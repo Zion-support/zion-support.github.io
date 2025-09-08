@@ -1,12 +1,17 @@
+<<<<<<< HEAD
 
 
 
+=======
+  className: string;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   id: string;
   innerHTML: string;
   textContent: string | null;
   style: { [key: string]: string }
 }
 
+<<<<<<< HEAD
 
 
 import { cn  } from '../../lib / utils';
@@ -27,13 +32,19 @@ interface HTMLDivElement extends HTMLElement {}
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <div className={cn(badgeVariants({ variant }), className)} {...props} />;
   );
 }
 export { Badge, badgeVariants }
+<<<<<<< HEAD
 
 
+=======
+const badge_variants = cva (
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   "inline - flex items - center rounded - full border px - 2.5 py - 0.5 text - xs font - semibold transition - colors focus:outline - none focus:ring - 2 focus:ring - ring focus:ring - offset - 2",
   {
     variants: {
@@ -62,5 +73,8 @@ export interface BadgeProps;
 function Badge() {
   return (
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

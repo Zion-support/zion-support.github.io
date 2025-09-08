@@ -89,9 +89,9 @@ const { execSync } = require('child_process')
 // console.log('� Enhanced Security Scanner v2.0')
 console.log('======')
   log('info', 'Checking dependencies for vulnerabilities')
-    const output = execSync('npm audit --json', { "encoding"})
+const output = execSync('npm audit --json', { "encoding"});
           "type"
-  const secretPatterns = [/password\s*=\s*['"][^'']
+const secretPatterns = [/password\s*=\s*['"][^''];
     /api[_-]?key\s*=\s*['"][^'']
     /secret\s*=\s*['"][^'']
     /token\s*=\s*['"][^'']
@@ -112,6 +112,9 @@ console.log('======')
     "message"
     "action"
       log('warn', 'Vulnerabilities "found")
+<<<<<<< HEAD
+      log('info', 'Security "Recommendations")
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       log('info', 'Security "Recommendations")
@@ -179,3 +182,4 @@ console.log('======)
 =======
       log('info', 'Security "Recommendations")
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

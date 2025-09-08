@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
@@ -7,21 +10,36 @@ DropdownMenu;
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { Button } from "@/components/ui/button",
 import { SORT_OPTIONS } from "@/data/sortOptions",
 import { SortDesc, ChevronDown } from 'lucide-react'
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+import { Button } from "@/components/ui/button",
+import { SORT_OPTIONS } from "@/data/sortOptions",
+import { SortDesc, ChevronDown } from 'lucide-react'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   sortOption: string
 
   setSortOption: (option: string) => void
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -35,22 +53,34 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
   return (
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           </div>
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent
-        align="start"
+      <DropdownMenuContent 
+        align="start" 
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
       >
+
         {SORT_OPTIONS.map((option) => (
+<<<<<<< HEAD
           <DropdownMenuItem
             key={option.value}
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
 
 
+=======
+
+          <DropdownMenuItem
+            key={option.value}
+            onClick={() => setSortOption(option.value)}
+            className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
@@ -79,8 +109,11 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
           <div className="flex items-center gap-2">;
             <SortDesc className="h-4 w-4 text-zion-purple" />;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label || "Sort by"}
           </div>;
@@ -98,17 +131,60 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
           </DropdownMenuItem>
         ))}
 
+<<<<<<< HEAD
 
 
+=======
+            {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label || "Sort by"}
+          </div>;
+          <ChevronDown className="h-4 w-4 ml-2 opacity-50" />;
+        </Button>;
+      </DropdownMenuTrigger>;
+      <DropdownMenuContent;
+        align="start";
+        className="w-[200px] bg-zion-blue-dark border-zion-blue-light";
+      >;
+        {SORT_OPTIONS.map((option) => (;
+          <DropdownMenuItem;
+            key={option.value}
+            onClick={() => setSortOption(option.value)}
+            className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
+              sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
+            }`}
+          >
+            {option.label}
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>;
+  );
+};
+}
+}
+}
+            className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${;
+              sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : "";
+            }`}
+          >;
+            {option.label}
+          </DropdownMenuItem>;
+        ))}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       </DropdownMenuContent>;
     </DropdownMenu>;
   );
 }
+<<<<<<< HEAD
 
 
   );
 }
 
+=======
+
+  );
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
@@ -157,4 +233,8 @@ export function SortDropdown() {return (<DropdownMenu>;
           <DropdownMenuItem;
             key={option.value}
 
+<<<<<<< HEAD
 
+=======
+            onClick={() => setSortOption(option.value)}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

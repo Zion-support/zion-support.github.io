@@ -6,6 +6,8 @@
 =======
 
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
@@ -29,8 +31,9 @@
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const { execSync } = require('child_process');
-const fs = require(fs');
+const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process')
 const fs = require('fs')
@@ -59,6 +62,9 @@ async function analyzeBundle() {}
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
+    
+=======
 =======
 =======
 
@@ -66,11 +72,22 @@ async function analyzeBundle() {}
 =======
 >>>>>>> merged-prs-20250907-203621
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
 <<<<<<< HEAD
 
     console.log('Bundle analysis completed. Check .next/analyze/ for results.')} catch (error) {}
     console.error('Bundle analysis "failed": ', error.message)};
+<<<<<<< HEAD
+
+};
+analyzeBundle();
+      
+
+
+
+
+=======
 =======
 <<<<<<< HEAD
 
@@ -114,3 +131,4 @@ analyzeBundle();
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

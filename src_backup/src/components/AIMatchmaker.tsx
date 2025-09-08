@@ -93,7 +93,11 @@ interface AIMatchmakerProps  {serviceType?: string,onMatchSelect?: ("match": any
       ),logInfo('AI matching "results":', { "data": results }),setMatches(results),toast({"title": "Matches Found","description": `Found ${results.length} matches based on your description.`})} catch (error) {logErrorToProduction('Error during AI "matching":', { "data": error }),toast({"title": "Matching Error","description": "We couldn't find matches for your request. Please try again.","variant": "destructive"}),onMatchSelect?: ("match": any,) => void,className?: string;"}export function AIMatchmaker(): any ({serviceType = '',onMatchSelect,className}: AIMatchmakerProps) {const [query, setQuery] = useState('')const [isMatchmaking, setIsMatchmaking] = useState(false)const [matches, setMatches] = useState([] as MatchResult[])const [hasSearched, setHasSearched]  = useState(false)const handleSearch = async () => {if (!query && query.trim()) {toast({"title": 'Please enter a description',"description": "Tell us what you're looking for so we can find matches.","variant": 'destructive'})return;'
     }setIsMatchmaking(true)setHasSearched(true)try {logInfo('Starting AI matching', { "data": { query, serviceType } })// Get AI matches;'
       const results  = await findMatches(query, serviceType, 3)logInfo('AI matching "results":', { "data": results })setMatches(results)toast({"title": 'Matches Found',"description": `Found ${results && results.length} matches based on your description.`})} catch (error) {logErrorToProduction('Error during AI "matching":', { "data": error })toast({"title": 'Matching Error',"description":;'          "We couldn't find matches for your request. Please try again.","variant": 'destructive'})// Set empty matches to show no results found UI;'
+<<<<<<< HEAD
+      setMatches([])} finally {setIsMatchmaking(false)},const handleItemSelect = ("item": any) => {if (onMatchSelect) {// Find the original MatchResult that contains this item;
+=======
       setMatches([])} finally {setIsMatchmaking(false)}},const handleItemSelect = ("item": any) => {if (onMatchSelect) {// Find the original MatchResult that contains this item;
+>>>>>>> origin/resolved-merge-conflicts
       }
       const matchResult  = matches.find(match => match.item.id === item.id)}const handleItemSelect = ("item": any) => {    if (onMatchSelect) {// Find the original MatchResult that contains this item;
       }
@@ -157,7 +161,11 @@ if ( {) {$2;
           </div>;{hasSearched && (matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
+<<<<<<< HEAD
+              serviceType={serviceType}
+=======
               serviceType={serviceType}}
+>>>>>>> origin/resolved-merge-conflicts
 }projectDescription={query}
             />;
           )}projectDescription={query}

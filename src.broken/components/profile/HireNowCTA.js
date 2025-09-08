@@ -1,5 +1,27 @@
+<<<<<<< HEAD
+=======
+
+:src/components/profile/HireNowCTA.jsx
+import React, {useState} from 'react';
+import {Button} from "../ui/Button";
+import {Card, CardContent, CardHeader, CardTitle} from "../ui/Card";
+import {Input} from "../ui/Input";
+import {Textarea} from "../ui/Textarea";
+import {DollarSign, MessageSquare} from 'lucide-react';
+export function HireNowCTA("props": "any) {;
+    const [isFormOpen", setIsFormOpen] = useState(false);
+    const [formData, setFormData] = useState({;
+        "projectDescription": '',;
+        "budget": '',;
+        "startDate": '',;
+        "message": '';
+    });
+    const handleSubmit = ("props": "any) => {;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '../ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
@@ -7,6 +29,14 @@ import { Input } from '../ui/Input';
 import { Textarea } from '../ui/Textarea';
 import { DollarSign, MessageSquare } from 'lucide-react';
 
+=======
+    const [isFormOpen, setIsFormOpen] = useState(false);
+    const [formData, setFormData] = useState({'
+        projectDescription: '','
+        budget: '','
+        startDate: '','
+        message: ''
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
@@ -17,7 +47,10 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         startDate: '',
         message: ''
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         e.preventDefault();
 
         if (onHire) {
@@ -29,10 +62,29 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             projectDescription: '','
             budget: '','
             startDate: '',
+<<<<<<< HEAD
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
+=======
+    );
+        setIsFormOpen(false)};
+            message: ''
+        });
+        setIsFormOpen(false);
+    };
+    const handleChange = (e) => {
+
+    );
+        setIsFormOpen(false)};
+            message: ''
+        });
+        setIsFormOpen(false)
+};    const handleChange = (e) => {
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         setFormData(prev => ({
             ...prev,
             [e.target.name]: e.target.value
@@ -63,7 +115,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </label>"
               <Textarea id="projectDescription" name="projectDescription" value={formData.projectDescription} onChange={handleChange} placeholder="Describe your project requirements..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>
             </div>
-
             <div className="grid grid-cols-2 gap-4">
               <div>"
                 <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">
@@ -71,7 +122,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 </label>"
                 <Input id="budget" name="budget" value={formData.budget} onChange={handleChange} placeholder="e.g., $1000-5000" className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>
               </div>
-
               <div>
 
                 <label htmlFor="startDate" className="block text-sm font-medium text-white mb-2">
@@ -80,7 +130,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 <Input id="startDate" name="startDate" type="date" value={formData.startDate} onChange={handleChange} className="bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan" required/>
               </div>
             </div>
-
             <div>
 
               <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
@@ -88,7 +137,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </label>"
               <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Any additional details or questions..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" rows={3}/>
             </div>
-
             <div className="flex gap-3">
 
               <Button type="submit" className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
@@ -101,7 +149,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
           </form>)}
       </CardContent>
+<<<<<<< HEAD
 
     </Card>);
 
 
+=======
+
+    </Card>);
+>>>>>>> origin/cursor/delete-old-data-records-6bba

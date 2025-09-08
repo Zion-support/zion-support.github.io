@@ -77,11 +77,16 @@ type SignupFormData = z.infer<typeof signupSchema>,;
     return null,;
   },;
 ;
+<<<<<<< HEAD
 
   const getFieldClasses = (fieldName:string) => {;
     const state = fieldStates[fieldName],;
     const isTouched = touchedFields[fieldName as keyof SignupFormData],;
 
+=======
+  const getFieldClasses = ("fieldName":string) => {;
+    }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     ;
     if (!isTouched) return '',;
     ;
@@ -387,6 +392,7 @@ pr-12325
 }</p>) ;
 }</div> {;
 
+<<<<<<< HEAD
   errors.root.message ;
 }</div>) ;
 }{;
@@ -395,3 +401,8 @@ pr-12325
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Creating Account... </>) : ('Create Account') ;
 }</Button> </form>) ;
 
+=======
+}</div>) ;"
+}<Button > {'";"
+  isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Creating Account... </>) : ('Create Account') ;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

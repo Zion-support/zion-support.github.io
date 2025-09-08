@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useEffect } from 'react',
 import { useLocation } from 'react-router-dom',
@@ -9,16 +10,29 @@ import { useEffect } from 'react',
 import { useLocation } from 'react-router-dom',
 
 
+=======
+
+import { useEffect } from 'react',
+import { useLocation } from 'react-router-dom',
+import {useEffect} from 'react';
+import {useLocation} from 'react-router-dom';
+import { useEffect } from 'react',
+import { useLocation } from 'react-router-dom',
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 /**
  * Custom hook to track page views for analytics purposes;
  * Attaches event listeners to track route changes and logs page views;
  */
 
+<<<<<<< HEAD
 
 
 export function usePageViewTracking() {
@@ -27,13 +41,19 @@ export function usePageViewTracking() {
 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const location = useLocation();
   useEffect(() => {
     const handleRouteChange = () => {
       // Track page view
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       console && console.log('Page view:', window && window.location.pathname)
 
       console.log("Page view:", window.location.pathname);
@@ -41,6 +61,7 @@ export function usePageViewTracking() {
     };
 
 
+<<<<<<< HEAD
       // // // console.log('Page view:', window.location.pathname)
     },
 
@@ -166,6 +187,8 @@ function usePageViewTracking() {
 }
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const location = useLocation(),;
   useEffect(() => {;
     const handleRouteChange = () => {;
@@ -177,6 +200,9 @@ function usePageViewTracking() {
     // Initial page load;
 
 ;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

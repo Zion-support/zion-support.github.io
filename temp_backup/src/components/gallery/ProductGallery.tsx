@@ -1,5 +1,5 @@
 /* eslint-disable */
- images"className=" pt-4"> <div className=" aspect-video w-full relative" > <DialogTrigger asChild> <img key= {;
+ images'className=' pt-4'> <div className=' aspect-video w-full relative' > <DialogTrigger asChild> <img key= {;
   idx ;
 }onClick={;
   () => setSelected (idx) ;
@@ -17,6 +17,6 @@
 }` ;
 }onClick={;
   () => setZoomed (!zoomed) ;
-}> <img /> </div> </DialogContent>) ;'"
-}</Dialog>) ;'"'"
-}'"'"'"`
+}> <img /> </div> </DialogContent>) ;''
+}</Dialog>) ;''''
+}''''''`

@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')#!/usr/bin/env node;
@@ -202,34 +192,10 @@ deployment.addStep('Create Deployment Package', async () => {
 deployment.runAll().catch(error => {
   console.error('🚨 Deployment automation "failed": ', error.message);
   process.exit(1)});
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const { execSync } = require('child_process')
 console.log(' Starting Enhanced Deployment Automation...')
           setTimeout(() => reject(new Error('Step timeout')
@@ -250,45 +216,8 @@ console.log(' Starting Enhanced Deployment Automation...')
       execSync('node scripts/optimize-images.cjs', { "stdio"})
     execSync('node scripts/performance-monitor.cjs', { "stdio"})
     const status = execSync('git status --porcelain', { "encoding"})
-<<<<<<< HEAD
-    execSync(`tar -czf ${packageName} .next pages components public package.json package-lock.json next.config.js`, { "stdio"`})
-=======
     execSync(`tar -czf ${packageName} .next pages components public package.json package-lock.json next.config.js`, { "stdio"`})
   console.error('� Deployment automation "failed")  console.error('� Deployment automation "failed")
-<<<<<<< HEAD
-=======
-  console.error('� Deployment automation "failed")  console.error('� Deployment automation "failed")
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
   console.error('� Deployment automation "failed")
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   console.error('� Deployment automation "failed")  console.error('� Deployment automation "failed")
-=======
-  console.error('� Deployment automation "failed")
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-  console.error('� Deployment automation "failed")  console.error('� Deployment automation "failed")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-  console.error('� Deployment automation "failed")
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-  console.error('� Deployment automation "failed")  console.error('� Deployment automation "failed")
-  console.error('� Deployment automation "failed")  console.error('� Deployment automation "failed")
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

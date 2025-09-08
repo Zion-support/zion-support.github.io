@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { ;
   getClientBudgetSuggestion,;
   PricingSuggestion,;
   ClientBudgetParams,;
   trackPricingSuggestion;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { Sparkles } from 'lucide-react';
 
@@ -22,7 +28,10 @@ export const ClientBudgetRecommender:React.FC<ClientBudgetRecommenderProps> = ({
 )
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     } finally {;
       setIsLoading(false),;
     }
@@ -39,8 +48,11 @@ export const ClientBudgetRecommender:React.FC<ClientBudgetRecommenderProps> = ({
           userId:user.id,;
           suggestionType:"client",;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           suggestedMin:suggestion.minRate,;
           suggestedMax:suggestion.maxRate,;
           accepted:true;
@@ -51,7 +63,10 @@ export const ClientBudgetRecommender:React.FC<ClientBudgetRecommenderProps> = ({
 ;
   return (;
     <div className="space-y-4">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       <div>;
           <Button;"
@@ -71,7 +86,10 @@ export const ClientBudgetRecommender:React.FC<ClientBudgetRecommenderProps> = ({
             rateType="hourly";"
           />;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       </div>;
 
 },; import {;
@@ -84,16 +102,22 @@ trackPricingSuggestion import {;
   Sparkles ;
 }from 'lucide-react' interface ClientBudgetRecommenderProps {;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   jobTitle: string;
 category: string;
 timeline?: string;
 scope?: string;
 experienceLevel?: string;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   jobTitle;
 category;
 timeline;
@@ -108,9 +132,13 @@ const [suggestion, setSuggestion] = useState<PricingSuggestion | null> (null);
 const { ;
   user ;
  } = useAuth ();
+<<<<<<< HEAD
 
 const generateSuggestion = async () => {;
 
+=======
+  }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   if (!jobTitle || !category) {;
   return ;
 }setIsLoading (true);
@@ -130,5 +158,9 @@ if (experienceLevel) params.experienceLevel = experienceLevel;
 return (<div className="space-y-4" > <div> {";"  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;"  generateSuggestion ";"}> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) ;
 }</div> </div>) ;
 
+<<<<<<< HEAD
 
 
+=======
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/pricing/ClientBudgetRecommender.tsx
+>>>>>>> origin/cursor/delete-old-data-records-6bba

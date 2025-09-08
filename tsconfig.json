@@ -12,7 +12,7 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "incremental": true,
-    "module": "esnext",
+    "module": "ESNext",
     "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -26,6 +26,7 @@
       }
     ],
     "paths": {
+<<<<<<< HEAD
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
       "@/pages/*": ["./pages/*"],
@@ -38,8 +39,52 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+=======
+      "@/*": [
+        "./src/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/pages/*": [
+        "./src/pages/*"
+      ],
+      "@/utils/*": [
+        "./src/utils/*"
+      ],
+      "@/hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@/types/*": [
+        "./src/types/*"
+      ],
+      "@/styles/*": [
+        "./styles/*"
+      ],
+      "@/assets/*": [
+        "./src/assets/*"
+      ],
+      "@/app/*": [
+        "./app/*"
+      ],
+      "@/public/*": [
+        "./public/*"
+      ]
+    },
+    "strictNullChecks": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   "exclude": [
     "node_modules",
+    ".next",
+    "out",
+    "dist",
     "apps/**",
     "apps.backup/**",
     "api-backup/**",

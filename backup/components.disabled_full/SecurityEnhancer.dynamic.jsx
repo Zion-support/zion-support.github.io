@@ -1,4 +1,4 @@
-const SecurityEnhancer = dynamic(() => import("./SecurityEnhancer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default SecurityEnhancer' ,'
+const SecurityEnhancer = dynamic(() => import('./SecurityEnhancer'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default SecurityEnhancer' ,'
 
 </p>'
 </p>'
@@ -23,8 +23,8 @@ const SecurityEnhancer = dynamic(() => import("./SecurityEnhancer"),{'; "loading
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const SecurityEnhancer = dynamic(() => import(\"./SecurityEnhancer\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default SecurityEnhancer\' ,const SecurityEnhancer = dynamic(() => import(\"./SecurityEnhancer\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default SecurityEnhancer\" ,\"\"\";
-const SecurityEnhancer = dynamic(() => import(\"./SecurityEnhancer\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default SecurityEnhancer' ,';
+const SecurityEnhancer = dynamic(() => import(\'./SecurityEnhancer\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default SecurityEnhancer\' ,const SecurityEnhancer = dynamic(() => import(\'./SecurityEnhancer\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default SecurityEnhancer\' ,\'\'\';
+const SecurityEnhancer = dynamic(() => import(\'./SecurityEnhancer\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default SecurityEnhancer' ,';
 </p>';
 </p>';
 </p>';
@@ -60,7 +60,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
 </p>';
 </p>'</p>';
-const SecurityEnhancer = dynamic(() => import(\"./SecurityEnhancer\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default SecurityEnhancer' ,'
+const SecurityEnhancer = dynamic(() => import(\'./SecurityEnhancer\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default SecurityEnhancer' ,'
 </p>'
 </p>'
 </p>'

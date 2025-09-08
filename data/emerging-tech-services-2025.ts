@@ -1,10 +1,39 @@
+<<<<<<< HEAD
 
 
+=======
+export interface EmergingTechService2025 {
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
+  contactInfo: {
+    mobile: string,
+    email: string,
+    address: string}
+}
+export const emergingTechServices2025: EmergingTechService2025[] = [
+  {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     id: "metaverse-platform",
     name: "Metaverse Development Platform",
     tagline: "Create immersive virtual experiences",
     price: "$249/month",
     description: "Advanced metaverse development platform for building virtual worlds and experiences.",
+<<<<<<< HEAD
+=======
+    id: 'metaverse-platform'
+    name: 'Metaverse Development Platform'
+    tagline: 'Create immersive virtual experiences'
+    price: '$249/month'
+    description:
+      'Advanced metaverse development platform for building virtual worlds and experiences.'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     features: [
       "3D world building",
       "Avatar customization",
@@ -18,6 +47,7 @@
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -33,3 +63,9 @@
   }
 ];
 
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+],
+>>>>>>> origin/cursor/delete-old-data-records-6bba

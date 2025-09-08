@@ -70,12 +70,20 @@ const noop = () => {}const noop = () => {}const noopReturn = () => null,const no
     apply() {}
   },// Tracing;
   "Tracing": {"BrowserTracing": class BrowserTracing {constructor() {}
+<<<<<<< HEAD
+    },// Integrations;
+=======
     }},// Integrations;
+>>>>>>> origin/resolved-merge-conflicts
   "Integrations": {"BrowserTracing": class BrowserTracing {constructor() {}
     }
     "Http": class Http {constructor() {}
     },"OnUncaughtException": class OnUncaughtException {constructor() {}
+<<<<<<< HEAD
+    },"OnUnhandledRejection": class OnUnhandledRejection {constructor() {}
+=======
     },"OnUnhandledRejection": class OnUnhandledRejection {constructor() {}}
+>>>>>>> origin/resolved-merge-conflicts
     }
     }
   },// Transport;

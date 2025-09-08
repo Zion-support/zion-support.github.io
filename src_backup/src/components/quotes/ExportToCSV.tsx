@@ -1,11 +1,19 @@
 import { Button  } from '@/components/ui/button';'
 import { Download  } from 'lucide-react';'
 import type { QuoteRequest } from '@/types/quotes';'
+<<<<<<< HEAD
+interface ExportToCSVProps  {'quotes': QuoteRequest[];
+  }
+  filename?: string;
+}
+export const ExportToCSV = ({ quotes, filename = 'quote-requests' }: ExportToCSVProps) => {const handleExport = () => {// Define CSV Headers;'
+=======
 interface ExportToCSVProps  {"quotes": QuoteRequest[];
   }
   filename?: string;
 }
 export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {const handleExport = () => {// Define CSV Headers;"
+>>>>>>> origin/resolved-merge-conflicts
     }
     const headers = [;
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';'
@@ -20,7 +28,11 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       quote.project_name;
       quote.project_summary;
       quote.budget_display |;
+<<<<<<< HEAD
+  'quotes': QuoteRequest[];
+=======
   "quotes": QuoteRequest[];
+>>>>>>> origin/resolved-merge-conflicts
   filename?: string;
 }export const ExportToCSV  = null;(quote.budget_min && quote.budget_max;
           ? `$${quote.budget_min} - $${quote.budget_max}`;`          : quote.budget_min;
@@ -31,10 +43,17 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       headers.join()...rows.map(row =>;
         row.map(cell =>;
           // Escape commas and quotes in cell values;
+<<<<<<< HEAD
+          typeof cell === 'string' && (cell.includes() |cell.includes('''))? `'${cell.replace(/'/g, '''')}'`;`            : cell;
+        ).join())const blob = new Blob([csvContent], { 'type': 'text/csv,charset=utf-8,' })const url = URL.createObjectURL(blob)const link = document.createElement('a')link.setAttribute('href', url)link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`)document.body.appendChild(link)// Download file and clean up;`    link.click()setTimeout(() => {document.body.removeChild(link)URL.revokeObjectURL(url)}, 100)import { Button  } from '@/components / ui / button';'
+import type { QuoteRequest } from '@/types / quotes';'
+interface ExportToCSVProps  {'quotes': QuoteRequest[];
+=======
           typeof cell === 'string' && (cell.includes() |cell.includes('"'))? `"${cell.replace(/"/g, '""')}"`;`            : cell;
         ).join())const blob = new Blob([csvContent], { "type": 'text/csv,charset=utf-8,' })const url = URL.createObjectURL(blob)const link = document.createElement('a')link.setAttribute('href', url)link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`)document.body.appendChild(link)// Download file and clean up;`    link.click()setTimeout(() => {document.body.removeChild(link)URL.revokeObjectURL(url)}, 100)import { Button  } from '@/components / ui / button';'
 import type { QuoteRequest } from '@/types / quotes';'
 interface ExportToCSVProps  {"quotes": QuoteRequest[];
+>>>>>>> origin/resolved-merge-conflicts
   }
   filename?: string;
 export const ExportToCSV = ({quotes,filename = 'quote - requests';'
@@ -54,10 +73,17 @@ export const ExportToCSV = ({quotes,filename = 'quote - requests';'
           .map (cell =>;
             // Escape commas and quotes in cell values;
             typeof cell === 'string' &&;'
+<<<<<<< HEAD
+            (cell.includes (', ') || cell.includes ('''))? `'${cell.replace (/'/g, '''')}'`;`              : cell).join (', '))].join ('\n')// Create download link;'
+    const blob = new Blob ([csv_content], { 'type': 'text / csv;charset = utf - 8;' })const url = URL.createObjectURL (blob)const link = document.create_element ('a')link.set_attribute ('href', url)link.set_attribute ('download',`${filename}-${new Date ().toISOString ().split ('T')[0]}.csv`)document.body.append_child (link)import { Button   } from '@/components / ui / button';'interface ExportToCSVProps  {'quotes': QuoteRequest[],filename?: string;
+}
+export const ExportToCSV = ({ quotes, filename = 'quote - requests' }: ExportToCSVProps) =>: any {const handle_export = () =>: any {// Define CSV Headers;'
+=======
             (cell.includes (', ') || cell.includes ('"'))? `"${cell.replace (/"/g, '""')}"`;`              : cell).join (', '))].join ('\n')// Create download link;'
     const blob = new Blob ([csv_content], { "type": 'text / csv;charset = utf - 8;' })const url = URL.createObjectURL (blob)const link = document.create_element ('a')link.set_attribute ('href', url)link.set_attribute ('download',`${filename}-${new Date ().toISOString ().split ('T')[0]}.csv`)document.body.append_child (link)import { Button   } from '@/components / ui / button';'interface ExportToCSVProps  {"quotes": QuoteRequest[],filename?: string;
 }
 export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToCSVProps) =>: any {const handle_export = () =>: any {// Define CSV Headers;"
+>>>>>>> origin/resolved-merge-conflicts
     }
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';'
       'StatusCreated Date';'
@@ -78,16 +104,28 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       headers.join ()...rows.map (row =>;
         row.map (cell =>;
           // Escape commas and quotes in cell values;
+<<<<<<< HEAD
+          typeof cell === 'string' && (cell.includes () || cell.includes ('''))? `'${cell.replace (/'/g, '''')}'`;`            : cell).join ())].join ('\n')// Create download link;'
+    const blob = new Blob ([csv_content], { 'type': 'text / csv, charset = utf - 8, ' })const url = URL.createObjectURL (blob)const link = document.create_element ('a')link.set_attribute ('href', url)link.set_attribute ('download', `${filename}-${new Date ().toISOString ().split ('T')[0]}.csv`)document.body.append_child (link)// Download file and clean up;`    link.click ()set_timeout (() => {document.body.remove_child (link)URL.revokeObjectURL (url)}, 100)}
+=======
           typeof cell === 'string' && (cell.includes () || cell.includes ('"'))? `"${cell.replace (/"/g, '""')}"`;`            : cell).join ())].join ('\n')// Create download link;'
     const blob = new Blob ([csv_content], { "type": 'text / csv, charset = utf - 8, ' })const url = URL.createObjectURL (blob)const link = document.create_element ('a')link.set_attribute ('href', url)link.set_attribute ('download', `${filename}-${new Date ().toISOString ().split ('T')[0]}.csv`)document.body.append_child (link)// Download file and clean up;`    link.click ()set_timeout (() => {document.body.remove_child (link)URL.revokeObjectURL (url)}, 100)}
+>>>>>>> origin/resolved-merge-conflicts
       >;
       <Download size={16} />;
       Export CSV;
     </Button>)}
+<<<<<<< HEAD
+'';'
+  } }
+  return (import { Button } from '@/components/ui/button',import type { QuoteRequest } from '@/types/quotes',interface ExportToCSVProps  {'quotes': QuoteRequest[],filename?: string;'
+}export const ExportToCSV = ({ quotes, filename = 'quote-requests' }: ExportToCSVProps) => {const handleExport = () => {// Define CSV Headers;'
+=======
 '";"
   } }
   return (import { Button } from "@/components/ui/button",import type { QuoteRequest } from "@/types/quotes",interface ExportToCSVProps  {"quotes": QuoteRequest[],filename?: string;"
 }export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {const handleExport = () => {// Define CSV Headers;"
+>>>>>>> origin/resolved-merge-conflicts
     }
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline','StatusCreated Date';'
     ],// Format quote data for CSV;
@@ -98,11 +136,19 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       headers.join(),...rows.map(row =>;
         row.map(cell =>;
           // Escape commas and quotes in cell values;
+<<<<<<< HEAD
+          typeof cell === 'string' && (cell.includes() || cell.includes('''))? `'${cell.replace(/'/g, '''')}'`;`            : cell;
+        ).join())''},)}].join('\n'),// Create download link;'
+    const blob = new Blob([csvContent], { 'type': 'text/csv,charset=utf-8,' }),const url = URL.createObjectURL(blob),const link = document.createElement('a'),link.setAttribute('href', url),link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`),document.body.appendChild(link),// Download file and clean up;`    link.click(),setTimeout(() => {document.body.removeChild(link),URL.revokeObjectURL(url)}, 100)},return (<Button;
+      variant='outline';interface ExportToCSVProps  {'quotes': QuoteRequest[],filename?: string;'
+}export const ExportToCSV = ({ quotes, filename = 'quote-requests' }: ExportToCSVProps) => {const handleExport = () => {// Define CSV Headers;'
+=======
           typeof cell === 'string' && (cell.includes() || cell.includes('"'))? `"${cell.replace(/"/g, '""')}"`;`            : cell;
         ).join())'"},)}].join('\n'),// Create download link;'
     const blob = new Blob([csvContent], { "type": 'text/csv,charset=utf-8,' }),const url = URL.createObjectURL(blob),const link = document.createElement('a'),link.setAttribute('href', url),link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`),document.body.appendChild(link),// Download file and clean up;`    link.click(),setTimeout(() => {document.body.removeChild(link),URL.revokeObjectURL(url)}, 100)},return (<Button;
       variant="outline";interface ExportToCSVProps  {"quotes": QuoteRequest[],filename?: string;"
 }export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {const handleExport = () => {// Define CSV Headers;"
+>>>>>>> origin/resolved-merge-conflicts
     }
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';'
       'StatusCreated Date';'
@@ -123,24 +169,43 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       headers && headers.join()...rows && rows.map(row => { return  ; }
         row && row.map(cell => { return  ; }
           // Escape commas and quotes in cell values;
+<<<<<<< HEAD
+          typeof cell === 'string' && (cell && cell.includes() || cell && cell.includes('''))? `'${cell && cell.replace(/'/g, '''')}'` ;`            : cell;
+        ).join())].join('\n')// Create download link;'
+    const blob = new Blob([csvContent], { 'type': 'text/csv,charset=utf-8,' })const url = URL && URL.createObjectURL(blob)const link = document && document.createElement('a')link && link.setAttribute('href', url)link && link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`)document && document.body.appendChild(link)// Download file and clean up;`    link && link.click()setTimeout(() => {document && document.body.removeChild(link)URL && URL.revokeObjectURL(url)}, 100)}>;
+=======
           typeof cell === 'string' && (cell && cell.includes() || cell && cell.includes('"'))? `"${cell && cell.replace(/"/g, '""')}"` ;`            : cell;
         ).join())].join('\n')// Create download link;'
     const blob = new Blob([csvContent], { "type": 'text/csv,charset=utf-8,' })const url = URL && URL.createObjectURL(blob)const link = document && document.createElement('a')link && link.setAttribute('href', url)link && link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`)document && document.body.appendChild(link)// Download file and clean up;`    link && link.click()setTimeout(() => {document && document.body.removeChild(link)URL && URL.revokeObjectURL(url)}, 100)}>;
+>>>>>>> origin/resolved-merge-conflicts
       <Download size={16} />;
       Export CSV;
     </Button>;
   )}return (<Button;
+<<<<<<< HEAD
+      variant='outline';'
+      onClick = {handleExport}
+      className='flex items-center gap-2';'
+=======
       variant="outline";"
       onClick = {handleExport}
       className="flex items-center gap-2";"
+>>>>>>> origin/resolved-merge-conflicts
       disabled={quotes && quotes.length === 0}>;
       <Download size={16} />;
       Export CSV;
     </Button>;
+<<<<<<< HEAD
+  )}''},<Button;'
+      variant='outline';'
+      on_click = {handle_export }
+      className='flex items - center gap - 2';'
+=======
   )}'"},<Button;"
       variant="outline";"
       on_click = {handle_export }
       className="flex items - center gap - 2";"
+>>>>>>> origin/resolved-merge-conflicts
       disabled={quotes.length === 0}
     >;
       <Download size={16} />;
@@ -153,12 +218,22 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
           .map(cell =>;
             // Escape commas and quotes in cell values;
             typeof cell === 'string' &&;'
+<<<<<<< HEAD
+            (cell.includes(',') || cell.includes('''))? `'${cell.replace(/'/g, '''')}'`;`              : cell;
+          ).join(','))].join('\n')// Create download link;'
+    const blob = new Blob([csvContent], { 'type': 'text/csv;charset=utf-8;' })const url = URL.createObjectURL(blob)const link = document.createElement('a')link.setAttribute('href', url)link.setAttribute('download',`${filename}-${new Date().toISOString().split('T')[0]}.csv`;`
+=======
             (cell.includes(',') || cell.includes('"'))? `"${cell.replace(/"/g, '""')}"`;`              : cell;
           ).join(','))].join('\n')// Create download link;'
     const blob = new Blob([csvContent], { "type": 'text/csv;charset=utf-8;' })const url = URL.createObjectURL(blob)const link = document.createElement('a')link.setAttribute('href', url)link.setAttribute('download',`${filename}-${new Date().toISOString().split('T')[0]}.csv`;`
+>>>>>>> origin/resolved-merge-conflicts
     )document.body.appendChild(link)// Download file and clean up;
     link.click()setTimeout(() => {document.body.removeChild(link)URL.revokeObjectURL(url)}, 100)}>;
       <Download size={16} />;
       Export CSV;
     </Button>;
+<<<<<<< HEAD
+)}'';
+=======
 )}'";
+>>>>>>> origin/resolved-merge-conflicts

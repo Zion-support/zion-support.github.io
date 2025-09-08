@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -8,7 +11,11 @@ function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 exports.config = {
+<<<<<<< HEAD
   schedule: '*/15 * * * *
+=======
+  schedule: '*/15 * * * *'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
 exports.handler = async () => {
@@ -18,6 +25,7 @@ exports.handler = async () => {
     const res = fn();
     if (res.stdout) logs.push(res.stdout);
     if (res.stderr) logs.push(res.stderr);
+<<<<<<< HEAD
 `;
     logs.push(`exit=${res.status |0}`);
     return res.status |0;
@@ -31,3 +39,18 @@ exports.handler = async () => {
 
 
 
+=======
+
+    logs.push(`exit=${res.status |0}`);
+    return res.status |0;
+
+  }
+  step('alt-text:suggest', () => runNode('automation/alt-text-suggester.cjs'));
+  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+  return { statusCode: 200, body: logs.join('\n') }
+
+};  step('alt-text:suggest', () => runNode('automation/alt-text-suggester.cjs'))
+  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'))
+  return { statusCode: 200, body: logs.join('\n') }
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

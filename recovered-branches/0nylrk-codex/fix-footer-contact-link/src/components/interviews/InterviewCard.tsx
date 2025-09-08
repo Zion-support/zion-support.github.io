@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React, { useState } from "react";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -13,6 +16,17 @@ import {Clock, ExternalLink, MessageSquare, Video, X} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
 import {InterviewResponseForm} from "./InterviewResponseForm";
 
+<<<<<<< HEAD
+=======
+interface InterviewCardProps {;
+  interview: Interview,;
+  onRefresh: () => Promise<void>;
+}
+
+export function InterviewCard(): any ({ interview, onRefresh }: InterviewCardProps) {;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface InterviewCardProps {
   interview: Interview,
   onRefresh: () => Promise<void>
@@ -21,6 +35,7 @@ interface InterviewCardProps {
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
 
   const { user } = useAuth();
+<<<<<<< HEAD
 
 export /**
  * InterviewCard - Function description
@@ -53,6 +68,43 @@ function InterviewCard() {
     }
   }
 
+=======
+  const [isLoading, setIsLoading] = useState(false);import React, { useState } from './react';'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';'
+import { Button } from '@/components / ui / button';'
+import { Badge } from '@/components / ui / badge';'
+import { Interview } from '@/types / interview';'
+import { use_auth } from '@/hooks / use_auth';'
+import { use_interviews } from '@/hooks / use_interviews';'
+import { format, formatDistanceToNow, is_past, parseISO } from './date - fns';'
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from '@/components / ui / alert - dialog';'
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components / ui / dialog';'
+import { Clock, ExternalLink, MessageSquare, Video, X } from './lucide-react';'
+import { toast } from '@/components / ui / use - toast';'
+import { InterviewResponseForm } from './InterviewResponseForm';'
+interface InterviewCardProps {
+  interview: Interview,
+  onRefresh: () => Promise<void>
+}
+
+  const { respondToInterview, cancelInterview } = useInterviews();
+  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
+
+  const { user } = useAuth();
+
+  const { respondToInterview, cancelInterview } = useInterviews();
+  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+import React, { useState } from './react';
+
+    if (success) {
+
+    } else {
+      return `Starts in ${formatDistanceToNow (interview_date)}`;
+    }
+  }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading(true),
@@ -61,12 +113,18 @@ function InterviewCard() {
       status 
 
 
+<<<<<<< HEAD
     if (success) {
       toast({
         title: `Interview ${status}`
         description: `You have successfully ${status} the interview request.`
 
 
+=======
+      toast({
+        title: `Interview ${status}`
+        description: `You have successfully ${status} the interview request.`
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
 
@@ -83,11 +141,14 @@ if ( {) {}
       toast ({}`
         title: `Interview ${status}`,`
         description: `You have successfully ${status} the interview request.`;
+<<<<<<< HEAD
 
       });
       setIsResponseDialogOpen (false);
       await on_refresh ();
     } else {
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
   onRefresh: () => Promise<void>
@@ -130,7 +191,10 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   },
 
   const handleCancelInterview = async () => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     setIsLoading(true),
     const success = await cancelInterview(interview.id),
 
@@ -149,9 +213,13 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
     setIsLoading (false);
   }
 ;
+<<<<<<< HEAD
 
   const handleCancelInterview = async () => {}
 
+=======
+    }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     setIsLoading (true);
     const success = await cancel_interview (interview.id);
 ;
@@ -165,7 +233,29 @@ if ( {) {}
       });
       await on_refresh ();
 
+<<<<<<< HEAD
 
+=======
+
+    } else {
+      toast({
+        title: "Error"
+        description: "Failed to cancel the interview. Please try again."
+        variant: "destructive"
+      })
+    }
+    setIsLoading(false)
+  },
+
+
+  const getStatusBadge = () => {
+    switch (interview.status) {
+      case 'requested':
+        return <Badge className="bg-amber-500">Pending</Badge>;
+      case 'confirmed':
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const isClient = user?.id === interview && interview.client_id;
   const isTalent = user?.id === interview && interview.talent_id;
   // Format interview date and time;
@@ -174,9 +264,12 @@ if ( {) {}
   // Calculate when interview ends;
   const endTime = new Date(interviewDate);
 
+<<<<<<< HEAD
   endTime && endTime.setMinutes(endTime && endTime.getMinutes() + interview && interview.duration_minutes);
   const formattedEndTime = format(endTime, 'h: mm a'),;
   const isInterviewPending = interview && interview.status === 'requested';
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   const isInterviewConfirmed = interview && interview.status === 'confirmed';
   const isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate && interviewDate.getTime() - 5 * 60000)), // 5 minutes before;
@@ -203,6 +296,7 @@ if ( {) {}
       default:
         return <Badge>{interview.status}</Badge>
 
+<<<<<<< HEAD
 
   };
 
@@ -220,6 +314,16 @@ if ( {) {}
 
 
 
+=======
+
+  },;
+    }
+    setIsLoading(true),;
+      }
+      "interview_id": interview && interview.id, ;
+      status ;
+    });
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     if (success) {;
 
       });
@@ -232,12 +336,16 @@ if ( {) {}
     }
     setIsLoading(false);
   };
+
   const handleCancelInterview = async () => {;
     setIsLoading(true);
     const success = await cancelInterview(interview && interview.id);
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     if (success) {;
 
         variant: "destructive";
@@ -246,8 +354,11 @@ if ( {) {}
     setIsLoading(false);
   };
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const getStatusBadge = () => {;
     switch (interview && interview.status) {;'
       case 'requested':;"
@@ -257,7 +368,10 @@ if ( {) {}
           <Badge className="bg-green-500 animate-pulse">Live Now</Badge> : ;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           <Badge className="bg-green-600">Confirmed</Badge>;
       case 'declined':;
         return <Badge variant="destructive">Declined</Badge>;
@@ -271,8 +385,19 @@ if ( {) {}
       default:;
         return <Badge>{interview && interview.status}</Badge>;
     }
+<<<<<<< HEAD
 
 
+=======
+  };
+  const getOtherPartyName = () => {;
+    if (isClient) {;
+      return interview && interview.talent_name || 'Talent';
+    } else {;
+      return interview && interview.client_name || 'Client';
+    }
+  }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
@@ -295,6 +420,7 @@ if ( {) {}
               <p className="font-medium">{formattedDate}</p>;
               <p className="text-sm text-muted-foreground">;
 
+<<<<<<< HEAD
                 {formattedTime} - {formattedEndTime} ({interview && interview.duration_minutes} minutes);
 
               </p>;
@@ -305,6 +431,8 @@ if ( {) {}
           </div>;
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>;
       default:;
@@ -314,6 +442,7 @@ if ( {) {}
   }
 
 
+<<<<<<< HEAD
           {interview && interview.notes && (;
             <div className="flex items-start gap-3">;
               <MessageSquare className="h-4 w-4 mt-0 && 0.5 text-muted-foreground" />;
@@ -328,11 +457,14 @@ if ( {) {}
 
       <CardFooter className="pt-2">;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <div className="grid grid-cols-1 gap-2 w-full">;
           {/* For clients with pending requests */}
           {isClient && isInterviewPending && (;
             <AlertDialog>;
 
+<<<<<<< HEAD
               <AlertDialogTrigger asChild>;
                 <Button variant="outline" size="sm" className="w-full">;
                   <X className="h-4 w-4 mr-2" /> Cancel Request;
@@ -341,6 +473,8 @@ if ( {) {}
               <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
                 <AlertDialogHeader>;
                   <AlertDialogTitle>Cancel Interview Request</AlertDialogTitle>;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   }
 ;
@@ -464,6 +598,7 @@ if ( {) {}
                 <AlertDialogHeader>;
                   <AlertDialogTitle > Cancel Interview Request</AlertDialogTitle>;
 
+<<<<<<< HEAD
 
                   <AlertDialogDescription>;
                     Are you sure you want to cancel this interview request? This action cannot be undone.;
@@ -488,6 +623,8 @@ if ( {) {}
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           {/* For talents with pending requests */}
           {isTalent && isInterviewPending && (;"
             <div className="grid grid-cols-2 gap-2">;
@@ -498,8 +635,11 @@ if ( {) {}
                 Decline;
               </Button>;
 
+<<<<<<< HEAD
             </div>;
           )}
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>;
@@ -524,8 +664,17 @@ if ( {) {}
                 </Button>
               )}
 
+<<<<<<< HEAD
 
 
+=======
+                  <Video className="h-4 w-4 mr-2" />
+                  <Video className="h-4 w-4 mr-2" /> 
+                  {isInterviewLive ? 'Join Now' : 'Join Meeting'}
+                </Button>
+              )}
+              
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               <AlertDialog>
 
                 <AlertDialogTrigger asChild>
@@ -534,7 +683,10 @@ if ( {) {}
 
                   </Button>
                 </AlertDialogTrigger>"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white">
                   <AlertDialogHeader>
                     <AlertDialogTitle>Cancel Confirmed Interview</AlertDialogTitle>
@@ -555,6 +707,10 @@ if ( {) {}
                 <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
                   <AlertDialogHeader>;
                     <AlertDialogTitle>Cancel Confirmed Interview</AlertDialogTitle>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -563,7 +719,10 @@ if ( {) {}
                     </AlertDialogDescription>;
                   </AlertDialogHeader>;
                   <AlertDialogFooter>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 <AlertDialogCancel>Go Back</AlertDialogCancel>;
                     <AlertDialogAction ;
@@ -578,15 +737,62 @@ if ( {) {}
                 </AlertDialogContent>;
               </AlertDialog>;
 
+<<<<<<< HEAD
             </>;          )}
 
 
+=======
+                      disabled={isLoading}
+                      className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+                    >
+                      Cancel Interview
+                    </AlertDialogAction>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
+            </>
+          )}
+        </div>
+      </CardFooter>
+      {/* Response dialog for talents */}
+      <Dialog open={isResponseDialogOpen} onOpenChange={setIsResponseDialogOpen}>
+        <DialogContent className="sm:max-w-[500px] bg-zion-blue-dark border-zion-blue-light text-white">
+          <DialogHeader>
+            <DialogTitle>Respond to Interview Request</DialogTitle>
+          </DialogHeader>
+          <InterviewResponseForm
+        </div>;
+      </CardFooter>;
+      ;
+      {/* Response dialog for talents */}
+      <Dialog open={isResponseDialogOpen} onOpenChange={setIsResponseDialogOpen}>;
+
+        <DialogContent className="sm:max-w-[500px] bg-zion-blue-dark border-zion-blue-light text-white">;
+          <DialogHeader>;
+            <DialogTitle>Respond to Interview Request</DialogTitle>;
+          </DialogHeader>;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             interview={interview}
             onConfirm={() => handleRespondToInterview('confirmed')}
             onClose={() => setIsResponseDialogOpen(false)}
             isLoading={isLoading}
 
+<<<<<<< HEAD
 
+=======
+          />
+        </DialogContent>
+      </Dialog>
+    </Card>
+  )
+}
+          />;
+        </DialogContent>;
+      </Dialog>;
+    </Card>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             </>)}
         </div>;
       </CardFooter>;
@@ -603,9 +809,16 @@ if ( {) {}
           />;
         </DialogContent>;
       </Dialog>;
+<<<<<<< HEAD
 
     </Card>);
 
 
 
 
+=======
+    </Card>);
+
+    </Card>);
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba

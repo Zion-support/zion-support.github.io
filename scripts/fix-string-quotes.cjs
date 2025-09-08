@@ -25,7 +25,7 @@ const path = require('path')
 >>>>>>> merged-prs-20250907-203621
 // console.log(' Fixing String Quote Issues...')
 console.log('====')
-const filesToFix = ['pages/api/docs.ts']
+const filesToFix = ['pages/api/docs.ts'];
   'pages/api/health.ts'
   'components/ContactForm.tsx'
   'components/ErrorBoundary.tsx'
@@ -41,6 +41,9 @@ const filesToFix = ['pages/api/docs.ts']
     "pattern"
     "replacement"
     "replacement": '"$1${$2}$3"
+<<<<<<< HEAD
+    "replacement": '"$1\\\\\n  $2"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,3 +76,4 @@ const filesToFix = ['pages/api/docs.ts']
 =======
     "replacement": '"$1\\\\\n  $2"
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

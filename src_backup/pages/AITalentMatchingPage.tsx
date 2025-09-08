@@ -92,8 +92,45 @@ function AITalentMatchingPage() {}
     { label: "Time to Hire", value: "50% faster" }
   ];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+    {
+      name: 'Emily Stone',
+      role: 'HR Director',
+      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
+      avatar: '/placeholder.svg',
+    },
+    {
+      name: 'Raj Patel',
+      role: 'Startup Founder',
+      text: "The quality of candidates has improved dramatically since using Zion's platform.",
+      avatar: '/placeholder.svg',
+    },
+  ];
+
+  
+    />
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <ServiceLandingTemplate"
       title="AI Talent Matching""

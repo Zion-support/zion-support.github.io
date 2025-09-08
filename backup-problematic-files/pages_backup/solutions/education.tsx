@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import {GraduationCap,, Users,, BookOpen,, Laptop,, Globe} from 'lucide-react';
 import React from 'react';
@@ -13,6 +14,8 @@ const features = [;
     description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
 import React from 'react';
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -39,6 +42,7 @@ const features = [
     description: 'AI-powered analytics to improve student outcomes',
     benefits: ['Performance tracking', 'Predictive analytics', 'Intervention alerts', 'Reporting']
   },
+<<<<<<< HEAD
 
   },;
   {}
@@ -65,6 +69,18 @@ const features = [
   },
   {
     icon: BookOpen,
+=======
+
+  {
+    icon: BookOpen,
+    title: 'Digital Content',
+    description: 'Interactive digital content and multimedia learning materials',
+    benefits: ['Interactive content', 'Multimedia support', 'Accessibility', 'Mobile learning']
+  },
+  {
+    icon: Laptop,
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     title: 'Digital Content Management',
     description: 'Interactive digital content creation and distribution'
@@ -197,8 +213,10 @@ export default function EducationSolutions() {
     benefits: ['Video conferencing', 'Screen sharing', 'Breakout rooms', 'Recording']
   }
 ];
+
 export default function EducationSolutionsPage() {
   return (
+<<<<<<< HEAD
 
     <Layout
       title="Education Solutions - Zion Tech Group"
@@ -208,6 +226,18 @@ export default function EducationSolutionsPage() {
         {/* Hero Section */}
     >
       <div className="min-h-screen bg-white">
+=======
+
+
+    <>
+      <Head>
+        <title>Education Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive education technology solutions including LMS, student analytics, digital content, and virtual classrooms." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -273,6 +303,7 @@ export default function EducationSolutionsPage() {
                   </p>
                 </div>
 
+<<<<<<< HEAD
     title: 'Virtual Classrooms,',;
     description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
   },;
@@ -456,6 +487,8 @@ export default function EducationSolutionsPage() {;
         </section>;
         {/* Solutions List */}
         <section className="py-20 bg-gray-800/30">";
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           <div className="container mx-auto px-4">";
             <div className="max-w-4xl mx-auto">";
@@ -463,6 +496,7 @@ export default function EducationSolutionsPage() {;
                 Our Education Solutions;
               </h2>;
 
+<<<<<<< HEAD
               <div className="grid grid-cols-1 md: grid-cols-2 gap-6">",;
                 {solutions && solutions.map((solution, index) => (,;
                   <div key={index} className="flex items-center space-x-3">";
@@ -471,13 +505,18 @@ export default function EducationSolutionsPage() {;
                   </div>;
                 ))}
               </div>,;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             </div>;
           </div>;
         </section>;
         {/* Accessibility Section */}
 
+<<<<<<< HEAD
         <section className="py-20">";
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           <div className="container mx-auto px-4">";
             <div className="bg-gray-800/50 rounded-2xl p-12">";
@@ -487,11 +526,14 @@ export default function EducationSolutionsPage() {;
                 </h2>;
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
 
+<<<<<<< HEAD
                   Our education solutions are built with accessibility in mind, ;
                   ensuring equal access to learning opportunities for all students.;
                 </p>;
               </div>;
               <div className="grid grid-cols-1 md: grid-cols-3 gap-8">", <div className="text-center">",;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";
                     <Globe className="w-8 h-8 text-white" />";
@@ -519,7 +561,10 @@ export default function EducationSolutionsPage() {;
         </section>;
         {/* CTA Section */}
 
+<<<<<<< HEAD
         <section className="py-20">";
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           <div className="container mx-auto px-4">";
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">";
@@ -531,10 +576,13 @@ export default function EducationSolutionsPage() {;
                 enhance learning outcomes and support modern educational practices.;
               </p>;
 
+<<<<<<< HEAD
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">",;
                   Schedule Consultation;
                 </button>;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover: bg-white hover:text-blue-600 transition-colors font-medium">", Download Education Guide,;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                 </button>;
               </div>;
@@ -542,6 +590,7 @@ export default function EducationSolutionsPage() {;
           </div>;
         </section>;
 
+<<<<<<< HEAD
       </div>;
     </Layout>;
         {/* Benefits Section */}
@@ -562,6 +611,8 @@ export default function EducationSolutionsPage() {;
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                   ))}
                 </ul>
@@ -586,11 +637,14 @@ export default function EducationSolutionsPage() {;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {benefit}
 
+<<<<<<< HEAD
                       </div>;
                     ))}
                   </div>;
                 </motion && motion.div>;
               ))}
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             </div>
           </div>
@@ -637,5 +691,8 @@ export default function EducationSolutionsPage() {;
     </Layout>
 
     </>
+<<<<<<< HEAD
     </>
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';';
-export function Select({ children, className="",  value, onValueChange }) {;
+export function Select({ children, className='',  value, onValueChange }) {;
     return (<select className={`${baseClasses} ${className}`} value={value} onChange={onChange} disabled={disabled}>;
       {children}
     </select>);
@@ -17,10 +17,10 @@ export function SelectItem({ children, value }) {;`
       {children}
     </div>);
 }'
-export function SelectValue({ placeholder }) {';'"
-    return <span className="text-sm">{placeholder || 'Select an option'}</span>;'
-}';"
-export function SelectContent({ children, className="" }) {;`
+export function SelectValue({ placeholder }) {';''
+    return <span className='text-sm'>{placeholder || 'Select an option'}</span>;'
+}';'
+export function SelectContent({ children, className='' }) {;`
     return (<div className={`;
       absolute top-full left-0 right-0 z-50 mt-1 rounded-md border ;
       border-zion-blue-light/30 bg-zion-blue-dark/90 backdrop-blur-sm ;
@@ -28,8 +28,8 @@ export function SelectContent({ children, className="" }) {;`
     `}>;
       {children}
     </div>);'
-}';"
-export function SelectItem({ children, className="",  value, ...props }) {;`
+}';'
+export function SelectItem({ children, className='',  value, ...props }) {;`
     return (<div className={`;
         relative flex w-full cursor-pointer select-none items-center ;
         rounded-sm px-3 py-2 text-sm text-white outline-none ;
@@ -39,5 +39,5 @@ export function SelectItem({ children, className="",  value, ...props }) {;`
       `} data-value={value} {...props}>;
       {children}
     </div>);
-}'"
-'"'"`
+}''
+''''`

@@ -12,7 +12,7 @@ const Badge: React.FC<BadgeProps> = ({
   return (
     <div 
       className={`badge ${className}`}
-      data-testid="badge"
+      data-testid='badge'
     >
       {children || `Badge Component`}
     </div>

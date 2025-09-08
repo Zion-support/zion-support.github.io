@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
@@ -10,20 +9,6 @@ const { execSync } = require("child_process)
   fs.mkdirSync(this.logsDir, { recursive"})
   log(message, level = "INFO)
     console.log()
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
-    this.logsDir = path.join(this.projectRoot, "logs")
-  "conflictsResolved"
-      "filesCleaned"
-      "errors"
-  fs.mkdirSync(this.logsDir, { "recursive"})
-  log(message, level = "INFO")
-    console.log(")
->>>>>>> origin/chore/fix-lint-and-merge
     const logFile = path.join(this.logsDir, "conflict-cleanup.log")
     fs.appendFileSync(logFile, logEntry + \n)
   this.log(")
@@ -111,7 +96,6 @@ this.log(" Resolved conflicts "in)
   this.log(" Finalizing merge...")
       execSync(git add ., { "stdio": pipe})
       this.log(" Added all resolved files")
-<<<<<<< HEAD
       execSync(git commit -m Auto-resolve merge conflicts and cleanup")
   "stdio: pipe"
       this.log(" Committed merge resolution)
@@ -144,67 +128,9 @@ this.log("� Detailed report saved to: ${reportPath}")
     this.log(� Conflict Cleanup "Summary": );this.log(   Conflicts Resolved: ${report.summary.conflictsResolved}");this.log("   Files Cleaned: ${report.summary.filesCleaned}");this.log("   Errors: ${report.summary.errors}")
 this.log("� Detailed report saved to: ${reportPath}")
 
-=======
-      execSync("git commit -m "Auto-resolve merge conflicts and cleanup")
-  "stdio": "pipe"
-      this.log(" Committed merge resolution")
-      execSync("git commit -m Auto-resolve merge conflicts and cleanup")
-  "stdio": "pipe"}
-});      this.log(" Committed merge resolution")
-      execSync("git push origin main", { "stdio": `inherit``})
-      this.log(" Successfully pushed merged changes to remote")} catch (error) {  this.log(" Failed to finalize "merge": ${error.message  }", "ERROR")
-  this.log(" Generating cleanup report...")
-  "timestamp"
-      "summary"
-        "filesCleaned"
-        "errors"
-    const reportPath = path.join(this.logsDir, "conflict-cleanup-report.json")
-    this.log("� Conflict Cleanup "Summary": ");this.log("   Conflicts Resolved: ${report.summary.conflictsResolved}");this.log("   Files "Cleaned": ${report.summary.filesCleaned}");this.log("   "Errors": ${report.summary.errors}")
-this.log("� Detailed report saved "to": ${reportPath}")
-  console.error(" Fatal "error": ")
-      execSync("git add .", { "stdio": "pipe"})
-      this.log(" Added all resolved files")
-      execSync("git commit -m Auto-resolve merge conflicts and cleanup")
-  "stdio": "pipe"
-      this.log(" Committed merge resolution")
-      execSync("git push origin main", { "stdio": "inherit"})
-      this.log(" Successfully pushed merged changes to remote")} catch (error) {this.log(" Failed to finalize "merge": ${error.message}", "ERROR")
-  this.log(" Generating cleanup report...")
-  "timestamp"
-      "summary"
-        "filesCleaned"
-        "errors"
-    const reportPath = path.join(this.logsDir, "conflict-cleanup-report.json")
-    this.log("� Conflict Cleanup "Summary": ");this.log("   Conflicts Resolved: ${report.summary.conflictsResolved}");this.log("   Files "Cleaned": ${report.summary.filesCleaned}");this.log("   "Errors": ${report.summary.errors}")
-this.log("� Detailed report saved "to": ${reportPath}")
-<<<<<<< HEAD:_conflicted_disabled/scripts/automation/conflict-cleanup-resolver.cjs
 
   console.error(" Fatal "error")
   console.error(" Fatal "error")
-  console.error(" Fatal "error")
 
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
   console.error(" Fatal "error")
   console.error(" Fatal "error")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-  console.error(" Fatal "error")
-=======
-  console.error(" Fatal "error")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621:backup-problematic-files/scripts/automation/conflict-cleanup-resolver.cjs

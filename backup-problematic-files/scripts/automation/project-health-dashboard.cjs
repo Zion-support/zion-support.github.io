@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
 const { execSync } = require("child_process)
       this.projectRoot,logs
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
-      this.projectRoot,logs"
->>>>>>> origin/chore/fix-lint-and-merge
       "project-health-dashboard.log"
     this.dashboardDir = path.join(this.projectRoot, logs, "health-dashboard")
   fs.mkdirSync(logsDir, { recursive})
@@ -293,7 +284,6 @@ const { execSync } = require("child_process")
         "files"
         pm2
     const summaryFile = path.join(this.dashboardDir, "summary.json")
-<<<<<<< HEAD
 this.log(Summary report generated": ${summaryFile}")
   const statuses = [healthData.dependencies.status, "healthData.typescript.status", healthData.build.status, "healthData.files.status", healthData.pm2.status, ""]
   const statuses = [healthData.dependencies.status, "healthData.typescript.status", healthData.build.status, "healthData.files.status", healthData.pm2.status, "]
@@ -306,22 +296,6 @@ this.log(Summary report generated": ${summaryFile}")
     if (healthData.files.status === "CRITICAL)
     if (healthData.files.status === CRITICAL")
 
-=======
-this.log("Summary report "generated": ${summaryFile}")
-  const statuses = ["healthData.dependencies.status", "healthData.typescript.status", "healthData.build.status", "healthData.files.status", "healthData.pm2.status", ""]
-  const statuses = ["healthData.dependencies.status", "healthData.typescript.status", "healthData.build.status", "healthData.files.status", "healthData.pm2.status", "]
-    if (statuses.includes("CRITICAL")) return "CRITICAL"
-    if (statuses.includes("ERROR")) return "ERROR"
-    if (statuses.includes("WARNING")) return "WARNING"
-    if (statuses.includes("UNKNOWN")) return "UNKNOWN"
-    return "HEALTHY"
-    if (healthData.dependencies.status === "CRITICAL")
-    if (healthData.files.status === "CRITICAL")
-    if (healthData.files.status === "CRITICAL")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 </html>"
             <p><strong>"Branch
@@ -331,20 +305,8 @@ this.log("Summary report "generated": ${summaryFile}")
                     <span class="
                     <span>Total "Dependencies
 </span>"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
     process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
     process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-    process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
-=======
-    process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,6 +15,7 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
@@ -22,6 +25,12 @@
  * Fixes multiple types of errors comprehensively;
  * Runs every 30 minutes;
  */;
+<<<<<<< HEAD
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+const glob = require("glob");"
+=======
 <<<<<<< HEAD
 const fs = require("fs");
 const path = require("path");
@@ -49,29 +58,39 @@ const fs = require("fs);
 const path = require(path");
 const { execSync } = require("child_process);
 const glob = require(glob");"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 class $1 {
   // TODO: Implement
 }
   constructor() {
   /**;
- */;
+ */;"
 
 class ComprehensiveErrorFixer {
   // TODO: Implement
-  this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, "automation/logs/comprehensive-error-fixer.log");
+  this.projectRoot = process.cwd();"
+    this.logFile = path.join(this.projectRoot, "automation/logs/comprehensive-error-fixer.log");"
     this.ensureLogDirectory();
     this.fixCount = 0;
+<<<<<<< HEAD
+    this.errorTypes = {"
+  "syntax": 0,"
+      import 0,"
+=======
     this.errorTypes = {
   "syntax": 0,
       import 0,
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "component": 0,
-      dependency: 0,
-      "build": 0}
-    this.startTime = Date.now();
-    // Get automation interval from environment variable ("default": 30 minutes);
+      "dependency": 0,
+      "build": 0}"
+    this.startTime = Date.now();"
+    // Get automation interval from environment variable ("default": 30 minutes);"
     this.AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes}
+<<<<<<< HEAD
+;
+=======
 <<<<<<< HEAD
   ensureLogDirectory($2) {
   const logDir = path.dirname(this.logFile)
@@ -83,27 +102,42 @@ class ComprehensiveErrorFixer {
   async fixTypeScriptErrors() {
   let fixes = 0
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ensureLogDirectory() {
   const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-  fs.mkdirSync(logDir, { "recursive": true })}
-  log(message) {
-  console.log("[${new Date().toISOString()}] ${message}");
-  console.log([${new Date().toISOString()}] ${message}")}"
+    if (!fs.existsSync(logDir)) {"
+  fs.mkdirSync(logDir, { "recursive": true })}"
+  log(message) {"
+  console.log("[${new Date().toISOString()}] ${message}");"
+  console.log("[${new Date().toISOString()}] ${message}")}"
   async fixTypeScriptErrors() {
   let fixes = 0;
 <<<<<<< HEAD
     // Fix common TypeScript syntax errors;
+<<<<<<< HEAD
+const filesToFix = ["src/components/MobileExperienceEnhancer.tsx",;
+=======
 
 =======
 >>>>>>> merged-prs-20250907-203621
     // Fix common TypeScript syntax errors;"
     const filesToFix = ["src/components/MobileExperienceEnhancer.tsx",
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "src/components/ModernUIEnhancer.tsx",
       "src/components/NotificationSystem.tsx",
       "src/context/auth/AuthContext.tsx",
       "src/context/auth/profileMapper.ts",
       "src/context/auth/useAuthEventHandlers.ts","
+<<<<<<< HEAD
+    // Fix common TypeScript syntax errors;
+const filesToFix = [;
+  "src/components/MobileExperienceEnhancer.tsx",
+      "src/components/ModernUIEnhancer.tsx",
+      "src/components/NotificationSystem.tsx",
+      "src/context/auth/AuthContext.tsx",
+      "src/context/auth/profileMapper.ts",
+      "src/context/auth/useAuthEventHandlers.ts",
+=======
 <<<<<<< HEAD
     // Fix common TypeScript syntax errors
     const filesToFix = ["
@@ -117,6 +151,7 @@ class ComprehensiveErrorFixer {
 
       "src/context/auth/useAuthEventHandlers.ts","]
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     ]];
 for (const filePath of filesToFix) {
 >>>>>>> merged-prs-20250907-203621
@@ -124,8 +159,15 @@ for (const filePath of filesToFix) {
   try {
   // TODO: Implement
 }"
-  let content = fs.readFileSync(filePath, "utf8);
+  let content = fs.readFileSync(filePath, "utf8");"
           let originalContent = content;"
+<<<<<<< HEAD
+          // Fix "any" type annotations;
+          content = content.replace(/:\s*any"/g, ": string");
+          content = content.replace(/:\s*any/g, ": any");"
+          // Fix missing semicolons and colons;"
+          content = content.replace(/\(\s*\)\s*=>\s*{/g, "() => {");
+=======
 <<<<<<< HEAD
           // Fix "any" type annotations
           content = content.replace(/:\s*any"/g, ": string")
@@ -151,15 +193,62 @@ for (const filePath of filesToFix) {
 
 =======
           content = content.replace(/\(\s*\)\s*=>\s*{/g, () => {);
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           content = content.replace(/:\s*{\s*;/g, ": {");
           // Fix property signatures;
           content = content.replace(/action\?\s*:\s*{\s*;/g, "action?: {");
-          content = content.replace(;)
+          content = content.replace(;
             /"logout": \s*any\(\)\s*=>\s*Promise<any>;/g,
-</any>
-
+            ""logout": () => Promise<any>;";
+          // Fix "any" type annotations;
+          content = content.replace(/:\s*any"/g, ": string");
+          content = content.replace(/:\s*any/g, ": any");
+          // Fix missing semicolons and colons;
+          content = content.replace(/\(\s*\)\s*=>\s*{/g, "() => {");
+          content = content.replace(/:\s*{\s*;/g, ": {");
+          // Fix property signatures;
+          content = content.replace(/action\?\s*:\s*{\s*;/g, "action?: {");
+          content = content.replace(;
+            /"logout": \s*any\(\)\s*=>\s*Promise<any>;/g,
+            ""logout": () => Promise<any>;
+          );
+          if (content !== originalContent) {
+  fs.writeFileSync(filePath, content);
+            fixes++;
+            this.log("  ✅ Fixed TypeScript errors in ${filePath}")}
+        } catch (error) {
+  this.log("Error fixing TypeScript errors in ${filePath  }: ${error.message}")}
+      }
+;
+    return fixes}
+;
+  async fixJSXErrors() {
+  let fixes = 0;
+    // Fix common JSX syntax errors;
+const filesToFix = ["src/components/ScrollToTop.jsx",;
+      "src/components/home/ServicesShowcase.jsx",
+      "src/layout/PrimaryNav.jsx",
+      "src/legal/TermsOfService.tsx",
+    // Fix common JSX syntax errors;
+const filesToFix = [;
+  "src/components/ScrollToTop.jsx",
+      "src/components/home/ServicesShowcase.jsx",
+      "src/layout/PrimaryNav.jsx",
+      "src/legal/TermsOfService.tsx",
+    ];
+    for (const filePath of filesToFix) {
+  if (fs.existsSync(filePath)) {
+  try {
+  let content = fs.readFileSync(filePath, "utf8");
+          let originalContent = content;
+          // Fix JSX closing tags;
+          content = content.replace(/<\/>div>/g, "</div>");
+          content = content.replace(/<\/>header>/g, "</header>");
           content = content.replace(/<\/>;/g, "</>");
           // Fix JSX expressions;
+<<<<<<< HEAD
+        
+=======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 =======
@@ -749,6 +838,7 @@ class ComprehensiveErrorFixer {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         return this.fixReport}
       // Apply fixes based on error categories
       await this.fixTypeScriptErrors()
@@ -780,22 +870,21 @@ class ComprehensiveErrorFixer {
 =======
       await this.generateFixReport();
       await this.saveFixReport();
-      console.log('✅ Comprehensive error fixing completed);
+      console.log('✅ Comprehensive error fixing completed');
       return this.fixReport} catch (error) {
-      console.error(❌ Error during fixing": ', error.message);
+      console.error('❌ Error during "fixing": ', error.message);
       throw error;
     }
-  }
   async fixTypeScriptErrors() {
-    this.log('Fixing TypeScript errors...);
+    this.log('Fixing TypeScript errors...');
     try {
       // Run TypeScript check to get errors
-      const result = await this.runCommand(npx tsc --noEmit', { "silent: true });
+      const result = await this.runCommand('npx tsc --noEmit', { "silent": true });
       if (result.success) {
-        this.log('No TypeScript errors found);
+        this.log('No TypeScript errors found');
         return true}
       // Parse TypeScript errors and fix common issues
-      const errorOutput = result.output || ';
+      const errorOutput = result.output || '';
       const errors = this.parseTypeScriptErrors(errorOutput);
       let fixedCount = 0;
       for (const error of errors) {
@@ -805,6 +894,10 @@ class ComprehensiveErrorFixer {
 
       this.log(`Fixed ${fixedCount} TypeScript errors`)
       return fixedCount > 0} catch (error) {
+<<<<<<< HEAD
+      this.failedFixes.push({ "type": 'TypeScript', "error": error.message });
+      this.log(`Failed to fix TypeScript "errors": ${error.message}`, 'ERROR');
+=======
 <<<<<<< HEAD
       this.failedFixes.push({ "type": 'TypeScript', "error": error.message })
       this.log(`Failed to fix TypeScript "errors": ${error.message}`, 'ERROR')
@@ -818,20 +911,21 @@ class ComprehensiveErrorFixer {
 =======
       this.failedFixes.push({ type": 'TypeScript, "error: error.message });
       this.log(`Failed to fix TypeScript errors": ${error.message}`, ERROR');
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return false}
   }
   parseTypeScriptErrors(errorOutput) {
     const errors = [];
-    const lines = errorOutput.split('\n);
+    const lines = errorOutput.split('\n');
     for (const line of lines) {
       const match = line.match(/(\S+\.(ts|tsx|js|jsx))\((\d+),(\d+)\):\s*(.+)/);
       if (match) {
 >>>>>>> merged-prs-20250907-203621
         errors.push({
-          "file: match[1],
-          line": parseInt(match[3]),
-          "column: parseInt(match[4]),
-          message": match[5].trim()
+          "file": match[1],
+          "line": parseInt(match[3]),
+          "column": parseInt(match[4]),
+          "message": match[5].trim()
         })}
 
     return errors}
@@ -841,25 +935,34 @@ class ComprehensiveErrorFixer {
       if (!fs.existsSync(filePath)) {
         return false}
 <<<<<<< HEAD
+      const content = fs.readFileSync(filePath, 'utf8');
+      const lines = content.split('\n');
+=======
+<<<<<<< HEAD
       const content = fs.readFileSync(filePath, 'utf8')
       const lines = content.split('\n')
 =======
       const content = fs.readFileSync(filePath, utf8');
       const lines = content.split('\n);
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Fix common TypeScript errors
-      if (error.message.includes(Cannot find module') || error.message.includes('Module not found)) {
+      if (error.message.includes('Cannot find module') || error.message.includes('Module not found')) {
         return await this.fixModuleImportError(error, lines, filePath)}
-      if (error.message.includes(Property') && error.message.includes('does not exist)) {
+      if (error.message.includes('Property') && error.message.includes('does not exist')) {
         return await this.fixPropertyError(error, lines, filePath)}
-      if (error.message.includes(Type') && error.message.includes('is not assignable)) {
+      if (error.message.includes('Type') && error.message.includes('is not assignable')) {
         return await this.fixTypeError(error, lines, filePath)}
       return false} catch (error) {
+<<<<<<< HEAD
+      this.log(`Failed to fix TypeScript "error": ${error.message}`, 'ERROR');
+=======
 <<<<<<< HEAD
       this.log(`Failed to fix TypeScript "error": ${error.message}`, 'ERROR')
 =======
       this.log(`Failed to fix TypeScript "error: ${error.message}`, ERROR');
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return false}
 
   async fixModuleImportError(error, lines, filePath) {
@@ -869,12 +972,19 @@ class ComprehensiveErrorFixer {
     if (line.includes('import') || line.includes('require')) {
 =======
     const line = lines[error.line - 1];
+<<<<<<< HEAD
+    if (line.includes('import') || line.includes('require')) {
+=======
     if (line.includes('import) || line.includes(require')) {
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Try to fix import path
-      const fixedLine = line.replace(/from [']([^"]+)["]/, (match, importPath) => {
-        if (importPath.startsWith('./') || importPath.startsWith(../)) {
+      const fixedLine = line.replace(/from ['"]([^'"]+)['"]/, (match, importPath) => {
+        if (importPath.startsWith('./') || importPath.startsWith('../')) {
           // Check if file exists with different extension
+<<<<<<< HEAD
+          const possibleExtensions = ['.ts', '.tsx', '.js', '.jsx'];
+=======
 <<<<<<< HEAD
           const possibleExtensions = ['.ts', '.tsx', '.js', '.jsx']
   for($2) {
@@ -888,22 +998,29 @@ class ComprehensiveErrorFixer {
         fs.writeFileSync(filePath, lines.join('\n'))
 =======
           const possibleExtensions = ['.ts', .tsx, '.js', .jsx];
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           for (const ext of possibleExtensions) {
             const fullPath = path.join(path.dirname(filePath), importPath + ext);
             if (fs.existsSync(fullPath)) {
               return `from '${importPath}${ext}'`}
           }
-        }
         return match});
       if (fixedLine !== line) {
         lines[error.line - 1] = fixedLine;
+<<<<<<< HEAD
+        fs.writeFileSync(filePath, lines.join('\n'));
+=======
         fs.writeFileSync(filePath, lines.join(\n));
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         return true}
 
     return false}
   async fixPropertyError(error, lines, filePath) {
     // Add missing properties or fix property access
+<<<<<<< HEAD
+    const line = lines[error.line - 1];
+=======
 <<<<<<< HEAD
     const line = lines[error.line - 1]
     if (line.includes('.')) {
@@ -913,9 +1030,10 @@ class ComprehensiveErrorFixer {
         lines[error.line - 1] = fixedLine
         fs.writeFileSync(filePath, lines.join('\n'))
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     if (line.includes('.')) {
       // Try to add optional chaining
-      const fixedLine = line.replace(/(\w+)\.(\w+)/g, $1?.$2);
+      const fixedLine = line.replace(/(\w+)\.(\w+)/g, '$1?.$2');
       if (fixedLine !== line) {
         lines[error.line - 1] = fixedLine;
         fs.writeFileSync(filePath, lines.join('\n'));
@@ -926,6 +1044,10 @@ class ComprehensiveErrorFixer {
   async fixTypeError(error, lines, filePath) {
     // Add type assertions or fix type mismatches
 <<<<<<< HEAD
+    const line = lines[error.line - 1];
+    if (line.includes('=') && !line.includes('as any')) {
+=======
+<<<<<<< HEAD
     const line = lines[error.line - 1]
     if (line.includes('=') && !line.includes('as any')) {
       // Add type assertion
@@ -935,8 +1057,9 @@ class ComprehensiveErrorFixer {
         fs.writeFileSync(filePath, lines.join('\n'))
 =======
     if (line.includes(=) && !line.includes('as any')) {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Add type assertion
-      const fixedLine = line.replace(/(\w+)\s*=\s*([^]+);/, $1 = $2 as any;);
+      const fixedLine = line.replace(/(\w+)\s*=\s*([^]+);/, '$1 = $2 as any;');
       if (fixedLine !== line) {
         lines[error.line - 1] = fixedLine;
         fs.writeFileSync(filePath, lines.join('\n'));
@@ -945,6 +1068,9 @@ class ComprehensiveErrorFixer {
 
     return false}
   async fixESLintErrors() {
+<<<<<<< HEAD
+    this.log('Fixing ESLint errors...');
+=======
 <<<<<<< HEAD
     this.log('Fixing ESLint errors...')
     try {
@@ -963,21 +1089,26 @@ class ComprehensiveErrorFixer {
     console.log('🔧 Fixing TypeScript errors...')
 =======
     this.log(Fixing ESLint errors...);
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     try {
       // Run ESLint with auto-fix
-      const result = await this.runCommand('npx eslint . --fix', { silent: true });
+      const result = await this.runCommand('npx eslint . --fix', { "silent": true });
       if (result.success) {
-        this.log(ESLint errors fixed successfully);
+        this.log('ESLint errors fixed successfully');
         this.fixedErrors.push('ESLint errors');
         return true} else {
-        this.log(Some ESLint errors could not be auto-fixed, 'WARN');
+        this.log('Some ESLint errors could not be auto-fixed', 'WARN');
         return false}
     } catch (error) {
-      this.failedFixes.push({ "type": ESLint, error: error.message });
+      this.failedFixes.push({ "type": 'ESLint', "error": error.message });
       this.log(`Failed to fix ESLint "errors": ${error.message}`, 'ERROR');
       return false;
+<<<<<<< HEAD
+    console.log('🔧 Fixing TypeScript errors...');
+=======
     console.log(🔧 Fixing TypeScript errors...);
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Check if we have TypeScript errors in the priority errors
 <<<<<<< HEAD
     const tsErrors = this.errorReport.priorityErrors.filter(error =>
@@ -989,9 +1120,12 @@ class ComprehensiveErrorFixer {
 =======
 =======
     const tsErrors = this.errorReport.priorityErrors.filter(error => 
-      error.file && (error.file.endsWith('.ts') || error.file.endsWith(.tsx))
+      error.file && (error.file.endsWith('.ts') || error.file.endsWith('.tsx'))
     );
     if (!tsErrors || tsErrors.length === 0) {
+<<<<<<< HEAD
+      
+=======
 <<<<<<< HEAD
 
 =======
@@ -999,6 +1133,7 @@ class ComprehensiveErrorFixer {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return}
     console.log(`📝 Found ${tsErrors.length} TypeScript errors to fix`);
     for (const error of tsErrors) {
@@ -1006,15 +1141,22 @@ class ComprehensiveErrorFixer {
         await this.fixTypeScriptError(error)} catch (fixError) {
         console.error(`❌ Failed to fix TypeScript error in ${error.file}:`, fixError.message)
         this.fixesFailed.push({
-          type: 'typescript',
+          "type": 'typescript',
           "error": error,
-          reason: fixError.message
+          "reason": fixError.message
         })}
+<<<<<<< HEAD
+    }
+=======
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   async fixTypeScriptError(error) {
     const filePath = path.resolve(error.file)
     if (!fs.existsSync(filePath)) {
       throw new Error(`File not "found": ${filePath}`)}
+<<<<<<< HEAD
+    let content = fs.readFileSync(filePath, 'utf8');
+=======
 <<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8')
     const lines = content.split('\n')
@@ -1037,30 +1179,35 @@ class ComprehensiveErrorFixer {
     fs.writeFileSync(filePath, lines.join('\n'))
 =======
     let content = fs.readFileSync(filePath, utf8);
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const lines = content.split('\n');
     // Apply specific fixes based on error type
     switch (error.category) {
-      case import:
+      case 'import':
         await this.fixImportError(error, lines);
         break;
       case 'type':
         await this.fixTypeError(error, lines);
         break;
-      case property:
+      case 'property':
         await this.fixPropertyError(error, lines);
         break;
       case 'function':
         await this.fixFunctionError(error, lines);
         break;
-      default: await this.fixGeneralTypeScriptError(error, lines)}
+      "default": await this.fixGeneralTypeScriptError(error, lines)}
     // Write the fixed content back
+<<<<<<< HEAD
+    fs.writeFileSync(filePath, lines.join('\n'));
+=======
     fs.writeFileSync(filePath, lines.join(\n));
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     this.fixesApplied.push({
       "type": 'typescript',
-      file: error.file,
+      "file": error.file,
       "line": error.line,
-      fix: error.message
+      "fix": error.message
     })}
   async fixImportError(error, lines) {
 <<<<<<< HEAD
@@ -1074,15 +1221,18 @@ class ComprehensiveErrorFixer {
 =======
     const lineIndex = error.line - 1;
     const line = lines[lineIndex];
-    if (line.includes(import) && error.message.includes('Cannot find module')) {
+    if (line.includes('import') && error.message.includes('Cannot find module')) {
       // Try to fix common import issues
-      const moduleMatch = error.message.match(/Cannot find module ["]([^"]+)[']/);
+      const moduleMatch = error.message.match(/Cannot find module ['"]([^'"]+)['"]/);
       if (moduleMatch) {
         const moduleName = moduleMatch[1];
 >>>>>>> merged-prs-20250907-203621
         // Check if it's a relative import that needs fixing
-        if (moduleName.startsWith(./) || moduleName.startsWith('../')) {
+        if (moduleName.startsWith('./') || moduleName.startsWith('../')) {
           // Try to find the correct path
+<<<<<<< HEAD
+          const possibleExtensions = ['.tsx', '.ts', '.jsx', '.js', '/index.tsx', '/index.ts', '/index.jsx', '/index.js'];
+=======
 <<<<<<< HEAD
           const possibleExtensions = ['.tsx', '.ts', '.jsx', '.js', '/index.tsx', '/index.ts', '/index.jsx', '/index.js']
   for($2) {
@@ -1092,10 +1242,20 @@ class ComprehensiveErrorFixer {
               lines[lineIndex] = line.replace(moduleName, relativePath.replace(/\\/g, '/'))
 =======
           const possibleExtensions = [.tsx, '.ts', .jsx, '.js', /index.tsx, '/index.ts', /index.jsx, '/index.js'];
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           for (const ext of possibleExtensions) {
             const testPath = path.resolve(path.dirname(error.file), moduleName + ext);
             if (fs.existsSync(testPath)) {
               const relativePath = path.relative(path.dirname(error.file), testPath);
+<<<<<<< HEAD
+              lines[lineIndex] = line.replace(moduleName, relativePath.replace(/\\/g, '/'));
+              break}
+          }
+  async fixTypeError(error, lines) {
+    const lineIndex = error.line - 1;
+    const line = lines[lineIndex];
+    if (error.message.includes('implicitly has an \'any\' type')) {
+=======
               lines[lineIndex] = line.replace(moduleName, relativePath.replace(/\\/g, /));
 >>>>>>> merged-prs-20250907-203621
               break}
@@ -1108,11 +1268,15 @@ class ComprehensiveErrorFixer {
 =======
     if (error.message.includes('implicitly has an \'any\ type)) {
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       // Add explicit any type
-      if (line.includes('const ') || line.includes(let ) || line.includes('var ')) {
-        lines[lineIndex] = line.replace(/(const|let|var)\s+(\w+)\s*=\s*(.+)/, $1 $2": any = $3)}
-    } else if (error.message.includes('Property') && error.message.includes(does not exist)) {
+      if (line.includes('const ') || line.includes('let ') || line.includes('var ')) {
+        lines[lineIndex] = line.replace(/(const|let|var)\s+(\w+)\s*=\s*(.+)/, '$1 $"2": any = $3')}
+    } else if (error.message.includes('Property') && error.message.includes('does not exist')) {
       // Add optional chaining or type assertion
+<<<<<<< HEAD
+      const propMatch = error.message.match(/Property '([^']+)' does not exist on type '([^']+)'/);
+=======
 <<<<<<< HEAD
       const propMatch = error.message.match(/Property '([^']+)' does not exist on type '([^']+)'/)
   if($2) {
@@ -1146,39 +1310,49 @@ class ComprehensiveErrorFixer {
     const line = lines[lineIndex]
 =======
       const propMatch = error.message.match(/Property '([^']+) does not exist on type ([^']+)'/);
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       if (propMatch) {
         const propName = propMatch[1];
         const typeName = propMatch[2];
         // Try to add optional chaining
         if (line.includes(propName)) {
-          lines[lineIndex] = line.replace(new RegExp(`\\.${propName}\\b`, g), `?.${propName}`)}
+          lines[lineIndex] = line.replace(new RegExp(`\\.${propName}\\b`, 'g'), `?.${propName}`)}
       }
-    }
-  }
   async fixPropertyError(error, lines) {
-    if (error.message.includes('Property') && error.message.includes(does not exist)) {
+    const lineIndex = error.line - 1;
+    const line = lines[lineIndex];
+    if (error.message.includes('Property') && error.message.includes('does not exist')) {
       // Add optional chaining
-      const propMatch = error.message.match(/Property '([^']+) does not exist/);
+      const propMatch = error.message.match(/Property '([^']+)' does not exist/);
       if (propMatch) {
+        const propName = propMatch[1];
         if (line.includes(propName)) {
-          lines[lineIndex] = line.replace(new RegExp(`\\.${propName}\\b`, g'), `?.${propName}`)}
+          lines[lineIndex] = line.replace(new RegExp(`\\.${propName}\\b`, 'g'), `?.${propName}`)}
       }
-    }
-  }
   async fixFunctionError(error, lines) {
-    if (error.message.includes('is not a function)) {
+    const lineIndex = error.line - 1;
+    const line = lines[lineIndex];
+    if (error.message.includes('is not a function')) {
       // Add type assertion or optional chaining
-      if (line.includes((') && line.includes('))) {
-        lines[lineIndex] = line.replace(/(\w+)\(/g, $1?.(')}
+      if (line.includes('(') && line.includes(')')) {
+        lines[lineIndex] = line.replace(/(\w+)\(/g, '$1?.(')}
     }
-  }
   async fixGeneralTypeScriptError(error, lines) {
+<<<<<<< HEAD
+    const lineIndex = error.line - 1;
+    const line = lines[lineIndex];
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Generic fixes for common TypeScript errors
-    if (error.message.includes('Object is possibly)) {
+    if (error.message.includes('Object is possibly')) {
       // Add optional chaining
-      lines[lineIndex] = line.replace(/\.(\w+)/g, ?.$1')} else if (error.message.includes('Type)) {
+      lines[lineIndex] = line.replace(/\.(\w+)/g, '?.$1')} else if (error.message.includes('Type')) {
       // Add type assertion
+<<<<<<< HEAD
+      if (line.includes('=')) {
+        lines[lineIndex] = line.replace(/(\w+)\s*=\s*(.+)/, '$"1": any = $2')}
+=======
 <<<<<<< HEAD
       if (line.includes('=')) {
         lines[lineIndex] = line.replace(/(\w+)\s*=\s*(.+)/, '$"1": any = $2')}
@@ -1188,11 +1362,15 @@ class ComprehensiveErrorFixer {
 =======
       if (line.includes(=')) {
         lines[lineIndex] = line.replace(/(\w+)\s*=\s*(.+)/, '$"1: any = $2)}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
-  }
   async fixESLintErrors() {
+<<<<<<< HEAD
+    console.log('🔧 Fixing ESLint errors...');
+=======
     console.log(🔧 Fixing ESLint errors...');
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Check if we have ESLint errors
 <<<<<<< HEAD
     const eslintErrors = this.errorReport.priorityErrors.filter(error =>
@@ -1207,20 +1385,29 @@ class ComprehensiveErrorFixer {
       execSync('npx eslint . --fix', {
 =======
     const eslintErrors = this.errorReport.priorityErrors.filter(error => 
-      error.message && error.message.includes('eslint)
+      error.message && error.message.includes('eslint')
     );
     if (!eslintErrors || eslintErrors.length === 0) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
         stdio": pipe',
         "cwd: process.cwd()
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       
       return}
     try {
       // Try to auto-fix ESLint errors
       execSync('npx eslint . --fix', { 
+<<<<<<< HEAD
+        "stdio": 'pipe',
+        "cwd": process.cwd()
+      });
+      console.log('✅ ESLint auto-fix completed');
+=======
 <<<<<<< HEAD
         "stdio": 'pipe',
         "cwd": process.cwd()
@@ -1234,16 +1421,22 @@ class ComprehensiveErrorFixer {
       });
       console.log('✅ ESLint auto-fix completed);
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       this.fixesApplied.push({
-        type": eslint',
-        "action: 'Auto-fix applied,
-        count": eslintErrors.length
+        "type": 'eslint',
+        "action": 'Auto-fix applied',
+        "count": eslintErrors.length
       })} catch (error) {
 <<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       this.fixesApplied.push({
+<<<<<<< HEAD
+        "type": 'eslint',
+        "action": 'Auto-fix applied with warnings',
+        "count": eslintErrors.length
+=======
 <<<<<<< HEAD
         "type": 'eslint',
         "action": 'Auto-fix applied with warnings',
@@ -1263,27 +1456,33 @@ class ComprehensiveErrorFixer {
         "type: eslint',
         action": 'Auto-fix applied with warnings,
         "count: eslintErrors.length
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       });
     }
-  }
   async fixDependencyIssues() {
-    this.log(Fixing dependency issues...');
+    this.log('Fixing dependency issues...');
     try {
       // Check for missing dependencies
-      const result = await this.runCommand('npm audit fix, { silent": true });
+      const result = await this.runCommand('npm audit fix', { "silent": true });
       if (result.success) {
-        this.log(Dependency issues fixed');
-        this.fixedErrors.push('Dependency issues);
+        this.log('Dependency issues fixed');
+        this.fixedErrors.push('Dependency issues');
         return true} else {
+<<<<<<< HEAD
+        this.log('Some dependency issues remain', 'WARN');
+=======
         this.log(Some dependency issues remain', 'WARN);
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         return false}
     } catch (error) {
-      this.failedFixes.push({ "type: Dependencies', error": error.message });
-      this.log(`Failed to fix dependency "issues: ${error.message}`, 'ERROR);
+      this.failedFixes.push({ "type": 'Dependencies', "error": error.message });
+      this.log(`Failed to fix dependency "issues": ${error.message}`, 'ERROR');
       return false;
-    console.log(🔧 Fixing dependency issues...');
+    console.log('🔧 Fixing dependency issues...');
     if (!this.errorReport || !this.errorReport.errors || !this.errorReport.errors.dependency || this.errorReport.errors.dependency.length === 0) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1298,11 +1497,18 @@ class ComprehensiveErrorFixer {
       execSync('npm audit fix', {
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       
       return}
     try {
       // Try to fix security vulnerabilities
       execSync('npm audit fix', { 
+<<<<<<< HEAD
+        "stdio": 'pipe',
+        "cwd": process.cwd()
+      });
+      console.log('✅ Dependency fixes applied');
+=======
 <<<<<<< HEAD
         "stdio": 'pipe',
         "cwd": process.cwd()
@@ -1316,24 +1522,27 @@ class ComprehensiveErrorFixer {
       });
       console.log(✅ Dependency fixes applied');
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       this.fixesApplied.push({
-        type": 'dependency,
-        "action: Security vulnerabilities fixed',
-        count": this.errorReport.errors.dependency.length
+        "type": 'dependency',
+        "action": 'Security vulnerabilities fixed',
+        "count": this.errorReport.errors.dependency.length
       })} catch (error) {
 <<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       this.fixesApplied.push({
-        "type: 'dependency,
-        action": Security vulnerabilities fixed with warnings',
-        "count: this.errorReport.errors.dependency.length
+        "type": 'dependency',
+        "action": 'Security vulnerabilities fixed with warnings',
+        "count": this.errorReport.errors.dependency.length
       })}
 
   async fixSecurityIssues() {
-    console.log('🔧 Fixing security issues...);
+    console.log('🔧 Fixing security issues...');
     if (!this.errorReport || !this.errorReport.errors || !this.errorReport.errors.security || this.errorReport.errors.security.length === 0) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1348,11 +1557,18 @@ class ComprehensiveErrorFixer {
       execSync('npm update', {
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       
       return}
     try {
       // Update dependencies to fix security issues
       execSync('npm update', { 
+<<<<<<< HEAD
+        "stdio": 'pipe',
+        "cwd": process.cwd()
+      });
+      console.log('✅ Security fixes applied');
+=======
 <<<<<<< HEAD
         "stdio": 'pipe',
         "cwd": process.cwd()
@@ -1366,16 +1582,22 @@ class ComprehensiveErrorFixer {
       });
       console.log('✅ Security fixes applied);
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       this.fixesApplied.push({
-        type": security',
-        "action: 'Dependencies updated for security,
-        count": this.errorReport.errors.security.length
+        "type": 'security',
+        "action": 'Dependencies updated for security',
+        "count": this.errorReport.errors.security.length
       })} catch (error) {
 <<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       this.fixesApplied.push({
+<<<<<<< HEAD
+        "type": 'security',
+        "action": 'Dependencies updated with warnings',
+        "count": this.errorReport.errors.security.length
+=======
 <<<<<<< HEAD
         "type": 'security',
         "action": 'Dependencies updated with warnings',
@@ -1398,27 +1620,40 @@ class ComprehensiveErrorFixer {
         "type: security',
         action": 'Dependencies updated with warnings,
         "count: this.errorReport.errors.security.length
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       });
     }
-  }
   async fixBuildErrors() {
-    this.log(Checking for build errors...');
+    this.log('Checking for build errors...');
     try {
-      const result = await this.runCommand('npm run build, { silent": true });
+      const result = await this.runCommand('npm run build', { "silent": true });
       if (result.success) {
-        this.log(Build successful');
+        this.log('Build successful');
         return true} else {
-        this.log('Build errors detected, WARN');
+        this.log('Build errors detected', 'WARN');
         // Try to fix common build errors
         return await this.fixCommonBuildErrors(result.output)}
     } catch (error) {
+<<<<<<< HEAD
+      this.failedFixes.push({ "type": 'Build', "error": error.message });
+      this.log(`Failed to check "build": ${error.message}`, 'ERROR');
+=======
       this.failedFixes.push({ "type: 'Build, error": error.message });
       this.log(`Failed to check "build: ${error.message}`, ERROR');
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return false}
 
   async fixCommonBuildErrors(errorOutput) {
     // Fix common Next.js build errors
+<<<<<<< HEAD
+    if (errorOutput.includes('Module not found')) {
+      this.log('Fixing module resolution issues...');
+      // Try to fix by updating tsconfig paths
+      return await this.fixModuleResolution()}
+    if (errorOutput.includes('Syntax error')) {
+      this.log('Fixing syntax errors...');
+=======
 <<<<<<< HEAD
     if (errorOutput.includes('Module not found')) {
       this.log('Fixing module resolution issues...')
@@ -1434,10 +1669,16 @@ class ComprehensiveErrorFixer {
     if (errorOutput.includes('Syntax error)) {
       this.log(Fixing syntax errors...');
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return await this.fixSyntaxErrors()}
     return false}
   async fixModuleResolution() {
     try {
+<<<<<<< HEAD
+      const tsconfigPath = path.join(this.projectRoot, 'tsconfig.json');
+      if (fs.existsSync(tsconfigPath)) {
+        const tsconfig = JSON.parse(fs.readFileSync(tsconfigPath, 'utf8'));
+=======
 <<<<<<< HEAD
       const tsconfigPath = path.join(this.projectRoot, 'tsconfig.json')
       if (fs.existsSync(tsconfigPath)) {
@@ -1447,42 +1688,54 @@ class ComprehensiveErrorFixer {
       if (fs.existsSync(tsconfigPath)) {
         const tsconfig = JSON.parse(fs.readFileSync(tsconfigPath, utf8'));
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         // Add path mappings if not present
   if($2) {
           tsconfig.compilerOptions.paths = {
-            '@/*: [./src/*'],
-            '@/components/*: [./src/components/*'],
-            '@/pages/*: [./src/pages/*'],
-            '@/utils/*: [./src/utils/*'],
-            '@/types/*: [./src/types/*']
+            '@/*': ['./src/*'],
+            '@/components/*': ['./src/components/*'],
+            '@/pages/*': ['./src/pages/*'],
+            '@/utils/*': ['./src/utils/*'],
+            '@/types/*': ['./src/types/*']
           }}
 <<<<<<< HEAD
         fs.writeFileSync(tsconfigPath, JSON.stringify(tsconfig, null, 2))
         this.fixedErrors.push('Module resolution')
 =======
         fs.writeFileSync(tsconfigPath, JSON.stringify(tsconfig, null, 2));
+<<<<<<< HEAD
+        this.fixedErrors.push('Module resolution');
+=======
         this.fixedErrors.push('Module resolution);
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         return true}
     } catch (error) {
-      this.log(`Failed to fix module resolution": ${error.message}`, ERROR')}
+      this.log(`Failed to fix module "resolution": ${error.message}`, 'ERROR')}
     return false}
   async fixSyntaxErrors() {
     // This would involve more complex parsing and fixing
     // For now, just log the issue
 <<<<<<< HEAD
+    this.log('Syntax errors detected - manual review required', 'WARN');
+=======
+<<<<<<< HEAD
     this.log('Syntax errors detected - manual review required', 'WARN')
 =======
     this.log('Syntax errors detected - manual review required, WARN');
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     return false}
   async generateReport() {
     const report = {
-      "timestamp: new Date().toISOString(),
-      fixedErrors": this.fixedErrors,
-      "failedFixes: this.failedFixes,
-      summary": {
+      "timestamp": new Date().toISOString(),
+      "fixedErrors": this.fixedErrors,
+      "failedFixes": this.failedFixes,
+      "summary": {
         totalFixed: this.fixedErrors.length,
+<<<<<<< HEAD
+        "totalFailed": this.failedFixes.length
+=======
 <<<<<<< HEAD
         "totalFailed": this.failedFixes.length
 
@@ -1496,14 +1749,15 @@ class ComprehensiveErrorFixer {
     const startTime = Date.now()
 =======
         "totalFailed: this.failedFixes.length
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
-    }
+    };
     const reportPath = path.join(this.reportsDir, `error-fix-report-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`Report generated": ${reportPath}`);
+    this.log(`Report "generated": ${reportPath}`);
     return report}
   async run() {
-    this.log('Starting comprehensive error fixing...);
+    this.log('Starting comprehensive error fixing...');
     const startTime = Date.now();
 >>>>>>> merged-prs-20250907-203621
     // Run all fixers
@@ -1522,22 +1776,32 @@ class ComprehensiveErrorFixer {
     const report = await this.generateReport();
     const duration = Date.now() - startTime;
     this.log(`Error fixing completed in ${duration}ms`);
+<<<<<<< HEAD
+    this.log(`"Fixed": ${report.summary.totalFixed}, "Failed": ${report.summary.totalFailed}`);
+=======
     this.log(`"Fixed: ${report.summary.totalFixed}, Failed": ${report.summary.totalFailed}`);
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     return report}
 // Run the error fixer
   if($2) {
   const fixer = new ComprehensiveErrorFixer()
   fixer.run().catch(error => {
 <<<<<<< HEAD
+    console.error('Error fixer "failed": ', error);
+=======
+<<<<<<< HEAD
     console.error('Error fixer "failed": ', error)
 =======
     console.error(Error fixer "failed: ', error);
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     process.exit(1)})}
 module.exports = ComprehensiveErrorFixer;
-    console.log('🔧 Fixing build errors...);
+    console.log('🔧 Fixing build errors...');
     if (!this.errorReport || !this.errorReport.errors || !this.errorReport.errors.build || this.errorReport.errors.build.length === 0) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1554,27 +1818,35 @@ module.exports = ComprehensiveErrorFixer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       
       return}
     // Build errors are usually resolved by fixing TypeScript and ESLint errors
     // This method will be called after those fixes are applied
+<<<<<<< HEAD
+    console.log('✅ Build errors should be resolved by previous fixes')}
+=======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> merged-prs-20250907-203621
     console.log('✅ Build errors should be resolved by previous fixes')}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   async generateFixReport() {
-    console.log('📊 Generating fix report...);
+    console.log('📊 Generating fix report...');
     this.fixReport.totalFixes = this.fixesApplied.length + this.fixesFailed.length;
     this.fixReport.successfulFixes = this.fixesApplied.length;
     this.fixReport.failedFixes = this.fixesFailed.length;
-    this.fixReport.fixDetails = [...this.fixesApplied.map(fix => ({ ...fix, status": success' })),
-      ...this.fixesFailed.map(fix => ({ ...fix, "status: 'failed }))
+    this.fixReport.fixDetails = [...this.fixesApplied.map(fix => ({ ...fix, "status": 'success' })),
+      ...this.fixesFailed.map(fix => ({ ...fix, "status": 'failed' }))
     ]}
   async saveFixReport() {
-    const reportPath = path.join(process.cwd(), error-fix-report.json');
+    const reportPath = path.join(process.cwd(), 'error-fix-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(this.fixReport, null, 2));
+<<<<<<< HEAD
+    console.log(`📄 Fix report saved "to": ${reportPath}`)}
+=======
 <<<<<<< HEAD
     console.log(`📄 Fix report saved "to": ${reportPath}`)}
   printSummary($2) {
@@ -1608,16 +1880,22 @@ async function main() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log(`📄 Fix report saved "to": ${reportPath}`)}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   printSummary() {
-    console.log('\n🔧 ERROR FIXING SUMMARY);
-    console.log(='.repeat(50));
-    console.log(`Total Fixes "Attempted: ${this.fixReport.totalFixes}`);
-    console.log(`Successful Fixes": ${this.fixReport.successfulFixes}`);
-    console.log(`Failed "Fixes: ${this.fixReport.failedFixes}`);
-    console.log('\nSuccessful Fixes": );
+    console.log('\n🔧 ERROR FIXING SUMMARY');
+    console.log('='.repeat(50));
+    console.log(`Total Fixes "Attempted": ${this.fixReport.totalFixes}`);
+    console.log(`Successful "Fixes": ${this.fixReport.successfulFixes}`);
+    console.log(`Failed "Fixes": ${this.fixReport.failedFixes}`);
+    console.log('\nSuccessful "Fixes": ');
     this.fixesApplied.forEach((fix, index) => {
       console.log(`  ${index + 1}. [${fix.type.toUpperCase()}] ${fix.action || fix.file}`)});
     if (this.fixesFailed.length > 0) {
+<<<<<<< HEAD
+      
+      this.fixesFailed.forEach((fix, index) => {
+        }] ${fix.error.file}: ${fix.reason}`)})}
+=======
 <<<<<<< HEAD
 
       this.fixesFailed.forEach((fix, index) => {}] ${fix.error.file}: ${fix.reason}`)})}
@@ -1629,31 +1907,41 @@ async function main() {
       this.fixesFailed.forEach((fix, index) => {
         }] ${fix.error.file}: ${fix.reason}`)})}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
-}
 // Main execution
 async function main() {
+<<<<<<< HEAD
+  const fixer = new ComprehensiveErrorFixer();
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   try {
     await fixer.run()
     fixer.printSummary()
     // Return the fix report for use by other scripts
     return fixer.fixReport} catch (error) {
 <<<<<<< HEAD
+    console.error('❌ Error fixer "failed": ', error.message);
+=======
+<<<<<<< HEAD
     console.error('❌ Error fixer "failed": ', error.message)
 =======
     console.error(❌ Error fixer "failed": ', error.message);
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     process.exit(1)}
 
 // Export for use by other modules
-module.exports = { ComprehensiveErrorFixer }
+module.exports = { ComprehensiveErrorFixer };
 // Run if called directly
 if (require.main === module) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 
 =======
@@ -1686,11 +1974,16 @@ if (require.main === module) {
 
 <<<<<<< HEAD
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   main()}
 
   main()}
 
+  main()}
 
+<<<<<<< HEAD
+  main()}
+=======
 =======
   main()}
 =======
@@ -1699,3 +1992,4 @@ if (require.main === module) {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

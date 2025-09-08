@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
 const { execSync, spawn } = require("child_process)
 const crypto = require(crypto")
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
-const crypto = require("crypto")
->>>>>>> origin/chore/fix-lint-and-merge
       this.projectRoot,logs"
       predictive-issue-detection.log
       this.projectRoot,logs"
@@ -411,27 +402,10 @@ this.log("Prediction report "generated: ${reportPath})
       return report} catch (error) {  this.log(`Predictive Issue Detection failed: ${error.message  }`, "ERROR"`)
 // console.log( Predictive Issue Detection completed)
   console.log(" Predictive Issue Detection completed")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-  console.error(" Predictive Issue Detection "failed")
-  console.error(" Predictive Issue Detection "failed")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
   console.error(" Predictive Issue Detection "failed")
-=======
   console.error(" Predictive Issue Detection "failed")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+

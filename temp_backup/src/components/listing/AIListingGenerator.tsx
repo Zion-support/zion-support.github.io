@@ -44,7 +44,7 @@ if (.error) {) {$2;}
       setGeneratedContent ((data as any)?.generated || null)toast ({title: "Content Generated",description: "AI has created optimized listing content for you.";}
       })} catch (error) {logErrorToProduction ('Error generating content:', { data: error}"
 }),toast ({title: "Generation Failed",description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",variant: "destructive";}"
-      })} finally {setIsLoading(false)}},const handleApply = (if (generatedContent && onApplyGenerated) {onApplyGenerated(generatedContent),toast({title: "Content Applied";"
+      })} finally {setIsLoading(false)},const handleApply = (if (generatedContent && onApplyGenerated) {onApplyGenerated(generatedContent),toast({title: "Content Applied";"
         description: "The generated content has been applied to your listing.";) => {
   return $3;}
 }"
@@ -77,7 +77,7 @@ if (.error) {) {$2;}
       })if (error) {throw new Error(error && error.message)}if (data && (data as any).error) {throw new Error((data as any).error)}setGeneratedContent((data as any)?.generated || null)toast({title: "Content Generated",description: "AI has created optimized listing content for you.";}
       })} catch (error) {logErrorToProduction('Error generating content:', { data: error}"
 }),toast({title: "Generation Failed",description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",variant: "destructive";}
-      })} finally {setIsLoading(false)}}
+      })} finally {setIsLoading(false)}
 "
 const handleApply = (if (generatedContent && onApplyGenerated) {onApplyGenerated(generatedContent)toast({title: "Content Applied",description: "The generated content has been applied to your listing.";) => {
   return $3;}
@@ -87,7 +87,7 @@ if ( {) {$2;}
 }"
       onApplyGenerated (generated_content)toast ({title: "Content Applied",description: "The generated content has been applied to your listing.";}
       })}"
-  }}},return (<div className="space-y-6" />;"
+  }},return (<div className="space-y-6" />;"
       <Card className="border border-zion-blue-light bg-zion-blue-dark" />;
         <CardHeader />;"
           <CardTitle className="flex items-center text-white" />;"

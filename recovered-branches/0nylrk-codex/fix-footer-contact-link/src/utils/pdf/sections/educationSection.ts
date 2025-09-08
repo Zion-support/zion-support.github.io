@@ -2,6 +2,7 @@ import { jsPDF  } from 'jspdf';
 import { Education  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
 
+<<<<<<< HEAD
 
 
   doc && doc.setFontSize(16);
@@ -24,14 +25,21 @@ import { PdfThemeColors  } from '../themeConfig';
     if (yPos > 260) {
 
 
+=======
+      
+      yPos += (descriptionLines && descriptionLines.length * 5) + 20
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     } else {
       yPos += 20
 
+<<<<<<< HEAD
 import { jsPDF } from 'jspdf',;
 import { Education } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { formatDate } from '../formatters',;
 export function addEducationSection(;
   doc: jsPDF,;
@@ -94,13 +102,25 @@ export function addEducationSection(;
     } else {;
       yPos += 20;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }
 
   }
 
+<<<<<<< HEAD
   return yPos + 5
+=======
+import {jsPDF} from 'jspdf';
+import {Education} from '@/types / resume';
+import {PdfThemeColors} from '../theme_config';
+    }
+
+  }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import {format_date} from '../formatters';
 export function addEducationSection (;
@@ -167,5 +187,8 @@ export function addEducationSection (;
   }
 
   return y_pos + 5;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

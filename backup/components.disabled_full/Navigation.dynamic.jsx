@@ -1,4 +1,4 @@
-const Navigation = dynamic(() => import("./Navigation"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Navigation' ,'
+const Navigation = dynamic(() => import('./Navigation'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default Navigation' ,'
 
 </p>'
 </p>'
@@ -23,8 +23,8 @@ const Navigation = dynamic(() => import("./Navigation"),{'; "loading": () => <p>
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const Navigation = dynamic(() => import(\"./Navigation\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default Navigation\' ,const Navigation = dynamic(() => import(\"./Navigation\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default Navigation\" ,\"\"\";
-const Navigation = dynamic(() => import(\"./Navigation\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default Navigation' ,';
+const Navigation = dynamic(() => import(\'./Navigation\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default Navigation\' ,const Navigation = dynamic(() => import(\'./Navigation\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default Navigation\' ,\'\'\';
+const Navigation = dynamic(() => import(\'./Navigation\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default Navigation' ,';
 </p>';
 </p>';
 </p>';
@@ -60,7 +60,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
 </p>';
 </p>'</p>';
-const Navigation = dynamic(() => import(\"./Navigation\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default Navigation' ,'
+const Navigation = dynamic(() => import(\'./Navigation\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default Navigation' ,'
 </p>'
 </p>'
 </p>'

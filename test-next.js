@@ -1,7 +1,10 @@
 const { execSync } = require('child_process');
 
 console.log('Testing Next.js installation...');
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 try {
   // Check if Next.js is installed
@@ -17,13 +20,21 @@ try {
 }
 const { execSync } = require($2);
 console.log($2);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 try {
   // Check if Next.js is installed
   const nextVersion = execSync('npx next --version', { encoding: 'utf8' });
   console.log('Next.js version:', nextVersion.trim());
 } catch (error) {
+<<<<<<< HEAD
 
   console.error('Error:', error.message)
 }
 
+=======
+  console.error('Error:', error.message)
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,5 +1,6 @@
 // comment;
 export class authService {}}
+<<<<<<< HEAD
 
 
   async get() {};
@@ -9,6 +10,15 @@ export class authService {}}
       throw error}
 
 
+=======
+;
+  async get() {};
+      const response = await fetch("${this.baseUrl}/auth")}
+      return await response.json()}
+    } catch (error) {}}
+      throw error}
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 // Create and export a singleton instance;
 const authService = new AuthService();
 export default authService;
@@ -18,6 +28,7 @@ export { API_BASE_URL };
 export { API_BASE_URL };
 export { API_BASE_URL };
 
+<<<<<<< HEAD
 
 
 export class authService {}} ; async get() {}; const response = await fetch("${this && this.baseUrl}/auth");,} return await response && response.json();,} } catch (error) {}} throw error;,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
@@ -31,3 +42,7 @@ export class authService {}} ; async get() {}; const response = await fetch("${t
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
+=======
+export class authService {}} ; async get() {}; const response = await fetch("${this.baseUrl}/auth");,} return await response.json();,} } catch (error) {}} throw error;,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
+export class authService {}} ; async get() {}; const response = await fetch("${this.baseUrl}/auth"),} return await response.json(),} } catch (error) {}} throw error,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -16,13 +16,14 @@ const { execSync } = require('child_process')
 =======
 <<<<<<< HEAD
 
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    console.error('Automation system "failed")
 const fs = require('fs')
-const path = require(path')
+const path = require('path')
 
 
 const { execSync } = require('child_process')
+<<<<<<< HEAD
+=======
 console.log( Enhanced Automation System Starting...')
         this.logDir = 'automation-reports
         this.timestamp = new Date().toISOString().replace(/[:.]/g, -')
@@ -160,16 +161,14 @@ console.log(' Enhanced Automation System Starting...')
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     console.error('Automation system "failed")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
@@ -178,3 +177,4 @@ console.log(' Enhanced Automation System Starting...')
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

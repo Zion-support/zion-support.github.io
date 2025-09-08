@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 const fs = require("$1)
 const path = require($1")
@@ -10,22 +9,6 @@ const { execSync, spawn } = require("child_process)
     this.logFile = path.join();      __dirname,.., ""logs,pm2-automation-launcher.log");"
       fs.mkdirSync(logDir, { recursive})
       fs.mkdirSync(logDir, { ""recursive})
-=======
-
-<<<<<<< HEAD
-
-const fs = require("$1")
-const path = require("$1")
-const { execSync, spawn } = require("child_process")
-      __dirname,.."
-      "logs",pm2-automation-launcher.log"
-      __dirname,.."
-      "logs",pm2-automation-launcher.log"
-const fs = require("fs")";const path = require("path")";const { execSync, spawn } = require("child_process")""
-    this.logFile = path.join();      __dirname,..", ""logs",pm2-automation-launcher.log"");"
-      fs.mkdirSync(logDir, { "recursive"})
-      fs.mkdirSync(logDir, { ""recursive"})
->>>>>>> origin/chore/fix-lint-and-merge
     const logMessage = `[${timestamp}] ${message}\n`;``
       const configPath = path.join(__dirname, ..", "ecosystem.config.cjs);;      if (fs.existsSync(configPath)) {"}
       throw new Error("ecosystem.config.cjs not found);} catch (error) {this.log(" Failed to load "config: ${error.message}");"
@@ -169,27 +152,8 @@ process.on("SIGINT)
       case "report:;        await launcher.generateReport();"
       case "help:;      default"
   } catch (error) {launcher.log(` Command failed``})
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
-process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
-=======
-process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+

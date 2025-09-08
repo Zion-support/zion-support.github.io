@@ -220,7 +220,32 @@ export default function JobDetailsPage() { return null; }
   }
 }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD:pages_backup/jobs/[slug].tsx
+<div className='fixed inset-x-0 bottom-0 z-30 bg-white/90 dark:bg-black/80 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-3'>
+          <div className='container mx-auto px-2'>
+            <EnhancedButton onClick={onApply} variant='primary' fullWidth>
+              Apply Now
+            </EnhancedButton>
+          </div>
+        </div>
+      )}
+    </div>
+);
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/jobs/[slug].tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba

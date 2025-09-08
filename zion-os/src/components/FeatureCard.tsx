@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 }
 
+=======
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -69,7 +74,10 @@ interface FeatureCardProps {id: number;
   isActive: boolean;
   onClick: () => void;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export /**
  * FeatureCard - Function description
 
@@ -83,8 +91,13 @@ function FeatureCard() {}
     yellow: "bg - yellow - 500 / 20 hover:bg - yellow - 500 / 30 border - yellow - 500 / 30","
     indigo: "bg - indigo - 500 / 20 hover:bg - indigo - 500 / 30 border - indigo - 500 / 30";
   }
+<<<<<<< HEAD
 
 
+=======
+  const color_classes = {
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <div;
 
@@ -98,6 +111,16 @@ if ( {) {
   $2
 }
           e.prevent_default ();
+<<<<<<< HEAD
+=======
+          on_click ();          e.preventDefault();
+          on_click ();
+          e.preventDefault();
+          onClick();
+        }
+      }
+      tab_index={0}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
       className={`card group cursor-pointer transition-all duration-300 ${isActive ? 'scale-105 shadow-2xl' : 'hover:scale-105';
@@ -167,10 +190,20 @@ export function FeatureCard({;
       </p>;
       <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200">;
         <Link;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           href={href}
           className="text-sm font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded";
           onClick={(e) => e.stopPropagation()}
+        >
+          Learn more →
+        </Link>
+      </div>
+    </div>
+  )
+}
 
         }
       }}

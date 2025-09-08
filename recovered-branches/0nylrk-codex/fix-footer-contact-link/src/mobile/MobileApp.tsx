@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { MobileThemeProvider } from "./theme/MobileThemeProvider";
@@ -20,6 +23,15 @@ import { MobileBrowse } from "./pages/MobileBrowse",
 import { MobileProjects } from "./pages/MobileProjects",
 import { MobileMessages } from "./pages/MobileMessages",
 
+<<<<<<< HEAD
+=======
+import { MobileResumeBuilder } from "./pages/MobileResumeBuilder",import { MobileJobPost } from "./pages/MobileJobPost";
+
+import { useAuth } from "@/hooks/useAuth";
+export function MobileApp() {
+  const { isAuthenticated } = useAuth();
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   return (
     <MobileThemeProvider>
@@ -37,12 +49,63 @@ import { MobileMessages } from "./pages/MobileMessages",
         <Route path="/resume" element={<MobileResumeBuilder />} />"
         <Route path="/post-job" element={<MobileJobPost />} />"
         <Route path="/profile" element={<div>Profile page</div>} />"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </MobileThemeProvider>
 
   )
+
+
+<<<<<<< HEAD
+=======
+import React from "react";
+import {Routes, Route, Navigate} from "react-router-dom";
+import {MobileThemeProvider} from "./theme/MobileThemeProvider";
+import {MobileOnboarding} from "./pages/MobileOnboarding";
+import {MobileHome} from "./pages/MobileHome";
+import {MobileBrowse} from "./pages/MobileBrowse";
+import {MobileProjects} from "./pages/MobileProjects";
+import {MobileMessages} from "./pages/MobileMessages";
+import {MobileResumeBuilder} from "./pages/MobileResumeBuilder";
+import {MobileJobPost} from "./pages/MobileJobPost";
+import {useAuth} from "@/hooks/useAuth";
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+import React from "react",;
+import { Routes, Route, Navigate } from "react-router-dom",;
+import { MobileThemeProvider } from "./theme/MobileThemeProvider",;
+import { MobileOnboarding } from "./pages/MobileOnboarding",;
+import { MobileHome } from "./pages/MobileHome",;
+import { MobileBrowse } from "./pages/MobileBrowse",;
+import { MobileProjects } from "./pages/MobileProjects",;
+import { MobileMessages } from "./pages/MobileMessages",;
+import { MobileResumeBuilder } from "./pages/MobileResumeBuilder",;
+import { MobileJobPost } from "./pages/MobileJobPost",;
+import { useAuth } from "@/hooks/useAuth",;
+<<<<<<< HEAD
+
+
+;
+
+=======
+
+;
+
+  return (
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+
+    <MobileThemeProvider>;
+      <Routes>;
+        <Route path="/onboarding" element={<MobileOnboarding />} />;
+        <Route;
+          path="/";
+<<<<<<< HEAD
+
+=======
 
 
 import React from "react",;
@@ -56,17 +119,23 @@ import { MobileMessages } from "./pages/MobileMessages",;
 import { MobileResumeBuilder } from "./pages/MobileResumeBuilder",;
 import { MobileJobPost } from "./pages/MobileJobPost",;
 import { useAuth } from "@/hooks/useAuth",;
-
-
 ;
-
-
+export function MobileApp() {;
+  const { isAuthenticated } = useAuth(),;
+  ;
+  return (;
     <MobileThemeProvider>;
       <Routes>;
         <Route path="/onboarding" element={<MobileOnboarding />} />;
-        <Route;
-          path="/";
-
+        <Route ;
+          path="/" ;
+          element={;
+            isAuthenticated ? <MobileHome /> :<Navigate to="/onboarding" />;
+          } ;
+          element={;
+            isAuthenticated ? <MobileHome /> : <Navigate to="/onboarding" />;
+          } ;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
         />;
@@ -74,7 +143,34 @@ import { useAuth } from "@/hooks/useAuth",;
         <Route path="/projects" element={<MobileProjects />} />;
         <Route path="/inbox" element={<MobileMessages />} />;
 
+<<<<<<< HEAD
         <Route path="/resume" element={<MobileResumeBuilder />} />;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
+<<<<<<< HEAD
+=======
+  );
+}
+        <Route path="/post - job" element={<MobileJobPost />} />;
+        <Route path="/profile" element={<div > Profile page</div>} />;
+        <Route path="*" element={<Navigate to="/" replace />} />;
+      </Routes>;
+    </MobileThemeProvider>);
+}
+
+</MobileThemeProvider>);
+}
+        <Route path="/post-job" element={<MobileJobPost />} />;
+        <Route path="/profile" element={<div>Profile page</div>} />;
+        <Route path="*" element={<Navigate to="/" replace />} />;
+      </Routes>;
+    </MobileThemeProvider>;
+  );
+}
+;
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -303,16 +303,16 @@ visible: {
   y: 0, opacity: 1, transition: {
   duration: 0.5 
 }
-                animate={{ opacity: 1, y: 0 }}
-                transition={{duration: 0.8 }
+                animate={ opacity: 1, y: 0 }
+                transition={duration: 0.8 }
 }
 }
-> <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Comprehensive </span> <br /> <span className="text-white" >Pricing & Plans</span> </motion.h1> <motion.p > Transparent pricing for all our revolutionary micro SaaS services. Choose the perfect plan for your business with guaranteed ROI and enterprise-grade reliability. </motion.p> {
+> <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent' > Comprehensive </span> <br /> <span className='text-white' >Pricing & Plans</span> </motion.h1> <motion.p > Transparent pricing for all our revolutionary micro SaaS services. Choose the perfect plan for your business with guaranteed ROI and enterprise-grade reliability. </motion.p> {
   /* Market Stats */ 
 }<motion.div </div>) ) 
 }</motion.div> {
   /* CTA Buttons */ 
-}<motion.div > View Pricing Tiers <DollarSign className="ml-2 w-5 h-5" /> </Button> <Button > Browse All Services <Search className="ml-2 w-5 h-5" /> </Button> </motion.div> </div> </div> </section> </div> </div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" > <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent" > Flexible Pricing </span> <br /> <span className="text-white" >for Every Business</span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee. </p> </motion.div> <motion.div > {
+}<motion.div > View Pricing Tiers <DollarSign className='ml-2 w-5 h-5' /> </Button> <Button > Browse All Services <Search className='ml-2 w-5 h-5' /> </Button> </motion.div> </div> </div> </section> </div> </div> </div> </section> > <h2 className='text-4xl md:text-5xl font-bold text-white mb-4' > <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent' > Flexible Pricing </span> <br /> <span className='text-white' >for Every Business</span> </h2> <p className='text-xl text-gray-300 max-w-3xl mx-auto' > Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee. </p> </motion.div> <motion.div > {
   pricingTiers.map ( (tier, index) => (<motion.div key= {
   tier.name 
 }variants= {
@@ -323,8 +323,8 @@ visible: {
 }
 }> <UltraFuturisticCard Most Popular </div> </div>) 
 }</div>) ) 
-}</div> <div className="text-center" > <Button className="w-full" ml-2 w-4 h-4"/> </Button> </div> </UltraFuturisticCard> </motion.div>) ) 
-}</motion.div> </div> </section> > <div className=" flex flex-col lg:flex-row gap-6 items-center justify-between"> <div className=" flex flex-wrap gap-4"> <select) ) 
+}</div> <div className='text-center' > <Button className='w-full' ml-2 w-4 h-4'/> </Button> </div> </UltraFuturisticCard> </motion.div>) ) 
+}</motion.div> </div> </section> > <div className=' flex flex-col lg:flex-row gap-6 items-center justify-between'> <div className=' flex flex-wrap gap-4'> <select) ) 
 }</select> <select > {
   priceRanges.map (range => (<option key= {
   range.value 
@@ -341,19 +341,19 @@ visible: {
 }> {
   option.label 
 }</option>) ) 
-}</select> </div> <div className=" flex items-center gap-4"> <div className=" relative"> <Search className=" absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"/> <input /> </div> <div className=" flex border border-gray-600 rounded-lg overflow-hidden"> <button onClick= {
+}</select> </div> <div className=' flex items-center gap-4'> <div className=' relative'> <Search className=' absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400'/> <input /> </div> <div className=' flex border border-gray-600 rounded-lg overflow-hidden'> <button onClick= {
   () => setViewMode ('grid') 
 }className= {
   `px-3 py-2 $ {
   viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400' 
 }` 
-}> <Grid className=" w-4 h-4"/> </button> <button onClick= {
+}> <Grid className=' w-4 h-4'/> </button> <button onClick= {
   () => setViewMode ('list') 
 }className= {
   `px-3 py-2 $ {
   viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400' 
 }` 
-}> <List className=" w-4 h-4"/> </button> </div> </div> </div> </motion.div> {
+}> <List className=' w-4 h-4'/> </button> </div> </div> </div> </motion.div> {
   /* Services Display */ 
 }<motion.div > {
   filteredServices.map ( (service, index) => (<motion.div key= {
@@ -367,11 +367,11 @@ visible: {
               <motion.div;
 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
 
-                initial={{ opacity: 0, y: 20 ,}
+                initial={ opacity: 0, y: 20 ,}
 }
-                animate={{ opacity: 1, y: 0 ,}
+                animate={ opacity: 1, y: 0 ,}
 }
-                transition={{ duration: 0.8, delay: 0.4 ,}
+                transition={ duration: 0.8, delay: 0.4 ,}
 }
                />;
                 {marketStats.map((stat, index) => (<div key={index} className='text-center' />;
@@ -388,11 +388,11 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
 
                 ))}
               </motion.div>;
-                initial={{ opacity: 0, y: 20 ,}
+                initial={ opacity: 0, y: 20 ,}
 }
-                animate={{ opacity: 1, y: 0 ,}
+                animate={ opacity: 1, y: 0 ,}
 }
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 ,}
+                transition={ duration: 0 && 0.8, delay: 0 && 0.4 ,}
 }>;
                 {marketStats && marketStats.map((stat, index) => (<div key={index} className='text-center' />;
                     <div className='text-3xl font-bold text-cyan-400 mb-2' />;
@@ -401,10 +401,10 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
                     <div className='text-gray-400 text-sm' />{stat && stat.label}</div>;
                     <div className='text-gray-500 text-xs' />;
                       {stat && stat.description}
-                    </div>                  </div>                  <div key={index} className="text-center" />;
-                    <div className="text-3xl font-bold text-cyan-400 mb-2" />{stat && stat.metric}</div>;
-                    <div className="text-gray-400 text-sm" />{stat && stat.label}</div>;
-                    <div className="text-gray-500 text-xs" />{stat && stat.description}</div>;
+                    </div>                  </div>                  <div key={index} className='text-center' />;
+                    <div className='text-3xl font-bold text-cyan-400 mb-2' />{stat && stat.metric}</div>;
+                    <div className='text-gray-400 text-sm' />{stat && stat.label}</div>;
+                    <div className='text-gray-500 text-xs' />{stat && stat.description}</div>;
                 ))}
 
               {/* CTA Buttons */}
@@ -412,11 +412,11 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
 <motion.div;
 className='flex flex-col sm:flex-row gap-4 justify-center items-center'
 
-                initial={{ opacity: 0, y: 20 ,}
+                initial={ opacity: 0, y: 20 ,}
 }
-                animate={{ opacity: 1, y: 0 ,}
+                animate={ opacity: 1, y: 0 ,}
 }
-                transition={{ duration: 0.8, delay: 0.6 ,}
+                transition={ duration: 0.8, delay: 0.6 ,}
 }
                />;
 <Button;
@@ -436,26 +436,26 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center'
                     document;}
                       .getElementById('services-pricing')?.scrollIntoView({ behavior: 'smooth' },
 }
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center";
-                initial={{ opacity: 0, y: 20 ,}
+                className='flex flex-col sm:flex-row gap-4 justify-center items-center';
+                initial={ opacity: 0, y: 20 ,}
 }
-                animate={{ opacity: 1, y: 0 ,}
+                animate={ opacity: 1, y: 0 ,}
 }
-                transition={{ duration: 0.8, delay: 0.6 ,}
+                transition={ duration: 0.8, delay: 0.6 ,}
 }
               >;
                 <Button;
-                  variant="primary";
-                  size="lg";
+                  variant='primary';
+                  size='lg';
                   onClick={() = /> document.getElementById('pricing-tiers')?.scrollIntoView({ behavior: 'smooth' },
 }
                 >;
                   View Pricing Tiers;
-                  <DollarSign className="ml-2 w-5 h-5" />;
+                  <DollarSign className='ml-2 w-5 h-5' />;
                 </Button>;
                 <Button;
-                  variant="futuristic";
-                  size="lg";
+                  variant='futuristic';
+                  size='lg';
                   onClick={() = /> document.getElementById('services-pricing')?.scrollIntoView({ behavior: 'smooth' })}
 
                 >
@@ -492,11 +492,11 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center'
           <div className='container mx-auto px-4' />
             <motion.div;
 className='text-center mb-16'
-              initial={{ opacity: 0, y: 20 ,}
+              initial={ opacity: 0, y: 20 ,}
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.6 }
              />
 
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-4' />
@@ -518,13 +518,13 @@ className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'
 }
               initial='hidden';
               whileInView='visible';
-              viewport={{once: true }
+              viewport={once: true }
 }
              />;
               {pricingTiers.map((tier, index) => (<motion.div;}
                   key={tier.name}
                   variants={itemVariants}
-                  whileHover={{y: -10 }
+                  whileHover={y: -10 }
 }
                  />;
                   <UltraFuturisticCard;
@@ -588,20 +588,20 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';}
 
 
         {/* Services Pricing Grid */}
-        <section id="services-pricing" className="py-20" />
-          <div className="container mx-auto px-4" />
+        <section id='services-pricing' className='py-20' />
+          <div className='container mx-auto px-4' />
             {/* Filters and Controls *,}
 }
             <motion&& motion.div;
-className='mb-8'              initial={{ opacity: 0, y: 20 ,}
-}        <section id="services-pricing" className="py-20" />;
+className='mb-8'              initial={ opacity: 0, y: 20 ,}
+}        <section id='services-pricing' className='py-20' />;
 
-          <div className="container mx-auto px-4" />;
+          <div className='container mx-auto px-4' />;
             {/* Filters and Controls */}
             <motion&& motion.div;
-              className='mb-8'              initial={{ opacity: 0, y: 20 ,}
-}        <section id="services-pricing" className="py-20" />;
-          <div className="container mx-auto px-4" />;
+              className='mb-8'              initial={ opacity: 0, y: 20 ,}
+}        <section id='services-pricing' className='py-20' />;
+          <div className='container mx-auto px-4' />;
             {/* Filters and Controls */}{/* Services Pricing Grid */}
 <section id='services-pricing' className='py-20' />;
           <div className='container mx-auto px-4' />;
@@ -610,11 +610,11 @@ className='mb-8'              initial={{ opacity: 0, y: 20 ,}
             <motion.div;
 className='mb-8'
 
-              initial={{ opacity: 0, y: 20 ,}
+              initial={ opacity: 0, y: 20 ,}
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={ duration: 0.6 }
 
              />
 <div className='flex flex-col lg:flex-row gap-6 items-center justify-between' />
@@ -680,14 +680,14 @@ type='text'
 
               initial='hidden'
               whileInView='visible'
-              viewport={{once: true }
+              viewport={once: true }
 }
              />
               {filteredServices.map((service, index) => (}
                 <motion.div;}
 key={service.id}
                   variants={itemVariants}
-                  whileHover={{y: -5 }
+                  whileHover={y: -5 }
 } />;
                   <UltraFuturisticCard;
 variant={(service.variant as any) || 'quantum-advanced'}
@@ -872,9 +872,9 @@ variant='futuristic'
             {filteredServices.length === 0 && (
 <motion.div;}
 className='text-center py-16'}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{duration: 0.6 }
+                initial={ opacity: 0 }
+                animate={ opacity: 1 }
+                transition={duration: 0.6 }
 }
                />
 <div className='text-6xl mb-4' />🔍</div>
@@ -890,14 +890,14 @@ variant='primary'
                     setSearchQuery('');
                     setSelectedCategory('All');}
                     setPriceRange('All');}
-                  }}
+                  }
 
                 >
                   Clear Filters;
                 </Button>
               </motion.div>
                      setPriceRange('All')
-                   }}
+                   }
                  >
                    Clear Filters;
                  </Button>
@@ -911,11 +911,11 @@ variant='primary'
           <div className='container mx-auto px-4 text-center' />
             <motion.div;
 className='max-w-4xl mx-auto'
-              initial={{ opacity: 0, y: 20 ,}
+              initial={ opacity: 0, y: 20 ,}
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{duration: 0.8 }
+              whileInView={ opacity: 1, y: 0 }
+              viewport={ once: true }
+              transition={duration: 0.8 }
 }
              />
 

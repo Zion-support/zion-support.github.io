@@ -41,6 +41,7 @@ export function KanbanColumn({;
       default:;
 
         return "bg-muted/30";
+<<<<<<< HEAD
 
     }
   },;
@@ -133,3 +134,5 @@ return (<Card className= {
 }</Droppable> </CardContent> </Card>) 
 }
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

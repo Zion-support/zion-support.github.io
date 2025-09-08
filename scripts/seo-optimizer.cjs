@@ -20,11 +20,15 @@ const path = require("path");
 
 const { execSync } = require('child_process');
 <<<<<<< HEAD
+const fs = require('fs');
+=======
+<<<<<<< HEAD
 const fs = require(fs');
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs');
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const path = require('path');
 >>>>>>> origin/main
 class SEOOptimizer {
@@ -83,12 +87,12 @@ optimizer.run().catch(console.error);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     const prefix = {
-      INFO': 'ℹ️,
-      SUCCESS': '✅,
-      ERROR': '❌,
-      WARNING': '⚠️,
-      PROGRESS': '🔄
-    }[type] || ℹ️';
+      'INFO': 'ℹ️',
+      'SUCCESS': '✅',
+      'ERROR': '❌',
+      'WARNING': '⚠️',
+      'PROGRESS': '🔄'
+    }[type] || 'ℹ️';
     console.log(`${prefix} [${timestamp}] ${message}`);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -97,14 +101,21 @@ optimizer.run().catch(console.error);
   }
   async optimizeSEO() {
 <<<<<<< HEAD
+    this.log('🔍 Starting SEO optimization...')
+=======
+<<<<<<< HEAD
     this.log('🔍 Starting SEO optimization...)
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // File extensions to analyze
-const fileExtensions = [.js', '.jsx, .ts', '.tsx]
+const fileExtensions = ['.js', '.jsx', '.ts', '.tsx']
 // Analyze a single file for SEO
 function analyzeFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, utf8')
+    const content = fs.readFileSync(filePath, 'utf8')
     const relativePath = path.relative(process.cwd(), filePat;h;)
+<<<<<<< HEAD
+    const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx', '.html'])
+=======
     const files = this.getAllFiles(this.projectRoot, ['.js, .jsx', '.ts, .tsx', '.html])
 =======
     this.log('🔍 Starting SEO optimization...');
@@ -117,31 +128,37 @@ function analyzeFile(filePath) {
     const relativePath = path.relative(process.cwd(), filePat;h;);
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx', '.html']);
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const seoReport = {
-      "timestamp: new Date().toISOString(),
-      metrics": {
+      "timestamp": new Date().toISOString(),
+      "metrics": {
         totalPages: 0,
-        "pagesWithTitle: 0,
-        pagesWithMetaDescription": 0,
-        "pagesWithH1: 0,
-        pagesWithImages": 0,
-        "averageTitleLength: 0,
-        averageMetaLength": 0
+        "pagesWithTitle": 0,
+        "pagesWithMetaDescription": 0,
+        "pagesWithH1": 0,
+        "pagesWithImages": 0,
+        "averageTitleLength": 0,
+        "averageMetaLength": 0
       },
+<<<<<<< HEAD
+      "issues": [],
+      "recommendations": []
+=======
 <<<<<<< HEAD
       "issues: [],
       recommendations": []
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
   for($2) {
       try {
-        const content = fs.readFileSync(file, utf8')
+        const content = fs.readFileSync(file, 'utf8')
         const analysis = this.analyzeFile(file, content)
   if($2) {
           seoReport.metrics.totalPages++
           this.updateMetrics(seoReport.metrics, analysis)
           this.checkIssues(seoReport, analysis)
       } catch (error) {
-        this.log(`Error analyzing ${file}: ${error.message}`, 'WARN)
+        this.log(`Error analyzing ${file}: ${error.message}`, 'WARN')
     this.generateRecommendations(seoReport)
     this.saveReport(seoReport)
     this.log(`✅ SEO optimization completed! Analyzed ${seoReport.metrics.totalPages} pages.`)
@@ -149,14 +166,14 @@ function analyzeFile(filePath) {
   analyzeFile($2) {
     const relativePath = path.relative(this.projectRoot, filePath)
     const analysis = {
-      "file: relativePath,
-      hasTitle": false,
-      "hasMetaDescription: false,
-      hasH1": false,
-      "hasImages: false,
-      titleLength": 0,
-      "metaLength: 0,
-      issues": []
+      "file": relativePath,
+      "hasTitle": false,
+      "hasMetaDescription": false,
+      "hasH1": false,
+      "hasImages": false,
+      "titleLength": 0,
+      "metaLength": 0,
+      "issues": []
     }
 =======
       "issues": [],
@@ -201,7 +218,11 @@ function analyzeFile(filePath) {
     }
     // Check for meta description
 <<<<<<< HEAD
+    const metaMatch = content.match(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']*)["']/i)
+=======
+<<<<<<< HEAD
     const metaMatch = content.match(/<meta[^>]*name=["]description['][^>]*content=[']([^"]*)["]/i)
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   if($2) {
       analysis.hasMetaDescription = true
       analysis.metaLength = metaMatch[1].length
@@ -250,11 +271,11 @@ function analyzeFile(filePath) {
   generateRecommendations($2) {
     const metrics = seoReport.metrics
   if($2) {
-      seoReport.recommendations.push('Add title tags to more pages (target: 80%+)')
+      seoReport.recommendations.push('Add title tags to more pages ("target": 80%+)')
   if($2) {
-      seoReport.recommendations.push(Add meta descriptions to more pages ("target": 80%+))
+      seoReport.recommendations.push('Add meta descriptions to more pages ("target": 80%+)')
   if($2) {
-      seoReport.recommendations.push('Add H1 tags to more pages (target: 90%+)')
+      seoReport.recommendations.push('Add H1 tags to more pages ("target": 90%+)')
   if($2) {
       metrics.averageTitleLength = Math.round(metrics.averageTitleLength / metrics.pagesWithTitle)
   if($2) {
@@ -266,7 +287,7 @@ function analyzeFile(filePath) {
   for($2) {
         const fullPath = path.join(dir, item)
         const stat = fs.statSync(fullPath)
-        if (stat.isDirectory() && !item.startsWith(.) && item !== 'node_modules') {
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
           files.push(...this.getAllFiles(fullPath, extensions))
 =======
       seoReport.issues.push(`${analysis.file}: Meta description too long (${analysis.metaLength} chars)`);
@@ -309,7 +330,11 @@ function analyzeFile(filePath) {
       }
     } catch (error) {
 <<<<<<< HEAD
+      // Skip directories that can't be read
+=======
+<<<<<<< HEAD
       // Skip directories that cant be read
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
     return files
   saveReport($2) {
@@ -325,19 +350,30 @@ function analyzeFile(filePath) {
       this.log(`📄 SEO report saved "to": ${this.reportFile}`);
     } catch (error) {
 <<<<<<< HEAD
+      this.log(`Failed to save SEO "report": ${error.message}`, 'ERROR')
+=======
+<<<<<<< HEAD
       this.log(`Failed to save SEO report: ${error.message}`, ERROR')
 =======
       this.log(`Failed to save SEO "report": ${error.message}`, 'ERROR');
     }
   }
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   async run() {
     try {
       return await this.optimizeSEO();
     } catch (error) {
-      this.log(`SEO optimizer "failed": ${error.message}`, 'ERROR);
+      this.log(`SEO optimizer "failed": ${error.message}`, 'ERROR');
       throw error;
     }
+<<<<<<< HEAD
+
+const optimizer = new SEOOptimizer();
+optimizer.run().catch(console.error);
+
+module.exports = SEOOptimizer;
+=======
   }
 }
 <<<<<<< HEAD
@@ -351,6 +387,7 @@ function analyzeFile(filePath) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Run if called directly
 if (require.main === module) {
   const optimizer = new SEOOptimizer();
@@ -364,13 +401,13 @@ if (require.main === module) {
     this.improvements = [];
 
 </title>
-            { tag: description', pattern: /<meta[^>]*name=[']description[][^>]*>/i, required: true },
+            { tag: 'description', pattern: /<meta[^>]*name=["']description["'][^>]*>/i, required: true },
 </meta>
-            { tag: keywords', pattern: /<meta[^>]*name=["']keywords["][^>]*>/i, required: false },
-            { tag: viewport', pattern: /<meta[^>]*name=[']viewport[][^>]*>/i, required: true },
-            { tag: og:title', pattern: /<meta[^>]*property=["']og:title["][^>]*>/i, required: false },
-            { tag: og:description', pattern: /<meta[^>]*property=[']og:description[][^>]*>/i, required: false },
-            { tag: og:image', pattern: /<meta[^>]*property=["']og:image["'][^>]*>/i, required: false }
+            { tag: 'keywords', pattern: /<meta[^>]*name=["']keywords["'][^>]*>/i, required: false },
+            { tag: 'viewport', pattern: /<meta[^>]*name=["']viewport["'][^>]*>/i, required: true },
+            { tag: 'og:title', pattern: /<meta[^>]*property=["']og:title["'][^>]*>/i, required: false },
+            { tag: 'og:description', pattern: /<meta[^>]*property=["']og:description["'][^>]*>/i, required: false },
+            { tag: 'og:image', pattern: /<meta[^>]*property=["']og:image["'][^>]*>/i, required: false }
           const titleMatches = content.match(/<title[^>]*>.*?<\/title>/gi);
           const headingPattern = /<h([1-6])[^>]*>.*?<\/h[1-6]>/gi;
 </h>
@@ -381,7 +418,7 @@ if (require.main === module) {
             headingLevels.forEach((level, index) => {
           const imgPattern = /<img[^>]*>/gi;
 
-<urlset xmlns=http://www.sitemaps.org/schemas/sitemap/0.9>"
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">"
 </urlset>
   <url>
 </url>
@@ -399,6 +436,8 @@ if (require.main === module) {
 
 =======
 module.exports = SEOOptimizer;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -410,7 +449,9 @@ module.exports = SEOOptimizer;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
+const optimizer = new SEOOptimizer();
 optimizer.run().catch(console.error);
 
 module.exports = SEOOptimizer;
@@ -419,6 +460,8 @@ module.exports = SEOOptimizer;
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -428,3 +471,4 @@ module.exports = SEOOptimizer;
 >>>>>>> origin/main
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

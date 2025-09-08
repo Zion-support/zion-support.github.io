@@ -323,7 +323,7 @@ export default function Dashboard() {;
                     <span className="text-zion-cyan font-medium">65%</span>
                   </div>
                   <div className="w-full bg-zion-blue rounded-full h-2">
-                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>
+                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={ width: "65%" }></div>
                   </div>
                   
                   <div className="flex justify-between items-center">
@@ -374,7 +374,7 @@ export default function Dashboard() {;
                             description: "Please try again",
                             variant: "destructive"})
                         }
-                      }}
+                      }
                     >
                       <Settings size={16} className="text-zion-purple" />
                       Send Onboarding Nudge
@@ -412,7 +412,7 @@ export default function Dashboard() {;
                             variant: 'destructive'
                           })
                         }
-                      }}
+                      }
                     >
                       <Bell size={16} className='text-yellow-500' />
                       Send System Alert
@@ -515,7 +515,7 @@ export default function Dashboard() {;
                         icon={<ShoppingBag className="h-8 w-8" />}
                         title="No Orders"
                         description="You haven't purchased anything yet."
-                        action={{ text: 'Visit Marketplace', href: '/marketplace' }}
+                        action={ text: 'Visit Marketplace', href: '/marketplace' }
                         className="border-none bg-transparent text-center";
                       />;
                     ) : (;

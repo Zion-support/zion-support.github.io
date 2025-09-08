@@ -1,26 +1,60 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from "react",
 import { cn } from "@/lib/utils",
 
 import React from "react";
 
+<<<<<<< HEAD
 
+=======
+
+  return (
+    <div;
+      className={cn("
+
+        "px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider",
+        className,
+      )}
+    <div 
+      className={cn("px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider", className)} 
+      {...props}
+    >
+      {children}
+    </div>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
   className?: string;
   children?: React && React.ReactNode;
 
+<<<<<<< HEAD
 
+=======
+  );
+
+  className?: string;
+  children?: React && React.ReactNode;
+
+  );
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       )}
       {...props}
     >;
       {children}
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export function SidebarGroupLabel(): any ({ className, children, ...props }: SidebarGroupLabelProps) {;
   return (
     <div
@@ -29,8 +63,11 @@ export function SidebarGroupLabel(): any ({ className, children, ...props }: Sid
       {children}
     </div>;
 
+<<<<<<< HEAD
   );
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   );
 
@@ -38,7 +75,10 @@ export function SidebarGroupLabel(): any ({ className, children, ...props }: Sid
 
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     </div>);
 interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {;
 
@@ -52,6 +92,7 @@ import { cn } from "@/lib/utils",;"
     >;
       {children}
     </div>;
+<<<<<<< HEAD
 
   );
 }
@@ -60,3 +101,10 @@ import { cn } from "@/lib/utils",;"
 
 
 
+=======
+  );
+}
+
+}
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

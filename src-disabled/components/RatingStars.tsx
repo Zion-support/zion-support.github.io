@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Star, StarHalf } from 'lucide-react'
 
 export function RatingStars({ value = 0, count }: { value?: number, count?: number }) {
@@ -18,7 +21,10 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
             />
           )
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         if (i === filled && half) {;
           return (;
@@ -35,7 +41,21 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
       {typeof count === 'number' && (
         <span className="text-xs ml-1">({count})</span>
 
+<<<<<<< HEAD
 
+=======
+}
+
+              className="h-4 w-4 fill-zion-cyan text-zion-cyan";
+            />;
+          );
+        }
+        return <Star key={i} className="h-4 w-4 text-zion-slate" />;
+      })}
+      {typeof count === 'number' && (;
+        <span className="text-xs ml-1">({count})</span>;
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       )}
 
@@ -50,5 +70,21 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
 }
 }
 
+<<<<<<< HEAD
+=======
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+});
+}{";
+  typeof count === 'number' && (<span className="text-xs ml-1" > ({;
+  count ;
+}) </span> ;
+}</div>) ;
+
+}'"
+>>>>>>> origin/cursor/delete-old-data-records-6bba

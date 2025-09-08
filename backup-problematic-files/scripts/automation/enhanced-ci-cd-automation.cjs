@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const { execSync } = require("child_process)
 const fs = require(fs")
@@ -10,20 +9,6 @@ console.log(" Starting Enhanced "CI/CD Automation...)
       build: { status: "pending", result}
       "testing": { status: pending, "result"}
       quality: { status: "pending", result}
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-console.log("" Starting Enhanced "CI/CD" Automation...")
-  "dependencies": { status: "pending", "result"}
-      "linting": { status: "pending", "result"}
-      "typeCheck": { status: "pending", "result"}
-      "build": { status: "pending", "result"}
-      "testing": { status: "pending", "result"}
-      "quality": { status: "pending", "result"}
->>>>>>> origin/chore/fix-lint-and-merge
     this.reportDir = path.join(process.cwd(), "ci-cd-reports"
   fs.mkdirSync(this.reportDir, { recursive})
   console.log(""� Installing dependencies...)
@@ -289,7 +274,6 @@ ${this.ciResults.dependencies.status === failure ? - **Error**: ${this.ciResults
 });console.log(Total "Checks: ${report.summary.total}`);console.log(""Passed: ${report.summary.passed} );console.log(""Failed: ${report.summary.failed} );console.log("Quality "Score: ${report.quality.score}%`)
   await this.runQualityChecks();"
 "
-<<<<<<< HEAD
       const report = await this.generateCIReport();
 
 // console.log("\n Pipeline "Summary: `);console.log(Duration: ${report.duration}
@@ -301,35 +285,8 @@ ${this.ciResults.dependencies.status === failure ? - **Error**: ${this.ciResults
   console.error(" CI/CD"" automation failed: ")
 // Start the "CI/CD"
 
-=======
-      const report = await this.generateCIReport();"
-"
-// console.log("\n Pipeline "Summary": `);console.log(Duration: ${report.duration}
-});console.log(Total "Checks": ${report.summary.total}`");console.log(""Passed": ${report.summary.passed} ");console.log(""Failed": ${report.summary.failed} ");console.log("Quality "Score"`)
-  console.log("\n Pipeline failed. Review failed checks above.")
-  console.log("\n Pipeline passed successfully! Ready for deployment.")
-  console.error(" Pipeline "failed": ")
-  console.error(" Pipeline "failed": ")
-  console.error(" ""CI/CD"" automation "failed": ")
-// Start the ""CI/CD""
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 // Start the "
 // Start the "
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-// Start the "
-=======
-// Start the "
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

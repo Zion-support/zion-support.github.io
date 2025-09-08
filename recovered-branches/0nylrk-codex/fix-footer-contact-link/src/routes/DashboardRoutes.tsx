@@ -1,5 +1,55 @@
+<<<<<<< HEAD
+=======
+
+import { Fragment } from "react";
+import { Route, Routes } from "react-router-dom";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import Dashboard from "@/pages/Dashboard";
+import ClientDashboard from "@/pages/ClientDashboard";
+import TalentDashboard from "@/pages/TalentDashboard";
+import CreatorDashboard from "@/pages/CreatorDashboard";
+import Analytics from "@/pages/Analytics";
+import ProjectMilestones from "@/pages/ProjectMilestones";
+import ProjectDetails from "@/pages/ProjectDetails";
+import ProjectRoom from "@/pages/ProjectRoom";
+import MessagingInbox from "@/pages/MessagingInbox";
+import Payments from "@/pages/Payments";
+import Interviews from "@/pages/Interviews";
+import Notifications from "@/pages/Notifications";
+import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";
+import HiringTracker from "@/pages/HiringTracker";
+import PortfolioBuilder from "@/pages/PortfolioBuilder";
+import Referrals from "@/pages/Referrals";
+import DeveloperPortal from "@/pages/DeveloperPortal";
+import WalletPage from "@/pages/Wallet";
+import ContractBuilder from "@/pages/ContractBuilder";
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+import {Route, Routes} from "react-router-dom";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import Dashboard from "@/pages/Dashboard";
+import ClientDashboard from "@/pages/ClientDashboard";
+import TalentDashboard from "@/pages/TalentDashboard";
+import CreatorDashboard from "@/pages/CreatorDashboard";
+import Analytics from "@/pages/Analytics";
+import ProjectMilestones from "@/pages/ProjectMilestones";
+import ProjectDetails from "@/pages/ProjectDetails";
+import ProjectRoom from "@/pages/ProjectRoom";
+import MessagingInbox from "@/pages/MessagingInbox";
+import Payments from "@/pages/Payments";
+import Interviews from "@/pages/Interviews";
+import Notifications from "@/pages/Notifications";
+import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";
+import HiringTracker from "@/pages/HiringTracker";
+import PortfolioBuilder from "@/pages/PortfolioBuilder";
+import Referrals from "@/pages/Referrals";
+import DeveloperPortal from "@/pages/DeveloperPortal";
+import WalletPage from "@/pages/Wallet";
+import ContractBuilder from "@/pages/ContractBuilder";
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -20,13 +70,45 @@ import HiringTracker from "@/pages/HiringTracker",
 import PortfolioBuilder from "@/pages/PortfolioBuilder",
 import Referrals from "@/pages/Referrals",
 import DeveloperPortal from "@/pages/DeveloperPortal",
+<<<<<<< HEAD
+=======
+
+import WalletPage from "@/pages/Wallet";
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
 
 
 
 const DashboardRoutes = () => {
 const DashboardRoutes = () => {;
+=======
+"
+import { Fragment } from "react","
+import { Route, Routes } from "react-router-dom","
+import { ProtectedRoute } from "@/components/ProtectedRoute","
+import Dashboard from "@/pages/Dashboard","
+import ClientDashboard from "@/pages/ClientDashboard","
+import TalentDashboard from "@/pages/TalentDashboard","
+import CreatorDashboard from "@/pages/CreatorDashboard","
+import Analytics from "@/pages/Analytics","
+import ProjectMilestones from "@/pages/ProjectMilestones","
+import ProjectDetails from "@/pages/ProjectDetails","
+import ProjectRoom from "@/pages/ProjectRoom","
+import MessagingInbox from "@/pages/MessagingInbox","
+import Payments from "@/pages/Payments","
+import Interviews from "@/pages/Interviews","
+import Notifications from "@/pages/Notifications","
+import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker","
+import HiringTracker from "@/pages/HiringTracker","
+import PortfolioBuilder from "@/pages/PortfolioBuilder","
+import Referrals from "@/pages/Referrals","
+import DeveloperPortal from "@/pages/DeveloperPortal","
+import WalletPage from "@/pages/Wallet","
+import ContractBuilder from "@/pages/ContractBuilder",
+const DashboardRoutes = () => {}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   return (
     <Routes>
@@ -97,6 +179,7 @@ const DashboardRoutes = () => {;
       />
       <Route"
         path="/messages"
+<<<<<<< HEAD
 
         element={
 
@@ -171,6 +254,9 @@ const DashboardRoutes = () => {;
       />;
       <Route
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         path="/developers"
         element={}
           <ProtectedRoute>
@@ -189,6 +275,7 @@ const DashboardRoutes = () => {;
       <Route"
         path="/dashboard/api-access"
 
+<<<<<<< HEAD
 
 export default DashboardRoutes,";
 import { Fragment } from "react",;"
@@ -230,10 +317,13 @@ const DashboardRoutes = () => {;
       />
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           <ProtectedRoute>;
             <TalentDashboard />;
           </ProtectedRoute>;
         }
+<<<<<<< HEAD
 
       />;
       <Route;
@@ -253,6 +343,62 @@ const DashboardRoutes = () => {;
       <Route;
         path="/messages";
 
+=======
+
+      />
+
+          <ProtectedRoute>
+            <CreatorDashboard />
+          </ProtectedRoute>
+
+        }
+      />
+
+          <ProtectedRoute>
+            <Analytics />
+          </ProtectedRoute>
+        }
+      />
+
+          <ProtectedRoute>
+            <ProjectMilestones />
+          </ProtectedRoute>
+        }
+
+      />
+
+            <ProjectDetails />;
+          </ProtectedRoute>;
+        }
+      />
+      <Route
+        path="/project/:id/room"
+        element={
+          <ProtectedRoute>
+            <ProjectRoom />
+          </ProtectedRoute>
+        }
+      />;
+
+        element={
+          <ProtectedRoute>;
+            <WalletPage />;
+          </ProtectedRoute>;
+        }
+      />;
+
+          </ProtectedRoute>;
+        }
+      />;
+      <Route;
+
+          </ProtectedRoute>;
+        }
+      />;
+      <Route;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           <ProtectedRoute>;
             <DeveloperPortal />;
           </ProtectedRoute>;
@@ -278,6 +424,7 @@ const DashboardRoutes = () => {;
   );
 },;
 
+<<<<<<< HEAD
 
 },
 
@@ -286,6 +433,9 @@ const DashboardRoutes = () => {;
 export default DashboardRoutes;
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         }
 
       />;
@@ -296,5 +446,38 @@ export default DashboardRoutes;
 ;
 
 
+<<<<<<< HEAD
 
 
+=======
+      />
+      <Route
+        path="/wallet"
+        element={
+          <ProtectedRoute>
+            <WalletPage />
+          </ProtectedRoute>
+        }
+      />;
+      <Route;
+        path="/dashboard/api-access";
+        element={;
+          <ProtectedRoute>;
+            <DeveloperPortal />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route;
+        path="/contract-builder";
+        element={;
+          <ProtectedRoute>;
+            <ContractBuilder />;
+          </ProtectedRoute>;
+        } ;
+      />;
+    </Routes>;
+  );
+},;
+
+export default DashboardRoutes;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 export interface TalentProfileData {;
 
@@ -39,8 +40,40 @@ export interface CategorizedSkills {;
 import { useState  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 
+=======
+export interface TalentProfileData {}
+';
+import {useState} from 'react';'
+import {supabase} from '@/integrations / supabase / client';'
+export interface TalentProfileData {export interface TalentProfileData {
+}
+import {supabase} from '@/integrations/supabase/client';'
+import {supabase} from '@/integrations/supabase/client';
+export interface TalentProfileData {;
 
 
+  name: string;
+  title: string;
+  bio: string;
+
+  skills: string[]
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+
+
+<<<<<<< HEAD
+=======
+export interface CategorizedSkills {;
+  programming: string[];
+  devops: string[];
+  platforms: string[];
+import { useState  } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+
+
+export interface TalentProfileData {
+export interface TalentProfileData {
+export interface TalentProfileData {export interface TalentProfileData {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export interface EnhancedProfile {
   summary: string,
@@ -62,7 +95,10 @@ export function useTalentProfileEnhancer() { return null; }
     setIsGenerating(true);
     setError(null),
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     try {
       // Call the Supabase Edge Function
       const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {
@@ -112,27 +148,59 @@ export function useTalentProfileEnhancer() { return null; }
         throw new Error(error.message);
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       }
       return data as EnhancedProfile;
     } catch (err: any) {}
 '
       setError(err && err.message || 'Failed to enhance profile'),
 
+<<<<<<< HEAD
 
 
   };
 
 
 
+=======
+
+export interface CategorizedSkills {
+
+  programming: string[];
+  devops: string[];
+
+
+  };
+
+  return {
+    enhanceProfile;
+    isGenerating;
+    error
+  }
+  };
+  
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return {
     enhanceProfile;
     isGenerating;
 
     error
 
+<<<<<<< HEAD
 
+=======
+  },;
+  return {;
+    enhanceProfile;
+    isGenerating;
+    error;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   other: string[];
 
 }
@@ -180,7 +248,10 @@ export interface EnhancedProfile {
   // TODO: Implement
   summary: string,
   categorizedSkills: CategorizedSkills;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export interface EnhancedProfile {
   summary: string,
@@ -219,6 +290,12 @@ export function useTalentProfileEnhancer() {
   }
 }
 
+<<<<<<< HEAD
+=======
+  }
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   }
 }
 
@@ -227,6 +304,12 @@ pr-12325
     enhance_profile;
 
   }
+<<<<<<< HEAD
+=======
+
+}
+  }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
 import { useState } from 'react',;
@@ -289,4 +372,10 @@ export function useTalentProfileEnhancer() {;
   }
 }
 
+<<<<<<< HEAD
 
+=======
+  }
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

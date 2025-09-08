@@ -1,5 +1,11 @@
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 const TalentRoutes = () => {
 
 const TalentRoutes = () => {;
@@ -29,9 +35,8 @@ const TalentRoutes = () => {;
   return (
     <Routes>;
       {/* Talent Routes */}
-      <Route path="/talent" element={<TalentDirectory />} />
-      <Route path="/talents" element={<TalentsPage />} />
 
+<<<<<<< HEAD
       <Route path="/talent/:id" element={<TalentProfilePage />} />
       <Route"
         path="/saved-talents"
@@ -60,12 +65,17 @@ const TalentRoutes = () => {;
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <Routes>;
       {/* Talent Routes */}
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '../components / ProtectedRoute';
 import TalentDirectory from "../pages / TalentDirectory";
@@ -102,6 +112,7 @@ const TalentRoutes = () =>: any {}
     </Routes>);
 }
 ;
+<<<<<<< HEAD
 
 
 },
@@ -112,3 +123,30 @@ export default TalentRoutes;
 
 
 
+=======
+
+export default TalentRoutes;
+
+  ),;
+},;
+;export default TalentRoutes,
+ const TalentRoutes = () => {
+  return (<Routes> {
+  /* Talent Routes */ 
+}<Route path="/talent" element= {
+  <TalentDirectory /> 
+}/> <Route path="/talents" element= {
+  <TalentsPage /> 
+}/> <Route path="/talent/:id" element= {
+  <TalentProfilePage /> 
+}/> <Route path="/saved-talents" element= {
+  <ProtectedRoute> 
+}/> <Route <CreateTalentProfile /> </ProtectedRoute> 
+}/> </Routes>) 
+};
+export default TalentRoutes;
+  );
+},;
+
+export default TalentRoutes;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

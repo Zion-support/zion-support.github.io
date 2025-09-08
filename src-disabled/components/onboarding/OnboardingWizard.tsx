@@ -1,5 +1,20 @@
+<<<<<<< HEAD
 
 
+=======
+import { useState, useEffect } from 'react''
+import { useRouter } from 'next/router''
+import { useAuth } from '@/hooks/useAuth''
+import { Button } from '@/components/ui/button''
+
+
+import { useState, useEffect  } from 'react';
+import { useRouter  } from 'next/router';
+import { useAuth  } from '@/hooks/useAuth';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useAuth } from '@/hooks/useAuth'
@@ -35,16 +50,55 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
 
+<<<<<<< HEAD
 import { cn } from '@/lib/utils';
+=======
+interface WizardStep {;
+  title: string;
+  description: string;
+  icon: React && React.ReactNode;
+import { useState, useEffect } from 'react
+import { useRouter } from 'next/router
+import { useAuth } from '@/hooks/useAuth
+import { Button } from '@/components/ui/button
+  // TODO: Implement
+}
+  Card;
+  CardContent;
+  CardFooter;
+  CardHeader;
+  CardTitle;
+} from '@/components/ui/card
+  Rocket;
+  FileText;
+  Users;
+  Calendar;
+  Eye;
+  MessageSquare;
+} from 'lucide-react
+import { cn } from '@/lib/utils
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card
+import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react
+interface WizardStep {;
+  title: string;,
+  description: string;
+  icon: React && React.ReactNode;,
+pr-12325
+  action: {;
+    text: string;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 interface WizardStep {
 
+<<<<<<< HEAD
   title: string;
   description: string;
   icon: React.ReactNode;
   action: {
     text: string;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   className?: string
 
 
@@ -73,15 +127,29 @@ pr-12325
 export function OnboardingWizard(): any ({;
   type,;
   onComplete,;
+<<<<<<< HEAD
 
 
 
+=======
+  type,
+  onComplete,
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   onSkip,;
   className,;
 }:,  OnboardingWizardProps) {;,
   const [currentStep, setCurrentStep] = useState(0);
+<<<<<<< HEAD
 
 
+=======
+  const router = useRouter(); // Changed from useNavigate to useRouter
+  className,;)
+}: OnboardingWizardProps) {;
+  const router = useRouter(); // Changed from useNavigate to useRouter;
+pr-12325
+  const { user } = useAuth()
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           </div>;
         </div>;
         <div className='flex flex-col items-center text-center p-4'>;
@@ -219,6 +287,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Reach out to the talent that fits your needs",
       icon: <MessageSquare className="h-6 w-6 text-zion-purple" />,
       action: {
+<<<<<<< HEAD
 
         text: 'Browse Talent',
         url: '/talent',
@@ -226,6 +295,8 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
     },
   ]
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         text: "Browse Talent",
         url: "/talent"
       }
@@ -268,6 +339,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Let our AI find the perfect opportunities for you",
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />,
       action: {
+<<<<<<< HEAD
 
         text: 'Enable Matchmaking',
         url: '/talent-dashboard',
@@ -299,6 +371,8 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   }
     >
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         text: "Enable Matchmaking",
         url: "/talent-dashboard"
       }
@@ -327,10 +401,27 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       onSkip();
     }
   },
+<<<<<<< HEAD
 
   
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
+=======
+  return (
+    <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
+      <CardHeader>
+        <CardTitle className='text-center text-white'>
+          {type === 'client'
+            ? 'Ready to find top IT talent?'
+            : "Let's build your professional profile"}
+        </CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        <div className='flex items-center mb-6'>;
+          {/* Step dots */}
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       <CardHeader>
         <CardTitle className="text-center text-white">
@@ -342,6 +433,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       <CardContent>
         <div className="flex items-center mb-6">
           {/* Step dots */}
+<<<<<<< HEAD
 
           <div className='flex items-center justify-center flex-1'>
           <div className='flex items-center justify-center flex-1'>
@@ -354,6 +446,9 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
                     ? 'bg-zion-purple scale-125'
 
 
+=======
+          <div className="flex items-center justify-center flex-1">
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             {steps.map((_, index) => (
               <div
                 key={index}
@@ -401,6 +496,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
 
+<<<<<<< HEAD
 
 
             onClick={handleSkip}
@@ -408,6 +504,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+            variant="ghost"""
+            className="text-zion-slate-light hover:text-white""
+            onClick={handleSkip}
+          >;
+<<<<<<< HEAD
+=======
+
+    ;"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       icon: <FileText className='h - 6 w - 6 text - zion - purple' />,
 
       icon: <Users className='h - 6 w - 6 text - zion - cyan' />,
@@ -466,5 +572,31 @@ pr-12325
       </CardFooter>;
     </Card>);
 }
+<<<<<<< HEAD
+=======
+;
+}}}}}}}]]
+;
+      </CardFooter>
+    </Card>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+                      ? 'bg - zion - cyan';')
+                      : 'bg - zion - blue - light')}              />))}
+        <div className='flex flex - col items - center text - center p - 4'>;
+          <div className='bg - gradient - to - br from - zion - blue to - zion - purple / 20 p - 4 rounded - full mb - 4'>;
+          <h3 className='text - xl font - bold text - white mb - 2'>;
+          <p className='text - zion - slate - light mb - 6'>;
+      <CardFooter className='flex flex - col space - y-2'>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+            variant='ghost';
+            className='text - zion - slate - light hover:text - white';
+            on_click={handle_skip}          >;
+
+    );
+pr-12325
+>>>>>>> origin/cursor/delete-old-data-records-6bba

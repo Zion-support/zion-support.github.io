@@ -1,9 +1,13 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
 }
 
+<<<<<<< HEAD
 ;
 
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
@@ -14,13 +18,18 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <>;
       <FormField
         control={form && form.control}
         name="budgetMin"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from './react';
 import { UseFormReturn  } from './react - hook - form';
 import {
@@ -35,13 +44,18 @@ import { TalentProfile  } from '@/types / talent';
 import { FormValues  } from './useHireRequestForm';
 interface BudgetFieldsProps {
   form: UseFormReturn < FormValues>;
+<<<<<<< HEAD
 
+=======
+  form: UseFormReturn<FormValues>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   talent?: TalentProfile;
 }
 
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 
   return (
+<<<<<<< HEAD
 
     <>;
       <FormField;
@@ -144,6 +158,9 @@ export function BudgetFields({ form, talent } BudgetFieldsProps) {;
               <div className="relative">;
                 <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>;
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 <Input
                   type="number"
                   className="pl-7 bg-zion-blue border-zion-blue-light text-white"
@@ -181,6 +198,7 @@ export function BudgetFields({ form, talent } BudgetFieldsProps) {;
   );
 }
 
+<<<<<<< HEAD
                 />;
               </div>;
             </FormControl>;
@@ -188,6 +206,8 @@ export function BudgetFields({ form, talent } BudgetFieldsProps) {;
           </FormItem>)}
       />;
     </>);
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }
 
@@ -247,6 +267,22 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 
 ;
 
+<<<<<<< HEAD
+=======
+
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
+<<<<<<< HEAD
+=======
+      <FormField;
+        control={form.control}
+  )
+}
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

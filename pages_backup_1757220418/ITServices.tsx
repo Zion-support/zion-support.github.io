@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +19,34 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+=======
+import { Star } from 'lucide-react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import Layout from '../components/Layout'
+
+              IT Services page is under construction.;
+            </p>;
+          </div>;
+        </div>;
+      </div>;
+import React from "react";
+import Layout from "../components/Layout";
+ursor/integrate-build-improve-and-re-verify-8f7d
+import React from 'react';
+import Layout from '../components/Layout';
+origin/automation-improvements-final
+
+import React from "react";
+import Layout from "../components/Layout";
+origin/main
+
+import React from "react";
+import Layout from "../components/Layout";
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export default function ITServices() {
   return (
     <Layout
@@ -54,24 +83,84 @@ origin/automation-improvements-final
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
     </Layout>
 
+=======
+export default function ITServices() {;
+  return (
+    <Layout
+      title="IT Services - Zion Tech Group"
+      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation.">;
+      <div className="min-h-screen bg-gray-50 py-20">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
+              IT Services;
+            </h1>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              Complete IT solutions to power your digital transformation.;
+            </p>;
+          </div>;
+          <div className="text-center">;
+            <p className="text-gray-600">;
+import React from './react';
+import Layout from "../components / Layout";
+;
+export default /**
+ * ITServices - Function description
+ */
+function ITServices() {
+  return (
+    <Layout;
+      title="IT Services - Zion Tech Group";
+      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation.";
+    >;
+      <div className="min - h-screen bg - gray - 50 py - 20">;
+        <div className="container mx - auto px - 4">;
+          <div className="text - center mb - 12">;
+            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
+              IT Services;
+            </h1>;
+            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
+              Complete IT solutions to power your digital transformation.;
+            </p>;
+          </div>;
+          <div className="text - center">;
+            <p className="text - gray - 600">;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               IT Services page is under construction.;
             </p>;
           </div>;
         </div>;
       </div>;
 
+<<<<<<< HEAD
 
 
+=======
+
+    </Layout>;
+  );
+}
+}
+
+
+}
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Star } from 'lucide-react';
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { 
   Server, 
   Shield, 
@@ -98,9 +187,14 @@ import {
   MapPin,
   FileText,
 
+<<<<<<< HEAD
   Cpu;
 } from 'lucide-react';
 
+=======
+  Cpu
+} from 'lucide-react'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 const itServices = [
   {
     category: "Managed IT Services",
@@ -264,8 +358,12 @@ const itServices = [
     ]
   }
 
+<<<<<<< HEAD
 ];
 
+=======
+]
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 const microSaaS = [
   {
     name: "IT Asset Management",
@@ -345,8 +443,12 @@ const microSaaS = [
     icon: Wifi
   }
 
+<<<<<<< HEAD
 ];
 
+=======
+]
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 const processSteps = [
   {
     step: "01",
@@ -374,10 +476,36 @@ const processSteps = [
     description: "Ongoing optimization and updates to keep your IT infrastructure current."
   }
 
+<<<<<<< HEAD
 ];
 const stats = [
   { number: "99.9%", label: "Uptime Guarantee" },
 
+=======
+]
+const stats = [
+  { number: "99.9%", label: "Uptime Guarantee" },
+  { number: "15min", label: "Response Time" },
+  { number: "500+", label: "IT Projects Completed" },
+  { number: "24/7", label: "Support Available" }
+]
+export default function ITServices() {
+  return (
+    <Layout
+      title="IT Services - Zion Tech Group"
+      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation."
+    >
+      <div className="min-h-screen bg-gray-50 py-20">
+      <div className="min-h-screen bg-gray-50 py-20">
+  { number: "15min", label: "Response Time" },
+  { number: "500+", label: "IT Projects Completed" },
+  { number: "24/7", label: "Support Available" }
+];
+export default function ITServices() {
+    >
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-20">
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -396,6 +524,7 @@ const stats = [
       </section>
 
 
+<<<<<<< HEAD
 export default function ITServicesPage() {
   return (
     <MainLayout
@@ -417,23 +546,15 @@ export default function ITServicesPage() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT solutions to keep your business running smoothly. 
               From cloud management to cybersecurity, we've got you covered.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </motion.div>
-            ))}
+=======
           </div>
+          <div className="text-center">
+            <p className="text-gray-600">
+              IT Services page is under construction.
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+            </p>
+          </div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {itServices.map((service, index) => (
@@ -449,6 +570,30 @@ export default function ITServicesPage() {
                   <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                 </div>
 
+=======
+        </div>
+      </section>
+      {/* Process Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+
+</motion.div>
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Our IT Service Process
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
+              A proven methodology that ensures successful IT implementation and maximum value for your investment.
+            </p>
+          </motion.div>
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {processSteps.map((step, index) => (
               <motion.div
@@ -538,9 +683,17 @@ export default function ITServicesPage() {
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
 
       </div>
     </MainLayout>
   );
 
 
+=======
+      </section>
+    </Layout>
+  )
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

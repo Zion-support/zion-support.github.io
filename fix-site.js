@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 const fs = require ('fs'),
@@ -20,12 +21,24 @@ const next_config = {
 
     domains: ["localhost", "ziontechgroup.com"];
 
+=======
+const fs = require($2);
+console.log($2);
+// Fix Next.js configuration
+const nextConfig = $2;
+  eslint: { ignoreDuringBuilds: true},
+  typescript: { ignoreBuildErrors: true},
+  pageExtensions: ['tsxtsjsxjs'],
+  images: {
+    domains: ["localhost", "ziontechgroup.com"]
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   },
   output: 'standalone',
   trailingSlash: false,
   distDir: '.next'
 },
 
+<<<<<<< HEAD
 
 console.log ('✅ Next.js configuration fixed'),
 // Remove empty files that might cause issues;
@@ -46,6 +59,9 @@ emptyFiles.forEach(file => {;)
   if (fs.existsSync(file) && fs.statSync(file).size === 0) {;
     fs.unlinkSync(file),;`;
 
+=======
+module.exports = nextConfig,`,
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 fs.writeFileSync($2);
 console.log($2);
@@ -58,7 +74,11 @@ emptyFiles.forEach(file => {
   }
 }),
 
+<<<<<<< HEAD
 console.log ('🎉 Site fixes completed!'),
 
 
 
+=======
+console.log($2);
+>>>>>>> origin/cursor/delete-old-data-records-6bba

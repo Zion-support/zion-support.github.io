@@ -1,10 +1,18 @@
 
 
+<<<<<<< HEAD
+import React from 'react';
+import { logDebug  } from '@/utils/productionLogger';
+import { Button } from '@/components/ui/button',
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+=======
 import React from "react";
 import { logDebug  } from '@/utils/productionLogger';
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+>>>>>>> origin/resolved-merge-conflicts
 import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
 
 interface IntegrationCardProps {
@@ -271,14 +279,24 @@ export function IntegrationCards() {
     </div>;
   )/>;
     </div>;
+<<<<<<< HEAD
+  )}        icon={<Briefcase className='h-5 w-5' />}
+=======
   )}        icon={<Briefcase className="h-5 w-5" />}
+>>>>>>> origin/resolved-merge-conflicts
         onConnect={() => logDebug('Connect Salesforce clicked')}
       />;
 
       <IntegrationCard
+<<<<<<< HEAD
+        title='Microsoft Teams'
+        description='Receive updates through Microsoft Teams.'
+        icon={<Users className='h-5 w-5' />}
+=======
         title="Microsoft Teams"
         description="Receive updates through Microsoft Teams."
         icon={<Users className="h-5 w-5" />}
+>>>>>>> origin/resolved-merge-conflicts
         onConnect={() => logDebug('Connect Teams clicked')}
 
 

@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {useState} from "react";
 import {MatchResultItem} from "@/lib/ai-matchmaking";
 import {Card, CardContent} from "@/components/ui/card";
@@ -16,7 +19,10 @@ import {cn} from "@/lib/utils";
   projectDescription?: string;
   serviceType?: string;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export function AIMatchingResults(): any ({;
 
@@ -24,13 +30,40 @@ export function AIMatchingResults(): any ({;
   matches;
   onSelectMatch;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   isLoading = false;
   projectDescription = "";
   serviceType: _serviceType = "";
 }: AIMatchingResultsProps) {;
   const [activeTab, setActiveTab] = useState("all");
+<<<<<<< HEAD
 
+=======
+
+import { useState } from "react",
+import { MatchResultItem } from "@/lib/ai-matchmaking",
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",
+
+import { cn } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
+interface AIMatchingResultsProps {
+
+  matches: MatchResultItem[]
+  onSelectMatch?: (match: MatchResultItem) => void
+
+  isLoading?: boolean;
+  projectDescription?: string;
+import { Skeleton } from "@/components/ui/skeleton",
+import { cn } from "@/lib/utils",
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
@@ -52,8 +85,11 @@ interface AIMatchingResultsProps {}
   projectDescription?: string,
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   // Group matches by category
   const categories = {
     all: matches
@@ -63,8 +99,11 @@ interface AIMatchingResultsProps {}
     equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -78,6 +117,7 @@ interface AIMatchingResultsProps {}
       </div>
     )
   }
+<<<<<<< HEAD
 
   if (matches.length === 0) {
     return (
@@ -94,6 +134,10 @@ interface AIMatchingResultsProps {}
               <p className="text-sm text-white">{projectDescription}</p>
             </div>
 
+=======
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { useState } from "react",;
 import { MatchResultItem } from "@/lib/ai-matchmaking",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -113,6 +157,7 @@ interface AIMatchingResultsProps {;
 }
 ;
 
+<<<<<<< HEAD
 export function AIMatchingResults({;
   matches,;
   onSelectMatch,;
@@ -126,24 +171,28 @@ export function AIMatchingResults({;
 
 
 
+=======
+
+  };
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   // Get the icon for a category;
   const getCategoryIcon = (category: string) => {;
 
     if (lowerCategory && lowerCategory.includes("equipment")) return Monitor,;
     return BriefcaseIcon;
   };
+<<<<<<< HEAD
 
 
   if (isLoading) {;
 
-      <div className="space-y-4">;
-        <Skeleton className="h-10 w-full" />;
-        <div className="space-y-3">;
-          <Skeleton className="h-[120px] w-full" />;
-          <Skeleton className="h-[120px] w-full" />;
+=======
+
+  if (isLoading) {;
+
           <Skeleton className="h-[120px] w-full" />;
         </div>;
-      </div>;
+
   if (matches && matches.length === 0) {;
     return (
     ),;
@@ -154,12 +203,37 @@ export function AIMatchingResults({;
     );
   }
 
+    return (
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+      <div className="space-y-4">;
+        <Skeleton className="h-10 w-full" />;
+        <div className="space-y-3">;
+          <Skeleton className="h-[120px] w-full" />;
+          <Skeleton className="h-[120px] w-full" />;
+
+          <Skeleton className="h-[120px] w-full" />;
+        </div>;
+
+  if (matches && matches.length === 0) {;
+    return (
+    ),;
+  }
+  ;
+  if (matches.length === 0) {;
+    return (;
+    );
+  }
+
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   if (matches && matches.length === 0) {;
     return (
 
+<<<<<<< HEAD
 
       <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">;
         <CardContent className="pt-6">;
@@ -190,6 +264,8 @@ export function AIMatchingResults({;
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <div className="space-y-4">
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -277,6 +353,7 @@ if ( {) {}
                 const CategoryIcon = getCategoryIcon (match.category);
                 return (
 
+<<<<<<< HEAD
   return (
     ),;
   }
@@ -318,15 +395,20 @@ if ( {) {}
                         match.category.toLowerCase().includes("service") ? "bg-zion-purple" :;
                         "bg-green-500";
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                       )} />;
                       <div className="flex-1 p-4">;
                         <div className="flex items-start gap-4">;
                           <Avatar className="h-12 w-12 border border-zion-blue-light">;
 
+<<<<<<< HEAD
                             {match.image ? (;
                               <AvatarImage src={match.image} />;
                             ) :(;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                               <AvatarFallback className="bg-zion-purple/20">;
 
                                 <CategoryIcon className="h-6 w-6 text-zion-purple" />;
@@ -334,6 +416,7 @@ if ( {) {}
 
                             )}
 
+<<<<<<< HEAD
                           </Avatar>;
                           ;
                           <div className="flex-1">;
@@ -358,6 +441,8 @@ if ( {) {}
                               </Badge>;
                               {match.skills && match.skills.slice(0, 3).map((skill:string, i:number) => (;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                                 <Badge key={i} variant="outline" className="text-xs bg-zion-blue-dark text-white border-zion-blue-light">;
                                   {skill}
                                 </Badge>;
@@ -369,6 +454,7 @@ if ( {) {}
                         </div>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
 
                   </Card>;
                 ),;
@@ -436,3 +522,12 @@ if (isLoading) {
 
 }
 
+=======
+
+}
+
+}
+
+
+  onSelectMatch;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

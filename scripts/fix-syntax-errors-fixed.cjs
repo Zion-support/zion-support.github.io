@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require("$1");
+const path = require("path");
+let content = fs.readFileSync(filePath, "utf8");
+      content = content.replace(/&apos;s\s*""\s*$/gm, "&apos;s"")
+      content = content.replace(/&apos;s\s*""\s*>/gm, "&apos;s">")
+      content = content.replace(/&apos;s\s*""\s*,/gm, "&apos;s", ")
+      content = content.replace(/we\\"ll\s*""\s*$/gm, "we\\"ll"")
+      content = content.replace(/we\\"ll\s*""\s*,/gm, "we\\"ll", ")
+      content = content.replace(/""\s*$/gm, """)
+      content = content.replace(/""\s*>/gm, "">")
+      content = content.replace(/""\s*,/gm, ", ")
+      content = content.replace(/""\s*\)/gm, "")"
+=======
+<<<<<<< HEAD
 
 
 #!/usr/bin/env node;
@@ -79,12 +94,20 @@ const path = require("path")
       content = content.replace(/\s*>/gm, >")
       content = content.replace(/\s*,/gm, ", ")
       content = content.replace(/\s*\)/gm, )"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         fs.writeFileSync(filePath, content, "utf8")
       this.errors.push({ "file": filePath, "error"})
     this.log(" Starting syntax error fixing...")
       "pages/blog.tsx"
       "pages/help.tsx"
       "pages/pricing-guide.tsx"
+<<<<<<< HEAD
+      "
+
+      "
+
+      "
+=======
 <<<<<<< HEAD
       "pages/pricing.tsx"
 
@@ -129,3 +152,4 @@ const path = require("path")
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

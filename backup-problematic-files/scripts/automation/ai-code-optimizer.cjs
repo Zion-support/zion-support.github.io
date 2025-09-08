@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
@@ -19,29 +18,6 @@ const { execSync } = require("child_process)
   await fs.mkdir(this.reportDir, { "recursive})
     await fs.mkdir(this.backupDir, { recursive"})
 // console.log(" Starting AI Code Optimization...)
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
-  "performance"
-      "memory"
-      "security"
-      "maintainability"
-      "accessibility"
-  "filesAnalyzed"
-      "optimizationsApplied"
-      "performanceGains"
-      "memorySavings"
-      "securityFixes"
-    this.reportDir = path.join(process.cwd(), "ai-optimization-reports"
-    this.backupDir = path.join(process.cwd(), "ai-optimization-backups"
-    console.log("🤖 AI Code Optimizer initialized")
-  await fs.mkdir(this.reportDir, { "recursive"})
-    await fs.mkdir(this.backupDir, { "recursive"})
-// console.log("" Starting AI Code Optimization...")
->>>>>>> origin/chore/fix-lint-and-merge
       console.log(" AI Code Optimization completed successfully")
   console.error( AI Code Optimization failed": ")
   console.error( AI Code Optimization failed": ")
@@ -179,27 +155,10 @@ console.log( AI optimization report saved to ${reportPath})
   recommendations.push("� Memory optimization opportunities available)
   recommendations.push(♿ Accessibility improvements recommended for better user experience)
   console.log("🤖 Starting AI Code Optimizer...")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-  console.error(" AI Code Optimizer "failed")
-  console.error(" AI Code Optimizer "failed")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
   console.error(" AI Code Optimizer "failed")
-=======
   console.error(" AI Code Optimizer "failed")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+

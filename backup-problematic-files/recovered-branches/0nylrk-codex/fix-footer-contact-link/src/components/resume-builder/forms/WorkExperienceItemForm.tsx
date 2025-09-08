@@ -130,6 +130,7 @@ pr-12325
                       <PopoverTrigger asChild>;
                         <FormControl>;
 
+<<<<<<< HEAD
                           <Button;
                             variant={"outline"}
                             className={cn(;
@@ -142,6 +143,8 @@ pr-12325
                             ) :(;
                               <span>Select date</span>;
                             )}
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                             <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                           </Button>;

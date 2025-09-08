@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 #!/"usr/bin/env" node;
-=======
-#!/usr/bin/env node;"
->>>>>>> origin/chore/fix-lint-and-merge
 /**;
  * PM2 Error Prevention Automation;
  * Continuously monitors and fixes common project errors;
@@ -10,7 +6,6 @@
  */;
 #!/usr/bin/env node
 /**;
-<<<<<<< HEAD
  * PM2 Error Prevention Automation;
  * Continuously monitors and fixes common project errors;
  * Runs every 5 minutes to prevent build failures;
@@ -25,24 +20,11 @@ class $1 {}
   this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, "automation/logs/pm2-error-prevention.log"");
     this.errorLogFile = path.join(this.projectRoot, automation/logs/pm2-error-prevention-error.log"");
-=======
- */;"
-const fs = require("fs");
-const path = require("path");
-const { execSync, spawn } = require("child_process");
-const glob = require("glob");"
-class $1 {}
-  constructor() {}
-  this.projectRoot = process.cwd();"
-    this.logFile = path.join(this.projectRoot, "automation/logs/pm2-error-prevention.log);
-    this.errorLogFile = path.join(this.projectRoot, automation/logs/pm2-error-prevention-error.log");"
->>>>>>> origin/chore/fix-lint-and-merge
     this.ensureLogDirectory();
     this.errorCount = 0;
     this.fixCount = 0}
   ensureLogDirectory() {}
   const logDir = path.dirname(this.logFile);
-<<<<<<< HEAD
     if (!fs.existsSync(logDir)) {}
   fs.mkdirSync(logDir, { recursive": true })}
   }
@@ -200,87 +182,8 @@ class $1 {}
         selfClosingTags.forEach(tag => {const regex = new RegExp(`<${tag}([^>]*)(?<!\\/>)>`, g");
           if (regex.test(content)) {content = content.replace(regex, `<${tag}$1 />`);
             modified = true}
-=======
-    if (!fs.existsSync(logDir)) {}"
-  fs.mkdirSync(logDir, { "recursive": true })};"
-  };
-  log(message, isError = false) {}
-  const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;`
-
-  async runTypeCheck() {}
-  try {}"
-  this.log("Running TypeScript type check...");
-      execSync("npm run type-check", {})
-  "cwd": this.projectRoot,
-        "stdio": "pipe",
-        "timeout": 60000;"
-
-      return false};
-  async runLint() {}
-
-  fixCommonSyntaxErrors() {}"
-  this.log("Fixing common syntax errors...");"
-    // Fix common JSX syntax issues;"
-    const jsxFiles = glob.sync("src/**/*.{tsx,jsx}", { "cwd": this.projectRoot }")
-});
-    jsxFiles.forEach(filePath => {})
-
-        let content = fs.readFileSync(fullPath", "utf8");"
-        let modified = false;
-        // Fix stray quotes in JSX;"
-        const quoteRegex = /"([^]*)\s*/g;"
-        if (quoteRegex.test(content)) {}"
-  content = content.replace(quoteRegex, "$1");"
-          modified = true};
-        // Fix broken JSX expressions;
-        const brokenJsxRegex = /<([A-Z][a-zA-Z]*)\s*\(([^)]+)\)/g;
-        if (brokenJsxRegex.test(content)) {}"
-  content = content.replace(brokenJsxRegex, "<$1 $2");"
-        // Fix unterminated strings;"
-        const unterminatedStringRegex = /([^"]*)$/gm;"
-        if (unterminatedStringRegex.test(content)) {}"
-
-    })};
-  fixImportIssues() {}"
-  this.log("Fixing import issues...");
-    const tsFiles = glob.sync("src/**/*.{ts,tsx}", { "cwd": this.projectRoot }")
-    tsFiles.forEach(filePath => {})
-
-        // Fix broken import statements;"
-        const brokenImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["]([^"]+)["]\s*;?\s*$/gm;"
-        if (brokenImportRegex.test(content)) {}
-  content = content.replace(brokenImportRegex, (match, imports, module) => {}"`;
-  const cleanImports = imports.replace(/\s+/g, " ").trim();return `import { ${cleanImports} } from `${module}";"}"
-        // Fix missing semicolons;"
-        const missingSemicolonRegex = /import\s*{[^}]+}\s*from\s*["][^"]+[](?!\s*)/g;"
-        if (missingSemicolonRegex.test(content)) {}"
-  content = content.replace(missingSemicolonRegex, "$&;");"
-
-  content = content.replace(brokenImportRegex, (match, imports, module) => {}"
-  const cleanImports = imports.replace(/\s+/g, " ").trim();return "import { ${cleanImports} } from "${module}";"}"
-        // Fix missing semicolons;"
-
-        if (modified) {}"
-  fs.writeFileSync(fullPath, content);this.log("Fixed import issues in ${filePath}");"
-          this.fixCount++};"
-      } catch (error) {  this.log("Error fixing imports in ${filePath  }: ${error.message}", true)};"
-  fixComponentIssues() {}"
-  this.log("Fixing component issues...");
-    const componentFiles = glob.sync("src/**/*.{tsx,jsx}", { "cwd": this.projectRoot }")
-    componentFiles.forEach(filePath => {})
-
-        // Fix broken JSX component calls;
-        const brokenComponentRegex = /<([A-Z][a-zA-Z]*)\s*\(([^)]+)\)\s*>/g;
-        if (brokenComponentRegex.test(content)) {}"
-  content = content.replace(brokenComponentRegex, "<$1 $2>");"
-        // Fix missing closing tags;"
-
-          if (regex.test(content)) {content = content.replace(regex, `<${tag}$1 />`);
->>>>>>> origin/chore/fix-lint-and-merge
         }
 
-<<<<<<< HEAD
         if (modified) {}
   fs.writeFileSync(fullPath, content);this.log(`Fixed component issues in ${filePath}`);
           this.fixCount++}
@@ -373,36 +276,6 @@ class $1 {}
   this.log(Starting PM2 Error Prevention Automation...");
     try {}
   // Step "1: Install missing dependencies;
-=======
-  async installMissingDependencies() {}
-  this.log("Checking for missing dependencies...");"
-      // Check if TypeScript is available;
-
-        execSync("npm install --save-dev typescript", { "cwd": this.projectRoot, "stdio": "pipe"   }")
-        this.log("TypeScript installed")};"
-      // Check if other essential dependencies are available;"
-
-  async cleanup() {}
-  this.log("Cleaning up build artifacts...");"
-      // Remove build artifacts;"
-      const buildDirs = ["dist", "build", ".next", "out"];"
-      buildDirs.forEach(dir => {})"
-  const fullPath = path.join(this.projectRoot, "dir);"
-        if (fs.existsSync(fullPath)) {}"
-  fs.rmSync(fullPath", { "recursive": true, "force": true }")`;
-});this.log(`Removed ${dir} directory`)};
-      // Remove TypeScript build info;"
-      const tsBuildInfo = path.join(this.projectRoot, "tsconfig.tsbuildinfo");"
-      if (fs.existsSync(tsBuildInfo)) {}
-      // Remove build artifacts;"
-      // Remove TypeScript build info;"
-  fs.unlinkSync(tsBuildInfo);"
-
-    return report};
-  async run() {}"
-  this.log("Starting PM2 Error Prevention Automation...");"
-  // Step "1": Install missing dependencies;"
->>>>>>> origin/chore/fix-lint-and-merge
       await this.installMissingDependencies();
       // Step 2: Fix common syntax errors, this.fixCommonSyntaxErrors(),
       // Step 3: Fix import issues, this.fixImportIssues(),
@@ -414,7 +287,6 @@ class $1 {}
       // Step 9: Run tests, const testsPassed = await this.runTests(),
       // Generate report;
       const report = await this.generateReport();
-<<<<<<< HEAD
       if (typeCheckPassed && lintPassed && buildPassed && testsPassed) {}
   this.log(All checks passed successfully!");this.log(`Fixed ${this.fixCount} errors during this run`)} else {`}
   this.log("Some checks failed, but errors were fixed, true);
@@ -452,30 +324,12 @@ const automation = new ErrorPreventionAutomation();
 // Handle process signals;
 process.on(SIGINT", () => {}
   automation.log("Received SIGINT, shutting down gracefully...);
-=======
-
-  // Step "1": Install missing dependencies;"
-      // Step 2: Fix common syntax errors, this.fixCommonSyntaxErrors(),
-      // Step 3: Fix import issues, this.fixImportIssues(),
-      // Step 4: Fix component issues, this.fixComponentIssues(),
-      // Step 5: Clean up build artifacts, await this.cleanup(),
-      // Step 6: Run type check, const typeCheckPassed = await this.runTypeCheck(),
-      // Step 7: Run lint, const lintPassed = await this.runLint(),
-      // Step 8: Run build, const buildPassed = await this.runBuild(),
-      // Step 9: Run tests, const testsPassed = await this.runTests(),
-      // Generate report;
-
-  return files};
-// Run the automation;
-<<<<<<< HEAD
 const automation = new ErrorPreventionAutomation();
 // Handle process signals;"
 process.on("SIGINT", () => {}
   automation.log("Received SIGINT, shutting down gracefully...");"
->>>>>>> origin/chore/fix-lint-and-merge
   process.exit(0)}
 
-<<<<<<< HEAD
 process.on(SIGTERM", () => {}
   automation.log("Received SIGTERM, shutting down gracefully...);
   process.exit(0)}
@@ -485,30 +339,8 @@ process.on(SIGTERM", () => {}
 automation.run().catch(error => {automation.log(`Unhandled error": ${error.message}`, true);
   process.exit(1)}
 
-=======
-  process.exit(1)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 });
 });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-automation.run().catch(error => {automation.log(`Unhandled "error": ${error.message}`, true);
-  process.exit(1)}
-<<<<<<< HEAD
-});
-=======
-});
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

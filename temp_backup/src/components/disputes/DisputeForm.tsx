@@ -21,7 +21,6 @@ const formSchema = z.object ({;"
 });
 description: z.string () attachments: z.array (z.any () ) .optional () ;
 });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }
 };
 const removeFile = (index: number) => {;

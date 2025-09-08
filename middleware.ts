@@ -8,7 +8,11 @@ export function middleware(request: NextRequest) {
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-Content-Type-Options', 'nosniff');
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+<<<<<<< HEAD
   response.headers.set('X-XSS-Protection', '1; mode=block');
+=======
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   
   // Content Security Policy
   const csp = [
@@ -18,7 +22,11 @@ export function middleware(request: NextRequest) {
     "img-src 'self' data: https:",
     "font-src 'self' data:",
     "connect-src 'self'",
+<<<<<<< HEAD
     "frame-ancestors 'none'",
+=======
+    "frame-ancestors 'none'"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   ].join('; ');
   
   response.headers.set('Content-Security-Policy', csp);
@@ -27,7 +35,11 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
+<<<<<<< HEAD
   matcher: [
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
+=======
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 };

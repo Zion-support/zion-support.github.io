@@ -1,23 +1,45 @@
 
 
+<<<<<<< HEAD
 
 
   return {
 
 
+=======
+import React, { useState } from "react",
+import type { UserProfile } from "@/types/auth";
+import type { UserProfile } from "@/types/auth",
+
+  return {
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     user,
     setUser,
     isLoading,
     setIsLoading,
 
+<<<<<<< HEAD
+=======
+
+import React, { useState } from "react",;
+import type { UserProfile } from "@/types/auth",;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 /**;
  * Custom hook to manage auth state;
  */;
 export function useAuthState() {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import React, { useState } from './react';
 import type { UserProfile } from "@/types / auth";
@@ -45,7 +67,10 @@ function useAuthState() {
     setOnboardingStep;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return {;
     user;
     set_user;
@@ -55,6 +80,17 @@ function useAuthState() {
 
     setOnboardingStep;
   }
+<<<<<<< HEAD
 
 }
 
+=======
+}
+  }
+}
+;
+  }
+}
+;
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

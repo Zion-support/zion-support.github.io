@@ -1,6 +1,10 @@
 /* eslint-disable */
+<<<<<<< HEAD
+   //Apply search filter const matchesSearch = listing.title.toLowerCase () .includes (searchQuery.toLowerCase () ) || listing.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || (listing.tags && listing.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) );
+=======
  >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Example listing type //Process listings based on filters and search const processedListings = initialListings .filter (listing => {;
   //Apply search filter const matchesSearch = listing.title.toLowerCase () .includes (searchQuery.toLowerCase () ) || listing.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || (listing.tags && listing.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) );
+>>>>>>> origin/resolved-merge-conflicts
 //Apply category filters if (selectedFilter === 'all') return matchesSearch;';''
 if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating || 0) >= 4;';''
 if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore || 0) >= 85;''

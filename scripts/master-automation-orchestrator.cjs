@@ -1,89 +1,4 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:scripts/master-automation-orchestrator.cjs
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<<< HEAD:scripts/master-automation-orchestrator.cjs
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<<< HEAD:scripts/master-automation-orchestrator.cjs
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-
-
-
-
-<<<<<<< HEAD
-main
-
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
-<<<<<<< HEAD
-
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-========
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -91,52 +6,16 @@ const { execSync } = require('child_process')
 // console.log(' Starting Master Automation Orchestrator...')
 console.log('=====')
   console.log('\n "Recommendations")
-<<<<<<< HEAD
-=======
-=======
-<<<<<<<< HEAD:scripts/master-automation-orchestrator.cjs
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-<<<<<<< HEAD
-=======
-  console.log('\n "Recommendations")
-<<<<<<< HEAD
-
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.logFile = path.join(this.reportsDir, 'master-automation.log');
-=======
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node
 
 
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-========
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
 class MasterAutomationOrchestrator {
   constructor() {
     this.projectRoot = process.cwd();
     this.startTime = new Date();
-<<<<<<< HEAD
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
     this.logFile = path.join(this.reportsDir, 'master-automation.log');
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     this.results = {
       scripts: [],
       tests: { passed: 0, failed: 0 },
@@ -144,11 +23,6 @@ class MasterAutomationOrchestrator {
       improvements: [],
       errors: []
     };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> merged-prs-20250907-203621
     this.ensureDirectories();
   }
 
@@ -158,18 +32,6 @@ class MasterAutomationOrchestrator {
     }
   }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
-=======
-=======
-  }
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
     const prefix = {
@@ -179,26 +41,6 @@ class MasterAutomationOrchestrator {
       'WARNING': '⚠️',
       'PROGRESS': '🔄'
     }[type] || 'ℹ️';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.logFile = path.join(this.reportsDir, 'master-automation.log');
-    this.ensureDirectories();
-  }
-
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
-
-  log(message) {
-    const logMessage = `[${timestamp}] ${message}`;
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
     const logMessage = `${prefix} [${timestamp}] ${message}`;
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + '\n');
@@ -206,19 +48,6 @@ class MasterAutomationOrchestrator {
 
   async runCommand(command, description, options = {}) {
     this.log(`Running: ${description}`);
-<<<<<<< HEAD
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-    console.log(`${prefix} [${timestamp}] ${message}`);
-  }
-
-  async runCommand(command, description, options = {}) {
-    this.log(`Running: ${description}`);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
@@ -226,28 +55,11 @@ class MasterAutomationOrchestrator {
         encoding: 'utf8',
         ...options,
       });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      this.log(`✅ Completed: ${description}`);
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`❌ Failed: ${description} - ${error.message}`);
-=======
->>>>>>> merged-prs-20250907-203621
       this.log(`✅ ${description} completed successfully`, 'SUCCESS');
       return { success: true, output: result };
     } catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
       this.results.errors.push(`${description}: ${error.message}`);
-=======
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       return {
         success: false,
         error: error.message,
@@ -280,11 +92,6 @@ class MasterAutomationOrchestrator {
     } catch (error) {
       this.log(`❌ Error running ${description}: ${error.message}`, 'ERROR');
       this.results.errors.push(`${description}: ${error.message}`);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> merged-prs-20250907-203621
       return { success: false, error: error.message };
     }
   }
@@ -512,12 +319,6 @@ class MasterAutomationOrchestrator {
     } catch (error) {
       this.log(`❌ Master automation orchestration failed: ${error.message}`);
 
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
       return { success: false, error: error.message };
     }
   }
@@ -552,10 +353,6 @@ class MasterAutomationOrchestrator {
 
   async runTests() {
     this.log('\n🧪 RUNNING TESTS');
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     try {
       // Run type check
       const typeResult = await this.runCommand('npm run type-check', 'TypeScript type check');
@@ -590,20 +387,12 @@ class MasterAutomationOrchestrator {
 
   async buildProject() {
     this.log('\n🏗️ BUILDING PROJECT');
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     try {
       // Clean build
       await this.runCommand('npm run clean', 'Clean build');
 
       // Build project
       const buildResult = await this.runCommand('npm run build', 'Production build');
-<<<<<<< HEAD
-=======
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       if (buildResult.success) {
         this.results.builds.success = true;
         this.log('✅ Build successful', 'SUCCESS');
@@ -619,10 +408,6 @@ class MasterAutomationOrchestrator {
 
   async commitAndPush() {
     this.log('\n📝 COMMITTING AND PUSHING CHANGES');
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     try {
       // Add all changes
       await this.runCommand('git add .', 'Git add');
@@ -643,10 +428,6 @@ class MasterAutomationOrchestrator {
 
   async mergeToMain() {
     this.log('\n🔄 MERGING TO MAIN BRANCH');
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     try {
       // Check current branch
       const currentBranch = execSync('git branch --show-current', { encoding: 'utf8' }).trim();
@@ -655,20 +436,10 @@ class MasterAutomationOrchestrator {
       if (currentBranch !== 'main') {
         // Switch to main branch
         await this.runCommand('git checkout main', 'Switch to main branch');
-<<<<<<< HEAD
         // Merge the current branch
         await this.runCommand(`git merge ${currentBranch}`, `Merge ${currentBranch} into main`);
         // Push to main
         await this.runCommand('git push origin main', 'Push to main branch');
-=======
-        
-        // Merge the current branch
-        await this.runCommand(`git merge ${currentBranch}`, `Merge ${currentBranch} into main`);
-        
-        // Push to main
-        await this.runCommand('git push origin main', 'Push to main branch');
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         this.log('✅ Successfully merged to main branch', 'SUCCESS');
       } else {
         this.log('ℹ️ Already on main branch', 'INFO');
@@ -681,10 +452,6 @@ class MasterAutomationOrchestrator {
 
   generateFinalReport() {
     const duration = Date.now() - this.startTime;
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     this.log('\n📊 MASTER AUTOMATION ORCHESTRATOR REPORT');
     this.log('='.repeat(60));
     this.log(`Total Duration: ${duration}ms`);
@@ -709,14 +476,7 @@ class MasterAutomationOrchestrator {
     }
 
     // Save comprehensive report
-<<<<<<< HEAD
     const report = {
-=======
-<<<<<<< HEAD
-=======
-    const report = {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
       timestamp: new Date().toISOString(),
       duration,
       results: this.results,
@@ -753,18 +513,6 @@ class MasterAutomationOrchestrator {
   }
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Run the automation
-if (require.main === module) {
-  const automation = new MasterAutomationOrchestrator();
-  automation.run().then(result => {
-    if (result.success) {
-=======
->>>>>>> merged-prs-20250907-203621
 // Run the master automation orchestrator
 if (require.main === module) {
   const orchestrator = new MasterAutomationOrchestrator();
@@ -795,18 +543,3 @@ module.exports = MasterAutomationOrchestrator;
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-// Run the master automation orchestrator
-if (require.main === module) {
-  const orchestrator = new MasterAutomationOrchestrator();
-  orchestrator.run().catch(console.error);
-}
-
-module.exports = MasterAutomationOrchestrator;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

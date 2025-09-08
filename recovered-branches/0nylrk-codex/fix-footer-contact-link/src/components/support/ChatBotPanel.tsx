@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React, { useState, useRef, useEffect } from "react";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -23,7 +26,10 @@ import { ChatMessage } from "./ChatMessage",
 import { QuickReplyButton } from "./QuickReplyButton",
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 // Define suggested quick replies
 
 const QUICK_REPLIES = [
@@ -35,7 +41,10 @@ type Message = {
   content: string
   sender: "user" | "bot"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React, { useState, useRef, useEffect } from "react";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -69,7 +78,10 @@ export function ChatBotPanel() {;
       sender: "bot",;
       timestamp: new Date()}]),;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const [inputValue, setInputValue] = useState("");
 
   const [isLoading, setIsLoading] = useState(false);
@@ -78,8 +90,33 @@ export function ChatBotPanel() {;
   const inputRef = useRef<HTMLInputElement>(null);
 
   const { theme } = useTheme();
+<<<<<<< HEAD
 
       sender: "bot",
+=======
+},
+
+export function ChatBotPanel() {
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: "welcome",
+      content: "Hi! How can I help you?",
+
+      sender: "bot",
+      timestamp: new Date()}]),
+  const [inputValue, setInputValue] = useState($2);
+  const [isLoading, setIsLoading] = useState($2);
+  const [failedAttempts, setFailedAttempts] = useState($2);
+  const scrollAreaRef = $2;
+  const inputRef = $2;
+  const { theme } = useTheme($2);
+  // Auto-scroll to bottom when messages change
+  useEffect(() => {
+    if (scrollAreaRef.current) {
+      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
+    }
+  }, [messages]),
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
   // Auto-scroll to bottom when messages change
@@ -91,6 +128,7 @@ export function ChatBotPanel() {;
     if (!text.trim()) return
     const userMessage: Message = {
 
+<<<<<<< HEAD
 
 
   // Auto-scroll to bottom when messages change;
@@ -124,11 +162,15 @@ export function ChatBotPanel() {;
         sender: "bot",;
         timestamp: new Date()},;
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       setMessages((prev) => [...prev, botMessage]);
       // Check if the request was successful;
       if (!response.success) {}
         setFailedAttempts((prev) => prev + 1);
 
+<<<<<<< HEAD
         // After 3 failed attempts, suggest escalation;
         if (failedAttempts >= 2) {;
           suggestEscalation();
@@ -169,6 +211,8 @@ function ChatBotPanel() {
       content: "Hi! How can I help you?",
       sender: "bot",
       timestamp: new Date ()}]),
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   const [input_value, setInputValue] = useState ("");
   const [is_loading, setIsLoading] = useState (false);
@@ -197,6 +241,7 @@ if ( {) {}
     }
   }, []);
 
+<<<<<<< HEAD
 ;
   const handleSendMessage = async (text: string = input_value) => {
     if () return, ) {
@@ -237,11 +282,17 @@ if ( {) {
           suggest_escalation ();
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const handleSendMessage = async (text: string = inputValue) => {
     if (!text.trim()) return
     const userMessage: Message = {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       id: `user-${Date.now()}`,
       content: text,"
       sender: "user",
@@ -258,13 +309,19 @@ if ( {) {
       const botMessage: Message = {}`
         id: `bot-${Date.now()}`,'"
         content: response.message || "Sorry, I couldn't process your request. Please try again.","
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         sender: "bot",
         timestamp: new Date()},
       
       setMessages((prev) => [...prev, botMessage]),
       
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       // Check if the request was successful;
       if (!response.success) {}
         setFailedAttempts((prev) => prev + 1),
@@ -273,14 +330,33 @@ if ( {) {
         if (failedAttempts >= 2) {}
           suggestEscalation()
 
+<<<<<<< HEAD
+=======
+        }
+      } else {}
+        // Reset failed attempts if successful;
+        setFailedAttempts (0);
+      }
+
+    } catch (error) {;"
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       console && console.error("Error in AI chat:", error);
       toast({;"
         variant: "destructive",;"
         title: "Communication Error",'"
         description: "We're having trouble connecting to our support service."}),;
+<<<<<<< HEAD
 
 
 
+=======
+      setFailedAttempts((prev) => prev + 1);
+      if (failedAttempts >= 2) {;
+        suggestEscalation();
+    } catch (error) {
+    } catch (error) {"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       console.error("Error in AI chat:", error),
 
   }, []),;
@@ -310,13 +386,17 @@ if ( {) {
         if (failedAttempts >= 2) {;
           suggestEscalation();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         }
       } else {
         // Reset failed attempts if successful
         setFailedAttempts(0)
       }
 
+<<<<<<< HEAD
 
 
         variant: "destructive",
@@ -335,6 +415,40 @@ import { useTheme } from "@/hooks/useTheme",;
 
 
 
+=======
+  }, []),;
+  const handleSendMessage = async (text: string = inputValue) => {;
+    if (!text.trim()) return,;
+    const userMessage: Message = {;
+      id: `user-${Date.now()}`,;
+      content: text,;
+      sender: "user",;
+      timestamp: new Date()},;
+    setMessages((prev) => [...prev, userMessage]),;
+    setInputValue(""),;
+    setIsLoading(true),;
+    try {;
+      // Call the OpenAI-powered support function;
+      const response = await sendToAIAssistant(text),;
+      const botMessage: Message = {;
+        id: `bot-${Date.now()}`,;
+        content: response.message || "Sorry, I couldn't process your request. Please try again.",;
+        sender: "bot",;
+        timestamp: new Date()},;
+      setMessages((prev) => [...prev, botMessage]),;
+      // Check if the request was successful;
+      if (!response.success) {;
+        setFailedAttempts((prev) => prev + 1),;
+        // After 3 failed attempts, suggest escalation;
+        if (failedAttempts >= 2) {;
+          suggestEscalation();
+        }
+      } else {
+        // Reset failed attempts if successful
+        setFailedAttempts(0)
+      }
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       }
     } finally {}
       setIsLoading(false)
@@ -344,36 +458,239 @@ import { useTheme } from "@/hooks/useTheme",;
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+
+
+  },
+
+  };
+  },
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const sendToAIAssistant = async (message: string) => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
+<<<<<<< HEAD
 
 
 
+=======
           "Content-Type": "application/json"},
-        body: JSON.stringify({ "
-          messages: [{ role: "user", content: message }] 
+        body: JSON.stringify({ 
+          messages: [{ role: "user", content: message}] 
         })}),
-
       
-
       if (!response.ok) {
         return {
           success: false
           message: "I'm having trouble connecting to my knowledge base right now."
         }
 
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+          "Content-Type": "application/json"},
+        body: JSON.stringify({ "
+          messages: [{ role: "user", content: message }] 
+        })}),
+
+<<<<<<< HEAD
+      
+
+=======
+
+      if (!response.ok) {}
+        return {}
+          success: false'"
+          message: "I'm having trouble connecting to my knowledge base right now."
+        }
+
+      const data = await response.json();
+      return {
+        success: true
+        message: data.message
+
+      console.error ("Error in AI chat:", error);
+      toast ({"
+        variant: "destructive","
+        title: "Communication Error",'"
+        description: "We're having trouble connecting to our support service."}),
+      setFailedAttempts ((prev) => prev + 1);
+      // Check condition;
+if ( {) {}
+  $2;
+}
+        suggest_escalation ();
+      }
+    } finally {}
+      setIsLoading (false);
+    }
+  }
+
+;
+  const sendToAIAssistant = async (message: string) => {}
+    try {"
+      const response = await fetch ("https://ziontechgroup.functions.supabase.co / functions / v1 / ai - chat", {"
+        method: "POST",
+        headers: {"
+          "Content - Type": "application / json"}
+        body: JSON.stringify ({"
+          messages: [{ role: "user", content: message }];
+        })});
+;
+      // Check condition;
+if ( {) {}
+  $2;
+}
+        return {}
+          success: false,'"
+          message: "I'm having trouble connecting to my knowledge base right now.";
+        }
+      }
+      const data = await response.json ();
+      return {}
+        success: true,
+        message: data.message;
+
+      }
+    } catch (error) {"
+      console.error ("Error in AI chat:", error);
+
+        success: false,
+        message: "I'm experiencing technical difficulties. Please try again later."
+      }
+      console.error("Error in AI chat:", error);
+      return {
+        success: false
+        message: "I'm experiencing technical difficulties. Please try again later."
+
+  };
+
+  }
+  const suggestEscalation = () => {}
+    const escalationMessage: Message = {}`
+      id: `bot-escalation-${Date.now()}`'"
+      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?""
+      sender: "bot"
+      timestamp: new Date()}
+    setMessages((prev) => [...prev, escalationMessage]);
+    // Log this interaction for the support team;
+    logSupportEscalation()
+  }
+  };
+      };
+    }
+  },
+      };
+    }
+  },
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+      if (!response.ok) {
+        return {
+          success: false
+          message: "I'm having trouble connecting to my knowledge base right now."
+        }
+<<<<<<< HEAD
+=======
+
+      
+
+
+          message: "I'm having trouble connecting to my knowledge base right now."
+        };
+      }
+      
+      const data = await response.json();
+      return {
+        success: true
+
+      const data = await response.json();
+      return {
+        success: true
+        message: data.message
+      console.error ("Error in AI chat:", error);
+      toast ({
+        variant: "destructive",
+        title: "Communication Error",
+        description: "We're having trouble connecting to our support service."}),
+      setFailedAttempts ((prev) => prev + 1);
+      // Check condition
+if ( {) {
+  $2
+}
+        suggest_escalation ();
+      }
+    } finally {
+      setIsLoading (false);
+    }
+  }
+;
+  const sendToAIAssistant = async (message: string) => {
+    try {
+      const response = await fetch ("https://ziontechgroup.functions.supabase.co / functions / v1 / ai - chat", {
+        method: "POST",
+        headers: {
+          "Content - Type": "application / json"}
+        body: JSON.stringify ({
+          messages: [{ role: "user", content: message }];
+        })});
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        return {
+          success: false,
+          message: "I'm having trouble connecting to my knowledge base right now.";
+        }
+      }
+      const data = await response.json ();
+      return {
+        success: true,
+        message: data.message;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+
       }
 
 
+<<<<<<< HEAD
+=======
+  };
+
+      }
+    }
+  }
+  const suggestEscalation = () => {
+    const escalationMessage: Message = {
+      id: `bot-escalation-${Date.now()}`
+      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?"
+      sender: "bot"
+      timestamp: new Date()}
+    setMessages((prev) => [...prev, escalationMessage]);
+    // Log this interaction for the support team
+    logSupportEscalation()
+  }
+  };
+      };
+    }
+  },
+      };
+    }
+  },
+
+  const suggestEscalation = () => {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     const escalationMessage: Message = {
       id: `bot-escalation-${Date.now()}`,
       content:
@@ -388,22 +705,29 @@ import { useTheme } from "@/hooks/useTheme",;
   },
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const logSupportEscalation = async () => {
     try {
       // Send the conversation to the backend for logging
       // This would be implemented in a real system
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         conversationHistory: messages.map(m => ({
           content: m.content
           sender: m.sender
           timestamp: m.timestamp
         }))
       })
+<<<<<<< HEAD
 
 
 
@@ -565,6 +889,11 @@ export function ChatBotPanel() {;
   },
 
 
+=======
+        success: false,
+        message: "I'm experiencing technical difficulties. Please try again later.";
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const handleEscalateToLiveAgent = () => {
 
     setMessages((prev) => [
@@ -576,12 +905,16 @@ export function ChatBotPanel() {;
         sender: "user"
 
 
+<<<<<<< HEAD
 
       }
     ]),
     
 
 
+=======
+      {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         id: `bot-${Date.now()}`
         content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.";
@@ -589,7 +922,10 @@ export function ChatBotPanel() {;
         sender: "bot"
         timestamp: new Date()
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     // In a real implementation, this would trigger a live chat request
     toast({
       title: "Support request submitted"
@@ -598,9 +934,12 @@ export function ChatBotPanel() {;
   },
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const handleEmailSupport = () => {
 
     setMessages((prev) => [
@@ -612,7 +951,10 @@ export function ChatBotPanel() {;
         timestamp: new Date()
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       {
         id: `bot-${Date.now()}`
         content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours."
@@ -622,6 +964,7 @@ export function ChatBotPanel() {;
       }
     ])
 
+<<<<<<< HEAD
 
   };
   const sendToAIAssistant = async (message: string) => {;
@@ -657,15 +1000,23 @@ export function ChatBotPanel() {;
 
 
 
+=======
+
+  },
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <div className="flex flex-col h-full">
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
         <div className="flex flex-col gap-4">
           {messages.map((message) => (
             <ChatMessage
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   },;
 
   const suggestEscalation = () => {;
@@ -675,8 +1026,11 @@ export function ChatBotPanel() {;
       sender: "bot",;
       timestamp: new Date()},;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const logSupportEscalation = async () => {;
     try {;
       // Send the conversation to the backend for logging;
@@ -686,7 +1040,17 @@ export function ChatBotPanel() {;
         timestamp: new Date();
       }
     ]);
+<<<<<<< HEAD
 
+=======
+  },;
+  return (;
+    <div className="flex flex-col h-full">;
+      <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>;
+        <div className="flex flex-col gap-4">;
+          {messages.map((message) => (;
+            <ChatMessage;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   return (
     <div className="flex flex-col h-full">;
@@ -702,20 +1066,30 @@ export function ChatBotPanel() {;
               timestamp={message.timestamp}
             />
 
+<<<<<<< HEAD
           ))}
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           {isLoading && (
 
             <div className="flex items-center justify-center py-2">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />
             </div>
           )}
         </div>
       </ScrollArea>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       {messages.length === 1 && ("
         <div className="px-4 py-3">"
           <p className={cn("text-sm mb-2", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
@@ -723,6 +1097,10 @@ export function ChatBotPanel() {;
           </p>"
           <div className="flex flex-wrap gap-2">
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           {isLoading && (;
             <div className="flex items-center justify-center py-2">;
 
@@ -732,8 +1110,11 @@ export function ChatBotPanel() {;
         </div>;
       </ScrollArea>;
 
+<<<<<<< HEAD
       
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       {failedAttempts >= 3 && (
 
         <div className="px-4 py-3 border-t border-zion-purple/10">
@@ -750,7 +1131,10 @@ export function ChatBotPanel() {;
               Chat with Live Agent;
             </Button>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       {failedAttempts >= 3 && (;"
         <div className="px-4 py-3 border-t border-zion-purple/10">;"
@@ -766,6 +1150,7 @@ export function ChatBotPanel() {;
             </Button>;
 
 
+<<<<<<< HEAD
             <Button
               onClick={handleEmailSupport}
               size="sm"
@@ -773,12 +1158,20 @@ export function ChatBotPanel() {;
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               Email Support;
             </Button>;
           </div>;
         </div>;
+<<<<<<< HEAD
 
       )}
+=======
+
+
+                ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" 
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                 : "bg-white border-gray-200"
 
@@ -790,7 +1183,10 @@ export function ChatBotPanel() {;
             disabled={isLoading |!inputValue.trim()}"
             className="bg-zion-cyan hover: bg-zion-cyan/80 text-white"
           >"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <Send className="h-4 w-4" />
           </Button>
         </form>
@@ -798,7 +1194,25 @@ export function ChatBotPanel() {;
     </div>
   )
 
+<<<<<<< HEAD
 
+=======
+              theme === "dark" ;
+                ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" ;
+
+              theme === "dark" ;
+                ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" ;
+
+}
+              theme === "dark" ;
+                ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" ;
+
+              theme === "dark" ;
+                ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" ;
+
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
       {failedAttempts >= 3 && (;
         <div className="px-4 py-3 border-t border-zion-purple/10">;
@@ -930,6 +1344,7 @@ export function ChatBotPanel() {;
             e.preventDefault();
             handleSendMessage();
 
+<<<<<<< HEAD
           }}
           className="flex items-center gap-2"
         >
@@ -942,6 +1357,8 @@ export function ChatBotPanel() {;
               "flex-1";
               theme === "dark";
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple";
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             <Send className="h-4 w-4" />;
 </Input>
@@ -958,7 +1375,396 @@ export function ChatBotPanel() {;
         </form>;
       </div>;
     </div>;
+<<<<<<< HEAD
 
 
 
 
+=======
+
+
+}
+            onChange={(e) => setInputValue(e && e.target.value)}
+            placeholder="Type your question...";"
+            className={cn(;
+              "flex-1";"
+;  ); type Message = {
+  }
+  "id": string;
+"content": string;
+export function ChatBotPanel() {
+  }
+  const [messages, setMessages] = useState<Message[]> ([ {
+  //Auto-scroll to bottom when messages change useEffect ( () => {
+  }
+  if (scrollAreaRef.current) {
+  }
+  scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight 
+}
+}, [messages]);
+//Focus input when component mounts useEffect ( () => {
+  }
+  if (inputRef.current) {
+  }
+  inputRef.current.focus () 
+}
+}, []);
+  }
+  if (!text.trim () ) return;
+"id": `user-$ {`  }
+  Date.now () 
+}`;`"content": text;
+setIsLoading (true);
+  "id": `bot-$ {`  }
+  Date.now () 
+}`;`//After 3 failed attempts, suggest escalation if (failedAttempts >= 2) {
+  }
+  setFailedAttempts ( (prev) => prev + 1);
+if (failedAttempts >= 2) {
+  }
+  suggestEscalation () 
+}
+}finally {
+  }
+  setIsLoading (false) 
+}
+};
+  }
+  try {
+  }
+  const response = await fetch (""https"://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {"
+  }
+  "method": "POST";"
+"headers": {
+  "Content-Type" : "application/json" "
+};
+"body": JSON.stringify ({
+}) 
+});
+}const data = await response.json ();
+return {
+  }
+  "success": true;
+"message": data.message 
+}
+}catch (error) {
+  
+}
+};
+const suggestEscalation = () => {
+  }
+  }
+  "id": `bot-escalation-$ {`  }
+  Date.now () 
+}`;`"content": //Log this interaction for the support team logSupportEscalation () 
+};
+  }
+  try {
+  //Send the conversation to the backend for logging //This would be implemented in a real system "conversationHistory": messages.map (m => ({
+  }
+  "content": m.content;
+"sender": m.sender;
+"timestamp": m.timestamp 
+}) ) 
+}) 
+}catch (error) {
+  
+}
+};
+const handleQuickReply = ("text": string) => {
+  }
+  handleSendMessage (text) 
+};
+setMessages ( (prev) => [ ...prev, {
+  }
+  "id": `user-$ {`  }
+  Date.now () 
+}`;`"content": "I'd like to speak with a human agent";"
+"sender": "user";"
+"timestamp": new Date () 
+};
+"timestamp": new Date () 
+}]);
+//In a real implementation, this would trigger a live chat request 
+};
+  setMessages ( (prev) => [ ...prev, {
+  }
+  "id": `user-$ {`  }
+  Date.now () 
+}`;`
+"content": "I'd like to email support";"
+"sender": "user";"
+"timestamp": new Date () 
+};
+"timestamp": new Date () 
+}]) 
+};
+</div>) 
+}</div> </ScrollArea> key= {
+  }
+  reply.id 
+}text= {
+  }
+  reply.text 
+}onClick= {
+  () => handleQuickReply (reply.text) 
+}/>) ) 
+}</div> </div>) 
+}Need more help? </p> <div className="flex gap-2" > <Button > Chat with Live Agent </Button> <Button > Email Support </Button> </div> </div>) "
+}h-4 w-4" /> </Button> </form> </div> </div>) "
+}
+
+  );
+}
+;
+}
+}
+;
+
+;
+  const handleQuickReply = (text: string) =>: any {
+    handleSendMessage (text);
+  }
+;
+  const handleEscalateToLiveAgent = () =>: any {
+    set_messages ((prev) => [;
+      ...prev,
+      {
+        id: `user-${Date.now ()}`,
+        content: "I'd like to speak with a human agent",
+        sender: "user",
+        timestamp: new Date ();
+      }
+      {
+        id: `bot-${Date.now ()}`,
+        content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.";
+        sender: "bot",
+        timestamp: new Date ();
+      }
+    ]);
+;
+    // In a real implementation, this would trigger a live chat request;
+    toast ({
+      title: "Support request submitted",
+      description: "A support agent will be with you shortly."});
+  }
+;
+  const handleEmailSupport = () =>: any {
+    set_messages ((prev) => [;
+      ...prev,
+      {
+        id: `user-${Date.now ()}`,
+        content: "I'd like to email support",
+        sender: "user",
+        timestamp: new Date ();
+      }
+      {
+        id: `bot-${Date.now ()}`,
+        content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours.",
+        sender: "bot",
+        timestamp: new Date ();
+      }
+    ]);
+  }
+;
+  return (
+    <div className="flex flex - col h - full">;
+      <ScrollArea className="flex - 1 p - 4" ref={scrollAreaRef}>;
+        <div className="flex flex - col gap - 4">;
+          {messages.map ((message) => (
+            <ChatMessage;
+              key={message.id}
+              message={message.content}
+              is_user={message.sender === "user"}
+              timestamp={message.timestamp}
+            />))}
+          {is_loading && (
+            <div className="flex items - center justify - center py - 2">;
+              <Loader2 className="h - 5 w - 5 animate - spin text - zion - purple" />;
+            </div>)}
+        </div>;
+      </ScrollArea>;
+      {messages.length === 1 && (
+        <div className="px - 4 py - 3">;
+          <p className={cn ("text - sm mb - 2", theme === "dark" ? "text - gray - 300" : "text - gray - 600")}>;
+            Suggested questions:;
+          </p>;
+          <div className="flex flex - wrap gap - 2">;
+            {QUICK_REPLIES.map ((reply) => (
+              <QuickReplyButton;
+                key={reply.id}
+                text={reply.text}
+                on_click={() => handleQuickReply (reply.text)}
+              />))}
+          </div>;
+        </div>)}
+      {failed_attempts >= 3 && (
+        <div className="px - 4 py - 3 border - t border - zion - purple / 10">;
+          <p className={cn ("text - sm mb - 2 font - medium", theme === "dark" ? "text - gray - 300" : "text - gray - 600")}>;
+            Need more help?;
+          </p>;
+          <div className="flex gap - 2">;
+            <Button;
+              on_click={handleEscalateToLiveAgent}
+              size="sm";
+              className="bg - zion - purple hover:bg - zion - purple - light text - white";
+            >;
+              Chat with Live Agent;
+            </Button>;
+            <Button;
+              on_click={handleEmailSupport}
+              size="sm";
+              variant="outline";
+            >;
+              Email Support;
+            </Button>;
+          </div>;
+        </div>)}
+      <div className={cn (
+        "p - 4 border - t",
+        theme === "dark" ? "border - zion - blue - light" : "border - gray - 200")}>;
+        <form;
+          on_submit={(e) => {
+            e.prevent_default ();
+            handleSendMessage ();
+          }}
+          className="flex items - center gap - 2";
+        >;
+          <Input;
+            ref={input_ref}
+            value={input_value}
+            on_change={(e) => setInputValue (e.target.value)}
+            placeholder="Type your question...";
+            className={cn (
+              "flex - 1";
+              theme === "dark";
+                ? "bg - zion - blue border - zion - blue - light focus - visible:ring - zion - purple";
+                : "bg - white border - gray - 200")}
+          />;
+          <Button;
+            type="submit";
+            size="icon";
+            disabled={is_loading || !input_value.trim ()}
+            className="bg - zion - cyan hover: bg - zion - cyan / 80 text - white";
+          >;
+            <Send className="h - 4 w - 4" />;
+          </Button>;
+        </form>;
+      </div>;
+    </div>);
+  ); type Message = {
+  id: string;
+content: string;
+export function ChatBotPanel () {
+  const [messages, setMessages] = useState<Message[]> ([ {
+  //Auto-scroll to bottom when messages change useEffect ( () => {
+  if (scrollAreaRef.current) {
+  scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight 
+}
+}, [messages]);
+//Focus input when component mounts useEffect ( () => {
+  if (inputRef.current) {
+  inputRef.current.focus () 
+}
+}, []);
+const handleSendMessage = async (text: string = inputValue) => {
+  if (!text.trim () ) return;
+id: `user-$ {
+  Date.now () 
+}`;
+content: text;
+setIsLoading (true);
+  id: `bot-$ {
+  Date.now () 
+}`;
+//After 3 failed attempts, suggest escalation if (failedAttempts >= 2) {
+  setFailedAttempts ( (prev) => prev + 1);
+if (failedAttempts >= 2) {
+  suggestEscalation () 
+}
+}finally {
+  setIsLoading (false) 
+}
+};
+const sendToAIAssistant = async (message: string) => {
+  try {
+  const response = await fetch ("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
+  method: "POST";
+headers: {
+  "Content-Type" : "application/json" 
+};
+body: JSON.stringify ({
+  
+}) 
+});
+}const data = await response.json ();
+return {
+  success: true;
+message: data.message 
+}
+}catch (error) {
+  
+}
+};
+const suggestEscalation = () => {
+  const escalationMessage: Message = {
+  id: `bot-escalation-$ {
+  Date.now () 
+}`;
+content: //Log this interaction for the support team logSupportEscalation () 
+};
+const logSupportEscalation = async () => {
+  try {
+  //Send the conversation to the backend for logging //This would be implemented in a real system conversationHistory: messages.map (m => ({
+  content: m.content;
+sender: m.sender;
+timestamp: m.timestamp 
+}) ) 
+}) 
+}catch (error) {
+  
+}
+};
+const handleQuickReply = (text: string) => {
+  handleSendMessage (text) 
+};
+setMessages ( (prev) => [ ...prev, {
+  id: `user-$ {
+  Date.now () 
+}`;
+content: "I'd like to speak with a human agent";
+sender: "user";
+timestamp: new Date () 
+};
+timestamp: new Date () 
+}]);
+//In a real implementation, this would trigger a live chat request 
+};
+  setMessages ( (prev) => [ ...prev, {
+  id: `user-$ {
+  Date.now () 
+}`;
+content: "I'd like to email support";
+sender: "user";
+timestamp: new Date () 
+};
+timestamp: new Date () 
+}]) 
+};
+</div>) 
+}</div> </ScrollArea> key= {
+  reply.id 
+}text= {
+  reply.text 
+}onClick= {
+  () => handleQuickReply (reply.text) 
+}/>) ) 
+}</div> </div>) 
+}Need more help? </p> <div className="flex gap-2" > <Button > Chat with Live Agent </Button> <Button > Email Support </Button> </div> </div>) 
+}h-4 w-4" /> </Button> </form> </div> </div>) 
+}
+  );
+}
+;
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

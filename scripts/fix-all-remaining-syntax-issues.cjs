@@ -41,11 +41,17 @@ const path = require('path')
 // console.log(' Fixing All Remaining Syntax Issues...')
 console.log('=====')
 const problematicFiles = ['pages/docs/integration-examples.tsx'];
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   'pages/security.tsx'
   'pages/services-catalog.tsx'
   'pages/services-comparison.tsx'
   'pages/services-overview.tsx'
+<<<<<<< HEAD
+let content = '';
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 let content = '';
@@ -108,6 +114,7 @@ let content = '';
 >>>>>>> origin/chore/fix-lint-and-merge
 =======
 let content = '';
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     if (filePath === 'pages/docs/integration-examples.tsx')
       content = "
     "phone"
@@ -128,4 +135,7 @@ let content = '';
       "features"
         <meta name="description" content="
         <meta property="og:description" content="
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

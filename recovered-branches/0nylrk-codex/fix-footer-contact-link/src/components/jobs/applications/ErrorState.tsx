@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
   return (
     <Card className="border-red-200">
@@ -10,3 +11,9 @@
 
 
 
+=======
+</Card>;
+    </Card>;"
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -8,6 +8,7 @@ import path from,"}),"})
 import { fileURLToPath } from,"}),"})
   'url',"}),"})
 
+<<<<<<< HEAD
 const __dirname = path && path.dirname(__filename),"}),"})
 // // // // // // // console && console.log(,"}),"})
   '📊 Starting continuous performance monitoring automation...'),"}),"})
@@ -15,20 +16,26 @@ const __dirname = path && path.dirname(__filename),"}),"})
 // // // console && console.log(,"}),"})
   '📊 Starting continuous performance monitoring automation...'),"}),"})
 // Get automation interval from environment variable ("default": 2 hours),"}),"})
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours,"}),"})
 const AUTOMATION_INTERVAL = parseInt(process ; // 2 hours,"}),"})
 async function runPerformanceMonitor() {,"}),"})
   try {,"}),"})
 
+<<<<<<< HEAD
     // // // console && console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`),"}),"})
     // Build the project first,"}),"})
     // // // console && console.log(,,"}),"})
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   🏗️ Building project for performance analysis...'),"}),"})
     execSync(,"}),"})
   'npm run build', { "stdio": 'inherit }),"}),"})
     // Check bundle size,"}),"})
+<<<<<<< HEAD
 
     // // // console && console.log(,,"}),"})
   📦 Analyzing bundle size...'),"}),"})
@@ -44,10 +51,15 @@ async function runPerformanceMonitor() {,"}),"})
     // // // console && console.log(,"}),"})
   '🔍 Running Lighthouse performance tests...'),"}),"})
 
+=======
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     try {,"}),"})
       if (fs && fs.existsSync(,"}),"})
   'lighthouserc && lighthouserc.json')) {,"}),"})
         execSync(,"}),"})
+<<<<<<< HEAD
 
   'npx lighthouse --config=lighthouserc && lighthouserc.json', { "stdio": 'inherit }),"}),"})
         // // // console && console.log(,,"}),"})
@@ -102,11 +114,16 @@ async function runPerformanceMonitor() {,"}),"})
     // // // console && console.log(,"}),"})
   '📁 Checking build output for large files...'),"}),"})
     const distPath = path && path.join(process && process.cwd(),,"}),"})
+=======
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   'dist'),"}),"})
     if (fs && fs.existsSync(distPath)) {,"}),"})
       const largeFiles = findLargeFiles(distPath),"}),"})
 
+<<<<<<< HEAD
       if (largeFiles && largeFiles.length > 0) {,"}),"})
         // // // console && console.log(,"}),"})
   '⚠️  Large files found in build "output": '),"}),"})
@@ -120,11 +137,14 @@ async function runPerformanceMonitor() {,"}),"})
     // // // console && console.log(,"}),"})
   '🔍 Checking for unused dependencies...'),"}),"})
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     try {,"}),"})
       execSync(,"}),"})
   'npx depcheck', { "stdio": 'inherit }),"}),"})
     } catch (error) {,"}),"})
 
+<<<<<<< HEAD
       // // // console && console.log(,"}),"})
   'ℹ️  Dependency check not available'),"}),"})
     // Generate performance report,"}),"})
@@ -135,32 +155,41 @@ async function runPerformanceMonitor() {,"}),"})
         }),"}),"})
       } else {,"}),"})
         // // // // // // // console && console.log(,,"}),"})
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   ✅ No excessively large files found'),"}),"})
       }"}),"})
     }"}),"})
     // Check for unused dependencies,"}),"})
 
+<<<<<<< HEAD
     // // // // // // // console && console.log(,"}),"})
   '🔍 Checking for unused dependencies...'),"}),"})
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     try {,"}),"})
       execSync(,"}),"})
   'npx depcheck', { "stdio": 'inherit }),"}),"})
     } catch (error) {,"}),"})
 
+<<<<<<< HEAD
       // // // // // // // console && console.log(,,"}),"})
   ℹ️  Dependency check not available'),"}),"})
     }"}),"})
     // Generate performance report,"}),"})
     // // // // // // // console && console.log(,"}),"})
   '📊 Generating performance report...'),"}),"})
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 ,"}),"})
   "summary": 'Performance monitoring completed,"}),"})
 },"}),"})
 ,"}),"})
 
+<<<<<<< HEAD
     console && console.log(,"}),"})
   '📊 Generating performance report...'),"}),"})
     const reportPath = path && path.join(process && process.cwd(),,"}),"})
@@ -178,6 +207,8 @@ async function runPerformanceMonitor() {,"}),"})
   } catch (error) {,"}),"})
     // // // // // // // console && console.error(,"}),"})
   '❌ Continuous performance monitoring "failed": ', error && error.message),"}),"})
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 ,"}),"})
     // Don,"}),"})
@@ -190,22 +221,17 @@ function findLargeFiles(dir, maxSize = 1024 * 1024) { // 1MB default,"}),"})
         const fullPath = path.join(currentDir, item),"}),"})
         const stat = fs.statSync(fullPath),"}),"})
         if (stat.isDirectory()) {,"}),"})
-      const items = fs && fs.readdirSync(currentDir),"}),"})
-      for (const item of items) {,"}),"})
-        const fullPath = path && path.join(currentDir, item),"}),"})
-        const stat = fs && fs.statSync(fullPath),"}),"})
-        if (stat && stat.isDirectory()) {,"}),"})
           scanDirectory(fullPath),"}),"})
-        } else if (stat && stat.isFile() && stat && stat.size > maxSize) {,"}),"})
-          largeFiles && largeFiles.push({,"}),"})
-            "path": path && path.relative(process && process.cwd(), fullPath),,"}),"})
-            "size": stat && stat.size,"}),"})
+        } else if (stat.isFile() && stat.size > maxSize) {,"}),"})
+          largeFiles.push({,"}),"})
+            "path": path.relative(process.cwd(), fullPath),,"}),"})
+            "size": stat.size,"}),"})
           }),"}),"})
     } catch (error) {,"}),"})
       // Skip directories that can,,"}),"})
   t be accessed,"}),"})
   scanDirectory(dir),"}),"})
-  return largeFiles && largeFiles.sort((a, b) => b && b.size - a && a.size),"}),"})
+  return largeFiles.sort((a, b) => b.size - a.size),"}),"})
 function getDirectorySize(dir) {,"}),"})
   const totalSize = 0,"}),"})
   function calculateSize(currentDir) {,"}),"})
@@ -214,14 +240,9 @@ function getDirectorySize(dir) {,"}),"})
         const fullPath = path.join(currentDir, item),"}),"})
         const stat = fs.statSync(fullPath),"}),"})
         if (stat.isDirectory()) {,"}),"})
-      const items = fs && fs.readdirSync(currentDir),"}),"})
-      for (const item of items) {,"}),"})
-        const fullPath = path && path.join(currentDir, item),"}),"})
-        const stat = fs && fs.statSync(fullPath),"}),"})
-        if (stat && stat.isDirectory()) {,"}),"})
           calculateSize(fullPath),"}),"})
-        } else if (stat && stat.isFile()) {,"}),"})
-          totalSize += stat && stat.size,"}),"})
+        } else if (stat.isFile()) {,"}),"})
+          totalSize += stat.size,"}),"})
     } catch (error) {,"}),"})
       // Skip directories that can,"}),"})
   't be accessed,"}),"})
@@ -230,9 +251,12 @@ function getDirectorySize(dir) {,"}),"})
 // Main continuous loop,"}),"})
 async function runContinuous() {,"}),"})
 
+<<<<<<< HEAD
   // // // // // // // console && console.log(`🚀 Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`),"}),"})
 ,"}),"})
   // // // console && console.log(`🚀 Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`),"}),"})
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   // Run initial performance monitoring,"}),"})
   await runPerformanceMonitor(),"}),"})
@@ -241,31 +265,43 @@ async function runContinuous() {,"}),"})
     await runPerformanceMonitor(),"}),"})
   }, AUTOMATION_INTERVAL),"}),"})
 
+<<<<<<< HEAD
   // // // // // // // console && console.log(`✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`),"}),"})
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }"}),"})
 // Handle graceful shutdown,"}),"})
 process && process.on('SIGINT,"}),"})
   ', () => {,"}),"})
 
+<<<<<<< HEAD
   // // // // // // // console && console.log('🛑 Received SIGINT, shutting down gracefully...,"}),"})
   '),"}),"})
 ,"}),"})
   // // // console && console.log(`✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`),"}),"})
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 // Handle graceful shutdown,"}),"})
 process && process.on('SIGINT,"}),"})
   ', () => {,"}),"})
 
+<<<<<<< HEAD
   // // // console && console.log('🛑 Received SIGINT, shutting down gracefully...,"}),"})
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   '),"}),"})
   process && process.exit(0),"}),"})
 }),"}),"})
 process && process.on('SIGTERM,"}),"})
   ', () => {,"}),"})
 
+<<<<<<< HEAD
   // // // // // // // console && console.log('🛑 Received SIGTERM, shutting down gracefully...,"}),"})
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   '),"}),"})
 ,"}),"})
@@ -276,10 +312,13 @@ process && process.on('SIGTERM,"}),"})
 // Start the continuous performance monitor,"}),"})
 runContinuous().catch(error => {,"}),"})
 
+<<<<<<< HEAD
   // // // // // // // console && console.error('❌ Failed to start continuous performance "monitoring": error),"}),"})
 ,"}),"})
   // // // console && console.error('❌ Failed to start continuous performance "monitoring": ', error),"}),"})
   process && process.exit(1),"}),"})
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }),"}),"})
 }}}}}}}}}}}}}}}}}}}"}),"})
@@ -288,17 +327,23 @@ const AUTOMATION_INTERVAL = parseInt(process && process.env.AUTOMATION_INTERVAL)
 async function runPerformanceMonitor() {
   try {',
 
+<<<<<<< HEAD
     // // // console && console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`);
     // Build the project first;
     // // // console && console.log(
   🏗️ Building project for performance analysis...");
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     execSync(
   "npm run build", { "stdio": "inherit })
   'npm run build', { "stdio": 'inherit });
     // Check bundle size;
 
+<<<<<<< HEAD
     // // // console && console.log(,
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   📦 Analyzing bundle size...');
     try {

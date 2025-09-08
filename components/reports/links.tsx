@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useEffect } from 'react';
 
@@ -6,6 +7,17 @@ import { useEffect } from 'react';
 
 
 
+=======
+
+  return null;export default function LinksReportRedirect() {;
+  useEffect(() => {;
+    if (typeof window !== 'undefined') {;
+      window && window.location.replace('/reports/links/index && index.html');
+    }
+  }, []);
+  }, []);
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export default /**
  * LinksReportRedirect - Function description
  */
@@ -14,7 +26,17 @@ function LinksReportRedirect() {
     // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 
+=======
+}
+      window.location.replace ('/reports / links / index.html');
+    }
+  }, []);
+  return null;export default /**
+ * LinksReportRedirect - Function description
+ */
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 export default function LinksReportRedirect(req, res) {}
   try {};
@@ -36,20 +58,33 @@ if ( {) {}
   return null;export default /**;
  * LinksReportRedirect - Function description;
  */
+<<<<<<< HEAD
 
+=======
+function LinksReportRedirect() {}
+  useEffect (() => {}
+    // Check condition;
+if ( {) {}
+  $2;
+}'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 function LinksReportRedirect() {
   useEffect (() => {
     // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       window.location.replace ('/reports / links / index.html');
     }
   }, []);
   return null;
 
 
+<<<<<<< HEAD
   }, []);
   return null;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -57,3 +92,42 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+}
+
+
+
+export default function LinksReportRedirect() {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {;
+      window.location.replace('/reports/links/index.html');
+    }
+  }, []);
+  return null;export default function LinksReportRedirect() {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.location.replace('/reports/links/index.html')
+    };
+  }, []);
+  return null
+}
+
+}
+export default function LinksReportRedirect(req, res) {
+  try {
+  useEffect(() => {;
+    if (typeof window !== 'undefined') {;
+      window.location.replace('/reports/links/index.html');
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, []);
+  return null;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,17 +1,5 @@
 module.exports = {
-<<<<<<< HEAD
-  extends: [
-    'next/core-web-vitals',
-    'plugin:@typescript-eslint/recommended',
-  ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  rules: {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
@@ -94,8 +82,7 @@ module.exports = {
   "parser": '@typescript-eslint/parser',
   "plugins": ['@typescript-eslint'],
   "rules": {
-<<<<<<< HEAD
-=======
+
   extends: [
     'next/core-web-vitals',
     'plugin:@typescript-eslint/recommended',
@@ -103,10 +90,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   rules: {
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
     'react-hooks/exhaustive-deps': 'warn',
@@ -118,25 +102,21 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-<<<<<<< HEAD
+
     es6: true
   },
   globals: {
     KeyboardEvent: 'readonly',
-=======
-<<<<<<< HEAD
     es6: true,
     dom: true
   },
   globals: {
     KeyboardEvent: 'readonly',
-<<<<<<< HEAD
-=======
+
     es6: true
   },
   globals: {
     KeyboardEvent: 'readonly',
->>>>>>> merged-prs-20250907-203621
     MouseEvent: 'readonly',
     Event: 'readonly'
   },
@@ -161,10 +141,6 @@ module.exports = {
     'app-improvement-*.cjs',
     'analyze-*.cjs',
     'code-quality-*.js',
-<<<<<<< HEAD
-    'components/**',
-    'app/**',
-=======
     'components/*.dynamic.jsx',
     'components/Accessibility*.tsx',
     'components/Accessibility*.jsx',
@@ -175,63 +151,11 @@ module.exports = {
     'components/AnalyticsManager.tsx',
     'components/AnalyticsTracker.tsx',
     'components/ContactForm.tsx',
->>>>>>> merged-prs-20250907-203621
     'api/create-payment-intent.js',
     'api/newsletter/subscribe.js',
     'api/quotes.js',
     'api/shipping-rates.js',
     'api/wallet.js',
-<<<<<<< HEAD
-    'automation/**',
-    '*.report.json',
-    'temp_*/',
-    'temp-*/**',
-    'temp/**',
-    'temp_backup/',
-    'temp_exclude/**',
-    'test_build/',
-    'tests/**',
-    '__tests__/**',
-    'test-*/**',
-    'pages.disabled/**',
-    'pages_disabled/**',
-    'pages-disabled/**',
-    'src.disabled/**',
-    'components.disabled/**',
-    'hooks.disabled/**',
-    'types.disabled/**',
-    'contracts.disabled/**',
-    'solutions.disabled/**',
-    'zion-os.disabled/**',
-    'zion_academy/**',
-    'automation_backup/**',
-    'automation/backups/**',
-    'backup-pages/**',
-    'backup/**',
-    'backup-*/**',
-    'backup-problematic-files/**',
-    'corrupted*/**',
-    'broken*/**',
-    'recovered-branches/**',
-    'lib_backup/**',
-    'data_backup/**',
-    'styles_backup/**',
-    'api-backup/**',
-    'ai-optimization-backups/**',
-    'optimization-reports/**',
-    'test-generation-reports/**',
-    'test-reports/**',
-    'test-results/**',
-    'security-reports/**',
-    'pages.__backup/**',
-    'zion-os/**',
-    'zion-website/**',
-    'zion-ai-assistant/**',
-    'types/**',
-    'utils/**'
-  ],
-};
-=======
     'automation/comprehensive-app-improver.cjs',
     'automation/dependency-fixer.cjs',
     'automation/deployment-automator.cjs',
@@ -272,16 +196,4 @@ module.exports = {
     'pages.disabled_auto/',
   ],
 };
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-    "HTMLElement": 'readonly',
-    "HTMLButtonElement": 'readonly',
-    "HTMLAnchorElement": 'readonly',
-    "MutationObserver": 'readonly',
-    "RequestInit": 'readonly',
-    "AbortController": 'readonly',
-    "fs": 'readonly',
-    "CodeQualityChecker": 'readonly'}};
-module.exports = { extends: [ 'next/core-web-vitals','eslint:recommended','@typescript-eslint/recommended',],parser: '@typescript-eslint/parser',plugins: ['@typescript-eslint'],rules: { '@typescript-eslint/no-unused-vars': 'warn','@typescript-eslint/no-explicit-any': 'warn','no-console': 'off','react/no-unescaped-entities': 'warn','no-undef': 'off',},overrides: [{ files: ['*.ts','*.tsx'],rules: { 'no-undef': 'off' } }],env: { browser: true,node: true,es6: true,dom: true },globals: { KeyboardEvent: 'readonly',HTMLElement: 'readonly',HTMLButtonElement: 'readonly',HTMLAnchorElement: 'readonly',MutationObserver: 'readonly',RequestInit: 'readonly',AbortController: 'readonly',fs: 'readonly',CodeQualityChecker: 'readonly',},};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+

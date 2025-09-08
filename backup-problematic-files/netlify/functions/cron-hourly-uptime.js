@@ -1,6 +1,18 @@
 
+<<<<<<< HEAD
 
 
+=======
+        const ms = Date.now() - t0;
+        results.push({
+          path: ep
+          status: 0
+          ms
+          error: String(e.message |e)
+        });
+      }
+    }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 const { upsertFile } = require('./_lib/github');
 exports.handler = async function () {
   try {
@@ -23,26 +35,39 @@ exports.handler = async function () {
         const ms = Date.now() - t0;
         results.push({ path: ep, status: resp.status, ms });
       } catch (e) {
+<<<<<<< HEAD
 
 
+=======
+        }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         results.push({
           path: ep;,
   status: 0;
           ms;)
           error: String(e.message |e)
         });
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     const log = { timestamp: Date.now(), results }
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
     if (owner && repo && token) {
       const existingPath = 'data/ops/uptime-log.json';
+<<<<<<< HEAD
 
       // Fetch existing file, append, and trim to last 500 entries;
   // TODO: Implement
 }`;
 
+=======
+      // Fetch existing file, append, and trim to last 500 entries;
+  // TODO: Implement
+}`;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         const existingUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/${existingPath}`;
         const resp = await fetch(existingUrl);
         const arr = resp.ok ? await resp.json() : [];
@@ -50,7 +75,10 @@ exports.handler = async function () {
         while (arr.length > 500) arr.shift();
         const content = JSON.stringify(arr, null, 2);
         await upsertFile({
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           owner;
           repo;
           path: existingPath;
@@ -62,6 +90,10 @@ exports.handler = async function () {
           message: 'chore(automation): init uptime log
     return {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
 };  try {
@@ -114,6 +146,17 @@ exports.handler = async function () {
 },
 
 
+<<<<<<< HEAD
 
 
 
+=======
+main:netlify/functions/cron-hourly-uptime.js
+:backup-problematic-files/netlify/functions/cron-hourly-uptime.js
+:netlify/functions/cron-hourly-uptime.js
+main:netlify/functions/cron-hourly-uptime.js
+:backup-problematic-files/netlify/functions/cron-hourly-uptime.js
+
+    return { statusCode: 200, body: JSON.stringify({ ok: true, count: results.length }) }
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+>>>>>>> origin/cursor/delete-old-data-records-6bba

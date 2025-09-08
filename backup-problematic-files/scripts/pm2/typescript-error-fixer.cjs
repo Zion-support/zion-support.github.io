@@ -6,40 +6,18 @@
 const fs = // // require('fs');
 const path = // // require(path');
 const { execSync } = // // require('child_process');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 class TypeScriptErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
     this.fixInterval = parseInt(process.env.FIX_INTERVAL) || 900000; // 15 minutes default;
-<<<<<<< HEAD
     this.autoImportFix = process.env.AUTO_IMPORT_FIX === true';
     this.typeAnnotationFix = process.env.TYPE_ANNOTATION_FIX === 'true;
     this.interfaceGeneration = process.env.INTERFACE_GENERATION === true';
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
     this.maxComplexity = parseInt(process.env.MAX_COMPLEXITY) || 10;
     this.fixesApplied = 0;
     this.fixesFailed = 0;
@@ -52,7 +30,6 @@ class TypeScriptErrorFixer {}
       level,
       message,
       data,
-<<<<<<< HEAD
       service: 'typescript-error-fixer
     }
 
@@ -63,33 +40,16 @@ class TypeScriptErrorFixer {}
       console.log(`[${timestamp}] INFO: ${message}`, data)} else if (level === 'debug) {`}
       console.log(`[${timestamp}] DEBUG: ${message}`, data)}
     this.writeToLog(logEntry)}
-=======
-<<<<<<< HEAD
-      service: 'typescript-error-fixer'
-    };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
       console.log(`[${timestamp}] INFO: ${message}`, data)} else if (level === 'debug') {`}
       console.log(`[${timestamp}] DEBUG: ${message}`, data)};
     this.writeToLog(logEntry)};
->>>>>>> origin/chore/fix-lint-and-merge
   writeToLog(logEntry) {}
     const logDir = path.join(this.projectRoot, logs', 'pm2);
     if (!fs.existsSync(logDir)) {}
@@ -99,63 +59,31 @@ class TypeScriptErrorFixer {}
   async start() {}
     this.log(info', 'Starting TypeScript Error Fixer Service...);
     
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {}
       this.ensureDirectories();
       await this.performTypeScriptFixes();
       this.startContinuousFixing();
       this.setupSignalHandlers();
-<<<<<<< HEAD
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-      this.log(info', 'TypeScript Error Fixer Service started successfully);
 
-=======
-      this.log('info', 'TypeScript Error Fixer Service started successfully');
-<<<<<<< HEAD
-<<<<<<< HEAD
+      
+      
+      
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-      
-      
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-      this.log('info', 'TypeScript Error Fixer Service started successfully');
-<<<<<<< HEAD
-=======
-      
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       setInterval(async () => {}
         await this.performTypeScriptFixes()}, this.fixInterval)} catch (error) {}
       this.log(error', 'Failed to start TypeScript Error Fixer Service, error);
       process.exit(1)}
   }
   ensureDirectories() {}
-<<<<<<< HEAD
     const dirs = [logs/pm2', 'backups/typescript-fixes, temp', 'fixed-files];
-=======
-    const dirs = ['logs/pm2', 'backups/typescript-fixes', 'temp', 'fixed-files'];
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
         fs.mkdirSync(fullPath, { recursive: true })}
     })}
   async performTypeScriptFixes() {}
-<<<<<<< HEAD
     this.log(info', 'Starting TypeScript error fixing process...);
     
     try {}
@@ -183,32 +111,10 @@ class TypeScriptErrorFixer {}
     this.fixesFailed = 0;
     this.fixesSkipped = 0;
     this.fixedFiles.clear()}
-=======
-
-  resetCounters() {}
-    this.fixedFiles.clear()};
->>>>>>> origin/chore/fix-lint-and-merge
   async getTypeScriptErrors() {}
-<<<<<<< HEAD
     try {}
-<<<<<<< HEAD
-      const result = execSync('npx tsc --noEmit --json, {})
-        cwd: this.projectRoot, 
-        encoding: utf8',
-        stdio: 'pipe
-=======
-      const result = execSync('npx tsc --noEmit --json', { })
-<<<<<<< HEAD
-        cwd: this.projectRoot,
-=======
-        cwd: this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-        encoding: 'utf8',
-        stdio: 'pipe'
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
+
       }
 });
       if (result) {}
@@ -216,7 +122,6 @@ class TypeScriptErrorFixer {}
         return parsed.errors || []}
       return []} catch (error) {}
       // Parse stderr for errors;
-<<<<<<< HEAD
       const stderr = error.stderr ? error.stderr.toString() : ';
       return this.parseTypeScriptErrors(stderr)}
   }
@@ -224,13 +129,6 @@ class TypeScriptErrorFixer {}
     const errors = [];
     const lines = stderr.split('\n);
     
-=======
-      const stderr = error.stderr ? error.stderr.toString() : ;
-      return this.parseTypeScriptErrors(stderr)};
-  parseTypeScriptErrors(stderr) {}
-    const errors = [];
-    const lines = stderr.split('\n');
->>>>>>> origin/chore/fix-lint-and-merge
     lines.forEach(line => {})
       const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/);
       if (match) {}
@@ -239,7 +137,6 @@ class TypeScriptErrorFixer {}
           line: parseInt(match[2]),
           column: parseInt(match[3]),
           message: match[4].trim(),
-<<<<<<< HEAD
           code: TS_ERROR'
         })}
     }
@@ -259,100 +156,47 @@ class TypeScriptErrorFixer {}
       if (error.line > lines.length) {}
         this.fixesSkipped++;
         return}
-=======
-
-    return errors};
-  async fixTypeScriptError(error) {}
-    if (!error.file || !fs.existsSync(error.file)) {}
-      this.fixesSkipped++;
-
-      const lines = content.split('\n');
-      if (error.line > lines.length) {}
-        return};
->>>>>>> origin/chore/fix-lint-and-merge
       const lineIndex = error.line - 1;
       const line = lines[lineIndex];
       if (this.shouldSkipLine(line)) {}
-<<<<<<< HEAD
         this.fixesSkipped++;
         return}
-=======
->>>>>>> origin/chore/fix-lint-and-merge
       const fixedLine = await this.fixTypeScriptLine(line, error, lines, lineIndex);
       if (fixedLine !== line) {}
         lines[lineIndex] = fixedLine;
-<<<<<<< HEAD
         const fixedContent = lines.join(\n');
         
-=======
-        const fixedContent = lines.join('\n');
->>>>>>> origin/chore/fix-lint-and-merge
         // Create backup;
         await this.createBackup(error.file);
         // Write fixed content;
-<<<<<<< HEAD
         fs.writeFileSync(error.file, fixedContent, 'utf8);
         
         this.fixesApplied++;
         this.fixedFiles.add(error.file);
-<<<<<<< HEAD
+
 
         this.log(info', `Successfully fixed TypeScript error in: ${error.file}:${error.line}`)} else {`}
         this.fixesSkipped++}
-=======
 
         this.fixesApplied++;
         this.fixedFiles.add(error.file);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-        
-        
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-<<<<<<< HEAD
-=======
-        
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         this.log('info', `Successfully fixed TypeScript error in: ${error.file}:${error.line}`)} else {`}
         this.fixesSkipped++};
->>>>>>> origin/chore/fix-lint-and-merge
     } catch (error) {}
       this.log('error, `Error fixing TypeScript error in ${error.file}`, error);
       this.fixesFailed++}
   }
   shouldSkipLine(line) {}
     const trimmed = line.trim();
-<<<<<<< HEAD
     return !trimmed ||
            trimmed.startsWith('//') ||
            trimmed.startsWith('/*') ||
-=======
-    return !trimmed || 
-<<<<<<< HEAD
-           trimmed.startsWith(//') || 
-           trimmed.startsWith('/*) || 
-           trimmed.startsWith(*') ||
-           trimmed.startsWith('import) ||
-           trimmed.startsWith(export')}
-=======
-           trimmed.startsWith('//') || 
-           trimmed.startsWith('/*') || 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
            trimmed.startsWith('*') ||
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
            trimmed.startsWith('import') ||
            trimmed.startsWith('export')};
->>>>>>> origin/chore/fix-lint-and-merge
   async fixTypeScriptLine(line, error, allLines, lineIndex) {}
     let fixedLine = line;
     // Fix common TypeScript errors;
@@ -364,42 +208,18 @@ class TypeScriptErrorFixer {}
       fixedLine = this.fixParameterError(line, error, allLines, lineIndex)}
     return fixedLine}
   fixUndefinedName(line, error, allLines, lineIndex) {}
-<<<<<<< HEAD
     const nameMatch = error.message.match(/Cannot find name ([^']+)'/);
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
     if (!nameMatch) return line;
     const undefinedName = nameMatch[1];
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
     // Try to find the name in the file;
     const namePattern = new RegExp(`\\b${undefinedName}\\b`, g);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-=======
-    
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     // Try to find the name in the file;
     const namePattern = new RegExp(`\\b${undefinedName}\\b`, 'g');
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
     const matches = line.match(namePattern);
     if (matches) {}
       // Check if it should be imported;
@@ -407,20 +227,14 @@ class TypeScriptErrorFixer {}
         return this.addImportStatement(undefinedName, allLines)}
       // Check if it should be declared;
       if (this.shouldBeDeclared(undefinedName, allLines)) {}
-<<<<<<< HEAD
         return this.addVariableDeclaration(line, undefinedName)}
     }
     return line}
-=======
-        return this.addVariableDeclaration(line, undefinedName)};
-    return line};
->>>>>>> origin/chore/fix-lint-and-merge
   fixTypeError(line, error, allLines, lineIndex) {}
     // Fix 'any' type issues;
     if (error.message.includes(implicitly has an \any\' type')) {}
       const varMatch = line.match(/(\w+)\s*[:=]/);
       if (varMatch) {}
-<<<<<<< HEAD
         const varName = varMatch[1];
         return line.replace(new RegExp(`\\b${varName}\\b`), `${varName}: any`)}
     }
@@ -432,36 +246,13 @@ class TypeScriptErrorFixer {}
     return line}
   fixModuleError(line, error, allLines, lineIndex) {}
     const moduleMatch = error.message.match(/Cannot find module '([^']+)/);
-=======
-        const varName = varMatch[1];`;
-        return line.replace(new RegExp(`\\b${varName}\\b`), `${varName}: any`)};
-
->>>>>>> origin/chore/fix-lint-and-merge
     if (!moduleMatch) return line;
     const moduleName = moduleMatch[1];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-=======
-    
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
     // Try to fix common module issues;
     if (moduleName.startsWith(@/')) {}
       const fixedModule = moduleName.replace('@/, ./src/');
@@ -472,18 +263,11 @@ class TypeScriptErrorFixer {}
   fixPropertyError(line, error, allLines, lineIndex) {}
     const propertyMatch = error.message.match(/Property ([^']+)' does not exist on type/);
     if (!propertyMatch) return line;
-<<<<<<< HEAD
-    
-    const propertyName = propertyMatch[1];
-<<<<<<< HEAD
 
-=======
-    const propertyName = propertyMatch[1];
-<<<<<<< HEAD
-=======
     
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+    const propertyName = propertyMatch[1];
+
+
     // Add type assertion;
     if (line.includes(. + propertyName)) {}
       return line.replace(new RegExp(`\\.${propertyName}`), `['${propertyName}']`)}
@@ -505,7 +289,7 @@ class TypeScriptErrorFixer {}
     const namePattern = new RegExp(`\\b${name}\\b`, g);
     let firstUsage = -1;
     let declaration = -1;
-<<<<<<< HEAD
+
 
     allLines.forEach((line, index) => {}
       if (namePattern.test(line)) {}
@@ -517,25 +301,12 @@ class TypeScriptErrorFixer {}
 });
     
     return firstUsage !== -1 && (declaration === -1 || declaration > firstUsage)}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     // Try to fix common module issues;
 
     if (!propertyMatch) return line;
     const propertyName = propertyMatch[1];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Add type assertion;
 
       if (paramMatch) {}
@@ -544,40 +315,20 @@ class TypeScriptErrorFixer {}
 
     let firstUsage = -1;
     let declaration = -1;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-<<<<<<< HEAD
-=======
-    
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     allLines.forEach((line, index) => {}
       if (namePattern.test(line)) {}
         if (firstUsage === -1) firstUsage = index;
         if (line.includes('const') || line.includes('let') || line.includes('var') || line.includes('function')) {}
           declaration = index};
     return firstUsage !== -1 && (declaration === -1 || declaration > firstUsage)};
->>>>>>> origin/chore/fix-lint-and-merge
   addImportStatement(name, allLines) {}
     // Find the best place to add import;
     let importIndex = 0;
     for (let i = 0; i < allLines.length; i++) {}
       if (allLines[i].trim().startsWith('import')) {}
-<<<<<<< HEAD
         importIndex = i + 1} else if (allLines[i].trim() && !allLines[i].trim().startsWith(//)) {}
         break}
     }
@@ -599,9 +350,6 @@ class TypeScriptErrorFixer {}
       this.log(debug, `Backup created: ${backupPath}`)} catch (error) {`}
       this.log('warn', `Failed to create backup for: ${filePath}`, error.message)}
   }
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
   async generateFixReport() {}
     const report = {}
       timestamp: new Date().toISOString(),
@@ -614,7 +362,6 @@ class TypeScriptErrorFixer {}
   successRate: this.fixesApplied / (this.fixesApplied + this.fixesFailed) * 100,
       },
       fixedFiles: Array.from(this.fixedFiles),
-<<<<<<< HEAD
       recommendations: this.generateRecommendations();
     }
 
@@ -623,16 +370,10 @@ class TypeScriptErrorFixer {}
 
     this.log('info', `TypeScript fix report generated: ${reportPath}`);
     return report}
-=======
-      recommendations: this.generateRecommendations(),
-
-    return report};
->>>>>>> origin/chore/fix-lint-and-merge
   generateRecommendations() {}
     const recommendations = [];
     if (this.fixesFailed > 0) {}
       recommendations.push({})
-<<<<<<< HEAD
         priority: high,
         action: 'Review failed TypeScript fixes manually',
         description: `${this.fixesFailed} TypeScript fixes failed and need manual intervention
@@ -655,21 +396,9 @@ class TypeScriptErrorFixer {}
       this.log('info', Received SIGUSR2 signal, triggering immediate TypeScript fix...);
       await this.performTypeScriptFixes()})}
 }
-=======
-
-        description: `${this.fixesFailed} TypeScript fixes failed and need manual intervention;
-    if (this.fixesApplied > 0) {}
-
-        description: `${this.fixesApplied} TypeScript fixes were applied, verify compilation;
-    return recommendations};
-  startContinuousFixing() {}
-
-      await this.performTypeScriptFixes()})};
->>>>>>> origin/chore/fix-lint-and-merge
 // Start the service;
 const fixer = new TypeScriptErrorFixer();
 // Handle graceful shutdown;
-<<<<<<< HEAD
 process.on('SIGINT', () => {}
   fixer.log(info, 'Received SIGINT, shutting down gracefully...');
   process.exit(0)}
@@ -696,27 +425,10 @@ process.on(unhandledRejection, (reason, promise) => {}
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-});
-});
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
 });
-=======
 });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+

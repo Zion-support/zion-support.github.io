@@ -1,6 +1,5 @@
 
 const fs = require('fs');
-<<<<<<< HEAD
 const path = require(path');
 
 class ComponentReplacer {}
@@ -15,29 +14,6 @@ class ComponentReplacer {}
     const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react;
 import { motion, AnimatePresence } from framer-motion';
 import {}
-=======
-const path = require('path');
-class ComponentReplacer {}
-  constructor() {}
-    this.projectRoot = process.cwd();
-
-    const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { }
-<<<<<<< HEAD
-  Bot,
-  User,
-  Send,
-  Paperclip,
-  Mic,
-  MicOff,
-  Settings,
-  X,
-  ThumbsUp,
-  ThumbsDown,
-  Sparkles,
-=======
->>>>>>> origin/chore/fix-lint-and-merge
   Bot, 
   User, 
   Send, 
@@ -49,12 +25,10 @@ import { }
   ThumbsUp, 
   ThumbsDown, 
   Sparkles, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Clock,
   MessageCircle,
   HelpCircle,
   Star;
-<<<<<<< HEAD
 } from 'lucide-react;
 
 interface ChatMessage {}
@@ -64,11 +38,6 @@ interface ChatMessage {}
   timestamp: Date;
   type: text' | 'file;
   status: sending' | 'sent | error';
-=======
-} from 'lucide-react';
-interface ChatMessage {}
-
->>>>>>> origin/chore/fix-lint-and-merge
   metadata?: {}
     confidence?: number;
     suggestions?: string[];
@@ -78,7 +47,6 @@ interface AIChatbotSystemProps {}
   showHeader?: boolean;
   showSettings?: boolean;
   maxMessages?: number;
-<<<<<<< HEAD
   autoScroll?: boolean}
 export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
   showHeader = true,
@@ -101,10 +69,6 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
 });
   const [isListening, setIsListening] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-=======
-  autoScroll?: boolean};
-export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
->>>>>>> origin/chore/fix-lint-and-merge
 
   const [messages, setMessages] = useState<ChatMessage[]>([]);
 
@@ -112,7 +76,6 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 "
   const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}"
 
-<<<<<<< HEAD
   // Sample welcome message;
   useEffect(() => {}
     if (isOpen && messages.length === 0) {}
@@ -224,43 +187,21 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
   // Toggle voice input;
   const toggleVoiceInput = useCallback(() => {}
     setIsListening(!isListening)}, [isListening]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
   // Rate response;
   const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
     console.log(\"Rated message \${messageId} as \${rating}\")}, []);
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-=======
-<<<<<<< HEAD
-  // Rate response;
-  const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
-    console.log(\"Rated message \${messageId} as \${rating}\")}, []);
-<<<<<<< HEAD
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-
-<<<<<<< HEAD
   // Rate response;
   const rateResponse = useCallback(("messageId": string, rating: positive | 'negative') => {}
     console.log(\"Rated message \${messageId} as \${rating}\")}, []);
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   return ()
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <>
       {/* Chat Toggle Button */}
       <button;
-<<<<<<< HEAD
         onClick={() => setIsOpen(!isOpen)}
         className=fixed bottom-6 right-6 w-14 h-14 bg-zion-cyan text-white rounded-full shadow-lg hover": bg-zion-cyan/80 transition-all duration-300 z-50 flex items-center justify-center"
         aria-label=Toggle AI Chat
@@ -396,69 +337,10 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                       )}
                     </div>
                   </div>
-=======
-        onClick={() => setIsOpen(!isOpen)};
-</button>"
-        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />};"
-
-      </button>
-      <AnimatePresence>
-
-          <motion.div;"
-            initial={{ "opacity": 0, "y": 20, "scale": 0.95 }};
-            animate={{ "opacity": 1, "y": 0, "scale": 1 }};
-            exit={{ "opacity": 0, "y": 20, "scale": 0.95 }};
-            className="fixed bottom-24 right-6 w-96 h-[600px] bg-zinc-900 border border-zinc-700 rounded-2xl shadow-2xl z-40 flex flex-col
-          >
-</motion>"
-              <div className="p-4 border-b border-zinc-700 bg-zinc-800/50 rounded-t-2xl">"
-</div>"
-                <div className="flex items-center justify-between">"
-                  <div className="flex items-center gap-3">"
-                    <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-blue-600 rounded-full flex items-center justify-center">"
-                      <Bot className="w-5 h-5 text-white" />"
-
-                    </div>
-                    <div>
-
-                      <p className="text-xs text-zinc-400">Powered by AI</p>"
-                  <div className="flex items-center gap-2">"
-                        onClick={() => setShowSettingsPanel(!showSettingsPanel)};
-                        <Settings className="w-4 h-4" />"
-
-                      onClick={() => setIsOpen(false)};
-                      <X className="w-4 h-4" />"
-
-            <div className="flex-1 overflow-y-auto p-4 space-y-4">"
-                <motion.div;
-                  key={message.id};"
-
-                      <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">"
-                        <User className="w-4 h-4 text-zinc-300" />"
-
-                      <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">"
-                        <Bot className="w-4 h-4 text-white" />"
-
-                        <div className="mt-2 space-y-2">"
-                            <div className="flex flex-wrap gap-1">"
-                                  key={index};
-                                  onClick={() => handleSuggestionClick(suggestion)};
-                                <span;
-                                  key={index};"
-
-                      <span className="text-xs text-zinc-500">"
-                      </span>"
-                        <div className="flex items-center gap-1">"
-                          <button;"
-
-                            <ThumbsDown className="w-3 h-3" />"
-
->>>>>>> origin/chore/fix-lint-and-merge
                 </motion.div>
               ))}
               {/* Typing Indicator */}
               {isTyping && (})
-<<<<<<< HEAD
                 <motion.div;
                   initial={{ opacity: 0 }}
                   animate={{ "opacity": 1 }}
@@ -555,88 +437,24 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
       throw error}
   }
 }
-=======
-
-                  <div className="flex items-center gap-2 p-3 bg-zinc-800/50 rounded-lg">"
-                    <div className="flex space-x-1">"
-
-                    <span className="text-sm text-zinc-400">Zion AI is typing...</span>"
-              )};
-              <div ref={messagesEndRef} />
-            <div className="p-4 border-t border-zinc-700/50">"
-              <form onSubmit={handleSubmit} className="flex items-center gap-2">"
-</form>"
-                <div className="flex-1 relative">"
-                  <input;"
-                    type="text
-                    value={inputValue};
-                    onChange={(e) => setInputValue(e.target.value)};
-</input>"
-                  <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">"
-</label>
-
-                      onChange={handleFileUpload};"
-                      className="hidden"
-                      accept="image/*,.pdf,.doc,.docx,.txt
-                    />
-                    <Paperclip className="w-4 h-4 text-zinc-400 "hover": text-zinc-300 transition-colors" />"
-
-                  <Send className="w-4 h-4" />"
-
-              <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">"
-                  <Sparkles className="w-3 h-3" />"
-
-                  <span>Powered by Zion AI</span>
-                  <Clock className="w-3 h-3" />"
-
-                  <span>24/7 Available</span>
-    </>
-  )};"
-";"
-    fs.writeFileSync(this.filePath, workingComponent);"
-
-      throw error};
-  };
->>>>>>> origin/chore/fix-lint-and-merge
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const automation = new ComponentReplacer();
   automation.run();
-<<<<<<< HEAD
     .then(() => {}
       console.log(Component Replacer completed successfully!);
       process.exit(0)}
 });
     .catch(error => {})
       console.error('Component Replacer "failed": ', error);
-<<<<<<< HEAD
-      process.exit(1)})}
 
-=======
-      process.exit(1)})};
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 module.exports = ComponentReplacer;
 module.exports = ComponentReplacer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     .then(() => {}"
 
       process.exit(1)})};
-<<<<<<< HEAD
 module.exports = ComponentReplacer;
-<<<<<<< HEAD
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-=======
+
 module.exports = ComponentReplacer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

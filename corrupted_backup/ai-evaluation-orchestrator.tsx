@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+const AIEvaluationOrchestrator: React.FC = () => {
+  return (
+    <Layout>
+      <Head>
+
+=======
 import React from 'react',
 import Head from 'next/head',
 import Button from '../components/ui/Button',
@@ -124,6 +135,7 @@ export default function AIEvaluationOrchestratorPage() {
               <li>• Error handling</li>
               <li>• Compliance monitoring</li>
             </ul>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </div>
         </div>
 
@@ -135,7 +147,11 @@ export default function AIEvaluationOrchestratorPage() {
       </main>
     </Layout>
   );
+<<<<<<< HEAD
+
+=======
 }
 };
 
 export default AIEvaluationOrchestrator;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

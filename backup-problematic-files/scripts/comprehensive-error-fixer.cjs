@@ -3,44 +3,27 @@
  * Comprehensive Error Fixer;
  * Automatically fixes common syntax and logical errors in the codebase;
  */
-<<<<<<< HEAD
 const fs = require("child_process);
 const path = require(child_process");
 const { execSync } = require("child_process);
-=======
-const fs = require("child_process");
-const path = require("child_process");
-const { execSync } = require("child_process");"
->>>>>>> origin/chore/fix-lint-and-merge
 class ComprehensiveErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
     this.logs = [];
     this.errors = [];
-<<<<<<< HEAD
     this.fixes = []}
   log(message, type = info") {}
-=======
-    this.fixes = []};"
-  log(message, type = "info") {}"
->>>>>>> origin/chore/fix-lint-and-merge
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}
     console.log(logEntry);
     this.logs.push(logEntry)}
   async fixCommonSyntaxErrors() {}
-<<<<<<< HEAD
     try {}
       this.log("Fixing common syntax errors...);
-=======
-    try {}"
-      this.log("Fixing common syntax errors...");"
->>>>>>> origin/chore/fix-lint-and-merge
       // Find all source files;
       const sourceFiles = this.findSourceFiles();
       for (const file of sourceFiles) {}
         try {}
-<<<<<<< HEAD
           await this.fixFileErrors(file)} catch (error) {}
           this.log(`Failed to fix ${file}: ${error.message}`, error")}
       }
@@ -57,22 +40,6 @@ class ComprehensiveErrorFixer {}
         this.findFilesRecursively(dir, extensions, files)}
     }
     return files}
-=======
-
-      };"
-      this.log("Common syntax errors fixed", "success");
-      this.fixes.push("syntax_errors")} catch (error) {}
-      this.log("Syntax error fixing failed", "error")};"
-  };
-  findSourceFiles() {}"
-    const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];
-    const extensions = [".js", ".jsx", ".ts", ".tsx"];"
-    const files = [];
-    for (const dir of sourceDirs) {}
-      if (fs.existsSync(dir)) {}
-        this.findFilesRecursively(dir, extensions, files)};
-    return files};
->>>>>>> origin/chore/fix-lint-and-merge
   findFilesRecursively(dir, extensions, files) {}
     const items = fs.readdirSync(dir);
     for (const item of items) {}
@@ -82,7 +49,6 @@ class ComprehensiveErrorFixer {}
         this.findFilesRecursively(fullPath, extensions, files)} else if (stat.isFile()) {}
         const ext = path.extname(item);
         if (extensions.includes(ext)) {}
-<<<<<<< HEAD
           files.push(fullPath)}
       }
     }
@@ -102,29 +68,11 @@ class ComprehensiveErrorFixer {}
         { pattern": /function\s+(\w+)\s*\(\s*\)\s*{/g, "replacement: function $1() {" }
         // Fix template literal issues;
         { "pattern: /([^"]*)\$\{([^}]+)\}"/g, replacement: ""$1${$2} }
-=======
-          files.push(fullPath)};
-  async fixFileErrors(filePath) {}
-      let content = fs.readFileSync(filePath, "utf8");"
-      let modified = false;
-      // Fix common syntax errors;
-      const fixes = [// Fix semicolons in object properties;]"
-        { "pattern": /(\w+):\s*([^}]+);/g, "replacement": "$1: $2," };"
-        // Fix missing commas in arrays;"
-        { "pattern": /(\w+)\s*\n\s*(\w+)/g, "replacement": "$1,\n$2" };"
-        // Fix duplicate catch blocks;"
-        { "pattern": /}\s*catch\s*\([^)]+\)\s*{[^}]*}\s*catch\s*\([^)]+\)\s*{/g, "replacement": "} catch (error) {" };"
-        // Fix malformed function declarations;"
-        { "pattern": /function\s+(\w+)\s*\(\s*\)\s*{/g, "replacement": "function $1() {" };"
-        // Fix template literal issues;"
-        { "pattern": /"([^"]*)\$\{([^}]+)\}"/g, "replacement": $1${$2} };"
->>>>>>> origin/chore/fix-lint-and-merge
       ];
       for (const fix of fixes) {}
         const newContent = content.replace(fix.pattern, fix.replacement);
         if (newContent !== content) {}
           content = newContent;
-<<<<<<< HEAD
           modified = true}
       }
       if (modified) {}
@@ -186,71 +134,8 @@ if (require.main === module) {}
   const fixer = new ComprehensiveErrorFixer();
   fixer.run().catch(console.error)}
 
-=======
-          modified = true};
-      if (modified) {}
-        fs.writeFileSync(filePath, content);"
-        this.log("Fixed syntax errors in ${filePath}", "success");
-        this.fixes.push("fixed_${path.basename(filePath)}")};"
-    } catch (error) {}"
-      this.log("Error fixing ${filePath}: ${error.message}", "error");
-      this.errors.push({ "file": filePath, "error": error.message })};"
-  async runTypeScriptCheck() {}
 
-      execSync("npx tsc --noEmit", { "cwd": this.projectRoot, "stdio": "pipe" }")
-});"
-      this.log("TypeScript check passed", "success");
-      this.fixes.push("typescript_check")} catch (error) {}
-      this.log("TypeScript check failed", "error");
-      this.errors.push({ "check": "typescript", "error": error.message })};"
-  async runLinting() {}
 
-      this.errors.push({ "check": "eslint", "error": error.message })};"
-  async generateReport() {}
-    const report = {}"
-      "timestamp": new Date().toISOString();
-      summary: {totalFixes: this.fixes.length,"totalErrors": this.errors.length;}"
-        totalLogs: this.logs.length};"
-      "fixes": this.fixes;"
-      errors: this.errors;,
-  logs: this.logs};"
-    const reportPath = path.join(this.projectRoot, "comprehensive-error-fixer-report.json");"
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));"
-    this.log("Report saved to ${reportPath}", "success");"
-    return report};
-  async run() {}"
-    this.log("Starting Comprehensive Error Fixer");"
-      await this.fixCommonSyntaxErrors();
-      await this.runTypeScriptCheck();
-      await this.runLinting();
-      const report = await this.generateReport();"
-
-      throw error};
-// Run the error fixer;
-if (require.main === module) {}
-  const fixer = new ComprehensiveErrorFixer();
-  fixer.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = ComprehensiveErrorFixer;
-module.exports = ComprehensiveErrorFixer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 module.exports = ComprehensiveErrorFixer;
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-module.exports = ComprehensiveErrorFixer;
-=======
-module.exports = ComprehensiveErrorFixer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

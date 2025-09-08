@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export default i18n;
 
@@ -23,6 +24,27 @@ i18n
       }
     }
     fallbackLng: 'en', // Default language
+=======
+export default i18n;
+
+    }
+    detection: {'
+      order: ['localStoragenavigator'];'
+      lookupLocalStorage: 'zion_language''
+      caches: ['localStorage']
+    }});
+
+
+document && document.documentElement.dir = i18n && i18n.dir();
+
+// Listen for language changes to update RTL/LTR direction'
+i18n && i18n.on('languageChanged', (lng) => {}
+  document && document.documentElement.dir = i18n && i18n.dir();
+  
+  // Save language preference to localStorage'
+  localStorage && localStorage.setItem('zion_language', lng);
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 // Initialize i18next;
 i18n;
@@ -70,6 +92,10 @@ i18n.on ('language_changed', (lng) => {}
 });
 ;
 
+<<<<<<< HEAD
 
 
 
+=======
+export default i18n;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

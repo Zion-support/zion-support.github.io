@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+import React from "react",
+import { CheckCircle, Circle, ArrowRight } from "lucide-react",
+import { cn } from "@/lib/utils",
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export interface OnboardingStep {
   id: string,
@@ -21,11 +27,17 @@ export interface OnboardingStep {;
   action?: string;
 }
 
+<<<<<<< HEAD
 
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length;
   const progress = Math.round((completedSteps / steps.length) * 100);
 
+=======
+
+  const completedSteps = steps.filter(step => step.completed).length,
+  const progress = Math.round((completedSteps / steps.length) * 100),
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   return ("
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>"
@@ -36,7 +48,37 @@ export interface OnboardingStep {;
       {/* Progress bar */}"
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
 
+<<<<<<< HEAD
 
+=======
+        <div
+          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
+        <div 
+          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
+
+;
+
+export function OnboardingTracker({;
+  steps,;"
+  title = "Complete Your Profile",;
+  className;
+        <div
+          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
+        <div 
+          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
+
+;
+
+export function OnboardingTracker({;
+  steps,;"
+  title = "Complete Your Profile",;
+  className;
+
+  title?: string;
+  className?: string;
+}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   title?: string;
   className?: string;
@@ -51,15 +93,21 @@ export function OnboardingTracker(): any ({ ;
   const completedSteps = steps && steps.filter(step => step && step.completed).length;
   const progress = Math && Math.round((completedSteps / steps && steps.length) * 100);
 
+<<<<<<< HEAD
   return (
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>;
       <div className="flex items-center justify-between mb-4">;
         <h3 className="text-lg font-medium text-white">{title}</h3>;
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>;
       </div>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <div
 
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
@@ -67,17 +115,23 @@ export function OnboardingTracker(): any ({ ;
       </div>;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <div 
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
 
-          style={{ width: `${progress}%` }}
+          style={ width: `${progress}%` }
         ></div>
       </div>
 
 
+<<<<<<< HEAD
       {/* Steps list */}
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <div className="space-y-3">;
         {steps && steps.map((step) => (;"
           <div key={step && step.id} className="flex items-center">;"
@@ -94,6 +148,7 @@ export function OnboardingTracker(): any ({ ;
         ))}
 
 
+<<<<<<< HEAD
 
       </div>;
     </div>;
@@ -102,6 +157,8 @@ export function OnboardingTracker(): any ({ ;
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from './react';
 import { CheckCircle, Circle, ArrowRight } from './lucide-react';
 import { cn } from '@/lib / utils';
@@ -221,5 +278,9 @@ className?: string
   steps: OnboardingStep[],;
 
 
+<<<<<<< HEAD
 
 
+=======
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

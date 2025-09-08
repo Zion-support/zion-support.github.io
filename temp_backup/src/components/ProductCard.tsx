@@ -21,7 +21,7 @@ const stockVariant = product.stock === undefined ? 'success' : product.stock <= 
   (e) => handleImageError (e) ;
 }priority= {;
   false ;
-}/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center" > <span className="text-gray-500" >No Image</span> </div>) ;
+}/>) : (<div className='w-full h-full bg-gray-200 flex items-center justify-center' > <span className='text-gray-500' >No Image</span> </div>) ;
 }src= {;
   imageUrl ;
 }alt= {;
@@ -31,10 +31,10 @@ const stockVariant = product.stock === undefined ? 'success' : product.stock <= 
   objectFit: 'cover' ;
 }
 }onError= {;
-  (e) => handleImageError (e) ;"
-}priority= {;""
-  false ";""
-}/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center" > <span className="text-gray-500" >No Image</span> </div>) ;
+  (e) => handleImageError (e) ;'
+}priority= {;''
+  false ';''
+}/>) : (<div className='w-full h-full bg-gray-200 flex items-center justify-center' > <span className='text-gray-500' >No Image</span> </div>) ;
 }{;
   product.currency ;
 }{;
@@ -44,12 +44,12 @@ const stockVariant = product.stock === undefined ? 'success' : product.stock <= 
   onBuy && (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button onClick={;
   (e) => {;
   e.stopPropagation ();
-if (onBuy) {;'"
-  setIsRedirecting (true);'"'"
-onBuy () > {'";'"'"
-  isRedirecting ? (<> <span className="animate-spin inline-block mr-2 h-4 w-4 border-2 border-current border-t-transparent rounded-full" role="status" aria-hidden="true" ></span> Processing... </>) : ('Buy Now') ;
+if (onBuy) {;''
+  setIsRedirecting (true);''''
+onBuy () > {'';''''
+  isRedirecting ? (<> <span className='animate-spin inline-block mr-2 h-4 w-4 border-2 border-current border-t-transparent rounded-full' role='status' aria-hidden='true' ></span> Processing... </>) : ('Buy Now') ;
 }</Button> </TooltipTrigger> {;
   !isAuthenticated && !isRedirecting && (<TooltipContent>Login required</TooltipContent>) ;
-}</Tooltip> </TooltipProvider>) ;'"
-}</div> </div>) ;'"'"
-}'"'"'"
+}</Tooltip> </TooltipProvider>) ;''
+}</div> </div>) ;''''
+}''''''

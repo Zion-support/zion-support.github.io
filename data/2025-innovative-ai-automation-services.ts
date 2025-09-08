@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 customers: 156;
 
@@ -143,6 +144,30 @@ reviews: 167;
 
 
 
+=======
+  }
+];
+
+
+  }
+];
+  // Autonomous Data Analytics Platform
+  {
+    id: 'ai-autonomous-code-review', name: 'AI Autonomous Code Review',
+    tagline: 'Automated code quality analysis with AI-powered insights and security scanning', price: '$199',
+    period: '/month',
+    description: 'Advanced AI-powered code review system that automatically analyzes code quality, security vulnerabilities, and performance issues across multiple programming languages.',
+    features: [
+
+      website: 'https://ziontechgroup.com';
+    }
+    real_implementation: true;
+    implementation_details: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
+    launch_date: '2025 - 01 - 28';
+    customers: 234;
+    rating: 4.8;
+    reviews: 167;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -471,4 +496,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     reviews: 167;
   }
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

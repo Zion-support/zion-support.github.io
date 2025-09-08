@@ -1,12 +1,19 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
 
 import React, { useState, useEffect } from 'react';
 
 
+<<<<<<< HEAD
 
+=======
+  const { projectId } = useParams() as { projectId?: string };
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import {useParams} from 'react-router-dom';
 import {useProjects} from '@/hooks/useProjects';
@@ -18,20 +25,41 @@ import {useDisputeCheck} from '@/hooks/useDisputeCheck';
 import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions, ProjectHeader} from './components';
 export function ProjectMilestonesContent() {
   const { projectId } = useParams() as { projectId?: string }
+<<<<<<< HEAD
 
 
 export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const { user } = useAuth();
   const { getProjectById } = useProjects();
     milestones
     activities;
     isLoading: milestonesLoading
 
+<<<<<<< HEAD
 
 
 
+=======
+
+export function ProjectMilestonesContent() {;
+  const { projectId } = useParams() as { projectId?: string };
+
+import React, { useState, useEffect } from 'react';
+
+
+
+export function ProjectMilestonesContent() {;
+  const { projectId } = useParams() as { projectId?: string };
+
+import React, { useState, useEffect } from 'react';
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     createMilestone;
     updateMilestoneStatus;
     deleteMilestone;
@@ -44,11 +72,14 @@ export function ProjectMilestonesContent() {;
           setProject(projectData);
 
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         }
       } catch (error) {;
         console && console.error("Error loading project:", error);
@@ -56,6 +87,7 @@ export function ProjectMilestonesContent() {;
         setIsLoading(false);
       }
     }
+<<<<<<< HEAD
 
       }
     }
@@ -72,12 +104,51 @@ export function ProjectMilestonesContent() {;
   const projectType = job?.category |"Other";
   if (isLoading |!project) {
 
+=======
+        }
+      } catch (error) {
+        console.error("Error loading project:", error)
+      } finally {
+        setIsLoading(false)
+
+  useEffect(() => {;
+
+    async function loadProject() {;
+      if (!projectId) return,;
+      ;
+      setIsLoading(true),;
+      try {;
+
+        const projectData = await getProjectById(projectId);
+        if (projectData) {;
+          setProject(projectData);
+
+        }
+      } catch (error) {;"
+        console.error("Error loading project:", error),;
+      } finally {;
+        setIsLoading(false),;      }
+        if (projectData) {
+          setProject(projectData)}
+      } catch (error) {} finally {setIsLoading(false)}
+
+      }
+    }
+;
+    loadProject(),;
+    refetch();
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     loadProject(),
     refetch()
   }, [projectId, getProjectById, refetch]),
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const handleMilestoneCreated = async () => {;
     await refetch();
   };
@@ -98,6 +169,7 @@ export function ProjectMilestonesContent() {;
 
 
 
+<<<<<<< HEAD
           isUnderDispute={isUnderDispute}
           disputeId={disputeId}
           isTalent={isTalent}
@@ -129,6 +201,45 @@ export function ProjectMilestonesContent() {;
             isTalent={isTalent}
 
 
+=======
+      title: data && data.title,;
+      description: data && data.description || "",;
+      amount: data && data.amount,;
+      status: "pending" as const,;
+      due_date: data && data.due_date ? data && data.due_date.toISOString() : undefined;
+    };
+
+    await createMilestone(milestoneData);
+    setActiveTab('milestones');
+    await handleMilestoneCreated();
+  };
+
+  return (
+    <div className="container mx-auto py-8 px-4">;
+      <ProjectHeader title={project && project.job?.title || "Untitled Project"} />;
+
+      <div className="flex justify-between items-center my-6">;
+        <h2 className="text-2xl font-bold">Payment Milestones</h2>;
+
+        <ProjectActions
+
+        <ProjectActions;
+    },
+    
+    await createMilestone(milestoneData),'
+
+    setActiveTab('milestones'),
+    await handleMilestoneCreated()
+  },
+
+
+            paymentTerms={project && project.payment_terms}
+            isSubmitting={isSubmitting}
+            onCreateMilestone={createMilestone}
+            milestones={milestones}
+
+            onCreateMilestone={createMilestone}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {use_params} from 'react-router-dom';
 import {use_projects} from '@/hooks / use_projects';
 import {use_milestones} from '@/hooks / use_milestones';
@@ -136,10 +247,13 @@ import {useJobDetails} from '@/hooks / useJobDetails';
 import {use_auth} from '@/hooks / use_auth';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components / ui / tabs';
 import {useDisputeCheck} from '@/hooks / useDisputeCheck';
+<<<<<<< HEAD
 
 
 import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions, ProjectHeader} from './components';
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
 
  */
@@ -147,9 +261,12 @@ function ProjectMilestonesContent() {}
   const { project_id } = use_params () as { project_id?: string }
   const { user } = use_auth ();
   const { getProjectById } = use_projects ();
+<<<<<<< HEAD
 
   const {}
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     milestones,
     activities;
     is_loading: milestones_loading,
@@ -289,9 +406,28 @@ pr-12325
             onUpdateStatus={updateMilestoneStatus}
             onDeleteMilestone={delete_milestone}
             onUploadDeliverable={upload_deliverable}
+<<<<<<< HEAD
+=======
+
+            <MilestoneCreator
+
+          {(isClient || isTalent) && (
+            <MilestoneCreator 
+
+              onSubmit={handleMilestoneSubmit}
+
+              isSubmitting={isSubmitting}
+
+              onCancel={() => setActiveTab('milestones')}
+              projectScope={project && project.scope_summary}
+              projectStartDate={project && project.start_date}
+              projectEndDate={project && project.end_date}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             refetch={refetch}
 
+<<<<<<< HEAD
             paymentTerms={project.payment_terms}
             isSubmitting={isSubmitting}
             onCreateMilestone={createMilestone}
@@ -340,6 +476,12 @@ pr-12325
               projectType={projectType}
             />;
           )}
+=======
+            <MilestoneCreator
+
+            <MilestoneCreator;
+          {(isClient || isTalent) && (
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           />;
         </TabsContent>;"
@@ -361,6 +503,7 @@ pr-12325
         </TabsContent>;
       </Tabs>;
     </div>);
+<<<<<<< HEAD
 
   ),; setIsLoading (true);
 try {
@@ -373,3 +516,8 @@ try {
 
 
 
+=======
+
+
+  ),; setIsLoading (true);
+>>>>>>> origin/cursor/delete-old-data-records-6bba

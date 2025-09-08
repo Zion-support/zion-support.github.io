@@ -7,12 +7,18 @@ import React from "react",
 import { Button } from "@/components/ui/button",
 import { Search, Sliders } from "lucide-react";
 import { Input } from "@/components/ui/input";
+<<<<<<< HEAD
 
 import { Search, Sliders } from "lucide-react",
 
 
 
 
+=======
+import { Search, Sliders } from "lucide-react",
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface MobileFilterBarProps {
 
 interface MobileFilterBarProps {};
@@ -30,9 +36,22 @@ export function MobileFilterBar({
 
 
 
+<<<<<<< HEAD
 
 
 
+=======
+  setSearchTerm
+  setIsMobileFilterOpen
+
+
+export function MobileFilterBar({ ;
+  searchTerm;
+export function MobileFilterBar({ 
+  searchTerm,
+  setSearchTerm, 
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }: MobileFilterBarProps) {
 
   return (
@@ -57,6 +76,7 @@ export function MobileFilterBar({
       </div>
     </div>
 
+<<<<<<< HEAD
 
 
         <Sliders className="h-4 w-4" />;
@@ -65,6 +85,29 @@ export function MobileFilterBar({
 
 
 
+=======
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Search, Sliders} from "lucide-react";
+import {Input} from "@/components/ui/input";
+
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Search, Sliders } from "lucide-react",;
+
+import { Input } from "@/components/ui/input",;
+
+interface MobileFilterBarProps {;
+  searchTerm: string,;
+  setSearchTerm: (value: string) => void,;
+  setIsMobileFilterOpen: (isOpen: boolean) => void;
+}
+
+
+        <Sliders className="h-4 w-4" />;
+        Filter Talents;
+      </Button>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from './react';
 
 import { Input } from '@/components / ui / input';
@@ -85,13 +128,25 @@ export /**;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 ;
 
 
+<<<<<<< HEAD
 }
 
 ;
 
 
 
+=======
+          className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate";
+        />;
+
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

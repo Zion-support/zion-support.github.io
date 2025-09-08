@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+#!/usr/bin/env node
+
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -85,6 +89,10 @@ const { execSync } = require('child_process')
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
+#!/usr/bin/env node
+
+=======
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -112,6 +120,7 @@ const { execSync } = require('child_process')
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node
 
 
@@ -120,6 +129,35 @@ main
 #!/usr/bin/env node
 
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+<<<<<<< HEAD
+#!/usr/bin/env node
+
+/**
+ * Performance Monitoring Script
+ * Monitors application performance metrics
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+class PerformanceMonitor {
+  constructor() {
+    this.metrics = {
+      bundleSize: '0',
+      memoryUsage: '0',
+      timestamp: new Date().toISOString()
+    };
+  }
+
+  async run() {
+    console.log('📊 Running performance monitoring...');
+    console.log('✅ Performance monitoring completed');
+  }
+
+const monitor = new PerformanceMonitor();
+monitor.run().catch(console.error);
+
+=======
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -157,49 +195,33 @@ const { execSync } = require('child_process')
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 const fs = require('fs');
 const path = require('path');
+>>>>>>> origin/resolved-merge-conflicts
 const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 <<<<<<< HEAD
+console.log('⚡ Performance Monitor...\n');
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 console.log('📊 Starting performance monitoring...');
+>>>>>>> origin/resolved-merge-conflicts
 
-// Performance monitoring configuration
-const config = {
-  outputDir: path.join(__dirname, '..', 'performance-reports'),
-  metrics: {
-    bundleSize: true,
-    loadTime: true,
-    memoryUsage: true,
-    cpuUsage: true
-  }
-};
-
-// Ensure output directory exists
-if (!fs.existsSync(config.outputDir)) {
-  fs.mkdirSync(config.outputDir, { recursive: true });
-}
-
-// Performance metrics collection
-function collectMetrics() {
-  const metrics = {
-    timestamp: new Date().toISOString(),
-    memoryUsage: process.memoryUsage(),
-    uptime: process.uptime(),
-    platform: process.platform,
-    nodeVersion: process.version
-  };
-
-  return metrics;
-}
-
-// Save metrics to file
-function saveMetrics(metrics) {
-  const filename = `performance-${Date.now()}.json`;
-  const filepath = path.join(config.outputDir, filename);
+// Function to monitor performance
+function monitorPerformance() {
+  console.log('📊 Performance Analysis\n');
   
+<<<<<<< HEAD
+  // Check bundle size
+  console.log('📦 Bundle Analysis:');
+=======
   fs.writeFileSync(filepath, JSON.stringify(metrics, null, 2));
   console.log(`📈 Performance metrics saved to: ${filename}`);
 }
 
+<<<<<<< HEAD
+=======
 // Main execution
 try {
   const metrics = collectMetrics();
@@ -396,15 +418,27 @@ let passed = 0;
 let failed = 0;
 
 performanceChecks.forEach(check => {
+>>>>>>> origin/resolved-merge-conflicts
   try {
-    if (check.check()) {
-      console.log(`✅ ${check.name}`);
-      passed++;
+    if (fs.existsSync('.next/static/chunks')) {
+      const chunks = fs.readdirSync('.next/static/chunks');
+      let totalSize = 0;
+      
+      chunks.forEach(chunk => {
+        const chunkPath = path.join('.next/static/chunks', chunk);
+        const stats = fs.statSync(chunkPath);
+        totalSize += stats.size;
+      });
+      
+      console.log(`   Total chunks: ${chunks.length}`);
+      console.log(`   Total size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
     } else {
-      console.log(`❌ ${check.name}`);
-      failed++;
+      console.log('   No build found. Run "npm run build" first.');
     }
   } catch (error) {
+<<<<<<< HEAD
+    console.log(`   Error analyzing bundle: ${error.message}`);
+=======
     console.log(`❌ ${check.name} - Error: ${error.message}`);
     failed++;
   }
@@ -457,6 +491,7 @@ if (performanceMetrics.recommendations.length > 0) {
   console.log('\n✅ No performance issues detected');
 }
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
@@ -464,19 +499,89 @@ class PerformanceMonitor {
       memoryUsage: '0',
       timestamp: new Date().toISOString()
     };
+>>>>>>> origin/resolved-merge-conflicts
   }
 
-  async run() {
-    console.log('📊 Running performance monitoring...');
-    console.log('✅ Performance monitoring completed');
+  // Check for large files
+  console.log('\n🔍 Large Files Check:');
+  const findLargeFiles = (dir, maxSize = 1024 * 1024) => { // 1MB
+    let largeFiles = [];
+    try {
+      const items = fs.readdirSync(dir);
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        if (stat.isDirectory() && !item.startsWith('.') && !item.includes('node_modules')) {
+          largeFiles = largeFiles.concat(findLargeFiles(fullPath, maxSize));
+        } else if (stat.isFile() && stat.size > maxSize) {
+          largeFiles.push({ path: fullPath, size: stat.size });
+        }
+      }
+    } catch (error) {
+      // Ignore errors
+    }
+    return largeFiles;
+  };
+
+  const largeFiles = findLargeFiles('.');
+  if (largeFiles.length > 0) {
+    console.log('   Large files found:');
+    largeFiles.forEach(file => {
+      console.log(`   - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB`);
+    });
+  } else {
+    console.log('   No large files found');
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
 
-const monitor = new PerformanceMonitor();
-monitor.run().catch(console.error);
+  // Check for unused dependencies
+  console.log('\n📋 Dependency Analysis:');
+  try {
+    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+    const dependencies = Object.keys(packageJson.dependencies || {});
+    const devDependencies = Object.keys(packageJson.devDependencies || {});
+    
+    console.log(`   Production dependencies: ${dependencies.length}`);
+    console.log(`   Development dependencies: ${devDependencies.length}`);
+    
+    // Check for potentially unused dependencies
+    const commonUnused = ['lodash', 'moment', 'jquery'];
+    const unused = dependencies.filter(dep => commonUnused.includes(dep));
+    if (unused.length > 0) {
+      console.log(`   Potentially unused: ${unused.join(', ')}`);
+    }
+  } catch (error) {
+    console.log(`   Error analyzing dependencies: ${error.message}`);
+  }
 
+<<<<<<< HEAD
+  // Check build performance
+  console.log('\n⏱️ Build Performance:');
+  try {
+=======
 main
 
+<<<<<<< HEAD
+
+// Save report
+fs.writeFileSync('performance-metrics.json', JSON.stringify(performanceMetrics, null, 2));
+console.log('\n📄 Performance report saved to performance-metrics.json');
+
+// Exit after a delay to prevent rapid restarts
+setTimeout(() => {
+  process.exit(0);
+}, 1000);
+ursor/automate-test-improve-and-merge-code-59d5
+
+console.log('⚡ Performance Monitor');
+console.log('
+=======
 =======
 <<<<<<< HEAD
 
@@ -561,109 +666,40 @@ class PerformanceMonitor {
 
   async monitorBuildPerformance(report) {
     this.log('Monitoring build performance...);
+>>>>>>> origin/resolved-merge-conflicts
     const startTime = Date.now();
+    execSync('npm run build', { stdio: 'pipe' });
+    const endTime = Date.now();
+    const buildTime = (endTime - startTime) / 1000;
+    console.log(`   Build time: ${buildTime.toFixed(2)} seconds`);
+    
+    if (buildTime > 60) {
+      console.log('   ⚠️ Build time is quite long. Consider optimization.');
+    } else if (buildTime > 30) {
+      console.log('   ⚠️ Build time is moderate. Some optimization possible.');
+    } else {
+      console.log('   ✅ Build time is good.');
+    }
+  } catch (error) {
+    console.log(`   Error measuring build time: ${error.message}`);
+  }
 
-      const buildTime = Date.now() - startTime;
-      report.metrics.buildTime = buildTime;
-      report.metrics.buildTimeSeconds = (buildTime / 1000).toFixed(2);
-      if (buildTime > 60000) { // 1 minute
-        report.recommendations.push({
+  // Memory usage check
+  console.log('\n💾 Memory Usage:');
+  const memUsage = process.memoryUsage();
+  console.log(`   RSS: ${(memUsage.rss / 1024 / 1024).toFixed(2)} MB`);
+  console.log(`   Heap Used: ${(memUsage.heapUsed / 1024 / 1024).toFixed(2)} MB`);
+  console.log(`   Heap Total: ${(memUsage.heapTotal / 1024 / 1024).toFixed(2)} MB`);
 
-      this.log('Build failed, skipping build performance monitoring');
-      report.metrics.buildTime = 0;
-
-  async monitorBundleSize(report) {
-    this.log('Monitoring bundle size...);
-    const distDir = path.join(this.workspaceRoot,dist');
-    if (fs.existsSync(distDir)) {
-      const bundleSize = this.getDirectorySize(distDir);
-      report.metrics.bundleSize = bundleSize;
-      report.metrics.bundleSizeMB = (bundleSize / (1024 * 1024)).toFixed(2);
-      if (bundleSize > 2 * 1024 * 1024) { // 2MB
-
-
-  async monitorDependencies(report) {
-    this.log('Monitoring dependencies...);
-    const packageJsonPath = path.join(this.workspaceRoot,package.json');
-    if (fs.existsSync(packageJsonPath)) {
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,utf8));
-      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
-      report.metrics.totalDependencies = Object.keys(dependencies).length;
-      // Check for heavy dependencies
-      const heavyDeps = [lodash,moment,jquery,bootstrap];
-      const foundHeavyDeps = Object.keys(dependencies).filter(dep => heavyDeps.includes(dep));
-      report.metrics.heavyDependencies = foundHeavyDeps.length;
-      if (foundHeavyDeps.length > 0) {
-
-
-  calculatePerformanceScore(report) {
-    let score = 100;
-    // Deduct for build time
-    if (report.metrics.buildTime > 60000) {
-      score -= 20;
-    } else if (report.metrics.buildTime > 30000) {
-      score -= 10;
-    // Deduct for bundle size
-    if (report.metrics.bundleSize > 2 * 1024 * 1024) {
-      score -= 30;
-    } else if (report.metrics.bundleSize > 1024 * 1024) {
-      score -= 15;
-    // Deduct for heavy dependencies
-    if (report.metrics.heavyDependencies > 2) {
-    } else if (report.metrics.heavyDependencies > 0) {
-      score -= 5;
-    return Math.max(0, Math.min(100, score));
-
-  generateRecommendations(report) {
-
-
-  getDirectorySize(dir) {
-    let size = 0;
-    const items = fs.readdirSync(dir);
-    items.forEach(item => {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {
-        size += this.getDirectorySize(fullPath);
-        size += stat.size;
-    return size;
-
-// CLI interface
-if (require.main === module) {
-  const monitor = new PerformanceMonitor();
-  monitor.runPerformanceMonitoring().catch(console.error);
-
-module.exports = PerformanceMonitor;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-=======
->>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-if (failed === 0) {
-  console.log('🎉 All performance checks passed!');
-  process.exit(0);
-} else {
-  console.log('⚠️  Some performance checks failed. Please review the issues.');
-  process.exit(1);
+  console.log('\n✅ Performance monitoring completed');
 }
+<<<<<<< HEAD
+
+// Run performance monitoring
+monitorPerformance();
+=======
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts

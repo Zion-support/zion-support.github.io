@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export type BlockchainNetwork = "ethereum" | "polygon" | "none";
 
   id: string;
@@ -11,13 +14,17 @@ export type BlockchainNetwork = "ethereum" | "polygon" | "none";
   createdAt: string;
 
   createdBy: string
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   status: 'draft' | 'deployed' | 'executed' | 'cancelled'
 
 ;
 
   status: "draft" | "deployed" | "executed" | "cancelled";
 
+<<<<<<< HEAD
 }
 
 export interface EscrowContractDetails {
@@ -28,6 +35,9 @@ export interface EscrowContractDetails {;
 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   client: string;
 
   talent: string;
@@ -38,14 +48,28 @@ export interface EscrowContractDetails {;
 export interface DeploymentOptions {;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   network: BlockchainNetwork;
   walletAddress?: string;
   useEscrow: boolean
 
   deployToChain: boolean
 
+<<<<<<< HEAD
+=======
+  completion_deadline: string,
+
+  arbitrator?: string;
+
+}
+
+export interface DeploymentOptions {
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   completion_deadline: string,
 
@@ -69,6 +93,13 @@ export interface DeploymentOptions {;
   walletAddress?: string,;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+  useEscrow: boolean;,
+  deployToChain: boolean;
+}
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

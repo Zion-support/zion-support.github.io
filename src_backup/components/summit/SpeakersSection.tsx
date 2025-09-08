@@ -5,7 +5,11 @@ interface Speaker {
   title: string,
   avatar: string,
   twitter?: string
+<<<<<<< HEAD
+import Image from 'next/image',
+=======
 import Image from "next/image",
+>>>>>>> origin/resolved-merge-conflicts
 import { Twitter, Linkedin } from 'lucide-react'
 
 interface Speaker {
@@ -21,7 +25,11 @@ interface Speaker {
   avatar: string,
   twitter?: string
 
+<<<<<<< HEAD
+import Image from 'next/image',
+=======
 import Image from "next/image",
+>>>>>>> origin/resolved-merge-conflicts
 import { Twitter, Linkedin } from 'lucide-react'
 
 interface Speaker {

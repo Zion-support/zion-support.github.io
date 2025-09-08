@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+#!/""usr/bin/env""
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -20,12 +23,16 @@ console.log(" Starting continuous front maximizer automation...)
 >>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { execSync  } from "child_process"
-import fs from fs
+import fs from "fs"
 import path from "path"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { fileURLToPath } from "url"
 console.log("" Starting continuous front maximizer automation...")
 import { execSync  } from "child_process"
@@ -45,7 +52,11 @@ console.log(" Starting continuous front maximizer automation...")
 // console.log(" Build completed"")
   console.log(""⚠  Build failed but continuing...")
   console.log("⚠  Build failed but continuing...")
+<<<<<<< HEAD
+const distPath = path.join(process.cwd(), "dist";
+=======
     const distPath = path.join(process.cwd(), "dist"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // console.log("⚠  Build verification "failed": dist folder not found")
     console.log("�  Optimizing images...")
   if (fs.existsSync(""scripts/optimize-images.js"")
@@ -74,26 +85,38 @@ console.log("� Checking JavaScript bundle optimization...")
   "timestamp"
       "summary": "Front maximizer completed"
       "status": "completed"
+<<<<<<< HEAD
+const reportPath = path.join(process.cwd(), "front-maximizer-report.json";
+    console.log(" Continuous front maximizer completed successfully")
+  console.error(" Continuous front maximizer "failed": ")
+=======
     const reportPath = path.join(process.cwd(), "front-maximizer-report.json"
     console.log(" Continuous front maximizer completed successfully")
   console.error(" Continuous front maximizer "failed": ")
   console.error(" Continuous front maximizer "failed": ")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // console.log("⚠  Critical CSS extraction failed but continuing...")
     console.log(" Generating front maximizer report...")
   "timestamp"
       "summary": "Front maximizer completed"
       "status": "completed"
+<<<<<<< HEAD
+const reportPath = path.join(process.cwd(), "front-maximizer-report.json";
+    console.log(" Continuous front maximizer completed successfully")
+  console.error(" Continuous front maximizer "failed": ")
+=======
     const reportPath = path.join(process.cwd(), "front-maximizer-report.json"
     console.log(" Continuous front maximizer completed successfully")
   console.error(" Continuous front maximizer "failed": ")
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Don"
   console.log( Continuous front maximizer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes```)
-process.on(SIGINT)
+process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
-process.on(SIGINT)
+process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
-process.on(SIGTERM)
+process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
 
@@ -106,6 +129,14 @@ process.on(SIGTERM)
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+  console.error(" Failed to start continuous front "maximizer": ")
+
+
+
+
+
+=======
 
   console.error( Failed to start continuous front maximizer": ")
 
@@ -140,3 +171,4 @@ process.on(SIGTERM)
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

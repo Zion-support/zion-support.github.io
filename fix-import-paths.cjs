@@ -149,10 +149,4 @@ files.forEach(file => {
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
 });
-<<<<<<< HEAD
-
 console.log(`🔧 Import path fixing completed. Fixed ${fixedCount} files`);
-
-=======
-console.log(`🔧 Import path fixing completed. Fixed ${fixedCount} files`);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

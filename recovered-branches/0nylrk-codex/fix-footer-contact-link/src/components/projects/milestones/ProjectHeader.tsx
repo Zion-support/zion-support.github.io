@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 
+=======
+title: string;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 export /**
  * ProjectHeader - Function description
@@ -30,10 +34,14 @@ interface ProjectHeaderProps {
 }
 export function ProjectHeader({ title }: ProjectHeaderProps) {
 
+<<<<<<< HEAD
 
   const navigate = useNavigate();
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   title: string
 }
 
@@ -42,6 +50,7 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {;
 import {useNavigate} from 'react-router-dom';
 import {Button} from '@/components/ui/button';
 import {ArrowLeft} from 'lucide-react';
+
 interface ProjectHeaderProps {;
   title: string;
 }
@@ -50,11 +59,21 @@ export function ProjectHeader(): any ({ title }: ProjectHeaderProps) {;
 
 
 
+<<<<<<< HEAD
         >
           <ArrowLeft className="h-4 w-4 mr-1" />
           Back
         </Button>
 
+=======
+import {useNavigate} from 'react-router-dom';
+import {Button} from '@/components/ui/button';
+import {ArrowLeft} from 'lucide-react';
+
+interface ProjectHeaderProps {;
+  title: string;
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
         <h1 className="text-2xl md:text-3xl font-bold truncate max-w-xl">
@@ -62,6 +81,41 @@ export function ProjectHeader(): any ({ title }: ProjectHeaderProps) {;
         </h1>
       </div>
     </div>
+<<<<<<< HEAD
+=======
+
+  );
+}
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
 
+=======
+  );
+}
+
+  )
+}
+;
+
+  ),;}
+ <Button variant="ghost" size="sm" className="mr-2" onClick= {
+  () => navigate (-1) 
+}> <ArrowLeft className="h-4 w-4 mr-1" /> Back </Button> </div> </div>) 
+}
+  );
+}
+}
+;
+
+  );
+}
+  )
+}
+;
+  )
+}
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

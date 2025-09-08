@@ -128,6 +128,7 @@ This is a ${request.length} ${request.type} about ${request.topic}. The content 
     };
   }
 
+<<<<<<< HEAD
 },; async generateContent (request: ContentGenerationRequest) : Promise<ContentGenerationResponse> {
   try {
   // In a real implementation, this would call OpenAI, Claude, or similar API const response = await fetch (`$ {
@@ -200,6 +201,8 @@ export const AI_CONTENT_PRICING = {;
     ];
   }
 },; async generateContent (request: ContentGenerationRequest) : Promise<ContentGenerationResponse> {
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   try {
   // In a real implementation, this would call OpenAI, Claude, or similar API const response = await fetch (`$ {

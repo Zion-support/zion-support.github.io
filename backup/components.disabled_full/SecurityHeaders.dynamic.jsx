@@ -1,4 +1,4 @@
-const SecurityHeaders = dynamic(() => import("./SecurityHeaders"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default SecurityHeaders' ,'
+const SecurityHeaders = dynamic(() => import('./SecurityHeaders'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default SecurityHeaders' ,'
 
 </p>'
 </p>'
@@ -23,8 +23,8 @@ const SecurityHeaders = dynamic(() => import("./SecurityHeaders"),{'; "loading":
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const SecurityHeaders = dynamic(() => import(\"./SecurityHeaders\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default SecurityHeaders\' ,const SecurityHeaders = dynamic(() => import(\"./SecurityHeaders\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default SecurityHeaders\" ,\"\"\";
-const SecurityHeaders = dynamic(() => import(\"./SecurityHeaders\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default SecurityHeaders' ,';
+const SecurityHeaders = dynamic(() => import(\'./SecurityHeaders\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default SecurityHeaders\' ,const SecurityHeaders = dynamic(() => import(\'./SecurityHeaders\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default SecurityHeaders\' ,\'\'\';
+const SecurityHeaders = dynamic(() => import(\'./SecurityHeaders\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default SecurityHeaders' ,';
 </p>';
 </p>';
 </p>';
@@ -60,7 +60,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
 </p>';
 </p>'</p>';
-const SecurityHeaders = dynamic(() => import(\"./SecurityHeaders\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default SecurityHeaders' ,'
+const SecurityHeaders = dynamic(() => import(\'./SecurityHeaders\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default SecurityHeaders' ,'
 </p>'
 </p>'
 </p>'

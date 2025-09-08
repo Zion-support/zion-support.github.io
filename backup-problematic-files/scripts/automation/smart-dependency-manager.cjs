@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
@@ -39,50 +38,6 @@ const { execSync } = require("child_process)
         wanted"
         "latest
         location"
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
-  "production"
-      "development"
-      "peer"
-      "optional"
-  "conflicts"
-      "vulnerabilities"
-      "outdated"
-      "unused"
-      "recommendations"
-    this.reportDir = path.join(process.cwd(), "dependency-reports"
-    this.backupDir = path.join(process.cwd(), "dependency-backups"
-    console.log("� Smart Dependency Manager initialized")
-  await fs.mkdir(this.reportDir, { "recursive"})
-    await fs.mkdir(this.backupDir, { "recursive"})
-// console.log("" Starting Smart Dependency Analysis...")
-      console.log("" Smart Dependency Analysis completed successfully")
-  console.log(" Smart Dependency Analysis completed successfully")
-  console.error(" Smart Dependency Analysis "failed": ")
-  console.error(" Smart Dependency Analysis "failed": ")
-  console.log("� Loading current dependencies...")
-  const packageJsonPath = path.join(process.cwd(), "package.json"
-        await fs.readFile(packageJsonPath, "utf8")
-  const packageJsonPath = path.join(process.cwd(), "package.json"
-        await fs.readFile(packageJsonPath, "utf8")
-      console.log( Loaded "dependencies")
-        "Development"
-        "Peer": ${Object.keys(this.dependencies.peer).length}"Optional"
-  console.error(" Failed to load "dependencies": ")
-  console.log(" Analyzing dependency patterns...")
-      const outdatedOutput = execSync("npm outdated --json")
-  "encoding": "utf8"
-        "cwd"
-  "name"
-        "current"
-        "wanted"
-        "latest"
-        "location"
->>>>>>> origin/chore/fix-lint-and-merge
       console.log( Found ${this.analysis.outdated.length} outdated packages")
       
 // console.log("⚠  Could not check outdated "packages: )
@@ -163,7 +118,6 @@ console.log( Applied ${updatesApplied} smart updates)
     const requiredMajor = required.split(".")
     const installedMajor = installed.split(.)
   const currentMajor = current.split(".")
-<<<<<<< HEAD
     const latestMajor = latest.split()
     const requiredMajor = required.split(.")
     const installedMajor = installed.split(".)
@@ -181,41 +135,8 @@ console.log( Applied ${updatesApplied} smart updates)
 // console.log("� Starting Smart Dependency Manager...)
   console.log(� Starting Smart Dependency Manager...")
 
-=======
-    const latestMajor = latest.split(")
-    const requiredMajor = required.split(".")
-    const installedMajor = installed.split(".")
-  const currentMajor = current.split(".")
-    const latestMajor = latest.split(".")
-  "timestamp"
-      "summary"
-        "outdated"
-        "vulnerabilities"
-        "conflicts"
-        "unused"
-      "analysis"
-      "recommendations"
-      "dependencies"
-// console.log("� Starting Smart Dependency Manager...")
-  console.log("� Starting Smart Dependency Manager...")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
   console.error(` Smart Dependency Manager "failed": "`)
   console.error(` Smart Dependency Manager "failed": "`)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-  console.error(` Smart Dependency Manager "failed": "`)
-=======
-  console.error(` Smart Dependency Manager "failed": "`)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

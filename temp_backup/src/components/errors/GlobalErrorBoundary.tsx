@@ -3,7 +3,7 @@
   {;'
   React, {;''
   Component,  ErrorInfo, ReactNode ';'
-  } from "react";''
+  } from 'react';''
 import * as Sentry from '@sentry/nextjs' error: Error | null errorInfo: ErrorInfo | null errorId: string | null retryCount: number userFeedback: string showDetails: boolean ;
 }interface ErrorBoundaryProps {;
   children: ReactNode fallback?: ReactNode onError?: (error: Error, errorInfo: ErrorInfo) => void enableRetry?: boolean maxRetries?: number showReportButton?: boolean context?: string ;'
@@ -120,9 +120,9 @@ timestamp: new Date () .toISOString () ;
 }
 }render () {;
   if (this.state.hasError && this.state.error) {;
-  //Use custom fallback if provided if (this.props.fallback) {;"
-  return this.props.fallback ;""
-}const severity = this.getErrorSeverity (this.state.error) const suggestion = this.getErrorSuggestion (this.state.error) const canRetry = this.props.enableRetry !== false && this.state.retryCount < (this.props.maxRetries || 3) return (<div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20" > <motion.div initial= {;
+  //Use custom fallback if provided if (this.props.fallback) {;'
+  return this.props.fallback ;''
+}const severity = this.getErrorSeverity (this.state.error) const suggestion = this.getErrorSuggestion (this.state.error) const canRetry = this.props.enableRetry !== false && this.state.retryCount < (this.props.maxRetries || 3) return (<div className='min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20' > <motion.div initial= {;
   {;
   opacity: 0, scale: 0.95 ;
 }
@@ -141,10 +141,10 @@ export const withErrorBoundary = <P extends object>(;
   return WrappedComponent;
 }
 }transition= {;
-  {;"
-  duration: 0.3 ;"'"
-}";'"'"
-}> <Card className="w-full max-w-2xl border-red-200 bg-white dark:bg-gray-900" > <CardHeader className="text-center" > <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20" > <AlertTriangle className="h-8 w-8 text-red-600 dark:text-red-400" /> </div> <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100" > Oops! Something went wrong </CardTitle> <div className="flex items-center justify-center gap-2 mt-2" > <Badge variant= {';''
+  {;'
+  duration: 0.3 ;'''
+}';''''
+}> <Card className='w-full max-w-2xl border-red-200 bg-white dark:bg-gray-900' > <CardHeader className='text-center' > <div className='mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20' > <AlertTriangle className='h-8 w-8 text-red-600 dark:text-red-400' /> </div> <CardTitle className='text-2xl font-bold text-gray-900 dark:text-gray-100' > Oops! Something went wrong </CardTitle> <div className='flex items-center justify-center gap-2 mt-2' > <Badge variant= {';''
   severity === 'critical'? 'destructive': severity === 'high'? 'destructive': 'secondary' ;
 }> {;
   severity.toUpperCase () ;
@@ -153,11 +153,11 @@ export const withErrorBoundary = <P extends object>(;
 }</Badge>) ;
 }</div> </CardHeader> </p>) ;
 }</div> Try Again </Button>) ;
-}Go Home </Button> <Button </Button> </div> {;"
-  /* Error Details */ ;"'"
-}<AnimatePresence> {";'"'"
-  this.state.showDetails && (<motion.div > <div className="space-y-4" > <div> </code> </div> {'";'"'"
-  process.env.NODE ENV === 'development' && this.state.error.stack && (<div> <h4 className="font-semibold text-sm mb-2" >Stack Trace:</h4> <pre className="p-3 bg-gray-50 dark:bg-gray-800 rounded text-xs overflow-auto max-h-32" > {;
+}Go Home </Button> <Button </Button> </div> {;'
+  /* Error Details */ ;'''
+}<AnimatePresence> {';''''
+  this.state.showDetails && (<motion.div > <div className='space-y-4' > <div> </code> </div> {'';''''
+  process.env.NODE ENV === 'development' && this.state.error.stack && (<div> <h4 className='font-semibold text-sm mb-2' >Stack Trace:</h4> <pre className='p-3 bg-gray-50 dark:bg-gray-800 rounded text-xs overflow-auto max-h-32' > {;
   this.state.error.stack ;
 }</pre> </div>) ;
 }Report Issue </Button>) ;
@@ -180,6 +180,6 @@ export const withErrorBoundary = <P extends object>(;
 }> <Component {;
   ...props ;`
 }/> </GlobalErrorBoundary>) WrappedComponent.displayName = `withErrorBoundary ($ {;
-  Component.displayName || Component.name ;'"`
-}) ` return WrappedComponent;'"'"
-}export default GlobalErrorBoundary '"'"'"`
+  Component.displayName || Component.name ;''`
+}) ` return WrappedComponent;''''
+}export default GlobalErrorBoundary ''''''`

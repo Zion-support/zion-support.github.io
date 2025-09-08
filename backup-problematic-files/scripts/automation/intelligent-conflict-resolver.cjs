@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/"usr/bin/env" node;
 #!/usr/bin/env node;
 const fs = require("fs);
@@ -8,21 +7,9 @@ class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();
     this.logsDir = path.join(this.projectRoot, logs");
-=======
-#!/usr/bin/env node;"
-#!/usr/bin/env node"
-const fs = require("fs");
-const path = require("path");
-const { execSync, spawn } = require("child_process");"
-class $1 {}
-  constructor() {}
-  this.projectRoot = process.cwd();"
-    this.logsDir = path.join(this.projectRoot, "logs");"
->>>>>>> origin/chore/fix-lint-and-merge
     this.ensureLogsDirectory();
     this.setupLogging()}
   ensureLogsDirectory() {}
-<<<<<<< HEAD
   if (!fs.existsSync(this.logsDir)) {}
   fs.mkdirSync(this.logsDir, { "recursive: true })}
   }
@@ -81,74 +68,20 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
         "markers": conflictMarkers,
         resolvable: this.canAutoResolve(conflictMarkers),
         "recommendations": []}
-=======
-  if (!fs.existsSync(this.logsDir)) {}"
-  fs.mkdirSync(this.logsDir, { "recursive": true })};"
-  };
-  setupLogging() {}"
-  this.logFile = path.join(this.logsDir, "intelligent-conflict-resolver.log");"
-    this.errorFile = path.join(;)"
-      this.logsDir,intelligent-conflict-resolver-error.log";"
-    )};
-;"
-  log(message, level = "INFO") {}"
-  const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message};`"
-    console.log("logMessage);"
-    // Write to log file;"
-    fs.appendFileSync(this.logFile, logMessage + "\n");"
-    // Write errors to error file;"
-    if (level === "ERROR") {}"
-  // Write to log file;"
-    // Write errors to error file;"
-    if (level === "ERROR") {}
-  fs.appendFileSync(this.errorFile, logMessage + "\n")};"
-  async checkForConflicts() {}"
-  this.log("Checking for merge conflicts...");"
-    try {}
-  // Check git status for conflicts;"
-      const status = execSync("git status --porcelain", { "encoding": "utf8" }")
-});
-      const conflictFiles = status;"
-        .split("\n");
-        .filter(line => line.startsWith("UU "));"
-        .map(line => line.substring(3));
-      if (conflictFiles.length === 0) {}"
-  this.log("No merge conflicts detected");"
-        return []};
-
-    try {}"
-  const content = fs.readFileSync(filePath, "utf8");"
-      const conflictMarkers = this.extractConflictMarkers(content);
-      if (conflictMarkers.length === 0) {}"
-  return { "type": "no-conflict", "resolvable": false };"
-      const analysis = {}
-  filePath,"
-        "type": this.determineConflictType(conflictMarkers),
-        "markers": conflictMarkers,
-        "resolvable": this.canAutoResolve(conflictMarkers),
-        "recommendations": []};"
->>>>>>> origin/chore/fix-lint-and-merge
       // Generate resolution recommendations;
       if (analysis.resolvable) {}
   analysis.recommendations = this.generateResolutionStrategy(;)
           conflictMarkers,
           filePath;
-<<<<<<< HEAD
         )}
       return analysis} catch (error) {  this.log(`Failed to analyze ${filePath  }: ${error.message}`, ERROR);
       return { "type": error, "resolvable": false, error: error.message }
     }
   }
-=======
-
-      return { "type": "error", "resolvable": false, "error": error.message };"
->>>>>>> origin/chore/fix-lint-and-merge
   extractConflictMarkers(content) {}
   const markers = [];"
     const lines = content.split("\n");"
     for (let i = 0; i < lines.length; i++) {}
-<<<<<<< HEAD
   const line = lines[i];
       if (line.startsWith(<<<<<<<)) {}
   const marker = {}
@@ -158,21 +91,9 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
         // Find the separator;
         for (let j = i + 1; j < lines.length; j++) {}
   if (lines[j].startsWith()) {}
-=======
-  const line = lines[i];"
-      if (line.startsWith("<<<<<<<")) {}"
-  const marker = {}"
-  "start": i,
-          "startMarker": line,
-          "branch": line.substring(7).trim()};"
-        // Find the separator;
-        for (let j = i + 1; j < lines.length; j++) {}"
-  if (lines[j].startsWith()) {}"
->>>>>>> origin/chore/fix-lint-and-merge
   // Find the separator;
 
   marker.separator = j;
-<<<<<<< HEAD
             break}
         }
         // Find the end marker;
@@ -188,21 +109,9 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
       }
     }
     return markers}
-=======
-            break};
-        // Find the end marker;
-        for (let j = marker.separator + 1; j < lines.length; j++) {}
-  marker.end = j;
-            marker.endMarker = lines[j];
-            marker.otherBranch = lines[j].substring(8).trim();
-        if (marker.end) {}
-  markers.push(marker)};
-    return markers};
->>>>>>> origin/chore/fix-lint-and-merge
   determineConflictType(markers) {}
   const types = markers.map(marker => {})"
   const startContent = this.getConflictContent(marker, "start");
-<<<<<<< HEAD
       const endContent = this.getConflictContent(marker, end);
       if (this.isPackageJsonConflict(startContent, endContent));
         return "package-json";
@@ -305,76 +214,9 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
             );
             break;
           case lock-file:;
-=======
-      const endContent = this.getConflictContent(marker, "end");"
-      if (this.isPackageJsonConflict(startContent, endContent));"
-        return "package-json";
-      if (this.isLockFileConflict(startContent, endContent)) return "lock-file";"
-      if (this.isConfigFileConflict(startContent, endContent));"
-        return "config-file";"
-      if (this.isComponentConflict(startContent, endContent));"
-        return "component";
-      if (this.isImportConflict(startContent, endContent)) return "import";
-      if (this.isStyleConflict(startContent, endContent)) return "style";
-      return "unknown"}"
-});"
-    return types[0] || "unknown"};"
-  getConflictContent(marker, side) {}"
-  if (side === "start") {}
-  return marker.startMarker} else if (side === "end") {}"
-  return marker.endMarker};"
-    return "};"
-  isPackageJsonConflict(startContent, endContent) {}
-  return (;)"
-      startContent.includes("package.json") ||;
-      endContent.includes("package.json");"
-  isLockFileConflict(startContent, endContent) {}
-
-      endContent.includes("yarn.lock");"
-  isConfigFileConflict(startContent, endContent) {}
-
-      startContent.includes("eslint");"
-  isComponentConflict(startContent, endContent) {}
-
-      startContent.includes("className");"
-  isImportConflict(startContent, endContent) {}"
-  return startContent.includes("import ") || startContent.includes("export ")};"
-  isStyleConflict(startContent, endContent) {}
-
-      startContent.includes("tailwind");"
-  canAutoResolve(markers) {}
-  // Can auto-resolve package.json, lock files, and some config conflicts;"
-    const autoResolvableTypes = ["package-json", "lock-file", "config-file"];"
-    return markers.some(marker => {})
-  const type = this.determineConflictType([marker]);
-      return autoResolvableTypes.includes(type)})};
-  generateResolutionStrategy(markers, filePath) {}
-  const strategies = [];
-    markers.forEach(marker => {})
-      switch (type) {}"
-  case "package-json":;
-          strategies.push(Merge dependencies from both branches, keeping latest versions";)"
-          );
-          break;"
-        case "lock-file":;
-          strategies.push("Regenerate lock file by running npm install");"
-
-          strategies.push("Manual review required")};"
-    }
-    return strategies};
-
-      let resolvedContent = content;
-      analysis.markers.forEach(marker => {})
-  case "package-json":;"
-            resolvedContent = this.resolvePackageJsonConflict(;)
-              resolvedContent,
-              marker;
-          case "lock-file":;"
->>>>>>> origin/chore/fix-lint-and-merge
             resolvedContent = this.resolveLockFileConflict(;)
           case "config-file":;"
             resolvedContent = this.resolveConfigFileConflict(;)
-<<<<<<< HEAD
               resolvedContent,
               marker;
             );
@@ -425,43 +267,10 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
   resolveConfigFileConflict(content, marker) {}
   // For config files, prefer development settings;
     // Simple "strategy": take the section with more configuration options;
-=======
-
-      return false};
-  resolvePackageJsonConflict(content, marker) {}"
-  // Simple "strategy": take the version with more dependencies;
-    const startSection = this.getConflictSection(content, marker, "start");
-    const endSection = this.getConflictSection(content, marker, "end");"
-  const startJson = JSON.parse(startSection);
-      const endJson = JSON.parse(endSection);
-
-      // Merge dependencies, preferring higher versions;
-      const merged = { ...startJson };
-      if (endJson.dependencies) {}
-  merged.dependencies = {}
-  ...merged.dependencies,
-          ...endJson.dependencies};
-      if (endJson.devDependencies) {}
-  merged.devDependencies = {}
-  ...merged.devDependencies,
-          ...endJson.devDependencies};
-      return content.replace(;)
-        this.getConflictRange(content, marker),
-
-      return content};
-  resolveLockFileConflict(content, marker) {}
-  // For lock files, suggest regeneration;"
-    this.log("Lock file conflict detected - recommend running npm install");"
-  resolveConfigFileConflict(content, marker) {}
-  // For config files, prefer development settings;"
-
-    // Simple "strategy": take the section with more configuration options;"
->>>>>>> origin/chore/fix-lint-and-merge
     if (startSection.length > endSection.length) {}
         startSection;
       )} else {}
         endSection;
-<<<<<<< HEAD
       )}
   }
   getConflictSection(content, marker, side) {}
@@ -479,24 +288,9 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
   "timestamp": new Date().toISOString(),
         summary: {}
   totalConflicts: conflicts.length,
-=======
-  getConflictSection(content, marker, side) {}"
-
-  return lines.slice(marker.separator + 1, marker.end).join("\n")};"
-  getConflictRange(content, marker) {}"
-
-    return lines.slice(marker.start, marker.end + 1).join("\n")};"
-  async generateConflictReport(conflicts) {}"
-  this.log("Generating conflict resolution report...");"
-  const report = {}"
-  "timestamp": new Date().toISOString(),
-        "summary": {}"
-  totalConflicts: conflicts.length,"
->>>>>>> origin/chore/fix-lint-and-merge
           "autoResolvable": conflicts.filter(c => c.resolvable).length,
           manualReview: conflicts.filter(c => !c.resolvable).length},
         "conflicts": conflicts,
-<<<<<<< HEAD
         recommendations: this.generateOverallRecommendations(conflicts)}
       const reportPath = path.join(;)
         this.projectRoot,conflict-resolution-report.json";
@@ -522,23 +316,10 @@ this.log(`Conflict resolution report saved to ${reportPath}`);
     if (conflicts.length === 0) {}
   recommendations.push("No conflicts detected - repository is clean");
       return recommendations}
-=======
-        "recommendations": this.generateOverallRecommendations(conflicts)};"
-      const reportPath = path.join(;)"
-        this.projectRoot,conflict-resolution-report.json";"
-
-      throw error};
-  generateOverallRecommendations(conflicts) {}
-  const recommendations = [];
-    if (conflicts.length === 0) {}"
-  recommendations.push("No conflicts detected - repository is clean");"
-      return recommendations};
->>>>>>> origin/chore/fix-lint-and-merge
     const autoResolvable = conflicts.filter(c => c.resolvable);
     const manualReview = conflicts.filter(c => !c.resolvable);
     if (autoResolvable.length > 0) {}`;
   recommendations.push(Auto-resolve ${autoResolvable.length} conflicts using intelligent resolution`;`)
-<<<<<<< HEAD
     if (autoResolvable.length > 0) {}
   recommendations.push(Auto-resolve ${autoResolvable.length} conflicts using intelligent resolution;)
       )}
@@ -569,22 +350,6 @@ this.log(`Conflict resolution report saved to ${reportPath}`);
   this.log("No conflicts to resolve");
         return { resolved: 0, "total": 0 }
       }
-=======
-    if (autoResolvable.length > 0) {}"
-  recommendations.push(Auto-resolve ${autoResolvable.length} conflicts using intelligent resolution";)"
-    if (manualReview.length > 0) {}"`;
-  recommendations.push( `Manually review ${manualReview.length} conflicts that require human intervention";`)"
-
-  recommendations.push(Run npm install after resolving package.json conflicts";)"
-  async runConflictResolution() {}"
-  this.log("Starting intelligent conflict resolution...");"
-  // Check for conflicts;
-      const conflictFiles = await this.checkForConflicts();
-
-        return { "resolved": 0, "total": 0 };"
-  // Check for conflicts;
-
->>>>>>> origin/chore/fix-lint-and-merge
       // Analyze each conflict;
       const conflicts = [];
       let resolvedCount = 0;
@@ -593,7 +358,6 @@ this.log(`Conflict resolution report saved to ${reportPath}`);
         conflicts.push(analysis);
         // Attempt auto-resolution;
   const resolved = await this.autoResolveConflict(filePath, analysis);
-<<<<<<< HEAD
           if (resolved) resolvedCount++}
       }
       // Generate report;
@@ -610,26 +374,11 @@ this.log(`Conflict resolution report saved to ${reportPath}`);
   async start() {}
   this.log("Starting intelligent conflict resolver...`);
     try {}
-=======
-          if (resolved) resolvedCount++};
-      // Generate report;
-      await this.generateConflictReport(conflicts);"`;
-      this.log(Conflict resolution "completed": ${resolvedCount}/${conflicts.length} conflicts resolved`;`)"
-      // Generate report;
-      await this.generateConflictReport(conflicts);"
-      this.log(Conflict resolution "completed": ${resolvedCount}/${conflicts.length} conflicts resolved";)"
-      );"
-
-    } catch (error) {  this.log(`Conflict resolution "failed": ${error.message  }", "ERROR");"
-  async start() {}"`;
-  this.log("Starting intelligent conflict resolver...`);"
->>>>>>> origin/chore/fix-lint-and-merge
   // Run initial conflict resolution;
       await this.runConflictResolution();
       // Set up periodic conflict checking;
       setInterval(;)
         async () => {}
-<<<<<<< HEAD
   try {}
   await this.runConflictResolution()} catch (error) {}
   this.log(Periodic conflict resolution "failed: ${error.message  }`,`)
@@ -639,16 +388,7 @@ this.log(`Conflict resolution report saved to ${reportPath}`);
         30 * 60 * 1000;
       ); // Every 30 minutes;
       this.log("Intelligent conflict resolver started successfully);
-=======
-
-              "ERROR";"
-        },
-        30 * 60 * 1000;
-      ); // Every 30 minutes;"
-      this.log("Intelligent conflict resolver started successfully");"
->>>>>>> origin/chore/fix-lint-and-merge
       // Keep the process running;
-<<<<<<< HEAD
       setInterval(() => {}
   this.log(Conflict resolver heartbeat...")}, 60000); // Every minute} catch (error) {  this.log(`Failed to start conflict "resolver: ${error.message  }`, ERROR");
       throw error}
@@ -678,27 +418,10 @@ if (require.main === module) {}
   resolver.log(Shutting down gracefully...");
     process.exit(0)}
 });
-<<<<<<< HEAD
-  resolver.start().catch(error => {resolver.log(`Fatal "error: ${error.message}`, ERROR");
-    process.exit(1)})}
 
-=======
-  resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}`, "ERROR");
-    process.exit(1)})};
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 module.exports = IntelligentConflictResolver;
 module.exports = IntelligentConflictResolver;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 // Main execution;
 if (require.main === module) {}
@@ -714,11 +437,4 @@ if (require.main === module) {}
     process.exit(1)})};
 module.exports = IntelligentConflictResolver;
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-module.exports = IntelligentConflictResolver;
-=======
-module.exports = IntelligentConflictResolver;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

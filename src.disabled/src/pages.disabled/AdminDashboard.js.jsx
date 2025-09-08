@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
 
@@ -20,3 +21,8 @@ import _React from 'react';'''; import AdminLayout from '@/components/admin/Admi
 
 
 
+=======
+import React from \'react\';\''\'; import AdminLayout from \'@/components/admin/AdminLayout\'; export {}; return null} return(); <AdminLayout> <div className=\"space-y-4\"> <h1 className=\"text-2xl font-bold\">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
+const React from "react";"""; import AdminLayout from "@/components/admin/AdminLayout"; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };"""
+import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -17,7 +17,7 @@ function containsVagueJobClaims(text: string): string[] {
   const reasons: string[] = [],
   for (const pattern of vagueScammyJobPhrases) {
     const re = new RegExp($2);
-    if (re.test(lower)) reasons.push(`job_vague_claim:"${pattern}"`)
+    if (re.test(lower)) reasons.push(`job_vague_claim:'${pattern}'`)
   }
   return reasons
 }
@@ -45,7 +45,7 @@ export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps)
     }
     const phrases = containsSuspiciousPhrase($2);
     if (phrases.length > 0) {
-      reasons.push(...phrases.map((p) => `suspicious_phrase:"${p}"`)),
+      reasons.push(...phrases.map((p) => `suspicious_phrase:'${p}'`)),
       if (severity === 'low') severity = 'medium'
     }
   }

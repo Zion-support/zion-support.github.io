@@ -1,12 +1,23 @@
 
+<<<<<<< HEAD
 
+=======
+return (
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     <>
       <TabsContent value="basic-info">
         <BasicInfoForm;
           resumeId={resume?.id!}
 
+<<<<<<< HEAD
 
 
+=======
+
+"
+import {TabsContent} from "@/components/ui/tabs";"
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {Resume} from "@/types/resume";
 import {BasicInfoForm} from '../forms/basic-info';'
 import {WorkExperienceForm} from '../forms/WorkExperienceForm';'
@@ -14,15 +25,39 @@ import {EducationForm} from '../forms/EducationForm';'
 import {SkillsForm} from '../forms/SkillsForm';'
 import {CertificationsForm} from '../forms/CertificationsForm';'
 import {PreviewResume} from '../PreviewResume';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+interface ResumeStepContentProps {}
+  activeTab: string;
+  resume: Resume;
+  onNextStep: () => void;
+  onPrevStep: () => void;
+
+            // // // console.log("Saving basic info:", data)
+          }}
+          onComplete={onNextStep}
+        />
+
+      </TabsContent>"
+      <TabsContent value="work-experience">
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface ResumeStepContentProps {;
   activeTab: string,;
   resume: Resume,;
   onNextStep: () => void,;
   onPrevStep: () => void;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export const ResumeStepContent = ({ ;
   activeTab;
@@ -55,13 +90,20 @@ export const ResumeStepContent = ({;
 
       <TabsContent value="work-experience">;
 
+<<<<<<< HEAD
 
+=======
+        <WorkExperienceForm ;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           resumeId={resume?.id!}
           workExperiences={resume?.work_experience || []}
 
           onComplete={onNextStep}
           onBack={onPrevStep}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         />;
       </TabsContent>;
@@ -113,44 +155,75 @@ export const ResumeStepContent = ({;
           onBack={onPrevStep}
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           resumeId={resume?.id!}
           educationEntries={resume?.education |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <SkillsForm
 
           resumeId={resume?.id!}
           skills={resume?.skills |[]}
           onComplete={onNextStep}
 
+<<<<<<< HEAD
           onBack={onPrevStep}
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           resumeId={resume?.id!}
           certifications={resume?.certifications |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
+<<<<<<< HEAD
 
 
+=======
+        />
+      </TabsContent>
+      <TabsContent value="preview">
+        <PreviewResume
+          resume={resume as Resume}
+          onBack={onPrevStep}
+        />
+      </TabsContent>
+    </>
+  )
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         />;
       </TabsContent>;
       ;
       <TabsContent value="preview">;
 
+<<<<<<< HEAD
         <PreviewResume ;
           resume={resume as Resume} ;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           onBack={onPrevStep}
         />;
       </TabsContent>;
     </>;
 
 
+<<<<<<< HEAD
+=======
+};
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   active_tab: string,
   resume: Resume,
   onNextStep: () => void,
@@ -214,6 +287,78 @@ export const ResumeStepContent = ({;
 }
 ;
 
+<<<<<<< HEAD
+=======
+
+  activeTab: string;
+resume: Resume;
+onNextStep: () => void;
+onPrevStep: () => void 
+}export const ResumeStepContent = ({
+  activeTab;
+resume;
+onNextStep;
+onPrevStep 
+}: ResumeStepContentProps) => {
+  return (<> <TabsContent value="basic-info" > <BasicInfoForm resumeId= {
+  resume?.id! 
+}initialData= {
+  resume?.basic info 
+}onSave= {
+  (data) => {
+  //Here you would typically save the data to your backend 
+}
+}onComplete= {
+  onNextStep 
+}work-experience"> <WorkExperienceForm resumeId= {
+  resume?.id! 
+}workExperiences= {
+  resume?.work experience || [] 
+}onComplete= {
+  onNextStep 
+}onBack= {
+  onPrevStep 
+}/> </TabsContent> <TabsContent value=" education"> <EducationForm resumeId= {
+  resume?.id! 
+}educationEntries= {
+  resume?.education || [] 
+}onComplete= {
+  onNextStep 
+}onBack= {
+  onPrevStep 
+}/> </TabsContent> <TabsContent value=" skills"> <SkillsForm resumeId= {
+  resume?.id! 
+}skills= {
+  resume?.skills || [] 
+}onComplete= {
+  onNextStep 
+}onBack= {
+  onPrevStep 
+}/> </TabsContent> <TabsContent value=" certifications"> <CertificationsForm resumeId= {
+  resume?.id! 
+}certifications= {
+  resume?.certifications || [] 
+}onComplete= {
+  onNextStep 
+}onBack= {
+  onPrevStep 
+}/> </TabsContent> <TabsContent value=" preview" > <PreviewResume resume= {
+  resume as Resume 
+}onBack= {
+  onPrevStep 
+}/> </TabsContent> </>) 
+};
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
+<<<<<<< HEAD
+=======
+        />;
+      </TabsContent>;
+    </>;
+
+
+};
+>>>>>>> origin/cursor/delete-old-data-records-6bba

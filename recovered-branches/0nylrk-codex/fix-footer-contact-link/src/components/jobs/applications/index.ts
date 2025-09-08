@@ -12,7 +12,11 @@ export { ApplicationProgress } from "./ApplicationProgress";
 export { ApplicationRow } from "./ApplicationRow";
 
 
+<<<<<<< HEAD
 
+=======
+pr-12325
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export { ApplicationsTracker } from './ApplicationsTracker',;
 export { ApplicationsTable } from './ApplicationsTable',;
 export { EmptyState } from './EmptyState',;
@@ -26,6 +30,9 @@ export { ApplicationCard } from './ApplicationCard',;
 export { ApplicationProgress } from './ApplicationProgress',;
 
 export { ApplicationRow } from './ApplicationRow';
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 
+=======
+import React from './react';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {
   Card,
   CardContent,
@@ -42,9 +46,13 @@ export function PageViewsChart(): any ({;
   timeRange,;
   onTimeRangeChange,;
 }: PageViewsChartProps) {;
+<<<<<<< HEAD
 
 
 
+=======
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
@@ -52,27 +60,39 @@ export function PageViewsChart(): any ({;
         <CardDescription className="text-zion-slate-light">Daily page view statistics</CardDescription>
       </CardHeader>
       <CardContent className="p-0 pb-4">
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <AnalyticsChart
 
           title=""
 
           data={data |[]}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           dataKeys={["views"]}
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />
       </CardContent>
     </Card>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface PageViewsChartProps {;
   data: Array<{ date: string, views: number }>,;
   timeRange: string;
@@ -132,7 +152,20 @@ import {
       </CardContent>;
     </Card>);
 
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }
 
+<<<<<<< HEAD
 
+=======
+      </CardContent>;
+    </Card>;
+  );
+
+}
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

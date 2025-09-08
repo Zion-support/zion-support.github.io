@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -18,6 +19,22 @@ export interface MetaverseDigitalRealityService2026 {;
 
 
 
+=======
+export interface MetaverseDigitalRealityService2026 {
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
+  contactInfo: {
+    mobile: string,
+    email: string,
+    address: string}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
 export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] = [
@@ -41,6 +58,7 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
+<<<<<<< HEAD
 
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
       mobile: "+1 302 464 0950",
@@ -50,3 +68,8 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
   }
 ];
 
+=======
+    }
+  }
+],
+>>>>>>> origin/cursor/delete-old-data-records-6bba

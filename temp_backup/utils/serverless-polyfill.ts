@@ -3,7 +3,11 @@
 }
 }//Ensure self is properly referenced const selfRef: unknown = typeof self !== 'undefined' ? self : typeof global !== 'undefined' ? global : typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : {;
 };
+<<<<<<< HEAD
+//CRITICAL: Webpack chunk array polyfill if (typeof b !== 'function' && b !== null) throw new TypeError ('Class extends value ' + String (b) + 'is not a constructor or null');
+=======
 //CRITICAL: Webpack chunk array polyfill if (typeof b !== "function" && b !== null) throw new TypeError ("Class extends value " + String (b) + "is not a constructor or null");
+>>>>>>> origin/resolved-merge-conflicts
   return t;
 }
 }return t;
@@ -17,7 +21,6 @@ awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
 }return new (P || (P = Promise) ) (function (resolve: any, reject: any) {;
   step ( (generator = generator.apply (thisArg, arguments || []) ) .next () );
 });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }'
 };''
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';''
@@ -34,6 +37,11 @@ awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
   //Ensure Node.js global has necessary polyfills if (typeof global.self === 'undefined') {;
   return Object.values (checks) .every (Boolean);
 };
+<<<<<<< HEAD
+  ;''''
+}, // Ensure this can be imported as a module''''''
+=======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Auto-verify in development export default {;'"
   ;'"'"
 }, // Ensure this can be imported as a module'"'"'"
+>>>>>>> origin/resolved-merge-conflicts

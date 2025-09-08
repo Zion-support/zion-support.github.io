@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
@@ -13,23 +12,6 @@ const { execSync, spawn } = require("child_process)
   fs.mkdirSync(dir, { recursive"})
   log(message, level = "INFO)
     console.log()
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
-    this.logsDir = path.join(this.projectRoot, "logs")
-    this.backupsDir = path.join(this.projectRoot, "backups")
-  "branchesProcessed"
-      "conflictsResolved"
-      "mergesSuccessful"
-      "errors"
-  ["this.logsDir", "this.backupsDir"]
-  fs.mkdirSync(dir, { "recursive"})
-  log(message, level = "INFO")
-    console.log(")
->>>>>>> origin/chore/fix-lint-and-merge
     const logFile = path.join(this.logsDir, "merge-resolver.log")
     fs.appendFileSync(logFile, logEntry + \n)
   this.log(" Starting Comprehensive Merge Conflict Resolver...")
@@ -144,37 +126,13 @@ this.log(` Resolved conflicts in": ${filePath}"`)
         "mergesSuccessful
         errors"
       "successRate"
-<<<<<<< HEAD:_conflicted_disabled/scripts/automation/comprehensive-merge-resolver.cjs
-
-    const reportPath = path.join(this.logsDir, ")
     const reportPath = path.join(this.logsDir, ")
     const reportPath = path.join(this.logsDir, ")
 
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+    const reportPath = path.join(this.logsDir, ")
+    const reportPath = path.join(this.logsDir, ")
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
     const reportPath = path.join(this.logsDir, ")
     const reportPath = path.join(this.logsDir, ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-    const reportPath = path.join(this.logsDir, ")
-=======
-    const reportPath = path.join(this.logsDir, ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621:backup-problematic-files/scripts/automation/comprehensive-merge-resolver.cjs

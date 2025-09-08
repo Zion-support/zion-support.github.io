@@ -1,29 +1,8 @@
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 #!/usr/bin/env node;
 ;const fs = require('fs');
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-#!/usr/bin/env node;
-;const fs = require('fs');
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 const fs = require('fs')
 const path = require('path')
         console.log(' Checking system health...')
@@ -415,52 +394,4 @@ class HealthMonitor {
    */
   displayStatus() {
     console.log('\n🏥 HEALTH MONITOR REPORT');
-<<<<<<< HEAD
-    console.log('===');
-    console.log(`Overall Status: ${this.healthData.overallStatus.toUpperCase()}`);
-    console.log(`Timestamp: ${this.healthData.timestamp}`);
-    
-    if (this.healthData.recommendations.length > 0) {
-      console.log('\n📋 Recommendations:');
-      this.healthData.recommendations.forEach((rec, index) => {
-        console.log(`${index + 1}. ${rec}`);
-      });
-    }
-  }
-}
 
-// Run if called directly
-if (require.main === module) {
-  const monitor = new HealthMonitor();
-  monitor.runHealthChecks()
-    .then(() => monitor.displayStatus())
-    .catch(console.error);
-}
-const monitor = new EnhancedHealthMonitor();
-monitor.generateReport();
-const fs = require("fs");"const path = require("path");class EnhancedHealthMonitor { constructor() { this.metrics = { uptime: process.uptime()," memory: process.memoryUsage()," timestamp: new Date().toISOString() }} checkSystemHealth() {" console.log(" Checking system health."); const health = {"" status: "healthy"," checks: { memory: this.checkMemory()," disk: this.checkDisk()," network: this.checkNetwork()," database: this.checkDatabase() }," metrics: this.metrics }; return health} checkMemory() { const usage = process.memoryUsage(); const isHealthy = usage.heapUsed < usage.heapTotal * 0.8; return {"" status: isHealthy ? "healthy" : "warning"," usage: usage,"" message: isHealthy ? "Memory usage normal" : "High memory usage detected" }} checkDisk() { / Simplified disk check return {"" status: "healthy","" message: "Disk space available" }} checkNetwork() { / Simplified network check return {"" status: "healthy","" message: "Network connectivity normal" }} checkDatabase() { / Simplified database check return {"" status: "healthy","" message: "Database connection stable" }} generateReport() { const health = this.checkSystemHealth(); const reportPath = `health-report-${Date.now()}.json`; fs.writeFileSync(reportPath, JSON.stringify(health, null, 2));"` console.log(` Health report generated: ${reportPath}`); return health}}const monitor = new EnhancedHealthMonitor();monitor.generateReport();""`"`
-        console.log(' Checking system health...')
-            "status"
-            "status"
-            "message"
-            "status"
-            "message"
-            "status"
-            "message"
-            "status"
-            "message"
-=======
-    console.log('
->>>>>>> origin/chore/fix-lint-and-merge
-
-module.exports = HealthMonitor;
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -5,7 +5,6 @@ const { execSync } = require('child_process');
 class CodeQualityAutoEnhancer {}
   constructor() {}
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.reportsDir = path.join(this.projectRoot, error-reports');
     this.logsDir = path.join(this.projectRoot, 'automation/logs);
     this.checkInterval = parseInt(process.env.QUALITY_CHECK_INTERVAL) || 3600000; // 1 hour;
@@ -15,17 +14,9 @@ class CodeQualityAutoEnhancer {}
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
         fs.mkdirSync(dir, { "recursive: true })}
-=======
-
-    // Ensure directories exist;
-    [this.reportsDir, this.logsDir].forEach(dir => {})
-      if (!fs.existsSync(dir)) {}
-        fs.mkdirSync(dir, { "recursive": true })};"
->>>>>>> origin/chore/fix-lint-and-merge
     }
 });
     this.enhancementsApplied = 0;
-<<<<<<< HEAD
     this.qualityHistory = []}
   log(message, level = 'INFO) {}
     const timestamp = new Date().toISOString();
@@ -40,18 +31,9 @@ class CodeQualityAutoEnhancer {}
     ];
 
     const results = {}
-=======
-    this.qualityHistory = []};"
-  log(message, level = 'INFO') {}
-    const timestamp = new Date().toISOString();
-
-    ];
-    const results = {};
->>>>>>> origin/chore/fix-lint-and-merge
     let totalIssues = 0;
     for (const check of checks) {}
       try {}
-<<<<<<< HEAD
         execSync(check.command, { stdio": pipe' }
 });
         results[check.name] = { "success: true, issues": [], "count: 0 }} catch (error) {}
@@ -65,24 +47,11 @@ class CodeQualityAutoEnhancer {}
     const issues = [];
     const lines = output.split(\n');
     
-=======
-
-        const output = error.stdout?.toString() || error.stderr?.toString() || ;
-        const issues = this.parseQualityIssues(output, check.name);
-        results[check.name] = { "success": false, issues, "count": issues.length };"
-        totalIssues += issues.length};
-    };
-    return { results, totalIssues }};
-  parseQualityIssues(output, checkType) {}
-    const issues = [];"
-    const lines = output.split('\n');
->>>>>>> origin/chore/fix-lint-and-merge
     for (const line of lines) {}
       if (line.includes('error) || line.includes(warning') || line.includes('failed)) {}
         const match = line.match(/([^:]+):(\d+):(\d+)/);
         if (match) {}
           issues.push({})
-<<<<<<< HEAD
             file": match[1].trim(),
             "line: parseInt(match[2]),
             column": parseInt(match[3]),
@@ -103,19 +72,9 @@ class CodeQualityAutoEnhancer {}
     if (!this.autoEnhanceEnabled) {}
       this.log(Auto-enhancement is disabled', 'INFO);
       return 0}
-=======
-
-          })};
-    return issues};
-  async applyCodeEnhancements(issues) {}
-    if (!this.autoEnhanceEnabled) {}"
-
-      return 0};
->>>>>>> origin/chore/fix-lint-and-merge
     let enhancementsApplied = 0;
     for (const issue of issues) {}
         if (await this.applyEnhancement(issue)) {}
-<<<<<<< HEAD
           enhancementsApplied++}
       } catch (error) {}
         this.log(`Failed to apply enhancement": ${error.message}`, ERROR')}
@@ -139,16 +98,6 @@ class CodeQualityAutoEnhancer {}
         const content = fs.readFileSync(issue.file, utf8');
         const lines = content.split('\n);
         
-=======
-          enhancementsApplied++};
-
-        return await this.applyTestCoverageEnhancement(issue);
-      "default": return false};"
-  async applyESLintEnhancement(issue) {}
-    try {}"
-
-        const lines = content.split('\n');
->>>>>>> origin/chore/fix-lint-and-merge
         // Apply common ESLint fixes;
         const enhancements = [this.fixUnusedVariables.bind(this)]
           this.fixMissingSemicolons.bind(this),
@@ -162,7 +111,6 @@ class CodeQualityAutoEnhancer {}
         for (const enhancement of enhancements) {}
             const result = enhancement(lines, issue);
             if (result.modified) {}
-<<<<<<< HEAD
               modifiedContent = result.content;
               this.log(`Applied ESLint enhancement to ${issue.file}: ${result.description}`, INFO')}
           } catch (enhancementError) {}
@@ -193,12 +141,6 @@ class CodeQualityAutoEnhancer {}
         const content = fs.readFileSync(issue.file, 'utf8');
         const lines = content.split(\n');
         
-=======
-
-      return false};
-  async applyPrettierEnhancement(issue) {}
-
->>>>>>> origin/chore/fix-lint-and-merge
         // Apply common TypeScript enhancements;
         const enhancements = [this.fixAnyType.bind(this)]
           this.fixMissingImports.bind(this),
@@ -207,7 +149,6 @@ class CodeQualityAutoEnhancer {}
           this.fixGenericTypes.bind(this),
           this.fixOptionalProperties.bind(this);
 
-<<<<<<< HEAD
 
         for (const enhancement of enhancements) {}
           try {}
@@ -225,13 +166,10 @@ class CodeQualityAutoEnhancer {}
       this.log(`Failed to apply TypeScript enhancement": ${error.message}`, 'ERROR);
       return false}
   }
-=======
->>>>>>> origin/chore/fix-lint-and-merge
   async applyTestCoverageEnhancement(issue) {}
       // Generate test files for uncovered code;
       const uncoveredFiles = this.findUncoveredFiles();
       for (const file of uncoveredFiles) {}
-<<<<<<< HEAD
         await this.generateTestFile(file)}
       return uncoveredFiles.length > 0} catch (error) {}
       this.log(`Failed to apply test coverage "enhancement: ${error.message}`, ERROR');
@@ -240,10 +178,6 @@ class CodeQualityAutoEnhancer {}
   fixUnusedVariables(lines, issue) {}
     if (issue.message.includes('is assigned a value but never used)) {}
       const varMatch = issue.message.match(/([^']+)' is assigned a value but never used/);
-=======
-        await this.generateTestFile(file)};
-
->>>>>>> origin/chore/fix-lint-and-merge
       if (varMatch) {}
         const varName = varMatch[1];
         const lineIndex = issue.line - 1;
@@ -252,7 +186,6 @@ class CodeQualityAutoEnhancer {}
         if (line.includes(varName)) {}`;
           lines[lineIndex] = `// ${line} // eslint-disable-line no-unused-vars`;`
           return {}
-<<<<<<< HEAD
             modified": true,
             "content: lines.join(\n),
             description": `Commented out unused variable ${varName}
@@ -391,39 +324,15 @@ class CodeQualityAutoEnhancer {}
   fixTypeAnnotations(lines, issue) {}
     
     if (issue.message.includes(implicitly has an any type)) {}
-=======
-
-            "description": `Commented out unused variable ${varName}"
-          }};
-    };"
-    return { "modified": false, "content": lines.join('\n') }};
-  fixMissingSemicolons(lines, issue) {}
-    if (issue.message.includes('Missing semicolon')) {}
-
-</any>
-        for (let i = 0; i < lines.length; i++) {}
-          if (lines[i].trim().startsWith('import ')) {}
-            lastImportIndex = i};
-        if (lastImportIndex >= 0) {}
-          lines.splice(lastImportIndex + 1, 0, importStatement)} else {}
-          lines.unshift(importStatement)};
-
-    if (issue.message.includes('implicitly has an any type')) {}
->>>>>>> origin/chore/fix-lint-and-merge
       // Add type annotation;
       const varMatch = line.match(/(const|let|var)\s+(\w+)\s*=/);
         const varName = varMatch[2];
-<<<<<<< HEAD
         const fixedLine = line.replace()
           new RegExp(`(${varMatch[1]}\\s+${varName}\\s*)=`),`
           "$"1: unknown =
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
         );
         if (fixedLine !== line) {}
           lines[lineIndex] = fixedLine;
-<<<<<<< HEAD
           return {}
             modified: true,
             "content": lines.join('\n'),
@@ -435,10 +344,6 @@ class CodeQualityAutoEnhancer {}
   fixInterfaceIssues(lines, issue) {}
     if (issue.message.includes('Property') && issue.message.includes(does not exist on type)) {}
       const propMatch = issue.message.match(/Property '([^']+) does not exist on type ([^']+)'/);
-=======
-            modified: true,"
-
->>>>>>> origin/chore/fix-lint-and-merge
       if (propMatch) {}
         const propName = propMatch[1];
         const typeName = propMatch[2];
@@ -447,7 +352,6 @@ class CodeQualityAutoEnhancer {}
             // Add the missing property;
             const indent = lines[i].match(/^\s*/)[0];`;
             lines.splice(i + 1, 0, `${indent}  ${propName}?: unknown;`);
-<<<<<<< HEAD
             
             return {}
               "modified": true,
@@ -491,9 +395,6 @@ class CodeQualityAutoEnhancer {}
         }}
     }
     return { modified: false, "content": lines.join('\n') }}
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
   findUncoveredFiles() {}
     // This is a simplified version - in a real implementation, youd parse coverage reports;
     const uncoveredFiles = [];
@@ -501,7 +402,6 @@ class CodeQualityAutoEnhancer {}
     for (const file of sourceFiles) {}
       const testFile = this.getTestFilePath(file);
       if (!fs.existsSync(testFile)) {}
-<<<<<<< HEAD
         uncoveredFiles.push(file)}
     }
     return uncoveredFiles}
@@ -509,18 +409,10 @@ class CodeQualityAutoEnhancer {}
     const relativePath = path.relative(path.join(this.projectRoot, src'), sourceFile);
     const testPath = path.join(this.projectRoot, 'tests, relativePath.replace(/\.(js|jsx|ts|tsx)$/, .test.$1'));
     return testPath}
-=======
-        uncoveredFiles.push(file)};
-    return uncoveredFiles};
-  getTestFilePath(sourceFile) {}
-
-    return testPath};
->>>>>>> origin/chore/fix-lint-and-merge
   async generateTestFile(sourceFile) {}
       const testFile = this.getTestFilePath(sourceFile);
       const testDir = path.dirname(testFile);
       if (!fs.existsSync(testDir)) {}
-<<<<<<< HEAD
         fs.mkdirSync(testDir, { recursive: true })}
       const fileName = path.basename(sourceFile, path.extname(sourceFile));
       const testContent = `import { render, screen } from '@testing-library/react;
@@ -528,16 +420,11 @@ import ${fileName} from ../${path.relative(testDir, sourceFile)}';
 
 describe('${fileName}, () => {}
   test(renders without crashing', () => {}
-=======
-        fs.mkdirSync(testDir, { "recursive": true })};"
-
->>>>>>> origin/chore/fix-lint-and-merge
     render(<${fileName} />);
     // Add more specific tests here;
   })}
 });`;
 `;`
-<<<<<<< HEAD
       
       fs.writeFileSync(testFile, testContent);
       this.log(`Generated test "file": ${testFile}`, 'INFO);
@@ -550,9 +437,6 @@ describe('${fileName}, () => {}
     const sourceFiles = [];
     const srcDir = path.join(this.projectRoot, 'src);
     
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
     if (!fs.existsSync(srcDir)) {}
       return sourceFiles}
     const walkDir = (dir) => {}
@@ -562,7 +446,6 @@ describe('${fileName}, () => {}
         const stat = fs.statSync(filePath);
         if (stat.isDirectory()) {}
           walkDir(filePath)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {}
-<<<<<<< HEAD
           sourceFiles.push(filePath)}
       }
     }
@@ -581,16 +464,10 @@ describe('${fileName}, () => {}
         return}
       this.log(`Found ${checkResult.totalIssues} quality issues, applying enhancements...`, 'INFO);
       
-=======
-          sourceFiles.push(filePath)};
-    walkDir(srcDir);
-
->>>>>>> origin/chore/fix-lint-and-merge
       // Apply enhancements;
       const allIssues = Object.values(checkResult.results);
         .filter(result => !result.success);
         .flatMap(result => result.issues);
-<<<<<<< HEAD
       
       const enhancementsApplied = await this.applyCodeEnhancements(allIssues);
       
@@ -612,23 +489,11 @@ describe('${fileName}, () => {}
       }
       
       // Save report;
-=======
-
-        "initialIssues": checkResult.totalIssues,"
-        enhancementsApplied,"
-        "remainingIssues": postCheckResult.totalIssues,
-        "improvement": checkResult.totalIssues - postCheckResult.totalIssues,
-        "details": {}"
-          before: checkResult.results,"
-          "after": postCheckResult.results;"
-      // Save report;`;
->>>>>>> origin/chore/fix-lint-and-merge
       const reportPath = path.join(this.reportsDir, `quality-enhancement-report-${Date.now()}.json`);
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       // Update quality history;
       this.qualityHistory.push(report);
       if (this.qualityHistory.length > 50) {}
-<<<<<<< HEAD
         this.qualityHistory = this.qualityHistory.slice(-50)}
       this.log(`Code quality enhancement completed. Report saved to ${reportPath}`, 'INFO)} catch (error) {`}
       this.log(`Code quality enhancement "failed": ${error.message}`, ERROR')}
@@ -636,14 +501,10 @@ describe('${fileName}, () => {}
   async startEnhancer() {}
     this.log('Starting code quality auto-enhancer...);
     
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
     // Run initial enhancement;
     await this.runQualityEnhancement();
     // Set up periodic enhancement;
     setInterval(async () => {}
-<<<<<<< HEAD
       try {}
         await this.runQualityEnhancement()} catch (error) {}
         this.log(`Error in periodic enhancement: ${error.message}`, ERROR')}
@@ -678,36 +539,8 @@ if (require.main === module) {}
     enhancer.log(`Failed to start "enhancer": ${error.message}`, 'ERROR');
     process.exit(1)})}
 
-=======
 
-      "autoEnhanceEnabled": this.autoEnhanceEnabled;"
-// Main execution;
-if (require.main === module) {}
-  const enhancer = new CodeQualityAutoEnhancer();
-  // Handle graceful shutdown;"
 
-    process.exit(1)})};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = CodeQualityAutoEnhancer;
-module.exports = CodeQualityAutoEnhancer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 module.exports = CodeQualityAutoEnhancer;
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-module.exports = CodeQualityAutoEnhancer;
-=======
-module.exports = CodeQualityAutoEnhancer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

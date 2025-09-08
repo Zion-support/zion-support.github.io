@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
 "
@@ -18,25 +21,44 @@ import { serve } from "https: //deno.land/std@0.190.0/http/server.ts","
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
 
+<<<<<<< HEAD
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+=======
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 serve(async (req) => {
 
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
@@ -61,12 +83,142 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
 
+<<<<<<< HEAD
   try {
     const { title, keyFeatures, targetAudience } = await req.json();
 
     if (!title) {
       return new Response(
 
+=======
+        JSON.stringify({
+          error: "Missing required field: title"
+        });
+        {
+          status: 400
+
+
+          headers: { ...corsHeaders, "Content-Type": "application/json" }
+
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
+import {Configuration, OpenAIApi} from "npm: openai@4 ;"
+const corsHeaders = {"
+  "Access-Control-Allow-Origin": "*"""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}""
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"""
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";"
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;""
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";""
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",""
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0",""
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0","
+  "Access-Control-Allow-Origin": "*",""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},"
+serve(async (req) => {"
+  if (req && req.method === "OPTIONS") {"
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+  // TODO: Implement
+        });
+        {
+          status: 400;,"
+  headers: { ...corsHeaders, "Content-Type": "application/json" }"
+pr-12325
+    const { title, keyFeatures, targetAudience } = await req.json(),
+
+      return new Response(
+        JSON.stringify({ "
+          error: "Missing required field: title" 
+        }),
+        {}
+          status: 400, "
+          headers: { ...corsHeaders, "Content-Type": "application/json" } "
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;"
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0",;
+const corsHeaders = {;"
+  "Access-Control-Allow-Origin": "*",;"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
+serve(async (req) => {;"
+  if (req.method === "OPTIONS") {;
+    return new Response(null, { headers: corsHeaders });
+  }
+
+        JSON.stringify({ "
+          error: "Missing required field: title"")
+        }),
+          status: 400, "
+          headers: { ...corsHeaders, "Content-Type": "application/json" }""
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;""
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0",;"
+const corsHeaders = {;"
+  "Access-Control-Allow-Origin": "*",;""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;"
+serve(async (req) => {;"
+  if (req.method === "OPTIONS") {;"
+
+    return new Response(null, { headers: corsHeaders });
+pr-12325
+;
+  try {;}
+    const { title, keyFeatures, targetAudience } = await req.json(),;
+    if (!title) {;
+      return new Response(;
+        JSON.stringify({;"
+          error: "Missing required field: title";
+        }),;
+        {;
+          status: 400,;"
+          headers: { ...corsHeaders, "Content-Type": "application/json" } ;
+
+          headers: { ...corsHeaders, "Content-Type": "application/json" }
+
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,'
+  }
+;
+  try {;
+    }
+;
+    if (!title) {;
+      return new Response(;
+        JSON.stringify({ ;
+          error:"Missing required field:title" ;
+        }),;
+        { ;
+          status:400, ;
+          headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
+
+        JSON.stringify({ ;"
+          error:"Missing required field:title" ;")
+        }),;
+        { ;
+          status:400, ;"
+          headers:{ ...corsHeaders, "Content-Type":"application/json" } ;"
+
+    const { title, keyFeatures, targetAudience } = await req.json(),;
+    if (!title) {;
+      return new Response(;
+        JSON.stringify({;
+          error: "Missing required field: title";
+        }),;
+        {;
+          status: 400,;
+          headers: { ...corsHeaders, "Content-Type": "application/json" } ;
+
+    const { title, keyFeatures, targetAudience } = await req && req.json();
+    if (!title) {
+      return new Response(
+        JSON && JSON.stringify({ 
+          error: "Missing required field: title" 
+        JSON && JSON.stringify({ 
+          error: "Missing required field: title" 
+
+        });
+        {
+          status: 400
+          headers: { ...corsHeaders, "Content-Type": "application/json" }
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
 const cors_headers = {"
   "Access - Control - Allow - Origin": "*","
@@ -105,9 +257,12 @@ if ( {) {}
           status: 400, "
           headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         }
       )
     }
@@ -129,31 +284,43 @@ Title: ${title}
 Key Features: ${keyFeatures |"Not specified"}
 Target Audience: ${targetAudience |"General users"}
 
+<<<<<<< HEAD
 
     
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
+
     const configuration = new Configuration({;'
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
+<<<<<<< HEAD
 
     const openai = new OpenAIApi(configuration),;
     const prompt = `Create a professional and detailed service description for the following service:;
 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 Title: ${title}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 The description should: 1. Be approximately 200-300 words
 2. Highlight the key benefits and unique selling points
 3. Use professional language suitable for a marketplace listing
 4. Speak directly to the target audience
+<<<<<<< HEAD
 
 
 The description should: 1. Be approximately 200-300 words;
@@ -165,6 +332,34 @@ The description should: 1. Be approximately 200-300 words;
       });
 
 Target Audience: ${targetAudience || "General users"}
+=======
+5. Include a compelling opening and closing statement`;
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini"
+      messages: [{ role: "user", content: prompt }];
+      temperature: 0.7});
+    const generatedDescription = completion.choices[0].message.content;
+    return new Response(
+      JSON.stringify({ description: generatedDescription });
+      {
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+      }
+    )
+  } catch (error) {
+    console.error("Error in generate-service-description:", error);
+    return new Response(
+      JSON.stringify({
+        error: "Failed to generate service description"
+        details: error.message
+      });
+      {
+        status: 500
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+      }
+    )
+  }
+});
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
 The description should: 1. Be approximately 200-300 words;
 2. Highlight the key benefits and unique selling points;
@@ -174,6 +369,7 @@ The description should: 1. Be approximately 200-300 words;
       temperature: 0.7}),;
     const generatedDescription = completion.choices[0].message.content,;
     return new Response(;
+<<<<<<< HEAD
       JSON.stringify({ description: generatedDescription }),;
 
     );
@@ -312,11 +508,39 @@ The description should: 1. Be approximately 200 - 300 words;
       });
       {
 
+=======
+      JSON.stringify({ description:generatedDescription }),;
+      { ;
+        headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
+      }
+    ),;
+  } catch (error) {;
+    console.error("Error in generate-service-description:", error),;
+    ;
+    return new Response(;
+      JSON.stringify({ ;
+        error:"Failed to generate service description",;
+        details:error.message ;
+      }),;
+
+5. Include a compelling opening and closing statement`,
+
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [{ role: "user", content: prompt }],
+      temperature: 0.7}),
+
+    const generatedDescription = completion.choices[0].message.content,
+    
+    return new Response(
+      JSON.stringify({ description: generatedDescription }),
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       { 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
       }
     )
   } catch (error) {
+<<<<<<< HEAD
 
     console.error("Error in generate-service-description:", error),
     
@@ -328,12 +552,48 @@ The description should: 1. Be approximately 200 - 300 words;
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
+=======
+    console.error($2);
+    return new Response($2);
+      { 
+        status: 500, 
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+      }
+    )
+
+5. Include a compelling opening and closing statement`,
+
+    const completion = await openai.chat.completions.create({"
+      messages: [{ role: "user", content: prompt }],")
+pr-12325
+
+      temperature: 0.7}),
+    const generatedDescription = completion.choices[0].message.content,
+    return new Response(
+      JSON.stringify({ description: generatedDescription }),
+      { "
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+      }
+    )
+  } catch (error) {"
+    console.error("Error in generate-service-description:", error),
+    return new Response(
+      JSON.stringify({ "
+        error: "Failed to generate service description",
+        details: error.message;
+      }),
+      {}
+        status: 500, "
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   }
 });
 
 ;
 
+<<<<<<< HEAD
 
 const corsHeaders = {;"
   "Access-Control-Allow-Origin":"*",;""
@@ -501,3 +761,7 @@ return new Response (JSON.stringify ({
 });
 
 
+=======
+
+});
+>>>>>>> origin/cursor/delete-old-data-records-6bba

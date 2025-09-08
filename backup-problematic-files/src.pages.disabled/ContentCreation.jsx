@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,6 +20,11 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+=======
+}
+}
+<
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import React from 'react';
 interface EmailautomationProps {

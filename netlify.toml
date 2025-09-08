@@ -1,5 +1,9 @@
 [build]
+<<<<<<< HEAD
   command = "yarn install && yarn build"
+=======
+  command = "npm ci && npm run build"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   publish = ".next"
   functions = "netlify/functions"
 

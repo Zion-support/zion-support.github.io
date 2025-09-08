@@ -28,10 +28,10 @@ if (!hasActiveFilters) return null;
   status ;''
 }> {';''
   status === 'full-time' ? 'Full-time' : status === 'part-time' ? 'Part-time' : 'Project-based' ;
-}<X className="h-3 w-3" /> </ClickableBadge>) ) ;
+}<X className='h-3 w-3' /> </ClickableBadge>) ) ;
 }{;
   selectedRegions.map (region => (<ClickableBadge key= {;
   region ;
-}</ClickableBadge>) ;'"
-}<Button ;'"'"
-}'"'"'"
+}</ClickableBadge>) ;''
+}<Button ;''''
+}''''''

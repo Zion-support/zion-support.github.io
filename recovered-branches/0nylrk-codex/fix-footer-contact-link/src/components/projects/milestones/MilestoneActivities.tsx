@@ -1,5 +1,16 @@
 
+<<<<<<< HEAD
 
+=======
+import {supabase} from '@/integrations / supabase / client';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
+import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';
+import {format} from 'date - fns';
+import {Skeleton} from '@/components / ui / skeleton';
+
+interface MilestoneActivitiesProps {
+  project_id: string;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 interface Activity {
 
@@ -13,10 +24,84 @@ interface Activity {
   created_at: string
 
   }
+<<<<<<< HEAD
+=======
+  const [activities, setActivities] = useState<Activity[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
+
+<<<<<<< HEAD
+  created_by_profile: {
+
+=======
+        setActivities(data || []);
+      } catch (err) {;
+        }
+        console && console.error('Error fetching milestone "activities":', err);'
+      } finally {;
+        }
+        setIsLoading(false);
+
+      }
+    }
+    if (projectId) {;
+      }
+      fetchActivities();
+    }
+
+  }, [projectId]),;
+  function getActivityDescription("activity": Activity): string {;
+    }
+    switch (activity.action) {;
+      }
+      case 'created':;'
+        return 'created a new milestone',;'
+      case 'status_changed':;'
+        return `changed status from ${activity && activity.previous_status || 'none'} to ${activity && activity.new_status}`;`        if (error) throw error,;
+        setActivities(data || []);
+      } catch (err) {;
+        }
+        console.error('Error fetching milestone "activities":', err);'
+      } finally {;
+        }
+        setIsLoading(false);      }
+import React, { useState, useEffect } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
+import { format  } from 'date-fns';
+import { Skeleton } from '@/components/ui/skeleton';
+interface MilestoneActivitiesProps {
+  projectId: string}
+
+interface Activity {
+  id: string,
+  milestone_id: string,
+  user_id: string,
+  action: string,
+  previous_status: string | null,
+  new_status: string,
+  comment: string | null,
+  created_at: string,
+  milestone: {
 
   created_by_profile: {
 
+
+    display_name: string
+
+    avatar_url: string | null
+  }
+}
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
+  const [activities, setActivities] = useState<Activity[]>([]),
+
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
+  const [activities, setActivities] = useState<Activity[]>([]);
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     async function fetchActivities() {
@@ -37,7 +122,10 @@ interface Activity {
         setActivities(data |[])
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     title: string;
   }
 
@@ -77,7 +165,10 @@ if (throw error) {}
 }
         set_activities (data || []);
 
+<<<<<<< HEAD
       } catch (err) {
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         console.error ('Error fetching milestone activities:', err);
       } finally {}
@@ -85,19 +176,30 @@ if (throw error) {}
       }
     }
 
+<<<<<<< HEAD
 import {supabase} from '@/integrations/supabase/client';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
 import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
 import {format} from 'date-fns';
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import {Skeleton} from '@/components/ui/skeleton';
 interface MilestoneActivitiesProps {;
   projectId: string;
 }
+<<<<<<< HEAD
 
 
 
 
+=======
+interface MilestoneActivitiesProps {;
+  projectId: string;
+}
+;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface Activity {;
   id: string,;
   milestone_id: string,;
@@ -108,11 +210,46 @@ interface Activity {;
   comment: string | null,;
   created_at: string,;
   milestone: {;
+<<<<<<< HEAD
 
     title: string;
 
         return 'updated milestone details';
       case 'deliverable_added':;
+=======
+
+
+    if (projectId) {;
+      fetchActivities();
+    }
+
+  }, [projectId]),;
+  function getActivityDescription(activity: Activity): string {;
+    switch (activity.action) {;
+
+      case 'created':;
+        return 'created a new milestone',;
+      case 'status_changed':;
+
+        return `changed status from ${activity && activity.previous_status || 'none'} to ${activity && activity.new_status}`;
+        if (error) throw error,;
+        setActivities(data || []);
+      } catch (err) {;'
+        console.error('Error fetching milestone activities:', err);
+      } finally {;
+
+      }
+
+  }, [projectId]),;
+  function getActivityDescription(activity: Activity): string {;
+    switch (activity.action) {;
+'
+      case 'created':;'
+        return 'created a new milestone',;'
+      case 'status_changed':;'`
+        return `changed status from ${activity && activity.previous_status || 'none'} to ${activity && activity.new_status}`;'
+      case 'updated':;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         return 'added a deliverable';
       default:;
@@ -120,6 +257,7 @@ interface Activity {;
   if (isLoading) {;
 
 
+<<<<<<< HEAD
         return activity.action.replace(/_/g, ' ');
 
 
@@ -157,6 +295,11 @@ interface Activity {;
 
       <div className="space-y-4">
         {[1, 2, 3].map((i) => (
+=======
+    return (
+      <div className="space-y-4">
+        {[1, 2, 3].map((i) => (
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           <Card key={i}>"
             <CardContent className="p-6">"
               <div className="flex items-center space-x-4">"
@@ -201,7 +344,10 @@ interface Activity {;
 </Skeleton>"
                   <Skeleton className="h-4 w-60" />"
 </Skeleton>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 </div>
               </div>
             </CardContent>
@@ -212,8 +358,17 @@ interface Activity {;
   }
 
 
+<<<<<<< HEAD
 
 
+=======
+    return ("
+      <div className="space-y-4">;
+        {[1, 2, 3].map((i) => (;
+
+    return (
+      <div className="space-y-4">;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         {[1, 2, 3].map((i) => (;
           <Card key={i}>;
             <CardContent className="p-6">;
@@ -229,16 +384,27 @@ interface Activity {;
           </Card>;
         ))}
       </div>;
+<<<<<<< HEAD
 
 
+=======
+
+
+          <p className="text-muted-foreground py-8">No activity found for this project</p>;
+        </CardContent>;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     <div className="space-y-4">;
       <Card>;
         <CardHeader>;
           <CardTitle>Project Activity</CardTitle>;
 
+<<<<<<< HEAD
         </CardHeader>;
         <CardContent className="p-6">;
           <div className="space-y-6">;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                     )}
                   </p>;
@@ -246,8 +412,15 @@ interface Activity {;
               </div>;
             ))}
 
+<<<<<<< HEAD
+=======
+
+      </Card>;
+    </div>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
           </div>;
         </CardContent>;
       </Card>;
@@ -257,6 +430,10 @@ interface Activity {;
 }
 
 
+=======
+
+    // Check condition
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 if ( {) {
   $2
 }
@@ -353,6 +530,7 @@ default: return activity.action.replace (/ /g, ' ')
 }
   );
 }
+<<<<<<< HEAD
 
 ;
 
@@ -375,6 +553,9 @@ default: return activity.action.replace (/ /g, ' ')
 if ( {) {
   $2
 }
+=======
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     return (
       <div className="space - y-4">;
         {[1, 2, 3].map ((i) => (
@@ -387,4 +568,85 @@ if ( {) {
 
 export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesProps) {;
 
+<<<<<<< HEAD
 
+=======
+
+      <div className="space-y-4">"
+
+      </div>;"
+      <div className="space-y-4">;"
+</div>
+          <Card key={i}>;
+</Card>"
+            <CardContent className="p-6">;"
+</CardContent>"
+              <div className="flex items-center space-x-4">;"
+</div>"
+                <Skeleton className="h-10 w-10 rounded-full" />;"
+</Skeleton>"
+                <div className="space-y-2">;"
+</div>"
+                  <Skeleton className="h-4 w-40" />;"
+</Skeleton>"
+                  <Skeleton className="h-4 w-60" />;"
+</Skeleton>
+                </div>;
+              </div>;
+            </CardContent>;
+          </Card>;
+      </div>;
+      <Card>;
+</Card>"
+        <CardContent className="p-6 text-center">;"
+</CardContent>"
+          <p className="text-muted-foreground py-8">No activity found for this project</p>;"
+        </CardContent>;
+      </Card>;"
+    <div className="space-y-4">;"
+</div>
+          <Card key={i}>
+"
+            <CardContent className="p-6">"
+              <div className="flex items-center space-x-4">"
+</div>"
+                <Skeleton className="h-10 w-10 rounded-full" />"
+                <div className="space-y-2">"
+                  <Skeleton className="h-4 w-40" />"
+                  <Skeleton className="h-4 w-60" />"
+
+          </div>;
+        </CardContent>;
+      </Card>;
+    </div>);
+  ),; useEffect ( () => {
+  async function fetchActivities () {
+  try {
+  setIsLoading (true);
+const {
+  data, error 
+}= await supabase .from ('milestone activities') .select (`*;
+milestone: milestone id (title);
+created by profile:profiles!user id (display name, avatar url) `) .eq ('project id', projectId) if (error) throw error;
+function getActivityDescription (activity: Activity) : string {
+  switch (activity.action) {
+  case 'created': return 'created a new milestone';
+case 'status changed': case 'updated': return 'updated milestone details';
+case 'deliverable added': return 'added a deliverable';
+default: return activity.action.replace (/ /g, ' ') 
+}
+}<Card key= {
+  i 
+}> <CardContent className="p-6" > <div className="flex items-center space-x-4" > <Skeleton className="h-10 w-10 rounded-full" /> <div className="space-y-2" > <Skeleton className="h-4 w-40" /> <Skeleton className="h-4 w-60" /> </div> </div> </CardContent> </Card>) ) 
+}</div>) 
+}if (activities.length === 0) {
+  return (<Card> <CardContent className="p-6 text-center" > <p className="text-muted-foreground py-8" >No activity found for this project</p> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Project Activity</CardTitle> </CardHeader> <AvatarFallback> {
+  activity.created by profile?.display name?.charAt (0) || '?' 
+}</AvatarFallback> </Avatar>) 
+}</p> </div> </div>) ) 
+}</div> </CardContent> </Card> </div>) 
+});
+}
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

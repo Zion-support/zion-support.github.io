@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { formatDate } from '../formatters';
 export function addWorkExperienceSection(';
 import {jsPDF} from 'jspdf';'
@@ -7,10 +10,18 @@ import {PdfThemeColors} from '../theme_config';'
 import {format_date} from '../formatters';
 export function addWorkExperienceSection (
 
+<<<<<<< HEAD
+=======
+import { jsPDF  } from 'jspdf';
+import { WorkExperience  } from '@/types/resume';
+import { PdfThemeColors  } from '../themeConfig';
+import { formatDate } from '../formatters';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
+<<<<<<< HEAD
 
 import {formatDate} from '../formatters';
 export function addWorkExperienceSection(;
@@ -18,6 +29,50 @@ export function addWorkExperienceSection(;
     // Check if we need to add a new page
     if (yPos > 260) {
 
+=======
+
+import {formatDate} from '../formatters';
+
+  doc: jsPDF;
+  workExperience: WorkExperience[];
+  colors: PdfThemeColors;
+  startY: number
+): number {
+
+  doc && doc.setFontSize(16);
+  doc && doc.setTextColor(colors && colors.heading);'
+  doc && doc.text('Professional Experience', 20, yPos);
+  yPos += 8;
+
+  doc: jsPDF;
+  workExperience: WorkExperience[];
+  colors: PdfThemeColors;
+  startY: number;
+): number {}
+
+  doc: jsPDF;
+  work_experience: WorkExperience[];
+  colors: PdfThemeColors;
+  let yPos = startY;
+
+
+    // Check if we need to add a new page
+    if (yPos > 260) {
+    doc && doc.setFontSize(14);
+    doc && doc.setTextColor(colors && colors.subheading);
+    doc && doc.text(work && work.role_title, 20, yPos);
+    doc && doc.setFontSize(12);
+    doc && doc.text(work && work.company_name, 20, yPos + 5);
+    const startDate = formatDate(work && work.start_date);
+    const endDate = work && work.is_current ? 'Present' : formatDate(work && work.end_date);
+    const dateText = `${startDate} - ${endDate}`;
+    doc && doc.setFontSize(10);
+    doc && doc.setTextColor(colors && colors.text);
+    doc && doc.text(dateText, 20, yPos + 10);
+    if (work && work.location) {
+      doc && doc.text(work && work.location, 70, yPos + 10)
+    }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       doc && doc.addPage();
       yPos = 20
     }
@@ -41,11 +96,15 @@ export function addWorkExperienceSection(;
       doc && doc.text(work && work.location, 70, yPos + 10)
     }
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     if (work && work.description) {
       doc && doc.setFontSize(10);
       const descriptionLines = doc && doc.splitTextToSize(work && work.description, 170);
       doc && doc.text(descriptionLines, 20, yPos + 16);
+<<<<<<< HEAD
 
       
       yPos += (descriptionLines && descriptionLines.length * 5) + 20
@@ -54,6 +113,67 @@ export function addWorkExperienceSection(;
       yPos += 20
 
 
+=======
+      yPos += (descriptionLines && descriptionLines.length * 5) + 20
+    } else {
+      yPos += 20
+
+      doc.addPage();
+      yPos = 20
+    }
+    doc.setFontSize(14);
+    doc.setTextColor(colors.subheading);
+    doc.text(work.role_title, 20, yPos);
+    doc.setFontSize(12);
+    doc.text(work.company_name, 20, yPos + 5);
+    const startDate = formatDate(work.start_date);
+    const endDate = work.is_current ? 'Present' : formatDate(work.end_date);
+    const dateText = `${startDate} - ${endDate}`;
+    doc.setFontSize(10);
+    doc.setTextColor(colors.text);
+    doc.text(dateText, 20, yPos + 10);
+    if (work.location) {
+      doc.text(work.location, 70, yPos + 10)
+    }
+    if (work.description) {
+      doc.setFontSize(10);
+      const descriptionLines = doc.splitTextToSize(work.description, 170);
+      doc.text(descriptionLines, 20, yPos + 16);
+
+      yPos += (descriptionLines.length * 5) + 20
+    } else {
+      yPos += 20
+    } else {
+      yPos += 20
+
+      doc.addPage();
+      yPos = 20
+    }
+    doc.setFontSize(14);
+    doc.setTextColor(colors.subheading);
+    doc.text(work.role_title, 20, yPos);
+    doc.setFontSize(12);
+    doc.text(work.company_name, 20, yPos + 5);
+    const startDate = formatDate(work.start_date);
+    const endDate = work.is_current ? 'Present' : formatDate(work.end_date);
+    const dateText = `${startDate} - ${endDate}`;
+    doc.setFontSize(10);
+    doc.setTextColor(colors.text);
+    doc.text(dateText, 20, yPos + 10);
+    if (work.location) {
+      doc.text(work.location, 70, yPos + 10)
+    }
+    if (work.description) {
+      doc.setFontSize(10);
+      const descriptionLines = doc.splitTextToSize(work.description, 170);
+      doc.text(descriptionLines, 20, yPos + 16);
+
+      yPos += (descriptionLines.length * 5) + 20
+    } else {
+      yPos += 20
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { jsPDF } from 'jspdf',;
 import { WorkExperience } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -147,12 +267,20 @@ pr-12325
       yPos += 20;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   start_y: number): number {
   // Check condition
 if (return start_y) {
   $2
+<<<<<<< HEAD
+=======
+    }
+  }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }
 
@@ -242,7 +370,12 @@ pr-12325
     }
   }
 
+<<<<<<< HEAD
   return y_pos + 5;
 
 
 
+=======
+  return yPos + 5;
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import { useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 export default function IntegrationsRedirect() {;
@@ -24,4 +27,5 @@ export default function Page() {
       </section>
     </main>
   );
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }

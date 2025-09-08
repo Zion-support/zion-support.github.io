@@ -1,8 +1,33 @@
+<<<<<<< HEAD
 
 
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 
 
+=======
+
+
+
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
+import { Phone, ShieldCheck, Clock } from 'lucide-react'
+:src/pages/ITSupportPage.tsx
+export default function ITSupportPage() {
+  const benefits = [
+    {import React from "react"
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate"
+import React from "react"
+export default function ITSupportPage() {
+
+
+      title: 'Multi - Channel Support',
+      description:;
+        'Get help via phone, chat, or onsite visits tailored to your needs.',
+      icon: <Phone className='h - 8 w - 8' />,
+    },
+  ];
+  const testimonials = [;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     {
       name: 'Lisa Wong'
       role: 'Operations Manager'
@@ -10,8 +35,22 @@ import { Phone, ShieldCheck, Clock } from 'lucide-react'
       avatar: '/placeholder.svg'
     }
     {
+<<<<<<< HEAD
 
 
+=======
+
+      name: 'Carlos Diaz'
+      role: 'IT Lead'
+      text: 'Professional and responsive. Their technicians feel like an extension of our own team.'
+      avatar: '/placeholder.svg'
+    }
+  ]
+    return (
+
+
+export default function ITSupportPage() {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
@@ -41,9 +80,12 @@ export default function ITSupportPage() {
       name: "Carlos Diaz",
       role: "IT Lead",
       text: "Professional and responsive. Their technicians feel like an extension of our own team.",
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -79,15 +121,26 @@ import { Phone, ShieldCheck, Clock } from 'lucide-react';
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
     <ServiceLandingTemplate
       subtitle="Reliable assistance to keep your business technology operating smoothly."
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
+<<<<<<< HEAD
 
 
+=======
+
+;
+}
+}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       benefits={benefits}
       testimonials={testimonials}
       ctaText="Get IT Support"
@@ -135,7 +188,11 @@ export default function ITSupportPage() {;
   ];
     return (
 
+<<<<<<< HEAD
 
 
 
 
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/delete-old-data-records-6bba

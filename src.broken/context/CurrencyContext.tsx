@@ -15,7 +15,7 @@ const DEFAULT_CURRENCY: CurrencyInfo = $2;
   fx_rate: 1},
 
 const CurrencyContext = $2;
-  setCurrency: () => {}}),
+  setCurrency: () => {}),
 
 const CURRENCY_COOKIE = $2;
 function readCookie(name: string): string | null {
@@ -43,7 +43,7 @@ export const CurrencyProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   },
 
   return (
-    <CurrencyContext.Provider value={{ currency, setCurrency }}>
+    <CurrencyContext.Provider value={ currency, setCurrency }>
       {children}
     </CurrencyContext.Provider>
   )

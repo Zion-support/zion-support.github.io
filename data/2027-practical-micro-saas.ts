@@ -1,10 +1,39 @@
+<<<<<<< HEAD
 
 
+=======
+export interface PracticalMicroSaas2027 {
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
+  contactInfo: {
+    mobile: string,
+    email: string,
+    address: string}
+}
+export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
+  {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     id: "2027-practical-micro-saas",
     name: "2027 Practical Micro SAAS Platform",
     tagline: "Practical micro SAAS for 2027",
     price: "$129/month",
     description: "Practical micro SAAS platform designed for 2027 with real-world business applications.",
+<<<<<<< HEAD
+=======
+    id: '2027-practical-micro-saas'
+    name: '2027 Practical Micro SAAS Platform'
+    tagline: 'Practical micro SAAS for 2027'
+    price: '$129/month'
+    description:
+      'Practical micro SAAS platform designed for 2027 with real-world business applications.'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     features: [
       "Practical solutions",
       "Business applications",
@@ -18,6 +47,7 @@
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -33,3 +63,9 @@
   }
 ];
 
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+],
+>>>>>>> origin/cursor/delete-old-data-records-6bba

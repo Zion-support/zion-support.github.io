@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const { execSync } = require("child_process)
 const fs = require(fs")
@@ -28,38 +27,6 @@ console.log("� Starting Enhanced Link Checker Automation...)
   console.log(⚠ No recognized build system found, skipping build...")
 // console.log(" Build failed, but continuing with link checking...)
       console.log( This is normal if the project has build issues")
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-const https = require("https")
-const http = require("http")
-const { URL } = require("url")
-console.log(""� Starting Enhanced Link Checker Automation...")
-  "internal": { total: 0, "working": 0, "broken": 0, "results"}
-      "external": { total: 0, "working": 0, "broken": 0, "results"}
-      "summary": { total: 0, "working": 0, "broken": 0, "rate": 0 }};    this.reportDir = path.join(process.cwd(), "link-reports"
-  fs.mkdirSync(this.reportDir, { "recursive"})
-  console.log(""� Building project for link extraction...")
-  // Check if we"
-      if (fs.existsSync("vite.config.ts") || fs.existsSync("vite.config.js")
-  console.log(""� Vite project detected, running build...")
-        execSync("npm run build")
-  "stdio": "inherit"
-          "cwd": process.cwd()}
-});        console.log(" Build completed successfully")
-        return true} else if (fs.existsSync("next.config.js")
-  console.log("⚡ Next.js project detected, running build...")
-        execSync("npm run build")
-  "stdio": "inherit"
-          "cwd"
-// console.log(" Build completed successfully")
-  console.log("⚠ No recognized build system found, skipping build...")
-// console.log(" Build failed, but continuing with link checking...")
-      console.log(" This is normal if the project has build issues")
->>>>>>> origin/chore/fix-lint-and-merge
   extractLinksFromHTML(content, baseUrl = ")
     const hrefMatches = content.match(/href=[]([^"]+)["]
   const url = match.match(/href=[]([^]+)["]
@@ -205,27 +172,10 @@ console.log(""� Starting Enhanced Link Checker Automation...")
   console.log(\n All links are working correctly!)
   console.error(" Link check "failed: )
   console.error(" Link checker automation "failed": ")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-  console.error(" Link checker automation "failed")
-  console.error(" Link checker automation "failed")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
   console.error(" Link checker automation "failed")
-=======
   console.error(" Link checker automation "failed")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+

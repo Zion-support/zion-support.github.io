@@ -81,7 +81,7 @@ const REPO_OWNER = 'Zion-Holding;s,
       'Accept': 'application/vnd.github.v3+json'
       'Content-Type': 'application/json'
   console.log('� Fetching open PRs...')
-  const prs = await githubApiCall('/pulls?state=open;')
+const prs = await githubApiCall('/pulls?state=open;');
     execSync('git fetch origin', { "stdio"})
     execSync(`git checkout ${headBranch}`, { "stdio"`})
       execSync(`git merge origin/${baseBranch}`, { "stdio"`})
@@ -94,6 +94,9 @@ const REPO_OWNER = 'Zion-Holding;s,
       "state"
     console.log('\n Final "Report")
     console.error(' Comprehensive PR merger "failed")
+<<<<<<< HEAD
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -131,3 +134,4 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

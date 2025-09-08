@@ -1,4 +1,23 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+console.log(' Starting App Optimizer...')
+    // Directory doesn't exist or can'
+console.log(' Analyzing bundle size...')
+const nextDir = path.join(process.cwd(), '.next;';
+      optimizationReport.recommendations.push('Bundle size is large (>50MB). Consider code splitting and lazy loading.'
+      optimizationReport.improvements.push('Bundle size is within acceptable limits')
+  console.warn('Could not analyze bundle "size")
+  console.warn('Could not analyze "dependencies")
+// console.log('\n App Optimization "Summary")
+console.log('\n App Optimization "Summary")
+// console.log(`   - Bundle "size"`)
+console.log(`   - Total "images"`)
+// console.log('\n "Improvements")
+=======
+<<<<<<< HEAD
 
 
 #!/usr/bin/env node;
@@ -10,12 +29,21 @@ const path = require('path')
 const { execSync } = require('child_process')
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
+  console.log('\n "Recommendations")
+
+  console.log('\n "Recommendations")
 #!/usr/bin/env node;
 const fs = require('fs')
-const path = require(path')
+const path = require('path')
+
+
 
 const { execSync } = require('child_process')
+<<<<<<< HEAD
+  console.log('\n "Recommendations")
+=======
 console.log( Starting App Optimizer...')
     // Directory doesn't exist or can
     // Directory doesnt exist or can'
@@ -118,10 +146,13 @@ console.log(`   - Total "images"`)
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
@@ -130,3 +161,4 @@ console.log(`   - Total "images"`)
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

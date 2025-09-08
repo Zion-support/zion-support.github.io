@@ -29,8 +29,13 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
 
+<<<<<<< HEAD
+        <SidebarGroup title='Dashboard'>
+          <SidebarMenuItem href='/creator-dashboard' icon={<Home size={16} />}>
+=======
         <SidebarGroup title="Dashboard">
           <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>
+>>>>>>> origin/resolved-merge-conflicts
             <span>Home</span>
 
 
@@ -301,7 +306,7 @@ function AppSidebar() {return (<Sidebar>;
           <SidebarMenuItem href=/profile" icon={<Users size={16} />}>;
             <span > Profile</span>;
           </SidebarMenuItem>;
-          <SidebarMenuItem href="/settings" icon={<Settings size={16} />}>;
+          <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>;
             <span > Settings</span>;
           </SidebarMenuItem>;
         </SidebarGroup>;

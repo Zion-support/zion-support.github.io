@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 
 
+=======
+
+
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
+// Reusing the categories array from CategoriesSection.tsx
+// Ideally, this would come from a shared data source or API
+
+
+export default function AllCategoriesPage() {
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <div className='min-h-screen bg-zion-blue'>
       <div className='container mx-auto px-4 py-12'>
@@ -7,6 +20,41 @@
           <GradientHeading
             level='h1'
 
+<<<<<<< HEAD
+=======
+              <CategoryCard
+                key={category && category.id}
+                title={category && category.title}
+                description={category && category.description}
+                icon={category && category.icon}
+                href={category && category.href}
+              />;
+            ))}
+
+          </div>;
+
+              <CategoryCard
+                key={category.id}
+                title={category.title}
+                description={category.description}
+                icon={category.icon}
+                href={category.href}
+              />
+            ))}
+          </div>
+        <ErrorBoundary>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {categories.map(category => (          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {categories.map((category) => (
+              <CategoryCard
+import { CategoryCard } from "@/components/CategoryCard",
+import { GradientHeading } from "@/components/GradientHeading",
+import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
+
+          </p>
+        </div>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         <ErrorBoundary>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -53,7 +101,11 @@ export default function AllCategoriesPage() {;
       <div className="container mx-auto px-4 py-12">;
         <div className="text-center mb-12">;
 
+<<<<<<< HEAD
 
+=======
+          <GradientHeading level="h1" className="text-4xl md:text-5xl font-bold mb-4">;",
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           <GradientHeading level="h1" className="text-4xl md:text-5xl font-bold mb-4">;
             All Categories;
           </GradientHeading>;
@@ -63,13 +115,47 @@ export default function AllCategoriesPage() {;
           </p>;
         </div>;
         <ErrorBoundary>;
+<<<<<<< HEAD
 
 
+=======
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
+            {categories.map((category) => (;
+              <CategoryCard;
+            className='text-4xl md:text-5xl font-bold mb-4'
+          >
+            All Categories
+          </GradientHeading>
+          <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>
+            Explore our extensive range of AI services and products. Find
+            exactly what you're looking for to enhance your business or personal
+            projects.
+          </p>
+        </div>
+        <ErrorBoundary>
+<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {categories.map(category => (
+              <CategoryCard
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 key={category.title}
                 title={category.title}
                 description={category.description}
                 icon={category.icon}
+<<<<<<< HEAD
 
+=======
+
+}
+
+                // The CategoryCard itself is a Link to its specific category page;
+                // So we don't pass the category.link to a 'to' prop here directly;
+                // The 'link' in the categories array above is used by CategoryCard's internal Link;
+              />;
+            ))}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           </div>;
         </ErrorBoundary>;
@@ -113,4 +199,17 @@ export default function AllCategoriesPage() {;
     </div>);
 }
 
+<<<<<<< HEAD
+=======
+;
+}))]
+;
+          </div>
+        </ErrorBoundary>
+      </div>
+    </div>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 

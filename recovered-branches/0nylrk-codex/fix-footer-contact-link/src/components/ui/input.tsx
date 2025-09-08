@@ -1,5 +1,14 @@
 
+<<<<<<< HEAD
 
+=======
+import * as React from "react"
+"
+import { cn } from "@/lib/utils"
+
+
+const Input = React.forwardRef<HTMLInputElement React.ComponentProps<"input">>(
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   ({ className, type, ...props }, ref) => {
     return (
@@ -28,7 +37,10 @@ import * as React from &quot;react & quot;
 import { cn } from &quot;@/lib / utils & quot;
 )}
 
+<<<<<<< HEAD
         ref={ref}
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         {...props}
       />);
@@ -43,13 +55,23 @@ export { Input }
 export { Input };
 
 
+<<<<<<< HEAD
 
+=======
+;
+export { Input };
+"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 Input.displayName = "Input"
 
 export { Input };
 ;
 
+<<<<<<< HEAD
 
 
 
 
+=======
+export { Input }
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,84 +1,13 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"function log(message, type = "INFO") {" const icons = { INFO: "", SUCCESS: "", ERROR: "", WARNING: "" };" console.log(`${icons[type] | ""} ${message}`);}function ensureDir(dir) {" fs.mkdirSync(dir, { recursive: true });}function findFiles(dir, exts) { if (!fs.existsSync(dir)) return []; const results = []; for (const entry of fs.readdirSync(dir)) { const p = path.join(dir, entry); const stat = fs.statSync(p); if (stat.isDirectory()) results.push(.findFiles(p, exts)); else if (exts.includes(path.extname(entry).toLowerCase())) results.push(p); } return results;}function optimizeImages(publicDir, report) {" const images = findFiles(publicDir, [".png", ".jpg", ".jpeg"]); if (images.length === 0) {" report.actions.push("No images found to optimize"); return; } let sharp; try {" sharp = require("sharp"); } catch {" report.actions.push("sharp not installed; skipping image optimization"); return; } const optimized = []; for (const img of images) { const stat = fs.statSync(img); if (stat.size < 150 * 1024) continue; / skip small files const ext = path.extname(img).toLowerCase();"` const outPath = img.replace(new RegExp(`${ext}$`), ".webp"); try {" sharp(img).webp({ quality: 80 }).toFile(outPath);" optimized.push({ from: img, to: outPath }); } catch (e) {` report.errors.push(`Failed optimizing ${img}: ${e.message}`); } } if (optimized.length > 0) report.optimizedImages = optimized;` report.actions.push(`Optimized ${optimized.length} images to WebP`);}function ensureNextConfigFlags(rootDir, report) {" const candidates = ["next.config.js", "deployment/next.config.js"]; for (const rel of candidates) { const file = path.join(rootDir, rel); if (!fs.existsSync(file)) continue;" const original = fs.readFileSync(file, "utf8");"" if (original.includes("optimizeCss: true")) {` report.actions.push(`${rel}: optimizeCss already enabled`); continue; } / Attempt minimal enhancement by appending experimental.optimizeCss try { let updated = original;"" if (original.includes("experimental: ")) { updated = original.replace( /experimental:\s*\{/,"" "experimental: {\n optimizeCss: true," ); } else if (" original.includes("nextConfig") |" original.includes("module.exports") ) { updated = original.replace(/\{([\s\S]*?)\}/, m =>"" m.replace(/\}$/, ",\n experimental: { optimizeCss: true }\n}") ); } if (updated !== original) { fs.writeFileSync(file, updated); report.modifiedFiles.push(file);` report.actions.push(`${rel}: enabled experimental.optimizeCss`); } } catch (e) {` report.errors.push(`Failed updating ${rel}: ${e.message}`); } }}function main() { const root = process.cwd(); const timestamp = Date.now(); const report = { timestamp," actions: []," optimizedImages: []," modifiedFiles: []," errors: []};" log("Starting Performance Optimizer.");" ensureDir(path.join(root, "automation-reports")); / Image optimization in public/" optimizeImages(path.join(root, "public"), report); / Ensure Next.js config flags ensureNextConfigFlags(root, report); const outFile = path.join( root,` `performance-optimizer-report-${timestamp}.json` ); fs.writeFileSync(outFile, JSON.stringify(report, null, 2)); log("` `Performance optimization complete. Report: ${path.basename(outFile)}`," "SUCCESS" );}try { main();} catch (e) {""` log(`Performance optimizer failed: ${e.message}`, "ERROR"); process.exit(1);}'"`'"`
-#!/usr/bin/env node;
-/*
- Simple Performance Optimizer;
- - Scans project for large images in public/ and optimizes via sharp if available;
- - Ensures Next.js production optimizations flags are present in next.config.js;
- - Generates a small report file referencing actions taken;
-*/
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-#!/usr/bin/env node
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-#!/usr/bin/env node
-=======
 
-<<<<<<< HEAD
+
+#!/usr/bin/env node
+
 
       if (updated !== original) {
         fs.writeFileSync(file, updated);
         report.modifiedFiles.push(file);
         report.actions.push(`${rel}: enabled experimental.optimizeCss`);
 main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> origin/chore/fix-lint-and-merge
 
 /*
  Simple Performance Optimizer;
@@ -88,111 +17,20 @@ main
 */
 
 
-<<<<<<< HEAD
 console.log(⚡ Starting Performance Optimizer...);
   // TODO: Implement
 }
   constructor() {
 
-=======
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-/**
- * Performance Optimizer
- * Automatically optimizes application performance
- */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-
-=======
 const { execSync } = require('child_process');
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> merged-prs-20250907-203621
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
 class PerformanceOptimizer {
   constructor() {
-<<<<<<< HEAD
-=======
-    this.reportsDir = path.join(process.cwd(), 'automation-reports');
-    this.ensureReportsDir();
-  }
-
-  ensureReportsDir() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
-
-  async optimizePerformance() {
-    const optimizations = [
-      { name: 'Bundle Analysis', command: 'npm run analyze', description: 'Analyzing bundle size' },
-      { name: 'Image Optimization', command: 'npm run optimize:images', description: 'Optimizing images' },
-      { name: 'Code Splitting', command: 'npm run build:analyze', description: 'Analyzing code splitting' },
-      { name: 'Lighthouse Audit', command: 'npm run perf:lighthouse', description: 'Running Lighthouse audit' },
-      { name: 'Performance Monitor', command: 'npm run perf:monitor', description: 'Monitoring performance' }
-    ];
-
-    const results = [];
-    let successfulOptimizations = 0;
-
-    for (const optimization of optimizations) {
-      try {
-        this.log(`🔧 Running ${optimization.name}...`);
-        this.log(`📝 ${optimization.description}`);
-        
-        execSync(optimization.command, { stdio: 'pipe' });
-        
-        console.log(`✅ ${optimization.name} completed successfully`);
-        results.push({ 
-          name: optimization.name, 
-          status: 'success', 
-          description: optimization.description,
-          error: null 
-        });
-        successfulOptimizations++;
-      } catch (error) {
-        console.log(`❌ ${optimization.name} failed`);
-        results.push({ 
-          name: optimization.name, 
-          status: 'failed', 
-          description: optimization.description,
-          error: error.message 
-        });
-      }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -252,118 +90,22 @@ class PerformanceOptimizer {
           error: error.message 
         });
       }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-=======
-
-console.log('⚡ Starting Performance Optimizer...');
-
-class PerformanceOptimizer {
-  constructor() {
-    this.reportsDir = path.join(process.cwd(), 'automation-reports');
-    this.ensureReportsDir();
-  }
-
-  ensureReportsDir() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
-
-  async optimizePerformance() {
-    const optimizations = [
-      { name: 'Bundle Analysis', command: 'npm run analyze', description: 'Analyzing bundle size' },
-      { name: 'Image Optimization', command: 'npm run optimize:images', description: 'Optimizing images' },
-      { name: 'Code Splitting', command: 'npm run build:analyze', description: 'Analyzing code splitting' },
-      { name: 'Lighthouse Audit', command: 'npm run perf:lighthouse', description: 'Running Lighthouse audit' },
-      { name: 'Performance Monitor', command: 'npm run perf:monitor', description: 'Monitoring performance' }
-    ];
-
-    const results = [];
-    let successfulOptimizations = 0;
-
-    for (const optimization of optimizations) {
-      try {
-        this.log(`🔧 Running ${optimization.name}...`);
-        this.log(`📝 ${optimization.description}`);
-        
-        execSync(optimization.command, { stdio: 'pipe' });
-        
-        console.log(`✅ ${optimization.name} completed successfully`);
-        results.push({ 
-          name: optimization.name, 
-          status: 'success', 
-          description: optimization.description,
-          error: null 
-        });
-        successfulOptimizations++;
-      } catch (error) {
-        console.log(`❌ ${optimization.name} failed`);
-        results.push({ 
-          name: optimization.name, 
-          status: 'failed', 
-          description: optimization.description,
-          error: error.message 
-        });
-      }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 function log(message, type = 'INFO') {
   const icons = { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️' };
   console.log(`${icons[type] || ''} ${message}`);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-function ensureDir(dir) {
-  fs.mkdirSync(dir, { recursive: true });
-}
-=======
 
 function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
 }
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-function ensureDir(dir) {
-  fs.mkdirSync(dir, { recursive: true });
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 function findFiles(dir, exts) {
   if (!fs.existsSync(dir)) return [];
   const results = [];
@@ -374,55 +116,19 @@ function findFiles(dir, exts) {
       results.push(...findFiles(p, exts));
     } else if (exts.includes(path.extname(entry).toLowerCase())) {
       results.push(p);
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   }
   return results;
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 function optimizeImages(publicDir, report) {
   const images = findFiles(publicDir, ['.png', '.jpg', '.jpeg']);
   if (images.length === 0) {
     report.actions.push('No images found to optimize');
     return;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   let sharp;
   try {
     sharp = require('sharp');
@@ -430,31 +136,14 @@ function optimizeImages(publicDir, report) {
     report.actions.push('sharp not installed; skipping image optimization');
     return;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const optimized = [];
   for (const img of images) {
     const stat = fs.statSync(img);
     if (stat.size < 150 * 1024) continue; // skip small files
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     const ext = path.extname(img).toLowerCase();
     const outPath = img.replace(new RegExp(`${ext}$`), '.webp');
-=======
-    
-    const ext = path.extname(img).toLowerCase();
-    const outPath = img.replace(new RegExp(`${ext}$`), '.webp');
-    
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    const ext = path.extname(img).toLowerCase();
-    const outPath = img.replace(new RegExp(`${ext}$`), '.webp');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     try {
       sharp(img).webp({ quality: 80 }).toFile(outPath);
       optimized.push({ from: img, to: outPath });
@@ -462,119 +151,40 @@ function optimizeImages(publicDir, report) {
       report.errors.push(`Failed optimizing ${img}: ${e.message}`);
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   if (optimized.length > 0) {
     report.optimizedImages = optimized;
   }
   report.actions.push(`Optimized ${optimized.length} images to WebP`);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-function ensureNextConfigFlags(rootDir, report) {
-  const candidates = ['next.config.js', 'deployment/next.config.js'];
-  for (const rel of candidates) {
-    const file = path.join(rootDir, rel);
-    if (!fs.existsSync(file)) continue;
-    const original = fs.readFileSync(file, 'utf8');
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-function ensureNextConfigFlags(rootDir, report) {
-  const candidates = ['next.config.js', 'deployment/next.config.js'];
-  for (const rel of candidates) {
-    const file = path.join(rootDir, rel);
-    if (!fs.existsSync(file)) continue;
-    const original = fs.readFileSync(file, 'utf8');
-<<<<<<< HEAD
-    
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    if (original.includes('optimizeCss: true')) {
-      report.actions.push(`${rel}: optimizeCss already enabled`);
-      continue;
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Attempt minimal enhancement by appending experimental.optimizeCss
-    try {
-      let updated = original;
-=======
 
     // Attempt minimal enhancement by appending experimental.optimizeCss
     try {
       let updated = original;
-      
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    // Attempt minimal enhancement by appending experimental.optimizeCss
-    try {
-      let updated = original;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       if (original.includes('experimental:')) {
         updated = original.replace(
           /experimental:\s*\{/,
           'experimental: {\n    optimizeCss: true,'
         );
       } else if (original.includes('nextConfig') || original.includes('module.exports')) {
-<<<<<<< HEAD
         updated = original.replace(/\{([\s\S]*?)\}/, m =>
           m.replace(/\}$/, ',\n  experimental: { optimizeCss: true }\n}')
         );
       }
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-        updated = original.replace(/\{([\s\S]*?)\}/, m => 
-          m.replace(/\}$/, ',\n  experimental: { optimizeCss: true }\n}')
-        );
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
 #!/usr/bin/env node
 
-<<<<<<< HEAD
 /**
  * Performance Optimizer
  * Automatically optimizes application performance
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 
-=======
 const { execSync } = require('child_process');
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     if (!config.includes('optimizeCss')) {}
       optimizations.push('Add CSS optimization');
     };
@@ -588,32 +198,8 @@ const path = require('path');
       this.report.recommendations.push({})
         file: configPath,
         optimizations;
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       }
-<<<<<<< HEAD
 #!/usr/bin/env node
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 });
       log(`Found ${optimizations.length} optimization opportunities in next.config.js`, 'WARNING');
     } else {}
@@ -745,33 +331,8 @@ if (require.main === module) {}
   const optimizer = new PerformanceOptimizer();
   optimizer.optimize().then(success => {})
     process.exit(success ? 0 : 1);
-<<<<<<< HEAD
 
-=======
-#!/usr/bin/env node
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      if (updated !== original) {
-        fs.writeFileSync(file, updated);
-        report.modifiedFiles.push(file);
-        report.actions.push(`${rel}: enabled experimental.optimizeCss`);
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -781,173 +342,7 @@ class PerformanceOptimizer {
     this.reportsDir = path.join(process.cwd(), 'automation-reports');
     this.ensureReportsDir();
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-});
-};
-module.exports = PerformanceOptimizer;
-console.log('⚡ Zion Tech Group - Performance Optimizer');
-console.log('==========================================');
 
-const performanceReport = {
-    timestamp: new Date().toISOString(),
-    optimizations: [],
-    recommendations: [],
-    metrics: {}
-};
-
-function analyzeBundleSize() {
-    console.log('\n📦 Analyzing bundle size...');
-    
-    try {
-        if (fs.existsSync('.next')) {
-            const stats = execSync('du -sh .next', { encoding: 'utf8' });
-            const size = stats.trim().split('\t')[0];
-            
-            performanceReport.metrics.bundleSize = size;
-            console.log(`✅ Bundle size: ${size}`);
-            
-            if (size.includes('M') && parseInt(size) > 50) {
-                performanceReport.recommendations.push({
-                    type: 'bundle_size',
-                    message: 'Bundle size is large, consider code splitting',
-                    priority: 'high'
-                });
-            }
-        } else {
-            console.log('⚠️  No build found, run npm run build first');
-        }
-=======
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-
-=======
-const fs = require('fs');
-const path = require('path');
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-class PerformanceOptimizer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportPath = path.join(this.projectRoot, 'performance-optimization-report.json');
-  }
-
-  log(message) {
-<<<<<<< HEAD
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
-
-  async optimizePerformance() {
-    const optimizations = [
-      { name: 'Bundle Analysis', command: 'npm run analyze', description: 'Analyzing bundle size' },
-      { name: 'Image Optimization', command: 'npm run optimize:images', description: 'Optimizing images' },
-      { name: 'Code Splitting', command: 'npm run build:analyze', description: 'Analyzing code splitting' },
-      { name: 'Lighthouse Audit', command: 'npm run perf:lighthouse', description: 'Running Lighthouse audit' },
-      { name: 'Performance Monitor', command: 'npm run perf:monitor', description: 'Monitoring performance' }
-    ];
-
-    const results = [];
-    let successfulOptimizations = 0;
-
-      if (buildResult.success) {
-        // Analyze bundle size
-        const buildDir = path.join(this.projectRoot, '.next');
-        if (fs.existsSync(buildDir)) {
-          const stats = fs.statSync(buildDir);
-          const sizeInMB = stats.size / (1024 * 1024);
-          
-          this.results.bundleAnalysis = {
-            success: true,
-            size: sizeInMB,
-            recommendations: this.generateBundleRecommendations(sizeInMB)
-          };
-        }
-      }
-    } catch (error) {
-      this.results.bundleAnalysis = {
-        success: false,
-        size: 0,
-
-<<<<<<< HEAD
-    const ext = path.extname(img).toLowerCase()
-    const outPath = img.replace(new RegExp(`${ext}$`), .webp')
-    try {
-        execSync(optimization.command, { stdio: 'pipe });
-=======
-  async optimizeImages() {
-    this.log('\n🖼️ OPTIMIZING IMAGES');
-    
-    try {
-      // Check if images directory exists
-      const imagesDir = path.join(this.projectRoot, 'public', 'images');
-      if (fs.existsSync(imagesDir)) {
-        const imageFiles = fs.readdirSync(imagesDir).filter(file => 
-          /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
-        );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        execSync(optimization.command, { stdio: 'pipe' });
->>>>>>> origin/chore/fix-lint-and-merge
-        console.log(`✅ ${optimization.name} completed successfully`);
-        results.push({ 
-          name: optimization.name, 
-          status: success', 
-          description: optimization.description,
-          error: null 
-        });
-        successfulOptimizations++;
-      } catch (error) {
-        console.log(`❌ ${optimization.name} failed`);
-        results.push({ 
-          name: optimization.name, 
-          status: 'failed, 
-          description: optimization.description,
-          error: error.message 
-        });
-    for (const optimization of optimizations) {
-      try {
-        this.log(`🔧 Running ${optimization.name}...`);
-        this.log(`📝 ${optimization.description}`);
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-        
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-        this.results.imageOptimization = {
-          success: true,
-          optimized: imageFiles.length,
-          recommendations: this.generateImageRecommendations(imageFiles.length)
-        }
-      } else {
-        this.results.imageOptimization = {
-          success: true,
-          optimized: 0,
-<<<<<<< HEAD
-          recommendations: [No images found to optimize']
-        }
-      }
-=======
-          recommendations: ['No images found to optimize']
-        };
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
   async implementCodeSplitting() {
     this.log('\n🔀 IMPLEMENTING CODE SPLITTING');
     
@@ -973,11 +368,9 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
         chunks: 3,
         recommendations: this.generateCodeSplittingRecommendations()
       };
->>>>>>> origin/chore/fix-lint-and-merge
     } catch (error) {
       this.results.codeSplitting = {
         success: false,
-<<<<<<< HEAD
         optimized: 0,
         recommendations: ['Failed to optimize images]
       }
@@ -998,13 +391,6 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
     if (original.includes('optimizeCss: true)) {
       report.actions.push(`${rel}: optimizeCss already enabled`);
       continue;
-=======
-        chunks: 0,
-        recommendations: ['Failed to implement code splitting']
-      };
-    }
-  }
->>>>>>> origin/chore/fix-lint-and-merge
 
   async setupCaching() {
     this.log('\n💾 SETTING UP CACHING');
@@ -1159,28 +545,9 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
     // Save detailed report
     const report = {
       timestamp: new Date().toISOString(),
-<<<<<<< HEAD
 
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`\n📄 Detailed report saved to ${reportPath}`);
-=======
-      totalDuration,
-      results: this.results,
-      summary: {
-        bundleOptimized: this.results.bundleAnalysis.success,
-        imagesOptimized: this.results.imageOptimization.success,
-        codeSplittingImplemented: this.results.codeSplitting.success,
-        cachingConfigured: this.results.caching.success,
-        compressionSetup: this.results.compression.success
-      }
-    };
-    
-    fs.writeFileSync(
-      'performance-optimization-report.json',
-      JSON.stringify(report, null, 2)
-    );
-    this.log('\n📄 Detailed report saved to performance-optimization-report.json');
->>>>>>> origin/chore/fix-lint-and-merge
   }
 
   async run() {
@@ -1197,31 +564,13 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
       this.log(`Fatal error: ${error.message}`, 'ERROR);
     } finally {
       this.generateReport();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
 
     }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
     }
   }
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const report = {
       timestamp: new Date().toISOString(),
       totalOptimizations: optimizations.length,
@@ -1236,13 +585,7 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
     
     this.log(`📊 Performance optimization completed! Report saved to: ${reportPath}`);
     this.log(`📈 Performance Score: ${report.performanceScore}% (${successfulOptimizations}/${optimizations.length} optimizations successful)`);
-<<<<<<< HEAD
 
-=======
-    
-// Run performance optimization
-const optimizer = new PerformanceOptimizer();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     try {
       await this.analyzeBundle();
       await this.optimizeImages();
@@ -1257,58 +600,15 @@ const optimizer = new PerformanceOptimizer();
   }
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Run the performance optimizer
 if (require.main === module) {
     const optimizer = new PerformanceOptimizer(),
     optimizer.run().catch(console.error)
   }
-<<<<<<< HEAD
 
 module.exports = PerformanceOptimizer;
 
-<<<<<<< HEAD
 
-=======
-
-=======
-module.exports = PerformanceOptimizer;
-      if (updated !== original) {
-        fs.writeFileSync(file, updated);
-        report.modifiedFiles.push(file);
-        report.actions.push(`${rel}: enabled experimental.optimizeCss`);
-      }
-    } catch (e) {
-      report.errors.push(`Failed updating ${rel}: ${e.message}`);
-    }
-  }
-}
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 function main() {
   const root = process.cwd();
   const timestamp = Date.now();
@@ -1336,31 +636,6 @@ function main() {
   fs.writeFileSync(outFile, JSON.stringify(report, null, 2));
 
   log(`Performance optimization complete. Report: ${path.basename(outFile)}`, 'SUCCESS');
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-}
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-try {
-  main();
-} catch (e) {
-  log(`Performance optimizer failed: ${e.message}`, 'ERROR');
-  process.exit(1);
-}
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 });
 };
 module.exports = PerformanceOptimizer;
@@ -1395,7 +670,6 @@ function analyzeBundleSize() {
         } else {
             console.log('⚠️  No build found, run npm run build first');
         }
-=======
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -1403,7 +677,6 @@ const { execSync } = require("child_process");
 class PerformanceOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
->>>>>>> merged-prs-20250907-203621
     this.optimizations = [];
     this.logFile = path.join(__dirname, '../logs/performance-optimizer.log');
     this.ensureLogsDir();
@@ -1756,7 +1029,6 @@ const path = require('path');
 console.log('⚡ Starting Performance Optimizer...');
 
 class PerformanceOptimizer {
-<<<<<<< HEAD
 class AutoGeneratedClass {
   constructor($2) {
     this.reportsDir = path.join(process.cwd(), 'automation-reports')
@@ -1767,14 +1039,6 @@ class AutoGeneratedClass {
   log($2) {
     const timestamp = new Date().toISOString()
     console.log(`[${timestamp}] ${message}`)
-=======
-  constructor() {
-    this.reportsDir = path.join(process.cwd(), 'automation-reports');
-    this.ensureReportsDir();
-  }
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   ensureReportsDir() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
@@ -1784,7 +1048,6 @@ class AutoGeneratedClass {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);
   }
->>>>>>> merged-prs-20250907-203621
   async optimizePerformance() {
     const optimizations = [
       { name: 'Bundle Analysis', command: 'npm run analyze', description: 'Analyzing bundle size' },
@@ -1792,19 +1055,10 @@ class AutoGeneratedClass {
       { name: 'Code Splitting', command: 'npm run build:analyze', description: 'Analyzing code splitting' },
       { name: 'Lighthouse Audit', command: 'npm run perf:lighthouse', description: 'Running Lighthouse audit' },
       { name: 'Performance Monitor', command: 'npm run perf:monitor', description: 'Monitoring performance' }
-<<<<<<< HEAD
     ]
     const results = []
     let successfulOptimizations = 0
   for($2) {
-=======
-    ];
-    const results = [];
-    let successfulOptimizations = 0;
-<<<<<<< HEAD
-
-    for (const optimization of optimizations) {
->>>>>>> merged-prs-20250907-203621
       try {
         this.log(`🔧 Running ${optimization.name}...`)
         this.log(`📝 ${optimization.description}`)
@@ -2778,121 +2032,8 @@ generateOptimizationRecommendations();
 
 // Run if called directly;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 
-console.log('⚡ Starting Performance Optimizer...');
-
-class PerformanceOptimizer {
-  constructor() {
-    this.reportsDir = path.join(process.cwd(), 'automation-reports');
-    this.ensureReportsDir();
-  }
-
-    } catch (error) {
-      this.errors.push(`Build test failed: ${error.message}`);
-      this.log(`❌ Build test failed: ${error.message}`, "ERROR");
-    }
-
-    } catch (error) {
-      this.log(`💥 Fatal error: ${error.message}`, "ERROR");
-      process.exit(1);
-    }
-  }
-
-  ensureReportsDir() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
-
-  async optimizePerformance() {
-    const optimizations = [
-      { name: 'Bundle Analysis', command: 'npm run analyze', description: 'Analyzing bundle size' },
-      { name: 'Image Optimization', command: 'npm run optimize:images', description: 'Optimizing images' },
-      { name: 'Code Splitting', command: 'npm run build:analyze', description: 'Analyzing code splitting' },
-      { name: 'Lighthouse Audit', command: 'npm run perf:lighthouse', description: 'Running Lighthouse audit' },
-      { name: 'Performance Monitor', command: 'npm run perf:monitor', description: 'Monitoring performance' }
-    ];
-
-    const results = [];
-    let successfulOptimizations = 0;
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-      if (buildResult.success) {
-        // Analyze bundle size
-        const buildDir = path.join(this.projectRoot, '.next');
-        if (fs.existsSync(buildDir)) {
-          const stats = fs.statSync(buildDir);
-          const sizeInMB = stats.size / (1024 * 1024);
-          this.results.bundleAnalysis = {
-            success: true,
-            size: sizeInMB,
-            recommendations: this.generateBundleRecommendations(sizeInMB)
-          };
-        }
-      }
-    } catch (error) {
-      this.results.bundleAnalysis = {
-        success: false,
-        size: 0,
-        recommendations: ['Failed to analyze bundle size']
-      };
-    }
-  }
-  async optimizeImages() {
-    this.log('\n🖼️ OPTIMIZING IMAGES');
-    try {
-      // Check if images directory exists
-      const imagesDir = path.join(this.projectRoot, 'public', 'images');
-      if (fs.existsSync(imagesDir)) {
-        const imageFiles = fs.readdirSync(imagesDir).filter(file => 
-          /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
-        );
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        execSync(optimization.command, { stdio: 'pipe' });
-        console.log(`✅ ${optimization.name} completed successfully`);
-        results.push({ 
-          name: optimization.name, 
-          status: 'success', 
-          description: optimization.description,
-          error: null 
-        });
-        successfulOptimizations++;
-      } catch (error) {
-        console.log(`❌ ${optimization.name} failed`);
-        results.push({ 
-          name: optimization.name, 
-          status: 'failed', 
-          description: optimization.description,
-          error: error.message 
-        });
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         this.results.imageOptimization = {
           success: true,
           optimized: imageFiles.length,
@@ -2904,13 +2045,7 @@ class PerformanceOptimizer {
           optimized: 0,
           recommendations: ['No images found to optimize']
         };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
       }
     } catch (error) {
       this.results.imageOptimization = {
@@ -2918,10 +2053,7 @@ class PerformanceOptimizer {
         optimized: 0,
         recommendations: ['Failed to optimize images']
       };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
     }
   }
 
@@ -3145,264 +2277,10 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
       this.log(`Fatal error: ${error.message}`, 'ERROR');
     } finally {
       this.generateReport();
-<<<<<<< HEAD
-
+    }
     }
   }
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-    }
-  }
-
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-  async implementCodeSplitting() {
-    this.log('\n🔀 IMPLEMENTING CODE SPLITTING');
-    
-    try {
-      // Create dynamic import examples
-      const codeSplittingExamples = `
-// Example: Dynamic imports for better code splitting
-const LazyComponent = React.lazy(() => import('./LazyComponent'));
-
-// Example: Route-based code splitting
-const HomePage = React.lazy(() => import('../pages/Home'));
-const AboutPage = React.lazy(() => import('../pages/About'));
-
-// Example: Component-based code splitting
-const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
-`;
-
-      const examplesPath = path.join(this.projectRoot, 'code-splitting-examples.js');
-      fs.writeFileSync(examplesPath, codeSplittingExamples);
-      
-      this.results.codeSplitting = {
-        success: true,
-        chunks: 3,
-        recommendations: this.generateCodeSplittingRecommendations()
-      };
-    } catch (error) {
-      this.results.codeSplitting = {
-        success: false,
-        chunks: 0,
-        recommendations: ['Failed to implement code splitting']
-      };
-    }
-  }
-
-  async setupCaching() {
-    this.log('\n💾 SETTING UP CACHING');
-    
-    try {
-      // Create caching configuration
-      const cachingConfig = {
-        static: {
-          maxAge: 31536000, // 1 year
-          immutable: true
-        },
-        dynamic: {
-          maxAge: 86400, // 1 day
-          staleWhileRevalidate: 3600 // 1 hour
-        },
-        api: {
-          maxAge: 300, // 5 minutes
-          staleWhileRevalidate: 60 // 1 minute
-        }
-      };
-
-      const configPath = path.join(this.projectRoot, 'caching-config.json');
-      fs.writeFileSync(configPath, JSON.stringify(cachingConfig, null, 2));
-      
-      this.results.caching = {
-        success: true,
-        strategies: ['static', 'dynamic', 'api'],
-        recommendations: this.generateCachingRecommendations()
-      };
-    } catch (error) {
-      this.results.caching = {
-        success: false,
-        strategies: [],
-        recommendations: ['Failed to setup caching']
-      };
-    }
-  }
-
-  async setupCompression() {
-    this.log('\n🗜️ SETTING UP COMPRESSION');
-    
-    try {
-      // Create compression configuration
-      const compressionConfig = {
-        gzip: {
-          enabled: true,
-          level: 6,
-          threshold: 1024
-        },
-        brotli: {
-          enabled: true,
-          level: 4,
-          threshold: 1024
-        }
-      };
-
-      const configPath = path.join(this.projectRoot, 'compression-config.json');
-      fs.writeFileSync(configPath, JSON.stringify(compressionConfig, null, 2));
-      
-      this.results.compression = {
-        success: true,
-        ratio: 0.7, // Estimated compression ratio
-        recommendations: this.generateCompressionRecommendations()
-      };
-    } catch (error) {
-      this.results.compression = {
-        success: false,
-        ratio: 0,
-        recommendations: ['Failed to setup compression']
-      };
-    }
-  }
-
-  generateBundleRecommendations(sizeInMB) {
-    const recommendations = [];
-    
-    if (sizeInMB > 5) {
-      recommendations.push('Bundle size is large. Consider code splitting.');
-    }
-    if (sizeInMB > 10) {
-      recommendations.push('Bundle size is very large. Implement lazy loading.');
-    }
-    if (sizeInMB > 20) {
-      recommendations.push('Bundle size is extremely large. Consider micro-frontends.');
-    }
-    
-    recommendations.push('Use dynamic imports for large components');
-    recommendations.push('Implement tree shaking to remove unused code');
-    recommendations.push('Consider using a CDN for static assets');
-    
-    return recommendations;
-  }
-
-  generateImageRecommendations(imageCount) {
-    const recommendations = [];
-    
-    if (imageCount > 0) {
-      recommendations.push('Convert images to WebP format for better compression');
-      recommendations.push('Implement responsive images with srcset');
-      recommendations.push('Add lazy loading for images below the fold');
-      recommendations.push('Use appropriate image sizes for different screen densities');
-    }
-    
-    recommendations.push('Consider using a service like Cloudinary for image optimization');
-    recommendations.push('Implement progressive image loading');
-    
-    return recommendations;
-  }
-
-  generateCodeSplittingRecommendations() {
-    return [
-      'Implement route-based code splitting',
-      'Use React.lazy() for component-based splitting',
-      'Split vendor libraries into separate chunks',
-      'Implement dynamic imports for heavy components',
-      'Consider using loadable-components for SSR compatibility'
-    ];
-  }
-
-  generateCachingRecommendations() {
-    return [
-      'Implement service worker for offline caching',
-      'Use HTTP caching headers appropriately',
-      'Implement client-side caching with React Query or SWR',
-      'Cache API responses with appropriate TTL',
-      'Use CDN for static asset caching'
-    ];
-  }
-
-  generateCompressionRecommendations() {
-    return [
-      'Enable gzip compression on the server',
-      'Implement Brotli compression for better ratios',
-      'Minify CSS and JavaScript files',
-      'Remove unused CSS and JavaScript',
-      'Optimize font loading and subsetting'
-    ];
-  }
-
-  generateReport() {
-    const totalDuration = Date.now() - this.startTime;
-    
-    this.log('\n📊 PERFORMANCE OPTIMIZATION REPORT');
-    this.log('='.repeat(60));
-    this.log(`Total Duration: ${totalDuration}ms`);
-    this.log('');
-    
-    Object.entries(this.results).forEach(([task, result]) => {
-      const status = result.success ? '✅' : '❌';
-      this.log(`${status} ${task}: ${JSON.stringify(result, null, 2)}`);
-    });
-    
-    // Save detailed report
-    const report = {
-      timestamp: new Date().toISOString(),
-      totalDuration,
-      results: this.results,
-      summary: {
-        bundleOptimized: this.results.bundleAnalysis.success,
-        imagesOptimized: this.results.imageOptimization.success,
-        codeSplittingImplemented: this.results.codeSplitting.success,
-        cachingConfigured: this.results.caching.success,
-        compressionSetup: this.results.compression.success
-      }
-    };
-    
-    fs.writeFileSync(
-      'performance-optimization-report.json',
-      JSON.stringify(report, null, 2)
-    );
-    this.log('\n📄 Detailed report saved to performance-optimization-report.json');
-  }
-
-  async run() {
-    this.log('🚀 Starting Performance Optimizer');
-    this.log('='.repeat(60));
-    
-    try {
-      await this.analyzeBundle();
-      await this.optimizeImages();
-      await this.implementCodeSplitting();
-      await this.setupCaching();
-      await this.setupCompression();
-    } catch (error) {
-      this.log(`Fatal error: ${error.message}`, 'ERROR');
-    } finally {
-      this.generateReport();
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-    }
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-    }
-  }
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const report = {
       timestamp: new Date().toISOString(),
       totalOptimizations: optimizations.length,
@@ -3415,18 +2293,6 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Performance optimization completed! Report saved to: ${reportPath}`);
     this.log(`📈 Performance Score: ${report.performanceScore}% (${successfulOptimizations}/${optimizations.length} optimizations successful)`);
-<<<<<<< HEAD
-=======
-    
-// Run performance optimization
-const optimizer = new PerformanceOptimizer();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-optimizer.optimizePerformance().catch(console.error);
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     try {
       await this.analyzeBundle();
       await this.optimizeImages();
@@ -3439,9 +2305,6 @@ optimizer.optimizePerformance().catch(console.error);
       this.generateReport();
     }
   }
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
 
   async start() {
     this.log('🚀 Performance Optimizer started');
@@ -3456,75 +2319,18 @@ optimizer.optimizePerformance().catch(console.error);
 
     this.log('🔄 Performance Optimizer is running. Optimization every 2 hours.');
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-main
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 // Run the performance optimizer
 if (require.main === module) {
-<<<<<<< HEAD
 
   const optimizer = new PerformanceOptimizer();
   optimizer.run().catch(console.error);
 }
 
 
-=======
-    const optimizer = new PerformanceOptimizer(),
-    optimizer.run().catch(console.error)
-  }
-<<<<<<< HEAD
 
-=======
-module.exports = PerformanceOptimizer;
-      if (updated !== original) {
-        fs.writeFileSync(file, updated);
-        report.modifiedFiles.push(file);
-        report.actions.push(`${rel}: enabled experimental.optimizeCss`);
-      }
-    } catch (e) {
-      report.errors.push(`Failed updating ${rel}: ${e.message}`);
-    }
-  }
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 function main() {
   const root = process.cwd();
   const timestamp = Date.now();
@@ -3547,20 +2353,6 @@ function main() {
   );
   fs.writeFileSync(outFile, JSON.stringify(report, null, 2));
   log(`Performance optimization complete. Report: ${path.basename(outFile)}`, 'SUCCESS');
-<<<<<<< HEAD
-=======
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
     } catch (error) {
       this.errors.push(`Build test failed: ${error.message}`);
@@ -3580,9 +2372,6 @@ console.log(`\n📄 Report saved to: ${reportPath}`);
 }
 
 // Run if called directly
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> merged-prs-20250907-203621
 if (require.main === module) {
   const optimizer = new PerformanceOptimizer();
   optimizer.start().catch(console.error);
@@ -3591,7 +2380,6 @@ if (require.main === module) {
 module.exports = PerformanceOptimizer;
 module.exports = PerformanceOptimizer;
 
-<<<<<<< HEAD
 
 
 
@@ -3602,37 +2390,9 @@ optimizer.optimizePerformance().catch(console.error);
 // Run performance optimization;
 
   // TODO: Implement
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-try {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+optimizer.optimizePerformance().catch(console.error);
   main();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-} catch (e) {
-  log(`Performance optimizer failed: ${e.message}`, 'ERROR');
-  process.exit(1);
-<<<<<<< HEAD
-}
-=======
-}
-}
-optimizer.optimizePerformance().catch(console.error);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
-optimizer.optimizePerformance().catch(console.error);
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> merged-prs-20250907-203621
 
 module.exports = PerformanceOptimizer;
 module.exports = PerformanceOptimizer;
@@ -3659,17 +2419,4 @@ module.exports = PerformanceOptimizer;
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+

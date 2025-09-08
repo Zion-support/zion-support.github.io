@@ -1,9 +1,19 @@
 
+<<<<<<< HEAD
+=======
+import type { UserDetails } from "@/types/auth";"
+import { supabase } from "@/integrations/supabase/client","
+import type { UserDetails } from "@/types/auth",import {supabase} from "@/integrations/supabase/client";"
+import type { UserDetails } from "@/types/auth","
+import type { UserDetails } from "@/types/auth";
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import {supabase} from "@/integrations/supabase/client";
 import type { UserDetails } from "@/types/auth";
 
 
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
 
@@ -11,20 +21,29 @@ import type { UserDetails } from "@/types/auth",
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 /**
  * Utility function to clean up authentication state";
  * This helps prevent auth state inconsistencies and "limbo" states;
  */
 
+<<<<<<< HEAD
 
 export const cleanupAuthState = () => {
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   // Remove all Supabase auth keys from localStorage
   Object.keys(localStorage).forEach((key) => {
     if (key.startsWith('supabase.auth.') |key.includes('sb-')) {
       localStorage.removeItem(key)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     }
 
@@ -35,11 +54,18 @@ export const cleanupAuthState = () => {
     }
   })
 }
+<<<<<<< HEAD
 
 import { supabase } from "@/integrations/supabase/client",;
 
 import type { UserDetails } from "@/types/auth",;
 
+=======
+import { supabase } from "@/integrations/supabase/client";"
+import { supabase } from "@/integrations/supabase/client",;
+
+import type { UserDetails } from "@/types/auth",;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 /**;
  * Utility function to clean up authentication state;"
  * This helps prevent auth state inconsistencies and "limbo" states;
@@ -58,13 +84,17 @@ export const cleanupAuthState = () => {;
     if (key.startsWith('supabase.auth.') || key.includes('sb-')) {;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }
   })
 },
 
 
+<<<<<<< HEAD
 
 
 
@@ -78,6 +108,11 @@ export const checkNewRegistration = async (user: UserDetails) => {
     const { data: existingCampaign } = await supabase
       .from("email_campaigns")
       .select("id")
+=======
+/**
+ * Utility function to check new user registration and schedule welcome emails;
+ */
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     // If no welcome email sent yet, schedule one
     if (!existingCampaign) {
@@ -86,7 +121,10 @@ export const checkNewRegistration = async (user: UserDetails) => {
         .from("scheduled_jobs")
         .insert({
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     // Check if user has received welcome email already;
     const { data: existingCampaign } = await supabase"
@@ -104,8 +142,19 @@ export const checkNewRegistration = async (user: UserDetails) => {
           }
         });
 
+<<<<<<< HEAD
+=======
+
+            user_id: user.id,"
+            email_type: "welcome_series","
+            user_type: user.userType || "unknown","
+            display_name: user.displayName || user.email?.split("@")[0] || "User"
+          }
+        }),
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
             user_id: user.id,
             email_type: "welcome_series",
             user_type: user.userType || "unknown",
@@ -131,6 +180,9 @@ export const checkNewRegistration = async (user: UserDetails) => {
 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             user_id: user.id,
 
             email_type: "welcome_series",
@@ -164,7 +216,10 @@ export const checkNewRegistration = async (user: UserDetails) => {;
 
             display_name: user.displayName || user.email?.split("@")[0] || "User";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           }
         });
 ;
@@ -178,12 +233,19 @@ export const checkNewRegistration = async (user: UserDetails) => {;
             email_type: "welcome_series";"
             user_type: user.user_type || "unknown","
             display_name: user.display_name || user.email?.split ("@")[0] || "User";
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           }
         });
     }
+<<<<<<< HEAD
   } catch (error) {
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
     console.error("Error checking or scheduling welcome email:", error)
@@ -199,8 +261,30 @@ export const checkNewRegistration = async (user: UserDetails) => {;
 import { supabase } from "@/integrations/supabase/client",;"
 import type { UserDetails } from "@/types/auth",;
 ;
+<<<<<<< HEAD
+=======
+
+/**;
+ * Utility function to clean up authentication state;"
+ * This helps prevent auth state inconsistencies and "limbo" states;
+ */;
+export const cleanupAuthState = () => {;
+  // Remove standard auth tokens;'
+  localStorage.removeItem('supabase.auth.token'),;
+  ;
+  // Remove all Supabase auth keys from localStorage;
+  Object.keys(localStorage).forEach((key) => {;'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
 
 
+<<<<<<< HEAD
+=======
+            display_name: user.displayName || user.email?.split("@")[0] || "User";
+          }
+        });
+
+    }
+>>>>>>> origin/cursor/delete-old-data-records-6bba

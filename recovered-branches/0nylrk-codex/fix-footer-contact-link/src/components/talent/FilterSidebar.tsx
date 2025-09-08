@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import React from "react";
 import {Button} from "@/components/ui/button";
@@ -12,6 +13,9 @@ import {ExperienceFilter} from "./filters/ExperienceFilter";
 import {PriceFilter} from "./filters/PriceFilter";
 import {FilterSidebarProps} from "@/types/filters";
 
+=======
+searchTerm;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   setSearchTerm;
   selectedSkills;
   toggleSkill;
@@ -30,6 +34,7 @@ import {FilterSidebarProps} from "@/types/filters";
   clearFilters;
 
 
+<<<<<<< HEAD
 
 export function FilterSidebar({
 
@@ -51,12 +56,20 @@ export function FilterSidebar({
   sortOption,
   setSortOption,
   clearFilters,
+=======
+export function FilterSidebar({
+
+  searchTerm,
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   return (
     <>;
       {/* Filter header */}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       "
 import React from "react",;"
@@ -131,9 +144,12 @@ export function FilterSidebar({;
 
       </div>;
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       {/* Search */}
 
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
@@ -186,12 +202,46 @@ export function FilterSidebar({;
       )}
     </>
   )
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+import React from './react';
+import { Button } from '@/components / ui / button';
+import { Filter } from './lucide-react';
+import { SearchFilter } from './filters / SearchFilter';
+import { SortFilter } from './filters / SortFilter';
+import { SkillsFilter } from './filters / SkillsFilter';
+import { AvailabilityFilter } from './filters / AvailabilityFilter';
+import { RegionFilter } from './filters / RegionFilter';
+import { ExperienceFilter } from './filters / ExperienceFilter';
+import { PriceFilter } from './filters / PriceFilter';
+
+import { FilterSidebarProps } from '@/types / filters';
+export /**;
+ * FilterSidebar - Function description;
+ */
+function FilterSidebar() {}
+  return (
+    <>;
+
+          Filters;
+        </h3>;
+        <Button;"
+          variant="ghost";"
+          size="sm";
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         >;
           Clear All;
         </Button>;
       </div>;
+<<<<<<< HEAD
 
       ;
       {/* Search */}
@@ -255,6 +305,11 @@ export function FilterSidebar({;
       )}
     </>;
 
+=======
+
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   ),;}
  export function FilterSidebar ({
   searchTerm;
@@ -279,6 +334,7 @@ isMobileFilterOpen
   return (<> /* Filter header */ 
 }<div className="flex items-center justify-between mb-6" > <h3 className="text-lg font-semibold text-white flex items-center" > <Filter className="h-4 w-4 mr-2 text-zion-purple" /> Filters </h3> <Button > Clear All </Button> </div> {
   /* Search */ 
+<<<<<<< HEAD
 
 }<SearchFilter searchTerm= {
   searchTerm 
@@ -359,3 +415,61 @@ isMobileFilterOpen
 }
 
 
+=======
+
+ * FilterSidebar - Function description;
+ */)
+function FilterSidebar() {
+      <div className="flex items - center justify - between mb - 6">;"
+        <h3 className="text - lg font - semibold text - white flex items - center">;"
+          <Filter className="h - 4 w - 4 mr - 2 text - zion - purple" />;"
+
+          on_click={clear_filters}"
+          className="h - 7 text - xs text - zion - purple hover:text - zion - purple - light hover:bg - transparent";"
+
+  return (<> /* Filter header */ "
+}<div className="flex items-center justify-between mb-6" > <h3 className="text-lg font-semibold text-white flex items-center" > <Filter className="h-4 w-4 mr-2 text-zion-purple" /> Filters </h3> <Button > Clear All  </div> {"
+}<SearchFilter searchTerm= {
+}setSearchTerm= {
+}/> {
+
+}<SortFilter sortOption= {
+}setSortOption= {
+
+}<SkillsFilter selectedSkills= {
+}toggleSkill= {
+}expanded= {
+  expandedSections.skills;
+}toggleSection= {)"
+  () => toggleSection ('skills')
+
+}<AvailabilityFilter selectedAvailability= {
+}toggleAvailability= {
+  expandedSections.availability;
+}toggleSection= {
+  () => toggleSection ('availability')
+
+}<RegionFilter selectedRegions= {
+}toggleRegion= {
+  expandedSections.region;
+  () => toggleSection ('region')
+
+}<ExperienceFilter experienceRange= {
+}setExperienceRange= {
+  expandedSections.experience;
+  () => toggleSection ('experience')
+
+}<PriceFilter priceRange= {
+}setPriceRange= {
+  expandedSections.price;
+  () => toggleSection ('price')
+
+  isMobileFilterOpen && (<Button onClick= {)
+  () => window.dispatchEvent (new CustomEvent ('closeMobileFilter') )
+
+}className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4" > Apply Filters )"
+}</>) 
+}
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

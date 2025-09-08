@@ -8,6 +8,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 const fs = require("fs)
 const path = require(path")
@@ -18,10 +20,13 @@ const os = require(os")
 =======
 <<<<<<< HEAD
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const os = require("os")
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -31,12 +36,13 @@ const { execSync, spawn } = require("child_process");
 >>>>>>> main
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 class AutomationOrchestrator {
   constructor() {
     this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, "automation-reports);
-    this.logsDir = path.join(this.projectRoot, logs");
+    this.reportsDir = path.join(this.projectRoot, "automation-reports");
+    this.logsDir = path.join(this.projectRoot, "logs");
     this.results = {
       success: [],
       errors: [],
@@ -49,11 +55,15 @@ class AutomationOrchestrator {
         systemInfo: {}
       }
 <<<<<<< HEAD
+    };
+=======
+<<<<<<< HEAD
     }
 =======
     };
     this.startTime = Date.now();
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
     // Ensure directories exist
     [this.reportsDir, this.logsDir].forEach(dir => {
@@ -70,11 +80,14 @@ class AutomationOrchestrator {
       cpus: os.cpus().length,
       totalMemory: os.totalmem(),
       freeMemory: os.freemem()
-    }
+    };
   }
 
-  log(message, type = "info) {
+  log(message, type = "info") {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+    const prefix = type === "error" ? "❌" : type === "success" ? "✅" : "ℹ️";
+=======
 <<<<<<< HEAD
     const prefix = type === error" ? "❌ : type === success" ? "✅ : ℹ️";
 
@@ -85,12 +98,13 @@ class AutomationOrchestrator {
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const logMessage = `[${timestamp}] ${prefix} ${message}`;
     console.log(logMessage);
     
     // Write to log file
-    const logFile = path.join(this.logsDir, "automation-orchestrator.log);
-    fs.appendFileSync(logFile, logMessage + \n");
+    const logFile = path.join(this.logsDir, "automation-orchestrator.log");
+    fs.appendFileSync(logFile, logMessage + "\n");
   }
 
   async runScriptsInParallel(scripts, category, maxConcurrency = 3) {
@@ -111,7 +125,6 @@ class AutomationOrchestrator {
       if (results.length >= maxConcurrency) {
         await Promise.allSettled(results.splice(0, maxConcurrency));
       }
-    }
     
     // Wait for remaining scripts
     if (results.length > 0) {
@@ -119,6 +132,29 @@ class AutomationOrchestrator {
     }
     
     this.log(`Completed ${category} scripts execution`);
+<<<<<<< HEAD
+  }
+
+  async run() {
+    try {
+      this.log("🚀 Starting Comprehensive Automation Orchestration...");
+      this.log("🏢 Zion Tech Group - Advanced Automation System");
+      
+      await this.init();
+      await this.preAutomationChecks();
+      await this.runErrorFixing();
+      await this.runBuildOptimization();
+      await this.runPerformanceMonitoring();
+      await this.runQualityChecks();
+      await this.generateReport();
+      
+      this.log("🎉 Comprehensive automation completed successfully!", "success");
+      this.log(`⏱️ Total orchestration time: ${Date.now() - this.startTime}ms`);
+      
+    } catch (error) {
+      this.log(`Orchestration failed: ${error.message}`, "error");
+      process.exit(1);
+=======
 <<<<<<< HEAD
   }
 
@@ -196,10 +232,13 @@ class AutomationOrchestrator {
       this.log(`${name} had issues: ${error.message}`, "warning");
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
-  }
 
   async preAutomationChecks() {
+<<<<<<< HEAD
+    this.log("🔍 Running pre-automation checks...");
+=======
 <<<<<<< HEAD
     this.log("🔍 Running pre-automation checks...");
 =======
@@ -209,12 +248,18 @@ class AutomationOrchestrator {
     this.log("Running pre-automation checks...");
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
     // Check if we're in a Node.js project
-    if (!fs.existsSync("package.json)) {
-      throw new Error(Not in a Node.js project directory");
+    if (!fs.existsSync("package.json")) {
+      throw new Error("Not in a Node.js project directory");
     }
     
+<<<<<<< HEAD
+    if (!fs.existsSync("scripts")) {
+      this.log("Creating scripts directory...");
+      fs.mkdirSync("scripts", { recursive: true });
+=======
 <<<<<<< HEAD
     if (!fs.existsSync("scripts")) {
       this.log("Creating scripts directory...")
@@ -240,19 +285,25 @@ class AutomationOrchestrator {
       this.log("Creating scripts directory...");
       fs.mkdirSync("scripts", { recursive: true });
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
     
     // Check Node.js version
     const nodeVersion = process.version;
     this.log(`Node.js version: ${nodeVersion}`);
     
-    this.results.success.push(Pre-automation checks passed");
+    this.results.success.push("Pre-automation checks passed");
   }
 
   async runErrorFixing() {
-    this.log("🔧 Running error fixing automation...);
+    this.log("🔧 Running error fixing automation...");
     
     const errorFixingScripts = [
+<<<<<<< HEAD
+      "comprehensive-error-fixer.cjs",
+      "auto-fixer.js"
+    ];
+=======
 <<<<<<< HEAD
       comprehensive-error-fixer.cjs"];
 =======
@@ -263,13 +314,21 @@ class AutomationOrchestrator {
 >>>>>>> merged-prs-20250907-203621
     ];
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
     for (const script of errorFixingScripts) {
-      await this.runScript(script, "error-fixing);
+      await this.runScript(script, "error-fixing");
     }
-  }
 
   async runBuildOptimization() {
+<<<<<<< HEAD
+    this.log("⚡ Running build optimization...");
+    
+    const buildScripts = [
+      "advanced-build-optimizer.js",
+      "optimize-build.js"
+    ];
+=======
 <<<<<<< HEAD
     this.log("⚡ Running build optimization...")
     const buildScripts = [
@@ -288,13 +347,21 @@ class AutomationOrchestrator {
 >>>>>>> merged-prs-20250907-203621
     ];
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
     for (const script of buildScripts) {
-      await this.runScript(script, build-optimization");
+      await this.runScript(script, "build-optimization");
     }
-  }
 
   async runPerformanceMonitoring() {
+<<<<<<< HEAD
+    this.log("📊 Running performance monitoring...");
+    
+    const performanceScripts = [
+      "performance-monitor-enhanced.js",
+      "performance-optimizer.js"
+    ];
+=======
 <<<<<<< HEAD
     this.log("📊 Running performance monitoring...")
     const performanceScripts = [
@@ -313,16 +380,19 @@ class AutomationOrchestrator {
 >>>>>>> merged-prs-20250907-203621
     ];
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
     for (const script of performanceScripts) {
-      await this.runScript(script, "performance-monitoring);
+      await this.runScript(script, "performance-monitoring");
     }
-  }
 
   async runQualityChecks() {
-    this.log(🔍 Running quality checks...");
+    this.log("🔍 Running quality checks...");
     
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const qualityChecks = [
       { cmd: "npm run lint", name: "ESLint" },
       { cmd: "npm run type-check", name: "TypeScript" },
@@ -338,8 +408,11 @@ class AutomationOrchestrator {
         this.results.warnings.push(`${check.name} had issues`);
         this.log(`${check.name} had issues`, "error");
       }
+<<<<<<< HEAD
+=======
     }
   }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   async runScript(scriptName, category) {
     const scriptPath = path.join("scripts", scriptName);
@@ -357,11 +430,16 @@ class AutomationOrchestrator {
       this.results.errors.push(`${scriptName} failed`);
       this.log(`${scriptName} failed: ${error.message}`, "error");
     }
+<<<<<<< HEAD
+=======
   }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   async generateReport() {
     this.log("📊 Generating comprehensive automation report...");
     
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 
@@ -411,6 +489,7 @@ class AutomationOrchestrator {
     const duration = Date.now() - this.startTime;
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const report = {
       timestamp: new Date().toISOString(),
       duration: `${duration}ms`,
@@ -422,10 +501,15 @@ class AutomationOrchestrator {
       results: this.results,
       recommendations: this.generateRecommendations(),
       nextSteps: this.generateNextSteps()
-    }
+    };
     
-    const reportPath = path.join(process.cwd(), "comprehensive-automation-report.json);
+    const reportPath = path.join(process.cwd(), "comprehensive-automation-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
+    this.log(`📄 Comprehensive report saved to ${reportPath}`, "success");
+    
+    // Generate markdown summary
+=======
 <<<<<<< HEAD
     this.log(`📄 Comprehensive report saved to ${reportPath}`, "success");
     
@@ -443,6 +527,7 @@ class AutomationOrchestrator {
   generateMarkdownReport(report) {
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const markdown = `# Comprehensive Automation Report
 
 ## Summary
@@ -454,12 +539,15 @@ class AutomationOrchestrator {
 
 <<<<<<< HEAD
 ## Successful Operations
-${report.results.success.map(item => `- ${item}`).join(\n")}
+${report.results.success.map(item => `- ${item}`).join("\n")}
 
 ## Errors
-${report.results.errors.map(item => `- ${item}`).join("\n)}
+${report.results.errors.map(item => `- ${item}`).join("\n")}
 
 ## Warnings
+<<<<<<< HEAD
+${report.results.warnings.map(item => `- ${item}`).join("\n")}
+=======
 ${report.results.warnings.map(item => `- ${item}`).join(\n")}
 =======
 ## Results
@@ -473,11 +561,17 @@ ${report.results.errors.map(item => `- ${item}`).join("\n")}
 ### Warnings
 ${report.results.warnings.map(item => `- ${item}`).join("\n")}
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 ## Recommendations
-${report.recommendations.map(item => `- ${item}`).join("\n)}
+${report.recommendations.map(item => `- ${item}`).join("\n")}
 
 ## Next Steps
+<<<<<<< HEAD
+${report.nextSteps.map(item => `- ${item}`).join("\n")}
+
+*Generated on ${report.timestamp}*
+=======
 <<<<<<< HEAD
 ${report.nextSteps.map(item => `- ${item}`).join("\n")}
 
@@ -490,10 +584,14 @@ ${report.nextSteps.map(item => `- ${item}`).join(\n")}
 ${report.nextSteps.map(item => `- ${item}`).join("\n")}
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 `;
     
-    const markdownPath = path.join(process.cwd(), "AUTOMATION_REPORT.md);
+    const markdownPath = path.join(process.cwd(), "AUTOMATION_REPORT.md");
     fs.writeFileSync(markdownPath, markdown);
+<<<<<<< HEAD
+    this.log(`📄 Markdown summary saved to ${markdownPath}`, "success");
+=======
 <<<<<<< HEAD
     this.log(`📄 Markdown summary saved to ${markdownPath}`, "success");
 =======
@@ -503,38 +601,44 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n")}
     this.log(`📝 Markdown summary saved to ${markdownPath}`, "success");
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
 
   generateRecommendations() {
     const recommendations = [];
     
     if (this.results.errors.length > 0) {
-      recommendations.push(Address all errors before deployment");
+      recommendations.push("Address all errors before deployment");
     }
     
     if (this.results.warnings.length > 0) {
-      recommendations.push("Review and address warnings for better code quality);
+      recommendations.push("Review and address warnings for better code quality");
     }
     
-    recommendations.push(Implement continuous integration for automated testing");
-    recommendations.push("Set up automated deployment pipeline);
-    recommendations.push(Monitor performance metrics in production");
-    recommendations.push("Regular security audits and dependency updates);
+    recommendations.push("Implement continuous integration for automated testing");
+    recommendations.push("Set up automated deployment pipeline");
+    recommendations.push("Monitor performance metrics in production");
+    recommendations.push("Regular security audits and dependency updates");
     
     return recommendations;
   }
 
   generateNextSteps() {
     return [
-      Review the comprehensive automation report",
-      "Address any critical errors identified,
-      Implement recommended optimizations",
-      "Set up monitoring for production environment,
-      Schedule regular automation runs",
-      "Document any custom automation workflows
+      "Review the comprehensive automation report",
+      "Address any critical errors identified",
+      "Implement recommended optimizations",
+      "Set up monitoring for production environment",
+      "Schedule regular automation runs",
+      "Document any custom automation workflows"
     ];
   }
 
+<<<<<<< HEAD
+      this.log(")
+
+      this.log(")
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -543,6 +647,7 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n")}
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   generateMarkdownReport(report) {
     return `# Automation Report
 
@@ -555,13 +660,13 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n")}
 - ⚠️ Warnings: ${report.summary.warnings}
 
 ## Successful Operations
-${report.results.success.map(item => `- ${item.script || item.command || item.check || Operation}`).join('\n')}
+${report.results.success.map(item => `- ${item.script || item.command || item.check || 'Operation'}`).join('\n')}
 
 ## Errors
-${report.results.errors.map(item => `- ${item.script || item.command || item.check || Operation}: ${item.error}`).join('\n')}
+${report.results.errors.map(item => `- ${item.script || item.command || item.check || 'Operation'}: ${item.error}`).join('\n')}
 
 ## Warnings
-${report.results.warnings.map(item => `- ${item}`).join(\n)}
+${report.results.warnings.map(item => `- ${item}`).join('\n')}
 
 ## Recommendations
 ${report.recommendations.map(item => `- ${item}`).join('\n')}
@@ -573,8 +678,8 @@ ${report.nextSteps.map(item => `- ${item}`).join('\n')}
 
   async run() {
     this.results.metrics.startTime = Date.now();
-    this.log(🚀 Starting Comprehensive Automation Orchestration...");
-    this.log("🏢 Zion Tech Group - Advanced Automation System);
+    this.log("🚀 Starting Comprehensive Automation Orchestration...");
+    this.log("🏢 Zion Tech Group - Advanced Automation System");
     
     try {
       // Track memory usage
@@ -601,9 +706,11 @@ ${report.nextSteps.map(item => `- ${item}`).join('\n')}
       
       const report = this.generateReport();
       
-      this.log(🎉 Comprehensive automation completed successfully!", "success);
+      this.log("🎉 Comprehensive automation completed successfully!", "success");
       this.log(`⏱️ Total orchestration time: ${(report.duration / 1000).toFixed(2)}s`);
       this.log(`💾 Memory usage: ${(this.results.metrics.memoryUsage.end.heapUsed / 1024 / 1024).toFixed(2)}MB`);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -631,13 +738,30 @@ ${report.nextSteps.map(item => `- ${item}`).join('\n')}
 >>>>>>> main
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       
     } catch (error) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       this.log(`❌ Orchestration failed: ${error.message}`, "error");
       this.results.metrics.endTime = Date.now();
       this.results.metrics.duration = this.results.metrics.endTime - this.results.metrics.startTime;
       throw error;
+<<<<<<< HEAD
+    }
+
+// Run the orchestrator
+const orchestrator = new ComprehensiveAutomationOrchestrator();
+orchestrator.startTime = Date.now();
+orchestrator.run().catch(console.error);
+
+      this.log(")
+
+
+
+=======
 =======
 <<<<<<< HEAD
       this.log(`❌ Orchestration failed: ${error.message}`, error");
@@ -867,3 +991,4 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n"`)
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/main
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

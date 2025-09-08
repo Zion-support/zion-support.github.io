@@ -32,7 +32,10 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
 
                   <span>Pick a date</span>;
 
+<<<<<<< HEAD
                 )}
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               initialFocus;
             />;

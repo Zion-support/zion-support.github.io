@@ -1,4 +1,4 @@
-const SecurityDashboard = dynamic(() => import("./SecurityDashboard"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default SecurityDashboard' ,'
+const SecurityDashboard = dynamic(() => import('./SecurityDashboard'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default SecurityDashboard' ,'
 </p>'
 </p>'
 </p>'
@@ -23,8 +23,8 @@ const SecurityDashboard = dynamic(() => import("./SecurityDashboard"),{'; "loadi
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const SecurityDashboard = dynamic(() => import(\"./SecurityDashboard\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default SecurityDashboard\' ,const SecurityDashboard = dynamic(() => import(\"./SecurityDashboard\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default SecurityDashboard\" ,\"\"\";
-const SecurityDashboard = dynamic(() => import(\"./SecurityDashboard\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default SecurityDashboard' ,';
+const SecurityDashboard = dynamic(() => import(\'./SecurityDashboard\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default SecurityDashboard\' ,const SecurityDashboard = dynamic(() => import(\'./SecurityDashboard\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default SecurityDashboard\' ,\'\'\';
+const SecurityDashboard = dynamic(() => import(\'./SecurityDashboard\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default SecurityDashboard' ,';
 </p>';
 </p>';
 </p>';
@@ -60,7 +60,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
 </p>';
 </p>'</p>';
-const SecurityDashboard = dynamic(() => import(\"./SecurityDashboard\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default SecurityDashboard' ,'
+const SecurityDashboard = dynamic(() => import(\'./SecurityDashboard\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default SecurityDashboard' ,'
 </p>'
 </p>'
 </p>'

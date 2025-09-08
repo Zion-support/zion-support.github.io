@@ -1,10 +1,20 @@
 
+<<<<<<< HEAD
 
 
   level: number, // 1 - 5;
 
 export interface ProfileSkill {
 
+=======
+name: string,
+  level: number, // 1 - 5;
+
+export interface ProfileSkill {
+  name: string,
+  level: number, // 1-5
+  endorsements?: number
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   name: string;
   level: number; // 1-5
 
@@ -37,28 +47,22 @@ export interface ProfileSkill {
   tags?: string[];
   url?: string;
   date: string;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
-  name: string
-
-  level: number, // 1-5
-  endorsements?: number
-}
-export interface ProfileProject {
-  id: string,
-  title: string,
-  description: string,
-  imageUrl?: string,
-  tags?: string[],
   url?: string,
+<<<<<<< HEAD
 
   date: string;
 
+=======
+  date: string;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
-  url?: string
 
-  date: string
 }
 
 export interface ProfileSkill {
@@ -83,6 +87,7 @@ export interface ProfileProject {;
 }
 export interface ProfileExperience {
 
+<<<<<<< HEAD
 
   id: string;
   role: string;
@@ -128,3 +133,6 @@ export interface ProfileExperience {
 
 
 
+=======
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

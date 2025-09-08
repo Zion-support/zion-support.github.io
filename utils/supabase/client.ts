@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 })
 
 })
@@ -68,4 +69,10 @@ export const supabase = { auth: { sign_in: () => Promise.resolve ({ data: null, 
 }
 ;
 
+=======
+import { createClient } from "@supabase/supabase-js";
+const supabaseUrl = $2;
+const supabaseAnonKey = $2;
+export const supabase = createClient($2);
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 

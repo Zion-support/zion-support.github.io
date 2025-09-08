@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,6 +15,7 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
@@ -28,7 +31,7 @@
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 const fs = require('fs');
-const path = require(path');
+const path = require('path');
 const { execSync } = require('child_process');
 =======
 
@@ -48,6 +51,10 @@ class ProjectHealthMonitor {}
         if () {}
 <<<<<<< HEAD
             fs.mkdirSync(logsDir, { "recursive": true })};"
+    };
+=======
+<<<<<<< HEAD
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     }
   log($2) {}
         const timestamp = new Date().toISOString() {}
@@ -59,6 +66,7 @@ class ProjectHealthMonitor {}
 =======
             fs.mkdirSync(logsDir, { "recursive: true })}
     }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     log(message) {}
         const timestamp = new Date().toISOString() {}
     ) {}"
@@ -67,31 +75,27 @@ class ProjectHealthMonitor {}
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
 <<<<<<< HEAD
-
-        console.log(message)}
-    checkProjectStructure() {}
-
+        console.log(message)};
 =======
-        this.log(Checking project structure...');
+<<<<<<< HEAD
+
         console.log(message)}
-
-        const optionalFiles = ['README.md]
-            .gitignore',
-            '.env.example,
-            Dockerfile',
-            'docker-compose.yml
-        ];
-
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
-        const structure = {}
-            "required: {},
-            optional": {},
-            "score: 0;
-       }
-
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     checkProjectStructure() {}
-
+        this.log('Checking project structure...');
+        console.log(message)};
+        
+        const structure = {}
+            "required": {},
+            "optional": {},
             "score": 0;
+<<<<<<< HEAD
+       };
+        
+    checkProjectStructure() {}"
+
+            "score": 0;"
+=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -155,10 +159,14 @@ class ProjectHealthMonitor {}
             "score": 0;"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         // Check required files;
         for (const file of requiredFiles) {}
             const exists = fs.existsSync(path.join(this.projectRoot, file;););
             structure.required[file] = exists;
+<<<<<<< HEAD
+            if (structure.score += 10};)
+=======
 <<<<<<< HEAD
             if (structure.score += 10};)
         // Check optional files
@@ -172,14 +180,23 @@ class ProjectHealthMonitor {}
             if (structure.score += 5};)"`
 =======
             if (structure.score += 10})
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         // Check optional files;
         for (const file of optionalFiles) {}
             const exists = fs.existsSync(path.join(this.projectRoot, file) {}
-    structure.score += 10}
+    structure.score += 10};
         // Check optional files;
             const exists = fs.existsSync(path.join(this.projectRoot, file})
 }););
             structure.optional[file] = exists;
+<<<<<<< HEAD
+            if (structure.score += 5};)"`;
+        this.log(`Project structure "score": ${structure.score}/100`)) {`}"
+    structure.score += 5};"`;
+        this.log(`Project structure "score": ${structure.score}/100`)};"
+        return structure};
+        
+=======
 <<<<<<< HEAD
             if (structure.score += 5})`;
         this.log(`Project structure "score": ${structure.score}/100`)) {`}
@@ -215,20 +232,30 @@ class ProjectHealthMonitor {}
 =======
         
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         try {}
             // Run linting;
-            execSync(npm run lint', {})
-                cwd": this.projectRoot, 
-                "stdio: 'pipe
+            execSync('npm run lint', { })
+                "cwd": this.projectRoot, 
+                "stdio": 'pipe'
             }
 });
 <<<<<<< HEAD
+            
+    checkCodeQuality() {}"
+=======
+<<<<<<< HEAD
 
     checkCodeQuality() {}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
             }
-            return {}
+            return {;}
 
+<<<<<<< HEAD
+                "error": error.message;"
+            }};
+=======
 =======
             
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -257,6 +284,7 @@ class ProjectHealthMonitor {}
 });
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         
         try {}
             execSync('npm run type-check', { })
@@ -266,6 +294,12 @@ class ProjectHealthMonitor {}
 });
             
 <<<<<<< HEAD
+            return {;}
+                "status": 'success',
+                "typeCheck": 'passed',
+                "score": 20;
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> merged-prs-20250907-203621
@@ -273,35 +307,24 @@ class ProjectHealthMonitor {}
                 "status": 'success',
                 "typeCheck": 'passed',
                 "score": 20
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             }} catch (error) {}
             return {;}
                 "status": 'warning',
                 "typeCheck": 'failed',
                 "score": 0,
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 "error": error.message;
-            }}
-
-        try {}
-            execSync(npm run type-check', {})
-                cwd": this.projectRoot, 
-                "stdio: 'pipe
-            }
-});
-
-            return {}
-                status": success',
-                "typeCheck: 'passed,
-                score": 20;
-            }} catch (error) {}
-            return {}
-                "status: warning',
-                typeCheck": 'failed,
-                "score: 0,
-                error": error.message;
-            }}
-    }
+            }};
+    };
     checkBuildHealth() {}
+<<<<<<< HEAD
+        this.log('Checking build health...');
+        
+=======
 <<<<<<< HEAD
         this.log(Checking build health...');
 
@@ -328,12 +351,16 @@ class ProjectHealthMonitor {}
 =======
         
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         try {}
-            execSync('npm run build, {})
-                "cwd: this.projectRoot, 
-                stdio": pipe'
+            execSync('npm run build', { })
+                "cwd": this.projectRoot, 
+                "stdio": 'pipe'
             }
 });
+<<<<<<< HEAD
+            
+=======
 <<<<<<< HEAD
 
             return {}
@@ -343,21 +370,42 @@ class ProjectHealthMonitor {}
 =======
             
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             return {;}
                 "status": 'success',
                 "build": 'passed',
                 "score": 20;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             }} catch (error) {}
-            return {}
-                status": 'failed,
-                "build: failed',
-                score": 0,
-                "error: error.message;
-            }}
-    }
+            return {;}
+                "status": 'failed',
+                "build": 'failed',
+                "score": 0,
+                "error": error.message;
+            }};
+    };
     checkDependencies() {}
+<<<<<<< HEAD
+        this.log('Checking dependencies health...');
+        
+        try {}
+            const packageJsonPath = path.join(this.projectRoot, 'package.json';);
+            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
+            
+const totalDeps = Object.keys(packageJson.dependencies || {}).length +;
+                             Object.keys(packageJson.devDependencies || {}).lengt;h;
+            
+            // Check for outdated packages;
+            let outdatedCount = ;0;
+            try {}
+                execSync('npm outdated --json', { })
+                    "cwd": this.projectRoot, 
+                    "stdio": 'pipe'
+=======
 <<<<<<< HEAD
 
 =======
@@ -410,11 +458,13 @@ class ProjectHealthMonitor {}
                     "stdio": 'pipe'
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     checkTypeScript() {}"
 
             const totalDeps = Object.keys(packageJson.dependencies || {}).length + 
                              Object.keys(packageJson.devDependencies || {}).lengt;h;
             // Check for outdated packages;
+            let outdatedCount = ;0;
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 })} catch (error) {}
@@ -429,6 +479,9 @@ class ProjectHealthMonitor {}
             
 =======
 <<<<<<< HEAD
+            
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -438,6 +491,7 @@ class ProjectHealthMonitor {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             return {;}
                 "status": 'success',
                 "totalDependencies": totalDeps,
@@ -453,6 +507,9 @@ class ProjectHealthMonitor {}
     checkSecurity() {}
         this.log('Checking security health...');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         
         try {}
             const auditResult = execSync('npm audit --json', { })
@@ -480,6 +537,13 @@ class ProjectHealthMonitor {}
                 "encoding": 'utf8',
                 "stdio": 'pipe'
 
+<<<<<<< HEAD
+            };);
+            const auditData = JSON.parse(auditResult;);
+            const vulnerabilities = auditData.vulnerabilities?.total ||;0;
+            const score = Math.max(0, 20 - (vulnerabilities * 5;););
+        
+=======
 <<<<<<< HEAD
 =======
 
@@ -511,6 +575,7 @@ class ProjectHealthMonitor {}
 
 =======
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> merged-prs-20250907-203621
@@ -553,6 +618,16 @@ class ProjectHealthMonitor {}
         const dependencies = this.checkDependencies(;);
         const security = this.checkSecurity(;);
 <<<<<<< HEAD
+        
+const totalScore = structure.score + codeQuality.score + typeScript.score +;
+                          build.score + dependencies.score + security.scor;e;
+        
+const healthStatus = totalScore >= 80 ? 'excellent' :;
+                           totalScore >= 60 ? 'good' : 
+                           totalScore >= 40 ? 'fair' : 'poo;r;';
+        
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -582,9 +657,17 @@ class ProjectHealthMonitor {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         const report = {}
-            timestamp: new Date().toISOString(),
+            "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
+<<<<<<< HEAD
+            "health": {}
+        const totalScore = structure.score + codeQuality.score + typeScript.score + 
+                          build.score + dependencies.score + security.scor;e;
+
+            "health": {}"
+=======
 <<<<<<< HEAD
             health: {}
         const totalScore = structure.score + codeQuality.score + typeScript.score + 
@@ -600,15 +683,30 @@ class ProjectHealthMonitor {}
             "health": {}"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 overall: {}
-                    score: totalScore,
+                    score: totalScore,"
                     "status": healthStatus,
-                    maxScore: 100;"
+                    "maxScore": 100;"
                 },"
-                structure: structure,
+                "structure": structure,
                 "codeQuality": codeQuality,
-                typeScript: typeScript,
+                "typeScript": typeScript,
                 "build": build,
+<<<<<<< HEAD
+                "dependencies": dependencies,
+                "security": security;"
+            "recommendations": this.generateHealthRecommendations(totalScore, healthStatus);"
+
+
+        this.log(`Overall health "score": ${totalScore}/100 (${healthStatus})`);"
+        return report};
+    generateHealthRecommendations(score, status) {}
+        const recommendations = [];
+        if ( {})"
+            recommendations.push('Project health needs immediate attention')};
+
+=======
 <<<<<<< HEAD
                 "dependencies": dependencies,
                 "security": security;"
@@ -671,6 +769,7 @@ class ProjectHealthMonitor {}
 >>>>>>> merged-prs-20250907-203621
             recommendations.push('Project health needs immediate attention')};
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             recommendations.push('Focus on improving code quality and fixing build issues')};
             recommendations.push('Update outdated dependencies');
             recommendations.push('Address security vulnerabilities')};
@@ -678,11 +777,16 @@ class ProjectHealthMonitor {}
         recommendations.push('Set up continuous integration');
         recommendations.push('Regularly monitor project health');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         
         return recommendations};
     async run() {}
         this.log('Project Health Monitor started');
         
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -698,10 +802,15 @@ class ProjectHealthMonitor {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         try {}
             const report = this.generateHealthReport(;);
-            this.log('Project Health Monitor completed successfully);
+            this.log('Project Health Monitor completed successfully');
             return report} catch (error) {}
+<<<<<<< HEAD
+            this.log(`Project Health Monitor "failed": ${error.message}`);
+        return recommendations};
+=======
 <<<<<<< HEAD
             this.log(`Project Health Monitor failed": ${error.message}`);
         return recommendations}
@@ -710,9 +819,17 @@ class ProjectHealthMonitor {}
 =======
         return recommendations};
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     async run() {}
-        this.log(Project Health Monitor started');
+        this.log('Project Health Monitor started');
 
+<<<<<<< HEAD
+            throw error};
+// Run the monitor if this script is executed directly;
+    const monitor = new ProjectHealthMonitor) {}
+    const monitor = new ProjectHealthMonitor}(;);
+    monitor.run().catch(console.error)};
+=======
 <<<<<<< HEAD
             throw error}
 // Run the monitor if this script is executed directly;
@@ -734,6 +851,7 @@ class ProjectHealthMonitor {}
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 =======
 module.exports = ProjectHealthMonitor;
@@ -741,6 +859,12 @@ module.exports = ProjectHealthMonitor;
 module.exports = ProjectHealthMonitor;
 module.exports = ProjectHealthMonitor;
 
+<<<<<<< HEAD
+
+
+
+
+=======
 
 
 =======
@@ -767,3 +891,4 @@ module.exports = ProjectHealthMonitor;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

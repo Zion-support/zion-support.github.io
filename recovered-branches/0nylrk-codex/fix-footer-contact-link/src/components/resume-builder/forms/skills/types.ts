@@ -1,6 +1,18 @@
+<<<<<<< HEAD
 
 export interface SkillsFormProps {
 
+=======
+export interface SkillsFormProps {
+import {Skill} from '@/types/resume';
+export interface SkillsFormProps {;
+
+import { Skill  } from '@/types / resume';
+
+export interface SkillsFormProps {};
+  resume_id: string;
+'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {Skill} from '@/types/resume';
 export interface SkillsFormProps {;
   resumeId: string;
@@ -9,6 +21,7 @@ export interface SkillsFormProps {;
   onBack: () => void;
 
 }
+<<<<<<< HEAD
 
 export interface SkillItemProps {
   skill: Skill;
@@ -76,6 +89,13 @@ export interface SkillsFormProps {;
   onBack: () => void;
 
 
+=======
+export interface SkillItemProps {};
+
+
+  onAddSkill: (skill: Skill) => Promise<boolean>;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 ;
 export interface SkillItemProps {;
@@ -96,6 +116,7 @@ export interface AddSkillFormProps {;
   defaultCategory?: string;
 
 
+<<<<<<< HEAD
 
 
 }
@@ -104,6 +125,8 @@ export interface BulkAddSkillsProps {
 
   onSuccess: () => Promise<void>;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
   onAddSkill: (skill: Skill) => Promise<boolean>;
@@ -122,7 +145,11 @@ export interface BulkAddSkillsProps {};
 }
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -6,77 +6,34 @@
 const fs = // // require('fs');
 const path = // // require(path');
 const { execSync } = // // require('child_process');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 class SyntaxErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
     this.fixInterval = parseInt(process.env.FIX_INTERVAL) || 600000; // 10 minutes default;
-<<<<<<< HEAD
     this.backupFiles = process.env.BACKUP_FILES === true';
     this.maxFixesPerRun = parseInt(process.env.MAX_FIXES_PER_RUN) || 100;
     this.skipLargeFiles = process.env.SKIP_LARGE_FILES === 'true;
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
     this.largeFileThreshold = parseInt(process.env.LARGE_FILE_THRESHOLD) || 10000;
     this.fixesApplied = 0;
     this.fixesFailed = 0;
     this.fixesSkipped = 0;
     this.fixedFiles = new Set();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
-    
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     this.syntaxPatterns = {}
       unterminatedStrings: []
         /(["`])((?:(?!\1)[^\\]|\\.)*?)(?=\n|$)/g,`
         /(['`])((?:(?!\1)[^\\]|\\.)*?)(?=\s*[,)\]}])/g;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.syntaxPatterns = {}
       unterminatedStrings: []
 
->>>>>>> origin/chore/fix-lint-and-merge
       ],
       unterminatedComments: []
         /\/\*([^*]|\*[^/])*$/gm,
@@ -99,7 +56,6 @@ class SyntaxErrorFixer {}
       level,
       message,
       data,
-<<<<<<< HEAD
       service: 'syntax-error-fixer
     }
 
@@ -109,29 +65,14 @@ class SyntaxErrorFixer {}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === info') {`}
       console.log(`[${timestamp}] INFO: ${message}`, data)} else if (level === 'debug) {`}
       console.log(`[${timestamp}] DEBUG: ${message}`, data)}
-=======
-<<<<<<< HEAD
-      service: 'syntax-error-fixer'
-    };
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
       console.log(`[${timestamp}] INFO: ${message}`, data)} else if (level === 'debug') {`}
       console.log(`[${timestamp}] DEBUG: ${message}`, data)};
->>>>>>> origin/chore/fix-lint-and-merge
     // Write to log file;
     this.writeToLog(logEntry)}
   writeToLog(logEntry) {}
@@ -143,9 +84,7 @@ class SyntaxErrorFixer {}
   async start() {}
     this.log(info', 'Starting Syntax Error Fixer Service...);
     
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {}
       // Create necessary directories;
       this.ensureDirectories();
@@ -155,90 +94,38 @@ class SyntaxErrorFixer {}
       this.startContinuousFixing();
       // Listen for signals to trigger fixes;
       this.setupSignalHandlers();
-<<<<<<< HEAD
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-      this.log(info', 'Syntax Error Fixer Service started successfully);
 
-      // Keep the process alive;
-      setInterval(async () => {}
-        await this.performSyntaxFixes()}, this.fixInterval)} catch (error) {}
-      this.log(error', 'Failed to start Syntax Error Fixer Service, error);
-      process.exit(1)}
-  }
-  ensureDirectories() {}
-    const dirs = []
-      logs/pm2',
-      'backups,
-      temp',
-      'fixed-files
-=======
-      this.log('info', 'Syntax Error Fixer Service started successfully');
-<<<<<<< HEAD
-<<<<<<< HEAD
+      
+      
+      
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-      
-      
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-      this.log('info', 'Syntax Error Fixer Service started successfully');
-<<<<<<< HEAD
-=======
-      
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       // Keep the process alive;
       setInterval(async () => {}
         await this.performSyntaxFixes()}, this.fixInterval)} catch (error) {}
       this.log('error', 'Failed to start Syntax Error Fixer Service', error);
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       process.exit(1)};
   ensureDirectories() {}
     const dirs = []
-<<<<<<< HEAD
       'logs/pm2',
       'backups',
       'temp',
       'fixed-files'
->>>>>>> origin/chore/fix-lint-and-merge
     ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
         fs.mkdirSync(fullPath, { recursive: true })}
     })}
   async performSyntaxFixes() {}
-<<<<<<< HEAD
     this.log(info', 'Starting syntax error fixing process...);
     
     try {}
@@ -247,140 +134,61 @@ class SyntaxErrorFixer {}
       this.fixesFailed = 0;
       this.fixesSkipped = 0;
       this.fixedFiles.clear();
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 
-=======
 
       // Reset counters;
       this.fixedFiles.clear();
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       // Find files with syntax issues;
       const filesWithIssues = await this.findFilesWithSyntaxIssues();
       if (filesWithIssues.length === 0) {}
-<<<<<<< HEAD
         this.log(info', 'No files with syntax issues found);
         return}
       this.log(info', `Found ${filesWithIssues.length} files with syntax issues`);
-=======
->>>>>>> origin/chore/fix-lint-and-merge
 
       // Process files in batches to avoid overwhelming the system;
       const batchSize = Math.min(10, Math.ceil(filesWithIssues.length / 4));
       for (let i = 0; i < filesWithIssues.length; i += batchSize) {}
         const batch = filesWithIssues.slice(i, i + batchSize);
         await Promise.all(batch.map(file => this.fixFileSyntax(file)));
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
         // Small delay between batches;
         if (i + batchSize < filesWithIssues.length) {}
           await new Promise(resolve => setTimeout(resolve, 1000))}
       }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-        
-        
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-=======
-        
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         // Small delay between batches;
         if (i + batchSize < filesWithIssues.length) {}
           await new Promise(resolve => setTimeout(resolve, 1000))};
->>>>>>> origin/chore/fix-lint-and-merge
       // Generate report;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+
       this.log('info, `Syntax fixing completed. Applied: ${this.fixesApplied}, Failed: ${this.fixesFailed}, Skipped: ${this.fixesSkipped}`)} catch (error) {`}
       this.log(error', 'Error during syntax fixing process, error)}
   }
   async findFilesWithSyntaxIssues() {}
     const sourceDirs = [src', 'components, pages', 'utils, hooks', 'types];
     const extensions = [.js', '.jsx, .ts', '.tsx];
-=======
->>>>>>> origin/chore/fix-lint-and-merge
     const filesWithIssues = [];
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-      await this.generateFixReport();
-      this.log('info', `Syntax fixing completed. Applied: ${this.fixesApplied}, Failed: ${this.fixesFailed}, Skipped: ${this.fixesSkipped}`)} catch (error) {`}
-      this.log('error', 'Error during syntax fixing process', error)};
-  };
-  async findFilesWithSyntaxIssues() {}
-    const sourceDirs = ['src', 'components', 'pages', 'utils', 'hooks', 'types'];
-    const extensions = ['.js', '.jsx', '.ts', '.tsx'];
-    const filesWithIssues = [];
-<<<<<<< HEAD
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     for (const dir of sourceDirs) {}
       if (fs.existsSync(fullPath)) {}
         const files = this.walkDirectory(fullPath, extensions);
         for (const file of files) {}
           if (await this.hasSyntaxIssues(file)) {}
-<<<<<<< HEAD
             filesWithIssues.push(file)}
         }
       }
     }
     return filesWithIssues}
-=======
-            filesWithIssues.push(file)};
-    return filesWithIssues};
->>>>>>> origin/chore/fix-lint-and-merge
   walkDirectory(dir, extensions) {}
     const files = [];
       const items = fs.readdirSync(dir);
@@ -391,7 +199,6 @@ class SyntaxErrorFixer {}
           files.push(...this.walkDirectory(fullPath, extensions))} else if (stat.isFile()) {}
           const ext = path.extname(item);
           if (extensions.includes(ext)) {}
-<<<<<<< HEAD
             files.push(fullPath)}
         }
       })} catch (error) {}
@@ -401,15 +208,10 @@ class SyntaxErrorFixer {}
     try {}
       const content = fs.readFileSync(filePath, 'utf8');
       
-=======
-            files.push(fullPath)};
-
->>>>>>> origin/chore/fix-lint-and-merge
       // Skip large files if configured;
       if (this.skipLargeFiles && content.length > this.largeFileThreshold) {}
         return false}
       // Check for various syntax issues;
-<<<<<<< HEAD
       return this.detectSyntaxIssues(content)} catch (error) {}
       this.log(warn', `Error reading file: ${filePath}`, error.message);
       return false}
@@ -419,43 +221,20 @@ class SyntaxErrorFixer {}
     const singleQuotes = (content.match(/'/g) || []).length;
     const doubleQuotes = (content.match(//g) || []).length;
     const backticks = (content.match(/`/g) || []).length;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
+
 
     const backticks = (content.match(/`/g) || []).length;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-=======
-    
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || backticks % 2 !== 0) {}
       return true}
     // Check for unterminated comments;
     const openComments = (content.match(/\/\*/g) || []).length;
     const closeComments = (content.match(/\*\//g) || []).length;
     if (openComments !== closeComments) {}
-<<<<<<< HEAD
       return true}
-=======
->>>>>>> origin/chore/fix-lint-and-merge
     // Check for unclosed brackets;
     const openBraces = (content.match(/\{/g) || []).length;}
     const closeBraces = (content.match(/\}/g) || []).length;
@@ -463,14 +242,8 @@ class SyntaxErrorFixer {}
     const closeBrackets = (content.match(/\]/g) || []).length;
     const openParens = (content.match(/\(/g) || []).length;
     const closeParens = (content.match(/\)/g) || []).length;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
-    
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     if (openBraces !== closeBraces || openBrackets !== closeBrackets || openParens !== closeParens) {}
       return true}
     // Check for malformed imports/exports;
@@ -486,75 +259,37 @@ class SyntaxErrorFixer {}
     try {}
       this.log('info', `Fixing syntax issues in: ${filePath}`);
       
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (openBraces !== closeBraces || openBrackets !== closeBrackets || openParens !== closeParens) {}
     // Check for malformed imports/exports;
     const importLines = content.match(/import\s+[^]+/g) || [];
     const exportLines = content.match(/export\s+[^]+/g) || [];
     for (const line of [...importLines, ...exportLines]) {}"
 
->>>>>>> origin/chore/fix-lint-and-merge
       // Create backup if enabled;
       if (this.backupFiles) {}
         await this.createBackup(filePath)}
       // Read file content;
-<<<<<<< HEAD
       const content = fs.readFileSync(filePath, utf8);
       
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
       // Apply fixes;
       const fixedContent = await this.applySyntaxFixes(content, filePath);
       if (fixedContent !== content) {}
         // Write fixed content;
-<<<<<<< HEAD
         fs.writeFileSync(filePath, fixedContent, 'utf8');
         
         this.fixesApplied++;
         this.fixedFiles.add(filePath);
-<<<<<<< HEAD
+
         
-<<<<<<< HEAD
         this.log(info, `Successfully fixed syntax issues in: ${filePath}`);
 
-=======
-        this.log('info', `Successfully fixed syntax issues in: ${filePath}`);
-<<<<<<< HEAD
-<<<<<<< HEAD
+        
+        
+        
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-        
-        
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-        this.log('info', `Successfully fixed syntax issues in: ${filePath}`);
-<<<<<<< HEAD
-=======
-        
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         // Verify the fix;
         if (await this.verifyFix(filePath)) {}
           this.log('info', `Fix verification passed for: ${filePath}`)} else {`}
@@ -577,18 +312,9 @@ class SyntaxErrorFixer {}
       const backupPath = path.join(backupDir, `${fileName}.${timestamp}.backup`);
       
       fs.copyFileSync(filePath, backupPath);
-<<<<<<< HEAD
       this.log(debug, `Backup created: ${backupPath}`)} catch (error) {`}
       this.log('warn', `Failed to create backup for: ${filePath}`, error.message)}
   }
-=======
-      this.log('debug', `Backup created: ${backupPath}`)} catch (error) {`}
-      this.log('warn', `Failed to create backup for: ${filePath}`, error.message)};
-  };
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
   async applySyntaxFixes(content, filePath) {}
     let fixedContent = content;
     const fixes = [];
@@ -605,22 +331,14 @@ class SyntaxErrorFixer {}
     // Fix common JSX issues;
     fixedContent = this.fixJSXIssues(fixedContent, fixes);
     // Fix common TypeScript issues;
-<<<<<<< HEAD
     if (filePath.endsWith(.ts) || filePath.endsWith('.tsx')) {}
       fixedContent = this.fixTypeScriptIssues(fixedContent, fixes)}
     if (fixes.length > 0) {}
       this.log(debug, `Applied ${fixes.length} fixes to: ${filePath}`, fixes)}
     return fixedContent}
-=======
-    if (filePath.endsWith('.ts') || filePath.endsWith('.tsx')) {}
-      fixedContent = this.fixTypeScriptIssues(fixedContent, fixes)};
-
-    return fixedContent};
->>>>>>> origin/chore/fix-lint-and-merge
   fixUnterminatedStrings(content, fixes) {}
     const fixed = content;
     // Fix single quotes;
-<<<<<<< HEAD
     const singleQuoteMatches = fixed.match(/'[^']*$/gm);
     if (singleQuoteMatches) {}
       singleQuoteMatches.forEach(match => {})
@@ -645,21 +363,11 @@ class SyntaxErrorFixer {}
     return fixed}
   fixUnterminatedComments(content, fixes) {}
     
-=======
-
-    // Fix double quotes;
-    const doubleQuoteMatches = fixed.match(/"[^"]*$/gm);"
-    if (doubleQuoteMatches) {}
-      doubleQuoteMatches.forEach(match => {})
-        const original = match;"
-
->>>>>>> origin/chore/fix-lint-and-merge
     // Find lines with unterminated block comments;
     const lines = fixed.split('\n);
     let inComment = false;
     for (let i = 0; i < lines.length; i++) {}
       const line = lines[i];
-<<<<<<< HEAD
       
       if (line.includes(/*') && !line.includes('*/)) {}
         inComment = true}
@@ -681,149 +389,8 @@ class SyntaxErrorFixer {}
       const line = lines[i].trim();
       
       if (line && )
-<<<<<<< HEAD
-          !line.endsWith(;') && 
-          !line.endsWith('{) && }
-          !line.endsWith(}') && 
-          !line.endsWith('[) && ]
-          !line.endsWith(]') && 
-          !line.endsWith('() && 
-          !line.endsWith()') &&
-          !line.startsWith('//) && 
-          !line.startsWith(/*') && 
-          !line.startsWith('*) &&
-          !line.includes(function') && 
-          !line.includes('class) && 
-          !line.includes(const') &&
-          !line.includes('let) && 
-          !line.includes(var') && 
-          !line.includes('import) &&
-          !line.includes(export') && 
-          !line.includes('return) && 
-          !line.includes(if') &&
-          !line.includes('for) && 
-          !line.includes(while') && 
-          !line.includes('switch) &&
-          !line.includes(try') && 
-          !line.includes('catch) && 
-          !line.includes(finally')) {}
-        
-        lines[i] = lines[i] + ';;
-        fixes.push({ type: missing_semicolon', line: i + 1, action: 'added_semicolon })}
-    }
-    return lines.join(\n')}
-=======
-<<<<<<< HEAD
-          !line.endsWith(';') &&
-          !line.endsWith('{') && }
-          !line.endsWith('}') &&
-          !line.endsWith('[') && ]
-          !line.endsWith(']') &&
-          !line.endsWith('(') &&
-          !line.endsWith(')') &&
-          !line.startsWith('//') &&
-          !line.startsWith('/*') &&
-          !line.startsWith('*') &&
-          !line.includes('function') &&
-          !line.includes('class') &&
-          !line.includes('const') &&
-          !line.includes('let') &&
-          !line.includes('var') &&
-          !line.includes('import') &&
-          !line.includes('export') &&
-          !line.includes('return') &&
-          !line.includes('if') &&
-          !line.includes('for') &&
-          !line.includes('while') &&
-          !line.includes('switch') &&
-          !line.includes('try') &&
-          !line.includes('catch') &&
-=======
-          !line.endsWith(';') && 
-          !line.endsWith('{') && }
-          !line.endsWith('}') && 
-          !line.endsWith('[') && ]
-          !line.endsWith(']') && 
-          !line.endsWith('(') && 
-          !line.endsWith(')') &&
-          !line.startsWith('//') && 
-          !line.startsWith('/*') && 
-          !line.startsWith('*') &&
-          !line.includes('function') && 
-          !line.includes('class') && 
-=======
 
-          !line.includes('function') &&
-          !line.includes('class') &&
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-          !line.includes('const') &&
-          !line.includes('let') &&
-          !line.includes('var') &&
-          !line.includes('import') &&
-          !line.includes('export') &&
-          !line.includes('return') &&
-          !line.includes('if') &&
-          !line.includes('for') &&
-          !line.includes('while') &&
-          !line.includes('switch') &&
-<<<<<<< HEAD
-          !line.includes('try') && 
-          !line.includes('catch') && 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-          !line.includes('try') &&
-          !line.includes('catch') &&
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-          !line.includes('finally')) {}
 
->>>>>>> origin/chore/fix-lint-and-merge
-  fixMalformedImports(content, fixes) {}
-    let fixed = content;
-    // Fix imports without semicolons;
-    fixed = fixed.replace(/import\s+([^]+?)(?=\n|$)/g, (match, importContent) => {}
-<<<<<<< HEAD
-      if (!importContent.trim().endsWith(';)) {}
-        fixes.push({ type: malformed_import', action: 'added_semicolon }
-});
-        return `import ${importContent}}
-=======
-
-        return `import ${importContent};};
->>>>>>> origin/chore/fix-lint-and-merge
-      return match}
-    // Fix exports without semicolons;
-    fixed = fixed.replace(/export\s+([^]+?)(?=\n|$)/g, (match, exportContent) => {}
-<<<<<<< HEAD
-      if (!exportContent.trim().endsWith(;')) {}
-        fixes.push({ type: 'malformed_export, action: added_semicolon' }
-});
-        return `export ${exportContent}}
-      return match}
-});
-    
-    return fixed}
-  fixUnclosedBrackets(content, fixes) {}
-    
-=======
-
-        return `export ${exportContent};};
-  fixUnclosedBrackets(content, fixes) {}
->>>>>>> origin/chore/fix-lint-and-merge
-    // Count brackets and add missing ones;
-    const openBraces = (fixed.match(/\{/g) || []).length;}
-    const closeBraces = (fixed.match(/\}/g) || []).length;
-    const openBrackets = (fixed.match(/\[/g) || []).length;
-    const closeBrackets = (fixed.match(/\]/g) || []).length;
-    const openParens = (fixed.match(/\(/g) || []).length;
-    const closeParens = (fixed.match(/\)/g) || []).length;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-    
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     // Add missing closing braces;
     if (openBraces > closeBraces) {}
       const missing = openBraces - closeBraces;
@@ -857,22 +424,8 @@ class SyntaxErrorFixer {}
         fixes.push({ type: 'jsx_fragment, action: fixed_fragment_syntax' }
 });
         return `<React.Fragment>${content}</React.Fragment>`}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Add missing closing braces;
     if (openBraces > closeBraces) {}
       const missing = openBraces - closeBraces;
@@ -883,8 +436,6 @@ class SyntaxErrorFixer {}
       if (tagStart.includes('=') && !tagStart.endsWith('/>')) {}
 
         return `<React.Fragment>${content}</React.Fragment>`};
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
       return match}
 });
     
@@ -921,66 +472,13 @@ class SyntaxErrorFixer {}
       if (filePath.endsWith(.ts') || filePath.endsWith('.tsx)) {}
         try {}
           execSync(`npx tsc --noEmit "${filePath}"`, { `})
-<<<<<<< HEAD
-            cwd: this.projectRoot,
-            stdio: 'pipe'
-=======
-            cwd: this.projectRoot, 
-<<<<<<< HEAD
-            stdio: pipe' 
-=======
-            stdio: 'pipe' 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
->>>>>>> origin/chore/fix-lint-and-merge
-          })} catch (error) {}
-          return false}
-      }
-      return true} catch (error) {}
-      return false}
-  }
-  async generateFixReport() {}
-    const report = {}
-      timestamp: new Date().toISOString(),
-      summary: {}
-        totalFixes: this.fixesApplied + this.fixesFailed + this.fixesSkipped,
-        fixesApplied: this.fixesApplied,
-        fixesFailed: this.fixesFailed,
-        fixesSkipped: this.fixesSkipped,
-        successRate: this.fixesApplied / (this.fixesApplied + this.fixesFailed) * 100;
-      },
-      fixedFiles: Array.from(this.fixedFiles),
-      recommendations: this.generateRecommendations();
-    }
 
-    // Write report to file;
-    const reportPath = path.join(this.projectRoot, 'error-reports, `syntax-fix-report-${Date.now()}.json`);
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-<<<<<<< HEAD
-
-    return report}
-=======
-
-    this.log('info', `Syntax fix report generated: ${reportPath}`);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
     
     
     
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-=======
-    
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     return report};
->>>>>>> origin/chore/fix-lint-and-merge
   generateRecommendations() {}
     const recommendations = [];
 
@@ -1046,28 +544,9 @@ process.on(unhandledRejection', (reason, promise) => {}
 fixer.start().catch(error => {})
   fixer.log('error, Failed to start service', error);
   process.exit(1)}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-});
-});
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
+
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-});
-=======
-});
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

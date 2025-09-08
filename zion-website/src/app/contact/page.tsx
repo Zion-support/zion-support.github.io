@@ -1,6 +1,7 @@
 const contactMethods = [
 
 
+<<<<<<< HEAD
 import React from 'react';'
 
 export default function ContactPage() {{"name": 'Email';'
@@ -108,6 +109,8 @@ export default function ContactPage() {return (<div className="min-h-screen bg-w
       </div>;
       {/* Contact form */}
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <div className="mx-auto mt-32 max-w-7xl px-6 "sm":mt-40 "lg":px-8">;"
         <div className="mx-auto max-w-2xl "lg":text-center">;"
           <h2 className="text-base font-semibold leading-7 text-blue-400">Send us a message</h2>;"
@@ -154,7 +157,10 @@ export default function ContactPage() {return (<div className="min-h-screen bg-w
               <button;
                 type="submit";"
                 className="w-full bg-blue-600 text-white py-2 px-4 rounded-md "hover":bg-blue-700 transition-colors">"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       {/* Office locations */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
@@ -196,6 +202,7 @@ export default function ContactPage() {return (<div className="min-h-screen bg-w
       </div>;
       {/* FAQ */}
 
+<<<<<<< HEAD
       <div className="mx-auto mt-32 max-w-7xl px-6 "sm":mt-40 "lg":px-8">;"
         <div className="mx-auto max-w-2xl "lg":text-center">;"
           <h2 className="text-base font-semibold leading-7 text-blue-400">Frequently Asked</h2>;"
@@ -230,6 +237,8 @@ export default function ContactPage() {return (<div className="min-h-screen bg-w
       </div>;
       {/* CTA section */}
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             Ready to get started?;
           </h2>;
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">;"
@@ -251,4 +260,7 @@ export default function ContactPage() {return (<div className="min-h-screen bg-w
   )}
 
 export default Page;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

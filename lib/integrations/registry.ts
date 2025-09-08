@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 export class IntegrationRegistry {
@@ -59,10 +60,17 @@ export function getProviderById (
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12243
+
+export function getProviderById("id": string): IntegrationProviderMeta | undefined {
+  }
+  return PROVIDERS.find(provider => { return provider.id === id); }
+}
 
 // Register default connectors
 integrationRegistry.registerConnector('slack', new SlackConnector({
@@ -95,6 +103,13 @@ export function getProviderById(
   id: string,
 
 
+<<<<<<< HEAD
 
 
 
+=======
+export function getActiveProviders(): IntegrationProviderMeta[] {
+  }
+  return PROVIDERS.filter(provider => { return provider.isActive); }
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

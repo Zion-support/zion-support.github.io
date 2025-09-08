@@ -1,12 +1,28 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+    this.reportFile = path.join(__dirname, '../logs/dependency-optimization-report.json')
+    console.log('� Optimizing dependencies...')
+const outdated = execSync('npm outdated --json', { encoding: 'utf8'});
+const unused = execSync('npx depcheck --json', { encoding: 'utf8'});
+      console.log(' Dependency optimization completed!')
+      console.error(' Dependency optimization failed:')
 
+      recommendations.push('Update outdated packages for security and performance')
 
-      recommendations.push(Update outdated packages for security and performance')
+      recommendations.push('Remove unused dependencies to reduce bundle size')
 
+<<<<<<< HEAD
+      recommendations.push('Remove unused dependencies to reduce bundle size')
+=======
 =======
 
       recommendations.push('Remove unused dependencies to reduce bundle size)
@@ -66,7 +82,9 @@ const { execSync } = require('child_process')
       recommendations.push('Remove unused dependencies to reduce bundle size)
 
       recommendations.push(Remove unused dependencies to reduce bundle size')
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
+      recommendations.push('Remove unused dependencies to reduce bundle size')
 
 =======
 <<<<<<< HEAD

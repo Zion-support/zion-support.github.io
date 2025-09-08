@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { ScrollArea } from "@/components/ui/scroll-area",;
@@ -8,7 +11,10 @@ import { toast } from "@/components/ui/use-toast",;
 import { cn } from "@/lib/utils",;
 import { ChatMessage } from "./ChatMessage",;
 import { QuickReplyButton } from "./QuickReplyButton",;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { useTheme } from "@/hooks/useTheme",;
 
@@ -22,14 +28,21 @@ type Message = {;
   id: string;,;
   content: string;,;"
   sender: "user" | "bot";,;"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   timestamp:Date;
 },;
 export function ChatBotPanel() {;
   const [messages, setMessages] = useState<Message[]>([;
+<<<<<<< HEAD
 
 )
 
+=======
+)
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const scrollAreaRef = useRef<HTMLDivElement>(null),;
 
   const inputRef = useRef<HTMLInputElement>(null),;
@@ -53,12 +66,18 @@ export function ChatBotPanel() {;
     if (!text.trim()) return,;
     ;
     const userMessage:Message = {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       id: `user-${Date.now();}`,;
       content: text;,;
       sender: "user";,;
       timestamp: new Date();},;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     ;
     setMessages((prev) => [...prev, userMessage]),;
     setInputValue(""),;
@@ -69,12 +88,18 @@ export function ChatBotPanel() {;
       const response = await sendToAIAssistant(text),;
       ;
       const botMessage:Message = {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         id: `bot-${Date.now();}`,;
         content: response.message || "Sorry;, I couldn't process your request. Please try again.",;
         sender: "bot";,;
         timestamp: new Date();},;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       ;
       setMessages((prev) => [...prev, botMessage]),;
       ;
@@ -92,15 +117,21 @@ export function ChatBotPanel() {;
       }
     } catch (error) {;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       toast({;
         variant:"destructive",;
         title:"Communication Error",;
         description:"We're having trouble connecting to our support service."}),;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       ;
       setFailedAttempts((prev) => prev + 1),;
       if (failedAttempts >= 2) {;
@@ -113,21 +144,31 @@ export function ChatBotPanel() {;
 ;
   const sendToAIAssistant = async (message:string) => {;
     try {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       const response = await fetch("https: //ziontechgroup.functions.supabase.co/functions/v1/ai-chat";, {;
         method: "POST";,;
         headers:{;
           "Content-Type":"application/json"},;
         body:JSON.stringify({ ;
           messages: [{ role:"user";, content: message ;}] ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         })}),;
       ;
       if (!response.ok) {;
         return {;
+<<<<<<< HEAD
 
           success: false;,;
 
+=======
+          success: false;,;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           message:"I'm having trouble connecting to my knowledge base right now.";
         },;
 
@@ -135,7 +176,10 @@ export function ChatBotPanel() {;
       ;
       const data = await response.json(),;
       return {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         success: true;,;
         message:data.message;
       },;
@@ -147,7 +191,10 @@ export function ChatBotPanel() {;
       },;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           {isLoading && (;
             <div className="flex items-center justify-center py-2">;
               <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />;
@@ -169,7 +216,10 @@ export function ChatBotPanel() {;
                 key={reply.id}
                 text={reply.text}
                 onClick={() => handleQuickReply(reply.text)}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         </div>;"
         <div className="px-4 py-3 border-t border-zion-purple/10">;"
@@ -179,7 +229,10 @@ export function ChatBotPanel() {;
               onClick={handleEscalateToLiveAgent}"
               size="sm";""
               className="bg-zion-purple hover:bg-zion-purple-light text-white";"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             >;
 
               Email Support;
@@ -192,20 +245,29 @@ export function ChatBotPanel() {;
       <div className={cn(;
         "p-4 border-t", ;
         theme === "dark" ? "border-zion-blue-light" :"border-gray-200";
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       )}>;
         <form ;
           onSubmit={(e) => {;
 </form>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           <Input;
             ref={inputRef}
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <Send className="h-4 w-4" />;
           </Button>;
         </form>;
@@ -217,8 +279,11 @@ export function ChatBotPanel() {;
 content: string;
 export function ChatBotPanel () {;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const [messages, setMessages] = useState<Message[]> ([ {;
   //Auto-scroll to bottom when messages change useEffect ( () => {;
   if (scrollAreaRef.current) {;
@@ -238,8 +303,14 @@ id: `user-$ {;
 content: text;
 setIsLoading (true);
 
+<<<<<<< HEAD
 
 
+=======
+:temp_broken_files/support/ChatBotPanel.tsx
+
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/ChatBotPanel.tsx
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   id: `bot-$ {;
   Date.now () ;
 }`;
@@ -255,14 +326,24 @@ if (failedAttempts >= 2) {;
 const sendToAIAssistant = async (message: string) => {;
   try {;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 };
 body: JSON.stringify ({;
   ;
 });
 
+<<<<<<< HEAD
 
+=======
+});
+:temp_broken_files/support/ChatBotPanel.tsx
+
+ursor/fix-lint-push-and-merge-to-main-e10e: src/components/support/ChatBotPanel.tsx;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }const data = await response.json ();
 return {;
@@ -273,21 +354,89 @@ message: data.message ;
   ;
 }
 };
+<<<<<<< HEAD
 
 
 };
 
 const logSupportEscalation = async () => {;
 
+=======
+
+const suggestEscalation = () => {;
+  const escalationMessage: Message = {;
+  id: `bot-escalation-$ {;
+  Date.now () ;
+}`;
+
+};
+  }
+  try {;
+  //Send the conversation to the backend for logging //This would be implemented in a real system conversationHistory: messages.map (m => ({;
+  content: m.content;,  sender: m.sender;, timestamp: m.timestamp ;
+  try {;
+  //Send the conversation to the backend for logging //This would be implemented in a real system conversationHistory: messages.map (m => ({;
+  content: m.content,  sender: m.sender, timestamp: m.timestamp ;
+  try {;
+  //Send the conversation to the backend for logging //This would be implemented in a real system conversationHistory: messages.map (m => ({;
+  content: m.content;,  sender: m.sender;, timestamp: m.timestamp ;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }) );
 component: 'ChatBotPanel' ;
 }
 };
+<<<<<<< HEAD
 
 const handleEscalateToLiveAgent = () => {;
 
   setMessages ( (prev) => [ ...prev, {;
   id: `user-$ {;
+=======
+  }
+  setMessages ( (prev) => [ ...prev, {;
+  id: `user-$ {;
+  setMessages ( (prev) => [ ...prev, {;
+  id: `user-$ {;
+  Date.now () ;"}`;'";"content: "I'd like to speak with a human agent",";"sender: "user",
+timestamp: new Date () ;
+};
+timestamp: new Date () ;
+}]);
+//In a real implementation, this would trigger a live chat request ;
+};
+
+  setMessages ( (prev) => [ ...prev, {;
+  id: `user-$ {;
+  Date.now () ;"}`;'";"content: "I'd like to email support",";"sender: "user",
+timestamp: new Date () ;
+};
+timestamp: new Date () ;
+}]) ;
+};
+</div>) ;
+}</div> </ScrollArea> key= {;
+  reply.id ;
+}text= {;
+  reply.text ;
+}onClick={;
+  () => handleQuickReply (reply.text) ;
+}/>) ) ;"}</div> </div>) ";"}Need more help? </p> <div className="flex gap-2" > <Button > Chat with Live Agent </Button> <Button > Email Support </Button> </div> </div>) ";"}aria-label="Send message" h-4 w-4" /> </Button> </form> </div> </div>) ;"}'"
+  setMessages ( (prev) => [ ...prev, {;
+  id: `user-$ {;
+
+};
+timestamp: new Date () ;
+}]);
+//In a real implementation, this would trigger a live chat request 
+
+};
+
+:temp_broken_files/support/ChatBotPanel.tsx
+
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/ChatBotPanel.tsx
+  setMessages ( (prev) => [ ...prev, {;
+  id: `user-$ {;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 };
 timestamp: new Date () ;
@@ -296,4 +445,7 @@ timestamp: new Date () ;
 };
 pr-12325
 </div>) ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

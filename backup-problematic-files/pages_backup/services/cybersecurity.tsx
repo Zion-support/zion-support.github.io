@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -302,6 +303,9 @@ import Layout from '../../components/Layout';
 import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Eye, Shield, Lock, AlertTriangle } from 'lucide-react';
@@ -552,6 +556,7 @@ export default function CybersecurityPage() {;
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {securityServices && securityServices.map((service, index) => {}
+<<<<<<< HEAD
 
                 const IconComponent = service && service.icon;
                 return (
@@ -565,6 +570,15 @@ export default function CybersecurityPage() {;
                     <div className="text-red-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
 
+=======
+                return (<motion&& motion.div)key={index}
+                    className="bg-white p-6 rounded-lg shadow-lg "hover":shadow-xl transition-all duration-300"";"
+                    initial={{ "opacity": 0, "y": 30 }}
+                    whileInView={{ "opacity": 1, "y": 0 }}
+                    transition={{ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }}
+                    viewport={{ "once": true }}>,<div className="text-red-600 mb-4">";"
+                      <IconComponent className="w-10 h-10" />";"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     </div>;
                     <h3 className="text-xl font-bold text-gray-900 mb-4">";
                       {service.title}
@@ -648,8 +662,18 @@ const features = [
     title: 'Data Protection',
     description: 'Advanced encryption and data protection solutions'
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+const securityServices = [
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
     title: "Security Assessment",
     description: "Comprehensive security evaluation of your systems",
@@ -673,6 +697,7 @@ const features = [
   },
   {
 
+<<<<<<< HEAD
     icon: ArrowRight,
     title: 'Security Training',
     description: 'Employee security awareness and training programs'
@@ -706,6 +731,13 @@ const features = [;
     icon: ArrowRight,;
     title: 'Security Training',;
     description: 'Employee security awareness and training programs';
+=======
+    title: "Security Training",
+    description: "Employee security awareness and training programs",
+    icon: Shield,
+    features: ["Security training", "Phishing simulations", "Best practices", "Certification"],
+    pricing: "$500 - $2,000/month"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   }
 ];
@@ -719,6 +751,7 @@ const benefits = [
   'Peace of mind with 24/7 monitoring'
 ];
 export default function CybersecurityServices() {
+<<<<<<< HEAD
 
 export default function CybersecurityPage() {;
 const benefits = [;
@@ -736,6 +769,20 @@ export default function CybersecurityServices() {;
       description="Comprehensive cybersecurity services to protect your business from threats. Advanced security solutions, compliance, and 24/7 monitoring."
       keywords="cybersecurity, security services, data protection, threat monitoring, compliance, security audit">;
       <div className="min-h-screen bg-white">;
+=======
+
+
+export default function CybersecurityPage() {
+  return (
+    <>
+      <Head>
+        <title>Cybersecurity Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive cybersecurity services including threat detection, data protection, security assessment, and training programs." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -774,11 +821,11 @@ export default function CybersecurityServices() {;
                     <feature.icon className="w-6 h-6 text-red-600" />
 
         {/* Services Grid */}
-        <section className="py-16 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {securityServices && securityServices.map((service, index) => (;
-                <motion&& motion.div
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {securityServices.map((service, index) => (
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -795,23 +842,23 @@ export default function CybersecurityServices() {;
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
-              <div>;
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
-                  Why Choose Our Cybersecurity Services?;
-                </h2>;
-                <p className="text-xl text-gray-600 mb-8">;
-                  Our cybersecurity experts provide comprehensive protection against;
-                  evolving threats while ensuring compliance with industry regulations.;
-                </p>;
-                <ul className="space-y-4">;
-                  {benefits && benefits.map((benefit, index) => (;
-                    <li key={index} className="flex items-start">;
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
-                      <span className="text-gray-700">{benefit}</span>;
-                    </li>;
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Why Choose Our Cybersecurity Services?
+                </h2>
+                <p className="text-xl text-gray-600 mb-8">
+                  Our cybersecurity experts provide comprehensive protection against
+                  evolving threats while ensuring compliance with industry regulations.
+                </p>
+                <ul className="space-y-4">
+                  {benefits.map((benefit, index) => (
+                    <li key={index} className="flex items-start">
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">{benefit}</span>
+                    </li>
                   ))}
 
                 </ul>
@@ -866,7 +913,18 @@ export default function CybersecurityServices() {;
       </div>
 
     </>
+<<<<<<< HEAD
 
 export default Cybersecurity;
 
 
+=======
+  );
+}
+
+    </Layout>
+    </Layout>
+    </>
+
+    </>
+>>>>>>> origin/cursor/delete-old-data-records-6bba

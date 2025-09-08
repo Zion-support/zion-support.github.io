@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
     tagline: 'Next-generation cloud infrastructure with quantum encryption and zero-trust security',
     price: '$4,999',
     period: '/month',
@@ -112,6 +113,8 @@
     variant: 'quantum - networking - enterprise',
     contact_info: {
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
   }
 ];
@@ -382,4 +385,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     reviews: 4;
   }
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

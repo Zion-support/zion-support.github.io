@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -13,12 +14,24 @@ export function ReviewsList({
   isLoading
   onReportReview
 
+=======
+
+import { Review } from "@/types/reviews",
+import { ReviewCard } from "./ReviewCard",
+
+import { Review } from "@/types/reviews";
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         {Array (3);
           .fill (0);
           .map ((_, i) => (
             <div;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             >
               <div className="flex items-center gap-3 mb-3">
                 <div className="h-10 w-10 rounded-full bg-muted"></div>
@@ -33,7 +46,10 @@ export function ReviewsList({
                 <div className="h-6 w-16 bg-muted rounded"></div>
               </div>
             </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     return (
 
@@ -82,6 +98,12 @@ export function ReviewsList({
 
       </div>
 
+<<<<<<< HEAD
+=======
+
+    );
+  }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   if (reviews.length === 0) {}
     return ("
@@ -96,5 +118,30 @@ export function ReviewsList({
   }
 
 
+<<<<<<< HEAD
 
 
+=======
+        <p className="text - muted - foreground">;
+          Once reviews are submitted and approved, they will appear here.;
+        </p>;
+      </div>);
+  }
+
+    <div className="space - y-4">;
+      {reviews.map ((review) => (
+        <ReviewCard key={review.id} review={review} on_report={onReportReview} />))}
+    </div>);
+}
+
+
+      {reviews.map((review) => (
+        <ReviewCard key={review.id} review={review} onReport={onReportReview} />
+      ))}
+    </div>
+  );
+
+}
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

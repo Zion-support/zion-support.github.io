@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
@@ -7,12 +8,16 @@ import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Certification} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useCertifications() {;
+<<<<<<< HEAD
 
 
 
@@ -27,6 +32,12 @@ export function useCertifications() {;
 
 
 
+=======
+  const { user } = useAuth();
+
+  const { user } = useAuth();
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Certification } from '@/types/resume',;
@@ -39,6 +50,7 @@ export function useCertifications() { return null; }
   const [isLoading, setIsLoading] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
   const addCertification = async (resumeId: string, cert: Certification): Promise<boolean> => {;
+<<<<<<< HEAD
 
     if (!user) {;
       setError('You must be logged in to add certifications'),;
@@ -46,20 +58,28 @@ export function useCertifications() { return null; }
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }
 
     setIsLoading(true),
     setError(null),
 
+<<<<<<< HEAD
     
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     try {
       const { error } = await supabase
         .from('certifications')
         .insert({
+<<<<<<< HEAD
 
 
         }),
@@ -68,13 +88,28 @@ export function useCertifications() { return null; }
       
 
 
+=======
+          resume_id: resumeId;
+          name: cert.name;
+          issuing_organization: cert.issuing_organization;
+          issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null;
+          expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null;
+          credential_id: cert.credential_id
+          credential_url: cert.credential_url
+      return showSuccessToast("Certification added", "Your certification has been added to your resume")
+    } catch (e: any) {'
+      return handleResumeError(e, 'Could not add certification')
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
       return showSuccessToast("Certification added", "Your certification has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add certification')
     } finally {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       setIsLoading(false)
 
@@ -88,16 +123,24 @@ export function useCertifications() { return null; }
     setIsLoading(true);
     setError(null);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
 
     setIsLoading(true),;
     setError(null),;
     try {;
+<<<<<<< HEAD
 
       const { error } = await supabase;'
         .from('certifications');
 
+=======
+      }
+        .from('certifications');'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         .insert({;
           resume_id: resumeId,;
           name: cert.name,;
@@ -121,17 +164,55 @@ export function useCertifications() { return null; }
       return false;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }
     
     setIsLoading(true),
     setError(null),
 
+<<<<<<< HEAD
 
     }
     
 
+=======
+;
+export function useCertifications() {;
+  }
+    setIsLoading(true),
+    setError(null),
+
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { Certification } from '@/types/resume',;
+import { useAuth } from '@/hooks/useAuth',;
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils',;
+;
+export function useCertifications() {;
+  const { user } = useAuth(),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+
+  ;
+  const addCertification = async (resumeId:string, cert:Certification):Promise<boolean> => {;
+    if (!user) {;
+      setError('You must be logged in to add certifications'),;
+      return false;
+    }
+    ;
+    setIsLoading(true),;
+    setError(null),;
+    ;
+    try {;
+
+      const { error } = await supabase;
+        .from('certifications');
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         .insert({;
           resume_id:resumeId,;
           name:cert.name,;
@@ -165,7 +246,10 @@ export function useCertifications() { return null; }
       const { error } = await supabase;
         .from('certifications');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         .update({;
           name:cert.name,;
           issuing_organization:cert.issuing_organization,;
@@ -199,7 +283,10 @@ export function useCertifications() { return null; }
       const { error } = await supabase;
         .from('certifications');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         .delete();
         .eq('id', certId),;
       ;
@@ -210,6 +297,7 @@ export function useCertifications() { return null; }
       return handleResumeError(e, 'Could not delete certification'),;
     } finally {;
       setIsLoading(false),;
+<<<<<<< HEAD
 
     }
 
@@ -220,6 +308,27 @@ export function useCertifications() { return null; }
     try {
 
 
+=======
+    }
+
+
+    try {
+      const { error } = await supabase
+        .from('certifications')
+        .update({
+}
+        .from('certifications')'
+      const { error } = await supabase
+        .from('certifications')
+        .update({
+          name: cert && cert.name;
+          issuing_organization: cert && cert.issuing_organization;
+          issue_date: cert && cert.issue_date ? formatDateForDB(cert && cert.issue_date) : null;
+          expiration_date: cert && cert.expiration_date ? formatDateForDB(cert && cert.expiration_date) : null;
+          credential_id: cert && cert.credential_id,
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           name: cert.name,
           issuing_organization: cert.issuing_organization,
           issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null,
@@ -230,9 +339,13 @@ export function useCertifications() { return null; }
       
       if (error) throw error,
 
+<<<<<<< HEAD
       
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       return showSuccessToast("Certification updated", "Your certification has been updated")
     } catch (e: any) {'
       return handleResumeError(e, 'Could not update certification')
@@ -253,10 +366,15 @@ export function useCertifications() { return null; }
     setIsLoading(true),;
     setError(null),;
     try {;
+<<<<<<< HEAD
 
       const { error } = await supabase;'
         .from('certifications');
 
+=======
+      }
+        .from('certifications');'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         .update({;
           name: cert.name,;
           issuing_organization: cert.issuing_organization,;
@@ -279,20 +397,48 @@ export function useCertifications() { return null; }
       setError('You must be logged in to delete certifications'),;
       return false;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }
     
     setIsLoading(true),
     setError(null),
 
     try {
+<<<<<<< HEAD
+=======
+
+      const { error } = await supabase
+        .from('certifications')
+        .delete()
+        .eq($2);
+      if (error) throw error,
+      
+      return showSuccessToast("Certification deleted", "Your certification has been removed from your resume")
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not delete certification')
+    } finally {
+}
+        .from('certifications')'
+        .delete()
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+      return showSuccessToast("Certification deleted", "Your certification has been removed from your resume")
+    } catch (e: any) {'
+      return handleResumeError(e, 'Could not delete certification')
+    } finally {}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       setIsLoading(false)
-    }
-  },
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {useState} from 'react';
 
     } catch (e: any) {
@@ -331,13 +477,30 @@ import {useState} from 'react';
 
 
 
+<<<<<<< HEAD
+=======
+    }
+    
+    setIsLoading(true),
+    setError(null),
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     try {
       const { error } = await supabase
         .from('certifications')
 
 
+<<<<<<< HEAD
 
+=======
+import {supabase} from '@/integrations / supabase / client';
+import {Certification} from '@/types / resume';
+import {use_auth} from '@/hooks / use_auth';
+
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
+export /**;
+ * use_certifications - Function description;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
  */
 function use_certifications() {}
   const { user } = use_auth ();
@@ -351,7 +514,10 @@ if ( {) {}
   $2;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   },;
   return {;
     isLoading,;
@@ -359,9 +525,15 @@ if ( {) {}
     addCertification;
     updateCertification;
     deleteCertification;
+<<<<<<< HEAD
 
 
 
+=======
+  }
+}
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         .from ('certifications');
         .insert ({}
@@ -369,6 +541,7 @@ if ( {) {}
   }
 }
 
+<<<<<<< HEAD
 
 ;
 
@@ -378,6 +551,15 @@ if ( {) {}
       const { error } = await supabase;
         .from ('certifications');
 
+=======
+    setIsLoading (true);
+    set_error (null);
+;
+
+    try {
+      }
+        .from ('certifications');'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         .insert ({
 
 if (throw error) {
@@ -406,9 +588,14 @@ if (throw error) {
 ;
 
     try {
+<<<<<<< HEAD
 
   // TODO: Implement
 
+=======
+      }
+        .from ('certifications');'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         .update ({
 
         .eq ('id', cert_id);
@@ -431,9 +618,14 @@ if (throw error) {
 ;
 
     try {
+<<<<<<< HEAD
 
   // TODO: Implement
 
+=======
+      }
+        .from ('certifications');'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         .delete ();
       // Check condition;
       return showSuccessToast ("Certification deleted", "Your certification has been removed from your resume");"
@@ -451,6 +643,7 @@ if (throw error) {
     update_certification;
     delete_certification;
 
+<<<<<<< HEAD
   }
   },;
 ;
@@ -513,3 +706,12 @@ deleteCertification
 }
   }
 
+=======
+}
+;
+  }
+}
+;
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

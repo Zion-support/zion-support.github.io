@@ -2,6 +2,7 @@ import { Star } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 interface ReviewStatsProps {
 
+<<<<<<< HEAD
 
 
 interface ReviewStatsProps {
@@ -9,6 +10,8 @@ interface ReviewStatsProps {
   averageRating: number,
   totalReviews: number,
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   ratingDistribution?: Record<number, number>
 "
 import { Star } from "lucide-react","
@@ -33,11 +36,15 @@ import { Progress } from "@/components/ui/progress",
   totalReviews: number,
   ratingDistribution?: Record<number number>
 
+<<<<<<< HEAD
   // Format the average rating to one decimal place
 
 }
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
 
+=======
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   // Calculate percentages for distribution if available
   const getPercentage = (count: number) => {
@@ -45,7 +52,10 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
     return (count / totalReviews) * 100
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <div className="bg-card border rounded-lg p-4">
       <div className="flex items-center justify-between mb-4">
@@ -58,7 +68,10 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                   key={i}
                   className={`h-4 w-4 ${
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   return (
 
@@ -247,7 +260,10 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
   return (;
 
   return (
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     <div className="bg-card border rounded-lg p-4">;
       <div className="flex items-center justify-between mb-4">;
         <div>;
@@ -255,7 +271,17 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
           <div className="flex items-center">;
             <div className="flex mr-2">;
               {[1, 2, 3, 4, 5].map((i) => (;
+<<<<<<< HEAD
 
+=======
+                <Star
+                  key={i}
+                  className={`h-4 w-4 ${
+                    i <= Math && Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
+                  }`}
+<Star;
+                  key={i}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                   className={`h-4 w-4 ${;
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" :"text-gray-300";                  }`}
@@ -263,7 +289,11 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
               ))}
             </div>;
             <span className="text-sm text-muted-foreground">;
-                <Star;
+              {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
+
+<<<<<<< HEAD
+=======
+<Star;
                   key={i}
                   className={`h-4 w-4 ${;
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
@@ -273,7 +303,7 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
             </div>
             <span className="text-sm text-muted-foreground">
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
-
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             </span>
           </div>
@@ -291,7 +321,10 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
               />
               <div className="w-8 text-xs text-muted-foreground">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
 import { Star } from './lucide-react';
@@ -340,16 +373,28 @@ if (return 0, ) {
             </div>;
             <span className="text - sm text - muted - foreground">;
               {total_reviews} {total_reviews === 1 ? "review" : "reviews"}
+<<<<<<< HEAD
 
               {totalReviews} {totalReviews === 1 ? "review" :"reviews"}
 
+=======
+
+
+{totalReviews} {totalReviews === 1 ? "review" :"reviews"}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             </span>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
                 {ratingDistribution[rating] |0}
 
+=======
+
+
+{ratingDistribution[rating] |0}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               </div>
             </div>
                 {ratingDistribution[rating] || 0}
@@ -361,10 +406,67 @@ if (return 0, ) {
     </div>
   )
 }
+<<<<<<< HEAD
 
     </div>;
   );
 }
+=======
+    </div>;
+  );
+}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
+<<<<<<< HEAD
+=======
+              <Progress;
+                value={get_percentage (rating_distribution[rating] || 0)}"
+                className="h - 2";"
+"
+              <div className="w - 8 text - xs text - muted - foreground">;"
+            </div>))}
+        </div>)}
+    </div>);
+}
+
+
+;
+      ;
+      {ratingDistribution && (;
+        <div className="space-y-2">;
+          {[5, 4, 3, 2, 1].map((rating) => (;
+            <div key={rating} className="flex items-center gap-2">;
+              <div className="w-6 text-sm text-right">{rating}</div>;
+              <Star className="h-3 w-3 text-yellow-400" />;
+    </div>);"
+        <div className="space-y-2">;"
+            <div key={rating} className="flex items-center gap-2">;"
+              <div className="w-6 text-sm text-right">{rating}</div>;""
+              <Star className="h-3 w-3 text-yellow-400" />;"
+
+
+              <Progress ;
+                value={getPercentage(ratingDistribution[rating] || 0)} ;"
+                className="h-2" ;"
+              <div className="w-8 text-xs text-muted-foreground">;"
+            </div>;          ))}
+return (<div className="bg-card border rounded-lg p-4" > <div className="flex items-center justify-between mb-4" > <div> <h3 className="text-xl font-bold" > {"
+}</h3> <div className="flex items-center" > <div className="flex mr-2" > {"
+</div>)
+  [1, 2, 3, 4, 5].map ( (i) => (<Star key= {
+  i;
+}className= {`;
+  `h-4 w-4 $ {)"
+  i <= Math.round (averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300""`;
+}` 
+}/>) ) 
+}</div> <span className="text-sm text-muted-foreground" > {"
+}</div>) 
+}</div>) 
+}
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,4 +1,30 @@
 
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import {useEffect, useState} from "react";
 import {useNavigate, useSearchParams} from "react-router-dom";
@@ -7,9 +33,16 @@ import {generateSearchSuggestions} from "@/data/marketplaceData";
 import {SearchSuggestion} from "@/types/search";
 import {useAISearch} from "@/hooks/useAISearch";
 import {AppLayout} from "@/layout/AppLayout";
+<<<<<<< HEAD
 
 export default function SearchPage() {;
 
+=======
+
+
+  const [params] = useSearchParams();
+  const navigate = useNavigate();
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   const [params] = useSearchParams();
 
@@ -48,6 +81,7 @@ export default function SearchPage() {}
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
 
+<<<<<<< HEAD
 
 
 
@@ -88,6 +122,8 @@ export default function SearchPage() {;
     e.preventDefault()
     navigate(`/search?q=${encodeURIComponent(query)}`);
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   }, [initial]),
 
   const handleSubmit = (e: React.FormEvent) => {}
@@ -96,9 +132,12 @@ export default function SearchPage() {;
     search(query)
   },
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
 
     <AppLayout>;
@@ -114,7 +153,10 @@ export default function SearchPage() {;
             placeholder="Search talent, jobs, and projects..."
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const { results, loading, search } = useAISearch(),;
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),;
   useEffect(() => {;
@@ -138,10 +180,13 @@ export default function SearchPage() {;
           />;
         </form>;
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results && results.length === 0 && (;"
           <p className="text-zion-slate-light">No results found.</p>;
@@ -160,6 +205,7 @@ export default function SearchPage() {;
               </div>;
             ))}
 
+<<<<<<< HEAD
   }, [initial]),;
 ;
   const handleSubmit = (e:React.FormEvent) => {;
@@ -180,6 +226,8 @@ export default function SearchPage() {;
           />;
         </form>;
 ;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results.length === 0 && (;
@@ -203,6 +251,7 @@ export default function SearchPage() {;
       </main>;
     </AppLayout>;
 
+<<<<<<< HEAD
 import { useEffect, useState } from './react';
 import { use_navigate, useSearchParams } from './react-router-dom';
 import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';
@@ -216,6 +265,8 @@ export default /**
 function SearchPage() {
   const [params] = useSearchParams ();
   const navigate = use_navigate ();
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   const initial = params.get ("q") || "";
   const [query, set_query] = useState (initial);
@@ -251,5 +302,59 @@ function SearchPage() {
 }
 
 
+<<<<<<< HEAD
 
 
+=======
+  ),;}
+ const suggestions: SearchSuggestion[] = generateSearchSuggestions ();
+  loading && <p className="text-zion-slate-light">Searching...</p> 
+}{
+  !loading && results.length === 0 && (<p className="text-zion-slate-light">No results found.</p>) 
+}{
+  !loading && results.length > 0 && (<div className="space-y-4"> {
+  results.map ( (r) => (<div key= {
+
+    );"
+  loading && <p className="text-zion-slate-light">Searching...</p>""
+  !loading && results.length === 0 && (<p className="text-zion-slate-light">No results found.</p>)""
+  !loading && results.length > 0 && (<div className="space-y-4"> {"
+</div>)
+  results.map ( (r) => (<div key= {`;
+  `$ {
+  r.type;
+}-$ {
+  r.id;`;
+}` "
+}className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > <p className="text-xs uppercase text-zion-slate-light mb-1"> {"
+}</p> <h3 className="text-lg font-bold text-white"> {"
+</h3>"
+}</h3> <p className="text-zion-slate-light"> {"
+</p>)
+}</p> </div>) ) 
+}</div>) 
+}</main> ) "
+          <p className="text-zion-slate-light">No results found.</p>""
+          <div className="space-y-4">"
+                className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4""
+        {loading && <p className="text-zion-slate-light">Searching...</p>}
+        {!loading && results.length === 0 && (
+          <p className="text-zion-slate-light">No results found.</p>
+        )}
+        {!loading && results.length > 0 && (
+          <div className="space-y-4">
+            {results.map((r) => (
+              <div
+                key={`${r.type}-${r.id}`}
+                className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
+              >
+                <p className="text-xs uppercase text-zion-slate-light mb-1">"
+                </p>"
+                <h3 className="text-lg font-bold text-white">{r.title}</h3>""
+                <p className="text-zion-slate-light">{r.description}</p>"
+      </main>
+    </AppLayout>
+  )
+}
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

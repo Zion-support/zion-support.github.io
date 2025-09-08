@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
@@ -22,31 +21,6 @@ const { execSync } = require("child_process)
   this.log( Failed to initialize Merge Conflict "Resolver: ${error.message  })
     const automationScripts = ["comprehensive-error-fixer.cjs", typescript-error-fixer.cjs", "console-error-fixer.cjs, performance-monitor.cjs"", health-checker.cjs, "git-operations-manager.cjs", dependency-manager.cjs", "build-optimizer.cjs, ""]
       this.automations.set(merge-conflict-resolver)
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
-      this.projectRoot, "master-automation-controller-report.json"
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
-      this.projectRoot, "master-automation-controller-report.json"
-    console.log(`[${timestamp}] � Master "Controller"`)
-  this.log(" Starting Master Automation Controller...")
-    this.log(" Master Controller started successfully")
-  this.log("� Stopping Master Automation Controller...")
-    for (const ["name", "automation")]
-    for (const ["name", "automation")]
-    this.log(" Master Controller stopped")
-  this.log(" Initializing automation scripts...")
-  const AutoErrorFixer = require("./auto-error-fixer.cjs")
-      this.automations.set("auto-error-fixer")
-      this.log(" Auto Error Fixer initialized")} catch (error) {  this.log(` Failed to initialize Auto Error "Fixer"`})
-  const MergeConflictResolver = require("./merge-conflict-resolver.cjs")
-      this.automations.set("merge-conflict-resolver")
->>>>>>> origin/chore/fix-lint-and-merge
       this.log(" Merge Conflict Resolver initialized")
   this.log( Failed to initialize Merge Conflict Resolver: ${error.message}")
     const automationScripts = ["comprehensive-error-fixer.cjs, typescript-error-fixer.cjs", "console-error-fixer.cjs, performance-monitor.cjs", "health-checker.cjs, git-operations-manager.cjs", "dependency-manager.cjs, build-optimizer.cjs", "]
@@ -135,27 +109,10 @@ const { execSync } = require("child_process")
         "default
     } catch (error) {  this.log(` Command failed"`})
   process.on("SIGINT")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-  process.on("SIGTERM")
-  process.on("SIGTERM")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
   process.on("SIGTERM")
-=======
   process.on("SIGTERM")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+

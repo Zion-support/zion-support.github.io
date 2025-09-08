@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+=======
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Interview } from "@/types/interview",
+import { format, parseISO } from "date-fns",
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 import React from './react';
@@ -7,15 +14,20 @@ import { Interview  } from '@/types / interview';
 import { format, parseISO  } from './date - fns';
 
 
+<<<<<<< HEAD
 
 interface InterviewResponseFormProps {
 
+=======
+interface InterviewResponseFormProps {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 interface InterviewResponseFormProps {};
 interface InterviewResponseFormProps {;
 
   interview: Interview;
 
+<<<<<<< HEAD
 
 
 interface InterviewResponseFormProps {
@@ -52,6 +64,55 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
 
 
 
+=======
+
+export function InterviewResponseForm(): any ({;
+  interview,;
+  onConfirm,;
+  onClose,;
+  isLoading,;
+}: InterviewResponseFormProps) {;
+  // Format interview date and time;
+  const interviewDate = parseISO(interview && interview.scheduled_date);
+  const formattedDate = format(interviewDate, "EEEE, MMMM d");
+  const formattedTime = format(interviewDate, "h: mm a");
+import React from "react";
+import { Button } from "@/components/ui/button";
+
+import { format, parseISO } from "date-fns";export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading }: InterviewResponseFormProps) {
+  // Format interview date and time
+  const interviewDate = parseISO(interview.scheduled_date),
+  const formattedDate = format(interviewDate, 'EEEE, MMMM d'),
+  const formattedTime = format(interviewDate, 'h: mm a'),  const endTime = new Date(interviewDate);
+  endTime && endTime.setMinutes(endTime && endTime.getMinutes() + interview && interview.duration_minutes);
+  const formattedEndTime = format(endTime, "h: mm a");
+import { Interview } from "@/types/interview";
+
+interface InterviewResponseFormProps {
+
+
+  interview: Interview,
+  onConfirm: () => Promise<void>,
+  onClose: () => void,
+  isLoading: boolean;
+}
+
+export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading }: InterviewResponseFormProps) {};
+  // Format interview date and time;
+  const interviewDate = parseISO(interview.scheduled_date),
+  const formattedDate = format(interviewDate, 'EEEE, MMMM d'),'
+  const formattedTime = format(interviewDate, 'h: mm a'),
+
+  // Calculate when interview ends;
+
+          Interview requested by {interview.client_name |"Client"}
+        </p>
+
+
+          Interview requested by {interview.client_name || 'Client'}
+        </p>
+        
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <div className="grid gap-3">
           <div className="flex items-center gap-3">
             <div className="w-24 text-sm text-zion-slate-light">Date:</div>
@@ -61,8 +122,11 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
 
             <div className="w-24 text-sm text-zion-slate-light">Time:</div>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <div>{formattedTime} - {formattedEndTime}</div>
           </div>"
           <div className="flex items-center gap-3">"
@@ -89,7 +153,25 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
       </div>
     </div>
 
+<<<<<<< HEAD
 
+=======
+  )
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Interview } from "@/types/interview",;
+
+import { format, parseISO } from "date-fns",;
+interface InterviewResponseFormProps {;
+  interview: Interview,;
+  onConfirm: () => Promise<void>,;
+  onClose: () => void,;
+  isLoading: boolean;
+}
+;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               {formattedTime} - {formattedEndTime}
             </div>;
           </div>;"
@@ -99,28 +181,40 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
             <div>{interview.duration_minutes} minutes</div>;
 
 
+<<<<<<< HEAD
 
       <div className="flex justify-end gap-3 pt-4">;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <Button variant="outline" onClick={onClose} disabled={isLoading}>;
           Cancel;
         </Button>;
         <Button onClick={onConfirm} disabled={isLoading}>;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           {isLoading ? "Confirming..." : "Confirm Interview"}
         </Button>;
       </div>;
     </div>;
 
+<<<<<<< HEAD
   );
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   on_confirm: () => Promise < void>;
   );}
 interface InterviewResponseFormProps {
   // TODO: Implement
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 interface InterviewResponseFormProps {;
   interview: Interview;
@@ -219,10 +313,30 @@ function InterviewResponseForm() {
         <Button on_click={on_confirm} disabled={is_loading}>;
 
     </div>);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }
 ;
 
 
 
+<<<<<<< HEAD
 
+=======
+          {isLoading ? "Confirming..." :"Confirm Interview"}
+        </Button>;
+      </div>;
+    </div>;
+  ),;}
+
+
+}</div> 
+}</div> </div> </Button> </div> </div>) 
+}
+}
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

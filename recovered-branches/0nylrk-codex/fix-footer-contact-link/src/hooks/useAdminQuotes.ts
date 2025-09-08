@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 
+=======
+pr-12325
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
@@ -9,8 +13,11 @@ import type { DateRange } from '@/types/dateRange';
 
 export const useAdminQuotes = () => {
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const { toast } = useToast();
   const queryClient = useQueryClient();'
   const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');'
@@ -21,11 +28,34 @@ export const useAdminQuotes = () => {
   const { data: allQuotes = [], isLoading, error } = useQuery({'
     queryKey: ['quotesadmin'];
 
+<<<<<<< HEAD
 
 
     enabled: true});
 
 
+=======
+    enabled: true});
+
+    enabled: true});
+
+import { useState } from 'react',;
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
+import { quoteRequestService } from '@/services/quoteRequestService',;
+import type { QuoteRequest, QuoteStatus } from '@/types/quotes',;
+import { useToast } from '@/components/ui/use-toast',;
+import type { DateRange } from '@/types/dateRange',;
+export const useAdminQuotes = () => {;
+  const { toast } = useToast(),;
+  const queryClient = useQueryClient(),;
+  const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all'),;
+  const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active'),;
+  const [searchQuery, setSearchQuery] = useState(''),;
+  const [dateRange, setDateRange] = useState<DateRange | undefined>(undefined),;
+  // Fetch all quote requests;
+  const { data: allQuotes = [], isLoading, error } = useQuery({;
+    enabled: true});
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     queryKey: ['quotesadmin'],;
     queryFn: () => quoteRequestService.getAll(),;
@@ -71,18 +101,39 @@ export const useAdminQuotes = () => {
     }
     // Date range filter
     if (dateRange?.from) {
+<<<<<<< HEAD
 
       const createdAt = new Date(quote && quote.created_at);
       if (createdAt < dateRange && dateRange.from) {
+=======
+      const createdAt = new Date(quote && quote.created_at);
+      if (createdAt < dateRange && dateRange.from) {
+const createdAt = new Date(quote.created_at);
+      if (createdAt < dateRange.from) {
+      const createdAt = new Date(quote && quote.created_at);
+      if (createdAt < dateRange && dateRange.from) {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         return false
       }
     }
     if (dateRange?.to) {
+<<<<<<< HEAD
 
       const createdAt = new Date(quote && quote.created_at);
       const endDate = new Date(dateRange && dateRange.to);
       endDate && endDate.setHours(23, 59, 59, 999), // End of day
+=======
+      const createdAt = new Date(quote && quote.created_at);
+      const endDate = new Date(dateRange && dateRange.to);
+      endDate && endDate.setHours(23, 59, 59, 999), // End of day
+const createdAt = new Date(quote.created_at);
+      const endDate = new Date(dateRange.to);
+      endDate.setHours(23, 59, 59, 999), // End of day
+      const createdAt = new Date(quote && quote.created_at);
+      const endDate = new Date(dateRange && dateRange.to);
+      endDate && endDate.setHours(23, 59, 59, 999), // End of day
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       if (createdAt > endDate) {
         return false
@@ -90,7 +141,74 @@ export const useAdminQuotes = () => {
     }
 
 
+<<<<<<< HEAD
 
+=======
+return true
+  });
+  // Update quote status mutation
+  const updateStatusMutation = useMutation({
+    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>
+      quoteRequestService.updateStatus(id, status);
+
+
+      return false    return true
+  });
+  // Update quote status mutation
+  const updateStatusMutation = useMutation({
+    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
+
+import {useState} from 'react';''
+import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';''
+import {quoteRequestService} from '@/services/quoteRequestService';''
+import type { QuoteRequest, QuoteStatus } from '@/types/quotes';''
+import { useToast } from '@/components/ui/use-toast';''
+import type { DateRange } from '@/types/dateRange';'
+export const useAdminQuotes = () => {;
+
+'
+import {useState} from 'react';''
+import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';''
+import {quoteRequestService} from '@/services/quoteRequestService';''
+import type { QuoteRequest, QuoteStatus } from '@/types/quotes';''
+import { useToast } from '@/components/ui/use-toast';''
+import type { DateRange } from '@/types/dateRange';'
+export const useAdminQuotes = () => {
+export const useAdminQuotes = () => {;
+  const { toast } = useToast();
+  const queryClient = useQueryClient();'
+  const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');'
+</QuoteStatus>'
+  const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active');''
+  const [searchQuery, setSearchQuery] = useState('');'
+  const [dateRange, setDateRange] = useState<DateRange | undefined>(undefined);
+</DateRange>'
+  const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all'),;'
+</QuoteStatus>'
+  const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active'),;''
+  const [searchQuery, setSearchQuery] = useState(''),;'
+  const [dateRange, setDateRange] = useState<DateRange | undefined>(undefined),;
+</DateRange>
+      if (createdAt < dateRange && dateRange.from) {
+      const createdAt = new Date(quote && quote.created_at);
+      if (createdAt < dateRange && dateRange.from) {
+        return false;
+      }
+    }
+    if (dateRange?.to) {
+      const createdAt = new Date(quote && quote.created_at);
+      const endDate = new Date(dateRange && dateRange.to);
+      endDate && endDate.setHours(23, 59, 59, 999), // End of day;
+      const createdAt = new Date(quote && quote.created_at);
+      const endDate = new Date(dateRange && dateRange.to);
+      endDate && endDate.setHours(23, 59, 59, 999), // End of day;
+      if (createdAt > endDate) {
+        return false;
+      }
+    }
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
     // Search filter;
     if (searchQuery) {;
@@ -122,6 +240,14 @@ export const useAdminQuotes = () => {
       }
     }
 
+<<<<<<< HEAD
+=======
+    return true
+  });
+  // Update quote status mutation
+  const updateStatusMutation = useMutation({
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
     return true
@@ -138,8 +264,12 @@ export const useAdminQuotes = () => {
         description: "The quote request status has been updated"
 
 
+<<<<<<< HEAD
       });
 
+=======
+});
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       queryClient && queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
     };
     onError: (error: Error) => {
@@ -147,16 +277,24 @@ export const useAdminQuotes = () => {
 
         description: "Failed to update status: " + error && error.message,
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         variant: "destructive"
       })
     }
   });
 
+<<<<<<< HEAD
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({
 
+=======
+  // Archive/Unarchive mutation;
+  const toggleArchiveMutation = useMutation({}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     },
     onError: (error: Error) => {}
       toast({"
@@ -172,8 +310,11 @@ export const useAdminQuotes = () => {
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService.toggleArchive(id, isArchived),
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     onSuccess: (_, variables) => {
 
       toast({
@@ -183,7 +324,10 @@ export const useAdminQuotes = () => {
           ? "The quote request has been archived""
           : "The quote request has been moved back to active quotes"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService && quoteRequestService.toggleArchive(id, isArchived);
@@ -200,7 +344,33 @@ export const useAdminQuotes = () => {
       toast({"
         title: "Error";"
         description: "Failed to update quote: " + error && error.message,
+<<<<<<< HEAD
 
+=======
+
+"
+    onError: (error: Error) => {
+      toast({
+        title: "Error";
+        description: "Failed to update quote: " + error.message
+        variant: "destructive"
+      })
+    }
+  }),
+
+  // Delete mutation
+  const deleteMutation = useMutation({
+    mutationFn: (id: string) => quoteRequestService.delete($2);
+    onSuccess: () => {
+      toast($2);
+      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
+    },
+"
+        variant: "destructive"
+
+      })
+    }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         description: "The quote request has been permanently deleted"
 
@@ -209,9 +379,12 @@ export const useAdminQuotes = () => {
     };
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     onError: (error: Error) => {
       toast({
         title: "Error";
@@ -220,19 +393,52 @@ export const useAdminQuotes = () => {
 
       queryClient && queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
     };
+<<<<<<< HEAD
+=======
+    onError: (error: Error) => {}
+      toast({"
+        title: "Error";"
+        description: "Failed to delete quote: " + error && error.message,
+
+
+      queryClient && queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
+    };
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     onError: (error: Error) => {
       toast({
         title: "Error";
         description: "Failed to delete quote: " + error && error.message,
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         variant: "destructive"
       })
     }
   });
 
+<<<<<<< HEAD
 
+=======
+
+    quotes: filteredQuotes;
+    isLoading;
+    error;
+    statusFilter;
+    setStatusFilter;
+    archiveFilter;
+    setArchiveFilter;
+    searchQuery;
+    setSearchQuery;
+    dateRange;
+    setDateRange
+    updateStatus: (id: string, status: QuoteStatus) =>
+      updateStatusMutation.mutate({ id, status });
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {useState} from 'react';
 import {use_query, use_mutation, useQueryClient} from '@tanstack / react - query';
 import {quoteRequestService} from '@/services / quoteRequestService';
@@ -311,7 +517,10 @@ export const useAdminQuotes = () =>: any {};
   });
 ;
 
+<<<<<<< HEAD
   return {
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     quotes: filtered_quotes;
     is_loading;
@@ -323,12 +532,21 @@ export const useAdminQuotes = () =>: any {};
     search_query;
     setSearchQuery;
 
+<<<<<<< HEAD
     toggleArchive: (id: string, isArchived: boolean) =>
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     toggleArchive: (id: string, isArchived: boolean) => 
 
 
 
+<<<<<<< HEAD
+=======
+
+    toggleArchive: (id: string, isArchived: boolean) => 
+    },
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     onError: (error: Error) => {
       toast({
         title: "Error",
@@ -435,6 +653,7 @@ export const useAdminQuotes = () =>: any {};
 pr-12325
   return {;
     quotes: filteredQuotes,;
+<<<<<<< HEAD
     isLoading,;
     error,;
     statusFilter,;
@@ -453,12 +672,17 @@ pr-12325
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     setDateRange,
 
     updateStatus: (id: string, status: QuoteStatus) => 
@@ -488,6 +712,18 @@ pr-12325
 }
 ;
 
+<<<<<<< HEAD
 
 
 
+=======
+
+import { useState } from 'react',;
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
+import { quoteRequestService } from '@/services/quoteRequestService',;
+import type { QuoteRequest, QuoteStatus } from '@/types/quotes',;
+import { useToast } from '@/components/ui/use-toast',;
+import type { DateRange } from '@/types/dateRange',;
+
+});
+>>>>>>> origin/cursor/delete-old-data-records-6bba

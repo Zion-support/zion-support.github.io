@@ -1,10 +1,14 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface HelpArticleListProps {
   categoryId: string,
   onArticleSelect: (articleId: string) => void,
   searchQuery: string
+<<<<<<< HEAD
 
 }
 
@@ -61,6 +65,21 @@ interface HelpArticleListProps {;
 }
 
 
+=======
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { HELP_CATEGORIES } from "./help-content",;
+interface HelpArticleListProps {;
+  categoryId: string,;
+  onArticleSelect: (articleId: string) => void,;
+  searchQuery: string;
+}
+;
+export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
+  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
+  if (!category) {;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
   const category = HELP_CATEGORIES && HELP_CATEGORIES.find(cat => cat && cat.id === categoryId);
   if (!category) {;
@@ -74,6 +93,7 @@ export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQue
           article && article.content.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
       );
     : category && category.articles;
+
   return (
     <div>;"
       <div className="mb-6">;"
@@ -81,6 +101,7 @@ export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQue
         <p className="text-zion-slate-light">{category && category.description}</p>;
       </div>;
 
+<<<<<<< HEAD
       {filteredArticles && filteredArticles.length === 0 ? (;
 
 import React from "react",;
@@ -120,10 +141,14 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } Hel
         <div className="text-center py-8">;
           <h3 className="text-lg font-medium mb-2">No articles found</h3>;
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           <p className="text-zion-slate-light">;
             Try adjusting your search query or browse another category.;
           </p>;
         </div>;
+<<<<<<< HEAD
 
       ) :(;
         <div className="space-y-4">;
@@ -141,6 +166,23 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } Hel
               </CardHeader>;
               <CardContent>;
                 <p className="text-sm text-zion-slate-light truncate">;
+=======
+
+
+              className="cursor-pointer hover:border-zion-purple/50 transition-colors"
+            >;"
+              <CardHeader className="pb-2">;"
+                <CardTitle className="text-lg">{article && article.title}</CardTitle>;"
+                <CardDescription className="text-zion-slate-light text-sm">;
+                  Last updated: {formatDate(article && article.lastUpdated)}
+
+                </p>;
+              </CardContent>;
+            </Card>;
+          ))}
+        </div>;
+      )}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 function formatDate(date: string): string {
@@ -254,11 +296,13 @@ function format_date (date: string): string {"
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
 }
+
 function formatDate(): any (date: string): string {;
   return new Date(date).toLocaleDateString("en-US", {;
     year: "numeric",;
     month: "long",;
     day: "numeric";
+
   });
 }
 
@@ -397,6 +441,7 @@ function format_date (date: string): string {
     month: "long",
     day: "numeric",
   });
+}
                   {article.content.substring(0, 120)}...;
                 </p>;
               </CardContent>;
@@ -407,13 +452,19 @@ function format_date (date: string): string {
   ),;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   })
   })
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 ;
 function formatDate(date: string): string {;
@@ -424,6 +475,10 @@ function formatDate(date: string): string {;
   });
 }
 
+<<<<<<< HEAD
 
 
 
+=======
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

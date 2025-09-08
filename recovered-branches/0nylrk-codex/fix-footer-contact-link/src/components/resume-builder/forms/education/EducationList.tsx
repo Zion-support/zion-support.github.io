@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
 
@@ -9,14 +12,26 @@ import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
 
 
+<<<<<<< HEAD
 
+=======
+import { Education  } from '@/types/resume';
+import { EducationItem } from './EducationItem';
+import { Education  } from '@/types/resume';
+import { EducationItem } from './EducationItem';
+import {Education} from '@/types/resume';
+import {EducationItem} from './EducationItem';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface EducationListProps {
   educationEntries: Education[];
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Education } from '@/types/resume',;
 import { EducationItem } from './EducationItem',;
 interface EducationListProps {;
@@ -25,9 +40,12 @@ interface EducationListProps {;
   onDelete: (id: string) => void;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 export function EducationList({
   educationEntries
@@ -35,8 +53,38 @@ export function EducationList({
   onDelete
 }: EducationListProps) {
   if (!educationEntries |educationEntries.length === 0) {
+<<<<<<< HEAD
 
 
+=======
+
+
+import { Education } from "@/types/resume";
+
+import { EducationItem } from "./EducationItem";
+interface EducationListProps {}
+  educationEntries: Education[];
+  onEdit: (education: Education) => void;
+
+  onDelete: (id: string) => void;
+}
+
+export function EducationList({}
+  educationEntries,
+  onEdit,
+  onDelete,
+
+    return null;
+  }
+
+
+  return ("
+    <div className="space-y-4">"
+      <h3 className="text-md font-medium">Added Education</h3>
+      {educationEntries.map((edu) => (
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   education_entries: Education[];
   on_edit: (education: Education) => void;
   on_delete: (id: string) => void;
@@ -58,6 +106,7 @@ if ( {) {
         <EducationItem;
           key={edu.id}
           education={edu}
+<<<<<<< HEAD
 
 
 import { Education } from "@/types/resume";
@@ -85,6 +134,9 @@ export function EducationList({
       <h3 className="text-md font-medium">Added Education</h3>
       {educationEntries.map((edu) => (
         <EducationItem
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           key={edu.id}
           education={edu}
           onEdit={onEdit}
@@ -93,11 +145,9 @@ export function EducationList({
 
       ))}
     </div>
-          on_edit={on_edit}
-          on_delete={on_delete}
-        />))}
-    </div>);
+  );
 }
+<<<<<<< HEAD
 
 
   )
@@ -106,6 +156,8 @@ export function EducationList({
 ;
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
 
 interface EducationListProps {
@@ -217,5 +269,60 @@ pr-12325
   );
 }
 ;
+<<<<<<< HEAD
 
 
+=======
+
+
+import { Education } from '@/types/resume',;
+import { EducationItem } from './EducationItem',;
+;
+interface EducationListProps {;
+  educationEntries:Education[],;
+  onEdit:(education:Education) => void,;
+  onDelete:(id:string) => void;
+}
+;
+export function EducationList({ educationEntries, onEdit, onDelete } EducationListProps) {;
+  if (!educationEntries || educationEntries.length === 0) {;
+    return null,;
+  }
+;
+  return (;
+    <div className="space-y-4">;
+      <h3 className="text-md font-medium">Added Education</h3>;
+      {educationEntries.map((edu) => (;
+
+
+</EducationItem>
+    </div>"
+    <div className="space-y-4">"
+</div>"
+      <h3 className="text-md font-medium">Added Education</h3>"
+        <EducationItem;
+          key={edu.id}
+          education={edu}
+          onEdit={onEdit}
+          onDelete={onDelete}
+        />
+</EducationItem>
+    </div>"
+    <div className="space-y-4">;"
+      <h3 className="text-md font-medium">Added Education</h3>;"
+
+        <EducationItem ;
+          key={edu.id} ;
+          education={edu} ;
+          onEdit={onEdit} ;
+          onDelete={onDelete} ;
+        />;
+
+
+  );
+}
+  )
+}
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

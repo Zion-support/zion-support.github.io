@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -102,6 +103,45 @@ const categories = ['AI Services', 'IT Services', 'Development', 'Security'];
         {/* Header */}
 
 
+=======
+
+<<<<<<< HEAD
+=======
+
+=======
+=======
+  return (
+    <EnhancedLayout>
+      <h1 className=\"text-3xl font-bold mb-4\">Our Services</h1>
+      <p className=\"text-gray-700 mb-6\">Comprehensive solutions across software, cloud, and AI.</p>
+      <div className=\"grid \"md\": grid-cols-2 lg:grid-cols-3 gap-6\">
+        <Link href=\"/services/web-application-development-chat\" className=\"bg-white p-4 rounded shadow hover:shadow-md transition\">
+          Web Application Development
+        </Link>
+        <Link href=\"/services/mobile-app-development-chat\" className=\"bg-white p-4 rounded shadow hover:shadow-md transition\">
+          Mobile App Development
+        </Link>
+        <Link href=\"/services/cloud-migration-services-chat\" className=\"bg-white p-4 rounded shadow hover:shadow-md transition\">
+          Cloud Migration
+        </Link>
+        <Link href=\"/services/ai-model-development-chat\" className=\"bg-white p-4 rounded shadow hover:shadow-md transition\">
+          AI Model Development
+        </Link>
+        <Link href=\"/services/performance-optimization-chat\" className=\"bg-white p-4 rounded shadow hover:shadow-md transition\">
+          Performance Optimization
+        </Link>
+        <Link href=\"/services/security-auditing-chat\" className=\"bg-white p-4 rounded shadow hover:shadow-md transition\">
+          Security Auditing
+        </Link>
+      </div>
+    </EnhancedLayout>
+  );
+};
+
+
+=======
+        {/* Header */}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <header className=\"bg-white shadow-sm\">
           <div className=\"max-w-7xl mx-auto px-4 \"sm\": p x-6 lg: p x-8\">
             <div className=\"flex justify-between items-center py-6\">
@@ -127,6 +167,7 @@ const categories = ['AI Services', 'IT Services', 'Development', 'Security'];
           </div>
         </header>
 
+<<<<<<< HEAD
 
 
         <section className=\"bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 py-20 text-center\">
@@ -140,6 +181,15 @@ const categories = ['AI Services', 'IT Services', 'Development', 'Security'];
 
 
 
+=======
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+=======
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               Comprehensive Technology Solutions
             </div>
             <h1 className=\"text-4xl md: tex t-6xl font-bold text-white mb-4\">Our Services</h1>
@@ -149,6 +199,7 @@ const categories = ['AI Services', 'IT Services', 'Development', 'Security'];
           </div>
         </section>
 
+<<<<<<< HEAD
 
 
 
@@ -181,6 +232,36 @@ import { ArrowRight, Brain, Cloud, Globe, Smartphone, Shield, Database, Cpu, Zap
 
 
 
+=======
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+=======
+=======
+            {services.map((service, index) => {
+              const IconComponent = service.icon;
+              return (
+                <div key={index} className=\"bg-white border border-gray-200 rounded-xl p-6 shadow-lg \"hover\": shado w-xl transition-shadow\">
+                  <div className=\"flex items-center mb-4\">
+                    <div className=\"w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg flex items-center justify-center mr-4\">
+                      <IconComponent className=\"w-6 h-6 text-white\"  />
+                    </div>
+                    <h3 className=\"text-xl font-semibold text-gray-900\">{service.name}</h3>
+                  </div>
+                  <p className=\"text-gray-600 mb-4\">{service.description}</p>
+                  <ul className=\"space-y-2 mb-6\">
+                    {service.features.map((feature, featureIndex) => (
+
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+=======
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const services = [{
       title: \'AI Development\',
       \"description\": \'Custom artificial intelligence solutions and machine learning models tailored to your business needs.\',
@@ -311,8 +392,48 @@ import { ArrowRight, Brain, Cloud, Globe, Smartphone, Shield, Database, Cpu, Zap
       \"description\": \'We build your solution using agile methodologies with continuous testing.\'
     },
     {
+<<<<<<< HEAD
 
 
+=======
+      \"step\": \'04\',
+      \"title\": \'Deployment & Support\',
+      \"description\": \'We deploy your solution and provide ongoing support and maintenance.\'
+    }
+  ];
+  return (
+    <MainLayout
+      title=\"Our Services - Zion Tech Group\"
+      description=\"Explore our comprehensive range of technology services including AI development, cloud solutions, web development, mobile apps, and more.\"
+    >
+      {/* Hero Section */}
+      <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+          <div className=\"text-center\">
+            <h1 className=\"text-5xl font-bold mb-6\">Our Services</h1>
+            <p className=\"text-xl max-w-3xl mx-auto\">
+              Comprehensive technology solutions designed to transform your business 
+              and drive digital innovation across all industries.
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* Services Grid */}
+      <section className=\"py-20\">
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+          <div className=\"text-center mb-16\">
+            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">
+              Technology Solutions
+            </h2>
+            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
+              From AI and cloud computing to web development and cybersecurity, 
+              we provide end-to-end technology solutions for modern businesses.
+            </p>
+          </div>
+
+
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             {services.map((service) => (
               <div
                 key={service.title}
@@ -331,6 +452,7 @@ import { ArrowRight, Brain, Cloud, Globe, Smartphone, Shield, Database, Cpu, Zap
                   <ul className=\"space-y-2 mb-6\">
                     {service.features.slice(0, 3).map((feature) => (
 
+<<<<<<< HEAD
 
 
 
@@ -591,6 +713,23 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
+=======
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+=======
+=======
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+
+=======
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                   <Link
                     href={service.href}
                     className=\"text-blue-600 \"hover\": text-blue-700 font-medium flex items-center\"
@@ -605,6 +744,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         </div>
       </section>
       {/* Process Section */}
+<<<<<<< HEAD
 
 
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
@@ -613,6 +753,22 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
 
+=======
+      <section className=\"py-20 bg-gray-50\">
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+          <div className=\"text-center mb-16\">
+            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">
+              Our Development Process
+            </h2>
+            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
+              We follow a proven methodology to ensure successful project delivery 
+              and exceed your expectations.
+            </p>
+          </div>
+
+
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             {process.map((step) => (
               <div key={step.step} className=\"text-center\">
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-xl font-bold\">
@@ -625,9 +781,43 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   {step.description}
                 </p>
               </div>
+<<<<<<< HEAD
 
 
 
+=======
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Why Choose Us */}
+      <section className=\"py-20\">
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+          <div className=\"grid grid-cols-1 lg:grid-cols-2 gap-12 items-center\">
+            <div>
+              <h2 className=\"text-4xl font-bold text-gray-900 mb-6\">
+                Why Choose Zion Tech Group?
+              </h2>
+              <div className=\"space-y-6\">
+                <div className=\"flex items-start\">
+                  <div className=\"bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 mt-1\">
+                    <Zap className=\"h-6 w-6\" />
+                  </div>
+                  <div>
+                    <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">
+                      Cutting-Edge Technology
+                    </h3>
+                    <p className=\"text-gray-600\">
+                      We stay ahead of the curve with the latest technologies and 
+                      industry best practices to deliver innovative solutions.
+                    </p>
+                  </div>
+                </div>
+
+
+=======
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                   </div>
                   <div>
                     <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">
@@ -640,6 +830,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   </div>
                 </div>
 
+<<<<<<< HEAD
 
 
                   </div>
@@ -673,6 +864,36 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
+=======
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+=======
+=======
+                  </div>
+                  <div>
+                    <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">
+                      Expert Team
+                    </h3>
+                    <p className=\"text-gray-600\">
+                      Our experienced developers and consultants bring deep expertise 
+                      across multiple technologies and industries.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+=======
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 achieve your business goals with our technology solutions.
               </p>
               <div className=\"space-y-4\">
@@ -684,5 +905,50 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 </Link>
                 <Link
                   href=\"/about\"
+<<<<<<< HEAD
 
 
+=======
+                  className=\"block w-full bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-3 px-6 rounded-lg font-semibold text-center transition-colors\"
+                >
+                  Learn More About Us
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className=\"py-20 bg-blue-600 text-white\">
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8 text-center\">
+          <h2 className=\"text-4xl font-bold mb-6\">
+            Ready to Transform Your Business?
+          </h2>
+          <p className=\"text-xl mb-8 max-w-3xl mx-auto\">
+            Join hundreds of businesses that have already transformed their operations 
+            with our innovative technology solutions.
+          </p>
+          <div className=\"flex flex-col sm:flex-row gap-4 justify-center\">
+            <Link
+              href=\"/contact\"
+              className=\"bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors\"
+            >
+              Start Your Project
+            </Link>
+            <Link
+              href=\"/case-studies\"
+              className=\"bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors\"
+            >
+              View Case Studies
+            </Link>
+          </div>
+        </div>
+      </section>
+    </MainLayout>
+  );
+};
+export default Services;
+
+
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

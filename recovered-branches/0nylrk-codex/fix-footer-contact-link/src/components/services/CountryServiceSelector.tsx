@@ -5,6 +5,7 @@ import {
 import { CountrySelector } from "./CountrySelector";
 
 
+<<<<<<< HEAD
 
 
 interface CountryServiceSelectorProps {
@@ -22,11 +23,81 @@ export function CountryServiceSelector({
         <CountrySelector
 
 
+=======
+import { PaymentSection } from "./PaymentSection";
+import { ServiceDetails } from "./ServiceDetails";
+
+import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
+import {CountrySelector} from "./CountrySelector";
+import {PaymentSection} from "./PaymentSection";
+import {ServiceDetails} from "./ServiceDetails";
+
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
+import { CountrySelector } from "./CountrySelector",
+import { PaymentSection } from "./PaymentSection",
+import { ServiceDetails } from "./ServiceDetails",
+
+
+interface CountryServiceSelectorProps {
+  onCountryChange?: (country: CountryPricing | null) => void;
+  selectedCountry?: CountryPricing | null
+}
+export function CountryServiceSelector({
+  onCountryChange
+  selectedCountry: initialCountry
+
+
+import {
+
+  onsiteServicePricing,
+  CountryPricing,;
+} from "@/data/onsiteServicePricing";"
+import { CountrySelector } from "./CountrySelector";"
+import { PaymentSection } from "./PaymentSection";"
+import { ServiceDetails } from "./ServiceDetails";
+interface CountryServiceSelectorProps {}
+  onCountryChange?: (country: CountryPricing | null) => void;
+  selectedCountry?: CountryPricing | null;
+}
+
+export function CountryServiceSelector({}
+  onCountryChange,
+  selectedCountry: initialCountry,
+
+          onCountryChange={onCountryChange || (() => {})}
+          selectedCountry={initialCountry || null}
+        />
+
+        {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
+      </div>
+
+      {initialCountry && <ServiceDetails country={initialCountry.country} />}
+    </div>
+
+        {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
+      </div>;
+
+  );
+}
+;
+
+        {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
+      </div>
+
+      {initialCountry && <ServiceDetails country={initialCountry.country} />}
+    </div>
+  );
+}
+;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           onCountryChange={onCountryChange || (() => {})} ;
           selectedCountry={initialCountry || null} ;
         />;
+        ;
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>;
+<<<<<<< HEAD
       {initialCountry && <ServiceDetails country={initialCountry && initialCountry.country} />}
     </div>;
   );
@@ -63,6 +134,12 @@ function CountryServiceSelector() {
 ;
 
 
+=======
+
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
+import { CountrySelector } from "./CountrySelector",;
+import { PaymentSection } from "./PaymentSection",;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { ServiceDetails } from "./ServiceDetails",;
 ;
@@ -71,6 +148,7 @@ interface CountryServiceSelectorProps {;
   selectedCountry?:CountryPricing | null;
 }
 ;
+<<<<<<< HEAD
 
 export function CountryServiceSelector({ onCountryChange, selectedCountry:initialCountry } CountryServiceSelectorProps) {;
   return (;
@@ -78,6 +156,9 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry:initia
       <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">;
         <CountrySelector ;
 
+=======
+export function CountryServiceSelector() { return null; }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           onCountryChange={onCountryChange || (() => {})} ;
           selectedCountry={initialCountry || null} ;
         />;
@@ -86,9 +167,42 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry:initia
       </div>;
       ;
       {initialCountry && <ServiceDetails country={initialCountry.country} />}
+<<<<<<< HEAD
 
     </div>;
   ),;}
 
 
 
+=======
+    </div>
+  )
+}
+ interface CountryServiceSelectorProps {}
+  onCountryChange?: (country: CountryPricing | null) => void;
+
+}) 
+}selectedCountry= {}
+  initialCountry || null;
+}/> {}
+  initialCountry && <PaymentSection selectedCountry= {}
+  initialCountry;
+}/> 
+}</div> {}
+  initialCountry && <ServiceDetails country= {}
+  initialCountry.country;
+}/> 
+}</div>) 
+});
+
+}
+}
+;
+
+  );
+}
+  )
+}
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

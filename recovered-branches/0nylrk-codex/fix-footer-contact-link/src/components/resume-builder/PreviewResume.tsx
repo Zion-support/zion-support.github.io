@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 
 
+=======
+
+import {Resume} from '@/types/resume';
+import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Resume } from '@/types/resume',;
 import {;
   PreviewHeader,;
@@ -10,6 +17,7 @@ import {;
   CertificationsSection;
 } from './preview',;
 interface PreviewResumeProps {;
+<<<<<<< HEAD
 
   resume: Resume;
 
@@ -40,6 +48,18 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
 
 import {
 
+=======
+  }
+  "resume": Resume;
+  "onBack": () => void;import { Resume } from "@/types/resume";"
+  }
+}
+
+import { Resume } from "@/types/resume";
+
+
+import {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   PreviewHeader,
   ResumeBasicInfoSection,
   WorkExperienceSection,
@@ -61,6 +81,7 @@ interface PreviewResumeProps {
 
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
   return (
+<<<<<<< HEAD
 
     <div className="space - y-6">;
       <PreviewHeader resume={resume} on_back={on_back} />;
@@ -98,11 +119,18 @@ export function PreviewResume({ resume, onBack } PreviewResumeProps) {;
         <CertificationsSection certifications={resume.certifications} />;
       </div>;
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     <div className="space-y-6">
       <PreviewHeader resume={resume} onBack={onBack} />
 
 
+<<<<<<< HEAD
 
 
 
+=======
+      </div>
+>>>>>>> origin/cursor/delete-old-data-records-6bba

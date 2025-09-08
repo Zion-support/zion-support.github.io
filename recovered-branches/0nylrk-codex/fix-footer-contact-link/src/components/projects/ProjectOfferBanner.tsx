@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {Bell, Calendar, X} from "lucide-react";
@@ -7,7 +10,54 @@ import {Card, CardContent} from "@/components/ui/card";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ProjectOfferBanner() {;
+<<<<<<< HEAD
 
+=======
+
+import { useEffect, useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { Bell, Calendar, X } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card",
+
+  const navigate = useNavigate();
+  const { projects, isLoading } = useProjects();
+  const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
+  const [dismissed, setDismissed] = useState<Set<string>>(new Set());
+
+import { useEffect, useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { Bell, Calendar, X } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card",
+import { useProjects } from "@/hooks/useProjects";
+import { Project } from "@/types/projects";
+export function ProjectOfferBanner() {
+  const navigate = useNavigate($2);
+  const { projects, isLoading } = useProjects($2);
+
+import { useEffect, useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { Bell, Calendar, X } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card",
+
+  const navigate = useNavigate();
+  const { projects, isLoading } = useProjects();
+  const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
+  const [dismissed, setDismissed] = useState<Set<string>>(new Set());
+import { useProjects } from "@/hooks/useProjects",
+import { Project } from "@/types/projects",
+export function ProjectOfferBanner() {
+  const navigate = useNavigate(),
+  const { projects, isLoading } = useProjects(),
+  const [pendingOffers, setPendingOffers] = useState<Project[]>([]),
+  const [dismissed, setDismissed] = useState<Set<string>>(new Set()),
+  
+  useEffect(() => {
+    if (projects && !isLoading) {
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Bell, Calendar, X } from "lucide-react",;
@@ -38,10 +88,25 @@ export function ProjectOfferBanner() {;
 };
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
+<<<<<<< HEAD
 
 
 
 
+=======
+
+  }
+
+
+
+  }
+  
+  }
+  
+  }
+  
+  }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   return (
     <div className=\"mb-6 space-y-3\" />
@@ -66,6 +131,7 @@ key={offer.id}
                 </div>
               </div>
 
+<<<<<<< HEAD
 
               <div className="flex items-center gap-2">
                 <Button size="sm" className="whitespace-nowrap">
@@ -75,6 +141,8 @@ key={offer.id}
                   size="sm"
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 >;
                   <X className=\"h-4 w-4\" />;
                 </Button>;
@@ -83,6 +151,7 @@ key={offer.id}
           </Card>;
         ))}
 
+<<<<<<< HEAD
     </div>;
   useEffect (() => {
     // Check condition
@@ -191,3 +260,21 @@ if (isLoading || pendingOffers.length === 0 || pendingOffers.every (p => dismiss
 ;
 
 
+=======
+import { useEffect, useState } from './react';
+import { use_navigate } from './react-router-dom';
+import { Bell, Calendar, X } from './lucide-react';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent } from '@/components / ui / card';
+import { use_projects } from '@/hooks / use_projects';
+import { Project } from '@/types / projects';
+export /**
+ * ProjectOfferBanner - Function description;
+ */
+function ProjectOfferBanner() {}
+  const navigate = use_navigate ();}
+  const { projects, is_loading } = use_projects ();
+  const [pending_offers, setPendingOffers] = useState < Project[]>([]);
+
+  const [dismissed, set_dismissed] = useState < Set < string>>(new Set ());
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -14,7 +14,7 @@ const getFieldClasses = () => {';''
 case 'valid': return 'border-green-500 focus: border-green-500 focus:ring-green-500/20';';''
 case 'invalid': return 'border-red-500 focus:border-red-500 focus:ring-red-500/20';''
 default: switch (type) {';''
-  case 'textarea': return (<div className="relative" > <Textarea disabled= {;
+  case 'textarea': return (<div className='relative' > <Textarea disabled= {;
   disabled ;
 }className= {;
   baseClasses ;
@@ -42,20 +42,20 @@ case 'checkbox': <Checkbox id= {;
   disabled ;
 }/> <label > {;
   label ;
-}</label> {;'"
-  getValidationIcon () ;'"'"
-}</div>);'";'"'"
-case 'password': return (<div className="relative" > <Input type= {';''
+}</label> {;''
+  getValidationIcon () ;''''
+}</div>);'';''''
+case 'password': return (<div className='relative' > <Input type= {';''
   showPassword ? 'text': 'password' ;
 }disabled= {;'
   disabled ;''
 }className= {';''
-  cn (baseClasses, 'pr-20') ;"
-}{;""
-  ...form.register (name) ";""
-}/>) : (<Eye className="h-4 w-4" />) ;""
-}</Button> </div> </div>);";""
-default: return (<div className="relative" > <Input type= {;
+  cn (baseClasses, 'pr-20') ;'
+}{;''
+  ...form.register (name) ';''
+}/>) : (<Eye className='h-4 w-4' />) ;''
+}</Button> </div> </div>);';''
+default: return (<div className='relative' > <Input type= {;
   type ;
 }disabled= {;
   disabled ;
@@ -67,10 +67,10 @@ default: return (<div className="relative" > <Input type= {;
 }''
 };';''
 if (type === 'checkbox') {;
-  return (<FormField control= {;"
-  form.control ;""
-}{";""
-  fieldError && (<FormMessage className="text-sm text-red-500" > {;
+  return (<FormField control= {;'
+  form.control ;''
+}{';''
+  fieldError && (<FormMessage className='text-sm text-red-500' > {;
   fieldError.message ;
 }</FormMessage>) ;
 }) ;
@@ -79,15 +79,15 @@ if (type === 'checkbox') {;
 }/>) ;
 }return (<FormField control= {;
   form.control ;
-}name= {;"
-  name ;""
-}render= {";""
-  () => (<FormItem> <FormLabel className="text-sm font-medium" > {;
+}name= {;'
+  name ;''
+}render= {';''
+  () => (<FormItem> <FormLabel className='text-sm font-medium' > {;
   label ;
-}</FormLabel> <FormControl> {;"
-  renderField () ;""
-}</FormControl> {";""
-  fieldError && (<FormMessage className="text-sm text-red-500 flex items-center gap-1" > <AlertCircle className="h-3 w-3" /> {;
+}</FormLabel> <FormControl> {;'
+  renderField () ;''
+}</FormControl> {';''
+  fieldError && (<FormMessage className='text-sm text-red-500 flex items-center gap-1' > <AlertCircle className='h-3 w-3' /> {;
   fieldError.message ;
 }</FormMessage>) ;
 }) ;
@@ -120,6 +120,6 @@ phone: {;
   pattern: validationPatterns.phone, custom: (value: string) => {;
   if (value && !validationPatterns.phone.test (value) ) {;
 }
-}'"
-};'"'"
-'"'"'"
+}''
+};''''
+''''''

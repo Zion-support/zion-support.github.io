@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+=======
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {type, Company} from "./CompanyDashboard";
+import {Bell, Users, Settings} from "lucide-react";
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -6,6 +14,25 @@ import { type Company } from "./CompanyDashboard",
 import { Bell, Users, Settings } from "lucide-react",
 
 
+<<<<<<< HEAD
+=======
+interface WorkspaceHeaderProps {
+  company: Company
+}
+
+interface WorkspaceHeaderProps {
+  company: Company
+}
+
+export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
+
+  return (
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { Button } from "@/components/ui/button",;
 import { type Company } from "./CompanyDashboard",;
@@ -16,6 +43,7 @@ interface WorkspaceHeaderProps {;
 ;
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
   return (;
+<<<<<<< HEAD
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -36,6 +64,12 @@ import { Button } from '@/components / ui / button';
 import { type, Company } from './CompanyDashboard';
 import { Bell, Users, Settings } from './lucide-react';
 
+=======
+export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
+  return (
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface WorkspaceHeaderProps {
   company: Company
 import React from \"react\",;
@@ -100,7 +134,11 @@ src={company.logoUrl |\"/placeholder.svg\"}
               className=\"max-h-10 max-w-10\"
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

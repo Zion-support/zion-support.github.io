@@ -1,0 +1,1946 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { 
+  Building, 
+  Zap, 
+  Target, 
+  Shield, 
+  Rocket, 
+  Globe,
+  BarChart3,
+  Users,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Lightbulb,
+  Code,
+  Database,
+  Network,
+  Cloud,
+  Lock,
+  Eye,
+  Sparkles,
+  TrendingUp,
+  Settings,
+  Cpu,
+  Brain,
+  DollarSign,
+  ChartBar,
+  Clock,
+  Award
+} from 'lucide-react';
+  Brain, 
+  Cpu, 
+  Zap, 
+  Target, 
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  TrendingUp,
+  Award,
+  Globe,
+  Shield,
+  Cloud,
+  Lock,
+  Database,
+  Network,
+  Code,
+  BarChart3,
+  Lightbulb,
+  Rocket,
+  Clock,
+  Phone,
+  Mail,
+  MapPin,
+  Sparkles,
+  Eye,
+  Heart,
+  Settings,
+  Workflow,
+  BarChart,
+  PieChart,
+  Monitor,
+  HardDrive,
+  Server,
+  FileCheck,
+  AlertTriangle,
+  Search,
+  BookOpen,
+  Microscope,
+  TestTube,
+  Wifi,
+  Signal,
+  Smartphone,
+  Car,
+  Building,
+  Factory,
+  Hospital,
+  ShoppingCart
+} from 'lucide-react';
+import SEOHead from '../components/SEOHead';
+    {
+  Building, 
+  Users, 
+  TrendingUp, 
+  Zap, 
+  Shield, 
+  Globe, 
+  Award, 
+  ArrowRight,
+  Star,
+  CheckCircle,
+  Clock,
+  Target,
+  BarChart3,
+  Cpu,
+  Database
+} from 'lucide-react';
+const CaseStudies = () => {
+  const caseStudies = [
+    {
+      company: "Global Financial Services",
+      industry: "Financial Services",
+      challenge: "Complex legacy systems and compliance requirements",
+      solution: "AI-powered digital transformation and SOC2 compliance automation",
+      results: [
+        "40% reduction in operational costs",
+        "100% SOC2 compliance achievement",
+        "60% faster time-to-market for new products"
+      ],
+      icon: Building,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      company: "Healthcare Technology Provider",
+      industry: "Healthcare",
+      challenge: "Patient data security and HIPAA compliance",
+      solution: "Advanced cybersecurity suite with AI-powered threat detection",
+      results: [
+        "99.9% security incident prevention",
+        "50% reduction in security response time",
+        "Full HIPAA compliance certification"
+      ],
+      metrics: {
+        roi: '320%',
+        timeframe: '12 months',
+        teamSize: '20 people'
+      },
+      image: '/api/placeholder/400/300',
+      tags: ['Quantum Security', 'Financial Trading', 'AI Prediction', 'Risk Management']
+    },
+    {
+      company: "Manufacturing Corporation",
+      industry: "Manufacturing",
+      challenge: "Supply chain inefficiencies and quality control",
+      solution: "AI-powered supply chain optimization and predictive maintenance",
+      results: [
+        "30% improvement in supply chain efficiency",
+        "25% reduction in equipment downtime",
+        "20% increase in product quality"
+      ],
+      icon: Cpu,
+      color: "from-orange-500 to-red-500"
+    },
+    {
+      company: "E-commerce Platform",
+      industry: "Retail",
+      challenge: "Customer experience and operational scalability",
+      solution: "AI-powered customer analytics and autonomous operations",
+      results: [
+        "35% increase in customer satisfaction",
+        "45% improvement in conversion rates",
+        "24/7 autonomous customer support"
+      ],
+      icon: Globe,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      company: "Cloud Infrastructure Provider",
+      industry: "Technology",
+      challenge: "Multi-cloud management and cost optimization",
+      solution: "Intelligent cloud orchestration and cost management",
+      results: [
+        "50% reduction in cloud costs",
+        "99.99% uptime achievement",
+        "Automated scaling and optimization"
+      ],
+      icon: Database,
+      color: "from-indigo-500 to-blue-500"
+    },
+    {
+      company: "Research Institution",
+      industry: "Education",
+      challenge: "Research data management and collaboration",
+      solution: "AI-powered research platform and collaborative tools",
+      results: [
+        "3x faster research completion",
+        "Enhanced collaboration capabilities",
+        "Automated data analysis and insights"
+      ],
+      icon: Users,
+      color: "from-teal-500 to-cyan-500"
+    }
+  ];
+  const testimonials = [
+    {
+      quote: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions have given us a competitive edge we never thought possible.",
+      author: "Sarah Johnson",
+      title: "CTO",
+      company: "Global Financial Services"
+    },
+    {
+      quote: "The cybersecurity implementation exceeded our expectations. We've achieved unprecedented security levels while maintaining operational efficiency.",
+      author: "Michael Chen",
+      title: "Security Director",
+      company: "Healthcare Technology Provider"
+    },
+    {
+      quote: "Our supply chain optimization has revolutionized our manufacturing process. The AI insights are invaluable for strategic decision-making.",
+      author: "David Rodriguez",
+      title: "Operations Manager",
+      company: "Manufacturing Corporation"
+  Star, 
+  Users, 
+  TrendingUp, 
+  DollarSign, 
+  Clock, 
+  ArrowRight,
+  CheckCircle,
+  Brain,
+  Shield,
+  Cpu,
+  Database,
+  Network,
+  Target,
+  BarChart3,
+  Zap,
+  Heart,
+  Building,
+  Globe,
+  Award,
+  Briefcase,
+  Rocket,
+  Lightbulb,
+  CheckSquare,
+  ShoppingCart,
+  GraduationCap
+} from 'lucide-react';
+import { CASE_STUDIES } from "@/data/case-studies";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+export default function CaseStudies() {
+  const caseStudies = [
+    {
+      id: 1,
+      title: "AI-Powered Healthcare Analytics Transformation",
+      company: "MetroHealth Medical Center",
+      industry: "Healthcare",
+      challenge: "MetroHealth was struggling with inefficient patient data analysis, leading to delayed diagnoses and increased costs.",
+      solution: "Implemented our AI healthcare analytics platform with predictive modeling and real-time monitoring capabilities.",
+      results: [
+        "85% improvement in diagnostic accuracy",
+        "40% reduction in treatment costs",
+        "70% faster patient data analysis",
+        "60% improvement in patient outcomes"
+      ],
+      technologies: ["AI Analytics", "Machine Learning", "Predictive Modeling", "Real-time Monitoring"],
+      icon: Heart,
+      color: "from-red-500 to-pink-500",
+      featured: true
+    },
+    {
+      id: 2,
+      title: "Enterprise AI Automation Platform",
+      company: "GlobalTech Solutions",
+      industry: "Technology",
+      challenge: "GlobalTech needed to automate complex business processes and reduce operational costs across multiple departments.",
+      solution: "Deployed our autonomous business operations platform with AI workflow automation and intelligent decision-making.",
+      results: [
+        "300% increase in operational efficiency",
+        "50% reduction in operational costs",
+        "80% automation of repetitive tasks",
+        "Real-time business intelligence"
+      ],
+      technologies: ["AI Automation", "Workflow Optimization", "Business Intelligence", "Process Mining"],
+      icon: Brain,
+      color: "from-purple-500 to-pink-500",
+      featured: true
+    },
+    {
+      id: 3,
+      title: "Quantum Neural Network Implementation",
+      company: "Quantum Research Labs",
+      industry: "Research & Development",
+      challenge: "Quantum Research Labs required advanced neural network capabilities for complex scientific computations.",
+      solution: "Implemented our quantum neural network platform with hybrid quantum-classical algorithms.",
+      results: [
+        "1000x faster computation speed",
+        "90% improvement in accuracy",
+        "Real-time quantum processing",
+        "Advanced research capabilities"
+      ],
+      technologies: ["Quantum Computing", "Neural Networks", "Hybrid Algorithms", "Scientific Computing"],
+      icon: Cpu,
+      color: "from-blue-500 to-cyan-500",
+      featured: false
+    },
+    {
+      id: 4,
+      title: "Cybersecurity & Compliance Automation",
+      company: "SecureBank Financial",
+      industry: "Financial Services",
+      challenge: "SecureBank needed to automate SOC2 compliance processes and enhance threat detection capabilities.",
+      solution: "Deployed our SOC2 compliance automation platform with advanced cybersecurity monitoring.",
+      results: [
+        "95% automation of compliance tasks",
+        "99.9% threat detection accuracy",
+        "60% reduction in compliance costs",
+        "Real-time security monitoring"
+      ],
+      technologies: ["SOC2 Compliance", "Threat Detection", "Automation", "Security Monitoring"],
+      icon: Shield,
+      color: "from-green-500 to-emerald-500",
+      featured: false
+    },
+    {
+      id: 5,
+      title: "5G Enterprise Network Solutions",
+      company: "ConnectCorp Telecommunications",
+      industry: "Telecommunications",
+      challenge: "ConnectCorp needed to deploy high-speed 5G networks for enterprise clients with minimal downtime.",
+      solution: "Implemented our 5G enterprise solutions with intelligent network optimization and management.",
+      results: [
+        "10x faster network speeds",
+        "99.9% network uptime",
+        "50% reduction in deployment time",
+        "Advanced network analytics"
+      ],
+      technologies: ["5G Networks", "Network Optimization", "Enterprise Solutions", "Network Management"],
+      icon: Network,
+      color: "from-indigo-500 to-purple-500",
+      featured: false
+    },
+    {
+      id: 6,
+      title: "AI Marketing Automation Success",
+      company: "GrowthMarketing Inc",
+      industry: "Marketing",
+      challenge: "GrowthMarketing struggled with manual campaign management and poor ROI tracking across multiple channels.",
+      solution: "Deployed our AI marketing automation platform with intelligent campaign optimization.",
+      results: [
+        "300% increase in conversion rates",
+        "60% reduction in marketing costs",
+        "200% improvement in customer engagement",
+        "Real-time campaign optimization"
+      ],
+      technologies: ["AI Marketing", "Campaign Automation", "ROI Tracking", "Multi-channel Management"],
+      icon: Target,
+      color: "from-orange-500 to-yellow-500",
+      featured: false
+  Building2, 
+  Shield, 
+  Brain, 
+  Cloud, 
+  Database, 
+  Network, 
+  Zap,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,
+  Globe
+} from 'lucide-react';
+export default function CaseStudies() {
+  const caseStudies = [
+    {
+      id: 1,
+      title: "AI-Powered Business Intelligence Transformation",
+      company: "Fortune 500 Manufacturing Corp",
+      industry: "Manufacturing",
+      challenge: "Complex data silos and manual reporting processes causing 3-week delays in business insights",
+      solution: "Implemented AI-driven business intelligence platform with autonomous data processing",
+      results: [
+        "Reduced reporting time from 3 weeks to 24 hours",
+        "Increased data accuracy by 99.7%",
+        "Generated $2.3M in cost savings annually",
+        "Improved decision-making speed by 85%"
+      ],
+      technologies: ["AI Business Intelligence", "Data Automation", "Real-time Analytics"],
+      icon: Brain,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      id: 2,
+      title: "Quantum-Safe Cybersecurity Implementation",
+      company: "Global Financial Services Inc",
+      industry: "Financial Services",
+      challenge: "Traditional encryption methods vulnerable to quantum computing threats",
+      solution: "Deployed quantum-resistant security framework with AI-powered threat detection",
+      results: [
+        "Enhanced security posture by 300%",
+        "Reduced security incidents by 95%",
+        "Achieved SOC2 Type II compliance in 6 months",
+        "Protected $50B+ in financial assets"
+      ],
+      technologies: ["Quantum Cryptography", "AI Security", "SOC2 Compliance"],
+      icon: Shield,
+import React from 'react';
+import { SEOHead } from '../components/SEOHead';
+import { Link } from 'react-router-dom';
+import { 
+  Building, 
+  Users, 
+  TrendingUp, 
+  Shield, 
+  Brain, 
+  Cpu, 
+  Database, 
+  Network, 
+  Globe, 
+  Target,
+  ArrowRight,
+  Star,
+  CheckCircle,
+  Zap,
+  BarChart3
+} from 'lucide-react';
+const CaseStudies = () => {
+  const caseStudies = [
+    {
+      id: 1,
+      title: "Global Manufacturing Transformation",
+      company: "Fortune 500 Manufacturing Corp",
+      industry: "Manufacturing",
+      challenge: "Legacy systems causing 40% production delays and 25% quality issues",
+      solution: "AI-powered autonomous business operations platform with predictive maintenance",
+      results: [
+        "60% reduction in production downtime",
+        "35% improvement in product quality",
+        "$12M annual cost savings",
+        "Real-time monitoring of 10,000+ IoT devices"
+      ],
+      icon: Building,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      id: 2,
+      title: "Healthcare AI Revolution",
+      company: "Regional Healthcare Network",
+      industry: "Healthcare",
+      challenge: "Patient wait times averaging 3 hours, diagnostic accuracy below 80%",
+      solution: "AI autonomous research assistant with medical imaging analysis",
+      results: [
+        "85% reduction in patient wait times",
+        "95% diagnostic accuracy improvement",
+        "40% faster treatment planning",
+        "24/7 AI-powered patient monitoring"
+      ],
+      icon: Users,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      id: 3,
+      title: "Financial Services Security Overhaul",
+      company: "International Bank Group",
+      industry: "Financial Services",
+      challenge: "Increasing cyber threats, 15% false positive rate in fraud detection",
+      solution: "Quantum-secure cloud infrastructure with AI-powered threat detection",
+      results: [
+        "99.9% threat detection accuracy",
+        "Zero security breaches in 18 months",
+        "60% reduction in false positives",
+        "Real-time fraud prevention"
+      ],
+      icon: Shield,
+      color: "from-red-500 to-pink-500"
+    },
+    {
+      id: 4,
+      title: "Retail Digital Transformation",
+      company: "National Retail Chain",
+      industry: "Retail",
+      challenge: "Declining foot traffic, poor customer engagement, inventory inefficiencies",
+      solution: "AI-powered customer intelligence platform with predictive analytics",
+      results: [
+        "45% increase in customer engagement",
+        "30% improvement in inventory turnover",
+        "25% increase in average order value",
+        "Personalized shopping experiences"
+      ],
+      icon: Target,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      id: 5,
+      title: "Technology Company Innovation",
+      company: "Tech Startup Inc",
+      industry: "Technology",
+      challenge: "Manual development processes, 6-month product release cycles",
+      solution: "AI autonomous DevOps platform with automated testing and deployment",
+      results: [
+        "90% reduction in deployment time",
+        "80% fewer production bugs",
+        "Continuous integration and deployment",
+        "Automated quality assurance"
+      ],
+      icon: Cpu,
+      color: "from-yellow-500 to-orange-500"
+    },
+    {
+      id: 6,
+      title: "Government Digital Services",
+      company: "Federal Agency",
+      industry: "Government",
+      challenge: "Citizen service delays, paper-based processes, security vulnerabilities",
+      solution: "AI-powered digital transformation with blockchain security",
+      results: [
+        "70% faster citizen services",
+        "100% digital process adoption",
+        "Enhanced security compliance",
+        "Improved citizen satisfaction"
+      ],
+      icon: Globe,
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      id: 6,
+      title: "Quantum Neural Network Research Platform",
+      company: "Research University",
+      industry: "Education & Research",
+      challenge: "Limited computational power for complex neural network research",
+      solution: "Deployed quantum-enhanced neural network platform for advanced AI research",
+      results: [
+        "Accelerated research by 1000x",
+        "Enabled breakthrough discoveries in 6 months",
+        "Published 15 peer-reviewed papers",
+        "Secured $10M in research funding"
+      ],
+      technologies: ["Quantum Computing", "Neural Networks", "AI Research"],
+      icon: Brain,
+      color: "from-violet-500 to-purple-500"
+      icon: Building,
+      title: "Global Manufacturing Corporation",
+      industry: "Manufacturing",
+      challenge: "Complex supply chain optimization and real-time production monitoring across 15 facilities worldwide.",
+      solution: "Implemented AI-powered autonomous business operations platform with IoT integration and predictive analytics.",
+      results: [
+        "40% reduction in operational costs",
+        "60% improvement in production efficiency",
+        "Real-time visibility across all facilities",
+        "Predictive maintenance preventing 85% of downtime"
+      ],
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: Shield,
+      title: "Financial Services Enterprise",
+      industry: "Financial Services",
+      challenge: "Complex compliance requirements and security threats requiring 24/7 monitoring and automated response.",
+      solution: "Deployed SOC2 compliance automation platform with AI-powered threat detection and automated compliance reporting.",
+      results: [
+        "90% reduction in compliance audit time",
+        "Real-time security threat detection",
+        "Automated compliance reporting",
+        "Zero security breaches in 18 months"
+      ],
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: Brain,
+      title: "Healthcare Research Institute",
+      industry: "Healthcare",
+      challenge: "Massive data analysis requirements for drug discovery and clinical research across multiple research domains.",
+      solution: "Implemented AI autonomous research assistant with quantum neural network capabilities for accelerated research.",
+      results: [
+        "10x faster research timeline",
+        "Discovery of 3 new drug candidates",
+        "Automated literature review and analysis",
+        "95% accuracy in research findings"
+      ],
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: Network,
+      title: "Technology Startup",
+      industry: "Technology",
+      challenge: "Rapid scaling requirements with limited IT resources and need for enterprise-grade infrastructure.",
+      solution: "Deployed comprehensive IT infrastructure with AI-powered asset management and 5G enterprise solutions.",
+      results: [
+        "300% growth in user base",
+        "99.9% system uptime",
+        "Automated infrastructure scaling",
+        "50% reduction in IT operational costs"
+      ],
+      color: "from-orange-500 to-red-500"
+    },
+    {
+      icon: Database,
+      title: "Retail Chain",
+      industry: "Retail",
+      challenge: "Inventory management across 200+ locations with real-time demand forecasting and supply chain optimization.",
+      solution: "Implemented AI-powered business intelligence platform with autonomous operations and predictive analytics.",
+      results: [
+        "25% reduction in inventory costs",
+        "Improved customer satisfaction by 35%",
+        "Real-time demand forecasting",
+        "Automated supply chain optimization"
+      ],
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      icon: Cloud,
+      title: "Cloud Services Provider",
+      industry: "Cloud Services",
+      challenge: "Managing complex multi-cloud environments with security compliance and performance optimization requirements.",
+      solution: "Deployed comprehensive cloud management platform with AI-powered optimization and security automation.",
+      results: [
+        "40% improvement in cloud performance",
+        "Automated security compliance",
+        "Reduced cloud costs by 30%",
+        "99.99% service availability"
+      ],
+      color: "from-teal-500 to-cyan-500"
+      title: "Fortune 500 Manufacturing Transformation",
+      description: "How we helped a global manufacturing company achieve 40% efficiency improvement with AI-powered automation",
+      industry: "Manufacturing",
+      icon: Factory,
+      results: ["40% efficiency boost", "30% cost reduction", "99.9% uptime"],
+      challenge: "Complex legacy systems and manual processes slowing down production",
+      solution: "AI-powered automation platform with predictive maintenance",
+      impact: "Transformed from traditional manufacturing to Industry 4.0 leader"
+    },
+    {
+      title: "Healthcare AI Implementation",
+      description: "Revolutionizing patient care with AI-powered diagnostic tools and automated workflows",
+      industry: "Healthcare",
+      icon: Hospital,
+      results: ["50% faster diagnosis", "90% accuracy improvement", "24/7 availability"],
+      challenge: "Long wait times and diagnostic errors affecting patient outcomes",
+      solution: "AI diagnostic assistant with automated patient monitoring",
+      impact: "Improved patient outcomes and reduced healthcare costs"
+    },
+    {
+      title: "Financial Services Security",
+      description: "Bank-grade security implementation with SOC2 compliance automation",
+      industry: "Financial Services",
+      icon: Shield,
+      results: ["99.9% security uptime", "SOC2 compliance", "Zero security breaches"],
+      challenge: "Complex compliance requirements and evolving security threats",
+      solution: "Automated SOC2 compliance platform with AI threat detection",
+      impact: "Achieved industry-leading security posture and compliance"
+    },
+    {
+      title: "Retail Digital Transformation",
+      description: "Omnichannel retail transformation with AI-powered customer insights",
+      industry: "Retail",
+      icon: ShoppingCart,
+      results: ["35% sales increase", "60% customer satisfaction", "Real-time analytics"],
+      challenge: "Disconnected customer experiences across channels",
+      solution: "AI-powered omnichannel platform with predictive analytics",
+      impact: "Became market leader in digital retail innovation"
+  Target,
+  Award,
+  BarChart3,
+  Shield,
+  Zap,
+  Brain,
+  Globe,
+  ShoppingBag
+} from 'lucide-react';
+const CaseStudies = () => {
+  const caseStudies = [
+    {
+      id: 1,
+      title: "AI-Powered Healthcare Analytics Transformation",
+      client: "Regional Medical Center",
+      industry: "Healthcare",
+      challenge: "Manual patient data analysis was taking 40+ hours per week, leading to delayed treatment decisions and increased operational costs.",
+      solution: "Implemented AI-powered analytics platform with real-time patient monitoring and predictive diagnosis capabilities.",
+      results: [
+        "Reduced data analysis time by 85%",
+        "Improved patient outcomes by 23%",
+        "Saved $2.4M annually in operational costs",
+        "Enhanced staff productivity by 60%"
+      ],
+      metrics: {
+        efficiency: "85%",
+        costSavings: "$2.4M",
+        timeReduction: "40hrs → 6hrs",
+        roi: "340%"
+      },
+      technologies: ["AI Analytics", "Machine Learning", "Real-time Monitoring", "Predictive Modeling"],
+      duration: "6 months",
+      teamSize: "8 specialists"
+    },
+    {
+      id: 2,
+      title: "Quantum-Safe Cybersecurity Implementation",
+      client: "Global Financial Institution",
+      industry: "Financial Services",
+      challenge: "Traditional encryption methods were vulnerable to quantum computing threats, requiring immediate future-proofing of security infrastructure.",
+      solution: "Deployed quantum-resistant cryptography and AI-powered threat detection systems across all digital assets.",
+      results: [
+        "Enhanced security posture by 95%",
+        "Reduced security incidents by 78%",
+        "Achieved SOC2 Type II compliance",
+        "Future-proofed against quantum threats"
+      ],
+      metrics: {
+        securityImprovement: "95%",
+        incidentReduction: "78%",
+        compliance: "100%",
+        threatDetection: "99.9%"
+      },
+      technologies: ["Quantum Cryptography", "AI Security", "SOC2 Automation", "Threat Intelligence"],
+      duration: "8 months",
+      teamSize: "12 specialists"
+    },
+    {
+      id: 3,
+      title: "Autonomous Business Operations Platform",
+      client: "Manufacturing Corporation",
+      industry: "Manufacturing",
+      challenge: "Manual business processes were causing bottlenecks, errors, and inefficiencies across 15 departments.",
+      solution: "Built comprehensive autonomous business operations platform with AI-driven process automation and decision-making capabilities.",
+      results: [
+        "Automated 70% of business processes",
+        "Reduced operational errors by 92%",
+        "Increased productivity by 45%",
+        "Cut operational costs by $1.8M annually"
+      ],
+      metrics: {
+        automation: "70%",
+        errorReduction: "92%",
+        productivity: "45%",
+        costSavings: "$1.8M"
+      },
+      technologies: ["AI Automation", "Process Mining", "RPA", "Business Intelligence"],
+      duration: "10 months",
+      teamSize: "15 specialists"
+    },
+    {
+      id: 4,
+      title: "5G Enterprise Network Infrastructure",
+      client: "Technology Startup",
+      industry: "Technology",
+      challenge: "Legacy network infrastructure couldn't support growing data demands and IoT device proliferation.",
+      solution: "Designed and implemented enterprise-grade 5G network with edge computing capabilities and IoT integration.",
+      results: [
+        "Increased network speed by 20x",
+        "Reduced latency by 90%",
+        "Supported 10,000+ IoT devices",
+        "Enhanced scalability for future growth"
+      ],
+      metrics: {
+        speedIncrease: "20x",
+        latencyReduction: "90%",
+        deviceSupport: "10,000+",
+        uptime: "99.99%"
+      },
+      technologies: ["5G Networks", "Edge Computing", "IoT Integration", "Network Security"],
+      duration: "7 months",
+      teamSize: "10 specialists"
+    },
+    {
+      id: 5,
+      title: "AI-Powered IT Asset Management",
+      client: "Enterprise Corporation",
+      industry: "Technology",
+      challenge: "Manual IT asset tracking was inefficient, leading to lost equipment, compliance issues, and unnecessary purchases.",
+      solution: "Implemented AI-driven IT asset management system with automated tracking, predictive maintenance, and cost optimization.",
+      results: [
+        "Reduced asset loss by 95%",
+        "Optimized IT spending by 30%",
+        "Improved compliance reporting by 100%",
+        "Enhanced asset lifecycle management"
+      ],
+      metrics: {
+        assetRecovery: "95%",
+        costOptimization: "30%",
+        compliance: "100%",
+        efficiency: "85%"
+      },
+      technologies: ["AI Analytics", "IoT Sensors", "Predictive Maintenance", "Compliance Automation"],
+      duration: "5 months",
+      teamSize: "6 specialists"
+    }
+  ];
+  const industries = [
+import { 
+  Building, 
+  Users, 
+  TrendingUp, 
+  Shield, 
+  Cpu, 
+  Brain,
+  ArrowRight,
+  Star,
+  CheckCircle
+} from 'lucide-react';
+export default function CaseStudies() {
+  const caseStudies = [
+    {
+      id: 1,
+      title: "AI-Powered Digital Transformation for Fortune 500 Manufacturing",
+      company: "Global Manufacturing Corp",
+      industry: "Manufacturing",
+      challenge: "Legacy system modernization and AI integration for predictive maintenance",
+      solution: "Implemented AI-powered IoT platform with predictive analytics",
+      results: [
+        "30% reduction in downtime",
+        "25% increase in production efficiency",
+        "$2M annual cost savings"
+      ],
+      technologies: ["AI/ML", "IoT", "Cloud Computing", "Predictive Analytics"],
+      image: "/images/case-studies/manufacturing-ai.jpg",
+      category: "AI & Digital Transformation"
+    },
+    {
+      id: 2,
+      title: "Cybersecurity Overhaul for Healthcare Provider",
+      company: "Metro Health Systems",
+      industry: "Healthcare",
+      challenge: "Compliance with HIPAA and SOC2 requirements while improving security posture",
+      solution: "Comprehensive security assessment and automated compliance platform",
+      results: [
+        "100% SOC2 compliance achieved",
+        "Zero security breaches in 18 months",
+        "40% reduction in security incidents"
+      ],
+      technologies: ["SOC2 Automation", "Threat Detection", "Compliance Management"],
+      image: "/images/case-studies/healthcare-security.jpg",
+      category: "Cybersecurity & Compliance"
+    },
+    {
+      id: 3,
+      title: "Quantum Computing Implementation for Financial Services",
+      company: "Quantum Finance Solutions",
+      industry: "Financial Services",
+      challenge: "Optimization of complex financial modeling and risk assessment",
+      solution: "Quantum neural network platform for portfolio optimization",
+      results: [
+        "50% faster risk calculations",
+        "15% improvement in portfolio returns",
+        "Real-time market analysis capabilities"
+      ],
+      technologies: ["Quantum Computing", "Neural Networks", "Financial Modeling"],
+      image: "/images/case-studies/quantum-finance.jpg",
+      category: "Quantum Technology"
+    },
+    {
+      id: 4,
+      title: "5G Enterprise Network for Smart City Infrastructure",
+      company: "Smart City Initiative",
+      industry: "Government & Infrastructure",
+      challenge: "High-speed connectivity for IoT devices and smart city applications",
+      solution: "Private 5G network with edge computing capabilities",
+      results: [
+        "10x faster data transmission",
+        "99.9% network uptime",
+        "Support for 100,000+ IoT devices"
+      ],
+      technologies: ["5G Networks", "Edge Computing", "IoT", "Network Optimization"],
+      image: "/images/case-studies/5g-smart-city.jpg",
+      category: "5G & Infrastructure"
+    },
+    {
+      id: 5,
+      title: "Micro SAAS Platform for Small Business Automation",
+      company: "Local Business Alliance",
+      industry: "Retail & Services",
+      challenge: "Affordable automation solutions for small businesses",
+      solution: "Custom micro SAAS platform with AI-powered automation",
+      results: [
+        "60% reduction in manual processes",
+        "25% increase in customer satisfaction",
+        "ROI achieved in 6 months"
+      ],
+      technologies: ["Micro SAAS", "AI Automation", "Business Process Automation"],
+      image: "/images/case-studies/micro-saas.jpg",
+      category: "Micro SAAS Solutions"
+    },
+    {
+      id: 6,
+      title: "AI Research Assistant for Academic Institution",
+      company: "Tech University Research Center",
+      industry: "Education & Research",
+      challenge: "Accelerating research processes and collaboration across departments",
+      solution: "AI-powered research assistant with autonomous capabilities",
+      results: [
+        "40% faster research completion",
+        "Improved cross-department collaboration",
+        "Enhanced research quality and reproducibility"
+      ],
+      technologies: ["AI Research", "Natural Language Processing", "Collaboration Tools"],
+      image: "/images/case-studies/ai-research.jpg",
+      category: "AI Research & Development"
+    }
+  ];
+  const categories = [
+    "All",
+    "AI & Digital Transformation",
+    "Cybersecurity & Compliance",
+    "Quantum Technology",
+    "5G & Infrastructure",
+    "Micro SAAS Solutions",
+    "AI Research & Development"
+  ];
+import React from 'react';
+import { motion } from 'framer-motion';
+import { CheckCircle, TrendingUp, Users, DollarSign, Clock, Target } from 'lucide-react';
+const CaseStudies = () => {
+  const caseStudies = [
+    {
+      id: 1,
+      title: "AI-Powered Healthcare Analytics Transformation",
+      client: "Regional Medical Center",
+      industry: "Healthcare",
+      challenge: "Complex patient data analysis and predictive modeling for improved care outcomes",
+      solution: "Implemented AI-powered analytics platform with machine learning algorithms for patient risk assessment",
+      results: [
+        "30% improvement in patient outcome predictions",
+        "25% reduction in readmission rates",
+        "40% faster diagnosis turnaround time",
+        "$2.5M annual cost savings"
+      ],
+      metrics: {
+        roi: "450%",
+        timeframe: "18 months",
+        teamSize: "8 specialists"
+      }
+    },
+    {
+      id: 2,
+      title: "Quantum Neural Network for Financial Risk Assessment",
+      client: "Global Investment Bank",
+      industry: "Financial Services",
+      challenge: "Complex market risk modeling requiring quantum-level computational power",
+      solution: "Deployed quantum neural network platform for real-time risk assessment and portfolio optimization",
+      results: [
+        "60% faster risk calculations",
+        "35% improvement in prediction accuracy",
+        "Real-time portfolio rebalancing",
+        "$15M additional trading profits"
+      ],
+      metrics: {
+        roi: "320%",
+        timeframe: "24 months",
+        teamSize: "12 quantum specialists"
+      }
+    },
+    {
+      id: 3,
+      title: "Autonomous Business Operations Platform",
+      client: "Manufacturing Conglomerate",
+      industry: "Manufacturing",
+      challenge: "Manual business processes causing delays and inefficiencies across 15 facilities",
+      solution: "Implemented autonomous business operations platform with AI-driven process automation",
+      results: [
+        "70% reduction in manual processing time",
+        "45% improvement in operational efficiency",
+        "24/7 autonomous operations",
+        "$8M annual operational cost savings"
+      ],
+      metrics: {
+        roi: "280%",
+        timeframe: "12 months",
+        teamSize: "15 automation experts"
+      }
+    },
+    {
+      id: 4,
+      title: "SOC2 Compliance Automation Suite",
+      client: "SaaS Technology Company",
+      industry: "Technology",
+      challenge: "Manual compliance processes taking 3+ months annually with high error rates",
+      solution: "Deployed automated SOC2 compliance platform with continuous monitoring and reporting",
+      results: [
+        "90% reduction in compliance preparation time",
+        "100% accuracy in compliance reporting",
+        "Real-time compliance monitoring",
+        "Zero compliance violations in 2 years"
+      ],
+      metrics: {
+        roi: "600%",
+        timeframe: "6 months",
+        teamSize: "6 compliance specialists"
+      }
+    },
+    {
+      id: 5,
+      title: "5G Enterprise Network Infrastructure",
+      client: "Smart City Initiative",
+      industry: "Government",
+      challenge: "Legacy network infrastructure unable to support IoT devices and smart city applications",
+      solution: "Designed and deployed enterprise-grade 5G network with edge computing capabilities",
+      results: [
+        "10x faster network speeds",
+        "Support for 100,000+ IoT devices",
+        "99.99% network uptime",
+        "40% reduction in infrastructure costs"
+      ],
+      metrics: {
+        roi: "380%",
+        timeframe: "36 months",
+        teamSize: "25 network engineers"
+import React from 'react';
+import { motion } from 'framer-motion';
+import { CheckCircle, Star, TrendingUp, Users, Globe, Shield } from 'lucide-react';
+export default function CaseStudies() {
+  const caseStudies = [
+    {
+      id: 1,
+      title: "AI-Powered Digital Transformation for Fortune 500 Manufacturing",
+      company: "Global Manufacturing Corp",
+      industry: "Manufacturing",
+      challenge: "Legacy systems causing 40% operational inefficiency and $2M annual losses",
+      solution: "Implemented AI-autonomous business operations platform with predictive analytics",
+      results: [
+        "65% reduction in operational costs",
+        "3x faster decision-making processes",
+        "$5M annual savings achieved",
+        "99.9% system uptime maintained"
+      ],
+      metrics: {
+        roi: "450%",
+        timeframe: "18 months",
+        teamSize: "25+ stakeholders"
+      }
+    },
+    {
+      id: 2,
+      title: "Quantum Neural Network Implementation for Financial Services",
+      company: "Quantum Finance Solutions",
+      industry: "Financial Services",
+      challenge: "Complex risk modeling taking weeks to process, limiting trading opportunities",
+      solution: "Deployed quantum neural network platform for real-time risk assessment",
+      results: [
+        "1000x faster risk calculations",
+        "Real-time trading decisions enabled",
+        "Risk prediction accuracy improved by 35%",
+        "Trading volume increased by 200%"
+      ],
+      metrics: {
+        roi: "320%",
+        timeframe: "12 months",
+        teamSize: "15+ developers"
+      }
+    },
+    {
+      id: 3,
+      title: "AI-Autonomous Research Assistant for Pharmaceutical R&D",
+      company: "BioTech Innovations Inc",
+      industry: "Healthcare & Life Sciences",
+      challenge: "Drug discovery process taking 5+ years with 90% failure rate",
+      solution: "Integrated AI-autonomous research assistant with machine learning algorithms",
+      results: [
+        "Drug discovery timeline reduced by 60%",
+        "Success rate improved to 25%",
+        "Research costs reduced by $50M annually",
+        "Patent applications increased by 300%"
+      ],
+      metrics: {
+        roi: "280%",
+        timeframe: "24 months",
+        teamSize: "40+ researchers"
+      }
+    },
+    {
+      id: 4,
+      title: "Cybersecurity & SOC2 Compliance Automation",
+      company: "SecureTech Enterprises",
+      industry: "Technology",
+      challenge: "Manual compliance processes taking 6+ months annually with security gaps",
+      solution: "Implemented automated SOC2 compliance platform with AI-powered security monitoring",
+      results: [
+        "Compliance time reduced to 2 weeks",
+        "Security incidents decreased by 80%",
+        "Audit preparation automated 95%",
+        "Annual compliance costs reduced by 70%"
+      ],
+      metrics: {
+        roi: "380%",
+        timeframe: "9 months",
+        teamSize: "20+ security professionals"
+      }
+    },
+    {
+      id: 5,
+      title: "5G Enterprise Solutions for Smart City Infrastructure",
+      company: "SmartCity Municipal Corp",
+      industry: "Government & Infrastructure",
+      challenge: "Outdated communication infrastructure limiting smart city capabilities",
+      solution: "Deployed comprehensive 5G enterprise solution with IoT integration",
+      results: [
+        "City-wide connectivity improved by 500%",
+        "Smart traffic management reduced congestion by 40%",
+        "Emergency response time improved by 60%",
+        "Energy efficiency increased by 35%"
+      ],
+      metrics: {
+        roi: "520%",
+        timeframe: "30 months",
+        teamSize: "50+ engineers"
+      }
+    { name: "Healthcare", icon: Heart, count: 12 },
+    { name: "Financial Services", icon: DollarSign, count: 8 },
+    { name: "Technology", icon: Cpu, count: 15 },
+    { name: "Manufacturing", icon: Building, count: 6 },
+    { name: "Retail", icon: ShoppingCart, count: 4 },
+    { name: "Education", icon: GraduationCap, count: 3 }
+    { name: "Manufacturing", count: 12, icon: Building2 },
+    { name: "Financial Services", count: 8, icon: Shield },
+    { name: "Healthcare", count: 15, icon: Users },
+    { name: "Technology", count: 20, icon: Globe },
+    { name: "Retail", count: 6, icon: TrendingUp },
+    { name: "Education", count: 4, icon: Brain }
+    { name: "Manufacturing", count: 15, icon: Building },
+    { name: "Healthcare", count: 12, icon: Users },
+    { name: "Financial Services", count: 18, icon: Shield },
+    { name: "Retail", count: 9, icon: Target },
+    { name: "Technology", count: 22, icon: Cpu },
+    { name: "Government", count: 8, icon: Globe },
+    { name: "Energy", count: 6, icon: Zap },
+    { name: "Transportation", count: 11, icon: Network }
+    "Manufacturing",
+    "Financial Services",
+    "Healthcare",
+    "Technology",
+    "Retail",
+    "Cloud Services",
+    "Education",
+    "Government",
+    "Energy",
+    "Transportation"
+    { name: "Healthcare", icon: Users, count: 12, color: "from-blue-500 to-cyan-500" },
+    { name: "Financial Services", icon: DollarSign, count: 8, color: "from-green-500 to-emerald-500" },
+    { name: "Manufacturing", icon: Target, count: 15, color: "from-orange-500 to-red-500" },
+    { name: "Technology", icon: Zap, count: 20, color: "from-purple-500 to-pink-500" },
+    { name: "Retail", icon: ShoppingBag, count: 6, color: "from-indigo-500 to-blue-500" },
+    { name: "Government", icon: Shield, count: 4, color: "from-gray-500 to-slate-500" }
+  ];
+  const metrics = [
+    {
+      icon: DollarSign,
+      title: "Cost Reduction",
+      value: "40%",
+      description: "Average cost savings across all implementations"
+    },
+    {
+      icon: ChartBar,
+      title: "Efficiency Gain",
+      value: "60%",
+      description: "Average improvement in operational efficiency"
+    },
+    {
+      icon: Clock,
+      title: "Time Savings",
+      value: "10x",
+      description: "Average acceleration in project timelines"
+    },
+    {
+      icon: Award,
+      title: "Success Rate",
+      value: "98%",
+      description: "Successful project completion rate"
+    }
+  ];
+  const testimonials = [
+    {
+      quote: "Zion Tech Group's AI solutions transformed our healthcare operations completely. The results exceeded our expectations.",
+      author: "Dr. Sarah Johnson",
+      position: "CTO, MetroHealth Medical Center",
+      rating: 5
+    },
+    {
+      quote: "The autonomous business platform reduced our operational costs by 50% while improving efficiency by 300%.",
+      author: "Michael Chen",
+      position: "CEO, GlobalTech Solutions",
+      rating: 5
+    },
+    {
+      quote: "Implementing their quantum neural network platform accelerated our research capabilities by 1000x.",
+      author: "Dr. Robert Kim",
+      position: "Research Director, Quantum Research Labs",
+      rating: 5
+    }
+  ];
+      }
+    }
+  ];
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+import { Link } from 'react-router-dom';
+import { ArrowRight, Building2, TrendingUp, Users, Award, Clock, DollarSign, CheckCircle, Star, Zap, Shield, Globe, Target, Brain, Rocket } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+const CaseStudies = () => {
+  const caseStudies = [
+    {
+      id: 1,
+      title: "Global Manufacturing Company Digital Transformation",
+      client: "Fortune 500 Manufacturing Corporation",
+      industry: "Manufacturing",
+      challenge: "Legacy systems integration and real-time production monitoring",
+      solution: "AI-powered IoT platform with predictive maintenance",
+      results: [
+        "35% reduction in downtime",
+        "28% increase in production efficiency",
+        "$2.3M annual cost savings",
+        "99.8% system uptime achieved"
+      ],
+      technologies: ["AI/ML", "IoT", "Cloud Computing", "Predictive Analytics"],
+      duration: "8 months",
+      teamSize: "12 specialists",
+      image: "/api/placeholder/600/400",
+      category: "Digital Transformation",
+      icon: Building2,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      id: 2,
+      title: "Healthcare Network Cybersecurity Enhancement",
+      client: "Regional Healthcare Network",
+      industry: "Healthcare",
+      challenge: "Protecting patient data and ensuring HIPAA compliance",
+      solution: "Zero-trust security architecture with AI threat detection",
+      results: [
+        "100% HIPAA compliance achieved",
+        "Zero security breaches in 18 months",
+        "45% faster threat response",
+        "Risk assessment improved by 60%"
+      ],
+      technologies: ["Cybersecurity", "AI Threat Detection", "Zero Trust", "Compliance"],
+      duration: "6 months",
+      teamSize: "8 specialists",
+      image: "/api/placeholder/600/400",
+      category: "Cybersecurity",
+      icon: Shield,
+      color: "from-red-500 to-pink-500"
+    },
+    {
+      id: 3,
+      title: "Financial Services AI Trading Platform",
+      client: "Mid-Market Investment Firm",
+      industry: "Financial Services",
+      challenge: "Manual trading processes and market analysis inefficiencies",
+      solution: "AI-powered algorithmic trading and risk management platform",
+      results: [
+        "40% increase in trading accuracy",
+        "67% faster market analysis",
+        "$5.1M increase in annual revenue",
+        "Risk exposure reduced by 32%"
+      ],
+      technologies: ["AI/ML", "Algorithmic Trading", "Risk Management", "Real-time Analytics"],
+      duration: "10 months",
+      teamSize: "15 specialists",
+      image: "/api/placeholder/600/400",
+      category: "AI Solutions",
+      icon: Brain,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      id: 4,
+      title: "Retail Chain Inventory Optimization",
+      client: "National Retail Chain",
+      industry: "Retail",
+      challenge: "Inventory management across 200+ locations",
+      solution: "AI-driven demand forecasting and automated inventory system",
+      results: [
+        "25% reduction in inventory costs",
+        "90% improvement in stock accuracy",
+        "15% increase in customer satisfaction",
+        "30% reduction in out-of-stock incidents"
+      ],
+      technologies: ["AI Forecasting", "Inventory Management", "Supply Chain", "Analytics"],
+      duration: "7 months",
+      teamSize: "10 specialists",
+      image: "/api/placeholder/600/400",
+      category: "Supply Chain",
+      icon: Target,
+      color: "from-purple-500 to-indigo-500"
+    },
+    {
+      id: 5,
+      title: "Smart City Infrastructure Platform",
+      client: "Metropolitan City Government",
+      industry: "Government",
+      challenge: "Modernizing city infrastructure and improving citizen services",
+      solution: "Integrated IoT platform for traffic, utilities, and public services",
+      results: [
+        "22% reduction in traffic congestion",
+        "18% decrease in energy consumption",
+        "95% citizen satisfaction rating",
+        "40% faster emergency response"
+      ],
+      technologies: ["IoT", "Smart Infrastructure", "Data Analytics", "Public Services"],
+      duration: "14 months",
+      teamSize: "20 specialists",
+      image: "/api/placeholder/600/400",
+      category: "Smart Cities",
+      icon: Globe,
+      color: "from-orange-500 to-yellow-500"
+    },
+    {
+      id: 6,
+      title: "Startup Quantum Computing Research Platform",
+      client: "Quantum Technology Startup",
+      industry: "Technology",
+      challenge: "Building scalable quantum computing research infrastructure",
+      solution: "Hybrid quantum-classical computing platform with AI optimization",
+      results: [
+        "50x improvement in computation speed",
+        "3 research breakthroughs achieved",
+        "$15M Series A funding secured",
+        "5 patent applications filed"
+      ],
+      technologies: ["Quantum Computing", "AI Optimization", "Research Platform", "Innovation"],
+      duration: "12 months",
+      teamSize: "18 specialists",
+      image: "/api/placeholder/600/400",
+      category: "Quantum Technology",
+      icon: Rocket,
+      color: "from-pink-500 to-rose-500"
+    }
+  ];
+  const metrics = [
+    { icon: Building2, value: "150+", label: "Projects Completed" },
+    { icon: Users, value: "98%", label: "Client Satisfaction" },
+    { icon: DollarSign, value: "$50M+", label: "Cost Savings Generated" },
+    { icon: Award, value: "25+", label: "Industry Awards" }
+  ];
+  const testimonials = [
+    {
+      quote: "Zion Tech Group transformed our manufacturing operations with their AI-powered solutions. The results exceeded our expectations.",
+      author: "Sarah Johnson",
+      position: "CTO, Global Manufacturing Corp",
+      company: "Fortune 500 Company"
+    },
+    {
+      quote: "Their cybersecurity expertise helped us achieve complete HIPAA compliance while improving our operational efficiency.",
+      author: "Dr. Michael Chen",
+      position: "Chief Information Officer",
+      company: "Regional Healthcare Network"
+    },
+    {
+      quote: "The AI trading platform delivered exceptional results and significantly improved our market performance.",
+      author: "Robert Williams",
+      position: "Head of Technology",
+      company: "Investment Firm"
+    }
+    <>
+      <Helmet>
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Explore real-world case studies and success stories from Zion Tech Group clients. See how we've helped businesses transform through technology." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+        {/* Hero Section */}
+        <section className="relative pt-32 pb-20 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4">
+                <Building className="w-8 h-8 text-white" />
+              </div>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Success Stories
+              <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                & Case Studies
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Discover how our AI-powered solutions have transformed businesses across industries. 
+              Real results, measurable impact, and proven success stories from organizations 
+              that trusted Zion Tech Group.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-500 hover:to-orange-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/25">
+                View All Case Studies
+              </button>
+              <button className="px-8 py-4 border-2 border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/10 font-semibold rounded-xl transition-all duration-300">
+                Share Your Story
+              </button>
+            </div>
+          </div>
+        </section>
+        {/* Metrics Section */}
+        <section className="py-20 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Proven Results
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our solutions deliver measurable, impactful results across all industries 
+                and business sizes.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {metrics.map((metric, index) => {
+                const Icon = metric.icon;
+                return (
+                  <div key={index} className="group">
+                    <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-full hover:border-yellow-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
+                      <div className="w-16 h-16 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                        <Icon className="w-8 h-8 text-yellow-400" />
+                      </div>
+                      <div className="text-4xl font-bold text-yellow-400 mb-2">{metric.value}</div>
+                      <h3 className="text-xl font-bold text-white mb-2">{metric.title}</h3>
+                      <p className="text-gray-300 text-sm">{metric.description}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+        {/* Case Studies Section */}
+        <section className="py-20 relative bg-gray-900/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Featured Case Studies
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Explore detailed case studies showcasing real implementations, 
+                challenges overcome, and measurable results achieved.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {caseStudies.map((study, index) => {
+                const Icon = study.icon;
+                return (
+                  <div key={index} className="group">
+                    <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-600/50 rounded-2xl p-8 h-full hover:border-yellow-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                      <div className="flex items-center justify-between mb-6">
+                        <div className={`w-16 h-16 bg-gradient-to-r ${study.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                          <Icon className="w-8 h-8 text-white" />
+                        </div>
+                        <span className="text-sm text-gray-400 bg-gray-700/50 px-3 py-1 rounded-full">
+                          {study.industry}
+                        </span>
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-4">{study.title}</h3>
+                      <div className="space-y-4 mb-6">
+                        <div>
+                          <h4 className="text-sm font-semibold text-yellow-400 mb-1">Challenge</h4>
+                          <p className="text-gray-300 text-sm">{study.challenge}</p>
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-semibold text-cyan-400 mb-1">Solution</h4>
+                          <p className="text-gray-300 text-sm">{study.solution}</p>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold text-green-400 mb-2">Results</h4>
+                        <ul className="space-y-1">
+                          {study.results.map((result, resultIndex) => (
+                            <li key={resultIndex} className="flex items-start space-x-2">
+                              <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                              <span className="text-gray-300 text-sm">{result}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+        {/* Industries Section */}
+        <section className="py-20 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Industries We Serve
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our solutions have been successfully implemented across diverse industries, 
+                delivering measurable results and transformative impact.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+              {industries.map((industry, index) => (
+                <div key={index} className="group">
+                  <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 h-full hover:border-yellow-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
+                    <h3 className="text-lg font-semibold text-white group-hover:text-yellow-400 transition-colors duration-300">
+                      {industry}
+                    </h3>
+                  </div>
+                </div>
+              ))}
+      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">
+              Success Stories
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Discover how organizations across industries have transformed their operations 
+              with Zion Tech Group's AI-powered solutions. Real results, real impact.
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="mb-8">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
+              <Award className="w-4 h-4 mr-2" />
+              Success Stories & Case Studies
+            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+              Real Results from
+              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
+                {" "}Real Clients
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Discover how leading organizations across industries have transformed their operations 
+              with Zion Tech Group's AI-powered solutions. See the measurable impact and real ROI.
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Success Stories That
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                {" "}Transform Industries
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Discover how leading organizations leverage Zion Tech Group's cutting-edge AI and quantum technologies 
+              to achieve breakthrough results and competitive advantages.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Start Your Success Story
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+              >
+                Explore Our Services
+              </Link>
+            </div>
+import React from 'react';
+import { 
+  Building, 
+  TrendingUp, 
+  Users, 
+  Clock, 
+  ArrowRight,
+  Filter,
+  Search,
+  Star,
+  CheckCircle,
+  BarChart3
+} from 'lucide-react';
+export default function CaseStudies() {
+  const caseStudies = [
+    {
+      id: 1,
+      title: 'AI-Powered Customer Service Transformation',
+      company: 'TechCorp Solutions',
+      industry: 'Technology',
+      challenge: 'High customer service costs and long response times',
+      solution: 'Implemented AI-powered chatbots and automated ticket routing',
+      results: [
+        'Reduced response time by 85%',
+        'Cut customer service costs by 60%',
+        'Improved customer satisfaction to 94%'
+      ],
+      duration: '3 months',
+      teamSize: '8 people',
+      technologies: ['AI/ML', 'NLP', 'Automation'],
+      image: '🤖',
+      featured: true
+    },
+    {
+      id: 2,
+      title: 'Quantum-Safe Cybersecurity Implementation',
+      company: 'GlobalBank International',
+      industry: 'Financial Services',
+      challenge: 'Vulnerability to quantum computing attacks',
+      solution: 'Deployed quantum-resistant cryptography and security protocols',
+      results: [
+        'Enhanced security against future threats',
+        'Compliant with new regulatory requirements',
+        'Zero security breaches in 18 months'
+      ],
+      duration: '6 months',
+      teamSize: '12 people',
+      technologies: ['Quantum Cryptography', 'Security', 'Compliance'],
+      image: '🔒',
+      featured: false
+    },
+    {
+      id: 3,
+      title: 'Cloud Infrastructure Migration',
+      company: 'ManufacturePro Inc.',
+      industry: 'Manufacturing',
+      challenge: 'Outdated on-premise systems limiting scalability',
+      solution: 'Migrated to hybrid cloud infrastructure with automation',
+      results: [
+        'Increased system performance by 300%',
+        'Reduced infrastructure costs by 40%',
+        'Enabled 24/7 global operations'
+      ],
+      duration: '8 months',
+      teamSize: '15 people',
+      technologies: ['Cloud Migration', 'DevOps', 'Automation'],
+      image: '☁️',
+      featured: false
+    },
+    {
+      id: 4,
+      title: 'AI Business Intelligence Platform',
+      company: 'RetailChain Corp',
+      industry: 'Retail',
+      challenge: 'Poor data visibility and decision-making capabilities',
+      solution: 'Built comprehensive AI-powered BI platform',
+      results: [
+        'Improved decision-making speed by 70%',
+        'Increased revenue by 25%',
+        'Enhanced inventory optimization'
+      ],
+      duration: '5 months',
+      teamSize: '10 people',
+      technologies: ['AI/ML', 'Data Analytics', 'Business Intelligence'],
+      image: '📊',
+      featured: false
+    },
+    {
+      id: 5,
+      title: 'Autonomous Manufacturing Systems',
+      company: 'AutoTech Industries',
+      industry: 'Automotive',
+      challenge: 'Production inefficiencies and quality control issues',
+      solution: 'Implemented AI-driven autonomous manufacturing systems',
+      results: [
+        'Increased production efficiency by 45%',
+        'Reduced defects by 80%',
+        'Lowered operational costs by 35%'
+      ],
+      duration: '10 months',
+      teamSize: '20 people',
+      technologies: ['AI/ML', 'IoT', 'Robotics'],
+      image: '🏭',
+      featured: false
+    },
+    {
+      id: 6,
+      title: 'Healthcare Data Analytics Platform',
+      company: 'MediCare Systems',
+      industry: 'Healthcare',
+      challenge: 'Fragmented patient data and poor insights',
+      solution: 'Developed unified healthcare analytics platform',
+      results: [
+        'Improved patient outcomes by 30%',
+        'Reduced administrative overhead by 50%',
+        'Enhanced diagnostic accuracy'
+      ],
+      duration: '7 months',
+      teamSize: '18 people',
+      technologies: ['Data Analytics', 'Healthcare IT', 'AI/ML'],
+      image: '🏥',
+      featured: false
+    }
+  ];
+  const industries = [
+    'All Industries',
+    'Technology',
+    'Financial Services',
+    'Manufacturing',
+    'Retail',
+    'Healthcare',
+    'Government'
+  ];
+  const technologies = [
+    'All Technologies',
+    'AI/ML',
+    'Quantum Technology',
+    'Cybersecurity',
+    'Cloud Computing',
+    'Data Analytics',
+    'IoT'
+  ];
+  CheckCircle, 
+  TrendingUp, 
+  Users, 
+  Building, 
+  Shield, 
+  Brain,
+  Zap,
+  Globe,
+  Award,
+  ArrowRight
+} from 'lucide-react';
+const CaseStudies = () => {
+  const caseStudies = [
+    {
+      id: 1,
+      title: "AI-Powered Healthcare Analytics Transformation",
+      client: "Regional Medical Center",
+      industry: "Healthcare",
+      challenge: "Complex patient data analysis and predictive modeling for improved care outcomes",
+      solution: "Implemented AI-powered analytics platform with machine learning algorithms for patient risk assessment",
+      results: [
+        "40% improvement in early disease detection",
+        "25% reduction in readmission rates",
+        "30% faster diagnosis times",
+        "$2.5M annual cost savings"
+      ],
+      technologies: ["AI/ML", "Healthcare Analytics", "Predictive Modeling", "Data Integration"],
+      image: "/images/case-studies/healthcare-analytics.jpg",
+      category: "AI Solutions"
+    },
+    {
+      id: 2,
+      title: "Quantum-Safe Cybersecurity Implementation",
+      client: "Global Financial Institution",
+      industry: "Financial Services",
+      challenge: "Need for future-proof cybersecurity against quantum computing threats",
+      solution: "Deployed quantum-resistant encryption and advanced threat detection systems",
+      results: [
+        "100% quantum-safe encryption coverage",
+        "60% reduction in security incidents",
+        "99.99% uptime for security systems",
+        "Compliance with international security standards"
+      ],
+      technologies: ["Quantum Cryptography", "Advanced Threat Detection", "Zero-Trust Architecture", "Compliance Automation"],
+      image: "/images/case-studies/quantum-security.jpg",
+      category: "Cybersecurity"
+    },
+    {
+      id: 3,
+      title: "Autonomous Business Operations Platform",
+      client: "Manufacturing Corporation",
+      industry: "Manufacturing",
+      challenge: "Manual business processes causing delays and inefficiencies in operations",
+      solution: "Implemented AI-powered autonomous business operations platform with intelligent automation",
+      results: [
+        "70% reduction in manual processing time",
+        "45% improvement in operational efficiency",
+        "90% automation of routine tasks",
+        "$3.2M annual operational cost savings"
+      ],
+      technologies: ["AI Automation", "Process Optimization", "Business Intelligence", "Workflow Management"],
+      image: "/images/case-studies/autonomous-operations.jpg",
+      category: "Business Operations"
+    },
+    {
+      id: 4,
+      title: "5G Enterprise Network Infrastructure",
+      client: "Technology Company",
+      industry: "Technology",
+      challenge: "Legacy network infrastructure limiting growth and innovation capabilities",
+      solution: "Designed and deployed enterprise-grade 5G network with edge computing capabilities",
+      results: [
+        "10x faster network speeds",
+        "99.9% network reliability",
+        "50% reduction in latency",
+        "Support for 10,000+ concurrent users"
+      ],
+      technologies: ["5G Networks", "Edge Computing", "Network Security", "Infrastructure Management"],
+      image: "/images/case-studies/5g-network.jpg",
+      category: "Infrastructure"
+    },
+    {
+      id: 5,
+      title: "AI-Powered IT Asset Management",
+      client: "Enterprise Corporation",
+      industry: "Technology",
+      challenge: "Inefficient IT asset tracking and management leading to cost overruns",
+      solution: "Implemented intelligent IT asset management system with predictive analytics",
+      results: [
+        "80% improvement in asset utilization",
+        "30% reduction in IT costs",
+        "Real-time asset tracking and monitoring",
+        "Automated compliance reporting"
+      ],
+      technologies: ["AI Analytics", "Asset Management", "Predictive Maintenance", "Compliance Automation"],
+      image: "/images/case-studies/it-asset-management.jpg",
+      category: "IT Management"
+    },
+    {
+      id: 6,
+      title: "SOC2 Compliance Automation",
+      client: "SaaS Startup",
+      industry: "Technology",
+      challenge: "Manual compliance processes consuming significant time and resources",
+      solution: "Automated SOC2 compliance framework with continuous monitoring and reporting",
+      results: [
+        "95% automation of compliance processes",
+        "60% reduction in audit preparation time",
+        "100% compliance score achievement",
+        "Real-time compliance monitoring"
+      ],
+      technologies: ["Compliance Automation", "Security Monitoring", "Audit Management", "Risk Assessment"],
+      image: "/images/case-studies/soc2-compliance.jpg",
+      category: "Compliance"
+    }
+  ];
+  const categories = ["All", "AI Solutions", "Cybersecurity", "Business Operations", "Infrastructure", "IT Management", "Compliance"];
+  const [selectedCategory, setSelectedCategory] = React.useState("All");
+  const filteredCaseStudies = selectedCategory === "All" 
+    ? caseStudies 
+    : caseStudies.filter(study => study.category === selectedCategory);
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
+      {/* Hero Section */}
+        </div>
+      </section>
+    </div>
+  );
+};
+export default CaseStudies;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {caseStudies.map((study) => (
+            <div
+              key={study.id}
+              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+            >
+              {/* Category Badge */}
+              <div className="mb-4">
+                <span className="inline-block px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-medium rounded-full">
+                  {study.category}
+                </span>
+              </div>
+              {/* Company Info */}
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">
+                  <Building className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white">{study.company}</h3>
+                  <p className="text-sm text-gray-400">{study.industry}</p>
+                </div>
+              </div>
+              {/* Title */}
+              <h4 className="text-xl font-bold text-white mb-4 leading-tight">
+                {study.title}
+              </h4>
+              {/* Challenge */}
+              <div className="mb-4">
+                <h5 className="text-sm font-semibold text-cyan-400 mb-2">Challenge</h5>
+                <p className="text-gray-300 text-sm">{study.challenge}</p>
+              </div>
+              {/* Solution */}
+              <div className="mb-4">
+                <h5 className="text-sm font-semibold text-cyan-400 mb-2">Solution</h5>
+                <p className="text-gray-300 text-sm">{study.solution}</p>
+              </div>
+              {/* Results */}
+              <div className="mb-4">
+                <h5 className="text-sm font-semibold text-cyan-400 mb-2">Results</h5>
+                <ul className="space-y-1">
+                  {study.results.map((result, index) => (
+                    <li key={index} className="flex items-center text-gray-300 text-sm">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {result}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              {/* Technologies */}
+              <div className="mb-6">
+                <h5 className="text-sm font-semibold text-cyan-400 mb-2">Technologies Used</h5>
+                <div className="flex flex-wrap gap-2">
+                  {study.technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              {/* CTA Button */}
+              <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
+                View Full Case Study
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* CTA Section */}
+      <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Write Your Success Story?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Let's discuss how our solutions can transform your business and deliver 
+              measurable results like the ones you see above.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
+              >
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200"
+              >
+                Explore Our Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+import { Helmet } from 'react-helmet-async';
+const CaseStudies: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Explore real-world case studies and success stories from Zion Tech Group clients. See how we've helped businesses transform through technology." />
+      </Helmet>
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Case Studies</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover how Zion Tech Group has helped businesses across industries achieve their digital transformation goals.
+            </p>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <p className="text-gray-600 text-center">
+              Case studies coming soon. We're working on showcasing our client success stories.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+export default CaseStudies;

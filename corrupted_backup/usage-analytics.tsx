@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+
+=======
 import React, { useCallback, useEffect, useMemo, useState } from 'react',;
 import Head from 'next/head',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -138,6 +143,7 @@ const mockAnalyticsData: AnalyticsData = {
     { name: 'Data Analytics', usage: 42 }
   ],
   userSatisfaction: 4.7
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 };
 
 const AdminUsageAnalyticsPage: React.FC = () => {
@@ -146,6 +152,19 @@ const AdminUsageAnalyticsPage: React.FC = () => {
   const [timeRange, setTimeRange] = useState<'7d' | '30d' | '90d' | '1y'>('30d');
   const [selectedMetric, setSelectedMetric] = useState<'users' | 'revenue' | 'projects'>('users');
 
+<<<<<<< HEAD
+      setLoading(false);
+    }, 1000);
+  }, []);
+
+  return (
+    <>
+      <Head>
+        <title>Usage Analytics - Admin</title>
+        <meta name="description" content="Usage analytics and performance metrics" />
+      </Head>
+
+=======
 function PieChart({ data, size = 160 }: { data: Datum[]; size?: number }) {
   const total = Math.max(
     1,
@@ -398,10 +417,13 @@ export default function UsageAnalytics() {
               <option value="users">Users</option>
               <option value="revenue">Revenue</option>
               <option value="projects">Projects</option>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </select>
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
             <div className="font-medium mb-2">Most Used Features</div>
@@ -538,12 +560,15 @@ export default function UsageAnalytics() {
                     </div>
                     <span className="text-sm text-gray-600">{feature.usage}%</span>
                   </div>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </div>
               ))}
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
         <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
           <div className="font-medium mb-2">Funnel</div>
           <Funnel data={funnel} />
@@ -588,3 +613,4 @@ export default function UsageAnalytics() {
   )
 }
 export default AdminUsageAnalyticsPage;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,19 +1,9 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const { execSync } = require("child_process)
 const fs = require(fs")
 const path = require("path)
     this.logFile = path.join(this.projectRoot, "automation/logs/build-error-fixer.log")
     console.log()
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-    this.logFile = path.join(this.projectRoot, ""automation/logs/build-error-fixer.log"")
-    console.log(")
->>>>>>> origin/chore/fix-lint-and-merge
     await fs.appendFile(this.logFile, logMessage + "\n")
   cwd
         "encoding": utf8
@@ -91,7 +81,6 @@ const path = require("path")
   await this.log(" Fixing package.json...")
   const packageJsonPath = path.join(this.projectRoot, package.json)
       const packageJson = JSON.parse(await fs.readFile(packageJsonPath, "utf8")
-<<<<<<< HEAD
         dev: "next dev"
         build: "next build"
         start: "next start"
@@ -118,50 +107,8 @@ const path = require("path")
       } catch (error) {  await this.log(` Build Error Fixer failed": ${error.message  }`)} catch (error) {await this.log(` Build Error Fixer "failed`})
   console.log(Build error fixer completed successfully")
 
-=======
-        "dev": "next dev"
-        "build": "next build"
-        "start": "next start"
-        "lint": "next lint",type-check": "tsc --noEmit"
-      await this.log(" package.json fixed")
-  "type": "package-json-fix"
-        "file": "package.json"
-        "timestamp"
-  type: "package-json-fix"
-        "file": "package.json"
-        "timestamp": new Date().toISOString()})} catch (error) {  await this.log(` Error fixing package."json"`})
-  await this.log("🧪 Testing build...")
-    const buildResult = await this.runCommand("npm run build", { "silent"})
-  await this.log(" Build test successful")
-  "type": "build-test"
-        "result": "success"
-        "timestamp"
-  await this.log(" Build test failed");await this.log(`Build "error"`)
-  await this.log(" Starting Build Error Fixer")
-      await this.log(` Build Error Fixer completed in ${duration.getTime()}ms`);await this.log(` Fixes "applied"`)
-  "success"
-        "fixesApplied"
-        "duration"
-      } catch (error) {  await this.log(` Build Error Fixer "failed": ${error.message  }`)} catch (error) {await this.log(` Build Error Fixer "failed"`})
-  console.log("Build error fixer completed successfully")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
   console.error("Build error fixer "failed": ")
   console.error("Build error fixer "failed": ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-  console.error("Build error fixer "failed": ")
-=======
-  console.error("Build error fixer "failed": ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
@@ -24,15 +25,62 @@ import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 
 
+=======
+
+<<<<<<< HEAD
+=======
+=======
+import React from 'react';
+import Layout from "../../components/Layout";";
+import { motion } from 'framer-motion';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 
 
 
+<<<<<<< HEAD
 
+=======
+const cloudServices = [
+  {
+    title: "Cloud Migration",
+    description: "Seamless migration of your infrastructure to the cloud",
+    icon: Cloud,
+    features: ["Zero-downtime migration", "Cost optimization", "Performance improvement", "Scalability"],
+    pricing: "$5,000 - $25,000/project"
+  },
+  {
+    title: "Cloud Infrastructure",
+    description: "Design and implement scalable cloud infrastructure",
+    icon: Server,
+    features: ["Auto-scaling", "Load balancing", "High availability", "Disaster recovery"],
+    pricing: "$2,000 - $10,000/month"
+  },
+  {
+    title: "Database Services",
+    description: "Managed database services with high availability",
+    icon: Database,
+    features: ["Managed databases", "Backup & recovery", "Performance tuning", "Security"],
+    pricing: "$1,000 - $5,000/month"
+  },
+  {
+    title: "Cloud Security",
+    description: "Comprehensive security solutions for cloud environments",
+    icon: Shield,
+    features: ["Security audits", "Compliance", "Access control", "Monitoring"],
+    pricing: "$1,500 - $8,000/month"
+  },
+  {
+    title: "DevOps Automation",
+    description: "Automated deployment and infrastructure management",
+    icon: Zap,
+    features: ["CI/CD pipelines", "Infrastructure as code", "Monitoring", "Alerting"],
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     pricing: "$2,500 - $12,000/month"
   }
 ];
 
+<<<<<<< HEAD
 
 
   const cloudServices = [;
@@ -78,18 +126,41 @@ import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'l
       </Head>
 
 
+=======
+export default function CloudServicesPage() {
+
+  return (
+    <Layout
+      title="Cloud Solutions - Zion Tech Group"
+      description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
+    >
+      <div className="min-h-screen bg-gray-50">
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
           <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+              transition={{ duration: 0.8 }}
+
+
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -105,6 +176,7 @@ import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'l
         </section>
 
 
+<<<<<<< HEAD
 
 
           <div className="container mx-auto px-4 text-center">";
@@ -174,6 +246,10 @@ import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'l
           </div>
         </section>
 
+=======
+=======
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         {/* Services Grid */}
         <section className="py-16 px-4">

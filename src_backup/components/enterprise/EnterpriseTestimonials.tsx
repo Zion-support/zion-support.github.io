@@ -2,6 +2,15 @@
   CarouselContent;
   CarouselItem;
   CarouselNext;
+<<<<<<< HEAD
+  CarouselPrevious} from '@/components/ui/carousel';
+
+        <Carousel className='w-full'>    quote: 'The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.',
+    author: 'Elena Rodriguez',
+    title: 'CTO',
+    company: 'FutureTech Systems',
+    image: '/placeholder.svg'}],
+=======
   CarouselPrevious} from "@/components/ui/carousel";
 
         <Carousel className='w-full'>    quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",
@@ -9,6 +18,7 @@
     title: "CTO",
     company: "FutureTech Systems",
     image: "/placeholder.svg"}],
+>>>>>>> origin/resolved-merge-conflicts
 
 
 import React from 'react';
@@ -112,7 +122,11 @@ export function EnterpriseTestimonials() {
         </div>
 
 
+<<<<<<< HEAD
+        <Carousel className='w-full'>
+=======
         <Carousel className="w-full">
+>>>>>>> origin/resolved-merge-conflicts
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
 
@@ -173,11 +187,19 @@ export function EnterpriseTestimonials() {return (<section id=testimonials' clas
           </p>;
         </div>;
 
+<<<<<<< HEAD
+        <Carousel className='w-full'>    quote: 'The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.',;
+    author: 'Elena Rodriguez',;
+    title: 'CTO',;
+    company: 'FutureTech Systems',;
+    image: '/placeholder && placeholder.svg'}],;
+=======
         <Carousel className='w-full'>    quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",;
     author: "Elena Rodriguez",;
     title: "CTO",;
     company: "FutureTech Systems",;
     image: "/placeholder && placeholder.svg"}],;
+>>>>>>> origin/resolved-merge-conflicts
 export function EnterpriseTestimonials() {;
   return (
 
@@ -242,7 +264,7 @@ export function EnterpriseTestimonials() {return (<section id="testimonials" cla
         </Carousel>;
       </div>;
     </section>;
-  )}}/>;
+  )}/>;
                     </div>;
                     <div>;
                       <p className='font-bold>{testimonial.author}</p>;
@@ -339,7 +361,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </section>
 
           </CarouselContent>;
+<<<<<<< HEAD
+          <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className='flex justify-center gap-2 mt-8'>;
+=======
           <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">;
+>>>>>>> origin/resolved-merge-conflicts
   CarouselContent,CarouselItem,CarouselNext,CarouselPrevious} from '@/components / ui / carousel';
 const testimonials = [;
   {quote:;

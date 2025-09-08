@@ -13,6 +13,7 @@ this && this.logFile = path && path.join(process && process.cwd(), 'logs', 'lint
   // TODO: Implement
       this && this.log('Starting lint fix automation...');
 
+<<<<<<< HEAD
       // Run ESLint with auto-fix
       const result = execSync('npm run lint:fix', { 
         encoding: 'utf8', 
@@ -23,6 +24,8 @@ this && this.logFile = path && path.join(process && process.cwd(), 'logs', 'lint
 
       this && this.fixedCount++;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       this && this.log(`Lint fix completed successfully. Fixed ${this && this.fixedCount} issues.`);
 
       this && this.errorCount++;`;
@@ -38,6 +41,7 @@ this && this.logFile = path && path.join(process && process.cwd(), 'logs', 'lint
     await this && this.runLintFix();
 
 
+<<<<<<< HEAD
     // Set up interval for continuous lint fixing
     setInterval(async () => {
       await this && this.runLintFix();
@@ -102,6 +106,8 @@ class LintAutomation {
     await this.runLintFix ();
 ;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     // Set up interval for continuous lint fixing;
     setInterval(async () => {
 
@@ -111,7 +117,28 @@ class LintAutomation {
 }
 
 // Run the automation;
+<<<<<<< HEAD
 
 const automation = new LintAutomation ();
 automation.run ().catch (console.error);
 
+=======
+
+const automation = new LintAutomation();
+automation && automation.run().catch(console && console.error);
+;
+const __filename = fileURLToPath (import.meta.url);
+const __dirname = path.dirname (__filename);
+
+    const log_message = `[${timestamp}] [${level}] ${message}\n`;
+    console.log (log_message.trim ());
+
+      fs.mkdir_sync (logs_dir, { recursive: true });
+    // Run initial lint fix;
+    await this.runLintFix ();
+    // Set up interval for continuous lint fixing;
+
+// Run the automation;
+
+const automation = new LintAutomation ();
+>>>>>>> origin/cursor/delete-old-data-records-6bba

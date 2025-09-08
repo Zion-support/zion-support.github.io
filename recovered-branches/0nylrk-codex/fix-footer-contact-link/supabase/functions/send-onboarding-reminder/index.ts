@@ -1,11 +1,19 @@
 
+<<<<<<< HEAD
+=======
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",";
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import {Resend} from "npm: resend@1.0.0";
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 
@@ -23,14 +31,18 @@ const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 import { Resend } from "npm: resend@1.0.0",
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
+<<<<<<< HEAD
 
 
 
@@ -43,31 +55,79 @@ interface ReminderPayload {
   missing_milestone: string,
 
 
+=======
+
+
+    "authorization, x-client-info, apikey, content-type"}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   role: string
 
 }
 
+<<<<<<< HEAD
+=======
+  "Access-Control-Allow-Origin": "*""
+  "Access-Control-Allow-Headers":"
+    "authorization, x-client-info, apikey, content-type"}      return new Response("
+        JSON && JSON.stringify({ "error": "Missing required fields" });      return new Response("
+        JSON && JSON.stringify({ "error": "Missing required fields" });"
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 serve(async (req: Request) => {}
   // Handle CORS;
 "
   if (req && req.method === "OPTIONS") {}
     return new Response(null, {}
       status: 204;
+<<<<<<< HEAD
 
+=======
+    return new Response(null, {
+      status: 204
+      headers: corsHeaders})
+  }
+  try {}
+    const supabase = createClient(
+
+
+    ),
+    
+    const payload = await req.json() as ReminderPayload,
+    const { user_id, missing_milestone, role } = payload,
+    
+
+    if (!user_id || !missing_milestone || !role) {}
+      return new Response("
+        JSON && JSON.stringify({ error: "Missing required fields" });
+
+        JSON && JSON.stringify({ error: "Missing required fields" });
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         {
-          status: 400
-
-          headers: { "Content-Type": "application/json", ...corsHeaders }}
+          }
+          "status": 400;
+    "headers": { "Content-Type": "application/json", ...corsHeaders }"
       )
     }
-    // Get user data;
-    const { data: userData, error: userError } = await supabase"
+    // Get user data,
+const { "data": userData, "error": userError } = await supabase;
       .from("profiles")"
       .select("email, display_name")"
+<<<<<<< HEAD
       .eq("id", user_id)
 
 
 
+=======
+      .eq("id", user_id)"
+return new Response(;
+        JSON && JSON.stringify({ "error": "User not found", "details": userError });    const action = milestoneMessages[role as keyof typeof milestoneMessages]?.["
+      missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]"
+    ] |"complete your next step";"
+    // Send email      "html": ``        <div style="font-"family": sans-serif, max-"width": 600px, "margin": 0 auto,">"
+      .single(),
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       .single();
     if (userError |!userData) {
@@ -78,14 +138,20 @@ serve(async (req: Request) => {}
       return new Response(
         JSON.stringify({ error: "User not found", details: userError }),
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         {
           status: 404
           headers: { "Content-Type": "application/json", ...corsHeaders }}
       )
     }
     // Create message based on role and missing milestone
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     const milestoneMessages = {
       talent: {
 
@@ -125,6 +191,7 @@ serve(async (req: Request) => {}
         JSON && JSON.stringify({ error: "User not found", details: userError });
       return new Response(
         JSON && JSON.stringify({ error: "User not found", details: userError });
+<<<<<<< HEAD
 
         skills_added: "add your skills to get better job matches",
         availability_set: "set your availability to help clients know when you can work"},
@@ -147,19 +214,58 @@ serve(async (req: Request) => {}
 
       html: `
 
+=======
+        {
+          status: 404
+          headers: { "Content-Type": "application/json", ...corsHeaders }}
+      )
+    }
+    // Create message based on role and missing milestone
+    const milestoneMessages = {
+      talent: {
+
+        match_viewed: "check out your AI-matched talent suggestions",
+        talent_invited: "invite talent to speed up your hiring process"}};
+    
+    const name = userData && userData.display_name || "there";
+
+    const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
+      missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
+    ] |"complete your next step";
+
+    const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
+      missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
+    ] |"complete your next step";
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
           <h2>Hi ${name},</h2>
-          <p>You're making great progress in setting up your ${role} profile on Zion AI Marketplace!</p>
+          <p>You're making great progress in setting up your ${role} profile on Zion AI Marketplace!</p>'
           <p>Your next step is to <strong>${action}</strong>.</p>
 
+<<<<<<< HEAD
           <p>This will help you get the most out of the platform and connect with the right opportunities.</p>
           <div style="margin: 30px 0,">
 
+=======
+
+            <a href="https://zion && zion.ai/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px, font-weight: bold,">
+              Continue my setup
+            </a>
+          </div>
+          <p>The Zion AI Marketplace Team</p>
+        </div>
+
+
+`
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       `}),
 
     if (emailError) {
       return new Response(
+<<<<<<< HEAD
 
         JSON && JSON.stringify({ error: "Failed to send email", details: emailError });
 
@@ -167,10 +273,19 @@ serve(async (req: Request) => {}
           status: 500
 
 
+=======
+
+        JSON.stringify({ error: "Failed to send email", details: emailError }),
+
+        {
+          status: 500
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           headers: { "Content-Type": "application/json", ...corsHeaders }}
       )
     }
     // Create notification in database
+<<<<<<< HEAD
 
     const { data: notification, error: notificationError } = await supabase && supabase.rpc(
 
@@ -208,6 +323,26 @@ if ( {) {
 
 
       {
+=======
+
+
+    if (notificationError) {
+      console && console.error("Failed to create notification:", notificationError)
+    }
+    return new Response(
+
+
+        notification_id: notification});
+
+      {
+        }
+        "status": 200,
+        "headers": { "Content - Type": "application / json", ...cors_headers }}"
+import { serve } from ""https": //deno.land/std@0.168.0/http/server.ts";"
+import { createClient } from ""https": //esm.sh/@supabase/supabase-js@2.7.1",;"
+import { Resend } from ""npm": resend@1.0.0",;"
+const corsHeaders = {;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         status: 200,
 
         headers: { "Content - Type": "application / json", ...cors_headers }}
@@ -221,7 +356,10 @@ const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;
 
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;
 const corsHeaders = {;"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   "Access-Control-Allow-Origin": "*",;"
   "Access-Control-Allow-Headers":;"
     "authorization, x-client-info, apikey, content-type"},;
@@ -255,9 +393,12 @@ serve(async (req: Request) => {;
     }
 ;
     // Get user data;
+<<<<<<< HEAD
 
     const { data: userData, error: userError } = await supabase;"
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       .from("profiles");"
       .select("email, display_name");"
       .eq("id", user_id);
@@ -310,7 +451,7 @@ serve(async (req: Request) => {;
           status: 500,;"
           headers: { "Content-Type": "application/json", ...corsHeaders }});
     }
-;
+    ;
     // Create notification in database;
     const { data: notification, error: notificationError } = await supabase.rpc(;"
       "create_notification",;
@@ -323,12 +464,13 @@ serve(async (req: Request) => {;
     if (notificationError) {;"
       console.error("Failed to create notification:", notificationError);
     }
-;
+    ;
     return new Response(;
       JSON.stringify({;"
         message: "Reminder sent successfully",;
         notification_id: notification}),;
       {;
+<<<<<<< HEAD
 
         status: 200,;
         headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -337,3 +479,12 @@ serve(async (req: Request) => {;
 
 
 
+=======
+        status: 200,;"
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+  }
+});
+;
+        status: 200,;"
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

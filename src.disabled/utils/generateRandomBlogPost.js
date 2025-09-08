@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 "export": const generateRandomBlogPost = () => {
   return {
@@ -13,3 +14,6 @@
 
 
 
+=======
+export: const generateRandomBlogPost = () => {
+>>>>>>> origin/cursor/delete-old-data-records-6bba

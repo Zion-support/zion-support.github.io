@@ -1,7 +1,21 @@
+<<<<<<< HEAD
 
 const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
 
+=======
+import { useEffect, useState } from "react";
+import { PerformanceMetrics } from "../types";
+export function usePerformanceMetrics() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isSupported, setIsSupported] = useState(false);
+  useEffect(() => {
+    if (typeof window === "undefined" |!("performance" in window)) {
+      return;
+    }
+    setIsSupported(true);
+    const measurePerformance = () => {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       const navigationEntries =
         window.performance.getEntriesByType("navigation");
       const navigation = navigationEntries[0] as PerformanceNavigationTiming;
@@ -19,6 +33,7 @@ const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
       }, 0);
       const fidEntries = window.performance.getEntriesByType("first-input");
       const fid = fidEntries[0] as PerformanceEventTiming;
+<<<<<<< HEAD
 
 
 
@@ -26,6 +41,8 @@ const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       setMetrics({
         loadTime: navigation.loadEventEnd - navigation.loadEventStart
         firstContentfulPaint: fcp ? fcp.startTime : 0
@@ -33,15 +50,32 @@ const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
         cumulativeLayoutShift: cls
         firstInputDelay: fid ? fid.processingStart - fid.startTime : 0
       });
+<<<<<<< HEAD
 
 
 
+=======
+import { useEffect, useState } from 'react',;
+import { PerformanceMetrics } from '../types',;
+export function usePerformanceMetrics() {;
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),;
+  const [isSupported, setIsSupported] = useState(false),;
+  useEffect(() => {;
+    if (typeof window === 'undefined' || !('performance' in window)) {;
+      return;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }
     // Wait for all performance entries to be available
     const timer = setTimeout(measurePerformance, 1000);
     return () => clearTimeout(timer);
   }, []);
+<<<<<<< HEAD
 
   return { metrics, isSupported }
 
 
+=======
+  return { metrics, isSupported }
+}
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

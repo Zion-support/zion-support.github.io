@@ -49,7 +49,7 @@ export default function SitemapPage() {const links = [}
 }
     { name: "Support", href: "/support",}
 }
-    { name: "Contact", href: "/contact" }class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
+    { name: "Contact", href: "/contact" }class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }
   static getDerivedStateFromError(error) {return {hasError: true }
 }
   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}

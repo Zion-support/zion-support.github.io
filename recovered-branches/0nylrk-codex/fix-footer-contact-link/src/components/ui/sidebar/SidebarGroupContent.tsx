@@ -1,6 +1,10 @@
 
+<<<<<<< HEAD
 
 
+=======
+import { cn } from "@/lib/utils";
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from "react",
 import { cn } from "@/lib/utils",
 
@@ -9,7 +13,16 @@ import { cn } from "@/lib/utils",
 
 import {cn} from "@/lib/utils";
 
+<<<<<<< HEAD
 interface SidebarGroupContentProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+=======
+interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string,
+  children?: React.ReactNode,
+
+import React from "react",
+import { cn } from "@/lib/utils",
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
   className?: string;
@@ -49,18 +62,28 @@ export function SidebarGroupContent({
 
   )
 
+<<<<<<< HEAD
 
 
   )
 
 
+=======
+  )
+import React from "react";"
+import React from "react",;
+import { cn } from "@/lib/utils",;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?: string;
 
 ;
 export function SidebarGroupContent({ className, children, ...props }: SidebarGroupContentProps) {;
   return (;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 "
     <div className={cn("space-y-1", className)} {...props}>;
@@ -87,5 +110,11 @@ import { cn  } from '@/lib / utils';
 interface SidebarGroupContentProps;
 
 
+<<<<<<< HEAD
 
 
+=======
+      {children}
+    </div>);
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

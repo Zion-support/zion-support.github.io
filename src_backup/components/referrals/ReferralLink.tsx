@@ -1,7 +1,7 @@
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
+import { useState } from 'react',
+import { Button } from '@/components/ui/button',
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -112,11 +112,11 @@ export function ReferralLink(): any ({;
 
   return (
 
-    <Card className="mt - 6">;
+    <Card className='mt - 6'>;
 
       <CardHeader>;
-        <CardTitle className="flex items-center gap-2">;
-          <Link className="h-5 w-5" />;
+        <CardTitle className='flex items-center gap-2'>;
+          <Link className='h-5 w-5' />;
           Your Referral Link;
         </CardTitle>;
         <CardDescription>;
@@ -129,7 +129,7 @@ export function ReferralLink(): any ({;
           
           {copied && (
 
-            <p className="text-sm text-green-600 dark:text-green-500">
+            <p className='text-sm text-green-600 dark:text-green-500'>
               Copied to clipboard!
             </p>
           )}
@@ -147,18 +147,18 @@ export function ReferralLink(): any ({;
               size='sm'
               className='flex items-center gap-2'
               onClick={() => onShare('twitter')}            <Button
-              variant="outline"
+              variant='outline'
 origin/cursor/automate-test-improve-and-merge-code-2533
-              size="sm"
-              className="flex items-center gap-2"
+              size='sm'
+              className='flex items-center gap-2'
 
             <Button 
-              variant="outline" 
-              size="sm"
-              className="flex items-center gap-2"
+              variant='outline' 
+              size='sm'
+              className='flex items-center gap-2'
 
             >
-              <Facebook className="h-4 w-4" />
+              <Facebook className='h-4 w-4' />
               Facebook
             </Button>
             <Button
@@ -175,15 +175,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
 
               onClick={() => onShare('linkedin')}            >;
-              <Share className='h-4 w-4' />              LinkedIn              <Share className="h-4 w-4" />;
-        <div className="flex flex - col space - y-3">;
-          <div className="flex space - x-2">;
+              <Share className='h-4 w-4' />              LinkedIn              <Share className='h-4 w-4' />;
+        <div className='flex flex - col space - y-3'>;
+          <div className='flex space - x-2'>;
 
               variant='outline';
               size='sm';
               className='flex items - center gap - 2';
               on_click={() => on_share ('linkedin')}            >;
-              <Share className='h - 4 w - 4' />              LinkedIn              <Share className="h - 4 w - 4" />;
+              <Share className='h - 4 w - 4' />              LinkedIn              <Share className='h - 4 w - 4' />;
 
               LinkedIn;
             </Button>;

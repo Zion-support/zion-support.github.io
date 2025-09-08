@@ -1,5 +1,22 @@
+<<<<<<< HEAD
 
 
+=======
+
+  milestones: Milestone[]
+  activities: Record<string, MilestoneActivity[]>;
+  isLoading: boolean;
+  isClient: boolean;
+  isTalent: boolean;
+  paymentTerms?: string;
+  isSubmitting: boolean;
+  onCreateMilestone: (data: any) => Promise<Milestone | null>
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
+  onDeleteMilestone: (id: string) => Promise<boolean>
+  onUploadDeliverable: (id: string, file: File) => Promise<any>
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from 'react',
 import { MilestonesList } from '../MilestonesList',
 import { PaymentSummary } from '../PaymentSummary',
@@ -7,8 +24,11 @@ import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilest
 import { toast } from "sonner",
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface MilestoneManagerProps {
 
   projectId: string,
@@ -23,17 +43,32 @@ interface MilestoneManagerProps {
   onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,
   onDeleteMilestone: (id: string) => Promise<boolean>,
   onUploadDeliverable: (id: string, file: File) => Promise<any>,
+<<<<<<< HEAD
 
   refetch: () => Promise<void>
 }
 
 
+=======
+
+
+  refetch: () => Promise<void>
+}
+;
+
+
+  projectId;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   refetch
 }: MilestoneManagerProps) {
 
   const handleMilestoneApproved = async (milestoneId: string) => {
     try {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   refetch;
 }: MilestoneManagerProps) {}
@@ -93,9 +128,18 @@ interface MilestoneManagerProps {
       console.error("Error approving milestone:", error),"
       toast.error("Failed to approve milestone")
     }
+<<<<<<< HEAD
 
 
 
+=======
+  },
+  
+
+  }
+  },
+  
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const handleMilestoneRejected = async (milestoneId: string) => {
     try {
       await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus),
@@ -108,14 +152,18 @@ interface MilestoneManagerProps {
     }
 
 
+<<<<<<< HEAD
   },
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       toast.error("Failed to approve milestone");
     }
   },;
   const handleMilestoneRejected = async (milestoneId: string) => {;
 
+<<<<<<< HEAD
 
     try {;
       await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus),;
@@ -132,19 +180,32 @@ interface MilestoneManagerProps {
         <MilestonesList;
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           milestones={milestones}
 
           activities={activities}
           is_loading={is_loading}
           is_client={is_client}
+<<<<<<< HEAD
 
 
 
+=======
+
+
+          onCreateMilestone={onCreateMilestone}
+          onUpdateStatus={onUpdateStatus}
+          onDeleteMilestone={onDeleteMilestone}
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         />;
       </div>;
       <div>;
         <PaymentSummary;
           milestones={milestones} 
+<<<<<<< HEAD
 
           isSubmitting={isSubmitting}
           onApprove={isClient ? handleMilestoneApproved :undefined}
@@ -158,6 +219,11 @@ interface MilestoneManagerProps {
         />;
       </div>;
     </div>;
+=======
+
+
+          paymentTerms={paymentTerms}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           is_submitting={is_submitting}
           on_approve={is_client ? handleMilestoneApproved : undefined}
@@ -165,9 +231,65 @@ interface MilestoneManagerProps {
         />;
       </div>;
       <div>;
+<<<<<<< HEAD
+=======
+        <PaymentSummary;
+          milestones={milestones}
+          payment_terms={payment_terms} />;
+      </div>;
+    </div>);
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
 
+=======
+}activities= {
+  }
+  activities
+}isLoading= {
+  }
+  isLoading
+}isClient= {
+  }
+  isClient
+}onCreateMilestone= {
+  }
+  onCreateMilestone
+}onUpdateStatus= {
+  }
+  onUpdateStatus
+}onDeleteMilestone= {
+  }
+  onDeleteMilestone
+}onUploadDeliverable= {
+  }
+  onUploadDeliverable
+}isSubmitting= {
+  }
+  isSubmitting
+}onApprove= {
+  }
+  isClient ? handleMilestoneApproved : undefined
+}onReject= {
+  }
+  isClient ? handleMilestoneRejected : undefined
+} /> </div> <div> <PaymentSummary milestones= {
+  }
+  milestones
+}paymentTerms= {
+  }
+  paymentTerms
+} /> </div> </div>)
+}
+          milestones={milestones}
+          activities={activities}
+          isLoading={isLoading}
+          isClient={isClient}
+          onCreateMilestone={onCreateMilestone}
+          onUpdateStatus={onUpdateStatus}
+          onDeleteMilestone={onDeleteMilestone}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           onUploadDeliverable={onUploadDeliverable}
 
         />;
@@ -193,6 +315,7 @@ interface MilestoneManagerProps {
           payment_terms={payment_terms}
         />;
       </div>;
+<<<<<<< HEAD
 
     </div>);
   ),; interface MilestoneManagerProps {
@@ -220,3 +343,7 @@ refetch: () => Promise<void>
 
 
 
+=======
+    </div>);
+    </div>);
+>>>>>>> origin/cursor/delete-old-data-records-6bba

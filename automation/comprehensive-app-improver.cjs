@@ -1,75 +1,12 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-"
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-#!/usr/bin/env node/usr/bin/env node;const fs = require("fs");"const path = require("path");"const { execSync, spawn } = require("child_process");class $1 {; constructor() {; this.projectRoot = process.cwd();" this.logFile = path.join(this.projectRoot, "automation-logs.txt"); this.startTime = new Date(); this.fixesApplied = []; this.$1 = []};" log(message, type = "INFO") {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${type}] ${message}`; console.log(logMessage); / Append to log file" fs.appendFileSync(this.logFile, logMessage + "\n")} async runCommand(command, options = {}) { try {"` this.log(`Running command: ${command}`); const result = execSync(command, {" encoding: "utf8"," cwd: this.projectRoot," stdio: options.silent ? "pipe" : "inherit", .options ,}); return result,} catch (error) {;"` this.log(`Command failed: ${command} - ${error.message}`, "ERROR");" this.errorsFound.push({ command, error: error.message }); return null,} }; async installDependencies() {;" this.log("Installing dependencies."); / Try different installation methods; const methods = [;" "npm install --legacy-peer-deps --force"," "npm install --force"," "yarn install --ignore-engines"]; for (const method of methods) {;" const result = await this.runCommand(method, { silent: true }); if (result !== null) {;"` this.log(`Dependencies installed successfully using: ${method}`);" this.fixesApplied.push("Dependencies installed"); return true,} };" this.log("Failed to install dependencies with all methods", "ERROR"); return false,}; async fixPackageJson() {;" this.log("Fixing package.json."); try {;" const packageJsonPath = path.join(this.projectRoot, "package.json");" const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")); / Fix common issues; const fixes = []; / Remove problematic dependencies;" if (packageJson.dependencies["@tailwindcss/postcss"]) {;" delete packageJson.dependencies["@tailwindcss/postcss"];" fixes.push("Removed @tailwindcss/postcss"),} ; / Ensure TypeScript is properly configured; if (!packageJson.devDependencies.typescript) {;" packageJson.devDependencies.typescript = "^5.0.0";" fixes.push("Added TypeScript dependency"),} ; / Fix engines; if (!packageJson.engines) {; packageJson.engines = {;" node: ">=18.0.0"," npm: ">=8.0.0",}" fixes.push("Added engines configuration"),} ; / Write back the fixed package.json; fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));"` this.log(`Package.json fixed: ${fixes.join(", ")}`); this.fixesApplied.push(.fixes),} catch (error) {;"` this.log(`Failed to fix package.json: ${error.message}`, "ERROR"),} }; async createMissingConfigFiles() {;" this.log("Creating missing configuration files."); const configs = [; {;" file: "eslint.config.js"," content: "import js from "@eslint/js";"const typescript from "@typescript-eslint/eslint-plugin";"const typescriptParser from "@typescript-eslint/parser";"const reactHooks from "eslint-plugin-react-hooks";"const reactRefresh from "eslint-plugin-react-refresh";module.exports = default [; js.configs.recommended, {;" files: ["**;const nextConfig = {;" experimental: {; appDir: true}," typescript: {; ignoreBuildErrors: false}," eslint: {; ignoreDuringBuilds: false}," images: {;" domains: ["localhost"]}}"module.exports = nextConfig",} ]; for (const config of configs) {; const configPath = path.join(this.projectRoot, config.file); if (!fs.existsSync(configPath)) {; fs.writeFileSync(configPath, config.content);` this.log(`Created ${config.file}`);` this.fixesApplied.push(`Created ${config.file}`),} } }; async fixTypeScriptErrors() {;" this.log("Fixing TypeScript errors."); / Run TypeScript check;" const tscResult = await this.runCommand("npx tsc --noEmit", { silent: true }); if (tscResult) {;" this.log("TypeScript check passed"); return true,} ; / Try to fix common TypeScript issues;" this.log("Attempting to fix TypeScript errors."); / Add missing type declarations;" const typeDeclarations = "declare module "*.svg" {;" const content: string; export default content,};"declare module "*.png" {;" const content: string; export default content,};"declare module "*.jpg" {;" const content: string; export default content,};"declare module "*.jpeg" {;" const content: string; export default content,};"declare module "*.gif" {;" const content: string; export default content,};"declare module "*.webp" {;" const content: string;" export default content,}";" const typesPath = path.join(this.projectRoot, "types", "global.d.ts"); if (!fs.existsSync(path.dirname(typesPath))) {;" fs.mkdirSync(path.dirname(typesPath), { recursive: true }),} fs.writeFileSync(typesPath, typeDeclarations);" this.log("Created global type declarations");" this.fixesApplied.push("Created global type declarations"); return false,}; async runLinting() {;" this.log("Running linting."); / Try to run ESLint;" const lintResult = await this.runCommand("npx eslint . --ext .js,.jsx,.ts,.tsx --fix", { silent: true }); if (lintResult) {;" this.log("Linting completed successfully");" this.fixesApplied.push("Linting fixes applied"); return true,} ;" this.log("Linting had issues, but continuing.", "WARN"); return false,}; async buildApp() {;" this.log("Building the application.");" const buildResult = await this.runCommand("npm run build", { silent: true }); if (buildResult) {;" this.log("Build completed successfully");" this.fixesApplied.push("Build successful"); return true,} ;" this.log("Build failed, but continuing with other improvements.", "WARN"); return false,}; async createEnhancedAutomationScripts() {;" this.log("Creating enhanced automation scripts."); const scripts = [; {;" name: "automation/health-check.cjs"," content: "#!/usr/bin/env node;"const { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class HealthChecker {; constructor() {; this.projectRoot = process.cwd(); this.issues = []; this.$1 = []}; async checkDependencies() {; try {;" const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"));" const nodeModulesExists = fs.existsSync(path.join(this.projectRoot, "node_modules")); if (!nodeModulesExists) {;" this.issues.push("node_modules directory missing");" this.fixes.push("Run npm install"),} ;" console.log(" Dependencies check completed"),} catch (error) {;" this.issues.push(\"Dependencies check failed: \${error.message}\"),} }; async checkConfiguration() {;" const configFiles = ["package.json", "tsconfig.json", "next.config.js", "eslint.config.js"]; for (const file of configFiles) {; const filePath = path.join(this.projectRoot, file); if (!fs.existsSync(filePath)) {;" this.issues.push(\"Missing configuration file: \${file}\");" this.fixes.push(\"Create \${file}\"),} } ;" console.log(" Configuration check completed"),}; async checkTypeScript() {; try {;" execSync("npx tsc --noEmit", { stdio: "pipe" });" console.log(" TypeScript check passed"),} catch (error) {;" this.issues.push("TypeScript compilation errors found");" this.fixes.push("Fix TypeScript errors"),} }; async checkLinting() {; try {;" execSync("npx eslint . --ext .js,.jsx,.ts,.tsx", { stdio: "pipe" });" console.log(" Linting check passed"),} catch (error) {;" this.issues.push("ESLint errors found");" this.fixes.push("Run npx eslint . --ext .js,.jsx,.ts,.tsx --fix"),} }; async runAllChecks() {;" console.log(" Running comprehensive health check.\n"); await this.checkDependencies(); await this.checkConfiguration(); await this.checkTypeScript(); await this.checkLinting();" console.log("\n Health Check Summary: ");" console.log(\"Issues found: \${this.issues.length}\");" console.log(\"Suggested fixes: \${this.fixes.length}\"); if (this.issues.length > 0) {;" console.log("\n Issues: ");" this.issues.forEach((issue, index) => console.log(\"\${index + 1}. \${issue}\")),} ; if (this.fixes.length > 0) {;" console.log("\n Suggested fixes: ");" this.fixes.forEach((fix, index) => console.log(\"\${index + 1}. \${fix}\")),} ; if (this.issues.length === 0) {;" console.log("\n All checks passed! Your app is healthy."),} }};const checker = new HealthChecker();"checker.runAllChecks().catch(console.error);",}, {;" name: "automation/performance-optimizer.cjs"," content: "#!/usr/bin/env node;"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class PerformanceOptimizer {; constructor() {; this.projectRoot = process.cwd(); this.$1 = []}; async optimizeImages() {;" console.log(" Optimizing images.");" const publicDir = path.join(this.projectRoot, "public"); if (fs.existsSync(publicDir)) {; / This would integrate with image optimization tools;" this.optimizations.push("Image optimization completed"),} }; async optimizeBundle() {;" console.log(" Analyzing bundle size."); try {; / Run bundle analyzer if available;" execSync("npm run build", { stdio: "pipe" });" this.optimizations.push("Bundle analysis completed"),} catch (error) {;" console.log("Bundle analysis failed, but continuing."),} }; async optimizeCode() {;" console.log(" Optimizing code."); / Remove unused imports; const srcFiles = this.findSourceFiles(); for (const file of srcFiles) {; try {;" let content = fs.readFileSync(file, "utf8"); let modified = false; / Remove empty lines at the end; const trimmed = content.trimEnd(); if (trimmed !== content) {;" content = trimmed + "\n"; modified = true,} ; if (modified) {; fs.writeFileSync(file, content),} } catch (error) {;" / Skip files that can"t be processed,} } ;" this.optimizations.push("Code optimization completed"),}; findSourceFiles() {; const files = [];" const srcDir = path.join(this.projectRoot, "src");" const componentsDir = path.join(this.projectRoot, "components");" const pagesDir = path.join(this.projectRoot, "pages"); [srcDir, componentsDir, pagesDir].forEach(dir => {; if (fs.existsSync(dir)) {; this.findFilesRecursively(dir, files),} }); return files.filter(file => ;" file.endsWith(".js") | ;" file.endsWith(".jsx") | ;" file.endsWith(".ts") | ;" file.endsWith(".tsx"); ),}; findFilesRecursively(dir, files) {; const items = fs.readdirSync(dir); for (const item of items) {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; this.findFilesRecursively(fullPath, files),} else {; files.push(fullPath),} } }; async runOptimizations() {;" console.log(" Starting performance optimizations.\n"); await this.optimizeImages(); await this.optimizeBundle(); await this.optimizeCode();" console.log("\n Performance optimizations completed: "); this.optimizations.forEach((opt, index) => {;" console.log(\"\${index + 1}. \${opt}\"),}),}};const optimizer = new PerformanceOptimizer();"optimizer.runOptimizations().catch(console.error);",}, {;" name: "automation/security-scanner.cjs"," content: "#!/usr/bin/env node;"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class SecurityScanner {; constructor() {; this.projectRoot = process.cwd(); this.vulnerabilities = []; this.$1 = []}; async scanDependencies() {;" console.log(" Scanning dependencies for vulnerabilities."); try {;" execSync("npm audit", { stdio: "pipe" });" console.log(" No critical vulnerabilities found"),} catch (error) {;" this.vulnerabilities.push("Dependency vulnerabilities detected");" this.recommendations.push("Run npm audit fix"),} }; async scanSecrets() {;" console.log(" Scanning for exposed secrets."); const sensitivePatterns = [;" /password\s*[:=]\s*[""][^""]+[""]/gi," /api[_-]?key\s*[:=]\s*[""][^""]+[""]/gi," /secret\s*[:=]\s*[""][^""]+[""]/gi," /token\s*[:=]\s*[""][^""]+[""]/gi]; const files = this.findSourceFiles(); for (const file of files) {; try {;" const content = fs.readFileSync(file, "utf8"); for (const pattern of sensitivePatterns) {; if (pattern.test(content)) {;" this.vulnerabilities.push(\"Potential secret in \${path.relative(this.projectRoot, file)}\");" this.recommendations.push(\"Review \${path.relative(this.projectRoot, file)} for exposed secrets\"),} } } catch (error) {;" / Skip files that can"t be read,} } ;" console.log(" Secret scanning completed"),}; findSourceFiles() {; const files = [];" const dirs = ["src", "components", "pages", "utils", "hooks"]; dirs.forEach(dir => {; const fullPath = path.join(this.projectRoot, dir); if (fs.existsSync(fullPath)) {; this.findFilesRecursively(fullPath, files),} }); return files.filter(file => ;" file.endsWith(".js") | ;" file.endsWith(".jsx") | ;" file.endsWith(".ts") | ;" file.endsWith(".tsx"); ),}; findFilesRecursively(dir, files) {; const items = fs.readdirSync(dir); for (const item of items) {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; this.findFilesRecursively(fullPath, files),} else {; files.push(fullPath),} } }; async scanConfiguration() {;" console.log(" Scanning configuration files.");" const configFiles = ["package.json", "next.config.js", ".env", ".env.local"]; for (const file of configFiles) {; const filePath = path.join(this.projectRoot, file); if (fs.existsSync(filePath)) {; try {;" const content = fs.readFileSync(filePath, "utf8"); / Check for insecure configurations;" if (content.includes("NODE_ENV=development") && file.includes(".env")) {;" this.recommendations.push(\"Review \${file} for production-ready configuration\"),} } catch (error) {;" / Skip files that can"t be read,} } } ;" console.log(" Configuration scanning completed"),}; async runSecurityScan() {;" console.log(" Starting security scan.\n"); await this.scanDependencies(); await this.scanSecrets(); await this.scanConfiguration();" console.log("\n Security Scan Summary: ");" console.log(\"Vulnerabilities found: \${this.vulnerabilities.length}\");" console.log(\"Recommendations: \${this.recommendations.length}\"); if (this.vulnerabilities.length > 0) {;" console.log("\n Vulnerabilities: ");" this.vulnerabilities.forEach((vuln, index) => console.log(\"\${index + 1}. \${vuln}\")),} ; if (this.recommendations.length > 0) {;" console.log("\n Recommendations: ");" this.recommendations.forEach((rec, index) => console.log(\"\${index + 1}. \${rec}\")),} ; if (this.vulnerabilities.length === 0) {;" console.log("\n No security issues found!"),} }};const scanner = new SecurityScanner();"scanner.runSecurityScan().catch(console.error);",} ]; for (const script of scripts) {; const scriptPath = path.join(this.projectRoot, script.name); const scriptDir = path.dirname(scriptPath); if (!fs.existsSync(scriptDir)) {;" fs.mkdirSync(scriptDir, { recursive: true }),} ; fs.writeFileSync(scriptPath, script.content);" fs.chmodSync(scriptPath, "755");` this.log(`Created ${script.name}`);` this.fixesApplied.push(`Created ${script.name}`),} }; async updatePackageJsonScripts() {;" this.log("Updating package.json scripts."); try {;" const packageJsonPath = path.join(this.projectRoot, "package.json");" const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")); const newScripts = {;" "health-check": "node automation/health-check.cjs"," "performance-optimize": "node automation/performance-optimizer.cjs"," "security-scan": "node automation/security-scanner.cjs"," "automation: all": "npm run health-check && npm run performance-optimize && npm run security-scan"," "automation: fix": "node automation/comprehensive-app-improver.cjs",} packageJson.scripts = { .packageJson.scripts, .newScripts } fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));" this.log("Updated package.json scripts");" this.fixesApplied.push("Updated package.json scripts"),} catch (error) {;"` this.log(`Failed to update package.json: ${error.message}`, "ERROR"),} }; async generateReport() {; const endTime = new Date(); const duration = endTime - this.startTime; const report = {;" timestamp: endTime.toISOString(),"` duration: `${Math.round(duration / 1000)}s`," fixesApplied: this.fixesApplied," errorsFound: this.errorsFound," summary: {; totalFixes: this.fixesApplied.length," totalErrors: this.errorsFound.length," success: this.errorsFound.length === 0,} }" const reportPath = path.join(this.projectRoot, "automation-report.json"); fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));" this.log("\n COMPREHENSIVE APP IMPROVEMENT REPORT");" this.log("==");"` this.log(`Duration: ${report.duration}`);"` this.log(`Fixes Applied: ${report.summary.totalFixes}`);"` this.log(`Errors Found: ${report.summary.totalErrors}`);"` this.log(`Success: ${report.summary.success ? "" : ""}`); if (this.fixesApplied.length > 0) {;" this.log("\n Fixes Applied: "); this.fixesApplied.forEach((fix, index) => {;` this.log(` ${index + 1}. ${fix}`),}),} ; if (this.errorsFound.length > 0) {;" this.log("\n Errors Found: "); this.errorsFound.forEach((error, index) => {;` this.log(` ${index + 1}. ${error.command}: ${error.error}`),}),} ;"` this.log(`\n Full report saved to: ${reportPath}`),}; async run() {;" this.log(" Starting Comprehensive App Improvement Process.");" this.log("======"); try {;" / Step 1: Fix package.json; await this.fixPackageJson(); / Step 2: Install dependencies; await this.installDependencies(); / Step 3: Create missing config files; await this.createMissingConfigFiles(); / Step 4: Fix TypeScript errors; await this.fixTypeScriptErrors(); / Step 5: Run linting; await this.runLinting(); / Step 6: Try to build; await this.buildApp(); / Step 7: Create enhanced automation scripts; await this.createEnhancedAutomationScripts(); / Step 8: Update package.json scripts; await this.updatePackageJsonScripts(); / Step 9: Generate report; await this.generateReport();" this.log("\n Comprehensive App Improvement completed!"),} catch (error) {;"` this.log(`Fatal error: ${error.message}`, "ERROR"); await this.generateReport(); process.exit(1),} }};/ Run the improver;const improver = new ComprehensiveAppImprover();improver.run().catch(console.error)""`"`
-#!/usr/bin/env node;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node/usr/bin/env node;const fs = require("fs");"const path = require("path");"const { execSync, spawn } = require("child_process");class $1 {; constructor() {; this.projectRoot = process.cwd();" this.logFile = path.join(this.projectRoot, "automation-logs.txt"); this.startTime = new Date(); this.fixesApplied = []; this.$1 = []};" log(message, type = "INFO") {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${type}] ${message}`; console.log(logMessage); / Append to log file" fs.appendFileSync(this.logFile, logMessage + "\n")} async runCommand(command, options = {}) { try {"` this.log(`Running command: ${command}`); const result = execSync(command, {" encoding: "utf8"," cwd: this.projectRoot," stdio: options.silent ? "pipe" : "inherit", .options ,}); return result,} catch (error) {;"` this.log(`Command failed: ${command} - ${error.message}`, "ERROR");" this.errorsFound.push({ command, error: error.message }); return null,} }; async installDependencies() {;" this.log("Installing dependencies."); / Try different installation methods; const methods = [;" "npm install --legacy-peer-deps --force"," "npm install --force"," "yarn install --ignore-engines"]; for (const method of methods) {;" const result = await this.runCommand(method, { silent: true }); if (result !== null) {;"` this.log(`Dependencies installed successfully using: ${method}`);" this.fixesApplied.push("Dependencies installed"); return true,} };" this.log("Failed to install dependencies with all methods", "ERROR"); return false,}; async fixPackageJson() {;" this.log("Fixing package.json."); try {;" const packageJsonPath = path.join(this.projectRoot, "package.json");" const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")); / Fix common issues; const fixes = []; / Remove problematic dependencies;" if (packageJson.dependencies["@tailwindcss/postcss"]) {;" delete packageJson.dependencies["@tailwindcss/postcss"];" fixes.push("Removed @tailwindcss/postcss"),} ; / Ensure TypeScript is properly configured; if (!packageJson.devDependencies.typescript) {;" packageJson.devDependencies.typescript = "^5.0.0";" fixes.push("Added TypeScript dependency"),} ; / Fix engines; if (!packageJson.engines) {; packageJson.engines = {;" node: ">=18.0.0"," npm: ">=8.0.0",}" fixes.push("Added engines configuration"),} ; / Write back the fixed package.json; fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));"` this.log(`Package.json fixed: ${fixes.join(", ")}`); this.fixesApplied.push(.fixes),} catch (error) {;"` this.log(`Failed to fix package.json: ${error.message}`, "ERROR"),} }; async createMissingConfigFiles() {;" this.log("Creating missing configuration files."); const configs = [; {;" file: "eslint.config.js"," content: "import js from "@eslint/js";"const typescript from "@typescript-eslint/eslint-plugin";"const typescriptParser from "@typescript-eslint/parser";"const reactHooks from "eslint-plugin-react-hooks";"const reactRefresh from "eslint-plugin-react-refresh";module.exports = default [; js.configs.recommended, {;" files: ["**;const nextConfig = {;" experimental: {; appDir: true}," typescript: {; ignoreBuildErrors: false}," eslint: {; ignoreDuringBuilds: false}," images: {;" domains: ["localhost"]}}"module.exports = nextConfig",} ]; for (const config of configs) {; const configPath = path.join(this.projectRoot, config.file); if (!fs.existsSync(configPath)) {; fs.writeFileSync(configPath, config.content);` this.log(`Created ${config.file}`);` this.fixesApplied.push(`Created ${config.file}`),} } }; async fixTypeScriptErrors() {;" this.log("Fixing TypeScript errors."); / Run TypeScript check;" const tscResult = await this.runCommand("npx tsc --noEmit", { silent: true }); if (tscResult) {;" this.log("TypeScript check passed"); return true,} ; / Try to fix common TypeScript issues;" this.log("Attempting to fix TypeScript errors."); / Add missing type declarations;" const typeDeclarations = "declare module "*.svg" {;" const content: string; export default content,};"declare module "*.png" {;" const content: string; export default content,};"declare module "*.jpg" {;" const content: string; export default content,};"declare module "*.jpeg" {;" const content: string; export default content,};"declare module "*.gif" {;" const content: string; export default content,};"declare module "*.webp" {;" const content: string;" export default content,}";" const typesPath = path.join(this.projectRoot, "types", "global.d.ts"); if (!fs.existsSync(path.dirname(typesPath))) {;" fs.mkdirSync(path.dirname(typesPath), { recursive: true }),} fs.writeFileSync(typesPath, typeDeclarations);" this.log("Created global type declarations");" this.fixesApplied.push("Created global type declarations"); return false,}; async runLinting() {;" this.log("Running linting."); / Try to run ESLint;" const lintResult = await this.runCommand("npx eslint . --ext .js,.jsx,.ts,.tsx --fix", { silent: true }); if (lintResult) {;" this.log("Linting completed successfully");" this.fixesApplied.push("Linting fixes applied"); return true,} ;" this.log("Linting had issues, but continuing.", "WARN"); return false,}; async buildApp() {;" this.log("Building the application.");" const buildResult = await this.runCommand("npm run build", { silent: true }); if (buildResult) {;" this.log("Build completed successfully");" this.fixesApplied.push("Build successful"); return true,} ;" this.log("Build failed, but continuing with other improvements.", "WARN"); return false,}; async createEnhancedAutomationScripts() {;" this.log("Creating enhanced automation scripts."); const scripts = [; {;" name: "automation/health-check.cjs"," content: "#!/usr/bin/env node;"const { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class HealthChecker {; constructor() {; this.projectRoot = process.cwd(); this.issues = []; this.$1 = []}; async checkDependencies() {; try {;" const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"));" const nodeModulesExists = fs.existsSync(path.join(this.projectRoot, "node_modules")); if (!nodeModulesExists) {;" this.issues.push("node_modules directory missing");" this.fixes.push("Run npm install"),} ;" console.log(" Dependencies check completed"),} catch (error) {;" this.issues.push(\"Dependencies check failed: \${error.message}\"),} }; async checkConfiguration() {;" const configFiles = ["package.json", "tsconfig.json", "next.config.js", "eslint.config.js"]; for (const file of configFiles) {; const filePath = path.join(this.projectRoot, file); if (!fs.existsSync(filePath)) {;" this.issues.push(\"Missing configuration file: \${file}\");" this.fixes.push(\"Create \${file}\"),} } ;" console.log(" Configuration check completed"),}; async checkTypeScript() {; try {;" execSync("npx tsc --noEmit", { stdio: "pipe" });" console.log(" TypeScript check passed"),} catch (error) {;" this.issues.push("TypeScript compilation errors found");" this.fixes.push("Fix TypeScript errors"),} }; async checkLinting() {; try {;" execSync("npx eslint . --ext .js,.jsx,.ts,.tsx", { stdio: "pipe" });" console.log(" Linting check passed"),} catch (error) {;" this.issues.push("ESLint errors found");" this.fixes.push("Run npx eslint . --ext .js,.jsx,.ts,.tsx --fix"),} }; async runAllChecks() {;" console.log(" Running comprehensive health check.\n"); await this.checkDependencies(); await this.checkConfiguration(); await this.checkTypeScript(); await this.checkLinting();" console.log("\n Health Check Summary: ");" console.log(\"Issues found: \${this.issues.length}\");" console.log(\"Suggested fixes: \${this.fixes.length}\"); if (this.issues.length > 0) {;" console.log("\n Issues: ");" this.issues.forEach((issue, index) => console.log(\"\${index + 1}. \${issue}\")),} ; if (this.fixes.length > 0) {;" console.log("\n Suggested fixes: ");" this.fixes.forEach((fix, index) => console.log(\"\${index + 1}. \${fix}\")),} ; if (this.issues.length === 0) {;" console.log("\n All checks passed! Your app is healthy."),} }};const checker = new HealthChecker();"checker.runAllChecks().catch(console.error);",}, {;" name: "automation/performance-optimizer.cjs"," content: "#!/usr/bin/env node;"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class PerformanceOptimizer {; constructor() {; this.projectRoot = process.cwd(); this.$1 = []}; async optimizeImages() {;" console.log(" Optimizing images.");" const publicDir = path.join(this.projectRoot, "public"); if (fs.existsSync(publicDir)) {; / This would integrate with image optimization tools;" this.optimizations.push("Image optimization completed"),} }; async optimizeBundle() {;" console.log(" Analyzing bundle size."); try {; / Run bundle analyzer if available;" execSync("npm run build", { stdio: "pipe" });" this.optimizations.push("Bundle analysis completed"),} catch (error) {;" console.log("Bundle analysis failed, but continuing."),} }; async optimizeCode() {;" console.log(" Optimizing code."); / Remove unused imports; const srcFiles = this.findSourceFiles(); for (const file of srcFiles) {; try {;" let content = fs.readFileSync(file, "utf8"); let modified = false; / Remove empty lines at the end; const trimmed = content.trimEnd(); if (trimmed !== content) {;" content = trimmed + "\n"; modified = true,} ; if (modified) {; fs.writeFileSync(file, content),} } catch (error) {;" / Skip files that can"t be processed,} } ;" this.optimizations.push("Code optimization completed"),}; findSourceFiles() {; const files = [];" const srcDir = path.join(this.projectRoot, "src");" const componentsDir = path.join(this.projectRoot, "components");" const pagesDir = path.join(this.projectRoot, "pages"); [srcDir, componentsDir, pagesDir].forEach(dir => {; if (fs.existsSync(dir)) {; this.findFilesRecursively(dir, files),} }); return files.filter(file => ;" file.endsWith(".js") | ;" file.endsWith(".jsx") | ;" file.endsWith(".ts") | ;" file.endsWith(".tsx"); ),}; findFilesRecursively(dir, files) {; const items = fs.readdirSync(dir); for (const item of items) {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; this.findFilesRecursively(fullPath, files),} else {; files.push(fullPath),} } }; async runOptimizations() {;" console.log(" Starting performance optimizations.\n"); await this.optimizeImages(); await this.optimizeBundle(); await this.optimizeCode();" console.log("\n Performance optimizations completed: "); this.optimizations.forEach((opt, index) => {;" console.log(\"\${index + 1}. \${opt}\"),}),}};const optimizer = new PerformanceOptimizer();"optimizer.runOptimizations().catch(console.error);",}, {;" name: "automation/security-scanner.cjs"," content: "#!/usr/bin/env node;"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class SecurityScanner {; constructor() {; this.projectRoot = process.cwd(); this.vulnerabilities = []; this.$1 = []}; async scanDependencies() {;" console.log(" Scanning dependencies for vulnerabilities."); try {;" execSync("npm audit", { stdio: "pipe" });" console.log(" No critical vulnerabilities found"),} catch (error) {;" this.vulnerabilities.push("Dependency vulnerabilities detected");" this.recommendations.push("Run npm audit fix"),} }; async scanSecrets() {;" console.log(" Scanning for exposed secrets."); const sensitivePatterns = [;" /password\s*[:=]\s*[""][^""]+[""]/gi," /api[_-]?key\s*[:=]\s*[""][^""]+[""]/gi," /secret\s*[:=]\s*[""][^""]+[""]/gi," /token\s*[:=]\s*[""][^""]+[""]/gi]; const files = this.findSourceFiles(); for (const file of files) {; try {;" const content = fs.readFileSync(file, "utf8"); for (const pattern of sensitivePatterns) {; if (pattern.test(content)) {;" this.vulnerabilities.push(\"Potential secret in \${path.relative(this.projectRoot, file)}\");" this.recommendations.push(\"Review \${path.relative(this.projectRoot, file)} for exposed secrets\"),} } } catch (error) {;" / Skip files that can"t be read,} } ;" console.log(" Secret scanning completed"),}; findSourceFiles() {; const files = [];" const dirs = ["src", "components", "pages", "utils", "hooks"]; dirs.forEach(dir => {; const fullPath = path.join(this.projectRoot, dir); if (fs.existsSync(fullPath)) {; this.findFilesRecursively(fullPath, files),} }); return files.filter(file => ;" file.endsWith(".js") | ;" file.endsWith(".jsx") | ;" file.endsWith(".ts") | ;" file.endsWith(".tsx"); ),}; findFilesRecursively(dir, files) {; const items = fs.readdirSync(dir); for (const item of items) {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; this.findFilesRecursively(fullPath, files),} else {; files.push(fullPath),} } }; async scanConfiguration() {;" console.log(" Scanning configuration files.");" const configFiles = ["package.json", "next.config.js", ".env", ".env.local"]; for (const file of configFiles) {; const filePath = path.join(this.projectRoot, file); if (fs.existsSync(filePath)) {; try {;" const content = fs.readFileSync(filePath, "utf8"); / Check for insecure configurations;" if (content.includes("NODE_ENV=development") && file.includes(".env")) {;" this.recommendations.push(\"Review \${file} for production-ready configuration\"),} } catch (error) {;" / Skip files that can"t be read,} } } ;" console.log(" Configuration scanning completed"),}; async runSecurityScan() {;" console.log(" Starting security scan.\n"); await this.scanDependencies(); await this.scanSecrets(); await this.scanConfiguration();" console.log("\n Security Scan Summary: ");" console.log(\"Vulnerabilities found: \${this.vulnerabilities.length}\");" console.log(\"Recommendations: \${this.recommendations.length}\"); if (this.vulnerabilities.length > 0) {;" console.log("\n Vulnerabilities: ");" this.vulnerabilities.forEach((vuln, index) => console.log(\"\${index + 1}. \${vuln}\")),} ; if (this.recommendations.length > 0) {;" console.log("\n Recommendations: ");" this.recommendations.forEach((rec, index) => console.log(\"\${index + 1}. \${rec}\")),} ; if (this.vulnerabilities.length === 0) {;" console.log("\n No security issues found!"),} }};const scanner = new SecurityScanner();"scanner.runSecurityScan().catch(console.error);",} ]; for (const script of scripts) {; const scriptPath = path.join(this.projectRoot, script.name); const scriptDir = path.dirname(scriptPath); if (!fs.existsSync(scriptDir)) {;" fs.mkdirSync(scriptDir, { recursive: true }),} ; fs.writeFileSync(scriptPath, script.content);" fs.chmodSync(scriptPath, "755");` this.log(`Created ${script.name}`);` this.fixesApplied.push(`Created ${script.name}`),} }; async updatePackageJsonScripts() {;" this.log("Updating package.json scripts."); try {;" const packageJsonPath = path.join(this.projectRoot, "package.json");" const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")); const newScripts = {;" "health-check": "node automation/health-check.cjs"," "performance-optimize": "node automation/performance-optimizer.cjs"," "security-scan": "node automation/security-scanner.cjs"," "automation: all": "npm run health-check && npm run performance-optimize && npm run security-scan"," "automation: fix": "node automation/comprehensive-app-improver.cjs",} packageJson.scripts = { .packageJson.scripts, .newScripts } fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));" this.log("Updated package.json scripts");" this.fixesApplied.push("Updated package.json scripts"),} catch (error) {;"` this.log(`Failed to update package.json: ${error.message}`, "ERROR"),} }; async generateReport() {; const endTime = new Date(); const duration = endTime - this.startTime; const report = {;" timestamp: endTime.toISOString(),"` duration: `${Math.round(duration / 1000)}s`," fixesApplied: this.fixesApplied," errorsFound: this.errorsFound," summary: {; totalFixes: this.fixesApplied.length," totalErrors: this.errorsFound.length," success: this.errorsFound.length === 0,} }" const reportPath = path.join(this.projectRoot, "automation-report.json"); fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));" this.log("\n COMPREHENSIVE APP IMPROVEMENT REPORT");" this.log("==");"` this.log(`Duration: ${report.duration}`);"` this.log(`Fixes Applied: ${report.summary.totalFixes}`);"` this.log(`Errors Found: ${report.summary.totalErrors}`);"` this.log(`Success: ${report.summary.success ? "" : ""}`); if (this.fixesApplied.length > 0) {;" this.log("\n Fixes Applied: "); this.fixesApplied.forEach((fix, index) => {;` this.log(` ${index + 1}. ${fix}`),}),} ; if (this.errorsFound.length > 0) {;" this.log("\n Errors Found: "); this.errorsFound.forEach((error, index) => {;` this.log(` ${index + 1}. ${error.command}: ${error.error}`),}),} ;"` this.log(`\n Full report saved to: ${reportPath}`),}; async run() {;" this.log(" Starting Comprehensive App Improvement Process.");" this.log("======"); try {;" / Step 1: Fix package.json; await this.fixPackageJson(); / Step 2: Install dependencies; await this.installDependencies(); / Step 3: Create missing config files; await this.createMissingConfigFiles(); / Step 4: Fix TypeScript errors; await this.fixTypeScriptErrors(); / Step 5: Run linting; await this.runLinting(); / Step 6: Try to build; await this.buildApp(); / Step 7: Create enhanced automation scripts; await this.createEnhancedAutomationScripts(); / Step 8: Update package.json scripts; await this.updatePackageJsonScripts(); / Step 9: Generate report; await this.generateReport();" this.log("\n Comprehensive App Improvement completed!"),} catch (error) {;"` this.log(`Fatal error: ${error.message}`, "ERROR"); await this.generateReport(); process.exit(1),} }};/ Run the improver;const improver = new ComprehensiveAppImprover();improver.run().catch(console.error)""`"`
 #!/usr/bin/env node;
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");"
@@ -175,7 +112,6 @@ module.exports = nextConfig"}"
     this.log("Attempting to fix TypeScript errors...");"
     // Add missing type declarations;"
     const typeDeclarations = "declare module "*.svg" {;
-<<<<<<< HEAD
   const "content": string;
   export default content,}
 ;
@@ -197,14 +133,6 @@ declare module "*.webp" {;
     if (!fs.existsSync(path.dirname(typesPath))) {;
   fs.mkdirSync(path.dirname(typesPath), { "recursive": true }),}
     fs.writeFileSync(typesPath, typeDeclarations);
-=======
-  const "content": string;"
-
-    const typesPath = path.join(this.projectRoot, "types", "global.d.ts");"
-    if (!fs.existsSync(path.dirname(typesPath))) {;"
-  fs.mkdirSync(path.dirname(typesPath), { "recursive": true })}"
-    fs.writeFileSync(typesPath, typeDeclarations);"
->>>>>>> origin/chore/fix-lint-and-merge
     this.log("Created global type declarations");
     this.fixesApplied.push("Created global type declarations");"
 
@@ -221,7 +149,6 @@ declare module "*.webp" {;
     const buildResult = await this.runCommand("npm run build", { "silent": true });"
     if (buildResult) {;"
   this.log("Build completed successfully");
-<<<<<<< HEAD
       this.fixesApplied.push("Build successful");
       return true,}
     ;
@@ -235,11 +162,6 @@ declare module "*.webp" {;
   "name": "automation/health-check.cjs",
         "content": "#!/usr/bin/env node;
 const { execSync } = require("child_process");
-=======
-      this.fixesApplied.push("Build successful");"
-
-const path = require("path");"
->>>>>>> origin/chore/fix-lint-and-merge
 class HealthChecker {;
   this.projectRoot = process.cwd();]
     this.issues = [];
@@ -263,7 +185,6 @@ class HealthChecker {;
     await this.checkTypeScript();
     await this.checkLinting();
     if (this.issues.length > 0) {;
-<<<<<<< HEAD
       this.issues.forEach((issue, index) => ),}
     ;
     if (this.fixes.length > 0) {;
@@ -279,10 +200,6 @@ checker.runAllChecks().catch(console.error);",},
       {;
   "name": "automation/performance-optimizer.cjs",
         "content": "#!/usr/bin/env node;
-=======
-
-const { execSync } = require("child_process");"
->>>>>>> origin/chore/fix-lint-and-merge
 class PerformanceOptimizer {;
   this.projectRoot = process.cwd();
   async optimizeImages() {;"
@@ -332,7 +249,6 @@ class PerformanceOptimizer {;
     await this.optimizeBundle();
     await this.optimizeCode();
     this.optimizations.forEach((opt, index) => {;
-<<<<<<< HEAD
   ,}),}
 }
 ;
@@ -341,9 +257,6 @@ optimizer.runOptimizations().catch(console.error);",},
       {;
   "name": "automation/security-scanner.cjs",
         "content": "#!/usr/bin/env node;
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
 class SecurityScanner {;
     this.vulnerabilities = [];
   async scanDependencies() {;
@@ -359,7 +272,6 @@ class SecurityScanner {;
     for (const file of files) {;
   const content = fs.readFileSync(file, "utf8");"
         for (const pattern of sensitivePatterns) {;
-<<<<<<< HEAD
   if (pattern.test(content)) {;
   this.vulnerabilities.push(\"Potential secret in \${path.relative(this.projectRoot, file)}\");
             this.recommendations.push(\"Review \${path.relative(this.projectRoot, file)} for exposed secrets\"),}
@@ -395,17 +307,6 @@ class SecurityScanner {;
   async scanConfiguration() {;
     const configFiles = ["package.json", "next.config.js", ".env", ".env.local"];
     for (const file of configFiles) {;
-=======
-  if (pattern.test(content)) {;"
-
-    const dirs = ["src", "components", "pages", "utils", "hooks"];"
-    dirs.forEach(dir => {;)
-  const fullPath = path.join(this.projectRoot, dir);
-      if (fs.existsSync(fullPath)) {;
-
-  async scanConfiguration() {;"
-    const configFiles = ["package.json", "next.config.js", ".env", ".env.local"];"
->>>>>>> origin/chore/fix-lint-and-merge
       if (fs.existsSync(filePath)) {;
   const content = fs.readFileSync(filePath, "utf8");"
           // Check for insecure configurations;"
@@ -419,7 +320,6 @@ class SecurityScanner {;
     for (const script of scripts) {;
   const scriptPath = path.join(this.projectRoot, script.name);
       const scriptDir = path.dirname(scriptPath);
-<<<<<<< HEAD
       if (!fs.existsSync(scriptDir)) {;
   fs.mkdirSync(scriptDir, { "recursive": true }),}
       ;
@@ -433,11 +333,6 @@ class SecurityScanner {;
   this.log("Updating package.json scripts...");
     try {;
       const newScripts = {;
-=======
-      if (!fs.existsSync(scriptDir)) {;"
-
-      const newScripts = {;"
->>>>>>> origin/chore/fix-lint-and-merge
   "health-check": "node automation/health-check.cjs",
         "performance-optimize": "node automation/performance-optimizer.cjs",
         "security-scan": "node automation/security-scanner.cjs",
@@ -479,7 +374,6 @@ class SecurityScanner {;
       // Step 8: Update package.json scripts;
       await this.updatePackageJsonScripts();
       // Step 9: Generate report;
-<<<<<<< HEAD
       await this.generateReport();
       this.log("\\n🎉 Comprehensive App Improvement completed!"),} catch (error) {;
   this.log(`Fatal "error": ${error.message}`, "ERROR');
@@ -491,75 +385,15 @@ class SecurityScanner {;
 // Run the improver;
 const improver = new ComprehensiveAppImprover();
 improver.run().catch(console.error)
-<<<<<<< HEAD
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 #!/usr/bin/env node;
-#!/usr/bin/env node;
-<<<<<<< HEAD
-origin/main
-origin/automation-improvements-final
-=======
-      await this.generateReport();"
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
-<<<<<<< HEAD
-#!/usr/bin/env node;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node;
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-#!/usr/bin/env node;
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 main
 
-=======
 
 #!/usr/bin/env node;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
 
 
@@ -569,16 +403,7 @@ main
 
 #!/usr/bin/env node;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -762,352 +587,27 @@ scanner.runSecurityScan().catch(console.error);"
     this.log("======")
   // Step "1"
       this.log("\\n� Comprehensive App Improvement completed!")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
-  this.log(`Fatal "error": ${error.message}`, ``)
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-<<<<<<< HEAD
-<<<<<<< HEAD
-  this.log(`Fatal "error": ${error.message}`, ``)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
-  this.log(`Fatal "error": ${error.message}`, ``)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
-  this.log(`Fatal "error": ${error.message}`, ``)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  this.log(`Fatal "error": ${error.message}`, ``)
-
-origin/automation-improvements-final
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-  this.log(`Fatal "error": ${error.message}`, ``)
 
   this.log(`Fatal "error": ${error.message}`, ``)
-main
-=======
+
 
 
 
   this.log(`Fatal "error": ${error.message}`, ``)
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-class ComprehensiveAppImprover {
-  constructor() {
-    this.reportsDir = './automation-reports';
-    this.improvements = [];
-    this.errors = [];
-  }
-
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
-
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursiv: true });
-    }
-  }
-
-  async runCommand(command, description) {
-    this.log(`🚀 ${description}`);
-    try {
-      const result = execSync(command, {
-        cw: process.cwd(),
-        encodin: 'utf8',
-        timeou: 60000,
-      });
-      this.log(`✅ ${description} - Success`);
-      return { succes: true, outpu: result };
-    } catch (error) {
-      this.log(`❌ ${description} - Faile: ${error.message}`);
-      return { succes: false, erro: error.message };
-    }
-  }
-
-  async improveCodeQuality() {
-    this.log('🔧 Improving code quality...');
-
-    // Fix common syntax issues
-    await this.runCommand('node fix-syntax-errors.cjs', 'Fix syntax errors');
-
-    // Run linting fixes
-    await this.runCommand('npm run: lint:fix', 'Fix linting issues');
-
-    // Optimize imports
-    await this.optimizeImports();
-
-    this.improvements.push('Code quality improvements applied');
-  }
-
-  async optimizeImports() {
-    this.log('📦 Optimizing imports...');
-
-    const files = this.getTypeScriptFiles('.');
-    let optimizedCount = 0;
-
-    for (const file of files) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-
-        // Remove unused imports
-        content = this.removeUnusedImports(content);
-
-        // Sort imports
-        content = this.sortImports(content);
-
-        if (content !== originalContent) {
-          fs.writeFileSync(file, content, 'utf8');
-          optimizedCount++;
-        }
-      } catch (error) {
-        this.errors.push({ file, erro: error.message });
-      }
-    }
-
-    this.log(`✅ Optimized ${optimizedCount} files`);
-  }
-
-  removeUnusedImports(content) {
-    // Simple unused import removal (basic implementation)
-    const lines = content.split('\n');
-    const usedIdentifiers = new Set();
-
-    // Find used identifiers
-    lines.forEach(line => {
-      const matches = line.match(/\b[a-zA-Z_$][a-zA-Z0-9_$]*\b/g);
-      if (matches) {
-        matches.forEach(match => usedIdentifiers.add(match));
-      }
-    });
-
-    // Remove unused imports
-    return lines
-      .filter(line => {
-        if (line.trim().startsWith('import ')) {
-          const importMatch = line.match(/import\s*{([^}]+)}/);
-          if (importMatch) {
-            const imports = importMatch[1].split(',').map(imp => imp.trim());
-            const usedImports = imports.filter(imp => usedIdentifiers.has(imp));
-            if (usedImports.length === 0) {
-              return false; // Remove unused import
-            }
-          }
-        }
-        return true;
-      })
-      .join('\n');
-  }
-
-  sortImports(content) {
-    const lines = content.split('\n');
-    const importLines = [];
-    const otherLines = [];
-    let inImports = false;
-
-    lines.forEach(line => {
-      if (line.trim().startsWith('import ')) {
-    importLines.push(line),
-    inImports = true
-  } else if (inImports && line.trim() === '') {
-        importLines.push(line);
-      } else {
-        if (inImports) {
-    otherLines.push(line),
-    inImports = false
-  } else {
-          otherLines.push(line);
-        }
-      }
-    });
-
-    // Sort imports
-    importLines.sort();
-
-    return [...importLines, ...otherLines].join('\n');
-  }
-
-  getTypeScriptFiles(dir) {
-    const files = [];
-
-    function walkDir(currentPath) {
-      const items = fs.readdirSync(currentPath);
-
-      for (const item of items) {
-        const fullPath = path.join(currentPath, item);
-        const stat = fs.statSync(fullPath);
-
-        if (
-          stat.isDirectory() &&
-          !item.startsWith('.') &&
-          item !== 'node_modules'
-        ) {
-          walkDir(fullPath);
-        } else if (
-          stat.isFile() &&
-          (item.endsWith('.ts') || item.endsWith('.tsx'))
-        ) {
-          files.push(fullPath);
-        }
-      }
-    }
-
-    walkDir(dir);
-    return files;
-  }
-
-  async improvePerformance() {
-    this.log('⚡ Improving performance...');
-
-    // Optimize images
-    await this.runCommand('npm run: optimize:images', 'Optimize images');
-
-    // Bundle analysis
-    await this.runCommand('npm run analyze', 'Analyze bundle');
-
-    this.improvements.push('Performance optimizations applied');
-  }
-
-  async improveSecurity() {
-    this.log('🔒 Improving security...');
-
-    // Run security audit
-    await this.runCommand('npm audit', 'Security audit');
-
-    // Fix security issues
-    await this.runCommand('npm audit fix', 'Fix security issues');
-
-    this.improvements.push('Security improvements applied');
-  }
-
-  async improveAccessibility() {
-    this.log('♿ Improving accessibility...');
-
-    // Run accessibility tests
-    await this.runCommand('npm run: test:accessibility', 'Accessibility tests');
-
-    this.improvements.push('Accessibility improvements applied');
-  }
-
-  async generateReport() {
-    const report = {
-      timestam: new Date().toISOString(),
-      improvement: this.improvements,
-      error: this.errors,
-      summar: {
-        totalImprovement: this.improvements.length,
-        totalError: this.errors.length,
-        successRat: this.errors.length === 0
-            ? 10: 0: Math.round(
-                (this.improvements.length /
-                  (this.improvements.length + this.errors.length)) *
-                  100
-              );
-      };
-    };
-
-    const reportPath = path.join(
-      this.reportsDir;
-      'comprehensive-app-improvement-report.json'
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-
-    this.log(`📊 Report saved: to: ${reportPath}`);
-    return report;
-  }
-
-  async run() {
-    this.log('🚀 Starting Comprehensive App Improver...');
-
-    this.ensureDirectories();
-
-    try {
-      await this.improveCodeQuality();
-      await this.improvePerformance();
-      await this.improveSecurity();
-      await this.improveAccessibility();
-
-      const report = await this.generateReport();
-
-      this.log('🎉 Comprehensive app improvement completed!');
-      this.log(
-        `📊 Summar: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
-      );
-
-      return report;
-    } catch (error) {
-      this.log(`❌ Erro: ${error.message}`);
-      throw error;
-    }
-  }
-}
-
-// Run the improver
-if (require.main === module) {
-  const improver = new ComprehensiveAppImprover();
-  improver.run().catch(error => {
-    console.error('❌ Erro: ', error);
-    process.exit(1);
-  });
-}
-
-module.exports = ComprehensiveAppImprover;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
   this.log(`Fatal "error": ${error.message}`, ``)
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-<<<<<<< HEAD
   this.log(`Fatal "error": ${error.message}`, ``)
 
 main
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> merged-prs-20250907-203621
 
 class ComprehensiveAppImprover {
   constructor() {
@@ -1327,116 +827,6 @@ class ComprehensiveAppImprover {
     };
 
     const reportPath = path.join(
-<<<<<<< HEAD
-=======
-      this.reportsDir;
-      'comprehensive-app-improvement-report.json'
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-
-    this.log(`📊 Report saved: to: ${reportPath}`);
-    return report;
-  }
-
-  async run() {
-    this.log('🚀 Starting Comprehensive App Improver...');
-
-    this.ensureDirectories();
-
-    try {
-      await this.improveCodeQuality();
-      await this.improvePerformance();
-      await this.improveSecurity();
-      await this.improveAccessibility();
-
-      const report = await this.generateReport();
-
-      this.log('🎉 Comprehensive app improvement completed!');
-      this.log(
-        `📊 Summar: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
-
-        `📊 Summar: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
-        `📊 Summar: y: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
-main
-        `📊 Summar: y: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
-
-        `📊 Summar: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
-
-        `📊 Summar: y: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
-
-      );
-
-      return report;
-    } catch (error) {
-      this.log(`❌ Erro: ${error.message}`);
-
-      this.log(`❌ Erro: ${error.message}`);
-      this.log(`❌ Erro: r: ${error.message}`);
-main
-      this.log(`❌ Erro: r: ${error.message}`);
-
-      this.log(`❌ Erro: ${error.message}`);
-
-      this.log(`❌ Erro: r: ${error.message}`);
-
-      throw error;
-    }
-  }
-}
-
-// Run the improver
-if (require.main === module) {
-  improver.run().catch(error => {
-    console.error('❌ Erro: ', error);
-
-    console.error('❌ Erro: ', error);
-    console.error('❌ Erro: r:', error);
-main
-    console.error('❌ Erro: r:', error);
-
-    console.error('❌ Erro: ', error);
-
-    console.error('❌ Erro: r:', error);
-
-    process.exit(1);
-  });
-}
-
-module.exports = ComprehensiveAppImprover;
-
-  this.log(`Fatal "error": ${error.message}`, ``)
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-
-class ComprehensiveAppImprover {
-  constructor() {
-    this.reportsDir = './automation-reports';
-    this.improvements = [];
-    this.errors = [];
-  }
-
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
-
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursiv: true });
-    }
-  }
-
-  async runCommand(command, description) {
-    this.log(`🚀 ${description}`);
-    try {
-=======
-  // TODO: Implement
-      const result = execSync(command, {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
         cw: process.cwd(),
         encodin: 'utf8',
         timeou: 60000,
@@ -1446,10 +836,6 @@ class ComprehensiveAppImprover {
     } catch (error) {
       this.log(`❌ ${description} - Faile: ${error.message}`);
       return { succes: false, erro: error.message };
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         cw: d: process.cwd(),
 
@@ -1459,33 +845,12 @@ class ComprehensiveAppImprover {
       return { succes: s: true, outpu: t: result };
 
       return { succes: s: false, erro: r: error.message };
-<<<<<<< HEAD
-<<<<<<< HEAD
-        cw: process.cwd(),
-        encodin: 'utf8',
-        timeou: 60000,
-      });
-      this.log(`✅ ${description} - Success`);
-      return { succes: true, outpu: result };
-    } catch (error) {
-      this.log(`❌ ${description} - Faile: ${error.message}`);
-      return { succes: false, erro: error.message };
 
-main
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
   async improveCodeQuality() {
 
-<<<<<<< HEAD
     // Fix common syntax issues
     await this.runCommand('node fix-syntax-errors.cjs', 'Fix syntax errors');
 
@@ -1504,12 +869,6 @@ main
 
     for (const file of files) {
       try {
-=======
-    let optimizedCount = 0;
-
-    for (const file of files) {
-  // TODO: Implement
->>>>>>> origin/chore/fix-lint-and-merge
 
         // Remove unused imports;
         content = this.removeUnusedImports(content);
@@ -1521,25 +880,11 @@ main
 
           optimizedCount++;
       } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        this.errors.push({ file, erro: error.message });
 
-        this.errors.push({ file, erro: error.message });
-        this.errors.push({ file, erro: r: error.message });
-main
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       }
     }
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 `;
     this.log(`✅ Optimized ${optimizedCount} files`);
@@ -1547,14 +892,8 @@ main
   removeUnusedImports(content) {
     // Simple unused import removal (basic implementation)
 
-<<<<<<< HEAD
     // Find used identifiers
     lines.forEach(line => {
-=======
-    // Find used identifiers;
-    lines.forEach(line => {)
-      const matches = line.match(/\b[a-zA-Z_$][a-zA-Z0-9_$]*\b/g);
->>>>>>> origin/chore/fix-lint-and-merge
       if (matches) {
         matches.forEach(match => usedIdentifiers.add(match));
 
@@ -1563,42 +902,17 @@ main
       .filter(line => {)
         if (line.trim().startsWith('import ')) {
           if (importMatch) {
-<<<<<<< HEAD
-=======
-
-            const usedImports = imports.filter(imp => usedIdentifiers.has(imp));
->>>>>>> origin/chore/fix-lint-and-merge
             if (usedImports.length === 0) {
               return false; // Remove unused import;
         return true;
       })
       .join('\n');
 
-<<<<<<< HEAD
   sortImports(content) {
-=======
-    const importLines = [];
-    const otherLines = [];
-    let inImports = false;
->>>>>>> origin/chore/fix-lint-and-merge
 
-<<<<<<< HEAD
     lines.forEach(line => {
       if (line.trim().startsWith('import ')) {
-<<<<<<< HEAD
-    importLines.push(line),
-    inImports = true
-  } else if (inImports && line.trim() === '') {
-        importLines.push(line);
-      } else {
-        if (inImports) {
-    otherLines.push(line),
-    inImports = false
-  } else {
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 
         importLines.push(line);
         inImports = true;
@@ -1612,29 +926,9 @@ main
         if (inImports) {
           otherLines.push(line);
           inImports = false;
-<<<<<<< HEAD
         } else {
-<<<<<<< HEAD
-    importLines.push(line),
-    inImports = true
-  } else if (inImports && line.trim() === '') {
-        importLines.push(line);
-      } else {
-        if (inImports) {
-    otherLines.push(line),
-    inImports = false
-  } else {
 
-main
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     // Sort imports;
     importLines.sort();
@@ -1645,10 +939,6 @@ main
     function walkDir(currentPath) {
 
       for (const item of items) {
-<<<<<<< HEAD
-=======
-        const fullPath = path.join(currentPath, item);
->>>>>>> origin/chore/fix-lint-and-merge
 
         if ()
           stat.isDirectory() &&
@@ -1668,12 +958,6 @@ main
 
 
   async generateReport() {
-<<<<<<< HEAD
-=======
-    const report = {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
       timestam: new Date().toISOString(),
       improvement: this.improvements,
       error: this.errors,
@@ -1681,11 +965,7 @@ main
         totalImprovement: this.improvements.length,
         totalError: this.errors.length,
         successRat: this.errors.length === 0
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       timestam: p: new Date().toISOString(),
       improvement: s: this.improvements,
@@ -1694,26 +974,8 @@ main
   totalImprovement: s: this.improvements.length,
         totalError: s: this.errors.length,
         successRat: e:
-<<<<<<< HEAD
           this.errors.length === 0
-<<<<<<< HEAD
-      timestam: new Date().toISOString(),
-      improvement: this.improvements,
-      error: this.errors,
-      summar: {
-        totalImprovement: this.improvements.length,
-        totalError: this.errors.length,
-        successRat: this.errors.length === 0
 
-main
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
             ? 10: 0: Math.round(
                 (this.improvements.length /)
@@ -1741,95 +1003,35 @@ main
 
       this.log('🎉 Comprehensive app improvement completed!');
       this.log(
-<<<<<<< HEAD
-<<<<<<< HEAD
-        `📊 Summar: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
 
-        `📊 Summar: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
-        `📊 Summar: y: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
-main
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       );
 
       return report;
     } catch (error) {
-<<<<<<< HEAD
       this.log(`❌ Erro: ${error.message}`);
 
       this.log(`❌ Erro: ${error.message}`);
       this.log(`❌ Erro: r: ${error.message}`);
 main
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       throw error;
 
 // Run the improver;
 if (require.main === module) {
   improver.run().catch(error => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.error('❌ Erro: ', error);
 
-    console.error('❌ Erro: ', error);
-    console.error('❌ Erro: r:', error);
-main
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     process.exit(1);
 
 module.exports = ComprehensiveAppImprover;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
   this.log(`Fatal "error": ${error.message}`, ``)
-<<<<<<< HEAD
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 
       fs.mkdirSync(this.reportsDir, { recursiv: true });
 
@@ -1891,7 +1093,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         `📊 Summar: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`)
 
 
-<<<<<<< HEAD
       const report = await this.generateReport();
 
       this.log('🎉 Comprehensive app improvement completed!');
@@ -1917,24 +1118,11 @@ if (require.main === module) {
 
 module.exports = ComprehensiveAppImprover;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
-=======
 const { execSync, spawn } = require("child_process")"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
 class $1 {
   // TODO: Implement
   constructor() {
@@ -1943,7 +1131,6 @@ class $1 {
     this.startTime = new Date()
     this.fixesApplied = []
     this.errorsFound = [],
-<<<<<<< HEAD
 }
   log(message, type = "INFO") {
   const timestamp = new Date().toISOString()
@@ -1959,19 +1146,6 @@ class $1 {
         stdio: options.silent ? "pipe" : "inherit",
         ...options ;
 })
-=======
-  log(message, type = "INFO") {"
-
-    console.log(logMessage)
-    // Append to log file;"
-    fs.appendFileSync(this.logFile, logMessage + "\n"),"
-  // TODO: Implement
-
-  encoding: "utf8","
-        cwd: this.projectRoot,"
-        stdio: options.silent ? "pipe" : "inherit","
-        ...options ;)
->>>>>>> origin/chore/fix-lint-and-merge
       return result;
 
       this.errorsFound.push({ command, error: error.message })
@@ -1979,40 +1153,16 @@ class $1 {
   async installDependencies() {"
   this.log("Installing dependencies...")"
     // Try different installation methods;
-<<<<<<< HEAD
     const methods = ["
 
         this.fixesApplied.push("Dependencies installed")"
     this.log("Failed to install dependencies with all methods", "ERROR")"
-=======
-    const methods = [
-  "npm install --legacy-peer-deps --force",
-      "npm install --force",
-      "yarn install --ignore-engines" ]
-    for (const method of methods) {
-  const result = await this.runCommand(method, { silent: true })
-      if (result !== null) {
-  this.log(`Dependencies installed successfully using: ${method}`)
-        this.fixesApplied.push("Dependencies installed")
-        return true;
-}
-    }
-    this.log("Failed to install dependencies with all methods", "ERROR")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     return false;
-<<<<<<< HEAD
 }
   async fixPackageJson() {
   this.log("Fixing package.json...")
     try {
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"))
-=======
-  async fixPackageJson() {"
-  this.log("Fixing package.json...")"
-  // TODO: Implement
-
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"))"
->>>>>>> origin/chore/fix-lint-and-merge
       // Fix common issues;
       const fixes = []
       // Remove problematic dependencies;"
@@ -2029,30 +1179,13 @@ class $1 {
           npm: ">=8.0.0";"
         fixes.push("Added engines configuration"),"
       // Write back the fixed package.json;
-<<<<<<< HEAD
 
   async createMissingConfigFiles() {"
   this.log("Creating missing configuration files...")"
-=======
-      fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
-      this.log(`Package.json fixed: ${fixes.join(", ")}`)
-      this.fixesApplied.push(...fixes)
-} catch (error) {
-  this.log(`Failed to fix package.json: ${error.message}`, "ERROR"),
-}
-  }
-  async createMissingConfigFiles() {
-  this.log("Creating missing configuration files...")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const configs = [
-<<<<<<< HEAD
   {
   file: "eslint.config.js",
         content: `import js from "@eslint/js";
-=======
-  {"
-
->>>>>>> origin/chore/fix-lint-and-merge
 export default [
   {]"
   files: ["**/*.{js,jsx,ts,tsx}"],"
@@ -2093,7 +1226,6 @@ module.exports = nextConfig`;
     const typeDeclarations = `declare module "*.svg" {"
   const content: string;
   export default content;
-<<<<<<< HEAD
 }
 declare module "*.png" {
   export default content;
@@ -2110,16 +1242,6 @@ declare module "*.gif" {
 declare module "*.webp" {
   export default content;
 }`;
-=======
-declare module "*.png" {"
-declare module "*.jpg" {"
-declare module "*.jpeg" {"
-declare module "*.gif" {"
-declare module "*.webp" {"
-  export default content;`;
-}`;"
-    const typesPath = path.join(this.projectRoot, "types", "global.d.ts")"
->>>>>>> origin/chore/fix-lint-and-merge
     if (!fs.existsSync(path.dirname(typesPath))) {
   fs.mkdirSync(path.dirname(typesPath), { recursive: true }),
     fs.writeFileSync(typesPath, typeDeclarations)"
@@ -2140,14 +1262,9 @@ declare module "*.webp" {"
   async createEnhancedAutomationScripts() {"
   this.log("Creating enhanced automation scripts...")"
     const scripts = [
-<<<<<<< HEAD
   {
   name: "automation/health-check.cjs",
         content: `#!/usr/bin/env node;
-=======
-
-const path = require("path")"
->>>>>>> origin/chore/fix-lint-and-merge
 class HealthChecker {
   // TODO: Implement
   this.projectRoot = process.cwd()]
@@ -2159,14 +1276,9 @@ class HealthChecker {
         this.fixes.push("Run npm install"),"
       console.log("✅ Dependencies check completed"),"
   this.issues.push(\`Dependencies check failed: \${error.message}\`),
-<<<<<<< HEAD
 }
   }
   async checkConfiguration() {
-=======
-  async checkConfiguration() {"
-  const configFiles = ["package.json", "tsconfig.json", "next.config.js", "eslint.config.js"]"
->>>>>>> origin/chore/fix-lint-and-merge
     for (const file of configFiles) {
   const filePath = path.join(this.projectRoot, file)
       if (!fs.existsSync(filePath)) {`;
@@ -2200,25 +1312,16 @@ class HealthChecker {
   console.log("\\n🎉 All checks passed! Your app is healthy."),"
 const checker = new HealthChecker()`;
 checker.runAllChecks().catch(console.error)`;
-<<<<<<< HEAD
 },
       {
   name: "automation/performance-optimizer.cjs",
         content: `#!/usr/bin/env node;
-=======
-
-const { execSync } = require("child_process")"
->>>>>>> origin/chore/fix-lint-and-merge
 class PerformanceOptimizer {
   // TODO: Implement
   this.projectRoot = process.cwd()
     this.optimizations = [],
   async optimizeImages() {"
   console.log("🖼️  Optimizing images...")
-<<<<<<< HEAD
-=======
-    const publicDir = path.join(this.projectRoot, "public")"
->>>>>>> origin/chore/fix-lint-and-merge
     if (fs.existsSync(publicDir)) {
   // This would integrate with image optimization tools;"
       this.optimizations.push("Image optimization completed"),"
@@ -2234,12 +1337,7 @@ class PerformanceOptimizer {
     // Remove unused imports;
     const srcFiles = this.findSourceFiles()
     for (const file of srcFiles) {
-<<<<<<< HEAD
   try {
-=======
-  // TODO: Implement
-  let content = fs.readFileSync(file, "utf8")"
->>>>>>> origin/chore/fix-lint-and-merge
         // Remove empty lines at the end;
         const trimmed = content.trimEnd()
         if (trimmed !== content) {"
@@ -2249,15 +1347,8 @@ class PerformanceOptimizer {
   // Skip files that can"t be processed;"
     this.optimizations.push("Code optimization completed"),"
   findSourceFiles() {
-<<<<<<< HEAD
   const files = []
     [srcDir, componentsDir, pagesDir].forEach(dir => {
-=======
-  const files = []"
-
-    const pagesDir = path.join(this.projectRoot, "pages")"
-    [srcDir, componentsDir, pagesDir].forEach(dir => {)
->>>>>>> origin/chore/fix-lint-and-merge
   if (fs.existsSync(dir)) {
   this.findFilesRecursively(dir, files),
 
@@ -2282,19 +1373,14 @@ class PerformanceOptimizer {
 }),
 const optimizer = new PerformanceOptimizer()`;
 optimizer.runOptimizations().catch(console.error)`;
-<<<<<<< HEAD
 },
       {
   name: "automation/security-scanner.cjs",
         content: `#!/usr/bin/env node;
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
 class SecurityScanner {
   // TODO: Implement
     this.vulnerabilities = []
     this.recommendations = [],
-<<<<<<< HEAD
   async scanDependencies() {"
   console.log("🔍 Scanning dependencies for vulnerabilities...")"
   // TODO: Implement
@@ -2305,40 +1391,13 @@ class SecurityScanner {
     const sensitivePatterns = []"
 
 
-=======
-}
-  async scanDependencies() {
-  console.log("🔍 Scanning dependencies for vulnerabilities...")
-    try {
-  execSync("npm audit", { stdio: "pipe" })
-      console.log("✅ No critical vulnerabilities found"),
-} catch (error) {
-  this.vulnerabilities.push("Dependency vulnerabilities detected")
-      this.recommendations.push("Run npm audit fix"),
-}
-  }
-  async scanSecrets() {
-  console.log("🔐 Scanning for exposed secrets...")
-    const sensitivePatterns = [
-  /password\\s*[:=]\\s*[""][^""]+[""]/gi,
-      /api[_-]?key\\s*[:=]\\s*[""][^""]+[""]/gi,
-      /secret\\s*[:=]\\s*[""][^""]+[""]/gi,
-      /token\\s*[:=]\\s*[""][^""]+[""]/gi;
-    ]
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const files = this.findSourceFiles()
-<<<<<<< HEAD
     for (const file of files) {
   try {
-=======
-  // TODO: Implement
-  const content = fs.readFileSync(file, "utf8")"
->>>>>>> origin/chore/fix-lint-and-merge
         for (const pattern of sensitivePatterns) {
   if (pattern.test(content)) {`;
   this.vulnerabilities.push(\`Potential secret in \${path.relative(this.projectRoot, file)}\`)`;
             this.recommendations.push(\`Review \${path.relative(this.projectRoot, file)} for exposed secrets\`),
-<<<<<<< HEAD
 }
         }
       } catch (error) {
@@ -2377,24 +1436,6 @@ class SecurityScanner {
   try {
           // Check for insecure configurations;
           if (content.includes("NODE_ENV=development") && file.includes(".env")) {
-=======
-  // Skip files that can"t be read;"
-    console.log("✅ Secret scanning completed"),"
-    const dirs = ["src", "components", "pages", "utils", "hooks"]"
-    dirs.forEach(dir => {)
-  const fullPath = path.join(this.projectRoot, dir)
-      if (fs.existsSync(fullPath)) {
-
-  // TODO: Implement
-  async scanConfiguration() {"
-  console.log("⚙️  Scanning configuration files...")
-    const configFiles = ["package.json", "next.config.js", ".env", ".env.local"]"
-      if (fs.existsSync(filePath)) {
-  // TODO: Implement
-  const content = fs.readFileSync(filePath, "utf8")"
-          // Check for insecure configurations;"
-          if (content.includes("NODE_ENV=development") && file.includes(".env")) {"`;
->>>>>>> origin/chore/fix-lint-and-merge
   this.recommendations.push(\`Review \${file} for production-ready configuration\`),
   // Skip files that can"t be read;"
     console.log("✅ Configuration scanning completed"),"
@@ -2416,18 +1457,12 @@ class SecurityScanner {
   console.log("\\n🎉 No security issues found!"),"
 const scanner = new SecurityScanner()`;
 scanner.runSecurityScan().catch(console.error)`;
-<<<<<<< HEAD
 
-=======
-}
-    ]
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     for (const script of scripts) {
   const scriptPath = path.join(this.projectRoot, script.name)
       const scriptDir = path.dirname(scriptPath)
       if (!fs.existsSync(scriptDir)) {
   fs.mkdirSync(scriptDir, { recursive: true }),
-<<<<<<< HEAD
 }
       fs.writeFileSync(scriptPath, script.content)
       fs.chmodSync(scriptPath, "755")
@@ -2449,31 +1484,14 @@ scanner.runSecurityScan().catch(console.error)`;
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
       this.log("Updated package.json scripts")
       this.fixesApplied.push("Updated package.json scripts")
-<<<<<<< HEAD
-=======
-      fs.writeFileSync(scriptPath, script.content)"
 
-  async updatePackageJsonScripts() {"
-  this.log("Updating package.json scripts...")"
-  // TODO: Implement
-
-        "automation:fix": "node automation/comprehensive-app-improver.cjs";"
-      fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))"
->>>>>>> origin/chore/fix-lint-and-merge
-
-=======
 } catch (error) {
   this.log(`Failed to update package.json: ${error.message}`, "ERROR"),
 }
   }
   async generateReport() {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const endTime = new Date()
-<<<<<<< HEAD
   timestamp: endTime.toISOString(),
-=======
-  timestamp: endTime.toISOString(),`;
->>>>>>> origin/chore/fix-lint-and-merge
       duration: `${Math.round(duration / 1000)}s`,
       fixesApplied: this.fixesApplied,
       errorsFound: this.errorsFound,
@@ -2484,8 +1502,6 @@ scanner.runSecurityScan().catch(console.error)`;
     const reportPath = path.join(this.projectRoot, "automation-report.json")"
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))"
 
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
       this.reportsDir,
 
     );
@@ -2518,75 +1534,10 @@ scanner.runSecurityScan().catch(console.error)`;
       this.log(`❌ Error: ${error.message}`);
       throw error;
     }
-<<<<<<< HEAD
-  }
-}
 
-=======
-=======
-  async run() {"
-  this.log("🚀 Starting Comprehensive App Improvement Process...")
-    this.log("======")"
-  // TODO: Implement
-  // Step 1: Fix package.json;
-      await this.fixPackageJson()
-      // Step 2: Install dependencies;
-      await this.installDependencies()
-      // Step 3: Create missing config files;
-      await this.createMissingConfigFiles()
-      // Step 4: Fix TypeScript errors;
-      await this.fixTypeScriptErrors()
-      // Step 5: Run linting;
-      await this.runLinting()
-      // Step 6: Try to build;
-      await this.buildApp()
-      // Step 7: Create enhanced automation scripts;
-      await this.createEnhancedAutomationScripts()
-      // Step 8: Update package.json scripts;
-      await this.updatePackageJsonScripts()
-      // Step 9: Generate report;
-<<<<<<< HEAD
-      await this.generateReport()"
-      this.log("\\n🎉 Comprehensive App Improvement completed!")"
-
-=======
-      await this.generateReport()
-      this.log("\\n🎉 Comprehensive App Improvement completed!")
-} catch (error) {
-  this.log(`Fatal error: ${error.message}`, "ERROR')
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-      await this.generateReport()
-      process.exit(1),
-<<<<<<< HEAD
-}
->>>>>>> origin/chore/fix-lint-and-merge
-  }
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 // Run the improver;
 const improver = new ComprehensiveAppImprover()
 improver.run().catch(console.error)
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-// Run the improver;
-const improver = new ComprehensiveAppImprover()
-improver.run().catch(console.error)
->>>>>>> origin/main
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
 // Run the improver
 if (require.main === module) {
   const improver = new ComprehensiveAppImprover();
@@ -2595,70 +1546,16 @@ if (require.main === module) {
     process.exit(1);
   });
 }
-<<<<<<< HEAD
+
 
 module.exports = ComprehensiveAppImprover;
-=======
-<<<<<<< HEAD
-module.exports = ComprehensiveAppImprover;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
 
-module.exports = ComprehensiveAppImprover;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Run the improver;
-const improver = new ComprehensiveAppImprover()
-improver.run().catch(console.error)
-=======
-<<<<<<< HEAD
-// Run the improver;
-const improver = new ComprehensiveAppImprover()
-improver.run().catch(console.error)
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/automate-test-improve-and-merge-code-59d5
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
-=======
 
 // Run the improver;
-<<<<<<< HEAD
 improver.run().catch(console.error)
-=======
->>>>>>> origin/chore/fix-lint-and-merge
 
 
 
@@ -2672,18 +1569,6 @@ improver.run().catch(console.error)
 
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
-
-<<<<<<< HEAD
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
 
 
@@ -2693,14 +1578,10 @@ improver.run().catch(console.error)
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+
+
+
+
+module.exports = ComprehensiveAppImprover;

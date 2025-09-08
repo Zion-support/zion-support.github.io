@@ -3,21 +3,33 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js';
 const supabaseUrl = $2;
 const serviceRoleKey = $2;
 let cachedClient: SupabaseClient | null = $2;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export function getServerSupabase(): SupabaseClient {
-  if (cachedClient) return cachedClient;
-  cachedClient = createClient(supabaseUrl, supabaseServiceKey, {
+  if (cachedClient) return cachedClient,
+  cachedClient = createClient($2);
+  return cachedClient
+}
+
+if (!supabaseServiceKey) {
+  throw new Error('Missing SUPABASE_SERVICE_ROLE_KEY environment variable');
+}
+
+export function getServerSupabase() {
+  return createClient(supabaseUrl, supabaseServiceKey, {
     auth: {
       autoRefreshToken: false,
       persistSession: false
     }
   });
-  return cachedClient;
 }
 
 export function getClientSupabase() {
   return createClient(supabaseUrl, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '');
 }
+<<<<<<< HEAD
 
 const supabaseUrl ="
   process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabase.co";
@@ -81,3 +93,5 @@ export function getServerSupabase() {;
 
 }
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

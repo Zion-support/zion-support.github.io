@@ -6,6 +6,16 @@ import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 interface ProjectActionsProps {
 
 
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Button  } from '@/components/ui/button';
+import { Link  } from 'react-router-dom';
+import { ShieldAlert } from "lucide-react";
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+interface ProjectActionsProps {
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import {Button} from '@/components/ui/button';
 
@@ -13,8 +23,11 @@ import {Link} from 'react-router-dom';
 import {ShieldAlert} from "lucide-react";'
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { Link } from 'react-router-dom',
@@ -22,24 +35,92 @@ import { ShieldAlert } from "lucide-react",
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface ProjectActionsProps {
   projectId: string,
   isUnderDispute: boolean,
   disputeId?: string,
   isTalent: boolean,
+<<<<<<< HEAD
 
 
+=======
+
+
+}
+
+export function ProjectActions({;
+  projectId;
+  isUnderDispute;
+  disputeId;
+  isTalent;
+export function ProjectActions({}
+  projectId,
+  isUnderDispute,
+  disputeId,
+  isTalent,
+
+  onAddMilestone
+}: ProjectActionsProps) {
+
+interface ProjectActionsProps {
+  // TODO: Implement
+}
+  projectId: string,
+  isUnderDispute: boolean,
+  disputeId?: string,
+  isTalent: boolean,
+  onAddMilestone: () => void;
+
+
+export function ProjectActions({;
+  projectId;
+  isUnderDispute;
+  disputeId;
+  isTalent;
+export function ProjectActions({
+  projectId,
+  isUnderDispute,
+  disputeId,
+  isTalent,
+
+
+  onAddMilestone;)
+}: ProjectActionsProps) {
+  return (
+
+    <div className="flex gap-2">
+      {isUnderDispute && disputeId ? (
+        <Button variant="outline" asChild>
+          <Link to={`/dashboard/disputes/${disputeId}`}>
+            <ShieldAlert className="h-4 w-4 mr-2" />
+            View Active Dispute
+          </Link>
+        </Button>
+      ) : (
+
+  onAddMilestone
+}: ProjectActionsProps) {
+  return (
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <RaiseDisputeButton
 
           projectId={projectId}
           variant="outline"
         />
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Link } from 'react-router-dom',;
@@ -54,6 +135,7 @@ interface ProjectActionsProps {;
   onAddMilestone: () => void;
 }
 ;
+<<<<<<< HEAD
 
 export function ProjectActions({;
   projectId,;
@@ -66,6 +148,10 @@ export function ProjectActions(): any ({;
   onAddMilestone;
 }: ProjectActionsProps) {;
 
+=======
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     <div className="flex gap-2">;
       {isUnderDispute && disputeId ? (;
         <Button variant="outline" asChild>;
@@ -75,6 +161,7 @@ export function ProjectActions(): any ({;
             View Active Dispute;
           </Link>;
         </Button>;
+<<<<<<< HEAD
 
       ) :(;
         <RaiseDisputeButton ;
@@ -87,6 +174,12 @@ export function ProjectActions(): any ({;
       ) : (;
 
 
+=======
+
+
+        />;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       )}
       {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>
@@ -94,7 +187,10 @@ export function ProjectActions(): any ({;
         </Button>
       )}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     </div>;
   ),;}
  interface ProjectActionsProps {
@@ -124,8 +220,11 @@ onAddMilestone
     </div>
   )
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export /**
  * ProjectActions - Function description
  */
@@ -149,6 +248,7 @@ return (;
       {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>;
           Add Milestone;
+<<<<<<< HEAD
 
         </Button>)}
     </div>);
@@ -157,3 +257,33 @@ return (;
 
 
 
+=======
+
+
+    </div>;
+  ),;}
+ interface ProjectActionsProps {
+  projectId: string;
+isUnderDispute: boolean;
+disputeId?: string;
+isTalent: boolean;
+onAddMilestone: () => void 
+}export function ProjectActions ({
+  projectId;
+isUnderDispute;
+disputeId;
+isTalent;
+onAddMilestone 
+}: ProjectActionsProps) {
+  return (<div className="flex gap-2" > isUnderDispute && disputeId ? (<Button variant="outline" asChild> <Link to= {
+  `/dashboard/disputes/$ {
+  disputeId 
+}` 
+}> <ShieldAlert className="h-4 w-4 mr-2" /> View Active Dispute </Link> </Button>) : (<RaiseDisputeButton />) 
+}{
+
+  isTalent && !isUnderDispute && (<Button onClick= {
+}> Add Milestone ) 
+
+}</div>)
+>>>>>>> origin/cursor/delete-old-data-records-6bba

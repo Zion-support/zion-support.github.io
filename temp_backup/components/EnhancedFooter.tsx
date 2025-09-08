@@ -1,8 +1,8 @@
 
   Brain,Mail,Phone,MapPin,Globe,} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
 import React from 'react';
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div />Something went wrong.</div>;}
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return {hasError: true }
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }static getDerivedStateFromError(error) {return { hasError: true }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div />Something went wrong.</div>;}
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }static getDerivedStateFromError(error) {return {hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
     }return this.props.children;
@@ -11,8 +11,8 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 import Link from 'next/link';
 import {Brain,Mail,Phone,MapPin,Globe,Github,Linkedin,Twitter,} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
 import { Facebook,Twitter,Linkedin,Instagram,Mail,Phone,MapPin,ArrowUp,Globe,Shield,FileText,HelpCircle,} from 'lucide-react';
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div />Something went wrong.</div>;}
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return {hasError: true }
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }static getDerivedStateFromError(error) {return { hasError: true }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div />Something went wrong.</div>;}
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }static getDerivedStateFromError(error) {return {hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
     }return this.props.children;
@@ -525,8 +525,8 @@ className='hover:text-white transition-colors';
               {socialLinks && socialLinks.map(social => (        <div className="pt-8 border-t border-white/10" />;}
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0" />;}
             {/* Copyright */}<div className="text-white/60 text-sm" />;
-            </div>;{/* Social Links */}}export default EnhancedFooter;  )<div className='pt-8 border-t border-white/10' />;
-            </div>;{/* Social Links */}}
+            </div>;{/* Social Links */}export default EnhancedFooter;  )<div className='pt-8 border-t border-white/10' />;
+            </div>;{/* Social Links */}
 
 export default EnhancedFooter;  )<div className='pt-8 border-t border-white/10' />;
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0' />;

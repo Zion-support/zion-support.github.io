@@ -1,6 +1,10 @@
 export interface ContactInfo {
 
+<<<<<<< HEAD
 
+=======
+  // TODO: Implement
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
   phone: string;,
   email: string;
@@ -25,8 +29,12 @@ export interface Service {
 pr-12325
   technologies: string[];
 
+<<<<<<< HEAD
   delivery_time: string;
 
+=======
+  deliveryTime: string;,
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   support: string;
   image?: string;
   popular?: boolean;
@@ -40,7 +48,11 @@ pr-12325
 // SEO and performance;
 export interface SEOProps {
 
+<<<<<<< HEAD
 
+=======
+  // TODO: Implement
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export interface PerformanceMetrics {
   // TODO: Implement
@@ -113,7 +125,10 @@ export interface User {
       push: boolean;
       sms: boolean;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export interface Notification {
   id: string;
@@ -132,6 +147,7 @@ export interface Notification {
   expires?: Date;
 }
 
+<<<<<<< HEAD
 
 // Project management
 export interface Project {
@@ -190,6 +206,9 @@ export interface Project {
 // Component props
 export interface BaseComponentProps {
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   children?: React.ReactNode;
   id?: string;
   disabled?: boolean;
@@ -207,4 +226,7 @@ export interface Environment {
   NEXT_PUBLIC_GA_ID?: string;
 
   NEXT_PUBLIC_SENTRY_DSN?: string;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

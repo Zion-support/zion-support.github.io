@@ -1,4 +1,43 @@
 
+<<<<<<< HEAD
+=======
+import React from 'react';
+import Image from 'next/image';
+import { Star, Heart, ShoppingCart } from 'lucide-react';
+import React from 'react';
+import Link from 'next/link';
+ursor/automate-test-improve-and-merge-code-646c;
+
+
+
+pr-12243
+        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
+      </div>;
+      <p className="text-sm text-gray-600 mb-4">{description}</p>;
+      <div className="mt-auto flex items-center justify-between">;
+        {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
+import React from 'react';
+import Link from 'next/link';
+import Link from next/link';
+
+interface EnhancedMarketplaceCardProps {
+  title: string;
+  description: string;
+  price?: string;
+  href: string, image?: string
+import React from 'react';
+import { Star, Heart, ShoppingCart } from 'lucide-react';
+pr-12243
+  image?: string;
+  href: string;
+  category?: string;
+  rating?: number;
+  reviews?: number;
+  features?: string[];
+  isNew?: boolean;
+  isPopular?: boolean;
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
   title,
@@ -112,12 +151,20 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
         </div>
       </div>
     </Link>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   );
 }
 
 export default EnhancedMarketplaceCard;
 
+<<<<<<< HEAD
+=======
+pr-12243
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
       </div>;
       <p className="text-sm text-gray-600 mb-4">{description}</p>;
@@ -126,20 +173,32 @@ export default EnhancedMarketplaceCard;
 import Link from 'next/link';
 import Image from 'next/image';
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface EnhancedMarketplaceCardProps {
   title: string, description: string
   price?: string;
   href: string, image?: string
+<<<<<<< HEAD
 
 
 
+=======
+
+import { Star, Heart, ShoppingCart } from lucide-react';
+pr-12243
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface MarketplaceCardProps {
 interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;
   price?: string;
 
+<<<<<<< HEAD
           <div className="text-sm text-gray-500 group-hover:text-blue-600 transition-colors">;
             Learn more →;
           </div>;
@@ -155,6 +214,30 @@ interface MarketplaceCardProps {;
   onAddToCart?: () => void;
   on_favorite?: () => void;
 }
+=======
+        <h3 className=text-lg font-semibold text-gray-900">{title}</h3>;
+      </div>;
+      <p className="text-sm text-gray-600 mb-4>{description}</p>;
+      <div className=mt-auto flex items-center justify-between">;
+        {price && <span className="text-sm font-medium text-blue-600>{price}</span>}
+interface EnhancedMarketplaceCardProps {
+  title: string, description: string
+  price?: string;
+  href: string, image?: string
+  href: string, image?: string
+
+interface MarketplaceCardProps {
+  title: string,
+  description: string,
+  price: number,
+  rating: number,
+  image: string,
+  onAddToCart?: () => void;
+  onFavorite?: () => void;
+}
+
+const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   title;
   description;
@@ -163,7 +246,12 @@ interface MarketplaceCardProps {;
   image;
   onAddToCart;
 
+<<<<<<< HEAD
 
+=======
+  image?: string;
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   title,
@@ -173,7 +261,10 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   image,
   onAddToCart,
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   onFavorite
 }) => {
   return (
@@ -205,10 +296,17 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
           Add to Cart
         </button>
       </div>
-</div>
+    </div>
   );
 
+<<<<<<< HEAD
 
 
 
 
+=======
+};
+
+export default EnhancedMarketplaceCard;
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

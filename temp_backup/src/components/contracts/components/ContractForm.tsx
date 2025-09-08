@@ -18,7 +18,10 @@ form.setValue (typedKey, initialValues[typedKey]) ;
 }return undefined;
 }, [form, onFormValuesChange]);
 };
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
+>>>>>>> origin/resolved-merge-conflicts
 }finally {;
   setIsGenerating (false) ;
 }

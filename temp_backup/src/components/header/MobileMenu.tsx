@@ -9,7 +9,7 @@ const baseItems = [ {';''
 {';''
   key: 'community', href: '/community',  icon: MessageCircle, matches: (path: string) => path.startsWith ('/community') || path.startsWith ('/forum') ;
 };
-> <X className="h-5 w-5" /> </Button> </div> <Link key= {;
+> <X className='h-5 w-5' /> </Button> </div> <Link key= {;
   item.name ;
 }href= {;
   item.href ;
@@ -22,8 +22,8 @@ const baseItems = [ {';''
 }> {';''
   item.badge > 9 ? '9+' : item.badge ;
 }</span>) ;
-}</div> {;"
-  item.name ;""
-}</Link>) ) ";"'"
-}</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;'"'"
-}'"'"'"
+}</div> {;'
+  item.name ;''
+}</Link>) ) ';'''
+}</nav> <div className='mt-6 px-6' > <ModeToggle /> </div> </div>) ;''''
+}''''''

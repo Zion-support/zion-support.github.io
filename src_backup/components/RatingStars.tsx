@@ -47,7 +47,11 @@ export function RatingStars({ value;
   )const half = value - filled >= 0 && 0.5;
   const total = 5;
 }
+<<<<<<< HEAD
+}const half = value - filled >= 0.5;
+=======
 }}const half = value - filled >= 0.5;
+>>>>>>> origin/resolved-merge-conflicts
   const total = 5;
 }
 }

@@ -1,59 +1,10 @@
-<<<<<<< HEAD
 
 #!/usr/bin/env node;
 const fs = require("fs)
 const path = require(path")
 console.log(" Starting Enhanced Error Fixing Automation System...)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
 
-class EnhancedErrorFixingAutomation {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.fixesApplied = [];
-    this.startTime = Date.now();
-  }
 
-  log(message, type = "info") {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logMessage);
-  }
-
-  async runCommand(command, options = {}) {
-    try {
-      const result = execSync(command, {
-        cwd: this.projectRoot,
-        encoding: "utf8",
-        stdio: options.silent ? "pipe" : "inherit",
-        ...options
-      });
-      return { success: true, output: result };
-    } catch (error) {
-      return { success: false, error: error.message, output: error.stdout || error.stderr };
-    }
-  }
-
-  async fixMergeConflicts() {
-    this.log("Fixing merge conflicts...");
-    
-    const files = this.getTypeScriptFiles();
-    
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync(file, "utf8");
-        if (content.includes("<<<<<<< HEAD") || content.includes("=======") || content.includes(">>>>>>> ")) {
-=======
-
-<<<<<<< HEAD
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           this.log(`Fixing merge conflicts in ${file}`);
           
           // Simple merge conflict resolution - keep the HEAD version
@@ -62,16 +13,8 @@ class EnhancedErrorFixingAutomation {
           let inConflict = false;
           
           for (const line of lines) {
-<<<<<<< HEAD
-            if (line.includes("<<<<<<< HEAD")) {
-              inConflict = true;
-              continue;
-            } else if (line.includes("=======")) {
-              continue;
-            } else if (line.includes(">>>>>>> ")) {
-=======
+
             if (line.includes("
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               inConflict = false;
               continue;
             } else if (!inConflict) {
@@ -158,20 +101,13 @@ if (require.main === module) {
 }
 
 module.exports = EnhancedErrorFixingAutomation;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node;
 #!/usr/bin/env node;
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
 console.log("" Starting Enhanced Error Fixing Automation System...")
->>>>>>> origin/chore/fix-lint-and-merge
   "AUTOMATION_INTERVAL"
   MAX_RETRIES
   "LOG_LEVEL": process.env.LOG_LEVEL || info
@@ -335,29 +271,9 @@ export default function"
       duration: "${duration}ms"
       fixesApplied
       "summary"
-<<<<<<< HEAD
         typescriptFixes: this.fixesApplied.filter(f => f.type === "typescript_error")
         eslintFixes: this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
 
-=======
-        "typescriptFixes": this.fixesApplied.filter(f => f.type === "typescript_error")
-        "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
-<<<<<<< HEAD
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-=======
-        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

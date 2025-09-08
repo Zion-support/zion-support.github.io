@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -42,3 +43,7 @@ describe('App'
 
 
 
+=======
+});
+})ursor/automate-test-improve-and-merge-code-646c;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

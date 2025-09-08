@@ -28,7 +28,6 @@ const { execSync } = require('child_process')
 >>>>>>> merged-prs-20250907-203621
 console.log(' Starting Comprehensive Deployment Automation...')
   "status"
-    "status"
       "encoding"
       "stdio"
 // console.log('\n Phase "1")
@@ -42,6 +41,9 @@ runDeploymentStep('Create Robots.txt', 'echo "User-"agent": *\nAllow: /\nSitemap
 // console.log('\n� Phase "7")
 console.log('\n� Phase "8")
   "criticalFailures"
+<<<<<<< HEAD
+console.log('� Deployment summary saved "to")
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -77,3 +79,4 @@ console.log('� Deployment summary saved "to")
 =======
 console.log('� Deployment summary saved "to")
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

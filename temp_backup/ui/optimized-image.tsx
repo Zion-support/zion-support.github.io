@@ -87,7 +87,7 @@ isLoading ? 'opacity-0' : 'opacity-100') ;
 }> {;
   images.map ( (image, index) => (<motion.div key= {;
   index ;
-}> <div className="relative" > <OptimizedImage </div>) ;
+}> <div className='relative' > <OptimizedImage </div>) ;
 }</div> </motion.div>) ) ;
 }</div> </div>) ;'
 };''
@@ -97,6 +97,6 @@ isLoading ? 'opacity-0' : 'opacity-100') ;
   src ? (<OptimizedImage src= {;
   src ;
 }</div>) ;
-}</div>) ;'"
-};'"'"
-'"'"'"`
+}</div>) ;''
+};''''
+''''''`

@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Switch } from '@/components/ui/switch',;
@@ -143,8 +146,12 @@ export function FraudDetectionSettings() {;
   ),; export function FraudDetectionSettings () {;
   const {;
 
+<<<<<<< HEAD
 
 
+=======
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/settings/FraudDetectionSettings.tsx
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   user ;
  } = useAuth ();
 const [messageScanningEnabled, setMessageScanningEnabled] = useState (true);
@@ -152,7 +159,11 @@ const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState (true
 const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState (true);
 const [isSaving, setIsSaving] = useState (false);
 
+<<<<<<< HEAD
 
+=======
+const handleSavePreferences = async () => {;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   if (!user?.id) return;
 try {;
   ;
@@ -165,6 +176,10 @@ toast ({;
 }finally {;
   setIsSaving (false) ;
 }
+<<<<<<< HEAD
 
 };
 
+=======
+};
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   keywords: 'ai project manager, services, business, technology',
 };
 
-export default function ServicePage() {
+function FeatureCard({ title, details }: { title: string; details: string[] }) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
@@ -36,7 +36,6 @@ export default function ServicePage() {
             <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
             <p className="text-gray-300">Grow with your business with our flexible and scalable platform.</p>
           </div>
-        </div>
 
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -47,7 +46,6 @@ export default function ServicePage() {
             Contact Sales
           </button>
         </div>
-      </div>
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
