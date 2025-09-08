@@ -161,7 +161,16 @@ const Index: NextPage = () => {
               <a href="/automation-health" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
                 System Health
               </a>
-              <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50">
+              <a href="/news" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50">
+                News
+              </a>
+              <a href="/reports" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50">
+                Reports & Analytics
+              </a>
+              <a href="/case-studies" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-orange-400/50">
+                Case Studies
+              </a>
+              <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
                 Contact
               </a>
             </div>
@@ -269,15 +278,24 @@ const Index: NextPage = () => {
                     <li><a href="/privacy" className="hover:text-fuchsia-400 transition-colors">Privacy Policy</a></li>
                   </ul>
                 </div>
-                <div>
-                  <h4 className="text-md font-semibold mb-4 text-white">Connect</h4>
-                  <ul className="space-y-2 text-sm text-white/70">
-                    <li><a href="/about" className="hover:text-green-400 transition-colors">About Us</a></li>
-                    <li><a href="/contact" className="hover:text-green-400 transition-colors">Contact</a></li>
-                    <li><a href="/automation-health" className="hover:text-green-400 transition-colors">Status</a></li>
-                    <li><a href="/api-documentation" className="hover:text-green-400 transition-colors">Developers</a></li>
-                  </ul>
-                </div>
+                                  <div>
+                    <h3 className="text-lg font-bold mb-4 text-green-400">Resources</h3>
+                    <ul className="space-y-2 text-white/70">
+                      <li><a href="/blog" className="hover:text-green-400 transition-colors">Blog</a></li>
+                      <li><a href="/reports" className="hover:text-green-400 transition-colors">Reports</a></li>
+                      <li><a href="/case-studies" className="hover:text-green-400 transition-colors">Case Studies</a></li>
+                      <li><a href="/resources" className="hover:text-green-400 transition-colors">Resources</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold mb-4 text-blue-400">Legal</h3>
+                    <ul className="space-y-2 text-white/70">
+                      <li><a href="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
+                      <li><a href="/about" className="hover:text-blue-400 transition-colors">About</a></li>
+                      <li><a href="/contact" className="hover:text-blue-400 transition-colors">Contact</a></li>
+                      <li><a href="/events" className="hover:text-blue-400 transition-colors">Events</a></li>
+                    </ul>
+                  </div>
               </div>
               <div className="mt-8 pt-8 border-t border-white/20 text-center">
                 <p className="text-white/60 text-sm">
