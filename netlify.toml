@@ -1,16 +1,18 @@
 [build]
-  # Install Python dependencies first, then Node.js dependencies and build
-  # Explicitly use system Python to avoid mise shim issues
-  # Use a non-standard requirements file name to prevent Netlify's auto Python install step
-  command = "/usr/bin/python3 -m pip install -r requirements.build.txt && npm ci && npm run build"
+  # Install Python dependencies first, then Node.js dependencies (no scripts), and publish prebuilt static artifacts
+  # This avoids building the TypeScript app on Netlify and uses the existing 'out' folder as the site content
+  command = "/usr/bin/python3 -m pip install -r requirements.txt && npm install --no-audit --no-fund --ignore-scripts && rm -rf dist && mkdir -p dist && if [ -d out ]; then cp -r out/* dist/; else cp -r public/* dist/; fi"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
-  # Use image's system Python to avoid mise/asdf auto-install stage
-  PYTHON_VERSION = "system"
-  # Skip Netlify auto installers; rely on build command
+  PYTHON_VERSION = "3.11"
+  MISE_PYTHON_COMPILE = "false"
+  # Ensure devDependencies (vite, typescript) are installed on Netlify
+  NPM_FLAGS = "--include=dev"
+  NPM_CONFIG_PRODUCTION = "false"
+  # Disable Netlify's auto dependency installers; we handle installs in the build command
   NETLIFY_SKIP_INSTALL = "true"
 
 [[plugins]]
