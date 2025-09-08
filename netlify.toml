@@ -1,6 +1,6 @@
 [build]
-  # Skip heavy build; install minimal Node deps non-interactively and deploy prebuilt dist
-  command = "npm ci --ignore-scripts --omit=optional || npm install --ignore-scripts --omit=optional"
+  # Publish prebuilt dist without running a build
+  command = "echo Skipping build; deploying prebuilt dist"
   publish = "dist"
   command_timeout = "30m"
 
@@ -13,11 +13,7 @@
   CYPRESS_INSTALL_BINARY = "0"
   ELECTRON_SKIP_DOWNLOAD = "1"
 
-[[plugins]]
-  package = "netlify-plugin-compress"
-  [plugins.inputs]
-    gzip = true
-    brotli = true
+
 
 [[redirects]]
   from = "/*"
