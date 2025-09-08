@@ -49,4 +49,5 @@ export default function CheckoutPage() {
       </div>
     </>
   );
-}
+
+export default Id;

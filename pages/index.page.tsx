@@ -1,20 +1,22 @@
 import React from 'react';
 import Head from 'next/head';
 
-export default function HomeIndex() {
-	return (
-		<>
-			<Head>
-				<title>Zion Tech Group</title>
-				<link rel="canonical" href="https://ziontechgroup.com" />
-			</Head>
-			<div className="min-h-screen flex items-center justify-center bg-black text-white">
-				<div className="text-center space-y-4">
-					<h1 className="text-3xl font-bold">Zion Tech Group</h1>
-					<p>Visit our services overview:</p>
-					<a className="text-cyan-400 underline" href="/services-advertising">Services Advertising</a>
-				</div>
-			</div>
-		</>
-	);
+export default function Indexpage() {
+  return (
+    <>
+      <Head>
+        <title>Indexpage - Zion Tech Group</title>
+        <meta name="description" content="Indexpage page" />
+      </Head>
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6">Indexpage</h1>
+        <p className="text-lg mb-4">This page is under construction.</p>
+        <div className="mt-4">
+          <a href="/" className="text-blue-600 hover:underline">
+            ← Back to Home
+          </a>
+        </div>
+      </div>
+    </>
+  );
 }

@@ -59,4 +59,5 @@ export default function VerifyStatus() {
       </div>
     </div>
   );
-}
+
+export default Verifystatus;

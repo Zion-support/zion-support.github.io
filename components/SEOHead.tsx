@@ -99,31 +99,55 @@ interface SEOHeadProps {
   nofollow?: boolean;
 }
 
-<<<<<<< HEAD
-
-
-
-  canonicalUrl,
-  ogImage = /og-image.jpg',
-  ogType = 'website,
-  twitterCard = summary_large_image',
-  structuredData,
-  noindex = false,
-  nofollow = false,
-
-      "@type": "PostalAddress",
-      addressCountry: 'US',
-    },
-    contactPoint: {
-      "@type": "ContactPoint",
-
-      telephone: '+1-555-123-4567',
-      contactType: 'customer service',
-    },
-    sameAs: [
-      'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title = 'Zion Tech Group - Revolutionary AI & Quantum Technology Solutions',
+  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.',
+  keywords = 'AI, quantum computing, cybersecurity, space technology, autonomous solutions, Zion Tech Group',
+  image = '/images/zion-tech-group-og.jpg',
+  url = 'https://ziontechgroup.com',
+  type = 'website',
+  publishedTime,
+  modifiedTime,
+  author = 'Zion Tech Group',
+  section,
+  tags = []
+}) => {
+  const siteName = 'Zion Tech Group';
+  const twitterHandle = '@ziontechgroup';
+  
+  // Structured data for better SEO
+  const structuredData: any = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": siteName,
+    "url": url,
+    "logo": `${url}/images/zion-tech-group-logo.png`,
+    "description": description,
+    "sameAs": [
+      "https://linkedin.com/company/ziontechgroup",
+      "https://twitter.com/ziontechgroup",
+      "https://github.com/ziontechgroup",
+      "https://youtube.com/ziontechgroup"
     ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "availableLanguage": "English"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US"
+    },
+    "foundingDate": "2020",
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Quantum Computing",
+      "Cybersecurity",
+      "Space Technology",
+      "Autonomous Systems",
+      "Cloud Infrastructure"
+    ]
+  };
 
   }
   const mergedStructuredData = structuredData || defaultStructuredData

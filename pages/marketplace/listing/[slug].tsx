@@ -17,25 +17,5 @@ const MarketplaceListing: React.FC<ListingProps> = ({ listing }) => {
       <p>{listing.description}</p>
     </main>
   );
-};
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = MARKETPLACE_LISTINGS.map(l => ({ params: { slug: l.id } }));
-  return { paths, fallback: 'blocking' };
-};
-
-export const getStaticProps: GetStaticProps<ListingProps> = async ({ params }) => {
-  const slug = params?.slug as string;
-  const listing = MARKETPLACE_LISTINGS.find(l => l.id === slug) || null;
-  if (!listing) {
-    return {
-      redirect: {
-        destination: '/marketplace',
-        permanent: false,
-      },
-    };
-  }
-  return { props: { listing } };
-};
-
-export default MarketplaceListing;
+export default Slug;

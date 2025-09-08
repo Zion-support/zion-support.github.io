@@ -37,4 +37,5 @@ export default function CheckoutIndexPage() {
       </div>
     </>
   );
-}
+
+export default Index;

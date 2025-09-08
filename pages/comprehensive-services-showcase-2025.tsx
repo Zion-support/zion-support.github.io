@@ -496,6 +496,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       </section>
     </Layout>
   );
-};
+}
 
-export default ComprehensiveServicesShowcase2025;
+export default Comprehensiveservicesshowcase2025;

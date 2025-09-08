@@ -59,4 +59,5 @@ export default function TalentPage() {
       </div>
     </>
   );
-}
+
+export default Id;
