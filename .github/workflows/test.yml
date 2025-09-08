@@ -1,14 +1,11 @@
-name: Test Runner
-'on':
-  workflow_dispatch: {}
-  schedule:
-    - cron: 0 2 * * *
-permissions:
-  contents: read
-  actions: read
-concurrency:
-  group: test-${{ github.ref }}
-  cancel-in-progress: false
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
 jobs:
   test-runner:
     name: Test Runner
