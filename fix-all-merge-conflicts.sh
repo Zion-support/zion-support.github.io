@@ -11,15 +11,14 @@ find . -type f \( -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js"
   echo "Processing: $file"
   
   # Remove merge conflict markers
-  sed -i '/<<<<<<< HEAD/d' "$file"
-  sed -i '/=======/d' "$file"
-  sed -i '/>>>>>>> cursor\/expand-services-advertise-and-build-project-9473/d' "$file"
-  sed -i '/>>>>>>> main/d' "$file"
+  sed -i '//d' "$file"
+  sed -i '/
+  sed -i '/
   
   # Remove any remaining merge conflict markers
-  sed -i '/<<<<<<< /d' "$file"
-  sed -i '/=======/d' "$file"
-  sed -i '/>>>>>>> /d' "$file"
+  sed -i '/
+  sed -i '//d' "$file"
+  sed -i '/
 done
 
 echo "All merge conflicts fixed!"

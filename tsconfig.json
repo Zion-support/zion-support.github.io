@@ -1,20 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ES2024",
+    "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@/pages/*": ["./src/pages/*"]
-    },
-    "types": ["vite/client", "react", "react-router-dom", "node"],
+
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -22,11 +13,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
-    "strict": false,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
+<<<<<<< HEAD
+    "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": false,
@@ -41,34 +35,62 @@
     "allowJs": true,
     "incremental": true,
     "noEmitOnError": false
+=======
+    "noFallthroughCasesInSwitch": true,
+
+    /* Path mapping */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+>>>>>>> c7463fd0584e5d583266e6252c3232de9d3fa475
   },
   "include": [
+
     "src/**/*",
-    "pages/**/*",
-    "*.ts",
-    "*.tsx"
+    "src/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "out",
     "build",
-    "coverage",
-    "src-disabled",
-    "src.broken",
-    "src_disabled_*",
-    "pages._archive_corrupted",
-    "pages.bak",
-    "*.disabled",
-    "*.backup",
-    "*.bak",
-    "recovered-branches",
-    "backup",
-    "corrupted*",
-    "*_backup*",
-    "temp*",
-    "tmp*",
-    "*.tmp",
-    "*.temp"
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "src.disabled/**/*",
+    "src_disabled_*/**/*",
+    "**/tests/**",
+    "__tests__/**",
+    "temp_*/**",
+    "temp-*/**",
+    "temp*/**",
+    "temp_conflicts/**",
+    "temp_exclude/**",
+    "zion-*/**",
+    "zion_os/**",
+    "zion/**",
+    "apps/**",
+    "utils/**",
+    "types/**",
+    "src/pages/**/*",
+    "src/routes/**/*",
+    "src/components/**/*",
+    "src/context/**/*",
+    "src/hooks/**/*",
+    "src/services/**/*",
+    "src/data/**/*",
+    "src/types/**/*",
+    "src/utils/**/*",
+    "src/layout/**/*",
+    "src/lib/**/*"
+
   ]
 }

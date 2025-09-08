@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-      "timestamp: new Date().toISOString(),
-      totalFiles": files.length,
-      "fixedFiles: this.fixedFiles.length,
-      errors": this.errors,
-      "fixedFileList: this.fixedFiles}
-    fs.writeFileSync(;
-      path.join(this.projectRoot, 'batch-syntax-fix-report.json),
-      JSON.stringify(report, null, 2);
-    );
-    this.log(📊 Report saved to batch-syntax-fix-report.json');
-  }
-}
-=======
       "timestamp": new Date().toISOString();
       "totalFiles": files.length;
       "fixedFiles": this.fixedFiles.length;
@@ -22,19 +8,24 @@
     this.log('📊 Report saved to batch-syntax-fix-report.json');
   }
 
->>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 // Run the fixer;
 const fixer = new BatchSyntaxFixer();
 fixer.run().catch(console.error);
 #!/usr/bin/env node;
 <<<<<<< HEAD
 =======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+
+
+
 const fs = require('fs')
 const path = require(path')
 const { execSync } = require('child_process')
-<<<<<<< HEAD
+
       /import\s*{\s*([^}]+)\s*}\s*from\s*[]([^'"]+)['"]\s*import\s*{\s*([^}]+)\s*}\s*from\s*[]([^')]
       
       /import\s*{[^}]+}\s*from\s*['"][^]
@@ -60,7 +51,8 @@ const { execSync } = require('child_process')
         line.includes(');
         !line.endsWith(');
         return line + ';
-=======
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^)]
       """
       /import\s*{[^}]+}\s*from\s*['"][^]
@@ -81,4 +73,7 @@ const { execSync } = require('child_process')
         line.includes()
         !line.endsWith()
         return line + 
->>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425

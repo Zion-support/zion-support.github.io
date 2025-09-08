@@ -10,8 +10,6 @@ const securityFiles = ['package-lock.json'];
     'yarn.lock'
     '.env.local'
     '.env.example'
-=======
-<<<<<<< HEAD
 
 
 #!/usr/bin/env node;
@@ -30,3 +28,31 @@ console.log(' Starting Analytics Collection...')
     '.env.local'
     '.env.example'
     'next.config.js'
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+
+
+console.log(' Starting Analytics Collection...')
+  fs.writeFileSync('analytics-report.json')
+  console.log(' Analytics collected and saved to analytics-report.json')
+    const buildDir = path.join(process.cwd(), '.next;
+    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')
+  const securityFiles = ['package-lock.json']
+    'yarn.lock'
+    '.env.local'
+    '.env.example'
+
+    'next.config.js'
+    'next.config.js'
+
+    'next.config.js'
+    'yarn.lock
+    '.env.local
+    '.env.example
+

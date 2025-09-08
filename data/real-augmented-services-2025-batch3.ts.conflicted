@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const augmentedServicesBatch3 = [
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export interface RealAugmentedService2025Batch3 {
   id: string;
   name: string;

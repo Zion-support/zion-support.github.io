@@ -188,8 +188,8 @@ export default function APIDocs() {
                 <div className="bg-gray-800 rounded-lg p-4 mb-6">
                   <code className="text-green-400">
                     curl -X POST https://api.ziontechgroup.com/v1/auth/login \<br />
-                    &nbsp;&nbsp;-H &quot;Content-Type: application/json&quot; \<br />
-                    &nbsp;&nbsp;-d &apos;{`{"username": "your-username", "password": "your-password"}`}&apos;
+                    &nbsp;&nbsp;-H "Content-Type: application/json" \<br />
+                    &nbsp;&nbsp;-d '{`{"username": "your-username", "password": "your-password"}`}'
                   </code>
                 </div>
 

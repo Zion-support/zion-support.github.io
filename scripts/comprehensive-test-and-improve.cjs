@@ -1,8 +1,11 @@
 #!/usr/bin/env node;
 =======
-<<<<<<< HEAD
+    optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+["]([^')]
 
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
+=======
+=======
+
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -44,30 +47,14 @@ const content = fs.readFileSync(scriptFile, 'utf8');
     optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]([^'')]
 
 
-<<<<<<< HEAD
 
 
 
-=======
-    optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+[']([^')]
-
-    optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+["]([^'')]
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
     optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+["]([^')]
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 #!/usr/bin/env node;
->>>>>>> merged-prs-20250907-203621
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
