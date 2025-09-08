@@ -1,31 +1,28 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Unused media scanner function triggered');
+    console.log('🚀 unused-media-scanner function triggered');
     
-    // Simulate unused media scanning tasks
-    const unusedMediaTasks = [
-      'Scanning for unused media files',
-      'Identifying orphaned assets',
-      'Generating cleanup reports'
-    ];
-    
-    return {
+    // TODO: Implement unused-media-scanner logic here
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Unused media scanner function executed successfully',
+        message: 'unused-media-scanner completed successfully',
         timestamp: new Date().toISOString(),
-        function: 'unused-media-scanner',
-        unusedMediaTasks: unusedMediaTasks,
-        status: 'completed'
+        function: 'unused-media-scanner'
       })
     };
+    
+    console.log('✅ unused-media-scanner completed successfully');
+    return result;
+    
   } catch (error) {
-    console.error('Error in unused media scanner function:', error);
+    console.error('❌ unused-media-scanner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        error: 'unused-media-scanner failed',
+        message: error.message,
+        function: 'unused-media-scanner'
       })
     };
   }

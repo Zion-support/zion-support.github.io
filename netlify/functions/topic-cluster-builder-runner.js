@@ -1,31 +1,28 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Topic cluster builder runner function triggered');
+    console.log('🚀 topic-cluster-builder-runner function triggered');
     
-    // Simulate topic cluster building tasks
-    const topicClusterTasks = [
-      'Building topic clusters',
-      'Organizing content themes',
-      'Creating content hierarchies'
-    ];
-    
-    return {
+    // TODO: Implement topic-cluster-builder-runner logic here
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Topic cluster builder runner function executed successfully',
+        message: 'topic-cluster-builder-runner completed successfully',
         timestamp: new Date().toISOString(),
-        function: 'topic-cluster-builder-runner',
-        topicClusterTasks: topicClusterTasks,
-        status: 'completed'
+        function: 'topic-cluster-builder-runner'
       })
     };
+    
+    console.log('✅ topic-cluster-builder-runner completed successfully');
+    return result;
+    
   } catch (error) {
-    console.error('Error in topic cluster builder runner function:', error);
+    console.error('❌ topic-cluster-builder-runner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        error: 'topic-cluster-builder-runner failed',
+        message: error.message,
+        function: 'topic-cluster-builder-runner'
       })
     };
   }
