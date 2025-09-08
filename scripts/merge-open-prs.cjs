@@ -1,139 +1,138 @@
 #!/usr/bin/env node
-const { execSync } = require('child_process');
-const https = require('https');
 
-function sh(command, opts = {}) {
-  return execSync(command, { stdio: 'pipe', encoding: 'utf8', ...opts }).trim();
+// Minimal, safe PR merger: lists open PRs and attempts to merge them via GitHub API.
+// - Uses GITHUB_TOKEN if set; otherwise extracts the x-access-token from the origin remote.
+// - Handles drafts by readying for review.
+// - If merge fails due to out-of-date branch, requests update-branch then retries once.
+
+const { execSync } = require('child_process');
+
+function getOriginUrl() {
+  const raw = execSync('git remote get-url origin', { encoding: 'utf8' }).trim();
+  return raw;
 }
 
-function getOwnerRepo() {
-  const remoteUrl = sh('git remote get-url origin');
-  const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
-  if (!m) throw new Error('Unable to parse owner/repo from origin');
-  return { owner: m[1], repo: m[2] };
+function getRepoFromGit() {
+  const remoteUrl = getOriginUrl();
+  const match = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
+  if (!match) throw new Error('Unable to parse owner/repo from origin');
+  return { owner: match[1], repo: match[2] };
 }
 
 function getToken() {
-  const env = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
-  if (env && env.trim()) return env.trim();
-  // Try to parse token from origin URL if present
-  const remoteUrl = sh('git remote get-url origin');
-  const tm = remoteUrl.match(/^https:\/\/x-access-token:([^@]+)@github\.com\//);
-  if (tm) return tm[1];
-  return null;
+  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) {
+    return process.env.GITHUB_TOKEN.trim();
+  }
+  const origin = getOriginUrl();
+  const m = origin.match(/https:\/\/x-access-token:([^@]+)@/);
+  if (m) return m[1];
+  throw new Error('No GitHub token found (GITHUB_TOKEN env or x-access-token remote)');
 }
 
-function githubRequest(path, token) {
-  const options = {
-    hostname: 'api.github.com',
-    path,
+async function ghApi(path, opts = {}) {
+  const token = getToken();
+  const url = `https://api.github.com${path}`;
+  const res = await fetch(url, {
     method: 'GET',
     headers: {
-      'User-Agent': 'merge-open-prs-script',
-      'Accept': 'application/vnd.github.v3+json',
+      'Authorization': `Bearer ${token}`,
+      'Accept': 'application/vnd.github+json',
+      'User-Agent': 'merge-open-prs-script'
     },
-  };
-  if (token) options.headers.Authorization = `token ${token}`;
-
-  return new Promise((resolve, reject) => {
-    const req = https.request(options, (res) => {
-      let data = '';
-      res.on('data', (chunk) => (data += chunk));
-      res.on('end', () => {
-        try {
-          const parsed = data ? JSON.parse(data) : [];
-          resolve(parsed);
-        } catch (e) {
-          reject(new Error(`Failed to parse GitHub response: ${e.message}\n${data}`));
-        }
-      });
-    });
-    req.on('error', reject);
-    req.end();
+    ...opts,
+    body: opts.body
   });
+  const text = await res.text();
+  let data;
+  try { data = text ? JSON.parse(text) : undefined; } catch { data = { raw: text }; }
+  if (!res.ok) {
+    const msg = data && data.message ? data.message : res.statusText;
+    const err = new Error(`${res.status} ${msg}`);
+    err.status = res.status;
+    err.data = data;
+    throw err;
+  }
+  return data;
 }
+
+async function listOpenPRs(owner, repo) {
+  return ghApi(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
+}
+
+async function getPR(owner, repo, number) {
+  return ghApi(`/repos/${owner}/${repo}/pulls/${number}`);
+}
+
+async function readyForReview(owner, repo, number) {
+  try {
+    await ghApi(`/repos/${owner}/${repo}/pulls/${number}/ready_for_review`, { method: 'POST' });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function requestUpdateBranch(owner, repo, number) {
+  try {
+    await ghApi(`/repos/${owner}/${repo}/pulls/${number}/update-branch`, { method: 'PUT' });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function tryMergePR(owner, repo, number, title) {
+  try {
+    const data = await ghApi(`/repos/${owner}/${repo}/pulls/${number}/merge`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ commit_title: `Merge PR #${number}: ${title}`, merge_method: 'squash' })
+    });
+    if (data && data.merged) return { status: 'merged', message: data.sha };
+    return { status: 'skipped', message: data && data.message ? data.message : 'not merged' };
+  } catch (e) {
+    return { status: 'failed', message: e.message, code: e.status };
+  }
+}
+
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
 async function main() {
-  const { owner, repo } = getOwnerRepo();
-  const token = getToken();
-
-  // Ensure main is current
-  sh('git fetch origin');
-  sh('git checkout main');
-  sh('git pull --ff-only origin main');
-
-  const prs = await githubRequest(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`, token);
-  if (!Array.isArray(prs) || prs.length === 0) {
-    console.log('No open PRs found.');
+  const { owner, repo } = getRepoFromGit();
+  const prs = await listOpenPRs(owner, repo);
+  if (!prs.length) {
+    console.log('No open PRs');
     return;
   }
-
-  let merged = 0;
-  let attempted = 0;
-
+  console.log(`Open PRs: ${prs.length}`);
+  const results = [];
   for (const pr of prs) {
-    const head = pr && pr.head && pr.head.ref;
-    const number = pr && pr.number;
-    const title = pr && pr.title;
-    if (!head) continue;
-    attempted++;
-    console.log(`\nMerging PR #${number}: ${title} (head: ${head}) into main`);
-
-    try {
-      // Ensure we have the head locally
-      try { sh(`git fetch origin ${head}:${head}`); } catch (_) { sh(`git fetch origin ${head}`); }
-
-      // Merge with preference to PR changes if conflicts
-      try {
-        sh(`git merge --no-ff --no-edit -X theirs origin/${head}`, { stdio: 'inherit' });
-      } catch (e) {
-        // Attempt auto-resolution by preferring incoming (theirs)
-        console.log('Conflicts detected. Attempting auto-resolution...');
-        // If merge is in progress, try to continue by adding conflicted files choosing theirs
-        const conflicted = sh('git diff --name-only --diff-filter=U || true')
-          .split('\n')
-          .filter(Boolean);
-        for (const f of conflicted) {
-          try { sh(`git checkout --theirs -- "${f}"`); } catch (_) {}
-          sh(`git add -- "${f}"`);
-        }
-        const staged = sh('git diff --cached --name-only || true').split('\n').filter(Boolean);
-        if (staged.length) {
-          sh('git commit -m "chore: auto-resolve merge conflicts (prefer PR changes)"');
-        } else {
-          // If nothing staged, abort and try a squash merge
-          sh('git merge --abort');
-          console.log('Retrying with squash merge...');
-          try {
-            sh(`git merge --squash origin/${head}`, { stdio: 'inherit' });
-            sh('git commit -m "chore: squash-merge PR #' + number + ' into main"');
-          } catch (squashErr) {
-            console.log(`Failed squash merge for PR #${number}: ${squashErr.message}`);
-            // Abort and skip this PR
-            try { sh('git merge --abort'); } catch (_) {}
-            continue;
-          }
-        }
-      }
-      merged++;
-    } catch (err) {
-      console.log(`Failed to merge PR #${number}: ${err.message}`);
-      try { sh('git merge --abort'); } catch (_) {}
+    console.log(`Attempting merge: #${pr.number} ${pr.title}`);
+    if (pr.draft) {
+      const ok = await readyForReview(owner, repo, pr.number);
+      console.log(` -> draft -> ready_for_review: ${ok ? 'ok' : 'failed'}`);
+      await sleep(500);
     }
+    let res = await tryMergePR(owner, repo, pr.number, pr.title || '');
+    if (res.status === 'failed' && (res.code === 405 || res.code === 409)) {
+      const updated = await requestUpdateBranch(owner, repo, pr.number);
+      if (updated) {
+        console.log(' -> update-branch requested; waiting before retry...');
+        await sleep(2500);
+        await getPR(owner, repo, pr.number).catch(() => {});
+        res = await tryMergePR(owner, repo, pr.number, pr.title || '');
+      }
+    }
+    console.log(` -> ${res.status}: ${res.message}`);
+    results.push({ number: pr.number, title: pr.title, status: res.status, message: res.message });
+    await sleep(300);
   }
-
-  if (merged > 0) {
-    console.log(`\nPushing updated main with ${merged}/${attempted} merged PRs...`);
-    sh('git push origin main');
-  } else {
-    console.log('No PRs merged.');
-  }
+  const merged = results.filter(r => r.status === 'merged').length;
+  const skipped = results.length - merged;
+  console.log(`Merged: ${merged}, Skipped: ${skipped}`);
 }
 
-main().catch((e) => {
-  console.error('Error:', e.message);
+main().catch(err => {
+  console.error('Error:', err.message);
   process.exit(1);
 });
-
-
-
