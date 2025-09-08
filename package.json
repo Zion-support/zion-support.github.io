@@ -90,44 +90,12 @@
   "engines": {
     "node": ">=20.18.1",
     "npm": ">=10.0.0"
-<<<<<<< HEAD
-=======
   },
   "scripts": {
-<<<<<<< HEAD
-    "pm2:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.config.cjs --update-env",
-    "pm2:stop": "pm2 stop ecosystem.config.cjs || true",
-    "pm2:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs --update-env)",
-    "pm2:status": "pm2 status",
-    "pm2:logs": "pm2 logs --lines 200",
-    "pm2:fastads:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.fast-ads.local.cjs --update-env",
-    "pm2:fastads:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.fast-ads.local.cjs || pm2 start ecosystem.fast-ads.local.cjs --update-env)",
-    "pm2:fastads:stop": "pm2 stop ecosystem.fast-ads.local.cjs || true",
-    "pm2:cron:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.cron.local.cjs --update-env",
-    "pm2:cron:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.cron.local.cjs || pm2 start ecosystem.cron.local.cjs --update-env)",
-    "pm2:cron:stop": "pm2 stop ecosystem.cron.local.cjs || true",
-    "pm2:bootstrap:logrotate": "pm2 install pm2-logrotate || true && pm2 set pm2-logrotate:max_size 10M && pm2 set pm2-logrotate:retain 30 && pm2 set pm2-logrotate:compress true && pm2 set pm2-logrotate:workerInterval 60 && pm2 set pm2-logrotate:rotateInterval '0 0 * * *'",
-    "functions:run": "node scripts/run-netlify-functions-locally.cjs",
-    "functions:run:execute": "node scripts/run-netlify-functions-locally.cjs --execute",
-    "front:advertise": "node automation/front-index-advertiser.cjs",
-    "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
-    "deps:cron:start": "bash automation/dependency-maintenance-cron.sh",
-    "sitemap": "node scripts/generate-sitemap.js",
-    "netlify:manifest": "node scripts/generate-netlify-functions-manifest.cjs",
-    "netlify:trigger": "node scripts/trigger-netlify-automations.cjs",
-    "readme:generate": "node scripts/generate-readme.js",
-    "search:index": "node scripts/generate-search-index.js",
-    "content:fix": "node automation/content-quality-fixer.cjs && node automation/content-quality-analyzer.cjs",
-    "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" next dev",
-    "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build",
-    "prebuild": "npm run build:health-check && npm run netlify:manifest",
-    "export": "rm -rf .next out tsconfig.tsbuildinfo && mkdir -p .temp && mv pages/reports .temp/ 2>/dev/null || true && NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build --no-lint && mv .temp/reports pages/ 2>/dev/null || true && rm -rf .temp",
-=======
     "sitemap": "node scripts/generate-sitemap.mjs",
     "dev": "NODE_OPTIONS=--openssl-legacy-provider next dev",
     "build": "NODE_OPTIONS=--openssl-legacy-provider next build && node scripts/generate-rss.mjs",
     "export": "NODE_OPTIONS=--openssl-legacy-provider next build && next export",
->>>>>>> origin/feat/rss-automation
     "start": "next start",
     "postbuild": "node automation/footer-injector.cjs || true",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
@@ -523,15 +491,11 @@
     "ts-node": "^10.9.2",
     "typescript": "5.9.2"
   },
-<<<<<<< HEAD
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
->>>>>>> origin/feat/homepage-improvements
-  }
-}
-=======
+  },
   "postcss": {
     "plugins": {
       "tailwindcss": {},
@@ -552,7 +516,5 @@
     "zion-tech-group"
   ],
   "author": "Zion Tech Group",
-  "license": "MIT",
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+  "license": "MIT"
 }
->>>>>>> origin/chore/automation-improvements
