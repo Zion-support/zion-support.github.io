@@ -1,4 +1,0 @@
-  resumeOptions;
-  selectedResume;
-  handleResumeSelect;
-  handleDownloadResume;
