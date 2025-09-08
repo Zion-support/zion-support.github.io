@@ -1305,37 +1305,35 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
                   <li>• Predictive maintenance</li>
                   <li>• Self-evolving systems</li>
                 </ul>
-                <Link href="/FINAL_PROJECT_STATUS_2025-01-17.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Project Status →
-                </Link>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🔒 Enterprise Security</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Bank-grade security</li>
-                  <li>• Automated threat detection</li>
-                  <li>• Compliance monitoring</li>
-                  <li>• Zero-trust architecture</li>
-                  <li>• Continuous security updates</li>
-                </ul>
-                <Link href="/SECURITY.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   View Security Guide →
-                </Link>
+                </a>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-green-400 mb-4 text-center">📈 Scalability & Performance</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Auto-scaling infrastructure</li>
-                  <li>• Global CDN distribution</li>
-                  <li>• Load balancing</li>
+                  <li>• Automated testing suites</li>
+                  <li>• Quality assurance</li>
+                  <li>• Performance testing</li>
+                  <li>• Security testing</li>
+                  <li>• Continuous validation</li>
+                </ul>
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  View Testing Guide →
+                </a>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">📈 Performance & Monitoring</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Real-time monitoring</li>
                   <li>• Performance optimization</li>
                   <li>• Real-time monitoring</li>
                 </ul>
-                <Link href="/PERFORMANCE.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   View Performance Guide →
-                </Link>
+                </a>
               </div>
             </div>
           </section>
