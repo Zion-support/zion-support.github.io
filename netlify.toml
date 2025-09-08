@@ -6,7 +6,7 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  PYTHON_VERSION = "3.12"
+  PYTHON_VERSION = "3.12.7"
   MISE_SETTINGS = "python.compile false"
 
 [[plugins]]
