@@ -1269,11 +1269,40 @@ import {
 
             </p>
             
-            {/* Contact Info */}
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-600">
-              <div className="flex items-center">
-                <Phone className="h-4 w-4 mr-2" />
-                <a href="tel:+13024640950" className="hover:text-blue-600">+1 302 464 0950</a>
+            {/* Navigation Links */}
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              <a href="/" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
+                Home
+              </a>
+              <a href="/about" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-fuchsia-400/50">
+                About
+              </a>
+              <a href="/automation" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50">
+                Automation
+              </a>
+              <a href="/blog" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
+                Blog
+              </a>
+              <a href="/contact" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+                Contact
+              </a>
+            </div>
+          </section>
+
+          <section className="mx-auto max-w-6xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
+                <div className="text-4xl mb-4">🤖</div>
+                <h3 className="text-2xl font-bold mb-4 text-cyan-400">AI Development</h3>
+                <p className="text-white/70 mb-6">
+                  Custom AI solutions including machine learning models, natural language processing, and computer vision systems.
+                </p>
+                <ul className="space-y-2 text-sm text-white/60">
+                  <li>• Machine Learning Models</li>
+                  <li>• Natural Language Processing</li>
+                  <li>• Computer Vision</li>
+                  <li>• Predictive Analytics</li>
+                </ul>
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
