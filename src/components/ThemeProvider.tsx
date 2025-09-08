@@ -1,8 +1,6 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
-import { createContext, useContext, useLayoutEffect, useState } from "react"
-import { safeStorage } from "@/utils/safeStorage"
-import { getThemeColors, applyThemeColors } from "@/utils/themeUtils"
+type Theme = 'light' | 'dark' | 'system';
 
 export type Theme = 'light' | 'dark' | 'system';
 
