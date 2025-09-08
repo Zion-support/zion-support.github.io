@@ -4,13 +4,11 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Book, FileText, Video, Download, Search, ExternalLink } from 'lucide-react';
 
-export default function Documentation() {
-  const contact = {
-    email: 'kleber@ziontechgroup.com',
-    phone: '+1-302-464-0950',
-    site: 'https://ziontechgroup.com'
-  };
-  const documentationSections = [
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+
+const DocsPage: React.FC = () => {
+  const quickStart = [
     {
       icon: Book,
       title: 'Getting Started',
@@ -55,7 +53,85 @@ export default function Documentation() {
         { name: 'Changelog', link: '/docs/changelog' }
       ]
     }
-  ];
+  ]
+
+  const apiSections = [
+    {
+      title: 'AI Services API',
+      description: 'Access our AI and machine learning capabilities',
+      endpoints: 15,
+      icon: <Zap className="w-6 h-6"  />,
+      color: 'blue'
+    },
+    {
+      title: 'Micro SaaS API',
+      description: 'Manage and deploy micro SaaS applications',
+      endpoints: 25,
+      icon: <Globe className="w-6 h-6"  />,
+      color: 'green'
+    },
+    {
+      title: 'IT Infrastructure API',
+      description: 'Monitor and manage IT infrastructure',
+      endpoints: 2 0,
+      icon: <Database className="w-6 h-6"  />,
+      color: 'purple'
+    },
+    {
+      title: 'Cybersecurity API',
+      description: 'Security monitoring and threat detection',
+      endpoints: 1 2,
+      icon: <Shield className="w-6 h-6"  />,
+      color: 'red'
+    }
+  ]
+
+  const codeExamples = [
+    {
+      language: 'JavaScript',
+      title: 'AI Service Integration',
+      code: `// Initialize AI service
+const aiService = new ZionAI({
+  apiKey: 'your-api-key',
+  environment: 'production'
+});
+
+// Process text with AI
+const result = await aiService.processText({
+  text: 'Hello, world!',
+  model: 'gpt-4',
+  options: {
+    maxTokens: 10 0,
+    temperature: 0.7
+  }
+});
+
+console.log(result);`
+    },
+    {
+      language: 'Python',
+      title: 'Micro SaaS API',
+      code: `import ziontech
+
+# Initialize client
+client = ziontech.Client(api_key='your-api-key')
+
+# Create a new project
+project = client.projects.create({
+    name: 'My Project',
+    description: 'A new micro SaaS project',
+    type: 'web_application'
+})
+
+# Deploy project
+deployment = client.deployments.create(
+    project_id=project.id,
+    environment='production'
+)
+
+print(f"Project deployed: {deployment.url}")`
+    }
+  ]
 
 const Page = () => {
   return (

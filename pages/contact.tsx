@@ -1,16 +1,20 @@
-import React, { useState } from 'react.ts'
-import { Link  } from 'react-router-dom.ts'
-import { Mail, Phone, MapPin, Send, CheckCircle  } from 'lucide-react.ts'
+import React, { useState } from 'react'
+import dynamic from 'next/dynamic'
+import { motion } from 'framer-motion'
+import { Phone, Mail, MapPin, Clock, ArrowRight, Send } from 'lucide-react'
 
 
-export default function Contact(...args: any[]): any {
-	const [formData, setFormData] = useState({
-		name: '',
-		email: '',
-		company: '',
-		message: ''
-	})
-	const [isSubmitted, setIsSubmitted] = useState(false)
+function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
 	const handleSubmit = (e: anyReact.FormEvent)  => {
 		e.preventDefault()
@@ -24,28 +28,42 @@ export default function Contact(...args: any[]): any {
 		}, 3000)
 	}
 
-	const handleChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)  => {
-		setFormData({
-			...formData,
-			[e.target.name]: e.target.value
-		})
-	}
-
-	return (
-  {/* Empty JSX fragment */}
-			{/* Hero Section */}
-			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl text-center">
-						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							Get in Touch
-						</h1>
-						<p className="mt-6 text-lg leading-8 text-gray-600">
-							Ready to transform your business with cutting-edge technology? Let's discuss how we can help.
-						</p>
-					</div>
-				</div>
-			</section>
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+    }, 2000);
+  };
+  const contactInfo = [
+    {
+      icon: <Phone className="w-6 h-6"  />,
+      title: "Phone",
+      details: "+1 302 464 0950",
+      link: "tel:+13024640950"
+    },
+    {
+      icon: <Mail className="w-6 h-6"  />,
+      title: "Email",
+      details: "kleber@ziontechgroup.com",
+      link: "mailto:kleber@ziontechgroup.com"
+    },
+    {
+      icon: <MapPin className="w-6 h-6"  />,
+      title: "Address",
+      details: "364 E Main St STE 1008\nMiddletown, DE 19709",
+      link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+    },
+    {
+      icon: <Clock className="w-6 h-6"  />,
+      title: "Business Hours",
+      details: "Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM",
+      link: null
+    }
+  ]
 
 			{/* Contact Form & Info */}
 			<section className="py-24 sm:py-32">

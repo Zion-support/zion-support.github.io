@@ -2,12 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-export default function Cybersecurity() {
-  const contact = {
-    email: 'kleber@ziontechgroup.com',
-    phone: '+1-302-464-0950',
-    site: 'https://ziontechgroup.com'
-  };
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+
+const CybersecurityPage: React.FC = () => {
   const services = [
     {
       icon: Shield,
@@ -48,65 +46,210 @@ export default function Cybersecurity() {
   ];
 
   return (
-    <Layout>
-      <Head>
-        <title>Cybersecurity | Zion Tech Group</title>
-        <meta name="description" content="Zero Trust designs, cloud posture hardening, incident response, and compliance readiness." />
-        <link rel="canonical" href="https://ziontechgroup.com/cybersecurity" />
-      </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto space-y-12">
-          <header className="text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 mb-4">
-              <Shield className="w-8 h-8 text-white" />
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Cybersecurity</h1>
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto">From strategy to operations: identity, data, networks, and workloads secured by design.</p>
-            <div className="mt-2 text-sm text-gray-400">New: VAPT and MDM offerings below.</div>
-            <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="/contact" className="px-8 py-4">Security Assessment</a>
-              <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
-            </div>
-          </header>
-
-          <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Key Capabilities</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {features.map((f) => (
-                <div key={f} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">
-                  <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
-                  <span className="text-gray-200">{f}</span>
+    <>
+      <SEO title="Cybersecurity Services - Zion Tech Group"
+        description="Comprehensive cybersecurity services including security assessments, data protection, monitoring, and incident response. Protect your business with our expert security solutions."
+        keywords="cybersecurity, security assessment, data protection, threat monitoring, incident response, compliance"
+        canonical="https://ziontechgroup.com/cybersecurity"
+       />
+      
+      <PageTransition>
+        <main className="min-h-screen bg-white">
+          {/* Hero Section */}
+          <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
+              >
+                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
+                  Cybersecurity <span className="text-blue-600">Services</span>
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Protect your business with comprehensive cybersecurity solutions including security assessments, data protection, and threat monitoring.
+                </p>
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                  <motion.a
+                    href="#services"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5"  />
+                    Explore Services
+                  </motion.a>
+                  <motion.a
+                    href="/contact"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5"  />
+                    Get Started
+                  </motion.a>
                 </div>
               ))}
             </div>
           </section>
 
-        {/* CTA Section */}
-        <section className="bg-gray-50 py-20">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Secure Your Business Today
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Don&apos;t wait for a security breach. Let our experts help you build a robust security posture.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-                className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+          {/* Services Grid */}
+          <section id="services" className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center mb-16"
               >
-                Schedule Security Audit
-              </Link>
-              <a 
-                href={`tel:${contact.phone}`}
-                className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-colors"
-              >
-                Call {contact.phone}
-              </a>
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                  Our Cybersecurity Services
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Comprehensive security solutions to protect your business from cyber threats and ensure compliance.
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+                {services.map((service, index) => (
+                  <motion.div
+                    key={service.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-300 overflow-hidden"
+                  >
+                    <div className="p-8">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-blue-600">
+                          {service.icon}
+                        </div>
+                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                          {service.category}
+                        </span>
+                      </div>
+                      
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">
+                        {service.title}
+                      </h3>
+                      
+                      <p className="text-gray-600 mb-6">
+                        {service.description}
+                      </p>
+                      
+                      <div className="mb-6">
+                        <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                        <ul className="space-y-2">
+                          {service.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
+                              <CheckCircle className="w-4 h-4 text-green-500"  />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div className="flex items-center justify-between text-sm text-gray-500 mb-6">
+                        <span className="font-semibold text-green-600">{service.pricing}</span>
+                        <span>{service.delivery}</span>
+                      </div>
+                      
+                      <motion.button
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-700 transition-colors"
+                      >
+                        <ArrowRight className="w-5 h-5"  />
+                        Learn More
+                      </motion.button>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </section>
-        </div>
-      </div>
-    </Layout>
-  );
+
+          {/* Compliance Standards */}
+          <section className="bg-gray-50 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                  Compliance Standards
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  We help you meet industry standards and regulatory requirements for data security.
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-2 md: gri d-cols-3 lg: gri d-cols-6 gap-8">
+                {complianceStandards.map((standard, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-xl p-6 shadow-lg hover: shadow-xl transition-shadow duration-300 text-center"
+                  >
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                      {standard.name}
+                    </h3>
+                    <p className="text-sm text-gray-600">
+                      {standard.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
+              >
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6">
+                  Secure Your Business Today
+                </h2>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Don't wait for a security breach. Protect your business with our comprehensive cybersecurity solutions.
+                </p>
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                  <motion.a
+                    href="/contact"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5"  />
+                    Get Started Today
+                  </motion.a>
+                  <motion.a
+                    href="tel:+13024640950"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5"  />
+                    Call Us: +1 302 464 0950
+                  </motion.a>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+        </main>
+      </PageTransition>
+    </>
+  )
 }
+
+export default CybersecurityPage
