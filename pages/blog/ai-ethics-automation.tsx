@@ -78,7 +78,7 @@ export default function AIEthicsAutomation() {
                 <p className="text-white/90 mb-4">
                   AI systems can inadvertently perpetuate or amplify existing biases present in training data. 
                   This is particularly concerning in areas like hiring, lending, and criminal justice 
-                  where biased decisions can have significant real-world consequences.
+                  where bias can have significant real-world consequences.
                 </p>
                 <p className="text-white/90 mb-4">
                   Our bias mitigation strategies include:
@@ -103,127 +103,94 @@ export default function AIEthicsAutomation() {
               <section className="mb-12">
                 <h2 className="text-2xl font-semibold mb-6 text-blue-400">Privacy and Data Protection</h2>
                 <p className="text-white/90 mb-4">
-                  Autonomous AI systems often require access to large amounts of data to function effectively. 
-                  Protecting individual privacy while maintaining system performance is a delicate balance 
-                  that requires careful consideration.
+                  Autonomous AI systems often require access to large amounts of data, raising important 
+                  questions about privacy and data protection. We must balance the benefits of AI with 
+                  the fundamental right to privacy.
                 </p>
                 <p className="text-white/90 mb-4">
-                  Our privacy protection measures include:
+                  Our privacy-first approach includes:
                 </p>
                 <ul className="space-y-2 text-white/80 mb-6">
                   <li>• Data minimization and purpose limitation</li>
-                  <li>• Strong encryption and access controls</li>
-                  <li>• Regular privacy impact assessments</li>
-                  <li>• Compliance with GDPR, CCPA, and other privacy regulations</li>
+                  <li>• Strong encryption and security measures</li>
+                  <li>• User consent and control over personal data</li>
+                  <li>• Compliance with global privacy regulations</li>
                 </ul>
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Accountability and Oversight</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Accountability and Governance</h2>
                 <p className="text-white/90 mb-4">
                   When AI systems make decisions, there must be clear lines of accountability. 
-                  This includes both technical accountability (understanding how systems work) 
-                  and human accountability (who is responsible for system behavior).
+                  This includes both technical accountability (who is responsible for system behavior) 
+                  and legal accountability (who is liable for outcomes).
                 </p>
                 <p className="text-white/90 mb-4">
-                  Our accountability framework includes:
+                  Our governance framework includes:
+                </p>
+                <ul className="space-y-2 text-white/80 mb-6">
+                  <li>• Clear ownership and responsibility for AI systems</li>
+                  <li>• Regular review and oversight of system performance</li>
+                  <li>• Mechanisms for addressing concerns and complaints</li>
+                  <li>• Continuous improvement based on feedback and outcomes</li>
+                </ul>
+              </section>
+              
+              <section className="mb-12">
+                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Human Oversight and Control</h2>
+                <p className="text-white/90 mb-4">
+                  Even the most advanced AI systems should not operate entirely without human oversight. 
+                  We believe in maintaining human control over critical decisions while leveraging AI 
+                  for enhanced decision-making support.
+                </p>
+                <p className="text-white/90 mb-4">
+                  Our human-AI collaboration approach includes:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-cyan-400 mb-2">Human Oversight</h4>
+                    <h4 className="font-semibold text-cyan-400 mb-2">Human-in-the-Loop</h4>
                     <p className="text-white/80 text-sm">
-                      Maintaining human oversight of critical AI decisions with override capabilities.
+                      Critical decisions require human review and approval before implementation.
                     </p>
                   </div>
                   
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-fuchsia-400 mb-2">Audit Trails</h4>
+                    <h4 className="font-semibold text-fuchsia-400 mb-2">Override Mechanisms</h4>
                     <p className="text-white/80 text-sm">
-                      Comprehensive logging of all AI decisions and actions for review and analysis.
+                      Humans can override AI decisions when necessary or appropriate.
                     </p>
                   </div>
                 </div>
-              </section>
-              
-              <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Safety and Risk Management</h2>
-                <p className="text-white/90 mb-4">
-                  Autonomous AI systems must be designed with safety as a primary concern. 
-                  This includes both preventing harm and having mechanisms to respond appropriately 
-                  when things go wrong.
-                </p>
-                <p className="text-white/90 mb-4">
-                  Our safety measures include:
-                </p>
-                <ul className="space-y-2 text-white/80 mb-6">
-                  <li>• Fail-safe mechanisms and emergency shutdown procedures</li>
-                  <li>• Continuous monitoring for unexpected behavior</li>
-                  <li>• Regular safety testing and validation</li>
-                  <li>• Clear escalation procedures for safety concerns</li>
-                </ul>
               </section>
               
               <section className="mb-12">
                 <h2 className="text-2xl font-semibold mb-6 text-cyan-400">Societal Impact and Responsibility</h2>
                 <p className="text-white/90 mb-4">
-                  Beyond individual system behavior, we must consider the broader societal impact 
-                  of autonomous AI systems. This includes effects on employment, social dynamics, 
-                  and economic inequality.
+                  Beyond individual system ethics, we must consider the broader societal impact of 
+                  autonomous AI systems. This includes effects on employment, economic inequality, 
+                  and social cohesion.
                 </p>
                 <p className="text-white/90 mb-4">
-                  Our approach to societal responsibility includes:
+                  Our commitment to societal responsibility includes:
                 </p>
                 <ul className="space-y-2 text-white/80 mb-6">
-                  <li>• Impact assessments before system deployment</li>
-                  <li>• Stakeholder engagement and consultation</li>
-                  <li>• Continuous monitoring of societal effects</li>
-                  <li>• Commitment to positive social outcomes</li>
+                  <li>• Assessing potential societal impacts before deployment</li>
+                  <li>• Engaging with stakeholders and affected communities</li>
+                  <li>• Contributing to public discourse on AI ethics</li>
+                  <li>• Supporting education and training for the AI era</li>
                 </ul>
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Ethical AI Development Process</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Continuous Ethical Review</h2>
                 <p className="text-white/90 mb-4">
-                  At Zion Tech Group, we've developed a comprehensive ethical AI development process 
-                  that integrates ethical considerations throughout the entire development lifecycle.
+                  Ethical considerations in AI are not static—they evolve as technology advances and 
+                  societal values change. We commit to ongoing ethical review and adaptation of our 
+                  systems and practices.
                 </p>
                 <p className="text-white/90 mb-4">
-                  Our process includes:
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                  <div className="bg-white/10 rounded-lg p-4 border border-white/20 text-center">
-                    <h4 className="font-semibold text-cyan-400 mb-2">Design Phase</h4>
-                    <p className="text-white/80 text-sm">
-                      Ethical requirements and constraints defined upfront
-                    </p>
-                  </div>
-                  
-                  <div className="bg-white/10 rounded-lg p-4 border border-white/20 text-center">
-                    <h4 className="font-semibold text-fuchsia-400 mb-2">Development Phase</h4>
-                    <p className="text-white/80 text-sm">
-                      Ethical considerations integrated into implementation
-                    </p>
-                  </div>
-                  
-                  <div className="bg-white/10 rounded-lg p-4 border border-white/20 text-center">
-                    <h4 className="font-semibold text-green-400 mb-2">Deployment Phase</h4>
-                    <p className="text-white/80 text-sm">
-                      Ongoing monitoring and ethical assessment
-                    </p>
-                  </div>
-                </div>
-              </section>
-              
-              <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-green-400">Looking Forward</h2>
-                <p className="text-white/90 mb-4">
-                  As AI technology continues to advance, ethical considerations will become even more important. 
-                  We're committed to staying at the forefront of ethical AI development and contributing 
-                  to industry best practices and standards.
-                </p>
-                <p className="text-white/90 mb-4">
-                  The future of AI must be built on a foundation of ethical principles, transparency, 
-                  and human-centered design. At Zion Tech Group, we're proud to be leading this charge.
+                  This includes regular ethical audits, stakeholder feedback, and updates to our 
+                  ethical frameworks based on new insights and developments in the field.
                 </p>
               </section>
               
