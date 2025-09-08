@@ -1,21 +1,44 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-const WINDOW_MS = 5 * 60 * 1000, // 5 minutes
-const MAX_REQUESTS = 30, // per IP per endpoint per window
+export interface RateLimitConfig {
+  windowMs: number;
+  maxRequests: number;
+}
 
-const store: Map<string, number[]> = new Map($2);
-export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
-  const ip = $2;
-  const key = $2;
-  const now = Date.now($2);
-  const windowStart = $2;
-  const timestamps = $2;
-  timestamps.push($2);
-  store.set($2);
-  if (timestamps.length > MAX_REQUESTS) {
-    res.setHeader('Retry-After', Math.ceil(WINDOW_MS / 1000).toString()),
-    res.status(429).json($2);
-    return false
+export class RateLimiter {
+  private requests: Map<string, number[]> = new Map();
+  private config: RateLimitConfig;
+
+  constructor(config: RateLimitConfig) {
+    this.config = config;
   }
 
-  return true
+  isAllowed(identifier: string): boolean {
+    const now = Date.now();
+    const windowStart = now - this.config.windowMs;
+    
+    if (!this.requests.has(identifier)) {
+      this.requests.set(identifier, []);
+    }
+    
+    const userRequests = this.requests.get(identifier)!;
+    
+    // Remove old requests outside the window
+    const validRequests = userRequests.filter(time => time > windowStart);
+    this.requests.set(identifier, validRequests);
+    
+    if (validRequests.length >= this.config.maxRequests) {
+      return false;
+    }
+    
+    validRequests.push(now);
+    return true;
+  }
+
+  reset(identifier: string): void {
+    this.requests.delete(identifier);
+  }
 }
+
+export const defaultRateLimiter = new RateLimiter({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  maxRequests: 100
+});

@@ -12,16 +12,19 @@ function ensureLogFile() {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
 
-  const { name, page = '', userType = 'guest', properties = {}, at } = req.body || {},
-  if (!name || typeof name !== 'string') return res.status(400).json($2);
-  const nowIso = new Date().toISOString($2);
-  const event = $2;
+  const { name, page = '', userType = 'guest', properties = {}, at } = req.body || {};
+  if (!name || typeof name !== 'string') return res.status(400).json({ error: 'Invalid event name' });
+
+  const nowIso = new Date().toISOString();
+  const event = {
+    name,
     page,
     userType,
     properties,
-    at: at && typeof at = $2;
+    at: at && typeof at === 'string' ? at : nowIso,
     ua: req.headers['user-agent'] || '',
-    ip: (req.headers['x-forwarded-for'] || req.socket.remoteAddress || '') as string},
+    ip: (req.headers['x-forwarded-for'] || req.socket.remoteAddress || '') as string
+  };
 
   try {
     ensureLogFile($2);

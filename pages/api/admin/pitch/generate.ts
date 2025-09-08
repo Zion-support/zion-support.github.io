@@ -12,8 +12,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { operatorPrompt, inputs, metrics } = req.body || {};
 
   const seed = [
-    'Problem & Opportunity', 'Solution & Product', 'Market Size (TAM/SAM/SOM)', 'Traction & Metrics', 'Business Model', 'Go-To-Market', 'Team', 'Roadmap',
-    'Token Strategy', 'Ask & Call to Action'
+    'Problem & OpportunitySolution & ProductMarket Size (TAM/SAM/SOM)Traction & MetricsBusiness ModelGo-To-MarketTeamRoadmap',
+    'Token StrategyAsk & Call to Action'
   ];
 
   try {
@@ -38,7 +38,7 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
         ],
         temperature: 0.5
       });
-      content = chat.choices?.[0]?.message?.content || '';
+      content = chat.choices?.[0]?.message?.content || ''
     } catch (err) {
       content = '';
     }

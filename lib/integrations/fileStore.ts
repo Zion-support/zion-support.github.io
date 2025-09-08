@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-
-
-
-const DATA_DIR = path && path.resolve(process && process.cwd(), "data", "integrations");
-
-const STATE_FILE = path && path.join(DATA_DIR, "state && state.json");
+import fs from 'fs';
+import path from 'path';
+import { IntegrationsState } from './types';
+const DATA_DIR = path.resolve(process.cwd(), 'data/integrations');
+const STATE_FILE = path.join(DATA_DIR, 'state.json');
 
 function ensureDataDir(): void {
   if (!fs && fs.existsSync(DATA_DIR)) {
@@ -105,102 +103,27 @@ export function readState(): IntegrationsState {
       connections: [],
       logs: [],
       overrides: [],
-
-      events: [],
-    };
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
+      events: []};
+    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8')
   }
 }
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export function readState(): IntegrationsState {
-  ensureDataDir(),
-  try {
-    const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
-    return { connections: [], logs: [], overrides: [], events: [] };
-  }
-}
-
-export function writeState(
-  mutator: (state: IntegrationsState) => void,
-): IntegrationsState {
-  ensureDataDir();
-  const current = readState();
-  (mutator(current),
-    fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), "utf8"));
-  return current;
-}
-<<<<<<< HEAD
-
-=======
-export function read_state (): IntegrationsState {
-  ensureDataDir ();
-  try {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-    fs.mkdirSync(DATA_DIR, { recursive: true });
-  }
-
-      events: []
-    };'
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
-}"
-    fs.writeFileSync (STATE_FILE, JSON.stringify (initial, null, 2), "utf8");
-  }
-}
-
-export function readState(): IntegrationsState {;
-
-<<<<<<< HEAD
-
-
-=======
-export function readState(): IntegrationsState {
-
-export function readState(): IntegrationsState {;
   ensureDataDir();
   try {
-    const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+    const raw = fs.readFileSync(STATE_FILE, 'utf8');
+    return JSON.parse(raw) as IntegrationsState
   } catch (error) {
     return { connections: [], logs: [], overrides: [], events: [] }
   }
 }
 <<<<<<< HEAD
 
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  mutator: (state: IntegrationsState) => void,
-): IntegrationsState {;
-
+export function writeState(mutator: (state: IntegrationsState) => void): IntegrationsState {
   ensureDataDir();
   const current = readState();
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-<<<<<<< HEAD
-  return current;
-}
-
-
-
-
-
-
-
-=======
   mutator(current);
   fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
-  return current;
+  return current
 }
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

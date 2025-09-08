@@ -8,5 +8,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   return res.status(200).json({
     title: 'Additional Insight',
-    content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'});
+    content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'
+  });
 }

@@ -1,61 +1,3 @@
-<<<<<<< HEAD
-
-
-
-=======
-
-
-
-
-
-import { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { ProviderConnection, SyncLogEntry } from "./types";
-import { v4 as uuidv4 } from "uuid";
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-
-
-
-
-
-import { ProviderConnection, SyncLogEntry } from "./types";
-import { v4 as uuidv4 } from "uuid";
-
-
-
-
-
-
-async function mockProviderCall<T>(
-  connection: ProviderConnection
-  action: string
-  details: Record<string, any>
-): Promise<{ log: SyncLogEntry; result: T }> {
-<<<<<<< HEAD
-
-
-
-=======
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-
-
-
-async function callProvider<T>(
-  connection: ProviderConnection,
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 export async function simulateAction<T = any>(
@@ -69,8 +11,7 @@ export async function simulateAction<T = any>(
     providerId: connection.providerId,
     level: 'info',
     action,
-    details
-  };
+    details};
   // In a real implementation, call provider SDK/API here using connection.accessToken
   return { log, result: { ok: true } as unknown as T };
 }
@@ -241,6 +182,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   },
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch })
+  }
 };
 
 // ATS actions
@@ -286,120 +230,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return simulateAction(connection, 'ats.uploadResume', { resumeMeta: { name: resume?.name } });
   },
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-=======
-
-
-  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
-    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
-
-
-  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
-    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
-
-
-
-
-  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
-    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+    return simulateAction(connection, 'ats.updateStatus', { change })
   }
-
 };
-
-// ATS actions
-export const ats = {
-
-
-  async pushApplicant($2) {
-    return simulateAction($3);
-
-    return executeProviderAction(connection, 'sendNotification', { notification });
-pr-12243
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-<<<<<<< HEAD
-=======
-;
-
-}
-;
-// ATS actions;
-export const ats = {}
-  async update_status (
-    connection: ProviderConnection,
-    status: Record < string, any>,
-  ) {";
-    return mockProviderCall (connection, "update_status", { status });
-  },
-}
-
-;
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-pr-12243
-
-export class WebhookConnector extends BaseConnector {
-  async connect(): Promise<IntegrationResponse> {
-    return { success: true ;};
-  }
-
-  async disconnect(): Promise<IntegrationResponse> {
-    return { success: true ;};
-  }
-
-  async test(): Promise<IntegrationResponse> {
-    return { success: true ;};
-  }
-}
-ursor/fix-website-loading-errors-and-merge-6662
-// Email actions
-export const email = {
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  async createCandidate(
-    connection: ProviderConnection,
-    candidate: Record<string, any>
-  ) {'
-    return executeProviderAction(connection, 'createCandidate', { candidate });
-  },
-};
-
-<<<<<<< HEAD
-
-    return simulateAction(connection, 'ats.updateStatus', { change });
-  },
-};
-=======
-
-// Email actions
-export const email = {
-
-  async sendNotification(
-
-    return executeProviderAction(connection, 'sendNotification', { notification });
-  },
-
-};
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    return simulateAction(connection, 'ats.updateStatus, { change });
-  }}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
-
-
-<<<<<<< HEAD
-=======
-
-    return simulateAction(connection, ats.updateStatus', { change });
-  }}
-
-  }},
-
->>>>>>> origin/cursor/delete-old-data-records-6bba

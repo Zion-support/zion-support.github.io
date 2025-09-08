@@ -7,7 +7,8 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     if (usingPlaceholder) {
       return res.status(200).json({ partners: [
         { code: 'aihub', name: 'AI Hub', status: 'approved', commission_rate: 0.2 },
-        { code: 'promptpro', name: 'Prompt Pro', status: 'pending', commission_rate: 0.15 }]});
+        { code: 'promptpro', name: 'Prompt Pro', status: 'pending', commission_rate: 0.15 }
+      ]});
     }
 
     const supabase = getServerSupabase();

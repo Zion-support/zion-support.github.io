@@ -5,7 +5,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
 
   // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB)
-  const data = $2;
+  const data = {
+    activeUsers30d: 12840,
     gmv: 1450000,
     mrr: 82000,
     yoyGrowth: 1.85,
