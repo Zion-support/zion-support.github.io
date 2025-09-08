@@ -476,7 +476,7 @@ const Enterprise = () => {
       </section>
     </div>
   );
-};
+}
 
 export default Enterprise;
 
