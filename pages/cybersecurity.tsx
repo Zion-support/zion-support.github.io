@@ -2,21 +2,49 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-import { Shield, CheckCircle, Lock, Activity } from 'lucide-react';
-
-export default function CybersecurityPage() {
-  const features = [
-    'Zero Trust architectures and identity-first segmentation',
-    'Cloud posture hardening, secrets management, and key rotation',
-    'Threat detection, incident response playbooks, and tabletop exercises',
-    'Compliance readiness: SOC 2, ISO 27001, HIPAA, GDPR',
-  ];
-
-  const solutions = [
-    { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' },
-    { name: 'Domain & TLS Monitoring', href: '/domain-dns-monitor' },
-    { name: 'Email Security (DMARC)', href: '/email-dmarc-analyzer' },
-    { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' },
+export default function Cybersecurity() {
+  const contact = {
+    email: 'kleber@ziontechgroup.com',
+    phone: '+1-302-464-0950',
+    site: 'https://ziontechgroup.com'
+  };
+  const services = [
+    {
+      icon: Shield,
+      title: 'Security Assessment & Auditing',
+      description: 'Comprehensive security evaluations to identify vulnerabilities and compliance gaps.',
+      features: ['Penetration testing', 'Vulnerability scanning', 'Compliance audits', 'Risk assessments']
+    },
+    {
+      icon: Lock,
+      title: 'Identity & Access Management',
+      description: 'Robust IAM solutions to control user access and protect sensitive data.',
+      features: ['Multi-factor authentication', 'Single sign-on', 'Role-based access', 'Privileged access management']
+    },
+    {
+      icon: Eye,
+      title: 'Security Monitoring & SIEM',
+      description: '24/7 security monitoring with advanced threat detection and incident response.',
+      features: ['Real-time monitoring', 'Threat intelligence', 'Incident response', 'Forensic analysis']
+    },
+    {
+      icon: AlertTriangle,
+      title: 'Threat Detection & Response',
+      description: 'Advanced threat hunting and automated response to security incidents.',
+      features: ['Behavioral analytics', 'AI-powered detection', 'Automated response', 'Threat hunting']
+    },
+    {
+      icon: Users,
+      title: 'Security Training & Awareness',
+      description: 'Comprehensive security education programs to build a security-conscious culture.',
+      features: ['Phishing simulations', 'Security workshops', 'Compliance training', 'Awareness campaigns']
+    },
+    {
+      icon: Database,
+      title: 'Data Protection & Encryption',
+      description: 'End-to-end data protection with advanced encryption and backup solutions.',
+      features: ['Data encryption', 'Backup solutions', 'Data loss prevention', 'Privacy compliance']
+    }
   ];
 
   return (

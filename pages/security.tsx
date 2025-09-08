@@ -3,84 +3,107 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import { Lock, Users, Shield, Eye, AlertTriangle, CheckCircle } from 'lucide-react';
 
-const securityFeatures = [
-  {
-    title: 'Data Encryption',
-    description: 'All data is encrypted in transit and at rest using industry-standard encryption protocols',
-    icon: Lock,
-    details: [
-      'AES-256 encryption for data at rest',
-      'TLS 1.3 for data in transit',
-      'End-to-end encryption for sensitive communications',
-      'Key management with hardware security modules'
-    ]
-  },
-  {
-    title: 'Access Control',
-    description: 'Multi-factor authentication and role-based access control to protect your systems',
-    icon: Users,
-    details: [
-      'Multi-factor authentication (MFA)',
-      'Role-based access control (RBAC)',
-      'Single sign-on (SSO) integration',
-      'Privileged access management'
-    ]
-  },
-  {
-    title: 'Threat Detection',
-    description: 'Advanced threat detection and response capabilities to identify and mitigate security risks',
-    icon: Shield,
-    details: [
-      'Real-time threat monitoring',
-      'Behavioral analytics',
-      'Automated incident response',
-      'Security information and event management (SIEM)'
-    ]
-  },
-  {
-    title: 'Compliance',
-    description: 'Meet industry standards and regulatory requirements with our compliance framework',
-    icon: CheckCircle,
-    details: [
-      'SOC 2 Type II certification',
-      'ISO 27001 compliance',
-      'GDPR compliance',
-      'HIPAA compliance for healthcare'
-    ]
-  }
-];
+export default function Security() {
+const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
+  };
+  const securityMeasures = [
+    {
+      title: "Data Encryption",
+      description: "All data is encrypted both in transit and at rest using industry-standard encryption protocols",
+      icon: "🔐",
+      details: [
+        "AES-256 encryption for data at rest",
+        "TLS 1.3 for data in transit",
+        "End-to-end encryption for sensitive communications",
+        "Regular encryption key rotation"
+      ]
+    },
+    {
+      title: "Access Control",
+      description: "Multi-layered access control systems ensure only authorized personnel can access sensitive information",
+      icon: "🔑",
+      details: [
+        "Multi-factor authentication (MFA)",
+        "Role-based access control (RBAC)",
+        "Principle of least privilege",
+        "Regular access reviews and audits"
+      ]
+    },
+    {
+      title: "Network Security",
+      description: "Advanced network security measures protect against external threats and unauthorized access",
+      icon: "🛡️",
+      details: [
+        "Firewall protection and intrusion detection",
+        "DDoS protection and mitigation",
+        "Network segmentation and isolation",
+        "Continuous network monitoring"
+      ]
+    },
+    {
+      title: "Compliance & Auditing",
+      description: "Regular compliance audits and security assessments ensure adherence to industry standards",
+      icon: "📋",
+      details: [
+        "SOC 2 Type II compliance",
+        "ISO 27001 certification",
+        "Regular penetration testing",
+        "Third-party security audits"
+      ]
+    }
+  ];
 
-const securityStats = [
-  { label: 'Security Incidents Prevented', value: '99.9%', icon: Shield },
-  { label: 'Uptime Guarantee', value: '99.99%', icon: Lock },
-  { label: 'Compliance Certifications', value: '15+', icon: CheckCircle },
-  { label: 'Security Experts', value: '50+', icon: Users }
-];
+  const certifications = [
+    { name: "SOC 2 Type II", description: "Security, availability, and confidentiality controls" },
+    { name: "ISO 27001", description: "Information security management system" },
+    { name: "HIPAA Compliant", description: "Healthcare data protection standards" },
+    { name: "GDPR Compliant", description: "European data protection regulations" },
+    { name: "PCI DSS", description: "Payment card industry security standards" },
+    { name: "NIST Framework", description: "Cybersecurity framework compliance" }
+  ];
+
+  const securityFeatures = [
+    "24/7 Security Monitoring",
+    "Automated Threat Detection",
+    "Incident Response Team",
+    "Regular Security Updates",
+    "Employee Security Training",
+    "Vulnerability Management",
+    "Data Backup & Recovery",
+    "Business Continuity Planning"
+  ];
 
 export default function SecurityPage() {
   return (
-    <Layout
-      title="Security - Zion Tech Group"
-      description="Enterprise-grade security solutions to protect your data and infrastructure. Learn about our security measures and compliance standards."
-      keywords="security, cybersecurity, data protection, compliance, encryption, threat detection"
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-red-900 via-orange-900 to-yellow-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Enterprise Security
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Protecting your data and infrastructure with industry-leading security measures and compliance standards
-              </p>
-            </motion.div>
+    <>
+      <Head>
+        <title>Security - Zion Tech Group | Information Security & Data Protection</title>
+        <meta name="description" content="Learn about Zion Tech Group's comprehensive security measures, data protection policies, and compliance certifications." />
+        <meta name="keywords" content="security, data protection, encryption, compliance, SOC 2, ISO 27001, cybersecurity, privacy" />
+        <link rel="canonical" href={`${contact.site}/security`} />
+        <meta property="og:title" content="Security - Zion Tech Group | Information Security & Data Protection" />
+        <meta property="og:description" content="Learn about Zion Tech Group's comprehensive security measures, data protection policies, and compliance certifications." />
+        <meta property="og:url" content={`${contact.site}/security`} />
+        <meta property="og:type" content="website" />
+      </Head>
+
+      <div style={{ minHeight: '100vh', background: 'white' }}>
+        <div style={{ maxWidth: 1200, margin: '40px 20px' }}>
+          <div style={{ textAlign: 'center', marginBottom: 60 }}>
+            <h1 style={{ 
+              fontSize: '3rem',
+              fontWeight: 800, 
+              marginBottom: 20,
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>
+              Security & Compliance
+            </h1>
+            <p style={{ fontSize: '1.2rem', color: maxWidth, 600, margin: '0 auto' }}>
+              Your data security is our top priority. We implement industry-leading security measures and maintain strict compliance with global standards.
+            </p>
           </div>
         </section>
 
