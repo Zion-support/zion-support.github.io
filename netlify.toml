@@ -1,23 +1,24 @@
 [build]
-  # Do not run any build. Deploy the prebuilt static export from out/ as-is.
-  command = "echo 'Skipping build; deploying prebuilt static export'"
-  publish = "out"
-  # Skip Netlify build if repo contents (except the prebuilt out/) have not changed
-  # Returning 0 from ignore skips the build, which is desired since we deploy prebuilt assets.
-  # This runs on Netlify and uses their special env vars for commit SHAs.
-  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude)out'"
+  # Install dependencies and build the static site via Vite. Publish the dist output.
+  command = "npm ci --no-audit --no-fund && npm run build"
+  publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
-  NETLIFY_SKIP_INSTALL = "true"
-  NETLIFY_SKIP_BUILD = "true"
+  # Ensure Netlify installs dependencies for the build
+  NETLIFY_SKIP_INSTALL = "false"
   # Avoid optional binary downloads (electron, playwright, cypress)
   PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
   PUPPETEER_SKIP_DOWNLOAD = "1"
   CYPRESS_INSTALL_BINARY = "0"
   ELECTRON_SKIP_DOWNLOAD = "1"
+  # Defensive: avoid Python build steps
+  MISE_PYTHON_COMPILE = "false"
+  MISE_DISABLE = "1"
+  MISE_SHIMS = "0"
+  MISE_TOOL_VERSIONS__python = "system"
 
 # Keep the config minimal to avoid plugin-related build failures
 
