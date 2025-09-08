@@ -18,6 +18,10 @@ console.log(' Starting JSX/TSX syntax fixer...')
         content = content.replace(/type\s*=\s*{['"]([^'"]+)['"]}/g, 'type="$1"
             return `style=``
             content = "
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
       execSync('npm run type-check', { "stdio"})
       "summary"
       "status"

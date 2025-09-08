@@ -6,6 +6,8 @@ function cleanMergeConflicts(content) {
     .replace(/[\s\S]*?[\s\S]*?
     .replace(/
 
+<<<<<<< HEAD
+=======
 
 
 
@@ -19,12 +21,15 @@ function cleanMergeConflicts(content) {
 
     .replace(/^
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 }
 
 
 
 // Function to clean common syntax errors;)
 function cleanSyntaxErrors(content) {
+<<<<<<< HEAD
+=======
 
   return content
     // Remove invalid characters at start of files
@@ -50,6 +55,7 @@ function cleanSyntaxErrors(content) {
     .replace(/^[^\w\s]*$/gm, '');
 }
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
   return content;
     // Remove invalid characters at start of files;
     .replace(/^[^\w\s<]/gm, )
@@ -72,11 +78,16 @@ function cleanSyntaxErrors(content) {
     .replace(/:\s*[^=,;{}()[\]]*$/gm, ': any')
     // Remove empty lines with only special characters;
     .replace(/^[^\w\s]*$/gm, );
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 // Function to process a file;
 function processFile(filePath) {
   try {
+<<<<<<< HEAD
+=======
 
     const content = fs.readFileSync(filePath, utf8);
     let cleaned = cleanMergeConflicts(content);
@@ -91,10 +102,13 @@ function processFile(filePath) {
   content = content.replace(/
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
   // TODO: Implement
     const content = fs.readFileSync(filePath, 'utf8');
     let cleaned = cleanMergeConflicts(content);
     cleaned = cleanSyntaxErrors(cleaned);
+<<<<<<< HEAD
+=======
 
 
     
@@ -162,3 +176,4 @@ function findConflictedFiles(dir, conflictedFiles = []) {
   // Remove any remaining conflict markers;
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425

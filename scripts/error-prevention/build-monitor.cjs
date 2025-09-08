@@ -1,5 +1,6 @@
 #!/usr/bin/env node;
 
+=======
 
 #!/usr/bin/env node;
 
@@ -82,33 +83,15 @@ class BuildMonitor {}
      {}
           console.log('Build check passed ✓')};
           this.lastBuildTime = new Date()} else {}
-          console.log('Build check failed ✗');
-          
-          // Attempt to fix common build issues;
-          this.attemptBuildFix()};
-      })} catch (error) {}
-      console.error('Error running build "check": ', error.message)};
-  };
-  async attemptBuildFix() {}
-    try {}
-      console.log('Attempting to fix build issues...');
-      
-      // Clean build directory;
-const cleanChild = spawn('npm', ['run', 'clean'], {});
-        "stdio": 'inherit',
-        "cwd": process.cwd();
-      };);
-      console.log('Attempting to fix build issues...');
-
-
-
-
-
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
 
 
       cleanChild.on('close', (code) => {}
           console.log('Clean completed, retrying build...')) {}
           console.log('Clean completed, retrying build...')};
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
       cleanChild.on('close, (code) => {}
           console.log(Clean completed, retrying build...')) {}
           console.log('Clean completed, retrying build...)}
@@ -128,27 +111,6 @@ const cleanChild = spawn('npm', ['run', 'clean'], {});
           console.log('Clean failed')};
       console.error('Error running build "fix": ', error.message)};
   stop() {}
-    console.log('Stopping Build Monitor...');
-    this.isRunning = false;
-    
-    if ( {})
-      clearInterval(this.intervalId)};
-    console.log('Build Monitor stopped')) {}
-    console.log('Build Monitor stopped')}};
-    console.log(Stopping Build Monitor...');
-
-    if ( {})
-      clearInterval(this.intervalId)}
-    console.log('Build Monitor stopped)) {}
-    console.log(Build Monitor stopped')}}
-    console.log('Stopping Build Monitor...');
-    
-    this.isRunning = false;
-    
-    this.isRunning = false;
-    if ( {})
-      clearInterval(this.intervalId)};
-    console.log('Build Monitor stopped')) {}
     console.log('Build Monitor stopped')}}
 // Start the monitor if run directly
   const monitor = new BuildMonitor) {}

@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
+<<<<<<< HEAD
+=======
+=======
+=======
 
 
 const fs = require('fs');
@@ -12,6 +16,7 @@ const path = require('path');
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 /**
  * Search Index Generator;
  * Generates search index for the application;
@@ -19,13 +24,21 @@ const path = require('path');
 
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
 
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 class SearchIndexGenerator {
   // TODO: Implement
 }
   constructor() {
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+=======
 
     this.index = {
       pages: [],
@@ -304,3 +317,4 @@ const generator = new SearchIndexGenerator();
 generator.generateIndex();
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
