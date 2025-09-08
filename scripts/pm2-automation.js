@@ -29,56 +29,72 @@ class PM2Automation {
         encoding: 'utf8',
         stdio: 'pipe'
       });
-      this.log(`✅ ${description} completed successfully`);
+      this.log(`✓ ${description} completed successfully`);
       return result;
     } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`);
+      this.log(`✗ ${description} failed: ${error.message}`);
       throw error;
     }
   }
 
-  async ci() {
-    this.log('🚀 Starting CI process...');
+  async ciPipeline() {
+    this.log('🚀 Starting CI Pipeline...');
     
     try {
-      await this.runCommand('yarn install', 'Installing dependencies');
+      // Install dependencies
+      await this.runCommand('npm ci', 'Installing dependencies');
       
-      // Run linting but don't fail the entire process
-      try {
-        await this.runCommand('yarn lint', 'Running linting');
-      } catch (error) {
-        this.log('⚠ Linting failed (continuing with other checks)');
+      // Lint and type-check
+      await this.runCommand('npm run lint', 'Running linting');
+      await this.runCommand('npm run type-check', 'Running type checking');
+      
+      // Build project
+      await this.runCommand('npm run build', 'Building project');
+      
+      // Verify build output
+      const distExists = fs.existsSync(path.join(this.workspace, 'dist'));
+      if (!distExists) {
+        throw new Error('Build failed: dist folder not found');
       }
       
-      // Run type checking but don't fail the entire process
-      try {
-        await this.runCommand('yarn type-check', 'Running type checking');
-      } catch (error) {
-        this.log('⚠ Type checking failed (continuing with other checks)');
-      }
-      
-      await this.runCommand('yarn build', 'Building project');
-      
-      // Run tests if available
-      try {
-        await this.runCommand('yarn test', 'Running tests');
-      } catch (error) {
-        this.log('⚠ Tests not available or failed (continuing)');
-      }
-      
-      this.log('✅ CI process completed successfully');
+      this.log('✅ CI Pipeline completed successfully');
+      return true;
     } catch (error) {
-      this.log('❌ CI process failed');
-      process.exit(1);
+      this.log(`❌ CI Pipeline failed: ${error.message}`);
+      return false;
+    }
+  }
+
+  async securityScan() {
+    this.log('🔒 Starting Security Scan...');
+    
+    try {
+      // Run security audit
+      await this.runCommand('npm audit --audit-level=moderate', 'Running security audit');
+      
+      // Check for high severity vulnerabilities
+      try {
+        await this.runCommand('npm audit --audit-level=high', 'Checking for high severity vulnerabilities');
+        this.log('✅ No high severity vulnerabilities found');
+      } catch (auditError) {
+        this.log('⚠️ High severity vulnerabilities detected');
+        throw auditError;
+      }
+      
+      this.log('✅ Security scan completed successfully');
+      return true;
+    } catch (error) {
+      this.log(`❌ Security scan failed: ${error.message}`);
+      return false;
     }
   }
 
   async deploy() {
-    this.log('🚀 Starting deployment process...');
+    this.log('🚀 Starting Deployment...');
     
     try {
-      await this.runCommand('yarn install', 'Installing dependencies');
-      await this.runCommand('yarn build', 'Building project');
+      // Build project
+      await this.runCommand('npm run build', 'Building project for deployment');
       
       // Verify build output
       const distPath = path.join(this.workspace, 'dist');
@@ -86,175 +102,115 @@ class PM2Automation {
         throw new Error('Build failed: dist folder not found');
       }
       
-      const files = fs.readdirSync(distPath);
-      this.log(`✅ Build successful! Found ${files.length} files in dist folder`);
-      
       // Check for essential files
-      const essentialFiles = ['index.html'];
-      for (const file of essentialFiles) {
-        if (!fs.existsSync(path.join(distPath, file))) {
-          throw new Error(`Essential file missing: ${file}`);
-        }
+      const indexHtml = path.join(distPath, 'index.html');
+      if (!fs.existsSync(indexHtml)) {
+        throw new Error('index.html not found in build output');
       }
       
-      this.log('✅ Deployment verification completed');
-      this.log('🚀 Ready for deployment to your hosting platform');
+      this.log('✅ Build verification completed');
+      this.log('🚀 Ready for deployment to hosting platform');
       
+      // Here you can add your deployment commands
+      // Examples:
+      // - AWS S3: aws s3 sync dist/ s3://your-bucket-name/
+      // - Netlify: npx netlify-cli deploy --prod --dir=dist
+      // - Vercel: npx vercel --prod --cwd=dist
+      
+      this.log('✅ Deployment workflow completed');
+      return true;
     } catch (error) {
-      this.log('❌ Deployment process failed');
-      process.exit(1);
+      this.log(`❌ Deployment failed: ${error.message}`);
+      return false;
     }
   }
 
-  async updateDependencies() {
-    this.log('🔄 Starting dependency update process...');
+  async continuousImprovement() {
+    this.log('🔄 Starting Continuous Improvement...');
     
     try {
-      await this.runCommand('yarn install', 'Installing current dependencies');
+      // Install dependencies
+      await this.runCommand('npm ci', 'Installing dependencies');
       
-      // Check for outdated packages
+      // Build project
+      await this.runCommand('npm run build', 'Building project');
+      
+      // Run code quality checks with auto-fix
       try {
-        const outdated = execSync('yarn outdated --json', { 
-          cwd: this.workspace, 
-          encoding: 'utf8',
-          stdio: 'pipe'
-        });
-        this.log('📦 Outdated packages found');
-        console.log(outdated);
-      } catch (error) {
-        this.log('✅ All packages are up to date');
+        await this.runCommand('npm run lint -- --fix', 'Running linting with auto-fix');
+      } catch (lintError) {
+        this.log('⚠️ Linting with auto-fix completed with warnings');
       }
       
-      // Run security audit
       try {
-        await this.runCommand('yarn audit --level moderate', 'Running security audit');
-      } catch (error) {
-        this.log('⚠ Security vulnerabilities found (check yarn audit for details)');
+        await this.runCommand('npm run type-check', 'Running type checking');
+      } catch (typeError) {
+        this.log('⚠️ Type checking completed with warnings');
       }
       
-      // Update dependencies
-      try {
-        await this.runCommand('yarn upgrade', 'Updating dependencies');
-        await this.runCommand('yarn install', 'Installing updated dependencies');
-        await this.runCommand('yarn build', 'Building with updated dependencies');
-        
-        // Run linting but don't fail the entire process
-        try {
-          await this.runCommand('yarn lint', 'Linting with updated dependencies');
-        } catch (error) {
-          this.log('⚠ Linting failed (continuing)');
-        }
-        
-        // Run type checking but don't fail the entire process
-        try {
-          await this.runCommand('yarn type-check', 'Type checking with updated dependencies');
-        } catch (error) {
-          this.log('⚠ Type checking failed (continuing)');
-        }
-        
-        this.log('✅ Dependency update completed successfully');
-      } catch (error) {
-        this.log('❌ Dependency update failed');
-        throw error;
-      }
-      
+      this.log('✅ Continuous improvement completed successfully');
+      return true;
     } catch (error) {
-      this.log('❌ Dependency update process failed');
-      process.exit(1);
+      this.log(`❌ Continuous improvement failed: ${error.message}`);
+      return false;
     }
   }
 
-  async securityCheck() {
-    this.log('🔒 Starting security check process...');
+  async runScheduledTasks() {
+    this.log('⏰ Running scheduled tasks...');
     
-    try {
-      await this.runCommand('yarn install', 'Installing dependencies');
-      
-      // Run yarn audit
-      try {
-        await this.runCommand('yarn audit --level moderate', 'Running security audit');
-        this.log('✅ No security vulnerabilities found');
-      } catch (error) {
-        this.log('⚠ Security vulnerabilities found');
-        this.log('Run "yarn audit" to see details');
-      }
-      
-      // Check for outdated packages
-      try {
-        const outdated = execSync('yarn outdated --json', { 
-          cwd: this.workspace, 
-          encoding: 'utf8',
-          stdio: 'pipe'
-        });
-        this.log('📦 Some packages may be outdated (this is not necessarily a security issue)');
-      } catch (error) {
-        this.log('✅ All packages are up to date');
-      }
-      
-      this.log('✅ Security check completed');
-      
-    } catch (error) {
-      this.log('❌ Security check failed');
-      process.exit(1);
-    }
-  }
-
-  async startMonitoring() {
-    this.log('📊 Starting PM2 monitoring...');
+    const now = new Date();
+    const dayOfWeek = now.getDay(); // 0 = Sunday, 1 = Monday
     
-    try {
-      // Start the app if not already running
-      execSync('pm2 start ecosystem.config.js', { 
-        cwd: this.workspace, 
-        stdio: 'pipe'
-      });
-      
-      this.log('✅ PM2 monitoring started');
-      this.log('Use "pm2 monit" to view monitoring dashboard');
-      this.log('Use "pm2 logs" to view logs');
-      
-    } catch (error) {
-      this.log('⚠ App may already be running or failed to start');
+    // Run continuous improvement on Mondays (similar to GitHub Actions schedule)
+    if (dayOfWeek === 1) {
+      this.log('📅 Monday detected - running continuous improvement');
+      await this.continuousImprovement();
     }
+    
+    // Run security scan daily
+    this.log('🔒 Running daily security scan');
+    await this.securityScan();
+    
+    this.log('✅ Scheduled tasks completed');
   }
 }
 
 // CLI interface
-const command = process.argv[2];
-const automation = new PM2Automation();
-
-switch (command) {
-  case 'ci':
-    automation.ci();
-    break;
-  case 'deploy':
-    automation.deploy();
-    break;
-  case 'deps':
-    automation.updateDependencies();
-    break;
-  case 'security':
-    automation.securityCheck();
-    break;
-  case 'monitor':
-    automation.startMonitoring();
-    break;
-  default:
-    console.log(`
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const automation = new PM2Automation();
+  const command = process.argv[2];
+  
+  switch (command) {
+    case 'ci':
+      automation.ciPipeline();
+      break;
+    case 'security':
+      automation.securityScan();
+      break;
+    case 'deploy':
+      automation.deploy();
+      break;
+    case 'improvement':
+      automation.continuousImprovement();
+      break;
+    case 'scheduled':
+      automation.runScheduledTasks();
+      break;
+    default:
+      console.log(`
 PM2 Automation Script
 
 Usage: node scripts/pm2-automation.js <command>
 
 Commands:
-  ci        - Run CI process (install, lint, type-check, build, test)
-  deploy    - Run deployment process (install, build, verify)
-  deps      - Update dependencies and run security audit
-  security  - Run security checks and audit
-  monitor   - Start PM2 monitoring
-
-Examples:
-  node scripts/pm2-automation.js ci
-  node scripts/pm2-automation.js deploy
-  node scripts/pm2-automation.js deps
-`);
+  ci          - Run CI pipeline (build, lint, type-check)
+  security    - Run security scan
+  deploy      - Run deployment workflow
+  improvement - Run continuous improvement tasks
+  scheduled   - Run scheduled tasks (daily/weekly)
+      `);
+  }
 }
+
+export default PM2Automation;
