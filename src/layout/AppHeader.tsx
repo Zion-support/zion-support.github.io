@@ -12,6 +12,8 @@ export function AppHeader() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
+  const [companyDropdownOpen, setCompanyDropdownOpen] = useState(false);
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
@@ -38,12 +40,11 @@ export function AppHeader() {
   };
   const navigation = [
     { name: 'Home', href: '/', current: true },
-    { name: 'About', href: '/about', current: false },
-    { name: 'Services', href: '/services', current: false },
-    { name: 'Solutions', href: '/solutions', current: false },
-    { name: 'Case Studies', href: '/case-studies', current: false },
-    { name: 'Blog', href: '/blog', current: false },
-    { name: 'Careers', href: '/careers', current: false },
+    { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
+    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
+    { name: 'Company', href: '/about', current: false, hasDropdown: true },
+    { name: 'Resources', href: '/news', current: false, hasDropdown: true },
+    { name: 'Support', href: '/help', current: false, hasDropdown: true },
     { name: 'Contact', href: '/contact', current: false },
   ];
 
@@ -400,8 +401,68 @@ export function AppHeader() {
     { name: 'Services Showcase', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
     { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
-    { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart, description: 'Explore our solutions' },
-    { name: 'Partners', href: '/partners', icon: Users, description: 'Strategic partnerships' }
+  ];
+
+  const companyCategories = [
+    {
+      name: 'About Us',
+      icon: Building,
+      color: 'from-blue-600 to-cyan-600',
+      items: [
+        { name: 'About Us', href: '/about', description: 'Our story and mission' },
+        { name: 'Team', href: '/team', description: 'Meet our experts' },
+        { name: 'Careers', href: '/careers', description: 'Join our team' },
+        { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
+      ]
+    }
+  ];
+
+  const resourcesCategories = [
+    {
+      name: 'News & Updates',
+      icon: BookOpen,
+      color: 'from-green-600 to-emerald-600',
+      items: [
+        { name: 'Latest News', href: '/news', description: 'Company updates and insights' },
+        { name: 'Blog', href: '/blog', description: 'Technology insights and articles' },
+        { name: 'Press', href: '/press', description: 'Media resources and releases' }
+      ]
+    },
+    {
+      name: 'Research & Events',
+      icon: TrendingUp,
+      color: 'from-purple-600 to-pink-600',
+      items: [
+        { name: 'Research & Development', href: '/research-development', description: 'Our innovation initiatives' },
+        { name: 'Events & Webinars', href: '/events', description: 'Upcoming events and workshops' },
+        { name: 'Case Studies', href: '/case-studies', description: 'Success stories and outcomes' }
+      ]
+    }
+  ];
+
+  const supportCategories = [
+    {
+      name: 'Help & Support',
+      icon: HelpCircle,
+      color: 'from-blue-600 to-cyan-600',
+      items: [
+        { name: 'Help Center', href: '/help', description: 'Find answers to questions' },
+        { name: 'Support Portal', href: '/support', description: 'Technical assistance' },
+        { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
+        { name: 'Contact Support', href: '/contact', description: 'Get in touch' }
+      ]
+    },
+    {
+      name: 'Resources',
+      icon: BookOpen,
+      color: 'from-green-600 to-emerald-600',
+      items: [
+        { name: 'Documentation', href: '/docs', description: 'Technical guides' },
+        { name: 'Training', href: '/training', description: 'Learning resources' },
+        { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
+        { name: 'Community', href: '/community', description: 'User community' }
+      ]
+    }
   ];
 
   const supportLinks = [
@@ -447,247 +508,41 @@ export function AppHeader() {
               {navigation.map((item) => (
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? (
-                    <div className="relative">
-                      <button
-                        onClick={() => {
-                          if (item.name === 'Services') {
-                            setServicesDropdownOpen(!servicesDropdownOpen);
-                            setSolutionsDropdownOpen(false);
-                            setResourcesDropdownOpen(false);
-                          } else if (item.name === 'Solutions') {
-                            setSolutionsDropdownOpen(!solutionsDropdownOpen);
-                            setServicesDropdownOpen(false);
-                            setResourcesDropdownOpen(false);
-                          } else if (item.name === 'Resources') {
-                            setResourcesDropdownOpen(!resourcesDropdownOpen);
-                            setServicesDropdownOpen(false);
-                            setSolutionsDropdownOpen(false);
-                          }
-                        }}
-                        className="flex items-center text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200 relative group"
-                      >
-                        {item.name}
-                        <ChevronDown className={`ml-1 w-4 h-4 transition-transform duration-200 ${
-                          (item.name === 'Services' && servicesDropdownOpen) ||
-                          (item.name === 'Solutions' && solutionsDropdownOpen) ||
-                          (item.name === 'Resources' && resourcesDropdownOpen)
-                            ? 'rotate-180' : ''
-                        }`} />
-                      </button>
-
-                      {/* Services Dropdown */}
-                      {item.name === 'Services' && servicesDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
-                          <div className="p-6">
-                            <div className="grid grid-cols-2 gap-6">
-                              {services.map((service) => (
-                                <Link
-                                  key={service.name}
-                                  to={service.href}
-                                  className={`group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50 ${
-                                    service.featured ? 'ring-2 ring-cyan-400/50' : ''
-                                  }`}
-                                  onClick={() => setServicesDropdownOpen(false)}
-                                >
-                                  <div className="flex items-start gap-3">
-                                    <div className={`p-2 rounded-lg bg-gradient-to-br ${service.color}`}>
-                                      {React.createElement(service.icon, { className: "w-5 h-5 text-white" })}
-                                    </div>
-                                    <div className="flex-1">
-                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                                        {service.name}
-                                      </h3>
-                                      <p className="text-sm text-gray-400 mt-1">
-                                        {service.description}
-                                      </p>
-                                      {service.featured && (
-                                        <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
-                                          <Star className="w-3 h-3" />
-                                          Featured
-                                        </span>
-                                      )}
-                                    </div>
-                                  </div>
-                                </Link>
-                              ))}
-                            </div>
-                            <div className="mt-6 pt-6 border-t border-slate-700/50">
-                              <div className="flex items-center justify-between">
-                                <Link
-                                  to="/services"
-                                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
-                                  onClick={() => setServicesDropdownOpen(false)}
-                                >
-                                  View All Services
-                                  <ArrowRight className="w-4 h-4" />
-                                </Link>
-                                <div className="flex items-center gap-4 text-sm text-gray-400">
-                                  <span>Quick Access:</span>
-                                  <div className="flex gap-2">
-                                    <Link
-                                      to="/request-quote"
-                                      className="px-3 py-1 bg-slate-700/50 rounded-md hover:bg-slate-600/50 hover:text-white transition-colors"
-                                      onClick={() => setServicesDropdownOpen(false)}
-                                    >
-                                      Get Quote
-                                    </Link>
-                                    <Link
-                                      to="/schedule-demo"
-                                      className="px-3 py-1 bg-slate-700/50 rounded-md hover:bg-slate-600/50 hover:text-white transition-colors"
-                                      onClick={() => setServicesDropdownOpen(false)}
-                                    >
-                                      Schedule Demo
-                                    </Link>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Solutions Dropdown */}
-                      {item.name === 'Solutions' && solutionsDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-[600px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
-                          <div className="p-6">
-                            <div className="grid grid-cols-2 gap-4">
-                              {solutions.map((solution) => (
-                                <Link
-                                  key={solution.name}
-                                  to={solution.href}
-                                  className={`group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50 ${
-                                    solution.featured ? 'ring-2 ring-cyan-400/50' : ''
-                                  }`}
-                                  onClick={() => setSolutionsDropdownOpen(false)}
-                                >
-                                  <div className="flex items-start gap-3">
-                                    <div className="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500">
-                                      {React.createElement(solution.icon, { className: "w-5 h-5 text-white" })}
-                                    </div>
-                                    <div className="flex-1">
-                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                                        {solution.name}
-                                      </h3>
-                                      <p className="text-sm text-gray-400 mt-1">
-                                        {solution.description}
-                                      </p>
-                                      {solution.featured && (
-                                        <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
-                                          <Star className="w-3 h-3" />
-                                          Featured
-                                        </span>
-                                      )}
-                                    </div>
-                                  </div>
-                                </Link>
-                              ))}
-                            </div>
-                            <div className="mt-6 pt-6 border-t border-slate-700/50">
-                              <div className="flex items-center justify-between">
-                                <Link
-                                  to="/solutions"
-                                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
-                                  onClick={() => setSolutionsDropdownOpen(false)}
-                                >
-                                  View All Solutions
-                                  <ArrowRight className="w-4 h-4" />
-                                </Link>
-                                <div className="flex items-center gap-4 text-sm text-gray-400">
-                                  <span>Quick Access:</span>
-                                  <div className="flex gap-2">
-                                    <Link
-                                      to="/contact"
-                                      className="px-3 py-1 bg-slate-700/50 rounded-md hover:bg-slate-600/50 hover:text-white transition-colors"
-                                      onClick={() => setSolutionsDropdownOpen(false)}
-                                    >
-                                      Contact Us
-                                    </Link>
-                                    <Link
-                                      to="/schedule-demo"
-                                      className="px-3 py-1 bg-slate-700/50 rounded-md hover:bg-slate-600/50 hover:text-white transition-colors"
-                                      onClick={() => setSolutionsDropdownOpen(false)}
-                                    >
-                                      Schedule Demo
-                                    </Link>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Resources Dropdown */}
-                      {item.name === 'Resources' && resourcesDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-[600px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
-                          <div className="p-6">
-                            <div className="grid grid-cols-2 gap-4">
-                              {resources.map((resource) => (
-                                <Link
-                                  key={resource.name}
-                                  to={resource.href}
-                                  className={`group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50 ${
-                                    resource.featured ? 'ring-2 ring-cyan-400/50' : ''
-                                  }`}
-                                  onClick={() => setResourcesDropdownOpen(false)}
-                                >
-                                  <div className="flex items-start gap-3">
-                                    <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500">
-                                      {React.createElement(resource.icon, { className: "w-5 h-5 text-white" })}
-                                    </div>
-                                    <div className="flex-1">
-                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                                        {resource.name}
-                                      </h3>
-                                      <p className="text-sm text-gray-400 mt-1">
-                                        {resource.description}
-                                      </p>
-                                      {resource.featured && (
-                                        <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
-                                          <Star className="w-3 h-3" />
-                                          Featured
-                                        </span>
-                                      )}
-                                    </div>
-                                  </div>
-                                </Link>
-                              ))}
-                            </div>
-                            <div className="mt-6 pt-6 border-t border-slate-700/50">
-                              <div className="flex items-center justify-between">
-                                <Link
-                                  to="/resources"
-                                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
-                                  onClick={() => setResourcesDropdownOpen(false)}
-                                >
-                                  View All Resources
-                                  <ArrowRight className="w-4 h-4" />
-                                </Link>
-                                <div className="flex items-center gap-4 text-sm text-gray-400">
-                                  <span>Quick Access:</span>
-                                  <div className="flex gap-2">
-                                    <Link
-                                      to="/faq"
-                                      className="px-3 py-1 bg-slate-700/50 rounded-md hover:bg-slate-600/50 hover:text-white transition-colors"
-                                      onClick={() => setResourcesDropdownOpen(false)}
-                                    >
-                                      FAQ
-                                    </Link>
-                                    <Link
-                                      to="/contact"
-                                      className="px-3 py-1 bg-slate-700/50 rounded-md hover:bg-slate-600/50 hover:text-white transition-colors"
-                                      onClick={() => setResourcesDropdownOpen(false)}
-                                    >
-                                      Contact
-                                    </Link>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      )}
-                    </div>
+                    <button
+                      onClick={() => {
+                        // Close other dropdowns
+                        if (item.name === 'Services') {
+                          setServicesDropdownOpen(!servicesDropdownOpen);
+                          setSolutionsDropdownOpen(false);
+                          setCompanyDropdownOpen(false);
+                          setResourcesDropdownOpen(false);
+                        } else if (item.name === 'Solutions') {
+                          setSolutionsDropdownOpen(!solutionsDropdownOpen);
+                          setServicesDropdownOpen(false);
+                          setCompanyDropdownOpen(false);
+                          setResourcesDropdownOpen(false);
+                        } else if (item.name === 'Company') {
+                          setCompanyDropdownOpen(!companyDropdownOpen);
+                          setServicesDropdownOpen(false);
+                          setSolutionsDropdownOpen(false);
+                          setResourcesDropdownOpen(false);
+                        } else if (item.name === 'Resources') {
+                          setResourcesDropdownOpen(!resourcesDropdownOpen);
+                          setServicesDropdownOpen(false);
+                          setSolutionsDropdownOpen(false);
+                          setCompanyDropdownOpen(false);
+                        }
+                      }}
+                      className="flex items-center space-x-1 text-slate-300 hover:text-white transition-colors py-2"
+                    >
+                      <span>{item.name}</span>
+                      <ChevronDown className={`w-4 h-4 transition-transform ${
+                        (item.name === 'Services' && servicesDropdownOpen) ||
+                        (item.name === 'Solutions' && solutionsDropdownOpen) ||
+                        (item.name === 'Company' && companyDropdownOpen) ||
+                        (item.name === 'Resources' && resourcesDropdownOpen) ? 'rotate-180' : ''
+                      }`} />
+                    </button>
                   ) : (
                     <Link
                       to={item.href}
@@ -850,6 +705,147 @@ export function AppHeader() {
                       </Link>
                     ))}
                   </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Solutions Dropdown */}
+        <AnimatePresence>
+          {solutionsDropdownOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20"
+            >
+              <div className="container mx-auto px-4 py-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                  {solutionsCategories.map((category) => (
+                    <div key={category.name} className="space-y-4">
+                      <div className="flex items-center space-x-3">
+                        <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
+                          <category.icon className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white">{category.name}</h3>
+                          <p className="text-sm text-slate-400">{category.description}</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        {category.solutions.map((solution) => (
+                          <Link
+                            key={solution.name}
+                            to={solution.href}
+                            className="block p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                          >
+                            <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                              {solution.name}
+                            </div>
+                            <div className="text-sm text-slate-400 group-hover:text-slate-300 transition-colors">
+                              {solution.description}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Company Dropdown */}
+        <AnimatePresence>
+          {companyDropdownOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20"
+            >
+              <div className="container mx-auto px-4 py-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  {companyCategories.map((category) => (
+                    <div key={category.name} className="space-y-4">
+                      <div className="flex items-center space-x-3">
+                        <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
+                          <category.icon className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white">{category.name}</h3>
+                          <p className="text-sm text-slate-400">{category.description}</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        {category.items.map((item) => (
+                          <Link
+                            key={item.name}
+                            to={item.href}
+                            className="block p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                          >
+                            <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                              {item.name}
+                            </div>
+                            <div className="text-sm text-slate-400 group-hover:text-slate-300 transition-colors">
+                              {item.description}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Resources Dropdown */}
+        <AnimatePresence>
+          {resourcesDropdownOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20"
+            >
+              <div className="container mx-auto px-4 py-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  {resourcesCategories.map((category) => (
+                    <div key={category.name} className="space-y-4">
+                      <div className="flex items-center space-x-3">
+                        <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
+                          <category.icon className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white">{category.name}</h3>
+                          <p className="text-sm text-slate-400">{category.description}</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        {category.items.map((item) => (
+                          <Link
+                            key={item.name}
+                            to={item.href}
+                            className="block p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                          >
+                            <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                              {item.name}
+                            </div>
+                            <div className="text-sm text-slate-400 group-hover:text-slate-300 transition-colors">
+                              {item.description}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
