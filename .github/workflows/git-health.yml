@@ -20,6 +20,7 @@ jobs:
         run: npm ci
         continue-on-error: true
       - name: Run git health check
+        if: always()
         run: node automation/git-health-runner.cjs
         continue-on-error: true
       - name: Create summary

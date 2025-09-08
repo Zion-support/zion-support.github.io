@@ -32,9 +32,11 @@ jobs:
         run: npm ci
         continue-on-error: true
       - name: Run Autonomous Meta Orchestrator (once)
+        if: always()
         run: node automation/autonomous-meta-orchestrator.cjs once
         continue-on-error: true
       - name: Commit and push changes
+        if: always()
         run: |
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "github-actions[bot]"

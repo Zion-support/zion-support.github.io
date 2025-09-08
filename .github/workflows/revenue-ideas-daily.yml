@@ -25,6 +25,7 @@ jobs:
         run: npm ci
         continue-on-error: true
       - name: Run revenue ideas orchestrator (single cycle)
+        if: always()
         run: node automation/revenue-ideas-orchestrator.cjs once | cat
         continue-on-error: true
       - name: Upload artifacts

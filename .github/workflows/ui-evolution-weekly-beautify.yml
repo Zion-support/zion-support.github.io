@@ -18,9 +18,11 @@ jobs:
         run: npm ci
         continue-on-error: true
       - name: Generate beautify suggestions
+        if: always()
         run: node automation/beautify-hightech-ui.cjs | cat
         continue-on-error: true
       - name: Summarize UI evolution
+        if: always()
         run: node automation/ui-evolution-dashboard.cjs | tee ui-evolution-summary.json
         continue-on-error: true
       - name: Upload UI beautify artifacts

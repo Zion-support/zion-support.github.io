@@ -33,6 +33,7 @@ jobs:
         continue-on-error: true
       - name: Check workflow health before fixing
         id: pre-check
+        if: always()
         run: |
           echo "Checking workflow health before attempting auto-fixes..."
           if node automation/check-workflow-health.cjs | grep -q "✅ All workflows are healthy"; then
@@ -45,6 +46,7 @@ jobs:
         continue-on-error: true
       - name: Run auto-fixers (only if needed)
         if: steps.pre-check.outputs.needs-fixing == 'true'
+        if: always()
         run: |
           npm run fix:all || true
           npm run type-check || true

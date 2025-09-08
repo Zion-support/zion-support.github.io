@@ -21,6 +21,7 @@ jobs:
         run: npm ci
         continue-on-error: true
       - name: Run sync health check
+        if: always()
         run: node automation/sync-health-check.cjs | tee sync-health.out
         continue-on-error: true
       - name: Upload sync health artifacts

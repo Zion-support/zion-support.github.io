@@ -32,25 +32,31 @@ jobs:
         run: npm ci
         continue-on-error: true
       - name: Prepare LinkedIn Marketing (analyze + factory)
+        if: always()
         run: |
           node automation/linkedin-marketing-analyzer.cjs || true
           node automation/linkedin-marketing-factory.cjs || true
         continue-on-error: true
       - name: Run LinkedIn Marketing poster (once)
+        if: always()
         run: node automation/linkedin-marketing-orchestrator.cjs once || true
         continue-on-error: true
       - name: Run LinkedIn Pro (analyze + factory + post once)
+        if: always()
         run: node automation/linkedin-pro-orchestrator.cjs once || true
         continue-on-error: true
       - name: Prepare Instagram Marketing (analyze + factory)
+        if: always()
         run: |
           node automation/instagram-marketing-analyzer.cjs || true
           node automation/instagram-marketing-factory.cjs || true
         continue-on-error: true
       - name: Run Instagram Marketing poster (once)
+        if: always()
         run: node automation/instagram-marketing-orchestrator.cjs once || true
         continue-on-error: true
       - name: Commit any generated changes
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

@@ -24,8 +24,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run LinkedIn marketing orchestrator (single cycle)
+        if: always()
         run: node automation/linkedin-marketing-orchestrator.cjs once | cat
       - name: Run Instagram marketing orchestrator (single cycle)
+        if: always()
         run: node automation/instagram-marketing-orchestrator.cjs once | cat
 :.github/workflows/backup-20250818-113801/marketing-daily.yml
 :.github/workflows/backup-20250818-113801/marketing-daily.yml

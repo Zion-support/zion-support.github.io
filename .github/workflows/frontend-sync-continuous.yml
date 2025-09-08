@@ -23,6 +23,7 @@ jobs:
         run: npm ci
         continue-on-error: true
       - name: Run frontend sync (single cycle)
+        if: always()
         run: node automation/frontend-sync-orchestrator.cjs once | cat
         continue-on-error: true
       - name: Upload frontend-sync reports and logs
@@ -36,6 +37,7 @@ jobs:
           retention-days: 7
         if: always()
       - name: Push changes (if any)
+        if: always()
         run: |
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "github-actions[bot]"

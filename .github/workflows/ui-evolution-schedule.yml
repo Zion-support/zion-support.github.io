@@ -18,6 +18,7 @@ jobs:
         run: npm ci
         continue-on-error: true
       - name: Run UI evolution
+        if: always()
         run: node automation/ui-evolution-runner.cjs
         continue-on-error: true
       - name: Upload UI evolution reports and logs
