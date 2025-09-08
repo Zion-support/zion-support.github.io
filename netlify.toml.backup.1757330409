@@ -6,7 +6,12 @@
 
 [build.environment]
   NODE_VERSION = "20"
+<<<<<<< HEAD
+  PYTHON_VERSION = "3.12.6"
+  MISE_PYTHON_COMPILE = "false"
+=======
   PYTHON_VERSION = "3.12"
+>>>>>>> origin/cursor/build-image-with-python-dependency-failure-1c63
 
 [[plugins]]
   package = "netlify-plugin-compress"
