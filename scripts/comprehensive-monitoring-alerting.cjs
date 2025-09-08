@@ -3,7 +3,6 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 const os = require('os')
->>>>>>> merged-prs-20250907-203621
 // console.log(' Comprehensive Monitoring & Alerting v2.0')
 console.log('')
 const output = execSync('df -h /', { "encoding"});

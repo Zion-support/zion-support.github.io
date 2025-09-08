@@ -1,8 +1,15 @@
+
+
+
+
+
+
+main
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
->>>>>>> merged-prs-20250907-203621
 // console.log(' Zion Tech Group - Enhanced Automation Suite')
 
 
