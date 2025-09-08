@@ -21613,3 +21613,20 @@ fatal: couldn't find remote ref cursor/expand-services-and-deploy-updates-9191
 [2025-09-08T21:28:27.043Z] ✅ Success: Get git status
 [2025-09-08T21:28:27.044Z] 📄 Found 0 conflicted files
 [2025-09-08T21:28:27.044Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:28:27.142Z] ✅ Success: Add resolved files
+[2025-09-08T21:28:27.142Z] 🚀 Commit merge for cursor/expand-services-and-deploy-updates-9191: git commit -m "Resolve conflicts and merge cursor/expand-services-and-deploy-updates-9191"
+[2025-09-08T21:28:27.215Z] ✅ Success: Commit merge for cursor/expand-services-and-deploy-updates-9191
+[2025-09-08T21:28:27.215Z] ✅ Successfully resolved conflicts and merged: cursor/expand-services-and-deploy-updates-9191
+[2025-09-08T21:28:27.215Z] 🔄 Attempting to merge branch: cursor/expand-services-and-deploy-updates-936f
+[2025-09-08T21:28:27.215Z] 🚀 Fetch origin/cursor/expand-services-and-deploy-updates-936f: git fetch origin cursor/expand-services-and-deploy-updates-936f
+[2025-09-08T21:28:27.329Z] ❌ Error in Fetch origin/cursor/expand-services-and-deploy-updates-936f: Command failed: git fetch origin cursor/expand-services-and-deploy-updates-936f
+fatal: couldn't find remote ref cursor/expand-services-and-deploy-updates-936f
+
+[2025-09-08T21:28:27.329Z] ❌ Failed to merge cursor/expand-services-and-deploy-updates-936f: Command failed: git fetch origin cursor/expand-services-and-deploy-updates-936f
+fatal: couldn't find remote ref cursor/expand-services-and-deploy-updates-936f
+
+[2025-09-08T21:28:27.329Z] 🔧 Attempting to resolve conflicts for: cursor/expand-services-and-deploy-updates-936f
+[2025-09-08T21:28:27.329Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:28:27.383Z] ✅ Success: Get git status
+[2025-09-08T21:28:27.383Z] 📄 Found 0 conflicted files
+[2025-09-08T21:28:27.383Z] 🚀 Add resolved files: git add .
