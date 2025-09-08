@@ -46,3 +46,7 @@
   [headers.values]
     Cache-Control = "public, max-age=300"
 
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> origin/pr/12597
