@@ -23,7 +23,7 @@ export interface AnalyticsContextValue {
 
 const AnalyticsContext = createContext<AnalyticsContextValue | undefined>(undefined);
 
-export const AnalyticsProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
+export const AnalyticsProvider: React.FC<React.PropsWithChildren<object>> = ({ children }) => {
   const [pageViews, setPageViews] = useState<number>(0);
   const [events, setEvents] = useState<AnalyticsEvent[]>([]);
   const [lastEvent, setLastEvent] = useState<AnalyticsEvent | null>(null);

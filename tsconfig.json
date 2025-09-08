@@ -52,6 +52,14 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "src/pages",
+    "src/routes",
+    "src/components",
+    "src/hooks",
+    "src/services",
+    "src/data",
+    "src/layout",
+    "src/context/WalletContext.tsx"
   ]
 }
