@@ -51,7 +51,6 @@ jobs:
           fi
           
           echo "Health analysis completed" >> $GITHUB_STEP_SUMMARY
-
   workflow-optimization:
     name: Workflow Optimization
     runs-on: ubuntu-latest
@@ -111,7 +110,6 @@ jobs:
           EOF
           
           echo "Optimization report generated"
-
       - name: Upload optimization report
         uses: actions/upload-artifact@v4
         with:
@@ -130,6 +128,7 @@ jobs:
       - name: Analyze current scheduling
         run: |
           echo "## 📅 Current Workflow Schedule Analysis" >> $GITHUB_STEP_SUMMARY
+          
           echo "### Current Schedule Distribution:" >> $GITHUB_STEP_SUMMARY
           
           # Morning workflows (6-9 AM)
@@ -154,7 +153,6 @@ jobs:
           echo "- Afternoon: Security scans and dependency updates" >> $GITHUB_STEP_SUMMARY
           echo "- Evening: Maintenance and optimization" >> $GITHUB_STEP_SUMMARY
           echo "- Night: Light monitoring and cleanup" >> $GITHUB_STEP_SUMMARY
-
   workflow-summary:
     name: Workflow Summary
     runs-on: ubuntu-latest
