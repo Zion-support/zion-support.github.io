@@ -433,7 +433,7 @@ const Home = memo(() => {;
               Ready to Transform Your Business?
             </h2>
             <p className=\"text-xl text-blue-100 mb-8 max-w-2xl mx-auto\">
-              Let&apos;s discuss how our technology solutions can drive your
+              Let's discuss how our technology solutions can drive your
               success. Get started with a free consultation.\'
             </p>
             <div className=\"flex flex-col sm: fle x-row gap-4 justify-center\">

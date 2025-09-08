@@ -34,7 +34,7 @@ export default function handler("req": NextApiReques t, "res": NextApiRespons e)
     // - A logging service (LogDNA, Papertrail, etc.)
     // - A database for analysis;
     // - An alerting system (PagerDuty, Slack, etc.)"
-    // For now, we&apos;ll just acknowledge receipt
+    // For now, we'll just acknowledge receipt
     res.status(200).json({
       "success": tru e,""
       "message": 'Error logged successfully',')

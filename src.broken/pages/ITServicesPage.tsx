@@ -8,7 +8,7 @@ import React from 'react';
 import { 
 
   BarChart3
-} from 'lucide-react',
+} from 'lucide-react';
 
 export default function ITServicesPage() {
   const itServices = $2;
@@ -325,7 +325,7 @@ import {;
   Lock,;
   Users,;
   BarChart3;'
-} from 'lucide-react',;
+} from 'lucide-react';;
 export default function ITServicesPage() {;
   const itServices = [;
     {;

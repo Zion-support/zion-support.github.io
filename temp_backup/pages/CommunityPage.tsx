@@ -3,7 +3,7 @@ import { useState } from "react";
 import CreatePostButton from "@/components/community/CreatePostButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SEO } from "@/components/SEO";
-import ForumCategories from "@/components/community/ForumCategories";
+
 import PostCard from "@/components/community/PostCard";
 import { useAuth } from "@/hooks/useAuth";
 import { ForumPost } from "@/types/community";
@@ -119,7 +119,7 @@ export default function CommunityPage() {
           <CreatePostButton />
         </div>
         
-        <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
+
           <TabsList className="mb-6">
             <TabsTrigger value="categories">Categories</TabsTrigger>
             <TabsTrigger value="featured">Featured</TabsTrigger>
@@ -127,7 +127,7 @@ export default function CommunityPage() {
           </TabsList>
           
           <TabsContent value="categories">
-            <ForumCategories />
+
           </TabsContent>
           
           <TabsContent value="featured">
@@ -145,8 +145,7 @@ export default function CommunityPage() {
               ))}
             </div>
           </TabsContent>
-        </Tabs>
-      </div>
+
     </>
   );
 }

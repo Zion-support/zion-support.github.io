@@ -107,3 +107,12 @@ fixer.fixAllFiles()
   .catch(error => {
     console.error('❌ Fatal error:', error);
     process.exit(1)});
+let fixedCount = 0;
+filesToFix.forEach(file => {
+  if (fixFile(file)) {
+    fixedCount++;
+  }
+});
+
+module.exports = SyntaxErrorFixer;
+console.log(`\n📊 Fixed ${fixedCount} files`);

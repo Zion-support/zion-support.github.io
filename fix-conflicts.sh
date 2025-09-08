@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Find all files with merge conflicts
-conflicted_files=$(find ./pages -name "*.tsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
+conflicted_files=$(find ./pages -name "*.tsx" | xargs grep -l "
 
 for file in $conflicted_files; do
     echo "Fixing $file..."
