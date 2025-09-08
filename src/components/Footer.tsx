@@ -109,13 +109,54 @@ const footerSections = [
     icon: Target,
     links: [
       { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
+      { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart }
+    ]
+  },
+  {
+    title: 'Micro SaaS Solutions',
+    icon: ShoppingCart,
+    links: [
+      { name: 'Micro SaaS Platform', path: '/micro-saas', icon: ShoppingCart },
+      { name: 'Micro CRM', path: '/services/micro-crm', icon: Users },
+      { name: 'Helpdesk Platform', path: '/services/helpdesk', icon: MessageCircle },
+      { name: 'Website Analytics', path: '/services/website-analytics', icon: BarChart3 },
+      { name: 'IT Helpdesk', path: '/services/it-helpdesk', icon: HelpCircle },
+      { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', icon: TrendingUp },
+      { name: 'Mobile Survey', path: '/services/mobile-survey', icon: Smartphone },
+      { name: 'Email Sequencer', path: '/services/email-sequencer', icon: Mail },
+      { name: 'Podcast Transcription', path: '/services/podcast-transcription', icon: Video },
+      { name: 'Returns Management', path: '/services/returns-management', icon: Truck }
+    ]
+  },
+  {
+    title: 'Solutions',
+    icon: Target,
+    links: [
+      { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
       { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
       { name: 'Financial Solutions', path: '/solutions/financial', icon: DollarSign },
-      { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Cpu },
       { name: 'Government Solutions', path: '/solutions/government', icon: Building },
-      { name: 'Retail Solutions', path: '/solutions/retail', icon: ShoppingCart },
-      { name: 'Education Solutions', path: '/solutions/education', icon: GraduationCap },
-      { name: 'Startup Solutions', path: '/solutions/startup', icon: Rocket }
+      { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Cpu },
+      { name: 'Retail Solutions', path: '/solutions/retail', icon: ShoppingCart }
+    ]
+  },
+  {
+    title: 'Support & Resources',
+    icon: HelpCircle,
+    links: [
+      { name: 'Help Center', path: '/help', icon: HelpCircle },
+      { name: 'FAQ', path: '/faq', icon: HelpCircle },
+      { name: 'Documentation', path: '/documentation', icon: BookOpen },
+      { name: 'API Documentation', path: '/api-docs', icon: Code },
+      { name: 'Developer Portal', path: '/developer', icon: Cpu },
+      { name: 'Training', path: '/training', icon: GraduationCap },
+      { name: 'Blog', path: '/blog', icon: BookOpen },
+      { name: 'News', path: '/news', icon: Newspaper },
+      { name: 'Case Studies', path: '/case-studies', icon: FileText },
+      { name: 'Pricing', path: '/pricing', icon: DollarSign },
+      { name: 'Contact Support', path: '/contact', icon: MessageCircle },
+      { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
+      { name: 'Sitemap', path: '/sitemap', icon: FileText }
     ]
   }
 ];

@@ -1026,6 +1026,22 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- New Pages -->
+  <url>
+    <loc>https://ziontechgroup.com/emerging-tech</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://ziontechgroup.com/resources</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Auth Pages -->
   <url>
     <loc>https://ziontechgroup.com/login</loc>
     <lastmod>2025-01-17</lastmod>

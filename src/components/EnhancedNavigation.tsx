@@ -32,14 +32,13 @@ const navigationItems: NavigationItem[] = [
     label: 'Services', 
     href: '/services',
     children: [
-      { label: 'AI & Machine Learning', href: '/services/ai' },
+      { label: 'AI & Machine Learning', href: '/services/ai-ml' },
       { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
       { label: 'Cybersecurity', href: '/services/cybersecurity' },
-      { label: 'Digital Transformation', href: '/services/digital-transformation' },
       { label: 'IT Infrastructure', href: '/services/it-infrastructure' },
-      { label: 'Micro SaaS Solutions', href: '/services/micro-saas' },
-      { label: 'Quantum Computing', href: '/services/quantum-computing' },
-      { label: 'Space Technology', href: '/space-tech' }
+      { label: 'Digital Transformation', href: '/services/digital-transformation' },
+      { label: 'Micro SaaS Solutions', href: '/micro-saas' },
+      { label: 'Consulting', href: '/it-consulting' }
     ]
   },
   { 
@@ -55,31 +54,42 @@ const navigationItems: NavigationItem[] = [
     ]
   },
   { 
-    label: 'Company', 
-    href: '/about',
+    label: 'AI Services', 
+    href: '/ai-services',
     children: [
-      { label: 'About Us', href: '/about' },
-      { label: 'Team', href: '/team' },
-      { label: 'Careers', href: '/careers' },
-      { label: 'Partners', href: '/partners' },
-      { label: 'News', href: '/news' },
-      { label: 'Case Studies', href: '/case-studies' }
+      { label: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
+      { label: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
+      { label: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+      { label: 'AI Content Creation', href: '/services/ai-content-creation' },
+      { label: 'AI Cybersecurity', href: '/services/ai-cybersecurity' },
+      { label: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform' }
     ]
   },
+  { 
+    label: 'Emerging Tech', 
+    href: '/emerging-tech',
+    children: [
+      { label: 'Quantum Computing', href: '/services/quantum-computing' },
+      { label: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
+      { label: 'Digital Twin', href: '/services/digital-twin' },
+      { label: 'Space Technology', href: '/space-tech' },
+      { label: 'Blockchain Solutions', href: '/services/blockchain' }
+    ]
+  },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
   { 
     label: 'Resources', 
     href: '/resources',
     children: [
       { label: 'Blog', href: '/blog' },
+      { label: 'Case Studies', href: '/case-studies' },
+      { label: 'News', href: '/news' },
       { label: 'FAQ', href: '/faq' },
       { label: 'Help Center', href: '/help' },
-      { label: 'Training', href: '/training' },
-      { label: 'White Papers', href: '/white-papers' },
-      { label: 'Webinars', href: '/webinars' }
+      { label: 'Documentation', href: '/documentation' }
     ]
-  },
-  { label: 'Pricing', href: '/pricing' },
-  { label: 'Contact', href: '/contact' }
+  }
 ];
 
 export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ 
@@ -367,36 +377,18 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
               {/* Mobile Actions */}
               <div className="pt-4 border-t border-slate-700/50 space-y-3">
-                <div className="flex items-center space-x-4 text-slate-400">
-                  <Phone className="w-4 h-4" />
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-4 text-slate-400">
-                  <Mail className="w-4 h-4" />
-                  <span>info@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center space-x-4 text-slate-400">
-                  <MapPin className="w-4 h-4" />
-                  <span>123 Tech Street, Digital City</span>
-                </div>
-                
-                {/* Quick Links */}
-                <div className="pt-2 space-y-2">
-                  <Link
-                    to="/search"
-                    className="flex items-center space-x-2 text-slate-400 hover:text-white px-3 py-2 rounded-md transition-colors duration-200"
-                  >
-                    <Search className="w-4 h-4" />
-                    <span>Search</span>
-                  </Link>
-                  <Link
-                    to="/dashboard"
-                    className="flex items-center space-x-2 text-slate-400 hover:text-white px-3 py-2 rounded-md transition-colors duration-200"
-                  >
-                    <User className="w-4 h-4" />
-                    <span>Dashboard</span>
-                  </Link>
-                </div>
+                              <div className="flex items-center space-x-4 text-slate-400">
+                <Phone className="w-4 h-4" />
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center space-x-4 text-slate-400">
+                <Mail className="w-4 h-4" />
+                <span>contact@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-4 text-slate-400">
+                <MapPin className="w-4 h-4" />
+                <span>Innovation District, Tech City</span>
+              </div>
               </div>
             </div>
           </motion.div>
