@@ -12,12 +12,12 @@ export default function HomePage() {
   return (
     <div>
       <Head>
-        <title>Zion Tech Group — World&apos;s Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform</title>
+        <title>Zion Tech Group — World&#39;s Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform</title>
         <meta name="description" content="Experience the future of autonomous technology with 227+ intelligent automations, AI-powered cloud systems, comprehensive redundancy infrastructure, and zero-downtime operations. The most advanced autonomous platform ever built." />
         <meta property="og:title" content="Zion Tech Group — World's Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform" />
         <meta property="og:description" content="Experience the future of autonomous technology with 227+ intelligent automations, AI-powered cloud systems, comprehensive redundancy infrastructure, and zero-downtime operations." />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="AI automation, autonomous systems, cloud infrastructure, machine learning, DevOps, CI/CD, technology consulting, Zion Tech Group" />
+        <meta name="keywords" content="autonomous technology, AI automation, cloud infrastructure, redundancy systems, zero-downtime, intelligent systems, innovation hub" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
@@ -28,7 +28,7 @@ export default function HomePage() {
               Zion Tech Group
             </h1>
             <p className="text-2xl text-white/90 max-w-4xl mx-auto mb-8">
-              The world&apos;s most advanced autonomous innovation hub delivering cutting-edge technology solutions, intelligent automation systems, and the future of cloud-native AI infrastructure.
+              The world&#39;s most advanced autonomous innovation hub delivering cutting-edge technology solutions, intelligent automation systems, and the future of cloud-native AI infrastructure.
             </p>
             <div className="flex flex-wrap justify-center gap-6 mb-12">
               <div className="bg-white/10 backdrop-blur-xl rounded-full px-6 py-3 border border-cyan-400/30">
@@ -867,6 +867,41 @@ export default function HomePage() {
                 <h3 className="text-lg font-semibold text-green-400 mb-2">Contact</h3>
                 <p className="text-white/70 text-sm">Get in touch</p>
               </Link>
+
+              <Link href="/reports/updates" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">📈</span>
+                </div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-2">Reports</h3>
+                <p className="text-white/70 text-sm">Live updates</p>
+              </Link>
+
+              <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-rose-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-rose-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">🛡️</span>
+                </div>
+                <h3 className="text-lg font-semibold text-rose-300 mb-2">Privacy</h3>
+                <p className="text-white/70 text-sm">Policy details</p>
+              </Link>
+            </div>
+          </section>
+
+          {/* Quick Links to Key Content */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-3xl font-bold tracking-wide text-white/90 mb-8">✨ Quick Links</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm">
+              <Link href="/about" className="underline text-white/80 hover:text-cyan-300">About</Link>
+              <Link href="/services" className="underline text-white/80 hover:text-fuchsia-300">Services</Link>
+              <Link href="/resources" className="underline text-white/80 hover:text-blue-300">Resources</Link>
+              <Link href="/case-studies" className="underline text-white/80 hover:text-yellow-300">Case Studies</Link>
+              <Link href="/blog" className="underline text-white/80 hover:text-purple-300">Blog</Link>
+              <Link href="/contact" className="underline text-white/80 hover:text-green-300">Contact</Link>
+              <Link href="/privacy" className="underline text-white/80 hover:text-rose-300">Privacy</Link>
+              <Link href="/reports/updates" className="underline text-white/80 hover:text-cyan-300">Reports</Link>
+              <Link href="/blog/ai-automation-trends-2025" className="underline text-white/80 hover:text-purple-300">AI Automation Trends</Link>
+              <Link href="/blog/cloud-native-automation" className="underline text-white/80 hover:text-purple-300">Cloud-Native Automation</Link>
+              <Link href="/blog/autonomous-content-generation" className="underline text-white/80 hover:text-purple-300">Autonomous Content</Link>
+              <Link href="/blog/ai-ethics-automation" className="underline text-white/80 hover:text-purple-300">AI Ethics</Link>
             </div>
           </section>
 
