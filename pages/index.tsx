@@ -592,8 +592,8 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Threat detection & response</li>
                   <li>• Zero-trust architecture</li>
                 </ul>
-                <Link href="/SECURITY.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Security Guide →
+                <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  View Security & Privacy →
                 </Link>
               </div>
 
@@ -606,8 +606,8 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Security testing</li>
                   <li>• Continuous validation</li>
                 </ul>
-                <Link href="/TESTING.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  View Testing Guide →
+                <Link href="/resources" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  Explore Testing Resources →
                 </Link>
               </div>
 
@@ -620,8 +620,8 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Analytics dashboard</li>
                   <li>• Predictive maintenance</li>
                 </ul>
-                <Link href="/PERFORMANCE.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View Performance Guide →
+                <Link href="/blog/performance-optimization" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  Read Performance Optimization →
                 </Link>
               </div>
             </div>
@@ -640,8 +640,8 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Health monitoring</li>
                   <li>• Self-healing infrastructure</li>
                 </ul>
-                <Link href="/README_ULTIMATE_REDUNDANCY.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  Learn More →
+                <Link href="/services" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  Explore Redundancy Services →
                 </Link>
               </div>
 
@@ -654,8 +654,8 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Error prevention</li>
                   <li>• Predictive analytics</li>
                 </ul>
-                <Link href="/README_COMPREHENSIVE_REDUNDANCY.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  Learn More →
+                <Link href="/services" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  Explore Automation Services →
                 </Link>
               </div>
 
@@ -668,8 +668,8 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Performance monitoring</li>
                   <li>• Cluster management</li>
                 </ul>
-                <Link href="/README_PM2_REDUNDANCY_COMPLETE.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  Learn More →
+                <Link href="/resources" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  Learn More in Resources →
                 </Link>
               </div>
             </div>
