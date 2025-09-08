@@ -1,123 +1,138 @@
-# GitHub Workflows - MIGRATED TO PM2 ✅
+# GitHub Workflows - Zion Tech Group
 
-## 🚀 Migration Status: COMPLETED
+## 🚀 Overview
 
-All GitHub Actions workflows have been successfully migrated to PM2 automation processes. The workflows directory now contains only this README file.
+This directory contains the remaining GitHub Actions workflows after migrating most automation tasks to PM2. The PM2 automation system provides continuous monitoring, maintenance, and improvement with better performance and resource efficiency.
 
-## 📊 Migration Summary
+## 📋 Remaining Workflows
 
-### **GitHub Actions Removed**: 40 workflows
-### **PM2 Processes Created**: 11 automation processes
-### **System Status**: 100% operational
+### CodeQL Security Analysis
+- **File**: `codeql.yml`
+- **Purpose**: Automated security code analysis using GitHub's CodeQL engine
+- **Triggers**: Push to main/develop branches, pull requests, weekly schedule
+- **Functionality**: 
+  - JavaScript/TypeScript code analysis
+  - Security vulnerability detection
+  - Automated security scanning
 
-## 🔄 What Happened
+### Status Reporting
+- **File**: `status.yml`
+- **Purpose**: Status reporting for remaining workflows
+- **Triggers**: Completion of other workflows
+- **Functionality**: 
+  - Workflow status reporting
+  - PM2 automation information display
 
-All GitHub Actions workflows that were previously handling:
-- Continuous integration and deployment
-- Security auditing and dependency updates
-- Link checking and quality assurance
-- Performance monitoring and optimization
-- Content generation and SEO optimization
-- Testing and build validation
+## 🔄 Migrated to PM2 Automation
 
-Have been **completely replaced** by PM2 automation processes that run continuously with better performance and control.
+The following tasks have been migrated from GitHub Actions to PM2 automation processes:
 
-## 🚀 Current Automation System
+| Task | PM2 Process | Frequency | Status |
+|------|-------------|-----------|---------|
+| **CI/CD Pipeline** | `daily-build-test` + `continuous-improvement` | Every hour + Every 2 hours | ✅ Running |
+| **Security Auditing** | `security-audit` | Every 4 hours | ✅ Running |
+| **Dependency Updates** | `dependency-updates` | Every 6 hours | ✅ Running |
+| **Performance Monitoring** | `performance-monitor` | Every 2 hours | ✅ Running |
+| **Quality Checks** | `quality-checks` | Every 3 hours | ✅ Running |
+| **Link Validation** | `link-checker` + `link-integrity` | Every 30 min + Every 2 hours | ✅ Running |
+| **Console Error Fixing** | `console-error-fixer` | Every 15 minutes | ✅ Running |
+| **Frontend Optimization** | `front-maximizer` | Every 4 hours | ✅ Running |
+| **Sitemap Generation** | `sitemap-runner` | Every 6 hours | ✅ Running |
 
-### **PM2 Processes Running**
-All automation is now handled by 11 PM2 processes running continuously:
+## 🛠️ PM2 Management Commands
 
-| Process | Functionality | Interval |
-|---------|---------------|----------|
-| **console-error-fixer** | Error detection & fixing | Every 15 minutes |
-| **link-checker** | Link validation & health | Every 30 minutes |
-| **continuous-improvement** | Code quality & improvements | Every 2 hours |
-| **daily-build-test** | Build testing & validation | Every hour |
-| **security-audit** | Security scanning | Every 4 hours |
-| **dependency-updates** | Package updates | Every 6 hours |
-| **performance-monitor** | Performance tracking | Every 2 hours |
-| **quality-checks** | Code quality enforcement | Every 3 hours |
-| **link-integrity** | Link integrity validation | Every 2 hours |
-| **front-maximizer** | Frontend optimization | Every 4 hours |
-| **sitemap-runner** | Sitemap generation | Every 6 hours |
-
-## 🛠️ How to Manage Automation
-
-### **Check Status**
 ```bash
+# Check automation status
 pm2 status
-```
 
-### **View Logs**
-```bash
+# View automation logs
 pm2 logs
-```
 
-### **Monitor Real-time**
-```bash
+# Restart automation processes
+pm2 restart ecosystem.config.cjs
+
+# Stop automation processes
+pm2 stop ecosystem.config.cjs
+
+# Start automation processes
+pm2 start ecosystem.config.cjs
+
+# Monitor automation in real-time
 pm2 monit
 ```
 
-### **Restart All Processes**
+## 📊 Benefits of PM2 Migration
+
+### Performance Improvements
+- **Faster execution**: No GitHub Actions startup overhead
+- **Continuous operation**: 24/7 automation instead of scheduled runs
+- **Resource efficiency**: Lower memory and CPU usage
+- **Real-time monitoring**: Immediate feedback and status updates
+
+### Cost Reduction
+- **No GitHub Actions minutes**: Eliminates GitHub Actions usage costs
+- **Reduced external dependencies**: Self-contained automation system
+- **Better resource utilization**: Optimized for the specific environment
+
+### Enhanced Capabilities
+- **Immediate response**: No waiting for GitHub Actions scheduling
+- **Custom automation**: Tailored to specific project needs
+- **Better error handling**: Graceful failure recovery and logging
+- **Real-time reporting**: Continuous status monitoring and alerts
+
+## 🔒 Security Considerations
+
+- **CodeQL remains**: Security scanning continues via GitHub Actions
+- **PM2 isolation**: Each automation process runs independently
+- **Resource limits**: Memory and CPU limits prevent resource exhaustion
+- **Audit logging**: Full automation activity logging and monitoring
+
+## 📈 Monitoring and Maintenance
+
+### Daily Operations
+- Check PM2 status: `pm2 status`
+- Review automation logs: `pm2 logs`
+- Monitor resource usage: `pm2 monit`
+
+### Weekly Maintenance
+- Review automation performance
+- Check for process restarts
+- Analyze automation reports
+
+### Monthly Review
+- Performance optimization
+- Automation process updates
+- Resource usage analysis
+
+## 🆘 Troubleshooting
+
+### Common Issues
+1. **Process not starting**: Check PM2 installation and ecosystem config
+2. **High memory usage**: Review memory limits in ecosystem.config.cjs
+3. **Process errors**: Check logs with `pm2 logs <process-name>`
+
+### Quick Fixes
 ```bash
-pm2 restart all
+# Restart all automation processes
+pm2 restart ecosystem.config.cjs
+
+# Check specific process logs
+pm2 logs <process-name>
+
+# Auto-fix failed processes
+pm2 restart <failed-process>
 ```
 
-## 📁 File Structure
+## 📚 Additional Resources
 
-```
-.github/
-├── workflows/
-│   └── README.md (this file)
-├── actions/ (custom actions)
-├── ISSUE_TEMPLATE/ (issue templates)
-└── README.md (GitHub documentation)
-```
-
-## 🔍 Why This Migration?
-
-### **Benefits of PM2 Over GitHub Actions**
-- ✅ **Continuous operation** instead of event-driven execution
-- ✅ **Real-time monitoring** and health checking
-- ✅ **Local control** over all automation processes
-- ✅ **Resource optimization** with efficient process management
-- ✅ **Auto-recovery** with automatic restart on failures
-- ✅ **Custom scheduling** with configurable intervals
-- ✅ **Comprehensive logging** and reporting capabilities
-
-### **Cost and Performance Improvements**
-- Reduced GitHub Actions minutes consumption
-- Better resource utilization
-- Improved automation coverage
-- Enhanced monitoring and control
-- Lower operational costs
-
-## 📋 Migration Documentation
-
-For complete details about the migration, see:
-- `GITHUB_ACTIONS_TO_PM2_MIGRATION_SUMMARY.md` - Complete migration report
-- `PM2_AUTOMATION_README.md` - PM2 automation system documentation
-- `PM2_AUTOMATION_COMPLETION_REPORT.md` - System completion report
-
-## 🎯 Next Steps
-
-The migration is complete. Focus on:
-1. **Monitoring** - Use PM2 tools to monitor automation health
-2. **Optimization** - Fine-tune intervals and resource usage
-3. **Expansion** - Add new automation processes as needed
-4. **Integration** - Connect with external monitoring tools
-
-## 🏆 Conclusion
-
-This migration represents a significant improvement in automation capabilities:
-- **Before**: 40 GitHub Actions workflows with limited control
-- **After**: 11 PM2 processes with continuous operation and full control
-
-The system is now more efficient, reliable, and maintainable than ever before.
+- [PM2 Documentation](https://pm2.keymetrics.io/docs/)
+- [PM2 Automation README](../PM2_AUTOMATION_README.md)
+- [Ecosystem Configuration](../ecosystem.config.cjs)
+- [Automation Scripts](../scripts/automation/)
 
 ---
 
-**Migration Date**: $(date)
-**Status**: ✅ 100% Complete
-**System Health**: 🟢 All Systems Operational
-**Documentation**: See project root for complete PM2 automation guides
+**Last Updated**: $(date)
+**Migration Status**: ✅ Complete
+**PM2 Status**: All automation processes operational
+**GitHub Actions**: Reduced from 40+ workflows to 2 essential workflows
