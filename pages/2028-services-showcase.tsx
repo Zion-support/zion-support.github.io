@@ -103,15 +103,12 @@ export default function ServicesShowcase2028() {
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 shadow-2xl shadow-purple-500/25 flex items-center space-x-2"
-              >
-                <Rocket className="w-5 h-5" />
-                <span>Get Started Today</span>
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"><span>Get Started</span>
+                <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/revolutionary-2028-pricing"
-                className="px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-200 hover:text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 flex items-center space-x-2"
-              >
+                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"><span>View Pricing</span>
                 <DollarSign className="w-5 h-5" />
                 <span>View Pricing</span>
               </Link>
@@ -284,17 +281,13 @@ export default function ServicesShowcase2028() {
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 shadow-2xl shadow-purple-500/25 flex items-center space-x-2"
-              >
-                <Phone className="w-5 h-5" />
-                <span>Contact Us Now</span>
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"><span>Start Your Journey</span>
+                <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/case-studies"
-                className="px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-200 hover:text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 flex items-center space-x-2"
-              >
-                <Target className="w-5 h-5" />
-                <span>View Case Studies</span>
+                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"><span>View Case Studies</span>
+                <TrendingUp className="w-5 h-5" />
               </Link>
             </div>
 

@@ -1489,29 +1489,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               x1='0%'
               y1='0%'
               x2='100%'
-      </div>
-
-      {/* Quantum Entanglement Lines */}
-      <div className="absolute inset-0">
-        <svg className="w-full h-full">
-          <defs>
-            <linearGradient id="quantumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="rgba(0,255,255,0.3)" />
-              <stop offset="50%" stopColor="rgba(255,0,255,0.3)" />
-              <stop offset="100%" stopColor="rgba(0,255,255,0.3)" />
-              <stop offset="100%" stopColor="rgba(0,255,255,0 && 0.3)" />;
-          </defs>;
-          {[...Array(15)].map((_, i) => (;
-            <motion&& motion.line;
-              key={i}
-              x1={Math && Math.random() * 100}
-              y1={Math && Math.random() * 100}
-              x2={Math && Math.random() * 100}
-              y2={Math && Math.random() * 100}
-              stroke='url(#quantumGradient)'
-              y2='100%'
-            >
-              <stop offset='0%' stopColor='rgba(0,255,255,0.3)' />
+              y2='100%'><stop offset='0%' stopColor='rgba(0,255,255,0.3)' />
               <stop offset='50%' stopColor='rgba(255,0,255,0.3)' />
               <stop offset='100%' stopColor='rgba(0,255,255,0.3)' />
             </linearGradient>

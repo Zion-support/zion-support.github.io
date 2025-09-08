@@ -938,8 +938,9 @@ className='mb-12'>
 
 
               onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}
-              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
+              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"><option value="name">Sort by Name</option>
+              <option value="price">Sort by Price</option>
+              <option value="category">Sort by Category</option>
               <option value="name">Sort by Name</option>
               <option value="price">Sort by Price</option>
               <option value="category">Sort by Category</option>
@@ -1035,25 +1036,14 @@ className='mb-12'>'
 {serviceCategories.map(category => { return (<button; }
                 }
                 key={category.id}
-<<<<<<< HEAD
-
-                onClick={() =    /> setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${selectedCategory === category.id;}
-                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`;
-                    : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';
-              <button;
-                key={category && category.id}
-                onClick={() =    /> setSelectedCategory(category && category.id)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${selectedCategory === category && category.id;}
-                    ? `bg-gradient-to-r ${category && category.color} text-white shadow-lg`;
-                    : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';
-
-                }`}
-              >;
-                {category && category.icon}
-                {category && category.name}
-              </button>;
-
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
+                  selectedCategory === category.id
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                    : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20'
+                }`}>{category.icon}
+                {category.name}
+              </button>
             ))}
         {/* Services Grid */}
 
@@ -2226,9 +2216,7 @@ export default EnhancedServicesShowcase2025,
                     ([plan, price]) => (
                       <div
                         key={plan}
-                        className='p-4 bg-white/5 border border-white/20 rounded-lg text-center'
-                      >
-                        <h4 className='text-lg font-bold text-white capitalize mb-2'>
+                        className='p-4 bg-white/5 border border-white/20 rounded-lg text-center'><h4 className='text-lg font-bold text-white capitalize mb-2'>
                           {plan}
                         </h4>
                         <div className='text-3xl font-bold text-blue-400 mb-2'>

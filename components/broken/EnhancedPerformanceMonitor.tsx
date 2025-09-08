@@ -671,11 +671,7 @@ export default EnhancedPerformanceMonitor;
 if (!performanceData) {
 }> <div className="animate-pulse" > <div className="h-4 bg-gray-700 rounded w-1/3 mb-4" ></div> <div className="space-y-3" > <div className="h-3 bg-gray-700 rounded" ></div> <div className="h-3 bg-gray-700 rounded w-5/6" ></div> <div className="h-3 bg-gray-700 rounded w-4/6" ></div> </div> </div> </div>)
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}> </p> </div> </div> <div className="flex items-center space-x-2" > <button > <BarChart3 className="w-4 h-4" /> </button> <button > <RefreshCw className= {
+}> </p> </div> </div> <div className="flex items-center space-x-2"><button><BarChart3 className="w-4 h-4" /> </button> <button><RefreshCw className= {
   `w-4 h-4 $ {
   isLoading ? 'animate-spin' : ''
 }`

@@ -40,7 +40,8 @@ export default function QuantumFinancialTradingPage() {
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit">
               <div className="flex items-end justify-between mb-3">
                 <div>
-                  <div className="text-3xl font-bold text-white">{service?.price || 'Enterprise'}<span className="text-slate-400 text-base">{service?.period || ''}</span></div>
+                  <div className="text-3xl font-bold text-white text-slate-400 text-base">{service.price}<span>{service.period}</span></div>
+                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
                 </div>
               </div>
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Request Demo</Button>

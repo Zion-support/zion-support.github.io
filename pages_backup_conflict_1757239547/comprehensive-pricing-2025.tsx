@@ -146,9 +146,7 @@ export default function ComprehensivePricingPage() {
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
                       : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
-                  }`}
-                >
-                  <span>{category.icon}</span>
+                  }`}><span>{category.icon}</span>
                   {category.name}
                 </button>
               ))}

@@ -746,98 +746,37 @@ body: JSON.stringify({ itemId, status }),
             <div className='text-xs text-gray-500'>;'
 >>>>>>> origin/cursor/delete-old-data-records-6bba
       )}
-      {items && items.map(item => (<div;}
-          key={item && item.id}
-
-<<<<<<< HEAD
-          className='border border-gray-200 dark:border-gray-800 rounded p-3 flex items-center justify-between'    />;
-          <div    />;
-            <div className='font-medium'    />{item && item.title}</div>;
-            <div className='text-xs text-gray-500'    />;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              {new Date(item && item.createdAt).toLocaleString()} • {item && item.status}
-            </div>;
-          </div>;
-          <select;
-<<<<<<< HEAD
-
-            onChange={e =    /> changeStatus(item && item.id, e && e.target.value)}
-            className='border rounded px-2 py-1 bg-transparent text-sm'>
-
-
-
-
-
-
-
-
-
-=======
-            defaultValue={item && item.status}
-
-          <select;
-            defaultValue={item && item.status}
-            onChange={e => { return changeStatus(item && item.id, e && e.target.value)}
-            className='border rounded px-2 py-1 bg-transparent text-sm'>'
-
-            <option value='lead'>Lead</option>; }'
-            <option value='qualified'>Qualified</option>;'
-            <option value='proposal'>Proposal</option>;'
-            <option value='in_progress'>In Progress</option>;'
-            <option value='complete'>Complete</option>;'
-            <option value='lost'>Lost</option>          </select>;'
-            <option value='lead'>Lead</option>;'
-            <option value='qualified'>Qualified</option>;'
-            <option value='proposal'>Proposal</option>;'
-            <option value='in_progress'>In Progress</option>;'
-            <option value='complete'>Complete</option>;'
-            <option value='lost'>Lost</option>;'
-
-const { listVendors } = await import('../utils/vendor-store')const vendor = listVendors()[0] |null; // tie to auth later;'
-  return { 'props': { vendor } }
-})}
-
-const { listVendors,;
-} = await import('../utils/vendor-store')const vendor = listVendors()[0] || null; // tie to auth later;'
-return { 'props': { vendor } })defaultValue={item.statu,;
-
-          >;
-            <option value='lead'>Lead</option>;
-            <option value='qualified'>Qualified</option>;
-            <option value='proposal'>Proposal</option>;
-            <option value='in_progress'>In Progress</option>;
-            <option value='complete'>Complete</option>;
-            <option value='lost'>Lost</option>          </select>;
-        </div>))}
-    </div>          <select default_value={item.status} on_change={e => change_status (item.id, e.target.value)} className="border rounded px - 2 py - 1 bg - transparent text - sm">;
-
-            <option value='lead'    />Lead</option>;
-            <option value='qualified'    />Qualified</option>;
-            <option value='proposal'    />Proposal</option>;
-            <option value='in_progress'    />In Progress</option>;
-            <option value='complete'    />Complete</option>;
-            <option value='lost'    />Lost</option>          </select>;
-            <option value=\"lead\"    />Lead</option>;
-            <option value=\"qualified\"    />Qualified</option>;
-            <option value=\"proposal\"    />Proposal</option>;
-            <option value=\"in_progress\"    />In Progress</option>;
-            <option value=\"complete\"    />Complete</option>;
-            <option value=\"lost\"    />Lost</option>;
-
-const { listVendors } = await import('../utils/vendor-store')const vendor = listVendors()[0] |null; // tie to auth later;
-  return { props: { vendor } }
-})}
-
-const { listVendors,}
-} = await import('../utils/vendor-store')const vendor = listVendors()[0] || null; // tie to auth later;
-  return { props: { vendor } }})defaultValue={item.statu,}
-}
-            onChange={e => { return changeStatus(item.id, e.target.value)}
-
-
-
+      {items.map(item => (
+        <div
+          key={item.id}
+          className='border border-gray-200 dark:border-gray-800 rounded p-3 flex items-center justify-between'
+        >
+          <div>
+            <div className='font-medium'>{item.title}</div>
+            <div className='text-xs text-gray-500'>
+              {new Date(item.createdAt).toLocaleString()} • {item.status}
+            </div>
+          </div>
+          <select
+            defaultValue={item.status}
+            onChange={e => changeStatus(item.id, e.target.value)}
+            className='border rounded px-2 py-1 bg-transparent text-sm'><option value='lead'>Lead</option>
+            <option value='qualified'>Qualified</option>
+            <option value='proposal'>Proposal</option>
+            <option value='in_progress'>In Progress</option>
+            <option value='complete'>Complete</option>
+            <option value='lost'>Lost</option>          </select>
+        </div>
+      ))}
+    </div>          <select defaultValue={item.status} onChange={e => changeStatus(item.id, e.target.value)} className="border rounded px-2 py-1 bg-transparent text-sm">
+            <option value="lead">Lead</option>
+            <option value="qualified">Qualified</option>
+            <option value="proposal">Proposal</option>
+            <option value="in_progress">In Progress</option>
+            <option value="complete">Complete</option>
+            <option value="lost">Lost</option>
+        </div>
+      ))}
     </div>
 };
     </div>

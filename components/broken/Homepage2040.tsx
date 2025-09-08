@@ -1014,9 +1014,7 @@ export default Homepage2040;
         {/* Hero Section with Enhanced Background */}
         <section
           className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden"
-          aria-labelledby="hero-heading"
-        >
-          {/* Enhanced Futuristic Background Elements */}
+          aria-labelledby="hero-heading">{/* Enhanced Futuristic Background Elements */}
           <div className="absolute inset-0 pointer-events-none">
             {/* Animated geometric shapes */}
             <motion.div
@@ -1069,16 +1067,12 @@ export default Homepage2040;
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className="space-y-8"
-            >
-              {/* Enhanced Company Badge */}
+              className="space-y-8">{/* Enhanced Company Badge */}
               <motion.div
                 variants={itemVariants}
                 className="inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
                 role="banner"
-                aria-label="Company recognition"
-              >
-                <Star className="w-5 h-5 animate-pulse" aria-hidden="true" />
+                aria-label="Company recognition"><Star className="w-5 h-5 animate-pulse" aria-hidden="true" />
                 <span>Innovation Leader 2040</span>
                 <Sparkles className="w-5 h-5 animate-pulse" aria-hidden="true" />
               </motion.div>
@@ -1103,9 +1097,7 @@ export default Homepage2040;
               {/* Enhanced CTA Section */}
               <motion.div 
                 variants={itemVariants}
-                className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
-              >
-                <Link href="/get-started" aria-label="Get started with our services">
+                className="flex flex-col sm:flex-row gap-6 justify-center mb-12"><Link href="/get-started" aria-label="Get started with our services">
                   <button className="group px-10 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black">
                     <span className="flex items-center gap-3">
                       Get Started
@@ -1128,9 +1120,7 @@ export default Homepage2040;
               {/* Enhanced Trust Indicators */}
               <motion.div
                 variants={itemVariants}
-                className="flex flex-wrap justify-center gap-8 text-sm text-gray-400"
-              >
-                <div className="flex items-center gap-2">
+                className="flex flex-wrap justify-center gap-8 text-sm text-gray-400"><div className="flex items-center gap-2">
                   <ShieldCheck className="w-5 h-5 text-green-400" />
                   <span>SOC 2 Type II Certified</span>
                 </div>
@@ -1160,15 +1150,11 @@ export default Homepage2040;
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-            >
-              {statsData.map((stat, index) => (
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{statsData.map((stat, index) => (
                 <motion.div
                   key={stat.label}
                   variants={itemVariants}
-                  className="group text-center p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"
-                >
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${stat.color} mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  className="group text-center p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"><div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${stat.color} mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <stat.icon className="w-8 h-8 text-white" aria-hidden="true" />
                   </div>
                   <div className={`text-4xl font-bold mb-2 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
@@ -1210,15 +1196,11 @@ export default Homepage2040;
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-            >
-              {serviceCategories.map((category, index) => (
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{serviceCategories.map((category, index) => (
                 <motion.div
                   key={category.name}
                   variants={itemVariants}
-                  className="group relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
-                >
-                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${category.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
+                  className="group relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"><div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${category.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
                   <div className="relative z-10">
                     <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${category.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       <category.icon className="w-8 h-8 text-white" aria-hidden="true" />
@@ -1261,15 +1243,11 @@ export default Homepage2040;
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-              {featuredServices.map((service, index) => (
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{featuredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
-                  className="group relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"
-                >
-                  <div className="flex items-start justify-between mb-6">
+                  className="group relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"><div className="flex items-start justify-between mb-6">
                     <div className="text-4xl">{service.icon}</div>
                     {service.popular && (
                       <div className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full">
@@ -1361,9 +1339,7 @@ export default Homepage2040;
               <motion.div
               <motion.div 
                 variants={itemVariants}
-                className="flex flex-col sm:flex-row gap-6 justify-center"
-              >
-                <Link href="/contact" aria-label="Contact us">
+                className="flex flex-col sm:flex-row gap-6 justify-center"><Link href="/contact" aria-label="Contact us">
                   <button className="px-12 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25">
                     Contact Us Today
                   </button>
@@ -1376,9 +1352,7 @@ export default Homepage2040;
               </motion.div>
               <motion.div
                 variants={itemVariants}
-                className="flex items-center justify-center gap-8 text-sm text-gray-400"
-              >
-                <div className="flex items-center gap-2">
+                className="flex items-center justify-center gap-8 text-sm text-gray-400"><div className="flex items-center gap-2">
                   <Shield className="w-5 h-5 text-green-400" />
                   <span>Enterprise Security</span>
                 </div>

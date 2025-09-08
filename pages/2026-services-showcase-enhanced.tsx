@@ -362,8 +362,9 @@ export default function Services2026ShowcaseEnhancedPage() {
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       className={viewMode === 'grid' ? '' : 'bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30'}
                     >
-                      <FuturisticCard className="h-full">
-                        <div className="p-6">
+                      <UltraFuturisticCard
+                        variant={mapServiceVariantToCardVariant(service.variant)}
+                        className="h-full"><div className="p-6">
                           {/* Service Header */}
                           <div className="flex items-start justify-between mb-4">
                             <div className="text-4xl">{service.icon}</div>
@@ -470,16 +471,16 @@ export default function Services2026ShowcaseEnhancedPage() {
                 Join thousands of businesses already using our innovative services to gain competitive advantages and achieve remarkable ROI.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg text-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-                  onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')}
-                >
-                  <Mail className="w-5 h-5 mr-2" />
+                <Button
+                  variant="primary"
+                  size="lg"
+                  onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')}><Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
-                </button>
-                <button className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-6 py-3 rounded-lg text-lg font-medium hover:from-purple-600 hover:to-pink-700 transition-all duration-200"
-                  onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')}
-                >
-                  <Phone className="w-5 h-5 mr-2" />
+                </Button>
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')}><Phone className="w-5 h-5 mr-2" />
                   Call Now
                 </button>
               </div>

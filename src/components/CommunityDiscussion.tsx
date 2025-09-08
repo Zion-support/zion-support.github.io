@@ -56,8 +56,10 @@ export const CommunityDiscussion = () => {
       </div>
       <Separator className="mb-6"/>
       <div className="mb-4 flex justify-end">
-        <Button className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale" size="sm" onClick={() => setShowNew((v) => !v)}>
-          {showNew ? "Cancel" : "New Post"}
+        <Button
+          className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
+          size="sm"
+          onClick={() => setShowNew((v) => !v)}>{showNew ? "Cancel" : "New Post"}
         </Button>
       </div>
       {showNew && (<Card className="mb-6 animate-scale-in">
@@ -73,9 +75,21 @@ export const CommunityDiscussion = () => {
               </Button>
             </div>
           </CardContent>
-        </Card>)}
-      <div className="flex flex-col gap-6">
-        {posts.map((post) => (<Card key={post.id} className="bg-zion-blue border-zion-slate-dark shadow-lg">
+        </Card>
+      )}
+      <div className='flex flex-col gap-6'>
+        {posts.map(post => (
+          <Card
+            key={post.id}
+            className='bg-zion-blue border-zion-slate-dark shadow-lg'><CardContent className='py-4 flex gap-4'>
+              <Avatar>
+                <AvatarFallback>
+                  {post.author
+                    .split(' ')
+                    .map(s => s[0])
+                    .join('')                    .toUpperCase()      <div className="flex flex-col gap-6">
+        {posts.map((post,) => (
+          <Card key={post.id} className="bg-zion-blue border-zion-slate-dark shadow-lg">
             <CardContent className="py-4 flex gap-4">
               <Avatar>
                 <AvatarFallback>

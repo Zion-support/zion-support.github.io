@@ -1169,35 +1169,34 @@ type='text''
                     className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent'
                   />
                 </div>
-
-                {/* Rate Limit */}
-                        key={limit.value}
-                        on_click={() => setRateLimit (limit.value,}
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<div className='font-medium'    />{limit.label}</div>;
-                        <div className='text-xs text-gray-400 mt-1'    />;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                          {limit.description}
-                        </div>;
-                      </button>;
-                {/* Time Window */}
-
-<<<<<<< HEAD
-
-                <div    />
-<label className='block text-sm font-medium text-gray-300 mb-3'    />
-                    Time Window;
-                  </label>
-                  <div className='grid grid-cols-2 gap-3'    />
-
-
-
+                <Button
+                  onClick={testRateLimiting}
+                  disabled={
+                    !endpoint.trim() |!rateLimit |!timeWindow |isTesting
+                  }
+                  className='w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed'>{isTesting ? (
+                    <>
+                      <RefreshCw className='w-5 h-5 mr-2 animate-spin' />                      Testing Rate Limiting...
+                    </>
+                  ) : (
+                    <>
+                      <Zap className='w-5 h-5 mr-2' />                      Test Rate Limiting                  disabled={!endpoint.trim() |!rateLimit |!timeWindow |isTesting}
+                  className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isTesting ? (
+                    <>
+                      <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
+                      Testing Rate Limiting...
+                    </>
+                  ) : (
+                    <>
+                      <Zap className='w-5 h-5 mr-2' />                      <Zap className="w-5 h-5 mr-2" />
+                      Test Rate Limiting
+                    </>
+                  )}
+                </Button>
+              </div>
+            </Card>
             {/* Test Results */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='flex items-center justify-between mb-6'>
@@ -2260,8 +2259,20 @@ print('Rate Limit Info:', {
                 size='sm'
                 className='mt-4 border-gray-600 text-gray-300 hover: bg-gray-700'
               >
-                <Copy className='w-4 h-4 mr-2'    />
-                Copy Code;
+                <Copy className='w-4 h-4 mr-2' />                Copy Code    'reset': response.headers.get('x-ratelimit-reset')
+})`)}
+                variant="outline"
+                size="sm"
+                className="mt-4 border-gray-600 text-gray-300 hover:bg-gray-700"><Copy className='w-4 h-4 mr-2' />
+    'limit': response.headers.get('x-ratelimit-limit');
+    'remaining': response.headers.get('x-ratelimit-remaining');
+    'reset': response.headers.get('x-ratelimit-reset')
+})`)}
+                variant="outline"
+                size="sm"
+                className="mt-4 border-gray-600 text-gray-300 hover:bg-gray-700"><Copy className="w-4 h-4 mr-2" />
+                <Copy className="w-4 h-4 mr-2" />
+                Copy Code
               </Button>
             </Card>
           </div>

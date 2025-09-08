@@ -115,69 +115,23 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
       particleCount={500}
-      animationSpeed={3}>;
-      <Head>;
-        <title>Revolutionary 2026 Services Showcase | Zion Tech Group</title>;
-
-import Head from 'next/head';
-
-export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',}
-<<<<<<< HEAD
-  website: 'https://ziontechgroup.com',  }const contactInfo  = null;return (<UltraQuantumHolographicBackground;
-
-=======
-  website: 'https://ziontechgroup.com'}
-  const contactInfo  = null;return (<UltraQuantumHolographicBackground;
-      intensity=\'extreme\';
-      colorScheme=\'neural-network\';
-      particleCount={500}
-      animationSpeed={3}    />;
-      <Head    />;
-        <title    />Revolutionary 2026 Services Showcase | Zion Tech Group</title>;
-        <meta name=\"description\" content=\"Discover our cutting-edge 2026 micro SAAS, AI, and emerging technology solutions. Transform your business with revolutionary services designed for the future.\"    />;
-        <meta name=\"keywords\" content=\"2026 services, AI services, quantum computing, micro SAAS, emerging technology, blockchain, metaverse, autonomous systems, biotech AI, climate AI\"    />;
-        <meta name=\"robots\" content=\"index, follow\"    />;
-        <meta property=\"og:title\" content=\"Revolutionary 2026 Services Showcase | Zion Tech Group\"    />;
-        <meta property=\"og:description\" content=\"Discover our cutting-edge 2026 micro SAAS, AI, and emerging technology solutions. Transform your business with revolutionary services designed for the future.\"    />;
-        <meta property=\"og:type\" content=\"website\"    />;
-        <meta property=\"og:url\" content=\"https://ziontechgroup && ziontechgroup.com/2026-services-showcase-v3\"    />;
-        <meta property=\"og:image\" content=\"https://ziontechgroup && ziontechgroup.com/og-image-2026-services && services.jpg\"    />;
-        <meta name=\"twitter:card\" content=\"summary_large_image\"    />;
-        <meta name=\"twitter:title\" content=\"Revolutionary 2026 Services Showcase | Zion Tech Group\"    />;
-        <meta name=\"twitter:description\" content=\"Discover our cutting-edge 2026 micro SAAS, AI, and emerging technology solutions.\"    />;
-        <meta name=\"twitter:image\" content=\"https://ziontechgroup && ziontechgroup.com/og-image-2026-services && services.jpg\"    />;
-        <link rel=\"canonical\" href=\"https://ziontechgroup && ziontechgroup.com/2026-services-showcase-v3\"    />;
-      </Head>;<div className='min-h-screen'    />      <div className=\"min-h-screen\"    />;
-        {/* Navigation */}
-        <UltraAdvancedNavigation2026    />;
-        {/* Navigation */}
-        <UltraAdvancedNavigation2026    />;
-        {/* Navigation */}
-        <UltraAdvancedNavigation2026 />;
-
-        {/* Hero Section */}
-        <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative'>;
-          <div className='max-w-7xl mx-auto text-center'>            <motion && motion.div        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">;
-          <div className="max-w-7xl mx-auto text-center">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}>;
-              <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>;
-                Revolutionary 2026 Services;
-              </h1>;
-              <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8'>;
-                Experience the future of technology with our cutting-edge micro;
-                SAAS, AI, and emerging technology solutions. Transform your;
-                business with services designed for tomorrow's challenges.;
-              </p>;
-              <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
-                <motion&& motion.a
-                  href='#services'
-
-
-      <div className="min-h-screen">
+      animationSpeed={3}><Head>
+        <title>Revolutionary 2026 Services Showcase | Zion Tech Group</title>
+        <meta name="description" content="Discover our cutting-edge 2026 micro SAAS, AI, and emerging technology solutions. Transform your business with revolutionary services designed for the future." />
+        <meta name="keywords" content="2026 services, AI services, quantum computing, micro SAAS, emerging technology, blockchain, metaverse, autonomous systems, biotech AI, climate AI" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Revolutionary 2026 Services Showcase | Zion Tech Group" />
+        <meta property="og:description" content="Discover our cutting-edge 2026 micro SAAS, AI, and emerging technology solutions. Transform your business with revolutionary services designed for the future." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-v3" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image-2026-services.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Revolutionary 2026 Services Showcase | Zion Tech Group" />
+        <meta name="twitter:description" content="Discover our cutting-edge 2026 micro SAAS, AI, and emerging technology solutions." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/og-image-2026-services.jpg" />
+        <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase-v3" />
+      </Head>
+      <div className='min-h-screen'>      <div className="min-h-screen">
         {/* Navigation */}
         <UltraAdvancedNavigation2026 />
 

@@ -890,9 +890,7 @@ className='px-4 py-2 bg-blue-600 text-white rounded'
             <select
               className="mt-1 w-full border rounded p-2"
               value={persona.voice}
-              onChange={(e) => setPersona({ ...persona, voice: e.target.value as any })}
-            >
-              <option value="Visionary">Visionary</option>
+              onChange={(e) => setPersona({ ...persona, voice: e.target.value as any })}><option value="Visionary">Visionary</option>
               <option value="Grounded">Grounded</option>
               <option value="Technical">Technical</option>
             </select>

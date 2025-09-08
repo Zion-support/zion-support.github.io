@@ -187,9 +187,7 @@ export default function Revolutionary2025Pricing() {
                   onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
                   className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
                     billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600'
-                  }`}
-                >
-                  <span
+                  }`}><span
                     className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
                       billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
                     }`}
@@ -243,10 +241,11 @@ export default function Revolutionary2025Pricing() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.6 }} className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-4 border border-pink-500/30">
-                  <div className="text-2xl font-bold text-pink-400">{marketAnalysis.globalReach}</div>
-                  <div className="text-xs text-gray-400">Global Reach</div>
-                </motion.div>
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                  className='bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-4 border border-pink-500/30'><div className='text-2xl font-bold text-pink-400'>
+                    {marketAnalysis.globalReach}
+                  </div>
+                  <div className='text-xs text-gray-400'>Global Reach</div>                </motion.div>
               </div>
             </motion.div>
           </div>
@@ -335,8 +334,8 @@ export default function Revolutionary2025Pricing() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }} className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              viewport={{ once: true }}
+              className='text-center mb-16'><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Individual Service Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -355,9 +354,7 @@ export default function Revolutionary2025Pricing() {
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 border-blue-500 text-white'
                       : 'border-gray-600 text-gray-300 hover:border-blue-500 hover:text-blue-400'
-                  }`}
-                >
-                  <category.icon className="w-5 h-5" />
+                  }`}><category.icon className='w-5 h-5' />
                   {category.name}
                   <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
                     {category.count}

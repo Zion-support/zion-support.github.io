@@ -1850,7 +1850,39 @@ key={index}
                           </div>
                           <div className='flex items-center justify-between'>
                             <span className='text-gray-400'>Growth Rate:</span>
-                            <span className='text-green-400 font-semibold'>{segment.growthRate}</span>
+                            <span className='text-green-400 font-semibold'>
+                              {segment.growthRate}
+                            </span>                          </div>              Market Segment Analysis
+            </h2>
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Detailed analysis of key micro SaaS market segments with market size, growth rates, trends, and opportunities.
+            </p>
+          </div>
+          <div className="space-y-8">
+            {marketSegments.map((segment, index) => (
+              <Card
+                key={index}
+                className="card-hover border-gradient-blue overflow-hidden"
+                style={{ animationDelay: `${index * 0.1}s` }}><div className="p-8">
+                  <div className="flex flex-col lg:flex-row gap-8">
+                    {/* Segment Header */}
+                    <div className="lg:w-1/3">
+                      <div className="text-center lg:text-left">
+                        <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${segment.color} shadow-xl mx-auto lg:mx-0 mb-6`}>
+                          {segment.icon}
+                        </div>
+                        <h3 className="text-2xl font-bold mb-3 text-white">
+                          {segment.name}
+                        </h3>
+                        {/* Market Data */}
+                        <div className="space-y-3 text-sm mb-6">
+                          <div className="flex items-center justify-between">
+                            <span className="text-gray-400">Market Size:</span>
+                            <span className="text-white font-semibold">{segment.marketSize}</span>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <span className="text-gray-400">Growth Rate:</span>
+                            <span className="text-green-400 font-semibold">{segment.growthRate}</span>
                           </div>
                         </div>
                       </div>
@@ -2033,23 +2065,16 @@ key={index}
                           <Target className=w-5 h-5 mr-2 text-blue-400" />
                           Market Opportunities
                         </h4>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4>
-                          {segment.opportunities.map((opportunity, oppIndex) => (
-                            <div key={oppIndex} className=flex items-start text-gray-300 text-sm">
-                              <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0 />
-                              {opportunity}
-                            </div>
-                          ))}
-
-=======
-
-                      {/* Opportunities */}
-                      <div className="mt-8 pt-6 border-t border-gray-700">
-                        <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-                          <Target className="w-5 h-5 mr-2 text-blue-400" />
-                          Market Opportunities
-                        </h4>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                          {segment.opportunities.map(
+                            (opportunity, oppIndex) => (
+                              <div
+                                key={oppIndex}
+                                className='flex items-start text-gray-300 text-sm'><span className='w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0' />
+                                {opportunity}
+                              </div>
+                            )
+                          )}                        </div>                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           {segment.opportunities.map((opportunity, oppIndex) => (
                             <div key={oppIndex} className="flex items-start text-gray-300 text-sm">
                               <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
@@ -2158,17 +2183,9 @@ key={index}
               <Card;
 
                 key={index}
-                className='card - hover border - gradient - blue';
-                style={{ animation_delay: `${index * 0.1}s` ,
-}
-                  />;
-                <div className='p - 6'    />;
-                  <h3 className='text - xl font - bold text - white mb - 4'    />;
-                    {analysis.company}
-
-
-
-                  </h3>;
+                className="card-hover border-gradient-blue"
+                style={{ animationDelay: `${index * 0.1}s` }}><div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-4">{analysis.company}</h3>
                   {/* Examples */}
                   <div className='mb - 6'>;
                     <h4 className='text - sm font - semibold text - gray - 400 mb - 2'>;
@@ -2613,13 +2630,7 @@ key={index}
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{strategy.strategy}</h3>
-                  <p className="text-gray-300 mb-6">{strategy.description}</p>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+                style={{ animationDelay: `${index * 0.1}s` }}><div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <h3 className="text-xl font-bold text-white">{trend.trend}</h3>
                     <div className="flex items-center space-x-2">
@@ -2661,9 +2672,88 @@ key={index}
                     </h4>
                     <ul className='space-y-1 text-xs text-gray-300'>'
                       {trend.examples.map((example, exampleIndex) => (
-                        <li key={exampleIndex} className='flex items-start'>'
-                          <span className='w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0' />'
-                          {example}
+                        <li key={exampleIndex} className='flex items-start'>
+                          <span className='w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {example}
+                  <p className="text-gray-300 mb-4">{trend.description}</p>
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
+                    <ul className="space-y-1 text-xs text-gray-300">
+                      {trend.examples.map((example, exampleIndex) => (
+                        <li key={exampleIndex} className="flex items-start">
+                          <span className="w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0" />
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className='text-sm font-semibold text-green-400 mb-2'>
+                      Opportunities:
+                    </h4>
+                    <p className='text-xs text-gray-300'>
+                      {trend.opportunities}
+                    </p>                  </div>                    <h4 className="text-sm font-semibold text-green-400 mb-2">Opportunities:</h4>
+                    <p className="text-xs text-gray-300">{trend.opportunities}</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Pricing Strategies */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+              Pricing Strategy Analysis
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Analysis of different pricing strategies used in the micro SaaS
+              market and their implications for business success.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+            {pricingStrategies.map((strategy, index) => (
+              <Card
+                key={index}
+                className='card-hover border-gradient-blue'
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className='p-6'>
+                  <h3 className='text-xl font-bold text-white mb-3'>
+                    {strategy.strategy}
+                  </h3>
+                  <p className='text-gray-300 mb-6'>{strategy.description}</p>
+                  {/* Pros */}
+                  <div className='mb-4'>
+                    <h4 className='text-sm font-semibold text-green-400 mb-2'>
+                      Pros:
+                    </h4>
+                    <ul className='space-y-1 text-xs text-gray-300'>
+                      {strategy.pros.map((pro, proIndex) => (
+                        <li key={proIndex} className='flex items-start'>
+                          <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {pro}              Pricing Strategy Analysis
+            </h2>
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Analysis of different pricing strategies used in the micro SaaS market and their implications for business success.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {pricingStrategies.map((strategy, index) => (
+              <Card
+                key={index}
+                className="card-hover border-gradient-blue"
+                style={{ animationDelay: `${index * 0.1}s` }}><div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-3">{strategy.strategy}</h3>
+                  <p className="text-gray-300 mb-6">{strategy.description}</p>
+                  {/* Pros */}
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-green-400 mb-2">Pros:</h4>
+                    <ul className="space-y-1 text-xs text-gray-300">
+                      {strategy.pros.map((pro, proIndex) => (
+                        <li key={proIndex} className="flex items-start">
+                          <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
+                          {pro}
                         </li>
                       ))}
                     </ul>

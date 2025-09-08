@@ -2698,9 +2698,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   href='tel:+13024640950'
                   className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300'                >                <a
                   href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  <span>Get Started Today</span>
+                  className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"><span>Get Started Today</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
                 <a

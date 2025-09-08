@@ -342,352 +342,45 @@ const formatPrice = (return price && price.replace('$', '').replace(, '');) => {
 
 
             {/* Sort and View Controls */}
-
-
-=======
-                onChange={(e) => setSearchTerm(e && e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20";
-              />;
-            </div>;
-            {/* Sort and View Controls */}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                onChange={e => setSortBy(e && e.target.value as any)}
-                className='bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400';
-  Star,
-  Clock,
-  Users,
-  TrendingUp,
-  CheckCircle,
-  ExternalLink,
-  ChevronRight,
-  Shield,
-  Zap,
-  Globe,
-  Rocket,
-  Brain,
-  Atom,
-  Search,
-  Filter,
-  Grid,
-  List,
-  ArrowRight,
-  Award,
-  Target,
-} from 'lucide-react';
-import { comprehensiveMicroSaasServices } from '../data / comprehensive - 2025 - micro - saas - expansion';
-import { specializedEmergingTechServices } from '../data / specialized - emerging - tech - services - 2025';import {
-  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink,
-  ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
-  Search, Filter, Grid, List, ArrowRight, Award, Target;
-} from 'lucide-react';
-import { comprehensiveMicroSaasServices } from '../data / comprehensive - 2025 - micro - saas - expansion';
-import { specializedEmergingTechServices } from '../data / specialized - emerging - tech - services - 2025';
-  const [selected_category, setSelectedCategory] = useState ('all');
-  const [selected_service, setSelectedService] = useState < string | null>(null);
-  const [search_term, setSearchTerm] = useState ('');
-  const [view_mode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sort_by, setSortBy] = useState<;
-    'popularity' | 'price' | 'rating' | 'newest';
-  >('popularity');
-  // Combine all services;
-  const all_services = [;
-    ...comprehensiveMicroSaasServices,
-    ...specializedEmergingTechServices,
-  ];
-;
-  const categories = [;
-    { id: 'all', name: 'All Services', icon: '🚀', count: all_services.length },
-    {
-      id: 'AI & Machine Learning',
-      name: 'AI & ML',
-      icon: '🧠',
-      count: all_services.filter (string => s.category === 'AI & Machine Learning');
-        .length,
-    },
-    {
-      id: 'Healthcare AI',
-      name: 'Healthcare',
-      icon: '🏥',
-      count: all_services.filter (string => s.category === 'Healthcare AI').length,
-    },
-    {
-      id: 'Fintech AI',
-      name: 'Fintech',
-      icon: '💰',
-      count: all_services.filter (string => s.category === 'Fintech AI').length,
-    },
-    {
-      id: 'Cybersecurity',
-      name: 'Security',
-      icon: '🛡️',
-      count: all_services.filter (string => s.category === 'Cybersecurity').length,
-    },
-    {
-      id: 'IoT & Smart Cities',
-      name: 'Smart Cities',
-      icon: '🏙️',
-      count: all_services.filter (string => s.category === 'IoT & Smart Cities');
-        .length,
-    },
-    {
-      id: 'Blockchain & DeFi',
-      name: 'Blockchain',
-      icon: '🔗',
-      count: all_services.filter (string => s.category === 'Blockchain & DeFi').length,
-    },
-    {
-      id: 'Quantum Computing',
-      name: 'Quantum',
-      icon: '⚛️',
-      count: all_services.filter (string => s.category === 'Quantum Computing').length,
-    },
-    {
-      id: 'Space Technology',
-      name: 'Space Tech',
-      icon: '🚀',
-      count: all_services.filter (string => s.category === 'Space Technology').length,
-    },
-    {
-      id: 'Autonomous Systems',
-      name: 'Autonomous',
-      icon: '🤖',
-      count: all_services.filter (string => s.category === 'Autonomous Systems');
-        .length,
-    },
-    {
-      id: 'AR / VR & Metaverse',
-      name: 'AR / VR',
-      icon: '🥽',
-      count: all_services.filter (string => s.category === 'AR / VR & Metaverse').length,
-    },
-    {
-      id: '5G / 6G Networks',
-      name: '5G / 6G',
-      icon: '📡',
-      count: all_services.filter (string => s.category === '5G / 6G Networks').length,
-    },
-    {
-      id: 'Biotechnology AI',
-      name: 'Biotech',
-      icon: '🧬',
-      count: all_services.filter (string => s.category === 'Biotechnology AI').length,
-    },
-    {
-      id: 'Renewable Energy',
-      name: 'Energy',
-      icon: '⚡',
-      count: all_services.filter (string => s.category === 'Renewable Energy').length,
-    },
-    {
-      id: 'Edge Computing',
-      name: 'Edge',
-      icon: '🌐',
-      count: all_services.filter (string => s.category === 'Edge Computing').length,
-    },
-    {
-      id: 'Quantum Internet',
-      name: 'Q - Internet',
-      icon: '🌍',
-      count: all_services.filter (string => s.category === 'Quantum Internet').length,
-    },
-    {
-      id: 'Neuromorphic Computing',
-      name: 'Neuro',
-      icon: '🧠',
-      count: all_services.filter (string => s.category === 'Neuromorphic Computing');
-        .length,
-    },  ];    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: all_services.filter (string => s.category === 'AI & Machine Learning').length },
-    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: all_services.filter (string => s.category === 'Healthcare AI').length },
-    { id: 'Fintech AI', name: 'Fintech', icon: '💰', count: all_services.filter (string => s.category === 'Fintech AI').length },
-    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: all_services.filter (string => s.category === 'Cybersecurity').length },
-    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️', count: all_services.filter (string => s.category === 'IoT & Smart Cities').length },
-    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: all_services.filter (string => s.category === 'Blockchain & DeFi').length },
-    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️', count: all_services.filter (string => s.category === 'Quantum Computing').length },
-    { id: 'Space Technology', name: 'Space Tech', icon: '🚀', count: all_services.filter (string => s.category === 'Space Technology').length },
-    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖', count: all_services.filter (string => s.category === 'Autonomous Systems').length },
-    { id: 'AR / VR & Metaverse', name: 'AR / VR', icon: '🥽', count: all_services.filter (string => s.category === 'AR / VR & Metaverse').length },
-    { id: '5G / 6G Networks', name: '5G / 6G', icon: '📡', count: all_services.filter (string => s.category === '5G / 6G Networks').length },
-    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬', count: all_services.filter (string => s.category === 'Biotechnology AI').length },
-    { id: 'Renewable Energy', name: 'Energy', icon: '⚡', count: all_services.filter (string => s.category === 'Renewable Energy').length },
-    { id: 'Edge Computing', name: 'Edge', icon: '🌐', count: all_services.filter (string => s.category === 'Edge Computing').length },
-    { id: 'Quantum Internet', name: 'Q - Internet', icon: '🌍', count: all_services.filter (string => s.category === 'Quantum Internet').length },
-    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠', count: all_services.filter (string => s.category === 'Neuromorphic Computing').length }
-  // Filter and sort services;
-  const filtered_services = all_services;
-    .filter (service => {
-      const matches_category =;
-        selected_category === 'all' || service.category === selected_category;
-      const matches_search =;
-        service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-        service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-        service.tagline.toLowerCase ().includes (search_term.toLowerCase ());
-      return matches_category && matches_search;    })      const matches_category = selected_category === 'all' || service.category === selected_category;
-      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                          service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-                          service.tagline.toLowerCase ().includes (search_term.toLowerCase ());
-      return matches_category && matches_search;
-    .sort ((a, b) => {
-      switch (sort_by) {
-        case 'popularity':;
-          return b.popular ? 1 : -1;
-        case 'price':;
-          return (
-            parse_float (a.price.replace ('$', '').replace (', ', '')) -;
-            parse_float (b.price.replace ('$', '').replace (', ', '')));
-        case 'rating':;
-          return b.rating - a.rating;
-        case 'newest':;
-          return (
-            new Date (b.launch_date).get_time () - new Date (a.launch_date).get_time ());
-        default:;
-          return 0;      }          return parse_float (a.price.replace ('$', '').replace (, '')) - parse_float (b.price.replace ('$', '').replace (, ''));
-        case 'rating':;
-          return b.rating - a.rating;
-        case 'newest':;
-          return new Date (b.launch_date).get_time () - new Date (a.launch_date).get_time ();
-        default: return 0;
-    });
-;
-  const getCategoryIcon = (category: string) =>: any {
-    const category_data = categories.find (cat => cat.id === category);
-    return category_data?.icon || '🚀';
-  }
-;
-  const format_price = (price: string) =>: any {
-    return price.replace ('$', '').replace (', ', '');
-  }
-;
-  return (
-    <section className='py - 20 px - 6 bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950'>;
-      <div className='max - w-7xl mx - auto'>        {/* Header */}  }
-;
-  const format_price = (price: string) =>: any {
-    return price.replace ('$', '').replace (, '');
-  }
-;
-  return (
-    <section className="py - 20 px - 6 bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950">;
-      <div className="max - w-7xl mx - auto">;
-        {/* Header */}
-        <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className='text - center mb - 16';
-        >;
-          <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent'>;
-            Revolutionary Micro SAAS Services 2025;
-          </h2>;
-          <p className='text - xl text - white / 70 max - w-3xl mx - auto mb - 8'>;
-            Discover our cutting - edge micro SAAS solutions that are transforming;
-            industries and driving the future of technology;
-          </p>;
-          <div className='flex items - center justify - center gap - 6 text - white / 60 mb - 8'>;
-            <div className='flex items - center gap - 2'>;
-              <Shield className='w - 5 h - 5' />;
-              <span > Enterprise - grade security</span>;
-            </div>;
-            <div className='flex items - center gap - 2'>;
-              <Zap className='w - 5 h - 5' />;
-              <span > AI - powered optimization</span>;
-            </div>;
-            <div className='flex items - center gap - 2'>;
-              <Globe className='w - 5 h - 5' />;
-              <span > Global deployment</span>;
-            </div>;
-          </div>;
-          <div className='bg - white / 5 rounded - 2xl p - 6 border border - white / 10'>;
-            <div className='grid grid - cols - 1 md:grid - cols - 4 gap - 6 text - center'>;
-              <div>;
-                <div className='text - 3xl font - bold text - blue - 400'>;
-                  {all_services.length}+;
-                </div>;
-                <div className='text - white / 60'>Services Available</div>;
-              </div>;
-              <div>;
-                <div className='text - 3xl font - bold text - green - 400'>99.9%</div>;
-                <div className='text - white / 60'>Uptime Guarantee</div>;
-              </div>;
-              <div>;
-                <div className='text - 3xl font - bold text - purple - 400'>24 / 7</div>;
-                <div className='text - white / 60'>Support Available</div>;
-              </div>;
-              <div>;
-                <div className='text - 3xl font - bold text - orange - 400'>500%+</div>;
-                <div className='text - white / 60'>Average ROI</div>              </div>        >;
-          <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent">;
-            Revolutionary Micro SAAS Services 2025;
-          </h2>;
-          <p className="text - xl text - white / 70 max - w-3xl mx - auto mb - 8">;
-            Discover our cutting - edge micro SAAS solutions that are transforming industries and driving the future of technology;
-          </p>;
-          <div className="flex items - center justify - center gap - 6 text - white / 60 mb - 8">;
-            <div className="flex items - center gap - 2">;
-              <Shield className="w - 5 h - 5" />;
-              <span > Enterprise - grade security</span>;
-            </div>;
-            <div className="flex items - center gap - 2">;
-              <Zap className="w - 5 h - 5" />;
-              <span > AI - powered optimization</span>;
-            </div>;
-            <div className="flex items - center gap - 2">;
-              <Globe className="w - 5 h - 5" />;
-              <span > Global deployment</span>;
-            </div>;
-          </div>;
-          <div className="bg - white / 5 rounded - 2xl p - 6 border border - white / 10">;
-            <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 6 text - center">;
-              <div>;
-                <div className="text - 3xl font - bold text - blue - 400">{all_services.length}+</div>;
-                <div className="text - white / 60">Services Available</div>;
-              </div>;
-              <div>;
-                <div className="text - 3xl font - bold text - green - 400">99.9%</div>;
-                <div className="text - white / 60">Uptime Guarantee</div>;
-              </div>;
-              <div>;
-                <div className="text - 3xl font - bold text - purple - 400">24 / 7</div>;
-                <div className="text - white / 60">Support Available</div>;
-              </div>;
-              <div>;
-                <div className="text - 3xl font - bold text - orange - 400">500%+</div>;
-                <div className="text - white / 60">Average ROI</div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              </div>;
-            </div>;
-          </div>;
-        </motion.div>;
-          className='text-center mb-16'>;'
-          <h2 className='text-4xl 'md':text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;'
-            Revolutionary Micro SAAS Services 2025;
-          </h2>;
-          <p className='text-xl text-white/70 max-w-3xl mx-auto mb-8'>;'
-            Discover our cutting-edge micro SAAS solutions that are transforming;
-            industries and driving the future of technology;
-          </p>;
-          <div className='flex items-center justify-center gap-6 text-white/60 mb-8'>;'
-            <div className='flex items-center gap-2'>;'
-              <Shield className='w-5 h-5' />;'
-              <span>Enterprise-grade security</span>;
-            </div>;
-            <div className='flex items-center gap-2'>;'
-              <Zap className='w-5 h-5' />;'
-              <span>AI-powered optimization</span>;
-            </div>;
-<<<<<<< HEAD
-
-            {/* Sort and View Controls */}
-            <div className='flex items - center gap - 4'>;
-              <select;
-                value={sort_by}
-                on_change={e => setSortBy (e.target.value as any)}
-                className='bg - white / 10 border border - white / 20 rounded - xl px - 4 py - 3 text - white focus:outline - none focus:border - blue - 400';
-
-
+            <div className='flex items-center gap-4'>
+              <select
+                value={sortBy}
+                onChange={e => setSortBy(e.target.value as any)}
+                className='bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400'
+              >
+                <option value='popularity'>Most Popular</option>
+                <option value='price'>Price: Low to High</option>
+                <option value='rating'>Highest Rated</option>
+                <option value='newest'>Newest First</option>
+              </select>
+              <div className='flex bg-white/10 rounded-xl p-1'>
+                <button
+                  onClick={() => setViewMode('grid')}
+                  className={`p-2 rounded-lg transition-all ${
+                    viewMode === 'grid'
+                      ? 'bg-blue-600 text-white'
+                      : 'text-white/60 hover:text-white'
+                  }`}
+                >
+                  <Grid className='w-5 h-5' />                </button>                <button
+                  onClick={() => setViewMode('list')}
+                  className={`p-2 rounded-lg transition-all ${
+                    viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white'
+                  }`}><Grid className="w-5 h-5" />
+                  <Grid className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`p-2 rounded-lg transition-all ${
+                    viewMode === 'list'
+                      ? 'bg-blue-600 text-white'
+                      : 'text-white/60 hover:text-white'
+                  }`}
+                >
+                  <List className='w-5 h-5' />                </button>                    viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white'
+                  }`}
+                >
+                  <List className="w-5 h-5" />
               </div>
             </div>
           </div>
@@ -862,158 +555,13 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
                 key={category.id}
-                on_click={() => setSelectedCategory (category.id)}
-                className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${
-                  selected_category === category.id;
-                    ? 'bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white shadow - lg';
-                    : 'bg - white / 10 text - white / 70 hover:bg - white / 20 hover:text - white';
-                }`}
-
-=======
-
-          <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'    />;
-            {/* Search */}
-            <div className='relative flex-1 max-w-md'    />;
-              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5'    />;
-              <input;
-                type='text';
-                placeholder='Search services...';
-                value={searchTerm}{/* Search */}
-            <div className=\"relative flex-1 max-w-md\"    />;
-              <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5\"    />;
-              <input;
-                type=\'text\';
-                placeholder=\'Search services...\';
-                value={searchTerm}
-                  />;
-                <option value='popularity'    />Most Popular</option>;
-                <option value='price'    />Price: Low to High</option>;
-                <option value='rating'    />Highest Rated</option>;
-                <option value='newest'    />Newest First</option>;
-              </select>;onChange={e => setSearchTerm(e.target.value)}
-                className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20';
-              />;
-            </div>;
-            {/* Sort and View Controls */}
-<div className='flex items-center gap-4'    />;
-              <select;
-                value={sortBy}
-                onChange={e =    /> setSortBy(e.target.value as any)}
-                className='bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400';
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              >;
-                className='bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400'>
-
-                <option value='popularity'    />Most Popular</option>;
-                <option value='price'    />Price: Low to High</option>;
-                <option value='rating'    />Highest Rated</option>;
-                <option value='newest'    />Newest First</option>;
-              </select>;
-              <div className='flex bg-white/10 rounded-xl p-1'    />;
-                <button;
-                  onClick={() =    /> setViewMode('grid')}
-                  className={`p-2 rounded-lg transition-all ${viewMode === 'grid';
-                      ? 'bg-blue-600 text-white';}
-                      : 'text-white/60 hover:text-white';}
-                  }`}>;
-                  <Grid className='w-5 h-5'    />;
-                </button>;
-                <button;
-                  onClick={() =    /> setViewMode('list')}
-                  className={`p-2 rounded-lg transition-all ${viewMode === 'list';
-                      ? 'bg-blue-600 text-white';}
-                      : 'text-white/60 hover:text-white';}
-                  }`}
-                >;
-                      ? 'bg-blue-600 text-white';
-                      : 'text-white/60 hover:text-white';
-                  }`}>
-
-                  <Grid className='w-5 h-5'    />;
-                </button>;
-                <button;
-                  onClick={() =    /> setViewMode('list')}
-                  className={`p-2 rounded-lg transition-all ${viewMode === 'list';
-                      ? 'bg-blue-600 text-white';}
-                      : 'text-white/60 hover:text-white';}
-                  }`}>
-
-                  <List className='w-5 h-5'    />;
-                </button>;
-              </div>;
-            </div>;
-          </div>;
-        </motion.div>;
-                >;
-        </motion.div>>
-
-                  <List className='w-5 h-5' />;'
-              </div>;
-            </div>;
-          </div>;
-        </motion && motion.div>;{/* Category Filter */}
-        <motion&& motion.div;
-          initial={ 'opacity': 0, 'y': 20 }
-          whileInView={ 'opacity': 1, 'y': 0 }
-          transition={ 'duration': 0 && 0.6 }
-          viewport={ 'once': true }className='mb-12';'
-        >;
-          initial={ 'opacity': 0, 'y': 20 
-}
-          whileInView={ 'opacity': 1, 'y': 0 }
-          transition={ 'duration': 0 && 0.6 }
-          viewport={ 'once': true 
-}className='mb-12'>'
-
-<<<<<<< HEAD
-
-
-
-=======
-          <div className='flex flex-wrap justify-center gap-3'>;'
-            {categories.map(category => { return (<button; }
-                }
-                key={category.id}
-                on_click={() => setSelectedCategory (category.id)}
-                className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${selected_category === category.id;`                    ? 'bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white shadow - lg';'
-                    : 'bg - white / 10 text - white / 70 'hover':bg - white / 20 'hover':text - white';'
-                }`}>`
-
-                <span>{category.icon}</span>;
-                {category.name}<span className='text-xs bg-white/20 px-2 py-1 rounded-full'>;'
-          <div className='flex flex-wrap justify-center gap-3'    />;
-            {categories.map(category => (<button;}
-                key={category.id}
-                on_click={() =    /> setSelectedCategory (category.id)}
-                className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${selected_category === category.id;
-                    ? 'bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white shadow - lg';}
-                    : 'bg - white / 10 text - white / 70 hover:bg - white / 20 hover:text - white';}
-                }`}>
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-                <span    />{category.icon}</span>;
-                {category.name}<span className='text-xs bg-white/20 px-2 py-1 rounded-full'    />;
-                  {category.count}
-                </span>;
-              </button>;
-            ))}
-
-<<<<<<< HEAD
-          </div>
-        </motion.div>
-
-
-
-
-        {/* Services Display */}
-        {viewMode === 'grid' ? (;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            <AnimatePresence>;
-              {filteredServices && filteredServices.map((service, index) => (;
-                <motion&& motion.div
-                  key={service && service.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
+                  selectedCategory === category.id
+                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
+                    : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
+                }`}><span>{category.icon}</span>
+                {category.name}
                 <span className='text-xs bg-white/20 px-2 py-1 rounded-full'>
                   {category.count}
                 </span>              </button>                <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{category.count}</span>

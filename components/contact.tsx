@@ -2006,9 +2006,7 @@ setSubmitSuccess (true)
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
-              <div className="text-center mb-12">
+              className="max-w-4xl mx-auto"><div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                   Start Your Transformation Journey
                 </h2>
@@ -2021,9 +2019,7 @@ setSubmitSuccess (true)
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="text-center py-12"
-                  >
-                    <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
+                    className="text-center py-12"><CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
                     <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
                     <p className="text-gray-300 text-lg">
                       Thank you for reaching out. Our team will get back to you within 2 hours with a personalized solution.
@@ -2112,9 +2108,7 @@ setSubmitSuccess (true)
                         name="service"
                         value={formData.service}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-gray-800/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20"
-                      >
-                        <option value="">Select a service category</option>
+                        className="w-full px-4 py-3 bg-gray-800/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20"><option value="">Select a service category</option>
                         <option value="ai-services">AI & Machine Learning Services</option>
                         <option value="quantum-computing">Quantum Computing & Space Technology</option>
                         <option value="enterprise-it">Enterprise IT & Infrastructure</option>
@@ -2144,9 +2138,7 @@ setSubmitSuccess (true)
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                      >
-                        {isSubmitting ? (
+                        className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none">{isSubmitting ? (
                           <span className="flex items-center justify-center">
                             <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                             Sending Message...
@@ -2174,9 +2166,7 @@ setSubmitSuccess (true)
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              className="text-center mb-12"><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Popular Revolutionary Services
               </h2>
               <p className="text-xl text-gray-300">
@@ -2192,9 +2182,7 @@ setSubmitSuccess (true)
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="group cursor-pointer"
-                >
-                  <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105">
+                  className="group cursor-pointer"><div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105">
                     {/* Service Icon */}
                     <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       <span className="text-2xl">{service.icon}</span>
@@ -2247,9 +2235,7 @@ setSubmitSuccess (true)
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6">
+              viewport={{ once: true }}><h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6">
                 Why Choose
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Zion Tech Group?</span>
               </h2>

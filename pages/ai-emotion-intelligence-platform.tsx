@@ -362,9 +362,7 @@ export default function AIEmotionIntelligencePlatform() {
                       plan.popular
                         ? 'bg-gradient-to-r from-pink-500 to-purple-500 text-white hover:from-pink-600 hover:to-purple-600'
                         : 'border border-pink-500/30 text-pink-300 hover:bg-pink-500/10 hover:border-pink-500/50'
-                    }`}
-                  >
-                    {plan.cta}
+                    }`}>{plan.cta}
                   </Link>
                 </motion.div>
               ))}

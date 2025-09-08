@@ -1051,9 +1051,7 @@ const data = await resp.json();
             <select
               className='mt-1 w-full border rounded p-2'
               value={program}
-              onChange={e => setProgram(e.target.value as any)}
-            >
-              <option value='grant'>Grant</option>
+              onChange={e => setProgram(e.target.value as any)}><option value='grant'>Grant</option>
               <option value='incubator'>Incubator</option>
             </select>
           </label>

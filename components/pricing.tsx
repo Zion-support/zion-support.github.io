@@ -401,50 +401,16 @@ are already operational and delivering transformative results
               <select;
 >>>>>>> origin/cursor/delete-old-data-records-6bba
                 value={selectedCategory}
-                onChange={e =    /> setSelectedCategory(e.target.value)}
-                className='px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus: outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20'>
-
-                {categories.map(category => (<option key={category} value={categor,}
-}    />;
-<<<<<<< HEAD
-
-                    {category}
-                  </option>;
-                ))}
-
-
-            transition={{ duration: 0.8 }}
-
-
-
-
-
-
-
-
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20">{categories.map(category => (
+                  <option key={category} value={category}>{category}</option>
                 ))}
               </select>
-
-
-<div className='text-center text-gray-400'    />
-              <p    />
-                Showing {filteredServices.length} services in{' '}
-                {Object.keys(servicesByCategory).length} categories;
-              </p>
-
-=======
-                    {category}
-                  </option>;
-                ))}
-              <select;
-
+              <select
                 value={selectedPriceRange}
-                onChange={e => setSelectedPriceRange(e.target.value)}
-
-                className='px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white "focus": outline-none "focus":border-cyan-400/40 "focus":ring-2 "focus":ring-cyan-500/20''
-              >
-                {categories.map(category => (
-                  <option key={category} value={category}>{category}</option>
+                onChange={(e) => setSelectedPriceRange(e.target.value)}
+                className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20">{priceRanges.map(range => (
+                  <option key={range.id} value={range.id}>{range.name}</option>
                 ))}
               </select>
             </div>
@@ -471,27 +437,22 @@ are already operational and delivering transformative results
             {Object.entries(servicesByCategory).map(([category, services], categoryIndex) => (<motion.div;
                   }
                   key={category}
-                  initial={ 'opacity': 0, 'y': 30 
-}
-                  whileInView={ 'opacity': 1, 'y': 0 
-}
-                  transition={ 'duration': 0.8, 'delay': categoryIndex * 0.2 }
-                  viewport={ 'once': true 
-}
-                  className='mb-20'>'
-
-                  <div className='text-center mb-12'>;'
-                    <h2 className='text-3xl 'md':text-4xl font-bold text-white mb-4'>;'
-                      {category} Services;
-                    </h2>;
-                    <p className='text-gray-400 text-lg'>;'
-                      {services.length} revolutionary {category.toLowerCase()}{' '}'
-                      solutions;
-                    </p>;
-                  </div>;
-                  <div className='grid grid-cols-1 'md':grid-cols-2 'lg':grid-cols-3 gap-8'>;'
-                    {services.map((service, serviceIndex) => (<motion.div;
-                        }
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
+                  viewport={{ once: true }}
+                  className='mb-20'><div className='text-center mb-12'>
+                    <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
+                      {category} Services
+                    </h2>
+                    <p className='text-gray-400 text-lg'>
+                      {services.length} revolutionary {category.toLowerCase()}{' '}
+                      solutions
+                    </p>
+                  </div>
+                  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                    {services.map((service, serviceIndex) => (
+                      <motion.div
                         key={service.id}
                         initial={ 'opacity': 0, 'y': 20 
 }

@@ -558,31 +558,23 @@ href="/pricing"
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'    />;
               {marketInsights.map((insight, index) => (<Card;}
                   key={index}
-<<<<<<< HEAD
-
-                  className='text - center group hover:scale - 105 transition - transform duration - 300';
-                >;
-                  <div;
-                    className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br from - indigo - 500 to - purple - 600 flex items - center justify - center text - white mx - auto mb - 6`}
-                  >                    {insight.icon}                Why Choose Zion?;
-              </h2>;
-              <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
-                Key insights that make Zion the smart choice for your business.;
-              </p>;
-            </div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
-              {market_insights.map ((insight, index) => (
-                <Card;
-=======
-
-                  className='text-center group hover:scale-105 transition-transform duration-300'    />
-
-                  <div;
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mx-auto mb-6`}
-
-                      />
-
-
+                  className="text-center group hover:scale-105 transition-transform duration-300"><div
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mx-auto mb-6`}><section className="py-24 bg-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-20">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
+                Why Choose Zion?
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Key insights that make Zion the smart choice for your business.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {marketInsights.map((insight, index) => (
+                <Card
+                  key={index}
+                  className="text-center group hover:scale-105 transition-transform duration-300"><div className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mx-auto mb-6`}>
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mx-auto mb-6`}>
                     {insight.icon}
                   <p className={`text-lg font-semibold ${insight.color}`}    />
 

@@ -191,9 +191,7 @@ key = {i}
               s.code.map((c, i) => (
                 <pre
                   key={i}
-                  className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'
-                >
-                  {c.content}
+                  className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'>{c.content}
                 </pre>
               ))}          </section>  }, []);
 

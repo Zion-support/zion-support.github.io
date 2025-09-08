@@ -296,11 +296,9 @@ const title = String(formData.get('title') |'New lead');'
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>;
             {vendor.packages.map(p => (<div;
                 key={p.id}
-                className='border border-gray-200 dark:border-gray-800 rounded p-4';
-              >;
-                <div className='font-medium'>{p.title}</div>;
-                <div className='text-sm text-gray-500'>{p.description}</div>;
-                <div className='mt-2 text-sm'>;
+                className='border border-gray-200 dark:border-gray-800 rounded p-4'><div className='font-medium'>{p.title}</div>
+                <div className='text-sm text-gray-500'>{p.description}</div>
+                <div className='mt-2 text-sm'>
                   ${p.priceUsd} {p.timeframe ? `/ ${p.timeframe}` : ''}
           <h2 className="text-lg font-medium mb-2">Packages</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

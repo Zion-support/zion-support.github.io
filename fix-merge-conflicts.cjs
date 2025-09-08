@@ -101,5 +101,28 @@ for (const file of sourceFiles) {
   }
 }
 
-console.log(`\nResolved conflicts in ${resolvedCount} files`);
-console.log('Merge conflict resolution complete!');
+function findAndFixConflicts(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += findAndFixConflicts(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      if (fixMergeConflicts(filePath)) {
+        fixedCount++;
+      }
+    }
+  } catch (error) {
+    console.log(`⚠️  Could not fix ${filePath}: ${error.message}`);
+  }
+}
+
+console.log(`🎉 Fixed ${fixedCount} files with merge conflicts!`);
+console.log("Starting merge conflict resolution...");
+findAndFixFiles(".");
+console.log("Merge conflict resolution completed!")
+console.log(`Fixed merge conflicts in ${fixedCount} files`);

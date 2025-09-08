@@ -117,20 +117,33 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
             </motion.div>
 
             {/* Featured Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {allServices.filter(service => service.popular).slice(0, 6).map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105 group"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-4xl">{service.icon}</span>
-                    {service.popular && (
-                      <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs px-3 py-1 rounded-full">
-                        Popular
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
+              {allServices
+                .filter(service => service.popular)
+                .slice(0, 6)
+                .map((service, index) => (
+                  <motion.div
+                    key={service.id}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105 group'><div className='flex items-center justify-between mb-4'>
+                      <span className='text-4xl'>{service.icon}</span>
+                      {service.popular && (
+                        <span className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs px-3 py-1 rounded-full'>
+                          Popular
+                        </span>
+                      )}
+                    </div>
+                    <h3 className='text-xl font-bold mb-2 text-white group-hover:text-cyan-400 transition-colors'>
+                      {service.name}
+                    </h3>
+                    <p className='text-gray-300 text-sm mb-4'>
+                      {service.tagline}
+                    </p>
+                    <div className='mb-4'>
+                      <span className='text-3xl font-bold text-green-400'>
+                        {service.price}
                       </span>
                     )}
                   </div>
@@ -183,11 +196,10 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-                className="mb-16"
-              >
-                <h3 className="text-3xl font-bold mb-8 text-center text-cyan-400">{category}</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {allServices
+                className='mb-16'><h3 className='text-3xl font-bold mb-8 text-center text-cyan-400'>
+                  {category}
+                </h3>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                  {allServices
                     .filter(service => service.category === category)
                     .map((service, serviceIndex) => (
                       <motion.div

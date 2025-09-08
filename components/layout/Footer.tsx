@@ -73,9 +73,7 @@ const Footer: React.FC = () => {
                 <li key={service.name}>
                   <Link
                     href={service.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
-                  >
-                    {service.name}
+                    className="text-gray-400 hover:text-white transition-colors">{service.name}
                   </Link>
                 </li>
               ))}
@@ -89,7 +87,18 @@ const Footer: React.FC = () => {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors">{item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h3 className="text-lg font-semibold mb-4">Support</h3>
+            <ul className="space-y-2">
+              {support.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="text-gray-400 hover:text-white transition-colors"
                   >
                     {item.name}
                   </Link>

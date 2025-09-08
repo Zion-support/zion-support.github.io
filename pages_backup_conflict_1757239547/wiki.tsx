@@ -25,9 +25,7 @@ function CopyButton({ text, label }: { text: string, label: string }) {
         setCopied(true)
         setTimeout(() => setCopied(false), 1500)
       }}
-      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
-    >
-      {copied ? 'Copied' : label}
+      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900">{copied ? 'Copied' : label}
     </button>
   )
 }

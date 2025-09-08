@@ -789,7 +789,43 @@ const contactInfo = null;
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
               <Link
                 href="/contact"
-
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"><span>Get Started</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                href="/revolutionary-2028-pricing"
+                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"><span>View Pricing</span>
+                <DollarSign className="w-5 h-5" />
+              </Link>
+            </div>
+            {/* Stats */}
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-8 pt-16'>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-purple-400'>50+</div>
+                <div className='text-purple-300'>Innovative Services</div>
+              </div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-blue-400'>99.9%</div>
+                <div className='text-blue-300'>Accuracy Rate</div>
+              </div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-pink-400'>500+</div>
+                <div className='text-pink-300'>Happy Clients</div>
+              </div>
+              <div className='text-center'>
+                <div className='text-3xl font-bold text-cyan-400'>24/7</div>
+                <div className='text-cyan-300'>Support Available</div>              </div>              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-400">99.9%</div>
+                <div className="text-blue-300">Accuracy Rate</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-pink-400">500+</div>
+                <div className="text-pink-300">Happy Clients</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-cyan-400">24/7</div>
+                <div className="text-cyan-300">Support Available</div>
               </div>
             </div>
           </motion.div>
@@ -1312,11 +1348,20 @@ Discover our comprehensive range of futuristic services designed to transform yo
                     <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       <category.icon className=w-8 h-8 text-white" />
                     </div>
-
-                    <h3 className="text-2xl font-bold text-white mb-3>{category.title}</h3>
-                    <p className=text-purple-300 mb-6">{category.description}</p>
-
-                    <div className="space-y-3 mb-6>
+                    <h3 className='text-2xl font-bold text-white mb-3'>
+                      {category.title}
+                    </h3>
+                    <p className='text-purple-300 mb-6'>
+                      {category.description}
+                    </p>
+                    <div className='space-y-3 mb-6'>
+                      {category.services.slice(0, 3).map(service => (
+                        <div
+                          key={service.id}
+                          className='flex items-center space-x-3'><CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
+                          <span className='text-purple-200 text-sm'>
+                            {service.name}
+                          </span>                        </div>                    <div className="space-y-3 mb-6">
                       {category.services.slice(0, 3).map((service) => (
                         <div key={service.id} className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />

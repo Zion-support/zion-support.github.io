@@ -453,9 +453,7 @@ export default function Badges({ balance }: { balance: number }) {
               : "bg-gray-100 border-gray-200 text-gray-500"
 
           }`}
-          title={`Requires ${b.threshold} ZION$`}
-        >
-          {b.label}
+          title={`Requires ${b.threshold} ZION$`}>{b.label}
         </span>
       ))}
       {active && (

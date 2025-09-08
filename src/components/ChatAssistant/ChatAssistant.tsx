@@ -103,9 +103,7 @@ export function ChatAssistant(...args: []):  {
       className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
-      aria-labelledby="chat-assistant-title"
-    >
-      <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">
+      aria-labelledby="chat-assistant-title"><div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">
         {/* Header */}
         <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">
           <div className="flex items-center space-x-3">
@@ -143,9 +141,10 @@ export function ChatAssistant(...args: []):  {
         )}
         
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-4" aria-live="polite">
-          {currentMessages.length === 0 ? (
-            <div className="text-center text-zion-slate py-8">
+        <div
+          className="flex-1 overflow-y-auto p-4 space-y-4"
+          aria-live="polite">{currentMessages.length === 0 ? (
+            <div className="text-center text-zion-slate py-8 space-y-4">
               <p>Start a conversation with {recipient.name}</p>
             </div>
           ) : (
@@ -172,10 +171,13 @@ export function ChatAssistant(...args: []):  {
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
           role="dialog"
           aria-modal="true"
-          aria-labelledby="confirm-message-title"
-        >
-          <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">
-            <h3 id="confirm-message-title" className="text-lg font-semibold text-white mb-4">Confirm Message</h3>
+          aria-labelledby="confirm-message-title"><div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">
+            <h3
+              id="confirm-message-title"
+              className="text-lg font-semibold text-white mb-4"
+            >
+              Confirm Message
+            </h3>
             <p className="text-zion-slate mb-6 whitespace-pre-wrap break-words">
               {guestMessage}
             </p>

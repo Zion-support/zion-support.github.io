@@ -279,30 +279,7 @@ if (
                         rel='noreferrer';
                       >;
                         target='_blank'
-
-            )}
-          </section>;
-          <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>;
-            <h2 className='font-medium mb-2'>Updates</h2>;
-            <div className='space-y-3'>;
-              {(item && item.updates || []);
-                .slice();
-                .reverse();
-                .map(u => (;
-                  <div key={u && u.id} className='text-sm'>;
-                    <div className='text-xs text-gray-500'>;
-                      {new Date(u && u.createdAt).toLocaleString()}
-                    </div>;
-                    <div className='whitespace-pre-wrap'>{u && u.content}</div>;
-                  </div>;
-                ))}
-              {(!item && item.updates || item && item.updates.length === 0) && (;
-                <div className='text-sm text-gray-600'>No updates yet.</div>;
-              )}
-              <div className='pt-2'>;
-                        rel='noreferrer'
-                      >
-                        {l}
+                        rel='noreferrer'>{l}
                       </a>
                     </li>
                   ))}                </ul>              <div className="mt-2">

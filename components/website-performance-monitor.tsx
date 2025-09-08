@@ -900,18 +900,17 @@ href='#pricing';'
                       {feature.description}
             ))}
                 key={index}
-
-=======
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
-            {metrics.map ((metric, index) => (
-              <Card;
-                key={index}
-                className='card - hover border - gradient - blue text - center';
-                style={{ animation_delay: `${index * 0.1}s` }}
-              >;
-                <div className='text - 4xl mb - 4'>{metric.icon}</div>;
-                <h3 className={`text - xl font - bold mb - 3 ${metric.color}`}>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
+                className="card-hover group border-gradient-blue"
+                style={{ animationDelay: `${index * 0.1}s` }}><div className="flex items-start space-x-6">
+                  <div className="relative">
+                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
+                      {feature.icon}
+                    </div>
+                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-4 text-white">
+                      {feature.title}
                     </h3>
                     <p className="text-gray-400 leading-relaxed">
                       {feature.description}
@@ -1025,21 +1024,12 @@ href='#pricing';'
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
-
-
-                </p>              </Card>
-
-=======
-              <Card
-                key={index}
-                className="card-hover border-gradient-blue text-center"
-                </p>              </Card>
-                <p className='text - gray - 400 text - sm leading - relaxed'    />;
-
-                  {metric.description}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-                </p>
+                style={{ animationDelay: `${index * 0.1}s` }}><div className="text-4xl mb-4">{metric.icon}</div>
+                <h3 className={`text-xl font-bold mb-3 ${metric.color}`}>{metric.name}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{metric.description}</p>
+                <div className="text-4xl mb-4">{metric.icon}</div>
+                <h3 className={`text-xl font-bold mb-3 ${metric.color}`}>{metric.name}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{metric.description}</p>
               </Card>
 
 

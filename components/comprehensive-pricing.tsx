@@ -1418,9 +1418,56 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';'
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-
-
-
+              viewport={{ once: true }}
+            >
+              {pricingTiers.map((tier, index) => (
+                <motion.div
+                  key={tier.name}
+                  variants={itemVariants}
+                  whileHover={{ y: -10 }}
+                >
+                  <UltraFuturisticCard
+                    variant={
+                      tier.popular ? 'holographic-advanced' : 'quantum-advanced'
+                    }
+                    size='large'
+                    className={`h-full relative ${tier.popular ? 'ring-2 ring-purple-400' : ''}`}>{tier.popular && (
+                      <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+                        <div className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold'>                          Most Popular
+                        </div>
+                      </div>
+                    )}                    variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced'}
+                    size="large"
+                    className={`h-full relative ${tier.popular ? 'ring-2 ring-purple-400' : ''}`}>{tier.popular && (
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                        </div>
+                      </div>
+                    )}
+                    <div className='text-center mb-8'>
+                      <div
+                        className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${tier.color} mb-6`}
+                      >
+                        {tier.icon}
+                      </div>
+                      <h3 className='text-2xl font-bold text-white mb-2'>
+                        {tier.name}
+                      </h3>
+                      <p className='text-gray-300 text-sm mb-4'>
+                        {tier.description}
+                      </p>
+                      <div className='text-4xl font-bold text-cyan-400 mb-2'>
+                        {tier.price}
+                      </div>
+                      <div className='text-sm text-gray-400'>{tier.period}</div>
+                    </div>
+                    <div className='space-y-3 mb-8'>
+                      {tier.features.map((feature, idx) => (
+                        <div key={idx} className='flex items-center gap-2'>
+                          <Check className='w-4 h-4 text-green-400 flex-shrink-0' />
+                          <span className='text-sm text-gray-300'>
+                            {feature}
+                          </span>                        </div>
                       ))}
                     </div>
 
@@ -1796,64 +1843,244 @@ variant={(service.variant as any) || 'quantum-advanced'}'
 
 >>>>>>> origin/cursor/delete-old-data-records-6bba
                     size={viewMode === 'grid' ? 'large' : 'medium'}
-                    className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
-                  >
-                    {viewMode === 'grid' ? (
+                    className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}>{viewMode === 'grid' ? (
                       // Grid View
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              variants={container_variants}
-              initial='hidden';
-              whileInView='visible'              viewport={{ once: true }}            <motion.div;
-              className={view_mode === 'grid';
-                ? "grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 8";
-                : "space - y-6",
-              }
-              variants={container_variants}
-              initial="hidden";
-              whileInView="visible";
-            >;
-              {filtered_services.map ((service, index) => (
-                <motion.div;
-                  key={service.id}
-                  variants={item_variants}
-                  while_hover={{ coordinate_y: -5 }}
-                >;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                  <UltraFuturisticCard;
-                    variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
-                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
-                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}variant={service.variant as any || 'quantum-advanced'}variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
-                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}variant={(service.variant as any) || 'quantum-advanced'}size={viewMode === 'grid' ? 'large' : 'medium'}
-                    className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
-                  >;
-
-<<<<<<< HEAD
-                  whileHover={{ y: -5 ,}
-}    />;
-                  <UltraFuturisticCard;
-variant={(service.variant as any) || 'quantum-advanced'}
-                    size={viewMode === 'grid' ? 'large' : 'medium'}
-                    className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md: flex-row' : ''}`}
-                      />
-                    {viewMode === 'grid' ? (
-                      // Grid View;
-}
-<div className='text-center'    />}
-                        <div className='text-4xl mb-4'    />{service.icon}</div>
-                        <h3 className='text-xl font-bold text-white mb-2'    />
-
-                          {service.nam,}
-}
-
-
+                      <div className='text-center'>
+                        <div className='text-4xl mb-4'>{service.icon}</div>
+                        <h3 className='text-xl font-bold text-white mb-2'>
+                          {service.name}
+                        </h3>
+                        <p className='text-gray-300 mb-4 text-sm'>
+                          {service.tagline}
+                        </p>
+                        <div className='text-2xl font-bold text-cyan-400 mb-2'>
+                          {service.price}
+                        </div>
+                        <div className='text-sm text-gray-400 mb-4'>
+                          {service.period}
+                        </div>
+                        <div className='space-y-2 mb-6'>
+                          {service.features.slice(0, 3).map((feature, idx) => (
+                            <div
+                              key={idx}
+                              className='flex items-center gap-2 text-sm'
+                            >
+                              <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
+                              <span className='text-gray-300'>{feature}</span>                            </div>
+                          ))}
+                        </div>
+                      <div className="text-center">
+                        <div className="text-4xl mb-4">{service.icon}</div>
+                        <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+                        <p className="text-gray-300 mb-4 text-sm">{service.tagline}</p>
+                        <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                        <div className="text-sm text-gray-400 mb-4">{service.period}</div>
+                        <div className="space-y-2 mb-6">
+                          {service.features.slice(0, 3).map((feature, idx) => (
+                            <div key={idx} className="flex items-center gap-2 text-sm">
+                              <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
+                              <span className="text-gray-300">{feature}</span>
+                          ))}
+                        </div>
+                        <div className='text-center space-y-2'>
+                          <Button
+                            variant='primary'
+                            size='sm'
+                            onClick={() => window.open(service.link, '_blank')}
+                            className='w-full'
+                          >
+                            Learn More
+                            <ExternalLink className='ml-2 w-4 h-4' />
+                          </Button>
+                          <Button
+                            variant='futuristic'
+                            size='sm'
+                            onClick={() =>
+                              window.open(
+                                'https://ziontechgroup.com/contact'
+                                '_blank'
+                              )
+                            }
+                            className='w-full'
+                          >
+                            Get Pricing
+                            <DollarSign className='ml-2 w-4 h-4' />
+                          </Button>                        </div>
+                      </div>
+                    ) : (
+                      // List View                        <div className="text-center space-y-2">
+                                                     <Button
+                             variant="primary"
+                             size="sm"
+                             onClick={() => window.open(service.link, '_blank')}
+                             className="w-full"
+                           >
+                             Learn More
+                             <ExternalLink className="ml-2 w-4 h-4" />
+                           </Button>
+                           <Button
+                             variant="futuristic"
+                             size="sm"
+                             onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+                             className="w-full"
+                           >
+                             Get Pricing
+                             <DollarSign className="ml-2 w-4 h-4" />
+                           </Button>
+                      </div>
+                    ) : (
+                      // List View
+                      <div className='flex flex-col md:flex-row gap-6 w-full'>
+                        <div className='text-4xl md:text-5xl flex-shrink-0'>
+                          {service.icon}
+                        </div>
+                        <div className='flex-1'>
+                          <div className='flex flex-col md:flex-row md:items-center md:justify-between mb-4'>
+                            <div>
+                              <h3 className='text-xl font-bold text-white mb-2'>
+                                {service.name}
+                              </h3>
+                              <p className='text-gray-300 text-sm'>
+                                {service.tagline}
+                              </p>
+                            </div>
+                            <div className='text-right mt-2 md:mt-0'>
+                              <div className='text-2xl font-bold text-cyan-400'>
+                                {service.price}
+                              </div>
+                              <div className='text-sm text-gray-400'>
+                                {service.period}
+                              </div>
+                            </div>
+                          </div>
+                          <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
+                            <div>
+                              <h4 className='text-sm font-semibold text-cyan-400 mb-2'>
+                                Key Features
+                              </h4>
+                              <div className='space-y-1'>
+                                {service.features
+                                  .slice(0, 4)
+                                  .map((feature, idx) => (
+                                    <div
+                                      key={idx}
+                                      className='flex items-center gap-2 text-sm'><Check className='w-3 h-3 text-green-400 flex-shrink-0' />
+                                      <span className='text-gray-300'>
+                                        {feature}
+                                      </span>
+                                    </div>
+                                  ))}
+                              </div>
+                            </div>
+                            <div>
+                              <h4 className='text-sm font-semibold text-purple-400 mb-2'>
+                                Market Info
+                              </h4>
+                              <div className='space-y-1 text-sm text-gray-300'>
+                                <div>
+                                  <span className='text-gray-400'>ROI:</span>{' '}
+                                  {service.roi}
+                                </div>
+                                <div>
+                                  <span className='text-gray-400'>Market:</span>{' '}
+                                  {service.marketSize}
+                                </div>
+                                <div>
+                                  <span className='text-gray-400'>Growth:</span>{' '}
+                                  {service.growthRate}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className='flex gap-2'>
+                            <Button
+                              variant='primary'
+                              size='sm'
+                              onClick={() =>
+                                window.open(service.link, '_blank')
+                              }
+                            >
+                              Learn More
+                              <ExternalLink className='ml-2 w-4 h-4' />
+                            </Button>
+                            <Button
+                              variant='futuristic'
+                              size='sm'
+                              onClick={() =>
+                                window.open(
+                                  'https://ziontechgroup.com/contact'
+                                  '_blank'
+                                )
+                              }
+                            >
+                              Get Pricing
+                              <DollarSign className='ml-2 w-4 h-4' />
+                            </Button>                          </div>
+                          <div className="flex gap-2">
+                                                         <Button
+                               variant="primary"
+                               size="sm"
+                               onClick={() => window.open(service.link, '_blank')}
+                             >
+                               Learn More
+                               <ExternalLink className="ml-2 w-4 h-4" />
+                             </Button>
+                             <Button
+                               variant="futuristic"
+                               size="sm"
+                               onClick={() => window.open('https: //ziontechgroup.com/contact_blank')}
+                             >
+                               Get Pricing
+                               <DollarSign className="ml-2 w-4 h-4" />
+                             </Button>
+                        </div>
+                      </div>
+                    )}
+                  </UltraFuturisticCard>
+                </motion.div>
+              ))}
+            </motion.div>
+            {filteredServices.length === 0 && (
+              <motion.div
+                className='text-center py-16'                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+              >              <motion.div
+                className="text-center py-16"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className='text-6xl mb-4'>🔍</div>
+                <h3 className='text-2xl font-bold text-white mb-2'>
+                  No Services Found
+                </h3>
+                <p className='text-gray-400 mb-6'>
+                  Try adjusting your search criteria or filters.
+                </p>
+                <Button
+                  variant='primary'
+                  onClick={() => {
+                    setSearchQuery('');
+                    setSelectedCategory('All');
+                    setPriceRange('All');
+                  }}
+                >
+                  Clear Filters
+                </Button>              </motion.div>                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
+                <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>
+                                 <Button
+                   variant="primary"
+                   onClick={() => {
+                     setSearchQuery('');
+                     setSelectedCategory('All');
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+                     setPriceRange('All')
+                   }}
+                 >
+                   Clear Filters
+                 </Button>
             )}
 
 

@@ -963,9 +963,7 @@ className='flex flex-wrap justify-center gap-4 mb-12'
                     activeCategory === category.id
                       ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400'
                       : 'border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400'
-                  }`}
-                >
-                  {category.icon}
+                  }`}>{category.icon}
                   <span>{category.name}</span>
                 </motion.button>
               ))}
@@ -1485,8 +1483,21 @@ animate: {}
                   className='bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2'
                 >
                   <span>Get Started Today</span>
-                  <ArrowRight className='w-5 h-5' />
-
+                  <ArrowRight className='w-5 h-5' />                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300'                >                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of companies already leveraging our cutting-edge technology solutions
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2"><span>Get Started Today</span>
+                  <ArrowRight className="w-5 h-5" />
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}

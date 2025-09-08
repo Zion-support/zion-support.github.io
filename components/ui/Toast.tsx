@@ -371,9 +371,7 @@ default:
       animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 300, scale: isVisible ? 1 : 0.8 }}
       exit={{ opacity: 0, x: 300, scale: 0.8 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className={`relative p-4 rounded-xl border ${getBorderColor()} ${getBackgroundColor()} backdrop-blur-xl shadow-2xl max-w-sm`}
-    >
-      <div className="flex items-start space-x-3">
+      className={`relative p-4 rounded-xl border ${getBorderColor()} ${getBackgroundColor()} backdrop-blur-xl shadow-2xl max-w-sm`}><div className="flex items-start space-x-3">
         <div className="flex-shrink-0 mt-0.5">
           {getIcon()}
         </div>

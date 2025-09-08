@@ -2150,15 +2150,26 @@ const Homepage2037: React.FC = () => {}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >;
-                  <UltraFuturisticServiceCard2026;
-<<<<<<< HEAD
-
-
-=======
-                      icon: service.icon;
-                    }}"
+                  viewport={{ once: true }}><UltraFuturisticServiceCard2026
+                    service={{
+                      id: service.id
+                      name: service.name
+                      tagline: service.tagline
+                      description: service.description
+                      price: service.price
+                      period: service.period
+                      features: service.features.slice(0, 5)
+                      popular: service.popular
+                      category: service.category
+                      icon: service.icon
+                    }}
+                    variant='ai'                  />
+                </motion.div>
+              ))}
+            </div>                      popular: service.popular
+                      category: service.category
+                      icon: service.icon
+                    }}
                     variant="ai"
             </div>
 
@@ -2475,16 +2486,8 @@ key={service.id}
 >>>>>>> origin/cursor/delete-old-data-records-6bba
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}>;
-<<<<<<< HEAD
-
-                  <UltraFuturisticServiceCard2026
-
-=======
-                  <UltraFuturisticServiceCard2026;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                      features: service.features.slice (0, 5),
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}><UltraFuturisticServiceCard2026
                     service={{
                       id: service.id,
                       name: service.name,
@@ -2784,16 +2787,8 @@ key={service.id}
 >>>>>>> origin/cursor/delete-old-data-records-6bba
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}>;
-<<<<<<< HEAD
-
-                  <UltraFuturisticServiceCard2026
-
-=======
-                  <UltraFuturisticServiceCard2026;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                      features: service.features.slice (0, 5),
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}><UltraFuturisticServiceCard2026
                     service={{
                       id: service.id,
                       name: service.name,

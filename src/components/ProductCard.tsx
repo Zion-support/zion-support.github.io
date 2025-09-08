@@ -59,33 +59,32 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
         <Heart aria-hidden="true" className={active ? 'text-red-500 fill-red-500' : 'text-gray-500'}/>
       </button>
 
-    <div className="w-full h-40 relative mb-2">
-      {imageUrl && !imageError ? (<Image src={imageUrl} alt={imageAltText} fill style={{ objectFit: 'cover' }} onError={(e) => handleImageError(e)} priority={false} sizes={imageSizes}/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center">
-          <span className="text-gray-500">No Image</span>
-        </div>)}
-      {active && (<div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">
-          <Heart aria-hidden="true" className="text-red-500 fill-red-500"/>
-        </div>)}
-    </div>
-      <Link href={`/marketplace/listing/${product.id}`}>
-        <h3 className="font-semibold mb-1">{productTitle}</h3>
-      </Link>
-      {product.price != null && (<p className="text-sm text-muted-foreground">
-          {product.currency}
-          {product.price}
-        </p>)}
-      <div className="mt-2 flex gap-2">
-        <Button size="sm" className="flex-1" onClick={addToCart}>
-          Add to Cart
-        </Button>
-        {onBuy && (<TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button onClick={(e) => {
-                e.stopPropagation();
-                onBuy();
-            }} size="sm" variant="outline" className="flex-1" data-testid="buy-now-button" disabled={!isAuthenticated || buyDisabled}>
-                  Buy Now
+<<<<<<< HEAD
+export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyDisabled;
+                      onBuy()
+                        .catch(() => {
+                          // Error is handled by parent, but we still need to reset loading locally
+                        })
+                        .finally(() => {
+                          setIsRedirecting(false), // Always reset loading state
+                          if (onBuyAttemptComplete) {
+                            onBuyAttemptComplete(), // Notify parent if it provided this callback
+                          }
+                        })
+                    }
+                  }}
+                  size="sm"
+                  variant="outline"
+                  className="flex-1"
+                  data-testid="buy-now-button"
+                  disabled={!isAuthenticated || buyDisabled || isRedirecting}>{isRedirecting ? (
+                    <>
+                      <span className="animate-spin inline-block mr-2 h-4 w-4 border-2 border-current border-t-transparent rounded-full" role="status" aria-hidden="true"></span>
+                      Processing...
+                    </>
+                  ) : (
+                    'Buy Now'
+                  )}
                 </Button>
               </TooltipTrigger>
               {!isAuthenticated && (<TooltipContent>Login required</TooltipContent>)}

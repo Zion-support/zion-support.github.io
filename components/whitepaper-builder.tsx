@@ -200,9 +200,7 @@ return `/api/zion-whitepaper-pdf?edition=${edition}`;`
         <select
           value={edition}
           onChange={(e) => setEdition(e.target.value as WhitepaperEdition)}
-          className="border rounded px-3 py-2 bg-white dark:bg-black"
-        >
-          <option value="full">Full</option>
+          className="border rounded px-3 py-2 bg-white dark:bg-black"><option value="full">Full</option>
           <option value="investor">Investor</option>
           <option value="developer">Developer</option>
         </select>

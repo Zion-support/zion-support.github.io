@@ -268,9 +268,7 @@ export default function PricingEnhanced2026Page() {
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
                 className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
                   billingCycle === 'yearly' ? 'bg-cyan-600' : 'bg-gray-600'
-                }`}
-              >
-                <span
+                }`}><span
                   className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
                     billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
                   }`}
@@ -357,10 +355,8 @@ export default function PricingEnhanced2026Page() {
                            } else {
                              window.open(`mailto:${contactInfo.email}?subject=Start Free Trial - ${tier.name}`, '_blank');
                            }
-                         }}
-                       >
-                         {tier.cta}
-                       </button>
+                         }}>{tier.cta}
+                       </Button>
                     </div>
                   </FuturisticCard>
                 </motion.div>
@@ -516,16 +512,16 @@ export default function PricingEnhanced2026Page() {
                 Join thousands of businesses already using our innovative services to gain competitive advantages and achieve remarkable ROI.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center"
-                  onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')}
-                >
-                  <Mail className="w-5 h-5 mr-2" />
+                <Button
+                  variant="primary"
+                  size="lg"
+                  onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')}><Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
-                </button>
-                <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center"
-                  onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')}
-                >
-                  <Phone className="w-5 h-5 mr-2" />
+                </Button>
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')}><Phone className="w-5 h-5 mr-2" />
                   Call Now
                 </button>
               </div>

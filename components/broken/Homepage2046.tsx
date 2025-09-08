@@ -421,9 +421,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
             boxShadow: { duration: 2, repeat: Infinity, ease: "easeInOut" }
           }}
-          className="w-32 h-32 mx-auto mb-8"
-        >
-          <div className="w-full h-full bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 rounded-full blur-xl opacity-40 animate-pulse"></div>
+          className="w-32 h-32 mx-auto mb-8"><div className="w-full h-full bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 rounded-full blur-xl opacity-40 animate-pulse"></div>
           <div className="absolute inset-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center">
             <Brain className="w-16 h-16 text-white" />
           </div>
@@ -2002,15 +2000,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/delete-old-data-records-6bba
                       key={category}
                       onClick={() => setSelectedCategory(category)}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${;
-                        selectedCategory === category;
-                          ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white';
-                          : 'bg-black/30 border border-cyan-400/30 text-gray-300 hover:border-cyan-400 hover:text-cyan-400';
-                      }`}
-                    >;
-                      {category === 'all' ? 'All Categories' : category}
-<<<<<<< HEAD
-=======
+                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                        selectedCategory === category
+                          ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
+                          : 'bg-black/30 border border-cyan-400/30 text-gray-300 hover:border-cyan-400 hover:text-cyan-400'
+                      }`}>{category === 'all' ? 'All Categories' : category}
                     </button>
                   ))}
                 </div>

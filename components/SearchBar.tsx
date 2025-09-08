@@ -104,22 +104,54 @@ ref={inputRef}
 className="h-5 w-5 text-slate-400"
             fill="none"
             stroke="currentColor"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path,
-strokeLinecap="round"
+            viewBox="0 0 24 24"><path
+              strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             />
           </svg>
         </div>
-      )}
-
-      {isOpen && query.length > 2 && results.length === 0 && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-white/20 rounded-lg shadow-xl z-50 p-4">
-          <p className="text-slate-300 text-center">No results found for &quot;{query}&quot;</p>
+        {isLoading && (
+          <div className="absolute inset-y-0 right-0 flex items-center pr-3">
+            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500"></div>
+          </div>
+        )}
+      </div>
+      {/* Search Results Dropdown */}
+      {isOpen && (
+        <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
+          {results.length > 0 ? (
+            <div className="py-2">
+              {results.map((result, index) => (
+                <Link
+                  key={index}
+                  href={result.url}
+                  onClick={handleResultClick}
+                  className="block px-4 py-3 hover:bg-gray-50 transition-colors"><div className="flex items-start space-x-3">
+                    <div className="flex-shrink-0">
+                      <div className={`w-2 h-2 rounded-full mt-2 ${
+                        result.type === 'service' ? 'bg-blue-500' :
+                        result.type === 'page' ? 'bg-green-500' : 'bg-purple-500'
+                      }`}></div>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-gray-900 truncate">
+                        {result.title}
+                      </p>
+                      <p className="text-sm text-gray-500 truncate">
+                        {result.description}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          ) : query && !isLoading ? (
+            <div className="px-4 py-3 text-sm text-gray-500">
+              No results found for &quot;{query}&quot;
+            </div>
+          ) : null}
         </div>
       )}
     </div>

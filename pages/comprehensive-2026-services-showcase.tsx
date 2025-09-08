@@ -97,9 +97,7 @@ export default function Comprehensive2026ServicesShowcase() {
       intensity="extreme" 
       colorScheme="quantum-fusion"
       particleCount={500}
-      animationSpeed={2.5}
-    >
-      <Head>
+      animationSpeed={2.5}><Head>
         <title>Comprehensive 2026 Services Showcase | Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive collection of cutting-edge AI, IT infrastructure, and micro SaaS services for 2026. Transform your business with innovative technology solutions." />
         <meta name="keywords" content="AI services, IT infrastructure, micro SaaS, quantum computing, blockchain, 2026 technology, Zion Tech Group" />
@@ -220,9 +218,7 @@ export default function Comprehensive2026ServicesShowcase() {
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="bg-gray-800/50 border border-gray-600/30 rounded-xl px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                  >
-                    <option value="popularity">Most Popular</option>
+                    className="bg-gray-800/50 border border-gray-600/30 rounded-xl px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"><option value="popularity">Most Popular</option>
                     <option value="price-low">Price: Low to High</option>
                     <option value="price-high">Price: High to Low</option>
                     <option value="rating">Highest Rated</option>
@@ -234,9 +230,7 @@ export default function Comprehensive2026ServicesShowcase() {
                       onClick={() => setViewMode('grid')}
                       className={`p-2 rounded-lg transition-all duration-300 ${
                         viewMode === 'grid' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
-                      }`}
-                    >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      }`}><svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                       </svg>
                     </button>
@@ -244,9 +238,7 @@ export default function Comprehensive2026ServicesShowcase() {
                       onClick={() => setViewMode('list')}
                       className={`p-2 rounded-lg transition-all duration-300 ${
                         viewMode === 'list' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
-                      }`}
-                    >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      }`}><svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
                       </svg>
                     </button>
@@ -264,9 +256,7 @@ export default function Comprehensive2026ServicesShowcase() {
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
-            >
-              <AnimatePresence>
+              className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}><AnimatePresence>
                 {filteredServices.map((service) => (
                   <motion.div
                     key={service.id}

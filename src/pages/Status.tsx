@@ -195,8 +195,52 @@ const Status: React.FC = () => (
                           <span>Duration: {incident.duration}</span>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="text-center">
+                <p className="text-zion-slate-light mb-4">
+                  For detailed incident history and real-time updates:
+                </p>
+                <Button
+                  variant="outline"
+                  asChild
+                  className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"><a 
+                    href={statusUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"><ExternalLink className="h-4 w-4" />
+                    Visit Full Status Page
+                  </a>
+                </Button>
+              </div>
+            </>
+          )}
+
+          <div className="mt-12 text-center">
+            <Card className="bg-zion-blue-dark border-zion-blue-light">
+              <CardHeader>
+                <CardTitle className="text-white">Need Help?</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-zion-slate-light">
+                  If you're experiencing issues not reflected here, please contact our support team.
+                </p>
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                  <Button
+                    variant="outline"
+                    asChild
+                    className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"><Link href="/contact">Contact Support</Link>
+                  </Button>
+                  <Button
+                    variant="outline"
+                    asChild
+                    className="text-zion-purple border-zion-purple hover:bg-zion-purple/10"><a href="https://twitter.com/ZionTechGroup" target="_blank" rel="noopener noreferrer">
+                      @ZionTechGroup
+                    </a>
+                  </Button>
                 </div>
               )}
             </div>

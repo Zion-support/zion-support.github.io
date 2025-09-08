@@ -726,9 +726,7 @@ className='group relative'>;'
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>    >
       <motion.div
         variants={cardVariants}
-        className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300"
-      >
-        {/* Glowing border effect */}
+        className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300">{/* Glowing border effect */}
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         <div className="relative p-6">
           {/* Service header */}
@@ -766,9 +764,7 @@ className='group relative'>;'
                 .map((feature: string, idx: number) => (
                   <div
                     key={idx}
-                    className='flex items-center space-x-2 text-xs text-slate-400'
-                  >
-                    <div className='w-1.5 h-1.5 bg-cyan-500 rounded-full' />
+                    className='flex items-center space-x-2 text-xs text-slate-400'><div className='w-1.5 h-1.5 bg-cyan-500 rounded-full' />
                     <span>{feature}</span>
                   </div>
                 ))}            </div>
@@ -1161,8 +1157,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{innovative2026AIServices.map((service, index) => renderServiceCard(service, index))}
             {innovative2026AIServices.map((service, index) => renderServiceCard(service, index))}
           </motion.div>
         </motion.div>
@@ -1283,8 +1278,7 @@ className='mb-20'
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{innovative2026ITInfrastructureServices.map((service, index) => renderServiceCard(service, index))}
             {innovative2026ITInfrastructureServices.map((service, index) => renderServiceCard(service, index))}
           </motion.div>
         </motion.div>
@@ -1489,8 +1483,7 @@ variants={containerVariant}
 
             initial="hidden"
             whileInView="visible"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{innovative2026MicroSaasServices.map((service, index) => renderServiceCard(service, index))}
             {innovative2026MicroSaasServices.map((service, index) => renderServiceCard(service, index))}
 
 

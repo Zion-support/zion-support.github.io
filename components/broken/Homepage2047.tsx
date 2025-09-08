@@ -1301,8 +1301,16 @@ href='/contact
 
                 >
                   <span>Get Started</span>
-                  <ArrowRight className='w-5 h-5 group-"hover":translate-x-1 transition-transform duration-200' />'
->>>>>>> origin/cursor/delete-old-data-records-6bba
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-200' />                </Link>              >
+                <Link
+                  href="/2025-innovative-services-showcase-v2"
+                  className="group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center space-x-2"><span>Explore Services</span>
+                  <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="group border-2 border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 hover:border-cyan-500 transition-all duration-200 flex items-center justify-center space-x-2"><span>Get Started</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
                 </Link>
               </motion.div>
 
@@ -2454,11 +2462,7 @@ className="text-center mt-16"
               <ArrowRight className='w-5 h-5' />            </Link>          >
             <Link
               href="/2025-innovative-services-showcase-v2"
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-              className='inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg "hover": from-purple-600 "hover":to-pink-600 transition-all duration-200 "hover":scale-105 shadow-lg "hover":shadow-purple-500/25''
-            >
-              <span>View All {allInnovativeServices.length}+ Services</span>
+              className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25"><span>View All {allInnovativeServices.length}+ Services</span>
               <ArrowRight className="w-5 h-5" />
               className='inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25'
             >

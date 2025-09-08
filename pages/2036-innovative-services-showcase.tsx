@@ -166,9 +166,7 @@ export default function InnovativeServicesShowcase2036() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+            transition={{ duration: 0.8, delay: 0.4 }}><button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25'>
               Explore Services
             </button>
             <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
@@ -186,12 +184,10 @@ export default function InnovativeServicesShowcase2036() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
-              <Phone className="w-8 h-8 mx-auto mb-4 text-cyan-400" />
-              <h3 className="text-lg font-semibold mb-2">Phone</h3>
-              <p className="text-gray-300">{contactInfo.mobile}</p>
+            viewport={{ once: true }}><div className='text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300'>
+              <Phone className='w-8 h-8 mx-auto mb-4 text-cyan-400' />
+              <h3 className='text-lg font-semibold mb-2'>Phone</h3>
+              <p className='text-gray-300'>{contactInfo.mobile}</p>
             </div>
             <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
               <Mail className="w-8 h-8 mx-auto mb-4 text-cyan-400" />
@@ -216,9 +212,7 @@ export default function InnovativeServicesShowcase2036() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            viewport={{ once: true }}><h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
               Revolutionary Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -233,12 +227,10 @@ export default function InnovativeServicesShowcase2036() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            {/* Search and View Controls */}
-            <div className="flex flex-col lg:flex-row gap-4 justify-between items-center">
-              <div className="relative flex-1 max-w-md">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            viewport={{ once: true }}>{/* Search and View Controls */}
+            <div className='flex flex-col lg:flex-row gap-4 justify-between items-center'>
+              <div className='relative flex-1 max-w-md'>
+                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
                 <input
                   type="text"
                   placeholder="Search services..."
@@ -310,12 +302,12 @@ export default function InnovativeServicesShowcase2036() {
                 variants={itemVariants}
                 className={`bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
                   viewMode === 'list' ? 'flex gap-6' : ''
-                }`}
-              >
-                {viewMode === 'list' && (
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center text-2xl">
-                      {categoryIcons[service.category] || <Star className="w-8 h-8" />}
+                }`}>{viewMode === 'list' && (
+                  <div className='flex-shrink-0'>
+                    <div className='w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center text-2xl'>
+                      {categoryIcons[service.category] |(
+                        <Star className='w-8 h-8' />
+                      )}
                     </div>
                   </div>
                 )}

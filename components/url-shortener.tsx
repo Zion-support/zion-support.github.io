@@ -821,17 +821,47 @@ key={url && url.i,}
                       <div className='text-center p-4 bg-gray-800 rounded-lg'    />;
                         <div className='text-2xl font-bold text-orange-400 mb-1'    />;
                           {url.clicks}
-                        </div>;
-                        <div className='text-xs text-gray-400'    />;
-                          Total Clicks;
-                        </div>;
-                      </div>;
+                        </div>
+                        <div className='text-xs text-gray-400'>
+                          Total Clicks
+                          {url.clicks}
+                        </div>
+                        <div className="text-xs text-gray-400">Total Clicks</div>
+                      </div>
+                      <div className="flex space-x-2">
+                        <Button
+                          onClick={() => copyToClipboard(url.shortUrl)}
+                          variant="outline"
+                          size="sm"
+                          className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-600"
+                        >
+                          <Copy className='w-4 h-4 mr-2' />                        </div>
+                      </div>
+                      <div className='flex space-x-2'>
+                        <Button
+                          onClick={() => copyToClipboard(url.shortUrl)}
+                          variant="outline"
+                          size="sm"
+                          className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-600"><Copy className='w-4 h-4 mr-2' />
+                    <div className="flex flex-col space-y-3">
+                      <div className="text-center p-4 bg-gray-800 rounded-lg">
+                        <div className="text-2xl font-bold text-orange-400 mb-1">
+                          {url.clicks}
+                        </div>
+                        <div className="text-xs text-gray-400">Total Clicks</div>
+                      </div>
 
-=======
-                      <div className='flex space-x-2'    />;
-                        <Button;
-                          onClick={() =    /> copyToClipboard(url.shortUrl)}
-
+                      <div className="flex space-x-2">
+                        <Button
+                          onClick={() => copyToClipboard(url.shortUrl)}
+                          variant="outline"
+                          size="sm"
+                          className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-600"><Copy className="w-4 h-4 mr-2" />
+                          <Copy className="w-4 h-4 mr-2" />
+                          Copy
+                        </Button>
+                        <Button
+                          onClick={() => incrementClicks(url.id)}
                           variant='outline'
                           size='sm'
                           className='flex-1 border-gray-600 text-gray-300 hover: bg-gray-600'
@@ -875,7 +905,13 @@ onClick={() =    />;}
 <<<<<<< HEAD
                         </Button>;
                         <Button
-=======
+                          onClick={() => deleteUrl(url.id)}                        <Button
+                          onClick={() => setShowQR(showQR === url.id ? null : url.id)}
+                          variant="outline"
+                          size="sm"
+                          className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-600"><QrCode className="w-4 h-4 mr-2" />
+                          <QrCode className="w-4 h-4 mr-2" />
+                          QR Code
                         </Button>
                         <Button;
 onClick={() =    /> deleteUrl(url.id,}

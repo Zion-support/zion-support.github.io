@@ -247,10 +247,9 @@ export default function BrowserAutomationCloudPage() {
             {features && features.map(f => (;
               <div
                 key={f}
-                className='flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10'>;
-                <Check className='w-5 h-5 text-cyan-400 mt-1' />;
-                <p className='text-gray-200'>{f}</p>;
-              </div>;
+                className='flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10'><Check className='w-5 h-5 text-cyan-400 mt-1' />
+                <p className='text-gray-200'>{f}</p>
+              </div>
             ))}
           </div>;
           <div className='mt-8 flex flex-wrap items-center gap-4'>;
@@ -469,17 +468,13 @@ export default function BrowserAutomationCloudPage() {
               href='https://playwright.dev/'
               target='_blank'
               rel='noreferrer'
-              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'
-            >
-              <ExternalLink className='w-4 h-4' /> Playwright
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'><ExternalLink className='w-4 h-4' /> Playwright
             </a>
             <a
               href='https://pptr.dev/'
               target='_blank'
               rel='noreferrer'
-              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'
-            >
-              <ExternalLink className='w-4 h-4' /> Puppeteer
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'><ExternalLink className='w-4 h-4' /> Puppeteer
             </a>
           </div>
         </section>

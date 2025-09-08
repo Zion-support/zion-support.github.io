@@ -1043,14 +1043,26 @@ key={index}
                 </h3>;
                 <p className='text-gray-400 text-sm mb-4 leading-relaxed'    />;
                   {insight.description}
-                </p>;
-                <div;
-                  className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${insight.color} bg-gray-800/50`}    />
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+                </p>
+                <div
+                  className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${insight.color} bg-gray-800/50`}
+                >                  {insight.trend}              Business Tool Trends & Insights
+            </h2>
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Stay ahead of the curve with our analysis of the business tools landscape and emerging opportunities.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {businessInsights.map((insight, index) => (
+              <Card
+                key={index}
+                className="card-hover border-gradient-blue text-center"
+                style={{ animationDelay: `${index * 0.1}s` }}><h3 className="text-xl font-bold text-white mb-3">{insight.title}</h3>
+                <p className="text-gray-400 text-sm mb-4 leading-relaxed">{insight.description}</p>
+                <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${insight.color} bg-gray-800/50`}>
+                <h3 className="text-xl font-bold text-white mb-3">{insight.title}</h3>
+                <p className="text-gray-400 text-sm mb-4 leading-relaxed">{insight.description}</p>
+                <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${insight.color} bg-gray-800/50`}>
                   {insight.trend}
 
                 </div>

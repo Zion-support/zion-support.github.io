@@ -243,14 +243,12 @@ href='#contact'
               <Phone className='w-5 h-5 mr-2' />              Contact Sales          >
             <a
               href="#pricing"
-              className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold text-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105">;
-              <Target className="w-5 h-5 mr-2" />;
-              Get Started;
-            </a>;
+              className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold text-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105"><Target className="w-5 h-5 mr-2" />
+              Get Started
+            </a>
             <a
               href="#contact"
-              className="inline-flex items-center px-8 py-4 rounded-full border-2 border-green-500/30 text-green-400 font-semibold text-lg hover:bg-green-500/10 transition-all duration-300"
-            >
+              className="inline-flex items-center px-8 py-4 rounded-full border-2 border-green-500/30 text-green-400 font-semibold text-lg hover:bg-green-500/10 transition-all duration-300"><Phone className="w-5 h-5 mr-2" />
               <Phone className="w-5 h-5 mr-2" />
               Contact Sales
             </a>

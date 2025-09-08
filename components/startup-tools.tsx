@@ -795,57 +795,14 @@ variant='outline';'
               </Button>
             </div>
           </div>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'    />;
-              <Button;
-                href='#tools';
-                size='lg';
-                className='animate-scale-in shadow-2xl shadow-orange-500/25 hover:shadow-orange-500/40';
-                style={{ animationDelay: '0.2s' }}
-
-<<<<<<< HEAD
-
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-
-
-      {/* Category Filter */}
-<section className='py-16 bg-gray-900'    />
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />
-          <div className='flex flex-wrap justify-center gap-4'    />
-            {categories.map(category => (}
-              <button;}
-key={category}
-                onClick={() =    /> setSelectedCategory(category,}
-}
-                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category;
-                    ? 'bg-orange-600 text-white shadow-lg';}
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white';}
-                }`}>
-
-
-
-                {category}
-
-              </button>
-
-=======
-                  />
-                Explore Tools;
-                <ArrowRight className='w-5 h-5 ml-2'    />
-              </Button>
-              <Button;
-href='/contact'
-                variant='outline'
-                size='lg'
-                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
-                style={{ animationDelay: '0.4s' }}
-                  />
-                Get Startup Advice;
-              </Button>
+          {/* Stats */}
+          <div
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
+            style={{ animationDelay: '0.6s' }}><div className='text-center group'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>
+                {startupTools.length}+
+              </div>
+              <div className='text-gray-400 text-sm'>Essential Tools</div>
             </div>
 
 
@@ -863,45 +820,11 @@ href='/contact'
 >>>>>>> origin/cursor/delete-old-data-records-6bba
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
-                  selectedCategory === category;
-                    ? 'bg-orange-600 text-white shadow-lg';
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white';
-                }`}
-              >;
-                {category}
-<<<<<<< HEAD
-
-              </button>;
-
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Tools Grid */}
-
-<section id='tools' className='py-24 bg-black'    />
-        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'    />
-          <div className='text-center mb-20'    />
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'    />
-              {selectedCategory === 'All'}
-                ? 'All Startup Tools'}
-                : `${selectedCategory} Tools`}
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'    />
-              {selectedCategory === 'All'}
-                ? 'Discover the essential tools that successful startups use to grow and scale their businesses.'}
-                : `Explore the best ${selectedCategory.toLowerCase()} tools to accelerate your startup's growth.,
-}
-
-=======
-              </button>
-            ))}
-          </div>
-      </section>
-      {/* Tools Grid */}
-
-
-                {category}
+                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                  selectedCategory === category
+                    ? 'bg-orange-600 text-white shadow-lg'
+                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
+                }`}>{category}
               </button>
             ))}
           </div>

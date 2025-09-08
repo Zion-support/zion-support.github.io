@@ -595,51 +595,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     m && m.role === 'assistant''
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800''
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
-                key={idx}
-                className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right';
-                }>;
-                <div;
-                  className={m && m.role === 'assistant';
-                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'            {messages && messages.map((m, idx) => (<div key={idx} className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>;
-                <div;
-                  className={m && m.role === 'assistant';
-                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800';
-                    m.role === 'assistant';
-                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800';
-                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white';
-                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
-
-                  }
-                >
-=======
-  }
-
-                <div,
-className={
-
-                    }
-
-                    m.role === 'assistant''
-                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 "dark": bg-gray-800''
-                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white''
-
-                 
-}
-                >;
-
-              aria-label='Close'
-              className='p-1 rounded hover: bg-gray-200 dark:hover:bg-gray-700'
-            >
-              <X size={1}
-}    />
-            </button>
-          </div>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-                  {m.content}
-
+                  }>{m.content}
                 </div>
               </div>
 

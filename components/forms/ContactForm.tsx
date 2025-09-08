@@ -995,68 +995,12 @@ htmlFor='phone'
                     name="service"
                     value={formData && formData.service}
                     onChange={handleChange}
-
-
-                  <label
-                    htmlFor='message'
-                    className='block text-white font-medium mb-2'>;
-                    Message *;
-                  </label>;
-                  <textarea
-                    id='message'
-                  </select>;
-                </div>;
-                <div>;
-<label;
-                    htmlFor='message';
-                    className='block text-white font-medium mb-2'>;
-                    Message *;
-                  </label>;
-                  <textarea;
-                    id='message';
-                    name='message'                    value={formData && formData.message}
-                    onChange={handleChange}
-                    required;
-                    rows={5}
-                    className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none';
-                    name='message';
-                    value={formData.message}
-                  <label
-                      placeholder='Enter phone number'
-                    />
-
-=======
-
-                      placeholder='Enter phone number'' />
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-white font-medium mb-2">
-                    Service of Interest
-                  </label>
-<<<<<<< HEAD
-
-=======
-                  <select
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                  <select,
-id='service''
-                    name='service''
-
-                    value={formData.service}
-                    onChange={handleChang
-}
-                    className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white 'focus':outline-none 'focus':border-blue-500 transition-colors'>'
-
-                    <option value=''>Select a service</option>;'
-                    {services.map(service => { return (<option; }
-                        }
-                        key={service}
-                        value={service}
-                        className='bg-gray-800 text-white'>'
-
+                    className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"><option value="">Select a service</option>
+                    {services.map((service) => (
+                      <option key={service} value={service} className="bg-gray-800 text-white">
+                    <option value="">Select a service</option>
+                    {services.map((service) => (
+                      <option key={service} value={service} className="bg-gray-800 text-white">
                         {service}
                       </option>
                     ))}

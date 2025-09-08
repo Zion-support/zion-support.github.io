@@ -302,9 +302,48 @@ const EnhancedFooter: React.FC = () => {
             </div>
           ))}
         </div>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
+        {/* Bottom Section */}
+        <div className='pt-8 border-t border-white/10'>
+          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
+            {/* Copyright */}
+            <div className='text-white/60 text-sm'>              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+            {/* Social Links */}
+            <div className='flex items-center space-x-4'>
+              {socialLinks.map(social => (        <div className="pt-8 border-t border-white/10">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            {/* Copyright */}
+            <div className="text-white/60 text-sm">
+            </div>
+            {/* Social Links */}
+            <div className='flex items-center space-x-4'>
+              {socialLinks.map(social => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/70 hover:text-white transition-all duration-200'
+                  aria-label={social.name}
+                >
+                  <social.icon className='w-5 h-5' />                </a>                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/70 hover:text-white transition-all duration-200"
+                  aria-label={social.name}><social.icon className='w-5 h-5' />
+            <div className="flex items-center space-x-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/70 hover:text-white transition-all duration-200"
+                  aria-label={social.name}><social.icon className="w-5 h-5" />
+                  <social.icon className="w-5 h-5" />
+                </a>
               ))}
             </div>
           </div>

@@ -738,8 +738,37 @@ onChange={e => setInputJson(e.target.value)}
                   onClick={loadSampleJSON}
                   variant="outline"
                   size="sm"
-                  className="border-gray-600 text-gray-300 hover:bg-gray-700"
-                >
+                  className="border-gray-600 text-gray-300 hover:bg-gray-700"><Upload className='w-4 h-4 mr-2' />
+                
+                <div className="flex items-center space-x-2">
+                  <input
+                    type="checkbox"
+                    id="compactMode"
+                    checked={compactMode}
+                    onChange={(e) => setCompactMode(e.target.checked)}
+                    className="w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500"
+                  />
+                  <label htmlFor="compactMode" className="text-sm text-gray-300" htmlFor="input-Compact mode">Compact mode</label>
+                </div>
+                
+                <div className="flex items-center space-x-2">
+                  <input
+                    type="checkbox"
+                    id="showLineNumbers"
+                    checked={showLineNumbers}
+                    onChange={(e) => setShowLineNumbers(e.target.checked)}
+                    className="w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500"
+                  />
+                  <label htmlFor="showLineNumbers" className="text-sm text-gray-300" htmlFor="input-Line numbers">Line numbers</label>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-3">
+                <Button
+                  onClick={loadSampleJSON}
+                  variant="outline"
+                  size="sm"
+                  className="border-gray-600 text-gray-300 hover:bg-gray-700"><Upload className="w-4 h-4 mr-2" />
                   <Upload className="w-4 h-4 mr-2" />
                   Load Sample
                 </Button>
@@ -898,10 +927,34 @@ variant='outline';'
                     <strong>Error:</strong> {errorMessage}
                   </div>
                 )}
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+                <div className='flex space-x-3'>
+                  <Button
+                    onClick={formatJSON}
+                    disabled={!inputJson.trim()}
+                    className='flex-1 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white py-3 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed'
+                  >
+                    <Code className='w-5 h-5 mr-2' />                    Format JSON                  <Button
+                    onClick={formatJSON}
+                    disabled={!inputJson.trim()}
+                    className="flex-1 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white py-3 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"><Code className="w-5 h-5 mr-2" />
+                    <Code className="w-5 h-5 mr-2" />
+                    Format JSON
+                  </Button>
+                  <Button
+                    onClick={minifyJSON}
+                    disabled={!inputJson.trim()}
+                    variant='outline'
+                    className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'                  >                    variant="outline"
+                    className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50"
+                  >
+                    Minify
+                  </Button>
+                  <Button
+                    onClick={validateJSON}
+                    disabled={!inputJson.trim()}
+                    variant='outline'
+                    className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'                  >                    variant="outline"
+                    className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50"
                   >
                     Validate
 
@@ -1133,9 +1186,7 @@ onClick={() =    />}
                       onClick={() => copyToClipboard(formattedJson)}
                       variant="outline"
                       size="sm"
-                      className="border-gray-600 text-gray-300 hover:bg-gray-700"
-                    >
-                      <Copy className="w-4 h-4 mr-2" />
+                      className="border-gray-600 text-gray-300 hover:bg-gray-700"><Copy className="w-4 h-4 mr-2" />
                       Copy
                     </Button>
                     <Button
@@ -1168,8 +1219,27 @@ onClick={() =    />}
                       onClick={() => downloadJSON(formattedJson, 'formatted.json')}
                       variant="outline"
                       size="sm"
-                      className="border-gray-600 text-gray-300 hover:bg-gray-700"
-                    >
+                      className="border-gray-600 text-gray-300 hover:bg-gray-700"><Download className='w-4 h-4 mr-2' />
+            <Card className="p-8 bg-gray-800 border border-gray-700">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-2xl font-bold text-white flex items-center">
+                  <CheckCircle className="w-6 h-6 mr-3 text-cyan-400" />
+                  Formatted Output
+                </h3>
+                {formattedJson && (
+                  <div className="flex items-center space-x-2">
+                    <Button
+                      onClick={() => copyToClipboard(formattedJson)}
+                      variant="outline"
+                      size="sm"
+                      className="border-gray-600 text-gray-300 hover:bg-gray-700"><Copy className="w-4 h-4 mr-2" />
+                      Copy
+                    </Button>
+                    <Button
+                      onClick={() => downloadJSON(formattedJson, 'formatted.json')}
+                      variant="outline"
+                      size="sm"
+                      className="border-gray-600 text-gray-300 hover:bg-gray-700"><Download className="w-4 h-4 mr-2" />
                       <Download className="w-4 h-4 mr-2" />
                       Download
                     </Button>

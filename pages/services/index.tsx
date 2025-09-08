@@ -151,7 +151,34 @@ export default function ServicesIndex(...args: any[]): any {
               </div>
             ))}
           </div>
-        </div>
+        </section>
+        {/* Call to Action */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto max-w-4xl text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact us today to discuss how our services can transform your business.
+              </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+                >
+                  Contact Sales
+                </a>
+                <a
+                  href="/get-started"
+                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
+                >
+                  Get Started
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
       </div>
     </div>
   );

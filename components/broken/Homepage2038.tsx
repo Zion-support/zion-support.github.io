@@ -349,10 +349,7 @@ initial={{ opacity: 0, y: 20 }
 
                     className="group px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 text-lg"
                     whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <span className="flex items-center gap-3">
-
+                    whileTap={{ scale: 0.95 }}><span className="flex items-center gap-3">
                       Get Started
                       <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                     </span>
@@ -773,7 +770,33 @@ className='p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300'
                 </div>
                 <div className='text-sm text-green-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity'    />
                   Unlimited potential
-                </div>
+                </div>              </motion.div>            >
+              <motion.div
+                className="p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
+                whileHover={{ scale: 1.05 }}><div className="text-5xl font-bold text-cyan-400 mb-3 group-hover:text-cyan-300 transition-colors">100+</div>
+                <div className="text-gray-300 text-lg">AI Services</div>
+                <div className="text-sm text-cyan-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">Cutting-edge solutions</div>
+              </motion.div>
+              <motion.div
+                className="p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
+                whileHover={{ scale: 1.05 }}><div className="text-5xl font-bold text-blue-400 mb-3 group-hover:text-blue-300 transition-colors">200+</div>
+                <div className="text-gray-300 text-lg">Quantum Solutions</div>
+                <div className="text-sm text-blue-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">Next-gen computing</div>
+              </motion.div>
+              <motion.div
+                className="p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
+                whileHover={{ scale: 1.05 }}><div className="text-5xl font-bold text-purple-400 mb-3 group-hover:text-purple-300 transition-colors">24/7</div>
+                <div className="text-gray-300 text-lg">Autonomous Operations</div>
+                <div className="text-sm text-purple-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">Always available</div>
+              </motion.div>
+              <motion.div
+                className="p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
+                whileHover={{ scale: 1.05 }}><div className="text-5xl font-bold text-green-400 mb-3 group-hover:text-green-300 transition-colors">∞</div>
+                <div className="text-gray-300 text-lg">Future Possibilities</div>
+                <div className="text-sm text-green-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">Unlimited potential</div>
+                <div className="text-5xl font-bold text-green-400 mb-3 group-hover:text-green-300 transition-colors">∞</div>
+                <div className="text-gray-300 text-lg">Future Possibilities</div>
+                <div className="text-sm text-green-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">Unlimited potential</div>
               </motion.div>
             </motion.div>
           </div>
@@ -1215,9 +1238,8 @@ key={service.id}
 
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}>;
-                  <UltraFuturisticServiceCard2038
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}><UltraFuturisticServiceCard2038
                     service={service}
 <<<<<<< HEAD
 
@@ -2106,12 +2128,9 @@ className='px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold 
                   whileInView={{ opacity: 1, coordinate_y: 0 }
 
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }
-
-                    />
-                  <UltraFuturisticServiceCard2038
-                    service={service}"
-                    variant='automation'                     />                    variant=\'automation\'
+                  viewport={{ once: true }}><UltraFuturisticServiceCard2038
+                    service={service}
+                    variant='automation'                  />                    variant="automation"
                   />
                 </motion.div>))}
             </div>
@@ -2802,9 +2821,8 @@ key={service.id}
 
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}>;
-                  <UltraFuturisticServiceCard2038
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}><UltraFuturisticServiceCard2038
                     service={service}
 
 
@@ -3908,9 +3926,7 @@ className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold round
                   <motion.button
                     className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 text-lg"
                     whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <span className="flex items-center gap-3">
+                    whileTap={{ scale: 0.95 }}><span className="flex items-center gap-3">
                       Get Started Today
                       <ArrowRight className="w-6 h-6" />
                     </span>

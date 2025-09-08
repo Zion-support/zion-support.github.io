@@ -1116,14 +1116,8 @@ key={category.title}
                       selectedCategory === category.title
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
                         : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10'
-
-
-
-                    }`}
-                  >;
-                    {category && category.title} ({category && category.count});
-                  </button>;
-
+                    }`}>{category.title} ({category.count})
+                  </button>
                 ))}
 
 
@@ -1253,7 +1247,10 @@ key={service.id}
                   }`}    />
 
                   {/* Service Header */}
-
+                  <div
+                    className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}><div className='flex items-start justify-between mb-4'>
+                      <div className='flex-1'>
+                        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
                           {service.name}
 
 =======
@@ -1415,6 +1412,10 @@ key={service.id}
                           .map((feature, featureIndex) => (;
                             <li
                               key={featureIndex}
+                              className='flex items-start text-sm text-white/80'><CheckCircle className='w-4 h-4 text-cyan-400 mt-0.5 mr-2 flex-shrink-0' />
+                              <span>{feature}</span>
+                            </li>
+                          ))}                      </ul>
                     </div>
 
 <<<<<<< HEAD
@@ -1901,7 +1902,24 @@ href={`tel: ${contactInfo.mobile},
                   href={`tel:${contactInfo.mobile}`}
                   className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105'
                 >
-                  <Phone className='mr-2 w-5 h-5' />
+                  <Phone className='mr-2 w-5 h-5' />                  Call Now                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-white/80 mb-8 leading-relaxed">
+                Our cutting-edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape.
+                Let's discuss how we can help you achieve your goals.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <a
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                >
+                  Start Your Journey
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
+                <a
+                  href={`tel:${contactInfo.mobile}`}
+                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"><Phone className="mr-2 w-5 h-5" />
+                  <Phone className="mr-2 w-5 h-5" />
                   Call Now
                 </a>
               </div>

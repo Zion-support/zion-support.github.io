@@ -1866,15 +1866,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className='group';
-                  >;
-                    <Link href={service.link}>;
-                      <div className='relative p-6 bg-black/50 backdrop-blur-sm border border-gray-700/50 rounded-xl hover:border-cyan-400/50 transition-all duration-300 hover:scale-105'>;
-                        <div className='flex items-start justify-between mb-4'>;
-                          <div className='text-3xl'>{service.icon}</div>;
-                          {service.popular && (<span className='px-3 py-1 text-xs bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-full'>;
-                              New;
-                            </span>;
+                    className='group'><Link href={service.link}>
+                      <div className='relative p-6 bg-black/50 backdrop-blur-sm border border-gray-700/50 rounded-xl hover:border-cyan-400/50 transition-all duration-300 hover:scale-105'>
+                        <div className='flex items-start justify-between mb-4'>
+                          <div className='text-3xl'>{service.icon}</div>
+                          {service.popular && (
+                            <span className='px-3 py-1 text-xs bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-full'>
+                              New
+                            </span>
                           )}
                         </div>;
 

@@ -184,9 +184,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                       key={link.name}
                       href={link.href}
                       className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
-                      onClick={onClose}
-                    >
-                      {link.name}
+                      onClick={onClose}>{link.name}
                     </Link>
                   ))}
                 </div>
@@ -208,10 +206,13 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     <span>364 E Main St STE 1008, Middletown DE 19709</span>
                   </div>
                 </div>
-                <button className="flex items-center space-x-3 w-full px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                  <LogOut className="h-5 w-5" />
-                  <span className="font-medium">Sign Out</span>
-                </button>
+                <div className="mt-4">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                    onClick={onClose}><span>Get Started</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </Link>
               </div>
             </div>
           </motion.div>

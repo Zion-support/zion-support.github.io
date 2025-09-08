@@ -89,41 +89,267 @@ export default function Innovative2025ServicesShowcase() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-8"
-          >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Innovative 2025
-              </span>
-              <br />
-              <span className="text-white">Services Showcase</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover revolutionary technology services that will transform your business in 2025. From AI-powered solutions to quantum computing and space technology.
-            </p>
-          </motion.div>
-
-          {/* CTA Buttons */}
-          <motion.div
+            transition={{ duration: 0.8 }}><span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              Innovative 2025
+            </span>
+            <br />
+            <span className="text-white">Services Showcase</span>
+          </motion.h1>
+          <motion.p
+            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
-            <Link
-              href="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold text-lg rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-            >
-              Get Started Today
-            </Link>
-            <Link
-              href="/services"
-              className="px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10 hover:border-cyan-500/50 font-bold text-lg rounded-2xl transition-all duration-300"
-            >
-              View All Services
-            </Link>
-          </motion.div>
+            Experience the future of technology with our revolutionary AI platforms, quantum computing solutions
+            autonomous systems, and innovative micro SAAS services that are transforming industries worldwide.
+          </motion.p>
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}><div className="max-w-7xl mx-auto">
+              {/* Search Bar */}
+              <div className="mb-8">
+                <div className="relative max-w-2xl mx-auto">
+                  <input
+                    type="text"
+                    placeholder="Search innovative services..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full px-6 py-4 bg-gray-900/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  />
+                  <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
+                </div>
+              </div>
+              {/* Category Filters */}
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
+                {categories.map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`flex items-center space-x-2 px-6 py-3 rounded-xl border transition-all duration-300 ${
+                      selectedCategory === category.id
+                        ? 'border-purple-500 bg-purple-500/20 text-purple-300'
+                        : 'border-gray-700 text-gray-300 hover:border-gray-600 hover:text-white'
+                    }`}><category.icon className="w-5 h-5" />
+                    <span>{category.name}</span>
+                    <span className="bg-gray-700 px-2 py-1 rounded-full text-xs">
+                      {category.count}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </motion.section>
+          {/* Services Grid */}
+          <motion.section
+            className="relative z-20 py-16 px-4 sm:px-6 lg:px-8"
+            variants={staggerContainer}
+            initial="initial"
+            animate="animate"><div className="max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredServices.map((service) => (
+                  <motion.div
+                    key={service.id}
+                    className="group relative"
+                    variants={fadeInUp}
+                    whileHover={{ y: -10 }}
+                    transition={{ duration: 0.3 }}><div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm">
+                      {/* Service Icon and Header */}
+                      <div className="p-8">
+                        <div className="flex items-center justify-between mb-6">
+                          <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${(service as any).color |'from-blue-500 to-purple-500'} flex items-center justify-center text-3xl`}>
+                            {(service as any).icon |'🚀'}
+                          </div>
+                                                      {(service as any).popular && (
+                            <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
+                              POPULAR
+                            </div>
+                          )}
+                        </div>
+                        {/* Service Name and Tagline */}
+                        <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
+                          {service.name}
+                        </h3>
+                        <p className="text-gray-300 mb-6 leading-relaxed">
+                          {(service as any).tagline |service.description?.substring(0, 100) |'Innovative service solution'}
+                        </p>
+                        {/* Price */}
+                        <div className="flex items-baseline mb-6">
+                          <span className="text-3xl font-bold text-white">{(service as any).price |(service as any).pricing?.starter |'Contact Us'}</span>
+                          <span className="text-gray-400 ml-2">{(service as any).period |''}</span>
+                        </div>
+                        {/* Features */}
+                        <div className="space-y-3 mb-8">
+                          {service.features.slice(0, 5).map((feature, featureIndex) => (
+                            <div key={featureIndex} className="flex items-start space-x-3">
+                              <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                              <span className="text-gray-300 text-sm">{feature}</span>
+                            </div>
+                          ))}
+                          {service.features.length > 5 && (
+                            <div className="text-gray-500 text-sm">
+                              +{service.features.length - 5} more features
+                            </div>
+                          )}
+                        </div>
+                        {/* Service Stats */}
+                        <div className="grid grid-cols-3 gap-4 mb-6 text-center">
+                          <div>
+                            <div className="text-lg font-bold text-white">{(service as any).customers |'1000'}+</div>
+                            <div className="text-xs text-gray-400">Customers</div>
+                          </div>
+                          <div>
+                            <div className="text-lg font-bold text-white">{(service as any).rating |'4.8'}</div>
+                            <div className="text-xs text-gray-400">Rating</div>
+                          </div>
+                          <div>
+                            <div className="text-lg font-bold text-white">{(service as any).reviews |'500'}</div>
+                            <div className="text-xs text-gray-400">Reviews</div>
+                          </div>
+                        </div>
+                        {/* CTA Button */}
+                        <Link
+                          href={`/services/${service.id}`}
+                          className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+                        >
+                          <span>Learn More</span>
+                          <ArrowRight className="w-5 h-5" />
+                        </Link>
+                      </div>
+                      {/* Hover Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+              {filteredServices.length === 0 && (
+                <motion.div
+                  className="text-center py-20"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}><div className="text-6xl mb-6">🔍</div>
+                  <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
+                  <p className="text-gray-400 mb-8">
+                    Try adjusting your search terms or category filters
+                  </p>
+                  <button
+                    onClick={() => {
+                      setSearchTerm('')
+                      setSelectedCategory('all')
+                    }}
+                    className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+                  >
+                    Clear Filters
+                  </button>
+                </motion.div>
+              )}
+            </div>
+          </motion.section>
+          {/* Contact Section */}
+          <motion.section
+            className="relative z-20 py-20 px-4 sm:px-6 lg:px-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2 }}><div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl md:text-5xl font-bold mb-8">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 mb-12">
+                Get in touch with our team to learn more about our innovative 2025 services
+                and how they can revolutionize your operations.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div className="text-center">
+                  <Phone className="w-8 h-8 text-purple-400 mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+                  <p className="text-gray-300">+1 302 464 0950</p>
+                </div>
+                <div className="text-center">
+                  <Mail className="w-8 h-8 text-purple-400 mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+                  <p className="text-gray-300">kleber@ziontechgroup.com</p>
+                </div>
+                <div className="text-center">
+                  <MapPin className="w-8 h-8 text-purple-400 mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+                  <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
+                >
+                  Contact Us Today
+                </Link>
+                <Link
+                  href="/services"
+                  className="border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold hover:border-gray-500 transition-all duration-300"
+                >
+                  View All Services
+                </Link>
+              </div>
+            </div>
+          </motion.section>
+          {/* Footer */}
+          <motion.footer
+            className="relative z-20 py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.4 }}><div className="max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
+                <div>
+                  <div className="flex items-center space-x-2 mb-4">
+                    <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                      <Zap className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-lg font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                      Zion Tech Group
+                    </span>
+                  </div>
+                  <p className="text-gray-400 text-sm">
+                    Transforming businesses with innovative technology solutions for the future.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold mb-4">Services</h3>
+                  <ul className="space-y-2 text-sm text-gray-400">
+                    <li><Link href="/services" className="hover:text-white transition-colors">AI Services</Link></li>
+                    <li><Link href="/services" className="hover:text-white transition-colors">IT Infrastructure</Link></li>
+                    <li><Link href="/services" className="hover:text-white transition-colors">Micro SAAS</Link></li>
+                    <li><Link href="/services" className="hover:text-white transition-colors">Cybersecurity</Link></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold mb-4">Company</h3>
+                  <ul className="space-y-2 text-sm text-gray-400">
+                    <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+                    <li><Link href="/team" className="hover:text-white transition-colors">Our Team</Link></li>
+                    <li><Link href="/careers" className="hover:text-white transition-colors">Careers</Link></li>
+                    <li><Link href="/news" className="hover:text-white transition-colors">News</Link></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold mb-4">Connect</h3>
+                  <ul className="space-y-2 text-sm text-gray-400">
+                    <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+                    <li><Link href="/support" className="hover:text-white transition-colors">Support</Link></li>
+                    <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
+                    <li><Link href="/resources" className="hover:text-white transition-colors">Resources</Link></li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-12 pt-8 border-t border-gray-800 text-center">
+                <p className="text-gray-400 text-sm">
+                  © 2025 Zion Tech Group. All rights reserved.
+                  <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link>
+                  <Link href="/terms" className="hover:text-white transition-colors ml-2">Terms of Service</Link>
+                </p>
+              </div>
+            </div>
+          </motion.footer>
         </div>
       </section>
 

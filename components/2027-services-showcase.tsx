@@ -450,15 +450,12 @@ const contactInfo = {mobile: '+1 302 464 0950',
               >
                 <DollarSign className='w-5 h-5' />                <span>View Pricing</span>              <Link
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2"
-              >
-                <Rocket className="w-5 h-5" />
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2"><Rocket className="w-5 h-5" />
                 <span>Get Started</span>
               </Link>
               <Link
                 href="/pricing"
-                className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2"
-              >
+                className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2"><DollarSign className="w-5 h-5" />
                 <DollarSign className="w-5 h-5" />
 
                 <span>View Pricing</span>
@@ -511,8 +508,7 @@ const contactInfo = {mobile: '+1 302 464 0950',
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400"
-                >
+                  className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400">{categories.map((category) => (
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
                       {category.icon} {category.name} ({category.count})
@@ -562,8 +558,12 @@ const contactInfo = {mobile: '+1 302 464 0950',
                 <select
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)}
-                  className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400"
-                >
+                  className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400">{priceRanges.map(range => (
+                <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Price Range">Price Range</label>
+                <select
+                  value={selectedPriceRange}
+                  onChange={(e) => setSelectedPriceRange(e.target.value)}
+                  className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400">{priceRanges.map((range) => (
                   {priceRanges.map((range) => (
                     <option key={range.id} value={range.id}>
                       {range.name} ({range.count})
@@ -588,378 +588,19 @@ const contactInfo = {mobile: '+1 302 464 0950',
                   <option value='price'>Price</option>;
                   <option value='roi'>ROI</option>                </select>                <select
                   value={sortBy}
-<<<<<<< HEAD
-
-
-                  onChange={(e) => setSortBy(e && e.target.value)}
-                  className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400";
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      <UltraFuturisticNavigation2027 />;
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content='2027 Services Showcase - Zion Tech Group' />
-        <meta name='twitter:description' content='Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions.' />
-      </Head>
-
-      <UltraFuturisticNavigation2027 />
-
-      {/* Hero Section */}
-<section className='pt-32 pb-20 px-4 'sm':px-6 'lg':px-8'>;'
-        <div className='max-w-7xl mx-auto text-center'>;'
-          <motion.div;
-            initial={ 'opacity': 0, 'y': 30 }
-            animate={ 'opacity': 1, 'y': 0 }
-            transition={ 'duration': 0.8 }
-            initial={ 'opacity': 0, 'y': 30 
-}
-            animate={ 'opacity': 1, 'y': 0 }
-            transition={ 'duration': 0.8 
-}
-          >;
-<h1 className='text-5xl 'md':text-7xl font-bold mb-6'>;'
-              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;'
-                2027 Services Showcase;
-              </span>;
-            </h1>;
-            <p className='text-xl 'md':text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto'>;'
-              Experience the future of technology with our revolutionary 2027;
-              services. From AI consciousness evolution to practical micro SAAS;
-              solutions.;
-            </p>;
-            {/* Stats */}
-            <div className='grid grid-cols-2 'md':grid-cols-4 gap-6 mb-12'>;'
-              <div className='text-center'>;'
-                <div className='text-3xl 'md':text-4xl font-bold text-cyan-400 mb-2'>;'
-                  {allServices.length}+;
-                </div>;
-                <div className='text-cyan-300'>Services</div>;'
-              </div>;
-              <div className='text-center'>;'
-                <div className='text-3xl 'md':text-4xl font-bold text-purple-400 mb-2'>;'
-                  15+;
-                </div>;
-                <div className='text-purple-300'>Categories</div>;'
-              </div>;
-              <div className='text-center'>;'
-                <div className='text-3xl 'md':text-4xl font-bold text-pink-400 mb-2'>;'
-                  1000+;
-                </div>;
-                <div className='text-pink-300'>Customers</div>;'
-              </div>;
-              <div className='text-center'>;'
-                <div className='text-3xl 'md':text-4xl font-bold text-green-400 mb-2'>;'
-                  4.9★;
-                </div>;
-                <div className='text-green-300'>Rating</div>;'
-              </div>;
-            </div>;
-            {/* CTA Buttons */}
-<div className='flex flex-col 'sm':flex-row gap-4 justify-center'>;'
-              <Link;
-                href='/contact';'
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl 'hover':from-cyan-600 'hover':to-purple-700 transition-all duration-300 transform 'hover':shadow-xl 'hover':shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2';'
-              >;
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl 'hover':from-cyan-600 'hover':to-purple-700 transition-all duration-300 transform 'hover':shadow-xl 'hover':shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2'>'
-
-                <Rocket className='w-5 h-5' />;'
-                <span>Get Started</span>;
-              </Link>;
-              <Link;
-                href='/pricing';'
-                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl 'hover':bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2';'
-              >;
-                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl 'hover':bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2'>'
-
-                <DollarSign className='w-5 h-5' />;'
-                <span>View Pricing</span>;
-<<<<<<< HEAD
-
-=======
-          name='twitter:title';
-          content='2027 Services Showcase - Zion Tech Group';
-        <meta;
-          name='twitter:description';
-          content='Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions.';
-           />      </Head>        {/* Open Graph */}
-              </span>;
-            </h1>;
-            <p className=\"text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto\"    />;
-              Experience the future of technology with our revolutionary 2027 services. From AI consciousness evolution to practical micro SAAS solutions.;
-            </p>;
-            {/* Stats */}
-            <div className=\"grid grid-cols-2 md:grid-cols-4 gap-6 mb-12\"    />;
-              <div className=\"text-center\"    />;
-                <div className=\"text-3xl md:text-4xl font-bold text-cyan-400 mb-2\"    />;
-                  {allServices.length}+;
-                </div>;
-                <div className=\"text-cyan-300\"    />Services</div>;
-              </div>;
-              <div className=\"text-center\"    />;
-                <div className=\"text-3xl md:text-4xl font-bold text-purple-400 mb-2\"    />;
-                  15+;
-                </div>;
-                <div className=\"text-purple-300\"    />Categories</div>;
-              </div>;
-              <div className=\"text-center\"    />;
-                <div className=\"text-3xl md:text-4xl font-bold text-pink-400 mb-2\"    />;
-                  1000+;
-                </div>;
-                <div className=\"text-pink-300\"    />Customers</div>;
-              </div>;
-              <div className=\"text-center\"    />;
-                <div className=\"text-3xl md:text-4xl font-bold text-green-400 mb-2\"    />;
-                  4.9★;
-                </div>;
-                <div className=\"text-green-300\"    />Rating</div>;
-              </div>;
-            </div>;
-                href=\'/contact\';
-                className=\"px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2\">;
-                <Rocket className=\"w-5 h-5\"    />;
-                <span    />Get Started</span>;
-              </Link>;
-              <Link;
-                href=\'/pricing\';
-           />;
-      </Head>;
-      <UltraFuturisticNavigation2027    />;
-      {/* Hero Section */}
-<section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'    />;
-        <div className='max-w-7xl mx-auto text-center'    />;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            initial={{ opacity: 0, y: 30 ,}
-}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 ,}
-}
-              />;
-<h1 className='text-5xl md:text-7xl font-bold mb-6'    />;
-              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'    />;
-                2027 Services Showcase;
-              </span>;
-            </h1>;
-            <p className='text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto'    />;
-              Experience the future of technology with our revolutionary 2027;
-              services. From AI consciousness evolution to practical micro SAAS;
-              solutions.;
-            </p>;
-            {/* Stats */}
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'    />;
-              <div className='text-center'    />;
-                <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'    />;
-                  {allServices.length}+;
-                </div>;
-                <div className='text-cyan-300'    />Services</div>;
-              </div>;
-              <div className='text-center'    />;
-                <div className='text-3xl md:text-4xl font-bold text-purple-400 mb-2'    />;
-                  15+;
-                </div>;
-                <div className='text-purple-300'    />Categories</div>;
-              </div>;
-              <div className='text-center'    />;
-                <div className='text-3xl md:text-4xl font-bold text-pink-400 mb-2'    />;
-                  1000+;
-                </div>;
-                <div className='text-pink-300'    />Customers</div>;
-              </div>;
-              <div className='text-center'    />;
-                <div className='text-3xl md:text-4xl font-bold text-green-400 mb-2'    />;
-                  4.9★;
-                </div>;
-                <div className='text-green-300'    />Rating</div>;
-              </div>;
-            </div>;
-            {/* CTA Buttons */}
-<div className='flex flex-col sm:flex-row gap-4 justify-center'    />;
-              <Link;
-                href='/contact';
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2';
-                  />;
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2'>
-
-                <Rocket className='w-5 h-5'    />;
-                <span    />Get Started</span>;
-              </Link>;
-              <Link;
-                href='/pricing';
-                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2';
-                  />;
-                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2'>
-
-                <DollarSign className='w-5 h-5'    />;
-                <span    />View Pricing</span>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-<<<<<<< HEAD
-
-                className=\"px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2\">;
-                <DollarSign className=\"w-5 h-5\"    />;
-                <span    />View Pricing</span>;
-
-=======
-                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl 'hover':bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2'>;'
-                <DollarSign className='w-5 h-5' />;'
-                <span>View Pricing</span>;
-                className=\"px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2\">;
-                <DollarSign className=\"w-5 h-5\"    />;
-                <span    />View Pricing</span>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              </Link>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;{/* Search and Filters */}<input;
-<<<<<<< HEAD
-
-                  type=\'text\';
-                  placeholder=\'Search services...\';
-
-                  value={searchTerm}
-                </select    />;
-              </div>;{/* Price Range Filter */}
-
-              <div    />;
-                <label className='block text-cyan-400 font-medium mb-2'    />;
-
-                  Price Range;
-                </label>;
-                <select;
-                  value={selectedPriceRange}
-
-                  onChange={e =    /> setSelectedPriceRange(e && e.target.value)}
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400';
-
-                >;
-                  {priceRanges && priceRanges.map(range => (                    <option key={range && range.id} value={range && range.id}    />                <select;
-                  value={selectedPriceRange}
-
-                  onChange={(e) =    /> setSelectedPriceRange(e && e.target.value)}
-                  className=\'w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400\';
-                >;
-                  {priceRanges && priceRanges.map((range) => (<option key={range && range.id} value={range && range.id}    />;
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus: outline-none focus:border-cyan-400'>
-
-
-                  {priceRanges && priceRanges.map(range => (                    <option key={range && range.id} value={range && range.i,}
-}    />                <select;
-                  value={selectedPriceRange}
-                  onChange={(e) =    /> setSelectedPriceRange(e && e.target.value)}
-                  className=\"w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus: outline-none focus:border-cyan-400\">
-
-                  {priceRanges && priceRanges.map((range) => (<option key={range && range.id} value={range && range.i,}
-}    />;
-                      {range && range.name} ({range && range.count})</option>;<section className='px-4 sm:px-6 lg:px-8 mb-16'    />;
-        <div className='max-w-7xl mx-auto'    />;
-          <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 shadow-2xl shadow-cyan-500/20'    />;
-            {/* Search Bar */}
-            <div className='mb-6'    />;
-              <div className='relative'    />;
-                <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-cyan-400'    />;
-                <input;
-                  type='text';
-                  placeholder='Search services...';
-                  value={searchTerm}
-                  onChange={e =    /> setSearchTerm(e.target.value)}
-                  className='w-full pl-12 pr-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white placeholder-cyan-300 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20';
-                />;
-              </div>;
-            </div>;
-            {/* Filters */}
-
-<div className='grid grid-cols-1 md:grid-cols-3 gap-6'    />;
-              {/* Category Filter */}
-              <div    />;
-                <label className='block text-cyan-400 font-medium mb-2'    />;
-                  Category;
-                </label>;
-                <select;
-                  value={selectedCategory}
-                  onChange={e =    /> setSelectedCategory(e.target.value)}
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400';
-                >;
-                  {categories.map(category => (<option key={category.id} value={category.id}    />;
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus: outline-none focus:border-cyan-400'>
-
-=======
-                  type='text';'
-                  placeholder='Search services...';'
-                  value={searchTerm}
-                </select    />;
-              </div>;{/* Price Range Filter */}
-              <div>;
-
-                  {categories.map(category => (<option key={category.id} value={category.i,}
-}    />;
-                      {category.icon} {category.name} ({category.count})</option>;
-                  ))}
-                </select>;
-              </div>;
-              {/* Price Range Filter */}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-                >;
-                  {priceRanges.map(range => (<option key={range.id} value={range.id}    />;
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus: outline-none focus:border-cyan-400'>
-
-                  {priceRanges.map(range => (<option key={range.id} value={range.i,}
-}    />;
-                      {range.name} ({range.count})</option>;
-<<<<<<< HEAD
-
-
-=======
-                  onChange={(e) => setSelectedPriceRange(e.target.value)}
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400'
-                >
-                  {priceRanges.map((range) => (
-                    <option key={range.id} value={range.id}>
-                      {range.name} ({range.count})
-                    </option>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                  ))}
-              {/* Sort By */}
-              <div    />;
-                <label className='block text-cyan-400 font-medium mb-2'    />;
-                  Sort By;
-                </label>;{/* Sort By */}
-<<<<<<< HEAD
-
-              <div    />;
-                <label className=\"block text-cyan-400 font-medium mb-2\" htmlFor=\"input-Sort By\"    />Sort By</label>;
-                <select;
-                  value={sortBy}
-                  onChange={e =    /> setSortBy(e && e.target.value)}
-                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400'>
-
-
-                  <option value='name'    />Name</option>;
-                  <option value='price'    />Price</option>;
-                  <option value='roi'    />ROI</option>                </select>                <select;
-                  value={sortBy}
-
-                    />;
-                  <option value=\"name\"    />Name</option>;
-                  <option value=\"price\"    />Price</option>;
-                  <option value=\"roi\"    />ROI</option>;
-=======
-              <div>;
-                <label className='block text-cyan-400 font-medium mb-2' htmlFor='input-Sort By'>Sort By</label>;'
-                <select;
-              <div>
-                <label className='block text-cyan-400 font-medium mb-2'>Sort By</label>
-                <select
-                  value={sortBy}
-
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400"><option value="name">Name</option>
+                  <option value="price">Price</option>
+                  <option value="roi">ROI</option>
+                  <option value="name">Name</option>
+                  <option value="price">Price</option>
+                  <option value="roi">ROI</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Services Grid */}
 
                   <option value='name'>Name</option>;'

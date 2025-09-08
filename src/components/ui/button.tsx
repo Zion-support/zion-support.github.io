@@ -34,8 +34,7 @@ export function Button(...args: []):  {
       className={classes}
       onClick={onClick}
       disabled={disabled}
-    >
-      {children}
+      style={style}>{content}
     </button>
   );
 }

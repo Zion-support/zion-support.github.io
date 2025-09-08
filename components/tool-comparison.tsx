@@ -620,16 +620,10 @@ insights.
             </div>
           </div>
           {/* Stats */}
-
-
-
-
-<div;
-className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0.6s' }}
-              />
-            <div className='text-center group'    />
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'    />
+          <div
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
+            style={{ animationDelay: '0.6s' }}><div className='text-center group'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>
                 {allTools.length}+
 
               </div>
@@ -845,9 +839,7 @@ variant='outline';'
                     selectedCategory === category
                       ? 'bg-purple-600 text-white shadow-lg'
                       : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
-                  }`}
-                >
-                  {category}
+                  }`}>{category}
                 </button>
               ))}
 
@@ -939,8 +931,9 @@ value={sortBy}
 
 =======
                 onChange={(e) => setSortBy(e.target.value)}
-                className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-              >
+                className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"><option value="rating">Sort by Rating</option>
+                <option value="users">Sort by Users</option>
+                <option value="name">Sort by Name</option>
                 <option value="rating">Sort by Rating</option>
                 <option value="users">Sort by Users</option>
                 <option value="name">Sort by Name</option>
@@ -996,98 +989,61 @@ value={sortBy}
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Users</th>
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Best For</th>
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Actions</th>
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                onChange={(e) => setSortBy(e && e.target.value)}
-                className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500";
-              >;
-                <option value="rating">Sort by Rating</option>;
-                <option value="users">Sort by Users</option>;
-                <option value="name">Sort by Name</option>;
-<<<<<<< HEAD
-
-=======
-                <option value='rating'>Sort by Rating</option>; }'
-                <option value='users'>Sort by Users</option>;'
-                <option value='name'>Sort by Name</option>;'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-              </select>;
-            </div>;
-      </section>;
-      {/* Comparison Table */}
-
-<<<<<<< HEAD
-
-<section id='comparison' className='py-24 bg-black'    />
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />
-          <div className='text-center mb-20'    />
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'    />
-            </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'    />
-              Compare features, pricing, and user ratings to find the perfect;
-
-                          {tool && tool.icon}
-                        </div>;
-
-                        <div    />;
-                          <div className='font-semibold text-white'    />;
-
-                            {tool && tool.name}
-                          </div>;
-                        </div>;
-                      </div>;
-                    </td>;
-
-                    <td className='py-4 px-6'    />;
-                      <span className='px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300'    />;
-                        {tool && tool.category}
-                      </span>;
-                    </td>;
-                    <td className='py-4 px-6'    />;
-
-                      <span;
-                        className={`font-medium ${getPricingColor(tool && tool.pricing)}`}    />
-
-                        {tool && tool.pricing}
-                      </span>;
-                    </td>;
-
-=======
-                          className={`w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center ${tool && tool.color}`}>`
-                          {tool && tool.icon}
-                        </div>;
-                        <div>;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                    <td className='py-4 px-6'    />;
-                      <div className='flex items-center space-x-1'    />;
-                        <Star className='w-4 h-4 text-yellow-400 fill-current'    />;
-                        <span className='text-white'    />{tool && tool.rating}</span>;
-                      </div>;
-                    </td>;
-                    <td className='py-4 px-6 text-gray-300'    />{tool && tool.users}</td>;
-                    <td className='py-4 px-6'    />;
-                      <div className='max-w-xs text-sm text-gray-400'    />;
-                        {tool && tool.bestFor}
-                      </div>;
-                    </td>;
-                    <td className='py-4 px-6'    />;
-                      <div className='flex space-x-2'    />;
-                        <Button;
-                          href={tool && tool.website}
-                          variant='outline';
-                          size='sm';
-                          className='text-xs'    />;
-                          Visit;
-                          <ExternalLink className='w-3 h-3 ml-1'    />;
-                        </Button>;
-                        <Button;
-                          href={`/tool-details/${tool && tool.name.toLowerCase().replace(/\s+/g, '-')}`}
-
+              </thead>
+              <tbody>
+                {sortedTools.map((tool, index) => (
+                  <tr
+                    key={index}
+                    className='border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors duration-200'><td className='py-4 px-6'>
+                      <div className='flex items-center space-x-3'>
+                        <div
+                          className={`w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center ${tool.color}`}
+                        >
+                          {tool.icon}
+                        </div>
+                        <div>
+                          <div className='font-semibold text-white'>
+                            {tool.name}
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td className='py-4 px-6'>
+                      <span className='px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300'>
+                        {tool.category}
+                      </span>
+                    </td>
+                    <td className='py-4 px-6'>
+                      <span
+                        className={`font-medium ${getPricingColor(tool.pricing)}`}
+                      >
+                        {tool.pricing}
+                      </span>
+                    </td>
+                    <td className='py-4 px-6'>
+                      <div className='flex items-center space-x-1'>
+                        <Star className='w-4 h-4 text-yellow-400 fill-current' />
+                        <span className='text-white'>{tool.rating}</span>
+                      </div>
+                    </td>
+                    <td className='py-4 px-6 text-gray-300'>{tool.users}</td>
+                    <td className='py-4 px-6'>
+                      <div className='max-w-xs text-sm text-gray-400'>
+                        {tool.bestFor}
+                      </div>
+                    </td>
+                    <td className='py-4 px-6'>
+                      <div className='flex space-x-2'>
+                        <Button
+                          href={tool.website}
+                          variant='outline'
+                          size='sm'
+                          className='text-xs'                        >
+                          Visit
+                          <ExternalLink className='w-3 h-3 ml-1' />
+                        </Button>
+                        <Button
+                          href={`/tool-details/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
                           variant='ghost'
                           size='sm'
 

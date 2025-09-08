@@ -2401,28 +2401,24 @@ href={featuredServices[currentServiceIndex]?.link}
                   <ChevronRight className='w-6 h-6' />
                 </button>
                 {/* Service Indicators */}
-                      </span>;
-                    </div>;
-                    <a;
-                      href={featuredServices[currentServiceIndex]?.link}{featuredServices[currentServiceIndex]?.name}
-                    </h3>;
-                    <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto">;
-                      {featuredServices[currentServiceIndex]?.description}
-                    </p>;
-                    <div className="text-3xl font-bold text-cyan-400 mb-6">;
-                      {featuredServices[currentServiceIndex]?.price}
-                      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-full text-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300";
-                    >;
-                      Get Started;
-                      <ArrowRight className="w-5 h-5 ml-2" />;
-                      className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-full text-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300';
-                    >;
-                      Get Started;
-                      <ArrowRight className='w-5 h-5 ml-2' />;
-
-        {/* Enhanced Testimonials Section */}
-        <section className="py-20 px-4 relative">
-
+                <div className='absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2'>                  {featuredServices.map((_, index) => (                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button
+                  onClick={nextService}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm"><ChevronRight className="w-6 h-6" />
+                </button>
+                {/* Service Indicators */}
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+                  {featuredServices.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentServiceIndex(index)}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        index === currentServiceIndex
+                          ? 'bg-cyan-400 w-8'                          : 'bg-white/30 hover:bg-white/50'                        index === currentServiceIndex
+                          ? 'bg-cyan-400 w-8'
+                          : 'bg-white/30 hover:bg-white/50'
                       }`}
                     />
                   ))}

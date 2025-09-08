@@ -580,14 +580,51 @@ const user = await supabase.auth.getUser();
                   <option>Mid</option>
                   <option>Senior</option>
                   <option>Lead</option>
-
-<<<<<<< HEAD
-    if (!data);}
-  return [] as { label: string; value: number,}
-}[];
-
-=======
-
+                </select>
+              </div>
+              <div>
+                <label className='block text-sm mb-2'>Employment</label>
+                <select
+                  value={employmentType}
+                  onChange={e => setEmploymentType(e.target.value as any)}
+                  className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm'><option value='contract'>Contract</option>
+                  <option value='freelance'>Freelance</option>
+                  <option value='full-time'>Full-time</option>                </select>
+              </div>
+            </div>
+                <label className="block text-sm mb-2" htmlFor="input-Employment">Employment</label>
+                <select value={employmentType} onChange={(e) => setEmploymentType(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
+                  <option value="contract">Contract</option>
+                  <option value="freelance">Freelance</option>
+                  <option value="full-time">Full-time</option>
+              </div>
+            </div>
+            <div className='flex items-center gap-2 mt-3'>
+              <input
+                id='remote'
+                type='checkbox'
+                checked={remote}
+                onChange={e => setRemote(e.target.checked)}
+              />
+              <label htmlFor='remote' className='text-sm'>
+                Remote role
+              </label>
+            </div>
+            {!isLoggedIn && (
+              <div className='mt-3 text-xs text-gray-500'>                Advanced filters are available when you sign in.
+              </div>
+            )}
+            <div className="flex items-center gap-2 mt-3">
+              <input id="remote" type="checkbox" checked={remote} onChange={(e) => setRemote(e.target.checked)} />
+              <label htmlFor="remote" className="text-sm" htmlFor="input-Remote role">Remote role</label>
+            </div>
+            {!isLoggedIn && (
+              <div className="mt-3 text-xs text-gray-500">
+                Advanced filters are available when you sign in.
+              </div>
+            )}
+            <button
+              onClick={fetchInsights}
               disabled={loading}
               className='mt-4 w-full rounded bg-indigo-600 text-white py-2 text-sm hover:bg-indigo-700 disabled:opacity-50'    />
 

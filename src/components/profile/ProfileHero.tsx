@@ -1,10 +1,75 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Badge } from "@/components/ui/badge";
-import { Star } from "lucide-react";
-import { cn } from 'node_modules/@babel/types/lib/utils';
-export function ProfileHero({ name, title, avatarUrl, coverImageUrl, location, rating, reviewCount, aiScore, profileType }) {
-    return (<div className="w-full overflow-hidden">
+import { Star } from 'lucide-react'
+import { cn } from "@/lib/utils";
+interface ProfileHeroProps {
+  name: string;
+  title: string;
+  avatarUrl?: string;
+  coverImageUrl?: string;
+  location?: string;
+  rating?: number;
+  reviewCount?: number;
+  aiScore?: number;
+  profileType: 'service' | 'talent'
+export function ProfileHero({
+  name;
+  title;
+  avatarUrl;
+  coverImageUrl;
+  location;
+  rating;
+  reviewCount;
+  aiScore;
+  profileType
+}: ProfileHeroProps) {
+  return (
+    <div className;
+=======
+  name: string
+  title: string;  avatarUrl?: string;  name: string
+  title: string
+  avatarUrl?: string
+  coverImageUrl?: string
+  location?: string
+  rating?: number
+  reviewCount?: number
+  aiScore?: number
+  profileType: 'service' | 'talent'
+export function ProfileHero({
+  name
+  title
+  avatarUrl
+  coverImageUrl
+  location
+  rating
+  reviewCount
+  aiScore
+  profileType
+}: ProfileHeroProps) {
+  return (
+    <div className='w-full overflow-hidden'>
+      <div className='relative'>
+        <AspectRatio ratio={3 / 1} className='bg-zion-blue-light'>          {coverImageUrl ? (
+            <img
+              src={coverImageUrl}
+              alt={`${name} cover`}
+              className='w-full h-full object-cover'
+              loading='lazy'
+export function ProfileHero({
+  name
+  title
+  avatarUrl
+  coverImageUrl
+  location
+  rating
+  reviewCount
+  aiScore
+  profileType
+}: ProfileHeroProps) {
+  return (
+    <div className="w-full overflow-hidden">
       <div className="relative">
         <AspectRatio ratio={3 / 1} className="bg-zion-blue-light">
           {coverImageUrl ? (<img loading="lazy" src={coverImageUrl} alt={`${name} cover`} className="w-full h-full object-cover"/>) : (<div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark"/>)}

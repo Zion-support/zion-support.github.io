@@ -401,9 +401,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
     return (
       <div
         ref={ref}
-        className={`resume-a4 ${theme === 'dark' ? 'dark' : ''} bg-white dark:bg-black text-gray-900 dark:text-gray-100`}
-      >
-        <div className="p-8">
+        className={`resume-a4 ${theme === 'dark' ? 'dark' : ''} bg-white dark:bg-black text-gray-900 dark:text-gray-100`}><div className="p-8">
           {/* Header */}
           <header className="mb-6">
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">{data.name}</h1>

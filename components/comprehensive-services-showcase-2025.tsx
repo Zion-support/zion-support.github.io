@@ -1283,29 +1283,15 @@ type='text'
             {/* Category Filters */}
             <div className="flex flex-wrap items-center space-x-2">
               {categories.map((category) => (
-      <div className='bg-black/50 backdrop-blur-lg border-b border-cyan-500/20 sticky top-20 z-40'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
-          <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0'>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            {/* Category Filters */}
-
-            <div className='flex flex-wrap items-center space-x-2'    />
-              {categories.map(category => (}
-                <button;}
-key={category.name}
-                  on_click={() =    /> setSelectedCategory (category.name)}
-                  className={`flex items - center space - x-2 px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 200 ${selected_category === category.name;
-                      ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white shadow - lg shadow - cyan - 500 / 25';}
-                      : 'bg - white / 10 text - gray - 300 hover:bg - white / 20 hover:text - white';}
-                  }`}>
-
-<<<<<<< HEAD
-
-
-
-
-
-=======
+                  key={category.name}
+                  onClick={() => setSelectedCategory(category.name)}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                    selectedCategory === category.name
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                  }`}>{category.icon}
+                  <span>{category.name}</span>
+                  <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>                    {category.count}                  <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
                     {category.count}
 >>>>>>> origin/cursor/delete-old-data-records-6bba
                   key={category.name}
@@ -1452,8 +1438,8 @@ key={category.name}
               <select
                 value={selectedPriceRange}
                 onChange={(e) => setSelectedPriceRange(e.target.value)}
-                className="px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
-              >
+                className="px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50">{priceRanges.map((range) => (
+                  <option key={range.value} value={range.value} className="bg-gray-900 text-white">
                 {priceRanges.map((range) => (
                   <option key={range.value} value={range.value} className="bg-gray-900 text-white">
                     {range.label}
@@ -1541,12 +1527,18 @@ onClick={() =    /> setViewMode('grid')}
               {/* Sort Options */}
               <select
                 value={sortBy}
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+                onChange={e => setSortBy(e.target.value)}
+                className='px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50'>{sortOptions.map(option => (
+                  <option
+                    key={option.value}
+                    value={option.value}
+                    className='bg-gray-900 text-white'
+                  >                    {option.label}                onChange={(e) => setSortBy(e.target.value)}
+                className="px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+              >
+                {sortOptions.map((option) => (
+                  <option key={option.value} value={option.value} className="bg-gray-900 text-white">
+                  </option>
                 ))}
               </select>
               {/* View Mode Toggle */}

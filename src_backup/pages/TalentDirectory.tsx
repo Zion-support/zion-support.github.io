@@ -64,9 +64,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     variant="ghost"
                     size="sm"
                     onClick={() => setIsMobileFilterOpen(false)}
-                    className="text-zion-slate-light h-8 w-8 p-0"
-                  >
-                    <X className="h-4 w-4" />
+                    className="text-zion-slate-light h-8 w-8 p-0"><X className="h-4 w-4" />
                     <span className="sr-only">Close</span>
 >>>>>>> origin/resolved-merge-conflicts
                   </Button>

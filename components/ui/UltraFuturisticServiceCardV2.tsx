@@ -312,18 +312,64 @@ const getGradientClass = (
     >
 
       {/* Glow effect */}
-
-      <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200'    /></div>;
-
-                    {service && service.category}
-                  </span>;
-                </div>;
-              </div>;
-            </div>;
-
-            {service && service.popular && (;
-              <motion&& motion.div
-
+      <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200'></div>
+      {/* Main card */}
+      <div className='relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full overflow-hidden'>
+        {/* Background pattern */}
+        <div className='absolute inset-0 opacity-5'>
+          <div className='absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400'></div>
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]'></div>
+        </div>
+        {/* Header */}
+        <div className='relative z-10 mb-6'>
+          <div className='flex items-start justify-between mb-4'>
+            <div className='flex items-center space-x-3'>
+              <div className='text-3xl'>{service.icon}</div>
+              <div>
+                <div className='flex items-center space-x-2'>
+                  {getCategoryIcon(service.category)}
+                  <span className='text-xs font-medium text-gray-400 uppercase tracking-wider'>                    {service.category}    }
+    return 'from-cyan-500 to-blue-500'
+  }
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50, scale: 0.9 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{
+        duration: 0.6
+        delay: index * 0.1
+        ease: [0.25, 0.46, 0.45, 0.94]
+      }}
+      whileHover={{
+        y: -10
+        scale: 1.02
+        transition: { duration: 0.3 }
+      }}
+      className="group relative">{/* Glow effect */}
+      <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+      {/* Main card */}
+      <div className="relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full overflow-hidden">
+        {/* Background pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]"></div>
+        </div>
+        {/* Header */}
+        <div className="relative z-10 mb-6">
+          <div className="flex items-start justify-between mb-4">
+            <div className="flex items-center space-x-3">
+              <div className="text-3xl">{service.icon}</div>
+              <div>
+                <div className="flex items-center space-x-2">
+                  {getCategoryIcon(service.category)}
+                  <span className="text-xs font-medium text-gray-400 uppercase tracking-wider">
+                    {service.category}
+                  </span>
+                </div>
+              </div>
+            </div>
+            {service.popular && (
+              <motion.div
                 initial={{ scale: 0 }}
 
 

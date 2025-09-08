@@ -564,10 +564,8 @@ href={`/blog/${trend.id}`}
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'    />;
                 {automationTools.map((tool, index) => (<div;}
                     key={index}
-                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center'    />
-
-                    <div className='text-4xl mb-4'    />🔧</div>;
-                    <h3 className='text-xl font-bold mb-3 text-white'    />;
+                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center'><div className='text-4xl mb-4'>🔧</div>
+                    <h3 className='text-xl font-bold mb-3 text-white'>
                       {tool.title}
                     </h3>;
                     <p className='text-white/70 mb-4'    />{tool.description}</p>;

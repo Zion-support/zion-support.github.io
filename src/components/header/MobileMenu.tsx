@@ -35,14 +35,20 @@ export function MobileMenu({ className }) {
         {isOpen ? <X className="h-6 w-6"/> : <Menu className="h-6 w-6"/>}
       </Button>
 
-      {/* Mobile menu overlay */}
-      {isOpen && (<div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
-          <div className="fixed inset-y-0 right-0 w-80 bg-zion-blue-dark border-l border-zion-purple/20">
-            <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">
-              <h2 className="text-lg font-semibold text-white">Menu</h2>
-              <Button variant="ghost" size="sm" onClick={toggleMenu} className="p-2 text-white hover:bg-zion-purple/20">
-                <X className="h-5 w-5"/>
-              </Button>
+// Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts
+// These are routes that should trigger the login modal if accessed while unauthenticated.
+const protectedRoutes = null;
+                // It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility.
+                // Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay.
+              }
+              onClose(), // Close mobile menu on any click
+            }}><div className="relative mr-4">
+              <item.icon className="h-5 w-5" aria-hidden="true" />
+              {item.badge && item.badge > 0 && (
+                <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">
+                  {item.badge > 9 ? '9+' : item.badge}
+                </span>
+              )}
             </div>
 
             {/* Navigation items */}

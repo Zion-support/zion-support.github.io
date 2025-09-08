@@ -362,9 +362,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <option>Token Integration</option>
               <option>Custom Marketplace Instance</option>
             </select>
-            <button disabled={loading} className="bg-black text-white px-4 py-2 rounded disabled:opacity-50">{loading ? "Submitting..." : "Register"}</button>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+            <button
+              disabled={loading}
+              className='bg-black text-white px-4 py-2 rounded disabled:opacity-50'>{loading ? 'Submitting...' : 'Register'}
+            </button>
+          </form>
+          <div className='bg-white p-6 rounded-lg shadow'>
+            <h2 className='text-xl font-medium mb-4'>Available Endpoints</h2>
+            <ul className='list-disc ml-6 space-y-1 text-sm'>              <li>POST /talents</li>            <button disabled={loading} className="bg-black text-white px-4 py-2 rounded disabled:opacity-50">{loading ? "Submitting..." : "Register"}</button>
+          </form>
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h2 className="text-xl font-medium mb-4">Available Endpoints</h2>
+            <ul className="list-disc ml-6 space-y-1 text-sm">
               <li>GET /jobs</li>
               <li>GET /certifications</li>
               <li>POST /verify-student</li>

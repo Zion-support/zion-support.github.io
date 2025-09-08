@@ -1114,34 +1114,15 @@ key={index}
                       </span>
                     </div>
                   )}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-<<<<<<< HEAD
-=======
-                    tier.popular ? 'scale-105' : ''}
-}
-                  },
-}    />
-
-
-                  {tier.popular && (<div className='absolute -top-4 left-1/2 transform -translate-x-1/2'    />;
-                      <span className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold'    />;
-                        Most Popular;
-                      </span>;}
-                    </div>;}
-                  )}
-<div;
-                    className={`relative p-8 rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${tier.popular;
-                        ? 'border-cyan-500/50 shadow-cyan-500/20';}
-                        : '';}
-                    }`}    />
-
-                    <div className='text-center mb-8'    />;
-                      <div;
-                        className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${tier.color} mb-4`}    />
-
+                  <div
+                    className={`relative p-8 rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
+                      tier.popular
+                        ? 'border-cyan-500/50 shadow-cyan-500/20'
+                        : ''
+                    }`}><div className='text-center mb-8'>
+                      <div
+                        className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${tier.color} mb-4`}
+                      >
                         {tier.icon}
                       </div>;
                       <h3 className='text-2xl font-bold text-white mb-2'    />;
@@ -1405,13 +1386,8 @@ solutions for different business needs.
                     selectedCategory === category.name
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
                       : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10'
-
-
-
-                  }`}
-                >;
-                  {category && category.name} ({category && category.services.length});
-                </button>;
+                  }`}>{category.name} ({category.services.length})
+                </button>
               ))}
 
             </div>;
@@ -2104,7 +2080,24 @@ href={`'tel': ${contactInfo.mobile},`}
                   href={`tel:${contactInfo.mobile}`}
                   className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105'
                 >
-                  <Phone className='mr-2 w-5 h-5' />
+                  <Phone className='mr-2 w-5 h-5' />                  Call Now                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-white/80 mb-8 leading-relaxed">
+                Our team of experts is ready to help you choose the perfect plan and get you started with our
+                cutting-edge technology solutions. Contact us today for a personalized consultation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <a
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                >
+                  Start Your Journey
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
+                <a
+                  href={`tel:${contactInfo.mobile}`}
+                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"><Phone className="mr-2 w-5 h-5" />
+                  <Phone className="mr-2 w-5 h-5" />
                   Call Now
                 </a>
               </div>

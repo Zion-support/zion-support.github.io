@@ -1,39 +1,18 @@
-import React from 'react';
-import { Link    } from 'react-router-dom';
-import { motion    } from 'framer-motion';
-import { FooterNewsletter    } from '@/components/FooterNewsletter';
-import { Twitter, 
-  Linkedin, 
-  Facebook, 
-  Instagram, 
-  Github, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ArrowUp,
-  Globe,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Building,
-  Users,
-  FileText,
-  Video,
-  TestTube,
-  TrendingUp,
-  CheckCircle,
-  Briefcase,
-  Newspaper,
-  Target,
-  Rocket,
-  Heart,
-  DollarSign,
-  HelpCircle,
-  Activity,
-  Cpu,
-  GraduationCap
-   } from 'lucide-react';
+<<<<<<< HEAD
+import { FooterNewsletter } from "@/components/FooterNewsletter";
+import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
+import Link from "next/link", // Changed from react-router-dom
+import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
+function resolveUrl(envVar: string | undefined, fallback: string) {
+  if (!envVar || envVar.trim() === "" || envVar;
+                behavior: 'smooth' 
+              })
+            }}
+            className="flex items-center space-x-1 text-foreground/80 hover: text-primary text-sm transition-colors cursor-pointer"
+            aria-label="Back to top"><ChevronUp className="h-4 w-4" aria-hidden="true" />
+            <span>Back to Top</span>
+          </button>
+        </div>
 
 interface FooterLink {
   name: string;

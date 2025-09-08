@@ -94,72 +94,14 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            <Link
-              href="/"
-              className={`font-medium transition-colors duration-200 ${
-                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'
-              }`}
-            >
-              Home
-            </Link>
-            <div className="relative">
-              <button
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className={`flex items-center space-x-1 font-medium transition-colors duration-200 ${
-                  isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'
-                }`}
-              >
-                <span>Services</span>
-                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
-                  isServicesOpen ? 'rotate-180' : ''
-                }`} />
-              </button>
-              <AnimatePresence>
-                {isServicesOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border z-50"
-                    onMouseEnter={() => setIsServicesOpen(true)}
-                    onMouseLeave={() => setIsServicesOpen(false)}
-                  >
-                    <div className="p-6">
-                      <div className="grid grid-cols-2 gap-4">
-                        {servicesDropdown.map((service) => (
-                          <Link key={service.title} href={service.href} className="group">
-                            <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                              <service.icon className="w-6 h-6 text-blue-600 mt-1" />
-                              <div>
-                                <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">{service.title}</h3>
-                                <p className="text-sm text-gray-600">{service.description}</p>
-                              </div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-            <Link
-              href="/about"
-              className={`font-medium transition-colors duration-200 ${
-                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'
-              }`}
-            >
-              About
-            </Link>
-            <Link
-              href="/contact"
-              className={`font-medium transition-colors duration-200 ${
-                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'
-              }`}
-            >
-              Contact
-            </Link>
+          <nav className="hidden lg:flex space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">{item.name}
+              </Link>
+            ))}
           </nav>
 
           {/* CTA Button */}

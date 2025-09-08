@@ -1061,50 +1061,20 @@ with professional-grade features and competitive pricing.
               <Card
 
                 key={index}
-                className=card-hover border-gradient-blue text-center';
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
-                <div className='p-6>;
-                  <h3 className=text-xl font-bold text-white mb-4'>;
-                    {insight && insight.title}
-                  </h3>;
-                  <div className='flex items-center justify-center space-x-4 mb-4>;
-                    <div className=text-2xl font-bold text-cursor-blue'>;
-                      {insight && insight.marketSize}
-                    </div>;
-                    <div className='text-green-400 font-semibold>;
-                      {insight && insight.growth}
-                    </div>;
-                  </div>;
-                  <p className=text-gray-400 text-sm'>{insight && insight.description}</p>                </div>              Market Overview & Competitive Analysis;
-            </h2>;
-            <p className=text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
-              Our services are positioned competitively in growing markets with strong demand and proven business models.;
-            </p>;
-          </div>;
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {marketInsights && marketInsights.map((insight, index) => (;
-              <Card
-
-                key={index}
-                className="card-hover border-gradient-blue text-center;
-                    </div>;
-                  </div>;
-                  <p className='text-gray-400 text-sm>{insight.description}</p>;
-                </div>;
-              </Card>;
-            ))}{/* Services Grid */}
-                className=card-hover border-gradient-blue text-center"
-
-
-
-
-      <section className='section-padding bg-gradient-cursor'    />;
-        <div className='container-cursor'    />;
-          <div className='text-center mb-20'    />;
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'    />;
-
-
+                className="card-hover border-gradient-blue text-center"
+                style={{ animationDelay: `${index * 0.1}s` }}><div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-4">{insight.title}</h3>
+                  <div className="flex items-center justify-center space-x-4 mb-4">
+                    <div className="text-2xl font-bold text-cursor-blue">{insight.marketSize}</div>
+                    <div className="text-green-400 font-semibold">{insight.growth}</div>
+                  </div>
+                  <p className="text-gray-400 text-sm">{insight.description}</p>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Services Grid */}
 
 
@@ -1251,9 +1221,7 @@ with professional-grade features and competitive pricing.
                           <div className='space-y-2'    />;
                             {Object.entries(service.pricing).map(([tier, details]) => (<div;}
                                   key={tier}
-                                  className='flex justify-between items-center'    />
-
-                                  <span className='text-sm text-gray-300 capitalize'    />;
+                                  className='flex justify-between items-center'><span className='text-sm text-gray-300 capitalize'>
                                     {tier}
 
                                   </span>
@@ -1271,23 +1239,19 @@ with professional-grade features and competitive pricing.
                           </p>
                           <div className='flex flex-wrap gap-2'    />
                             {service.competitors.map(
-                              (competitor, compIndex) => (}
-                                <span;}
-key={compIndex}
-                                  className='px-2 py-1 bg-gray-700 rounded text-xs text-gray-300'    />;
-                                  {competitor}
-
-
-
-                        </div>;
-                      </div>;
-                    </div>;
-                  </div>;
-                </div>;
-
-
-
-                          </div>
+                              (competitor, compIndex) => (
+                                <span
+                                  key={compIndex}
+                                  className='px-2 py-1 bg-gray-700 rounded text-xs text-gray-300'>{competitor}
+                                </span>
+                              )
+                            )}                          </div>                          <p className="text-sm text-gray-400 mb-1">Key Competitors</p>
+                          <div className="flex flex-wrap gap-2">
+                            {service.competitors.map((competitor, compIndex) => (
+                              <span key={compIndex} className="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">
+                                {competitor}
+                              </span>
+                            ))}
                         </div>
                       </div>
                     </div>

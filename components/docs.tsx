@@ -342,15 +342,8 @@ href={e && e.url}
 >>>>>>> origin/cursor/delete-old-data-records-6bba
                     target='_blank'
                     rel='noopener noreferrer'
-
-                    className='text-cyan-400 hover:underline'
-                      />
-
-                    {e.nam,}
-}
-                  </a>;
-<<<<<<< HEAD
-
+                    className='text-cyan-400 hover:underline'>{e.name}
+                  </a>
                 </li>              ))}
 
                 Contact Support;
@@ -391,6 +384,37 @@ href={e && e.url}
             </ul>
           </Card>
           <Card className="p-6 bg-black/40 border border-gray-700/50">
+            <h2 className="text-xl font-semibold mb-4 text-white">External References</h2>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">
+              {external.map((e) => (
+                <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>
+            </ul>
+          </Card>
+          <Card className='p-6 bg-black/40 border border-gray-700/50'>
+            <h2 className='text-xl font-semibold mb-4 text-white'>
+              Need help?
+            </h2>
+            <div className='flex flex-col sm:flex-row gap-3'>
+              <Button
+                href='/contact'
+                className='bg-gradient-to-r from-cyan-600 to-blue-600 text-white'
+              >
+                Contact Support
+              </Button>
+              <Button
+                href={contact.website}
+                variant='outline'
+                className='border-gray-600 text-gray-200'
+              >
+                Visit Website
+              </Button>
+              <a
+                className='text-cyan-400'
+                href={`tel:${contact.mobile.replace(/[^+\\d]/g, '')}`}>{contact.mobile}
+              </a>
+              <a className='text-purple-400' href={`mailto:${contact.email}`}>
+                {contact.email}
+              </a>            </div>          <Card className="p-6 bg-black/40 border border-gray-700/50">
             <h2 className="text-xl font-semibold mb-4 text-white">Need help?</h2>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button href="/contact" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white">Contact Support</Button>

@@ -259,18 +259,24 @@ const getAnimatePosition = (switch (direction) {case 'up':;
         return { opacity: 1, y: 0,) => {
   return $3;}
 }
-}case 'down':;
-        return { opacity: 1, y: 0,}
-}case 'left':;
-        return { opacity: 1, x: 0,}
-}case 'right':;
-        return { opacity: 1, x: 0,}
-}default:;
-        return { opacity: 1, y: 0 }}
-  }{childre,}
-}
-    </motion && motion.div>;
-
+export default LazySection;      case 'down':
+        return { opacity: 1, y: 0 }
+      case 'left':
+        return { opacity: 1, x: 0 }
+      case 'right':
+        return { opacity: 1, x: 0 }
+      default:
+        return { opacity: 1, y: 0 }
+    }
+  }
+  return (
+    <motion.div
+      ref={ref}
+      initial={getInitialPosition()}
+      animate={isInView ? getAnimatePosition() : getInitialPosition()}
+      transition={{ duration: 0.8, delay, ease: "easeOut" }}
+      className={className}>{children}
+    </motion.div>
   )
 };
 

@@ -269,24 +269,10 @@ export default function PortfolioPage() {
               and growth            </p>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="mb-12"
-          >
-            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='mb-12'><p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
               Discover how we've helped organizations leverage cutting-edge
               technology to solve complex challenges and achieve remarkable
               results.            </p>
@@ -327,9 +313,7 @@ export default function PortfolioPage() {
                   selectedCategory === category
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
                     : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
-                }`}
-              >
-                {category}
+                }`}>{category}
               </button>
             ))}
           </div>

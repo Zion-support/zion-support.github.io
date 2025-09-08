@@ -1078,8 +1078,16 @@ className='text-center mb-12'
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-
-
+              viewport={{ once: true }}
+            >
+              {popularServices.slice(0, 6).map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  variants={itemVariants}
+                  whileHover={{ y: -10 }}><UltraFuturisticCard
+                    variant={service.variant as any}
+                    size='large'
+                    className='h-full cursor-pointer'
                     onClick={() => setSelectedService(service)}
 
 
@@ -1344,34 +1352,18 @@ key={service.id}
 
 
                   variants={itemVariants}
-
-                  whileHover={{ y: -5 ,}
-}    />;
-                  <UltraFuturisticCard;
-                    variant={service && service.variant as any}
+                  whileHover={{ y: -5 }}><UltraFuturisticCard
+                    variant={service.variant as any}
                     size={viewMode === 'grid' ? 'large' : 'medium'}
-
-=======
-                  variants={itemVariants}
-
-                          {service.features.slice(0, 3).map((feature, idx) => (<div;
-                              }
-                              key={idx}
-
-
-                    onClick={() =    /> setSelectedService(service)}
-
-                  >
-                    {viewMode === 'grid' ? (
-                      // Grid View}
-<div className='text-center'    />}
-                        <div className='text-4xl mb-4'    />{service.icon}</div>
-                        <h3 className='text-xl font-bold text-white mb-2'    />
-
-                          {service.nam,}
-}
-                        </h3>;
-                        <p className='text-gray-300 mb-4 text-sm'    />;
+                    className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
+                    onClick={() => setSelectedService(service)}>{viewMode === 'grid' ? (
+                      // Grid View
+                      <div className='text-center'>
+                        <div className='text-4xl mb-4'>{service.icon}</div>
+                        <h3 className='text-xl font-bold text-white mb-2'>
+                          {service.name}
+                        </h3>
+                        <p className='text-gray-300 mb-4 text-sm'>
                           {service.tagline}
                         </p>;
                         <div className='text-2xl font-bold text-cyan-400 mb-2'    />;
@@ -1443,17 +1435,8 @@ key={service.id}
                                 {service.features;}
                                   .slice(0, 4).map((feature, idx) => (<div;}
                                       key={idx}
-                                      className='flex items-center gap-2 text-sm'    />
-
-                                      <Check className='w-3 h-3 text-green-400 flex-shrink-0'    />;
-                                      <span className='text-gray-300'    />;
-=======
-                                {service.features;
-                                  .slice(0, 4).map((feature, idx) => (<div;
-                                      }
-                                      key={idx}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+                                      className='flex items-center gap-2 text-sm'><Check className='w-3 h-3 text-green-400 flex-shrink-0' />
+                                      <span className='text-gray-300'>
                                         {feature}
                                       </span>;
                                     </div>;
@@ -1672,9 +1655,7 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                       className='text-gray-400 hover:text-white text-2xl'                    >                initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
-                onClick={(e) => e.stopPropagation()}
-              >
-                <div className="p-8">
+                onClick={(e) => e.stopPropagation()}><div className="p-8">
                   <div className="flex justify-between items-start mb-6">
                     <div className="flex items-center gap-4">
                       <div className="text-5xl">{selectedService.icon}</div>
@@ -1995,12 +1976,26 @@ className='text-gray-400 hover:text-white text-2xl'>
                       
                       <div className="space-y-4>
                         <div>
-                          <h4 className=text-sm font-semibold text-purple-400 mb-2">Key Features</h4>
-                          <div className="space-y-2>
-                            {selectedService.features.map((feature, idx) => (
-                              <div key={idx} className=flex items-center gap-2 text-sm">
-                                <Check className="w-3 h-3 text-green-400 flex-shrink-0 />
-                                <span className=text-gray-300">{feature}</span>
+                          <h4 className='text-sm font-semibold text-blue-400 mb-2'>
+                            Capabilities
+                          </h4>
+                          <div className='space-y-2'>
+                            {selectedService.capabilities.map(
+                              (capability, idx) => (
+                                <div
+                                  key={idx}
+                                  className='flex items-center gap-2 text-sm'><Zap className='w-3 h-3 text-cyan-400 flex-shrink-0' />
+                                  <span className='text-gray-300'>
+                                    {capability}
+                                  </span>
+                                </div>
+                              )
+                            )}                          </div>                          <h4 className="text-sm font-semibold text-blue-400 mb-2">Capabilities</h4>
+                          <div className="space-y-2">
+                            {selectedService.capabilities.map((capability, idx) => (
+                              <div key={idx} className="flex items-center gap-2 text-sm">
+                                <Zap className="w-3 h-3 text-cyan-400 flex-shrink-0" />
+                                <span className="text-gray-300">{capability}</span>
                               </div>
                             ))}
 <<<<<<< HEAD

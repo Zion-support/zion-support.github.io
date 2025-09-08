@@ -715,66 +715,24 @@ key={idx}
 
                       </ul>
                     </div>
-
-<div className='flex flex-col 'sm': flex-row gap-3'>'
-                      <a,
-href={service && service.lin
-}
-                        className='bg-gradient-to-r from-cyan-500 to-blue-600 'hover':from-cyan-400 'hover':to-blue-500 text-white font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform 'hover':shadow-xl 'hover':shadow-cyan-500/30 'hover':shadow-2xl 'hover':shadow-cyan-500/25 inline-flex items-center justify-center space-x-2'>;'
-                        <span>Learn More</span>;
-                        <ExternalLink className='w-5 h-5' />;'
-                      </a>;
-                      </ul>
-                    </div>
-
-                      <a,
-href='/contact''
-
-                        className='border-2 border-cyan-400 text-cyan-400 'hover': bg-cyan-400 'hover':text-black font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform 'hover':shadow-xl 'hover':shadow-cyan-500/30''
-
-
-                  viewport={{ once: true }}
-
-className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300'
-                    />
-                  <div className='mb-6'    />
-                    <h3 className='text-2xl font-bold text-white mb-4'    />
-
-                      {service.titl,}
-}
-                    </h3>;
-                    <p className='text - gray - 300 mb - 6 leading - relaxed'    />;
-                      {service.description}
-                        {service.price}
-                      </div>;
-                      <div className='text - sm text - gray - 400'    />;
-                        {service.market_data}
-                      </div>;
-                      <div className='text - sm text - green - 400 mt - 1'    />;
-
-                        {service.savings}
-
-                      </div>
-                    </div>
-                    <div className='mb-6'    />
-                      <h4 className='text-lg font-semibold text-white mb-3'    />
-                        Key Features:
-                      </h4>
-                      <ul className='space-y-2'    />
-                        {service.features.map((feature, idx) => (}
-                          <li;}
-key={idx}
-                            className='flex items-center text-gray-300'    />
-
-                            <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'    />;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                            {feature}
-                          </li>;
-                        ))}
-
-
-
-<<<<<<< HEAD
+                    <div className='flex flex-col sm:flex-row gap-3'>
+                      <a
+                        href={service.link}
+                        className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25 inline-flex items-center justify-center space-x-2'
+                      >
+                        <span>Learn More</span>
+                        <ExternalLink className='w-5 h-5' />
+                      </a>
+                      <a
+                        href='/contact'
+                        className='border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'                      >                      <a
+                        href={service.link}
+                        className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25 inline-flex items-center justify-center space-x-2"><span>Learn More</span>
+                        <ExternalLink className="w-5 h-5" />
+                      </a>
+                      <a
+                        href="/contact"
+                        className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
                       >
                         Get Started
 
@@ -1170,9 +1128,7 @@ className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 
                 href='/services'
 >>>>>>> origin/cursor/delete-old-data-records-6bba
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <UltraFuturisticCard variant="quantum-holographic" className="p-6">
+                  viewport={{ once: true }}><UltraFuturisticCard variant="quantum-holographic" className="p-6">
                     <div className="text-4xl mb-4">{service.icon}</div>
                     <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
                     <p className="text-gray-400 text-sm mb-4">{service.description}</p>
@@ -1183,9 +1139,7 @@ className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 
                     <div className="text-sm text-gray-400 mb-4">{service.marketSize} • {service.growthRate}</div>
                     <a
                       href={service.link}
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 inline-flex items-center space-x-2"
-                    >
-                      <span>Learn More</span>
+                      className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 inline-flex items-center space-x-2"><span>Learn More</span>
                       <ArrowRight className="w-4 h-4" />
                     </a>
                   </UltraFuturisticCard>
@@ -1369,10 +1323,15 @@ className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 
                   transition={ duration: 0.8, delay: index * 0.1 }
                   viewport={ once: true}
                 >
-                  <UltraFuturisticCard variant='quantum-holographic' className='p-6'>
-                    <div className='text-4xl mb-4'>{service.icon}</div>
-                    <h3 className='text-xl font-bold text-white mb-3'>{service.name}</h3>
-                    <p className='text-gray-400 text-sm mb-4'>{service.description}</p>
+                  <UltraFuturisticCard
+                    variant='quantum-holographic'
+                    className='p-6'><div className='text-4xl mb-4'>{service.icon}</div>
+                    <h3 className='text-xl font-bold text-white mb-3'>
+                      {service.name}
+                    </h3>
+                    <p className='text-gray-400 text-sm mb-4'>
+                      {service.description}
+                    </p>
                     <div className='text-2xl font-bold text-cyan-400 mb-2'>
                       {service.price}
                       <span className='text-sm text-gray-400'>{service.period}</span>
@@ -1380,13 +1339,22 @@ className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 
                     <div className='text-sm text-gray-400 mb-4'>{service.marketSize} • {service.growthRate}</div>
                     <a
                       href={service.link}
-<<<<<<< HEAD
-
-
-=======
-
-
-
+                      className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 inline-flex items-center space-x-2'
+                    >
+                      <span>Learn More</span>
+                      <ArrowRight className='w-4 h-4' />                    </a>                      {service.price}
+                      <span className="text-sm text-gray-400">{service.period}</span>
+                    </div>
+                    <div className="text-sm text-gray-400 mb-4">{service.marketSize} • {service.growthRate}</div>
+                    <a
+                      href={service.link}
+                      className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 inline-flex items-center space-x-2"><span>Learn More</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+                  </UltraFuturisticCard>
+                </motion.div>
+              ))}
+            </div>
             <motion.div
               className="text-center mt-16
               initial={{ opacity: 0, y: 30}}

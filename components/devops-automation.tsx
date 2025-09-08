@@ -716,29 +716,7 @@ href='#demo';
               {features.map((feature, index) => (<Card;
                   }
                   key={index}
-                  className='text-center group 'hover':scale-105 transition-transform duration-300'>'
-              {features.map((feature, index) => (<Card;
-                  }
-                  key={index}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'    />;
-              {features.map((feature, index) => (<Card;}
-                  key={index}
-                  className='text-center group hover:scale-105 transition-transform duration-300'    />
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-                  <div;
-                    className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 ${feature.color}`}    />
-
-<<<<<<< HEAD
-=======
-
-                  <div;
-                    className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 ${feature.color}`}    />
-
+                  className="text-center group hover:scale-105 transition-transform duration-300"><div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 ${feature.color}`}>
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
@@ -852,9 +830,7 @@ className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-a
               {automationExamples.map((example, index) => (
                 <Card
                   key={index}
-                  className="text-center group hover:scale-105 transition-transform duration-300"
-                >
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 bg-gradient-to-br ${example.color}`}>
+                  className="text-center group hover:scale-105 transition-transform duration-300"><div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 bg-gradient-to-br ${example.color}`}>
                     {example.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{example.title}</h3>

@@ -1867,9 +1867,7 @@ export default function MarketPricing() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-center"
-          >
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            className="text-center"><p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               {currentMarket.description}
             </p>
           </motion.div>
@@ -1900,9 +1898,7 @@ export default function MarketPricing() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
-              >
-                <div className="flex flex-col lg:flex-row gap-6">
+                className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"><div className="flex flex-col lg:flex-row gap-6">
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="text-2xl font-bold">{competitor.name}</h3>
@@ -2218,9 +2214,7 @@ export default function MarketPricing() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className={`w-20 h-20 bg-gradient-to-r ${tier.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                className="text-center"><div className={`w-20 h-20 bg-gradient-to-r ${tier.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
                   <BarChart3 className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-lg font-bold mb-2">{tier.label}</h3>
@@ -2233,9 +2227,7 @@ export default function MarketPricing() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
-            className="text-center"
-          >
-            <h3 className="text-2xl font-bold mb-4">Strategic Advantages</h3>
+            className="text-center"><h3 className="text-2xl font-bold mb-4">Strategic Advantages</h3>
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {[
                 {
@@ -2283,9 +2275,7 @@ export default function MarketPricing() {;
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="p-6 rounded-2xl bg-white/5 border border-white/10"
-            >
-              <h3 className="text-2xl font-bold mb-4 text-green-400">Growth Drivers</h3>
+              className="p-6 rounded-2xl bg-white/5 border border-white/10"><h3 className="text-2xl font-bold mb-4 text-green-400">Growth Drivers</h3>
               <ul className="space-y-3">
                 {[
                   'Increasing demand for AI consciousness in customer serviceQuantum computing breakthroughs in cryptographyAutomation needs in post-pandemic business operationsDigital transformation initiatives across industriesGrowing focus on AI ethics and responsible development'
@@ -2302,9 +2292,7 @@ export default function MarketPricing() {;
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="p-6 rounded-2xl bg-white/5 border border-white/10"
-            >
-              <h3 className="text-2xl font-bold mb-4 text-blue-400">Market Opportunities</h3>
+              className="p-6 rounded-2xl bg-white/5 border border-white/10"><h3 className="text-2xl font-bold mb-4 text-blue-400">Market Opportunities</h3>
               <ul className="space-y-3">
                 {[
                   'Untapped markets in emerging economiesIntegration opportunities with existing enterprise systemsCustom AI consciousness solutions for specific industriesPartnerships with research institutions and universitiesWhite-label solutions for enterprise software providers'
@@ -2327,9 +2315,7 @@ export default function MarketPricing() {;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md: text-5xl font-bold mb-6">
+            viewport={{ once: true }}><h2 className="text-4xl md: text-5xl font-bold mb-6">
               Ready to Compete in the Market?
             </h2>
             <p className="text-xl text-gray-300 mb-8">

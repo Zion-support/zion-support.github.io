@@ -911,13 +911,27 @@ className='grid grid-cols-2 "md":grid-cols-4 gap-6 max-w-4xl mx-auto''
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
             {categories.map ((category, index) => {
               const IconComponent = category.icon;
-
-
-      {/* Featured Services */}
-      <section className='py-20 px-4'>;
-        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
-
-=======
+              return (
+                <motion.div
+                  key={category.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group relative"><div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl`}>
+                    <div className="text-center">
+                      <div className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br ${category.color} bg-opacity-20 flex items-center justify-center border border-white/20`}>
+                        <IconComponent className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-4">{category.name}</h3>
+                      <div className="text-gray-300 text-sm">
+                        {innovative2025MicroSaasBatch.filter(service => service.category === category.name).length} Services
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -1722,9 +1736,7 @@ export default Comprehensive2025InnovativeServicesShowcase;
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className="group relative"
-                >
-                  <div className="p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm">
+                  className="group relative"><div className="p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm">
                     <div className="flex items-start space-x-4">
                       <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${getCategoryColor(service.category)} bg-opacity-20 flex items-center justify-center border border-white/20 text-2xl flex-shrink-0`}>
                         {service.icon}
@@ -1747,44 +1759,26 @@ export default Comprehensive2025InnovativeServicesShowcase;
           </div>
         </div>
       </section>
-
-      <section className='py-20 px-4'>'
-        <div className='max-w-4xl mx-auto text-center'>'
-          <motion.div,
-initial={ 'opacity': 0, 'y': 20 
-}
-            whileInView={ 'opacity': 1, 'y': 0 }
-            transition={ 'duration': 0 && 0.8 }
-            viewport={ 'once': true 
-}
-
-className='space-y-8''
-          >
-            <h2 className='text-4xl 'md':text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>'
+      {/* Contact CTA */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="space-y-8"><h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
               Ready to Transform Your Business?
             </h2>
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>'
               Get in touch with our team to discuss how our innovative services,
 can drive your success
             </p>
-            <div className='flex flex-col 'sm':flex-row gap-4 justify-center'>'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-            className='space-y-8'>'
-
-            <h2 className='text-4xl 'md':text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>;'
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;'
-              Get in touch with our team to discuss how our innovative services;
-              can drive your success;
-            </p>;
-              <a;
-<<<<<<< HEAD
-href='mailto:kleber@ziontechgroup.com'
-                className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105'
-                  />
-                Email Us;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2"><Zap className="w-5 h-5" />
+                <span>Call Now: +1 302 464 0950</span>
               </a>
             </div>
 <div className='text-sm text-gray-400'    />

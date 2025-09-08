@@ -35,9 +35,18 @@ console.error(, ErrorBoundary caught an error:  , error, errorInfo);'  }'
   '            </p>'
   '            <button'
               onClick={this.handleRetry}
-              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors""            >"              <RefreshCw className="w-4 h-4 mr-2" />"              Try Again"            </button>
-            {process.env.NODE_ENV === 'development'
-  ' && this.state.error && (              <details className="mt-4 text-left">"                <summary className="cursor-pointer text-sm text-gray-500">"                  Error Details"                </summary>'"<pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">"                  {this.state.error.stack}"                </pre></details>
+              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors"><RefreshCw className="w-4 h-4 mr-2" />
+              Try Again
+            </button>
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mt-4 text-left">
+                <summary className="cursor-pointer text-sm text-gray-500">
+                  Error Details
+                </summary>
+                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
+                  {this.state.error.stack}
+                </pre>
+              </details>
             )}
           </div>
         </div>

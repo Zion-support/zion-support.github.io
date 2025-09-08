@@ -426,9 +426,7 @@ export default function AIEvalsPage() {
                   href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-xs'
-                >
-                  {contactInfo.address}
+                  className='text-xs'>{contactInfo.address}
                 </a>
               </div>
             </div>

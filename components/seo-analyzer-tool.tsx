@@ -1218,6 +1218,19 @@ className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gr
               <Card
                 key={index}
                 className="card-hover group border-gradient-green"
+                style={{ animationDelay: `${index * 0.1}s` }}><div className="flex items-start space-x-6">
+                  <div className="relative">
+                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
+                      {feature.icon}
+                    </div>
+                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-4 text-white">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {feature.description}
                     </p>
                   </div>
               </Card>
@@ -1258,8 +1271,17 @@ className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gr
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'    />
             {seoFactors.map((category, index) => (
-
-
+              <Card
+                key={index}
+                className="card-hover border-gradient-green"
+                style={{ animationDelay: `${index * 0.1}s` }}><div className="flex items-center mb-6">
+                  <div className="text-3xl mr-4">{category.icon}</div>
+                  <h3 className={`text-xl font-bold ${category.color}`}>{category.category}</h3>
+                </div>
+                <ul className="space-y-3">
+                  {category.factors.map((factor, factorIndex) => (
+                    <li key={factorIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                       {factor}
                     </li>;
 =======

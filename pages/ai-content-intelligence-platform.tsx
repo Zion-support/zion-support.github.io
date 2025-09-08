@@ -165,10 +165,8 @@ export default function AIContentIntelligencePlatform() {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="flex items-center space-x-2 mb-6">
-                <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
+              transition={{ duration: 0.8 }}><div className='flex items-center space-x-2 mb-6'>
+                <span className='bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full'>
                   NEW SERVICE
                 </span>
                 <span className="text-gray-400 text-sm">Launch Date: January 15, 2025</span>
@@ -327,21 +325,22 @@ export default function AIContentIntelligencePlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className={`relative ${plan.popular ? 'scale-105' : ''}`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold px-4 py-2 rounded-full">
-                      MOST POPULAR
+                className={`relative ${plan.popular ? 'scale-105' : ''}`}>{plan.popular && (
+                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+                    <span className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold px-4 py-2 rounded-full'>                      MOST POPULAR
                     </span>
                   </div>
                 )}
-                <div className={`bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border ${plan.popular ? 'border-blue-500' : 'border-gray-700'} rounded-2xl p-8 h-full`}>
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="text-4xl font-bold text-blue-400 mb-2">{plan.price}</div>
-                    <div className="text-gray-400 mb-4">{plan.period}</div>
-                    <p className="text-gray-300">{plan.description}</p>
+                <div
+                  className={`bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border ${plan.popular ? 'border-blue-500' : 'border-gray-700'} rounded-2xl p-8 h-full`}><div className='text-center mb-8'>
+                    <h3 className='text-2xl font-bold text-white mb-2'>
+                      {plan.name}
+                    </h3>
+                    <div className='text-4xl font-bold text-blue-400 mb-2'>
+                      {plan.price}
+                    </div>
+                    <div className='text-gray-400 mb-4'>{plan.period}</div>
+                    <p className='text-gray-300'>{plan.description}</p>
                   </div>
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (

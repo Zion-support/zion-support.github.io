@@ -1154,48 +1154,15 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
 
               <Link
                 href="/contact"
-
-              transition={{ duration: 1, delay: 0.7 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
-            >
-              <Link
-                href="/contact"
-              <Link
-                href="/contact"
-
-                className="group relative px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 hover:from-violet-600 hover:to-purple-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">;
-                <span className="flex items-center">;
-                  Get Started Today;
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />;
-                </span>;
-                <div className="absolute inset-0 bg-gradient-to-r from-violet-400 to-purple-400 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>;
-              </Link>;
-                className="group px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-300 hover:text-white font-bold rounded-2xl text-lg transition-all duration-300 hover:bg-purple-500/10">;
-                <span className="flex items-center">;
-                  View Pricing;
-                  <ArrowRight className="ml-2 w-5 h-5" />;
-                </span>;
-              </Link>;
-            </motion && motion.div>;
-
-
-
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            {/* Key Stats */}
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-
-
-<<<<<<< HEAD
-=======
+                className="group relative px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 hover:from-violet-600 hover:to-purple-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"><span className="flex items-center">
+                  Get Started Today
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-400 to-purple-400 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+              </Link>
               <Link
                 href="#pricing"
-                className="group px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-300 hover:text-white font-bold rounded-2xl text-lg transition-all duration-300 hover:bg-purple-500/10"
-              >
-                <span className="flex items-center">
+                className="group px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-300 hover:text-white font-bold rounded-2xl text-lg transition-all duration-300 hover:bg-purple-500/10"><span className="flex items-center">
                   View Pricing
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </span>
@@ -2555,6 +2522,20 @@ initial={{ opacity: 0, y: 30 ,}
 }
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
+            className='text-center'
+          >
+            <Link
+              href='/contact'
+              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25'
+            >
+              <span className='flex items-center'>
+                Get Started Today
+                <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />              </span>          >
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover: from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"><span className="flex items-center">
+                Get Started Today
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </span>
             </Link>
           </motion.div>

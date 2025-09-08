@@ -186,9 +186,7 @@ export default function ComprehensiveServicesOverviewPage() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
-                  className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400"
-                >
-                  <option value="popularity">Most Popular</option>
+                  className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400"><option value="popularity">Most Popular</option>
                   <option value="price">Price: Low to High</option>
                   <option value="rating">Highest Rated</option>
                   <option value="newest">Newest First</option>
@@ -240,9 +238,7 @@ export default function ComprehensiveServicesOverviewPage() {
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
                       : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
-                  }`}
-                >
-                  <span>{category.icon}</span>
+                  }`}><span>{category.icon}</span>
                   {category.name}
                   <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{category.count}</span>
                 </button>

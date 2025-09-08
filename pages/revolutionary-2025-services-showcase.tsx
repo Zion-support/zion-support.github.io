@@ -119,8 +119,7 @@ export default function Revolutionary2025ServicesShowcase() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
+              className="text-center max-w-4xl mx-auto"><h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Revolutionary 2025 Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -176,64 +175,62 @@ export default function Revolutionary2025ServicesShowcase() {
             </motion.div>
           </div>
         </section>
-
-        {/* Category Filter and Controls */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-8">
-              {/* Category Filter */}
-              <div className="flex flex-wrap gap-3">
-                {serviceCategories.map((category) => (
-                  <motion.button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-300 ${
-                      selectedCategory === category.id
-                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 border-blue-500 text-white'
-                        : 'border-gray-600 text-gray-300 hover:border-blue-500 hover:text-blue-400'
-                    }`}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <category.icon className="w-4 h-4" />
-                    {category.name}
-                    <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
-                      {category.count}
-                    </span>
-                  </motion.button>
-                ))}
+        {/* Search and Filter Section */}
+        <section className="py-8 px-4 border-b border-gray-800">
+          <div className="container mx-auto">
+            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+              {/* Search */}
+              <div className="relative flex-1 max-w-md">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search revolutionary services..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                />
               </div>
-
-              {/* View Controls */}
-              <div className="flex items-center gap-4">
-                <div className="flex items-center gap-2">
-                  <span className="text-gray-400 text-sm">Sort by:</span>
+              {/* Filters */}
+              <div className="flex flex-wrap gap-4 items-center">
+                {/* Category Filter */}
+                <div className="relative">
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent pr-10"><option value="all">All Categories</option>
+                    {serviceCategories.map(category => (
+                      <option key={category.id} value={category.id}>
+                        {category.title.split(' ').slice(1).join(' ')}
+                      </option>
+                    ))}
+                  </select>
+                  <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
+                </div>
+                {/* Sort Filter */}
+                <div className="relative">
                   <select
                     value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value as any)} className="bg-gray-800 border border-gray-600 rounded-lg px-3 py-2 text-gray-300 text-sm focus:outline-none focus:border-blue-500">
-                    <option value="popularity">Popularity</option>
-                    <option value="rating">Rating</option>
-                    <option value="price">Price</option>
-                    <option value="newest">Newest</option>
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent pr-10"><option value="popularity">Most Popular</option>
+                    <option value="rating">Highest Rated</option>
+                    <option value="customers">Most Customers</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
                   </select>
                 </div>
                 
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => setViewMode('grid')}
-                    className={`p-2 rounded-lg transition-colors ${
-                      viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-gray-400 hover:text-blue-400'
-                    }`}
-                  >
-                    <Grid className="w-5 h-5" />
+                    className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'}`}><svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                    </svg>
                   </button>
                   <button
                     onClick={() => setViewMode('list')}
-                    className={`p-2 rounded-lg transition-colors ${
-                      viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-gray-400 hover:text-blue-400'
-                    }`}
-                  >
-                    <List className="w-5 h-5" />
+                    className={`p-2 rounded ${viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'}`}><svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+                    </svg>
                   </button>
                 </div>
               </div>
@@ -258,31 +255,146 @@ export default function Revolutionary2025ServicesShowcase() {
             >
               {sortedServices.map((service) => (
                 <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                  className={`group relative ${
-                    viewMode === 'grid' 
-                      ? 'bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105'
-                      : 'bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300'
-                  }`}
-                >
-                  {/* Service Header */}
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="text-3xl">{service.icon}</div>
-                      <div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                  key="grid"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">{sortedServices.map((service, index) => (
+                    <motion.div
+                      key={service.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="group relative"><div className="relative bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 rounded-2xl p-6 h-full backdrop-blur-xl hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                        {/* Popular Badge */}
+                        {service.popular && (
+                          <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            POPULAR
+                          </div>
+                        )}
+                        {/* Service Icon */}
+                        <div className="text-4xl mb-4">{service.icon}</div>
+                        {/* Service Title */}
+                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
                           {service.name}
                         </h3>
                         <p className="text-gray-400 text-sm">{service.tagline}</p>
                       </div>
-                    </div>
-                    {service.popular && (
-                      <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1">
-                        <Star className="w-3 h-3" />
-                        Popular
+                    </motion.div>
+                  ))}
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="list"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="space-y-6">{sortedServices.map((service, index) => (
+                    <motion.div
+                      key={service.id}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="bg-gradient-to-r from-gray-900/80 to-black/90 border border-gray-700/50 rounded-xl p-6 backdrop-blur-xl hover:border-purple-500/50 transition-all duration-300"><div className="flex flex-col lg:flex-row gap-6">
+                        {/* Left Column */}
+                        <div className="flex-1">
+                          <div className="flex items-start gap-4 mb-4">
+                            <div className="text-4xl">{service.icon}</div>
+                            <div className="flex-1">
+                              <div className="flex items-center gap-3 mb-2">
+                                <h3 className="text-xl font-bold text-white">{service.name}</h3>
+                                {service.popular && (
+                                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                                    POPULAR
+                                  </span>
+                                )}
+                              </div>
+                              <p className="text-gray-300 text-sm">{service.tagline}</p>
+                            </div>
+                          </div>
+                          <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                              <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features</h4>
+                              <ul className="space-y-1">
+                                {service.features.slice(0, 4).map((feature, featureIndex) => (
+                                  <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                                    {feature}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                            <div>
+                              <h4 className="text-sm font-semibold text-blue-400 mb-2">Technology Stack</h4>
+                              <div className="flex flex-wrap gap-2">
+                                {service.technology.slice(0, 6).map((tech, techIndex) => (
+                                  <span key={techIndex} className="bg-gray-800/50 text-gray-300 text-xs px-2 py-1 rounded">
+                                    {tech}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        {/* Right Column */}
+                        <div className="lg:w-80 space-y-4">
+                          {/* Price */}
+                          <div className="text-center">
+                            <div className="text-3xl font-bold text-white mb-1">
+                              {service.price}
+                              <span className="text-lg text-gray-400 font-normal">{service.period}</span>
+                            </div>
+                            <div className="text-sm text-gray-400">30-day free trial</div>
+                          </div>
+                          {/* Market Data */}
+                          <div className="grid grid-cols-2 gap-3">
+                            <div className="bg-gray-800/50 rounded-lg p-3 text-center">
+                              <div className="text-xs text-gray-400 mb-1">Market Size</div>
+                              <div className="text-sm text-gray-200">{service.marketSize}</div>
+                            </div>
+                            <div className="bg-gray-800/50 rounded-lg p-3 text-center">
+                              <div className="text-xs text-gray-400 mb-1">Growth Rate</div>
+                              <div className="text-sm text-gray-200">{service.growthRate}</div>
+                            </div>
+                          </div>
+                          {/* ROI */}
+                          <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-3">
+                            <div className="text-xs text-green-400 mb-1">Expected ROI</div>
+                            <div className="text-sm text-green-300">{service.roi}</div>
+                          </div>
+                          {/* Action Buttons */}
+                          <div className="space-y-3">
+                            <Link href={service.link} target="_blank" rel="noopener noreferrer">
+                              <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300">
+                                <ExternalLink className="w-4 h-4 mr-2 inline" />
+                                Learn More
+                              </button>
+                            </Link>
+                            <Link href="/contact">
+                              <button className="w-full px-4 py-3 border border-gray-600 text-gray-300 rounded-lg hover:border-purple-500 hover:text-purple-400 transition-all duration-300">
+                                Contact Sales
+                              </button>
+                            </Link>
+                          </div>
+                          {/* Contact Info */}
+                          <div className="space-y-2 text-xs">
+                            <div className="flex items-center gap-2 text-purple-400">
+                              <Phone className="w-3 h-3" />
+                              <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:text-white">
+                                {service.contactInfo.mobile}
+                              </a>
+                            </div>
+                            <div className="flex items-center gap-2 text-blue-400">
+                              <Mail className="w-3 h-3" />
+                              <a href={`mailto:${service.contactInfo.email}`} className="hover:text-white">
+                                {service.contactInfo.email}
+                              </a>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     )}
                   </div>
@@ -365,9 +477,7 @@ export default function Revolutionary2025ServicesShowcase() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              viewport={{ once: true }}><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">

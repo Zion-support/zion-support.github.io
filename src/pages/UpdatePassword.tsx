@@ -159,8 +159,10 @@ export default function UpdatePassword() {
                           <FormMessage className="text-red-400"/>
                         </FormItem>)}/>
 
-                    <Button type="submit" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" disabled={isLoading || !accessToken}>
-                      {isLoading ? "Updating..." : "Update Password"}
+                    <Button
+                      type="submit"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                      disabled={isLoading || !accessToken}>{isLoading ? "Updating..." : "Update Password"}
                     </Button>
 
                     <div className="text-center">

@@ -371,9 +371,41 @@ className='mb-8'
                 <input
                   type="text"
                   placeholder="Search services..."
-
-<<<<<<< HEAD
-=======
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50"
+                />
+              </div>
+              {/* Category Filter */}
+              <div>
+                <select
+                  value={selectedCategory}
+                  onChange={e => setSelectedCategory(e.target.value)}
+                  className='w-full px-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white focus:outline-none focus:border-cyan-500/50'
+                >
+                  <option value='all'>All Categories</option>                  {serviceCategories.map(category => (                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white focus:outline-none focus:border-cyan-500/50"
+                >
+                  <option value="all">All Categories</option>
+                    <option key={category.id} value={category.id}>
+                      {category.title}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              {/* Sort By */}
+              <div>
+                <select
+                  value={sortBy}
+                  onChange={e => setSortBy(e.target.value)}
+                  className='w-full px-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white focus:outline-none focus:border-cyan-500/50'><option value='name'>Sort by Name</option>
+                  <option value='price'>Sort by Price</option>
+                  <option value='category'>Sort by Category</option>                </select>                  onChange={(e) => setSortBy(e.target.value)}
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white focus:outline-none focus:border-cyan-500/50"
+                >
+                  <option value="name">Sort by Name</option>
+                  <option value="price">Sort by Price</option>
+                  <option value="category">Sort by Category</option>
               </div>
               <div className='text-gray-400'>Categories</div>'
             </div>
@@ -515,7 +547,22 @@ className='group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border bord
 
 
                 {/* Features */}
-                <div className="mb-6">
+                <div className='mb-6'>
+                  <h4 className='text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide'>
+                    Key Features
+                  </h4>
+                  <ul className='space-y-2'>
+                    {service.features
+                      .slice(0, 3)
+                      .map((feature, featureIndex) => (
+                        <li
+                          key={featureIndex}
+                          className='flex items-center text-sm text-gray-300'><CheckCircle className='w-4 h-4 text-cyan-400 mr-2 flex-shrink-0' />
+                          {feature}
+                        </li>
+                      ))}
+                    {service.features.length > 3 && (
+                      <li className='text-sm text-cyan-400'>                        +{service.features.length - 3} more features                <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide">Key Features</h4>
                   <ul className="space-y-2">
                     {service.features.slice(0, 3).map((feature, featureIndex) => (

@@ -151,9 +151,12 @@ export default function ContentGenerator() {
                     </div>)}
                 </CardContent>
                 <CardFooter>
-                  <Button onClick={generateContent} disabled={isGenerating} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
-                    {isGenerating ? (<React.Fragment>
-                        <Loader2 className="mr-2 h-4 w-4 animate-spin"/>
+                  <Button
+                    onClick={generateContent}
+                    disabled={isGenerating}
+                    className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">{isGenerating ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                         Generating...
                       </React.Fragment>) : (<React.Fragment>Generate {contentType === 'blog' ? 'Blog Post' : 'Newsletter'}</React.Fragment>)}
                   </Button>
@@ -276,11 +279,20 @@ export default function ContentGenerator() {
                         </Tabs>
                       </div>)) : (<div className="flex flex-col items-center justify-center py-12 text-center">
                       <div className="bg-zion-blue-light/20 p-6 rounded-full mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-zion-purple">
-                          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
-                          <polyline points="14 2 14 8 20 8"/>
-                          <path d="M12 18v-6"/>
-                          <path d="M8 15h8"/>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="h-8 w-8 text-zion-purple"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                          <polyline points="14 2 14 8 20 8" />
+                          <path d="M12 18v-6" />
+                          <path d="M8 15h8" />
                         </svg>
                       </div>
                       <h3 className="text-white font-medium mb-2">No Content Generated Yet</h3>

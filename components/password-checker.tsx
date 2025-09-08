@@ -578,8 +578,70 @@ protect your accounts and data.
                 Password Analysis
               </h3>
               <div className="space-y-6">
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+                {/* Password Input */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
+                    Enter Password
+                  ">
+                    Enter Password
+                  </label>
+                  <div className="relative">
+                    <input
+                      type={showPassword ? 'text' : 'password'}
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      placeholder="Type your password here..."
+                      className="w-full px-4 py-3 pr-12 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowPassword(!showPassword)}
+                      className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-white">{showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                      {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                    </button>
+                  </div>
+                </div>
+                {/* Generate Password */}
+                <div>
+                  <Button
+                    onClick={generateStrongPassword}
+                    className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold'
+                  >
+                    <RefreshCw className='w-5 h-5 mr-2' />                    Generate Strong Password                    className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    Generate Strong Password
+                  </Button>
+                </div>
+                {/* Generated Password Display */}
+                {generatedPassword && (
+                  <div className='p-4 bg-gray-700 rounded-lg border border-gray-600'>
+                    <div className='flex items-center justify-between'>
+                      <span className='text-sm text-gray-300'>
+                        Generated Password:
+                      </span>
+                      <Button
+                        onClick={() => copyToClipboard(generatedPassword)}
+                        variant='outline'
+                        size='sm'
+                        className='border-gray-600 text-gray-300 hover:bg-gray-600'
+                      >
+                        <Copy className='w-4 h-4 mr-2' />
+                        Copy
+                      </Button>
+                    </div>
+                    <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}                      <Button
+                        onClick={() => copyToClipboard(generatedPassword)}
+                        variant="outline"
+                        size="sm"
+                        className="border-gray-600 text-gray-300 hover:bg-gray-600"><Copy className="w-4 h-4 mr-2" />
+                        Copy
+                      </Button>
+                    </div>
+                    <div className="mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all">
+                      {generatedPassword}
+                    </div>
+                  </div>
                 )}
 
 
@@ -994,13 +1056,22 @@ key={index}
                   {/* Suggestions */}
                   {suggestions.length > 0 && (
                     <div>
-
-
-                          <div key={index} className="flex items-start space-x-3>
-                            <AlertTriangle className=w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
-                            <span className="text-sm text-yellow-300>{suggestion}</span>
-                          </div>
->>>>>>> origin/cursor/delete-old-data-records-6bba
+                      <h4 className='text-lg font-semibold text-white mb-3'>
+                        Suggestions
+                      </h4>
+                      <div className='space-y-2'>
+                        {suggestions.map((suggestion, index) => (
+                          <div
+                            key={index}
+                            className='flex items-start space-x-3'><AlertTriangle className='w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0' />
+                            <span className='text-sm text-yellow-300'>
+                              {suggestion}
+                            </span>                          </div>                      <h4 className="text-lg font-semibold text-white mb-3">Suggestions</h4>
+                      <div className="space-y-2">
+                        {suggestions.map((suggestion, index) => (
+                          <div key={index} className="flex items-start space-x-3">
+                            <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
+                            <span className="text-sm text-yellow-300">{suggestion}</span>
                         ))}
                       </div>
                     </div>

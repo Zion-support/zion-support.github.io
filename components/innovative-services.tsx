@@ -625,8 +625,8 @@ redefining what's possible.
                       {categories.map(category => (                        <option key={category.name} value={category.name}>                    <select
                       value={selectedCategory}
                       onChange={(e) => setSelectedCategory(e.target.value)}
-                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    >
+                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"><option value="All">All Categories</option>
+                      {categories.map((category) => (
                       <option value="All">All Categories</option>
                       {categories.map((category) => (
                         <option key={category.name} value={category.name}>
@@ -687,8 +687,7 @@ redefining what's possible.
                       {priceRanges.map(range => (                        <option key={range.value} value={range.value}>                    <select
                       value={priceRange}
                       onChange={(e) => setPriceRange(e.target.value)}
-                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    >
+                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">{priceRanges.map((range) => (
                       {priceRanges.map((range) => (
                         <option key={range.value} value={range.value}>
                       {priceRanges.map(range => (                        <option key={range.value} value={range.value}>
@@ -714,8 +713,7 @@ redefining what's possible.
                       {sortOptions.map(option => (                        <option key={option.value} value={option.value}>                    <select
                       value={sortBy}
                       onChange={(e) => setSortBy(e.target.value)}
-                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    >
+                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">{sortOptions.map((option) => (
                       {sortOptions.map((option) => (
                         <option key={option.value} value={option.value}>
                       {sortOptions.map(option => (                        <option key={option.value} value={option.value}>
@@ -918,10 +916,18 @@ viewMode === 'list'
                             : 'text-gray-400 hover: text-white'}
                         }`}
                       >
-                        <List className='w-5 h-5'    />
-                      </button>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                      >
+                        <Grid className='w-5 h-5' />                      </button>                      <button
+                        onClick={() => setViewMode('list')}
+                        className={`px-3 py-2 rounded-lg transition-all ${
+                          viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
+                        }`}><Grid className='w-5 h-5' />
+                  <div className="flex-shrink-0">
+                    <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">
+                      <button
+                        onClick={() => setViewMode('grid')}
+                        className={`px-3 py-2 rounded-lg transition-all ${
+                          viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
+                        }`}><Grid className="w-5 h-5" />
                         <Grid className="w-5 h-5" />
                       </button>
                       <button
@@ -1195,23 +1201,14 @@ viewMode === 'list'
                               .slice(0, 3).map((feature, index) => (<div;
                                   }
                                   key={index}
-                                  className='flex items-center space-x-2'>'
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-<div className='mb-6'    />;
-                          <h4 className='text-sm font-semibold text-white mb-3'    />;
-                            Key Features;
-                          </h4>;
-                          <div className='space-y-2'    />;
-                            {service.features;}
-                              .slice(0, 3).map((feature, index) => (<div;}
-                                  key={index}
-                                  className='flex items-center space-x-2'    />
-<<<<<<< HEAD
-
-=======
-                        <div className="mb-6">
+                                  className='flex items-center space-x-2'><Check className='w-4 h-4 text-green-400 flex-shrink-0' />
+                                  <span className='text-xs text-gray-300'>
+                                    {feature}
+                                  </span>
+                                </div>
+                              ))}
+                            {service.features.length > 3 && (
+                              <div className='text-xs text-cyan-400 text-center pt-2'>                                +{service.features.length - 3} more features                        <div className="mb-6">
                           <h4 className="text-sm font-semibold text-white mb-3">Key Features</h4>
                           <div className="space-y-2">
                             {service.features.slice(0, 3).map((feature, index) => (
@@ -1350,11 +1347,10 @@ viewMode === 'list'
                           <Button
                             href={`mailto:${contactInfo && contactInfo.email}?subject=Inquiry about ${service && service.name}`}
                             variant="secondary"
-
-
-
-
-
+                            className="px-4"><Mail className="w-4 h-4" />
+                            <Mail className="w-4 h-4" />
+                          </Button>
+                        </div>
                         {/* Contact Info */}
 <div className=mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center'>;
 =======
@@ -1410,110 +1406,60 @@ viewMode === 'list'
 
 
           {/* Call to Action */}
-
-=======
-<div className='mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center'>'
-                          <div>
-                            'Contact': {contactInfo.mobile} | {contactInfo.email}
-                          </div>
-                          <div className='mt-1'>{contactInfo.website}</div>'
-                        {/* CTA Buttons */}
-<div className='flex space-x-3'    />;
-                          <Button;
-                            href={service.link}
-                            variant='primary';
-                            className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700'    />
-
-                            Learn More;
-                            <ArrowRight className='w-4 h-4 ml-2'    />;
-                          </Button>;
-                          <Button;
-                            href={`mailto: ${contactInfo.email}?subject=Inquiry about ${service.name},
-}
-                            variant='secondary';
-                            className='px-4'    />
-
-                            <Mail className='w-4 h-4'    />;
-                          </Button>;
-                        </div>;
-
-                        {/* Contact Info */}
-
-<div className='mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center'    />
-                          <div    />
-                            Contact: {contactInfo.mobile} | {contactInfo.email}
-                          </div>
-                          <div className='mt-1'    />{contactInfo.website}</div>
-                        </div>
-                      </div>
-                    </QuantumHolographicCard>
-                  ),
-}
-                </div>;
-              )}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-<section className='px-4 sm:px-6 lg:px-8 mb-20'    />;
-            <div className='max-w-4xl mx-auto text-center'    />;
-              <EnhancedFuturisticCard className='p-12'    />;
-                <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'    />;
-<<<<<<< HEAD
-
-=======
-            </div>;
-          </section>;
-          {/* Call to Action */}
-          <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
-            <div className='max-w-4xl mx-auto text-center'>;
-              <EnhancedFuturisticCard className='p-12'>;
-                <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-                  Ready to Lead the Future?;
-                </h2>;
-                <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'    />;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                  Join the revolution with our breakthrough micro SAAS services.;
-                  Transform your business with quantum AI, autonomous systems;
-                  and cutting-edge technology.;
-                </p>;
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-                <div className='flex flex-col sm:flex-row gap-4 justify-center'    />;
-            </div>;
-          </section>;{/* Call to Action */}
-          <section className='px-4 sm:px-6 lg:px-8 mb-20'    />;
-            <div className='max-w-4xl mx-auto text-center'    />;
-              <EnhancedFuturisticCard className='p-12'    />;
-                <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'    />;
-                  Ready to Lead the Future?;
-
-<<<<<<< HEAD
-=======
-                </h2>;
-                <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'    />;
-                  Join the revolution with our breakthrough micro SAAS services.;
-                  Transform your business with quantum AI, autonomous systems,and cutting-edge technology.;
-                </p>;
-
-                <div className='flex flex-col sm:flex-row gap-4 justify-center'    />;
-
-                  <Button;
-variant='primary'
-
-
-                    className='bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg'
-                      />
-                    <Phone className='w-5 h-5 mr-2'    />
-
-                    Call Now: {contactInfo.mobil,}
-}
-                  </Button>;
-                  <Button;
-                    href={`mailto: ${contactInfo.email}`}
-
-variant='secondary'
+          <section className='px-4 sm:px-6 lg:px-8 mb-20'>
+            <div className='max-w-4xl mx-auto text-center'>
+              <EnhancedFuturisticCard className='p-12'>
+                <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+                  Ready to Lead the Future?
+                </h2>
+                <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
+                  Join the revolution with our breakthrough micro SAAS services.
+                  Transform your business with quantum AI, autonomous systems
+                  and cutting-edge technology.
+                </p>
+                <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                  <Button
+                    href={`tel:${contactInfo.mobile}`}
+                    variant='primary'
+                    className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg'
+                  >
+                    <Phone className='w-5 h-5 mr-2' />                    Call Now: {contactInfo.mobile}
+                  </Button>
+                  <Button
+                    href={`mailto:${contactInfo.email}`}
+                    variant='secondary'
+                    className='px-8 py-4 text-lg'                  Ready to Lead the Future?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                  Join the revolution with our breakthrough micro SAAS services.
+                  Transform your business with quantum AI, autonomous systems, and cutting-edge technology.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button
+                    href={`tel:${contactInfo.mobile}`}
+                    variant="primary"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg"><Phone className='w-5 h-5 mr-2' />
+          <section className="px-4 sm:px-6 lg:px-8 mb-20">
+            <div className="max-w-4xl mx-auto text-center">
+              <EnhancedFuturisticCard className="p-12">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Ready to Lead the Future?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                  Join the revolution with our breakthrough micro SAAS services. 
+                  Transform your business with quantum AI, autonomous systems, and cutting-edge technology.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button
+                    href={`tel:${contactInfo.mobile}`}
+                    variant="primary"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg"><Phone className="w-5 h-5 mr-2" />
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call Now: {contactInfo.mobile}
+                  </Button>
+                  <Button
+                    href={`mailto:${contactInfo.email}`}
+                    variant='secondary'
                     className='px-8 py-4 text-lg'
 
                       />

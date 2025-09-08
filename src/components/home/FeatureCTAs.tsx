@@ -158,11 +158,16 @@ export function FeatureCTAs(...args: []):  {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Explore Our Comprehensive Solutions
+    <section
+      className={cn(
+        "py-16 bg-gradient-to-b from-background to-background/90"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+        className
+      )}
+      style={style}><div className="container mx-auto px-4">
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl font-bold tracking-tight mb-3">
+            {t('home.features_heading')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             From AI services to IT infrastructure, discover the tools and expertise you need to transform your business
@@ -194,12 +199,28 @@ export function FeatureCTAs(...args: []):  {
               </CardContent>
               
               <CardFooter>
-                <Link to={feature.link} className="w-full">
-                  <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
+                <Button asChild className='w-full gap-1'>
+                  <Link
+                    href = {feature.link,}
+                    aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
+                    className='cursor-pointer'
+                    {...(feature.key === 'ai_talent_matching' && {
+                      'data-testid': 'explore-ai-talent-matching-cta'
+                    })}
+                  >
+                    <span>
+                      {t('general.explore')} {t(`features.${feature.key}`)}
+                    </span>
+                    <ArrowRight className='h-4 w-4' />                  </Link>                  <Link
+                    href={feature.link}
+                    aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
+                    className="cursor-pointer"
+                    {...(feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}><span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
+                    <ArrowRight className="h-4 w-4" />
+                    <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
               </CardFooter>
             </Card>
           ))}
