@@ -1,7 +1,7 @@
 [build]
-  # Do not run any build. Deploy the prebuilt static export from out/ as-is.
-  command = "echo 'Skipping build; deploying prebuilt static export'"
-  publish = "out"
+  # Do not run any build. Deploy the prebuilt static export from dist/ as-is.
+  command = "echo 'Skipping build; deploying prebuilt static export from dist/'"
+  publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
