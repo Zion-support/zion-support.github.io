@@ -1,5 +1,5 @@
 [build]
-  # Deploy prebuilt static site in 'dist' and skip build
+  # Use prebuilt static site in 'dist' to avoid broken build step
   command = "echo 'Skipping build: deploying prebuilt dist'"
   publish = "dist"
   functions = "netlify/functions"
@@ -12,10 +12,8 @@
   PYTHON_VERSION = "3.11"
   # Do not install dependencies during deploy; avoids Yarn on Netlify
   NETLIFY_SKIP_INSTALL = "true"
-  # Force Netlify to use npm instead of Yarn
   NETLIFY_USE_YARN = "false"
-  # Use npm explicitly when installs do run locally
-  NPM_VERSION = "10.8.2"
+  NPM_FLAGS = "--omit=optional"
 
 
 
