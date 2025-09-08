@@ -50,6 +50,11 @@ declare module 'react-hook-form';
 declare module 'react-i18next';
 declare module 'react-dom/client';
 declare module 'recharts';
+declare module 'next' {
+  export type GetStaticPaths = any;
+  export type GetStaticProps<P = any, Q = any> = any;
+  export type GetServerSideProps<P = any, Q = any> = any;
+}
 declare module 'next-themes';
 declare module 'tailwind-merge';
 declare module 'react-cookie-consent';

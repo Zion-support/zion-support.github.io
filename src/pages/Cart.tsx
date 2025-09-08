@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
-import apiClient from '@/services/apiClient';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
 
@@ -19,6 +18,15 @@ export default function CartPage() {
   const [items, setItems] = useState<CartItem[]>([]);
   const [code, setCode] = useState('');
   const [discount, setDiscount] = useState(0);
+
+  if (!user) {
+    toast({
+      title: 'Authentication required',
+      description: 'Please sign in to view your cart.',
+    });
+    navigate('/login');
+    return null;
+  }
 
   if (!user) {
     toast({

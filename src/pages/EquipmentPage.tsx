@@ -13,6 +13,8 @@ import { Search, Filter, Star, Clock, DollarSign, Users, MapPin, Phone, Mail } f
 
 const API_BASE = '/api';
 
+const API_BASE = '/api';
+
 // Sample datacenter equipment listings
 const EQUIPMENT_LISTINGS: ProductListing[] = [
   {

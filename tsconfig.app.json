@@ -21,7 +21,9 @@
 
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "axios": ["./src/lib/axios.ts"]
     },
     "types": [
       "vite/client",

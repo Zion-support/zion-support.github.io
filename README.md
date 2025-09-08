@@ -1,15 +1,10 @@
 # Zion Tech Group Website
 
-A modern, responsive website built with React, TypeScript, and Vite for Zion Tech Group - a leading technology company specializing in AI solutions, cloud services, and digital transformation.
+# Welcome to the project
 
 ## 🌟 Features
 
-- **Modern Design**: Clean, professional design with dark theme and gradient accents
-- **Responsive Layout**: Fully responsive design that works on all devices
-- **Interactive Components**: Smooth animations and transitions using Framer Motion
-- **SEO Optimized**: Built with search engine optimization in mind
-- **Fast Performance**: Optimized for speed and user experience
-- **Accessibility**: WCAG compliant with proper semantic HTML and ARIA labels
+**Maintained by**: Jules, Codex, and Kleber Alcatrao
 
 ## 🚀 Tech Stack
 
@@ -22,13 +17,7 @@ A modern, responsive website built with React, TypeScript, and Vite for Zion Tec
 - **State Management**: React Hooks (useState, useContext)
 - **Package Manager**: npm
 
-## 📁 Project Structure
-
-## Environment Configuration
-
-⚠️ **IMPORTANT**: This project uses **Supabase for authentication** and **Netlify for environment variable management**. Proper configuration is essential for the application to function correctly.
-
-### Authentication Setup
+**Use your preferred IDE**
 
 The application uses Supabase for all authentication functionality:
 - User registration and login
@@ -130,7 +119,7 @@ celery -A backend.celery worker -B
 
 ### Colors and Theme
 
-The website uses a custom color palette defined in `tailwind.config.js`:
+Deployment instructions to be updated.
 
 ## Integrations
 

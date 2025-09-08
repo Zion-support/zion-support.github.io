@@ -1,32 +1,34 @@
-import pdfMake from 'pdfmake/build/pdfmake';
-import pdfFonts from 'pdfmake/build/vfs_fonts';
+import { jsPDF } from 'jspdf';
+import 'jspdf-autotable';
 import type { OrderDetail } from '@/hooks/useOrder';
 
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
-
+// Generates a simple PDF invoice for an order using jsPDF which is already
+// included in the project dependencies. The returned Blob can be downloaded by
+// the browser.
 export async function generateInvoicePdf(order: OrderDetail): Promise<Blob> {
-  const itemsTable = [
-    ['Item', 'Qty', 'Price'],
-    ...order.items.map(i => [i.name, String(i.quantity), `$${i.price.toFixed(2)}`])
-  ];
+  const doc = new jsPDF();
 
-  const docDef: any = {
-    content: [
-      { text: `Invoice #${order.orderId}`, style: 'header' },
-      { text: `Date: ${new Date(order.date).toLocaleDateString()}` },
-      { text: 'Shipping Address', style: 'subheader', margin: [0, 10, 0, 4] },
-      `${order.shippingAddress.name}\n${order.shippingAddress.street}\n${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`,
-      { text: 'Items', style: 'subheader', margin: [0, 10, 0, 4] },
-      { table: { widths: ['*', 40, 60], body: itemsTable } },
-      { text: `Total: $${order.total.toFixed(2)}`, margin: [0, 10, 0, 0] }
-    ],
-    styles: {
-      header: { fontSize: 18, bold: true },
-      subheader: { fontSize: 14, bold: true }
-    }
-  };
+  doc.setFontSize(18);
+  doc.text(`Invoice #${order.orderId}`, 20, 20);
 
-  return new Promise((resolve) => {
-    pdfMake.createPdf(docDef).getBlob((blob: Blob) => resolve(blob));
+  doc.setFontSize(12);
+  doc.text(`Date: ${new Date(order.date).toLocaleDateString()}`, 20, 30);
+
+  // Shipping address section
+  const address = `${order.shippingAddress.name}\n${order.shippingAddress.street}\n` +
+    `${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`;
+  doc.text(address, 20, 40);
+
+  // Items table
+  const items = order.items.map(i => [i.name, String(i.quantity), `$${i.price.toFixed(2)}`]);
+  (doc as any).autoTable({
+    head: [['Item', 'Qty', 'Price']],
+    body: items,
+    startY: 70,
   });
+
+  const finalY = ((doc as any).lastAutoTable?.finalY || 70) + 10;
+  doc.text(`Total: $${order.total.toFixed(2)}`, 20, finalY);
+
+  return doc.output('blob');
 }

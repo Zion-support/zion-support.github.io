@@ -84,7 +84,10 @@ export default function OrdersPage() {
                 <TableCell>{order.total}</TableCell>
                 <TableCell>{getStatusBadge(order.status)}</TableCell>
                 <TableCell>
-                  <Link to={`/orders/${order.orderId}`} className="text-zion-purple underline">
+                  <Link
+                    to={`/orders/${order.orderId}`}
+                    className="text-zion-purple underline"
+                  >
                     View
                   </Link>
                 </TableCell>

@@ -1,76 +1,71 @@
-import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'; // Assuming this component exists
-import { toast } from '@/hooks/use-toast'; // Assuming this hook exists
-// Placeholder for the actual API call, to be implemented in a later step
-import { resetPassword } from '@/services/auth';
-export default function ResetPasswordPage() {
-    const { token } = useParams();
-    const navigate = useNavigate();
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState('');
-    useEffect(() => {
-        if (!token) {
-            setError('Invalid or missing reset token.');
-            // Consider redirecting to an error page or login page
-        }
-    }, [token]);
-    const handlePasswordChange = (e) => {
-        setPassword(e.target.value);
-    };
-    const handleConfirmPasswordChange = (e) => {
-        setConfirmPassword(e.target.value);
-    };
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setError('');
-        if (password !== confirmPassword) {
-            setError('Passwords do not match.');
-            return;
-        }
-        // Basic password strength check (can be enhanced)
-        if (password.length < 8) {
-            setError('Password must be at least 8 characters long.');
-            return;
-        }
-        setIsLoading(true);
-        try {
-            await resetPassword(token, password);
-            toast.success('Password has been reset successfully!');
-            navigate('/login'); // Redirect to login page on success
-        }
-        catch (err) {
-            // Ensure err.message is a string.
-            const errorMessage = err instanceof Error ? err.message : 'Failed to reset password. Please try again.';
-            setError(errorMessage);
-            toast.error(errorMessage);
-        }
-        finally {
-            setIsLoading(false);
-        }
-    };
-    if (error && !token) { // If token was invalid from the start
-        return (<div className="flex min-h-screen items-center justify-center p-4 text-red-500">
-        <p>{error}</p>
-      </div>);
+import { useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { toast } from '@/hooks/use-toast'
+
+const API_URL = import.meta.env.VITE_API_URL || ''
+
+function strength(pw: string) {
+  if (pw.length < 8) return 0
+  if (pw.length < 10) return 1
+  if (pw.length < 12) return 2
+  return 3
+}
+
+export default function ResetPassword() {
+  const { token = '', uid = '' } = useParams()
+  const [password, setPassword] = useState('')
+  const [confirm, setConfirm] = useState('')
+  const [loading, setLoading] = useState(false)
+  const s = strength(password)
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (password !== confirm) {
+      toast.error('Passwords do not match')
+      return
     }
-    return (<div className="flex min-h-screen items-center justify-center p-4">
+    setLoading(true)
+    try {
+      const res = await fetch(`${API_URL}/auth/reset-password/${uid}/${token}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password })
+      })
+      if (res.status === 200) {
+        toast.success('Password updated')
+      } else {
+        toast.error('Reset failed')
+      }
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return (
+    <div className="flex min-h-screen items-center justify-center p-4">
       <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-4">
-        <h2 className="text-2xl font-bold text-center">Reset Your Password</h2>
-        {error && <p className="text-red-500 text-sm text-center">{error}</p>}
-        <div>
-          <Input type="password" name="password" placeholder="Enter new password" value={password} onChange={handlePasswordChange} disabled={isLoading}/>
-          {/* Assuming PasswordStrengthMeter is available and configured */}
-          {/* <PasswordStrengthMeter password={password} /> */}
+        <Input
+          type="password"
+          placeholder="New password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <div className="h-2 bg-zinc-200 rounded">
+          <div
+            className={`h-full rounded ${['bg-red-500','bg-yellow-500','bg-blue-500','bg-green-500'][s]}`}
+            style={{ width: `${(s+1)*25}%` }}
+          />
         </div>
-        <Input type="password" name="confirmPassword" placeholder="Confirm new password" value={confirmPassword} onChange={handleConfirmPasswordChange} disabled={isLoading}/>
-        <Button type="submit" className="w-full" disabled={isLoading}>
-          {isLoading ? 'Resetting Password...' : 'Reset Password'}
-        </Button>
+        <Input
+          type="password"
+          placeholder="Confirm password"
+          value={confirm}
+          onChange={(e) => setConfirm(e.target.value)}
+        />
+        <Button type="submit" disabled={loading}>{loading ? 'Saving...' : 'Reset Password'}</Button>
       </form>
-    </div>);
+    </div>
+  )
 }

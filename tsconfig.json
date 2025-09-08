@@ -29,7 +29,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "axios": ["./src/lib/axios"]
+      "@/pages/*": ["./src/pages/*"],
+      "axios": ["./src/lib/axios.ts"]
     },
     "typeRoots": ["./src/types"],
 

@@ -32,13 +32,16 @@ export default defineConfig({
     sourcemap: false,
     minify: 'esbuild',
     rollupOptions: {
-      external: ['react-markdown', 'vue'],
+      output: {
+        inlineDynamicImports: false,
+      },
+      // Bundle axios with the app to avoid missing module errors
     },
   },
   resolve: {
     alias: {
-      '@': srcDir,
-      'axios': axiosPath
+      '@': path.resolve(__dirname, './src'),
+      'axios': path.resolve(__dirname, './src/lib/axios.ts')
     }
   },
   build: {

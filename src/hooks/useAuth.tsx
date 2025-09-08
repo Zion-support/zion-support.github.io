@@ -1,4 +1,8 @@
-import { useState, useEffect, createContext, useContext, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { AuthContext } from "@/context/auth/AuthContext";
+import type { UserDetails as AuthUserDetails } from "@/types/auth";
+import { subscribeToPush } from "@/utils/pushSubscription";
 
 interface User {
   id: string;

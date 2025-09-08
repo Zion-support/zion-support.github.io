@@ -1,17 +1,27 @@
 
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle, ShoppingCart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
-import { useAppSelector } from "@/store/hooks";
-import { selectCartCount } from "@/store/cartSlice";
+import { useFavorites } from "@/hooks/useFavorites";
+import { useCart } from "@/context/CartContext";
+import {
+  Home,
+  Search,
+  MessageCircle,
+  Heart,
+  MessageSquare,
+  ShoppingCart,
+  User
+} from "lucide-react";
 
 export function MobileBottomNav() {
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
-  const cartCount = useAppSelector(selectCartCount);
+  const { count: favoritesCount } = useFavorites();
+  const { items } = useCart();
+  const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
 
   const navItems = [
     {
@@ -33,11 +43,12 @@ export function MobileBottomNav() {
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     },
     {
-      name: "Cart",
-      href: "/cart",
-      icon: ShoppingCart,
-      matches: (path: string) => path.startsWith("/cart"),
-      badge: cartCount
+      name: "Wishlist",
+      href: "/wishlist",
+      icon: Heart,
+      matches: (path: string) => path.startsWith("/wishlist"),
+      badge: favoritesCount,
+      authRequired: true
     },
     {
       name: "Messages",
@@ -46,6 +57,13 @@ export function MobileBottomNav() {
       matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
       badge: unreadCount,
       authRequired: true
+    },
+    {
+      name: "Cart",
+      href: "/cart",
+      icon: ShoppingCart,
+      matches: (path: string) => path.startsWith("/cart"),
+      badge: cartCount
     },
     {
       name: "Dashboard",

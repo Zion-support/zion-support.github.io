@@ -97,6 +97,91 @@ export default function TalentDirectory() {
   }
 
   return (
+    <div className="container mx-auto px-4 py-8">
+        <div className="flex flex-col space-y-8">
+          <div>
+            <h1 className="text-3xl font-bold text-white mb-2">AI & Tech Talent Directory</h1>
+            <p className="text-zion-slate-light">
+              Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.
+            </p>
+          </div>
+          
+          {/* Main content */}
+          <div className="flex flex-col lg:flex-row gap-6">
+            {/* Sidebar - Desktop */}
+            <div className="w-full lg:w-64 shrink-0 hidden lg:block">
+              <FilterSidebar
+                searchTerm={searchTerm}
+                setSearchTerm={setSearchTerm}
+                selectedSkills={selectedSkills}
+                toggleSkill={toggleSkill}
+                selectedAvailability={selectedAvailability}
+                toggleAvailability={toggleAvailability}
+                selectedRegions={selectedRegions}
+                toggleRegion={toggleRegion}
+                priceRange={priceRange}
+                setPriceRange={setPriceRange}
+                experienceRange={experienceRange}
+                setExperienceRange={setExperienceRange}
+                expandedSections={expandedSections}
+                toggleSection={toggleSection}
+                sortOption={sortOption}
+                setSortOption={setSortOption}
+                clearFilters={clearFilters}
+              />
+            </div>
+            
+            {/* Mobile filter button */}
+            <div className="lg:hidden mb-4">
+              <Button
+                onClick={() => setIsMobileFilterOpen(true)}
+                variant="outline"
+                className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light"
+              >
+                Filter & Sort
+              </Button>
+            </div>
+            
+            {/* Results */}
+            <TalentResults
+              talents={paginatedTalents}
+              totalCount={filteredTalents.length}
+              isLoading={isLoading}
+              viewProfile={viewProfile}
+              handleRequestHire={handleRequestHire}
+              isAuthenticated={isAuthenticated}
+              activeFiltersProps={{
+                selectedSkills,
+                toggleSkill,
+                selectedAvailability,
+                toggleAvailability,
+                selectedRegions,
+                toggleRegion,
+                priceRange,
+                setPriceRange,
+                experienceRange,
+                setExperienceRange,
+                clearFilters,
+              }}
+            />
+
+  if (isLoading) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <TalentSkeleton />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <ErrorBanner msg="Unable to load talent profiles." />
+      </div>
+    );
+  }
+
+  return (
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Talent Directory - Zion Tech Group"

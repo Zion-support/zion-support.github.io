@@ -5,8 +5,8 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Input } from '@/components/ui/input';
 import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
-import { useNavigate, useLocation } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
+import { PointsBadge } from '@/components/loyalty/PointsBadge';
 import {
   Dialog,
   DialogContent,
@@ -19,9 +19,18 @@ import { Input } from '@/components/ui/input';
 import { useAuth } from '@/hooks/useAuth';
 
 
+interface CheckoutForm {
+  name: string;
+  email: string;
+  address: string;
+  city: string;
+  country: string;
+}
+
 export default function Checkout() {
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const [searchParams] = useSearchParams();
   const [items, setItems] = useState<CartItem[]>([]);
   const { user } = useAuth();
   const [showGuest, setShowGuest] = useState(false);
@@ -29,9 +38,13 @@ export default function Checkout() {
   const [guestAddress, setGuestAddress] = useState('');
 
   useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const productParam = params.get('product');
-    const stored = localStorage.getItem('cart');
+    const sku = searchParams.get('sku');
+    if (sku) {
+      setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
+      return;
+    }
+
+    const stored = safeStorage.getItem('cart');
     if (stored) {
       try {
         const parsed = JSON.parse(stored) as CartItem[];
@@ -43,22 +56,7 @@ export default function Checkout() {
         // ignore parsing errors
       }
     }
-    if (productParam) {
-      setItems([
-        { id: productParam, name: 'Test Item', price: 25, quantity: 1 },
-      ]);
-    } else {
-      // Provide mock data if cart empty
-      setItems([
-        {
-          id: 'prod_mock',
-          name: 'Test Item',
-          price: 25,
-          quantity: 1,
-        },
-      ]);
-    }
-  }, [location.search]);
+  }, [searchParams]);
 
   const createSession = async (body: any) => {
     try {
@@ -111,7 +109,10 @@ export default function Checkout() {
 
   return (
     <div className="container max-w-2xl py-10">
-      <h1 className="text-3xl font-bold mb-6">{t('checkout.title')}</h1>
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-3xl font-bold">{t('checkout.title')}</h1>
+        <PointsBadge />
+      </div>
       <div className="grid gap-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">

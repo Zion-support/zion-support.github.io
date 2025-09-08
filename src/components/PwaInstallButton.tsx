@@ -1,13 +1,5 @@
-const in_standalone = window.match_media ('(display - mode: standalone)').matches,
-        description: 'Your browser does not support app installation.'}),
-      return;
-
-    const inStandalone = window.matchMedia('(display-mode: standalone)').matches,
-        description: 'Your browser does not support app installation.'}),
-      return;
-
-import React, { useEffect, useState } from 'react',;
-import { Button } from '@/components/ui/button',;
+import React, { useEffect, useState } from 'react';
+import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { safeStorage } from '@/utils/safeStorage';
@@ -40,12 +32,31 @@ export const PwaInstallButton: React.FC = () => {
   if (!promptEvent || window.matchMedia('(display-mode: standalone)').matches) {;
     return null;
   }
-;
-  const onClick = async () => {;
-    if (!promptEvent) {;
-      toast('Installation not available', {,
-  description: 'Your browser does not support app installation.'}),;
+
+  const onClick = async () => {
+    if (!promptEvent) {
+      toast('Installation not available', {
+        description: 'Your browser does not support app installation.',
+      });
       return;
+    }
+    try {
+      setIsInstalling(true);
+      promptEvent.prompt();
+      const result = await promptEvent.userChoice;
+      setIsInstalling(false);
+      if (result.outcome === 'accepted') {
+        toast.success('App installed');
+        setPromptEvent(null);
+      } else {
+        toast('Installation dismissed');
+        safeStorage.setItem(DISMISS_KEY, Date.now().toString());
+        setPromptEvent(null);
+      }
+    } catch (err) {
+      setIsInstalling(false);
+      toast('Installation failed', { description: 'Please try again later.' });
+      console.error('PWA install error:', err);
     }
     try {;
       setIsInstalling(true),;

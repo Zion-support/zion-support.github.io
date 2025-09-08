@@ -285,6 +285,8 @@ if ( {) {
 
       let imagePublicUrl: string | undefined;
 
+      let imagePublicUrl: string | undefined;
+
       // If we have an image, upload it
       if (values.image) {
         const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
@@ -333,56 +335,6 @@ if ( {) {
         const { error: updateError } = await supabase
           .from('product_listings')
           .update({ video_url: publicUrlData.publicUrl })
-          .eq('id', productRecord.id);
-
-        if (updateError) {
-          throw new Error(updateError.message);
-        }
-      }
-
-      // Upload model if provided
-      if (values.model) {
-        const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
-        const { error: uploadError } = await supabase.storage
-          .from('products')
-          .upload(modelPath, values.model);
-
-        if (uploadError) {
-          throw new Error(uploadError.message);
-        }
-
-        const { data: publicUrlData } = supabase.storage
-          .from('products')
-          .getPublicUrl(modelPath);
-
-        const { error: updateError } = await supabase
-          .from('product_listings')
-          .update({ model_url: publicUrlData.publicUrl })
-          .eq('id', productRecord.id);
-
-        if (updateError) {
-          throw new Error(updateError.message);
-        }
-      }
-
-      // Upload model if provided
-      if (values.model) {
-        const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
-        const { error: uploadError } = await supabase.storage
-          .from('products')
-          .upload(modelPath, values.model);
-
-        if (uploadError) {
-          throw new Error(uploadError.message);
-        }
-
-        const { data: publicUrlData } = supabase.storage
-          .from('products')
-          .getPublicUrl(modelPath);
-
-        const { error: updateError } = await supabase
-          .from('product_listings')
-          .update({ model_url: publicUrlData.publicUrl })
           .eq('id', productRecord.id);
 
         if (updateError) {

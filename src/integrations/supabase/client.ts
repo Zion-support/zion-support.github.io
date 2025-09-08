@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-import { captureException } from '@/lib/sentry';
+import { supabaseStorageAdapter } from './safeStorageAdapter';
 
 interface SupabaseClient {
   auth: {
@@ -15,11 +15,17 @@ interface SupabaseClient {
   };
 }
 
-// Enhanced network connectivity check with multiple strategies
-export const checkOnline = async (): Promise<boolean> => {
-  // First check navigator.onLine
-  if (typeof navigator !== 'undefined' && !navigator.onLine) {
-    return false;
+// Create Supabase client with proper configuration
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    persistSession: true,
+    autoRefreshToken: true,
+    storage: supabaseStorageAdapter,
+  },
+  global: {
+    headers: {
+      'apikey': supabaseAnonKey
+    }
   }
 
   try {

@@ -1,218 +1,14 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Activity, 
-  Shield, 
-  Cloud, 
-  Brain,
-  Rocket,
-  Zap,
-  Clock,
-  CheckCircle,
-  AlertTriangle,
-  ArrowUpRight,
-  ArrowDownRight,
-  Calendar,
-  FileText,
-  MessageSquare,
-  Bell,
-  Settings,
-  Search,
-  Filter,
-  Download,
-  Eye,
-  MoreHorizontal,
-  Plus,
-  Star,
-  Target,
-  Award,
-  Globe,
-  Database,
-  Server,
-  Lock,
-  Cpu,
-  Network,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Laptop
-} from 'lucide-react';
-
-const stats = [
-  {
-    title: 'Total Revenue',
-    value: '$2.4M',
-    change: '+12.5%',
-    changeType: 'positive',
-    icon: DollarSign,
-    color: 'from-green-400 to-emerald-500'
-  },
-  {
-    title: 'Active Users',
-    value: '45.2K',
-    change: '+8.1%',
-    changeType: 'positive',
-    icon: Users,
-    color: 'from-blue-400 to-cyan-500'
-  },
-  {
-    title: 'System Uptime',
-    value: '99.9%',
-    change: '+0.1%',
-    changeType: 'positive',
-    icon: Activity,
-    color: 'from-purple-400 to-pink-500'
-  },
-  {
-    title: 'Security Score',
-    value: '98.5',
-    change: '+2.3%',
-    changeType: 'positive',
-    icon: Shield,
-    color: 'from-yellow-400 to-orange-500'
-  }
-];
-
-const recentActivities = [
-  {
-    id: 1,
-    type: 'deployment',
-    title: 'AI Model Update Deployed',
-    description: 'New machine learning model deployed to production',
-    time: '2 hours ago',
-    status: 'success',
-    icon: Brain
-  },
-  {
-    id: 2,
-    type: 'security',
-    title: 'Security Scan Completed',
-    description: 'Automated security scan found no critical vulnerabilities',
-    time: '4 hours ago',
-    status: 'success',
-    icon: Shield
-  },
-  {
-    id: 3,
-    type: 'maintenance',
-    title: 'Scheduled Maintenance',
-    description: 'Database optimization completed successfully',
-    time: '6 hours ago',
-    status: 'info',
-    icon: Database
-  },
-  {
-    id: 4,
-    type: 'alert',
-    title: 'High CPU Usage Detected',
-    description: 'Server CPU usage reached 85% threshold',
-    time: '8 hours ago',
-    status: 'warning',
-    icon: Cpu
-  }
-];
-
-const quickActions = [
-  {
-    title: 'Deploy New Service',
-    description: 'Launch a new microservice',
-    icon: Rocket,
-    color: 'from-blue-400 to-cyan-500',
-    href: '/deploy'
-  },
-  {
-    title: 'Run Security Scan',
-    description: 'Initiate security vulnerability scan',
-    icon: Shield,
-    color: 'from-red-400 to-orange-500',
-    href: '/security'
-  },
-  {
-    title: 'Monitor Performance',
-    description: 'View real-time system metrics',
-    icon: Activity,
-    color: 'from-green-400 to-emerald-500',
-    href: '/monitoring'
-  },
-  {
-    title: 'Generate Report',
-    description: 'Create monthly performance report',
-    icon: FileText,
-    color: 'from-purple-400 to-pink-500',
-    href: '/reports'
-  }
-];
-
-const systemHealth = [
-  {
-    name: 'Web Servers',
-    status: 'healthy',
-    uptime: '99.9%',
-    response: '45ms',
-    icon: Server,
-    color: 'text-green-400'
-  },
-  {
-    name: 'Database Cluster',
-    status: 'healthy',
-    uptime: '99.8%',
-    response: '12ms',
-    icon: Database,
-    color: 'text-green-400'
-  },
-  {
-    name: 'AI Services',
-    status: 'warning',
-    uptime: '98.5%',
-    response: '120ms',
-    icon: Brain,
-    color: 'text-yellow-400'
-  },
-  {
-    name: 'Security Services',
-    status: 'healthy',
-    uptime: '99.9%',
-    response: '8ms',
-    icon: Shield,
-    color: 'text-green-400'
-  }
-];
-
-const recentDeployments = [
-  {
-    id: 1,
-    service: 'AI Analytics API',
-    version: 'v2.1.0',
-    status: 'success',
-    deployedBy: 'John Smith',
-    time: '2 hours ago',
-    environment: 'Production'
-  },
-  {
-    id: 2,
-    service: 'User Management',
-    version: 'v1.5.2',
-    status: 'success',
-    deployedBy: 'Sarah Johnson',
-    time: '6 hours ago',
-    environment: 'Production'
-  },
-  {
-    id: 3,
-    service: 'Payment Gateway',
-    version: 'v3.0.1',
-    status: 'pending',
-    deployedBy: 'Mike Davis',
-    time: '12 hours ago',
-    environment: 'Staging'
-  }
-];
+import { useAuth } from "@/hooks/useAuth";
+import { Button } from "@/components/ui/button";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { CommunityDiscussion } from "@/components/CommunityDiscussion";
+import { Badge } from "@/components/ui/badge";
+import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react";
+import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications";
+import { NotificationBell } from "@/components/NotificationBell";
+import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
 
 export default function Dashboard() {
   const [selectedTimeframe, setSelectedTimeframe] = useState('7d');
@@ -261,16 +57,71 @@ export default function Dashboard() {
               <p className="text-slate-400">Monitor and manage your technology infrastructure</p>
             </div>
             
-            <div className="flex items-center space-x-4">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-slate-400" />
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 pr-4 py-2 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
-                />
+            {/* Main Content - Dashboard */}
+            <div className="lg:col-span-2">
+              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-2xl font-bold text-white">Dashboard</h2>
+                  <div className="flex items-center gap-2">
+                    <NotificationBell />
+                    <Button 
+                      variant="outline" 
+                      className="text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white"
+                      onClick={logout}
+                    >
+                      <LogOut size={16} className="mr-2" />
+                      Logout
+                    </Button>
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">
+                  <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light">
+                    <h3 className="text-lg font-medium text-white">Welcome, {user.displayName.split(' ')[0]}</h3>
+                    <p className="text-zion-slate-light mt-1">Your journey on Zion has just begun!</p>
+                  </div>
+                  <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-cyan/30 border border-zion-blue-light">
+                    <h3 className="text-lg font-medium text-white">Getting Started</h3>
+                    <p className="text-zion-slate-light mt-1">Complete your profile to unlock all features.</p>
+                  </div>
+                </div>
+                
+                {/* Badges Preview */}
+                <div className="mb-8">
+                  <h3 className="text-lg font-bold text-white mb-4">Your Badges</h3>
+                  <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
+                    <div className="flex flex-col items-center">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center mb-2">
+                        <UserCheck size={24} className="text-white" />
+                      </div>
+                      <span className="text-xs text-center text-zion-slate-light">Newcomer</span>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-purple-light flex items-center justify-center mb-2">
+                        <MessageSquare size={24} className="text-white" />
+                      </div>
+                      <span className="text-xs text-center text-zion-slate-light">First Post</span>
+                    </div>
+                    <div className="flex flex-col items-center opacity-40">
+                      <div className="w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2">
+                        <Bell size={24} className="text-zion-slate-light" />
+                      </div>
+                      <span className="text-xs text-center text-zion-slate-light">Locked</span>
+                    </div>
+                    <div className="flex flex-col items-center opacity-40">
+                      <div className="w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2">
+                        <span className="text-zion-slate-light text-xl">?</span>
+                      </div>
+                      <span className="text-xs text-center text-zion-slate-light">Locked</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Community Section */}
+                <div>
+                  <h3 className="text-lg font-bold text-white mb-4">Community</h3>
+                  <CommunityDiscussion />
+                </div>
               </div>
               
               <button className="p-2 text-slate-400 hover:text-white hover:bg-slate-700 rounded-lg transition-colors duration-200">

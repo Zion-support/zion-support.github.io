@@ -1,5 +1,7 @@
-import React from 'react';
-import { Card } from './ui/card';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { useRequestQuoteWizard } from "@/context";
+import { FavoriteButton } from "@/components/FavoriteButton";
 
 interface ServiceCardProps {
   title: string,
@@ -17,34 +19,17 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   className = ''
 }) => {
   return (
-    <Card className={`h-full ${className}`}>
-      {icon && (
-        <div className="flex items-center justify-center w-12 h-12 mb-4 bg-blue-100 rounded-lg">
-          {icon}
-        </div>
-      )}
-      
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">
-        {title}
-      </h3>
-      
-      <p className="text-gray-600 mb-4">
-        {description}
-      </p>
-      
-      {features.length > 0 && (
-        <ul className="space-y-2">
-          {features.map((feature, index) => (
-            <li key={index} className="flex items-center text-sm text-gray-600">
-              <svg className="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-              {feature}
-            </li>
-          ))}
-        </ul>
-      )}
-    </Card>
+    <div
+      data-testid={`service-card-${service.id}`}
+      onClick={handleClick}
+      className="cursor-pointer p-4 border border-zion-blue-light rounded-lg bg-zion-blue-dark hover:border-zion-purple/50 relative"
+    >
+      <FavoriteButton itemId={service.id} itemType="service" />
+      <h3 className="text-white font-medium mb-2">{service.title}</h3>
+      <Button size="sm" onClick={handleRequestQuote} data-testid="request-quote-btn">
+        Request Quote
+      </Button>
+    </div>
   );
 };
 

@@ -2,12 +2,8 @@ import { useNavigate, Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductListing } from "@/types/listings";
-import { Star, DollarSign, Heart } from "lucide-react";
-import { useAppDispatch } from "@/store/hooks";
-import { addToWishlist, getApiUrl } from "@/store/wishlistSlice";
-import { useAuth } from "@/hooks/useAuth";
-import { useLocation } from "react-router-dom";
-import { toast } from "sonner";
+import { Star, DollarSign } from "lucide-react";
+import { FavoriteButton } from "@/components/FavoriteButton";
 
 
 export function ProductListingCard({
@@ -93,6 +89,7 @@ export function ProductListingCard({
               Featured
             </Badge>
           )}
+          <FavoriteButton itemId={listing.id} itemType="product" />
         </div>
       </div>
       
@@ -117,11 +114,11 @@ export function ProductListingCard({
           
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
-            <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
+            <h3 className="font-semibold text-white mb-2 hover:text-zion-cyan transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
               {listing.title}
             </h3>
           </div>
-          <p className="text-sm text-zion-slate line-clamp-2 mb-4">
+          <p className="text-zion-slate line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]">
             {listing.description}
           </p>
           
