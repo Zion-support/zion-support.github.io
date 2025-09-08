@@ -6,14 +6,14 @@ const stripe = new Stripe(Deno.env.get('STRIPE_SECRET_KEY') || '', {
   apiVersion: '2023-10-16'
 });
 
+const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET') || '';
+
 const supabase = createClient(
   Deno.env.get('SUPABASE_URL') || '',
   Deno.env.get('SUPABASE_ANON_KEY') || ''
 );
 
-const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET') || '';
-
-serve(async req => {
+serve(async (req) => {
   if (req.method === 'POST') {
     const body = await req.text();
     const signature = req.headers.get('stripe-signature') || '';
