@@ -2,17 +2,25 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { fileURLToPath } from 'node:url'
 import path from 'path'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [
     react({
       // Enable React Fast Refresh
       fastRefresh: true,
       // Optimize JSX runtime
       jsxRuntime: 'automatic',
+    }),
+    // Add bundle analyzer in analyze mode
+    mode === 'analyze' && visualizer({
+      filename: 'dist/stats.html',
+      open: true,
+      gzipSize: true,
+      brotliSize: true,
     })
-  ],
+  ].filter(Boolean),
   build: {
     // Disable source maps in production for smaller bundle
     sourcemap: false,
@@ -49,6 +57,10 @@ export default defineConfig({
     host: true,
     open: true,
     cors: true,
+    // Enable HMR for better development experience
+    hmr: {
+      overlay: true,
+    },
   },
   define: {
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
@@ -61,6 +73,19 @@ export default defineConfig({
       'react-router-dom',
       'axios',
       'date-fns',
+      'lodash.debounce',
+      'framer-motion',
     ],
+    // Exclude problematic dependencies
+    exclude: ['@vite/client', '@vite/env'],
   },
-})
+  // Performance optimizations
+  esbuild: {
+    target: 'esnext',
+    format: 'esm',
+  },
+  // CSS optimizations
+  css: {
+    devSourcemap: true,
+  },
+}))
