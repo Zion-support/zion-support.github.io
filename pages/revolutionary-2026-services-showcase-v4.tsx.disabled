@@ -7,7 +7,7 @@ import {
   ArrowRight, Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, Phone, Mail, MapPin, Eye, Heart, Target, Award
 } from 'lucide-react';
-import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
+import { innovative2026MicroSaasV4Services } from '../data/innovative-2026-micro-saas-v4';
 import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
 import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-v4';
@@ -30,7 +30,7 @@ export default function Revolutionary2026ServicesShowcaseV4() {
 
   // Combine all new services
   const allServices = [
-    ...innovative2026MicroSaasServicesV4,
+    ...innovative2026MicroSaasV4Services,
     ...emergingTech2026ServicesV4,
     ...enterpriseIT2026ServicesV4,
     ...innovative2026AIServicesV4

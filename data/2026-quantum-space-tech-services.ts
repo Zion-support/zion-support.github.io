@@ -1,108 +1,52 @@
-
-  id: string;
-  name: string;
-  tagline: string;
-  price: string,
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-  contactInfo: {
-    mobile: string;
-    email: string;
-export interface QuantumSpaceTechService2026 {;
-    address: string
-};
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,,
-  description: string,;
-  features: string[],;
-  link: string,;
-  category: string,;
-  realImplementation: boolean,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string;
-
-  }
-}
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-  id: string, name: string,
-  tagline: string, price: string,
-  description: string, features: string[],
-  link: string, category: string,
-  realImplementation: boolean,
-  contactInfo: {
-    mobile: string, email: string,
-    address: string
-  }
-}
-
-export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
+export const quantumSpaceTechServices2026 = [
   {
-    id: "2026-quantum-space-tech", name: "2026 Quantum Space Tech Platform",
-    tagline: "Quantum computing meets space technology", price: "$599/month",
-    description: "Revolutionary platform combining quantum computing with advanced space technology for 2026.",
+    name: 'Quantum Computing Solutions 2026',
+    path: '/services/quantum-computing-solutions-2026',
+    description: 'Advanced quantum computing services and consulting',
+    icon: 'Cpu',
+    category: 'Quantum Technology',
     features: [
-      "Quantum computing";
-      "Space technology";
-      "Advanced algorithms";
-      "Innovation platform";
-      "Expert support"
-    ];
-    link: "/services/2026-quantum-space-tech", category: "Quantum Space Tech 2026",
-    realImplementation: true,
-    contactInfo: {
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-      email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
-    }
-  }
-];
-;
-    id: "2026-quantum-space-tech",
-    name: "2026 Quantum Space Tech Platform",
-    tagline: "Quantum computing meets space technology",
-    price: "$599/month",
-    description: "Revolutionary platform combining quantum computing with advanced space technology for 2026.",
-    features: [
-      "Quantum computing",
-      "Space technology",
-      "Advanced algorithms",
-      "Innovation platform",
-      "Expert support"
+      'Quantum algorithm optimization',
+      'Quantum-safe cryptography',
+      'Quantum simulation services',
+      'Quantum consulting'
     ],
-    link: "/services/2026-quantum-space-tech",
-    category: "Quantum Space Tech 2026",
-    realImplementation: true,
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },;
-];      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+    pricing: {
+      starter: '$999/month',
+      professional: '$1999/month',
+      enterprise: 'Custom'
+    }
+  },
+  {
+    name: 'Space Technology Integration 2026',
+    path: '/services/space-technology-integration-2026',
+    description: 'Space-based technology solutions and services',
+    icon: 'Rocket',
+    category: 'Space Technology',
+    features: [
+      'Satellite data processing',
+      'Space-based analytics',
+      'Orbital technology consulting',
+      'Space infrastructure services'
+    ],
+    pricing: {
+      starter: '$1499/month',
+      professional: '$2999/month',
+      enterprise: 'Custom'
     }
   }
 ];
+
+export const quantumSpaceCategories2026 = [
+  'Quantum Computing',
+  'Space Technology',
+  'Advanced Analytics',
+  'Infrastructure'
+];
+
+export const quantumSpaceStats2026 = {
+  totalServices: 2,
+  categories: 4,
+  averageRating: 4.9,
+  activeUsers: 800
+};

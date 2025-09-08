@@ -160,3 +160,93 @@ export interface AdvancedAIAutomationService {
     reviews: 267
   }
 ];
+
+// Service categories
+export const aiAutomationCategories = [
+  'All',
+  'AI & Business Automation',
+  'AI & Customer Experience',
+  'AI & Supply Chain',
+  'AI & Financial Services',
+  'AI & Human Resources',
+  'AI & Marketing'
+];
+
+export const getAIAutomationServicesByCategory = (category: string) => {
+  if (category === 'All') return advancedAIAutomationServices;
+  return advancedAIAutomationServices.filter(service => service.category === category);
+};
+
+export const getPopularAIAutomationServices = (limit: number = 6): AIAutomationService[] => {
+  return advancedAIAutomationServices
+    .filter(service => service.popular)
+    .slice(0, limit);
+};
+
+export const getAIAutomationServicesByTechnology = (technology: string): AIAutomationService[] => {
+  return advancedAIAutomationServices.filter(service =>
+    service.technology.some(tech =>
+      tech.toLowerCase().includes(technology.toLowerCase())
+    )
+  );
+};
+
+export const getAIAutomationServicesByPriceRange = (minPrice: number, maxPrice: number): AIAutomationService[] => {
+  return advancedAIAutomationServices.filter(service => {
+    const price = parseFloat(service.price.replace('$', '').replace(',', ''));
+    return price >= minPrice && (maxPrice === Infinity || price <= maxPrice);
+  });
+};
+
+export const advancedAIAutomationServices2026 = [
+  {
+    name: 'Advanced AI Automation Platform 2026',
+    path: '/services/advanced-ai-automation-platform-2026',
+    description: 'Next-generation AI automation platform for enterprise',
+    icon: 'Brain',
+    category: 'AI & Automation',
+    features: [
+      'Advanced AI algorithms',
+      'Process automation',
+      'Intelligent decision making',
+      'Performance optimization'
+    ],
+    pricing: {
+      starter: '$599/month',
+      professional: '$1199/month',
+      enterprise: 'Custom'
+    }
+  },
+  {
+    name: 'Advanced AI Workflow Engine 2026',
+    path: '/services/advanced-ai-workflow-engine-2026',
+    description: 'Intelligent workflow automation with AI',
+    icon: 'Workflow',
+    category: 'AI & Automation',
+    features: [
+      'Smart workflow design',
+      'AI optimization',
+      'Real-time monitoring',
+      'Advanced analytics'
+    ],
+    pricing: {
+      starter: '$399/month',
+      professional: '$799/month',
+      enterprise: 'Custom'
+    }
+  }
+];
+
+export const advancedAIAutomationCategories2026 = [
+  'Process Automation',
+  'Workflow Management',
+  'Decision Intelligence',
+  'Performance Optimization'
+];
+
+export const advancedAIAutomationStats2026 = {
+  totalServices: 2,
+  categories: 4,
+  averageRating: 4.9,
+  activeUsers: 3000
+};

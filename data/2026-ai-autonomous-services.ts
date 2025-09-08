@@ -1,108 +1,52 @@
-
-  id: string;
-  name: string;
-  tagline: string;
-  price: string,
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-  contactInfo: {
-    mobile: string;
-    email: string;
-export interface AiAutonomousService2026 {;
-    address: string
-};
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,,
-  description: string,;
-  features: string[],;
-  link: string,;
-  category: string,;
-  realImplementation: boolean,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string;
-
-  }
-}
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-  id: string, name: string,
-  tagline: string, price: string,
-  description: string, features: string[],
-  link: string, category: string,
-  realImplementation: boolean,
-  contactInfo: {
-    mobile: string, email: string,
-    address: string
-  }
-}
-
-export const aiAutonomousServices2026: AiAutonomousService2026[] = [
+export const aiAutonomousServices2026 = [
   {
-    id: "2026-ai-autonomous", name: "2026 AI Autonomous Platform",
-    tagline: "Fully autonomous AI systems", price: "$499/month",
-    description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",
+    name: 'AI Autonomous Business Manager 2026',
+    path: '/services/ai-autonomous-business-manager-2026',
+    description: 'Next-generation autonomous business management system',
+    icon: 'Brain',
+    category: 'AI & Machine Learning',
     features: [
-      "Autonomous operation";
-      "Self-learning capabilities";
-      "Independent decision making";
-      "Advanced AI algorithms";
-      "24/7 operation"
-    ];
-    link: "/services/2026-ai-autonomous", category: "AI Autonomous 2026",
-    realImplementation: true,
-    contactInfo: {
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-      email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
-    }
-  }
-];
-;
-    id: "2026-ai-autonomous",
-    name: "2026 AI Autonomous Platform",
-    tagline: "Fully autonomous AI systems",
-    price: "$499/month",
-    description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",
-    features: [
-      "Autonomous operation",
-      "Self-learning capabilities",
-      "Independent decision making",
-      "Advanced AI algorithms",
-      "24/7 operation"
+      'Advanced decision-making algorithms',
+      'Real-time business intelligence',
+      'Automated workflow optimization',
+      'Predictive analytics integration'
     ],
-    link: "/services/2026-ai-autonomous",
-    category: "AI Autonomous 2026",
-    realImplementation: true,
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },;
-];      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+    pricing: {
+      starter: '$299/month',
+      professional: '$599/month',
+      enterprise: 'Custom'
+    }
+  },
+  {
+    name: 'AI Autonomous Research Assistant 2026',
+    path: '/services/ai-autonomous-research-assistant-2026',
+    description: 'Intelligent research automation and analysis',
+    icon: 'Search',
+    category: 'AI & Machine Learning',
+    features: [
+      'Automated data collection',
+      'Intelligent pattern recognition',
+      'Research synthesis',
+      'Citation management'
+    ],
+    pricing: {
+      starter: '$199/month',
+      professional: '$399/month',
+      enterprise: 'Custom'
     }
   }
 ];
+
+export const aiAutonomousCategories2026 = [
+  'Business Management',
+  'Research & Development',
+  'Data Analysis',
+  'Process Automation'
+];
+
+export const aiAutonomousStats2026 = {
+  totalServices: 2,
+  categories: 4,
+  averageRating: 4.8,
+  activeUsers: 1500
+};
