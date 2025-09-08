@@ -1,120 +1,32 @@
-/* Enhanced App Styles */
 .App {
-  text-align: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #0A1024 0%, #141A3C 50%, #1A1A2E 100%);
+  background: linear-gradient(135deg, #0A1024 0%, #141A3C 100%);
   color: white;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-header {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+.main-content {
+  flex: 1;
+  padding: 2rem 0;
 }
 
-.App-header h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  background: linear-gradient(45deg, #00FFFF, #A450FF, #FF6B6B);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradientShift 3s ease-in-out infinite;
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem 0;
+  }
 }
 
-@keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+/* Smooth transitions for route changes */
+.route-transition {
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-.App-header p {
-  font-size: 1.2rem;
-  margin-bottom: 3rem;
-  color: #94A3B8;
-}
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.feature-card {
-  background: rgba(20, 26, 60, 0.8);
-  border: 1px solid #2D4A8A;
-  border-radius: 12px;
-  padding: 2rem;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  position: relative;
-  overflow: hidden;
-}
-
-.feature-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transition: left 0.5s ease;
-}
-
-.feature-card:hover::before {
-  left: 100%;
-}
-
-.feature-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.3);
-  border-color: #00FFFF;
-}
-
-.feature-card h3 {
-  color: #00FFFF;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  position: relative;
-  z-index: 1;
-}
-
-.feature-card p {
-  color: #94A3B8;
-  line-height: 1.6;
-  position: relative;
-  z-index: 1;
-}
-
-/* Enhanced button styles */
-button {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s ease;
-}
-
-button:hover::before {
-  left: 100%;
-}
-
-/* Loading animation */
-@keyframes fadeInUp {
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -122,16 +34,55 @@ button:hover::before {
   }
 }
 
-.fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
+/* Loading states */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
 }
 
-/* Pulse animation for status indicator */
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+/* Error states */
+.error {
+  text-align: center;
+  padding: 2rem;
+  color: #ff6b6b;
 }
 
-.pulse {
-  animation: pulse 2s ease-in-out infinite;
+/* Accessibility improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus states for better accessibility */
+*:focus {
+  outline: 2px solid #00FFFF;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .App {
+    background: #000;
+    color: #fff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .route-transition {
+    animation: none;
+  }
+  
+  * {
+    transition: none !important;
+  }
 }

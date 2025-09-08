@@ -29,117 +29,120 @@ export function throttle<T extends (...args: any[]) => any>(
   };
 }
 
-// Lazy load images with intersection observer
-export function lazyLoadImage(img: HTMLImageElement, src: string) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          img.src = src;
-          img.classList.remove('lazy');
-          observer.unobserve(img);
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-  observer.observe(img);
-}
-
-// Preload critical resources
-export function preloadResource(href: string, as: string) {
-  const link = document.createElement('link');
-  link.rel = 'preload';
-  link.href = href;
-  link.as = as;
-  document.head.appendChild(link);
-}
-
-// Check if element is in viewport
-export function isInViewport(element: HTMLElement): boolean {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
-// Performance monitoring
+// Performance monitoring class
 export class PerformanceMonitor {
-  private static instance: PerformanceMonitor;
-  private metrics: Map<string, number> = new Map();
+  private metrics: Record<string, any> = {};
+  private observers: PerformanceObserver[] = [];
 
-  static getInstance(): PerformanceMonitor {
-    if (!PerformanceMonitor.instance) {
-      PerformanceMonitor.instance = new PerformanceMonitor();
+  constructor() {
+    this.initializeObservers();
+  }
+
+  private initializeObservers() {
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+      // Monitor LCP (Largest Contentful Paint)
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        this.metrics.lcp = lastEntry.startTime;
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      this.observers.push(lcpObserver);
+
+      // Monitor FID (First Input Delay)
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          this.metrics.fid = entry.processingStart - entry.startTime;
+        });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      this.observers.push(fidObserver);
+
+      // Monitor CLS (Cumulative Layout Shift)
+      const clsObserver = new PerformanceObserver((list) => {
+        let clsValue = 0;
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+          }
+        });
+        this.metrics.cls = clsValue;
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      this.observers.push(clsObserver);
     }
-    return PerformanceMonitor.instance;
   }
 
-  startTiming(name: string): void {
-    this.metrics.set(name, performance.now());
+  startMonitoring() {
+    // Start performance monitoring
+    console.log('Performance monitoring started');
   }
 
-  endTiming(name: string): number {
-    const startTime = this.metrics.get(name);
-    if (startTime) {
-      const duration = performance.now() - startTime;
-      this.metrics.delete(name);
-      return duration;
+  stopMonitoring() {
+    // Stop performance monitoring
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+    console.log('Performance monitoring stopped');
+  }
+
+  getMetrics() {
+    return { ...this.metrics };
+  }
+
+  reportMetrics(endpoint?: string) {
+    if (endpoint) {
+      // In a real app, this would send metrics to analytics endpoint
+      console.log('Reporting metrics to:', endpoint, this.metrics);
     }
-    return 0;
-  }
-
-  getMetrics(): Record<string, number> {
-    return Object.fromEntries(this.metrics);
   }
 }
 
-// Memory usage monitoring
-export function getMemoryUsage(): {
-  used: number;
-  total: number;
-  percentage: number;
-} {
-  if ('memory' in performance) {
+// Utility function to measure function execution time
+export function measureTime<T>(fn: () => T, label?: string): T {
+  const start = performance.now();
+  const result = fn();
+  const end = performance.now();
+  
+  if (label) {
+    console.log(`${label} took ${end - start} milliseconds`);
+  }
+  
+  return result;
+}
+
+// Utility function to create a performance mark
+export function mark(name: string) {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    performance.mark(name);
+  }
+}
+
+// Utility function to measure between two marks
+export function measure(name: string, startMark: string, endMark?: string) {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    try {
+      if (endMark) {
+        performance.measure(name, startMark, endMark);
+      } else {
+        performance.measure(name, startMark);
+      }
+    } catch (error) {
+      console.warn('Performance measure failed:', error);
+    }
+  }
+}
+
+// Utility function to get memory usage (if available)
+export function getMemoryUsage() {
+  if (typeof window !== 'undefined' && 'memory' in performance) {
     const memory = (performance as any).memory;
     return {
       used: memory.usedJSHeapSize,
       total: memory.totalJSHeapSize,
-      percentage: (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100,
+      limit: memory.jsHeapSizeLimit
     };
   }
-  return { used: 0, total: 0, percentage: 0 };
-}
-
-// Bundle size optimization helpers
-export function createChunkLoader<T>(
-  importFn: () => Promise<{ default: T }>
-): () => Promise<T> {
-  let promise: Promise<T> | null = null;
-  
-  return () => {
-    if (!promise) {
-      promise = importFn().then(module => module.default);
-    }
-    return promise;
-  };
-}
-
-// Critical resource hints
-export function addResourceHints(): void {
-  const hints = [
-    { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
-    { href: '/api/health', as: 'fetch', crossorigin: 'anonymous' },
-  ];
-
-  hints.forEach(hint => {
-    const link = document.createElement('link');
-    Object.entries(hint).forEach(([key, value]) => {
-      link.setAttribute(key, value);
-    });
-    document.head.appendChild(link);
-  });
+  return null;
 }
