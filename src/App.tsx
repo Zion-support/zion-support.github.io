@@ -1,14 +1,38 @@
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { AppHeader  } from './layout/AppHeader';
-import { EnhancedFuturisticFooter  } from './components/EnhancedFuturisticFooter';
-import { ChatAssistant  } from './components/ChatAssistant';
-import { LoadingSpinner  } from './components/ui/LoadingSpinner';
-import { SEO  } from './components/SEO';
-import { PerformanceOptimizer  } from './components/PerformanceOptimizer';
-import { EnhancedAccessibilityEnhancer  } from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer  } from './components/MobileExperienceEnhancer';
-import { ErrorBoundary  } from './components/ErrorBoundary';
+import './App.css';
+import { ThemeProvider } from "./components/ThemeProvider";
+import { WhitelabelProvider } from "./context/WhitelabelContext";
+import { Toaster } from "./components/ui/toaster";
+import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import {
+  AuthRoutes,
+  DashboardRoutes,
+  MarketplaceRoutes,
+  TalentRoutes,
+  AdminRoutes,
+  MobileAppRoutes,
+  ContentRoutes,
+  ErrorRoutes,
+  EnterpriseRoutes,
+  CommunityRoutes,
+  DeveloperRoutes
+} from './routes';
+const Home = React.lazy(() => import('./pages/Home'));
+const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
+const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
+const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
+const Analytics = React.lazy(() => import('./pages/Analytics'));
+const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage'));
+const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
+const Categories = React.lazy(() => import('./pages/Categories'));
+const Login = React.lazy(() => import('./pages/Login'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
+const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
+const ContactPage = React.lazy(() => import('./pages/Contact'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -30,26 +54,8 @@ const baseRoutes = [
   { path: '/analytics', element: <Analytics /> },
   { path: '/mobile-launch', element: <MobileLaunchPage /> },
   { path: '/open-app', element: <OpenAppRedirect /> },
-  {
-    path: '/community',
-    element: (
-      <CommunityProvider>
-        <CommunityPage />
-      </CommunityProvider>
-    ),
-  },
+  { path: '/community', element: <CommunityPage /> },
   { path: '/contact', element: <ContactPage /> },
-  { path: '/partners', element: <PartnersPage /> },
-  { path: '/sitemap', element: <Sitemap /> },
-  { path: '/help', element: <Help /> },
-  { path: '/zion-hire-ai', element: <ZionHireAI /> },
-  { path: '/hire-ai', element: <ZionHireAI /> },
-  { path: '/request-quote', element: <RequestQuotePage /> },
-  { path: '/blog', element: <Blog /> },
-  { path: '/blog/:slug', element: <BlogPost /> },
-  { path: '/wishlist', element: <WishlistPage /> },
-  { path: '/cart', element: <CartPage /> },
-  { path: '/checkout', element: <Checkout /> },
 ];
 
 // New pages
