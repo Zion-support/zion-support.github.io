@@ -9860,3 +9860,283 @@ fatal: couldn't find remote ref cursor/build-and-deploy-web-application-fd76
 [2025-09-08T21:02:07.228Z] ✅ Success: Get git status
 [2025-09-08T21:02:07.228Z] 📄 Found 0 conflicted files
 [2025-09-08T21:02:07.228Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:02:07.380Z] ✅ Success: Add resolved files
+[2025-09-08T21:02:07.380Z] 🚀 Commit merge for cursor/build-and-deploy-web-application-fd76: git commit -m "Resolve conflicts and merge cursor/build-and-deploy-web-application-fd76"
+[2025-09-08T21:02:07.509Z] ✅ Success: Commit merge for cursor/build-and-deploy-web-application-fd76
+[2025-09-08T21:02:07.510Z] ✅ Successfully resolved conflicts and merged: cursor/build-and-deploy-web-application-fd76
+[2025-09-08T21:02:07.510Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-008f
+[2025-09-08T21:02:07.510Z] 🚀 Fetch origin/cursor/build-and-fix-errors-008f: git fetch origin cursor/build-and-fix-errors-008f
+[2025-09-08T21:02:08.049Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-008f
+[2025-09-08T21:02:08.050Z] 🚀 Merge cursor/build-and-fix-errors-008f: git merge origin/cursor/build-and-fix-errors-008f --no-ff -m "Merge branch cursor/build-and-fix-errors-008f into main"
+[2025-09-08T21:02:08.566Z] ✅ Success: Merge cursor/build-and-fix-errors-008f
+[2025-09-08T21:02:08.567Z] ✅ Successfully merged: cursor/build-and-fix-errors-008f
+[2025-09-08T21:02:08.567Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-079c
+[2025-09-08T21:02:08.567Z] 🚀 Fetch origin/cursor/build-and-fix-errors-079c: git fetch origin cursor/build-and-fix-errors-079c
+[2025-09-08T21:02:08.925Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-079c
+[2025-09-08T21:02:08.925Z] 🚀 Merge cursor/build-and-fix-errors-079c: git merge origin/cursor/build-and-fix-errors-079c --no-ff -m "Merge branch cursor/build-and-fix-errors-079c into main"
+[2025-09-08T21:02:09.355Z] ✅ Success: Merge cursor/build-and-fix-errors-079c
+[2025-09-08T21:02:09.355Z] ✅ Successfully merged: cursor/build-and-fix-errors-079c
+[2025-09-08T21:02:10.355Z] 📦 Processing batch 115/509
+[2025-09-08T21:02:10.356Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-0ebf
+[2025-09-08T21:02:10.356Z] 🚀 Fetch origin/cursor/build-and-fix-errors-0ebf: git fetch origin cursor/build-and-fix-errors-0ebf
+[2025-09-08T21:02:10.734Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-0ebf
+[2025-09-08T21:02:10.734Z] 🚀 Merge cursor/build-and-fix-errors-0ebf: git merge origin/cursor/build-and-fix-errors-0ebf --no-ff -m "Merge branch cursor/build-and-fix-errors-0ebf into main"
+[2025-09-08T21:02:11.194Z] ✅ Success: Merge cursor/build-and-fix-errors-0ebf
+[2025-09-08T21:02:11.194Z] ✅ Successfully merged: cursor/build-and-fix-errors-0ebf
+[2025-09-08T21:02:11.194Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-0ec8
+[2025-09-08T21:02:11.194Z] 🚀 Fetch origin/cursor/build-and-fix-errors-0ec8: git fetch origin cursor/build-and-fix-errors-0ec8
+[2025-09-08T21:02:11.611Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-0ec8
+[2025-09-08T21:02:11.612Z] 🚀 Merge cursor/build-and-fix-errors-0ec8: git merge origin/cursor/build-and-fix-errors-0ec8 --no-ff -m "Merge branch cursor/build-and-fix-errors-0ec8 into main"
+[2025-09-08T21:02:12.160Z] ✅ Success: Merge cursor/build-and-fix-errors-0ec8
+[2025-09-08T21:02:12.160Z] ✅ Successfully merged: cursor/build-and-fix-errors-0ec8
+[2025-09-08T21:02:12.160Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-0f78
+[2025-09-08T21:02:12.160Z] 🚀 Fetch origin/cursor/build-and-fix-errors-0f78: git fetch origin cursor/build-and-fix-errors-0f78
+[2025-09-08T21:02:12.689Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-0f78
+[2025-09-08T21:02:12.689Z] 🚀 Merge cursor/build-and-fix-errors-0f78: git merge origin/cursor/build-and-fix-errors-0f78 --no-ff -m "Merge branch cursor/build-and-fix-errors-0f78 into main"
+[2025-09-08T21:02:13.276Z] ✅ Success: Merge cursor/build-and-fix-errors-0f78
+[2025-09-08T21:02:13.276Z] ✅ Successfully merged: cursor/build-and-fix-errors-0f78
+[2025-09-08T21:02:13.276Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-0fb2
+[2025-09-08T21:02:13.276Z] 🚀 Fetch origin/cursor/build-and-fix-errors-0fb2: git fetch origin cursor/build-and-fix-errors-0fb2
+[2025-09-08T21:02:13.706Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-0fb2
+[2025-09-08T21:02:13.706Z] 🚀 Merge cursor/build-and-fix-errors-0fb2: git merge origin/cursor/build-and-fix-errors-0fb2 --no-ff -m "Merge branch cursor/build-and-fix-errors-0fb2 into main"
+[2025-09-08T21:02:14.182Z] ✅ Success: Merge cursor/build-and-fix-errors-0fb2
+[2025-09-08T21:02:14.182Z] ✅ Successfully merged: cursor/build-and-fix-errors-0fb2
+[2025-09-08T21:02:14.182Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-1dae
+[2025-09-08T21:02:14.182Z] 🚀 Fetch origin/cursor/build-and-fix-errors-1dae: git fetch origin cursor/build-and-fix-errors-1dae
+[2025-09-08T21:02:14.518Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-1dae
+[2025-09-08T21:02:14.518Z] 🚀 Merge cursor/build-and-fix-errors-1dae: git merge origin/cursor/build-and-fix-errors-1dae --no-ff -m "Merge branch cursor/build-and-fix-errors-1dae into main"
+[2025-09-08T21:02:14.955Z] ✅ Success: Merge cursor/build-and-fix-errors-1dae
+[2025-09-08T21:02:14.955Z] ✅ Successfully merged: cursor/build-and-fix-errors-1dae
+[2025-09-08T21:02:14.955Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-20b1
+[2025-09-08T21:02:14.955Z] 🚀 Fetch origin/cursor/build-and-fix-errors-20b1: git fetch origin cursor/build-and-fix-errors-20b1
+[2025-09-08T21:02:15.282Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-20b1
+[2025-09-08T21:02:15.282Z] 🚀 Merge cursor/build-and-fix-errors-20b1: git merge origin/cursor/build-and-fix-errors-20b1 --no-ff -m "Merge branch cursor/build-and-fix-errors-20b1 into main"
+[2025-09-08T21:02:15.725Z] ✅ Success: Merge cursor/build-and-fix-errors-20b1
+[2025-09-08T21:02:15.725Z] ✅ Successfully merged: cursor/build-and-fix-errors-20b1
+[2025-09-08T21:02:15.725Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-2334
+[2025-09-08T21:02:15.725Z] 🚀 Fetch origin/cursor/build-and-fix-errors-2334: git fetch origin cursor/build-and-fix-errors-2334
+[2025-09-08T21:02:16.048Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-2334
+[2025-09-08T21:02:16.048Z] 🚀 Merge cursor/build-and-fix-errors-2334: git merge origin/cursor/build-and-fix-errors-2334 --no-ff -m "Merge branch cursor/build-and-fix-errors-2334 into main"
+[2025-09-08T21:02:16.472Z] ✅ Success: Merge cursor/build-and-fix-errors-2334
+[2025-09-08T21:02:16.472Z] ✅ Successfully merged: cursor/build-and-fix-errors-2334
+[2025-09-08T21:02:16.472Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-2599
+[2025-09-08T21:02:16.472Z] 🚀 Fetch origin/cursor/build-and-fix-errors-2599: git fetch origin cursor/build-and-fix-errors-2599
+[2025-09-08T21:02:16.785Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-2599
+[2025-09-08T21:02:16.785Z] 🚀 Merge cursor/build-and-fix-errors-2599: git merge origin/cursor/build-and-fix-errors-2599 --no-ff -m "Merge branch cursor/build-and-fix-errors-2599 into main"
+[2025-09-08T21:02:17.227Z] ✅ Success: Merge cursor/build-and-fix-errors-2599
+[2025-09-08T21:02:17.228Z] ✅ Successfully merged: cursor/build-and-fix-errors-2599
+[2025-09-08T21:02:17.228Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-28eb
+[2025-09-08T21:02:17.228Z] 🚀 Fetch origin/cursor/build-and-fix-errors-28eb: git fetch origin cursor/build-and-fix-errors-28eb
+[2025-09-08T21:02:17.554Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-28eb
+[2025-09-08T21:02:17.554Z] 🚀 Merge cursor/build-and-fix-errors-28eb: git merge origin/cursor/build-and-fix-errors-28eb --no-ff -m "Merge branch cursor/build-and-fix-errors-28eb into main"
+[2025-09-08T21:02:17.984Z] ✅ Success: Merge cursor/build-and-fix-errors-28eb
+[2025-09-08T21:02:17.984Z] ✅ Successfully merged: cursor/build-and-fix-errors-28eb
+[2025-09-08T21:02:17.984Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-2df6
+[2025-09-08T21:02:17.984Z] 🚀 Fetch origin/cursor/build-and-fix-errors-2df6: git fetch origin cursor/build-and-fix-errors-2df6
+[2025-09-08T21:02:18.316Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-2df6
+[2025-09-08T21:02:18.316Z] 🚀 Merge cursor/build-and-fix-errors-2df6: git merge origin/cursor/build-and-fix-errors-2df6 --no-ff -m "Merge branch cursor/build-and-fix-errors-2df6 into main"
+[2025-09-08T21:02:18.738Z] ✅ Success: Merge cursor/build-and-fix-errors-2df6
+[2025-09-08T21:02:18.738Z] ✅ Successfully merged: cursor/build-and-fix-errors-2df6
+[2025-09-08T21:02:19.739Z] 📦 Processing batch 116/509
+[2025-09-08T21:02:19.739Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-3358
+[2025-09-08T21:02:19.739Z] 🚀 Fetch origin/cursor/build-and-fix-errors-3358: git fetch origin cursor/build-and-fix-errors-3358
+[2025-09-08T21:02:20.087Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-3358
+[2025-09-08T21:02:20.087Z] 🚀 Merge cursor/build-and-fix-errors-3358: git merge origin/cursor/build-and-fix-errors-3358 --no-ff -m "Merge branch cursor/build-and-fix-errors-3358 into main"
+[2025-09-08T21:02:20.511Z] ✅ Success: Merge cursor/build-and-fix-errors-3358
+[2025-09-08T21:02:20.512Z] ✅ Successfully merged: cursor/build-and-fix-errors-3358
+[2025-09-08T21:02:20.512Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-3cda
+[2025-09-08T21:02:20.512Z] 🚀 Fetch origin/cursor/build-and-fix-errors-3cda: git fetch origin cursor/build-and-fix-errors-3cda
+[2025-09-08T21:02:20.831Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-3cda
+[2025-09-08T21:02:20.831Z] 🚀 Merge cursor/build-and-fix-errors-3cda: git merge origin/cursor/build-and-fix-errors-3cda --no-ff -m "Merge branch cursor/build-and-fix-errors-3cda into main"
+[2025-09-08T21:02:21.246Z] ✅ Success: Merge cursor/build-and-fix-errors-3cda
+[2025-09-08T21:02:21.246Z] ✅ Successfully merged: cursor/build-and-fix-errors-3cda
+[2025-09-08T21:02:21.246Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-4070
+[2025-09-08T21:02:21.246Z] 🚀 Fetch origin/cursor/build-and-fix-errors-4070: git fetch origin cursor/build-and-fix-errors-4070
+[2025-09-08T21:02:21.561Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-4070
+[2025-09-08T21:02:21.562Z] 🚀 Merge cursor/build-and-fix-errors-4070: git merge origin/cursor/build-and-fix-errors-4070 --no-ff -m "Merge branch cursor/build-and-fix-errors-4070 into main"
+[2025-09-08T21:02:21.984Z] ✅ Success: Merge cursor/build-and-fix-errors-4070
+[2025-09-08T21:02:21.984Z] ✅ Successfully merged: cursor/build-and-fix-errors-4070
+[2025-09-08T21:02:21.984Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-4469
+[2025-09-08T21:02:21.984Z] 🚀 Fetch origin/cursor/build-and-fix-errors-4469: git fetch origin cursor/build-and-fix-errors-4469
+[2025-09-08T21:02:22.308Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-4469
+[2025-09-08T21:02:22.308Z] 🚀 Merge cursor/build-and-fix-errors-4469: git merge origin/cursor/build-and-fix-errors-4469 --no-ff -m "Merge branch cursor/build-and-fix-errors-4469 into main"
+[2025-09-08T21:02:22.780Z] ✅ Success: Merge cursor/build-and-fix-errors-4469
+[2025-09-08T21:02:22.780Z] ✅ Successfully merged: cursor/build-and-fix-errors-4469
+[2025-09-08T21:02:22.780Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-4788
+[2025-09-08T21:02:22.780Z] 🚀 Fetch origin/cursor/build-and-fix-errors-4788: git fetch origin cursor/build-and-fix-errors-4788
+[2025-09-08T21:02:23.105Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-4788
+[2025-09-08T21:02:23.105Z] 🚀 Merge cursor/build-and-fix-errors-4788: git merge origin/cursor/build-and-fix-errors-4788 --no-ff -m "Merge branch cursor/build-and-fix-errors-4788 into main"
+[2025-09-08T21:02:23.532Z] ✅ Success: Merge cursor/build-and-fix-errors-4788
+[2025-09-08T21:02:23.532Z] ✅ Successfully merged: cursor/build-and-fix-errors-4788
+[2025-09-08T21:02:23.532Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-4dff
+[2025-09-08T21:02:23.532Z] 🚀 Fetch origin/cursor/build-and-fix-errors-4dff: git fetch origin cursor/build-and-fix-errors-4dff
+[2025-09-08T21:02:23.855Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-4dff
+[2025-09-08T21:02:23.855Z] 🚀 Merge cursor/build-and-fix-errors-4dff: git merge origin/cursor/build-and-fix-errors-4dff --no-ff -m "Merge branch cursor/build-and-fix-errors-4dff into main"
+[2025-09-08T21:02:24.278Z] ✅ Success: Merge cursor/build-and-fix-errors-4dff
+[2025-09-08T21:02:24.278Z] ✅ Successfully merged: cursor/build-and-fix-errors-4dff
+[2025-09-08T21:02:24.278Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-58a7
+[2025-09-08T21:02:24.278Z] 🚀 Fetch origin/cursor/build-and-fix-errors-58a7: git fetch origin cursor/build-and-fix-errors-58a7
+[2025-09-08T21:02:24.590Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-58a7
+[2025-09-08T21:02:24.590Z] 🚀 Merge cursor/build-and-fix-errors-58a7: git merge origin/cursor/build-and-fix-errors-58a7 --no-ff -m "Merge branch cursor/build-and-fix-errors-58a7 into main"
+[2025-09-08T21:02:25.009Z] ✅ Success: Merge cursor/build-and-fix-errors-58a7
+[2025-09-08T21:02:25.009Z] ✅ Successfully merged: cursor/build-and-fix-errors-58a7
+[2025-09-08T21:02:25.009Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-67d7
+[2025-09-08T21:02:25.009Z] 🚀 Fetch origin/cursor/build-and-fix-errors-67d7: git fetch origin cursor/build-and-fix-errors-67d7
+[2025-09-08T21:02:25.327Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-67d7
+[2025-09-08T21:02:25.327Z] 🚀 Merge cursor/build-and-fix-errors-67d7: git merge origin/cursor/build-and-fix-errors-67d7 --no-ff -m "Merge branch cursor/build-and-fix-errors-67d7 into main"
+[2025-09-08T21:02:25.749Z] ✅ Success: Merge cursor/build-and-fix-errors-67d7
+[2025-09-08T21:02:25.749Z] ✅ Successfully merged: cursor/build-and-fix-errors-67d7
+[2025-09-08T21:02:25.749Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-6ada
+[2025-09-08T21:02:25.749Z] 🚀 Fetch origin/cursor/build-and-fix-errors-6ada: git fetch origin cursor/build-and-fix-errors-6ada
+[2025-09-08T21:02:26.065Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-6ada
+[2025-09-08T21:02:26.065Z] 🚀 Merge cursor/build-and-fix-errors-6ada: git merge origin/cursor/build-and-fix-errors-6ada --no-ff -m "Merge branch cursor/build-and-fix-errors-6ada into main"
+[2025-09-08T21:02:26.504Z] ✅ Success: Merge cursor/build-and-fix-errors-6ada
+[2025-09-08T21:02:26.504Z] ✅ Successfully merged: cursor/build-and-fix-errors-6ada
+[2025-09-08T21:02:26.504Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-6dc9
+[2025-09-08T21:02:26.504Z] 🚀 Fetch origin/cursor/build-and-fix-errors-6dc9: git fetch origin cursor/build-and-fix-errors-6dc9
+[2025-09-08T21:02:26.836Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-6dc9
+[2025-09-08T21:02:26.836Z] 🚀 Merge cursor/build-and-fix-errors-6dc9: git merge origin/cursor/build-and-fix-errors-6dc9 --no-ff -m "Merge branch cursor/build-and-fix-errors-6dc9 into main"
+[2025-09-08T21:02:27.263Z] ✅ Success: Merge cursor/build-and-fix-errors-6dc9
+[2025-09-08T21:02:27.263Z] ✅ Successfully merged: cursor/build-and-fix-errors-6dc9
+[2025-09-08T21:02:28.265Z] 📦 Processing batch 117/509
+[2025-09-08T21:02:28.265Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-711d
+[2025-09-08T21:02:28.265Z] 🚀 Fetch origin/cursor/build-and-fix-errors-711d: git fetch origin cursor/build-and-fix-errors-711d
+[2025-09-08T21:02:28.607Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-711d
+[2025-09-08T21:02:28.607Z] 🚀 Merge cursor/build-and-fix-errors-711d: git merge origin/cursor/build-and-fix-errors-711d --no-ff -m "Merge branch cursor/build-and-fix-errors-711d into main"
+[2025-09-08T21:02:29.029Z] ✅ Success: Merge cursor/build-and-fix-errors-711d
+[2025-09-08T21:02:29.029Z] ✅ Successfully merged: cursor/build-and-fix-errors-711d
+[2025-09-08T21:02:29.029Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-74c2
+[2025-09-08T21:02:29.029Z] 🚀 Fetch origin/cursor/build-and-fix-errors-74c2: git fetch origin cursor/build-and-fix-errors-74c2
+[2025-09-08T21:02:29.351Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-74c2
+[2025-09-08T21:02:29.351Z] 🚀 Merge cursor/build-and-fix-errors-74c2: git merge origin/cursor/build-and-fix-errors-74c2 --no-ff -m "Merge branch cursor/build-and-fix-errors-74c2 into main"
+[2025-09-08T21:02:29.768Z] ✅ Success: Merge cursor/build-and-fix-errors-74c2
+[2025-09-08T21:02:29.768Z] ✅ Successfully merged: cursor/build-and-fix-errors-74c2
+[2025-09-08T21:02:29.768Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-76f3
+[2025-09-08T21:02:29.768Z] 🚀 Fetch origin/cursor/build-and-fix-errors-76f3: git fetch origin cursor/build-and-fix-errors-76f3
+[2025-09-08T21:02:30.088Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-76f3
+[2025-09-08T21:02:30.088Z] 🚀 Merge cursor/build-and-fix-errors-76f3: git merge origin/cursor/build-and-fix-errors-76f3 --no-ff -m "Merge branch cursor/build-and-fix-errors-76f3 into main"
+[2025-09-08T21:02:30.522Z] ✅ Success: Merge cursor/build-and-fix-errors-76f3
+[2025-09-08T21:02:30.522Z] ✅ Successfully merged: cursor/build-and-fix-errors-76f3
+[2025-09-08T21:02:30.522Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-7a1f
+[2025-09-08T21:02:30.522Z] 🚀 Fetch origin/cursor/build-and-fix-errors-7a1f: git fetch origin cursor/build-and-fix-errors-7a1f
+[2025-09-08T21:02:30.841Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-7a1f
+[2025-09-08T21:02:30.841Z] 🚀 Merge cursor/build-and-fix-errors-7a1f: git merge origin/cursor/build-and-fix-errors-7a1f --no-ff -m "Merge branch cursor/build-and-fix-errors-7a1f into main"
+[2025-09-08T21:02:31.261Z] ✅ Success: Merge cursor/build-and-fix-errors-7a1f
+[2025-09-08T21:02:31.261Z] ✅ Successfully merged: cursor/build-and-fix-errors-7a1f
+[2025-09-08T21:02:31.261Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-800d
+[2025-09-08T21:02:31.261Z] 🚀 Fetch origin/cursor/build-and-fix-errors-800d: git fetch origin cursor/build-and-fix-errors-800d
+[2025-09-08T21:02:31.575Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-800d
+[2025-09-08T21:02:31.575Z] 🚀 Merge cursor/build-and-fix-errors-800d: git merge origin/cursor/build-and-fix-errors-800d --no-ff -m "Merge branch cursor/build-and-fix-errors-800d into main"
+[2025-09-08T21:02:32.005Z] ✅ Success: Merge cursor/build-and-fix-errors-800d
+[2025-09-08T21:02:32.005Z] ✅ Successfully merged: cursor/build-and-fix-errors-800d
+[2025-09-08T21:02:32.005Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-8064
+[2025-09-08T21:02:32.005Z] 🚀 Fetch origin/cursor/build-and-fix-errors-8064: git fetch origin cursor/build-and-fix-errors-8064
+[2025-09-08T21:02:32.327Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-8064
+[2025-09-08T21:02:32.327Z] 🚀 Merge cursor/build-and-fix-errors-8064: git merge origin/cursor/build-and-fix-errors-8064 --no-ff -m "Merge branch cursor/build-and-fix-errors-8064 into main"
+[2025-09-08T21:02:32.749Z] ✅ Success: Merge cursor/build-and-fix-errors-8064
+[2025-09-08T21:02:32.749Z] ✅ Successfully merged: cursor/build-and-fix-errors-8064
+[2025-09-08T21:02:32.749Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-8308
+[2025-09-08T21:02:32.749Z] 🚀 Fetch origin/cursor/build-and-fix-errors-8308: git fetch origin cursor/build-and-fix-errors-8308
+[2025-09-08T21:02:33.102Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-8308
+[2025-09-08T21:02:33.102Z] 🚀 Merge cursor/build-and-fix-errors-8308: git merge origin/cursor/build-and-fix-errors-8308 --no-ff -m "Merge branch cursor/build-and-fix-errors-8308 into main"
+[2025-09-08T21:02:33.526Z] ✅ Success: Merge cursor/build-and-fix-errors-8308
+[2025-09-08T21:02:33.526Z] ✅ Successfully merged: cursor/build-and-fix-errors-8308
+[2025-09-08T21:02:33.526Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-856d
+[2025-09-08T21:02:33.526Z] 🚀 Fetch origin/cursor/build-and-fix-errors-856d: git fetch origin cursor/build-and-fix-errors-856d
+[2025-09-08T21:02:33.841Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-856d
+[2025-09-08T21:02:33.841Z] 🚀 Merge cursor/build-and-fix-errors-856d: git merge origin/cursor/build-and-fix-errors-856d --no-ff -m "Merge branch cursor/build-and-fix-errors-856d into main"
+[2025-09-08T21:02:34.261Z] ✅ Success: Merge cursor/build-and-fix-errors-856d
+[2025-09-08T21:02:34.261Z] ✅ Successfully merged: cursor/build-and-fix-errors-856d
+[2025-09-08T21:02:34.261Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-8662
+[2025-09-08T21:02:34.261Z] 🚀 Fetch origin/cursor/build-and-fix-errors-8662: git fetch origin cursor/build-and-fix-errors-8662
+[2025-09-08T21:02:34.647Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-8662
+[2025-09-08T21:02:34.647Z] 🚀 Merge cursor/build-and-fix-errors-8662: git merge origin/cursor/build-and-fix-errors-8662 --no-ff -m "Merge branch cursor/build-and-fix-errors-8662 into main"
+[2025-09-08T21:02:35.089Z] ✅ Success: Merge cursor/build-and-fix-errors-8662
+[2025-09-08T21:02:35.089Z] ✅ Successfully merged: cursor/build-and-fix-errors-8662
+[2025-09-08T21:02:35.090Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-8b64
+[2025-09-08T21:02:35.090Z] 🚀 Fetch origin/cursor/build-and-fix-errors-8b64: git fetch origin cursor/build-and-fix-errors-8b64
+[2025-09-08T21:02:35.409Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-8b64
+[2025-09-08T21:02:35.409Z] 🚀 Merge cursor/build-and-fix-errors-8b64: git merge origin/cursor/build-and-fix-errors-8b64 --no-ff -m "Merge branch cursor/build-and-fix-errors-8b64 into main"
+[2025-09-08T21:02:35.835Z] ✅ Success: Merge cursor/build-and-fix-errors-8b64
+[2025-09-08T21:02:35.835Z] ✅ Successfully merged: cursor/build-and-fix-errors-8b64
+[2025-09-08T21:02:36.837Z] 📦 Processing batch 118/509
+[2025-09-08T21:02:36.837Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-8da2
+[2025-09-08T21:02:36.837Z] 🚀 Fetch origin/cursor/build-and-fix-errors-8da2: git fetch origin cursor/build-and-fix-errors-8da2
+[2025-09-08T21:02:37.170Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-8da2
+[2025-09-08T21:02:37.170Z] 🚀 Merge cursor/build-and-fix-errors-8da2: git merge origin/cursor/build-and-fix-errors-8da2 --no-ff -m "Merge branch cursor/build-and-fix-errors-8da2 into main"
+[2025-09-08T21:02:37.625Z] ✅ Success: Merge cursor/build-and-fix-errors-8da2
+[2025-09-08T21:02:37.625Z] ✅ Successfully merged: cursor/build-and-fix-errors-8da2
+[2025-09-08T21:02:37.625Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-97a7
+[2025-09-08T21:02:37.625Z] 🚀 Fetch origin/cursor/build-and-fix-errors-97a7: git fetch origin cursor/build-and-fix-errors-97a7
+[2025-09-08T21:02:37.982Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-97a7
+[2025-09-08T21:02:37.982Z] 🚀 Merge cursor/build-and-fix-errors-97a7: git merge origin/cursor/build-and-fix-errors-97a7 --no-ff -m "Merge branch cursor/build-and-fix-errors-97a7 into main"
+[2025-09-08T21:02:38.420Z] ✅ Success: Merge cursor/build-and-fix-errors-97a7
+[2025-09-08T21:02:38.420Z] ✅ Successfully merged: cursor/build-and-fix-errors-97a7
+[2025-09-08T21:02:38.420Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-9dce
+[2025-09-08T21:02:38.420Z] 🚀 Fetch origin/cursor/build-and-fix-errors-9dce: git fetch origin cursor/build-and-fix-errors-9dce
+[2025-09-08T21:02:38.745Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-9dce
+[2025-09-08T21:02:38.745Z] 🚀 Merge cursor/build-and-fix-errors-9dce: git merge origin/cursor/build-and-fix-errors-9dce --no-ff -m "Merge branch cursor/build-and-fix-errors-9dce into main"
+[2025-09-08T21:02:39.164Z] ✅ Success: Merge cursor/build-and-fix-errors-9dce
+[2025-09-08T21:02:39.164Z] ✅ Successfully merged: cursor/build-and-fix-errors-9dce
+[2025-09-08T21:02:39.164Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-a120
+[2025-09-08T21:02:39.164Z] 🚀 Fetch origin/cursor/build-and-fix-errors-a120: git fetch origin cursor/build-and-fix-errors-a120
+[2025-09-08T21:02:39.486Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-a120
+[2025-09-08T21:02:39.486Z] 🚀 Merge cursor/build-and-fix-errors-a120: git merge origin/cursor/build-and-fix-errors-a120 --no-ff -m "Merge branch cursor/build-and-fix-errors-a120 into main"
+[2025-09-08T21:02:39.926Z] ✅ Success: Merge cursor/build-and-fix-errors-a120
+[2025-09-08T21:02:39.926Z] ✅ Successfully merged: cursor/build-and-fix-errors-a120
+[2025-09-08T21:02:39.926Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-a8bf
+[2025-09-08T21:02:39.926Z] 🚀 Fetch origin/cursor/build-and-fix-errors-a8bf: git fetch origin cursor/build-and-fix-errors-a8bf
+[2025-09-08T21:02:40.278Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-a8bf
+[2025-09-08T21:02:40.278Z] 🚀 Merge cursor/build-and-fix-errors-a8bf: git merge origin/cursor/build-and-fix-errors-a8bf --no-ff -m "Merge branch cursor/build-and-fix-errors-a8bf into main"
+[2025-09-08T21:02:40.707Z] ✅ Success: Merge cursor/build-and-fix-errors-a8bf
+[2025-09-08T21:02:40.707Z] ✅ Successfully merged: cursor/build-and-fix-errors-a8bf
+[2025-09-08T21:02:40.707Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-a934
+[2025-09-08T21:02:40.707Z] 🚀 Fetch origin/cursor/build-and-fix-errors-a934: git fetch origin cursor/build-and-fix-errors-a934
+[2025-09-08T21:02:41.016Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-a934
+[2025-09-08T21:02:41.016Z] 🚀 Merge cursor/build-and-fix-errors-a934: git merge origin/cursor/build-and-fix-errors-a934 --no-ff -m "Merge branch cursor/build-and-fix-errors-a934 into main"
+[2025-09-08T21:02:41.435Z] ✅ Success: Merge cursor/build-and-fix-errors-a934
+[2025-09-08T21:02:41.435Z] ✅ Successfully merged: cursor/build-and-fix-errors-a934
+[2025-09-08T21:02:41.435Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-ad81
+[2025-09-08T21:02:41.435Z] 🚀 Fetch origin/cursor/build-and-fix-errors-ad81: git fetch origin cursor/build-and-fix-errors-ad81
+[2025-09-08T21:02:41.747Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-ad81
+[2025-09-08T21:02:41.747Z] 🚀 Merge cursor/build-and-fix-errors-ad81: git merge origin/cursor/build-and-fix-errors-ad81 --no-ff -m "Merge branch cursor/build-and-fix-errors-ad81 into main"
+[2025-09-08T21:02:42.163Z] ✅ Success: Merge cursor/build-and-fix-errors-ad81
+[2025-09-08T21:02:42.163Z] ✅ Successfully merged: cursor/build-and-fix-errors-ad81
+[2025-09-08T21:02:42.163Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-aec6
+[2025-09-08T21:02:42.163Z] 🚀 Fetch origin/cursor/build-and-fix-errors-aec6: git fetch origin cursor/build-and-fix-errors-aec6
+[2025-09-08T21:02:42.482Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-aec6
+[2025-09-08T21:02:42.482Z] 🚀 Merge cursor/build-and-fix-errors-aec6: git merge origin/cursor/build-and-fix-errors-aec6 --no-ff -m "Merge branch cursor/build-and-fix-errors-aec6 into main"
+[2025-09-08T21:02:42.919Z] ✅ Success: Merge cursor/build-and-fix-errors-aec6
+[2025-09-08T21:02:42.919Z] ✅ Successfully merged: cursor/build-and-fix-errors-aec6
+[2025-09-08T21:02:42.919Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-b823
+[2025-09-08T21:02:42.919Z] 🚀 Fetch origin/cursor/build-and-fix-errors-b823: git fetch origin cursor/build-and-fix-errors-b823
+[2025-09-08T21:02:43.271Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-b823
+[2025-09-08T21:02:43.272Z] 🚀 Merge cursor/build-and-fix-errors-b823: git merge origin/cursor/build-and-fix-errors-b823 --no-ff -m "Merge branch cursor/build-and-fix-errors-b823 into main"
+[2025-09-08T21:02:43.719Z] ✅ Success: Merge cursor/build-and-fix-errors-b823
+[2025-09-08T21:02:43.719Z] ✅ Successfully merged: cursor/build-and-fix-errors-b823
+[2025-09-08T21:02:43.719Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-c3e5
+[2025-09-08T21:02:43.719Z] 🚀 Fetch origin/cursor/build-and-fix-errors-c3e5: git fetch origin cursor/build-and-fix-errors-c3e5
+[2025-09-08T21:02:44.059Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-c3e5
+[2025-09-08T21:02:44.059Z] 🚀 Merge cursor/build-and-fix-errors-c3e5: git merge origin/cursor/build-and-fix-errors-c3e5 --no-ff -m "Merge branch cursor/build-and-fix-errors-c3e5 into main"
+[2025-09-08T21:02:44.483Z] ✅ Success: Merge cursor/build-and-fix-errors-c3e5
+[2025-09-08T21:02:44.484Z] ✅ Successfully merged: cursor/build-and-fix-errors-c3e5
+[2025-09-08T21:02:45.485Z] 📦 Processing batch 119/509
+[2025-09-08T21:02:45.485Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-c928
+[2025-09-08T21:02:45.485Z] 🚀 Fetch origin/cursor/build-and-fix-errors-c928: git fetch origin cursor/build-and-fix-errors-c928
+[2025-09-08T21:02:45.819Z] ✅ Success: Fetch origin/cursor/build-and-fix-errors-c928
+[2025-09-08T21:02:45.819Z] 🚀 Merge cursor/build-and-fix-errors-c928: git merge origin/cursor/build-and-fix-errors-c928 --no-ff -m "Merge branch cursor/build-and-fix-errors-c928 into main"
+[2025-09-08T21:02:46.255Z] ✅ Success: Merge cursor/build-and-fix-errors-c928
+[2025-09-08T21:02:46.255Z] ✅ Successfully merged: cursor/build-and-fix-errors-c928
+[2025-09-08T21:02:46.255Z] 🔄 Attempting to merge branch: cursor/build-and-fix-errors-c9ef
+[2025-09-08T21:02:46.255Z] 🚀 Fetch origin/cursor/build-and-fix-errors-c9ef: git fetch origin cursor/build-and-fix-errors-c9ef
+[2025-09-08T21:02:46.362Z] ❌ Error in Fetch origin/cursor/build-and-fix-errors-c9ef: Command failed: git fetch origin cursor/build-and-fix-errors-c9ef
+fatal: couldn't find remote ref cursor/build-and-fix-errors-c9ef
+
+[2025-09-08T21:02:46.362Z] ❌ Failed to merge cursor/build-and-fix-errors-c9ef: Command failed: git fetch origin cursor/build-and-fix-errors-c9ef
+fatal: couldn't find remote ref cursor/build-and-fix-errors-c9ef
+
+[2025-09-08T21:02:46.362Z] 🔧 Attempting to resolve conflicts for: cursor/build-and-fix-errors-c9ef
+[2025-09-08T21:02:46.362Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:02:46.424Z] ✅ Success: Get git status
+[2025-09-08T21:02:46.424Z] 📄 Found 0 conflicted files
+[2025-09-08T21:02:46.424Z] 🚀 Add resolved files: git add .
