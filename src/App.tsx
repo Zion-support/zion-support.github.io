@@ -55,7 +55,7 @@ import RequestQuotePage from './pages/RequestQuote';
 import WishlistPage from './pages/Wishlist';
 import CartPage from './pages/Cart';
 import Checkout from './pages/Checkout';
-import { SupportChatbot } from './components/SupportChatbot';
+import PrivacySettings from './pages/PrivacySettings';
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -95,6 +95,7 @@ const baseRoutes = [
   { path: '/wishlist', element: <WishlistPage /> },
   { path: '/cart', element: <CartPage /> },
   { path: '/checkout', element: <Checkout /> },
+  { path: '/privacy-settings', element: <PrivacySettings /> },
 ];
 
 const App = () => {
@@ -129,9 +130,10 @@ const App = () => {
         <OfflineToast />
         <Toaster />
         <SonnerToaster position="top-right" />
-        <SupportChatbot />
-        <PwaInstallButton />
-      </ThemeProvider>
+          <CookieBanner />
+          <PwaInstallButton />
+        </ThemeProvider>
+      </ConsentProvider>
     </WhitelabelProvider>
   );
 }
