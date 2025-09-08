@@ -34,7 +34,8 @@ jobs:
         uses: actions/upload-artifact@v4
           retention-days: 30
         with:
-          name: link-monitor-reports-daily
+          retention-days: 30
+          name: marketing-reports
           path: |
             data/reports/links/**/*
             automation/logs/**/*.log
