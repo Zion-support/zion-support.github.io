@@ -21,7 +21,8 @@ import { Switch } from '@/components/ui/switch';
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
-import { apiClient } from "@/utils/apiClient";
+import { useAppDispatch } from '@/store/hooks';
+import { addItem } from '@/store/cartSlice';
 
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
 =======
