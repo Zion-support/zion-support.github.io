@@ -1,173 +1,241 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Code, BookOpen, Terminal, Zap, Shield, Globe, Settings, Users } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { Button } from '../components/ui/button';
+import { Code, ExternalLink, Book, Terminal, Download, Github } from 'lucide-react';
 
 export default function DeveloperPortal() {
-  const resources = [
+  const apiEndpoints = [
     {
-      icon: BookOpen,
-      title: 'Documentation',
-      description: 'Comprehensive guides and tutorials',
-      link: '/docs'
+      title: 'Services API',
+      description: 'Access our comprehensive services catalog programmatically',
+      endpoint: '/api/v1/services',
+      method: 'GET',
+      documentation: '/docs/api/services'
     },
     {
-      icon: Code,
-      title: 'Code Examples',
-      description: 'Ready-to-use code snippets and samples',
-      link: '/examples'
+      title: 'Pricing API',
+      description: 'Get real-time pricing for all our services',
+      endpoint: '/api/v1/pricing',
+      method: 'GET',
+      documentation: '/docs/api/pricing'
     },
     {
-      icon: Terminal,
-      title: 'SDKs & Libraries',
-      description: 'Official SDKs for popular languages',
-      link: '/sdks'
-    },
-    {
-      icon: Zap,
-      title: 'API Playground',
-      description: 'Interactive API testing environment',
-      link: '/playground'
-    },
-    {
-      icon: Shield,
-      title: 'Authentication',
-      description: 'Security and access management',
-      link: '/auth'
-    },
-    {
-      icon: Globe,
-      title: 'Status & Health',
-      description: 'Real-time service status monitoring',
-      link: '/status'
+      title: 'Quote Request API',
+      description: 'Submit and manage quote requests',
+      endpoint: '/api/v1/quotes',
+      method: 'POST',
+      documentation: '/docs/api/quotes'
     }
   ];
 
-  const quickStart = [
+  const sdks = [
     {
-      step: 1,
-      title: 'Get API Key',
-      description: 'Sign up and obtain your authentication credentials'
+      name: 'JavaScript SDK',
+      description: 'Official JavaScript/TypeScript SDK for Node.js and browser',
+      language: 'JavaScript',
+      install: 'npm install @ziontechgroup/sdk'
     },
     {
-      step: 2,
-      title: 'Choose SDK',
-      description: 'Select the appropriate SDK for your programming language'
+      name: 'Python SDK',
+      description: 'Official Python SDK for server-side applications',
+      language: 'Python',
+      install: 'pip install ziontechgroup-sdk'
     },
     {
-      step: 3,
-      title: 'Make First Call',
-      description: 'Test your setup with a simple API request'
-    },
-    {
-      step: 4,
-      title: 'Build & Deploy',
-      description: 'Integrate our services into your application'
+      name: 'PHP SDK',
+      description: 'Official PHP SDK for web applications',
+      language: 'PHP',
+      install: 'composer require ziontechgroup/sdk'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Developer Portal - Zion Tech Group"
-        description="Comprehensive developer resources, SDKs, documentation, and tools for building with Zion Tech Group services."
+        title="Developer Portal - Zion Tech Group" 
+        description="Access our APIs, SDKs, and developer resources. Integrate Zion Tech Group services into your applications."
+        canonical="/developer-portal"
       />
-      
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
-        <div className="relative z-10 max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Developer
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Portal</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Everything you need to build amazing applications with Zion Tech Group services.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105">
-                Get Started
-              </button>
-              <button className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">
-                View Documentation
-              </button>
-            </div>
-          </motion.div>
+
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Developer Portal
+          </h1>
+          <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+            Build powerful applications with our comprehensive APIs and developer tools. 
+            Access documentation, SDKs, and resources to integrate our services.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-slate-900">
+              <Book className="w-5 h-5 mr-2" />
+              API Documentation
+            </Button>
+            <Button size="lg" variant="outline" className="border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-slate-900">
+              <Github className="w-5 h-5 mr-2" />
+              GitHub
+            </Button>
+          </div>
         </div>
       </section>
 
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Developer Resources
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Access comprehensive tools and resources to accelerate your development.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {resources.map((resource, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-200 cursor-pointer"
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
-                  <resource.icon className="w-6 h-6 text-cyan-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{resource.title}</h3>
-                <p className="text-gray-300">{resource.description}</p>
-              </motion.div>
+      {/* API Endpoints */}
+      <section className="py-16 bg-slate-800">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">API Endpoints</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {apiEndpoints.map((api, index) => (
+              <Card key={index} className="bg-slate-700 border-slate-600">
+                <CardHeader>
+                  <CardTitle className="text-white flex items-center">
+                    <Code className="w-5 h-5 mr-2 text-cyan-400" />
+                    {api.title}
+                  </CardTitle>
+                  <CardDescription className="text-slate-300">
+                    {api.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="bg-slate-900 p-4 rounded-lg mb-4">
+                    <code className="text-green-400 text-sm">
+                      {api.method} {api.endpoint}
+                    </code>
+                  </div>
+                  <Button variant="outline" className="w-full border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-slate-900">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    View Docs
+                  </Button>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Quick Start Guide
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Get up and running with our services in just a few steps.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickStart.map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-200 text-center"
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
-                  {step.step}
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
-                <p className="text-gray-300 text-sm">{step.description}</p>
-              </motion.div>
+      {/* SDKs */}
+      <section className="py-16 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Official SDKs</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {sdks.map((sdk, index) => (
+              <Card key={index} className="bg-slate-800 border-slate-600">
+                <CardHeader>
+                  <CardTitle className="text-white">{sdk.name}</CardTitle>
+                  <CardDescription className="text-slate-300">
+                    {sdk.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="bg-slate-900 p-4 rounded-lg mb-4">
+                    <code className="text-green-400 text-sm">
+                      {sdk.install}
+                    </code>
+                  </div>
+                  <div className="flex gap-2">
+                    <Button size="sm" className="bg-cyan-500 hover:bg-cyan-600 text-slate-900">
+                      <Download className="w-4 h-4 mr-2" />
+                      Install
+                    </Button>
+                    <Button size="sm" variant="outline" className="border-slate-500 text-slate-300">
+                      <Github className="w-4 h-4 mr-2" />
+                      GitHub
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Getting Started */}
+      <section className="py-16 bg-slate-800">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Getting Started</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <Card className="bg-slate-700 border-slate-600">
+                <CardHeader>
+                  <CardTitle className="text-white">1. Get API Key</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-300 mb-4">
+                    Sign up for a developer account and generate your API key from the dashboard.
+                  </p>
+                  <Button className="bg-cyan-500 hover:bg-cyan-600 text-slate-900">
+                    Get API Key
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-slate-700 border-slate-600">
+                <CardHeader>
+                  <CardTitle className="text-white">2. Install SDK</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-300 mb-4">
+                    Choose your preferred language and install the official SDK.
+                  </p>
+                  <div className="bg-slate-900 p-4 rounded-lg">
+                    <code className="text-green-400 text-sm">
+                      npm install @ziontechgroup/sdk
+                    </code>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-slate-700 border-slate-600">
+                <CardHeader>
+                  <CardTitle className="text-white">3. Make First Call</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-300 mb-4">
+                    Initialize the client and make your first API call.
+                  </p>
+                  <div className="bg-slate-900 p-4 rounded-lg">
+                    <code className="text-green-400 text-sm">
+                      const client = new ZionAPI(apiKey);
+                    </code>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-slate-700 border-slate-600">
+                <CardHeader>
+                  <CardTitle className="text-white">4. Explore</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-300 mb-4">
+                    Browse our comprehensive documentation and examples.
+                  </p>
+                  <Button variant="outline" className="border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-slate-900">
+                    <Book className="w-4 h-4 mr-2" />
+                    Documentation
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section className="py-16 bg-slate-900">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Need Help?</h2>
+          <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
+            Our developer support team is here to help you integrate our services successfully.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-slate-900">
+              <Terminal className="w-5 h-5 mr-2" />
+              Developer Support
+            </Button>
+            <Button size="lg" variant="outline" className="border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-slate-900">
+              Join Community
+            </Button>
           </div>
         </div>
       </section>

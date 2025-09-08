@@ -109,7 +109,11 @@ interface AppHeaderProps {
         { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', description: 'Proactive Customer Engagement' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Smart email management' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', description: 'Automated marketing campaigns' },
+        { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', description: 'Intelligent lead qualification' },
+        { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer', description: 'Search engine optimization' }
       ]
     },
     {
@@ -119,7 +123,9 @@ interface AppHeaderProps {
       services: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' }
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations guidance' },
+        { name: 'API Monitoring', href: '/services/api-monitoring', description: 'API performance tracking' },
+        { name: 'MLOps Pipeline', href: '/services/mlops-pipeline', description: 'Machine learning operations' }
       ]
     },
     {
@@ -147,23 +153,11 @@ interface AppHeaderProps {
       icon: Shield,
       color: 'from-indigo-600 to-purple-600',
       services: [
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
-        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' }
-      ]
-    }
-  ];
-
-  const solutionsCategories = [
-    {
-      name: 'AI Solutions',
-      icon: Brain,
-      color: 'from-purple-600 to-pink-600',
-      solutions: [
-        { name: 'AI Solutions Overview', href: '/ai-solutions', description: 'Comprehensive AI solutions' },
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-powered security' },
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Modern security framework' },
+        { name: 'Incident Response', href: '/services/incident-response-platform', description: 'Security incident management' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Comprehensive AI security' },
+        { name: 'SOC2 Compliance Tracker', href: '/services/soc2-compliance-tracker', description: 'Compliance monitoring' }
       ]
     },
     {
@@ -186,15 +180,33 @@ interface AppHeaderProps {
         { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', description: 'Latest cutting-edge solutions' },
         { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', description: 'Future-ready services' }
       ]
+    },
+    {
+      name: 'Micro SaaS',
+      description: 'Specialized micro-services & solutions',
+      color: 'from-amber-500 to-yellow-600',
+      icon: Star,
+      services: [
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions', description: 'Custom micro-applications' },
+        { name: 'Employee Scheduling', href: '/services/employee-scheduling-saas', description: 'Staff scheduling automation' },
+        { name: 'Affiliate Marketing Tracker', href: '/services/affiliate-marketing-tracker', description: 'Track affiliate performance' },
+        { name: 'Uptime SLA Monitor', href: '/services/uptime-sla-monitor', description: 'Service availability monitoring' },
+        { name: 'Returns Management', href: '/services/returns-management', description: 'E-commerce returns processing' },
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', description: 'Mobile survey platform' }
+      ]
     }
   ];
 
   const quickLinks = [
-    { name: 'Solutions', href: '/solutions', icon: Target },
-    { name: 'Pricing', href: '/pricing', icon: DollarSign },
-    { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-    { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
-    { name: 'Blog', href: '/blog', icon: BookOpen },
+    { name: 'Services Catalog', href: '/services-catalog', icon: Star, description: 'Complete services catalog' },
+    { name: 'Services Comparison', href: '/services-comparison', icon: TrendingUp, description: 'Compare our services' },
+    { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign, description: 'View pricing options' },
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
+    { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: Rocket, description: 'Future-ready services' },
+    { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Brain, description: 'Latest cutting-edge solutions' },
+  ];
+
+  const supportLinks = [
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'Support', href: '/support', icon: MessageCircle },
