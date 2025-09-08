@@ -48,9 +48,17 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const Partners = React.lazy(() => import('./pages/Partners'));
 
-// Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
-const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
+// New service pages
+const DeveloperProductivityCopilot = React.lazy(() => import('./pages/services/developer-productivity-copilot'));
+const AISalesAssistant = React.lazy(() => import('./pages/services/ai-sales-assistant'));
+const SecurityPostureGuardian = React.lazy(() => import('./pages/services/security-posture-guardian'));
+const AIDataPipelineOptimizer = React.lazy(() => import('./pages/services/ai-data-pipeline-optimizer'));
+
+// Enhanced components
+const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
+const Community = React.lazy(() => import('./pages/Community'));
+const Developers = React.lazy(() => import('./pages/Developers'));
+const Demo = React.lazy(() => import('./pages/Demo'));
 
 // Revolutionary services pages for 2030
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
@@ -367,11 +375,10 @@ function App() {
                 <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
                 
                 {/* Additional service routes */}
-                <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
-                <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
-                <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
-                <Route path="/services/quantum-computing" element={<QuantumComputing />} />
-                <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
+                <Route path="/services/developer-productivity-copilot" element={<DeveloperProductivityCopilot />} />
+                <Route path="/services/ai-sales-assistant" element={<AISalesAssistant />} />
+                <Route path="/services/security-posture-guardian" element={<SecurityPostureGuardian />} />
+                <Route path="/services/ai-data-pipeline-optimizer" element={<AIDataPipelineOptimizer />} />
 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
