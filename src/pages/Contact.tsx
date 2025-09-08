@@ -73,16 +73,16 @@ export default function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      details: 'info@ziontechgroup.com',
-      description: 'We respond within 2 hours during business hours',
-      color: 'from-green-500 to-emerald-600'
+      value: 'kleber@ziontechgroup.com',
+      description: 'Send us an email for detailed inquiries',
+      color: 'from-green-500 to-emerald-500'
     },
     {
       icon: MapPin,
-      title: 'Headquarters',
-      details: 'Wilmington, Delaware',
-      description: 'Serving clients globally with local expertise',
-      color: 'from-orange-500 to-red-600'
+      title: 'Office',
+      value: '364 E Main St STE 1008',
+      description: 'Visit our office in Middletown, DE',
+      color: 'from-purple-500 to-pink-500'
     },
     {
       icon: Clock,
@@ -160,6 +160,33 @@ export default function Contact() {
       icon: Users,
       title: 'Expert Team',
       description: 'World-class engineers, scientists, and business consultants'
+    }
+  ];
+
+  const contactInfo = [
+    {
+      icon: Phone,
+      title: 'Phone Support',
+      details: ['+1 302 464 0950', 'Available 24/7 for urgent support'],
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: Mail,
+      title: 'Email Support',
+      details: ['kleber@ziontechgroup.com', 'Response within 2 hours'],
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: MapPin,
+      title: 'Office Location',
+      details: ['364 E Main St STE 1008', 'Middletown, DE 19709'],
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: Clock,
+      title: 'Business Hours',
+      details: ['Monday - Friday: 9:00 AM - 6:00 PM EST', 'Global remote support available'],
+      color: 'from-yellow-500 to-orange-500'
     }
   ];
 
@@ -392,67 +419,256 @@ export default function Contact() {
               </h2>
               
               <div className="space-y-6">
-                {whyChooseUs.map((feature, index) => (
-                  <motion.div
-                    key={feature.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className="flex items-start space-x-4"
-                  >
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <feature.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                      <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-100">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Ready to Get Started?</h3>
-                <p className="text-gray-600 mb-4">
-                  Schedule a free consultation with our experts to discuss your technology needs.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <a
-                    href="tel:+13024640950"
-                    className="inline-flex items-center justify-center px-4 py-2 bg-cyan-400 text-white font-medium rounded-lg hover:bg-cyan-500 transition-colors duration-200"
-                  >
-                    <Phone className="w-4 h-4 mr-2" />
-                    Call Now
-                  </a>
-                  <a
-                    href="mailto:kleber@ziontechgroup.com"
-                    className="inline-flex items-center justify-center px-4 py-2 border border-cyan-400 text-cyan-400 font-medium rounded-lg hover:bg-cyan-400 hover:text-white transition-colors duration-200"
-                  >
-                    <Mail className="w-4 h-4 mr-2" />
-                    Email Us
-                  </a>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold">Quick Response</p>
+                    <p className="text-gray-300">We respond within 24 hours</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                    <Shield className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold">Secure Communication</p>
+                    <p className="text-gray-300">Your information is protected</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                    <Users className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold">Expert Team</p>
+                    <p className="text-gray-300">Connect with our specialists</p>
+                  </div>
                 </div>
               </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50"
+            >
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <input
+                    type="text"
+                    placeholder="First Name *"
+                    required
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last Name *"
+                    required
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                
+                <input
+                  type="email"
+                  placeholder="Email Address *"
+                  required
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+                
+                <input
+                  type="text"
+                  placeholder="Organization"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+                
+                <select className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                  <option value="">Select Service Interest</option>
+                  {services.map((service, index) => (
+                    <option key={index} value={service}>{service}</option>
+                  ))}
+                </select>
+                
+                <textarea
+                  placeholder="Tell us about your project or inquiry... *"
+                  rows={4}
+                  required
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                ></textarea>
+                
+                <button
+                  type="submit"
+                  className="w-full btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700"
+                >
+                  Schedule a Call
+                </button>
+                <motion.button
+                  type="button"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                >
+                  View Our Services
+                </motion.button>
+              </form>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Office Locations */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Departments Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our Global Offices
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+              Contact Specific Departments
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Strategically located offices to serve our global client base with local expertise.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Need to reach a specific team? Here are the direct contact details for our key departments.
             </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {departments.map((dept, index) => (
+              <motion.div
+                key={dept.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="p-6 bg-slate-700/50 rounded-2xl border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-600/50"
+              >
+                <h3 className="text-xl font-semibold text-white mb-4">{dept.name}</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <Mail className="w-5 h-5 text-blue-400" />
+                    <a href={`mailto:${dept.email}`} className="text-blue-400 hover:text-blue-300 transition-colors">
+                      {dept.email}
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Phone className="w-5 h-5 text-blue-400" />
+                    <a href={`tel:${dept.phone}`} className="text-blue-400 hover:text-blue-300 transition-colors">
+                      {dept.phone}
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-20 bg-slate-900/50">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="space-y-8"
+          >
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
+              <p className="text-lg text-gray-300 mb-8">
+                We're here to help you transform your business with cutting-edge AI and technology solutions. 
+                Let's discuss your needs and explore how we can work together.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              {contactInfo.map((info, index) => (
+                <motion.div
+                  key={info.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                  className="flex items-start space-x-4 p-6 bg-slate-800/30 rounded-xl border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300"
+                >
+                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${info.color} flex items-center justify-center flex-shrink-0`}>
+                    <info.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
+                    {info.details.map((detail, detailIndex) => (
+                      <p key={detailIndex} className="text-gray-300">{detail}</p>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Additional Info */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
+              className="p-6 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-400/30"
+            >
+              <h3 className="text-xl font-semibold text-white mb-4">Ready to Get Started?</h3>
+              <p className="text-gray-300 mb-4">
+                Schedule a consultation to discuss your technology needs and explore how our solutions can drive your business forward.
+              </p>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+              >
+                Schedule Consultation
+              </motion.button>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 lg:py-32 bg-gradient-to-r from-cyan-600 to-blue-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Let's Build Something Amazing Together
+            </h2>
+            <p className="text-xl text-cyan-100 max-w-3xl mx-auto mb-8">
+              Whether you're looking to implement AI solutions, modernize your cloud infrastructure, 
+              or strengthen your cybersecurity posture, we're here to help.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
+              >
+                View Our Services
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300"
+              >
+                Learn More About Us
+              </motion.button>
+            </div>
+            <div className="mt-12">
+              <h3 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h3>
+              <p className="text-gray-300 mb-4">364 E Main St STE 1008</p>
+              <p className="text-gray-300">Middletown DE 19709</p>
+              <p className="text-gray-300 mt-4">United States</p>
+            </div>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -516,9 +732,9 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Final CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-purple-500/10">
+        <div className="container-responsive text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -542,7 +758,7 @@ export default function Contact() {
           </motion.div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

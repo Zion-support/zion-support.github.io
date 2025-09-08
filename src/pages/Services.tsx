@@ -237,8 +237,131 @@ const Services = () => {
               to="/request-quote"
               className="bg-white/20 hover:bg-white/30 text-white px-8 py-3 rounded-lg font-medium transition-colors"
             >
-              Request Quote
-            </Link>
+              <div className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-600">
+                <div className="text-2xl font-bold text-cyan-400 mb-2">{SERVICE_STATISTICS_2030.totalServices}</div>
+                <div className="text-sm text-slate-300">Total Services</div>
+              </div>
+              <div className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-600">
+                <div className="text-2xl font-bold text-purple-400 mb-2">{SERVICE_STATISTICS_2030.totalCategories}</div>
+                <div className="text-sm text-slate-300">Categories</div>
+              </div>
+              <div className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-600">
+                <div className="text-2xl font-bold text-green-400 mb-2">{SERVICE_STATISTICS_2030.aiServices}</div>
+                <div className="text-sm text-slate-300">AI Services</div>
+              </div>
+              <div className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-600">
+                <div className="text-2xl font-bold text-yellow-400 mb-2">{SERVICE_STATISTICS_2030.emergingTechServices}</div>
+                <div className="text-sm text-slate-300">Emerging Tech</div>
+              </div>
+            </motion.div>
+
+            {/* Anchor Sections for Footer Links */}
+            <div className="mb-12 space-y-4">
+              {/* AI Services Anchors */}
+              <div id="ai-business-intelligence" className="invisible absolute -mt-20"></div>
+              <div id="ai-healthcare" className="invisible absolute -mt-20"></div>
+              <div id="ai-legal-tech" className="invisible absolute -mt-20"></div>
+              <div id="ai-research" className="invisible absolute -mt-20"></div>
+              <div id="ai-green-tech" className="invisible absolute -mt-20"></div>
+              <div id="ai-metaverse" className="invisible absolute -mt-20"></div>
+              <div id="ai-space-tech" className="invisible absolute -mt-20"></div>
+              <div id="ai-fintech" className="invisible absolute -mt-20"></div>
+              <div id="ai-supply-chain" className="invisible absolute -mt-20"></div>
+              <div id="ai-qa" className="invisible absolute -mt-20"></div>
+              <div id="ai-marketing-automation" className="invisible absolute -mt-20"></div>
+              <div id="ai-customer-support" className="invisible absolute -mt-20"></div>
+              <div id="ai-hr" className="invisible absolute -mt-20"></div>
+              <div id="ai-content-creation" className="invisible absolute -mt-20"></div>
+              <div id="ai-workflow-automation" className="invisible absolute -mt-20"></div>
+              <div id="ai-project-management" className="invisible absolute -mt-20"></div>
+              <div id="ai-sales-intelligence" className="invisible absolute -mt-20"></div>
+              <div id="ai-innovation-management" className="invisible absolute -mt-20"></div>
+              
+              {/* Infrastructure & Security Anchors */}
+              <div id="zero-trust-security" className="invisible absolute -mt-20"></div>
+              <div id="ai-ethics-guardian" className="invisible absolute -mt-20"></div>
+              <div id="cybersecurity" className="invisible absolute -mt-20"></div>
+              <div id="cloud-devops" className="invisible absolute -mt-20"></div>
+              <div id="data-analytics" className="invisible absolute -mt-20"></div>
+              <div id="it-infrastructure" className="invisible absolute -mt-20"></div>
+              <div id="digital-twin" className="invisible absolute -mt-20"></div>
+              <div id="iot-edge" className="invisible absolute -mt-20"></div>
+              <div id="blockchain" className="invisible absolute -mt-20"></div>
+              <div id="quantum-computing" className="invisible absolute -mt-20"></div>
+              
+              {/* Revolutionary Services 2030 Anchors */}
+              <div id="quantum-ai-trading" className="invisible absolute -mt-20"></div>
+              <div id="neural-interface" className="invisible absolute -mt-20"></div>
+              <div id="holographic-workspace" className="invisible absolute -mt-20"></div>
+              <div id="biodigital-twin" className="invisible absolute -mt-20"></div>
+              <div id="space-debris-tracking" className="invisible absolute -mt-20"></div>
+              <div id="metaverse-builder" className="invisible absolute -mt-20"></div>
+            </div>
+
+            {/* Search and Filter Controls */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mb-8"
+            >
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search services..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent w-80"
+                  />
+                </div>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                >
+                  <option value="rating">Sort by Rating</option>
+                  <option value="price">Sort by Price</option>
+                  <option value="reviews">Sort by Reviews</option>
+                  <option value="name">Sort by Name</option>
+                </select>
+              </div>
+            </motion.div>
+
+            {/* Category Filter */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="mb-8"
+            >
+              <div className="flex flex-wrap justify-center gap-3">
+                <button
+                  onClick={() => setActiveCategory('all')}
+                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
+                    activeCategory === 'all'
+                      ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-lg'
+                      : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-600'
+                  }`}
+                >
+                  All Services ({COMPREHENSIVE_SERVICES_INDEX_2030.length})
+                </button>
+                {categories.slice(1).map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => setActiveCategory(category.id)}
+                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
+                      activeCategory === category.id
+                        ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-lg'
+                        : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-600'
+                    }`}
+                  >
+                    {category.icon} {category.name} ({category.count})
+                  </button>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -416,6 +539,4 @@ const Services = () => {
       </div>
     </div>
   );
-};
-
-export default Services;
+  }
