@@ -8,10 +8,10 @@ import './i18n';
 // Register service worker
 import { registerServiceWorker } from './serviceWorkerRegistration';
 
-// Error handling function
-const showApiError = (error: unknown): void => {
-  console.error('API Error:', error);
-};
+// Error handling function (currently unused but kept for future use)
+// const showApiError = (error: unknown): void => {
+//   console.error('API Error:', error);
+// };
 
 // Global error handler
 const handleGlobalError = (error: Error): void => {
@@ -34,11 +34,11 @@ const handleGlobalError = (error: Error): void => {
 
 // Set up global error handlers
 window.addEventListener('error', (event) => {
-  handleGlobalError(event.error);
+  handleGlobalError(event.error as Error);
 });
 
 window.addEventListener('unhandledrejection', (event) => {
-  handleGlobalError(new Error(event.reason));
+  handleGlobalError(new Error(String(event.reason)));
 });
 
 try {
@@ -47,7 +47,8 @@ try {
     throw new Error('Root element not found');
   }
 
-  ReactDOM.createRoot(rootElement).render(
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
     <React.StrictMode>
       <App />
     </React.StrictMode>,
