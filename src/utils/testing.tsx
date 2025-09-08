@@ -62,7 +62,7 @@ export const generateMockComment = (overrides: Partial<any> = {}) => ({
 });
 
 // API mocking utilities
-export const mockApiResponse = <T>(data: T, delay: number = 0) => {
+export const mockApiResponse = <T,>(data: T, delay: number = 0) => {
   return new Promise<T>((resolve) => {
     setTimeout(() => resolve(data), delay);
   });
@@ -307,7 +307,7 @@ export const setupTestEnvironment = () => {
 };
 
 // Custom hooks for testing
-export const useTestHook = <T>(hook: () => T): T => {
+export const useTestHook = <T,>(hook: () => T): T => {
   const TestComponent = () => {
     const result = hook();
     return <div data-testid="hook-result">{JSON.stringify(result)}</div>;
@@ -327,7 +327,7 @@ export const createSnapshot = (component: React.ReactElement) => {
 // Integration test utilities
 export const renderWithProviders = (
   ui: React.ReactElement,
-  options?: Omit<RenderOptions, 'wrapper'>
+  options?: Partial<RenderOptions>
 ) => {
   return customRender(ui, options);
 };

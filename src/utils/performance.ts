@@ -281,7 +281,7 @@ export const analyzeBundleSize = () => {
     return total;
   }, 0);
 
-  // console.log('Bundle Analysis:', {
+  console.log('Bundle Analysis:', {
     scripts: scripts.length,
     stylesheets: stylesheets.length,
     estimatedScriptSize: `${totalScriptSize}KB`,

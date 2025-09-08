@@ -148,7 +148,7 @@ class ErrorHandler {
       } else {
         // Fallback to console logging
         console.group('Error Report');
-        errorsToReport.forEach(error => // console.error(error));
+        errorsToReport.forEach(error => console.error(error));
         console.groupEnd();
       }
     } catch (error) {
