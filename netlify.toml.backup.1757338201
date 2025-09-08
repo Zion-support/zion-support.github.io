@@ -1,6 +1,11 @@
 [build]
+<<<<<<< HEAD
+  # Install dependencies and build the static site via Vite. Publish the dist output.
+  command = "npm ci --no-audit --no-fund && npm run build"
+=======
   # Temporary: skip building and publish existing dist to unblock Netlify deploy
   command = "/usr/bin/env bash -lc 'echo Skipping build on Netlify; true'"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9231
   publish = "dist"
   command_timeout = "30m"
 
