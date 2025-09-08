@@ -12,7 +12,7 @@ import { AICodeGenerator } from './components/AICodeGenerator';
 import { EnterpriseDashboard } from './components/EnterpriseDashboard';
 import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
 import { MachineLearningDashboard } from './components/MachineLearningDashboard';
-import PerformanceOptimizer from './components/PerformanceOptimizer.tsx';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { LinkHealthMonitor } from './components/LinkHealthMonitor';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
@@ -35,22 +35,9 @@ const ServicesPage = React.lazy(() => import('./pages/ServicesPage.jsx'));
 const Contact = React.lazy(() => import('./pages/Contact.jsx'));
 const Login = React.lazy(() => import('./pages/Login.jsx'));
 
-// Lazy load pages - Services
-const AIBusinessSolutions = React.lazy(() => import('./pages/AIBusinessSolutions.jsx'));
-const CybersecuritySuite = React.lazy(() => import('./pages/CybersecuritySuite.jsx'));
-const CloudInfrastructure = React.lazy(() => import('./pages/CloudInfrastructure.jsx'));
-const DigitalMarketingServicesPage = React.lazy(() => import('./pages/DigitalMarketingServicesPage.jsx'));
-const FinancialSolutions = React.lazy(() => import('./pages/FinancialSolutions.jsx'));
-const ManufacturingSolutions = React.lazy(() => import('./pages/ManufacturingSolutions.jsx'));
-const IoTServicesPage = React.lazy(() => import('./pages/IoTServicesPage.jsx'));
-const BlockchainServicesPage = React.lazy(() => import('./pages/BlockchainServicesPage.jsx'));
-const QuantumTechnology = React.lazy(() => import('./pages/QuantumTechnology.jsx'));
-const FiveGEnterpriseSolutions = React.lazy(() => import('./pages/5GEnterpriseSolutions.jsx'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT.jsx'));
-const EnterpriseIT = React.lazy(() => import('./pages/EnterpriseIT.jsx'));
-const MicroSaasServices = React.lazy(() => import('./pages/MicroSaasServices.jsx'));
-const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage.jsx'));
-const DisputeManagement = React.lazy(() => import('./pages/DisputeManagement.jsx'));
+// New pages from incoming branch
+const MicroSaasServicesPage = lazy(() => import('./pages/InnovativeMicroSaasServices'));
+const PricingPage = lazy(() => import('./pages/PricingPage'));
 
 // Lazy load pages - Products & Solutions
 const ProductPage = React.lazy(() => import('./pages/ProductPage.jsx'));
@@ -141,18 +128,41 @@ const TokenIntegrations = React.lazy(() => import('./pages/TokenIntegrations.jsx
 const HowItWorks = React.lazy(() => import('./pages/HowItWorks.jsx'));
 const GetStarted = React.lazy(() => import('./pages/GetStarted.jsx'));
 
-// Lazy load pages - Admin & Management
-const ProductsAdminPage = React.lazy(() => import('./pages/ProductsAdminPage.jsx'));
-const MoreProductsPage = React.lazy(() => import('./pages/MoreProductsPage.jsx'));
-const Featured = React.lazy(() => import('./pages/Featured.jsx'));
+// AI Autonomous Service pages
+const AIAutonomousBusinessManager = lazy(() => import('./pages/services/AIAutonomousBusinessManager'));
+const AIAutonomousBusinessPlatform = lazy(() => import('./pages/services/AIAutonomousBusinessPlatform'));
+const AIAutonomousCodeReview = lazy(() => import('./pages/services/AIAutonomousCodeReview'));
+const AIAutonomousCreativeDirector = lazy(() => import('./pages/services/AIAutonomousCreativeDirector'));
+const AIAutonomousData = lazy(() => import('./pages/services/AIAutonomousData'));
+const AIAutonomousDecisionEngine = lazy(() => import('./pages/services/AIAutonomousDecisionEngine'));
+const AIAutonomousDecisionPlatform = lazy(() => import('./pages/services/AIAutonomousDecisionPlatform'));
+const AIAutonomousDevOps = lazy(() => import('./pages/services/AIAutonomousDevOps'));
+const AIAutonomousEducationProfessor = lazy(() => import('./pages/AIAutonomousEducationProfessor'));
+const AIAutonomousHealthcarePhysician = lazy(() => import('./pages/AIAutonomousHealthcarePhysician'));
+const AIAutonomousLearningSystem = lazy(() => import('./pages/AIAutonomousLearningSystem'));
+const AIAutonomousLegalCounsel = lazy(() => import('./pages/AIAutonomousLegalCounsel'));
+const AIAutonomousLogistics = lazy(() => import('./pages/AIAutonomousLogistics'));
+const AIAutonomousManufacturing = lazy(() => import('./pages/AIAutonomousManufacturing'));
+const AIAutonomousResearch = lazy(() => import('./pages/services/AIAutonomousResearch'));
+const AIAutonomousRobotics = lazy(() => import('./pages/AIAutonomousRobotics'));
+const AIAutonomousScientificResearcher = lazy(() => import('./pages/AIAutonomousScientificResearcher'));
+const AIAutonomousSecurity = lazy(() => import('./pages/AIAutonomousSecurity'));
+const AIAutonomousSystemsPlatform = lazy(() => import('./pages/services/AIAutonomousSystemsPlatform'));
+const AIAutonomousTesting = lazy(() => import('./pages/AIAutonomousTesting'));
+const AIAutonomousVehiclePlatform = lazy(() => import('./pages/AIAutonomousVehiclePlatform'));
+const AIAutonomousVehicle = lazy(() => import('./pages/AIAutonomousVehicle'));
+const AIAutonomousVehiclesPlatform = lazy(() => import('./pages/AIAutonomousVehiclesPlatform'));
+const AIAutonomousVehicles = lazy(() => import('./pages/AIAutonomousVehicles'));
+const AIAutonomousVentureCapitalist = lazy(() => import('./pages/AIAutonomousVentureCapitalist'));
 
-// Lazy load pages - Other
-const VideoCall = React.lazy(() => import('./pages/VideoCall.jsx'));
-const Index = React.lazy(() => import('./pages/Index.jsx'));
-const Developer = React.lazy(() => import('./pages/Developer.jsx'));
+// AI Content Generation pages
+const AIContentGenerationAutomation = lazy(() => import('./pages/AIContentGenerationAutomation'));
+const AIContentGenerationPro = lazy(() => import('./pages/AIContentGenerationPro'));
+const AIConsciousnessEvolution = lazy(() => import('./pages/AIConsciousnessEvolution'));
 
-// Components
-const Sitemap = React.lazy(() => import('./components/Sitemap.jsx'));
+// Enhanced AI service pages
+const AIBusinessIntelligenceElite = lazy(() => import('./pages/AIBusinessIntelligenceElite'));
+const AIBusinessIntelligenceSuite = lazy(() => import('./pages/AIBusinessIntelligenceSuite'));
 
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen">
@@ -162,153 +172,277 @@ const LoadingSpinner = () => (
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
-        <AppHeader />
-        <main className="flex-1">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              {/* Main Routes */}
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/forgot-password" element={<ForgotPassword />} />
-              <Route path="/update-password" element={<UpdatePassword />} />
+    <EnhancedErrorBoundary>
+      <EnhancedAccessibility />
+      <PerformanceMonitor />
+      <ThemeProvider>
+        <WhitelabelProvider>
+          <Router>
+                        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+                {/* Enhanced SEO */}
+                <EnhancedSEO 
+                  title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
+                  description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
+                  keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
+                  type="website"
+                  url="/"
+                  image="/og-image.jpg"
+                  canonicalUrl="https://ziontechgroup.com"
+                />
+                
+                <Header />
+                <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+                
+                <main id="main-content" className="pt-20">
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <Routes>
+                      {/* Main Routes */}
+                      <Route path="/" element={<Home />} />
+                      <Route path="/home" element={<Home />} />
+                      <Route path="/services" element={<Services />} />
+                      <Route path="/ai-solutions" element={<AISolutions />} />
+                      <Route path="/services-showcase" element={<ServicesShowcase />} />
+                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
+                      <Route path="/ai-matcher" element={<AIMatcherPage />} />
+                      <Route path="/talent-directory" element={<TalentDirectory />} />
+                      <Route path="/talents" element={<TalentsPage />} />
+                      <Route path="/emerging-tech" element={<EmergingTech />} />
+                      
+                      {/* New routes from incoming branch */}
+                      <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
+                      <Route path="/pricing" element={<PricingPage />} />
+                      
+                      {/* Service Routes */}
+                      <Route path="/ai-services" element={<AIServices />} />
+                      <Route path="/cloud-devops" element={<CloudDevOps />} />
+                      <Route path="/enterprise-solutions" element={<EnterpriseSolutionsPage />} />
+                      <Route path="/digital-transformation" element={<DigitalTransformation />} />
+                      
+                      {/* Missing pages from analysis */}
+                      <Route path="/quantum-neural-network-platform" element={<QuantumNeuralNetworkPlatform />} />
+                      <Route path="/autonomous-business-operations-platform" element={<AutonomousBusinessOperationsPlatform />} />
+                      <Route path="/ai-powered-it-asset-management" element={<AIPoweredITAssetManagement />} />
+                      <Route path="/soc2-compliance-automation" element={<SOC2ComplianceAutomation />} />
+                      <Route path="/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
+                      <Route path="/5g-enterprise-solutions" element={<FiveGEnterpriseSolutions />} />
+                      <Route path="/case-studies" element={<CaseStudies />} />
+                      <Route path="/help" element={<HelpCenter />} />
+                      <Route path="/new-services" element={<NewServices />} />
+                      
+                      {/* Additional missing pages */}
+                      <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
+                      <Route path="/ai-autonomous-business-platform" element={<AIAutonomousBusinessPlatform />} />
+                      <Route path="/ai-autonomous-research" element={<AIAutonomousResearch />} />
+                      <Route path="/ai-autonomous-systems-platform" element={<AIAutonomousSystemsPlatform />} />
+                      <Route path="/ai-autonomous-code-review" element={<AIAutonomousCodeReview />} />
+                      <Route path="/ai-autonomous-creative-director" element={<AIAutonomousCreativeDirector />} />
+                      
+                      {/* Company Routes */}
+                      <Route path="/about" element={<About />} />
+                      <Route path="/contact" element={<Contact />} />
+                      <Route path="/mission" element={<Mission />} />
+                      <Route path="/team" element={<Team />} />
+                      <Route path="/careers" element={<Careers />} />
+                      <Route path="/partners" element={<Partners />} />
+                      <Route path="/blog" element={<Blog />} />
+                      <Route path="/news" element={<News />} />
+                      
+                      {/* Service Detail Routes */}
+                      <Route path="/services-overview" element={<ServicesOverview />} />
+                      <Route path="/services/ai-autonomous-systems" element={<AIAutonomousSystems />} />
+                      <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                      <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+                      <Route path="/services/quantum-technology" element={<QuantumTechnology />} />
+                      <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                      <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+                      <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
+                      <Route path="/services/industry-solutions" element={<IndustrySolutions />} />
+                      <Route path="/services/innovative-new-services" element={<InnovativeNewServices />} />
+                      <Route path="/services/specialized-it-infrastructure" element={<SpecializedITInfrastructure />} />
+                      <Route path="/innovative-micro-saas-services" element={<InnovativeMicroSaasServices />} />
+                      <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
+                      <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
+                      <Route path="/enhanced-services-showcase" element={<EnhancedServicesShowcase />} />
+                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
+                      
+                      {/* New innovative service routes */}
+                      <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+                      <Route path="/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
+                      <Route path="/iot-data-analytics" element={<IoTDataAnalytics />} />
+                      
+                      {/* Additional innovative service routes */}
+                      <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                      <Route path="/iot-management-platform" element={<IoTManagementPlatform />} />
+                      <Route path="/blockchain-defi-solutions" element={<BlockchainDeFiSolutions />} />
+                      
+                      {/* Solutions Routes */}
+                      <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
+                      <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
+                      
+                      {/* Legacy route redirects for SEO */}
+                      <Route path="/comprehensive-services" element={<Services />} />
+                      <Route path="/services-comparison" element={<Services />} />
+                      <Route path="/it-onsite-services" element={<Services />} />
+                      
+                      {/* Additional missing pages to fix broken links */}
+                      <Route path="/privacy" element={<Privacy />} />
+                      <Route path="/terms" element={<Terms />} />
+                      <Route path="/cookies" element={<Cookies />} />
+                      <Route path="/faq" element={<FAQ />} />
+                      <Route path="/events" element={<Events />} />
+                      <Route path="/webinars" element={<Webinars />} />
+                      <Route path="/white-papers" element={<WhitePapers />} />
+                      <Route path="/testimonials" element={<Testimonials />} />
+                      <Route path="/support" element={<Support />} />
+                      <Route path="/docs" element={<Docs />} />
+                      <Route path="/marketplace" element={<Marketplace />} />
+                      <Route path="/community" element={<Community />} />
+                      
+                      {/* AI Autonomous Service routes */}
+                      <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
+                      <Route path="/ai-autonomous-business-platform" element={<AIAutonomousBusinessPlatform />} />
+                      <Route path="/ai-autonomous-code-review" element={<AIAutonomousCodeReview />} />
+                      <Route path="/ai-autonomous-creative-director" element={<AIAutonomousCreativeDirector />} />
+                      <Route path="/ai-autonomous-data" element={<AIAutonomousData />} />
+                      <Route path="/ai-autonomous-decision-engine" element={<AIAutonomousDecisionEngine />} />
+                      <Route path="/ai-autonomous-decision-platform" element={<AIAutonomousDecisionPlatform />} />
+                      <Route path="/ai-autonomous-devops" element={<AIAutonomousDevOps />} />
+                      <Route path="/ai-autonomous-education-professor" element={<AIAutonomousEducationProfessor />} />
+                      <Route path="/ai-autonomous-healthcare-physician" element={<AIAutonomousHealthcarePhysician />} />
+                      <Route path="/ai-autonomous-learning-system" element={<AIAutonomousLearningSystem />} />
+                      <Route path="/ai-autonomous-legal-counsel" element={<AIAutonomousLegalCounsel />} />
+                      <Route path="/ai-autonomous-logistics" element={<AIAutonomousLogistics />} />
+                      <Route path="/ai-autonomous-manufacturing" element={<AIAutonomousManufacturing />} />
+                      <Route path="/ai-autonomous-research" element={<AIAutonomousResearch />} />
+                      <Route path="/ai-autonomous-robotics" element={<AIAutonomousRobotics />} />
+                      <Route path="/ai-autonomous-scientific-researcher" element={<AIAutonomousScientificResearcher />} />
+                      <Route path="/ai-autonomous-security" element={<AIAutonomousSecurity />} />
+                      <Route path="/ai-autonomous-systems-platform" element={<AIAutonomousSystemsPlatform />} />
+                      <Route path="/ai-autonomous-testing" element={<AIAutonomousTesting />} />
+                      <Route path="/ai-autonomous-vehicle-platform" element={<AIAutonomousVehiclePlatform />} />
+                      <Route path="/ai-autonomous-vehicle" element={<AIAutonomousVehicle />} />
+                      <Route path="/ai-autonomous-vehicles-platform" element={<AIAutonomousVehiclesPlatform />} />
+                      <Route path="/ai-autonomous-vehicles" element={<AIAutonomousVehicles />} />
+                      <Route path="/ai-autonomous-venture-capitalist" element={<AIAutonomousVentureCapitalist />} />
+                      
+                      {/* AI Content Generation routes */}
+                      <Route path="/ai-content-generation-automation" element={<AIContentGenerationAutomation />} />
+                      <Route path="/ai-content-generation-pro" element={<AIContentGenerationPro />} />
+                      <Route path="/ai-consciousness-evolution" element={<AIConsciousnessEvolution />} />
+                      
+                      {/* Enhanced AI service routes */}
+                      <Route path="/ai-business-intelligence-elite" element={<AIBusinessIntelligenceElite />} />
+                      <Route path="/ai-business-intelligence-suite" element={<AIBusinessIntelligenceSuite />} />
+                      
+                      {/* AI Content Generation routes */}
+                      <Route path="/ai-content-generation-automation" element={<AIContentGenerationAutomation />} />
+                      <Route path="/ai-content-generation-pro" element={<AIContentGenerationPro />} />
+                      <Route path="/ai-consciousness-evolution" element={<AIConsciousnessEvolution />} />
+                      
+                      {/* Enhanced AI service routes */}
+                      <Route path="/ai-autonomous-business-manager-2029" element={<AIAutonomousBusinessManager />} />
+                      <Route path="/ai-autonomous-business-platform-2026" element={<AIAutonomousBusinessPlatform />} />
+                      <Route path="/ai-business-intelligence-elite-2026" element={<AIBusinessIntelligenceElite />} />
+                      <Route path="/ai-business-intelligence-suite-2029" element={<AIBusinessIntelligenceSuite />} />
+                      <Route path="/ai-content-generation-automation-2033" element={<AIContentGenerationAutomation />} />
+                      <Route path="/ai-content-generation-pro-2029" element={<AIContentGenerationPro />} />
+                      <Route path="/ai-consciousness-evolution-2025" element={<AIConsciousnessEvolution />} />
+                      <Route path="/ai-consciousness-evolution-2029" element={<AIConsciousnessEvolution />} />
+                      
+                      {/* Quantum and other technology routes */}
+                      <Route path="/quantum-cloud-infrastructure" element={<QuantumTechnology />} />
+                      <Route path="/quantum-financial-trading" element={<QuantumTechnology />} />
+                      <Route path="/quantum-services" element={<QuantumTechnology />} />
+                      <Route path="/space-tech" element={<EmergingTech />} />
+                      <Route path="/research-development" element={<EmergingTech />} />
+                      <Route path="/enterprise-it" element={<ITInfrastructure />} />
+                      <Route path="/micro-saas" element={<MicroSAASSolutions />} />
+                    </Routes>
+                  </Suspense>
+                </main>
+                
+                <Footer />
+                <SonnerToaster />
+              </div>
               
-              {/* Services Routes */}
-              <Route path="/services/ai-business-solutions" element={<AIBusinessSolutions />} />
-              <Route path="/services/cybersecurity-suite" element={<CybersecuritySuite />} />
-              <Route path="/services/cloud-infrastructure" element={<CloudInfrastructure />} />
-              <Route path="/services/digital-marketing" element={<DigitalMarketingServicesPage />} />
-              <Route path="/services/financial-solutions" element={<FinancialSolutions />} />
-              <Route path="/services/manufacturing-solutions" element={<ManufacturingSolutions />} />
-              <Route path="/services/iot-services" element={<IoTServicesPage />} />
-              <Route path="/services/blockchain-services" element={<BlockchainServicesPage />} />
-              <Route path="/services/quantum-technology" element={<QuantumTechnology />} />
-              <Route path="/services/5g-enterprise-solutions" element={<FiveGEnterpriseSolutions />} />
-              <Route path="/services/green-it" element={<GreenIT />} />
-              <Route path="/services/enterprise-it" element={<EnterpriseIT />} />
-              <Route path="/services/micro-saas" element={<MicroSaasServices />} />
-              <Route path="/services/onsite-it" element={<ITOnsiteServicesPage />} />
-              <Route path="/services/dispute-management" element={<DisputeManagement />} />
+              {/* Enhanced Accessibility Controls */}
+              <EnhancedAccessibility />
               
-              {/* Products Routes */}
-              <Route path="/products" element={<ProductPage />} />
-              <Route path="/products/new" element={<NewProductsPage />} />
-              <Route path="/equipment" element={<EquipmentPage />} />
-              <Route path="/portfolio-builder" element={<PortfolioBuilder />} />
-              <Route path="/zion-hire-ai" element={<ZionHireAI />} />
-              <Route path="/ai-research-assistant" element={<AIResearchAssistant />} />
-              <Route path="/ai-content-generator" element={<AIContentGenerator />} />
-              <Route path="/ai-code-review" element={<AICodeReview />} />
-              <Route path="/cloud-cost-optimizer" element={<CloudCostOptimizer />} />
-              <Route path="/service-description-generator" element={<ServiceDescriptionGenerator />} />
+              {/* Website Improvement Tools */}
+              <ContentQualityEnhancer />
+              <BrokenLinkFixer />
+              <WebsiteImprovementDashboard />
               
-              {/* Business & Enterprise Routes */}
-              <Route path="/business-solutions" element={<BusinessSolutionsPage />} />
-              <Route path="/enterprise" element={<EnterpriseAdmin />} />
-              <Route path="/enterprise/billing" element={<EnterpriseBilling />} />
-              <Route path="/enterprise/demo" element={<EnterpriseDemo />} />
-              <Route path="/enterprise/plans" element={<EnterprisePlans />} />
-              <Route path="/digital-transformation" element={<DigitalTransformation />} />
-              <Route path="/autonomous-business-platform" element={<AutonomousBusinessOperationsPlatform />} />
+              {/* AI Chatbot - Always Available */}
+              <AIChatbot />
               
-              {/* Community & Support Routes */}
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/partners" element={<Partners />} />
-              <Route path="/events" element={<Events />} />
-              <Route path="/news" element={<News />} />
-              <Route path="/blog" element={<BlogPost />} />
-              <Route path="/forum/post/:id" element={<ForumPostPage />} />
-              <Route path="/forum/category/:category" element={<ForumCategoryPage />} />
-              <Route path="/forum/create" element={<CreatePostPage />} />
-              <Route path="/forum/edit/:id" element={<EditPostPage />} />
-              
-              {/* User & Account Routes */}
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/profile/:id" element={<ProfilePage />} />
-              
-              {/* Marketplace & E-commerce Routes */}
-              <Route path="/cart" element={<Cart />} />
-              <Route path="/orders" element={<Orders />} />
-              <Route path="/orders/:id" element={<OrderDetail />} />
-              <Route path="/order-confirmation" element={<OrderConfirmation />} />
-              <Route path="/search" element={<SearchResultsPage />} />
-              <Route path="/category/:category" element={<CategoryDetail />} />
-              <Route path="/listing/:id" element={<ListingDetail />} />
-              
-              {/* Jobs & Talent Routes */}
-              <Route path="/jobs/post" element={<PostJob />} />
-              <Route path="/jobs/:id" element={<JobDetails />} />
-              <Route path="/hiring-tracker" element={<HiringTracker />} />
-              <Route path="/talent-onboarding" element={<TalentOnboarding />} />
-              <Route path="/community/profile/:id" element={<CommunityProfilePage />} />
-              
-              {/* Legal & Documentation Routes */}
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/cookies" element={<Cookies />} />
-              <Route path="/docs" element={<Documentation />} />
-              <Route path="/developer" element={<DeveloperPortal />} />
-              
-              {/* Pricing & Plans Routes */}
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/pricing-guide" element={<PricingGuidePage />} />
-              <Route path="/services-pricing" element={<ServicesPricingPage />} />
-              <Route path="/services-comparison" element={<ServicesComparisonPage />} />
-              
-              {/* Specialized Services Routes */}
-              <Route path="/next-gen-services-2025" element={<NextGenServicesShowcase2025 />} />
-              <Route path="/cutting-edge-services-2025" element={<CuttingEdgeInnovativeServices2025 />} />
-              <Route path="/enhanced-innovative-services" element={<EnhancedInnovativeServices />} />
-              <Route path="/enhanced-services" element={<EnhancedServicesPage />} />
-              <Route path="/enhanced-services-showcase" element={<EnhancedServicesShowcase />} />
-              <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
-              <Route path="/comprehensive-contact" element={<ComprehensiveContact />} />
-              <Route path="/advanced-services" element={<AdvancedServicesPage />} />
-              <Route path="/services-overview" element={<ServicesOverview />} />
-              <Route path="/new-services-overview" element={<NewServicesOverview />} />
-              <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
-              <Route path="/micro-saas-showcase" element={<MicroSAASShowcase />} />
-              <Route path="/content-generator" element={<ContentGenerator />} />
-              <Route path="/service-onboarding" element={<ServiceOnboarding />} />
-              <Route path="/token-integrations" element={<TokenIntegrations />} />
-              <Route path="/how-it-works" element={<HowItWorks />} />
-              <Route path="/get-started" element={<GetStarted />} />
-              
-              {/* Admin & Management Routes */}
-              <Route path="/admin/products" element={<ProductsAdminPage />} />
-              <Route path="/more-products" element={<MoreProductsPage />} />
-              <Route path="/featured" element={<Featured />} />
-              
-              {/* Other Routes */}
-              <Route path="/video-call" element={<VideoCall />} />
-              <Route path="/index" element={<Index />} />
-              <Route path="/dev" element={<Developer />} />
-              <Route path="/sitemap" element={<Sitemap />} />
-              
-              {/* Catch-all route for 404 */}
-              <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
-                <div className="text-center">
-                  <h1 className="text-6xl font-bold text-zion-cyan mb-4">404</h1>
-                  <p className="text-xl text-zion-slate-light mb-8">Page not found</p>
-                  <a href="/" className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
-                    Go Home
-                  </a>
+              {/* Collaborative Text Editor - Development Mode */}
+              {import.meta.env.DEV && (
+                <div className="fixed bottom-24 left-6 z-40 w-96">
+                  <CollaborativeTextEditor
+                    roomId="dev-editor"
+                    userId="dev-user"
+                    userName="Developer"
+                    initialContent="Welcome to the collaborative text editor! Start typing to see AI suggestions and real-time collaboration features."
+                    enableAI={true}
+                    enableCollaboration={true}
+                    enableVersioning={true}
+                  />
                 </div>
-              </div>} />
-            </Routes>
-          </Suspense>
-        </main>
-        <Footer />
-        <ChatAssistant />
-      </div>
-    </Router>
-  );
-}
+              )}
+              
+              {/* AI Code Generator - Development Mode */}
+              {import.meta.env.DEV && (
+                <div className="fixed bottom-24 right-6 z-40 w-96">
+                  <AICodeGenerator />
+                </div>
+              )}
+              
+              {/* Development Dashboards */}
+              {import.meta.env.DEV && (
+                <>
+                  {/* Performance Dashboard */}
+                  <div className="fixed top-4 left-4 z-40">
+                    <PerformanceDashboard />
+                  </div>
+                  
+                  {/* Analytics Dashboard */}
+                  <div className="fixed top-4 right-4 z-40">
+                    <AnalyticsDashboard />
+                  </div>
+                  
+                  {/* Enterprise Dashboard */}
+                  <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
+                    <EnterpriseDashboard />
+                  </div>
+                  
+                  {/* Security & Compliance Dashboard */}
+                  <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
+                    <SecurityComplianceDashboard />
+                  </div>
+                  
+                  {/* Machine Learning Dashboard */}
+                  <div className="fixed top-4 right-4 z-40">
+                    <MachineLearningDashboard />
+                  </div>
+                </>
+              )}
+              
+              {/* Enhanced Performance Monitor - Always Available */}
+              <PerformanceMonitor />
+              
+              {/* Link Health Monitor - Development Mode */}
+              {import.meta.env.DEV && (
+                <LinkHealthMonitor
+                  autoCheck={true}
+                  showDetails={false}
+                />
+              )}
+            </Router>
+          </WhitelabelProvider>
+        </ThemeProvider>
+      </EnhancedErrorBoundary>
+    );
+  };
 
 export default App;

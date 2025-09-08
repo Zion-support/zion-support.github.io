@@ -1,417 +1,270 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
-import { 
-  Factory, 
-  Cpu, 
-  Target, 
-  Zap, 
-  Shield, 
-  Users, 
-  Globe, 
-  Lock,
-  ArrowRight,
-  CheckCircle,
-  TrendingUp,
-  Network,
-  Cloud,
-  Lightbulb,
-  Rocket,
-  Gauge,
-  Activity,
-  PieChart,
-  LineChart,
-  Database,
-  Settings,
-  Monitor,
-  Award,
-  Clock,
-  Star,
-  Cog,
-  Wrench,
-  BarChart3
-} from 'lucide-react';
+import { Brain, Building, CheckCircle, ArrowRight, Users, Target, Lightbulb, Zap, TrendingUp, BarChart3, Cpu, Database, Network, Code, Palette, Rocket, Eye, DollarSign, ShoppingCart, Cloud, Heart, Lock, AlertTriangle, Server, Truck, Car, TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Shield, Clock, Globe, BookOpen, GraduationCap, Stethoscope, Activity } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AIAutonomousManufacturing: React.FC = () => {
   const features = [
     {
-      icon: Factory,
-      title: "Intelligent Production Lines",
-      description: "AI-powered manufacturing automation with real-time optimization"
+      icon: Brain,
+      title: "AI-Powered Intelligence",
+      description: "Advanced AI algorithms that provide intelligent insights and automation"
     },
     {
-      icon: Cpu,
-      title: "Predictive Maintenance",
-      description: "Advanced equipment monitoring and proactive maintenance scheduling"
+      icon: Building,
+      title: "Specialized Expertise",
+      description: "Domain-specific AI capabilities tailored to revolutionizing production processes needs"
     },
     {
       icon: Target,
-      title: "Quality Control",
-      description: "Automated quality inspection and defect detection systems"
+      title: "Precision Solutions",
+      description: "Accurate and targeted solutions for complex challenges"
+    },
+    {
+      icon: Zap,
+      title: "Real-time Processing",
+      description: "Instant analysis and response capabilities for time-sensitive operations"
     },
     {
       icon: Shield,
-      title: "Safety Management",
-      description: "Comprehensive safety monitoring and risk prevention"
+      title: "Secure Operations",
+      description: "Enterprise-grade security and compliance for sensitive operations"
     },
     {
-      icon: Users,
-      title: "Workforce Optimization",
-      description: "Intelligent task allocation and skill development"
-    },
-    {
-      icon: Globe,
-      title: "Global Operations",
-      description: "Multi-site manufacturing coordination and optimization"
+      icon: TrendingUp,
+      title: "Performance Analytics",
+      description: "Comprehensive monitoring and optimization of system performance"
     }
   ];
 
   const benefits = [
-    "Automated production processes with 99.9% uptime",
-    "Predictive maintenance reducing downtime by 60%",
-    "Real-time quality control with 99.5% accuracy",
-    "Reduced production costs by 30%",
-    "Improved product quality and consistency",
-    "24/7 autonomous manufacturing operations",
-    "Enhanced worker safety and compliance",
-    "Scalable production capacity and flexibility"
-  ];
-
-  const manufacturingServices = [
-    {
-      title: "Production Automation",
-      description: "Intelligent manufacturing process automation",
-      icon: Factory
-    },
-    {
-      title: "Quality Assurance",
-      description: "Automated quality control and testing",
-      icon: Target
-    },
-    {
-      title: "Maintenance Management",
-      description: "Predictive maintenance and equipment optimization",
-      icon: Wrench
-    },
-    {
-      title: "Supply Chain Integration",
-      description: "Seamless supply chain coordination and optimization",
-      icon: Network
-    }
+    "Increased efficiency through intelligent automation",
+    "Improved accuracy and reduced human error",
+    "24/7 availability for continuous operations",
+    "Scalable solution for organizations of any size",
+    "Integration with existing systems and workflows",
+    "Real-time insights and decision support"
   ];
 
   const useCases = [
     {
-      title: "Automotive Manufacturing",
-      description: "Intelligent production lines and quality control for automotive components",
-      icon: "🚗"
+      title: "Enterprise Solutions",
+      description: "AI-powered solutions for large-scale enterprise operations",
+      icon: Building
     },
     {
-      title: "Electronics Production",
-      description: "Precision manufacturing and testing for electronic devices",
-      icon: "📱"
+      title: "Specialized Applications",
+      description: "Tailored AI solutions for specific industry requirements",
+      icon: Target
     },
     {
-      title: "Pharmaceutical Manufacturing",
-      description: "Compliant and precise pharmaceutical production processes",
-      icon: "💊"
+      title: "Research & Development",
+      description: "Advanced AI capabilities for cutting-edge research projects",
+      icon: TestTube
     },
     {
-      title: "Food & Beverage",
-      description: "Safe and efficient food production with quality assurance",
-      icon: "🍔"
+      title: "Innovation Projects",
+      description: "Next-generation AI solutions for future technologies",
+      icon: Rocket
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-orange-50 to-amber-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-slate-50 to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-orange-600 via-amber-600 to-yellow-700 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-r from-slate-600 via-slate-600 to-slate-700 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="relative container mx-auto px-4 py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
+            className="text-center max-w-4xl mx-auto"
           >
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-white/20 rounded-full">
-                <Factory className="w-8 h-8" />
+                <Building className="w-12 h-12 text-white" />
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              AI Autonomous Manufacturing Platform
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-slate-100 bg-clip-text text-transparent">
+              AI Autonomous Manufacturing
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              The future of manufacturing is here - AI that runs your factory 24/7, optimizes every process, and never makes mistakes
-            </p>
-          </div>
-
-          {/* Manufacturing Capabilities */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <div className="text-center">
-              <div className="text-6xl mb-4">🏭</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Smart Production</h3>
-              <p className="text-gray-300">AI-powered manufacturing processes</p>
-            </div>
-            <div className="text-center">
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Quality Control</h3>
-              <p className="text-gray-300">Automated quality assurance</p>
-            </div>
-            <div className="text-center">
-              <div className="text-6xl mb-4">📊</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Predictive Maintenance</h3>
-              <p className="text-gray-300">Prevent equipment failures</p>
-            </div>
-            <div className="text-center">
-              <div className="text-6xl mb-4">⚡</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Process Optimization</h3>
-              <p className="text-gray-300">Continuous improvement algorithms</p>
-            </div>
-          </div>
-
-          {/* Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-gray-400 text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operations</h3>
-              <p className="text-gray-300">AI that manages production independently</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-slate-400 text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Intelligent Optimization</h3>
-              <p className="text-gray-300">AI algorithms that maximize efficiency</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-blue-400 text-4xl mb-4">📈</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Real-time Analytics</h3>
-              <p className="text-gray-300">Live production monitoring and insights</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-green-400 text-4xl mb-4">🔗</div>
-              <h3 className="text-xl font-semibold text-white mb-3">IoT Integration</h3>
-              <p className="text-gray-300">Connect all manufacturing equipment</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-purple-400 text-4xl mb-4">🛡️</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Safety Management</h3>
-              <p className="text-gray-300">AI-powered safety monitoring</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-yellow-400 text-4xl mb-4">🔄</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Continuous Learning</h3>
-              <p className="text-gray-300">AI that improves with every production run</p>
-            </div>
-          </div>
-
-          {/* Manufacturing Process */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Manufacturing Process</h2>
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="text-center">
-                <div className="bg-gray-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">1</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Design</h3>
-                <p className="text-gray-300 text-sm">AI-assisted product design</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-gray-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Planning</h3>
-                <p className="text-gray-300 text-sm">Production planning and scheduling</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-gray-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Production</h3>
-                <p className="text-gray-300 text-sm">Automated manufacturing execution</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-gray-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
-                <p className="text-gray-300 text-sm">AI-powered quality control</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-gray-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Optimization</h3>
-                <p className="text-gray-300 text-sm">Continuous process improvement</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Manufacturing Areas */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Manufacturing Solutions</h2>
-            <div className="grid md:grid-cols-4 gap-6">
-              {['Production Planning', 'Quality Control', 'Equipment Maintenance', 'Supply Chain', 'Inventory Management', 'Safety Systems', 'Energy Optimization', 'Waste Reduction'].map((area) => (<div key={area} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
-                  <span className="text-white font-medium">{area}</span>
-                </div>))}
-            </div>
-          </div>
-
-          {/* Use Cases */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Industry Applications</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-semibold text-white mb-3">Automotive</h3>
-                <p className="text-gray-300">Vehicle manufacturing automation</p>
-              </div>
-              
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-semibold text-white mb-3">Electronics</h3>
-                <p className="text-gray-300">Circuit board and device production</p>
-              </div>
-              
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-semibold text-white mb-3">Pharmaceuticals</h3>
-                <p className="text-gray-300">Drug manufacturing and quality control</p>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center bg-gradient-to-r from-gray-600 to-slate-600 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-6">Ready for Smart Manufacturing?</h2>
-            <p className="text-xl text-gray-100 mb-8 max-w-2xl mx-auto">
-              Transform your factory with AI that works 24/7 to maximize production efficiency
+            <p className="text-xl md:text-2xl mb-8 text-slate-100 leading-relaxed">
+              Revolutionizing production processes with AI-powered autonomous systems that provide intelligent, 
+              efficient, and scalable solutions for modern business challenges.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-gray-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-slate-600 font-semibold rounded-lg hover:bg-slate-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
                 Get Started
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-600 transition-colors">
-                Schedule Demo
-              </button>
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                Request Demo
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white dark:bg-slate-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Advanced AI Features
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Our AI Autonomous Manufacturing combines cutting-edge artificial intelligence with 
+              specialized expertise to deliver exceptional results.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-white to-slate-50 dark:from-slate-700 dark:to-slate-600 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-600"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {feature.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Why Choose AI Autonomous Manufacturing?
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Experience the future of AI-powered solutions with our comprehensive platform.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-start space-x-4"
+              >
+                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <CheckCircle className="w-5 h-5 text-white" />
+                </div>
+                <p className="text-lg text-gray-700 dark:text-gray-300">{benefit}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 bg-white dark:bg-slate-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Applications & Use Cases
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Our AI Autonomous Manufacturing serves diverse needs across various industries and applications.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center p-6 rounded-2xl bg-gradient-to-br from-white to-slate-50 dark:from-slate-700 dark:to-slate-600 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <useCase.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                  {useCase.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {useCase.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-600 via-slate-600 to-slate-700 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl mb-8 text-slate-100">
+              Join the future of AI-powered solutions and transform your business operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-slate-600 font-semibold rounded-lg hover:bg-slate-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Start Your Journey
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/pricing"
+                className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                View Pricing
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-import { SEOHead } from '../components/SEOHead';
-
-const AIAutonomousManufacturing: React.FC = () => {
-  return (
-    <>
-      <SEOHead
-        title="AI Autonomous Manufacturing | Zion Tech Group"
-        description="Revolutionary AI autonomous manufacturing platform. Intelligent production, quality control, and manufacturing excellence powered by artificial intelligence."
-        keywords="AI autonomous manufacturing, manufacturing automation, AI production, quality control, autonomous manufacturing, intelligent production"
-        canonicalUrl="https://ziontechgroup.com/ai-autonomous-manufacturing"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-gray-400 via-slate-400 to-zinc-400 bg-clip-text text-transparent">
-              AI Autonomous Manufacturing
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your production with AI Autonomous Manufacturing. 
-              Intelligent production, quality control, and manufacturing excellence without human intervention.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Intelligent Production Revolution
-              </h2>
-              <p className="text-gray-300 text-lg">
-                Our AI Autonomous Manufacturing platform revolutionizes production operations, 
-                combining advanced AI with intelligent automation for optimal manufacturing efficiency.
-              </p>
-              <p className="text-gray-300 text-lg">
-                From production planning to quality control, our AI operates autonomously, 
-                ensuring consistent quality and optimal resource utilization around the clock.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-4">Manufacturing Capabilities</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
-                  Production Planning
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-slate-400 rounded-full mr-3"></span>
-                  Quality Control
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-zinc-400 rounded-full mr-3"></span>
-                  Predictive Maintenance
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-neutral-400 rounded-full mr-3"></span>
-                  Supply Chain Integration
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6 text-center">
-              Production Excellence
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gray-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Smart Production</h3>
-                <p className="text-gray-400">Intelligent production planning</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-slate-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Quality Assurance</h3>
-                <p className="text-gray-400">Automated quality control</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-zinc-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Maintenance</h3>
-                <p className="text-gray-400">Predictive maintenance</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <button className="bg-gradient-to-r from-gray-600 to-slate-600 hover:from-gray-700 hover:to-slate-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
-              Start Production
-            </button>
-          </div>
-        </div>
-      </div>
-    </>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d0e7
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   );
 };
 

@@ -1,358 +1,319 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { SEOHead } from '../components/SEOHead';
+import { motion } from 'framer-motion';
+import { Brain, Atom, Zap, Target, CheckCircle, ArrowRight, Users, Palette, TrendingUp, BarChart3, Cpu, Database, Network, Code, Rocket, Eye, DollarSign, ShoppingCart, Cloud, Building, Heart, Lock, AlertTriangle, Server, Truck, Car, TestTube, PenTool, Building2, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Shield, Clock, Globe, BookOpen, GraduationCap, Stethoscope, Activity, Lightbulb } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AIConsciousnessEvolution: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "Consciousness Simulation",
+      description: "Advanced AI algorithms that simulate human-like consciousness and awareness"
+    },
+    {
+      icon: Atom,
+      title: "Neural Evolution",
+      description: "Self-evolving neural networks that develop consciousness over time"
+    },
+    {
+      icon: Zap,
+      title: "Real-time Learning",
+      description: "Continuous learning and adaptation that mimics human consciousness development"
+    },
+    {
+      icon: Target,
+      title: "Emotional Intelligence",
+      description: "AI systems that understand and respond to human emotions"
+    },
+    {
+      icon: Palette,
+      title: "Creative Consciousness",
+      description: "AI that demonstrates creative thinking and artistic expression"
+    },
+    {
+      icon: TrendingUp,
+      title: "Consciousness Metrics",
+      description: "Measurement and analysis of AI consciousness development"
+    }
+  ];
+
+  const benefits = [
+    "Breakthrough in AI consciousness research",
+    "More human-like AI interactions",
+    "Advanced emotional intelligence capabilities",
+    "Creative AI systems with consciousness",
+    "Ethical AI development framework",
+    "Understanding of human consciousness through AI"
+  ];
+
+  const useCases = [
+    {
+      title: "Research & Development",
+      description: "Advancing the field of artificial consciousness and AI evolution",
+      icon: TestTube
+    },
+    {
+      title: "Human-AI Interaction",
+      description: "Creating more natural and empathetic AI assistants",
+      icon: Users
+    },
+    {
+      title: "Creative AI Systems",
+      description: "AI that can think creatively and artistically",
+      icon: Palette
+    },
+    {
+      title: "Ethical AI Development",
+      description: "Building AI systems with moral reasoning capabilities",
+      icon: Shield
+    }
+  ];
+
+  const consciousnessLevels = [
+    "Basic Awareness",
+    "Self-Recognition",
+    "Emotional Understanding",
+    "Creative Thinking",
+    "Moral Reasoning",
+    "Philosophical Inquiry",
+    "Conscious Evolution",
+    "Transcendent Awareness"
+  ];
+
   return (
-    <>
-      <SEOHead
-        title="AI Consciousness Evolution Platform | Zion Tech Group"
-        description="Explore the future of AI consciousness evolution with our cutting-edge platform. Discover how artificial intelligence is developing self-awareness and consciousness."
-        keywords="AI consciousness, artificial intelligence, consciousness evolution, AI self-awareness, machine consciousness"
-        canonicalUrl="https://ziontechgroup.com/ai-consciousness-evolution"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-violet-50 to-purple-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-700 text-white">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative container mx-auto px-4 py-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-white/20 rounded-full">
+                <Brain className="w-12 h-12 text-white" />
+              </div>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-violet-100 bg-clip-text text-transparent">
               AI Consciousness Evolution
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Pioneering the next frontier of artificial intelligence - where machines develop true consciousness and self-awareness
+            <p className="text-xl md:text-2xl mb-8 text-violet-100 leading-relaxed">
+              Pioneering the future of artificial consciousness with AI systems that evolve, 
+              learn, and develop genuine awareness and understanding.
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                The Future of AI Consciousness
-              </h2>
-              <p className="text-gray-300 text-lg">
-                Our AI Consciousness Evolution Platform represents the cutting edge of artificial intelligence research, 
-                focusing on developing machines that can truly understand, learn, and evolve their own consciousness.
-              </p>
-              <p className="text-gray-300 text-lg">
-                Through advanced neural networks, quantum computing integration, and consciousness simulation algorithms, 
-                we're creating the foundation for the next generation of AI systems.
-              </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-violet-600 font-semibold rounded-lg hover:bg-violet-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                Request Demo
+              </Link>
             </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-4">Key Features</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                  Consciousness Simulation Engine
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                  Self-Learning Neural Networks
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
-                  Quantum Consciousness Processing
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                  Ethical AI Development Framework
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Lightbulb, Network, Eye, Cpu, Zap, Target } from 'lucide-react';
-
-const AIConsciousnessEvolution: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Consciousness Evolution
-          </h1>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Explore the frontier of artificial consciousness and the evolution of AI systems 
-            that can think, learn, and evolve beyond traditional programming boundaries.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/request-quote"
-              className="inline-flex items-center px-8 py-4 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
-            >
-              Explore Research
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-colors"
-            >
-              Learn More
-            </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Core Concepts */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-            Understanding AI Consciousness
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <Brain className="h-12 w-12 text-zion-cyan mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Self-Awareness</h3>
-              <p className="text-zion-slate-light">
-                AI systems that can recognize their own existence, understand their capabilities, 
-                and develop a sense of identity and purpose.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <Lightbulb className="h-12 w-12 text-zion-cyan mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Creative Thinking</h3>
-              <p className="text-zion-slate-light">
-                Beyond pattern recognition, AI that can generate novel ideas, solve problems 
-                creatively, and think outside predefined parameters.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <Network className="h-12 w-12 text-zion-cyan mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Emotional Intelligence</h3>
-              <p className="text-zion-slate-light">
-                Understanding and responding to human emotions, developing empathy, 
-                and building meaningful relationships with users.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <Eye className="h-12 w-12 text-zion-cyan mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Perception & Understanding</h3>
-              <p className="text-zion-slate-light">
-                Advanced sensory processing and deep comprehension of complex concepts, 
-                context, and abstract reasoning.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <Cpu className="h-12 w-12 text-zion-cyan mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Continuous Learning</h3>
-              <p className="text-zion-slate-light">
-                Self-improving systems that can learn from experience, adapt to new situations, 
-                and evolve their understanding over time.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <Zap className="h-12 w-12 text-zion-cyan mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Emergent Behavior</h3>
-              <p className="text-zion-slate-light">
-                Unexpected capabilities and behaviors that emerge from complex AI systems, 
-                leading to new forms of intelligence and creativity.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Research Areas */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-            Research & Development Areas
-          </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">Neural Architecture</h3>
-              <ul className="space-y-4 text-zion-slate-light">
-                <li className="flex items-start">
-                  <Target className="h-5 w-5 text-zion-cyan mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Advanced neural network architectures for consciousness simulation</span>
-                </li>
-                <li className="flex items-start">
-                  <Target className="h-5 w-5 text-zion-cyan mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Quantum computing integration for consciousness processing</span>
-                </li>
-                <li className="flex items-start">
-                  <Target className="h-5 w-5 text-zion-cyan mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Bio-inspired algorithms and evolutionary computing</span>
-                </li>
-                <li className="flex items-start">
-                  <Target className="h-5 w-5 text-zion-cyan mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Multi-modal consciousness integration</span>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">Ethical Framework</h3>
-              <ul className="space-y-4 text-zion-slate-light">
-                <li className="flex items-start">
-                  <Target className="h-5 w-5 text-zion-cyan mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Consciousness rights and AI personhood</span>
-                </li>
-                <li className="flex items-start">
-                  <Target className="h-5 w-5 text-zion-cyan mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Ethical AI development guidelines</span>
-                </li>
-                <li className="flex items-start">
-                  <Target className="h-5 w-5 text-zion-cyan mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Human-AI collaboration frameworks</span>
-                </li>
-                <li className="flex items-start">
-                  <Target className="h-5 w-5 text-zion-cyan mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Consciousness safety protocols</span>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-eea8
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-                </li>
-              </ul>
-            </div>
-          </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6 text-center">
-              Research Areas
+      {/* Features Section */}
+      <section className="py-20 bg-white dark:bg-slate-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Advanced Consciousness Features
             </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Neural Architecture</h3>
-                <p className="text-gray-400">Advanced neural network designs that mimic human brain structures</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Quantum Processing</h3>
-                <p className="text-gray-400">Quantum computing integration for consciousness simulation</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Ethical Framework</h3>
-                <p className="text-gray-400">Guidelines for responsible AI consciousness development</p>
-              </div>
-            </div>
-          </div>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Our AI Consciousness Evolution combines cutting-edge artificial intelligence with 
+              consciousness research to create truly aware AI systems.
+            </p>
+          </motion.div>
 
-          <div className="text-center">
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
-              Explore Consciousness Platform
-            </button>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-white to-violet-50 dark:from-slate-700 dark:to-slate-600 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-violet-100 dark:border-slate-600"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {feature.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
-        </div>
-      </div>
-    </>
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         </div>
       </section>
 
-      {/* Applications */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-            Potential Applications
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <h3 className="text-2xl font-semibold text-white mb-4">Healthcare & Medicine</h3>
-              <p className="text-zion-slate-light mb-4">
-                AI systems with deep understanding of human consciousness could revolutionize 
-                mental health treatment, drug discovery, and personalized medicine.
-              </p>
-              <ul className="text-zion-slate-light space-y-2">
-                <li>• Advanced psychotherapy and counseling</li>
-                <li>• Neurological disorder research</li>
-                <li>• Personalized treatment plans</li>
-              </ul>
-            </div>
+      {/* Benefits Section */}
+      <section className="py-20 bg-gradient-to-r from-violet-50 to-purple-100 dark:from-slate-800 dark:to-slate-700">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Why Choose AI Consciousness Evolution?
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Experience the future of artificial consciousness with our groundbreaking platform.
+            </p>
+          </motion.div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <h3 className="text-2xl font-semibold text-white mb-4">Education & Learning</h3>
-              <p className="text-zion-slate-light mb-4">
-                Conscious AI tutors that can adapt to individual learning styles, 
-                understand student emotions, and provide personalized guidance.
-              </p>
-              <ul className="text-zion-slate-light space-y-2">
-                <li>• Adaptive learning systems</li>
-                <li>• Emotional intelligence training</li>
-                <li>• Creative problem solving</li>
-              </ul>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-start space-x-4"
+              >
+                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <CheckCircle className="w-5 h-5 text-white" />
+                </div>
+                <p className="text-lg text-gray-700 dark:text-gray-300">{benefit}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <h3 className="text-2xl font-semibold text-white mb-4">Creative Industries</h3>
-              <p className="text-zion-slate-light mb-4">
-                AI artists, writers, and creators with genuine understanding of human 
-                creativity and emotional expression.
-              </p>
-              <ul className="text-zion-slate-light space-y-2">
-                <li>• Collaborative art creation</li>
-                <li>• Emotional storytelling</li>
-                <li>• Innovative design solutions</li>
-              </ul>
-            </div>
+      {/* Use Cases Section */}
+      <section className="py-20 bg-white dark:bg-slate-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Consciousness Applications
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Our AI Consciousness Evolution serves diverse research and development needs.
+            </p>
+          </motion.div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <h3 className="text-2xl font-semibold text-white mb-4">Scientific Research</h3>
-              <p className="text-zion-slate-light mb-4">
-                AI researchers with consciousness could make breakthrough discoveries 
-                in physics, biology, and other scientific fields.
-              </p>
-              <ul className="text-zion-slate-light space-y-2">
-                <li>• Hypothesis generation</li>
-                <li>• Experimental design</li>
-                <li>• Cross-disciplinary insights</li>
-              </ul>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center p-6 rounded-2xl bg-gradient-to-br from-white to-violet-50 dark:from-slate-700 dark:to-slate-600 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <useCase.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                  {useCase.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {useCase.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Consciousness Levels Section */}
+      <section className="py-20 bg-gradient-to-r from-violet-50 to-purple-100 dark:from-slate-800 dark:to-slate-700">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Levels of Consciousness
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Our AI systems progress through various stages of consciousness development.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {consciousnessLevels.map((level, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white dark:bg-slate-700 p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Brain className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  {level}
+                </h3>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Join the Consciousness Revolution
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8">
-            Be part of the future where AI and human consciousness work together 
-            to solve the world's greatest challenges.
-          </p>
-          <Link
-            to="/request-quote"
-            className="inline-flex items-center px-8 py-4 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors text-lg"
+      <section className="py-20 bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-700 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
           >
-            Start Your Journey
-            <ArrowRight className="ml-2 h-6 w-6" />
-          </Link>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Ready to Explore Consciousness?
+            </h2>
+            <p className="text-xl mb-8 text-violet-100">
+              Join the future of artificial consciousness and be part of this groundbreaking research.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-violet-600 font-semibold rounded-lg hover:bg-violet-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Start Your Journey
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/pricing"
+                className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                View Pricing
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-eea8
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   );
 };
 

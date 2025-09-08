@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Truck, CheckCircle, ArrowRight, Users, Target, Lightbulb, Zap, TrendingUp, BarChart3, Cpu, Database, Network, Code, Palette, Rocket, Eye, DollarSign, ShoppingCart, Cloud, Building, Heart, Lock, AlertTriangle, Server, Car, TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Shield, Clock, Globe, BookOpen, GraduationCap, Stethoscope, Activity } from 'lucide-react';
+import { Brain, Car, CheckCircle, ArrowRight, Users, Target, Lightbulb, Zap, TrendingUp, BarChart3, Cpu, Database, Network, Code, Palette, Rocket, Eye, DollarSign, ShoppingCart, Cloud, Building, Heart, Lock, AlertTriangle, Server, Truck, TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Shield, Clock, Globe, BookOpen, GraduationCap, Stethoscope, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const AIAutonomousLogistics: React.FC = () => {
+const AIAutonomousVehicles: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -11,9 +11,9 @@ const AIAutonomousLogistics: React.FC = () => {
       description: "Advanced AI algorithms that provide intelligent insights and automation"
     },
     {
-      icon: Truck,
+      icon: Car,
       title: "Specialized Expertise",
-      description: "Domain-specific AI capabilities tailored to transforming supply chain operations needs"
+      description: "Domain-specific AI capabilities tailored to revolutionizing mobility solutions needs"
     },
     {
       icon: Target,
@@ -70,9 +70,9 @@ const AIAutonomousLogistics: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-blue-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-amber-50 to-amber-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-blue-600 to-blue-700 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-r from-amber-600 via-amber-600 to-amber-700 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 py-24">
           <motion.div
@@ -83,20 +83,20 @@ const AIAutonomousLogistics: React.FC = () => {
           >
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-white/20 rounded-full">
-                <Truck className="w-12 h-12 text-white" />
+                <Car className="w-12 h-12 text-white" />
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              AI Autonomous Logistics
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-amber-100 bg-clip-text text-transparent">
+              AI Autonomous Vehicles
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
-              Transforming supply chain operations with AI-powered autonomous systems that provide intelligent, 
+            <p className="text-xl md:text-2xl mb-8 text-amber-100 leading-relaxed">
+              Revolutionizing mobility solutions with AI-powered autonomous systems that provide intelligent, 
               efficient, and scalable solutions for modern business challenges.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-8 py-4 bg-white text-amber-600 font-semibold rounded-lg hover:bg-amber-50 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -125,7 +125,7 @@ const AIAutonomousLogistics: React.FC = () => {
               Advanced AI Features
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Our AI Autonomous Logistics combines cutting-edge artificial intelligence with 
+              Our AI Autonomous Vehicles combines cutting-edge artificial intelligence with 
               specialized expertise to deliver exceptional results.
             </p>
           </motion.div>
@@ -137,9 +137,9 @@ const AIAutonomousLogistics: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-white to-blue-50 dark:from-slate-700 dark:to-slate-600 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100 dark:border-slate-600"
+                className="bg-gradient-to-br from-white to-amber-50 dark:from-slate-700 dark:to-slate-600 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-amber-100 dark:border-slate-600"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
@@ -155,7 +155,7 @@ const AIAutonomousLogistics: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-slate-800 dark:to-slate-700">
+      <section className="py-20 bg-gradient-to-r from-amber-50 to-amber-100 dark:from-slate-800 dark:to-slate-700">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -164,7 +164,7 @@ const AIAutonomousLogistics: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Why Choose AI Autonomous Logistics?
+              Why Choose AI Autonomous Vehicles?
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Experience the future of AI-powered solutions with our comprehensive platform.
@@ -203,7 +203,7 @@ const AIAutonomousLogistics: React.FC = () => {
               Applications & Use Cases
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Our AI Autonomous Logistics serves diverse needs across various industries and applications.
+              Our AI Autonomous Vehicles serves diverse needs across various industries and applications.
             </p>
           </motion.div>
 
@@ -214,9 +214,9 @@ const AIAutonomousLogistics: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center p-6 rounded-2xl bg-gradient-to-br from-white to-blue-50 dark:from-slate-700 dark:to-slate-600 shadow-lg hover:shadow-xl transition-all duration-300"
+                className="text-center p-6 rounded-2xl bg-gradient-to-br from-white to-amber-50 dark:from-slate-700 dark:to-slate-600 shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
@@ -232,7 +232,7 @@ const AIAutonomousLogistics: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-blue-600 to-blue-700 text-white">
+      <section className="py-20 bg-gradient-to-r from-amber-600 via-amber-600 to-amber-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -243,13 +243,13 @@ const AIAutonomousLogistics: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 text-amber-100">
               Join the future of AI-powered solutions and transform your business operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-8 py-4 bg-white text-amber-600 font-semibold rounded-lg hover:bg-amber-50 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Start Your Journey
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -268,4 +268,4 @@ const AIAutonomousLogistics: React.FC = () => {
   );
 };
 
-export default AIAutonomousLogistics;
+export default AIAutonomousVehicles;

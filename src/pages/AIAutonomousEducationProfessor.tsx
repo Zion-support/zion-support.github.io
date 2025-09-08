@@ -1,179 +1,132 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
-import { 
-  GraduationCap, 
-  BookOpen, 
-  Users, 
-  Brain, 
-  Target, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Lock,
-  ArrowRight,
-  CheckCircle,
-  TrendingUp,
-  Cpu,
-  Network,
-  Cloud,
-  Lightbulb,
-  Rocket,
-  Gauge,
-  Activity,
-  PieChart,
-  LineChart,
-  Database,
-  Settings,
-  Monitor,
-  Award,
-  Clock,
-  Star
-} from 'lucide-react';
+import { Brain, Users, BookOpen, GraduationCap, Lightbulb, Target, CheckCircle, ArrowRight, Star, Globe, Clock, Shield, Zap, TrendingUp, BarChart3, Cpu, Database, Network, Code, Palette, Rocket, Eye, DollarSign, ShoppingCart, Cloud, Building, Heart, Lock, AlertTriangle, Server, Truck, Car, TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AIAutonomousEducationProfessor: React.FC = () => {
   const features = [
     {
-      icon: GraduationCap,
-      title: "Intelligent Curriculum Design",
-      description: "AI-powered curriculum creation and adaptive learning paths"
-    },
-    {
-      icon: BookOpen,
-      title: "Personalized Learning",
-      description: "Individualized education plans based on student performance and preferences"
-    },
-    {
       icon: Brain,
-      title: "Adaptive Assessment",
-      description: "Intelligent testing and evaluation with real-time feedback"
+      title: "AI-Powered Learning",
+      description: "Advanced AI algorithms that adapt to individual learning styles and pace"
     },
     {
       icon: Users,
-      title: "Student Engagement",
-      description: "Interactive learning experiences and gamification elements"
+      title: "Personalized Education",
+      description: "Tailored learning paths for each student based on their strengths and weaknesses"
     },
     {
-      icon: Globe,
-      title: "Global Accessibility",
-      description: "Multi-language support and worldwide educational access"
+      icon: BookOpen,
+      title: "Comprehensive Curriculum",
+      description: "AI-generated curriculum that covers all necessary topics with real-time updates"
     },
     {
-      icon: Shield,
-      title: "Academic Integrity",
-      description: "Plagiarism detection and academic honesty monitoring"
+      icon: GraduationCap,
+      title: "Expert Knowledge Base",
+      description: "Access to vast knowledge databases and expert-level insights across all subjects"
+    },
+    {
+      icon: Lightbulb,
+      title: "Interactive Learning",
+      description: "Engaging, interactive learning experiences that keep students motivated"
+    },
+    {
+      icon: Target,
+      title: "Progress Tracking",
+      description: "Real-time monitoring of student progress with actionable insights"
     }
   ];
 
   const benefits = [
-    "Personalized learning experiences for every student",
-    "24/7 availability for continuous education",
-    "Adaptive curriculum that evolves with student progress",
-    "Real-time performance analytics and insights",
-    "Reduced administrative workload for educators",
-    "Improved student engagement and retention rates",
-    "Scalable education delivery to any number of students",
-    "Consistent quality across all educational content"
-  ];
-
-  const learningModules = [
-    {
-      title: "Core Subjects",
-      description: "Mathematics, Science, Language Arts, and Social Studies",
-      icon: BookOpen
-    },
-    {
-      title: "Advanced Topics",
-      description: "STEM, Computer Science, and Specialized Skills",
-      icon: Brain
-    },
-    {
-      title: "Practical Applications",
-      description: "Real-world projects and hands-on learning",
-      icon: Target
-    },
-    {
-      title: "Assessment & Feedback",
-      description: "Continuous evaluation and improvement tracking",
-      icon: Gauge
-    }
+    "24/7 availability for continuous learning",
+    "Adaptive learning paths for optimal retention",
+    "Multilingual support for global accessibility",
+    "Integration with existing educational systems",
+    "Scalable solution for institutions of any size",
+    "Comprehensive analytics and reporting"
   ];
 
   const useCases = [
     {
       title: "K-12 Education",
-      description: "Comprehensive primary and secondary education support with personalized learning paths",
-      icon: "🎓"
+      description: "Personalized learning experiences for primary and secondary education",
+      icon: GraduationCap
     },
     {
       title: "Higher Education",
-      description: "University-level courses and degree programs with advanced analytics",
-      icon: "🏛️"
+      description: "Advanced AI tutoring for university and college students",
+      icon: BookOpen
     },
     {
       title: "Corporate Training",
-      description: "Professional development and skill-building for organizations",
-      icon: "💼"
+      description: "AI-driven employee development and skill enhancement",
+      icon: Users
     },
     {
-      title: "Special Needs Education",
-      description: "Tailored learning experiences for students with diverse learning requirements",
-      icon: "🌟"
+      title: "Special Education",
+      description: "Tailored support for students with diverse learning needs",
+      icon: Heart
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-orange-50 to-amber-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-orange-600 via-amber-600 to-yellow-700 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="relative container mx-auto px-4 py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
+            className="text-center max-w-4xl mx-auto"
           >
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-white/20 rounded-full">
-                <GraduationCap className="w-8 h-8" />
+                <Brain className="w-12 h-12 text-white" />
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               AI Autonomous Education Professor
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-orange-100">
-              Revolutionize education with intelligent, autonomous teaching that adapts to every student's needs
+            <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
+              Revolutionizing education with AI-powered autonomous teaching systems that provide personalized, 
+              adaptive learning experiences for every student.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors flex items-center justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors">
-                Watch Demo
-              </button>
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                Request Demo
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-white dark:bg-slate-800">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Advanced Educational Capabilities
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Revolutionary AI Education Features
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI professor combines cutting-edge technology with proven educational methodologies
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Our AI Autonomous Education Professor combines cutting-edge artificial intelligence with 
+              proven educational methodologies to deliver exceptional learning experiences.
             </p>
           </motion.div>
 
@@ -183,16 +136,16 @@ const AIAutonomousEducationProfessor: React.FC = () => {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-white to-orange-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-white to-blue-50 dark:from-slate-700 dark:to-slate-600 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100 dark:border-slate-600"
               >
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-orange-600" />
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>
@@ -201,169 +154,77 @@ const AIAutonomousEducationProfessor: React.FC = () => {
         </div>
       </section>
 
-      {/* Learning Modules Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-50 to-amber-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Benefits Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-50 to-indigo-100 dark:from-slate-800 dark:to-slate-700">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Comprehensive Learning Modules
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Why Choose AI Autonomous Education?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From foundational concepts to advanced applications, our platform covers all aspects of education
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Experience the future of education with our comprehensive AI-powered learning platform.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {learningModules.map((module, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-start space-x-4"
               >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
-                    <module.icon className="w-6 h-6 text-orange-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900">
-                    {module.title}
-                  </h3>
+                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <CheckCircle className="w-5 h-5 text-white" />
                 </div>
-                <p className="text-gray-600">
-                  {module.description}
-                </p>
+                <p className="text-lg text-gray-700 dark:text-gray-300">{benefit}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Choose AI Autonomous Education?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience unprecedented efficiency and effectiveness in educational delivery
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                Transform Your Educational Experience
-              </h3>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className="flex items-start"
-                  >
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">{benefit}</span>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="bg-white p-8 rounded-2xl shadow-xl">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Gauge className="w-10 h-10 text-white" />
-                  </div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">
-                    Educational Performance
-                  </h4>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Learning Speed</span>
-                      <span className="font-semibold text-green-600">3x Faster</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Retention Rate</span>
-                      <span className="font-semibold text-green-600">85%</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Student Engagement</span>
-                      <span className="font-semibold text-green-600">90%</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Success Rate</span>
-                      <span className="font-semibold text-green-600">95%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* Use Cases Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-50 to-amber-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-white dark:bg-slate-800">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Educational Applications
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Applications Across Education
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover how our AI professor transforms education across various settings
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Our AI Autonomous Education Professor serves diverse educational needs across various sectors.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center p-6 rounded-2xl bg-gradient-to-br from-white to-blue-50 dark:from-slate-700 dark:to-slate-600 shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <div className="flex items-center mb-4">
-                  <span className="text-3xl mr-3">{useCase.icon}</span>
-                  <h3 className="text-xl font-semibold text-gray-900">
-                    {useCase.title}
-                  </h3>
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <useCase.icon className="w-8 h-8 text-white" />
                 </div>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                  {useCase.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
                   {useCase.description}
                 </p>
-                <button className="text-orange-600 font-semibold hover:text-orange-700 transition-colors flex items-center">
-                  Learn More
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </button>
               </motion.div>
             ))}
           </div>
@@ -371,203 +232,40 @@ const AIAutonomousEducationProfessor: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-600 to-amber-700 text-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white">
+        <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
           >
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Transform Education?
             </h2>
-            <p className="text-xl mb-8 text-orange-100">
-              Join the future of intelligent, autonomous education with Zion Tech Group
+            <p className="text-xl mb-8 text-blue-100">
+              Join the future of AI-powered education and provide your students with the most advanced 
+              learning experience available.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors">
-                Start Free Trial
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors">
-                Schedule Demo
-              </button>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Start Your Journey
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/pricing"
+                className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                View Pricing
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-import { SEOHead } from '../components/SEOHead';
-
-const AIAutonomousEducationProfessor: React.FC = () => {
-  return (
-    <>
-      <SEOHead
-        title="AI Autonomous Education Professor | Zion Tech Group"
-        description="Revolutionary AI autonomous education professor. Intelligent teaching, personalized learning, and educational excellence powered by artificial intelligence."
-        keywords="AI autonomous education professor, AI teaching, personalized learning, intelligent education, autonomous learning, educational AI"
-        canonicalUrl="https://ziontechgroup.com/ai-autonomous-education-professor"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              AI Autonomous Education Professor
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Meet your personal AI professor that never sleeps, never gets tired, and adapts to your learning style in real-time
-            </p>
-          </div>
-
-          {/* Educational Capabilities */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <div className="text-center">
-              <div className="text-6xl mb-4">📚</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Personalized Learning</h3>
-              <p className="text-gray-300">Adaptive curriculum based on your progress</p>
-            </div>
-            <div className="text-center">
-              <div className="text-6xl mb-4">🎯</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Intelligent Tutoring</h3>
-              <p className="text-gray-300">One-on-one guidance and support</p>
-            </div>
-            <div className="text-center">
-              <div className="text-6xl mb-4">📊</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Progress Tracking</h3>
-              <p className="text-gray-300">Real-time assessment and feedback</p>
-            </div>
-            <div className="text-center">
-              <div className="text-6xl mb-4">🌍</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Global Access</h3>
-              <p className="text-gray-300">Learn from anywhere, anytime</p>
-            </div>
-          </div>
-
-          {/* Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-teal-400 text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Adaptive Intelligence</h3>
-              <p className="text-gray-300">AI that learns your learning patterns and adjusts accordingly</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-cyan-400 text-4xl mb-4">📝</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Dynamic Content</h3>
-              <p className="text-gray-300">Real-time content generation and customization</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-blue-400 text-4xl mb-4">🎨</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Multi-Modal Learning</h3>
-              <p className="text-gray-300">Text, audio, video, and interactive content</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-green-400 text-4xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Intelligent Assessment</h3>
-              <p className="text-gray-300">AI-powered testing and evaluation</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-purple-400 text-4xl mb-4">🤝</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Collaborative Learning</h3>
-              <p className="text-gray-300">Group projects and peer interaction</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-yellow-400 text-4xl mb-4">📈</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Performance Analytics</h3>
-              <p className="text-gray-300">Comprehensive learning insights and recommendations</p>
-            </div>
-          </div>
-
-          {/* Learning Process */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Personalized Learning Process</h2>
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="bg-teal-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">1</div>
-                <h3 className="text-xl font-semibold text-white mb-3">Assessment</h3>
-                <p className="text-gray-300">Evaluate current knowledge and skills</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-teal-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
-                <h3 className="text-xl font-semibold text-white mb-3">Customization</h3>
-                <p className="text-gray-300">Create personalized learning path</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-teal-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
-                <h3 className="text-xl font-semibold text-white mb-3">Learning</h3>
-                <p className="text-gray-300">Interactive lessons and exercises</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-teal-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
-                <h3 className="text-xl font-semibold text-white mb-3">Evaluation</h3>
-                <p className="text-gray-300">Continuous assessment and feedback</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Subjects */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Available Subjects</h2>
-            <div className="grid md:grid-cols-4 gap-6">
-              {['Mathematics', 'Science', 'History', 'Literature', 'Computer Science', 'Languages', 'Arts', 'Business'].map((subject) => (<div key={subject} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
-                  <span className="text-white font-medium">{subject}</span>
-                </div>))}
-            </div>
-          </div>
-
-          {/* Use Cases */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Learning Applications</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-semibold text-white mb-3">K-12 Education</h3>
-                <p className="text-gray-300">Supplemental learning and homework help</p>
-              </div>
-              
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-semibold text-white mb-3">Higher Education</h3>
-                <p className="text-gray-300">University courses and degree programs</p>
-              </div>
-              
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-semibold text-white mb-3">Professional Development</h3>
-                <p className="text-gray-300">Skills training and certification</p>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center bg-gradient-to-r from-teal-600 to-cyan-600 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-6">Ready to Learn with AI?</h2>
-            <p className="text-xl text-teal-100 mb-8 max-w-2xl mx-auto">
-              Experience personalized education that adapts to your learning style and pace
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Start Learning
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors">
-                View Courses
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d0e7
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   );
 };
 

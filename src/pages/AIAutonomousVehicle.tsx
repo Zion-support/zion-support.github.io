@@ -1,78 +1,78 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Truck, CheckCircle, ArrowRight, Users, Target, Lightbulb, Zap, TrendingUp, BarChart3, Cpu, Database, Network, Code, Palette, Rocket, Eye, DollarSign, ShoppingCart, Cloud, Building, Heart, Lock, AlertTriangle, Server, Car, TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Shield, Clock, Globe, BookOpen, GraduationCap, Stethoscope, Activity } from 'lucide-react';
+import { Brain, Car, CheckCircle, ArrowRight, Users, Target, Lightbulb, Zap, TrendingUp, BarChart3, Cpu, Database, Network, Code, Palette, Rocket, Eye, DollarSign, ShoppingCart, Cloud, Building, Heart, Lock, AlertTriangle, Server, Truck, TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Shield, Clock, Globe, BookOpen, GraduationCap, Stethoscope, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const AIAutonomousLogistics: React.FC = () => {
+const AIAutonomousVehicle: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Intelligence",
-      description: "Advanced AI algorithms that provide intelligent insights and automation"
+      title: "AI-Powered Navigation",
+      description: "Advanced AI algorithms for autonomous vehicle navigation and control"
     },
     {
-      icon: Truck,
-      title: "Specialized Expertise",
-      description: "Domain-specific AI capabilities tailored to transforming supply chain operations needs"
+      icon: Car,
+      title: "Vehicle Control",
+      description: "Intelligent control systems for safe and efficient autonomous driving"
+    },
+    {
+      icon: Eye,
+      title: "Computer Vision",
+      description: "Advanced computer vision for road detection and obstacle avoidance"
     },
     {
       icon: Target,
-      title: "Precision Solutions",
-      description: "Accurate and targeted solutions for complex challenges"
-    },
-    {
-      icon: Zap,
-      title: "Real-time Processing",
-      description: "Instant analysis and response capabilities for time-sensitive operations"
+      title: "Route Optimization",
+      description: "AI-driven route planning and traffic optimization"
     },
     {
       icon: Shield,
-      title: "Secure Operations",
-      description: "Enterprise-grade security and compliance for sensitive operations"
+      title: "Safety Systems",
+      description: "Comprehensive safety and emergency response systems"
     },
     {
       icon: TrendingUp,
       title: "Performance Analytics",
-      description: "Comprehensive monitoring and optimization of system performance"
+      description: "Real-time monitoring and optimization of vehicle performance"
     }
   ];
 
   const benefits = [
-    "Increased efficiency through intelligent automation",
-    "Improved accuracy and reduced human error",
-    "24/7 availability for continuous operations",
-    "Scalable solution for organizations of any size",
-    "Integration with existing systems and workflows",
-    "Real-time insights and decision support"
+    "Enhanced safety through AI-powered driving",
+    "Improved traffic flow and reduced congestion",
+    "24/7 autonomous operation capabilities",
+    "Scalable solution for fleet management",
+    "Integration with existing vehicle systems",
+    "Real-time monitoring and control"
   ];
 
   const useCases = [
     {
-      title: "Enterprise Solutions",
-      description: "AI-powered solutions for large-scale enterprise operations",
+      title: "Passenger Vehicles",
+      description: "Autonomous cars for personal and ride-sharing use",
+      icon: Car
+    },
+    {
+      title: "Commercial Fleets",
+      description: "Autonomous trucks and delivery vehicles",
+      icon: Truck
+    },
+    {
+      title: "Public Transport",
+      description: "Autonomous buses and shuttles",
       icon: Building
     },
     {
-      title: "Specialized Applications",
-      description: "Tailored AI solutions for specific industry requirements",
+      title: "Specialized Vehicles",
+      description: "Autonomous vehicles for specific industries",
       icon: Target
-    },
-    {
-      title: "Research & Development",
-      description: "Advanced AI capabilities for cutting-edge research projects",
-      icon: TestTube
-    },
-    {
-      title: "Innovation Projects",
-      description: "Next-generation AI solutions for future technologies",
-      icon: Rocket
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-blue-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-orange-50 to-amber-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-blue-600 to-blue-700 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-r from-orange-600 via-amber-600 to-yellow-700 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 py-24">
           <motion.div
@@ -83,20 +83,20 @@ const AIAutonomousLogistics: React.FC = () => {
           >
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-white/20 rounded-full">
-                <Truck className="w-12 h-12 text-white" />
+                <Car className="w-12 h-12 text-white" />
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              AI Autonomous Logistics
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-orange-100 bg-clip-text text-transparent">
+              AI Autonomous Vehicle
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
-              Transforming supply chain operations with AI-powered autonomous systems that provide intelligent, 
-              efficient, and scalable solutions for modern business challenges.
+            <p className="text-xl md:text-2xl mb-8 text-orange-100 leading-relaxed">
+              Revolutionizing transportation with AI-powered autonomous vehicles that provide 
+              safe, efficient, and intelligent driving experiences.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-8 py-4 bg-white text-orange-600 font-semibold rounded-lg hover:bg-orange-50 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -122,11 +122,11 @@ const AIAutonomousLogistics: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Advanced AI Features
+              Advanced Autonomous Features
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Our AI Autonomous Logistics combines cutting-edge artificial intelligence with 
-              specialized expertise to deliver exceptional results.
+              Our AI Autonomous Vehicle combines cutting-edge artificial intelligence with 
+              advanced automotive technology to deliver exceptional driving experiences.
             </p>
           </motion.div>
 
@@ -137,9 +137,9 @@ const AIAutonomousLogistics: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-white to-blue-50 dark:from-slate-700 dark:to-slate-600 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100 dark:border-slate-600"
+                className="bg-gradient-to-br from-white to-orange-50 dark:from-slate-700 dark:to-slate-600 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100 dark:border-slate-600"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-amber-600 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
@@ -155,7 +155,7 @@ const AIAutonomousLogistics: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-slate-800 dark:to-slate-700">
+      <section className="py-20 bg-gradient-to-r from-orange-50 to-amber-100 dark:from-slate-800 dark:to-slate-700">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -164,10 +164,10 @@ const AIAutonomousLogistics: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Why Choose AI Autonomous Logistics?
+              Why Choose AI Autonomous Vehicle?
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Experience the future of AI-powered solutions with our comprehensive platform.
+              Experience the future of transportation with our comprehensive AI-powered platform.
             </p>
           </motion.div>
 
@@ -200,10 +200,10 @@ const AIAutonomousLogistics: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Applications & Use Cases
+              Vehicle Applications
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Our AI Autonomous Logistics serves diverse needs across various industries and applications.
+              Our AI Autonomous Vehicle serves diverse transportation needs across various industries.
             </p>
           </motion.div>
 
@@ -214,9 +214,9 @@ const AIAutonomousLogistics: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center p-6 rounded-2xl bg-gradient-to-br from-white to-blue-50 dark:from-slate-700 dark:to-slate-600 shadow-lg hover:shadow-xl transition-all duration-300"
+                className="text-center p-6 rounded-2xl bg-gradient-to-br from-white to-orange-50 dark:from-slate-700 dark:to-slate-600 shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
@@ -232,7 +232,7 @@ const AIAutonomousLogistics: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-blue-600 to-blue-700 text-white">
+      <section className="py-20 bg-gradient-to-r from-orange-600 via-amber-600 to-yellow-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -241,15 +241,15 @@ const AIAutonomousLogistics: React.FC = () => {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Get Started?
+              Ready to Transform Transportation?
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Join the future of AI-powered solutions and transform your business operations.
+            <p className="text-xl mb-8 text-orange-100">
+              Join the future of autonomous vehicles and revolutionize your transportation needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-8 py-4 bg-white text-orange-600 font-semibold rounded-lg hover:bg-orange-50 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Start Your Journey
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -268,4 +268,4 @@ const AIAutonomousLogistics: React.FC = () => {
   );
 };
 
-export default AIAutonomousLogistics;
+export default AIAutonomousVehicle;

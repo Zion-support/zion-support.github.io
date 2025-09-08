@@ -1,596 +1,398 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Target, 
-  BarChart3, 
-  Zap, 
-  Shield, 
-  Users, 
-  Globe, 
-  Lock,
-  ArrowRight,
-  CheckCircle,
-  TrendingUp,
-  Cpu,
-  Network,
-  Cloud,
-  Lightbulb,
-  Rocket,
-  Gauge,
-  Activity,
-  PieChart,
-  LineChart,
-  Database,
-  Settings,
-  Monitor
-} from 'lucide-react';
-
-const AIAutonomousDecisionPlatform: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "Intelligent Decision Engine",
-      description: "AI-powered autonomous decision-making with real-time analysis and learning capabilities"
-    },
-    {
-      icon: Target,
-      title: "Predictive Analytics",
-      description: "Advanced forecasting and trend analysis for strategic planning and risk assessment"
-    },
-    {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Comprehensive security with encryption, compliance, and audit trails"
-    },
-    {
-      icon: Zap,
-      title: "Real-time Processing",
-      description: "Instant decision-making with minimal latency and high throughput"
-    },
-    {
-      icon: Users,
-      title: "Multi-stakeholder Support",
-      description: "Collaborative decision-making across teams, departments, and organizations"
-    },
-    {
-      icon: Globe,
-      title: "Global Scalability",
-      description: "Enterprise-grade platform that scales with your business needs worldwide"
-    }
-  ];
-
-  const benefits = [
-    "Automated decision-making processes with 99.9% accuracy",
-    "Real-time risk assessment and mitigation strategies",
-    "Predictive analytics for strategic planning and forecasting",
-    "Reduced decision-making time by 90%",
-    "Improved consistency and compliance across operations",
-    "Comprehensive audit trails and regulatory compliance",
-    "Seamless integration with existing business systems",
-    "24/7 autonomous operation with minimal human intervention"
-  ];
-
-  const platformComponents = [
-    {
-      title: "Data Ingestion Layer",
-      description: "Multi-source data collection and validation",
-      icon: Database
-    },
-    {
-      title: "AI Processing Engine",
-      description: "Machine learning models and decision algorithms",
-      icon: Brain
-    },
-    {
-      title: "Decision Orchestrator",
-      description: "Workflow management and decision routing",
-      icon: Settings
-    },
-    {
-      title: "Monitoring & Analytics",
-      description: "Real-time performance tracking and insights",
-      icon: Monitor
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Financial Services",
-      description: "Automated trading decisions, risk assessment, and compliance monitoring",
-      icon: "💰"
-    },
-    {
-      title: "Healthcare",
-      description: "Medical diagnosis support, treatment planning, and patient care optimization",
-      icon: "🏥"
-    },
-    {
-      title: "Manufacturing",
-      description: "Predictive maintenance, quality control, and supply chain optimization",
-      icon: "🏭"
-    },
-    {
-      title: "Retail & E-commerce",
-      description: "Inventory management, pricing optimization, and customer experience",
-      icon: "🛒"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50 to-blue-100">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-700 text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="flex justify-center mb-6">
-              <div className="p-3 bg-white/20 rounded-full">
-                <Brain className="w-8 h-8" />
-              </div>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              AI Autonomous Decision Platform
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-indigo-100">
-              The complete platform for intelligent, autonomous decision-making that transforms your business operations
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
-                Watch Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Complete Platform Capabilities
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our comprehensive platform combines cutting-edge AI technology with enterprise-grade infrastructure
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-white to-indigo-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-indigo-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600">
-                  {feature.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Platform Architecture Section */}
-      <section className="py-20 bg-gradient-to-r from-indigo-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Platform Architecture
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Built with modern, scalable architecture designed for enterprise performance and reliability
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {platformComponents.map((component, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
-                    <component.icon className="w-6 h-6 text-indigo-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900">
-                    {component.title}
-                  </h3>
-                </div>
-                <p className="text-gray-600">
-                  {component.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our Platform?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience unprecedented efficiency and accuracy in your decision-making processes
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                Transform Your Business Operations
-              </h3>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className="flex items-start"
-                  >
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">{benefit}</span>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="bg-white p-8 rounded-2xl shadow-xl">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Gauge className="w-10 h-10 text-white" />
-                  </div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">
-                    Platform Performance
-                  </h4>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Decision Speed</span>
-                      <span className="font-semibold text-green-600">10x Faster</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Accuracy Rate</span>
-                      <span className="font-semibold text-green-600">99.9%</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Cost Reduction</span>
-                      <span className="font-semibold text-green-600">75%</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Uptime</span>
-                      <span className="font-semibold text-green-600">99.99%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 bg-gradient-to-r from-indigo-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Industry Applications
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover how our platform transforms operations across various industries
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="flex items-center mb-4">
-                  <span className="text-3xl mr-3">{useCase.icon}</span>
-                  <h3 className="text-xl font-semibold text-gray-900">
-                    {useCase.title}
-                  </h3>
-                </div>
-                <p className="text-gray-600 mb-4">
-                  {useCase.description}
-                </p>
-                <button className="text-indigo-600 font-semibold hover:text-indigo-700 transition-colors flex items-center">
-                  Learn More
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-indigo-600 to-blue-700 text-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl font-bold mb-6">
-              Ready to Deploy Autonomous Decision-Making?
-            </h2>
-            <p className="text-xl mb-8 text-indigo-100">
-              Join the future of intelligent business operations with Zion Tech Group
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
-                Start Free Trial
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-import { SEOHead } from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
+import { Brain, Target, BarChart3, Users, Database, Globe, Rocket, Eye, Clock, Cloud, Network, Zap, TrendingUp, PieChart, BarChart, LineChart, Gauge, Lightbulb, Layers, Shield } from 'lucide-react';
 
 const AIAutonomousDecisionPlatform: React.FC = () => {
   return (
     <>
-      <SEOHead
-        title="AI Autonomous Decision Platform | Zion Tech Group"
-        description="Revolutionary AI autonomous decision platform. Intelligent decision-making, strategic planning, and business optimization powered by artificial intelligence."
-        keywords="AI autonomous decision platform, autonomous decision making, AI strategy, business decisions, intelligent automation, decision optimization"
-        canonicalUrl="https://ziontechgroup.com/ai-autonomous-decision-platform"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              AI Autonomous Decision Platform
+      <Helmet>
+        <title>AI Autonomous Decision Platform - Zion Tech Group</title>
+        <meta name="description" content="Deploy our comprehensive AI Autonomous Decision Platform to create intelligent, self-managing decision systems that operate independently across your organization." />
+        <meta name="keywords" content="AI autonomous decision platform, decision automation platform, AI decision platform, enterprise decision platform" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-decision-platform" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-violet-50 to-purple-100">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-purple-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-violet-100 text-violet-800 text-sm font-medium mb-6">
+              <Brain className="w-4 h-4 mr-2" />
+              Complete Decision Automation Platform
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              AI Autonomous
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-purple-600"> Decision Platform</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              The ultimate platform for orchestrating intelligent decision-making across your entire organization with autonomous AI agents and advanced analytics
-            </p>
-          </div>
-
-          {/* Platform Overview */}
-          <div className="grid lg:grid-cols-2 gap-12 mb-16 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-white mb-6">Platform Architecture</h2>
-              <p className="text-lg text-gray-300 mb-6">
-                Our decision platform provides a unified framework for autonomous decision-making, featuring intelligent agents, 
-                advanced analytics, and seamless integration with your existing systems.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-                  <span className="text-gray-300">Multi-agent decision orchestration</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-indigo-400 rounded-full"></div>
-                  <span className="text-gray-300">Real-time data processing</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
-                  <span className="text-gray-300">Advanced machine learning</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                  <span className="text-gray-300">Scalable cloud infrastructure</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
-              <h3 className="text-2xl font-semibold text-white mb-4">Core Features</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between">
-                  <span className="text-gray-300">Decision Orchestration</span>
-                  <span className="text-green-400">✓</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-300">Real-time Analytics</span>
-                  <span className="text-green-400">✓</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-300">Machine Learning</span>
-                  <span className="text-green-400">✓</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-300">API Integration</span>
-                  <span className="text-green-400">✓</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-300">Security & Compliance</span>
-                  <span className="text-green-400">✓</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-blue-400 text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Decision Orchestration</h3>
-              <p className="text-gray-300">Coordinate multiple AI agents for complex decision scenarios</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-indigo-400 text-4xl mb-4">📊</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Advanced Analytics</h3>
-              <p className="text-gray-300">Real-time data analysis and predictive modeling</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-purple-400 text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-semibold text-white mb-3">AI Agents</h3>
-              <p className="text-gray-300">Specialized autonomous agents for different decision domains</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-green-400 text-4xl mb-4">🔗</div>
-              <h3 className="text-xl font-semibold text-white mb-3">System Integration</h3>
-              <p className="text-gray-300">Seamless integration with existing business systems</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-cyan-400 text-4xl mb-4">📈</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Performance Monitoring</h3>
-              <p className="text-gray-300">Track decision quality and optimize performance</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-yellow-400 text-4xl mb-4">🔄</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Continuous Learning</h3>
-              <p className="text-gray-300">AI system that improves with every decision</p>
-            </div>
-          </div>
-
-          {/* Decision Workflow */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Decision Workflow</h2>
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="text-center">
-                <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">1</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Data Input</h3>
-                <p className="text-gray-300 text-sm">Collect data from multiple sources</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Analysis</h3>
-                <p className="text-gray-300 text-sm">Process and analyze data</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Agent Coordination</h3>
-                <p className="text-gray-300 text-sm">Coordinate AI agents</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Decision</h3>
-                <p className="text-gray-300 text-sm">Generate optimal decision</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Execution</h3>
-                <p className="text-gray-300 text-sm">Execute and monitor</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Use Cases */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Platform Applications</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-semibold text-white mb-3">Enterprise Operations</h3>
-                <p className="text-gray-300">Orchestrate decisions across business units</p>
-              </div>
-              
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-semibold text-white mb-3">Financial Services</h3>
-                <p className="text-gray-300">Risk assessment and investment decisions</p>
-              </div>
-              
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-semibold text-white mb-3">Healthcare</h3>
-                <p className="text-gray-300">Clinical decision support and diagnostics</p>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-6">Build Your Decision Platform</h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Start orchestrating intelligent decisions across your organization with our AI platform
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              A comprehensive platform that transforms your entire decision-making ecosystem with AI-powered automation, intelligence, and autonomous execution capabilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Get Started
+              <button className="px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                Start Platform Trial
               </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                View Documentation
+              <button className="px-8 py-4 border-2 border-violet-600 text-violet-600 font-semibold rounded-lg hover:bg-violet-600 hover:text-white transition-all duration-300">
+                Platform Demo
               </button>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* Platform Overview */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Complete Decision Transformation Platform
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our platform integrates all aspects of your decision-making process into a unified, intelligent system that operates autonomously.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                  Unified Decision Intelligence
+                </h3>
+                <p className="text-lg text-gray-600 mb-6">
+                  Connect all your decision systems, data sources, and processes into a single intelligent platform that provides real-time insights and automated decision execution.
+                </p>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-violet-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <Zap className="w-3 h-3 text-violet-600" />
+                    </div>
+                    <span className="text-gray-700">Centralized decision orchestration and control</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-violet-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <Zap className="w-3 h-3 text-violet-600" />
+                    </div>
+                    <span className="text-gray-700">Cross-system learning and knowledge sharing</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-violet-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <Zap className="w-3 h-3 text-violet-600" />
+                    </div>
+                    <span className="text-gray-700">Unified governance and compliance management</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-gradient-to-br from-violet-100 to-purple-100 p-4 rounded-lg text-center">
+                    <Brain className="w-8 h-8 text-violet-600 mx-auto mb-2" />
+                    <h4 className="font-semibold text-gray-900">AI Core</h4>
+                  </div>
+                  <div className="bg-gradient-to-br from-blue-100 to-cyan-100 p-4 rounded-lg text-center">
+                    <Database className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+                    <h4 className="font-semibold text-gray-900">Data Hub</h4>
+                  </div>
+                  <div className="bg-gradient-to-br from-green-100 to-emerald-100 p-4 rounded-lg text-center">
+                    <Target className="w-8 h-8 text-green-600 mx-auto mb-2" />
+                    <h4 className="font-semibold text-gray-900">Decision Engine</h4>
+                  </div>
+                  <div className="bg-gradient-to-br from-red-100 to-orange-100 p-4 rounded-lg text-center">
+                    <Shield className="w-8 h-8 text-red-600 mx-auto mb-2" />
+                    <h4 className="font-semibold text-gray-900">Governance</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Core Modules */}
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Platform Core Modules
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Comprehensive modules that cover every aspect of autonomous decision-making.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-br from-violet-50 to-purple-50 p-8 rounded-xl border border-violet-200">
+                <div className="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mb-6">
+                  <Brain className="w-6 h-6 text-violet-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Decision Engine</h3>
+                <p className="text-gray-600 mb-4">
+                  Advanced AI algorithms that power autonomous decision-making and learning capabilities.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Machine learning models</li>
+                  <li>• Neural networks</li>
+                  <li>• Decision trees</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl border border-blue-200">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                  <Database className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Data Integration Hub</h3>
+                <p className="text-gray-600 mb-4">
+                  Centralized data management that connects all business systems and external data sources.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Multi-source integration</li>
+                  <li>• Real-time synchronization</li>
+                  <li>• Data quality management</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border border-green-200">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                  <Target className="w-6 h-6 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Decision Orchestration</h3>
+                <p className="text-gray-600 mb-4">
+                  Intelligent workflow automation that coordinates decision processes and execution.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Workflow orchestration</li>
+                  <li>• Process automation</li>
+                  <li>• Performance optimization</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-xl border border-red-200">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                  <Shield className="w-6 h-6 text-red-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Governance & Compliance</h3>
+                <p className="text-gray-600 mb-4">
+                  Enterprise-grade governance with automated compliance monitoring and risk management.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Policy enforcement</li>
+                  <li>• Compliance automation</li>
+                  <li>• Risk mitigation</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-yellow-50 to-amber-50 p-8 rounded-xl border border-yellow-200">
+                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                  <Users className="w-6 h-6 text-yellow-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Collaboration Hub</h3>
+                <p className="text-gray-600 mb-4">
+                  Team collaboration and stakeholder engagement for complex decision processes.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Team coordination</li>
+                  <li>• Stakeholder input</li>
+                  <li>• Consensus building</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl border border-indigo-200">
+                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                  <BarChart3 className="w-6 h-6 text-indigo-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Analytics & Reporting</h3>
+                <p className="text-gray-600 mb-4">
+                  Comprehensive decision intelligence with automated reporting and actionable insights.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Real-time dashboards</li>
+                  <li>• Predictive insights</li>
+                  <li>• Automated reporting</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Decision Types */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Decision Types & Applications
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Our platform supports various types of decisions for different use cases and domains.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mb-6">
+                  <Brain className="w-6 h-6 text-violet-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Strategic Decisions</h3>
+                <p className="text-gray-600 mb-4">
+                  High-level business decisions that shape long-term direction and competitive positioning.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Business strategy</li>
+                  <li>• Market entry</li>
+                  <li>• Investment decisions</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                  <Target className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Tactical Decisions</h3>
+                <p className="text-gray-600 mb-4">
+                  Medium-term decisions that implement strategic plans and optimize operations.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Resource allocation</li>
+                  <li>• Process optimization</li>
+                  <li>• Performance management</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                  <Network className="w-6 h-6 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Operational Decisions</h3>
+                <p className="text-gray-600 mb-4">
+                  Day-to-day decisions that keep business processes running smoothly and efficiently.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Daily operations</li>
+                  <li>• Quality control</li>
+                  <li>• Customer service</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                  <BarChart3 className="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Financial Decisions</h3>
+                <p className="text-gray-600 mb-4">
+                  Financial planning, investment, and risk management decisions that impact business performance.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Budget allocation</li>
+                  <li>• Investment strategies</li>
+                  <li>• Risk management</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                  <Shield className="w-6 h-6 text-red-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Risk Decisions</h3>
+                <p className="text-gray-600 mb-4">
+                  Security, compliance, and risk mitigation decisions that protect business assets.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Security protocols</li>
+                  <li>• Compliance measures</li>
+                  <li>• Crisis management</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                  <Lightbulb className="w-6 h-6 text-yellow-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Innovation Decisions</h3>
+                <p className="text-gray-600 mb-4">
+                  Research, development, and innovation decisions that drive future growth and competitiveness.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• R&D priorities</li>
+                  <li>• Technology adoption</li>
+                  <li>• Creative direction</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Implementation Process */}
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Implementation Process
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Our proven methodology for deploying autonomous decision platforms successfully.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-violet-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-violet-600">1</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Assess</h3>
+                <p className="text-gray-600">
+                  Current decision processes and requirements
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-blue-600">2</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Design</h3>
+                <p className="text-gray-600">
+                  Platform architecture and decision frameworks
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-green-600">3</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Deploy</h3>
+                <p className="text-gray-600">
+                  Platform deployment and integration
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-purple-600">4</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Optimize</h3>
+                <p className="text-gray-600">
+                  Continuous learning and improvement
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gradient-to-r from-violet-600 to-purple-600">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Deploy Your Decision Platform?
+            </h2>
+            <p className="text-xl text-violet-100 mb-8">
+              Transform your decision-making with the most advanced AI autonomous platform available.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-white text-violet-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300">
+                Start Platform Trial
+              </button>
+              <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-violet-600 transition-all duration-300">
+                Schedule Consultation
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
     </>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d0e7
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   );
 };
 

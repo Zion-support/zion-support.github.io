@@ -1,171 +1,271 @@
-import { Helmet } from 'react-helmet-async';
-const AIAutonomousSecurity = () => {
-    return (<React.Fragment>
-      <Helmet>
-        <title>AI Autonomous Security Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous security platform that protects systems, detects threats, and maintains security with advanced AI capabilities and autonomous defense."/>
-        <meta name="keywords" content="AI security, autonomous security, threat detection, autonomous defense, AI protection, autonomous security monitoring"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-security"/>
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
-              AI Autonomous Security Platform
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Brain, Shield, CheckCircle, ArrowRight, Users, Target, Lightbulb, Zap, TrendingUp, BarChart3, Cpu, Database, Network, Code, Palette, Rocket, Eye, DollarSign, ShoppingCart, Cloud, Building, Heart, Lock, AlertTriangle, Server, Truck, Car, TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Clock, Globe, BookOpen, GraduationCap, Stethoscope, Activity } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const AIAutonomousSecurity: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "AI-Powered Intelligence",
+      description: "Advanced AI algorithms that provide intelligent insights and automation"
+    },
+    {
+      icon: Shield,
+      title: "Specialized Expertise",
+      description: "Domain-specific AI capabilities tailored to enhancing cybersecurity defenses needs"
+    },
+    {
+      icon: Target,
+      title: "Precision Solutions",
+      description: "Accurate and targeted solutions for complex challenges"
+    },
+    {
+      icon: Zap,
+      title: "Real-time Processing",
+      description: "Instant analysis and response capabilities for time-sensitive operations"
+    },
+    {
+      icon: Shield,
+      title: "Secure Operations",
+      description: "Enterprise-grade security and compliance for sensitive operations"
+    },
+    {
+      icon: TrendingUp,
+      title: "Performance Analytics",
+      description: "Comprehensive monitoring and optimization of system performance"
+    }
+  ];
+
+  const benefits = [
+    "Increased efficiency through intelligent automation",
+    "Improved accuracy and reduced human error",
+    "24/7 availability for continuous operations",
+    "Scalable solution for organizations of any size",
+    "Integration with existing systems and workflows",
+    "Real-time insights and decision support"
+  ];
+
+  const useCases = [
+    {
+      title: "Enterprise Solutions",
+      description: "AI-powered solutions for large-scale enterprise operations",
+      icon: Building
+    },
+    {
+      title: "Specialized Applications",
+      description: "Tailored AI solutions for specific industry requirements",
+      icon: Target
+    },
+    {
+      title: "Research & Development",
+      description: "Advanced AI capabilities for cutting-edge research projects",
+      icon: TestTube
+    },
+    {
+      title: "Innovation Projects",
+      description: "Next-generation AI solutions for future technologies",
+      icon: Rocket
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-red-50 to-red-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-r from-red-600 via-red-600 to-red-700 text-white">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative container mx-auto px-4 py-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-white/20 rounded-full">
+                <Shield className="w-12 h-12 text-white" />
+              </div>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-red-100 bg-clip-text text-transparent">
+              AI Autonomous Security
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Your AI security partner that never sleeps, never gets tired, and continuously protects your systems 24/7
-            </p>
-          </div>
-
-          {/* Security Capabilities */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <div className="text-center">
-              <div className="text-6xl mb-4">🛡️</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Threat Detection</h3>
-              <p className="text-gray-300">Real-time monitoring</p>
-            </div>
-            <div className="text-center">
-              <div className="text-6xl mb-4">🔒</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Access Control</h3>
-              <p className="text-gray-300">Secure authentication</p>
-            </div>
-            <div className="text-center">
-              <div className="text-6xl mb-4">🚨</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Incident Response</h3>
-              <p className="text-gray-300">Automatic mitigation</p>
-            </div>
-            <div className="text-center">
-              <div className="text-6xl mb-4">📊</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Security Analytics</h3>
-              <p className="text-gray-300">Threat intelligence</p>
-            </div>
-          </div>
-
-          {/* Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-red-400 text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Security Intelligence</h3>
-              <p className="text-gray-300">AI trained on vast security datasets</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-orange-400 text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
-              <p className="text-gray-300">AI that protects independently</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-yellow-400 text-4xl mb-4">📈</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Continuous Protection</h3>
-              <p className="text-gray-300">24/7 security monitoring</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-amber-400 text-4xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Threat Analysis</h3>
-              <p className="text-gray-300">Deep security insights</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-lime-400 text-4xl mb-4">🛡️</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Risk Mitigation</h3>
-              <p className="text-gray-300">Proactive threat prevention</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-green-400 text-4xl mb-4">🔄</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Adaptive Security</h3>
-              <p className="text-gray-300">Learns new threats</p>
-            </div>
-          </div>
-
-          {/* Security Process */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Security Process</h2>
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="text-center">
-                <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">1</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Monitor</h3>
-                <p className="text-gray-300 text-sm">Track threats</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Detect</h3>
-                <p className="text-gray-300 text-sm">Identify risks</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Analyze</h3>
-                <p className="text-gray-300 text-sm">Assess threats</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Respond</h3>
-                <p className="text-gray-300 text-sm">Mitigate risks</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Recover</h3>
-                <p className="text-gray-300 text-sm">Restore security</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Security Types */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Security Solutions</h2>
-            <div className="grid md:grid-cols-4 gap-6">
-              {['Network Security', 'Endpoint Security', 'Cloud Security', 'Data Security', 'Application Security', 'Identity Security', 'Infrastructure Security', 'IoT Security'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
-                  <span className="text-white font-medium">{type}</span>
-                </div>))}
-            </div>
-          </div>
-
-          {/* Use Cases */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Security Applications</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-semibold text-white mb-3">Enterprise Security</h3>
-                <p className="text-gray-300">Corporate protection</p>
-              </div>
-              
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-semibold text-white mb-3">Cloud Security</h3>
-                <p className="text-gray-300">Cloud infrastructure protection</p>
-              </div>
-              
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-semibold text-white mb-3">Critical Infrastructure</h3>
-                <p className="text-gray-300">Essential system protection</p>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-6">Ready for AI-Powered Security?</h2>
-            <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
-              Transform your protection with AI that never stops defending
+            <p className="text-xl md:text-2xl mb-8 text-red-100 leading-relaxed">
+              Enhancing cybersecurity defenses with AI-powered autonomous systems that provide intelligent, 
+              efficient, and scalable solutions for modern business challenges.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Start Securing
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors">
-                View Demo
-              </button>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-red-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                Request Demo
+              </Link>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white dark:bg-slate-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Advanced AI Features
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Our AI Autonomous Security combines cutting-edge artificial intelligence with 
+              specialized expertise to deliver exceptional results.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-white to-red-50 dark:from-slate-700 dark:to-slate-600 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-red-100 dark:border-slate-600"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-2xl flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {feature.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
-      </div>
-    </React.Fragment>)};
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-gradient-to-r from-red-50 to-red-100 dark:from-slate-800 dark:to-slate-700">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Why Choose AI Autonomous Security?
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Experience the future of AI-powered solutions with our comprehensive platform.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-start space-x-4"
+              >
+                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <CheckCircle className="w-5 h-5 text-white" />
+                </div>
+                <p className="text-lg text-gray-700 dark:text-gray-300">{benefit}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 bg-white dark:bg-slate-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Applications & Use Cases
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Our AI Autonomous Security serves diverse needs across various industries and applications.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center p-6 rounded-2xl bg-gradient-to-br from-white to-red-50 dark:from-slate-700 dark:to-slate-600 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <useCase.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                  {useCase.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {useCase.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-red-600 via-red-600 to-red-700 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl mb-8 text-red-100">
+              Join the future of AI-powered solutions and transform your business operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-red-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Start Your Journey
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/pricing"
+                className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                View Pricing
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
 export default AIAutonomousSecurity;

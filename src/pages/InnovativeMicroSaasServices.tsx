@@ -81,7 +81,7 @@ const InnovativeMicroSaasServices: React.FC = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
   // Combine all services
-  const allServices: Service[] = [
+  const allServices = [
     ...ADVANCED_MICRO_SAAS_SERVICES,
     ...EMERGING_TECH_SERVICES
   ];
@@ -90,8 +90,8 @@ const InnovativeMicroSaasServices: React.FC = () => {
   
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-<<<<<<< HEAD
-    const matchesSearch = getServiceProperty(service, 'title', '').toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const serviceTitle = 'title' in service ? service.title : service.name;
+    const matchesSearch = serviceTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          getServiceTags(service).some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 =======
@@ -313,15 +313,7 @@ const InnovativeMicroSaasServices: React.FC = () => {
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
-<<<<<<< HEAD
-                      <h3 className="text-xl font-bold text-white mb-2">{getServiceProperty(service, 'title', 'Service')}</h3>
-=======
-<<<<<<< HEAD
                       <h3 className="text-xl font-bold text-white mb-2">{'title' in service ? service.title : service.name}</h3>
-=======
-                      <h3 className="text-xl font-bold text-white mb-2">{getServiceProperty(service, 'title', 'Service')}</h3>
->>>>>>> origin/cursor/website-audit-and-enhancement-3843
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
                       <p className="text-gray-400 text-sm mb-3">{service.description}</p>
                     </div>
                     <button
@@ -339,8 +331,7 @@ const InnovativeMicroSaasServices: React.FC = () => {
                     </span>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-cyan-400">
-<<<<<<< HEAD
-                        {formatPrice(getServicePrice(service).price, getServicePrice(service).currency)}
+                        {formatPrice(service.price, 'currency' in service ? service.currency : '$')}
                       </div>
                       <div className="text-gray-400 text-sm">per {getServicePrice(service).pricingModel}</div>
 =======
@@ -501,29 +492,13 @@ const InnovativeMicroSaasServices: React.FC = () => {
                       </div>
 
                       {/* Innovation Level */}
-<<<<<<< HEAD
-                      {getServiceProperty(service, 'innovationLevel', '') && (
-=======
-<<<<<<< HEAD
                       {'innovationLevel' in service && service.innovationLevel && (
-=======
-                      {getServiceProperty(service, 'innovationLevel', '') && (
->>>>>>> origin/cursor/website-audit-and-enhancement-3843
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
                         <div>
                           <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
                             <Lightbulb size={20} className="mr-2 text-yellow-400" />
                             Innovation Level
                           </h4>
-<<<<<<< HEAD
-                          <p className="text-gray-300 text-sm">{getServiceProperty(service, 'innovationLevel', '')}</p>
-=======
-<<<<<<< HEAD
-                                                      <p className="text-gray-300 text-sm">{service.innovationLevel as string}</p>
-=======
-                          <p className="text-gray-300 text-sm">{getServiceProperty(service, 'innovationLevel', '')}</p>
->>>>>>> origin/cursor/website-audit-and-enhancement-3843
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+                          <p className="text-gray-300 text-sm">{String(service.innovationLevel)}</p>
                         </div>
                       )}
 
@@ -531,15 +506,7 @@ const InnovativeMicroSaasServices: React.FC = () => {
                       <div className="pt-4 border-t border-gray-700">
                         <div className="flex flex-col sm:flex-row gap-3">
                           <a
-<<<<<<< HEAD
-                            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${getServiceProperty(service, 'title', 'Service')}`}
-=======
-<<<<<<< HEAD
                             href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${'title' in service ? service.title : service.name}`}
-=======
-                            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${getServiceProperty(service, 'title', 'Service')}`}
->>>>>>> origin/cursor/website-audit-and-enhancement-3843
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
                             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg text-center font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
                           >
                             <Mail size={20} className="mr-2" />

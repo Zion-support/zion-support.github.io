@@ -21,27 +21,43 @@ export interface Service {
 
 export const COMPREHENSIVE_SERVICES: Service[] = [
   {
-    id: "ai-content-hub-pro",
-    title: "AI Content Hub Pro",
-    description: "Enterprise-grade AI content creation platform for multi-platform content generation and optimization.",
-    category: "AI & Content Creation",
-    price: 2999,
+    id: "ai-autonomous-business-manager",
+    title: "AI Autonomous Business Manager",
+    description: "Intelligent business management system that autonomously handles operations, decision-making, and optimization.",
+    category: "AI & Business Management",
+    subcategory: "Autonomous Operations",
+    price: 3000,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Multi-language Generation",
-      "SEO Optimization", 
-      "Cross-platform Distribution",
-      "Brand Voice Consistency",
-      "Real-time Analytics",
-      "24/7 Support"
+      "Autonomous decision making",
+      "Business process automation",
+      "Performance optimization",
+      "Real-time monitoring",
+      "Predictive analytics"
+    ],
+    benefits: [
+      "24/7 business operations",
+      "Reduce operational costs",
+      "Improve efficiency",
+      "Data-driven decisions"
     ],
     useCases: [
-      "Marketing agencies",
-      "Content creators",
-      "E-commerce businesses",
-      "Publishing companies"
+      "Small businesses",
+      "Medium enterprises",
+      "Startups",
+      "Service companies"
     ],
+    targetAudience: [
+      "Business owners",
+      "Entrepreneurs",
+      "Operations managers",
+      "Startup founders"
+    ],
+    tags: ["AI", "Business Automation", "Autonomous Operations", "Efficiency"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$3,000 - $8,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -49,27 +65,44 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     }
   },
   {
-    id: "ai-customer-service-automation",
-    title: "AI Customer Service Automation",
-    description: "Intelligent customer service automation with natural language processing and sentiment analysis.",
-    category: "AI & Customer Service",
-    price: 1999,
+    id: "ai-autonomous-decision-engine",
+    title: "AI Autonomous Decision Engine",
+    description: "Advanced AI system that makes autonomous decisions based on data analysis and business rules.",
+    category: "AI & Decision Making",
+    subcategory: "Autonomous Intelligence",
+    price: 2500,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "24/7 Customer Support",
-      "Multi-language Support",
-      "Sentiment Analysis",
-      "Ticket Routing",
-      "Performance Analytics",
-      "Integration APIs"
+      "Intelligent decision making",
+      "Data analysis",
+      "Risk assessment",
+      "Performance optimization",
+      "Learning algorithms"
+    ],
+    benefits: [
+      "Faster decision making",
+      "Reduce human error",
+      "Optimize outcomes",
+      "Continuous learning"
     ],
     useCases: [
-      "E-commerce platforms",
-      "SaaS companies",
       "Financial services",
-      "Healthcare providers"
+      "Healthcare",
+      "Manufacturing",
+      "Retail",
+      "Logistics"
     ],
+    targetAudience: [
+      "Data scientists",
+      "Business analysts",
+      "Operations managers",
+      "Technology officers"
+    ],
+    tags: ["AI", "Decision Making", "Machine Learning", "Automation"],
+    estimatedDelivery: "4-5 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,500 - $7,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -77,27 +110,43 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     }
   },
   {
-    id: "ai-sales-intelligence-platform",
-    title: "AI Sales Intelligence Platform",
-    description: "Advanced sales intelligence platform with predictive analytics and lead scoring.",
-    category: "AI & Sales",
-    price: 2499,
+    id: "ai-autonomous-development",
+    title: "AI Autonomous Development",
+    description: "AI-powered software development platform that automates coding, testing, and deployment.",
+    category: "AI & Development",
+    subcategory: "Autonomous Coding",
+    price: 2000,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Lead Scoring",
-      "Predictive Analytics",
-      "Sales Forecasting",
-      "CRM Integration",
-      "Performance Tracking",
-      "Custom Reports"
+      "Automated code generation",
+      "Intelligent testing",
+      "Deployment automation",
+      "Code review",
+      "Performance optimization"
+    ],
+    benefits: [
+      "Faster development",
+      "Reduce bugs",
+      "Improve quality",
+      "Cost savings"
     ],
     useCases: [
-      "Sales teams",
-      "Marketing agencies",
-      "B2B companies",
-      "Real estate firms"
+      "Software companies",
+      "IT departments",
+      "Startups",
+      "Digital agencies"
     ],
+    targetAudience: [
+      "Developers",
+      "DevOps engineers",
+      "Project managers",
+      "Technology leaders"
+    ],
+    tags: ["AI", "Software Development", "Automation", "DevOps"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,000 - $6,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -105,27 +154,87 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     }
   },
   {
-    id: "ai-fintech-platform",
-    title: "AI Fintech Platform",
-    description: "Comprehensive AI-powered financial technology platform for modern banking and fintech solutions.",
-    category: "AI & Fintech",
-    price: 3999,
+    id: "ai-autonomous-education",
+    title: "AI Autonomous Education",
+    description: "Intelligent education platform that provides personalized learning experiences and autonomous tutoring.",
+    category: "AI & Education",
+    subcategory: "Autonomous Learning",
+    price: 1500,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Fraud Detection",
-      "Risk Assessment",
-      "Credit Scoring",
-      "Investment Analysis",
-      "Regulatory Compliance",
-      "Real-time Processing"
+      "Personalized learning",
+      "Adaptive curriculum",
+      "Intelligent tutoring",
+      "Progress tracking",
+      "Performance analytics"
+    ],
+    benefits: [
+      "Personalized education",
+      "Improve learning outcomes",
+      "Reduce costs",
+      "Scalable learning"
     ],
     useCases: [
-      "Banks",
-      "Credit unions",
+      "K-12 schools",
+      "Universities",
+      "Corporate training",
+      "Online education"
+    ],
+    targetAudience: [
+      "Educators",
+      "Training managers",
+      "Students",
+      "Corporate leaders"
+    ],
+    tags: ["AI", "Education", "Personalized Learning", "Automation"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,500 - $4,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+  {
+    id: "ai-autonomous-finance",
+    title: "AI Autonomous Finance",
+    description: "Intelligent financial management platform with automated trading, risk management, and portfolio optimization.",
+    category: "AI & Finance",
+    subcategory: "Autonomous Trading",
+    price: 4000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Automated trading",
+      "Risk management",
+      "Portfolio optimization",
+      "Market analysis",
+      "Performance tracking"
+    ],
+    benefits: [
+      "Automated trading",
+      "Risk reduction",
+      "Performance optimization",
+      "24/7 monitoring"
+    ],
+    useCases: [
       "Investment firms",
-      "Insurance companies"
+      "Banks",
+      "Hedge funds",
+      "Individual investors"
     ],
+    targetAudience: [
+      "Financial advisors",
+      "Portfolio managers",
+      "Traders",
+      "Investment professionals"
+    ],
+    tags: ["AI", "Finance", "Trading", "Risk Management"],
+    estimatedDelivery: "4-5 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$4,000 - $12,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -133,27 +242,43 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     }
   },
   {
-    id: "ai-healthcare-tech-platform",
-    title: "AI Healthcare Technology Platform",
-    description: "Advanced healthcare technology platform with AI-powered diagnostics and patient care management.",
+    id: "ai-autonomous-healthcare",
+    title: "AI Autonomous Healthcare",
+    description: "Intelligent healthcare platform with autonomous diagnosis, treatment planning, and patient monitoring.",
     category: "AI & Healthcare",
-    price: 3499,
+    subcategory: "Autonomous Medicine",
+    price: 3500,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Medical Imaging Analysis",
-      "Patient Data Analytics",
-      "Drug Discovery Support",
-      "Clinical Decision Support",
-      "HIPAA Compliance",
-      "Integration APIs"
+      "Autonomous diagnosis",
+      "Treatment planning",
+      "Patient monitoring",
+      "Medical imaging",
+      "Predictive analytics"
+    ],
+    benefits: [
+      "Improve diagnosis accuracy",
+      "Reduce medical errors",
+      "Optimize treatment",
+      "Better patient outcomes"
     ],
     useCases: [
       "Hospitals",
       "Clinics",
       "Research institutions",
-      "Pharmaceutical companies"
+      "Healthcare providers"
     ],
+    targetAudience: [
+      "Doctors",
+      "Healthcare administrators",
+      "Researchers",
+      "Medical professionals"
+    ],
+    tags: ["AI", "Healthcare", "Medical AI", "Diagnosis"],
+    estimatedDelivery: "5-6 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,500 - $10,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -161,195 +286,43 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     }
   },
   {
-    id: "quantum-enterprise-platform",
-    title: "Quantum Enterprise Platform",
-    description: "Enterprise-grade quantum computing platform for advanced computational problems.",
-    category: "Quantum Computing",
-    price: 4999,
+    id: "ai-autonomous-marketing",
+    title: "AI Autonomous Marketing",
+    description: "Intelligent marketing platform with automated campaigns, customer segmentation, and performance optimization.",
+    category: "AI & Marketing",
+    subcategory: "Autonomous Campaigns",
+    price: 1800,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Quantum Algorithm Library",
-      "Hybrid Classical-Quantum Processing",
-      "Security Protocols",
-      "Performance Monitoring",
-      "Developer Tools",
-      "Enterprise Support"
+      "Automated campaigns",
+      "Customer segmentation",
+      "Content personalization",
+      "Performance tracking",
+      "A/B testing"
+    ],
+    benefits: [
+      "Automated marketing",
+      "Improve ROI",
+      "Personalized content",
+      "Better targeting"
     ],
     useCases: [
-      "Research institutions",
-      "Financial services",
-      "Pharmaceutical companies",
-      "Government agencies"
+      "Marketing agencies",
+      "E-commerce",
+      "B2B companies",
+      "Startups"
     ],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "autonomous-business-platform",
-    title: "Autonomous Business Operations Platform",
-    description: "Fully autonomous business operations platform with AI-driven decision making and process automation.",
-    category: "AI & Business Automation",
-    price: 3999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Process Automation",
-      "Decision Engine",
-      "Performance Optimization",
-      "Resource Management",
-      "Analytics Dashboard",
-      "Custom Workflows"
+    targetAudience: [
+      "Marketing managers",
+      "Digital marketers",
+      "Business owners",
+      "Marketing professionals"
     ],
-    useCases: [
-      "Large enterprises",
-      "Manufacturing companies",
-      "Logistics firms",
-      "Service providers"
-    ],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "ai-it-asset-management",
-    title: "AI-Powered IT Asset Management",
-    description: "Intelligent IT asset management platform with predictive maintenance and lifecycle optimization.",
-    category: "IT & Asset Management",
-    price: 1999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Asset Tracking",
-      "Predictive Maintenance",
-      "Lifecycle Management",
-      "Cost Optimization",
-      "Compliance Monitoring",
-      "Integration APIs"
-    ],
-    useCases: [
-      "IT departments",
-      "Data centers",
-      "Manufacturing companies",
-      "Healthcare facilities"
-    ],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "soc2-compliance-automation",
-    title: "SOC2 Compliance Automation",
-    description: "Automated SOC2 compliance platform with continuous monitoring and audit preparation.",
-    category: "Compliance & Security",
-    price: 2999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Continuous Monitoring",
-      "Audit Preparation",
-      "Policy Management",
-      "Risk Assessment",
-      "Compliance Reporting",
-      "Expert Support"
-    ],
-    useCases: [
-      "SaaS companies",
-      "Financial services",
-      "Healthcare providers",
-      "Government contractors"
-    ],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "ai-research-assistant",
-    title: "AI Autonomous Research Assistant",
-    description: "Advanced AI research assistant for autonomous scientific research and data analysis.",
-    category: "AI & Research",
-    price: 2499,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Literature Review",
-      "Data Analysis",
-      "Hypothesis Generation",
-      "Experiment Design",
-      "Results Interpretation",
-      "Publication Support"
-    ],
-    useCases: [
-      "Research institutions",
-      "Universities",
-      "Pharmaceutical companies",
-      "Government labs"
-    ],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "5g-enterprise-solutions",
-    title: "5G Enterprise Solutions",
-    description: "Comprehensive 5G enterprise solutions for next-generation connectivity and IoT applications.",
-    category: "5G & Connectivity",
-    price: 3499,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "5G Network Design",
-      "IoT Integration",
-      "Edge Computing",
-      "Network Security",
-      "Performance Monitoring",
-      "24/7 Support"
-    ],
-    useCases: [
-      "Manufacturing companies",
-      "Smart cities",
-      "Transportation companies",
-      "Healthcare facilities"
-    ],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "quantum-machine-learning-platform",
-    title: "Quantum Machine Learning Platform",
-    description: "Advanced quantum machine learning platform combining quantum computing with AI algorithms.",
-    category: "Quantum & AI",
-    price: 5999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum ML Algorithms",
-      "Hybrid Training",
-      "Model Optimization",
-      "Quantum Feature Selection",
-      "Performance Analytics",
-      "Research Support"
-    ],
-    useCases: [
-      "Research institutions",
-      "AI companies",
-      "Financial services",
-      "Government agencies"
-    ],
+    tags: ["AI", "Marketing", "Automation", "Personalization"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,800 - $5,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -646,234 +619,21 @@ export const SERVICE_CATEGORIES = [
   "Web & Mobile Development",
   "Digital Transformation",
   "Blockchain & Web3",
-  "IoT & Edge Computing",
-  "Emerging Technologies"
-];
-
-export const SERVICE_SUBCATEGORIES = {
-  "AI & Machine Learning": [
-    "Chatbots & Conversational AI",
-    "Content Generation",
-    "Computer Vision",
-    "Natural Language Processing",
-    "Predictive Analytics",
-    "AI Ethics & Governance"
-  ],
-  "Cloud & DevOps": [
-    "Cost Optimization",
-    "Container Orchestration",
-    "Infrastructure as Code",
-    "CI/CD Pipelines",
-    "Cloud Migration"
-  ],
-  "Cybersecurity": [
-    "Security Testing",
-    "Monitoring & Response",
-    "Compliance & Governance",
-    "Identity & Access Management",
-    "Threat Intelligence"
-  ],
-  "Data & Analytics": [
-    "Data Engineering",
-    "Business Intelligence",
-    "Machine Learning",
-    "Data Visualization",
-    "Data Governance"
-  ],
-  "Web & Mobile Development": [
-    "Progressive Web Apps",
-    "Mobile Apps",
-    "Web Applications",
-    "API Development",
-    "E-commerce Solutions"
-  ],
-  "Digital Transformation": [
-    "Strategy & Consulting",
-    "System Modernization",
-    "Process Automation",
-    "Change Management",
-    "Technology Assessment"
-  ],
-  "Blockchain & Web3": [
-    "Smart Contracts",
-    "DeFi Development",
-    "NFT Marketplaces",
-    "Blockchain Integration",
-    "Web3 Applications"
-  ],
-  "IoT & Edge Computing": [
-    "Platform Development",
-    "Device Management",
-    "Edge Analytics",
-    "Sensor Integration",
-    "Remote Monitoring"
-  ],
-  "Emerging Technologies": [
-    "Quantum Computing",
-    "Metaverse & VR",
-    "AI Ethics & Governance",
-    "Augmented Reality",
-    "Extended Reality (XR)"
-  ]
-};
-=======
-    description: "Develop comprehensive disaster recovery and business continuity plans. Includes risk assessment, recovery procedures, testing protocols, and ongoing maintenance. Features cloud-based backup solutions and failover systems.",
-    category: "Managed IT Services",
-    subcategory: "Disaster Recovery",
-    price: 15999,
-    currency: "$",
-    tags: ["Disaster Recovery", "Business Continuity", "Risk Assessment", "Cloud Backup"],
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-05-15T15:30:00.000Z",
-    rating: 4.8,
-    reviewCount: 67,
-    location: "Global",
-    availability: "8-10 Weeks",
-    aiScore: 89
-  }
-];
-
-// Service Categories for better organization
-export const SERVICE_CATEGORIES = [
-  {
-    id: "ai-machine-learning",
-    name: "AI & Machine Learning",
-    description: "Advanced artificial intelligence and machine learning solutions",
-    icon: "🤖",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "AI & Machine Learning")
-  },
-  {
-    id: "cloud-infrastructure",
-    name: "Cloud & Infrastructure",
-    description: "Cloud migration, DevOps, and infrastructure management",
-    icon: "☁️",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Cloud & Infrastructure")
-  },
-  {
-    id: "cybersecurity",
-    name: "Cybersecurity",
-    description: "Comprehensive security solutions and compliance",
-    icon: "🔒",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Cybersecurity")
-  },
-  {
-    id: "data-analytics",
-    name: "Data & Analytics",
-    description: "Data warehousing, analytics, and business intelligence",
-    icon: "📊",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Data & Analytics")
-  },
-  {
-    id: "digital-transformation",
-    name: "Digital Transformation",
-    description: "Strategic consulting and system modernization",
-    icon: "🚀",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Digital Transformation")
-  },
-  {
-    id: "mobile-web-development",
-    name: "Mobile & Web Development",
-    description: "Custom applications and digital solutions",
-    icon: "💻",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Mobile & Web Development")
-  },
-  {
-    id: "blockchain-web3",
-    name: "Blockchain & Web3",
-    description: "Decentralized applications and smart contracts",
-    icon: "⛓️",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Blockchain & Web3")
-  },
-  {
-    id: "iot-edge-computing",
-    name: "IoT & Edge Computing",
-    description: "Internet of Things and edge computing solutions",
-    icon: "🌐",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "IoT & Edge Computing")
-  },
-  {
-    id: "enterprise-software",
-    name: "Enterprise Software",
-    description: "ERP, CRM, and enterprise system solutions",
-    icon: "🏢",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Enterprise Software")
-  },
-  {
-    id: "managed-it-services",
-    name: "Managed IT Services",
-    description: "24/7 support and managed IT solutions",
-    icon: "🛠️",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Managed IT Services")
-  }
-];
-
-// Featured Services for homepage display
-export const FEATURED_SERVICES = COMPREHENSIVE_SERVICES.filter(service => service.featured);
-
-// Services by price range
-export const SERVICES_BY_PRICE = {
-  budget: COMPREHENSIVE_SERVICES.filter(s => s.price && s.price < 5000),
-  midRange: COMPREHENSIVE_SERVICES.filter(s => s.price && s.price >= 5000 && s.price < 15000),
-  enterprise: COMPREHENSIVE_SERVICES.filter(s => s.price && s.price >= 15000)
-};
-=======
-  { id: "ai-ml", name: "AI & Machine Learning", description: "Artificial intelligence and machine learning solutions" },
-  { id: "cloud-devops", name: "Cloud & DevOps", description: "Cloud infrastructure and development operations" },
-  { id: "cybersecurity", name: "Cybersecurity", description: "Security solutions and protection services" },
-  { id: "data-analytics", name: "Data & Analytics", description: "Data processing and business intelligence" },
-  { id: "web-mobile", name: "Web & Mobile Development", description: "Application development services" },
-  { id: "blockchain-web3", name: "Blockchain & Web3", description: "Decentralized technology solutions" },
-  { id: "iot-hardware", name: "IoT & Hardware", description: "Internet of Things and hardware solutions" },
-  { id: "digital-transformation", name: "Digital Transformation", description: "Business transformation consulting" }
-];
-
-// Pricing tiers for subscription services
-export const SUBSCRIPTION_TIERS = [
-  {
-    name: "Starter",
-    price: 99,
-    currency: "$",
-    period: "month",
-    features: ["Basic features", "Email support", "5 projects", "Standard templates"]
-  },
-  {
-    name: "Professional",
-    price: 299,
-    currency: "$",
-    period: "month",
-    features: ["Advanced features", "Priority support", "Unlimited projects", "Custom templates", "API access"]
-  },
-  {
-    name: "Enterprise",
-    price: 999,
-    currency: "$",
-    period: "month",
-    features: ["All features", "24/7 support", "Custom integrations", "Dedicated account manager", "SLA guarantee"]
-  }
-];
-  website: "https://ziontechgroup.com"
-};
-=======
-=======
-  website: "https://ziontechgroup.com"
-};
-=======
-  "Process Automation",
-  "AI & Content Creation",
-  "AI & Customer Service",
-  "AI & Sales",
-  "AI & Fintech",
-  "AI & Healthcare",
-  "Quantum Computing",
-  "AI & Business Automation",
-  "IT & Asset Management",
-  "Compliance & Security",
-  "AI & Research",
-  "5G & Connectivity",
-  "Quantum & AI"
+  "Voice AI",
+  "Quantum Security",
+  "Content Creation",
+  "Identity Management",
+  "Sales Intelligence",
+  "Incident Response",
+  "Customer Analytics",
+  "Supply Chain",
+  "HR Technology",
+  "Financial Security",
+  "Storage Solutions",
+  "Customer Experience",
+  "Zero Trust Security",
+  "NFT Platform",
+  "DeFi Services",
+  "Security Testing",
+  "Process Automation"
 ];

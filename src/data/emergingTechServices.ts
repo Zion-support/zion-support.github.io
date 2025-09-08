@@ -2043,8 +2043,8 @@ export const getServicesByInnovationLevel = (level: string) => {
   return EMERGING_TECH_SERVICES.filter(service => service.innovationLevel === level);
 };
 
-export const getFutureProofServices = () => {
-  return EMERGING_TECH_SERVICES.filter(service => service.futureProof);
+export const getFeaturedEmergingTechServices = () => {
+  return EMERGING_TECH_SERVICES.slice(0, 8);
 };
 
 <<<<<<< HEAD
@@ -2055,17 +2055,5 @@ export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
 };
 =======
 export const getServicesByInnovationScore = (minScore: number) => {
-    technology: ["Unity3D", "Unreal Engine", "React", "Node.js", "WebGL", "WebXR", "3D Graphics"],
-    integrations: ["Display hardware", "Content management systems", "Streaming platforms", "Mobile apps"],
-    compliance: ["Content standards", "Accessibility guidelines", "Industry regulations"],
-    roi: "400% within 12 months",
-    competitors: ["Magic Leap", "Microsoft HoloLens", "RealView", "Looking Glass"],
-    marketTrend: "Growing market with increasing demand for immersive experiences",
-    innovationLevel: "Advanced holographic platform for commercial applications",
-    uniqueValue: "First comprehensive platform for creating and distributing holographic content across multiple display types"
-  }
-];
-
-export default EMERGING_TECH_SERVICES;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+  return EMERGING_TECH_SERVICES.filter(service => service.price >= minScore);
+};

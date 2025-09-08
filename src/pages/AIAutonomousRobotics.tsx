@@ -1,171 +1,271 @@
-import { Helmet } from 'react-helmet-async';
-const AIAutonomousRobotics = () => {
-    return (<React.Fragment>
-      <Helmet>
-        <title>AI Autonomous Robotics Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous robotics platform that enables intelligent robots to operate independently, learn from experience, and perform complex tasks with human-like capabilities."/>
-        <meta name="keywords" content="AI robotics, autonomous robots, intelligent automation, AI automation, robotic systems, autonomous systems"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-robotics"/>
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
-              AI Autonomous Robotics Platform
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Brain, Cpu, CheckCircle, ArrowRight, Users, Target, Lightbulb, Zap, TrendingUp, BarChart3, Database, Network, Code, Palette, Rocket, Eye, DollarSign, ShoppingCart, Cloud, Building, Heart, Lock, AlertTriangle, Server, Truck, Car, TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Shield, Clock, Globe, BookOpen, GraduationCap, Stethoscope, Activity } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const AIAutonomousRobotics: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "AI-Powered Intelligence",
+      description: "Advanced AI algorithms that provide intelligent insights and automation"
+    },
+    {
+      icon: Cpu,
+      title: "Specialized Expertise",
+      description: "Domain-specific AI capabilities tailored to advancing robotic automation needs"
+    },
+    {
+      icon: Target,
+      title: "Precision Solutions",
+      description: "Accurate and targeted solutions for complex challenges"
+    },
+    {
+      icon: Zap,
+      title: "Real-time Processing",
+      description: "Instant analysis and response capabilities for time-sensitive operations"
+    },
+    {
+      icon: Shield,
+      title: "Secure Operations",
+      description: "Enterprise-grade security and compliance for sensitive operations"
+    },
+    {
+      icon: TrendingUp,
+      title: "Performance Analytics",
+      description: "Comprehensive monitoring and optimization of system performance"
+    }
+  ];
+
+  const benefits = [
+    "Increased efficiency through intelligent automation",
+    "Improved accuracy and reduced human error",
+    "24/7 availability for continuous operations",
+    "Scalable solution for organizations of any size",
+    "Integration with existing systems and workflows",
+    "Real-time insights and decision support"
+  ];
+
+  const useCases = [
+    {
+      title: "Enterprise Solutions",
+      description: "AI-powered solutions for large-scale enterprise operations",
+      icon: Building
+    },
+    {
+      title: "Specialized Applications",
+      description: "Tailored AI solutions for specific industry requirements",
+      icon: Target
+    },
+    {
+      title: "Research & Development",
+      description: "Advanced AI capabilities for cutting-edge research projects",
+      icon: TestTube
+    },
+    {
+      title: "Innovation Projects",
+      description: "Next-generation AI solutions for future technologies",
+      icon: Rocket
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-purple-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-purple-600 to-purple-700 text-white">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative container mx-auto px-4 py-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-white/20 rounded-full">
+                <Cpu className="w-12 h-12 text-white" />
+              </div>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-100 bg-clip-text text-transparent">
+              AI Autonomous Robotics
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              The future of robotics is here - intelligent machines that think, learn, and work autonomously with human-like capabilities
-            </p>
-          </div>
-
-          {/* Robotics Capabilities */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <div className="text-center">
-              <div className="text-6xl mb-4">🤖</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Autonomous Operation</h3>
-              <p className="text-gray-300">Robots that work independently</p>
-            </div>
-            <div className="text-center">
-              <div className="text-6xl mb-4">🧠</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Intelligent Learning</h3>
-              <p className="text-gray-300">AI that learns from experience</p>
-            </div>
-            <div className="text-center">
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Computer Vision</h3>
-              <p className="text-gray-300">Advanced visual perception</p>
-            </div>
-            <div className="text-center">
-              <div className="text-6xl mb-4">⚡</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Real-time Processing</h3>
-              <p className="text-gray-300">Instant decision making</p>
-            </div>
-          </div>
-
-          {/* Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-red-400 text-4xl mb-4">🚀</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Autonomous Navigation</h3>
-              <p className="text-gray-300">Robots that navigate complex environments</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-orange-400 text-4xl mb-4">🤝</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Human Collaboration</h3>
-              <p className="text-gray-300">Safe interaction with human workers</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-yellow-400 text-4xl mb-4">📊</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Performance Analytics</h3>
-              <p className="text-gray-300">Real-time monitoring and optimization</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-green-400 text-4xl mb-4">🔒</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Safety Systems</h3>
-              <p className="text-gray-300">Advanced safety protocols and monitoring</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-blue-400 text-4xl mb-4">🔄</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Adaptive Behavior</h3>
-              <p className="text-gray-300">Robots that adapt to changing conditions</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-purple-400 text-4xl mb-4">🌐</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Cloud Integration</h3>
-              <p className="text-gray-300">Centralized control and data sharing</p>
-            </div>
-          </div>
-
-          {/* Robotics Process */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Robotics Process</h2>
-            <div className="grid md:grid-cols-5 gap-6">
-              <div className="text-center">
-                <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">1</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Perception</h3>
-                <p className="text-gray-300 text-sm">Sense environment and objects</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Planning</h3>
-                <p className="text-gray-300 text-sm">AI decision making and path planning</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Execution</h3>
-                <p className="text-gray-300 text-sm">Perform planned actions</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Learning</h3>
-                <p className="text-gray-300 text-sm">Improve from experience</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
-                <h3 className="text-lg font-semibold text-white mb-2">Optimization</h3>
-                <p className="text-gray-300 text-sm">Continuous improvement</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Robotics Applications */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Robotics Applications</h2>
-            <div className="grid md:grid-cols-4 gap-6">
-              {['Manufacturing', 'Healthcare', 'Agriculture', 'Logistics', 'Construction', 'Service Robots', 'Research', 'Entertainment'].map((application) => (<div key={application} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
-                  <span className="text-white font-medium">{application}</span>
-                </div>))}
-            </div>
-          </div>
-
-          {/* Use Cases */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Industry Solutions</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-semibold text-white mb-3">Industrial Automation</h3>
-                <p className="text-gray-300">Manufacturing and assembly automation</p>
-              </div>
-              
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-semibold text-white mb-3">Medical Robotics</h3>
-                <p className="text-gray-300">Surgical assistance and patient care</p>
-              </div>
-              
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-semibold text-white mb-3">Autonomous Vehicles</h3>
-                <p className="text-gray-300">Self-driving cars and drones</p>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-6">Ready for Autonomous Robotics?</h2>
-            <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
-              Transform your operations with intelligent robots that work 24/7
+            <p className="text-xl md:text-2xl mb-8 text-purple-100 leading-relaxed">
+              Advancing robotic automation with AI-powered autonomous systems that provide intelligent, 
+              efficient, and scalable solutions for modern business challenges.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-purple-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
                 Get Started
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors">
-                Schedule Demo
-              </button>
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                Request Demo
+              </Link>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white dark:bg-slate-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Advanced AI Features
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Our AI Autonomous Robotics combines cutting-edge artificial intelligence with 
+              specialized expertise to deliver exceptional results.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-white to-purple-50 dark:from-slate-700 dark:to-slate-600 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100 dark:border-slate-600"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {feature.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
-      </div>
-    </React.Fragment>)};
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-50 to-purple-100 dark:from-slate-800 dark:to-slate-700">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Why Choose AI Autonomous Robotics?
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Experience the future of AI-powered solutions with our comprehensive platform.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-start space-x-4"
+              >
+                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <CheckCircle className="w-5 h-5 text-white" />
+                </div>
+                <p className="text-lg text-gray-700 dark:text-gray-300">{benefit}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 bg-white dark:bg-slate-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              Applications & Use Cases
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Our AI Autonomous Robotics serves diverse needs across various industries and applications.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center p-6 rounded-2xl bg-gradient-to-br from-white to-purple-50 dark:from-slate-700 dark:to-slate-600 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <useCase.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                  {useCase.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {useCase.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-600 via-purple-600 to-purple-700 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl mb-8 text-purple-100">
+              Join the future of AI-powered solutions and transform your business operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-purple-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Start Your Journey
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/pricing"
+                className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                View Pricing
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
 export default AIAutonomousRobotics;

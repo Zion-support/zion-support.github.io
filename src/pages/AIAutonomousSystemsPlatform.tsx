@@ -1,456 +1,399 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { SEOHead } from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
+import { Brain, Cpu, Network, Shield, Target, BarChart3, Users, Database, Globe, Rocket, Eye, Clock, Cloud, Zap, Layers, Settings, Monitor } from 'lucide-react';
 
 const AIAutonomousSystemsPlatform: React.FC = () => {
   return (
     <>
-      <SEOHead
-        title="AI Autonomous Systems Platform | Zion Tech Group"
-        description="Revolutionary AI autonomous systems platform. Intelligent system automation, autonomous operations, and platform excellence powered by artificial intelligence."
-        keywords="AI autonomous systems platform, autonomous systems, AI automation, intelligent systems, autonomous platform, system automation"
-        canonicalUrl="https://ziontechgroup.com/ai-autonomous-systems-platform"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
-              AI Autonomous Systems Platform
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              The ultimate platform for building, deploying, and managing autonomous AI systems that operate independently and intelligently
-            </p>
-          </div>
+      <Helmet>
+        <title>AI Autonomous Systems Platform - Zion Tech Group</title>
+        <meta name="description" content="Deploy our comprehensive AI Autonomous Systems Platform to create intelligent, self-managing systems that operate independently across multiple domains." />
+        <meta name="keywords" content="AI autonomous systems platform, autonomous systems, AI platform, intelligent automation, self-managing systems" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-systems-platform" />
+      </Helmet>
 
-          {/* Platform Overview */}
-          <div className="grid lg:grid-cols-2 gap-12 mb-16 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-white mb-6">Platform Architecture</h2>
-              <p className="text-lg text-gray-300 mb-6">
-                Our platform provides a comprehensive foundation for autonomous AI systems, featuring advanced orchestration, 
-                intelligent decision-making, and seamless integration capabilities.
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50 to-purple-100">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-100 text-indigo-800 text-sm font-medium mb-6">
+              <Brain className="w-4 h-4 mr-2" />
+              Complete Autonomous Systems Platform
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              AI Autonomous
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600"> Systems Platform</span>
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Build, deploy, and manage intelligent autonomous systems that operate independently, learn continuously, and adapt to changing environments across any domain.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                Start Platform Trial
+              </button>
+              <button className="px-8 py-4 border-2 border-indigo-600 text-indigo-600 font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition-all duration-300">
+                Platform Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Platform Overview */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Complete Autonomous Systems Infrastructure
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our platform provides everything needed to create, deploy, and manage intelligent autonomous systems that operate independently across multiple domains.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-                  <span className="text-gray-300">Multi-agent orchestration</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
-                  <span className="text-gray-300">Intelligent workflow automation</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-teal-400 rounded-full"></div>
-                  <span className="text-gray-300">Real-time decision engines</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                  <span className="text-gray-300">Scalable infrastructure</span>
-                </div>
-              </div>
             </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
-              <h3 className="text-2xl font-semibold text-white mb-4">Core Capabilities</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between">
-                  <span className="text-gray-300">Agent Management</span>
-                  <span className="text-green-400">✓</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-300">Workflow Orchestration</span>
-                  <span className="text-green-400">✓</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-300">Decision Intelligence</span>
-                  <span className="text-green-400">✓</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-300">Performance Monitoring</span>
-                  <span className="text-green-400">✓</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-300">Security & Compliance</span>
-                  <span className="text-green-400">✓</span>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                  Unified Autonomous Systems Management
+                </h3>
+                <p className="text-lg text-gray-600 mb-6">
+                  Manage multiple autonomous systems from a single platform with unified monitoring, control, and optimization capabilities.
+                </p>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-indigo-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <Zap className="w-3 h-3 text-indigo-600" />
+                    </div>
+                    <span className="text-gray-700">Centralized system orchestration and control</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-indigo-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <Zap className="w-3 h-3 text-indigo-600" />
+                    </div>
+                    <span className="text-gray-700">Cross-system learning and knowledge sharing</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-indigo-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <Zap className="w-3 h-3 text-indigo-600" />
+                    </div>
+                    <span className="text-gray-700">Unified security and compliance management</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-gradient-to-br from-indigo-100 to-purple-100 p-4 rounded-lg text-center">
+                    <Brain className="w-8 h-8 text-indigo-600 mx-auto mb-2" />
+                    <h4 className="font-semibold text-gray-900">AI Core</h4>
+                  </div>
+                  <div className="bg-gradient-to-br from-blue-100 to-cyan-100 p-4 rounded-lg text-center">
+                    <Network className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+                    <h4 className="font-semibold text-gray-900">Network Layer</h4>
+                  </div>
+                  <div className="bg-gradient-to-br from-green-100 to-emerald-100 p-4 rounded-lg text-center">
+                    <Cpu className="w-8 h-8 text-green-600 mx-auto mb-2" />
+                    <h4 className="font-semibold text-gray-900">Processing</h4>
+                  </div>
+                  <div className="bg-gradient-to-br from-red-100 to-orange-100 p-4 rounded-lg text-center">
+                    <Shield className="w-8 h-8 text-red-600 mx-auto mb-2" />
+                    <h4 className="font-semibold text-gray-900">Security</h4>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </section>
 
-          {/* Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-blue-400 text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Intelligent Agents</h3>
-              <p className="text-gray-300">Create and deploy autonomous AI agents with specialized capabilities</p>
+        {/* Core Components */}
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Platform Core Components
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Comprehensive components that enable the creation and management of autonomous systems.
+              </p>
             </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-cyan-400 text-4xl mb-4">🔄</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Workflow Automation</h3>
-              <p className="text-gray-300">Design complex workflows that agents can execute autonomously</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-teal-400 text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Decision Engine</h3>
-              <p className="text-gray-300">Advanced AI-powered decision-making with explainable reasoning</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-green-400 text-4xl mb-4">📊</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Performance Analytics</h3>
-              <p className="text-gray-300">Comprehensive monitoring and optimization of autonomous systems</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-purple-400 text-4xl mb-4">🔒</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Security Framework</h3>
-              <p className="text-gray-300">Enterprise-grade security with compliance and governance controls</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-yellow-400 text-4xl mb-4">🚀</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Scalable Infrastructure</h3>
-              <p className="text-gray-300">Cloud-native architecture that scales with your business needs</p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl border border-indigo-200">
+                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                  <Brain className="w-6 h-6 text-indigo-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Engine</h3>
+                <p className="text-gray-600 mb-4">
+                  Advanced AI algorithms that power autonomous decision-making and learning capabilities.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Machine learning models</li>
+                  <li>• Neural networks</li>
+                  <li>• Decision trees</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl border border-blue-200">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                  <Network className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Communication Layer</h3>
+                <p className="text-gray-600 mb-4">
+                  Secure communication protocols for inter-system coordination and data exchange.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• API management</li>
+                  <li>• Message queuing</li>
+                  <li>• Real-time sync</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border border-green-200">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                  <Cpu className="w-6 h-6 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Processing Engine</h3>
+                <p className="text-gray-600 mb-4">
+                  High-performance computing infrastructure for real-time data processing and analysis.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Parallel processing</li>
+                  <li>• GPU acceleration</li>
+                  <li>• Load balancing</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-xl border border-red-200">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                  <Shield className="w-6 h-6 text-red-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Security Framework</h3>
+                <p className="text-gray-600 mb-4">
+                  Multi-layered security with threat detection, encryption, and access control.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Threat detection</li>
+                  <li>• Encryption</li>
+                  <li>• Access control</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-yellow-50 to-amber-50 p-8 rounded-xl border border-yellow-200">
+                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                  <Monitor className="w-6 h-6 text-yellow-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Monitoring System</h3>
+                <p className="text-gray-600 mb-4">
+                  Real-time monitoring and alerting for system health, performance, and security.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Health monitoring</li>
+                  <li>• Performance metrics</li>
+                  <li>• Alert management</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-pink-50 to-rose-50 p-8 rounded-xl border border-pink-200">
+                <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-6">
+                  <Settings className="w-6 h-6 text-pink-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Configuration Management</h3>
+                <p className="text-gray-600 mb-4">
+                  Centralized configuration management for all autonomous systems and components.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Version control</li>
+                  <li>• Rollback capability</li>
+                  <li>• Environment management</li>
+                </ul>
+              </div>
             </div>
           </div>
+        </section>
 
-          {/* Use Cases */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Platform Applications</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-semibold text-white mb-3">Enterprise Operations</h3>
-                <p className="text-gray-300">Automate complex business processes with intelligent decision-making</p>
+        {/* System Types */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Autonomous System Types
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Our platform supports various types of autonomous systems for different use cases and domains.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                  <Brain className="w-6 h-6 text-indigo-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Cognitive Systems</h3>
+                <p className="text-gray-600 mb-4">
+                  AI systems that can think, learn, and make decisions like humans.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Natural language processing</li>
+                  <li>• Problem solving</li>
+                  <li>• Creative thinking</li>
+                </ul>
               </div>
-              
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-semibold text-white mb-3">Research & Development</h3>
-                <p className="text-gray-300">Accelerate innovation with autonomous research and development workflows</p>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                  <Cpu className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Physical Systems</h3>
+                <p className="text-gray-600 mb-4">
+                  Autonomous robots and machines that interact with the physical world.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Robotics</li>
+                  <li>• Autonomous vehicles</li>
+                  <li>• Industrial automation</li>
+                </ul>
               </div>
-              
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-semibold text-white mb-3">Customer Service</h3>
-                <p className="text-gray-300">Provide 24/7 intelligent customer support with autonomous agents</p>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                  <Network className="w-6 h-6 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Network Systems</h3>
+                <p className="text-gray-600 mb-4">
+                  Distributed systems that operate across networks and coordinate with each other.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Edge computing</li>
+                  <li>• IoT networks</li>
+                  <li>• Cloud systems</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                  <BarChart3 className="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Analytical Systems</h3>
+                <p className="text-gray-600 mb-4">
+                  Systems that analyze data and provide insights autonomously.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Data analysis</li>
+                  <li>• Predictive modeling</li>
+                  <li>• Business intelligence</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                  <Shield className="w-6 h-6 text-red-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Security Systems</h3>
+                <p className="text-gray-600 mb-4">
+                  Autonomous security systems that protect against threats and vulnerabilities.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Threat detection</li>
+                  <li>• Incident response</li>
+                  <li>• Vulnerability management</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                  <Users className="w-6 h-6 text-yellow-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Collaborative Systems</h3>
+                <p className="text-gray-600 mb-4">
+                  Systems that work together with humans and other systems collaboratively.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Human-AI collaboration</li>
+                  <li>• Multi-agent systems</li>
+                  <li>• Team coordination</li>
+                </ul>
               </div>
             </div>
           </div>
+        </section>
 
-          {/* CTA Section */}
-          <div className="text-center bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-6">Build Your Autonomous Future</h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Start building intelligent, autonomous systems that transform your business operations
+        {/* Implementation Process */}
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Implementation Process
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Our proven methodology for deploying autonomous systems successfully.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-indigo-600">1</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Design</h3>
+                <p className="text-gray-600">
+                  System architecture and requirements definition
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-blue-600">2</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Develop</h3>
+                <p className="text-gray-600">
+                  System development and AI model training
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-green-600">3</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Deploy</h3>
+                <p className="text-gray-600">
+                  System deployment and integration
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-purple-600">4</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Optimize</h3>
+                <p className="text-gray-600">
+                  Continuous learning and improvement
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gradient-to-r from-indigo-600 to-purple-600">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Build Autonomous Systems?
+            </h2>
+            <p className="text-xl text-indigo-100 mb-8">
+              Transform your operations with intelligent, self-managing systems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Get Started
+              <button className="px-8 py-4 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300">
+                Start Platform Trial
               </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                View Documentation
+              <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300">
+                Schedule Consultation
               </button>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-    </React.Fragment>)};
-export default AIAutonomousSystemsPlatform;
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cpu, 
-  Network, 
-  Zap, 
-  Shield, 
-  Users, 
-  Globe, 
-  Database,
-  CheckCircle,
-  ArrowRight,
-  Rocket,
-  Target,
-  BarChart3,
-  Clock,
-  Settings,
-  Monitor
-} from 'lucide-react';
-
-export default function AIAutonomousSystemsPlatform() {
-  const features = [
-    {
-      icon: Brain,
-      title: "Intelligent Automation",
-      description: "AI-powered systems that autonomously manage complex operations and decision-making processes."
-    },
-    {
-      icon: Cpu,
-      title: "Scalable Architecture",
-      description: "Cloud-native platform designed to scale from small businesses to enterprise-level operations."
-    },
-    {
-      icon: Network,
-      title: "Distributed Intelligence",
-      description: "Multi-agent systems that collaborate and coordinate across different domains and functions."
-    },
-    {
-      icon: Zap,
-      title: "Real-time Processing",
-      description: "Instant data processing and decision-making capabilities for time-critical operations."
-    },
-    {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-grade security with advanced encryption and compliance features."
-    },
-    {
-      icon: Users,
-      title: "Human-AI Collaboration",
-      description: "Seamless integration between human expertise and AI capabilities for optimal results."
-    }
-  ];
-
-  const platformComponents = [
-    {
-      title: "Core AI Engine",
-      description: "Advanced machine learning algorithms and neural networks for intelligent decision making.",
-      icon: Brain
-    },
-    {
-      title: "Data Management",
-      description: "Comprehensive data ingestion, processing, and storage with real-time analytics.",
-      icon: Database
-    },
-    {
-      title: "Workflow Automation",
-      description: "Intelligent process automation with adaptive learning and optimization.",
-      icon: Settings
-    },
-    {
-      title: "Monitoring & Analytics",
-      description: "Real-time system monitoring, performance analytics, and predictive maintenance.",
-      icon: Monitor
-    }
-  ];
-
-  const benefits = [
-    "24/7 autonomous operation",
-    "Reduced operational costs",
-    "Improved efficiency and accuracy",
-    "Scalable business operations",
-    "Real-time insights and analytics",
-    "Enhanced decision-making capabilities"
-  ];
-
-  const useCases = [
-    {
-      title: "Manufacturing",
-      description: "Autonomous production lines with predictive maintenance and quality control."
-    },
-    {
-      title: "Healthcare",
-      description: "AI-powered patient monitoring and automated medical diagnostics."
-    },
-    {
-      title: "Finance",
-      description: "Automated trading systems and risk management platforms."
-    },
-    {
-      title: "Logistics",
-      description: "Intelligent supply chain management and route optimization."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-              AI Autonomous Systems Platform
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              The ultimate platform for building, deploying, and managing intelligent autonomous systems 
-              that transform how businesses operate in the digital age.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/demo"
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
-                Watch Demo
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Platform Capabilities
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our comprehensive platform provides everything you need to build and deploy 
-              intelligent autonomous systems at scale.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Platform Components Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Platform Architecture
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built with modular components that integrate seamlessly to create powerful autonomous systems.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {platformComponents.map((component, index) => (
-              <div
-                key={index}
-                className="bg-gray-700/50 rounded-xl p-6 border border-gray-600 hover:border-cyan-500 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mb-4">
-                  <component.icon className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">{component.title}</h3>
-                <p className="text-gray-300">{component.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits and Use Cases */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-8">Key Benefits</h2>
-              <div className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="h-6 w-6 text-cyan-500 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-8">Industry Use Cases</h2>
-              <div className="space-y-4">
-                {useCases.map((useCase, index) => (
-                  <div key={index} className="bg-gray-800/50 rounded-lg p-4 border border-gray-700">
-                    <h4 className="text-lg font-semibold text-white mb-2">{useCase.title}</h4>
-                    <p className="text-gray-300 text-sm">{useCase.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Technology Stack */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Technology Stack
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built with cutting-edge technologies for maximum performance, reliability, and scalability.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { icon: Brain, name: "Machine Learning", desc: "Advanced AI algorithms" },
-              { icon: Database, name: "Big Data", desc: "Real-time processing" },
-              { icon: Network, name: "Cloud Native", desc: "Scalable architecture" },
-              { icon: Shield, name: "Enterprise Security", desc: "Bank-grade protection" }
-            ].map((tech, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <tech.icon className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
-                <p className="text-gray-400 text-sm">{tech.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Build Autonomous Systems?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join the future of autonomous technology with Zion Tech Group.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Start Building
-              <Rocket className="ml-2 h-5 w-5" />
-            </Link>
-            <Link
-              to="/pricing"
-              className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
-            >
-              View Pricing
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+    </>
   );
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/website-audit-and-enhancement-98d0
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+};
+
+export default AIAutonomousSystemsPlatform;
