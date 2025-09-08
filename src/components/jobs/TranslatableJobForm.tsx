@@ -1,205 +1,33 @@
+import React from 'react';
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent } from "@/components/ui/card",
-import { Loader2, Globe } from 'lucide-react'
-import { useTranslation } from "react-i18next",
-import { useTranslationService } from "@/hooks/useTranslationService",
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
-import { toast } from "@/components/ui/use-toast";
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface TranslatableJobFormProps {
-  onSubmit: (formData: any) => void;
-  isSubmitting?: boolean
-}
-
-export function TranslatableJobForm({ onSubmit, isSubmitting;
+export const TranslatableJobForm: React.FC = () => {
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold mb-6">{t('jobs.post_job_title')}</h1>
-        <p className="text-zion-slate-light mb-6">
-          {t('jobs.post_job_description')}
-        </p>
-      </div>
-      
-      <div className="space-y-4">
-        <div className="space-y-2">
-          <div className="flex justify-between items-center">
-            <label htmlFor="title" className="text-lg font-medium">
-              {t('jobs.job_title')}
-            </label>
-            <Button
-              type="button"
-              size="sm"
-              variant="outline"
-              onClick={() => autoTranslate('title')}
-              disabled={isTranslating || (!title.en && !title.es && !title.fr && !title.pt && !title.ar)}
-              className="flex items-center gap-1">{isTranslating ? (
-                <Loader2 className="h-4 w-4 animate-spin" />
-              ) : (
-                <Globe className="h-4 w-4" />
-              )}
-              {t('translation.auto_translate')}
-            </Button>
-          </div>
-          
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
-            <TabsList className="w-full">
-              {supportedLanguages.map((lang) => (
-                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">
-                  <span className="mr-1">{lang.flag}</span> {lang.name}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-            
-            {supportedLanguages.map((lang) => (
-              <TabsContent key={lang.code} value={lang.code} className="mt-2">
-                <div className="space-y-1">
-                  <Input
-                    id={`title-${lang.code}`}
-                    value={title[lang.code] || ''}
-                    onChange={(e) => handleTitleChange(e.target.value)}
-                    className="w-full"
-                    dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
-                  />
-                </div>
-              </TabsContent>
-            ))}
-          </Tabs>
+    <div className="max-w-2xl mx-auto p-6">
+      <h2 className="text-2xl font-bold mb-4">Job Form</h2>
+      <form className="space-y-4">
+        <div>
+          <label className="block text-sm font-medium mb-2">Title</label>
+          <input 
+            type="text" 
+            className="w-full border border-gray-300 rounded px-3 py-2"
+            placeholder="Enter job title"
+          />
         </div>
-        
-        <div className="space-y-2">
-          <div className="flex justify-between items-center">
-            <label htmlFor="description" className="text-lg font-medium">
-              {t('jobs.job_description')}
-            </label>
-            <Button
-              type="button"
-              size="sm"
-              variant="outline"
-              onClick={() => autoTranslate('description')}
-              disabled={isTranslating || (!description.en && !description.es && !description.fr && !description.pt && !description.ar)}
-              className="flex items-center gap-1">{isTranslating ? (
-                <Loader2 className="h-4 w-4 animate-spin" />
-              ) : (
-                <Globe className="h-4 w-4" />
-              )}
-              {t('translation.auto_translate')}
-            </Button>
-          </div>
-          
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
-            <TabsList className="w-full">
-              {supportedLanguages.map((lang) => (
-                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">
-                  <span className="mr-1">{lang.flag}</span> {lang.name}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-            
-            {supportedLanguages.map((lang) => (
-              <TabsContent key={lang.code} value={lang.code} className="mt-2">
-                <Textarea
-                  id={`description-${lang.code}`}
-                  value={description[lang.code] || ''}
-                  onChange={(e) => handleDescriptionChange(e.target.value)}
-                  className="min-h-32 w-full"
-                  dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
-                />
-              </TabsContent>
-            ))}
-          </Tabs>
+        <div>
+          <label className="block text-sm font-medium mb-2">Description</label>
+          <textarea 
+            className="w-full border border-gray-300 rounded px-3 py-2"
+            rows={4}
+            placeholder="Enter job description"
+          />
         </div>
-        
-        <div className="space-y-2">
-          <div className="flex justify-between items-center">
-            <label htmlFor="requirements" className="text-lg font-medium">
-              {t('jobs.skills_required')}
-            </label>
-            <Button
-              type="button"
-              size="sm"
-              variant="outline"
-              onClick={() => autoTranslate('requirements')}
-              disabled={isTranslating || (!requirements.en && !requirements.es && !requirements.fr && !requirements.pt && !requirements.ar)}
-              className="flex items-center gap-1">{isTranslating ? (
-                <Loader2 className="h-4 w-4 animate-spin" />
-              ) : (
-                <Globe className="h-4 w-4" />
-              )}
-              {t('translation.auto_translate')}
-            </Button>
-          </div>
-          
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
-            <TabsList className="w-full">
-              {supportedLanguages.map((lang) => (
-                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">
-                  <span className="mr-1">{lang.flag}</span> {lang.name}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-            
-            {supportedLanguages.map((lang) => (
-              <TabsContent key={lang.code} value={lang.code} className="mt-2">
-                <Textarea
-                  id={`requirements-${lang.code}`}
-                  value={requirements[lang.code] || ''}
-                  onChange={(e) => handleRequirementsChange(e.target.value)}
-                  className="min-h-24 w-full"
-                  dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
-                />
-              </TabsContent>
-            ))}
-          </Tabs>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="space-y-1">
-            <label htmlFor="budget" className="text-lg font-medium">
-              {t('jobs.budget')}
-            </label>
-            <Input
-              id="budget"
-              value={budget}
-              onChange={(e) => setBudget(e.target.value)}
-              placeholder="$1000 - $2000"
-              className="w-full"
-            />
-          </div>
-          <div className="space-y-1">
-            <label htmlFor="deadline" className="text-lg font-medium">
-              {t('jobs.deadline')}
-            </label>
-            <Input
-              id="deadline"
-              type="date"
-              value={deadline}
-              onChange={(e) => setDeadline(e.target.value)}
-              className="w-full"
-            />
-          </div>
-        </div>
-      </div>
-      
-      <div className="pt-4">
-        <Button
+        <button 
           type="submit"
-          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan"
-          disabled={isSubmitting || isTranslating}>{isSubmitting ? (
-            <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              {t('jobs.submitting')}
-            </>
-          ) : (
-            t('jobs.post_job_button')
-          )}
-        </Button>
-      </div>
-    </form>
-  )
-}
+          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  );
+};

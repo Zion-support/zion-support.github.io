@@ -1,4 +1,4 @@
-
+import React from "react";
 import { GradientHeading } from "./GradientHeading";
 import { Link } from "react-router-dom";
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
@@ -21,172 +21,59 @@ const categories = [
   },
   {
     title: "Equipment",
-    description: "Rent or buy specialized hardware, servers, and devices",
+    description: "Professional-grade hardware and software solutions",
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment",
-    color: "from-amber-500 to-orange-600",
+    color: "from-green-500 to-emerald-600",
   },
   {
     title: "Innovation",
-    description: "Discover cutting-edge solutions and tech breakthroughs",
+    description: "Cutting-edge AI and emerging technology solutions",
     icon: <Lightbulb className="w-10 h-10" />,
-    link: "/category/innovation",
-    color: "from-emerald-500 to-green-600",
+    link: "/innovation",
+    color: "from-orange-500 to-red-600",
   },
 ];
 
-const specialServices = [
-  {
-    title: "IT Onsite Services",
-    link: "/it-onsite-services"
-  },
-  {
-    title: "Services Overview",
-    link: "/services-overview"
-  },
-  {
-    title: "AI Services",
-    link: "/ai-services"
-  },
-  {
-    title: "Comprehensive Services",
-    link: "/comprehensive-services"
-    title: "Comprehensive Services",
-    link: "/comprehensive-services"
-  },
-  {
-    title: "AI Services",
-    link: "/ai-services"
-  },
-  {
-    title: "Cybersecurity Services",
-    link: "/cybersecurity-services"
-  },
-  {
-    title: "Micro SAAS",
-    link: "/micro-saas"
-  },
-  {
-    title: "All Services",
-    link: "/comprehensive-services"
-  },
-  {
-    title: "Pricing",
-    link: "/services-pricing"
-  },
-  {
-    title: "Enterprise Solutions",
-    link: "/enterprise-solutions"
-  },
-  {
-    title: "Innovative Services",
-    link: "/innovative-services"
-  }
-];
-
-interface CategoriesSectionProps
-  extends React.HTMLAttributes<HTMLElement> {
-  showTitle?: boolean
-}
-
-export function CategoriesSection({
-  showTitle = true,
-  className,
-  style,
-  ...props
-}: CategoriesSectionProps) {
+export const CategoriesSection: React.FC = () => {
   return (
-    <section
-      className={cn("py-20 bg-zion-blue", className)}
-      style={style}
-      {...props}
-    >
-      <div className="container mx-auto px-4">
-        {showTitle && (
-          <div className="text-center mb-16">
-            <GradientHeading>Explore Categories</GradientHeading>
-            <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
-              Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation
-            </p>
-          </div>
-        )}
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {categories.map((category) => (
-            <Link 
-              key={category.title} 
-              to={category.link} 
+    <section className="py-16 bg-gradient-to-b from-zion-slate-dark to-zion-slate-darker">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <GradientHeading
+            text="Explore Our Solutions"
+            className="text-4xl md:text-5xl font-bold mb-4"
+          />
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            Discover comprehensive technology solutions tailored to your business needs
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {categories.map((category, index) => (
+            <Link
+              key={category.title}
+              to={category.link}
               className="group block"
             >
-              <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${category.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                <div className="text-white">
+              <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-blue-light/20 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
+                <div className={cn(
+                  "w-16 h-16 rounded-xl bg-gradient-to-br flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300",
+                  category.color
+                )}>
                   {category.icon}
                 </div>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">{category.title}</h3>
-              <p className="text-zion-slate-light text-sm mb-4">{category.description}</p>
-              <Link 
-                to={category.link}
-                className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300 group-hover:translate-x-1"
-              >
-                Explore <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Service Categories */}
-        <motion.div 
-          className="mb-12"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={containerVariants}
-        >
-          <h3 className="text-2xl font-bold text-white text-center mb-8">Specialized Services</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {serviceCategories.map((service, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                whileHover="hover"
-                className="group relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300"
-              >
-                <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <div className="text-white">
-                    {service.icon}
-                  </div>
-                </div>
-                <h3 className="text-white text-xl font-bold mb-2">{category.title}</h3>
-                <p className="text-zion-slate-light">{category.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                  {category.title}
+                </h3>
+                <p className="text-zion-slate-light group-hover:text-zion-slate-light/80 transition-colors">
+                  {category.description}
+                </p>
               </div>
             </Link>
           ))}
         </div>
-        
-        <div className="mt-8">
-          <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {specialServices.map((service) => (
-              <Link 
-                key={service.title}
-                to={service.link}
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
-              >
-                {service.title}
-              </Link>
-            ))}
-          </div>
-        </div>
-        
-        <div className="mt-12 flex justify-center">
-          <Link 
-            to="/categories" 
-            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
-          >
-            View All Categories →
-          </Link>
-        </div>
       </div>
-    </div>
-  )}
+    </section>
+  );
+};
