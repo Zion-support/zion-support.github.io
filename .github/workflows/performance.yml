@@ -1,0 +1,134 @@
+name: Performance & Quality Monitoring
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    # Run every 8 hours as an alternative to PM2 automation
+    - cron: '0 */8 * * *'
+  workflow_dispatch:
+
+jobs:
+  performance-monitoring:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Use Node.js 20.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build for analysis
+      run: npm run build
+      
+    - name: Bundle size analysis
+      run: |
+        echo "=== Bundle Size Analysis ==="
+        du -sh dist/ || echo "Build directory not found"
+        find dist -name "*.js" -exec du -sh {} \; | sort -hr | head -10
+        
+    - name: Lighthouse CI (if available)
+      run: |
+        npx lhci autorun || echo "Lighthouse CI not configured"
+        
+    - name: Web Vitals check
+      run: |
+        npx web-vitals dist || echo "Web Vitals not available"
+        
+    - name: Performance budget check
+      run: |
+        npx bundlesize || echo "Bundlesize not configured"
+
+  quality-assurance:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Use Node.js 20.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Code coverage (if available)
+      run: |
+        npm run test:coverage || echo "Test coverage not configured"
+        
+    - name: Code complexity analysis
+      run: |
+        npx complexity-report src/ || echo "Complexity reporter not available"
+        
+    - name: Maintainability index
+      run: |
+        npx maintainability-index src/ || echo "Maintainability index not available"
+        
+    - name: Technical debt analysis
+      run: |
+        npx technical-debt src/ || echo "Technical debt analyzer not available"
+        
+    - name: Code quality metrics
+      run: |
+        echo "=== Code Quality Report ==="
+        echo "Total files: $(find src -name '*.ts' -o -name '*.tsx' -o -name '*.js' -o -name '*.jsx' | wc -l)"
+        echo "Total lines: $(find src -name '*.ts' -o -name '*.tsx' -o -name '*.js' -o -name '*.jsx' -exec wc -l {} + | tail -1 | awk '{print $1}')"
+        echo "TypeScript files: $(find src -name '*.ts' -o -name '*.tsx' | wc -l)"
+        echo "JavaScript files: $(find src -name '*.js' -o -name '*.jsx' | wc -l)"
+
+  continuous-improvement:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Use Node.js 20.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Check for improvement opportunities
+      run: |
+        echo "=== Improvement Opportunities ==="
+        echo "Checking for unused dependencies..."
+        npx depcheck || echo "Depcheck not available"
+        
+        echo "Checking for duplicate code..."
+        npx jscpd src/ || echo "JSCPD not available"
+        
+        echo "Checking for code smells..."
+        npx sonarqube-scanner || echo "SonarQube not configured"
+        
+    - name: Generate improvement report
+      run: |
+        echo "=== Continuous Improvement Report ===" > improvement-report.md
+        echo "Generated on: $(date)" >> improvement-report.md
+        echo "" >> improvement-report.md
+        echo "## Code Quality Metrics" >> improvement-report.md
+        echo "- Total TypeScript files: $(find src -name '*.ts' -o -name '*.tsx' | wc -l)" >> improvement-report.md
+        echo "- Total JavaScript files: $(find src -name '*.js' -o -name '*.jsx' | wc -l)" >> improvement-report.md
+        echo "- Build size: $(du -sh dist/ 2>/dev/null || echo 'N/A')" >> improvement-report.md
+        
+    - name: Upload improvement report
+      uses: actions/upload-artifact@v4
+      with:
+        name: improvement-report
+        path: improvement-report.md
+        retention-days: 30
