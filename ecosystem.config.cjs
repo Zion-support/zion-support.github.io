@@ -1,5 +1,6 @@
 module.exports = {
   apps: [
+    // Main application - Vite dev server
     {
       name: 'bolt-app-dev',
       script: 'npm',
@@ -11,23 +12,28 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
-        PORT: 3000
-      }
-    },
-    {
-      name: 'bolt-app-preview',
-      script: 'npm',
-      args: 'run preview',
-      cwd: './',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
+        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+      },
+      env_production: {
         NODE_ENV: 'production',
-        PORT: 4173
+        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
       }
     },
+    
+    // Backend server - commented out as server directory may not exist
+    // {
+    //   name: 'zion-backend',
+    //   script: 'npm',
+    //   args: 'start',
+    //   cwd: './server',
+    //   instances: 1,
+    //   autorestart: true,
+    //   watch: false,
+    //   max_memory_restart: '1G',
+    //   env: {
+    //     NODE_ENV: 'production'
+    //   }
+    // },
 
   deploy: {
     production: {
