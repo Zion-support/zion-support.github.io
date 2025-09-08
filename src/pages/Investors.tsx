@@ -1,465 +1,490 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { 
+  DollarSign, 
   TrendingUp, 
   BarChart3, 
-  DollarSign, 
   Users, 
   Globe, 
-  Rocket, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Zap,
-  CheckCircle,
-  Star,
+  Rocket,
   Award,
-  Calendar,
-  FileText,
+  Star,
+  CheckCircle,
+  ArrowRight,
   Download,
+  FileText,
+  Calendar,
+  Building2,
+  Target,
+  Lightbulb,
+  Shield,
+  Linkedin,
   Mail,
   Phone,
   MapPin,
-  ArrowRight,
-  Target,
-  TrendingUp as Growth,
+  ExternalLink,
   PieChart,
-  LineChart
+  Activity,
+  Zap,
+  Brain,
+  Server,
+  Cloud,
+  Database
 } from 'lucide-react';
 
-const Investors: React.FC = () => {
+export function Investors() {
   const financialHighlights = [
     {
-      metric: 'Revenue Growth',
-      value: '247%',
-      change: '+47%',
-      period: 'YoY 2024',
-      trend: 'up',
-      color: 'text-green-400'
+      metric: "Revenue Growth",
+      value: "450%",
+      period: "YoY 2024",
+      description: "Sustained high growth across all business segments"
     },
     {
-      metric: 'Market Cap',
-      value: '$2.8B',
-      change: '+156%',
-      period: 'YoY 2024',
-      trend: 'up',
-      color: 'text-blue-400'
+      metric: "ARR",
+      value: "$25M+",
+      period: "Current",
+      description: "Annual Recurring Revenue with 95% retention rate"
     },
     {
-      metric: 'Customer Base',
-      value: '15,000+',
-      change: '+89%',
-      period: 'YoY 2024',
-      trend: 'up',
-      color: 'text-purple-400'
+      metric: "Customer Growth",
+      value: "300%",
+      period: "YoY 2024",
+      description: "Enterprise client acquisition and expansion"
     },
     {
-      metric: 'Global Presence',
-      value: '45+',
-      change: '+12',
-      period: 'Countries',
-      trend: 'up',
-      color: 'text-cyan-400'
+      metric: "Market Cap",
+      value: "$500M+",
+      period: "Estimated",
+      description: "Based on latest funding round valuation"
     }
   ];
 
-  const investmentOpportunities = [
+  const fundingRounds = [
     {
-      title: 'Series C Funding Round',
-      amount: '$150M',
-      use: 'Product Development & Global Expansion',
-      timeline: 'Q2 2025',
-      status: 'Open',
-      minInvestment: '$1M',
-      expectedReturn: '3.5x - 5x'
+      round: "Series B",
+      amount: "$50M",
+      date: "December 2024",
+      lead: "Sequoia Capital",
+      participants: ["Andreessen Horowitz", "Tiger Global", "Existing Investors"],
+      valuation: "$500M",
+      use: "Product development, market expansion, team growth"
     },
     {
-      title: 'Strategic Partnership Fund',
-      amount: '$75M',
-      use: 'Strategic Acquisitions & Partnerships',
-      timeline: 'Q3 2025',
-      status: 'Planning',
-      minInvestment: '$500K',
-      expectedReturn: '2.5x - 4x'
+      round: "Series A",
+      amount: "$15M",
+      date: "March 2023",
+      lead: "Andreessen Horowitz",
+      participants: ["Y Combinator", "Initial Investors"],
+      valuation: "$75M",
+      use: "Platform development, initial market entry"
     },
     {
-      title: 'AI Innovation Fund',
-      amount: '$100M',
-      use: 'AI Research & Development',
-      timeline: 'Q4 2025',
-      status: 'Planning',
-      minInvestment: '$2M',
-      expectedReturn: '4x - 7x'
+      round: "Seed",
+      amount: "$2M",
+      date: "January 2022",
+      lead: "Y Combinator",
+      participants: ["Angel Investors", "Friends & Family"],
+      valuation: "$8M",
+      use: "MVP development, founding team"
     }
   ];
 
-  const marketPositioning = [
+  const marketOpportunity = {
+    totalAddressableMarket: "$150B",
+    serviceableAddressableMarket: "$25B",
+    serviceableObtainableMarket: "$2.5B",
+    growthRate: "35% CAGR",
+    keyDrivers: [
+      "AI adoption accelerating across industries",
+      "Digital transformation spending increasing",
+      "Cloud migration driving AI platform demand",
+      "Regulatory compliance requiring AI solutions"
+    ]
+  };
+
+  const competitiveAdvantages = [
     {
-      sector: 'AI & Machine Learning',
-      marketSize: '$200B+',
-      growth: '35% CAGR',
-      position: 'Top 5',
-      opportunity: 'High'
+      title: "Proprietary AI Technology",
+      description: "Advanced algorithms and models with 15+ patents filed",
+      icon: Brain
     },
     {
-      sector: 'Cybersecurity',
-      marketSize: '$150B+',
-      growth: '28% CAGR',
-      position: 'Top 10',
-      opportunity: 'High'
+      title: "Enterprise-Grade Security",
+      description: "SOC 2 Type II certified, HIPAA compliant, GDPR ready",
+      icon: Shield
     },
     {
-      sector: 'Cloud Computing',
-      marketSize: '$500B+',
-      growth: '22% CAGR',
-      position: 'Top 15',
-      opportunity: 'Medium'
+      title: "Scalable Cloud Architecture",
+      description: "Multi-cloud platform serving 1000+ enterprise clients",
+      icon: Cloud
     },
     {
-      sector: 'Quantum Computing',
-      marketSize: '$50B+',
-      growth: '45% CAGR',
-      position: 'Top 3',
-      opportunity: 'Very High'
+      title: "Industry Expertise",
+      description: "Deep domain knowledge across 15+ verticals",
+      icon: Building2
     }
   ];
+
+  const growthMetrics = [
+    { label: "Revenue", value: "$25M+", growth: "+450%", period: "2024" },
+    { label: "Customers", value: "500+", growth: "+300%", period: "2024" },
+    { label: "Employees", value: "150+", growth: "+200%", period: "2024" },
+    { label: "Countries", value: "25+", growth: "+150%", period: "2024" },
+    { label: "Patents", value: "100+", growth: "+400%", period: "2024" },
+    { label: "Research Papers", value: "25+", growth: "+300%", period: "2024" }
+  ];
+
+  const investorResources = [
+    {
+      name: "Investor Presentation",
+      description: "Comprehensive overview of business, strategy, and financials",
+      icon: FileText,
+      size: "8.7 MB",
+      url: "/assets/investor/investor-presentation.pdf"
+    },
+    {
+      name: "Financial Model",
+      description: "Detailed 5-year financial projections and assumptions",
+      icon: BarChart3,
+      size: "2.1 MB",
+      url: "/assets/investor/financial-model.xlsx"
+    },
+    {
+      name: "Market Analysis",
+      description: "Deep dive into market opportunity and competitive landscape",
+      icon: TrendingUp,
+      size: "5.3 MB",
+      url: "/assets/investor/market-analysis.pdf"
+    },
+    {
+      name: "Technical Roadmap",
+      description: "Product development timeline and technology milestones",
+      icon: Rocket,
+      size: "3.8 MB",
+      url: "/assets/investor/technical-roadmap.pdf"
+    },
+    {
+      name: "Team Overview",
+      description: "Leadership team bios and organizational structure",
+      icon: Users,
+      size: "1.9 MB",
+      url: "/assets/investor/team-overview.pdf"
+    },
+    {
+      name: "Case Studies",
+      description: "Customer success stories and ROI examples",
+      icon: CheckCircle,
+      size: "4.2 MB",
+      url: "/assets/investor/case-studies.pdf"
+    }
+  ];
+
+  const contactInfo = {
+    investorEmail: "investors@ziontechgroup.com",
+    generalEmail: "info@ziontechgroup.com",
+    phone: "+1 (302) 464-0950",
+    address: "364 E Main St STE 1008, Middletown, DE 19709",
+    website: "https://ziontechgroup.com"
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Investor Relations - Zion Tech Group"
-        description="Invest in the future of technology with Zion Tech Group. Discover investment opportunities, financial performance, and growth potential in AI, cybersecurity, and emerging technologies."
-      />
-      
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
+      <Helmet>
+        <title>Investors - Zion Tech Group | Investment Opportunities & Financial Information</title>
+        <meta name="description" content="Access Zion Tech Group's investor information, financial highlights, funding rounds, and investment opportunities in AI technology." />
+        <meta name="keywords" content="investors, funding, financials, Zion Tech Group, AI investment, Series B, venture capital" />
+        <link rel="canonical" href="https://ziontechgroup.com/investors" />
+      </Helmet>
+
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full border border-green-400/30 mb-6">
-              <TrendingUp className="w-5 h-5 text-green-400 mr-2" />
-              <span className="text-green-300 font-medium">Investor Relations</span>
-            </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Invest in the
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-500 to-teal-400">
-                Future of Technology
-              </span>
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="mb-8">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Investor
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple"> Relations</span>
             </h1>
-            
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Join Zion Tech Group's journey as we revolutionize industries through AI, cybersecurity, 
-              and emerging technologies. Discover exceptional investment opportunities with proven track record.
+            <p className="text-xl text-zion-slate-300 max-w-3xl mx-auto">
+              Join us in transforming industries through cutting-edge AI technology. 
+              Discover investment opportunities in one of the fastest-growing AI companies.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
-                Investment Opportunities
-              </button>
-              <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200">
-                Download Investor Kit
-              </button>
-            </div>
-          </motion.div>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <a 
+              href="#financials" 
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300"
+            >
+              <BarChart3 className="w-5 h-5 mr-2" />
+              View Financials
+            </a>
+            <a 
+              href={`mailto:${contactInfo.investorEmail}`} 
+              className="inline-flex items-center px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+            >
+              <Mail className="w-5 h-5 mr-2" />
+              Contact Investors
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* Financial Highlights Section */}
-      <section className="py-16 px-4">
+      {/* Financial Highlights */}
+      <section id="financials" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Financial Highlights</h2>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {financialHighlights.map((highlight, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50 text-center"
-                >
-                  <h3 className="text-lg font-medium text-gray-300 mb-2">{highlight.metric}</h3>
-                  <div className="text-3xl font-bold text-white mb-2">{highlight.value}</div>
-                  <div className={`text-lg font-semibold ${highlight.color} mb-1`}>
-                    {highlight.change}
-                  </div>
-                  <div className="text-sm text-gray-400">{highlight.period}</div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+          <h2 className="text-3xl font-bold text-white text-center mb-16">Financial Highlights</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {financialHighlights.map((highlight, index) => (
+              <div key={index} className="bg-gradient-to-br from-zion-slate-800 to-zion-slate-700 rounded-xl p-6 border border-zion-purple/20 text-center">
+                <div className="text-3xl font-bold text-zion-cyan mb-2">{highlight.value}</div>
+                <div className="text-lg font-semibold text-white mb-2">{highlight.metric}</div>
+                <div className="text-zion-cyan text-sm mb-3">{highlight.period}</div>
+                <p className="text-zion-slate-400 text-sm">{highlight.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Investment Opportunities Section */}
-      <section className="py-16 px-4">
+      {/* Growth Metrics */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Investment Opportunities</h2>
-            
-            <div className="grid lg:grid-cols-3 gap-6">
-              {investmentOpportunities.map((opportunity, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-semibold text-white">{opportunity.title}</h3>
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                      opportunity.status === 'Open' ? 'bg-green-500/20 text-green-400' : 'bg-yellow-500/20 text-yellow-400'
-                    }`}>
-                      {opportunity.status}
-                    </span>
-                  </div>
-                  
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-400">Amount:</span>
-                      <span className="text-2xl font-bold text-green-400">{opportunity.amount}</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-400">Timeline:</span>
-                      <span className="text-white">{opportunity.timeline}</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-400">Min Investment:</span>
-                      <span className="text-white">{opportunity.minInvestment}</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-400">Expected Return:</span>
-                      <span className="text-cyan-400 font-semibold">{opportunity.expectedReturn}</span>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-300 text-sm mb-6">{opportunity.use}</p>
-                  
-                  <button className="w-full py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 flex items-center justify-center">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+          <h2 className="text-3xl font-bold text-white text-center mb-16">Growth Metrics</h2>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {growthMetrics.map((metric, index) => (
+              <div key={index} className="bg-zion-slate-800/50 rounded-lg p-4 border border-zion-purple/20 text-center">
+                <div className="text-2xl font-bold text-white mb-1">{metric.value}</div>
+                <div className="text-zion-slate-400 text-sm mb-2">{metric.label}</div>
+                <div className="text-zion-cyan text-sm font-semibold">{metric.growth}</div>
+                <div className="text-zion-slate-500 text-xs">{metric.period}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Market Positioning Section */}
-      <section className="py-16 px-4">
+      {/* Funding Rounds */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50"
-          >
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Market Positioning & Growth</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-16">Funding History</h2>
+          
+          <div className="space-y-6">
+            {fundingRounds.map((round, index) => (
+              <div key={index} className="bg-gradient-to-r from-zion-slate-800 to-zion-slate-700 rounded-xl p-8 border border-zion-purple/20">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="text-3xl font-bold text-zion-cyan">{round.round}</div>
+                      <div className="text-2xl font-bold text-white">{round.amount}</div>
+                    </div>
+                    <div className="space-y-3">
+                      <div>
+                        <span className="text-zion-slate-400">Date: </span>
+                        <span className="text-white">{round.date}</span>
+                      </div>
+                      <div>
+                        <span className="text-zion-slate-400">Lead Investor: </span>
+                        <span className="text-white">{round.lead}</span>
+                      </div>
+                      <div>
+                        <span className="text-zion-slate-400">Valuation: </span>
+                        <span className="text-white">{round.valuation}</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-3">Participants</h4>
+                    <div className="space-y-2">
+                      {round.participants.map((participant, idx) => (
+                        <div key={idx} className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-300">{participant}</span>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <div className="mt-6">
+                      <h4 className="text-lg font-semibold text-white mb-3">Use of Funds</h4>
+                      <p className="text-zion-slate-300 text-sm">{round.use}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Market Opportunity */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-gradient-to-r from-zion-slate-800 to-zion-slate-700 rounded-2xl p-12 border border-zion-purple/20">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">Market Opportunity</h2>
             
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-xl font-semibold text-white mb-6 flex items-center">
-                  <BarChart3 className="w-6 h-6 text-cyan-400 mr-2" />
-                  Sector Analysis
-                </h3>
-                
+                <h3 className="text-2xl font-semibold text-white mb-6">Market Size</h3>
                 <div className="space-y-4">
-                  {marketPositioning.map((sector, index) => (
-                    <div key={index} className="bg-slate-900/50 rounded-lg p-4 border border-slate-700/50">
-                      <div className="flex items-center justify-between mb-2">
-                        <h4 className="font-semibold text-white">{sector.sector}</h4>
-                        <span className={`px-2 py-1 rounded text-xs ${
-                          sector.opportunity === 'Very High' ? 'bg-red-500/20 text-red-400' :
-                          sector.opportunity === 'High' ? 'bg-green-500/20 text-green-400' :
-                          'bg-yellow-500/20 text-yellow-400'
-                        }`}>
-                          {sector.opportunity}
-                        </span>
-                      </div>
-                      
-                      <div className="grid grid-cols-3 gap-2 text-sm">
-                        <div>
-                          <span className="text-gray-400">Market:</span>
-                          <div className="text-white font-medium">{sector.marketSize}</div>
-                        </div>
-                        <div>
-                          <span className="text-gray-400">Growth:</span>
-                          <div className="text-green-400 font-medium">{sector.growth}</div>
-                        </div>
-                        <div>
-                          <span className="text-gray-400">Position:</span>
-                          <div className="text-cyan-400 font-medium">{sector.position}</div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
+                  <div className="flex justify-between items-center p-4 bg-zion-slate-800/50 rounded-lg">
+                    <span className="text-zion-slate-300">Total Addressable Market</span>
+                    <span className="text-2xl font-bold text-zion-cyan">{marketOpportunity.totalAddressableMarket}</span>
+                  </div>
+                  <div className="flex justify-between items-center p-4 bg-zion-slate-800/50 rounded-lg">
+                    <span className="text-zion-slate-300">Serviceable Addressable Market</span>
+                    <span className="text-2xl font-bold text-zion-cyan">{marketOpportunity.serviceableAddressableMarket}</span>
+                  </div>
+                  <div className="flex justify-between items-center p-4 bg-zion-slate-800/50 rounded-lg">
+                    <span className="text-zion-slate-300">Serviceable Obtainable Market</span>
+                    <span className="text-2xl font-bold text-zion-cyan">{marketOpportunity.serviceableObtainableMarket}</span>
+                  </div>
+                  <div className="flex justify-between items-center p-4 bg-zion-slate-800/50 rounded-lg">
+                    <span className="text-zion-slate-300">Growth Rate</span>
+                    <span className="text-2xl font-bold text-zion-cyan">{marketOpportunity.growthRate}</span>
+                  </div>
                 </div>
               </div>
               
               <div>
-                <h3 className="text-xl font-semibold text-white mb-6 flex items-center">
-                  <TrendingUp className="w-6 h-6 text-green-400 mr-2" />
-                  Growth Strategy
-                </h3>
-                
-                <div className="space-y-4">
-                  <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-700/50">
-                    <h4 className="font-semibold text-white mb-2">Organic Growth</h4>
-                    <p className="text-gray-400 text-sm mb-3">Expand existing product lines and customer base</p>
-                    <div className="flex items-center text-sm text-green-400">
-                      <CheckCircle className="w-4 h-4 mr-2" />
-                      Target: 40% YoY growth
+                <h3 className="text-2xl font-semibold text-white mb-6">Key Growth Drivers</h3>
+                <div className="space-y-3">
+                  {marketOpportunity.keyDrivers.map((driver, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <TrendingUp className="w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0" />
+                      <span className="text-zion-slate-300">{driver}</span>
                     </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Competitive Advantages */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-16">Competitive Advantages</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {competitiveAdvantages.map((advantage, index) => (
+              <div key={index} className="bg-zion-slate-800/50 rounded-xl p-6 border border-zion-purple/20">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <advantage.icon className="w-6 h-6 text-zion-cyan" />
                   </div>
-                  
-                  <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-700/50">
-                    <h4 className="font-semibold text-white mb-2">Strategic Acquisitions</h4>
-                    <p className="text-gray-400 text-sm mb-3">Acquire complementary technologies and talent</p>
-                    <div className="flex items-center text-sm text-blue-400">
-                      <CheckCircle className="w-4 h-4 mr-2" />
-                      Target: 2-3 acquisitions/year
-                    </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-3">{advantage.title}</h3>
+                    <p className="text-zion-slate-300">{advantage.description}</p>
                   </div>
-                  
-                  <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-700/50">
-                    <h4 className="font-semibold text-white mb-2">Global Expansion</h4>
-                    <p className="text-gray-400 text-sm mb-3">Enter new markets and regions</p>
-                    <div className="flex items-center text-sm text-purple-400">
-                      <CheckCircle className="w-4 h-4 mr-2" />
-                      Target: 15 new countries
-                    </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Investor Resources */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-16">Investor Resources</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {investorResources.map((resource, index) => (
+              <div key={index} className="bg-zion-slate-800/50 rounded-lg p-6 border border-zion-purple/20">
+                <div className="flex items-center gap-3 mb-4">
+                  <resource.icon className="w-6 h-6 text-zion-cyan" />
+                  <h3 className="text-lg font-semibold text-white">{resource.name}</h3>
+                </div>
+                <p className="text-zion-slate-400 text-sm mb-4">{resource.description}</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-zion-slate-400">{resource.size}</span>
+                  <a 
+                    href={resource.url}
+                    className="inline-flex items-center px-4 py-2 bg-zion-cyan text-white text-sm font-medium rounded-lg hover:bg-zion-cyan/90 transition-colors"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    Download
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-zion-slate-800 to-zion-slate-700 rounded-2xl p-12 border border-zion-purple/20">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">Investor Relations</h2>
+            
+            <div className="text-center mb-8">
+              <p className="text-zion-slate-300 text-lg">
+                Ready to learn more about investment opportunities at Zion Tech Group? 
+                Our investor relations team is here to help.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <Mail className="w-5 h-5 text-zion-cyan" />
+                    <a href={`mailto:${contactInfo.investorEmail}`} className="text-zion-slate-300 hover:text-zion-cyan transition-colors">
+                      {contactInfo.investorEmail}
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Phone className="w-5 h-5 text-zion-cyan" />
+                    <a href={`tel:${contactInfo.phone}`} className="text-zion-slate-300 hover:text-zion-cyan transition-colors">
+                      {contactInfo.phone}
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <MapPin className="w-5 h-5 text-zion-cyan" />
+                    <span className="text-zion-slate-300">{contactInfo.address}</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-4">Next Steps</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan" />
+                    <span className="text-zion-slate-300">Schedule investor call</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan" />
+                    <span className="text-zion-slate-300">Access detailed financials</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-zion-cyan" />
+                    <span className="text-zion-slate-300">Meet leadership team</span>
                   </div>
                 </div>
               </div>
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Why Invest Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Invest in Zion Tech Group?</h2>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                {
-                  icon: Brain,
-                  title: 'AI Leadership',
-                  description: 'Pioneering AI solutions across industries',
-                  color: 'from-purple-500 to-pink-500'
-                },
-                {
-                  icon: Shield,
-                  title: 'Cybersecurity',
-                  description: 'Advanced security solutions for digital transformation',
-                  color: 'from-red-500 to-orange-500'
-                },
-                {
-                  icon: Cloud,
-                  title: 'Cloud Innovation',
-                  description: 'Next-generation cloud infrastructure and services',
-                  color: 'from-blue-500 to-cyan-500'
-                },
-                {
-                  icon: Zap,
-                  title: 'Emerging Tech',
-                  description: 'Quantum computing and IoT edge solutions',
-                  color: 'from-green-500 to-emerald-500'
-                }
-              ].map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-                  <p className="text-gray-400 text-sm">{feature.description}</p>
-                </motion.div>
-              ))}
+            <div className="text-center">
+              <a 
+                href={`mailto:${contactInfo.investorEmail}?subject=Investment Inquiry`}
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Schedule Investor Call
+              </a>
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50"
-          >
-            <h2 className="text-3xl font-bold text-white mb-6">Ready to Invest in the Future?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Connect with our investor relations team to learn more about investment opportunities, 
-              schedule a meeting, or access detailed financial information.
-            </p>
-            
-            <div className="grid md:grid-cols-3 gap-6 max-w-2xl mx-auto mb-8">
-              <div className="flex items-center justify-center">
-                <Phone className="w-5 h-5 text-cyan-400 mr-2" />
-                <span className="text-gray-300">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center justify-center">
-                <Mail className="w-5 h-5 text-purple-400 mr-2" />
-                <span className="text-gray-300">investors@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center justify-center">
-                <MapPin className="w-5 h-5 text-green-400 mr-2" />
-                <span className="text-gray-300">Middletown, DE</span>
-              </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
-                Schedule Meeting
-              </button>
-              <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200">
-                Download Investor Kit
-              </button>
-            </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>
   );
-};
+}
 
 export default Investors;
