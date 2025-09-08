@@ -1333,140 +1333,165 @@ import {
               />
             </div>
 
-            {/* Category Filter */}
-            <div className="flex flex-wrap gap-2">
-              <button
-                onClick={() => setSelectedCategory('all')}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  selectedCategory === 'all'
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                All Services ({services.length})
-              </button>
-              {serviceCategories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                    selectedCategory === category.id
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-                >
-                  {category.name} ({category.count})
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-blue-400">Service Delivery Process</h2>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">1</div>
+                  <h3 className="text-lg font-semibold mb-2">Discovery</h3>
+                  <p className="text-sm text-white/70">Understanding your needs and objectives</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-fuchsia-400 mb-2">2</div>
+                  <h3 className="text-lg font-semibold mb-2">Planning</h3>
+                  <p className="text-sm text-white/70">Creating detailed roadmap and strategy</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-400 mb-2">3</div>
+                  <h3 className="text-lg font-semibold mb-2">Implementation</h3>
+                  <p className="text-sm text-white/70">Building and deploying solutions</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-400 mb-2">4</div>
+                  <h3 className="text-lg font-semibold mb-2">Optimization</h3>
+                  <p className="text-sm text-white/70">Continuous improvement and support</p>
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Fast Delivery
-              </h3>
-              <p className="text-gray-600">
-                Agile development process ensuring rapid deployment and time-to-market
-              </p>
             </div>
-            <div className="text-center group">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-200 transition-colors mb-4">
-                <Shield className="h-8 w-8 text-purple-600" />
+
+            {/* Industry Solutions Section */}
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-purple-400">Industry Solutions</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
+                  <div className="text-2xl mb-3">🏥</div>
+                  <h3 className="text-lg font-semibold mb-2 text-cyan-400">Healthcare</h3>
+                  <p className="text-sm text-white/70 mb-3">AI-powered diagnostics, patient care automation, and medical data analytics.</p>
+                  <ul className="text-xs text-white/60 space-y-1">
+                    <li>• Medical Imaging Analysis</li>
+                    <li>• Patient Data Management</li>
+                    <li>• Drug Discovery Support</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
+                  <div className="text-2xl mb-3">🏭</div>
+                  <h3 className="text-lg font-semibold mb-2 text-fuchsia-400">Manufacturing</h3>
+                  <p className="text-sm text-white/70 mb-3">Smart factory solutions, predictive maintenance, and quality control automation.</p>
+                  <ul className="text-xs text-white/60 space-y-1">
+                    <li>• Predictive Maintenance</li>
+                    <li>• Quality Control</li>
+                    <li>• Supply Chain Optimization</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
+                  <div className="text-2xl mb-3">💰</div>
+                  <h3 className="text-lg font-semibold mb-2 text-green-400">Finance</h3>
+                  <p className="text-sm text-white/70 mb-3">Risk assessment, fraud detection, and automated trading systems.</p>
+                  <ul className="text-xs text-white/60 space-y-1">
+                    <li>• Fraud Detection</li>
+                    <li>• Risk Assessment</li>
+                    <li>• Algorithmic Trading</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
+                  <div className="text-2xl mb-3">🛒</div>
+                  <h3 className="text-lg font-semibold mb-2 text-blue-400">Retail</h3>
+                  <p className="text-sm text-white/70 mb-3">Customer behavior analysis, inventory management, and personalized marketing.</p>
+                  <ul className="text-xs text-white/60 space-y-1">
+                    <li>• Customer Analytics</li>
+                    <li>• Inventory Optimization</li>
+                    <li>• Personalized Marketing</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
+                  <div className="text-2xl mb-3">🚗</div>
+                  <h3 className="text-lg font-semibold mb-2 text-yellow-400">Transportation</h3>
+                  <p className="text-sm text-white/70 mb-3">Route optimization, fleet management, and autonomous vehicle systems.</p>
+                  <ul className="text-xs text-white/60 space-y-1">
+                    <li>• Route Optimization</li>
+                    <li>• Fleet Management</li>
+                    <li>• Traffic Analysis</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
+                  <div className="text-2xl mb-3">🎓</div>
+                  <h3 className="text-lg font-semibold mb-2 text-purple-400">Education</h3>
+                  <p className="text-sm text-white/70 mb-3">Personalized learning, student analytics, and administrative automation.</p>
+                  <ul className="text-xs text-white/60 space-y-1">
+                    <li>• Adaptive Learning</li>
+                    <li>• Student Analytics</li>
+                    <li>• Administrative Automation</li>
+                  </ul>
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Security First
-              </h3>
-              <p className="text-gray-600">
-                Enterprise-grade security and compliance with industry standards
-              </p>
             </div>
-            <div className="text-center group">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-hover:bg-orange-200 transition-colors mb-4">
-                <Users className="h-8 w-8 text-orange-600" />
+
+            {/* Technology Partners Section */}
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-cyan-400">Technology Partners</h2>
+              <p className="text-white/70 mb-6 text-center">
+                We work with leading technology providers to deliver the best solutions for our clients
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="text-3xl mb-2">☁️</div>
+                  <div className="text-sm text-white/60">AWS</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl mb-2">🔷</div>
+                  <div className="text-sm text-white/60">Azure</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl mb-2">🔶</div>
+                  <div className="text-sm text-white/60">Google Cloud</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl mb-2">🐳</div>
+                  <div className="text-sm text-white/60">Docker</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl mb-2">⚓</div>
+                  <div className="text-sm text-white/60">Kubernetes</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl mb-2">🤖</div>
+                  <div className="text-sm text-white/60">TensorFlow</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl mb-2">🔥</div>
+                  <div className="text-sm text-white/60">PyTorch</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl mb-2">⚛️</div>
+                  <div className="text-sm text-white/60">React</div>
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                24/7 Support
-              </h3>
-              <p className="text-gray-600">
-                Round-the-clock support and maintenance for all our solutions
+            </div>
+
+            {/* Call to Action Section */}
+            <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-12 border border-cyan-500/20 text-center">
+              <h2 className="text-3xl font-bold mb-4 text-white">Ready to Get Started?</h2>
+              <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+                Let's discuss how our AI and automation services can transform your business operations 
+                and drive innovation across your organization.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contact" className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
+                  Schedule a Consultation
+                </a>
+                <a href="/case-studies" className="px-8 py-4 border border-white/20 text-white rounded-lg font-semibold hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300">
+                  View Our Work
+                </a>
+              </div>
             </div>
-            <h3 className="text-xl font-bold mb-4 text-gray-900">99.99% Uptime</h3>
-            <p className="text-gray-600">
-              Multi-layer redundancy systems ensure your operations never stop
-            </p>
-          </div>
-        </div>
-      </section>
-
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              We follow a systematic approach that ensures quality, speed, and successful outcomes for every project.
-            </p>
-
-                <span className="text-2xl font-bold text-blue-600">1</span>
-              </div>"
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-
-              <p className="text-gray-600">
-                Deep dive into your business needs, requirements, and technical constraints
-              </p>
-            </div>"
-            <div className="text-center group">"
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-hover:bg-green-200 transition-colors mb-4">"
-                <span className="text-2xl font-bold text-green-600">2</span>
-              </div>"
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-
-                <span className="text-2xl font-bold text-purple-600">3</span>
-              </div>"
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-
-                <span className="text-2xl font-bold text-orange-600">4</span>
-              </div>"
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Pricing & Market Positioning Section */}"
-      <section className="py-24 sm: py-32 bg-gray-50">"
-        <div className="mx-auto max-w-7xl px-6 l,
-    g:px-8">"
-          <div className="mx-auto max-w-2xl text-center mb-16">"
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 s,
-    m:text-4xl">
-              Competitive Pricing & Market Leadership
-            </h2>"
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Our pricing reflects the true value of cutting-edge technology
-              solutions, with transparent costs and exceptional ROI.
-            </p>
-          </div>
-
-
-                aria-label="Back to homepage"
-              >"
-                Back to Home{' '}
-                <span'
-                  aria-hidden="true""
-                  className="group-hover:translate-x-1 transition-transform inline-block"
-                >
-                  →
-                </span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </PageTransition>
-  )
-
+          </section>
+        </main>
+      </div>
+    </>
+  );
 }
-"
-
-	)}
-
-
