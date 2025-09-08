@@ -1,8 +1,20 @@
-export default function ChatContent5() {
+import type { NextPage } from 'next';
+import Head from 'next/head';
+
+const DigitalTransformationInsights: NextPage = () => {
   return (
-    <div className="py-10">
-      <h1 className="text-2xl font-semibold mb-2">Digital Transformation Insights</h1>
-      <p className="text-gray-600 dark:text-gray-300">Coming soon.</p>
+    <div>
+      <Head>
+        <title>DigitalTransformationInsights - Zion Tech Solutions</title>
+        <meta name="description" content="DigitalTransformationInsights page" />
+      </Head>
+      
+      <main>
+        <h1>DigitalTransformationInsights</h1>
+        <p>This page is under construction.</p>
+      </main>
     </div>
   );
-}
+};
+
+export default DigitalTransformationInsights;

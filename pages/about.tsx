@@ -1,8 +1,20 @@
-export default function About() {
+import type { NextPage } from 'next';
+import Head from 'next/head';
+
+const About: NextPage = () => {
   return (
-    <div className="py-10">
-      <h1 className="text-2xl font-semibold mb-2">About Zion</h1>
-      <p className="text-gray-600 dark:text-gray-300">Zion builds tools for talent networks, marketplaces, and AI-enabled growth.</p>
+    <div>
+      <Head>
+        <title>About - Zion Tech Solutions</title>
+        <meta name="description" content="About page" />
+      </Head>
+      
+      <main>
+        <h1>About</h1>
+        <p>This page is under construction.</p>
+      </main>
     </div>
   );
-}
+};
+
+export default About;

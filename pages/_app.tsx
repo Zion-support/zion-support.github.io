@@ -1,15 +1,13 @@
+import React from 'react';
 import type { AppProps } from 'next/app';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
-import { TenantProvider } from '../components/multiverse/TenantProvider';
-import { getServerSideTenant } from '../utils/tenant';
+import '../styles/globals.css';
 import '../styles/enhanced-design-system.css';
 import '../styles/modern-design-system.css';
-import PageLoadTracker from '../components/metrics/PageLoadTracker';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <EnhancedLayout>
-      <PageLoadTracker />
       <Component {...pageProps} />
     </EnhancedLayout>
   );

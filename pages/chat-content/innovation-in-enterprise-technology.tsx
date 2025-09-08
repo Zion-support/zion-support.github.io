@@ -1,8 +1,20 @@
-export default function ChatContent8() {
+import type { NextPage } from 'next';
+import Head from 'next/head';
+
+const InnovationInEnterpriseTechnology: NextPage = () => {
   return (
-    <div className="py-10">
-      <h1 className="text-2xl font-semibold mb-2">Innovation in Enterprise Technology</h1>
-      <p className="text-gray-600 dark:text-gray-300">Coming soon.</p>
+    <div>
+      <Head>
+        <title>InnovationInEnterpriseTechnology - Zion Tech Solutions</title>
+        <meta name="description" content="InnovationInEnterpriseTechnology page" />
+      </Head>
+      
+      <main>
+        <h1>InnovationInEnterpriseTechnology</h1>
+        <p>This page is under construction.</p>
+      </main>
     </div>
   );
-}
+};
+
+export default InnovationInEnterpriseTechnology;
