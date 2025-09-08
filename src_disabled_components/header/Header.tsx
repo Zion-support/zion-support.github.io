@@ -1,17 +1,17 @@
 
 import React from 'react';
-import { _Link } from 'react-router-dom';
-import { _Logo } from './Logo';
-import { _UserMenu } from './UserMenu';
-import { _LanguageSelector } from './LanguageSelector';
-import { _ModeToggle } from "@/components/ModeToggle";
-import { _MainNavigation } from '@/layout/MainNavigation';
-import { _useAuth } from '@/hooks/useAuth';
-import { _useWhitelabel } from '@/context/WhitelabelContext';
-import { _EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { _generateSearchSuggestions } from "@/data/marketplaceData";
-import { _useNavigate } from "react-router-dom";
-import { _useState } from "react";
+import { Link } from 'react-router-dom';
+import { Logo } from './Logo';
+import { UserMenu } from './UserMenu';
+import { LanguageSelector } from './LanguageSelector';
+import { ModeToggle } from "@/components/ModeToggle";
+import { MainNavigation } from '@/layout/MainNavigation';
+import { useAuth } from '@/hooks/useAuth';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { generateSearchSuggestions } from "@/data/marketplaceData";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export interface HeaderProps {
   hideLogin?: boolean;
@@ -24,8 +24,8 @@ export interface HeaderProps {
 }
 
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
-  const { _user } = useAuth();
-  const { _isWhitelabel, _primaryColor } = useWhitelabel();
+  const { user } = useAuth();
+  const { isWhitelabel, primaryColor } = useWhitelabel();
   const navigate = useNavigate();
   const [query, setQuery] = useState("");
   const searchSuggestions = generateSearchSuggestions();
@@ -41,7 +41,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   const headerStyle = effectiveTheme ? {
     backgroundColor: effectiveTheme.backgroundColor,
     color: effectiveTheme.textColor,
-    _borderColor: `${effectiveTheme.primaryColor}20`
+    borderColor: `${effectiveTheme.primaryColor}20`
   } : {};
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -55,23 +55,23 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   return (
     <header 
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md"
-      style={_headerStyle}
+      style={headerStyle}
     >
-      <div className="container flex h-16 items-center px-4 _sm:px-6">
-        <Logo customLogo={_customLogo} customColor={effectiveTheme?.primaryColor} />
+      <div className="container flex h-16 items-center px-4 sm:px-6">
+        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
 
         <div className="ml-6 flex-1">
           <MainNavigation />
         </div>
-        <form onSubmit={_handleSubmit} className="hidden md:block w-64 mx-4">
+        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
           <EnhancedSearchInput
-            value={_query}
-            onChange={_setQuery}
+            value={query}
+            onChange={setQuery}
             onSelectSuggestion={(text) => {
               navigate(`/search?q=${encodeURIComponent(text)}`);
               setQuery("");
             }}
-            searchSuggestions={_searchSuggestions}
+            searchSuggestions={searchSuggestions}
           />
         </form>
 

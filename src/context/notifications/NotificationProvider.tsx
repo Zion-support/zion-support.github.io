@@ -1,3 +1,4 @@
+=======
 import React, { createContext, useContext, useState } from 'react';
 
 interface Notification {
@@ -11,7 +12,7 @@ interface NotificationContextType {
   notifications: Notification[];
   addNotification: (notification: Omit<Notification, 'id'>) => void;
   removeNotification: (id: string) => void;
-  clearAll: () => void;
+  clearAll: () => void;>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 }
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
@@ -28,9 +29,7 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
       setTimeout(() => {
         removeNotification(id);
       }, notification.duration || 5000);
-    }
->>>>>>> c7463fd0584e5d583266e6252c3232de9d3fa475
-  };
+    }  };
 
   const removeNotification = (id: string) => {
     setNotifications(prev => prev.filter(n => n.id !== id));
@@ -52,10 +51,11 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
   );
 };
 
-export const useNotifications = () => {
+export const useNotifications = () => {>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   const context = useContext(NotificationContext);
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider');
   }
   return context;
+=======>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 };

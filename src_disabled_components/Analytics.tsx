@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { usePerformance } from '../hooks/usePerformance';
-import { useErrorHandler } from '../utils/errorHandler';
+import { performanceTracker } from '../utils/performance';
+import { errorReporter } from '../utils/errorReporting';
 
 interface AnalyticsProps {
   trackingId?: string;
@@ -15,9 +15,6 @@ export const Analytics: React.FC<AnalyticsProps> = ({
   enableErrorTracking = true,
   enablePageViewTracking = true,
 }) => {
-  const { getMetrics } = usePerformance();
-  const { handleError } = useErrorHandler();
-
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
@@ -29,7 +26,7 @@ export const Analytics: React.FC<AnalyticsProps> = ({
       document.head.appendChild(script);
 
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args: unknown[]) {
+      function gtag(...args: any[]) {
         window.dataLayer.push(args);
       }
       window.gtag = gtag;
@@ -72,57 +69,45 @@ export const Analytics: React.FC<AnalyticsProps> = ({
 
       window.addEventListener('popstate', trackPageView);
     }
-  }, [trackingId, enablePageViewTracking]);
 
-  // Track performance metrics
-  useEffect(() => {
-    if (enablePerformanceTracking && metrics && window.gtag) {
-      window.gtag('event', 'performance_metrics', {
-        load_time: Math.round(metrics.loadTime || 0),
-        first_contentful_paint: metrics.firstContentfulPaint ? Math.round(metrics.firstContentfulPaint) : undefined,
-        largest_contentful_paint: metrics.largestContentfulPaint ? Math.round(metrics.largestContentfulPaint) : undefined,
-        first_input_delay: metrics.firstInputDelay ? Math.round(metrics.firstInputDelay) : undefined,
-        cumulative_layout_shift: metrics.cumulativeLayoutShift ? Math.round(metrics.cumulativeLayoutShift * 1000) / 1000 : undefined,
-        time_to_interactive: metrics.timeToInteractive ? Math.round(metrics.timeToInteractive) : undefined,
-        memory_usage: metrics.memoryUsage ? Math.round(metrics.memoryUsage) : undefined,
+    // Track performance metrics
+    if (enablePerformanceTracking) {
+      const unsubscribe = performanceTracker.subscribe((metrics) => {
+        if (window.gtag) {
+          window.gtag('event', 'performance_metrics', {
+            load_time: Math.round(metrics.loadTime),
+            bundle_size: Math.round(metrics.bundleSize),
+            memory_usage: Math.round(metrics.memoryUsage),
+            render_time: Math.round(metrics.renderTime),
+            first_contentful_paint: metrics.firstContentfulPaint ? Math.round(metrics.firstContentfulPaint) : undefined,
+            largest_contentful_paint: metrics.largestContentfulPaint ? Math.round(metrics.largestContentfulPaint) : undefined,
+            cumulative_layout_shift: metrics.cumulativeLayoutShift ? Math.round(metrics.cumulativeLayoutShift * 1000) / 1000 : undefined,
+          });
+        }
       });
-    }
-  }, [metrics, enablePerformanceTracking]);
-
-  // Track errors
-  useEffect(() => {
-    if (enableErrorTracking) {
-      const handleGlobalError = (event: ErrorEvent) => {
-        handleError(event.error || new Error(event.message));
-        if (window.gtag) {
-          window.gtag('event', 'error_occurred', {
-            error_message: event.message,
-            error_filename: event.filename,
-            error_lineno: event.lineno,
-            error_colno: event.colno,
-          });
-        }
-      };
-
-      const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-        handleError(new Error(event.reason));
-        if (window.gtag) {
-          window.gtag('event', 'error_occurred', {
-            error_message: event.reason,
-            error_type: 'unhandled_promise_rejection',
-          });
-        }
-      };
-
-      window.addEventListener('error', handleGlobalError);
-      window.addEventListener('unhandledrejection', handleUnhandledRejection);
 
       return () => {
-        window.removeEventListener('error', handleGlobalError);
-        window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+        unsubscribe();
       };
     }
-  }, [enableErrorTracking, handleError]);
+
+    // Track errors
+    if (enableErrorTracking) {
+      const unsubscribe = errorReporter.subscribe((errorStats) => {
+        if (window.gtag) {
+          window.gtag('event', 'error_occurred', {
+            error_count: errorStats.totalErrors,
+            severity_counts: JSON.stringify(errorStats.severityCounts),
+            session_id: errorStats.sessionId,
+          });
+        }
+      });
+
+      return () => {
+        unsubscribe();
+      };
+    }
+  }, [trackingId, enablePerformanceTracking, enableErrorTracking, enablePageViewTracking]);
 
   return null; // This component doesn't render anything
 };
@@ -130,8 +115,8 @@ export const Analytics: React.FC<AnalyticsProps> = ({
 // Declare global gtag function
 declare global {
   interface Window {
-    dataLayer: unknown[];
-    gtag: (...args: unknown[]) => void;
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
   }
 }
 

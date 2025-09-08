@@ -1,9 +1,9 @@
-import React, { _useState } from 'react';
-import { _Button } from '@/components/ui/Button';
-import { _Dialog, _DialogContent, _DialogHeader, _DialogTitle, _DialogDescription, _DialogFooter } from '@/components/ui/dialog';
-import { _Input } from '@/components/ui/input';
-import { _getStripe } from '@/utils/getStripe';
-import { _useAuth } from '@/hooks/useAuth';
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/Button';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { getStripe } from '@/utils/getStripe';
+import { useAuth } from '@/hooks/useAuth';
 
 interface ProductCardProps {
   id: string;
@@ -12,22 +12,22 @@ interface ProductCardProps {
   priceId: string;
 }
 
-export function ProductCard({ _id, _name, _price, _priceId }: ProductCardProps) {
-  const { _user } = useAuth();
+export function ProductCard({ id, name, price, priceId }: ProductCardProps) {
+  const { user } = useAuth();
   const [showGuest, setShowGuest] = useState(false);
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
 
-  const createSession = async (_body: unknown) => {
+  const createSession = async (body: any) => {
     const res = await fetch('/api/create-checkout-session', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body),
     });
-    const { _sessionId } = await res.json();
+    const { sessionId } = await res.json();
     const stripe = await getStripe();
     if (stripe && sessionId) {
-      await stripe.redirectToCheckout({ _sessionId });
+      await stripe.redirectToCheckout({ sessionId });
     }
   };
 
@@ -36,7 +36,7 @@ export function ProductCard({ _id, _name, _price, _priceId }: ProductCardProps) 
       setShowGuest(true);
       return;
     }
-    await createSession({ _priceId });
+    await createSession({ priceId });
   };
 
   const handleGuest = async (e: React.FormEvent) => {
@@ -46,19 +46,19 @@ export function ProductCard({ _id, _name, _price, _priceId }: ProductCardProps) 
 
   return (
     <div className="border p-4 rounded-md space-y-3">
-      <h3 className="font-bold">{_name}</h3>
+      <h3 className="font-bold">{name}</h3>
       <p>${price.toFixed(2)}</p>
-      <Button onClick={_handleBuy}>Buy Now</Button>
+      <Button onClick={handleBuy}>Buy Now</Button>
 
-      <Dialog open={_showGuest} onOpenChange={_setShowGuest}>
+      <Dialog open={showGuest} onOpenChange={setShowGuest}>
         <DialogContent>
-          <form onSubmit={_handleGuest} className="space-y-4">
+          <form onSubmit={handleGuest} className="space-y-4">
             <DialogHeader>
               <DialogTitle>Checkout as Guest</DialogTitle>
               <DialogDescription>Enter email and shipping address</DialogDescription>
             </DialogHeader>
-            <Input aria-label="Email" required value={_email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
-            <Input aria-label="Shipping" required value={_address} onChange={(e) => setAddress(e.target.value)} placeholder="Shipping Address" />
+            <Input aria-label="Email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
+            <Input aria-label="Shipping" required value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Shipping Address" />
             <DialogFooter>
               <Button type="submit" className="w-full">Checkout</Button>
             </DialogFooter>

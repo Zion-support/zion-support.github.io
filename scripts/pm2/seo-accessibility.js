@@ -494,6 +494,7 @@ class SEOAccessibilityScanner {}
     this.log(`${this.processName} started successfully`);,
   }
 }
+=======>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 // Start the automation if this script is run directly;
 if (require.main === module) {}
   const scanner = new SEOAccessibilityScanner();,
@@ -502,4 +503,9 @@ if (require.main === module) {}
     process.exit(1);,
   });
 }
+module.exports = SEOAccessibilityScanner;>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======
+module.exports = SEOAccessibilityScanner;=======
 module.exports = SEOAccessibilityScanner;
+>>>>>>> origin/main
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

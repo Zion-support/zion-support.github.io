@@ -86,19 +86,17 @@ export function HireNowCTA("props": "any) {;
       </CardContent>;
     </Card>)}
 ;
-export default HireNowCTA;        e.preventDefault();        if (onHire) {
+=======export default HireNowCTA;        e.preventDefault();        if (onHire) {
             onHire(formData);
         }
-        // Reset form and close
-        setFormData({
-            projectDescription: '',
-            budget: '',
-            startDate: '',
+>>>>>>> origin/main            startDate: '',
 :src/components/profile/HireNowCTA.jsx
             message: ''}
     );
         setIsFormOpen(false)};
             message: ''
         });
+=======        setIsFormOpen(false);
+    };=======
         setIsFormOpen(false);
-    };
+    };>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

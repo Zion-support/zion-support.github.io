@@ -5,169 +5,120 @@ export interface User {
   email: string;
   name?: string;
   avatar?: string;
-  role?: string;
 }
 
-export interface AuthState {
+export interface AuthContextType {
   isAuthenticated: boolean;
   user: User | null;
-  isLoading: boolean;
-  error: string | null;
-}
-
-export interface AuthContextType extends AuthState {
   login: (email: string, password: string) => Promise<void>;
-  logout: () => Promise<void>;
+  logout: () => void;
   register: (email: string, password: string, name?: string) => Promise<void>;
-  clearError: () => void;
+  isLoading: boolean;
 }
 
-export const AuthContext = createContext<AuthContextType | undefined>(undefined);
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-// Remove this since we have useAuth in hooks/useAuth.ts
+export const useAuth = (): AuthContextType => {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+};
 
 interface AuthProviderProps {
   children: ReactNode;
 }
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
-  const [authState, setAuthState] = useState<AuthState>({
-    isAuthenticated: false,
-    user: null,
-    isLoading: true,
-    error: null,
-  });
+  const [user, setUser] = useState<User | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const isAuthenticated = !!user;
 
   useEffect(() => {
-    // Check for existing session
+    // Check for existing session on mount
     const checkAuth = async () => {
       try {
-        // Mock authentication check
-        const token = localStorage.getItem('auth_token');
+        const token = localStorage.getItem('auth-token');
         if (token) {
-          // In a real app, validate the token with your backend
-          setAuthState({
-            isAuthenticated: true,
-            user: {
-              id: '1',
-              email: 'user@example.com',
-              name: 'Demo User',
-            },
-            isLoading: false,
-            error: null,
-          });
-        } else {
-          setAuthState(prev => ({ ...prev, isLoading: false }));
+          // In a real app, you would validate the token with your backend
+          const userData = JSON.parse(localStorage.getItem('user-data') || '{}');
+          setUser(userData);
         }
       } catch (error) {
-        setAuthState({
-          isAuthenticated: false,
-          user: null,
-          isLoading: false,
-          error: 'Authentication check failed',
-        });
+        console.error('Auth check failed:', error);
+        localStorage.removeItem('auth-token');
+        localStorage.removeItem('user-data');
+      } finally {
+        setIsLoading(false);
       }
     };
 
     checkAuth();
   }, []);
 
-  const login = async (email: string, _password: string) => {
-    setAuthState(prev => ({ ...prev, isLoading: true, error: null }));
-    
+  const login = async (email: string, password: string) => {
+    setIsLoading(true);
     try {
-      // Mock login - in a real app, call your authentication API
-      if (email && password) {
-        const token = 'mock_token_' + Date.now();
-        localStorage.setItem('auth_token', token);
-        
-        setAuthState({
-          isAuthenticated: true,
-          user: {
-            id: '1',
-            email,
-            name: 'Demo User',
-          },
-          isLoading: false,
-          error: null,
-        });
-      } else {
-        throw new Error('Invalid credentials');
-      }
-    } catch (error) {
-      setAuthState({
-        isAuthenticated: false,
-        user: null,
-        isLoading: false,
-        error: error instanceof Error ? error.message : 'Login failed',
-      });
-    }
-  };
+      // In a real app, you would make an API call to your backend
+      const mockUser: User = {
+        id: '1',
+        email,
+        name: email.split('@')[0],
+      };
 
-  const logout = async () => {
-    setAuthState(prev => ({ ...prev, isLoading: true }));
-    
-    try {
-      localStorage.removeItem('auth_token');
-      setAuthState({
-        isAuthenticated: false,
-        user: null,
-        isLoading: false,
-        error: null,
-      });
+      const mockToken = 'mock-jwt-token';
+      
+      localStorage.setItem('auth-token', mockToken);
+      localStorage.setItem('user-data', JSON.stringify(mockUser));
+      setUser(mockUser);
     } catch (error) {
-      setAuthState(prev => ({
-        ...prev,
-        isLoading: false,
-        error: 'Logout failed',
-      }));
+      console.error('Login failed:', error);
+      throw error;
+    } finally {
+      setIsLoading(false);
     }
   };
 
   const register = async (email: string, password: string, name?: string) => {
-    setAuthState(prev => ({ ...prev, isLoading: true, error: null }));
-    
+    setIsLoading(true);
     try {
-      // Mock registration - in a real app, call your registration API
-      if (email && password) {
-        const token = 'mock_token_' + Date.now();
-        localStorage.setItem('auth_token', token);
-        
-        setAuthState({
-          isAuthenticated: true,
-          user: {
-            id: '1',
-            email,
-            name: name || 'New User',
-          },
-          isLoading: false,
-          error: null,
-        });
-      } else {
-        throw new Error('Invalid registration data');
-      }
+      // In a real app, you would make an API call to your backend
+      const mockUser: User = {
+        id: '1',
+        email,
+        name: name || email.split('@')[0],
+      };
+
+      const mockToken = 'mock-jwt-token';
+      
+      localStorage.setItem('auth-token', mockToken);
+      localStorage.setItem('user-data', JSON.stringify(mockUser));
+      setUser(mockUser);
     } catch (error) {
-      setAuthState({
-        isAuthenticated: false,
-        user: null,
-        isLoading: false,
-        error: error instanceof Error ? error.message : 'Registration failed',
-      });
+      console.error('Registration failed:', error);
+      throw error;
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  const clearError = () => {
-    setAuthState(prev => ({ ...prev, error: null }));
+  const logout = () => {
+    localStorage.removeItem('auth-token');
+    localStorage.removeItem('user-data');
+    setUser(null);
   };
 
   return (
     <AuthContext.Provider
       value={{
-        ...authState,
+        isAuthenticated,
+        user,
         login,
         logout,
         register,
-        clearError,
+        isLoading,
       }}
     >
       {children}
