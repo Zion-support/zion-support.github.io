@@ -35,9 +35,7 @@ const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/Comprehen
 const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030.tsx'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
 const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedServicesLanding.tsx'));
-const ComprehensiveServicesAdvertising = React.lazy(() => import('./pages/ComprehensiveServicesAdvertising.tsx'));
 const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030.tsx'));
-const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025.tsx'));
 
 // New pages
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
@@ -249,6 +247,19 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
   </div>
  );
 
+const Partners = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+    <SEO 
+      title="Partners - Zion Tech Group"
+      description="Partner with us to deliver cutting-edge AI and technology solutions to your clients."
+    />
+    <div className="text-center text-white">
+      <h1 className="text-4xl font-bold mb-4">Partners</h1>
+      <p className="text-xl text-gray-300">Partner with us</p>
+    </div>
+  </div>
+);
+
 function App() {
   return (
     <ErrorBoundary>
@@ -291,6 +302,7 @@ function App() {
                 <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                 <Route path="/pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                 <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
+                <Route path="/comprehensive-services-showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
