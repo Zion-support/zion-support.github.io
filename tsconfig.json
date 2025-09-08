@@ -44,6 +44,8 @@
   },
   "include": [
     "src/**/*",
+    "src/**/*.ts",
+    "src/**/*.tsx",
     "vite.config.ts",
     "tailwind.config.ts",
     "vitest.config.ts"
@@ -61,6 +63,10 @@
     "**/*.stories.tsx",
     "src_disabled_*",
     "src.disabled",
+    "src.disabled/**/*",
+    "src_disabled_*/**/*",
+    "**/disabled/**/*",
+    "**/*.disabled/**/*",
     "tests",
     "__tests__",
     "supabase/functions"
