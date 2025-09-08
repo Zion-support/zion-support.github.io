@@ -244,9 +244,8 @@ const EnhancedLoadingSpinner = () => (
 function App() {
   return (
     <WhitelabelProvider>
-      <ConsentProvider>
-        <ThemeProvider defaultTheme="dark">
-          <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+      <ThemeProvider defaultTheme="dark">
+        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
           <ErrorBoundary>
           <Routes>
             {baseRoutes.map(({ path, element }) => (
@@ -264,7 +263,8 @@ function App() {
             <Route path="/developers/*" element={<DeveloperRoutes />} />
             <Route path="*" element={<ErrorRoutes />} />
           </Routes>
-        </React.Suspense>
+          </ErrorBoundary>
+        </Suspense>
         <Toaster />
         <SonnerToaster position="top-right" />
           <CookieBanner />
