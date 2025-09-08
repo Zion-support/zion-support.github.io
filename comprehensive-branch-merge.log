@@ -20073,3 +20073,105 @@ fatal: couldn't find remote ref cursor/expand-services-advertise-and-build-proje
 [2025-09-08T21:26:47.348Z] ✅ Success: Get git status
 [2025-09-08T21:26:47.348Z] 📄 Found 0 conflicted files
 [2025-09-08T21:26:47.348Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:26:47.467Z] ✅ Success: Add resolved files
+[2025-09-08T21:26:47.467Z] 🚀 Commit merge for cursor/expand-services-advertise-and-build-project-931c: git commit -m "Resolve conflicts and merge cursor/expand-services-advertise-and-build-project-931c"
+[2025-09-08T21:26:47.547Z] ✅ Success: Commit merge for cursor/expand-services-advertise-and-build-project-931c
+[2025-09-08T21:26:47.547Z] ✅ Successfully resolved conflicts and merged: cursor/expand-services-advertise-and-build-project-931c
+[2025-09-08T21:26:47.547Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-96b8
+[2025-09-08T21:26:47.548Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-96b8: git fetch origin cursor/expand-services-advertise-and-build-project-96b8
+[2025-09-08T21:26:47.983Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-96b8
+[2025-09-08T21:26:47.983Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-96b8: git merge origin/cursor/expand-services-advertise-and-build-project-96b8 --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-96b8 into main"
+[2025-09-08T21:26:48.538Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-96b8
+[2025-09-08T21:26:48.538Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-96b8
+[2025-09-08T21:26:48.538Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-96f9
+[2025-09-08T21:26:48.538Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-96f9: git fetch origin cursor/expand-services-advertise-and-build-project-96f9
+[2025-09-08T21:26:48.946Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-96f9
+[2025-09-08T21:26:48.946Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-96f9: git merge origin/cursor/expand-services-advertise-and-build-project-96f9 --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-96f9 into main"
+[2025-09-08T21:26:49.401Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-96f9
+[2025-09-08T21:26:49.401Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-96f9
+[2025-09-08T21:26:49.401Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-9761
+[2025-09-08T21:26:49.401Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-9761: git fetch origin cursor/expand-services-advertise-and-build-project-9761
+[2025-09-08T21:26:49.757Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-9761
+[2025-09-08T21:26:49.757Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-9761: git merge origin/cursor/expand-services-advertise-and-build-project-9761 --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-9761 into main"
+[2025-09-08T21:26:50.202Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-9761
+[2025-09-08T21:26:50.202Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-9761
+[2025-09-08T21:26:50.202Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-9e1e
+[2025-09-08T21:26:50.202Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-9e1e: git fetch origin cursor/expand-services-advertise-and-build-project-9e1e
+[2025-09-08T21:26:50.530Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-9e1e
+[2025-09-08T21:26:50.531Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-9e1e: git merge origin/cursor/expand-services-advertise-and-build-project-9e1e --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-9e1e into main"
+[2025-09-08T21:26:50.988Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-9e1e
+[2025-09-08T21:26:50.988Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-9e1e
+[2025-09-08T21:26:50.988Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-a709
+[2025-09-08T21:26:50.988Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-a709: git fetch origin cursor/expand-services-advertise-and-build-project-a709
+[2025-09-08T21:26:51.337Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-a709
+[2025-09-08T21:26:51.337Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-a709: git merge origin/cursor/expand-services-advertise-and-build-project-a709 --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-a709 into main"
+[2025-09-08T21:26:51.772Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-a709
+[2025-09-08T21:26:51.772Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-a709
+[2025-09-08T21:26:51.772Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-b51f
+[2025-09-08T21:26:51.772Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-b51f: git fetch origin cursor/expand-services-advertise-and-build-project-b51f
+[2025-09-08T21:26:52.100Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-b51f
+[2025-09-08T21:26:52.100Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-b51f: git merge origin/cursor/expand-services-advertise-and-build-project-b51f --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-b51f into main"
+[2025-09-08T21:26:52.529Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-b51f
+[2025-09-08T21:26:52.529Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-b51f
+[2025-09-08T21:26:52.529Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-b744
+[2025-09-08T21:26:52.529Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-b744: git fetch origin cursor/expand-services-advertise-and-build-project-b744
+[2025-09-08T21:26:52.859Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-b744
+[2025-09-08T21:26:52.859Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-b744: git merge origin/cursor/expand-services-advertise-and-build-project-b744 --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-b744 into main"
+[2025-09-08T21:26:53.292Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-b744
+[2025-09-08T21:26:53.292Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-b744
+[2025-09-08T21:26:53.292Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-b7d5
+[2025-09-08T21:26:53.292Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-b7d5: git fetch origin cursor/expand-services-advertise-and-build-project-b7d5
+[2025-09-08T21:26:53.621Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-b7d5
+[2025-09-08T21:26:53.622Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-b7d5: git merge origin/cursor/expand-services-advertise-and-build-project-b7d5 --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-b7d5 into main"
+[2025-09-08T21:26:54.048Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-b7d5
+[2025-09-08T21:26:54.048Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-b7d5
+[2025-09-08T21:26:55.049Z] 📦 Processing batch 252/509
+[2025-09-08T21:26:55.049Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-c52f
+[2025-09-08T21:26:55.049Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-c52f: git fetch origin cursor/expand-services-advertise-and-build-project-c52f
+[2025-09-08T21:26:55.366Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-c52f
+[2025-09-08T21:26:55.366Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-c52f: git merge origin/cursor/expand-services-advertise-and-build-project-c52f --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-c52f into main"
+[2025-09-08T21:26:55.792Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-c52f
+[2025-09-08T21:26:55.792Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-c52f
+[2025-09-08T21:26:55.792Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-c7b8
+[2025-09-08T21:26:55.793Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-c7b8: git fetch origin cursor/expand-services-advertise-and-build-project-c7b8
+[2025-09-08T21:26:56.109Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-c7b8
+[2025-09-08T21:26:56.109Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-c7b8: git merge origin/cursor/expand-services-advertise-and-build-project-c7b8 --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-c7b8 into main"
+[2025-09-08T21:26:56.533Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-c7b8
+[2025-09-08T21:26:56.533Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-c7b8
+[2025-09-08T21:26:56.533Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-cac2
+[2025-09-08T21:26:56.533Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-cac2: git fetch origin cursor/expand-services-advertise-and-build-project-cac2
+[2025-09-08T21:26:56.850Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-cac2
+[2025-09-08T21:26:56.850Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-cac2: git merge origin/cursor/expand-services-advertise-and-build-project-cac2 --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-cac2 into main"
+[2025-09-08T21:26:57.277Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-cac2
+[2025-09-08T21:26:57.277Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-cac2
+[2025-09-08T21:26:57.277Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-db7d
+[2025-09-08T21:26:57.277Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-db7d: git fetch origin cursor/expand-services-advertise-and-build-project-db7d
+[2025-09-08T21:26:57.605Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-db7d
+[2025-09-08T21:26:57.605Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-db7d: git merge origin/cursor/expand-services-advertise-and-build-project-db7d --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-db7d into main"
+[2025-09-08T21:26:58.039Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-db7d
+[2025-09-08T21:26:58.040Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-db7d
+[2025-09-08T21:26:58.040Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-dc3f
+[2025-09-08T21:26:58.040Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-dc3f: git fetch origin cursor/expand-services-advertise-and-build-project-dc3f
+[2025-09-08T21:26:58.376Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-dc3f
+[2025-09-08T21:26:58.376Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-dc3f: git merge origin/cursor/expand-services-advertise-and-build-project-dc3f --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-dc3f into main"
+[2025-09-08T21:26:58.803Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-dc3f
+[2025-09-08T21:26:58.803Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-dc3f
+[2025-09-08T21:26:58.803Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-dc65
+[2025-09-08T21:26:58.803Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-dc65: git fetch origin cursor/expand-services-advertise-and-build-project-dc65
+[2025-09-08T21:26:59.113Z] ✅ Success: Fetch origin/cursor/expand-services-advertise-and-build-project-dc65
+[2025-09-08T21:26:59.113Z] 🚀 Merge cursor/expand-services-advertise-and-build-project-dc65: git merge origin/cursor/expand-services-advertise-and-build-project-dc65 --no-ff -m "Merge branch cursor/expand-services-advertise-and-build-project-dc65 into main"
+[2025-09-08T21:26:59.539Z] ✅ Success: Merge cursor/expand-services-advertise-and-build-project-dc65
+[2025-09-08T21:26:59.539Z] ✅ Successfully merged: cursor/expand-services-advertise-and-build-project-dc65
+[2025-09-08T21:26:59.539Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-de4a
+[2025-09-08T21:26:59.539Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-de4a: git fetch origin cursor/expand-services-advertise-and-build-project-de4a
+[2025-09-08T21:26:59.665Z] ❌ Error in Fetch origin/cursor/expand-services-advertise-and-build-project-de4a: Command failed: git fetch origin cursor/expand-services-advertise-and-build-project-de4a
+fatal: couldn't find remote ref cursor/expand-services-advertise-and-build-project-de4a
+
+[2025-09-08T21:26:59.666Z] ❌ Failed to merge cursor/expand-services-advertise-and-build-project-de4a: Command failed: git fetch origin cursor/expand-services-advertise-and-build-project-de4a
+fatal: couldn't find remote ref cursor/expand-services-advertise-and-build-project-de4a
+
+[2025-09-08T21:26:59.666Z] 🔧 Attempting to resolve conflicts for: cursor/expand-services-advertise-and-build-project-de4a
+[2025-09-08T21:26:59.666Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:26:59.719Z] ✅ Success: Get git status
+[2025-09-08T21:26:59.719Z] 📄 Found 0 conflicted files
+[2025-09-08T21:26:59.719Z] 🚀 Add resolved files: git add .
