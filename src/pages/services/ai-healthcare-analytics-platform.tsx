@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { Heart, Brain, Activity, Shield, Zap, CheckCircle, Clock, Target, BarChart3, Eye, AlertTriangle } from 'lucide-react';

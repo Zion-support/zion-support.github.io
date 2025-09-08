@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { DollarSign, TrendingDown, CheckCircle, ArrowRight, Play, Settings, Target, Calculator, PieChart, LineChart, Target, Wallet, PiggyBank, CreditCard, Receipt } from 'lucide-react';
 

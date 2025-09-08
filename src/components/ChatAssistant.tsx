@@ -90,8 +90,8 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
         setIsListening(false);
       };
 
-      recognitionRef.current.onerror = (event) => {
-        // // // // // console.error('Speech recognition error: ', event.error);
+      recognitionRef.current.onerror = (event: any) => {
+        // console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };
     }

@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Zap, Code, Database, Users, Shield, CheckCircle, ArrowRight, TrendingUp, Rocket, Globe } from 'lucide-react';

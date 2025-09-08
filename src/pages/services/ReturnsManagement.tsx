@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { SEO } from '@/components/SEO';
 
 function ReturnsManagement() {

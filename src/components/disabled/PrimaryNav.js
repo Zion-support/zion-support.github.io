@@ -39,7 +39,7 @@ export function PrimaryNav() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (query.trim()) {
-            // // // // // console.log('PrimaryNav search submit:', query);
+            // console.log('PrimaryNav search submit:', query);
             router.push(`/search/${slugify(query)}`);
             setQuery('');
         }
@@ -59,7 +59,7 @@ export function PrimaryNav() {
             {/* Search form with clamped width */}
             <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion={(sugg) => {
-            // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
+            // console.log('PrimaryNav search suggestion selected:', sugg);
             // Handle different suggestion types with proper navigation
             if (sugg.id) {
                 // Product listings with IDs go to product detail page
@@ -122,19 +122,9 @@ export function PrimaryNav() {
                   <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap">
                     {t('auth.signup')}
                   </Link>
-                </React.Fragment>)}
-            </Link>
-            <LanguageSelector />
-            <ModeToggle />
-            {!isLoggedIn && (<React.Fragment>
-                <Link href="/login" className="text-sm hover:text-primary" data-testid="login-link">
-                  {t('login', 'Login')}
-                </Link>
-                <Link href="/signup" className="ml-2 text-sm hover:text-primary">
-                  {t('signup', 'Sign up')}
-                </Link>
-              </React.Fragment>)}
-            {isLoggedIn && <UserMenu />}
+                </>)}
+              {isLoggedIn && <UserMenu />}
+            </div>
           </div>
           
           {/* Mobile menu button */}

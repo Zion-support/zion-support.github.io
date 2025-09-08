@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { Shield, FileText, Zap, BarChart3, Clock, Award, Star, Cpu, CheckCircle, Eye, Users, Lock, Download, AlertTriangle, Trash, ShoppingCart, DollarSign, Heart, GraduationCap, Home } from 'lucide-react';

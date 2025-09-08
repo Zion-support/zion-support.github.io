@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, MessageCircle, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Clock, Target, Activity, BarChart3, Database, Bot } from 'lucide-react';
 import { Link } from 'react-router-dom';

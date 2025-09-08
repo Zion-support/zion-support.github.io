@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { MessageCircle, Zap, Brain, CheckCircle, BarChart3, Target, Bot } from 'lucide-react';

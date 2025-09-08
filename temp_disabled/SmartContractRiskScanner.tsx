@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { Shield, Search, AlertTriangle, CheckCircle, ArrowRight, Lock, Globe, Award, Lightbulb, Code, Bug } from 'lucide-react';

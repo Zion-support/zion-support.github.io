@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { Link } from 'react-router-dom';
 import { Zap, GitFork, Cloud, Shield, CheckCircle, BarChart3, ArrowRight, Cpu, Database } from 'lucide-react';
 

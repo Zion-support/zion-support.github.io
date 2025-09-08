@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { Brain, GraduationCap, TrendingUp, Users, CheckCircle, BookOpen, BookOpen as BookOpenIcon, Users as UsersIcon } from 'lucide-react';

@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 // Removed unused: import { Link } from 'react-router-dom';
 import { 

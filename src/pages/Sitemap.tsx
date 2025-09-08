@@ -1,5 +1,4 @@
-// Removed unused: import React from 'react';
-import { SEO } from '../components/SEO';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   BarChart3, 

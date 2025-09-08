@@ -1,6 +1,4 @@
-// Removed unused: import React from 'react';
-// Removed unused: import { Link } from 'react-router-dom';
-// Removed unused: import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
   Zap, Bot, TrendingUp, Target, MessageCircle, BarChart3, 
   DollarSign, Users, Check, ArrowRight, ExternalLink, Phone, Mail,

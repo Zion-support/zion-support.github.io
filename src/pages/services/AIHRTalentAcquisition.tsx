@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { Users, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Search, TrendingUp, Zap, Target, Clock, Briefcase, Globe } from 'lucide-react';
 
 export default function AIHRTalentAcquisition() {

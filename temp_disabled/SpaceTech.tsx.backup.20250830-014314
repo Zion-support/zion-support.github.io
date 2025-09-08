@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Rocket, Satellite, CheckCircle, ArrowRight, Play, Settings, Target, Globe2, Orbit, Planet, Star, Telescope, Antenna, Signal, Navigation, Earth } from 'lucide-react';
 

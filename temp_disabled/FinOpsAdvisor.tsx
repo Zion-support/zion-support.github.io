@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, BarChart3, TrendingUp, Target, Users, CheckCircle, ArrowRight, Play, Settings, Activity, PieChart, Activity as ActivityIcon } from 'lucide-react';
 

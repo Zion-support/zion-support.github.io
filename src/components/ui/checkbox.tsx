@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 
 interface CheckboxProps {
   checked: boolean;

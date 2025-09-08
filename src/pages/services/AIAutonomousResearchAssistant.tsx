@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Search, BookOpen, TrendingUp, Zap, Shield, CheckCircle, ArrowRight, Lightbulb, Target } from 'lucide-react';
 

@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, BarChart3, Zap, Eye, ArrowRight, Database, TrendingUp, Target } from 'lucide-react';
 

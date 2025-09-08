@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { Link } from 'react-router-dom';
 import { Target, BarChart3, Users, CheckCircle, Zap, ArrowRight, Brain, TrendingUp } from 'lucide-react';
 

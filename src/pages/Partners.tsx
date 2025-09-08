@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Building, Globe, Star, ArrowRight, Handshake, Award, TrendingUp, Shield, Cloud, Brain } from 'lucide-react';
 

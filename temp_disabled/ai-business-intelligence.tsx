@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, BarChart3, TrendingUp, Database, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Zap, Target, PieChart } from 'lucide-react';
 import { Link } from 'react-router-dom';

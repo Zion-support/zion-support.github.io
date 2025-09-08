@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Heart, Stethoscope, Brain, Target, CheckCircle, Shield, Database, AlertTriangle, Award, Pill, Microscope, FileText, Lock, Eye } from 'lucide-react';

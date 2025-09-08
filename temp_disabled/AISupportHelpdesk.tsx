@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Users, Clock, CheckCircle, Mail, Phone } from 'lucide-react';

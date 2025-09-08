@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Headphones, CheckCircle, Zap, ArrowRight, Bot, Users, TrendingUp } from 'lucide-react';
 

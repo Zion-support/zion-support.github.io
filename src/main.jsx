@@ -78,33 +78,13 @@ function displayFatalError(message) {
 }
 
 try {
-    renderApp()}
-catch (error) {
-    // // // // // console.error('Global error caught in main.tsx:', error);
-    displayFatalError(error.message)}
+    renderApp();
+} catch (error) {
+    // console.error('Global error caught in main.jsx:', error);
+    displayFatalError(error.message);
+}
+
 window.addEventListener('error', (e) => {
-    // // // // // console.error('Unhandled error:', e.error || e.message);
-    displayFatalError(e.message)});
-// Render the app with proper provider structure
-ReactDOM.createRoot(document.getElementById('root')).render(<React.StrictMode>
-    <HelmetProvider>
-      <QueryClientProvider client={queryClient}>
-        <WhitelabelProvider>
-          <Router>
-            <AuthProvider>
-              <NotificationProvider>
-                <AnalyticsProvider>
-                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                    <AppLayout>
-                      <App />
-                    </AppLayout>
-                    <LanguageDetectionPopup />
-                  </LanguageProvider>
-                </AnalyticsProvider>
-              </NotificationProvider>
-            </AuthProvider>
-          </Router>
-        </WhitelabelProvider>
-      </QueryClientProvider>
-    </HelmetProvider>
-  </React.StrictMode>);
+    // console.error('Unhandled error:', e.error || e.message);
+    displayFatalError(e.message);
+});

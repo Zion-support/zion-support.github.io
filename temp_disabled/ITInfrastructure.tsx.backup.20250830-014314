@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Server, Network, CheckCircle, ArrowRight, Play, Settings, Target, Monitor, Database, HardDrive, Wifi, Shield, Cloud, Database2, Router } from 'lucide-react';
 

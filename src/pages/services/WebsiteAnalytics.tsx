@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { BarChart3, TrendingUp, CheckCircle, ArrowRight, Play, Settings, Target, Search, Globe, Database, Smartphone, Brain, Lock, Wifi, Bluetooth, Radio, Orbit, Planet, Star, Telescope, Antenna, Signal, Navigation, Earth, Moon, Sun, Binary, Network, Eye, Memory, HardDrive, Monitor, Eye, MousePointer, Clock, MapPin, Monitor, Globe, Smartphone, Monitor, Server, Database, HardDrive, Memory, Cpu, Network, Wifi, Bluetooth, Radio, Signal, Antenna, Orbit, Planet, Star, Telescope, Navigation, Earth, Moon, Sun, Binary, Network, Database, Lock, Eye, Brain, Cpu, Memory, HardDrive, Server } from 'lucide-react';
 

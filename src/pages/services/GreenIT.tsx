@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Leaf, Zap, Shield, Globe, TrendingUp, Database, Cloud, CheckCircle, Sun, Recycle, Gauge, Target, Award } from 'lucide-react';
 import { SEO } from '../../components/SEO';

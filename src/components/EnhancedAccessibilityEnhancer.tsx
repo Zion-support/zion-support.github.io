@@ -215,8 +215,8 @@ export default function EnhancedAccessibilityEnhancer() {
         }
       };
 
-      recognition.onerror = (event: unknown) => {
-        console.error('Speech recognition error:', event.error);
+      recognition.onerror = (event: any) => {
+        // console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };
 

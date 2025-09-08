@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Building, Target, CheckCircle, ArrowRight, Play, Settings, Shield, Database, Smartphone, Cloud, Strategy, Brain, Workflow, Scale, Lock, Wifi, Bluetooth, Radio, Orbit, Star, Antenna, Signal, Navigation, Moon, Sun, Binary, Network, Eye, HardDrive, UserHeart, UserHeart, Monitor, Eye, Users, Smartphone, Database, HardDrive, Network, Wifi, Bluetooth, Radio, Signal, Antenna, Orbit, Star, Navigation, Moon, Sun, Binary, Lock, Brain } from 'lucide-react';
 

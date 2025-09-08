@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { Lock, Shield, Database, Zap, Network, TrendingUp, Bitcoin, FileText, CheckCircle } from 'lucide-react';

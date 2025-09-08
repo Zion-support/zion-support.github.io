@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { SEO } from '@/components/SEO';
 import { MessageCircle, Bot, Check, ExternalLink, Phone, Mail, ArrowRight, Users, TrendingUp, Headphones } from 'lucide-react';
 

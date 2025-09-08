@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Truck, Brain, Shield, CheckCircle, ArrowRight, Phone, Mail, MapPin, Package, Route, Warehouse, AlertTriangle, Eye, ShoppingCart, Heart, Leaf } from 'lucide-react';
 

@@ -20,9 +20,12 @@ export const FooterNewsletter: React.FC = () => {
       setEmail('');
       
       // Reset after 3 seconds
-      setTimeout(() => setIsSubmitted(false), 3000)} catch (error) {
-      // // // // // console.error('Newsletter subscription failed:', error)} finally {
-      setIsSubmitting(false)}
+      setTimeout(() => setIsSubmitted(false), 3000);
+    } catch (error) {
+      // console.error('Newsletter subscription failed:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { BarChart3, Shield, Cloud, Brain, Zap, Activity, DollarSign, CheckCircle, Settings, Bell, Plus, ArrowRight, Calendar, Database, Network, HelpCircle, Atom } from 'lucide-react';
 

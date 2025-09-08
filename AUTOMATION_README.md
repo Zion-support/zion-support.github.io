@@ -1,319 +1,309 @@
-# 🚀 Project Automation System
+# Zion Tech Group - PM2 Automation System
 
-This project includes a comprehensive automation system built with PM2 and Node.js scripts to automatically detect, fix, and prevent common project errors and issues.
+## Overview
 
-## 📋 Overview
-
-The automation system consists of 10 specialized automation scripts that work together to maintain project health:
-
-1. **Error Fixer** - Detects and fixes common linting and TypeScript errors
-2. **Lint Automation** - Automates ESLint checks and fixes
-3. **Type Check Automation** - Automates TypeScript type checking
-4. **Code Quality Automation** - Analyzes code quality metrics
-5. **Dependency Automation** - Manages dependencies and security updates
-6. **Security Audit Automation** - Performs security audits and fixes
-7. **Performance Monitor Automation** - Monitors and optimizes performance
-8. **Build Health Automation** - Ensures build process health
-9. **File Cleanup Automation** - Cleans up unnecessary files
-10. **CI Automation** - Manages continuous integration checks
-
-## 🛠️ Prerequisites
-
-- Node.js 16+ installed
-- PM2 installed globally: `npm install -g pm2`
-- Project dependencies installed: `npm install`
+This project includes a comprehensive PM2 automation system that continuously monitors and fixes project errors, maintains code quality, and ensures optimal performance. The system runs multiple automated processes that work together to keep the project healthy and error-free.
 
 ## 🚀 Quick Start
 
-### 1. Start All Automations
-
+### 1. Install PM2 (if not already installed)
 ```bash
-# Start all PM2 automation processes
-npm run pm2:start
-
-# Check status
-npm run pm2:status
-
-# View logs
-npm run pm2:logs
+npm install -g pm2
 ```
 
-### 2. Run Individual Automations
-
+### 2. Start All Automations
 ```bash
-# Run all automations at once
-node scripts/automation-runner.js run-all
-
-# Run only critical automations
-node scripts/automation-runner.js run-critical
-
-# Run a specific automation
-node scripts/automation-runner.js run error-fixer.js
-
-# Run maintenance mode (all + health check)
-node scripts/automation-runner.js maintenance
+./start-automations.sh
 ```
 
-### 3. Continuous Mode
-
+Or manually:
 ```bash
-# Start continuous automation (runs every 5 minutes)
-node scripts/automation-runner.js continuous
-
-# Stop with Ctrl+C
+pm2 start ecosystem.config.cjs
 ```
 
-## 📊 Available Commands
-
-### PM2 Commands (via npm scripts)
-
+### 3. Monitor Status
 ```bash
-npm run pm2:start      # Start all automation processes
-npm run pm2:stop       # Stop all automation processes
-npm run pm2:restart    # Restart all automation processes
-npm run pm2:status     # Show PM2 status
-npm run pm2:logs       # Show recent logs
-npm run pm2:monit      # Open PM2 monitoring interface
+pm2 status
+pm2 logs
 ```
 
-### Automation Runner Commands
+## 🔧 Available Automations
 
-```bash
-node scripts/automation-runner.js run-all        # Run all automations
-node scripts/automation-runner.js run-critical   # Run critical automations only
-node scripts/automation-runner.js run [script]   # Run specific automation
-node scripts/automation-runner.js health         # Run health check
-node scripts/automation-runner.js maintenance    # Run maintenance mode
-node scripts/automation-runner.js continuous     # Start continuous mode
-node scripts/automation-runner.js status         # Show automation status
-node scripts/automation-runner.js help           # Show help
-```
+### High Priority (5-10 minute intervals)
 
-## 🔧 Individual Automation Scripts
+#### 1. Enhanced Error Fixer
+- **Script**: `scripts/automation/enhanced-error-fixer.cjs`
+- **Interval**: 10 minutes
+- **Purpose**: Automatically fixes common project errors including:
+  - Merge conflicts
+  - Unused imports and variables
+  - Console statements
+  - Parsing errors
+  - TypeScript errors
+  - ESLint violations
 
-### Error Fixer (`error-fixer.js`)
-- Detects linting and TypeScript errors
-- Automatically fixes common issues
-- Generates error reports
+#### 2. Project Health Monitor
+- **Script**: `scripts/automation/project-health-monitor.cjs`
+- **Interval**: 5 minutes
+- **Purpose**: Comprehensive project health monitoring:
+  - Build health
+  - Linting health
+  - TypeScript health
+  - Dependency health
+  - Security health
+  - Performance health
+  - Code quality health
 
-```bash
-node scripts/error-fixer.js
-```
+#### 3. Intelligent Predictive Monitor
+- **Script**: `scripts/automation/intelligent-predictive-monitor.cjs`
+- **Interval**: 5 minutes
+- **Purpose**: ML-powered monitoring and prediction:
+  - Failure prediction
+  - Performance optimization
+  - Resource usage monitoring
+  - Predictive maintenance
 
-### Lint Automation (`lint-automation.js`)
-- Runs ESLint checks
-- Applies automatic fixes
-- Generates linting reports
+### Medium Priority (15-30 minute intervals)
 
-```bash
-node scripts/lint-automation.js
-```
+#### 4. Console Error Fixer
+- **Script**: `scripts/automation/console-error-fixer.cjs`
+- **Interval**: 15 minutes
+- **Purpose**: Detects and fixes console statements in production code
 
-### Type Check Automation (`type-check-automation.js`)
-- Runs TypeScript type checking
-- Attempts to fix type errors
-- Generates type check reports
+#### 5. Link Checker
+- **Script**: `scripts/automation/link-checker.cjs`
+- **Interval**: 30 minutes
+- **Purpose**: Validates internal and external links
 
-```bash
-node scripts/type-check-automation.js
-```
+### Lower Priority (1-6 hour intervals)
 
-### Code Quality Automation (`code-quality-automation.js`)
-- Analyzes code complexity
-- Identifies maintainability issues
-- Generates quality metrics
+#### 6. Security Audit
+- **Script**: `scripts/automation/security-audit.cjs`
+- **Interval**: 4 hours
+- **Purpose**: Security vulnerability scanning
 
-```bash
-node scripts/code-quality-automation.js
-```
+#### 7. Quality Checks
+- **Script**: `scripts/automation/quality-checks.cjs`
+- **Interval**: 3 hours
+- **Purpose**: Code quality analysis
 
-### Dependency Automation (`dependency-automation.js`)
-- Checks for outdated packages
-- Runs security audits
-- Updates dependencies safely
+#### 8. Performance Monitor
+- **Script**: `scripts/automation/performance-monitor.cjs`
+- **Interval**: 2 hours
+- **Purpose**: Performance metrics monitoring
 
-```bash
-node scripts/dependency-automation.js
-```
-
-### Security Audit Automation (`security-audit-automation.js`)
-- Performs npm audit
-- Scans for security vulnerabilities
-- Fixes security issues automatically
-
-```bash
-node scripts/security-audit-automation.js
-```
-
-### Performance Monitor Automation (`performance-monitor-automation.js`)
-- Monitors build performance
-- Analyzes bundle size
-- Identifies performance bottlenecks
-
-```bash
-node scripts/performance-monitor-automation.js
-```
-
-### Build Health Automation (`build-health-automation.js`)
-- Verifies build process
-- Runs tests
-- Analyzes build artifacts
-
-```bash
-node scripts/build-health-automation.js
-```
-
-### File Cleanup Automation (`file-cleanup-automation.js`)
-- Removes temporary files
-- Cleans build artifacts
-- Identifies duplicate files
-
-```bash
-node scripts/file-cleanup-automation.js
-```
-
-### CI Automation (`ci-automation.js`)
-- Verifies Git status
-- Runs CI pipeline checks
-- Ensures deployment readiness
-
-```bash
-node scripts/ci-automation.js
-```
-
-## 📁 File Structure
-
-```
-project/
-├── scripts/
-│   ├── automation-runner.js          # Main automation coordinator
-│   ├── error-fixer.js               # Error detection and fixing
-│   ├── lint-automation.js           # Linting automation
-│   ├── type-check-automation.js     # TypeScript automation
-│   ├── code-quality-automation.js   # Code quality analysis
-│   ├── dependency-automation.js     # Dependency management
-│   ├── security-audit-automation.js # Security auditing
-│   ├── performance-monitor-automation.js # Performance monitoring
-│   ├── build-health-automation.js   # Build health checks
-│   ├── file-cleanup-automation.js   # File cleanup
-│   ├── ci-automation.js             # CI automation
-│   └── start-automation.sh          # PM2 management script
-├── logs/                            # Automation logs and reports
-├── ecosystem.config.cjs             # PM2 configuration
-└── package.json                     # Project configuration
-```
+#### 9. Dependency Updates
+- **Script**: `scripts/automation/dependency-updates.cjs`
+- **Interval**: 6 hours
+- **Purpose**: Automatic dependency updates
 
 ## 📊 Monitoring and Reports
 
-### Log Files
-All automation scripts generate logs in the `logs/` directory:
-- `automation-runner.log` - Main automation runner logs
-- `automation-status.json` - Current automation status
-- Individual script logs (e.g., `error-fixer.log`)
+### Report Locations
+- **Error Fix Reports**: `error-fix-reports/`
+- **Health Reports**: `health-reports/`
+- **Console Error Reports**: `console-error-fixer-report.json`
+- **Security Reports**: `security-reports/`
+- **Quality Reports**: `quality-report.json`
 
-### Reports
-Each automation generates detailed reports:
-- Error reports with fix recommendations
-- Performance metrics and optimization suggestions
-- Security audit results
-- Code quality analysis
-- Dependency update recommendations
-
-### Health Checks
-Run health checks to monitor system status:
+### Viewing Logs
 ```bash
-node scripts/automation-runner.js health
+# View all logs
+pm2 logs
+
+# View specific automation logs
+pm2 logs enhanced-error-fixer
+pm2 logs project-health-monitor
+pm2 logs intelligent-predictive-monitor
+
+# Follow logs in real-time
+pm2 logs --follow
+
+# View logs for specific time period
+pm2 logs --lines 100
 ```
 
-## ⚙️ Configuration
+## 🛠️ Management Commands
 
-### PM2 Ecosystem Configuration
-The `ecosystem.config.cjs` file configures:
-- Process names and scripts
-- Auto-restart policies
-- Memory limits
-- Log file paths
-- Cron schedules for periodic runs
+### Start/Stop Automations
+```bash
+# Start all automations
+pm2 start ecosystem.config.cjs
 
-### Customization
-Modify individual automation scripts to:
-- Adjust detection thresholds
-- Customize fix strategies
-- Add new automation rules
-- Integrate with external tools
+# Stop all automations
+pm2 stop all
 
-## 🚨 Troubleshooting
+# Restart all automations
+pm2 restart all
+
+# Delete all automations
+pm2 delete all
+```
+
+### Individual Automation Control
+```bash
+# Start specific automation
+pm2 start scripts/automation/enhanced-error-fixer.cjs --name enhanced-error-fixer
+
+# Stop specific automation
+pm2 stop enhanced-error-fixer
+
+# Restart specific automation
+pm2 restart enhanced-error-fixer
+
+# Delete specific automation
+pm2 delete enhanced-error-fixer
+```
+
+### Configuration
+```bash
+# Save current PM2 configuration
+pm2 save
+
+# Restore saved configuration
+pm2 resurrect
+
+# Generate startup script
+pm2 startup
+```
+
+## 🔍 Troubleshooting
 
 ### Common Issues
 
-1. **PM2 not found**
-   ```bash
-   npm install -g pm2
-   ```
-
-2. **Scripts fail to run**
-   ```bash
-   npm install  # Ensure dependencies are installed
-   ```
-
-3. **Permission errors**
-   ```bash
-   chmod +x scripts/*.js
-   ```
-
-4. **Log directory issues**
-   ```bash
-   mkdir -p logs
-   ```
-
-### Debug Mode
-Run automations with verbose logging:
+#### 1. PM2 Not Found
 ```bash
-# Check PM2 logs
-npm run pm2:logs
-
-# Check specific script logs
-tail -f logs/error-fixer.log
+npm install -g pm2
 ```
 
-## 🔄 Automation Schedules
+#### 2. Permission Issues
+```bash
+sudo npm install -g pm2
+```
 
-The system can be configured to run automatically:
+#### 3. Port Conflicts
+Check if ports are already in use:
+```bash
+lsof -i :3000
+```
 
-- **Continuous Mode**: Runs every 5 minutes
-- **Scheduled Runs**: Via PM2 cron schedules
-- **Manual Triggers**: On-demand execution
-- **Event-Driven**: Based on file changes or errors
+#### 4. Memory Issues
+Monitor memory usage:
+```bash
+pm2 monit
+```
 
-## 📈 Best Practices
+### Debug Mode
+```bash
+# Run automation in debug mode
+NODE_ENV=development pm2 start scripts/automation/enhanced-error-fixer.cjs --name debug-error-fixer
 
-1. **Start with Critical Automations**: Use `run-critical` for immediate issues
-2. **Monitor Logs**: Regularly check automation logs for issues
-3. **Review Reports**: Analyze generated reports for insights
-4. **Customize Rules**: Adapt automation rules to your project needs
-5. **Regular Maintenance**: Run maintenance mode weekly
-6. **Backup Before Major Changes**: Always backup before running dependency updates
+# View detailed logs
+pm2 logs debug-error-fixer --lines 200
+```
 
-## 🤝 Contributing
+## 📈 Performance Monitoring
 
-To add new automation scripts:
+### Real-time Monitoring
+```bash
+pm2 monit
+```
 
-1. Create a new script in the `scripts/` directory
-2. Follow the existing script structure
-3. Add the script to `automation-runner.js`
-4. Update the PM2 ecosystem configuration
-5. Test thoroughly before deployment
+### Performance Metrics
+- CPU usage per automation
+- Memory usage per automation
+- Error rates
+- Response times
+- Uptime statistics
 
-## 📞 Support
+## 🔒 Security Features
 
-For issues or questions:
-1. Check the logs in the `logs/` directory
-2. Review the automation status: `node scripts/automation-runner.js status`
-3. Run health checks: `node scripts/automation-runner.js health`
-4. Check PM2 status: `npm run pm2:status`
+### Automatic Security Checks
+- Dependency vulnerability scanning
+- Code security analysis
+- Security header validation
+- Content Security Policy checks
+
+### Security Reports
+- Automated security reports
+- Vulnerability notifications
+- Security score tracking
+
+## 🎯 Best Practices
+
+### 1. Regular Monitoring
+- Check PM2 status daily
+- Review automation logs weekly
+- Monitor performance metrics
+
+### 2. Backup Configuration
+```bash
+# Backup PM2 configuration
+pm2 save
+cp ~/.pm2/dump.pm2 pm2-backup.json
+```
+
+### 3. Update Automations
+- Keep automation scripts updated
+- Review and update intervals as needed
+- Monitor automation effectiveness
+
+### 4. Resource Management
+- Monitor memory usage
+- Adjust automation intervals if needed
+- Scale automations based on project size
+
+## 📝 Configuration
+
+### Environment Variables
+```bash
+# Set automation intervals (in milliseconds)
+export AUTOMATION_INTERVAL=600000  # 10 minutes
+export NODE_ENV=production
+```
+
+### Custom Intervals
+Edit `ecosystem.config.cjs` to modify automation intervals:
+```javascript
+env: {
+  NODE_ENV: 'production',
+  AUTOMATION_INTERVAL: '600000' // 10 minutes
+}
+```
+
+## 🚨 Alerts and Notifications
+
+### Error Alerts
+- Critical errors trigger immediate alerts
+- Warning thresholds for performance issues
+- Security vulnerability notifications
+
+### Health Score Tracking
+- Project health score (0-100)
+- Trend analysis
+- Improvement recommendations
+
+## 📚 Additional Resources
+
+### Documentation
+- [PM2 Documentation](https://pm2.keymetrics.io/docs/)
+- [Node.js Best Practices](https://github.com/goldbergyoni/nodebestpractices)
+- [Security Best Practices](https://owasp.org/www-project-top-ten/)
+
+### Support
+- Check automation logs for detailed error information
+- Review generated reports for insights
+- Monitor health scores for trends
 
 ---
 
-**Happy Automating! 🚀**
+## 🎉 Success Metrics
 
-This automation system will continuously monitor and maintain your project's health, automatically fixing common issues and providing insights for optimization.
+The automation system is working effectively when:
+- ✅ Project health score > 90
+- ✅ Zero critical errors
+- ✅ Build success rate > 95%
+- ✅ Security vulnerabilities < 5
+- ✅ Performance score > 85
+
+Monitor these metrics regularly to ensure optimal project health!

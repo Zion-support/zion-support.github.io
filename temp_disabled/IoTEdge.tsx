@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { Cpu, Wifi, Zap, Database, BarChart3, ArrowRight, Shield, Smartphone } from 'lucide-react';
 

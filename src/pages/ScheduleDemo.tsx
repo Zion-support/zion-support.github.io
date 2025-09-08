@@ -65,9 +65,12 @@ const ScheduleDemo: React.FC = () => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      setIsSubmitted(true)} catch (error) {
-      // // // // // console.error('Error submitting form:', error)} finally {
-      setIsSubmitting(false)}
+      setIsSubmitted(true);
+    } catch (error) {
+      // console.error('Error submitting form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {

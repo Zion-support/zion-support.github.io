@@ -1,4 +1,3 @@
-// Removed unused: import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Play, Settings, Target, Zap, BarChart3, TrendingUp, Calculator, Cloud, Zap, Gauge, BarChart4, TrendingUp, Lightbulb, Rocket } from 'lucide-react';
 
