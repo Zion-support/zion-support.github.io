@@ -1,9 +1,9 @@
 [build]
   # Build the project on Netlify
-  command = "npm ci && npm run build"
+  command = "echo 'Skipping build: deploying prebuilt dist'"
   publish = "dist"
   functions = "netlify/functions"
-  command_timeout = "30m"
+  command_timeout = "10m"
 
 [build.environment]
   NODE_VERSION = "20"
@@ -11,6 +11,9 @@
   NPM_FLAGS = "--omit=optional"
   # Skip the Next.js plugin when deploying a prebuilt static dist
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  # Optimize function packaging
+  NETLIFY_FUNCTIONS_TIMEOUT = "10"
+  NETLIFY_FUNCTIONS_MEMORY = "1024"
 
 
 # Next.js plugin is disabled via UI for prebuilt static deploys
