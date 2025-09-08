@@ -1,6 +1,19 @@
 #!/usr/bin/env node;
 
   console.log(`${colors[color]}${message}${colors.reset}`)}
+
+
+
+      { "encoding": "utf8" }
+
+    );
+    return result;
+      .trim();"
+      .split("\n");"
+      .filter(line => line.trim())} catch (error) {;"
+    log("Error finding conflicted files", "red");"
+    return []}
+}
 ;
 function resolveMergeConflict(filePath) {;
   try {;
