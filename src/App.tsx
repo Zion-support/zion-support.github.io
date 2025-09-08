@@ -78,30 +78,6 @@ const ResearchDevelopment = createLazyComponent(() => import('./pages/ResearchDe
 const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
 const Sitemap = createLazyComponent(() => import('./pages/sitemap'));
 
-// New service pages
-const AISalesCopilot = React.lazy(() => import('./pages/services/ai-sales-copilot'));
-const AIComplianceAssistant = React.lazy(() => import('./pages/services/ai-compliance-assistant'));
-const AIAutoEmailResponder = React.lazy(() => import('./pages/services/ai-auto-email-responder'));
-const LLMContentStudio = React.lazy(() => import('./pages/services/llm-content-studio'));
-const CloudFinOpsOptimizer = React.lazy(() => import('./pages/services/cloud-finops-optimizer'));
-
-// Enhanced components
-const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
-const Community = React.lazy(() => import('./pages/Community'));
-const Developers = React.lazy(() => import('./pages/Developers'));
-const Demo = React.lazy(() => import('./pages/Demo'));
-
-// New pages
-const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
-const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
-const ComprehensiveServicesLanding2027 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2027'));
-const InnovativeServices2025 = React.lazy(() => import('./pages/InnovativeServices2025'));
-const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
-const RevolutionaryServices2030 = React.lazy(() => import('./pages/revolutionary-services-2030'));
-const PricingGuide2025 = React.lazy(() => import('./pages/pricing-guide-2025'));
-const Developers = React.lazy(() => import('./pages/developers'));
-
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/digital-twin'));
@@ -201,148 +177,11 @@ const ScheduleDemo = () => (
   </div>
 );
 
-const Demo = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Demo - Zion Tech Group"
-      description="Experience our AI-powered solutions through interactive demos and demonstrations."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Demo</h1>
-      <p className="text-xl text-gray-300">Experience our solutions</p>
-    </div>
-  </div>
-);
-
-const Support = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Support - Zion Tech Group"
-      description="Get expert support and assistance for all our AI-powered solutions and services."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Support</h1>
-      <p className="text-xl text-gray-300">Get help when you need it</p>
-    </div>
-  </div>
-);
-
-const Community = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Community - Zion Tech Group"
-      description="Join our community of technology enthusiasts, developers, and business leaders."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Community</h1>
-      <p className="text-xl text-gray-300">Connect with like-minded professionals</p>
-    </div>
-  </div>
-);
-
-const Partnerships = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Partnerships - Zion Tech Group"
-      description="Explore partnership opportunities and strategic alliances with Zion Tech Group."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Partnerships</h1>
-      <p className="text-xl text-gray-300">Grow together with us</p>
-    </div>
-  </div>
-);
-
-const Investors = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Investor Relations - Zion Tech Group"
-      description="Learn about investment opportunities and our company's growth trajectory."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Investor Relations</h1>
-      <p className="text-xl text-gray-300">Investment opportunities</p>
-    </div>
-  </div>
-);
-
-const Press = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Press & Media - Zion Tech Group"
-      description="Latest news, press releases, and media resources from Zion Tech Group."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Press & Media</h1>
-      <p className="text-xl text-gray-300">Latest news and updates</p>
-    </div>
-  </div>
-);
-
-const Legal = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Legal - Zion Tech Group"
-      description="Legal information, terms, and policies for Zion Tech Group services."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Legal</h1>
-      <p className="text-xl text-gray-300">Legal information and policies</p>
-    </div>
-  </div>
-);
-
-const Training = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Training & Certification - Zion Tech Group"
-      description="Professional training and certification programs for AI and technology solutions."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Training & Certification</h1>
-      <p className="text-xl text-gray-300">Enhance your skills</p>
-    </div>
-  </div>
-);
-
-const API = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="API Reference - Zion Tech Group"
-      description="Comprehensive API documentation and developer resources for our AI services."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">API Reference</h1>
-      <p className="text-xl text-gray-300">Developer resources</p>
-    </div>
-  </div>
-);
-
-const Developers = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Developer Portal - Zion Tech Group"
-      description="Developer tools, documentation, and resources for building with our AI platform."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Developer Portal</h1>
-      <p className="text-xl text-gray-300">Build with our platform</p>
-    </div>
-  </div>
-);
-
-const Whitepapers = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="White Papers - Zion Tech Group"
-      description="In-depth research papers and technical insights on AI and emerging technologies."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">White Papers</h1>
-      <p className="text-xl text-gray-300">Research and insights</p>
-    </div>
-  </div>
-);
+// New innovative services - only import existing ones
+const AIContractAnalysis = lazy(() => import('./pages/services/AI-Powered-Contract-Analysis'));
+const AISupplyChainOptimizationNew = lazy(() => import('./pages/services/AI-Supply-Chain-Optimization'));
+const AICybersecurityThreatIntelligence = lazy(() => import('./pages/services/AI-Cybersecurity-Threat-Intelligence'));
+const AIHealthcareDiagnostics = lazy(() => import('./pages/services/AI-Healthcare-Diagnostics'));
 
 function App() {
   return (
@@ -371,15 +210,7 @@ function App() {
                 <Route path="/solutions" element={<Solutions />} />
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/case-studies" element={<CaseStudies />} />
-                <Route path="/white-papers" element={<WhitePapers />} />
-                <Route path="/webinars" element={<Webinars />} />
-                <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
-                <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
-                <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
-                <Route path="/services/comprehensive-advertising" element={<ComprehensiveServicesAdvertising />} />
-                <Route path="/services/showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
-                <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
-                <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
+                <Route path="/partners" element={<Partners />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
@@ -412,11 +243,7 @@ function App() {
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
-                <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
-                <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
-                <Route path="/services/quantum-computing" element={<QuantumComputing />} />
-                <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
+                <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
                 
                 {/* New innovative service routes */}
                 <Route path="/services/ai-legal-document-analysis" element={<AILegalDocumentAnalysis />} />

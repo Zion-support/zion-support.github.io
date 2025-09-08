@@ -106,34 +106,74 @@ export function EnhancedFuturisticFooter() {
       title: 'AI & Analytics Services',
       featured: true,
       links: [
-        { name: 'All Services', href: '/services', featured: true },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', featured: true },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', featured: true },
-        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', featured: true },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', featured: true },
-        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', featured: true },
-        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', featured: true },
-        { name: 'AI Legal Document Analysis', href: '/services/ai-legal-document-analysis', featured: true },
-        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', featured: true },
-        { name: 'AI Financial Trading', href: '/services/ai-financial-trading', featured: true },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', featured: true }
+        { name: 'AI Legal Document Analyzer', href: '/services/ai-legal-document-analysis', featured: true },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', featured: true },
+        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading', featured: true },
+        { name: 'AI Development Platform', href: '/services/ai-development', featured: true },
+        { name: 'AI Autonomous Research Assistant', href: '/services/ai-autonomous-research-assistant', featured: true }
+      ]
+    },
+    {
+      title: 'AI & Operations',
+      featured: true,
+      links: [
+        { name: 'AI Project Management', href: '/services/ai-project-management', featured: true },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', featured: true },
+        { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance', featured: true },
+        { name: 'AI Supply Chain Optimizer', href: '/services/ai-supply-chain-optimization', featured: true },
+        { name: 'Digital Twin Platform', href: '/services/digital-twin', featured: true },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', featured: true }
+      ]
+    },
+    {
+      title: 'AI & Marketing',
+      featured: true,
+      links: [
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', featured: true },
+        { name: 'AI Content Creation Studio', href: '/services/ai-content-creation', featured: true },
+        { name: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation', featured: true },
+        { name: 'AI HR Platform', href: '/services/ai-hr-platform', featured: true },
+        { name: 'AI Education Platform', href: '/services/ai-education', featured: true },
+        { name: 'AI Entertainment Platform', href: '/services/ai-entertainment', featured: true }
+      ]
+    },
+    {
+      title: 'Advanced Technologies',
+      featured: true,
+      links: [
+        { name: 'Quantum Computing', href: '/services/quantum-computing', featured: true },
+        { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', featured: true },
+        { name: 'AI Space Technology Platform', href: '/services/ai-space-technology', featured: true },
+        { name: 'AI Sustainable Technology', href: '/services/ai-sustainable-technology', featured: true },
+        { name: 'AI Metaverse Platform', href: '/services/ai-metaverse', featured: true },
+        { name: 'AI Green Technology Platform', href: '/services/ai-green-technology', featured: true }
+      ]
+    },
+    {
+      title: 'Enterprise Solutions',
+      featured: true,
+      links: [
+        { name: 'Enterprise AI Transformation', href: '/solutions', featured: true },
+        { name: 'AI-Powered Cybersecurity', href: '/services/ai-cybersecurity', featured: true },
+        { name: 'Data Analytics & BI', href: '/services/data-analytics', featured: true },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', featured: true },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops', featured: true }
       ]
     },
     {
       title: 'Infrastructure & Security',
       featured: true,
       links: [
-        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', featured: true },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops', featured: true },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', featured: true },
-        { name: 'Digital Twin Solutions', href: '/services/digital-twin', featured: true },
-        { name: 'Data Analytics', href: '/services/data-analytics', featured: true },
-        { name: 'Cybersecurity Solutions', href: '/services/cybersecurity', featured: true },
-        { name: 'Zero Trust Security', href: '/services#zero-trust-security', featured: true },
-        { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', featured: true },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', featured: true },
-        { name: 'AI Ethics & Governance', href: '/services#ai-ethics-guardian', featured: true }
+        { name: 'Cloud Infrastructure & DevOps', href: '/services/cloud-devops', featured: true },
+        { name: 'IoT Edge Computing Platform', href: '/services/iot-edge-computing', featured: true },
+        { name: 'Digital Twin Platform', href: '/services/digital-twin', featured: true },
+        { name: 'AI Research Assistant', href: '/services/ai-autonomous-research-assistant', featured: true },
+        { name: 'AI Legal Tech Platform', href: '/services/ai-legal-document-analysis', featured: true },
+        { name: 'AI Green Technology', href: '/services/ai-green-technology', featured: true },
+        { name: 'AI Development Platform', href: '/services/ai-development', featured: true },
+        { name: 'AI Entertainment Platform', href: '/services/ai-entertainment', featured: true },
+        { name: 'Micro SaaS Products', href: '/services/micro-saas', featured: true }
       ]
     },
     {
@@ -180,12 +220,8 @@ export function EnhancedFuturisticFooter() {
         { name: 'Blog & Insights', href: '/blog', featured: false },
         { name: 'FAQ & Help Center', href: '/faq', featured: false },
         { name: 'Documentation', href: '/docs', featured: false },
-        { name: 'API Reference', href: '/docs#api', featured: false },
-        { name: 'Developer Portal', href: '/developers', featured: false },
-        { name: 'Training & Certification', href: '/training', featured: false },
-        { name: 'Community Forum', href: '/community', featured: false },
-        { name: 'Success Stories', href: '/case-studies', featured: false },
-        { name: 'White Papers', href: '/white-papers', featured: false }
+        { name: 'FAQ & Support', href: '/faq', featured: false },
+        { name: 'Training Programs', href: '/training', featured: false }
       ]
     },
     {

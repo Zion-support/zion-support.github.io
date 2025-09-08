@@ -48,12 +48,12 @@ export function AppHeader() {
 
   const services = [
     { 
-      name: 'AI Sales Copilot', 
-      href: '/services/ai-sales-copilot', 
-      icon: Users, 
-      description: 'Intelligent Sales Optimization',
+      name: 'All Services', 
+      href: '/services', 
+      icon: Brain, 
+      description: 'Complete Service Catalog',
       featured: true,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-cyan-500 to-blue-500'
     },
     { 
       name: 'AI Business Intelligence', 
@@ -62,38 +62,6 @@ export function AppHeader() {
       description: 'Machine Learning & Data Science',
       featured: true,
       color: 'from-purple-500 to-cyan-500'
-    },
-    { 
-      name: 'AI Compliance Assistant', 
-      href: '/services/ai-compliance-assistant', 
-      icon: Shield, 
-      description: 'Automated Regulatory Compliance',
-      featured: true,
-      color: 'from-blue-500 to-indigo-500'
-    },
-    { 
-      name: 'AI Auto Email Responder', 
-      href: '/services/ai-auto-email-responder', 
-      icon: Mail, 
-      description: 'Intelligent Email Automation',
-      featured: true,
-      color: 'from-green-500 to-cyan-500'
-    },
-    { 
-      name: 'LLM Content Studio', 
-      href: '/services/llm-content-studio', 
-      icon: PenTool, 
-      description: 'AI-Powered Content Creation',
-      featured: true,
-      color: 'from-indigo-500 to-purple-500'
-    },
-    { 
-      name: 'Cloud FinOps Optimizer', 
-      href: '/services/cloud-finops-optimizer', 
-      icon: Cloud, 
-      description: 'Cloud Cost Optimization',
-      featured: true,
-      color: 'from-cyan-500 to-blue-500'
     },
     { 
       name: 'AI Healthcare Platform', 
@@ -122,63 +90,111 @@ export function AppHeader() {
     { 
       name: 'Digital Twin Platform', 
       href: '/services/digital-twin', 
-      icon: Globe, 
-      description: 'Virtual Replicas & Simulation',
+      icon: Building2, 
+      description: 'Digital Twin Solutions',
       featured: true,
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-blue-500 to-indigo-500'
     },
     { 
-      name: 'Micro SaaS Products', 
+      name: 'Data Analytics', 
+      href: '/services/data-analytics', 
+      icon: BarChart3, 
+      description: 'Business Intelligence & Analytics',
+      featured: true,
+      color: 'from-green-500 to-blue-500'
+    },
+    { 
+      name: 'IT Infrastructure', 
+      href: '/services/it-infrastructure', 
+      icon: Server, 
+      description: 'Enterprise IT Solutions',
+      featured: true,
+      color: 'from-gray-500 to-blue-500'
+    },
+    { 
+      name: 'Cloud DevOps', 
+      href: '/services/cloud-devops', 
+      icon: Cloud, 
+      description: 'Cloud & DevOps Services',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'Micro SAAS Products', 
       href: '/services/micro-saas', 
       icon: ShoppingCart, 
       description: 'AI automations with transparent pricing',
       featured: true,
-      color: 'from-orange-500 to-red-500'
+      color: 'from-orange-500 to-red-500',
+      price: 'Starting at $99/month',
+      category: 'Micro SaaS'
     }
   ];
 
   const solutions = [
-    {
-      name: 'Enterprise Solutions',
-      href: '/solutions',
-      icon: Building2,
-      description: 'Large-scale business transformations',
-      featured: true
+    { 
+      name: 'Enterprise Solutions', 
+      href: '/solutions', 
+      icon: Building, 
+      description: 'Large-scale business solutions',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
     },
-    {
-      name: 'SMB Solutions',
-      href: '/solutions',
-      icon: Building,
-      description: 'Small to medium business growth',
-      featured: false
+    { 
+      name: 'Healthcare Solutions', 
+      href: '/solutions', 
+      icon: Heart, 
+      description: 'Healthcare & medical solutions',
+      featured: true,
+      color: 'from-red-500 to-pink-500'
     },
-    {
-      name: 'Startup Solutions',
-      href: '/solutions',
-      icon: Rocket,
-      description: 'Accelerate your startup growth',
-      featured: false
+    { 
+      name: 'Financial Solutions', 
+      href: '/solutions', 
+      icon: DollarSign, 
+      description: 'Fintech & banking solutions',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
     },
-    {
-      name: 'Government Solutions',
-      href: '/solutions',
-      icon: Shield,
-      description: 'Public sector innovation',
-      featured: false
+    { 
+      name: 'Manufacturing Solutions', 
+      href: '/solutions', 
+      icon: Settings, 
+      description: 'Industrial & manufacturing solutions',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
     },
-    {
-      name: 'Healthcare Solutions',
-      href: '/solutions',
-      icon: Heart,
-      description: 'Digital health transformation',
-      featured: true
+    { 
+      name: 'Retail Solutions', 
+      href: '/solutions', 
+      icon: ShoppingCart, 
+      description: 'E-commerce & retail solutions',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
     },
-    {
-      name: 'Financial Solutions',
-      href: '/solutions',
-      icon: TrendingUp,
-      description: 'Fintech innovation & compliance',
-      featured: true
+    { 
+      name: 'Government Solutions', 
+      href: '/solutions', 
+      icon: Shield, 
+      description: 'Public sector solutions',
+      featured: true,
+      color: 'from-gray-500 to-slate-500'
+    },
+    { 
+      name: 'Education Solutions', 
+      href: '/solutions', 
+      icon: BookOpen, 
+      description: 'Educational technology solutions',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'Transportation Solutions', 
+      href: '/solutions', 
+      icon: Truck, 
+      description: 'Logistics & transportation solutions',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
     }
   ];
 
