@@ -26400,3 +26400,26 @@ fatal: couldn't find remote ref cursor/fix-project-errors-cc19
 [2025-09-08T21:35:43.931Z] ✅ Success: Get git status
 [2025-09-08T21:35:43.931Z] 📄 Found 0 conflicted files
 [2025-09-08T21:35:43.931Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:35:44.025Z] ✅ Success: Add resolved files
+[2025-09-08T21:35:44.026Z] 🚀 Commit merge for cursor/fix-project-errors-cc19: git commit -m "Resolve conflicts and merge cursor/fix-project-errors-cc19"
+[2025-09-08T21:35:44.098Z] ✅ Success: Commit merge for cursor/fix-project-errors-cc19
+[2025-09-08T21:35:44.098Z] ✅ Successfully resolved conflicts and merged: cursor/fix-project-errors-cc19
+[2025-09-08T21:35:44.098Z] 🔄 Attempting to merge branch: cursor/fix-sidebar-visibility-issue-dd5c
+[2025-09-08T21:35:44.098Z] 🚀 Fetch origin/cursor/fix-sidebar-visibility-issue-dd5c: git fetch origin cursor/fix-sidebar-visibility-issue-dd5c
+[2025-09-08T21:35:44.438Z] ✅ Success: Fetch origin/cursor/fix-sidebar-visibility-issue-dd5c
+[2025-09-08T21:35:44.438Z] 🚀 Merge cursor/fix-sidebar-visibility-issue-dd5c: git merge origin/cursor/fix-sidebar-visibility-issue-dd5c --no-ff -m "Merge branch cursor/fix-sidebar-visibility-issue-dd5c into main"
+[2025-09-08T21:35:44.879Z] ✅ Success: Merge cursor/fix-sidebar-visibility-issue-dd5c
+[2025-09-08T21:35:44.879Z] ✅ Successfully merged: cursor/fix-sidebar-visibility-issue-dd5c
+[2025-09-08T21:35:44.879Z] 🔄 Attempting to merge branch: cursor/fix-syntax-errors-91b3
+[2025-09-08T21:35:44.879Z] 🚀 Fetch origin/cursor/fix-syntax-errors-91b3: git fetch origin cursor/fix-syntax-errors-91b3
+[2025-09-08T21:35:44.987Z] ❌ Error in Fetch origin/cursor/fix-syntax-errors-91b3: Command failed: git fetch origin cursor/fix-syntax-errors-91b3
+fatal: couldn't find remote ref cursor/fix-syntax-errors-91b3
+
+[2025-09-08T21:35:44.988Z] ❌ Failed to merge cursor/fix-syntax-errors-91b3: Command failed: git fetch origin cursor/fix-syntax-errors-91b3
+fatal: couldn't find remote ref cursor/fix-syntax-errors-91b3
+
+[2025-09-08T21:35:44.988Z] 🔧 Attempting to resolve conflicts for: cursor/fix-syntax-errors-91b3
+[2025-09-08T21:35:44.988Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:35:45.039Z] ✅ Success: Get git status
+[2025-09-08T21:35:45.040Z] 📄 Found 0 conflicted files
+[2025-09-08T21:35:45.040Z] 🚀 Add resolved files: git add .
