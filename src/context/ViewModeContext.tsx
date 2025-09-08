@@ -9,7 +9,7 @@ interface ViewModeContextValue {
 
 const ViewModeContext = createContext<ViewModeContextValue | undefined>(undefined);
 
-export const ViewModeProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
+export const ViewModeProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   const [mode, setMode] = useState<ViewMode>('system');
   const value = useMemo(() => ({ mode, setMode }), [mode]);
   return <ViewModeContext.Provider value={value}>{children}</ViewModeContext.Provider>;
