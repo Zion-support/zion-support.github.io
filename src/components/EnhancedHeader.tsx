@@ -44,55 +44,115 @@ import {
   }
 ;
   const navigation = [
-
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'Services', href: '/services', icon: Code, hasDropdown: true },
+    { name: 'AI Solutions', href: '/ai-services', icon: Brain },
+    { name: 'IT Services', href: '/it-services', icon: Server },
+    { name: 'Micro SAAS', href: '/micro-saas', icon: Rocket },
+    { name: 'Solutions', href: '/solutions', icon: Target },
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Blog', href: '/blog', icon: BookOpen },
+    { name: 'News', href: '/news', icon: Newspaper },
+    { name: 'Contact', href: '/contact', icon: MessageCircle }
   ];
-  // Featured services for quick access;&apos;
-  const services = [
 
-      featured: true}
-  ];&apos;
-  const solutionsCategories = [
+  const serviceCategories = [
     {
-      title: &apos;Industry Solutions&apos;,
-      icon: Building,
-      color: &apos;from-blue-500 to-purple-500&apos;,
-      solutions: [{ nam,e: &apos;Enterprise Solutions&apos;, href: &apos;/solutions/enterprise&apos;, description: &apos;Large-scale business transformation&apos}, { name: &apos;Healthcare Solutions&apos;, href: &apos;/solutions/healthcare&apos;, description: &apos;Medical technology innovation&apos}, { name: &apos;Financial Solutions&apos;, href: &apos;/financial-solutions&apos;, description: &apos;Fintech and banking solutions&apos}, { name: &apos;Manufacturing Solutions&apos;, href: &apos;/manufacturing-solutions&apos;, description: &apos;Industry 4.0 automation&apos}]}, {
-      title: &apos;Technology Solutions&apos;,
-      icon: Cpu,
-      color: &apos;from-cyan-500 to-blue-500&apos;,
-      solutions: [
-        { nam,e: &apos;AI Solutions&apos;, href: &apos;/ai-solutions&apos;, description: &apos;Artificial intelligence integration&apos}, { name: &apos;Digital Transformation&apos;, href: &apos;/services/digital-transformation&apos;, description: &apos;Business modernization&apos}, { name: &apos;Research & Development&apos;, href: &apos;/research-development&apos;, description: &apos;Innovation and discovery&apos}, { name: &apos;Green IT Solutions&apos;, href: &apos;/green-it&apos;, description: &apos;Sustainable technology&apos}]}
-  ];&apos;
-  const companyLinks = [
-    { name: &apos;About Us&apos;, href: &apos;/about&apos;, description: &apos;Learn about our mission and values&apos}, { name: &apos;Our Team&apos;, href: &apos;/team&apos;, description: &apos;Meet our expert professionals&apos}, { name: &apos;Leadership&apos;, href: &apos;/leadership&apos;, description: &apos;Executive team and vision&apos}, { name: &apos;Careers&apos;, href: &apos;/careers&apos;, description: &apos;Join our growing team&apos}, { name: &apos;Partners&apos;, href: &apos;/partners&apos;, description: &apos;Strategic partnerships&apos}, { name: &apos;Case Studies&apos;, href: &apos;/case-studies&apos;, description: &apos;Success stories and results&apos}];&apos;
-  const resourceLinks = [
-    { name: &apos;Blog&apos;, href: &apos;/blog&apos;, description: &apos;Latest insights and updates&apos}, { name: &apos;News&apos;, href: &apos;/news&apos;, description: &apos;Company announcements&apos}, { name: &apos;Press&apos;, href: &apos;/press&apos;, description: &apos;Media resources&apos}, { name: &apos;Webinars&apos;, href: &apos;/webinars&apos;, description: &apos;Educational sessions&apos}, { name: &apos;White Papers&apos;, href: &apos;/white-papers&apos;, description: &apos;In-depth research&apos}, { name: &apos;Documentation&apos;, href: &apos;/documentation&apos;, description: &apos;Technical guides&apos}];&apos;
-  const supportLinks = [
-    { name: &apos;Help Center&apos;, href: &apos;/help&apos;, description: &apos;Find answers and solutions&apos}, { name: &apos;FAQ&apos;, href: &apos;/faq&apos;, description: &apos;Frequently asked questions&apos}, { name: &apos;Support&apos;, href: &apos;/support&apos;, description: &apos;Technical assistance&apos}, { name: &apos;Training&apos;, href: &apos;/training&apos;, description: &apos;Skill development programs&apos}, { name: &apos;Contact Support&apos;, href: &apos;/contact&apos;, description: &apos;Get in touch with our team&apos}, { name: &apos;Status Page&apos;, href: &apos;/status&apos;, description: &apos;Service availability&apos}];&apos;
-
-      href: '/services/ai-email-automation-suite', icon: Mail,
-      color: 'from-blue-500 to-indigo-500', featured: true}, { name: 'AI Social Media Scheduler', description: 'AI-powered social media automation',
-      href: '/services/ai-social-media-scheduler', icon: Share2,
-      color: 'from-purple-500 to-pink-500', featured: true}, { name: 'AI Customer Insights Platform', description: 'Advanced customer analytics & insights',
-      href: '/services/ai-customer-insights-platform', icon: Users,
-      color: 'from-green-500 to-emerald-500', featured: true}, { name: 'AI-Powered DevOps Automation', description: 'Intelligent CI/CD & infrastructure automation',
-      href: '/services/ai-powered-devops-automation', icon: Workflow,
-      color: 'from-blue-500 to-indigo-500', featured: true}, { name: 'AI Content Creation Studio Pro', description: 'Advanced AI-powered content creation platform',
-      href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool,
-      color: 'from-purple-500 to-pink-500', featured: true}, { name: 'Quantum AI Trading Platform', description: 'Revolutionary quantum-enhanced trading system',
-      href: '/services/Quantum-AI-Trading-Platform', icon: BarChart3,
-      color: 'from-orange-500 to-red-500', featured: true}, { name: 'AI Quantum Financial Analytics', description: 'Revolutionary quantum AI financial platform',
-      href: '/services/ai-quantum-financial-analytics-platform', icon: BarChart3,
-      color: 'from-blue-500 to-purple-600', featured: true}, { name: 'AI Autonomous Supply Chain', description: 'Self-learning supply chain management',
-      href: '/services/ai-autonomous-supply-chain-management-platform', icon: Truck,
-      color: 'from-green-500 to-blue-600', featured: true}, { name: 'AI Cybersecurity Operations', description: 'Autonomous security operations center',
-      href: '/services/ai-cybersecurity-operations-center', icon: Shield,
-      color: 'from-red-500 to-orange-600', featured: true}, { name: '2026 Services Showcase', description: 'Latest innovative services showcase',
-      href: '/innovative-services-showcase-2026', icon: Sparkles,
-      color: 'from-yellow-500 to-orange-500', featured: true}
-  ];
-
-    { label: 'Contact', href: '/contact' }
+      name: 'AI-Powered Micro SAAS',
+      description: 'Revolutionary AI-powered software solutions',
+      href: '/zion-cutting-edge-services-2029',
+      icon: Brain,
+      color: 'from-blue-500 to-cyan-500',
+      featured: true
+    },
+    {
+      name: 'AI Content Creation Studio Pro',
+      description: 'Advanced AI content creation platform',
+      href: '/services/AI-Content-Creation-Studio-Pro',
+      icon: PenTool,
+      color: 'from-purple-500 to-pink-500',
+      featured: true
+    },
+    {
+      name: 'Quantum AI Trading Platform',
+      description: 'Next-generation quantum trading platform',
+      href: '/services/Quantum-AI-Trading-Platform',
+      icon: Atom,
+      color: 'from-orange-500 to-red-500',
+      featured: true
+    },
+    {
+      name: 'Micro SAAS Solutions',
+      description: 'Innovative software-as-a-service solutions',
+      href: '/services/micro-saas-solutions',
+      icon: Rocket,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      name: 'AI Services',
+      description: 'Cutting-edge artificial intelligence solutions',
+      href: '/ai-services',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      name: 'IT Infrastructure',
+      description: 'Enterprise-grade IT solutions',
+      href: '/it-services',
+      icon: Server,
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      name: 'Quantum Computing',
+      description: 'Next-generation quantum solutions',
+      href: '/services/quantum-computing',
+      icon: Atom,
+      color: 'from-orange-500 to-red-500'
+    },
+    {
+      name: 'Cybersecurity',
+      description: 'Enterprise-grade security solutions',
+      href: '/services/cybersecurity',
+      icon: Shield,
+      color: 'from-red-500 to-pink-500'
+    },
+    {
+      name: 'Cloud & DevOps',
+      description: 'Scalable cloud infrastructure and automation',
+      href: '/services/cloud-devops',
+      icon: Cloud,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      name: 'Digital Transformation',
+      description: 'End-to-end business transformation services',
+      href: '/services/digital-transformation',
+      icon: Rocket,
+      color: 'from-orange-500 to-red-500'
+    },
+    {
+      name: '2025 Innovative Services',
+      description: 'Latest cutting-edge services',
+      href: '/zion-innovative-services-2025',
+      icon: SparklesIcon,
+      color: 'from-yellow-500 to-orange-500'
+    },
+    {
+      name: '2025 Services Showcase',
+      description: 'Comprehensive innovative services showcase',
+      href: '/innovative-services-showcase-2025',
+      icon: SparklesIcon,
+      color: 'from-cyan-500 to-blue-500',
+      featured: true
+    },
+    {
+      name: '2029 Cutting-Edge Services',
+      description: 'Future-ready innovative services',
+      href: '/zion-cutting-edge-services-2029',
+      icon: SparklesIcon,
+      color: 'from-indigo-500 to-purple-500',
+      featured: true
+    }
   ];
 
                 {link.label}

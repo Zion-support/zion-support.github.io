@@ -1,328 +1,487 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
+import {
+  Search,
+  Filter,
+  Calendar,
+  Clock,
+  User,
+  Tag,
+  ArrowRight,
+  BookOpen,
+  Brain,
+  Shield,
+  Cloud,
+  Rocket,
+  Atom,
+  Leaf,
+  TrendingUp,
+  Lightbulb,
+  Code,
+  Server,
+  Eye,
+  Heart,
+  Share2,
+  ChevronLeft,
+  ChevronRight,
+  Phone,
+  Mail,
+  MapPin
+} from 'lucide-react';
 
 export default function Blog() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All Posts', icon: BookOpen, count: 24 },
+    { id: 'ai', name: 'Artificial Intelligence', icon: Brain, count: 8 },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 6 },
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 5 },
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 3 },
+    { id: 'sustainability', name: 'Sustainable Tech', icon: Leaf, count: 2 }
+  ];
+
   const blogPosts = [
     {
       id: 1,
       title: 'The Future of AI in Business: 2025 Trends and Predictions',
       excerpt: 'Discover how artificial intelligence is reshaping business operations and what to expect in the coming year.',
-      category: 'AI & Machine Learning',
+      content: 'Artificial intelligence continues to revolutionize how businesses operate, from customer service automation to predictive analytics...',
       author: 'Kleber Santos',
-      date: 'January 15, 2025',
-      readTime: '5 min read',
-      image: '🤖',
-      featured: true
-    }, {
-      id: 2,
-      title: 'Cloud FinOps: Optimizing Your Cloud Costs in 2025',
-      excerpt: 'Learn the latest strategies for managing and optimizing cloud infrastructure costs in today\'s dynamic environment.',
-      category: 'Cloud & DevOps',
-      author: 'Cloud Team',
-      date: 'January 12, 2025',
-      readTime: '4 min read',
-      image: '☁️',
-      featured: false
-    }, {
-      id: 3,
-      title: 'Zero Trust Security: The New Standard for Enterprise Protection',
-      excerpt: 'Explore how zero trust architecture is becoming the foundation for modern cybersecurity strategies.',
-      category: 'Cybersecurity',
-      author: 'Security Team',
-      date: 'January 10, 2025',
-      readTime: '6 min read',
-      image: '🔒',
-      featured: false
-    }, {
-      id: 4,
-      title: 'Building Scalable Micro SAAS Applications: Best Practices',
-      excerpt: 'Essential guidelines for developing and scaling software-as-a-service applications for modern businesses.',
-      category: 'Micro SAAS',
-      author: 'Development Team',
-      date: 'January 8, 2025',
-      readTime: '7 min read',
-      image: '💻',
-      featured: false
-    }, {
-      id: 5,
-      title: 'Data Analytics in Healthcare: Improving Patient Outcomes',
-      excerpt: 'How healthcare organizations are leveraging data analytics to enhance patient care and operational efficiency.',
-      category: 'Data Analytics',
-      author: 'AI Team',
-      date: 'January 5, 2025',
-      readTime: '5 min read',
-      image: '📊',
-      featured: false
-    }, {
-      id: 6,
-      title: 'Quantum Computing: Breaking Down the Hype vs. Reality',
-      excerpt: 'A practical look at quantum computing\'s current state and its real-world applications for businesses.',
-      category: 'Emerging Tech',
-      author: 'Research Team',
-      date: 'January 3, 2025',
+      authorRole: 'CEO & Founder',
+      authorImage: '/team/kleber-santos.jpg',
+      publishDate: '2025-01-15',
       readTime: '8 min read',
-      image: '🚀',
-      featured: false
+      category: 'ai',
+      tags: ['AI', 'Business', 'Trends', '2025'],
+      featured: true,
+      image: '/blog/ai-business-trends-2025.jpg',
+      views: 1247,
+      likes: 89
+    },
+    {
+      id: 2,
+      title: 'Cybersecurity in the Age of AI: Threats and Solutions',
+      excerpt: 'Explore the evolving cybersecurity landscape and how AI is both a threat and a solution.',
+      content: 'As artificial intelligence becomes more sophisticated, cybersecurity threats are evolving at an unprecedented pace...',
+      author: 'AI Research Team',
+      authorRole: 'Security Specialists',
+      authorImage: '/team/ai-team.jpg',
+      publishDate: '2025-01-12',
+      readTime: '12 min read',
+      category: 'cybersecurity',
+      tags: ['Cybersecurity', 'AI', 'Threats', 'Security'],
+      featured: true,
+      image: '/blog/ai-cybersecurity-threats.jpg',
+      views: 2156,
+      likes: 156
+    },
+    {
+      id: 3,
+      title: 'Quantum Computing: Breaking Down the Hype vs. Reality',
+      excerpt: 'Separate fact from fiction in the quantum computing revolution and understand its real business applications.',
+      content: 'Quantum computing has been hailed as the next technological revolution, but what does it really mean for businesses...',
+      author: 'Quantum Research Team',
+      authorRole: 'Quantum Specialists',
+      authorImage: '/team/quantum-team.jpg',
+      publishDate: '2025-01-10',
+      readTime: '15 min read',
+      category: 'quantum',
+      tags: ['Quantum Computing', 'Technology', 'Innovation', 'Business'],
+      featured: false,
+      image: '/blog/quantum-computing-reality.jpg',
+      views: 1893,
+      likes: 134
+    },
+    {
+      id: 4,
+      title: 'Cloud-Native Development: Best Practices for 2025',
+      excerpt: 'Learn the essential practices for building scalable, resilient cloud applications in the modern era.',
+      content: 'Cloud-native development has become the standard for modern applications, but implementing it correctly requires...',
+      author: 'DevOps Engineers',
+      authorRole: 'Cloud Specialists',
+      authorImage: '/team/devops-team.jpg',
+      publishDate: '2025-01-08',
+      readTime: '10 min read',
+      category: 'cloud',
+      tags: ['Cloud', 'DevOps', 'Best Practices', '2025'],
+      featured: false,
+      image: '/blog/cloud-native-best-practices.jpg',
+      views: 1678,
+      likes: 98
+    },
+    {
+      id: 5,
+      title: 'Sustainable Technology: Green Solutions for Business Growth',
+      excerpt: 'How sustainable technology can drive business growth while reducing environmental impact.',
+      content: 'Sustainability is no longer just a corporate responsibility—it\'s a business imperative that can drive growth...',
+      author: 'Sustainability Team',
+      authorRole: 'Green Tech Specialists',
+      authorImage: '/team/sustainability-team.jpg',
+      publishDate: '2025-01-05',
+      readTime: '7 min read',
+      category: 'sustainability',
+      tags: ['Sustainability', 'Green Tech', 'Business Growth', 'Environment'],
+      featured: false,
+      image: '/blog/sustainable-technology-business.jpg',
+      views: 1432,
+      likes: 76
+    },
+    {
+      id: 6,
+      title: 'AI-Powered Customer Experience: The New Competitive Advantage',
+      excerpt: 'Transform your customer experience with AI-driven personalization and automation.',
+      content: 'Customer experience has become the primary differentiator in today\'s competitive market, and AI is the key...',
+      author: 'AI Research Team',
+      authorRole: 'AI Specialists',
+      authorImage: '/team/ai-team.jpg',
+      publishDate: '2025-01-03',
+      readTime: '9 min read',
+      category: 'ai',
+      tags: ['AI', 'Customer Experience', 'Personalization', 'Automation'],
+      featured: false,
+      image: '/blog/ai-customer-experience.jpg',
+      views: 1987,
+      likes: 145
     }
   ];
 
-  const categories = [
-    'All',
-    'AI & Machine Learning',
-    'Cloud & DevOps',
-    'Cybersecurity',
-    'Micro SAAS',
-    'Data Analytics',
-    'Emerging Tech'
-  ];
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
 
-  const featuredPost = blogPosts.find(post => post.featured);
+  const featuredPosts = blogPosts.filter(post => post.featured);
+  const regularPosts = filteredPosts.filter(post => !post.featured);
 
   return (
-    <>
-      <Head>
-        <title>Blog - Zion Tech Group | Technology Insights & Updates</title>
-        <meta name="description" content="Stay updated with the latest technology trends, AI insights, and industry best practices from Zion Tech Group experts." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
-        {/* Navigation */}
-        <nav className="bg-white/90 backdrop-blur-md shadow-lg border-b border-gray-200 sticky top-0 z-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <div className="flex items-center">
-                <Link href="/" className="text-2xl font-bold text-gray-900">Zion Tech Group</Link>
-              </div>
-              <div className="hidden md:flex space-x-8">
-                <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</Link>
-                <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Services</Link>
-                <Link href="/solutions" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Solutions</Link>
-                <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">About</Link>
-                <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Contact</Link>
-                <Link href="/blog" className="text-blue-600 font-medium">Blog</Link>
-              </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Blog - Zion Tech Group"
+        description="Stay updated with the latest insights on AI, cybersecurity, quantum computing, and technology trends. Expert analysis and industry insights from Zion Tech Group."
+        keywords="technology blog, AI insights, cybersecurity trends, quantum computing, cloud development, sustainable technology, Zion Tech Group"
+      />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-medium mb-6">
+              <BookOpen className="w-4 h-4 mr-2" />
+              Technology Insights
             </div>
-          </div>
-        </nav>
-
-        {/* Hero Section */}
-        <section className="py-20 sm:py-32">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 mb-6">
-              Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Insights</span>
+            
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Technology <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Insights</span> & Trends
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Stay ahead of the curve with expert insights on AI, cloud computing, cybersecurity, and emerging technologies
+            
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Stay ahead of the curve with expert analysis, industry insights, and cutting-edge technology trends 
+              from our team of specialists and thought leaders.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="#featured" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
-                Read Latest Articles
-              </Link>
-              <Link href="/contact" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-                Subscribe to Updates
-              </Link>
+            
+            {/* Search and Filter */}
+            <div className="max-w-2xl mx-auto mb-8">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search articles, topics, or authors..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+              </div>
             </div>
-          </div>
-        </section>
 
-        {/* Featured Post */}, {featuredPost && (
-          <section id="featured" className="py-20 bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Article</h2>
-                <p className="text-lg text-gray-600">Our latest insights and analysis</p>
-              </div>
-              
-              <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 md:p-12">
-                <div className="grid lg:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <div className="flex items-center space-x-4 mb-4">
-                      <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
-                        {featuredPost.category}
-                      </span>
-                      <span className="text-sm text-gray-500">{featuredPost.readTime}</span>
-                    </div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-4">{featuredPost.title}</h3>
-                    <p className="text-lg text-gray-600 mb-6">{featuredPost.excerpt}</p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                          <span className="text-lg">{featuredPost.image}</span>
-                        </div>
-                        <div>
-                          <p className="font-medium text-gray-900">{featuredPost.author}</p>
-                          <p className="text-sm text-gray-500">{featuredPost.date}</p>
-                        </div>
-                      </div>
-                      <Link 
-                        href={`/blog/${featuredPost.id}`}
-                        className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-                      >
-                        Read Full Article
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-32 h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center mx-auto">
-                      <span className="text-6xl">{featuredPost.image}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        )}, {/* Category Filter */}
-        <section className="py-12 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-wrap justify-center gap-3">
-              {categories.map((category, index) => (
+            {/* Category Filters */}
+            <div className="flex flex-wrap gap-3 justify-center">
+              {categories.map((category) => (
                 <button
-                  key={index}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                    category === 'All'
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white text-gray-700 hover:bg-blue-50 border border-gray-200'
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
+                    selectedCategory === category.id
+                      ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/30'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
                   }`}
                 >
-                  {category}
+                  <category.icon className="w-4 h-4" />
+                  {category.name}
+                  <span className="ml-1 text-xs opacity-75">({category.count})</span>
                 </button>
               ))}
             </div>
-          </div>
-        </section>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* Blog Posts Grid */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.filter(post => !post.featured).map((post) => (
-                <article key={post.id} className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
-                  <div className="p-6">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
-                        {post.category}
-                      </span>
-                      <span className="text-sm text-gray-500">{post.readTime}</span>
-                    </div>
-                    
-                    <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-                      <span className="text-2xl">{post.image}</span>
-                    </div>
-                    
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
-                      {post.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-4 line-clamp-3">
-                      {post.excerpt}
-                    </p>
-                    
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                          <span className="text-sm">{post.image}</span>
-                        </div>
-                        <div>
-                          <p className="text-sm font-medium text-gray-900">{post.author}</p>
-                          <p className="text-xs text-gray-500">{post.date}</p>
+      {/* Featured Posts */}
+      {featuredPosts.length > 0 && (
+        <section className="py-16 relative z-10">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Featured</span> Articles
+              </h2>
+              <p className="text-lg text-gray-300">Must-read insights from our experts</p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {featuredPosts.map((post, index) => (
+                <motion.article
+                  key={post.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group"
+                >
+                  <Link to={`/blog/${post.id}`}>
+                    <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:scale-105">
+                      <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
+                        <div className="text-center">
+                          <BookOpen className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
+                          <p className="text-gray-400 text-sm">Featured Article</p>
                         </div>
                       </div>
                       
-                      <Link 
-                        href={`/blog/${post.id}`}
-                        className="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center group"
-                      >
-                        Read More
-                        <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </Link>
+                      <div className="p-6">
+                        <div className="flex items-center gap-2 mb-4">
+                          <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full">
+                            {categories.find(c => c.id === post.category)?.name}
+                          </span>
+                          <span className="text-gray-400 text-sm">•</span>
+                          <span className="text-gray-400 text-sm">{post.readTime}</span>
+                        </div>
+                        
+                        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                          {post.title}
+                        </h3>
+                        
+                        <p className="text-gray-400 mb-4 leading-relaxed">
+                          {post.excerpt}
+                        </p>
+                        
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
+                              {post.author.split(' ').map(n => n[0]).join('')}
+                            </div>
+                            <div>
+                              <div className="text-sm font-medium text-white">{post.author}</div>
+                              <div className="text-xs text-gray-400">{post.authorRole}</div>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-center gap-4 text-gray-400 text-sm">
+                            <div className="flex items-center gap-1">
+                              <Eye className="w-4 h-4" />
+                              {post.views}
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Heart className="w-4 h-4" />
+                              {post.likes}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </article>
+                  </Link>
+                </motion.article>
               ))}
-            </div>
-            
-            <div className="text-center mt-12">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-                Load More Articles
-              </button>
             </div>
           </div>
         </section>
+      )}
 
-        {/* Newsletter Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Stay Updated</h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Get the latest technology insights, industry updates, and expert analysis delivered to your inbox
+      {/* Regular Posts */}
+      <section className="py-16 relative z-10">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Latest <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Articles</span>
+            </h2>
+            <p className="text-lg text-gray-300">Stay updated with the latest technology insights</p>
+          </motion.div>
+
+          {regularPosts.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {regularPosts.map((post, index) => (
+                <motion.article
+                  key={post.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group"
+                >
+                  <Link to={`/blog/${post.id}`}>
+                    <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 h-full">
+                      <div className="aspect-video bg-gradient-to-br from-slate-700/50 to-slate-800/50 flex items-center justify-center">
+                        <BookOpen className="w-12 h-12 text-gray-400" />
+                      </div>
+                      
+                      <div className="p-6">
+                        <div className="flex items-center gap-2 mb-4">
+                          <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full">
+                            {categories.find(c => c.id === post.category)?.name}
+                          </span>
+                          <span className="text-gray-400 text-sm">•</span>
+                          <span className="text-gray-400 text-sm">{post.readTime}</span>
+                        </div>
+                        
+                        <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                          {post.title}
+                        </h3>
+                        
+                        <p className="text-gray-400 mb-4 leading-relaxed text-sm">
+                          {post.excerpt}
+                        </p>
+                        
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <div className="w-6 h-6 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
+                              {post.author.split(' ').map(n => n[0]).join('')}
+                            </div>
+                            <div className="text-xs text-gray-400">{post.author}</div>
+                          </div>
+                          
+                          <div className="flex items-center gap-3 text-gray-400 text-xs">
+                            <div className="flex items-center gap-1">
+                              <Eye className="w-3 h-3" />
+                              {post.views}
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Heart className="w-3 h-3" />
+                              {post.likes}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </motion.article>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+              <h3 className="text-xl font-medium text-white mb-2">No articles found</h3>
+              <p className="text-gray-400">Try adjusting your search or filter criteria</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-900/50 relative z-10">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-2xl mx-auto"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              Stay <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Updated</span>
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">
+              Get the latest technology insights and industry trends delivered to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <input
                 type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
+                placeholder="Enter your email address"
+                className="flex-1 px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
-              <button className="bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium">
+              <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                 Subscribe
               </button>
             </div>
-            <p className="text-sm text-blue-200 mt-4">
-              No spam, unsubscribe at any time. We respect your privacy.
-            </p>
-          </div>
-        </section>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* Footer */}
-        <footer className="bg-gray-900 text-white py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-4 gap-8">
-              <div>
-                <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
-                <p className="text-gray-400 mb-4">
-                  Transforming businesses through innovative technology solutions and AI-powered automation.
-                </p>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-semibold mb-4">Blog Categories</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><Link href="/blog" className="hover:text-white transition-colors">AI & Machine Learning</Link></li>
-                  <li><Link href="/blog" className="hover:text-white transition-colors">Cloud & DevOps</Link></li>
-                  <li><Link href="/blog" className="hover:text-white transition-colors">Cybersecurity</Link></li>
-                  <li><Link href="/blog" className="hover:text-white transition-colors">Emerging Tech</Link></li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-semibold mb-4">Company</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-                  <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
-                  <li><Link href="/solutions" className="hover:text-white transition-colors">Solutions</Link></li>
-                  <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-semibold mb-4">Contact</h4>
-                <div className="space-y-2 text-gray-400">
-                  <p>+1 302 464 0950</p>
-                  <p>kleber@ziontechgroup.com</p>
-                  <p>Middletown, DE 19709</p>
-                </div>
-              </div>
-            </div>
+      {/* CTA Section */}
+      <section className="py-20 relative z-10">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Ready to <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Transform</span> Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Let's discuss how our technology solutions can help you achieve your business goals and stay ahead of the competition.
+            </p>
             
-            <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-              <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 inline-flex items-center group"
+              >
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+              
+              <Link
+                to="/services"
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 inline-flex items-center group"
+              >
+                Explore Services
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
             </div>
-          </div>
-        </footer>
-      </div>
-    </>
-  )}
+
+            {/* Contact Info */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-400">
+              <div className="flex items-center gap-2">
+                <Phone className="w-5 h-5 text-cyan-400" />
+                <span>+1 (302) 464-0950</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-5 h-5 text-cyan-400" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-5 h-5 text-cyan-400" />
+                <span>Delaware, USA</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}
