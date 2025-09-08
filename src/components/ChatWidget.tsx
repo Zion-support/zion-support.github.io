@@ -21,10 +21,13 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
 
   useEffect(() => {
     if (!isOpen) return;
-
     if ('Notification' in window && Notification.permission === 'default') {
       Notification.requestPermission();
     }
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) return;
 
     async function setup() {
       const { io } = await import('socket.io-client');
@@ -62,7 +65,6 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
     };
     socketRef.current.emit('send-message', { roomId, message: msg });
     setMessages(prev => [...prev, msg]);
-    // TODO: persist message via backend API
     setText('');
   };
 

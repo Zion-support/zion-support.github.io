@@ -1,19 +1,22 @@
 import { Server as IOServer } from 'socket.io';
-import type { Server as NetServer } from 'http';
+import type { Server as NetServer, IncomingMessage, ServerResponse } from 'http';
 
 export const config = { api: { bodyParser: false } };
 
-interface NextApiResponseServerIO {
-  socket: {
-    server: NetServer & { io?: IOServer };
-  };
-  end: () => void;
+// Basic request/response types so this handler works in Node or serverless environments
+type Req = IncomingMessage & { method?: string };
+interface SocketServer extends NetServer {
+  io?: IOServer;
+}
+interface Res extends ServerResponse {
+  socket: SocketServer;
 }
 
-export default function handler(req: any, res: NextApiResponseServerIO) {
-  if (!res.socket.server.io) {
-    const io = new IOServer(res.socket.server, { path: '/api/socket' });
-    res.socket.server.io = io;
+export default function handler(req: Req, res: Res) {
+  const httpServer = res.socket as SocketServer;
+  if (!httpServer.io) {
+    const io = new IOServer(httpServer, { path: '/api/socket' });
+    httpServer.io = io;
 
     io.on('connection', (socket) => {
       socket.on('join-room', (roomId: string) => {
