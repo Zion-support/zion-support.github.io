@@ -1,4 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { reportComponentError } from '../utils/errorReporting';
 
 interface Props {
   children: ReactNode;
@@ -28,6 +29,9 @@ export class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
+    
+    // Report error to error reporting system
+    reportComponentError(error, errorInfo, 'ErrorBoundary');
     
     // Call custom error handler if provided
     if (this.props.onError) {
