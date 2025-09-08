@@ -4,8 +4,16 @@
   publish = "dist"
   command_timeout = "30m"
 
+[build.environment]
+  NODE_VERSION = "18"
+
 [[plugins]]
   package = "netlify-plugin-compress"
   [plugins.inputs]
     gzip = true
     brotli = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
