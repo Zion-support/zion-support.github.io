@@ -192,6 +192,14 @@
   schedule = "17 */6 * * *"
 
 [[scheduled.functions]]
+  name = "redirect-manager"
+  schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "a11y-audit-runner"
+  schedule = "*/20 * * * *"
+
+[[scheduled.functions]]
   name = "todo-summary-runner"
   schedule = "*/30 * * * *"
 
@@ -212,6 +220,19 @@
   name = "auto-scheduler"
   schedule = "*/15 * * * *" # every 15 minutes
 
+[[scheduled.functions]]
+  name = "a11y-alt-text-auditor-runner"
+  schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "revenue-cta-inserter-runner"
+  schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "design-token-harmonizer-runner"
+  schedule = "0 */6 * * *"
+
+# From main (keep)
 [[scheduled.functions]]
   name = "deps-auto-upgrade-runner"
   schedule = "17 */6 * * *" # every 6 hours
