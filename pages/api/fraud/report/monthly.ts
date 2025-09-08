@@ -1,9 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    res.status(200).json({ message: 'Fraud monthly report endpoint' });
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
+import { getFraudStore } from '../../../../utils/fraud/store';
+export default async function handler(,
+    req: NextApiRequest, r,
+    es: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.status(405).json({,
+    error: 'Method not allowed' });
+    return
   }
 }

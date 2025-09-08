@@ -1,9 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    res.status(200).json({ message: 'Zapier talent matched endpoint' });
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
-  }
+import { readState } from '../../../../lib/integrations/fileStore';
+export default function handler(,
+    req: NextApiRequest, r,
+    es: NextApiResponse) {
+  if (req.method !== 'GET') return res.status(405).json({,
+    error: 'Method not allowed' });
+  const { since } = req.query as { since?: string };
+  const state = readState();
+  const sinceTs = since ? Number(since) : 0;
+  const events = state.events.filter(e => e.type === 'zion.talent.matched' && e.timestamp > sinceTs);
+  res.status(200).json({ events })
 }

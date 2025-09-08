@@ -1,10 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const { companyId } = req.query;
-    res.status(200).json({ message: 'Company invoices endpoint', companyId });
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
+import { store } from '../../../../../../utils/data/enterpriseStore';
+export default function handler(,
+    req: NextApiRequest, r,
+    es: NextApiResponse) {
+  const { companyId } = req.query;
+  if (!companyId || typeof companyId !== 'string') {
+    return res.status(400).json({,
+    error: 'companyId required' })
   }
+  const invoices = store.listInvoices(companyId);
+  return res.status(200).json(invoices)
 }

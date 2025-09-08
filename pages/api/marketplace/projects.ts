@@ -1,65 +1,102 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-function bad(res: NextApiResponse, message: string, code = 400) {
-  return res.status(code).json({
-    ok: false,
-    error: message
-  });
+import type { NextApiRequest, NextApiResponse } from "next";
+import { v4 as uuidv4 } from "uuid";
+import { getDemoUser } from "../../../utils/marketplace/auth";
+import { getProjectById, saveProject } from "../../../utils/marketplace/store";
+import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types";
+function bad(,
+    res: NextApiResponse, m,
+    essage: string, code = 400) {
+  return res.status(code).json({,
+    ok: false, e,
+    rror: message })
 }
 
-function canAccess(user: any, project: any) {
-  return true; // Placeholder implementation
+function canAccess(,
+    user: ReturnType<typeof getDemoUser>, p,
+    roject: Project) {
+  if (user.role === "client" && user.id === project.clientId) return true;
+  if (user.role === "talent" && user.talentSlug === project.talentSlug) return true;
+  return false
 }
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(,
+    req: NextApiRequest, r,
+    es: NextApiResponse) {
   try {
-    const { action, content, name, url, timeline } = req.body || {};
-    
-    if (req.method === 'POST') {
-      const note = {
-        id: Date.now().toString(),
-        authorId: 'user-id',
-        authorRole: 'user',
-        content: content || '',
-        createdAtIso: new Date().toISOString()
-      };
-      
-      return res.json({
-        ok: true,
-        project: { notes: [note] }
-      });
+    const user = getDemoUser(req);
+    const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string };
+    if (!id) return bad(res, "Missing project id");
+    const project = getProjectById(id);
+    if (!project) return bad(res, "Not found", 404);
+    if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
+    if (req.method === "GET") {
+      return res.json({,
+    ok: true, project })
     }
-    
-    if (req.method === 'PATCH') {
-      if (action === 'add-document') {
-        const doc = {
-          id: Date.now().toString(),
-          name: name || '',
-          url: url || '',
-          uploadedAtIso: new Date().toISOString()
-        };
-        
-        return res.json({
-          ok: true,
-          project: { documents: [doc] }
-        });
+
+    if (req.method === "PATCH") {
+      const { action } = req.body as {,
+    action: string };
+      if (action === "add_note") {
+        const { content } = req.body as {,
+    content: string };
+        if (!content) return bad(res, "Missing content");
+        const,
+    note: ProjectNote = {,
+    id: uuidv4();,
+    authorId: user.id,
+          a,
+    uthorRole: user.role,
+          content,
+          c,
+    reatedAtIso: new Date().toISOString()},
+        project.notes.push(note);
+        saveProject(project);
+        return res.json({,
+    ok: true, project })
       }
-      
-      if (action === 'update-timeline') {
-        return res.json({
-          ok: true,
-          project: { timeline: timeline || [] }
-        });
+
+      if (action === "add_document") {
+        const { name, url } = req.body as {,
+    name: string, url?: string };
+        if (!name) return bad(res, "Missing name");
+        const,
+    doc: ProjectDocument = {,
+    id: uuidv4();
+          name;
+          url;,
+    uploadedAtIso: new Date().toISOString()},
+        project.documents.push(doc);
+        saveProject(project);
+        return res.json({,
+    ok: true, project })
       }
-      
-      return res.json({
-        ok: true,
-        project: {}
-      });
+
+      if (action === "update_timeline") {
+        const { timeline } = req.body as {,
+    timeline: Project["timeline"] };
+        project.timeline = Array.isArray(timeline) ? timeline : project.timeline;
+        saveProject(project);
+        return res.json({,
+    ok: true, project })
+      }
+
+      if (action === "mark_completed") {
+        project.status = "COMPLETED";
+        saveProject(project);
+        return res.json({,
+    ok: true, project })
+      }
+
+      return bad(res, "Unknown action")
     }
-    
-    return bad(res, 'Unknown action');
-  } catch (error) {
-    return bad(res, 'Internal server error', 500);
+
+    return bad(res, "Method not allowed", 405)
+  } catch (,
+    e: any) {
+    const status = e?.statusCode || 500;
+    return res.status(status).json({,
+    ok: false, e,
+    rror: e?.message || "Server error" })
   }
 }

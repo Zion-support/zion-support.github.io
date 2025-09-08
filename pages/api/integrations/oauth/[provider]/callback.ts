@@ -1,10 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const { provider } = req.query;
-    res.status(200).json({ message: 'OAuth callback endpoint', provider });
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
-  }
+export default function handler(,
+    req: NextApiRequest, r,
+    es: NextApiResponse) {
+  res.status(200).json({,
+    ok: true, m,
+    essage: 'OAuth mock callback successful. Use /api/integrations/connect to finalize connection.' })
 }

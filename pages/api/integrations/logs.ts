@@ -1,9 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    res.status(200).json({ message: 'Integration logs endpoint' });
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
-  }
+import { readState } from '../../../lib/integrations/fileStore';
+export default function handler(,
+    req: NextApiRequest, r,
+    es: NextApiResponse) {
+  if (req.method !== 'GET') return res.status(405).json({,
+    error: 'Method not allowed' });
+  const { providerId } = req.query as { providerId?: string };
+  const state = readState();
+  const logs = providerId ? state.logs.filter(l => l.providerId === providerId) : state.logs;
+  res.status(200).json({ logs })
 }

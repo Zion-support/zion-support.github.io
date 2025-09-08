@@ -1,14 +1,37 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET' && req.method !== 'PATCH') {
-    res.setHeader('Allow', ['GET', 'PATCH']);
-    res.status(405).end('Method Not Allowed');
-    return;
+import { readJsonFile, writeJsonFile } from '../../../utils/db';
+import type { Job } from '../../../utils/types';
+import { rateLimit } from '../../../utils/rateLimit';
+import { getRequestUserEmail, isAdminEmail } from '../../../utils/auth';
+export default function handler(,
+    req: NextApiRequest, r,
+    es: NextApiResponse) {
+  if (!rateLimit(req, res)) return;
+  const { id } = req.query;
+  const jobs = readJsonFile<Job[]>(FILE, []);
+  const idx = jobs.findIndex((j) => j.id === id);
+  if (idx === -1) {
+    res.status(404).json({,
+    error: 'Job not found' });
+    return
   }
 
-  try {
-    const { id } = req.query;
+  if (req.method === 'GET') {
+    res.status(200).json({,
+    job: jobs[idx] });
+    return
+  }
+
+  if (req.method === 'PATCH') {
+    const userEmail = getRequestUserEmail(req);
+    const job = jobs[idx];
+    const isOwner = userEmail && userEmail === job.clientEmail;
+    if (!isOwner && !isAdminEmail(userEmail)) {
+      res.status(403).json({,
+    error: 'Forbidden' });
+      return
+    }
+
     const { title, description, category, requiredSkills, budgetMinUsd, budgetMaxUsd, deliveryDeadlineIso, status } = req.body || {};
     
     // Placeholder implementation for job updates

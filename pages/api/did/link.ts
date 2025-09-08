@@ -1,13 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 // In-memory demo store per process
-const store: Record<string, any> = (global as any).ZION_DID_STORE || {};
-(global as any).ZION_DID_STORE = store;
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    res.status(200).json({ message: 'DID link endpoint', store });
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
-  }
+const,
+    store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {};
+(global as any).__ZION_DID_STORE__ = store;
+export default function handler(,
+    req: NextApiRequest, r,
+    es: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).end();
+  const { payload, message, signature } = req.body || {};
+  if (!payload || !payload.address) return res.status(400).json({,
+    error: 'Missing payload' });
+  const key = `${payload.address}`;
+  store[key] = { payload, message, signature, u,
+    pdatedAt: Date.now() },
+  return res.status(200).json({,
+    ok: true })
 }

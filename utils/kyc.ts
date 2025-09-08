@@ -1,31 +1,25 @@
 export interface KycProfile {
+  id: string;
   userId: string;
-  status: 'draft' | 'submitted' | 'approved' | 'rejected' | 'needs_more_info';
+  status: 'pending' | 'submitted' | 'approved' | 'rejected' | 'needs_more_info';
   personalInfo: {
     firstName: string;
     lastName: string;
-    email: string;
-    phone: string;
     dateOfBirth: string;
+    nationality: string;
   };
-  identityDocuments: {
-    documentType: 'passport' | 'drivers_license' | 'national_id';
-    documentNumber: string;
-    documentImage: string;
+  documents: {
+    idType: 'passport' | 'drivers_license' | 'national_id';
+    idNumber: string;
+    idImageUrl?: string;
+    proofOfAddressUrl?: string;
   };
-  address: {
-    street: string;
-    city: string;
-    state: string;
-    zipCode: string;
-    country: string;
-  };
-  createdAt: string;
-  lastUpdatedAt: string;
   auditTrail: Array<{
     at: string;
     by: string;
     action: string;
     details?: any;
   }>;
+  createdAt: string;
+  lastUpdatedAt: string;
 }

@@ -1,10 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+import fs from 'fs';
+import path from 'path';
+export default function handler(,
+    req: NextApiRequest, r,
+    es: NextApiResponse) {
   try {
     const { id } = req.query;
-    res.status(200).json({ message: 'Learn course endpoint', id });
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
+    const course = courses.find((,
+    c: any) => c.id === id);
+    if (!course) return res.status(404).json({,
+    error: 'Course not found' });
+    res.status(200).json({ course })
+  } catch (,
+    e: any) {
+    res.status(500).json({,
+    error: e?.message ?? 'Failed to load course' })
   }
 }

@@ -1,15 +1,27 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
+import { getDisputeById } from '../../../utils/fsdb';
+import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../utils/auth';
+export default async function handler(,
+    req: NextApiRequest, r,
+    es: NextApiResponse) {
+  const { id } = req.query;
+  if (typeof id !== 'string') return res.status(400).json({,
+    error: 'Invalid id' });
+  const user = parseUserFromRequest(req);
+  if (req.method === 'GET') {
+    const dispute = await getDisputeById(id);
+    if (!dispute) return res.status(404).json({,
+    error: 'Not found' });
+    try {
+      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
+    } catch (,
+    e: any) {
+      return res.status(e.statusCode || 403).json({,
+    error: 'Forbidden' })
+    }
+    return res.status(200).json({ dispute })
   }
 
-  try {
-    const { id } = req.query;
-    res.status(200).json({ message: 'Dispute endpoint', id });
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
-  }
+  res.setHeader('AllowGET');
+  return res.status(405).end('Method Not Allowed')
 }

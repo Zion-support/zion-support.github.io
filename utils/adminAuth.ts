@@ -1,22 +1,33 @@
 import type { NextApiRequest } from 'next';
 
-export function getSessionFromReq(req: NextApiRequest): any {
-  // Mock implementation - in a real app, this would parse JWT or session
-  const authHeader = req.headers.authorization;
-  if (!authHeader) return null;
-  
-  // Mock session for development
-  return {
-    user: {
-      id: 'admin-1',
-      email: 'admin@ziontechgroup.com',
-      role: 'admin'
-    }
+export interface Session {
+  user: {
+    id: string;
+    email: string;
+    role: string;
   };
 }
 
+export function getSessionFromReq(req: NextApiRequest): Session | null {
+  // Mock implementation - in production, you'd verify JWT tokens, check cookies, etc.
+  const authHeader = req.headers.authorization;
+  if (authHeader && authHeader.startsWith('Bearer ')) {
+    return {
+      user: {
+        id: 'user-1',
+        email: 'user@example.com',
+        role: 'user'
+      }
+    };
+  }
+  return null;
+}
+
 export function isInternalAgentRequest(req: NextApiRequest): boolean {
-  // Mock implementation - in a real app, this would check for internal agent headers
+  // Check for internal agent headers or tokens
   const userAgent = req.headers['user-agent'] || '';
-  return userAgent.includes('internal-agent') || userAgent.includes('zion-bot');
+  const internalToken = req.headers['x-internal-token'];
+  
+  return userAgent.includes('internal-agent') || 
+         internalToken === process.env.INTERNAL_AGENT_TOKEN;
 }

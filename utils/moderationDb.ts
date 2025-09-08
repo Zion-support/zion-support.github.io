@@ -1,84 +1,78 @@
+import fs from 'fs';
+import path from 'path';
+
+export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+
 export interface ModerationFlag {
   id: string;
-  type: 'spam' | 'inappropriate' | 'harassment' | 'other';
-  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-  content: string;
-  reporterId: string;
-  reportedUserId: string;
+  contentType: 'post' | 'comment' | 'user';
+  contentId: string;
+  reason: string;
+  userEmail: string;
+  status: ModerationStatus;
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
-  reason: string;
-  userEmail: string;
-  contentType: string;
 }
 
-export async function getFlagById(id: string): Promise<ModerationFlag | null> {
-  // Mock implementation - in a real app, this would query a database
-  return {
-    id,
-    type: 'spam',
-    status: 'pending',
-    content: 'Mock content',
-    reporterId: 'user-1',
-    reportedUserId: 'user-2',
-    createdAt: new Date().toISOString(),
+const DATA_DIR = path.join(process.cwd(), 'data');
+const FILE = path.join(DATA_DIR, 'moderation-flags.json');
+
+function loadFlags(): ModerationFlag[] {
+  try {
+    if (!fs.existsSync(FILE)) return [];
+    const raw = fs.readFileSync(FILE, 'utf8');
+    return JSON.parse(raw);
+  } catch {
+    return [];
+  }
+}
+
+function saveFlags(flags: ModerationFlag[]): void {
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+  fs.writeFileSync(FILE, JSON.stringify(flags, null, 2));
+}
+
+export async function createFlag(init: Partial<ModerationFlag>): Promise<ModerationFlag> {
+  const flags = loadFlags();
+  const flag: ModerationFlag = {
+    id: init.id || `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    contentType: init.contentType || 'post',
+    contentId: init.contentId || '',
+    reason: init.reason || '',
+    userEmail: init.userEmail || '',
+    status: init.status || 'pending',
+    createdAt: init.createdAt || new Date().toISOString(),
     updatedAt: new Date().toISOString(),
-    reason: 'Spam content',
-    userEmail: 'user@example.com',
-    contentType: 'post'
+    adminNotes: init.adminNotes
   };
-}
-
-export async function updateFlagStatus(
-  id: string, 
-  status: 'approved' | 'removed' | 'warned' | 'banned',
-  adminNotes?: string
-): Promise<ModerationFlag | null> {
-  // Mock implementation - in a real app, this would update a database
-  const flag = await getFlagById(id);
-  if (!flag) return null;
   
-  return {
-    ...flag,
-    status,
-    adminNotes,
-    updatedAt: new Date().toISOString()
-  };
+  flags.push(flag);
+  saveFlags(flags);
+  return flag;
 }
 
 export async function readAllFlags(): Promise<ModerationFlag[]> {
-  // Mock implementation - in a real app, this would query a database
-  return [
-    {
-      id: 'flag-1',
-      type: 'spam',
-      status: 'pending',
-      content: 'Mock content 1',
-      reporterId: 'user-1',
-      reportedUserId: 'user-2',
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-      reason: 'Spam content',
-      userEmail: 'user@example.com',
-      contentType: 'post'
-    }
-  ];
+  return loadFlags();
 }
 
-export async function createFlag(data: any): Promise<ModerationFlag> {
-  // Mock implementation - in a real app, this would create a database record
-  return {
-    id: `flag-${Date.now()}`,
-    type: data.type || 'other',
-    status: 'pending',
-    content: data.content || '',
-    reporterId: data.reporterId || 'user-1',
-    reportedUserId: data.reportedUserId || 'user-2',
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
-    reason: data.reason || '',
-    userEmail: data.userEmail || '',
-    contentType: data.contentType || 'post'
-  };
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  const flags = loadFlags();
+  return flags.find(f => f.id === id) || null;
+}
+
+export async function updateFlagStatus(id: string, status: ModerationStatus, adminNotes?: string): Promise<ModerationFlag | null> {
+  const flags = loadFlags();
+  const flagIndex = flags.findIndex(f => f.id === id);
+  
+  if (flagIndex === -1) return null;
+  
+  flags[flagIndex].status = status;
+  flags[flagIndex].updatedAt = new Date().toISOString();
+  if (adminNotes) {
+    flags[flagIndex].adminNotes = adminNotes;
+  }
+  
+  saveFlags(flags);
+  return flags[flagIndex];
 }

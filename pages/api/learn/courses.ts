@@ -1,9 +1,28 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+import fs from 'fs';
+import path from 'path';
+export default function handler(,
+    req: NextApiRequest, r,
+    es: NextApiResponse) {
   try {
-    res.status(200).json({ message: 'Learn courses endpoint' });
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
+    const raw = fs.readFileSync(dataPath, 'utf-8');
+    const courses = JSON.parse(raw);
+    const { category, level, isFree } = req.query;
+    const filtered = courses.filter((,
+    c: any) => {
+      if (category && c.category !== category) return false;
+      if (level && c.level !== level) return false;
+      if (typeof isFree !== 'undefined') {
+        const freeVal = isFree === 'true' || isFree === true;
+        if (c.isFree !== freeVal) return false
+      }
+      return true
+    });
+    res.status(200).json({,
+    courses: filtered })
+  } catch (,
+    e: any) {
+    res.status(500).json({,
+    error: e?.message ?? 'Failed to load courses' })
   }
 }

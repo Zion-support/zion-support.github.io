@@ -1,4 +1,5 @@
 import { ApiDocsSpec } from './types';
+const baseUrl = 'https://api.zion.os';
 
 const baseUrl = 'https://api && api.zion.os';
 
@@ -366,50 +367,13 @@ const v1: ApiDocsSpec = {
           visibility: 'internal',
           auth: ['jwt'],
           responseBodySchema: { type: 'object', properties: { members: { type: 'number' }, proposals: { type: 'number' } } },
-          samples: [;
-            { language: 'curl', code: `curl '${base_url}/v1 / nation / stats' -H 'Authorization: Bearer <token>'` },
-            { language: 'javascript', code: `await fetch ('${base_url}/v1 / nation / stats', { headers: { Authorization: 'Bearer <token>' } }).then (r => r.json ()), ` },
-            { language: 'python', code: `import requests\nrequests.get ('${base_url}/v1 / nation / stats', headers={'Authorization':'Bearer <token>'}).json ()` }],
-          versions: ['v1'];
-        }
-      ];
-    }
-            { language: 'curl', code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },
-            { language: 'python', code: `import requests\nrequests ;
-};
-
-export default v1;
-  ];
-}
-;
-export default v1;
-;
+          samples: [
+            { language: 'curl', code: `curl '${baseUrl}/v1/nation/stats' -H 'Authorization: Bearer <token>'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/nation/stats', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json()),` },
+            { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/nation/stats', headers={'Authorization':'Bearer <token>'}).json()` }],
+          versions: ['v1']}]
       }
-    }
   ]
-}
-export default v1;
-
-  ];
-
-        }
-      ];
-    }
-
-            { language: 'curl', code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },
-            { language: 'python', code: `import requests\nrequests ;
-
-
-
-  ];
-
-  }
 };
+
 export default v1;
-  ];
-}
-;
-export default v1;
-;

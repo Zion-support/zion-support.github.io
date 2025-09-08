@@ -1,75 +1,70 @@
-export interface TokenConfig {
-  totalSupply: number;
-  maxSupply: number;
-  decimals: number;
-  symbol: string;
-  name: string;
-}
-
 export interface TokenTransaction {
   id: string;
   userId: string;
   amount: number;
-  type: 'issue' | 'revoke' | 'transfer';
-  reason: string;
-  timestamp: number;
+  type: 'earn' | 'spend' | 'transfer';
+  description: string;
+  timestamp: string;
 }
 
-let config: TokenConfig = {
-  totalSupply: 1000000,
-  maxSupply: 10000000,
-  decimals: 18,
+export interface TokenConfig {
+  name: string;
+  symbol: string;
+  totalSupply: number;
+  circulatingSupply: number;
+  exchangeRate: number;
+}
+
+// Mock data for development
+const mockTransactions: TokenTransaction[] = [
+  {
+    id: '1',
+    userId: 'user1',
+    amount: 100,
+    type: 'earn',
+    description: 'Task completion reward',
+    timestamp: new Date().toISOString()
+  }
+];
+
+const mockConfig: TokenConfig = {
+  name: 'Zion Token',
   symbol: 'ZION',
-  name: 'Zion Token'
+  totalSupply: 1000000,
+  circulatingSupply: 500000,
+  exchangeRate: 0.1
 };
 
-let transactions: TokenTransaction[] = [];
+export function getAllTransactions(): TokenTransaction[] {
+  return mockTransactions;
+}
 
 export function getConfig(): TokenConfig {
-  return { ...config };
-}
-
-export function setConfig(newConfig: Partial<TokenConfig>): void {
-  config = { ...config, ...newConfig };
-}
-
-export function getAllTransactions(): TokenTransaction[] {
-  return [...transactions];
+  return mockConfig;
 }
 
 export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
-  if (amount <= 0) throw new Error('Amount must be positive');
-  if (config.totalSupply + amount > config.maxSupply) throw new Error('Exceeds max supply');
-  
   const tx: TokenTransaction = {
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    id: Date.now().toString(),
     userId,
     amount,
-    type: 'issue',
-    reason,
-    timestamp: Date.now()
+    type: 'earn',
+    description: reason,
+    timestamp: new Date().toISOString()
   };
-  
-  transactions.push(tx);
-  config.totalSupply += amount;
-  
+  mockTransactions.push(tx);
   return tx;
 }
 
 export function revokeTokens(userId: string, amount: number, reason: string): TokenTransaction {
-  if (amount <= 0) throw new Error('Amount must be positive');
-  
   const tx: TokenTransaction = {
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    id: Date.now().toString(),
     userId,
-    amount,
-    type: 'revoke',
-    reason,
-    timestamp: Date.now()
+    amount: -amount,
+    type: 'spend',
+    description: reason,
+    timestamp: new Date().toISOString()
   };
-  
-  transactions.push(tx);
-  config.totalSupply = Math.max(0, config.totalSupply - amount);
-  
+  mockTransactions.push(tx);
   return tx;
 }

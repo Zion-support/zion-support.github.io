@@ -1,9 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+import { listProposals } from '../../../utils/data/proposals';
+export default function handler(,
+    _req: NextApiRequest, r,
+    es: NextApiResponse) {
   try {
-    res.status(200).json({ message: 'Proposals list endpoint' });
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
+    const proposals = listProposals();
+    res.status(200).json({ proposals })
+  } catch (,
+    error: any) {
+    res.status(500).json({,
+    error: error?.message || 'Failed to list proposals' })
   }
 }

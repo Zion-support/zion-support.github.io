@@ -1,10 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const { provider } = req.query;
-    res.status(200).json({ message: 'OAuth start endpoint', provider });
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
-  }
+export default function handler(,
+    req: NextApiRequest, r,
+    es: NextApiResponse) {
+  const { provider } = req.query as {,
+    provider: string };
+  const callbackUrl = `/api/integrations/oauth/${provider}/callback?code=mock_code&state=mock_state`;
+  res.writeHead(302, {,
+    Location: callbackUrl });
+  res.end()
 }
