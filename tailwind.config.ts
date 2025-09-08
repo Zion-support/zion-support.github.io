@@ -103,7 +103,7 @@ const config: Config = {
   },
   plugins: [
     animatePlugin,
-    plugin(function({ addUtilities }: { addUtilities: (utilities: Record<string, any>) => void }) {
+    plugin(({ addUtilities }) => {
       const newUtilities = {
         '.rtl': {
           direction: 'rtl',
