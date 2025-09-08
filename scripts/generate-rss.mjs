@@ -1,5 +1,9 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
 import { promises as fs } from 'fs';
+=======
+import fs from 'fs-extra';
+>>>>>>> origin/feat/rss-automation
 import path from 'path';
 import { glob } from 'glob';
 
@@ -63,6 +67,10 @@ async function generateRss() {
     const meta = await extractPostMeta(file);
     if (meta) items.push(meta);
   }
+<<<<<<< HEAD
+=======
+  // sort by date desc
+>>>>>>> origin/feat/rss-automation
   items.sort((a, b) => b.pubDate - a.pubDate);
 
   const now = new Date();
@@ -89,7 +97,11 @@ ${itemsXml}
   </channel>
 </rss>\n`;
 
+<<<<<<< HEAD
   await fs.mkdir('public', { recursive: true });
+=======
+  await fs.ensureDir('public');
+>>>>>>> origin/feat/rss-automation
   const outPath = path.join('public', 'feed.xml');
   await fs.writeFile(outPath, rss, 'utf8');
   console.log(`RSS generated: ${outPath} (${items.length} items)`);
@@ -98,4 +110,8 @@ ${itemsXml}
 generateRss().catch((err) => {
   console.error('RSS generation failed:', err);
   process.exit(1);
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> origin/feat/rss-automation
