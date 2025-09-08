@@ -1,16 +1,26 @@
 [build]
+<<<<<<< HEAD
+<<<<<<< HEAD
+  # Publish prebuilt dist without running a build
+  command = "echo Skipping build; deploying prebuilt dist"
+=======
   # Install Python dependencies first (if present), then Node.js dependencies and build
   # Use system Python to avoid shims. Fall back gracefully if requirements file is absent.
   command = "if [ -f requirements.build.txt ]; then /usr/bin/python3 -m pip install -r requirements.build.txt; fi && npm install --no-audit --no-fund && npm run build"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-47cc
 =======
   command = "/usr/bin/python3 -m pip install --no-input --break-system-packages -r requirements.txt || true && npm ci --no-audit --no-fund && npm run build"
+>>>>>>> origin/cursor/install-project-dependencies-with-mise-b132
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
+<<<<<<< HEAD
+=======
   PYTHON_VERSION = "3.11"
   # Disable Netlify's auto dependency installers; we handle installs in the build command
+>>>>>>> origin/cursor/install-project-dependencies-with-mise-b132
   NETLIFY_SKIP_INSTALL = "true"
 
 
