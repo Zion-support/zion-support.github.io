@@ -1,11 +1,9 @@
 {
-  "generatedAt": "2025-08-11T23:13:50.176Z",
+  "generatedAt": "2025-08-11T23:13:30.270Z",
   "functions": [
     "a11y-audit-runner",
     "ai-changelog-runner",
-    "ai-trends-radar-runner",
-    "asset-size-report",
-    "auto-discovery-runner",
+    "architecture-graph",
     "auto-scheduler",
     "automation-catalog",
     "automation-guardian-runner",
@@ -79,7 +77,7 @@
     "og-image-update-runner",
     "performance-hints-runner",
     "readme-advertiser",
-    "redirect-manager",
+    "repo-insights-digest",
     "repo-knowledge-graph-runner",
     "repo-radar-runner",
     "roadmap-synthesizer",
@@ -114,7 +112,6 @@
     "ultrafast-fcb-orchestrator",
     "ultrafast-front-orchestrator",
     "ultrafast-orchestrator",
-    "ux-a11y-auditor",
-    "ux-heuristics-runner"
+    "ux-issues-scanner"
   ]
 }
