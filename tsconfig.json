@@ -33,9 +33,7 @@
     "allowJs": true,
     "incremental": true,
     "noEmitOnError": false,
-<<<<<<< HEAD
-    "skipLibCheck": true
-=======
+    "skipLibCheck": true,
 
     /* Path mapping */
     "baseUrl": ".",
@@ -46,7 +44,6 @@
       "@/utils/*": ["./src/utils/*"],
       "@/lib/*": ["./src/lib/*"]
     }
->>>>>>> 42874371d357ddfaa9abeb871f172faae49b1020
   },
   "include": [
     "src/**/*",
