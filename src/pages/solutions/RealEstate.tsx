@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  GraduationCap, 
+  Home, 
   Users, 
   TrendingUp, 
   Shield, 
@@ -24,196 +24,228 @@ import {
   Phone,
   Mail,
   MapPin,
-  BookOpen,
-  Video,
-  Monitor,
-  Settings,
-  Lightbulb,
-  Cog,
-  Wrench,
-  Laptop,
-  Smartphone,
-  Tablet,
-  Wifi,
-  MessageCircle,
+  Building,
+  Search,
+  Filter,
   Calendar,
   Clock,
-  CheckSquare
+  CheckSquare,
+  DollarSign,
+  PieChart,
+  LineChart,
+  BarChart,
+  Target as TargetIcon,
+  Eye,
+  FileText,
+  Image,
+  Video,
+  Camera,
+  Smartphone,
+  Tablet,
+  Laptop,
+  Wifi,
+  MessageCircle,
+  PhoneCall,
+  Mail as MailIcon,
+  MapPin as MapPinIcon,
+  Navigation,
+  Compass,
+  Globe as GlobeIcon,
+  Lock as LockIcon,
+  Shield as ShieldIcon,
+  CheckCircle as CheckCircleIcon,
+  XCircle,
+  AlertTriangle,
+  Info,
+  HelpCircle,
+  Settings,
+  Cog,
+  Wrench,
+  Tool,
+  Hammer,
+  Paintbrush,
+  Ruler,
+  Calculator,
+  Percent,
+  Plus,
+  Minus,
+  Divide,
+  Equal
 } from 'lucide-react';
 
-export default function Education() {
+export default function RealEstate() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Learning Analytics",
-      description: "Advanced analytics to track student progress, identify learning gaps, and personalize educational experiences.",
-      benefits: ["Student performance tracking", "Personalized learning paths", "Early intervention", "Progress analytics"]
+      title: "AI-Powered Market Analysis",
+      description: "Advanced analytics and machine learning algorithms to provide accurate market insights and property valuations.",
+      benefits: ["Real-time market data", "Predictive analytics", "Property valuation", "Investment insights"]
     },
     {
       icon: Workflow,
-      title: "Digital Learning Platforms",
-      description: "Comprehensive digital learning environments that enhance engagement and improve learning outcomes.",
-      benefits: ["Interactive content", "Multi-modal learning", "Real-time collaboration", "Accessibility features"]
+      title: "Digital Property Management",
+      description: "Comprehensive property management platforms that streamline operations and improve tenant satisfaction.",
+      benefits: ["Tenant portal", "Maintenance tracking", "Financial reporting", "Document management"]
     },
     {
       icon: Shield,
-      title: "Educational Security & Privacy",
-      description: "Robust security solutions to protect student data and ensure compliance with educational privacy regulations.",
-      benefits: ["FERPA compliance", "Data encryption", "Access controls", "Privacy protection"]
+      title: "Real Estate Security & Compliance",
+      description: "Robust security solutions to protect sensitive property data and ensure regulatory compliance.",
+      benefits: ["Data encryption", "Access controls", "Audit trails", "Compliance monitoring"]
     },
     {
       icon: Cloud,
-      title: "Cloud-Based Education Infrastructure",
-      description: "Scalable cloud solutions designed for educational institutions of all sizes.",
-      benefits: ["Scalable infrastructure", "Cost optimization", "Remote access", "Disaster recovery"]
+      title: "Cloud-Based Real Estate Solutions",
+      description: "Scalable cloud platforms designed for real estate professionals and property management companies.",
+      benefits: ["Scalable infrastructure", "Remote access", "Data backup", "Cost optimization"]
     }
   ];
 
   const solutions = [
     {
-      category: "K-12 Education",
+      category: "Property Management",
       services: [
-        "Student Information Systems",
-        "Learning Management Platforms",
-        "Parent Communication Tools",
-        "Assessment & Testing",
-        "Special Education Support"
+        "Tenant Management Systems",
+        "Maintenance Request Tracking",
+        "Financial Reporting & Analytics",
+        "Document Management",
+        "Property Inspections"
       ]
     },
     {
-      category: "Higher Education",
+      category: "Market Analysis",
       services: [
-        "Campus Management Systems",
-        "Online Learning Platforms",
-        "Student Lifecycle Management",
-        "Research & Analytics",
-        "Alumni Engagement"
+        "Real Estate Market Data",
+        "Property Valuation Tools",
+        "Investment Analysis",
+        "Market Trends & Forecasting",
+        "Comparative Market Analysis"
       ]
     },
     {
-      category: "Corporate Training",
+      category: "Sales & Marketing",
       services: [
-        "Employee Learning Platforms",
-        "Skills Assessment Tools",
-        "Compliance Training",
-        "Performance Tracking",
-        "Certification Management"
+        "CRM Systems",
+        "Lead Management",
+        "Marketing Automation",
+        "Virtual Tours & 3D Imaging",
+        "Social Media Integration"
       ]
     },
     {
-      category: "Educational Technology",
+      category: "Investment & Finance",
       services: [
-        "AI Tutoring Systems",
-        "Virtual Reality Learning",
-        "Mobile Learning Apps",
-        "Data Analytics Platforms",
-        "Integration Services"
+        "Investment Portfolio Management",
+        "ROI Calculators",
+        "Financial Modeling",
+        "Risk Assessment",
+        "Tax Optimization"
       ]
     }
   ];
 
   const caseStudies = [
     {
-      institution: "Public School District",
-      challenge: "Limited access to technology and personalized learning tools",
-      solution: "Comprehensive digital learning platform with AI-powered analytics and mobile access",
-      results: "45% improvement in student engagement, 30% increase in test scores"
+      company: "Property Management Firm",
+      challenge: "Manual processes and lack of centralized data management",
+      solution: "Integrated property management platform with AI-powered analytics",
+      results: "40% reduction in operational costs, 60% improvement in tenant satisfaction"
     },
     {
-      institution: "University",
-      challenge: "Complex student management and outdated administrative systems",
-      solution: "Modern campus management system with integrated learning platforms",
-      results: "50% reduction in administrative overhead, 40% improvement in student satisfaction"
+      company: "Real Estate Investment Company",
+      challenge: "Limited market insights and investment analysis capabilities",
+      solution: "AI-powered market analysis platform with predictive modeling",
+      results: "35% improvement in investment decisions, 25% increase in portfolio returns"
     },
     {
-      institution: "Corporate Training Center",
-      challenge: "Inefficient training delivery and lack of progress tracking",
-      solution: "AI-powered learning platform with skills assessment and certification tracking",
-      results: "60% faster training completion, 35% improvement in knowledge retention"
+      company: "Real Estate Agency",
+      challenge: "Inefficient lead management and marketing processes",
+      solution: "Comprehensive CRM system with marketing automation",
+      results: "50% increase in lead conversion, 45% reduction in marketing costs"
     }
   ];
 
   const technologies = [
     {
       name: "AI & Machine Learning",
-      description: "Intelligent tutoring and personalized learning experiences",
+      description: "Predictive analytics and market insights",
       icon: Brain
     },
     {
       name: "Virtual Reality",
-      description: "Immersive learning environments and simulations",
-      icon: Monitor
+      description: "Immersive property tours and visualization",
+      icon: Eye
     },
     {
-      name: "Mobile Learning",
-      description: "Accessible learning on any device, anywhere",
-      icon: Smartphone
+      name: "IoT & Smart Buildings",
+      description: "Connected property management and monitoring",
+      icon: Wifi
     },
     {
-      name: "Cloud Computing",
-      description: "Scalable and secure educational infrastructure",
-      icon: Cloud
+      name: "Blockchain",
+      description: "Secure property transactions and records",
+      icon: Database
     }
   ];
 
   const benefits = [
     {
-      title: "Improved Learning Outcomes",
-      description: "AI-powered personalization leads to better student performance and engagement",
+      title: "Increased Efficiency",
+      description: "Automate routine tasks and streamline operations",
       icon: TrendingUp
     },
     {
-      title: "Cost Efficiency",
-      description: "Reduce administrative overhead and optimize resource allocation",
-      icon: DollarSign
+      title: "Better Decision Making",
+      description: "Data-driven insights for improved business decisions",
+      icon: BarChart3
     },
     {
-      title: "Accessibility",
-      description: "Ensure equal access to quality education for all students",
+      title: "Enhanced Customer Experience",
+      description: "Provide better service to tenants and clients",
       icon: Users
     },
     {
-      title: "Data-Driven Insights",
-      description: "Make informed decisions based on comprehensive analytics",
-      icon: BarChart3
+      title: "Cost Savings",
+      description: "Reduce operational costs and improve profitability",
+      icon: DollarSign
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Helmet>
-        <title>Education Solutions - Zion Tech Group</title>
-        <meta name="description" content="Transform education with Zion Tech Group's AI-powered learning platforms, digital learning solutions, and comprehensive educational technology services." />
-        <meta name="keywords" content="education solutions, digital learning, AI education, learning management systems, educational technology, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/solutions/education" />
+        <title>Real Estate Solutions - Zion Tech Group</title>
+        <meta name="description" content="Transform your real estate business with Zion Tech Group's AI-powered property management, market analysis, and digital real estate solutions." />
+        <meta name="keywords" content="real estate solutions, property management, real estate technology, market analysis, Zion Tech Group" />
+        <link rel="canonical" href="https://ziontechgroup.com/solutions/real-estate" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-blue/20 border border-zion-blue/30 text-zion-blue text-sm font-medium mb-6">
-              <GraduationCap className="w-4 h-4 mr-2" />
-              Education Solutions
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-orange/20 border border-zion-orange/30 text-zion-orange text-sm font-medium mb-6">
+              <Home className="w-4 h-4 mr-2" />
+              Real Estate Solutions
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transforming Education with
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-blue to-zion-cyan"> AI-Powered Technology</span>
+              Transform Real Estate with
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-orange to-zion-cyan"> AI-Powered Technology</span>
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Zion Tech Group delivers innovative education solutions that empower institutions to provide personalized, engaging, and effective learning experiences for students of all ages.
+              Zion Tech Group delivers innovative real estate solutions that combine cutting-edge technology with industry expertise to revolutionize property management, market analysis, and investment strategies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-cyan hover:to-zion-blue transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-orange to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-cyan hover:to-zion-orange transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/pricing"
-                className="inline-flex items-center px-8 py-4 border border-zion-blue text-zion-blue font-semibold rounded-lg hover:bg-zion-blue hover:text-white transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border border-zion-orange text-zion-orange font-semibold rounded-lg hover:bg-zion-orange hover:text-white transition-all duration-300"
               >
                 View Pricing
               </Link>
@@ -227,19 +259,19 @@ export default function Education() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Education Solutions
+              Comprehensive Real Estate Solutions
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              From K-12 to higher education and corporate training, we provide end-to-end educational technology solutions.
+              From property management to market analysis, we provide end-to-end real estate technology solutions.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-zion-blue/50 transition-all duration-300">
+              <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-zion-orange/50 transition-all duration-300">
                 <div className="flex items-center mb-6">
-                  <div className="p-3 bg-zion-blue/20 rounded-lg mr-4">
-                    <feature.icon className="w-8 h-8 text-zion-blue" />
+                  <div className="p-3 bg-zion-orange/20 rounded-lg mr-4">
+                    <feature.icon className="w-8 h-8 text-zion-orange" />
                   </div>
                   <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
                 </div>
@@ -263,10 +295,10 @@ export default function Education() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Education Solution Portfolio
+              Real Estate Solution Portfolio
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Comprehensive solutions covering all aspects of modern education and learning.
+              Comprehensive solutions covering all aspects of modern real estate operations.
             </p>
           </div>
           
@@ -282,7 +314,7 @@ export default function Education() {
                 <ul className="space-y-2">
                   {solution.services.map((service, idx) => (
                     <li key={idx} className="text-sm text-zion-slate-light flex items-center">
-                      <ArrowRight className="w-4 h-4 text-zion-blue mr-2 flex-shrink-0" />
+                      <ArrowRight className="w-4 h-4 text-zion-orange mr-2 flex-shrink-0" />
                       {service}
                     </li>
                   ))}
@@ -301,16 +333,16 @@ export default function Education() {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our education solutions deliver measurable improvements in learning outcomes and operational efficiency.
+              Our real estate solutions deliver measurable improvements in efficiency and profitability.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-zion-blue/50 transition-all duration-300">
+              <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-zion-orange/50 transition-all duration-300">
                 <div className="flex items-center mb-6">
-                  <div className="p-3 bg-zion-blue/20 rounded-lg mr-4">
-                    <benefit.icon className="w-8 h-8 text-zion-blue" />
+                  <div className="p-3 bg-zion-orange/20 rounded-lg mr-4">
+                    <benefit.icon className="w-8 h-8 text-zion-orange" />
                   </div>
                   <h3 className="text-2xl font-bold text-white">{benefit.title}</h3>
                 </div>
@@ -329,7 +361,7 @@ export default function Education() {
               Cutting-Edge Technologies
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              We leverage the latest technologies to deliver innovative education solutions.
+              We leverage the latest technologies to deliver innovative real estate solutions.
             </p>
           </div>
           
@@ -352,10 +384,10 @@ export default function Education() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Education Transformation Success Stories
+              Real Estate Transformation Success Stories
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              See how educational institutions are revolutionizing learning with Zion Tech Group solutions.
+              See how real estate companies are revolutionizing their operations with Zion Tech Group solutions.
             </p>
           </div>
           
@@ -363,11 +395,11 @@ export default function Education() {
             {caseStudies.map((study, index) => (
               <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
                 <div className="flex items-center mb-4">
-                  <div className="p-2 bg-zion-blue/20 rounded-lg mr-3">
-                    <Star className="w-6 h-6 text-zion-blue" />
+                  <div className="p-2 bg-zion-orange/20 rounded-lg mr-3">
+                    <Star className="w-6 h-6 text-zion-orange" />
                   </div>
                   <div>
-                    <div className="text-white font-semibold">{study.institution}</div>
+                    <div className="text-white font-semibold">{study.company}</div>
                   </div>
                 </div>
                 <div className="mb-4">
@@ -391,24 +423,24 @@ export default function Education() {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-zion-blue/20 to-zion-cyan/20 border border-zion-blue/30 rounded-2xl p-12">
+          <div className="bg-gradient-to-r from-zion-orange/20 to-zion-cyan/20 border border-zion-orange/30 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Education?
+              Ready to Transform Your Real Estate Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Let's discuss how Zion Tech Group can help you create the future of learning.
+              Let's discuss how Zion Tech Group can help you revolutionize your real estate operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-cyan hover:to-zion-blue transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-orange to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-cyan hover:to-zion-orange transition-all duration-300 transform hover:scale-105"
               >
                 Schedule Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border border-zion-blue text-zion-blue font-semibold rounded-lg hover:bg-zion-blue hover:text-white transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border border-zion-orange text-zion-orange font-semibold rounded-lg hover:bg-zion-orange hover:text-white transition-all duration-300"
               >
                 <Phone className="mr-2 w-5 h-5" />
                 Call Now
@@ -430,8 +462,8 @@ export default function Education() {
               <p className="text-zion-slate-light">+1 (302) 464-0950</p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="p-3 bg-zion-blue/20 rounded-lg mb-4">
-                <Mail className="w-8 h-8 text-zion-blue" />
+              <div className="p-3 bg-zion-orange/20 rounded-lg mb-4">
+                <Mail className="w-8 h-8 text-zion-orange" />
               </div>
               <h3 className="text-white font-semibold mb-2">Email</h3>
               <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>
