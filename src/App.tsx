@@ -6,7 +6,7 @@ import './App.css';
 
 // Components
 import ErrorBoundary from './components/ErrorBoundary';
-import { AppLayout } from './layout/AppLayout';
+import AppLayout from './layout/AppLayout';
 import LazyLoad from './components/LazyLoad';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import Analytics from './components/Analytics';
@@ -17,6 +17,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import BlogPage from './pages/BlogPage';
+import ServicesPage from './pages/ServicesPage';
 
 // Context Providers
 import { LanguageProvider } from './context/LanguageContext';
@@ -70,6 +72,8 @@ const App: React.FC = () => {
                                 <Route path="/" element={<Home />} />
                                 <Route path="/about" element={<About />} />
                                 <Route path="/contact" element={<Contact />} />
+                                <Route path="/blog" element={<BlogPage />} />
+                                <Route path="/services" element={<ServicesPage />} />
                                 <Route path="*" element={<NotFound />} />
                               </Routes>
                             </LazyLoad>
