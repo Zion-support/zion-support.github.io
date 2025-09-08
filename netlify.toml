@@ -2,7 +2,8 @@
   # Do not run any build. Deploy the prebuilt static export from out/ as-is.
   command = "echo 'Skipping build; deploying prebuilt static export'"
   publish = "out"
-  command_timeout = "30m"
+  # Netlify expects a numeric timeout (in seconds)
+  command_timeout = 1800
 
 [build.environment]
   NODE_VERSION = "20"
