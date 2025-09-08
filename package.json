@@ -222,7 +222,8 @@
     "esbuild": "^0.20.0",
     "vite": "^5.0.8",
     "vitest": "^1.4.0",
-    "@playwright/test": "^1.41.2"
+    "@storybook/react": "^7.6.15",
+    "@types/storybook__react": "^7.0.2"
   },
   "peerDependencies": {
     "react": "^18.2.0",

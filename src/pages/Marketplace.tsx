@@ -112,123 +112,7 @@ import { generateRandomListing } from "@/utils/generateRandomListing";
 import { toast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 import { SearchSuggestion } from "@/types/search";
-import styles from './Marketplace.module.css';
-import { useViewMode, ViewMode } from '@/context/ViewModeContext';
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from '@/components/ui/pagination';
-
-interface ProductContainerProps {
-  listings: ProductListing[];
-  onRequestQuote: (id: string) => void;
-}
-
-const marketplaceItems: MarketplaceItem[] = [
-  // AI Services
-  {
-    id: 1,
-    title: 'AI-Powered Server Cluster',
-    category: 'Products',
-    description: 'High-performance computing cluster optimized for AI workloads',
-    price: '$25,000',
-    rating: 4.9,
-    reviews: 127,
-    views: 2847,
-    likes: 156,
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
-          tags: ['AI', 'High Performance', 'Scalable'],
-    featured: true
-  },
-  {
-    id: 2,
-    title: 'Cybersecurity Expert Team',
-    category: 'Talent',
-    description: 'Senior cybersecurity professionals with 10+ years experience',
-    price: '$150/hr',
-    rating: 4.8,
-    reviews: 89,
-    views: 1956,
-    likes: 134,
-    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags: ['Security', 'Expert', 'Certified'],
-    featured: true
-  },
-  {
-    id: 'ai-healthcare-analytics',
-    title: 'AI Healthcare Analytics Suite',
-    description: 'Comprehensive healthcare analytics platform with AI-powered diagnostics and patient insights.',
-    category: 'AI Services',
-    subcategory: 'Healthcare',
-    price: '$8,500/month',
-    rating: 4.9,
-    reviews: 89,
-    image: '/images/marketplace/ai-healthcare.jpg',
-    featured: true,
-    tags: ['Healthcare', 'AI', 'Diagnostics', 'Analytics'],
-    vendor: 'Zion Tech Group',
-    availability: 'available',
-    delivery: 'Instant',
-    warranty: '30 days'
-  },
-  {
-    id: 'ai-legal-document-analysis',
-    title: 'AI Legal Document Analysis',
-    description: 'Intelligent legal document processing and analysis platform for law firms and legal departments.',
-    category: 'AI Services',
-    subcategory: 'Legal Tech',
-    price: '$3,200/month',
-    rating: 4.7,
-    reviews: 156,
-    views: 3241,
-    likes: 189,
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags: ['Quantum', 'Research', 'Advanced'],
-    featured: false
-  }
-];
-
-const categories = [
-  {
-    name: 'AI Services',
-    icon: Brain,
-    description: 'Artificial Intelligence solutions',
-    color: 'from-purple-500 to-pink-500',
-    count: 3
-  },
-  {
-    name: 'Cloud Services',
-    icon: Cloud,
-    description: 'Cloud infrastructure and migration',
-    color: 'from-blue-500 to-cyan-500',
-    count: 2
-  },
-  {
-    name: 'Security Services',
-    icon: Shield,
-    description: 'Cybersecurity and compliance',
-    color: 'from-red-500 to-orange-500',
-    count: 2
-  },
-  {
-    name: 'Hardware',
-    icon: Server,
-    description: 'Physical equipment and infrastructure',
-    color: 'from-green-500 to-emerald-500',
-    count: 2
-  },
-  {
-    name: 'Talent',
-    icon: Users,
-    description: 'Expert consultants and professionals',
-    color: 'from-indigo-500 to-purple-500',
-    count: 2
-  }
-];
+import { ListingView } from "@/types/listings";
 
 export default function Marketplace() {
   const navigate = useNavigate();
@@ -240,31 +124,80 @@ export default function Marketplace() {
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
   const [isLoading, setIsLoading] = useState(false);
-  const { viewMode, setViewMode } = useViewMode();
-  const createViewModeHandler = <T extends ViewMode>(mode: T) => () => setViewMode(mode);
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  const [view, setView] = useState<ListingView>(() =>
+    (localStorage.getItem('marketplaceView') as ListingView) || 'grid'
+  );
 
-  const filteredItems = marketplaceItems.filter(item => {
-    const categoryMatch = selectedCategory === 'all' || item.category === selectedCategory;
-    const searchMatch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                       item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                       item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return categoryMatch && searchMatch;
+  // Automatically append a new listing every 2 minutes
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setListings(prev => [...prev, generateRandomListing()]);
+    }, 120000); // 2 minutes
+    return () => clearInterval(interval);
+  }, []);
+  
+  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions();
+  const filterOptions = useMemo(() => generateFilterOptions(listings), [listings]);
+
+  useEffect(() => {
+    setIsLoading(true);
+    const timeout = setTimeout(() => setIsLoading(false), 300);
+    return () => clearTimeout(timeout);
+  }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
+
+  useEffect(() => {
+    localStorage.setItem('marketplaceView', view);
+  }, [view]);
+  
+  // Filter listings based on selected filters
+  const filteredListings = listings.filter(listing => {
+    // Search filter
+    if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase()) && 
+        !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
+        !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
+      return false;
+    }
+    
+    // Product type filter
+    if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
+      return false;
+    }
+    
+    // Location filter
+    if (selectedLocations.length > 0 && listing.location && !selectedLocations.includes(listing.location)) {
+      return false;
+    }
+    
+    // Availability filter
+    if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability)) {
+      return false;
+    }
+    
+    // Rating filter
+    if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {
+      return false;
+    }
+    
+    return true;
   });
-
-  const sortedItems = [...filteredItems].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
-      case 'price-high':
-        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
-      case 'rating':
-        return b.rating - a.rating;
-      case 'reviews':
-        return b.reviews - a.reviews;
-      default:
-        return b.featured ? 1 : -1;
+  
+  const handleFilterChange = (filterType: string, value: string) => {
+    switch (filterType) {
+      case 'productTypes':
+        setSelectedProductTypes(prev =>
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+        );
+        break;
+      case 'locations':
+        setSelectedLocations(prev =>
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+        );
+        break;
+      case 'availability':
+        setSelectedAvailability(prev =>
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+        );
+        break;
     }
   });
 
@@ -293,20 +226,20 @@ export default function Marketplace() {
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={createViewModeHandler('grid')}
+                onClick={() => setView('grid')}
+                aria-pressed={view === 'grid'}
                 aria-label="Grid view"
-                aria-pressed={viewMode === 'grid'}
-                className="text-zion-slate-light"
+                className={view === 'grid' ? 'text-zion-purple' : 'text-zion-slate-light'}
               >
                 <Grid3X3 className="h-4 w-4" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={createViewModeHandler('list')}
+                onClick={() => setView('list')}
+                aria-pressed={view === 'list'}
                 aria-label="List view"
-                aria-pressed={viewMode === 'list'}
-                className="text-zion-slate-light"
+                className={view === 'list' ? 'text-zion-purple' : 'text-zion-slate-light'}
               >
                 <ListFilter className="h-4 w-4" />
               </Button>
@@ -366,17 +299,30 @@ export default function Marketplace() {
                 <ProductList listings={paginatedListings} onRequestQuote={handleRequestQuote} />
               )
             ) : (
-              <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">
-                <h2 className="text-2xl font-bold text-white mb-4">{t('marketplace.no_results_title')}</h2>
-                <p className="text-zion-slate-light max-w-md mx-auto mb-8">
-                  {t('marketplace.no_results_description')}
-                </p>
-                <Button
-                  onClick={clearAllFilters}
-                  className="bg-zion-purple hover:bg-zion-purple-dark"
-                >
-                  {t('marketplace.clear_filters')}
-                </Button>
+              <div className={view === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 gap-6' : 'flex flex-col gap-6'}>
+                {filteredListings.length > 0 ? (
+                  filteredListings.map((listing) => (
+                    <ProductListingCard
+                      key={listing.id}
+                      listing={listing}
+                      view={view}
+                      onRequestQuote={handleRequestQuote}
+                    />
+                  ))
+                ) : (
+                <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">
+                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>
+                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">
+                    We couldn't find any listings matching your filters. Try adjusting your search criteria.
+                  </p>
+                  <Button 
+                    onClick={clearAllFilters}
+                    className="bg-zion-purple hover:bg-zion-purple-dark"
+                  >
+                    Clear Filters
+                  </Button>
+                </div>
+                )}
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5" />

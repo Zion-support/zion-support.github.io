@@ -48,6 +48,11 @@ export default defineConfig({
     rollupOptions: {
       external: ['axios']
     }
+  },
+  build: {
+    rollupOptions: {
+      external: ['lucide-react']
+    }
   }
 })
 =======
