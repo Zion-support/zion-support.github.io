@@ -16,7 +16,11 @@ const supabase = createClient(
 serve(async (req) => {
   if (req.method === 'POST') {
     const body = await req.text();
-    const signature = req.headers.get('stripe-signature') || '';
+    const signature = req.headers.get('stripe-signature');
+    
+    if (!signature) {
+      return new Response('No signature provided', { status: 400 });
+    }
 
     let event;
     try {
@@ -29,6 +33,10 @@ serve(async (req) => {
       const session = event.data.object as Stripe.Checkout.Session;
       const orderId = session.metadata?.orderId;
       if (orderId) {
+        const supabase = createClient(
+          Deno.env.get('SUPABASE_URL') || '',
+          Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || ''
+        );
         await supabase.from("orders").update({ status: "paid" }).eq("id", orderId);
       }
     }

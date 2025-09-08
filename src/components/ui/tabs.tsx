@@ -33,7 +33,7 @@ export const Tabs: React.FC<TabsProps> = ({
 };
 
 interface TabsListProps extends React.HTMLAttributes<HTMLDivElement> {
-  // Additional props can be added here if needed
+  children?: React.ReactNode;
 }
 
 export const TabsList: React.FC<TabsListProps> = ({ className, ...props }) => {
