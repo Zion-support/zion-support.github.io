@@ -1,5 +1,15 @@
-import { useCallback } from 'react';
-import type { User } from './useAuthState';
+import { useCallback  } from 'react.ts';
+
+export interface User {
+
+  id: string;
+  email: string;
+  displayName?: string;
+  avatar?: string;
+  role?: string;
+  isEmailVerified?: boolean;
+  createdAt?: string;
+  updatedAt?: string}
 
 export const useAuthEventHandlers = (
   setUser: (user: User | null)  => void,

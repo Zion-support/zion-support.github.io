@@ -28,7 +28,7 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
-    // // console.log('Form submitted:', formData);
+    // // // // // console.log('Form submitted:', formData);
     alert('Thank you for your message! We will get back to you within 24 hours.');
     setFormData({
       name: '',

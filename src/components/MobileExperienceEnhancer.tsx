@@ -536,8 +536,8 @@ export function MobileExperienceEnhancer({
         try {
           const registration = await navigator.serviceWorker.register('/sw.js');
           serviceWorkerRef.current = registration;
-          // // console.log('Service Worker registered successfully')} catch (error) {
-          // // console.warn('Service Worker registration failed:', error)}
+          // // // // // console.log('Service Worker registered successfully')} catch (error) {
+          // // // // // console.warn('Service Worker registration failed:', error)}
       }
       
       // Apply mobile navigation

@@ -1,6 +1,14 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction  } from '@reduxjs/toolkit';
 
-interface AuthState {
+export interface User {
+  id: string;
+  email: string;
+  name: string;
+  avatar?: string;
+}
+
+export interface AuthState {
+
   isLoggedIn: boolean;
 }
 

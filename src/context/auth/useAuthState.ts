@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
-interface User {
+export interface User {
+
   id: string;
   email: string;
   displayName?: string;
@@ -11,7 +12,8 @@ interface User {
   updatedAt?: string;
 }
 
-interface AuthTokens {
+export interface AuthTokens {
+
   accessToken: string | null;
   refreshToken: string | null;
 }
@@ -43,7 +45,7 @@ export const useAuthState = () => {
           }
         }
       } catch (error) {
-        // // console.error('Error checking auth state:', error)} finally {
+        // // // // // console.error('Error checking auth state:', error)} finally {
         setIsLoading(false)}
     };
 

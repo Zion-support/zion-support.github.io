@@ -14,9 +14,8 @@ export function usePerformance() {
     useEffect(() => {
         // Check if PerformanceObserver is supported
         if (!('PerformanceObserver' in window)) {
-            console.warn('PerformanceObserver not supported');
-            return;
-        }
+            // // // // // console.warn('PerformanceObserver not supported');
+            return}
         // First Contentful Paint (FCP)
         const fcpObserver = new PerformanceObserver((list) => {
             const entries = list.getEntries();
@@ -60,8 +59,7 @@ export function usePerformance() {
             clsObserver.observe({ entryTypes: ['layout-shift'] });
         }
         catch (error) {
-            console.warn('Error setting up performance observers:', error);
-        }
+            // // // // // console.warn('Error setting up performance observers:', error)}
         // Navigation timing metrics
         const navigationEntry = performance.getEntriesByType('navigation')[0];
         if (navigationEntry) {
@@ -118,10 +116,8 @@ export function usePerformance() {
         console.group('🚀 Performance Metrics');
         metricsWithRatings.forEach(({ name, value, rating }) => {
             const emoji = rating === 'good' ? '✅' : rating === 'needs-improvement' ? '⚠️' : '❌';
-            console.log(`${emoji} ${name}: ${value.toFixed(2)}ms (${rating})`);
-        });
-        console.groupEnd();
-    };
+            // // // // // console.log(`${emoji} ${name}: ${value.toFixed(2)}ms (${rating})`)});
+        console.groupEnd()};
     // Get performance score (0-100)
     const getPerformanceScore = () => {
         const metricsWithRatings = getMetricsWithRatings();
@@ -145,7 +141,7 @@ export function usePerformance() {
             const entries = list.getEntries();
             entries.forEach((entry) => {
                 if (entry.duration > 50) {
-                    console.warn('Long task detected:', {
+                    // // // // // console.warn('Long task detected:', {
                         duration: entry.duration,
                         startTime: entry.startTime,
                         name: entry.name
@@ -157,10 +153,8 @@ export function usePerformance() {
             longTaskObserver.observe({ entryTypes: ['longtask'] });
         }
         catch (error) {
-            console.warn('Error setting up long task observer:', error);
-        }
-        return () => longTaskObserver.disconnect();
-    }, []);
+            // // // // // console.warn('Error setting up long task observer:', error)}
+        return () => longTaskObserver.disconnect()}, []);
     return {
         metrics,
         observers: getMetricsWithRatings(),
@@ -184,11 +178,8 @@ export function usePerformanceEvent(eventName, callback) {
             observer.observe({ entryTypes: [eventName] });
         }
         catch (error) {
-            console.warn(`Error observing ${eventName}:`, error);
-        }
-        return () => observer.disconnect();
-    }, [eventName, callback]);
-}
+            // // // // // console.warn(`Error observing ${eventName}:`, error)}
+        return () => observer.disconnect()}, [eventName, callback])}
 // Hook for measuring time between renders
 export function useRenderTime() {
     const renderStart = useRef(performance.now());

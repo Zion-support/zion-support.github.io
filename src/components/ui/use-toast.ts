@@ -1,12 +1,6 @@
 import { useState } from 'react';
 
-interface Toast {
-  id: string;
-  title: string;
-  description?: string;
-  type?: 'success' | 'error' | 'warning' | 'info';
-  variant?: 'default' | 'destructive';
-import { useState, useCallback } from 'react';
+export interface ToastOptions {
 
 export interface Toast {
   id: string;

@@ -1,13 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-interface AccessibilityPreferences {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  focusIndicator: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
-}
+export interface UseAccessibilityOptions {
 
 interface AccessibilitySettings {
   fontSize: 'small' | 'medium' | 'large' | 'xlarge';
@@ -16,15 +9,7 @@ interface AccessibilitySettings {
   focusStyle: 'default' | 'high-visibility' | 'minimal';
 }
 
-export const useAccessibility = () => {
-  const [preferences, setPreferences] = useState<AccessibilityPreferences>({
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    focusIndicator: true,
-    screenReader: false,
-    keyboardNavigation: true
-  });
+export interface AccessibilityFeatures {
 
   const [settings, setSettings] = useState<AccessibilitySettings>({
     fontSize: 'medium',

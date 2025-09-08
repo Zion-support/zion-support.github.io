@@ -1,6 +1,8 @@
 import { toast as hotToast, type ToastOptions as HotToastOptions } from 'react-hot-toast';
 
-export type ToastOptions = HotToastOptions & {
+export interface Toast {
+
+  id: string;
   title?: string;
   description?: string;
   variant?: 'default' | 'destructive' | 'success';
@@ -58,4 +60,4 @@ toast.success = (message: string) => hotToast.success(message);
 // Export a default toast function for backward compatibility
 export const toast = ({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {
   // In a real implementation, this would dispatch to a global toast system
-  // // console.log('Toast:', { title, description, variant, duration })};
+  // // // // // console.log('Toast:', { title, description, variant, duration })};

@@ -1,28 +1,26 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState  } from 'react.ts';
+export interface PerformanceMetrics {
 
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  domLoad: number | null;
-  windowLoad: number | null;
-}
+  fcp: number | null; // First Contentful Paint
+  lcp: number | null; // Largest Contentful Paint
+  fid: number | null; // First Input Delay
+  cls: number | null; // Cumulative Layout Shift
+  ttfb: number | null; // Time to First Byte
+  domLoad: number | null; // DOM Content Loaded
+  windowLoad: number | null; // Window Load
+  navigationStart: number | null}
+export interface PerformanceObserverEntry {
 
-interface PerformanceObserverEntry {
   name: string;
   value: number;
   rating: 'good' | 'needs-improvement' | 'poor';
 }
 
 // Extended interfaces for specific performance entry types
-interface FirstInputEntry extends PerformanceEntry {
+export interface FirstInputEntry extends PerformanceEntry {
   processingStart: number;
-  startTime: number;
-}
-
-interface LayoutShiftEntry extends PerformanceEntry {
+  startTime: number}
+export interface LayoutShiftEntry extends PerformanceEntry {
   hadRecentInput: boolean;
   value: number;
 }

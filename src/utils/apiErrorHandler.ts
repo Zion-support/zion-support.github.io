@@ -8,7 +8,7 @@ export const showApiError = (error: unknown, fallbackMessage?: string) => {
   });
   // Log error for debugging
   if (process.env.NODE_ENV === 'development') {
-    // // // // // // console.error('API Error:', error);
+    // // // // // // // // // console.error('API Error:', error);
   }
 };
 export const handleApiError = (error: unknown, fallbackMessage?: string) => {

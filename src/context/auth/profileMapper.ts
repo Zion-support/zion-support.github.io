@@ -1,4 +1,4 @@
-interface SupabaseUser {
+export interface SupabaseUser {
 
   id: string;
   email?: string;
@@ -11,7 +11,7 @@ user_metadata?: {
   updated_at?: string;
 }
 
-interface Profile {
+export interface Profile {
 
   id: string;
   display_name?: string;
@@ -23,7 +23,7 @@ interface Profile {
 
 }
 
-interface MappedUser {
+export interface MappedUser {
 
 export interface Profile {
   id: string;

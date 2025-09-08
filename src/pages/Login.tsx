@@ -26,7 +26,7 @@ export default function Login() {
     }
     
     // Here you would typically make an API call to authenticate
-    // // console.log('Login attempt:', formData);
+    // // // // // console.log('Login attempt:', formData);
     
     setIsLoading(false)};
 

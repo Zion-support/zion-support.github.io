@@ -242,7 +242,7 @@ const jsonSitemap = generator.generateJSON();
         };
     }
     catch (error) {
-        // // console.error('Error generating sitemaps:', error);
+        // // // // // console.error('Error generating sitemaps:', error);
         throw error;
     }
 };;;;
