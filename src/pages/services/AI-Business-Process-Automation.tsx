@@ -13,12 +13,17 @@ import {
   ArrowRight,
   Play,
   BarChart3,
-  MessageCircle,
-  Heart,
-  Star,
-  Smile,
+  Workflow,
+  Settings,
+  Bot,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Globe,
   Target,
   Award,
+  Star,
   Phone,
   Mail,
   MapPin,
@@ -30,233 +35,109 @@ import {
   AlertTriangle,
   Lightbulb,
   Rocket,
-  Sparkles,
-  Eye,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  RefreshCw,
-  Zap as ZapIcon,
-  Globe2,
-  Smartphone,
-  Tablet,
-  Laptop,
-  Headphones,
-  UserCheck,
-  ThumbsUp,
-  TrendingDown,
-  Activity,
-  PieChart,
-  LineChart,
-  BarChart,
-  Users2,
-  UserPlus,
-  UserMinus,
-  UserX,
-  UserCheck2,
-  UserClock,
-  UserStar,
-  UserHeart,
-  UserZap,
-  UserShield,
-  UserCog,
-  UserEdit,
-  UserSettings,
-  UserSearch,
-  UserVoice,
-  UserVideo,
-  UserImage,
-  UserFile,
-  UserFolder,
-  UserDatabase,
-  UserCloud,
-  UserNetwork,
-  UserServer,
-  UserMonitor,
-  UserLaptop,
-  UserSmartphone,
-  UserTablet,
-  UserWatch,
-  UserGlasses,
-  UserHat,
-  UserTie,
-  UserSuit,
-  UserDress,
-  UserShirt,
-  UserPants,
-  UserShoes,
-  UserBag,
-  UserWallet,
-  UserKey,
-  UserLock,
-  UserUnlock,
-  UserKeyhole,
-  UserFingerprint,
-  UserEye,
-  UserEar,
-  UserNose,
-  UserMouth,
-  UserTongue,
-  UserTeeth,
-  UserHair,
-  UserBeard,
-  UserMustache,
-  UserGlasses2,
-  UserHat2,
-  UserTie2,
-  UserSuit2,
-  UserDress2,
-  UserShirt2,
-  UserPants2,
-  UserShoes2,
-  UserBag2,
-  UserWallet2,
-  UserKey2,
-  UserLock2,
-  UserUnlock2,
-  UserKeyhole2,
-  UserFingerprint2,
-  UserEye2,
-  UserEar2,
-  UserNose2,
-  UserMouth2,
-  UserTongue2,
-  UserTeeth2,
-  UserHair2,
-  UserBeard2,
-  UserMustache2
+  Sparkles
 } from 'lucide-react';
 
-const AICustomerExperiencePlatform: React.FC = () => {
+const AIBusinessProcessAutomation: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
   const [selectedPlan, setSelectedPlan] = useState('professional');
 
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Personalization',
-      description: 'Machine learning algorithms that understand customer behavior and deliver personalized experiences',
-      benefits: ['Dynamic content', 'Personalized recommendations', 'Behavioral targeting', 'Predictive personalization']
+      icon: Workflow,
+      title: 'Intelligent Workflow Design',
+      description: 'AI-powered workflow creation with drag-and-drop interface and intelligent suggestions',
+      benefits: ['Reduce design time by 70%', 'Auto-optimize processes', 'Smart routing decisions']
     },
     {
-      icon: MessageCircle,
-      title: 'Omnichannel Communication',
-      description: 'Seamless customer interactions across all channels with unified messaging',
-      benefits: ['Email, SMS, Chat', 'Social media integration', 'Voice & video calls', 'Unified inbox']
+      icon: Settings,
+      title: 'Advanced Process Automation',
+      description: 'End-to-end automation of complex business processes with AI decision making',
+      benefits: ['95% process accuracy', '24/7 operation', 'Real-time monitoring']
     },
     {
-      icon: Heart,
-      title: 'Sentiment Analysis',
-      description: 'Real-time emotion detection and sentiment tracking for proactive customer care',
-      benefits: ['Emotion detection', 'Sentiment scoring', 'Mood tracking', 'Proactive alerts']
+      icon: Bot,
+      title: 'RPA Integration',
+      description: 'Seamless integration with existing systems and legacy applications',
+      benefits: ['Non-invasive deployment', 'Quick ROI', 'Scalable automation']
     },
     {
-      icon: Users,
-      title: 'Customer Journey Mapping',
-      description: 'Visualize and optimize every touchpoint in the customer lifecycle',
-      benefits: ['Journey visualization', 'Touchpoint analysis', 'Optimization suggestions', 'Conversion tracking']
+      icon: Cpu,
+      title: 'Machine Learning Engine',
+      description: 'Continuous learning and improvement of automation processes',
+      benefits: ['Self-optimizing workflows', 'Predictive analytics', 'Adaptive processes']
     },
     {
-      icon: BarChart3,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive insights into customer behavior, satisfaction, and loyalty metrics',
-      benefits: ['Behavioral analytics', 'Satisfaction scores', 'Loyalty metrics', 'ROI tracking']
+      icon: Database,
+      title: 'Data Intelligence',
+      description: 'Advanced data processing and analytics for process optimization',
+      benefits: ['Real-time insights', 'Performance metrics', 'Trend analysis']
     },
     {
-      icon: Shield,
-      title: 'Privacy & Compliance',
-      description: 'Enterprise-grade security with GDPR, CCPA, and SOC2 compliance',
-      benefits: ['Data encryption', 'Privacy controls', 'Compliance reporting', 'Audit trails']
+      icon: Cloud,
+      title: 'Cloud-Native Architecture',
+      description: 'Scalable, secure, and reliable cloud-based automation platform',
+      benefits: ['Global accessibility', '99.9% uptime', 'Enterprise security']
     }
   ];
 
-  const customerTouchpoints = [
+  const useCases = [
     {
-      stage: 'Awareness',
-      touchpoints: ['Social media', 'Content marketing', 'SEO/PPC', 'Influencer partnerships'],
-      aiFeatures: ['Content optimization', 'Audience targeting', 'Trend prediction', 'ROI optimization']
-    },
-    {
-      stage: 'Consideration',
-      touchpoints: ['Website experience', 'Product demos', 'Case studies', 'Webinars'],
-      aiFeatures: ['Personalized content', 'Dynamic pricing', 'Recommendation engine', 'A/B testing']
-    },
-    {
-      stage: 'Purchase',
-      touchpoints: ['Checkout process', 'Payment options', 'Order confirmation', 'Welcome series'],
-      aiFeatures: ['Fraud detection', 'Payment optimization', 'Upsell suggestions', 'Loyalty rewards']
-    },
-    {
-      stage: 'Retention',
-      touchpoints: ['Customer support', 'Product usage', 'Feedback collection', 'Loyalty programs'],
-      aiFeatures: ['Predictive support', 'Usage analytics', 'Sentiment analysis', 'Churn prevention']
-    }
-  ];
-
-  const industrySolutions = [
-    {
-      industry: 'E-commerce & Retail',
-      challenges: ['Cart abandonment', 'Customer retention', 'Personalization', 'Customer service'],
-      solutions: ['AI-powered recommendations', 'Behavioral retargeting', 'Chatbot support', 'Loyalty optimization'],
-      roi: '250-400%',
-      metrics: ['Conversion rates', 'Customer lifetime value', 'Cart abandonment', 'Repeat purchases']
-    },
-    {
-      industry: 'SaaS & Technology',
-      challenges: ['User onboarding', 'Feature adoption', 'Customer success', 'Churn reduction'],
-      solutions: ['Smart onboarding flows', 'Feature discovery', 'Success tracking', 'Predictive churn'],
+      industry: 'Finance & Banking',
+      processes: ['Loan Processing', 'KYC Verification', 'Fraud Detection', 'Compliance Reporting'],
       roi: '300-500%',
-      metrics: ['User activation', 'Feature adoption', 'Customer satisfaction', 'Retention rates']
+      timeSaved: '60-80%'
     },
     {
       industry: 'Healthcare',
-      challenges: ['Patient engagement', 'Care coordination', 'Satisfaction scores', 'Outcome tracking'],
-      solutions: ['Patient portals', 'Care reminders', 'Satisfaction monitoring', 'Outcome analytics'],
-      roi: '200-350%',
-      metrics: ['Patient satisfaction', 'Engagement rates', 'Care outcomes', 'Provider efficiency']
+      processes: ['Patient Onboarding', 'Claims Processing', 'Appointment Scheduling', 'Medical Records'],
+      roi: '250-400%',
+      timeSaved: '50-75%'
     },
     {
-      industry: 'Financial Services',
-      challenges: ['Trust building', 'Service quality', 'Compliance', 'Customer retention'],
-      solutions: ['Trust scoring', 'Service monitoring', 'Compliance automation', 'Loyalty programs'],
+      industry: 'Manufacturing',
+      processes: ['Quality Control', 'Inventory Management', 'Supply Chain', 'Maintenance'],
+      roi: '200-350%',
+      timeSaved: '40-70%'
+    },
+    {
+      industry: 'Retail & E-commerce',
+      processes: ['Order Processing', 'Customer Service', 'Inventory Tracking', 'Returns Management'],
       roi: '180-300%',
-      metrics: ['Trust scores', 'Service quality', 'Compliance rates', 'Customer retention']
+      timeSaved: '45-65%'
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$1,200',
+      price: '$2,500',
       period: '/month',
-      description: 'Perfect for small businesses starting their CX journey',
+      description: 'Perfect for small businesses starting their automation journey',
       features: [
-        'Up to 1,000 customers',
-        'Basic AI personalization',
-        'Email & chat support',
-        'Standard analytics',
-        '3 team members',
-        'Basic integrations',
-        'Email support'
+        'Up to 10 automated processes',
+        'Basic AI workflow engine',
+        'Standard integrations',
+        'Email support',
+        'Basic analytics dashboard',
+        '5 user licenses'
       ],
       cta: 'Get Started',
       popular: false
     },
     {
       name: 'Professional',
-      price: '$3,800',
+      price: '$7,500',
       period: '/month',
-      description: 'Ideal for growing companies with advanced CX needs',
+      description: 'Ideal for growing companies with complex automation needs',
       features: [
-        'Up to 10,000 customers',
-        'Advanced AI personalization',
-        'Omnichannel communication',
-        'Advanced analytics & reporting',
-        '15 team members',
+        'Up to 50 automated processes',
+        'Advanced AI workflow engine',
         'Premium integrations',
         'Priority support',
-        'Custom dashboards',
+        'Advanced analytics & reporting',
+        '25 user licenses',
+        'Custom workflow templates',
         'API access'
       ],
       cta: 'Start Free Trial',
@@ -266,16 +147,16 @@ const AICustomerExperiencePlatform: React.FC = () => {
       name: 'Enterprise',
       price: 'Custom',
       period: '',
-      description: 'Tailored solutions for large enterprises with unlimited customers',
+      description: 'Tailored solutions for large enterprises with unlimited automation',
       features: [
-        'Unlimited customers',
+        'Unlimited automated processes',
         'Custom AI models',
         'White-label solutions',
         'Dedicated support team',
-        'Unlimited team members',
+        'Advanced security features',
+        'Unlimited user licenses',
         'Custom integrations',
-        'On-premise option',
-        'Advanced compliance'
+        'On-premise deployment option'
       ],
       cta: 'Contact Sales',
       popular: false
@@ -284,26 +165,26 @@ const AICustomerExperiencePlatform: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Jennifer Adams',
-      role: 'VP of Customer Experience',
-      company: 'RetailTech Solutions',
-      content: 'Zion Tech Group\'s CX platform transformed our customer relationships. We increased customer satisfaction by 45% and reduced churn by 30%.',
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      company: 'TechFlow Solutions',
+      content: 'Zion Tech Group\'s AI automation platform transformed our operations. We reduced manual processing time by 75% and improved accuracy to 99.2%.',
       rating: 5,
       avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face'
     },
     {
-      name: 'Mark Wilson',
-      role: 'Customer Success Director',
-      company: 'SaaS Innovations',
-      content: 'The AI-powered personalization and predictive analytics have revolutionized how we engage with customers, leading to 60% higher engagement rates.',
+      name: 'Michael Chen',
+      role: 'Operations Director',
+      company: 'Global Manufacturing Co.',
+      content: 'The intelligent workflow automation has streamlined our manufacturing processes, resulting in 40% faster production cycles and significant cost savings.',
       rating: 5,
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
     },
     {
-      name: 'Sarah Chen',
-      role: 'Marketing Manager',
-      company: 'HealthTech Pro',
-      content: 'Our patient engagement improved dramatically with the personalized communication features, resulting in 40% better health outcomes.',
+      name: 'Emily Rodriguez',
+      role: 'VP of Operations',
+      company: 'Healthcare Innovations',
+      content: 'Implementing AI process automation improved our patient care efficiency by 60% while maintaining the highest quality standards.',
       rating: 5,
       avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face'
     }
@@ -321,16 +202,16 @@ const AICustomerExperiencePlatform: React.FC = () => {
             className="mb-8"
           >
             <div className="inline-flex items-center space-x-2 bg-cyan-500/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Heart className="w-4 h-4" />
-              <span>AI-Powered CX Platform</span>
+              <Brain className="w-4 h-4" />
+              <span>AI-Powered Automation</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              AI Customer Experience
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Platform</span>
+              AI Business Process
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Automation</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Revolutionize customer relationships with AI-powered personalization, omnichannel communication, 
-              and predictive analytics. Deliver exceptional experiences that drive loyalty and growth.
+              Transform your business operations with intelligent automation that learns, adapts, and scales. 
+              Reduce manual work by up to 80% while improving accuracy and efficiency.
             </p>
           </motion.div>
 
@@ -342,20 +223,20 @@ const AICustomerExperiencePlatform: React.FC = () => {
             className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12"
           >
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">45%</div>
-              <div className="text-gray-300">Higher Satisfaction</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
+              <div className="text-gray-300">Process Automation</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">60%</div>
-              <div className="text-gray-300">Better Engagement</div>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">30%</div>
-              <div className="text-gray-300">Reduced Churn</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">99.5%</div>
+              <div className="text-gray-300">Accuracy Rate</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="text-3xl font-bold text-cyan-400 mb-2">300%</div>
-              <div className="text-gray-300">Average ROI</div>
+              <div className="text-gray-300">ROI Average</div>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
+              <div className="text-gray-300">Operation</div>
             </div>
           </motion.div>
 
@@ -389,11 +270,11 @@ const AICustomerExperiencePlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Powerful CX Features
+              Powerful Features for Intelligent Automation
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI-powered platform combines cutting-edge technology with intuitive design to deliver 
-              the most advanced customer experience solution available.
+              the most advanced business process automation solution available.
             </p>
           </motion.div>
 
@@ -426,72 +307,8 @@ const AICustomerExperiencePlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Customer Journey Section */}
+      {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Complete Customer Journey
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Optimize every touchpoint in the customer lifecycle with AI-powered insights and automation.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {customerTouchpoints.map((stage, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10"
-              >
-                <div className="flex items-center space-x-3 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-xl flex items-center justify-center">
-                    <Users className="w-6 h-6 text-cyan-400" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-white">{stage.stage}</h3>
-                </div>
-                
-                <div className="mb-6">
-                  <h4 className="text-lg font-medium text-cyan-400 mb-3">Touchpoints:</h4>
-                  <div className="grid grid-cols-2 gap-2">
-                    {stage.touchpoints.map((touchpoint, touchpointIndex) => (
-                      <div key={touchpointIndex} className="flex items-center space-x-2 text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400" />
-                        <span>{touchpoint}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="text-lg font-medium text-cyan-400 mb-3">AI Features:</h4>
-                  <div className="grid grid-cols-2 gap-2">
-                    {stage.aiFeatures.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-400">
-                        <Brain className="w-4 h-4 text-cyan-400" />
-                        <span>{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Industry Solutions Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -504,58 +321,48 @@ const AICustomerExperiencePlatform: React.FC = () => {
               Industry-Specific Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tailored CX solutions designed for your industry's unique challenges and opportunities.
+              See how AI automation transforms operations across different industries with proven results.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {industrySolutions.map((solution, index) => (
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10"
               >
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl font-semibold text-white">{solution.industry}</h3>
-                  <div className="text-2xl font-bold text-cyan-400">{solution.roi}</div>
+                  <h3 className="text-2xl font-semibold text-white">{useCase.industry}</h3>
+                  <div className="flex items-center space-x-2 text-cyan-400">
+                    <Star className="w-5 h-5 fill-current" />
+                    <span className="font-semibold">Top Performer</span>
+                  </div>
                 </div>
                 
                 <div className="mb-6">
-                  <h4 className="text-lg font-medium text-cyan-400 mb-3">Challenges:</h4>
+                  <h4 className="text-lg font-medium text-gray-300 mb-3">Automated Processes:</h4>
                   <div className="grid grid-cols-2 gap-2">
-                    {solution.challenges.map((challenge, challengeIndex) => (
-                      <div key={challengeIndex} className="flex items-center space-x-2 text-sm text-gray-300">
-                        <AlertTriangle className="w-4 h-4 text-yellow-400" />
-                        <span>{challenge}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-lg font-medium text-cyan-400 mb-3">Solutions:</h4>
-                  <div className="grid grid-cols-2 gap-2">
-                    {solution.solutions.map((sol, solIndex) => (
-                      <div key={solIndex} className="flex items-center space-x-2 text-sm text-gray-400">
+                    {useCase.processes.map((process, processIndex) => (
+                      <div key={processIndex} className="flex items-center space-x-2 text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-cyan-400" />
-                        <span>{sol}</span>
+                        <span>{process}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div>
-                  <h4 className="text-lg font-medium text-cyan-400 mb-3">Key Metrics:</h4>
-                  <div className="grid grid-cols-2 gap-2">
-                    {solution.metrics.map((metric, metricIndex) => (
-                      <div key={metricIndex} className="flex items-center space-x-2 text-sm text-gray-400">
-                        <BarChart3 className="w-4 h-4 text-cyan-400" />
-                        <span>{metric}</span>
-                      </div>
-                    ))}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-cyan-400 mb-1">{useCase.roi}</div>
+                    <div className="text-sm text-gray-400">Average ROI</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-cyan-400 mb-1">{useCase.timeSaved}</div>
+                    <div className="text-sm text-gray-400">Time Saved</div>
                   </div>
                 </div>
               </motion.div>
@@ -565,7 +372,7 @@ const AICustomerExperiencePlatform: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -578,7 +385,7 @@ const AICustomerExperiencePlatform: React.FC = () => {
               Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your CX needs. All plans include our core AI customer experience features.
+              Choose the perfect plan for your business needs. All plans include our core AI automation features.
             </p>
           </motion.div>
 
@@ -636,7 +443,7 @@ const AICustomerExperiencePlatform: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -649,7 +456,7 @@ const AICustomerExperiencePlatform: React.FC = () => {
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join hundreds of satisfied customers who have transformed their customer experience with AI.
+              Join hundreds of satisfied customers who have transformed their business with AI automation.
             </p>
           </motion.div>
 
@@ -687,7 +494,7 @@ const AICustomerExperiencePlatform: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -696,10 +503,10 @@ const AICustomerExperiencePlatform: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Ready to Transform Customer Experience?
+              Ready to Automate Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your AI-powered CX journey today and see the transformation in just 30 days.
+              Start your AI automation journey today and see the transformation in just 30 days.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 flex items-center space-x-2">
@@ -738,4 +545,4 @@ const AICustomerExperiencePlatform: React.FC = () => {
   );
 };
 
-export default AICustomerExperiencePlatform;
+export default AIBusinessProcessAutomation;
