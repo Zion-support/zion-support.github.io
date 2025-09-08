@@ -220,18 +220,27 @@
   name = "auto-scheduler"
   schedule = "*/15 * * * *" # every 15 minutes
 
+# New autonomous cloud automations
 [[scheduled.functions]]
-  name = "deps-auto-upgrade-runner"
-  schedule = "17 */12 * * *" # every 12 hours
+  name = "performance-budget-checker"
+  schedule = "*/5 * * * *" # every 5 minutes
 
 [[scheduled.functions]]
-  name = "branch-cleanup-runner"
-  schedule = "0 3 * * *" # daily at 03:00 UTC
+  name = "accessibility-quickscan"
+  schedule = "*/5 * * * *" # every 5 minutes
 
 [[scheduled.functions]]
-  name = "ui-beautifier-runner"
-  schedule = "5 */6 * * *" # every 6 hours
+  name = "og-preview-validator"
+  schedule = "*/15 * * * *" # every 15 minutes
 
 [[scheduled.functions]]
-  name = "revenue-ideas-runner"
-  schedule = "*/20 * * * *" # every 20 minutes
+  name = "content-freshness-runner"
+  schedule = "*/30 * * * *" # every 30 minutes
+
+[[scheduled.functions]]
+  name = "redirect-404-suggester"
+  schedule = "0 * * * *" # hourly
+
+[[scheduled.functions]]
+  name = "ai-issue-labeler"
+  schedule = "*/5 * * * *" # every 5 minutes
