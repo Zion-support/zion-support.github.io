@@ -99,19 +99,15 @@ export function AppHeader() {
         { name: 'Incident Response Platform', href: '/services/incident-response-platform' }
       ]
     },
-    { 
-      name: 'Emerging Technologies', 
-      href: '/services/quantum-computing', 
-      icon: Atom, 
-      description: 'Quantum Computing & IoT',
-      featured: true,
-      color: 'from-purple-500 to-pink-500',
-      subServices: [
-        { name: 'Quantum Computing', href: '/services/quantum-computing' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
-        { name: 'Space Technology', href: '/services/space-tech' },
-        { name: 'Sustainable Technology', href: '/services/sustainable-technology' },
-        { name: 'Robotics & Automation', href: '/services/robotics-automation' }
+    {
+      name: 'Digital Solutions',
+      icon: Rocket,
+      color: 'from-orange-600 to-red-600',
+      services: [
+        { name: 'Digital Twin', href: '/services/digital-twin', description: 'Simulation & Monitoring' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business modernization' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
+        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' }
       ]
     },
     { 
