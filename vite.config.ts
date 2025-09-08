@@ -281,16 +281,10 @@ export default defineConfig({
     cors: true,
   },
 
-  preview: {
-    port: 4173,
-    host: true,
-    open: true,
+  define: {
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
   },
-  // Performance optimizations
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion'],
-    exclude: ['@radix-ui/react-accordion']
-  }
+
 })
 =======
   },

@@ -1,6 +1,10 @@
 import type { Config } from 'tailwindcss'
-
-export default {
+export default (async () => {
+  const forms = await import('@tailwindcss/forms');
+  const typography = await import('@tailwindcss/typography');
+  const aspectRatio = await import('@tailwindcss/aspect-ratio');
+  
+  return {
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -269,4 +273,10 @@ export default {
       ],
     },
   },
-} satisfies Config
+  plugins: [
+    forms.default,
+    typography.default,
+    aspectRatio.default,
+  ],
+} satisfies Config;
+})();
