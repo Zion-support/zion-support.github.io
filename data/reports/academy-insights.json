@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-09-08T07:35:39.456Z",
+  "generatedAt": "2025-09-08T08:08:31.495Z",
   "featuredCourses": [
     {
       "slug": "ai-engineering-foundations",
@@ -24,6 +24,10 @@
       "url": "https://twitter.com/samhenrigold/status/1964428927159382261"
     },
     {
+      "title": "Show HN: C++ library for reading MacBook lid angle sensor data",
+      "url": "https://github.com/ufoym/mac-angle"
+    },
+    {
       "title": "Formatting code should be unnecessary",
       "url": "https://maxleiter.com/blog/formatting"
     },
@@ -40,16 +44,12 @@
       "url": "https://www.nature.com/articles/s41586-025-09430-z"
     },
     {
-      "title": "Show HN: C++ library for reading MacBook lid angle sensor data",
-      "url": "https://github.com/ufoym/mac-angle"
-    },
-    {
       "title": "Creative Technology: The Sound Blaster",
       "url": "https://www.abortretry.fail/p/the-story-of-creative-technology"
     },
     {
-      "title": "How many dimensions is this?",
-      "url": "https://lcamtuf.substack.com/p/how-many-dimensions-is-this"
+      "title": "How Britain built some of the world’s safest roads",
+      "url": "https://ourworldindata.org/britain-safest-roads-history"
     }
   ],
   "recommendations": [
