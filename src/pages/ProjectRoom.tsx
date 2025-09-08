@@ -8,18 +8,10 @@ import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lu
 import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { toast } from 'sonner';
 export default function ProjectRoom() {
-  const { projectId } = useParams() as { projectId: string };
+  const { projectId } = useParams();
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
-  const [callParticipants, setCallParticipants] = useState<Array<{
-    id: string;
-    name: string;
-    avatar?: string;
-    isMuted?: boolean;
-    isVideoEnabled?: boolean;
-    isScreenSharing?: boolean;
-    isHost?: boolean;
-  }>>([
+  const [callParticipants, setCallParticipants] = useState([
     {
       id: 'user-1',
       name: 'You',
@@ -27,7 +19,15 @@ export default function ProjectRoom() {
       isVideoEnabled: true,
       isMuted: false
     }
-  ]);
+  ] as Array<{
+    id: string;
+    name: string;
+    avatar?: string;
+    isMuted?: boolean;
+    isVideoEnabled?: boolean;
+    isScreenSharing?: boolean;
+    isHost?: boolean;
+  }>);
   
   const startVideoCall = () => {
     setIsInCall(true);

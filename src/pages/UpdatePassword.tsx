@@ -22,94 +22,100 @@ const updatePasswordSchema = z
     .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
     path: ["confirmPassword"],
-});
+  });
+
+type UpdatePasswordFormValues = any;
+
 export default function UpdatePassword() {
-    const [isLoading, setIsLoading] = useState(false);
-    const [accessToken, setAccessToken] = useState(null);
-    const [error, setError] = useState(null);
-    const [success, setSuccess] = useState(false);
-    const navigate = useNavigate();
-    const location = useLocation();
-    // Initialize react-hook-form
-    const form = useForm({
-        resolver: zodResolver(updatePasswordSchema),
-        defaultValues: {
-            password: "",
-            confirmPassword: "",
-        },
-    });
-    useEffect(() => {
-        // Extract access token from URL hash
-        const hashParams = new URLSearchParams(location.hash.substring(1));
-        const token = hashParams.get("access_token");
-        if (token) {
-            setAccessToken(token);
-        }
-        else {
-            setError("No access token found. Please request a new password reset link.");
-        }
-        // Clean up auth state to prevent issues
-        cleanupAuthState();
-    }, [location]);
-    // Form submission handler
-    const onSubmit = async (data) => {
-        if (!accessToken) {
-            setError("No access token found. Please request a new password reset link.");
-            return;
-        }
-        setIsLoading(true);
-        try {
-            // Set the session with the access token
-            await supabase.auth.setSession({
-                access_token: accessToken,
-                refresh_token: '',
-            });
-            // Update the password
-            const { error } = await supabase.auth.updateUser({
-                password: data.password,
-            });
-            if (error) {
-                toast({
-                    title: "Password update failed",
-                    description: error.message,
-                    variant: "destructive",
-                });
-                setError(error.message);
-                return;
-            }
-            // Show success message and clean up auth state
-            setSuccess(true);
-            toast({
-                title: "Password updated successfully",
-                description: "You can now log in with your new password.",
-            });
-            // Clean auth state and redirect after a delay
-            cleanupAuthState();
-            setTimeout(() => {
-                navigate("/login");
-            }, 3000);
-        }
-        catch (error) {
-            // // // console.error("Password update error:", error);
-            toast({
-                title: "Password update failed",
-                description: error.message || "An unexpected error occurred",
-                variant: "destructive",
-            });
-            setError(error.message || "An unexpected error occurred");
-        }
-        finally {
-            setIsLoading(false);
-        }
-    };
-    const onInvalid = (errors) => {
-        const firstError = Object.keys(errors)[0];
-        if (firstError) {
-            form.setFocus(firstError);
-        }
-    };
-    return (<React.Fragment>
-      
+  const [isLoading, setIsLoading] = useState(false);
+  const [accessToken, setAccessToken] = useState(null as string | null);
+  const [error, setError] = useState(null as string | null);
+  const [success, setSuccess] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Initialize react-hook-form
+  const form = useForm({
+    resolver: zodResolver(updatePasswordSchema),
+    defaultValues: {
+      password: "",
+      confirmPassword: "",
+    },
+  });
+
+  useEffect(() => {
+    // Extract access token from URL hash
+    const hashParams = new URLSearchParams(location.hash.substring(1));
+    const token = hashParams.get("access_token");
+    
+    if (token) {
+      setAccessToken(token);
+    } else {
+      setError("No access token found. Please request a new password reset link.");
+    }
+
+    // Clean up auth state to prevent issues
+    cleanupAuthState();
+  }, [location]);
+
+  // Form submission handler
+  const onSubmit = async (data: UpdatePasswordFormValues) => {
+    if (!accessToken) {
+      setError("No access token found. Please request a new password reset link.");
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+      // Set the session with the access token
+      await supabase.auth.setSession({
+        access_token: accessToken,
+        refresh_token: '',
+      });
+
+      // Update the password
+      const { error } = await supabase.auth.updateUser({
+        password: data.password,
+      });
+
+      if (error) {
+        toast({
+          title: "Password update failed",
+          description: error.message,
+          variant: "destructive",
+        });
+        setError(error.message);
+        return;
+      }
+
+      // Show success message and clean up auth state
+      setSuccess(true);
+      toast({
+        title: "Password updated successfully",
+        description: "You can now log in with your new password.",
+      });
+
+      // Clean auth state and redirect after a delay
+      cleanupAuthState();
+      setTimeout(() => {
+        navigate("/login");
+      }, 3000);
+    } catch (error: any) {
+      console.error("Password update error:", error);
+      toast({
+        title: "Password update failed",
+        description: error.message || "An unexpected error occurred",
+        variant: "destructive",
+      });
+      setError(error.message || "An unexpected error occurred");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <>
+      <Header />
       <div className="flex min-h-screen bg-zion-blue">
         <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">

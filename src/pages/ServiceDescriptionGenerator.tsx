@@ -5,11 +5,13 @@ import SEOHead from "@/components/SEOHead";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function ServiceDescriptionGenerator() {
-    const { isAuthenticated, isLoading } = useAuth();
-    const [generatedDescription, setGeneratedDescription] = useState(null);
-    // Show loading while checking authentication
-    if (isLoading) {
-        return (<div className="flex justify-center items-center min-h-screen bg-zion-blue">
+  const { isAuthenticated, isLoading } = useAuth();
+  const [generatedDescription, setGeneratedDescription] = useState(null as string | null);
+  
+  // Show loading while checking authentication
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">
         <div className="animate-pulse text-zion-purple text-lg">
           Loading...
         </div>

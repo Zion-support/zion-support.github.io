@@ -12,38 +12,35 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { useLanguage } from "@/context/LanguageContext";
 import { useTranslationService } from "@/hooks/useTranslationService";
 export default function TranslationManager() {
-    const { t, i18n } = useTranslation();
-    const isMobile = useIsMobile();
-    const { supportedLanguages } = useLanguage();
-    const { translateContent, isTranslating } = useTranslationService();
-    const [selectedNamespace, setSelectedNamespace] = useState("translation");
-    const [searchQuery, setSearchQuery] = useState("");
-    const [translations, setTranslations] = useState({});
-    const [filteredKeys, setFilteredKeys] = useState([]);
-    const [editingKey, setEditingKey] = useState(null);
-    const [editedTranslations, setEditedTranslations] = useState({});
-    const [isSaving, setIsSaving] = useState(false);
-    // Simulated translation data - in a real app, this would come from your backend
-    useEffect(() => {
-        // For demo purposes, we're using the loaded translations from i18next
-        const currentTranslations = {};
-        supportedLanguages.forEach(lang => {
-            const res = i18n.getResourceBundle(lang.code, selectedNamespace);
-            if (res) {
-                // Flatten nested objects for easier management
-                const flattenObject = (obj, prefix = '') => {
-                    return Object.keys(obj).reduce((acc, key) => {
-                        const pre = prefix.length ? `${prefix}.` : '';
-                        if (typeof obj[key] === 'object' && obj[key] !== null) {
-                            Object.assign(acc, flattenObject(obj[key], `${pre}${key}`));
-                        }
-                        else {
-                            acc[`${pre}${key}`] = obj[key];
-                        }
-                        return acc;
-                    }, {});
-                };
-                currentTranslations[lang.code] = flattenObject(res);
+  const { t, i18n } = useTranslation();
+  const isMobile = useIsMobile();
+  const { supportedLanguages } = useLanguage();
+  const { translateContent, isTranslating } = useTranslationService();
+  
+  const [selectedNamespace, setSelectedNamespace] = useState("translation");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [translations, setTranslations] = useState({} as Record<string, any>);
+  const [filteredKeys, setFilteredKeys] = useState([] as string[]);
+  const [editingKey, setEditingKey] = useState(null as string | null);
+  const [editedTranslations, setEditedTranslations] = useState({} as Record<string, Record<SupportedLanguage, string>>);
+  const [isSaving, setIsSaving] = useState(false);
+  
+  // Simulated translation data - in a real app, this would come from your backend
+  useEffect(() => {
+    // For demo purposes, we're using the loaded translations from i18next
+    const currentTranslations: Record<string, any> = {};
+    
+    supportedLanguages.forEach(lang => {
+      const res = i18n.getResourceBundle(lang.code, selectedNamespace);
+      if (res) {
+        // Flatten nested objects for easier management
+        const flattenObject = (obj: any, prefix = '') => {
+          return Object.keys(obj).reduce((acc, key) => {
+            const pre = prefix.length ? `${prefix}.` : '';
+            if (typeof obj[key] === 'object' && obj[key] !== null) {
+              Object.assign(acc, flattenObject(obj[key], `${pre}${key}`));
+            } else {
+              acc[`${pre}${key}`] = obj[key];
             }
         });
         return;

@@ -22,8 +22,6 @@ import {
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 
 export default function ProfileDetail() {
-  // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
   const { profileId } = useParams();
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);

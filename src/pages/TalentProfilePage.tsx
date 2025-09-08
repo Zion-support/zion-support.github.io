@@ -16,17 +16,14 @@ import { UserProfile } from "@/types/auth",
 import { toast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
 export default function TalentProfilePage() {
-<<<<<<< HEAD
-  const router = null;
-=======
-  const router = useRouter()
-  // Get id from Next.js router query params
-  const { id } = router.query as { id?: string }
-  const { profile, isLoading, error } = useTalentProfile(id)
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false)
-  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false)
-  const { userDetails } = useAuthStatus()
-  const { isAuthenticated, user } = useAuth()
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const { profile, isLoading, error } = useTalentProfile(id);
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
+  const { userDetails } = useAuthStatus();
+  const { isAuthenticated, user } = useAuth();
+
   // Create a compatible UserProfile from UserDetails or the authenticated user
   const userProfile: UserProfile = user
     ? {
