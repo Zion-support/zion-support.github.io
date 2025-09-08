@@ -412,7 +412,7 @@ export default function HomePage() {
                   <li>• GitHub Actions Redundancy</li>
                   <li>• Netlify Functions Redundancy</li>
                 </ul>
-                <Link href="/README_ULTIMATE_REDUNDANCY_V2.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/services#redundancy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Explore Redundancy Systems →
                 </Link>
               </div>
@@ -426,7 +426,7 @@ export default function HomePage() {
                   <li>• Autonomous Agents</li>
                   <li>• Innovation Systems</li>
                 </ul>
-                <Link href="/EXPONENTIAL_GROWTH_AUTOMATION.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/services#ai-automation" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Explore AI Systems →
                 </Link>
               </div>
@@ -440,7 +440,7 @@ export default function HomePage() {
                   <li>• Performance Optimization</li>
                   <li>• Quality Assurance</li>
                 </ul>
-                <Link href="/README_GITHUB_ACTIONS.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/services#build-systems" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Explore Build Systems →
                 </Link>
               </div>
