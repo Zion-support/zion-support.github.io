@@ -6,8 +6,7 @@ import { fireEvent  } from '@/lib/analytics';
 import { useAuth } from "@/context/auth/AuthProvider",
 
 import { useAuth } from "@/hooks/useAuth";
-import { toast } from "@/hooks/use-toast";
-import { auth } from "@/services/auth";
+import { loginUser } from "@/services/authService";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -19,8 +18,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Link, useNavigate } from "react-router-dom";
-import { LoadingOverlay } from "@/components/LoadingOverlay";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 
           ) {
             error_message =;
@@ -97,12 +95,11 @@ const loginSchema = z.object({
 type LoginFormValues = z.infer<typeof loginSchema>,
 
 export function LoginForm() {
-  const { isLoading, login } = useAuth(),
-  const [showPassword, setShowPassword] = useState(false),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [isResending, setIsResending] = useState(false),
-  const [verificationMessage, setVerificationMessage] = useState(''),
-  const router = useRouter(),
+  const { isLoading, login } = useAuth();
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const [showPassword, setShowPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
@@ -118,17 +115,16 @@ export function LoginForm() {
     try {
       setIsSubmitting(true);
       const { res, data: resData } = await loginUser(data.email, data.password);
-      if (!res.ok) {
-        toast.error(resData?.error || "Invalid credentials");
+      if (res.status !== 200) {
+        const message = resData?.error || "Invalid credentials";
+        form.setError("root", { message });
         return;
       }
-      toast.success("Logged in successfully");
-      if (resData?.token) {
-        document.cookie = `token=${resData.token}; path=/`;
-      }
-      navigate("/");
-    } catch (err) {
-      toast.error("Unable to login. Please try again.");
+
+      await login(data.email, data.password);
+
+      const next = searchParams.get('next') || '/';
+      navigate(next);
     } finally {
       setIsSubmitting(false);
     }
