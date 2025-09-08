@@ -1,7 +1,7 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
-const Alert-dialog = React.forwardRef<
+const AlertDialog = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
@@ -11,6 +11,6 @@ const Alert-dialog = React.forwardRef<
     {...props}
   />
 ))
-Alert-dialog.displayName = "Alert-dialog"
+AlertDialog.displayName = "AlertDialog"
 
-export { Alert-dialog }
+export { AlertDialog }

@@ -1,7 +1,7 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
-const Hover-card = React.forwardRef<
+const HoverCard = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
@@ -11,6 +11,6 @@ const Hover-card = React.forwardRef<
     {...props}
   />
 ))
-Hover-card.displayName = "Hover-card"
+HoverCard.displayName = "HoverCard"
 
-export { Hover-card }
+export { HoverCard }
