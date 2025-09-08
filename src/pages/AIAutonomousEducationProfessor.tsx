@@ -1,153 +1,163 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Users, BookOpen, GraduationCap, Lightbulb, Target, CheckCircle, ArrowRight, Star, Globe, Clock, Shield, Zap, TrendingUp, BarChart3, Cpu, Database, Network, Code, Palette, Rocket, Eye, DollarSign, ShoppingCart, Cloud, Building, Heart, Lock, AlertTriangle, Server, Truck, Car, TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone } from 'lucide-react';
+import { 
+  Brain, 
+  GraduationCap, 
+  BookOpen, 
+  Users, 
+  Target, 
+  Zap, 
+  Shield, 
+  Globe,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Star,
+  Award,
+  TrendingUp,
+  Lightbulb,
+  Rocket
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AIAutonomousEducationProfessor: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Learning",
-      description: "Advanced AI algorithms that adapt to individual learning styles and pace"
+      title: "AI-Powered Curriculum Design",
+      description: "Automatically generate personalized learning paths based on student performance and learning styles"
     },
     {
       icon: Users,
-      title: "Personalized Education",
-      description: "Tailored learning paths for each student based on their strengths and weaknesses"
-    },
-    {
-      icon: BookOpen,
-      title: "Comprehensive Curriculum",
-      description: "AI-generated curriculum that covers all necessary topics with real-time updates"
-    },
-    {
-      icon: GraduationCap,
-      title: "Expert Knowledge Base",
-      description: "Access to vast knowledge databases and expert-level insights across all subjects"
-    },
-    {
-      icon: Lightbulb,
-      title: "Interactive Learning",
-      description: "Engaging, interactive learning experiences that keep students motivated"
+      title: "Adaptive Learning Systems",
+      description: "Real-time adaptation of content difficulty and teaching methods for optimal student engagement"
     },
     {
       icon: Target,
-      title: "Progress Tracking",
-      description: "Real-time monitoring of student progress with actionable insights"
+      title: "Performance Analytics",
+      description: "Comprehensive insights into student progress, learning patterns, and areas for improvement"
+    },
+    {
+      icon: Zap,
+      title: "Automated Assessment",
+      description: "Intelligent grading, feedback generation, and progress tracking without human intervention"
+    },
+    {
+      icon: Shield,
+      title: "Educational Security",
+      description: "Secure student data handling and compliance with educational privacy regulations"
+    },
+    {
+      icon: Globe,
+      title: "Multi-Language Support",
+      description: "Seamless translation and localization for global educational institutions"
     }
   ];
 
   const benefits = [
-    "24/7 availability for continuous learning",
-    "Adaptive learning paths for optimal retention",
-    "Multilingual support for global accessibility",
-    "Integration with existing educational systems",
-    "Scalable solution for institutions of any size",
-    "Comprehensive analytics and reporting"
+    "24/7 availability for student support and guidance",
+    "Reduced administrative workload for educators",
+    "Personalized learning experiences for each student",
+    "Scalable educational solutions for institutions",
+    "Data-driven insights for curriculum improvement",
+    "Cost-effective educational technology implementation"
   ];
 
   const useCases = [
     {
-      title: "K-12 Education",
-      description: "Personalized learning experiences for primary and secondary education",
+      title: "Higher Education",
+      description: "University-level course management and student support systems",
       icon: GraduationCap
     },
     {
-      title: "Higher Education",
-      description: "Advanced AI tutoring for university and college students",
+      title: "Corporate Training",
+      description: "Employee skill development and certification programs",
       icon: BookOpen
     },
     {
-      title: "Corporate Training",
-      description: "AI-driven employee development and skill enhancement",
+      title: "K-12 Education",
+      description: "Primary and secondary school learning enhancement",
       icon: Users
     },
     {
-      title: "Special Education",
-      description: "Tailored support for students with diverse learning needs",
-      icon: Heart
+      title: "Online Learning Platforms",
+      description: "Massive Open Online Courses (MOOCs) and virtual classrooms",
+      icon: Globe
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container mx-auto px-4 py-24">
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center"
           >
             <div className="flex justify-center mb-6">
-              <div className="p-3 bg-white/20 rounded-full">
-                <Brain className="w-12 h-12 text-white" />
+              <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                <Brain className="w-10 h-10 text-white" />
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               AI Autonomous Education Professor
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
-              Revolutionizing education with AI-powered autonomous teaching systems that provide personalized, 
-              adaptive learning experiences for every student.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Revolutionizing education with intelligent, autonomous teaching systems that adapt, 
+              personalize, and optimize learning experiences for every student.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2"
               >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <span>Get Started</span>
+                <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link
-                to="/demo"
-                className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
-                Request Demo
-              </Link>
+              <button className="bg-gray-800 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-700 transition-all duration-200 flex items-center justify-center space-x-2">
+                <Play className="w-5 h-5" />
+                <span>Watch Demo</span>
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white dark:bg-slate-800">
-        <div className="container mx-auto px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Revolutionary AI Education Features
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              Intelligent Education Features
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Our AI Autonomous Education Professor combines cutting-edge artificial intelligence with 
-              proven educational methodologies to deliver exceptional learning experiences.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI-powered education platform combines cutting-edge technology with proven 
+              pedagogical principles to deliver exceptional learning outcomes.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-                key={index}
+                key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-white to-blue-50 dark:from-slate-700 dark:to-slate-600 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100 dark:border-slate-600"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {feature.description}
-                </p>
+                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -155,76 +165,98 @@ const AIAutonomousEducationProfessor: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-50 to-indigo-100 dark:from-slate-800 dark:to-slate-700">
-        <div className="container mx-auto px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Why Choose AI Autonomous Education?
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              Why Choose AI Education?
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Experience the future of education with our comprehensive AI-powered learning platform.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your educational institution with autonomous AI systems that never sleep, 
+              never tire, and continuously improve.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex items-start space-x-4"
-              >
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <CheckCircle className="w-5 h-5 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h3 className="text-2xl font-semibold mb-6">Key Benefits</h3>
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <CheckCircle className="w-6 h-6 text-cyan-500 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="bg-gradient-to-br from-cyan-500/10 to-purple-600/10 rounded-xl p-8 border border-cyan-500/20"
+            >
+              <h3 className="text-2xl font-semibold mb-6">Success Metrics</h3>
+              <div className="space-y-6">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">95%</div>
+                  <div className="text-gray-300">Student Satisfaction</div>
                 </div>
-                <p className="text-lg text-gray-700 dark:text-gray-300">{benefit}</p>
-              </motion.div>
-            ))}
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-purple-400 mb-2">40%</div>
+                  <div className="text-gray-300">Learning Efficiency Improvement</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">60%</div>
+                  <div className="text-gray-300">Administrative Cost Reduction</div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-white dark:bg-slate-800">
-        <div className="container mx-auto px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Applications Across Education
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              Educational Applications
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Our AI Autonomous Education Professor serves diverse educational needs across various sectors.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From primary schools to corporate training, our AI education platform adapts 
+              to diverse learning environments and requirements.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
-                key={index}
+                key={useCase.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center p-6 rounded-2xl bg-gradient-to-br from-white to-blue-50 dark:from-slate-700 dark:to-slate-600 shadow-lg hover:shadow-xl transition-all duration-300"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                  {useCase.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  {useCase.description}
-                </p>
+                <h3 className="text-xl font-semibold mb-3">{useCase.title}</h3>
+                <p className="text-gray-300 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -232,34 +264,32 @@ const AIAutonomousEducationProfessor: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Ready to Transform Education?
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Join the future of AI-powered education and provide your students with the most advanced 
-              learning experience available.
+            <p className="text-xl text-gray-300 mb-8">
+              Join the future of education with AI-powered autonomous teaching systems that 
+              adapt, learn, and grow with your institution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
               >
-                Start Your Journey
-                <ArrowRight className="ml-2 w-5 h-5" />
+                Start Your AI Education Journey
               </Link>
               <Link
-                to="/pricing"
-                className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+                to="/services"
+                className="bg-gray-800 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-700 transition-all duration-200"
               >
-                View Pricing
+                Explore All Services
               </Link>
             </div>
           </motion.div>

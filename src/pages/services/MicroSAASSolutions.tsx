@@ -20,14 +20,12 @@ import {
   Cpu,
   BarChart3,
   Target,
-  Rocket,
-  Brain,
-  Monitor,
-  Key,
-  Settings,
-  Cloud
->>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+  DollarSign,
+  Clock,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Brain
 } from 'lucide-react';
 
 export default function MicroSAASSolutions() {
@@ -45,7 +43,7 @@ export default function MicroSAASSolutions() {
 <<<<<<< HEAD
       title: "AI-Powered CRM Platform",
       description: "Intelligent customer relationship management with predictive analytics, automated follow-ups, and smart lead scoring.",
-      icon: '🧠',
+      icon: Users,
       features: ["Predictive Analytics", "Automated Follow-ups", "Smart Lead Scoring", "Real-time Insights", "AI Chat Support"],
       price: "$299/month",
       marketPrice: "$599/month",
@@ -374,6 +372,33 @@ export default function MicroSAASSolutions() {
       icon: Users
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
 >>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+    }
+  ];
+
+  const pricingTiers = [
+    {
+      name: "Starter",
+      price: "$129",
+      period: "/month",
+      description: "Perfect for small businesses and startups",
+      features: ["Basic Features", "Email Support", "5 Users", "Basic Analytics"],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$299",
+      period: "/month",
+      description: "Ideal for growing businesses",
+      features: ["Advanced Features", "Priority Support", "25 Users", "Advanced Analytics", "API Access"],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$599",
+      period: "/month",
+      description: "For large organizations",
+      features: ["All Features", "24/7 Support", "Unlimited Users", "Custom Integrations", "Dedicated Account Manager"],
+      popular: false
     }
   ];
 
@@ -918,7 +943,7 @@ export default function MicroSAASSolutions() {
                 className="glass-card p-6 text-center hover:scale-105 transition-all duration-300 group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <benefit.icon className={`w-16 h-16 mx-auto mb-6 ${benefit.color} group-hover:scale-110 transition-transform duration-300`} />
+                <benefit.icon className="w-16 h-16 mx-auto mb-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
                 <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
                   {benefit.title}
                 </h3>

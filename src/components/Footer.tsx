@@ -51,35 +51,40 @@ export function Footer() {
     {
       title: 'Company',
       links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'Contact', href: '/contact' },
+        { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
+        { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
+        { label: "AI Education Professor", path: "/ai-autonomous-education-professor" },
+        { label: "AI Healthcare Physician", path: "/ai-autonomous-healthcare-physician" },
+        { label: "AI Learning System", path: "/ai-autonomous-learning-system" },
+        { label: "AI Legal Counsel", path: "/ai-autonomous-legal-counsel" },
+        { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
+        { label: "AI Business Intelligence", path: "/services/ai-business-intelligence" }
       ]
     },
     {
       title: 'Services',
       links: [
-        { name: 'AI Solutions', href: '/ai-solutions' },
-        { name: 'Cloud Services', href: '/services/cloud' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Infrastructure', href: '/services/infrastructure' },
-        { name: 'Digital Transformation', href: '/services/transformation' },
-        { name: 'Consulting', href: '/services/consulting' },
-        { name: 'Quantum AI', href: '/services/quantum-ai' },
+        { label: "IT Infrastructure", path: "/services/it-infrastructure" },
+        { label: "Cybersecurity", path: "/services/cybersecurity" },
+        { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
+        { label: "Cloud DevOps", path: "/cloud-devops" },
+        { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
+        { label: "Advanced Cybersecurity Suite", path: "/advanced-cybersecurity-suite" },
+        { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
+        { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" }
       ]
     },
     {
       title: 'Resources',
       links: [
-        { name: 'Blog', href: '/blog' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'API Reference', href: '/api-docs' },
-        { name: 'Training', href: '/training' },
-        { name: 'Webinars', href: '/webinars' },
+        { label: "Enterprise Solutions", path: "/solutions/enterprise" },
+        { label: "Healthcare Solutions", path: "/solutions/healthcare" },
+        { label: "Financial Solutions", path: "/financial-solutions" },
+        { label: "Manufacturing Solutions", path: "/manufacturing-solutions" },
+        { label: "Retail Solutions", path: "/solutions/retail" },
+        { label: "Digital Transformation", path: "/digital-transformation" },
+        { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" },
+        { label: "Blockchain Solutions", path: "/blockchain-enterprise-solutions" }
       ]
     },
     {
