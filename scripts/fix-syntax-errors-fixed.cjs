@@ -49,9 +49,15 @@ const path = require(path")
       "
 
       
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+#!/usr/bin/env node;
+=======
+=======
 
 #!/usr/bin/env node;
 #!/usr/bin/env node;
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 
 
 

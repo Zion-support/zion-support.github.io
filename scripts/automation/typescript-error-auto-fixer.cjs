@@ -10,6 +10,15 @@ class TypeScriptErrorAutoFixer {}
     this.reportsDir = path.join(this.projectRoot, 'error-reports');
     this.logsDir = path.join(this.projectRoot, 'automation/logs');
     this.fixInterval = parseInt(process.env.TYPESCRIPT_FIX_INTERVAL) || 600000; // 10 minutes;
+    console.log(`[${timestamp}] [${level}] ${message})};
+>>>>>>> origin/chore/fix-lint-and-merge
+  async runTypeScriptCheck() {}
+    try {}
+
+        const match = line.match(/([^:]+):(\d+):(\d+)/);
+        if (match) {}
+          if (currentError) {}
+=======
     this.autoFixEnabled = process.env.AUTO_FIX_ENABLED === 'true';
 =======
 
@@ -56,6 +65,7 @@ class TypeScriptErrorAutoFixer {}
         if (match) {}
           if (currentError) {}
             errors.push(currentError)};
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
           currentError = {}
 
     return errors};
@@ -64,6 +74,10 @@ class TypeScriptErrorAutoFixer {}
 =======
     for (const error of errors) {}
         if (await this.fixSingleError(error)) {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    // Apply common TypeScript fixes;
+>>>>>>> merged-prs-20250907-203621
+=======
           fixesApplied++};
 
     return fixesApplied};
@@ -74,6 +88,7 @@ class TypeScriptErrorAutoFixer {}
     const lines = content.split('\n');
 =======
     // Apply common TypeScript fixes;
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
     const fixes = [this.fixAnyType.bind(this)]
       this.fixMissingImports.bind(this),
       this.fixTypeAnnotations.bind(this),
@@ -102,22 +117,6 @@ class TypeScriptErrorAutoFixer {}
       if (fixedLine !== line) {}
         lines[lineIndex] = fixedLine;
         return {}
-          "modified": true,
-          "content": lines.join('\n'),
-          "description": 'Replaced any with unknown type'
-        }};
-    };
-    return { "modified": false, "content": lines.join('\n') }};
-  fixMissingImports(lines, error) {}
-    if (error.message.includes('Cannot find module') || error.message.includes('Module not found')) {}
-      const importMatch = error.message.match(/Cannot find module ['"]([^'"]+)['"]/);
-      if (importMatch) {}
-        const moduleName = importMatch[1];
-        // Add missing import at the top of the file;
-        const importStatement = `import * as ${moduleName.split('/').pop()} from '${moduleName}';`;`
-        // Find the last import statement;
-        let lastImportIndex = -1;
-=======
 
 </any>
         for (let i = 0; i < lines.length; i++) {}
@@ -132,6 +131,11 @@ class TypeScriptErrorAutoFixer {}
     };"
     return { "modified": false, "content": lines.join('\n') }};
   fixTypeAnnotations(lines, error) {}
+    const lineIndex = error.line - 1;
+    const line = lines[lineIndex];
+=======
+      const postCheckResult = await this.runTypeScriptCheck();
+=======
     const lineIndex = error.line - 1;
     const line = lines[lineIndex];
 =======
@@ -227,11 +231,16 @@ class TypeScriptErrorAutoFixer {}
 
       // Run check again to see if fixes worked;
       const postCheckResult = await this.runTypeScriptCheck();
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
       const report = {}
 
         "initialErrors": checkResult.errors.length,"
         fixesApplied,"
         "remainingErrors": postCheckResult.errors.length,
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+    this.log(`TypeScript error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
         "success": postCheckResult.success;
       };
       // Save report;
@@ -263,6 +272,7 @@ class TypeScriptErrorAutoFixer {}
 
     }, this.fixInterval);
     this.log(`TypeScript error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)};
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 // Main execution;
 if (require.main === module) {}
   const fixer = new TypeScriptErrorAutoFixer();

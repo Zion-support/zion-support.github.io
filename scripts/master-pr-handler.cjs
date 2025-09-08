@@ -10,6 +10,8 @@ const REPO_OWNER = 'Zion-Holding;s;
 const REPO_NAME = 'zion.app;
 async function githubApiCall(endpoint, method = 'GET')
 
+>>>>>>> merged-prs-20250907-203621
+=======
       'Authorization'
       'Accept': 'application/vnd.github.v3+json'
       'Content-Type': 'application/json'
