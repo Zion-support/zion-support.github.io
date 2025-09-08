@@ -32,10 +32,6 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
       });
     }
 
-    if ('Notification' in window && Notification.permission === 'default') {
-      Notification.requestPermission();
-    }
-
     setup();
     return () => {
       socketRef.current?.disconnect();
@@ -57,12 +53,12 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
       sender_id: String(user.id),
       recipient_id: recipientId,
       content: text,
-      created_at: new Date().toISOString()
+      created_at: new Date().toISOString(),
+      read: false
     };
     socketRef.current.emit('send-message', { roomId, message: msg });
     setMessages(prev => [...prev, msg]);
     setText('');
-    // TODO: persist message via backend API
   };
 
   if (!isOpen) return null;
