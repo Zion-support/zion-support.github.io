@@ -82,6 +82,25 @@ export default function HomePage({ pageLinks }: HomePageProps) {
               <Link href="/contact" className="px-7 py-3 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 rounded-lg text-white font-semibold transition-all duration-300 shadow-lg">
                 Get Started
               </Link>
+              <Link href="/blog" className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Blog
+              </Link>
+              <Link href="/resources" className="px-8 py-4 bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-600 hover:to-indigo-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Resources
+              </Link>
+              <Link href="/case-studies" className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Case Studies
+              </Link>
+            </div>
+            <div className="flex justify-center">
+              <a
+                href="https://github.com/Zion-Holdings/zion.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all duration-300 hover:border-cyan-400/50"
+              >
+                ⭐ Star us on GitHub
+              </a>
             </div>
           </section>
 
