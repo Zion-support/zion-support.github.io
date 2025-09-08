@@ -63,6 +63,7 @@ const appConfig: AppConfig = {
 const AppLoadingFallback: React.FC = () => (
   <LoadingPage message="Loading Zion App..." />
 );
+
 // Main App component
 const App: React.FC = () => {
   return (
@@ -105,6 +106,6 @@ const App: React.FC = () => {
       </HelmetProvider>
     </ErrorBoundary>
   );
-};
+}
 
 export default App;
