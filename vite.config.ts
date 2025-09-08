@@ -1,28 +1,18 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import { fileURLToPath } from 'node:url'
+import { SAMPLE_SERVICES } from './src/data/sampleServices'
 
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-=======
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
-=======
-import path from 'node:path'
->>>>>>> origin/cursor/build-and-fix-errors-e276
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+const srcDir = fileURLToPath(new URL('./src', import.meta.url))
+const axiosPath = fileURLToPath(new URL('./src/lib/axios.ts', import.meta.url))
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-<<<<<<< HEAD
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
+      '@': srcDir,
+      'axios': axiosPath
     }
 =======
 <<<<<<< HEAD
