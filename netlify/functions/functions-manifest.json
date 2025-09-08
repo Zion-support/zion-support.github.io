@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T22:43:10.973Z",
+  "generatedAt": "2025-08-11T22:27:02.379Z",
   "functions": [
     "a11y-alt-text-auditor-runner",
     "a11y-audit-runner",
@@ -26,7 +26,6 @@
     "dead-code-audit",
     "dead-code-report",
     "deps-auto-upgrade-runner",
-    "design-token-harmonizer-runner",
     "docs-index-runner",
     "docs-knowledge-sync",
     "docs-link-checker-runner",
@@ -80,7 +79,7 @@
     "repo-insights-digest",
     "repo-knowledge-graph-runner",
     "repo-radar-runner",
-    "revenue-cta-inserter-runner",
+    "revenue-ideas-runner",
     "schedule-content-index",
     "schedule-homepage",
     "schedule-knowledge-graph",

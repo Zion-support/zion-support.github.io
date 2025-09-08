@@ -220,20 +220,18 @@
   name = "auto-scheduler"
   schedule = "*/15 * * * *" # every 15 minutes
 
-# Newly added autonomous cloud automations
 [[scheduled.functions]]
-  name = "front-autopilot"
-  schedule = "*/2 * * * *" # every 2 minutes
+  name = "deps-auto-upgrade-runner"
+  schedule = "17 */12 * * *" # every 12 hours
 
 [[scheduled.functions]]
-  name = "auto-heal-and-optimize"
-  schedule = "*/5 * * * *" # every 5 minutes
+  name = "branch-cleanup-runner"
+  schedule = "0 3 * * *" # daily at 03:00 UTC
 
 [[scheduled.functions]]
-  name = "content-refresh-runner"
-  schedule = "*/10 * * * *" # every 10 minutes
+  name = "ui-beautifier-runner"
+  schedule = "5 */6 * * *" # every 6 hours
 
-# From main (keep)
 [[scheduled.functions]]
-  name = "autonomous-innovation-studio"
-  schedule = "*/2 * * * *" # every 2 minutes
+  name = "revenue-ideas-runner"
+  schedule = "*/20 * * * *" # every 20 minutes
