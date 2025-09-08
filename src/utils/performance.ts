@@ -327,7 +327,8 @@ export const PerformanceWrapper: React.FC<{
 };
 
 export default performanceMonitor;
-=======
+
+/**
  * Performance utilities for optimizing the application
  */
 
@@ -475,4 +476,3 @@ export function getMemoryUsage() {
   }
   return null;
 }
->>>>>>> origin/main

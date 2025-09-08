@@ -334,7 +334,8 @@ const DefaultErrorFallback: React.FC<{ error: Error }> = ({ error }) => (
 );
 
 export default errorHandler;
-=======
+
+/**
  * Error handling utilities for the application
  */
 
@@ -554,4 +555,3 @@ export function getErrorBoundaryFallback(error: Error): {
     action: 'Reload Page',
   };
 }
->>>>>>> origin/main

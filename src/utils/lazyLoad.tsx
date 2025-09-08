@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Suspense, lazy, ComponentType } from 'react';
 import LoadingSpinner from '../components/LoadingSpinner';
 
@@ -21,12 +20,7 @@ export const withLazyLoad = <P extends object>(
   );
 };
 
-// Lazy load pages
-=======
-import React, { lazy } from 'react';
-
 // Lazy loaded pages
->>>>>>> origin/main
 export const LazyHome = lazy(() => import('../pages/Home'));
 export const LazyAbout = lazy(() => import('../pages/About'));
 export const LazyContact = lazy(() => import('../pages/Contact'));
@@ -135,8 +129,7 @@ export default {
   useIntersectionObserver,
   LazyImage,
 };
-=======
+
 // Lazy loaded components
 export const LazyAnalytics = lazy(() => import('../components/PerformanceDashboard'));
 export const LazyPerformanceMonitor = lazy(() => import('../components/PerformanceOptimizations'));
->>>>>>> origin/main
