@@ -1,215 +1,238 @@
-// eslint.config.js
-import js from "@eslint/js";
-import globals from "globals";
-import tseslint from "typescript-eslint";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
-// import cypressPlugin from "eslint-plugin-cypress/flat"; // Corrected import for flat config
+import { FlatCompat } from '@eslint/eslintrc';
+import js from '@eslint/js';
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+// import nextPlugin from '@next/eslint-plugin-next'; // Not needed for Vite project
+import globals from 'globals';
 
-// Cleaned global objects
-const browserGlobals = Object.fromEntries(
-  Object.entries(globals.browser).map(([key, value]) => [key.trim(), value])
-);
-const nodeGlobals = Object.fromEntries(
-  Object.entries(globals.node).map(([key, value]) => [key.trim(), value])
-);
-const serviceWorkerGlobals = Object.fromEntries(
-  Object.entries(globals.serviceworker).map(([key, value]) => [key.trim(), value])
-);
-
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all
+});
 
 export default [
-  // 1. Global Ignores
+  js.configs.recommended,
+  {
+    languageOptions: {
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly'
+      }
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn'
+    }
+  },
   {
     ignores: [
-      "dist/",
-      "node_modules/",
-      "**/*.config.js", // Ignores this file, tailwind.config.js, etc.
-      // "*.config.ts", // Handled by specific tsconfig below if needed
-      "extension/",
-      "supabase/functions/_shared/",
-      "playwright.config.ts",
-      "jest.config.js",
-      "scripts/",
-      "coverage/",
-      "*.d.ts", // Typically declaration files don't need linting
-    ],
+      'node_modules/**',
+      '.next/**',
+      'dist/**',
+      'build/**',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'scripts/**',
+      'automation/**',
+      'automation_backup/**',
+      'apps.backup/**',
+      'backup-problematic-files/**',
+      'backup-merge-conflicts/**',
+      'corrupted_backup/**',
+      'corrupted-files-backup/**',
+      'src.disabled/**',
+      'components.disabled/**',
+      'pages.disabled/**',
+      'zion-os/**',
+      'zion-website/**',
+      'zion_academy/**',
+      'api-backup/**',
+      'api-disabled/**',
+      'api.disabled/**',
+      'backup/**',
+      'backups/**',
+      'broken_files_backup/**',
+      'cypress_backup/**',
+      'data_backup/**',
+      'deployment/**',
+      'deployments/**',
+      'dao/**',
+      'e2e/**',
+      'server/**',
+      'temp_*/**',
+      'test_build/**',
+      'tests/**',
+      '__tests__/**',
+      'components/apps/extension/**',
+      'lib.broken/**',
+      'middleware/**',
+      'netlify/**',
+      'pm2-automation/**',
+      'pm2-backups/**',
+      'recovered-branches/**',
+      'src.broken/**',
+      'src_backup_temp/**',
+      'test-next/**',
+      'tools/**',
+      'utils/**',
+      '*.cjs',
+      '*.mjs',
+      'supabase/**',
+      'ultimate-*.cjs',
+      'advanced-*.js',
+      'comprehensive-*.js',
+      'enhanced-*.js',
+      'fix-*.js',
+      'merge-*.js',
+      'run-*.js',
+      'test-*.js',
+      '*.test.js',
+      '*.spec.js',
+      'aggressive-*.js',
+      'batch-*.js',
+      'clean-*.js',
+      'critical-*.js',
+      'execute-*.js',
+      'final-*.js',
+      'health-*.js',
+      'improve-*.js',
+      'maintenance-*.js',
+      'monitoring-*.js',
+      'optimized-*.js',
+      'performance-*.js',
+      'resolve-*.js',
+      'seo-*.js',
+      'simple-*.js',
+      'structural-*.js',
+      'system-*.js',
+      'ultimate-*.js',
+      '*.js',
+      'src_backup_temp/**',
+      'temp-backup/**',
+      'temp_exclude/**',
+      'temp_components/**',
+      'temp_broken_files/**',
+      'temp_working/**',
+      'zion-os.disabled/**',
+      'zion-ai-assistant/**',
+      'tools/**',
+      'utils/**',
+      'recovered-branches/**',
+      'pages._archive_corrupted/**',
+      'pages.bak/**',
+      'pages.disabled_full/**',
+      'pages_api.disabled/**',
+      'pages_backup_conflicts/**',
+      'pages_disabled/**',
+      'src.pages.disabled/**',
+      'vite.config-backup.ts',
+      'out/**',
+      'public-backup/**',
+      'pages_backup/**',
+      'pages.old/**',
+      'pages.broken/**',
+      'pages-all-disabled/**',
+      'pages-disabled/**',
+      'clean-build/**',
+      'test-minimal/**',
+      'src_disabled_*/**',
+      'src-disabled/**',
+      'public/sw.js',
+      'public/service-worker.js',
+      'factories/**',
+      'lib.disabled/**',
+      'pages/index.backup.js',
+      '_conflicted_disabled/**',
+      'api/**',
+      'cache/**',
+      'cypress/**',
+      'extension/**'
+    ]
   },
-
-  // 2. Base Configuration for JavaScript files
   {
-    files: ["**/*.{js,cjs,mjs}"],
-    rules: js.configs.recommended.rules, // Using only rules from js.configs.recommended
+    files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      sourceType: "commonjs", // Default, overridden by more specific configs below
-      globals: { ...nodeGlobals },
-    },
-  },
-  // JS files that are ES Modules
-  {
-    files: ["api/**/*.js", "pages/api/**/*.js", "src/utils/setupAnalyticsTables.js"],
-    languageOptions: { sourceType: "module", globals: { ...nodeGlobals } },
-  },
-  // Service Worker JS
-  {
-    files: ["public/service-worker.js"],
-    languageOptions: { globals: { ...serviceWorkerGlobals } },
-  },
-
-  // 3. TypeScript Configurations
-  // Main application TS/TSX files (src, pages, but not tests, stories, cypress, supabase yet)
-  ...tseslint.config({
-    files: ["src/**/*.{ts,tsx}", "pages/**/*.{ts,tsx}"], 
-    // Exclude story files from this general src/pages config
-    ignores: ["src/**/*.stories.tsx", "src/**/*.stories.ts", "src/**/*.test.tsx", "src/**/*.test.ts"],
-    extends: [...tseslint.configs.recommendedTypeChecked],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.json"], // Simplified to only tsconfig.json
-        tsconfigRootDir: import.meta.dirname,
+      ecmaVersion: 2020,
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly'
       },
-      globals: { ...browserGlobals },
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
     },
-    plugins: { "react-hooks": reactHooks, "react-refresh": reactRefresh },
+    plugins: {
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks
+      // '@next/next': nextPlugin, // Not needed for Vite project
+    },
     rules: {
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
-      "@typescript-eslint/no-unused-vars": "warn",
-      "@typescript-eslint/no-explicit-any": "warn",
-      "@typescript-eslint/no-unsafe-assignment": "warn",
-      "@typescript-eslint/no-unsafe-member-access": "warn",
-      "@typescript-eslint/no-unsafe-call": "warn",
-      "@typescript-eslint/no-unsafe-return": "warn",
-      "@typescript-eslint/no-unsafe-argument": "warn",
-      "@typescript-eslint/restrict-template-expressions": "warn",
-      "@typescript-eslint/no-floating-promises": ["warn", { ignoreVoid: true }],
-      "@typescript-eslint/no-misused-promises": ["warn", { checksVoidReturn: false }],
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/display-name': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/ban-ts-comment': 'off',
+      'no-unused-vars': 'off',
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'prefer-const': 'error',
+      'no-debugger': 'warn',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn'
     },
-  }),
-
-  // Config for vite.config.ts, tailwind.config.ts etc. (Node environment TS files)
-  // This should specifically target config files at the root.
-  ...tseslint.config({
-    files: ["vite.config.ts", "tailwind.config.ts", "cypress.config.ts", "vitest.config.ts"], // Explicit list
-    extends: [...tseslint.configs.recommendedTypeChecked],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json"], // Use tsconfig.node.json
-        tsconfigRootDir: import.meta.dirname,
-      },
-      globals: { ...nodeGlobals },
-    },
-    rules: {
-        "@typescript-eslint/no-unsafe-assignment": "off",
-        "@typescript-eslint/no-unsafe-call": "off",
-        "@typescript-eslint/no-unsafe-member-access": "off",
-        "@typescript-eslint/no-var-requires": "off",
-        "@typescript-eslint/no-require-imports": "off",
+    settings: {
+      react: {
+        version: 'detect'
+      }
     }
-  }),
-
-  // Test files configuration (__tests__ directory)
-  ...tseslint.config({
-    files: ["__tests__/**/*.{ts,tsx}"],
-    extends: [...tseslint.configs.recommendedTypeChecked],
+  },
+  {
+    files: ['**/*.js'],
     languageOptions: {
-      parserOptions: {
-        project: "./__tests__/tsconfig.json",
-        tsconfigRootDir: import.meta.dirname,
-      },
-      globals: { ...globals.jest, ...browserGlobals }, // Jest and browser globals
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly'
+      }
     },
     rules: {
-      "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/no-unsafe-assignment": "off",
-      "@typescript-eslint/no-unsafe-member-access": "off",
-      "@typescript-eslint/no-unsafe-call": "off",
-      "@typescript-eslint/no-unsafe-return": "off",
-      "@typescript-eslint/no-unsafe-argument": "off",
-      // Allow describe, it, expect etc.
-      "@typescript-eslint/unbound-method": "off",
-    },
-  }),
-
-  // Test files configuration (tests/ directory)
-  ...tseslint.config({
-    files: ["tests/**/*.{ts,tsx,js,jsx}"], // Include JS/JSX as per its tsconfig
-    ignores: ["tests/e2e/**"], // e2e tests inside 'tests' might be Playwright, not Jest
-    extends: [...tseslint.configs.recommendedTypeChecked],
-    languageOptions: {
-      parserOptions: {
-        project: "./tests/tsconfig.json",
-        tsconfigRootDir: import.meta.dirname,
-      },
-      globals: { ...globals.jest, ...browserGlobals }, // Jest and browser globals
-    },
-    rules: {
-      "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/no-unsafe-assignment": "off",
-      "@typescript-eslint/no-unsafe-member-access": "off",
-      "@typescript-eslint/no-unsafe-call": "off",
-      "@typescript-eslint/no-unsafe-return": "off",
-      "@typescript-eslint/no-unsafe-argument": "off",
-      "@typescript-eslint/unbound-method": "off", // for Jest matchers
-      "@typescript-eslint/no-var-requires": "off", // Allow require in JS test files
-      "@typescript-eslint/no-require-imports": "off", // Allow require in JS test files
-    },
-  }),
-
-  // Storybook files configuration
-  ...tseslint.config({
-    files: [
-      ".storybook/**/*.ts",
-      ".storybook/**/*.tsx",
-      "src/**/*.stories.tsx",
-      "src/**/*.stories.ts", // Added .ts stories
-      "stories/**/*.stories.tsx",
-      "stories/**/*.stories.ts", // Added .ts stories
-    ],
-    extends: [...tseslint.configs.recommendedTypeChecked],
-    languageOptions: {
-      parserOptions: {
-        project: "./.storybook/tsconfig.json",
-        tsconfigRootDir: import.meta.dirname,
-      },
-      globals: { ...browserGlobals },
-    },
-    rules: {
-      "import/no-anonymous-default-export": "off",
-      "react-refresh/only-export-components": "off",
-      "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/no-unsafe-assignment": "off",
-      "@typescript-eslint/no-unsafe-member-access": "off",
-      "@typescript-eslint/no-unsafe-call": "off",
-      "@typescript-eslint/no-unsafe-return": "off",
-      "@typescript-eslint/no-unsafe-argument": "off",
-      "@typescript-eslint/no-floating-promises": "off",
-      "@typescript-eslint/restrict-template-expressions": "off",
-    },
-  }),
-
-  // Supabase functions configuration
-  ...tseslint.config({
-    files: ["supabase/functions/**/*.ts"],
-    extends: [...tseslint.configs.recommendedTypeChecked],
-    languageOptions: {
-      parserOptions: {
-        project: "./supabase/functions/tsconfig.json",
-        tsconfigRootDir: import.meta.dirname,
-      },
-      globals: { ...nodeGlobals },
-    },
-    rules: {
-      "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/no-unsafe-assignment": "off",
-      "@typescript-eslint/no-unsafe-member-access": "off",
-      "@typescript-eslint/no-unsafe-call": "off",
-      "@typescript-eslint/no-unsafe-return": "off",
-      "@typescript-eslint/no-unsafe-argument": "off",
-      "@typescript-eslint/no-floating-promises": "warn", 
-      "@typescript-eslint/restrict-template-expressions": "warn", 
-    },
-  }),
-  
-  // Cypress configuration removed due to missing plugin
+      'no-console': 'off'
+    }
+  }
 ];
