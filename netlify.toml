@@ -1,18 +1,11 @@
 [build]
-  # Ensure required toolchains are present before dependency installation
-  command = "mise install && python -m pip install -r requirements.txt && npm ci && npm run build"
+  # Skip build and publish prebuilt static files in dist
+  command = "echo Skipping build; using prebuilt dist"
   publish = "dist"
-=======
-  # Use prebuilt static site in 'out' to avoid broken build step
-  command = "echo Using prebuilt out directory"
-  publish = "out"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
-  PYTHON_VERSION = "3.11"
-  # Allow mise to manage tools in CI
-  NETLIFY_SKIP_INSTALL = "true"
 
 
 [[redirects]]
