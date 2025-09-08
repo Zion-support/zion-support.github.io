@@ -1,2215 +1,381 @@
-export type InnovativeService = {
-  id: string;
-  title: string;
-  description: string;
-  price: number;
-  pricingModel: string;
-  userLimit: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetMarket: string[];
-  ctaLabel: string;
-  href: string;
-  external?: boolean;
-  featured?: boolean;
-  marketSize?: string;
-  roi?: string;
-  implementationTime?: string;
-  supportLevel?: string;
-  compliance?: string[];
-  integrations?: string[];
-  api?: boolean;
-  mobile?: boolean;
-  enterprise?: boolean;
-  startup?: boolean;
-  smb?: boolean;
+import { ProductListing } from "@/types/listings";
+
+export const INNOVATIVE_SERVICES_2026: ProductListing[] = [
+  // AI-Powered Enterprise Solutions
+  {
+    id: "ai-enterprise-workflow-orchestrator",
+    title: "AI Enterprise Workflow Orchestrator",
+    description: "Intelligent workflow automation platform that learns from business processes and optimizes operations in real-time. Reduces manual tasks by 80% and improves efficiency by 65%.",
+    category: "AI & Operations",
+    subcategory: "Workflow Automation",
+    price: 12999,
+    currency: "$",
+    tags: ["Workflow Automation", "Process Optimization", "AI Learning", "Real-time Analytics", "Enterprise Integration"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-workflow-orchestrator.jpg"],
+    createdAt: "2024-01-01T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 156,
+    featured: true,
+    location: "Global",
+    availability: "6-8 Weeks",
+    aiScore: 98,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-workflow-orchestrator",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$10,000-20,000",
+    competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
+    roi: "700% within 8 months",
+    setupTime: "6-8 weeks",
+    integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Dynamics", "Workday", "ServiceNow"]
+  },
+
+  // Advanced AI-Powered Cybersecurity
+  {
+    id: "ai-adaptive-cybersecurity-platform",
+    title: "AI Adaptive Cybersecurity Platform",
+    description: "Self-learning cybersecurity system that adapts to new threats in real-time. Uses behavioral analysis and predictive modeling to prevent attacks before they happen with 99.5% accuracy.",
+    category: "Cybersecurity",
+    subcategory: "AI Security",
+    price: 15999,
+    currency: "$",
+    tags: ["Adaptive Security", "Behavioral Analysis", "Predictive Modeling", "Threat Prevention", "Zero-Day Protection"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-adaptive-cybersecurity.jpg"],
+    createdAt: "2024-01-05T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 89,
+    featured: true,
+    location: "Global",
+    availability: "8-10 Weeks",
+    aiScore: 99,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-adaptive-cybersecurity",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$12,000-25,000",
+    competitors: ["Darktrace", "SentinelOne", "CrowdStrike"],
+    roi: "800% within 10 months",
+    setupTime: "8-10 weeks",
+    integrations: ["SIEM Systems", "EDR Solutions", "Firewalls", "Identity Management", "Threat Intelligence Platforms"]
+  },
+
+  // Quantum-Ready AI Platform
+  {
+    id: "quantum-ai-hybrid-platform",
+    title: "Quantum AI Hybrid Platform",
+    description: "Next-generation AI platform that combines classical machine learning with quantum computing capabilities. Solves complex optimization problems 1000x faster than traditional methods.",
+    category: "Quantum Computing",
+    subcategory: "AI Integration",
+    price: 24999,
+    currency: "$",
+    priceRange: "$20,000-40,000",
+    tags: ["Quantum Computing", "AI Integration", "Optimization", "Hybrid Computing", "Future-Ready"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/quantum-ai-hybrid.jpg"],
+    createdAt: "2024-01-10T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 67,
+    featured: true,
+    location: "Global",
+    availability: "10-12 Weeks",
+    aiScore: 100,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/quantum-ai-hybrid",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$20,000-40,000",
+    competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum"],
+    roi: "1000% within 12 months",
+    setupTime: "10-12 weeks",
+    integrations: ["Quantum Simulators", "Cloud Quantum Services", "Classical AI Frameworks", "HPC Clusters"]
+  },
+
+  // Micro SAAS - AI Content Studio
+  {
+    id: "ai-content-studio-pro",
+    title: "AI Content Studio Pro",
+    description: "Professional content creation platform powered by advanced AI. Generates high-quality articles, videos, and social media content with human-like creativity and SEO optimization.",
+    category: "AI & Content",
+    subcategory: "Content Creation",
+    price: 2999,
+    currency: "$",
+    tags: ["Content Creation", "AI Writing", "Video Generation", "SEO Optimization", "Social Media"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-content-studio.jpg"],
+    createdAt: "2024-01-15T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 234,
+    featured: true,
+    location: "Global",
+    availability: "2-4 Weeks",
+    aiScore: 95,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-content-studio",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$2,500-5,000",
+    competitors: ["Jasper", "Copy.ai", "Writesonic"],
+    roi: "400% within 4 months",
+    setupTime: "2-4 weeks",
+    integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social Media Platforms"]
+  },
+
+  // Micro SAAS - AI Customer Support Hub
+  {
+    id: "ai-customer-support-hub",
+    title: "AI Customer Support Hub",
+    description: "Intelligent customer support platform with 24/7 availability, multilingual support, and seamless human handoff. Reduces response time by 90% and increases customer satisfaction by 75%.",
+    category: "AI & Customer Support",
+    subcategory: "Support Automation",
+    price: 3999,
+    currency: "$",
+    tags: ["Customer Support", "24/7 Availability", "Multilingual", "Human Handoff", "Satisfaction"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-customer-support-hub.jpg"],
+    createdAt: "2024-01-20T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 189,
+    featured: true,
+    location: "Global",
+    availability: "3-5 Weeks",
+    aiScore: 94,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-customer-support-hub",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$3,000-6,000",
+    competitors: ["Intercom", "Zendesk", "Freshdesk"],
+    roi: "500% within 5 months",
+    setupTime: "3-5 weeks",
+    integrations: ["CRM Systems", "Help Desk Tools", "Live Chat Platforms", "Email Systems"]
+  },
+
+  // Micro SAAS - AI Project Management
+  {
+    id: "ai-project-management-suite",
+    title: "AI Project Management Suite",
+    description: "Smart project management platform that predicts delays, optimizes resource allocation, and provides real-time insights. Improves project success rate by 85% and reduces timeline by 30%.",
+    category: "AI & Operations",
+    subcategory: "Project Management",
+    price: 4999,
+    currency: "$",
+    tags: ["Project Management", "Predictive Analytics", "Resource Optimization", "Real-time Insights", "Success Rate"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-project-management.jpg"],
+    createdAt: "2024-01-25T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 156,
+    featured: true,
+    location: "Global",
+    availability: "4-6 Weeks",
+    aiScore: 93,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-project-management",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$4,000-8,000",
+    competitors: ["Asana", "Monday.com", "ClickUp"],
+    roi: "600% within 6 months",
+    setupTime: "4-6 weeks",
+    integrations: ["Slack", "Microsoft Teams", "Jira", "Trello", "Time Tracking Tools"]
+  },
+
+  // IT Infrastructure - Edge Computing Platform
+  {
+    id: "edge-computing-platform",
+    title: "Edge Computing Platform",
+    description: "Distributed edge computing infrastructure that brings processing closer to data sources. Reduces latency by 80% and improves performance for IoT and real-time applications.",
+    category: "IT Infrastructure",
+    subcategory: "Edge Computing",
+    price: 18999,
+    currency: "$",
+    tags: ["Edge Computing", "IoT", "Real-time Processing", "Low Latency", "Distributed Infrastructure"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/edge-computing-platform.jpg"],
+    createdAt: "2024-02-01T10:00:00.000Z",
+    rating: 4.7,
+    reviewCount: 78,
+    featured: true,
+    location: "Global",
+    availability: "8-10 Weeks",
+    aiScore: 92,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/edge-computing-platform",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$15,000-30,000",
+    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT"],
+    roi: "750% within 10 months",
+    setupTime: "8-10 weeks",
+    integrations: ["IoT Devices", "Cloud Platforms", "5G Networks", "Industrial Systems"]
+  },
+
+  // AI Healthcare Analytics Platform
+  {
+    id: "ai-healthcare-analytics-platform",
+    title: "AI Healthcare Analytics Platform",
+    description: "Advanced healthcare analytics platform that processes medical data to provide predictive insights, early disease detection, and personalized treatment recommendations with 96% accuracy.",
+    category: "AI & Healthcare",
+    subcategory: "Analytics",
+    price: 22999,
+    currency: "$",
+    tags: ["Healthcare Analytics", "Predictive Medicine", "Early Detection", "Personalized Treatment", "Medical AI"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-healthcare-analytics.jpg"],
+    createdAt: "2024-02-05T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 45,
+    featured: true,
+    location: "Global",
+    availability: "10-12 Weeks",
+    aiScore: 97,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-healthcare-analytics",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$18,000-35,000",
+    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
+    roi: "900% within 12 months",
+    setupTime: "10-12 weeks",
+    integrations: ["EMR Systems", "Medical Devices", "Clinical Databases", "Health Information Exchanges"]
+  },
+
+  // Blockchain Supply Chain Solution
+  {
+    id: "blockchain-supply-chain-platform",
+    title: "Blockchain Supply Chain Platform",
+    description: "Transparent and secure supply chain management using blockchain technology. Provides end-to-end traceability, reduces fraud by 95%, and improves efficiency by 40%.",
+    category: "Blockchain & Web3",
+    subcategory: "Supply Chain",
+    price: 16999,
+    currency: "$",
+    tags: ["Blockchain", "Supply Chain", "Traceability", "Fraud Prevention", "Transparency"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/blockchain-supply-chain.jpg"],
+    createdAt: "2024-02-10T10:00:00.000Z",
+    rating: 4.7,
+    reviewCount: 67,
+    featured: true,
+    location: "Global",
+    availability: "8-10 Weeks",
+    aiScore: 89,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/blockchain-supply-chain",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$12,000-25,000",
+    competitors: ["IBM Food Trust", "VeChain", "OriginTrail"],
+    roi: "650% within 10 months",
+    setupTime: "8-10 weeks",
+    integrations: ["ERP Systems", "WMS", "Logistics Platforms", "IoT Sensors", "Smart Contracts"]
+  },
+
+  // Sustainable Technology Platform
+  {
+    id: "sustainable-technology-platform",
+    title: "Sustainable Technology Platform",
+    description: "Comprehensive platform for monitoring and optimizing environmental impact. Helps organizations reduce carbon footprint by 60% and achieve sustainability goals with AI-powered insights.",
+    category: "Sustainable Technology",
+    subcategory: "Environmental Monitoring",
+    price: 12999,
+    currency: "$",
+    tags: ["Sustainability", "Environmental Monitoring", "Carbon Footprint", "AI Insights", "Green Technology"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/sustainable-technology.jpg"],
+    createdAt: "2024-02-15T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 89,
+    featured: true,
+    location: "Global",
+    availability: "6-8 Weeks",
+    aiScore: 91,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/sustainable-technology",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$10,000-20,000",
+    competitors: ["Watershed", "Normative", "Carbon Analytics"],
+    roi: "550% within 8 months",
+    setupTime: "6-8 weeks",
+    integrations: ["IoT Sensors", "Energy Management Systems", "Building Management", "Sustainability Reporting Tools"]
+  }
+];
+
+// Service Categories for 2026
+export const SERVICE_CATEGORIES_2026 = [
+  "AI & Operations",
+  "Cybersecurity",
+  "Quantum Computing",
+  "AI & Content",
+  "AI & Customer Support",
+  "IT Infrastructure",
+  "AI & Healthcare",
+  "Blockchain & Web3",
+  "Sustainable Technology"
+];
+
+// Service Statistics for 2026
+export const SERVICE_STATISTICS_2026 = {
+  totalServices: INNOVATIVE_SERVICES_2026.length,
+  totalCategories: SERVICE_CATEGORIES_2026.length,
+  averagePrice: Math.round(
+    INNOVATIVE_SERVICES_2026.reduce((sum, service) => sum + service.price, 0) / 
+    INNOVATIVE_SERVICES_2026.length
+  ),
+  averageRating: Math.round(
+    (INNOVATIVE_SERVICES_2026.reduce((sum, service) => sum + service.rating, 0) / 
+    INNOVATIVE_SERVICES_2026.length) * 10
+  ) / 10,
+  featuredServices: INNOVATIVE_SERVICES_2026.filter(service => service.featured).length,
+  aiServices: INNOVATIVE_SERVICES_2026.filter(service => 
+    service.category.includes('AI') || service.aiScore > 90
+  ).length,
+  microSaasServices: INNOVATIVE_SERVICES_2026.filter(service => 
+    service.price < 10000
+  ).length
 };
 
-export const innovativeServices2026: InnovativeService[] = [
-  // MICRO SAAS SERVICES
-  {
-    id: 'ai-powered-customer-churn-predictor',
-    title: 'AI-Powered Customer Churn Predictor',
-    description: 'Predict customer churn with 95% accuracy using machine learning algorithms and behavioral analysis.',
-    category: 'Micro SaaS',
-    price: '$299',
-    billing: 'month',
-    features: [
-      'Real-time churn risk scoring',
-      'Behavioral pattern analysis',
-      'Predictive analytics dashboard',
-      'Automated retention campaigns',
-      'CRM integration (Salesforce, HubSpot)',
-      'Custom retention strategies',
-      'ROI tracking and reporting'
-    ],
-    benefits: [
-      'Reduce churn by up to 40%',
-      'Increase customer lifetime value',
-      'Optimize retention spend',
-      'Proactive customer success'
-    ],
-    useCases: [
-      'SaaS subscription businesses',
-      'E-commerce platforms',
-      'Subscription box services',
-      'Digital content providers'
-    ],
-    targetMarket: ['SaaS Companies', 'E-commerce', 'Subscription Services', 'Digital Media'],
-    ctaLabel: 'Start Free Trial',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$2.5B',
-    roi: '300%',
-    implementationTime: '2-4 weeks',
-    supportLevel: '24/7',
-    compliance: ['GDPR', 'CCPA', 'SOC 2'],
-    integrations: ['Salesforce', 'HubSpot', 'Stripe', 'Shopify'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'intelligent-inventory-optimization',
-    title: 'Intelligent Inventory Optimization',
-    description: 'AI-driven inventory management that reduces stockouts by 60% and optimizes warehouse space utilization.',
-    category: 'Micro SaaS',
-    price: '$199',
-    billing: 'month',
-    features: [
-      'Demand forecasting with 90% accuracy',
-      'Real-time inventory tracking',
-      'Automated reorder points',
-      'Multi-location management',
-      'Supplier performance analytics',
-      'Seasonal trend analysis',
-      'Cost optimization recommendations'
-    ],
-    benefits: [
-      'Reduce inventory costs by 25%',
-      'Eliminate stockouts',
-      'Improve cash flow',
-      'Optimize warehouse space'
-    ],
-    useCases: [
-      'Retail chains',
-      'E-commerce warehouses',
-      'Manufacturing companies',
-      'Distribution centers'
-    ],
-    targetMarket: ['Retail', 'E-commerce', 'Manufacturing', 'Logistics'],
-    ctaLabel: 'Optimize Inventory',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$3.8B',
-    roi: '250%',
-    implementationTime: '3-5 weeks',
-    supportLevel: 'Business hours + emergency',
-    compliance: ['ISO 9001', 'FDA', 'GMP'],
-    integrations: ['SAP', 'Oracle', 'NetSuite', 'QuickBooks'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: false,
-    smb: true
-  },
-  {
-    id: 'smart-energy-consumption-monitor',
-    title: 'Smart Energy Consumption Monitor',
-    description: 'IoT-powered energy monitoring system that helps businesses reduce energy costs by up to 35%.',
-    category: 'Micro SaaS',
-    price: '$149',
-    billing: 'month',
-    features: [
-      'Real-time energy consumption tracking',
-      'Smart device identification',
-      'Anomaly detection alerts',
-      'Energy efficiency recommendations',
-      'Carbon footprint calculation',
-      'Cost analysis and forecasting',
-      'Mobile app monitoring'
-    ],
-    benefits: [
-      'Reduce energy bills by 35%',
-      'Improve sustainability score',
-      'Comply with green regulations',
-      'Enhance corporate social responsibility'
-    ],
-    useCases: [
-      'Office buildings',
-      'Manufacturing facilities',
-      'Retail stores',
-      'Data centers'
-    ],
-    targetMarket: ['Commercial Real Estate', 'Manufacturing', 'Retail', 'Data Centers'],
-    ctaLabel: 'Monitor Energy',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$1.9B',
-    roi: '200%',
-    implementationTime: '1-2 weeks',
-    supportLevel: '24/7 monitoring',
-    compliance: ['LEED', 'ISO 50001', 'Energy Star'],
-    integrations: ['Building Management Systems', 'Smart Meters', 'Solar Panels'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'automated-compliance-monitor',
-    title: 'Automated Compliance Monitor',
-    description: 'Continuous compliance monitoring for GDPR, HIPAA, SOC 2, and other regulatory frameworks with automated reporting.',
-    category: 'Micro SaaS',
-    price: '$399',
-    billing: 'month',
-    features: [
-      'Multi-framework compliance monitoring',
-      'Automated evidence collection',
-      'Real-time compliance scoring',
-      'Automated audit reports',
-      'Policy template library',
-      'Employee training tracking',
-      'Incident response automation'
-    ],
-    benefits: [
-      'Reduce compliance costs by 50%',
-      'Eliminate audit surprises',
-      'Maintain continuous compliance',
-      'Protect against fines and penalties'
-    ],
-    useCases: [
-      'Healthcare organizations',
-      'Financial services',
-      'Technology companies',
-      'Government contractors'
-    ],
-    targetMarket: ['Healthcare', 'Finance', 'Technology', 'Government'],
-    ctaLabel: 'Ensure Compliance',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$4.2B',
-    roi: '400%',
-    implementationTime: '4-6 weeks',
-    supportLevel: '24/7 + compliance experts',
-    compliance: ['GDPR', 'HIPAA', 'SOC 2', 'PCI DSS', 'ISO 27001'],
-    integrations: ['AWS', 'Azure', 'GCP', 'Jira', 'ServiceNow'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
+// Featured Services for 2026
+export const FEATURED_SERVICES_2026 = INNOVATIVE_SERVICES_2026.filter(service => service.featured);
 
-  // AI SOLUTIONS
-  {
-    id: 'autonomous-customer-service-agent',
-    title: 'Autonomous Customer Service Agent',
-    description: 'AI-powered customer service that handles 80% of inquiries autonomously with human-like conversation capabilities.',
-    category: 'AI Solutions',
-    price: '$1,299',
-    billing: 'month',
-    features: [
-      'Natural language processing',
-      'Multi-language support (50+ languages)',
-      'Context-aware conversations',
-      'Seamless human handoff',
-      'Sentiment analysis',
-      'Knowledge base learning',
-      '24/7 availability'
-    ],
-    benefits: [
-      'Reduce support costs by 60%',
-      'Improve customer satisfaction by 40%',
-      'Handle 10x more inquiries',
-      'Provide instant responses'
-    ],
-    useCases: [
-      'E-commerce customer support',
-      'SaaS product support',
-      'Banking customer service',
-      'Healthcare patient support'
-    ],
-    targetMarket: ['E-commerce', 'SaaS', 'Banking', 'Healthcare', 'Telecommunications'],
-    ctaLabel: 'Deploy AI Agent',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$15.7B',
-    roi: '500%',
-    implementationTime: '6-8 weeks',
-    supportLevel: '24/7 + AI specialists',
-    compliance: ['GDPR', 'CCPA', 'HIPAA'],
-    integrations: ['Zendesk', 'Intercom', 'Slack', 'Microsoft Teams'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'predictive-maintenance-platform',
-    title: 'Predictive Maintenance Platform',
-    description: 'IoT and AI-powered predictive maintenance that reduces equipment downtime by 70% and extends asset lifespan.',
-    category: 'AI Solutions',
-    price: '$2,499',
-    billing: 'month',
-    features: [
-      'Real-time equipment monitoring',
-      'Machine learning failure prediction',
-      'Maintenance scheduling optimization',
-      'Spare parts inventory management',
-      'Performance analytics dashboard',
-      'Mobile technician app',
-      'Integration with CMMS systems'
-    ],
-    benefits: [
-      'Reduce unplanned downtime by 70%',
-      'Extend equipment life by 30%',
-      'Optimize maintenance costs',
-      'Improve safety and compliance'
-    ],
-    useCases: [
-      'Manufacturing plants',
-      'Power plants',
-      'Oil and gas facilities',
-      'Transportation fleets'
-    ],
-    targetMarket: ['Manufacturing', 'Energy', 'Oil & Gas', 'Transportation', 'Utilities'],
-    ctaLabel: 'Predict Maintenance',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$8.9B',
-    roi: '350%',
-    implementationTime: '8-12 weeks',
-    supportLevel: '24/7 + field engineers',
-    compliance: ['ISO 55001', 'OSHA', 'API'],
-    integrations: ['SAP', 'Maximo', 'Oracle', 'Siemens Mindsphere'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: false,
-    smb: true
-  },
-  {
-    id: 'ai-powered-fraud-detection',
-    title: 'AI-Powered Fraud Detection',
-    description: 'Real-time fraud detection system that identifies fraudulent transactions with 99.5% accuracy using advanced machine learning.',
-    category: 'AI Solutions',
-    price: '$3,999',
-    billing: 'month',
-    features: [
-      'Real-time transaction monitoring',
-      'Behavioral pattern analysis',
-      'Multi-channel fraud detection',
-      'Automated risk scoring',
-      'False positive reduction',
-      'Compliance reporting',
-      'Machine learning model updates'
-    ],
-    benefits: [
-      'Reduce fraud losses by 80%',
-      'Improve detection accuracy',
-      'Reduce false positives by 60%',
-      'Comply with regulatory requirements'
-    ],
-    useCases: [
-      'Credit card transactions',
-      'Online banking',
-      'E-commerce payments',
-      'Insurance claims'
-    ],
-    targetMarket: ['Banking', 'E-commerce', 'Insurance', 'Payment Processors'],
-    ctaLabel: 'Detect Fraud',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$12.3B',
-    roi: '600%',
-    implementationTime: '10-14 weeks',
-    supportLevel: '24/7 + security experts',
-    compliance: ['PCI DSS', 'SOC 2', 'ISO 27001', 'GDPR'],
-    integrations: ['Stripe', 'PayPal', 'Square', 'Banking APIs'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-
-  // IT SERVICES
-  {
-    id: 'cloud-migration-accelerator',
-    title: 'Cloud Migration Accelerator',
-    description: 'End-to-end cloud migration service that reduces migration time by 50% and ensures zero downtime.',
-    category: 'IT Services',
-    price: '$15,000',
-    billing: 'project',
-    features: [
-      'Cloud readiness assessment',
-      'Migration strategy planning',
-      'Zero-downtime migration',
-      'Performance optimization',
-      'Cost optimization analysis',
-      'Security and compliance setup',
-      'Post-migration support'
-    ],
-    benefits: [
-      'Reduce migration time by 50%',
-      'Ensure zero business disruption',
-      'Optimize cloud costs',
-      'Improve scalability and performance'
-    ],
-    useCases: [
-      'Legacy system modernization',
-      'Data center consolidation',
-      'Application modernization',
-      'Disaster recovery setup'
-    ],
-    targetMarket: ['Enterprise', 'Mid-market', 'Government', 'Healthcare'],
-    ctaLabel: 'Start Migration',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$68.4B',
-    roi: '200%',
-    implementationTime: '8-16 weeks',
-    supportLevel: '24/7 + migration specialists',
-    compliance: ['SOC 2', 'ISO 27001', 'HIPAA', 'FedRAMP'],
-    integrations: ['AWS', 'Azure', 'GCP', 'VMware', 'OpenStack'],
-    api: false,
-    mobile: false,
-    enterprise: true,
-    startup: false,
-    smb: true
-  },
-  {
-    id: 'cybersecurity-posture-assessment',
-    title: 'Cybersecurity Posture Assessment',
-    description: 'Comprehensive security assessment that identifies vulnerabilities and provides actionable remediation roadmap.',
-    category: 'IT Services',
-    price: '$8,500',
-    billing: 'project',
-    features: [
-      'Vulnerability assessment',
-      'Penetration testing',
-      'Security architecture review',
-      'Compliance gap analysis',
-      'Risk assessment report',
-      'Remediation roadmap',
-      'Security training recommendations'
-    ],
-    benefits: [
-      'Identify security gaps',
-      'Reduce cyber risk',
-      'Comply with regulations',
-      'Improve security posture'
-    ],
-    useCases: [
-      'Security audits',
-      'Compliance assessments',
-      'Merger and acquisition due diligence',
-      'Annual security reviews'
-    ],
-    targetMarket: ['Enterprise', 'Mid-market', 'Healthcare', 'Finance'],
-    ctaLabel: 'Assess Security',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$45.2B',
-    roi: '300%',
-    implementationTime: '4-6 weeks',
-    supportLevel: 'Business hours + emergency',
-    compliance: ['ISO 27001', 'NIST', 'SOC 2', 'PCI DSS'],
-    integrations: ['Security tools', 'SIEM systems', 'Vulnerability scanners'],
-    api: false,
-    mobile: false,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'digital-transformation-consulting',
-    title: 'Digital Transformation Consulting',
-    description: 'Strategic consulting to help organizations navigate digital transformation with proven methodologies and best practices.',
-    category: 'IT Services',
-    price: '$25,000',
-    billing: 'project',
-    features: [
-      'Digital maturity assessment',
-      'Transformation roadmap development',
-      'Change management strategy',
-      'Technology architecture design',
-      'Process optimization',
-      'Talent development planning',
-      'ROI measurement framework'
-    ],
-    benefits: [
-      'Accelerate digital transformation',
-      'Improve operational efficiency',
-      'Enhance customer experience',
-      'Increase competitive advantage'
-    ],
-    useCases: [
-      'Digital strategy development',
-      'Process digitization',
-      'Customer experience transformation',
-      'Operational excellence initiatives'
-    ],
-    targetMarket: ['Enterprise', 'Mid-market', 'Government', 'Healthcare'],
-    ctaLabel: 'Transform Digitally',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$89.7B',
-    roi: '250%',
-    implementationTime: '12-24 weeks',
-    supportLevel: 'Business hours + strategic support',
-    compliance: ['Industry standards', 'Best practices'],
-    integrations: ['Enterprise systems', 'Cloud platforms', 'Digital tools'],
-    api: false,
-    mobile: false,
-    enterprise: true,
-    startup: false,
-    smb: true
-  },
-
-// Revolutionary Micro SAAS Services 2026
-export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
-  {
-    id: 'quantum-computing-as-a-service',
-    title: 'Quantum Computing as a Service',
-    description: 'Access to quantum computing resources for complex optimization problems and scientific research.',
-    category: 'Quantum Computing',
-    price: '$5,999',
-    billing: 'month',
-    features: [
-      'Quantum algorithm development',
-      'Quantum hardware access',
-      'Hybrid classical-quantum computing',
-      'Quantum error correction',
-      'Performance optimization',
-      'Research collaboration tools',
-      'Educational resources'
-    ],
-    benefits: [
-      'Solve previously intractable problems',
-      'Accelerate research and development',
-      'Gain quantum advantage',
-      'Future-proof your technology stack'
-    ],
-    useCases: [
-      'Drug discovery',
-      'Financial modeling',
-      'Logistics optimization',
-      'Cryptography research'
-    ],
-    targetMarket: ['Research Institutions', 'Pharmaceutical', 'Finance', 'Technology'],
-    ctaLabel: 'Access Quantum',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$1.2B',
-    roi: '400%',
-    implementationTime: '6-8 weeks',
-    supportLevel: 'Business hours + quantum experts',
-    compliance: ['Research standards', 'Data security'],
-    integrations: ['Classical computing', 'Cloud platforms', 'Research tools'],
-    api: true,
-    mobile: false,
-    enterprise: true,
-    startup: false,
-    smb: false
-  },
-  {
-    id: 'blockchain-supply-chain-tracking',
-    title: 'Blockchain Supply Chain Tracking',
-    description: 'End-to-end supply chain transparency using blockchain technology for traceability and compliance.',
-    category: 'Blockchain & Web3',
-    price: '$2,999',
-    billing: 'month',
-    features: [
-      'Real-time supply chain tracking',
-      'Smart contract automation',
-      'Compliance documentation',
-      'Quality assurance tracking',
-      'Sustainability metrics',
-      'Multi-stakeholder access',
-      'Mobile app for field workers'
-    ],
-    benefits: [
-      'Improve supply chain transparency',
-      'Reduce fraud and counterfeiting',
-      'Ensure compliance',
-      'Build consumer trust'
-    ],
-    useCases: [
-      'Food safety tracking',
-      'Pharmaceutical supply chain',
-      'Luxury goods authentication',
-      'Sustainable sourcing verification'
-    ],
-    targetMarket: ['Food & Beverage', 'Pharmaceutical', 'Luxury Goods', 'Manufacturing'],
-    ctaLabel: 'Track Supply Chain',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$3.4B',
-    roi: '300%',
-    implementationTime: '8-12 weeks',
-    supportLevel: '24/7 + blockchain experts',
-    compliance: ['FDA', 'EU regulations', 'Industry standards'],
-    integrations: ['ERP systems', 'IoT devices', 'Mobile apps'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'metaverse-commerce-platform',
-    title: 'Metaverse Commerce Platform',
-    description: 'Complete metaverse commerce solution for virtual shopping experiences and digital asset trading.',
-    category: 'Metaverse & AR/VR',
-    price: '$4,999',
-    billing: 'month',
-    features: [
-      '3D virtual storefronts',
-      'Digital asset marketplace',
-      'AR/VR shopping experiences',
-      'Virtual try-on capabilities',
-      'Cryptocurrency payments',
-      'Social commerce features',
-      'Analytics and insights'
-    ],
-    benefits: [
-      'Create immersive shopping experiences',
-      'Reach global audiences',
-      'Reduce physical infrastructure costs',
-      'Innovate customer engagement'
-    ],
-    useCases: [
-      'Fashion retail',
-      'Real estate virtual tours',
-      'Automotive showrooms',
-      'Entertainment venues'
-    ],
-    targetMarket: ['Retail', 'Real Estate', 'Automotive', 'Entertainment'],
-    ctaLabel: 'Enter Metaverse',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$5.8B',
-    roi: '350%',
-    implementationTime: '12-16 weeks',
-    supportLevel: 'Business hours + metaverse experts',
-    compliance: ['Digital rights', 'Privacy regulations'],
-    integrations: ['E-commerce platforms', 'Payment gateways', 'Social media'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-
-  // NEW INNOVATIVE MICRO SAAS SERVICES
-  {
-    id: 'ai-powered-legal-document-automation',
-    title: 'AI Legal Document Automation Platform',
-    description: 'Automate legal document creation, review, and compliance with AI-powered templates and risk assessment.',
-    category: 'Micro SaaS',
-    price: '$399',
-    billing: 'month',
-    features: [
-      'AI-powered contract generation',
-      'Legal compliance checking',
-      'Risk assessment algorithms',
-      'Template library (500+ documents)',
-      'Version control and tracking',
-      'Electronic signature integration',
-      'Regulatory updates automation',
-      'Multi-jurisdiction support'
-    ],
-    benefits: [
-      'Reduce legal document creation time by 80%',
-      'Minimize compliance risks by 90%',
-      'Cut legal costs by 60%',
-      'Improve document accuracy'
-    ],
-    useCases: [
-      'Law firms',
-      'Corporate legal departments',
-      'Real estate agencies',
-      'HR departments'
-    ],
-    targetMarket: ['Legal Services', 'Corporate', 'Real Estate', 'HR'],
-    ctaLabel: 'Schedule Demo',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$12.8B',
-    roi: '450%',
-    implementationTime: '3-5 weeks',
-    supportLevel: '24/7',
-    compliance: ['GDPR', 'CCPA', 'SOC 2', 'HIPAA'],
-    integrations: ['DocuSign', 'Clio', 'PracticePanther', 'Salesforce'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'ai-powered-healthcare-predictive-analytics',
-    title: 'AI Healthcare Predictive Analytics Platform',
-    description: 'Predictive healthcare analytics using AI to forecast patient outcomes, optimize treatments, and reduce readmissions.',
-    category: 'Micro SaaS',
-    price: '$599',
-    billing: 'month',
-    features: [
-      'Patient outcome prediction',
-      'Treatment optimization algorithms',
-      'Readmission risk scoring',
-      'Population health analytics',
-      'Clinical decision support',
-      'Real-time monitoring dashboards',
-      'HIPAA-compliant data handling',
-      'Integration with EHR systems'
-    ],
-    benefits: [
-      'Reduce readmissions by 35%',
-      'Improve treatment outcomes by 40%',
-      'Cut healthcare costs by 25%',
-      'Enhance patient satisfaction'
-    ],
-    useCases: [
-      'Hospitals and clinics',
-      'Health insurance companies',
-      'Pharmaceutical companies',
-      'Research institutions'
-    ],
-    targetMarket: ['Healthcare', 'Pharmaceuticals', 'Insurance', 'Research'],
-    ctaLabel: 'Request Demo',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$45.2B',
-    roi: '380%',
-    implementationTime: '4-6 weeks',
-    supportLevel: '24/7',
-    compliance: ['HIPAA', 'HITECH', 'SOC 2', 'GDPR'],
-    integrations: ['Epic', 'Cerner', 'Allscripts', 'Practice Fusion'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: false,
-    smb: true
-  },
-  {
-    id: 'ai-powered-financial-trading-risk-management',
-    title: 'AI Financial Trading Risk Management',
-    description: 'Advanced risk management platform for financial trading using AI to predict market volatility and optimize portfolios.',
-    category: 'Micro SaaS',
-    price: '$799',
-    billing: 'month',
-    features: [
-      'Real-time risk assessment',
-      'Portfolio optimization algorithms',
-      'Market volatility prediction',
-      'Compliance monitoring',
-      'Stress testing scenarios',
-      'Performance analytics',
-      'Multi-asset class support',
-      'Regulatory reporting'
-    ],
-    benefits: [
-      'Reduce trading losses by 45%',
-      'Improve portfolio returns by 30%',
-      'Ensure regulatory compliance',
-      'Minimize operational risks'
-    ],
-    useCases: [
-      'Investment banks',
-      'Hedge funds',
-      'Asset management firms',
-      'Trading desks'
-    ],
-    targetMarket: ['Financial Services', 'Investment', 'Trading', 'Asset Management'],
-    ctaLabel: 'Start Free Trial',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$28.7B',
-    roi: '520%',
-    implementationTime: '5-7 weeks',
-    supportLevel: '24/7',
-    compliance: ['SOX', 'Basel III', 'MiFID II', 'Dodd-Frank'],
-    integrations: ['Bloomberg', 'Reuters', 'FactSet', 'Thomson Reuters'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: false,
-    smb: false
-  },
-  {
-    id: 'ai-powered-supply-chain-optimization',
-    title: 'AI Supply Chain Optimization Platform',
-    description: 'End-to-end supply chain optimization using AI to predict demand, optimize routes, and reduce costs.',
-    category: 'Micro SaaS',
-    price: '$349',
-    billing: 'month',
-    features: [
-      'Demand forecasting with 95% accuracy',
-      'Route optimization algorithms',
-      'Inventory management automation',
-      'Supplier performance tracking',
-      'Real-time visibility dashboards',
-      'Cost optimization recommendations',
-      'Sustainability metrics',
-      'Multi-warehouse management'
-    ],
-    benefits: [
-      'Reduce supply chain costs by 30%',
-      'Improve delivery times by 40%',
-      'Optimize inventory levels',
-      'Enhance supplier relationships'
-    ],
-    useCases: [
-      'Manufacturing companies',
-      'Retail chains',
-      'E-commerce platforms',
-      'Logistics providers'
-    ],
-    targetMarket: ['Manufacturing', 'Retail', 'E-commerce', 'Logistics'],
-    ctaLabel: 'Get Started',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$18.9B',
-    roi: '280%',
-    implementationTime: '3-4 weeks',
-    supportLevel: '24/7',
-    compliance: ['ISO 28000', 'C-TPAT', 'GDPR', 'SOC 2'],
-    integrations: ['SAP', 'Oracle', 'NetSuite', 'Shopify'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'ai-powered-hr-recruitment-platform',
-    title: 'AI HR Recruitment & Talent Management',
-    description: 'Intelligent recruitment platform that uses AI to source, screen, and match candidates with job requirements.',
-    category: 'Micro SaaS',
-    price: '$249',
-    billing: 'month',
-    features: [
-      'AI-powered candidate sourcing',
-      'Resume parsing and matching',
-      'Skills assessment automation',
-      'Interview scheduling optimization',
-      'Diversity and inclusion tracking',
-      'Performance prediction algorithms',
-      'Employee retention analytics',
-      'Compliance monitoring'
-    ],
-    benefits: [
-      'Reduce time-to-hire by 50%',
-      'Improve candidate quality by 40%',
-      'Cut recruitment costs by 35%',
-      'Enhance diversity hiring'
-    ],
-    useCases: [
-      'HR departments',
-      'Recruitment agencies',
-      'Staffing companies',
-      'Large enterprises'
-    ],
-    targetMarket: ['HR', 'Recruitment', 'Staffing', 'Corporate'],
-    ctaLabel: 'Start Free Trial',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$22.1B',
-    roi: '320%',
-    implementationTime: '2-3 weeks',
-    supportLevel: '24/7',
-    compliance: ['EEOC', 'OFCCP', 'GDPR', 'SOC 2'],
-    integrations: ['Workday', 'BambooHR', 'Greenhouse', 'Lever'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'ai-powered-education-personalization',
-    title: 'AI Education Personalization Platform',
-    description: 'Personalized learning platform that adapts to individual student needs using AI and adaptive algorithms.',
-    category: 'Micro SaaS',
-    price: '$199',
-    billing: 'month',
-    features: [
-      'Adaptive learning algorithms',
-      'Personalized curriculum design',
-      'Progress tracking and analytics',
-      'Student performance prediction',
-      'Content recommendation engine',
-      'Multi-modal learning support',
-      'Parent and teacher dashboards',
-      'Assessment automation'
-    ],
-    benefits: [
-      'Improve student performance by 45%',
-      'Reduce learning time by 30%',
-      'Increase engagement by 60%',
-      'Personalize education experience'
-    ],
-    useCases: [
-      'K-12 schools',
-      'Universities and colleges',
-      'Corporate training programs',
-      'Online education platforms'
-    ],
-    targetMarket: ['Education', 'Corporate Training', 'Online Learning', 'EdTech'],
-    ctaLabel: 'Schedule Demo',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$32.5B',
-    roi: '290%',
-    implementationTime: '3-4 weeks',
-    supportLevel: '24/7',
-    compliance: ['FERPA', 'COPPA', 'GDPR', 'SOC 2'],
-    integrations: ['Canvas', 'Blackboard', 'Moodle', 'Google Classroom'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'ai-powered-project-management-platform',
-    title: 'AI Project Management & Collaboration',
-    description: 'Intelligent project management platform that uses AI to optimize workflows, predict risks, and improve team collaboration.',
-    category: 'Micro SaaS',
-    price: '$299',
-    billing: 'month',
-    features: [
-      'AI-powered task prioritization',
-      'Risk prediction and mitigation',
-      'Resource optimization algorithms',
-      'Team performance analytics',
-      'Automated progress tracking',
-      'Intelligent scheduling',
-      'Real-time collaboration tools',
-      'Integration with popular tools'
-    ],
-    benefits: [
-      'Improve project success rate by 40%',
-      'Reduce project delays by 35%',
-      'Increase team productivity by 30%',
-      'Optimize resource allocation'
-    ],
-    useCases: [
-      'Project managers',
-      'Development teams',
-      'Marketing agencies',
-      'Consulting firms'
-    ],
-    targetMarket: ['Project Management', 'Development', 'Marketing', 'Consulting'],
-    ctaLabel: 'Start Free Trial',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$16.8B',
-    roi: '310%',
-    implementationTime: '2-3 weeks',
-    supportLevel: '24/7',
-    compliance: ['GDPR', 'SOC 2', 'ISO 27001'],
-    integrations: ['Jira', 'Asana', 'Trello', 'Slack'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'ai-powered-customer-success-platform',
-    title: 'AI Customer Success & Retention Platform',
-    description: 'Predictive customer success platform that uses AI to identify at-risk customers and optimize retention strategies.',
-    category: 'Micro SaaS',
-    price: '$399',
-    billing: 'month',
-    features: [
-      'Customer health scoring',
-      'Churn prediction algorithms',
-      'Automated engagement campaigns',
-      'Success metric tracking',
-      'Personalized onboarding flows',
-      'Product usage analytics',
-      'Customer feedback analysis',
-      'ROI measurement tools'
-    ],
-    benefits: [
-      'Increase customer retention by 45%',
-      'Improve customer satisfaction by 50%',
-      'Reduce churn by 40%',
-      'Optimize customer lifetime value'
-    ],
-    useCases: [
-      'SaaS companies',
-      'Subscription services',
-      'E-commerce platforms',
-      'B2B service providers'
-    ],
-    targetMarket: ['SaaS', 'Subscription Services', 'E-commerce', 'B2B'],
-    ctaLabel: 'Get Started',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$14.3B',
-    roi: '340%',
-    implementationTime: '3-4 weeks',
-    supportLevel: '24/7',
-    compliance: ['GDPR', 'CCPA', 'SOC 2'],
-    integrations: ['Salesforce', 'HubSpot', 'Intercom', 'Zendesk'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'ai-powered-cybersecurity-threat-intelligence',
-    title: 'AI Cybersecurity Threat Intelligence Platform',
-    description: 'Advanced threat intelligence platform that uses AI to detect, analyze, and respond to cybersecurity threats in real-time.',
-    category: 'Micro SaaS',
-    price: '$599',
-    billing: 'month',
-    features: [
-      'Real-time threat detection',
-      'AI-powered threat analysis',
-      'Automated incident response',
-      'Threat hunting capabilities',
-      'Vulnerability assessment',
-      'Security posture monitoring',
-      'Compliance reporting',
-      'Integration with SIEM tools'
-    ],
-    benefits: [
-      'Reduce security incidents by 70%',
-      'Improve threat response time by 80%',
-      'Ensure compliance with regulations',
-      'Protect against advanced threats'
-    ],
-    useCases: [
-      'Enterprise organizations',
-      'Financial institutions',
-      'Healthcare providers',
-      'Government agencies'
-    ],
-    targetMarket: ['Cybersecurity', 'Financial Services', 'Healthcare', 'Government'],
-    ctaLabel: 'Schedule Security Assessment',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$38.9B',
-    roi: '420%',
-    implementationTime: '4-6 weeks',
-    supportLevel: '24/7',
-    compliance: ['SOC 2', 'ISO 27001', 'NIST', 'GDPR'],
-    integrations: ['Splunk', 'QRadar', 'ELK Stack', 'Microsoft Sentinel'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: false,
-    smb: true
-  },
-  {
-    id: 'ai-powered-data-governance-platform',
-    title: 'AI Data Governance & Compliance Platform',
-    description: 'Comprehensive data governance platform that ensures data quality, compliance, and security across all data assets.',
-    category: 'Micro SaaS',
-    price: '$499',
-    billing: 'month',
-    features: [
-      'Data quality assessment',
-      'Compliance monitoring',
-      'Data lineage tracking',
-      'Privacy impact assessments',
-      'Automated data classification',
-      'Access control management',
-      'Audit trail generation',
-      'Regulatory reporting'
-    ],
-    benefits: [
-      'Ensure data compliance by 95%',
-      'Improve data quality by 60%',
-      'Reduce compliance risks',
-      'Streamline audit processes'
-    ],
-    useCases: [
-      'Financial services',
-      'Healthcare organizations',
-      'Retail companies',
-      'Government agencies'
-    ],
-    targetMarket: ['Data Governance', 'Compliance', 'Financial Services', 'Healthcare'],
-    ctaLabel: 'Start Compliance Assessment',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$25.6B',
-    roi: '380%',
-    implementationTime: '4-5 weeks',
-    supportLevel: '24/7',
-    compliance: ['GDPR', 'CCPA', 'SOX', 'HIPAA'],
-    integrations: ['Snowflake', 'Databricks', 'AWS', 'Azure'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: false,
-    smb: true
-  },
-  {
-    id: 'ai-powered-edge-computing-platform',
-    title: 'AI Edge Computing & IoT Platform',
-    description: 'Intelligent edge computing platform that processes data locally using AI to reduce latency and improve performance.',
-    category: 'Micro SaaS',
-    price: '$699',
-    billing: 'month',
-    features: [
-      'Edge AI processing',
-      'Real-time data analytics',
-      'IoT device management',
-      'Low-latency computing',
-      'Offline capability',
-      'Scalable architecture',
-      'Security at the edge',
-      'Integration with cloud services'
-    ],
-    benefits: [
-      'Reduce latency by 90%',
-      'Improve performance by 60%',
-      'Lower bandwidth costs',
-      'Enable offline operations'
-    ],
-    useCases: [
-      'Manufacturing automation',
-      'Smart cities',
-      'Autonomous vehicles',
-      'Industrial IoT'
-    ],
-    targetMarket: ['Edge Computing', 'IoT', 'Manufacturing', 'Smart Cities'],
-    ctaLabel: 'Request Demo',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$42.1B',
-    roi: '450%',
-    implementationTime: '6-8 weeks',
-    supportLevel: '24/7',
-    compliance: ['ISO 27001', 'SOC 2', 'NIST'],
-    integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Kubernetes'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: false,
-    smb: false
-  },
-  {
-    id: 'ai-powered-quantum-computing-platform',
-    title: 'AI Quantum Computing & Optimization Platform',
-    description: 'Quantum computing platform that combines AI with quantum algorithms to solve complex optimization problems.',
-    category: 'Micro SaaS',
-    price: '$999',
-    billing: 'month',
-    features: [
-      'Quantum algorithm optimization',
-      'Hybrid quantum-classical computing',
-      'Complex problem solving',
-      'Performance benchmarking',
-      'Quantum error correction',
-      'Scalable quantum architecture',
-      'Integration with classical AI',
-      'Quantum machine learning'
-    ],
-    benefits: [
-      'Solve complex problems 1000x faster',
-      'Optimize operations exponentially',
-      'Enable new computational capabilities',
-      'Future-proof technology investment'
-    ],
-    useCases: [
-      'Financial modeling',
-      'Drug discovery',
-      'Logistics optimization',
-      'Cryptography'
-    ],
-    targetMarket: ['Quantum Computing', 'Financial Services', 'Pharmaceuticals', 'Research'],
-    ctaLabel: 'Explore Quantum Solutions',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$65.8B',
-    roi: '600%',
-    implementationTime: '8-12 weeks',
-    supportLevel: '24/7',
-    compliance: ['ISO 27001', 'SOC 2', 'NIST'],
-    integrations: ['IBM Quantum', 'Google Quantum', 'Microsoft Azure Quantum', 'Amazon Braket'],
-    api: true,
-    mobile: false,
-    enterprise: true,
-    startup: false,
-    smb: false
-  },
-  {
-    id: 'ai-powered-blockchain-smart-contracts',
-    title: 'AI Blockchain Smart Contract Platform',
-    description: 'Intelligent blockchain platform that uses AI to optimize smart contracts, detect vulnerabilities, and ensure compliance.',
-    category: 'Micro SaaS',
-    price: '$449',
-    billing: 'month',
-    features: [
-      'AI-powered smart contract generation',
-      'Vulnerability detection',
-      'Compliance checking',
-      'Automated auditing',
-      'Gas optimization',
-      'Multi-blockchain support',
-      'Integration with DeFi protocols',
-      'Regulatory compliance tools'
-    ],
-    benefits: [
-      'Reduce smart contract vulnerabilities by 80%',
-      'Lower gas costs by 40%',
-      'Ensure regulatory compliance',
-      'Speed up development cycles'
-    ],
-    useCases: [
-      'DeFi platforms',
-      'NFT marketplaces',
-      'Supply chain tracking',
-      'Financial services'
-    ],
-    targetMarket: ['Blockchain', 'DeFi', 'NFT', 'Financial Services'],
-    ctaLabel: 'Start Building',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$19.8B',
-    roi: '480%',
-    implementationTime: '4-6 weeks',
-    supportLevel: '24/7',
-    compliance: ['GDPR', 'SOX', 'AML', 'KYC'],
-    integrations: ['Ethereum', 'Polygon', 'Solana', 'Binance Smart Chain'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'ai-powered-metaverse-development',
-    title: 'AI Metaverse & AR/VR Development Platform',
-    description: 'Comprehensive metaverse development platform that uses AI to create immersive experiences and virtual environments.',
-    category: 'Micro SaaS',
-    price: '$599',
-    billing: 'month',
-    features: [
-      'AI-powered 3D asset generation',
-      'Virtual environment creation',
-      'Avatar customization',
-      'Social interaction tools',
-      'Cross-platform compatibility',
-      'Performance optimization',
-      'Analytics and insights',
-      'Monetization tools'
-    ],
-    benefits: [
-      'Reduce development time by 60%',
-      'Improve user engagement by 80%',
-      'Lower development costs',
-      'Enable rapid prototyping'
-    ],
-    useCases: [
-      'Gaming companies',
-      'Educational institutions',
-      'Real estate agencies',
-      'Event organizers'
-    ],
-    targetMarket: ['Metaverse', 'Gaming', 'Education', 'Real Estate'],
-    ctaLabel: 'Create Metaverse',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$74.8B',
-    roi: '520%',
-    implementationTime: '6-8 weeks',
-    supportLevel: '24/7',
-    compliance: ['GDPR', 'COPPA', 'SOC 2'],
-    integrations: ['Unity', 'Unreal Engine', 'VRChat', 'Roblox'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'ai-powered-autonomous-systems',
-    title: 'AI Autonomous Systems & Robotics Platform',
-    description: 'Intelligent autonomous systems platform that uses AI to control robots, drones, and autonomous vehicles.',
-    category: 'Micro SaaS',
-    price: '$799',
-    billing: 'month',
-    features: [
-      'Autonomous navigation',
-      'Object recognition',
-      'Path planning algorithms',
-      'Safety monitoring',
-      'Remote operation control',
-      'Performance analytics',
-      'Integration with IoT sensors',
-      'Scalable fleet management'
-    ],
-    benefits: [
-      'Improve operational efficiency by 70%',
-      'Reduce human error by 90%',
-      'Lower operational costs',
-      'Enable 24/7 operations'
-    ],
-    useCases: [
-      'Manufacturing automation',
-      'Warehouse operations',
-      'Agricultural automation',
-      'Delivery services'
-    ],
-    targetMarket: ['Robotics', 'Automation', 'Manufacturing', 'Logistics'],
-    ctaLabel: 'Automate Operations',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$58.9B',
-    roi: '450%',
-    implementationTime: '8-10 weeks',
-    supportLevel: '24/7',
-    compliance: ['ISO 13482', 'ANSI/RIA R15.06', 'ISO 10218'],
-    integrations: ['ROS', 'Gazebo', 'Webots', 'MATLAB'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: false,
-    smb: false
-  },
-  {
-    id: 'ai-powered-sustainability-monitoring',
-    title: 'AI Sustainability & ESG Monitoring Platform',
-    description: 'Comprehensive sustainability monitoring platform that tracks environmental, social, and governance metrics using AI.',
-    category: 'Micro SaaS',
-    price: '$349',
-    billing: 'month',
-    features: [
-      'ESG metric tracking',
-      'Carbon footprint calculation',
-      'Sustainability reporting',
-      'Compliance monitoring',
-      'Performance benchmarking',
-      'Goal setting and tracking',
-      'Stakeholder communication',
-      'Integration with ERP systems'
-    ],
-    benefits: [
-      'Improve ESG scores by 40%',
-      'Reduce compliance risks',
-      'Enhance stakeholder trust',
-      'Drive sustainable growth'
-    ],
-    useCases: [
-      'Corporations',
-      'Investment firms',
-      'Government agencies',
-      'Non-profit organizations'
-    ],
-    targetMarket: ['Sustainability', 'ESG', 'Corporate', 'Investment'],
-    ctaLabel: 'Start Sustainability Journey',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$28.3B',
-    roi: '320%',
-    implementationTime: '3-4 weeks',
-    supportLevel: '24/7',
-    compliance: ['GRI', 'SASB', 'TCFD', 'ISO 14001'],
-    integrations: ['SAP', 'Oracle', 'Salesforce', 'Workday'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'ai-powered-space-technology',
-    title: 'AI Space Technology & Satellite Management',
-    description: 'Advanced space technology platform that uses AI to optimize satellite operations, space missions, and data analysis.',
-    category: 'Micro SaaS',
-    price: '$1299',
-    billing: 'month',
-    features: [
-      'Satellite orbit optimization',
-      'Space debris tracking',
-      'Mission planning algorithms',
-      'Earth observation analytics',
-      'Communication optimization',
-      'Power management systems',
-      'Anomaly detection',
-      'Integration with ground stations'
-    ],
-    benefits: [
-      'Optimize satellite operations by 50%',
-      'Reduce mission costs by 30%',
-      'Improve data quality',
-      'Enhance mission success rates'
-    ],
-    useCases: [
-      'Satellite operators',
-      'Space agencies',
-      'Telecommunications companies',
-      'Earth observation services'
-    ],
-    targetMarket: ['Space Technology', 'Satellites', 'Telecommunications', 'Government'],
-    ctaLabel: 'Explore Space Solutions',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$469.8B',
-    roi: '680%',
-    implementationTime: '10-12 weeks',
-    supportLevel: '24/7',
-    compliance: ['ITAR', 'EAR', 'ISO 27001', 'NIST'],
-    integrations: ['NASA APIs', 'ESA APIs', 'SpaceX APIs', 'Ground station networks'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: false,
-    smb: false
-  },
-  {
-    id: 'ai-powered-biotech-health-platform',
-    title: 'AI Biotech & Health Innovation Platform',
-    description: 'Cutting-edge biotech platform that uses AI to accelerate drug discovery, genetic analysis, and personalized medicine.',
-    category: 'Micro SaaS',
-    price: '$899',
-    billing: 'month',
-    features: [
-      'Drug discovery algorithms',
-      'Genetic sequence analysis',
-      'Protein structure prediction',
-      'Clinical trial optimization',
-      'Personalized medicine recommendations',
-      'Biomarker identification',
-      'Drug interaction analysis',
-      'Regulatory compliance tools'
-    ],
-    benefits: [
-      'Accelerate drug discovery by 10x',
-      'Reduce development costs by 60%',
-      'Improve treatment effectiveness',
-      'Enable personalized medicine'
-    ],
-    useCases: [
-      'Pharmaceutical companies',
-      'Biotech startups',
-      'Research institutions',
-      'Healthcare providers'
-    ],
-    targetMarket: ['Biotechnology', 'Pharmaceuticals', 'Healthcare', 'Research'],
-    ctaLabel: 'Accelerate Discovery',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$89.7B',
-    roi: '580%',
-    implementationTime: '8-10 weeks',
-    supportLevel: '24/7',
-    compliance: ['FDA', 'EMA', 'HIPAA', 'GCP'],
-    integrations: ['Lab management systems', 'Clinical trial platforms', 'Genomic databases', 'FDA databases'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: false
-  },
-  {
-    id: 'ai-powered-fintech-defi-platform',
-    title: 'AI FinTech & DeFi Innovation Platform',
-    description: 'Next-generation financial technology platform that combines AI with decentralized finance for innovative financial services.',
-    category: 'Micro SaaS',
-    price: '$649',
-    billing: 'month',
-    features: [
-      'AI-powered trading algorithms',
-      'DeFi protocol optimization',
-      'Risk assessment models',
-      'Regulatory compliance tools',
-      'Cross-chain interoperability',
-      'Yield optimization',
-      'Portfolio management',
-      'Real-time market analysis'
-    ],
-    benefits: [
-      'Improve trading performance by 50%',
-      'Reduce financial risks by 40%',
-      'Optimize yield generation',
-      'Ensure regulatory compliance'
-    ],
-    useCases: [
-      'Cryptocurrency exchanges',
-      'DeFi protocols',
-      'Investment firms',
-      'Traditional banks'
-    ],
-    targetMarket: ['FinTech', 'DeFi', 'Cryptocurrency', 'Traditional Finance'],
-    ctaLabel: 'Innovate Finance',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$179.8B',
-    roi: '520%',
-    implementationTime: '6-8 weeks',
-    supportLevel: '24/7',
-    compliance: ['SOX', 'Basel III', 'MiFID II', 'AML/KYC'],
-    integrations: ['Ethereum', 'Polygon', 'Solana', 'Traditional banking APIs'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'ai-powered-digital-transformation',
-    title: 'AI Digital Transformation & Innovation Platform',
-    description: 'Comprehensive digital transformation platform that uses AI to modernize businesses and drive innovation across all operations.',
-    category: 'Micro SaaS',
-    price: '$1499',
-    billing: 'month',
-    features: [
-      'Business process automation',
-      'Legacy system modernization',
-      'Cloud migration planning',
-      'Change management tools',
-      'Performance monitoring',
-      'ROI measurement',
-      'Stakeholder communication',
-      'Continuous improvement'
-    ],
-    benefits: [
-      'Accelerate digital transformation by 3x',
-      'Reduce transformation costs by 40%',
-      'Improve operational efficiency',
-      'Enhance competitive advantage'
-    ],
-    useCases: [
-      'Large enterprises',
-      'Government agencies',
-      'Healthcare organizations',
-      'Financial institutions'
-    ],
-    targetMarket: ['Digital Transformation', 'Enterprise', 'Government', 'Healthcare'],
-    ctaLabel: 'Transform Your Business',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$521.5B',
-    roi: '450%',
-    implementationTime: '12-16 weeks',
-    supportLevel: '24/7',
-    compliance: ['ISO 27001', 'SOC 2', 'NIST', 'GDPR'],
-    integrations: ['ERP systems', 'CRM platforms', 'Cloud providers', 'Legacy systems'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: false,
-    smb: false
-  },
-
-  // IT SERVICES & TRADITIONAL TECHNOLOGY SOLUTIONS
-  {
-    id: 'enterprise-it-infrastructure-management',
-    title: 'Enterprise IT Infrastructure Management',
-    description: 'Comprehensive IT infrastructure management services including network design, server management, and cloud migration.',
-    category: 'IT Services',
-    price: '$2,500',
-    billing: 'month',
-    features: [
-      'Network architecture design',
-      'Server and storage management',
-      'Cloud migration services',
-      '24/7 monitoring and support',
-      'Disaster recovery planning',
-      'Security implementation',
-      'Performance optimization',
-      'Compliance management'
-    ],
-    benefits: [
-      'Reduce IT downtime by 90%',
-      'Improve system performance by 60%',
-      'Cut infrastructure costs by 40%',
-      'Ensure business continuity'
-    ],
-    useCases: [
-      'Large enterprises',
-      'Government agencies',
-      'Healthcare organizations',
-      'Financial institutions'
-    ],
-    targetMarket: ['Enterprise', 'Government', 'Healthcare', 'Financial Services'],
-    ctaLabel: 'Schedule Infrastructure Assessment',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$89.2B',
-    roi: '280%',
-    implementationTime: '8-12 weeks',
-    supportLevel: '24/7',
-    compliance: ['ISO 27001', 'SOC 2', 'NIST', 'HIPAA'],
-    integrations: ['VMware', 'Microsoft', 'Cisco', 'AWS'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: false,
-    smb: true
-  },
-  {
-    id: 'cybersecurity-audit-compliance',
-    title: 'Cybersecurity Audit & Compliance Services',
-    description: 'Comprehensive cybersecurity auditing and compliance services to protect your organization from threats and meet regulatory requirements.',
-    category: 'Cybersecurity',
-    price: '$1,800',
-    billing: 'month',
-    features: [
-      'Security vulnerability assessment',
-      'Penetration testing',
-      'Compliance auditing',
-      'Security policy development',
-      'Incident response planning',
-      'Employee security training',
-      'Regular security reviews',
-      'Compliance reporting'
-    ],
-    benefits: [
-      'Identify and fix security vulnerabilities',
-      'Meet regulatory compliance requirements',
-      'Reduce security incident risks',
-      'Build customer trust and confidence'
-    ],
-    useCases: [
-      'Financial services',
-      'Healthcare organizations',
-      'Government agencies',
-      'E-commerce companies'
-    ],
-    targetMarket: ['Cybersecurity', 'Compliance', 'Financial Services', 'Healthcare'],
-    ctaLabel: 'Schedule Security Audit',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$38.9B',
-    roi: '320%',
-    implementationTime: '4-6 weeks',
-    supportLevel: '24/7',
-    compliance: ['SOC 2', 'ISO 27001', 'NIST', 'PCI DSS'],
-    integrations: ['SIEM tools', 'EDR solutions', 'Firewall systems', 'Identity management'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'cloud-migration-consulting',
-    title: 'Cloud Migration & Consulting Services',
-    description: 'Expert cloud migration services to help organizations move to the cloud efficiently and cost-effectively.',
-    category: 'Cloud & DevOps',
-    price: '$3,200',
-    billing: 'month',
-    features: [
-      'Cloud strategy planning',
-      'Migration roadmap development',
-      'Application modernization',
-      'Data migration services',
-      'Performance optimization',
-      'Cost optimization',
-      'Security implementation',
-      'Training and support'
-    ],
-    benefits: [
-      'Reduce infrastructure costs by 50%',
-      'Improve scalability and flexibility',
-      'Enhance disaster recovery',
-      'Modernize legacy applications'
-    ],
-    useCases: [
-      'Enterprise organizations',
-      'Startups scaling up',
-      'Government agencies',
-      'Healthcare providers'
-    ],
-    targetMarket: ['Cloud Computing', 'Enterprise', 'Startups', 'Government'],
-    ctaLabel: 'Start Cloud Migration',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$68.4B',
-    roi: '380%',
-    implementationTime: '12-16 weeks',
-    supportLevel: '24/7',
-    compliance: ['ISO 27001', 'SOC 2', 'NIST', 'GDPR'],
-    integrations: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'data-analytics-business-intelligence',
-    title: 'Data Analytics & Business Intelligence',
-    description: 'Transform your data into actionable insights with advanced analytics and business intelligence solutions.',
-    category: 'Data & Analytics',
-    price: '$1,500',
-    billing: 'month',
-    features: [
-      'Data warehouse design',
-      'ETL pipeline development',
-      'Dashboard creation',
-      'Predictive analytics',
-      'Data visualization',
-      'Report automation',
-      'Data quality management',
-      'Performance monitoring'
-    ],
-    benefits: [
-      'Make data-driven decisions',
-      'Identify business opportunities',
-      'Improve operational efficiency',
-      'Gain competitive advantage'
-    ],
-    useCases: [
-      'Retail companies',
-      'Financial services',
-      'Healthcare organizations',
-      'Manufacturing companies'
-    ],
-    targetMarket: ['Data Analytics', 'Business Intelligence', 'Retail', 'Financial Services'],
-    ctaLabel: 'Unlock Your Data',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$42.1B',
-    roi: '340%',
-    implementationTime: '6-8 weeks',
-    supportLevel: '24/7',
-    compliance: ['GDPR', 'CCPA', 'SOC 2', 'HIPAA'],
-    integrations: ['Snowflake', 'Tableau', 'Power BI', 'Python'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'devops-automation-services',
-    title: 'DevOps Automation & CI/CD Services',
-    description: 'Streamline your development and operations with automated CI/CD pipelines and DevOps best practices.',
-    category: 'Cloud & DevOps',
-    price: '$2,100',
-    billing: 'month',
-    features: [
-      'CI/CD pipeline setup',
-      'Infrastructure as Code',
-      'Automated testing',
-      'Deployment automation',
-      'Monitoring and logging',
-      'Performance optimization',
-      'Security scanning',
-      'Team training'
-    ],
-    benefits: [
-      'Reduce deployment time by 80%',
-      'Improve code quality',
-      'Increase team productivity',
-      'Reduce operational errors'
-    ],
-    useCases: [
-      'Software development teams',
-      'IT operations teams',
-      'Startups',
-      'Enterprise organizations'
-    ],
-    targetMarket: ['DevOps', 'Software Development', 'IT Operations', 'Startups'],
-    ctaLabel: 'Automate Your DevOps',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$25.6B',
-    roi: '360%',
-    implementationTime: '6-8 weeks',
-    supportLevel: '24/7',
-    compliance: ['ISO 27001', 'SOC 2', 'NIST'],
-    integrations: ['Jenkins', 'GitLab', 'Docker', 'Kubernetes'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'digital-transformation-consulting',
-    title: 'Digital Transformation Consulting',
-    description: 'Strategic digital transformation consulting to help organizations modernize and compete in the digital age.',
-    category: 'Digital Transformation',
-    price: '$4,500',
-    billing: 'month',
-    features: [
-      'Digital strategy development',
-      'Technology assessment',
-      'Change management',
-      'Process optimization',
-      'Digital culture building',
-      'Performance measurement',
-      'ROI tracking',
-      'Continuous improvement'
-    ],
-    benefits: [
-      'Accelerate digital transformation',
-      'Improve operational efficiency',
-      'Enhance customer experience',
-      'Gain competitive advantage'
-    ],
-    useCases: [
-      'Traditional businesses',
-      'Government agencies',
-      'Healthcare organizations',
-      'Financial institutions'
-    ],
-    targetMarket: ['Digital Transformation', 'Consulting', 'Enterprise', 'Government'],
-    ctaLabel: 'Transform Your Business',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$521.5B',
-    roi: '420%',
-    implementationTime: '16-24 weeks',
-    supportLevel: '24/7',
-    compliance: ['ISO 27001', 'SOC 2', 'NIST', 'GDPR'],
-    integrations: ['ERP systems', 'CRM platforms', 'Cloud providers', 'Legacy systems'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: false,
-    smb: false
-  },
-  {
-    id: 'iot-solutions-development',
-    title: 'IoT Solutions Development & Integration',
-    description: 'End-to-end IoT solutions development including hardware integration, data processing, and analytics.',
-    category: 'IoT & Edge',
-    price: '$2,800',
-    billing: 'month',
-    features: [
-      'IoT device development',
-      'Sensor integration',
-      'Data processing pipelines',
-      'Real-time analytics',
-      'Cloud integration',
-      'Security implementation',
-      'Scalability planning',
-      'Maintenance support'
-    ],
-    benefits: [
-      'Automate manual processes',
-      'Gain real-time insights',
-      'Improve operational efficiency',
-      'Reduce operational costs'
-    ],
-    useCases: [
-      'Manufacturing companies',
-      'Smart cities',
-      'Agriculture',
-      'Healthcare providers'
-    ],
-    targetMarket: ['IoT', 'Manufacturing', 'Smart Cities', 'Agriculture'],
-    ctaLabel: 'Build IoT Solutions',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$42.1B',
-    roi: '380%',
-    implementationTime: '8-12 weeks',
-    supportLevel: '24/7',
-    compliance: ['ISO 27001', 'SOC 2', 'NIST', 'GDPR'],
-    integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'blockchain-development-services',
-    title: 'Blockchain Development & Smart Contract Services',
-    description: 'Custom blockchain development services including smart contracts, DeFi applications, and enterprise blockchain solutions.',
-    category: 'Blockchain & Web3',
-    price: '$3,500',
-    billing: 'month',
-    features: [
-      'Custom blockchain development',
-      'Smart contract development',
-      'DeFi application development',
-      'NFT marketplace creation',
-      'Security auditing',
-      'Performance optimization',
-      'Integration services',
-      'Maintenance support'
-    ],
-    benefits: [
-      'Build decentralized applications',
-      'Ensure transparency and security',
-      'Reduce intermediary costs',
-      'Enable new business models'
-    ],
-    useCases: [
-      'Financial services',
-      'Supply chain management',
-      'Digital identity',
-      'Gaming and entertainment'
-    ],
-    targetMarket: ['Blockchain', 'DeFi', 'Financial Services', 'Supply Chain'],
-    ctaLabel: 'Build on Blockchain',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$19.8B',
-    roi: '450%',
-    implementationTime: '8-12 weeks',
-    supportLevel: '24/7',
-    compliance: ['GDPR', 'SOX', 'AML', 'KYC'],
-    integrations: ['Ethereum', 'Polygon', 'Solana', 'Binance Smart Chain'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'mobile-app-development',
-    title: 'Mobile App Development & Optimization',
-    description: 'Custom mobile application development for iOS and Android with modern UI/UX and performance optimization.',
-    category: 'IT Services',
-    price: '$1,800',
-    billing: 'month',
-    features: [
-      'Native iOS development',
-      'Native Android development',
-      'Cross-platform development',
-      'UI/UX design',
-      'Performance optimization',
-      'Testing and quality assurance',
-      'App store optimization',
-      'Maintenance and updates'
-    ],
-    benefits: [
-      'Reach mobile users effectively',
-      'Improve customer engagement',
-      'Increase brand visibility',
-      'Generate new revenue streams'
-    ],
-    useCases: [
-      'E-commerce businesses',
-      'Service providers',
-      'Entertainment companies',
-      'Educational institutions'
-    ],
-    targetMarket: ['Mobile Development', 'E-commerce', 'Services', 'Entertainment'],
-    ctaLabel: 'Build Mobile App',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$58.9B',
-    roi: '320%',
-    implementationTime: '8-12 weeks',
-    supportLevel: '24/7',
-    compliance: ['GDPR', 'CCPA', 'COPPA', 'SOC 2'],
-    integrations: ['Firebase', 'AWS Mobile', 'Azure Mobile', 'Analytics tools'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'web-development-services',
-    title: 'Web Development & E-commerce Solutions',
-    description: 'Custom web development services including responsive websites, e-commerce platforms, and web applications.',
-    category: 'IT Services',
-    price: '$1,200',
-    billing: 'month',
-    features: [
-      'Custom website development',
-      'E-commerce platform development',
-      'Responsive design',
-      'SEO optimization',
-      'Performance optimization',
-      'Security implementation',
-      'Content management systems',
-      'Maintenance and support'
-    ],
-    benefits: [
-      'Establish online presence',
-      'Increase customer reach',
-      'Improve customer experience',
-      'Generate online sales'
-    ],
-    useCases: [
-      'Small businesses',
-      'E-commerce companies',
-      'Service providers',
-      'Non-profit organizations'
-    ],
-    targetMarket: ['Web Development', 'E-commerce', 'Small Business', 'Services'],
-    ctaLabel: 'Build Your Website',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$89.7B',
-    roi: '280%',
-    implementationTime: '6-8 weeks',
-    supportLevel: '24/7',
-    compliance: ['GDPR', 'CCPA', 'WCAG', 'SOC 2'],
-    integrations: ['WordPress', 'Shopify', 'WooCommerce', 'Payment gateways'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'managed-it-services',
-    title: 'Managed IT Services & Support',
-    description: 'Comprehensive managed IT services including 24/7 monitoring, support, and proactive maintenance.',
-    category: 'IT Services',
-    price: '$1,500',
-    billing: 'month',
-    features: [
-      '24/7 IT monitoring',
-      'Help desk support',
-      'Proactive maintenance',
-      'Security management',
-      'Backup and recovery',
-      'Network management',
-      'Software updates',
-      'Performance optimization'
-    ],
-    benefits: [
-      'Reduce IT downtime',
-      'Lower IT costs',
-      'Improve system reliability',
-      'Focus on core business'
-    ],
-    useCases: [
-      'Small to medium businesses',
-      'Healthcare practices',
-      'Legal firms',
-      'Real estate agencies'
-    ],
-    targetMarket: ['Managed IT', 'SMB', 'Healthcare', 'Professional Services'],
-    ctaLabel: 'Get Managed IT Support',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$274.2B',
-    roi: '250%',
-    implementationTime: '2-4 weeks',
-    supportLevel: '24/7',
-    compliance: ['SOC 2', 'ISO 27001', 'HIPAA', 'GDPR'],
-    integrations: ['RMM tools', 'PSA platforms', 'Monitoring systems', 'Backup solutions'],
-    api: true,
-    mobile: true,
-    enterprise: false,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'data-backup-recovery-services',
-    title: 'Data Backup & Disaster Recovery Services',
-    description: 'Comprehensive data backup and disaster recovery solutions to protect your business from data loss.',
-    category: 'IT Services',
-    price: '$800',
-    billing: 'month',
-    features: [
-      'Automated backup solutions',
-      'Cloud backup services',
-      'Disaster recovery planning',
-      'Business continuity planning',
-      'Regular testing and validation',
-      'Compliance reporting',
-      '24/7 monitoring',
-      'Quick recovery services'
-    ],
-    benefits: [
-      'Protect against data loss',
-      'Ensure business continuity',
-      'Meet compliance requirements',
-      'Reduce recovery time'
-    ],
-    useCases: [
-      'All business types',
-      'Healthcare organizations',
-      'Financial services',
-      'Legal firms'
-    ],
-    targetMarket: ['Data Protection', 'Business Continuity', 'All Industries'],
-    ctaLabel: 'Protect Your Data',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$12.3B',
-    roi: '300%',
-    implementationTime: '2-3 weeks',
-    supportLevel: '24/7',
-    compliance: ['SOC 2', 'ISO 27001', 'HIPAA', 'GDPR'],
-    integrations: ['Veeam', 'Commvault', 'AWS Backup', 'Azure Backup'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'network-security-services',
-    title: 'Network Security & Firewall Management',
-    description: 'Comprehensive network security services including firewall management, intrusion detection, and security monitoring.',
-    category: 'Cybersecurity',
-    price: '$1,200',
-    billing: 'month',
-    features: [
-      'Firewall configuration and management',
-      'Intrusion detection and prevention',
-      'Network monitoring',
-      'Security policy implementation',
-      'Regular security updates',
-      'Threat intelligence',
-      'Incident response',
-      'Compliance reporting'
-    ],
-    benefits: [
-      'Protect against cyber threats',
-      'Ensure network security',
-      'Meet compliance requirements',
-      'Reduce security risks'
-    ],
-    useCases: [
-      'All business types',
-      'Healthcare organizations',
-      'Financial services',
-      'Government agencies'
-    ],
-    targetMarket: ['Network Security', 'Cybersecurity', 'All Industries'],
-    ctaLabel: 'Secure Your Network',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$38.9B',
-    roi: '280%',
-    implementationTime: '2-4 weeks',
-    supportLevel: '24/7',
-    compliance: ['SOC 2', 'ISO 27001', 'NIST', 'PCI DSS'],
-    integrations: ['Cisco', 'Palo Alto', 'Fortinet', 'Check Point'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'email-security-services',
-    title: 'Email Security & Phishing Protection',
-    description: 'Advanced email security services to protect against phishing, malware, and other email-based threats.',
-    category: 'Cybersecurity',
-    price: '$600',
-    billing: 'month',
-    features: [
-      'Phishing protection',
-      'Malware scanning',
-      'Spam filtering',
-      'Email encryption',
-      'Data loss prevention',
-      'Advanced threat protection',
-      'Security awareness training',
-      'Compliance monitoring'
-    ],
-    benefits: [
-      'Protect against email threats',
-      'Ensure email security',
-      'Meet compliance requirements',
-      'Reduce security incidents'
-    ],
-    useCases: [
-      'All business types',
-      'Healthcare organizations',
-      'Financial services',
-      'Educational institutions'
-    ],
-    targetMarket: ['Email Security', 'Cybersecurity', 'All Industries'],
-    ctaLabel: 'Secure Your Email',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$15.8B',
-    roi: '320%',
-    implementationTime: '1-2 weeks',
-    supportLevel: '24/7',
-    compliance: ['SOC 2', 'ISO 27001', 'HIPAA', 'GDPR'],
-    integrations: ['Microsoft 365', 'Google Workspace', 'Exchange', 'Outlook'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
-  },
-  {
-    id: 'endpoint-security-services',
-    title: 'Endpoint Security & Device Management',
-    description: 'Comprehensive endpoint security services to protect all devices in your organization from threats.',
-    category: 'Cybersecurity',
-    price: '$900',
-    billing: 'month',
-    features: [
-      'Antivirus and antimalware',
-      'Device management',
-      'Patch management',
-      'Application control',
-      'Data encryption',
-      'Device monitoring',
-      'Incident response',
-      'Compliance reporting'
-    ],
-    benefits: [
-      'Protect all devices',
-      'Ensure endpoint security',
-      'Meet compliance requirements',
-      'Reduce security risks'
-    ],
-    useCases: [
-      'All business types',
-      'Healthcare organizations',
-      'Financial services',
-      'Educational institutions'
-    ],
-    targetMarket: ['Endpoint Security', 'Cybersecurity', 'All Industries'],
-    ctaLabel: 'Protect Your Devices',
-    href: 'https://ziontechgroup.com/contact',
-    featured: true,
-    marketSize: '$18.9B',
-    roi: '300%',
-    implementationTime: '2-3 weeks',
-    supportLevel: '24/7',
-    compliance: ['SOC 2', 'ISO 27001', 'HIPAA', 'GDPR'],
-    integrations: ['CrowdStrike', 'SentinelOne', 'Carbon Black', 'Microsoft Defender'],
-    api: true,
-    mobile: true,
-    enterprise: true,
-    startup: true,
-    smb: true
+// High-ROI Services (ROI > 500%)
+export const HIGH_ROI_SERVICES_2026 = INNOVATIVE_SERVICES_2026.filter(service => {
+  const roi = service.roi;
+  if (typeof roi === 'string') {
+    const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
+    return roiNumber > 500;
   }
-];
+  return false;
+});
 
-// Revolutionary IT Infrastructure Services 2026
-export const revolutionaryITInfrastructureServices2026: ITService[] = [
-  {
-    name: 'Micro SaaS',
-    description: 'Scalable software solutions for specific business needs',
-    services: innovativeServices2026.filter(s => s.category === 'Micro SaaS')
-  },
-  {
-    name: 'AI Solutions',
-    description: 'Advanced artificial intelligence and machine learning solutions',
-    services: innovativeServices2026.filter(s => s.category === 'AI Solutions')
-  },
-  {
-    name: 'IT Services',
-    description: 'Comprehensive IT consulting and implementation services',
-    services: innovativeServices2026.filter(s => s.category === 'IT Services')
-  },
-  {
-    name: 'Emerging Technologies',
-    description: 'Cutting-edge technologies shaping the future',
-    services: innovativeServices2026.filter(s => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
+// Quick Setup Services (< 8 weeks)
+export const QUICK_SETUP_SERVICES_2026 = INNOVATIVE_SERVICES_2026.filter(service => {
+  const setupTime = service.setupTime;
+  if (typeof setupTime === 'string') {
+    const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
+    return weeks < 8;
   }
-];
-
-export default innovativeServices2026;
+  return false;
+});

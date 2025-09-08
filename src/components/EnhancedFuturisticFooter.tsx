@@ -76,16 +76,23 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     {
       title: 'Emerging Technologies',
       links: [
-        { name: 'Blockchain DeFi Platform', href: '/services/blockchain-defi-platform' },
-        { name: 'Metaverse Development Platform', href: '/services/metaverse-development-platform' },
-        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
-        { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning' },
-        { name: 'Autonomous Systems Platform', href: '/services/autonomous-systems-platform' },
-        { name: 'Digital Twin Platform', href: '/services/digital-twin-platform' },
-        { name: 'Space Technology Platform', href: '/services/space-technology-platform' },
-        { name: 'Sustainable Technology Platform', href: '/services/sustainable-technology-platform' },
-        { name: 'Quantum Computing Solutions', href: '/services/quantum-computing-solutions' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' }
+        { name: 'All Services', href: '/services', featured: true },
+        { name: 'Innovative Services 2025', href: '/services/innovative-2025', featured: true },
+        { name: 'Innovative Services 2026', href: '/innovative-services-showcase-2026', featured: true },
+        { name: 'AI Business Intelligence', href: '/services#ai-business-intelligence', featured: true },
+        { name: 'AI Healthcare Diagnostics', href: '/services#ai-healthcare', featured: true },
+        { name: 'AI Legal Tech Platform', href: '/services#ai-legal-tech', featured: true },
+        { name: 'AI Research & Discovery', href: '/services#ai-research', featured: true },
+        { name: 'AI Green Technology', href: '/services#ai-green-tech', featured: true },
+        { name: 'AI Metaverse Platform', href: '/services#ai-metaverse', featured: true },
+        { name: 'AI Space Technology', href: '/services#ai-space-tech', featured: true },
+        { name: 'AI FinTech Platform', href: '/services#ai-fintech', featured: true },
+        { name: 'AI Supply Chain', href: '/services#ai-supply-chain', featured: true },
+        { name: 'AI Quality Assurance', href: '/services#ai-qa', featured: true },
+        { name: 'AI Marketing Automation', href: '/services#ai-marketing-automation', featured: true },
+        { name: 'AI Customer Support', href: '/services#ai-customer-support', featured: true },
+        { name: 'AI HR & Recruitment', href: '/services#ai-hr', featured: true },
+        { name: 'AI Content Creation', href: '/services#ai-content-creation', featured: true }
       ]
     },
     {
@@ -125,20 +132,18 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Zap,
       color: 'from-blue-600 to-cyan-600',
       links: [
-        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-        { name: 'Returns Management', href: '/services/returns-management' },
-        { name: 'Email Sequencer', href: '/services/email-sequencer' },
-        { name: 'Podcast Transcription', href: '/services/podcast-transcription' },
-        { name: 'Micro CRM', href: '/services/micro-crm' },
-        { name: 'Affiliate Tracking', href: '/services/affiliate-tracking' },
-        { name: 'IT Helpdesk', href: '/services/it-helpdesk' },
-        { name: 'Green IT Solutions', href: '/green-it' },
-        { name: 'Marketplace', href: '/marketplace' }
+        { name: 'Comprehensive Pricing 2027', href: '/comprehensive-pricing-guide-2027', featured: true },
+        { name: 'Pricing Guide 2026', href: '/pricing-guide-2026', featured: true },
+        { name: 'Pricing Guide 2030', href: '/pricing-guide-2030', featured: true },
+        { name: 'Blog & Insights', href: '/blog', featured: false },
+        { name: 'FAQ & Help Center', href: '/faq', featured: false },
+        { name: 'Documentation', href: '/docs', featured: false },
+        { name: 'API Reference', href: '/api-docs', featured: false },
+        { name: 'Developer Portal', href: '/developers', featured: false },
+        { name: 'Training & Certification', href: '/training', featured: false },
+        { name: 'Community Forum', href: '/community', featured: false },
+        { name: 'Success Stories', href: '/case-studies', featured: false },
+        { name: 'White Papers', href: '/white-papers', featured: false }
       ]
     },
     {
