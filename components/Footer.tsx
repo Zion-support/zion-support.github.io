@@ -12,65 +12,32 @@ const Footer: React.FC = () => {
     website: 'https://ziontechgroup.com'
   };
 
-  const footerSections = [
-    {
-      title: 'Core Services',
-      links: [
-        { name: 'AI & Machine Learning', href: '/services/ai-machine-learning' },
-        { name: 'Cloud & Infrastructure', href: '/services/cloud-infrastructure' },
-        { name: 'Web & Mobile Development', href: '/services/web-mobile-development' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Blockchain & DeFi', href: '/services/blockchain-defi' },
-        { name: 'IoT & Smart Cities', href: '/services/iot-smart-cities' }
-      ]
-    },
-    {
-      title: 'Solutions',
-      links: [
-        { name: 'Enterprise IT', href: '/solutions/enterprise-it' },
-        { name: 'Micro SaaS', href: '/solutions/micro-saas' },
-        { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
-        { name: 'Research & Development', href: '/solutions/research-development' },
-        { name: 'Quantum Computing', href: '/solutions/quantum-computing' },
-        { name: 'Space Technology', href: '/solutions/space-technology' }
-      ]
-    },
-    {
-      title: 'Industries',
-      links: [
-        { name: 'Financial Services', href: '/industries/financial-services' },
-        { name: 'Healthcare', href: '/industries/healthcare' },
-        { name: 'Manufacturing', href: '/industries/manufacturing' },
-        { name: 'Government', href: '/industries/government' },
-        { name: 'Education', href: '/industries/education' },
-        { name: 'Retail & E-commerce', href: '/industries/retail-ecommerce' }
-      ]
-    },
-    {
-      title: 'Company',
-      links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'News & Updates', href: '/news' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Research', href: '/research' },
-        { name: 'Support', href: '/support' }
-      ]
-    }
-  ];
+const company = [{ "name": 'About Us', "href": '/about' },
+  { "name": 'Our Team', "href": '/about#team' },
+  { "name": 'Careers', "href": '/careers' },
+  { "name": 'Case Studies', "href": '/case-studies' },
+  { "name": 'Blog', "href": '/blog' },
+  { "name": 'News', "href": '/news' },
+  { "name": 'Support', "href": '/support' }
+];
 
-  const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: '💼' },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: '🐦' },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: '💻' },
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: '📺' },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: '📘' },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: '📷' }
-  ];
+const resources = [{ "name": 'Documentation', "href": '/docs' },
+  { "name": 'API Reference', "href": '/api-docs' },
+  { "name": 'Tutorials', "href": '/tutorials' },
+  { "name": 'Guides', "href": '/guides' },
+  { "name": 'FAQ', "href": '/faq' },
+  { "name": 'Support', "href": '/support' },
+  { "name": 'Resources', "href": '/resources' }
+];
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+const legal = [{ "name": 'Privacy Policy', "href": '/privacy' },
+  { "name": 'Terms of Service', "href": '/terms' },
+  { "name": 'Cookie Policy', "href": '/cookies' },
+  { "name": 'Security', "href": '/security' },
+  { "name": 'Compliance', "href": '/compliance' },
+  { "name": 'Accessibility', "href": '/accessibility' },
+  { "name": 'Sitemap', "href": '/sitemap' }
+];
 
   return (
     <footer className="bg-black/95 backdrop-blur-2xl border-t border-white/20 relative overflow-hidden">

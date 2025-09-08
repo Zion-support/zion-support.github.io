@@ -1,296 +1,391 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, CheckCircle, ArrowRight, AlertTriangle, Users, Globe, Zap } from 'lucide-react';
+import MainLayout from '../components/layout/MainLayout';
+
+const securityFeatures = [
+  {
+    title: "Data Encryption",
+    description: "All data is encrypted in transit and at rest using industry-standard encryption protocols",
+    icon: Lock,
+    details: [
+      "AES-256 encryption for data at rest",
+      "TLS 1.3 for data in transit",
+      "End-to-end encryption for sensitive communications",
+      "Regular encryption key rotation"
+    ]
+  },
+  {
+    title: "Access Controls",
+    description: "Multi-layered access controls ensure only authorized personnel can access your data",
+    icon: Users,
+    details: [
+      "Role-based access control (RBAC)",
+      "Multi-factor authentication (MFA)",
+      "Single sign-on (SSO) integration",
+      "Regular access reviews and audits"
+    ]
+  },
+  {
+    title: "Network Security",
+    description: "Advanced network security measures protect against external threats",
+    icon: Globe,
+    details: [
+      "Firewall protection and intrusion detection",
+      "DDoS protection and mitigation",
+      "Network segmentation and isolation",
+      "Regular security monitoring and logging"
+    ]
+  },
+  {
+    title: "Compliance & Auditing",
+    description: "Regular audits and compliance with industry security standards",
+    icon: Shield,
+    details: [
+      "SOC 2 Type II compliance",
+      "ISO 27001 certification",
+      "Regular third-party security audits",
+      "Continuous compliance monitoring"
+    ]
+  }
+];
+
+const complianceStandards = [
+  {
+    name: "SOC 2 Type II",
+    description: "Comprehensive audit of our security controls and processes",
+    status: "Certified",
+    icon: "🔒"
+  },
+  {
+    name: "ISO 27001",
+    description: "International standard for information security management",
+    status: "Certified",
+    icon: "🛡️"
+  },
+  {
+    name: "GDPR",
+    description: "General Data Protection Regulation compliance",
+    status: "Compliant",
+    icon: "🇪🇺"
+  },
+  {
+    name: "CCPA",
+    description: "California Consumer Privacy Act compliance",
+    status: "Compliant",
+    icon: "🇺🇸"
+  },
+  {
+    name: "HIPAA",
+    description: "Health Insurance Portability and Accountability Act",
+    status: "Compliant",
+    icon: "🏥"
+  },
+  {
+    name: "PCI DSS",
+    description: "Payment Card Industry Data Security Standard",
+    status: "Compliant",
+    icon: "💳"
+  }
+];
+
+const securityPractices = [
+  {
+    title: "Secure Development",
+    description: "Security is built into every stage of our development process",
+    practices: [
+      "Secure coding practices and training",
+      "Regular security code reviews",
+      "Automated security testing",
+      "Threat modeling and risk assessment"
+    ]
+  },
+  {
+    title: "Incident Response",
+    description: "Comprehensive incident response plan for security events",
+    practices: [
+      "24/7 security monitoring",
+      "Rapid incident detection and response",
+      "Regular incident response drills",
+      "Post-incident analysis and improvement"
+    ]
+  },
+  {
+    title: "Employee Training",
+    description: "Regular security training and awareness programs",
+    practices: [
+      "Mandatory security training for all employees",
+      "Phishing simulation and testing",
+      "Security awareness campaigns",
+      "Regular security updates and briefings"
+    ]
+  },
+  {
+    title: "Vendor Security",
+    description: "Strict security requirements for all third-party vendors",
+    practices: [
+      "Vendor security assessments",
+      "Security requirements in contracts",
+      "Regular vendor security reviews",
+      "Incident notification requirements"
+    ]
+  }
+];
 
 export default function SecurityPage() {
   return (
-    <>
-      <Head>
-        <title>Security & Monitoring — Zion Tech Group | Autonomous Innovation Hub</title>
-        <meta name="description" content="Advanced security systems with continuous monitoring, automated threat response, vulnerability assessment, and intelligent security orchestration." />
-        <meta property="og:title" content="Security & Monitoring — Zion Tech Group" />
-        <meta property="og:description" content="Advanced security systems with continuous monitoring and automated threat response." />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          {/* Hero Section */}
-          <section className="text-center mb-20">
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-8 bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-              Security & Monitoring
-            </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-              Advanced autonomous security systems that continuously monitor, detect, and respond to threats 
-              in real-time with zero human intervention.
-            </p>
-            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-xl rounded-full px-6 py-2 border border-white/20">
-              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-              <span className="text-sm text-white/80">32+ Security Automations Active</span>
-            </div>
-          </section>
+    <MainLayout
+      title="Security - Zion Tech Group"
+      description="Learn about our comprehensive security measures, compliance standards, and data protection practices."
+      keywords="security, data protection, compliance, encryption, privacy, cybersecurity"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-red-900 via-orange-900 to-yellow-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-red-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-orange-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          </div>
 
-          {/* Security Features */}
-          <section className="mb-20">
-            <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
-              Comprehensive Security Features
-            </h2>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Continuous Security Scanning */}
-              <div className="bg-gradient-to-br from-red-500/10 to-pink-500/10 backdrop-blur-xl rounded-2xl p-8 border border-red-500/20">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-red-400 to-pink-500 rounded-xl flex items-center justify-center">
-                    <span className="text-2xl">🔍</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-red-400">Continuous Security Scanning</h3>
-                </div>
-                <p className="text-white/80 mb-6 leading-relaxed">
-                  24/7 automated security scanning across all systems, dependencies, and infrastructure. 
-                  Real-time vulnerability detection with instant threat assessment.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-red-400 rounded-full"></span>
-                    <span className="text-white/70">Dependency Vulnerability Scanning</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-red-400 rounded-full"></span>
-                    <span className="text-white/70">Infrastructure Security Audits</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-red-400 rounded-full"></span>
-                    <span className="text-white/70">Code Security Analysis</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-red-400 rounded-full"></span>
-                    <span className="text-white/70">Real-time Threat Detection</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Automated Threat Response */}
-              <div className="bg-gradient-to-br from-orange-500/10 to-yellow-500/10 backdrop-blur-xl rounded-2xl p-8 border border-orange-500/20">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-yellow-500 rounded-xl flex items-center justify-center">
-                    <span className="text-2xl">⚡</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-orange-400">Automated Threat Response</h3>
-                </div>
-                <p className="text-white/80 mb-6 leading-relaxed">
-                  Intelligent threat response systems that automatically contain, isolate, and remediate 
-                  security incidents without human intervention.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                    <span className="text-white/70">Instant Incident Containment</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                    <span className="text-white/70">Automated Remediation</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                    <span className="text-white/70">Threat Intelligence Integration</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                    <span className="text-white/70">Response Orchestration</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Compliance Monitoring */}
-              <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-xl rounded-2xl p-8 border border-blue-500/20">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-xl flex items-center justify-center">
-                    <span className="text-2xl">📋</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-blue-400">Compliance Monitoring</h3>
-                </div>
-                <p className="text-white/80 mb-6 leading-relaxed">
-                  Continuous compliance monitoring across multiple frameworks and standards. 
-                  Automated reporting and audit trail generation for regulatory requirements.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                    <span className="text-white/70">GDPR Compliance</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                    <span className="text-white/70">SOC 2 Type II</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                    <span className="text-white/70">ISO 27001 Standards</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                    <span className="text-white/70">Automated Audit Reports</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Intelligent Monitoring */}
-              <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-xl rounded-2xl p-8 border border-green-500/20">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center">
-                    <span className="text-2xl">🧠</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-green-400">Intelligent Monitoring</h3>
-                </div>
-                <p className="text-white/80 mb-6 leading-relaxed">
-                  AI-powered monitoring systems that learn from patterns, predict potential threats, 
-                  and adapt security measures in real-time.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                    <span className="text-white/70">Behavioral Analysis</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                    <span className="text-white/70">Threat Prediction</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                    <span className="text-white/70">Adaptive Security</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                    <span className="text-white/70">Machine Learning</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Security Metrics */}
-          <section className="mb-20">
-            <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
-              Security Performance Metrics
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 text-center">
-                <div className="text-4xl font-bold text-green-400 mb-2">99.99%</div>
-                <div className="text-white/70 mb-4">Uptime</div>
-                <div className="text-sm text-white/50">Continuous monitoring ensures maximum availability</div>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 text-center">
-                <div className="text-4xl font-bold text-blue-400 mb-2">&lt;1s</div>
-                <div className="text-white/70 mb-4">Response Time</div>
-                <div className="text-sm text-white/50">Instant threat detection and response</div>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 text-center">
-                <div className="text-4xl font-bold text-purple-400 mb-2">0</div>
-                <div className="text-white/70 mb-4">Security Breaches</div>
-                <div className="text-sm text-white/50">Zero successful attacks in production</div>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 text-center">
-                <div className="text-4xl font-bold text-red-400 mb-2">24/7</div>
-                <div className="text-white/70 mb-4">Monitoring</div>
-                <div className="text-sm text-white/50">Round-the-clock security surveillance</div>
-              </div>
-            </div>
-          </section>
-
-          {/* Security Technologies */}
-          <section className="mb-20">
-            <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
-              Advanced Security Technologies
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-red-400/30 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-red-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">🔐</span>
-                </div>
-                <h3 className="text-2xl font-bold text-red-400 mb-4 text-center">Zero Trust Architecture</h3>
-                <p className="text-white/80 text-center mb-6">
-                  Never trust, always verify approach with continuous authentication and authorization
-                </p>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-orange-400/30 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-yellow-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">🛡️</span>
-                </div>
-                <h3 className="text-2xl font-bold text-orange-400 mb-4 text-center">Intrusion Prevention</h3>
-                <p className="text-white/80 text-center mb-6">
-                  Advanced IPS/IDS systems with machine learning threat detection
-                </p>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-blue-400/30 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">🔒</span>
-                </div>
-                <h3 className="text-2xl font-bold text-blue-400 mb-4 text-center">Encryption at Rest</h3>
-                <p className="text-white/80 text-center mb-6">
-                  AES-256 encryption for all stored data and communications
-                </p>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-green-400/30 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">📊</span>
-                </div>
-                <h3 className="text-2xl font-bold text-green-400 mb-4 text-center">Security Analytics</h3>
-                <p className="text-white/80 text-center mb-6">
-                  Real-time security intelligence and predictive analytics
-                </p>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-purple-400/30 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">🌐</span>
-                </div>
-                <h3 className="text-2xl font-bold text-purple-400 mb-4 text-center">Web Application Firewall</h3>
-                <p className="text-white/80 text-center mb-6">
-                  Advanced WAF protection against OWASP Top 10 vulnerabilities
-                </p>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-indigo-400/30 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-400 to-violet-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">🚨</span>
-                </div>
-                <h3 className="text-2xl font-bold text-indigo-400 mb-4 text-center">Incident Response</h3>
-                <p className="text-white/80 text-center mb-6">
-                  Automated incident response with playbook execution
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Call to Action */}
-          <section className="text-center mb-20">
-            <div className="bg-gradient-to-r from-red-500/10 via-pink-500/10 to-purple-500/10 backdrop-blur-xl rounded-3xl p-12 border border-white/20">
-              <h2 className="text-3xl font-bold mb-6 text-white">
-                Secure Your Digital Infrastructure
-              </h2>
-              <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-                Experience enterprise-grade security with autonomous monitoring and response. 
-                Let our systems protect your assets 24/7.
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Security &{' '}
+                <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+                  Compliance
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Your data security is our top priority. We implement industry-leading security measures 
+                and maintain compliance with the highest standards.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-red-500/25">
-                  Get Security Assessment
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Security Audit
                 </Link>
-                <Link href="/automation" className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105">
-                  Learn About Automation
+                <Link href="/privacy" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                  Privacy Policy
                 </Link>
               </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Security Features */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-12 md:mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Security Features
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                Multi-layered security approach protecting your data at every level.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {securityFeatures.map((feature, index) => {
+                const IconComponent = feature.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-r from-red-600 to-orange-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                      <IconComponent className="w-8 h-8 text-white" />
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-red-600 transition-colors">
+                      {feature.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {feature.description}
+                    </p>
+
+                    <ul className="space-y-2">
+                      {feature.details.map((detail, detailIndex) => (
+                        <li key={detailIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="w-4 h-4 text-red-500 mr-2 flex-shrink-0" />
+                          {detail}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                );
+              })}
             </div>
-          </section>
-        </main>
+          </div>
+        </section>
+
+        {/* Compliance Standards */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-12 md:mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Compliance Standards
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                We maintain compliance with industry-leading security and privacy standards.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {complianceStandards.map((standard, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-gray-50 p-6 rounded-lg hover:bg-red-50 transition-colors group"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="text-3xl mb-3">{standard.icon}</div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-red-600 transition-colors">
+                    {standard.name}
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-3">{standard.description}</p>
+                  <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
+                    standard.status === 'Certified' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
+                  }`}>
+                    {standard.status}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Security Practices */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-12 md:mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Security Practices
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                Our comprehensive security practices ensure continuous protection and improvement.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {securityPractices.map((practice, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-red-600 transition-colors">
+                    {practice.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    {practice.description}
+                  </p>
+
+                  <ul className="space-y-2">
+                    {practice.practices.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-red-500 mr-2 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Security Contact */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="bg-gradient-to-r from-red-50 to-orange-50 p-8 rounded-xl text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <AlertTriangle className="w-16 h-16 text-red-600 mx-auto mb-4" />
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Report a Security Issue
+              </h2>
+              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                If you discover a security vulnerability or have concerns about our security practices, 
+                please report it to our security team immediately.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:security@ziontechgroup.com" className="px-8 py-4 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors font-semibold">
+                  security@ziontechgroup.com
+                </a>
+                <Link href="/contact" className="px-8 py-4 border-2 border-red-600 text-red-600 rounded-lg hover:bg-red-600 hover:text-white transition-colors font-semibold">
+                  Contact Security Team
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+                Questions About Our Security?
+              </h2>
+              <p className="text-xl mb-8 max-w-3xl mx-auto">
+                Our security team is available to answer any questions about our security measures and compliance.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  Contact Security Team
+                </Link>
+                <Link href="/privacy" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-red-600 transition-all duration-300 font-semibold">
+                  Privacy Policy
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
       </div>
-    </>
+    </MainLayout>
   );
 }
