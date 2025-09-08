@@ -1,26 +1,26 @@
-import React, { createContext, useContext, ReactNode } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
-const defaultConfig = {
-	companyName: 'Zion Tech Group',
-	logo: '/logo.svg',
-	primaryColor: '#1e40af',
-	secondaryColor: '#7c3aed',
-	domain: 'https://ziontechgroup.com',
-	isWhitelabel: false,
-	contactInfo: {
-		phone: '+1 302 464 0950',
-		email: 'kleber@ziontechgroup.com',
-		address: '364 E Main St STE 1008 Middletown DE 19709',
-	},
+interface WhitelabelContextType {
+  theme: string;
+  setTheme: (theme: string) => void;
+}
+
+const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined);
+
+export const WhitelabelProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [theme, setTheme] = useState('default');
+  
+  return (
+    <WhitelabelContext.Provider value={{ theme, setTheme }}>
+      {children}
+    </WhitelabelContext.Provider>
+  );
 };
 
-type WhitelabelConfig = typeof defaultConfig;
-interface WhitelabelProviderProps { children: ReactNode; config?: Partial<WhitelabelConfig> }
-
-const WhitelabelContext = createContext<WhitelabelConfig>(defaultConfig);
-export const useWhitelabel = () => useContext(WhitelabelContext);
-
-export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ children, config = {} }) => {
-	const mergedConfig = { ...defaultConfig, ...config, contactInfo: { ...defaultConfig.contactInfo, ...(config as any).contactInfo } } as WhitelabelConfig;
-	return <WhitelabelContext.Provider value={mergedConfig}>{children}</WhitelabelContext.Provider>;
+export const useWhitelabel = () => {
+  const context = useContext(WhitelabelContext);
+  if (!context) {
+    throw new Error('useWhitelabel must be used within a WhitelabelProvider');
+  }
+  return context;
 };
