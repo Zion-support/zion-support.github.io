@@ -1,43 +1,26 @@
 exports.handler = async function(event, context) {
-  console.log('🤖 image-optimizer-runner function triggered');
-  
   try {
-    // Image optimization logic
-    const timestamp = new Date().toISOString();
+    console.log('image-optimizer-runner function triggered');
     
-    // Simulate image processing
-    const imageStats = {
-      processed: Math.floor(Math.random() * 100) + 50,
-      optimized: Math.floor(Math.random() * 80) + 40,
-      skipped: Math.floor(Math.random() * 20) + 5,
-      totalSizeReduction: Math.floor(Math.random() * 60) + 20
-    };
-    
+    // Basic image optimization running logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Image optimization completed successfully',
-        timestamp: timestamp,
+        message: 'Image optimizer runner function executed successfully',
+        timestamp: new Date().toISOString(),
         function: 'image-optimizer-runner',
-        status: 'success',
-        imageStats: imageStats,
-        formats: ['webp', 'avif', 'jpeg'],
-        quality: 'high'
+        action: 'optimizing images for performance'
       })
     };
     
-    console.log('✅ image-optimizer-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ image-optimizer-runner failed:', error);
+    console.error('Error in image-optimizer-runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        message: 'Image optimization failed',
-        error: error.message,
-        function: 'image-optimizer-runner',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message
       })
     };
   }
