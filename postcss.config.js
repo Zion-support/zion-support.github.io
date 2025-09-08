@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default {
   plugins: {
     '@tailwindcss/postcss': {},
@@ -20,3 +21,9 @@ export default {
     }
   },
 }
+=======
+module.exports = {
+  plugins: ['@tailwindcss/postcss'],
+};
+
+>>>>>>> origin/feat/homepage-improvements
