@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-09-08T09:37:49.232Z",
+  "generatedAt": "2025-09-08T10:39:26.234Z",
   "featuredCourses": [
     {
       "slug": "ai-engineering-foundations",
@@ -20,20 +20,16 @@
       "url": "https://twitter.com/samhenrigold/status/1964428927159382261"
     },
     {
-      "title": "Show HN: TheAuditor – Offline security scanner for AI-generated code",
-      "url": "https://github.com/TheAuditorTool/Auditor"
-    },
-    {
       "title": "Show HN: C++ library for reading MacBook lid angle sensor data",
       "url": "https://github.com/ufoym/mac-angle"
     },
     {
-      "title": "Formatting code should be unnecessary",
-      "url": "https://maxleiter.com/blog/formatting"
-    },
-    {
       "title": "Why Is Japan Still Investing in Custom Floating Point Accelerators?",
       "url": "https://www.nextplatform.com/2025/09/04/why-is-japan-still-investing-in-custom-floating-point-accelerators/"
+    },
+    {
+      "title": "Formatting code should be unnecessary",
+      "url": "https://maxleiter.com/blog/formatting"
     },
     {
       "title": "GPT-5 Thinking in ChatGPT (a.k.a. Research Goblin) is good at search",
@@ -42,6 +38,10 @@
     {
       "title": "Intel Arc Pro B50 GPU Launched at $349 for Compact Workstations",
       "url": "https://www.guru3d.com/story/intel-arc-pro-b50-gpu-launched-at-for-compact-workstations/"
+    },
+    {
+      "title": "Show HN: Veena Chromatic Tuner",
+      "url": "https://play.google.com/store/apps/details?id=in.magima.digitaltuner&hl=en_US"
     },
     {
       "title": "Analog optical computer for AI inference and combinatorial optimization",
