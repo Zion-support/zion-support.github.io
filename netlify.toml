@@ -1,5 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  command = "npm ci && npm install react@18.3.1 react-dom@18.3.1 && npm run build"
+[build]
+  # Install Python dependencies first, then Node.js dependencies and build
+  command = "pip install -r requirements.txt && npm ci && npm run build"
   publish = "dist"
+  command_timeout = "30m"
+
+[[plugins]]
+  package = "netlify-plugin-compress"
+  [plugins.inputs]
+    gzip = true
+    brotli = true
