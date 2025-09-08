@@ -1,7 +1,7 @@
 [build]
   # Do not run any build. Deploy the prebuilt dist/ as-is.
   command = "echo 'Skipping build; deploying prebuilt dist'"
-  publish = "dist"
+  publish = "out"
   command_timeout = "30m"
 
 [build.environment]
