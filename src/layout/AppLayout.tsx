@@ -1,10 +1,12 @@
 import React from 'react';
+import { AppConfig } from '../types/app';
 
 interface AppLayoutProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  config?: AppConfig;
 }
 
-export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
+export const AppLayout: React.FC<AppLayoutProps> = ({ children, config }) => {
   return (
     <div className="min-h-screen bg-zion-blue text-white">
       <header className="bg-zion-blue-dark border-b border-zion-blue-light">
