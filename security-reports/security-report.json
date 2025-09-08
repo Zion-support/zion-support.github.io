@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-29T16:33:20.061Z",
+  "timestamp": "2025-08-29T16:14:58.909Z",
   "summary": {
     "totalVulnerabilities": 0,
     "criticalVulnerabilities": 0,
@@ -42,12 +42,6 @@
           "type": "API Key",
           "file": "/workspace/src/pages/Documentation.tsx",
           "line": 122,
-          "match": "apiKey: 'your-api-key'..."
-        },
-        {
-          "type": "API Key",
-          "file": "/workspace/src/pages/Documentation.tsx",
-          "line": 133,
           "match": "apiKey: 'your-api-key'..."
         },
         {
