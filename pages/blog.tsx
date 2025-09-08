@@ -1,254 +1,260 @@
-import React from 'react.ts'
-import Link from 'next/link.ts'
-import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp  } from 'lucide-react.ts'
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../components/ui/Card';
+import { Button } from '../components/ui/Button';
 
 export default function Blog(...args: any[]): any {
   const blogPosts = [
     {
-      id: 'ai-automation-trends-2025',
-      title: 'AI Automation Trends That Will Dominate 2025',
-      excerpt: 'Discover the top AI automation trends that will reshape business operations and drive innovation across industries.',
+      id: 'ai-automation-future',
+      title: 'The Future of AI Automation in 2024',
+      excerpt: 'Discover the latest trends and innovations shaping the future of autonomous technology and how businesses can prepare for the AI revolution.',
       author: 'Zion Tech Team',
-      date: '2025-01-15',
-      readTime: '8 min read',
+      date: 'January 15, 2024',
+      readTime: '5 min read',
       category: 'AI & Automation',
       tags: ['AI', 'Automation', 'Trends', '2025'],
       featured: true,
       image: '/blog/ai-automation-trends.jpg'
     },
     {
-      id: 'cloud-native-security',
-      title: 'Building Secure Cloud-Native Applications',
-      excerpt: 'Learn the essential security practices for developing and deploying cloud-native applications in today\'s threat landscape.',
+      id: 'cloud-optimization-guide',
+      title: 'Complete Guide to Cloud Infrastructure Optimization',
+      excerpt: 'Learn the best practices for optimizing your cloud infrastructure, reducing costs, and improving performance with autonomous systems.',
+      author: 'Cloud Engineering Team',
+      date: 'January 10, 2024',
+      readTime: '8 min read',
+      category: 'Cloud Computing',
+      featured: false
+    },
+    {
+      id: 'content-generation-ai',
+      title: 'How AI is Revolutionizing Content Generation',
+      excerpt: 'Explore how autonomous content generation systems are transforming marketing, SEO, and content creation across industries.',
+      author: 'Content AI Team',
+      date: 'January 5, 2024',
+      readTime: '6 min read',
+      category: 'Content Marketing',
+      featured: false
+    },
+    {
+      id: 'security-automation',
+      title: 'Automating Security: The Future of Cyber Defense',
+      excerpt: 'Discover how AI-powered security automation is protecting businesses from evolving cyber threats and reducing response times.',
       author: 'Security Team',
-      date: '2025-01-10',
-      readTime: '12 min read',
+      date: 'December 28, 2023',
+      readTime: '7 min read',
       category: 'Cybersecurity',
-      tags: ['Cloud', 'Security', 'DevOps', 'Best Practices'],
-      featured: false,
-      image: '/blog/cloud-security.jpg'
+      featured: false
     },
     {
-      id: 'quantum-computing-future',
-      title: 'The Future of Quantum Computing in Enterprise',
-      excerpt: 'Explore how quantum computing will revolutionize enterprise applications and what businesses need to prepare for.',
-      author: 'Innovation Lab',
-      date: '2025-01-08',
-      readTime: '10 min read',
-      category: 'Emerging Tech',
-      tags: ['Quantum', 'Computing', 'Enterprise', 'Future'],
-      featured: false,
-      image: '/blog/quantum-computing.jpg'
+      id: 'performance-monitoring',
+      title: 'Real-time Performance Monitoring with AI',
+      excerpt: 'Learn how autonomous monitoring systems provide real-time insights and automatically optimize application performance.',
+      author: 'Performance Team',
+      date: 'December 20, 2023',
+      readTime: '6 min read',
+      category: 'Performance',
+      featured: false
     },
     {
-      id: 'devops-automation-best-practices',
-      title: 'DevOps Automation: Best Practices for 2025',
-      excerpt: 'Master the essential DevOps automation practices that will streamline your development and deployment processes.',
-      author: 'DevOps Team',
-      date: '2025-01-05',
-      readTime: '15 min read',
-      category: 'DevOps',
-      tags: ['DevOps', 'Automation', 'CI/CD', 'Best Practices'],
-      featured: false,
-      image: '/blog/devops-automation.jpg'
-    },
-    {
-      id: 'ai-ethics-governance',
-      title: 'AI Ethics and Governance: A Business Imperative',
-      excerpt: 'Understand why AI ethics and governance are critical for business success and how to implement them effectively.',
-      author: 'AI Ethics Team',
-      date: '2025-01-03',
-      readTime: '11 min read',
-      category: 'AI & Ethics',
-      tags: ['AI Ethics', 'Governance', 'Compliance', 'Business'],
-      featured: false,
-      image: '/blog/ai-ethics.jpg'
-    },
-    {
-      id: 'cybersecurity-threat-landscape',
-      title: '2025 Cybersecurity Threat Landscape Analysis',
-      excerpt: 'Stay ahead of emerging cyber threats with our comprehensive analysis of the 2025 threat landscape.',
-      author: 'Cybersecurity Team',
-      date: '2024-12-28',
-      readTime: '14 min read',
-      category: 'Cybersecurity',
-      tags: ['Cybersecurity', 'Threats', 'Analysis', '2025'],
-      featured: false,
-      image: '/blog/cyber-threats.jpg'
+      id: 'automation-roi',
+      title: 'Measuring ROI of AI Automation Projects',
+      excerpt: 'Understand how to calculate and demonstrate the return on investment for your AI automation initiatives.',
+      author: 'Analytics Team',
+      date: 'December 15, 2023',
+      readTime: '9 min read',
+      category: 'Business Strategy',
+      featured: false
     }
   {/* Removed stray closing bracket */}
 
-  const categories = [
-    { name: 'All', count: blogPosts.length },
-    { name: 'AI & Automation', count: 2 },
-    { name: 'Cybersecurity', count: 2 },
-    { name: 'Cloud & DevOps', count: 2 },
-    { name: 'Emerging Tech', count: 1 },
-    { name: 'AI & Ethics', count: 1 }
-  {/* Removed stray closing bracket */}
+  const categories = ['All', 'AI & Automation', 'Cloud Computing', 'Content Marketing', 'Cybersecurity', 'Performance', 'Business Strategy'];
 
 const Page = () => {
   return (
-    <MainLayout 
-      title="Page - Zion Tech Group"
-      description="Zion Tech Group page"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
+    <>
+      <Head>
+        <title>Blog | Zion Tech Group</title>
+        <meta name="description" content="Stay updated with the latest insights on AI automation, cloud computing, and autonomous technology from our expert team." />
+        <meta property="og:title" content="Blog" />
+        <meta property="og:description" content="Latest insights on AI automation and autonomous technology." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      
+      {/* Hero Section */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Insights & Updates
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Stay updated with the latest insights on AI automation, cloud computing, and autonomous technology
+          </p>
         </div>
-      </div>
-    </MainLayout>
-  );
-};
+      </section>
 
       {/* Featured Post */}
-      <section className="py-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
-            {blogPosts.filter(post => post.featured).map(post => (
-              <div key={post.id} className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div className="p-8">
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                      Featured
-                    </span>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                      {post.category}
-                    </span>
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Featured Article
+            </h2>
+            <p className="text-xl text-gray-600">
+              Our most recent and impactful insights
+            </p>
+          </div>
+
+          {blogPosts.filter(post => post.featured).map(post => (
+            <Card key={post.id} className="hover-lift">
+              <CardHeader>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
+                    {post.category}
+                  </span>
+                  <div className="text-sm text-gray-500">
+                    {post.date} • {post.readTime}
                   </div>
-                  
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">{post.title}</h2>
-                  <p className="text-lg text-gray-600 mb-6">{post.excerpt}</p>
-                  
-                  <div className="flex items-center gap-6 text-sm text-gray-500 mb-6">
-                    <div className="flex items-center gap-2">
-                      <User className="h-4 w-4" />
-                      {post.author}
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Calendar className="h-4 w-4" />
-                      {new Date(post.date).toLocaleDateString('en-US', { 
-                        year: 'numeric', 
-                        month: 'long', 
-                        day: 'numeric' 
-                      })}
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="h-4 w-4" />
-                      {post.readTime}
-                    </div>
-                  </div>
-                  
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {post.tags.map(tag => (
-                      <span key={tag} className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-gray-100 text-gray-800">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  <Link
-                    href={`/blog/${post.id}`}
-                    className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:shadow-lg transition-all duration-200"
-                  >
-                    Read Full Article
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
                 </div>
-              </div>
+                <CardTitle className="text-3xl text-gray-900">{post.title}</CardTitle>
+                <CardDescription className="text-lg text-gray-600">
+                  {post.excerpt}
+                </CardDescription>
+                <div className="flex items-center justify-between pt-4">
+                  <span className="text-gray-600">By {post.author}</span>
+                  <Button variant="outline">
+                    Read Full Article
+                  </Button>
+                </div>
+              </CardHeader>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Category Filter */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center gap-3">
+            {categories.map(category => (
+              <button
+                key={category}
+                className="px-4 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 hover:bg-blue-50 hover:border-blue-200 hover:text-blue-700 transition-all duration-200"
+              >
+                {category}
+              </button>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Blog Posts Grid */}
-      <section className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center mb-16">
-            <h2 className="text-base font-semibold leading-7 text-blue-600">Latest Articles</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Stay informed with our latest insights
-            </p>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Explore our collection of articles covering the latest trends, best practices, and industry insights.
+      {/* All Blog Posts */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Latest Articles
+            </h2>
+            <p className="text-xl text-gray-600">
+              Explore our complete collection of insights and updates
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 gap-8 md: anygrid-cols-2 lg:grid-cols-3">
-            {blogPosts.filter(post  => !post.featured).map((post, index) => (
-              <article key={post.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-                <div className="p-6">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogPosts.filter(post => !post.featured).map(post => (
+              <Card key={post.id} className="hover-lift">
+                <CardHeader>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
                       {post.category}
                     </span>
-                    <span className="text-xs text-gray-500">{post.readTime}</span>
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">{post.title}</h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
-                  
-                  <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                    <div className="flex items-center gap-1">
-                      <User className="h-3 w-3" />
-                      {post.author}
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Calendar className="h-3 w-3" />
-                      {new Date(post.date).toLocaleDateString('en-US', { 
-                        month: 'short', 
-                        day: 'numeric' 
-                      })}
+                    <div className="text-xs text-gray-500">
+                      {post.readTime}
                     </div>
                   </div>
-                  
-                  <div className="flex flex-wrap gap-1 mb-4">
-                    {post.tags.slice(0, 3).map(tag => (
-                      <span key={tag} className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-blue-50 text-blue-700">
-                        {tag}
-                      </span>
-                    ))}
+                  <CardTitle className="text-xl text-gray-900">{post.title}</CardTitle>
+                  <CardDescription className="text-gray-600">
+                    {post.excerpt}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-gray-500">
+                      {post.date} • By {post.author}
+                    </div>
+                    <Button variant="outline" size="sm">
+                      Read More
+                    </Button>
                   </div>
-                  
-                  <Link
-                    href={`/blog/${post.id}`}
-                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors"
-                  >
-                    Read More
-                    <ArrowRight className="ml-1 h-3 w-3" />
-                  </Link>
-                </div>
-              </article>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-24 sm:py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
-              Never miss an insight
-            </h2>
-            <p className="text-lg leading-8 text-gray-600 mb-8">
-              Subscribe to our newsletter and get the latest technology insights, industry trends, and expert advice delivered to your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+      <section className="py-24 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Stay Updated
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Get the latest insights on AI automation and autonomous technology delivered to your inbox
+          </p>
+          <div className="max-w-md mx-auto">
+            <div className="flex gap-3">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="flex-1 px-4 py-3 rounded-lg border-0 focus:outline-none focus:ring-2 focus:ring-white"
               />
-              <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-200">
+              <Button variant="secondary" size="lg">
                 Subscribe
-              </button>
+              </Button>
             </div>
+            <p className="text-blue-100 text-sm mt-3">
+              No spam, unsubscribe at any time
+            </p>
           </div>
         </div>
       </section>
-    </div>
-  {/* Removed stray closing parenthesis */}
-  {/* Removed stray closing brace */}
+
+      {/* CTA Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Ready to Learn More?
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Explore our services and see how autonomous technology can transform your business
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              asChild
+              size="lg"
+              variant="gradient"
+              className="transform hover:scale-105 transition-transform duration-200"
+            >
+              <Link href="/services">
+                Explore Services
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="transform hover:scale-105 transition-transform duration-200"
+            >
+              <Link href="/contact">
+                Get in Touch
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

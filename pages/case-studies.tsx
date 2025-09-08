@@ -1,79 +1,8 @@
-import React from 'react.ts'
-import { Link  } from 'react-router-dom.ts'
-import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap  } from 'lucide-react.ts'
-
-
-export default function CaseStudies(...args: any[]): any {
-	const caseStudies = [
-		{
-			id: 1,
-			title: 'TechCorp: 300% Efficiency Increase with AI Automation',
-			client: 'TechCorp Inc.',
-			industry: 'Technology',
-			challenge: 'Manual processes were slowing down operations and causing errors in customer service.',
-			solution: 'Implemented AI-powered multi-agent system for customer service and sales operations.',
-			results[
-				'300% increase in operational efficiency',
-				'90% reduction in response time',
-				'$2.5M annual cost savings',
-				'Improved customer satisfaction scores'
-			],
-			duration: '6 months',
-			team: 12,
-			rating: 5
-		},
-		{
-			id: 2,
-			title: 'HealthCare Solutions: Secure Cloud Migration',
-			client: 'HealthCare Solutions',
-			industry: 'Healthcare',
-			challenge: 'Legacy on-premise systems were expensive to maintain and lacked scalability.',
-			solution: 'Migrated to secure cloud infrastructure with HIPAA compliance and disaster recovery.',
-			results[
-				'40% reduction in infrastructure costs',
-				'99.9% uptime achieved',
-				'Full HIPAA compliance',
-				'Improved data security'
-			],
-			duration: '8 months',
-			team: 8,
-			rating: 5
-		},
-		{
-			id: 3,
-			title: 'ManufacturingCo: IoT and AI Integration',
-			client: 'ManufacturingCo',
-			industry: 'Manufacturing',
-			challenge: 'Production inefficiencies and lack of real-time monitoring were causing delays.',
-			solution: 'Deployed IoT sensors and AI analytics for predictive maintenance and optimization.',
-			results[
-				'25% increase in production output',
-				'60% reduction in downtime',
-				'Predictive maintenance alerts',
-				'Real-time production monitoring'
-			],
-			duration: '10 months',
-			team: 15,
-			rating: 5
-		},
-		{
-			id: 4,
-			title: 'FinTech Startup: Micro SaaS Platform',
-			client: 'FinTech Startup',
-			industry: 'Financial Services',
-			challenge: 'Needed a scalable platform to manage multiple financial services efficiently.',
-			solution: 'Built custom micro SaaS platform with automated workflows and AI-powered insights.',
-			results[
-				'50% faster service delivery',
-				'Automated compliance reporting',
-				'Scalable architecture',
-				'Reduced operational overhead'
-			],
-			duration: '4 months',
-			team: 6,
-			rating: 5
-		}
-  {/* Removed stray closing bracket */}
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/Card';
+import { Button } from '../components/ui/Button';
 
   const caseStudies = [
     {
@@ -454,248 +383,178 @@ const CaseStudies: NextPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <Head>
-        <title>Case Studies - Zion Tech Group | Success Stories & Client Results</title>
-        <meta name="description" content="Explore our successful client implementations and transformative technology solutions. See how we've helped businesses across industries achieve remarkable results with AI, cloud computing, and digital transformation." />
-        <meta name="keywords" content="case studies, client success stories, AI implementation, cloud migration, digital transformation results, technology solutions" />
+        <title>Case Studies | Zion Tech Group</title>
+        <meta name="description" content="Explore real-world success stories of how our autonomous technology solutions have transformed businesses across industries." />
+        <meta property="og:title" content="Case Studies" />
+        <meta property="og:description" content="Real-world success stories of our autonomous technology solutions." />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
-      <Navigation />
-
-      <main className="container mx-auto px-4 py-16 pt-32">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
+      
+      {/* Hero Section */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Success Stories & Case Studies
+            Success Stories
           </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-            Discover how we&apos;ve helped businesses across industries achieve remarkable results through innovative 
-            technology solutions. From AI-powered systems to cloud transformations, see the real impact of our work.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
-            <span>📊 Proven Results</span>
-            <span>🏆 Award-Winning Projects</span>
-            <span>💼 Industry Leaders</span>
-            <span>🎯 Measurable Impact</span>
-          </div>
-        </div>
-
-        {/* Featured Case Studies */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Success Stories</h2>
-          <div className="grid lg:grid-cols-2 gap-12">
-            {featuredCaseStudies.map((study) => (
-              <div key={study.id} className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <div className="p-8">
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center space-x-3">
-                      <div className="text-4xl">{study.image}</div>
-                      <div>
-                        <div className="text-sm text-blue-600 font-medium">{study.service}</div>
-                        <div className="text-xs text-gray-500">{study.industry}</div>
-                      </div>
-                    </div>
-                    <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-medium">
-                      Featured
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{study.title}</h3>
-                  <p className="text-lg font-medium text-blue-600 mb-4">{study.company}</p>
-                  <p className="text-gray-600 mb-6">{study.description}</p>
-                  
-                  {/* Key Metrics */}
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    {study.metrics.slice(0, 4).map((metric, idx) => (
-                      <div key={idx} className="text-center p-3 bg-gray-50 rounded-lg">
-                        <div className="text-2xl font-bold text-blue-600">{metric.value}</div>
-                        <div className="text-sm text-gray-600">{metric.label}</div>
-                        <div className="text-xs text-green-600 font-medium">{metric.improvement}</div>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Testimonial */}
-                  <div className="bg-blue-50 rounded-lg p-4 mb-6">
-                    <p className="text-gray-700 italic mb-3">&quot;{study.testimonial.quote}&quot;</p>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                        {study.testimonial.avatar}
-                      </div>
-                      <div>
-                        <div className="font-medium text-gray-900">{study.testimonial.author}</div>
-                        <div className="text-sm text-gray-500">{study.testimonial.role}</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-4 text-sm text-gray-500">
-                      <span>⏱️ {study.duration}</span>
-                      <span>👥 {study.teamSize}</span>
-                    </div>
-                    <Link
-                      href={`/case-studies/${study.id}`}
-                      className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
-                    >
-                      View Details
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Filters */}
-        <section className="mb-12">
-          <div className="bg-white rounded-2xl shadow-lg p-6">
-            <div className="grid md:grid-cols-2 gap-6">
-              {/* Industry Filter */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Filter by Industry</label>
-                <select
-                  value={selectedIndustry}
-                  onChange={(e) => setSelectedIndustry(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  {industries.map(industry => (
-                    <option key={industry} value={industry}>{industry}</option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Service Filter */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Filter by Service</label>
-                <select
-                  value={selectedService}
-                  onChange={(e) => setSelectedService(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  {services.map(service => (
-                    <option key={service} value={service}>{service}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Results Count */}
-        <div className="mb-8">
-          <p className="text-gray-600">
-            Showing <span className="font-semibold">{filteredCaseStudies.length}</span> case studies
-            {selectedIndustry !== 'All' && ` in ${selectedIndustry}`}
-            {selectedService !== 'All' && ` for ${selectedService}`}
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover how our autonomous technology solutions have transformed businesses across industries
           </p>
         </div>
+      </section>
 
-        {/* All Case Studies */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">All Case Studies</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredCaseStudies.map((study) => (
-              <div key={study.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-3xl">{study.image}</div>
-                    <div className="text-right">
-                      <div className="text-xs text-gray-500">{study.industry}</div>
-                      <div className="text-xs text-blue-600 font-medium">{study.service}</div>
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{study.title}</h3>
-                  <p className="text-blue-600 font-medium mb-3">{study.company}</p>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">{study.description}</p>
-                  
-                  {/* Top 2 Metrics */}
-                  <div className="grid grid-cols-2 gap-3 mb-4">
-                    {study.metrics.slice(0, 2).map((metric, idx) => (
-                      <div key={idx} className="text-center p-2 bg-gray-50 rounded">
-                        <div className="text-lg font-bold text-blue-600">{metric.value}</div>
-                        <div className="text-xs text-gray-600">{metric.label}</div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <div className="text-xs text-gray-500">
-                      {study.duration} • {study.teamSize}
-                    </div>
-                    <Link
-                      href={`/case-studies/${study.id}`}
-                      className="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors duration-200"
-                    >
-                      View Details →
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Statistics Section */}
-        <section className="mb-16">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Our Track Record</h2>
-              <p className="text-xl opacity-90 max-w-2xl mx-auto">
-                These numbers represent real results achieved for our clients across various industries and project types.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">500+</div>
-                <div className="text-lg opacity-90">Projects Delivered</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">99.9%</div>
-                <div className="text-lg opacity-90">Client Satisfaction</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">$50M+</div>
-                <div className="text-lg opacity-90">Client Savings Generated</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">25+</div>
-                <div className="text-lg opacity-90">Industries Served</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="text-center">
-          <div className="bg-white rounded-2xl shadow-lg p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ready to Create Your Success Story?
+      {/* Featured Case Study */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Featured Case Study
             </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss how we can help you achieve similar results with innovative technology solutions 
-              tailored to your specific business needs.
+            <p className="text-xl text-gray-600">
+              Our most impactful transformation story
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300"
-              >
-                Start Your Project
+          </div>
+
+          {caseStudies.filter(cs => cs.featured).map(caseStudy => (
+            <Card key={caseStudy.id} className="hover-lift">
+              <CardHeader>
+                <div className="flex items-center justify-between mb-4">
+                  <div>
+                    <CardTitle className="text-2xl text-blue-600">{caseStudy.title}</CardTitle>
+                    <p className="text-gray-600 mt-2">{caseStudy.company} • {caseStudy.industry}</p>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-sm text-gray-500">Duration</div>
+                    <div className="font-semibold text-gray-900">{caseStudy.duration}</div>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">The Challenge</h3>
+                    <p className="text-gray-600 mb-6">{caseStudy.challenge}</p>
+                    
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Our Solution</h3>
+                    <p className="text-gray-600 mb-6">{caseStudy.solution}</p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Results</h3>
+                    <ul className="space-y-2 mb-6">
+                      {caseStudy.results.map((result, index) => (
+                        <li key={index} className="flex items-start">
+                          <span className="text-green-500 mr-2">✓</span>
+                          <span className="text-gray-600">{result}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Technologies Used</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {caseStudy.technologies.map((tech, index) => (
+                        <span key={index} className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* All Case Studies */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              All Case Studies
+            </h2>
+            <p className="text-xl text-gray-600">
+              Explore our complete portfolio of successful transformations
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {caseStudies.filter(cs => !cs.featured).map(caseStudy => (
+              <Card key={caseStudy.id} className="hover-lift">
+                <CardHeader>
+                  <CardTitle className="text-xl text-gray-900">{caseStudy.title}</CardTitle>
+                  <p className="text-gray-600">{caseStudy.company} • {caseStudy.industry}</p>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Challenge</h4>
+                      <p className="text-gray-600 text-sm">{caseStudy.challenge}</p>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Solution</h4>
+                      <p className="text-gray-600 text-sm">{caseStudy.solution}</p>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Key Results</h4>
+                      <ul className="space-y-1">
+                        {caseStudy.results.slice(0, 2).map((result, index) => (
+                          <li key={index} className="flex items-start text-sm">
+                            <span className="text-green-500 mr-2">✓</span>
+                            <span className="text-gray-600">{result}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="pt-4">
+                      <Button variant="outline" className="w-full">
+                        View Full Case Study
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Create Your Success Story?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let&apos;s discuss how our autonomous technology can transform your business
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              asChild
+              size="lg"
+              variant="secondary"
+              className="transform hover:scale-105 transition-transform duration-200"
+            >
+              <Link href="/contact">
+                Get Started Today
               </Link>
-              <Link
-                href="/services"
-                className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300"
-              >
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-blue-600 transform hover:scale-105 transition-all duration-200"
+            >
+              <Link href="/services">
                 Explore Our Services
               </Link>
-            </div>
+            </Button>
           </div>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
+        </div>
+      </section>
+    </>
   );
 };
 

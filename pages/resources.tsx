@@ -1,387 +1,312 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-=======
-import Layout from './components/Layout';
-import { 
-  FileText, 
-  BarChart3, 
-  MessageSquare, 
-  Settings, 
-  BookOpen, 
-  Video, 
-  Download, 
-  CheckCircle, 
-  ArrowRight 
-} from 'lucide-react';
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
-
-const resources = [
-  {
-    title: "Documentation",
-    description: "Comprehensive guides and technical documentation",
-    icon: FileText,
-    href: "/docs",
-    color: "from-blue-500 to-blue-600",
-    items: ["API Documentation", "Integration Guides", "Best Practices", "Troubleshooting"]
-  },
-  {
-    title: "Case Studies",
-    description: "Real-world success stories and implementations",
-    icon: BarChart3,
-    href: "/case-studies",
-    color: "from-green-500 to-green-600",
-    items: ["Client Success Stories", "Implementation Examples", "ROI Analysis", "Lessons Learned"]
-  },
-  {
-    title: "Blog",
-    description: "Latest insights, trends, and technical articles",
-    icon: MessageSquare,
-    href: "/blog",
-    color: "from-purple-500 to-purple-600",
-    items: ["Technology Trends", "Industry Insights", "Technical Tutorials", "Company News"]
-  },
-  {
-    title: "API Reference",
-    description: "Complete API documentation and examples",
-    icon: Settings,
-    href: "/api-docs",
-    color: "from-orange-500 to-orange-600",
-    items: ["REST API", "GraphQL", "SDKs", "Code Examples"]
-  }
-];
-
-const quickLinks = [
-  { title: "Getting Started", href: "/docs/getting-started", icon: BookOpen },
-  { title: "Video Tutorials", href: "/tutorials", icon: Video },
-  { title: "Download SDKs", href: "/downloads", icon: Download },
-  { title: "Support Center", href: "/support", icon: MessageSquare }
-];
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../components/ui/Card';
+import { Button } from '../components/ui/Button';
 
 export default function ResourcesPage() {
+  const resources = [
+    {
+      id: 'ai-automation-guide',
+      title: 'Complete Guide to AI Automation',
+      description: 'A comprehensive guide covering everything you need to know about implementing AI automation in your business.',
+      type: 'Guide',
+      category: 'AI & Automation',
+      downloadUrl: '#',
+      fileSize: '2.3 MB',
+      featured: true
+    },
+    {
+      id: 'cloud-optimization-whitepaper',
+      title: 'Cloud Infrastructure Optimization Whitepaper',
+      description: 'Learn the best practices for optimizing cloud infrastructure and reducing costs with autonomous systems.',
+      type: 'Whitepaper',
+      category: 'Cloud Computing',
+      downloadUrl: '#',
+      fileSize: '1.8 MB',
+      featured: false
+    },
+    {
+      id: 'content-generation-case-study',
+      title: 'Content Generation ROI Case Study',
+      description: 'Real-world examples of how AI-powered content generation delivers measurable business results.',
+      type: 'Case Study',
+      category: 'Content Marketing',
+      downloadUrl: '#',
+      fileSize: '1.2 MB',
+      featured: false
+    },
+    {
+      id: 'security-automation-checklist',
+      title: 'Security Automation Implementation Checklist',
+      description: 'A step-by-step checklist for implementing automated security systems in your organization.',
+      type: 'Checklist',
+      category: 'Cybersecurity',
+      downloadUrl: '#',
+      fileSize: '0.8 MB',
+      featured: false
+    },
+    {
+      id: 'performance-monitoring-guide',
+      title: 'Performance Monitoring Best Practices',
+      description: 'Essential guidelines for setting up effective performance monitoring with AI-driven insights.',
+      type: 'Guide',
+      category: 'Performance',
+      downloadUrl: '#',
+      fileSize: '1.5 MB',
+      featured: false
+    },
+    {
+      id: 'automation-roi-calculator',
+      title: 'Automation ROI Calculator',
+      description: 'Interactive tool to calculate the return on investment for your automation projects.',
+      type: 'Tool',
+      category: 'Business Strategy',
+      downloadUrl: '#',
+      fileSize: '0.5 MB',
+      featured: false
+    }
+  ];
+
+  const categories = ['All', 'AI & Automation', 'Cloud Computing', 'Content Marketing', 'Cybersecurity', 'Performance', 'Business Strategy'];
+
   return (
-<<<<<<< HEAD
-    <UltraFuturisticBackground intensity;
-=======
-    <UltraFuturisticBackground intensity="high" variant="quantum">
-      <SEO title="Resources | Zion Tech Group" description="Guides, case studies, support, training, and market pricing links." canonical="https://ziontechgroup.com/resources/" />
-      <div className="container mx-auto px-4 py-16 text-white">
-        <div className="text-center max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Resources</h1>
-          <p className="mt-3 text-gray-300">Docs, guides, and references to help you evaluate and deploy faster. Contact: +1 302 464 0950 • kleber@ziontechgroup.com</p>
+    <>
+      <Head>
+        <title>Resources | Zion Tech Group</title>
+        <meta name="description" content="Access our comprehensive library of guides, whitepapers, case studies, and tools to help you implement autonomous technology solutions." />
+        <meta property="og:title" content="Resources" />
+        <meta property="og:description" content="Comprehensive library of guides and tools for autonomous technology." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      
+      {/* Hero Section */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Resource Center
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Access our comprehensive library of guides, whitepapers, case studies, and tools
+          </p>
         </div>
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' }
-            { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' }
-            { name: 'Market Pricing', href: '/market-pricing', blurb: 'Vendor links and typical budgets.' }
-            { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' }
-            { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' }
-            { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
-          ].map((it) => (
-            <Link key={it.href} href={it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover:border-cyan-500/50 transition-colors block">
-              <div className="text-sm text-gray-400">Resource</div>
-              <h3 className="text-xl font-semibold text-white">{it.name}</h3>
-              <p className="mt-1 text-gray-300">{it.blurb}</p>
-              <div className="mt-3 text-cyan-300">Open →</div>
-            </Link>
+      </section>
+
+      {/* Featured Resource */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Featured Resource
+            </h2>
+            <p className="text-xl text-gray-600">
+              Our most comprehensive guide to AI automation
+            </p>
+          </div>
+
+          {resources.filter(resource => resource.featured).map(resource => (
+            <Card key={resource.id} className="hover-lift">
+              <CardHeader>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-3">
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
+                      {resource.type}
+                    </span>
+                    <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">
+                      {resource.category}
+                    </span>
+                  </div>
+                  <div className="text-sm text-gray-500">
+                    {resource.fileSize}
+                  </div>
+                </div>
+                <CardTitle className="text-3xl text-gray-900">{resource.title}</CardTitle>
+                <CardDescription className="text-lg text-gray-600">
+                  {resource.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center justify-between">
+                  <div className="text-sm text-gray-500">
+                    Free download • No registration required
+                  </div>
+                  <Button variant="gradient" size="lg">
+                    Download Now
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
-      </div>
-    </UltraFuturisticBackground>
-  )
-}
-      {/* Whitepapers */}
-      <section id="whitepapers" className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"><h2 className="text-4xl font-bold text-slate-900 mb-6">Whitepapers & Guides</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              In-depth research and comprehensive guides on the latest technology trends and best practices.
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {whitepapers.map((paper, index) => (
-              <motion.div
-                key={paper.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"><div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-8">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm text-white">
-                      {paper.category}
-                    </span>
-                    <span className="text-white/80 text-sm">{paper.pages} pages</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-3 leading-tight">{paper.title}</h3>
-                  <p className="text-blue-100 leading-relaxed">{paper.description}</p>
-                </div>
-                <div className="p-8">
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="text-slate-600 text-sm">
-                      {paper.downloadCount} downloads
-                    </span>
-                    <a
-                      href={paper.downloadUrl}
-                      className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"><Download className="w-5 h-5" />
-                      <span>Download</span>
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
       </section>
-      {/* Case Studies */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"><h2 className="text-4xl font-bold text-slate-900 mb-6">Case Studies</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Real-world examples of how our solutions have transformed businesses across industries.
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
-              <motion.div
-                key={study.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"><div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6">
-                  <FileText className="w-8 h-8 text-white" />
-                </div>
-                <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
-                  {study.industry}
-                </span>
-                <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight">{study.title}</h3>
-                <p className="text-slate-600 leading-relaxed mb-6">{study.description}</p>
-                <div className="mb-6">
-                  <h4 className="font-semibold text-slate-900 mb-3">Key Results:</h4>
-                  <ul className="space-y-2">
-                    {study.results.map((result, idx) => (
-                      <li key={idx} className="text-sm text-slate-600 flex items-center space-x-2">
-                        <ArrowRight className="w-3 h-3 text-blue-500 flex-shrink-0" />
-                        <span>{result}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <a
-                  href={study.readUrl}
-                  className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"><span>Read Case Study</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Videos */}
-      <section className="py-20 bg-slate-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-6">Video Resources</h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              Visual learning resources and expert insights on technology trends and implementations.
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {videos.map((video, index) => (
-              <motion.div
-                key={video.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300"><div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-6 text-center">
-                  <Play className="w-12 h-12 text-white mx-auto mb-3" />
-                  <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm text-white">
-                    {video.category}
-                  </span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-white mb-3 leading-tight">{video.title}</h3>
-                  <p className="text-white/70 text-sm leading-relaxed mb-4">{video.description}</p>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-white/60 text-sm">{video.duration}</span>
-                  </div>
-                  <a
-                    href={video.watchUrl}
-                    className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
-                  >
-                    Watch Video
-                  </a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Documentation */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"><h2 className="text-4xl font-bold text-slate-900 mb-6">Documentation</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Technical documentation, implementation guides, and best practices for our solutions.
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {documentation.map((doc, index) => (
-              <motion.div
-                key={doc.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"><div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6">
-                  <BookOpen className="w-8 h-8 text-white" />
-                </div>
-                <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
-                  {doc.type}
-                </span>
-                <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight">{doc.title}</h3>
-                <p className="text-slate-600 leading-relaxed mb-6">{doc.description}</p>
-                <div className="flex items-center justify-between mb-6 text-sm text-slate-500">
-                  <span>{doc.pages} pages</span>
-                  <span>Updated {doc.lastUpdated}</span>
-                </div>
-                <a
-                  href={doc.downloadUrl}
-                  className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
-                >
-                  Download
-                </a>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}><h2 className="text-4xl font-bold text-white mb-6">Need More Resources?</h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Can't find what you're looking for? Our team is here to help with custom research
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-              personalized consultations, and tailored solutions for your specific needs.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
-              >
-                Contact Our Experts
-              </a>
-              <a
-                href="/contact"
-                className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
-              >
-                Request Custom Research
-              </a>
-            </div>
-          </div>
-        </section>
 
-        {/* Quick Links Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Quick Links
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Popular resources and quick access to important information
-              </p>
-            </motion.div>
+      {/* Category Filter */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center gap-3">
+            {categories.map(category => (
+              <button
+                key={category}
+                className="px-4 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 hover:bg-blue-50 hover:border-blue-200 hover:text-blue-700 transition-all duration-200"
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {quickLinks.map((link, index) => {
-                const IconComponent = link.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-gray-50 p-6 rounded-lg hover:bg-white hover:shadow-lg transition-all duration-300 group cursor-pointer"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -5 }}
-                  >
-                    <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                      <IconComponent className="w-6 h-6 text-white" />
+      {/* All Resources */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              All Resources
+            </h2>
+            <p className="text-xl text-gray-600">
+              Explore our complete collection of guides, tools, and insights
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {resources.filter(resource => !resource.featured).map(resource => (
+              <Card key={resource.id} className="hover-lift">
+                <CardHeader>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
+                      {resource.type}
+                    </span>
+                    <div className="text-xs text-gray-500">
+                      {resource.fileSize}
                     </div>
-                    
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">
-                      {link.title}
-                    </h3>
-                    
-                    <Link
-                      href={link.href}
-                      className="text-indigo-600 hover:text-indigo-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center"
-                    >
-                      <span>Access Now</span>
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </motion.div>
-                );
-              })}
-            </div>
+                  </div>
+                  <CardTitle className="text-xl text-gray-900">{resource.title}</CardTitle>
+                  <CardDescription className="text-gray-600">
+                    {resource.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center justify-between">
+                    <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">
+                      {resource.category}
+                    </span>
+                    <Button variant="outline" size="sm">
+                      Download
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Need More Help?
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-                Can't find what you're looking for? Our support team is here to help
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Contact Support
-                </Link>
-                <Link href="/docs" className="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Browse Documentation
-                </Link>
-              </div>
-            </motion.div>
+      {/* Additional Resources */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Additional Resources
+            </h2>
+            <p className="text-xl text-gray-600">
+              More ways to learn and grow with autonomous technology
+            </p>
           </div>
-        </section>
-      </div>
-    </Layout>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="hover-lift text-center">
+              <CardHeader>
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <CardTitle className="text-xl text-gray-900">Documentation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Comprehensive technical documentation for all our autonomous systems and APIs.
+                </p>
+                <Button variant="outline" className="w-full">
+                  View Docs
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover-lift text-center">
+              <CardHeader>
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <CardTitle className="text-xl text-gray-900">Video Tutorials</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Step-by-step video tutorials covering implementation and best practices.
+                </p>
+                <Button variant="outline" className="w-full">
+                  Watch Videos
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover-lift text-center">
+              <CardHeader>
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <CardTitle className="text-xl text-gray-900">Community</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Join our community of developers and technology professionals.
+                </p>
+                <Button variant="outline" className="w-full">
+                  Join Community
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Need More Help?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Can&apos;t find what you&apos;re looking for? Our team is here to help
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              asChild
+              size="lg"
+              variant="secondary"
+              className="transform hover:scale-105 transition-transform duration-200"
+            >
+              <Link href="/contact">
+                Contact Support
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-blue-600 transform hover:scale-105 transition-all duration-200"
+            >
+              <Link href="/services">
+                Explore Services
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
