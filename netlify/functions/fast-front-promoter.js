@@ -1,8 +1,8 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 fast-front-promoter function triggered');
+    console.log('fast-front-promoter function triggered');
     
-    // Fast front promotion logic
+    // Basic fast front promotion logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,26 +10,20 @@ exports.handler = async function(event, context) {
         message: 'Fast front promoter function executed successfully',
         timestamp: timestamp,
         function: 'fast-front-promoter',
-        action: 'rapid_front_promotion',
-        promotionsExecuted: 8,
-        contentOptimized: 15,
-        userEngagement: 'increased',
-        conversionRate: 'improved',
-        nextActions: ['optimize-landing', 'enhance-cta', 'a-b-test']
+        action: 'front_promotion'
       })
     };
     
-    console.log('✅ fast-front-promoter completed successfully');
+    console.log('fast-front-promoter completed successfully');
     return result;
     
   } catch (error) {
-    console.error('❌ fast-front-promoter failed:', error);
+    console.error('fast-front-promoter error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Fast front promoter function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message
       })
     };
   }

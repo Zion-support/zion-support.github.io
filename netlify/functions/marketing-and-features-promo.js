@@ -1,8 +1,8 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 marketing-and-features-promo function triggered');
+    console.log('marketing-and-features-promo function triggered');
     
-    // Marketing and features promotion logic
+    // Basic marketing and features promotion logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,23 +10,20 @@ exports.handler = async function(event, context) {
         message: 'Marketing and features promo function executed successfully',
         timestamp: timestamp,
         function: 'marketing-and-features-promo',
-        action: 'feature_promotion',
-        features: ['ai-automation', 'cloud-orchestration', 'performance-optimization'],
-        marketingChannels: ['homepage', 'social-media', 'email']
+        action: 'promotion'
       })
     };
     
-    console.log('✅ marketing-and-features-promo completed successfully');
+    console.log('marketing-and-features-promo completed successfully');
     return result;
     
   } catch (error) {
-    console.error('❌ marketing-and-features-promo failed:', error);
+    console.error('marketing-and-features-promo error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Marketing and features promo function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message
       })
     };
   }

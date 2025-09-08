@@ -1,8 +1,8 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 readme-advertiser function triggered');
+    console.log('readme-advertiser function triggered');
     
-    // README advertising logic
+    // Basic README advertising logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -11,22 +11,20 @@ exports.handler = async function(event, context) {
         timestamp: timestamp,
         function: 'readme-advertiser',
         action: 'readme_promotion',
-        features: ['automation', 'orchestration', 'optimization'],
-        targetAudience: 'developers'
+        promotion_status: 'active'
       })
     };
     
-    console.log('✅ readme-advertiser completed successfully');
+    console.log('readme-advertiser completed successfully');
     return result;
     
   } catch (error) {
-    console.error('❌ readme-advertiser failed:', error);
+    console.error('readme-advertiser error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'README advertiser function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message
       })
     };
   }

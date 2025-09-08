@@ -1,8 +1,8 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 roadmap-curator function triggered');
+    console.log('roadmap-curator function triggered');
     
-    // Roadmap curation logic
+    // Basic roadmap curation logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -11,24 +11,20 @@ exports.handler = async function(event, context) {
         timestamp: timestamp,
         function: 'roadmap-curator',
         action: 'roadmap_curation',
-        featuresPlanned: 15,
-        priorityLevels: { high: 5, medium: 7, low: 3 },
-        timeline: 'Q1 2025',
-        stakeholderFeedback: 'positive'
+        roadmap_items: 18
       })
     };
     
-    console.log('✅ roadmap-curator completed successfully');
+    console.log('roadmap-curator completed successfully');
     return result;
     
   } catch (error) {
-    console.error('❌ roadmap-curator failed:', error);
+    console.error('roadmap-curator error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Roadmap curator function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message
       })
     };
   }

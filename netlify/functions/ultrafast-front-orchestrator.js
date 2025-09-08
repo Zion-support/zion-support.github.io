@@ -1,8 +1,8 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 ultrafast-front-orchestrator function triggered');
+    console.log('ultrafast-front-orchestrator function triggered');
     
-    // Ultrafast front orchestration logic
+    // Basic ultrafast front orchestration logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,26 +10,21 @@ exports.handler = async function(event, context) {
         message: 'Ultrafast front orchestrator function executed successfully',
         timestamp: timestamp,
         function: 'ultrafast-front-orchestrator',
-        action: 'ultra_rapid_frontend_orchestration',
-        orchestrationSpeed: 'ultrafast',
-        optimizationsApplied: 15,
-        performanceGain: '45%',
-        userExperience: 'lightning-fast',
-        nextPhase: ['real-time-optimization', 'predictive-enhancement', 'ai-driven-orchestration']
+        action: 'front_orchestration',
+        speed: 'ultra_fast'
       })
     };
     
-    console.log('✅ ultrafast-front-orchestrator completed successfully');
+    console.log('ultrafast-front-orchestrator completed successfully');
     return result;
     
   } catch (error) {
-    console.error('❌ ultrafast-front-orchestrator failed:', error);
+    console.error('ultrafast-front-orchestrator error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Ultrafast front orchestrator function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message
       })
     };
   }

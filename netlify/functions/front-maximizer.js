@@ -1,8 +1,8 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 front-maximizer function triggered');
+    console.log('front-maximizer function triggered');
     
-    // Front maximization logic
+    // Basic front maximization logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,26 +10,21 @@ exports.handler = async function(event, context) {
         message: 'Front maximizer function executed successfully',
         timestamp: timestamp,
         function: 'front-maximizer',
-        action: 'frontend_maximization',
-        optimizationsApplied: 12,
-        performanceGain: '28%',
-        userEngagement: 'increased',
-        conversionOptimization: 'enabled',
-        nextPhase: ['advanced-analytics', 'personalization', 'ai-optimization']
+        action: 'front_maximization',
+        optimization_level: 'maximum'
       })
     };
     
-    console.log('✅ front-maximizer completed successfully');
+    console.log('front-maximizer completed successfully');
     return result;
     
   } catch (error) {
-    console.error('❌ front-maximizer failed:', error);
+    console.error('front-maximizer error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Front maximizer function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message
       })
     };
   }

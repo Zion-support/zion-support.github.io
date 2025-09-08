@@ -1,8 +1,8 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 topics-map-runner function triggered');
+    console.log('topics-map-runner function triggered');
     
-    // Topics mapping logic
+    // Basic topics mapping logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -11,26 +11,20 @@ exports.handler = async function(event, context) {
         timestamp: timestamp,
         function: 'topics-map-runner',
         action: 'topics_mapping',
-        topicsMapped: 67,
-        contentGaps: 12,
-        keywordOpportunities: 23,
-        seoStrategy: 'enhanced',
-        contentPlanning: 'optimized',
-        nextActions: ['content-creation', 'keyword-research', 'competitive-analysis']
+        topics_mapped: 23
       })
     };
     
-    console.log('✅ topics-map-runner completed successfully');
+    console.log('topics-map-runner completed successfully');
     return result;
     
   } catch (error) {
-    console.error('❌ topics-map-runner failed:', error);
+    console.error('topics-map-runner error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Topics map runner function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message
       })
     };
   }

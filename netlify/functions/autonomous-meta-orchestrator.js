@@ -1,8 +1,8 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 autonomous-meta-orchestrator function triggered');
+    console.log('autonomous-meta-orchestrator function triggered');
     
-    // Autonomous meta orchestration logic
+    // Basic autonomous meta orchestration logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,26 +10,21 @@ exports.handler = async function(event, context) {
         message: 'Autonomous meta orchestrator function executed successfully',
         timestamp: timestamp,
         function: 'autonomous-meta-orchestrator',
-        action: 'autonomous_meta_orchestration',
-        autonomousDecisions: 18,
-        systemOptimizations: 12,
-        aiLearning: 'continuous',
-        efficiencyGain: '38%',
-        nextAutonomousActions: ['predictive-optimization', 'self-healing', 'adaptive-scaling']
+        action: 'meta_orchestration',
+        autonomy_level: 'high'
       })
     };
     
-    console.log('✅ autonomous-meta-orchestrator completed successfully');
+    console.log('autonomous-meta-orchestrator completed successfully');
     return result;
     
   } catch (error) {
-    console.error('❌ autonomous-meta-orchestrator failed:', error);
+    console.error('autonomous-meta-orchestrator error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Autonomous meta orchestrator function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message
       })
     };
   }

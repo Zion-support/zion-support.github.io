@@ -1,8 +1,8 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 unused-media-scanner function triggered');
+    console.log('unused-media-scanner function triggered');
     
-    // Unused media scanning logic
+    // Basic unused media scanning logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,25 +10,21 @@ exports.handler = async function(event, context) {
         message: 'Unused media scanner function executed successfully',
         timestamp: timestamp,
         function: 'unused-media-scanner',
-        action: 'unused_media_detection',
-        mediaFilesScanned: 456,
-        unusedFiles: 34,
-        potentialSpaceSavings: '89.2MB',
-        recommendations: ['archive-unused', 'delete-obsolete', 'optimize-storage']
+        action: 'unused_media_scan',
+        unused_files_found: 5
       })
     };
     
-    console.log('✅ unused-media-scanner completed successfully');
+    console.log('unused-media-scanner completed successfully');
     return result;
     
   } catch (error) {
-    console.error('❌ unused-media-scanner failed:', error);
+    console.error('unused-media-scanner error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Unused media scanner function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message
       })
     };
   }

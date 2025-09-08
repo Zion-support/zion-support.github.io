@@ -1,8 +1,8 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 front-index-orchestrator function triggered');
+    console.log('front-index-orchestrator function triggered');
     
-    // Front index orchestration logic
+    // Basic front index orchestration logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,26 +10,20 @@ exports.handler = async function(event, context) {
         message: 'Front index orchestrator function executed successfully',
         timestamp: timestamp,
         function: 'front-index-orchestrator',
-        action: 'frontend_index_orchestration',
-        indexesOptimized: 8,
-        searchPerformance: 'improved',
-        contentDiscovery: 'enhanced',
-        userExperience: 'optimized',
-        nextOptimizations: ['faceted-search', 'autocomplete', 'smart-ranking']
+        action: 'index_management'
       })
     };
     
-    console.log('✅ front-index-orchestrator completed successfully');
+    console.log('front-index-orchestrator completed successfully');
     return result;
     
   } catch (error) {
-    console.error('❌ front-index-orchestrator failed:', error);
+    console.error('front-index-orchestrator error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Front index orchestrator function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message
       })
     };
   }

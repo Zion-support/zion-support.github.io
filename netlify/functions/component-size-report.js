@@ -1,8 +1,8 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 component-size-report function triggered');
+    console.log('component-size-report function triggered');
     
-    // Component size reporting logic
+    // Basic component size reporting logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,25 +10,21 @@ exports.handler = async function(event, context) {
         message: 'Component size report function executed successfully',
         timestamp: timestamp,
         function: 'component-size-report',
-        action: 'component_size_analysis',
-        componentsAnalyzed: 67,
-        largestComponents: ['DataTable', 'ChartRenderer', 'FormBuilder'],
-        averageSize: '12.3KB',
-        optimizationOpportunities: 8
+        action: 'size_analysis',
+        components_analyzed: 34
       })
     };
     
-    console.log('✅ component-size-report completed successfully');
+    console.log('component-size-report completed successfully');
     return result;
     
   } catch (error) {
-    console.error('❌ component-size-report failed:', error);
+    console.error('component-size-report error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Component size report function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message
       })
     };
   }

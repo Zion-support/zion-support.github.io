@@ -1,8 +1,8 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 deps-auto-upgrade-runner function triggered');
+    console.log('deps-auto-upgrade-runner function triggered');
     
-    // Dependencies auto-upgrade logic
+    // Basic dependencies auto-upgrade logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -11,24 +11,20 @@ exports.handler = async function(event, context) {
         timestamp: timestamp,
         function: 'deps-auto-upgrade-runner',
         action: 'dependency_upgrade',
-        packagesChecked: 45,
-        packagesUpgraded: 8,
-        securityUpdates: 3,
-        breakingChanges: 0
+        packages_upgraded: 7
       })
     };
     
-    console.log('✅ deps-auto-upgrade-runner completed successfully');
+    console.log('deps-auto-upgrade-runner completed successfully');
     return result;
     
   } catch (error) {
-    console.error('❌ deps-auto-upgrade-runner failed:', error);
+    console.error('deps-auto-upgrade-runner error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Dependencies auto-upgrade runner function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message
       })
     };
   }

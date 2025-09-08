@@ -1,8 +1,8 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 front-visionary-expander function triggered');
+    console.log('front-visionary-expander function triggered');
     
-    // Front visionary expansion logic
+    // Basic front visionary expansion logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,26 +10,20 @@ exports.handler = async function(event, context) {
         message: 'Front visionary expander function executed successfully',
         timestamp: timestamp,
         function: 'front-visionary-expander',
-        action: 'visionary_frontend_expansion',
-        innovationsImplemented: 6,
-        futureFeatures: 12,
-        userExperience: 'revolutionary',
-        competitiveAdvantage: 'significant',
-        nextBreakthroughs: ['ai-powered-ui', 'immersive-experiences', 'predictive-interfaces']
+        action: 'vision_expansion'
       })
     };
     
-    console.log('✅ front-visionary-expander completed successfully');
+    console.log('front-visionary-expander completed successfully');
     return result;
     
   } catch (error) {
-    console.error('❌ front-visionary-expander failed:', error);
+    console.error('front-visionary-expander error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Front visionary expander function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message
       })
     };
   }

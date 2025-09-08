@@ -1,8 +1,8 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 robots-auditor function triggered');
+    console.log('robots-auditor function triggered');
     
-    // Robots.txt auditing logic
+    // Basic robots.txt auditing logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,26 +10,21 @@ exports.handler = async function(event, context) {
         message: 'Robots auditor function executed successfully',
         timestamp: timestamp,
         function: 'robots-auditor',
-        action: 'robots_txt_audit',
-        robotsFileAnalyzed: true,
-        directivesOptimized: 6,
-        crawlEfficiency: 'improved',
-        seoCompliance: 'verified',
-        recommendations: ['add-sitemap', 'optimize-crawl-delay', 'block-unnecessary']
+        action: 'robots_audit',
+        robots_status: 'valid'
       })
     };
     
-    console.log('✅ robots-auditor completed successfully');
+    console.log('robots-auditor completed successfully');
     return result;
     
   } catch (error) {
-    console.error('❌ robots-auditor failed:', error);
+    console.error('robots-auditor error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Robots auditor function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message
       })
     };
   }

@@ -1,8 +1,8 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 front-ads-promoter function triggered');
+    console.log('front-ads-promoter function triggered');
     
-    // Front ads promotion logic
+    // Basic front ads promotion logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,26 +10,21 @@ exports.handler = async function(event, context) {
         message: 'Front ads promoter function executed successfully',
         timestamp: timestamp,
         function: 'front-ads-promoter',
-        action: 'frontend_ad_promotion',
-        adsOptimized: 12,
-        clickThroughRate: '15.2%',
-        conversionOptimization: 'enabled',
-        targetingImproved: true,
-        revenueImpact: 'positive'
+        action: 'ads_promotion',
+        ads_active: true
       })
     };
     
-    console.log('✅ front-ads-promoter completed successfully');
+    console.log('front-ads-promoter completed successfully');
     return result;
     
   } catch (error) {
-    console.error('❌ front-ads-promoter failed:', error);
+    console.error('front-ads-promoter error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Front ads promoter function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message
       })
     };
   }

@@ -1,8 +1,8 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 sitemap_runner function triggered');
+    console.log('sitemap_runner function triggered');
     
-    // Sitemap generation logic
+    // Basic sitemap generation logic
     const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
@@ -10,23 +10,20 @@ exports.handler = async function(event, context) {
         message: 'Sitemap runner function executed successfully',
         timestamp: timestamp,
         function: 'sitemap_runner',
-        action: 'sitemap_generation',
-        pages: ['/', '/about', '/contact', '/docs'],
-        lastUpdated: timestamp
+        action: 'sitemap_generation'
       })
     };
     
-    console.log('✅ sitemap_runner completed successfully');
+    console.log('sitemap_runner completed successfully');
     return result;
     
   } catch (error) {
-    console.error('❌ sitemap_runner failed:', error);
+    console.error('sitemap_runner error:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Sitemap runner function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message
       })
     };
   }
