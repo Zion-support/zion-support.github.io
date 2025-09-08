@@ -6,7 +6,13 @@
 
 [build.environment]
   NODE_VERSION = "20"
+<<<<<<< HEAD
+  PYTHON_VERSION = "3.12"
+  PIP_CACHE_DIR = "/opt/buildhome/.cache/pip"
+  MISE_SETTINGS_PYTHON_COMPILE = "false"
+=======
   PYTHON_VERSION = "3.10"
+>>>>>>> origin/cursor/build-and-dependency-installation-failure-36be
 
 [[plugins]]
   package = "netlify-plugin-compress"
