@@ -6,9 +6,6 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  PYTHON_VERSION = "3.11"
-  MISE_PYTHON_COMPILE = "false"
-  # Disable Netlify's auto dependency installers; we handle installs in the build command
   NETLIFY_SKIP_INSTALL = "true"
   NETLIFY_SKIP_BUILD = "true"
   # Avoid optional binary downloads (electron, playwright, cypress)
