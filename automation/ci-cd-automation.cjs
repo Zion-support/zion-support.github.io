@@ -1,101 +1,132 @@
-#!/usr/bin/env node;
-ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
-cursor/website-audit-and-update-with-deployment-76dc;
-cursor/fix-lint-push-and-merge-to-main-f3c1;
+#!/usr/bin/env node
+
+/**
+ * CI/CD Automation Script
+ * Replaces GitHub Actions CI/CD Pipeline
+ * Runs: npm ci, npm run verify, npm run build
+ */
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+
 class CICDAutomation {
-  // TODO: Implement
-}
   constructor() {
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-main
-
-
-
-
-
-
-
-
-
-
-#!/usr/bin/env node;
-
-ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
-cursor/website-audit-and-update-with-deployment-76dc;
-cursor/fix-lint-push-and-merge-to-main-f3c1;"
-class CICDAutomation {}
-  constructor() {}
-this.logFile = path.join(__dirname, 'logs', 'ci-cd-automation.log');ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
-cursor/website-audit-and-update-with-deployment-76dc;
-cursor/fix-lint-push-and-merge-to-main-f3c1;
+    this.workspace = process.cwd();
+    this.logFile = path.join(this.workspace, 'logs', 'ci-cd.log');
     this.ensureLogDir();
-  };
-  ensureLogDir() {}
+  }
+
+  ensureLogDir() {
     const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { "recursive": true }
-});
-    };
-  };
-  log(message) {}
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
+  }
+
+  log(message) {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;`
-console.log(message);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
-    fs.appendFileSync(this.logFile, logMessage)
-  async runTests() {}
-    try {}"
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(message);
+    fs.appendFileSync(this.logFile, logMessage);
+  }
 
+  async runCommand(command, description) {
+    try {
+      this.log(`Starting: ${description}`);
+      const output = execSync(command, { 
+        cwd: this.workspace, 
+        encoding: 'utf8',
+        stdio: 'pipe'
+      });
+      this.log(`✅ Success: ${description}`);
+      if (output) {
+        this.log(`Output: ${output.substring(0, 500)}...`);
+      }
+      return true;
+    } catch (error) {
+      this.log(`❌ Error in ${description}: ${error.message}`);
+      if (error.stdout) {
+        this.log(`STDOUT: ${error.stdout}`);
+      }
+      if (error.stderr) {
+        this.log(`STDERR: ${error.stderr}`);
+      }
       return false;
-    };
-  };
-ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
-cursor/website-audit-and-update-with-deployment-76dc;
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-  async runBuild() {}
-    try {}
-      this.log('Running build...')
-      execSync('npm run build', { "stdio": 'pipe' }
-})
-      this.log('Build completed successfully')
-      return true
-    } catch (error) {}
-      this.log(`Build "failed": ${error.message}`);
-      return false;
-    };
-  };
-cursor/fix-lint-push-and-merge-to-main-f3c1;
+    }
+  }
 
-async runLint() {}
+  async installDependencies() {
+    return await this.runCommand(
+      'npm ci --no-audit --no-fund',
+      'Installing dependencies'
+    );
+  }
 
-      "build": await this.runBuild();"
-    const allPassed = Object.values(results).every(result => result)
-  if($2) {}"
-      this.log('CI/CD pipeline completed successfully')
-    } else {}
-      this.log('CI/CD pipeline failed - some steps did not pass')
-  async start() {}
-    this.log('CI/CD automation service started')
-    // Run initial pipeline
-    await this.runCIPipeline()
-    // Set up interval for periodic CI/CD (every 4 hours)
-    setInterval(async () => {}
-      await this.runCIPipeline();
-    }, 4 * 60 * 60 * 1000);
-  };
-};
-// Start the automation if this file is run directly;
-if (require.main === module) {}
+  async runVerify() {
+    return await this.runCommand(
+      'npm run verify',
+      'Running verification (type-check, lint, tests)'
+    );
+  }
+
+  async runBuild() {
+    return await this.runCommand(
+      'npm run build',
+      'Building application'
+    );
+  }
+
+  async runTests() {
+    return await this.runCommand(
+      'npm run test:smoke',
+      'Running smoke tests'
+    );
+  }
+
+  async runCICDPipeline() {
+    this.log('🚀 Starting CI/CD Pipeline Automation');
+    
+    const steps = [
+      { name: 'Install Dependencies', fn: () => this.installDependencies() },
+      { name: 'Run Verification', fn: () => this.runVerify() },
+      { name: 'Run Build', fn: () => this.runBuild() },
+      { name: 'Run Tests', fn: () => this.runTests() }
+    ];
+
+    let allPassed = true;
+    
+    for (const step of steps) {
+      const success = await step.fn();
+      if (!success) {
+        allPassed = false;
+        this.log(`❌ CI/CD Pipeline failed at step: ${step.name}`);
+        break;
+      }
+    }
+
+    if (allPassed) {
+      this.log('✅ CI/CD Pipeline completed successfully');
+    } else {
+      this.log('❌ CI/CD Pipeline failed');
+    }
+
+    return allPassed;
+  }
+}
+
+// Main execution
+if (require.main === module) {
   const automation = new CICDAutomation();
-  automation.start().catch(console.error);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
-cursor/website-audit-and-update-with-deployment-76dc;
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-};
+  
+  automation.runCICDPipeline()
+    .then(success => {
+      process.exit(success ? 0 : 1);
+    })
+    .catch(error => {
+      automation.log(`Fatal error: ${error.message}`);
+      process.exit(1);
+    });
+}
+
 module.exports = CICDAutomation;

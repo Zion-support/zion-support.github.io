@@ -24,6 +24,7 @@ module.exports = {
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
       env: {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '600000' // 10 minutes
@@ -205,156 +206,74 @@ module.exports = {
 
     // 🔧 NEW: TypeScript Error Fixer - runs every 10 minutes (HIGHEST PRIORITY)
     {
-      name: 'typescript-error-fixer',
-      script: './scripts/automation/typescript-error-fixer.cjs',
+      name: 'ci-cd-automation',
+      script: 'automation/ci-cd-automation.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
+      cron_restart: '0 */4 * * *', // Restart every 4 hours
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '600000' // 10 minutes
-      }
+        LOG_LEVEL: 'info'
+      },
+      log_file: './logs/ci-cd.log',
+      out_file: './logs/ci-cd-out.log',
+      error_file: './logs/ci-cd-error.log',
+      time: true
     },
 
     // 🎨 NEW: Lucide React Icon Fixer - runs every 20 minutes
     {
-      name: 'lucide-react-icon-fixer',
-      script: './scripts/automation/lucide-react-fixer.cjs',
+      name: 'continuous-improvement',
+      script: 'automation/continuous-improvement.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      cron_restart: '0 */3 * * *', // Restart every 3 hours
+      env: {
+        NODE_ENV: 'production',
+        LOG_LEVEL: 'info'
+      },
+      log_file: './logs/continuous-improvement.log',
+      out_file: './logs/continuous-improvement-out.log',
+      error_file: './logs/continuous-improvement-error.log',
+      time: true
+    },
+    {
+      name: 'quality-checks',
+      script: 'automation/lint-automation.js',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
+      cron_restart: '0 */3 * * *', // Restart every 3 hours
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1200000' // 20 minutes
-      }
+        LOG_LEVEL: 'info'
+      },
+      log_file: './logs/quality-checks.log',
+      out_file: './logs/quality-checks-out.log',
+      error_file: './logs/quality-checks-error.log',
+      time: true
     },
-
-    // 📊 NEW: Error Monitoring Dashboard - runs every 5 minutes (HIGHEST PRIORITY)
     {
-      name: 'error-monitoring-dashboard',
-      script: './scripts/automation/error-monitoring-dashboard.cjs',
+      name: 'performance-monitor',
+      script: 'automation/build-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '300000' // 5 minutes
-      }
-    },
-
-    // 🆕 NEW: TypeScript Error Fixer - runs every 30 minutes (HIGH PRIORITY)
-    {
-      name: 'typescript-error-fixer',
-      script: './scripts/automation/typescript-error-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
-      }
-    },
-
-    // 🆕 NEW: Project Health Monitor - runs every hour
-    {
-      name: 'project-health-monitor',
-      script: './scripts/automation/project-health-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
-      }
-    },
-
-    // 🆕 NEW: Error Fixing Orchestrator - runs every 15 minutes (HIGHEST PRIORITY)
-    {
-      name: 'error-fixing-orchestrator',
-      script: './scripts/automation/error-fixing-orchestrator.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '900000' // 15 minutes
-      }
-    },
-
-    // Enhanced Error Fixer - runs every 10 minutes (HIGHEST PRIORITY)
-    {
-      name: 'enhanced-error-fixer',
-      script: './scripts/automation/enhanced-error-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '600000' // 10 minutes
-      }
-    },
-
-    // Automation Orchestrator - coordinates all automations
-    {
-      name: 'automation-orchestrator',
-      script: './scripts/automation/automation-orchestrator.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '300000' // 5 minutes
-      }
-    },
-
-    // 🚨 NEW: Error Fix Automation Orchestrator - runs continuously (HIGHEST PRIORITY)
-    {
-      name: 'error-fix-orchestrator',
-      script: './scripts/automation/error-fix-orchestrator.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '60000' // 1 minute (continuous monitoring)
-      }
-    },
-
-    // 🔧 NEW: Core Error Fixer - runs every 15 minutes (HIGHEST PRIORITY)
-    {
-      name: 'core-error-fixer',
-      script: './scripts/automation/error-fix-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '900000' // 15 minutes
-      }
-    },
-
-    // 🤖 NEW: AI Code Optimizer - runs every hour
-    {
-      name: 'automation-dashboard',
-      script: './scripts/automation/automation-dashboard.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '60000' // 1 minute
-      }
+        LOG_LEVEL: 'info'
+      },
+      log_file: './logs/performance-monitor.log',
+      out_file: './logs/performance-monitor-out.log',
+      error_file: './logs/performance-monitor-error.log',
+      time: true
     }
   ],
 

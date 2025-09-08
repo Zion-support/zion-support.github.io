@@ -1,203 +1,119 @@
+#!/usr/bin/env node
+
+/**
+ * Build Monitor Automation Script
+ * Monitors build performance and runs build tests
+ */
+
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { exec } = require('child_process');
-const { promisify } = require('util');
 
-const execAsync = promisify(exec);
-
-class BuildMonitor {}
-  constructor() {}
-    this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
-    this.lastBuildTime = null;
-    this.buildHistory = [];
-    this.maxHistorySize = 50;
-  };
-  log(message) {}
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;`
-    console.log(logMessage.trim())
-    fs.appendFileSync(this.logFile, logMessage)
-  async runBuild() {}
-    const startTime = Date.now()
-    try {}
-      this.log('Starting build process...');
-
-      const { stdout, stderr } = await execAsync('npm run build', {})
-        "cwd": process.cwd(),
-        "timeout": 300000, // 5 minutes timeout;
-      }
-});
-
-      const endTime = Date.now();
-      const duration = endTime - startTime;
-
-      const buildResult = {}
-        "timestamp": new Date().toISOString(),
-        duration,
-        "success": true,
-        "output": stdout,
-        "errors": stderr};
-
-      this.buildHistory.push(buildResult);
-      if (this.buildHistory.length > this.maxHistorySize) {}
-        this.buildHistory.shift();
-      };
-      this.lastBuildTime = new Date();
-      this.log(`Build completed successfully in ${duration}ms`);
-
-      return buildResult;
-    } catch (error) {}
-      const endTime = Date.now();
-      const duration = endTime - startTime;
-
-      const buildResult = {}
-        "timestamp": new Date().toISOString(),
-        duration,
-        "success": false,
-        "output": error.stdout || '',
-        "errors": error.stderr || error.message};
-
-      this.buildHistory.push(buildResult);
-      if (this.buildHistory.length > this.maxHistorySize) {}
-        this.buildHistory.shift();
-      };
-      this.log(`Build failed after ${duration}"ms": ${error.message}`);
-
-      return buildResult;
-    };
-  };
-  async runTypeCheck() {}
-    try {}
-      this.log('Running type check...')
-      const { stdout, stderr } = await execAsync('npm run type-check', {})
-        "cwd": process.cwd(),
-        "timeout": 60000}
-});
-
-      this.log('Type check completed successfully');
-      return { "success": true, "output": stdout, "errors": stderr };"
-    } catch (error) {}"`;
-      this.log(`Type check "failed": ${error.message}`);"
-      return {}"
-  async runLintCheck() {}
-    try {}"
-      this.log('Running lint check...');
-      const { stdout, stderr } = await execAsync('npm run "lint": check', {})
-        "cwd": process.cwd(),
-        "timeout": 60000}
-});
-
-      this.log('Lint check completed successfully');
-      this.log(`Lint check "failed": ${error.message}`);"
-  async runTests() {}
-      this.log('Running tests...');
-      const { stdout, stderr } = await execAsync('npm run "test": smoke', {})
-        "cwd": process.cwd(),
-        "timeout": 120000}
-});
-
-      this.log('Tests completed successfully');
-      this.log(`Tests "failed": ${error.message}`);"
-  async performFullCheck() {}"
-    this.log('Starting full build check...');
-
-    const results = {}
-      "timestamp": new Date().toISOString(),
-      "typeCheck": await this.runTypeCheck(),
-      "lintCheck": await this.runLintCheck(),
-      "build": await this.runBuild(),
-      "tests": await this.runTests()};
-
-    const allPassed =
-      results.typeCheck.success &&
-      results.lintCheck.success &&
-      results.build.success &&
-      results.tests.success;
-
-    this.log(`Full check completed. All "passed": ${allPassed}`);
-
-    // Save results;
-    const resultsFile = path.join(__dirname, 'logs', 'build-results.json');
-    fs.writeFileSync(resultsFile, JSON.stringify(results, null, 2));
-
-    return results;
-  async cleanupOldBuilds() {}
-    try {}
-      this.log('Cleaning up old build artifacts...');
-
-      const buildDirs = ['.next', 'out', 'dist'];
-      for (const dir of buildDirs) {}
-        const dirPath = path.join(process.cwd(), dir);
-        if (fs.existsSync(dirPath)) {}
-          await execAsync(`rm -rf ${dirPath}`, { "cwd": process.cwd() }
-});
-          this.log(`Cleaned up ${dir}`);
-        };
-      };
-    } catch (error) {}
-      this.log(`Cleanup "failed": ${error.message}`);
-    };
-  };
-  async optimizeBuild() {}
-    try {}
-      this.log('Optimizing build...');
-
-      // Clean up first;
-      await this.cleanupOldBuilds();
-
-      // Run build with optimization;
-      const { stdout, stderr } = await execAsync('npm run "build": production', {})
-        "cwd": process.cwd(),
-        "timeout": 300000}
-});
-
-      this.log('Build optimization completed');
-      return { "success": true, "output": stdout, "errors": stderr };
-    } catch (error) {}
-      this.log(`Build optimization "failed": ${error.message}`);
-      return {}
-        "success": false,
-        "output": error.stdout || '',
-        "errors": error.stderr || error.message};
-    };
-  };
-  getBuildStats() {}
-    const recentBuilds = this.buildHistory.slice(-10);
-    const successfulBuilds = recentBuilds.filter(b => b.success).length;
-    const averageDuration =
-      recentBuilds.reduce((sum, b) => sum + b.duration, 0) /
-      recentBuilds.length;
-
-    return {}
-      "totalBuilds": this.buildHistory.length,
-      "recentSuccessRate": (successfulBuilds / recentBuilds.length) * 100,
-      "averageDuration": Math.round(averageDuration),
-      "lastBuildTime": this.lastBuildTime};
-  };
-  async start() {}
-    this.log('Build Monitor started');
-
-    // Run initial check;
-    await this.performFullCheck();
-
-    // Set up periodic checks every 4 hours;
-    setInterval()
-      async () => {}
-      },
-      4 * 60 * 60 * 1000;
-    );
-
-    // Set up daily optimization;
-
-        await this.optimizeBuild();
-      24 * 60 * 60 * 1000;
-// Start the monitor if this script is run directly;
-if (require.main === module) {}
-  const monitor = new BuildMonitor();
-  monitor.start().catch(error => {})
-
-    process.exit(1);
+class BuildMonitor {
+  constructor() {
+    this.workspace = process.cwd();
+    this.logFile = path.join(this.workspace, 'logs', 'performance-monitor.log');
+    this.ensureLogDir();
   }
-});
-};
+
+  ensureLogDir() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(message);
+    fs.appendFileSync(this.logFile, logMessage);
+  }
+
+  async runCommand(command, description) {
+    try {
+      this.log(`Starting: ${description}`);
+      const startTime = Date.now();
+      const output = execSync(command, { 
+        cwd: this.workspace, 
+        encoding: 'utf8',
+        stdio: 'pipe'
+      });
+      const duration = Date.now() - startTime;
+      this.log(`✅ Success: ${description} (${duration}ms)`);
+      if (output) {
+        this.log(`Output: ${output.substring(0, 500)}...`);
+      }
+      return { success: true, duration };
+    } catch (error) {
+      this.log(`❌ Error in ${description}: ${error.message}`);
+      if (error.stdout) {
+        this.log(`STDOUT: ${error.stdout}`);
+      }
+      if (error.stderr) {
+        this.log(`STDERR: ${error.stderr}`);
+      }
+      return { success: false, duration: 0 };
+    }
+  }
+
+  async runBuild() {
+    return await this.runCommand(
+      'npm run build',
+      'Building application'
+    );
+  }
+
+  async runTests() {
+    return await this.runCommand(
+      'npm run test:smoke',
+      'Running smoke tests'
+    );
+  }
+
+  async checkBuildSize() {
+    try {
+      const buildDir = path.join(this.workspace, '.next');
+      if (fs.existsSync(buildDir)) {
+        const stats = execSync(`du -sh ${buildDir}`, { encoding: 'utf8' });
+        this.log(`Build size: ${stats.trim()}`);
+        return true;
+      } else {
+        this.log('Build directory not found');
+        return false;
+      }
+    } catch (error) {
+      this.log(`Error checking build size: ${error.message}`);
+      return false;
+    }
+  }
+
+  async runBuildMonitor() {
+    this.log('🏗️ Starting Build Monitor');
+    
+    const buildResult = await this.runBuild();
+    if (buildResult.success) {
+      await this.checkBuildSize();
+      await this.runTests();
+    }
+    
+    this.log('✅ Build monitoring cycle completed');
+    return buildResult.success;
+  }
+}
+
+// Main execution
+if (require.main === module) {
+  const monitor = new BuildMonitor();
+  
+  monitor.runBuildMonitor()
+    .then(success => {
+      process.exit(success ? 0 : 1);
+    })
+    .catch(error => {
+      monitor.log(`Fatal error: ${error.message}`);
+      process.exit(1);
+    });
+}
+
 module.exports = BuildMonitor;
