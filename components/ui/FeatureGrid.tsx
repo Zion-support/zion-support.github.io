@@ -1,21 +1,42 @@
-import { Bot, Briefcase, MessageSquare, ShieldCheck, Rocket, Trophy } from 'lucide-react';
-import FuturisticCard from './FuturisticCard';
-
 export default function FeatureGrid() {
-  const items = [
-    { title: 'AI Talent Marketplace', description: 'Discover vetted AI engineers, data scientists, and agents.', Icon: Bot },
-    { title: 'Post & Match', description: 'Post jobs and get intelligent, auto-matched proposals.', Icon: Briefcase },
-    { title: 'Secure Messaging', description: 'Encrypted inbox with file sharing and structured threads.', Icon: MessageSquare },
-    { title: 'Trust & Safety', description: 'Identity checks, NDAs, and milestone escrow.', Icon: ShieldCheck },
-    { title: 'Faster Delivery', description: 'Templates, automations, and reusable components.', Icon: Rocket },
-    { title: 'Quality Outcomes', description: 'Reviews, benchmarks, and continuous verification.', Icon: Trophy },
+  const features = [
+    {
+      title: 'In‑App Video Interviews',
+      desc: 'Schedule and run interviews with Zoom/Meet links and countdown timers.',
+    },
+    {
+      title: 'Smart Calendar Logic',
+      desc: 'Duration presets, availability, and reminders 30 minutes before.',
+    },
+    {
+      title: 'Operated Workflows',
+      desc: 'Auto-generate summaries and email confirmations to both parties.',
+    },
+    {
+      title: 'Secure Access Control',
+      desc: 'Only the involved client and talent can view and join interviews.',
+    },
+    {
+      title: 'Talent Marketplace',
+      desc: 'Curated AI, cloud, data and product experts with transparent pricing.',
+    },
+    {
+      title: 'End‑to‑End Engagements',
+      desc: 'From discovery chat to delivery with dashboards and status logging.',
+    },
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {items.map((it) => (
-        <FuturisticCard key={it.title} {...it} />
-      ))}
-    </div>
+    <section className="enhanced-card">
+      <h2 className="text-xl md:text-2xl font-semibold">Capabilities</h2>
+      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {features.map((f) => (
+          <div key={f.title} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 hover:shadow-md transition-shadow">
+            <h3 className="font-medium">{f.title}</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{f.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }

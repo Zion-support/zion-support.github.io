@@ -1,22 +1,24 @@
 import Link from 'next/link';
 import AnimatedBackground from './AnimatedBackground';
 
-interface FuturisticHeroProps {
-  children: ReactNode;
-  title?: string;
-  subtitle?: string;
-  className?: string}
-
-export default function FuturisticHero({ 
-  children, 
-  title, 
-  subtitle, 
-  className = "bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20" 
-}: FuturisticHeroProps) {
+export default function FuturisticHero() {
   return (
-    <div className={className}>
-      <div className="container mx-auto px-4 text-center">
-        {title && <h1 className="text-4xl md:text-6xl font-bold mb-6">{title}</h1>}, {subtitle && <p className="text-xl md:text-2xl mb-8 opacity-90">{subtitle}</p>}, {children}
+    <section className="relative isolate overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-8 md:p-12 shadow-sm">
+      <AnimatedBackground />
+      <div className="relative z-10">
+        <div className="max-w-3xl">
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">
+            Build Faster with Zion AI Marketplace
+          </h1>
+          <p className="mt-4 text-gray-600 dark:text-gray-300 text-base md:text-lg">
+            Discover top AI talent and services. Chat, scope, and schedule in-app video interviews with real-time calendar logic and secure workflows.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link href="/services"><a className="enhanced-button enhanced-button-primary">Explore Services</a></Link>
+            <Link href="/interviews"><a className="enhanced-button enhanced-button-secondary">Schedule Interview</a></Link>
+          </div>
+        </div>
       </div>
-    </div>
-  )}
+    </section>
+  );
+}

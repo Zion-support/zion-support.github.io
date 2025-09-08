@@ -1,24 +1,42 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+import fs from 'fs';
+import path from 'path';
 
-export default class ZionDocument extends Document {
-	render() {
-		return (
-			<Html lang="en">
-				<Head>
-					<meta name="viewport" content="width=device-width, initial-scale=1" />
-					<meta name="theme-color" content="#020617" />
-					<meta name="color-scheme" content="dark light" />
-					<link rel="icon" href="/og/zion-tech-group.svg" type="image/svg+xml" />
-					<link rel="manifest" href="/manifest.webmanifest" />
-					<link rel="preconnect" href="https://fonts.googleapis.com" />
-					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-					<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-				</Head>
-				<body className="bg-slate-950 text-white">
-					<Main />
-					<NextScript />
-				</body>
-			</Html>
-		);
-	}
+function readSchema(name: string): string | null {
+  try {
+    const p = path.join(process.cwd(), 'data', 'schema', `${name}.json`);
+    if (!fs.existsSync(p)) return null;
+    return fs.readFileSync(p, 'utf8');
+  } catch {
+    return null;
+  }
 }
+
+class MyDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
+  }
+
+  render() {
+    const org = readSchema('organization');
+    const site = readSchema('website');
+    const services = readSchema('services');
+
+    return (
+      <Html lang="en">
+        <Head>
+          {org && (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: org }} />)}
+          {site && (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: site }} />)}
+          {services && (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: services }} />)}
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}
+
+export default MyDocument;
