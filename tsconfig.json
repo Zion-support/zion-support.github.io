@@ -14,7 +14,7 @@
       "@/*": ["./src/*"],
       "@/pages/*": ["./src/pages/*"]
     },
-    "types": ["vite/client", "react", "react-router-dom"],
+    "types": ["vite/client", "react", "react-router-dom", "node"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -51,13 +51,12 @@
     "node_modules",
     "dist",
     "build",
+    "src.disabled",
+    "src_disabled_*",
+    "tests",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "src.disabled/**/*",
-    "src_disabled_*/**/*",
-    "**/disabled/**/*",
-    "**/*.disabled/**/*"
+    "**/*.spec.tsx"
   ]
 }
