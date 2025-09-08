@@ -1,16 +1,59 @@
 
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Home, Search, User, Menu } from 'lucide-react';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle, ShoppingCart } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { useAppSelector } from "@/store/hooks";
+import { selectCartCount } from "@/store/cartSlice";
 
 export function MobileBottomNav() {
   const location = useLocation();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+  const cartCount = useAppSelector(selectCartCount);
 
-  const navigation = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'Search', href: '/search', icon: Search },
-    { name: 'Menu', href: '#', icon: Menu, action: 'menu' },
-    { name: 'Profile', href: '/profile', icon: User },
+  const navItems = [
+    {
+      name: "Home",
+      href: "/",
+      icon: Home,
+      matches: (path: string) => path === "/"
+    },
+    {
+      name: "Browse",
+      href: "/talent",
+      icon: Search,
+      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
+    },
+    {
+      name: "Community",
+      href: "/community",
+      icon: MessageCircle,
+      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
+    },
+    {
+      name: "Cart",
+      href: "/cart",
+      icon: ShoppingCart,
+      matches: (path: string) => path.startsWith("/cart"),
+      badge: cartCount
+    },
+    {
+      name: "Messages",
+      href: "/messages",
+      icon: MessageSquare,
+      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
+      badge: unreadCount,
+      authRequired: true
+    },
+    {
+      name: "Dashboard",
+      href: "/dashboard",
+      icon: User,
+      matches: (path: string) => path.startsWith("/dashboard"),
+      authRequired: true
+    }
   ];
 
   const handleMenuClick = (e: React.MouseEvent, item: any) => {

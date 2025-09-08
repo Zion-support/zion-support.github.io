@@ -20,7 +20,8 @@ import { Switch } from '@/components/ui/switch';
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
-import { apiClient } from "@/utils/apiClient";
+import { useAppDispatch } from '@/store/hooks';
+import { addItem } from '@/store/cartSlice';
 
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
 =======
@@ -226,30 +227,15 @@ export default function EquipmentDetail() {
     );
   }
 
-  const handleAddToCart = async () => {
-    setIsAdding(true);
-    try {
-      const res = await fetch('/api/cart/add', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          id: equipment.id,
-          name: equipment.name,
-          price: equipment.price,
-          quantity,
-        }),
-      });
-      const items: CartItem[] = await res.json();
-      dispatch({ type: 'SET_ITEMS', payload: items });
-      toast({
-        title: 'Added to cart',
-        description: `${quantity}x ${equipment.name} added to your cart.`,
-      });
-    } catch {
-      toast({ title: 'Error', description: 'Could not add to cart.' });
-    } finally {
-      setIsAdding(false);
-    }
+  const dispatch = useAppDispatch();
+  const handleAddToCart = () => {
+    dispatch(addItem({
+      id: equipment.id,
+      name: equipment.name,
+      price: equipment.price,
+      quantity,
+    }));
+    toast({ title: 'Added to cart 🛒' });
   };
 
   const handleBuyNow = async () => {

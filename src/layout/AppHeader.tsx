@@ -5,7 +5,18 @@ import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export function AppHeader(): JSX.Element {
+import { useState } from 'react';
+import { useMessaging } from '@/context/MessagingContext';
+import { MainNavigation } from './MainNavigation';
+import { Logo } from '@/components/header/Logo';
+import { ModeToggle } from '@/components/ModeToggle';
+import { Menu, X } from 'lucide-react';
+import { MobileMenu } from '@/components/header/MobileMenu';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+import { CartIcon } from '@/components/CartIcon';
+
+export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -464,121 +475,50 @@ export function AppHeader(): JSX.Element {
   };
   return (
     <>
-      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled 
-          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10' 
-          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'
-      }`}>
-        <div className="container-responsive">
-          <div className="flex h-20 items-center justify-between">
-            {/* Logo */}
-            <div className="flex items-center">
-              <Link to="/" className="flex-shrink-0 group">
-                <div className="flex items-center space-x-3">
-                  <div className="relative">
-                    <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Zap className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-                  </div>
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
-                    Zion Tech Group
-                  </h1>
-                </div>
-              </Link>
-            </div>
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              {navigation.map((item) => (
-                <div key={item.name} className="relative">
-                  {item.hasDropdown ? (
-                    <button
-                      onClick={() => {
-                        // Close other dropdowns
-                        if (item.name === 'Services') {
-                          setServicesDropdownOpen(!servicesDropdownOpen);
-                          setSolutionsDropdownOpen(false);
-                          setCompanyDropdownOpen(false);
-                          setResourcesDropdownOpen(false);
-                        } else if (item.name === 'Solutions') {
-                          setSolutionsDropdownOpen(!solutionsDropdownOpen);
-                          setServicesDropdownOpen(false);
-                          setCompanyDropdownOpen(false);
-                          setResourcesDropdownOpen(false);
-                        } else if (item.name === 'Company') {
-                          setCompanyDropdownOpen(!companyDropdownOpen);
-                          setServicesDropdownOpen(false);
-                          setSolutionsDropdownOpen(false);
-                          setResourcesDropdownOpen(false);
-                        } else if (item.name === 'Resources') {
-                          setResourcesDropdownOpen(!resourcesDropdownOpen);
-                          setServicesDropdownOpen(false);
-                          setSolutionsDropdownOpen(false);
-                          setCompanyDropdownOpen(false);
-                        }
-                      }}
-                      className="flex items-center space-x-1 text-slate-300 hover:text-white transition-colors py-2"
-                    >
-                      <span>{item.name}</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform ${
-                        (item.name === 'Services' && servicesDropdownOpen) ||
-                        (item.name === 'Solutions' && solutionsDropdownOpen) ||
-                        (item.name === 'Company' && companyDropdownOpen) ||
-                        (item.name === 'Resources' && resourcesDropdownOpen) ? 'rotate-180' : ''
-                      }`} />
-                    </button>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200 relative group"
-                    >
-                      {item.name}
-                    </Link>
-                  )}
-                </div>
-              ))}
-            </nav>
-            {/* Right side - Search, Actions, Mobile menu */}
-            <div className="flex items-center space-x-4">
-              {/* Search */}
-              <form onSubmit={handleSearch} className="hidden md:block">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-64 pl-10 pr-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-sm"
-                  />
-                </div>
-              </form>
-              {/* Contact Info */}
-              <div className="hidden lg:flex items-center space-x-4">
-                <a
-                  href={`tel:${contactInfo.phone}`}
-                  className="flex items-center gap-2 text-slate-300 hover:text-cyan-400 transition-colors text-sm"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span className="hidden xl:inline">{contactInfo.phone}</span>
-                </a>
-                <a
-                  href={`mailto:${contactInfo.email}`}
-                  className="flex items-center gap-2 text-slate-300 hover:text-cyan-400 transition-colors text-sm"
-                >
-                  <Mail className="w-4 h-4" />
-                  <span className="hidden xl:inline">{contactInfo.email}</span>
-                </a>
-              </div>
-              {/* CTA Button */}
-              <Link
-                to="/request-quote"
-                className="hidden md:inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white text-sm font-medium rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-              >
-                Get Quote
-              </Link>
-              {/* Theme Toggle */}
-              <ThemeToggle />
+      <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md">
+        <div className="container flex h-16 items-center px-4 sm:px-6">
+          <Logo />
+          <div className="ml-6 flex-1 hidden md:block">
+            <MainNavigation unreadCount={unreadCount} />
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden ml-auto mr-4">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none"
+              aria-expanded={mobileMenuOpen}
+              aria-label="Toggle mobile menu"
+            >
+              <span className="sr-only">Open main menu</span>
+              {mobileMenuOpen ? (
+                <X className="block h-6 w-6" aria-hidden="true" />
+              ) : (
+                <Menu className="block h-6 w-6" aria-hidden="true" />
+              )}
+            </button>
+          </div>
+          <CartIcon className="mx-4" />
+          <ModeToggle />
+        </div>
+      </header>
+      
+      {/* Mobile menu - positioned outside of header to prevent overlap issues */}
+      {mobileMenuOpen && (
+        <div className="md:hidden fixed inset-0 z-40 pt-16">
+          <div 
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <MobileMenu 
+              unreadCount={unreadCount} 
+              onClose={() => setMobileMenuOpen(false)} 
+            />
+          </div>
+        </div>
+      )}
 
               {/* Contact Info */}
               <div className="hidden lg:flex items-center space-x-4 text-sm text-slate-300">
