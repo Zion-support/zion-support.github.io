@@ -1,378 +1,237 @@
-
-import React from
-  'react';
-import { motion } from
-  'framer-motion';
-import { SEO } from
-  '../components/SEO';
-import { Button } from
-  '../components/ui/Button';
-import { Card } from
-  '../components/ui/Card';
-import { Badge } from
-  '../components/ui/Badge';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../components/Layout';
 import { 
-  FileText, Download,
-  Calendar, User,
-  Clock, ArrowRight,
-  Search, Filter,
-  Tag, Eye,
-  Share2, BookOpen,
-  TrendingUp, Brain,
-  Shield, Cloud,
-  Database, Network,
-  Zap, Globe,
-  Phone, Mail,
-  Award, Star,
-  CheckCircle
-} from
-  'lucide-react';
+  Download, 
+  FileText, 
+  Calendar, 
+  User, 
+  ArrowRight, 
+  CheckCircle,
+  BookOpen,
+  Brain,
+  Cloud,
+  Shield,
+  Database,
+  Code
+} from 'lucide-react';
 
-const categories = []
-  "All Papers",
-  "Artificial Intelligence",
-  "Cybersecurity",
-  "Quantum Computing",
-  "Healthcare Technology",
-  "SaaS",
-  "Data Privacy"];
+const whitePapers = [
+  {
+    title: 'AI Implementation Guide for Enterprises',
+    description: 'Comprehensive guide to implementing AI solutions in enterprise environments, including best practices and common pitfalls.',
+    author: 'Dr. Sarah Johnson',
+    date: '2024-01-15',
+    category: 'AI & Machine Learning',
+    downloads: 1250,
+    pages: 45,
+    icon: Brain,
+    downloadUrl: '/downloads/ai-implementation-guide.pdf'
+  },
+  {
+    title: 'Cloud Migration Strategies',
+    description: 'Step-by-step strategies for successful cloud migration, covering AWS, Azure, and Google Cloud platforms.',
+    author: 'Mike Chen',
+    date: '2024-01-10',
+    category: 'Cloud Computing',
+    downloads: 980,
+    pages: 32,
+    icon: Cloud,
+    downloadUrl: '/downloads/cloud-migration-strategies.pdf'
+  },
+  {
+    title: 'Cybersecurity Best Practices 2024',
+    description: 'Latest cybersecurity trends, threats, and best practices for protecting your organization.',
+    author: 'Emily Davis',
+    date: '2024-01-05',
+    category: 'Cybersecurity',
+    downloads: 2100,
+    pages: 28,
+    icon: Shield,
+    downloadUrl: '/downloads/cybersecurity-best-practices-2024.pdf'
+  },
+  {
+    title: 'Database Optimization Techniques',
+    description: 'Advanced techniques for optimizing database performance and scalability in modern applications.',
+    author: 'David Wilson',
+    date: '2023-12-20',
+    category: 'Database',
+    downloads: 750,
+    pages: 38,
+    icon: Database,
+    downloadUrl: '/downloads/database-optimization-techniques.pdf'
+  },
+  {
+    title: 'Microservices Architecture Patterns',
+    description: 'Design patterns and best practices for building scalable microservices architectures.',
+    author: 'Lisa Rodriguez',
+    date: '2023-12-15',
+    category: 'Software Architecture',
+    downloads: 1100,
+    pages: 42,
+    icon: Code,
+    downloadUrl: '/downloads/microservices-architecture-patterns.pdf'
+  },
+  {
+    title: 'DevOps Transformation Guide',
+    description: 'Complete guide to transforming your organization with DevOps practices and culture.',
+    author: 'Alex Thompson',
+    date: '2023-12-10',
+    category: 'DevOps',
+    downloads: 890,
+    pages: 35,
+    icon: BookOpen,
+    downloadUrl: '/downloads/devops-transformation-guide.pdf'
+  }
 ];
 
-  const categories = [
-    { name: "All Categories", count: 24, active: true }, { name: "AI Strategy", count: 6, active: false }, { name: "Security", count: 4, active: false }, { name: "Cloud Computing", count: 5, active: false }, { name: "Analytics", count: 3, active: false }, { name: "Customer Experience", count: 3, active: false }, { name: "Digital Transformation", count: 2, active: false }, { name: "Other", count: 1, active: false }
-  ];
+const categories = [
+  'All',
+  'AI & Machine Learning',
+  'Cloud Computing',
+  'Cybersecurity',
+  'Database',
+  'Software Architecture',
+  'DevOps'
+];
 
-  const featuredPaper = whitePapers.find(paper => paper.featured);
-
+export default function WhitePapersPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="White Papers - Zion Tech Group" 
-        description="Access our comprehensive white papers and research reports on AI, technology trends, and business innovation. Expert insights and actionable strategies."
-      />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <Badge variant="secondary" className="mb-4">
-              <FileText className="w-4 h-4 mr-2" />
-              Research & Insights
-            </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              White Papers
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Access our comprehensive research and insights on the latest technology trends and business strategies.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Featured White Paper */}, {featuredPaper && (
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+    <Layout
+      title="White Papers - Zion Tech Group | Technical Resources"
+      description="Download our comprehensive white papers on technology trends, best practices, and industry insights. Free technical resources for developers and IT professionals."
+      keywords="white papers, technical resources, technology trends, best practices, AI, cloud, cybersecurity, database"
+    >
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
             >
-              <h2 className="text-3xl font-bold text-white mb-8">Featured White Paper</h2>
-              <Card className="overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                  <div className="relative h-64 lg:h-full">
-                    <img 
-                      src={featuredPaper.image} 
-                      alt={featuredPaper.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white">
-                        <Star className="w-4 h-4 mr-1" />
-                        Featured
-                      </Badge>
-                    </div>
-                  </div>
-                  <div className="p-8">
-                    <div className="flex items-center mb-4">
-                      <Badge variant="outline" className="mr-3">{featuredPaper.category}</Badge>
-                      <span className="text-gray-400 text-sm">{featuredPaper.pages} pages</span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-4">{featuredPaper.title}</h3>
-                    <p className="text-gray-300 mb-6">{featuredPaper.description}</p>
-                    
-                    <div className="grid grid-cols-2 gap-4 mb-6">
-                      <div className="text-center">
-                        <div className="text-2xl font-bold text-green-400">{featuredPaper.downloads.toLocaleString()}</div>
-                        <div className="text-sm text-gray-400">Downloads</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-2xl font-bold text-blue-400">{featuredPaper.rating}/5</div>
-                        <div className="text-sm text-gray-400">Rating</div>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center text-gray-400 text-sm">
-                        <User className="w-4 h-4 mr-2" />
-                        {featuredPaper.author}
-                        <Calendar className="w-4 h-4 ml-4 mr-2" />
-                        {new Date(featuredPaper.date).toLocaleDateString()}
-                      </div>
-                      <Button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-                        <Download className="w-4 h-4 mr-2" />
-                        Download Now
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </Card>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                White Papers & Research
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Access our comprehensive collection of technical white papers and research documents. 
+                Free downloads covering AI, cloud solutions, cybersecurity, and more.
+              </p>
             </motion.div>
           </div>
         </section>
-      )}, {/* White Papers Grid */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-8">
-            {/* Main Content */}
-            <div className="lg:w-2/3">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="mb-8"
-              >
-</motion>"
-                <div className="md:flex">"
-</div>"
-                  <div className="md:w-1/3">"
-</div>"
-                    <div className="h-64 md:h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">"
-</div>"
-                      <FileText className="w-24 h-24 text-white" />"
-</FileText>
-                    </div>
-                  </div>"
-                  <div className="md:w-2/3 p-8">"
-</div>"
-                    <div className="flex items-center gap-2 mb-4">"
-</div>"
-                      <Tag className="w-4 h-4 text-blue-600" />"
-</Tag>"
-                      <span className="text-sm text-blue-600 font-medium">"
-</span>
-                      </span>
-                    </div>
-                    "
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">"
-</h2>
-                    </h2>
-                    "
-                    <p className="text-gray-600 mb-6 text-lg">"
-</p>
-                    </p>
-                    "
-                    <div className="flex items-center justify-between text-sm text-gray-500 mb-6">"
-</div>"
-                      <div className="flex items-center gap-4">"
-</div>"
-                        <div className="flex items-center gap-2">"
-</div>"
-                          <User className="w-4 h-4" />"
-</User>
-                          <span>{paper.author}</span>
-                        </div>"
-                        <div className="flex items-center gap-2">"
-</div>"
-                          <Calendar className="w-4 h-4" />"
-</Calendar>
-                          <span>{paper.date}</span>
-                        </div>"
-                        <div className="flex items-center gap-2">"
-</div>"
-                          <Download className="w-4 h-4" />"
-</Download>
-                          <span>{paper.downloadCount} downloads</span>
-                        </div>
-                      </div>
-                      <span>{paper.readTime}</span>
-                    </div>
-                    "
-                    <div className="flex gap-4">"
-</div>
-                      <a;
-                        href={paper.pdfUrl};
-                        download;"
-                        className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-                      >
-</a>"
-                        <Download className="w-4 h-4" />"
-</Download>
-                      </a>"
-                      <button className="inline-flex items-center gap-2 border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors">"
-</button>"
-                        <ExternalLink className="w-4 h-4" />"
-</ExternalLink>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </motion.article>);
-            ))};
-          </div>
-        </div>
-      </section>"
-      <section className="py-8 bg-white">"
-</section>"
-        <div className="container mx-auto px-4">"
-</div>"
-          <div className="max-w-6xl mx-auto">"
-</div>"
-            <div className="flex flex-wrap gap-4 justify-center">"
-</div>
-                <button;
-                  key={index};
-                  className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${`}
-                    index === 0;
-                      ? 'bg-blue-600 text-white'''
-                      : 'bg-gray-100 text-gray-700 hover:bg-blue-50''
-                  }`};
-                >
-</button>
-                </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="py-16">"
-</section>"
-        <div className="container mx-auto px-4">"
-</div>"
-          <div className="max-w-6xl mx-auto">"
-</div>"
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">All White Papers</h2>"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
-</div>
-                <motion.article;
-                  key={paper.id};
-                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ delay: index * 0.1 }};
-                  whileHover={{ y: -5 }};
-                >
-</motion>"
-                  <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">"
-</div>"
-                    <FileText className="w-16 h-16 text-white" />"
-</FileText>
-                  </div>"
-                  <div className="p-6">"
-</div>"
-                    <div className="flex items-center gap-2 mb-3">"
-</div>"
-                      <Tag className="w-4 h-4 text-blue-600" />"
-</Tag>"
-                      <span className="text-sm text-blue-600 font-medium">"
-</span>
-                      </span>
-                    </div>
-                    "
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">"
-</h3>
-                    </h3>
-                    "
-                    <p className="text-gray-600 mb-4 line-clamp-3">"
-</p>
-                    </p>
-                    "
-                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">"
-</div>"
-                      <div className="flex items-center gap-2">"
-</div>"
-                        <User className="w-4 h-4" />"
-</User>
-                        <span>{paper.author}</span>
-                      </div>"
-                      <div className="flex items-center gap-2">"
-</div>"
-                        <Calendar className="w-4 h-4" />"
-</Calendar>
-                        <span>{paper.date}</span>
-                      </div>
-                    </div>
-                    "
-                    <div className="flex items-center justify-between mb-4">"
-</div>"
-                      <span className="text-sm text-gray-500">{paper.readTime}</span>"
-                      <span className="text-sm text-gray-500 flex items-center gap-1">"
-</span>"
-                        <Download className="w-4 h-4" />"
-</Download>
-                      </span>
-                    </div>
-                    "
-                    <div className="flex gap-2">"
-</div>
-                      <a;
-                        href={paper.pdfUrl};
-                        download;"
-                        className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
-                      >
-</a>"
-                        <Download className="w-4 h-4" />"
-</Download>
-                      </a>"
-                      <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors text-sm">"
-</button>
-                      </button>
-                    </div>
-                  </div>
-                </motion.article>
-              ))};
-            </div>"
-            <div className="text-center mt-12">"
-</div>"
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
-</button>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>"
-      <section className="py-16 bg-blue-600">"
-</section>"
-        <div className="container mx-auto px-4">"
-</div>"
-          <div className="max-w-4xl mx-auto text-center">"
-</div>"
-            <h2 className="text-3xl font-bold text-white mb-4">"
-</h2>
-            </h2>"
-            <p className="text-xl text-blue-100 mb-8">"
-</p>
-            </p>
-            "
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">"
-</div>
-              <input;"
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
-              />
-</input>"
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">"
-</button>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )};
 
-export default WhitePapers;
+        {/* White Papers List */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Featured White Papers
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                In-depth technical resources written by our expert team.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {whitePapers.map((paper, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                      <paper.icon className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-900">{paper.title}</h3>
+                      <p className="text-sm text-blue-600">{paper.category}</p>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-4">{paper.description}</p>
+                  
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-center text-sm text-gray-600">
+                      <User className="w-4 h-4 mr-2" />
+                      {paper.author}
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      {paper.date}
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600">
+                      <FileText className="w-4 h-4 mr-2" />
+                      {paper.pages} pages
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600">
+                      <Download className="w-4 h-4 mr-2" />
+                      {paper.downloads.toLocaleString()} downloads
+                    </div>
+                  </div>
+
+                  <a
+                    href={paper.downloadUrl}
+                    className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-center inline-flex items-center justify-center"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    Download PDF
+                  </a>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Need Custom Research?
+              </h2>
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Our team can create custom white papers and research documents tailored to your specific needs.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center"
+                >
+                  <ArrowRight className="w-5 h-5 mr-2" />
+                  Request Custom Research
+                </Link>
+                <Link
+                  href="/services"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
+                  View Our Services
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+  );
+}
