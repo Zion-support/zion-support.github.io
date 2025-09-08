@@ -6,10 +6,10 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Continuous orchestrator function executed successfully',
+        message: 'continuous-orchestrator executed successfully',
         timestamp: new Date().toISOString(),
         function: 'continuous-orchestrator',
-        action: 'continuous orchestration of processes'
+        purpose: 'Multi-tool refresh and sitemap generation'
       })
     };
     
@@ -20,7 +20,8 @@ exports.handler = async function(event, context) {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
-        message: error.message
+        message: error.message,
+        function: 'continuous-orchestrator'
       })
     };
   }

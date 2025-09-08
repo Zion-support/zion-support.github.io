@@ -2,14 +2,13 @@ exports.handler = async function(event, context) {
   try {
     console.log('a11y-alt-text-runner function triggered');
     
-    // Basic accessibility alt text running logic
+    // Basic accessibility alt-text scanning logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'A11y alt text runner function executed successfully',
+        message: 'a11y-alt-text-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'a11y-alt-text-runner',
-        action: 'checking accessibility alt text'
+        function: 'a11y-alt-text-runner'
       })
     };
     
@@ -20,7 +19,8 @@ exports.handler = async function(event, context) {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
-        message: error.message
+        message: error.message,
+        function: 'a11y-alt-text-runner'
       })
     };
   }

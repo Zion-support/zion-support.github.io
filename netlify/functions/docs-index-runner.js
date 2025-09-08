@@ -6,10 +6,10 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Docs index runner function executed successfully',
+        message: 'docs-index-runner executed successfully',
         timestamp: new Date().toISOString(),
         function: 'docs-index-runner',
-        action: 'indexing documentation content'
+        purpose: 'Technical notes and guides indexing'
       })
     };
     
@@ -20,7 +20,8 @@ exports.handler = async function(event, context) {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
-        message: error.message
+        message: error.message,
+        function: 'docs-index-runner'
       })
     };
   }

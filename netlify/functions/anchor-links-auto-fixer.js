@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Anchor links auto-fixer function executed successfully',
+        message: 'anchor-links-auto-fixer executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'anchor-links-auto-fixer',
-        action: 'auto-fixing anchor links'
+        function: 'anchor-links-auto-fixer'
       })
     };
     
@@ -20,7 +19,8 @@ exports.handler = async function(event, context) {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
-        message: error.message
+        message: error.message,
+        function: 'anchor-links-auto-fixer'
       })
     };
   }

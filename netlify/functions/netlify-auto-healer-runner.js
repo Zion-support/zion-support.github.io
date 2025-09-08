@@ -2,14 +2,14 @@ exports.handler = async function(event, context) {
   try {
     console.log('netlify-auto-healer-runner function triggered');
     
-    // Basic Netlify auto-healing running logic
+    // Basic Netlify auto-healing logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Netlify auto-healer runner function executed successfully',
+        message: 'netlify-auto-healer-runner executed successfully',
         timestamp: new Date().toISOString(),
         function: 'netlify-auto-healer-runner',
-        action: 'running auto-healing processes for Netlify'
+        purpose: 'Site health monitoring and auto-healing'
       })
     };
     
@@ -20,7 +20,8 @@ exports.handler = async function(event, context) {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
-        message: error.message
+        message: error.message,
+        function: 'netlify-auto-healer-runner'
       })
     };
   }

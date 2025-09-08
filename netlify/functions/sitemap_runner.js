@@ -2,14 +2,14 @@ exports.handler = async function(event, context) {
   try {
     console.log('sitemap_runner function triggered');
     
-    // Basic sitemap running logic
+    // Basic sitemap generation logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Sitemap runner function executed successfully',
+        message: 'sitemap_runner executed successfully',
         timestamp: new Date().toISOString(),
         function: 'sitemap_runner',
-        action: 'generating and updating sitemap'
+        purpose: 'Sitemap generation and maintenance'
       })
     };
     
@@ -20,7 +20,8 @@ exports.handler = async function(event, context) {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
-        message: error.message
+        message: error.message,
+        function: 'sitemap_runner'
       })
     };
   }

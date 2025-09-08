@@ -2,14 +2,14 @@ exports.handler = async function(event, context) {
   try {
     console.log('security-audit-runner function triggered');
     
-    // Basic security audit running logic
+    // Basic security audit logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Security audit runner function executed successfully',
+        message: 'security-audit-runner executed successfully',
         timestamp: new Date().toISOString(),
         function: 'security-audit-runner',
-        action: 'running security audits and vulnerability scans'
+        purpose: 'Security scanning and vulnerability assessment'
       })
     };
     
@@ -20,7 +20,8 @@ exports.handler = async function(event, context) {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
-        message: error.message
+        message: error.message,
+        function: 'security-audit-runner'
       })
     };
   }

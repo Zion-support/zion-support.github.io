@@ -6,10 +6,10 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Front visionary expander function executed successfully',
+        message: 'front-visionary-expander executed successfully',
         timestamp: new Date().toISOString(),
         function: 'front-visionary-expander',
-        action: 'expanding front-end visionary features'
+        purpose: 'Enhances main/front with animated sections and deep links'
       })
     };
     
@@ -20,7 +20,8 @@ exports.handler = async function(event, context) {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
-        message: error.message
+        message: error.message,
+        function: 'front-visionary-expander'
       })
     };
   }

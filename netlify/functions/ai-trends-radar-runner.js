@@ -2,14 +2,13 @@ exports.handler = async function(event, context) {
   try {
     console.log('ai-trends-radar-runner function triggered');
     
-    // Basic AI trends radar running logic
+    // Basic AI trends radar logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'AI trends radar runner function executed successfully',
+        message: 'ai-trends-radar-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'ai-trends-radar-runner',
-        action: 'monitoring AI trends and developments'
+        function: 'ai-trends-radar-runner'
       })
     };
     
@@ -20,7 +19,8 @@ exports.handler = async function(event, context) {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
-        message: error.message
+        message: error.message,
+        function: 'ai-trends-radar-runner'
       })
     };
   }

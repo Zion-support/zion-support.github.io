@@ -6,9 +6,10 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Homepage advertiser function executed successfully',
+        message: 'homepage_advertiser executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'homepage_advertiser'
+        function: 'homepage_advertiser',
+        purpose: 'Homepage content promotion and advertising'
       })
     };
     
@@ -19,7 +20,8 @@ exports.handler = async function(event, context) {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
-        message: error.message
+        message: error.message,
+        function: 'homepage_advertiser'
       })
     };
   }

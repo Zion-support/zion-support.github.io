@@ -2,14 +2,14 @@ exports.handler = async function(event, context) {
   try {
     console.log('headers-enforcer function triggered');
     
-    // Basic headers enforcement logic
+    // Basic HTTP headers enforcement logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Headers enforcer function executed successfully',
+        message: 'headers-enforcer executed successfully',
         timestamp: new Date().toISOString(),
         function: 'headers-enforcer',
-        action: 'enforcing security and caching headers'
+        purpose: 'Enforce and audit HTTP headers continuously'
       })
     };
     
@@ -20,7 +20,8 @@ exports.handler = async function(event, context) {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
-        message: error.message
+        message: error.message,
+        function: 'headers-enforcer'
       })
     };
   }

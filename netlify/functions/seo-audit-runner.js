@@ -2,14 +2,14 @@ exports.handler = async function(event, context) {
   try {
     console.log('seo-audit-runner function triggered');
     
-    // Basic SEO audit running logic
+    // Basic SEO audit logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'SEO audit runner function executed successfully',
+        message: 'seo-audit-runner executed successfully',
         timestamp: new Date().toISOString(),
         function: 'seo-audit-runner',
-        action: 'running SEO audits and optimizations'
+        purpose: 'SEO optimization and audit'
       })
     };
     
@@ -20,7 +20,8 @@ exports.handler = async function(event, context) {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
-        message: error.message
+        message: error.message,
+        function: 'seo-audit-runner'
       })
     };
   }

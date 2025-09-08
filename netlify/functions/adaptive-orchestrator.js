@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Adaptive orchestrator function executed successfully',
+        message: 'adaptive-orchestrator executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'adaptive-orchestrator',
-        action: 'adaptive orchestration of processes'
+        function: 'adaptive-orchestrator'
       })
     };
     
@@ -20,7 +19,8 @@ exports.handler = async function(event, context) {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
-        message: error.message
+        message: error.message,
+        function: 'adaptive-orchestrator'
       })
     };
   }
