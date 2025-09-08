@@ -43,26 +43,13 @@
     "noEmitOnError": false
   },
   "include": [
-    "src/**/*",
-    "vite.config.ts",
-    "tailwind.config.ts",
-    "vitest.config.ts"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
     "dist",
     "build",
-    "coverage",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "**/*.stories.ts",
-    "**/*.stories.tsx",
-    "src_disabled_*",
-    "src.disabled",
-    "tests",
-    "__tests__",
-    "supabase/functions"
+    "**/*.test.*",
+    "**/*.spec.*"
   ]
 }
