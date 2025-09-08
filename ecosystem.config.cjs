@@ -1,155 +1,139 @@
 module.exports = {
   apps: [
-    // Main application
+    // Main automation orchestrator
     {
-      name: 'zion-website',
-      script: 'npm',
-      args: 'start',
-      cwd: './',
+      name: 'automation-orchestrator',
+      script: './automation/intelligent-orchestrator.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+        PORT: 3001
       },
-      env_production: {
-        NODE_ENV: 'production',
-        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+      env_development: {
+        NODE_ENV: 'development',
+        PORT: 3001
       }
     },
-
-    // CI/CD Pipeline Automation
+    
+    // Linting automation manager
     {
-      name: 'ci-cd-pipeline',
-      script: './scripts/pm2/ci-cd-pipeline.js',
+      name: 'lint-automation-manager',
+      script: './automation/lint-automation-manager.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      max_memory_restart: '512M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production'
       }
     },
-
-    // Continuous Improvement Automation
+    
+    // Linting monitor
     {
-      name: 'continuous-improvement',
-      script: './scripts/pm2/continuous-improvement.js',
+      name: 'lint-monitor',
+      script: './automation/lint-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 2 * * 1', // Weekly on Monday at 2 AM
-      max_memory_restart: '512M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production'
       }
     },
-
-    // Dependency Management Automation
+    
+    // Linting error fixer
     {
-      name: 'dependency-manager',
-      script: './scripts/pm2/dependency-manager.js',
+      name: 'lint-error-fixer',
+      script: './automation/lint-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 2 * * 1', // Every Monday at 2 AM
-      max_memory_restart: '512M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production'
       }
     },
-
-    // Link Checker Automation
+    
+    // Code quality monitor
     {
-      name: 'link-checker',
-      script: './scripts/pm2/link-checker.js',
+      name: 'code-quality-monitor',
+      script: './automation/code-quality-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 2 * * *', // Daily at 2 AM
-      max_memory_restart: '512M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production'
       }
     },
-
-    // Code Quality Automation
+    
+    // Performance optimizer
     {
-      name: 'code-quality',
-      script: './scripts/pm2/code-quality.js',
+      name: 'performance-optimizer',
+      script: './automation/performance-optimizer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */4 * * *', // Every 4 hours
-      max_memory_restart: '512M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production'
       }
     },
-
-    // Performance Monitoring
+    
+    // Security scanner
     {
-      name: 'performance-monitor',
-      script: './scripts/pm2/performance-monitor.js',
+      name: 'security-scanner',
+      script: './automation/security-scanner.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */2 * * *', // Every 2 hours
-      max_memory_restart: '512M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production'
       }
     },
-
-    // Security Audit Automation
+    
+    // Automation factory
     {
-      name: 'security-audit',
-      script: './scripts/pm2/security-audit.js',
+      name: 'automation-factory',
+      script: './automation/automation-factory.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 3 * * *', // Daily at 3 AM
-      max_memory_restart: '512M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production'
       }
     },
-
-    // Build Automation
+    
+    // Automation dashboard
     {
-      name: 'build-automation',
-      script: './scripts/pm2/build-automation.js',
+      name: 'automation-dashboard',
+      script: './automation/automation-dashboard.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */8 * * *', // Every 8 hours
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+        PORT: 3002
+      }
+    },
+    
+    // Launch all automation
+    {
+      name: 'launch-all-automation',
+      script: './automation/launch-all-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
       }
     }
-  ],
-
-  deploy: {
-    production: {
-      user: 'ubuntu',
-      host: 'localhost',
-      ref: 'origin/main',
-      repo: 'git@github.com:your-username/your-repo.git',
-      path: '/var/www/production',
-      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production'
-    },
-    staging: {
-      user: 'ubuntu',
-      host: 'localhost',
-      ref: 'origin/develop',
-      repo: 'git@github.com:your-username/your-repo.git',
-      path: '/var/www/staging',
-      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production'
-    }
-  }
+  ]
 };
