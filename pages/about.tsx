@@ -1,143 +1,184 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
-export default function AboutPage() {
+export default function About() {
   return (
     <>
       <Head>
         <title>About Zion Tech Group | Autonomous Innovation Hub</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, vision, and commitment to autonomous innovation and cutting-edge technology solutions." />
-        <meta property="og:title" content="About Zion Tech Group | Autonomous Innovation Hub" />
-        <meta property="og:description" content="Learn about Zion Tech Group's mission, vision, and commitment to autonomous innovation and cutting-edge technology solutions." />
+        <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize technology through autonomous AI systems and cutting-edge innovation." />
+        <meta property="og:title" content="About Zion Tech Group" />
+        <meta property="og:description" content="Learn about Zion Tech Group's mission to revolutionize technology through autonomous AI systems and cutting-edge innovation." />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-6xl mx-auto">
+            <Link href="/" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-8">
+              ← Back to Home
+            </Link>
+            
             <header className="text-center mb-16">
-              <nav className="mb-6 text-left">
-                <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                  ← Back to Home
-                </a>
-              </nav>
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
                 About Zion Tech Group
               </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Pioneering the future of autonomous technology and intelligent automation systems.
+              <p className="text-xl text-white/80 max-w-4xl mx-auto">
+                Pioneering the future of autonomous technology through AI-driven innovation, sustainable development, and human-AI collaboration.
               </p>
             </header>
 
-            <section className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-cyan-300">Our Mission</h2>
-              <p className="text-lg text-white/80 mb-4">
-                Zion Tech Group is dedicated to revolutionizing the technology landscape through autonomous innovation, 
-                intelligent automation, and cutting-edge AI solutions. We believe in creating systems that work 
-                independently, continuously learn, and adapt to meet the evolving needs of our digital world.
-              </p>
-              <p className="text-lg text-white/80">
-                Our mission is to build a future where technology serves humanity autonomously, efficiently, 
-                and ethically, driving progress across industries and empowering organizations to achieve 
-                unprecedented levels of productivity and innovation.
-              </p>
-            </section>
-
-            <section className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-cyan-300">Core Values</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
+            <section className="mb-20">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h2 className="text-3xl font-bold mb-6 text-white">Our Mission</h2>
+                  <p className="text-lg text-white/80 mb-6">
+                    To accelerate human progress by developing autonomous AI systems that solve complex global challenges while maintaining ethical boundaries and human oversight.
+                  </p>
+                  <p className="text-white/70 mb-6">
+                    We believe in the power of human-AI collaboration to create solutions that are not only technologically advanced but also socially responsible and environmentally sustainable.
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 px-4 py-2 rounded-lg border border-green-500/30">
+                      <span className="text-green-300 font-semibold">Innovation First</span>
+                    </div>
+                    <div className="bg-gradient-to-r from-blue-500/20 to-blue-600/20 px-4 py-2 rounded-lg border border-blue-500/30">
+                      <span className="text-blue-300 font-semibold">Ethical AI</span>
+                    </div>
+                    <div className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 px-4 py-2 rounded-lg border border-purple-500/30">
+                      <span className="text-purple-300 font-semibold">Global Impact</span>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">Innovation</h3>
-                  <p className="text-white/70">Pushing boundaries and exploring new frontiers in technology</p>
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Reliability</h3>
-                  <p className="text-white/70">Building systems that work consistently and dependably</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Security</h3>
-                  <p className="text-white/70">Ensuring the highest standards of data protection and privacy</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Collaboration</h3>
-                  <p className="text-white/70">Working together to achieve greater impact and innovation</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-yellow-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Creativity</h3>
-                  <p className="text-white/70">Thinking outside the box to solve complex challenges</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Passion</h3>
-                  <p className="text-white/70">Driven by our love for technology and its potential</p>
+                <div className="bg-gradient-to-br from-cyan-500/20 to-fuchsia-500/20 p-8 rounded-2xl border border-cyan-500/30">
+                  <h3 className="text-2xl font-bold text-cyan-300 mb-4">Core Values</h3>
+                  <ul className="space-y-4 text-white/90">
+                    <li className="flex items-start space-x-3">
+                      <span className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></span>
+                      <span><strong>Autonomy:</strong> Empowering AI systems to operate independently while maintaining human oversight</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <span className="w-2 h-2 bg-fuchsia-400 rounded-full mt-2 flex-shrink-0"></span>
+                      <span><strong>Innovation:</strong> Continuously pushing the boundaries of what's possible with technology</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <span className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></span>
+                      <span><strong>Sustainability:</strong> Developing solutions that benefit both humanity and the planet</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <span className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></span>
+                      <span><strong>Collaboration:</strong> Fostering partnerships between humans and AI for mutual growth</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </section>
 
-            <section className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-cyan-300">Our Story</h2>
-              <div className="space-y-6">
-                <p className="text-lg text-white/80">
-                  Founded with a vision to create truly autonomous systems, Zion Tech Group emerged from the 
-                  recognition that the future of technology lies in intelligent automation that can operate 
-                  independently while continuously improving and adapting.
-                </p>
-                <p className="text-lg text-white/80">
-                  Our journey began with a simple question: "What if technology could think for itself?" 
-                  This curiosity led us to develop sophisticated AI systems, autonomous workflows, and 
-                  intelligent automation solutions that are reshaping industries across the globe.
-                </p>
-                <p className="text-lg text-white/80">
-                  Today, we stand at the forefront of autonomous technology, with over 200+ automation 
-                  systems running continuously, generating content, optimizing performance, and driving 
-                  innovation without human intervention. Our commitment to excellence and our passion for 
-                  pushing technological boundaries continues to drive us forward.
-                </p>
+            <section className="mb-20">
+              <h2 className="text-3xl font-bold text-center mb-12 text-white">Our Journey</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 p-6 rounded-xl border border-blue-500/30 text-center">
+                  <div className="text-4xl font-bold text-blue-300 mb-2">2019</div>
+                  <h3 className="text-xl font-semibold text-blue-200 mb-3">Foundation</h3>
+                  <p className="text-blue-200/90 text-sm">
+                    Zion Tech Group was founded with a vision to revolutionize how humans interact with artificial intelligence
+                  </p>
+                </div>
+                
+                <div className="bg-gradient-to-br from-purple-500/20 to-purple-600/20 p-6 rounded-xl border border-purple-500/30 text-center">
+                  <div className="text-4xl font-bold text-purple-300 mb-2">2022</div>
+                  <h3 className="text-xl font-semibold text-purple-200 mb-3">Breakthrough</h3>
+                  <p className="text-purple-200/90 text-sm">
+                    Achieved first autonomous AI system capable of self-improvement and independent problem-solving
+                  </p>
+                </div>
+                
+                <div className="bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 p-6 rounded-xl border border-cyan-500/30 text-center">
+                  <div className="text-4xl font-bold text-cyan-300 mb-2">2025</div>
+                  <h3 className="text-xl font-semibold text-cyan-200 mb-3">Expansion</h3>
+                  <p className="text-cyan-200/90 text-sm">
+                    Deployed autonomous systems across 23 countries, serving millions of users worldwide
+                  </p>
+                </div>
               </div>
             </section>
 
-            <section className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
-              <h2 className="text-3xl font-bold mb-6 text-cyan-300">Join Our Mission</h2>
-              <p className="text-lg text-white/80 mb-6">
-                We're always looking for passionate individuals and organizations who share our vision 
-                of a future powered by autonomous innovation. Whether you're interested in partnering 
-                with us, joining our team, or learning more about our technology, we'd love to hear from you.
+            <section className="mb-20">
+              <h2 className="text-3xl font-bold text-center mb-12 text-white">Technology Stack</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="bg-gradient-to-br from-green-500/20 to-green-600/20 p-6 rounded-xl border border-green-500/30 text-center">
+                  <h3 className="text-lg font-semibold text-green-300 mb-2">AI/ML</h3>
+                  <p className="text-green-200/90 text-sm">
+                    Advanced machine learning models, neural networks, and autonomous decision-making systems
+                  </p>
+                </div>
+                
+                <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 p-6 rounded-xl border border-blue-500/30 text-center">
+                  <h3 className="text-lg font-semibold text-blue-300 mb-2">Cloud Native</h3>
+                  <p className="text-blue-200/90 text-sm">
+                    Kubernetes, microservices architecture, and auto-scaling infrastructure
+                  </p>
+                </div>
+                
+                <div className="bg-gradient-to-br from-purple-500/20 to-purple-600/20 p-6 rounded-xl border border-purple-500/30 text-center">
+                  <h3 className="text-lg font-semibold text-purple-300 mb-2">Quantum Computing</h3>
+                  <p className="text-purple-200/90 text-sm">
+                    Quantum algorithms and hybrid classical-quantum systems for complex problem solving
+                  </p>
+                </div>
+                
+                <div className="bg-gradient-to-br from-orange-500/20 to-orange-600/20 p-6 rounded-xl border border-orange-500/30 text-center">
+                  <h3 className="text-lg font-semibold text-orange-300 mb-2">Edge Computing</h3>
+                  <p className="text-orange-200/90 text-sm">
+                    Distributed computing infrastructure for real-time processing and low-latency applications
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section className="mb-20">
+              <h2 className="text-3xl font-bold text-center mb-12 text-white">Global Impact</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div className="bg-gradient-to-r from-emerald-500/20 to-emerald-600/20 p-8 rounded-2xl border border-emerald-500/30">
+                  <h3 className="text-2xl font-bold text-emerald-300 mb-4">Environmental Solutions</h3>
+                  <p className="text-emerald-200 mb-4">
+                    Our autonomous systems are helping to solve critical environmental challenges:
+                  </p>
+                  <ul className="text-emerald-200/90 space-y-2 text-sm">
+                    <li>• Climate modeling and prediction</li>
+                    <li>• Renewable energy optimization</li>
+                    <li>• Sustainable agriculture systems</li>
+                    <li>• Wildlife conservation monitoring</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-gradient-to-r from-rose-500/20 to-rose-600/20 p-8 rounded-2xl border border-rose-500/30">
+                  <h3 className="text-2xl font-bold text-rose-300 mb-4">Healthcare Innovation</h3>
+                  <p className="text-rose-200 mb-4">
+                    Advancing medical technology through autonomous AI:
+                  </p>
+                  <ul className="text-rose-200/90 space-y-2 text-sm">
+                    <li>• Drug discovery acceleration</li>
+                    <li>• Medical imaging analysis</li>
+                    <li>• Personalized treatment plans</li>
+                    <li>• Pandemic response systems</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section className="text-center">
+              <h2 className="text-3xl font-bold mb-6 text-white">Join Our Mission</h2>
+              <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+                Be part of the future where humans and AI work together to solve the world's greatest challenges.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-fuchsia-500 hover:from-cyan-600 hover:to-fuchsia-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 text-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-fuchsia-600 transition-all duration-200">
                   Get in Touch
-                </a>
-                <a href="/" className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 text-center">
-                  Explore Our Work
-                </a>
+                </Link>
+                <Link href="/reports" className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200">
+                  View Our Work
+                </Link>
               </div>
             </section>
           </div>
