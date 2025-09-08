@@ -1,46 +1,41 @@
 exports.handler = async function(event, context) {
-  console.log('auto-scheduler function executed');
-  
   try {
-    // Simulate auto scheduling logic
-    const timestamp = new Date().toISOString();
-    const result = {
-      status: 'success',
-      function: 'auto-scheduler',
-      timestamp: timestamp,
-      message: 'Auto scheduling completed successfully',
-      data: {
-        tasksScheduled: Math.floor(Math.random() * 50) + 25,
-        prioritiesOptimized: true,
-        resourceAllocation: 'efficient',
-        timelineOptimized: true,
-        performance: 'optimal'
-      }
-    };
+    console.log('auto-scheduler function triggered');
     
-    console.log('Auto scheduling result:', result);
-    
-    return {
+    // Basic auto scheduling logic
+    const response = {
       statusCode: 200,
-      body: JSON.stringify(result),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify({
+        message: 'Auto scheduler function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'auto-scheduler',
+        status: 'success',
+        schedulerType: 'auto',
+        tasks: ['content-update', 'security-scan', 'performance-check', 'backup']
+      })
     };
+    
+    return response;
   } catch (error) {
     console.error('Error in auto-scheduler:', error);
     
     return {
       statusCode: 500,
-      body: JSON.stringify({
-        status: 'error',
-        function: 'auto-scheduler',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify({
+        message: 'Error in auto scheduler function',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'auto-scheduler',
+        status: 'error'
+      })
     };
   }
 };

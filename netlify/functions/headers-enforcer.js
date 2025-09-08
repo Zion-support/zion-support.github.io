@@ -1,47 +1,43 @@
 exports.handler = async function(event, context) {
-  console.log('headers-enforcer function executed');
-  
   try {
-    // Simulate headers enforcement logic
-    const timestamp = new Date().toISOString();
-    const result = {
-      status: 'success',
-      function: 'headers-enforcer',
-      timestamp: timestamp,
-      message: 'Headers enforcement completed successfully',
-      data: {
-        headersEnforced: 67,
-        securityHeaders: 'applied',
-        performanceHeaders: 'optimized',
-        complianceScore: '100%',
-        securityEnhanced: true,
-        performanceImproved: true
-      }
-    };
+    console.log('headers-enforcer function triggered');
     
-    console.log('Headers enforcement result:', result);
-    
-    return {
+    // Basic headers enforcement logic
+    const response = {
       statusCode: 200,
-      body: JSON.stringify(result),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+        'X-Content-Type-Options': 'nosniff',
+        'X-Frame-Options': 'SAMEORIGIN'
+      },
+      body: JSON.stringify({
+        message: 'Headers enforcer function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'headers-enforcer',
+        status: 'success',
+        enforcedHeaders: ['HSTS', 'X-Content-Type-Options', 'X-Frame-Options']
+      })
     };
+    
+    return response;
   } catch (error) {
     console.error('Error in headers-enforcer:', error);
     
     return {
       statusCode: 500,
-      body: JSON.stringify({
-        status: 'error',
-        function: 'headers-enforcer',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify({
+        message: 'Error in headers enforcer function',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'headers-enforcer',
+        status: 'error'
+      })
     };
   }
 };

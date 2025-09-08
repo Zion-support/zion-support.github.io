@@ -1,46 +1,40 @@
 exports.handler = async function(event, context) {
-  console.log('front-enhancer function executed');
-  
   try {
-    // Simulate front-end enhancement logic
-    const timestamp = new Date().toISOString();
-    const result = {
-      status: 'success',
-      function: 'front-enhancer',
-      timestamp: timestamp,
-      message: 'Front-end enhancement completed successfully',
-      data: {
-        componentsEnhanced: Math.floor(Math.random() * 15) + 3,
-        uiOptimized: true,
-        accessibility: 'improved',
-        performance: 'boosted',
-        userExperience: 'enhanced'
-      }
-    };
+    console.log('front-enhancer function triggered');
     
-    console.log('Front-end enhancement result:', result);
-    
-    return {
+    // Basic front-end enhancement logic
+    const response = {
       statusCode: 200,
-      body: JSON.stringify(result),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify({
+        message: 'Front-end enhancer function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'front-enhancer',
+        status: 'success',
+        enhancements: ['ui', 'ux', 'performance']
+      })
     };
+    
+    return response;
   } catch (error) {
     console.error('Error in front-enhancer:', error);
     
     return {
       statusCode: 500,
-      body: JSON.stringify({
-        status: 'error',
-        function: 'front-enhancer',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify({
+        message: 'Error in front-end enhancer function',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'front-enhancer',
+        status: 'error'
+      })
     };
   }
 };

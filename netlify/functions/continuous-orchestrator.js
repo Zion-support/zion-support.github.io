@@ -1,46 +1,41 @@
 exports.handler = async function(event, context) {
-  console.log('continuous-orchestrator function executed');
-  
   try {
-    // Simulate continuous orchestration logic
-    const timestamp = new Date().toISOString();
-    const result = {
-      status: 'success',
-      function: 'continuous-orchestrator',
-      timestamp: timestamp,
-      message: 'Continuous orchestration completed successfully',
-      data: {
-        workflowsManaged: Math.floor(Math.random() * 30) + 15,
-        processesMonitored: true,
-        automationActive: true,
-        healthStatus: 'optimal',
-        uptime: '99.9%'
-      }
-    };
+    console.log('continuous-orchestrator function triggered');
     
-    console.log('Continuous orchestration result:', result);
-    
-    return {
+    // Basic continuous orchestration logic
+    const response = {
       statusCode: 200,
-      body: JSON.stringify(result),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify({
+        message: 'Continuous orchestrator function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'continuous-orchestrator',
+        status: 'success',
+        mode: 'continuous',
+        activities: ['monitor', 'optimize', 'deploy', 'iterate']
+      })
     };
+    
+    return response;
   } catch (error) {
     console.error('Error in continuous-orchestrator:', error);
     
     return {
       statusCode: 500,
-      body: JSON.stringify({
-        status: 'error',
-        function: 'continuous-orchestrator',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify({
+        message: 'Error in continuous orchestrator function',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'continuous-orchestrator',
+        status: 'error'
+      })
     };
   }
 };

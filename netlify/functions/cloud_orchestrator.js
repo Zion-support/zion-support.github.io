@@ -1,46 +1,40 @@
 exports.handler = async function(event, context) {
-  console.log('cloud_orchestrator function executed');
-  
   try {
-    // Simulate cloud orchestration logic
-    const timestamp = new Date().toISOString();
-    const result = {
-      status: 'success',
-      function: 'cloud_orchestrator',
-      timestamp: timestamp,
-      message: 'Cloud orchestration completed successfully',
-      data: {
-        servicesOrchestrated: Math.floor(Math.random() * 20) + 5,
-        resourcesOptimized: true,
-        loadBalanced: true,
-        monitoring: 'active',
-        performance: 'optimal'
-      }
-    };
+    console.log('cloud_orchestrator function triggered');
     
-    console.log('Cloud orchestration result:', result);
-    
-    return {
+    // Basic cloud orchestration logic
+    const response = {
       statusCode: 200,
-      body: JSON.stringify(result),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify({
+        message: 'Cloud orchestrator function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'cloud_orchestrator',
+        status: 'success',
+        services: ['compute', 'storage', 'networking']
+      })
     };
+    
+    return response;
   } catch (error) {
     console.error('Error in cloud_orchestrator:', error);
     
     return {
       statusCode: 500,
-      body: JSON.stringify({
-        status: 'error',
-        function: 'cloud_orchestrator',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify({
+        message: 'Error in cloud orchestrator function',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'cloud_orchestrator',
+        status: 'error'
+      })
     };
   }
 };

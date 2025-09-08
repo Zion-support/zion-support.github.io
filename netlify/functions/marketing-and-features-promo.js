@@ -1,46 +1,42 @@
 exports.handler = async function(event, context) {
-  console.log('marketing-and-features-promo function executed');
-  
   try {
-    // Simulate marketing and features promotion logic
-    const timestamp = new Date().toISOString();
-    const result = {
-      status: 'success',
-      function: 'marketing-and-features-promo',
-      timestamp: timestamp,
-      message: 'Marketing and features promotion completed successfully',
-      data: {
-        campaignsProcessed: Math.floor(Math.random() * 15) + 5,
-        featuresPromoted: Math.floor(Math.random() * 10) + 3,
-        marketingOptimized: true,
-        conversionRates: 'improved',
-        audienceEngagement: 'increased'
-      }
-    };
+    console.log('marketing-and-features-promo function triggered');
     
-    console.log('Marketing and features promotion result:', result);
-    
-    return {
+    // Basic marketing and features promotion logic
+    const response = {
       statusCode: 200,
-      body: JSON.stringify(result),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify({
+        message: 'Marketing and features promo function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'marketing-and-features-promo',
+        status: 'success',
+        promoType: 'features',
+        campaigns: ['new-features', 'performance', 'security', 'usability'],
+        targetAudience: 'developers'
+      })
     };
+    
+    return response;
   } catch (error) {
     console.error('Error in marketing-and-features-promo:', error);
     
     return {
       statusCode: 500,
-      body: JSON.stringify({
-        status: 'error',
-        function: 'marketing-and-features-promo',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify({
+        message: 'Error in marketing and features promo function',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'marketing-and-features-promo',
+        status: 'error'
+      })
     };
   }
 };

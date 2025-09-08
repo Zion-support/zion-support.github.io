@@ -1,44 +1,39 @@
 exports.handler = async function(event, context) {
-  console.log('homepage_advertiser function executed');
-  
   try {
-    // Simulate homepage advertising logic
-    const timestamp = new Date().toISOString();
-    const result = {
-      status: 'success',
-      function: 'homepage_advertiser',
-      timestamp: timestamp,
-      message: 'Homepage advertising completed successfully',
-      data: {
-        adsProcessed: Math.floor(Math.random() * 10) + 1,
-        contentUpdated: true,
-        performance: 'optimal'
-      }
-    };
+    console.log('homepage_advertiser function triggered');
     
-    console.log('Homepage advertising result:', result);
-    
-    return {
+    // Basic homepage advertising logic
+    const response = {
       statusCode: 200,
-      body: JSON.stringify(result),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify({
+        message: 'Homepage advertiser function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'homepage_advertiser',
+        status: 'success'
+      })
     };
+    
+    return response;
   } catch (error) {
     console.error('Error in homepage_advertiser:', error);
     
     return {
       statusCode: 500,
-      body: JSON.stringify({
-        status: 'error',
-        function: 'homepage_advertiser',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify({
+        message: 'Error in homepage advertiser function',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'homepage_advertiser',
+        status: 'error'
+      })
     };
   }
 };

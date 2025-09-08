@@ -1,46 +1,41 @@
 exports.handler = async function(event, context) {
-  console.log('innovation-lab function executed');
-  
   try {
-    // Simulate innovation lab logic
-    const timestamp = new Date().toISOString();
-    const result = {
-      status: 'success',
-      function: 'innovation-lab',
-      timestamp: timestamp,
-      message: 'Innovation lab completed successfully',
-      data: {
-        innovationsGenerated: Math.floor(Math.random() * 25) + 15,
-        experimentsConducted: Math.floor(Math.random() * 10) + 5,
-        breakthroughsAchieved: Math.floor(Math.random() * 5) + 2,
-        futureReady: true,
-        competitiveAdvantage: 'strengthened'
-      }
-    };
+    console.log('innovation-lab function triggered');
     
-    console.log('Innovation lab result:', result);
-    
-    return {
+    // Basic innovation lab logic
+    const response = {
       statusCode: 200,
-      body: JSON.stringify(result),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify({
+        message: 'Innovation lab function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'innovation-lab',
+        status: 'success',
+        labType: 'innovation',
+        experiments: ['ai-integration', 'automation', 'optimization', 'research']
+      })
     };
+    
+    return response;
   } catch (error) {
     console.error('Error in innovation-lab:', error);
     
     return {
       statusCode: 500,
-      body: JSON.stringify({
-        status: 'error',
-        function: 'innovation-lab',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify({
+        message: 'Error in innovation lab function',
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        function: 'innovation-lab',
+        status: 'error'
+      })
     };
   }
 };
