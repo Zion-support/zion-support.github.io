@@ -1,21 +1,6 @@
-<<<<<<< HEAD
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'node:path'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-<<<<<<< HEAD
 import { resolve } from 'path'
-import { visualizer } from 'rollup-plugin-visualizer'
-<<<<<<< HEAD
-=======
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
-=======
 
 export default defineConfig({
   plugins: [react()],
@@ -231,7 +216,6 @@ export default defineConfig({
           const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
           return `js/[name]-[hash].js`;
         },
-        entryFileNames: 'js/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];

@@ -1,29 +1,58 @@
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-6">
-          <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold text-blue-900">
-              Zion Tech Group
-            </a>
-          </div>
-
-            <a href="/" className="text-gray-700 hover:text-blue-600">Home</a>
-            <a href="/about" className="text-gray-700 hover:text-blue-600">About</a>
-            <a href="/services" className="text-gray-700 hover:text-blue-600">Services</a>
-            <a href="/solutions" className="text-gray-700 hover:text-blue-600">Solutions</a>
-
-  Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,
-  Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen,
-  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star,
-  Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool,
-  Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,
-
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Menu,
+  X,
+  Search,
+  User,
+  Bell,
+  ChevronDown,
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  Rocket,
+  Globe,
+  Cpu,
+  Lock,
+  Heart,
+  Users,
+  ShoppingCart,
+  BookOpen,
+  MessageCircle,
+  HelpCircle,
+  DollarSign,
+  Gauge,
+  Workflow,
+  Atom,
+  Star,
+  Target,
+  TrendingUp,
+  Award,
+  Code,
+  Truck,
+  Building,
+  BarChart3,
+  PenTool,
+  Eye,
+  Server,
+  Smartphone,
+  Database,
+  Network,
+  Clock,
+  ArrowRight,
+  PanelLeft,
+  Sparkles,
+  Phone,
+  Mail,
+  MapPin,
+  Satellite,
+  FileText,
+  Sparkles as SparklesIcon
+} from 'lucide-react';
+import { enhancedServicesCatalog2025 } from '../data/enhancedServicesCatalog2025';
 
-import {
-  Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,
-  Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen,
-
+export function EnhancedHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState(&apos;&apos;);&apos;&apos;
   const [scrolled, setScrolled] = useState(false);
@@ -34,6 +63,9 @@ import {
     window.addEventListener(&apos;scroll&apos;, handleScroll);
     return () => window.removeEventListener(&apos;scroll&apos;, handleScroll)}, []);
   useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
 
     // Close mobile menu when route changes;
 
