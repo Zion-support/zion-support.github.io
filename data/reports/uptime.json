@@ -1,26 +1,26 @@
 {
-  "runAt": "2025-08-09T17:25:27.406Z",
-  "base": "http://localhost:3000",
+  "runAt": "2025-09-08T10:39:27.901Z",
+  "base": "https://zion.app",
   "results": [
     {
-      "url": "http://localhost:3000/",
-      "ok": false,
-      "status": 0
+      "url": "https://zion.app/",
+      "ok": true,
+      "status": 200
     },
     {
-      "url": "http://localhost:3000/academy",
-      "ok": false,
-      "status": 0
+      "url": "https://zion.app/academy",
+      "ok": true,
+      "status": 404
     },
     {
-      "url": "http://localhost:3000/api/metrics/live",
-      "ok": false,
-      "status": 0
+      "url": "https://zion.app/api/metrics/live",
+      "ok": true,
+      "status": 404
     },
     {
-      "url": "http://localhost:3000/api/academy/analytics",
-      "ok": false,
-      "status": 0
+      "url": "https://zion.app/api/academy/analytics",
+      "ok": true,
+      "status": 404
     }
   ]
 }

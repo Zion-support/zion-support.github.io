@@ -11,12 +11,13 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"],
+      "@/pages/*": ["./src/pages/*"]
     },
-    "types": [],
-    "moduleResolution": "node",
+    "types": ["vite/client", "react", "react-router-dom"],
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
