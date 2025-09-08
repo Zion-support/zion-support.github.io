@@ -1,8 +1,32 @@
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
-      parser: tsparser,
+import js from "@eslint/js";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+import pluginReact from "eslint-plugin-react";
+import pluginReactHooks from "eslint-plugin-react-hooks";
+import eslintConfigPrettier from "eslint-config-prettier";
+// import eslintConfigNext from 'eslint-config-next';
+
+const projectRoot = import.meta.dirname;
+const tsPluginDef = { "@typescript-eslint": tseslint.plugin };
+
+export default tseslint.config(
+  // 1. Global Ignores
+  {
+    ignores: ["node_modules/**", "dist/**", "out/**", "coverage/**", "build/**", ".next/**", "public/build/**"],
+  },
+
+  // eslintConfigNext,
+
+  // Fallback for problematic files (non-type-aware TS linting)
+  {
+    files: [
+      "src/hooks/useAuth.tsx",
+      "src/components/ui/sidebar/index.tsx",
+      "src/types/pwa.d.ts",
+      "vite.config.d.ts"
+    ],
+    languageOptions: {
+      parser: tseslint.parser,
       parserOptions: {
         ecmaVersion: 2020,
         sourceType: 'module',
