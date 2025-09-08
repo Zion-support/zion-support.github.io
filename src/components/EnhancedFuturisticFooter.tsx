@@ -122,10 +122,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
-        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
-        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
-        { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform' },
-        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' }
+        { name: 'Autonomous BI Platform', href: '/services/autonomous-business-intelligence' },
+        { name: 'Consciousness Simulation', href: '/services/consciousness-simulation' },
+        { name: 'Quantum Neural Networks', href: '/services/quantum-neural-network' },
+        { name: 'Emotional Intelligence AI', href: '/services/ai-emotional-intelligence' },
+        { name: 'AI Creativity Platform', href: '/services/ai-creativity-platform' },
+        { name: 'AI Education Platform', href: '/services/ai-education-platform' }
       ]
     },
     {
@@ -133,18 +135,14 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Zap,
       color: 'from-blue-600 to-cyan-600',
       links: [
-        { name: 'Comprehensive Pricing 2027', href: '/comprehensive-pricing-guide-2027', featured: true },
-        { name: 'Pricing Guide 2026', href: '/pricing-guide-2026', featured: true },
-        { name: 'Pricing Guide 2030', href: '/pricing-guide-2030', featured: true },
-        { name: 'Blog & Insights', href: '/blog', featured: false },
-        { name: 'FAQ & Help Center', href: '/faq', featured: false },
-        { name: 'Documentation', href: '/docs', featured: false },
-        { name: 'API Reference', href: '/api-docs', featured: false },
-        { name: 'Developer Portal', href: '/developers', featured: false },
-        { name: 'Training & Certification', href: '/training', featured: false },
-        { name: 'Community Forum', href: '/community', featured: false },
-        { name: 'Success Stories', href: '/case-studies', featured: false },
-        { name: 'White Papers', href: '/white-papers', featured: false }
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
+        { name: 'FinOps Advisor', href: '/services/finops-advisor' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        { name: 'AI DevOps Automation', href: '/services/ai-devops-automation' },
+        { name: 'Quantum-Ready Data Centers', href: '/services/quantum-ready-data-center' }
       ]
     },
     {
@@ -152,74 +150,71 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
-        { name: 'IT Consulting', href: '/it-consulting' },
-        { name: 'IT Onsite Services', href: '/it-onsite-services' },
-        { name: 'Cybersecurity Services', href: '/services/ai-cybersecurity' },
-        { name: 'Data Analytics', href: '/services/data-analytics' },
-        { name: 'Digital Transformation', href: '/services/transformation' },
-        { name: 'Managed IT Services', href: '/services/managed-it' },
-        { name: 'Network Security', href: '/services/network-security' },
-        { name: 'Backup & Recovery', href: '/services/backup-recovery' }
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge' },
+        { name: 'Autonomous IoT Platform', href: '/services/autonomous-iot-edge-computing' },
+        { name: 'Space Technology', href: '/services/space-tech' },
+        { name: 'Autonomous Vehicles', href: '/services/ai-autonomous-vehicle' }
       ]
     },
     {
-      title: 'Company',
-      featured: false,
+      title: 'Cybersecurity & Identity',
+      icon: Shield,
+      color: 'from-red-600 to-pink-600',
       links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'News', href: '/news' },
-        { name: 'Events', href: '/events' },
-        { name: 'Research & Development', href: '/research-development' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'Documentation', href: '/documentation' },
-        { name: 'API Reference', href: '/api' },
-        { name: 'Status Page', href: '/status' }
+        { name: 'Zero Trust Security', href: '/services/zero-trust-network-architecture' },
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'AI Threat Hunter', href: '/services/ai-cybersecurity-threat-hunter' },
+        { name: 'Quantum Cryptography', href: '/services/quantum-enhanced-cryptography' },
+        { name: 'Blockchain Identity', href: '/services/blockchain-identity-verification' }
       ]
     },
     {
-      title: 'Specialized AI Services',
-      icon: Brain,
-      color: 'from-emerald-600 to-teal-600',
+      title: 'Emerging Technologies',
+      icon: Zap,
+      color: 'from-yellow-600 to-orange-600',
       links: [
+        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
+        { name: 'Green IT Solutions', href: '/services/green-it' },
+        { name: 'AI Sustainability', href: '/services/ai-sustainability-platform' }
+      ]
+    },
+    {
+      title: 'Healthcare & Biotech',
+      icon: Heart,
+      color: 'from-pink-600 to-rose-600',
+      links: [
+        { name: 'Healthcare Technology', href: '/services/healthcare-tech' },
         { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
-        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics' },
-        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform' },
-        { name: 'AI Project Management', href: '/services/ai-project-management' },
+        { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostic' },
+        { name: 'Biotech Solutions', href: '/services/biotech-healthcare-technology' }
+      ]
+    },
+    {
+      title: 'Business Solutions',
+      icon: TrendingUp,
+      color: 'from-teal-600 to-green-600',
+      links: [
+        { name: 'Customer Success AI', href: '/services/ai-customer-success-platform' },
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
-        { name: 'AI Data Governance', href: '/services/ai-data-governance' }
+        { name: 'AI Data Governance', href: '/services/ai-data-governance' },
+        { name: 'Enterprise RAG Search', href: '/services/enterprise-rag-search' },
+        { name: 'Agentic Copilot Suite', href: '/services/agentic-copilot-suite' }
       ]
     },
     {
-      title: 'Micro SaaS Solutions',
-      icon: ShoppingCart,
-      color: 'from-orange-600 to-red-600',
+      title: 'Specialized Services',
+      icon: Star,
+      color: 'from-indigo-600 to-purple-600',
       links: [
-        { name: 'Innovative Micro SaaS 2025', href: '/innovative-micro-saas-2025' },
-        { name: 'AI Content Creation', href: '/services/ai-content-creation-platform' },
-        { name: 'AI Video Editing', href: '/services/ai-video-editing-platform' },
-        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation' },
-        { name: 'AI Email Marketing', href: '/services/ai-email-marketing-platform' },
-        { name: 'AI Social Media Management', href: '/services/ai-social-media-management' },
-        { name: 'AI SEO Optimization', href: '/services/ai-seo-optimization-platform' },
-        { name: 'AI Project Management', href: '/services/ai-project-management' }
-      ]
-    },
-    {
-      title: 'Contact Information',
-      icon: MessageSquare,
-      color: 'from-cyan-600 to-blue-600',
-      links: [
-        { name: 'Phone: +1 302 464 0950', href: 'tel:+13024640950' },
-        { name: 'Email: kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
-        { name: 'Address: 364 E Main St STE 1008', href: '#' },
-        { name: 'Middletown DE 19709', href: '#' },
-        { name: 'Website: ziontechgroup.com', href: 'https://ziontechgroup.com' }
+        { name: 'Legal AI Automation', href: '/services/ai-legal-document-automation' },
+        { name: 'Quantum Supply Chain', href: '/services/quantum-supply-chain-optimizer' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' }
       ]
     }
   ];

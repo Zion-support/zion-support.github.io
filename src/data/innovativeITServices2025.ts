@@ -1,350 +1,677 @@
-export interface ServiceContact {
-  phone: string;
-  email: string;
-  website: string;
-  address: string;
-}
-
-export interface ITService {
-  id: number;
-  name: string;
-  category: string;
+export interface InnovativeITService {
+  id: string;
+  title: string;
   description: string;
-  hourlyRate: number;
-  projectRate: number;
+  category: string;
+  subcategory: string;
+  price: number;
+  currency: string;
+  pricingModel: string;
   features: string[];
   benefits: string[];
+  useCases: string[];
   targetAudience: string[];
   tags: string[];
-  contactInfo: ServiceContact;
+  estimatedDelivery: string;
+  supportLevel: string;
   marketPrice: string;
-  responseTime: string;
-  sla: string;
-  certifications: string[];
-  deliveryTime: string;
-  support: string;
+  roi: string;
+  innovationLevel: string;
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+  };
+  technicalSpecs?: {
+    technology: string[];
+    integrations: string[];
+    apiEndpoints: number;
+    uptime: string;
+    security: string[];
+  };
+  competitors?: string[];
+  marketSize?: string;
 }
 
-// Innovative IT Services for 2025
-export const innovativeITServices2025: ITService[] = [
+export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
+  // Advanced Infrastructure Services
   {
-    id: 1,
-    name: "Zero-Trust Network Architecture",
-    category: "Cybersecurity",
-    description: "Implementation of zero-trust security architecture with continuous verification, micro-segmentation, and adaptive access controls",
-    hourlyRate: 150,
-    projectRate: 25000,
+    id: "quantum-ready-data-center-design",
+    title: "Quantum-Ready Data Center Design & Implementation",
+    description: "Future-proof data center infrastructure designed to support quantum computing, AI workloads, and next-generation technologies with energy efficiency and scalability at its core.",
+    category: "Infrastructure",
+    subcategory: "Data Center",
+    price: 150000,
+    currency: "$",
+    pricingModel: "project",
     features: [
-      "Identity verification",
+      "Quantum-ready architecture design",
+      "AI-optimized cooling systems",
+      "Modular infrastructure components",
+      "Energy efficiency optimization",
+      "Scalable power management",
+      "Advanced security implementation",
+      "Disaster recovery planning",
+      "Performance monitoring systems",
+      "Green energy integration",
+      "Future technology roadmap"
+    ],
+    benefits: [
+      "Future-proof infrastructure investment",
+      "Reduce energy costs by 40%",
+      "Improve performance by 60%",
+      "Enhanced security posture",
+      "Scalable for growth"
+    ],
+    useCases: [
+      "Enterprise data centers",
+      "Cloud service providers",
+      "Research institutions",
+      "Financial services",
+      "Healthcare organizations"
+    ],
+    targetAudience: [
+      "CTOs",
+      "Infrastructure Directors",
+      "Data Center Managers",
+      "IT Architects",
+      "Facility Managers"
+    ],
+    tags: ["Infrastructure", "Data Center", "Quantum Computing", "AI", "Energy Efficiency"],
+    estimatedDelivery: "6-12 months",
+    supportLevel: "enterprise",
+    marketPrice: "$150,000 - $500,000",
+    roi: "200-400%",
+    innovationLevel: "Revolutionary",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Quantum Computing", "AI", "IoT", "Blockchain", "Edge Computing"],
+      integrations: ["AWS", "Azure", "Google Cloud", "VMware", "OpenStack"],
+      apiEndpoints: 1000,
+      uptime: "99.99%",
+      security: ["SOC 2", "ISO 27001", "PCI DSS", "HIPAA", "Quantum-resistant encryption"]
+    },
+    competitors: ["Equinix", "Digital Realty", "NTT", "CyrusOne", "CoreSite"],
+    marketSize: "$59.7 billion by 2025"
+  },
+
+  {
+    id: "autonomous-network-management-platform",
+    title: "Autonomous Network Management Platform",
+    description: "AI-powered network infrastructure management system that automatically optimizes performance, detects issues, and implements fixes without human intervention across complex enterprise networks.",
+    category: "Networking",
+    subcategory: "Network Management",
+    price: 8999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered network optimization",
+      "Autonomous issue resolution",
+      "Predictive maintenance",
+      "Real-time performance monitoring",
+      "Intelligent traffic routing",
+      "Security threat detection",
+      "Compliance automation",
+      "Multi-vendor support",
+      "Mobile management app",
+      "Advanced analytics dashboard"
+    ],
+    benefits: [
+      "Reduce network downtime by 90%",
+      "Improve performance by 50%",
+      "Lower operational costs by 40%",
+      "Automate 80% of network tasks",
+      "Enhanced security posture"
+    ],
+    useCases: [
+      "Enterprise networks",
+      "Data center networks",
+      "Cloud networking",
+      "IoT networks",
+      "5G infrastructure"
+    ],
+    targetAudience: [
+      "Network Administrators",
+      "IT Directors",
+      "Network Engineers",
+      "System Administrators",
+      "DevOps Teams"
+    ],
+    tags: ["Networking", "AI", "Automation", "Network Management", "Performance Optimization"],
+    estimatedDelivery: "8-12 weeks",
+    supportLevel: "premium",
+    marketPrice: "$8,999 - $24,999/month",
+    roi: "250-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "FastAPI", "PostgreSQL"],
+      integrations: ["Cisco", "Juniper", "Aruba", "VMware", "OpenStack"],
+      apiEndpoints: 800,
+      uptime: "99.99%",
+      security: ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]
+    },
+    competitors: ["Cisco DNA", "Juniper Mist", "Aruba Central", "VMware NSX", "OpenStack"],
+    marketSize: "$12.8 billion by 2025"
+  },
+
+  {
+    id: "zero-trust-security-implementation",
+    title: "Zero Trust Security Implementation & Management",
+    description: "Comprehensive zero trust security framework implementation that continuously verifies every user, device, and transaction while providing seamless user experience and robust protection.",
+    category: "Cybersecurity",
+    subcategory: "Zero Trust",
+    price: 25000,
+    currency: "$",
+    pricingModel: "project",
+    features: [
+      "Identity verification systems",
+      "Device trust scoring",
       "Micro-segmentation",
       "Continuous monitoring",
-      "Adaptive access controls",
       "Threat detection",
-      "Compliance automation",
+      "Access control automation",
+      "Compliance reporting",
       "Security analytics",
-      "Incident response"
+      "Incident response",
+      "User behavior analytics"
     ],
     benefits: [
-      "Enhanced security posture",
-      "Reduced attack surface",
-      "Compliance automation",
-      "Cost savings",
-      "Operational efficiency",
-      "Risk mitigation"
+      "Reduce security breaches by 95%",
+      "Improve compliance by 90%",
+      "Lower security costs by 30%",
+      "Enhanced user experience",
+      "Future-proof security"
     ],
-    targetAudience: ["Enterprises", "Financial institutions", "Healthcare", "Government"],
-    tags: ["Zero-Trust", "Cybersecurity", "Network Security", "Compliance", "Identity Management"],
+    useCases: [
+      "Enterprise security",
+      "Financial services",
+      "Healthcare",
+      "Government",
+      "Critical infrastructure"
+    ],
+    targetAudience: [
+      "CISOs",
+      "Security Directors",
+      "IT Security Teams",
+      "Compliance Officers",
+      "Risk Managers"
+    ],
+    tags: ["Cybersecurity", "Zero Trust", "Identity Management", "Access Control", "Threat Detection"],
+    estimatedDelivery: "3-6 months",
+    supportLevel: "enterprise",
+    marketPrice: "$25,000 - $75,000",
+    roi: "300-500%",
+    innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/zero-trust-architecture",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      website: "https://ziontechgroup.com"
     },
-    marketPrice: "$150-250/hour",
-    responseTime: "2 hours",
-    sla: "99.9% uptime",
-    certifications: ["CISSP", "CISM", "CCSP", "SANS"],
-    deliveryTime: "4-6 weeks",
-    support: "24/7 premium support"
-  },
-  {
-    id: 2,
-    name: "Quantum-Ready Infrastructure",
-    category: "Infrastructure",
-    description: "Design and implementation of quantum-ready IT infrastructure prepared for post-quantum cryptography and quantum computing integration",
-    hourlyRate: 200,
-    projectRate: 50000,
-    features: [
-      "Post-quantum cryptography",
-      "Quantum-resistant algorithms",
-      "Hybrid encryption systems",
-      "Future-proof architecture",
-      "Performance optimization",
-      "Scalability planning",
-      "Migration strategies",
-      "Training and documentation"
-    ],
-    benefits: [
-      "Future-proof security",
-      "Competitive advantage",
-      "Regulatory compliance",
-      "Long-term cost savings",
-      "Technology leadership",
-      "Risk mitigation"
-    ],
-    targetAudience: ["Technology companies", "Research institutions", "Government agencies", "Financial services"],
-    tags: ["Quantum Computing", "Infrastructure", "Cryptography", "Future-Proof", "Security"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/quantum-ready-infrastructure",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+    technicalSpecs: {
+      technology: ["Python", "React", "FastAPI", "PostgreSQL", "Redis"],
+      integrations: ["Okta", "Azure AD", "AWS IAM", "CrowdStrike", "SentinelOne"],
+      apiEndpoints: 600,
+      uptime: "99.99%",
+      security: ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]
     },
-    marketPrice: "$200-300/hour",
-    responseTime: "4 hours",
-    sla: "99.95% uptime",
-    certifications: ["Quantum Computing", "Cryptography", "Infrastructure", "Security"],
-    deliveryTime: "8-12 weeks",
-    support: "24/7 enterprise support"
+    competitors: ["Okta", "Azure AD", "AWS IAM", "Ping Identity", "ForgeRock"],
+    marketSize: "$19.6 billion by 2025"
   },
+
   {
-    id: 3,
-    name: "AI-Powered DevOps Automation",
+    id: "ai-powered-devops-automation",
+    title: "AI-Powered DevOps Automation Platform",
+    description: "Intelligent DevOps platform that uses AI to automate code deployment, testing, monitoring, and infrastructure management while optimizing performance and reducing human error.",
     category: "DevOps",
-    description: "Intelligent DevOps automation platform with AI-driven deployment, monitoring, and optimization capabilities",
-    hourlyRate: 125,
-    projectRate: 30000,
+    subcategory: "Automation",
+    price: 5999,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      "AI deployment optimization",
-      "Intelligent monitoring",
+      "AI-powered CI/CD pipelines",
       "Automated testing",
+      "Intelligent monitoring",
       "Performance optimization",
+      "Infrastructure as code",
       "Security scanning",
-      "Cost optimization",
-      "Predictive analytics",
-      "Self-healing systems"
+      "Compliance automation",
+      "Multi-cloud support",
+      "Mobile management",
+      "Advanced analytics"
     ],
     benefits: [
-      "Faster deployments",
-      "Reduced errors",
-      "Cost optimization",
-      "Improved reliability",
-      "Better performance",
-      "Operational efficiency"
+      "Reduce deployment time by 80%",
+      "Improve code quality by 60%",
+      "Lower operational costs by 40%",
+      "Automate 90% of DevOps tasks",
+      "Enhanced security"
     ],
-    targetAudience: ["Development teams", "DevOps engineers", "Startups", "Enterprises"],
-    tags: ["DevOps", "AI", "Automation", "CI/CD", "Monitoring"],
+    useCases: [
+      "Software development",
+      "Web applications",
+      "Mobile apps",
+      "Microservices",
+      "Cloud applications"
+    ],
+    targetAudience: [
+      "DevOps Engineers",
+      "Software Developers",
+      "System Administrators",
+      "IT Managers",
+      "Product Managers"
+    ],
+    tags: ["DevOps", "AI", "Automation", "CI/CD", "Infrastructure as Code"],
+    estimatedDelivery: "6-10 weeks",
+    supportLevel: "premium",
+    marketPrice: "$5,999 - $16,999/month",
+    roi: "250-400%",
+    innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-devops-automation",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      website: "https://ziontechgroup.com"
     },
-    marketPrice: "$125-175/hour",
-    responseTime: "4 hours",
-    sla: "99.9% uptime",
-    certifications: ["AWS", "Azure", "GCP", "DevOps", "Kubernetes"],
-    deliveryTime: "3-4 weeks",
-    support: "Business hours + emergency support"
-  },
-  {
-    id: 4,
-    name: "Edge Computing Infrastructure",
-    category: "Infrastructure",
-    description: "Design and deployment of edge computing infrastructure for low-latency applications and IoT deployments",
-    hourlyRate: 140,
-    projectRate: 35000,
-    features: [
-      "Edge node deployment",
-      "Latency optimization",
-      "IoT integration",
-      "Data processing",
-      "Security implementation",
-      "Scalability planning",
-      "Performance monitoring",
-      "Maintenance automation"
-    ],
-    benefits: [
-      "Reduced latency",
-      "Better performance",
-      "Cost optimization",
-      "Scalability",
-      "Real-time processing",
-      "Bandwidth savings"
-    ],
-    targetAudience: ["Manufacturing", "Healthcare", "Smart cities", "Retail"],
-    tags: ["Edge Computing", "IoT", "Infrastructure", "Low Latency", "Performance"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/edge-computing-infrastructure",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "FastAPI", "Docker"],
+      integrations: ["GitHub", "GitLab", "Jenkins", "AWS", "Azure", "Google Cloud"],
+      apiEndpoints: 700,
+      uptime: "99.95%",
+      security: ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]
     },
-    marketPrice: "$140-200/hour",
-    responseTime: "6 hours",
-    sla: "99.9% uptime",
-    certifications: ["Edge Computing", "IoT", "Infrastructure", "Networking"],
-    deliveryTime: "6-8 weeks",
-    support: "Business hours + emergency support"
+    competitors: ["GitLab", "Jenkins", "CircleCI", "Travis CI", "GitHub Actions"],
+    marketSize: "$8.2 billion by 2025"
   },
+
   {
-    id: 5,
-    name: "Blockchain Infrastructure Services",
+    id: "blockchain-enterprise-solutions",
+    title: "Blockchain Enterprise Solutions & Integration",
+    description: "Comprehensive blockchain solutions for enterprises including smart contracts, supply chain tracking, digital identity, and decentralized applications with enterprise-grade security and scalability.",
     category: "Blockchain",
-    description: "Enterprise blockchain infrastructure design, deployment, and management for secure decentralized applications",
-    hourlyRate: 175,
-    projectRate: 45000,
+    subcategory: "Enterprise Solutions",
+    price: 35000,
+    currency: "$",
+    pricingModel: "project",
     features: [
-      "Blockchain architecture design",
       "Smart contract development",
-      "Node deployment",
-      "Security implementation",
-      "Performance optimization",
-      "Monitoring and analytics",
-      "Compliance tools",
-      "Integration services"
+      "Supply chain tracking",
+      "Digital identity management",
+      "DeFi applications",
+      "NFT marketplace",
+      "Cross-chain interoperability",
+      "Enterprise security",
+      "Compliance frameworks",
+      "API integration",
+      "Analytics dashboard"
     ],
     benefits: [
-      "Enhanced security",
-      "Transparency",
-      "Cost reduction",
-      "Automation",
-      "Trust building",
-      "Innovation leadership"
+      "Increase transparency by 100%",
+      "Reduce fraud by 95%",
+      "Lower transaction costs by 60%",
+      "Improve efficiency by 40%",
+      "Enhanced security"
     ],
-    targetAudience: ["Financial institutions", "Healthcare", "Supply chain", "Government"],
-    tags: ["Blockchain", "Smart Contracts", "Decentralized", "Security", "Innovation"],
+    useCases: [
+      "Supply chain management",
+      "Financial services",
+      "Healthcare",
+      "Real estate",
+      "Government services"
+    ],
+    targetAudience: [
+      "CTOs",
+      "Innovation Directors",
+      "Business Analysts",
+      "Product Managers",
+      "Technology Leaders"
+    ],
+    tags: ["Blockchain", "Smart Contracts", "DeFi", "NFTs", "Enterprise Solutions"],
+    estimatedDelivery: "4-8 months",
+    supportLevel: "enterprise",
+    marketPrice: "$35,000 - $100,000",
+    roi: "200-400%",
+    innovationLevel: "Cutting-edge",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/blockchain-infrastructure",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      website: "https://ziontechgroup.com"
     },
-    marketPrice: "$175-250/hour",
-    responseTime: "8 hours",
-    sla: "99.9% uptime",
-    certifications: ["Blockchain", "Ethereum", "Hyperledger", "Security"],
-    deliveryTime: "8-10 weeks",
-    support: "24/7 premium support"
+    technicalSpecs: {
+      technology: ["Ethereum", "Hyperledger", "React", "Node.js", "MongoDB"],
+      integrations: ["AWS", "Azure", "Google Cloud", "Salesforce", "SAP"],
+      apiEndpoints: 400,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]
+    },
+    competitors: ["IBM Blockchain", "Microsoft Azure Blockchain", "Amazon Managed Blockchain", "ConsenSys"],
+    marketSize: "$19.9 billion by 2025"
   },
+
   {
-    id: 6,
-    name: "Green IT Infrastructure",
+    id: "quantum-computing-infrastructure",
+    title: "Quantum Computing Infrastructure & Services",
+    description: "Complete quantum computing infrastructure including quantum processors, quantum algorithms, quantum software development, and hybrid classical-quantum computing solutions for enterprise applications.",
+    category: "Quantum Computing",
+    subcategory: "Infrastructure",
+    price: 100000,
+    currency: "$",
+    pricingModel: "project",
+    features: [
+      "Quantum processor deployment",
+      "Quantum algorithm development",
+      "Hybrid computing systems",
+      "Quantum software development",
+      "Quantum security",
+      "Performance optimization",
+      "Training and support",
+      "Research collaboration",
+      "API access",
+      "Analytics platform"
+    ],
+    benefits: [
+      "Solve complex problems 1000x faster",
+      "Enable new applications",
+      "Competitive advantage",
+      "Future-proof technology",
+      "Research leadership"
+    ],
+    useCases: [
+      "Cryptography",
+      "Optimization problems",
+      "Machine learning",
+      "Financial modeling",
+      "Drug discovery"
+    ],
+    targetAudience: [
+      "Research Institutions",
+      "Financial Services",
+      "Pharmaceutical Companies",
+      "Technology Companies",
+      "Government Agencies"
+    ],
+    tags: ["Quantum Computing", "Quantum Algorithms", "Hybrid Computing", "Research", "Innovation"],
+    estimatedDelivery: "8-16 months",
+    supportLevel: "enterprise",
+    marketPrice: "$100,000 - $500,000",
+    roi: "150-300%",
+    innovationLevel: "Revolutionary",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Qiskit", "Cirq", "PennyLane", "Python", "C++"],
+      integrations: ["AWS Braket", "Azure Quantum", "Google Quantum", "IBM Quantum"],
+      apiEndpoints: 200,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "Quantum-resistant encryption"]
+    },
+    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket", "D-Wave"],
+    marketSize: "$1.9 billion by 2025"
+  },
+
+  {
+    id: "ai-powered-it-consulting",
+    title: "AI-Powered IT Consulting & Strategy",
+    description: "Intelligent IT consulting services that use AI to analyze business needs, recommend optimal technology solutions, and provide strategic guidance for digital transformation initiatives.",
+    category: "Consulting",
+    subcategory: "IT Strategy",
+    price: 5000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered business analysis",
+      "Technology assessment",
+      "Digital transformation strategy",
+      "Technology roadmap",
+      "Vendor selection",
+      "Implementation planning",
+      "Change management",
+      "Performance monitoring",
+      "Ongoing support",
+      "Strategic advisory"
+    ],
+    benefits: [
+      "Optimize technology investments",
+      "Accelerate digital transformation",
+      "Reduce implementation risks",
+      "Improve ROI",
+      "Strategic advantage"
+    ],
+    useCases: [
+      "Digital transformation",
+      "Technology modernization",
+      "Cloud migration",
+      "Security enhancement",
+      "Process optimization"
+    ],
+    targetAudience: [
+      "CTOs",
+      "CIOs",
+      "IT Directors",
+      "Business Leaders",
+      "Technology Managers"
+    ],
+    tags: ["Consulting", "IT Strategy", "Digital Transformation", "Technology Assessment", "Strategic Planning"],
+    estimatedDelivery: "Ongoing",
+    supportLevel: "premium",
+    marketPrice: "$5,000 - $15,000/month",
+    roi: "300-600%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["AI", "Machine Learning", "Data Analytics", "Business Intelligence", "Process Automation"],
+      integrations: ["Enterprise systems", "Cloud platforms", "Analytics tools", "Project management", "Communication platforms"],
+      apiEndpoints: 100,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "GDPR", "Confidentiality agreements"]
+    },
+    competitors: ["McKinsey", "BCG", "Bain", "Deloitte", "Accenture"],
+    marketSize: "$48.2 billion by 2025"
+  },
+
+  {
+    id: "green-it-sustainability-solutions",
+    title: "Green IT & Sustainability Solutions",
+    description: "Comprehensive green IT solutions that help organizations reduce their carbon footprint through energy-efficient technology, sustainable practices, and environmental impact monitoring.",
     category: "Sustainability",
-    description: "Energy-efficient IT infrastructure design and implementation with carbon footprint reduction and sustainability optimization",
-    hourlyRate: 130,
-    projectRate: 32000,
+    subcategory: "Green IT",
+    price: 15000,
+    currency: "$",
+    pricingModel: "project",
     features: [
-      "Energy-efficient design",
-      "Carbon footprint analysis",
+      "Energy efficiency assessment",
+      "Sustainable technology implementation",
+      "Carbon footprint monitoring",
+      "Green procurement",
+      "Waste reduction",
       "Renewable energy integration",
-      "Cooling optimization",
-      "Power management",
       "Sustainability reporting",
-      "Cost optimization",
-      "Compliance monitoring"
+      "Compliance monitoring",
+      "Employee training",
+      "Performance tracking"
     ],
     benefits: [
-      "Cost savings",
-      "Environmental impact",
+      "Reduce energy costs by 30%",
+      "Lower carbon footprint by 40%",
+      "Improve brand reputation",
       "Regulatory compliance",
-      "Brand reputation",
-      "Operational efficiency",
-      "Sustainability leadership"
+      "Cost savings"
     ],
-    targetAudience: ["Corporations", "Data centers", "Manufacturing", "Government"],
-    tags: ["Green IT", "Sustainability", "Energy Efficiency", "Carbon Reduction", "Compliance"],
+    useCases: [
+      "Data centers",
+      "Office environments",
+      "Manufacturing facilities",
+      "Retail operations",
+      "Healthcare facilities"
+    ],
+    targetAudience: [
+      "Sustainability Officers",
+      "Facility Managers",
+      "IT Directors",
+      "Operations Managers",
+      "Environmental Officers"
+    ],
+    tags: ["Sustainability", "Green IT", "Energy Efficiency", "Environmental Impact", "Compliance"],
+    estimatedDelivery: "3-6 months",
+    supportLevel: "premium",
+    marketPrice: "$15,000 - $50,000",
+    roi: "200-400%",
+    innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/green-it-infrastructure",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      website: "https://ziontechgroup.com"
     },
-    marketPrice: "$130-180/hour",
-    responseTime: "6 hours",
-    sla: "99.9% uptime",
-    certifications: ["LEED", "Energy Star", "Sustainability", "Green Building"],
-    deliveryTime: "6-8 weeks",
-    support: "Business hours + emergency support"
+    technicalSpecs: {
+      technology: ["IoT", "AI", "Data Analytics", "Energy Management", "Monitoring Systems"],
+      integrations: ["Building management systems", "Energy monitoring", "Sustainability platforms", "Reporting tools"],
+      apiEndpoints: 300,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "GDPR", "Environmental compliance"]
+    },
+    competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls", "Trane"],
+    marketSize: "$15.6 billion by 2025"
   },
+
   {
-    id: 7,
-    name: "AI Infrastructure Optimization",
-    category: "AI Infrastructure",
-    description: "Specialized infrastructure optimization for AI workloads, including GPU clusters, distributed training, and inference optimization",
-    hourlyRate: 180,
-    projectRate: 55000,
+    id: "space-technology-solutions",
+    title: "Space Technology Solutions & Services",
+    description: "Advanced space technology solutions including satellite systems, space data analytics, Earth observation, and space-based communications for commercial and research applications.",
+    category: "Space Tech",
+    subcategory: "Satellite Solutions",
+    price: 75000,
+    currency: "$",
+    pricingModel: "project",
     features: [
-      "GPU cluster design",
-      "Distributed training setup",
-      "Inference optimization",
-      "Model deployment",
-      "Performance tuning",
-      "Scalability planning",
-      "Cost optimization",
-      "Monitoring and alerting"
+      "Satellite system design",
+      "Space data analytics",
+      "Earth observation",
+      "Space communications",
+      "Navigation systems",
+      "Weather monitoring",
+      "Environmental tracking",
+      "Research collaboration",
+      "API access",
+      "Analytics platform"
     ],
     benefits: [
-      "Faster AI training",
-      "Cost optimization",
-      "Better performance",
-      "Scalability",
-      "Operational efficiency",
-      "Competitive advantage"
+      "Global coverage",
+      "Real-time data access",
+      "High-resolution imaging",
+      "Weather prediction",
+      "Environmental monitoring"
     ],
-    targetAudience: ["AI companies", "Research institutions", "Enterprises", "Startups"],
-    tags: ["AI Infrastructure", "GPU Clusters", "Machine Learning", "Performance", "Optimization"],
+    useCases: [
+      "Agriculture",
+      "Weather forecasting",
+      "Environmental monitoring",
+      "Navigation",
+      "Communications"
+    ],
+    targetAudience: [
+      "Government Agencies",
+      "Research Institutions",
+      "Agricultural Companies",
+      "Weather Services",
+      "Telecommunications"
+    ],
+    tags: ["Space Technology", "Satellites", "Earth Observation", "Space Communications", "Research"],
+    estimatedDelivery: "12-24 months",
+    supportLevel: "enterprise",
+    marketPrice: "$75,000 - $250,000",
+    roi: "150-300%",
+    innovationLevel: "Revolutionary",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-infrastructure-optimization",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      website: "https://ziontechgroup.com"
     },
-    marketPrice: "$180-250/hour",
-    responseTime: "4 hours",
-    sla: "99.95% uptime",
-    certifications: ["AI/ML", "GPU Computing", "Distributed Systems", "Performance"],
-    deliveryTime: "8-12 weeks",
-    support: "24/7 premium support"
+    technicalSpecs: {
+      technology: ["Satellite Technology", "AI", "Data Analytics", "Remote Sensing", "Communications"],
+      integrations: ["Ground stations", "Data processing centers", "Research platforms", "Analytics tools"],
+      apiEndpoints: 150,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "Space regulations", "Data protection"]
+    },
+    competitors: ["SpaceX", "Blue Origin", "Virgin Galactic", "Planet Labs", "Maxar"],
+    marketSize: "$469.8 billion by 2025"
   },
+
   {
-    id: 8,
-    name: "Hybrid Cloud Architecture",
-    category: "Cloud",
-    description: "Design and implementation of hybrid cloud architectures with seamless integration between on-premises and cloud environments",
-    hourlyRate: 145,
-    projectRate: 38000,
+    id: "biotech-healthcare-technology",
+    title: "Biotech & Healthcare Technology Solutions",
+    description: "Cutting-edge biotechnology and healthcare technology solutions including AI-powered diagnostics, personalized medicine, drug discovery, and healthcare data analytics.",
+    category: "Healthcare",
+    subcategory: "Biotechnology",
+    price: 45000,
+    currency: "$",
+    pricingModel: "project",
     features: [
-      "Hybrid architecture design",
-      "Cloud migration strategy",
-      "Integration services",
-      "Security implementation",
-      "Performance optimization",
-      "Cost management",
-      "Disaster recovery",
-      "Compliance monitoring"
+      "AI-powered diagnostics",
+      "Personalized medicine",
+      "Drug discovery",
+      "Healthcare analytics",
+      "Patient monitoring",
+      "Clinical trials",
+      "Regulatory compliance",
+      "Data security",
+      "Research collaboration",
+      "Analytics platform"
     ],
     benefits: [
-      "Flexibility",
-      "Cost optimization",
-      "Security control",
-      "Scalability",
-      "Compliance",
-      "Risk mitigation"
+      "Improve patient outcomes",
+      "Accelerate drug discovery",
+      "Reduce healthcare costs",
+      "Personalized treatment",
+      "Enhanced research"
     ],
-    targetAudience: ["Enterprises", "Financial services", "Healthcare", "Government"],
-    tags: ["Hybrid Cloud", "Cloud Migration", "Integration", "Security", "Compliance"],
+    useCases: [
+      "Medical diagnostics",
+      "Drug development",
+      "Patient care",
+      "Clinical research",
+      "Healthcare management"
+    ],
+    targetAudience: [
+      "Healthcare Providers",
+      "Pharmaceutical Companies",
+      "Research Institutions",
+      "Medical Device Companies",
+      "Healthcare Systems"
+    ],
+    tags: ["Biotechnology", "Healthcare", "AI", "Personalized Medicine", "Drug Discovery"],
+    estimatedDelivery: "6-12 months",
+    supportLevel: "enterprise",
+    marketPrice: "$45,000 - $150,000",
+    roi: "200-400%",
+    innovationLevel: "Cutting-edge",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/hybrid-cloud-architecture",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      website: "https://ziontechgroup.com"
     },
-    marketPrice: "$145-200/hour",
-    responseTime: "6 hours",
-    sla: "99.9% uptime",
-    certifications: ["AWS", "Azure", "GCP", "Cloud Architecture", "Security"],
-    deliveryTime: "6-10 weeks",
-    support: "Business hours + emergency support"
+    technicalSpecs: {
+      technology: ["AI", "Machine Learning", "Data Analytics", "Biotechnology", "Healthcare Systems"],
+      integrations: ["EHR systems", "Medical devices", "Research platforms", "Analytics tools"],
+      apiEndpoints: 400,
+      uptime: "99.95%",
+      security: ["HIPAA", "SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]
+    },
+    competitors: ["23andMe", "Illumina", "Thermo Fisher", "Roche", "Johnson & Johnson"],
+    marketSize: "$2.4 trillion by 2025"
   }
 ];
