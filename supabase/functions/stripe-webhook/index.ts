@@ -16,11 +16,7 @@ const supabase = createClient(
 serve(async (req) => {
   if (req.method === 'POST') {
     const body = await req.text();
-    const signature = req.headers.get('stripe-signature');
-    
-    if (!signature) {
-      return new Response('No signature provided', { status: 400 });
-    }
+    const signature = req.headers.get('stripe-signature') || '';
 
     let event;
     try {
