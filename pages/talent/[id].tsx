@@ -1,138 +1,62 @@
 import React from 'react';
-import { NextSeo } from '@/components/NextSeo';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
-// Loader2 removed as TalentProfileSkeleton will be used
-import TalentProfileSkeleton from '@/components/talent/TalentProfileSkeleton';
-import NotFound from '@/components/NotFound';
-import useSWR from 'swr';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
-interface TalentProfileBasic {
-  id: string;
-  name: string;
-  bio?: string;
-  skills?: string[];
-  portfolio?: string[];
-}
-
-// fetcher-like function for handling API responses
-const handleApiResponse = async (res: Response) => {
-  if (!res.ok) {
-    const error = new Error('An error occurred while fetching the data.');
-    // Read response body once and attempt to parse JSON
-    const raw = await res.text();
-    try {
-      (error as any).info = JSON.parse(raw);
-    } catch {
-      (error as any).info = { message: raw };
-    }
-    (error as any).status = res.status;
-    throw error;
-  }
-  return res.json();
-};
-
-const TalentPage: React.FC = () => {
+export default function TalentPage() {
   const router = useRouter();
-  const { id } = router.query as { id?: string };
+  const { id } = router.query;
 
-  const { data, error, isLoading } = useSWR<TalentProfileBasic>(
-    id ? `/api/talent/${id}` : null,
-    (url: string) => fetch(url).then(handleApiResponse)
-  );
-
-  if (isLoading || !router.isReady || !id) {
-    return <TalentProfileSkeleton />;
-  }
-
-  // Specific 404 error from API
-  if (error && (error as any).status === 404) {
-    return (
-      <>
-        <NextSeo title="Talent Not Found" description="Talent profile unavailable" />
-        <NotFound />
-      </>
-    );
-  }
-
-  // Other errors (non-404)
-  if (error) {
-    const err: any = error;
-    return (
-      <div className="flex flex-col items-center justify-center py-20 text-center">
-        <h2 className="text-2xl font-semibold mb-2">Error</h2>
-        <p>Failed to load talent profile.</p>
-        {err.status && <p>Status: {err.status}</p>}
-        <p>Message: {err.info?.error || err.info?.message || err.message}</p>
-      </div>
-    );
-  }
-
-  // API call was successful (no error thrown) but no profile found
-  // This also implies !isLoading at this point.
-  if (!data) {
-    return (
-      <>
-        <NextSeo title="Talent Not Found" description="Talent profile unavailable" />
-        <NotFound />
-      </>
-    );
-  }
-
-  // If we reach here, talent data is available
   return (
     <>
-      <NextSeo
-        title={data.name}
-        description={data.bio ?? undefined} // Ensure description is string or undefined
-        openGraph={{
-          images: undefined,
-          title: data.name,
-          description: data.bio ?? undefined // Ensure description is string or undefined
-        }}
-      />
-      <main className="min-h-screen bg-zion-blue py-8 text-white" data-testid="talent-details">
-        <div className="container mx-auto px-4 space-y-6">
-          <div className="flex items-center gap-4">
-            <Avatar className="h-20 w-20">
-              <AvatarFallback>{data.name.charAt(0)}</AvatarFallback>
-            </Avatar>
-            <div>
-              <h1 className="text-3xl font-bold" data-testid="profile-name">
-                {data.name}
-              </h1>
-              {data.bio && <p className="text-zion-slate-light">{data.bio}</p>}
+      <Head>
+        <title>Talent Profile - Zion Tech Group</title>
+        <meta name="description" content="View talent profiles and professional information" />
+      </Head>
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold mb-4">Talent Profile</h1>
+            <p className="text-xl text-gray-600">Talent ID: {id}</p>
+          </div>
+          
+          <div className="bg-white rounded-lg shadow-lg p-8 text-center">
+            <div className="mb-6">
+              <h2 className="text-2xl font-semibold mb-4">Talent Feature Coming Soon</h2>
+              <p className="text-gray-600 mb-6">
+                We're currently developing our talent platform. In the meantime, please contact us directly for talent inquiries.
+              </p>
+            </div>
+
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+              <h3 className="text-lg font-semibold text-blue-800 mb-2">Contact Us for Talent</h3>
+              <p className="text-blue-700 mb-4">
+                Our team can help you find the right talent for your project needs.
+              </p>
+              <div className="space-y-2 text-sm text-blue-600 mb-4">
+                <p>📞 <a href="tel:+13024640950" className="hover:underline">+1 302 464 0950</a></p>
+                <p>✉️ <a href="mailto:kleber@ziontechgroup.com" className="hover:underline">kleber@ziontechgroup.com</a></p>
+                <p>📍 364 E Main St STE 1008 Middletown DE 19709</p>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                href="/contact"
+                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Contact Us
+              </Link>
+              <Link
+                href="/services"
+                className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+              >
+                View Our Services
+              </Link>
             </div>
           </div>
-
-          {data.skills && data.skills.length > 0 && (
-            <div className="flex flex-wrap gap-2" data-testid="skills">
-              {data.skills.map((skill) => (
-                <Badge key={skill} variant="secondary">
-                  {skill}
-                </Badge>
-              ))}
-            </div>
-          )}
-
-          {data.portfolio && data.portfolio.length > 0 && (
-            <div>
-              <h2 className="text-xl font-semibold mb-2">Portfolio</h2>
-              <ul className="list-disc ml-5 space-y-1">
-                {data.portfolio.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          <Button className="bg-zion-purple text-white">Hire</Button>
         </div>
-      </main>
+      </div>
     </>
   );
-};
-
-export default TalentPage;
+}

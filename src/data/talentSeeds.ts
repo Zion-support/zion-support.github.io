@@ -1,34 +1,71 @@
-import { TalentProfile } from '@/types/talent';
+export interface Talent {
+  id: string;
+  name: string;
+  title: string;
+  skills: string[];
+  experience: number;
+  hourlyRate: number;
+  availability: 'available' | 'busy' | 'unavailable';
+  location: string;
+  rating: number;
+  completedProjects: number;
+  description: string;
+}
 
-export const TALENT_SEEDS: TalentProfile[] = [
+export const talentSeeds: Talent[] = [
   {
-    id: 'seed-1',
-    user_id: 'user-seed-1',
-    full_name: 'Alice Johnson',
-    professional_title: 'Full Stack Developer',
-    profile_picture_url: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=200&h=200',
-    skills: ['React', 'Node.js', 'TypeScript'],
-    hourly_rate: 120,
-    availability_type: 'full_time'
+    id: '1',
+    name: 'Sarah Chen',
+    title: 'Senior AI Engineer',
+    skills: ['Python', 'TensorFlow', 'PyTorch', 'Machine Learning', 'Deep Learning'],
+    experience: 8,
+    hourlyRate: 120,
+    availability: 'available',
+    location: 'San Francisco, CA',
+    rating: 4.9,
+    completedProjects: 45,
+    description: 'Experienced AI engineer with expertise in computer vision and natural language processing.'
   },
   {
-    id: 'seed-2',
-    user_id: 'user-seed-2',
-    full_name: 'Brian Lee',
-    professional_title: 'Data Scientist',
-    profile_picture_url: 'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&h=200',
-    skills: ['Python', 'TensorFlow', 'Data Analysis'],
-    hourly_rate: 150,
-    availability_type: 'part_time'
+    id: '2',
+    name: 'Michael Rodriguez',
+    title: 'Cybersecurity Specialist',
+    skills: ['Network Security', 'Penetration Testing', 'Incident Response', 'Compliance'],
+    experience: 6,
+    hourlyRate: 95,
+    availability: 'available',
+    location: 'Austin, TX',
+    rating: 4.8,
+    completedProjects: 32,
+    description: 'Certified cybersecurity professional with experience in enterprise security and threat hunting.'
   },
   {
-    id: 'seed-3',
-    user_id: 'user-seed-3',
-    full_name: 'Carla Gomez',
-    professional_title: 'DevOps Engineer',
-    profile_picture_url: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&h=200',
-    skills: ['AWS', 'Docker', 'Kubernetes'],
-    hourly_rate: 140,
-    availability_type: 'project'
+    id: '3',
+    name: 'Emily Watson',
+    title: 'DevOps Engineer',
+    skills: ['AWS', 'Docker', 'Kubernetes', 'Terraform', 'CI/CD'],
+    experience: 5,
+    hourlyRate: 85,
+    availability: 'busy',
+    location: 'Seattle, WA',
+    rating: 4.7,
+    completedProjects: 28,
+    description: 'DevOps engineer specializing in cloud infrastructure and automation.'
+  },
+  {
+    id: '4',
+    name: 'David Kim',
+    title: 'Full Stack Developer',
+    skills: ['React', 'Node.js', 'Python', 'PostgreSQL', 'MongoDB'],
+    experience: 7,
+    hourlyRate: 75,
+    availability: 'available',
+    location: 'New York, NY',
+    rating: 4.9,
+    completedProjects: 52,
+    description: 'Full stack developer with expertise in modern web technologies and scalable applications.'
   }
 ];
+
+// Export for API routes
+export const TALENT_SEEDS = talentSeeds;

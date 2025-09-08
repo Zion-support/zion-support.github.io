@@ -94,17 +94,6 @@ export default function Revolutionary2025ServicesShowcase() {
     }
   });
 
-  // Statistics
-  const stats = {
-    totalServices: allRevolutionaryServices.length,
-    totalCustomers: allRevolutionaryServices.reduce((sum, service) => sum + service.customers, 0),
-    averageRating: (allRevolutionaryServices.reduce((sum, service) => sum + service.rating, 0) / allRevolutionaryServices.length).toFixed(1),
-    totalRevenue: allRevolutionaryServices.reduce((sum, service) => {
-      const price = parseInt(service.price.replace('$', '').replace(',', ''));
-      return sum + (price * service.customers);
-    }, 0)
-  };
-
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
       <div className="min-h-screen">
@@ -422,4 +411,10 @@ export default function Revolutionary2025ServicesShowcase() {
       </div>
     </UltraQuantumHolographicBackground>
   );
+}
+
+export async function getServerSideProps() {
+  return {
+    props: {}
+  };
 }

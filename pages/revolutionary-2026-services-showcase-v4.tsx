@@ -574,3 +574,9 @@ export default function Revolutionary2026ServicesShowcaseV4() {
     </>
   );
 }
+
+export async function getServerSideProps() {
+  return {
+    props: {}
+  };
+}

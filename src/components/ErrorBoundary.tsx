@@ -1,9 +1,8 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw } from 'lucide-react'
+import React, { Component, ReactNode } from "react";
 
-interface Props {
-  children: ReactNode
-  fallback?: ReactNode
+interface ErrorBoundaryProps {
+  children: ReactNode;
+  fallback?: ReactNode;
 }
 
 interface State {
@@ -31,34 +30,21 @@ export default class ErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback
-      }
-
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50">
-          <div className="max-w-md mx-auto text-center px-6">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-red-100 mb-6">
-              <AlertTriangle className="h-8 w-8 text-red-600" />
-            </div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Something went wrong
-            </h1>
-            <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
+      return this.props.fallback || (
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+            <p className="text-gray-600 mb-4">We're sorry, but something unexpected happened.</p>
             <button
-              onClick={this.handleRetry}
-              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              onClick={() => window.location.reload()}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
             >
-              <RefreshCw className="w-4 h-4 mr-2" />
-              Try Again
+              Reload Page
             </button>
           </div>
         </div>
-      )
+      );
     }
-
-    return this.props.children
+    return this.props.children;
   }
 }

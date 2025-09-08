@@ -6,18 +6,12 @@ import {
   Zap, Brain, Atom, Rocket, Shield, Target, 
   Phone, Mail, MapPin, Globe, ExternalLink,
   Twitter, Linkedin, Github, Facebook, Instagram,
-  ArrowRight, Star, TrendingUp, Users, Award
-=======
-  Phone, Mail, MapPin, Globe, 
-  Brain, Rocket, Shield, Cloud, 
-  Zap, Atom, Building2, Star,
-  ArrowRight, ExternalLink
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cef6
+  ArrowRight, Star, TrendingUp, Users, Award,
+  DollarSign, Microscope, Network, Palette, BarChart3, ShieldCheck, Youtube
 } from 'lucide-react';
 import Link from 'next/link';
 
-<<<<<<< HEAD
-const EnhancedFooter: React.FC = () => {
+export default function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
 =======
 export default function EnhancedFooter() {
@@ -639,6 +633,4 @@ export default function EnhancedFooter() {
       </motion.div>
     </footer>
   );
-};
-
-export default EnhancedFooter;
+}

@@ -491,3 +491,9 @@ export default function Services2026ShowcaseEnhancedPage() {
     </UltraFuturisticBackground>
   );
 }
+
+export async function getServerSideProps() {
+  return {
+    props: {}
+  };
+}

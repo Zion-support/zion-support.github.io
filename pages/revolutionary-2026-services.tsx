@@ -457,3 +457,9 @@ export default function Revolutionary2026ServicesPage() {
     </Layout>
   );
 }
+
+export async function getServerSideProps() {
+  return {
+    props: {}
+  };
+}
