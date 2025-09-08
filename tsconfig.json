@@ -5,12 +5,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@/pages/*": ["./src/pages/*"]
-    },
-    "types": ["vite/client", "react", "react-router-dom", "node"],
+
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -22,11 +17,32 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "allowJs": true,
+    "incremental": true,
+    "noEmitOnError": true,
+
+    /* Path mapping */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": [
+
     "src/**/*",
     "src/**/*.tsx",
     "src/**/*.ts",
@@ -59,6 +75,18 @@
     "zion/**",
     "apps/**",
     "utils/**",
-    "types/**"
+    "types/**",
+    "src/pages/**/*",
+    "src/routes/**/*",
+    "src/components/**/*",
+    "src/context/**/*",
+    "src/hooks/**/*",
+    "src/services/**/*",
+    "src/data/**/*",
+    "src/types/**/*",
+    "src/utils/**/*",
+    "src/layout/**/*",
+    "src/lib/**/*"
+
   ]
 }
