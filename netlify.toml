@@ -206,39 +206,21 @@ name = "broken-image-scanner"
 schedule = "0 */6 * * *" # every 6 hours
 
 [[scheduled.functions]]
-name = "auto-scheduler"
-schedule = "*/15 * * * *" # every 15 minutes
-
-# Newly added cloud automations
-[[scheduled.functions]]
-name = "performance-audit-runner"
-schedule = "0 * * * *" # hourly
+  name = "auto-scheduler"
+  schedule = "*/15 * * * *" # every 15 minutes
 
 [[scheduled.functions]]
-name = "unused-deps-runner"
-schedule = "17 */6 * * *" # every 6 hours
+  name = "branch-cleanup-runner"
+  schedule = "17 3 * * *"
 
 [[scheduled.functions]]
-name = "sitemap-pinger"
-schedule = "0 */2 * * *" # every 2 hours
-
-# From main (keep)
-[[scheduled.functions]]
-  name = "autonomous-innovation-generator"
-  schedule = "*/2 * * * *" # every 2 minutes
+  name = "deps-auto-upgrade-runner"
+  schedule = "0 4 * * *"
 
 [[scheduled.functions]]
-  name = "external-link-checker"
-  schedule = "15 */6 * * *" # every 6 hours at :15
+  name = "auto-media-release-runner"
+  schedule = "0 */6 * * *"
 
 [[scheduled.functions]]
-  name = "image-optimizer"
-  schedule = "0 */8 * * *" # every 8 hours
-
-[[scheduled.functions]]
-  name = "newsroom-publisher"
-  schedule = "*/180 * * * *" # every 3 hours
-
-[[scheduled.functions]]
-  name = "ai-changelog-updater"
-  schedule = "7 */4 * * *" # every 4 hours, at :07
+  name = "llm-content-curator-runner"
+  schedule = "*/30 * * * *"
