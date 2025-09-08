@@ -63,11 +63,21 @@ const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const Legal = React.lazy(() => import('./pages/Legal'));
 const EnhancedContact = React.lazy(() => import('./components/EnhancedContact'));
 
-// Enhanced components
-const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
-const Community = React.lazy(() => import('./pages/Community'));
-const Developers = React.lazy(() => import('./pages/Developers'));
-const Demo = React.lazy(() => import('./pages/Demo'));
+// Support and onboarding pages
+const GetStarted = createLazyComponent(() => import('./pages/GetStarted'));
+const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
+const Support = createLazyComponent(() => import('./pages/Support'));
+const FAQ = createLazyComponent(() => import('./pages/FAQ'));
+const Status = createLazyComponent(() => import('./pages/Status'));
+
+// New AI Services 2025 - Combined from both versions
+const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
+const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cybersecurity-Platform'));
+const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
+const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
+const AIAutonomousResearchAssistant = createLazyComponent(() => import('./pages/services/ai-autonomous-research-assistant'));
+const AIFinancialTradingPlatform = createLazyComponent(() => import('./pages/services/ai-financial-trading-platform'));
+const BlockchainEnterpriseSolutions = createLazyComponent(() => import('./pages/services/blockchain-enterprise-solutions'));
 
 // New pages
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
@@ -283,9 +293,113 @@ function App() {
                   <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
                   <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
 
-                  {/* Catch all route */}
-                  <Route path="*" element={<Home />} />
-                </Routes>
+                    {/* New AI Services 2025 */}
+                    <Route path="/services/ai-supply-chain-optimization" element={<ModernLayout><AISupplyChainOptimization /></ModernLayout>} />
+                    <Route path="/services/ai-cybersecurity-platform" element={<ModernLayout><AICybersecurity /></ModernLayout>} />
+                    <Route path="/services/ai-healthcare-platform" element={<ModernLayout><AIHealthcare /></ModernLayout>} />
+                    <Route path="/services/ai-quantum-hybrid-platform" element={<ModernLayout><AIQuantumHybridPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-autonomous-research-assistant" element={<ModernLayout><AIAutonomousResearchAssistant /></ModernLayout>} />
+                    <Route path="/services/ai-financial-trading-platform" element={<ModernLayout><AIFinancialTradingPlatform /></ModernLayout>} />
+                    <Route path="/services/blockchain-enterprise-solutions" element={<ModernLayout><BlockchainEnterpriseSolutions /></ModernLayout>} />
+
+                    {/* New Innovative Services 2025 - Combined from both versions */}
+                    <Route path="/services/ai-enterprise-automation-platform" element={<AIEnterpriseAutomationPlatform />} />
+                    <Route path="/services/ai-data-analytics-platform" element={<AIDataAnalyticsPlatform />} />
+                    <Route path="/services/it-infrastructure-management" element={<ITInfrastructureManagement />} />
+                    <Route path="/services/micro-saas-solutions-comprehensive" element={<MicroSaaSSolutionsComprehensive />} />
+
+                    {/* New Innovative AI Services 2025 - From remote version */}
+                    <Route path="/services/ai-quantum-neural-network-platform" element={<AIQuantumNeuralNetworkPlatform />} />
+                    <Route path="/services/ai-autonomous-business-operations-platform" element={<AIAutonomousBusinessOperationsPlatform />} />
+                    <Route path="/services/ai-customer-experience-analytics-platform" element={<AICustomerExperienceAnalyticsPlatform />} />
+
+                    {/* New Innovative Services 2025 - Additional */}
+                    <Route path="/services/ai-enterprise-intelligence-platform" element={<AIEnterpriseIntelligencePlatform />} />
+                    <Route path="/services/quantum-ai-cybersecurity-platform" element={<QuantumAICybersecurityPlatform />} />
+                    <Route path="/services/ai-hr-management-platform" element={<AIHRManagementPlatform />} />
+
+                    {/* Additional service routes from remote branch */}
+                    <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
+                    <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
+                    <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
+                    <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                    <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                    <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
+                    <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+                    <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                    <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+
+                    {/* Solution Routes */}
+                    <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
+                    <Route path="/solutions/financial" element={<FinancialSolutions />} />
+                    <Route path="/solutions/manufacturing" element={<ManufacturingSolutions />} />
+                    <Route path="/solutions/government" element={<GovernmentSolutions />} />
+                    <Route path="/solutions/retail" element={<RetailSolutions />} />
+                    <Route path="/solutions/quantum-edge-computing" element={<QuantumEdgeComputing />} />
+                    <Route path="/solutions/ai-autonomous-business" element={<AIAutonomousBusiness />} />
+                    <Route path="/solutions/blockchain-web3" element={<BlockchainWeb3 />} />
+                    <Route path="/solutions/iot-edge-computing" element={<IoTEdgeComputing />} />
+                    <Route path="/solutions/space-tech" element={<SpaceTech />} />
+
+                    {/* Showcase Routes */}
+                    <Route path="/comprehensive-services-showcase-2025" element={<ModernLayout><ComprehensiveServicesShowcase2025 /></ModernLayout>} />
+                    <Route path="/innovative-ai-services-showcase-2025" element={<ModernLayout><InnovativeAIServicesShowcase2025 /></ModernLayout>} />
+                    <Route path="/innovative-services-showcase-2025" element={<ModernLayout><InnovativeServicesShowcase2025 /></ModernLayout>} />
+
+                    {/* Legal and Policy Pages */}
+                    <Route path="/privacy" element={<ModernLayout><Privacy /></ModernLayout>} />
+                    <Route path="/terms" element={<ModernLayout><Terms /></ModernLayout>} />
+                    <Route path="/cookies" element={<ModernLayout><Cookies /></ModernLayout>} />
+                    <Route path="/accessibility" element={<ModernLayout><Accessibility /></ModernLayout>} />
+                    <Route path="/security" element={<ModernLayout><Security /></ModernLayout>} />
+                    <Route path="/compliance" element={<ModernLayout><Compliance /></ModernLayout>} />
+
+                    {/* New pages we created */}
+                    <Route path="/enterprise" element={<Enterprise />} />
+                    <Route path="/industry-solutions" element={<IndustrySolutions />} />
+                    <Route path="/cloud-solutions" element={<CloudSolutions />} />
+                    <Route path="/emerging-tech" element={<EmergingTech />} />
+                    <Route path="/get-started" element={<GetStarted />} />
+                    <Route path="/request-quote" element={<RequestQuote />} />
+                    <Route path="/support" element={<Support />} />
+                    <Route path="/faq" element={<FAQ />} />
+                    <Route path="/status" element={<Status />} />
+
+                    {/* 404 Page */}
+                    <Route
+                      path="*"
+                      element={
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
+                        >
+                          <div className="text-center text-white">
+                            <h1 className="text-6xl font-bold mb-4">404</h1>
+                            <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>
+                            <p className="text-gray-300 mb-8">
+                              The page you're looking for doesn't exist or has been moved.
+                            </p>
+                            <button
+                              onClick={() => window.history.back()}
+                              className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mr-4"
+                            >
+                              Go Back
+                            </button>
+                            <button
+                              onClick={() => window.location.href = '/'}
+                              className="px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
+                            >
+                              Go Home
+                            </button>
+                          </div>
+                        </motion.div>
+                      }
+                    />
+                  </Routes>
+                </AnimatePresence>
               </Suspense>
             </main>
           </div>

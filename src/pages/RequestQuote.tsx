@@ -1,586 +1,457 @@
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
-  Building2, 
+  Calculator, 
+  Brain, 
+  Shield, 
+  Zap, 
   Users, 
-  Globe, 
-  Calendar, 
-  MessageSquare, 
-  Phone, 
+  Building2, 
   Mail, 
-  FileText,
+  Phone,
+  MapPin,
+  Clock,
   CheckCircle,
   ArrowRight,
-  Zap,
-  Brain,
-  Shield,
+  Star,
+  TrendingUp,
+  Globe,
+  Server,
   Cloud,
-  Database,
-  Cpu,
-  Network,
   Lock,
-  BarChart3,
-  Workflow,
-  Atom,
-  Rocket,
-  Target,
-  DollarSign,
-  Clock,
-  Star
+  Database,
+  Workflow
 } from 'lucide-react';
 
 export default function RequestQuote() {
-  const [formData, setFormData] = useState({
-    companyName: '',
-    contactName: '',
-    email: '',
-    phone: '',
-    companySize: '',
-    industry: '',
-    projectType: [],
-    budget: '',
-    timeline: '',
-    description: '',
-    requirements: '',
-    preferredContact: 'email'
-  });
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [companySize, setCompanySize] = useState('');
+  const [timeline, setTimeline] = useState('');
+  const [budget, setBudget] = useState('');
 
-  const [currentStep, setCurrentStep] = useState(1);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const projectTypes = [
-    { id: 'ai-automation', name: 'AI & Automation', icon: Brain, description: 'AI-powered business process automation' },
-    { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Cloud, description: 'Cloud infrastructure and deployment' },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, description: 'Security solutions and compliance' },
-    { id: 'data-analytics', name: 'Data Analytics', icon: BarChart3, description: 'Business intelligence and insights' },
-    { id: 'digital-transformation', name: 'Digital Transformation', icon: Workflow, description: 'End-to-end business transformation' },
-    { id: 'it-infrastructure', name: 'IT Infrastructure', icon: Cpu, description: 'Infrastructure management and optimization' },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Atom, description: 'Quantum solutions and research' },
-    { id: 'blockchain', name: 'Blockchain', icon: Network, description: 'Distributed ledger technology' },
-    { id: 'micro-saas', name: 'Micro SaaS', icon: Zap, description: 'Custom software solutions' },
-    { id: 'edge-computing', name: 'Edge Computing', icon: Cpu, description: 'Edge and IoT solutions' }
+  const serviceCategories = [
+    {
+      id: 'ai-automation',
+      name: 'AI & Automation',
+      icon: <Brain className="w-6 h-6" />,
+      services: [
+        'AI Enterprise Automation Platform',
+        'AI Data Analytics Platform',
+        'AI Business Intelligence',
+        'AI Cybersecurity Platform',
+        'AI Autonomous Research Assistant',
+        'AI Financial Trading Platform',
+        'AI Healthcare Platform',
+        'AI Quantum Hybrid Platform'
+      ]
+    },
+    {
+      id: 'it-infrastructure',
+      name: 'IT & Infrastructure',
+      icon: <Server className="w-6 h-6" />,
+      services: [
+        'IT Infrastructure Management',
+        'Cloud & DevOps Solutions',
+        'Cybersecurity Services',
+        'Digital Transformation',
+        'Edge Computing Solutions',
+        'Quantum Computing Solutions',
+        'IoT Edge Computing'
+      ]
+    },
+    {
+      id: 'micro-saas',
+      name: 'Micro SaaS Solutions',
+      icon: <Zap className="w-6 h-6" />,
+      services: [
+        'AI Sales Copilot',
+        'Cloud FinOps Optimizer',
+        'AI Compliance Assistant',
+        'Micro SaaS Platform',
+        'AI HR Management Platform',
+        'AI Customer Support Automation',
+        'AI Workflow Orchestrator'
+      ]
+    }
   ];
 
   const companySizes = [
-    '1-10 employees',
-    '11-50 employees', 
-    '51-200 employees',
-    '201-1000 employees',
-    '1000+ employees'
-  ];
-
-  const industries = [
-    'Technology',
-    'Healthcare',
-    'Financial Services',
-    'Manufacturing',
-    'Retail',
-    'Government',
-    'Education',
-    'Energy',
-    'Transportation',
-    'Other'
-  ];
-
-  const budgets = [
-    'Under $10K',
-    '$10K - $50K',
-    '$50K - $100K',
-    '$100K - $500K',
-    '$500K - $1M',
-    '$1M+'
+    { value: 'startup', label: 'Startup (1-10 employees)', description: 'Perfect for emerging businesses' },
+    { value: 'small', label: 'Small Business (11-50 employees)', description: 'Ideal for growing companies' },
+    { value: 'medium', label: 'Medium Business (51-200 employees)', description: 'Great for established organizations' },
+    { value: 'large', label: 'Large Business (201-1000 employees)', description: 'Perfect for enterprise solutions' },
+    { value: 'enterprise', label: 'Enterprise (1000+ employees)', description: 'Custom enterprise solutions' }
   ];
 
   const timelines = [
-    '1-3 months',
-    '3-6 months',
-    '6-12 months',
-    '12+ months'
+    { value: 'immediate', label: 'Immediate (1-2 weeks)', description: 'Urgent implementation needed' },
+    { value: 'quick', label: 'Quick (1-2 months)', description: 'Fast-track implementation' },
+    { value: 'standard', label: 'Standard (3-6 months)', description: 'Normal implementation timeline' },
+    { value: 'extended', label: 'Extended (6+ months)', description: 'Complex, phased implementation' }
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+  const budgetRanges = [
+    { value: 'under-50k', label: 'Under $50,000', description: 'Basic implementation' },
+    { value: '50k-100k', label: '$50,000 - $100,000', description: 'Standard implementation' },
+    { value: '100k-250k', label: '$100,000 - $250,000', description: 'Advanced implementation' },
+    { value: '250k-500k', label: '$250,000 - $500,000', description: 'Enterprise implementation' },
+    { value: '500k-plus', label: '$500,000+', description: 'Custom enterprise solution' }
+  ];
+
+  const handleServiceToggle = (service: string) => {
+    setSelectedServices(prev => 
+      prev.includes(service) 
+        ? prev.filter(s => s !== service)
+        : [...prev, service]
+    );
   };
 
-  const handleProjectTypeChange = (projectType: string) => {
-    setFormData(prev => ({
-      ...prev,
-      projectType: prev.projectType.includes(projectType)
-        ? prev.projectType.filter(pt => pt !== projectType)
-        : [...prev.projectType, projectType]
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    console.log('Quote request submitted:', formData);
-    setIsSubmitting(false);
-    
-    // Show success message or redirect
-    alert('Thank you! Your quote request has been submitted. We\'ll get back to you within 24 hours.');
+    // Handle form submission
+    console.log('Quote request submitted:', {
+      selectedServices,
+      companySize,
+      timeline,
+      budget
+    });
   };
-
-  const nextStep = () => setCurrentStep(prev => Math.min(prev + 1, 3));
-  const prevStep = () => setCurrentStep(prev => Math.max(prev - 1, 1));
-
-  const progress = (currentStep / 3) * 100;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
-      {/* Header */}
-      <div className="bg-zinc-800/50 border-b border-zinc-700/50">
-        <div className="container mx-auto px-4 py-6">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Get Your Custom Quote
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+          <div className="text-center">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-6">
+              <Calculator className="w-10 h-10 text-white" />
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Get Your Custom
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                {" "}Quote
+              </span>
             </h1>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Tell us about your project and we'll provide a detailed proposal tailored to your needs
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Ready to transform your business? Get a personalized quote for our cutting-edge 
+              AI, IT, and Micro SaaS solutions tailored to your specific needs.
             </p>
-          </motion.div>
+          </div>
+        </div>
+        
+        {/* Background Elements */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
         </div>
       </div>
 
-      {/* Progress Bar */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto mb-8">
-          <div className="flex items-center justify-between mb-4">
-            <div className={`flex items-center ${currentStep >= 1 ? 'text-zion-cyan' : 'text-zinc-500'}`}>
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center border-2 ${currentStep >= 1 ? 'border-zion-cyan bg-zion-cyan' : 'border-zinc-500'}`}>
-                {currentStep > 1 ? <CheckCircle className="w-5 h-5 text-white" /> : '1'}
-              </div>
-              <span className="ml-2 font-medium">Company Info</span>
-            </div>
-            <div className={`flex items-center ${currentStep >= 2 ? 'text-zion-cyan' : 'text-zinc-500'}`}>
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center border-2 ${currentStep >= 2 ? 'border-zion-cyan bg-zion-cyan' : 'border-zinc-500'}`}>
-                {currentStep > 2 ? <CheckCircle className="w-5 h-5 text-white" /> : '2'}
-              </div>
-              <span className="ml-2 font-medium">Project Details</span>
-            </div>
-            <div className={`flex items-center ${currentStep >= 3 ? 'text-zion-cyan' : 'text-zinc-500'}`}>
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center border-2 ${currentStep >= 3 ? 'border-zion-cyan bg-zion-cyan' : 'border-zinc-500'}`}>
-                3
-              </div>
-              <span className="ml-2 font-medium">Requirements</span>
-            </div>
-          </div>
-          <div className="w-full bg-zinc-700 rounded-full h-2">
-            <div 
-              className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full transition-all duration-500"
-              style={{ width: `${progress}%` }}
-            ></div>
-          </div>
-        </div>
-
-        {/* Form */}
-        <div className="max-w-4xl mx-auto">
-          <motion.form
-            onSubmit={handleSubmit}
-            className="bg-zinc-800/50 border border-zinc-700/50 rounded-2xl p-8 backdrop-blur-sm"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            {/* Step 1: Company Information */}
-            {currentStep === 1 && (
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <Building2 className="w-6 h-6 mr-3 text-zion-cyan" />
-                  Company Information
-                </h2>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-zinc-300 mb-2">
-                      Company Name *
-                    </label>
-                    <input
-                      type="text"
-                      name="companyName"
-                      required
-                      className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                      placeholder="Enter your company name"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-zinc-300 mb-2">
-                      Contact Name *
-                    </label>
-                    <input
-                      type="text"
-                      name="contactName"
-                      value={formData.contactName}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-zinc-300 mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                      placeholder="your.email@company.com"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-zinc-300 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                      placeholder="+1 (555) 123-4567"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-zinc-300 mb-2">
-                      Company Size *
-                    </label>
-                    <select
-                      name="companySize"
-                      value={formData.companySize}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                    >
-                      <option value="">Select company size</option>
-                      {companySizes.map(size => (
-                        <option key={size} value={size}>{size}</option>
-                      ))}
-                    </select>
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-zinc-300 mb-2">
-                      Industry *
-                    </label>
-                    <select
-                      name="industry"
-                      value={formData.industry}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                    >
-                      <option value="">Select industry</option>
-                      {industries.map(industry => (
-                        <option key={industry} value={industry}>{industry}</option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-                
-                <div className="flex justify-end pt-6">
-                  <button
-                    type="button"
-                    onClick={nextStep}
-                    disabled={!formData.companyName || !formData.contactName || !formData.email || !formData.companySize || !formData.industry}
-                    className="px-8 py-3 bg-zion-cyan hover:bg-zion-cyan/80 text-white font-semibold rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
-                  >
-                    Next Step
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </button>
-                </div>
-              </motion.div>
-            )}
-
-            {/* Step 2: Project Details */}
-            {currentStep === 2 && (
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <Target className="w-6 h-6 mr-3 text-zion-cyan" />
-                  Project Details
-                </h2>
-                
-                <div>
-                  <label className="block text-sm font-medium text-zinc-300 mb-4">
-                    What services are you interested in? *
-                  </label>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {projectTypes.map(projectType => (
-                      <label
-                        key={projectType.id}
-                        className={`flex items-start p-4 rounded-lg border-2 cursor-pointer transition-all duration-300 ${
-                          formData.projectType.includes(projectType.id)
-                            ? 'border-zion-cyan bg-zion-cyan/10'
-                            : 'border-zinc-600 hover:border-zinc-500'
-                        }`}
-                      >
-                        <input
-                          type="checkbox"
-                          checked={formData.projectType.includes(projectType.id)}
-                          onChange={() => handleProjectTypeChange(projectType.id)}
-                          className="mt-1 mr-3 text-zion-cyan focus:ring-zion-cyan"
-                        />
-                        <div>
-                          <div className="flex items-center text-white font-medium">
-                            <projectType.icon className="w-5 h-5 mr-2 text-zion-cyan" />
-                            {projectType.name}
-                          </div>
-                          <p className="text-sm text-zinc-400 mt-1">{projectType.description}</p>
-                        </div>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-zinc-300 mb-2">
-                      Budget Range *
-                    </label>
-                    <select
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                    >
-                      <option value="">Select budget range</option>
-                      {budgets.map(budget => (
-                        <option key={budget} value={budget}>{budget}</option>
-                      ))}
-                    </select>
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-zinc-300 mb-2">
-                      Timeline *
-                    </label>
-                    <select
-                      name="timeline"
-                      required
-                      value={formData.timeline}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                    >
-                      <option value="">Select timeline</option>
-                      {timelines.map(timeline => (
-                        <option key={timeline} value={timeline}>{timeline}</option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-                
-                <div className="flex justify-between pt-6">
-                  <button
-                    type="button"
-                    onClick={prevStep}
-                    className="px-6 py-3 border border-zinc-600 text-zinc-300 hover:bg-zinc-700/50 rounded-lg transition-all duration-300"
-                  >
-                    Previous
-                  </button>
-                  <button
-                    type="button"
-                    onClick={nextStep}
-                    disabled={formData.projectType.length === 0 || !formData.budget || !formData.timeline}
-                    className="px-8 py-3 bg-zion-cyan hover:bg-zion-cyan/80 text-white font-semibold rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
-                  >
-                    Next Step
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </button>
-                </div>
-              </motion.div>
-            )}
-
-            {/* Step 3: Requirements */}
-            {currentStep === 3 && (
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="space-y-6"
-              >
-                <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <FileText className="w-6 h-6 mr-3 text-zion-cyan" />
-                  Project Requirements
-                </h2>
-                
-                <div>
-                  <label className="block text-sm font-medium text-zinc-300 mb-2">
-                    Project Description *
-                  </label>
-                  <textarea
-                    name="description"
-                    value={formData.description}
-                    onChange={handleInputChange}
-                    required
-                    rows={4}
-                    className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                    placeholder="Describe your project goals, challenges, and what you hope to achieve..."
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-zinc-300 mb-2">
-                    Specific Requirements
-                  </label>
-                  <textarea
-                    name="requirements"
-                    value={formData.requirements}
-                    onChange={handleInputChange}
-                    rows={4}
-                    className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                    placeholder="Any specific technical requirements, integrations, or constraints..."
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-zinc-300 mb-2">
-                    Preferred Contact Method
-                  </label>
-                  <div className="flex space-x-4">
-                    {[
-                      { value: 'email', label: 'Email', icon: Mail },
-                      { value: 'phone', label: 'Phone', icon: Phone },
-                      { value: 'message', label: 'Message', icon: MessageSquare }
-                    ].map(option => (
-                      <label key={option.value} className="flex items-center cursor-pointer">
-                        <input
-                          type="radio"
-                          name="preferredContact"
-                          value={option.value}
-                          checked={formData.preferredContact === option.value}
-                          onChange={handleInputChange}
-                          className="mr-2 text-zion-cyan focus:ring-zion-cyan"
-                        />
-                        <option.icon className="w-4 h-4 mr-1 text-zinc-400" />
-                        <span className="text-zinc-300">{option.label}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-                
-                <div className="flex justify-between pt-6">
-                  <button
-                    type="button"
-                    onClick={prevStep}
-                    className="px-6 py-3 border border-zinc-600 text-zinc-300 hover:bg-zinc-700/50 rounded-lg transition-all duration-300"
-                  >
-                    Previous
-                  </button>
-                  <button
-                    type="submit"
-                    disabled={isSubmitting || !formData.description}
-                    className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan/80 hover:to-zion-purple/80 text-white font-semibold rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
-                        Submitting...
-                      </>
-                    ) : (
-                      <>
-                        Submit Quote Request
-                        <Rocket className="w-5 h-5 ml-2" />
-                      </>
-                    )}
-                  </button>
-                </div>
-              </motion.div>
-            )}
-          </motion.form>
-        </div>
-      </div>
-
-      {/* Benefits Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Zion Tech Group?
+      {/* Why Get a Quote */}
+      <div className="py-20 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Get a Custom Quote?
             </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              We deliver cutting-edge solutions with unmatched expertise and support
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Every business is unique. Our custom quotes ensure you get exactly what you need 
+              at the right price point.
             </p>
-          </motion.div>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Star,
-                title: "Expert Team",
-                description: "Certified professionals with deep industry expertise"
-              },
-              {
-                icon: Clock,
-                title: "Fast Delivery",
-                description: "Quick turnaround times without compromising quality"
-              },
-              {
-                icon: DollarSign,
-                title: "Competitive Pricing",
-                description: "Transparent pricing with no hidden costs"
-              },
-              {
-                icon: Shield,
-                title: "Enterprise Security",
-                description: "Bank-level security protocols and compliance"
-              },
-              {
-                icon: Globe,
-                title: "24/7 Support",
-                description: "Round-the-clock technical support and maintenance"
-              },
-              {
-                icon: Zap,
-                title: "Innovation First",
-                description: "Cutting-edge technologies and best practices"
-              }
-            ].map((benefit, index) => (
-              <motion.div
-                key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 * index }}
-                className="bg-zinc-800/30 border border-zinc-700/50 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-zion-cyan" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-6 bg-slate-700/50 rounded-xl border border-slate-600/50">
+              <Star className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Personalized Solutions</h3>
+              <p className="text-gray-300">Tailored to your specific business needs and goals</p>
+            </div>
+            
+            <div className="text-center p-6 bg-slate-700/50 rounded-xl border border-slate-600/50">
+              <TrendingUp className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">ROI Optimization</h3>
+              <p className="text-gray-300">Maximize your investment with strategic planning</p>
+            </div>
+            
+            <div className="text-center p-6 bg-slate-700/50 rounded-xl border border-slate-600/50">
+              <Clock className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Timeline Planning</h3>
+              <p className="text-gray-300">Realistic implementation schedules that work for you</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Quote Form */}
+      <div className="py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Request Your Custom Quote
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Fill out the form below and our team will provide you with a detailed, 
+              personalized quote within 24 hours.
+            </p>
+          </div>
+          
+          <form onSubmit={handleSubmit} className="space-y-12">
+            {/* Service Selection */}
+            <div>
+              <h3 className="text-2xl font-semibold text-white mb-6 flex items-center">
+                <Zap className="w-6 h-6 mr-3 text-cyan-400" />
+                Select Services
+              </h3>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                {serviceCategories.map((category) => (
+                  <div key={category.id} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
+                    <div className="flex items-center mb-4">
+                      <div className="text-cyan-400 mr-3">{category.icon}</div>
+                      <h4 className="text-lg font-semibold text-white">{category.name}</h4>
+                    </div>
+                    <div className="space-y-3">
+                      {category.services.map((service) => (
+                        <label key={service} className="flex items-start space-x-3 cursor-pointer group">
+                          <input
+                            type="checkbox"
+                            checked={selectedServices.includes(service)}
+                            onChange={() => handleServiceToggle(service)}
+                            className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500 mt-1"
+                          />
+                          <span className="text-gray-300 group-hover:text-white transition-colors text-sm">
+                            {service}
+                          </span>
+                        </label>
+                      ))}
+                    </select>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Company Information */}
+            <div>
+              <h3 className="text-2xl font-semibold text-white mb-6 flex items-center">
+                <Building2 className="w-6 h-6 mr-3 text-purple-400" />
+                Company Information
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Company Size</label>
+                  <select
+                    value={companySize}
+                    onChange={(e) => setCompanySize(e.target.value)}
+                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  >
+                    <option value="">Select company size</option>
+                    {companySizes.map((size) => (
+                      <option key={size.value} value={size.value}>
+                        {size.label}
+                      </option>
+                    ))}
+                  </select>
+                  {companySize && (
+                    <p className="text-sm text-gray-400 mt-2">
+                      {companySizes.find(s => s.value === companySize)?.description}
+                    </p>
+                  )}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                <p className="text-zinc-400">{benefit.description}</p>
-              </motion.div>
-            ))}
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Implementation Timeline</label>
+                  <select
+                    value={timeline}
+                    onChange={(e) => setTimeline(e.target.value)}
+                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  >
+                    <option value="">Select timeline</option>
+                    {timelines.map((t) => (
+                      <option key={t.value} value={t.value}>
+                        {t.label}
+                      </option>
+                    ))}
+                  </select>
+                  {timeline && (
+                    <p className="text-sm text-gray-400 mt-2">
+                      {timelines.find(t => t.value === timeline)?.description}
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {/* Budget Range */}
+            <div>
+              <h3 className="text-2xl font-semibold text-white mb-6 flex items-center">
+                <TrendingUp className="w-6 h-6 mr-3 text-green-400" />
+                Budget Range
+              </h3>
+              <div className="max-w-2xl">
+                <select
+                  value={budget}
+                  onChange={(e) => setBudget(e.target.value)}
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                >
+                  <option value="">Select budget range</option>
+                  {budgetRanges.map((range) => (
+                    <option key={range.value} value={range.value}>
+                      {range.label}
+                    </option>
+                  ))}
+                </select>
+                {budget && (
+                  <p className="text-sm text-gray-400 mt-2">
+                    {budgetRanges.find(r => r.value === budget)?.description}
+                  </p>
+                )}
+              </div>
+            </div>
+
+            {/* Additional Information */}
+            <div>
+              <h3 className="text-2xl font-semibold text-white mb-6 flex items-center">
+                <Users className="w-6 h-6 mr-3 text-yellow-400" />
+                Additional Information
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Company Name</label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Enter your company name"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Contact Name</label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                  <input
+                    type="email"
+                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Enter your email address"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
+                  <input
+                    type="tel"
+                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+              </div>
+              
+              <div className="mt-6">
+                <label className="block text-sm font-medium text-gray-300 mb-2">Project Description</label>
+                <textarea
+                  rows={4}
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  placeholder="Describe your project requirements, goals, and any specific challenges you're facing..."
+                />
+              </div>
+            </div>
+
+            {/* Submit Button */}
+            <div className="text-center">
+              <button
+                type="submit"
+                className="px-12 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-lg"
+              >
+                Get My Custom Quote
+              </button>
+              <p className="text-gray-400 mt-4 text-sm">
+                We'll respond within 24 hours with your personalized quote
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      {/* What Happens Next */}
+      <div className="py-20 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              What Happens Next?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our streamlined process ensures you get the information you need quickly 
+              and efficiently.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Submit Request</h3>
+              <p className="text-gray-300">Fill out our comprehensive quote form</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Expert Review</h3>
+              <p className="text-gray-300">Our team analyzes your requirements</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Custom Quote</h3>
+              <p className="text-gray-300">Receive your personalized quote within 24 hours</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">4</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Project Start</h3>
+              <p className="text-gray-300">Begin your digital transformation journey</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Don't wait to transform your business. Get your custom quote today and 
+            take the first step towards digital excellence.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+            >
+              <Phone className="w-5 h-5 inline mr-2" />
+              Talk to an Expert
+            </Link>
+            <Link
+              to="/services"
+              className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
+            >
+              <ArrowRight className="w-5 h-5 inline mr-2" />
+              Explore Services
+            </Link>
           </div>
         </div>
       </div>
