@@ -188,19 +188,15 @@
   schedule = "53 */6 * * *"
 
 [[scheduled.functions]]
-  name = "redirect-healer"
-  schedule = "*/15 * * * *"
+  name = "ux-heuristics-audit-runner"
+  schedule = "*/10 * * * *"
 
 [[scheduled.functions]]
-  name = "sitemap-prioritizer"
-  schedule = "17 */6 * * *"
-
-[[scheduled.functions]]
-  name = "redirect-manager"
+  name = "roadmap-synthesizer"
   schedule = "*/30 * * * *"
 
 [[scheduled.functions]]
-  name = "a11y-audit-runner"
+  name = "content-gap-finder"
   schedule = "*/20 * * * *"
 
 [[scheduled.functions]]
