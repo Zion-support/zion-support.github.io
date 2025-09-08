@@ -130,6 +130,9 @@ export default function FrontLanding() {
                 ['Performance Audit', '/reports/performance'],
                 ['Deps Audit', '/reports/deps'],
                 ['AI Trends', '/reports/ai-trends'],
+                ['Roadmap', '/reports/roadmap'],
+                ['Redirect Healer', '/.netlify/functions/redirect-healer'],
+                ['Sitemap Prioritizer', '/.netlify/functions/sitemap-prioritizer'],
                 ['Newsroom', '/newsroom'],
                 ['Site Health', '/site-health'],
               ].map(([label, href]) => (
