@@ -46,63 +46,36 @@ const AIContentGenerator = React.lazy(() => import('./pages/AIContentGenerator')
 const CybersecurityServices = React.lazy(() => import('./pages/CybersecurityServices'));
 const CloudMigrationServices = React.lazy(() => import('./pages/CloudMigrationServices'));
 
-const baseRoutes = [
-  { path: '/', element: <Home /> },
-  { path: '/match', element: <AIMatcherPage /> },
-  { path: '/login', element: <Login /> },
-  { path: '/signup', element: <Signup /> },
-  { path: '/talent', element: <TalentDirectory /> },
-  { path: '/talents', element: <TalentsPage /> },
-  { path: '/services', element: <ServicesPage /> },
-  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
-  { path: '/categories', element: <Categories /> },
-  { path: '/equipment', element: <EquipmentPage /> },
-  { path: '/equipment/:id', element: <EquipmentDetail /> },
-  { path: '/analytics', element: <Analytics /> },
-  { path: '/mobile-launch', element: <MobileLaunchPage /> },
-  { path: '/open-app', element: <OpenAppRedirect /> },
-  { path: '/community', element: <CommunityPage /> },
-  { path: '/contact', element: <ContactPage /> },
-  { path: '/partners', element: <PartnersPage /> },
-  { path: '/zion-hire-ai', element: <ZionHireAI /> },
-  { path: '/hire-ai', element: <ZionHireAI /> },
-  { path: '/request-quote', element: <RequestQuotePage /> },
-  { path: '/ai-analytics-dashboard', element: <AIAnalyticsDashboard /> },
-  { path: '/ai-content-generator', element: <AIContentGenerator /> },
-  { path: '/cybersecurity-services', element: <CybersecurityServices /> },
-  { path: '/cloud-migration-services', element: <CloudMigrationServices /> },
-  { path: '/blog', element: <Blog /> },
-  { path: '/blog/:slug', element: <BlogPost /> },
-];
+// Lazy load pages for better performance
+const Index = lazy(() => import('../pages/index'))
+const Services = lazy(() => import('../pages/services'))
+const Contact = lazy(() => import('../pages/contact'))
+const About = lazy(() => import('../pages/about'))
+const Privacy = lazy(() => import('../pages/privacy'))
+const Terms = lazy(() => import('../pages/terms'))
+const News = lazy(() => import('../pages/news'))
+const CookiePolicy = lazy(() => import('../pages/cookie-policy'))
+const NotFound = lazy(() => import('../pages/404'))
 
 const App = () => {
   // Ensure each navigation starts at the top of the page
   useScrollToTop();
   return (
-    <WhitelabelProvider>
-      <ThemeProvider defaultTheme="dark">
-        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
-          <Routes>
-            {baseRoutes.map(({ path, element }) => (
-              <Route key={path} path={path} element={element} />
-            ))}
-            <Route path="/auth/*" element={<AuthRoutes />} />
-            <Route path="/dashboard/*" element={<DashboardRoutes />} />
-            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
-            <Route path="/talent/*" element={<TalentRoutes />} />
-            <Route path="/admin/*" element={<AdminRoutes />} />
-            <Route path="/mobile/*" element={<MobileAppRoutes />} />
-            <Route path="/content/*" element={<ContentRoutes />} />
-            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
-            <Route path="/community/*" element={<CommunityRoutes />} />
-            <Route path="/developers/*" element={<DeveloperRoutes />} />
-            <Route path="*" element={<ErrorRoutes />} />
-          </Routes>
-        </Suspense>
-        <Toaster />
-        <SonnerToaster position="top-right" />
-      </ThemeProvider>
-    </WhitelabelProvider>
-  );
-};
+    <Layout>
+      <Suspense fallback={<LoadingSpinner />}>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
+    </Layout>
+  )
+}
 
