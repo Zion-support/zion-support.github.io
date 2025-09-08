@@ -1,117 +1,87 @@
 import React from 'react';
 import Link from 'next/link';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Users, 
-  Globe,
-  Zap,
-  Target,
-  Award,
-  ArrowRight,
-  PieChart,
-  DollarSign,
-  Link as LinkIcon,
-  Share2,
-  BarChart3 as Analytics,
-  Monitor,
-  Smartphone,
-  CheckCircle,
-  Brain,
-  Cpu,
-  Building,
-  Eye,
-  MousePointer,
-  AlertTriangle
-} from 'lucide-react';
-
-const AffiliateAttributionHub: React.FC = () => {
-  const features = [
-    {
-      title: "Multi-Touch Attribution",
-      description: "Track customer journey across all touchpoints and channels",
-      icon: "🔄"
-    },
-    {
-      title: "Real-time Analytics",
-      description: "Live insights into affiliate performance and conversions",
-      icon: "📊"
-    },
-    {
-      title: "Fraud Detection",
-      description: "Advanced algorithms to detect and prevent affiliate fraud",
-      icon: "🛡️"
-    },
-    {
-      title: "Commission Management",
-      description: "Automated commission calculation and payment processing",
-      icon: "💰"
-    }
-  ];
-
-  const attributionModels = [
-    {
-      name: "First-Touch Attribution",
-      description: "Credit goes to the first affiliate that introduced the customer",
-      useCase: "Brand awareness campaigns"
-    },
-    {
-      name: "Last-Touch Attribution",
-      description: "Credit goes to the last affiliate before conversion",
-      useCase: "Direct response campaigns"
-    },
-    {
-      name: "Linear Attribution",
-      description: "Equal credit distribution across all touchpoints",
-      useCase: "Multi-channel marketing"
-    },
-    {
-      name: "Time-Decay Attribution",
-      description: "More recent touchpoints receive higher credit",
-      useCase: "Long sales cycles"
-    }
-  ];
-
-  const platformFeatures = [
-    {
-      category: "Affiliate Management",
-      features: ["Affiliate onboarding", "Performance tracking", "Commission rules", "Payment processing"]
-    },
-    {
-      category: "Analytics & Reporting",
-      features: ["Real-time dashboards", "Custom reports", "ROI analysis", "Conversion tracking"]
-    },
-    {
-      category: "Fraud Prevention",
-      features: ["Click fraud detection", "Conversion validation", "IP monitoring", "Behavioral analysis"]
-    },
-    {
-      category: "Integration & APIs",
-      features: ["CRM integration", "E-commerce platforms", "Marketing tools", "Custom webhooks"]
-    }
-  ];
-
-  const benefits = [
-    {
-      title: "Increased Revenue",
-      description: "Optimize affiliate performance and maximize conversions"
-    },
-    {
-      title: "Better ROI",
-      description: "Accurate attribution leads to better marketing decisions"
-    },
-    {
-      title: "Fraud Prevention",
-      description: "Protect your budget from fraudulent affiliate activities"
-    },
-    {
-      title: "Data Insights",
-      description: "Deep understanding of customer journey and attribution patterns"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+const AffiliateAttributionHub = () => {
+    const features = [
+        {
+            title: "Multi-Touch Attribution",
+            description: "Track customer journey across all touchpoints and channels",
+            icon: "🔄"
+        },
+        {
+            title: "Real-time Analytics",
+            description: "Live insights into affiliate performance and conversions",
+            icon: "📊"
+        },
+        {
+            title: "Fraud Detection",
+            description: "Advanced algorithms to detect and prevent affiliate fraud",
+            icon: "🛡️"
+        },
+        {
+            title: "Commission Management",
+            description: "Automated commission calculation and payment processing",
+            icon: "💰"
+        }
+    ];
+    const attributionModels = [
+        {
+            name: "First-Touch Attribution",
+            description: "Credit goes to the first affiliate that introduced the customer",
+            useCase: "Brand awareness campaigns"
+        },
+        {
+            name: "Last-Touch Attribution",
+            description: "Credit goes to the last affiliate before conversion",
+            useCase: "Direct response campaigns"
+        },
+        {
+            name: "Linear Attribution",
+            description: "Equal credit distribution across all touchpoints",
+            useCase: "Multi-channel marketing"
+        },
+        {
+            name: "Time-Decay Attribution",
+            description: "More recent touchpoints receive higher credit",
+            useCase: "Long sales cycles"
+        }
+    ];
+    const platformFeatures = [
+        {
+            category: "Affiliate Management",
+            features: ["Affiliate onboarding", "Performance tracking", "Commission rules", "Payment processing"]
+        },
+        {
+            category: "Analytics & Reporting",
+            features: ["Real-time dashboards", "Custom reports", "ROI analysis", "Conversion tracking"]
+        },
+        {
+            category: "Fraud Prevention",
+            features: ["Click fraud detection", "Conversion validation", "IP monitoring", "Behavioral analysis"]
+        },
+        {
+            category: "Integration & APIs",
+            features: ["CRM integration", "E-commerce platforms", "Marketing tools", "Custom webhooks"]
+        }
+    ];
+    const benefits = [
+        {
+            title: "Increased Revenue",
+            description: "Optimize affiliate performance and maximize conversions"
+        },
+        {
+            title: "Better ROI",
+            description: "Accurate attribution leads to better marketing decisions"
+        },
+        {
+            title: "Fraud Prevention",
+            description: "Protect your budget from fraudulent affiliate activities"
+        },
+        {
+            title: "Data Insights",
+            description: "Deep understanding of customer journey and attribution patterns"
+        }
+    ];
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -132,13 +102,11 @@ const AffiliateAttributionHub: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Powerful Attribution Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
+              {features.map((feature, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 text-sm">{feature.description}</p>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
           
@@ -146,16 +114,14 @@ const AffiliateAttributionHub: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Flexible Attribution Models</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {attributionModels.map((model, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+              {attributionModels.map((model, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                   <h3 className="text-xl font-semibold text-white mb-3">{model.name}</h3>
                   <p className="text-gray-300 mb-4">{model.description}</p>
                   <div className="bg-white/5 rounded-lg p-3">
                     <span className="text-sm text-blue-400 font-medium">Best for:</span>
                     <span className="text-sm text-gray-300 ml-2">{model.useCase}</span>
                   </div>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
           
@@ -163,19 +129,15 @@ const AffiliateAttributionHub: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Platform Features</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {platformFeatures.map((category, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              {platformFeatures.map((category, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
                   <ul className="space-y-2">
-                    {category.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
+                    {category.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300">
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {feature}
-                      </li>
-                    ))}
+                      </li>))}
                   </ul>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
           
@@ -183,12 +145,10 @@ const AffiliateAttributionHub: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose Our Attribution Hub?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
+              {benefits.map((benefit, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                   <h3 className="text-lg font-semibold text-white mb-3">{benefit.title}</h3>
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
           
@@ -263,16 +223,10 @@ const AffiliateAttributionHub: React.FC = () => {
                 affiliate marketing ROI. Contact us today to get started.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                >
+                <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                   Get Started Today
                 </Link>
-                <Link
-                  to="/services"
-                  className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-                >
+                <Link to="/services" className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
                   View All Services
                 </Link>
               </div>
@@ -280,8 +234,6 @@ const AffiliateAttributionHub: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 };
-
 export default AffiliateAttributionHub;

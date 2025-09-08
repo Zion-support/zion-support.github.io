@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousAudit: React.FC = () => {
-  return (
-    <>
+const AIAutonomousAudit = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Audit Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous audit platform that continuously conducts audits, examines systems, and ensures compliance with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI audit, autonomous audit, audit conduction, system examination, autonomous operations, AI audit platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-audit" />
+        <meta name="description" content="Revolutionary AI autonomous audit platform that continuously conducts audits, examines systems, and ensures compliance with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI audit, autonomous audit, audit conduction, system examination, autonomous operations, AI audit platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-audit"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousAudit: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Audit Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Financial Audit', 'Compliance Audit', 'Security Audit', 'Performance Audit', 'Quality Audit', 'Process Audit', 'System Audit', 'Risk Audit'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Financial Audit', 'Compliance Audit', 'Security Audit', 'Performance Audit', 'Quality Audit', 'Process Audit', 'System Audit', 'Risk Audit'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousAudit: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousAudit;

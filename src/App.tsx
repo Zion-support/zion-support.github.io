@@ -46,20 +46,20 @@ const FAQ = React.lazy(() => import('./pages/FAQ'));
 const Documentation = React.lazy(() => import('./pages/Documentation'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
-const Cookies = React.lazy(() => import('./pages/Cookies'));
-const Partners = React.lazy(() => import('./pages/Partners'));
-const Pricing = React.lazy(() => import('./pages/Pricing'));
-const SearchPage = React.lazy(() => import('./pages/SearchPage'));
-const Legal = React.lazy(() => import('./pages/Legal'));
-const EnhancedContact = React.lazy(() => import('./components/EnhancedContact'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const AdvancedServicesShowcase2027 = React.lazy(() => import('./pages/AdvancedServicesShowcase2027'));
+const ComprehensivePricing2027 = React.lazy(() => import('./pages/ComprehensivePricing2027'));
+const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027'));
 
-// Lazy load our new innovative services
-const InnovativeServicesShowcase = React.lazy(() => import('./pages/InnovativeServicesShowcase'));
-
-// Loading component
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500"></div>
+// Enhanced loading component with skeleton
+const LoadingFallback = () => (
+  <div className="min-h-screen bg-background flex items-center justify-center">
+    <div className="text-center space-y-4">
+      <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto"></div>
+      <p className="text-zion-cyan text-lg font-medium">Loading Zion...</p>
+      <p className="text-muted-foreground text-sm">Preparing your AI marketplace experience</p>
+    </div>
   </div>
 );
 
@@ -74,7 +74,7 @@ function App() {
         <AppHeader />
         
         <main className="flex-1">
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<LoadingFallback />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -89,7 +89,9 @@ function App() {
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/innovative-services-2025" element={<InnovativeServicesShowcase />} />
+              <Route path="/advanced-services-2027" element={<AdvancedServicesShowcase2027 />} />
+              <Route path="/comprehensive-pricing-2027" element={<ComprehensivePricing2027 />} />
+              <Route path="/comprehensive-services-overview-2027" element={<ComprehensiveServicesOverview2027 />} />
             </Routes>
           </Suspense>
         </main>

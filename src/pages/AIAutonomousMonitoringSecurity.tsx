@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousMonitoringSecurity: React.FC = () => {
-  return (
-    <>
+const AIAutonomousMonitoringSecurity = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Monitoring Security Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous monitoring security platform that continuously secures monitoring, detects threats, and protects monitoring infrastructure with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI monitoring security, autonomous monitoring security, monitoring protection, threat detection, autonomous operations, AI monitoring security platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-monitoring-security" />
+        <meta name="description" content="Revolutionary AI autonomous monitoring security platform that continuously secures monitoring, detects threats, and protects monitoring infrastructure with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI monitoring security, autonomous monitoring security, monitoring protection, threat detection, autonomous operations, AI monitoring security platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-monitoring-security"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-yellow-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousMonitoringSecurity: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Monitoring Security Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['System Monitoring Security', 'Network Monitoring Security', 'Application Monitoring Security', 'Performance Monitoring Security', 'Log Monitoring Security', 'Alert Monitoring Security', 'Dashboard Monitoring Security', 'Report Monitoring Security'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['System Monitoring Security', 'Network Monitoring Security', 'Application Monitoring Security', 'Performance Monitoring Security', 'Log Monitoring Security', 'Alert Monitoring Security', 'Dashboard Monitoring Security', 'Report Monitoring Security'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousMonitoringSecurity: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousMonitoringSecurity;

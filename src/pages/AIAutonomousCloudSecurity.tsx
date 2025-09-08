@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousCloudSecurity: React.FC = () => {
-  return (
-    <>
+const AIAutonomousCloudSecurity = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Cloud Security Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous cloud security platform that continuously secures cloud environments, detects threats, and protects infrastructure with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI cloud security, autonomous cloud security, cloud protection, threat detection, autonomous operations, AI cloud security platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-cloud-security" />
+        <meta name="description" content="Revolutionary AI autonomous cloud security platform that continuously secures cloud environments, detects threats, and protects infrastructure with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI cloud security, autonomous cloud security, cloud protection, threat detection, autonomous operations, AI cloud security platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-cloud-security"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousCloudSecurity: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Cloud Security Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['AWS Security', 'Azure Security', 'Google Cloud Security', 'Multi-Cloud Security', 'Cloud Access Security', 'Cloud Data Security', 'Cloud Network Security', 'Cloud Application Security'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['AWS Security', 'Azure Security', 'Google Cloud Security', 'Multi-Cloud Security', 'Cloud Access Security', 'Cloud Data Security', 'Cloud Network Security', 'Cloud Application Security'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousCloudSecurity: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousCloudSecurity;

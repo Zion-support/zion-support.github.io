@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousDesign: React.FC = () => {
-  return (
-    <>
+const AIAutonomousDesign = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Design Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous design platform that continuously creates designs, generates concepts, and produces visual solutions with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI design, autonomous design, design generation, concept creation, autonomous operations, AI design platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-design" />
+        <meta name="description" content="Revolutionary AI autonomous design platform that continuously creates designs, generates concepts, and produces visual solutions with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI design, autonomous design, design generation, concept creation, autonomous operations, AI design platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-design"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousDesign: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Design Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Graphic Design', 'Web Design', 'UI/UX Design', 'Product Design', 'Logo Design', 'Brand Design', 'Print Design', 'Digital Design'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Graphic Design', 'Web Design', 'UI/UX Design', 'Product Design', 'Logo Design', 'Brand Design', 'Print Design', 'Digital Design'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousDesign: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousDesign;

@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousArchitecture: React.FC = () => {
-  return (
-    <>
+const AIAutonomousArchitecture = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Architecture Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous architecture platform that continuously designs systems, creates blueprints, and plans structures with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI architecture, autonomous architecture, system design, blueprint creation, autonomous operations, AI architecture platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-architecture" />
+        <meta name="description" content="Revolutionary AI autonomous architecture platform that continuously designs systems, creates blueprints, and plans structures with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI architecture, autonomous architecture, system design, blueprint creation, autonomous operations, AI architecture platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-architecture"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousArchitecture: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Architecture Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['System Architecture', 'Software Architecture', 'Network Architecture', 'Data Architecture', 'Cloud Architecture', 'Enterprise Architecture', 'Solution Architecture', 'Infrastructure Architecture'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['System Architecture', 'Software Architecture', 'Network Architecture', 'Data Architecture', 'Cloud Architecture', 'Enterprise Architecture', 'Solution Architecture', 'Infrastructure Architecture'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousArchitecture: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousArchitecture;

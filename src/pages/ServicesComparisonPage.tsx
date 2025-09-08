@@ -1,258 +1,114 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Check, Star, Zap, Brain, Shield, Cloud, Rocket, Cpu, Lock, Heart, Users, TrendingUp, Award, DollarSign } from 'lucide-react';
-import { SEO } from '../components/SEO';
-
-interface ServiceTier {
-  name: string;
-  price: string;
-  period: string;
-  features: string[];
-  popular?: boolean;
-  color: string;
-}
-
-interface ServiceCategory {
-  name: string;
-  description: string;
-  icon: React.ComponentType<any>;
-  color: string;
-  services: ServiceTier[];
-}
-
-export default function ServicesComparisonPage() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('ai-services');
-
-  const serviceCategories: ServiceCategory[] = [
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+import { PRICING_TIERS } from '@/data/advancedServices';
+// Service comparison data
+const SERVICE_COMPARISONS = [
     {
-      name: 'AI & Analytics Services',
-      description: 'Intelligent solutions for data-driven decisions',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-600',
-      services: [
-        {
-          name: 'Starter',
-          price: '$299',
-          period: '/month',
-          color: 'from-purple-500 to-pink-600',
-          features: [
-            'AI Business Intelligence Dashboard',
-            'Basic Analytics Reports',
-            'Email Support',
-            '5 User Licenses',
-            'Standard Integrations'
-          ]
-        },
-        {
-          name: 'Professional',
-          price: '$799',
-          period: '/month',
-          color: 'from-purple-600 to-pink-700',
-          popular: true,
-          features: [
-            'Advanced AI Analytics',
-            'Custom Dashboards',
-            'Priority Support',
-            'Unlimited Users',
-            'API Access',
-            'Custom Integrations',
-            'Training Sessions'
-          ]
-        },
-        {
-          name: 'Enterprise',
-          price: '$1,999',
-          period: '/month',
-          color: 'from-purple-700 to-pink-800',
-          features: [
-            'Full AI Suite Access',
-            'Custom AI Models',
-            'Dedicated Support',
-            'White-label Solutions',
-            'Advanced Security',
-            'SLA Guarantees',
-            'On-site Training'
-          ]
-        }
-      ]
+        category: "AI & Automation",
+        services: [
+            {
+                name: "AI Business Process Automation",
+                starter: { price: "$2,999", features: ["Basic workflow automation", "Email automation", "Document processing", "Standard support"] },
+                professional: { price: "$4,999", features: ["Advanced AI capabilities", "Custom integrations", "Priority support", "Training sessions", "Analytics dashboard"] },
+                enterprise: { price: "$7,999+", features: ["Full AI suite", "Custom development", "24/7 support", "On-site training", "SLA guarantees", "White-label options"] }
+            },
+            {
+                name: "AI Customer Intelligence",
+                starter: { price: "$3,999", features: ["Basic customer analytics", "Churn prediction", "Email support"] },
+                professional: { price: "$5,999", features: ["Advanced analytics", "Personalization engine", "Priority support", "Custom dashboards", "API access"] },
+                enterprise: { price: "$8,999+", features: ["Full customer intelligence suite", "Custom algorithms", "Dedicated support", "Advanced integrations", "Compliance features"] }
+            }
+        ]
     },
     {
-      name: 'Cloud & DevOps',
-      description: 'Modern infrastructure & automation solutions',
-      icon: Cloud,
-      color: 'from-blue-500 to-cyan-600',
-      services: [
-        {
-          name: 'Basic',
-          price: '$199',
-          period: '/month',
-          color: 'from-blue-500 to-cyan-600',
-          features: [
-            'Cloud Infrastructure Setup',
-            'Basic Monitoring',
-            'Email Support',
-            'Standard Security',
-            'Backup Solutions'
-          ]
-        },
-        {
-          name: 'Advanced',
-          price: '$599',
-          period: '/month',
-          color: 'from-blue-600 to-cyan-700',
-          popular: true,
-          features: [
-            'Full DevOps Pipeline',
-            'Advanced Monitoring',
-            '24/7 Support',
-            'Enhanced Security',
-            'Auto-scaling',
-            'Cost Optimization',
-            'Performance Tuning'
-          ]
-        },
-        {
-          name: 'Enterprise',
-          price: '$1,499',
-          period: '/month',
-          color: 'from-blue-700 to-cyan-800',
-          features: [
-            'Custom Cloud Architecture',
-            'Multi-cloud Management',
-            'Dedicated Team',
-            'Advanced Compliance',
-            'Disaster Recovery',
-            'Custom Integrations'
-          ]
-        }
-      ]
+        category: "Cybersecurity & Compliance",
+        services: [
+            {
+                name: "AI Threat Detection System",
+                starter: { price: "$5,999", features: ["Basic threat detection", "Email alerts", "Standard support"] },
+                professional: { price: "$7,999", features: ["Advanced threat detection", "Behavioral analysis", "Priority support", "Custom rules", "Training"] },
+                enterprise: { price: "$12,999+", features: ["Full security suite", "Custom development", "24/7 monitoring", "Dedicated team", "Compliance reporting"] }
+            },
+            {
+                name: "Compliance Management Platform",
+                starter: { price: "$2,999", features: ["Basic compliance monitoring", "GDPR support", "Email support"] },
+                professional: { price: "$4,999", features: ["Multi-framework support", "Automated reporting", "Priority support", "Custom workflows", "Training"] },
+                enterprise: { price: "$6,999+", features: ["Full compliance suite", "Custom frameworks", "Dedicated support", "Advanced integrations", "Audit preparation"] }
+            }
+        ]
     },
     {
-      name: 'Micro SaaS Solutions',
-      description: 'Specialized business applications',
-      icon: Zap,
-      color: 'from-green-500 to-emerald-600',
-      services: [
-        {
-          name: 'Single App',
-          price: '$99',
-          period: '/month',
-          color: 'from-green-500 to-emerald-600',
-          features: [
-            'One Micro SaaS Application',
-            'Basic Features',
-            'Email Support',
-            'Standard Updates',
-            'Basic Analytics'
-          ]
-        },
-        {
-          name: 'App Suite',
-          price: '$299',
-          period: '/month',
-          color: 'from-green-600 to-emerald-700',
-          popular: true,
-          features: [
-            'Up to 5 Applications',
-            'Advanced Features',
-            'Priority Support',
-            'Custom Branding',
-            'API Access',
-            'Advanced Analytics'
-          ]
-        },
-        {
-          name: 'Full Platform',
-          price: '$799',
-          period: '/month',
-          color: 'from-green-700 to-emerald-800',
-          features: [
-            'Unlimited Applications',
-            'Custom Development',
-            'Dedicated Support',
-            'White-label Solutions',
-            'Advanced Integrations',
-            'Custom Workflows'
-          ]
-        }
-      ]
+        category: "Cloud & DevOps",
+        services: [
+            {
+                name: "Cloud Cost Optimization",
+                starter: { price: "$1,999", features: ["Basic cost analysis", "Resource optimization", "Email support"] },
+                professional: { price: "$3,999", features: ["Advanced optimization", "Automated scaling", "Priority support", "Custom policies", "Training"] },
+                enterprise: { price: "$5,999+", features: ["Full optimization suite", "Custom algorithms", "Dedicated support", "Advanced analytics", "Multi-cloud support"] }
+            },
+            {
+                name: "DevOps Automation Platform",
+                starter: { price: "$2,999", features: ["Basic CI/CD", "Automated testing", "Email support"] },
+                professional: { price: "$4,999", features: ["Advanced automation", "Custom pipelines", "Priority support", "Advanced testing", "Training"] },
+                enterprise: { price: "$7,999+", features: ["Full DevOps suite", "Custom development", "Dedicated support", "Advanced monitoring", "Multi-environment support"] }
+            }
+        ]
     },
     {
-      name: 'Cybersecurity & Compliance',
-      description: 'Advanced security & regulatory compliance',
-      icon: Shield,
-      color: 'from-red-500 to-orange-600',
-      services: [
-        {
-          name: 'Basic Security',
-          price: '$399',
-          period: '/month',
-          color: 'from-red-500 to-orange-600',
-          features: [
-            'Basic Security Audits',
-            'Compliance Monitoring',
-            'Email Support',
-            'Standard Reports',
-            'Basic Training'
-          ]
-        },
-        {
-          name: 'Advanced Security',
-          price: '$899',
-          period: '/month',
-          color: 'from-red-600 to-orange-700',
-          popular: true,
-          features: [
-            'Advanced Security Suite',
-            'Real-time Monitoring',
-            '24/7 Security Operations',
-            'Compliance Automation',
-            'Incident Response',
-            'Security Training'
-          ]
-        },
-        {
-          name: 'Enterprise Security',
-          price: '$2,499',
-          period: '/month',
-          color: 'from-red-700 to-orange-800',
-          features: [
-            'Full Security Platform',
-            'Custom Security Policies',
-            'Dedicated Security Team',
-            'Advanced Threat Detection',
-            'Compliance Automation',
-            'Custom Integrations'
-          ]
-        }
-      ]
+        category: "Data & Analytics",
+        services: [
+            {
+                name: "Data Quality Platform",
+                starter: { price: "$3,999", features: ["Basic data validation", "Data cleaning", "Email support"] },
+                professional: { price: "$5,999", features: ["Advanced validation", "Custom rules", "Priority support", "Advanced analytics", "Training"] },
+                enterprise: { price: "$8,999+", features: ["Full data suite", "Custom algorithms", "Dedicated support", "Advanced governance", "Compliance features"] }
+            },
+            {
+                name: "Real-Time Analytics Dashboard",
+                starter: { price: "$1,999", features: ["Basic dashboard", "Real-time data", "Email support"] },
+                professional: { price: "$3,999", features: ["Advanced dashboards", "Custom visualizations", "Priority support", "Advanced analytics", "Training"] },
+                enterprise: { price: "$5,999+", features: ["Full analytics suite", "Custom development", "Dedicated support", "Advanced integrations", "White-label options"] }
+            }
+        ]
     }
-  ];
+];
+export default function ServicesComparisonPage() {
+    const [selectedCategory, setSelectedCategory] = useState("AI & Automation");
+    return (<div className="min-h-screen bg-background">
+      <SEO title="Services Comparison & Pricing - Zion Tech Group" description="Compare our AI and IT services, features, and pricing plans. Choose the perfect solution for your business needs and budget." keywords="service comparison, pricing plans, AI services, IT consulting, cybersecurity, cloud services" canonical="https://ziontechgroup.com/services-comparison"/>
 
-  const selectedCategoryData = serviceCategories.find(cat => cat.name.toLowerCase().includes(selectedCategory.replace('-', ' '))) || serviceCategories[0];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Services Comparison - Zion Tech Group"
-        description="Compare our comprehensive range of AI, IT, and micro SaaS services with detailed pricing and features."
-      />
-      
-      {/* Header Section */}
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-            Services Comparison
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Services Comparison & Pricing
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Choose the perfect service tier for your business needs. Compare features, pricing, and benefits across all our service categories.
           </p>
-        </motion.div>
+          
+          {/* Contact Information */}
+          <div className="flex flex-wrap justify-center gap-6 mb-8">
+            <div className="flex items-center gap-2 text-zion-cyan">
+              <Phone className="w-5 h-5"/>
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center gap-2 text-zion-cyan">
+              <Mail className="w-5 h-5"/>
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+            <div className="flex items-center gap-2 text-zion-cyan">
+              <MapPin className="w-5 h-5"/>
+              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
         {/* Category Selection */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -289,56 +145,113 @@ export default function ServicesComparisonPage() {
             <h2 className="text-3xl font-bold text-white mb-4">{selectedCategoryData.name}</h2>
             <p className="text-lg text-slate-300 max-w-2xl mx-auto">{selectedCategoryData.description}</p>
           </div>
-
-          {/* Pricing Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {selectedCategoryData.services.map((tier, index) => (
-              <motion.div
-                key={tier.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative rounded-2xl p-8 ${
-                  tier.popular 
-                    ? 'bg-gradient-to-br from-slate-800 to-slate-700 border-2 border-cyan-400 shadow-2xl shadow-cyan-400/20' 
-                    : 'bg-slate-800/50 border border-slate-700'
-                }`}
-              >
-                {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-                      Most Popular
-                    </div>
-                  </div>
-                )}
-
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">{tier.name}</h3>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-white">{tier.price}</span>
-                    <span className="text-slate-400">{tier.period}</span>
-                  </div>
-                  <button className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
-                    tier.popular
-                      ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white hover:shadow-lg hover:shadow-cyan-400/25'
-                      : 'bg-slate-700 text-white hover:bg-slate-600'
-                  }`}>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {PRICING_TIERS.map((tier, index) => (<Card key={tier.name} className={`bg-zion-blue-dark border-zion-blue-light text-white ${index === 1 ? 'border-zion-cyan scale-105' : ''}`}>
+                <CardHeader className="text-center">
+                  <CardTitle className="text-2xl">{tier.name}</CardTitle>
+                  <div className="text-4xl font-bold text-zion-cyan">{tier.price}</div>
+                  <CardDescription className="text-zion-slate-light">
+                    {tier.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3">
+                    {tier.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center gap-2">
+                        <CheckCircle className="w-5 h-5 text-zion-cyan"/>
+                        <span>{feature}</span>
+                      </li>))}
+                  </ul>
+                  <Button className="w-full mt-6 bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">
                     Get Started
-                  </button>
-                </div>
-
-                <div className="space-y-4">
-                  {tier.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-start space-x-3">
-                      <Check className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-300">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+                  </Button>
+                </CardContent>
+              </Card>))}
           </div>
-        </motion.div>
+        </div>
+      </section>
+
+      {/* Service Comparisons */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-zion-blue mb-4">Detailed Service Comparisons</h2>
+            <p className="text-zion-slate text-lg">
+              Compare features, capabilities, and pricing across all our services
+            </p>
+          </div>
+
+          <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
+            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 bg-zion-blue-light">
+              {SERVICE_COMPARISONS.map((category) => (<TabsTrigger key={category.category} value={category.category} className="data-[state=active]:bg-zion-cyan data-[state=active]:text-zion-blue">
+                  {category.category}
+                </TabsTrigger>))}
+            </TabsList>
+
+            {SERVICE_COMPARISONS.map((category) => (<TabsContent key={category.category} value={category.category} className="mt-8">
+                <div className="space-y-8">
+                  {category.services.map((service, serviceIndex) => (<Card key={serviceIndex} className="border-zion-blue-light">
+                      <CardHeader>
+                        <CardTitle className="text-2xl text-zion-blue">{service.name}</CardTitle>
+                        <CardDescription>
+                          Compare features and pricing across different service tiers
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                          {/* Starter Plan */}
+                          <div className="text-center p-6 border border-zion-blue-light rounded-lg">
+                            <h3 className="text-xl font-semibold text-zion-blue mb-2">Starter</h3>
+                            <div className="text-3xl font-bold text-zion-cyan mb-4">{service.starter.price}</div>
+                            <ul className="space-y-3 text-left">
+                              {service.starter.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center gap-2">
+                                  <CheckCircle className="w-4 h-4 text-green-500"/>
+                                  <span className="text-sm text-zion-slate">{feature}</span>
+                                </li>))}
+                            </ul>
+                            <Button className="w-full mt-4 bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue">
+                              Choose Starter
+                            </Button>
+                          </div>
+
+                          {/* Professional Plan */}
+                          <div className="text-center p-6 border-2 border-zion-cyan rounded-lg bg-zion-blue-light/5">
+                            <Badge className="mb-2 bg-zion-cyan text-zion-blue">Most Popular</Badge>
+                            <h3 className="text-xl font-semibold text-zion-blue mb-2">Professional</h3>
+                            <div className="text-3xl font-bold text-zion-cyan mb-4">{service.professional.price}</div>
+                            <ul className="space-y-3 text-left">
+                              {service.professional.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center gap-2">
+                                  <CheckCircle className="w-4 h-4 text-green-500"/>
+                                  <span className="text-sm text-zion-slate">{feature}</span>
+                                </li>))}
+                            </ul>
+                            <Button className="w-full mt-4 bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue">
+                              Choose Professional
+                            </Button>
+                          </div>
+
+                          {/* Enterprise Plan */}
+                          <div className="text-center p-6 border border-zion-blue-light rounded-lg">
+                            <h3 className="text-xl font-semibold text-zion-blue mb-2">Enterprise</h3>
+                            <div className="text-3xl font-bold text-zion-cyan mb-4">{service.enterprise.price}</div>
+                            <ul className="space-y-3 text-left">
+                              {service.enterprise.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center gap-2">
+                                  <CheckCircle className="w-4 h-4 text-green-500"/>
+                                  <span className="text-sm text-zion-slate">{feature}</span>
+                                </li>))}
+                            </ul>
+                            <Button className="w-full mt-4 bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue">
+                              Contact Sales
+                            </Button>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>))}
+                </div>
+              </TabsContent>))}
+          </Tabs>
+        </div>
+      </section>
 
         {/* Additional Information */}
         <motion.div
@@ -352,12 +265,68 @@ export default function ServicesComparisonPage() {
             <p className="text-slate-300 mb-6">
               Our team can create tailored solutions that perfectly fit your business requirements.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg hover:shadow-cyan-400/25 transition-all duration-300"
-              >
-                Contact Sales
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+                <Brain className="w-8 h-8 text-zion-blue"/>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">AI Expertise</h3>
+              <p className="text-zion-slate-light">Cutting-edge AI solutions with proven results</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-zion-blue"/>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Enterprise Security</h3>
+              <p className="text-zion-slate-light">Bank-level security and compliance standards</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-zion-blue"/>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
+              <p className="text-zion-slate-light">Certified professionals with industry experience</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-8 h-8 text-zion-blue"/>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3>
+              <p className="text-zion-slate-light">Track record of successful implementations</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-zion-blue mb-4">Need Help Choosing?</h2>
+          <p className="text-zion-slate text-lg mb-8 max-w-2xl mx-auto">
+            Our experts are here to help you find the perfect solution for your business needs and budget.
+          </p>
+          
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">
+              <Phone className="w-5 h-5 mr-2"/>
+              Call +1 302 464 0950
+            </Button>
+            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue">
+              <Mail className="w-5 h-5 mr-2"/>
+              Email kleber@ziontechgroup.com
+            </Button>
+          </div>
+          
+          <div className="text-zion-slate">
+            <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>
+            <p className="mt-2">
+              <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-zion-cyan-dark inline-flex items-center gap-1">
+                ziontechgroup.com <ExternalLink className="w-4 h-4"/>
               </a>
               <a
                 href="/request-quote"
@@ -367,8 +336,7 @@ export default function ServicesComparisonPage() {
               </a>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </div>
-  );
+        </div>
+      </section>
+    </div>);
 }

@@ -1,11 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CakeIcon, Cog6ToothIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
-
-
-const Cookies: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+const Cookies = () => {
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
@@ -104,7 +101,7 @@ const Cookies: React.FC = () => {
                   <strong>Phone:</strong> +1 (302) 464-0950<br />
                   <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
 =======
-const Cookies: React.FC = () => {
+const Cookies: React.FC = () => {}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
@@ -113,7 +110,7 @@ const Cookies: React.FC = () => {
           <div className="text-center">
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-orange-600/20 rounded-full">
-                <CakeIcon className="h-12 w-12 text-orange-400" />
+                <CakeIcon className="h-12 w-12 text-orange-400"/>
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
@@ -145,7 +142,7 @@ const Cookies: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="text-center">
                 <div className="bg-orange-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <CakeIcon className="h-8 w-8 text-orange-400" />
+                  <CakeIcon className="h-8 w-8 text-orange-400"/>
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Small Text Files</h3>
                 <p className="text-gray-300 text-sm">
@@ -154,26 +151,21 @@ const Cookies: React.FC = () => {
               </div>
               <div className="text-center">
                 <div className="bg-blue-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Cog6ToothIcon className="h-8 w-8 text-blue-400" />
+                  <Cog6ToothIcon className="h-8 w-8 text-blue-400"/>
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Enhanced Experience</h3>
                 <p className="text-gray-300 text-sm">
                   Personalize content and improve functionality
                 </p>
 =======
-import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
 
-export default function Cookies() {
+export default function Cookies() {}
   return (
     <div className="min-h-screen bg-zion-blue">
-      <SEO
-        title="Cookie Policy | Zion Tech Group"
-        description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content."
-        keywords="cookie policy, privacy, data collection, website cookies"
-        canonical="https://ziontechgroup.com/cookies"
-      />
+      <SEO title="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy, privacy, data collection, website cookies" canonical="https://ziontechgroup.com/cookies"/>
       <Header />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -312,7 +304,7 @@ export default function Cookies() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="p-3 bg-green-600/20 rounded-lg w-fit mb-4">
-                <ShieldCheckIcon className="h-8 w-8 text-green-400" />
+                <ShieldCheckIcon className="h-8 w-8 text-green-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Essential Cookies</h3>
               <p className="text-gray-300 mb-4">
@@ -327,7 +319,7 @@ export default function Cookies() {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="p-3 bg-blue-600/20 rounded-lg w-fit mb-4">
-                <Cog6ToothIcon className="h-8 w-8 text-blue-400" />
+                <Cog6ToothIcon className="h-8 w-8 text-blue-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Functional Cookies</h3>
               <p className="text-gray-300 mb-4">
@@ -342,7 +334,7 @@ export default function Cookies() {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="p-3 bg-purple-600/20 rounded-lg w-fit mb-4">
-                                 <CakeIcon className="h-8 w-8 text-purple-400" />
+                                 <CakeIcon className="h-8 w-8 text-purple-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Analytics Cookies</h3>
               <p className="text-gray-300 mb-4">
@@ -357,7 +349,7 @@ export default function Cookies() {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="p-3 bg-orange-600/20 rounded-lg w-fit mb-4">
-                <ShieldCheckIcon className="h-8 w-8 text-orange-400" />
+                <ShieldCheckIcon className="h-8 w-8 text-orange-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Marketing Cookies</h3>
               <p className="text-gray-300 mb-4">
@@ -372,7 +364,7 @@ export default function Cookies() {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="p-3 bg-cyan-600/20 rounded-lg w-fit mb-4">
-                                 <Cog6ToothIcon className="h-8 w-8 text-cyan-400" />
+                                 <Cog6ToothIcon className="h-8 w-8 text-cyan-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Third-Party Cookies</h3>
               <p className="text-gray-300 mb-4">
@@ -387,7 +379,7 @@ export default function Cookies() {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="p-3 bg-pink-600/20 rounded-lg w-fit mb-4">
-                                 <CakeIcon className="h-8 w-8 text-pink-400" />
+                                 <CakeIcon className="h-8 w-8 text-pink-400"/>
               </div>
               <h3 className="text-xl font-semibold mb-3">Session Cookies</h3>
               <p className="text-gray-300 mb-4">
@@ -539,22 +531,16 @@ export default function Cookies() {
             We're here to help you understand and manage your cookie preferences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 text-lg"
-            >
+            <Link to="/contact" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 text-lg">
               Contact Us
             </Link>
-            <Link
-              to="/privacy"
-              className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg"
-            >
+            <Link to="/privacy" className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">
               View Privacy Policy
             </Link>
           </div>
         </div>
       </section>
-    </div>
+    </></div>
   );
 };
 
@@ -566,18 +552,13 @@ export default Cookies;
   );
 }
 =======
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
+import {SEO} from '@/components/SEO';
+import {GradientHeading} from '@/components/GradientHeading';
 
-export default function Cookies() {
+export default function Cookies() {}
   return (
     <>
-      <SEO 
-        title="Cookie Policy - Zion Tech Group" 
-        description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience." 
-        keywords="cookie policy, cookies, tracking, Zion Tech Group, privacy"
-        canonical="https://ziontechgroup.com/cookies"
-      />
+      <SEO title="Cookie Policy - Zion Tech Group" description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience." keywords="cookie policy, cookies, tracking, Zion Tech Group, privacy" canonical="https://ziontechgroup.com/cookies"/>
       
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -734,3 +715,5 @@ export default function Cookies() {
     </>
   );
 }
+    </></></></></></></></></></></>);
+};

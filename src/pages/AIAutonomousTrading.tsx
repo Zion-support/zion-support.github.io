@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousTrading: React.FC = () => {
-  return (
-    <>
+const AIAutonomousTrading = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Trading Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous trading platform that analyzes markets, executes trades, and manages portfolios with advanced AI capabilities and 24/7 market monitoring." />
-        <meta name="keywords" content="AI trading, autonomous trading, algorithmic trading, AI trading bot, automated trading, AI investment" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-trading" />
+        <meta name="description" content="Revolutionary AI autonomous trading platform that analyzes markets, executes trades, and manages portfolios with advanced AI capabilities and 24/7 market monitoring."/>
+        <meta name="keywords" content="AI trading, autonomous trading, algorithmic trading, AI trading bot, automated trading, AI investment"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-trading"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousTrading: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Trading Assets</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Stocks', 'Forex', 'Cryptocurrency', 'Commodities', 'Options', 'Futures', 'ETFs', 'Bonds'].map((asset) => (
-                <div key={asset} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Stocks', 'Forex', 'Cryptocurrency', 'Commodities', 'Options', 'Futures', 'ETFs', 'Bonds'].map((asset) => (<div key={asset} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{asset}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -182,8 +178,6 @@ const AIAutonomousTrading: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousTrading;

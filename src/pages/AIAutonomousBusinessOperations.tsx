@@ -1,97 +1,91 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-const AIAutonomousBusinessOperations: React.FC = () => {
-  const features = [
-    {
-      title: "Process Automation",
-      description: "AI-powered automation of repetitive business processes",
-      icon: "⚙️"
-    },
-    {
-      title: "Decision Support",
-      description: "Intelligent decision-making assistance and recommendations",
-      icon: "🧠"
-    },
-    {
-      title: "Resource Optimization",
-      description: "AI-driven optimization of business resources and operations",
-      icon: "📊"
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Forecast trends and optimize business performance",
-      icon: "🔮"
-    }
-  ];
-
-  const businessAreas = [
-    {
-      category: "Operations Management",
-      capabilities: ["Process optimization", "Workflow automation", "Quality control", "Performance monitoring"]
-    },
-    {
-      category: "Financial Operations",
-      capabilities: ["Budget optimization", "Cost analysis", "Revenue forecasting", "Risk management"]
-    },
-    {
-      category: "Human Resources",
-      capabilities: ["Talent acquisition", "Performance evaluation", "Training optimization", "Workforce planning"]
-    },
-    {
-      category: "Customer Operations",
-      capabilities: ["Customer service automation", "Support ticket routing", "Feedback analysis", "Customer journey optimization"]
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Manufacturing",
-      description: "Optimize production processes and quality control",
-      icon: "🏭"
-    },
-    {
-      title: "Retail",
-      description: "Inventory management and customer experience optimization",
-      icon: "🛍️"
-    },
-    {
-      title: "Healthcare",
-      description: "Patient care optimization and resource management",
-      icon: "🏥"
-    },
-    {
-      title: "Finance",
-      description: "Risk assessment and portfolio optimization",
-      icon: "💼"
-    }
-  ];
-
-  const benefits = [
-    {
-      title: "Efficiency Gains",
-      description: "Improve operational efficiency by 40%",
-      metric: "40%"
-    },
-    {
-      title: "Cost Reduction",
-      description: "Reduce operational costs through optimization",
-      metric: "30%"
-    },
-    {
-      title: "Error Reduction",
-      description: "Minimize human errors in business processes",
-      metric: "90%"
-    },
-    {
-      title: "Scalability",
-      description: "Easily scale operations as business grows",
-      metric: "Unlimited"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+const AIAutonomousBusinessOperations = () => {
+    const features = [
+        {
+            title: "Process Automation",
+            description: "AI-powered automation of repetitive business processes",
+            icon: "⚙️"
+        },
+        {
+            title: "Decision Support",
+            description: "Intelligent decision-making assistance and recommendations",
+            icon: "🧠"
+        },
+        {
+            title: "Resource Optimization",
+            description: "AI-driven optimization of business resources and operations",
+            icon: "📊"
+        },
+        {
+            title: "Predictive Analytics",
+            description: "Forecast trends and optimize business performance",
+            icon: "🔮"
+        }
+    ];
+    const businessAreas = [
+        {
+            category: "Operations Management",
+            capabilities: ["Process optimization", "Workflow automation", "Quality control", "Performance monitoring"]
+        },
+        {
+            category: "Financial Operations",
+            capabilities: ["Budget optimization", "Cost analysis", "Revenue forecasting", "Risk management"]
+        },
+        {
+            category: "Human Resources",
+            capabilities: ["Talent acquisition", "Performance evaluation", "Training optimization", "Workforce planning"]
+        },
+        {
+            category: "Customer Operations",
+            capabilities: ["Customer service automation", "Support ticket routing", "Feedback analysis", "Customer journey optimization"]
+        }
+    ];
+    const useCases = [
+        {
+            title: "Manufacturing",
+            description: "Optimize production processes and quality control",
+            icon: "🏭"
+        },
+        {
+            title: "Retail",
+            description: "Inventory management and customer experience optimization",
+            icon: "🛍️"
+        },
+        {
+            title: "Healthcare",
+            description: "Patient care optimization and resource management",
+            icon: "🏥"
+        },
+        {
+            title: "Finance",
+            description: "Risk assessment and portfolio optimization",
+            icon: "💼"
+        }
+    ];
+    const benefits = [
+        {
+            title: "Efficiency Gains",
+            description: "Improve operational efficiency by 40%",
+            metric: "40%"
+        },
+        {
+            title: "Cost Reduction",
+            description: "Reduce operational costs through optimization",
+            metric: "30%"
+        },
+        {
+            title: "Error Reduction",
+            description: "Minimize human errors in business processes",
+            metric: "90%"
+        },
+        {
+            title: "Scalability",
+            description: "Easily scale operations as business grows",
+            metric: "Unlimited"
+        }
+    ];
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -112,13 +106,11 @@ const AIAutonomousBusinessOperations: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">AI-Powered Business Operations</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
+              {features.map((feature, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 text-sm">{feature.description}</p>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
           
@@ -126,19 +118,15 @@ const AIAutonomousBusinessOperations: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Business Coverage</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {businessAreas.map((area, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              {businessAreas.map((area, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-4">{area.category}</h3>
                   <ul className="space-y-2">
-                    {area.capabilities.map((capability, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
+                    {area.capabilities.map((capability, idx) => (<li key={idx} className="flex items-center text-gray-300">
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {capability}
-                      </li>
-                    ))}
+                      </li>))}
                   </ul>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
           
@@ -146,13 +134,11 @@ const AIAutonomousBusinessOperations: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Perfect For</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
+              {useCases.map((useCase, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
                   <div className="text-4xl mb-4">{useCase.icon}</div>
                   <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300 text-sm">{useCase.description}</p>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
           
@@ -160,13 +146,11 @@ const AIAutonomousBusinessOperations: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose AI Business Operations?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
+              {benefits.map((benefit, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                   <div className="text-3xl font-bold text-blue-400 mb-2">{benefit.metric}</div>
                   <h3 className="text-lg font-semibold text-white mb-3">{benefit.title}</h3>
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
           
@@ -249,16 +233,10 @@ const AIAutonomousBusinessOperations: React.FC = () => {
                 reduce costs, and improve efficiency across your organization.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                >
+                <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                   Get Operations Assessment
                 </Link>
-                <Link
-                  to="/services"
-                  className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-                >
+                <Link to="/services" className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
                   View All Services
                 </Link>
               </div>
@@ -266,8 +244,6 @@ const AIAutonomousBusinessOperations: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 };
-
 export default AIAutonomousBusinessOperations;

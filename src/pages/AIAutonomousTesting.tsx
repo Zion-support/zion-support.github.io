@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousTesting: React.FC = () => {
-  return (
-    <>
+const AIAutonomousTesting = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Testing Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous testing platform that conducts comprehensive testing, ensures quality, and maintains testing excellence with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI testing, autonomous testing, automated testing, quality testing, autonomous quality, AI testing platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-testing" />
+        <meta name="description" content="Revolutionary AI autonomous testing platform that conducts comprehensive testing, ensures quality, and maintains testing excellence with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI testing, autonomous testing, automated testing, quality testing, autonomous quality, AI testing platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-testing"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousTesting: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Testing Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Unit Testing', 'Integration Testing', 'System Testing', 'Performance Testing', 'Security Testing', 'User Acceptance Testing', 'Regression Testing', 'Automated Testing'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Unit Testing', 'Integration Testing', 'System Testing', 'Performance Testing', 'Security Testing', 'User Acceptance Testing', 'Regression Testing', 'Automated Testing'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousTesting: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousTesting;

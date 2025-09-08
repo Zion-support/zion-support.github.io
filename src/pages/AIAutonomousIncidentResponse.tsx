@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousIncidentResponse: React.FC = () => {
-  return (
-    <>
+const AIAutonomousIncidentResponse = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Incident Response Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous incident response platform that continuously detects incidents, responds automatically, and resolves issues with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI incident response, autonomous incident response, incident detection, automatic response, autonomous operations, AI incident response platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-incident-response" />
+        <meta name="description" content="Revolutionary AI autonomous incident response platform that continuously detects incidents, responds automatically, and resolves issues with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI incident response, autonomous incident response, incident detection, automatic response, autonomous operations, AI incident response platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-incident-response"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousIncidentResponse: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Incident Response Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Security Incident Response', 'IT Incident Response', 'Network Incident Response', 'System Incident Response', 'Data Incident Response', 'Service Incident Response', 'Performance Incident Response', 'Availability Incident Response'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Security Incident Response', 'IT Incident Response', 'Network Incident Response', 'System Incident Response', 'Data Incident Response', 'Service Incident Response', 'Performance Incident Response', 'Availability Incident Response'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousIncidentResponse: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousIncidentResponse;

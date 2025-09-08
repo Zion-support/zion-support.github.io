@@ -1,32 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  REVOLUTIONARY_2025_ADVANCED_SERVICES 
-} from '../../data/revolutionary-2025-advanced-services';
-import { 
-  EMERGING_TECH_2025_SPECIALIZED_SERVICES 
-} from '../../data/emerging-tech-2025-specialized-services';
-
-const ServicesMarketingPage: React.FC = () => {
-  const allServices = [
-    ...REVOLUTIONARY_2025_ADVANCED_SERVICES,
-    ...EMERGING_TECH_2025_SPECIALIZED_SERVICES
-  ];
-
-  const serviceCategories = {
-    'Micro SAAS': allServices.filter(s => s.category === 'Micro SAAS'),
-    'IT Services': allServices.filter(s => s.category === 'IT Services'),
-    'AI Solutions': allServices.filter(s => s.category === 'AI Solutions'),
-    'Blockchain & Web3': allServices.filter(s => s.category === 'Blockchain & Web3'),
-    'IoT & Edge Computing': allServices.filter(s => s.category === 'IoT & Edge Computing'),
-    'Sustainable Technology': allServices.filter(s => s.category === 'Sustainable Technology'),
-    'Space Technology': allServices.filter(s => s.category === 'Space Technology'),
-    'Biotechnology': allServices.filter(s => s.category === 'Biotechnology'),
-    'Quantum Technology': allServices.filter(s => s.category === 'Quantum Technology')
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+import { REVOLUTIONARY_2025_ADVANCED_SERVICES } from '../../data/revolutionary-2025-advanced-services';
+import { EMERGING_TECH_2025_SPECIALIZED_SERVICES } from '../../data/emerging-tech-2025-specialized-services';
+const ServicesMarketingPage = () => {
+    const allServices = [
+        ...REVOLUTIONARY_2025_ADVANCED_SERVICES,
+        ...EMERGING_TECH_2025_SPECIALIZED_SERVICES
+    ];
+    const serviceCategories = {
+        'Micro SAAS': allServices.filter(s => s.category === 'Micro SAAS'),
+        'IT Services': allServices.filter(s => s.category === 'IT Services'),
+        'AI Solutions': allServices.filter(s => s.category === 'AI Solutions'),
+        'Blockchain & Web3': allServices.filter(s => s.category === 'Blockchain & Web3'),
+        'IoT & Edge Computing': allServices.filter(s => s.category === 'IoT & Edge Computing'),
+        'Sustainable Technology': allServices.filter(s => s.category === 'Sustainable Technology'),
+        'Space Technology': allServices.filter(s => s.category === 'Space Technology'),
+        'Biotechnology': allServices.filter(s => s.category === 'Biotechnology'),
+        'Quantum Technology': allServices.filter(s => s.category === 'Quantum Technology')
+    };
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -63,16 +55,10 @@ const ServicesMarketingPage: React.FC = () => {
 
           {/* Call to Action */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/revolutionary-services-2025"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
+            <Link to="/revolutionary-services-2025" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
               Explore All Services
             </Link>
-            <a
-              href="tel:+13024640950"
-              className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
+            <a href="tel:+13024640950" className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Call Now: +1 302 464 0950
             </a>
           </div>
@@ -155,12 +141,10 @@ const ServicesMarketingPage: React.FC = () => {
             </p>
           </div>
 
-          {Object.entries(serviceCategories).map(([category, services]) => (
-            <div key={category} className="mb-16">
+          {Object.entries(serviceCategories).map(([category, services]) => (<div key={category} className="mb-16">
               <h3 className="text-3xl font-bold text-white mb-8 text-center">{category}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {services.map((service) => (
-                  <div key={service.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300">
+                {services.map((service) => (<div key={service.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300">
                     <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
                     <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
                     <div className="flex items-center justify-between mb-4">
@@ -171,17 +155,12 @@ const ServicesMarketingPage: React.FC = () => {
                       <div className="font-semibold text-white">Expected ROI:</div>
                       <div className="text-green-400">{service.roi}</div>
                     </div>
-                    <Link
-                      to={`/revolutionary-services-2025#${service.id}`}
-                      className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300"
-                    >
+                    <Link to={`/revolutionary-services-2025#${service.id}`} className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300">
                       Learn More →
                     </Link>
-                  </div>
-                ))}
+                  </div>))}
               </div>
-            </div>
-          ))}
+            </div>))}
         </div>
       </section>
 
@@ -285,10 +264,7 @@ const ServicesMarketingPage: React.FC = () => {
             </div>
 
             <div className="text-center">
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=ROI%20Calculation%20Request"
-                className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-              >
+              <a href="mailto:kleber@ziontechgroup.com?subject=ROI%20Calculation%20Request" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                 Request Custom ROI Analysis
               </a>
             </div>
@@ -329,30 +305,19 @@ const ServicesMarketingPage: React.FC = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
+              <a href="tel:+13024640950" className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                 📞 Call Now: +1 302 464 0950
               </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:bg-white/10 transition-all duration-300"
-              >
+              <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:bg-white/10 transition-all duration-300">
                 ✉️ Email Us
               </a>
-              <Link
-                to="/revolutionary-services-2025"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
+              <Link to="/revolutionary-services-2025" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                 Explore All Services
               </Link>
             </div>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 };
-
 export default ServicesMarketingPage;

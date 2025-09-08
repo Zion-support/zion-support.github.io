@@ -1,117 +1,85 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
-import { 
-  Code, 
-  Zap, 
-  Users, 
-  TrendingUp, 
-  Shield, 
-  Globe, 
-  Building, 
-  Rocket, 
-  Cpu, 
-  BarChart3,
-  Database,
-  Cloud,
-  Lock,
-  Smartphone,
-  Target,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Brain
-} from 'lucide-react';
-
+import { Code, Zap, Users, TrendingUp, Shield, Building, Cpu, BarChart3 } from 'lucide-react';
 export default function MicroSAASSolutions() {
-  const services = [
-    {
-      title: "Custom SAAS Development",
-      description: "Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.",
-      icon: Code,
-      features: ["Custom workflows", "API integration", "User management", "Scalable architecture"]
-    },
-    {
-      title: "Multi-tenant Architecture",
-      description: "Efficient multi-tenant systems that maximize resource utilization while maintaining data isolation and security.",
-      icon: Users,
-      features: ["Data isolation", "Resource sharing", "Customization options", "Performance optimization"]
-    },
-    {
-      title: "Subscription Management",
-      description: "Comprehensive billing and subscription systems with flexible pricing models and automated renewals.",
-      icon: BarChart3,
-      features: ["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"]
-    },
-    {
-      title: "API Development & Integration",
-      description: "Robust APIs that enable seamless integration with existing systems and third-party applications.",
-      icon: Cpu,
-      features: ["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]
-    },
-    {
-      title: "Analytics & Reporting",
-      description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
-      icon: TrendingUp,
-      features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
-    }
-  ];
-
-  const benefits = [
-    {
-      title: "Rapid Deployment",
-      description: "Quick time-to-market with agile development methodologies",
-      icon: Zap
-    },
-    {
-      title: "Scalability",
-      description: "Built to grow with your business from day one",
-      icon: TrendingUp
-    },
-    {
-      title: "Cost Efficiency",
-      description: "Reduced infrastructure costs with cloud-native solutions",
-      icon: BarChart3
-    },
-    {
-      title: "Security",
-      description: "Enterprise-grade security and compliance standards",
-      icon: Shield
-    }
-  ];
-
-  const industries = [
-    {
-      name: "Healthcare",
-      description: "HIPAA-compliant patient management systems",
-      icon: Building
-    },
-    {
-      name: "Finance",
-      description: "Regulatory-compliant financial tools",
-      icon: Building
-    },
-    {
-      name: "Education",
-      description: "Learning management and student tracking",
-      icon: Building
-    },
-    {
-      name: "Real Estate",
-      description: "Property management and client portals",
-      icon: Building
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
-      <SEO 
-        title="Micro SAAS Solutions - Zion Tech Group" 
-        description="Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries."
-        keywords="micro SAAS, custom software, subscription management, multi-tenant, API development, business software"
-        canonical="https://ziontechgroup.com/services/micro-saas-solutions"
-      />
+    const services = [
+        {
+            title: "Custom SAAS Development",
+            description: "Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.",
+            icon: Code,
+            features: ["Custom workflows", "API integration", "User management", "Scalable architecture"]
+        },
+        {
+            title: "Multi-tenant Architecture",
+            description: "Efficient multi-tenant systems that maximize resource utilization while maintaining data isolation and security.",
+            icon: Users,
+            features: ["Data isolation", "Resource sharing", "Customization options", "Performance optimization"]
+        },
+        {
+            title: "Subscription Management",
+            description: "Comprehensive billing and subscription systems with flexible pricing models and automated renewals.",
+            icon: BarChart3,
+            features: ["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"]
+        },
+        {
+            title: "API Development & Integration",
+            description: "Robust APIs that enable seamless integration with existing systems and third-party applications.",
+            icon: Cpu,
+            features: ["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]
+        },
+        {
+            title: "Analytics & Reporting",
+            description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
+            icon: TrendingUp,
+            features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
+        }
+    ];
+    const benefits = [
+        {
+            title: "Rapid Deployment",
+            description: "Quick time-to-market with agile development methodologies",
+            icon: Zap
+        },
+        {
+            title: "Scalability",
+            description: "Built to grow with your business from day one",
+            icon: TrendingUp
+        },
+        {
+            title: "Cost Efficiency",
+            description: "Reduced infrastructure costs with cloud-native solutions",
+            icon: BarChart3
+        },
+        {
+            title: "Security",
+            description: "Enterprise-grade security and compliance standards",
+            icon: Shield
+        }
+    ];
+    const industries = [
+        {
+            name: "Healthcare",
+            description: "HIPAA-compliant patient management systems",
+            icon: Building
+        },
+        {
+            name: "Finance",
+            description: "Regulatory-compliant financial tools",
+            icon: Building
+        },
+        {
+            name: "Education",
+            description: "Learning management and student tracking",
+            icon: Building
+        },
+        {
+            name: "Real Estate",
+            description: "Property management and client portals",
+            icon: Building
+        }
+    ];
+    return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
+      <SEO title="Micro SAAS Solutions - Zion Tech Group" description="Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries." keywords="micro SAAS, custom software, subscription management, multi-tenant, API development, business software" canonical="https://ziontechgroup.com/services/micro-saas-solutions"/>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
@@ -152,10 +120,9 @@ export default function MicroSAASSolutions() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-shadow">
+            {services.map((service, index) => (<div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-shadow">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white" />
+                  <service.icon className="w-8 h-8 text-white"/>
                 </div>
                 <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
                   {service.title}
@@ -164,15 +131,12 @@ export default function MicroSAASSolutions() {
                   {service.description}
                 </p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-zion-slate">
+                  {service.features.map((feature, idx) => (<li key={idx} className="flex items-center text-sm text-zion-slate">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
                       {feature}
-                    </li>
-                  ))}
+                    </li>))}
                 </ul>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
       </section>
@@ -191,10 +155,9 @@ export default function MicroSAASSolutions() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
+            {benefits.map((benefit, index) => (<div key={index} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-10 h-10 text-white" />
+                  <benefit.icon className="w-10 h-10 text-white"/>
                 </div>
                 <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
                   {benefit.title}
@@ -202,8 +165,7 @@ export default function MicroSAASSolutions() {
                 <p className="text-zion-slate">
                   {benefit.description}
                 </p>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
       </section>
@@ -221,10 +183,9 @@ export default function MicroSAASSolutions() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {industries.map((industry, index) => (
-              <div key={index} className="bg-zion-blue-light rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+            {industries.map((industry, index) => (<div key={index} className="bg-zion-blue-light rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <industry.icon className="w-8 h-8 text-white" />
+                  <industry.icon className="w-8 h-8 text-white"/>
                 </div>
                 <h3 className="text-lg font-semibold text-zion-blue-dark mb-2">
                   {industry.name}
@@ -232,8 +193,7 @@ export default function MicroSAASSolutions() {
                 <p className="text-sm text-zion-slate">
                   {industry.description}
                 </p>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
       </section>
@@ -258,6 +218,5 @@ export default function MicroSAASSolutions() {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 }

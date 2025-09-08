@@ -1,88 +1,67 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Target, 
-  TrendingUp, 
-  Award, 
-  Users, 
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Zap,
-  Lightbulb,
-  BarChart3,
-  Rocket,
-  Shield,
-  Clock
-} from 'lucide-react';
+import { Brain, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Rocket, Shield } from 'lucide-react';
 import AdvancedServiceRecommendation from '../components/AdvancedServiceRecommendation';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-
-const ServiceRecommendations: React.FC = () => {
-  const features = [
-    {
-      icon: <Brain className="w-6 h-6 text-zion-cyan" />,
-      title: 'AI-Powered Analysis',
-      description: 'Advanced algorithms analyze your business profile to find perfect service matches'
-    },
-    {
-      icon: <Target className="w-6 h-6 text-zion-purple" />,
-      title: 'Personalized Matching',
-      description: 'Get recommendations tailored to your industry, budget, and technology maturity'
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6 text-zion-green" />,
-      title: 'ROI Optimization',
-      description: 'Focus on services that deliver the highest return on investment for your business'
-    },
-    {
-      icon: <Award className="w-6 h-6 text-zion-orange" />,
-      title: 'Expert Validation',
-      description: 'All recommendations are validated by our technology experts and industry specialists'
-    }
-  ];
-
-  const benefits = [
-    'Save time researching and comparing different service options',
-    'Get personalized recommendations based on your specific business needs',
-    'Understand implementation complexity and expected timelines',
-    'Focus on high-priority solutions with proven ROI potential',
-    'Access to our comprehensive portfolio of cutting-edge services',
-    'Expert guidance throughout the selection and implementation process'
-  ];
-
-  const processSteps = [
-    {
-      step: 1,
-      title: 'Tell Us About Your Business',
-      description: 'Fill out our comprehensive business profile form with industry, size, goals, and challenges',
-      icon: <Users className="w-8 h-8 text-zion-cyan" />
-    },
-    {
-      step: 2,
-      title: 'AI Analysis & Matching',
-      description: 'Our AI engine analyzes your profile and matches it with the most suitable services',
-      icon: <Brain className="w-8 h-8 text-zion-purple" />
-    },
-    {
-      step: 3,
-      title: 'Personalized Recommendations',
-      description: 'Receive detailed recommendations with match scores, priorities, and implementation details',
-      icon: <Target className="w-8 h-8 text-zion-green" />
-    },
-    {
-      step: 4,
-      title: 'Expert Consultation',
-      description: 'Connect with our experts to discuss implementation and get started with your chosen solution',
-      icon: <Award className="w-8 h-8 text-zion-orange" />
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-zion-blue-dark">
+const ServiceRecommendations = () => {
+    const features = [
+        {
+            icon: <Brain className="w-6 h-6 text-zion-cyan"/>,
+            title: 'AI-Powered Analysis',
+            description: 'Advanced algorithms analyze your business profile to find perfect service matches'
+        },
+        {
+            icon: <Target className="w-6 h-6 text-zion-purple"/>,
+            title: 'Personalized Matching',
+            description: 'Get recommendations tailored to your industry, budget, and technology maturity'
+        },
+        {
+            icon: <TrendingUp className="w-6 h-6 text-zion-green"/>,
+            title: 'ROI Optimization',
+            description: 'Focus on services that deliver the highest return on investment for your business'
+        },
+        {
+            icon: <Award className="w-6 h-6 text-zion-orange"/>,
+            title: 'Expert Validation',
+            description: 'All recommendations are validated by our technology experts and industry specialists'
+        }
+    ];
+    const benefits = [
+        'Save time researching and comparing different service options',
+        'Get personalized recommendations based on your specific business needs',
+        'Understand implementation complexity and expected timelines',
+        'Focus on high-priority solutions with proven ROI potential',
+        'Access to our comprehensive portfolio of cutting-edge services',
+        'Expert guidance throughout the selection and implementation process'
+    ];
+    const processSteps = [
+        {
+            step: 1,
+            title: 'Tell Us About Your Business',
+            description: 'Fill out our comprehensive business profile form with industry, size, goals, and challenges',
+            icon: <Users className="w-8 h-8 text-zion-cyan"/>
+        },
+        {
+            step: 2,
+            title: 'AI Analysis & Matching',
+            description: 'Our AI engine analyzes your profile and matches it with the most suitable services',
+            icon: <Brain className="w-8 h-8 text-zion-purple"/>
+        },
+        {
+            step: 3,
+            title: 'Personalized Recommendations',
+            description: 'Receive detailed recommendations with match scores, priorities, and implementation details',
+            icon: <Target className="w-8 h-8 text-zion-green"/>
+        },
+        {
+            step: 4,
+            title: 'Expert Consultation',
+            description: 'Connect with our experts to discuss implementation and get started with your chosen solution',
+            icon: <Award className="w-8 h-8 text-zion-orange"/>
+        }
+    ];
+    return (<div className="min-h-screen bg-zion-blue-dark">
       {/* Hero Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -92,11 +71,7 @@ const ServiceRecommendations: React.FC = () => {
         </div>
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered Service Recommendations
             </h1>
@@ -105,17 +80,11 @@ const ServiceRecommendations: React.FC = () => {
               recommendation engine. Get personalized matches based on your industry, goals, and requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4"
-                onClick={() => document.getElementById('recommendation-engine')?.scrollIntoView({ behavior: 'smooth' })}
-              >
+              <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick={() => document.getElementById('recommendation-engine')?.scrollIntoView({ behavior: 'smooth' })}>
                 Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"/>
               </Button>
-              <Button 
-                className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"
-                onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Help', '_blank')}
-              >
+              <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Help', '_blank')}>
                 Learn More
               </Button>
             </div>
@@ -126,13 +95,7 @@ const ServiceRecommendations: React.FC = () => {
       {/* Features Section */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
               How Our AI Recommendation Engine Works
             </h2>
@@ -143,14 +106,7 @@ const ServiceRecommendations: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
+            {features.map((feature, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
                 <Card className="h-full text-center hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="mx-auto w-12 h-12 bg-zion-blue-light/10 rounded-full flex items-center justify-center mb-4">
@@ -166,8 +122,7 @@ const ServiceRecommendations: React.FC = () => {
                     </p>
                   </CardContent>
                 </Card>
-              </motion.div>
-            ))}
+              </motion.div>))}
           </div>
         </div>
       </section>
@@ -175,13 +130,7 @@ const ServiceRecommendations: React.FC = () => {
       {/* Process Steps Section */}
       <section className="py-16 px-6 bg-zion-blue-light/5">
         <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
               Simple 4-Step Process
             </h2>
@@ -191,15 +140,7 @@ const ServiceRecommendations: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {processSteps.map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex gap-4"
-              >
+            {processSteps.map((step, index) => (<motion.div key={index} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className="flex gap-4">
                 <div className="flex-shrink-0">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white font-bold text-xl">
                     {step.step}
@@ -216,8 +157,7 @@ const ServiceRecommendations: React.FC = () => {
                     {step.description}
                   </p>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>))}
           </div>
         </div>
       </section>
@@ -225,13 +165,7 @@ const ServiceRecommendations: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
               Why Use Our Recommendation Engine?
             </h2>
@@ -241,19 +175,10 @@ const ServiceRecommendations: React.FC = () => {
           </motion.div>
 
           <div className="space-y-4">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-start gap-3"
-              >
-                <CheckCircle className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0" />
+            {benefits.map((benefit, index) => (<motion.div key={index} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0"/>
                 <span className="text-zion-slate-dark">{benefit}</span>
-              </motion.div>
-            ))}
+              </motion.div>))}
           </div>
         </div>
       </section>
@@ -261,13 +186,7 @@ const ServiceRecommendations: React.FC = () => {
       {/* Recommendation Engine Section */}
       <section id="recommendation-engine" className="py-16 px-6 bg-zion-blue-light/5">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
               Get Your Personalized Recommendations
             </h2>
@@ -284,12 +203,7 @@ const ServiceRecommendations: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -298,26 +212,18 @@ const ServiceRecommendations: React.FC = () => {
               technology solutions to accelerate your business growth and success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4"
-                onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation', '_blank')}
-              >
-                <Rocket className="w-5 h-5 mr-2" />
+              <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation', '_blank')}>
+                <Rocket className="w-5 h-5 mr-2"/>
                 Start Your Transformation
               </Button>
-              <Button 
-                className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"
-                onClick={() => window.open('tel:+13024640950', '_blank')}
-              >
-                <Shield className="w-5 h-5 mr-2" />
+              <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick={() => window.open('tel:+13024640950', '_blank')}>
+                <Shield className="w-5 h-5 mr-2"/>
                 Speak with an Expert
               </Button>
             </div>
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 };
-
 export default ServiceRecommendations;

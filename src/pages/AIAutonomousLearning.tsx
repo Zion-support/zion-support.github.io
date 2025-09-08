@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousLearning: React.FC = () => {
-  return (
-    <>
+const AIAutonomousLearning = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Learning Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous learning platform that continuously acquires knowledge, adapts to new information, and improves performance with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI learning, autonomous learning, machine learning, knowledge acquisition, autonomous operations, AI learning platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-learning" />
+        <meta name="description" content="Revolutionary AI autonomous learning platform that continuously acquires knowledge, adapts to new information, and improves performance with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI learning, autonomous learning, machine learning, knowledge acquisition, autonomous operations, AI learning platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-learning"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-lime-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousLearning: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Learning Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Supervised Learning', 'Unsupervised Learning', 'Reinforcement Learning', 'Transfer Learning', 'Online Learning', 'Batch Learning', 'Incremental Learning', 'Meta Learning'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Supervised Learning', 'Unsupervised Learning', 'Reinforcement Learning', 'Transfer Learning', 'Online Learning', 'Batch Learning', 'Incremental Learning', 'Meta Learning'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousLearning: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousLearning;

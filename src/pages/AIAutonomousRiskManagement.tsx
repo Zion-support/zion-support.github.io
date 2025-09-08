@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousRiskManagement: React.FC = () => {
-  return (
-    <>
+const AIAutonomousRiskManagement = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Risk Management Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous risk management platform that continuously identifies risks, assesses threats, and mitigates vulnerabilities with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI risk management, autonomous risk management, risk identification, threat assessment, autonomous operations, AI risk management platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-risk-management" />
+        <meta name="description" content="Revolutionary AI autonomous risk management platform that continuously identifies risks, assesses threats, and mitigates vulnerabilities with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI risk management, autonomous risk management, risk identification, threat assessment, autonomous operations, AI risk management platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-risk-management"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousRiskManagement: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Risk Management Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Security Risk Management', 'Financial Risk Management', 'Operational Risk Management', 'Strategic Risk Management', 'Compliance Risk Management', 'Technology Risk Management', 'Environmental Risk Management', 'Reputational Risk Management'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Security Risk Management', 'Financial Risk Management', 'Operational Risk Management', 'Strategic Risk Management', 'Compliance Risk Management', 'Technology Risk Management', 'Environmental Risk Management', 'Reputational Risk Management'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousRiskManagement: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousRiskManagement;

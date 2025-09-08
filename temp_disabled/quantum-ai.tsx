@@ -1,9 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-
-const QuantumAIServices: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-slate-900 text-white">
+const QuantumAIServices = () => {
+    return (<div className="min-h-screen bg-slate-900 text-white">
       {/* Header Section */}
       <div className="pt-20 pb-16 bg-gradient-to-br from-slate-900 via-blue-900/20 to-cyan-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,16 +14,10 @@ const QuantumAIServices: React.FC = () => {
               to solve complex problems that were previously impossible.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
-              >
+              <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">
                 Get Started
               </Link>
-              <Link
-                to="/quantum-neural-network-platform"
-                className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg"
-              >
+              <Link to="/quantum-neural-network-platform" className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">
                 Learn More
               </Link>
             </div>
@@ -49,10 +41,7 @@ const QuantumAIServices: React.FC = () => {
                 Advanced neural network architectures optimized for quantum computing, 
                 enabling faster training and superior performance.
               </p>
-              <Link
-                to="/quantum-neural-network-platform"
-                className="text-blue-400 hover:text-blue-300 transition-colors"
-              >
+              <Link to="/quantum-neural-network-platform" className="text-blue-400 hover:text-blue-300 transition-colors">
                 Learn More →
               </Link>
             </div>
@@ -66,10 +55,7 @@ const QuantumAIServices: React.FC = () => {
                 Cutting-edge research in quantum algorithms, quantum machine learning, 
                 and quantum optimization techniques.
               </p>
-              <Link
-                to="/research-development"
-                className="text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
+              <Link to="/research-development" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 Learn More →
               </Link>
             </div>
@@ -83,10 +69,7 @@ const QuantumAIServices: React.FC = () => {
                 Solve complex optimization problems using quantum algorithms 
                 for logistics, finance, and scientific research.
               </p>
-              <Link
-                to="/services/consulting"
-                className="text-purple-400 hover:text-purple-300 transition-colors"
-              >
+              <Link to="/services/consulting" className="text-purple-400 hover:text-purple-300 transition-colors">
                 Learn More →
               </Link>
             </div>
@@ -159,23 +142,15 @@ const QuantumAIServices: React.FC = () => {
             and research capabilities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
-            >
+            <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">
               Schedule a Consultation
             </Link>
-            <Link
-              to="/quantum-neural-network-platform"
-              className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg"
-            >
+            <Link to="/quantum-neural-network-platform" className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">
               Explore Platform
             </Link>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
 };
-
 export default QuantumAIServices;

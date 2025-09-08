@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousHybridSecurity: React.FC = () => {
-  return (
-    <>
+const AIAutonomousHybridSecurity = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Hybrid Security Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous hybrid security platform that continuously secures hybrid environments, detects threats, and protects hybrid infrastructure with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI hybrid security, autonomous hybrid security, hybrid protection, threat detection, autonomous operations, AI hybrid security platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-hybrid-security" />
+        <meta name="description" content="Revolutionary AI autonomous hybrid security platform that continuously secures hybrid environments, detects threats, and protects hybrid infrastructure with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI hybrid security, autonomous hybrid security, hybrid protection, threat detection, autonomous operations, AI hybrid security platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-hybrid-security"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousHybridSecurity: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Hybrid Security Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Cloud Security', 'On-Premises Security', 'Hybrid Cloud Security', 'Multi-Cloud Security', 'Edge Security', 'Network Security', 'Data Security', 'Application Security'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Cloud Security', 'On-Premises Security', 'Hybrid Cloud Security', 'Multi-Cloud Security', 'Edge Security', 'Network Security', 'Data Security', 'Application Security'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousHybridSecurity: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousHybridSecurity;

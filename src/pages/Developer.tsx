@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const Developer: React.FC = () => {
-  return (
-    <>
+const Developer = () => {
+    return (<>
       <Helmet>
         <title>Developer Portal - Zion Tech Group</title>
-        <meta name="description" content="Access Zion Tech Group's developer portal for tools, SDKs, and integration resources." />
+        <meta name="description" content="Access Zion Tech Group's developer portal for tools, SDKs, and integration resources."/>
       </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-12">
@@ -25,8 +23,6 @@ const Developer: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default Developer;

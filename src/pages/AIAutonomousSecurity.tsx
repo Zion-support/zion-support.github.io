@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousSecurity: React.FC = () => {
-  return (
-    <>
+const AIAutonomousSecurity = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Security Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous security platform that protects systems, detects threats, and maintains security with advanced AI capabilities and autonomous defense." />
-        <meta name="keywords" content="AI security, autonomous security, threat detection, autonomous defense, AI protection, autonomous security monitoring" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-security" />
+        <meta name="description" content="Revolutionary AI autonomous security platform that protects systems, detects threats, and maintains security with advanced AI capabilities and autonomous defense."/>
+        <meta name="keywords" content="AI security, autonomous security, threat detection, autonomous defense, AI protection, autonomous security monitoring"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-security"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousSecurity: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Security Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Network Security', 'Endpoint Security', 'Cloud Security', 'Data Security', 'Application Security', 'Identity Security', 'Infrastructure Security', 'IoT Security'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Network Security', 'Endpoint Security', 'Cloud Security', 'Data Security', 'Application Security', 'Identity Security', 'Infrastructure Security', 'IoT Security'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousSecurity: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousSecurity;

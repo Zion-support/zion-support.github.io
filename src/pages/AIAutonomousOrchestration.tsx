@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousOrchestration: React.FC = () => {
-  return (
-    <>
+const AIAutonomousOrchestration = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Orchestration Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous orchestration platform that continuously coordinates systems, manages workflows, and orchestrates operations with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI orchestration, autonomous orchestration, system coordination, workflow management, autonomous operations, AI orchestration platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-orchestration" />
+        <meta name="description" content="Revolutionary AI autonomous orchestration platform that continuously coordinates systems, manages workflows, and orchestrates operations with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI orchestration, autonomous orchestration, system coordination, workflow management, autonomous operations, AI orchestration platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-orchestration"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousOrchestration: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Orchestration Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['System Orchestration', 'Workflow Orchestration', 'Service Orchestration', 'Process Orchestration', 'Resource Orchestration', 'Network Orchestration', 'Cloud Orchestration', 'Data Orchestration'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['System Orchestration', 'Workflow Orchestration', 'Service Orchestration', 'Process Orchestration', 'Resource Orchestration', 'Network Orchestration', 'Cloud Orchestration', 'Data Orchestration'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousOrchestration: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousOrchestration;

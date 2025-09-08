@@ -1,92 +1,80 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from '../../data/2025-advanced-innovative-services-expansion-v3';
-
-const AdvancedInnovativeServicesShowcase2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState<string>('');
-  const [sortBy, setSortBy] = useState<string>('name');
-
-  const categories = [
-    'all',
-    'Legal Tech & Compliance',
-    'Quantum Computing & Security',
-    'Healthcare & Biotech',
-    'Energy & Sustainability',
-    'Cybersecurity',
-    'Fintech & Trading',
-    'Quantum Computing & AI',
-    'Supply Chain & Logistics',
-    'Edge Computing & IoT',
-    'Marketing & Automation',
-    'Quantum Technology',
-    'AI & Machine Learning',
-    'AI & Analytics',
-    'AI & Customer Experience'
-  ];
-
-  const allServices = [
-    ...advancedInnovativeServices2025V3.map(service => ({ ...service, type: 'Micro SAAS' })),
-    ...advancedITServices2025.map(service => ({ ...service, type: 'IT Service' })),
-    ...advancedAIServices2025.map(service => ({ ...service, type: 'AI Service' }))
-  ];
-
-  const filteredServices = allServices
-    .filter(service => 
-      selectedCategory === 'all' || service.category === selectedCategory
-    )
-    .filter(service =>
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      (service as any).features?.some((feature: string) => feature.toLowerCase().includes(searchTerm.toLowerCase()))
-    )
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'price':
-          return parseFloat((a as any).price?.replace(/[^0-9.]/g, '') || '0') - parseFloat((b as any).price?.replace(/[^0-9.]/g, '') || '0');
-        case 'category':
-          return a.category.localeCompare(b.category);
-        case 'name':
-        default:
-          return a.name.localeCompare(b.name);
-      }
+const AdvancedInnovativeServicesShowcase2025 = () => {
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [searchTerm, setSearchTerm] = useState('');
+    const [sortBy, setSortBy] = useState('name');
+    const categories = [
+        'all',
+        'Legal Tech & Compliance',
+        'Quantum Computing & Security',
+        'Healthcare & Biotech',
+        'Energy & Sustainability',
+        'Cybersecurity',
+        'Fintech & Trading',
+        'Quantum Computing & AI',
+        'Supply Chain & Logistics',
+        'Edge Computing & IoT',
+        'Marketing & Automation',
+        'Quantum Technology',
+        'AI & Machine Learning',
+        'AI & Analytics',
+        'AI & Customer Experience'
+    ];
+    const allServices = [
+        ...advancedInnovativeServices2025V3.map(service => ({ ...service, type: 'Micro SAAS' })),
+        ...advancedITServices2025.map(service => ({ ...service, type: 'IT Service' })),
+        ...advancedAIServices2025.map(service => ({ ...service, type: 'AI Service' }))
+    ];
+    const filteredServices = allServices
+        .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
+        .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.features?.some((feature) => feature.toLowerCase().includes(searchTerm.toLowerCase())))
+        .sort((a, b) => {
+        switch (sortBy) {
+            case 'price':
+                return parseFloat(a.price?.replace(/[^0-9.]/g, '') || '0') - parseFloat(b.price?.replace(/[^0-9.]/g, '') || '0');
+            case 'category':
+                return a.category.localeCompare(b.category);
+            case 'name':
+            default:
+                return a.name.localeCompare(b.name);
+        }
     });
-
-  const getCategoryIcon = (category: string) => {
-    const icons: { [key: string]: string } = {
-      'Legal Tech & Compliance': '⚖️',
-      'Quantum Computing & Security': '🔐',
-      'Healthcare & Biotech': '🏥',
-      'Energy & Sustainability': '🌱',
-      'Cybersecurity': '🛡️',
-      'Fintech & Trading': '📈',
-      'Quantum Computing & AI': '🔮',
-      'Supply Chain & Logistics': '🚚',
-      'Edge Computing & IoT': '🌐',
-      'Marketing & Automation': '📢',
-      'Quantum Technology': '🔮',
-      'AI & Machine Learning': '🧠',
-      'AI & Analytics': '📊',
-      'AI & Customer Experience': '💬'
+    const getCategoryIcon = (category) => {
+        const icons = {
+            'Legal Tech & Compliance': '⚖️',
+            'Quantum Computing & Security': '🔐',
+            'Healthcare & Biotech': '🏥',
+            'Energy & Sustainability': '🌱',
+            'Cybersecurity': '🛡️',
+            'Fintech & Trading': '📈',
+            'Quantum Computing & AI': '🔮',
+            'Supply Chain & Logistics': '🚚',
+            'Edge Computing & IoT': '🌐',
+            'Marketing & Automation': '📢',
+            'Quantum Technology': '🔮',
+            'AI & Machine Learning': '🧠',
+            'AI & Analytics': '📊',
+            'AI & Customer Experience': '💬'
+        };
+        return icons[category] || '🚀';
     };
-    return icons[category] || '🚀';
-  };
-
-  const getServiceTypeColor = (type: string) => {
-    switch (type) {
-      case 'Micro SAAS':
-        return 'bg-blue-100 text-blue-800 border-blue-200';
-      case 'IT Service':
-        return 'bg-green-100 text-green-800 border-green-200';
-      case 'AI Service':
-        return 'bg-purple-100 text-purple-800 border-purple-200';
-      default:
-        return 'bg-gray-100 text-gray-800 border-gray-200';
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+    const getServiceTypeColor = (type) => {
+        switch (type) {
+            case 'Micro SAAS':
+                return 'bg-blue-100 text-blue-800 border-blue-200';
+            case 'IT Service':
+                return 'bg-green-100 text-green-800 border-green-200';
+            case 'AI Service':
+                return 'bg-purple-100 text-purple-800 border-purple-200';
+            default:
+                return 'bg-gray-100 text-gray-800 border-gray-200';
+        }
+    };
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -119,12 +107,7 @@ const AdvancedInnovativeServicesShowcase2025: React.FC = () => {
               </div>
             </div>
             <div className="mt-4">
-              <a 
-                href="https://ziontechgroup.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300 underline"
-              >
+              <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">
                 Visit our website: ziontechgroup.com
               </a>
             </div>
@@ -132,22 +115,13 @@ const AdvancedInnovativeServicesShowcase2025: React.FC = () => {
 
           {/* Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <Link
-              to="/comprehensive-services-2025"
-              className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105"
-            >
+            <Link to="/comprehensive-services-2025" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105">
               🚀 All 2025 Services
             </Link>
-            <Link
-              to="/innovative-services-2025"
-              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105"
-            >
+            <Link to="/innovative-services-2025" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105">
               💡 Innovative Services
             </Link>
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105"
-            >
+            <Link to="/contact" className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105">
               📞 Get Quote
             </Link>
           </div>
@@ -162,39 +136,23 @@ const AdvancedInnovativeServicesShowcase2025: React.FC = () => {
               {/* Search */}
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Search Services</label>
-                <input
-                  type="text"
-                  placeholder="Search by name, description, or features..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
+                <input type="text" placeholder="Search by name, description, or features..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
               </div>
 
               {/* Category Filter */}
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                  {categories.map(category => (
-                    <option key={category} value={category} className="bg-slate-800 text-white">
+                <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  {categories.map(category => (<option key={category} value={category} className="bg-slate-800 text-white">
                       {category === 'all' ? 'All Categories' : category}
-                    </option>
-                  ))}
+                    </option>))}
                 </select>
               </div>
 
               {/* Sort */}
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
+                <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
                   <option value="name" className="bg-slate-800 text-white">Name</option>
                   <option value="price" className="bg-slate-800 text-white">Price</option>
                   <option value="category" className="bg-slate-800 text-white">Category</option>
@@ -216,15 +174,11 @@ const AdvancedInnovativeServicesShowcase2025: React.FC = () => {
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {filteredServices.map((service) => (
-              <div
-                key={service.id}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 group"
-              >
+            {filteredServices.map((service) => (<div key={service.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 group">
                 {/* Service Type Badge */}
                 <div className="flex justify-between items-start mb-4">
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getServiceTypeColor((service as any).type)}`}>
-                    {(service as any).type}
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getServiceTypeColor(service.type)}`}>
+                    {service.type}
                   </span>
                   <span className="text-3xl">{service.icon || '🚀'}</span>
                 </div>
@@ -238,9 +192,7 @@ const AdvancedInnovativeServicesShowcase2025: React.FC = () => {
                 </p>
 
                 {/* Tagline */}
-                {(service as any).tagline && (
-                  <p className="text-gray-300 mb-4 italic">{(service as any).tagline}</p>
-                )}
+                {service.tagline && (<p className="text-gray-300 mb-4 italic">{service.tagline}</p>)}
 
                 {/* Description */}
                 <p className="text-gray-300 mb-4 line-clamp-3">
@@ -249,95 +201,67 @@ const AdvancedInnovativeServicesShowcase2025: React.FC = () => {
 
                 {/* Pricing */}
                 <div className="mb-4">
-                  {(service as any).price ? (
-                    <div className="text-2xl font-bold text-blue-400">
-                      {(service as any).price}
-                      {(service as any).period && (
-                        <span className="text-sm text-gray-400 font-normal">{(service as any).period}</span>
-                      )}
-                    </div>
-                  ) : (service as any).hourlyRate ? (
-                    <div className="text-2xl font-bold text-green-400">
-                      ${(service as any).hourlyRate}
+                  {service.price ? (<div className="text-2xl font-bold text-blue-400">
+                      {service.price}
+                      {service.period && (<span className="text-sm text-gray-400 font-normal">{service.period}</span>)}
+                    </div>) : service.hourlyRate ? (<div className="text-2xl font-bold text-green-400">
+                      ${service.hourlyRate}
                       <span className="text-sm text-gray-400 font-normal">/hour</span>
-                    </div>
-                  ) : (
-                    <div className="text-2xl font-bold text-purple-400">
-                      {(service as any).pricing}
-                    </div>
-                  )}
+                    </div>) : (<div className="text-2xl font-bold text-purple-400">
+                      {service.pricing}
+                    </div>)}
                   
-                  {(service as any).projectRate && (
-                    <p className="text-sm text-gray-400 mt-1">{(service as any).projectRate}</p>
-                  )}
+                  {service.projectRate && (<p className="text-sm text-gray-400 mt-1">{service.projectRate}</p>)}
                 </div>
 
                 {/* Features */}
-                {(service as any).features && (
-                  <div className="mb-4">
+                {service.features && (<div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
-                      {(service as any).features.slice(0, 3).map((feature: string, index: number) => (
-                        <li key={index} className="text-xs text-gray-400 flex items-center">
+                      {service.features.slice(0, 3).map((feature, index) => (<li key={index} className="text-xs text-gray-400 flex items-center">
                           <span className="text-blue-400 mr-2">✓</span>
                           {feature}
-                        </li>
-                      ))}
-                      {(service as any).features.length > 3 && (
-                        <li className="text-xs text-gray-500">
-                          +{(service as any).features.length - 3} more features
-                        </li>
-                      )}
+                        </li>))}
+                      {service.features.length > 3 && (<li className="text-xs text-gray-500">
+                          +{service.features.length - 3} more features
+                        </li>)}
                     </ul>
-                  </div>
-                )}
+                  </div>)}
 
                 {/* Market Position */}
-                {(service as any).marketPosition && (
-                  <div className="mb-4 p-3 bg-white/5 rounded-lg">
+                {service.marketPosition && (<div className="mb-4 p-3 bg-white/5 rounded-lg">
                     <h4 className="text-sm font-semibold text-gray-300 mb-2">Market Position:</h4>
-                    <p className="text-xs text-gray-400">{(service as any).marketPosition}</p>
-                  </div>
-                )}
+                    <p className="text-xs text-gray-400">{service.marketPosition}</p>
+                  </div>)}
 
                 {/* ROI and Benefits */}
                 <div className="mb-4">
-                  {(service as any).roi && (
-                    <div className="mb-2">
+                  {service.roi && (<div className="mb-2">
                       <span className="text-xs font-semibold text-green-400">ROI: </span>
-                      <span className="text-xs text-gray-300">{(service as any).roi}</span>
-                    </div>
-                  )}
-                  {(service as any).benefits && (
-                    <div>
+                      <span className="text-xs text-gray-300">{service.roi}</span>
+                    </div>)}
+                  {service.benefits && (<div>
                       <span className="text-xs font-semibold text-blue-400">Benefits: </span>
                       <span className="text-xs text-gray-300">
-                        {(service as any).benefits.slice(0, 2).join(', ')}
-                        {(service as any).benefits.length > 2 && '...'}
+                        {service.benefits.slice(0, 2).join(', ')}
+                        {service.benefits.length > 2 && '...'}
                       </span>
-                    </div>
-                  )}
+                    </div>)}
                 </div>
 
                 {/* Contact and Action */}
                 <div className="border-t border-white/20 pt-4">
                   <div className="flex justify-between items-center">
                     <div className="text-xs text-gray-400">
-                      <p>📧 {(service as any).contactInfo?.email || 'kleber@ziontechgroup.com'}</p>
-                      <p>📱 {(service as any).contactInfo?.mobile || '+1 302 464 0950'}</p>
+                      <p>📧 {service.contactInfo?.email || 'kleber@ziontechgroup.com'}</p>
+                      <p>📱 {service.contactInfo?.mobile || '+1 302 464 0950'}</p>
                     </div>
-                    <a
-                      href={(service as any).link || 'https://ziontechgroup.com'}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105"
-                    >
+                    <a href={service.link || 'https://ziontechgroup.com'} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105">
                       Learn More
                     </a>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
       </section>
@@ -354,16 +278,10 @@ const AdvancedInnovativeServicesShowcase2025: React.FC = () => {
               Contact us today to discuss your specific needs and discover how we can help you succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-50 transition-colors"
-              >
+              <a href="tel:+13024640950" className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-50 transition-colors">
                 📞 Call Now: +1 302 464 0950
               </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-800 transition-colors"
-              >
+              <a href="mailto:kleber@ziontechgroup.com" className="bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-800 transition-colors">
                 ✉️ Email Us
               </a>
             </div>
@@ -374,8 +292,6 @@ const AdvancedInnovativeServicesShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 };
-
 export default AdvancedInnovativeServicesShowcase2025;

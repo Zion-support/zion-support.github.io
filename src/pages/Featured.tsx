@@ -1,10 +1,7 @@
-
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { GradientHeading } from "@/components/GradientHeading";
-
 export default function Featured() {
-  return (
-    <>
+    return (<>
       
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-12">
@@ -19,10 +16,9 @@ export default function Featured() {
           </div>
           
           {/* Reuse the FeaturedListings component */}
-          <FeaturedListingsSection showTitle={false} />
+          <FeaturedListingsSection showTitle={false}/>
         </div>
       </div>
       
-    </>
-  );
+    </>);
 }

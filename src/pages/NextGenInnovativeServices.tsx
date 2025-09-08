@@ -1,74 +1,60 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Search, Filter, Grid, List, ExternalLink, Phone, Mail, Globe, ArrowRight, Star, Clock, Users, CheckCircle, TrendingUp, Award, Lightbulb } from 'lucide-react';
-import { NEXT_GEN_INNOVATIVE_SERVICES, NextGenInnovativeService } from '../data/nextGenInnovativeServices';
-
+import { Search, Filter, Grid, List, ExternalLink, Phone, Mail, Globe, Clock, Users, CheckCircle, TrendingUp, Award } from 'lucide-react';
+import { NEXT_GEN_INNOVATIVE_SERVICES } from '../data/nextGenInnovativeServices';
 export default function NextGenInnovativeServices() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedService, setSelectedService] = useState<NextGenInnovativeService | null>(null);
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-
-  // Get unique categories
-  const categories = useMemo(() => ['all', ...Array.from(new Set(NEXT_GEN_INNOVATIVE_SERVICES.map(s => s.category)))], []);
-
-  // Filter services based on search and category
-  const filteredServices = useMemo(() => {
-    return NEXT_GEN_INNOVATIVE_SERVICES.filter(service => {
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      return matchesCategory && matchesSearch;
-    });
-  }, [searchTerm, selectedCategory]);
-
-  const formatPrice = (price: number, currency: string) => {
-    return `${currency}${price.toLocaleString()}`;
-  };
-
-  const getSupportLevelColor = (level: string) => {
-    switch (level.toLowerCase()) {
-      case 'enterprise': return 'bg-purple-600';
-      case 'premium': return 'bg-blue-600';
-      case 'standard': return 'bg-green-600';
-      default: return 'bg-gray-600';
-    }
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedService, setSelectedService] = useState(null);
+    const [viewMode, setViewMode] = useState('grid');
+    // Get unique categories
+    const categories = useMemo(() => ['all', ...Array.from(new Set(NEXT_GEN_INNOVATIVE_SERVICES.map(s => s.category)))], []);
+    // Filter services based on search and category
+    const filteredServices = useMemo(() => {
+        return NEXT_GEN_INNOVATIVE_SERVICES.filter(service => {
+            const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+            const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+            return matchesCategory && matchesSearch;
+        });
+    }, [searchTerm, selectedCategory]);
+    const formatPrice = (price, currency) => {
+        return `${currency}${price.toLocaleString()}`;
+    };
+    const getSupportLevelColor = (level) => {
+        switch (level.toLowerCase()) {
+            case 'enterprise': return 'bg-purple-600';
+            case 'premium': return 'bg-blue-600';
+            case 'standard': return 'bg-green-600';
+            default: return 'bg-gray-600';
+        }
+    };
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+    const itemVariants = {
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.5
+            }
+        }
+    };
+    return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Next-Generation Innovative Services
             </h1>
@@ -132,46 +118,28 @@ export default function NextGenInnovativeServices() {
             {/* Search */}
             <div className="flex-1 max-w-md">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-blue-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
-                />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"/>
+                <input type="text" placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-white/10 border border-blue-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"/>
               </div>
             </div>
 
             {/* Category Filter */}
             <div className="flex items-center gap-4">
-              <Filter className="text-blue-400 w-5 h-5" />
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="bg-white/10 border border-blue-400/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
-              >
-                {categories.map(category => (
-                  <option key={category} value={category} className="bg-gray-800 text-white">
+              <Filter className="text-blue-400 w-5 h-5"/>
+              <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="bg-white/10 border border-blue-400/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-400">
+                {categories.map(category => (<option key={category} value={category} className="bg-gray-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
-                  </option>
-                ))}
+                  </option>))}
               </select>
             </div>
 
             {/* View Mode Toggle */}
             <div className="flex items-center gap-2">
-              <button
-                onClick={() => setViewMode('grid')}
-                className={`p-2 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-blue-400 text-white' : 'bg-white/10 text-gray-400'}`}
-              >
-                <Grid className="w-5 h-5" />
+              <button onClick={() => setViewMode('grid')} className={`p-2 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-blue-400 text-white' : 'bg-white/10 text-gray-400'}`}>
+                <Grid className="w-5 h-5"/>
               </button>
-              <button
-                onClick={() => setViewMode('list')}
-                className={`p-2 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-blue-400 text-white' : 'bg-white/10 text-gray-400'}`}
-              >
-                <List className="w-5 h-5" />
+              <button onClick={() => setViewMode('list')} className={`p-2 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-blue-400 text-white' : 'bg-white/10 text-gray-400'}`}>
+                <List className="w-5 h-5"/>
               </button>
             </div>
           </div>
@@ -180,21 +148,8 @@ export default function NextGenInnovativeServices() {
 
       {/* Services Grid/List */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
-        >
-          {filteredServices.map((service) => (
-            <motion.div
-              key={service.id}
-              variants={itemVariants}
-              className={`bg-white/10 backdrop-blur-sm rounded-xl border border-blue-400/20 hover:border-blue-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-400/20 cursor-pointer ${
-                viewMode === 'list' ? 'p-6' : 'p-6'
-              }`}
-              onClick={() => setSelectedService(service)}
-            >
+        <motion.div variants={containerVariants} initial="hidden" animate="visible" className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
+          {filteredServices.map((service) => (<motion.div key={service.id} variants={itemVariants} className={`bg-white/10 backdrop-blur-sm rounded-xl border border-blue-400/20 hover:border-blue-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-400/20 cursor-pointer ${viewMode === 'list' ? 'p-6' : 'p-6'}`} onClick={() => setSelectedService(service)}>
               {/* Service Header */}
               <div className="mb-4">
                 <div className="flex items-center justify-between mb-2">
@@ -216,29 +171,22 @@ export default function NextGenInnovativeServices() {
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-4">
-                {service.tags.slice(0, 4).map((tag, index) => (
-                  <span
-                    key={index}
-                    className="text-xs px-2 py-1 bg-white/10 text-gray-300 rounded-full"
-                  >
+                {service.tags.slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-white/10 text-gray-300 rounded-full">
                     {tag}
-                  </span>
-                ))}
-                {service.tags.length > 4 && (
-                  <span className="text-xs px-2 py-1 bg-white/10 text-gray-300 rounded-full">
+                  </span>))}
+                {service.tags.length > 4 && (<span className="text-xs px-2 py-1 bg-white/10 text-gray-300 rounded-full">
                     +{service.tags.length - 4} more
-                  </span>
-                )}
+                  </span>)}
               </div>
 
               {/* Quick Info */}
               <div className="grid grid-cols-2 gap-4 text-sm mb-4">
                 <div className="flex items-center text-gray-400">
-                  <Clock size={16} className="mr-2" />
+                  <Clock size={16} className="mr-2"/>
                   {service.estimatedDelivery}
                 </div>
                 <div className="flex items-center text-gray-400">
-                  <Users size={16} className="mr-2" />
+                  <Users size={16} className="mr-2"/>
                   {service.targetAudience.length} audiences
                 </div>
               </div>
@@ -247,48 +195,33 @@ export default function NextGenInnovativeServices() {
               <div className="pt-4 border-t border-white/20">
                 <div className="flex items-center justify-between text-sm">
                   <div className="flex items-center text-gray-400">
-                    <Phone size={16} className="mr-2" />
+                    <Phone size={16} className="mr-2"/>
                     {service.contactInfo.phone}
                   </div>
-                  <a
-                    href={`mailto:${service.contactInfo.email}`}
-                    className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
-                  >
-                    <Mail size={16} className="mr-2" />
+                  <a href={`mailto:${service.contactInfo.email}`} className="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                    <Mail size={16} className="mr-2"/>
                     Contact
                   </a>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>))}
         </motion.div>
 
         {/* No Results */}
-        {filteredServices.length === 0 && (
-          <div className="text-center py-12">
+        {filteredServices.length === 0 && (<div className="text-center py-12">
             <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>
-            <button
-              onClick={() => {
+            <button onClick={() => {
                 setSearchTerm('');
                 setSelectedCategory('all');
-              }}
-              className="text-blue-400 hover:text-blue-300 transition-colors"
-            >
+            }} className="text-blue-400 hover:text-blue-300 transition-colors">
               Clear filters
             </button>
-          </div>
-        )}
+          </div>)}
       </div>
 
       {/* Service Detail Modal */}
-      {selectedService && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            className="bg-gray-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-          >
+      {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} className="bg-gray-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-8">
               {/* Modal Header */}
               <div className="flex items-start justify-between mb-6">
@@ -304,10 +237,7 @@ export default function NextGenInnovativeServices() {
                   <h2 className="text-3xl font-bold text-white mb-3">{selectedService.title}</h2>
                   <p className="text-gray-300 text-lg leading-relaxed">{selectedService.description}</p>
                 </div>
-                <button
-                  onClick={() => setSelectedService(null)}
-                  className="text-gray-400 hover:text-white transition-colors ml-4"
-                >
+                <button onClick={() => setSelectedService(null)} className="text-gray-400 hover:text-white transition-colors ml-4">
                   ✕
                 </button>
               </div>
@@ -363,31 +293,27 @@ export default function NextGenInnovativeServices() {
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div>
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                    <CheckCircle size={20} className="mr-2 text-green-400" />
+                    <CheckCircle size={20} className="mr-2 text-green-400"/>
                     Key Features
                   </h3>
                   <ul className="space-y-2">
-                    {selectedService.features.map((feature, index) => (
-                      <li key={index} className="flex items-start text-gray-300">
+                    {selectedService.features.map((feature, index) => (<li key={index} className="flex items-start text-gray-300">
                         <div className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
                         {feature}
-                      </li>
-                    ))}
+                      </li>))}
                   </ul>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                    <TrendingUp size={20} className="mr-2 text-blue-400" />
+                    <TrendingUp size={20} className="mr-2 text-blue-400"/>
                     Benefits
                   </h3>
                   <ul className="space-y-2">
-                    {selectedService.benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-start text-gray-300">
+                    {selectedService.benefits.map((benefit, index) => (<li key={index} className="flex items-start text-gray-300">
                         <div className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
                         {benefit}
-                      </li>
-                    ))}
+                      </li>))}
                   </ul>
                 </div>
               </div>
@@ -397,22 +323,18 @@ export default function NextGenInnovativeServices() {
                 <div>
                   <h3 className="text-xl font-bold text-white mb-4">Use Cases</h3>
                   <div className="flex flex-wrap gap-2">
-                    {selectedService.useCases.map((useCase, index) => (
-                      <span key={index} className="px-3 py-1 bg-purple-400/20 text-purple-400 rounded-full text-sm">
+                    {selectedService.useCases.map((useCase, index) => (<span key={index} className="px-3 py-1 bg-purple-400/20 text-purple-400 rounded-full text-sm">
                         {useCase}
-                      </span>
-                    ))}
+                      </span>))}
                   </div>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-bold text-white mb-4">Target Audience</h3>
                   <div className="flex flex-wrap gap-2">
-                    {selectedService.targetAudience.map((audience, index) => (
-                      <span key={index} className="px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-sm">
+                    {selectedService.targetAudience.map((audience, index) => (<span key={index} className="px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-sm">
                         {audience}
-                      </span>
-                    ))}
+                      </span>))}
                   </div>
                 </div>
               </div>
@@ -420,7 +342,7 @@ export default function NextGenInnovativeServices() {
               {/* Competitive Advantage */}
               <div className="bg-white/10 rounded-lg p-6 mb-8">
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                  <Award size={20} className="mr-2 text-yellow-400" />
+                  <Award size={20} className="mr-2 text-yellow-400"/>
                   Competitive Advantage
                 </h3>
                 <p className="text-gray-300 text-lg">{selectedService.competitiveAdvantage}</p>
@@ -428,45 +350,26 @@ export default function NextGenInnovativeServices() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href={`mailto:${selectedService.contactInfo.email}?subject=Inquiry about ${selectedService.title}`}
-                  className="flex-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg text-center font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center"
-                >
-                  <Mail size={20} className="mr-2" />
+                <a href={`mailto:${selectedService.contactInfo.email}?subject=Inquiry about ${selectedService.title}`} className="flex-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg text-center font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">
+                  <Mail size={20} className="mr-2"/>
                   Get Quote
                 </a>
-                <a
-                  href={`tel:${selectedService.contactInfo.phone}`}
-                  className="flex-1 bg-gray-700 text-white px-6 py-3 rounded-lg text-center font-semibold hover:bg-gray-600 transition-all duration-300 flex items-center justify-center"
-                >
-                  <Phone size={20} className="mr-2" />
+                <a href={`tel:${selectedService.contactInfo.phone}`} className="flex-1 bg-gray-700 text-white px-6 py-3 rounded-lg text-center font-semibold hover:bg-gray-600 transition-all duration-300 flex items-center justify-center">
+                  <Phone size={20} className="mr-2"/>
                   Call Now
                 </a>
-                {selectedService.demoUrl && (
-                  <a
-                    href={selectedService.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 border-2 border-blue-400 text-blue-400 px-6 py-3 rounded-lg text-center font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300 flex items-center justify-center"
-                  >
-                    <ExternalLink size={20} className="mr-2" />
+                {selectedService.demoUrl && (<a href={selectedService.demoUrl} target="_blank" rel="noopener noreferrer" className="flex-1 border-2 border-blue-400 text-blue-400 px-6 py-3 rounded-lg text-center font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300 flex items-center justify-center">
+                    <ExternalLink size={20} className="mr-2"/>
                     View Demo
-                  </a>
-                )}
+                  </a>)}
               </div>
             </div>
           </motion.div>
-        </div>
-      )}
+        </div>)}
 
       {/* Contact CTA */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-center"
-        >
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.5 }} className="text-center">
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-12">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Innovate?
@@ -476,27 +379,16 @@ export default function NextGenInnovativeServices() {
               Get in touch today to start your innovation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center"
-              >
-                <Phone size={24} className="mr-2" />
+              <a href="tel:+13024640950" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Phone size={24} className="mr-2"/>
                 Call +1 302 464 0950
               </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="bg-gray-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-600 transition-all duration-300 flex items-center justify-center"
-              >
-                <Mail size={24} className="mr-2" />
+              <a href="mailto:kleber@ziontechgroup.com" className="bg-gray-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-600 transition-all duration-300 flex items-center justify-center">
+                <Mail size={24} className="mr-2"/>
                 Email Us
               </a>
-              <a
-                href="https://ziontechgroup.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300 flex items-center justify-center"
-              >
-                <Globe size={24} className="mr-2" />
+              <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300 flex items-center justify-center">
+                <Globe size={24} className="mr-2"/>
                 Visit Website
               </a>
             </div>
@@ -507,6 +399,5 @@ export default function NextGenInnovativeServices() {
           </div>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>);
 }

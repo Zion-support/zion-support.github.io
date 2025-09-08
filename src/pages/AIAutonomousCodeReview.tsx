@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousCodeReview: React.FC = () => {
-  return (
-    <>
+const AIAutonomousCodeReview = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Code Review | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered autonomous code review system that automatically analyzes, reviews, and improves code quality with intelligent insights and recommendations." />
-        <meta name="keywords" content="AI code review, autonomous code review, code quality, software development, AI development tools" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-code-review" />
+        <meta name="description" content="Revolutionary AI-powered autonomous code review system that automatically analyzes, reviews, and improves code quality with intelligent insights and recommendations."/>
+        <meta name="keywords" content="AI code review, autonomous code review, code quality, software development, AI development tools"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-code-review"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
@@ -114,11 +112,9 @@ const AIAutonomousCodeReview: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Supported Languages & Frameworks</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['JavaScript', 'TypeScript', 'Python', 'Java', 'C#', 'Go', 'Rust', 'PHP', 'Ruby', 'Swift', 'Kotlin', 'Scala'].map((lang) => (
-                <div key={lang} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['JavaScript', 'TypeScript', 'Python', 'Java', 'C#', 'Go', 'Rust', 'PHP', 'Ruby', 'Swift', 'Kotlin', 'Scala'].map((lang) => (<div key={lang} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{lang}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -139,8 +135,6 @@ const AIAutonomousCodeReview: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousCodeReview;

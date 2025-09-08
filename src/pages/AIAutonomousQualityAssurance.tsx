@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousQualityAssurance: React.FC = () => {
-  return (
-    <>
+const AIAutonomousQualityAssurance = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Quality Assurance Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous quality assurance platform that continuously monitors quality, ensures standards, and maintains excellence with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI quality assurance, autonomous quality assurance, quality monitoring, standard assurance, autonomous operations, AI quality assurance platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-quality-assurance" />
+        <meta name="description" content="Revolutionary AI autonomous quality assurance platform that continuously monitors quality, ensures standards, and maintains excellence with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI quality assurance, autonomous quality assurance, quality monitoring, standard assurance, autonomous operations, AI quality assurance platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-quality-assurance"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousQualityAssurance: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Quality Assurance Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Software Quality Assurance', 'Product Quality Assurance', 'Service Quality Assurance', 'Process Quality Assurance', 'Data Quality Assurance', 'Performance Quality Assurance', 'Security Quality Assurance', 'Compliance Quality Assurance'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Software Quality Assurance', 'Product Quality Assurance', 'Service Quality Assurance', 'Process Quality Assurance', 'Data Quality Assurance', 'Performance Quality Assurance', 'Security Quality Assurance', 'Compliance Quality Assurance'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousQualityAssurance: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousQualityAssurance;

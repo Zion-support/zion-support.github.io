@@ -4,85 +4,71 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { FuturisticCard, NeonText } from "@/components/ui/FuturisticBackground";
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  Clock, 
-  Users, 
-  Shield, 
-  Zap,
-  ExternalLink
-} from "lucide-react";
-
+import { Phone, Mail, MapPin, Globe, Clock, Users, Shield, Zap, ExternalLink } from "lucide-react";
 export function ContactInfo() {
-  const contactMethods = [
-    {
-      title: "Phone Support",
-      description: "Speak directly with our technical experts",
-      icon: <Phone className="h-8 w-8 text-zion-cyan" />,
-      value: "+1 302 464 0950",
-      action: "tel:+13024640950",
-      badge: "24/7 Available",
-      color: "#00ffff"
-    },
-    {
-      title: "Email Support",
-      description: "Get detailed responses to your inquiries",
-      icon: <Mail className="h-8 w-8 text-zion-purple" />,
-      value: "kleber@ziontechgroup.com",
-      action: "mailto:kleber@ziontechgroup.com",
-      badge: "Response < 2hrs",
-      color: "#8c15e9"
-    },
-    {
-      title: "Office Location",
-      description: "Visit our headquarters for in-person meetings",
-      icon: <MapPin className="h-8 w-8 text-zion-cyan" />,
-      value: "364 E Main St STE 1008, Middletown DE 19709",
-      action: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709",
-      badge: "Open Mon-Fri",
-      color: "#00ffff"
-    },
-    {
-      title: "Main Website",
-      description: "Explore our complete company portfolio",
-      icon: <Globe className="h-8 w-8 text-zion-purple" />,
-      value: "ziontechgroup.com",
-      action: "https://ziontechgroup.com",
-      badge: "Official Site",
-      color: "#8c15e9"
-    }
-  ];
-
-  const companyStats = [
-    {
-      label: "Years Experience",
-      value: "10+",
-      icon: <Clock className="h-6 w-6 text-zion-cyan" />
-    },
-    {
-      label: "Team Members",
-      value: "50+",
-      icon: <Users className="h-6 w-6 text-zion-purple" />
-    },
-    {
-      label: "Projects Completed",
-      value: "500+",
-      icon: <Shield className="h-6 w-6 text-zion-cyan" />
-    },
-    {
-      label: "Client Satisfaction",
-      value: "98%",
-      icon: <Zap className="h-6 w-6 text-zion-purple" />
-    }
-  ];
-
-  return (
-    <section className="py-20 relative">
+    const contactMethods = [
+        {
+            title: "Phone Support",
+            description: "Speak directly with our technical experts",
+            icon: <Phone className="h-8 w-8 text-zion-cyan"/>,
+            value: "+1 302 464 0950",
+            action: "tel:+13024640950",
+            badge: "24/7 Available",
+            color: "#00ffff"
+        },
+        {
+            title: "Email Support",
+            description: "Get detailed responses to your inquiries",
+            icon: <Mail className="h-8 w-8 text-zion-purple"/>,
+            value: "kleber@ziontechgroup.com",
+            action: "mailto:kleber@ziontechgroup.com",
+            badge: "Response < 2hrs",
+            color: "#8c15e9"
+        },
+        {
+            title: "Office Location",
+            description: "Visit our headquarters for in-person meetings",
+            icon: <MapPin className="h-8 w-8 text-zion-cyan"/>,
+            value: "364 E Main St STE 1008, Middletown DE 19709",
+            action: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709",
+            badge: "Open Mon-Fri",
+            color: "#00ffff"
+        },
+        {
+            title: "Main Website",
+            description: "Explore our complete company portfolio",
+            icon: <Globe className="h-8 w-8 text-zion-purple"/>,
+            value: "ziontechgroup.com",
+            action: "https://ziontechgroup.com",
+            badge: "Official Site",
+            color: "#8c15e9"
+        }
+    ];
+    const companyStats = [
+        {
+            label: "Years Experience",
+            value: "10+",
+            icon: <Clock className="h-6 w-6 text-zion-cyan"/>
+        },
+        {
+            label: "Team Members",
+            value: "50+",
+            icon: <Users className="h-6 w-6 text-zion-purple"/>
+        },
+        {
+            label: "Projects Completed",
+            value: "500+",
+            icon: <Shield className="h-6 w-6 text-zion-cyan"/>
+        },
+        {
+            label: "Client Satisfaction",
+            value: "98%",
+            icon: <Zap className="h-6 w-6 text-zion-purple"/>
+        }
+    ];
+    return (<section className="py-20 relative">
       {/* Background accent */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-blue-dark/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-blue-dark/10 to-transparent"/>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
@@ -99,13 +85,7 @@ export function ContactInfo() {
 
         {/* Contact Methods Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {contactMethods.map((method, index) => (
-            <FuturisticCard 
-              key={index} 
-              glowColor={method.color}
-              intensity="medium"
-              className="group hover:scale-105 transition-transform duration-300"
-            >
+          {contactMethods.map((method, index) => (<FuturisticCard key={index} glowColor={method.color} intensity="medium" className="group hover:scale-105 transition-transform duration-300">
               <CardHeader className="pb-4">
                 <div className="flex justify-between items-start mb-4">
                   <div className="p-3 rounded-lg bg-black/20 backdrop-blur-sm">
@@ -133,12 +113,11 @@ export function ContactInfo() {
                 <Button asChild className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                   <a href={method.action} target="_blank" rel="noopener noreferrer">
                     <span>Contact via {method.title.split(' ')[0]}</span>
-                    <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"/>
                   </a>
                 </Button>
               </CardContent>
-            </FuturisticCard>
-          ))}
+            </FuturisticCard>))}
         </div>
 
         {/* Company Statistics */}
@@ -154,8 +133,7 @@ export function ContactInfo() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {companyStats.map((stat, index) => (
-            <Card key={index} className="text-center group hover:shadow-lg hover:border-primary/50 transition-all duration-300">
+          {companyStats.map((stat, index) => (<Card key={index} className="text-center group hover:shadow-lg hover:border-primary/50 transition-all duration-300">
               <CardContent className="pt-6">
                 <div className="flex justify-center mb-3">
                   <div className="p-2 rounded-lg bg-black/20 group-hover:scale-110 transition-transform duration-300">
@@ -169,8 +147,7 @@ export function ContactInfo() {
                   {stat.label}
                 </div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>))}
         </div>
 
         {/* Quick Contact CTA */}
@@ -202,18 +179,12 @@ export function ContactInfo() {
                 Prefer to call? We're available 24/7 for urgent matters
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
-                <a 
-                  href="tel:+13024640950" 
-                  className="flex items-center justify-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors"
-                >
-                  <Phone className="h-4 w-4" />
+                <a href="tel:+13024640950" className="flex items-center justify-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors">
+                  <Phone className="h-4 w-4"/>
                   +1 302 464 0950
                 </a>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
-                  className="flex items-center justify-center gap-2 text-zion-purple hover:text-zion-purple-light transition-colors"
-                >
-                  <Mail className="h-4 w-4" />
+                <a href="mailto:kleber@ziontechgroup.com" className="flex items-center justify-center gap-2 text-zion-purple hover:text-zion-purple-light transition-colors">
+                  <Mail className="h-4 w-4"/>
                   kleber@ziontechgroup.com
                 </a>
               </div>
@@ -221,6 +192,5 @@ export function ContactInfo() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
 }

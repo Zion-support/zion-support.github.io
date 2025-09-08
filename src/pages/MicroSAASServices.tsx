@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const MicroSAASServices: React.FC = () => {
-  return (
-    <>
+const MicroSAASServices = () => {
+    return (<>
       <Helmet>
         <title>Micro SaaS Services - Zion Tech Group</title>
-        <meta name="description" content="Discover Zion Tech Group's micro SaaS services. Scalable, focused solutions for specific business needs." />
+        <meta name="description" content="Discover Zion Tech Group's micro SaaS services. Scalable, focused solutions for specific business needs."/>
       </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-12">
@@ -25,8 +23,6 @@ const MicroSAASServices: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default MicroSAASServices;

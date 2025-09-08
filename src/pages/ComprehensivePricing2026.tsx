@@ -1,121 +1,83 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ultimateInnovativeServices2026 } from '../data/2026-ultimate-innovative-services';
 import { enterpriseITInfrastructureServices2026 } from '../data/2026-enterprise-it-infrastructure-services';
-
-const ComprehensivePricing2026: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
-
-  // Combine all services
-  const allServices = [...ultimateInnovativeServices2026, ...enterpriseITInfrastructureServices2026];
-
-  const categories = [
-    'all',
-    'AI & Business Solutions',
-    'IT Infrastructure',
-    'Cybersecurity',
-    'Cloud & DevOps',
-    'Specialized Industry'
-  ];
-
-  const getCategoryServices = (category: string) => {
-    switch (category) {
-      case 'AI & Business Solutions':
-        return allServices.filter(service => 
-          ['Business Intelligence', 'Marketing Automation', 'Customer Service', 'Workflow Automation'].includes(service.category)
-        );
-      case 'IT Infrastructure':
-        return allServices.filter(service => 
-          ['Data Center Management', 'Storage Management', 'Virtualization', 'IT Asset Management'].includes(service.category)
-        );
-      case 'Cybersecurity':
-        return allServices.filter(service => 
-          ['Cybersecurity', 'Network Security'].includes(service.category)
-        );
-      case 'Cloud & DevOps':
-        return allServices.filter(service => 
-          ['Cloud Infrastructure', 'DevOps', 'Performance Monitoring'].includes(service.category)
-        );
-      case 'Specialized Industry':
-        return allServices.filter(service => 
-          ['Supply Chain Management', 'Financial Technology', 'Healthcare Technology', 'Legal Technology', 'Blockchain Technology', 'Internet of Things', 'Quantum Computing'].includes(service.category)
-        );
-      default:
-        return allServices;
-    }
-  };
-
-  const filteredServices = getCategoryServices(selectedCategory);
-
-  const getAnnualPrice = (monthlyPrice: string) => {
-    const price = parseInt(monthlyPrice.replace(/[^0-9]/g, ''));
-    const annualPrice = price * 12 * 0.8; // 20% discount for annual
-    return `$${annualPrice.toLocaleString()}`;
-  };
-
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants: Variants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+const ComprehensivePricing2026 = () => {
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [billingCycle, setBillingCycle] = useState('monthly');
+    // Combine all services
+    const allServices = [...ultimateInnovativeServices2026, ...enterpriseITInfrastructureServices2026];
+    const categories = [
+        'all',
+        'AI & Business Solutions',
+        'IT Infrastructure',
+        'Cybersecurity',
+        'Cloud & DevOps',
+        'Specialized Industry'
+    ];
+    const getCategoryServices = (category) => {
+        switch (category) {
+            case 'AI & Business Solutions':
+                return allServices.filter(service => ['Business Intelligence', 'Marketing Automation', 'Customer Service', 'Workflow Automation'].includes(service.category));
+            case 'IT Infrastructure':
+                return allServices.filter(service => ['Data Center Management', 'Storage Management', 'Virtualization', 'IT Asset Management'].includes(service.category));
+            case 'Cybersecurity':
+                return allServices.filter(service => ['Cybersecurity', 'Network Security'].includes(service.category));
+            case 'Cloud & DevOps':
+                return allServices.filter(service => ['Cloud Infrastructure', 'DevOps', 'Performance Monitoring'].includes(service.category));
+            case 'Specialized Industry':
+                return allServices.filter(service => ['Supply Chain Management', 'Financial Technology', 'Healthcare Technology', 'Legal Technology', 'Blockchain Technology', 'Internet of Things', 'Quantum Computing'].includes(service.category));
+            default:
+                return allServices;
+        }
+    };
+    const filteredServices = getCategoryServices(selectedCategory);
+    const getAnnualPrice = (monthlyPrice) => {
+        const price = parseInt(monthlyPrice.replace(/[^0-9]/g, ''));
+        const annualPrice = price * 12 * 0.8; // 20% discount for annual
+        return `$${annualPrice.toLocaleString()}`;
+    };
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+    const itemVariants = {
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.5,
+                ease: "easeOut"
+            }
+        }
+    };
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 
-            className="text-4xl md:text-6xl font-bold mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             Comprehensive
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               {" "}Pricing 2026
             </span>
           </motion.h1>
-          <motion.p 
-            className="text-xl text-gray-300 max-w-4xl mx-auto mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
+          <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
             Transparent pricing for all our innovative services. Choose the plan that fits your business needs 
             with flexible billing options and enterprise-grade support.
           </motion.p>
 
           {/* Billing Toggle */}
-          <motion.div 
-            className="flex items-center justify-center gap-4 mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
+          <motion.div className="flex items-center justify-center gap-4 mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
             <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
-            <button
-              onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
-              className={`relative w-16 h-8 bg-white/20 rounded-full p-1 transition-all duration-300 ${billingCycle === 'annual' ? 'bg-cyan-500' : ''}`}
-            >
-              <div className={`w-6 h-6 bg-white rounded-full transition-all duration-300 ${billingCycle === 'annual' ? 'translate-x-8' : ''}`} />
+            <button onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')} className={`relative w-16 h-8 bg-white/20 rounded-full p-1 transition-all duration-300 ${billingCycle === 'annual' ? 'bg-cyan-500' : ''}`}>
+              <div className={`w-6 h-6 bg-white rounded-full transition-all duration-300 ${billingCycle === 'annual' ? 'translate-x-8' : ''}`}/>
             </button>
             <span className={`text-lg ${billingCycle === 'annual' ? 'text-white' : 'text-gray-400'}`}>
               Annual <span className="text-cyan-400 text-sm">(Save 20%)</span>
@@ -123,12 +85,7 @@ const ComprehensivePricing2026: React.FC = () => {
           </motion.div>
 
           {/* Contact Information */}
-          <motion.div 
-            className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 mb-8 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
+          <motion.div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 mb-8 max-w-2xl mx-auto" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
             <h3 className="text-2xl font-bold mb-4 text-cyan-400">Contact Zion Tech Group</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div>
@@ -152,19 +109,11 @@ const ComprehensivePricing2026: React.FC = () => {
       <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
-            {categories.map(category => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  selectedCategory === category
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-                }`}
-              >
+            {categories.map(category => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${selectedCategory === category
+                ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
+                : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'}`}>
                 {category === 'all' ? 'All Services' : category}
-              </button>
-            ))}
+              </button>))}
           </div>
         </div>
       </section>
@@ -172,29 +121,15 @@ const ComprehensivePricing2026: React.FC = () => {
       {/* Pricing Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            {filteredServices.map((service, index) => (
-              <motion.div
-                key={service.id}
-                variants={itemVariants}
-                className="group"
-                whileHover={{ scale: 1.02, y: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
+          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" variants={containerVariants} initial="hidden" animate="visible">
+            {filteredServices.map((service, index) => (<motion.div key={service.id} variants={itemVariants} className="group" whileHover={{ scale: 1.02, y: -5 }} transition={{ type: "spring", stiffness: 300 }}>
                 <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/25 h-full">
                   {/* Service Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="text-4xl">{service.icon}</div>
-                    {service.popular && (
-                      <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
+                    {service.popular && (<span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
                         Popular
-                      </span>
-                    )}
+                      </span>)}
                   </div>
 
                   {/* Service Info */}
@@ -211,11 +146,9 @@ const ComprehensivePricing2026: React.FC = () => {
                     <div className="text-gray-400">
                       {billingCycle === 'monthly' ? service.period : '/year'}
                     </div>
-                    {billingCycle === 'annual' && (
-                      <div className="text-sm text-green-400 mt-1">
+                    {billingCycle === 'annual' && (<div className="text-sm text-green-400 mt-1">
                         Save 20% with annual billing
-                      </div>
-                    )}
+                      </div>)}
                   </div>
 
                   {/* Category */}
@@ -227,12 +160,10 @@ const ComprehensivePricing2026: React.FC = () => {
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                     <ul className="text-xs text-gray-300 space-y-1">
-                      {service.features.slice(0, 4).map((feature, idx) => (
-                        <li key={idx} className="flex items-center gap-2">
+                      {service.features.slice(0, 4).map((feature, idx) => (<li key={idx} className="flex items-center gap-2">
                           <span className="text-cyan-400">✓</span>
                           {feature}
-                        </li>
-                      ))}
+                        </li>))}
                     </ul>
                   </div>
 
@@ -266,50 +197,30 @@ const ComprehensivePricing2026: React.FC = () => {
 
                   {/* Action Buttons */}
                   <div className="flex gap-2">
-                    <a
-                      href={service.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300 text-center"
-                    >
+                    <a href={service.link} target="_blank" rel="noopener noreferrer" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300 text-center">
                       Learn More
                     </a>
-                    <Link
-                      to="/contact"
-                      className="flex-1 bg-white/10 hover:bg-white/20 text-white text-sm font-semibold py-2 px-4 rounded-lg border border-white/30 hover:border-cyan-400/50 transition-all duration-300 text-center"
-                    >
+                    <Link to="/contact" className="flex-1 bg-white/10 hover:bg-white/20 text-white text-sm font-semibold py-2 px-4 rounded-lg border border-white/30 hover:border-cyan-400/50 transition-all duration-300 text-center">
                       Get Quote
                     </Link>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>))}
           </motion.div>
 
           {/* No Results */}
-          {filteredServices.length === 0 && (
-            <motion.div 
-              className="text-center py-16"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-            >
+          {filteredServices.length === 0 && (<motion.div className="text-center py-16" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-gray-300">Try selecting a different category or browse all services.</p>
-            </motion.div>
-          )}
+            </motion.div>)}
         </div>
       </section>
 
       {/* Enterprise Plans */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Solutions</span>
             </h2>
@@ -350,12 +261,7 @@ const ComprehensivePricing2026: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Get Started</span>?
             </h2>
@@ -364,27 +270,15 @@ const ComprehensivePricing2026: React.FC = () => {
               Our team is ready to help you choose the perfect solution for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-lg py-4 px-8 rounded-xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 border border-cyan-500/30 hover:border-cyan-500/60"
-                >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link to="/contact" className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-lg py-4 px-8 rounded-xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 border border-cyan-500/30 hover:border-cyan-500/60">
                   <span className="text-xl">🚀</span>
                   Get Custom Quote
                   <span className="text-xl">→</span>
                 </Link>
               </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <a
-                  href="tel:+13024640950"
-                  className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md text-white font-semibold text-lg py-4 px-8 rounded-xl border border-white/30 hover:border-cyan-400/50 hover:bg-white/20 transition-all duration-300 shadow-lg"
-                >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <a href="tel:+13024640950" className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md text-white font-semibold text-lg py-4 px-8 rounded-xl border border-white/30 hover:border-cyan-400/50 hover:bg-white/20 transition-all duration-300 shadow-lg">
                   <span className="text-xl">📞</span>
                   Call Now
                 </a>
@@ -417,8 +311,6 @@ const ComprehensivePricing2026: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 };
-
 export default ComprehensivePricing2026;

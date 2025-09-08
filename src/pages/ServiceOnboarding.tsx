@@ -1,19 +1,14 @@
-
 import React from "react";
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
-
 export default function ServiceOnboarding() {
-  const { user, isLoading } = useAuth();
-
-  // If not authenticated, redirect to login
-  if (!isLoading && !user) {
-    return <Navigate to="/login" replace />;
-  }
-
-  return (
-    <>
+    const { user, isLoading } = useAuth();
+    // If not authenticated, redirect to login
+    if (!isLoading && !user) {
+        return <Navigate to="/login" replace/>;
+    }
+    return (<>
       
       <div className="bg-zion-blue min-h-screen py-8 md:py-12">
         <div className="container mx-auto px-4">
@@ -29,6 +24,5 @@ export default function ServiceOnboarding() {
         </div>
       </div>
       
-    </>
-  );
+    </>);
 }

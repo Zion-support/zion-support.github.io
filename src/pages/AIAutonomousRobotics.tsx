@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousRobotics: React.FC = () => {
-  return (
-    <>
+const AIAutonomousRobotics = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Robotics Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous robotics platform that enables intelligent robots to operate independently, learn from experience, and perform complex tasks with human-like capabilities." />
-        <meta name="keywords" content="AI robotics, autonomous robots, intelligent automation, AI automation, robotic systems, autonomous systems" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-robotics" />
+        <meta name="description" content="Revolutionary AI autonomous robotics platform that enables intelligent robots to operate independently, learn from experience, and perform complex tasks with human-like capabilities."/>
+        <meta name="keywords" content="AI robotics, autonomous robots, intelligent automation, AI automation, robotic systems, autonomous systems"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-robotics"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousRobotics: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Robotics Applications</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Manufacturing', 'Healthcare', 'Agriculture', 'Logistics', 'Construction', 'Service Robots', 'Research', 'Entertainment'].map((application) => (
-                <div key={application} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Manufacturing', 'Healthcare', 'Agriculture', 'Logistics', 'Construction', 'Service Robots', 'Research', 'Entertainment'].map((application) => (<div key={application} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{application}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousRobotics: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousRobotics;

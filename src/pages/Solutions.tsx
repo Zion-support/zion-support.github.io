@@ -1,12 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
-
-const Solutions: React.FC = () => {
-  return (
-    <>
+const Solutions = () => {
+    return (<>
       <Helmet>
         <title>Custom Solutions - Zion Tech Group</title>
-        <meta name="description" content="Custom technology solutions tailored to your business needs. Zion Tech Group delivers innovative solutions that drive results." />
+        <meta name="description" content="Custom technology solutions tailored to your business needs. Zion Tech Group delivers innovative solutions that drive results."/>
       </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-12">
@@ -25,8 +22,6 @@ const Solutions: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default Solutions;

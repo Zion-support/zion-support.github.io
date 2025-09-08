@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousResearch: React.FC = () => {
-  return (
-    <>
+const AIAutonomousResearch = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Research Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous research platform that accelerates scientific discovery, automates research workflows, and provides intelligent insights across multiple domains." />
-        <meta name="keywords" content="AI research, autonomous research, scientific discovery, research automation, AI platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-research" />
+        <meta name="description" content="Revolutionary AI autonomous research platform that accelerates scientific discovery, automates research workflows, and provides intelligent insights across multiple domains."/>
+        <meta name="keywords" content="AI research, autonomous research, scientific discovery, research automation, AI platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-research"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -105,8 +103,6 @@ const AIAutonomousResearch: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousResearch;

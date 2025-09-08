@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousMarketing: React.FC = () => {
-  return (
-    <>
+const AIAutonomousMarketing = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Marketing Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous marketing platform that provides intelligent campaign optimization, automated content creation, and personalized customer targeting with advanced AI capabilities." />
-        <meta name="keywords" content="AI marketing, autonomous campaigns, marketing automation, AI content creation, personalized marketing, marketing AI" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-marketing" />
+        <meta name="description" content="Revolutionary AI autonomous marketing platform that provides intelligent campaign optimization, automated content creation, and personalized customer targeting with advanced AI capabilities."/>
+        <meta name="keywords" content="AI marketing, autonomous campaigns, marketing automation, AI content creation, personalized marketing, marketing AI"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-marketing"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
@@ -120,11 +118,9 @@ const AIAutonomousMarketing: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Marketing Channels</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Email Marketing', 'Social Media', 'Content Marketing', 'PPC Advertising', 'SEO/SEM', 'Influencer Marketing', 'Video Marketing', 'Mobile Marketing'].map((channel) => (
-                <div key={channel} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Email Marketing', 'Social Media', 'Content Marketing', 'PPC Advertising', 'SEO/SEM', 'Influencer Marketing', 'Video Marketing', 'Mobile Marketing'].map((channel) => (<div key={channel} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{channel}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -166,8 +162,6 @@ const AIAutonomousMarketing: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousMarketing;

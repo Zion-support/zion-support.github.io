@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousAnalytics: React.FC = () => {
-  return (
-    <>
+const AIAutonomousAnalytics = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Analytics Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous analytics platform that analyzes data, generates insights, and provides intelligent business intelligence with advanced AI capabilities." />
-        <meta name="keywords" content="AI analytics, autonomous analytics, AI business intelligence, data analytics, AI insights, autonomous BI" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-analytics" />
+        <meta name="description" content="Revolutionary AI autonomous analytics platform that analyzes data, generates insights, and provides intelligent business intelligence with advanced AI capabilities."/>
+        <meta name="keywords" content="AI analytics, autonomous analytics, AI business intelligence, data analytics, AI insights, autonomous BI"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-analytics"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousAnalytics: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Analytics Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Business Intelligence', 'Predictive Analytics', 'Descriptive Analytics', 'Prescriptive Analytics', 'Real-time Analytics', 'Big Data Analytics', 'Customer Analytics', 'Performance Analytics'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Business Intelligence', 'Predictive Analytics', 'Descriptive Analytics', 'Prescriptive Analytics', 'Real-time Analytics', 'Big Data Analytics', 'Customer Analytics', 'Performance Analytics'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousAnalytics: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousAnalytics;

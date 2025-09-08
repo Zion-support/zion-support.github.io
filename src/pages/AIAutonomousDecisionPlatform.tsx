@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousDecisionPlatform: React.FC = () => {
-  return (
-    <>
+const AIAutonomousDecisionPlatform = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Decision Platform | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI autonomous decision platform that orchestrates intelligent decision-making across your entire organization with advanced analytics and machine learning." />
-        <meta name="keywords" content="AI decision platform, autonomous decision making, decision orchestration, AI analytics, business intelligence, decision automation" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-decision-platform" />
+        <meta name="description" content="Comprehensive AI autonomous decision platform that orchestrates intelligent decision-making across your entire organization with advanced analytics and machine learning."/>
+        <meta name="keywords" content="AI decision platform, autonomous decision making, decision orchestration, AI analytics, business intelligence, decision automation"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-decision-platform"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -191,8 +189,6 @@ const AIAutonomousDecisionPlatform: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousDecisionPlatform;

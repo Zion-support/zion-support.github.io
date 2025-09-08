@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousInfrastructureSecurity: React.FC = () => {
-  return (
-    <>
+const AIAutonomousInfrastructureSecurity = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Infrastructure Security Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous infrastructure security platform that continuously secures infrastructure, detects threats, and protects infrastructure with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI infrastructure security, autonomous infrastructure security, infrastructure protection, threat detection, autonomous operations, AI infrastructure security platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-infrastructure-security" />
+        <meta name="description" content="Revolutionary AI autonomous infrastructure security platform that continuously secures infrastructure, detects threats, and protects infrastructure with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI infrastructure security, autonomous infrastructure security, infrastructure protection, threat detection, autonomous operations, AI infrastructure security platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-infrastructure-security"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousInfrastructureSecurity: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Infrastructure Security Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Server Security', 'Network Security', 'Storage Security', 'Database Security', 'Application Security', 'Cloud Security', 'Physical Security', 'Virtual Security'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Server Security', 'Network Security', 'Storage Security', 'Database Security', 'Application Security', 'Cloud Security', 'Physical Security', 'Virtual Security'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousInfrastructureSecurity: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousInfrastructureSecurity;

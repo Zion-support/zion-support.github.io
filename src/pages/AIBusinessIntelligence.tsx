@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart3, TrendingUp, Target, Users, Zap, Shield, ArrowRight, CheckCircle, Brain } from 'lucide-react';
-
-const AIBusinessIntelligence: React.FC = () => {
-  return (
-    <>
+const AIBusinessIntelligence = () => {
+    return (<>
       <Helmet>
         <title>AI Business Intelligence | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with AI-powered business intelligence. Get real-time insights, predictive analytics, and intelligent decision-making capabilities." />
-        <meta name="keywords" content="AI business intelligence, business analytics, predictive analytics, data insights, Zion Tech Group" />
+        <meta name="description" content="Transform your business with AI-powered business intelligence. Get real-time insights, predictive analytics, and intelligent decision-making capabilities."/>
+        <meta name="keywords" content="AI business intelligence, business analytics, predictive analytics, data insights, Zion Tech Group"/>
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
@@ -17,7 +15,7 @@ const AIBusinessIntelligence: React.FC = () => {
           <div className="max-w-7xl mx-auto text-center">
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-indigo-500/20 rounded-full">
-                <Brain className="h-8 w-8 text-indigo-400" />
+                <Brain className="h-8 w-8 text-indigo-400"/>
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -30,7 +28,7 @@ const AIBusinessIntelligence: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"/>
               </button>
               <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Watch Demo
@@ -54,7 +52,7 @@ const AIBusinessIntelligence: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="p-3 bg-indigo-500/20 rounded-lg w-fit mb-4">
-                  <BarChart3 className="h-6 w-6 text-indigo-400" />
+                  <BarChart3 className="h-6 w-6 text-indigo-400"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Predictive Analytics</h3>
                 <p className="text-gray-300">
@@ -64,7 +62,7 @@ const AIBusinessIntelligence: React.FC = () => {
 
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="p-3 bg-green-500/20 rounded-lg w-fit mb-4">
-                  <TrendingUp className="h-6 w-6 text-green-400" />
+                  <TrendingUp className="h-6 w-6 text-green-400"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Real-time Monitoring</h3>
                 <p className="text-gray-300">
@@ -74,7 +72,7 @@ const AIBusinessIntelligence: React.FC = () => {
 
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="p-3 bg-purple-500/20 rounded-lg w-fit mb-4">
-                  <Target className="h-6 w-6 text-purple-400" />
+                  <Target className="h-6 w-6 text-purple-400"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Goal Tracking</h3>
                 <p className="text-gray-300">
@@ -84,7 +82,7 @@ const AIBusinessIntelligence: React.FC = () => {
 
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="p-3 bg-blue-500/20 rounded-lg w-fit mb-4">
-                  <Users className="h-6 w-6 text-blue-400" />
+                  <Users className="h-6 w-6 text-blue-400"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Customer Insights</h3>
                 <p className="text-gray-300">
@@ -94,7 +92,7 @@ const AIBusinessIntelligence: React.FC = () => {
 
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="p-3 bg-yellow-500/20 rounded-lg w-fit mb-4">
-                  <Zap className="h-6 w-6 text-yellow-400" />
+                  <Zap className="h-6 w-6 text-yellow-400"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Automated Reporting</h3>
                 <p className="text-gray-300">
@@ -104,7 +102,7 @@ const AIBusinessIntelligence: React.FC = () => {
 
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="p-3 bg-red-500/20 rounded-lg w-fit mb-4">
-                  <Shield className="h-6 w-6 text-red-400" />
+                  <Shield className="h-6 w-6 text-red-400"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Risk Assessment</h3>
                 <p className="text-gray-300">
@@ -132,20 +130,18 @@ const AIBusinessIntelligence: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-6">Data Analytics</h3>
                 <div className="space-y-4">
                   {[
-                    'Advanced Statistical Analysis',
-                    'Machine Learning Models',
-                    'Natural Language Processing',
-                    'Pattern Recognition',
-                    'Anomaly Detection',
-                    'Trend Forecasting',
-                    'Correlation Analysis',
-                    'Predictive Modeling'
-                  ].map((capability, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
+            'Advanced Statistical Analysis',
+            'Machine Learning Models',
+            'Natural Language Processing',
+            'Pattern Recognition',
+            'Anomaly Detection',
+            'Trend Forecasting',
+            'Correlation Analysis',
+            'Predictive Modeling'
+        ].map((capability, index) => (<div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0"/>
                       <span className="text-gray-300">{capability}</span>
-                    </div>
-                  ))}
+                    </div>))}
                 </div>
               </div>
 
@@ -153,20 +149,18 @@ const AIBusinessIntelligence: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-6">Business Intelligence</h3>
                 <div className="space-y-4">
                   {[
-                    'Interactive Dashboards',
-                    'Custom Report Builder',
-                    'Real-time Data Streaming',
-                    'Multi-source Data Integration',
-                    'Automated Insights Generation',
-                    'Collaborative Analytics',
-                    'Mobile BI Access',
-                    'Advanced Visualization'
-                  ].map((capability, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
+            'Interactive Dashboards',
+            'Custom Report Builder',
+            'Real-time Data Streaming',
+            'Multi-source Data Integration',
+            'Automated Insights Generation',
+            'Collaborative Analytics',
+            'Mobile BI Access',
+            'Advanced Visualization'
+        ].map((capability, index) => (<div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0"/>
                       <span className="text-gray-300">{capability}</span>
-                    </div>
-                  ))}
+                    </div>))}
                 </div>
               </div>
             </div>
@@ -251,8 +245,6 @@ const AIBusinessIntelligence: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIBusinessIntelligence;

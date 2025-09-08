@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const Talents: React.FC = () => {
-  return (
-    <>
+const Talents = () => {
+    return (<>
       <Helmet>
         <title>Browse Talents - Zion Tech Group</title>
-        <meta name="description" content="Browse our comprehensive directory of technology professionals. Find the perfect talent for your project needs." />
+        <meta name="description" content="Browse our comprehensive directory of technology professionals. Find the perfect talent for your project needs."/>
       </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-12">
@@ -25,8 +23,6 @@ const Talents: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default Talents;

@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousVirtualAssistant: React.FC = () => {
-  return (
-    <>
+const AIAutonomousVirtualAssistant = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Virtual Assistant | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous virtual assistant that provides 24/7 intelligent support, task automation, and personalized assistance with advanced AI capabilities." />
-        <meta name="keywords" content="AI virtual assistant, autonomous assistant, AI assistant, virtual AI, intelligent assistant, AI automation" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-virtual-assistant" />
+        <meta name="description" content="Revolutionary AI autonomous virtual assistant that provides 24/7 intelligent support, task automation, and personalized assistance with advanced AI capabilities."/>
+        <meta name="keywords" content="AI virtual assistant, autonomous assistant, AI assistant, virtual AI, intelligent assistant, AI automation"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-virtual-assistant"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousVirtualAssistant: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Assistant Capabilities</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Email Management', 'Calendar Scheduling', 'Task Organization', 'Information Search', 'Document Creation', 'Data Analysis', 'Communication', 'Reminders'].map((task) => (
-                <div key={task} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Email Management', 'Calendar Scheduling', 'Task Organization', 'Information Search', 'Document Creation', 'Data Analysis', 'Communication', 'Reminders'].map((task) => (<div key={task} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{task}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousVirtualAssistant: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousVirtualAssistant;
