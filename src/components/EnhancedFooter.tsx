@@ -55,68 +55,61 @@ export function EnhancedFooter() {
 
   const footerSections = [
     {
-      title: 'Featured Services',
-      links: [
-        { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true },
-        { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform', icon: Atom, featured: true },
-        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles, featured: true },
-        { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Sparkles, featured: true },
-        { name: 'AI-Powered Micro SAAS', href: '/zion-cutting-edge-services-2029', icon: Brain, featured: true }
-      ]
-    },
-    {
       title: 'Core Services',
       links: [
-        { name: 'AI Services', href: '/ai-services', icon: Brain },
-        { name: 'IT Infrastructure', href: '/it-services', icon: Server },
-        { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Rocket },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'AI & Machine Learning', href: '/ai-services', icon: Brain },
+        { name: 'IT Services', href: '/it-services', icon: Server },
+        { name: 'Micro SaaS', href: '/micro-saas', icon: Rocket },
         { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
-        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket }
+        { name: 'Cybersecurity', href: '/services/ai-cybersecurity-platform', icon: Shield },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: TrendingUp }
       ]
     },
     {
-      title: 'Solutions',
+      title: 'AI Solutions',
+      links: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation-suite', icon: PenTool },
+        { name: 'AI Project Management', href: '/services/ai-project-management', icon: Workflow },
+        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: DollarSign },
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: TrendingUp }
+      ]
+    },
+    {
+      title: 'Industry Solutions',
       links: [
         { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },
         { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Heart },
-        { name: 'Financial Solutions', href: '/solutions/financial', icon: TrendingUp },
-        { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: Cpu },
-        { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart },
-        { name: 'Government Solutions', href: '/solutions/government', icon: Globe2 }
+        { name: 'Financial Services', href: '/solutions/financial', icon: DollarSign },
+        { name: 'Manufacturing', href: '/solutions/manufacturing', icon: Truck },
+        { name: 'Government', href: '/solutions/government', icon: Building },
+        { name: 'Education', href: '/solutions/education', icon: BookOpen }
       ]
     },
     {
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about', icon: Users },
-        { name: 'Leadership', href: '/leadership', icon: Award },
-        { name: 'Careers', href: '/careers', icon: GraduationCap },
+        { name: 'Our Team', href: '/team', icon: Award },
+        { name: 'Careers', href: '/careers', icon: Workflow },
         { name: 'Partners', href: '/partners', icon: Handshake },
-        { name: 'News', href: '/news', icon: Newspaper },
-        { name: 'Blog', href: '/blog', icon: BookOpen }
+        { name: 'News & Updates', href: '/news', icon: FileText },
+        { name: 'Case Studies', href: '/case-studies', icon: BarChart3 }
       ]
     },
     {
       title: 'Resources',
       links: [
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },
+        { name: 'Documentation', href: '/documentation', icon: FileText },
+        { name: 'API Reference', href: '/api', icon: Code },
+        { name: 'Developer Portal', href: '/developer-portal', icon: Cpu },
+        { name: 'Help Center', href: '/help', icon: HelpCircle },
+        { name: 'FAQ', href: '/faq', icon: MessageCircle },
+        { name: 'Training', href: '/training', icon: BookOpen },
+        { name: 'Webinars', href: '/webinars', icon: Users },
         { name: 'White Papers', href: '/white-papers', icon: FileText },
-        { name: 'Webinars', href: '/webinars', icon: Video },
-        { name: 'Training', href: '/training', icon: GraduationCap },
-        { name: 'Documentation', href: '/documentation', icon: BookOpen },
-        { name: 'Support', href: '/support', icon: HelpCircle }
-      ]
-    },
-    {
-      title: 'Contact',
-      links: [
-        { name: 'Contact Us', href: '/contact', icon: MessageCircle },
-        { name: 'Request Quote', href: '/request-quote', icon: DollarSign },
-        { name: 'Phone: +1 (302) 464-0950', href: 'tel:+13024640950', icon: Phone },
-        { name: 'Email: kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com', icon: Mail },
-        { name: 'Location: Delaware, USA', href: '#', icon: MapPin }
+        { name: 'Blog', href: '/blog', icon: PenTool }
       ]
     }
   ];

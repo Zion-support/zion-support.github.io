@@ -76,12 +76,24 @@ export function EnhancedHeader() {
   }
 ;
   const navigation = [
-    { name: 'Home', href: '/', current: true },
-    { name: 'About', href: '/about', current: false },
-    { name: 'Services', href: '/services', current: false },
-    { name: 'Solutions', href: '/solutions', current: false },
-    { name: 'Pricing', href: '/services-pricing', current: false },
-    { name: 'Contact', href: '/contact', current: false },
+    { name: 'Home', href: '/', current: location.pathname === '/' },
+    { name: 'About', href: '/about', current: location.pathname === '/about' },
+    { name: 'Services', href: '/services', current: location.pathname.startsWith('/services') },
+    { name: 'Solutions', href: '/solutions', current: location.pathname.startsWith('/solutions') },
+    { name: 'AI Services', href: '/ai-services', current: location.pathname.startsWith('/ai-services') },
+    { name: 'IT Services', href: '/it-services', current: location.pathname.startsWith('/it-services') },
+    { name: 'Micro SaaS', href: '/micro-saas', current: location.pathname.startsWith('/micro-saas') },
+    { name: 'Marketplace', href: '/marketplace', current: location.pathname.startsWith('/marketplace') },
+    { name: 'Resources', href: '/resources', current: location.pathname.startsWith('/resources') },
+    { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
+    { name: 'Blog', href: '/blog', current: location.pathname === '/blog' },
+    { name: 'Careers', href: '/careers', current: location.pathname === '/careers' },
+    { name: 'Partners', href: '/partners', current: location.pathname === '/partners' },
+    { name: 'News', href: '/news', current: location.pathname === '/news' },
+    { name: 'Case Studies', href: '/case-studies', current: location.pathname === '/case-studies' },
+    { name: 'Help', href: '/help', current: location.pathname === '/help' },
+    { name: 'FAQ', href: '/faq', current: location.pathname === '/faq' },
+    { name: 'Pricing', href: '/pricing', current: location.pathname === '/pricing' },
   ];
 
   const serviceCategories = [
@@ -179,7 +191,186 @@ export function EnhancedHeader() {
       href: '/zion-cutting-edge-services-2029',
       icon: SparklesIcon,
       color: 'from-indigo-500 to-purple-500',
-      featured: true
+      badge: 'Future'
+    },
+    
+    // AI & Machine Learning
+    { 
+      name: 'AI Business Intelligence', 
+      href: '/services/ai-business-intelligence', 
+      icon: Brain, 
+      description: 'AI-powered business insights', 
+      category: 'AI & ML', 
+      color: 'from-purple-600 to-indigo-700',
+      badge: 'Popular'
+    },
+    { 
+      name: 'AI Compliance Assistant', 
+      href: '/services/ai-compliance-assistant', 
+      icon: Shield, 
+      description: 'Automated compliance management', 
+      category: 'AI & ML', 
+      color: 'from-green-600 to-emerald-700',
+      badge: 'New'
+    },
+    { 
+      name: 'AI Sales Copilot', 
+      href: '/services/ai-sales-copilot', 
+      icon: TrendingUp, 
+      description: 'AI sales automation', 
+      category: 'AI & ML', 
+      color: 'from-blue-600 to-cyan-700',
+      badge: 'Popular'
+    },
+    { 
+      name: 'AI-Powered SEO', 
+      href: '/services/ai-seo', 
+      icon: Eye, 
+      description: 'AI-driven SEO optimization', 
+      category: 'AI & ML', 
+      color: 'from-indigo-600 to-purple-700',
+      badge: 'Popular'
+    },
+    { 
+      name: 'AI Content Marketing Suite', 
+      href: '/services/ai-content-marketing-suite', 
+      icon: PenTool, 
+      description: 'Content creation automation', 
+      category: 'AI & ML', 
+      color: 'from-pink-600 to-rose-700',
+      badge: 'New'
+    },
+    { 
+      name: 'AI Customer Support Automation', 
+      href: '/services/ai-customer-support-automation', 
+      icon: MessageCircle, 
+      description: 'Automated customer service', 
+      category: 'AI & ML', 
+      color: 'from-cyan-600 to-blue-700',
+      badge: 'Popular'
+    },
+    { 
+      name: 'AI Project Management', 
+      href: '/services/ai-project-management', 
+      icon: Workflow, 
+      description: 'AI project coordination', 
+      category: 'AI & ML', 
+      color: 'from-orange-600 to-red-700',
+      badge: 'New'
+    },
+    { 
+      name: 'AI Financial Analytics', 
+      href: '/services/ai-financial-analytics', 
+      icon: DollarSign, 
+      description: 'Financial data analysis', 
+      category: 'AI & ML', 
+      color: 'from-emerald-600 to-green-700',
+      badge: 'Popular'
+    },
+    
+    // IT & Infrastructure
+    { 
+      name: 'Cloud DevOps', 
+      href: '/services/cloud-devops', 
+      icon: Cloud, 
+      description: 'DevOps automation', 
+      category: 'IT & Infrastructure', 
+      color: 'from-blue-600 to-indigo-700',
+      badge: 'Popular'
+    },
+    { 
+      name: 'IT Infrastructure', 
+      href: '/services/it-infrastructure', 
+      icon: Server, 
+      description: 'Infrastructure management', 
+      category: 'IT & Infrastructure', 
+      color: 'from-gray-600 to-slate-700',
+      badge: 'Popular'
+    },
+    { 
+      name: 'Zero Trust Network Access', 
+      href: '/services/zero-trust-network-access', 
+      icon: Lock, 
+      description: 'Next-generation security architecture', 
+      category: 'IT & Infrastructure', 
+      color: 'from-red-600 to-orange-700',
+      badge: 'Popular'
+    },
+    { 
+      name: 'AI Cybersecurity Platform', 
+      href: '/services/ai-cybersecurity-platform', 
+      icon: Shield, 
+      description: 'AI-powered security', 
+      category: 'IT & Infrastructure', 
+      color: 'from-red-600 to-pink-700',
+      badge: 'New'
+    },
+    
+    // Emerging Technologies
+    { 
+      name: 'Quantum Computing', 
+      href: '/services/quantum-computing', 
+      icon: Atom, 
+      description: 'Quantum solutions', 
+      category: 'Emerging Tech', 
+      color: 'from-violet-600 to-purple-700',
+      badge: 'Featured'
+    },
+    { 
+      name: 'AI Quantum Hybrid Platform', 
+      href: '/services/ai-quantum-hybrid-platform', 
+      icon: Atom, 
+      description: 'Quantum-AI integration platform', 
+      category: 'Emerging Tech', 
+      color: 'from-indigo-600 to-purple-700',
+      badge: 'New'
+    },
+    { 
+      name: 'Space Technology Solutions', 
+      href: '/services/space-technology-solutions', 
+      icon: Satellite, 
+      description: 'Space tech for terrestrial use', 
+      category: 'Emerging Tech', 
+      color: 'from-slate-600 to-gray-700',
+      badge: 'Featured'
+    },
+    { 
+      name: 'Digital Twin', 
+      href: '/services/digital-twin', 
+      icon: Eye, 
+      description: 'Digital twin technology', 
+      category: 'Emerging Tech', 
+      color: 'from-cyan-600 to-blue-700',
+      badge: 'New'
+    },
+    
+    // Micro SaaS
+    { 
+      name: 'Micro CRM', 
+      href: '/services/micro-crm', 
+      icon: Users, 
+      description: 'Customer relationship management', 
+      category: 'Micro SaaS', 
+      color: 'from-blue-600 to-cyan-700',
+      badge: 'Popular'
+    },
+    { 
+      name: 'Helpdesk Platform', 
+      href: '/services/helpdesk', 
+      icon: HelpCircle, 
+      description: 'Support ticketing system', 
+      category: 'Micro SaaS', 
+      color: 'from-green-600 to-emerald-700',
+      badge: 'Popular'
+    },
+    { 
+      name: 'Website Analytics', 
+      href: '/services/website-analytics', 
+      icon: BarChart3, 
+      description: 'Web analytics platform', 
+      category: 'Micro SaaS', 
+      color: 'from-purple-600 to-pink-700',
+      badge: 'Popular'
     }
   ];
 
