@@ -21630,3 +21630,45 @@ fatal: couldn't find remote ref cursor/expand-services-and-deploy-updates-936f
 [2025-09-08T21:28:27.383Z] ✅ Success: Get git status
 [2025-09-08T21:28:27.383Z] 📄 Found 0 conflicted files
 [2025-09-08T21:28:27.383Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:28:27.481Z] ✅ Success: Add resolved files
+[2025-09-08T21:28:27.481Z] 🚀 Commit merge for cursor/expand-services-and-deploy-updates-936f: git commit -m "Resolve conflicts and merge cursor/expand-services-and-deploy-updates-936f"
+[2025-09-08T21:28:27.552Z] ✅ Success: Commit merge for cursor/expand-services-and-deploy-updates-936f
+[2025-09-08T21:28:27.552Z] ✅ Successfully resolved conflicts and merged: cursor/expand-services-and-deploy-updates-936f
+[2025-09-08T21:28:27.552Z] 🔄 Attempting to merge branch: cursor/expand-services-and-deploy-updates-941a
+[2025-09-08T21:28:27.552Z] 🚀 Fetch origin/cursor/expand-services-and-deploy-updates-941a: git fetch origin cursor/expand-services-and-deploy-updates-941a
+[2025-09-08T21:28:27.915Z] ✅ Success: Fetch origin/cursor/expand-services-and-deploy-updates-941a
+[2025-09-08T21:28:27.915Z] 🚀 Merge cursor/expand-services-and-deploy-updates-941a: git merge origin/cursor/expand-services-and-deploy-updates-941a --no-ff -m "Merge branch cursor/expand-services-and-deploy-updates-941a into main"
+[2025-09-08T21:28:28.373Z] ✅ Success: Merge cursor/expand-services-and-deploy-updates-941a
+[2025-09-08T21:28:28.373Z] ✅ Successfully merged: cursor/expand-services-and-deploy-updates-941a
+[2025-09-08T21:28:28.373Z] 🔄 Attempting to merge branch: cursor/expand-services-and-deploy-updates-9481
+[2025-09-08T21:28:28.373Z] 🚀 Fetch origin/cursor/expand-services-and-deploy-updates-9481: git fetch origin cursor/expand-services-and-deploy-updates-9481
+[2025-09-08T21:28:28.742Z] ✅ Success: Fetch origin/cursor/expand-services-and-deploy-updates-9481
+[2025-09-08T21:28:28.742Z] 🚀 Merge cursor/expand-services-and-deploy-updates-9481: git merge origin/cursor/expand-services-and-deploy-updates-9481 --no-ff -m "Merge branch cursor/expand-services-and-deploy-updates-9481 into main"
+[2025-09-08T21:28:29.221Z] ✅ Success: Merge cursor/expand-services-and-deploy-updates-9481
+[2025-09-08T21:28:29.221Z] ✅ Successfully merged: cursor/expand-services-and-deploy-updates-9481
+[2025-09-08T21:28:29.221Z] 🔄 Attempting to merge branch: cursor/expand-services-and-deploy-updates-95bb
+[2025-09-08T21:28:29.221Z] 🚀 Fetch origin/cursor/expand-services-and-deploy-updates-95bb: git fetch origin cursor/expand-services-and-deploy-updates-95bb
+[2025-09-08T21:28:29.597Z] ✅ Success: Fetch origin/cursor/expand-services-and-deploy-updates-95bb
+[2025-09-08T21:28:29.597Z] 🚀 Merge cursor/expand-services-and-deploy-updates-95bb: git merge origin/cursor/expand-services-and-deploy-updates-95bb --no-ff -m "Merge branch cursor/expand-services-and-deploy-updates-95bb into main"
+[2025-09-08T21:28:30.080Z] ✅ Success: Merge cursor/expand-services-and-deploy-updates-95bb
+[2025-09-08T21:28:30.080Z] ✅ Successfully merged: cursor/expand-services-and-deploy-updates-95bb
+[2025-09-08T21:28:30.080Z] 🔄 Attempting to merge branch: cursor/expand-services-and-deploy-updates-9852
+[2025-09-08T21:28:30.080Z] 🚀 Fetch origin/cursor/expand-services-and-deploy-updates-9852: git fetch origin cursor/expand-services-and-deploy-updates-9852
+[2025-09-08T21:28:30.459Z] ✅ Success: Fetch origin/cursor/expand-services-and-deploy-updates-9852
+[2025-09-08T21:28:30.460Z] 🚀 Merge cursor/expand-services-and-deploy-updates-9852: git merge origin/cursor/expand-services-and-deploy-updates-9852 --no-ff -m "Merge branch cursor/expand-services-and-deploy-updates-9852 into main"
+[2025-09-08T21:28:30.928Z] ✅ Success: Merge cursor/expand-services-and-deploy-updates-9852
+[2025-09-08T21:28:30.928Z] ✅ Successfully merged: cursor/expand-services-and-deploy-updates-9852
+[2025-09-08T21:28:31.929Z] 📦 Processing batch 266/509
+[2025-09-08T21:28:31.929Z] 🔄 Attempting to merge branch: cursor/expand-services-and-deploy-updates-997b
+[2025-09-08T21:28:31.929Z] 🚀 Fetch origin/cursor/expand-services-and-deploy-updates-997b: git fetch origin cursor/expand-services-and-deploy-updates-997b
+[2025-09-08T21:28:32.047Z] ❌ Error in Fetch origin/cursor/expand-services-and-deploy-updates-997b: Command failed: git fetch origin cursor/expand-services-and-deploy-updates-997b
+fatal: couldn't find remote ref cursor/expand-services-and-deploy-updates-997b
+
+[2025-09-08T21:28:32.047Z] ❌ Failed to merge cursor/expand-services-and-deploy-updates-997b: Command failed: git fetch origin cursor/expand-services-and-deploy-updates-997b
+fatal: couldn't find remote ref cursor/expand-services-and-deploy-updates-997b
+
+[2025-09-08T21:28:32.047Z] 🔧 Attempting to resolve conflicts for: cursor/expand-services-and-deploy-updates-997b
+[2025-09-08T21:28:32.047Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:28:32.112Z] ✅ Success: Get git status
+[2025-09-08T21:28:32.112Z] 📄 Found 0 conflicted files
+[2025-09-08T21:28:32.112Z] 🚀 Add resolved files: git add .
