@@ -226,24 +226,24 @@ module.exports = {
       }
     },
 
-    // CodeQL analysis automation - runs every 12 hours
+    // CodeQL Security Scanner - runs every 24 hours
     {
-      name: 'codeql-analyzer',
-      script: './scripts/automation/codeql-analyzer.cjs',
+      name: 'codeql-security-scan',
+      script: './scripts/automation/codeql-security-scan.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '512M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '43200000' // 12 hours
+        AUTOMATION_INTERVAL: '86400000' // 24 hours
       }
     },
 
-    // Workflow status monitor - runs every 30 minutes
+    // Status Monitor - runs every 30 minutes
     {
-      name: 'workflow-monitor',
-      script: './scripts/automation/workflow-monitor.cjs',
+      name: 'status-monitor',
+      script: './scripts/automation/status-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
