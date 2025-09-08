@@ -1,16 +1,23 @@
 [build]
+<<<<<<< HEAD
+  command = "npm ci --ignore-scripts --omit=optional || npm install --ignore-scripts --omit=optional && npm run build"
+=======
   # Skip building on Netlify and deploy prebuilt dist/ directory
   command = "echo Skipping build; deploying prebuilt dist"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1292
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
+<<<<<<< HEAD
+=======
   # Skip dependency install since we are not building on Netlify
   NETLIFY_SKIP_INSTALL = "true"
 
 
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1292
 
 [[redirects]]
   from = "/*"
