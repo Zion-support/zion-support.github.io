@@ -43,13 +43,20 @@
     "noEmitOnError": false
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
     "dist",
     "build",
-    "**/*.test.*",
-    "**/*.spec.*"
+    "src.disabled",
+    "src_disabled_*",
+    "tests",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
   ]
 }
