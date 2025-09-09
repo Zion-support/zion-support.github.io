@@ -1,25 +1,30 @@
-import React from 'react.ts';
-;
-interface CheckboxProps extends React.PropsWithChildren<{}> {;
-;
-  checked: boolean;
-  onCheckedChange?: (checked: boolean) => void;
-  onChange?: () => void;
+import React from 'react';
+
+interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  checked?: boolean;
+  onChange?: (checked: boolean) => void;
   className?: string;
-  disabled?: boolean;
-  className?: string};
-;
-export function Checkbox(...args[]):  {;
-  return (;
-    <label className = {`flex items-center space-x-2 cursor-pointer ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}>;
-      <input;
-        type="checkbox";
-        checked={checked};
-        onChange={(e) => onChange(e.target.checked)};
-        disabled={disabled};
-        className="w-4 h-4 text-zion-cyan border-gray-300 rounded focus:ring-zion-cyan focus:ring-2";
-      />;
-      {label && <span className="text-sm text-gray-700">{label}</span>};
-    </label>;
+  id?: string;
+  defaultChecked?: boolean;
+}
+
+export const Checkbox: React.FC<CheckboxProps> = ({ 
+  checked = false, 
+  onChange, 
+  className = "",
+  id,
+  defaultChecked,
+  ...props
+}) => {
+  return (
+    <input
+      type="checkbox"
+      id={id}
+      checked={checked}
+      defaultChecked={defaultChecked}
+      onChange={(e) => onChange?.(e.target.checked)}
+      className={`w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light rounded focus:ring-zion-cyan focus:ring-2 ${className}`}
+      {...props}
+    />
   );
 };

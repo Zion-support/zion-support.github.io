@@ -7,44 +7,53 @@ const LinkHealthMonitor = () => {
     const [linkStatuses, setLinkStatuses] = useState([]);
     const [report, setReport] = useState(null);
     const [selectedFilter, setSelectedFilter] = useState('all');
-    // Sample data based on the analysis report
-    const sampleLinks = [
-        {
-            url: 'https://linkedin.com/company/ziontechgroup',
-            status: 'broken',
-            statusCode: 404,
-            responseTime: 1200,
-            lastChecked: new Date(),
-            parentPage: 'Homepage',
-            linkText: 'LinkedIn'
-        },
-        {
-            url: 'https://twitter.com/ziontechgroup',
-            status: 'external',
-            statusCode: 200,
-            responseTime: 800,
-            lastChecked: new Date(),
-            parentPage: 'Homepage',
-            linkText: 'Twitter'
-        },
-        {
-            url: 'tel:+1 302 464 0950',
-            status: 'healthy',
-            statusCode: 200,
-            responseTime: 50,
-            lastChecked: new Date(),
-            parentPage: 'Contact',
-            linkText: 'Phone Number'
-        },
-        {
-            url: 'mailto:kleber@ziontechgroup.com',
-            status: 'healthy',
-            statusCode: 200,
-            responseTime: 50,
-            lastChecked: new Date(),
-            parentPage: 'Contact',
-            linkText: 'Email'
-        }
+    // Sample data based on the analysis report;
+    const sampleLinks = [];
+        {}
+';
+'';
+''';
+            url: 'https://linkedin.com/company/ziontechgroup',''';
+            status: 'broken',;
+            statusCode: 404,';
+            responseTime: 1200,'';
+            lastChecked: new Date(),''';
+            parentPage: 'Homepage',''';
+            linkText: 'LinkedIn'},;
+        {}
+';
+'';
+''';
+            url: 'https://twitter.com/ziontechgroup',''';
+            status: 'external',;
+            statusCode: 200,';
+            responseTime: 800,'';
+            lastChecked: new Date(),''';
+            parentPage: 'Homepage',''';
+            linkText: 'Twitter'},;
+        {}
+';
+'';
+''';
+            url: 'tel:+1 302 464 0950',''';
+            status: 'healthy',;
+            statusCode: 200,';
+            responseTime: 50,'';
+            lastChecked: new Date(),''';
+            parentPage: 'Contact',''';
+            linkText: 'Phone Number'},;
+        {}
+';
+'';
+''';
+            url: 'mailto:kleber@ziontechgroup.com',''';
+            status: 'healthy',;
+            statusCode: 200,';
+            responseTime: 50,'';
+            lastChecked: new Date(),''';
+            parentPage: 'Contact',''';
+            linkText: 'Email';
+
     ];
     useEffect(() => {
         setLinkStatuses(sampleLinks);
@@ -56,47 +65,49 @@ const LinkHealthMonitor = () => {
         const brokenLinks = links.filter(l => l.status === 'broken').length;
         const externalLinks = links.filter(l => l.status === 'external').length;
         const avgResponseTime = links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks;
-        setReport({
-            totalLinks,
-            healthyLinks,
-            brokenLinks,
-            externalLinks,
-            averageResponseTime: avgResponseTime,
-            lastUpdated: new Date()
-        });
-    };
-    const startMonitoring = async () => {
-        setIsMonitoring(true);
-        // Simulate link checking
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        setIsMonitoring(false);
-    };
-    const getStatusIcon = (status) => {
-        switch (status) {
-            case 'healthy':
-                return <CheckCircle className="w-4 h-4 text-green-400"/>;
-            case 'broken':
-                return <AlertTriangle className="w-4 h-4 text-red-400"/>;
-            case 'external':
-                return <ExternalLink className="w-4 h-4 text-blue-400"/>;
-            default:
-                return <RefreshCw className="w-4 h-4 text-yellow-400"/>;
-        }
-    };
-    const getStatusColor = (status) => {
-        switch (status) {
-            case 'healthy':
-                return 'text-green-400';
-            case 'broken':
-                return 'text-red-400';
-            case 'external':
-                return 'text-blue-400';
-            default:
-                return 'text-yellow-400';
-        }
-    };
-    const filteredLinks = linkStatuses.filter(link => {
-        if (selectedFilter === 'all')
+        setReport({}
+            totalLinks,;
+            healthyLinks,;
+            brokenLinks,;
+            externalLinks,;
+            averageResponseTime: avgResponseTime,;
+            lastUpdated: new Date () }) }
+    const startMonitoring = async () => {}
+        setIsMonitoring(true) ;
+        // Simulate link checking;
+        await new Promise(resolve => setTimeout (resolve, 2000) ) ;
+        setIsMonitoring(false) }
+    const getStatusIcon = (status) => {}
+        switch (status) {}
+';
+            case 'healthy': any;
+                return <CheckCircle className="w-4 h-4 text-green-400"/>;'";
+            case 'broken':"";
+                return <AlertTriangle className="w-4 h-4 text-red-400"/>;'";
+            case 'external':"";
+                return <ExternalLink className="w-4 h-4 text-blue-400"/>;";
+            default:"";
+                return <RefreshCw className="w-4 h-4 text-yellow-400"/>}
+    }
+    const getStatusColor = (status) => {}
+        switch (status) {}
+';
+'';
+''';
+            case 'healthy':'''';
+                return 'text-green-400';''';
+            case 'broken':'''';
+                return 'text-red-400';''';
+            case 'external':'''';
+                return 'text-blue-400';''';
+            default:'''';
+                return 'text-yellow-400'}
+    }
+    const filteredLinks = linkStatuses.filter(link => {}
+';
+'';
+''';
+        if (selectedFilter === 'all');
             return true;
         return link.status === selectedFilter;
     });
@@ -253,6 +264,11 @@ const LinkHealthMonitor = () => {
             </div>
           </motion.div>
         </motion.div>)}
-    </>);
-};
-export default LinkHealthMonitor;
+    </>)}
+export default LinkHealthMonitor}}}}
+
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }

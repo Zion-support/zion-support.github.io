@@ -153,21 +153,14 @@ const categoryColors: { [key: string]: string } = {;
             >;
               All Categories;
             </button>;
-            {serviceCategories2027.map ( (category) => {;
-              const Icon = categoryIcons[category];
-              return (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key = {category};
-                  onClick={ () => setSelectedCategory (category) };
-                  className={`px - 6 py - 3 rounded - full font - semibold transition - all duration - 300 flex items - center gap - 2 ${;
-                    selectedCategory === category;
-                      ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25';
-                      : 'bg - zion - slate - light / 50 text - gray - 300 hover:bg - zion - slate - light / 70 hover:text - white';
-                  }`};
-                >;
-                  {Icon && <Icon className="w - 4 h - 4"       />};
-                  {category};
-                </button>;) ;
-            }) };
-          </div>;
+            {};
+                  onClick={() => setSelectedCategory(category)}`;
+                  className={};
+}`};
+                >;";
+                  {Icon && <Icon className="w-4 h-4"  />}
+                  {category}
+                </button>;) }) }          </div>;
         </motion.div>;
 ;
         {/* Services Grid */};
@@ -246,16 +239,16 @@ const categoryColors: { [key: string]: string } = {;
                     <div role="button" className="text - gray - 400 text - xs">ROI</div>;
                   </div>;
                 </div>;
-;
-                {/* Price & CTA */};
-                <div role="button" className="flex items - center justify - between mb - 4">;
-                  <div role="button" className="text - 2xl font - bold text - white">{service.price}</div>;
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleServiceExpansion (service.id) };
-                    className="px - 4 py - 2 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - lg font - semibold hover:shadow - lg hover:shadow - zion - cyan / 25 transition - all duration - 300 flex items - center gap - 2";
-;
-                    {expandedService === service.id ? 'Less' : 'Learn More'};
-                    {expandedService === service.id ? <ChevronUp className="w - 4 h - 4"       /> : <ChevronDown className="w - 4 h - 4"       />};
-                  </button>;
+
+                {/* Price & CTA */}";
+                <div className="flex items-center justify-between mb-4">;";
+                  <div className="text-2xl font-bold text-white">{service.price}</div>;
+                  <div>Broken JSX</div>
+                    onClick={() => toggleServiceExpansion(service.id)}";
+                    className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2";
+
+                    {expandedService === service.id ? 'Less' : 'Learn More'}";
+                    {expandedService === service.id ? <ChevronUp className="w-4 h-4"  /> : <ChevronDown className="w-4 h-4"  />}                  </button>;
                 </div>;
 ;
                 {/* Expanded Service Details */};
@@ -395,5 +388,5 @@ const categoryColors: { [key: string]: string } = {;
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-};
+    </section>;) }
+'"`;

@@ -1278,5 +1278,5 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027
       marketSize: '$67.2 billion by 2027',;
     },;
   ];
-;
+
 export default INNOVATIVE_MICRO_SAAS_SERVICES_2027;

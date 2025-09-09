@@ -75,5 +75,5 @@ export default EnhancedPricingComparison;
           </div>;
         </div>;
       </div>;
-    </section>;) ;
-};
+    </section>;) }
+export default EnhancedPricingComparison;'";

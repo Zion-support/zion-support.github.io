@@ -172,24 +172,66 @@ const ContentQualityAnalyzer = () => {
             {/* Content */}
             <div className="p-6 space-y-6">
               {/* Summary Cards */}
-              {report && (<div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                  <div className="bg-gray-800 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-white">{report.totalPages}</div>
-                    <div className="text-gray-400 text-sm">Total Pages</div>
-                  </div>
-                  <div className="bg-red-900/20 border border-red-500/20 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-red-400">{report.criticalIssues}</div>
-                    <div className="text-red-400 text-sm">Critical Issues</div>
-                  </div>
-                  <div className="bg-yellow-900/20 border border-yellow-500/20 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-yellow-400">{report.mediumIssues}</div>
-                    <div className="text-yellow-400 text-sm">Medium Issues</div>
-                  </div>
-                  <div className="bg-blue-900/20 border border-blue-500/20 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-blue-400">{report.pagesWithMetaDescriptions}</div>
-                    <div className="text-blue-400 text-sm">With Meta Descriptions</div>
-                  </div>
-                </div>)}
+              {};
+                      {report.totalPages}
+                    </div>";
+                    <div className="text-gray-400 text-sm">Total Pages</div>;
+                  </div>";
+                  <div className="bg-red-900/20 border border-red-500/20 rounded-lg p-4 text-center">";
+                    <div className="text-2xl font-bold text-red-400">;
+                      {report.criticalIssues}
+                    </div>";
+                    <div className="text-red-400 text-sm">Critical Issues</div>;
+                  </div>";
+                  <div className="bg-yellow-900/20 border border-yellow-500/20 rounded-lg p-4 text-center">";
+                    <div className="text-2xl font-bold text-yellow-400">;
+                      {report.mediumIssues}
+                    </div>";
+                    <div className="text-yellow-400 text-sm">Medium Issues</div>;
+                  </div>";
+                  <div className="bg-blue-900/20 border border-blue-500/20 rounded-lg p-4 text-center">";
+                    <div className="text-2xl font-bold text-blue-400">;
+                      {report.pagesWithMetaDescriptions}
+                    </div>";
+                    <div className="text-blue-400 text-sm">;
+                      With Meta Descriptions;
+                    </div>;
+                  </div>;
+                </div>;
+              )}
+
+              {/* Actions */}";
+              <div className="flex items-center justify-between">";
+                <div className="flex space-x-2">;
+                  <div>Broken JSX</div>
+                    onClick={() => setSelectedFilter('all')}
+                    className={};
+}`}
+                  >;
+                    All Issues;
+                  </button>;
+                  <div>Broken JSX</div>
+                    onClick={() => setSelectedFilter('critical')}`;
+                    className={};
+}`}
+                  >;
+                    Critical;
+                  </button>;
+                  <div>Broken JSX</div>
+                    onClick={() => setSelectedFilter('medium')}`;
+                    className={};
+}`}
+                  >;
+                    Medium;
+                  </button>;
+                  <div>Broken JSX</div>
+                    onClick={() => setSelectedFilter('low')}`;
+                    className={};
+}`}
+                  >;
+                    Low;
+                  </button>;
+                </div>;
 
               {/* Actions */}
               <div className="flex items-center justify-between">
@@ -375,6 +417,13 @@ const ContentQualityAnalyzer = () => {
             </div>
           </motion.div>
         </motion.div>)}
-    </>);
-};
+    </>)}
 export default ContentQualityAnalyzer;
+
+
+export { ContentQualityAnalyzer }
+export { ContentQualityAnalyzer }
+export { ContentQualityAnalyzer }
+export { ContentQualityAnalyzer }
+export { ContentQualityAnalyzer }
+"}

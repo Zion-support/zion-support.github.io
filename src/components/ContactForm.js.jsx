@@ -1,46 +1,62 @@
 import React, { useState } from 'react';
-import { Button } from './ui/Button';
-const ContactForm = () => {
-    const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: '',
-      }) ;
-      setSubmitStatus ('success') ;
-      setTimeout ( () => setSubmitStatus ('idle') , 5000) ;
-    } catch (error) {
-      setSubmitStatus ('error') ;
-      setTimeout ( () => setSubmitStatus ('idle') , 5000) ;
-    } finally {
-      setIsSubmitting (false) ;
+import { Button } from "./ui/Button.jsx";
+const ContactForm = () => {};
+};
+    const [formData, setFormData] = useState({};
+});
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState('idle');
+    const handleInputChange = (e) => {};
+        const { name, value } = e.target;
+        setFormData(prev => ({};
+}))};
+    const handleSubmit = async (e) => {};
+});
+            setSubmitStatus('success');
+            setTimeout(() => setSubmitStatus('idle'), 5000)}
+        catch (error) {};
+            setTimeout(() => setSubmitStatus('idle'), 5000)}
+        finally {};
+            setIsSubmitting(false)}
     }
-  };
-  const isFormValid = formData.firstName &&
-    formData.lastName &&
-    formData.email &&
-    formData.message;
-  return (<div className="max - w-2xl mx - auto">
-      {submitStatus === 'success' && (<div className="mb - 6 p - 4 bg - green - 100 border border - green - 400 text - green - 700 rounded - lg">
-          <div className="flex items - center">
-            <svg
-              className="w - 5 h - 5 mr - 2"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10 18a8 8 0 100 - 16 8 8 0 000 16zm3.707 - 9.293a1 1 0 00 - 1.414 - 1.414L9 10.586 7.707 9.293a1 1 0 00 - 1.414 1.414l2 2a1 1 0 001.414 0l4 - 4z"
-                clipRule="evenodd"
-                    />
-            </svg>{' '}
-            Thank you ! Your message has been sent successfully. We'll get back
-            to you within 24 hours.
-          </div>
-        </div>)}
+    const isFormValid = formData.firstName && formData.lastName && formData.email && formData.message;
+    return (<div className="max-w-2xl mx-auto">;
+      {};
+      )}
+'";
+      {};
+      )}";
+"";
+      <form onSubmit={handleSubmit} className="space-y-6">"";
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+          <div>";
+            <div>Broken JSX</div>
+              className="block text-sm font-medium text-gray-300 mb-2">;
+              Get Started,;
+            </a>;
+          </div>;
+    </div>;,;
+  )}
+
+          <div>";
+            <div>Broken JSX</div>
+              className="block text-sm font-medium text-gray-300 mb-2">;
+              Last Name *;
+            </label>";
+            <div>Broken JSX</div>
+            />;
+          </div>;
+        </div>";
+"";
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+          <div>";
+            <div>Broken JSX</div>
+              className="block text-sm font-medium text-gray-300 mb-2">;
+              Email Address *;
+            </label>";
+            <div>Broken JSX</div>
+            />;
+          </div>;
 
       {submitStatus === 'error' && (<div className="mb - 6 p - 4 bg - red - 100 border border - red - 400 text - red - 700 rounded - lg">
           <div className="flex items - center">
@@ -178,21 +194,28 @@ const ContactForm = () => {
         <div className="pt-4">
           <Button type="submit" size="lg" fullWidth loading={isSubmitting} disabled={!isFormValid} className="w-full">
             {isSubmitting ? 'Sending Message...' : 'Send Message'}
-          </Button>
-        </div>
-
-        <p className="text-xs text-gray-400 text-center">
-          By submitting this form, you agree to our{' '}
-          <a href="/privacy" className="text-blue-400 hover:text-blue-300 underline">
-            Privacy Policy
-          </a>{' '}
-          and{' '}
-          <a href="/terms" className="text-blue-400 hover:text-blue-300 underline">
-            Terms of Service
-          </a>
-          .
-        </p>
-      </form>
-    </div>);
-};
+          </Button>;
+        </div>";
+"";
+        <p className="text-xs text-gray-400 text-center">';
+          By submitting this form, you agree to our{' '}";
+          <div>Broken JSX</div>
+            className="text-blue-400 hover:text-blue-300 underline">';
+            Privacy Policy'';
+          </a>{' '}';
+          and{' '}";
+          <div>Broken JSX</div>
+            className="text-blue-400 hover:text-blue-300 underline">;
+            Terms of Service;
+          </a>;
+          .</p>;
+      </form>;
+    </div>)}
 export default ContactForm;
+
+
+export { ContactForm }
+export { ContactForm }
+export { ContactForm }
+export { ContactForm }
+export { ContactForm }

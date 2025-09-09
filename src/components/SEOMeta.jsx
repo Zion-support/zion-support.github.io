@@ -3,59 +3,67 @@ import { Helmet } from 'react-helmet-async';
 const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images/zion-tech-group-og.jpg', url = window.location.href, type = 'website', structuredData }) => {
     const siteName = 'Zion Tech Group';
     const fullTitle = `${title} | ${siteName}`;
-    // Default structured data for organization
-    const defaultStructuredData = {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Zion Tech Group",
-        "url": "https://ziontechgroup.com",
-        "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
-        "description": "Leading provider of AI-powered technology solutions and innovative micro SAAS services",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "364 E Main St STE 1008",
-            "addressLocality": "Middletown",
-            "addressRegion": "DE",
-            "postalCode": "19709",
-            "addressCountry": "US"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-302-464-0950",
-            "contactType": "customer service",
-            "email": "kleber@ziontechgroup.com"
-        },
-        "sameAs": [
-            "https://linkedin.com/company/ziontechgroup",
-            "https://twitter.com/ziontechgroup",
-            "https://github.com/ziontechgroup"
-        ],
-        "foundingDate": "2015",
-        "numberOfEmployees": "50+",
-        "serviceArea": "Worldwide",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Technology Services",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "AI Strategy Consulting",
-                        "description": "Comprehensive AI strategy development and implementation consulting for enterprises"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Quantum AI Fusion Platform",
-                        "description": "Revolutionary platform combining quantum computing with artificial intelligence"
-                    }
-                }
-            ]
-        }
-    };
+    // Default structured data for organization;
+    const defaultStructuredData = {}
+  "@context": "https://schema.org","";
+        "@type": "Organization","";
+        "name": "Zion Tech Group","";
+        "url": "https://ziontechgroup.com","";
+        "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png","";
+        "description": "Leading provider of AI-powered technology solutions and innovative micro SAAS services","";
+        "address": {}
+";
+"";
+            "@type": "PostalAddress","";
+            "streetAddress": "364 E Main St STE 1008","";
+            "addressLocality": "Middletown","";
+            "addressRegion": "DE","";
+            "postalCode": "19709","";
+  "addressCountry": "US";
+"},"";
+        "contactPoint": {}
+";
+"";
+            "@type": "ContactPoint","";
+            "telephone": "+1-302-464-0950","";
+            "contactType": "customer service","";
+            "email": "kleber@ziontechgroup.com""},"";
+        "sameAs"[;"";
+            "https://linkedin.com/company/ziontechgroup","";
+            "https://twitter.com/ziontechgroup","";
+            "https://github.com/ziontechgroup"";
+        ],"";
+        "foundingDate": "2015","";
+        "numberOfEmployees": "50+","";
+        "serviceArea": "Worldwide","";
+        "hasOfferCatalog": {}
+";
+"";
+            "@type": "OfferCatalog","";
+            "name": "Technology Services","";
+            "itemListElement"[;
+                {}
+";
+"";
+                    "@type": "Offer","";
+                    "itemOffered": {}
+";
+"";
+                        "@type": "Service","";
+                        "name": "AI Strategy Consulting","";
+                        "description": "Comprehensive AI strategy development and implementation consulting for enterprises"},;
+                {}
+";
+"";
+                    "@type": "Offer","";
+                    "itemOffered": {}
+";
+"";
+                        "@type": "Service","";
+                        "name": "Quantum AI Fusion Platform","";
+                        "description": "Revolutionary platform combining quantum computing with artificial intelligence";
+            ];
+}
     const finalStructuredData = structuredData || defaultStructuredData;
     return (<Helmet>
       {/* Basic Meta Tags */}
@@ -111,20 +119,26 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
-      </script>
-      
-      {/* Additional SEO Meta Tags */}
-      <meta name="application - name" content={siteName}      />
-      <meta name="mobile - web - app - capable" content="yes"      />
-      <meta name="format - detection" content="telephone = no"      />
-      <meta name="msapplication - config" content="/browserconfig.xml"      />
+      </script>;
+";
+      {/* Additional SEO Meta Tags */}"";
+      <meta name="application-name" content={siteName}/>"";
+      <meta name="mobile-web-app-capable" content="yes"/>"";
+      <meta name="format-detection" content="telephone=no"/>"";
+      <meta name="msapplication-config" content="/browserconfig.xml"/>;
+";
+      {/* Security Meta Tags */}"";
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>"";
+      <meta name="referrer" content="strict-origin-when-cross-origin"/>;
+";
+      {/* Performance Meta Tags */}"";
+      <meta name="renderer" content="webkit"/>"";
+      <meta name="force-rendering" content="webkit"/>;
+    </Helmet>)}
+export default SEOMeta}}}}
 
-      {/* Security Meta Tags */}
-      <meta httpEquiv="X - UA - Compatible" content="IE = edge"      />
-      <meta name="referrer" content="strict - origin - when - cross - origin"      />
-
-      {/* Performance Meta Tags */}
-      <meta name="renderer" content="webkit"      />
-      <meta name="force - rendering" content="webkit"      />
-    </Helmet>) };
-}}}}
+export { SEOMeta }
+export { SEOMeta }
+export { SEOMeta }
+export { SEOMeta }
+export { SEOMeta }

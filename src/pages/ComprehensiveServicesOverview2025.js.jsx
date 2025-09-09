@@ -56,87 +56,121 @@ const ComprehensiveServicesOverview2025 = () => {
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Comprehensive Services
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              {" "}Overview 2025
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Explore our complete portfolio of innovative micro SAAS services, IT solutions, and AI platforms. 
-            Each service is designed with cutting-edge technology and proven methodologies to drive business transformation.
-          </p>
-          
-          {/* Navigation */}
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <Link to="/comprehensive-services-2025" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300">
-              Landing Page
-            </Link>
-            <Link to="/enhanced-services-2025" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300">
-              Services Showcase
-            </Link>
-            <a href="tel:+13024640950" className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300">
-              Call Now
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Category Filter */}
-      <section className="px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-            <h3 className="text-lg font-semibold text-blue-400 mb-4 text-center">Filter by Category</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
-              {categories.map(category => (<button key={category} onClick={() => setSelectedCategory(category)} className={`p-3 rounded-lg border transition-all duration-300 text-center ${selectedCategory === category
-                ? 'bg-blue-500/20 border-blue-400 text-blue-400'
-                : 'bg-white/10 border-white/20 hover:border-blue-400 hover:text-blue-400'}`}>
-                  <div className="text-2xl mb-1">{getCategoryIcon(category)}</div>
-                  <div className="text-xs">{category === 'all' ? 'All Categories' : category}</div>
-                </button>))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Overview */}
-      <section className="px-4 sm:px-6 lg:px-8 mb-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (<div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 overflow-hidden hover:border-blue-400 transition-all duration-300 hover:scale-105">
-                {/* Service Header */}
-                <div className={`p-6 bg-gradient-to-r ${getCategoryColor(service.category)}`}>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-3xl">{getCategoryIcon(service.category)}</span>
-                    <span className="text-sm bg-white/20 px-2 py-1 rounded-full">{service.category}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                  <p className="text-white/90 text-sm">{service.tagline}</p>
-                </div>
-
-                {/* Service Content */}
-                <div className="p-6">
-                  <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
-                  
-                  {/* Key Metrics */}
-                  <div className="grid grid-cols-2 gap-4 mb-4">
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-blue-400">{service.price}</div>
-                      <div className="text-xs text-gray-400">{service.period}</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-green-400">{service.rating}/5.0</div>
-                      <div className="text-xs text-gray-400">{service.reviews} reviews</div>
-                    </div>
-                  </div>
-
-                  {/* Technology Stack */}
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Technology Stack</h4>
-                    <div className="flex flex-wrap gap-1">
-                      {service.technology.slice(0, 3).map((tech, index) => (<span key={index} className="bg-blue-500/20 text-blue-400 px-2 py-1 rounded-full text-xs">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
+        <div className="max-w-7xl mx-auto text-center">;
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+            Comprehensive Services;
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">;
+              {" "}Overview 2025;
+            </span>;
+          </h1>          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">;
+            Explore our complete portfolio of innovative micro SAAS services, IT;
+            solutions, and AI platforms. Each service is designed with;
+            cutting-edge technology and proven methodologies to drive business;
+            transformation.;
+          </p>;
+";
+          {/* Navigation */}"";
+          <div className="flex flex-wrap justify-center gap-4 mb-8">";
+            <div>Broken JSX</div>
+              className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300">;
+              Landing Page;
+            </Link>";
+            <div>Broken JSX</div>
+              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300">;
+              Services Showcase;
+            </Link>";
+            <div>Broken JSX</div>
+              className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300">;
+              Call Now;
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+";
+      {/* Category Filter */}"";
+      <section className="px-4 sm:px-6 lg:px-8 mb-12">"";
+        <div className="max-w-7xl mx-auto">"";
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"";
+            <h3 className="text-lg font-semibold text-blue-400 mb-4 text-center">;
+              Filter by Category";
+            </h3>"";
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">;
+              {};
+                  onClick={() => setSelectedCategory(category)}
+                  className={`p-3 rounded-lg border transition-all duration-300 text-center ${}
+';
+                    selectedCategory === category'';
+                      ? 'bg-blue-500/20 border-blue-400 text-blue-400'''`;
+                      : 'bg-white/10 border-white/20 hover:border-blue-400 hover:text-blue-400'``}`}">"";
+                  <div className="text-2xl mb-1">;
+                    {getCategoryIcon(category)}";
+                  </div>"";
+                  <div className="text-xs">';
+                    {category === 'all' ? 'All Categories' : category}
+                  </div>;
+                </button>;
+              ))}
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+";
+      {/* Services Overview */}"";
+      <section className="px-4 sm:px-6 lg:px-8 mb-20">"";
+        <div className="max-w-7xl mx-auto">"";
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">;
+            {};
+                {/* Service Header */}`;
+                <div>Broken JSX</div>
+                  className={`p-6 bg-gradient-to-r ${getCategoryColor(service.category)}`}">"";
+                  <div className="flex items-center justify-between mb-4">"";
+                    <span className="text-3xl">;
+                      {getCategoryIcon(service.category)}";
+                    </span>"";
+                    <span className="text-sm bg-white/20 px-2 py-1 rounded-full">;
+                      {service.category}
+                    </span>";
+                  </div>"";
+                  <h3 className="text-xl font-bold text-white mb-2">;
+                    {service.name}";
+                  </h3>"";
+                  <p className="text-white/90 text-sm">{service.tagline}</p>;
+                </div>;
+";
+                {/* Service Content */}"";
+                <div className="p-6">"";
+                  <p className="text-gray-300 text-sm mb-4 line-clamp-3">;
+                    {service.description}
+                  </p>;
+";
+                  {/* Key Metrics */}"";
+                  <div className="grid grid-cols-2 gap-4 mb-4">"";
+                    <div className="text-center">"";
+                      <div className="text-lg font-bold text-blue-400">;
+                        {service.price}";
+                      </div>"";
+                      <div className="text-xs text-gray-400">;
+                        {service.period}
+                      </div>";
+                    </div>"";
+                    <div className="text-center">"";
+                      <div className="text-lg font-bold text-green-400">;
+                        {service.rating}/5.0";
+                      </div>"";
+                      <div className="text-xs text-gray-400">;
+                        {service.reviews} reviews;
+                      </div>;
+                    </div>;
+                  </div>;
+";
+                  {/* Technology Stack */}"";
+                  <div className="mb-4">"";
+                    <h4 className="text-sm font-semibold text-blue-400 mb-2">;
+                      Technology Stack";
+                    </h4>"";
+                    <div className="flex flex-wrap gap-1">;
+                      {};
                           {tech}
                         </span>))}
                     </div>
@@ -316,59 +350,84 @@ const ComprehensiveServicesOverview2025 = () => {
                         <div className="flex flex-wrap gap-2">
                           {service.compliance.map((cert, index) => (<span key={index} className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">
                               {cert}
-                            </span>))}
-                        </div>
-                      </div>
-
-                      {/* Contact and Next Steps */}
-                      <div className="bg-slate-700 rounded-lg p-6">
-                        <h3 className="text-lg font-semibold text-blue-400 mb-4">Get Started</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                          <div>
-                            <h4 className="text-sm font-semibold text-gray-400 mb-2">Contact Information</h4>
-                            <p className="text-gray-300">Phone: {service.contact.phone}</p>
-                            <p className="text-gray-300">Email: {service.contact.email}</p>
-                            <p className="text-gray-300">Address: {service.contact.address}</p>
-                          </div>
-                          <div>
-                            <h4 className="text-sm font-semibold text-gray-400 mb-2">Next Steps</h4>
-                            <div className="space-y-2">
-                              <a href={service.website} target="_blank" rel="noopener noreferrer" className="block bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg transition-colors duration-300">
-                                Visit Website
-                              </a>
-                              <a href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`} className="block bg-green-600 hover:bg-green-700 text-white text-center py-2 px-4 rounded-lg transition-colors duration-300">
-                                Request Demo
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </>);
-            })()}
-            </div>
-          </div>
-        </div>)}
-
-      {/* Footer CTA */}
-      <section className="px-4 sm:px-6 lg:px-8 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Explore Our Services?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact us today to learn more about our comprehensive services and how they can transform your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+13024640950" className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
-              Call Now: +1 302 464 0950
-            </a>
-            <a href="mailto:kleber@ziontechgroup.com" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
-              Email: kleber@ziontechgroup.com
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>);
-};
+                            </span>;
+                          ))}
+                        </div>;
+                      </div>;
+";
+                      {/* Contact and Next Steps */}"";
+                      <div className="bg-slate-700 rounded-lg p-6">"";
+                        <h3 className="text-lg font-semibold text-blue-400 mb-4">;
+                          Get Started";
+                        </h3>"";
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
+                          <div>"";
+                            <h4 className="text-sm font-semibold text-gray-400 mb-2">;
+                              Contact Information";
+                            </h4>"";
+                            <p className="text-gray-300">;
+                              Phone: {service.contact.phone}";
+                            </p>"";
+                            <p className="text-gray-300">;
+                              Email: {service.contact.email}";
+                            </p>"";
+                            <p className="text-gray-300">;
+                              Address: {service.contact.address}
+                            </p>;
+                          </div>";
+                          <div>"";
+                            <h4 className="text-sm font-semibold text-gray-400 mb-2">;
+                              Next Steps";
+                            </h4>"";
+                            <div className="space-y-2">;
+                              <div>Broken JSX</div>
+                                className="block bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg transition-colors duration-300">;
+                                Visit Website;
+                              </a>`;
+                              <div>Broken JSX</div>
+                                className="block bg-green-600 hover:bg-green-700 text-white text-center py-2 px-4 rounded-lg transition-colors duration-300">;
+                                Request Demo;
+                              </a>;
+                            </div>;
+                          </div>;
+                        </div>;
+                      </div>;
+                    </div>;
+                  </>;
+                )})()}
+            </div>;
+          </div>;
+        </div>;
+      )}
+";
+      {/* Footer CTA */}"";
+      <section className="px-4 sm:px-6 lg:px-8 py-20">"";
+        <div className="max-w-4xl mx-auto text-center">"";
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">;
+            Ready to Explore Our Services?";
+          </h2>"";
+          <p className="text-xl text-gray-300 mb-8">;
+            Contact us today to learn more about our comprehensive services and;
+            how they can transform your business.";
+          </p>"";
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+            <div>Broken JSX</div>
+              className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300">;
+              Call Now: +1 302 464 0950;
+            </a>";
+            <div>Broken JSX</div>
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300">;
+              Email: kleber@ziontechgroup.com;
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>)}
 export default ComprehensiveServicesOverview2025;
+
+
+export { ComprehensiveServicesOverview2025 }
+export { ComprehensiveServicesOverview2025 }
+export { ComprehensiveServicesOverview2025 }
+export { ComprehensiveServicesOverview2025 }
+export { ComprehensiveServicesOverview2025 }

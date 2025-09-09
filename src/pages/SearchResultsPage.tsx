@@ -16,8 +16,7 @@ const LIMIT = 20;
 
 export default function SearchResultsPage() {
   const router = useRouter();
-  const initialQuery = (router.query.q as string) || "";
-  const [query, setQuery] = useState(initialQuery);
+  const [query, setQuery] = useState("");
 
   // Sync query state with the URL once the router is ready
   useEffect(() => {

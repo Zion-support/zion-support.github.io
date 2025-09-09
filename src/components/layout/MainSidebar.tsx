@@ -278,44 +278,53 @@ export function MainSidebar(...args: any[]): any {;
       icon: Phone;
     };
   ];
-;
-  const renderSidebarItem = (item: SidebarItem, level: number = 0) => {;
-    const isActive = location.pathname === item.href;
-    const hasChildren = item.children && item.children.length > 0;
-    const isExpanded = expandedSections.includes(item.name.toLowerCase());
-    const isFeatured = item.featured;
-;
-    return (;
-      <div key={item.name} className="mb-1">;
-        {hasChildren ? (;
-          <div>;
-            <button;
-              onClick={() => toggleSection(item.name.toLowerCase())};
-              className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${;
-                level === 0 ;
-                  ? 'text-slate-300 hover:text-white hover:bg-slate-700/50' ;
-                  : 'text-slate-400 hover:text-slate-300';
-              }`};
-            >;
-              <div className="flex items-center space-x-3">;
-                <item.icon className="w-4 h-4"       />;
+
+    return ()      <div key={item.name} className="mb-1">;
+        {};
                 <span>{item.name}</span>;
-                {isFeatured && (;
-                  <Star className="w-3 h-3 text-yellow-400"       />;
-                )};
+                {};
+                )}
               </div>;
-              {isExpanded ? (;
-                <ChevronDown className="w-4 h-4"       />;
-              ) : (;
-                <ChevronRight className="w-4 h-4"       />;
-              )};
+              {};
+                <ChevronRight className="w-4 h-4"  />              )}
             </button>;
-            ;
-            {isExpanded && (;
-              <div className="ml-6 mt-2 space-y-1">;
-                {item.children!.map(((((((child => renderSidebarItem(child, level + 1, index, index, index, index, index, index) => ({ ...(((((child => renderSidebarItem(child, level + 1, index, index, index, index, index, key: index })) => ({ ...((((child => renderSidebarItem(child, level + 1, index, index, index, index, key: index })) => ({ ...(((child => renderSidebarItem(child, level + 1, index, index, index, key: index })) => ({ ...((child => renderSidebarItem(child, level + 1, index, index, key: index })) => ({ ...(child => renderSidebarItem(child, level + 1, index, key: index })) => ({ ...child => renderSidebarItem(child, level + 1, key: index })))};
+
+            {};
+                {item.children!.map(child => renderSidebarItem(child, level + 1))}
               </div>;
-            )};
+            )}
+          </div>;
+        ) : ;
+          <div>Broken JSX</div>
+            onClick={() => setIsOpen(false)}
+          >";
+            <item.icon className="w-4 h-4" />;
+            <span>{item.name}</span>;
+            {};
+              <Star className="w-3 h-3 text-yellow-400"  />            )}
+          </Link>;
+        )}
+      </div>;
+    )}
+  return ();
+    <>;
+      {/* Mobile menu button */}
+      <div>Broken JSX</div>
+        onClick={() => setIsOpen(!isOpen)}";
+        className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">";
+        {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}      </button>;
+
+      {/* Sidebar */}`;
+      <div>Broken JSX</div>
+      `}>";
+        <div className="flex flex-col h-full">;
+          {/* Header */}";
+          <div className="flex items-center justify-between p-4 border-b border-slate-700/50">";
+            <h2 className="text-lg font-semibold text-white">Navigation</h2>;
+            <div>Broken JSX</div>
+              onClick={() => setIsOpen(false)}";
+              className="lg:hidden p-1 rounded text-slate-400 hover:text-white hover:bg-slate-800">";
+              <X className="w-5 h-5"  />            </button>;
           </div>;
         ) : (;
           <Link;
@@ -401,7 +410,7 @@ export function MainSidebar(...args: any[]): any {;
         />;
       )};
     </>;
-  )};
+  )}
             </div>;
           </div>;
         </div>;

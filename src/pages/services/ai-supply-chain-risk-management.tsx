@@ -536,7 +536,4 @@ const AISupplyChainRiskManagement = () => {;
         </div>;
       </section>;
     </div>;
-  );
-};
-;
-export default AISupplyChainRiskManagement;
+  )}

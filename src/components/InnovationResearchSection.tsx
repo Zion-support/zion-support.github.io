@@ -1,13 +1,6 @@
-export /**;
-export default IconComponent;
-export default IconComponent;
-export default InnovationResearchSection;
-import {;
-import { motion } from 'framer - motion';
-;
-;
- * InnovationResearchSection function;
- * @param {*} params - Function parameters;
+import {  import { motion  } from 'framer-motion';
+
+ params - Function parameters;
  * @returns {*} Function return value;
  */;
 function InnovationResearchSection(...args: any[]): any {;
@@ -283,9 +276,9 @@ const innovationMetrics = [;
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
-;
-            <span className="text - 2xl">→</span>;
+    </section>;) }
+export default InnovationResearchSection;";
+            <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
       </div>;

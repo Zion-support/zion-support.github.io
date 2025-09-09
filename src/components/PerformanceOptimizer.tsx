@@ -1,67 +1,89 @@
-import { useEffect } from 'react';
+import React, { memo, useEffect, useCallback } from 'react';
+import { performanceMonitor, performanceUtils } from '../utils/performance';
 
-export default function Page() {
-export default function Page() {
-interface PerformanceOptimizerProps { children: React.ReactNode;
- }
+interface PerformanceOptimizerProps {
+  enableMonitoring?: boolean;
+  children: React.ReactNode;
+}
 
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+const PerformanceOptimizer = memo<PerformanceOptimizerProps>(({ 
+  enableMonitoring = false, 
+  children 
+}) => {
+  const measureRender = useCallback(() => {
+    if (enableMonitoring) {
+      return performanceMonitor.measureRenderTime('PerformanceOptimizer');
+    }
+    return () => {};
+  }, [enableMonitoring]);
+
   useEffect(() => {
+    const cleanup = measureRender();
+    
     // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalFonts = ['https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap'
-      ];
-      
-      criticalFonts.forEach(font => {
+    if (typeof window !== 'undefined') {
+      // Preload critical CSS
+      const criticalCSS = document.querySelector('link[rel="preload"][as="style"]');
+      if (!criticalCSS) {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.as = 'style';
-        link.href = font;
+        link.href = '/assets/index.css';
         document.head.appendChild(link);
-      });
-    };
+      }
 
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy';
+      // Preload critical fonts
+      const criticalFonts = [
+        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+      ];
+      
+      criticalFonts.forEach(fontUrl => {
+        if (!document.querySelector(`link[href="${fontUrl}"]`)) {
+          const link = document.createElement('link');
+          link.rel = 'preload';
+          link.as = 'style';
+          link.href = fontUrl;
+          document.head.appendChild(link);
         }
-        if(!img.decoding) {
-          img.decoding = 'async';
-        }
       });
-    };
+    }
 
-    // Initialize optimizations
-    preloadCriticalResources();
-    optimizeImages();
+    return cleanup;
+  }, [measureRender]);
 
-    // Set up intersection observer for lazy loading
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const target = entry.target as HTMLElement;
-            if(target.dataset.src) {
-              target.style.backgroundImage = `url(${target.dataset.src})`;
-              target.removeAttribute('data-src');
-              observer.unobserve(target);
-            }
-          }
-        });
-      },
-      { rootMargin: '50px'  }
-    );
+  // Optimize scroll performance
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
 
-    // Observe lazy load elements
-    const lazyElements = document.querySelectorAll('[data-src]');
-    lazyElements.forEach(el => observer.observe(el));
+    const optimizedScrollHandler = performanceUtils.throttle(() => {
+      // Handle scroll events efficiently
+    }, 16); // ~60fps
 
+    window.addEventListener('scroll', optimizedScrollHandler, { passive: true });
+    
     return () => {
-      observer.disconnect();
+      window.removeEventListener('scroll', optimizedScrollHandler);
+    };
+  }, []);
+
+  // Optimize resize performance
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const optimizedResizeHandler = performanceUtils.debounce(() => {
+      // Handle resize events efficiently
+    }, 250);
+
+    window.addEventListener('resize', optimizedResizeHandler);
+    
+    return () => {
+      window.removeEventListener('resize', optimizedResizeHandler);
     };
   }, []);
 
   return <>{children}</>;
-};
+});
+
+PerformanceOptimizer.displayName = 'PerformanceOptimizer';
+
+export { PerformanceOptimizer };

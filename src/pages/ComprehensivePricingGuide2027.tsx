@@ -290,7 +290,7 @@ import { SEO } from '../components / SEO';
       popular: false;
     };
   ];
-;
+
   const marketComparison = [;
     {;
       feature: "AI Workflow Automation",;
@@ -321,29 +321,25 @@ import { SEO } from '../components / SEO';
       savings: "50 - 63%";
     };
   ];
-;
-  return (<div className="min - h-screen bg - gradient - to - br from - zion - slate - 900 via - zion - slate - 800 to - zion - slate - 900">;
-      {/* Futuristic Animated Background */};
-      <div className="fixed inset - 0 overflow - hidden pointer - events - none" aria - hidden="true">;
-        <div className="absolute inset - 0 bg-[linear - gradient (rgba (34,221,210,0.1) _1px,transparent_1px) ,linear - gradient (90deg,rgba (34,221,210,0.1) _1px,transparent_1px) ] bg-[size:50px_50px] animate - pulse"></div>;
-        <div className="absolute inset - 0 bg - gradient - to - r from - zion - cyan / 5 via - transparent to - zion - purple / 5"></div>;
-      </div>;
-;
-      <div className="relative z - 10">;
-        {/* Hero Section */};
-        <section className="relative pt - 32 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="max - w-7xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-            >;
-              <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - zion - cyan / 10 border border - zion - cyan / 20 text - zion - cyan text - sm font - medium mb - 8">;
-                <DollarSign className="w - 4 h - 4 mr - 2"       />;
-                Comprehensive Pricing Guide 2027;
-              </div>;
-              ;
-              <h1 className="text - 5xl md:text - 7xl font - bold text - white mb - 6 bg - gradient - to - r from - zion - cyan via - zion - purple to - zion - cyan bg - clip - text text - transparent">;
+
+  return (;
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">;
+      {/* Futuristic Animated Background */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">;
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/5 via-transparent to-zion-purple/5"></div>;
+      </div>";
+"";
+      <div className="relative z-10">";
+        {/* Hero Section */}"";
+        <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">"";
+          <div className="max-w-7xl mx-auto text-center">;
+            <div>Broken JSX</div>
+              transition={{ duration: 0.8 }}">"";
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8">"";
+                <DollarSign className="w-4 h-4 mr-2"  />                Comprehensive Pricing Guide 2027;
+              </div>";
+              "";
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">;
                 Transparent Pricing Guide;
               </h1>;
               ;
@@ -475,32 +471,17 @@ import { SEO } from '../components / SEO';
               <p className="text - xl text - zion - slate - 300 max - w-3xl mx - auto">;
                 Comprehensive solutions for large organizations requiring multiple services and custom solutions;
               </p>;
-            </motion.div>;
-;
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-              {enterprisePackages.map ( (pkg, index) => (<motion.div;
-                  key={index};
-                  initial={{ opacity: 0, y: 20 }};
-                  whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.8, delay: index * 0.1 }};
-                  viewport={{ once: true }};
-                  className={`relative bg - zion - slate - 800 / 50 backdrop - blur - sm border rounded - xl p - 8 ${;
-                    pkg.popular ;
-                      ? 'border - zion - cyan / 50 bg - zion - cyan / 5' ;
-                      : 'border - zion - slate - 600 / 50';
-                  }`};
-                >;
-                  {pkg.popular && (<div className="absolute - top - 4 left - 1/2 transform - translate - x-1 / 2">;
-                      <span className="bg - gradient - to - r from - zion - cyan to - zion - purple text - white px - 4 py - 2 rounded - full text - sm font - semibold">;
-                        Most Popular;
-                      </span>;
-                    </div>) };
-                  ;
-                  <div className="text - center mb - 8">;
-                    <h3 className="text - 2xl font - bold text - white mb - 4">{pkg.name}</h3>;
-                    <div className="mb - 4">;
-                      <span className="text - 4xl font - bold text - white">{pkg.price}</span>;
-                      <span className="text - zion - slate - 400">{pkg.period}</span>;
+            </motion.div>";
+"";
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
+              {};
+                    </div>) }
+
+                  <div className="text-center mb-8">;
+                    <h3 className="text-2xl font - bold text-white mb-4">{pkg.name}</h3>;
+                    <div className="mb-4">;
+                      <span className="text-4xl font - bold text-white">{pkg.price}</span>;
+                      <span className="text-zion - slate -400">{pkg.period}</span>;
                     </div>;
                     <p className="text - zion - slate - 300">{pkg.description}</p>;
                   </div>;
@@ -633,6 +614,13 @@ import { SEO } from '../components / SEO';
           </div>;
         </section>;
       </div>;
-    </div>) ;
-};
-;
+    </div>;
+  )}
+export default ComprehensivePricingGuide2027;
+
+
+export { ComprehensivePricingGuide2027 }
+export { ComprehensivePricingGuide2027 }
+export { ComprehensivePricingGuide2027 }
+export { ComprehensivePricingGuide2027 }
+export { ComprehensivePricingGuide2027 }

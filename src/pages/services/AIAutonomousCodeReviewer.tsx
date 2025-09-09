@@ -75,7 +75,7 @@ const AIAutonomousCodeReviewer = () => {;
       description: 'Built-in code review workflows, comments, and approval systems for development teams';
     };
   ];
-;
+
   const benefits = [;
     'Reduce code review time by 70%',;
     'Catch 90% of bugs before production',;
@@ -84,7 +84,7 @@ const AIAutonomousCodeReviewer = () => {;
     'Reduce technical debt',;
     'Ensure consistent coding standards';
   ];
-;
+
   const services = [;
     {;
       icon: Server,;
@@ -107,7 +107,7 @@ const AIAutonomousCodeReviewer = () => {;
       description: 'SQL query optimization, database schema analysis, and performance tuning recommendations';
     };
   ];
-;
+
   const useCases = [;
     {;
       industry: 'Software Development',;
@@ -126,7 +126,7 @@ const AIAutonomousCodeReviewer = () => {;
       description: 'Maintaining high coding standards and reducing technical debt in large codebases';
     };
   ];
-;
+
   const pricing = [;
     {;
       name: 'Starter',;
@@ -181,7 +181,7 @@ const AIAutonomousCodeReviewer = () => {;
       popular: false;
     };
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Hero Section */};
@@ -197,17 +197,17 @@ const AIAutonomousCodeReviewer = () => {;
               <Code className="w-4 h-4 mr-2"       />;
               AI-Powered Code Review;
             </div>;
-            ;
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
               AI Autonomous;
               <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent"> Code Reviewer</span>;
             </h1>;
-            ;
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
               Revolutionize your code review process with AI-powered analysis that catches bugs, ;
               improves security, and maintains code quality automatically.;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">;
                 <Play className="w-5 h-5 mr-2"       />;
@@ -371,26 +371,8 @@ const AIAutonomousCodeReviewer = () => {;
           </motion.div>;
 ;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {pricing.map((((((((plan, index, index, index, index, index, index, index) => ({ ...((((((plan, index, index, index, index, index, index, key: index })) => ({ ...(((((plan, index, index, index, index, index, key: index })) => ({ ...((((plan, index, index, index, index, key: index })) => ({ ...(((plan, index, index, index, key: index })) => ({ ...((plan, index, index, key: index })) => ({ ...(plan, index, key: index })) => (;
-              <motion.div;
-                key={index};
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }};
-                transition={{ duration: 0.5, delay: index * 0.1 }};
-                className={`relative bg-slate-800/50 border rounded-xl p-8 ${;
-                  plan.popular ;
-                    ? 'border-blue-500/50 bg-blue-500/5' ;
-                    : 'border-slate-700/50';
-                }`};
-              >;
-                {plan.popular && (;
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">;
-                      Most Popular;
-                    </span>;
-                  </div>;
-                )};
-                ;
+            {};
+                )}
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-gray-400 mb-4">{plan.description}</p>;
@@ -549,7 +531,7 @@ const AIAutonomousCodeReviewer = () => {;
                 Contact Sales;
               </button>;
             </div>;
-            ;
+
             <div className="mt-8 text-center">;
               <p className="text-gray-400 mb-4">Ready to get started? Contact our team:</p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-300">;
@@ -571,7 +553,11 @@ const AIAutonomousCodeReviewer = () => {;
         </div>;
       </section>;
     </div>;
-  );
-};
-;
+  )}
 export default AIAutonomousCodeReviewer;}}}}
+
+export { AIAutonomousCodeReviewer }
+export { AIAutonomousCodeReviewer }
+export { AIAutonomousCodeReviewer }
+export { AIAutonomousCodeReviewer }
+export { AIAutonomousCodeReviewer }

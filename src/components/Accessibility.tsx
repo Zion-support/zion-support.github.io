@@ -1,11 +1,8 @@
 import { useState, useEffect } from 'react';
 export /**;
-import { ;
-import { motion, AnimatePresence } from 'framer - motion';
-;
-;
- * Accessibility function;
- * @param {*} params - Function parameters;
+import { motion, AnimatePresence  } from 'framer-motion';
+
+ params - Function parameters;
  * @returns {*} Function return value;
  */;
 function Accessibility(...args: any[]): any {;
@@ -350,5 +347,7 @@ interface AccessibilitySettings {;
             </div>;
           </motion.div>;) };
       </AnimatePresence>;
-    </>;) ;
-}}}}}}}}}}}
+    </>;
+  )}
+
+;,"});})";

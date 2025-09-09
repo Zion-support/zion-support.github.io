@@ -1,1 +1,86 @@
-import React, { useState } from 'react'; import { Link    } from 'react-router-dom'; import { MainNavigation } from './MainNavigation'; import { MobileMenu } from './MobileMenu'; import { Logo } from './Logo'; import { Menu, X, Search, Bell, User, ShoppingBag    } from 'lucide-react'; import { SearchFunctionality } from '../SearchFunctionality'; ; export function Header() {; const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); const [showSearch, setShowSearch] = useState(false); ; const toggleMobileMenu = () => {; setIsMobileMenuOpen(!isMobileMenuOpen); }; ; const closeMobileMenu = () => setIsMobileMenuOpen(false); const toggleSearch = () => setShowSearch(!showSearch); ; return (; <>; {}; <div className="bg-zion-slate-darker border-b border-zion-purple/10">";" <div className="container mx-auto px-4 sm:px-6 lg:px-8">";" <div className="flex h-12 items-center justify-between text-sm">";" <div className="flex items-center space-x-6">";" <div className="text-zion-slate-light">";" 📧 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-zion-cyan transition-colors">kleber@ziontechgroup.com</a>;" </div>";" <div className="text-zion-slate-light hidden sm:block">";" 📞 <a href="tel:+13024640950" className="hover:text-zion-cyan transition-colors">+1 (302) 464-0950</a>; </div>;" </div>";" <div className="flex items-center space-x-4">";" <Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">; Support;" </Link>";" <Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">; Careers;" </Link>";" <Link to="/pricing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">; Pricing;" </Link>";" <div className="flex items-center space-x-2">";" <span className="text-zion-slate-light text-xs">Follow us:</span>";" <a href="https:
+
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Logo } from './Logo';
+import { UserMenu } from './UserMenu';
+import { LanguageSelector } from './LanguageSelector';
+import { ModeToggle } from "@/components/ModeToggle";
+import { MainNavigation } from '@/layout/MainNavigation';
+import { useAuth } from '@/hooks/useAuth';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { generateSearchSuggestions } from "@/data/marketplaceData";
+
+export interface HeaderProps {
+  hideLogin?: boolean;
+  customLogo?: string;
+  customTheme?: {
+    primaryColor: string;
+    backgroundColor: string;
+    textColor: string;
+  };
+}
+
+export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
+  const { user } = useAuth();
+  const firstName =
+    (user && typeof user !== 'boolean' ? (user.displayName?.split(' ')[0] || user.name?.split(' ')[0]) : undefined) || '';
+  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const navigate = useNavigate();
+  const [query, setQuery] = useState("");
+  const searchSuggestions = generateSearchSuggestions();
+  
+  // If we have a white-label tenant and no specific customTheme is provided,
+  // use the tenant's primary color
+  const effectiveTheme = customTheme || (isWhitelabel ? {
+    primaryColor,
+    backgroundColor: '#000000', // Default dark background
+    textColor: '#ffffff', // Default light text
+  } : undefined);
+  
+  const headerStyle = effectiveTheme ? {
+    backgroundColor: effectiveTheme.backgroundColor,
+    color: effectiveTheme.textColor,
+    borderColor: `${effectiveTheme.primaryColor}20`
+  } : {};
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (query.trim()) {
+      navigate(`/search?q=${encodeURIComponent(query)}`);
+      setQuery("");
+    }
+  };
+  
+  return (
+    <header 
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md"
+      style={headerStyle}
+    >
+      <div className="container flex h-16 items-center px-4 sm:px-6">
+        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
+
+        <div className="ml-6 flex-1">
+          <MainNavigation />
+        </div>
+        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
+          <EnhancedSearchInput
+            value={query}
+            onChange={setQuery}
+            onSelectSuggestion={(text) => {
+              navigate(`/search?q=${encodeURIComponent(text)}`);
+              setQuery("");
+            }}
+            searchSuggestions={searchSuggestions}
+          />
+        </form>
+
+        <div className="flex items-center gap-2">
+          <LanguageSelector />
+          <ModeToggle />
+          {!hideLogin && <UserMenu />}
+        </div>
+      </div>
+    </header>
+  );
+}

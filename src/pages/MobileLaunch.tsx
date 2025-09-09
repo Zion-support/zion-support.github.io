@@ -544,8 +544,6 @@ const MobileLaunch: React.FC = () => {;
                 Get Support < ArrowRight className="ml - 2 w - 5 h - 5"       />;
               </Link>;
             </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+    </>;
+  )}
+export default MobileLaunch;

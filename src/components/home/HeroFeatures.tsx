@@ -77,27 +77,25 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {;
             {/* Glow effect */};
             <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-xl blur-xl group-hover: blur-2xl transition-all duration-300"       />;
           </div>;
-;
-          <h3 id={`feature-${index}-title`} className="relative text-lg font-semibold text-white mb-2 group-hover: text-zion-cyan transition-colors duration-300">;
-            {feature.title};
+"`;
+          <h3 id={`feature-${index}-title`} className="relative text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">;
+            {feature.title}
           </h3>;
-;
-          <p className="relative text-zion-slate-light text-sm leading-relaxed group-hover: text-zion-slate-light/90 transition-colors duration-300">;
-            {feature.description};
+";
+          <p className="relative text-zion-slate-light text-sm leading-relaxed group-hover:text-zion-slate-light/90 transition-colors duration-300">;
+            {feature.description}
           </p>;
-;
-          {/* Hover indicator */};
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover: w-1/2 transition-all duration-500"       />;
+
+          {/* Hover indicator */}";
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-500" />;
         </motion.div>;
-      ))};
+      ))}
     </motion.div>;
-  )};
-          {/* Hover indicator */};
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover: w-1/2 transition-all duration-500"       />;
+  )}
+          {/* Hover indicator */};";
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-500" />;
         </motion.div>;
-      ))};
+      ))}
     </motion.div>;
-  );
-};
-;
-export default HeroFeatures;}}
+  )}
+export default HeroFeatures}}'"`;

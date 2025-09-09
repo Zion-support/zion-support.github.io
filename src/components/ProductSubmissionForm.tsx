@@ -24,8 +24,6 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { AIListingGenerator } from "@/components/AIListingGenerator";
 import { Sparkles } from "lucide-react";
 
-const isBrowser = typeof window !== 'undefined';
-
 // Define the form schema with zod
 const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
@@ -34,9 +32,7 @@ const productSchema = z.object({
     message: "Price must be a valid number",
   }),
   category: z.string().min(1, "Please select a category"),
-  image: isBrowser ? z.instanceof(File).optional() : z.any().optional(),
-  video: isBrowser ? z.instanceof(File).optional() : z.any().optional(),
-  model: isBrowser ? z.instanceof(File).optional() : z.any().optional(),
+  image: z.instanceof(File).optional(),
   tags: z.string().optional(),
 });
 

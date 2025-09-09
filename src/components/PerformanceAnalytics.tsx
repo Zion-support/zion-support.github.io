@@ -135,42 +135,16 @@ const PerformanceAnalytics: React.FC = () => {;
       case 'critical': return 'bg - red - 500 / 20';
       default: return 'bg - gray - 500 / 20';
 ;
-  };
-;
-  const getTrendIcon = (trend: string) => {;
-    switch (trend) {;
-      case 'up': return < TrendingUp className="w - 4 h - 4 text - red - 400" />;
-      case 'down': return < TrendingDown className="w - 4 h - 4 text - green - 400" />;
-      default: return < Activity className="w - 4 h - 4 text - blue - 400" />;
-;
-  };
-;
-  const startMonitoring = () => {;
-    setIsMonitoring (true) ;
-    setPerformanceData (generateMockData () ) ;
-  };
-;
-  const stopMonitoring = () => {;
-    setIsMonitoring (false) ;
-  };
-;
-  return (<div role="button" className = "min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 p - 6">;
-      <div role="button" className="max - w-7xl mx - auto">;
-        {/* Header */};
-        <motion.div;
-          initial = {;
-  { opacity: 0,;
-  y: 20 ;
-;
-}};
-          animate = {;
-  { opacity: 1,;
-  y: 0 ;
-;
-}};
-          className="text - center mb - 12";
-        >;
-          <h1 className="text - 4xl md:text - 6xl font - bold text - white mb - 4">;
+    setIsMonitoring(true) ;
+    setPerformanceData(generateMockData () ) }
+    setIsMonitoring(false) }
+  return (";
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-6">";
+      <div className="max-w-7xl mx-auto">;
+        {/* Header */}
+        <div>Broken JSX</div>
+          className="text-center mb-12">";
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">;
             Performance Analytics;
           </h1>;
           <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
@@ -279,35 +253,23 @@ const PerformanceAnalytics: React.FC = () => {;
                     {metric.status.charAt (0) .toUpperCase () + metric.status.slice (1) };
                   </div>;
                 </div>;
-              </motion.div>) ) };
-          </motion.div>) };
-;
-        {/* Alerts and Recommendations */};
-        {performanceData && (<motion.div;
-            initial = {;
-  { opacity: 0,;
-  y: 20 ;
-;
-}};
-            animate = {;
-  { opacity: 1,;
-  y: 0 ;
-;
-}};
-            transition={{ delay: 0.5 }};
-            className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8 mb - 12";
-          >;
-            {/* Alerts */};
-            <div role="button" className="bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - xl p - 6">;
-              <div role="button" className="flex items - center gap - 3 mb - 4">;
-                <AlertTriangle className="w - 6 h - 6 text - yellow - 400"       />;
-                <h3 className="text - xl font - semibold text - white">Active Alerts</h3>;
-              </div>;
-              <div role="button" className="space - y-3">;
-                {performanceData.alerts.map ( (alert, index) => (<div role="button" key={index} className="flex items - start gap - 3 p - 3 bg - yellow - 500 / 10 border border - yellow - 500 / 20 rounded - lg">;
-                    <div role="button" className="w - 2 h - 2 bg - yellow - 400 rounded - full mt - 2 flex - shrink - 0"></div>;
-                    <p className="text - sm text - gray - 300">{alert}</p>;
-                  </div>) ) };
+              </motion.div>) ) }
+          </motion.div>) }
+
+        {/* Alerts and Recommendations */}
+        {};
+            {/* Alerts */}";
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">";
+              <div className="flex items-center gap-3 mb-4">";
+                <AlertTriangle className="w-6 h-6 text-yellow-400"  />"                <h3 className="text-xl font-semibold text-white">Active Alerts</h3>;
+              </div>";
+              <div className="space-y-3">;
+                {};
+                  <div key={index} className="flex items-start gap-3 p-3 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">";
+                    <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>";
+                    <p className="text-sm text-gray-300">{alert}</p>;
+                  </div>;
+                ))}
               </div>;
             </div>;
 ;
@@ -324,30 +286,16 @@ const PerformanceAnalytics: React.FC = () => {;
                   </div>) ) };
               </div>;
             </div>;
-          </motion.div>) };
-;
-        {/* Performance Chart Placeholder */};
-        <motion.div;
-          initial = {;
-  { opacity: 0,;
-  y: 20 ;
-;
-}};
-          animate = {;
-  { opacity: 1,;
-  y: 0 ;
-;
-}};
-          transition={{ delay: 0.6 }};
-          className="bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - xl p - 8 text - center";
-        >;
-          <BarChart3 className="w - 16 h - 16 text - gray - 400 mx - auto mb - 4"       />;
-          <h3 className="text - xl font - semibold text - white mb - 2">Performance Trends</h3>;
-          <p className="text - gray - 400">;
-            {isMonitoring ;
-              ? 'Real - time performance data is being collected and analyzed...';
-              : 'Start monitoring to view performance trends and historical data';
-            };
+          </motion.div>) }
+
+        {/* Performance Chart Placeholder */}
+        <div>Broken JSX</div>
+          className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p - 8 text-center">;
+          <BarChart3 className="w-16 h-16 text-gray - 400 mx - auto mb-4" />;
+          <h3 className="text-xl font - semibold text-white mb-2">Performance Trends</h3>;
+          <p className="text-gray -400">;
+            {};
+}
           </p>;
           {isMonitoring && (<div role="button" className="mt - 4 text - sm text - green - 400">;
               <Activity className="w - 4 h - 4 inline mr - 2 animate - pulse"       />;
@@ -376,7 +324,8 @@ const PerformanceAnalytics: React.FC = () => {;
                 Last updated: {new Date (performanceData.timestamp) .toLocaleTimeString () };
               </span>;
             </div>;
-          </motion.div>;) };
+          </motion.div>;) }
       </div>;
     </div>;) ;
-</div>};
+</div>}
+export default PerformanceAnalytics}}}}}}}}'"`;

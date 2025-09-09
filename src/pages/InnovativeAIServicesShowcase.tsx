@@ -4,120 +4,36 @@ export default React.memo (function InnovativeAIServicesShowcase(...args: any[])
 import {;
 import { motion } from 'framer - motion';
 ;
-;
-  Zap, Sparkles, TrendingUp, Route, Users, PenTool,;
-  CheckCircle, ArrowRight, ExternalLink, Phone, Mail,;
-  BarChart3, Shield, Briefcase, Package, Target;
-} from 'lucide - react';
-;
-  const services = [;
-    {;
-      id: 'ai - project - manager',;
-      title: 'AI Project Manager',;
-      description: 'Transform your project management with AI - driven insights, automated planning, and intelligent resource optimization.',;
-      icon: Zap,;
-      color: 'from - blue - 600 to - indigo - 700',;
-      features: [;
-        'AI - powered project planning and scheduling',;
-        'Automated resource allocation and team management',;
-        'Real - time progress tracking with predictive analytics',;
-        'Intelligent risk assessment and mitigation';
-      ],;
-      benefits: ['70% faster project planning', '40% higher success rate', '3x ROI within 6 months'],;
-      pricing: { starter: '$99 / mo', professional: '$299 / mo', enterprise: '$799 / mo' },;
-      route: '/services / ai - project - manager';
-    },;
-    {;
-      id: 'ai - content - marketing - suite',;
-      title: 'AI Content Marketing Suite',;
-      description: 'Transform your content marketing with AI that writes, optimizes, and distributes content across all channels.',;
-      icon: PenTool,;
-      color: 'from - purple - 600 to - indigo - 700',;
-      features: [;
-        'AI - powered content generation for blogs, social media, and emails',;
-        'Multi - language content creation and localization',;
-        'SEO optimization with keyword research and content planning',;
-        'Content performance analytics and A / B testing';
-      ],;
-      benefits: ['10x more content output', '60% better SEO rankings', '70% cost reduction'],;
-      pricing: { starter: '$79 / mo', professional: '$199 / mo', enterprise: '$499 / mo' },;
-      route: '/services / ai - content - marketing - suite';
-    },;
-    {;
-      id: 'ai - financial - analytics',;
-      title: 'AI Financial Analytics Platform',;
-      description: 'Transform your financial decision - making with AI - driven insights, predictive analytics, and automated portfolio optimization.',;
-      icon: TrendingUp,;
-      color: 'from - green - 600 to - emerald - 700',;
-      features: [;
-        'AI - powered financial forecasting and trend analysis',;
-        'Real - time market data integration and analysis',;
-        'Automated financial reporting and compliance',;
-        'Risk assessment and portfolio optimization';
-      ],;
-      benefits: ['25 - 40% better investment returns', '80% faster analysis time', '85% market prediction accuracy'],;
-      pricing: { starter: '$199 / mo', professional: '$499 / mo', enterprise: '$1,299 / mo' },;
-      route: '/services / ai - financial - analytics';
-    },;
-    {;
-      id: 'ai - hr - talent - platform',;
-      title: 'AI HR & Talent Platform',;
-      description: 'Transform your HR operations with AI - driven insights, automated workflows, and intelligent talent management.',;
-      icon: Users,;
-      color: 'from - orange - 600 to - red - 700',;
-      features: [;
-        'AI - powered candidate screening and matching',;
-        'Automated resume parsing and skill assessment',;
-        'Intelligent interview scheduling and feedback',;
-        'Employee performance analytics and insights';
-      ],;
-      benefits: ['60% faster time - to - hire', '40% better candidate quality', '30% reduced hiring costs'],;
-      pricing: { starter: '$149 / mo', professional: '$399 / mo', enterprise: '$999 / mo' },;
-      route: '/services / ai - hr - talent - platform';
-    },;
-    {;
-      id: 'ai - supply - chain - optimization',;
-      title: 'AI Supply Chain Optimization',;
-      description: 'Transform your supply chain with AI - driven insights, predictive analytics, and automated optimization.',;
-      icon: Route,;
-      color: 'from - teal - 600 to - cyan - 700',;
-      features: [;
-        'AI - powered demand forecasting and inventory optimization',;
-        'Real - time supply chain visibility and tracking',;
-        'Automated route optimization and logistics planning',;
-        'Supplier performance analytics and risk assessment';
-      ],;
-      benefits: ['20 - 30% reduced inventory costs', '25% improved delivery times', '40% fewer disruptions'],;
-      pricing: { starter: '$299 / mo', professional: '$799 / mo', enterprise: '$1,999 / mo' },;
-      route: '/services / ai - supply - chain - optimization';
-    };
+export default function InnovativeAIServicesShowcase(...args: unknown[]): unknown {};
+      pricing: { starter: '$99/mo', professional: '$299/mo', enterprise: '$799/mo' },;
+      route: '/services/ai-project-manager';,
+},;
+    {};
+      pricing: { starter: '$79/mo', professional: '$199/mo', enterprise: '$499/mo' },;
+      route: '/services/ai-content-marketing-suite';,
+},;
+    {};
+      pricing: { starter: '$199/mo', professional: '$499/mo', enterprise: '$1,299/mo' },;
+      route: '/services/ai-financial-analytics';,
+},;
+    {};
+      pricing: { starter: '$149/mo', professional: '$399/mo', enterprise: '$999/mo' },;
+      route: '/services/ai-hr-talent-platform';,
+},;
+    {};
+      pricing: { starter: '$299/mo', professional: '$799/mo', enterprise: '$1,999/mo' },;
+      route: '/services/ai-supply-chain-optimization'}
   ];
-;
-  return (<div className = "min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white">;
-      <SEO ;
-        title="Innovative AI Services Showcase - Zion Tech Group";
-        description="Discover our comprehensive suite of AI - powered business solutions including project management, content marketing, financial analytics, HR talent management, and supply chain optimization.";
-            />;
-;
-      {/* Hero Section */};
-      <section className="relative py - 20 sm:py - 24">;
-        <div className="container mx - auto px - 4 text - center">;
-          <motion.div ;
-            initial = {;
-  { opacity: 0,;
-  y: 20 ;
-;
-}};
-            animate = {;
-  { opacity: 1,;
-  y: 0 ;
-;
-}};
-            transition={{ duration: 0.6 }};
-            className="inline - flex items - center px - 4 py - 2 rounded - full bg - gradient - to - r from - cyan - 400 to - blue - 500 text - slate - 900 font - semibold mb - 6";
-;
-            <Sparkles className="w - 4 h - 4 mr - 2"       />;
-            Innovative AI - Powered Solutions;
+
+  return (;
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
+      <div>Broken JSX</div>
+      />;
+
+      {/* Hero Section */}
+      <section className="relative py-20 sm:py-24">        <div className="container mx-auto px-4 text-center">;
+          <div>Broken JSX</div>
+            <Sparkles className="w-4 h-4 mr-2"  />            Innovative AI-Powered Solutions;
           </motion.div>;
           ;
           <motion.h1 ;
@@ -323,5 +239,11 @@ import { motion } from 'framer - motion';
           </div>;
         </div>;
       </section>;
-    </div>;) ;
-}}}
+    </div>;
+  )}}}
+
+export { InnovativeAIServicesShowcase }
+export { InnovativeAIServicesShowcase }
+export { InnovativeAIServicesShowcase }
+export { InnovativeAIServicesShowcase }
+export { InnovativeAIServicesShowcase }

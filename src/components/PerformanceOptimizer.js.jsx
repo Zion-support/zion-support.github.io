@@ -99,24 +99,13 @@ export const PerformanceOptimizer = ({ children }) => {
             return () => observer.disconnect();
         }
     }, [location.pathname]);
-    return <>{optimizedChildren}</>;
-};
-// Add global performance optimizations
-if (typeof window !== 'undefined') {
-    // Optimize long tasks
-    if ('scheduler' in window && 'postTask' in window.scheduler) {
-        window.scheduler.postTask(() => {
-            // Run non-critical tasks during idle time
-        }, { priority: 'background' });
-    }
-    // Optimize memory usage
-    if ('memory' in performance) {
-        const memoryThreshold = 50 * 1024 * 1024; // 50MB
-        if (performance.memory.usedJSHeapSize > memoryThreshold) {
-            // Trigger garbage collection if available
-            if ('gc' in window) {
-                window.gc();
-            }
+    return <>{optimizedChildren}</>}
+// Add global performance optimizations';
+if(typeof window !== 'null') {};
+}, { priority: 'background' })}
+    // Optimize memory usage';
+    if('memory' in performance) {};
+                window.gc()}
         }
     }
 }

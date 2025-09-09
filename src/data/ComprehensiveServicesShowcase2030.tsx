@@ -374,11 +374,9 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
             </div>;
           </div>;
         </div>;
-      );
-    };
-  };
-;
-  return (;
+      )}
+  }
+  return ();
     <>;
       <SEO;
         title = "Comprehensive Services Showcase 2030 - Zion Tech Group";
@@ -527,11 +525,11 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 Clear Filters;
               </button>;
             </div>;
-          )};
-;
-          {/* Contact CTA */};
-          <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">;
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>;
+          )}
+
+          {/* Contact CTA */}";
+          <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">";
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>";
             <p className="text-xl text-blue-100 mb-6">;
               Get in touch with our experts to discuss your specific needs and discover how our services can drive your success.;
             </p>;
@@ -553,7 +551,5 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
         </div>;
       </div>;
     </>;
-  );
-};
-;
-export default ComprehensiveServicesShowcase2030;}}}}}
+  )}
+export default ComprehensiveServicesShowcase2030}}}}}'"`;

@@ -80,10 +80,9 @@ export function ValidatedFormField({
     return () => {
       if (timer) clearTimeout(timer);
     };
-  }, [fieldValue, isTouched, debounceMs, debounceTimer, validateField]); // Added debounceTimer and validateField
+  }, [fieldValue, isTouched, debounceMs]);
 
-  // Memoize validateField as it's used in a useEffect dependency array
-  const validateField = React.useCallback((value: any): string | null => {
+  const validateField = (value: any): string | null => {
     if (validation.required && (!value || (typeof value === 'string' && value.trim() === ''))) {
       return `${label} is required`;
     }
@@ -107,7 +106,7 @@ export function ValidatedFormField({
     }
 
     return null;
-  }, [validation, label]); // Added validation and label as dependencies
+  };
 
   const getValidationIcon = () => {
     if (!showValidIcon || !isTouched || validationState === 'idle') return null;

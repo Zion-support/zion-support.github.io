@@ -1,6 +1,5 @@
 import { fetchProductById } from '../productService';
 import type { ProductDetailsData } from '../../types/product';
-import { vi, describe, it, expect, beforeEach, afterEach, type SpyInstance, type MockInstance } from 'vitest';
 
 // Mock product data for successful response
 const mockProduct: ProductDetailsData = {
@@ -12,7 +11,7 @@ const mockProduct: ProductDetailsData = {
   currency: 'USD',
   category: 'Test Category',
   tags: ['test', 'product'],
-  images: [{ url: 'http://example.com/image.jpg', alt: 'Test Image' }],
+  images: [{ url: 'http://example.com/image.jpg', alt: 'Test Image' }], // Assuming images is an array of objects
   averageRating: 4.5,
   reviewCount: 100,
   specifications: ['Spec A', 'Spec B'],
@@ -21,19 +20,21 @@ const mockProduct: ProductDetailsData = {
 
 describe('fetchProductById', () => {
   const originalFetch = global.fetch;
-  let mockFetch: MockInstance<[input: RequestInfo | URL, init?: RequestInit | undefined], Promise<Response>>;
-  let consoleWarnSpy: SpyInstance<[message?: any, ...optionalParams: any[]], void>;
-  let consoleErrorSpy: SpyInstance<[message?: any, ...optionalParams: any[]], void>;
+  let mockFetch: jest.Mock;
+  let consoleWarnSpy: jest.SpyInstance;
+  let consoleErrorSpy: jest.SpyInstance;
 
   beforeEach(() => {
-    mockFetch = vi.fn();
+    mockFetch = jest.fn();
     global.fetch = mockFetch;
-    consoleWarnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
-    consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    // Spy on console methods before each test
+    consoleWarnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
+    consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
   });
 
   afterEach(() => {
     global.fetch = originalFetch;
+    // Restore console spies after each test
     consoleWarnSpy.mockRestore();
     consoleErrorSpy.mockRestore();
   });
@@ -88,6 +89,7 @@ describe('fetchProductById', () => {
     mockFetch.mockRejectedValueOnce(networkError);
 
     const productId = 'network-error-id';
+    // The implementation re-throws the original error, so we check for that.
     await expect(fetchProductById(productId)).rejects.toThrow(networkError.message);
     expect(mockFetch).toHaveBeenCalledWith(`/api/marketplace/product/${productId}`);
     expect(consoleErrorSpy).toHaveBeenCalledWith('An error occurred in fetchProductById:', networkError);

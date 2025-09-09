@@ -11,7 +11,6 @@ import {
   FormControl,
   FormMessage,
 } from '@/components/ui/form';
-import { ControllerRenderProps } from 'react-hook-form'; // Added import
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import {
@@ -76,7 +75,7 @@ export default function GrantsPage() {
               <FormField
                 control={form.control}
                 name="projectName"
-                render={({ field }: { field: ControllerRenderProps<FormValues, "projectName"> }) => (
+                render={({ field }: { field: import('react-hook-form').UseFormRegisterReturn }) => (
                   <FormItem>
                     <FormLabel>Project Name</FormLabel>
                     <FormControl>
@@ -89,7 +88,7 @@ export default function GrantsPage() {
               <FormField
                 control={form.control}
                 name="teamInfo"
-                render={({ field }: { field: ControllerRenderProps<FormValues, "teamInfo"> }) => (
+                render={({ field }: { field: import('react-hook-form').UseFormRegisterReturn }) => (
                   <FormItem>
                     <FormLabel>Team Info</FormLabel>
                     <FormControl>
@@ -102,7 +101,7 @@ export default function GrantsPage() {
               <FormField
                 control={form.control}
                 name="summary"
-                render={({ field }: { field: ControllerRenderProps<FormValues, "summary"> }) => (
+                render={({ field }: { field: import('react-hook-form').UseFormRegisterReturn }) => (
                   <FormItem>
                     <FormLabel>Proposal Summary</FormLabel>
                     <FormControl>
@@ -115,7 +114,7 @@ export default function GrantsPage() {
               <FormField
                 control={form.control}
                 name="timeline"
-                render={({ field }: { field: ControllerRenderProps<FormValues, "timeline"> }) => (
+                render={({ field }: { field: import('react-hook-form').UseFormRegisterReturn }) => (
                   <FormItem>
                     <FormLabel>Timeline</FormLabel>
                     <FormControl>
@@ -128,7 +127,7 @@ export default function GrantsPage() {
               <FormField
                 control={form.control}
                 name="budget"
-                render={({ field }: { field: ControllerRenderProps<FormValues, "budget"> }) => (
+                render={({ field }: { field: import('react-hook-form').UseFormRegisterReturn }) => (
                   <FormItem>
                     <FormLabel>Budget Request (ZION$ or USDC)</FormLabel>
                     <FormControl>
@@ -141,7 +140,7 @@ export default function GrantsPage() {
               <FormField
                 control={form.control}
                 name="links"
-                render={({ field }: { field: ControllerRenderProps<FormValues, "links"> }) => (
+                render={({ field }: { field: import('react-hook-form').UseFormRegisterReturn }) => (
                   <FormItem>
                     <FormLabel>Supporting Links / Pitch Deck</FormLabel>
                     <FormControl>
@@ -153,7 +152,9 @@ export default function GrantsPage() {
               <FormField
                 control={form.control}
                 name="category"
-                render={({ field }: { field: ControllerRenderProps<FormValues, "category"> }) => (
+                render={({ field }: { field: import('react-hook-form').UseFormRegisterReturn }) => {
+                 const categoryValue = form.watch('category');
+                 return (
                   <FormItem>
                     <FormLabel>Category</FormLabel>
                     <Select value={categoryValue} onValueChange={(value) => field.onChange({ target: { value } } as any)}>

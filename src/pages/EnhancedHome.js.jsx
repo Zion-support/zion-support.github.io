@@ -5,3 +5,9 @@ const EnhancedHome = () => {
     </div>);
 };
 export default EnhancedHome;
+
+
+export { EnhancedHome }
+export { EnhancedHome }
+export { EnhancedHome }
+export { EnhancedHome }

@@ -1,225 +1,221 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock  } from 'lucide-react';
-;
-;
-export default function Careers(...args[]):  {;
-	const openPositions = [;
-		{;
-			title: 'Senior AI Engineer',;
-			department: 'AI & Machine Learning',;
-			location: 'Remote / San Francisco',;
-			type: 'Full-time',;
-			description: 'Build next-generation autonomous AI systems and multi-agent workflows.';
-		},;
-		{;
-			title: 'Cloud Infrastructure Engineer',;
-			department: 'Cloud & DevOps',;
-			location: 'Remote / New York',;
-			type: 'Full-time',;
-			description: 'Design and implement scalable cloud architectures for enterprise clients.';
-		},;
-		{;
-			title: 'Cybersecurity Specialist',;
-			department: 'Security',;
-			location: 'Remote / Austin',;
-			type: 'Full-time',;
-			description: 'Develop advanced security solutions and compliance frameworks.';
-		},;
-		{;
-			title: 'Frontend Developer',;
-			department: 'Engineering',;
-			location: 'Remote',;
-			type: 'Full-time',;
-			description: 'Create intuitive user interfaces for our AI-powered platforms.';
-;
-	];
-;
-	return (;
-		<>;
-			{/* Hero Section */};
-			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">;
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">;
-					<div className="mx-auto max-w-2xl text-center">;
-						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">;
-							Join Our Team;
-						</h1>;
-						<p className="mt-6 text-lg leading-8 text-gray-600">;
-							Help us build the future of business technology. We're looking for passionate innovators who want to make a real impact.;
-						</p>;
-					</div>;
-				</div>;
-			</section>;
-;
-			{/* Why Work With Us */};
-			<section className="py-24 sm:py-32">;
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">;
-					<div className="mx-auto max-w-2xl text-center mb-16">;
-						<h2 className="text-3xl font-bold tracking-tight text-gray-900">Why Work With Us?</h2>;
-						<p className="mt-6 text-lg text-gray-600">;
-							Join a team that's redefining what's possible in business technology;
-						</p>;
-					</div>;
-					<div className="grid gap-8 lg:grid-cols-2">;
-						<div className="space-y-8">;
-							<div className="flex items-start gap-x-4">;
-								<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600">;
-									<Zap className="h-6 w-6 text-white"       />;
-								</div>;
-								<div>;
-									<h3 className="text-lg font-semibold text-gray-900 mb-2">Cutting-Edge Technology</h3>;
-									<p className="text-gray-600">;
-										Work with the latest AI, cloud, and cybersecurity technologies that are shaping the future of business.;
-									</p>;
-								</div>;
-							</div>;
-							<div className="flex items-start gap-x-4">;
-								<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600">;
-									<Globe className="h-6 w-6 text-white"       />;
-								</div>;
-								<div>;
-									<h3 className="text-lg font-semibold text-gray-900 mb-2">Remote-First Culture</h3>;
-									<p className="text-gray-600">;
-										Work from where in the world with flexible hours and a supportive remote work environment.;
-									</p>;
-								</div>;
-							</div>;
-						</div>;
-						<div className="space-y-8">;
-							<div className="flex items-start gap-x-4">;
-								<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600">;
-									<Users className="h-6 w-6 text-white"       />;
-								</div>;
-								<div>;
-									<h3 className="text-lg font-semibold text-gray-900 mb-2">Collaborative Team</h3>;
-									<p className="text-gray-600">;
-										Join a diverse team of experts who value collaboration, innovation, and continuous learning.;
-									</p>;
-								</div>;
-							</div>;
-							<div className="flex items-start gap-x-4">;
-								<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600">;
-									<Award className="h-6 w-6 text-white"       />;
-								</div>;
-								<div>;
-									<h3 className="text-lg font-semibold text-gray-900 mb-2">Career Growth</h3>;
-									<p className="text-gray-600">;
-										Clear career paths, mentorship programs, and opportunities to work on groundbreaking projects.;
-									</p>;
-								</div>;
-							</div>;
-						</div>;
-					</div>;
-				</div>;
-			</section>;
-;
-			{/* Benefits & Perks */};
-			<section className="py-24 sm:py-32 bg-gray-50">;
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">;
-					<div className="mx-auto max-w-2xl text-center mb-16">;
-						<h2 className="text-3xl font-bold tracking-tight text-gray-900">Benefits & Perks</h2>;
-						<p className="mt-6 text-lg text-gray-600">;
-							We believe in taking care of our team so they can do their best work;
-						</p>;
-					</div>;
-					<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">;
-						<div className="text-center">;
-							<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-6">;
-								<Heart className="h-8 w-8 text-blue-600"       />;
-							</div>;
-							<h3 className="text-xl font-semibold text-gray-900 mb-4">Health & Wellness</h3>;
-							<p className="text-gray-600">;
-								Comprehensive health coverage, wellness programs, and mental health support.;
-							</p>;
-						</div>;
-						<div className="text-center">;
-							<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 mb-6">;
-								<Globe className="h-8 w-8 text-green-600"       />;
-							</div>;
-							<h3 className="text-xl font-semibold text-gray-900 mb-4">Flexible Work</h3>;
-							<p className="text-gray-600">;
-								Remote-first culture with flexible hours and unlimited PTO.;
-							</p>;
-						</div>;
-						<div className="text-center">;
-							<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 mb-6">;
-								<Zap className="h-8 w-8 text-purple-600"       />;
-							</div>;
-							<h3 className="text-xl font-semibold text-gray-900 mb-4">Learning & Development</h3>;
-							<p className="text-gray-600">;
-								Annual learning budget, conference attendance, and skill development programs.;
-							</p>;
-						</div>;
-					</div>;
-				</div>;
-			</section>;
-;
-			{/* Open Positions */};
-			<section className="py-24 sm:py-32">;
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">;
-					<div className="mx-auto max-w-2xl text-center mb-16">;
-						<h2 className="text-3xl font-bold tracking-tight text-gray-900">Open Positions</h2>;
-						<p className="mt-6 text-lg text-gray-600">;
-							Ready to join our mission? Check out our current openings.;
-						</p>;
-					</div>;
-					<div className="grid gap-6 lg: grid-cols-2">;
-						{openPositions.map((((((((position, index, index, index, index, index, index) => ({ ...((((((position, index, index, index, index, index, key: index })) => ({ ...(((((position, index, index, index, index, key: index })) => ({ ...((((position, index, index, index, key: index })) => ({ ...(((position, index, index, key: index })) => ({ ...((position, index, key: index })) => ({ ...(position, key: index }))  => (;
-							<div key={position.title} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">;
-								<div className="flex items-start justify-between mb-4">;
-									<div>;
-										<h3 className="text-xl font-semibold text-gray-900">{position.title}</h3>;
-										<p className="text-gray-600">{position.department}</p>;
-									</div>;
-									<span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">;
-										{position.type};
-									</span>;
-								</div>;
-								<div className="flex items-center gap-4 text-sm text-gray-500 mb-4">;
-									<div className="flex items-center gap-1">;
-										<MapPin className="h-4 w-4"       />;
-										{position.location};
-									</div>;
-								</div>;
-								<p className="text-gray-600 mb-4">{position.description}</p>;
-								<Link;
-									to="/contact";
-									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium";
-;
-									Apply Now <ArrowRight className="ml-2 h-4 w-4"       />;
-								</Link>;
-							</div>;
-						))};
-					</div>;
-				</div>;
-			</section>;
-;
-			{/* CTA Section */};
-			<section className="py-24 sm:py-32 bg-blue-600">;
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">;
-					<div className="mx-auto max-w-2xl text-center">;
-						<h2 className="text-3xl font-bold tracking-tight text-white">Don't See the Right Role?</h2>;
-						<p className="mt-6 text-lg text-blue-100">;
-							We're always looking for talented individuals. Send us your resume and let's discuss how you can contribute to our mission.;
-						</p>;
-						<div className="mt-10 flex items-center justify-center gap-x-6">;
-							<Link;
-								to="/contact";
-								className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
-;
-								Send Resume;
-							</Link>;
-							<a;
-								href="mailto:careers@ziontechgroup.com";
-								className="text-sm font-semibold leading-6 text-white hover:text-blue-100";
-;
-								careers@ziontechgroup.com;
-							</a>;
-						</div>;
-					</div>;
-				</div>;
-			</section>;
-		</>;
-	);
+import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+import {
+  Users,
+  Award,
+  Home,
+  Heart,
+  Zap,
+  Globe,
+  ArrowRight,
+  CheckCircle,
+  MapPin,
+  Clock,
+  DollarSign
+} from 'lucide-react';
+
+const Careers: NextPage = () => {
+  const benefits = [
+    {
+      icon: Heart,
+      title: 'Health & Wellness',
+      description: 'Comprehensive health insurance, dental, vision, and wellness programs.'
+    },
+    {
+      icon: Home,
+      title: 'Remote Work',
+      description: 'Flexible remote work options and home office stipend.'
+    },
+    {
+      icon: Award,
+      title: 'Growth Opportunities',
+      description: 'Professional development, training programs, and career advancement paths.'
+    },
+    {
+      icon: Zap,
+      title: 'Innovation Time',
+      description: 'Dedicated time for personal projects and innovation.'
+    }
+  ];
+
+  const openPositions = [
+    {
+      title: 'Senior Full-Stack Developer',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '5+ years',
+      description: 'Join our team to build cutting-edge web applications using React, Node.js, and cloud technologies.'
+    },
+    {
+      title: 'AI/ML Engineer',
+      location: 'San Francisco, CA',
+      type: 'Full-time',
+      experience: '3+ years',
+      description: 'Develop and deploy machine learning models and AI solutions for our clients.'
+    },
+    {
+      title: 'DevOps Engineer',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '4+ years',
+      description: 'Manage cloud infrastructure and implement CI/CD pipelines for scalable applications.'
+    }
+  ];
+
+  return (
+    <>
+      <Head>
+        <title>Careers - Zion Tech Group</title>
+        <meta 
+          name="description" 
+          content="Join our team of innovative developers, AI engineers, and technology experts. Explore career opportunities at Zion Tech Group." 
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      "
+<Layout 
+        title="Careers"
+        description="Join our team of innovative developers and technology experts"
+      >
+        {/*   */}"
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Team</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Be part of a team that's building the future of technology. Work on cutting-edge projects with the latest tools and technologies.
+            </p>"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
+                View Open Positions
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </button>"
+              <button className="inline-flex items-center px-8 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300>
+                Learn About Our Culture,
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Work With Us */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Work With Us?</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                We offer more than just a job - we offer a career path with growth, learning, and innovation
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Open Positions */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Open Positions</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Explore current opportunities and find your perfect role
+              </p>
+            </div>
+            <div className="space-y-6">
+              {openPositions.map((position, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{position.title}</h3>
+                      <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+                        <div className="flex items-center">
+                          <MapPin className="w-4 h-4 mr-1" />
+                          {position.location}
+                        </div>
+                        <div className="flex items-center">
+                          <Clock className="w-4 h-4 mr-1" />
+                          {position.type}
+                        </div>
+                        <div className="flex items-center">
+                          <Users className="w-4 h-4 mr-1" />
+                          {position.experience}
+                        </div>
+                      </div>
+                    </div>
+                    <button className="mt-4 md:mt-0 inline-flex items-center px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300">
+                      Apply Now
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </button>
+                  </div>
+                  <p className="text-gray-600">{position.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Culture & Values */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Culture</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                We foster an environment of innovation, collaboration, and continuous learning
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Globe className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Global Impact</h3>
+                <p className="text-gray-600">Work on projects that make a difference worldwide</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Innovation First</h3>
+                <p className="text-gray-600">Be at the forefront of technology and innovation</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Collaborative Team</h3>
+                <p className="text-gray-600">Work with talented professionals in a supportive environment</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold mb-6">Ready to Join Our Team?</h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Don't see a position that fits? We're always looking for talented individuals to join our growing team.
+            </p>
+            <button className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300">
+              Send Us Your Resume
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </button>
+          </div>
+        </section>
+      </Layout>
+    </>
+  );
 };
-;
+
+export default Careers;

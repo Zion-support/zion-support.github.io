@@ -182,71 +182,45 @@ const ServicePortfolioDashboard = () => {
             </p>
           </motion.div>
 
-          <div className="space - y-4">
-            {benefits.map ( (benefit, index) => (<motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items - start gap - 3"
-              >
-                <CheckCircle className="w - 5 h - 5 text - zion - cyan mt - 1 flex - shrink - 0"       />
-                <span className="text - zion - slate - dark">{benefit}</span>
-              </motion.div>) ) }
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio Dashboard Section */}
-      <section id="portfolio-dashboard" className="py-16 px-6 bg-zion-blue-light/5">
-        <div className="max-w-7xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
-              Interactive Portfolio Dashboard
-            </h2>
-            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
-              Explore our comprehensive service portfolio with real-time analytics, 
-              performance metrics, and strategic insights.
-            </p>
-          </motion.div>
-
-          <AdvancedServicePortfolioDashboard       />
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Portfolio?
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Our comprehensive portfolio dashboard provides the insights you need to make 
-              informed decisions and drive strategic growth in your technology investments.
-            </p>
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">
-              <Button
-                className="bg - white text - zion - purple hover:bg - zion - slate - light text - lg px - 8 py - 4"
-                onClick={ () =>
-                  window.open ('mailto:kleber@ziontechgroup.com?subject = Portfolio Optimization Consultation',
-                    '_blank') }
-              >
-                <Rocket className="w - 5 h - 5 mr - 2"       />
-                Get Portfolio Strategy
-              </Button>
-              <Button
-                className="border - white text - white hover:bg - white hover:text - zion - purple text - lg px - 8 py - 4"
-                onClick={ () => window.open ('tel:+13024640950', '_blank') }
-              >
-                <Shield className="w - 5 h - 5 mr - 2"       />
-                Speak with an Expert
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>);
-};
+          <AdvancedServicePortfolioDashboard />;
+        </div>;
+      </section>;
+";
+      {/* CTA Section */}"";
+      <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan">"";
+        <div className="max-w-4xl mx-auto text-center">;
+          <div>Broken JSX</div>
+            viewport={{ once: true }}">"";
+            <h2 className="text-4xl font-bold text-white mb-6">;
+              Ready to Optimize Your Portfolio?";
+            </h2>"";
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">;
+              Our comprehensive portfolio dashboard provides the insights you;
+              need to make informed decisions and drive strategic growth in your;
+              technology investments.";
+            </p>"";
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+              <div>Broken JSX</div>
+                onClick={};
+}">"";
+                <Rocket className="w-5 h-5 mr-2" />;
+                Get Portfolio Strategy;
+              </Button>";
+              <div>Broken JSX</div>
+                onClick={() => window.open('tel:+13024640950',_blank')}">"";
+                <Shield className="w-5 h-5 mr-2" />;
+                Speak with an Expert;
+              </Button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>)}
 export default ServicePortfolioDashboard;
+
+
+export { ServicePortfolioDashboard }
+export { ServicePortfolioDashboard }
+export { ServicePortfolioDashboard }
+export { ServicePortfolioDashboard }
+export { ServicePortfolioDashboard }

@@ -1,58 +1,42 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
-import { ADVANCED_INNOVATIVE_SERVICES } from '../data/advancedInnovativeServices';
-import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
-export function NewServices() {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [searchTerm, setSearchTerm] = useState('');
-    const [selectedService, setSelectedService] = useState(null);
-    // Combine all services
-    const allServices = [
-        ...COMPREHENSIVE_SERVICES,
-        ...ADVANCED_INNOVATIVE_SERVICES,
-        ...EMERGING_TECH_SERVICES
-    ];
-    // Get unique categories
-    const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
-    const filteredServices = allServices.filter(service => {
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-        const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+import { COMPREHENSIVE_SERVICES } from "../data/comprehensiveServices.jsx";
+
+import { EMERGING_TECH_SERVICES } from "../data/emergingTechServices.jsx";
+export function NewServices() {};
+  return null;
+}
+    const filteredServices = allServices.filter(service => {}
+        const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||';
+            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||'';
             (('tags' in service && 'tags' in service && service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))) || false);
-        return matchesCategory && matchesSearch;
-    });
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1
-            }
+        return matchesCategory && matchesSearch});
+    const containerVariants = {}
+        hidden: { opacity: 0 },;
+        visible: {}
+            opacity: 1,;
+            transition: {}
+                staggerChildren: 0.1}
         }
-    };
-    const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.5
-            }
-        }
-    };
-    return (<div className="min-h-screen bg-zion-blue-dark text-white relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-quantum-gradient opacity-20 animate-pulse"></div>
-      <div className="absolute inset-0 bg-quantum-mesh"></div>
-      
-      {/* Matrix Rain Effect */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (<div key={i} className="absolute text-zion-cyan text-xs animate-matrix-rain" style={{
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 20}s`,
-                animationDuration: `${20 + Math.random() * 10}s`
-            }}>
+    }
+    const itemVariants = {}
+  hidden: {};
+},;
+        visible: {}
+            y: 0,;
+            opacity: 1,;
+            transition: {}
+                duration: 0.5}
+        }"};"";
+    return (<div className="min-h-screen bg-zion-blue-dark text-white relative overflow-hidden">";
+      {/* Animated Background */}"";
+      <div className="absolute inset-0 bg-quantum-gradient opacity-20 animate-pulse"></div>"";
+      <div className="absolute inset-0 bg-quantum-mesh"></div>;
+      ";
+      {/* Matrix Rain Effect */}"";
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">"";
+        {};
+}}>';
             {Math.random() > 0.5 ? '1' : '0'}
           </div>))}
       </div>

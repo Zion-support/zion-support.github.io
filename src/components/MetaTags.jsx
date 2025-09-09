@@ -36,39 +36,25 @@ export const MetaTags = ({ title, description, keywords = 'AI, artificial intell
       <meta name="theme - color" content="#22ddd2"      />
       <meta name="msapplication - TileColor" content="#22ddd2"      />
 
-      {/* Article specific meta tags */}
-      {type === 'article' && publishedTime && (<meta property="article:published_time" content={publishedTime}      />) }
-      {type === 'article' && modifiedTime && (<meta property="article:modified_time" content={modifiedTime}      />) }
-      {type === 'article' && (<meta property="article:author" content={author}      />) }
+      {/* Article specific meta tags */}'";
+      {type === 'article' && publishedTime && (<meta property="article:published_time" content={publishedTime}/>)}'";
+      {type === 'article' && modifiedTime && (<meta property="article:modified_time" content={modifiedTime}/>)}'";
+      {type === 'article' && (<meta property="article:author" content={author}/>)}
 
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": type === 'article' ? 'Article' : 'Organization',
-            "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/logo.png",
-            "description": "Leading provider of AI-powered solutions, cybersecurity, and enterprise IT services",
-            "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "US"
-            },
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"
-            },
-            "sameAs": [
-                "https://linkedin.com/company/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
-                "https://github.com/Zion-Holdings"
-            ],
-            "foundingDate": "2020",
-            "industry": "Technology",
-            "keywords": "AI, artificial intelligence, cybersecurity, cloud computing, IT services"
-        })}
-      </script>
-    </Helmet>);
-};
+      {/* Structured Data */}";
+      <script type="application/ld+json">;
+        {};
+},";
+            "contactPoint": {};
+},";
+            "sameAs"[;";
+                "https://linkedin.com/company/ziontechgroup",";
+                "https://twitter.com/ziontechgroup",";
+                "https://github.com/Zion-Holdings";
+            ],";
+            "foundingDate": "2020",";
+            "industry": "Technology",";
+            "keywords": "AI, artificial intelligence, cybersecurity, cloud computing, IT services"}) }
+      </script>;
+    </Helmet>)}
+'"`}

@@ -28,70 +28,155 @@ export default function MicroCRM(...args: any[]): any {;
         'Comprehensive reporting and analytics to track performance and identify opportunities.',;
     },;
   ];
-;
-  const benefits = [;
-    'Streamline customer relationship management',;
-    'Improve sales team productivity',;
-    'Enhance customer communication',;
-    'Track sales performance metrics',;
-    'Automate repetitive tasks',;
-    'Centralize customer data',;
+
+  const pricingPlans = [;
+    {};
+},;
+    {};
+},;
+    {};
+}
   ];
-;
-  const useCases = [;
-    {;
-      title: 'Small Business CRM',;
-      description:;
-        'Perfect for small businesses looking to manage customer relationships efficiently.',;
-      icon: Building,;
-    },;
-    {;
-      title: 'Sales Team Management',;
-      description:;
-        'Empower sales teams with tools to track leads and manage customer interactions.',;
-      icon: Users,;
-    },;
-    {;
-      title: 'Customer Support',;
-      description:;
-        'Track customer issues and provide timely support with integrated ticketing.',;
-      icon: Phone,;
-    },;
-    {;
-      title: 'Marketing Campaigns',;
-      description:;
-        'Manage marketing campaigns and track customer engagement and responses.',;
-      icon: Target,;
-    },;
+
+  const testimonials = [;
+    {};
+},;
+    {};
+},;
+    {};
+}
   ];
-;
+
   return (;
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-      <SEO;
-        title="Micro CRM - Zion Tech Group";
-        description="Streamline your customer relationship management with our Micro CRM solution. Perfect for small businesses and growing teams.";
-            />;
-;
-      {/* Hero Section */};
-      <section className="relative py-20 overflow-hidden">;
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>;
-        <div className="container mx-auto px-4 relative z-10">;
-          <div className="text-center max-w-4xl mx-auto">;
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/30 mb-6">;
-              <Users className="w-5 h-5 text-cyan-400 mr-2"       />;
-              <span className="text-cyan-300 text-sm font-medium">;
-                Customer Relationship Management;
-              </span>;
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">;
+      {/* Header */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
+        <div className="max-w-7xl mx-auto">;
+          <div>Broken JSX</div>
+          >;
+            <div>Broken JSX</div>
+              className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors mb-8">;
+              <ArrowLeft className="w-4 h-4 mr-2" />;
+              Back to Services;
+            </Link>;
+
+            <div className="text-center mb-12">;
+              <div className="flex items-center justify-center mb-6">;
+                <Users className="w-16 h-16 text-purple-400 mr-4" />;
+                <h1 className="text-5xl md:text-6xl font-bold text-white">;
+                  Micro CRM Platform;
+                </h1>;
+              </div>;
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
+                Lightweight CRM solution for small businesses with essential customer management features, lead tracking, and sales pipeline management.;
+              </p>;
+
+              {/* Contact Info */}
+              <div className="flex flex-wrap justify-center gap-6 mb-8">;
+                <a href={`tel:${contactInfo.phone}`} className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors">;
+                  <Phone className="w-5 h-5" />;
+                  <span>{contactInfo.phone}</span>;
+                </a>;
+                <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors">;
+                  <Mail className="w-5 h-5" />;
+                  <span>{contactInfo.email}</span>;
+                </a>;
+                <a href={contactInfo.website} className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors">;
+                  <Globe className="w-5 h-5" />;
+                  <span>{contactInfo.website}</span>;
+                </a>;
+              </div>;
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <div>Broken JSX</div>
+                  className="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">;
+                  <Phone className="w-5 h-5 mr-2" />;
+                  Get Started Today;
+                </a>;
+                <div>Broken JSX</div>
+                  className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">;
+                  <Mail className="w-5 h-5 mr-2" />;
+                  Request Demo;
+                </a>;
+              </div>;
             </div>;
-;
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
-              Micro CRM;
-            </h1>;
-;
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">;
-              Streamline your customer relationships with our lightweight,;
-              powerful CRM solution designed for small businesses and growing;
-              teams.;
+          </motion.div>;
+        </div>;
+      </section>;
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
+        <div className="max-w-7xl mx-auto">;
+          <div>Broken JSX</div>
+            className="text-center mb-16">;
+            <h2 className="text-4xl font-bold text-white mb-6">Essential CRM Features</h2>;
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">;
+              Everything you need to manage your customer relationships and grow your business.;
+            </p>;
+          </motion.div>;
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {};
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>;
+                </div>;
+                <p className="text-gray-300">{feature.description}</p>;
+              </motion.div>;
+            ))}
+          </div>;
+        </div>;
+      </section>;
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">;
+        <div className="max-w-7xl mx-auto">;
+          <div>Broken JSX</div>
+            className="text-center mb-16">;
+            <h2 className="text-4xl font-bold text-white mb-6">Simple, Affordable Pricing</h2>;
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">;
+              Choose the plan that grows with your business. No hidden fees, no surprises.;
+            </p>;
+          </motion.div>;
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
+            {};
+                )}
+
+                <div className="text-center mb-8">;
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
+                  <div className="flex items-baseline justify-center mb-4">;
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>;
+                    <span className="text-gray-400 ml-1">{plan.period}</span>;
+                  </div>;
+                  <p className="text-gray-300">{plan.description}</p>;
+                </div>;
+
+                <ul className="space-y-4 mb-8">;
+                  {};
+                    <li key={idx} className="flex items-center text-gray-300">;
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
+                      {feature}
+                    </li>;
+                  ))}
+                </ul>;
+
+                <div>Broken JSX</div>
+                >;
+                  Get Started;
+                </a>;
+              </motion.div>;
+            ))}
+          </div>;
+        </div>;
+      </section>;
+
+      {/* Testimonials Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
+        <div className="max-w-7xl mx-auto">;
+          <div>Broken JSX</div>
+            className="text-center mb-16">;
+            <h2 className="text-4xl font-bold text-white mb-6">Trusted by Growing Businesses</h2>;
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">;
+              See how our Micro CRM platform is helping businesses scale their sales operations.;
             </p>;
 ;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
@@ -218,5 +303,5 @@ export default function MicroCRM(...args: any[]): any {;
         </div>;
       </section>;
     </div>;
-  );
-};
+  )}
+export default MicroCRM;

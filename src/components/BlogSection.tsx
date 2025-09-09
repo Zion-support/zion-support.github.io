@@ -1,6 +1,10 @@
 import { GradientHeading } from "./GradientHeading";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+<<<<<<< HEAD
 import { Button } from "./ui/Button";
+=======
+import { Button } from "@/components/ui/Button";
+>>>>>>> cursor/check-fix-push-and-merge-to-main-d695
 import Link from "next/link";
 import { BLOG_POSTS } from "@/data/blog-posts";
 import Image from 'next/image';

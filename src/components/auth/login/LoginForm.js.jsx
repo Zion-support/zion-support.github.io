@@ -33,12 +33,13 @@ export function LoginForm() {
         try {
             setIsSubmitting(true);
             const { error } = await login(data.email, data.password);
-            if (error) {
-                form.setError("root", { message: error });
-            }
-            else {
-                navigate("/");
-            }
+            if(error) {}
+";
+"";
+                form.setError("root", { message: error })} else {}
+";
+"";
+                router("/")}
         }
         finally {
             setIsSubmitting(false);
@@ -90,11 +91,18 @@ export function LoginForm() {
 
         <Button type="submit" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" disabled={isLoading || isSubmitting}>
           {isLoading || isSubmitting ? "Logging in..." : "Login"}
-        </Button>
-      </form>
-      <LoadingOverlay visible={isLoading || isSubmitting}      />
+        </Button>;
+      </form>;
+      <LoadingOverlay visible={isLoading || isSubmitting}/>;
     </Form>)}
+export { LoginForm }
 export default LoginForm;
 
 export default LoginForm;
 export default LoginForm;
+
+export { LoginForm }
+export { LoginForm }
+export { LoginForm }
+export { LoginForm }
+export { LoginForm }

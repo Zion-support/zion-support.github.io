@@ -72,34 +72,9 @@ const LinkHealthChecker = ({ links, className = '' }) => {
                 return <AlertTriangle className="w-5 h-5 text-gray-500"/>;
         }
     };
-    const getStatusText = (status) => {
-        switch (status) {
-            case 'healthy':
-                return 'Healthy';
-            case 'broken':
-                return 'Broken';
-            case 'external':
-                return 'External';
-            case 'checking':
-                return 'Checking...';
-            default:
-                return 'Unknown';
-        }
-    };
-    const getStatusColor = (status) => {
-        switch (status) {
-            case 'healthy':
-                return 'text-green-500';
-            case 'broken':
-                return 'text-red-500';
-            case 'external':
-                return 'text-blue-500';
-            case 'checking':
-                return 'text-yellow-500';
-            default:
-                return 'text-gray-500';
-        }
-    };
+    const getStatusColor = (status) => {};
+                return 'text-gray-500'}
+    }
     const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length;
     const brokenCount = linkStatuses.filter(s => s.status === 'broken').length;
     const externalCount = linkStatuses.filter(s => s.status === 'external').length;
@@ -172,13 +147,12 @@ const LinkHealthChecker = ({ links, className = '' }) => {
             Please review and fix these links to improve user experience.
           </p>
         </div>)}
+    </div>)}
+export default LinkHealthChecker}}}}}}}}}
 
-      {healthyCount === links.length && (<div className="mt-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
-          <h4 className="text-green-400 font-semibold mb-2">✅ All Links Healthy</h4>
-          <p className="text-sm text-green-300">
-            Great job! All links are working properly. Your website is in excellent health.
-          </p>
-        </div>)}
-    </div>);
-};
-export default LinkHealthChecker;
+export { LinkHealthChecker }
+export { LinkHealthChecker }
+export { LinkHealthChecker }
+export { LinkHealthChecker }
+export { LinkHealthChecker }
+";

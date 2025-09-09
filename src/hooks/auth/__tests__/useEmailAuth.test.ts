@@ -1,4 +1,5 @@
 import { renderHook, act } from '@testing-library/react';
+import { vi } from 'vitest';
 
 import { useEmailAuth } from '../useEmailAuth';
 import { safeStorage, safeSessionStorage } from '@/utils/safeStorage'; // Mocked in setupTests.ts
@@ -6,22 +7,22 @@ import { toast } from '@/hooks/use-toast'; // Mocked in setupTests.ts or here
 
 // Mock toast if not already fully mocked in setupTests,
 // especially if you want to assert on its calls within these specific tests.
-jest.mock('@/hooks/use-toast', async (importOriginal) => {
+vi.mock('@/hooks/use-toast', async (importOriginal) => {
   const actual = await importOriginal() as any;
   return {
     ...actual,
-    toast: jest.fn(),
+    toast: vi.fn(),
   };
 });
 
 describe('useEmailAuth', () => {
-  let mockSetUser: ReturnType<typeof jest.fn>;
-  let mockSetIsLoading: ReturnType<typeof jest.fn>;
+  let mockSetUser: ReturnType<typeof vi.fn>;
+  let mockSetIsLoading: ReturnType<typeof vi.fn>;
 
   beforeEach(() => {
-    jest.clearAllMocks();
-    mockSetUser = jest.fn();
-    mockSetIsLoading = jest.fn();
+    vi.clearAllMocks();
+    mockSetUser = vi.fn();
+    mockSetIsLoading = vi.fn();
   });
 
   it('successful login with rememberMe=true stores token in localStorage', async () => {
@@ -138,9 +139,9 @@ describe('useEmailAuth', () => {
   // Test for cleanupAuthState being called - already part of the hook's login
   it('calls cleanupAuthState on login attempt', async () => {
     // We need to spy on cleanupAuthState.
-    // Since it's imported from another module, we can jest.spyOn that module.
+    // Since it's imported from another module, we can vi.spyOn that module.
     const authUtils = await import('@/utils/authUtils');
-    const cleanupSpy = jest.spyOn(authUtils, 'cleanupAuthState');
+    const cleanupSpy = vi.spyOn(authUtils, 'cleanupAuthState');
 
     const { result } = renderHook(() => useEmailAuth(mockSetUser, mockSetIsLoading));
 

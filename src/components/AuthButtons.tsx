@@ -16,7 +16,6 @@ export function AuthButtons({ providers = ['google', 'github', 'facebook', 'cred
   const handleSignIn = async (provider: Provider) => {
     setLoadingProvider(provider);
     await signIn(provider);
-    setLoadingProvider(null); // Reset loading state
   };
 
   const gridCols = `grid-cols-${providers.length}`;

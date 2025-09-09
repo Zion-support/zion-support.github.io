@@ -1,135 +1,93 @@
-import React from 'react';
-import { SEO } from "@/components/SEO";
-import Link from 'next/link';
-import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target } from 'lucide-react';
-export default function DataAnalyticsServices() {
-    const analyticsServices = [
-        {
-            icon: BarChart3,
-            title: 'Business Intelligence & Reporting',
-            description: 'Transform raw data into actionable insights with interactive dashboards and automated reporting.',
-            price: 'From $3,500/month',
-            marketPrice: '$2,500 - $8,000/month',
-            features: [
-                'Interactive dashboards with real-time data',
-                'Automated report generation and distribution',
-                'Custom KPI tracking and alerts',
-                'Multi-source data integration',
-                'Role-based access control',
-                'Mobile-responsive design'
-            ],
-            benefits: [
-                'Faster decision-making with real-time insights',
-                'Reduced manual reporting time by 80%',
-                'Improved data accuracy and consistency',
-                'Enhanced stakeholder communication'
-            ]
-        },
-        {
-            icon: TrendingUp,
-            title: 'Predictive Analytics & Forecasting',
-            description: 'Leverage machine learning to predict future trends and make data-driven decisions.',
-            price: 'From $5,000/month',
-            marketPrice: '$4,000 - $12,000/month',
-            features: [
-                'Advanced statistical modeling',
-                'Machine learning algorithms',
-                'Scenario planning and what-if analysis',
-                'Automated forecasting models',
-                'Confidence interval reporting',
-                'Model performance monitoring'
-            ],
-            benefits: [
-                'Proactive business planning',
-                'Risk mitigation and opportunity identification',
-                'Improved resource allocation',
-                'Competitive advantage through foresight'
-            ]
-        },
-        {
-            icon: Database,
-            title: 'Data Engineering & ETL',
-            description: 'Build robust data pipelines and warehouses for scalable analytics infrastructure.',
-            price: 'From $4,500/month',
-            marketPrice: '$3,500 - $10,000/month',
-            features: [
-                'Data pipeline development and maintenance',
-                'ETL/ELT process optimization',
-                'Data quality monitoring and validation',
-                'Real-time data streaming',
-                'Cloud-native data warehousing',
-                'Data governance and compliance'
-            ],
-            benefits: [
-                'Centralized data access and management',
-                'Improved data quality and reliability',
-                'Faster data processing and delivery',
-                'Reduced data silos and duplication'
-            ]
-        },
-        {
-            icon: Users,
-            title: 'Customer Analytics & Segmentation',
-            description: 'Understand customer behavior and create targeted marketing strategies.',
-            price: 'From $3,800/month',
-            marketPrice: '$3,000 - $9,000/month',
-            features: [
-                'Customer journey mapping and analysis',
-                'Behavioral segmentation and clustering',
-                'Churn prediction and prevention',
-                'Customer lifetime value analysis',
-                'A/B testing and optimization',
-                'Personalization engine integration'
-            ],
-            benefits: [
-                'Improved customer retention and loyalty',
-                'Higher marketing ROI through targeting',
-                'Better product-market fit',
-                'Enhanced customer experience'
-            ]
-        },
-        {
-            icon: Shield,
-            title: 'Data Governance & Compliance',
-            description: 'Ensure data security, privacy, and regulatory compliance across your analytics platform.',
-            price: 'From $4,200/month',
-            marketPrice: '$3,500 - $8,500/month',
-            features: [
-                'GDPR, CCPA, and HIPAA compliance',
-                'Data privacy and security controls',
-                'Audit trails and data lineage',
-                'Access control and encryption',
-                'Compliance reporting and monitoring',
-                'Data retention and deletion policies'
-            ],
-            benefits: [
-                'Reduced compliance risks and penalties',
-                'Enhanced data security and trust',
-                'Streamlined audit processes',
-                'Protection of sensitive information'
-            ]
-        },
-        {
-            icon: Zap,
-            title: 'Real-Time Analytics & Monitoring',
-            description: 'Monitor business performance in real-time with instant alerts and notifications.',
-            price: 'From $4,800/month',
-            marketPrice: '$4,000 - $11,000/month',
-            features: [
-                'Real-time data streaming and processing',
-                'Instant alerting and notifications',
-                'Performance monitoring dashboards',
-                'Anomaly detection and alerting',
-                'Mobile push notifications',
-                'Integration with incident management'
-            ],
-            benefits: [
-                'Immediate issue identification and response',
-                'Improved operational efficiency',
-                'Better customer experience',
-                'Reduced downtime and losses'
-            ]
-        }
+import React from 'react';''';
+import { Link } from 'react-router-dom';''';
+import { Helmet } from 'react-helmet-async';
+import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target export { function };
+export {};
+  return null;
+}
+    const analyticsServices = [];
+        {}
+            icon: BarChart3,';
+            title: 'Business Intelligence & Reporting',';
+            description: 'Transform raw data into actionable insights with interactive dashboards and automated reporting.',';
+            price: 'From $3,500/month',';
+            marketPrice: '$2,500 - $8,000/month',';
+            features: ['';
+                'Interactive dashboards with real-time data',Automated report generation and distribution',Custom KPI tracking and alerts',Multi-source data integration',Role-based access control',Mobile-responsive design';
+            ],';
+            benefits: ['';
+                'Faster decision-making with real-time insights',Reduced manual reporting time by 80%',Improved data accuracy and consistency',Enhanced stakeholder communication';
+            ]},;
+        {}
+            icon: TrendingUp,';
+            title: 'Predictive Analytics & Forecasting',';
+            description: 'Leverage machine learning to predict future trends and make data-driven decisions.',';
+            price: 'From $5,000/month',';
+            marketPrice: '$4,000 - $12,000/month',';
+            features: ['';
+                'Advanced statistical modeling',Machine learning algorithms',Scenario planning and what-if analysis',Automated forecasting models',Confidence interval reporting',Model performance monitoring';
+            ],';
+            benefits: ['';
+                'Proactive business planning',Risk mitigation and opportunity identification',Improved resource allocation',Competitive advantage through foresight';
+            ]},;
+        {}
+            icon: Database,';
+            title: 'Data Engineering & ETL',';
+            description: 'Build robust data pipelines and warehouses for scalable analytics infrastructure.',';
+            price: 'From $4,500/month',';
+            marketPrice: '$3,500 - $10,000/month',';
+            features: ['';
+                'Data pipeline development and maintenance',ETL/ELT process optimization',Data quality monitoring and validation',Real-time data streaming',Cloud-native data warehousing',Data governance and compliance';
+            ],';
+            benefits: ['';
+                'Centralized data access and management',Improved data quality and reliability',Faster data processing and delivery',Reduced data silos and duplication';
+            ]},;
+        {}
+            icon: Users,';
+            title: 'Customer Analytics & Segmentation',';
+            description: 'Understand customer behavior and create targeted marketing strategies.',';
+            price: 'From $3,800/month',';
+            marketPrice: '$3,000 - $9,000/month',';
+            features: ['';
+                'Customer journey mapping and analysis',Behavioral segmentation and clustering',Churn prediction and prevention',Customer lifetime value analysis',A/B testing and optimization',Personalization engine integration';
+            ],';
+            benefits: ['';
+                'Improved customer retention and loyalty',Higher marketing ROI through targeting',Better product-market fit',Enhanced customer experience';
+            ]},;
+        {}
+            icon: Shield,';
+            title: 'Data Governance & Compliance',';
+            description: 'Ensure data security, privacy, and regulatory compliance across your analytics platform.',';
+            price: 'From $4,200/month',';
+            marketPrice: '$3,500 - $8,500/month',';
+            features: ['';
+                'GDPR, CCPA, and HIPAA compliance',Data privacy and security controls',Audit trails and data lineage',Access control and encryption',Compliance reporting and monitoring',Data retention and deletion policies';
+            ],';
+            benefits: ['';
+                'Reduced compliance risks and penalties',Enhanced data security and trust',Streamlined audit processes',Protection of sensitive information';
+            ]},;
+        {}
+            icon: Zap,';
+            title: 'Real-Time Analytics & Monitoring',';
+            description: 'Monitor business performance in real-time with instant alerts and notifications.',';
+            price: 'From $4,800/month',';
+            marketPrice: '$4,000 - $11,000/month',';
+            features: ['';
+                'Real-time data streaming and processing',Instant alerting and notifications',Performance monitoring dashboards',Anomaly detection and alerting',Mobile push notifications',Integration with incident management';
+            ],';
+            benefits: ['';
+                'Immediate issue identification and response',Improved operational efficiency',Better customer experience',Reduced downtime and losses';
+            ]';
+'';
+    ];''';
+    const industries = ['''';
+        'Financial Services & Banking',Healthcare & Life Sciences',Retail & E-commerce',Manufacturing & Supply Chain',Energy & Utilities',Telecommunications',Transportation & Logistics',Government & Public Sector''';
+    ];''';
+    const technologies = ['''';
+        'Tableau & Power BI',Python & R for Analytics',Apache Spark & Kafka',Snowflake & BigQuery',AWS Redshift & Azure Synapse',Databricks & Dataiku',Alteryx & KNIME',TensorFlow & PyTorch''';
+    ];''';
+    const benefits = ['''';
+        'Data-driven decision making and strategy',Improved operational efficiency and cost reduction',Enhanced customer understanding and engagement',Competitive advantage through insights',Risk mitigation and compliance',Scalable analytics infrastructure';
     ];
     const industries = [
         'Financial Services & Banking',
@@ -296,103 +254,108 @@ export default function DataAnalyticsServices() {
             {technologies.map((((((((tech, index, index, index, index, index, index, index) => ({ ...((((((tech, index, index, index, index, index, index, key: index })) => ({ ...(((((tech, index, index, index, index, index, key: index })) => ({ ...((((tech, index, index, index, index, key: index })) => ({ ...(((tech, index, index, index, key: index })) => ({ ...((tech, index, index, key: index })) => ({ ...(tech, index, key: index })) => (<div key={tech} className="bg-white rounded-lg p-4 text-center hover:bg-blue-50 transition-colors border border-gray-200">
                 <span className="text-gray-700 font-medium text-sm">{tech}</span>
               </div>))}
-          </div>
-        </div>
-      </section>
+          </div>;
+        </div>;
+      </section>;
+";
+      {/* Process Section */}"";
+      <section className="py-20 bg-white">"";
+        <div className="container mx-auto px-4">"";
+          <div className="text-center mb-16">"";
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Analytics Implementation Process</h2>"";
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              A proven methodology for delivering successful analytics solutions that drive business value.;
+            </p>;
+          </div>";
+"";
+          <div className="max-w-6xl mx-auto">"";
+            <div className="grid md:grid-cols-6 gap-8">"";
+              <div className="text-center">"";
+                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">"";
+                  <span className="text-white font-bold text-xl">1</span>";
+                </div>"";
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Discovery</h3>"";
+                <p className="text-gray-600 text-sm">;
+                  Understand business needs and data opportunities;
+                </p>;
+              </div>";
+"";
+              <div className="text-center">"";
+                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">"";
+                  <span className="text-white font-bold text-xl">2</span>";
+                </div>"";
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Assessment</h3>"";
+                <p className="text-gray-600 text-sm">;
+                  Evaluate current data infrastructure and maturity;
+                </p>;
+              </div>";
+"";
+              <div className="text-center">"";
+                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">"";
+                  <span className="text-white font-bold text-xl">3</span>";
+                </div>"";
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Strategy</h3>"";
+                <p className="text-gray-600 text-sm">;
+                  Develop analytics roadmap and architecture;
+                </p>;
+              </div>";
+"";
+              <div className="text-center">"";
+                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">"";
+                  <span className="text-white font-bold text-xl">4</span>";
+                </div>"";
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Implementation</h3>"";
+                <p className="text-gray-600 text-sm">;
+                  Build and deploy analytics solutions;
+                </p>;
+              </div>";
+"";
+              <div className="text-center">"";
+                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">"";
+                  <span className="text-white font-bold text-xl">5</span>";
+                </div>"";
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Training</h3>"";
+                <p className="text-gray-600 text-sm">;
+                  Enable teams to use analytics effectively;
+                </p>;
+              </div>";
+"";
+              <div className="text-center">"";
+                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">"";
+                  <span className="text-white font-bold text-xl">6</span>";
+                </div>"";
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Optimization</h3>"";
+                <p className="text-gray-600 text-sm">;
+                  Continuous improvement and scaling;
+                </p>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+";
+      {/* CTA Section */}"";
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">"'";
+        <div className="container mx-auto px-4 text-center">'"'";
+          <h2 className="text-4xl font-bold mb-6">Ready to Unlock Your Data's Potential?</h2>"";
+          <p className="text-xl mb-8 max-w-3xl mx-auto">;
+            Let our analytics experts help you transform raw data into actionable insights;
+            that drive business growth and competitive advantage.";
+          </p>"";
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">"";
+            <Link to="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">;
+              Start Your Analytics Journey";
+            </Link>"";
+            <Link to="/services" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">;
+              Explore All Services;
+            </Link>;
+          </div>;
+        </div>;
+      </section>;
+    </div>)}}}
 
-      {/* Process Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Analytics Implementation Process</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A proven methodology for delivering successful analytics solutions that drive business value.
-            </p>
-          </div>
-
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-6 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-xl">1</span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Discovery</h3>
-                <p className="text-gray-600 text-sm">
-                  Understand business needs and data opportunities
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-xl">2</span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Assessment</h3>
-                <p className="text-gray-600 text-sm">
-                  Evaluate current data infrastructure and maturity
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-xl">3</span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Strategy</h3>
-                <p className="text-gray-600 text-sm">
-                  Develop analytics roadmap and architecture
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-xl">4</span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Implementation</h3>
-                <p className="text-gray-600 text-sm">
-                  Build and deploy analytics solutions
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-xl">5</span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Training</h3>
-                <p className="text-gray-600 text-sm">
-                  Enable teams to use analytics effectively
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-xl">6</span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Optimization</h3>
-                <p className="text-gray-600 text-sm">
-                  Continuous improvement and scaling
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Unlock Your Data's Potential?</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let our analytics experts help you transform raw data into actionable insights 
-            that drive business growth and competitive advantage.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Start Your Analytics Journey
-            </Link>
-            <Link to="/services" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Explore All Services
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>);
-}
+export { DataAnalyticsServices }
+export { DataAnalyticsServices }
+export { DataAnalyticsServices }
+export { DataAnalyticsServices }
+export { DataAnalyticsServices }

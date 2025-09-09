@@ -28,7 +28,7 @@ export function MilestoneCreator({
       onCancel={onCancel}
       projectScope={projectScope}
       projectStartDate={projectStartDate}
-      projectEndDate={projectEndDate || undefined}
+      projectEndDate={projectEndDate}
       projectType={projectType}
     />
   );

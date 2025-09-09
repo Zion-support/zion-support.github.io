@@ -18,7 +18,7 @@ export default function ErrorResetOnRouteChange() {
     return () => {
       router.events.off('routeChangeStart', handleRouteChange);
     };
-  }, [router.events, resetError, dismiss]); // Added dismiss
+  }, [router.events, resetError]);
 
   return null;
 }

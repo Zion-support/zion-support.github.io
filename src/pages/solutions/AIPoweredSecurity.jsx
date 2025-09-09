@@ -259,25 +259,30 @@ const AIPoweredSecurity = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Secure Your Organization?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Protect your business with intelligent, AI-driven security 
-            that adapts to evolving threats.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-              Secure Your Business
-            </a>
-            <a href="/solutions" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-              View All Solutions
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>);
-};
-export default AIPoweredSecurity;
+      <section className="py-16 px-4 sm:px-6 lg:px-8">;
+        <div className="max-w-4xl mx-auto text-center">;
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
+            Ready to Secure Your Organization?;
+          </h2>;
+          <p className="text-xl text-gray-300 mb-8">;
+            Protect your business with intelligent, AI-driven security;
+            that adapts to evolving threats.;
+          </p>;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+            <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl">;
+              Secure Your Business;
+            </a>;
+            <a href="/solutions" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
+              View All Solutions;
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>)}
+export default AIPoweredSecurity}}}}
+
+export { AIPoweredSecurity }
+export { AIPoweredSecurity }
+export { AIPoweredSecurity }
+export { AIPoweredSecurity }
+export { AIPoweredSecurity }

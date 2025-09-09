@@ -56,7 +56,7 @@ export default function AIProjectManagementPlatform(...args: any[]):  {;
       description: 'Intelligent report generation with customizable dashboards and stakeholder updates';
     };
   ];
-;
+
   const pricingPlans = [;
     {;
       name: 'Starter',;
@@ -108,7 +108,7 @@ export default function AIProjectManagementPlatform(...args: any[]):  {;
       popular: false;
     };
   ];
-;
+
   const benefits = [;
     {;
       icon: Clock,;
@@ -131,7 +131,7 @@ export default function AIProjectManagementPlatform(...args: any[]):  {;
       description: 'Automated workflows free up time for strategic work';
     };
   ];
-;
+
   const useCases = [;
     {;
       title: 'Software Development',;
@@ -154,7 +154,7 @@ export default function AIProjectManagementPlatform(...args: any[]):  {;
       icon: Calendar;
     };
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -214,8 +214,8 @@ export default function AIProjectManagementPlatform(...args: any[]):  {;
           </motion.div>;
         </div>;
       </section>;
-;
-      {/* Features Section */};
+
+      {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion.div;
@@ -504,54 +504,9 @@ export default function AIProjectManagementPlatform(...args: any[]):  {;
           </motion.div>;
 ;
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">;
-            {pricingPlans.map((((((((plan, index, index, index, index, index, index, index) => ({ ...((((((plan, index, index, index, index, index, index, key: index })) => ({ ...(((((plan, index, index, index, index, index, key: index })) => ({ ...((((plan, index, index, index, index, key: index })) => ({ ...(((plan, index, index, index, key: index })) => ({ ...((plan, index, index, key: index })) => ({ ...(plan, index, key: index }))  => (;
-              <motion.div;
-                key={index};
-                initial = {;
-  { opacity: 0,;
-  y: 20 ;
-;
-;
-;
-;
-;
-;
-}};
-                whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-;
-;
-;
-;
-;
-;
-}};
-                transition = {;
-  { duration: 0.8,;
-  delay: index * 0.1 ;
-;
-;
-;
-;
-;
-;
-}};
-                viewport={{ once: true }};
-                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${;
-                  plan.popular;
-                    ? 'border-purple-500 ring-2 ring-purple-500/20';
-                    : 'border-gray-700';
-                }`};
-;
-                {plan.popular && (;
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">;
-                      Most Popular;
-                    </span>;
-                  </div>;
-                )};
-;
+            {};
+                )}
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-gray-300 mb-4">{plan.description}</p>;
@@ -633,5 +588,10 @@ export default function AIProjectManagementPlatform(...args: any[]):  {;
         </div>;
       </section>;
     </div>;
-  );
-}}}}}}
+  )}}}}}}
+
+export { AIProjectManagementPlatform }
+export { AIProjectManagementPlatform }
+export { AIProjectManagementPlatform }
+export { AIProjectManagementPlatform }
+export { AIProjectManagementPlatform }

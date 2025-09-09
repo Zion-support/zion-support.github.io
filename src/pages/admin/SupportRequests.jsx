@@ -1,92 +1,99 @@
-import React, { useState } from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { Search, Filter } from "lucide-react";
-import { SEO } from "@/components/SEO";
-// Mock data for support requests
-const MOCK_SUPPORT_REQUESTS = [
-    {
-        id: "SR-1001",
-        user: "john.doe@example.com",
-        userId: "user-123",
-        issue: "Cannot access account after password reset",
-        status: "open",
-        priority: "high",
-        createdAt: "2023-12-15T14:30:00Z",
-        lastUpdated: "2023-12-15T15:45:00Z",
-        category: "authentication"
-    },
-    {
-        id: "SR-1002",
-        user: "sarah.smith@company.co",
-        userId: "user-456",
-        issue: "Payment failed but funds were deducted",
-        status: "in-progress",
-        priority: "high",
-        createdAt: "2023-12-14T09:15:00Z",
-        lastUpdated: "2023-12-15T13:20:00Z",
-        category: "billing"
-    },
-    {
-        id: "SR-1003",
-        user: "tech.guru@startup.io",
-        userId: "user-789",
-        issue: "Unable to download invoice PDF",
-        status: "open",
-        priority: "medium",
-        createdAt: "2023-12-15T11:00:00Z",
-        lastUpdated: "2023-12-15T11:00:00Z",
-        category: "billing"
-    },
-    {
-        id: "SR-1004",
-        user: "developer@codelab.dev",
-        userId: "user-235",
-        issue: "API integration documentation is outdated",
-        status: "open",
-        priority: "low",
-        createdAt: "2023-12-13T16:45:00Z",
-        lastUpdated: "2023-12-13T16:45:00Z",
-        category: "api"
-    },
-    {
-        id: "SR-1005",
-        user: "maria.rodriguez@design.co",
-        userId: "user-567",
-        issue: "Dispute with freelancer over delivered work quality",
-        status: "in-progress",
-        priority: "high",
-        createdAt: "2023-12-12T10:30:00Z",
-        lastUpdated: "2023-12-15T09:15:00Z",
-        category: "disputes"
-    },
-    {
-        id: "SR-1006",
-        user: "alex.wong@datacompany.com",
-        userId: "user-890",
-        issue: "Profile verification pending for over 7 days",
-        status: "resolved",
-        priority: "medium",
-        createdAt: "2023-12-08T13:20:00Z",
-        lastUpdated: "2023-12-15T08:30:00Z",
-        category: "verification"
-    },
-    {
-        id: "SR-1007",
-        user: "jamie.taylor@tech.org",
-        userId: "user-345",
-        issue: "Cannot upload portfolio images",
-        status: "resolved",
-        priority: "medium",
-        createdAt: "2023-12-10T15:10:00Z",
-        lastUpdated: "2023-12-13T11:25:00Z",
-        category: "profile"
-    }
+import React, { useState } from "react";"";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"";
+import { Input } from "@/components/ui/input";"";
+import { Button } from "@/components/ui/button";"";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";"";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";"";
+import { Badge } from "@/components/ui/badge";"";
+import { Search, Filter } from "lucide-react";"";
+import SEO from "@/components/SEO";
+// Mock data for support requests;
+const MOCK_SUPPORT_REQUESTS = [];
+    {}
+";
+"";
+        id: "SR-1001","";
+        user: "john.doe@example.com","";
+        userId: "user-123","";
+        issue: "Cannot access account after password reset","";
+        status: "open","";
+        priority: "high","";
+        createdAt: "2023-12-15T14:30:00Z","";
+        lastUpdated: "2023-12-15T15:45:00Z","";
+        category: "authentication"},;
+    {}
+";
+"";
+        id: "SR-1002","";
+        user: "sarah.smith@company.co","";
+        userId: "user-456","";
+        issue: "Payment failed but funds were deducted","";
+        status: "in-progress","";
+        priority: "high","";
+        createdAt: "2023-12-14T09:15:00Z","";
+        lastUpdated: "2023-12-15T13:20:00Z","";
+        category: "billing"},;
+    {}
+";
+"";
+        id: "SR-1003","";
+        user: "tech.guru@startup.io","";
+        userId: "user-789","";
+        issue: "Unable to download invoice PDF","";
+        status: "open","";
+        priority: "medium","";
+        createdAt: "2023-12-15T11:00:00Z","";
+        lastUpdated: "2023-12-15T11:00:00Z","";
+        category: "billing"},;
+    {}
+";
+"";
+        id: "SR-1004","";
+        user: "developer@codelab.dev","";
+        userId: "user-235","";
+        issue: "API integration documentation is outdated","";
+        status: "open","";
+        priority: "low","";
+        createdAt: "2023-12-13T16:45:00Z","";
+        lastUpdated: "2023-12-13T16:45:00Z","";
+        category: "api"},;
+    {}
+";
+"";
+        id: "SR-1005","";
+        user: "maria.rodriguez@design.co","";
+        userId: "user-567","";
+        issue: "Dispute with freelancer over delivered work quality","";
+        status: "in-progress","";
+        priority: "high","";
+        createdAt: "2023-12-12T10:30:00Z","";
+        lastUpdated: "2023-12-15T09:15:00Z","";
+        category: "disputes"},;
+    {}
+";
+"";
+        id: "SR-1006","";
+        user: "alex.wong@datacompany.com","";
+        userId: "user-890","";
+        issue: "Profile verification pending for over 7 days","";
+        status: "resolved","";
+        priority: "medium","";
+        createdAt: "2023-12-08T13:20:00Z","";
+        lastUpdated: "2023-12-15T08:30:00Z","";
+        category: "verification"},;
+    {}
+";
+"";
+        id: "SR-1007","";
+        user: "jamie.taylor@tech.org","";
+        userId: "user-345","";
+        issue: "Cannot upload portfolio images","";
+        status: "resolved","";
+        priority: "medium","";
+        createdAt: "2023-12-10T15:10:00Z","";
+        lastUpdated: "2023-12-13T11:25:00Z","";
+        category: "profile";
 ];
 export default function SupportRequests() {
     const [searchQuery, setSearchQuery] = useState("");
@@ -285,38 +292,44 @@ export default function SupportRequests() {
                           <Button variant="ghost" size="sm">Assign</Button>
                         </TableCell>
                       </TableRow>))}
-                  </TableBody>
-                </Table>
-              </CardContent>
-            </Card>
-          </TabsContent>
-          
-          <TabsContent value="escalated" className="mt-6">
-            <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
-              <h3 className="text-xl font-medium mb-4">Escalated Requests</h3>
-              <p className="text-zion-slate-light">
-                This tab will show support requests that have been escalated by agents or the system.
-              </p>
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="ai-flagged" className="mt-6">
-            <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
-              <h3 className="text-xl font-medium mb-4">AI Flagged Issues</h3>
-              <p className="text-zion-slate-light">
-                This tab shows issues that our AI system has identified as requiring human attention.
-              </p>
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="need-response" className="mt-6">
-            <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
-              <h3 className="text-xl font-medium mb-4">Awaiting Response</h3>
-              <p className="text-zion-slate-light">
-                These support requests have been waiting for an agent response for over 24 hours.
-              </p>
-            </div>
-          </TabsContent>
-        </Tabs>
-      </div>);
-}
+                  </TableBody>;
+                </Table>;
+              </CardContent>;
+            </Card>;
+          </TabsContent>";
+"";
+          <TabsContent value="escalated" className="mt-6">"";
+            <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">"";
+              <h3 className="text-xl font-medium mb-4">Escalated Requests</h3>"";
+              <p className="text-zion-slate-light">;
+                This tab will show support requests that have been escalated by agents or the system.;
+              </p>;
+            </div>;
+          </TabsContent>";
+"";
+          <TabsContent value="ai-flagged" className="mt-6">"";
+            <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">"";
+              <h3 className="text-xl font-medium mb-4">AI Flagged Issues</h3>"";
+              <p className="text-zion-slate-light">;
+                This tab shows issues that our AI system has identified as requiring human attention.;
+              </p>;
+            </div>;
+          </TabsContent>";
+"";
+          <TabsContent value="need-response" className="mt-6">"";
+            <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">"";
+              <h3 className="text-xl font-medium mb-4">Awaiting Response</h3>"";
+              <p className="text-zion-slate-light">;
+                These support requests have been waiting for an agent response for over 24 hours.;
+              </p>;
+            </div>;
+          </TabsContent>;
+        </Tabs>;
+      </div>)}
+
+
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }

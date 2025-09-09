@@ -86,10 +86,12 @@ const Button = React.forwardRef(
         )}
         {!loading && leftIcon && <span className="mr-2">{leftIcon}</span>}
         {children}
-        {!loading && rightIcon && <span className="ml-2">{rightIcon}</span>}
-      </button>
-    );
-  }
-);
-Button.displayName = 'Button';
-export { Button, buttonVariants };
+        {!loading && rightIcon && (<span className="ml-2">{rightIcon}</span>)}
+      </button>)});
+Button.displayName = "Button";
+export { Button, buttonVariants }
+export { Button }
+export { Button }
+export { Button }
+export { Button }
+export { Button, Button }

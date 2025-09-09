@@ -64,81 +64,78 @@ export default function Marketplace () {
             case 'availability':
                 setSelectedAvailability (prev => prev.includes (value) ? prev.filter (item => item !== value) [...prev, value]) ;
                 break}
-    };
-    const clearAllFilters = () => {
-        setSearchQuery ("") ;
-        setSelectedProductTypes ([]) ;
-        setSelectedLocations ([]) ;
-        setSelectedAvailability ([]) ;
-        setSelectedRating (null) };
-    // Handle requesting a quote
-    const handleRequestQuote = (listingId) => {
-        const listing = listings.find (item => item.id === listingId) ;
-        if (listing) {
-                    // Quote request functionality would go here
-        console.log (`Quote requested for ${listing.title}`) ;
-            // Navigate to the quote request page with the listing information
-            router ("/request - quote", {
-                state: {
-                    serviceType: listing.category,
-                    specificItem: {
-                        id: listing.id,
-                        title: listing.title,
-                        category: listing.category,
-                        image: listing.images?.[0]
-                    }
+    }
+    const clearAllFilters = () => {}
+  return <div>Component</div>;
+};
+";
+"";
+        setSearchQuery("");
+        setSelectedProductTypes([]);
+        setSelectedLocations([]);
+        setSelectedAvailability([]);
+        setSelectedRating(null)}
+    // Handle requesting a quote;
+    const handleRequestQuote = (listingId) => {}
+        const listing = listings.find(item => item.id === listingId);
+        if (listing) {}
+`;
+                    // Quote request functionality would go here``;
+        // console.log(`Quote requested for ${listing.title}`);";
+            // Navigate to the quote request page with the listing information"";
+            router("/request-quote", {}
+                state: {}
+                    serviceType: listing.category,;
+                    specificItem: {}
+                        id: listing.id,;
+                        title: listing.title,;
+                        category: listing.category,;
+                        image: listing.images?.[0]}
                 }
-            }) }
-    };
-    return (<main className="flex - grow container mx - auto px - 4 py - 8">
-        <div className="max - w-4xl mx - auto mb - 8">
-          <h1 className="text - 3xl font - bold text - white mb - 4">AI & Tech Marketplace</h1>
-          <p className="text - zion - slate - light">
-            Discover professional services and products for your AI and tech projects.
-            Browse our curated collection of solutions from verified providers.
-          </p>
-        </div>
-        
-        {/* Search and filter bar */}
-        <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4 mb - 8">
-          <div className="flex flex - col md:flex - row gap - 4">
-            <div className="relative flex - 1">
-              <EnhancedSearchInput value={searchQuery} onChange={setSearchQuery} onSelectSuggestion={setSearchQuery} placeholder={t ('marketplace.search_placeholder') } searchSuggestions={searchSuggestions}      />
-            </div>
-            <div className="flex gap - 2">
-              <Button variant="ghost" size="icon" onClick={ () => setView ('grid') } aria - pressed={view === 'grid'} className={view === 'grid' ? 'text - zion - purple' : 'text - zion - slate - light'}>
-                <Grid3X3 className="h - 4 w - 4"      />
-              </Button>
-              <Button variant="ghost" size="icon" onClick={ () => setView ('list') } aria - pressed={view === 'list'} className={view === 'list' ? 'text - zion - purple' : 'text - zion - slate - light'}>
-                <ListFilter className="h - 4 w - 4"      />
-              </Button>
-            </div>
-          </div>
-        </div>
-
-        {/* Main layout with sidebar and results */}
-        <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6">
-          {/* Sidebar Filters */}
-          <div className="lg:col - span - 1">
-            <FilterSidebar filters = {
-  {
-            selectedProductTypes,
-            selectedLocations,
-            selectedAvailability,
-  selectedRating
-
-}} filterOptions={filterOptions} onFilterChange={handleFilterChange} onRatingChange={setSelectedRating} onClearFilters={clearAllFilters}      />
-          </div>
-          
-          {/* Main content */}
-          <div className="lg:col - span - 3">
-            {/* Active filters display */}
-            <ActiveFiltersBar selectedProductTypes={selectedProductTypes} selectedLocations={selectedLocations} selectedAvailability={selectedAvailability} selectedRating={selectedRating} searchQuery={searchQuery} onRemoveFilter={handleFilterChange} onRemoveRating={ () => setSelectedRating (null) } onClearSearch={ () => setSearchQuery ("") }/>
-
-            {/* Results count */}
-            <div className="mb - 6">
-              <p className="text - zion - slate - light">
-                Showing {filteredListings.length} results
+            })}"};"";
+    return (<main className="flex-grow container mx-auto px-4 py-8">"";
+        <div className="max-w-4xl mx-auto mb-8">"";
+          <h1 className="text-3xl font-bold text-white mb-4">AI & Tech Marketplace</h1>"";
+          <p className="text-zion-slate-light">;
+            Discover professional services and products for your AI and tech projects.;
+            Browse our curated collection of solutions from verified providers.;
+          </p>;
+        </div>;
+        ";
+        {/* Search and filter bar */}"";
+        <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">"";
+          <div className="flex flex-col md:flex-row gap-4">"";
+            <div className="relative flex-1">';
+              <EnhancedSearchInput value={searchQuery} onChange={setSearchQuery} onSelectSuggestion={setSearchQuery} placeholder={t('marketplace.search_placeholder')} searchSuggestions={searchSuggestions}/>";
+            </div>"'";
+            <div className="flex gap-2">'"'";
+              <Button variant="ghost" size="icon" onClick={() => setView('grid')} aria-pressed={view === 'grid'} className={view === 'grid' ? 'text-zion-purple' : 'text-zion-slate-light'}>"";
+                <Grid3X3 className="h-4 w-4"/>'";
+              </Button>'"'";
+              <Button variant="ghost" size="icon" onClick={() => setView('list')} aria-pressed={view === 'list'} className={view === 'list' ? 'text-zion-purple' : 'text-zion-slate-light'}>"";
+                <ListFilter className="h-4 w-4"/>;
+              </Button>;
+            </div>;
+          </div>;
+        </div>;
+";
+        {/* Main layout with sidebar and results */}"";
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">";
+          {/* Sidebar Filters */}"";
+          <div className="lg:col-span-1">;
+            <div>Broken JSX</div>
+}} filterOptions={filterOptions} onFilterChange={handleFilterChange} onRatingChange={setSelectedRating} onClearFilters={clearAllFilters}/>;
+          </div>;
+          ";
+          {/* Main content */}"";
+          <div className="lg:col-span-3">";
+            {/* Active filters display */}"";
+            <ActiveFiltersBar selectedProductTypes={selectedProductTypes} selectedLocations={selectedLocations} selectedAvailability={selectedAvailability} selectedRating={selectedRating} searchQuery={searchQuery} onRemoveFilter={handleFilterChange} onRemoveRating={() => setSelectedRating(null)} onClearSearch={() => setSearchQuery("")}/>;
+";
+            {/* Results count */}"";
+            <div className="mb-6">"";
+              <p className="text-zion-slate-light">"`;
+                Showing {filteredListings.length} results"`"`;
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
@@ -157,6 +154,13 @@ export default function Marketplace () {
                   </Button>
                 </div>) }
               </div>) }
-          </div>
-        </div>
-      </main>) }
+          </div>;
+        </div>;
+      </main>)}
+
+
+export { Marketplace }
+export { Marketplace }
+export { Marketplace }
+export { Marketplace }
+export { Marketplace }

@@ -59,8 +59,7 @@ export function QuoteWizard({ category }) {
               : 'item'
         } to continue.`
       );
-      return;
-    }
+      return}
     setSelectionError('');
     setStep(2);
   };
@@ -258,3 +257,22 @@ export function QuoteWizard({ category }) {
     }
     return null;
 }
+  if(step === 3) {};
+        <StepIndicator step={step} />";
+        <div className="text-2xl font-semibold text-green-600">;
+          Quote Submitted Successfully!;
+        </div>";
+        <p className="text-muted-foreground">;
+          Thank you for your request regarding{' '}
+          {selectedItem?.name || 'the selected item'}.We will get back to you;
+          shortly.</p>;
+        <div>Broken JSX</div>
+          onClick={};
+}}
+        >;
+          Request Another Quote;
+        </Button>;
+      </div>;
+    )}
+  return null}
+'"`

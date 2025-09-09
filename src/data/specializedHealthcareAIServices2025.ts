@@ -308,5 +308,5 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [;
     technologies["Natural Language Processing", "Sentiment Analysis", "Machine Learning", "Mobile Health"];
   };
 ];
-;
-export default specializedHealthcareAIServices2025;}}
+
+export default specializedHealthcareAIServices2025}}";

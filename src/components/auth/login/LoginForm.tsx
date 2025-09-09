@@ -18,7 +18,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import Link from "next/link";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 
 // Form validation schema
 const loginSchema = z.object({
@@ -148,14 +148,8 @@ export function LoginForm() {
 
         <div className="flex items-center justify-between">
           <div className="text-sm">
-            {/* "Remember me" checkbox is now above, this div can be used for "Forgot Password" if it's still needed */}
-            {/* If "Remember me" was previously here, it's moved. */}
-          </div>
-          <div className="text-sm">
-            <Link href="/forgot-password">
-              <a className="font-medium text-zion-cyan hover:text-zion-cyan-light">
-                Forgot password?
-              </a>
+            <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
+              Forgot your password?
             </Link>
           </div>
         </div>
@@ -167,13 +161,6 @@ export function LoginForm() {
         >
           {isLoading || isSubmitting ? "Logging in..." : "Login"}
         </Button>
-        <p className="text-sm text-center mt-4">
-          <Link href="/signup">
-            <a className="font-medium text-zion-cyan hover:text-zion-cyan-light">
-              Create account
-            </a>
-          </Link>
-        </p>
       </form>
     </Form>
   );

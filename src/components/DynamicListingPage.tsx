@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import { useNavigate } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
 import { ProductListingCard } from "@/components/ProductListingCard";
 import { Button } from "@/components/ui/Button";
@@ -50,7 +50,7 @@ export function DynamicListingPage({
   detailBasePath = '/marketplace/listing',
   itemsPerPage,
 }: DynamicListingPageProps) {
-  const router = useRouter();
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [view, setView] = useState<ListingView>("grid");
@@ -76,13 +76,7 @@ export function DynamicListingPage({
   ]);
 
   const handleSliderChange = (values: number[]) => {
-    const [min, max] = values.map(Number);
-    // Check for null, undefined, or NaN to ensure valid numbers before setting state
-    if (min === null || min === undefined || isNaN(min) ||
-        max === null || max === undefined || isNaN(max)) {
-      return;
-    }
-    setCurrentPriceFilter([min, max]);
+    setCurrentPriceFilter([values[0], values[1]]);
   };
 
   const filteredListings = allListings.filter(listing => {
@@ -131,20 +125,17 @@ export function DynamicListingPage({
           title: "Quote Requested",
           description: `Your quote request for ${listing.title} has been sent.`
         });
-
-        // Serialize state to query parameters for Next.js navigation
-        const navigationState = {
-          serviceType: categorySlug,
-          specificItem: {
-            id: listing.id,
-            title: listing.title,
-            category: listing.category,
-            image: listing.images?.[0],
-          },
-        };
-        router.push({
-          pathname: "/request-quote",
-          query: { state: JSON.stringify(navigationState) },
+        
+        navigate("/request-quote", {
+          state: { 
+            serviceType: categorySlug, 
+            specificItem: {
+              id: listing.id,
+              title: listing.title,
+              category: listing.category,
+              image: listing.image?.[0]
+            }
+          }
         });
       }
     }, 500);
@@ -329,12 +320,19 @@ export function DynamicListingPage({
             </div>
 
             {isLoading ? (
-              <div className={view === "grid"
-                ? "grid grid-cols-1 md:grid-cols-2 gap-6"
-                : "flex flex-col gap-6"}>
+              <div
+                className={
+                  view === "grid"
+                    ? "grid grid-cols-1 md:grid-cols-2 gap-6"
+                    : "flex flex-col gap-6"
+                }
+              >
                 {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">
-                    <Skeleton className="h-48 w-full bg-zion-blue-light/20"/>
+                  <div
+                    key={i}
+                    className="rounded-lg overflow-hidden border border-zion-blue-light"
+                  >
+                    <Skeleton className="h-48 w-full bg-zion-blue-light/20" />
                     <div className="p-4">
                       <Skeleton className="h-6 w-1/3 mb-2 bg-zion-blue-light/20" />
                       <Skeleton className="h-8 w-5/6 mb-4 bg-zion-blue-light/20" />
@@ -349,62 +347,81 @@ export function DynamicListingPage({
                 ))}
               </div>
             ) : filteredListings.length > 0 ? (
-              <div className={view === "grid"
-                ? "grid grid-cols-1 md:grid-cols-2 gap-6"
-                : "flex flex-col gap-6"}>
+              <>
+              <div
+                className={
+                  view === "grid"
+                    ? "grid grid-cols-1 md:grid-cols-2 gap-6"
+                    : "flex flex-col gap-6"
+                }
+              >
                 {paginatedListings.map((listing) => (
-                  <ProductListingCard 
-                    key={listing.id} 
-                    listing={listing} 
-                    view={view} 
-                    onRequestQuote={handleRequestQuote} 
+                  <ProductListingCard
+                    key={listing.id}
+                    listing={listing}
+                    view={view}
+                    onRequestQuote={handleRequestQuote}
                     detailBasePath={detailBasePath}
                   />
                 ))}
               </div>
+              {totalPages > 1 && (
+                <div className="mt-8">
+                  <Pagination className="justify-center">
+                    <PaginationContent>
+                      <PaginationItem>
+                        <PaginationPrevious
+                          href="#"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            setCurrentPage(Math.max(1, currentPage - 1));
+                          }}
+                        />
+                      </PaginationItem>
+                      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                        <PaginationItem key={page}>
+                          <PaginationLink
+                            href="#"
+                            isActive={page === currentPage}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              setCurrentPage(page);
+                            }}
+                          >
+                            {page}
+                          </PaginationLink>
+                        </PaginationItem>
+                      ))}
+                      <PaginationItem>
+                        <PaginationNext
+                          href="#"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            setCurrentPage(Math.min(totalPages, currentPage + 1));
+                          }}
+                        />
+                      </PaginationItem>
+                    </PaginationContent>
+                  </Pagination>
+                </div>
+              )}
+              </>
             ) : (
               <div className="text-center py-20">
                 <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>
                 <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
-                <Button variant="outline" onClick={() => {
-                  setSearchQuery("");
-                  setSelectedCategory("all");
-                  setCurrentPriceFilter([0, priceRange.max]);
-                  setSelectedRating(null);
-                }} className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
+                <Button 
+                  variant="outline" 
+                  onClick={() => {
+                    setSearchQuery("");
+                    setSelectedCategory("all");
+                    setCurrentPriceFilter([0, priceRange.max]);
+                    setSelectedRating(null);
+                  }}
+                  className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+                >
                   Clear all filters
                 </Button>
-              </div>
-            )}
-            
-            {totalPages > 1 && (
-              <div className="mt-8">
-                <Pagination className="justify-center">
-                  <PaginationContent>
-                    <PaginationItem>
-                      <PaginationPrevious href="#" onClick={(e) => {
-                        e.preventDefault();
-                        setCurrentPage(Math.max(1, currentPage - 1));
-                      }}/>
-                    </PaginationItem>
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                      <PaginationItem key={page}>
-                        <PaginationLink href="#" isActive={page === currentPage} onClick={(e) => {
-                          e.preventDefault();
-                          setCurrentPage(page);
-                        }}>
-                          {page}
-                        </PaginationLink>
-                      </PaginationItem>
-                    ))}
-                    <PaginationItem>
-                      <PaginationNext href="#" onClick={(e) => {
-                        e.preventDefault();
-                        setCurrentPage(Math.min(totalPages, currentPage + 1));
-                      }}/>
-                    </PaginationItem>
-                  </PaginationContent>
-                </Pagination>
               </div>
             )}
           </div>

@@ -1,50 +1,24 @@
-import React, { useEffect, useRef } from 'react';
-export const FuturisticAnimatedBackground: React.FC = () => {;
-export default FuturisticAnimatedBackground;
-;
-;
-  const canvasRef = useRef < HTMLCanvasElement> (null) ;
-;
-  useEffect ( () => {;
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-;
-    const ctx = canvas.getContext ('2d') ;
-    if (!ctx) return;
-;
+export const FuturisticAnimatedBackground: React.FC = () => {};
+}, []);
+    ;
+    if(!canvas) return;
+
+    if(!ctx) return;
+
     // Set canvas size;
-    const resizeCanvas = () => {;
+
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-    resizeCanvas () ;
-    window.addEventListener ('resize', resizeCanvas) ;
-;
-    // Add enhanced grid background;
-    const gridCanvas = document.createElement ('canvas') ;
-    const gridCtx = gridCanvas.getContext ('2d') ;
-    if (gridCtx) {;
-      gridCanvas.width = canvas.width;
-      gridCanvas.height = canvas.height;
-      ;
-      // Draw enhanced grid;
-      gridCtx.strokeStyle = 'rgba (6, 182, 212, 0.1) ';
-      gridCtx.lineWidth = 1;
-      ;
-      for (let x = 0; x < gridCanvas.width; x += 40) {;
-        gridCtx.beginPath () ;
-        gridCtx.moveTo (x, 0) ;
-        gridCtx.lineTo (x, gridCanvas.height) ;
-        gridCtx.stroke () ;
-      };
-      ;
-      for (let y = 0; y < gridCanvas.height; y += 40) {;
-        gridCtx.beginPath () ;
-        gridCtx.moveTo (0, y) ;
-        gridCtx.lineTo (gridCanvas.width, y) ;
-        gridCtx.stroke () ;
-      };
-    };
+      canvas.height = window.innerHeight}
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Add enhanced grid background';
+
+    if(gridCtx) {};
+      cancelAnimationFrame(animationId)}}, []) ;
+  return ();
+    <div>Broken JSX</div>
+    />;) };
 ;
     // Animation variables;
     let animationId: number;

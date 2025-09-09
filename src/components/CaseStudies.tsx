@@ -1,6 +1,37 @@
-import React from 'react'
-import { motion     } from 'framer-motion'
-import { CheckCircle, TrendingUp, Users, DollarSign     } from 'lucide-react'
+React from 'react';
+import {  motion   } from "framer-motion";
+import {  CheckCircle, TrendingUp, Users, DollarSign   } from "lucide-react";
+;
+interface CaseStudy {};
+}[];
+  technologies: string[];
+  duration: string;,
+}
+;
+const caseStudies: CaseStudy[] = [{};
+      { metric: 'Response Time', value: '85% faster', icon: <TrendingUp className="w-5 h-5" /> },;
+      { metric: 'Customer Satisfaction', value: '+32%', icon: <CheckCircle className="w-5 h-5" /> },;
+      { metric: 'Cost Reduction', value: '40%', icon: <DollarSign className="w-5 h-5" /> }
+    ],;
+    technologies: ['OpenAI GPT-4', 'LangChain', 'React', 'Node.js', 'PostgreSQL'],;
+    duration: '3 months';,
+},;
+  {};
+    results: [{ metric: 'Processing Speed', value: '10x faster', icon: <TrendingUp className="w-5 h-5" /> },;
+      { metric: 'Scalability', value: 'Unlimited', icon: <Users className="w-5 h-5" /> },;
+      { metric: 'Infrastructure Cost', value: '-60%', icon: <DollarSign className="w-5 h-5" /> }
+    ],;
+    technologies: ['AWS', 'Kubernetes', 'Apache Kafka', 'Apache Spark', 'Terraform'],;
+    duration: '6 months';,
+},;
+  {};
+    results: [{ metric: 'Security Incidents', value: '-95%', icon: <CheckCircle className="w-5 h-5" /> },;
+      { metric: 'Compliance Score', value: '99.9%', icon: <CheckCircle className="w-5 h-5" /> },;
+      { metric: 'Detection Time', value: 'Real-time', icon: <TrendingUp className="w-5 h-5" /> }
+    ],;
+    technologies: ['Okta', 'CrowdStrike', 'Splunk', 'AWS GuardDuty', 'Python'],;
+    duration: '4 months'}
+];
 
 interface CaseStudy { id: string
   title: string
@@ -153,24 +184,16 @@ export default function CaseStudies() {
         </div>
 
         {/* CTA */}
-        <motion.div 
-          className="text-center mt-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true  }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <p className="text-lg text-gray-600 mb-6">
-            Ready to see similar results for your business?
-          </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-          >
-            Start Your Project
-          </a>
-        </motion.div>
-      </div>
-    </section>
-  )
-}
+        <div>Broken JSX</div>
+        >;
+          <p className="text-lg text-gray-600 mb-6">;
+            Ready to see similar results for your business?;
+          </p>;
+          <div>Broken JSX</div>
+            className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl">;
+            Start Your Project;
+          </a>;
+        </motion.div>;
+      </div>;
+    </section>;
+  )}

@@ -125,8 +125,8 @@ const AIBusinessIntelligence = () => {
                 duration: 0.5
             }
         }
-    };
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    }
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"       />
@@ -274,27 +274,34 @@ const AIBusinessIntelligence = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business Intelligence?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let our AI experts help you implement a comprehensive business intelligence solution 
-              that will drive growth and competitive advantage.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-                Schedule Consultation
-              </Link>
-              <Link to="/case-studies" className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
-                View Case Studies
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </div>);
-};
+      <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
+          <div>Broken JSX</div>
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">;
+            <h2 className="text-4xl font-bold text-white mb-6">;
+              Ready to Transform Your Business Intelligence?;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
+              Let our AI experts help you implement a comprehensive business intelligence solution;
+              that will drive growth and competitive advantage.;
+            </p>;
+            <div className="flex flex-wrap justify-center gap-4">;
+              <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">;
+                Schedule Consultation;
+              </Link>;
+              <Link to="/case-studies" className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">;
+                View Case Studies;
+              </Link>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </div>;
+    </div>;
+  )}
 export default AIBusinessIntelligence;
+
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }

@@ -5,15 +5,47 @@ import GitHubProvider from "next-auth/providers/github"; // Added GitHubProvider
 import FacebookProvider from "next-auth/providers/facebook";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { withErrorLogging } from '@/utils/withErrorLogging';
-import { supabase } from '@/utils/supabase/client'; // Use centralized client
+import { createClient } from '@supabase/supabase-js';
 import { verifyMessage } from 'ethers'; // Assuming ethers v6+
 import { logInfo, logWarn, logError } from '@/utils/productionLogger';
 import { NextApiRequest, NextApiResponse } from "next";
 
+<<<<<<< HEAD
 // Define custom types by extending NextAuth's default types
 interface ExtendedUser extends NextAuthUser {
   id: string; // Ensure id is always part of the user object model
   walletAddress?: string;
+=======
+// Simple logging functions
+const logInfo = (message: string, data?: any) => {
+  console.log(`[INFO] ${message}`, data || '');
+};
+
+const logWarn = (message: string, data?: any) => {
+  console.warn(`[WARN] ${message}`, data || '');
+};
+
+const logErrorToProduction = (message: string, data?: any) => {
+  console.error(`[ERROR] ${message}`, data || '');
+};
+
+// Initialize Supabase client (ensure these ENV vars are set)
+let supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL as string;
+// IMPORTANT: Use the SERVICE_ROLE_KEY for admin operations like user lookup if necessary,
+// but for signInWithPassword, anon key might be sufficient if RLS allows.
+// For robust auth provider, service role key might be needed for full control.
+// Here, we're verifying credentials, so signInWithPassword should be fine with anon key if it's public.
+// However, if creating users or more complex checks, service key is safer.
+// Let's assume public URL and anon key are fine for signIn, as it's a client-facing action.
+// If this [...nextauth].ts is ONLY for server-side session management after Supabase auth,
+// then Supabase client might not even be needed here if Supabase JWT is used as next-auth session token.
+// But typical CredentialsProvider does its own validation.
+let supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string;
+
+// Temporary workaround for build if .env.local has invalid placeholders
+if (supabaseUrl === 'your_supabase_url_here/' || supabaseUrl === 'your_supabase_url_here' || !supabaseUrl) {
+  supabaseUrl = 'http://localhost:54321'; // A valid placeholder URL
+>>>>>>> cursor/check-fix-push-and-merge-to-main-73b8
 }
 
 interface ExtendedJWT extends NextAuthJWT {

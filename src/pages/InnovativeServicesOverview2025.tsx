@@ -101,55 +101,45 @@ const InnovativeServicesOverview2025 = () => {;
       benefits: [;
         'Improve outcomes by 35%',;
         'Reduce readmissions by 40%',;
-        'Lower costs by 30%',;
-      ],;
-    },;
+        'Lower costs by 30%';
+      ]}
   ];
-;
-  const additionalServices = [;
-    {;
+
+  const additionalServices: unknown = [{}
       name: 'AI - Powered SEO Platform',;
       description: 'Advanced SEO optimization with machine learning',;
       price: '$1,500 / month',;
-      path: '/services / ai - powered - seo',;
-    },;
-    {;
+      path: '/services / ai - powered - seo'},;
+    {}
       name: 'AI Interview Assessment',;
       description: 'Intelligent candidate evaluation and screening',;
       price: '$800 / month',;
-      path: '/services / interview - assessment - ai',;
-    },;
-    {;
+      path: '/services / interview-assessment - ai'},;
+    {}
       name: 'Zero Trust Network Access',;
       description: 'Enterprise - grade security with zero trust principles',;
       price: '$2,000 / month',;
-      path: '/services / zero - trust - network - access',;
-    },;
-    {;
+      path: '/services / zero - trust - network - access'},;
+    {}
       name: 'AI Workflow Orchestrator',;
       description: 'Intelligent business process automation',;
       price: '$1,800 / month',;
-      path: '/services / ai - workflow - orchestrator',;
-    },;
+      path: '/services / ai - workflow-orchestrator'}
   ];
-;
-  return (<div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light">;
-      {/* Hero Section */};
-      <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-7xl mx - auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }};
-            animate={{ opacity: 1, y: 0 }};
-            transition={{ duration: 0.8 }};
-            className="text - center";
-          >;
-            <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - gradient - to - r from - blue - 500 to - purple - 600 text - white text - sm font - medium mb - 6">;
-              <Sparkles className="w - 4 h - 4 mr - 2"       />;
-              Innovative Services 2025;
-            </div>;
-            <h1 className="text - 4xl md:text - 6xl font - bold text - white mb - 6">;
-              Cutting - Edge AI Solutions for < span className="bg - gradient - to - r from - blue - 400 to - purple - 400 bg - clip - text text - transparent">;
-                {' '};
+
+  return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">";
+      {/* Hero Section */}"";
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"";
+        <div className="max-w-7xl mx-auto">;
+          <div>Broken JSX</div>
+            className="text-center"">"";
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6">"";
+              <Sparkles className="w-4 h-4 mr-2"  />              Innovative Services 2025";
+            </div>"";
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">";
+              Cutting-Edge AI Solutions for"";
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">';
+                {' '}
                 Modern Businesses;
               </span>;
             </h1>;
@@ -196,46 +186,47 @@ const InnovativeServicesOverview2025 = () => {;
               Our most innovative and impactful AI - powered solutions;
             </p>;
           </motion.div>;
-;
-          <div className="grid grid - cols - 1 md: anygrid - cols - 2 gap - 8">;
-            {serviceCategories.map ( (service, index) => (<motion.div;
-                key={service.id};
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }};
-                transition={{ duration: 0.6, delay: index * 0.1 }};
-                className="bg - zion - slate - dark / 80 backdrop - blur - sm rounded - xl p - 8 border border - zion - slate - light / 20 hover:border - zion - slate - light / 40 transition - all duration - 300";
-              >;
-                <div;
-                  className={`w - 16 h - 16 bg - gradient - to - r ${service.color} rounded - xl flex items - center justify - center mb - 6`};
-                >;
-                  <service.icon className="w - 8 h - 8 text - white"       />;
-                </div>;
-                <h3 className="text - 2xl font - bold text - white mb - 4">;
-                  {service.title};
-                </h3>;
-                <p className="text - zion - slate - light mb - 6">;
-                  {service.description};
-                </p>;
-;
-                <div className="mb - 6">;
-                  <div className="text - 3xl font - bold text - white mb - 2">;
-                    {service.price};
-                  </div>;
-                  <div className="text - zion - slate - light">Starting price</div>;
-                </div>;
-;
-                <div className="mb - 6">;
-                  <h4 className="text - lg font - semibold text - white mb - 3">;
-                    Key Features:;
-                  </h4>;
-                  <ul className="space - y-2">;
-                    {service.features.map ( (feature, featureIndex) => (<li;
-                        key={featureIndex};
-                        className="flex items - center space - x-2";
-                      >;
-                        <CheckCircle className="w - 4 h - 4 text - green - 400 flex - shrink - 0"       />;
-                        <span className="text - zion - slate - light">{feature}</span>;
-                      </li>) ) };
+
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 gap-8">;
+            {};
+                  className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6`}">"";
+                  <service.icon className="w-8 h-8 text-white" />";
+                </div>"";
+                <h3 className="text-2xl font-bold text-white mb-4">;
+                  {service.title}";
+                </h3>"";
+                <p className="text-zion-slate-light mb-6">;
+                  {service.description}
+                </p>";
+"";
+                <div className="mb-6">"";
+                  <div className="text-3xl font-bold text-white mb-2">;
+                    {service.price}";
+                  </div>"";
+                  <div className="text-zion-slate-light">Starting price</div>;
+                </div>";
+"";
+                <div className="mb-6">"";
+                  <h4 className="text-lg font-semibold text-white mb-3">;
+                    Key Features:";
+                  </h4>"";
+                  <ul className="space-y-2">;
+                    {};
+                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0"  />"                        <span className="text-zion-slate-light">{feature}</span>;
+                      </li>;
+                    ))}
+                  </ul>;
+                </div>";
+"";
+                <div className="mb-6">"";
+                  <h4 className="text-lg font-semibold text-white mb-3">;
+                    Business Impact:";
+                  </h4>"";
+                  <ul className="space-y-2">;
+                    {};
+                        <TrendingUp className="w-4 h-4 text-blue-400 flex-shrink-0"  />"                        <span className="text-zion-slate-light">{benefit}</span>;
+                      </li>;
+                    ))}
                   </ul>;
                 </div>;
 ;
@@ -282,23 +273,16 @@ const InnovativeServicesOverview2025 = () => {;
               Explore our complete portfolio of AI - powered solutions;
             </p>;
           </motion.div>;
-;
-          <div className="grid grid - cols - 1 md: anygrid - cols - 2 lg:grid - cols - 4 gap - 6">;
-            {additionalServices.map ( (service, index) => (<motion.div;
-                key={index};
-                initial={{ opacity: 0, scale: 0.8 }};
-                whileInView={{ opacity: 1, scale: 1 }};
-                transition={{ duration: 0.6, delay: index * 0.1 }};
-                className="bg - zion - slate - dark / 80 backdrop - blur - sm rounded - lg p - 6 border border - zion - slate - light / 20 hover:border - zion - slate - light / 40 transition - all duration - 300";
-              >;
-                <h3 className="text - lg font - semibold text - white mb - 2">;
-                  {service.name};
-                </h3>;
-                <p className="text - zion - slate - light text - sm mb - 4">;
-                  {service.description};
-                </p>;
-                <div className="text - xl font - bold text - white mb - 4">;
-                  {service.price};
+
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-4 gap-6">;
+            {};
+                  {service.name}";
+                </h3>"";
+                <p className="text-zion-slate-light text-sm mb-4">;
+                  {service.description}";
+                </p>"";
+                <div className="text-xl font-bold text-white mb-4">;
+                  {service.price}
                 </div>;
                 <a;
                   href={service.path};
@@ -363,6 +347,12 @@ const InnovativeServicesOverview2025 = () => {;
           </motion.div>;
         </div>;
       </section>;
-    </div>) ;
-};
-;
+    </div>;
+  )}
+export default InnovativeServicesOverview2025;
+
+export { InnovativeServicesOverview2025 }
+export { InnovativeServicesOverview2025 }
+export { InnovativeServicesOverview2025 }
+export { InnovativeServicesOverview2025 }
+export { Page }

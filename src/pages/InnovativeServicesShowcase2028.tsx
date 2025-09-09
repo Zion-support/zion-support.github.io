@@ -501,34 +501,24 @@ import { motion } from 'framer - motion';
 ;
   const itemVariants = {;
     hidden: { opacity: 0, y: 20 },;
-    visible: {;
-      opacity: 1,;
-      y: 0,;
-      transition: { duration: 0.6 },;
-    },;
-  };
-;
-  return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 text - white">;
-      <SEO;
-        title="2028 Innovative Services Showcase - Zion Tech Group";
-        description="Explore our cutting - edge AI services, micro SAAS solutions, IT infrastructure, and emerging technologies. Real market prices and proven ROI.";
-        keywords="AI services, micro SAAS, IT services, quantum computing, blockchain, IoT, green technology, space technology, Zion Tech Group";
-        canonicalUrl="https://ziontechgroup.com / innovative - services - showcase - 2028";
-            />;
-;
-      {/* Hero Section */};
-      <section className="relative pt - 28 pb - 16 overflow - hidden">;
-        <div role="button" className="absolute inset - 0 bg - gradient - to - br from - blue - 900 / 20 to - purple - 900 / 20"></div>;
-        <div role="button" className="container mx - auto px - 4 relative z - 10">;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }};
-            animate={{ opacity: 1, y: 0 }};
-            transition={{ duration: 0.8 }};
-            className="text - center max - w-4xl mx - auto";
-          >;
-            <h1 className="text - 5xl md:text - 6xl font - bold text - white mb - 6">;
-              2028 Innovative Services < span className="bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
-                {' '};
+    visible: {};
+      transition: { duration: 0.6 }
+    }
+  }
+  return (;
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">;
+      <div>Broken JSX</div>
+      />;
+
+      {/* Hero Section */}
+      <section className="relative pt-28 pb-16 overflow-hidden">;
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20"></div>        <div className="container mx-auto px-4 relative z-10">;
+          <div>Broken JSX</div>
+            className="text-center max-w-4xl mx-auto"">"";
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">";
+              2028 Innovative Services"";
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
+                {' '}
                 Showcase;
               </span>;
             </h1>;
@@ -554,41 +544,42 @@ import { motion } from 'framer - motion';
           </motion.div>;
         </div>;
       </section>;
-;
-      {/* Search and Filter */};
-      <section className="py - 8 bg - slate - 800 / 30">;
-        <div role="button" className="container mx - auto px - 4">;
-          <div role="button" className="flex flex - col lg:flex - row gap - 6 items - center justify - between">;
-            {/* Search */};
-            <div role="button" className="relative flex - 1 max - w-md">;
-              <input;
-                type="text";
-                placeholder="Search services...";
-                value={searchQuery};
-                onChange={e => setSearchQuery (e.target.value) };
-                className="w - full px - 4 py - 3 bg - slate - 700 border border - slate - 600 rounded - lg text - white placeholder - slate - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500";
-              />;
-              <Search className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 w - 5 h - 5"       />;
-            </div>;
-;
-            {/* Category Filter */};
-            <div role="button" className="flex flex - wrap gap - 2">;
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveCategory ('all') };
-                className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 ${;
-                  activeCategory === 'all';
-                    ? 'bg - cyan - 500 text - white shadow - lg shadow - cyan - 500 / 25';
-                    : 'bg - slate - 700 text - slate - 300 hover:bg - slate - 600';
-                }`};
+";
+      {/* Search and Filter */}"";
+      <section className="py-8 bg-slate-800/30">"";
+        <div className="container mx-auto px-4">"";
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">";
+            {/* Search */}"";
+            <div className="relative flex-1 max-w-md">";
+              <div>Broken JSX</div>
+                onChange={e => setSearchQuery(e.target.value)}"";
+                className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"";
+              />"";
+              <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />            </div>;
+";
+            {/* Category Filter */}"";
+            <div className="flex flex-wrap gap-2">';
+              <div>Broken JSX</div>
+                onClick={() => setActiveCategory('all')}
+                className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${}
+';
+'';
+'''`;
+                  activeCategory === 'all''''`'`;
+                    ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'''`'`'`;
+                    : 'bg-slate-700 text-slate-300 hover:bg-slate-600'````}`}
               >;
                 All Services;
               </button>;
-              {serviceCategories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id};
-                  onClick={ () => setActiveCategory (category.id) };
-                  className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 ${;
-                    activeCategory === category.id;
-                      ? 'bg - cyan - 500 text - white shadow - lg shadow - cyan - 500 / 25';
-                      : 'bg - slate - 700 text - slate - 300 hover:bg - slate - 600';
-                  }`};
+              {};
+                  onClick={() => setActiveCategory(category.id)}``;
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${}
+';
+'';
+'''`;
+                    activeCategory === category.id'''`'`;
+                      ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'''`'`'`;
+                      : 'bg-slate-700 text-slate-300 hover:bg-slate-600'````}`}
                 >;
                   {category.name};
                 </button>) ) };
@@ -883,5 +874,12 @@ import { motion } from 'framer - motion';
           </motion.div>;
         </div>;
       </section>;
-    </div>) ;
-};
+    </div>;
+  )}
+
+
+export { InnovativeServicesShowcase2028 }
+export { InnovativeServicesShowcase2028 }
+export { InnovativeServicesShowcase2028 }
+export { InnovativeServicesShowcase2028 }
+export { InnovativeServicesShowcase2028 }
