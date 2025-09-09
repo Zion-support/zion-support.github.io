@@ -1,199 +1,207 @@
 {
-  "totalSize": 670076,
-  "files": [
-    {
-      "path": "assets/react-core-D1e13s5w.js",
-      "size": 162425,
-      "sizeKB": "158.62",
-      "type": "JavaScript"
-    },
-    {
-      "path": "assets/motion-Bkqt2upB.js",
-      "size": 107035,
-      "sizeKB": "104.53",
-      "type": "JavaScript"
-    },
-    {
-      "path": "assets/index-CUw36I0g.css",
-      "size": 94513,
-      "sizeKB": "92.30",
-      "type": "CSS"
-    },
-    {
-      "path": "assets/pages-w782Bt7K.js",
-      "size": 78577,
-      "sizeKB": "76.74",
-      "type": "JavaScript"
-    },
-    {
-      "path": "assets/vendor-C5kwZTdR.js",
-      "size": 62400,
-      "sizeKB": "60.94",
-      "type": "JavaScript"
-    },
-    {
-      "path": "assets/components-CsWcAY9E.js",
-      "size": 35821,
-      "sizeKB": "34.98",
-      "type": "JavaScript"
-    },
-    {
-      "path": "assets/service-pages-DSgYfVBA.js",
-      "size": 29424,
-      "sizeKB": "28.73",
-      "type": "JavaScript"
-    },
-    {
-      "path": "assets/main-pages-CvGXeGZR.js",
-      "size": 19701,
-      "sizeKB": "19.24",
-      "type": "JavaScript"
-    },
-    {
-      "path": "assets/index-D3LuTS5o.js",
-      "size": 11726,
-      "sizeKB": "11.45",
-      "type": "JavaScript"
-    },
-    {
-      "path": "assets/router-DhGlUbI3.js",
-      "size": 11340,
-      "sizeKB": "11.07",
-      "type": "JavaScript"
-    },
-    {
-      "path": "services/index.html",
-      "size": 10889,
-      "sizeKB": "10.63",
-      "type": "HTML"
-    },
-    {
-      "path": "feed.xml",
-      "size": 7138,
-      "sizeKB": "6.97",
-      "type": "Other"
-    },
-    {
-      "path": "sw.js",
-      "size": 6961,
-      "sizeKB": "6.80",
-      "type": "JavaScript"
-    },
-    {
-      "path": "offline.html",
-      "size": 5958,
-      "sizeKB": "5.82",
-      "type": "HTML"
-    },
-    {
-      "path": "assets/ui-components-CbIzj8Eq.js",
-      "size": 5006,
-      "sizeKB": "4.89",
-      "type": "JavaScript"
-    },
-    {
-      "path": "assets/talent-pages-DRi1sEnL.js",
-      "size": 4707,
-      "sizeKB": "4.60",
-      "type": "JavaScript"
-    },
-    {
-      "path": "reports/pre-build-health/index.html",
-      "size": 2697,
-      "sizeKB": "2.63",
-      "type": "HTML"
-    },
-    {
-      "path": "manifest.json",
-      "size": 2427,
-      "sizeKB": "2.37",
-      "type": "Other"
-    },
-    {
-      "path": "assets/auth-pages-CUO0GtaQ.js",
-      "size": 2403,
-      "sizeKB": "2.35",
-      "type": "JavaScript"
-    },
-    {
-      "path": "reports/page-validation/index.html",
-      "size": 2159,
-      "sizeKB": "2.11",
-      "type": "HTML"
-    },
-    {
-      "path": "index.html",
-      "size": 1345,
-      "sizeKB": "1.31",
-      "type": "HTML"
-    },
-    {
-      "path": "reports/pre-build-health/latest.json",
-      "size": 1241,
-      "sizeKB": "1.21",
-      "type": "Other"
-    },
-    {
-      "path": "assets/utils-DUg4_aAP.js",
-      "size": 1122,
-      "sizeKB": "1.10",
-      "type": "JavaScript"
-    },
-    {
-      "path": "favicon.ico",
-      "size": 849,
-      "sizeKB": "0.83",
-      "type": "Other"
-    },
-    {
-      "path": "robots.txt",
-      "size": 797,
-      "sizeKB": "0.78",
-      "type": "Other"
-    },
-    {
-      "path": "site.webmanifest",
-      "size": 493,
-      "sizeKB": "0.48",
-      "type": "Other"
-    },
-    {
-      "path": "favicon.svg",
-      "size": 410,
-      "sizeKB": "0.40",
-      "type": "Image"
-    },
-    {
-      "path": ".well-known/security.txt",
-      "size": 315,
-      "sizeKB": "0.31",
-      "type": "Other"
-    },
-    {
-      "path": "_headers",
-      "size": 174,
-      "sizeKB": "0.17",
-      "type": "Other"
-    },
-    {
-      "path": "_redirects",
-      "size": 23,
-      "sizeKB": "0.02",
-      "type": "Other"
-    }
-  ],
-  "recommendations": [
-    {
-      "type": "warning",
-      "message": "Found 2 large files (>100KB)",
+  "timestamp": "2025-09-09T05:32:26.942Z",
+  "summary": {
+    "totalSize": 625709,
+    "totalSizeKB": "611.04",
+    "totalSizeMB": "0.60",
+    "jsFileCount": 13,
+    "cssFileCount": 1,
+    "otherFileCount": 0,
+    "chunkCount": 13
+  },
+  "chunks": {
+    "auth": {
+      "totalSize": 2403,
+      "fileCount": 1,
       "files": [
-        "assets/react-core-D1e13s5w.js",
-        "assets/motion-Bkqt2upB.js"
+        {
+          "name": "auth-pages-CeahdUpu.js",
+          "size": 2403,
+          "sizeKB": 2.35
+        }
       ]
     },
-    {
-      "type": "error",
-      "message": "JavaScript bundle is too large (526.02KB). Consider code splitting."
+    "components": {
+      "totalSize": 35790,
+      "fileCount": 1,
+      "files": [
+        {
+          "name": "components-CUqh7V0G.js",
+          "size": 35790,
+          "sizeKB": 34.95
+        }
+      ]
+    },
+    "index": {
+      "totalSize": 12610,
+      "fileCount": 1,
+      "files": [
+        {
+          "name": "index-CAsiqLzL.js",
+          "size": 12610,
+          "sizeKB": 12.31
+        }
+      ]
+    },
+    "main": {
+      "totalSize": 19677,
+      "fileCount": 1,
+      "files": [
+        {
+          "name": "main-pages-C18LIdqg.js",
+          "size": 19677,
+          "sizeKB": 19.22
+        }
+      ]
+    },
+    "motion": {
+      "totalSize": 106401,
+      "fileCount": 1,
+      "files": [
+        {
+          "name": "motion-CRAysFof.js",
+          "size": 106401,
+          "sizeKB": 103.91
+        }
+      ]
+    },
+    "pages": {
+      "totalSize": 78403,
+      "fileCount": 1,
+      "files": [
+        {
+          "name": "pages-8mnT8kN1.js",
+          "size": 78403,
+          "sizeKB": 76.57
+        }
+      ]
+    },
+    "react": {
+      "totalSize": 163004,
+      "fileCount": 1,
+      "files": [
+        {
+          "name": "react-core-B1LcFCqU.js",
+          "size": 163004,
+          "sizeKB": 159.18
+        }
+      ]
+    },
+    "router": {
+      "totalSize": 10817,
+      "fileCount": 1,
+      "files": [
+        {
+          "name": "router-DJErntid.js",
+          "size": 10817,
+          "sizeKB": 10.56
+        }
+      ]
+    },
+    "service": {
+      "totalSize": 29352,
+      "fileCount": 1,
+      "files": [
+        {
+          "name": "service-pages-CY8uBsT8.js",
+          "size": 29352,
+          "sizeKB": 28.66
+        }
+      ]
+    },
+    "talent": {
+      "totalSize": 4707,
+      "fileCount": 1,
+      "files": [
+        {
+          "name": "talent-pages-BMOedMYk.js",
+          "size": 4707,
+          "sizeKB": 4.6
+        }
+      ]
+    },
+    "ui": {
+      "totalSize": 4985,
+      "fileCount": 1,
+      "files": [
+        {
+          "name": "ui-components-CndVxDU1.js",
+          "size": 4985,
+          "sizeKB": 4.87
+        }
+      ]
+    },
+    "utils": {
+      "totalSize": 1120,
+      "fileCount": 1,
+      "files": [
+        {
+          "name": "utils-BE1ogIA6.js",
+          "size": 1120,
+          "sizeKB": 1.09
+        }
+      ]
+    },
+    "vendor": {
+      "totalSize": 61927,
+      "fileCount": 1,
+      "files": [
+        {
+          "name": "vendor-DlDwwZFJ.js",
+          "size": 61927,
+          "sizeKB": 60.48
+        }
+      ]
     }
-  ]
+  },
+  "largestFiles": {
+    "js": [
+      {
+        "name": "react-core-B1LcFCqU.js",
+        "sizeKB": 159.18
+      },
+      {
+        "name": "motion-CRAysFof.js",
+        "sizeKB": 103.91
+      },
+      {
+        "name": "pages-8mnT8kN1.js",
+        "sizeKB": 76.57
+      },
+      {
+        "name": "vendor-DlDwwZFJ.js",
+        "sizeKB": 60.48
+      },
+      {
+        "name": "components-CUqh7V0G.js",
+        "sizeKB": 34.95
+      },
+      {
+        "name": "service-pages-CY8uBsT8.js",
+        "sizeKB": 28.66
+      },
+      {
+        "name": "main-pages-C18LIdqg.js",
+        "sizeKB": 19.22
+      },
+      {
+        "name": "index-CAsiqLzL.js",
+        "sizeKB": 12.31
+      },
+      {
+        "name": "router-DJErntid.js",
+        "sizeKB": 10.56
+      },
+      {
+        "name": "ui-components-CndVxDU1.js",
+        "sizeKB": 4.87
+      }
+    ],
+    "css": [
+      {
+        "name": "index-CUw36I0g.css",
+        "sizeKB": 92.3
+      }
+    ]
+  }
 }

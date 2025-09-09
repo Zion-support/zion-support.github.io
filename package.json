@@ -25,6 +25,7 @@
     "build:analyze": "ANALYZE=true vite build",
     "build:preview": "npm run build && npm run start",
     "analyze:bundle": "node scripts/bundle-analyzer.js",
+    "analyze:detailed": "npm run build && npm run analyze:bundle",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
@@ -47,7 +48,9 @@
     "prebuild": "echo 'Skipping prebuild checks'",
     "postbuild": "echo 'Build completed successfully' && npm run optimize",
     "optimize": "node scripts/optimize-build.js",
-    "build:optimize": "npm run build && npm run optimize"
+    "optimize:advanced": "node scripts/advanced-optimize.js",
+    "build:optimize": "npm run build && npm run optimize",
+    "build:advanced": "npm run build && npm run optimize:advanced"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
@@ -81,6 +84,7 @@
     "node-fetch": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-error-boundary": "^6.0.0",
     "react-helmet-async": "^2.0.4",
     "react-hook-form": "^7.50.1",
     "react-hot-toast": "^2.4.1",
