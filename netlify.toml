@@ -1,4 +1,4 @@
-# Netlify rebuild trigger
+# Netlify rebuild trigger - bump to trigger deploy
 [build]
   # Build the Vite React project on Netlify
   # Minor comment change to trigger Netlify redeploy
