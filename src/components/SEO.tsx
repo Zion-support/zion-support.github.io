@@ -347,8 +347,9 @@ export function BlogPostSEO({
         mainEntityOfPage: {
           '@type': 'WebPage',
         }
-      }}
-    />
+      }
+    }
+  />
   );
 }
 

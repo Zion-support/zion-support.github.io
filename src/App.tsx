@@ -1,15 +1,20 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { HelmetProvider } from 'react-helmet-async';
-import './App.css';
-
-// Simple components
-import { ErrorBoundary } from './components/ErrorBoundary';
+import { ThemeProvider } from './components/ThemeProvider';
+import { ErrorBoundary, setupGlobalErrorHandling } from './components/ErrorHandling';
+import ScrollToTop from './components/ScrollToTop';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceWrapper from './components/PerformanceWrapper';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
+import { SEO, HomePageSEO } from './components/SEO';
+import AccessibilityEnhancements from './components/AccessibilityEnhancements';
+import { PerformanceOptimizations } from './components/PerformanceOptimizations';
 import { NotificationToast } from './components/NotificationToast';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import './App.css';
 
 // Create QueryClient instance
 const queryClient = new QueryClient({
@@ -21,110 +26,91 @@ const queryClient = new QueryClient({
   },
 });
 
-// Our enhanced service pages
+// Pages - Lazy loaded for better performance
+const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
-const Mission = lazy(() => import('./pages/Mission'));
-const Team = lazy(() => import('./pages/Team'));
-const ServicesOverview = lazy(() => import('./pages/services/ServicesOverview'));
-const AIAutonomousSystems = lazy(() => import('./pages/services/AIAutonomousSystems'));
-const QuantumTechnology = lazy(() => import('./pages/services/QuantumTechnology'));
-const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity'));
-const ITInfrastructure = lazy(() => import('./pages/services/ITInfrastructure'));
-const MicroSAASSolutions = lazy(() => import('./pages/services/MicroSAASSolutions'));
-const IndustrySolutions = lazy(() => import('./pages/services/IndustrySolutions'));
-
-// Additional pages
-const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
-const CloudInfrastructure = lazy(() => import('./pages/CloudInfrastructure'));
-const CaseStudies = lazy(() => import('./pages/CaseStudies'));
-const ServicesComparison = lazy(() => import('./pages/ServicesComparison'));
-const Privacy = lazy(() => import('./pages/Privacy'));
-const Terms = lazy(() => import('./pages/Terms'));
-const Cookies = lazy(() => import('./pages/Cookies'));
-const Sitemap = lazy(() => import('./pages/Sitemap'));
+const Pricing = lazy(() => import('./pages/Pricing'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
-// Simple Home component
-const Home = () => (
-  <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white flex items-center justify-center">
-    <div className="text-center">
-      <h1 className="text-6xl font-bold mb-4">Zion Tech Group</h1>
-      <p className="text-xl mb-8">AI & IT Solutions</p>
-      <div className="text-green-400 text-lg">
-        ✅ Successfully built and deployed! 🚀
-      </div>
-    </div>
-  </div>
-);
+// Service Pages - Lazy loaded for better performance
+const AIServices = lazy(() => import('./pages/AIServices'));
+const ITServices = lazy(() => import('./pages/ITServices'));
+const MicroSaaS = lazy(() => import('./pages/MicroSaaS'));
+const Cybersecurity = lazy(() => import('./pages/Cybersecurity'));
+const CloudMigration = lazy(() => import('./pages/CloudMigration'));
+const MobileDevelopment = lazy(() => import('./pages/MobileDevelopment'));
 
+// Additional Pages - Lazy loaded for better performance
+const FAQ = lazy(() => import('./pages/FAQ'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
+const Support = lazy(() => import('./pages/Support'));
 
-// Main App component
-const App: React.FC = () => {
+function App() {
+  // Setup global error handling
+  useEffect(() => {
+    setupGlobalErrorHandling();
+  }, []);
+
   return (
-    <ErrorBoundary>
-      <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={queryClient}>
+      <ErrorBoundary>
         <HelmetProvider>
-          <Router>
-            <div className="App">
-              <main className="main-content">
-                <Suspense fallback={<LoadingSpinner />}>
-                  <Routes>
-                    {/* Main Routes */}
-                    <Route path="/" element={<Home />} />
-                    <Route path="/home" element={<Home />} />
+          <ThemeProvider>
+            <AccessibilityEnhancer>
+              <AccessibilityEnhancements>
+                <Router>
+                  <ScrollToTop />
+                  <PerformanceWrapper>
+                    <PerformanceOptimizer enableMonitoring={process.env.NODE_ENV === 'development'} />
                     
-                    {/* Services Routes */}
-                    <Route path="/services" element={<ServicesOverview />} />
-                    <Route path="/comprehensive-services" element={<ServicesOverview />} />
-                    <Route path="/services-comparison" element={<ServicesComparison />} />
-                    <Route path="/services-showcase" element={<ServicesOverview />} />
-                    <Route path="/it-onsite-services" element={<ServicesOverview />} />
+                    {/* SEO Meta Tags */}
+                    <HomePageSEO />
                     
-                    {/* Enhanced Service Pages */}
-                    <Route path="/services/overview" element={<ServicesOverview />} />
-                    <Route path="/services/ai-autonomous-systems" element={<AIAutonomousSystems />} />
-                    <Route path="/services/quantum-technology" element={<QuantumTechnology />} />
-                    <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-                    <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
-                    <Route path="/services/micro-saas" element={<MicroSAASSolutions />} />
-                    <Route path="/services/industry-solutions" element={<IndustrySolutions />} />
-                    
-                    {/* AI & Technology Routes */}
-                    <Route path="/ai-solutions" element={<AIAutonomousSystems />} />
-                    <Route path="/cybersecurity" element={<Cybersecurity />} />
-                    <Route path="/digital-transformation" element={<DigitalTransformation />} />
-                    <Route path="/cloud-infrastructure" element={<CloudInfrastructure />} />
-                    
-                    {/* Company Routes */}
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/mission" element={<Mission />} />
-                    <Route path="/team" element={<Team />} />
-                    <Route path="/case-studies" element={<CaseStudies />} />
-                    
-                    {/* Legal Routes */}
-                    <Route path="/privacy" element={<Privacy />} />
-                    <Route path="/terms" element={<Terms />} />
-                    <Route path="/cookies" element={<Cookies />} />
-                    
-                    {/* Utility Routes */}
-                    <Route path="/sitemap" element={<Sitemap />} />
-                    
-                    {/* 404 Route */}
-                    <Route path="*" element={<NotFound />} />
-                  </Routes>
-                </Suspense>
-              </main>
-            </div>
-            <NotificationToast />
-            <PerformanceMonitor />
-            <AccessibilityEnhancer />
-          </Router>
+                    <div className="min-h-screen bg-background text-foreground" id="main-content">
+                      <PerformanceOptimizations>
+                        <Suspense fallback={<LoadingSpinner />}>
+                          <Routes>
+                            {/* Main Routes */}
+                            <Route path="/" element={<Home />} />
+                            <Route path="/about" element={<About />} />
+                            <Route path="/services" element={<Services />} />
+                            <Route path="/contact" element={<Contact />} />
+                            <Route path="/pricing" element={<Pricing />} />
+                            
+                            {/* Service Routes */}
+                            <Route path="/services/ai-services" element={<AIServices />} />
+                            <Route path="/services/it-services" element={<ITServices />} />
+                            <Route path="/services/micro-saas" element={<MicroSaaS />} />
+                            <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                            <Route path="/services/cloud-solutions" element={<CloudMigration />} />
+                            <Route path="/services/mobile-development" element={<MobileDevelopment />} />
+                            
+                            {/* Additional Routes */}
+                            <Route path="/faq" element={<FAQ />} />
+                            <Route path="/privacy" element={<Privacy />} />
+                            <Route path="/terms" element={<Terms />} />
+                            <Route path="/support" element={<Support />} />
+                            
+                            {/* 404 Route */}
+                            <Route path="*" element={<NotFound />} />
+                          </Routes>
+                        </Suspense>
+                      </PerformanceOptimizations>
+                    </div>
+                  </PerformanceWrapper>
+                </Router>
+                <NotificationToast />
+                <PerformanceMonitor />
+              </AccessibilityEnhancements>
+            </AccessibilityEnhancer>
+          </ThemeProvider>
         </HelmetProvider>
-      </QueryClientProvider>
-    </ErrorBoundary>
+      </ErrorBoundary>
+    </QueryClientProvider>
   );
-};
+}
 
 export default App;

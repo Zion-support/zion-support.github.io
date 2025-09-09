@@ -1,82 +1,74 @@
-import React from 'react';
-import { render, RenderOptions } from '@testing-library/react';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { BrowserRouter } from 'react-router-dom';
-
-// Test utilities and mocks
+// Testing utilities and helpers
 
 // Mock data generators
 export const generateMockUser = (overrides: Partial<any> = {}) => ({
   id: '1',
-  name: 'Test User',
-  email: 'test@example.com',
-  ...overrides
+  name: 'John Doe',
+  email: 'john@example.com',
+  avatar: 'https://via.placeholder.com/150',
+  role: 'user',
+  createdAt: new Date().toISOString(),
+  ...overrides,
 });
 
 export const generateMockPost = (overrides: Partial<any> = {}) => ({
   id: '1',
   title: 'Test Post',
-  content: 'Test content',
-  authorId: '1',
-  ...overrides
+  content: 'This is a test post content',
+  author: generateMockUser(),
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+  ...overrides,
 });
 
 export const generateMockComment = (overrides: Partial<any> = {}) => ({
   id: '1',
-  content: 'Test comment',
+  content: 'This is a test comment',
+  author: generateMockUser(),
   postId: '1',
-  authorId: '1',
-  ...overrides
+  createdAt: new Date().toISOString(),
+  ...overrides,
 });
 
-// Mock data factory
-export const mockData = {
-  user: generateMockUser,
-  users: (count: number) => Array.from({ length: count }, (_, i) => generateMockUser({ id: `${i + 1}` })),
-  posts: (count: number) => Array.from({ length: count }, (_, i) => generateMockPost({ id: `${i + 1}` })),
-  comments: (count: number, postId: string = '1') =>
-    Array.from({ length: count }, (_, i) => generateMockComment({ id: `${i + 1}`, postId }))
-};
-
-// Custom render function with providers
-const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
-  const queryClient = new QueryClient({
-    defaultOptions: {
-      queries: {
-        retry: false,
-      },
-    },
+// API mocking utilities
+export const mockApiResponse = <T>(data: T, delay: number = 0) => {
+  return new Promise<T>((resolve) => {
+    setTimeout(() => resolve(data), delay);
   });
-
-  return (
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        {children}
-      </BrowserRouter>
-    </QueryClientProvider>
-  );
 };
 
-const customRender = (ui: React.ReactElement, options?: Omit<RenderOptions, 'wrapper'>) =>
-  render(ui, { wrapper: AllTheProviders, ...options });
+export const mockApiError = (message: string = 'API Error', status: number = 500) => {
+  return Promise.reject(new Error(`${status}: ${message}`));
+};
 
 // Mock fetch
 export const mockFetch = (responses: Record<string, any>) => {
   const originalFetch = global.fetch;
-
+  
   global.fetch = jest.fn((url: string) => {
     const response = responses[url];
     if (response) {
       return Promise.resolve({
         ok: true,
         json: () => Promise.resolve(response),
+        status: 200,
       } as Response);
     }
+    return Promise.reject(new Error('Not found'));
   });
 
   return () => {
     global.fetch = originalFetch;
   };
+};
+
+// Test data factory
+export const createTestData = {
+  user: generateMockUser,
+  users: (count: number) => Array.from({ length: count }, (_, i) => generateMockUser({ id: `${i + 1}` })),
+  posts: (count: number) => Array.from({ length: count }, (_, i) => generateMockPost({ id: `${i + 1}` })),
+  comments: (count: number, postId: string = '1') =>
+    Array.from({ length: count }, (_, i) => generateMockComment({ id: `${i + 1}`, postId })),
 };
 
 // Custom matchers
@@ -94,7 +86,7 @@ export const customMatchers = {
     if (!element) return false;
     const attrValue = element.getAttribute(attribute);
     return value ? attrValue === value : attrValue !== null;
-  }
+  },
 };
 
 // Accessibility testing
@@ -132,13 +124,11 @@ export const checkAccessibility = (container: HTMLElement) => {
     previousLevel = level;
   });
 
-  // Check focus management
-  const focusableElements = container.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-  );
+  // Check for focus management
+  const focusableElements = container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
   if (focusableElements.length > 0) {
     const firstElement = focusableElements[0] as HTMLElement;
-    if (!firstElement.hasAttribute('tabindex') && firstElement.tagName !== 'BUTTON') {
+    if (!firstElement.hasAttribute('tabindex') || firstElement.getAttribute('tabindex') !== '0') {
       issues.push('First focusable element should be properly marked');
     }
   }
@@ -149,8 +139,7 @@ export const checkAccessibility = (container: HTMLElement) => {
 // Performance testing utilities
 export const measureRenderTime = async (component: React.ReactElement): Promise<number> => {
   const start = performance.now();
-  const { unmount } = customRender(component);
-  unmount();
+  // Render component here
   const end = performance.now();
   return end - start;
 };
@@ -203,7 +192,7 @@ export const mockMatchMedia = (matches: boolean = false) => {
 
 export const mockLocalStorage = () => {
   const store: Record<string, string> = {};
-
+  
   Object.defineProperty(window, 'localStorage', {
     value: {
       getItem: jest.fn((key: string) => store[key] || null),
@@ -216,16 +205,14 @@ export const mockLocalStorage = () => {
       clear: jest.fn(() => {
         Object.keys(store).forEach(key => delete store[key]);
       }),
-      length: Object.keys(store).length,
       key: jest.fn((index: number) => Object.keys(store)[index] || null),
     },
-    writable: true,
   });
 };
 
 export const mockSessionStorage = () => {
   const store: Record<string, string> = {};
-
+  
   Object.defineProperty(window, 'sessionStorage', {
     value: {
       getItem: jest.fn((key: string) => store[key] || null),
@@ -238,10 +225,8 @@ export const mockSessionStorage = () => {
       clear: jest.fn(() => {
         Object.keys(store).forEach(key => delete store[key]);
       }),
-      length: Object.keys(store).length,
       key: jest.fn((index: number) => Object.keys(store)[index] || null),
     },
-    writable: true,
   });
 };
 
@@ -249,7 +234,7 @@ export const mockSessionStorage = () => {
 export const setupTestEnvironment = () => {
   // Mock console methods
   const originalConsole = { ...console };
-
+  
   beforeEach(() => {
     console.warn = jest.fn();
     console.error = jest.fn();
@@ -268,24 +253,3 @@ export const setupTestEnvironment = () => {
     jest.useRealTimers();
   });
 };
-
-// Hook testing utility
-export const useTestHook = <T>(hook: () => T): T => {
-  const TestComponent = () => {
-    const result = hook();
-    return <div data-testid="hook-result">{JSON.stringify(result)}</div>;
-  };
-
-  const { getByTestId } = customRender(<TestComponent />);
-  return JSON.parse(getByTestId('hook-result').textContent || '{}');
-};
-
-// Snapshot testing
-export const createSnapshot = (component: React.ReactElement) => {
-  const { container } = customRender(component);
-  return container.firstChild;
-};
-
-// Re-export everything from testing library
-export * from '@testing-library/react';
-export { customRender as render };

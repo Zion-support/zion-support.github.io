@@ -1,54 +1,61 @@
 import React from 'react';
-import { cn } from '../../lib/utils';
+import { Slot } from '@radix-ui/react-slot';
+import { ButtonProps } from '../../types/components';
+import LoadingSpinner from '../LoadingSpinner';
+import { cn } from '@/lib/utils';
+import { cva, type VariantProps } from "class-variance-authority";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'default' | 'outline' | 'ghost' | 'link';
-  size?: 'default' | 'sm' | 'lg' | 'icon';
-  asChild?: boolean;
-}
+const buttonVariants = cva(
+  "inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed",
+  {
+    variants: {
+      variant: {
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+      },
+      size: {
+        default: "h-10 px-4 py-2",
+        sm: "h-9 rounded-md px-3",
+        lg: "h-11 rounded-md px-8",
+        icon: "h-10 w-10",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+);
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = 'default', size = 'default', asChild = false, ...props }, ref) => {
-    const baseClasses = 'inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background';
-    
-    const variants = {
-      default: 'bg-zion-cyan text-zion-blue hover:bg-zion-cyan/90',
-      outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue',
-      ghost: 'hover:bg-zion-blue-light hover:text-zion-cyan',
-      link: 'underline-offset-4 hover:underline text-zion-cyan'
-    };
-    
-    const sizes = {
-      default: 'h-10 py-2 px-4',
-      sm: 'h-9 px-3 rounded-md',
-      lg: 'h-11 px-8 rounded-md',
-      icon: 'h-10 w-10'
-    };
-
-    const classes = cn(
-      baseClasses,
-      variants[variant],
-      sizes[size],
-      className
-    );
-
-    if (asChild && React.isValidElement(props.children)) {
-      return React.cloneElement(props.children, {
-        className: cn(classes, props.children.props.className),
-        ref
-      });
-    }
+  ({ className, variant, size, asChild = false, loading = false, disabled, onClick, children, ...props }, ref) => {
+    const Comp = asChild ? Slot : 'button';
+    const classes = cn(buttonVariants({ variant, size, className }));
 
     return (
-      <button
+      <Comp
         className={classes}
+        disabled={disabled || loading}
+        onClick={onClick}
         ref={ref}
         {...props}
-      />
+      >
+        {loading && (
+          <LoadingSpinner
+            size="sm"
+            className="mr-2"
+          />
+        )}
+        {children}
+      </Comp>
     );
   }
 );
 
 Button.displayName = 'Button';
 
-export { Button };
+export { Button, buttonVariants };

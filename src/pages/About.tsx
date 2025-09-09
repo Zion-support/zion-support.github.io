@@ -3,15 +3,14 @@ import React, { memo } from 'react';
 import { SEO } from "@/components/SEO";
 
 const InfoCard: React.FC<{ children: React.ReactNode }> = memo(({ children }) => (
-  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
     {children}
   </div>
 ));
 
 InfoCard.displayName = 'InfoCard';
 
-const About: React.FC = memo(() => {
-  const features = [
+const About: React.FC = memo(() => {  const features = [
     'Expert team with years of industry experience',
     'Cutting-edge AI and machine learning solutions',
     'Comprehensive IT support and cybersecurity',
