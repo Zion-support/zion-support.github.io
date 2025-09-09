@@ -2,6 +2,7 @@ import React from 'react'
 import { render, RenderOptions } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { vi } from 'vitest'
 import { AnalyticsProvider } from '../context/AnalyticsContext'
 import { LanguageProvider } from '../context/LanguageContext'
 import { ViewModeProvider } from '../context/ViewModeContext'
@@ -9,27 +10,27 @@ import { WhitelabelProvider } from '../context/WhitelabelContext'
 
 // Mock implementations for testing
 const mockAnalytics = {
-  trackEvent: jest.fn(),
-  trackPageView: jest.fn(),
-  setUser: jest.fn(),
-  identify: jest.fn()
+  trackEvent: vi.fn(),
+  trackPageView: vi.fn(),
+  setUser: vi.fn(),
+  identify: vi.fn()
 }
 
 const mockLanguage = {
   language: 'en',
-  setLanguage: jest.fn(),
+  setLanguage: vi.fn(),
   t: (key: string) => key
 }
 
 const mockViewMode = {
   viewMode: 'grid',
-  setViewMode: jest.fn(),
-  toggleViewMode: jest.fn()
+  setViewMode: vi.fn(),
+  toggleViewMode: vi.fn()
 }
 
 const mockWhitelabel = {
   theme: 'default',
-  setTheme: jest.fn(),
+  setTheme: vi.fn(),
   branding: {
     logo: '',
     companyName: 'Zion Tech Group',
@@ -43,7 +44,7 @@ const AllTheProviders: React.FC<{ children: React.ReactNode }> = ({ children }) 
     defaultOptions: {
       queries: {
         retry: false,
-        cacheTime: 0
+        gcTime: 0
       }
     }
   })
@@ -51,10 +52,10 @@ const AllTheProviders: React.FC<{ children: React.ReactNode }> = ({ children }) 
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <AnalyticsProvider value={mockAnalytics}>
-          <LanguageProvider value={mockLanguage}>
-            <ViewModeProvider value={mockViewMode}>
-              <WhitelabelProvider value={mockWhitelabel}>
+        <AnalyticsProvider>
+          <LanguageProvider>
+            <ViewModeProvider>
+              <WhitelabelProvider>
                 {children}
               </WhitelabelProvider>
             </ViewModeProvider>
@@ -122,28 +123,28 @@ export const waitForLoadingToFinish = () =>
   new Promise(resolve => setTimeout(resolve, 0))
 
 export const mockFetch = (data: any, status = 200) => {
-  global.fetch = jest.fn(() =>
+  global.fetch = vi.fn(() =>
     Promise.resolve({
       ok: status >= 200 && status < 300,
       status,
       json: () => Promise.resolve(data),
       text: () => Promise.resolve(JSON.stringify(data))
     })
-  ) as jest.Mock
+  ) as any
 }
 
 export const mockLocalStorage = () => {
   const store: Record<string, string> = {}
   
   return {
-    getItem: jest.fn((key: string) => store[key] || null),
-    setItem: jest.fn((key: string, value: string) => {
+    getItem: vi.fn((key: string) => store[key] || null),
+    setItem: vi.fn((key: string, value: string) => {
       store[key] = value
     }),
-    removeItem: jest.fn((key: string) => {
+    removeItem: vi.fn((key: string) => {
       delete store[key]
     }),
-    clear: jest.fn(() => {
+    clear: vi.fn(() => {
       Object.keys(store).forEach(key => delete store[key])
     })
   }
@@ -168,10 +169,10 @@ export const measurePerformance = (fn: () => void) => {
 
 // Mock router
 export const mockRouter = {
-  push: jest.fn(),
-  replace: jest.fn(),
-  goBack: jest.fn(),
-  goForward: jest.fn(),
+  push: vi.fn(),
+  replace: vi.fn(),
+  goBack: vi.fn(),
+  goForward: vi.fn(),
   location: {
     pathname: '/',
     search: '',
@@ -182,7 +183,7 @@ export const mockRouter = {
 
 // Clean up after tests
 export const cleanup = () => {
-  jest.clearAllMocks()
+  vi.clearAllMocks()
   localStorage.clear()
   sessionStorage.clear()
 }

@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, Star, Clock, Shield, Zap, Brain, Cloud, Database, Globe, Users, Code } from 'lucide-react';
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES } from '../data/comprehensiveServices';
-import { LoadingSpinner } from '../components/LoadingSpinner';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "AI & Machine Learning": <Brain className="w-6 h-6" />,
