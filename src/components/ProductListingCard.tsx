@@ -124,8 +124,6 @@ function ProductListingCardComponent({ listing, view = 'grid', onRequestQuote, d
           </div>
         </div>
       </div>
-    </div>);
+    </div>
+  );
 }
-;
-export const ProductListingCard = React.memo(ProductListingCardComponent);
-ProductListingCard.displayName = 'ProductListingCard';

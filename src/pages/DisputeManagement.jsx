@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SEO from '../SEO';
+import SEO from '@/components/SEO';
 export default function DisputeManagement() {
     const [activeTab, setActiveTab] = useState('overview');
     return (<>
