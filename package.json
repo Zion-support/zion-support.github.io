@@ -83,7 +83,7 @@
     "@types/lodash.debounce": "^4.0.9",
     "axios-retry": "^4.5.0",
     "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.0",
+    "clsx": "^2.1.1",
     "cmdk": "^0.2.1",
     "date-fns": "^3.3.1",
     "embla-carousel-react": "^8.0.0-rc19",
@@ -129,7 +129,7 @@
     "sonner": "^2.0.5",
     "stripe": "^18.2.0",
     "swr": "^2.2.0",
-    "tailwind-merge": "^2.2.1",
+    "tailwind-merge": "^2.6.0",
     "vaul": "^1.1.2",
     "yup": "^1.2.0",
     "zod": "^3.22.4"

@@ -11,6 +11,8 @@
   NPM_FLAGS = "--omit=optional"
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
+# Next.js plugin is disabled via UI for prebuilt static deploys
+
 # Headers
 [[headers]]
   for = "/*"

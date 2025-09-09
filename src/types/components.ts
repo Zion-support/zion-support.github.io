@@ -16,8 +16,8 @@ export interface LoadingSpinnerProps extends BaseComponentProps {
 }
 
 // Feature card props
-export interface FeatureCardProps extends BaseComponentProps {
-  id: string | number;
+export interface FeatureCardProps extends Omit<BaseComponentProps, 'id'> {
+  id: number;
   title: string;
   description: string;
   icon: ReactNode;
@@ -75,14 +75,19 @@ export interface CardProps extends BaseComponentProps {
 
 // Form props
 export interface FormProps extends BaseComponentProps {
+<<<<<<< HEAD
+  onSubmit: (data: Record<string, unknown>) => void;
+  initialValues?: Record<string, unknown>;
+=======
   onSubmit: (data: Record<string, any>) => void;
   initialValues?: Record<string, any>;
+>>>>>>> f4b09ea04ba03ec91ac9f9f038743c939fe2b361
   validationSchema?: unknown;
   loading?: boolean;
 }
 
 // Table props
-export interface TableProps<T = any> extends BaseComponentProps {
+export interface TableProps<T = unknown> extends BaseComponentProps {
   data: T[];
   columns: TableColumn<T>[];
   loading?: boolean;
@@ -96,7 +101,7 @@ export interface TableProps<T = any> extends BaseComponentProps {
   };
 }
 
-export interface TableColumn<T = any> {
+export interface TableColumn<T = unknown> {
   key: keyof T | string;
   title: string;
   render?: (value: unknown, row: T) => ReactNode;
@@ -138,5 +143,5 @@ export interface SEOProps {
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product';
-  structuredData?: Record<string, any>;
+  structuredData?: Record<string, unknown>;
 }

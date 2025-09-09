@@ -42,18 +42,16 @@
     }
   },
   "include": [
-
-    "src/**/*",
-    "src/**/*.tsx",
     "src/**/*.ts",
-    "src/**/*.js",
-    "src/**/*.jsx",
-    "next-env.d.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    ".next/types/**/*.ts"
+    "src/**/*.tsx"
   ],
   "exclude": [
-
+    "node_modules",
+    "dist",
+    "src.disabled",
+    "temp-disabled",
+    "temp_backup",
+    "tests",
+    "supabase/functions"
   ]
 }
