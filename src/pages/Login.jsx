@@ -17,7 +17,7 @@ export default function Login() {
 
   useEffect(() => {
     // This effect handles token processing (e.g., from magic link)
-    // It runs when component mounts or searchParams change
+    // It runs when component mounts or search params change
     const token = searchParams.get('token');
     if (token) {
       safeStorage.setItem('zion_token', token);
