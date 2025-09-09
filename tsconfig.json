@@ -9,11 +9,6 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "axios": ["./src/lib/axios.ts"]
-    },
     "types": ["vite/client", "react", "react-router-dom", "socket.io", "socket.io-client", "vitest/globals"],
 
     /* Bundler mode */
@@ -43,6 +38,11 @@
     "incremental": true,
     "noEmitOnError": false,
     /* Path mapping */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "axios": ["./src/lib/axios.ts"]
+    },
     "plugins": [
       {
         "name": "next"
