@@ -1,145 +1,114 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Zap, 
-  Globe, 
-  Cpu, 
-  Database, 
-  Network, 
-  Lock, 
-  Code, 
-  Rocket, 
-  Users, 
-  BarChart3, 
-  FileImage, 
-  TrendingUp, 
-  MessageCircle, 
-  Video, 
-  FileText, 
-  Heart,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Target,
-  Lightbulb
-} from 'lucide-react';
+import { Rocket, Zap, Shield, TrendingUp, Users, Globe, Code, BarChart3, Brain, Target, ShoppingCart } from 'lucide-react';
 
-const microSaasSolutions = [
-  {
-    id: 'ai-business-intelligence',
-    name: 'AI Business Intelligence',
-    description: 'Transform your business data into actionable insights with AI-powered analytics and reporting.',
-    icon: Brain,
-    features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom Reports', 'Data Visualization'],
-    href: '/micro-saas/ai-business-intelligence',
-    color: 'from-zion-cyan to-zion-blue',
-    category: 'AI & Analytics'
-  },
-  {
-    id: 'customer-experience',
-    name: 'Customer Experience Platform',
-    description: 'Deliver exceptional customer experiences with AI-driven personalization and automation.',
-    icon: Users,
-    features: ['Customer Journey Mapping', 'Personalization Engine', 'Feedback Analytics', 'Omnichannel Support'],
-    href: '/micro-saas/customer-experience',
-    color: 'from-zion-purple to-zion-pink',
-    category: 'Customer Engagement'
-  },
-  {
-    id: 'quantum-computing',
-    name: 'Quantum Computing Solutions',
-    description: 'Leverage quantum computing power for complex problem-solving and optimization.',
-    icon: Rocket,
-    features: ['Quantum Algorithms', 'Optimization Tools', 'Simulation Platform', 'API Integration'],
-    href: '/micro-saas/quantum-computing',
-    color: 'from-zion-blue to-zion-cyan',
-    category: 'Advanced Computing'
-  },
-  {
-    id: 'supply-chain',
-    name: 'Supply Chain Intelligence',
-    description: 'Optimize your supply chain with AI-powered forecasting and real-time monitoring.',
-    icon: Network,
-    features: ['Demand Forecasting', 'Inventory Optimization', 'Risk Assessment', 'Performance Analytics'],
-    href: '/micro-saas/supply-chain',
-    color: 'from-zion-green to-zion-blue',
-    category: 'Operations'
-  },
-  {
-    id: 'cybersecurity',
-    name: 'Cybersecurity Suite',
-    description: 'Protect your digital assets with advanced threat detection and response capabilities.',
-    icon: Shield,
-    features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Compliance Monitoring'],
-    href: '/micro-saas/cybersecurity',
-    color: 'from-zion-red to-zion-orange',
-    category: 'Security'
-  },
-  {
-    id: 'iot-edge',
-    name: 'IoT Edge Computing',
-    description: 'Build and deploy IoT solutions with edge computing capabilities for real-time processing.',
-    icon: Cpu,
-    features: ['Edge Analytics', 'Device Management', 'Real-time Processing', 'Cloud Integration'],
-    href: '/micro-saas/iot-edge',
-    color: 'from-zion-purple to-zion-cyan',
-    category: 'IoT & Edge'
-  },
-  {
-    id: 'content-creation',
-    name: 'AI Content Creation',
-    description: 'Generate high-quality content automatically with AI-powered writing and design tools.',
-    icon: FileText,
-    features: ['Content Generation', 'Design Automation', 'SEO Optimization', 'Multi-format Output'],
-    href: '/micro-saas/content-creation',
-    color: 'from-zion-pink to-zion-purple',
-    category: 'Content & Marketing'
-  },
-  {
-    id: 'hr-platform',
-    name: 'HR Management Platform',
-    description: 'Streamline HR operations with AI-driven recruitment, performance management, and analytics.',
-    icon: Users,
-    features: ['Talent Acquisition', 'Performance Tracking', 'Employee Analytics', 'Compliance Management'],
-    href: '/micro-saas/hr-platform',
-    color: 'from-zion-green to-zion-blue',
-    category: 'Human Resources'
-  }
-];
+const MicroSaasPage = () => {
+  const services = [
+    {
+      name: 'AI Business Intelligence',
+      description: 'Intelligent analytics and insights powered by AI',
+      icon: Brain,
+      features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom Reports'],
+      price: 'From $99/month',
+      color: 'from-zion-cyan to-zion-blue'
+    },
+    {
+      name: 'Customer Experience Platform',
+      description: 'Omnichannel customer engagement and support',
+      icon: Users,
+      features: ['Live Chat', 'Ticket Management', 'Customer Analytics'],
+      price: 'From $149/month',
+      color: 'from-zion-purple to-zion-pink'
+    },
+    {
+      name: 'Digital Transformation Suite',
+      description: 'End-to-end digital transformation solutions',
+      icon: Rocket,
+      features: ['Process Automation', 'Legacy Migration', 'Change Management'],
+      price: 'From $299/month',
+      color: 'from-zion-green to-zion-cyan'
+    },
+    {
+      name: 'Cybersecurity Framework',
+      description: 'Comprehensive security and compliance solutions',
+      icon: Shield,
+      features: ['Threat Detection', 'Compliance Monitoring', 'Security Training'],
+      price: 'From $199/month',
+      color: 'from-zion-orange to-zion-red'
+    },
+    {
+      name: 'Cloud Management Platform',
+      description: 'Multi-cloud orchestration and optimization',
+      icon: Globe,
+      features: ['Cost Optimization', 'Performance Monitoring', 'Auto-scaling'],
+      price: 'From $179/month',
+      color: 'from-zion-blue to-zion-purple'
+    },
+    {
+      name: 'Data Analytics Engine',
+      description: 'Advanced data processing and visualization',
+      icon: BarChart3,
+      features: ['Data Integration', 'ML Models', 'Interactive Charts'],
+      price: 'From $129/month',
+      color: 'from-zion-pink to-zion-orange'
+    }
+  ];
 
-const benefits = [
-  {
-    icon: Zap,
-    title: 'Rapid Deployment',
-    description: 'Get up and running in minutes with our pre-built solutions and templates.'
-  },
-  {
-    icon: Target,
-    title: 'Scalable Architecture',
-    description: 'Start small and scale up as your business grows with flexible pricing models.'
-  },
-  {
-    icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Bank-grade security with SOC 2 compliance and advanced encryption.'
-  },
-  {
-    icon: Lightbulb,
-    title: 'AI-Powered Insights',
-    description: 'Leverage machine learning and AI to make data-driven decisions.'
-  }
-];
+  const benefits = [
+    {
+      title: 'Rapid Deployment',
+      description: 'Get up and running in days, not months',
+      icon: Zap,
+      color: 'text-zion-cyan'
+    },
+    {
+      title: 'Scalable Architecture',
+      description: 'Grow with your business needs',
+      icon: TrendingUp,
+      color: 'text-zion-purple'
+    },
+    {
+      title: 'Cost Effective',
+      description: 'Pay only for what you use',
+      icon: Target,
+      color: 'text-zion-blue'
+    },
+    {
+      title: 'Enterprise Security',
+      description: 'Bank-grade security and compliance',
+      icon: Shield,
+      color: 'text-zion-green'
+    }
+  ];
 
-export default function MicroSaas() {
+  const useCases = [
+    {
+      industry: 'Healthcare',
+      solutions: ['Patient Management', 'Compliance Tracking', 'Telemedicine'],
+      icon: Users
+    },
+    {
+      industry: 'Finance',
+      solutions: ['Risk Management', 'Compliance Automation', 'Customer Analytics'],
+      icon: Shield
+    },
+    {
+      industry: 'Manufacturing',
+      solutions: ['IoT Integration', 'Predictive Maintenance', 'Supply Chain'],
+      icon: Code
+    },
+    {
+      industry: 'Retail',
+      solutions: ['Inventory Management', 'Customer Insights', 'E-commerce'],
+      icon: ShoppingCart
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>
+      <section className="relative pt-20 pb-16 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
         <div className="container-responsive relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -147,28 +116,82 @@ export default function MicroSaas() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
+                <Rocket className="w-10 h-10 text-white" />
+              </div>
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-6">
               Micro SAAS Solutions
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Powerful, focused software solutions that solve specific business challenges. 
-              Deploy in minutes, scale as you grow, and transform your operations with AI-powered tools.
+              Powerful, focused software-as-a-service solutions designed for modern businesses. 
+              Deploy quickly, scale efficiently, and transform your operations.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/contact"
-                className="btn-futuristic px-8 py-4 text-lg"
-              >
-                Get Started
-              </Link>
-              <Link
-                to="/demo"
-                className="btn-neon px-8 py-4 text-lg"
-              >
-                Request Demo
-              </Link>
+              <button className="btn-futuristic px-8 py-4 text-lg">
+                Explore Solutions
+              </button>
+              <button className="btn-neon px-8 py-4 text-lg">
+                Schedule Demo
+              </button>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Our Micro SAAS Portfolio
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Specialized solutions that address specific business challenges with precision and efficiency.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={service.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group cursor-pointer"
+              >
+                <div className="bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
+                  <p className="text-zion-slate-light mb-6">{service.description}</p>
+                  
+                  <div className="space-y-3 mb-6">
+                    {service.features.map((feature) => (
+                      <div key={feature} className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                        <span className="text-sm text-zion-slate-light">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-zion-cyan mb-4">{service.price}</div>
+                    <button className="btn-futuristic w-full">
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -184,8 +207,8 @@ export default function MicroSaas() {
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Micro SAAS?
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our micro SAAS solutions are designed for modern businesses that need powerful tools without the complexity.
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Our approach delivers focused solutions that solve specific problems without unnecessary complexity.
             </p>
           </motion.div>
 
@@ -196,10 +219,10 @@ export default function MicroSaas() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center p-6 bg-zion-slate-dark/50 rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+                className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <benefit.icon className={`w-8 h-8 ${benefit.color}`} />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-zion-slate-light">{benefit.description}</p>
@@ -209,7 +232,7 @@ export default function MicroSaas() {
         </div>
       </section>
 
-      {/* Solutions Grid */}
+      {/* Use Cases */}
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
@@ -219,64 +242,96 @@ export default function MicroSaas() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Explore Our Solutions
+              Industry Solutions
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              From AI-powered analytics to cybersecurity, we have the tools you need to succeed.
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Tailored solutions for specific industries and use cases.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaasSolutions.map((solution, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
               <motion.div
-                key={solution.id}
+                key={useCase.industry}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group"
+                className="bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8"
               >
-                <Link to={solution.href}>
-                  <div className="bg-zion-slate-dark/50 rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 p-6 h-full hover:bg-zion-slate-dark/70">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center`}>
-                        <solution.icon className="w-8 h-8 text-white" />
-                      </div>
-                      <span className="text-xs text-zion-cyan bg-zion-cyan/10 px-2 py-1 rounded-full">
-                        {solution.category}
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                      {solution.name}
-                    </h3>
-                    
-                    <p className="text-zion-slate-light mb-4 leading-relaxed">
-                      {solution.description}
-                    </p>
-                    
-                    <div className="space-y-2 mb-6">
-                      {solution.features.slice(0, 3).map((feature, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-zion-slate-light">
-                          <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                    
-                    <div className="flex items-center text-zion-cyan group-hover:text-zion-purple transition-colors">
-                      <span className="text-sm font-medium">Learn More</span>
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </div>
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
+                    <useCase.icon className="w-6 h-6 text-white" />
                   </div>
-                </Link>
+                  <h3 className="text-2xl font-semibold text-white">{useCase.industry}</h3>
+                </div>
+                
+                <div className="space-y-3">
+                  {useCase.solutions.map((solution) => (
+                    <div key={solution} className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                      <span className="text-zion-slate-light">{solution}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <button className="btn-futuristic mt-6">
+                  Explore {useCase.industry} Solutions
+                </button>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Stats Section */}
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
+        <div className="container-responsive">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <div className="text-4xl font-bold text-zion-cyan mb-2">50+</div>
+              <div className="text-zion-slate-light">Micro SAAS Solutions</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-center"
+            >
+              <div className="text-4xl font-bold text-zion-purple mb-2">1000+</div>
+              <div className="text-zion-slate-light">Active Users</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-center"
+            >
+              <div className="text-4xl font-bold text-zion-blue mb-2">99.9%</div>
+              <div className="text-zion-slate-light">Uptime</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-center"
+            >
+              <div className="text-4xl font-bold text-zion-cyan mb-2">24/7</div>
+              <div className="text-zion-slate-light">Support</div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
+      <section className="py-20">
         <div className="container-responsive text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -287,25 +342,25 @@ export default function MicroSaas() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses that have already revolutionized their operations with our micro SAAS solutions.
+              Start with a focused solution and scale as you grow. Our micro SAAS approach 
+              ensures you get exactly what you need, when you need it.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/contact"
-                className="btn-futuristic px-8 py-4 text-lg"
-              >
+              <button className="btn-futuristic px-8 py-4 text-lg">
                 Start Free Trial
-              </Link>
-              <Link
-                to="/pricing"
-                className="btn-neon px-8 py-4 text-lg"
-              >
-                View Pricing
-              </Link>
+              </button>
+              <button className="btn-neon px-8 py-4 text-lg">
+                Contact Sales
+              </button>
+              <button className="btn-futuristic px-8 py-4 text-lg">
+                View Documentation
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default MicroSaasPage;

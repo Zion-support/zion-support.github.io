@@ -1,48 +1,48 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Leaf, Zap, Globe, Target, Users, BarChart3, Shield } from 'lucide-react';
+import { Server, Network, Shield, Zap, Database, Globe, Cpu, Target } from 'lucide-react';
 
-const SustainabilityPage = () => {
+const InfrastructurePage = () => {
   const services = [
     {
-      icon: Heart,
-      title: 'Green IT Solutions',
-      description: 'Energy-efficient technology solutions that reduce environmental impact while maintaining performance.'
+      icon: Server,
+      title: 'Server Management',
+      description: 'Comprehensive server infrastructure design, deployment, and ongoing management services.'
     },
     {
-      icon: Leaf,
-      title: 'Carbon Footprint Analysis',
-      description: 'Comprehensive assessment and tracking of your organization\'s carbon emissions and environmental impact.'
-    },
-    {
-      icon: Zap,
-      title: 'Renewable Energy Integration',
-      description: 'Smart grid solutions and renewable energy systems for sustainable power management.'
-    },
-    {
-      icon: Globe,
-      title: 'Circular Economy',
-      description: 'Waste reduction strategies and resource optimization for sustainable business practices.'
-    },
-    {
-      icon: Target,
-      title: 'Sustainability Reporting',
-      description: 'ESG reporting and compliance solutions for transparent sustainability performance tracking.'
+      icon: Network,
+      title: 'Network Design',
+      description: 'Scalable network architecture with high availability, security, and performance optimization.'
     },
     {
       icon: Shield,
-      title: 'Climate Risk Management',
-      description: 'Assessment and mitigation strategies for climate-related risks and opportunities.'
+      title: 'Security Infrastructure',
+      description: 'Multi-layered security solutions including firewalls, intrusion detection, and access control.'
+    },
+    {
+      icon: Zap,
+      title: 'High Availability',
+      description: 'Redundant systems and failover solutions to ensure 99.9% uptime and business continuity.'
+    },
+    {
+      icon: Database,
+      title: 'Storage Solutions',
+      description: 'Enterprise storage systems with backup, disaster recovery, and data protection.'
+    },
+    {
+      icon: Globe,
+      title: 'Global Connectivity',
+      description: 'Multi-site connectivity solutions with load balancing and geographic redundancy.'
     }
   ];
 
   const benefits = [
-    'Reduce energy costs by 30-50%',
-    'Improve brand reputation and customer loyalty',
-    'Comply with environmental regulations',
-    'Attract and retain top talent',
-    'Access green financing and incentives',
-    'Future-proof your business operations'
+    'Improve system reliability to 99.9%',
+    'Reduce infrastructure costs by 25-40%',
+    'Enhance security and compliance',
+    'Scale infrastructure as needed',
+    'Optimize performance and efficiency',
+    'Ensure business continuity'
   ];
 
   return (
@@ -59,22 +59,22 @@ const SustainabilityPage = () => {
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
-                <Heart className="w-10 h-10 text-white" />
+                <Server className="w-10 h-10 text-white" />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-6">
-              Sustainability Solutions
+              Infrastructure Solutions
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Transform your business into a sustainable powerhouse. Our green technology solutions help you 
-              reduce environmental impact while improving efficiency and profitability.
+              Build a rock-solid foundation for your business with our enterprise-grade infrastructure solutions. 
+              From servers to networks, we provide reliable, scalable, and secure technology foundations.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <button className="btn-futuristic px-8 py-3 text-lg">
-                Sustainability Assessment
+                Infrastructure Assessment
               </button>
               <button className="btn-neon px-8 py-3 text-lg">
-                Green IT Solutions
+                Get Quote
               </button>
             </div>
           </motion.div>
@@ -91,10 +91,10 @@ const SustainabilityPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Sustainable Technology Services
+              Infrastructure Services
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              From green IT to carbon management, we provide comprehensive sustainability solutions.
+              Comprehensive infrastructure solutions designed for enterprise reliability and performance.
             </p>
           </motion.div>
 
@@ -128,11 +128,11 @@ const SustainabilityPage = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Why Choose Sustainable Solutions?
+                Why Choose Our Infrastructure?
               </h2>
               <p className="text-lg text-zion-slate-light mb-8 leading-relaxed">
-                Sustainability is not just good for the planet—it's good for business. Our solutions help you 
-                achieve both environmental and financial goals.
+                Our infrastructure solutions are built for enterprise reliability, providing the foundation 
+                your business needs to grow and succeed.
               </p>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -160,12 +160,12 @@ const SustainabilityPage = () => {
             >
               <div className="bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-3xl p-8 border border-zion-cyan/30">
                 <div className="text-center">
-                  <Leaf className="w-16 h-16 text-zion-cyan mx-auto mb-6" />
+                  <Target className="w-16 h-16 text-zion-cyan mx-auto mb-6" />
                   <h3 className="text-2xl font-semibold text-white mb-4">
-                    Green IT Assessment
+                    Infrastructure Assessment
                   </h3>
                   <p className="text-zion-slate-light mb-6">
-                    Get a comprehensive assessment of your IT infrastructure's environmental impact.
+                    Get a comprehensive evaluation of your current infrastructure and optimization recommendations.
                   </p>
                   <button className="btn-futuristic px-6 py-3">
                     Get Assessment
@@ -177,68 +177,8 @@ const SustainabilityPage = () => {
         </div>
       </section>
 
-      {/* Impact Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Environmental Impact
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              See the real difference our sustainability solutions can make for your organization and the planet.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-4xl font-bold text-zion-cyan mb-2">40%</h3>
-              <div className="text-zion-slate-light">Energy Reduction</div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Globe className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-4xl font-bold text-zion-purple mb-2">60%</h3>
-              <div className="text-zion-slate-light">Carbon Footprint Reduction</div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Target className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-4xl font-bold text-zion-blue mb-2">25%</h3>
-              <div className="text-zion-slate-light">Cost Savings</div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
         <div className="container-responsive text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -246,17 +186,17 @@ const SustainabilityPage = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Go Green?
+              Ready to Build Your Foundation?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Join the sustainability revolution and create a better future for your business and the planet.
+              Create a robust, scalable infrastructure that supports your business growth and success.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <button className="btn-futuristic px-8 py-4 text-lg">
-                Sustainability Consultation
+                Schedule Consultation
               </button>
               <button className="btn-neon px-8 py-4 text-lg">
-                Green IT Solutions
+                Get Infrastructure Quote
               </button>
             </div>
           </motion.div>
@@ -266,4 +206,4 @@ const SustainabilityPage = () => {
   );
 };
 
-export default SustainabilityPage;
+export default InfrastructurePage;

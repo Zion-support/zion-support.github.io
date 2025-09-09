@@ -34,6 +34,24 @@ const LoadingFallback = () => (
   </div>
 );
 
+// Additional lazy loaded pages
+const AIAnalytics = React.lazy(() => import('./pages/services/ai-analytics'));
+const Cybersecurity = React.lazy(() => import('./pages/services/cybersecurity'));
+const CloudDevOps = React.lazy(() => import('./pages/services/cloud-devops'));
+const IoTEdge = React.lazy(() => import('./pages/services/iot-edge'));
+const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
+const Blockchain = React.lazy(() => import('./pages/services/blockchain'));
+const DigitalTwin = React.lazy(() => import('./pages/services/digital-twin'));
+const Sustainability = React.lazy(() => import('./pages/services/sustainability'));
+const Infrastructure = React.lazy(() => import('./pages/services/infrastructure'));
+const Team = React.lazy(() => import('./pages/Team'));
+const Help = React.lazy(() => import('./pages/Help'));
+const Security = React.lazy(() => import('./pages/Security'));
+const Status = React.lazy(() => import('./pages/Status'));
+const Marketplace = React.lazy(() => import('./pages/Marketplace'));
+const MicroSaas = React.lazy(() => import('./pages/MicroSaas'));
+const ITServices = React.lazy(() => import('./pages/ITServices'));
+
 function App() {
   return (
     <Router>
@@ -61,11 +79,33 @@ function App() {
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
-              
-              {/* New Services Routes */}
-              <Route path="/all-services-2025" element={<AllServices2025 />} />
-              <Route path="/services" element={<AllServices2025 />} />
-              <Route path="/comprehensive-services" element={<AllServices2025 />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services-advertising" element={<ServicesAdvertising />} />
+              <Route path="/services/ai-analytics" element={<AIAnalytics />} />
+              <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+              <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+              <Route path="/services/iot-edge" element={<IoTEdge />} />
+              <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+              <Route path="/services/blockchain" element={<Blockchain />} />
+              <Route path="/services/digital-twin" element={<DigitalTwin />} />
+              <Route path="/services/sustainability" element={<Sustainability />} />
+              <Route path="/it-services/infrastructure" element={<Infrastructure />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/help" element={<Help />} />
+              <Route path="/security" element={<Security />} />
+              <Route path="/status" element={<Status />} />
+              <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/micro-saas" element={<MicroSaas />} />
+              <Route path="/it-services" element={<ITServices />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/micro-saas-services" element={<MicroSaasServices />} />
+              <Route path="/zion-hire-ai" element={<ZionHireAI />} />
+              <Route path="/hire-ai" element={<ZionHireAI />} />
+              <Route path="/innovative-services-2027" element={<InnovativeServices2027 />} />
+              <Route path="/comprehensive-pricing-2027" element={<ComprehensivePricing2027 />} />
+              <Route path="/all-services-2027" element={<AllServices2027 />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>

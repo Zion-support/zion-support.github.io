@@ -1,50 +1,48 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Rocket, Atom, Zap, Target, Brain, Globe, Shield, BarChart3 } from 'lucide-react';
+import { Shield, Lock, Eye, AlertTriangle, Users, Globe, Zap, Target, CheckCircle } from 'lucide-react';
 
-const QuantumComputingPage = () => {
-  const services = [
+const SecurityPage = () => {
+  const securityFeatures = [
     {
-      icon: Atom,
-      title: 'Quantum Algorithms',
-      description: 'Custom quantum algorithms designed for specific business problems and optimization challenges.'
+      icon: Shield,
+      title: 'Multi-Layer Security',
+      description: 'Enterprise-grade security with multiple layers of protection including firewalls, encryption, and access controls.'
     },
     {
-      icon: Zap,
-      title: 'Quantum Simulation',
-      description: 'Advanced quantum simulation for complex systems in chemistry, materials science, and finance.'
+      icon: Lock,
+      title: 'Data Encryption',
+      description: 'End-to-end encryption for data at rest and in transit, ensuring your information remains secure.'
     },
     {
-      icon: Target,
-      title: 'Optimization Solutions',
-      description: 'Quantum optimization for logistics, supply chain, and resource allocation problems.'
+      icon: Eye,
+      title: '24/7 Monitoring',
+      description: 'Continuous security monitoring with real-time threat detection and automated response systems.'
     },
     {
-      icon: Brain,
-      title: 'Machine Learning',
-      description: 'Quantum machine learning algorithms for enhanced pattern recognition and data analysis.'
+      icon: AlertTriangle,
+      title: 'Threat Intelligence',
+      description: 'Advanced threat intelligence and proactive security measures to prevent attacks before they occur.'
+    },
+    {
+      icon: Users,
+      title: 'Access Control',
+      description: 'Role-based access control with multi-factor authentication and secure user management.'
     },
     {
       icon: Globe,
-      title: 'Cryptography',
-      description: 'Quantum-resistant cryptography and secure communication protocols for the future.'
-    },
-    {
-      icon: Shield,
-      title: 'Research & Development',
-      description: 'Collaborative R&D programs to advance quantum computing applications in your industry.'
+      title: 'Compliance',
+      description: 'Full compliance with industry standards including SOC2, ISO 27001, and GDPR requirements.'
     }
   ];
 
-  const applications = [
-    'Financial Modeling & Risk Assessment',
-    'Drug Discovery & Molecular Design',
-    'Supply Chain Optimization',
-    'Climate Modeling & Prediction',
-    'Artificial Intelligence Enhancement',
-    'Cryptographic Security',
-    'Material Science Research',
-    'Logistics & Transportation'
+  const complianceStandards = [
+    'SOC 2 Type II Certification',
+    'ISO 27001 Information Security',
+    'GDPR Compliance',
+    'HIPAA Compliance',
+    'PCI DSS Compliance',
+    'NIST Cybersecurity Framework'
   ];
 
   return (
@@ -61,29 +59,29 @@ const QuantumComputingPage = () => {
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
-                <Rocket className="w-10 h-10 text-white" />
+                <Shield className="w-10 h-10 text-white" />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-6">
-              Quantum Computing
+              Security & Compliance
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Unlock the future of computing with quantum technology. Solve previously impossible problems 
-              and accelerate innovation across industries with our quantum computing solutions.
+              Your security is our top priority. We implement enterprise-grade security measures and maintain 
+              full compliance with industry standards to protect your data and business.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <button className="btn-futuristic px-8 py-3 text-lg">
-                Quantum Assessment
+                Security Assessment
               </button>
               <button className="btn-neon px-8 py-3 text-lg">
-                Research Partnership
+                Compliance Report
               </button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Security Features */}
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container-responsive">
           <motion.div
@@ -93,34 +91,34 @@ const QuantumComputingPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Quantum Computing Services
+              Security Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              From algorithm development to quantum simulation, we provide comprehensive quantum computing solutions.
+              Comprehensive security measures designed to protect your business and data.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {securityFeatures.map((feature, index) => (
               <motion.div
-                key={service.title}
+                key={feature.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white" />
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
-                <p className="text-zion-slate-light leading-relaxed">{service.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-zion-slate-light leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Applications Section */}
+      {/* Compliance Section */}
       <section className="py-20">
         <div className="container-responsive">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -130,25 +128,23 @@ const QuantumComputingPage = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Industry Applications
+                Industry Compliance
               </h2>
               <p className="text-lg text-zion-slate-light mb-8 leading-relaxed">
-                Quantum computing is revolutionizing industries by solving complex problems that were previously 
-                impossible with classical computers.
+                We maintain full compliance with industry standards and regulations to ensure your business 
+                meets all security and privacy requirements.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {applications.map((application, index) => (
+                {complianceStandards.map((standard, index) => (
                   <motion.div
-                    key={application}
+                    key={standard}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="flex items-center space-x-3 text-zion-slate-light"
                   >
-                    <div className="w-6 h-6 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    <span>{application}</span>
+                    <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                    <span>{standard}</span>
                   </motion.div>
                 ))}
               </div>
@@ -162,12 +158,12 @@ const QuantumComputingPage = () => {
             >
               <div className="bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-3xl p-8 border border-zion-cyan/30">
                 <div className="text-center">
-                  <Brain className="w-16 h-16 text-zion-cyan mx-auto mb-6" />
+                  <Target className="w-16 h-16 text-zion-cyan mx-auto mb-6" />
                   <h3 className="text-2xl font-semibold text-white mb-4">
-                    Quantum Readiness
+                    Security Assessment
                   </h3>
                   <p className="text-zion-slate-light mb-6">
-                    Assess your organization's readiness for quantum computing adoption.
+                    Get a comprehensive security evaluation of your infrastructure and systems.
                   </p>
                   <button className="btn-futuristic px-6 py-3">
                     Get Assessment
@@ -179,61 +175,33 @@ const QuantumComputingPage = () => {
         </div>
       </section>
 
-      {/* Quantum Advantage Section */}
+      {/* Security Stats */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
         <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              The Quantum Advantage
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Discover how quantum computing can provide exponential speedup for your most complex computational challenges.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-center"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Exponential Speedup</h3>
-              <p className="text-zion-slate-light">Solve problems in minutes that would take classical computers years.</p>
+              <div className="text-4xl font-bold text-zion-cyan mb-2">99.99%</div>
+              <div className="text-zion-slate-light">Uptime</div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-center"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Target className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Complex Optimization</h3>
-              <p className="text-zion-slate-light">Find optimal solutions for multi-dimensional optimization problems.</p>
+              <div className="text-4xl font-bold text-zion-purple mb-2">&lt;5min</div>
+              <div className="text-zion-slate-light">Response Time</div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-center"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <BarChart3 className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Advanced Simulation</h3>
-              <p className="text-zion-slate-light">Simulate quantum systems and complex molecular interactions.</p>
+              <div className="text-4xl font-bold text-zion-blue mb-2">0</div>
+              <div className="text-zion-slate-light">Security Breaches</div>
             </motion.div>
           </div>
         </div>
@@ -248,17 +216,17 @@ const QuantumComputingPage = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready for the Quantum Future?
+              Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Position your organization at the forefront of quantum computing innovation and gain a competitive advantage.
+              Protect your business with enterprise-grade security and maintain full compliance with industry standards.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <button className="btn-futuristic px-8 py-4 text-lg">
-                Quantum Strategy Session
+                Security Consultation
               </button>
               <button className="btn-neon px-8 py-4 text-lg">
-                Research Partnership
+                Compliance Review
               </button>
             </div>
           </motion.div>
@@ -268,4 +236,4 @@ const QuantumComputingPage = () => {
   );
 };
 
-export default QuantumComputingPage;
+export default SecurityPage;
