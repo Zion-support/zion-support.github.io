@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -9,7 +8,6 @@ export default function Custom404() {
     <Layout
       title="404 - Page Not Found | Zion Tech Group"
       description="The page you're looking for doesn't exist. Return to our homepage or explore our services."
-      noIndex={true}
     >
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="max-w-2xl mx-auto px-4 text-center">
@@ -18,76 +16,30 @@ export default function Custom404() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {/* 404 Animation */}
-            <motion.div
-              className="text-8xl md:text-9xl font-bold text-blue-600 mb-8"
-              animate={{
-                scale: [1, 1.1, 1],
-                rotate: [0, 5, -5, 0]
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                repeatType: "reverse"
-              }}
-            >
-              404
-            </motion.div>
-
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Page Not Found
-            </h1>
-            
-            <p className="text-xl text-gray-600 mb-8">
-              Sorry, the page you're looking for doesn't exist or has been moved.
+            <h1 className="text-9xl font-bold text-blue-600 mb-4">404</h1>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Page Not Found</h2>
+            <p className="text-lg text-gray-600 mb-8">
+              The page you're looking for doesn't exist or has been moved.
             </p>
-
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300"
               >
-                <Home className="w-5 h-5" />
+                <Home className="mr-2 h-5 w-5" />
                 Go Home
               </Link>
-              
-              <button
-                onClick={() => window.history.back()}
-                className="inline-flex items-center gap-2 bg-gray-600 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-colors"
+              <Link
+                href="/services"
+                className="inline-flex items-center border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-300"
               >
-                <ArrowLeft className="w-5 h-5" />
-                Go Back
-              </button>
-            </div>
-
-            {/* Search Suggestion */}
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h2 className="text-lg font-semibold text-gray-900 mb-4">
-                Looking for something specific?
-              </h2>
-              <div className="flex gap-2">
-                <input
-                  type="text"
-                  placeholder="Search our website..."
-                  className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                  <Search className="w-5 h-5" />
-                </button>
-              </div>
+                <Search className="mr-2 h-5 w-5" />
+                Explore Services
+              </Link>
             </div>
           </motion.div>
         </div>
       </div>
     </Layout>
-=======
-export default function NotFound() {
-  return (
-    <div className="py-24 text-center">
-      <h1 className="text-4xl font-bold">404</h1>
-      <p className="mt-2 opacity-80">Page not found</p>
-    </div>
->>>>>>> origin/feat/home-redesign
   );
 }

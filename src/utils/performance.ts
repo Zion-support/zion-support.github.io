@@ -1,242 +1,265 @@
 /**
- * Performance Monitoring Utility
- * Tracks and reports performance metrics
+ * Performance monitoring utilities
  */
 
-export interface PerformanceMetric {
-  name: string;
-  value: number;
-  timestamp: string;
-  type: 'timing' | 'counter' | 'gauge';
-  tags?: Record<string, string>;
-}
-
-export interface WebVitalsMetric {
-  name: 'CLS' | 'FID' | 'FCP' | 'LCP' | 'TTFB';
-  value: number;
-  delta: number;
-  id: string;
-  navigationType: string;
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  bundleSize: number;
+  memoryUsage: number;
 }
 
 class PerformanceMonitor {
-  private static instance: PerformanceMonitor;
-  private metrics: PerformanceMetric[] = [];
-  private observers: PerformanceObserver[] = [];
-  private maxMetrics = 1000;
+  private metrics: PerformanceMetrics = {
+    loadTime: 0,
+    renderTime: 0,
+    bundleSize: 0,
+    memoryUsage: 0,
+  };
 
-  private constructor() {
-    this.initializeWebVitals();
-    this.initializeResourceTiming();
+  private startTime: number = 0;
+
+  constructor() {
+    this.startTime = performance.now();
+    this.measureLoadTime();
+    this.measureMemoryUsage();
   }
 
-  public static getInstance(): PerformanceMonitor {
-    if (!PerformanceMonitor.instance) {
-      PerformanceMonitor.instance = new PerformanceMonitor();
+  private measureLoadTime() {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('load', () => {
+        this.metrics.loadTime = performance.now() - this.startTime;
+        this.reportMetrics();
+      });
     }
-    return PerformanceMonitor.instance;
   }
 
-  /**
-   * Initialize Web Vitals monitoring
-   */
-  private initializeWebVitals(): void {
-    if (typeof window === 'undefined') return;
+  private measureMemoryUsage() {
+    if (typeof window !== 'undefined' && 'memory' in performance) {
+      const memory = (performance as any).memory;
+      this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
+    }
+  }
 
-    // First Contentful Paint (FCP)
-    this.observeMetric('paint', (entries) => {
-      entries.forEach((entry) => {
-        if (entry.name === 'first-contentful-paint') {
-          this.recordMetric('FCP', entry.startTime, 'timing');
+  private reportMetrics() {
+    if (process.env.NODE_ENV === 'development') {
+      console.group('🚀 Performance Metrics');
+      console.log(`Load Time: ${this.metrics.loadTime.toFixed(2)}ms`);
+      console.log(`Memory Usage: ${this.metrics.memoryUsage.toFixed(2)}MB`);
+      console.log(`Bundle Size: ${this.metrics.bundleSize}KB`);
+      console.groupEnd();
+    }
+  }
+
+  public measureRenderTime(componentName: string) {
+    const start = performance.now();
+    return () => {
+      const end = performance.now();
+      const renderTime = end - start;
+      this.metrics.renderTime = Math.max(this.metrics.renderTime, renderTime);
+      
+      if (process.env.NODE_ENV === 'development') {
+        const color = renderTime > 16 ? '🔴' : renderTime > 8 ? '🟡' : '🟢';
+        console.log(`${color} ${componentName} render time: ${renderTime.toFixed(2)}ms`);
+        
+        // Track slow renders
+        if (renderTime > 16) {
+          console.warn(`⚠️ Slow render detected: ${componentName} took ${renderTime.toFixed(2)}ms`);
         }
-      });
-    });
-
-    // Largest Contentful Paint (LCP)
-    this.observeMetric('largest-contentful-paint', (entries) => {
-      const lastEntry = entries[entries.length - 1];
-      this.recordMetric('LCP', lastEntry.startTime, 'timing');
-    });
-
-    // First Input Delay (FID)
-    this.observeMetric('first-input', (entries) => {
-      entries.forEach((entry) => {
-        this.recordMetric('FID', entry.processingStart - entry.startTime, 'timing');
-      });
-    });
-
-    // Cumulative Layout Shift (CLS)
-    this.observeMetric('layout-shift', (entries) => {
-      let clsValue = 0;
-      entries.forEach((entry) => {
-        if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value;
-        }
-      });
-      this.recordMetric('CLS', clsValue, 'gauge');
-    });
-  }
-
-  /**
-   * Initialize resource timing monitoring
-   */
-  private initializeResourceTiming(): void {
-    if (typeof window === 'undefined') return;
-
-    this.observeMetric('resource', (entries) => {
-      entries.forEach((entry) => {
-        const resourceEntry = entry as PerformanceResourceTiming;
-        this.recordMetric('Resource Load Time', resourceEntry.duration, 'timing', {
-          resource: resourceEntry.name,
-          type: resourceEntry.initiatorType
-        });
-      });
-    });
-  }
-
-  /**
-   * Observe a specific performance metric
-   */
-  private observeMetric(type: string, callback: (entries: PerformanceEntry[]) => void): void {
-    if (typeof window === 'undefined') return;
-
-    try {
-      const observer = new PerformanceObserver((list) => {
-        callback(list.getEntries());
-      });
-      observer.observe({ type, buffered: true });
-      this.observers.push(observer);
-    } catch (error) {
-      console.warn(`Failed to observe ${type} metric:`, error);
-    }
-  }
-
-  /**
-   * Record a performance metric
-   */
-  private recordMetric(name: string, value: number, type: 'timing' | 'counter' | 'gauge', tags?: Record<string, string>): void {
-    const metric: PerformanceMetric = {
-      name,
-      value,
-      timestamp: new Date().toISOString(),
-      type,
-      tags
+      }
     };
-
-    this.metrics.push(metric);
-
-    // Keep only the most recent metrics
-    if (this.metrics.length > this.maxMetrics) {
-      this.metrics = this.metrics.slice(-this.maxMetrics);
-    }
-
-    // Log in development
-    if (import.meta.env.DEV) {
-      console.log('Performance Metric:', metric);
-    }
   }
 
-  /**
-   * Get all recorded metrics
-   */
-  public getMetrics(): PerformanceMetric[] {
-    return [...this.metrics];
-  }
-
-  /**
-   * Get metrics by name
-   */
-  public getMetricsByName(name: string): PerformanceMetric[] {
-    return this.metrics.filter(metric => metric.name === name);
-  }
-
-  /**
-   * Get average value for a metric
-   */
-  public getAverageMetric(name: string): number {
-    const metrics = this.getMetricsByName(name);
-    if (metrics.length === 0) return 0;
-    
-    const sum = metrics.reduce((acc, metric) => acc + metric.value, 0);
-    return sum / metrics.length;
-  }
-
-  /**
-   * Clear all metrics
-   */
-  public clearMetrics(): void {
-    this.metrics = [];
-  }
-
-  /**
-   * Disconnect all observers
-   */
-  public disconnect(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-  }
-
-  /**
-   * Get performance summary
-   */
-  public getSummary(): Record<string, any> {
-    const fcp = this.getAverageMetric('FCP');
-    const lcp = this.getAverageMetric('LCP');
-    const fid = this.getAverageMetric('FID');
-    const cls = this.getAverageMetric('CLS');
-
-    return {
-      firstContentfulPaint: fcp,
-      largestContentfulPaint: lcp,
-      firstInputDelay: fid,
-      cumulativeLayoutShift: cls,
-      totalMetrics: this.metrics.length,
-      resourceLoadTimes: this.getMetricsByName('Resource Load Time').length
-    };
+  public getMetrics(): PerformanceMetrics {
+    return { ...this.metrics };
   }
 }
 
-// Export singleton instance
-export const performanceMonitor = PerformanceMonitor.getInstance();
+export const performanceMonitor = new PerformanceMonitor();
 
-// Export utility functions
-export const measurePerformance = () => {
-  return performanceMonitor.getSummary();
-};
+/**
+ * Hook for measuring component performance
+ */
+export function usePerformanceMeasure(componentName: string) {
+  const measure = performanceMonitor.measureRenderTime(componentName);
+  return measure;
+}
 
-export const getPerformanceMetrics = () => {
-  return performanceMonitor.getMetrics();
-};
-
-export const clearPerformanceMetrics = () => {
-  performanceMonitor.clearMetrics();
-};
-
-// Debounce utility for performance optimization
-export const debounce = <T extends (...args: any[]) => any>(
-  func: T,
-  wait: number
-): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  };
-};
-
-// Memory usage utility
-export const getMemoryUsage = (): any => {
-  if (typeof window !== 'undefined' && (window.performance as any).memory) {
-    return (window.performance as any).memory;
-  }
-  return null;
-};
-
-// Performance timing utility
-export const getNavigationTiming = (): PerformanceNavigationTiming | null => {
+/**
+ * Bundle size analyzer
+ */
+export function analyzeBundleSize() {
   if (typeof window !== 'undefined') {
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    return navigation;
+    const scripts = Array.from(document.querySelectorAll('script[src]'));
+    let totalSize = 0;
+    
+    scripts.forEach(script => {
+      const src = script.getAttribute('src');
+      if (src && src.includes('assets/')) {
+        // Estimate size based on file name patterns
+        const sizeMatch = src.match(/-([a-zA-Z0-9]+)\.js$/);
+        if (sizeMatch) {
+          totalSize += sizeMatch[1].length * 0.1; // Rough estimate
+        }
+      }
+    });
+    
+    return totalSize;
   }
-  return null;
+  return 0;
+}
+
+/**
+ * Performance optimization utilities
+ */
+export const performanceUtils = {
+  /**
+   * Debounce function for performance
+   */
+  debounce<T extends (...args: any[]) => any>(
+    func: T,
+    wait: number
+  ): (...args: Parameters<T>) => void {
+    let timeout: NodeJS.Timeout;
+    return (...args: Parameters<T>) => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func(...args), wait);
+    };
+  },
+
+  /**
+   * Throttle function for performance
+   */
+  throttle<T extends (...args: any[]) => any>(
+    func: T,
+    limit: number
+  ): (...args: Parameters<T>) => void {
+    let inThrottle: boolean;
+    return (...args: Parameters<T>) => {
+      if (!inThrottle) {
+        func(...args);
+        inThrottle = true;
+        setTimeout(() => (inThrottle = false), limit);
+      }
+    };
+  },
+
+  /**
+   * Memoize function for expensive calculations
+   */
+  memoize<T extends (...args: any[]) => any>(func: T): T {
+    const cache = new Map();
+    return ((...args: Parameters<T>) => {
+      const key = JSON.stringify(args);
+      if (cache.has(key)) {
+        return cache.get(key);
+      }
+      const result = func(...args);
+      cache.set(key, result);
+      return result;
+    }) as T;
+  },
+
+  /**
+   * Preload resources for better performance
+   */
+  preloadResource(url: string, type: 'script' | 'style' | 'image' | 'font' = 'script') {
+    if (typeof window === 'undefined') return;
+    
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = url;
+    
+    switch (type) {
+      case 'script':
+        link.as = 'script';
+        break;
+      case 'style':
+        link.as = 'style';
+        break;
+      case 'image':
+        link.as = 'image';
+        break;
+      case 'font':
+        link.as = 'font';
+        link.crossOrigin = 'anonymous';
+        break;
+    }
+    
+    document.head.appendChild(link);
+  },
+
+  /**
+   * Lazy load images with intersection observer
+   */
+  lazyLoadImages() {
+    if (typeof window === 'undefined') return;
+    
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.classList.remove('lazy');
+          observer.unobserve(img);
+        }
+      });
+    });
+    
+    images.forEach(img => imageObserver.observe(img));
+  },
+
+  /**
+   * Optimize critical rendering path
+   */
+  optimizeCriticalRenderingPath() {
+    if (typeof window === 'undefined') return;
+    
+    // Remove render-blocking resources
+    const nonCriticalCSS = document.querySelectorAll('link[rel="stylesheet"]:not([media])');
+    nonCriticalCSS.forEach(link => {
+      (link as HTMLLinkElement).media = 'print';
+      (link as HTMLLinkElement).onload = function() {
+        this.media = 'all';
+      };
+    });
+  },
+
+  /**
+   * Monitor Core Web Vitals
+   */
+  monitorCoreWebVitals() {
+    if (typeof window === 'undefined') return;
+    
+    // Monitor Largest Contentful Paint (LCP)
+    if ('PerformanceObserver' in window) {
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        console.log('LCP:', lastEntry.startTime);
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // Monitor First Input Delay (FID)
+      const fidObserver = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          console.log('FID:', (entry as any).processingStart - entry.startTime);
+        });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // Monitor Cumulative Layout Shift (CLS)
+      const clsObserver = new PerformanceObserver((list) => {
+        let clsValue = 0;
+        list.getEntries().forEach((entry) => {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        });
+        console.log('CLS:', clsValue);
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+    }
+  },
 };

@@ -9,22 +9,22 @@ function resolveConflicts(filePath) {
     if (!fs.existsSync(filePath)) return false;
     
     let content = fs.readFileSync(filePath, 'utf8');
-    if (!content.includes('<<<<<<< HEAD')) return false;
+    if (!content.includes('')) return false;
     
     console.log(`🔧 Resolving: ${filePath}`);
     
-    // Keep incoming changes (after =======)
+    // Keep incoming changes (after )
     const lines = content.split('\n');
     const resolved = [];
     let inConflict = false;
     let keepIncoming = false;
     
     for (const line of lines) {
-      if (line.includes('<<<<<<< HEAD')) {
+      if (line.includes('')) {
         inConflict = true;
         keepIncoming = false;
         continue;
-      } else if (line.includes('=======')) {
+      } else if (line.includes('')) {
         keepIncoming = true;
         continue;
       } else if (line.includes('>>>>>>>')) {
@@ -66,7 +66,7 @@ function findConflicts() {
         } else if (stat.isFile()) {
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
-            if (content.includes('<<<<<<< HEAD')) {
+            if (content.includes('')) {
               conflicts.push(fullPath);
             }
           } catch (error) {

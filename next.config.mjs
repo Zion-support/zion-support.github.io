@@ -78,8 +78,12 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
-  // Use standalone output for deployment
-  output: 'standalone',
+  // Use static export for Netlify deployment
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true
+  },
 };
 
 export default nextConfig;

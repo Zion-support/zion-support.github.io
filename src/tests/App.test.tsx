@@ -1,30 +1,37 @@
 import React from 'react'
-import { render, screen, waitFor } from '../utils/testUtils'
+import { render, screen, waitFor } from '@testing-library/react'
+import { vi } from 'vitest'
 import App from '../App'
 
 // Mock the lazy components
-jest.mock('../pages/About', () => {
-  return function MockAbout() {
-    return <div data-testid="about-page">About Page</div>
+vi.mock('../pages/About', () => {
+  return {
+    default: function MockAbout() {
+      return <div data-testid="about-page">About Page</div>
+    }
   }
 })
 
-jest.mock('../pages/Contact', () => {
-  return function MockContact() {
-    return <div data-testid="contact-page">Contact Page</div>
+vi.mock('../pages/Contact', () => {
+  return {
+    default: function MockContact() {
+      return <div data-testid="contact-page">Contact Page</div>
+    }
   }
 })
 
-jest.mock('../pages/NotFound', () => {
-  return function MockNotFound() {
-    return <div data-testid="not-found-page">Not Found Page</div>
+vi.mock('../pages/NotFound', () => {
+  return {
+    default: function MockNotFound() {
+      return <div data-testid="not-found-page">Not Found Page</div>
+    }
   }
 })
 
 describe('App', () => {
   beforeEach(() => {
     // Clear all mocks before each test
-    jest.clearAllMocks()
+    vi.clearAllMocks()
   })
 
   it('renders without crashing', () => {
@@ -91,7 +98,7 @@ describe('App', () => {
 
   it('handles errors gracefully', () => {
     // Mock console.error to avoid noise in test output
-    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {})
+    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {})
     
     // Create a component that throws an error
     const ErrorComponent = () => {
@@ -152,7 +159,7 @@ describe('Service Worker', () => {
     // Mock service worker
     Object.defineProperty(navigator, 'serviceWorker', {
       value: {
-        register: jest.fn().mockResolvedValue({}),
+        register: vi.fn().mockResolvedValue({}),
         ready: Promise.resolve({}),
         controller: null
       },
