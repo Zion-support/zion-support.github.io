@@ -16,15 +16,14 @@ const Contact = React.lazy(() => import('./pages/Contact.jsx'));
 const Login = React.lazy(() => import('./pages/Login.jsx'));
 
 // New service pages
-const ServicesIndex = React.lazy(() => import('./pages/services/index'));
-const AIAnalytics = React.lazy(() => import('./pages/services/ai-analytics'));
-const Cybersecurity = React.lazy(() => import('./pages/services/Cybersecurity'));
-const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
-const IoTEdge = React.lazy(() => import('./pages/services/IoTEdgeComputing'));
-const QuantumComputing = React.lazy(() => import('./pages/services/QuantumComputing'));
-const Blockchain = React.lazy(() => import('./pages/services/BlockchainWeb3'));
-const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
-const Sustainability = React.lazy(() => import('./pages/services/GreenIT'));
+const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
+const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
+const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
+const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
+const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const AdvancedServicesShowcase2027 = React.lazy(() => import('./pages/AdvancedServicesShowcase2027'));
+const AdvancedPricingGuide2027 = React.lazy(() => import('./pages/AdvancedPricingGuide2027'));
 
 // IT Services pages
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
@@ -150,8 +149,12 @@ function App() {
               <Route path="/micro-saas/ai-business-intelligence" element={<AIBusinessIntelligence />} />
               <Route path="/micro-saas/customer-experience" element={<CustomerExperience />} />
               
-              {/* Marketplace routes */}
-              <Route path="/marketplace" element={<MarketplaceIndex />} />
+              {/* Innovative Services 2027 Routes */}
+              <Route path="/innovative-services-2027" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview2027 />} />
+              <Route path="/comprehensive-pricing-guide" element={<ComprehensivePricingGuide2027 />} />
+              <Route path="/advanced-services-showcase" element={<AdvancedServicesShowcase2027 />} />
+              <Route path="/advanced-pricing-guide" element={<AdvancedPricingGuide2027 />} />
               
               {/* Fallback for any unmatched routes */}
               <Route path="*" element={<Home />} />
