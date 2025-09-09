@@ -1,0 +1,8 @@
+  pricingStrategy: {
+    strategy: string;
+    justification: string;
+    priceElasticity: string;
+
+    category: 'placeholder',
+  AI: & Autonomous Systems'',;
+    currentPrice: $,2,999,

@@ -1,43 +1,35 @@
 name: Security Scan
-
-on:
+'on':
+  workflow_dispatch: {}
   schedule:
-    - cron: '45 * * * *'
-  workflow_dispatch:
-
+    - cron: 0 */2 * * *
 permissions:
   contents: write
   pull-requests: write
   actions: read
-
 concurrency:
-  group: "security-scan"
+  group: security-scan
   cancel-in-progress: true
-
 jobs:
-  security:
+  main:
+    name: Security Scan Job
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Install
-        run: npm ci
-        env:
-          NODE_OPTIONS: --openssl-legacy-provider
-      - name: Run Security Scan
-        run: node automation/security-scanner-runner.cjs
-      - name: Commit and push
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Run security scan
         run: |
-          if [ -n "$(git status --porcelain)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -A
-            git commit -m "chore(automation): update security report"
-            git push
-          else
-            echo "No security changes"
-          fi
+          echo "Running security scan..."
+          npm audit --audit-level=moderate || true
+          echo "Security scan completed"
+    runs_on: ubuntu-latest

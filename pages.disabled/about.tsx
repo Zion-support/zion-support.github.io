@@ -54,7 +54,7 @@ export default function AboutPage() {
               About Zion Tech Group
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              We&apos;re a team of innovators, engineers, and visionaries dedicated to transforming businesses through cutting-edge technology solutions.
+              We're a team of innovators, engineers, and visionaries dedicated to transforming businesses through cutting-edge technology solutions.
             </p>
           </motion.div>
         </div>
@@ -74,7 +74,7 @@ export default function AboutPage() {
                 At Zion Tech Group, we believe that technology should be a force for good, driving innovation and creating value for businesses and society. Our mission is to democratize access to cutting-edge technology solutions, making them accessible to organizations of all sizes.
               </p>
               <p className="text-lg text-white/70 leading-relaxed">
-                We&apos;re committed to building solutions that not only solve today&apos;s challenges but also anticipate tomorrow&apos;s opportunities. Through our expertise in AI, quantum computing, cybersecurity, and digital transformation, we help businesses stay ahead of the curve and achieve sustainable growth.
+                We're committed to building solutions that not only solve today's challenges but also anticipate tomorrow's opportunities. Through our expertise in AI, quantum computing, cybersecurity, and digital transformation, we help businesses stay ahead of the curve and achieve sustainable growth.
               </p>
             </motion.div>
 
@@ -109,7 +109,7 @@ export default function AboutPage() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Our Impact in Numbers</h2>
             <p className="text-lg text-white/70 max-w-2xl mx-auto">
-              We&apos;ve delivered measurable results across hundreds of projects and helped organizations achieve their digital transformation goals.
+              We've delivered measurable results across hundreds of projects and helped organizations achieve their digital transformation goals.
             </p>
           </motion.div>
 
@@ -140,14 +140,22 @@ export default function AboutPage() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss how our cutting-edge technology solutions can drive innovation and growth for your organization.
+              Let's discuss how our cutting-edge technology solutions can drive innovation and growth for your organization.
             </p>
             <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
               Get Started Today
             </button>
           </motion.div>
         </div>
-      </div>
-    </UltraAdvancedFuturisticBackground>
+      </section>
+    </>
+  );
+}
+export default function About({ }: AboutProps) {
+  return (
+    <div>
+      <h1>About</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 }

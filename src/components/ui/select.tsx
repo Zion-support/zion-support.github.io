@@ -1,59 +1,108 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { cn } from '@/lib/utils';
+import { Button } from './Button';
+import { ChevronDown } from 'lucide-react';
 
 interface SelectProps {
+  value?: string;
+  onValueChange?: (value: string) => void;
   children: React.ReactNode;
   className?: string;
-  value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-  disabled?: boolean;
 }
 
-export function Select({ 
-  children, 
-  className = '', 
-  value, 
-  onChange, 
-  disabled = false 
-}: SelectProps) {
-  const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50';
-  
-  return (
-    <select
-      className={`${baseClasses} ${className}`}
-      value={value}
-      onChange={onChange}
-      disabled={disabled}
-    >
-      {children}
-    </select>
-  );
-}
+const Select = React.forwardRef<HTMLDivElement, SelectProps>(
+  ({ className, children, ...props }, ref) => {
+    return (
+      <div
+        ref={ref}
+        className={cn("relative", className)}
+        {...props}
+      >
+        {children}
+      </div>
+    );
+  }
+);
+Select.displayName = "Select";
 
-interface SelectItemProps {
+interface SelectTriggerProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
+}
+
+const SelectTrigger = React.forwardRef<HTMLButtonElement, SelectTriggerProps>(
+  ({ className, children, ...props }, ref) => {
+    return (
+      <Button
+        ref={ref}
+        variant="outline"
+        className={cn("w-full justify-between", className)}
+        {...props}
+      >
+        {children}
+        <ChevronDown className="h-4 w-4 opacity-50" />
+      </Button>
+    );
+  }
+);
+SelectTrigger.displayName = "SelectTrigger";
+
+interface SelectValueProps {
+  placeholder?: string;
+  children?: React.ReactNode;
+}
+
+const SelectValue: React.FC<SelectValueProps> = ({ placeholder, children }) => {
+  return (
+    <span className={cn(!children && "text-muted-foreground")}>
+      {children || placeholder}
+    </span>
+  );
+};
+
+interface SelectContentProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const SelectContent = React.forwardRef<HTMLDivElement, SelectContentProps>(
+  ({ className, children, ...props }, ref) => {
+    return (
+      <div
+        ref={ref}
+        className={cn(
+          "absolute top-full left-0 right-0 z-50 mt-1 bg-white border border-gray-200 rounded-md shadow-lg max-h-60 overflow-y-auto",
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </div>
+    );
+  }
+);
+SelectContent.displayName = "SelectContent";
+
+interface SelectItemProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   value: string;
+  children: React.ReactNode;
 }
 
-export function SelectItem({ children, value }: SelectItemProps) {
-  return (
-    <option value={value}>
-      {children}
-    </option>
-  );
-}
+const SelectItem = React.forwardRef<HTMLButtonElement, SelectItemProps>(
+  ({ className, children, ...props }, ref) => {
+    return (
+      <button
+        ref={ref}
+        className={cn(
+          "w-full px-4 py-2 text-left hover:bg-gray-100 focus:bg-gray-100 focus:outline-none",
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </button>
+    );
+  }
+);
+SelectItem.displayName = "SelectItem";
 
-export function SelectTrigger({ children, className = '' }: { children: React.ReactNode; className?: string }) {
-  return (
-    <div className={`flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}>
-      {children}
-    </div>
-  );
-}
-
-export function SelectValue({ placeholder }: { placeholder?: string }) {
-  return <span className="text-sm">{placeholder || 'Select an option'}</span>;
-}
-
-export function SelectContent({ children }: { children: React.ReactNode }) {
-  return <div className="relative">{children}</div>;
-}
+export { Select, SelectTrigger, SelectValue, SelectContent, SelectItem };

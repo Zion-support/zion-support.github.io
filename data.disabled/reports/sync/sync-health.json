@@ -1,7 +1,0 @@
-{
-  "timestamp": "2025-08-08T22:52:18.585Z",
-  "host": "cursor",
-  "repoRoot": "/workspace",
-  "status": "ok",
-  "details": "https://x-access-token:${GITHUB_TOKEN}@github.com/Zion-Holdings/zion.app"
-}

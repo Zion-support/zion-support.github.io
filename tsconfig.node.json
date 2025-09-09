@@ -3,12 +3,15 @@
     "composite": true,
     "skipLibCheck": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noEmit": true
   },
-  "exclude": ["./dist", "./node_modules", "./src"], // Explicitly exclude src
   "include": [
-    "vite.config.ts"
-    // Add any other Node-specific .ts files here if necessary, e.g., scripts at the root
+    "vite.config.ts",
+    "tailwind.config.ts",
+    "cypress.config.ts",
+    "vitest.config.ts"
   ]
 }

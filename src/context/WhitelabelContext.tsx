@@ -1,51 +1,29 @@
-import React, { createContext, useContext, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-interface WhitelabelConfig {
-  companyName: string;
-  logo: string;
+interface WhitelabelContextType {
+  brandName: string;
+  setBrandName: (name: string) => void;
   primaryColor: string;
-  secondaryColor: string;
-  domain: string;
-  isWhitelabel: boolean;
-  contactInfo: {
-    phone: string;
-    email: string;
-    address: string;
-  };
+  setPrimaryColor: (color: string) => void;
 }
 
-const defaultConfig: WhitelabelConfig = {
-  companyName: 'Zion Tech Group',
-  logo: '/logo.svg',
-  primaryColor: '#1e40af',
-  secondaryColor: '#7c3aed',
-  domain: 'https://ziontechgroup.com',
-  isWhitelabel: false,
-  contactInfo: {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  }
-};
+const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined);
 
-const WhitelabelContext = createContext<WhitelabelConfig>(defaultConfig);
-
-export const useWhitelabel = () => useContext(WhitelabelContext);
-
-interface WhitelabelProviderProps {
-  children: ReactNode;
-  config?: Partial<WhitelabelConfig>;
-}
-
-export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ 
-  children, 
-  config = {} 
-}) => {
-  const mergedConfig = { ...defaultConfig, ...config };
+export const WhitelabelProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const [brandName, setBrandName] = useState('Zion Tech Group');
+  const [primaryColor, setPrimaryColor] = useState('#3B82F6');
 
   return (
-    <WhitelabelContext.Provider value={mergedConfig}>
+    <WhitelabelContext.Provider value={{ brandName, setBrandName, primaryColor, setPrimaryColor }}>
       {children}
     </WhitelabelContext.Provider>
   );
+};
+
+export const useWhitelabel = () => {
+  const context = useContext(WhitelabelContext);
+  if (!context) {
+    throw new Error('useWhitelabel must be used within a WhitelabelProvider');
+  }
+  return context;
 };

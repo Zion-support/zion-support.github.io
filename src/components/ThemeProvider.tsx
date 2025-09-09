@@ -1,69 +1,61 @@
-"use client";
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
-import * as React from "react";
+
+
+interface ThemeContextValue {
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
+  actualTheme: 'light' | 'dark';
+}
+
+const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
+
+export const useTheme = () => {
+  const context = useContext(ThemeContext);
+  if (context === undefined) {
+    throw new Error('useTheme must be used within a ThemeProvider');
+  }
+  return context;
+};
 
 interface ThemeProviderProps {
   children: React.ReactNode;
-  defaultTheme?: string;
-  storageKey?: string;
 }
 
-export function ThemeProvider({ 
-  children, 
-  defaultTheme = "system", 
-  storageKey = "vite-ui-theme" 
-}: ThemeProviderProps) {
-  const [theme, setTheme] = React.useState<string>(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem(storageKey) || defaultTheme;
-    }
-    return defaultTheme;
-  });
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
+  const [theme, setTheme] = useState<Theme>('system');
+  const [actualTheme, setActualTheme] = useState<'light' | 'dark'>('light');
 
-  React.useEffect(() => {
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') as Theme;
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
+
+  useEffect(() => {
     const root = window.document.documentElement;
-    root.classList.remove("light", "dark");
-
-    if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
+    
+    if (theme === 'system') {
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      setActualTheme(systemTheme);
+      root.classList.remove('light', 'dark');
       root.classList.add(systemTheme);
-      return;
+    } else {
+      setActualTheme(theme);
+      root.classList.remove('light', 'dark');
+      root.classList.add(theme);
     }
-
-    root.classList.add(theme);
   }, [theme]);
 
-  const value = React.useMemo(
-    () => ({
-      theme,
-      setTheme: (theme: string) => {
-        localStorage.setItem(storageKey, theme);
-        setTheme(theme);
-      },
-    }),
-    [theme, storageKey]
-  );
+  const handleSetTheme = (newTheme: Theme) => {
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
 
   return (
-    <ThemeContext.Provider value={value}>
+    <ThemeContext.Provider value={{ theme, setTheme: handleSetTheme, actualTheme }}>
       {children}
     </ThemeContext.Provider>
   );
-}
-
-interface ThemeContextType {
-  theme: string;
-  setTheme: (theme: string) => void;
-}
-
-const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
-
-export const useTheme = () => {
-  const context = React.useContext(ThemeContext);
-  if (context === undefined) {
-    throw new Error("useTheme must be used within a ThemeProvider");
-  }
-  return context;
 };
