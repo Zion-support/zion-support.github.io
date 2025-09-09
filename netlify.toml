@@ -8,7 +8,7 @@
   command_timeout = "30m"
   # Skip TypeScript checking during build
 
-# Trigger: trivial edit to confirm Netlify picks up config and rebuilds
+# Trigger: trivial edit to confirm Netlify picks up config and rebuilds (noop update v2)
 
 [build.environment]
   NODE_VERSION = "20.18.1"
