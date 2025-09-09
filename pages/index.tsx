@@ -1,52 +1,48 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+    <>
       <Head>
-        <title>Zion Tech Solutions - Leading Technology Solutions Provider</title>
-        <meta name="description" content="Zion Tech Solutions provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence." />
+        <title>Zion Tech Group - Innovative IT Solutions & AI Services</title>
+        <meta name="description" content="Leading provider of AI-powered IT solutions, cloud migration, and digital transformation services." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <main className="container mx-auto px-4 py-16">
-        <div className="text-center text-white">
-          <h1 className="text-5xl font-bold mb-6">
-            Welcome to Zion Tech Solutions
-          </h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Leading technology solutions provider helping businesses transform their digital presence 
-            with cutting-edge AI, cloud architecture, and innovative development services.
-          </p>
-          
-          <div className="flex justify-center gap-6 mb-12">
-            <Link href="/services" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Our Services
-            </Link>
-            <Link href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Get in Touch
-            </Link>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">AI Development</h3>
-              <p>Custom AI solutions and machine learning models for your business needs.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cloud Architecture</h3>
-              <p>Scalable cloud solutions and infrastructure design for modern applications.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Digital Transformation</h3>
-              <p>End-to-end digital transformation services to modernize your business.</p>
+      <main className="min-h-screen bg-gradient-to-br from-blue-900 to-purple-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+              Zion Tech Group
+            </h1>
+            <p className="text-xl text-blue-200 mb-8">
+              Innovative IT Solutions & AI Services
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-lg font-semibold mb-2">AI Services</h3>
+                <p className="text-sm text-blue-200">
+                  Advanced AI-powered solutions for modern businesses
+                </p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-lg font-semibold mb-2">Cloud Solutions</h3>
+                <p className="text-sm text-blue-200">
+                  Scalable cloud infrastructure and migration services
+                </p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-lg font-semibold mb-2">Digital Transformation</h3>
+                <p className="text-sm text-blue-200">
+                  Complete digital transformation strategies and implementation
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </main>
-    </div>
+    </>
   );
-};
-
-export default Home;
+}

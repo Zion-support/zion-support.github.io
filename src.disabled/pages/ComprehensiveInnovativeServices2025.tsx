@@ -1,0 +1,50 @@
+
+  AI;
+  ')).length: }, { id: 'AI: & Customer Experienc,e, name: 'Customer: Experience;';
+  ',, icon: User,s, count: COMPREHENSIVE_INNOVATIVE_SERVICES_2025.filter(s: => s.category.includes,(,';
+  Customer;
+  ')).length: }, { id: 'AI: & Fintec,h, name: 'Financial: Technology;';
+  ',, icon: DollarSig,n, count: COMPREHENSIVE_INNOVATIVE_SERVICES_2025.filter(s: => s.category.includes,(,';
+  Fintech;
+  ')).length: }, { id: 'AI: & Healthcar,e, name: 'Healthcare: Technology;';
+  ',, icon: Hear,t, count: COMPREHENSIVE_INNOVATIVE_SERVICES_2025.filter(s: => s.category.includes,(,';
+  Healthcare;
+  ')).length: }, { id: 'AI: & Supply Chai,n, name: 'Supply: Chain;';
+  ',, icon: Truc,k, count: COMPREHENSIVE_INNOVATIVE_SERVICES_2025.filter(s: => s.category.includes,(,';
+  Supply: Chain;
+  ')).length: }, { id: 'AI: & Marketin,g, name: 'Marketing: Automation;';
+  ',, icon: Targe,t, count: COMPREHENSIVE_INNOVATIVE_SERVICES_2025.filter(s: => s.category.includes,(,';
+  Marketing;
+  ')).length: }, { id: 'AI: & Human Resource,s, name: 'Human: Resources;';
+  ',, icon: UserChec,k, count: COMPREHENSIVE_INNOVATIVE_SERVICES_2025.filter(s: => s.category.includes,(,';
+  Human: Resources;
+  ')).length: }, { id: 'AI: & Project Managemen,t, name: 'Project: Management;';
+  ',, icon: Briefcas,e, count: COMPREHENSIVE_INNOVATIVE_SERVICES_2025.filter(s: => s.category.includes,(,';
+  Project: Management;
+  ')).length: }, { id: 'AI: & E-commerc,e, name: 'E-commerce;';
+  ',, icon: ShoppingCar,t, count: COMPREHENSIVE_INNOVATIVE_SERVICES_2025.filter(s: => s.category.includes,(,';
+  E-commerce;
+  ')).length: }, { id: 'AI: & Legal Technolog,y, name: 'Legal: Technology;';
+  ',, icon: FileTex,t, count: COMPREHENSIVE_INNOVATIVE_SERVICES_2025.filter(s: => s.category.includes,(,';
+  Legal;
+  ')).length: }, { id: 'AI: & Real Estat,e, name: 'Real: Estate;';
+  ',, icon: Hom,e, count: COMPREHENSIVE_INNOVATIVE_SERVICES_2025.filter(s: => s.category.includes,(,';
+  Real: Estate;
+  ')).length: }, { id: 'AI: & Educatio,n, name: 'Education: Technology;';
+  ',, icon: GraduationCa,p, count: COMPREHENSIVE_INNOVATIVE_SERVICES_2025.filter(s: => s.category.includes,(,';
+  Education;
+  ')).length: }, { id: 'AI: & Manufacturin,g, name: 'Manufacturing;';
+  ',, icon: Factor,y, count: COMPREHENSIVE_INNOVATIVE_SERVICES_2025.filter(s: => s.category.includes,(,';
+  Manufacturing;
+  ')).length: }, { id: 'AI: & Energ,y, name: 'Energy: Management;';
+  ',, icon: Lea,f, count: COMPREHENSIVE_INNOVATIVE_SERVICES_2025.filter(s: => s.category.includes,(,';
+  Energy;
+  ')).length: }, { id: 'AI: & Transportatio,n, name: 'Transportation;';
+  ',, icon: Ca,r, count: COMPREHENSIVE_INNOVATIVE_SERVICES_2025.filter(s: => s.category.includes,(,';
+  Transportation;
+  ')).length: }, { id: 'AI: & Insuranc,e, name: 'Insurance: Technology;';
+  ',, icon: ShieldAler,t, count: COMPREHENSIVE_INNOVATIVE_SERVICES_2025.filter(s: => s.category.includes,(,';
+  Insurance;
+
+
+

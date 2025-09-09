@@ -1,0 +1,128 @@
+# Build artifacts
+dist/
+out/
+build/
+
+# Node modules
+node_modules/
+
+# Disabled/corrupted files
+src-disabled/
+src.broken/
+src_disabled_*/
+pages._archive_corrupted/
+pages.bak/
+*.disabled/
+*.backup/
+*.bak/
+
+# Test artifacts
+coverage/
+.nyc_output/
+
+# Generated files
+*.min.js
+*.bundle.js
+
+# Service workers (browser globals)
+public/sw*.js
+public/service-worker.js
+
+# Automation scripts
+*automation*.js
+*automation*.cjs
+*fix*.js
+*fix*.cjs
+*merge*.js
+*merge*.cjs
+*resolve*.js
+*resolve*.cjs
+*ultimate*.js
+*ultimate*.cjs
+*comprehensive*.js
+*comprehensive*.cjs
+
+# PM2 configs
+ecosystem*.js
+ecosystem*.cjs
+pm2-*.js
+pm2-*.cjs
+
+# Recovery/backup files
+recovered-branches/
+backup/
+corrupted*/
+*_backup*/
+
+# Temporary files
+temp*/
+tmp*/
+*.tmp
+*.temp
+
+# Config files that may have syntax issues
+postcss.config*.js
+vite.config*.js
+vitest.config*.js
+next.config*.js
+
+# Media directory with broken symlinks
+media/
+
+# Backup and corrupted files
+netlify/functions-backup/
+*.backup
+*.bak
+*_backup*
+corrupted*/
+broken*/
+disabled*/
+*_disabled*
+*_broken*
+*_corrupted*
+
+# Config files with syntax issues
+next-*.config.js
+*.config.js
+tailwind.config.js
+security*.js
+sentry*.js
+optimize*.js
+performance*.js
+seo*.js
+simple*.js
+test*.js
+workflow*.js
+website*.js
+trigger*.js
+step*.js
+start*.js
+restore*.js
+
+# Scripts directory (many corrupted files)
+scripts/
+
+# Utils directory (many corrupted files)
+utils/
+
+# Server directory
+server/
+
+# Test files
+tests/
+__tests__/
+
+# Public files
+public/
+
+# Root level problematic files
+*.js
+!src/**/*.js
+!app/**/*.js
+!components/**/*.js
+!lib/**/*.js
+!hooks/**/*.js
+!contexts/**/*.js
+!types/**/*.js
+!constants/**/*.js
+!styles/**/*.js

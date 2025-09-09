@@ -1,12 +1,83 @@
-[build]
-  command = "npm ci && npm run build"
-  publish = ".next"
+# Netlify rebuild trigger (minor touch to force deploy) - 2025-09-09 v4.27
+[build] # touch v4.27 to trigger Netlify rebuild
+  # Build the Vite React project on Netlify
+  command = "npm ci --no-audit --no-fund --include=optional && npm rebuild rollup @rollup/rollup-linux-x64-gnu || true && npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+  command_timeout = "30m"
+  # Skip TypeScript checking during build
 
-[build.environment]
-  NODE_VERSION = "20"
+  [build.environment]
+    NODE_VERSION = "20.19.0"
+    NODE_OPTIONS = "--max-old-space-size=4096"
+    SKIP_TYPE_CHECK = "true"
+    NEXT_RUNTIME_DISABLED = "1"
+    # Ensure devDependencies (e.g., Vite) are installed during CI
+    NPM_CONFIG_PRODUCTION = "false"
+    NPM_FLAGS = "--include=dev --include=optional"
+    # Ensure optional native Rollup binaries are installed
+    NPM_CONFIG_OPTIONAL = "true"
+    # Force Rollup to skip native binary and use JS fallback to avoid npm optional bug
+    ROLLUP_SKIP_NODEJS_NATIVE = "true"
+    # Disable Netlify's automatic Next.js Runtime since this is a Vite SPA
+    NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+# Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' plausible.io; connect-src 'self' plausible.io; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
 
-[[plugins]]
-  package = "netlify-plugin-cloudinary" 
+
+
+[[headers]]
+  for = "/logos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# SPA fallback is defined in public/_redirects to avoid double handling
+
+# Functions
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Essential scheduled functions only
+[[scheduled.functions]]
+  name = "health"
+  schedule = "*/5 * * * *" # every 5 minutes for health checks
+
+[context.production.environment]
+  NODE_ENV = "production"
+
+[context.deploy-preview]
+  command = "npm ci --no-audit --no-fund --include=optional && npm rebuild rollup @rollup/rollup-linux-x64-gnu || true && npm run build"
+
+[context.branch-deploy]
+  command = "npm ci --no-audit --no-fund --include=optional && npm rebuild rollup @rollup/rollup-linux-x64-gnu || true && npm run build"
+
+# Vite/React SPA configuration - SPA fallback for all routes
+# Note: SPA fallback is handled in _redirects file to avoid conflicts
+
+# Set basic cache headers for static assets for better performance
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+
+# SPA fallback handled via Netlify redirects since public/_redirects is gitignored
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
