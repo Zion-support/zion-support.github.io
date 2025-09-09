@@ -1,2 +1,4 @@
-import ForumCategoryPage from '@/pages/ForumCategoryPage';
-export default ForumCategoryPage;
+// Placeholder for Community Category Page
+export default function CommunityCategoryPage() {
+  return null;
+}
