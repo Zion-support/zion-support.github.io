@@ -1,0 +1,112 @@
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {CommunityDiscussion} from "@/components/CommunityDiscussion";
+import {Badge} from "@/components/ui/badge";
+import {UserCheck, Bell, MessageSquare, LogOut, Send, Settings} from "lucide-react";
+import {createTestNotification, createOnboardingNotification, createSystemNotification} from "@/utils/notifications";
+import {NotificationCenter} from "@/components/NotificationCenter";
+import {useToast} from "@/hooks/use-toast";
+import {Link} from "react-router-dom";
+export default function Dashboard() {;
+
+  const { user, logout } = useAuth();
+  const { toast } = useToast();
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { CommunityDiscussion } from "@/components/CommunityDiscussion",
+import { Badge } from "@/components/ui/badge",
+import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react",
+import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications",
+import { NotificationCenter } from "@/components/NotificationCenter",
+
+import { Link } from "react-router-dom";
+export default function Dashboard() {};
+  const { user, logout } = useAuth();
+  const { toast } = useToast();
+  if (!user) return null;
+  const { user, logout } = useAuth();
+  const { toast } = useToast();
+  if (!user) return null;
+    const result = await createTestNotification(user && user.id);
+    if (result && result.success) {;
+      toast({;
+        title: "Test notification created",,
+  description: "Check your notification center"});
+    } else {;
+      toast({;
+        title: "Error creating test notification",,
+  description: "Something went wrong",;
+        variant: "destructive"});
+
+  const handleTestNotification = async () => {
+    const result = await createTestNotification(user.id);
+    if (result.success) {
+      toast({
+        title: "Test notification created",
+        description: "Check your notification center",
+      });
+    } else {
+      toast({
+        title: "Error creating test notification",
+        description: "Something went wrong",
+        variant: "destructive",
+      });
+    }
+  }
+  },
+
+  return (
+            <div className="lg:col-span-1">
+              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4">
+                    {user.displayName
+                      .split(" ")
+                      .map((name) => name[0])"
+                      .join("")}
+                  </div>"
+                  <h2 className="text-xl font-bold text-white">
+                    {user.displayName}
+                  </h2>"
+                  <p className="text-zion-slate-light mb-2">{user.email}</p>
+
+                  <Badge className="bg-zion-purple text-white mb-4">
+                    {user.userType
+                      ? user.userType.charAt(0).toUpperCase() +
+                        user.userType.slice(1)
+                      : "New User"}
+                  </Badge>
+
+                  <Button
+                    className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                    onClick={() => window.location.href = "/profile"}
+                  >
+                    <UserCheck size={16} />
+                    Edit Profile
+                  </Button>
+                </div>
+              </div>
+              {/* Stats & Metrics */}
+              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
+                <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-zion-slate-light">Profile Completion</span>
+                    <span className="text-zion-cyan font-medium">65%</span>
+                  </div>
+                  <div className="w-full bg-zion-blue rounded-full h-2">
+                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={ width: "65%" }></div>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-zion-slate-light">Community Points</span>
+                    <span className="text-zion-cyan font-medium">125</span>
+                  </div>
+                      <a href="/wallet" className="hover:underline">View Wallet</Link>                    </span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-zion-slate-light">Badges Earned</span>
+
