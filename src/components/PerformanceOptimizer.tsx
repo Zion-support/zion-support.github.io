@@ -1,150 +1,45 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-
-interface PerformanceMetrics {
-  fcp: number; // First Contentful Paint
-  lcp: number; // Largest Contentful Paint
-  fid: number; // First Input Delay
-  cls: number; // Cumulative Layout Shift
-  ttfb: number; // Time to First Byte
-}
+import { motion, useInView } from 'framer-motion';
 
 interface PerformanceOptimizerProps {
-  enableMonitoring?: boolean;
   children: React.ReactNode;
-  preloadRoutes?: string[];
+  threshold?: number;
+  delay?: number;
+  className?: string;
 }
 
-export function PerformanceOptimizer({ children, preloadRoutes = [] }: PerformanceOptimizerProps) {
-  const location = useLocation();
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const observerRef = useRef<PerformanceObserver | null>(null);
-  const preloadCache = useRef<Set<string>>(new Set());
+interface LazyImageProps {
+  src: string;
+  alt: string;
+  className?: string;
+  placeholder?: string;
+  priority?: boolean;
+}
 
-  // Performance monitoring
-  useEffect(() => {
-    if ('PerformanceObserver' in window) {
-      // Monitor Core Web Vitals
-      observerRef.current = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            const lcp = entry.startTime;
-            setMetrics(prev => prev ? { ...prev, lcp } : { lcp, fcp: 0, fid: 0, cls: 0, ttfb: 0 });
-          }
-        }
-      });
+interface PerformanceMetrics {
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+}
 
-      observerRef.current.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // Monitor First Input Delay
-      observerRef.current.observe({ entryTypes: ['first-input'] });
-
-      // Monitor Layout Shifts
-      observerRef.current.observe({ entryTypes: ['layout-shift'] });
-    }
-
-    return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-    };
-  }, []);
-
-  // Measure FCP and TTFB
-  useEffect(() => {
-    const measurePerformance = () => {
-      if ('performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          const fcp = navigation.domContentLoadedEventEnd - navigation.navigationStart;
-          const ttfb = navigation.responseStart - navigation.requestStart;
-          
-          setMetrics(prev => prev ? { ...prev, fcp, ttfb } : { fcp, ttfb, lcp: 0, fid: 0, cls: 0 });
-        }
-      }
-    };
-
-    // Measure after a short delay to ensure DOM is ready
-    const timer = setTimeout(measurePerformance, 100);
-    return () => clearTimeout(timer);
-  }, [location.pathname]);
-
-  // Route preloading
-  useEffect(() => {
-    const preloadRoute = async (route: string) => {
-      if (preloadCache.current.has(route)) return;
-      
-      try {
-        // Preload critical routes
-        if (route === '/services') {
-          // Preload services page
-          const link = document.createElement('link');
-          link.rel = 'prefetch';
-          link.href = route;
-          document.head.appendChild(link);
-        }
-        
-        preloadCache.current.add(route);
-      } catch (error) {
-        console.warn('Failed to preload route:', route, error);
-      }
-    };
-
-    // Preload routes based on current location
-    preloadRoutes.forEach(route => {
-      if (location.pathname !== route) {
-        preloadRoute(route);
-      }
-    });
-  }, [location.pathname, preloadRoutes]);
-
-  // Resource hints
-  useEffect(() => {
-    // Add resource hints for better performance
-    const addResourceHints = () => {
-      // DNS prefetch for external domains
-      const dnsPrefetch = document.createElement('link');
-      dnsPrefetch.rel = 'dns-prefetch';
-      dnsPrefetch.href = '//fonts.googleapis.com';
-      document.head.appendChild(dnsPrefetch);
-
-      // Preconnect to critical domains
-      const preconnect = document.createElement('link');
-      preconnect.rel = 'preconnect';
-      preconnect.href = 'https://fonts.googleapis.com';
-      document.head.appendChild(preconnect);
-
-      // Preload critical fonts
-      const fontPreload = document.createElement('link');
-      fontPreload.rel = 'preload';
-      fontPreload.href = 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap';
-      fontPreload.as = 'style';
-      document.head.appendChild(fontPreload);
-    };
-
-    addResourceHints();
-  }, []);
-
-  // Performance reporting (in development)
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && metrics) {
-      console.log('Performance Metrics:', metrics);
-      
-      // Log performance warnings
-      if (metrics.lcp > 2500) {
-        console.warn('LCP is too slow:', metrics.lcp, 'ms (should be < 2500ms)');
-      }
-      if (metrics.fid > 100) {
-        console.warn('FID is too slow:', metrics.fid, 'ms (should be < 100ms)');
-      }
-      if (metrics.cls > 0.1) {
-        console.warn('CLS is too high:', metrics.cls, ' (should be < 0.1)');
-      }
-    }
-  }, [metrics]);
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  children,
+  threshold = 0.1,
+  delay = 0,
+  className = ''
+}) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { threshold, once: true });
 
   return (
-    <>
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.6, delay }}
+      className={className}
+    >
       {children}
       
       {/* Performance monitoring overlay (development only) */}
@@ -162,119 +57,209 @@ export function PerformanceOptimizer({ children, preloadRoutes = [] }: Performan
   );
 }
 
-// Hook for performance monitoring
-export function usePerformanceMonitoring() {
-  const [isLoading, setIsLoading] = useState(false);
-  const [loadTime, setLoadTime] = useState(0);
-  const startTimeRef = useRef<number>(0);
-
-  const startLoading = () => {
-    setIsLoading(true);
-    startTimeRef.current = performance.now();
-  };
-
-  const stopLoading = () => {
-    setIsLoading(false);
-    const endTime = performance.now();
-    setLoadTime(endTime - startTimeRef.current);
-  };
-
-  const measureAsync = async <T>(asyncFn: () => Promise<T>): Promise<T> => {
-    startLoading();
-    try {
-      const result = await asyncFn();
-      return result;
-    } finally {
-      stopLoading();
-    }
-  };
-
-  return {
-    isLoading,
-    loadTime,
-    startLoading,
-    stopLoading,
-    measureAsync
-  };
-}
-
-// Component for lazy loading with loading states
-export function LazyLoader<T extends Record<string, any>>(
-  importFn: () => Promise<{ default: React.ComponentType<T> }>,
-  fallback?: React.ReactNode
-) {
-  const LazyComponent = React.lazy(importFn);
-  
-  return function LazyWrapper(props: T) {
-    return (
-      <React.Suspense fallback={fallback || <div>Loading...</div>}>
-        <LazyComponent {...props} />
-      </React.Suspense>
-    );
-  };
-}
-
-// Image optimization component
-export function OptimizedImage({
+export const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
-  width,
-  height,
   className = '',
-  priority = false,
-  ...props
-}: {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  [key: string]: any;
-}) {
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzM0MTU2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2E2YjNjYSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+',
+  priority = false
+}) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     if (priority) {
-      // Preload priority images
-      const img = new Image();
-      img.src = src;
-      img.onload = () => setIsLoaded(true);
-      img.onerror = () => setError(true);
+      setIsLoaded(true);
     }
-  }, [src, priority]);
+  }, [priority]);
+
+  const handleLoad = () => {
+    setIsLoaded(true);
+  };
+
+  const handleError = () => {
+    setError(true);
+  };
 
   if (error) {
     return (
-      <div 
-        className={`bg-zion-slate-light/20 flex items-center justify-center ${className}`}
-        style={{ width, height }}
-      >
-        <span className="text-zion-slate-light text-sm">Image failed to load</span>
+      <div className={`bg-slate-700 flex items-center justify-center ${className}`}>
+        <span className="text-slate-400 text-sm">Image failed to load</span>
       </div>
     );
   }
 
   return (
-    <img
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
-      onLoad={() => setIsLoaded(true)}
-      onError={() => setError(true)}
-      loading={priority ? 'eager' : 'lazy'}
-      {...props}
-    />
+    <div className={`relative overflow-hidden ${className}`}>
+      <img
+        ref={imgRef}
+        src={isLoaded ? src : placeholder}
+        alt={alt}
+        className={`w-full h-full object-cover transition-opacity duration-300 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+        onLoad={handleLoad}
+        onError={handleError}
+        loading={priority ? 'eager' : 'lazy'}
+        decoding="async"
+      />
+      {!isLoaded && (
+        <div className="absolute inset-0 bg-slate-700 animate-pulse" />
+      )}
+    </div>
   );
 };
 
-interface MetricCardProps {
-  title: string;
-  value: string;
-  description: string;
-  icon: React.ReactNode;
-  status: 'good' | 'needs-improvement' | 'poor' | 'info';
-}
+export const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null
+  });
+
+  useEffect(() => {
+    // First Contentful Paint (FCP)
+    if ('PerformanceObserver' in window) {
+      const fcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+        if (fcpEntry) {
+          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+        }
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
+
+      // Largest Contentful Paint (LCP)
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        if (lastEntry) {
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+        }
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // First Input Delay (FID)
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach(entry => {
+          if (entry.entryType === 'first-input') {
+            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+          }
+        });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // Cumulative Layout Shift (CLS)
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach(entry => {
+          if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+            setMetrics(prev => ({ ...prev, cls: clsValue }));
+          }
+        });
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      return () => {
+        fcpObserver.disconnect();
+        lcpObserver.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+      };
+    }
+
+    // Fallback for older browsers
+    if ('performance' in window) {
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigationEntry) {
+        const fcp = navigationEntry.loadEventEnd - navigationEntry.loadEventStart;
+        setMetrics(prev => ({ ...prev, fcp }));
+      }
+    }
+  }, []);
+
+  // Log performance metrics in development
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Performance Metrics:', metrics);
+    }
+  }, [metrics]);
+
+  return null; // This component doesn't render anything visible
+};
+
+export const IntersectionObserverWrapper: React.FC<{
+  children: React.ReactNode;
+  threshold?: number;
+  rootMargin?: string;
+  className?: string;
+}> = ({ children, threshold = 0.1, rootMargin = '0px', className = '' }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold, rootMargin }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [threshold, rootMargin]);
+
+  return (
+    <div ref={ref} className={className}>
+      {isVisible ? children : (
+        <div className="animate-pulse bg-slate-700 rounded-lg">
+          <div className="h-4 bg-slate-600 rounded mb-2"></div>
+          <div className="h-4 bg-slate-600 rounded w-3/4"></div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export const CodeSplittingWrapper: React.FC<{
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
+}> = ({ children, fallback }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // Simulate code splitting delay
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!isLoaded) {
+    return fallback || (
+      <div className="flex items-center justify-center p-8">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div>
+      </div>
+    );
+  }
+
+  return <>{children}</>;
+};
+
+export default PerformanceOptimizer;
