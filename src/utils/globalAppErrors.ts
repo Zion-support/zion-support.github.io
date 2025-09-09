@@ -1,6 +1,6 @@
 import { enhancedGlobalErrorHandler } from './globalToastManager';
 import { apiErrorHandler, consoleErrorHandler, fetchErrorHandler } from './enhancedErrorHandlers';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import { info, logErrorToProduction } from '@/utils/productionLogger';
 
 
 /**
@@ -48,7 +48,7 @@ export function initializeGlobalErrorHandlers(): void {
     });
   }
 
-  logInfo('Enhanced global error handlers initialized');
+  info('Enhanced global error handlers initialized');
 }
 
 /**
@@ -80,5 +80,5 @@ function shouldIgnoreError(error: any): boolean {
 export function cleanupGlobalErrorHandlers(): void {
   consoleErrorHandler.restoreConsoleError();
   fetchErrorHandler.restoreFetch();
-  logInfo('Global error handlers cleaned up');
+  info('Global error handlers cleaned up');
 }

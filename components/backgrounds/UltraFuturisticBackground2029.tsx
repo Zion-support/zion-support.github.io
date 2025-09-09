@@ -34,7 +34,7 @@ export default function UltraFuturisticBackground2029() {
     canvas.height = window.innerHeight;
 
     let animationFrameId: number;
-    let particles: Array<{
+    const particles: Array<{
       x: number;
       y: number;
       vx: number;
