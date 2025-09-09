@@ -9,7 +9,11 @@ import type { } from './.next/types/routes.d.ts'
 
 // NOTE: This file should not be edited
 <<<<<<< HEAD
+<<<<<<< HEAD
 // see https://nextjs.org/docs/app/api-reference/config/typescript for more information.
 =======
 // see https://nextjs.org/docs/basic-features/typescript for more information.
 >>>>>>> cursor/check-fix-push-and-merge-to-main-649b
+=======
+// see https://nextjs.org/docs/basic-features/typescript for more information.
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3ded

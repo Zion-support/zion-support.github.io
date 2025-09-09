@@ -35,6 +35,7 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
+<<<<<<< HEAD
     "allowJs": true,
     "incremental": true
   },
@@ -52,6 +53,30 @@
     {
       "path": "./tsconfig.node.json"
     }
+=======
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "src",
+    ".next/types/**/*.ts"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3ded
   ],
   "exclude": [
     "node_modules"

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "extends": [
     "next/core-web-vitals",
     "next/typescript"
@@ -101,5 +102,11 @@
     "ecmaFeatures": {
       "jsx": true
     }
+=======
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    "no-console": "warn",
+    "no-unused-vars": "warn"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3ded
   }
 }
