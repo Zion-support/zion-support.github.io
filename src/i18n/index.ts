@@ -1,7 +1,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import { safeStorage } from '../utils/safeStorage';
+import { safeLocalStorage } from '../utils/safeStorage';
 
 const enTranslation = {} as const;
 const esTranslation = {} as const;
@@ -42,7 +42,10 @@ i18n.on('languageChanged', (lng) => {
   document.documentElement.dir = i18n.dir();
 
   // Save language preference to localStorage
-  safeStorage.setItem('zion_language', lng);
+  const storage = safeLocalStorage();
+  if (storage) {
+    storage.setItem('zion_language', lng);
+  }
   
   // If user is authenticated, save language preference to profile
   // This will be implemented in the LanguageContext

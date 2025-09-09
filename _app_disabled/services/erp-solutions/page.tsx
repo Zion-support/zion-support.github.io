@@ -5,11 +5,8 @@ export const metadata = {
 };
 
 export default function ERPSolutionsPage() {
-
-}
-
-return (;
-    <div className="max-w-6xl mx-auto px-4 py-12">"
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-16">"
         <h1 className="text-4xl font-bold text-gray-900 mb-6">"
           ERP Solutions
@@ -32,10 +29,12 @@ return (;
           </p>
         </div>
 
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 "hover":shadow-xl transition-shadow">"
-          <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">"
-            <span className="text-2xl">👥</span>"
-  )
-}
+        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+          <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+            <span className="text-2xl">👥</span>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-};
+}

@@ -4,6 +4,9 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './components/ThemeProvider';
 import ErrorBoundary from './components/ErrorBoundary';
+import PerformanceWrapper from './components/PerformanceWrapper';
+import LoadingSpinner from './components/LoadingSpinner';
+import { SEO, HomePageSEO } from './components/SEO';
 import './App.css';
 
 // Create QueryClient instance
