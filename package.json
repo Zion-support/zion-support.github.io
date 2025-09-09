@@ -51,6 +51,7 @@
   "dependencies": {
     "@google-analytics/data": "^4.12.1",
     "@google/generative-ai": "^0.24.1",
+<<<<<<< HEAD
     "@hookform/resolvers": "^5.2.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.1.15",
@@ -87,6 +88,7 @@
     "@supabase/supabase-js": "^2.39.3",
     "@tanstack/react-query": "^5.17.19",
     "@types/lodash.debounce": "^4.0.9",
+    "axios": "^1.7.9",
     "axios-retry": "^4.5.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -116,6 +118,7 @@
     "node-fetch": "*",
     "notistack": "^3.0.0",
     "react": "^18.2.0",
+    "react-datepicker": "^8.4.0",
     "react-day-picker": "^8.10.0",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^3.1.4",
@@ -136,6 +139,7 @@
     "stripe": "^18.2.0",
     "swr": "^2.2.0",
     "tailwind-merge": "^2.6.0",
+    "uuid": "^11.1.0",
     "vaul": "^1.1.2",
     "yup": "^1.2.0",
     "zod": "^3.22.4"
