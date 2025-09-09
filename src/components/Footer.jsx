@@ -119,11 +119,10 @@ export function Footer() {
       title: "Services",
       icon: <Brain className="h-5 w-5 text-zion-cyan" />,
       links: [
-        { label: "AI & Machine Learning", path: "/services#ai-ml" },
-        { label: "Blockchain & Web3", path: "/services#blockchain" },
-        { label: "IoT & Edge Computing", path: "/services#iot-edge" },
-        { label: "Quantum Computing", path: "/services#quantum" },
-        { label: "AR/VR & Metaverse", path: "/services#ar-vr" },
+        { label: "All Services", path: "/services" },
+        { label: "Enhanced Services", path: "/enhanced-services" },
+        { label: "Comprehensive Services", path: "/comprehensive-services" },
+        { label: "AI & Analytics", path: "/services#ai" },
         { label: "Cybersecurity", path: "/services#cybersecurity" },
         { label: "Cloud & Infrastructure", path: "/services#cloud" },
         { label: "Business Intelligence", path: "/services#business-intelligence" }
