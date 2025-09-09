@@ -17,6 +17,8 @@
     NPM_CONFIG_OPTIONAL = "true"
     # Force Rollup to skip native binary and use JS fallback to avoid npm optional bug
     ROLLUP_SKIP_NODEJS_NATIVE = "true"
+    # Disable Netlify's automatic Next.js Runtime since this is a Vite SPA
+    NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 # Headers
 [[headers]]
