@@ -1,8 +1,8 @@
 # Netlify rebuild trigger (minor touch to force deploy) - 2025-09-09 v4.53
 [build] # touch v4.53 to trigger Netlify rebuild
-  # Build the Next.js project on Netlify
+  # Build the site with Vite and publish the dist folder
   command = "npm ci --no-audit --no-fund --include=optional && npm run build:ci"
-  publish = ".next"
+  publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
   # Skip TypeScript checking during build
@@ -63,21 +63,3 @@
   command = "npm ci --no-audit --no-fund --include=optional && npm run build:ci"
 
 # Next.js configuration - no SPA fallback needed
-
-# Set basic cache headers for static assets for better performance
-[[headers]]
-  for = "/_next/static/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/_next/image/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# SPA fallback handled via Netlify redirects since public/_redirects is gitignored
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-# trigger: 2025-09-09T19:45:00Z
