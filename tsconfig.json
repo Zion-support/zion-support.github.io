@@ -11,9 +11,11 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@/pages/*": ["./src/pages/*"]
+      "@/pages/*": ["./src/pages/*"],
+      "axios": ["./src/lib/axios.ts"]
     },
-    "types": ["vite/client", "react", "react-router-dom", "node"],
+    "skipLibCheck": true,
+    "types": ["vite/client", "react", "react-router-dom", "node", "react-dom", "next", "next/types/global", "vitest/globals"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -40,7 +42,11 @@
     "allowJs": true,
     "incremental": true,
     "noEmitOnError": false,
-    "skipLibCheck": true
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts", 

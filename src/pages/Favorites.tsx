@@ -25,7 +25,7 @@ export default function FavoritesPage() {
               id={p.id} 
               name={p.title} 
               _price={p.price} 
-              __priceId={p.id} 
+              __priceId={`price_${p.id}`} 
             />
           ))}
         </div>
