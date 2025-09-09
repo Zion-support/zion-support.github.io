@@ -17,7 +17,7 @@ import { logDev } from '@/utils/developmentLogger';
 export interface UseMarketplaceState<T> {
   data: T[];
   loading: boolean;
-  error: string | null;
+  error: any | null; // Changed from string | null
   retry: () => void;
   refresh: () => void;
 }
@@ -61,21 +61,45 @@ export function useMarketplaceProducts(filters: MarketplaceFilters = {}) {
 }
 
 // Hook for categories
-export function useMarketplaceCategories() {
-  return useQuery({
-    queryKey: ['marketplace', 'categories'],
-    queryFn: async () => {
-      logDev('useMarketplaceCategories: Fetching categories');
+export function useMarketplaceCategories(): UseMarketplaceState<Category> {
+  const [data, setData] = useState<Category[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<any | null>(null); // Changed from string | null
+
+  const fetchData = useCallback(async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      console.log('useMarketplaceCategories: Fetching categories');
       
-      const response = await fetch('/api/marketplace/categories');
-      if (!response.ok) {
-        throw new Error(`Failed to fetch categories: ${response.status}`);
-      }
-      return response.json();
-    },
-    staleTime: 30 * 60 * 1000, // 30 minutes - categories change less frequently
-    refetchOnWindowFocus: false,
-  });
+      // Ensure the API endpoint matches the new Django endpoint
+      // This might require changes in `fetchCategories` in `src/services/marketplace.ts`
+      // if the URL is hardcoded there or constructed differently.
+      // For now, we assume `fetchCategories` correctly calls `/api/market/categories/`
+      const categories = await fetchCategories();
+      setData(categories);
+    } catch (err: any) {
+      console.error('useMarketplaceCategories: Error fetching categories:', err);
+      setError(err); // Store the raw error object
+      setData([]);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
+  const retry = useCallback(() => {
+    fetchData();
+  }, [fetchData]);
+
+  const refresh = useCallback(() => {
+    fetchData();
+  }, [fetchData]);
+
+  return { data, loading, error, retry, refresh };
 }
 
 // Hook for talent

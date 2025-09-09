@@ -1,19 +1,64 @@
 import { PrismaClient } from '@prisma/client';
-import { MARKETPLACE_LISTINGS } from '../src/data/listingData';
-
+import { execSync } from 'child_process';
 const prisma = new PrismaClient();
 
 async function main() {
-  const products = MARKETPLACE_LISTINGS.map((item) => ({
-    id: item.id,
-    name: item.title,
-    description: item.description,
-    price: item.price ?? undefined,
-    currency: item.currency === '$' ? 'USD' : item.currency,
-    images: item.images,
-    category: item.category,
-    tags: item.tags,
-  }));
+  // At the beginning of main() or after prisma client initialization
+  console.log('Attempting to seed categories via Django management command...');
+  try {
+    // Adjust the path to manage.py and python executable if necessary based on your environment
+    // Assuming prisma/seed.ts is run from the root of the project
+    const command = 'python backend/manage.py seed_categories';
+    execSync(command, { stdio: 'inherit', cwd: process.cwd() }); // stdio: 'inherit' will show output from the command
+    console.log('Django seed_categories command executed successfully.');
+  } catch (error) {
+    console.error('Failed to execute Django seed_categories command:', error);
+    // Decide if you want to exit the process or continue with other seeding operations
+    // process.exit(1); // Uncomment to exit if Django seeding fails
+  }
+
+  const products = [
+    {
+      id: 'demo-ai-writer',
+      name: 'AI Writing Assistant',
+      description: 'Generate blog posts and articles using AI.',
+      price: 29.99,
+      currency: 'USD',
+      images: ['https://placehold.co/600x400?text=AI+Writer'],
+    },
+    {
+      id: 'demo-ai-chatbot',
+      name: 'Customer Support Chatbot',
+      description: 'Automate customer chats with a smart AI bot.',
+      price: 49.0,
+      currency: 'USD',
+      images: ['https://placehold.co/600x400?text=AI+Chatbot'],
+    },
+    {
+      id: 'demo-ai-design',
+      name: 'AI Design Generator',
+      description: 'Create stunning designs from text prompts.',
+      price: 39.0,
+      currency: 'USD',
+      images: ['https://placehold.co/600x400?text=AI+Design'],
+    },
+    {
+      id: 'demo-ai-voice',
+      name: 'Voice Cloning Tool',
+      description: 'Clone voices for videos and podcasts.',
+      price: 25.0,
+      currency: 'USD',
+      images: ['https://placehold.co/600x400?text=AI+Voice'],
+    },
+    {
+      id: 'demo-ai-analytics',
+      name: 'Predictive Analytics Suite',
+      description: 'Forecast trends with machine learning analytics.',
+      price: 59.0,
+      currency: 'USD',
+      images: ['https://placehold.co/600x400?text=AI+Analytics'],
+    },
+  ];
 
   await prisma.product.createMany({ data: products, skipDuplicates: true });
 
@@ -43,14 +88,6 @@ async function main() {
 
   await prisma.talent.createMany({ data: talents, skipDuplicates: true });
 
-  const categories = [
-    { id: 'services', name: 'Services', slug: 'services', icon: 'Briefcase', active: true },
-    { id: 'talents', name: 'Talents', slug: 'talents', icon: 'Users', active: true },
-    { id: 'equipment', name: 'Equipment', slug: 'equipment', icon: 'HardDrive', active: true },
-    { id: 'innovation', name: 'Innovation', slug: 'innovation', icon: 'Lightbulb', active: true },
-  ];
-
-  await (prisma as any).category.createMany({ data: categories, skipDuplicates: true });
 }
 
 main()
