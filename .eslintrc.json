@@ -1,79 +1,21 @@
 {
-  "root": true,
-  "env": { "browser": true, "es2020": true },
   "extends": [
-    "eslint:recommended",
-    "@typescript-eslint/recommended"
+    "next/core-web-vitals",
+    "next/typescript"
   ],
-  "ignorePatterns": [
-    "dist/**/*",
-    ".eslintrc.cjs",
-    "media/**/*",
-    "scripts/**/*",
-    "node_modules/**/*",
-    "src.disabled/**/*",
-    "src_disabled_*/**/*",
-    "**/*.disabled/**/*",
-    "**/*.backup/**/*",
-    "**/*.temp/**/*",
-    "**/*.old/**/*",
-    "**/*.test.*",
-    "**/*.spec.*",
-    "tests/**/*",
-    "__tests__/**/*",
-    "cypress/**/*",
-    "e2e/**/*",
-    "corrupted_backup/**/*",
-    "data_backup/**/*",
-    "backup/**/*",
-    "broken_files_backup/**/*",
-    "corrupted_files_backup/**/*",
-    "corrupted_files_backup_2/**/*",
-    "corrupted-files-backup/**/*",
-    "pages._archive_corrupted/**/*",
-    "pages.bak/**/*",
-    "public-backup/**/*",
-    "recovered-branches/**/*",
-    "test_build/**/*",
-    "lib.broken/**/*",
-    "lib.disabled/**/*",
-    "src.broken/**/*",
-    "src.disabled/**/*",
-    "api.disabled/**/*",
-    "api.disabled.temp/**/*",
-    "api-backup/**/*",
-    "apps.backup/**/*",
-    "components_backup/**/*",
-    "components-disabled/**/*",
-    "components.disabled/**/*",
-    "components.disabled_full/**/*",
-    "contracts.disabled/**/*",
-    "data.disabled/**/*",
-    "cypress_backup/**/*",
-    "cypress.disabled/**/*",
-    "deployments/**/*",
-    "pm2-automation/**/*",
-    "netlify/functions-backup/**/*",
-    "*.cjs",
-    "*.js",
-    "!vite.config.js",
-    "!next.config.js",
-    "!tailwind.config.js",
-    "!postcss.config.js"
-  ],
-  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "semi": ["error", "always"],
+    "quotes": ["error", "single"],
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "import/no-anonymous-default-export": "off"
+  },
   "parserOptions": {
-    "ecmaVersion": "latest",
+    "ecmaVersion": 2020,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
     }
-  },
-  "plugins": ["react-refresh"],
-  "rules": {
-    "react-refresh/only-export-components": [
-      "warn",
-      { "allowConstantExport": true }
-    ]
   }
 }
