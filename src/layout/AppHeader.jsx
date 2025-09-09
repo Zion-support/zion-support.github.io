@@ -8,10 +8,50 @@ export function AppHeader() {
   const [marketplaceDropdownOpen, setMarketplaceDropdownOpen] = useState(false);
   const [companyDropdownOpen, setCompanyDropdownOpen] = useState(false);
 
-  const closeAllDropdowns = () => {
-    setServicesDropdownOpen(false);
-    setMarketplaceDropdownOpen(false);
-    setCompanyDropdownOpen(false);
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+    setDropdownOpen(null);
+  }, [location.pathname]);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    // In a real app, this would toggle the theme
+  };
+
+  const navigationItems = [
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
+    { 
+      path: '/services', 
+      label: 'Services',
+      hasDropdown: true,
+      dropdownItems: [
+        { path: '/services', label: 'All Services' },
+        { path: '/enhanced-services', label: 'Enhanced Services' },
+        { path: '/services#ai', label: 'AI & Analytics' },
+        { path: '/services#cybersecurity', label: 'Cybersecurity' },
+        { path: '/services#cloud', label: 'Cloud Solutions' },
+        { path: '/services#consulting', label: 'IT Consulting' }
+      ]
+    },
+    { path: '/contact', label: 'Contact' }
+  ];
+
+  const isActiveRoute = (path) => {
+    if (path === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(path);
   };
 
   return (
