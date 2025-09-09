@@ -7,7 +7,7 @@
   # Skip TypeScript checking during build
   environment = { SKIP_TYPE_CHECK = "true" }
 
-# Trigger: trivial edit to confirm Netlify picks up config and rebuilds
+# Trigger: trivial edit to confirm Netlify picks up config and rebuilds (noop update)
 
 [build.environment]
   NODE_VERSION = "20.18.1"
