@@ -315,12 +315,44 @@ const EnhancedServicesPreview = () => {
       features: ["Threat Detection", "Compliance", "Incident Response"]
     },
     {
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions for modern businesses",
-      icon: "☁️",
-      href: "/cloud-services",
-      gradient: "from-indigo-500 to-blue-500",
-      features: ["Migration", "Optimization", "Management"]
+      icon: Cloud,
+      title: "Cloud & DevOps",
+      description: "Scalable cloud infrastructure and automation",
+      href: "/services/cloud-devops",
+      color: "from-blue-500 to-cyan-500",
+      features: ["AWS/Azure", "Kubernetes", "CI/CD"]
+    },
+    {
+      icon: Chip,
+      title: "Edge Computing",
+      description: "Ultra-low latency IoT and edge solutions",
+      href: "/services/edge-computing-platform",
+      color: "from-green-500 to-emerald-500",
+      features: ["IoT Platforms", "Real-time Analytics", "5G Integration"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Micro SaaS",
+      description: "Innovative software-as-a-service solutions for modern businesses",
+      href: "/micro-saas",
+      color: "from-indigo-500 to-purple-500",
+      features: ["AI Sales Copilot", "Compliance Assistant", "FinOps Optimizer"]
+    },
+    {
+      icon: Shield,
+      title: "Cybersecurity",
+      description: "Advanced AI-powered security and threat detection",
+      href: "/services/cybersecurity",
+      color: "from-red-500 to-orange-500",
+      features: ["AI Threat Detection", "Zero Trust", "Incident Response"]
+    },
+    {
+      icon: Zap,
+      title: "Quantum AI",
+      description: "Next-generation quantum computing and AI integration",
+      href: "/services/ai-quantum-neural-network-platform",
+      color: "from-cyan-500 to-blue-500",
+      features: ["Quantum Neural Networks", "AI Algorithms", "Quantum Simulation"]
     }
   ];
 
@@ -384,17 +416,28 @@ const EnhancedServicesPreview = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-center mt-12"
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center mt-12 space-y-4"
         >
           <Link
             to="/services"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 mr-4"
           >
             View All Services
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
+          </Link>
+          
+          <Link
+            to="/innovative-services-showcase-2030"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
+          >
+            <span className="flex items-center gap-2">
+              Revolutionary Services 2030
+              <Rocket className="w-5 h-5" />
+            </span>
           </Link>
         </motion.div>
       </div>

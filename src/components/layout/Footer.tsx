@@ -52,24 +52,17 @@ export function Footer() {
             
             {/* Contact Info */}
             <div className="space-y-3">
-              <div className="flex items-center text-zion-slate-light">
-                <Phone className="w-4 h-4 mr-3 text-zion-cyan" />
-                <a href="tel:+13024640950" className="hover:text-zion-cyan transition-colors">
-                  +1 302 464 0950
-                </a>
+              <div className="flex items-center space-x-4 text-zinc-400">
+                <Mail className="w-4 h-4" />
+                <span>kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center text-zion-slate-light">
-                <Mail className="w-4 h-4 mr-3 text-zion-cyan" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-zion-cyan transition-colors">
-                  kleber@ziontechgroup.com
-                </a>
+              <div className="flex items-center space-x-3 text-zinc-400">
+                <Phone className="w-4 h-4" />
+                <span>+1 302 464 0950</span>
               </div>
-              <div className="flex items-start text-zion-slate-light">
-                <MapPin className="w-4 h-4 mr-3 mt-1 text-zion-cyan flex-shrink-0" />
-                <span className="leading-relaxed">
-                  364 E Main St STE 1008<br />
-                  Middletown DE 19709
-                </span>
+              <div className="flex items-center space-x-3 text-zinc-400">
+                <MapPin className="w-4 h-4" />
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
           </div>
