@@ -19,7 +19,7 @@ import {
   Clock,
   DollarSign,
   Tag,
-  Category,
+  FolderOpen as Category,
   SortAsc,
   SortDesc,
   Download
