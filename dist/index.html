@@ -57,6 +57,9 @@
     <!-- Manifest for PWA -->
     <link rel="manifest" href="/manifest.json" />
     
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    
     <!-- Theme color -->
     <meta name="theme-color" content="#0f172a" />
     <meta name="msapplication-TileColor" content="#0f172a" />
@@ -143,14 +146,29 @@
     <!-- Performance Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script type="module" crossorigin src="/js/main-CSUVQS1C.js"></script>
-    <link rel="modulepreload" crossorigin href="/js/react-vendor-DJcYfsJ3.js">
-    <link rel="modulepreload" crossorigin href="/js/router-vendor-2SXfyZza.js">
-    <link rel="modulepreload" crossorigin href="/js/ui-vendor-S0FxGqOh.js">
+    <script type="module" crossorigin src="/js/main-B38f-h8g.js"></script>
+    <link rel="modulepreload" crossorigin href="/js/vendor-lGlVL6UQ.js">
+    <link rel="modulepreload" crossorigin href="/js/react-vendor-CiTcxq43.js">
+    <link rel="modulepreload" crossorigin href="/js/ui-vendor-VuFwT3if.js">
     <link rel="stylesheet" crossorigin href="/css/main-CTZj1waA.css">
   </head>
   <body>
     <div id="root"></div>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
     
     <!-- Structured Data for WebPage -->
     <script type="application/ld+json">
