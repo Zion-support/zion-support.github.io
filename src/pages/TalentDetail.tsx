@@ -66,7 +66,7 @@ export default function TalentDetail() {
               ))}
             </ul>
           )}
-          {talent.average_rating && <p>Rating: {talent.average_rating}</p>}
+          {talent.rating && <p>Rating: {talent.rating}</p>}
           <Button className="bg-zion-purple text-white">Contact</Button>
         </div>
       </main>

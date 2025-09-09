@@ -3,11 +3,7 @@ import { useRouter } from 'next/router'; // Changed from useParams
 import { SEO } from '@/components/SEO';
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
-import type { TalentProfile as TalentProfileType } from '@/types/talent';
-
-interface TalentProfileWithSocial extends TalentProfileType {
-  social?: Record<string, string>;
-}
+import type { TalentProfileWithSocial } from '@/types/talent';
 
 export default function TalentProfilePage() {
   const router = useRouter();
@@ -52,7 +48,7 @@ export default function TalentProfilePage() {
             {profile.full_name}
           </h1>
           {profile.bio && <p>{profile.bio}</p>}
-          {profile.hourly_rate && <p>Hourly Rate: ${profile.hourly_rate}/hr</p>}
+          {profile.hourlyRate && <p>Hourly Rate: ${profile.hourlyRate}/hr</p>}
           {profile.skills && (
             <div>
               <h2 className="font-semibold">Skills</h2>

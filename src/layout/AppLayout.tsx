@@ -1,9 +1,6 @@
-import React from 'react';
+import React, { ReactNode, useState } from "react";
 import { Routes, Route } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-import React, { ReactNode, useState } from "react"; // Added useState
 import { Outlet } from "react-router-dom";
 // Assume useAuth hook exists and provides user object with emailVerified status and email
 import { useAuth } from '@/hooks/useAuth'; // Corrected path to the hook

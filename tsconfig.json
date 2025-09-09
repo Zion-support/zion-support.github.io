@@ -14,10 +14,10 @@
       "@/*": ["./src/*"],
       "axios": ["./src/lib/axios.ts"]
     },
-    "types": ["vite/client", "react", "react-router-dom", "socket.io", "socket.io-client", "vitest/globals"],
+    "types": ["node", "react", "react-dom", "next", "next/types/global", "socket.io", "socket.io-client", "vitest/globals"],
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
