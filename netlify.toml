@@ -7,49 +7,9 @@
   command_timeout = "30m"
   # Skip TypeScript checking during build
 
-  [build.environment]
-    NODE_VERSION = "20.19.0"
-    NODE_OPTIONS = "--max-old-space-size=6144"
-    SKIP_TYPE_CHECK = "true"
-    # Ensure devDependencies are installed during CI
-    NPM_CONFIG_PRODUCTION = "false"
-    NPM_FLAGS = "--include=dev --include=optional"
-    # Ensure optional dependencies are installed
-    NPM_CONFIG_OPTIONAL = "true"
-    # Enable Next.js runtime
-    # Skip Next.js plugin; we deploy a static Vite build
-    NETLIFY_NEXT_PLUGIN_SKIP = "true"
-
-# Headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    Strict-Transport-Security = "max-age=31536000"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' plausible.io; connect-src 'self' plausible.io; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
-
-
-
-[[headers]]
-  for = "/logos/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# SPA fallback handled via `_redirects` in publish dir if present
-
-# Functions
-[functions]
-  directory = "netlify/functions"
-  node_bundler = "esbuild"
-
-# Essential scheduled functions only
-[[scheduled.functions]]
-  name = "health"
-  schedule = "*/5 * * * *" # every 5 minutes for health checks
+# API functions (if needed)
+# [functions]
+# directory = "netlify/functions"
 
 [context.production.environment]
   NODE_ENV = "production"
