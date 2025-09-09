@@ -200,32 +200,3 @@ export const MARKETPLACE_LISTINGS = [
     aiScore: 93
   }
 ];
-
-export function generateSearchSuggestions() {
-  return [
-    'AI consulting',
-    'Cybersecurity',
-    'Cloud migration',
-    'Data science',
-    'Machine learning',
-    'DevOps',
-    'Network equipment',
-    'Server hardware',
-    'AI models',
-    'Content creation',
-    'Data analysis',
-    'Business intelligence'
-  ];
-}
-
-export function generateFilterOptions(listings) {
-  const productTypes = [...new Set(listings.map(listing => listing.category))];
-  const locations = [...new Set(listings.map(listing => listing.location).filter(Boolean))];
-  const availability = [...new Set(listings.map(listing => listing.availability).filter(Boolean))];
-  
-  return {
-    productTypes,
-    locations,
-    availability
-  };
-}

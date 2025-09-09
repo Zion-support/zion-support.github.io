@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown, Menu, X } from 'lucide-react';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [marketplaceDropdownOpen, setMarketplaceDropdownOpen] = useState(false);
+  const [companyDropdownOpen, setCompanyDropdownOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const closeAllDropdowns = () => {
+    setServicesDropdownOpen(false);
+    setMarketplaceDropdownOpen(false);
+    setCompanyDropdownOpen(false);
+  };
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -32,14 +32,10 @@ export function AppHeader() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Enhanced Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <motion.div 
-              className="relative"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-500 shadow-lg shadow-zion-cyan/25">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-3 group" onClick={closeAllDropdowns}>
+            <div className="relative">
+              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <span className="text-white font-bold text-lg lg:text-xl">Z</span>
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple rounded-xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
@@ -67,74 +63,140 @@ export function AppHeader() {
 
           {/* Enhanced Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <Link to="/" className="relative text-white hover:text-zion-cyan transition-colors duration-300 group">
-                <span className="relative z-10">Home</span>
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-zion-cyan to-zion-purple group-hover:w-full transition-all duration-300"></div>
-              </Link>
-            </motion.div>
+            <Link to="/" className="text-white hover:text-zion-cyan transition-colors duration-300" onClick={closeAllDropdowns}>
+              Home
+            </Link>
             
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <Link to="/about" className="relative text-white hover:text-zion-cyan transition-colors duration-300 group">
-                <span className="relative z-10">About</span>
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-zion-cyan to-zion-purple group-hover:w-full transition-all duration-300"></div>
-              </Link>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <Link to="/services" className="relative text-white hover:text-zion-cyan transition-colors duration-300 group">
-                <span className="relative z-10">Services</span>
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-zion-cyan to-zion-purple group-hover:w-full transition-all duration-300"></div>
-              </Link>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-            >
-              <Link to="/contact" className="relative text-white hover:text-zion-cyan transition-colors duration-300 group">
-                <span className="relative z-10">Contact</span>
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-zion-cyan to-zion-purple group-hover:w-full transition-all duration-300"></div>
-              </Link>
-            </motion.div>
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button 
+                className="flex items-center text-white hover:text-zion-cyan transition-colors duration-300"
+                onMouseEnter={() => setServicesDropdownOpen(true)}
+                onMouseLeave={() => setServicesDropdownOpen(false)}
+              >
+                Services
+                <ChevronDown className="ml-1 w-4 h-4" />
+              </button>
+              {servicesDropdownOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-64 bg-zinc-900/95 backdrop-blur-md border border-zion-cyan/20 rounded-lg shadow-xl"
+                  onMouseEnter={() => setServicesDropdownOpen(true)}
+                  onMouseLeave={() => setServicesDropdownOpen(false)}
+                >
+                  <div className="py-2">
+                    <Link to="/services" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
+                      All Services
+                    </Link>
+                    <Link to="/ai-services" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
+                      AI & Analytics
+                    </Link>
+                    <Link to="/cybersecurity" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
+                      Cybersecurity
+                    </Link>
+                    <Link to="/cloud-solutions" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
+                      Cloud Solutions
+                    </Link>
+                    <Link to="/quantum-technology" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
+                      Quantum Technology
+                    </Link>
+                    <Link to="/blockchain" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
+                      Blockchain & Web3
+                    </Link>
+                    <Link to="/green-it" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
+                      Green IT
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Marketplace Dropdown */}
+            <div className="relative group">
+              <button 
+                className="flex items-center text-white hover:text-zion-cyan transition-colors duration-300"
+                onMouseEnter={() => setMarketplaceDropdownOpen(true)}
+                onMouseLeave={() => setMarketplaceDropdownOpen(false)}
+              >
+                Marketplace
+                <ChevronDown className="ml-1 w-4 h-4" />
+              </button>
+              {marketplaceDropdownOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-64 bg-zinc-900/95 backdrop-blur-md border border-zion-cyan/20 rounded-lg shadow-xl"
+                  onMouseEnter={() => setMarketplaceDropdownOpen(true)}
+                  onMouseLeave={() => setMarketplaceDropdownOpen(false)}
+                >
+                  <div className="py-2">
+                    <Link to="/marketplace" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
+                      Products
+                    </Link>
+                    <Link to="/talent" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
+                      Talent
+                    </Link>
+                    <Link to="/equipment" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
+                      Equipment
+                    </Link>
+                    <Link to="/categories" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
+                      Categories
+                    </Link>
+                    <Link to="/it-onsite-services" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
+                      IT Onsite Services
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Company Dropdown */}
+            <div className="relative group">
+              <button 
+                className="flex items-center text-white hover:text-zion-cyan transition-colors duration-300"
+                onMouseEnter={() => setCompanyDropdownOpen(true)}
+                onMouseLeave={() => setCompanyDropdownOpen(false)}
+              >
+                Company
+                <ChevronDown className="ml-1 w-4 h-4" />
+              </button>
+              {companyDropdownOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-64 bg-zinc-900/95 backdrop-blur-md border border-zion-cyan/20 rounded-lg shadow-xl"
+                  onMouseEnter={() => setCompanyDropdownOpen(true)}
+                  onMouseLeave={() => setCompanyDropdownOpen(false)}
+                >
+                  <div className="py-2">
+                    <Link to="/about" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
+                      About Us
+                    </Link>
+                    <Link to="/blog" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
+                      Blog
+                    </Link>
+                    <Link to="/partners" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
+                      Partners
+                    </Link>
+                    <Link to="/careers" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
+                      Careers
+                    </Link>
+                    <Link to="/contact" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
+                      Contact
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <Link to="/faq" className="text-white hover:text-zion-cyan transition-colors duration-300" onClick={closeAllDropdowns}>
+              FAQ
+            </Link>
           </nav>
 
           {/* Enhanced Actions */}
           <div className="hidden lg:flex items-center space-x-4">
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
-              <Link to="/login" className="text-white hover:text-zion-cyan transition-colors duration-300 font-medium hover:scale-105">
-                Login
-              </Link>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.7 }}
-            >
-              <Link to="/contact" className="relative px-6 py-2 bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-all duration-300 overflow-hidden group">
-                <span className="relative z-10">Get Started</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-zion-purple via-zion-blue to-zion-cyan opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple animate-pulse opacity-20"></div>
-              </Link>
-            </motion.div>
+            <Link to="/login" className="text-white hover:text-zion-cyan transition-colors duration-300 font-medium" onClick={closeAllDropdowns}>
+              Login
+            </Link>
+            <Link to="/contact" className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-transform" onClick={closeAllDropdowns}>
+              Get Started
+            </Link>
           </div>
 
           {/* Enhanced Mobile Menu Button */}
@@ -144,102 +206,91 @@ export function AppHeader() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <div className="w-6 h-6 relative">
-              <motion.div
-                className="absolute top-0 left-0 w-6 h-0.5 bg-current rounded-full"
-                animate={mobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-                transition={{ duration: 0.3 }}
-              />
-              <motion.div
-                className="absolute top-2 left-0 w-6 h-0.5 bg-current rounded-full"
-                animate={mobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              />
-              <motion.div
-                className="absolute top-4 left-0 w-6 h-0.5 bg-current rounded-full"
-                animate={mobileMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-                transition={{ duration: 0.3 }}
-              />
-            </div>
-          </motion.button>
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
         </div>
 
-        {/* Enhanced Mobile Menu */}
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div 
-              className="lg:hidden py-4 border-t border-zion-cyan/20 bg-black/95 backdrop-blur-xl"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <nav className="flex flex-col space-y-4">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: 0.1 }}
-                >
-                  <Link to="/" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2 px-4 rounded-lg hover:bg-zion-cyan/10">
-                    Home
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden py-4 border-t border-zion-cyan/20">
+            <nav className="flex flex-col space-y-4">
+              <Link to="/" className="text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
+                Home
+              </Link>
+              
+              {/* Mobile Services Section */}
+              <div className="border-l-2 border-zion-cyan/30 pl-4">
+                <div className="text-zion-cyan font-medium mb-2">Services</div>
+                <div className="space-y-2 ml-4">
+                  <Link to="/services" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
+                    All Services
                   </Link>
-                </motion.div>
-                
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: 0.2 }}
-                >
-                  <Link to="/about" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2 px-4 rounded-lg hover:bg-zion-cyan/10">
-                    About
+                  <Link to="/ai-services" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
+                    AI & Analytics
                   </Link>
-                </motion.div>
-                
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: 0.3 }}
-                >
-                  <Link to="/services" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2 px-4 rounded-lg hover:bg-zion-cyan/10">
-                    Services
+                  <Link to="/cybersecurity" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
+                    Cybersecurity
                   </Link>
-                </motion.div>
-                
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: 0.4 }}
-                >
-                  <Link to="/contact" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2 px-4 rounded-lg hover:bg-zion-cyan/10">
-                    Contact
+                  <Link to="/cloud-solutions" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
+                    Cloud Solutions
                   </Link>
-                </motion.div>
-                
-                <div className="pt-4 border-t border-zion-cyan/20">
-                  <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: 0.5 }}
-                  >
-                    <Link to="/login" className="block text-white hover:text-zion-cyan transition-colors duration-300 font-medium mb-3 py-2 px-4 rounded-lg hover:bg-zion-cyan/10">
-                      Login
-                    </Link>
-                  </motion.div>
-                  
-                  <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: 0.6 }}
-                  >
-                    <Link to="/contact" className="block px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium text-center hover:scale-105 transition-transform">
-                      Get Started
-                    </Link>
-                  </motion.div>
                 </div>
-              </nav>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              </div>
+
+              {/* Mobile Marketplace Section */}
+              <div className="border-l-2 border-zion-cyan/30 pl-4">
+                <div className="text-zion-cyan font-medium mb-2">Marketplace</div>
+                <div className="space-y-2 ml-4">
+                  <Link to="/marketplace" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
+                    Products
+                  </Link>
+                  <Link to="/talent" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
+                    Talent
+                  </Link>
+                  <Link to="/equipment" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
+                    Equipment
+                  </Link>
+                </div>
+              </div>
+
+              {/* Mobile Company Section */}
+              <div className="border-l-2 border-zion-cyan/30 pl-4">
+                <div className="text-zion-cyan font-medium mb-2">Company</div>
+                <div className="space-y-2 ml-4">
+                  <Link to="/about" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
+                    About Us
+                  </Link>
+                  <Link to="/blog" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
+                    Blog
+                  </Link>
+                  <Link to="/partners" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
+                    Partners
+                  </Link>
+                  <Link to="/careers" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
+                    Careers
+                  </Link>
+                </div>
+              </div>
+
+              <Link to="/faq" className="text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
+                FAQ
+              </Link>
+              
+              <div className="pt-4 border-t border-zion-cyan/20">
+                <Link to="/login" className="block text-white hover:text-zion-cyan transition-colors duration-300 font-medium mb-2" onClick={() => setMobileMenuOpen(false)}>
+                  Login
+                </Link>
+                <Link to="/contact" className="block px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium text-center" onClick={() => setMobileMenuOpen(false)}>
+                  Get Started
+                </Link>
+              </div>
+            </nav>
+          </div>
+        )}
       </div>
     </motion.header>
   );

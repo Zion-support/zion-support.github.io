@@ -16,15 +16,8 @@ import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide
 
 
 import { MARKETPLACE_LISTINGS } from "@/data/listingData";
-import { ProductListing } from "@/types/listings";
-// useNavigate will be replaced by useRouter
-import { toast } from "@/hooks/use-toast";
-import { NextSeo } from '@/components/NextSeo';
-import { Header } from "@/components/Header";
-import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
-import {logErrorToProduction} from '@/utils/productionLogger';
-
-
+import { useNavigate } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 const AUTO_SERVICE_TITLES = [
   "AI-Powered Customer Support",
   "Cloud Infrastructure Management",
@@ -63,106 +56,84 @@ function generateInnovationListing(index: number): ProductListing {
     aiScore: Math.floor(Math.random() * 20) + 80
   };
 }
-
-interface CategoryDetailProps {
-  slug?: string;
-}
-
-export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps = {}) {
-  const router = useRouter();
-  // Use router.query for slug in Next.js. Ensure the page is named [slug].tsx or similar.
-  // If slugProp is provided, it takes precedence.
-  const slug = slugProp ?? (router.query.slug as string | undefined);
-  // navigate will be replaced by router.push or router.replace
-
-  // Redirect to categories list if slug is missing
-  // This check should ideally happen earlier or be handled by Next.js routing if possible
-  useEffect(() => {
-    if (!slug && router.isReady) { // Ensure router.query is populated
-      router.push('/categories');
-    }
-  }, [slug, router]);
-
-  if (!slug && !slugProp) { // If no slug and not yet redirected, render nothing or a loader
-    return null; // Or a loading spinner, or handle redirection more gracefully
-  }
-  const [isLoading, setIsLoading] = useState(true);
-  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
-  const [category, setCategory] = useState<{title: string, description: string, icon: React.JSX.Element}>({
-    title: "",
-    description: "",
-    icon: <Bot className="w-6 h-6" />
-  });
-  const innovationCounterRef = useRef(0);
-
-  // Map of category slugs to their display data
-  const categoryData = {
-    'services': {
-      title: "Services",
-      description: "On-demand IT support, consulting, development, and more",
-      icon: <Briefcase className="w-6 h-6" />
-    },
-    'talents': {
-      title: "Talents",
-      description: "Connect with AI experts, developers, and tech specialists",
-      icon: <Brain className="w-6 h-6" />
-    },
-    'equipment': {
-      title: "Equipment",
-      description: "Rent or buy specialized hardware, servers, and devices",
-      icon: <Code className="w-6 h-6" />
-    },
-    'innovation': {
-      title: "Innovation",
-      description: "Discover cutting-edge solutions and tech breakthroughs",
-      icon: <Bot className="w-6 h-6" />
-    },
-    'ai-models-apis': {
-      title: "AI Models & APIs",
-      description: "Access cutting-edge AI models with easy integration",
-      icon: <Brain className="w-6 h-6" />
-    },
-    'content-creation': {
-      title: "Content Creation",
-      description: "Generate high-quality content for your projects",
-      icon: <PenLine className="w-6 h-6" />
-    },
-    'data-analysis': {
-      title: "Data Analysis",
-      description: "Extract insights from complex datasets",
-      icon: <BarChart className="w-6 h-6" />
-    },
-    'computer-vision': {
-      title: "Computer Vision",
-      description: "Image and video processing solutions",
-      icon: <Eye className="w-6 h-6" />
-    },
-    'virtual-assistants': {
-      title: "Virtual Assistants",
-      description: "Intelligent automation for your workflow",
-      icon: <Bot className="w-6 h-6" />
-    },
-    'voice-speech': {
-      title: "Voice & Speech",
-      description: "Speech recognition and synthesis tools",
-      icon: <Mic className="w-6 h-6" />
-    },
-    'developer-tools': {
-      title: "Developer Tools",
-      description: "AI-powered coding assistance and automation",
-      icon: <Code className="w-6 h-6" />
-    },
-    'business-solutions': {
-      title: "Business Solutions",
-      description: "Enterprise AI integrations and services",
-      icon: <Briefcase className="w-6 h-6" />
-    }
-  };
-
-  useEffect(() => {
-    async function load() {
-      setIsLoading(true);
-      try {
+export default function CategoryDetail() {
+    // Cast to specify the expected route param type since useParams may be untyped
+    const { slug } = useParams();
+    const navigate = useNavigate();
+    const { toast } = useToast();
+    const [isLoading, setIsLoading] = useState(true);
+    const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
+    const [category, setCategory] = useState({
+        title: "",
+        description: "",
+        icon: <Bot className="w-6 h-6"/>
+    });
+    const innovationCounterRef = useRef(0);
+    // Map of category slugs to their display data
+    const categoryData = {
+        'services': {
+            title: "Services",
+            description: "On-demand IT support, consulting, development, and more",
+            icon: <Briefcase className="w-6 h-6"/>
+        },
+        'talents': {
+            title: "Talents",
+            description: "Connect with AI experts, developers, and tech specialists",
+            icon: <Brain className="w-6 h-6"/>
+        },
+        'equipment': {
+            title: "Equipment",
+            description: "Rent or buy specialized hardware, servers, and devices",
+            icon: <Code className="w-6 h-6"/>
+        },
+        'innovation': {
+            title: "Innovation",
+            description: "Discover cutting-edge solutions and tech breakthroughs",
+            icon: <Bot className="w-6 h-6"/>
+        },
+        'ai-models-apis': {
+            title: "AI Models & APIs",
+            description: "Access cutting-edge AI models with easy integration",
+            icon: <Brain className="w-6 h-6"/>
+        },
+        'content-creation': {
+            title: "Content Creation",
+            description: "Generate high-quality content for your projects",
+            icon: <PenLine className="w-6 h-6"/>
+        },
+        'data-analysis': {
+            title: "Data Analysis",
+            description: "Extract insights from complex datasets",
+            icon: <BarChart className="w-6 h-6"/>
+        },
+        'computer-vision': {
+            title: "Computer Vision",
+            description: "Image and video processing solutions",
+            icon: <Eye className="w-6 h-6"/>
+        },
+        'virtual-assistants': {
+            title: "Virtual Assistants",
+            description: "Intelligent automation for your workflow",
+            icon: <Bot className="w-6 h-6"/>
+        },
+        'voice-speech': {
+            title: "Voice & Speech",
+            description: "Speech recognition and synthesis tools",
+            icon: <Mic className="w-6 h-6"/>
+        },
+        'developer-tools': {
+            title: "Developer Tools",
+            description: "AI-powered coding assistance and automation",
+            icon: <Code className="w-6 h-6"/>
+        },
+        'business-solutions': {
+            title: "Business Solutions",
+            description: "Enterprise AI integrations and services",
+            icon: <Briefcase className="w-6 h-6"/>
+        }
+    };
+    useEffect(() => {
+        setIsLoading(true);
         // Find the category data based on slug
         const currentCategory = categoryData[slug as keyof typeof categoryData] || {
           title: slug
