@@ -59,23 +59,26 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           // FID measurement would go here in a real implementation
           fid = 50; // Placeholder
         }
+      });
+    });
+
+    images.forEach((img) => imageObserver.observe(img));
+  }, []);
+
+  // Service worker registration
+  const registerServiceWorker = useCallback(async () => {
+    if ('serviceWorker' in navigator) {
+      try {
+        // Unregister any existing service workers first
+        const registrations = await navigator.serviceWorker.getRegistrations();
+        for (const registration of registrations) {
+          await registration.unregister();
+        }
         
-        // Measure TTFB
-        const ttfb = navigation.responseStart - navigation.requestStart;
-        
-        const { score, grade } = calculateScore(fcp, lcp, cls, fid, ttfb);
-        
-        setMetrics({
-          fcp,
-          lcp,
-          cls,
-          fid,
-          ttfb,
-          score,
-          grade
-        });
-        
-        setOptimizations(generateOptimizations({ fcp, lcp, cls, fid, ttfb, score, grade }));
+        const registration = await navigator.serviceWorker.register('/sw.js');
+        console.log('Service Worker registered:', registration);
+      } catch (error) {
+        console.log('Service Worker registration failed:', error);
       }
     }
   }, [calculateScore, generateOptimizations]);

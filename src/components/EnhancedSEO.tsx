@@ -31,6 +31,39 @@ export default function EnhancedSEO({
   twitterCard = 'summary_large_image',
   structuredData,
   noindex = false,
+  nofollow = false
+}: EnhancedSEOProps) {
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : canonical || 'https://ziontechgroup.com';
+interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonical?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article' | 'product' | 'profile';
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  structuredData?: Record<string, any>;
+  noindex?: boolean;
+  nofollow?: boolean;
+  language?: string;
+  alternateLanguages?: Record<string, string>;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+}
+
+export function EnhancedSEO({
+  title = "Zion - The Future of Tech & AI Marketplace",
+  description = "The world's first free marketplace dedicated to high-tech and artificial intelligence. Publish, connect, and thrive — all in one place.",
+  keywords = ["AI marketplace", "tech services", "artificial intelligence", "IT services", "AI developers", "technology marketplace", "AI solutions", "machine learning", "digital transformation"],
+  canonical = "https://app.ziontechgroup.com/",
+  ogImage = "/favicon.svg",
+  ogType = "website",
+  twitterCard = "summary_large_image",
+  structuredData,
+  noindex = false,
   nofollow = false,
   language = 'en',
   alternateLanguages = {},
@@ -73,8 +106,24 @@ export default function EnhancedSEO({
     ],
     "offers": {
       "@type": "AggregateOffer",
-      "name": "AI & Technology Services",
-      "description": "Comprehensive AI, quantum computing, and enterprise technology solutions"
+      "priceCurrency": "USD",
+      "lowPrice": "599",
+      "highPrice": "25000",
+      "description": "Enterprise AI and Technology Solutions"
+    "url": "https://app.ziontechgroup.com",
+    "logo": "/favicon.svg",
+    "description": "The world's first free marketplace dedicated to high-tech and artificial intelligence",
+    "foundingDate": "2024",
+    "sameAs": [
+      "https://twitter.com/lovable_dev",
+      "https://www.facebook.com/zionmarketplace",
+      "https://www.linkedin.com/company/zion-marketplace"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "support@ziontechgroup.com",
+      "availableLanguage": ["English"]
     },
     "foundingDate": "2020",
     "numberOfEmployees": "50-100"
