@@ -1,49 +1,68 @@
 # PM2 Automation System
 
-This directory contains configuration and documentation for the PM2-based automation system that has replaced GitHub Actions workflows.
+This directory contains documentation for the PM2-based automation system that has replaced GitHub Actions workflows for the Zion Tech Group website.
 
 ## Automation Overview
 
-All previously GitHub Actions-based workflows have been migrated to PM2 processes that run continuously and automatically.
+The Zion Tech Group website now uses PM2 (Process Manager 2) for all automation tasks, providing:
+- **Continuous monitoring** of all processes
+- **Automatic restart** on failures
+- **Resource management** with memory limits
+- **Scheduled automation** at various intervals
+- **Real-time process monitoring**
 
-### 🔄 PM2 Automation Processes
-
-The following automation processes are managed by PM2 and run continuously:
-
-#### High Priority (Every 15 minutes)
-- **console-error-fixer**: Automatically fixes console errors and JavaScript issues
-
-#### Regular Intervals
-- **link-checker**: Runs every 30 minutes to check for broken links
-- **continuous-improvement**: Runs every 2 hours for automated improvements
-- **daily-build-test**: Runs every hour for build verification and testing
-- **security-audit**: Runs every 4 hours for security scanning
-- **performance-monitor**: Runs every 2 hours for performance monitoring
-- **quality-checks**: Runs every 3 hours for code quality assurance
-- **link-integrity**: Runs every 2 hours for link integrity verification
-- **front-maximizer**: Runs every 4 hours for frontend optimization
-- **sitemap-runner**: Runs every 6 hours for sitemap generation
-- **dependency-updates**: Runs every 6 hours for dependency management
+## PM2 Processes
 
 ### 🚀 Main Applications
 - **zion-app**: Main frontend application
 - **zion-backend**: Backend server
 
-## PM2 Management
+### 🔄 Automation Processes
 
-### Check Status
+#### High Priority (15 minutes)
+- **console-error-fixer**: Continuous console error detection and fixing
+
+#### Regular Intervals
+- **link-checker**: Link validation every 30 minutes
+- **continuous-improvement**: Code improvements every 2 hours
+- **daily-build-test**: Build and test automation every hour
+- **security-audit**: Security scanning every 4 hours
+- **dependency-updates**: Package updates every 6 hours
+- **performance-monitor**: Performance monitoring every 2 hours
+- **quality-checks**: Code quality checks every 3 hours
+- **link-integrity**: Link integrity verification every 2 hours
+- **front-maximizer**: Frontend optimization every 4 hours
+- **sitemap-runner**: Sitemap generation every 6 hours
+
+## Configuration
+
+### Ecosystem Configuration
+- **File**: `ecosystem.config.cjs`
+- **Memory Limits**: 512MB for automation processes, 1GB for main apps
+- **Auto-restart**: Enabled for all processes
+- **Environment**: Production mode with optimized Node.js settings
+
+### Environment Variables
+- `NODE_ENV`: Production
+- `NODE_OPTIONS`: Optimized memory settings
+- `AUTOMATION_INTERVAL`: Process-specific timing intervals
+
+## Management Commands
+
+### Start All Processes
 ```bash
-pm2 status
+pm2 start ecosystem.config.cjs
 ```
 
-### View Logs
+### Monitor Processes
 ```bash
-pm2 logs [process-name]
+pm2 list
+pm2 monit
 ```
 
-### Restart All Processes
+### Restart Specific Process
 ```bash
-pm2 restart all
+pm2 restart <process-name>
 ```
 
 ### Stop All Processes
@@ -51,34 +70,63 @@ pm2 restart all
 pm2 stop all
 ```
 
-### Start All Processes
+### Delete All Processes
 ```bash
-pm2 start ecosystem.config.cjs
+pm2 delete all
 ```
 
-## Configuration
+### View Logs
+```bash
+pm2 logs <process-name>
+pm2 logs --lines 100
+```
 
-The PM2 configuration is defined in `ecosystem.config.cjs` at the root of the project.
+## Benefits Over GitHub Actions
 
-## Benefits of PM2 over GitHub Actions
+1. **Real-time Processing**: Continuous operation instead of triggered runs
+2. **Resource Efficiency**: Lower overhead and faster execution
+3. **Immediate Response**: Instant error detection and recovery
+4. **Cost Effective**: No GitHub Actions minutes consumption
+5. **Local Control**: Full control over automation timing and resources
+6. **Scalability**: Easy to add new automation processes
 
-1. **Continuous Operation**: Processes run continuously instead of being triggered by events
-2. **Real-time Monitoring**: Immediate visibility into automation status
-3. **Resource Efficiency**: Better resource utilization and monitoring
-4. **Faster Response**: No waiting for GitHub Actions to trigger
-5. **Local Control**: Full control over automation without external dependencies
+## Monitoring & Maintenance
 
-## Migration Notes
+### Health Checks
+- Monitor process status with `pm2 list`
+- Check memory usage and restart counts
+- Review logs for errors or warnings
 
-- All GitHub Actions workflows have been replaced with PM2 processes
-- Automation now runs continuously instead of on-demand
-- Better error handling and recovery mechanisms
-- Improved monitoring and logging capabilities
+### Performance Optimization
+- Adjust memory limits in ecosystem config
+- Modify automation intervals as needed
+- Monitor CPU usage patterns
 
-## Best Practices
+### Troubleshooting
+1. **Process Crashes**: Check logs with `pm2 logs <name>`
+2. **Memory Issues**: Adjust max_memory_restart values
+3. **High Restart Counts**: Investigate underlying issues
+4. **Performance Issues**: Monitor resource usage
 
-For automation issues:
-1. Check PM2 status: `pm2 status`
-2. Review process logs: `pm2 logs [process-name]`
-3. Restart processes if needed: `pm2 restart [process-name]`
-4. Check the main PM2 automation documentation in the project root
+## Security
+
+- All processes run in production environment
+- Memory limits prevent resource exhaustion
+- Auto-restart ensures service availability
+- Process isolation for security
+
+## Future Enhancements
+
+- Add monitoring dashboards
+- Implement alerting for critical failures
+- Add process dependency management
+- Create backup automation processes
+
+## Support
+
+For PM2 automation issues:
+1. Check process status with `pm2 list`
+2. Review logs for error details
+3. Verify ecosystem configuration
+4. Check system resources
+5. Contact the development team
