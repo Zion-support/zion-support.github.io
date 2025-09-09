@@ -1,23 +1,23 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ;
-  BarChart3, ;
-  LineChart, ;
-  PieChart, ;
-  TrendingUp, ;
-  TrendingDown, ;
-  Activity, ;
-  Zap, ;
-  Target,;
-  RefreshCw,;
-  Download,;
-  Share2,;
-  Settings,;
-  Eye,;
-  EyeOff;
+import {
+  BarChart3,
+  LineChart,
+  PieChart,
+  TrendingUp,
+  TrendingDown,
+  Activity,
+  Zap,
+  Target,
+  RefreshCw,
+  Download,
+  Share2,
+  Settings,
+  Eye,
+  EyeOff
 } from 'lucide-react';
-;
-interface DataPoint {;
+
+interface DataPoint {
   id: string;
   label: string;
   value: number;

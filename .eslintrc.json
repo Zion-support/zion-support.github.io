@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "extends": [
     "next/core-web-vitals",
     "next/typescript"
@@ -39,6 +38,17 @@
     "lib.disabled/**/*",
     "src.broken/**/*",
     "src.disabled/**/*",
+    "src_disabled_*/**/*",
+    "src_disabled_components/**/*",
+    "src_disabled_context/**/*",
+    "src_disabled_layout/**/*",
+    "src_disabled_utils/**/*",
+    "src_disabled_1757239864/**/*",
+    "_app_disabled/**/*",
+    "_pages_api_disabled/**/*",
+    "temp-backup/**/*",
+    "test-utils.jsx",
+    "vite.config.backup.ts",
     "api.disabled/**/*",
     "api.disabled.temp/**/*",
     "api-backup/**/*",
@@ -55,6 +65,8 @@
     "pm2-automation/**/*",
     "netlify/functions-backup/**/*",
     "automation/**/*",
+    "temp-backup/**/*",
+    "supabase/functions/**/*",
     "advanced-*.js",
     "advanced-*.cjs",
     "aggressive-*.js",
@@ -102,11 +114,5 @@
     "ecmaFeatures": {
       "jsx": true
     }
-=======
-  "extends": ["next/core-web-vitals"],
-  "rules": {
-    "no-console": "warn",
-    "no-unused-vars": "warn"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3ded
   }
 }
