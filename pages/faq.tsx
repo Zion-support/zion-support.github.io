@@ -1,238 +1,267 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { ArrowRight, ChevronDown, ChevronUp, HelpCircle, MessageSquare, Phone, Mail } from 'lucide-react'
+import PageTransition from '../src/components/PageTransition'
 
-export default function FAQPage() {
-  const [openCategory, setOpenCategory] = useState('general');
+interface FAQItem {
+	question: string
+	answer: string
+	category: string
+}
 
-  const faqData = {
-    general: [
-      {
-        question: 'What is Zion Tech Group and what do you specialize in?',
-        answer: 'Zion Tech Group is a leading technology company specializing in AI automation and autonomous systems. We develop cutting-edge solutions that enable organizations to operate more efficiently, intelligently, and autonomously. Our expertise spans across AI, machine learning, edge computing, IoT integration, and sustainable technology solutions.'
-      },
-      {
-        question: 'How long has Zion Tech Group been in business?',
-        answer: 'Zion Tech Group has been at the forefront of AI automation technology for over 8 years. We\'ve successfully delivered autonomous systems to hundreds of organizations across various industries, establishing ourselves as a trusted partner in digital transformation and AI implementation.'
-      },
-      {
-        question: 'What industries do you serve?',
-        answer: 'We serve a diverse range of industries including healthcare, manufacturing, financial services, retail, transportation, energy, and government. Our AI automation solutions are designed to be industry-agnostic and can be customized to meet the specific needs of any sector.'
-      },
-      {
-        question: 'Do you offer consulting services in addition to technology solutions?',
-        answer: 'Yes, we provide comprehensive consulting services including AI strategy development, implementation planning, change management, and ongoing optimization. Our team of experts works closely with clients to ensure successful adoption and maximum ROI from AI automation investments.'
-      }
-    ],
-    technology: [
-      {
-        question: 'What types of AI technologies do you work with?',
-        answer: 'We work with a comprehensive range of AI technologies including machine learning, deep learning, natural language processing, computer vision, reinforcement learning, and edge AI. Our solutions incorporate the latest advancements in AI research and are designed to be scalable, secure, and sustainable.'
-      },
-      {
-        question: 'How do you ensure the security of AI systems?',
-        answer: 'Security is built into every layer of our AI systems. We implement multi-layered security architectures including encryption, secure model deployment, threat detection, and regular security audits. Our systems comply with industry standards and regulatory requirements while maintaining the highest levels of data protection.'
-      },
-      {
-        question: 'Can your AI systems operate offline or in edge environments?',
-        answer: 'Absolutely. We specialize in edge AI solutions that can operate independently of cloud infrastructure. Our edge AI systems are designed to process data locally, reducing latency, improving privacy, and enabling autonomous operation even in environments with limited connectivity.'
-      },
-      {
-        question: 'How do you handle data privacy and compliance?',
-        answer: 'We implement comprehensive data privacy measures including data anonymization, differential privacy, and secure multi-party computation. Our systems are designed to comply with GDPR, HIPAA, SOX, and other relevant regulations while maintaining the highest standards of data protection and ethical AI practices.'
-      }
-    ],
-    implementation: [
-      {
-        question: 'How long does it typically take to implement AI automation?',
-        answer: 'Implementation timelines vary depending on the complexity and scope of the project. Simple automation projects can be completed in 4-8 weeks, while comprehensive enterprise transformations may take 6-18 months. We work with clients to establish realistic timelines and deliver value incrementally throughout the process.'
-      },
-      {
-        question: 'What kind of support do you provide during and after implementation?',
-        answer: 'We provide comprehensive support throughout the entire implementation process and beyond. This includes dedicated project management, technical support, user training, documentation, and ongoing optimization services. Our support team is available 24/7 for critical issues and we offer various support tiers to meet different needs.'
-      },
-      {
-        question: 'Do you provide training for our staff?',
-        answer: 'Yes, we offer comprehensive training programs for technical and non-technical staff. Our training covers system operation, maintenance, troubleshooting, and best practices for maximizing the value of AI automation. We also provide ongoing education as new features and capabilities are released.'
-      },
-      {
-        question: 'Can we integrate your solutions with our existing systems?',
-        answer: 'Absolutely. Our AI systems are designed with open architectures and standard APIs that enable seamless integration with existing enterprise systems. We have extensive experience integrating with ERP systems, CRM platforms, databases, and custom applications across various technology stacks.'
-      }
-    ],
-    sustainability: [
-      {
-        question: 'How do you address environmental concerns in AI systems?',
-        answer: 'We\'re committed to sustainable AI development. Our systems use energy-efficient algorithms, renewable energy-powered infrastructure, and optimization techniques that minimize environmental impact. We also help clients measure and reduce the carbon footprint of their AI operations through our sustainability tools and consulting services.'
-      },
-      {
-        question: 'What makes your AI systems "green"?',
-        answer: 'Our green AI systems incorporate several key features: energy-efficient model architectures, intelligent resource allocation, renewable energy integration, and carbon footprint monitoring. We\'ve developed proprietary techniques that achieve comparable performance to traditional AI systems while using significantly less computational power.'
-      },
-      {
-        question: 'Do you offer sustainability reporting and metrics?',
-        answer: 'Yes, we provide comprehensive sustainability reporting including carbon emissions tracking, energy efficiency metrics, and environmental impact assessments. Our clients can monitor the environmental performance of their AI systems in real-time and receive detailed reports for compliance and optimization purposes.'
-      }
-    ],
-    healthcare: [
-      {
-        question: 'How do you ensure HIPAA compliance in healthcare AI systems?',
-        answer: 'Our healthcare AI systems are built with HIPAA compliance as a foundational requirement. We implement end-to-end encryption, secure data transmission, access controls, audit logging, and regular security assessments. All our healthcare solutions undergo rigorous compliance testing and are regularly updated to meet evolving regulatory requirements.'
-      },
-      {
-        question: 'What types of healthcare applications do you support?',
-        answer: 'We support a wide range of healthcare applications including diagnostic imaging, patient monitoring, predictive analytics, administrative automation, and clinical decision support. Our systems are designed to enhance rather than replace human expertise, improving patient outcomes while reducing administrative burden on healthcare professionals.'
-      },
-      {
-        question: 'How do you handle patient data privacy?',
-        answer: 'Patient data privacy is paramount in all our healthcare solutions. We implement multiple layers of protection including data anonymization, secure multi-party computation, and zero-knowledge proofs. Our systems are designed to process sensitive health information while maintaining the highest standards of privacy and security.'
-      }
-    ],
-    pricing: [
-      {
-        question: 'What is your pricing model?',
-        answer: 'We offer flexible pricing models including subscription-based services, project-based pricing, and enterprise licensing. Pricing depends on the scope of services, system complexity, and support requirements. We work with each client to develop a pricing structure that aligns with their budget and business objectives.'
-      },
-      {
-        question: 'Do you offer free trials or proof-of-concept projects?',
-        answer: 'Yes, we offer free trials and proof-of-concept projects for qualified organizations. This allows potential clients to experience the value of our AI automation solutions firsthand before making a full commitment. We also provide detailed ROI analysis and case studies to help clients understand the business impact.'
-      },
-      {
-        question: 'What ongoing costs should we expect?',
-        answer: 'Ongoing costs typically include system maintenance, updates, support services, and any additional features or capacity. We provide transparent pricing for all ongoing services and work with clients to optimize costs while maintaining system performance and reliability.'
-      }
-    ]
-  };
+const faqData: FAQItem[] = [
+	{
+		question: "What services does Zion Tech Group offer?",
+		answer: "We offer comprehensive technology solutions including AI autonomous systems, cloud platform development, cybersecurity services, and micro SaaS development. Our services cover everything from strategy and design to implementation and ongoing support.",
+		category: "Services"
+	},
+	{
+		question: "How long does it typically take to complete a project?",
+		answer: "Project timelines vary depending on complexity and scope. Small projects can be completed in 4-8 weeks, while larger enterprise solutions typically take 3-6 months. We provide detailed timelines during the discovery phase.",
+		category: "Project Management"
+	},
+	{
+		question: "Do you work with startups and small businesses?",
+		answer: "Absolutely! We work with businesses of all sizes, from startups to enterprise organizations. We tailor our approach and solutions to meet your specific needs and budget requirements.",
+		category: "Business"
+	},
+	{
+		question: "What cloud platforms do you specialize in?",
+		answer: "We have expertise in all major cloud platforms including AWS, Microsoft Azure, and Google Cloud Platform. We also specialize in multi-cloud architectures and hybrid cloud solutions.",
+		category: "Technology"
+	},
+	{
+		question: "How do you ensure the security of our data?",
+		answer: "Security is our top priority. We implement industry-standard security practices, conduct regular security audits, and follow compliance frameworks like SOC 2, ISO 27001, and GDPR requirements.",
+		category: "Security"
+	},
+	{
+		question: "Do you provide ongoing support and maintenance?",
+		answer: "Yes, we offer comprehensive support and maintenance packages. This includes monitoring, updates, security patches, and 24/7 emergency support for critical systems.",
+		category: "Support"
+	},
+	{
+		question: "Can you help with existing systems integration?",
+		answer: "Yes, we specialize in integrating new solutions with existing systems. We conduct thorough assessments of your current infrastructure and design integration strategies that minimize disruption.",
+		category: "Technology"
+	},
+	{
+		question: "What industries do you serve?",
+		answer: "We serve clients across various industries including healthcare, finance, manufacturing, retail, and technology. Our solutions are adaptable to meet industry-specific requirements and compliance needs.",
+		category: "Business"
+	},
+	{
+		question: "How do you handle project communication?",
+		answer: "We maintain regular communication through scheduled meetings, progress reports, and dedicated project management tools. You'll have a dedicated project manager as your primary point of contact.",
+		category: "Project Management"
+	},
+	{
+		question: "Do you offer training for our team?",
+		answer: "Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the solutions we implement. This includes documentation, hands-on training, and ongoing support.",
+		category: "Support"
+	},
+	{
+		question: "What is your pricing structure?",
+		answer: "We offer flexible pricing models including project-based pricing, retainer agreements, and subscription-based services. Pricing depends on project scope, complexity, and ongoing support requirements.",
+		category: "Business"
+	},
+	{
+		question: "How do you stay current with technology trends?",
+		answer: "Our team continuously researches and experiments with emerging technologies. We maintain partnerships with leading technology companies and participate in industry conferences and training programs.",
+		category: "Technology"
+	}
+]
 
-  const categories = [
-    { id: 'general', name: 'General Questions', icon: '🏢' },
-    { id: 'technology', name: 'Technology & AI', icon: '🤖' },
-    { id: 'implementation', name: 'Implementation & Support', icon: '🚀' },
-    { id: 'sustainability', name: 'Sustainability & Green AI', icon: '🌱' },
-    { id: 'healthcare', name: 'Healthcare Solutions', icon: '🏥' },
-    { id: 'pricing', name: 'Pricing & Business', icon: '💰' }
-  ];
+const categories = ["All", "Services", "Technology", "Business", "Project Management", "Security", "Support"]
 
-  return (
-    <>
-      <Head>
-        <title>FAQ | Zion Tech Group - Frequently Asked Questions</title>
-        <meta name="description" content="Find answers to common questions about Zion Tech Group's AI automation solutions, implementation process, and services." />
-        <meta property="og:title" content="FAQ | Zion Tech Group" />
-        <meta property="og:description" content="Find answers to common questions about Zion Tech Group's AI automation solutions." />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          <div className="max-w-6xl mx-auto">
-            <nav className="mb-8">
-              <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Home
-              </Link>
-            </nav>
-            
-            <header className="text-center mb-16">
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-                Frequently Asked Questions
-              </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Find answers to common questions about our AI automation solutions, 
-                implementation process, and services.
-              </p>
-            </header>
-            
-            {/* Category Navigation */}
-            <div className="mb-12">
-              <div className="flex flex-wrap gap-4 justify-center">
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setOpenCategory(category.id)}
-                    className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      openCategory === category.id
-                        ? 'bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white'
-                        : 'bg-white/10 text-white/80 hover:bg-white/20 hover:text-white'
-                    }`}
-                  >
-                    <span className="text-lg">{category.icon}</span>
-                    {category.name}
-                  </button>
-                ))}
-              </div>
-            </div>
-            
-            {/* FAQ Content */}
-            <div className="space-y-6">
-              {faqData[openCategory as keyof typeof faqData]?.map((item, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                  <h3 className="text-xl font-bold mb-4 text-cyan-400">
-                    {item.question}
-                  </h3>
-                  <p className="text-white/90 leading-relaxed">
-                    {item.answer}
-                  </p>
-                </div>
-              ))}
-            </div>
-            
-            {/* Contact Section */}
-            <section className="mt-20 text-center">
-              <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
-                <h2 className="text-2xl font-bold mb-4 text-white">Still Have Questions?</h2>
-                <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-                  Can't find the answer you're looking for? Our team of AI automation experts 
-                  is here to help. Get in touch with us for personalized assistance.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
-                    href="/contact"
-                    className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-                  >
-                    Contact Our Team
-                  </Link>
-                  <Link 
-                    href="/resources"
-                    className="bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
-                  >
-                    Browse Resources
-                  </Link>
-                </div>
-              </div>
-            </section>
-            
-            {/* Related Pages */}
-            <section className="mt-16">
-              <h2 className="text-2xl font-bold mb-8 text-center text-white">Explore More</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <Link href="/services" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl">🚀</span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">Our Services</h3>
-                  <p className="text-white/80 text-sm">Discover our comprehensive AI automation solutions</p>
-                </Link>
-                
-                <Link href="/blog" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300 text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl">📚</span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Blog & Insights</h3>
-                  <p className="text-white/80 text-sm">Read our latest thoughts on AI and automation</p>
-                </Link>
-                
-                <Link href="/case-studies" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300 text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl">📊</span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-green-400 mb-2">Case Studies</h3>
-                  <p className="text-white/80 text-sm">See how we've helped other organizations succeed</p>
-                </Link>
-              </div>
-            </section>
-          </div>
-        </main>
-      </div>
-    </>
-  );
+export default function FAQ() {
+	const [openItems, setOpenItems] = useState<Set<number>>(new Set())
+	const [selectedCategory, setSelectedCategory] = useState("All")
+
+	const toggleItem = (index: number) => {
+		const newOpenItems = new Set(openItems)
+		if (newOpenItems.has(index)) {
+			newOpenItems.delete(index)
+		} else {
+			newOpenItems.add(index)
+		}
+		setOpenItems(newOpenItems)
+	}
+
+	const filteredFAQs = selectedCategory === "All" 
+		? faqData 
+		: faqData.filter(faq => faq.category === selectedCategory)
+
+	return (
+		<PageTransition>
+			{/* Hero Section */}
+			<section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 sm:py-32">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center">
+						<h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+							Frequently Asked <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Questions</span>
+						</h1>
+						<p className="mt-6 text-lg leading-8 text-gray-600">
+							Find answers to common questions about our services, processes, and how we can help transform your business.
+						</p>
+					</div>
+				</div>
+				
+				{/* Background Pattern */}
+				<div className="absolute inset-0 -z-10 overflow-hidden">
+					<svg className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]" aria-hidden="true">
+						<defs>
+							<pattern id="hero-pattern" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+								<path d="M.5 200V.5H200" fill="none" />
+							</pattern>
+						</defs>
+						<rect width="100%" height="100%" strokeWidth="0" fill="url(#hero-pattern)" />
+					</svg>
+				</div>
+			</section>
+
+			{/* Category Filter */}
+			<section className="py-12 bg-white">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="flex flex-wrap justify-center gap-4">
+						{categories.map((category) => (
+							<button
+								key={category}
+								onClick={() => setSelectedCategory(category)}
+								className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+									selectedCategory === category
+										? 'bg-blue-600 text-white shadow-lg'
+										: 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+								}`}
+							>
+								{category}
+							</button>
+						))}
+					</div>
+				</div>
+			</section>
+
+			{/* FAQ Section */}
+			<section className="py-24 sm:py-32">
+				<div className="mx-auto max-w-4xl px-6 lg:px-8">
+					<div className="space-y-6">
+						{filteredFAQs.map((faq, index) => (
+							<div key={index} className="bg-white rounded-2xl border border-gray-200 shadow-sm">
+								<button
+									onClick={() => toggleItem(index)}
+									className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors rounded-2xl"
+								>
+									<h3 className="text-lg font-semibold text-gray-900 pr-4">
+										{faq.question}
+									</h3>
+									{openItems.has(index) ? (
+										<ChevronUp className="h-5 w-5 text-blue-600 flex-shrink-0" />
+									) : (
+										<ChevronDown className="h-5 w-5 text-gray-400 flex-shrink-0" />
+									)}
+								</button>
+								{openItems.has(index) && (
+									<div className="px-8 pb-6">
+										<p className="text-gray-600 leading-relaxed">
+											{faq.answer}
+										</p>
+									</div>
+								)}
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
+
+			{/* Still Have Questions */}
+			<section className="bg-white py-24 sm:py-32">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center">
+						<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-6">
+							<HelpCircle className="h-8 w-8 text-blue-600" />
+						</div>
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
+							Still have questions?
+						</h2>
+						<p className="text-lg text-gray-600 mb-8">
+							Can't find the answer you're looking for? Our team is here to help. Get in touch with us and we'll respond as soon as possible.
+						</p>
+						<div className="grid gap-6 md:grid-cols-3">
+							<div className="flex flex-col items-center">
+								<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 mb-4">
+									<MessageSquare className="h-6 w-6 text-white" />
+								</div>
+								<h3 className="text-lg font-semibold text-gray-900 mb-2">Live Chat</h3>
+								<p className="text-sm text-gray-600 text-center">
+									Chat with our support team in real-time
+								</p>
+							</div>
+							<div className="flex flex-col items-center">
+								<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 mb-4">
+									<Mail className="h-6 w-6 text-white" />
+								</div>
+								<h3 className="text-lg font-semibold text-gray-900 mb-2">Email Support</h3>
+								<p className="text-sm text-gray-600 text-center">
+									Send us an email and we'll get back to you
+								</p>
+							</div>
+							<div className="flex flex-col items-center">
+								<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 mb-4">
+									<Phone className="h-6 w-6 text-white" />
+								</div>
+								<h3 className="text-lg font-semibold text-gray-900 mb-2">Phone Support</h3>
+								<p className="text-sm text-gray-600 text-center">
+									Call us during business hours
+								</p>
+							</div>
+						</div>
+						<div className="mt-10 flex items-center justify-center gap-x-6">
+							<Link
+								href="/contact"
+								className="rounded-md bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
+							>
+								Contact Support
+								<ArrowRight className="ml-2 h-4 w-4 inline" />
+							</Link>
+							<Link
+								href="/services"
+								className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition-colors"
+							>
+								View Services <span aria-hidden="true">→</span>
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* CTA Section */}
+			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center">
+						<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+							Ready to get started?
+						</h2>
+						<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
+							Let's discuss your project and how our expertise can help you achieve your goals.
+						</p>
+						<div className="mt-10 flex items-center justify-center gap-x-6">
+							<Link
+								href="/contact"
+								className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
+							>
+								Get in Touch
+								<ArrowRight className="ml-2 h-4 w-4 inline" />
+							</Link>
+							<Link
+								href="/services"
+								className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
+							>
+								View Services <span aria-hidden="true">→</span>
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+		</PageTransition>
+	)
 }

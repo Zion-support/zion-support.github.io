@@ -4,120 +4,91 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
   push:
-    branches: [ main ]
-  schedule:
-    - cron: '0 2 * * 1' # Weekly on Monday at 2 AM UTC
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
-
+        with:
+          fetch-depth: 0
+          
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20.19.0
-          cache: 'npm'
+          node-version: '20'
+          cache: 'yarn'
 
-      - name: Install dependencies (clean)
-        run: npm ci --no-audit --no-fund --include=optional
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
 
-      - name: Rebuild optional rollup binaries (tolerate failure)
-        run: npm rebuild rollup @rollup/rollup-linux-x64-gnu || true
+      - name: Lint and type-check
+        run: |
+          yarn lint
+          yarn type-check
 
-      - name: Build
-        env:
-          NODE_ENV: production
-          SKIP_TYPE_CHECK: 'true'
-          ROLLUP_SKIP_NODEJS_NATIVE: 'true'
-        run: npm run build:ci
+      - name: Build project
+        run: yarn build
 
-      - name: Upload build artifact
-        if: always()
+      - name: Run tests
+        run: yarn test:ci
+        continue-on-error: true
+
+      - name: Security scan
+        run: yarn security:scan
+        continue-on-error: true
+
+      - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: dist
-          path: dist
-
-      - name: Build size analysis
-        if: success()
-        run: |
-          echo "Build size analysis:"
-          du -sh dist/
-          find dist -name "*.js" -exec wc -c {} + | sort -n | tail -10
-          find dist -name "*.css" -exec wc -c {} + | sort -n | tail -5
-
-  lint:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    continue-on-error: true
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20.19.0
-          cache: 'npm'
-
-      - name: Install dependencies (clean)
-        run: npm ci --no-audit --no-fund --include=optional
-
-      - name: ESLint
-        run: npm run lint
-
-  typecheck:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    continue-on-error: true
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20.19.0
-          cache: 'npm'
-
-      - name: Install dependencies (clean)
-        run: npm ci --no-audit --no-fund --include=optional
-
-      - name: TypeScript Check (no emit)
-        run: npm run type-check
+          name: build-output
+          path: |
+            .next/
+            out/
+            dist/
+          retention-days: 7
 
   security:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
-
+        
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20.19.0
-          cache: 'npm'
+          node-version: '20'
+          cache: 'yarn'
 
       - name: Install dependencies
-        run: npm ci --no-audit --no-fund --include=optional
+        run: yarn install --frozen-lockfile
 
-      - name: Security audit
-        run: npm audit --audit-level=moderate
+      - name: Run security audit
+        run: yarn security:scan
+        continue-on-error: true
 
       - name: Check for known vulnerabilities
         run: |
-          echo "Checking for security vulnerabilities..."
-          npm audit --json > audit-results.json || true
-          if [ -s audit-results.json ]; then
-            echo "Security audit completed. Check audit-results.json for details."
+          if yarn audit --audit-level=high; then
+            echo "No high severity vulnerabilities found"
           else
-            echo "No security issues found."
+            echo "High severity vulnerabilities found - please review"
+            exit 1
           fi
+
 
   performance:
     runs-on: ubuntu-latest

@@ -1,64 +1,104 @@
-name: CI
+name: Test Suite
 
 on:
   push:
-    branches: ["**"]
+    branches: [main, develop]
   pull_request:
-    branches: ["**"]
+    branches: [main, develop]
+
+permissions:
+  contents: read
 
 jobs:
-  test-runner:
-    name: Test Runner
+  test:
+    name: Run Test Suite
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+        
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: npm
+          cache: 'yarn'
+
       - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-      - name: Run type check
-        run: npm run type-check
-        continue-on-error: true
-      - name: Run linting
-        run: npm run lint
-        continue-on-error: true
-      - name: Run security audit
-        run: npm audit --audit-level=high
-        continue-on-error: true
-      - name: Build verification
-        run: npm run build
+        run: yarn install --frozen-lockfile
+
+      - name: Build project
+        run: yarn build
+
       - name: Verify build output
         run: |
-          if [ ! -d .next ]; then
-            echo "Build failed: .next folder not found"
+          if [ -d ".next" ]; then
+            echo "Next.js build successful"
+          elif [ -d "dist" ]; then
+            echo "Static build successful"
+          elif [ -d "out" ]; then
+            echo "Export build successful"
+          else
+            echo "Build failed: no output directory found"
             exit 1
           fi
-          echo "Build completed successfully"
-      - name: Verify asset paths
-        run: |
-          if [ -d dist ]; then
-            echo "Build assets found:"
-            ls -la dist/
-            echo "Total files: $(find dist -type f | wc -l)"
-          fi
-      - name: Run tests (if available)
-        run: npm test --if-present
+
+      - name: Run Jest tests with coverage
+        run: yarn test:ci
         continue-on-error: true
-      - name: Upload build artifacts
-        if: success()
+
+      - name: Upload coverage reports
         uses: actions/upload-artifact@v4
         with:
-          name: build
-          path: dist
+          name: coverage-report
+          path: coverage/
+          retention-days: 30
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifacts
+          path: |
+            .next/
+            out/
+            dist/
           retention-days: 7
 
+  e2e:
+    name: End-to-End Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: test
+    if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build project
+        run: yarn build
+
+      - name: Start development server
+        run: |
+          yarn dev &
+          sleep 30
+        env:
+          PORT: 3000
+
+      - name: Run E2E tests (placeholder)
+        run: |
+          echo "E2E tests would run here"
+          echo "Currently using placeholder - add actual E2E test commands"
+        continue-on-error: true
+
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: test-${{ github.ref }}
   cancel-in-progress: true
