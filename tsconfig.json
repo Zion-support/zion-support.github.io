@@ -5,7 +5,8 @@
     "lib": [
       "ES2020",
       "DOM",
-      "DOM.Iterable"
+      "DOM.Iterable",
+      "WebWorker"
     ],
     "module": "ESNext",
     "baseUrl": ".",
@@ -36,12 +37,25 @@
     "allowJs": true,
     "incremental": true,
     "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true,
+    "types": [
+      "node",
+      "jest",
+      "@testing-library/jest-dom"
+    ]
   },
   "include": [
-    "src/**/*",
     "*.ts",
-    "*.tsx"
+    "*.tsx",
+    "src/**/*",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
