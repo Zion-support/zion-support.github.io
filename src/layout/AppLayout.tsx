@@ -6,7 +6,7 @@ import { Outlet } from "react-router-dom";
 import { useAuth } from '@/hooks/useAuth'; // Corrected path to the hook
 import EmailVerificationBanner from '@/components/EmailVerificationBanner'; // Assuming path
 import { AppHeader } from "./AppHeader";
-import { Footer } from "@/components/Footer";
+import Footer from "@/components/Footer";
 import { SkipLink } from "@/components/SkipLink";
 import { useGlobalLoader } from '@/context/GlobalLoaderContext';
 import LoaderOverlay from '@/components/LoaderOverlay';

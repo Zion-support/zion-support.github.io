@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { ErrorBoundary } from 'react-error-boundary';
+import { Provider } from 'react-redux';
 import App from './App.tsx';
 import './index.css';
 // Removed feat/i18n-implementation and main markers
@@ -14,6 +15,19 @@ import './utils/globalFetchInterceptor';
 import './utils/consoleErrorToast';
 import ToastProvider from './components/ToastProvider';
 import { GlobalLoaderProvider } from '@/context/GlobalLoaderContext';
+import { store } from './store';
+import { WhitelabelProvider } from './context/WhitelabelContext';
+import { AuthProvider } from './context/auth';
+import { NotificationProvider } from './context/NotificationContext';
+import { AnalyticsProvider } from './context/AnalyticsContext';
+import { LanguageProvider } from './context/LanguageContext';
+import { ViewModeProvider } from './context/ViewModeContext';
+import { CartProvider } from './context/CartContext';
+import { FavoritesProvider } from './context/FavoritesContext';
+import { ReferralMiddleware } from './components/referral/ReferralMiddleware';
+import { AppLayout } from './layout/AppLayout';
+import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
+import { initializeGlobalErrorHandlers } from './utils/globalAppErrors';
 
 // Import i18n configuration
 import './i18n';
@@ -23,6 +37,36 @@ import { register } from './serviceWorkerRegistration';
 
 // Performance monitoring
 import { performanceMonitor } from './utils/performance';
+
+// Create QueryClient
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 1,
+      refetchOnWindowFocus: false,
+    },
+  },
+});
+
+// Loading fallback component
+const LoadingFallback = () => (
+  <div style={{ 
+    display: 'flex', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    height: '100vh',
+    fontFamily: 'sans-serif'
+  }}>
+    <div>Loading...</div>
+  </div>
+);
+
+// Global error handler function
+const handleGlobalError = (error: Error) => {
+  console.error('Global error caught:', error);
+  // Initialize global error handlers if not already done
+  initializeGlobalErrorHandlers();
+};
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
