@@ -1,264 +1,233 @@
 import React, { useState } from 'react';
 import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
-import { Textarea } from "@/components/ui/Textarea";
-import { Card } from "@/components/ui/Card";
-import { toast } from "@/components/ui/use-toast";
-import z from "zod";
-import { ChatAssistant } from "@/components/ChatAssistant/ChatAssistant";
-import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card } from "@/components/ui/card";
+import { Mail, Phone, MapPin, Clock, MessageSquare, Send } from 'lucide-react';
 
-export default function Contact() {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        subject: "",
-        message: ""
+const Contact: React.FC = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+
+  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormStatus('submitting');
+    
+    // Simulate form submission
+    setTimeout(() => {
+      setFormStatus('success');
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        company: '',
+        phone: '',
+        subject: '',
+        message: ''
+      });
+    }, 2000);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
     });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [errors, setErrors] = useState({});
-    const [isChatOpen, setIsChatOpen] = useState(false);
+  };
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
-        setErrors(prev => ({ ...prev, [name]: undefined }));
-    };
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <SEO 
+        title="Contact Zion Tech Group - Get in Touch"
+        description="Contact Zion Tech Group for AI solutions, quantum computing, and technology consulting. We're here to help transform your business."
+        keywords="contact Zion Tech Group, AI consulting, technology solutions, get quote"
+      />
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            Get in Touch
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Ready to transform your business with cutting-edge AI and technology solutions? 
+            Let's discuss how we can help you achieve your goals.
+          </p>
+        </div>
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const schema = z.object({
-            name: z.string().min(2, "Name must be at least 2 characters"),
-            email: z.string().email("Invalid email address"),
-            subject: z.string().min(2, "Subject must be at least 2 characters"),
-            message: z.string().min(10, "Message must be at least 10 characters"),
-        });
-
-        const result = schema.safeParse(formData);
-        if (!result.success) {
-            const fieldErrors = {};
-            for (const err of result.error.errors) {
-                if (err.path[0]) {
-                    fieldErrors[err.path[0]] = err.message;
-                }
-            }
-            setErrors(fieldErrors);
-            toast({
-                title: "Form Validation Error",
-                description: result.error.errors[0].message,
-                variant: "destructive",
-            });
-            return;
-        }
-
-        setErrors({});
-        // Simulate form submission
-        setIsSubmitting(true);
-        setTimeout(() => {
-            setIsSubmitting(false);
-            toast({
-                title: "Message Sent",
-                description: "We've received your message and will get back to you soon.",
-            });
-            // Reset form
-            setFormData({
-                name: "",
-                email: "",
-                subject: "",
-                message: "",
-            });
-        }, 1500);
-    };
-
-    // Handle sending messages to the AI chat assistant
-    const handleSendMessage = async (message) => {
-        try {
-            const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    messages: [{ role: "user", content: message }]
-                }),
-            });
-            if (!response.ok) {
-                throw new Error("Failed to get response from AI assistant");
-            }
-            return Promise.resolve();
-        } catch (error) {
-            console.error("Error in AI chat:", error);
-            toast({
-                title: "Chat Error",
-                description: "There was an error communicating with our AI assistant. Please try again.",
-                variant: "destructive"
-            });
-            return Promise.resolve();
-        }
-    };
-
-    const offices = [
-        {
-            name: "Headquarters",
-            address: "364 E Main St STE 1008",
-            city: "Middletown, DE 19709",
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com"
-        }
-    ];
-
-    return (
-        <>
-            <SEO 
-                title="Contact Us - Zion Tech Group" 
-                description="Get in touch with Zion Tech Group. Contact our team for AI solutions, IT services, and technology consulting." 
-                canonical="https://ziontechgroup.com/contact" 
-            />
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Form */}
+          <Card className="p-8 bg-slate-800/50 border-slate-700">
+            <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
             
-            <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <GradientHeading>Contact Us</GradientHeading>
-                        <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-                            Ready to transform your business with cutting-edge technology? Get in touch with our team.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        {/* Contact Form */}
-                        <div>
-                            <Card className="p-8">
-                                <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
-                                <form onSubmit={handleSubmit} className="space-y-6">
-                                    <div>
-                                        <Input
-                                            type="text"
-                                            name="name"
-                                            placeholder="Your Name"
-                                            value={formData.name}
-                                            onChange={handleChange}
-                                            className={errors.name ? "border-red-500" : ""}
-                                        />
-                                        {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
-                                    </div>
-
-                                    <div>
-                                        <Input
-                                            type="email"
-                                            name="email"
-                                            placeholder="Your Email"
-                                            value={formData.email}
-                                            onChange={handleChange}
-                                            className={errors.email ? "border-red-500" : ""}
-                                        />
-                                        {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
-                                    </div>
-
-                                    <div>
-                                        <Input
-                                            type="text"
-                                            name="subject"
-                                            placeholder="Subject"
-                                            value={formData.subject}
-                                            onChange={handleChange}
-                                            className={errors.subject ? "border-red-500" : ""}
-                                        />
-                                        {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject}</p>}
-                                    </div>
-
-                                    <div>
-                                        <Textarea
-                                            name="message"
-                                            placeholder="Your Message"
-                                            rows={5}
-                                            value={formData.message}
-                                            onChange={handleChange}
-                                            className={errors.message ? "border-red-500" : ""}
-                                        />
-                                        {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
-                                    </div>
-
-                                    <Button 
-                                        type="submit" 
-                                        disabled={isSubmitting}
-                                        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-                                    >
-                                        {isSubmitting ? "Sending..." : "Send Message"}
-                                    </Button>
-                                </form>
-                            </Card>
-                        </div>
-
-                        {/* Contact Information */}
-                        <div className="space-y-8">
-                            <div>
-                                <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
-                                <p className="text-zion-slate-light text-lg mb-8">
-                                    We're here to help you navigate the future of technology. Whether you have questions about our services or want to discuss a project, our team is ready to assist.
-                                </p>
-                            </div>
-
-                            {/* Office Information */}
-                            {offices.map((office, index) => (
-                                <Card key={index} className="p-6">
-                                    <h3 className="text-xl font-semibold text-white mb-4">{office.name}</h3>
-                                    <div className="space-y-3">
-                                        <div className="flex items-center text-zion-slate-light">
-                                            <MapPin className="h-5 w-5 mr-3 text-zion-cyan" />
-                                            <div>
-                                                <p>{office.address}</p>
-                                                <p>{office.city}</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-center text-zion-slate-light">
-                                            <Phone className="h-5 w-5 mr-3 text-zion-cyan" />
-                                            <a href={`tel:${office.phone}`} className="hover:text-zion-cyan transition-colors">
-                                                {office.phone}
-                                            </a>
-                                        </div>
-                                        <div className="flex items-center text-zion-slate-light">
-                                            <Mail className="h-5 w-5 mr-3 text-zion-cyan" />
-                                            <a href={`mailto:${office.email}`} className="hover:text-zion-cyan transition-colors">
-                                                {office.email}
-                                            </a>
-                                        </div>
-                                    </div>
-                                </Card>
-                            ))}
-
-                            {/* Quick Actions */}
-                            <div className="space-y-4">
-                                <h3 className="text-xl font-semibold text-white">Quick Actions</h3>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <Button 
-                                        variant="outline" 
-                                        className="w-full border-zion-blue-light text-zion-cyan hover:bg-zion-blue-light"
-                                        onClick={() => setIsChatOpen(true)}
-                                    >
-                                        <MessageSquare className="h-4 w-4 mr-2" />
-                                        Chat with AI
-                                    </Button>
-                                    <Button 
-                                        variant="outline" 
-                                        className="w-full border-zion-blue-light text-zion-cyan hover:bg-zion-blue-light"
-                                    >
-                                        <Mail className="h-4 w-4 mr-2" />
-                                        Schedule Call
-                                    </Button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-4">
+                <Input
+                  name="firstName"
+                  placeholder="First Name"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  required
+                  className="bg-slate-700 border-slate-600 text-white"
+                />
+                <Input
+                  name="lastName"
+                  placeholder="Last Name"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  required
+                  className="bg-slate-700 border-slate-600 text-white"
+                />
+              </div>
+              
+              <Input
+                name="email"
+                type="email"
+                placeholder="Email Address"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="bg-slate-700 border-slate-600 text-white"
+              />
+              
+              <Input
+                name="company"
+                placeholder="Company"
+                value={formData.company}
+                onChange={handleChange}
+                className="bg-slate-700 border-slate-600 text-white"
+              />
+              
+              <Input
+                name="phone"
+                placeholder="Phone Number"
+                value={formData.phone}
+                onChange={handleChange}
+                className="bg-slate-700 border-slate-600 text-white"
+              />
+              
+              <Input
+                name="subject"
+                placeholder="Subject"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+                className="bg-slate-700 border-slate-600 text-white"
+              />
+              
+              <Textarea
+                name="message"
+                placeholder="Your Message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows={5}
+                className="bg-slate-700 border-slate-600 text-white"
+              />
+              
+              <Button
+                type="submit"
+                disabled={formStatus === 'submitting'}
+                className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600"
+              >
+                {formStatus === 'submitting' ? (
+                  <>
+                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-4 h-4 mr-2" />
+                    Send Message
+                  </>
+                )}
+              </Button>
+              
+              {formStatus === 'success' && (
+                <div className="text-green-400 text-center">
+                  Thank you! Your message has been sent successfully.
                 </div>
-            </main>
+              )}
+              
+              {formStatus === 'error' && (
+                <div className="text-red-400 text-center">
+                  Something went wrong. Please try again.
+                </div>
+              )}
+            </form>
+          </Card>
 
-            <ChatAssistant 
-                isOpen={isChatOpen} 
-                onClose={() => setIsChatOpen(false)}
-                onSendMessage={handleSendMessage}
-            />
-        </>
-    );
-}
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
+              <p className="text-gray-300 mb-6">
+                We're here to help you navigate the future of technology. 
+                Reach out to us through any of the channels below.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-6 h-6 text-cyan-400" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1">Phone</h3>
+                  <p className="text-gray-300">+1 (302) 464-0950</p>
+                  <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-6 h-6 text-blue-400" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1">Email</h3>
+                  <p className="text-gray-300">kleber@ziontechgroup.com</p>
+                  <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-purple-400" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1">Address</h3>
+                  <p className="text-gray-300">364 E Main St STE 1008</p>
+                  <p className="text-gray-300">Middletown, DE 19709</p>
+                  <p className="text-sm text-gray-400">United States</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-6 h-6 text-green-400" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1">Business Hours</h3>
+                  <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
+                  <p className="text-gray-300">Saturday: 10:00 AM - 2:00 PM EST</p>
+                  <p className="text-sm text-gray-400">Sunday: Closed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;
