@@ -7,12 +7,12 @@
   functions = "netlify/functions"
   command_timeout = "30m"
   # Skip TypeScript checking during build
-  environment = { SKIP_TYPE_CHECK = "true" }
 
 # Trigger: trivial edit to confirm Netlify picks up config and rebuilds
 
 [build.environment]
   NODE_VERSION = "20.18.1"
+  SKIP_TYPE_CHECK = "true"
 
 # Headers
 [[headers]]
