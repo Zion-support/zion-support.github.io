@@ -452,8 +452,8 @@ const nextConfig = {
       }
     }
     
-    // For Netlify deployment, exclude problematic files temporarily
-    if (process.env.SKIP_TYPE_CHECK === 'true') {
+    // For Netlify deployment, exclude problematic files temporarily (server-side only)
+    if (process.env.SKIP_TYPE_CHECK === 'true' && isServer) {
       config.externals = config.externals || [];
       config.externals.push({
         './src/context/FavoritesContext.tsx': 'empty',
@@ -522,19 +522,20 @@ const nextConfig = {
         } catch (e) { /* ignore if already defined */ }
       }
       
-      // Add serverless-specific webpack configuration
-      config.target = 'node';
-      config.externalsPresets = { node: true };
-      
-      // Ensure proper module resolution in serverless
-      config.resolve.conditionNames = ['node', 'require', 'default'];
-      config.resolve.mainFields = ['main', 'module'];
+      // Add serverless-specific webpack configuration (server-side only)
+      if (isServer) {
+        config.target = 'node';
+        config.externalsPresets = { node: true };
+        
+        // Ensure proper module resolution in serverless
+        config.resolve.conditionNames = ['node', 'require', 'default'];
+        config.resolve.mainFields = ['main', 'module'];
+      }
     }
 
     // Exclude native modules from server-side bundling to prevent build errors
     if (isServer) {
       // Add all problematic native modules as externals with commonjs type
-      config.externals = config.externals || [];
       const nativeModules = [
         '@chainsafe/libp2p-noise',
         '@chainsafe/libp2p-gossipsub', 
@@ -567,6 +568,9 @@ const nextConfig = {
         'trough'
       ];
       
+      // Initialize externals array for server-side only
+      config.externals = config.externals || [];
+      
       // Add as external with commonjs type instead of module type
       nativeModules.forEach(module => {
         config.externals.push({
@@ -575,9 +579,9 @@ const nextConfig = {
       });
       console.log('🚫 Native modules externalized for server build:', nativeModules.length);
     } else {
-      // For client-side, bundle problematic UI libraries instead of externalizing
+      // For client-side, ensure externals is properly initialized but don't add problematic modules
       config.externals = config.externals || [];
-      // Don't externalize UI libraries on client side
+      // Don't externalize UI libraries on client side - let them be bundled
     }
 
     // Fix webpack cache configuration to prevent build errors and warnings
