@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
-import { Clock, DollarSign, Users, CheckCircle, Send, Phone, Mail, MapPin } from 'lucide-react';
+
+import React from 'react';
+import QuoteRequestForm from "@/components/QuoteRequestForm";
+import { SEO } from "@/components/SEO";
+import { MainNavigation } from "@/layout/MainNavigation";
+import { Footer } from "@/components/Footer";
 
 export default function RequestQuote() {
   const [formData, setFormData] = useState({

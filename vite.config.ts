@@ -74,10 +74,8 @@ export default defineConfig({
             return 'router-vendor';
           }
           
-          // UI Libraries
-          if (id.includes('@radix-ui') || id.includes('lucide-react')) {
-            return 'ui-vendor';
-          }
+          // Animation and motion libraries
+          'animation-vendor': ['framer-motion'],
           
           // Animation libraries
           if (id.includes('framer-motion') || id.includes('lottie')) {
@@ -132,9 +130,61 @@ export default defineConfig({
     // Asset optimization
     assetsInlineLimit: 2048,
     chunkSizeWarningLimit: 1000,
-    
-    // Enable tree shaking
-    treeshake: true,
+    sourcemap: false,
+  },
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom',
+      'react-router-dom',
+      '@radix-ui/react-accordion',
+      '@radix-ui/react-alert-dialog',
+      '@radix-ui/react-aspect-ratio',
+      '@radix-ui/react-avatar',
+      '@radix-ui/react-checkbox',
+      '@radix-ui/react-context-menu',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-label',
+      '@radix-ui/react-popover',
+      '@radix-ui/react-progress',
+      '@radix-ui/react-radio-group',
+      '@radix-ui/react-scroll-area',
+      '@radix-ui/react-select',
+      '@radix-ui/react-separator',
+      '@radix-ui/react-slider',
+      '@radix-ui/react-slot',
+      '@radix-ui/react-switch',
+      '@radix-ui/react-tabs',
+      '@radix-ui/react-toast',
+      '@radix-ui/react-tooltip',
+      'framer-motion',
+      'react-hook-form',
+      '@hookform/resolvers',
+      'zod',
+      '@reduxjs/toolkit',
+      'react-redux',
+      'recharts',
+      '@hello-pangea/dnd',
+      'i18next',
+      'i18next-browser-languagedetector',
+      'react-i18next',
+      'input-otp',
+      'react-day-picker',
+      'date-fns',
+      'axios',
+      'clsx',
+      'tailwind-merge',
+      'class-variance-authority',
+      'cmdk',
+      'lucide-react',
+      'react-icons',
+      'jspdf',
+      'jspdf-autotable',
+      '@stripe/stripe-js',
+      '@supabase/supabase-js',
+      '@tanstack/react-query',
+    ],
   },
 
   // Enhanced server configuration
