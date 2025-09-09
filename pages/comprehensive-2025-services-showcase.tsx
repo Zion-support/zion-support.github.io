@@ -8,6 +8,8 @@ import {
   Building, Cpu, Database, Cloud, Lock, Star, Zap, Users, Award, Globe,
   Filter, ChevronDown, ExternalLink, Sparkles, Eye, Clock, CheckCircle, TrendingUp, DollarSign, Phone
 } from 'lucide-react';
+import Layout from '../components/Layout';
+import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
 
 // Import all service data
 import { innovativeMicroSaasServicesExpanded } from '../data/innovative-2025-micro-saas-expanded';
@@ -71,13 +73,16 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      <SEO 
-        title="Comprehensive 2025 Services Showcase | Zion Tech Group"
-        description="Explore our comprehensive portfolio of innovative micro SAAS, IT, and AI services. Real, market-ready solutions with competitive pricing and proven ROI."
-        keywords="micro SAAS, IT services, AI services, cloud computing, cybersecurity, machine learning, predictive analytics, blockchain, quantum computing"
-        url="https://ziontechgroup.com/comprehensive-2025-services-showcase"
-      />
+    <Layout>
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+        <Head>
+          <title>Comprehensive 2025 Innovative Services Showcase — Zion Tech Group</title>
+          <meta name="description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transform your business with Zion Tech Group." />
+          <meta property="og:title" content="Comprehensive 2025 Innovative Services Showcase — Zion Tech Group" />
+          <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />
+          <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />
+          <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" />
+        </Head>
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -436,7 +441,9 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
           </motion.div>
         </div>
       </section>
-    </div>
+
+      </div>
+    </Layout>
   );
 };
 
