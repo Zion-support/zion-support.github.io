@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, AlertTriangle, XCircle, Clock, Server, Database, Globe, Zap } from 'lucide-react';
+import { 
+  Activity, 
+  CheckCircle, 
+  AlertTriangle, 
+  XCircle, 
+  Clock,
+  RefreshCw,
+  Server,
+  Database,
+  Network,
+  Globe,
+  Zap,
+  Shield,
+  Cloud,
+  ArrowRight
+} from 'lucide-react';
 
 const StatusPage = () => {
+  const [lastUpdated, setLastUpdated] = useState(new Date());
+  const [isRefreshing, setIsRefreshing] = useState(false);
+
   const systemStatus = {
     overall: 'operational',
-    lastUpdated: '2025-01-26 21:45 UTC',
+    lastIncident: '2024-01-15',
     uptime: '99.99%'
   };
 
@@ -13,82 +31,113 @@ const StatusPage = () => {
     {
       name: 'Website',
       status: 'operational',
-      uptime: '99.99%',
-      responseTime: '45ms',
-      lastIncident: 'None'
+      description: 'Main website and user portal',
+      icon: Globe,
+      responseTime: '120ms',
+      uptime: '99.99%'
     },
     {
       name: 'API Services',
       status: 'operational',
-      uptime: '99.98%',
-      responseTime: '120ms',
-      lastIncident: 'None'
+      description: 'REST API and GraphQL endpoints',
+      icon: Server,
+      responseTime: '45ms',
+      uptime: '99.98%'
     },
     {
       name: 'Database',
       status: 'operational',
-      uptime: '99.99%',
-      responseTime: '15ms',
-      lastIncident: 'None'
+      description: 'Primary and backup databases',
+      icon: Database,
+      responseTime: '12ms',
+      uptime: '99.99%'
     },
     {
       name: 'Authentication',
       status: 'operational',
-      uptime: '99.97%',
-      responseTime: '80ms',
-      lastIncident: 'None'
+      description: 'User authentication and authorization',
+      icon: Shield,
+      responseTime: '85ms',
+      uptime: '99.97%'
     },
     {
-      name: 'File Storage',
+      name: 'Cloud Infrastructure',
       status: 'operational',
-      uptime: '99.99%',
+      description: 'AWS, Azure, and Google Cloud services',
+      icon: Cloud,
       responseTime: '200ms',
-      lastIncident: 'None'
+      uptime: '99.96%'
     },
     {
-      name: 'Email Services',
+      name: 'AI Services',
       status: 'operational',
-      uptime: '99.95%',
-      responseTime: '150ms',
-      lastIncident: 'None'
+      description: 'Machine learning and AI processing',
+      icon: Zap,
+      responseTime: '350ms',
+      uptime: '99.95%'
     }
     fetchUptime();
   }, []);
 
-  const getStatusIcon = (status: ServiceStatus['status']) => {
+  const incidents = [
+    {
+      id: 1,
+      title: 'Scheduled Maintenance - Database Optimization',
+      status: 'resolved',
+      severity: 'low',
+      startTime: '2024-01-15 02:00 UTC',
+      endTime: '2024-01-15 04:00 UTC',
+      description: 'Routine database maintenance and optimization completed successfully.'
+    },
+    {
+      id: 2,
+      title: 'API Response Time Degradation',
+      status: 'resolved',
+      severity: 'medium',
+      startTime: '2024-01-10 14:30 UTC',
+      endTime: '2024-01-10 16:45 UTC',
+      description: 'Increased API response times were detected and resolved through load balancing optimization.'
+    }
+  ];
+
+  const getStatusColor = (status: string) => {
     switch (status) {
       case 'operational':
-        return <CheckCircle className="h-5 w-5 text-green-500" />;
+        return 'text-green-400 bg-green-500/20 border-green-500/30';
       case 'degraded':
-        return <Clock className="h-5 w-5 text-yellow-500" />;
+        return 'text-yellow-400 bg-yellow-500/20 border-yellow-500/30';
       case 'outage':
-        return <AlertCircle className="h-5 w-5 text-red-500" />;
-      case 'maintenance':
-        return <Clock className="h-5 w-5 text-blue-500" />;
+        return 'text-red-400 bg-red-500/20 border-red-500/30';
       default:
-        return <Clock className="w-5 h-5 text-gray-500" />;
+        return 'text-gray-400 bg-gray-500/20 border-gray-500/30';
     }
   };
 
-  const getStatusText = (status: ServiceStatus['status']) => {
+  const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational':
-        return 'text-green-500';
+        return CheckCircle;
       case 'degraded':
-        return 'text-yellow-500';
+        return AlertTriangle;
       case 'outage':
-        return 'text-red-500';
-      case 'maintenance':
-        return 'text-blue-500';
+        return XCircle;
       default:
-        return 'text-gray-500';
+        return Clock;
     }
+  };
+
+  const refreshStatus = () => {
+    setIsRefreshing(true);
+    setTimeout(() => {
+      setLastUpdated(new Date());
+      setIsRefreshing(false);
+    }, 1000);
   };
 
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 overflow-hidden">
+      <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
         <div className="container-responsive relative z-10">
           <motion.div
@@ -97,74 +146,59 @@ const StatusPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
-                <Server className="w-10 h-10 text-white" />
-              </div>
+            <div className="inline-flex items-center space-x-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full px-6 py-3 mb-8">
+              <Activity className="w-5 h-5 text-zion-cyan" />
+              <span className="text-zion-cyan font-medium">System Status</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-6">
-              System Status
+            
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              System
+              <span className="text-gradient"> Status</span>
             </h1>
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Real-time status of all Zion Tech Group services and systems. Monitor performance, 
-              uptime, and any ongoing issues.
+            
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Real-time status of all Zion Tech Group services and systems. 
+              We're committed to transparency and keeping you informed.
             </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Overall Status */}
-      <section className="py-20 bg-zion-slate-dark/50">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Overall System Status
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Current status of all our services and infrastructure.
-            </p>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-3xl p-12 text-center"
-            >
-              <div className="flex justify-center mb-6">
-                <CheckCircle className="w-20 h-20 text-green-500" />
+            
+            {/* Overall Status */}
+            <div className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-2xl p-8 max-w-2xl mx-auto">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-2xl font-bold text-white">Overall System Status</h2>
+                <button
+                  onClick={refreshStatus}
+                  disabled={isRefreshing}
+                  className="flex items-center space-x-2 text-zion-cyan hover:text-white transition-colors duration-300 disabled:opacity-50"
+                >
+                  <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
+                  <span>Refresh</span>
+                </button>
               </div>
-              <h3 className="text-3xl font-bold text-white mb-4">All Systems Operational</h3>
-              <p className="text-zion-slate-light text-lg mb-8">
-                All services are running normally with no reported issues.
-              </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-zion-cyan mb-2">{systemStatus.uptime}</div>
+              <div className="grid grid-cols-3 gap-6 text-center">
+                <div>
+                  <div className="text-3xl font-bold text-green-400 mb-2">All Systems Operational</div>
+                  <div className="text-zion-slate-light">Status</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-zion-cyan mb-2">{systemStatus.uptime}</div>
                   <div className="text-zion-slate-light">Uptime</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-zion-purple mb-2">{systemStatus.lastUpdated}</div>
-                  <div className="text-zion-slate-light">Last Updated</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-zion-blue mb-2">0</div>
-                  <div className="text-zion-slate-light">Active Incidents</div>
+                <div>
+                  <div className="text-3xl font-bold text-zion-cyan mb-2">{systemStatus.lastIncident}</div>
+                  <div className="text-zion-slate-light">Last Incident</div>
                 </div>
               </div>
-            </motion.div>
-          </div>
+              
+              <div className="text-center text-sm text-zion-slate-light mt-4">
+                Last updated: {lastUpdated.toLocaleString()}
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Service Status */}
+      {/* Services Status Section */}
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
@@ -176,55 +210,53 @@ const StatusPage = () => {
             <h2 className="text-4xl font-bold text-white mb-4">
               Service Status
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Detailed status of individual services and components.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Current status of all our core services and infrastructure components.
             </p>
           </motion.div>
 
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {services.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => {
+              const StatusIcon = getStatusIcon(service.status);
+              return (
                 <motion.div
                   key={service.name}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
                 >
                   <div className="flex items-center justify-between mb-6">
-                    <h3 className="text-xl font-semibold text-white">{service.name}</h3>
-                    {getStatusIcon(service.status)}
+                    <div className="flex items-center space-x-3">
+                      <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
+                        <service.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-white">{service.name}</h3>
+                    </div>
+                    <StatusIcon className={`w-6 h-6 ${getStatusColor(service.status).split(' ')[0]}`} />
                   </div>
                   
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-zion-slate-light">Status:</span>
-                      <span className={`font-medium ${getStatusColor(service.status)}`}>
-                        {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
-                      </span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-zion-slate-light">Uptime:</span>
-                      <span className="text-white font-medium">{service.uptime}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
+                  <p className="text-zion-slate-light mb-6">{service.description}</p>
+                  
+                  <div className="space-y-3 text-sm">
+                    <div className="flex justify-between">
                       <span className="text-zion-slate-light">Response Time:</span>
-                      <span className="text-white font-medium">{service.responseTime}</span>
+                      <span className="text-zion-cyan font-medium">{service.responseTime}</span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-zion-slate-light">Last Incident:</span>
-                      <span className="text-white font-medium">{service.lastIncident}</span>
+                    <div className="flex justify-between">
+                      <span className="text-zion-slate-light">Uptime:</span>
+                      <span className="text-zion-cyan font-medium">{service.uptime}</span>
                     </div>
                   </div>
                 </motion.div>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Performance Metrics */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
+      {/* Incidents Section */}
+      <section className="py-20 bg-zion-slate-dark/30">
         <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -233,95 +265,81 @@ const StatusPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Performance Metrics
+              Recent Incidents
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Real-time performance data and system metrics.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Information about recent service disruptions and maintenance activities.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-zion-cyan mb-2">45ms</h3>
-              <div className="text-zion-slate-light">Avg Response Time</div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Database className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-zion-purple mb-2">99.99%</h3>
-              <div className="text-zion-slate-light">Database Uptime</div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Globe className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-zion-blue mb-2">25+</h3>
-              <div className="text-zion-slate-light">Global Locations</div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Server className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-zion-cyan mb-2">1000+</h3>
-              <div className="text-zion-slate-light">Active Users</div>
-            </motion.div>
+          <div className="space-y-6">
+            {incidents.map((incident, index) => (
+              <motion.div
+                key={incident.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-2xl p-8"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">{incident.title}</h3>
+                    <div className="flex items-center space-x-4 text-sm">
+                      <span className={`inline-flex items-center px-3 py-1 rounded-full font-medium ${getStatusColor(incident.status)}`}>
+                        {incident.status.charAt(0).toUpperCase() + incident.status.slice(1)}
+                      </span>
+                      <span className="text-zion-slate-light">Severity: {incident.severity}</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <p className="text-zion-slate-light mb-6">{incident.description}</p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <span className="text-zion-slate-light">Start Time:</span>
+                    <span className="text-white ml-2">{incident.startTime}</span>
+                  </div>
+                  <div>
+                    <span className="text-zion-slate-light">End Time:</span>
+                    <span className="text-white ml-2">{incident.endTime}</span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20">
-        <div className="container-responsive text-center">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Need Help?
+              Stay Informed
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              If you're experiencing issues or have questions, our support team is here to help.
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Subscribe to our status updates and get notified about any service changes 
+              or incidents in real-time.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
-                Contact Support
+                Subscribe to Updates
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="btn-neon px-8 py-4 text-lg">
-                View Documentation
+                View Status History
               </button>
             </div>
           </motion.div>
         </div>
-      </main>
-    </>
+      </section>
+    </div>
   );
 };
 

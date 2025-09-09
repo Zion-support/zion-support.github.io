@@ -1,63 +1,41 @@
-import * as React from "react"
-import { cn } from "@/lib/utils"
-
-export interface SelectProps
-  extends React.SelectHTMLAttributes<HTMLSelectElement> {
-  onValueChange?: (value: string) => void;
-  children: React.ReactNode;
-  className?: string;
-  name?: string;
-}
-
-export function Select({ 
-  children, 
-  className = '', 
-  value, 
-  onChange, 
-  disabled = false 
-}: SelectProps) {
-  const baseClasses = 'flex h-10 w-full rounded-md border border-zion-cyan/20 bg-zion-slate-dark px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent disabled:cursor-not-allowed disabled:opacity-50';
-  
-  return (
-    <select
-      className={cn(
-        "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
-        className
-      )}
-      ref={ref}
-      onChange={(e) => onValueChange?.(e.target.value)}
-      {...props}
-    >
+import React from 'react';
+export function Select({ children, className = '', value, onValueChange }) {
+    return (<select className={`${baseClasses} ${className}`} value={value} onChange={onChange} disabled={disabled}>
       {children}
-    </select>
-  )
-)
-Select.displayName = "Select"
-
-export interface SelectTriggerProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
-
-export function SelectItem({ children, value }: SelectItemProps) {
-  return (
-    <option value={value}>
-      {children}
-    </option>
-  )
-)
-SelectItem.displayName = "SelectItem"
-
-export function SelectTrigger({ children, className = '' }: { children: React.ReactNode; className?: string }) {
-  return (
-    <div className={`flex h-10 w-full items-center justify-between rounded-md border border-zion-cyan/20 bg-zion-slate-dark px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${className}`}>
-      {children}
-    </div>
-  );
+    </select>);
 }
-
-export function SelectValue({ placeholder }: { placeholder?: string }) {
-  return <span className="text-sm text-white">{placeholder || 'Select an option'}</span>;
+export function SelectItem({ children, value }) {
+    return (<div className={`
+        flex h-10 w-full items-center justify-between rounded-md border 
+        border-zion-blue-light/30 bg-zion-blue-dark/50 px-3 py-2 text-sm 
+        text-white placeholder:text-zion-slate-light/50
+        focus:outline-none focus:ring-2 focus:ring-zion-cyan 
+        focus:border-transparent transition-colors cursor-pointer
+        ${className}
+      `} {...props}>
+      {children}
+    </div>);
 }
-
-export function SelectContent({ children }: { children: React.ReactNode }) {
-  return <div className="relative">{children}</div>;
+export function SelectValue({ placeholder }) {
+    return <span className="text-sm">{placeholder || 'Select an option'}</span>;
+}
+export function SelectContent({ children, className = '' }) {
+    return (<div className={`
+      absolute top-full left-0 right-0 z-50 mt-1 rounded-md border 
+      border-zion-blue-light/30 bg-zion-blue-dark/90 backdrop-blur-sm 
+      shadow-lg ${className}
+    `}>
+      {children}
+    </div>);
+}
+export function SelectItem({ children, className = '', value, ...props }) {
+    return (<div className={`
+        relative flex w-full cursor-pointer select-none items-center 
+        rounded-sm px-3 py-2 text-sm text-white outline-none 
+        hover:bg-zion-blue/20 focus:bg-zion-blue/20 
+        focus:text-white transition-colors
+        ${className}
+      `} data-value={value} {...props}>
+      {children}
+    </div>);
 }
