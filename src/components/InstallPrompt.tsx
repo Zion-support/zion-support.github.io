@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/Button';
+import { X } from 'lucide-react'; // Re-importing X
+import { Button } from '@/components/ui/button';
+import { safeSessionStorage } from '@/utils/safeStorage';
 
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;

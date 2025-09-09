@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import Link from 'next/link';
 import { Logo } from './Logo';
 import { UserMenu } from './UserMenu';
 import { LanguageSelector } from './LanguageSelector';
@@ -10,6 +9,11 @@ import { useAuth } from '@/hooks/useAuth';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
+import { slugify } from "@/lib/slugify";
+import { useRouter } from "next/router"; // Changed from react-router-dom
+import { PointsBadge } from '@/components/loyalty/PointsBadge';
+import { useTranslation } from 'react-i18next';
+import { logInfo } from '@/utils/productionLogger';
 
 export interface HeaderProps {
   hideLogin?: boolean;

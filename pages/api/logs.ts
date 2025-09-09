@@ -1,10 +1,8 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import {
-  logInfo as serverLogInfo,
-  logWarn as serverLogWarn,
-  logError as serverLogError,
-  logDebug as serverLogDebug
-} from '@/utils/productionLogger'; // Renamed to avoid conflict with client-side logger variable if any
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+import * as Sentry from '@sentry/nextjs';
+import { logWarn, logError } from '@/utils/productionLogger'; // Import loggers
 
 interface LogEntry {
   level: 'debug' | 'info' | 'warn' | 'error';
@@ -46,42 +44,18 @@ export default async function handler(
         continue;
       }
 
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log(`[${entry.level.toUpperCase()}] ${entry.timestamp} - ${entry.message}`, entry.context || '');
-      }
-
-    // Process all entries with server-side productionLogger
-    for (const entry of entries) {
-      const serverContext = {
-        clientTimestamp: entry.timestamp,
-        sessionId: entry.sessionId,
-        url: entry.url,
-        userAgent: entry.userAgent,
-        userId: entry.userId,
-        originalContext: entry.context,
-      };
-
-      switch (entry.level) {
-        case 'debug':
-          // Server-side debug logs from client are often too noisy for production
-          // Only log them if server is also in debug mode or explicit client_debug mode is enabled
-          if (process.env.NODE_ENV === 'development' || process.env.DEBUG === 'true' || process.env.CLIENT_DEBUG_LOGGING === 'true') {
-            serverLogDebug(`Client Debug: ${entry.message}`, serverContext);
-          }
-          break;
-        case 'info':
-          serverLogInfo(`Client Info: ${entry.message}`, serverContext);
-          break;
-        case 'warn':
-          serverLogWarn(`Client Warn: ${entry.message}`, serverContext);
-          break;
-        case 'error':
-          serverLogError(`Client Error: ${entry.message}`, entry.context?.error || new Error(entry.message), serverContext);
-          break;
-        default:
-          serverLogWarn(`Unknown client log level: ${entry.level} - Message: ${entry.message}`, serverContext);
-          break;
+    // 3. Optional: Forward to external webhook if configured via env
+    if (process.env.NEXT_PUBLIC_AUTOFIX_WEBHOOK_URL) {
+      try {
+        const doFetch = typeof fetch !== 'undefined' ? fetch : (await import('node-fetch')).default as unknown as typeof fetch;
+        await doFetch(process.env.NEXT_PUBLIC_AUTOFIX_WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ entries }),
+        });
+      } catch (err) {
+        // swallow – do not break client logging on webhook failure
+         logWarn('Failed to forward logs to webhook:', { data: err });
       }
     }
 
@@ -92,10 +66,9 @@ export default async function handler(
     });
 
   } catch (error) {
-    logErrorToProduction('Error processing logs:', error);
-    return res.status(500).json({ 
-      message: 'Internal Server Error',
-      timestamp: new Date().toISOString()
-    });
+    // Log server-side failure
+    logError('Error in /api/logs:', { data: error });
+    Sentry.captureException(error);
+    return res.status(500).json({ message: 'Internal Server Error' });
   }
 }

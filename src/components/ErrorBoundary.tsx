@@ -1,5 +1,7 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { logError, createErrorBoundary } from '../utils/error-handler';
+import React, { Component, ReactNode } from 'react';
+// import { Button } from './ui/button'; // Unused
+// import { AlertTriangle } from 'lucide-react'; // Unused
+import { logError } from '@/utils/productionLogger'; // Or your preferred logger
 
 interface Props {
   children: ReactNode;
@@ -23,17 +25,8 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log the error
-    logError(error, {
-      componentStack: errorInfo.componentStack,
-      errorBoundary: 'ErrorBoundary',
-    });
-
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
+  componentDidCatch(error: Error, errorInfo: any) {
+    logError('ErrorBoundary caught an error:', { data: { error, errorInfo } });
   }
 
   render() {

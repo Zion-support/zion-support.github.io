@@ -16,11 +16,25 @@ interface AutocompleteSuggestionsProps {
 
 const AutocompleteSuggestions: React.FC<AutocompleteSuggestionsProps> = ({
   suggestions,
-  onSelect,
-  onClose,
-  className
-}) => {
-  if (suggestions.length === 0) return null;
+  searchTerm,
+  onSelectSuggestion,
+  visible,
+  highlightedIndex,
+  listId
+}: AutocompleteSuggestionsProps) {
+  const listRef = useRef<HTMLUListElement>(null); // Moved up
+  const highlightedItemRef = useRef<HTMLLIElement>(null); // Moved up
+
+  useEffect(() => { // Moved up, logic inside remains conditional on props
+    if (visible && suggestions.length > 0 && highlightedIndex !== -1 && highlightedItemRef.current) {
+      highlightedItemRef.current.scrollIntoView({
+        block: "nearest",
+        inline: "nearest"
+      });
+    }
+  }, [highlightedIndex, visible, suggestions.length]); // Added dependencies
+
+  if (!visible || suggestions.length === 0) return null; // Early return after hooks
 
   return (
     <div

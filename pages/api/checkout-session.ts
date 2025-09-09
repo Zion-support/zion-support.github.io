@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import Stripe from 'stripe';
-import fs from 'fs';
-import path from 'path';
-import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
+// import fs from 'fs'; // Unused
+// import path from 'path'; // Unused
+import { logInfo, logWarn, logError } from '@/utils/productionLogger';
 
 
 // Note: Stripe instance will be created dynamically with the correct key
