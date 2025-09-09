@@ -158,8 +158,8 @@ export default defineConfig(({ mode }) => ({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Optimize build target - explicitly set to es2022
-    target: 'es2022',
+    // Optimize build target - ensure compatibility with esbuild
+    target: 'es2020',
     // Enable CSS code splitting
     cssCodeSplit: true,
     // Avoid gzip size computation entirely to prevent extra work on CI
@@ -235,6 +235,10 @@ export default defineConfig(({ mode }) => ({
     exclude: ['@vite/client', '@vite/env'],
     // Force pre-bundling for better performance
     force: true,
+    // Ensure esbuild target compatibility
+    esbuildOptions: {
+      target: 'es2020',
+    },
   },
   // Performance optimizations
   css: {

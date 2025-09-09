@@ -1,25 +1,21 @@
 // Next.js Cloudinary stub for Vite compatibility
+import React from 'react';
+
 export const CldImage = ({ src, alt, width, height, ...props }: any) => {
-  return {
-    type: 'img',
-    props: {
-      src,
-      alt,
-      width,
-      height,
-      ...props,
-    },
-  };
+  return React.createElement('img', {
+    src,
+    alt,
+    width,
+    height,
+    ...props,
+  });
 };
 
 export const CldVideo = ({ src, ...props }: any) => {
-  return {
-    type: 'video',
-    props: {
-      src,
-      ...props,
-    },
-  };
+  return React.createElement('video', {
+    src,
+    ...props,
+  });
 };
 
 export const CldUploadWidget = ({ children, ...props }: any) => {
@@ -37,14 +33,10 @@ export const CldUploadButton = ({ children, onUpload, uploadPreset, ...props }: 
     onUpload?.(mockResult);
   };
 
-  return {
-    type: 'button',
-    props: {
-      onClick: handleClick,
-      ...props,
-      children
-    }
-  };
+  return React.createElement('button', {
+    onClick: handleClick,
+    ...props,
+  }, children);
 };
 
 export default {
