@@ -1,69 +1,71 @@
-// Client-safe toast shim to avoid server-side ESM externalization issues
-// with react-hot-toast during Netlify/CI builds.
+import { toast as sonnerToast } from 'sonner';
 
-export type ToastOptions = {
+// This interface defines the shape the components are trying to use.
+interface ToastProps {
   title?: string;
   description?: string;
-  variant?: 'default' | 'destructive' | 'success';
-  // Accept and forward any additional options when available on client
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [key: string]: any;
-};
-
-export const useToast = () => ({ toast });
-
-function getClientHotToast() {
-  if (typeof window === 'undefined') return null;
-  try {
-    // Defer import to client runtime only
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const mod = require('react-hot-toast');
-    return mod?.toast || mod?.default || null;
-  } catch (_e) {
-    return null;
-  }
+  variant?: 'default' | 'destructive' | 'success'; // Add other variants if used
+  action?: React.ReactNode; // Assuming action might be needed as per ShadCN/Sonner patterns
 }
 
-function toast(options: ToastOptions) {
-  const clientToast = getClientHotToast();
-  const message = options.description || options.title || '';
-
-  if (clientToast) {
-    if (options.variant === 'destructive') {
-      clientToast.error(message, options);
-    } else if (options.variant === 'success') {
-      clientToast.success(message, options);
-    } else {
-      clientToast(message, options);
-    }
+// Adapter function
+const toastAdapter = (props: ToastProps | string) => {
+  if (typeof props === 'string') {
+    // Simple message
+    sonnerToast(props);
     return;
   }
 
-  // Server-side or when library unavailable: no-op with log
-  if (options.variant === 'destructive') {
-    console.error('Toast:', message);
-  } else if (options.variant === 'success') {
-    console.log('Toast success:', message);
-  } else {
-    console.log('Toast:', message);
+  const { title, description, variant, action } = props;
+  const message = title || description || ''; // Sonner needs a primary message.
+
+  // If only description is provided, sonner uses it as the main message.
+  // If title is also there, description goes into options.
+  const options: { description?: string; action?: React.ReactNode; } = {};
+  if (title && description) {
+    options.description = description;
   }
-}
+  if (action) {
+    options.action = action;
+  }
 
-toast.title = (title: string) => {
-  const clientToast = getClientHotToast();
-  return clientToast ? clientToast(title) : console.log('Toast:', title);
-};
-toast.description = (description: string) => {
-  const clientToast = getClientHotToast();
-  return clientToast ? clientToast(description) : console.log('Toast:', description);
-};
-toast.error = (error: string) => {
-  const clientToast = getClientHotToast();
-  return clientToast ? clientToast.error(error) : console.error('Toast error:', error);
-};
-toast.success = (message: string) => {
-  const clientToast = getClientHotToast();
-  return clientToast ? clientToast.success(message) : console.log('Toast success:', message);
+  switch (variant) {
+    case 'destructive':
+      sonnerToast.error(message, options);
+      break;
+    case 'success':
+      sonnerToast.success(message, options);
+      break;
+    default:
+      // If there's a title and description, pass description in options.
+      // If only title, it's the main message. If only description, it's also the main message.
+      if (title && description) {
+        sonnerToast(title, { description });
+      } else if (title) {
+        sonnerToast(title, options);
+      } else if (description) {
+        sonnerToast(description, options);
+      } else {
+        // Fallback if neither title nor description, though unlikely with current usage
+        sonnerToast("Notification", options);
+      }
+      break;
+  }
 };
 
-export { toast };
+// Re-exporting specific sonner methods if they are used directly elsewhere,
+// or to maintain compatibility if some parts of the app use toast.success("message")
+toastAdapter.success = (message: string, options?: object) => sonnerToast.success(message, options);
+toastAdapter.error = (message: string, options?: object) => sonnerToast.error(message, options);
+toastAdapter.info = (message: string, options?: object) => sonnerToast.info(message, options);
+toastAdapter.warning = (message: string, options?: object) => sonnerToast.warning(message, options);
+toastAdapter.loading = (message: string, options?: object) => sonnerToast.loading(message, options);
+// Ensure the component passed to the custom adapter is a ReactElement, or a function returning one.
+// Sonner's own `custom` type is `(component: (() => React.ReactNode) | React.ReactNode, options?: ExternalToastOptions) => number | string;`
+// The issue was likely my () => component was too generic. Let's align with Sonner's flexibility but fix the immediate error.
+// The error "Type 'ReactNode' is not assignable to type 'ReactElement'" suggests that 'component' itself was the problem.
+toastAdapter.custom = (component: React.ReactElement, options?: object) => sonnerToast.custom(() => component, options);
+toastAdapter.dismiss = (toastId?: string | number) => sonnerToast.dismiss(toastId);
+
+export const toast = toastAdapter;
+export const useToast = () => ({ toast: toastAdapter });

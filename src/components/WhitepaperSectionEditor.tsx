@@ -1,8 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { useUndoRedo } from '@/hooks/useUndoRedo';
-import {logErrorToProduction} from '@/utils/productionLogger';
-
+import React, { useState } from 'react';
+import { supabase } from '@/integrations/supabase/client'; // Corrected path
 
 interface WhitepaperSectionEditorProps {
   title: string;

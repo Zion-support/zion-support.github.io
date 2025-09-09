@@ -4,16 +4,23 @@ import type { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Star, DollarSign, Calendar } from 'lucide-react';
 
-interface ListingProps {
-  listing: {
-    slug: string;
-    title: string;
-    description: string;
-    price: string;
-    rating: number;
-    category: string;
-    image: string;
-  } | null;
+// Define ProductWithReviewStats here or import from a shared types file
+// This should match the type returned by `/api/products/[productId]/details`
+export type ProductWithReviewStats = Product & {
+  averageRating: number | null;
+  reviewCount: number;
+  // Adding fields to match the enriched type from the API / product card expectations
+  title?: string; // Usually mapped from product.name
+  category?: string;
+  images?: { url: string; alt?: string }[];
+  price?: number | null;
+  currency?: string;
+  tags?: string[];
+};
+
+interface RatingStarsProps {
+  value: number;
+  count?: number;
 }
 
 const ListingPage: React.FC<ListingProps> = ({ listing }) => {

@@ -1,7 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { z } from 'zod';
-import { withErrorLogging } from '@/utils/withErrorLogging';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import crypto from 'crypto';
+import { sendResetEmail } from '../../../src/lib/email';
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
 
 
 // Input validation schema

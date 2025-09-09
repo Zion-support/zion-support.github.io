@@ -3,6 +3,17 @@ import ReactDOM from 'react-dom/client';
 import { ErrorBoundary } from 'react-error-boundary';
 import App from './App.tsx';
 import './index.css';
+// Removed feat/i18n-implementation and main markers
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n'; // Adjust the path if your i18n.js is elsewhere
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { showApiError } from '@/utils/apiErrorHandler';
+import './utils/globalFetchInterceptor';
+import './utils/consoleErrorToast';
+import ToastProvider from './components/ToastProvider';
+import { GlobalLoaderProvider } from '@/context/GlobalLoaderContext';
 
 // Import i18n configuration
 import './i18n';
@@ -37,28 +48,55 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
   </div>
 );
 
-// Loading component
-const LoadingFallback = () => (
-  <div style={{ 
-    display: 'flex', 
-    justifyContent: 'center', 
-    alignItems: 'center', 
-    height: '100vh',
-    fontFamily: 'sans-serif',
-    color: '#666'
-  }}>
-    <div>Loading...</div>
-  </div>
-);
-
-// Error handling function
-// const showApiError = (error: unknown): void => {
-//   console.error('API Error:', error);
-// };
-
-// Global error handler
-const handleGlobalError = (error: Error): void => {
-  console.error('Global error caught:', error);
+try {
+  console.log("main.tsx: Before ReactDOM.createRoot");
+  // Removed initGA() call as it's undefined and likely superseded by AnalyticsProvider
+  // Render the app with proper provider structure
+  ReactDOM.createRoot(document.getElementById('root')!).render(
+    <React.StrictMode>
+      <Provider store={store}>
+        <GlobalLoaderProvider>
+        <I18nextProvider i18n={i18n}>
+          <HelmetProvider>
+            <QueryClientProvider client={queryClient}>
+              <WhitelabelProvider>
+                <Router>
+                <AuthProvider>
+                  <NotificationProvider>
+                    <AnalyticsProvider>
+                      <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                        <ViewModeProvider>
+                          <CartProvider>
+                            <FavoritesProvider>
+                              <ReferralMiddleware>
+                                <ToastProvider>
+                                  <AppLayout>
+                                    <App />
+                                  </AppLayout>
+                                </ToastProvider>
+                              </ReferralMiddleware>
+                            </FavoritesProvider>
+                          </CartProvider>
+                        </ViewModeProvider>
+                        <LanguageDetectionPopup />
+                      </LanguageProvider>
+                    </AnalyticsProvider>
+                  </NotificationProvider>
+                </AuthProvider>
+              </Router>
+            </WhitelabelProvider>
+          </QueryClientProvider>
+        </HelmetProvider>
+        </I18nextProvider>
+        </GlobalLoaderProvider>
+      </Provider>
+      {/* Removed duplicate main marker */}
+    </React.StrictMode>,
+  );
+  console.log("main.tsx: After ReactDOM.createRoot");
+} catch (error) {
+  console.error("Global error caught in main.tsx:", error);
+  console.log("main.tsx: Global error caught");
   const rootElement = document.getElementById('root');
   if (rootElement) {
     rootElement.innerHTML = `

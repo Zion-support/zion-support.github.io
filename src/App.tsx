@@ -23,31 +23,113 @@ import EnhancedNavigation from './components/EnhancedNavigation';
 import { bundleOptimizer } from './utils/bundleOptimizer';
 import './App.css';
 
-// Service Worker registration
-const registerServiceWorker = async () => {
-  if ('serviceWorker' in navigator) {
-    try {
-      const registration = await navigator.serviceWorker.register('/sw.js');
-      console.log('Service Worker registered successfully:', registration);
-      
-      // Handle updates
-      registration.addEventListener('updatefound', () => {
-        const newWorker = registration.installing;
-        if (newWorker) {
-          newWorker.addEventListener('statechange', () => {
-            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-              // New content is available, prompt user to refresh
-              if (confirm('New version available! Refresh to update?')) {
-                window.location.reload();
-              }
-            }
-          });
-        }
-      });
-    } catch (error) {
-      console.error('Service Worker registration failed:', error);
-    }
-  }
+function RootErrorFallback({ resetErrorBoundary }: FallbackProps) {
+  return (
+    <div role="alert" className="p-4 text-center space-y-2">
+      <p>Something went wrong</p>
+      <button onClick={resetErrorBoundary} className="underline">
+        Retry
+      </button>
+    </div>
+  );
+}
+
+const baseRoutes = [
+  { path: '/', element: <Home /> },
+  { path: '/categories/all', element: <AllCategoriesPage /> },
+  { path: '/match', element: <AIMatcherPage /> },
+  { path: '/login', element: <Login /> },
+  { path: '/register', element: <Signup /> },
+  { path: '/signup', element: <SimpleSignup /> },
+  { path: '/oauth', element: <OAuthCallback /> },
+  { path: '/talent', element: <TalentDirectory /> },
+  { path: '/talents', element: <TalentsPage /> },
+  { path: '/more-talents', element: <MoreTalentsPage /> },
+  { path: '/additional-talents', element: <AdditionalTalentsPage /> },
+  { path: '/services', element: <ServicesPage /> },
+  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
+  { path: '/it-onsite-services/:country', element: <ITOnsiteServicesPage /> },
+  { path: '/categories', element: <Categories /> },
+  { path: '/equipment', element: <EquipmentPage /> },
+  { path: '/equipment/:id', element: <EquipmentDetail /> },
+  { path: '/new-products', element: <NewProductsPage /> },
+  { path: '/analytics', element: <Analytics /> },
+  { path: '/mobile-launch', element: <MobileLaunchPage /> },
+  { path: '/open-app', element: <OpenAppRedirect /> },
+  {
+    path: '/community',
+    element: (
+      <CommunityProvider>
+        <CommunityPage />
+      </CommunityProvider>
+    ),
+  },
+  { path: '/contact', element: <ContactPage /> },
+  { path: '/partners', element: <PartnersPage /> },
+  { path: '/sitemap', element: <Sitemap /> },
+  { path: '/help', element: <Help /> },
+  { path: '/zion-hire-ai', element: <ZionHireAI /> },
+  { path: '/hire-ai', element: <ZionHireAI /> },
+  { path: '/request-quote', element: <RequestQuotePage /> },
+  { path: '/blog', element: <Blog /> },
+  { path: '/blog/:slug', element: <BlogPost /> },
+  { path: '/favorites', element: <FavoritesPage /> },
+  { path: '/wishlist', element: <WishlistPage /> },
+  { path: '/cart', element: <PrivateRoute><CartPage /></PrivateRoute> },
+  { path: '/wallet', element: <PrivateRoute><Wallet /></PrivateRoute> },
+  { path: '/profile', element: <PrivateRoute><Profile /></PrivateRoute> },
+  { path: '/recommendations', element: <PrivateRoute><RecommendationsPage /></PrivateRoute> },
+  { path: '/checkout', element: <PrivateRoute><Checkout /></PrivateRoute> },
+  { path: '/forgot-password', element: <ForgotPassword /> },
+  { path: '/reset-password/:token', element: <ResetPassword /> },
+];
+
+const App = () => {
+  console.log("App.tsx: Start");
+  // Ensure each navigation starts at the top of the page
+  useScrollToTop();
+  console.log("App.tsx: Rendering Tree");
+  return (
+    <ErrorBoundary
+      FallbackComponent={RootErrorFallback}
+      onError={(error, info) => {
+        captureException(error);
+        if (info?.componentStack) captureException(info.componentStack);
+      }}
+    >
+      <WhitelabelProvider>
+        <WalletProvider> {/* Added WalletProvider */}
+          <ThemeProvider defaultTheme="dark">
+            <ToastProvider>
+            <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+              <LocalErrorBoundary>
+          <Routes>
+            {baseRoutes.map(({ path, element }) => (
+              <Route key={path} path={path} element={element} />
+            ))}
+            <Route path="/auth/*" element={<AuthRoutes />} />
+            <Route path="/dashboard/*" element={<DashboardRoutes />} />
+            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
+            <Route path="/talent/*" element={<TalentRoutes />} />
+            <Route path="/admin/*" element={<AdminRoutes />} />
+            <Route path="/mobile/*" element={<MobileAppRoutes />} />
+            <Route path="/content/*" element={<ContentRoutes />} />
+            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
+            <Route path="/community/*" element={<CommunityRoutes />} />
+            <Route path="/developers/*" element={<DeveloperRoutes />} />
+            <Route path="*" element={<ErrorRoutes />} />
+          </Routes>
+              </LocalErrorBoundary>
+        </Suspense>
+        <OfflineToast />
+        <SupportChatbot />
+        <InstallPrompt />
+          </ToastProvider>
+      </ThemeProvider>
+        </WalletProvider> {/* Added WalletProvider closing tag */}
+    </WhitelabelProvider>
+    </ErrorBoundary>
+  );
 };
 
 // Create QueryClient instance with optimized settings
