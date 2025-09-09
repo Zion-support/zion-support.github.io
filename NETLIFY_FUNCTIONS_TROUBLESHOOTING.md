@@ -32,7 +32,7 @@
   functions = "netlify/functions"
 
 [build.environment]
-  NODE_VERSION = "20.18.1"
+  NODE_VERSION = "20.14.0"
   NPM_VERSION = "10.0.0"
 
 # Scheduled functions for automation
