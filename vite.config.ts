@@ -2,6 +2,15 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 
+// Disable complex manual chunking on CI/Netlify to avoid occasional hangs during
+// Rollup's chunk rendering phase. Can be overridden locally by setting
+// DISABLE_MANUAL_CHUNKS=false or enabling ANALYZE.
+const disableManualChunks = (
+  process.env.NETLIFY === 'true' ||
+  process.env.CI === 'true' ||
+  process.env.DISABLE_MANUAL_CHUNKS === 'true'
+) && process.env.ANALYZE !== 'true'
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   plugins: [
@@ -33,7 +42,7 @@ export default defineConfig(({ mode }) => ({
       },
       output: {
         // Manual chunk splitting for better caching and performance
-        manualChunks: (id) => {
+        manualChunks: disableManualChunks ? undefined : (id) => {
           // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
             // React ecosystem - core
