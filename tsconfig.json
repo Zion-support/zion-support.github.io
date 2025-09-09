@@ -23,21 +23,25 @@
         "./src/lib/axios.ts"
       ]
     },
-    /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-    /* Linting */
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
-<<<<<<< HEAD
+    "allowSyntheticDefaultImports": true,
     "allowJs": true,
-    "incremental": true
+    "skipLibCheck": true,
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts", 
@@ -48,35 +52,6 @@
     "pages/**/*",
     "*.ts",
     "*.tsx"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-=======
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
-    "allowSyntheticDefaultImports": true,
-    "allowJs": true,
-    "skipLibCheck": true,
-    "noEmit": true,
-    "incremental": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-  },
-  "include": [
-    "src",
-    ".next/types/**/*.ts"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3ded
   ],
   "exclude": [
     "node_modules"
