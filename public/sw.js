@@ -11,10 +11,10 @@ const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
-  '/manifest.json',
-  '/offline.html',
+  '/static/js/main.js',
+  '/static/css/main.css',
   '/favicon.ico',
-  '/favicon.svg'
+  '/manifest.json'
 ];
 
 // Install event - cache static assets
@@ -24,17 +24,17 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Service Worker: Caching static assets');
+        console.log('Opened static cache');
         return cache.addAll(STATIC_ASSETS);
       })
-      .then(() => {
-        console.log('Service Worker: Installation complete');
-        return self.skipWaiting();
+      .catch((error) => {
+        console.error('Error caching static assets:', error);
       })
       .catch((error) => {
         console.error('Service Worker: Installation failed', error);
       })
   );
+  self.skipWaiting();
 });
 
 // Activate event - clean up old caches
@@ -42,22 +42,18 @@ self.addEventListener('activate', (event) => {
   console.log('Service Worker: Activating...');
   
   event.waitUntil(
-    caches.keys()
-      .then((cacheNames) => {
-        return Promise.all(
-          cacheNames.map((cacheName) => {
-            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Service Worker: Deleting old cache', cacheName);
-              return caches.delete(cacheName);
-            }
-          })
-        );
-      })
-      .then(() => {
-        console.log('Service Worker: Activation complete');
-        return self.clients.claim();
-      })
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+            console.log('Deleting old cache:', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
   );
+  self.clients.claim();
 });
 
 // Fetch event - serve from cache or network
@@ -76,123 +72,82 @@ self.addEventListener('fetch', (event) => {
   }
 
   // Handle different types of requests
-  if (isStaticAsset(request)) {
-    event.respondWith(handleStaticAsset(request));
-  } else if (isAPIRequest(request)) {
-    event.respondWith(handleAPIRequest(request));
-  } else if (isPageRequest(request)) {
-    event.respondWith(handlePageRequest(request));
+  if (request.destination === 'document') {
+    // HTML pages - network first, fallback to cache
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          if (response.status === 200) {
+            const responseClone = response.clone();
+            caches.open(DYNAMIC_CACHE).then((cache) => {
+              cache.put(request, responseClone);
+            });
+          }
+          return response;
+        })
+        .catch(() => {
+          return caches.match(request);
+        })
+    );
+  } else if (request.destination === 'style' || request.destination === 'script') {
+    // CSS and JS - cache first, fallback to network
+    event.respondWith(
+      caches.match(request)
+        .then((response) => {
+          if (response) {
+            return response;
+          }
+          return fetch(request).then((response) => {
+            if (response.status === 200) {
+              const responseClone = response.clone();
+              caches.open(STATIC_CACHE).then((cache) => {
+                cache.put(request, responseClone);
+              });
+            }
+            return response;
+          });
+        })
+    );
+  } else if (request.destination === 'image') {
+    // Images - cache first, fallback to network
+    event.respondWith(
+      caches.match(request)
+        .then((response) => {
+          if (response) {
+            return response;
+          }
+          return fetch(request).then((response) => {
+            if (response.status === 200) {
+              const responseClone = response.clone();
+              caches.open(DYNAMIC_CACHE).then((cache) => {
+                cache.put(request, responseClone);
+              });
+            }
+            return response;
+          });
+        })
+    );
   } else {
-    event.respondWith(handleOtherRequest(request));
+    // Other resources - network first, fallback to cache
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          if (response.status === 200) {
+            const responseClone = response.clone();
+            caches.open(DYNAMIC_CACHE).then((cache) => {
+              cache.put(request, responseClone);
+            });
+          }
+          return response;
+        })
+        .catch(() => {
+          return caches.match(request);
+        })
+    );
   }
 });
 
-// Check if request is for static assets
-function isStaticAsset(request) {
-  const url = new URL(request.url);
-  return url.pathname.match(/\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|ico)$/);
-}
-
-// Check if request is for API
-function isAPIRequest(request) {
-  const url = new URL(request.url);
-  return url.pathname.startsWith('/api/') || url.hostname.includes('api');
-}
-
-// Check if request is for a page
-function isPageRequest(request) {
-  const url = new URL(request.url);
-  return url.pathname === '/' || !url.pathname.includes('.');
-}
-
-// Handle static assets - cache first strategy
-async function handleStaticAsset(request) {
-  try {
-    const cachedResponse = await caches.match(request);
-    if (cachedResponse) {
-      return cachedResponse;
-    }
-
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      const cache = await caches.open(STATIC_CACHE);
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    console.error('Service Worker: Static asset fetch failed', error);
-    return new Response('Asset not available', { status: 404 });
-  }
-}
-
-// Handle API requests - network first strategy
-async function handleAPIRequest(request) {
-  try {
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      const cache = await caches.open(DYNAMIC_CACHE);
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    console.error('Service Worker: API request failed', error);
-    const cachedResponse = await caches.match(request);
-    if (cachedResponse) {
-      return cachedResponse;
-    }
-    return new Response('API not available', { status: 503 });
-  }
-}
-
-// Handle page requests - network first with offline fallback
-async function handlePageRequest(request) {
-  try {
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      const cache = await caches.open(DYNAMIC_CACHE);
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    console.error('Service Worker: Page request failed', error);
-    const cachedResponse = await caches.match(request);
-    if (cachedResponse) {
-      return cachedResponse;
-    }
-    
-    // Return offline page for navigation requests
-    if (request.mode === 'navigate') {
-      const offlineResponse = await caches.match('/offline.html');
-      if (offlineResponse) {
-        return offlineResponse;
-      }
-    }
-    
-    return new Response('Page not available offline', { status: 503 });
-  }
-}
-
-// Handle other requests - cache first strategy
-async function handleOtherRequest(request) {
-  try {
-    const cachedResponse = await caches.match(request);
-    if (cachedResponse) {
-      return cachedResponse;
-    }
-
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      const cache = await caches.open(DYNAMIC_CACHE);
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    console.error('Service Worker: Other request failed', error);
-    return new Response('Resource not available', { status: 404 });
-  }
-}
-
-// Background sync for offline actions
+// Background sync for offline form submissions
 self.addEventListener('sync', (event) => {
   console.log('Service Worker: Background sync', event.tag);
   
@@ -201,14 +156,110 @@ self.addEventListener('sync', (event) => {
   }
 });
 
-// Push notifications
+async function doBackgroundSync() {
+  try {
+    // Get stored form data
+    const formData = await getStoredFormData();
+    
+    // Process each stored form submission
+    for (const data of formData) {
+      try {
+        await submitFormData(data);
+        await removeStoredFormData(data.id);
+      } catch (error) {
+        console.error('Background sync failed for form:', data.id, error);
+      }
+    }
+  } catch (error) {
+    console.error('Background sync failed:', error);
+  }
+}
+
+// Store form data when offline
+async function storeFormData(formData) {
+  try {
+    const db = await openDB();
+    const tx = db.transaction('forms', 'readwrite');
+    const store = tx.objectStore('forms');
+    await store.add({
+      id: Date.now().toString(),
+      data: formData,
+      timestamp: Date.now()
+    });
+    await tx.complete;
+  } catch (error) {
+    console.error('Error storing form data:', error);
+  }
+}
+
+// Get stored form data
+async function getStoredFormData() {
+  try {
+    const db = await openDB();
+    const tx = db.transaction('forms', 'readonly');
+    const store = tx.objectStore('forms');
+    return await store.getAll();
+  } catch (error) {
+    console.error('Error getting stored form data:', error);
+    return [];
+  }
+}
+
+// Remove stored form data
+async function removeStoredFormData(id) {
+  try {
+    const db = await openDB();
+    const tx = db.transaction('forms', 'readwrite');
+    const store = tx.objectStore('forms');
+    await store.delete(id);
+    await tx.complete;
+  } catch (error) {
+    console.error('Error removing stored form data:', error);
+  }
+}
+
+// Open IndexedDB
+async function openDB() {
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open('ZionTechGroupDB', 1);
+    
+    request.onerror = () => reject(request.error);
+    request.onsuccess = () => resolve(request.result);
+    
+    request.onupgradeneeded = (event) => {
+      const db = event.target.result;
+      if (!db.objectStoreNames.contains('forms')) {
+        db.createObjectStore('forms', { keyPath: 'id' });
+      }
+    };
+  });
+}
+
+// Submit form data to server
+async function submitFormData(formData) {
+  const response = await fetch('/api/contact', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData.data)
+  });
+  
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  
+  return response.json();
+}
+
+// Push notification handling
 self.addEventListener('push', (event) => {
   console.log('Service Worker: Push notification received');
   
   const options = {
-    body: event.data ? event.data.text() : 'New notification from Zion Tech Group',
-    icon: '/favicon.ico',
-    badge: '/favicon.ico',
+    body: event.data ? event.data.text() : 'New update from Zion Tech Group',
+    icon: '/icon-192x192.png',
+    badge: '/badge-72x72.png',
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
@@ -217,13 +268,13 @@ self.addEventListener('push', (event) => {
     actions: [
       {
         action: 'explore',
-        title: 'View Details',
-        icon: '/favicon.ico'
+        title: 'View',
+        icon: '/icon-192x192.png'
       },
       {
         action: 'close',
         title: 'Close',
-        icon: '/favicon.ico'
+        icon: '/icon-192x192.png'
       }
     ]
   };
@@ -246,17 +297,7 @@ self.addEventListener('notificationclick', (event) => {
   }
 });
 
-// Background sync implementation
-async function doBackgroundSync() {
-  try {
-    // Implement background sync logic here
-    console.log('Service Worker: Performing background sync');
-  } catch (error) {
-    console.error('Service Worker: Background sync failed', error);
-  }
-}
-
-// Message handling
+// Message handling from main thread
 self.addEventListener('message', (event) => {
   console.log('Service Worker: Message received', event.data);
   
@@ -264,8 +305,8 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
   }
   
-  if (event.data && event.data.type === 'GET_VERSION') {
-    event.ports[0].postMessage({ version: CACHE_NAME });
+  if (event.data && event.data.type === 'STORE_FORM_DATA') {
+    storeFormData(event.data.formData);
   }
 });
 
