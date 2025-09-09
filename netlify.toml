@@ -1,7 +1,6 @@
 # Netlify rebuild trigger (minor comment touch to force deploy - ensure rebuild)
 [build]
   # Build the Vite React project on Netlify
-  # Minor comment change to trigger Netlify redeploy - 2025-09-09
   command = "npm ci --no-audit --no-fund --include=dev && npm run build"
   publish = "dist"
   functions = "netlify/functions"
@@ -9,17 +8,11 @@
   # Skip TypeScript checking during build
 
   [build.environment]
-    NODE_VERSION = "20.18.1"
+    NODE_VERSION = "20.19.0"
     SKIP_TYPE_CHECK = "true"
-    # Ensure devDependencies (e.g., Vite) are installed during CI
+    # Ensure devDependencies (like vite) are installed during build
     NPM_FLAGS = "--include=dev"
-
-[build.environment]
-  NODE_VERSION = "20.18.1"
-  SKIP_TYPE_CHECK = "true"
-  # Ensure devDependencies (like vite) are installed during build
-  NPM_FLAGS = "--include=dev"
-  NPM_CONFIG_PRODUCTION = "false"
+    NPM_CONFIG_PRODUCTION = "false"
 
 # Headers
 [[headers]]
