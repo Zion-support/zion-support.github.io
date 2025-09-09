@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { ErrorBoundary } from 'react-error-boundary';
+import { Provider } from 'react-redux';
 import App from './App.tsx';
 import './index.css';
 // Removed feat/i18n-implementation and main markers
@@ -14,6 +15,19 @@ import './utils/globalFetchInterceptor';
 import './utils/consoleErrorToast';
 import ToastProvider from './components/ToastProvider';
 import { GlobalLoaderProvider } from '@/context/GlobalLoaderContext';
+import { store } from './store';
+import { WhitelabelProvider } from './context/WhitelabelContext';
+import { AuthProvider } from './context/auth';
+import { NotificationProvider } from './context/NotificationContext';
+import { AnalyticsProvider } from './context/AnalyticsContext';
+import { LanguageProvider } from './context/LanguageContext';
+import { ViewModeProvider } from './context/ViewModeContext';
+import { CartProvider } from './context/CartContext';
+import { FavoritesProvider } from './context/FavoritesContext';
+import { ReferralMiddleware } from './components/referral/ReferralMiddleware';
+import { AppLayout } from './layout/AppLayout';
+import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
+import { initializeGlobalErrorHandlers } from './utils/globalAppErrors';
 
 // Import i18n configuration
 import './i18n';
@@ -23,6 +37,39 @@ import { register } from './serviceWorkerRegistration';
 
 // Performance monitoring
 import { performanceMonitor } from './utils/performance';
+
+// Create QueryClient
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 1,
+      refetchOnWindowFocus: false,
+    },
+  },
+});
+
+// Loading fallback component
+const LoadingFallback = () => (
+  <div style={{ 
+    display: 'flex', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    height: '100vh',
+    fontFamily: 'sans-serif'
+  }}>
+    <div>Loading...</div>
+  </div>
+);
+
+// Global error handler function
+const handleGlobalError = (error: Error) => {
+  console.error('Global error caught:', error);
+  // Initialize global error handlers if not already done
+  initializeGlobalErrorHandlers();
+};
+
+// Export for global access
+(window as any).handleGlobalError = handleGlobalError;
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -48,70 +95,8 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
   </div>
 );
 
-try {
-  console.log("main.tsx: Before ReactDOM.createRoot");
-  // Removed initGA() call as it's undefined and likely superseded by AnalyticsProvider
-  // Render the app with proper provider structure
-  ReactDOM.createRoot(document.getElementById('root')!).render(
-    <React.StrictMode>
-      <Provider store={store}>
-        <GlobalLoaderProvider>
-        <I18nextProvider i18n={i18n}>
-          <HelmetProvider>
-            <QueryClientProvider client={queryClient}>
-              <WhitelabelProvider>
-                <Router>
-                <AuthProvider>
-                  <NotificationProvider>
-                    <AnalyticsProvider>
-                      <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                        <ViewModeProvider>
-                          <CartProvider>
-                            <FavoritesProvider>
-                              <ReferralMiddleware>
-                                <ToastProvider>
-                                  <AppLayout>
-                                    <App />
-                                  </AppLayout>
-                                </ToastProvider>
-                              </ReferralMiddleware>
-                            </FavoritesProvider>
-                          </CartProvider>
-                        </ViewModeProvider>
-                        <LanguageDetectionPopup />
-                      </LanguageProvider>
-                    </AnalyticsProvider>
-                  </NotificationProvider>
-                </AuthProvider>
-              </Router>
-            </WhitelabelProvider>
-          </QueryClientProvider>
-        </HelmetProvider>
-        </I18nextProvider>
-        </GlobalLoaderProvider>
-      </Provider>
-      {/* Removed duplicate main marker */}
-    </React.StrictMode>,
-  );
-  console.log("main.tsx: After ReactDOM.createRoot");
-} catch (error) {
-  console.error("Global error caught in main.tsx:", error);
-  console.log("main.tsx: Global error caught");
-  const rootElement = document.getElementById('root');
-  if (rootElement) {
-    rootElement.innerHTML = `
-      <div style="padding: 20px; text-align: center; font-family: sans-serif; color: #333;">
-        <h1>Application Error</h1>
-        <p>A critical error occurred while loading the application.</p>
-        <p>Error: ${error.message}</p>
-        <p>Please check the console for more details.</p>
-        <button onclick="window.location.reload()" style="padding: 10px 20px; margin-top: 10px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">
-          Reload Page
-        </button>
-      </div>
-    `;
-  }
-};
+// Initialize global error handlers early
+initializeGlobalErrorHandlers();
 
 // Set up global error handlers
 window.addEventListener('error', (event) => {
@@ -127,13 +112,14 @@ window.addEventListener('unhandledrejection', (event) => {
 });
 
 try {
+  console.log("main.tsx: Before ReactDOM.createRoot");
   const rootElement = document.getElementById('root');
   if (!rootElement) {
     throw new Error('Root element not found');
   }
 
-  const root = ReactDOM.createRoot(rootElement);
-  root.render(
+  // Render the app with proper provider structure
+  ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
       <ErrorBoundary
         FallbackComponent={ErrorFallback}
@@ -145,16 +131,54 @@ try {
         }}
       >
         <Suspense fallback={<LoadingFallback />}>
-          <App />
+          <Provider store={store}>
+            <GlobalLoaderProvider>
+              <I18nextProvider i18n={i18n}>
+                <HelmetProvider>
+                  <QueryClientProvider client={queryClient}>
+                    <WhitelabelProvider>
+                      <Router>
+                        <AuthProvider>
+                          <NotificationProvider>
+                            <AnalyticsProvider>
+                              <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                                <ViewModeProvider>
+                                  <CartProvider>
+                                    <FavoritesProvider>
+                                      <ReferralMiddleware>
+                                        <ToastProvider>
+                                          <AppLayout>
+                                            <App />
+                                          </AppLayout>
+                                        </ToastProvider>
+                                      </ReferralMiddleware>
+                                    </FavoritesProvider>
+                                  </CartProvider>
+                                </ViewModeProvider>
+                                <LanguageDetectionPopup />
+                              </LanguageProvider>
+                            </AnalyticsProvider>
+                          </NotificationProvider>
+                        </AuthProvider>
+                      </Router>
+                    </WhitelabelProvider>
+                  </QueryClientProvider>
+                </HelmetProvider>
+              </I18nextProvider>
+            </GlobalLoaderProvider>
+          </Provider>
         </Suspense>
       </ErrorBoundary>
     </React.StrictMode>,
   );
+
+  console.log("main.tsx: After ReactDOM.createRoot");
 
   // Register service worker in production
   if (import.meta.env.PROD) {
     register();
   }
 } catch (error) {
+  console.error("Global error caught in main.tsx:", error);
   handleGlobalError(error as Error);
 }

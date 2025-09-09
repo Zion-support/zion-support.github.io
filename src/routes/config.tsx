@@ -71,7 +71,7 @@ import StartupOSPage from '@/pages/StartupOS'; // Import the new page
 import GlobalMapPage from '@/pages/GlobalMap';
 import SummitPage from '@/pages/SummitPage';
 import OrgChartPage from '@/pages/OrgChart';
-import PrivacyVotePage from '@/pages/governance/privacy';
+import PrivacyVotePage from '@/pages/privacy';
 import MobilePwa from '@/pages/MobilePwa';
 import FounderBackupVault from '@/pages/FounderBackupVault';
 import CongressPage from '@/pages/Congress';

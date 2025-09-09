@@ -19,3 +19,5 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     { id: '10', text: 'Products', type: 'page' }
   ];
 };
+
+export const MARKETPLACE_LISTINGS = [];
