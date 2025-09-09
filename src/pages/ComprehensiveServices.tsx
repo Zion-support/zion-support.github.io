@@ -471,34 +471,24 @@ import { motion } from 'framer - motion';
 ;
   const itemVariants = {;
     hidden: { opacity: 0, y: 20 },;
-    visible: {;
-      opacity: 1,;
-      y: 0,;
-      transition: { duration: 0.6 },;
-    },;
-  };
-;
-  return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 text - white">;
-      <SEO;
-        title="Comprehensive Services - Zion Tech Group";
-        description="Explore our complete portfolio of AI services, micro SAAS solutions, IT infrastructure, and emerging technologies. Real market prices and proven ROI.";
-        keywords="AI services, micro SAAS, IT services, quantum computing, blockchain, IoT, green technology, space technology, comprehensive solutions";
-        canonicalUrl="https://ziontechgroup.com / comprehensive - services";
-            />;
-;
-      {/* Hero Section */};
-      <section className="relative pt - 28 pb - 16 overflow - hidden">;
-        <div role="button" className="absolute inset - 0 bg - gradient - to - br from - blue - 900 / 20 to - purple - 900 / 20"></div>;
-        <div role="button" className="container mx - auto px - 4 relative z - 10">;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }};
-            animate={{ opacity: 1, y: 0 }};
-            transition={{ duration: 0.8 }};
-            className="text - center max - w-4xl mx - auto";
-          >;
-            <h1 className="text - 5xl md:text - 6xl font - bold text - white mb - 6">;
-              Comprehensive < span className="bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
-                {' '};
+    visible: {};
+      transition: { duration: 0.6 }
+    }
+  }
+  return (;
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">;
+      <div>Broken JSX</div>
+      />;
+
+      {/* Hero Section */}
+      <section className="relative pt-28 pb-16 overflow-hidden">;
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20"></div>        <div className="container mx-auto px-4 relative z-10">;
+          <div>Broken JSX</div>
+            className="text-center max-w-4xl mx-auto"">"";
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">";
+              Comprehensive"";
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
+                {' '}
                 Services;
               </span>;
             </h1>;
@@ -910,5 +900,12 @@ import { motion } from 'framer - motion';
           </motion.div>;
         </div>;
       </section>;
-    </div>) ;
-};
+    </div>;
+  )}
+
+
+export { ComprehensiveServices }
+export { ComprehensiveServices }
+export { ComprehensiveServices }
+export { ComprehensiveServices }
+export { ComprehensiveServices }

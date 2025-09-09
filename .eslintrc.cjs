@@ -2,16 +2,7 @@
 module.exports = {
   root: true,
   extends: [
-    'eslint:recommended',
-    '@typescript-eslint/recommended'
-  ],
-  parser: '@typescript-eslint/parser',
-  plugins: [
-    '@typescript-eslint',
-    'react',
-    'react-hooks',
-    'react-refresh'
-  ],
+    'next/core-web-vitals'],
   rules: {
     '@typescript-eslint/no-unsafe-assignment': 'warn',
     '@typescript-eslint/no-unsafe-member-access': 'warn',
@@ -29,29 +20,7 @@ module.exports = {
     '@typescript-eslint/no-unsafe-function-type': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'react-refresh/only-export-components': 'warn',
-    'no-unused-vars': 'off',
-    'prefer-const': 'error',
-    'no-var': 'error',
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
-    'react/no-unescaped-entities': 'off'
-  },
-  env: {
-    browser: true,
-    es2021: true,
-    node: true
-  },
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true
-    },
-    project: './tsconfig.json'
-  },
-  settings: {
-    react: {
-      version: 'detect'
-    }
-  }
-};
+    'react/react-in-jsx-scope': 'off',
+    'no-undef': 'off'},
+  ignorePatterns: [
+    '**/*']}

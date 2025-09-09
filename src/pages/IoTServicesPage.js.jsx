@@ -220,45 +220,12 @@ const iotUseCases = [
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py - 16 bg - zion - blue">
-        <div className="container mx - auto px - 4 text - center">
-          <div className="max - w-3xl mx - auto">
-            <h2 className="text - 3xl font - bold text - white mb - 4">
-              Ready to Connect Your World with IoT?
-            </h2>
-            <p className="text - zion - slate - light text - lg mb - 8">
-              Join the IoT revolution and transform your business with connected
-              technology
-            </p>
-            <div className="flex flex - wrap justify - center gap - 4">
-              <Link href="/request - quote">
-                <Button className="bg - zion - cyan hover:bg - zion - cyan - dark text - white px - 8 py - 3">
-                  Get IoT Quote
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10 px - 8 py - 3">
-                  Contact IoT Experts
-                </Button>
-              </Link>
-            </div>
-            <div className="mt - 8 text - zion - slate - light">
-              <p>
-                📞 <strong > Mobile:</strong> +1 302 464 0950
-              </p>
-              <p>
-                📧 <strong > Email:</strong > kleber@ziontechgroup.com
-              </p>
-              <p>
-                📍 <strong > Address:</strong > 364 E Main St STE 1008 Middletown
-                DE 19709
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <TrustedBySection />;
+    </div>)}
 
-      <TrustedBySection       />
-    </div>) ;
-}
+
+export { IoTServicesPage }
+export { IoTServicesPage }
+export { IoTServicesPage }
+export { IoTServicesPage }
+export { IoTServicesPage }

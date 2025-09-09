@@ -65,263 +65,144 @@ const FloatingActionButton: React.FC < FloatingActionButtonProps> = ({;
       setCurrentTheme (theme) ;
     };
   }, [theme]) ;
-;
+
   // Show scroll to top button when scrolled down;
   useEffect ( () => {;
     const handleScroll = () => {;
       setShowScrollButton (window.scrollY > 300) ;
     };
 ;
-    window.addEventListener ('scroll', handleScroll) ;
-    return () => window.removeEventListener ('scroll', handleScroll) ;
-  }, []) ;
-;
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
+
   // Default actions;
-  const defaultActions: FloatingAction[] = [;
-    // Contact actions;
-    ... (showContactActions;
-      ? [;
-          {;
-            id: 'contact',;
-            icon: MessageCircle,;
-            label: 'Contact Us',;
-            action: () => {;
-              const contactSection = document.getElementById ('contact') ;
-              if (contactSection) {;
-                contactSection.scrollIntoView ({ behavior: 'smooth' }) ;
-              };
-            },;
-            color: 'bg - blue - 500 hover:bg - blue - 600',;
-            priority: 'high' as const,;
-          },;
-          {;
-            id: 'phone',;
-            icon: Phone,;
-            label: 'Call Now',;
-            action: () => {;
-              window.location.href = 'tel:+1234567890';
-            },;
-            color: 'bg - green - 500 hover:bg - green - 600',;
-            priority: 'high' as const,;
-          },;
-          {;
-            id: 'email',;
-            icon: Mail,;
-            label: 'Send Email',;
-            action: () => {;
-              window.location.href = 'mailto:info@ziontechgroup.com';
-            },;
-            color: 'bg - purple - 500 hover:bg - purple - 600',;
-            priority: 'medium' as const,;
-          },;
-          {;
-            id: 'location',;
-            icon: MapPin,;
-            label: 'Get Directions',;
-            action: () => {;
-              window.open ('https://maps.google.com/?q = Zion + Tech + Group',;
-                '_blank') ;
-            },;
-            color: 'bg - red - 500 hover:bg - red - 600',;
-            priority: 'medium' as const,;
-          },;
-        ];
-      : any[]) ,;
-;
+  const defaultActions: FloatingAction[] = [// Contact actions;
+    ...(showContactActions ? [;
+      {};
+            contactSection.scrollIntoView({ behavior: 'smooth' })}
+        },;
+        color: 'bg-blue-500 hover:bg-blue-600',;
+        priority: 'high' as const;,
+},;
+      {};
+          window.location.href = 'tel:+1234567890'},;
+        color: 'bg-green-500 hover:bg-green-600',;
+        priority: 'high' as const;,
+},;
+      {};
+          window.location.href = 'mailto:info@ziontechgroup.com'},;
+        color: 'bg-purple-500 hover:bg-purple-600',;
+        priority: 'medium' as const;,
+},;
+      {};
+          window.open('https://maps.google.com/?q=Zion+Tech+Group',_blank')},;
+        color: 'bg-red-500 hover:bg-red-600',;
+        priority: 'medium' as const}
+    ] : []),;
+
     // Utility actions;
-    ... (showUtilityActions;
-      ? [;
-          {;
-            id: 'bookmark',;
-            icon: Bookmark,;
-            label: 'Bookmark Page',;
-            action: () => {;
-              if (navigator.share) {;
-                navigator.share ({;
-                  title: document.title,;
-                  url: window.location.href,;
-                }) ;
-              } else {;
-                // Fallback for browsers without share API;
-                const url = window.location.href;
-                navigator.clipboard.writeText (url) .then ( () => {;
-                  // Show success message;
-                  showNotification ('Page URL copied to clipboard!') ;
-                }) ;
-              };
-            },;
-            color: 'bg - yellow - 500 hover:bg - yellow - 600',;
-            priority: 'low' as const,;
-          },;
-          {;
-            id: 'share',;
-            icon: Share2,;
-            label: 'Share Page',;
-            action: () => {;
-              if (navigator.share) {;
-                navigator.share ({;
-                  title: document.title,;
-                  url: window.location.href,;
-                }) ;
-              } else {;
-                // Fallback for browsers without share API;
-                const url = window.location.href;
-                navigator.clipboard.writeText (url) .then ( () => {;
-                  showNotification ('Page URL copied to clipboard!') ;
-                }) ;
-              };
-            },;
-            color: 'bg - indigo - 500 hover:bg - indigo - 600',;
-            priority: 'low' as const,;
-          },;
-          {;
-            id: 'download',;
-            icon: Download,;
-            label: 'Download Brochure',;
-            action: () => {;
-              // Create a temporary link to trigger download;
-              const link = document.createElement ('a') ;
-              link.href = '/brochure.pdf'; // Adjust path as needed;
-              link.download = 'Zion - Tech - Group - Brochure.pdf';
-              document.body.appendChild (link) ;
-              link.click () ;
-              document.body.removeChild (link) ;
-            },;
-            color: 'bg - teal - 500 hover:bg - teal - 600',;
-            priority: 'low' as const,;
-          },;
-          {;
-            id: 'print',;
-            icon: Printer,;
-            label: 'Print Page',;
-            action: () => {;
-              window.print () ;
-            },;
-            color: 'bg - gray - 500 hover:bg - gray - 600',;
-            priority: 'low' as const,;
-          },;
-        ];
-      : any[]) ,;
-;
+    ...(showUtilityActions ? [{};
+})} else {};
+              showNotification('Page URL copied to clipboard!')})}
+        },;
+        color: 'bg-yellow-500 hover:bg-yellow-600',;
+        priority: 'low' as const;,
+},;
+      {};
+})} else {};
+              showNotification('Page URL copied to clipboard!')})}
+        },;
+        color: 'bg-indigo-500 hover:bg-indigo-600',;
+        priority: 'low' as const;,
+},;
+      {};
+          document.body.removeChild(link)},;
+        color: 'bg-teal-500 hover:bg-teal-600',;
+        priority: 'low' as const;,
+},;
+      {};
+          window.print()},;
+        color: 'bg-gray-500 hover:bg-gray-600',;
+        priority: 'low' as const}
+    ] : []),;
+
     // Custom actions;
     ...actions,;
   ];
-;
+
   // Sort actions by priority;
-  const sortedActions = defaultActions.sort ( (a, b) => {;
-    const priorityOrder = { high: 3, medium: 2, low: 1 };
-    return priorityOrder[b.priority] - priorityOrder[a.priority];
-  }) ;
-;
+
+    return priorityOrder[b.priority] - priorityOrder[a.priority]}) ;
+
   // Toggle expansion;
-  const toggleExpansion = useCallback ( () => {;
-    setIsExpanded (prev => !prev) ;
   }, []) ;
-;
+
   // Scroll to top;
-  const scrollToTop = useCallback ( () => {;
-    window.scrollTo ({ top: 0, behavior: 'smooth' }) ;
-  }, []) ;
-;
+  }, []);
+
   // Show notification;
-  const showNotification = useCallback ( (message: string) => {;
-    // Create notification element;
-    const notification = document.createElement ('div') ;
-    notification.className = `;
-      fixed top - 4 right - 4 z - 50 px - 4 py - 2 bg - green - 500 text - white rounded - lg shadow - lg;
-      transform translate - x-full transition - transform duration - 300 ease - in - out;
+
+    notification.className=";
+      fixed top-4 right-4 z-50 px-4 py-2 bg-green-500 text-white rounded-lg shadow-lg;
+      transform translate-x-full transition-transform duration-300 ease-in-out";
     `;
     notification.textContent = message;
-;
-    document.body.appendChild (notification) ;
-;
+
+    document.body.appendChild(notification) ;
+
     // Animate in;
-    setTimeout ( () => {;
-      notification.classList.remove ('translate - x-full') ;
-    }, 100) ;
-;
+    setTimeout(() => {};
+      notification.classList.remove('translate-x-full')}, 100);
+
     // Remove after 3 seconds;
-    setTimeout ( () => {;
-      notification.classList.add ('translate - x-full') ;
-      setTimeout ( () => {;
-        document.body.removeChild (notification) ;
-      }, 300) ;
-    }, 3000) ;
-  }, []) ;
-;
+    setTimeout(() => {};
+        document.body.removeChild(notification)}, 300)}, 3000)}, []);
+
   // Get position classes;
-  const getPositionClasses = () => {;
-    switch (position) {;
-      case 'bottom - left':;
-        return 'bottom - 6 left - 6';
-      case 'top - right':;
-        return 'top - 6 right - 6';
-      case 'top - left':;
-        return 'top - 6 left - 6';
-      default:;
-        return 'bottom - 6 right - 6';
-    };
-  };
-;
+
+      case 'top-right':';
+        return 'top-6 right-6';
+      case 'top-left':';
+        return 'top-6 left-6';
+      default:';
+        return 'bottom-6 right-6'}
+  }
   // Get theme classes;
-  const getThemeClasses = () => {;
-    return currentTheme === 'dark';
-      ? 'bg - zion - slate - dark text - zion - slate - light border - zion - slate / 20';
-      : 'bg - zion - slate - light text - zion - slate - dark border - zion - slate / 20';
-  };
-;
-  return (<>;
-      {/* Main Floating Action Button */};
-      <div role="button" className={`fixed ${getPositionClasses () } z - 50`}>;
-        {/* Action Buttons */};
-        <div role="button" className={`relative ${isExpanded ? 'mb - 4' : ''}`}>;
-          {isExpanded && (<div role="button" className="absolute bottom - full mb - 4 space - y-3">;
-              {sortedActions.map ( (action, index) => (<div role="button" key={action.id};
-                  className={`;
-                    flex items - center space - x-3 p - 3 rounded - lg shadow - lg transition - all duration - 300;
-                    ${action.color} text - white transform opacity - 0 scale - 75;
-                    hover:scale - 105 focus:outline - none focus:ring - 2 focus:ring - white / 50;
-                  `};
-                  style={{;
-                    animationDelay: `${index * 100}ms`,;
-                    animation: 'slideInUp 0.3s ease - out forwards',;
-                  }};
-                >;
-                  <action.icon size={20}       />;
-                  <span className="whitespace - nowrap text - sm font - medium">;
-                    {action.label};
+  }
+  return ();
+    <>;
+      {/* Main Floating Action Button */}`;
+      <div className={`fixed ${getPositionClasses()} z-50`}>;
+        {/* Action Buttons */}'`;
+        <div className={`relative ${isExpanded ? 'mb-4' : ''}`}>;
+          {};
+                  <action.icon size={20} />";
+                  <span className="whitespace-nowrap text-sm font-medium">;
+                    {action.label}
                   </span>;
-                </div>) ) };
-            </div>) };
-;
-          {/* Main Button */};
-          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleExpansion};
-            className={`;
-              p - 4 rounded - full shadow - lg transition - all duration - 300;
-              ${getThemeClasses () } border - 2;
-              hover:scale - 110 focus:outline - none focus:ring - 4 focus:ring - zion - cyan / 30;
-              ${isExpanded ? 'rotate - 45' : ''};
-            `};
-            aria - label={isExpanded ? 'Close actions' : 'Open actions'};
-            aria - expanded={isExpanded};
-          >;
-            <Plus size={24} className="transition - transform duration - 300"       />;
+                </div>) ) }
+            </div>) }
+
+          {/* Main Button */}
+          <div>Broken JSX</div>
+          >";
+            <Plus size={24} className="transition-transform duration-300"  />;
           </button>;
         </div>;
       </div>;
-;
-      {/* Scroll to Top Button */};
-      {showScrollToTop && showScrollButton && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={scrollToTop};
-          className={`;
-            fixed bottom - 6 right - 6 z - 40 p - 4 rounded - full shadow - lg transition - all duration - 300;
-            ${getThemeClasses () } border - 2;
-            hover:scale - 110 focus:outline - none focus:ring - 4 focus:ring - zion - cyan / 30;
-            animate - bounce;
-          `};
-          aria - label="Scroll to top";
-        >;
-          <ArrowUp size={24}       />;
-        </button>) };
+
+      {/* Scroll to Top Button */}
+      {};
+          `}">;
+          <ArrowUp size={24}  />;
+        </button>) }
+
+      {/* CSS Animations */}`;
+      <style jsx>{};
+            transform: translateY(20px) scale(0.75) }
+          to {};
+            transform: translateY(0) scale(1) }
+        }
 ;
       {/* CSS Animations */};
       <style jsx>{`;
@@ -363,3 +244,11 @@ const FloatingActionButton: React.FC < FloatingActionButtonProps> = ({;
     </>) ;
 };
 ;
+const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = true }) => {};
+      onClick={() => setOpen(!open)}
+      aria-expanded={open}
+      className="fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg bg-cyan-500 hover:bg-cyan-600 text-white">;
+      <Plus size={24}  />;
+    </button>;
+  )}
+export default FloatingActionButton;

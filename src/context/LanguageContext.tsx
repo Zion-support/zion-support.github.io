@@ -1,20 +1,71 @@
-import React, { createContext, useContext, useState } from 'react';
-const LanguageContext = createContext(undefined);
-export function LanguageProvider({ children }) {
-    const [language, setLanguage] = useState('en');
-    const translations = {
-        en: {
-            'welcome': 'Welcome',
-            'get_started': 'Get Started',
-            'learn_more': 'Learn More',
-            'contact_us': 'Contact Us'
-        },
-        es: {
-            'welcome': 'Bienvenido',
-            'get_started': 'Comenzar',
-            'learn_more': 'Saber Más',
-            'contact_us': 'Contáctanos'
-        }
+import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
+import { safeStorage } from '@/utils/safeStorage';
+export default function Page() {};
+  return null;
+}
+  { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },;
+  { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
+];
+;
+const defaultLanguageContext: LanguageContextType = {};
+  changeLanguage: async () => {},;
+  isRTL: false,;
+  supportedLanguages}
+const LanguageContext = createContext(defaultLanguageContext);
+
+export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
+;
+interface LanguageProviderProps {};
+    user: { id?: string } | null;,
+};,
+}
+;
+export const LanguageProvider: React.FC<LanguageProviderProps> = ({};
+  authState = { isAuthenticated: false, user: null } ;,
+}) => {};
+  const { i18n, t } = useTranslation();
+  const { isAuthenticated, user } = authState;
+  const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(;
+    (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en';
+  );
+  const [isRTL, setIsRTL] = useState(i18n.dir() === 'rtl');
+  ;
+  useEffect(() => {};
+};,
+}, []);, []);
+    const savedLang = safeStorage.getItem('i18n_lang') as SupportedLanguage;
+    if(savedLang && supportedLanguages.some(lang => lang.code === savedLang)) {};
+}
+      setCurrentLanguage(savedLang);,
+}
+  }, [i18n]); // i18n is a dependency here;
+  ;
+  useEffect(() => {};
+};,
+}, []);, []);
+    setIsRTL(i18n.dir() === 'rtl');
+    document.documentElement.dir = i18n.dir();
+    document.documentElement.lang = currentLanguage;
+    ;
+    if(i18n.dir() === 'rtl') {};
+} else {};
+}
+  }, [currentLanguage, i18n]); // Correct: i18n and currentLanguage;
+  ;
+  useEffect(() => {};
+};,
+}, []);, []);
+    const syncLanguageWithProfile = async () => {};
+          const { error } = await supabase;
+            .from('profiles');
+            .update({ preferred_language: currentLanguage });
+            .eq('id', user.id);
+            ;
+          if(error) {};
+}
+        } catch(err) {};
+}
+      }
     };
     const t = (key) => {
         return translations[language]?.[key] || key;
@@ -22,12 +73,5 @@ export function LanguageProvider({ children }) {
     const isRTL = language === 'ar' || language === 'he';
     return (<LanguageContext.Provider value={{ language, setLanguage, t, isRTL }}>
       {children}
-    </LanguageContext.Provider>);
-}
-export function useLanguage() {
-    const context = useContext(LanguageContext);
-    if (!context) {
-        throw new Error('useLanguage must be used within a LanguageProvider');
-    }
-    return context;
-}
+    </LanguageContext.Provider>;
+  )}

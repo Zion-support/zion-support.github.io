@@ -120,12 +120,11 @@ export default function HealthcareSolutions() {
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"      />
                         {feature}
                       </li>))}
-                  </ul>
-                </div>);
-        })}
-          </div>
-        </div>
-      </section>
+                  </ul>;
+                </div>)})}
+          </div>;
+        </div>;
+      </section>;
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
@@ -193,23 +192,28 @@ export default function HealthcareSolutions() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Healthcare?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our healthcare solutions can improve patient outcomes and operational efficiency
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
-              Schedule Consultation
-            </Link>
-            <Link to="/services-overview" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
-              View All Services
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>);
-}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">;
+        <div className="max-w-4xl mx-auto text-center">;
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
+            Ready to Transform Healthcare?;
+          </h2>;
+          <p className="text-xl text-gray-300 mb-8">;
+            Let's discuss how our healthcare solutions can improve patient outcomes and operational efficiency;
+          </p>;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+            <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">;
+              Schedule Consultation;
+            </Link>;
+            <Link to="/services-overview" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">;
+              View All Services;
+            </Link>;
+          </div>;
+        </div>;
+      </section>;
+    </div>)}}}}
+
+export { HealthcareSolutions, Icon }
+export { HealthcareSolutions, Icon }
+export { HealthcareSolutions, Icon }
+export { HealthcareSolutions, Icon }
+export { HealthcareSolutions, Icon }

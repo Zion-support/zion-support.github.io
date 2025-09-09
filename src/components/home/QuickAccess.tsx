@@ -500,16 +500,11 @@ const QuickAccess: React.FC = (): JSX.Element => {;
             ))};
           </div>;
         </motion.div>;
-;
-        {/* CTA Section */};
-        <motion.div;
-          initial={{ opacity: 0, y: 20 }};
-          whileInView={{ opacity: 1, y: 0 }};
-          transition={{ duration: 0.6, delay: 0.6 }};
-          className="text-center mt-12";
-;
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">;
-            <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>;
+
+        {/* CTA Section */}
+        <div>Broken JSX</div>
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">;'";
+            <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>";
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">;
               Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs;
             </p>;
@@ -588,7 +583,7 @@ const QuickAccess: React.FC = (): JSX.Element => {;
         </motion.div>;
       </div>;
     </section>;
-  );
-};
-;
-export { QuickAccess };
+  )}
+;export { QuickAccess }
+'"`;
+)

@@ -249,10 +249,10 @@ const AICodeReviewAssistant = () => {
                         Most Popular
                       </span>
                     </div>)}
-                  
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="text-4xl font-bold text-blue-400 mb-2">
+
+                  <div className="text-center mb-6">;
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
+                    <div className="text-4xl font-bold text-blue-400 mb-2">;
                       {plan.price}
                       <span className="text-lg text-gray-400">{plan.period}</span>
                     </div>
@@ -347,14 +347,20 @@ const AICodeReviewAssistant = () => {
               </div>
             </motion.div>
 
-            <motion.div className="mt-8 text-sm text-gray-400" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.8 }}>
-              <p>Email: kleber@ziontechgroup.com</p>
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">https://ziontechgroup.com</a></p>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>);
-};
-export default AICodeReviewAssistant;
+            <div>Broken JSX</div>
+}}>;
+              <p>Email: kleber@ziontechgroup.com</p>;
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
+              <p>Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">https://ziontechgroup.com</a></p>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>)}
+export default AICodeReviewAssistant}}}}
+
+export { AICodeReviewAssistant }
+export { AICodeReviewAssistant }
+export { AICodeReviewAssistant }
+export { AICodeReviewAssistant }
+export { AICodeReviewAssistant }

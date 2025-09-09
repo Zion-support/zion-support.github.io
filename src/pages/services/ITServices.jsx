@@ -473,25 +473,31 @@ const ITServices = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Optimize Your IT Infrastructure?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let Zion Tech Group transform your IT operations with comprehensive, reliable, and 
-            cost-effective solutions that drive business success.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">
-              Get IT Support Today
-            </Link>
-            <Link to="/pricing" className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">
-              View Pricing Plans
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>);
-};
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">;
+        <div className="max-w-4xl mx-auto text-center">;
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">;
+            Ready to Optimize Your IT Infrastructure?;
+          </h2>;
+          <p className="text-xl text-gray-300 mb-8">;
+            Let Zion Tech Group transform your IT operations with comprehensive, reliable, and;
+            cost-effective solutions that drive business success.;
+          </p>;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+            <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">;
+              Get IT Support Today;
+            </Link>;
+            <Link to="/pricing" className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">;
+              View Pricing Plans;
+            </Link>;
+          </div>;
+        </div>;
+      </section>;
+    </div>)}
 export default ITServices;
+
+
+export { ITServices }
+export { ITServices }
+export { ITServices }
+export { ITServices }
+export { ITServices }

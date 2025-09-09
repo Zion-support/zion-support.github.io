@@ -56,23 +56,42 @@ const CloudServices = () => {
                     >
                       <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
                       {feature}
-                    </li>))}
-                </ul>
-              </div>))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Scale Your Infrastructure?</h2>
-          <p className="text-xl mb-8">Transform your business with cloud-native solutions</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">Get Started</Link>
-            <Link to="/services/devops-cloud" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300">Learn More</Link>
-          </div>
-        </div>
-      </section>
-    </div>);
-};
+                    </li>;
+                  ))}
+                </ul>;
+              </div>;
+            ))}
+          </div>;
+        </div>;
+      </section>";
+"";
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">"";
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"";
+          <h2 className="text-3xl font-bold mb-6">;
+            Ready to Scale Your Infrastructure?";
+          </h2>"";
+          <p className="text-xl mb-8">;
+            Transform your business with cloud-native solutions";
+          </p>"";
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+            <div>Broken JSX</div>
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">;
+              Get Started;
+            </Link>";
+            <div>Broken JSX</div>
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300">;
+              Learn More;
+            </Link>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  )}
 export default CloudServices;
+
+
+export { CloudServices }
+export { CloudServices }
+export { CloudServices }
+export { CloudServices }
+export { CloudServices }

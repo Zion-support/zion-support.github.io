@@ -149,89 +149,40 @@ const RevolutionaryServicesShowcase2025 = () => {
                 </div>
               </div>
 
-              {/* Market Info */}
-              <div className="mb-6 text-sm">
-                <div className="grid grid-cols-2 gap-4 text-gray-400">
-                  <div>
-                    <p className="font-semibold text-white">Market Size</p>
-                    <p>{service.marketSize}</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">Growth Rate</p>
-                    <p>{service.growthRate}</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* ROI and Setup */}
-              <div className="mb-6 text-sm">
-                <div className="grid grid-cols-2 gap-4 text-gray-400">
-                  <div>
-                    <p className="font-semibold text-white">Expected ROI</p>
-                    <p className="text-green-400">{service.roi}</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">Setup Time</p>
-                    <p>{service.setupTime}</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Trial Info */}
-              <div className="mb-6 text-center">
-                <div className="bg-blue-500/20 rounded-lg p-3">
-                  <p className="text-white font-semibold">{service.trialDays} Days Free Trial</p>
-                  <p className="text-blue-400 text-sm">No credit card required</p>
-                </div>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="space-y-3">
-                <a href={service.websiteUrl} target="_blank" rel="noopener noreferrer" className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
-                  Learn More & Get Started
-                </a>
-                {service.demoUrl && (<a href={service.demoUrl} target="_blank" rel="noopener noreferrer" className="block w-full border border-white/20 text-white text-center py-3 px-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                    Request Demo
-                  </a>)}
-              </div>
-
-              {/* Contact Info */}
-              <div className="mt-6 pt-6 border-t border-white/10 text-center">
-                <p className="text-sm text-gray-400 mb-2">Need help? Contact us directly:</p>
-                <div className="space-y-1 text-sm text-gray-300">
-                  <p>{service.contactInfo.phone}</p>
-                  <p>{service.contactInfo.email}</p>
-                </div>
-              </div>
-            </div>))}
-        </div>
-
-        {/* No Results */}
-        {filteredServices.length === 0 && (<div className="text-center py-12">
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-            <p className="text-gray-300">Try adjusting your search terms or category filter.</p>
-          </div>)}
-
-        {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our revolutionary services are designed to give you a competitive edge in 2025 and beyond. 
-              Contact us today to discuss how we can help you achieve your goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+13024640950" className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-700 transition-all duration-300">
-                📞 Call Now: +1 302 464 0950
-              </a>
-              <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300">
-                ✉️ Email Us
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>);
-};
+        {/* No Results */}";
+        {};
+        )}
+";
+        {/* Call to Action */}"";
+        <div className="mt-16 text-center">"";
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">"";
+            <h2 className="text-3xl font-bold text-white mb-4">;
+              Ready to Transform Your Business?";
+            </h2>"";
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
+              Our revolutionary services are designed to give you a competitive;
+              edge in 2025 and beyond. Contact us today to discuss how we can;
+              help you achieve your goals.";
+            </p>"";
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+              <div>Broken JSX</div>
+                className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-700 transition-all duration-300">;
+                📞 Call Now: +1 302 464 0950;
+              </a>";
+              <div>Broken JSX</div>
+                className="border-2 border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300">;
+                ✉️ Email Us;
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </div>)}
 export default RevolutionaryServicesShowcase2025;
+
+
+export { RevolutionaryServicesShowcase2025 }
+export { RevolutionaryServicesShowcase2025 }
+export { RevolutionaryServicesShowcase2025 }
+export { RevolutionaryServicesShowcase2025 }
+export { RevolutionaryServicesShowcase2025 }

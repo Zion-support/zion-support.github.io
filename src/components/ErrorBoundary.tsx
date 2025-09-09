@@ -43,17 +43,14 @@ export class ErrorBoundary extends Component<Props, State> {
               <div className="mt-6">
                 <button
                   onClick={() => window.location.reload()}
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                >
-                  Refresh Page
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      );
-    }
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">;
+                  Refresh Page;
+                </button>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }

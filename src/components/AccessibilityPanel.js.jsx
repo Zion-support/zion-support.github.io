@@ -175,135 +175,159 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                 </button>))}
             </div>
 
-            {/* Content */}
-            <div className="p-4 max-h-96 overflow-y-auto">
-              <AnimatePresence mode="wait">
-                {activeTab === 'general' && (<motion.div key="general" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
-                    <div>
-                      <label className="flex items-center space-x-3">
-                        <input type="checkbox" checked={settings.highContrast} onChange={(e) => updateSetting('highContrast', e.target.checked)} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
-                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                          High Contrast Mode
-                        </span>
-                      </label>
-                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                        Increases contrast for better readability
-                      </p>
-                    </div>
+            {/* Content */}";
+            <div className="p-4 max-h-96 overflow-y-auto">";
+              <AnimatePresence mode="wait">'";
+                {};
+}} className="space-y-4">;
+                    <div>";
+                      <label className="flex items-center space-x-3">";
+                        <div>Broken JSX</div>
+  (e) => updateSetting('highContrast',;
+  e.target.checked);
+"} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>";
+                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">;
+                          High Contrast Mode;
+                        </span>;
+                      </label>";
+                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">;
+                        Increases contrast for better readability;
+                      </p>;
+                    </div>;
 
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Font Size: {settings.fontSize}%
-                      </label>
-                      <input type="range" min="50" max="200" step="10" value={settings.fontSize} onChange={(e) => updateSetting('fontSize', parseInt(e.target.value))} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"/>
-                    </div>
+                    <div>";
+                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">;
+                        Font Size: {settings.fontSize}%;
+                      </label>";
+                      <div>Broken JSX</div>
+  (e) => updateSetting('fontSize',;
+  parseInt(e.target.value));
+"} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"/>;
+                    </div>;
 
-                    <div>
-                      <label className="flex items-center space-x-3">
-                        <input type="checkbox" checked={settings.reducedMotion} onChange={(e) => updateSetting('reducedMotion', e.target.checked)} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
-                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                          Reduced Motion
-                        </span>
-                      </label>
-                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                        Reduces animations and motion effects
-                      </p>
-                    </div>
+                    <div>";
+                      <label className="flex items-center space-x-3">";
+                        <div>Broken JSX</div>
+  (e) => updateSetting('reducedMotion',;
+  e.target.checked);
+"} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>";
+                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">;
+                          Reduced Motion;
+                        </span>;
+                      </label>";
+                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">;
+                        Reduces animations and motion effects;
+                      </p>;
+                    </div>;
                   </motion.div>)}
+'";
+                {};
+}} className="space-y-4">;
+                    <div>";
+                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">;
+                        Color Blindness Support;
+                      </label>;
+                      <div>Broken JSX</div>
+  (e) => updateSetting('colorBlindness',;
+  e.target.value);
+"} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">";
+                        <option value="none">None</option>";
+                        <option value="protanopia">Protanopia(Red-Blind)</option>";
+                        <option value="deuteranopia">Deuteranopia(Green-Blind)</option>";
+                        <option value="tritanopia">Tritanopia(Blue-Blind)</option>;
+                      </select>;
+                    </div>;
 
-                {activeTab === 'visual' && (<motion.div key="visual" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Color Blindness Support
-                      </label>
-                      <select value={settings.colorBlindness} onChange={(e) => updateSetting('colorBlindness', e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <option value="none">None</option>
-                        <option value="protanopia">Protanopia (Red-Blind)</option>
-                        <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
-                        <option value="tritanopia">Tritanopia (Blue-Blind)</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="flex items-center space-x-3">
-                        <input type="checkbox" checked={settings.focusIndicator} onChange={(e) => updateSetting('focusIndicator', e.target.checked)} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
-                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                          Enhanced Focus Indicators
-                        </span>
-                      </label>
-                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                        Makes focus indicators more visible
-                      </p>
-                    </div>
+                    <div>";
+                      <label className="flex items-center space-x-3">";
+                        <div>Broken JSX</div>
+  (e) => updateSetting('focusIndicator',;
+  e.target.checked);
+"} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>";
+                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">;
+                          Enhanced Focus Indicators;
+                        </span>;
+                      </label>";
+                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">;
+                        Makes focus indicators more visible;
+                      </p>;
+                    </div>;
                   </motion.div>)}
-
-                {activeTab === 'audio' && (<motion.div key="audio" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
-                    <div>
-                      <label className="flex items-center space-x-3">
-                        <input type="checkbox" checked={settings.screenReader} onChange={(e) => updateSetting('screenReader', e.target.checked)} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
-                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                          Screen Reader Mode
-                        </span>
-                      </label>
-                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                        Optimizes content for screen readers
-                      </p>
-                    </div>
-
-                    <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                      <h4 className="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">
-                        Keyboard Shortcuts
-                      </h4>
-                      <div className="text-xs text-blue-700 dark:text-blue-300 space-y-1">
-                        <div>• Alt + A: Toggle accessibility panel</div>
-                        <div>• Tab: Navigate between elements</div>
-                        <div>• Enter/Space: Activate buttons</div>
-                        <div>• Escape: Close modals</div>
-                      </div>
-                    </div>
+'";
+                {};
+}} className="space-y-4">;
+                    <div>";
+                      <label className="flex items-center space-x-3">";
+                        <div>Broken JSX</div>
+  (e) => updateSetting('screenReader',;
+  e.target.checked);
+"} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>";
+                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">;
+                          Screen Reader Mode;
+                        </span>;
+                      </label>";
+                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">;
+                        Optimizes content for screen readers;
+                      </p>;
+                    </div>;
+";
+                    <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">";
+                      <h4 className="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">;
+                        Keyboard Shortcuts;
+                      </h4>";
+                      <div className="text-xs text-blue-700 dark:text-blue-300 space-y-1">;
+                        <div>• Alt + A: Toggle accessibility panel</div>;
+                        <div>• Tab: Navigate between elements</div>;
+                        <div>• Enter / Space: Activate buttons</div>;
+                        <div>• Escape: Close modals</div>;
+                      </div>;
+                    </div>;
                   </motion.div>)}
+'";
+                {};
+}} className="space-y-4">;
+                    <div>";
+                      <label className="flex items-center space-x-3">";
+                        <div>Broken JSX</div>
+  (e) => updateSetting('keyboardNavigation',;
+  e.target.checked);
+"} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>";
+                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">;
+                          Enhanced Keyboard Navigation;
+                        </span>;
+                      </label>";
+                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">;
+                        Improves keyboard navigation experience;
+                      </p>;
+                    </div>;
+";
+                    <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">";
+                      <h4 className="text-sm font-medium text-green-800 dark:text-green-200 mb-2">;
+                        Navigation Tips;
+                      </h4>";
+                      <div className="text-xs text-green-700 dark:text-green-300 space-y-1">;
+                        <div>• Use Tab to navigate through interactive elements</div>;
+                        <div>• Use arrow keys for dropdowns and menus</div>;
+                        <div>• Press Enter or Space to activate buttons</div>;
+                        <div>• Use Escape to close panels and modals</div>;
+                      </div>;
+                    </div>;
+                  </motion.div>) }
+              </AnimatePresence>;
+            </div>;
 
-                {activeTab === 'navigation' && (<motion.div key="navigation" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
-                    <div>
-                      <label className="flex items-center space-x-3">
-                        <input type="checkbox" checked={settings.keyboardNavigation} onChange={(e) => updateSetting('keyboardNavigation', e.target.checked)} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
-                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                          Enhanced Keyboard Navigation
-                        </span>
-                      </label>
-                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                        Improves keyboard navigation experience
-                      </p>
-                    </div>
-
-                    <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                      <h4 className="text-sm font-medium text-green-800 dark:text-green-200 mb-2">
-                        Navigation Tips
-                      </h4>
-                      <div className="text-xs text-green-700 dark:text-green-300 space-y-1">
-                        <div>• Use Tab to navigate through interactive elements</div>
-                        <div>• Use arrow keys for dropdowns and menus</div>
-                        <div>• Press Enter or Space to activate buttons</div>
-                        <div>• Use Escape to close panels and modals</div>
-                      </div>
-                    </div>
-                  </motion.div>)}
-              </AnimatePresence>
-            </div>
-
-            {/* Footer */}
-            <div className="border-t border-gray-200 dark:border-slate-700 p-4 bg-gray-50 dark:bg-slate-700/50">
-              <div className="flex space-x-2">
-                <button onClick={resetSettings} className="flex-1 px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 border border-gray-300 dark:border-slate-600 rounded-md transition-colors">
-                  Reset
-                </button>
-                <button onClick={onToggle} className="flex-1 px-4 py-2 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors">
-                  Close
-                </button>
-              </div>
-            </div>
-          </motion.div>)}
-      </AnimatePresence>
-    </>);
-};
+            {/* Footer */}";
+            <div className="border-t border-gray-200 dark:border-slate-700 p-4 bg-gray-50 dark:bg-slate-700/50">";
+              <div className="flex space-x-2">";
+                <button onClick={resetSettings} className="flex-1 px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 border border-gray-300 dark:border-slate-600 rounded-md transition-colors">;
+                  Reset;
+                </button>";
+                <button onClick={onToggle} className="flex-1 px-4 py-2 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors">;
+                  Close;
+                </button>;
+              </div>;
+            </div>;
+          </motion.div>) }
+      </AnimatePresence>;
+    </>)}
 export default AccessibilityPanel;

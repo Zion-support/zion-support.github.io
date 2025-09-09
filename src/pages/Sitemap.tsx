@@ -717,8 +717,6 @@ const Sitemap: React.FC = () => {;
                 View FAQ;
               </Link>;
             </div>;
-          </div>;
-        </div>;
-      </div>;
-    </div>) ;
-};
+    </>;
+  )}
+export default Sitemap;

@@ -132,8 +132,14 @@ export default function Index () {
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection       />
 
-      <WaitlistSection       />
-      <FloatingCTA       />
-      <Footer       />
-    </div>) ;
-}
+      <WaitlistSection />;
+      <FloatingCTA />;
+      <Footer />;
+    </div>)}
+
+
+export { Index }
+export { Index }
+export { Index }
+export { Index }
+export { Index }

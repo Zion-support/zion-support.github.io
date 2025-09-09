@@ -1,137 +1,44 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
-import { Button } from "../ui/button";
-import { Badge } from "../ui/badge";
+
+
+
 import { Link } from "react-router-dom";
 import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
-import { TrustedBySection } from "../TrustedBySection";
-const blockchainServices = [
-    {
-        id: "smart-contracts",
-        title: "Smart Contract Development",
-        description: "Custom smart contract development for DeFi, NFTs, and enterprise blockchain solutions with comprehensive auditing.",
-        price: 3500,
-        currency: "$",
-        period: "/project",
-        features: [
-            "Custom smart contract development",
-            "Security auditing & testing",
-            "Gas optimization",
-            "Multi-chain deployment",
-            "Documentation & training",
-            "Ongoing support"
-        ],
-        icon: <Zap className="h-8 w-8"/>,
-        category: "Development",
-        badge: "Popular",
-        link: "/services",
-        image: "https://images.unsplash.com/photo-1639762681057-408e52192e55?auto=format&fit=crop&w=800&h=500"
-    },
-    {
-        id: "defi-platform",
-        title: "DeFi Platform Development",
-        description: "Complete DeFi platform development including DEX, lending protocols, yield farming, and liquidity management.",
-        price: 15000,
-        currency: "$",
-        period: "/platform",
-        features: [
-            "DEX development",
-            "Lending protocols",
-            "Yield farming",
-            "Liquidity management",
-            "Security audits",
-            "UI/UX design"
-        ],
-        icon: <Coins className="h-8 w-8"/>,
-        category: "DeFi",
-        badge: "Enterprise",
-        link: "/services",
-        image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
-    },
-    {
-        id: "nft-marketplace",
-        title: "NFT Marketplace Development",
-        description: "Custom NFT marketplace with minting, trading, auctions, and royalty distribution systems.",
-        price: 8000,
-        currency: "$",
-        period: "/marketplace",
-        features: [
-            "NFT minting & trading",
-            "Auction system",
-            "Royalty distribution",
-            "Multi-chain support",
-            "Admin dashboard",
-            "Analytics & reporting"
-        ],
-        icon: <Database className="h-8 w-8"/>,
-        category: "NFTs",
-        badge: "Featured",
-        link: "/services",
-        image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
-    },
-    {
-        id: "enterprise-blockchain",
-        title: "Enterprise Blockchain Solutions",
-        description: "Private blockchain networks for enterprise use cases including supply chain, identity management, and asset tracking.",
-        price: 25000,
-        currency: "$",
-        period: "/solution",
-        features: [
-            "Private blockchain setup",
-            "Consensus mechanisms",
-            "Identity management",
-            "Supply chain tracking",
-            "Integration APIs",
-            "Training & support"
-        ],
-        icon: <Network className="h-8 w-8"/>,
-        category: "Enterprise",
-        badge: "Custom",
-        link: "/services",
-        image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
-    },
-    {
-        id: "blockchain-security",
-        title: "Blockchain Security & Auditing",
-        description: "Comprehensive security audits, penetration testing, and vulnerability assessment for blockchain applications.",
-        price: 5000,
-        currency: "$",
-        period: "/audit",
-        features: [
-            "Smart contract auditing",
-            "Penetration testing",
-            "Vulnerability assessment",
-            "Security best practices",
-            "Compliance checking",
-            "Remediation guidance"
-        ],
-        icon: <Shield className="h-8 w-8"/>,
-        category: "Security",
-        badge: "Critical",
-        link: "/services",
-        image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
-    },
-    {
-        id: "blockchain-consulting",
-        title: "Blockchain Strategy Consulting",
-        description: "Strategic consulting for blockchain adoption, tokenomics design, and regulatory compliance guidance.",
-        price: 3000,
-        currency: "$",
-        period: "/day",
-        features: [
-            "Blockchain strategy",
-            "Tokenomics design",
-            "Regulatory compliance",
-            "Technology selection",
-            "Implementation roadmap",
-            "Risk assessment"
-        ],
-        icon: <BarChart3 className="h-8 w-8"/>,
-        category: "Consulting",
-        badge: "Expert",
-        link: "/services",
-        image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
-    }
+
+const blockchainBenefits = [;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+}];
+const useCases = [];
+  {}
+';
+    title: 'Supply Chain Management',';
+    description:''";
+      'Track products from origin to consumer with immutable records and real-time visibility',"";
+    icon: <LinkIcon className="h-6 w-6" />},;
+  {}
+';
+    title: 'Digital Identity',';
+    description:''";
+      'Self-sovereign identity solutions for secure, privacy-preserving authentication',"";
+    icon: <Shield className="h-6 w-6" />},;
+  {}
+';
+    title: 'Asset Tokenization',';
+    description:''";
+      'Convert real-world assets into digital tokens for fractional ownership and trading',"";
+    icon: <Coins className="h-6 w-6" />},;
+  {}
+';
+    title: 'Decentralized Finance',';
+    description:''";
+      'Build financial services without intermediaries using smart contracts and DeFi protocols',"";
+    icon: <Wallet className="h-6 w-6" />}
 ];
 const blockchainBenefits = [
   {
@@ -333,37 +240,12 @@ export default function BlockchainServicesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-zion-blue">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Build the Future with Blockchain?
-            </h2>
-            <p className="text-zion-slate-light text-lg mb-8">
-              Join the blockchain revolution and transform your business with decentralized technology
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/request-quote">
-                <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-8 py-3">
-                  Get Blockchain Quote
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
-                  Contact Blockchain Experts
-                </Button>
-              </Link>
-            </div>
-            <div className="mt-8 text-zion-slate-light">
-              <p>📞 <strong>Mobile:</strong> +1 302 464 0950</p>
-              <p>📧 <strong>Email:</strong> kleber@ziontechgroup.com</p>
-              <p>📍 <strong>Address:</strong> 364 E Main St STE 1008 Middletown DE 19709</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <TrustedBySection />;
+    </div>)}
 
-      <TrustedBySection       />
-    </div>) ;
-}
+
+export { BlockchainServicesPage }
+export { BlockchainServicesPage }
+export { BlockchainServicesPage }
+export { BlockchainServicesPage }
+export { BlockchainServicesPage }

@@ -1,53 +1,97 @@
-import { useState, useEffect } from "react";
-import { toast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from "@/integrations/supabase/client";
-import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals";
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
+import { toast } from '@/hooks/use-toast';
+;
+export default function Page() {};
+  return null;
+}
+} catch(error) {};
+}
+  }, [user?.id]);
+;
+  const fetchReferrals = useCallback(async () => {};
+      const { data, error } = await supabase;
+        .from('referrals');
+        .select('*');
+        .eq('referrer_id', user.id);
+        .order('created_at', { ascending: false });
 
-export function useReferrals() {
+      if(error) throw error;
+      setReferrals(data || []);,
+} catch(error) {};
+}
+  }, [user?.id]);
+;
+  const fetchRewards = useCallback(async () => {};
+      const { data, error } = await supabase;
+        .from('referral_rewards');
+        .select('*');
+        .eq('user_id', user.id);
+        .order('created_at', { ascending: false });
 
-  const { user } = useAuth();
-  const [referralCode, setReferralCode] = useState<ReferralCode | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [referrals, setReferrals] = useState<Referral[]>([]);
-  const [rewards, setRewards] = useState<ReferralReward[]>([]);
-  const [stats, setStats] = useState<ReferralStats>({
-    totalReferrals: 0,
-    pendingReferrals: 0,
-    completedReferrals: 0,
-    totalRewards: 0,
-  });
+      if(error) throw error;
+      setRewards(data || []);,
+} catch(error) {};
+}
+  }, [user?.id]);
+;
+  const fetchReferralStats = useCallback(async () => {};
+      const { data: referralsData, error: refError } = await supabase;
+        .from('referrals');
+        .select('id, status');
+        .eq('referrer_id', user.id);
 
-  useEffect(() => {
-    if (user) {
-      fetchReferralCode();
-      fetchReferralStats();
-      fetchReferrals();
-      fetchRewards();
-    }
-  }, [user]);
+      if(refError) throw refError;
 
-  const fetchReferralCode = async () => {
-    try {
-      setIsLoading(true);
-      const { data, error } = await supabase
-        .from('referral_codes')
-        .select('*')
-        .eq('user_id', user?.id)
-        .single();
+      const { data: rewardsData, error: rewardsError } = await supabase;
+        .from('referral_rewards');
+        .select('amount');
+        .eq('user_id', user.id);
 
-      if (error) {
-        logErrorToProduction('Error fetching referral code:', { data: error });
-        return;
-      }
+      if(rewardsError) throw rewardsError;
 
-      setReferralCode(data);
-    } catch (error) {
-      logErrorToProduction('Error in fetchReferralCode:', { data: error });
-    } finally {
-      setIsLoading(false);
-    }
+      const totalReferrals = referralsData ? referralsData.length : 0;
+      const pendingReferrals = referralsData ? referralsData.filter(r => r.status === 'pending').length : 0;
+      const completedReferrals = referralsData ? referralsData.filter(r => r.status === 'completed').length : 0;
+      ;
+      const totalRewards = rewardsData ? rewardsData.reduce((sum, item) => {};
+}, 0) : 0;
+      ;
+      setStats({};
+});
+      ;,
+} catch(error) {};
+}
+  }, [user?.id]);
+;
+  useEffect(() => {};
+}, []);
+    if(user) {};
+} else {};
+      setStats({ totalReferrals: 0, pendingReferrals: 0, completedReferrals: 0, totalRewards: 0 });
+      setReferrals([]);
+      setRewards([]);
+      setIsLoading(false)}
+  }, [user, fetchReferralCode, fetchReferralStats, fetchReferrals, fetchRewards]);
+;
+  const generateReferralCode = async () => {};
+});
+        return;,
+}
+;
+      const { data, error } = await supabase.rpc('generate_referral_code', {};
+});
+;
+      if(error) throw error;
+;
+      toast({};
+});
+;
+      await fetchReferralCode(); ;
+      ;
+      return data;,
+} catch(error: unknown) {};
+});,
+}
   };
 
   const fetchReferrals = async () => {

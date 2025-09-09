@@ -133,24 +133,64 @@ const LinkHealthMonitor = () => {
             {/* Content */}
             <div className="p-6 space-y-6">
               {/* Summary Cards */}
-              {report && (<div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                  <div className="bg-gray-800 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-white">{report.totalLinks}</div>
-                    <div className="text-gray-400 text-sm">Total Links</div>
-                  </div>
-                  <div className="bg-green-900/20 border border-green-500/20 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-green-400">{report.healthyLinks}</div>
-                    <div className="text-green-400 text-sm">Healthy</div>
-                  </div>
-                  <div className="bg-red-900/20 border border-red-500/20 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-red-400">{report.brokenLinks}</div>
-                    <div className="text-red-400 text-sm">Broken</div>
-                  </div>
-                  <div className="bg-blue-900/20 border border-blue-500/20 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-blue-400">{report.externalLinks}</div>
-                    <div className="text-blue-400 text-sm">External</div>
-                  </div>
-                </div>)}
+              {};
+                      {report.totalLinks}
+                    </div>";
+                    <div className="text-gray-400 text-sm">Total Links</div>;
+                  </div>";
+                  <div className="bg-green-900/20 border border-green-500/20 rounded-lg p-4 text-center">";
+                    <div className="text-2xl font-bold text-green-400">;
+                      {report.healthyLinks}
+                    </div>";
+                    <div className="text-green-400 text-sm">Healthy</div>;
+                  </div>";
+                  <div className="bg-red-900/20 border border-red-500/20 rounded-lg p-4 text-center">";
+                    <div className="text-2xl font-bold text-red-400">;
+                      {report.brokenLinks}
+                    </div>";
+                    <div className="text-red-400 text-sm">Broken</div>;
+                  </div>";
+                  <div className="bg-blue-900/20 border border-blue-500/20 rounded-lg p-4 text-center">";
+                    <div className="text-2xl font-bold text-blue-400">;
+                      {report.externalLinks}
+                    </div>";
+                    <div className="text-blue-400 text-sm">External</div>;
+                  </div>;
+                </div>;
+              )}
+
+              {/* Actions */}";
+              <div className="flex items-center justify-between">";
+                <div className="flex space-x-2">;
+                  <div>Broken JSX</div>
+                    onClick={() => setSelectedFilter('all')}
+                    className={};
+}`}
+                  >;
+                    All Links;
+                  </button>;
+                  <div>Broken JSX</div>
+                    onClick={() => setSelectedFilter('broken')}`;
+                    className={};
+}`}
+                  >;
+                    Broken;
+                  </button>;
+                  <div>Broken JSX</div>
+                    onClick={() => setSelectedFilter('external')}`;
+                    className={};
+}`}
+                  >;
+                    External;
+                  </button>;
+                  <div>Broken JSX</div>
+                    onClick={() => setSelectedFilter('healthy')}`;
+                    className={};
+}`}
+                  >;
+                    Healthy;
+                  </button>;
+                </div>;
 
               {/* Actions */}
               <div className="flex items-center justify-between">
@@ -264,6 +304,12 @@ const LinkHealthMonitor = () => {
             </div>
           </motion.div>
         </motion.div>)}
-    </>);
-};
+    </>)}
 export default LinkHealthMonitor;
+
+
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }

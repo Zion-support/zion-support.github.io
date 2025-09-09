@@ -490,22 +490,27 @@ export default function DevOpsCloudServices() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Accelerate Your Delivery?</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let our DevOps experts help you build faster, more reliable applications 
-            with modern cloud-native practices and automation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Start Your DevOps Journey
-            </Link>
-            <Link to="/services" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors">
-              Explore All Services
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>);
-}
+      <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">;
+        <div className="container mx-auto px-4 text-center">;
+          <h2 className="text-4xl font-bold mb-6">Ready to Accelerate Your Delivery?</h2>;
+          <p className="text-xl mb-8 max-w-3xl mx-auto">;
+            Let our DevOps experts help you build faster, more reliable applications;
+            with modern cloud-native practices and automation.;
+          </p>;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+            <Link to="/contact" className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">;
+              Start Your DevOps Journey;
+            </Link>;
+            <Link to="/services" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors">;
+              Explore All Services;
+            </Link>;
+          </div>;
+        </div>;
+      </section>;
+    </div>)}}}}}
+
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }

@@ -55,4 +55,5 @@ export const TalentCardPreview = ({ talent, onInvite, roleTitle }: TalentCardPre
         </Button>;
       </CardContent>;
     </Card>;
-  )};
+  )}
+'"`;

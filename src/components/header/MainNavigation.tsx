@@ -109,6 +109,7 @@ export function MainNavigation(...args: any[]): any {;
                     </li>;
                   </ul>;
                 </div>;
+
                 <div>;
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">;
                     <Shield className="w-4 h-4 mr-2"       />;
@@ -222,6 +223,7 @@ export function MainNavigation(...args: any[]): any {;
                   </ul>;
                 </div>;
               </div>;
+
               <div className="mt-4 pt-4 border-t border-zion-purple/20">;
                 <Link;
                   to="/enhanced-services";
@@ -295,6 +297,7 @@ export function MainNavigation(...args: any[]): any {;
                     </li>;
                   </ul>;
                 </div>;
+
                 <div>;
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">;
                     <HardDrive className="w-4 h-4 mr-2"       />;
@@ -336,6 +339,7 @@ export function MainNavigation(...args: any[]): any {;
                   </ul>;
                 </div>;
               </div>;
+
               <div className="mt-4 pt-4 border-t border-zion-purple/20">;
                 <Link;
                   to="/request-quote";
@@ -543,5 +547,4 @@ export function MainNavigation(...args: any[]): any {;
         Get Started;
       </NavLink>;
     </nav>;
-  );
-};
+  )}

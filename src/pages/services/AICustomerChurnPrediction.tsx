@@ -38,7 +38,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
       description: "Intelligent clustering of customers by risk level, value, and behavior patterns for targeted retention strategies.";
     };
   ];
-;
+
   const benefits = [;
     "Reduce customer churn by 40-60%",;
     "Increase customer lifetime value by 35%",;
@@ -46,7 +46,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
     "Improve customer satisfaction scores by 25%",;
     "Automate 80% of retention workflows";
   ];
-;
+
   const integrations = [;
     "Salesforce, HubSpot, Pipedrive",;
     "Stripe, PayPal, Square",;
@@ -54,7 +54,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
     "Google Analytics, Mixpanel, Amplitude",;
     "Slack, Microsoft Teams, Email";
   ];
-;
+
   const pricing = [;
     {;
       plan: "Starter",;
@@ -76,10 +76,9 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
       price: "Custom",;
       period: "",;
       features: ["Unlimited customers", "Custom ML models", "White-label solution", "Dedicated support", "SLA guarantees"],;
-      popular: false;
-    };
+      popular: false}
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">;
       <SEO ;
@@ -144,8 +143,8 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
           </motion.div>;
         </div>;
       </section>;
-;
-      {/* Features Section */};
+
+      {/* Features Section */}
       <section className="py-20 bg-slate-800/50">;
         <div className="container mx-auto px-4">;
           <motion.div;
@@ -180,7 +179,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
               Advanced AI capabilities designed to predict, prevent, and manage customer churn effectively;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid md: grid-cols-2 gap-8">;
             {features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index }))  => (;
               <motion.div;
@@ -264,7 +263,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
               Our platform delivers measurable business outcomes that directly impact your bottom line;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">;
             {benefits.map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index }))  => (;
               <motion.div;
@@ -347,7 +346,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
               Connect with your existing tools and workflows without disruption;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-5 gap-6">;
             {integrations.map((((((((integration, index, index, index, index, index, index, index) => ({ ...((((((integration, index, index, index, index, index, index, key: index })) => ({ ...(((((integration, index, index, index, index, index, key: index })) => ({ ...((((integration, index, index, index, index, key: index })) => ({ ...(((integration, index, index, index, key: index })) => ({ ...((integration, index, index, key: index })) => ({ ...(integration, index, key: index }))  => (;
               <motion.div;
@@ -427,56 +426,11 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
               Choose the plan that fits your business needs with no hidden fees;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">;
-            {pricing.map((((((((plan, index, index, index, index, index, index, index) => ({ ...((((((plan, index, index, index, index, index, index, key: index })) => ({ ...(((((plan, index, index, index, index, index, key: index })) => ({ ...((((plan, index, index, index, index, key: index })) => ({ ...(((plan, index, index, index, key: index })) => ({ ...((plan, index, index, key: index })) => ({ ...(plan, index, key: index }))  => (;
-              <motion.div;
-                key={plan.plan};
-                initial = {;
-  { opacity: 0,;
-  y: 30 ;
-;
-;
-;
-;
-;
-;
-}};
-                whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-;
-;
-;
-;
-;
-;
-}};
-                viewport={{ once: true }};
-                transition = {;
-  { duration: 0.8,;
-  delay: index * 0.1 ;
-;
-;
-;
-;
-;
-;
-}};
-                className={`relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border ${;
-                  plan.popular;
-                    ? 'border-red-500 shadow-lg shadow-red-500/20';
-                    : 'border-slate-700';
-                }`};
-;
-                {plan.popular && (;
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                    <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">;
-                      Most Popular;
-                    </span>;
-                  </div>;
-                )};
-;
+            {};
+                )}
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.plan}</h3>;
                   <div className="flex items-baseline justify-center">;
@@ -593,7 +547,11 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {;
         </div>;
       </section>;
     </div>;
-  );
-};
-;
+  )}
 export default AICustomerChurnPrediction;}}}
+
+export { AICustomerChurnPrediction }
+export { AICustomerChurnPrediction }
+export { AICustomerChurnPrediction }
+export { AICustomerChurnPrediction }
+export { AICustomerChurnPrediction }

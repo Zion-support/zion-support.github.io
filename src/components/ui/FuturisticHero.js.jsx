@@ -136,50 +136,26 @@ export default function FuturisticHero() {
         </motion.div>
 
         {/* Scroll Indicator */}
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {
-  { duration: 1,
-  delay: 1.5 
+        <div>Broken JSX</div>
+}} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">;
+          <div>Broken JSX</div>
+}} className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">;
+            <div>Broken JSX</div>
+}} className="w-1 h-3 bg-cyan-400 rounded-full mt-2"/>;
+          </motion.div>;
+        </motion.div>;
+      </div>;
+";
+      {/* Particle Effects */}"";
+      <div className="absolute inset-0 pointer-events-none">"";
+        {};
+                delay: Math.random() * 2}}/>))}
+      </div>;
+    </section>)}
 
-}} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <motion.div animate = {
-  { y[0, 10,;
-  0] 
 
-}} transition = {
-  { duration: 2,
-  repeat: Infinity 
-
-}} className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
-            <motion.div animate = {
-  { y[0, 12,;
-  0] 
-
-}} transition = {
-  { duration: 2,
-  repeat: Infinity 
-
-}} className="w-1 h-3 bg-cyan-400 rounded-full mt-2"      />
-          </motion.div>
-        </motion.div>
-      </div>
-
-      {/* Particle Effects */}
-      <div className="absolute inset-0 pointer-events-none">
-        {[...Array(50)].map((((((((_, i, index, index, index, index, index, index) => ({ ...((((((_, i, index, index, index, index, index, key: index })) => ({ ...(((((_, i, index, index, index, index, key: index })) => ({ ...((((_, i, index, index, index, key: index })) => ({ ...(((_, i, index, index, key: index })) => ({ ...((_, i, index, key: index })) => ({ ...(_, i, key: index })) => (<motion.div key={i} className="absolute w-1 h-1 bg-cyan-400 rounded-full" initial = {
-  {
-                x: Math.random() * window.innerWidth,
-                y: Math.random() * window.innerHeight,
-                opacity: Math.random(),
-            }} animate={{
-                y: [0, -100],
-                opacity: [0, 1, 0],
-            }} transition={{
-                duration: Math.random() * 3 + 2,
-                repeat: Infinity,
-                delay: Math.random() * 2,
-  
-
-}}      />))}
-      </div>
-    </section>);
-}
+export { FuturisticHero }
+export { FuturisticHero }
+export { FuturisticHero }
+export { FuturisticHero }
+export { FuturisticHero }

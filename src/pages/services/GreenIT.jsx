@@ -90,58 +90,32 @@ export default function GreenIT() {
     },
   ];
 
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: 'Cost Reduction',
-      description: 'Lower energy costs and operational expenses',
-    },
-    {
-      icon: Shield,
-      title: 'Compliance',
-      description: 'Meet environmental regulations and standards',
-    },
-    {
-      icon: Users,
-      title: 'Brand Value',
-      description: 'Enhanced reputation and customer trust',
-    },
-    {
-      icon: Award,
-      title: 'Innovation',
-      description: 'Leading-edge sustainable technology solutions',
-    },
+  const benefits = [;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+}
   ];
 
-  const technologies = [
-    {
-      icon: Battery,
-      title: 'Renewable Energy',
-      description: 'Solar, wind, and hydroelectric power integration',
-    },
-    {
-      icon: Cpu,
-      title: 'AI Optimization',
-      description: 'Machine learning for energy efficiency',
-    },
-    {
-      icon: Database,
-      title: 'Smart Monitoring',
-      description: 'IoT sensors and real-time analytics',
-    },
-    {
-      icon: Globe,
-      title: 'Carbon Tracking',
-      description: 'Comprehensive carbon footprint measurement',
-    },
+  const technologies = [;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+}
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-        title="Green IT Services - Zion Tech Group"
-        description="Sustainable and energy-efficient IT solutions. Green data centers, energy management, cloud optimization, and eco-friendly technology services."
-            />
+  return (;
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+      <div>Broken JSX</div>
+      />;
 
       {/* Hero Section */}
       <section className="relative py-20 px-4">
@@ -315,37 +289,36 @@ export default function GreenIT() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
-        <div className="container mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Go Green?
-            </h2>
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-8">
-              Transform your IT infrastructure with sustainable solutions that
-              benefit both your business and the planet.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-green-400 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105"
-              >
-                Start Green IT Journey
-              </a>
-              <a
-                href="/services-overview"
-                className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300"
-              >
-                Explore More Services
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
+      <section className="py-20 px-4 bg-gradient-to-r from-green-900/20 to-emerald-900/20">;
+        <div className="container mx-auto text-center">;
+          <div>Broken JSX</div>
+          >;
+            <h2 className="text-4xl font-bold text-white mb-6">;
+              Ready to Go Green?;
+            </h2>;
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-8">;
+              Transform your IT infrastructure with sustainable solutions that ;
+              benefit both your business and the planet.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <div>Broken JSX</div>
+                className="px-8 py-4 bg-gradient-to-r from-green-400 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105">;
+                Start Green IT Journey;
+              </a>;
+              <div>Broken JSX</div>
+                className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300">;
+                Explore More Services;
+              </a>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  )}
+
+
+export { GreenIT }
+export { GreenIT }
+export { GreenIT }
+export { GreenIT }
+export { GreenIT }

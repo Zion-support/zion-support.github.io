@@ -487,64 +487,72 @@ const SERVICE_LISTINGS = [
         reviewCount: 85,
     },
 ];
-function generateRandomService (idNum) {
-    const templates = [
-        {
-            title: "AI Automation Consulting",
-            category: "Consulting",
-            min: 4000,
-            max: 12000,
-            tags["Automation", "AI Strategy", "Optimization"],;
-        },
-        {
-            title: "Cloud Migration & Support",
-            category: "Management",
-            min: 3000,
-            max: 9000,
-            tags["Cloud", "Migration", "DevOps"],;
-        },
-        {
-            title: "Advanced Cybersecurity Suite",
-            category: "Security",
-            min: 5000,
-            max: 15000,
-            tags["Cybersecurity", "PenTesting", "Compliance"],;
-        },
-        {
-            title: "Big Data Engineering",
-            category: "Analytics",
-            min: 3500,
-            max: 11000,
-            tags["Data Engineering", "Analytics", "ETL"],;
-        },
-        {
-            title: "AI Model Training Service",
-            category: "Development",
-            min: 4500,
-            max: 13000,
-            tags["Machine Learning", "Model Training", "AI"],;
-        },
-        {
-            title: "Digital Transformation Strategy",
-            category: "Strategy",
-            min: 6000,
-            max: 14000,
-            tags["Transformation", "Strategy", "Business"],;
-        },
-    ];
-    const authors = [
-        "Global AI Experts",
-        "InnovateTech",
-        "SecureFuture",
-        "CloudOps Partners",
-        "DataVisor",
-        "NexGen Solutions",
-    ];
-    const images = [
-        "https://images.unsplash.com / photo - 1506765515384 - 028b60a970df?auto = format & fit = crop & w=800 & h=500",
-        "https://images.unsplash.com / photo - 1593642532973 - d31b6557fa68?auto = format & fit = crop & w=800 & h=500",
-        "https://images.unsplash.com / photo - 1523475496153 - 3a12d3e9ad12?auto = format & fit = crop & w=800 & h=500",
-        "https://images.unsplash.com / photo - 1545997331 - 9d517f5ab3b4?auto = format & fit = crop & w=800 & h=500",
+function generateRandomService(idNum) {}
+  return null;
+}
+    const templates = [];
+        {}
+";
+"";
+            title: "AI Automation Consulting","";
+            category: "Consulting",;
+            min: 4000,";
+            max: 12000,"";
+            tags["Automation", "AI Strategy", "Optimization"]},;
+        {}
+";
+"";
+            title: "Cloud Migration & Support","";
+            category: "Management",;
+            min: 3000,";
+            max: 9000,"";
+            tags["Cloud", "Migration", "DevOps"]},;
+        {}
+";
+"";
+            title: "Advanced Cybersecurity Suite","";
+            category: "Security",;
+            min: 5000,";
+            max: 15000,"";
+            tags["Cybersecurity", "PenTesting", "Compliance"]},;
+        {}
+";
+"";
+            title: "Big Data Engineering","";
+            category: "Analytics",;
+            min: 3500,";
+            max: 11000,"";
+            tags["Data Engineering", "Analytics", "ETL"]},;
+        {}
+";
+"";
+            title: "AI Model Training Service","";
+            category: "Development",;
+            min: 4500,";
+            max: 13000,"";
+            tags["Machine Learning", "Model Training", "AI"]},;
+        {}
+";
+"";
+            title: "Digital Transformation Strategy","";
+            category: "Strategy",;
+            min: 6000,";
+            max: 14000,"";
+            tags["Transformation", "Strategy", "Business"]}
+    ];";
+    const authors = ["";
+        "Global AI Experts","";
+        "InnovateTech","";
+        "SecureFuture","";
+        "CloudOps Partners","";
+        "DataVisor","";
+        "NexGen Solutions;
+    ];";
+    const images = ["";
+        "https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500","";
+        "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500","";
+        "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500","";
+        "https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500;
     ];
     const template = getRandomItem (templates) ;
     const author = getRandomItem (authors) ;
@@ -636,14 +644,21 @@ const SERVICE_FILTERS = [
                 {service.tags.slice (0, 3) .map ( (tag, index) => (<span key={index} className="px - 2 py - 1 bg - zion - blue / 10 text - zion - blue text - xs rounded - full">
                     {tag}
                   </span>) ) }
-              </div>
-
-              <Link to="/contact">
-                <Button className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">
-                  Get Quote
-                </Button>
-              </Link>
+              </div>";
+"";
+              <Link to="/contact">"";
+                <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+                  Get Quote;
+                </Button>;
+              </Link>;
             </div>) ) }
-        </div>
-      </div>
-    </div>) }
+        </div>;
+      </div>;
+    </div>)}
+
+
+export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage }
+export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage }
+export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage }
+export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage }
+export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage }

@@ -47,8 +47,8 @@ pricing: {;
   image: string;
   createdAt: string;
   featured: boolean;
-  trending: boolean};
-;
+  trending: boolean}
+
 // Zion Tech Group Contact Information;
 const zionContact = {;
   phone: "+1 302 464 0950",;

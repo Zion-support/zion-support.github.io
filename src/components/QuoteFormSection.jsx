@@ -1,25 +1,13 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = () => {
+import {};
+};
+  const [formData, setFormData] = useState({};
+});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-
-  const [formData, setFormData] = useState ({
-    name: '',
-    email: '',
-    phone: '',
-    comp: '',
-    service: '',
-    message: ''
-  }) ;
-  const [isSubmitting, setIsSubmitting] = useState (false) ;
-  const [isSubmitted, setIsSubmitted] = useState (false) ;
-
-  const services = [
-    'IT Support & Maintenance',
-    'Network Setup & Security',
-    'Hardware Installation',
-    'Data Recovery',
-    'Cloud Migration',
-    'Custom Solution'
+  const services = [';
+    'IT Support & Maintenance',Network Setup & Security',Hardware Installation',Data Recovery',Cloud Migration',Custom Solution';
   ];
 
   const handleChange = (e) => {
@@ -77,9 +65,10 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
         </div>
       </section>) }
 
-  return (<section className="py - 20 bg - gradient - to - br from - gray - 50 to - blue - 50">
-      <div className="max - w-6xl mx - auto px - 4 sm:px - 6 lg:px - 8">
-        <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - start">
+  return (";
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">";
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">";
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">;
           {/* Contact Information */}
           <div>
             <h2 className="text - 4xl font - bold text - gray - 900 mb - 6">
@@ -264,5 +253,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
             </form>
           </div>
         </div>;
-      </div>
-    </section>) };
+      </div>;
+    </section>;
+  )}
+'"}}

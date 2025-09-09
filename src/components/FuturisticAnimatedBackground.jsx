@@ -12,8 +12,7 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
         // Set canvas size
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        };
+            canvas.height = window.innerHeight}
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
         // Particle system
@@ -80,80 +79,9 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
                 }
                 // Update life
                 particle.life--;
-                if (particle.life <= 0) {
-                    particle.life = particle.maxLife;
-                    particle.x = Math.random() * canvas.width;
-                    particle.y = Math.random() * canvas.height;
-                }
-                // Draw particle
-                const alpha = (particle.life / particle.maxLife) * particle.opacity;
-                ctx.fillStyle = `${particle.color}${Math.floor(alpha * 255).toString(16).padStart(2, '0')}`;
-                ctx.beginPath();
-                ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-                ctx.fill();
-                // Draw glow effect
-                const gradient = ctx.createRadialGradient(particle.x, particle.y, 0, particle.x, particle.y, particle.size * 3);
-                gradient.addColorStop(0, `${particle.color}${Math.floor(alpha * 100).toString(16).padStart(2, '0')}`);
-                gradient.addColorStop(1, 'transparent');
-                ctx.fillStyle = gradient;
-                ctx.beginPath();
-                ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2);
-                ctx.fill();
-            });
-            // Draw connecting lines between nearby particles
-            ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity * 0.5})`;
-            ctx.lineWidth = 0.5;
-            for (let i = 0; i < particles.length; i++) {
-                for (let j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    const dy = particles[i].y - particles[j].y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-                    if (distance < 100) {
-                        const alpha = (1 - distance / 100) * gridOpacity * 0.5;
-                        ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
-                        ctx.beginPath();
-                        ctx.moveTo(particles[i].x, particles[i].y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.stroke();
-                    }
-                }
-            }
-            // Draw floating orbs
-            const time = Date.now() * 0.001;
-            for (let i = 0; i < 3; i++) {
-                const x = Math.sin(time * 0.5 + i) * canvas.width * 0.3 + canvas.width * 0.5;
-                const y = Math.cos(time * 0.3 + i) * canvas.height * 0.3 + canvas.height * 0.5;
-                const size = Math.sin(time + i) * 20 + 40;
-                const alpha = (Math.sin(time * 2 + i) + 1) * 0.1 + 0.05;
-                // Orb glow
-                const gradient = ctx.createRadialGradient(x, y, 0, x, y, size * 2);
-                gradient.addColorStop(0, `rgba(0, 255, 255, ${alpha})`);
-                gradient.addColorStop(0.5, `rgba(0, 255, 255, ${alpha * 0.5})`);
-                gradient.addColorStop(1, 'transparent');
-                ctx.fillStyle = gradient;
-                ctx.beginPath();
-                ctx.arc(x, y, size * 2, 0, Math.PI * 2);
-                ctx.fill();
-                // Orb core
-                ctx.fillStyle = `rgba(0, 255, 255, ${alpha * 2})`;
-                ctx.beginPath();
-                ctx.arc(x, y, size * 0.3, 0, Math.PI * 2);
-                ctx.fill();
-            }
-            // Draw scanning line effect
-            const scanY = (time * 50) % (canvas.height + 100) - 50;
-            const scanGradient = ctx.createLinearGradient(0, scanY - 2, 0, scanY + 2);
-            scanGradient.addColorStop(0, 'transparent');
-            scanGradient.addColorStop(0.5, 'rgba(0, 255, 255, 0.3)');
-            scanGradient.addColorStop(1, 'transparent');
-            ctx.fillStyle = scanGradient;
-            ctx.fillRect(0, scanY - 2, canvas.width, 4);
-            animationRef.current = requestAnimationFrame(animate);
-        };
-        animate();
-        return () => {
-            if (animationRef.current) {
-                cancelAnimationFrame (animationRef.current) }
-            window.removeEventListener ('resize', resizeCanvas) }}, [intensity, colorScheme]) ;
-    return (<canvas ref={canvasRef} className={`fixed inset - 0 pointer - events - none ${className}`} style={{ zIndex: -1 }}      />) };
-}}}}}}}}}}}
+                if(particle.life <div>Broken JSX</div>
+        return () => {};
+                cancelAnimationFrame(animationRef.current)}
+            window.removeEventListener('resize', resizeCanvas)}}, [intensity, colorScheme]);`;
+    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none ${className}`} style={{ zIndex: -1 }}/>)}
+export default FuturisticAnimatedBackground}}}}}}}}}}}'`;

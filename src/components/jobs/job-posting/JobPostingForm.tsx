@@ -152,8 +152,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
 
         <Button type="submit" disabled={isSubmitting || isFormLoading}>
           {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
-        </Button>
-      </form>
-    </Form>
-  );
-}
+        </Button>;
+      </form>;
+    </Form>;
+  )}

@@ -32,103 +32,72 @@ const UltimateServicesShowcase2026 = () => {
         'IT Asset Management',
         'Performance Monitoring'
     ];
-    const filteredServices = allServices
-        .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
-        .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.category.toLowerCase().includes(searchTerm.toLowerCase()))
-        .sort((a, b) => {
-        switch (sortBy) {
-            case 'price':
-                return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
-            case 'category':
-                return a.category.localeCompare(b.category);
-            case 'rating':
-                return b.rating - a.rating;
-            case 'name':
-            default:
-                return a.name.localeCompare(b.name);
+    const filteredServices = allServices;';
+        .filter(service => selectedCategory === 'all' || service.category === selectedCategory);
+        .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.category.toLowerCase().includes(searchTerm.toLowerCase()));
+        .sort((a, b) => {}
+            switch (sortBy) {}
+';
+                case 'price':';
+                    return parseInt(a.price.replace(/[^0-9]/g)) - parseInt(b.price.replace(/[^0-9]/g));';
+                case 'category': any;
+                    return a.category.localeCompare(b.category);';
+                case 'rating': any;
+                    return b.rating - a.rating;';
+                case 'name': any;
+                default: any;
+                    return a.name.localeCompare(b.name)}
+        });
+    const getCategoryIcon = (category) => {}
+        const icons = {}
+';
+'';
+''';
+  'Business Intelligence': '📊',Marketing Automation': '🎯',Customer Service': '🤖',Supply Chain Management': '📦',Financial Technology': '💰',Healthcare Technology': '🏥',Legal Technology': '⚖️',Workflow Automation': '⚡',Blockchain Technology': '🔗',Internet of Things': '🌐',Quantum Computing': '🔮',Cybersecurity': '🛡️',Cloud Infrastructure': '☁️',DevOps': '⚡',Data Center Management': '🏢',Network Security': '🌐',Storage Management': '💾',Virtualization': '🖥️',IT Asset Management': '📱',Performance Monitoring': '📊'''};''';
+        return icons[category] || '🚀';'};'';
+    return icons[category] || '🚀'}
+  const containerVariants = {}
+    hidden: { opacity: 0 },;
+    visible: {}
+      opacity: 1,;
+      transition: {}
+        staggerChildren: 0.1}
+    }
+  }
+            opacity: 1,;
+            transition: {}
+                staggerChildren: 0.1}
         }
-    });
-    const getCategoryIcon = (category) => {
-        const icons = {
-            'Business Intelligence': '📊',
-            'Marketing Automation': '🎯',
-            'Customer Service': '🤖',
-            'Supply Chain Management': '📦',
-            'Financial Technology': '💰',
-            'Healthcare Technology': '🏥',
-            'Legal Technology': '⚖️',
-            'Workflow Automation': '⚡',
-            'Blockchain Technology': '🔗',
-            'Internet of Things': '🌐',
-            'Quantum Computing': '🔮',
-            'Cybersecurity': '🛡️',
-            'Cloud Infrastructure': '☁️',
-            'DevOps': '⚡',
-            'Data Center Management': '🏢',
-            'Network Security': '🌐',
-            'Storage Management': '💾',
-            'Virtualization': '🖥️',
-            'IT Asset Management': '📱',
-            'Performance Monitoring': '📊'
-        };
-        return icons[category] || '🚀';
-    };
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1
-            }
-        }
-    };
-    const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.5,
-                ease: "easeOut"
-            }
-        }
-    };
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            Ultimate
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              {" "}Innovative Services 2026
-            </span>
-          </motion.h1>
-          <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            Discover our comprehensive collection of 20+ cutting-edge innovative services, 
-            from AI-powered business solutions to enterprise IT infrastructure. 
-            Each service is designed to transform your business and drive innovation with real, market-ready solutions.
-          </motion.p>
-          
-          {/* Contact Information */}
-          <motion.div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
-            <h3 className="text-2xl font-bold mb-4 text-cyan-400">Contact Zion Tech Group</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-              <div>
-                <strong>Mobile:</strong> +1 302 464 0950
-              </div>
-              <div>
-                <strong>Email:</strong> kleber@ziontechgroup.com
-              </div>
-              <div>
-                <strong>Address:</strong> 364 E Main St STE 1008 Middletown DE 19709
-              </div>
-            </div>
-            <div className="mt-4">
-              <strong>Website:</strong> <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 underline">https://ziontechgroup.com</a>
-            </div>
-          </motion.div>
+    }
+    const itemVariants = {}
+        hidden: {}
+            y: 20,;
+            opacity: 0},;
+        visible: {}
+            y: 0,;
+            opacity: 1,;
+            transition: {}
+                duration: 0.5,;
+                ease: "easeOut""}
+        }"};"";
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">";
+      {/* Hero Section */}"";
+      <section className="py-20 px-4 sm:px-6 lg:px-8">"";
+        <div className="max-w-7xl mx-auto text-center">";
+          <div>Broken JSX</div>
+          >";
+            Ultimate"";
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">"";
+              {" "}Innovative Services 2026;
+            </span>";
+          </motion.h1>"";
+          <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>;
+            Discover our comprehensive collection of 20+ cutting-edge innovative services,;
+            from AI-powered business solutions to enterprise IT infrastructure.;
+            Each service is designed to transform your business and drive innovation with real, market-ready solutions.;
+          </motion.p>;
 
           {/* Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -269,62 +238,69 @@ const UltimateServicesShowcase2026 = () => {
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-gray-300">Try adjusting your search criteria or browse all categories.</p>
             </motion.div>)}
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Transform</span> Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our innovative technology solutions can drive your business forward. 
-              Contact us today for a personalized consultation and demo.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link to="/contact" className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-lg py-4 px-8 rounded-xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 border border-cyan-500/30 hover:border-cyan-500/60">
-                  <span className="text-xl">🚀</span>
-                  Get Started Today
-                  <span className="text-xl">→</span>
-                </Link>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <a href="tel:+13024640950" className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md text-white font-semibold text-lg py-4 px-8 rounded-xl border border-white/30 hover:border-cyan-400/50 hover:bg-white/20 transition-all duration-300 shadow-lg">
-                  <span className="text-xl">📞</span>
-                  Call Now
-                </a>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Footer Info */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto text-center">
-          <h3 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl mb-4">🎯</div>
-              <h4 className="text-lg font-semibold text-white mb-2">Real, Market-Ready Solutions</h4>
-              <p className="text-gray-300 text-sm">All our services are fully implemented and ready for production use with real customers and proven ROI.</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">🚀</div>
-              <h4 className="text-lg font-semibold text-white mb-2">Cutting-Edge Technology</h4>
-              <p className="text-gray-300 text-sm">Built with the latest AI, machine learning, and cloud technologies to ensure maximum performance and scalability.</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">💎</div>
-              <h4 className="text-lg font-semibold text-white mb-2">Enterprise-Grade Support</h4>
-              <p className="text-gray-300 text-sm">24/7 support, comprehensive documentation, and dedicated account management for enterprise clients.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>);
-};
+        </div>;
+      </section>;
+";
+      {/* CTA Section */}"";
+      <section className="py-20 px-4 sm:px-6 lg:px-8">"";
+        <div className="max-w-4xl mx-auto text-center">;
+          <div>Broken JSX</div>
+}} viewport={{ once: true }} transition={{ duration: 0.8 }}>"";
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"";
+              Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Transform</span> Your Business?";
+            </h2>"";
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">';
+              Let's discuss how our innovative technology solutions can drive your business forward.;
+              Contact us today for a personalized consultation and demo.";
+            </p>"";
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>"";
+                <Link to="/contact" className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-lg py-4 px-8 rounded-xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 border border-cyan-500/30 hover:border-cyan-500/60">"";
+                  <span className="text-xl">🚀</span>";
+                  Get Started Today"";
+                  <span className="text-xl">→</span>;
+                </Link>;
+              </motion.div>";
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>"";
+                <a href="tel:+13024640950" className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md text-white font-semibold text-lg py-4 px-8 rounded-xl border border-white/30 hover:border-cyan-400/50 hover:bg-white/20 transition-all duration-300 shadow-lg">"";
+                  <span className="text-xl">📞</span>;
+                  Call Now;
+                </a>;
+              </motion.div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+";
+      {/* Footer Info */}"";
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">"";
+        <div className="max-w-7xl mx-auto text-center">"";
+          <h3 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h3>"";
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"";
+            <div className="text-center">"";
+              <div className="text-4xl mb-4">🎯</div>"";
+              <h4 className="text-lg font-semibold text-white mb-2">Real, Market-Ready Solutions</h4>"";
+              <p className="text-gray-300 text-sm">All our services are fully implemented and ready for production use with real customers and proven ROI.</p>";
+            </div>"";
+            <div className="text-center">"";
+              <div className="text-4xl mb-4">🚀</div>"";
+              <h4 className="text-lg font-semibold text-white mb-2">Cutting-Edge Technology</h4>"";
+              <p className="text-gray-300 text-sm">Built with the latest AI, machine learning, and cloud technologies to ensure maximum performance and scalability.</p>";
+            </div>"";
+            <div className="text-center">"";
+              <div className="text-4xl mb-4">💎</div>"";
+              <h4 className="text-lg font-semibold text-white mb-2">Enterprise-Grade Support</h4>"";
+              <p className="text-gray-300 text-sm">24/7 support, comprehensive documentation, and dedicated account management for enterprise clients.</p>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>) }
 export default UltimateServicesShowcase2026;
+
+export { UltimateServicesShowcase2026 }
+export { UltimateServicesShowcase2026 }
+export { UltimateServicesShowcase2026 }
+export { UltimateServicesShowcase2026 }
+export { UltimateServicesShowcase2026 }
+)

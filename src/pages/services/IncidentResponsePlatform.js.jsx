@@ -303,73 +303,95 @@ const IncidentResponsePlatform = () => {
               </motion.div>
 
               {/* Use Cases */}
-              <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
-                <h3 className="text-2xl font-bold text-white mb-6">Perfect For</h3>
-                <div className="space-y-3">
-                  {useCases.map((((((((useCase, index, index, index, index, index, index, index) => ({ ...((((((useCase, index, index, index, index, index, index, key: index })) => ({ ...(((((useCase, index, index, index, index, index, key: index })) => ({ ...((((useCase, index, index, index, index, key: index })) => ({ ...(((useCase, index, index, index, key: index })) => ({ ...((useCase, index, index, key: index })) => ({ ...(useCase, index, key: index })) => (
-                    <div
-                      key={index}
-                      className="flex items-center bg-white/10 rounded-lg p-3"
-                    >
-                      <Target className="w-5 h-5 text-yellow-400 mr-3"       />
-                      <span className="text-gray-300">{useCase}</span>
-                    </div>))}
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-red-900/50 to-pink-900/50">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.h2 className="text-3xl md:text-4xl font-bold text-white mb-6" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              Ready to Enhance Your Security Posture?
-            </motion.h2>
-            <motion.p className="text-xl text-gray-300 mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-              Join organizations already using our intelligent incident response platform
-            </motion.p>
-            
-            <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
-              <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300">
-                Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5"       />
-              </Link>
-              <a href="tel:+13024640950" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
-                Call: +1 302 464 0950
-              </a>
-            </motion.div>
-
-            <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }}>
-              <h3 className="text-lg font-semibold text-white mb-4">Why Choose Our Incident Response Platform?</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">
-                <div className="flex items-center">
-                  <span className="text-green-400 mr-2">✓</span>
-                  AI-Powered Threat Detection
-                </div>
-                <div className="flex items-center">
-                  <span className="text-green-400 mr-2">✓</span>
-                  Automated Response Workflows
-                </div>
-                <div className="flex items-center">
-                  <span className="text-green-400 mr-2">✓</span>
-                  24/7 Security Monitoring
-                </div>
-                <div className="flex items-center">
-                  <span className="text-green-400 mr-2">✓</span>
-                  Compliance Assurance
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div className="mt-8 text-sm text-gray-400" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.8 }}>
-              <p>Email: kleber@ziontechgroup.com</p>
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>Website: <a href="https://ziontechgroup.com" className="text-red-400 hover:text-red-300">https://ziontechgroup.com</a></p>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>);
-};
+              <div>Broken JSX</div>
+                transition={{ duration: 0.6 }}">"";
+                <h3 className="text-2xl font-bold text-white mb-6">;
+                  Perfect For";
+                </h3>"";
+                <div className="space-y-3">;
+                  {};
+                      <span className="text-gray-300">{useCase}</span>;
+                    </div>;
+                  ))}
+                </div>;
+              </motion.div>;
+            </div>;
+          </div>;
+        </section>;
+";
+        {/* CTA Section */}"";
+        <section className="py-20 bg-gradient-to-r from-red-900/50 to-pink-900/50">"";
+          <div className="max-w-4xl mx-auto text-center">";
+            <div>Broken JSX</div>
+            >;
+              Ready to Enhance Your Security Posture?;
+            </motion.h2>";
+            <div>Broken JSX</div>
+            >;
+              Join organizations already using our intelligent incident response;
+              platform;
+            </motion.p>;
+";
+            <div>Broken JSX</div>
+            >";
+              <div>Broken JSX</div>
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300">";
+                Start Free Trial"";
+                <ArrowRight className="ml-2 w-5 h-5" />;
+              </Link>";
+              <div>Broken JSX</div>
+                className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">;
+                Call: +1 302 464 0950;
+              </a>;
+            </motion.div>;
+";
+            <div>Broken JSX</div>
+              transition={{ duration: 0.6, delay: 0.6 }}">"";
+              <h3 className="text-lg font-semibold text-white mb-4">;
+                Why Choose Our Incident Response Platform?";
+              </h3>"";
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">"";
+                <div className="flex items-center">"";
+                  <span className="text-green-400 mr-2">✓</span>;
+                  AI-Powered Threat Detection";
+                </div>"";
+                <div className="flex items-center">"";
+                  <span className="text-green-400 mr-2">✓</span>;
+                  Automated Response Workflows";
+                </div>"";
+                <div className="flex items-center">"";
+                  <span className="text-green-400 mr-2">✓</span>;
+                  24/7 Security Monitoring";
+                </div>"";
+                <div className="flex items-center">"";
+                  <span className="text-green-400 mr-2">✓</span>;
+                  Compliance Assurance;
+                </div>;
+              </div>;
+            </motion.div>;
+";
+            <div>Broken JSX</div>
+            >;
+              <p>Email: kleber@ziontechgroup.com</p>;
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
+              <p>';
+                Website:{' '}";
+                <div>Broken JSX</div>
+                  className="text-red-400 hover:text-red-300">;
+                  https://ziontechgroup.com;
+                </a>;
+              </p>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+  )}
 export default IncidentResponsePlatform;
+
+
+export { IncidentResponsePlatform }
+export { IncidentResponsePlatform }
+export { IncidentResponsePlatform }
+export { IncidentResponsePlatform }
+export { IncidentResponsePlatform }

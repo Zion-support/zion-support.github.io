@@ -131,34 +131,12 @@ interface AdvancedAnalyticsDashboardProps {;
         newData.push ({;
           id: `${category}-${metric}`,;
           metric,;
-          value: Math.round (value * 100) / 100,;
-          change: Math.round (change * 100) / 100,;
-          trend: change > 2 ? 'up' : change < -2 ? 'down' : 'stable',;
-          category,;
-          timestamp: new Date () ,;
-          target: Math.round (value * 1.1 * 100) / 100,;
-          unit:;
-            category === 'performance';
-              ? 'ms';
-              : category === 'revenue';
-                ? '$';
-                : '',;
-        }) ;
-      }) ;
-    }) ;
-;
-    setAnalyticsData (newData) ;
-  }, []) ;
-;
-  // Refresh data;
-  const refreshData = useCallback ( () => {;
-    setIsLoading (true) ;
-    setTimeout ( () => {;
-      generateAnalyticsData () ;
-      setIsLoading (false) ;
-    }, 1000) ;
-  }, [generateAnalyticsData]) ;
-;
+          value: Math.round(value * 100) / 100,;
+          change: Math.round(change * 100) / 100,;
+          trend: change > 2 ? 'up' : change <div>Broken JSX</div>
+    setTimeout(() => {};
+      setIsLoading(false) }, 1000) }, [generateAnalyticsData]) ;
+
   // Export data;
   const exportData = useCallback ( () => {;
     if (onDataExport) {;
@@ -200,61 +178,39 @@ interface AdvancedAnalyticsDashboardProps {;
       generateAnalyticsData () ;
     };
   }, [isOpen, generateAnalyticsData]) ;
-;
-  // Get trend icon and color;
-  const getTrendDisplay = (trend: 'up' | 'down' | 'stable', change: number) => {;
-    const colors = {;
-      up: 'text - green - 500',;
-      down: 'text - red - 500',;
-      stable: 'text - gray - 500',;
-    };
-;
-    const icons = {;
-      up: <TrendingUp className="w - 4 h - 4"       />,;
-      down: <TrendingUp className="w - 4 h - 4 rotate - 180"       />,;
-      stable: <Activity className="w - 4 h - 4"       />,;
-    };
-;
-    return (<div role="button" className={`flex items - center space - x-1 ${colors[trend]}`}>;
-        {icons[trend]};
-        <span className="text - sm font - medium">;
-          {change > 0 ? '+' : ''};
+
+  // Get trend icon and color';
+
+    return ()`      <div className={`flex items-center space-x-1 ${colors[trend]}`}>;
+        {icons[trend]}";
+        <span className="text-sm font-medium">;
+          {change > 0 ? '+' : ''}
           {change}%;
         </span>;
-      </div>) ;
-  };
-;
+      </div>) }
   // Get category icon;
-  const getCategoryIcon = (category: string) => {;
-    const icons: { [key: string]: React.ReactNode } = {;
-      performance: <Zap className="w - 5 h - 5"       />,;
-      users: <Users className="w - 5 h - 5"       />,;
-      revenue: <DollarSign className="w - 5 h - 5"       />,;
-      engagement: <Activity className="w - 5 h - 5"       />,;
-      technical: <Cpu className="w - 5 h - 5"       />,;
-    };
-    return icons[category] || <Activity className="w - 5 h - 5"       />;
-  };
-;
+  const getCategoryIcon = (category: string) => {};
+    const icons: { [key: string]: React.ReactNode } = {};
+      technical: <Cpu className="w-5 h-5"  />};";
+    return icons[category] || <Activity className="w-5 h-5"  />}
   // Filter data by selected metrics;
-  const filteredData = analyticsData.filter (item =>;
-    selectedMetrics.includes (item.category) ) ;
-;
-  if (!enabled) return null;
-;
-  return (<>;
-      {/* Floating Analytics Button */};
-      <motion.button;
-        onClick={ () => setIsOpen (true) };
-        className="fixed bottom - 6 right - 6 z - 50 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white p - 4 rounded - full shadow - lg hover:shadow - xl transition - all duration - 300";
-        whileHover={{ scale: 1.1 }};
-        whileTap={{ scale: 0.95 }};
-        initial={{ opacity: 0, y: 100 }};
-        animate={{ opacity: 1, y: 0 }};
-        transition={{ delay: 0.5 }};
-      >;
-        <BarChart3 className="w - 6 h - 6"       />;
-        <div role="button" className="absolute - top - 2 -right - 2 w - 3 h - 3 bg - green - 500 rounded - full animate - pulse"       />;
+
+  if(!enabled) return null;
+
+  return ();
+    <>;
+      {/* Floating Analytics Button */}
+      <div>Broken JSX</div>
+        onClick={() => setIsOpen(true)}";
+        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300";
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+      >";
+        <BarChart3 className="w-6 h-6" />";
+        <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse" />;
       </motion.button>;
 ;
       {/* Analytics Dashboard Modal */};

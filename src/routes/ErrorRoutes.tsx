@@ -7,17 +7,15 @@ export default function Page() {
 export default function Page() {
 import LoadingSpinner from '../components/LoadingSpinner';
 
-// Lazy load error pages
+// Lazy load error pages;
 const NotFound = lazy(() => import('../pages/NotFound'));
-
-const ErrorRoutes: React.FC = () => {
-  return (<Suspense fallback={<LoadingSpinner />}>
-      <Routes>
-        <Route path="/404" element={<NotFound />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Suspense>
-  );
-};
-
+;
+const ErrorRoutes: React.FC = () => {};
+  return(<Suspense fallback={<LoadingSpinner />}>;
+      <Routes>;
+        <Route path="/404" element={<NotFound />} />;
+        <Route path="*" element={<NotFound />} />;
+      </Routes>;
+    </Suspense>;
+  )}
 export default ErrorRoutes;

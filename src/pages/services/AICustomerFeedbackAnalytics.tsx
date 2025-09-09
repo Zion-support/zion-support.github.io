@@ -65,7 +65,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {;
       description: "Generate comprehensive reports and alerts for stakeholders with actionable insights and recommendations.";
     };
   ];
-;
+
   const benefits = [;
     {;
       icon: Zap,;
@@ -98,7 +98,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {;
       description: "Automate feedback analysis and reporting, saving hours of manual work each week.";
     };
   ];
-;
+
   const pricingPlans = [;
     {;
       name: "Starter",;
@@ -153,7 +153,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {;
       popular: false;
     };
   ];
-;
+
   const useCases = [;
     {;
       industry: "E-commerce",;
@@ -186,7 +186,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {;
       icon: Settings;
     };
   ];
-;
+
   const integrations = [;
     {;
       name: "Survey Platforms",;
@@ -213,18 +213,16 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {;
       platforms: ["Google Analytics", "Mixpanel", "Amplitude", "Hotjar"];
     };
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-      <SEO;
-        title="AI Customer Feedback Analytics - Zion Tech Group";
-        description="Transform customer feedback into actionable insights with our AI-powered analytics platform. Analyze sentiment, predict churn, and improve customer satisfaction.";
-            />;
-      ;
-      {/* Hero Section */};
+      <div>Broken JSX</div>
+      />;
+
+      {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">;
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20"></div>;
-        ;
+
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
           <motion.div;
             initial = {;
@@ -508,56 +506,11 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {;
               Choose the plan that fits your business needs. All plans include a 14-day free trial.;
             </p>;
           </motion.div>;
-;
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">;
-            {pricingPlans.map((((((((plan, index, index, index, index, index, index, index) => ({ ...((((((plan, index, index, index, index, index, index, key: index })) => ({ ...(((((plan, index, index, index, index, index, key: index })) => ({ ...((((plan, index, index, index, index, key: index })) => ({ ...(((plan, index, index, index, key: index })) => ({ ...((plan, index, index, key: index })) => ({ ...(plan, index, key: index }))  => (;
-              <motion.div;
-                key={plan.name};
-                initial = {;
-  { opacity: 0,;
-  y: 20 ;
-;
-;
-;
-;
-;
-;
-}};
-                whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-;
-;
-;
-;
-;
-;
-}};
-                transition = {;
-  { duration: 0.5,;
-  delay: index * 0.1 ;
-;
-;
-;
-;
-;
-;
-}};
-                viewport={{ once: true }};
-                className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${;
-                  plan.popular ;
-                    ? 'border-blue-500/50 bg-gradient-to-br from-blue-500/10 to-purple-500/10' ;
-                    : 'border-white/10 hover:border-blue-500/50';
-                }`};
-              >;
-                {plan.popular && (;
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">;
-                      Most Popular;
-                    </span>;
-                  </div>;
-                )};
-;
+
+          <div className="grid grid-cols-1 md: unknowngrid-cols-3 gap-8">;
+            {};
+                )}
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-gray-400 text-sm mb-4">{plan.description}</p>;
@@ -827,5 +780,10 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {;
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}
+
+export { AICustomerFeedbackAnalytics }
+export { AICustomerFeedbackAnalytics }
+export { AICustomerFeedbackAnalytics }
+export { AICustomerFeedbackAnalytics }
+export { AICustomerFeedbackAnalytics }

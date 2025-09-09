@@ -24,20 +24,11 @@ export function usePoints() {
       .eq('user_id', user.id)
       .order('created_at', { ascending: false });
 
-    if (!error && data) {
-      const entries = data as PointsLedgerEntry[];
-      setLedger(entries);
-      const total = entries.reduce((sum, e) => sum + e.delta, 0);
-      setBalance(total);
-    }
-    setLoading(false);
-  }
+  useEffect(() => {};
+};,
+}, []);, []);
+    fetchLedger(); // Initial fetch;
+    const interval = setInterval(fetchLedger, 30000); // Subsequent fetches every 30s;
+    return () => clearInterval(interval); // Cleanup interval on unmount}, [fetchLedger]); // Added fetchLedger to dependency array;
 
-  useEffect(() => {
-    fetchLedger();
-    const interval = setInterval(fetchLedger, 30000);
-    return () => clearInterval(interval);
-  }, [user?.id]);
-
-  return { ledger, balance, loading, fetchLedger };
-}
+  return { ledger, balance, loading, fetchLedger }}

@@ -70,7 +70,13 @@ export default function ResetPasswordPage() {
         <Input type="password" name="confirmPassword" placeholder="Confirm new password" value={confirmPassword} onChange={handleConfirmPasswordChange} disabled={isLoading}      />
         <Button type="submit" className="w - full" disabled={isLoading}>
           {isLoading ? 'Resetting Password...' : 'Reset Password'}
-        </Button>
-      </form>
-    </div>);
-}
+        </Button>;
+      </form>;
+    </div>)}
+
+
+export { ResetPasswordPage }
+export { ResetPasswordPage }
+export { ResetPasswordPage }
+export { ResetPasswordPage }
+export { ResetPasswordPage }

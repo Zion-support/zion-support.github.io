@@ -1,8 +1,11 @@
-import { ArrowRight, CheckCircle, ExternalLink } from 'lucide - react.ts';
-import React from 'react.ts';
-import { SEO } from '@/components / SEO';
-export default ServicesAdvertising;
-;
+import React from 'react';
+import { ArrowRight, CheckCircle, ExternalLink  } from 'lucide-react';
+
+const anchor = (url: unknownstring, label?: string)  => (;
+  <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">;
+    {label ?? new URL(url).host + (url.includes('/pricing') ? '/pricing' : '')}
+  </a>;
+);
 ;
 const anchor = (url: anystring, label?: string) => (<a;
     className="text - cyan - 400 underline";
@@ -32,7 +35,7 @@ const ServicesAdvertising: React.FC = () : JSX.Element => {;
     'SOC 2 - aligned processes and data handling',;
     'Flexible deployment: SaaS or self - hosted options',;
   ];
-;
+
   const spotlight = [;
     {;
       title: 'Developer Productivity Copilot',;
@@ -62,9 +65,8 @@ const ServicesAdvertising: React.FC = () : JSX.Element => {;
         'https://snyk.io / plans/',;
         'https://www.paloaltonetworks.com / prisma / cloud / pricing',;
       ],;
-      href: '/services / security - posture - guardian',;
-    },;
-    {;
+      href: '/services / security - posture - guardian'},;
+    {}
       title: 'AI Data Pipeline Optimizer',;
       price: 'Typical: $200–$2,000 / mo',;
       refs: [;
@@ -72,49 +74,47 @@ const ServicesAdvertising: React.FC = () : JSX.Element => {;
         'https://www.snowflake.com / pricing/',;
         'https://www.getdbt.com / pricing',;
       ],;
-      href: '/services / ai - data - pipeline - optimizer',;
-    },;
-    {;
-      title: 'Privacy Request Portal (DSAR) ',;
+      href: '/services / ai - data - pipeline - optimizer'},;
+    {}
+      title: 'Privacy Request Portal(DSAR) ',;
       price: 'From $99 / mo + usage',;
       refs: [;
         'https://transcend.io / pricing/',;
         'https://www.onetrust.com / pricing/',;
       ],;
-      href: '/services / gdpr - dsar - portal',;
-    },;
-    {;
+      href: '/services / gdpr - dsar - portal'},;
+    {}
       title: 'CSP & Security Headers Manager',;
       price: 'From $49 / mo per domain',;
       refs: ['https://securityheaders.com/'],;
-      href: '/services / security - headers - csp - manager',;
-    },;
-    {;
+      href: '/services / security - headers - csp - manager'},;
+    {}
       title: 'Checkout A / B Optimizer',;
       price: 'From $99 / mo',;
       refs: ['https://www.optimizely.com / pricing/'],;
-      href: '/services / checkout - performance - optimizer',;
-    },;
-    {;
+      href: '/services / checkout - performance - optimizer'},;
+    {}
       title: 'Status & Incident Hub',;
       price: 'From $59 / mo',;
       refs: ['https://betterstack.com / status / pricing'],;
-      href: '/services / status - incident - hub',;
-    },;
+      href: '/services / status - incident - hub'}
   ] as const;
-;
-  return (<div className="min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white">;
-      <SEO;
-        title="AI, IT and Micro SaaS Services Advertising | Zion Tech Group";
-        description="Explore our AI, IT, and micro SaaS services with features, capabilities, benefits, pricing references, and easy contact options.";
-            />;
-;
-      <section className="relative pt - 24 pb - 12">;
-        <div className="container mx - auto px - 4 text - center max - w-5xl">;
-          <h1 className="text - 4xl sm:text - 6xl font - extrabold bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent">;
-            Services That Ship Outcomes;
-          </h1>;
-          <p className="mt - 4 text - lg text - slate - 300">;
+
+const ServicesAdvertising: React.FC = (): JSX.Element => {}
+  const benefits: string[] = ['';
+    'High-ROI projects with measurable KPIs',Transparent pricing with market references',Fast onboarding with templates and playbooks',Enterprise-grade security and compliance',24/7 support with SLAs',Proven architectures and reference implementations',No long-term lock-in; cancel anytime',SOC 2-aligned processes and data handling',Flexible deployment: SaaS or self-hosted options';
+  ];
+
+  return ("";
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">";
+      <div>Broken JSX</div>
+      />";
+"";
+      <section className="relative pt-24 pb-12">"";
+        <div className="container mx-auto px-4 text-center max-w-5xl">"          <h1 className="text-4xl sm:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
+            Services That Ship Outcomes";
+          </h1>"";
+          <p className="mt-4 text-lg text-slate-300">;
             AI platforms, enterprise IT solutions, and real micro SaaS;
             accelerators.;
           </p>;
@@ -236,5 +236,14 @@ const ServicesAdvertising: React.FC = () : JSX.Element => {;
           </div>;
         </div>;
       </section>;
-    </div>) ;
-};
+    </div>;
+  )}
+export default ServicesAdvertising;
+
+
+
+export { ServicesAdvertising }
+export { ServicesAdvertising }
+export { ServicesAdvertising }
+export { ServicesAdvertising }
+export { ServicesAdvertising, ServicesAdvertising }

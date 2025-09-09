@@ -29,12 +29,13 @@ export type ServiceItem = {;
 export type ServiceCategory = {;
   name: string;
   slug: string;
-  items: ServiceItem[];
-};
-;
-export const servicesCatalog: ServiceCategory[] = [;
-  {;
-    name: 'Micro SaaS',;
+  items: ServiceItem[]}
+;export const servicesCatalog: ServiceCategory[] = [];
+  {}
+';
+'';
+''';
+    name: 'Micro SaaS',''';
     slug: 'micro-saas',;
     items: [;
       {;

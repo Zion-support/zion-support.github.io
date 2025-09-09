@@ -47,9 +47,9 @@ const zionContact = {;
 ;
 ;
 };
-;
-    technologies["AI/ML", "Robo-advisory", "Portfolio Optimization", "Financial Planning"];
-  };
+    technologies["AI/ML", "Robo-advisory", "Portfolio Optimization", "Financial Planning"];,
+}
+    technologies["AI/ML", "Robo-advisory", "Portfolio Optimization", "Financial Planning"]}
 ];
-;
-export default specializedFinancialAIServices2025;}}
+
+export default specializedFinancialAIServices2025}}";

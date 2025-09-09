@@ -180,5 +180,5 @@ import { motion  } from 'framer - motion.ts';
           </motion.div>;
         </div>;
       </div>;
-    </section>;) ;
-};
+    </section>;) }
+export default NewsletterSection}}}'";

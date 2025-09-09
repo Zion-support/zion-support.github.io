@@ -29,7 +29,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
               99.9% accuracy with automated financial operations.;
             </p>;
           </div>;
-;
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
             <Button;
               size="lg";
@@ -54,7 +54,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">;
             Why Choose AI FinTech Platform?;
           </h2>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">;
               <div className="w-16 h-16 bg-emerald-600/20 rounded-full flex items-center justify-center mx-auto mb-4">;
@@ -68,7 +68,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
                 real-time;
               </p>;
             </Card>;
-;
+
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">;
               <div className="w-16 h-16 bg-teal-600/20 rounded-full flex items-center justify-center mx-auto mb-4">;
                 <Zap className="w-8 h-8 text-teal-400"       />;
@@ -81,7 +81,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
                 optimization;
               </p>;
             </Card>;
-;
+
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">;
               <div className="w-16 h-16 bg-cyan-600/20 rounded-full flex items-center justify-center mx-auto mb-4">;
                 <TrendingUp className="w-8 h-8 text-cyan-400"       />;
@@ -94,7 +94,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
                 significantly;
               </p>;
             </Card>;
-;
+
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">;
               <div className="w-16 h-16 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-4">;
                 <DollarSign className="w-8 h-8 text-blue-400"       />;
@@ -117,7 +117,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">;
             Advanced Financial Features;
           </h2>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             <div className="space-y-6">;
               <div className="flex items-start space-x-4">;
@@ -132,7 +132,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
                   </p>;
                 </div>;
               </div>;
-;
+
               <div className="flex items-start space-x-4">;
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"       />;
                 <div>;
@@ -145,7 +145,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
                   </p>;
                 </div>;
               </div>;
-;
+
               <div className="flex items-start space-x-4">;
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"       />;
                 <div>;
@@ -158,7 +158,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
                   </p>;
                 </div>;
               </div>;
-;
+
               <div className="flex items-start space-x-4">;
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"       />;
                 <div>;
@@ -171,7 +171,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
                 </div>;
               </div>;
             </div>;
-;
+
             <div className="space-y-6">;
               <div className="flex items-start space-x-4">;
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"       />;
@@ -185,7 +185,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
                   </p>;
                 </div>;
               </div>;
-;
+
               <div className="flex items-start space-x-4">;
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"       />;
                 <div>;
@@ -198,7 +198,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
                   </p>;
                 </div>;
               </div>;
-;
+
               <div className="flex items-start space-x-4">;
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"       />;
                 <div>;
@@ -211,7 +211,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
                   </p>;
                 </div>;
               </div>;
-;
+
               <div className="flex items-start space-x-4">;
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"       />;
                 <div>;
@@ -235,7 +235,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">;
             Comprehensive Financial Solutions;
           </h2>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <Card className="bg-slate-800/50 border-slate-700 p-6">;
               <div className="w-12 h-12 bg-emerald-600/20 rounded-lg flex items-center justify-center mb-4">;
@@ -249,7 +249,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
                 and automation;
               </p>;
             </Card>;
-;
+
             <Card className="bg-slate-800/50 border-slate-700 p-6">;
               <div className="w-12 h-12 bg-teal-600/20 rounded-lg flex items-center justify-center mb-4">;
                 <Shield className="w-6 h-6 text-teal-400"       />;
@@ -262,7 +262,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
                 transactions;
               </p>;
             </Card>;
-;
+
             <Card className="bg-slate-800/50 border-slate-700 p-6">;
               <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4">;
                 <BarChart3 className="w-6 h-6 text-cyan-400"       />;
@@ -274,7 +274,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
                 AI-driven investment recommendations and portfolio optimization;
               </p>;
             </Card>;
-;
+
             <Card className="bg-slate-800/50 border-slate-700 p-6">;
               <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">;
                 <Users className="w-6 h-6 text-blue-400"       />;
@@ -286,7 +286,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
                 Intelligent credit scoring and automated lending decisions;
               </p>;
             </Card>;
-;
+
             <Card className="bg-slate-800/50 border-slate-700 p-6">;
               <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">;
                 <Globe className="w-6 h-6 text-purple-400"       />;
@@ -299,7 +299,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
                 detection;
               </p>;
             </Card>;
-;
+
             <Card className="bg-slate-800/50 border-slate-700 p-6">;
               <div className="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4">;
                 <PieChart className="w-6 h-6 text-orange-400"       />;
@@ -321,7 +321,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">;
             Competitive Pricing;
           </h2>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <Card className="bg-slate-800/50 border-slate-700 p-8 text-center relative">;
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
@@ -356,7 +356,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
                 Start Free Trial;
               </Button>;
             </Card>;
-;
+
             <Card className="bg-gradient-to-br from-emerald-600 to-teal-600 p-8 text-center relative transform scale-105">;
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
                 <Badge;
@@ -397,7 +397,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
                 Get Started;
               </Button>;
             </Card>;
-;
+
             <Card className="bg-slate-800/50 border-slate-700 p-8 text-center relative">;
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
                 <Badge variant="secondary">Enterprise</Badge>;
@@ -443,7 +443,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">;
             Market Analysis & ROI;
           </h2>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             <div className="text-center">;
               <div className="text-4xl font-bold text-emerald-400 mb-2">;
@@ -479,7 +479,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
             Join financial institutions already using AI to revolutionize their;
             operations.;
           </p>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;
             <div className="flex items-center justify-center space-x-3 text-gray-300">;
               <Phone className="w-5 h-5 text-emerald-400"       />;
@@ -494,7 +494,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
               <span>ziontechgroup.com</span>;
             </div>;
           </div>;
-;
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
             <Button;
               size="lg";
@@ -520,7 +520,11 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {;
         </div>;
       </section>;
     </div>;
-  );
-};
-;
+  )}
 export default AIFinTechPlatform;
+
+export { AIFinTechPlatform }
+export { AIFinTechPlatform }
+export { AIFinTechPlatform }
+export { AIFinTechPlatform }
+export { AIFinTechPlatform }

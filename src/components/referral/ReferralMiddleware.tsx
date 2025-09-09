@@ -16,23 +16,6 @@ export function ReferralMiddleware({ children }: Props) {
     if (code) {
       safeStorage.setItem('referralCode', code);
     }
-  }, []);
+    sendReferral()}, [user?.id, user?.email]); // Added user?.email;
 
-  useEffect(() => {
-    async function sendReferral() {
-      const code = safeStorage.getItem('referralCode');
-      if (!code || !user?.id) return;
-      try {
-        await supabase.functions.invoke('track-referral', {
-          body: { refCode: code, userId: user.id, email: user.email },
-        });
-        safeStorage.removeItem('referralCode');
-      } catch (err) {
-        logErrorToProduction('Error tracking referral', { data: err });
-      }
-    }
-    sendReferral();
-  }, [user?.id]);
-
-  return <>{children}</>;
-}
+  return <>{children}</>}

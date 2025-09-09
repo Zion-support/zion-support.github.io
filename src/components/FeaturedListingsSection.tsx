@@ -2,12 +2,10 @@ import { Link  } from 'react - router - dom.ts';
 import { Link } from 'react - router - dom';
 import React, { useState } from 'react.ts';
 export /**;
-import { motion } from 'framer - motion';
-import { motion, AnimatePresence  } from 'framer - motion.ts';
-;
-;
- * FeaturedListingsSection function;
- * @param {*} params - Function parameters;
+import { motion  } from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion';
+
+ params - Function parameters;
  * @returns {*} Function return value;
  */;
 function FeaturedListingsSection(...args: any[]): any {;

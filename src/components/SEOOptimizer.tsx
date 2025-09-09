@@ -477,22 +477,20 @@ autoAnalyze:  true,;
                 </div>;
               </motion.div>;) };
           </AnimatePresence>;
-        </>;) : null};
-    </div>;) ;
-};
-;
+        </>;
+      ) : null}
+    </div>;
+  )}
 // Hook for using SEO optimization;
   const [analysis, setAnalysis] = useState < SEOAnalysis | null> (null) ;
-  const [isOptimizing, setIsOptimizing] = useState (false) ;
+  const [isOptimizing, setIsOptimizing] = useState(false);
+
+    setIsOptimizing(true) ;    // Implement actual optimization logic here;
+    await new Promise(resolve => setTimeout (resolve, 3000) ) ;
+    setIsOptimizing(false) }, []) ;
 ;
-  const optimizePage = useCallback (async () => {;
-    setIsOptimizing (true) ;
-    // Implement actual optimization logic here;
-    await new Promise (resolve => setTimeout (resolve, 3000) ) ;
-    setIsOptimizing (false) }, []) ;
-;
-  return {;
-    analysis,;
-    isOptimizing,;
-    optimizePage;
-  }};
+  return {};
+}};
+'"`;
+
+;,"});})";

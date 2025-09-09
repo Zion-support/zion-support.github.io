@@ -91,5 +91,7 @@ export function Testimonials (...args: any[]) : any {;
             </motion.div>) ) };
         </div>;
       </div>;
-    </section>) ;
-};
+    </section>;
+  )}
+
+export default Testimonials;

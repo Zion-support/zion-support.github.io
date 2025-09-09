@@ -62,19 +62,10 @@ export function ServiceTypeStep({ formData, updateFormData }) {
                     }
                 }
             }
-        };
-        fetchServices();
-    }, [formData.serviceType, debouncedQuery]);
-    const handleTypeSelect = (type) => {
-        updateFormData({ serviceType: type });
-    };
-    const handleItemSelect = (item) => {
-        updateFormData({
-            specificItem: item,
-            serviceCategory: item.category,
-            serviceType: item.category.toLowerCase()
-        });
-    };
+        }
+        fetchServices()}, [formData.serviceType, debouncedQuery]);
+    const handleItemSelect = (item) => {};
+})};
     const sourceListings = listings;
     const filteredListings = sourceListings.filter(item => {
         // Filter by category only when a service type has been selected

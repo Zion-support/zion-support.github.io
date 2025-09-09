@@ -172,63 +172,64 @@ export default function FinancialSolutions() {
                     </p>
                   </div>
                 ))}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+              </div>;
+            </motion.div>;
+          </div>;
+        </div>;
+      </section>;
+";
+      {/* Industries Section */}"";
+      <section className="py-20 px-4 sm:px-6 lg:px-8">"";
+        <div className="max-w-7xl mx-auto">;
+          <div>Broken JSX</div>
+            className="text-center mb-16"">"";
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">;
+              Industry Solutions";
+            </h2>"";
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
+              Our financial solutions are tailored to meet the unique challenges;
+              and requirements of various financial sectors.;
+            </p>;
+          </motion.div>";
+"";
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">;
+            {};
+                <h3 className="font-semibold">{industry}</h3>;
+              </motion.div>;
+            ))}
+          </div>;
+        </div>;
+      </section>;
+";
+      {/* CTA Section */}"";
+      <section className="py-20 px-4 sm:px-6 lg:px-8">"";
+        <div className="max-w-4xl mx-auto text-center">;
+          <div>Broken JSX</div>
+            viewport={{ once: true }}">"";
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">;
+              Ready to Transform Your Financial Services?";
+            </h2>"";
+            <p className="text-xl text-gray-300 mb-8">;
+              Join the future of financial technology and start seeing results;
+              today.";
+            </p>"";
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"";
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2">";
+                <span>Get Started Today</span>"";
+                <ArrowRight className="w-5 h-5" />";
+              </button>"";
+              <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">;
+                Contact Sales;
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>)}
 
-      {/* Industries Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Industry Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our financial solutions are tailored to meet the unique challenges and requirements 
-              of various financial sectors.
-            </p>
-          </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {industries.map((((((((industry, index, index, index, index, index, index, index) => ({ ...((((((industry, index, index, index, index, index, index, key: index })) => ({ ...(((((industry, index, index, index, index, index, key: index })) => ({ ...((((industry, index, index, index, index, key: index })) => ({ ...(((industry, index, index, index, key: index })) => ({ ...((industry, index, index, key: index })) => ({ ...(industry, index, key: index })) => (
-              <motion.div
-                key={industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300"
-              >
-                <CreditCard className="w-8 h-8 text-cyan-500 mx-auto mb-3"       />
-                <h3 className="font-semibold">{industry}</h3>
-              </motion.div>))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Financial Services?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join the future of financial technology and start seeing results today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2">
-                <span>Get Started Today</span>
-                <ArrowRight className="w-5 h-5"       />
-              </button>
-              <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
-                Contact Sales
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>);
-}
+export { FinancialSolutions }
+export { FinancialSolutions }
+export { FinancialSolutions }
+export { FinancialSolutions }
+export { FinancialSolutions }

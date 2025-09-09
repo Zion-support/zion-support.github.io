@@ -71,7 +71,7 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data / revolut
       buttonColor: 'from - purple - 600 to - indigo - 700';
     };
   ];
-;
+
   const serviceCategories = [;
     {;
       name: 'AI & Analytics',;
@@ -118,49 +118,43 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data / revolut
       icon: <Sparkles className="w - 6 h - 6"       />,;
       services: anyallServices.filter (s  => !s.category.includes ('AI') && !s.category.includes ('Space') && !s.category.includes ('Quantum') ) };
   ];
-;
+
   const getDiscountMultiplier = () => billingCycle === 'yearly' ? 0.83 : 1;
-;
-  return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">;
-      <SEO ;
-        title="Comprehensive Pricing Guide 2029 - Zion Tech Group";
-        description="Complete pricing information for our revolutionary 2029 AI, quantum computing, space technology, and emerging tech services.";
-            />;
-      ;
-      {/* Hero Section */};
-      <div role="button" className="relative overflow - hidden">;
-        <div role="button" className="absolute inset - 0 bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20"></div>;
-        <div role="button" className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 24">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }};
-            animate={{ opacity: 1, y: 0 }};
-            transition={{ duration: 0.8 }};
-            className="text - center";
-          >;
-            <h1 className="text - 5xl md:text - 7xl font - bold text - white mb - 6">;
-              Pricing Guide < span className="bg - gradient - to - r from - blue - 400 to - purple - 400 bg - clip - text text - transparent"> 2029</span>;
-            </h1>;
-            <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">;
+
+  return (;
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+      <div>Broken JSX</div>
+      />;
+
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">;
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">;
+          <div>Broken JSX</div>
+            className="text-center"">"";
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">";
+              Pricing Guide"";
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> 2029</span>";
+            </h1>"";
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
               Transparent pricing for our revolutionary AI, quantum computing, space technology, and emerging tech services. Choose the plan that fits your business needs.;
             </p>;
-            ;
-            {/* Billing Toggle */};
-            <div role="button" className="flex items - center justify - center gap - 4 mb - 8">;
-              <span className={`text - lg ${billingCycle === 'monthly' ? 'text - white' : 'text - gray - 400'}`}>Monthly</span>;
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setBillingCycle (billingCycle === 'monthly' ? 'yearly' : 'monthly') };
-                className={`relative inline - flex h - 8 w - 16 items - center rounded - full transition - colors ${;
-                  billingCycle === 'yearly' ? 'bg - blue - 600' : 'bg - gray - 600';
-                }`};
-              >;
-                <span;
-                  className={`inline - block h - 6 w - 6 transform rounded - full bg - white transition - transform ${;
-                    billingCycle === 'yearly' ? 'translate - x-9' : 'translate - x-1';
-                  }`};
-                      />;
-              </button>;
-              <span className={`text - lg ${billingCycle === 'yearly' ? 'text - white' : 'text - gray - 400'}`}>;
-                Yearly;
-                {billingCycle === 'yearly' && (<span className="ml - 2 text - sm bg - green - 500 text - white px - 2 py - 1 rounded - full">Save 17%</span>) };
+            ";
+            {/* Billing Toggle */}"";
+            <div className="flex items-center justify-center gap-4 mb-8">;
+              <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>';
+              <div>Broken JSX</div>
+                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}``;
+                className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${}
+'`;
+                  billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600'``}`}
+              >`;
+                <div>Broken JSX</div>
+                />'`;
+              </button>'`'`;
+              <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>';
+                Yearly''";
+                {};
+                )}
               </span>;
             </div>;
           </motion.div>;
@@ -353,40 +347,38 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data / revolut
           <h2 className="text - 4xl font - bold text - white mb - 6">;
             Frequently Asked Questions;
           </h2>;
-        </motion.div>;
-;
-        <div role="button" className="space - y-6">;
-          {[;
-            {;
-              question: any"Can I mix and match services from different categories?",;
-              answer: "Yes ! Our flexible pricing allows you to choose services from any category based on your specific business needs. You can start with a few services and add more as you grow.";
-            },;
-            {;
-              question: "Do you offer volume discounts for enterprise customers?",;
-              answer: "Absolutely ! Enterprise customers with multiple service subscriptions receive significant volume discounts. Contact our sales team for custom enterprise pricing.";
-            },;
-            {;
-              question: "What's included in the support packages?",;
-              answer: "Starter plans include email support, Professional plans include priority email support, and Enterprise plans include 24 / 7 phone and email support with dedicated account management.";
-            },;
-            {;
-              question: "Can I cancel or change my plan at any time?",;
-              answer: "Yes, you can upgrade, downgrade, or cancel your plan at any time. Changes take effect at the start of your next billing cycle.";
-            },;
-            {;
-              question: "Do you offer free trials?",;
-              answer: "Yes ! Most of our services offer free trials ranging from 14 - 30 days, depending on the service complexity and setup requirements.";
-            };
-          ].map ( (faq, index) => (<motion.div;
-              key={index};
-              initial={{ opacity: 0, x: -20 }};
-              whileInView={{ opacity: 1, x: 0 }};
-              transition={{ duration: 0.6, delay: index * 0.1 }};
-              className="bg - white / 5 backdrop - blur - sm rounded - lg p - 6 border border - white / 10";
-            >;
-              <h3 className="text - lg font - semibold text - white mb - 3">{faq.question}</h3>;
-              <p className="text - gray - 300">{faq.answer}</p>;
-            </motion.div>) ) };
+        </motion.div>";
+"";
+        <div className="space-y-6">;
+          {};
+              answer: "Yes! Our flexible pricing allows you to choose services from any category based on your specific business needs. You can start with a few services and add more as you grow."            },;
+            {}
+";
+"";
+              question: "Do you offer volume discounts for enterprise customers?","";
+              answer: "Absolutely! Enterprise customers with multiple service subscriptions receive significant volume discounts. Contact our sales team for custom enterprise pricing."},;
+            {}
+'";
+'"'";
+              question: "What's included in the support packages?","";
+              answer: "Starter plans include email support, Professional plans include priority email support, and Enterprise plans include 24/7 phone and email support with dedicated account management."},;
+            {}
+";
+"";
+              question: "Can I cancel or change my plan at any time?","";
+              answer: "Yes, you can upgrade, downgrade, or cancel your plan at any time. Changes take effect at the start of your next billing cycle."},;
+            {}
+";
+"";
+              question: "Do you offer free trials?","";
+              answer: "Yes! Most of our services offer free trials ranging from 14-30 days, depending on the service complexity and setup requirements.";,
+}
+          ].map((faq, index) => (<div>Broken JSX</div>
+              className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10"">"";
+              <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>"";
+              <p className="text-gray-300">{faq.answer}</p>;
+            </motion.div>;
+          ))}
         </div>;
       </div>;
 ;
@@ -421,5 +413,11 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data / revolut
           </div>;
         </div>;
       </div>;
-    </div>) ;
-}
+    </div>;
+  )}
+
+export { ComprehensivePricingGuide2029 }
+export { ComprehensivePricingGuide2029 }
+export { ComprehensivePricingGuide2029 }
+export { ComprehensivePricingGuide2029 }
+export { ComprehensivePricingGuide2029 }

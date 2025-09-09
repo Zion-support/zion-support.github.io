@@ -50,62 +50,15 @@ const TeamPage = () => {
     }
   ];
 
-  const departments = [
-    {
-      name: 'AI & Research',
-      description: 'Pioneering artificial intelligence solutions and cutting-edge research.',
-      teamSize: 45,
-      icon: Brain,
-      focus: ['Machine Learning', 'Natural Language Processing', 'Computer Vision']
-    },
-    {
-      name: 'Cybersecurity',
-      description: 'Protecting digital assets with advanced security solutions.',
-      teamSize: 32,
-      icon: Shield,
-      focus: ['Threat Detection', 'Security Architecture', 'Incident Response']
-    },
-    {
-      name: 'Cloud & Infrastructure',
-      description: 'Building scalable cloud solutions and robust infrastructure.',
-      teamSize: 38,
-      icon: Cloud,
-      focus: ['Cloud Architecture', 'DevOps', 'Infrastructure Management']
-    },
-    {
-      name: 'IoT & Edge Computing',
-      description: 'Connecting the world through innovative IoT solutions.',
-      teamSize: 28,
-      icon: Zap,
-      focus: ['Device Management', 'Edge Analytics', 'Smart Cities']
-    },
-    {
-      name: 'Quantum Computing',
-      description: 'Advancing the frontier of computational power.',
-      teamSize: 25,
-      icon: Rocket,
-      focus: ['Quantum Algorithms', 'Quantum Security', 'Research']
-    },
-    {
-      name: 'Sustainability',
-      description: 'Building a greener future through technology.',
-      teamSize: 20,
-      icon: Heart,
-      focus: ['Green IT', 'Carbon Management', 'Sustainable Solutions']
-    }
+  const advisors = [;
+    {};
+},;
+    {};
+}
   ];
 
-  const values = [
-    'Innovation First',
-    'Customer Success',
-    'Excellence in Execution',
-    'Collaborative Growth',
-    'Ethical Technology',
-    'Continuous Learning'
-  ];
-
-  return (
-    <div className="min-h-screen bg-futuristic">
+  return (;
+    <div className="min-h-screen bg-zion-slate-dark text-white">;
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
@@ -161,34 +114,20 @@ const TeamPage = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {leadership.map((leader, index) => (
-              <motion.div
-                key={leader.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
-              >
-                <div className="text-center mb-6">
-                  <div className="w-24 h-24 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-12 h-12 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
-                    {leader.name}
-                  </h3>
-                  <p className="text-zion-cyan font-semibold mb-4">{leader.title}</p>
-                </div>
-                
-                <p className="text-zion-slate-light mb-6 leading-relaxed text-center">
-                  {leader.bio}
-                </p>
-                
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Expertise:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {leader.expertise.map((skill) => (
-                      <span key={skill} className="text-sm bg-zion-cyan/10 text-zion-cyan px-3 py-1 rounded-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {};
+              <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300">;
+                <div className="text-center mb-6">;
+                  <div className="w-32 h-32 bg-zion-cyan/20 rounded-full mx-auto mb-4 flex items-center justify-center">;
+                    <Users className="w-16 h-16 text-zion-cyan" />;
+                  </div>;
+                  <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>;
+                  <p className="text-zion-cyan font-semibold mb-3">{member.title}</p>;
+                  <p className="text-zion-slate-light text-sm mb-4">{member.bio}</p>;
+
+                  <div className="flex flex-wrap gap-2 mb-4 justify-center">;
+                    {};
+                      <span key={skillIndex} className="px-3 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full">;
                         {skill}
                       </span>
                     ))}
@@ -242,39 +181,22 @@ const TeamPage = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {departments.map((dept, index) => (
-              <motion.div
-                key={dept.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
-              >
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <dept.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white group-hover:text-zion-cyan transition-colors duration-300">
-                      {dept.name}
-                    </h3>
-                    <p className="text-zion-cyan font-semibold">{dept.teamSize} Team Members</p>
-                  </div>
-                </div>
-                
-                <p className="text-zion-slate-light mb-6 leading-relaxed">
-                  {dept.description}
-                </p>
-                
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-3">Focus Areas:</h4>
-                  <ul className="space-y-2">
-                    {dept.focus.map((area) => (
-                      <li key={area} className="flex items-center text-zion-slate-light">
-                        <Star className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                        {area}
-                      </li>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">;
+            {};
+              <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">;
+                <div className="text-center">;
+                  <div className="w-24 h-24 bg-zion-purple/20 rounded-full mx-auto mb-4 flex items-center justify-center">;
+                    <Award className="w-12 h-12 text-zion-purple" />;
+                  </div>;
+                  <h3 className="text-xl font-bold text-white mb-2">{advisor.name}</h3>;
+                  <p className="text-zion-purple font-semibold mb-3">{advisor.title}</p>;
+                  <p className="text-zion-slate-light text-sm mb-4">{advisor.bio}</p>;
+
+                  <div className="flex flex-wrap gap-2 justify-center">;
+                    {};
+                      <span key={skillIndex} className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">;
+                        {skill}
+                      </span>;
                     ))}
                   </ul>
                 </div>
@@ -357,4 +279,48 @@ const TeamPage = () => {
   );
 };
 
-export default TeamPage;
+            <div className="text-center">;
+              <div className="w-16 h-16 bg-zion-cyan/20 rounded-full mx-auto mb-4 flex items-center justify-center">;
+                <Users className="w-8 h-8 text-zion-cyan" />;
+              </div>;
+              <h3 className="text-xl font-semibold text-white mb-3">Collaboration</h3>;
+              <p className="text-zion-slate-light text-sm">;
+                We believe in the power of diverse perspectives and collaborative problem-solving.;
+              </p>;
+            </div>;
+
+            <div className="text-center">;
+              <div className="w-16 h-16 bg-zion-cyan/20 rounded-full mx-auto mb-4 flex items-center justify-center">;
+                <Rocket className="w-8 h-8 text-zion-cyan" />;
+              </div>;
+              <h3 className="text-xl font-semibold text-white mb-3">Excellence</h3>;
+              <p className="text-zion-slate-light text-sm">;
+                We strive for excellence in everything we do, from code quality to customer experience.;
+              </p>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+
+      {/* Join Our Team Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20">;
+        <div className="container mx-auto max-w-4xl text-center">;
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
+            Join Our Growing Team;
+          </h2>;
+          <p className="text-lg text-zion-slate-light mb-8">;
+            We're always looking for talented individuals who are passionate about technology and innovation. ;
+            Explore our current opportunities and become part of our mission to transform the future.;
+          </p>;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+            <a href="/careers" className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105">;
+              View Open Positions;
+            </a>;
+            <a href="/contact" className="px-8 py-4 border border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple hover:text-white transition-all duration-300">;
+              Contact Us;
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  )}

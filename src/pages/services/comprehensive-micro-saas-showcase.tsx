@@ -1,73 +1,39 @@
-import React, { useState } from "react";
-import Link from "next/link";
-import { 
-  Brain, 
-  Check, 
-  ExternalLink, 
-  Phone, 
-  Mail, 
-  ArrowRight, 
-  Target, 
-  Zap, 
-  Shield, 
-  FileText, 
-  BarChart3, 
-  Star, 
-  Award, 
-  Users, 
-  Globe, 
-  MapPin,
-  Search,
-  Filter,
-  TrendingUp,
-  Clock,
-  DollarSign,
-  Eye,
-  ThumbsUp
-} from "lucide-react";
-import { REAL_MICRO_SAAS_SERVICES_2025 } from "../../data/realMicroSaasServices2025";
+import React from 'react';
+import Link from 'next/link';
+import {};
+} from 'lucide-react';
+import { REAL_MICRO_SAAS_SERVICES_2025 } from '../../data/realMicroSaasServices2025';
+;
+const ComprehensiveMicroSaasShowcase: React.FC = () => {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+}
+  ];
 
-export default function ComprehensiveMicroSaasShowcase() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [sortBy, setSortBy] = useState("rating");
+  const featuredServices = REAL_MICRO_SAAS_SERVICES_2025.filter(service => service.featured).slice(0, 6);
 
-  // Get unique categories
-  const categories = ["All", ...Array.from(new Set(REAL_MICRO_SAAS_SERVICES_2025.map(service => service.category)))];
-
-  // Filter and sort services
-  const filteredServices = REAL_MICRO_SAAS_SERVICES_2025
-    .filter(service => {
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === "All" || service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    })
-    .sort((a, b) => {
-      switch (sortBy) {
-        case "rating":
-          return b.rating - a.rating;
-        case "price":
-          return a.price - b.price;
-        case "aiScore":
-          return b.aiScore - a.aiScore;
-        case "reviewCount":
-          return b.reviewCount - a.reviewCount;
-        default:
-          return 0;
-      }
-    });
-
-  const stats = {
-    totalServices: REAL_MICRO_SAAS_SERVICES_2025.length,
-    averageRating: (REAL_MICRO_SAAS_SERVICES_2025.reduce((sum, service) => sum + service.rating, 0) / REAL_MICRO_SAAS_SERVICES_2025.length).toFixed(1),
-    totalReviews: REAL_MICRO_SAAS_SERVICES_2025.reduce((sum, service) => sum + service.reviewCount, 0),
-    averagePrice: Math.round(REAL_MICRO_SAAS_SERVICES_2025.reduce((sum, service) => sum + service.price, 0) / REAL_MICRO_SAAS_SERVICES_2025.length)
-  };
-
-  return (
-    <div className="min-h-screen bg-white">
+  return (;
+    <div className="min-h-screen bg-white">;
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 py-20 text-center">
         <div className="max-w-6xl mx-auto px-6">
@@ -206,7 +172,11 @@ export default function ComprehensiveMicroSaasShowcase() {
                       Featured
                     </div>
                   )}
-                </div>
+                </div>;
+              )})}
+          </div>;
+        </div>;
+      </section>;
 
                 {/* Description */}
                 <p className="text-gray-600 text-sm mb-4 line-clamp-3">{service.description}</p>
@@ -286,34 +256,32 @@ export default function ComprehensiveMicroSaasShowcase() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-indigo-600">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-          <p className="text-indigo-100 text-xl mb-8">
-            Get started with our AI-powered solutions today. Contact us for a personalized consultation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="px-8 py-3 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
-            >
-              Get Started <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-            <a 
-              href="tel:+13024640950" 
-              className="px-8 py-3 border border-white text-white rounded-lg hover:bg-white/10 transition-colors inline-flex items-center justify-center"
-            >
-              Call Now <Phone className="w-4 h-4 ml-2" />
-            </a>
-            <a 
-              href="mailto:kleber@ziontechgroup.com" 
-              className="px-8 py-3 border border-white text-white rounded-lg hover:bg-white/10 transition-colors inline-flex items-center justify-center"
-            >
-              Email Us <Mail className="w-4 h-4 ml-2" />
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}
+      <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">;
+        <div className="max-w-4xl mx-auto px-6 text-center">;
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">;
+            Ready to Transform Your Business?;
+          </h2>;
+          <p className="text-xl text-indigo-100 mb-8">;
+            Join hundreds of companies already using our AI solutions to drive growth and innovation;
+          </p>;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+            <div>Broken JSX</div>
+              className="px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center">;
+              <Phone className="w-5 h-5 mr-2" />;
+              Call +1 302 464 0950;
+            </Link>;
+            <div>Broken JSX</div>
+              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-flex items-center">;
+              <Mail className="w-5 h-5 mr-2" />;
+              Email Us;
+            </Link>;
+          </div>;
+          <div className="mt-8 text-indigo-200">;
+            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>;
+            <p>🌐 <Link href="https://ziontechgroup.com" className="hover:text-white">ziontechgroup.com</Link></p>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  )}
+export default ComprehensiveMicroSaasShowcase;

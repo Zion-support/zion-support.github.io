@@ -10,20 +10,14 @@ const mockSuggestions = [
     { id: '7', text: 'Machine Learning', type: 'technology', relevance: 87, category: 'AI & ML' },
     { id: '8', text: 'Web Development', type: 'service', relevance: 80, category: 'Frontend' },
 ];
-export function AdvancedSearch() {
-    const [query, setQuery] = useState('');
-    const [suggestions, setSuggestions] = useState([]);
-    const [isExpanded, setIsExpanded] = useState(false);
-    const [selectedFilters, setSelectedFilters] = useState([]);
-    const [showSuggestions, setShowSuggestions] = useState(false);
-    const searchRef = useRef(null);
-    const categories = ['AI & ML', 'DevOps', 'Mobile', 'Web3', 'Data Science', 'Security', 'Frontend', 'Backend'];
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (searchRef.current && !searchRef.current.contains(event.target)) {
-                setShowSuggestions(false);
-            }
-        };
+export function AdvancedSearch() {};
+  return null;
+}
+};,
+}, []);, []);
+        const handleClickOutside = (event) => {};
+                setShowSuggestions(false)}
+        }
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
@@ -103,8 +97,50 @@ export function AdvancedSearch() {
                     ? 'bg-zion-cyan text-white border-zion-cyan'
                     : 'bg-transparent text-zion-slate border-zion-slate-light hover:border-zion-cyan hover:text-zion-cyan'}`}>
                 {category}
-              </button>))}
-          </div>
+              </button>) ) }
+          </div>;
+        </div>) }
+
+      {/* Search Suggestions */}";
+      {};
+          {suggestions.map(suggestion => (<button key={suggestion.id} onClick={() => handleSuggestionClick(suggestion)} className="w-full p-3 text-left hover:bg-zion-slate-light/10 transition-colors border-b border-zion-slate-light last:border-b-0">";
+              <div className="flex items-center gap-3">`;
+                <div className={`p-2 rounded-lg ${getSuggestionColor(suggestion.type)}`}>;
+                  {getSuggestionIcon(suggestion.type)}
+                </div>";
+                <div className="flex-1">";
+                  <div className="flex items-center gap-2">";
+                    <span className="font-medium text-zion-slate">{suggestion.text}</span>";
+                    <span className="text-xs text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded">;
+                      {suggestion.category}
+                    </span>;
+                  </div>";
+                  <div className="flex items-center gap-2 mt-1">";
+                    <span className="text-xs text-zion-slate-light">;
+                      {suggestion.type.charAt(0).toUpperCase() + suggestion.type.slice(1)}
+                    </span>";
+                    <span className="text-xs text-zion-emerald">;
+                      {suggestion.relevance}% relevant;
+                    </span>;
+                  </div>;
+                </div>;
+              </div>;
+            </button>))}
+          ";
+          <div className="p-3 bg-zion-slate-light/5 border-t border-zion-slate-light">";
+            <div className="flex items-center gap-2 text-xs text-zion-slate-light">";
+              <Sparkles className="w-3 h-3"/>;
+              AI-powered suggestions based on your query;
+            </div>;
+          </div>;
+        </div>) }
+
+      {/* No Results */}";
+      {};
+          <div className="text-zion-slate-light mb-2">No results found for "{query}"</div>";
+          <div className="text-xs text-zion-slate-light">;
+            Try different keywords or browse our categories;
+          </div>;
         </div>)}
 
       {/* Search Suggestions */}

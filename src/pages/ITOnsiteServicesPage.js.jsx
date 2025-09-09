@@ -88,10 +88,19 @@ export default function ITOnsiteServicesPage() {
               </p>
             </div>
 
-            <ITServicePricingTable       />
-          </div>
+          <EnterpriseCallToAction />;
+        </div>;
+      </section>;
+        ,;
+            <GlobalServiceSection />;
+                ,;
+                    <TrustedBySection />;
+                        ,;
+                            <QuoteFormSection />)}
 
-          <EnterpriseCallToAction       />
-        </div>
-      </section>) , (<GlobalServiceSection       />) , (<TrustedBySection       />) , (<QuoteFormSection       />) ) ;
-}
+
+export { ITOnsiteServicesPage }
+export { ITOnsiteServicesPage }
+export { ITOnsiteServicesPage }
+export { ITOnsiteServicesPage }
+export { ITOnsiteServicesPage }

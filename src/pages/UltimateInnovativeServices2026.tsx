@@ -1,136 +1,51 @@
-import { Link } from 'react - router - dom';
-import React, { useState, useEffect } from 'react';
-import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data / ultimateInnovativeServices2026";
-import SEO from "@/components / SEO";
-export default React.memo (function UltimateInnovativeServices2026 (...args[]) :  {;
-import {;
-import { motion, AnimatePresence } from 'framer - motion';
-;
-;
-  Brain,;
-  Cloud,;
-  Shield,;
-  Server,;
-  Zap,;
-  Globe,;
-  Cpu,;
-  Database,;
-  Network,;
-  Lock,;
-  Code,;
-  Rocket,;
-  Users,;
-  Search,;
-  Filter,;
-  Star,;
-  TrendingUp,;
-  DollarSign,;
-  Clock,;
-  CheckCircle,;
-  ArrowRight,;
-  Play,;
-  BookOpen,;
-  MessageCircle,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Globe as GlobeIcon,;
-  Atom,;
-  Blockchain,;
-  Heart,;
-  Scale,;
-  Factory,;
-  Satellite,;
-  ShoppingCart,;
-  Building,;
-  Truck,;
-  Eye,;
-  EyeOff,;
-  ExternalLink,;
-  Award,;
-  Target,;
-  Lightbulb,;
-  Sparkles,;
-  Zap as ZapIcon,;
-  Brain as BrainIcon,;
-  Dna,;
-  Space,;
-  Layers,;
-  Monitor,;
-  Smartphone,;
-  Globe2,;
-  Leaf;
-} from 'lucide - react';
-;
-  const [searchQuery, setSearchQuery] = useState ('') ;
-  const [selectedCategory, setSelectedCategory] = useState ('all') ;
-  const [selectedPriceRange, setSelectedPriceRange] = useState ('all') ;
-  const [sortBy, setSortBy] = useState ('featured') ;
-  const [expandedService, setExpandedService] = useState < any> (null) ;
-;
-  const categories = [;
-    { id: 'all', name: 'All Services', icon: Zap, color: 'from - zion - cyan to - zion - blue' },;
-    { id: 'quantum - ai', name: 'Quantum AI', icon: Atom, color: 'from - zion - purple to - zion - cyan' },;
-    { id: 'neuromorphic - ai', name: 'Neuromorphic AI', icon: BrainIcon, color: 'from - zion - pink to - zion - purple' },;
-    { id: 'synthetic - biology', name: 'Synthetic Biology', icon: Dna, color: 'from - zion - green to - zion - blue' },;
-    { id: 'space - technology', name: 'Space Technology', icon: Space, color: 'from - zion - blue to - zion - purple' },;
-    { id: 'advanced - materials', name: 'Advanced Materials', icon: Layers, color: 'from - zion - orange to - zion - red' },;
-    { id: 'brain - computer - interface', name: 'Brain - Computer Interface', icon: Monitor, color: 'from - zion - purple to - zion - pink' },;
-    { id: 'digital - twin', name: 'Digital Twin', icon: Globe2, color: 'from - zion - cyan to - zion - green' },;
-    { id: 'extended - reality', name: 'Extended Reality', icon: Smartphone, color: 'from - zion - orange to - zion - purple' },;
-    { id: 'edge - ai', name: 'Edge AI', icon: Cpu, color: 'from - zion - green to - zion - cyan' },;
-    { id: 'federated - learning', name: 'Federated Learning', icon: Network, color: 'from - zion - purple to - zion - blue' },;
-    { id: 'sustainable - technology', name: 'Sustainable Technology', icon: Leaf, color: 'from - zion - green to - zion - blue' };
+import React from 'react';
+export {};
+  const [searchQuery, setSearchQuery] = useState('');';
+  const [selectedCategory, setSelectedCategory] = useState('all');';
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');';
+  const [sortBy, setSortBy] = useState('featured');
+  const [expandedService, setExpandedService] = useState<any>(null);';
+'';
+  ''';
+    { id: 'brain-computer-interface', name: 'Brain-Computer Interface', icon: Monitor, color: 'from-zion-purple to-zion-pink' },;''';
+    { id: 'digital-twin', name: 'Digital Twin', icon: Globe2, color: 'from-zion-cyan to-zion-green' },;''';
+    { id: 'extended-reality', name: 'Extended Reality', icon: Smartphone, color: 'from-zion-orange to-zion-purple' },;''';
+    { id: 'edge-ai', name: 'Edge AI', icon: Cpu, color: 'from-zion-green to-zion-cyan' },;''';
+    { id: 'federated-learning', name: 'Federated Learning', icon: Network, color: 'from-zion-purple to-zion-blue' },;''';
+    { id: 'sustainable-technology', name: 'Sustainable Technology', icon: Leaf, color: 'from-zion-green to-zion-blue' }
   ];
-;
-  const priceRanges = [;
-    { id: 'all', name: 'All Prices', range: 'All' },;
-    { id: 'under - 10k', name: 'Under $10K', range: 'Under $10,000' },;
-    { id: '10k - 20k', name: '$10K - $20K', range: '$10,000 - $20,000' },;
-    { id: 'over - 20k', name: 'Over $20K', range: 'Over $20,000' };
+
+  ';
+    { id: 'all', name: 'All Prices', range: 'All' },;';
+    { id: 'under-10k', name: 'Under $10K', range: 'Under $10,000' },;';
+    { id: '10k-20k', name: '$10K - $20K', range: '$10,000 - $20,000' },;';
+    { id: 'over-20k', name: 'Over $20K', range: 'Over $20,000' }
   ];
-;
-  const sortOptions = [;
-    { id: 'featured', name: 'Featured' },;
-    { id: 'price - low', name: 'Price: Low to High' },;
-    { id: 'price - high', name: 'Price: High to Low' },;
-    { id: 'innovation', name: 'Innovation Level' },;
-    { id: 'roi', name: 'ROI Potential' };
+';
+  const sortOptions: unknown = [;'';
+    { id: 'featured', name: 'Featured' },;'';
+    { id: 'price-low', name: 'Price: Low to High' },;'';
+    { id: 'price-high', name: 'Price: High to Low' },;'';
+    { id: 'innovation', name: 'Innovation Level' },;'    { id: 'roi', name: 'ROI Potential' }
   ];
-;
-        return 0};
+
+        return 0}
   }) ;
-;
-  const toggleServiceExpansion = (serviceId: string) => {;
-    setExpandedService (expandedService === serviceId ? null : serviceId) ;
-  };
-;
-  return (<div role="button" className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light">;
-      <SEO;
-        title="Ultimate Innovative Services 2026 | Zion Tech Group";
-        description="Discover our revolutionary micro SAAS services including Quantum AI, Neuromorphic Computing, Synthetic Biology, Space Technology, and more cutting - edge solutions.";
-        keywords="quantum AI, neuromorphic computing, synthetic biology, space technology, brain - computer interface, digital twin, extended reality, edge AI, federated learning, sustainable technology";
-            />;
-;
-      {/* Hero Section */};
-      <section className="relative overflow - hidden bg - gradient - to - r from - zion - cyan via - zion - blue to - zion - purple py - 20">;
-        <div role="button" className="absolute inset - 0 bg - black / 20"></div>;
-        <div role="button" className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
-          <motion.div;
-            initial = {;
-  { opacity: 0,;
-  y: 20 ;
-;
-}};
-            animate = {;
-  { opacity: 1,;
-  y: 0 ;
-;
-}};
-            transition={{ duration: 0.8 }};
-;
-            <h1 className="text - 5xl md:text - 7xl font - bold text - white mb - 6">;
-              Ultimate Innovative Services < span className="block text - 6xl md:text - 8xl bg - gradient - to - r from - yellow - 400 to - orange - 500 bg - clip - text text - transparent">;
+
+    setExpandedService (expandedService === serviceId ? null : serviceId) }
+  return ("";
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">";
+      <div>Broken JSX</div>
+       />;
+";
+      {/* Hero Section */}"";
+      <section className="relative overflow-hidden bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple py-20">"";
+        <div className="absolute inset-0 bg-black/20"></div>"";
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
+          <div>Broken JSX</div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">";
+              Ultimate Innovative Services"";
+              <span className="block text-6xl md:text-8xl bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">;
                 2026;
               </span>;
             </h1>;
@@ -212,20 +127,21 @@ import { motion, AnimatePresence } from 'framer - motion';
               </select>;
             </div>;
           </div>;
-;
-          {/* Sort Options */};
-          <div role="button" className="mt - 6 flex flex - wrap items - center gap - 4">;
-            <span className="text - zion - slate - 300">Sort by: any</span>;
-            {sortOptions.map (option  => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={option.id};
-                onClick={ () => setSortBy (option.id) };
-                className={`px - 4 py - 2 rounded - lg transition - all duration - 200 ${;
-                  sortBy === option.id;
-                    ? 'bg - zion - cyan text - white';
-                    : 'bg - white / 10 text - zion - slate - 300 hover:bg - white / 20';
-                }`};
-;
-                {option.name};
-              </button>) ) };
+
+          {/* Sort Options */}
+          <div className="mt-6 flex flex-wrap items-center gap-4">;
+            <span className="text-zion-slate-300">Sort by: unknown</span>            {};
+                onClick={() => setSortBy(option.id)}
+                className={`px-4 py-2 rounded-lg transition-all duration-200 ${}
+';
+'';
+'''`;
+                  sortBy === option.id'''`'`;
+                    ? 'bg-zion-cyan text-white'''`'`'`;
+                    : 'bg-white/10 text-zion-slate-300 hover:bg-white/20'````}`}
+
+                {option.name}
+              </button>) ) }
           </div>;
         </div>;
       </section>;
@@ -244,44 +160,21 @@ import { motion, AnimatePresence } from 'framer - motion';
 ;
           <div role="button" className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 8">;
             <AnimatePresence>;
-              {sortedServices.map ( (service, index) => (<motion.div;
-                  key={service.id};
-                  initial = {;
-  { opacity: 0,;
-  y: 20 ;
-;
-}};
-                  animate = {;
-  { opacity: 1,;
-  y: 0 ;
-;
-}};
-                  exit = {;
-  { opacity: 0,;
-  y: -20 ;
-;
-}};
-                  transition = {;
-  { duration: 0.5,;
-  delay: index * 0.1 ;
-;
-}};
-                  className="group relative";
-;
-                  <div role="button" className="relative bg - white / 5 backdrop - blur - sm border border - zion - slate - 300 / 20 rounded - 2xl p - 6 h - full transition - all duration - 300 hover:bg - white / 10 hover:border - zion - cyan / 50 hover:shadow - 2xl hover:shadow - zion - cyan / 20">;
-                    {/* Service Header */};
-                    <div role="button" className="flex items - start justify - between mb - 4">;
-                      <div role="button" className={`p - 3 rounded - xl bg - gradient - to - r ${getCategoryColor (service.category.toLowerCase () ) }`}>;
-                        {React.createElement (getCategoryIcon (service.category.toLowerCase () ) , {;
-                          className: "w - 6 h - 6 text - white";
-                        }) };
-                      </div>;
-                      <div role="button" className="text - right">;
-                        <div role="button" className="text - 2xl font - bold text - zion - cyan">;
-                          ${service.price.toLocaleString () };
-                        </div>;
-                        <div role="button" className="text - sm text - zion - slate - 400">;
-                          {service.pricingModel};
+              {};
+                    {/* Service Header */}""`;
+                    <div className="flex items-start justify-between mb-4">``;
+                      <div className={`p-3 rounded-xl bg-gradient-to-r ${getCategoryColor(service.category.toLowerCase())}`}>;
+                        {React.createElement(getCategoryIcon(service.category.toLowerCase()), {}
+";
+"";
+                          className: "w-6 h-6 text-white"})}";
+                      </div>"";
+                      <div className="text-right">"";
+                        <div className="text-2xl font-bold text-zion-cyan">;
+                          ${service.price.toLocaleString()}";
+                        </div>"";
+                        <div className="text-sm text-zion-slate-400">;
+                          {service.pricingModel}
                         </div>;
                       </div>;
                     </div>;
@@ -476,5 +369,12 @@ import { motion, AnimatePresence } from 'framer - motion';
           </motion.div>;
         </div>;
       </section>;
-    </div>;) ;
-};
+    </div>;
+  )}
+
+
+export { UltimateInnovativeServices2026 }
+export { UltimateInnovativeServices2026 }
+export { UltimateInnovativeServices2026 }
+export { UltimateInnovativeServices2026 }
+export { UltimateInnovativeServices2026 }
