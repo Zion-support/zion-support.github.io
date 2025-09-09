@@ -1,6 +1,7 @@
-// Re-export from the SSR client to maintain backward compatibility
-export { supabase, createClient } from '@/utils/supabase/client';
-import { logWarn, logDev } from '@/utils/productionLogger';
+import { createClient } from '@supabase/supabase-js';
+import { supabaseStorageAdapter } from './safeStorageAdapter';
+// Mock Supabase client for development
+// In production, this would be the actual Supabase client
 
 const supabaseUrl =
   process.env.NEXT_PUBLIC_SUPABASE_URL;

@@ -1,5 +1,3 @@
-import React, { memo, useState } from 'react';
-import { Link } from 'react-router-dom';
 
 interface BlogPost {
   id: string;
@@ -73,59 +71,9 @@ const BlogCard: React.FC<{ post: BlogPost }> = memo(({ post }) => (
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
         </svg>
       </div>
-    </div>
-    
-    <div className="space-y-3">
-      <div className="flex items-center gap-2 text-sm text-blue-300">
-        <span className="px-2 py-1 bg-blue-500/20 rounded-full text-xs">
-          {post.category}
-        </span>
-        <span>•</span>
-        <span>{post.readTime}</span>
-      </div>
-      
-      <h3 className="text-xl font-semibold text-white group-hover:text-blue-300 transition-colors">
-        <Link to={`/blog/${post.id}`} className="hover:underline">
-          {post.title}
-        </Link>
-      </h3>
-      
-      <p className="text-blue-200 line-clamp-3">
-        {post.excerpt}
-      </p>
-      
-      <div className="flex items-center justify-between pt-4">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-sm font-semibold">
-            {post.author.split(' ').map(n => n[0]).join('')}
-          </div>
-          <div>
-            <p className="text-white text-sm font-medium">{post.author}</p>
-            <p className="text-blue-300 text-xs">{new Date(post.date).toLocaleDateString()}</p>
-          </div>
-        </div>
-        
-        <Link 
-          to={`/blog/${post.id}`}
-          className="text-blue-400 hover:text-blue-300 font-medium text-sm group-hover:underline"
-        >
-          Read More →
-        </Link>
-      </div>
-      
-      <div className="flex flex-wrap gap-2 pt-2">
-        {post.tags.map((tag, index) => (
-          <span 
-            key={index}
-            className="px-2 py-1 bg-white/10 rounded-full text-xs text-white/70"
-          >
-            #{tag}
-          </span>
-        ))}
-      </div>
-    </div>
-  </article>
-));
+    </>
+  );
+}
 
 BlogCard.displayName = 'BlogCard';
 
@@ -135,118 +83,259 @@ const Blog: React.FC = memo(() => {
 
   const categories = ['All', ...Array.from(new Set(mockBlogPosts.map(post => post.category)))];
 
-  const filteredPosts = mockBlogPosts.filter(post => {
-    const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
-    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+  const blogPosts = [
+export default function Blog() {
+  const [posts, setPosts] = useState<BlogPost[]>([
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
+    {
+      id: 1,
+      title: 'The Future of AI: Autonomous Business Operations in 2025',
+      excerpt: 'Explore how autonomous AI systems are revolutionizing business operations and what this means for the future of work.',
+      category: 'ai',
+      author: 'Dr. Sarah Chen',
+      date: '2025-01-15',
+      readTime: '8 min read',
+      views: '2.4k',
+      tags: ['AI', 'Automation', 'Business', 'Future'],
+      featured: true,
+      image: '/api/placeholder/400/250'
+    },
+    {
+      id: 2,
+      title: 'Quantum Computing: Breaking Down the Barriers to Enterprise Adoption',
+      excerpt: 'Understanding the practical applications of quantum computing and how businesses can start preparing for the quantum revolution.',
+      category: 'quantum',
+      author: 'Dr. James Kim',
+      date: '2025-01-12',
+      readTime: '12 min read',
+      views: '1.8k',
+      tags: ['Quantum Computing', 'Enterprise', 'Technology', 'Innovation'],
+      featured: false,
+      image: '/api/placeholder/400/250'
+    },
+    {
+      id: 3,
+      title: 'Zero-Trust Security: The New Standard for Enterprise Protection',
+      excerpt: 'Why zero-trust security architecture is becoming essential for modern enterprises and how to implement it effectively.',
+      category: 'cybersecurity',
+      author: 'Michael Rodriguez',
+      date: '2025-01-10',
+      readTime: '10 min read',
+      views: '3.1k',
+      tags: ['Cybersecurity', 'Zero-Trust', 'Enterprise', 'Security'],
+      featured: false,
+      image: '/api/placeholder/400/250'
+    },
+    {
+      id: 4,
+      title: 'DevOps Transformation: From Theory to Practice',
+      excerpt: 'Real-world strategies for implementing DevOps practices and achieving faster, more reliable software delivery.',
+      category: 'cloud',
+      author: 'Emily Watson',
+      date: '2025-01-08',
+      readTime: '15 min read',
+      views: '2.7k',
+      tags: ['DevOps', 'Cloud', 'Automation', 'Software Development'],
+      featured: false,
+      image: '/api/placeholder/400/250'
+    },
+    {
+      id: 5,
+      title: 'AI-Powered Decision Making: Transforming Business Intelligence',
+      excerpt: 'How artificial intelligence is enhancing business intelligence and enabling data-driven decision making at scale.',
+      category: 'ai',
+      author: 'Dr. Sarah Chen',
+      date: '2025-01-05',
+      readTime: '9 min read',
+      views: '1.9k',
+      tags: ['AI', 'Business Intelligence', 'Data', 'Decision Making'],
+      featured: false,
+      image: '/api/placeholder/400/250'
+    },
+    {
+      id: 6,
+      title: 'The Rise of Edge Computing: Bringing Intelligence Closer to Data',
+      excerpt: 'Exploring the benefits of edge computing and how it\'s reshaping the future of IoT and real-time applications.',
+      category: 'cloud',
+      author: 'David Chen',
+      date: '2025-01-03',
+      readTime: '11 min read',
+      views: '1.6k',
+      tags: ['Edge Computing', 'IoT', 'Cloud', 'Real-time'],
+      featured: false,
+      image: '/api/placeholder/400/250'
+    },
+    {
+      id: 7,
+      title: 'Blockchain in Enterprise: Beyond Cryptocurrency',
+      excerpt: 'Practical applications of blockchain technology in enterprise environments and real-world use cases.',
+      category: 'business',
+      author: 'Alex Thompson',
+      date: '2025-01-01',
+      readTime: '13 min read',
+      views: '2.2k',
+      tags: ['Blockchain', 'Enterprise', 'Innovation', 'Technology'],
+      featured: false,
+      image: '/api/placeholder/400/250'
+    },
+    {
+      id: 8,
+      title: 'Machine Learning in Healthcare: Improving Patient Outcomes',
+      excerpt: 'How machine learning is transforming healthcare delivery and improving patient care and outcomes.',
+      category: 'ai',
+      author: 'Dr. Lisa Park',
+      date: '2024-12-28',
+      readTime: '14 min read',
+      views: '3.5k',
+      tags: ['AI', 'Healthcare', 'Machine Learning', 'Patient Care'],
+      featured: false,
+      image: '/api/placeholder/400/250'
+    }
+  ];
+
+  const featuredPost = blogPosts.find(post => post.featured);
+  const regularPosts = blogPosts.filter(post => !post.featured);
+
+  const filteredPosts = selectedCategory === 'all' 
+    ? regularPosts 
+    : regularPosts.filter(post => post.category === selectedCategory);
+
+  const searchFilteredPosts = filteredPosts.filter(post =>
+    post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+  );
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+  };
+
+  const recentArticles = [
+    {
+      id: 4,
+      title: "Building Autonomous Business Operations: A Step-by-Step Guide",
+      excerpt: "Transform your business processes with AI-powered automation. Learn the key steps to implement autonomous operations that can reduce costs by 40% and improve efficiency by 60%.",
+      author: "David Kim",
+      authorAvatar: "DK",
+      publishDate: "2025-01-08",
+      readTime: "15 min read",
+      category: "ai",
+      tags: ["AI", "Automation", "Business Operations", "Digital Transformation"],
+      image: "/api/placeholder/400/250",
+      views: "5.8k",
+      likes: 312
+    },
+    {
+      id: 5,
+      title: "Quantum Neural Networks: The Next Frontier in AI",
+      excerpt: "Dive deep into quantum neural networks and discover how they're solving complex problems in cryptography, optimization, and scientific research that classical computers cannot handle.",
+      author: "Dr. Elena Petrov",
+      authorAvatar: "EP",
+      publishDate: "2025-01-06",
+      readTime: "18 min read",
+      category: "quantum",
+      tags: ["Quantum Computing", "Neural Networks", "AI", "Research"],
+      image: "/api/placeholder/400/250",
+      views: "4.6k",
+      likes: 289
+    },
+    {
+      id: 6,
+      title: "Micro SAAS Solutions: Scaling Your Business with Custom Software",
+      excerpt: "Discover how micro SAAS solutions can help small and medium businesses compete with enterprise-level technology while maintaining flexibility and cost-effectiveness.",
+      author: "Alex Johnson",
+      authorAvatar: "AJ",
+      publishDate: "2025-01-04",
+      readTime: "11 min read",
+      category: "industry",
+      tags: ["SAAS", "Business", "Software", "Scaling"],
+      image: "/api/placeholder/400/250",
+      views: "3.9k",
+      likes: 201
+    },
+    {
+      id: 7,
+      title: "Edge Computing in IoT: Reducing Latency for Real-Time Applications",
+      excerpt: "Learn how edge computing is revolutionizing IoT applications by bringing computation closer to data sources, enabling real-time decision making in autonomous vehicles and smart cities.",
+      author: "Rachel Green",
+      authorAvatar: "RG",
+      publishDate: "2025-01-02",
+      readTime: "9 min read",
+      category: "infrastructure",
+      tags: ["Edge Computing", "IoT", "Real-Time", "Infrastructure"],
+      image: "/api/placeholder/400/250",
+      views: "3.2k",
+      likes: 178
+    },
+    {
+      id: 8,
+      title: "AI-Powered IT Asset Management: Maximizing ROI on Technology Investments",
+      excerpt: "Discover how AI can transform your IT asset management, from predictive maintenance to cost optimization, helping you get more value from your technology investments.",
+      author: "Carlos Mendez",
+      authorAvatar: "CM",
+      publishDate: "2024-12-30",
+      readTime: "13 min read",
+      category: "ai",
+      tags: ["AI", "IT Management", "Asset Management", "ROI"],
+      image: "/api/placeholder/400/250",
+      views: "2.8k",
+      likes: 156
+    },
+    {
+      id: 9,
+      title: "The Rise of Quantum-Safe Cryptography: Preparing for the Future",
+      excerpt: "As quantum computers become more powerful, traditional encryption methods are at risk. Learn about quantum-safe cryptography and how to future-proof your security infrastructure.",
+      author: "Dr. James Wilson",
+      authorAvatar: "JW",
+      publishDate: "2024-12-28",
+      readTime: "16 min read",
+      category: "cybersecurity",
+      tags: ["Quantum", "Cryptography", "Security", "Future-Proofing"],
+      image: "/api/placeholder/400/250",
+      views: "2.5k",
+      likes: 134
+    }
+  ];
+
+  const allArticles = [...featuredArticles, ...recentArticles];
+
+  const filteredArticles = allArticles.filter(article => {
+    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
+    const matchesSearch = 
+      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Blog</span>
-          </h1>
-          <p className="text-xl text-blue-200 max-w-3xl mx-auto mb-8">
-            Stay updated with the latest insights, trends, and best practices in AI, technology, and business innovation.
-          </p>
-          
-          {/* Search and Filter */}
-          <div className="max-w-2xl mx-auto space-y-4">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search articles..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 pl-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <svg className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
-            
-            <div className="flex flex-wrap gap-2 justify-center">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                    selectedCategory === category
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white/10 text-blue-300 hover:bg-white/20'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+  const sortedArticles = filteredArticles.sort((a, b) => {
+    switch (sortBy) {
+      case 'latest':
+        return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
+      case 'popular':
+        return b.views.localeCompare(a.views, undefined, { numeric: true });
+      case 'trending':
+        return b.likes - a.likes;
+      default:
+        return 0;
+    }
+  });
 
-      {/* Blog Posts Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          {filteredPosts.length > 0 ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
-                <BlogCard key={post.id} post={post} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-16">
-              <div className="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-12 h-12 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.29-1.009-5.824-2.709M15 6.291A7.962 7.962 0 0012 9c-2.34 0-4.29-1.009-5.824-2.709" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-semibold text-white mb-4">No articles found</h3>
-              <p className="text-blue-200 mb-6">Try adjusting your search or filter criteria.</p>
-              <button
-                onClick={() => {
-                  setSearchQuery('');
-                  setSelectedCategory('All');
-                }}
-                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
-              >
-                Clear Filters
-              </button>
-            </div>
-          )}
-        </div>
-      </section>
+>>>>>>> origin/cursor/website-audit-and-enhancement-2bc0
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+  };
 
-      {/* Newsletter Signup */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Stay Updated
-          </h2>
-          <p className="text-blue-200 mb-8">
-            Get the latest articles and insights delivered to your inbox.
-          </p>
-          
-          <div className="max-w-md mx-auto flex gap-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-            <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-colors whitespace-nowrap">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-});
-
-Blog.displayName = 'Blog';
-
-export default Blog;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-48a5
+}
+>>>>>>> origin/cursor/build-and-fix-errors-e276

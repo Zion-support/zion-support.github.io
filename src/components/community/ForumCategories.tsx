@@ -1,14 +1,5 @@
-import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { useAuth } from "@/hooks/useAuth";
-import {
-  MessageSquare,
-  Briefcase,
-  Code,
-  FileText,
-  Megaphone
-} from "lucide-react";
-import { ForumCategory, ForumCategoryInfo } from "@/types/community";
+import React from 'react';
+import { ForumCategoryInfo } from '@/types/community';
 
 const categories: ForumCategoryInfo[] = [
   {
@@ -48,49 +39,44 @@ const categories: ForumCategoryInfo[] = [
   }
 ];
 
-const iconMap = {
-  Briefcase,
-  MessageSquare,
-  Code,
-  FileText,
-  Megaphone
-};
-
-export const ForumCategories = () => {
-  console.log('ForumCategories rendering');
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-
-  const visibleCategories = categories.filter(
-    category => !category.adminOnly || isAdmin
-  );
-
-  console.log('ForumCategories visibleCategories:', visibleCategories);
   return (
-    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-      <h2>DEBUG: Forum Categories Section</h2>
-      {visibleCategories.map((category) => {
-        const Icon = iconMap[category.icon as keyof typeof iconMap];
-        return (
-          <Link key={category.id} href={`/community/category/${category.id}`} passHref>
-            <a className="block h-full"> {/* Make the anchor a block element and take full height */}
-              <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
-                <CardHeader className="flex flex-row items-center gap-4">
-                  <div className="p-2 bg-zion-purple/10 rounded-full">
-                    <Icon className="h-6 w-6 text-zion-purple" />
-                  </div>
-                  <CardTitle className="text-xl">{category.name}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">{category.description}</CardDescription>
-                </CardContent>
-              </Card>
-            </a>
-          </Link>
-        );
-      })}
+    <div className="space-y-4">
+      {categories.map((category) => (
+        <div key={category.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+          <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>
+          <p className="text-zion-slate-light mb-2">{category.description}</p>
+          <div className="flex justify-between text-sm text-zion-slate-light">
+            <span>{category.postCount} posts</span>
+            {category.lastPost && (
+              <span>Last: {category.lastPost.title} by {category.lastPost.author}</span>
+            )}
+
+interface ForumCategoriesProps {
+  categories: Array<{
+    id: string;
+    name: string;
+    description: string;
+    postCount: number;
+  }>;
+}
+
+const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) => {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {categories.map((category) => (
+        <div key={category.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+          <h3 className="text-xl font-semibold text-white mb-2">{category.name}</h3>
+          <p className="text-zion-slate-light mb-4">{category.description}</p>
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-zion-slate-light">
+              {category.postCount} posts
+            </span>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
 
 export default ForumCategories;
+}

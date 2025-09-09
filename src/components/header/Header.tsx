@@ -10,7 +10,11 @@ import { useWhitelabel } from '@/context/WhitelabelContext';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Sparkles } from "lucide-react";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
+import { Menu, X, Search as SearchIcon, Sparkles } from "lucide-react";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
 
 export interface HeaderProps {
   hideLogin?: boolean;
@@ -29,6 +33,9 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   const { isWhitelabel, primaryColor } = useWhitelabel();
   const navigate = useNavigate();
   const [query, setQuery] = useState("");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
   const searchSuggestions = generateSearchSuggestions();
   
   // If we have a white-label tenant and no specific customTheme is provided,
@@ -55,16 +62,29 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   
   return (
     <header 
-      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-xl shadow-2xl shadow-zion-purple/10"
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-purple-dark/95 to-zion-slate-dark/95 backdrop-blur-md shadow-lg shadow-zion-purple/10"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-slate-dark/95 to-zion-blue-dark/95 backdrop-blur-xl shadow-2xl shadow-zion-purple/10"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md neon-pulse"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5db4
       style={headerStyle}
     >
       <div className="container flex h-16 items-center px-4 sm:px-6">
         <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
 
-        <div className="ml-6 flex-1">
+        {/* Desktop Navigation */}
+
+        {/* Search Bar */}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
+        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
+        <div className="ml-6 flex-1 hidden md:block">
           <MainNavigation />
         </div>
-        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
+
+        {/* Desktop Search */}
+        <form onSubmit={handleSubmit} className="hidden lg:block w-64 mx-4">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
@@ -75,13 +95,263 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
             searchSuggestions={searchSuggestions}
           />
         </form>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5241
 
-        <div className="flex items-center gap-2">
+      </div>
+      
+      {/* Animated Header Border */}
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"></div>
+        {/* Desktop Actions */}
+        <div className="hidden lg:flex items-center gap-3">
+          <Button 
+            asChild 
+            variant="outline" 
+            className="border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300"
+          >
+            <Link to="/pricing">
+              <Sparkles className="h-4 w-4 mr-2" />
+              Pricing
+            </Link>
+          </Button>
+        {/* Desktop Actions */}
+        <div className="flex items-center gap-2 hidden md:flex">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
           <LanguageSelector />
           <ModeToggle />
           {!hideLogin && <UserMenu />}
         </div>
+
+        {/* Mobile Menu */}
+        <MobileMenu className="md:hidden" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
       </div>
+    <>
+      <header 
+        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+          isScrolled 
+            ? 'bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20' 
+            : 'bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20'
+        }`}
+        style={headerStyle}
+      >
+        <div className="container flex h-16 items-center px-4 sm:px-6">
+          <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
+
+          {/* Desktop Navigation */}
+          <div className="ml-6 flex-1 hidden lg:block">
+            <MainNavigation />
+          </div>
+
+          {/* Search Bar */}
+          <form onSubmit={handleSubmit} className="hidden md:block w-80 mx-6">
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <EnhancedSearchInput
+                value={query}
+                onChange={setQuery}
+                onSelectSuggestion={(text) => {
+                  navigate(`/search?q=${encodeURIComponent(text)}`);
+                  setQuery("");
+                }}
+                searchSuggestions={searchSuggestions}
+              />
+              <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                <SearchIcon className="h-4 w-4 text-zion-slate-light" />
+              </div>
+            </div>
+          </form>
+
+          {/* Right Side Actions */}
+          <div className="flex items-center gap-3">
+            {/* AI Assistant Button */}
+            <button className="hidden sm:flex items-center gap-2 px-3 py-2 rounded-lg bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 text-zion-cyan hover:from-zion-purple/30 hover:to-zion-cyan/30 transition-all duration-300 group">
+              <Sparkles className="h-4 w-4 group-hover:animate-pulse" />
+              <span className="text-sm font-medium">AI Assistant</span>
+            </button>
+
+            <LanguageSelector />
+            {!hideLogin && <UserMenu />}
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={toggleMobileMenu}
+              className="lg:hidden p-2 rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 transition-colors"
+            >
+              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Search Bar */}
+        <div className="lg:hidden px-4 pb-4">
+          <form onSubmit={handleSubmit}>
+            <div className="relative">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
+              <EnhancedSearchInput
+                value={query}
+                onChange={setQuery}
+                onSelectSuggestion={(text) => {
+                  navigate(`/search?q=${encodeURIComponent(text)}`);
+                  setQuery("");
+                }}
+                searchSuggestions={searchSuggestions}
+                placeholder="Search services, talent, equipment..."
+              />
+              <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                <SearchIcon className="h-4 w-4 text-zion-slate-light" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </header>
+
+      {/* Mobile Navigation Menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden fixed inset-0 z-40 bg-zion-blue-dark/95 backdrop-blur-xl">
+          <div className="flex flex-col h-full">
+            <div className="flex justify-between items-center p-4 border-b border-zion-purple/30">
+              <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
+              <button
+                onClick={toggleMobileMenu}
+                className="p-2 rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+            
+            <nav className="flex-1 p-4">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    to="/"
+                    onClick={toggleMobileMenu}
+                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/services"
+                    onClick={toggleMobileMenu}
+                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
+                  >
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/talent"
+                    onClick={toggleMobileMenu}
+                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
+                  >
+                    Talent
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/equipment"
+                    onClick={toggleMobileMenu}
+                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
+                  >
+                    Equipment
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/community"
+                    onClick={toggleMobileMenu}
+                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
+                  >
+                    Community
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/ai-content-generator"
+                    onClick={toggleMobileMenu}
+                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
+                  >
+                    AI Content Generator
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/cybersecurity-suite"
+                    onClick={toggleMobileMenu}
+                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
+                  >
+                    Cybersecurity Suite
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/cloud-optimizer"
+                    onClick={toggleMobileMenu}
+                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
+                  >
+                    Cloud Cost Optimizer
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
+                  </Link>
+                </li>
+                {user && (
+                  <li>
+                    <Link
+                      to="/dashboard"
+                      onClick={toggleMobileMenu}
+                      className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
+                    >
+                      Dashboard
+                    </Link>
+                  </li>
+                )}
+              </ul>
+            </nav>
+
+            <div className="p-4 border-t border-zion-purple/30">
+              <div className="flex flex-col gap-3">
+                <button className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-medium hover:from-zion-purple-light hover:to-zion-cyan-light transition-all duration-300">
+                  <Sparkles className="h-4 w-4" />
+                  AI Assistant
+                </button>
+                {!user && (
+                  <div className="flex gap-2">
+                    <Link
+                      to="/login"
+                      onClick={toggleMobileMenu}
+                      className="flex-1 px-4 py-2 text-center rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 transition-colors"
+                    >
+                      Login
+                    </Link>
+                    <Link
+                      to="/signup"
+                      onClick={toggleMobileMenu}
+                      className="flex-1 px-4 py-2 text-center rounded-lg bg-zion-purple text-white hover:bg-zion-purple-dark transition-colors"
+                    >
+                      Sign Up
+                    </Link>
+                  </div>
+                )}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      
+      {/* Neon glow effect */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
     </header>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5241
+    </>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
   );
 }

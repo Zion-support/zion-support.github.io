@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
@@ -198,51 +198,12 @@ const navigationItems: NavigationItem[] = [
   }
 ];
 
-// Enhanced social links
-const socialLinks = [
-  {
-    name: 'LinkedIn',
-    href: 'https://linkedin.com/company/zion-tech-group',
-    icon: <Linkedin className="w-5 h-5" />,
-    description: 'Follow us on LinkedIn'
-  },
-  {
-    name: 'Twitter',
-    href: 'https://twitter.com/ziontechgroup',
-    icon: <Twitter className="w-5 h-5" />,
-    description: 'Follow us on Twitter'
-  },
-  {
-    name: 'GitHub',
-    href: 'https://github.com/Zion-Holdings',
-    icon: <Github className="w-5 h-5" />,
-    description: 'View our open source projects'
-  },
-  {
-    name: 'YouTube',
-    href: 'https://youtube.com/@ziontechgroup',
-    icon: <Youtube className="w-5 h-5" />,
-    description: 'Watch our videos'
-  }
-];
+=======
+interface EnhancedNavigationProps {
+  className?: string;
+}
 
-// Performance-optimized animations
-const navigationAnimations = {
-  slideDown: {
-    initial: { opacity: 0, y: -20 },
-    animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -20 },
-    transition: { duration: 0.2, ease: "easeOut" }
-  },
-  fadeIn: {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    exit: { opacity: 0 },
-    transition: { duration: 0.15 }
-  }
-};
-
-const EnhancedNavigation: React.FC = () => {
+const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -270,27 +231,47 @@ const EnhancedNavigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on route change
-  useEffect(() => {
-    setIsOpen(false);
-    setActiveDropdown(null);
-  }, [router.asPath]);
+  const navigationItems = [
+    {
+      name: 'Services',
+      href: '/services',
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'AI & Machine Learning', href: '/services?category=ai-ml' },
+        { name: 'Quantum Computing', href: '/services?category=quantum' },
+        { name: 'Space Technology', href: '/services?category=space' },
+        { name: 'Biotech & Healthcare', href: '/services?category=biotech' },
+        { name: 'Financial Services', href: '/services?category=finance' },
+        { name: 'Cybersecurity', href: '/services?category=security' },
+        { name: 'Edge Computing', href: '/services?category=edge' },
+        { name: 'Blockchain', href: '/services?category=blockchain' },
+        { name: 'View All Services', href: '/services' }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'Enterprise Solutions', href: '/solutions?type=enterprise' },
+        { name: 'Startup Solutions', href: '/solutions?type=startup' },
+        { name: 'Government Solutions', href: '/solutions?type=government' },
+        { name: 'Healthcare Solutions', href: '/solutions?type=healthcare' },
+        { name: 'Financial Solutions', href: '/solutions?type=financial' }
+      ]
+    },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Resources', href: '/resources' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' }
+  ];
 
-  // Handle search focus
-  useEffect(() => {
-    if (isSearchOpen && searchRef.current) {
-      searchRef.current.focus();
-    }
-  }, [isSearchOpen]);
-
-  // Close dropdowns when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-              const target = event.target as any;
-      if (!target.closest('.navigation-dropdown')) {
-        closeDropdown();
-      }
-    };
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
@@ -334,31 +315,33 @@ const EnhancedNavigation: React.FC = () => {
   };
 
   return (
-    <nav 
-      ref={navRef}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-black/95 backdrop-blur-md border-b border-white/10' 
-          : 'bg-transparent'
-      }`}
-      role="navigation"
-      aria-label="Main navigation"
-    >
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-black/80 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' 
+        : 'bg-transparent'
+    } ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link 
-              href="/" 
-              className="flex items-center space-x-2 group"
-              aria-label="Zion Tech Group - Return to homepage"
-            >
-              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                <Zap className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex items-center space-x-3"
+          >
+            <Link href="/" className="flex items-center space-x-3 group">
+              <div className="relative">
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
               </div>
-              <span className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent">
-                Zion Tech Group
-              </span>
+              <div className="hidden sm:block">
+                <div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                  Zion Tech Group
+                </div>
+                <div className="text-xs text-cyan-400">Revolutionary Technology</div>
+              </div>
             </Link>
           </div>
 
@@ -460,21 +443,31 @@ const EnhancedNavigation: React.FC = () => {
               className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:ring-offset-2 focus:ring-offset-black"
               aria-label="Contact us"
             >
-              Get Started
-            </Link>
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+              >
+                Get Started
+              </Link>
+              <Link
+                href="/pricing"
+                className="px-4 py-2 text-sm font-medium text-gray-300 border border-gray-600 rounded-lg hover:text-white hover:border-gray-500 transition-colors duration-200"
+              >
+                Pricing
+              </Link>
+            </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
-            <button
-              onClick={toggleMenu}
-              className="p-2 text-white hover:text-cyan-400 transition-colors duration-200 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:ring-offset-2 focus:ring-offset-black"
-              aria-expanded={isOpen}
-              aria-label="Toggle mobile menu"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
+          <motion.button
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </motion.button>
         </div>
       </div>
 
@@ -520,12 +513,17 @@ const EnhancedNavigation: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            {...getAnimationProps('slideDown')}
-            className="lg:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-b border-white/20"
+            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20"
           >
             <div className="px-4 py-6 space-y-4">
-              {/* Mobile Search */}
-              <form onSubmit={handleSearch} className="relative">
+              {/* Search */}
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
                   value={searchQuery}
@@ -534,10 +532,56 @@ const EnhancedNavigation: React.FC = () => {
                   className="w-full px-4 py-3 text-white bg-white/10 border border-white/20 rounded-xl placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
                   aria-label="Search query"
                 />
-                <button
-                  type="submit"
-                  className="absolute right-2 top-2 p-2 text-cyan-400"
-                  aria-label="Submit search"
+              </div>
+
+              {/* Navigation Items */}
+              {navigationItems.map((item) => (
+                <div key={item.name} className="space-y-2">
+                  <Link
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                  >
+                    {item.name}
+                  </Link>
+                  
+                  {item.hasDropdown && item.dropdownItems && (
+                    <div className="ml-4 space-y-1">
+                      {item.dropdownItems.map((dropdownItem) => (
+                        <Link
+                          key={dropdownItem.name}
+                          href={dropdownItem.href}
+                          onClick={() => setIsOpen(false)}
+                          className="block text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1 text-sm"
+                        >
+                          {dropdownItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+
+              {/* Contact Info */}
+              <div className="pt-4 border-t border-cyan-500/20">
+                <div className="space-y-2 text-sm text-gray-400">
+                  <div className="flex items-center space-x-2">
+                    <Globe className="w-4 h-4" />
+                    <span>{contactInfo.website}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <User className="w-4 h-4" />
+                    <span>{contactInfo.email}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mobile CTA */}
+              <div className="pt-4">
+                <Link
+                  href="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300"
                 >
                   <Search className="w-5 h-5" />
                 </button>

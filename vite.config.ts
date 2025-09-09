@@ -1,16 +1,4 @@
-// Optimized Vite configuration for better performance and development experience
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
-import { fileURLToPath } from 'url'
-
-// Ensure __dirname is available in ESM
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-
-// Environment detection
-const isDev = process.env.NODE_ENV === 'development'
-const isProd = process.env.NODE_ENV === 'production'
-const isCI = process.env.CI === 'true' || process.env.NETLIFY === 'true'
+import path from 'node:path'
 
 export default defineConfig({
   base: '/',
@@ -24,24 +12,82 @@ export default defineConfig({
       include: ['**/*.tsx', '**/*.ts', '**/*.jsx', '**/*.js'],
     }),
   ],
-
-  // Optimized resolve configuration
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-      // Next.js compatibility stubs
-      'next/router': path.resolve(__dirname, './src/stubs/next-router.ts'),
-      'next/link': path.resolve(__dirname, './src/stubs/next-link.ts'),
-      'next/image': path.resolve(__dirname, './src/stubs/next-image.ts'),
-      'next/head': path.resolve(__dirname, './src/stubs/next-head.ts'),
-      'next-cloudinary': path.resolve(__dirname, './src/stubs/next-cloudinary.ts'),
-      '@supabase/ssr': path.resolve(__dirname, './src/stubs/supabase-ssr.ts'),
-      // External library stubs
-      '@datadog/browser-logs': path.resolve(__dirname, './src/utils/datadog-logs-shim.ts'),
-      'logrocket': path.resolve(__dirname, './src/utils/logrocket-shim.ts'),
+      '@': path.resolve(__dirname, './src')
+    }
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7bd2
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { VitePWA } from 'vite-plugin-pwa';
+import { resolve } from 'path';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    react(),
+    VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
+      manifest: {
+        name: 'Zion Tech Group - Revolutionary Technology Solutions',
+        short_name: 'Zion Tech',
+        description: 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.',
+        theme_color: '#06b6d4',
+        background_color: '#0f172a',
+        display: 'standalone',
+        orientation: 'portrait-primary',
+        scope: '/',
+        start_url: '/',
+        icons: [
+          {
+            src: 'icon-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+            purpose: 'maskable any'
+          },
+          {
+            src: 'icon-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable any'
+          }
+        ],
+        shortcuts: [
+          {
+            name: 'Services',
+            short_name: 'Services',
+            description: 'Explore our revolutionary technology services',
+            url: '/services'
+          },
+          {
+            name: 'Contact',
+            short_name: 'Contact',
+            description: 'Get in touch with our team',
+            url: '/contact'
+          },
+          {
+            name: 'About',
+            short_name: 'About',
+            description: 'Learn about Zion Tech Group',
+            url: '/about'
+          }
+        ]
+      }
+    })
+  ],
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-dfe9
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, './src'),
+      '@components': resolve(__dirname, './src/components'),
+      '@pages': resolve(__dirname, './src/pages'),
+      '@utils': resolve(__dirname, './src/utils'),
+      '@hooks': resolve(__dirname, './src/hooks'),
+      '@types': resolve(__dirname, './src/types'),
+      '@styles': resolve(__dirname, './src/styles'),
+      '@assets': resolve(__dirname, './src/assets'),
     },
-    // Optimize dependency resolution
-    dedupe: ['react', 'react-dom'],
   },
 
   // Enhanced build configuration
@@ -53,143 +99,7 @@ export default defineConfig({
     
     // Optimize chunk splitting
     rollupOptions: {
-      input: {
-        main: './index.html'
-      },
-      output: {
-        // Optimize chunk naming for better caching
-        chunkFileNames: isProd ? 'assets/[name]-[hash].js' : 'assets/[name].js',
-        entryFileNames: isProd ? 'assets/[name]-[hash].js' : 'assets/[name].js',
-        assetFileNames: isProd ? 'assets/[name]-[hash].[ext]' : 'assets/[name].[ext]',
-        
-        // Manual chunk splitting for better performance
-        manualChunks: isProd ? (id) => {
-          // Core React libraries
-          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
-            return 'react-vendor';
-          }
-          
-          // React Router
-          if (id.includes('node_modules/react-router')) {
-            return 'router-vendor';
-          }
-          
-          // Animation and motion libraries
-          'animation-vendor': ['framer-motion'],
-          
-          // Animation libraries
-          if (id.includes('framer-motion') || id.includes('lottie')) {
-            return 'animation-vendor';
-          }
-          
-          // Form libraries
-          if (id.includes('react-hook-form') || id.includes('react-query')) {
-            return 'form-vendor';
-          }
-          
-          // Utility libraries
-          if (id.includes('axios') || id.includes('date-fns') || id.includes('lodash') || id.includes('fuse.js')) {
-            return 'utils-vendor';
-          }
-          
-          // Query libraries
-          if (id.includes('@tanstack/react-query') || id.includes('react-query')) {
-            return 'query-vendor';
-          }
-          
-          // Other node_modules
-          if (id.includes('node_modules')) {
-            return 'vendor';
-          }
-        } : undefined,
-      },
-      
-      // Suppress warnings for better build experience
-      onwarn(warning, warn) {
-        // Suppress known warnings
-        if (warning.code === 'UNRESOLVED_IMPORT') return
-        if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return
-        if (warning.message.includes('Circular dependency')) return
-        warn(warning)
-      },
-    },
-    
-    // Optimize module preloading
-    modulePreload: {
-      polyfill: true,
-      resolveDependencies: (filename, deps) => {
-        // Only preload critical dependencies
-        return deps.filter(dep => {
-          return dep.includes('index-') || 
-                 dep.includes('react-core-') ||
-                 dep.includes('main-');
-        });
-      }
-    },
-    
-    // Asset optimization
-    assetsInlineLimit: 2048,
-    chunkSizeWarningLimit: 1000,
-    sourcemap: false,
-  },
-  optimizeDeps: {
-    include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-      '@radix-ui/react-accordion',
-      '@radix-ui/react-alert-dialog',
-      '@radix-ui/react-aspect-ratio',
-      '@radix-ui/react-avatar',
-      '@radix-ui/react-checkbox',
-      '@radix-ui/react-context-menu',
-      '@radix-ui/react-dialog',
-      '@radix-ui/react-dropdown-menu',
-      '@radix-ui/react-label',
-      '@radix-ui/react-popover',
-      '@radix-ui/react-progress',
-      '@radix-ui/react-radio-group',
-      '@radix-ui/react-scroll-area',
-      '@radix-ui/react-select',
-      '@radix-ui/react-separator',
-      '@radix-ui/react-slider',
-      '@radix-ui/react-slot',
-      '@radix-ui/react-switch',
-      '@radix-ui/react-tabs',
-      '@radix-ui/react-toast',
-      '@radix-ui/react-tooltip',
-      'framer-motion',
-      'react-hook-form',
-      '@hookform/resolvers',
-      'zod',
-      '@reduxjs/toolkit',
-      'react-redux',
-      'recharts',
-      '@hello-pangea/dnd',
-      'i18next',
-      'i18next-browser-languagedetector',
-      'react-i18next',
-      'input-otp',
-      'react-day-picker',
-      'date-fns',
-      'axios',
-      'clsx',
-      'tailwind-merge',
-      'class-variance-authority',
-      'cmdk',
-      'lucide-react',
-      'react-icons',
-      'jspdf',
-      'jspdf-autotable',
-      '@stripe/stripe-js',
-      '@supabase/supabase-js',
-      '@tanstack/react-query',
-    ],
-  },
-
-  // Enhanced server configuration
-  server: {
-    port: 5174,
-    // allowedHosts: ['devserver-preview--ziontechgroup.netlify.app'],
-  },
-});
+      external: ['lucide-react']
+    }
+  }
+})

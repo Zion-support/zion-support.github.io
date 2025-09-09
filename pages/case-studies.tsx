@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useState } from 'react';
+import Navigation from '../components/layout/Navigation';
+import Footer from '../components/Footer';
 
 export default function CaseStudiesPage() {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -149,6 +152,8 @@ export default function CaseStudiesPage() {
   const filteredCaseStudies = activeFilter === 'All' 
     ? caseStudies 
     : caseStudies.filter(study => study.industry === activeFilter);
+
+  const featuredCaseStudies = caseStudies.filter(study => study.featured);
 
   return (
     <>

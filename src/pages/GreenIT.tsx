@@ -1,4 +1,8 @@
 
+import { AppLayout } from "@/layout/AppLayout";
+import React from 'react';
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/Button";
@@ -22,6 +26,32 @@ export default function GreenIT() {
       icon: Cloud,
     },
     {
+      title: "Sustainable Software Development",
+      description: "Eco-friendly software practices that optimize performance and reduce resource consumption.",
+      benefits: ["Efficient Algorithms", "Reduced Server Load", "Sustainable Coding", "Performance Optimization"]
+    },
+    {
+      title: "Green Data Management",
+      description: "Sustainable data storage and management solutions that minimize environmental impact.",
+      benefits: ["Efficient Storage", "Data Deduplication", "Green Backup Solutions", "Sustainable Archives"]
+import React from 'react';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Leaf, Zap, Recycle, Globe, TrendingUp, Shield, Lightbulb, Users } from 'lucide-react';
+
+export default function GreenIT() {
+  const greenSolutions = [
+    {
+      icon: <Leaf className="w-8 h-8 text-green-400" />,
+      title: "Sustainable Data Centers",
+      description: "Energy-efficient data centers powered by renewable energy sources with advanced cooling systems and waste heat recovery.",
+      benefits: ["Reduced carbon footprint", "Lower energy costs", "Improved efficiency"]
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-yellow-400" />,
       title: "Renewable Energy Integration",
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
       icon: Leaf,
@@ -34,8 +64,41 @@ export default function GreenIT() {
         title="Green IT Solutions - Sustainable Technology"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
-        canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
+        canonical="https://ziontechgroup.com/green-it"
+        canonical="https://ziontechgroup.com/marketplace/category/green-it"
+        canonical="https://ziontechgroup.com/green-it"
+        canonical="https://ziontechgroup.com/green-it"
+        canonical="https://ziontechgroup.com/marketplace/category/green-it"
+        canonical="https://ziontechgroup.com/marketplace/category/green-it"
       />
+      <AppHeader />
+      <main className="min-h-screen bg-background pt-16 pb-20">
+        canonical="https://ziontechgroup.com/marketplace/category/green-it"
+      />
+      <AppHeader />
+      <main className="min-h-screen bg-background pt-16 pb-20">
+        canonical="https://ziontechgroup.com/marketplace/category/green-it"
+      />
+      <AppHeader />
+      <main className="min-h-screen bg-background pt-16 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Green
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                {" "}IT
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Sustainable technology solutions that reduce environmental impact while 
+              maintaining high performance and business value
+      <SEO 
+        title="Green IT Solutions - Zion Tech Group" 
+        description="Transform your IT operations with sustainable, eco-friendly solutions. Reduce carbon footprint and costs while improving efficiency." 
+        keywords="green IT, sustainable technology, eco-friendly IT, carbon neutral, renewable energy, e-waste management"
+        canonical="https://ziontechgroup.com/green-it"
+      />
+      
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -63,6 +126,30 @@ export default function GreenIT() {
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                       Explore Green IT Solutions
                     </Button>
+
+          {/* Why Green IT */}
+          <section className="mb-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-6">Why Choose Green IT?</h2>
+                <p className="text-zion-slate-light text-lg mb-6">
+                  The technology sector is responsible for a significant portion of global carbon emissions. 
+                  By adopting green IT practices, organizations can reduce their environmental impact while 
+                  improving operational efficiency and reducing costs.
+                </p>
+                <p className="text-zion-slate-light text-lg mb-6">
+                  Our comprehensive green IT solutions help businesses transition to sustainable technology 
+                  practices, from energy-efficient infrastructure to renewable energy integration and 
+                  responsible e-waste management.
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
+                    <div className="text-2xl font-bold text-green-400">40%</div>
+                    <div className="text-zion-slate-light text-sm">Average Energy Savings</div>
+                  </div>
+                  <div className="text-center p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
+                    <div className="text-2xl font-bold text-blue-400">60%</div>
+                    <div className="text-zion-slate-light text-sm">Carbon Reduction</div>
                   </div>
                 </div>
                 <div className="rounded-lg overflow-hidden relative w-full h-full">
@@ -130,6 +217,7 @@ export default function GreenIT() {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

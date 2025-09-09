@@ -1,14 +1,5 @@
 import React from 'react';
-import { formatDistanceToNow } from "date-fns";
-import Link from "next/link";
-import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { ForumPost } from "@/types/community";
-import { ProfileBadge } from "@/components/profile/ProfileBadge";
+import { ForumPost } from '@/types/community';
 
 interface PostCardProps {
   post: ForumPost;
@@ -60,6 +51,30 @@ const PostCard: React.FC = () => {
               </Badge>
             ))}
           </div>
+
+interface PostCardProps {
+  post: {
+    id: string;
+    title: string;
+    content: string;
+    authorName: string;
+    createdAt: string;
+    likes: number;
+    replies: number;
+  };
+}
+
+const PostCard: React.FC<PostCardProps> = ({ post }) => {
+  return (
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4">
+      <h3 className="text-xl font-semibold text-white mb-2">{post.title}</h3>
+      <p className="text-zion-slate-light mb-4 line-clamp-3">{post.content}</p>
+      <div className="flex justify-between items-center text-sm text-zion-slate-light">
+        <span>By {post.authorName}</span>
+        <span>{new Date(post.createdAt).toLocaleDateString()}</span>
+        <div className="flex items-center space-x-4">
+          <span>{post.likes} likes</span>
+          <span>{post.replies} replies</span>
         </div>
       </CardHeader>
 
@@ -98,3 +113,4 @@ const PostCard: React.FC = () => {
 };
 
 export default PostCard;
+}

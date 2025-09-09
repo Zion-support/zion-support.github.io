@@ -1,94 +1,26 @@
 
 import React from 'react';
-import QuoteRequestForm from "@/components/QuoteRequestForm";
-import { SEO } from "@/components/SEO";
-import { MainNavigation } from "@/layout/MainNavigation";
-import { Footer } from "@/components/Footer";
-
-export default function RequestQuote() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    serviceType: '',
-    projectDescription: '',
-    timeline: '',
-    budget: '',
-    additionalRequirements: ''
-  });
-
-  const [selectedServices, setSelectedServices] = useState<string[]>([]);
-
-  const serviceCategories = [
-    {
-      name: 'AI & Machine Learning',
-      services: ['AI Development', 'Machine Learning Models', 'Data Analytics', 'Chatbot Development', 'Computer Vision']
-    },
-    {
-      name: 'Cybersecurity',
-      services: ['Security Audits', 'Penetration Testing', 'Security Infrastructure', 'Compliance Consulting', 'Incident Response']
-    },
-    {
-      name: 'IT Services',
-      services: ['Network Setup', 'Cloud Migration', 'System Administration', 'IT Consulting', 'Hardware Installation']
-    },
-    {
-      name: 'Green IT',
-      services: ['Energy Audits', 'Sustainable Infrastructure', 'Green Computing', 'Carbon Footprint Analysis', 'Eco-friendly Solutions']
-    }
-  ];
-
-  const timelineOptions = [
-    { value: 'asap', label: 'ASAP (Within 1 week)', icon: <Clock className="h-4 w-4" /> },
-    { value: '1-2-weeks', label: '1-2 weeks', icon: <Clock className="h-4 w-4" /> },
-    { value: '1-month', label: '1 month', icon: <Clock className="h-4 w-4" /> },
-    { value: '2-3-months', label: '2-3 months', icon: <Clock className="h-4 w-4" /> },
-    { value: '3+months', label: '3+ months', icon: <Clock className="h-4 w-4" /> }
-  ];
-
-  const budgetOptions = [
-    { value: 'under-5k', label: 'Under $5,000', icon: <DollarSign className="h-4 w-4" /> },
-    { value: '5k-15k', label: '$5,000 - $15,000', icon: <DollarSign className="h-4 w-4" /> },
-    { value: '15k-50k', label: '$15,000 - $50,000', icon: <DollarSign className="h-4 w-4" /> },
-    { value: '50k-100k', label: '$50,000 - $100,000', icon: <DollarSign className="h-4 w-4" /> },
-    { value: '100k+', label: '$100,000+', icon: <DollarSign className="h-4 w-4" /> }
-  ];
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleServiceToggle = (service: string) => {
-    setSelectedServices(prev => 
-      prev.includes(service) 
-        ? prev.filter(s => s !== service)
-        : [...prev, service]
-    );
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', { ...formData, selectedServices });
-    // You would typically send this to your backend
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-      {/* Header */}
-      <div className="pt-24 pb-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Request a Quote
-          </h1>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Get personalized quotes from our network of AI and tech professionals. Tell us about your project and we'll connect you with the right experts.
-          </p>
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="Request Quote - Zion Tech Group" 
+        description="Get a custom quote for your AI and tech project needs from Zion Tech Group."
+        keywords="quote, pricing, AI services, tech services, project quote, Zion Tech Group"
+        canonical="https://ziontechgroup.com/request-quote"
+      />
+      
+      <AppHeader />
+      
+      <main className="pt-16 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Request a Custom Quote
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Tell us about your project and we'll connect you with the perfect talent and services for your needs
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b
+            </p>
+          </div>
           
           {/* Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -111,7 +43,12 @@ export default function RequestQuote() {
             </div>
           </div>
         </div>
-      </div>
+import { SEO } from "@/components/SEO";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { QuoteRequestForm } from "@/components/QuoteRequestForm";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { CheckCircle, Clock, Users, Zap } from "lucide-react";
 
       {/* Quote Form */}
       <div className="py-16">
@@ -311,7 +248,44 @@ export default function RequestQuote() {
             </div>
           </div>
         </div>
-      </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-aa85
+      </main>
+      
+      <Footer />
     </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+
+export default function RequestQuote() {
+  return (
+    <>
+      <SEO 
+        title="Request a Quote - Zion Tech Group"
+        description="Get a customized quote for your IT services, AI solutions, or tech projects. Our team will provide you with a detailed estimate tailored to your needs."
+        keywords="request quote, IT services quote, AI solutions quote, tech project estimate, custom pricing"
+        canonical="https://ziontechgroup.com/request-quote"
+      />
+      <Header />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Request a Custom Quote
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Get a personalized estimate for your IT services, AI solutions, or tech projects. 
+              Our team will analyze your requirements and provide you with a detailed quote.
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <QuoteRequestForm />
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
   );
 }

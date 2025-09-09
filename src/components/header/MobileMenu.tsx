@@ -1,11 +1,20 @@
 
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/Button";
-import { useTranslation } from "react-i18next";
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import Menu from 'lucide-react/dist/esm/icons/menu';
+import X from 'lucide-react/dist/esm/icons/x';
+import Search from 'lucide-react/dist/esm/icons/search';
+import User from 'lucide-react/dist/esm/icons/user';
+import MessageSquare from 'lucide-react/dist/esm/icons/message-square';
+import Home from 'lucide-react/dist/esm/icons/home';
+import Store from 'lucide-react/dist/esm/icons/store';
+import Users from 'lucide-react/dist/esm/icons/users';
+import Settings from 'lucide-react/dist/esm/icons/settings';
+import { useAuth } from '@/hooks/useAuth';
+import { useTranslation } from 'react-i18next';
+import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
 
 export interface MobileMenuProps {
   unreadCount?: number;
@@ -18,47 +27,16 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
   const isAuthenticated = !!user;
   const { t } = useTranslation();
 
-  const baseItems = [
-    {
-      key: 'home',
-      href: '/',
-      icon: Home,
-      matches: (path: string) => path === '/'
-    },
-    {
-      key: 'explore',
-      href: '/talent',
-      icon: Search,
-      matches: (path: string) => path.startsWith('/talent') || path.startsWith('/categories') || path.startsWith('/marketplace')
-    },
-    {
-      key: 'community',
-      href: '/community',
-      icon: MessageCircle,
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
-    },
-    {
-      key: 'post_job',
-      href: '/post-job',
-      icon: BriefcaseIcon,
-      matches: (path: string) => path.startsWith('/post-job'),
-      authRequired: true
-    },
-    {
-      key: 'messages',
-      href: '/messages',
-      icon: MessageSquare,
-      matches: (path: string) => path.startsWith('/messages') || path.startsWith('/inbox'),
-      badge: unreadCount,
-      authRequired: true
-    },
-    {
-      key: 'dashboard',
-      href: '/dashboard',
-      icon: User,
-      matches: (path: string) => path.startsWith('/dashboard'),
-      authRequired: true
-    }
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  const navigationItems = [
+    { href: '/', label: t('nav.home'), icon: Home, matches: (path: string) => path === '/' },
+    { href: '/marketplace', label: t('nav.marketplace'), icon: Store, matches: (path: string) => path.startsWith('/marketplace') },
+    { href: '/talent', label: t('nav.talent'), icon: Users, matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard') },
+    { href: '/categories', label: t('nav.categories'), icon: Store, matches: (path: string) => path.startsWith('/categories') },
+    { href: '/equipment', label: t('nav.equipment'), icon: Store, matches: (path: string) => path.startsWith('/equipment') },
+    { href: '/community', label: t('nav.community'), icon: Users, matches: (path: string) => path.startsWith('/community') },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
   ];
 
   const navItems = baseItems.map(item => ({
