@@ -120,3 +120,4 @@ core.*
 
 # Git submodules (prevent submodule checkout errors)
 .gitmodules
+core
