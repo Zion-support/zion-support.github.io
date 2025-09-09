@@ -258,6 +258,4 @@ export {
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
-}
-  );
 };

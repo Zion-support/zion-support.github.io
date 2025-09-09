@@ -16,8 +16,8 @@ export interface LoadingSpinnerProps extends BaseComponentProps {
 }
 
 // Feature card props
-export interface FeatureCardProps extends BaseComponentProps {
-  id: string | number;
+export interface FeatureCardProps extends Omit<BaseComponentProps, 'id'> {
+  id: number;
   title: string;
   description: string;
   icon: ReactNode;
@@ -82,7 +82,7 @@ export interface FormProps extends BaseComponentProps {
 }
 
 // Table props
-export interface TableProps<T = any> extends BaseComponentProps {
+export interface TableProps<T = unknown> extends BaseComponentProps {
   data: T[];
   columns: TableColumn<T>[];
   loading?: boolean;
@@ -96,7 +96,7 @@ export interface TableProps<T = any> extends BaseComponentProps {
   };
 }
 
-export interface TableColumn<T = any> {
+export interface TableColumn<T = unknown> {
   key: keyof T | string;
   title: string;
   render?: (value: unknown, row: T) => ReactNode;
@@ -138,5 +138,5 @@ export interface SEOProps {
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product';
-  structuredData?: Record<string, any>;
+  structuredData?: Record<string, unknown>;
 }
