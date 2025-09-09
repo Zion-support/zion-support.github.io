@@ -217,6 +217,7 @@
     "jsonwebtoken": "^9.0.2",
     "msw": "^2.8.7",
     "node-mocks-http": "^1.17.2",
+    "object.fromentries": "^2.0.8",
     "postcss": "^8.4.35",
     "rimraf": "^5.0.5",
     "rollup-plugin-visualizer": "^5.10.1",
