@@ -1,4 +1,4 @@
-import ProductCard from '@/components/ProductCard';
+import { ProductCard } from '@/components/ProductCard';
 import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
 
 export default function ProductsList() {

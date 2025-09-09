@@ -94,8 +94,8 @@ export default function ProfilePage() {
                 {/* Avatar */}
                 <div className="relative mr-4">
                   <Avatar className="w-24 h-24">
-                    {profileData.profile_picture_url ? (
-                      <AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name} />
+                    {profileData.profilePicture ? (
+                      <AvatarImage src={profileData.profilePicture} alt={profileData.full_name} />
                     ) : (
                       <AvatarFallback>{profileData.full_name?.charAt(0)}</AvatarFallback>
                     )}
@@ -234,7 +234,7 @@ export default function ProfilePage() {
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
-                hourly_rate: profileData?.hourly_rate || 0
+                hourlyRate: profileData?.hourlyRate || 0
               }}
             />
             {/* Placeholder for other sidebar elements */}

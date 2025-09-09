@@ -74,14 +74,14 @@ export default function ProductPage() {
       <SEO
         title={product.title}
         description={product.description}
-        ogImage={product.images?.[0]}
+        ogImage={product.image}
       />
       <div className="min-h-screen bg-zion-blue p-6 text-white">
         <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
-        {product.images?.length ? (
+        {product.image ? (
           <div className="mb-4 relative w-full h-64">
             <Image
-              src={product.images[0] || '/placeholder.svg'}
+              src={product.image || '/placeholder.svg'}
               alt={product.title}
               fill
               className="object-cover rounded-md"

@@ -60,20 +60,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         break;
     }
 
-          // Placeholder/default values for other fields potentially expected by UI components
-          // These would ideally come from an expanded Product model or other data sources
-          category: 'Uncategorized', // Default placeholder
-          // Removed direct access to product.images, product.price, product.currency, product.tags
-          // as they are not in the Prisma Product model.
-          // These fields are optional in ProductWithReviewStats or will use defaults if not set.
-          // If these need to be populated, it should be from other data sources or model extensions.
-          images: [], // Default to empty array or define based on other logic if available
-          price: null,  // Default to null or define based on other logic
-          currency: 'USD', // Default currency or define based on other logic
-          tags: [], // Default to empty array or define based on other logic
-        };
-      })
-    );
+    // Apply pagination
+    const startIndex = (page - 1) * limit;
+    const endIndex = startIndex + limit;
+    const items = products.slice(startIndex, endIndex).map(product => ({
+      ...product,
+      // Placeholder/default values for other fields potentially expected by UI components
+      // These would ideally come from an expanded Product model or other data sources
+      category: product.category || 'Uncategorized', // Default placeholder
+      // Removed direct access to product.images, product.price, product.currency, product.tags
+      // as they are not in the Prisma Product model.
+      // These fields are optional in ProductWithReviewStats or will use defaults if not set.
+      // If these need to be populated, it should be from other data sources or model extensions.
+      images: product.images || [], // Default to empty array or define based on other logic if available
+      price: product.price || null,  // Default to null or define based on other logic
+      currency: product.currency || 'USD', // Default currency or define based on other logic
+      tags: product.tags || [], // Default to empty array or define based on other logic
+    }));
 
     logInfo(`[API] /api/products - Found ${products.length} total products, returning ${items.length} for page ${page} (limit: ${limit})`);
     

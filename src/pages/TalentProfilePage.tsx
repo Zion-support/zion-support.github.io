@@ -103,7 +103,7 @@ export default function TalentProfilePage() {
       <SEO
         title={profile.full_name}
         description={profile.bio || 'Talent profile'}
-        ogImage={profile.profile_picture_url}
+        ogImage={profile.profilePicture}
       />
       <div className="min-h-screen bg-zion-blue pb-12">
       <TalentProfile

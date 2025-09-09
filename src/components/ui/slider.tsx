@@ -7,6 +7,7 @@ interface SliderProps {
   step?: number;
   onChange?: (value: number) => void;
   className?: string;
+  defaultValue?: number[];
 }
 
 export const Slider: React.FC<SliderProps> = ({ 
