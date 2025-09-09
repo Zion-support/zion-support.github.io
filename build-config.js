@@ -12,6 +12,6 @@ module.exports = {
     skipPostinstall: true,
     
     // Use specific Node.js version
-    nodeVersion: '20.20.0'
+    nodeVersion: '20.8.0'
   }
 };

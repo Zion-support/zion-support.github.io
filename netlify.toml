@@ -3,7 +3,7 @@
   command = "npm ci && npm run build"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "20.8.0"
   NODE_OPTIONS = "--max-old-space-size=6144"
   # Remove Next.js plugin skip since this is a Vite project
   # NETLIFY_NEXT_PLUGIN_SKIP = "true"
