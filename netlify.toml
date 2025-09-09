@@ -40,11 +40,7 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# SPA fallback - this should be the last redirect rule
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# SPA fallback is defined in public/_redirects to avoid double handling
 
 # Functions
 [functions]
