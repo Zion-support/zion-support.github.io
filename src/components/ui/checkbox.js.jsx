@@ -1,4 +1,7 @@
-import { jsx as _jsx } from "react/jsx-runtime";
-export const Checkbox = ({ checked = false, onChange, className = "" }) => {
-    return (_jsx("input", { type: "checkbox", checked: checked, onChange: (e) => onChange === null || onChange === void 0 ? void 0 : onChange(e.target.checked), className: `w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light rounded focus:ring-zion-cyan focus:ring-2 ${className}` }));
-};
+import React from 'react';
+export function Checkbox({ checked, onChange, label, disabled = false, className = '' }) {
+    return (<label className={`flex items-center space-x-2 cursor-pointer ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}>
+      <input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} disabled={disabled} className="w-4 h-4 text-zion-cyan border-gray-300 rounded focus:ring-zion-cyan focus:ring-2"/>
+      {label && <span className="text-sm text-gray-700">{label}</span>}
+    </label>);
+}

@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { GradientHeading } from "./GradientHeading";
-import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { GradientHeading } from './GradientHeading';
 
 const categories = [
   {
@@ -12,7 +11,7 @@ const categories = [
     icon: <Briefcase className="w-10 h-10" />,
     link: "/comprehensive-services",
     color: "from-purple-500 to-indigo-600",
-    features: ["Micro SAAS Solutions", "IT Infrastructure", "AI Integration", "Cloud Services"]
+    features: ["Micro SAAS Solutions", "IT Services", "AI Integration", "Custom Development"]
   },
   {
     title: "AI Solutions",
@@ -20,7 +19,7 @@ const categories = [
     icon: <Brain className="w-10 h-10" />,
     link: "/ai-solutions",
     color: "from-pink-500 to-rose-600",
-    features: ["Machine Learning", "Computer Vision", "NLP", "Predictive Analytics"]
+    features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
   },
   {
     title: "Talents",
@@ -28,7 +27,7 @@ const categories = [
     icon: <Users className="w-10 h-10" />,
     link: "/talent",
     color: "from-cyan-500 to-blue-600",
-    features: ["AI Experts", "Developers", "Data Scientists", "DevOps Engineers"]
+    features: ["Expert Developers", "AI Specialists", "Tech Consultants", "Project Managers"]
   },
   {
     title: "Equipment",
@@ -36,8 +35,8 @@ const categories = [
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment",
     color: "from-amber-500 to-orange-600",
-    features: ["GPU Servers", "AI Hardware", "Cloud Infrastructure", "Networking"]
-  },
+    features: ["High-Performance Servers", "AI Workstations", "Network Equipment", "Storage Solutions"]
+  }
 ];
 
 const specialServices = [
@@ -134,7 +133,7 @@ const specialServices: SpecialService[] = [
           >
             <GradientHeading className="mb-4">
               Explore Our Service Categories
-            </h2>
+            </GradientHeading>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">
               Discover comprehensive solutions across multiple domains
             </p>
@@ -149,9 +148,16 @@ const specialServices: SpecialService[] = [
           viewport={{ once: true }}
         >
           {categories.map((category, index) => (
-            <motion.div key={category.title} variants={itemVariants}>
+            <motion.div 
+              key={category.title}
+              variants={itemVariants}
+            >
               <Link to={category.link} className="group block h-full">
-                <div className="rounded-2xl overflow-hidden h-full border border-blue-400/30 bg-gradient-to-br from-slate-800/50 to-slate-800 p-8 transition-all duration-500 hover:border-blue-400/60 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-blue-400/20 backdrop-blur-sm">
+                <motion.div 
+                  className="rounded-2xl overflow-hidden h-full border border-blue-400/30 bg-gradient-to-br from-slate-800/50 to-slate-800 p-8 transition-all duration-500 hover:border-blue-400/60 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-blue-400/20 backdrop-blur-sm"
+                  variants={cardVariants}
+                  whileHover={{ scale: 1.02 }}
+                >
                   <div className={`rounded-2xl w-20 h-20 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                     <div className="text-white text-3xl">
                       {category.icon}
@@ -178,11 +184,9 @@ const specialServices: SpecialService[] = [
 
                   <div className="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
                     <span className="text-sm font-medium">Learn More</span>
-                    <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
-                </div>
+                </motion.div>
               </Link>
             </motion.div>
           ))}
@@ -193,7 +197,7 @@ const specialServices: SpecialService[] = [
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
         >
           <h3 className="text-center text-2xl font-bold text-white mb-8">Premium Services</h3>
           <div className="flex flex-wrap justify-center gap-6">
@@ -214,16 +218,14 @@ const specialServices: SpecialService[] = [
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
         >
           <Link 
             to="/services" 
             className="group inline-flex items-center gap-3 text-blue-400 border-b-2 border-blue-400 hover:border-blue-300 transition-colors text-lg font-medium py-2"
           >
             View All Services
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
+            <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </motion.div>
       </div>

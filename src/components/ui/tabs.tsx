@@ -41,7 +41,7 @@ interface TabsListProps {
 
 export function TabsList({ children, className = '' }: TabsListProps) {
   return (
-    <div className={`flex border-b border-zion-cyan/20 ${className}`}>
+    <div className={`flex border-b border-gray-200 ${className}`}>
       {children}
     </div>
   );
@@ -62,10 +62,10 @@ export function TabsTrigger({ children, value, className = '' }: TabsTriggerProp
   return (
     <button
       onClick={() => context.setActiveTab(value)}
-      className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors duration-200 ${
+      className={`px-4 py-2 text-sm font-medium transition-colors duration-200 ${
         isActive
-          ? 'border-zion-cyan text-zion-cyan'
-          : 'border-transparent text-zion-slate-light hover:text-zion-cyan hover:border-zion-cyan/50'
+          ? 'border-b-2 border-zion-cyan text-zion-cyan'
+          : 'text-zion-slate-light hover:text-zion-cyan'
       } ${className}`}
     >
       {children}

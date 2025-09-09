@@ -1,93 +1,83 @@
 import React, { useState } from 'react';
+import { Heart } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { HeartIcon } from '@/components/icons/index';
 
 interface FavoriteButtonProps {
-  isFavorited?: boolean;
-  onToggle?: (isFavorited: boolean) => void;
+  itemId: string;
+  itemType: 'product' | 'talent' | 'equipment' | 'service';
   className?: string;
-  size?: 'sm' | 'md' | 'lg';
-  showCount?: boolean;
-  count?: number;
-  disabled?: boolean;
-  'aria-label'?: string;
+  initialFavorited?: boolean;
+  onToggle?: (favorited: boolean) => void;
 }
 
-export const FavoriteButton: React.FC<FavoriteButtonProps> = ({
-  isFavorited = false,
-  onToggle,
-  className,
-  size = 'md',
-  showCount = false,
-  count = 0,
-  disabled = false,
-  'aria-label': ariaLabel = 'Toggle favorite',
-}) => {
-  const [internalFavorited, setInternalFavorited] = useState(isFavorited);
-  const [internalCount, setInternalCount] = useState(count);
+export function FavoriteButton({ 
+  itemId, 
+  itemType, 
+  className = '', 
+  initialFavorited = false,
+  onToggle 
+}: FavoriteButtonProps) {
+  const [isFavorited, setIsFavorited] = useState(initialFavorited);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const isCurrentlyFavorited = onToggle ? isFavorited : internalFavorited;
-  const currentCount = onToggle ? count : internalCount;
-
-  const handleClick = (e: React.MouseEvent) => {
+  const handleToggle = async (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     
-    if (disabled) return;
-
-    const newFavorited = !isCurrentlyFavorited;
-    const newCount = newFavorited ? currentCount + 1 : Math.max(0, currentCount - 1);
-
-    if (onToggle) {
-      onToggle(newFavorited);
-    } else {
-      setInternalFavorited(newFavorited);
-      setInternalCount(newCount);
+    if (isLoading) return;
+    
+    setIsLoading(true);
+    
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 300));
+      
+      const newFavorited = !isFavorited;
+      setIsFavorited(newFavorited);
+      
+      if (onToggle) {
+        onToggle(newFavorited);
+      }
+      
+      // Here you would typically make an API call to update the favorite status
+      // await api.toggleFavorite(itemId, itemType, newFavorited);
+      
+    } catch (error) {
+      console.error('Failed to toggle favorite:', error);
+      // Revert the state change on error
+      setIsFavorited(isFavorited);
+    } finally {
+      setIsLoading(false);
     }
-  };
-
-  const sizeClasses = {
-    sm: 'w-6 h-6',
-    md: 'w-8 h-8',
-    lg: 'w-10 h-10',
-  };
-
-  const iconSizeClasses = {
-    sm: 'w-3 h-3',
-    md: 'w-4 h-4',
-    lg: 'w-5 h-5',
   };
 
   return (
     <button
-      type="button"
-      onClick={handleClick}
-      disabled={disabled}
-      aria-label={ariaLabel}
-      aria-pressed={isCurrentlyFavorited}
+      onClick={handleToggle}
+      disabled={isLoading}
       className={cn(
-        'inline-flex items-center justify-center rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2',
-        sizeClasses[size],
-        isCurrentlyFavorited
-          ? 'text-red-500 hover:text-red-600 focus:ring-red-500'
-          : 'text-gray-400 hover:text-red-500 focus:ring-gray-400',
-        disabled && 'opacity-50 cursor-not-allowed',
+        'group relative p-2 rounded-full transition-all duration-300 hover:scale-110',
+        'focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2',
+        'disabled:opacity-50 disabled:cursor-not-allowed',
         className
       )}
+      aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
     >
-      <HeartIcon
+      <Heart
         className={cn(
-          iconSizeClasses[size],
-          isCurrentlyFavorited && 'fill-current'
+          'w-5 h-5 transition-all duration-300',
+          isFavorited
+            ? 'fill-red-500 text-red-500 group-hover:fill-red-600 group-hover:text-red-600'
+            : 'text-zion-slate-light group-hover:text-red-500 group-hover:fill-red-500/20'
         )}
       />
-      {showCount && (
-        <span className="ml-1 text-xs font-medium">
-          {currentCount}
-        </span>
+      
+      {/* Loading indicator */}
+      {isLoading && (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-4 h-4 border-2 border-zion-cyan border-t-transparent rounded-full animate-spin"></div>
+        </div>
       )}
     </button>
   );
-};
-
-export default FavoriteButton;
+}

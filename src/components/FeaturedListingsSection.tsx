@@ -3,113 +3,49 @@ import { motion } from 'framer-motion';
 import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-interface FeaturedListing {
-  id: number;
-  title: string;
-  category: string;
-  description: string;
-  rating: number;
-  reviews: number;
-  views: number;
-  likes: number;
-  image: string;
-  price: string;
-  tags: string[];
-  duration: string;
-  team: string;
-  location: string;
-  featured: boolean;
-  technologies: string[];
-  highlights: string[];
-}
-
-const featuredListings: FeaturedListing[] = [
+const featuredServices = [
   {
-    id: 1,
-    title: "AI-Powered E-commerce Platform",
-    category: "Web Development",
-    description: "Modern e-commerce solution with AI-driven product recommendations and personalized shopping experience",
+    title: 'AI-Powered Business Intelligence',
+    description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
+    category: 'AI Solutions',
     rating: 4.9,
     reviews: 127,
-    views: 2847,
-    likes: 156,
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    price: "$15,000",
-    tags: ["React", "Node.js", "AI/ML", "E-commerce"],
-    duration: "3-4 months",
-    team: "5 experts",
-    location: "Remote",
-    featured: true,
-    technologies: ["React", "Node.js", "MongoDB", "AI/ML", "AWS"],
-    highlights: ["AI Recommendations", "Real-time Analytics", "Mobile Responsive", "SEO Optimized"]
+    price: 'From $2,500',
+    image: '🤖',
+    link: '/services/ai',
+    features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards']
   },
   {
-    id: 2,
-    title: "Mobile Banking Application",
-    category: "Mobile Development",
-    description: "Secure and user-friendly mobile banking app with biometric authentication and real-time transactions",
+    title: 'Cloud Migration & Optimization',
+    description: 'Seamlessly migrate to the cloud with our proven methodology and expert guidance.',
+    category: 'Cloud & DevOps',
     rating: 4.8,
     reviews: 89,
-    views: 1956,
-    likes: 134,
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    price: "$22,000",
-    tags: ["React Native", "Security", "FinTech", "Biometrics"],
-    duration: "4-5 months",
-    team: "6 experts",
-    location: "Hybrid",
-    featured: true,
-    technologies: ["React Native", "Node.js", "PostgreSQL", "Biometrics", "Security"],
-    highlights: ["Biometric Auth", "Real-time Transactions", "Security Compliance", "Cross-platform"]
+    price: 'From $5,000',
+    image: '☁️',
+    link: '/services/cloud',
+    features: ['Zero-downtime Migration', 'Cost Optimization', 'Security Compliance']
   },
   {
-    id: 3,
-    title: "Cloud Infrastructure Migration",
-    category: "Cloud & DevOps",
-    description: "Complete migration from on-premise to cloud with automated CI/CD pipelines and monitoring",
-    rating: 4.7,
+    title: 'Cybersecurity Assessment & Implementation',
+    description: 'Comprehensive security evaluation and implementation for enterprise-level protection.',
+    category: 'Cybersecurity',
+    rating: 4.9,
     reviews: 156,
-    views: 3241,
-    likes: 189,
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80",
-    price: "$18,500",
-    tags: ["AWS", "Docker", "Kubernetes", "CI/CD"],
-    duration: "2-3 months",
-    team: "4 experts",
-    location: "On-site",
-    featured: true,
-    technologies: ["AWS", "Docker", "Kubernetes", "Jenkins", "Prometheus"],
-    highlights: ["Zero Downtime", "Auto-scaling", "Monitoring", "Security"]
+    price: 'From $3,500',
+    image: '🔒',
+    link: '/services/cybersecurity',
+    features: ['Security Audits', 'Threat Detection', 'Incident Response']
   }
 ];
 
-export default function FeaturedListingsSection() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [hoveredListing, setHoveredListing] = useState<number | null>(null);
-  const [showFilters, setShowFilters] = useState(false);
-
-  const filteredListings = selectedCategory === "All" 
-    ? featuredListings 
-    : featuredListings.filter(listing => listing.category === selectedCategory);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 }
-    }
+export function FeaturedListingsSection() {
+  const renderStars = (rating: number) => {
+    return Array.from({ length: 5 }, (_, i) => (
+      <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
+        ★
+      </span>
+    ));
   };
 
   return (
@@ -241,14 +177,23 @@ export default function FeaturedListingsSection() {
                 <div className="flex items-center justify-between">
                   <div className="text-2xl font-bold text-white">{listing.price}</div>
                   <Link
-                    to={`/services/${listing.id}`}
-                    className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25"
+                    to={service.link}
+                    className="text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:underline"
                   >
                     Get Started
                   </Link>
                 </div>
               </div>
-            </motion.div>
+              
+              <div className="px-6 pb-6">
+                <Link
+                  to={service.link}
+                  className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg"
+                >
+                  Get Started
+                </Link>
+              </div>
+            </div>
           ))}
         </motion.div>
 
@@ -261,11 +206,11 @@ export default function FeaturedListingsSection() {
           transition={{ duration: 0.6, delay: 0.5 }}
         >
           <Link
-            to="/comprehensive-services-showcase-2025"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/25"
+            to="/services"
+            className="inline-flex items-center px-8 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-300"
           >
             View All Services
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
         </motion.div>
       </div>

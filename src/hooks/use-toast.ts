@@ -1,20 +1,30 @@
-import { toast as sonnerToast } from 'sonner';
+import { toast as radixToast } from '@radix-ui/react-toast';
 
-// This interface defines the shape the components are trying to use.
-interface ToastProps {
+export type ToastOptions = {
   title?: string;
   description?: string;
-  variant?: 'default' | 'destructive' | 'success'; // Add other variants if used
-  action?: React.ReactNode; // Assuming action might be needed as per ShadCN/Sonner patterns
+  variant?: 'default' | 'destructive' | 'success';
+  duration?: number;
+};
+
+export const useToast = () => ({ toast });
+
+function toast(options: ToastOptions) {
+  const message = options.description || options.title || '';
+  const duration = options.duration || 5000;
+  
+  // For now, we'll use a simple console.log as a fallback
+  // In a real implementation, you'd integrate with @radix-ui/react-toast
+  console.log(`[Toast] ${options.variant || 'default'}: ${message}`);
+  
+  // You can implement proper toast functionality here using @radix-ui/react-toast
+  // This is a placeholder implementation
 }
 
-// Adapter function
-const toastAdapter = (props: ToastProps | string) => {
-  if (typeof props === 'string') {
-    // Simple message
-    sonnerToast(props);
-    return;
-  }
+toast.title = (title: string) => toast({ title });
+toast.description = (description: string) => toast({ description });
+toast.error = (error: string) => toast({ error, variant: 'destructive' });
+toast.success = (message: string) => toast({ message, variant: 'success' });
 
   const { title, description, variant, action } = props;
   const message = title || description || ''; // Sonner needs a primary message.
