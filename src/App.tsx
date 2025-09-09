@@ -17,29 +17,28 @@ const FAQ = React.lazy(() => import('./pages/FAQ'));
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const Demo = React.lazy(() => import('./pages/Demo'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const Services = React.lazy(() => import('./pages/Services'));
-const MicroSAASMain = React.lazy(() => import('./pages/MicroSAASMain'));
-const ITServicesMain = React.lazy(() => import('./pages/ITServicesMain'));
-const AIAnalytics = React.lazy(() => import('./pages/services/AIAnalytics'));
-const Cybersecurity = React.lazy(() => import('./pages/services/Cybersecurity'));
-
-// New innovative services
-const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
-const QuantumAIPlatform = React.lazy(() => import('./pages/services/QuantumAIPlatform'));
-const BlockchainWeb3Platform = React.lazy(() => import('./pages/services/BlockchainWeb3Platform'));
-const ServicesOverview = React.lazy(() => import('./pages/services/ServicesOverview'));
-
-// Enhanced loading component with skeleton
-const LoadingFallback = () => (
-  <div className="min-h-screen bg-background flex items-center justify-center">
-    <div className="text-center space-y-4">
-      <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto"></div>
-      <p className="text-zion-cyan text-lg font-medium">Loading Zion...</p>
-      <p className="text-muted-foreground text-sm">Preparing your AI marketplace experience</p>
-    </div>
-  </div>
-);
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const AIAnalytics = React.lazy(() => import('./pages/services/ai-analytics'));
+const ServicesAdvertising = React.lazy(() => import('./pages/ServicesAdvertising'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const MicroSaasServices = React.lazy(() => import('./pages/MicroSaasServices.jsx'));
+const MicroSAAS = React.lazy(() => import('./pages/MicroSAAS'));
+const AIBusinessIntelligence = React.lazy(() => import('./pages/micro-saas/ai-business-intelligence'));
+const CustomerExperience = React.lazy(() => import('./pages/micro-saas/customer-experience'));
+const QuantumComputing = React.lazy(() => import('./pages/micro-saas/quantum-computing'));
+const SupplyChain = React.lazy(() => import('./pages/micro-saas/supply-chain'));
+const Cybersecurity = React.lazy(() => import('./pages/micro-saas/cybersecurity'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/micro-saas/iot-edge'));
+const ContentCreation = React.lazy(() => import('./pages/micro-saas/content-creation'));
+const HRPlatform = React.lazy(() => import('./pages/micro-saas/hr-platform'));
+const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const NotFound = React.lazy(() => import('./pages/404.jsx'));
+const InnovativeServices2027 = React.lazy(() => import('./pages/InnovativeServices2027'));
+const ComprehensivePricing2027 = React.lazy(() => import('./pages/ComprehensivePricing2027'));
+const AllServices2027 = React.lazy(() => import('./pages/AllServices2027'));
 
 function App() {
   return (
@@ -64,15 +63,31 @@ function App() {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/demo" element={<Demo />} />
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
-              
-              {/* New innovative services */}
-              <Route path="/services" element={<ServicesOverview />} />
-              <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
-              <Route path="/services/quantum-ai-platform" element={<QuantumAIPlatform />} />
-              <Route path="/services/blockchain-web3-platform" element={<BlockchainWeb3Platform />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services/ai-analytics" element={<AIAnalytics />} />
+              <Route path="/services-advertising" element={<ServicesAdvertising />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/micro-saas-services" element={<MicroSaasServices />} />
+              <Route path="/micro-saas" element={<MicroSAAS />} />
+              <Route path="/micro-saas/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+              <Route path="/micro-saas/customer-experience" element={<CustomerExperience />} />
+              <Route path="/micro-saas/quantum-computing" element={<QuantumComputing />} />
+              <Route path="/micro-saas/supply-chain" element={<SupplyChain />} />
+              <Route path="/micro-saas/cybersecurity" element={<Cybersecurity />} />
+              <Route path="/micro-saas/iot-edge" element={<IoTEdgeComputing />} />
+              <Route path="/micro-saas/content-creation" element={<ContentCreation />} />
+              <Route path="/micro-saas/hr-platform" element={<HRPlatform />} />
+              <Route path="/zion-hire-ai" element={<ZionHireAI />} />
+              <Route path="/hire-ai" element={<ZionHireAI />} />
+              <Route path="/innovative-services-2027" element={<InnovativeServices2027 />} />
+              <Route path="/comprehensive-pricing-2027" element={<ComprehensivePricing2027 />} />
+              <Route path="/all-services-2027" element={<AllServices2027 />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>

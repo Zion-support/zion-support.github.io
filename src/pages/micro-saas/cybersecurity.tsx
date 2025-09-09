@@ -2,140 +2,145 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  BarChart3, 
-  TrendingUp, 
-  Target, 
+  Shield, 
+  Lock, 
+  Eye, 
+  AlertTriangle, 
   CheckCircle, 
   ArrowRight,
   Star,
   Users,
   Clock,
-  Shield,
   Globe,
+  BarChart3,
+  TrendingUp,
   Cpu,
   Database,
   Network,
-  Lock,
   Code,
-  Eye,
+  Key,
+  Fingerprint,
+  Bug,
+  Virus,
+  Fire,
+  Zap,
+  Target,
   Search,
   Filter,
   Download,
   Share2,
-  Settings,
-  Play,
-  Pause,
-  RefreshCw
+  Settings
 } from 'lucide-react';
 
 const features = [
   {
-    icon: Brain,
-    title: 'Machine Learning Models',
-    description: 'Custom ML models trained on your data for predictive analytics and insights.',
-    benefits: ['Predictive modeling', 'Pattern recognition', 'Anomaly detection', 'Recommendation engines']
+    icon: Shield,
+    title: 'Advanced Threat Detection',
+    description: 'AI-powered threat detection that identifies and blocks sophisticated cyber attacks in real-time.',
+    benefits: ['Behavioral analysis', 'Machine learning', 'Real-time monitoring', 'Zero-day protection']
   },
   {
-    icon: BarChart3,
-    title: 'Real-time Analytics',
-    description: 'Live dashboards and real-time data processing for instant decision-making.',
-    benefits: ['Live data streaming', 'Real-time alerts', 'Instant insights', 'Performance monitoring']
+    icon: Lock,
+    title: 'Identity & Access Management',
+    description: 'Secure user authentication and authorization with multi-factor authentication and role-based access.',
+    benefits: ['Multi-factor auth', 'Single sign-on', 'Role management', 'Privileged access']
   },
   {
-    icon: TrendingUp,
-    title: 'Business Intelligence',
-    description: 'Transform raw data into actionable business insights and strategic recommendations.',
-    benefits: ['Data visualization', 'KPI tracking', 'Trend analysis', 'Strategic planning']
+    icon: Eye,
+    title: 'Security Monitoring',
+    description: '24/7 security monitoring with automated incident response and threat intelligence.',
+    benefits: ['SIEM integration', 'Log analysis', 'Incident response', 'Threat hunting']
   },
   {
-    icon: Target,
-    title: 'Predictive Analytics',
-    description: 'Forecast future trends and outcomes using advanced statistical models.',
-    benefits: ['Demand forecasting', 'Risk assessment', 'Customer behavior', 'Market trends']
+    icon: AlertTriangle,
+    title: 'Vulnerability Management',
+    description: 'Continuous vulnerability assessment and automated patch management.',
+    benefits: ['Automated scanning', 'Risk scoring', 'Patch management', 'Compliance reporting']
   }
 ];
 
 const useCases = [
   {
     title: 'Financial Services',
-    description: 'Risk assessment, fraud detection, and portfolio optimization.',
+    description: 'Protect sensitive financial data and ensure regulatory compliance.',
     icon: Shield,
-    metrics: ['Risk modeling', 'Fraud detection', 'Portfolio optimization', 'Market analysis']
+    metrics: ['PCI DSS compliance', 'Fraud detection', 'Data encryption', 'Audit trails']
   },
   {
     title: 'Healthcare',
-    description: 'Patient diagnosis, treatment optimization, and resource planning.',
-    icon: Users,
-    metrics: ['Diagnostic support', 'Treatment planning', 'Resource optimization', 'Patient outcomes']
+    description: 'Secure patient data and maintain HIPAA compliance.',
+    icon: Lock,
+    metrics: ['HIPAA compliance', 'Patient privacy', 'Secure messaging', 'Access controls']
   },
   {
-    title: 'Retail & E-commerce',
-    description: 'Customer segmentation, demand forecasting, and inventory optimization.',
+    title: 'E-commerce',
+    description: 'Protect customer data and secure online transactions.',
     icon: Globe,
-    metrics: ['Customer insights', 'Demand forecasting', 'Inventory optimization', 'Personalization']
+    metrics: ['Payment security', 'Customer data protection', 'Fraud prevention', 'SSL management']
   },
   {
-    title: 'Manufacturing',
-    description: 'Predictive maintenance, quality control, and supply chain optimization.',
-    icon: Cpu,
-    metrics: ['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Efficiency gains']
+    title: 'Government',
+    description: 'Secure sensitive government information and critical infrastructure.',
+    icon: Target,
+    metrics: ['FedRAMP compliance', 'Classified data protection', 'Infrastructure security', 'Incident response']
   }
 ];
 
 const pricingPlans = [
   {
     name: 'Starter',
-    price: '$2,999',
+    price: '$399',
     period: '/month',
-    description: 'Perfect for small businesses starting their AI analytics journey.',
+    description: 'Perfect for small businesses with basic security needs.',
     features: [
-      'Basic ML models',
-      'Standard dashboards',
-      'Data integration',
+      'Up to 50 users',
+      'Basic threat detection',
+      'Email security',
+      'Basic monitoring',
       'Email support',
-      'Monthly reports',
-      'Basic training'
+      'Standard reports'
     ],
     popular: false
   },
   {
     name: 'Professional',
-    price: '$7,999',
+    price: '$899',
     period: '/month',
-    description: 'Ideal for growing businesses with advanced analytics needs.',
+    description: 'Ideal for growing businesses with advanced security requirements.',
     features: [
-      'Advanced ML models',
-      'Custom dashboards',
-      'Real-time analytics',
+      'Up to 500 users',
+      'Advanced threat detection',
+      'Identity management',
+      'Vulnerability scanning',
       'Priority support',
-      'Advanced training',
-      'API access',
-      'Custom integrations',
-      'Performance optimization'
+      'Advanced analytics',
+      'Incident response',
+      'Compliance tools'
     ],
     popular: true
   },
   {
     name: 'Enterprise',
-    price: '$19,999',
+    price: '$1,999',
     period: '/month',
-    description: 'For large organizations requiring enterprise-grade AI solutions.',
+    description: 'For large organizations requiring enterprise-grade security.',
     features: [
-      'Custom ML models',
-      'Advanced analytics',
+      'Unlimited users',
+      'Custom security solutions',
+      'Advanced monitoring',
       '24/7 support',
-      'Custom development',
-      'Advanced security',
+      'Custom integrations',
+      'Advanced analytics',
+      'Custom ML models',
       'White-label options',
-      'Dedicated team',
-      'Custom training'
+      'Advanced compliance',
+      'Dedicated account manager'
     ],
     popular: false
   }
 ];
 
-export default function AIAnalytics() {
+export default function Cybersecurity() {
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -149,21 +154,21 @@ export default function AIAnalytics() {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-6">
-              <Brain className="w-10 h-10 text-white" />
+              <Shield className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-gradient mb-6">
-              AI Analytics
+              Cybersecurity
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Transform your business with AI-powered analytics and machine learning. 
-              Unlock insights from your data and make data-driven decisions with confidence.
+              Protect your digital assets with enterprise-grade cybersecurity solutions. 
+              Advanced threat detection, identity management, and 24/7 monitoring.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
               >
-                Get Started
+                Start Free Trial
               </Link>
               <Link
                 to="/demo"
@@ -186,11 +191,11 @@ export default function AIAnalytics() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              AI Analytics Capabilities
+              Comprehensive Security Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our comprehensive AI analytics platform combines cutting-edge machine learning 
-              with powerful visualization tools to deliver actionable insights.
+              Our cybersecurity platform provides multi-layered protection with advanced 
+              AI capabilities and real-time threat intelligence.
             </p>
           </motion.div>
 
@@ -234,11 +239,11 @@ export default function AIAnalytics() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Solutions
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover how businesses across industries are leveraging AI analytics 
-              to drive growth and operational excellence.
+              Our cybersecurity platform is designed to meet the unique security challenges 
+              of different industries and compliance requirements.
             </p>
           </motion.div>
 
@@ -284,8 +289,8 @@ export default function AIAnalytics() {
               Choose Your Plan
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Flexible pricing options designed to scale with your business needs. 
-              Start your AI analytics journey today.
+              Flexible pricing options designed to scale with your security needs. 
+              Start protecting your business today with enterprise-grade security.
             </p>
           </motion.div>
 
@@ -354,18 +359,18 @@ export default function AIAnalytics() {
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Unlock AI Analytics?
+              Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our AI analytics platform to 
-              make data-driven decisions and drive growth.
+              Join thousands of businesses already using our cybersecurity platform to protect 
+              their digital assets and maintain compliance.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
               >
-                Get Started
+                Start Free Trial
               </Link>
               <Link
                 to="/demo"

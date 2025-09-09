@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  BarChart3, 
-  TrendingUp, 
+  Cpu, 
+  Network, 
+  Zap, 
   Target, 
   CheckCircle, 
   ArrowRight,
@@ -13,129 +13,135 @@ import {
   Clock,
   Shield,
   Globe,
-  Cpu,
+  BarChart3,
+  TrendingUp,
   Database,
-  Network,
   Lock,
   Code,
-  Eye,
+  Wifi,
+  Bluetooth,
+  Radio,
+  Satellite,
+  Cloud,
+  Server,
+  HardDrive,
+  Activity,
   Search,
   Filter,
   Download,
   Share2,
-  Settings,
-  Play,
-  Pause,
-  RefreshCw
+  Settings
 } from 'lucide-react';
 
 const features = [
   {
-    icon: Brain,
-    title: 'Machine Learning Models',
-    description: 'Custom ML models trained on your data for predictive analytics and insights.',
-    benefits: ['Predictive modeling', 'Pattern recognition', 'Anomaly detection', 'Recommendation engines']
+    icon: Cpu,
+    title: 'Edge Computing',
+    description: 'Process data at the edge for real-time insights and reduced latency.',
+    benefits: ['Local processing', 'Reduced latency', 'Bandwidth optimization', 'Offline capabilities']
   },
   {
-    icon: BarChart3,
+    icon: Network,
+    title: 'Device Management',
+    description: 'Centralized management of IoT devices with remote monitoring and control.',
+    benefits: ['Device provisioning', 'Remote updates', 'Health monitoring', 'Configuration management']
+  },
+  {
+    icon: Zap,
     title: 'Real-time Analytics',
-    description: 'Live dashboards and real-time data processing for instant decision-making.',
-    benefits: ['Live data streaming', 'Real-time alerts', 'Instant insights', 'Performance monitoring']
-  },
-  {
-    icon: TrendingUp,
-    title: 'Business Intelligence',
-    description: 'Transform raw data into actionable business insights and strategic recommendations.',
-    benefits: ['Data visualization', 'KPI tracking', 'Trend analysis', 'Strategic planning']
+    description: 'Instant data processing and analytics for immediate decision-making.',
+    benefits: ['Stream processing', 'Real-time dashboards', 'Instant alerts', 'Predictive analytics']
   },
   {
     icon: Target,
-    title: 'Predictive Analytics',
-    description: 'Forecast future trends and outcomes using advanced statistical models.',
-    benefits: ['Demand forecasting', 'Risk assessment', 'Customer behavior', 'Market trends']
+    title: 'Cloud Integration',
+    description: 'Seamless integration between edge devices and cloud platforms.',
+    benefits: ['Hybrid architecture', 'Data synchronization', 'Scalable storage', 'Advanced analytics']
   }
 ];
 
 const useCases = [
   {
-    title: 'Financial Services',
-    description: 'Risk assessment, fraud detection, and portfolio optimization.',
-    icon: Shield,
-    metrics: ['Risk modeling', 'Fraud detection', 'Portfolio optimization', 'Market analysis']
-  },
-  {
-    title: 'Healthcare',
-    description: 'Patient diagnosis, treatment optimization, and resource planning.',
-    icon: Users,
-    metrics: ['Diagnostic support', 'Treatment planning', 'Resource optimization', 'Patient outcomes']
-  },
-  {
-    title: 'Retail & E-commerce',
-    description: 'Customer segmentation, demand forecasting, and inventory optimization.',
-    icon: Globe,
-    metrics: ['Customer insights', 'Demand forecasting', 'Inventory optimization', 'Personalization']
-  },
-  {
-    title: 'Manufacturing',
-    description: 'Predictive maintenance, quality control, and supply chain optimization.',
+    title: 'Smart Manufacturing',
+    description: 'Optimize production with real-time monitoring and predictive maintenance.',
     icon: Cpu,
-    metrics: ['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Efficiency gains']
+    metrics: ['Production efficiency', 'Predictive maintenance', 'Quality control', 'Energy optimization']
+  },
+  {
+    title: 'Smart Cities',
+    description: 'Manage urban infrastructure with intelligent monitoring systems.',
+    icon: Globe,
+    metrics: ['Traffic management', 'Energy monitoring', 'Waste management', 'Public safety']
+  },
+  {
+    title: 'Healthcare IoT',
+    description: 'Monitor patients and medical equipment in real-time.',
+    icon: Shield,
+    metrics: ['Patient monitoring', 'Equipment tracking', 'Alert systems', 'Data compliance']
+  },
+  {
+    title: 'Retail Analytics',
+    description: 'Understand customer behavior and optimize store operations.',
+    icon: BarChart3,
+    metrics: ['Customer tracking', 'Inventory management', 'Store optimization', 'Marketing insights']
   }
 ];
 
 const pricingPlans = [
   {
     name: 'Starter',
-    price: '$2,999',
+    price: '$179',
     period: '/month',
-    description: 'Perfect for small businesses starting their AI analytics journey.',
+    description: 'Perfect for small IoT deployments with basic edge computing needs.',
     features: [
-      'Basic ML models',
-      'Standard dashboards',
-      'Data integration',
+      'Up to 100 devices',
+      'Basic edge processing',
+      'Standard monitoring',
       'Email support',
-      'Monthly reports',
-      'Basic training'
+      'Basic integrations',
+      'Mobile app access'
     ],
     popular: false
   },
   {
     name: 'Professional',
-    price: '$7,999',
+    price: '$499',
     period: '/month',
-    description: 'Ideal for growing businesses with advanced analytics needs.',
+    description: 'Ideal for growing IoT deployments with advanced edge computing requirements.',
     features: [
-      'Advanced ML models',
-      'Custom dashboards',
+      'Up to 1,000 devices',
+      'Advanced edge processing',
       'Real-time analytics',
       'Priority support',
-      'Advanced training',
-      'API access',
-      'Custom integrations',
-      'Performance optimization'
+      'Advanced integrations',
+      'Custom dashboards',
+      'Predictive analytics',
+      'API access'
     ],
     popular: true
   },
   {
     name: 'Enterprise',
-    price: '$19,999',
+    price: '$1,299',
     period: '/month',
-    description: 'For large organizations requiring enterprise-grade AI solutions.',
+    description: 'For large-scale IoT deployments requiring enterprise-grade solutions.',
     features: [
-      'Custom ML models',
+      'Unlimited devices',
+      'Custom edge solutions',
       'Advanced analytics',
       '24/7 support',
-      'Custom development',
-      'Advanced security',
+      'Custom integrations',
+      'Advanced ML models',
       'White-label options',
-      'Dedicated team',
-      'Custom training'
+      'Advanced security',
+      'Dedicated infrastructure',
+      'Dedicated account manager'
     ],
     popular: false
   }
 ];
 
-export default function AIAnalytics() {
+export default function IoTEdgeComputing() {
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -149,21 +155,21 @@ export default function AIAnalytics() {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-6">
-              <Brain className="w-10 h-10 text-white" />
+              <Cpu className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-gradient mb-6">
-              AI Analytics
+              IoT Edge Computing
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Transform your business with AI-powered analytics and machine learning. 
-              Unlock insights from your data and make data-driven decisions with confidence.
+              Process data at the edge for real-time insights and reduced latency. 
+              Transform your IoT deployment with intelligent edge computing solutions.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
               >
-                Get Started
+                Start Free Trial
               </Link>
               <Link
                 to="/demo"
@@ -186,11 +192,11 @@ export default function AIAnalytics() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              AI Analytics Capabilities
+              Edge Computing Capabilities
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our comprehensive AI analytics platform combines cutting-edge machine learning 
-              with powerful visualization tools to deliver actionable insights.
+              Our IoT edge computing platform provides the tools and infrastructure needed 
+              to process data locally and deliver real-time insights.
             </p>
           </motion.div>
 
@@ -237,8 +243,8 @@ export default function AIAnalytics() {
               Industry Applications
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover how businesses across industries are leveraging AI analytics 
-              to drive growth and operational excellence.
+              Discover how IoT edge computing is revolutionizing industries and enabling 
+              new possibilities for real-time data processing and analytics.
             </p>
           </motion.div>
 
@@ -284,8 +290,8 @@ export default function AIAnalytics() {
               Choose Your Plan
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Flexible pricing options designed to scale with your business needs. 
-              Start your AI analytics journey today.
+              Flexible pricing options designed to scale with your IoT deployment size. 
+              Start with edge computing today and see immediate benefits.
             </p>
           </motion.div>
 
@@ -354,18 +360,18 @@ export default function AIAnalytics() {
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Unlock AI Analytics?
+              Ready to Transform Your IoT Deployment?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our AI analytics platform to 
-              make data-driven decisions and drive growth.
+              Join thousands of businesses already using our edge computing platform to 
+              process data locally and gain real-time insights.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
               >
-                Get Started
+                Start Free Trial
               </Link>
               <Link
                 to="/demo"
