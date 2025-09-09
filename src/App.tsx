@@ -11,7 +11,7 @@ import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 import { SEO, HomePageSEO } from './components/SEO';
 import AccessibilityEnhancements from './components/AccessibilityEnhancements';
-import { PerformanceOptimizations } from './components/PerformanceOptimizations';
+import PerformanceOptimizations from './components/PerformanceOptimizations';
 import { NotificationToast } from './components/NotificationToast';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import './App.css';

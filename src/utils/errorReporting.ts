@@ -46,9 +46,11 @@ export class ErrorReporter {
         message: event.message,
         stack: event.error?.stack,
         url: event.filename,
-        line: event.lineno,
-        column: event.colno,
         severity: 'high',
+        context: {
+          line: event.lineno,
+          column: event.colno,
+        },
       });
     });
 
