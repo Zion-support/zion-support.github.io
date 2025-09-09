@@ -2,19 +2,13 @@ import React, { Suspense, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 import { HelmetProvider } from 'react-helmet-async';
-<<<<<<< HEAD
 import { ThemeProvider } from './components/ThemeProvider';
 import ErrorBoundary from './components/ErrorBoundary';
-// import PerformanceWrapper from './components/PerformanceWrapper';
-// import LoadingSpinner from './components/LoadingSpinner';
-// import { SEO, HomePageSEO } from './components/SEO';
-import './App.css';
-=======
 import { SEO } from './components/SEO';
 import { Header } from './components/Header';
-import { Footer } from './components/Footer';
+import Footer from './components/Footer';
 import LoadingSpinner from './components/ui/LoadingSpinner';
->>>>>>> pr-12872
+// import './App.css'; // Using Tailwind CSS instead
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/HomePage'));
