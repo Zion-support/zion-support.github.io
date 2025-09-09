@@ -63,7 +63,6 @@
   [headers.values]
     Cache-Control = "public, max-age=3600"
 
-# Cache static assets with different strategies
 [[headers]]
   for = "/*.js"
   [headers.values]
@@ -93,28 +92,6 @@
   for = "/*.ico"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-
-# Cache font files
-[[headers]]
-  for = "/*.woff2"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.woff"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.ttf"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# Cache HTML files for shorter periods
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=3600, must-revalidate"
 
 # SPA fallback handled via `_redirects` in publish dir if present
 
