@@ -1,4 +1,7 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
+import animatePlugin from "tailwindcss-animate";
+import plugin from "tailwindcss/plugin";
 
 export default {
   content: [
@@ -22,39 +25,10 @@ export default {
           DEFAULT: "var(--primary)",
           foreground: "var(--primary-foreground)",
         },
-        secondary: {
-          DEFAULT: "var(--secondary)",
-          foreground: "var(--secondary-foreground)",
-        },
-        muted: {
-          DEFAULT: "var(--muted)",
-          foreground: "var(--muted-foreground)",
-        },
-        accent: {
-          DEFAULT: "var(--accent)",
-          foreground: "var(--accent-foreground)",
-        },
-        destructive: {
-          DEFAULT: "var(--destructive)",
-          foreground: "var(--destructive-foreground)",
-        },
-        border: "var(--border)",
-        input: "var(--input)",
-        ring: "var(--ring)",
-        chart: {
-          "1": "var(--chart-1)",
-          "2": "var(--chart-2)",
-          "3": "var(--chart-3)",
-          "4": "var(--chart-4)",
-          "5": "var(--chart-5)",
-        },
-        // Zion Tech Group brand colors
         "zion-blue": {
-          DEFAULT: "#1e40af",
-          light: "#3b82f6",
-          lighter: "#60a5fa",
-          dark: "#1e3a8a",
-          darker: "#1e293b",
+          DEFAULT: "#2e73ea",
+          light: "#5b8fef",
+          dark: "#1e4ea8",
         },
         "zion-cyan": {
           DEFAULT: "#00e5ff",
@@ -163,44 +137,199 @@ export default {
           light: "#c084fc",
           dark: "#9333ea",
         },
+        "zion-green": {
+          DEFAULT: "#10b981",
+          light: "#34d399",
+          dark: "#059669",
+        },
+        "zion-orange": {
+          DEFAULT: "#f59e0b",
+          light: "#fbbf24",
+          dark: "#d97706",
+        },
+        "zion-red": {
+          DEFAULT: "#ef4444",
+          light: "#f87171",
+          dark: "#dc2626",
+        },
+        "zion-pink": {
+          DEFAULT: "#ec4899",
+          light: "#f472b6",
+          dark: "#db2777",
+        },
+        "zion-indigo": {
+          DEFAULT: "#6366f1",
+          light: "#818cf8",
+          dark: "#4f46e5",
+        },
+        "zion-emerald": {
+          DEFAULT: "#10b981",
+          light: "#34d399",
+          dark: "#059669",
+        },
+        "zion-teal": {
+          DEFAULT: "#14b8a6",
+          light: "#2dd4bf",
+          dark: "#0d9488",
+        },
+        "zion-amber": {
+          DEFAULT: "#f59e0b",
+          light: "#fbbf24",
+          dark: "#ca8a04",
+        },
+        "zion-yellow": {
+          DEFAULT: "#eab308",
+          light: "#facc15",
+          dark: "#ca8a04",
+        },
+        "zion-lime": {
+          DEFAULT: "#84cc16",
+          light: "#a3e635",
+          dark: "#65a30d",
+        },
+        "zion-rose": {
+          DEFAULT: "#f43f5e",
+          light: "#fb7185",
+          dark: "#e11d48",
+        },
+        "zion-violet": {
+          DEFAULT: "#8b5cf6",
+          light: "#a78bfa",
+          dark: "#7c3aed",
+        },
+        "zion-fuchsia": {
+          DEFAULT: "#d946ef",
+          light: "#e879f9",
+          dark: "#c026d3",
+        },
+        "zion-sky": {
+          DEFAULT: "#0ea5e9",
+          light: "#38bdf8",
+          dark: "#0284c7",
+        },
+        "zion-blue-light": {
+          DEFAULT: "#3b82f6",
+          light: "#60a5fa",
+          dark: "#2563eb",
+        },
+        "zion-cyan-light": {
+          DEFAULT: "#06b6d4",
+          light: "#22d3ee",
+          dark: "#0891b2",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        mono: ["JetBrains Mono", "monospace"],
+        sans: ["var(--font-sans)", ...fontFamily.sans],
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "float-slow": {
+          "0%, 100%": { transform: "translateY(0px) translateX(0px)" },
+          "33%": { transform: "translateY(-20px) translateX(10px)" },
+          "66%": { transform: "translateY(-10px) translateX(-15px)" },
+        },
+        "float-medium": {
+          "0%, 100%": { transform: "translateY(0px) translateX(0px)" },
+          "50%": { transform: "translateY(-15px) translateX(20px)" },
+        },
+        "float-fast": {
+          "0%, 100%": { transform: "translateY(0px) translateX(0px)" },
+          "25%": { transform: "translateY(-25px) translateX(-10px)" },
+          "75%": { transform: "translateY(-5px) translateX(15px)" },
+        },
+        "fade-in-up": {
+          "0%": { opacity: "0", transform: "translateY(30px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+        "fade-out": {
+          from: { opacity: "1" },
+          to: { opacity: "0" },
+        },
+        "slide-in-from-top": {
+          from: { transform: "translateY(-100%)" },
+          to: { transform: "translateY(0)" },
+        },
+        "slide-in-from-bottom": {
+          from: { transform: "translateY(100%)" },
+          to: { transform: "translateY(0)" },
+        },
+        "slide-in-from-left": {
+          from: { transform: "translateX(-100%)" },
+          to: { transform: "translateX(0)" },
+        },
+        "slide-in-from-right": {
+          from: { transform: "translateX(100%)" },
+          to: { transform: "translateX(0)" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { 
+            boxShadow: "0 0 20px rgba(34, 221, 210, 0.5)",
+            transform: "scale(1)"
+          },
+          "50%": { 
+            boxShadow: "0 0 40px rgba(34, 221, 210, 0.8)",
+            transform: "scale(1.05)"
+          },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "gradient-shift": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
       },
       animation: {
-        "fade-in": "fadeIn 0.5s ease-in-out",
-        "slide-up": "slideUp 0.5s ease-out",
-        "slide-down": "slideDown 0.5s ease-out",
-        "scale-in": "scaleIn 0.3s ease-out",
-        "bounce-gentle": "bounceGentle 2s infinite",
-        "pulse-gentle": "pulseGentle 3s infinite",
-        "float": "float 6s ease-in-out infinite",
-        "glow": "glow 2s ease-in-out infinite alternate",
-        "gradient": "gradient 8s ease infinite",
-        "shimmer": "shimmer 2.5s linear infinite",
-        "typing": "typing 3.5s steps(40, end)",
-        "blink-caret": "blinkCaret 0.75s step-end infinite",
-        "slide-in-left": "slideInLeft 0.5s ease-out",
-        "slide-in-right": "slideInRight 0.5s ease-out",
-        "slide-in-top": "slideInTop 0.5s ease-out",
-        "slide-in-bottom": "slideInBottom 0.5s ease-out",
-        "zoom-in": "zoomIn 0.3s ease-out",
-        "zoom-out": "zoomOut 0.3s ease-out",
-        "rotate-in": "rotateIn 0.5s ease-out",
-        "flip-in": "flipIn 0.6s ease-out",
-        "hinge": "hinge 2s ease-in-out",
-        "roll-in": "rollIn 0.6s ease-out",
-        "bounce-in": "bounceIn 0.8s ease-out",
-        "fade-in-up": "fadeInUp 0.6s ease-out",
-        "fade-in-down": "fadeInDown 0.6s ease-out",
-        "fade-in-left": "fadeInLeft 0.6s ease-out",
-        "fade-in-right": "fadeInRight 0.6s ease-out",
-        "fade-out": "fadeOut 0.5s ease-in",
-        "fade-out-up": "fadeOutUp 0.6s ease-in",
-        "fade-out-down": "fadeOutDown 0.6s ease-in",
-        "fade-out-left": "fadeOutLeft 0.6s ease-in",
-        "fade-out-right": "fadeOutRight 0.6s ease-in",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "float-slow": "float-slow 6s ease-in-out infinite",
+        "float-medium": "float-medium 4s ease-in-out infinite",
+        "float-fast": "float-fast 3s ease-in-out infinite",
+        "fade-in-up": "fade-in-up 0.8s ease-out forwards",
+        "fade-in": "fade-in 0.5s ease-out",
+        "fade-out": "fade-out 0.3s ease-out",
+        "slide-in-from-top": "slide-in-from-top 0.3s ease-out",
+        "slide-in-from-bottom": "slide-in-from-bottom 0.3s ease-out",
+        "slide-in-from-left": "slide-in-from-left 0.3s ease-out",
+        "slide-in-from-right": "slide-in-from-right 0.3s ease-out",
+        "slide-in": "slide-in 0.3s ease-out",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "float": "float 3s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 3s ease infinite",
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-mesh": "linear-gradient(45deg, #8c15e9, #22ddd2, #2e73ea, #8c15e9)",
+        "gradient-neon": "linear-gradient(45deg, #22ddd2, #8c15e9, #22ddd2)",
+      },
+      backdropBlur: {
+        xs: "2px",
+      },
+      boxShadow: {
+        "neon": "0 0 20px rgba(34, 221, 210, 0.5)",
+        "neon-purple": "0 0 20px rgba(140, 21, 233, 0.5)",
+        "neon-blue": "0 0 20px rgba(46, 115, 234, 0.5)",
+        "glow": "0 0 40px rgba(34, 221, 210, 0.3)",
+        "glow-purple": "0 0 40px rgba(140, 21, 233, 0.3)",
+        "glow-blue": "0 0 40px rgba(46, 115, 234, 0.3)",
       },
       keyframes: {
         fadeIn: {

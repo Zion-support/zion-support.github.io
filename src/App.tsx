@@ -4,12 +4,25 @@ import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { Sidebar } from './components/Sidebar'
 
-// Import core page components
-import Home from './pages/Home'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Services from './pages/Services'
-import NotFound from './pages/NotFound'
+// Lazy load pages - only import existing ones
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const PartnersPage = React.lazy(() => import('./pages/Partners'));
+const Login = React.lazy(() => import('./pages/Login'));
+const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const Services = React.lazy(() => import('./pages/Services'));
+const MicroSAASMain = React.lazy(() => import('./pages/MicroSAASMain'));
+const ITServicesMain = React.lazy(() => import('./pages/ITServicesMain'));
+const AIAnalytics = React.lazy(() => import('./pages/services/AIAnalytics'));
+const Cybersecurity = React.lazy(() => import('./pages/services/Cybersecurity'));
 
 // Import service pages
 import AI from './pages/services/AI'
@@ -21,26 +34,32 @@ import QuantumComputing from './pages/services/QuantumComputing'
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Header />
-        <Sidebar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/services" element={<Services />} />
-            
-            {/* Service routes */}
-            <Route path="/services/ai" element={<AI />} />
-            <Route path="/services/cloud" element={<Cloud />} />
-            <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-            <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
-            <Route path="/services/quantum-computing" element={<QuantumComputing />} />
-            
-            {/* Catch all route */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+        <AppHeader />
+        
+        <main className="flex-1">
+          <Suspense fallback={<LoadingFallback />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/green-it" element={<GreenIT />} />
+              <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/micro-saas" element={<MicroSAASMain />} />
+              <Route path="/it-services" element={<ITServicesMain />} />
+              <Route path="/services/ai-analytics" element={<AIAnalytics />} />
+              <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+            </Routes>
+          </Suspense>
         </main>
         <Footer />
       </div>

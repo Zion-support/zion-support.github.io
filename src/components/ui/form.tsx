@@ -1,222 +1,176 @@
-import React from 'react';
-import { cn } from '@/lib/utils';
+import * as React from "react"
+import * as LabelPrimitive from "@radix-ui/react-label"
+import { Slot } from "@radix-ui/react-slot"
+import {
+  Controller,
+  ControllerProps,
+  FieldPath,
+  FieldValues,
+  FormProvider,
+  useFormContext,
+} from "react-hook-form"
 
-interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
-  children: React.ReactNode;
+import { cn } from "@/lib/utils"
+import { Label } from "@/components/ui/label"
+
+const Form = FormProvider
+
+type FormFieldContextValue<
+  TFieldValues extends FieldValues = FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
+> = {
+  name: TName
 }
 
-interface FormFieldProps {
-  children: React.ReactNode;
-  className?: string;
-}
+const FormFieldContext = React.createContext<FormFieldContextValue>(
+  {} as FormFieldContextValue
+)
 
-interface FormItemProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-interface FormControlProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-interface FormLabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
-  children: React.ReactNode;
-  required?: boolean;
-}
-
-interface FormInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  error?: string;
-}
-
-interface FormTextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
-  error?: string;
-}
-
-interface FormSelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
-  children: React.ReactNode;
-  error?: string;
-}
-
-interface FormCheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  label: string;
-  error?: string;
-}
-
-interface FormRadioProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  label: string;
-  error?: string;
-}
-
-export function Form({ children, className, ...props }: FormProps) {
+const FormField = <
+  TFieldValues extends FieldValues = FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
+>({
+  ...props
+}: ControllerProps<TFieldValues, TName>) => {
   return (
-    <form className={cn('space-y-6', className)} {...props}>
-      {children}
-    </form>
-  );
+    <FormFieldContext.Provider value={{ name: props.name }}>
+      <Controller {...props} />
+    </FormFieldContext.Provider>
+  )
 }
 
-export function FormField({ children, className }: FormFieldProps) {
-  return (
-    <div className={cn('space-y-2', className)}>
-      {children}
-    </div>
-  );
+const useFormField = () => {
+  const fieldContext = React.useContext(FormFieldContext)
+  const itemContext = React.useContext(FormItemContext)
+  const { getFieldState, formState } = useFormContext()
+
+  const fieldState = getFieldState(fieldContext.name, formState)
+
+  if (!fieldContext) {
+    throw new Error("useFormField should be used within <FormField>")
+  }
+
+  const { id } = itemContext
+
+  return {
+    id,
+    name: fieldContext.name,
+    formItemId: `${id}-form-item`,
+    formDescriptionId: `${id}-form-item-description`,
+    formMessageId: `${id}-form-item-message`,
+    ...fieldState,
+  }
 }
 
-export function FormItem({ children, className }: FormItemProps) {
-  return (
-    <div className={cn('space-y-2', className)}>
-      {children}
-    </div>
-  );
+type FormItemContextValue = {
+  id: string
 }
 
-export function FormControl({ children, className }: FormControlProps) {
-  return (
-    <div className={cn('space-y-1', className)}>
-      {children}
-    </div>
-  );
-}
+const FormItemContext = React.createContext<FormItemContextValue>(
+  {} as FormItemContextValue
+)
 
-export function FormLabel({ children, required, className, ...props }: FormLabelProps) {
+const FormItem = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => {
+  const id = React.useId()
+
   return (
-    <label 
-      className={cn('block text-sm font-medium text-gray-700', className)} 
+    <FormItemContext.Provider value={{ id }}>
+      <div ref={ref} className={cn("space-y-2", className)} {...props} />
+    </FormItemContext.Provider>
+  )
+})
+FormItem.displayName = "FormItem"
+
+const FormLabel = React.forwardRef<
+  React.ElementRef<typeof LabelPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>
+>(({ className, ...props }, ref) => {
+  const { error, formItemId } = useFormField()
+
+  return (
+    <Label
+      ref={ref}
+      className={cn(error && "text-destructive", className)}
+      htmlFor={formItemId}
+      {...props}
+    />
+  )
+})
+FormLabel.displayName = "FormLabel"
+
+const FormControl = React.forwardRef<
+  React.ElementRef<typeof Slot>,
+  React.ComponentPropsWithoutRef<typeof Slot>
+>(({ ...props }, ref) => {
+  const { error, formItemId, formDescriptionId, formMessageId } = useFormField()
+
+  return (
+    <Slot
+      ref={ref}
+      id={formItemId}
+      aria-describedby={
+        !error
+          ? `${formDescriptionId}`
+          : `${formDescriptionId} ${formMessageId}`
+      }
+      aria-invalid={!!error}
+      {...props}
+    />
+  )
+})
+FormControl.displayName = "FormControl"
+
+const FormDescription = React.forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLParagraphElement>
+>(({ className, ...props }, ref) => {
+  const { formDescriptionId } = useFormField()
+
+  return (
+    <p
+      ref={ref}
+      id={formDescriptionId}
+      className={cn("text-sm text-muted-foreground", className)}
+      {...props}
+    />
+  )
+})
+FormDescription.displayName = "FormDescription"
+
+const FormMessage = React.forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLParagraphElement>
+>(({ className, children, ...props }, ref) => {
+  const { error, formMessageId } = useFormField()
+  const body = error ? String(error?.message) : children
+
+  if (!body) {
+    return null
+  }
+
+  return (
+    <p
+      ref={ref}
+      id={formMessageId}
+      className={cn("text-sm font-medium text-destructive", className)}
       {...props}
     >
-      {children}
-      {required && <span className="text-red-500 ml-1">*</span>}
-    </label>
-  );
-}
-
-export function FormInput({ error, className, ...props }: FormInputProps) {
-  return (
-    <div className="space-y-1">
-      <input
-        className={cn(
-          'block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400',
-          'focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500',
-          'disabled:bg-gray-50 disabled:text-gray-500 disabled:cursor-not-allowed',
-          error && 'border-red-300 focus:ring-red-500 focus:border-red-500',
-          className
-        )}
-        {...props}
-      />
-      {error && (
-        <p className="text-sm text-red-600">{error}</p>
-      )}
-    </div>
-  );
-}
-
-export function FormTextarea({ error, className, ...props }: FormTextareaProps) {
-  return (
-    <div className="space-y-1">
-      <textarea
-        className={cn(
-          'block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400',
-          'focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500',
-          'disabled:bg-gray-50 disabled:text-gray-500 disabled:cursor-not-allowed',
-          'resize-vertical min-h-[100px]',
-          error && 'border-red-300 focus:ring-red-500 focus:border-red-500',
-          className
-        )}
-        {...props}
-      />
-      {error && (
-        <p className="text-sm text-red-600">{error}</p>
-      )}
-    </div>
-  );
-}
-
-export function FormSelect({ error, children, className, ...props }: FormSelectProps) {
-  return (
-    <div className="space-y-1">
-      <select
-        className={cn(
-          'block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm bg-white',
-          'focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500',
-          'disabled:bg-gray-50 disabled:text-gray-500 disabled:cursor-not-allowed',
-          error && 'border-red-300 focus:ring-red-500 focus:border-red-500',
-          className
-        )}
-        {...props}
-      >
-        {children}
-      </select>
-      {error && (
-        <p className="text-sm text-red-600">{error}</p>
-      )}
-    </div>
-  );
-}
-
-export function FormCheckbox({ label, error, className, ...props }: FormCheckboxProps) {
-  return (
-    <div className="space-y-1">
-      <div className="flex items-center">
-        <input
-          type="checkbox"
-          className={cn(
-            'h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded',
-            'disabled:bg-gray-50 disabled:text-gray-500 disabled:cursor-not-allowed',
-            error && 'border-red-300',
-            className
-          )}
-          {...props}
-        />
-        <label className="ml-2 block text-sm text-gray-700">
-          {label}
-        </label>
-      </div>
-      {error && (
-        <p className="text-sm text-red-600">{error}</p>
-      )}
-    </div>
-  );
-}
-
-export function FormRadio({ label, error, className, ...props }: FormRadioProps) {
-  return (
-    <div className="space-y-1">
-      <div className="flex items-center">
-        <input
-          type="radio"
-          className={cn(
-            'h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300',
-            'disabled:bg-gray-50 disabled:text-gray-500 disabled:cursor-not-allowed',
-            error && 'border-red-300',
-            className
-          )}
-          {...props}
-        />
-        <label className="ml-2 block text-sm text-gray-700">
-          {label}
-        </label>
-      </div>
-      {error && (
-        <p className="text-sm text-red-600">{error}</p>
-      )}
-    </div>
-  );
-}
-
-export function FormDescription({ children, className }: { children: React.ReactNode; className?: string }) {
-  return (
-    <p className={cn('text-sm text-gray-500', className)}>
-      {children}
+      {body}
     </p>
-  );
-}
+  )
+})
+FormMessage.displayName = "FormMessage"
 
-export function FormMessage({ children, className }: { children: React.ReactNode; className?: string }) {
-  return (
-    <p className={cn('text-sm text-gray-600', className)}>
-      {children}
-    </p>
-  );
+export {
+  useFormField,
+  Form,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
+  FormMessage,
+  FormField,
 }

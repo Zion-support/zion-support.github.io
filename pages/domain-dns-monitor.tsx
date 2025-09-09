@@ -1,5 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import { Button } from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck, Globe } from 'lucide-react';
 
 export default function DomainDNSMonitorPage() {
   const contactInfo = {
@@ -19,7 +23,7 @@ export default function DomainDNSMonitorPage() {
   ];
 
   return (
-    <>
+    <UltraFuturisticBackground variant="quantum" intensity={1.5}>
       <Head>
         <title>Domain & DNS Health Monitor | Zion Tech Group</title>
         <meta name="description" content="Track domain expiry, DNS provider health, NS/DS drift, DNSSEC, and MX/SPF/DMARC correctness. Catch misconfigurations before outages." />
@@ -43,7 +47,7 @@ export default function DomainDNSMonitorPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-300">
                 {features.map((f) => (
                   <li key={f} className="flex items-start gap-2">
-                    <span className="w-4 h-4 text-emerald-400 mt-0.5">✓</span>
+                    <Check className="w-4 h-4 text-emerald-400 mt-0.5" /> 
                     <span>{f}</span>
                   </li>
                 ))}
@@ -54,25 +58,30 @@ export default function DomainDNSMonitorPage() {
               <div className="text-3xl font-bold text-white">$49<span className="text-base text-gray-400">/month</span></div>
               <div className="text-sm text-gray-400 mt-2">Trial: 14 days • Setup: 15 minutes</div>
               <div className="mt-6 flex gap-3">
-                <a href="/contact" className="flex-1 bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-4 py-2 rounded-lg text-center">Contact Sales</a>
-                <a href="https://ziontechgroup.com/domain-dns-monitor" className="flex-1 border border-gray-600 text-gray-200 px-4 py-2 rounded-lg text-center">Learn More</a>
+                <a href="/contact" className="flex-1 bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-4 py-2 rounded text-center">Contact Sales</a>
+                <a href="https://ziontechgroup.com/domain-dns-monitor" className="flex-1 border border-gray-600 text-gray-200 px-4 py-2 rounded text-center flex items-center justify-center gap-2">
+                  <ExternalLink className="w-4 h-4" /> Learn More
+                </a>
               </div>
               <div className="mt-6 space-y-3 text-sm">
-                <div className="flex items-center gap-2 text-cyan-400">
-                  📞 <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:underline">{contactInfo.mobile}</a>
+                <div className="flex items-center gap-2 text-cyan-400 hover:underline">
+                  <Phone className="w-4 h-4" />
+                  <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`}>{contactInfo.mobile}</a>
                 </div>
-                <div className="flex items-center gap-2 text-purple-400">
-                  ✉️ <a href={`mailto:${contactInfo.email}`} className="hover:underline">{contactInfo.email}</a>
+                <div className="flex items-center gap-2 text-purple-400 hover:underline">
+                  <Mail className="w-4 h-4" />
+                  <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
                 </div>
-                <div className="flex items-center gap-2 text-green-400">
-                  📍 <a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="hover:underline text-xs">{contactInfo.address}</a>
+                <div className="flex items-center gap-2 text-green-400 text-xs hover:underline">
+                  <MapPin className="w-4 h-4" />
+                  <a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer">{contactInfo.address}</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </UltraFuturisticBackground>
   );
 }
 
