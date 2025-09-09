@@ -1,4 +1,5 @@
-[build] # touch v4.63 to trigger Netlify rebuild
+# touch v4.63 to trigger Netlify rebuild
+[build]
   # Build the site with Vite and publish the dist folder
   # Netlify runs dependency installation before build.command. Avoid redundant npm ci.
   command = "npm run build:ci"
