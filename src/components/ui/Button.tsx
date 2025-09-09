@@ -32,9 +32,20 @@ const buttonVariants = cva(
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = "default", size = "default", asChild = false, loading = false, disabled, onClick, children, ...props }, ref) => {
     const Comp = asChild ? Slot : 'button';
+    
+    // Map custom variants to cva variants
+    const mappedVariant = variant === 'primary' ? 'primary' : 
+                         variant === 'danger' ? 'danger' : 
+                         variant as 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
+    
+    const mappedSize = size === 'md' ? 'md' : 
+                      size === 'sm' ? 'sm' : 
+                      size === 'lg' ? 'lg' : 
+                      size as 'sm' | 'md' | 'lg';
+    
     const classes = cn(buttonVariants({ 
-      variant: variant === 'primary' ? 'default' : variant === 'danger' ? 'destructive' : variant as any, 
-      size: size === 'md' ? 'default' : size as any, 
+      variant: mappedVariant, 
+      size: mappedSize, 
       className 
     }));
 

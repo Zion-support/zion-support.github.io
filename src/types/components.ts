@@ -29,11 +29,11 @@ export interface FeatureCardProps extends Omit<BaseComponentProps, 'id'> {
 
 // Button props
 export interface ButtonProps extends BaseComponentProps {
-  variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
-  size?: 'default' | 'sm' | 'lg' | 'icon';
+  variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link' | 'primary' | 'danger';
+  size?: 'default' | 'sm' | 'lg' | 'icon' | 'md';
   disabled?: boolean;
   loading?: boolean;
-  onClick?: () => void;
+  onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void;
   type?: 'button' | 'submit' | 'reset';
   fullWidth?: boolean;
   asChild?: boolean;

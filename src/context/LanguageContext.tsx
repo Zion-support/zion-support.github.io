@@ -1,17 +1,19 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
+export type SupportedLanguage = 'en' | 'es' | 'fr';
+
 interface LanguageContextType {
-  language: string;
-  setLanguage: (lang: string) => void;
+  currentLanguage: SupportedLanguage;
+  setLanguage: (lang: SupportedLanguage) => void;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState('en');
+  const [currentLanguage, setLanguage] = useState<SupportedLanguage>('en');
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage }}>
+    <LanguageContext.Provider value={{ currentLanguage, setLanguage }}>
       {children}
     </LanguageContext.Provider>
   );

@@ -3,6 +3,9 @@ import React from 'react';
 interface CardProps {
   className?: string;
   children: React.ReactNode;
+  onClick?: () => void;
+  tabIndex?: number;
+  onKeyDown?: (e: React.KeyboardEvent) => void;
 }
 
 interface CardHeaderProps {
