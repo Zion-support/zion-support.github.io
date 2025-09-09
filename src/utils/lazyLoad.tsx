@@ -72,8 +72,8 @@ export function preloadComponent(importFn: () => Promise<any>) {
 /**
  * Dynamic import with loading state
  */
-export function dynamicImport<T>(
-  importFn: () => Promise<T>,
+export function dynamicImport<T extends ComponentType<any>>(
+  importFn: () => Promise<{ default: T }>,
   loadingComponent?: ComponentType
 ) {
   return lazy(() =>

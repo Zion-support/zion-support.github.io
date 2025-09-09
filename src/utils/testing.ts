@@ -1,5 +1,6 @@
 // Testing utilities and helpers
 import { vi } from 'vitest'
+import React, { ReactElement } from 'react'
 
 // Mock data generators
 export const generateMockUser = (overrides: Partial<any> = {}) => ({
@@ -46,7 +47,8 @@ export const mockApiError = (message: string = 'API Error', status: number = 500
 export const mockFetch = (responses: Record<string, any>) => {
   const originalFetch = global.fetch;
   
-  global.fetch = vi.fn((url: string) => {
+  global.fetch = vi.fn((input: RequestInfo | URL, init?: RequestInit) => {
+    const url = typeof input === 'string' ? input : input.toString();
     const response = responses[url];
     if (response) {
       return Promise.resolve({
@@ -138,7 +140,7 @@ export const checkAccessibility = (container: HTMLElement) => {
 };
 
 // Performance testing utilities
-export const measureRenderTime = async (component: React.ReactElement): Promise<number> => {
+export const measureRenderTime = async (component: ReactElement): Promise<number> => {
   const start = performance.now();
   // Render component here
   const end = performance.now();
