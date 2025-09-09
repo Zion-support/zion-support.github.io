@@ -16,18 +16,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
+
+      - name: Run Lighthouse on production URLs (non-blocking on schedule)
+        if: ${{ github.event_name == 'schedule' }}
+        uses: treosh/lighthouse-ci-action@v12
+        continue-on-error: true
         with:
-          node-version: '20'
-          cache: npm
-      - name: Install dependencies
-        run: npm ci
-      - name: Run lighthouse live
-        run: 
-      - name: Upload results
-        uses: actions/upload-artifact@v4
-        if: always()
+          urls: |
+            https://ziontechgroup.com/
+            https://ziontechgroup.com/explore
+            https://ziontechgroup.com/front
+            https://ziontechgroup.com/newsroom
+            https://ziontechgroup.com/reports
+            https://ziontechgroup.com/site-health
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          runs: 3
+          configPath: lighthouserc.json
+
+      - name: Run Lighthouse on production URLs (strict)
+        if: ${{ github.event_name != 'schedule' }}
+        uses: treosh/lighthouse-ci-action@v12
         with:
           name: workflow-results
           path: |
