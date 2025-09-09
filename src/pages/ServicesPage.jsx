@@ -94,70 +94,83 @@ const SERVICE_LISTINGS = [
         features: ["Natural Voice Synthesis", "Emotion Control", "Multi-language Support", "Real-time Processing"],
         benefits: ["Studio-quality audio", "Unlimited voice variations", "Cost-effective production", "Rapid content creation"]
     },
+    // NEW: Advanced AI Services
     {
-        id: "ai-3d-generation",
-        title: "AI 3D Model Generator",
-        description: "Generate stunning 3D models from text descriptions or 2D images. Perfect for game developers, architects, and product designers.",
+        id: "ai-voice-synthesis",
+        title: "AI Voice Synthesis Studio",
+        description: "Create natural-sounding voiceovers, podcasts, and audio content with AI voice cloning and synthesis. Support for 50+ languages and accents.",
+        category: "AI & ML",
+        price: 49,
+        currency: "$",
+        tags: ["Voice Synthesis", "Voice Cloning", "Audio Generation", "Multilingual"],
+        author: {
+            name: "Zion Voice AI",
+            id: "zion-voice-ai",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        aiScore: 96,
+        rating: 4.8,
+        reviewCount: 89,
+    },
+    {
+        id: "ai-emotion-analysis",
+        title: "AI Emotion Analytics",
+        description: "Real-time emotion detection and sentiment analysis for customer feedback, social media monitoring, and user experience optimization.",
         category: "AI & ML",
         price: 79,
         currency: "$",
-        tags: ["3D Generation", "Text-to-3D", "Model Optimization", "Export Formats"],
+        tags: ["Emotion Detection", "Sentiment Analysis", "Customer Analytics", "UX Optimization"],
         author: {
-            name: "Zion 3D Labs",
-            id: "zion-3d-labs",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-02-05T14:20:00.000Z",
-        aiScore: 94,
-        rating: 4.7,
-        reviewCount: 89,
-        features: ["Text-to-3D Generation", "Image-to-3D Conversion", "Multiple Export Formats", "Texture Generation"],
-        benefits: ["Instant 3D creation", "No modeling skills needed", "Professional quality", "Rapid prototyping"]
-    },
-    // NEW: Quantum Computing Services
-    {
-        id: "quantum-simulation",
-        title: "Quantum Simulation Platform",
-        description: "Access to quantum computing resources for complex simulations, optimization problems, and research applications. Cloud-based quantum computing as a service.",
-        category: "Quantum Computing",
-        price: 299,
-        currency: "$",
-        tags: ["Quantum Computing", "Simulation", "Optimization", "Research Platform"],
-        author: {
-            name: "Zion Quantum",
-            id: "zion-quantum",
+            name: "Zion Emotion AI",
+            id: "zion-emotion-ai",
             avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
         },
-        images: ["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-02-08T09:30:00.000Z",
-        aiScore: 99,
-        rating: 4.9,
-        reviewCount: 45,
-        features: ["IBM Q Access", "Google Quantum", "Custom Algorithms", "Research Support"],
-        benefits: ["Cutting-edge technology", "Research acceleration", "Competitive advantage", "Expert consultation"]
+        images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-20T14:30:00.000Z",
+        aiScore: 94,
+        rating: 4.7,
+        reviewCount: 156,
     },
     // NEW: Blockchain & Web3 Services
     {
-        id: "smart-contract-audit",
-        title: "Smart Contract Security Audit",
-        description: "Comprehensive security audits for smart contracts and DeFi protocols. Automated testing, manual review, and vulnerability assessment.",
+        id: "blockchain-smart-contracts",
+        title: "Smart Contract Development",
+        description: "Custom smart contract development for DeFi, NFTs, and blockchain applications. Security auditing and deployment on multiple chains.",
         category: "Blockchain & Web3",
-        price: 199,
+        price: 299,
         currency: "$",
-        tags: ["Smart Contracts", "Security Audit", "DeFi Security", "Vulnerability Assessment"],
+        tags: ["Smart Contracts", "DeFi", "NFTs", "Blockchain Security"],
         author: {
-            name: "Zion Blockchain Security",
+            name: "Zion Blockchain",
             id: "zion-blockchain",
             avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
         },
-        images: ["https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-02-10T16:15:00.000Z",
-        aiScore: 95,
+        images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-25T09:15:00.000Z",
+        aiScore: 93,
         rating: 4.8,
         reviewCount: 78,
-        features: ["Automated Testing", "Manual Code Review", "Vulnerability Database", "Compliance Reports"],
-        benefits: ["Risk mitigation", "Investor confidence", "Regulatory compliance", "Cost savings"]
+    },
+    {
+        id: "nft-marketplace-platform",
+        title: "NFT Marketplace Platform",
+        description: "Complete NFT marketplace solution with minting, trading, and auction capabilities. Multi-chain support and advanced analytics.",
+        category: "Blockchain & Web3",
+        price: 199,
+        currency: "$",
+        tags: ["NFT Platform", "Marketplace", "Multi-chain", "Trading"],
+        author: {
+            name: "Zion NFT Solutions",
+            id: "zion-nft-solutions",
+            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-01T11:00:00.000Z",
+        aiScore: 91,
+        rating: 4.6,
+        reviewCount: 45,
     },
     // NEW: IoT & Edge Computing
     {
@@ -167,87 +180,97 @@ const SERVICE_LISTINGS = [
         category: "IoT & Edge",
         price: 89,
         currency: "$",
-        tags: ["IoT Management", "Device Monitoring", "Data Analytics", "Predictive Maintenance"],
+        tags: ["IoT Management", "Device Monitoring", "Predictive Maintenance", "Real-time Analytics"],
         author: {
-            name: "Zion IoT Solutions",
+            name: "Zion IoT",
             id: "zion-iot",
-            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-02-12T11:45:00.000Z",
-        aiScore: 92,
-        rating: 4.6,
-        reviewCount: 134,
-        features: ["Device Provisioning", "Real-time Monitoring", "Data Visualization", "Alert System"],
-        benefits: ["Operational efficiency", "Predictive insights", "Cost reduction", "Scalable infrastructure"]
-    },
-    // NEW: AR/VR Services
-    {
-        id: "ar-vr-development",
-        title: "AR/VR Development Studio",
-        description: "Custom augmented and virtual reality applications for enterprise, education, and entertainment. Cross-platform development and deployment.",
-        category: "AR/VR",
-        price: 149,
-        currency: "$",
-        tags: ["AR Development", "VR Development", "Cross-platform", "Enterprise Solutions"],
-        author: {
-            name: "Zion Immersive Tech",
-            id: "zion-immersive",
             avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
         },
-        images: ["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-02-15T13:20:00.000Z",
-        aiScore: 93,
+        images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        aiScore: 92,
         rating: 4.7,
-        reviewCount: 67,
-        features: ["Unity Development", "Unreal Engine", "Mobile AR", "Enterprise VR"],
-        benefits: ["Immersive experiences", "Training solutions", "Marketing innovation", "Competitive advantage"]
+        reviewCount: 134,
     },
-    // NEW: FinTech Services
     {
-        id: "ai-trading-bot",
-        title: "AI Trading Bot Platform",
-        description: "Intelligent algorithmic trading bots with machine learning capabilities. Risk management, portfolio optimization, and automated trading strategies.",
-        category: "FinTech",
-        price: 199,
+        id: "edge-ai-processing",
+        title: "Edge AI Processing",
+        description: "AI model deployment and inference at the edge for real-time processing. Optimized for low-latency applications and offline operation.",
+        category: "IoT & Edge",
+        price: 149,
         currency: "$",
-        tags: ["Algorithmic Trading", "Risk Management", "Portfolio Optimization", "Machine Learning"],
+        tags: ["Edge AI", "Real-time Processing", "Offline Operation", "Low Latency"],
         author: {
-            name: "Zion FinTech",
-            id: "zion-fintech",
+            name: "Zion Edge AI",
+            id: "zion-edge-ai",
             avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
         },
-        images: ["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-02-18T10:30:00.000Z",
-        aiScore: 96,
-        rating: 4.8,
-        reviewCount: 89,
-        features: ["Multiple Strategies", "Risk Controls", "Real-time Analytics", "API Integration"],
-        benefits: ["Automated trading", "Risk reduction", "24/7 operation", "Performance optimization"]
+        images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-20T14:30:00.000Z",
+        aiScore: 89,
+        rating: 4.5,
+        reviewCount: 67,
     },
-    // NEW: Green Tech Services
+    // NEW: Quantum Computing Services
     {
-        id: "carbon-tracking",
-        title: "Carbon Footprint Tracker",
-        description: "AI-powered carbon footprint tracking and sustainability analytics for businesses and individuals. Real-time monitoring and reduction recommendations.",
-        category: "Green Tech",
-        price: 39,
+        id: "quantum-algorithm-development",
+        title: "Quantum Algorithm Development",
+        description: "Custom quantum algorithm development for optimization, cryptography, and machine learning. Access to quantum simulators and real quantum hardware.",
+        category: "Quantum Computing",
+        price: 599,
         currency: "$",
-        tags: ["Carbon Tracking", "Sustainability", "Environmental Impact", "Green Analytics"],
+        tags: ["Quantum Algorithms", "Optimization", "Cryptography", "Quantum ML"],
         author: {
-            name: "Zion Green Tech",
-            id: "zion-green",
+            name: "Zion Quantum",
+            id: "zion-quantum",
             avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
         },
-        images: ["https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-02-20T15:45:00.000Z",
-        aiScore: 91,
-        rating: 4.6,
-        reviewCount: 156,
-        features: ["Real-time Tracking", "AI Recommendations", "Sustainability Reports", "Goal Setting"],
-        benefits: ["Environmental impact", "Cost savings", "Regulatory compliance", "Brand reputation"]
+        images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-25T09:15:00.000Z",
+        aiScore: 95,
+        rating: 4.9,
+        reviewCount: 23,
     },
-    // NEW: Cybersecurity Services
+    // NEW: AR/VR & Metaverse
+    {
+        id: "ar-vr-development",
+        title: "AR/VR Application Development",
+        description: "Custom augmented and virtual reality applications for training, marketing, and entertainment. Cross-platform development for major VR headsets.",
+        category: "AR/VR & Metaverse",
+        price: 399,
+        currency: "$",
+        tags: ["AR Development", "VR Development", "Cross-platform", "3D Modeling"],
+        author: {
+            name: "Zion Immersive",
+            id: "zion-immersive",
+            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-01T11:00:00.000Z",
+        aiScore: 88,
+        rating: 4.6,
+        reviewCount: 89,
+    },
+    {
+        id: "metaverse-platform",
+        title: "Metaverse Platform Development",
+        description: "Custom metaverse environments and virtual worlds for brands, events, and communities. Social features, virtual commerce, and interactive experiences.",
+        category: "AR/VR & Metaverse",
+        price: 799,
+        currency: "$",
+        tags: ["Metaverse", "Virtual Worlds", "Social VR", "Virtual Commerce"],
+        author: {
+            name: "Zion Metaverse",
+            id: "zion-metaverse",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        aiScore: 90,
+        rating: 4.7,
+        reviewCount: 56,
+    },
+    // NEW: Advanced Cybersecurity
     {
         id: "ai-threat-detection",
         title: "AI Threat Detection",
@@ -310,7 +333,7 @@ const SERVICE_LISTINGS = [
         rating: 4.8,
         reviewCount: 92,
     },
-    // Cloud & Infrastructure Services
+    // NEW: Advanced Cloud Services
     {
         id: "multi-cloud-management",
         title: "Multi-Cloud Management",
@@ -368,7 +391,7 @@ const SERVICE_LISTINGS = [
         rating: 4.5,
         reviewCount: 73,
     },
-    // Business Intelligence Services
+    // NEW: Advanced Business Intelligence
     {
         id: "ai-crm",
         title: "AI-Powered CRM",
@@ -426,7 +449,7 @@ const SERVICE_LISTINGS = [
         rating: 4.8,
         reviewCount: 98,
     },
-    // Communication & Collaboration Services
+    // NEW: Advanced Communication Services
     {
         id: "ai-meeting-assistant",
         title: "AI Meeting Assistant",
@@ -484,7 +507,7 @@ const SERVICE_LISTINGS = [
         rating: 4.8,
         reviewCount: 178,
     },
-    // Specialized Tools
+    // NEW: Specialized AI Tools
     {
         id: "ai-legal-review",
         title: "AI Legal Document Review",
@@ -811,6 +834,45 @@ const SERVICE_LISTINGS = [
         aiScore: 90,
         rating: 4.8,
         reviewCount: 267,
+    },
+    // NEW: Emerging Technology Services
+    {
+        id: "robotics-automation",
+        title: "Robotics Process Automation",
+        description: "Custom RPA solutions for manufacturing, logistics, and service industries. Integration with existing systems and AI-powered decision making.",
+        category: "Emerging Tech",
+        price: 399,
+        currency: "$",
+        tags: ["RPA", "Manufacturing", "Logistics", "AI Integration"],
+        author: {
+            name: "Zion Robotics",
+            id: "zion-robotics",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        aiScore: 87,
+        rating: 4.5,
+        reviewCount: 67,
+    },
+    {
+        id: "5g-network-optimization",
+        title: "5G Network Optimization",
+        description: "5G network planning, optimization, and management services. Coverage analysis, capacity planning, and performance optimization.",
+        category: "Emerging Tech",
+        price: 299,
+        currency: "$",
+        tags: ["5G Networks", "Network Optimization", "Coverage Analysis", "Performance"],
+        author: {
+            name: "Zion 5G Solutions",
+            id: "zion-5g-solutions",
+            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-20T14:30:00.000Z",
+        aiScore: 89,
+        rating: 4.6,
+        reviewCount: 89,
     },
     // Legacy services (keeping existing ones)
     {
@@ -1247,7 +1309,9 @@ const SERVICE_LISTINGS = [
 const SERVICE_FILTERS = [
     { label: 'AI & ML', value: 'ai-ml' },
     { label: 'Blockchain & Web3', value: 'blockchain-web3' },
+    { label: 'IoT & Edge', value: 'iot-edge' },
     { label: 'Quantum Computing', value: 'quantum-computing' },
+    { label: 'AR/VR & Metaverse', value: 'ar-vr-metaverse' },
     { label: 'Cybersecurity', value: 'cybersecurity' },
     { label: 'Cloud & Infrastructure', value: 'cloud-infrastructure' },
     { label: 'Business Intelligence', value: 'business-intelligence' },
@@ -1261,6 +1325,7 @@ const SERVICE_FILTERS = [
     { label: 'Sustainability', value: 'sustainability' },
     { label: 'Energy & Smart Cities', value: 'energy-smart-cities' },
     { label: 'Specialized Tools', value: 'specialized-tools' },
+    { label: 'Emerging Tech', value: 'emerging-tech' },
     { label: 'Development', value: 'development' },
     { label: 'Management', value: 'management' },
     { label: 'Security', value: 'security' },
@@ -1279,81 +1344,15 @@ const SERVICE_FILTERS = [
 
 export default function ServicesPage() {
     const [listings, setListings] = useState(SERVICE_LISTINGS);
-    const [filteredListings, setFilteredListings] = useState(SERVICE_LISTINGS);
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
-    const [sortBy, setSortBy] = useState('newest');
-
+    
     useEffect(() => {
         const interval = setInterval(() => {
             setListings(prev => [...prev, generateRandomService(prev.length + 1)]);
         }, 120000);
         return () => clearInterval(interval);
     }, []);
-
-    useEffect(() => {
-        let filtered = listings;
-        
-        // Filter by category
-        if (selectedCategory !== 'all') {
-            filtered = filtered.filter(service => 
-                service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory
-            );
-        }
-        
-        // Filter by search term
-        if (searchTerm) {
-            filtered = filtered.filter(service =>
-                service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-            );
-        }
-        
-        // Sort results
-        switch (sortBy) {
-            case 'price-low':
-                filtered = [...filtered].sort((a, b) => a.price - b.price);
-                break;
-            case 'price-high':
-                filtered = [...filtered].sort((a, b) => b.price - a.price);
-                break;
-            case 'rating':
-                filtered = [...filtered].sort((a, b) => b.rating - a.rating);
-                break;
-            case 'ai-score':
-                filtered = [...filtered].sort((a, b) => b.aiScore - a.aiScore);
-                break;
-            case 'newest':
-            default:
-                filtered = [...filtered].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-                break;
-        }
-        
-        setFilteredListings(filtered);
-    }, [listings, selectedCategory, searchTerm, sortBy]);
-
-    return (<div className="min-h-screen bg-background">
-      <SEO title="IT & AI Services - Zion Tech Group" description="Find expert technology service providers for your business needs, from AI development to infrastructure management." keywords="IT services, AI services, technology consulting, Zion Tech Group" url="https://ziontechgroup.com/services"/>
-      
-      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <h2 className="text-white text-lg font-medium">Featured Services</h2>
-          <div className="flex flex-wrap gap-2">
-            <Link to="/comprehensive-services">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Globe className="h-4 w-4 mr-2"/>
-                View All Services
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-                Request a Quote
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </div>
 
     const filteredServices = listings.filter(service => {
         const matchesCategory = selectedCategory === 'all' || 
@@ -1364,205 +1363,245 @@ export default function ServicesPage() {
         return matchesCategory && matchesSearch;
     });
 
-        {/* Search and Filter Section */}
-        <div className="mb-8 bg-white/95 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 shadow-lg">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            {/* Search */}
-            <div className="md:col-span-2">
-              <label className="block text-sm font-medium text-zion-blue mb-2">Search Services</label>
-              <input
-                type="text"
-                placeholder="Search by name, description, or tags..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-2 border border-zion-cyan/20 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent bg-white/50 backdrop-blur-sm"
-              />
-            </div>
-            
-            {/* Category Filter */}
-            <div>
-              <label className="block text-sm font-medium text-zion-blue mb-2">Category</label>
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-2 border border-zion-cyan/20 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent bg-white/50 backdrop-blur-sm"
-              >
-                <option value="all">All Categories</option>
-                {SERVICE_FILTERS.map(filter => (
-                  <option key={filter.value} value={filter.value}>
-                    {filter.label}
-                  </option>
-                ))}
-              </select>
-            </div>
-            
-            {/* Sort */}
-            <div>
-              <label className="block text-sm font-medium text-zion-blue mb-2">Sort By</label>
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="w-full px-4 py-2 border border-zion-cyan/20 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent bg-white/50 backdrop-blur-sm"
-              >
-                <option value="newest">Newest First</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="rating">Highest Rated</option>
-                <option value="ai-score">Highest AI Score</option>
-              </select>
-            </div>
-          </div>
-          
-          {/* Results Count */}
-          <div className="mt-4 pt-4 border-t border-zion-cyan/20">
-            <p className="text-sm text-zion-slate-light">
-              Showing {filteredListings.length} of {listings.length} services
-            </p>
-          </div>
-        </div>
+    const categories = ['all', ...SERVICE_FILTERS.map(filter => filter.value)];
 
-                {filteredListings.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredListings.map((service) => (
-              <div key={service.id} className="bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl p-6 border border-zion-cyan/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-zion-purple/25 group">
-                {/* Service Image */}
-                {service.images && service.images[0] && (
-                  <div className="mb-4 relative overflow-hidden rounded-lg">
-                    <img 
-                      src={service.images[0]} 
-                      alt={service.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-2 right-2 bg-zion-cyan text-black px-2 py-1 rounded-full text-xs font-bold">
-                      AI Score: {service.aiScore}
-                    </div>
-                  </div>
-                )}
-                
-                <div className="mb-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="px-3 py-1 bg-zion-blue/10 text-zion-blue text-xs font-medium rounded-full">
-                      {service.category}
-                    </span>
-                    <div className="flex items-center gap-1">
-                      <span className="text-yellow-500">★</span>
-                      <span className="font-medium text-sm">{service.rating}</span>
-                      <span className="text-zion-slate-light text-xs">({service.reviewCount})</span>
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-zion-blue mb-2 group-hover:text-zion-purple transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-zion-slate-light text-sm leading-relaxed mb-3">
-                    {service.description}
-                  </p>
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+            <SEO 
+                title="Innovative IT & AI Services - Zion Tech Group" 
+                description="Discover cutting-edge technology services including AI, blockchain, quantum computing, AR/VR, IoT, and cybersecurity solutions. Transform your business with Zion Tech Group's innovative micro SAAS services." 
+                keywords="AI services, blockchain development, quantum computing, AR/VR development, IoT solutions, cybersecurity, Zion Tech Group, micro SAAS" 
+                url="https://ziontechgroup.com/services"
+            />
+            
+            {/* Enhanced Hero Section */}
+            <div className="relative py-20 bg-gradient-to-br from-zion-blue-dark via-zion-purple-dark to-zion-blue overflow-hidden">
+                {/* Animated background elements */}
+                <div className="absolute inset-0 opacity-20">
+                    <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
+                    <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
+                    <div className="absolute top-1/2 left-1/2 w-32 h-32 border border-zion-cyan-light rounded-full animate-pulse delay-500"></div>
                 </div>
                 
-                {/* Features */}
-                {service.features && (
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-zion-blue mb-2">Key Features:</h4>
-                    <div className="flex flex-wrap gap-1">
-                      {service.features.slice(0, 3).map((feature, index) => (
-                        <span key={index} className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full">
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                
-                {/* Benefits */}
-                {service.benefits && (
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-zion-blue mb-2">Benefits:</h4>
-                    <div className="space-y-1">
-                      {service.benefits.slice(0, 2).map((benefit, index) => (
-                        <div key={index} className="flex items-center gap-2 text-xs text-zion-slate-light">
-                          <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
-                          {benefit}
+                <div className="container mx-auto px-4 text-center relative z-10">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                            <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                                Innovative
+                            </span>{' '}
+                            Tech Services
+                        </h1>
+                        <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto leading-relaxed">
+                            Discover cutting-edge AI, blockchain, quantum computing, AR/VR, IoT, and cybersecurity solutions. 
+                            Transform your business with our innovative micro SAAS services.
+                        </p>
+                        
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                            <Link to="/contact">
+                                <Button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
+                                    Get Started Today
+                                </Button>
+                            </Link>
+                            <Link to="/about">
+                                <Button variant="outline" className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
+                                    Learn More
+                                </Button>
+                            </Link>
                         </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                
-                {/* Pricing and Market Info */}
-                <div className="mb-4 p-3 bg-gradient-to-r from-zion-blue/5 to-zion-purple/5 rounded-lg border border-zion-cyan/20">
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="text-2xl font-bold text-zion-purple">
-                      ${service.price?.toLocaleString()}
-                    </div>
-                    {service.marketPrice && (
-                      <div className="text-xs text-zion-slate-light">
-                        Market: {service.marketPrice}
-                      </div>
-                    )}
-                  </div>
-                  {service.website && (
-                    <a 
-                      href={service.website} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-xs text-zion-cyan hover:text-zion-purple transition-colors underline"
-                    >
-                      Visit Website →
-                    </a>
-                  )}
-                </div>
 
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {service.tags.slice(0, 4).map((tag, index) => (
-                    <span key={index} className="px-2 py-1 bg-zion-blue/10 text-zion-blue text-xs rounded-full">
-                      {tag}
-                    </span>
-                  ))}
+                        {/* Service Categories Overview */}
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                            {['AI & ML', 'Blockchain', 'IoT & Edge', 'Quantum'].map((category, index) => (
+                                <motion.div
+                                    key={category}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                                    className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-zion-cyan/20"
+                                >
+                                    <div className="text-2xl font-bold text-zion-cyan mb-1">{category}</div>
+                                    <div className="text-zion-slate-light text-sm">Cutting-edge</div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </motion.div>
                 </div>
-
-                <div className="flex gap-2">
-                  <Link to="/contact" className="flex-1">
-                    <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white transition-all duration-300 hover:scale-105">
-                      Get Quote
-                    </Button>
-                  </Link>
-                  {service.website && (
-                    <a 
-                      href={service.website} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="px-4 py-2 border border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-colors duration-300 text-sm font-medium"
-                    >
-                      Demo
-                    </a>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-16">
-            <div className="w-24 h-24 bg-zion-cyan/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg className="w-12 h-12 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
             </div>
-            <h3 className="text-2xl font-bold text-zion-blue mb-2">No Services Found</h3>
-            <p className="text-zion-slate-light mb-6">
-              Try adjusting your search criteria or browse all our services.
-            </p>
-            <button 
-              onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('all');
-                setSortBy('newest');
-              }}
-              className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-transform"
-            >
-              Clear Filters
-            </button>
-          </div>
-        )}
-      </div>
-    </div>);
+
+            {/* Enhanced Services Section */}
+            <div className="container mx-auto px-4 py-16">
+                {/* Search and Filter Section */}
+                <div className="mb-12">
+                    <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+                        <div className="flex-1 max-w-md">
+                            <div className="relative">
+                                <input
+                                    type="text"
+                                    placeholder="Search services..."
+                                    value={searchTerm}
+                                    onChange={(e) => setSearchTerm(e.target.value)}
+                                    className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                                />
+                                <div className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light">
+                                    🔍
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div className="flex flex-wrap gap-2">
+                            {categories.map((category) => (
+                                <button
+                                    key={category}
+                                    onClick={() => setSelectedCategory(category)}
+                                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                                        selectedCategory === category
+                                            ? 'bg-zion-cyan text-black shadow-lg shadow-zion-cyan/25'
+                                            : 'bg-white/10 text-zion-slate-light hover:bg-white/20 hover:text-white border border-zion-cyan/20'
+                                    }`}
+                                >
+                                    {category === 'all' ? 'All Services' : 
+                                        SERVICE_FILTERS.find(f => f.value === category)?.label || category}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Services Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {filteredServices.map((service) => (
+                        <motion.div
+                            key={service.id}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="group bg-white/5 backdrop-blur-sm rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10 overflow-hidden"
+                        >
+                            {/* Service Image */}
+                            <div className="relative h-48 overflow-hidden">
+                                <img
+                                    src={service.images[0]}
+                                    alt={service.title}
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                />
+                                <div className="absolute top-4 right-4 bg-zion-cyan/90 text-black px-2 py-1 rounded-full text-xs font-bold">
+                                    {service.category}
+                                </div>
+                                <div className="absolute bottom-4 left-4 bg-black/80 text-white px-2 py-1 rounded-full text-xs">
+                                    AI Score: {service.aiScore}
+                                </div>
+                            </div>
+
+                            {/* Service Content */}
+                            <div className="p-6">
+                                <div className="mb-4">
+                                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
+                                        {service.title}
+                                    </h3>
+                                    <p className="text-zion-slate-light text-sm leading-relaxed">
+                                        {service.description}
+                                    </p>
+                                </div>
+                                
+                                {/* Price and Rating */}
+                                <div className="flex items-center justify-between mb-4">
+                                    <div className="text-2xl font-bold text-zion-cyan">
+                                        ${service.price?.toLocaleString()}
+                                        <span className="text-sm text-zion-slate-light font-normal">/month</span>
+                                    </div>
+                                    <div className="flex items-center gap-1">
+                                        <span className="text-yellow-400">★</span>
+                                        <span className="font-medium text-white">{service.rating}</span>
+                                        <span className="text-zion-slate-light text-sm">({service.reviewCount})</span>
+                                    </div>
+                                </div>
+
+                                {/* Tags */}
+                                <div className="flex flex-wrap gap-2 mb-6">
+                                    {service.tags.slice(0, 3).map((tag, index) => (
+                                        <span key={index} className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                {/* Author Info */}
+                                <div className="flex items-center justify-between mb-6">
+                                    <div className="flex items-center gap-3">
+                                        <img
+                                            src={service.author.avatarUrl || 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100'}
+                                            alt={service.author.name}
+                                            className="w-8 h-8 rounded-full border-2 border-zion-cyan/30"
+                                        />
+                                        <div>
+                                            <div className="text-white text-sm font-medium">{service.author.name}</div>
+                                            <div className="text-zion-slate-light text-xs">Verified Provider</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Action Buttons */}
+                                <div className="flex gap-3">
+                                    <Link to="/contact" className="flex-1">
+                                        <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan/80 hover:to-zion-purple/80 text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:scale-105">
+                                            Get Quote
+                                        </Button>
+                                    </Link>
+                                    <Button variant="outline" className="px-4 py-3 border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300">
+                                        Details
+                                    </Button>
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+
+                {/* No Results Message */}
+                {filteredServices.length === 0 && (
+                    <div className="text-center py-16">
+                        <div className="text-6xl mb-4">🔍</div>
+                        <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+                        <p className="text-zion-slate-light mb-6">Try adjusting your search terms or category filter</p>
+                        <Button 
+                            onClick={() => {
+                                setSearchTerm('');
+                                setSelectedCategory('all');
+                            }}
+                            className="bg-zion-cyan text-black px-6 py-3 rounded-lg hover:bg-zion-cyan/80 transition-colors"
+                        >
+                            Clear Filters
+                        </Button>
+                    </div>
+                )}
+
+                {/* Call to Action */}
+                <div className="mt-20 text-center">
+                    <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark p-12 rounded-2xl border border-zion-cyan/20">
+                        <h2 className="text-3xl font-bold text-white mb-4">
+                            Ready to Transform Your Business?
+                        </h2>
+                        <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
+                            Connect with our team of experts to discuss your technology needs and discover how our innovative solutions can drive your success.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <Link to="/contact">
+                                <Button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300">
+                                    Start Your Project
+                                </Button>
+                            </Link>
+                            <Link to="/about">
+                                <Button variant="outline" className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
+                                    Learn More
+                                </Button>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 }
