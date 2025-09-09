@@ -155,42 +155,31 @@ const getFallbackCategories = (): Category[] => {
   ];
 };
 
-// Helper function to get fallback equipment
-const getFallbackEquipment = (filters: SearchFilters = {}): Equipment[] => {
-  const fallbackEquipment: Equipment[] = [
-    {
-      id: 'eq-1',
-      name: 'AI Workstation Pro',
-      description: 'High-performance workstation optimized for AI development',
-      category: 'Hardware',
-      price: 4999,
-      currency: 'USD',
-      availability: 'In Stock',
-      location: 'San Francisco, CA',
-      specifications: ['NVIDIA RTX 4090', '128GB RAM', '2TB NVMe SSD'],
-      rating: 4.8,
-      reviewCount: 23
-    },
-    {
-      id: 'eq-2', 
-      name: 'Cloud GPU Cluster',
-      description: 'Scalable GPU cluster for machine learning training',
-      category: 'Cloud',
-      price: 2.50,
-      currency: 'USD',
-      availability: 'Available',
-      location: 'Global',
-      specifications: ['NVIDIA A100', 'Auto-scaling', 'Kubernetes'],
-      rating: 4.9,
-      reviewCount: 67
+export const fetchCategories = async (): Promise<Category[]> => {
+  try {
+    console.log('Fetching marketplace categories from /api/market/categories/ ...');
+    
+    // Ensure the path is correct for the new Django endpoint
+    const response = await marketplaceClient.get('/api/market/categories/', { // MODIFIED PATH
+      timeout: 10000, // 10 second timeout
+    });
+    
+    if (response.data && Array.isArray(response.data)) {
+      console.log(`Successfully fetched ${response.data.length} categories`);
+      return response.data;
+    } else {
+      console.warn('Categories API returned unexpected data format:', response.data);
+      return []; // Or throw an error if preferred
     }
-  ];
-  
-  // Apply basic filtering
-  if (filters.category) {
-    return fallbackEquipment.filter(eq => 
-      eq.category.toLowerCase() === filters.category?.toLowerCase()
-    );
+  } catch (error: any) {
+    console.error('Marketplace fetch failed - Categories:', {
+      message: error.message,
+      status: error.response?.status,
+      url: error.config?.url,
+    });
+    
+    // Re-throw the error so the hook can catch the raw error object
+    throw error;
   }
   
   return fallbackEquipment;
