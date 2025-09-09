@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { ButtonProps } from '../../types/components';
 import LoadingSpinner from '../LoadingSpinner';

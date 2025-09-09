@@ -29,8 +29,8 @@ export interface FeatureCardProps extends Omit<BaseComponentProps, 'id'> {
 
 // Button props
 export interface ButtonProps extends BaseComponentProps {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
-  size?: 'sm' | 'md' | 'lg';
+  variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
+  size?: 'default' | 'sm' | 'lg' | 'icon';
   disabled?: boolean;
   loading?: boolean;
   onClick?: () => void;
