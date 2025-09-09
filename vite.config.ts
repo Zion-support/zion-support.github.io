@@ -32,7 +32,24 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        passes: 2,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
+        hoist_funs: true,
+        hoist_vars: true,
+        reduce_vars: true,
+        side_effects: false
+      },
+      mangle: {
+        toplevel: true,
+        properties: {
+          regex: /^_/
+        }
       }
     },
     rollupOptions: {
@@ -40,12 +57,35 @@ export default defineConfig({
         main: './index.html'
       },
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'router-vendor': ['react-router-dom'],
-          'ui-vendor': ['framer-motion', 'lucide-react'],
-          'utils-vendor': ['date-fns', 'clsx', 'tailwind-merge'],
-          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod']
+        manualChunks: (id) => {
+          // React ecosystem
+          if (id.includes('react') || id.includes('react-dom')) {
+            return 'react-vendor';
+          }
+          // Router
+          if (id.includes('react-router')) {
+            return 'router-vendor';
+          }
+          // UI libraries
+          if (id.includes('framer-motion') || id.includes('lucide-react')) {
+            return 'ui-vendor';
+          }
+          // Form handling
+          if (id.includes('react-hook-form') || id.includes('@hookform') || id.includes('zod')) {
+            return 'form-vendor';
+          }
+          // Utilities
+          if (id.includes('date-fns') || id.includes('clsx') || id.includes('tailwind-merge')) {
+            return 'utils-vendor';
+          }
+          // SEO and analytics
+          if (id.includes('react-helmet') || id.includes('react-error-boundary')) {
+            return 'seo-vendor';
+          }
+          // Large node modules
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
@@ -72,8 +112,18 @@ export default defineConfig({
       'framer-motion',
       'lucide-react',
       'clsx',
-      'tailwind-merge'
-    ]
+      'tailwind-merge',
+      'react-helmet-async',
+      'react-error-boundary'
+    ],
+    exclude: ['@vite/client', '@vite/env']
+  },
+  esbuild: {
+    treeShaking: true,
+    minifyIdentifiers: true,
+    minifySyntax: true,
+    minifyWhitespace: true,
+    drop: ['console', 'debugger']
   },
   server: {
     port: 3000,
