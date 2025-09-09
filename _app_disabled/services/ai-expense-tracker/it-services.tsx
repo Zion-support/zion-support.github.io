@@ -3,13 +3,9 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import {
-  Server,
   Shield,
   Cloud,
   Database,
-  Smartphone,
-  Globe,
-  Lock,
   CheckCircle,
   ArrowRight,
   Phone,
@@ -19,17 +15,9 @@ import {
   Clock,
   Award,
   Users,
-  Building,
-  TrendingUp,
   Target,
   Star,
-  Rocket,
-  Brain,
-  Cpu,
-  FileText,
   Settings,
-  Monitor,
-  Wifi,
   HardDrive,
   Network
 } from 'lucide-react'
