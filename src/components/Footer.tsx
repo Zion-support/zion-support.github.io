@@ -1,17 +1,88 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-  Instagram, 
-  Mail, 
-  Phone, 
-  MapPin,
-  ArrowUp,
-  Heart
-} from 'lucide-react';
+import { Heart, Mail, Phone, MapPin, Globe, ArrowUp } from 'lucide-react';
+
+export const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
+  const socialLinks = [
+    { name: "LinkedIn", url: "https://www.linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
+    { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦", color: "hover:bg-sky-500/20" },
+    { name: "GitHub", url: "https://github.com/Zion-Holdings", icon: "💻", color: "hover:bg-gray-600/20" },
+    { name: "YouTube", url: "https://www.youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },
+    { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮", color: "hover:bg-indigo-600/20" }
+  ];
+
+  const footerSections = [
+    {
+      title: "AI & ML Services",
+      links: [
+        { label: "AI Workflow Automation", path: "/services/ai-workflow-automation" },
+        { label: "AI Content Generation", path: "/services" },
+        { label: "AI Analytics Platform", path: "/services" },
+        { label: "Machine Learning Solutions", path: "/services" }
+      ]
+    },
+    {
+      title: "Quantum & Blockchain",
+      links: [
+        { label: "Quantum Data Analytics", path: "/services/quantum-data-analytics" },
+        { label: "Blockchain Infrastructure", path: "/services/blockchain-infrastructure" },
+        { label: "NFT Marketplace", path: "/services" },
+        { label: "DeFi Solutions", path: "/services" }
+      ]
+    },
+    {
+      title: "Security & Cloud",
+      links: [
+        { label: "Zero Trust Security", path: "/services" },
+        { label: "SOC 2 Compliance", path: "/services" },
+        { label: "Cloud Migration", path: "/services" },
+        { label: "DevOps Automation", path: "/services" }
+      ]
+    },
+    {
+      title: "Company",
+      links: [
+        { label: "About Us", path: "/about" },
+        { label: "Our Team", path: "/about" },
+        { label: "Careers", path: "/careers" },
+        { label: "News & Updates", path: "/news" },
+        { label: "Case Studies", path: "/case-studies" },
+        { label: "Partners", path: "/partners" }
+      ]
+    },
+    {
+      title: "Resources",
+      links: [
+        { label: "Blog", path: "/blog" },
+        { label: "Documentation", path: "/docs" },
+        { label: "White Papers", path: "/white-papers" },
+        { label: "Webinars", path: "/webinars" },
+        { label: "Research", path: "/research-development" },
+        { label: "Events", path: "/events" },
+        { label: "Training", path: "/training" }
+      ]
+    },
+    {
+      title: "Support",
+      links: [
+        { label: "Contact Us", path: "/contact" },
+        { label: "Help Center", path: "/help" },
+        { label: "Support Portal", path: "/support" },
+        { label: "FAQ", path: "/faq" },
+        { label: "Consulting", path: "/services" },
+        { label: "Request Quote", path: "/contact" }
+      ]
+    }
+  ];
+
+  const contactInfo = [
+    { icon: Mail, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },
+    { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
+    { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },
+    { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
+  ];
 
 export function Footer() {
   const scrollToTop = () => {
@@ -71,17 +142,10 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-zion-blue-dark text-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }} />
-      </div>
-
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+    <footer className="bg-slate-900 text-white">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
