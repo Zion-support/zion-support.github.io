@@ -2,74 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Quote, Star, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 
-const testimonials = [
-  {
-    id: 1,
-    name: "Sarah Johnson",
-    role: "CTO at TechCorp",
-    comp: "TechCorp Inc.",
-    content: "Zion Tech Group has revolutionized how we find AI talent. The platform is intuitive and the quality of candidates is exceptional. We've reduced our hiring time by 60% while improving candidate quality.",
-    avatar: "/avatars/sarah.jpg",
-    rating: 5,
-    category: "Enterprise",
-    project: "AI Talent Acquisition"
-  },
-  {
-    id: 2,
-    name: "Michael Chen",
-    role: "AI Engineer",
-    comp: "Freelance",
-    content: "As a freelancer, Zion Tech Group has opened up incredible opportunities. The marketplace is well-organized and the clients are top-tier. I've doubled my income since joining the platform.",
-    avatar: "/avatars/michael.jpg",
-    rating: 5,
-    category: "Freelancer",
-    project: "Machine Learning Solutions"
-  },
-  {
-    id: 3,
-    name: "Dr. Emily Rodriguez",
-    role: "Research Director",
-    comp: "InnovateLab",
-    content: "The AI services we found through Zion Tech Group exceeded our expectations. The team delivered cutting-edge solutions that accelerated our research by months. Highly recommended!",
-    avatar: "/avatars/emily.jpg",
-    rating: 5,
-    category: "Research",
-    project: "AI Research Platform"
-  },
-  {
-    id: 4,
-    name: "David Kim",
-    role: "Startup Founder",
-    comp: "DataFlow",
-    content: "Starting a tech company is challenging, but Zion Tech Group made it so much easier. We found the perfect team and equipment to get our MVP to market in record time.",
-    avatar: "/avatars/david.jpg",
-    rating: 5,
-    category: "Startup",
-    project: "SaaS Platform"
-  },
-  {
-    id: 5,
-    name: "Lisa Thompson",
-    role: "IT Manager",
-    comp: "Global Retail Co.",
-    content: "Our digital transformation project was a huge success thanks to Zion Tech Group. The comprehensive services and expert team delivered everything we needed on time and budget.",
-    avatar: "/avatars/lisa.jpg",
-    rating: 5,
-    category: "Enterprise",
-    project: "Digital Transformation"
-  },
-  {
-    id: 6,
-    name: "Alex Patel",
-    role: "DevOps Engineer",
-    comp: "CloudScale",
-    content: "The infrastructure solutions from Zion Tech Group are world-class. We've achieved 99.99% uptime and our performance has improved dramatically. The team is incredibly responsive.",
-    avatar: "/avatars/alex.jpg",
-    rating: 5,
-    category: "Infrastructure",
-    project: "Cloud Infrastructure"
-  }
-];
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Avatar } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Quote } from "lucide-react";
+import Link from "next/link";
+import { CASE_STUDIES } from "@/data/case-studies";
 
 const swipeConfidenceThreshold = 10000;
 const swipePower = (offset: number, velocity: number) => {
@@ -220,15 +165,43 @@ export function TestimonialCarousel() {
             className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-blue-dark/80 hover:bg-zion-blue-dark border border-zion-blue-light/30 hover:border-zion-cyan/50 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-zion-cyan/25 z-10"
             onClick={() => paginate(-1)}
           >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-
-          <button
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-blue-dark/80 hover:bg-zion-blue-dark border border-zion-blue-light/30 hover:border-zion-cyan/50 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-zion-cyan/25 z-10"
-            onClick={() => paginate(1)}
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
+            <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
+                  <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 flex flex-col">
+                    <CardContent className="p-8 flex flex-col md:flex-row gap-6 flex-1">
+                      <div className="flex-shrink-0 flex flex-col items-center">
+                        <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">
+                          <img src={testimonial.avatar} alt={testimonial.author} />
+                        </Avatar>
+                        <div className="text-center md:text-left">
+                          <p className="font-bold text-zion-cyan">{testimonial.author}</p>
+                          <p className="text-zion-slate-light text-sm">{testimonial.role}</p>
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-4">
+                          <img src={testimonial.companyLogo} alt={`${testimonial.company} logo`} className="h-8 w-auto" />
+                          <span className="text-white font-semibold">{testimonial.company}</span>
+                        </div>
+                        <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />
+                        <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>
+                      </div>
+                    </CardContent>
+                    <CardFooter className="p-6 pt-0">
+                      <Button variant="link" className="text-zion-cyan p-0" asChild>
+                        <Link href={`/case-studies/${testimonial.slug}`}>Read Case Study →</Link>
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center mt-8 gap-2">
+              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
+              <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
+            </div>
+          </Carousel>
         </div>
 
         <div className="flex justify-center gap-3 mt-8">

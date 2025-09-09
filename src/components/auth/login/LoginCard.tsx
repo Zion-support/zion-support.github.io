@@ -1,5 +1,4 @@
-
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { LoginForm } from "./LoginForm";
 import { SocialLogin } from "./SocialLogin";
 
@@ -10,10 +9,15 @@ export function LoginCard() {
         <h2 className="text-3xl font-bold tracking-tight text-white">
           Welcome back
         </h2>
-        <p className="mt-2 text-sm text-zion-slate-light">
-          Don't have an account?{" "}
-          <Link to="/signup" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
-            Sign up
+        <div className="mt-2 text-sm text-zion-slate-light flex justify-center space-x-1">
+          <span>Don't have an account?</span>
+          <Link href="/signup">
+            <a
+              className="font-medium text-zion-cyan hover:text-zion-cyan-light"
+              style={{ color: "#0af" }}
+            >
+              Create account
+            </a>
           </Link>
         </p>
       </div>

@@ -1,6 +1,8 @@
 
 import React, { memo } from 'react';
 import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import Link from "next/link";
 
 const InfoCard: React.FC<{ children: React.ReactNode }> = memo(({ children }) => (
   <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -72,79 +74,13 @@ const About: React.FC = memo(() => {  const features = [
           </div>
         </div>
 
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-12 border border-white/20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6 text-white">Our Mission</h2>
-            <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
-              To empower businesses and organizations with transformative technology solutions that drive growth, 
-              efficiency, and innovation in an ever-evolving digital landscape.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold mb-6 text-white">What We Do</h3>
-              <ul className="space-y-4 text-zion-slate-light">
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-zion-blue-light mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
-                  AI-Powered Business Solutions
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-zion-blue-light mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
-                  Quantum Computing Platforms
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-zion-blue-light mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
-                  Cybersecurity & Compliance
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-zion-blue-light mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
-                  Cloud Infrastructure & DevOps
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-zion-blue-light mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
-                  Micro SAAS Development
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold mb-6 text-white">Why Choose Us</h3>
-              <ul className="space-y-4 text-zion-slate-light">
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-zion-purple mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
-                  Proven track record of successful projects
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-zion-purple mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
-                  Cutting-edge technology expertise
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-zion-purple mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
-                  24/7 support and monitoring
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-zion-purple mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
-                  Scalable and future-proof solutions
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-zion-purple mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
-                  Competitive pricing and flexible terms
-                </li>
-              </ul>
-            </div>
-
-          </div>
+        <div className="content-section text-center">
+          <p className="text-zion-slate-light text-lg">
+            Ready to work with us? Explore our{' '}
+            <Link href="/services"><a className="text-zion-cyan underline">AI & IT services</a></Link>{' '}
+            or <Link href="/contact"><a className="text-zion-cyan underline">get in touch</a></Link>. For the latest updates, visit our{' '}
+            <Link href="/blog"><a className="text-zion-cyan underline">blog</a></Link>.
+          </p>
         </div>
       </div>
     </div>

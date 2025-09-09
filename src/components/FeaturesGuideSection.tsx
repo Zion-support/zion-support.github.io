@@ -208,10 +208,7 @@ export function FeaturesGuideSection() {
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             asChild
           >
-            <Link
-              href="/marketplace"
-              onClick={() => fireEvent('explore_marketplace_click')}
-            >
+            <Link href="/marketplace">
               Explore Full Marketplace
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
