@@ -1,8 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 const Services: NextPage = () => {
   const serviceCategories = [
     {
@@ -185,15 +182,11 @@ export default function ServicesIndexPage() {
     'Observability': 'observability',
     'Quality & Monitoring': 'quality',
   };
->>>>>>> origin/feat/q3-services
 
-=======
 export default function ServicesIndex() {
->>>>>>> origin/feat/home-redesign
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       <Head>
-<<<<<<< HEAD
         <title>Our Services - Zion Tech Group | Comprehensive Technology Solutions</title>
         <meta name="description" content="Explore our comprehensive range of technology services including AI development, cloud solutions, software development, data analytics, security, and automation services. Contact us at +1 302 464 0950." />
         <meta name="keywords" content="AI services, cloud solutions, software development, data analytics, cybersecurity, automation, micro SAAS, technology consulting" />
@@ -300,4 +293,3 @@ export default Services;
     </div>
   );
 }
->>>>>>> origin/feat/home-redesign
