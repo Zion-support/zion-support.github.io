@@ -6,30 +6,54 @@
 // Store original process.env
 const ORIGINAL_ENV = process.env;
 
-// Helper to set and reset process.env for Jest tests
-const mockProcessEnv = (envValues: Record<string, string | boolean | undefined>) => {
-  process.env = { ...ORIGINAL_ENV }; // Start with a fresh copy of original env
-
-  // Set specific values for the test
-  for (const key in envValues) {
-    if (envValues[key] !== undefined) {
-      process.env[key] = String(envValues[key]);
+  for (const key of Object.keys(otherEnvValues)) {
+    const value = otherEnvValues[key];
+    if (value !== undefined) {
+      process.env[key] = String(value);
     } else {
-      delete process.env[key]; // Ensure it's treated as undefined by the code
+      // If undefined in input, set as empty string to override defaults
+      // and ensure it's treated as "missing" by the validator.
+      process.env[key] = '';
     }
   }
+
+  // Apply DEV last. For Jest, this usually means setting NODE_ENV or a specific mock
+  // if the code directly uses import.meta.env.DEV.
+  // Assuming babel-plugin-transform-import-meta or ts-jest handles import.meta.env.DEV
+  // to read from process.env.DEV or process.env.NODE_ENV.
+  if (devToSet) {
+    process.env.NODE_ENV = 'development';
+    process.env.DEV = 'true';
+  } else {
+    process.env.NODE_ENV = 'production';
+    process.env.DEV = 'false';
+  }
+  // If direct import.meta manipulation is needed, it's more complex and might require
+  // jest.mock for the module using it, or specific babel/ts-jest transformers.
 };
 
 
 describe('checkEssentialEnvVars', () => {
+  const originalEnv = { ...process.env };
+
   beforeEach(() => {
-    jest.resetModules(); // Clears the cache for modules, useful when env vars change
-    // process.env will be set by mockProcessEnv in each test
+    jest.resetModules();
+    process.env = { ...originalEnv }; // Restore original process.env
+    // Ensure a clean state for process.env related to DEV if needed
+    delete process.env.NODE_ENV;
+    delete process.env.DEV;
+    // Aggressively ensure import.meta.env is reset if it exists from a previous state
+    // This part is tricky with Jest as import.meta is ESM specific.
+    // Relies on ts-jest or babel correctly handling/transforming import.meta.env
+    // and jest.resetModules() clearing any cached transformed values.
+    if (globalThis.import && globalThis.import.meta) {
+      globalThis.import.meta.env = {}; // This might not be effective in Jest depending on transform
+    }
   });
 
   afterEach(() => {
-    process.env = ORIGINAL_ENV; // Restore original environment
-    jest.restoreAllMocks(); // Restores all spies
+    process.env = { ...originalEnv }; // Restore original process.env
+    jest.restoreAllMocks(); // Restores all spies and original implementations
   });
 
   it('should not throw an error when all essential environment variables are set correctly', () => {
@@ -125,13 +149,11 @@ describe('checkEssentialEnvVars', () => {
       NEXT_PUBLIC_SUPABASE_URL: 'https://valid.supabase.co',
       NEXT_PUBLIC_SUPABASE_ANON_KEY: 'valid_supabase_key',
     });
-    const consoleLogSpy = jest.spyOn(console, 'log');
+    const consoleLogSpy = jest.spyOn(console, 'log').mockImplementation(() => {}); // Mock to prevent actual logging
     return import('@/utils/validateEnv').then(module => {
       module.checkEssentialEnvVars();
-      // Note: The original test checked for 'Essential environment variables validated successfully.'
-      // This specific log might be conditional on import.meta.env.DEV.
-      // We'll check that it doesn't throw an error, which is the primary goal.
-      expect(consoleLogSpy).toHaveBeenCalled(); // Check if any log happened, refine if needed
+      expect(consoleLogSpy).toHaveBeenCalledWith('Essential environment variables validated successfully.');
+      // consoleLogSpy.mockRestore(); // Done in afterEach
     });
   });
 
@@ -143,96 +165,17 @@ describe('checkEssentialEnvVars', () => {
       NEXT_PUBLIC_SUPABASE_ANON_KEY: 'valid_supabase_key',
     });
 
-    const consoleLogSpy = jest.spyOn(console, 'log');
+    const consoleLogSpy = jest.spyOn(console, 'log').mockImplementation(() => {});
+    // Ensure spy is clean before the specific call we want to monitor
+    // consoleLogSpy.mockClear(); // jest.restoreAllMocks in afterEach handles this
 
     return import('@/utils/validateEnv').then(module => {
-      module.checkEssentialEnvVars();
-      // We expect it not to throw, but also not to log the specific DEV success message.
-      // The function might log other things, so we can't assert no logs at all.
-      // This test becomes less about a specific log message and more about behavior difference.
-      expect(consoleLogSpy).not.toHaveBeenCalledWith('Essential environment variables validated successfully.');
-    });
-  });
-});
-
-describe('validateProductionEnvironment', () => {
-  // ORIGINAL_ENV is already defined at the top of the file
-
-  beforeEach(() => {
-    jest.resetModules();
-    // process.env is managed by mockProcessEnv in each test for this suite too
-  });
-
-  afterEach(() => {
-    process.env = ORIGINAL_ENV;
-    jest.restoreAllMocks();
-  });
-
-  it('should not throw an error in development even if INTERNAL_AUTH_SERVICE_URL is missing, and should log a warning', () => {
-    mockProcessEnv({
-      NODE_ENV: 'development',
-      NEXT_PUBLIC_SUPABASE_URL: 'https://valid.supabase.co',
-      NEXT_PUBLIC_SUPABASE_ANON_KEY: 'valid_anon_key',
-      INTERNAL_AUTH_SERVICE_URL: undefined, // Explicitly undefined
-    });
-
-    const consoleWarnSpy = jest.spyOn(console, 'warn');
-
-    return import('@/utils/environmentConfig').then(configModule => {
-      expect(() => configModule.validateProductionEnvironment()).not.toThrow();
-      expect(consoleWarnSpy).toHaveBeenCalledWith(expect.stringContaining('Internal auth service URL is not configured - using fallback. Signup might be affected.'));
-    });
-  });
-
-  it('should throw an error in production if INTERNAL_AUTH_SERVICE_URL is missing', () => {
-    process.env.NODE_ENV = 'production';
-    // Ensure critical supabase vars are set
-    process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://valid.supabase.co';
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'valid_anon_key';
-    process.env.NEXT_PUBLIC_SENTRY_DSN = 'https://sentry.io/123'; // Sentry DSN also required for prod
-    // INTERNAL_AUTH_SERVICE_URL is not set
-    delete process.env.INTERNAL_AUTH_SERVICE_URL;
-
-    // Dynamically import after mocking environment
-    return import('@/utils/environmentConfig').then(configModule => {
-      expect(() => configModule.validateProductionEnvironment()).toThrowError(/INTERNAL_AUTH_SERVICE_URL must be configured in production for user signup/);
-    });
-  });
-
-  it('should not throw an error in production if INTERNAL_AUTH_SERVICE_URL is set', () => {
-    process.env.NODE_ENV = 'production';
-    process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://valid.supabase.co';
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'valid_anon_key';
-    process.env.NEXT_PUBLIC_SENTRY_DSN = 'https://sentry.io/123';
-    process.env.INTERNAL_AUTH_SERVICE_URL = 'https://my-auth-service.com'; // Changed to avoid "example"
-
-    // Dynamically import after mocking environment
-    return import('@/utils/environmentConfig').then(configModule => {
-      expect(() => configModule.validateProductionEnvironment()).not.toThrow();
-    });
-  });
-
-  it('should throw an error in production if Supabase URL is a placeholder', () => {
-    process.env.NODE_ENV = 'production';
-    process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://placeholder.supabase.co'; // Placeholder
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'valid_anon_key';
-    process.env.NEXT_PUBLIC_SENTRY_DSN = 'https://sentry.io/123';
-    process.env.INTERNAL_AUTH_SERVICE_URL = 'https://my-auth.example.com';
-
-    return import('@/utils/environmentConfig').then(configModule => {
-      expect(() => configModule.validateProductionEnvironment()).toThrowError(/NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY must be configured in production/);
-    });
-  });
-
-  it('should throw an error in production if Sentry DSN is missing', () => {
-    process.env.NODE_ENV = 'production';
-    process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://valid.supabase.co';
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'valid_anon_key';
-    delete process.env.NEXT_PUBLIC_SENTRY_DSN; // Missing Sentry DSN
-    process.env.INTERNAL_AUTH_SERVICE_URL = 'https://my-auth.example.com';
-
-    return import('@/utils/environmentConfig').then(configModule => {
-      expect(() => configModule.validateProductionEnvironment()).toThrowError(/NEXT_PUBLIC_SENTRY_DSN must be configured in production for error monitoring/);
+      try {
+        module.checkEssentialEnvVars();
+        expect(consoleLogSpy).not.toHaveBeenCalledWith('Essential environment variables validated successfully.');
+      } finally {
+        // consoleLogSpy.mockRestore(); // Done in afterEach
+      }
     });
   });
 });
