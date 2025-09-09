@@ -42,12 +42,6 @@
     "allowJs": true,
     "incremental": true,
     "noEmitOnError": false,
-    /* Path mapping */
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "axios": ["./src/lib/axios.ts"]
-    },
     "plugins": [
       {
         "name": "next"

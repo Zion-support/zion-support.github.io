@@ -1,4 +1,4 @@
-import { ProductCard } from '@/components/ProductCard';
+import ProductCard from '@/components/ProductCard';
 import { useFavorites } from '@/context/FavoritesContext.jsx';
 import { NEW_PRODUCTS } from '@/data/newProductsData';
 
