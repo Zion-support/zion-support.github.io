@@ -12,12 +12,18 @@ const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const UltimateServices = React.lazy(() => import('./pages/UltimateServices'));
 
-  const stats = [
-    { value: "500+", label: "Projects Delivered", icon: <CheckCircle className="w-6 h-6" /> },
-    { value: "99.9%", label: "Uptime Guarantee", icon: <Shield className="w-6 h-6" /> },
-    { value: "24/7", label: "Support Available", icon: <Users className="w-6 h-6" /> },
-    { value: "15+", label: "Years Experience", icon: <Star className="w-6 h-6" /> }
-  ];
+// Enhanced services pages
+const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage.tsx'));
+const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027.tsx'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
+const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027.tsx'));
+const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025.tsx'));
+const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.tsx'));
+const EnhancedZionServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedZionServicesShowcase2025.tsx'));
+const ZionTechGroupMarketing2025 = React.lazy(() => import('./pages/ZionTechGroupMarketing2025.tsx'));
+const InnovativeServices2028 = React.lazy(() => import('./pages/InnovativeServices2028'));
+const Revolutionary2026ServicesShowcase = React.lazy(() => import('./pages/Revolutionary2026ServicesShowcase.tsx'));
+const Revolutionary2026PricingGuide = React.lazy(() => import('./pages/Revolutionary2026PricingGuide.tsx'));
 
 // New service pages
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
@@ -40,33 +46,70 @@ const LoadingSpinner = () => (
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative">
-        {/* Futuristic Animated Background */}
-        <FuturisticAnimatedBackground />
-        
-        {/* Navigation */}
-        <FuturisticNavigation />
-        
-        <main className="flex-1 relative z-10">
-          <Suspense fallback={<EnhancedLoadingSpinner />}>
-            <Routes>
-              {/* Main Routes */}
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/ultimate-services" element={<UltimateServices />} />
-            </Routes>
-          </Suspense>
-        </main>
-        
-        {/* Footer */}
-        <FuturisticFooter />
-        
-        {/* Chat Assistant */}
-        <ChatAssistant />
-      </div>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <div className="min-h-screen bg-futuristic">
+          <SEO />
+          <AppHeader />
+          
+          <main className="flex-1">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/green-it" element={<GreenIT />} />
+                <Route path="/partners" element={<PartnersPage />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/search" element={<SearchPage />} />
+                <Route path="/help-center" element={<HelpCenter />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/solutions" element={<Solutions />} />
+                <Route path="/research-development" element={<ResearchDevelopment />} />
+                <Route path="/news" element={<News />} />
+                <Route path="/request-quote" element={<RequestQuote />} />
+                <Route path="/marketplace" element={<Marketplace />} />
+                
+                {/* Enhanced Services Routes */}
+                <Route path="/enhanced-services" element={<EnhancedServicesPage />} />
+                <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
+                <Route path="/services/pricing" element={<ComprehensivePricingGuide2027 />} />
+                <Route path="/services/showcase" element={<InnovativeServicesShowcase2027 />} />
+                <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
+                <Route path="/comprehensive-services-2025" element={<ComprehensiveServicesLanding2025 />} />
+                <Route path="/enhanced-zion-services-2025" element={<EnhancedZionServicesShowcase2025 />} />
+                <Route path="/zion-tech-group-marketing-2025" element={<ZionTechGroupMarketing2025 />} />
+                <Route path="/innovative-services-2028" element={<InnovativeServices2028 />} />
+                <Route path="/revolutionary-2026-services" element={<Revolutionary2026ServicesShowcase />} />
+                <Route path="/revolutionary-2026-pricing" element={<Revolutionary2026PricingGuide />} />
+                
+                {/* Service Routes - only for existing pages */}
+                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                <Route path="/services/digital-twin" element={<DigitalTwin />} />
+                <Route path="/services/data-analytics" element={<DataAnalytics />} />
+                <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+                <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                
+                {/* Catch all route */}
+                <Route path="*" element={<Home />} />
+              </Routes>
+            </Suspense>
+          </main>
+          
+          <Footer />
+          <ChatAssistant />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 };
 
