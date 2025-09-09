@@ -68,66 +68,30 @@ const fs = require('fs');
 
 const app = express();
 
-// Ensure server log directory exists
-const logDir = path.join(__dirname, 'logs');
-fs.mkdirSync(logDir, { recursive: true });
-const accessLogStream = fs.createWriteStream(path.join(logDir, 'access.log'), { flags: 'a' });
-
-Sentry.init({
-  dsn: process.env.SENTRY_DSN,
-  tracesSampleRate: 1.0,
-  // beforeSend(event) { // Datadog tracing might not be set up or needed for Sentry alone
-  //   const span = tracer.scope().active();
-  //   if (span) {
-  //     const ctx = span.context();
-  //     event.tags = {
-  //       ...event.tags,
-  //       dd_trace_id: ctx.toTraceId(),
-  //       dd_span_id: ctx.toSpanId(),
-  //     };
-  //   }
-  //   return event;
-  // },
+// New middleware to log all incoming request bodies
+app.use((req, res, next) => {
+  console.log('Incoming request body:', req.body);
+  next();
 });
 
-app.use(Sentry.Handlers.requestHandler());
-app.use(Sentry.Handlers.tracingHandler());
-
-// Use Helmet to apply various security headers
-app.use(helmet());
-
-// Enable CORS for allowed origins
-app.use(cors({ origin: allowedOrigins }));
-
-// Log HTTP requests to access.log in addition to console
-app.use(morgan('combined', { stream: accessLogStream }));
-
-app.use(morgan('dev'));
-app.use(mongooseMorgan({ connectionString: mongoUri }));
-app.use(express.json());
-app.use(passport.initialize());
-const limiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 100 });
-app.use(limiter);
-
-// Health check endpoint
-app.get('/healthz', (req, res) => {
-  try {
-    // Optional: Add more sophisticated checks here if needed (e.g., DB connection)
-    res.status(200).json({
-      status: 'UP',
-      timestamp: new Date().toISOString(),
-      // Add any other relevant info, like service name or version from package.json
-      service: process.env.npm_package_name,
-      version: process.env.npm_package_version
-    });
-  } catch (error) {
-    // If any checks fail, respond with a 503 status
-    res.status(503).json({
-      status: 'DOWN',
-      error: error.message,
-      timestamp: new Date().toISOString()
-    });
+// Middleware to log request body for /api/talent and /api/talent/:id
+app.use('/api/talent', (req, res, next) => {
+  // Check if the path is exactly /api/talent or /api/talent/:id (dynamic segment)
+  // For simplicity, this example logs for any sub-path of /api/talent.
+  // A more precise regex might be needed for strict matching if there are other /api/talent sub-routes not to be logged.
+  if (req.originalUrl.startsWith('/api/talent')) {
+    console.log('Talent API request:', req.method, req.originalUrl);
+    console.log('Body:', req.body);
   }
+  next();
+});
+
+// Log headers and body for all /auth/* requests
+app.use('/auth', (req, res, next) => {
+  console.log('Auth request:', req.method, req.originalUrl);
+  console.log('Headers:', req.headers);
+  console.log('Body:', req.body);
+  next();
 });
 
 app.use('/auth', authRoutes);
