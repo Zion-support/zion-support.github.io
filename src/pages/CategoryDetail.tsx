@@ -20,7 +20,6 @@ import { ProductListing } from "@/types/listings";
 // useNavigate will be replaced by useRouter
 import { toast } from "@/hooks/use-toast";
 import { NextSeo } from '@/components/NextSeo';
-import { Header } from "@/components/Header";
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
 import {logErrorToProduction} from '@/utils/productionLogger';
 

@@ -300,26 +300,6 @@ export async function fetchProducts(filters: SearchFilters = {}): Promise<Produc
   }
 }
 
-export async function fetchCategories(): Promise<Category[]> {
-  try {
-    const response = await fetch('/api/marketplace/categories');
-    
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-    }
-
-    const data: ApiResponse<Category[]> = await response.json();
-    
-    if (data.error) {
-      throw new Error(data.error);
-    }
-
-    return data.data || getFallbackCategories();
-  } catch (error) {
-    logErrorToProduction('Failed to fetch categories:', { data: error });
-    return getFallbackCategories();
-  }
-}
 
 export async function fetchTalent(filters: SearchFilters = {}): Promise<TalentProfile[]> {
   try {

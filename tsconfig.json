@@ -28,7 +28,7 @@
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    "noEmit": false,
     "jsx": "preserve",
     /* Linting */
     "strict": false,
@@ -37,22 +37,29 @@
     "noFallthroughCasesInSwitch": true,
     "allowJs": false,
     "incremental": true,
-    "types": ["node"],
+    "types": [
+      "node"
+    ],
     "typeRoots": [
       "./node_modules/@types",
       "./types"
     ],
     "outDir": "dist",
-    "jsx": "preserve",
     "declaration": true,
-    "allowImportingTsExtensions": true,
     "emitDeclarationOnly": true,
-    "noEmit": false
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
   "include": [
-    "next-env.d.ts", 
-    "app/**/*.ts", 
-    "app/**/*.tsx", 
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     ".next/types/**/*.ts",
     "src/**/*",
     "pages/**/*",

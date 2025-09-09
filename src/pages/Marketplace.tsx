@@ -49,40 +49,28 @@ interface Product {
   lastUpdated: string;
 }
 
-async function fetchProducts() {
-  // Network errors are caught and logged here.
-  // The error is re-thrown to be handled by react-query.
-  try {
-    const res = await fetch('/api/marketplace?type=all');
-    if (!res.ok) {
-      throw new Error('Failed to fetch products');
-    }
+const Marketplace: React.FC = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [cart, setCart] = useState<Set<string>>(new Set());
+  const [wishlist, setWishlist] = useState<Set<string>>(new Set());
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All Categories');
+  const [sortBy, setSortBy] = useState('popular');
 
-    // Filter by category
-    if (selectedCategory !== 'All Categories') {
-      filtered = filtered.filter(product => product.category === selectedCategory);
-    }
-
-    // Sort products
-    filtered.sort((a, b) => {
-      switch (sortBy) {
-        case 'popular':
-          return b.downloads - a.downloads;
-        case 'rating':
-          return b.rating - a.rating;
-        case 'newest':
-          return new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime();
-        case 'price-low':
-          return a.price - b.price;
-        case 'price-high':
-          return b.price - a.price;
-        default:
-          return 0;
+  async function fetchProducts() {
+    // Network errors are caught and logged here.
+    // The error is re-thrown to be handled by react-query.
+    try {
+      const res = await fetch('/api/marketplace?type=all');
+      if (!res.ok) {
+        throw new Error('Failed to fetch products');
       }
-    });
-
-    setFilteredProducts(filtered);
-  }, [searchQuery, selectedCategory, sortBy]);
+      return await res.json();
+    } catch (error) {
+      console.error('Error fetching products:', error);
+      throw error;
+    }
+  }
 
   const addToCart = (productId: string) => {
     setCart(prev => new Set([...prev, productId]));
@@ -136,4 +124,6 @@ async function fetchProducts() {
       )}
     </div>
   );
-}
+};
+
+export default Marketplace;

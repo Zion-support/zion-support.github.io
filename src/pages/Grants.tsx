@@ -171,8 +171,7 @@ export default function GrantsPage() {
                       </SelectContent>
                     </Select>
                   </FormItem>
-                );
-               }}
+                )}
               />
               <div className="flex gap-2">
                 <Button

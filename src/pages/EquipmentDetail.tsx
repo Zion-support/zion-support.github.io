@@ -245,5 +245,3 @@ export default function EquipmentDetail() {
     </>
   );
 };
-
-export default EquipmentDetail;

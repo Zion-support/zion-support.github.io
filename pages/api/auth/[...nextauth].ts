@@ -4,8 +4,21 @@ import GitHubProvider from "next-auth/providers/github"; // Added GitHubProvider
 import FacebookProvider from "next-auth/providers/facebook";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { withErrorLogging } from '@/utils/withErrorLogging';
-import { supabase } from '@/utils/supabase/client'; // Use centralized client
+import { createClient } from '@supabase/supabase-js';
 import { verifyMessage } from 'ethers'; // Assuming ethers v6+
+
+// Simple logging functions
+const logInfo = (message: string, data?: any) => {
+  console.log(`[INFO] ${message}`, data || '');
+};
+
+const logWarn = (message: string, data?: any) => {
+  console.warn(`[WARN] ${message}`, data || '');
+};
+
+const logErrorToProduction = (message: string, data?: any) => {
+  console.error(`[ERROR] ${message}`, data || '');
+};
 
 // Initialize Supabase client (ensure these ENV vars are set)
 let supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL as string;
