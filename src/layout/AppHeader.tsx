@@ -19,35 +19,9 @@ export function AppHeader() {
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'About', href: '/about', current: false },
-    { 
-      name: 'Services', 
-      href: '/services', 
-      current: false,
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'AI Solutions', href: '/services/ai', icon: '🤖' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: '🔒' },
-        { name: 'Cloud & DevOps', href: '/services/cloud', icon: '☁️' },
-        { name: 'IT Infrastructure', href: '/services/infrastructure', icon: '🏗️' },
-        { name: 'Digital Transformation', href: '/services/transformation', icon: '🚀' },
-        { name: 'Consulting', href: '/services/consulting', icon: '💼' }
-      ]
-    },
-    { 
-      name: 'Resources', 
-      href: '/resources', 
-      current: false,
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'Blog', href: '/blog', icon: '📝' },
-        { name: 'Case Studies', href: '/case-studies', icon: '📊' },
-        { name: 'White Papers', href: '/white-papers', icon: '📄' },
-        { name: 'Webinars', href: '/webinars', icon: '🎥' },
-        { name: 'Documentation', href: '/docs', icon: '📚' },
-        { name: 'Research', href: '/research', icon: '🔬' }
-      ]
-    },
-    { name: 'Careers', href: '/careers', current: false },
+    { name: 'Services', href: '/services', current: false },
+    { name: 'AI Services', href: '/enhanced-services', current: false },
+    { name: 'Micro SAAS', href: '/micro-saas-showcase', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
 

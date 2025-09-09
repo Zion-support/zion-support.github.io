@@ -10,6 +10,8 @@ import { PerformanceMonitor } from './components/PerformanceMonitor.tsx';
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
+const EnhancedServices = lazy(() => import('./pages/EnhancedServices'));
+const MicroSaasShowcase = lazy(() => import('./pages/MicroSaasShowcase'));
 const Contact = lazy(() => import('./pages/Contact'));
 const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
 const ServicesComparison = lazy(() => import('./pages/ServicesComparison'));
@@ -114,6 +116,9 @@ function App() {
               {/* Main Routes */}
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/enhanced-services" element={<EnhancedServices />} />
+              <Route path="/micro-saas-showcase" element={<MicroSaasShowcase />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/services" element={<Services />} />
               <Route path="/blog" element={<Blog />} />
