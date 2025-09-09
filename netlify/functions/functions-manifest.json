@@ -3,6 +3,7 @@
   "functions": [
     "a11y-alt-text-runner",
     "a11y_alt_text_runner",
+    "a11y-landmarks-runner",
     "adaptive-orchestrator",
     "adaptive_orchestrator",
     "ai-changelog-runner",
@@ -30,6 +31,7 @@
     "component-size-report",
     "component_coupling_graph_runner",
     "component_size_report",
+    "components-docs-runner",
     "content-freshness-score-runner",
     "content_freshness_score_runner",
     "continuous-front-runner",
@@ -79,6 +81,7 @@
     "innovation_lab",
     "intelligent-meta-orchestrator",
     "intelligent_meta_orchestrator",
+    "internal-anchors-auditor",
     "internal-link-graph-runner",
     "internal_link_graph_runner",
     "knowledge-pack-runner",

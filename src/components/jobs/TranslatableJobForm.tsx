@@ -1,23 +1,23 @@
-import React, { _useState } from "react";
-import { _Button } from "@/components/ui/Button";
-import { _Input } from "@/components/ui/input";
-import { _Textarea } from "@/components/ui/textarea";
-import { _Tabs, _TabsContent, _TabsList, _TabsTrigger } from "@/components/ui/tabs";
-import { _Card, _CardContent } from "@/components/ui/card";
-import { _Label } from "@/components/ui/label";
-import { _useTranslation } from "react-i18next";
-import { _useTranslationService } from "@/hooks/useTranslationService";
-import { _useLanguage, _SupportedLanguage } from "@/context/LanguageContext";
+import React, { useState } from "react";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent } from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+import { useTranslation } from "react-i18next";
+import { useTranslationService } from "@/hooks/useTranslationService";
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
 interface TranslatableJobFormProps {
-  _onSubmit: (data: any) => void;
+  onSubmit: (data: any) => void;
   isSubmitting: boolean;
 }
 
-export function TranslatableJobForm({ _onSubmit, _isSubmitting }: TranslatableJobFormProps) {
-  const { _t } = useTranslation();
-  const { _translateText } = useTranslationService();
-  const { _currentLanguage, _setLanguage } = useLanguage();
+export function TranslatableJobForm({ onSubmit, isSubmitting }: TranslatableJobFormProps) {
+  const { t } = useTranslation();
+  const { translateText } = useTranslationService();
+  const { currentLanguage, setLanguage } = useLanguage();
   
   const [formData, setFormData] = useState({
     title: "",
@@ -28,7 +28,7 @@ export function TranslatableJobForm({ _onSubmit, _isSubmitting }: TranslatableJo
     type: "full-time"
   });
 
-  const handleInputChange = (field: string, _value: string) => {
+  const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
@@ -40,7 +40,7 @@ export function TranslatableJobForm({ _onSubmit, _isSubmitting }: TranslatableJo
     onSubmit(formData);
   };
 
-  const handleLanguageChange = (_language: SupportedLanguage) => {
+  const handleLanguageChange = (language: SupportedLanguage) => {
     setLanguage(language);
   };
 

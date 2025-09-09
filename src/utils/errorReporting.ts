@@ -12,6 +12,8 @@ export interface ErrorReport {
   errorBoundary?: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
   context?: Record<string, any>;
+  line?: number;
+  column?: number;
 }
 
 export class ErrorReporter {
@@ -46,9 +48,11 @@ export class ErrorReporter {
         message: event.message,
         stack: event.error?.stack,
         url: event.filename,
-        line: event.lineno,
-        column: event.colno,
         severity: 'high',
+        context: {
+          line: event.lineno,
+          column: event.colno,
+        },
       });
     });
 
