@@ -43,8 +43,7 @@ import { SecurityComplianceSection } from "@/components/SecurityComplianceSectio
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
 import { EnhancedInnovativeServicesShowcase } from "@/components/EnhancedInnovativeServicesShowcase";
-import { ComprehensiveServicesShowcase2026 } from "@/components/ComprehensiveServicesShowcase2026";
-import { ComprehensivePricingGuide2026 } from "@/components/ComprehensivePricingGuide2026";
+import { Revolutionary2029ServicesShowcase } from "@/components/Revolutionary2029ServicesShowcase";
 import { EnhancedPricingComparison } from "@/components/EnhancedPricingComparison";
 
 // Data definitions
@@ -550,11 +549,8 @@ export default function Home() {
       {/* Enhanced Innovative Services Showcase */}
       <EnhancedInnovativeServicesShowcase />
 
-      {/* Comprehensive Services Showcase 2026 */}
-      <ComprehensiveServicesShowcase2026 />
-
-      {/* Comprehensive Pricing Guide 2026 */}
-      <ComprehensivePricingGuide2026 />
+      {/* Revolutionary 2029 Services Showcase */}
+      <Revolutionary2029ServicesShowcase />
 
       {/* Enhanced Pricing Comparison */}
       <EnhancedPricingComparison />
