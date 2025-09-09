@@ -18,28 +18,8 @@ export default defineConfig(({ mode }) => ({
     outDir: 'dist',
     // Disable source maps in production for smaller bundle
     sourcemap: false,
-    // Use terser for better minification
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 2,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-        unsafe_regexp: true,
-        unsafe_undefined: true,
-      },
-      mangle: {
-        safari10: true,
-      },
-      format: {
-        comments: false,
-      },
-    },
+    // Prefer esbuild for fast, reliable CI minification
+    minify: 'esbuild',
     // Chunk size warning limit
     chunkSizeWarningLimit: 1000,
     // Assets inline limit
@@ -154,6 +134,9 @@ export default defineConfig(({ mode }) => ({
     format: 'esm',
     // Disable TypeScript checking during build
     logLevel: 'error',
+    // Strip debugging noise and mark common logging as pure
+    drop: ['console', 'debugger'],
+    pure: ['console.log', 'console.info', 'console.debug'],
     // Skip TypeScript type checking during build
     tsconfigRaw: {
       compilerOptions: {
