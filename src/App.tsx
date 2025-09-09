@@ -1,10 +1,13 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { HelmetProvider } from 'react-helmet-async';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { ThemeToggle } from './components/ThemeToggle';
+import { Accessibility } from './components/Accessibility';
+import { FullScreenLoader } from './components/LoadingSpinner';
+import { SEO } from './components/SEO';
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));
@@ -27,134 +30,111 @@ const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment
 const News = React.lazy(() => import('./pages/News'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 
-// Enhanced loading component with better UX
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-    <div className="relative">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>
-      
-      {/* Main spinner */}
-      <div className="relative w-32 h-32 border-4 border-zion-cyan/20 rounded-full">
-        <div className="absolute top-0 left-0 w-32 h-32 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin"></div>
+// Error Boundary Component
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
+    <div className="max-w-md mx-auto text-center">
+      <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+        <span className="text-4xl text-red-500">⚠️</span>
       </div>
-      
-      {/* Zion logo overlay */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-2xl">
-        ZION
+      <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+      <p className="text-zion-slate-light mb-6">
+        We're sorry, but something unexpected happened. Please try refreshing the page.
+      </p>
+      <div className="space-y-3">
+        <button
+          onClick={resetErrorBoundary}
+          className="w-full bg-zion-cyan text-white px-6 py-3 rounded-lg hover:bg-zion-cyan-dark transition-colors"
+        >
+          Try Again
+        </button>
+        <button
+          onClick={() => window.location.href = '/'}
+          className="w-full border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg hover:bg-zion-cyan hover:text-white transition-colors"
+        >
+          Go Home
+        </button>
       </div>
-      
-      {/* Loading text */}
-      <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 text-zion-cyan text-lg font-medium">
-        Loading...
-      </div>
-      
-      {/* Animated dots */}
-      <div className="absolute -bottom-24 left-1/2 transform -translate-x-1/2 flex space-x-1">
-        <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce"></div>
-        <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-        <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-      </div>
+      {process.env.NODE_ENV === 'development' && (
+        <details className="mt-6 text-left">
+          <summary className="text-zion-slate-light cursor-pointer">Error Details</summary>
+          <pre className="mt-2 p-3 bg-zion-slate-light/10 rounded text-xs text-red-400 overflow-auto">
+            {error.message}
+          </pre>
+        </details>
+      )}
     </div>
   </div>
 );
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-futuristic">
-        {/* Global SEO Meta Tags */}
-        <Helmet>
-          <title>Zion Tech Group - AI-Powered Business Solutions & IT Services</title>
-          <meta name="description" content="Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, cloud infrastructure, and digital transformation expertise. Serving businesses worldwide with innovative technology solutions." />
-          <meta name="keywords" content="AI solutions, cybersecurity, cloud services, digital transformation, quantum computing, blockchain, IT consulting, business intelligence" />
-          <meta name="author" content="Zion Tech Group" />
-          <meta name="robots" content="index, follow" />
+    <HelmetProvider>
+      <Router>
+        <div className="min-h-screen bg-futuristic">
+          {/* SEO for main app */}
+          <SEO />
           
-          {/* Open Graph Meta Tags */}
-          <meta property="og:title" content="Zion Tech Group - AI-Powered Business Solutions" />
-          <meta property="og:description" content="Transform your business with cutting-edge AI solutions, cybersecurity services, and digital transformation expertise." />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://ziontechgroup.com" />
-          <meta property="og:image" content="https://ziontechgroup.com/images/og-image.jpg" />
-          <meta property="og:site_name" content="Zion Tech Group" />
+          <AppHeader />
           
-          {/* Twitter Card Meta Tags */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Zion Tech Group - AI-Powered Business Solutions" />
-          <meta name="twitter:description" content="Transform your business with cutting-edge AI solutions and IT services." />
-          <meta name="twitter:image" content="https://ziontechgroup.com/images/twitter-card.jpg" />
+          <main className="flex-1" id="main-content">
+            <Suspense fallback={<FullScreenLoader text="Loading Zion Tech Group..." />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/green-it" element={<GreenIT />} />
+                <Route path="/partners" element={<PartnersPage />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/services-advertising" element={<ServicesAdvertising />} />
+                <Route path="/solutions" element={<Solutions />} />
+                <Route path="/research-development" element={<ResearchDevelopment />} />
+                <Route path="/news" element={<News />} />
+                <Route path="/request-quote" element={<RequestQuote />} />
+                
+                {/* 404 Route */}
+                <Route path="*" element={
+                  <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
+                    <div className="max-w-md mx-auto text-center">
+                      <div className="w-20 h-20 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span className="text-4xl text-zion-cyan">404</span>
+                      </div>
+                      <h1 className="text-2xl font-bold text-white mb-4">Page Not Found</h1>
+                      <p className="text-zion-slate-light mb-6">
+                        The page you're looking for doesn't exist or has been moved.
+                      </p>
+                      <a
+                        href="/"
+                        className="inline-block bg-zion-cyan text-white px-6 py-3 rounded-lg hover:bg-zion-cyan-dark transition-colors"
+                      >
+                        Go Home
+                      </a>
+                    </div>
+                  </div>
+                } />
+              </Routes>
+            </Suspense>
+          </main>
           
-          {/* Additional Meta Tags */}
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <meta name="theme-color" content="#22ddd2" />
-          <meta name="msapplication-TileColor" content="#22ddd2" />
+          <Footer />
+          <ChatAssistant />
           
-          {/* Canonical URL */}
-          <link rel="canonical" href="https://ziontechgroup.com" />
-          
-          {/* Favicon and App Icons */}
-          <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-          
-          {/* Preconnect to external domains for performance */}
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-          
-          {/* Structured Data for SEO */}
-          <script type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/images/logo.png",
-              "description": "Leading technology solutions provider offering comprehensive AI, cybersecurity, cloud, and digital transformation services.",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-                "addressCountry": "US"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"
-              },
-              "sameAs": [
-                "https://linkedin.com/company/ziontechgroup",
-                "https://twitter.com/ziontechgroup"
-              ]
-            })}
-          </script>
-        </Helmet>
-        
-        <AppHeader />
-        
-        {/* Marketplace Routes */}
-        <Route path="/marketplace/*" element={<AppLayout><MarketplaceRoutes /></AppLayout>} />
-        
-        <Footer />
-        <ChatAssistant />
-        
-        {/* Performance Monitor - Only show in development or when explicitly enabled */}
-        <PerformanceMonitor 
-          enabled={process.env.NODE_ENV === 'development' || process.env.REACT_APP_SHOW_PERFORMANCE === 'true'}
-          showMetrics={true}
-          onMetricsUpdate={(metrics) => {
-            // Log performance metrics to console in development
-            if (process.env.NODE_ENV === 'development') {
-              console.log('Performance Metrics Updated:', metrics);
-            }
-          }}
-        />
-      </div>
-    </Router>
+          {/* Accessibility and Theme Controls */}
+          <div className="fixed bottom-6 left-6 z-50 flex flex-col gap-3">
+            <ThemeToggle />
+          </div>
+          <Accessibility />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 
