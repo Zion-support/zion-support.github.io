@@ -1,8 +1,12 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
-import Layout from '../components/Layout';
-import { Home, ArrowLeft, Search } from 'lucide-react';
+import Head from 'next/head';
+import { FileText, Shield } from 'lucide-react';
+
+const navigationItems = [
+  { name: 'Help Center', url: '/help', icon: FileText },
+  { name: 'Privacy Policy', url: '/privacy', icon: Shield }
+];
 
 export default function Custom404() {
   return (
