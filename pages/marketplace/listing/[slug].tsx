@@ -1,168 +1,118 @@
 import React from 'react';
-import type { GetServerSideProps } from 'next';
-import Head from 'next/head';
 import { NextSeo } from '@/components/NextSeo';
-import ProductReviews from '@/components/ProductReviews';
-import type { Product as ProductModel } from '@prisma/client';
+import type { GetStaticPaths, GetStaticProps } from 'next';
+import Link from 'next/link';
+import { ArrowLeft, Star, DollarSign, Calendar } from 'lucide-react';
 
-// Define ProductWithReviewStats here or import from a shared types file
-// This should match the type returned by `/api/products/[productId]/details`
-export type ProductWithReviewStats = ProductModel & {
-  averageRating: number | null;
-  reviewCount: number;
-  // Adding fields to match the enriched type from the API / product card expectations
-  title?: string; // Usually mapped from product.name
-  category?: string;
-  images?: { url: string; alt?: string }[];
-  price?: number | null;
-  currency?: string;
-  tags?: string[];
-};
-
-interface RatingStarsProps {
-  value: number;
-  count?: number;
+interface ListingProps {
+  listing: {
+    slug: string;
+    title: string;
+    description: string;
+    price: string;
+    rating: number;
+    category: string;
+    image: string;
+  } | null;
 }
 
-// Using a more robust placeholder that handles null/undefined values for rating
-const RatingStarsDisplay: React.FC<RatingStarsProps> = ({ value, count }) => {
-  const ratingValue = value ?? 0; // Default to 0 if value is null
-  const roundedRating = Math.round(ratingValue);
-  return (
-    <div className="flex items-center">
-      {Array.from({ length: 5 }, (_, i) => (
-        <span key={i} className={i < roundedRating ? 'text-yellow-400' : 'text-gray-300'}>★</span>
-      ))}
-      <span className="ml-1 text-sm text-gray-600 dark:text-gray-400">
-        {ratingValue > 0 ? `${ratingValue.toFixed(1)}/5` : 'Not rated'}
-      </span>
-      {typeof count !== 'undefined' && (
-        <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">({count} reviews)</span>
-      )}
-    </div>
-  );
-};
-
-interface ListingPageProps {
-  product: ProductWithReviewStats | null;
-  error?: string;
-}
-
-const MarketplaceListingPage: React.FC<ListingPageProps> = ({ product, error }) => {
-  if (error) {
-    return <div className="text-red-500 max-w-3xl mx-auto py-8 px-4">Error: {error}</div>;
+const ListingPage: React.FC<ListingProps> = ({ listing }) => {
+  if (!listing) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Listing Not Found</h1>
+          <p className="text-gray-600 mb-8">The listing you're looking for doesn't exist.</p>
+          <Link href="/marketplace" className="text-blue-600 hover:text-blue-800">
+            ← Back to Marketplace
+          </Link>
+        </div>
+      </div>
+    );
   }
-  if (!product) {
-    // This case should ideally be handled by notFound: true in getServerSideProps
-    return <div className="max-w-3xl mx-auto py-8 px-4">Product not found.</div>;
-  }
-
-  // The slug from URL is product.id because our API uses product.id for fetching
-  const productId = product.id;
-
-  const productLd = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: product.name,
-    description: product.description,
-    image: (product as any).imageUrl ?? product.images?.[0]?.url,
-    offers: {
-      "@type": "Offer",
-      price: product.price,
-      priceCurrency: product.currency,
-    },
-    aggregateRating:
-      product.reviewCount > 0 && product.averageRating !== null
-        ? {
-            "@type": "AggregateRating",
-            ratingValue: product.averageRating,
-            reviewCount: product.reviewCount,
-          }
-        : undefined,
-  };
 
   return (
     <>
-      <NextSeo
-        title={product.name}
-        description={product.description ?? undefined}
-        openGraph={{
-          title: product.name,
-          description: product.description ?? undefined,
-          images: (product as any).imageUrl ?? product.images?.[0]?.url ?? undefined,
-        }}
+      <NextSeo 
+        title={`${listing.title} - Zion Tech Group Marketplace`}
+        description={listing.description}
       />
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(productLd) }}
-        />
-      </Head>
-      <main className="prose dark:prose-invert max-w-3xl mx-auto py-8 px-4">
-
-        <h1>{product.name}</h1> {/* Using product.name from the Product model */}
-
-      {/* Display average rating and review count */}
-      <div className="my-4">
-        <h2 className="text-lg font-semibold mb-2">Overall Rating</h2>
-        {product.reviewCount > 0 && product.averageRating !== null ? (
-          <RatingStarsDisplay value={product.averageRating} count={product.reviewCount} />
-        ) : (
-          <p className="text-sm text-gray-500 dark:text-gray-400">No ratings yet for this product.</p>
-        )}
-      </div>
-
-      {product.description && (
-        <div className="mt-4 mb-6">
-          <h2 className="text-lg font-semibold mb-2">Description</h2>
-          <p>{product.description}</p>
+      <div className="min-h-screen bg-white">
+        <div className="max-w-6xl mx-auto px-4 py-8">
+          <Link 
+            href="/marketplace" 
+            className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-8"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Marketplace
+          </Link>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <img 
+                src={listing.image} 
+                alt={listing.title}
+                className="w-full h-64 object-cover rounded-lg"
+              />
+            </div>
+            
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900 mb-4">{listing.title}</h1>
+              <div className="flex items-center mb-4">
+                <Star className="h-5 w-5 text-yellow-400 fill-current" />
+                <span className="ml-1 text-gray-600">{listing.rating}/5</span>
+                <span className="ml-4 text-sm text-gray-500">{listing.category}</span>
+              </div>
+              
+              <div className="mb-6">
+                <div className="flex items-center text-3xl font-bold text-green-600 mb-2">
+                  <DollarSign className="h-8 w-8" />
+                  {listing.price}
+                </div>
+              </div>
+              
+              <div className="prose max-w-none">
+                <p className="text-gray-700 leading-relaxed">{listing.description}</p>
+              </div>
+              
+              <div className="mt-8">
+                <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                  Contact Seller
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-      )}
-
-      {/* Other product details can go here */}
-
-      <hr className="my-8" />
-
-      {/* Integrate ProductReviews component */}
-      <ProductReviews productId={productId} />
-    </main>
+      </div>
     </>
   );
 };
 
-export const getServerSideProps: GetServerSideProps<ListingPageProps> = async (context) => {
-  const slug = context.params?.slug as string;
-  if (!slug) {
-    return { notFound: true };
-  }
-
-  try {
-    // Fetch product details including review stats
-    const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-    const res = await fetch(`${appUrl}/api/products/${slug}/details`);
-
-    if (!res.ok) {
-      if (res.status === 404) {
-        return { notFound: true };
-      }
-      let errorMsg = `Failed to fetch product: ${res.status}`;
-      try {
-        const errorData = await res.json();
-        errorMsg = errorData.error || errorMsg;
-      } catch (jsonError) {
-        // If response is not JSON, use the status text or default message
-        errorMsg = res.statusText || errorMsg;
-      }
-      return { props: { product: null, error: errorMsg } };
-    }
-
-    const product: ProductWithReviewStats = await res.json();
-    return { props: { product, error: undefined } }; // Ensure error is undefined on success
-  } catch (e: any) {
-    console.error('Error in getServerSideProps for [slug]:', e);
-    // More generic error for the client
-    return { props: { product: null, error: 'An unexpected error occurred while trying to load product details.' } };
-  }
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: 'blocking'
+  };
 };
 
-export default MarketplaceListingPage;
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const slug = params?.slug as string;
+  
+  const listing = {
+    slug,
+    title: 'Sample Marketplace Listing',
+    description: 'This is a sample marketplace listing description. In a real implementation, this would be loaded from a database.',
+    price: '99',
+    rating: 4.5,
+    category: 'Software',
+    image: '/images/placeholder-product.jpg'
+  };
+
+  return {
+    props: {
+      listing
+    }
+  };
+};
+
+export default ListingPage;
