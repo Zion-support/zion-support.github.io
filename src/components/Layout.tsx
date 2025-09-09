@@ -24,19 +24,48 @@ const navigation: NavItem[] = [
       { label: 'Innovative 2026', href: '/services/innovative-2026-showcase' }
     ]
   },
-  { 
-    label: 'Solutions', 
-    href: '/solutions',
-    children: [
-      { label: 'Enterprise', href: '/solutions#enterprise' },
-      { label: 'Startups', href: '/solutions#startups' },
-      { label: 'Government', href: '/solutions#government' },
-      { label: 'Healthcare', href: '/solutions#healthcare' },
-      { label: 'Finance', href: '/solutions#finance' }
-    ]
-  },
-  { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' }
+  { label: 'Contact', href: '/contact', icon: Phone }
+];
+
+const sidebarNavigation: NavItem[] = [
+  { label: 'Main', icon: Home, href: '/', children: [
+    { label: 'Home', href: '/', icon: Home },
+    { label: 'Services', href: '/services', icon: Briefcase },
+    { label: 'Contact', href: '/contact', icon: Phone }
+  ]},
+  { label: 'Services', icon: Briefcase, href: '/services', children: [
+    { label: 'AI Autonomous Systems', href: '/services#ai', icon: Brain },
+    { label: 'Cloud Platforms', href: '/services#cloud', icon: Cloud },
+    { label: 'Cybersecurity', href: '/services#cybersecurity', icon: Shield },
+    { label: 'Micro SaaS', href: '/services#saas', icon: Code },
+    { label: 'Technical Consulting', href: '/services', icon: Users },
+    { label: 'System Integration', href: '/services', icon: Network }
+  ]},
+  { label: 'Company', icon: Building, href: '#', children: [
+    { label: 'About Us', href: '/about', icon: Building },
+    { label: 'Our Team', href: '/about', icon: Users },
+    { label: 'Careers', href: '/careers', icon: Target },
+    { label: 'Partners', href: '/partners', icon: Users2 }
+  ]},
+  { label: 'Resources', icon: BookOpen, href: '#', children: [
+    { label: 'Blog', href: '/blog', icon: FileText },
+    { label: 'Case Studies', href: '/resources', icon: BarChart3 },
+    { label: 'White Papers', href: '/resources', icon: FileText },
+    { label: 'Webinars', href: '/webinars', icon: Video },
+    { label: 'Documentation', href: '/docs', icon: HelpCircle }
+  ]},
+  { label: 'Support', icon: HelpCircle, href: '#', children: [
+    { label: 'FAQ', href: '/faq', icon: HelpCircle },
+    { label: 'Contact Support', href: '/contact', icon: MessageSquare },
+    { label: 'Training', href: '/resources', icon: GraduationCap },
+    { label: 'Sitemap', href: '/sitemap', icon: Activity }
+  ]},
+  { label: 'Legal', icon: Shield, href: '#', children: [
+    { label: 'Privacy Policy', href: '/privacy', icon: Shield },
+    { label: 'Terms of Service', href: '/terms', icon: FileText },
+    { label: 'Cookie Policy', href: '/privacy', icon: Cookie },
+    { label: 'GDPR Compliance', href: '/privacy', icon: Lock }
+  ]}
 ];
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -257,20 +286,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             {/* Contact Info */}
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-white">Contact</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li className="flex items-center space-x-2">
-                  <Phone className="h-4 w-4 text-blue-400" />
-                  <span>+1 302 464 0950</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <Mail className="h-4 w-4 text-purple-400" />
-                  <span>kleber@ziontechgroup.com</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <MapPin className="h-4 w-4 text-cyan-400" />
-                  <span className="text-sm">364 E Main St STE 1008<br />Middletown DE 19709</span>
-                </li>
+              <h3 className="text-sm font-semibold text-slate-300 tracking-wider uppercase mb-4">Company</h3>
+              <ul className="space-y-2">
+                <li><a href="/contact" className="text-slate-400 hover:text-white transition-colors flex items-center"><Phone className="w-4 h-4 mr-2" />Contact</a></li>
+                <li><a href="/privacy" className="text-slate-400 hover:text-white transition-colors flex items-center"><Shield className="w-4 h-4 mr-2" />Privacy</a></li>
+                <li><a href="/terms" className="text-slate-400 hover:text-white transition-colors flex items-center"><FileText className="w-4 h-4 mr-2" />Terms</a></li>
+                <li><a href="/about" className="text-slate-400 hover:text-white transition-colors flex items-center"><Building className="w-4 h-4 mr-2" />About</a></li>
+                <li><a href="/careers" className="text-slate-400 hover:text-white transition-colors flex items-center"><Users className="w-4 h-4 mr-2" />Careers</a></li>
               </ul>
             </div>
           </div>
