@@ -9,14 +9,12 @@ function resolveMergeConflicts(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     
-    if (content.includes('<<<<<<< HEAD')) {
+    if (content.includes('')) {
       console.log(`Resolving conflicts in ${filePath}...`);
       
       // Simple conflict resolution - keep the first version for most cases
       let resolved = content
-        .replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$1')
-        .replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$1');
-      
+        .replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n        .replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n      
       fs.writeFileSync(filePath, resolved);
       console.log(`✅ Resolved conflicts in ${filePath}`);
       return true;
@@ -44,7 +42,7 @@ function findConflictedFiles(dir) {
       } else if (stat.isFile() && (file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.js') || file.endsWith('.jsx'))) {
         try {
           const content = fs.readFileSync(filePath, 'utf8');
-          if (content.includes('<<<<<<< HEAD')) {
+          if (content.includes('')) {
             conflictedFiles.push(filePath);
           }
         } catch (error) {

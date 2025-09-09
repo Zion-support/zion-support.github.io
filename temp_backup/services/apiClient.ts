@@ -1,4 +1,4 @@
-<<<<<<< HEAD:temp_backup/services/apiClient.ts
+:temp_backup/services/apiClient.ts
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
@@ -30,7 +30,6 @@ apiClient.interceptors.response.use(
       toast.error(message);
     }
     return Promise.reject(new Error(error.message || 'API request failed'));
-=======
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
@@ -54,7 +53,6 @@ const handleApiError = (error: any) => {
     // Non-Axios errors
     captureException(error);
     toast.error('An unexpected error occurred.');
->>>>>>> origin/feat/cart-repair-auth-feedback:src/services/apiClient.ts
   }
   return Promise.reject(error);
 };

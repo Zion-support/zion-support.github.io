@@ -5,11 +5,9 @@
     "failedChecks": 0,
     "criticalFailures": 0,
     "canBuild": true,
-<<<<<<< HEAD:out/reports/pre-build-health/latest.json
+:out/reports/pre-build-health/latest.json
     "timestamp": "2025-08-19T21:22:22.237Z"
-=======
     "timestamp": "2025-08-20T12:04:39.479Z"
->>>>>>> origin/feat/homepage-advertising:public/reports/pre-build-health/latest.json
   },
   "results": [
     {
