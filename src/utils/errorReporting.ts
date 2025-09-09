@@ -12,6 +12,8 @@ export interface ErrorReport {
   errorBoundary?: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
   context?: Record<string, any>;
+  line?: number;
+  column?: number;
 }
 
 export class ErrorReporter {

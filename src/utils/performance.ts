@@ -61,7 +61,10 @@ class PerformanceMonitor {
     // First Input Delay (FID)
     this.observeMetric('first-input', (entries) => {
       entries.forEach((entry) => {
-        this.recordMetric('FID', entry.processingStart - entry.startTime, 'timing');
+        const fidEntry = entry as any; // Type assertion for FID-specific properties
+        if (fidEntry.processingStart) {
+          this.recordMetric('FID', fidEntry.processingStart - entry.startTime, 'timing');
+        }
       });
     });
 
