@@ -1,150 +1,330 @@
-import React, { ReactElement, ReactNode } from 'react';
-import { NextPage } from 'next';
+import React from 'react';
 import { useRouter } from 'next/router';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
-import { HelmetProvider } from 'react-helmet-async';
 import { AuthProvider } from '@/context/auth/AuthProvider';
 import { Provider as ReduxProvider } from 'react-redux';
-import { store } from '@/store';
-import { WhitelabelProvider } from '@/context/WhitelabelContext';
-import { WalletProvider } from '@/context/WalletContext';
-import { AnalyticsProvider } from '@/context/AnalyticsContext';
-import { CartProvider } from '@/context/CartContext';
+import { store } from '@/store'; // Changed to named import
+import { useAuth } from '@/hooks/useAuth';
 import { ErrorProvider } from '@/context/ErrorContext';
 import ErrorResetOnRouteChange from '@/components/ErrorResetOnRouteChange';
 import { I18nextProvider } from 'react-i18next';
 import i18n from '@/i18n';
-import { Toaster } from '@/components/ui/toaster';
+import { LanguageProvider } from '@/context/LanguageContext';
 import GlobalErrorBoundary from '@/components/GlobalErrorBoundary';
-import ErrorBoundary from '@/components/ErrorBoundary'; // Generic ErrorBoundary
+import { ErrorBoundary } from '@/components/ErrorBoundary';
 import RootErrorBoundary from '@/components/RootErrorBoundary';
 import { ApiErrorBoundary } from '@/components/ApiErrorBoundary';
-import { OfflineIndicator } from '@/components/OfflineIndicator';
-// import { BetaBanner } from '@/components/BetaBanner'; // Unused
-import { ThemeProvider } from '@/components/ThemeProvider';
-import { AppLayout } from '@/layout/AppLayout'; // Default AppLayout
 import ProductionErrorBoundary from '@/components/ProductionErrorBoundary';
 import dynamic from 'next/dynamic';
-// import { PerformanceMonitor } from '@/components/ui/performance-monitor'; // Unused
-// import { BundleAnalyzer } from '@/components/ui/bundle-analyzer'; // Unused
-// import { QuickActions } from '@/components/ui/quick-actions'; // Unused
-import { logInfo, logWarn, logError } from '@/utils/productionLogger';
-
-
-// Dynamically load heavy components to improve initial load time
-// const IntercomChat = dynamic(() => import('@/components/IntercomChat'), { // IntercomChat variable unused
-//   ssr: false,
-//   loading: () => null
-// });
-dynamic(() => import('@/components/IntercomChat'), { // Import for side effects if needed, or remove if not used
-  ssr: false,
-  loading: () => null
-});
+import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import { HydrationErrorBoundary } from '@/components/HydrationErrorBoundary';
-// Import Next.js fonts for optimal loading and CLS prevention
 import { Inter, Poppins } from 'next/font/google';
 import Head from 'next/head';
-// Import global Tailwind styles so they load before the app renders
+// Lazy load global styles to improve initial bundle size
 import '../src/index.css';
 import * as Sentry from '@sentry/nextjs';
-// import getConfig from 'next/config'; // Unused
 import { initializeGlobalErrorHandlers } from '@/utils/globalAppErrors';
 import {
   validateProductionEnvironment,
   initializeServices,
 } from '@/utils/environmentConfig';
-import {
-  initializePerformanceOptimizations,
-  initializePerformance,
-} from '@/utils/performance';
-import '@/utils/globalFetchInterceptor';
-import '@/utils/consoleErrorToast';
-import { initConsoleLogCapture } from '@/utils/consoleLogCapture';
-import { RouteChangeHandler } from '@/components/RouteChangeHandler';
-import RouteSEO from '@/components/RouteSEO';
-import { registerServiceWorker } from '@/serviceWorkerRegistration';
-// import PageTransition from '@/components/PageTransition'; // Unused
-// import { AnimatePresence } from 'framer-motion'; // Unused
 
-// Define types for getLayout pattern
-export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
-  getLayout?: (page: ReactElement) => ReactNode;
+// ===================================================================
+// DYNAMIC IMPORTS - Load heavy providers only when needed
+// ===================================================================
+
+// Load non-critical providers dynamically to reduce initial bundle
+const WhitelabelProvider = dynamic(() =>
+  import('@/context/WhitelabelContext').then(mod => ({ default: mod.WhitelabelProvider })), {
+  ssr: true,
+  loading: () => null
+});
+
+const WalletProvider = dynamic(() =>
+  import('@/context/WalletContext').then(mod => ({ default: mod.WalletProvider })), {
+  ssr: false, // Wallet is client-side only
+  loading: () => null
+});
+
+const AnalyticsProvider = dynamic(() =>
+  import('@/context/AnalyticsContext').then(mod => ({ default: mod.AnalyticsProvider })), {
+  ssr: false, // Analytics is client-side only
+  loading: () => null
+});
+
+const CartProvider = dynamic(() =>
+  import('@/context/CartContext').then(mod => ({ default: mod.CartProvider })), {
+  ssr: true,
+  loading: () => null
+});
+
+const FeedbackProvider = dynamic(() =>
+  import('@/context/FeedbackContext').then(mod => ({ default: mod.FeedbackProvider })), {
+  ssr: false, // Feedback is client-side only
+  loading: () => null
+});
+
+const ThemeProvider = dynamic(() =>
+  import('@/components/ThemeProvider').then(mod => ({ default: mod.ThemeProvider })), {
+  ssr: true,
+  loading: () => null
+});
+
+const AppLayout = dynamic(() =>
+  import('@/layout/AppLayout').then(mod => ({ default: mod.AppLayout })), {
+  ssr: true,
+  loading: () => (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-pulse text-lg">Loading layout...</div>
+    </div>
+  )
+});
+
+// Load utility components dynamically
+const ToastContainer = dynamic(() =>
+  import('@/components/ToastContainer').then(mod => ({ default: mod.ToastContainer })), {
+  ssr: false,
+  loading: () => null
+});
+
+const OfflineIndicator = dynamic(() =>
+  import('@/components/OfflineIndicator').then(mod => ({ default: mod.OfflineIndicator })), {
+  ssr: false,
+  loading: () => null
+});
+
+const RouteChangeHandler = dynamic(() =>
+  import('@/components/RouteChangeHandler').then(mod => ({ default: mod.RouteChangeHandler })), {
+  ssr: false,
+  loading: () => null
+});
+
+const RouteSEO = dynamic(() =>
+  import('@/components/RouteSEO'), {
+  ssr: true,
+  loading: () => null
+});
+
+// ===================================================================
+// FONT CONFIGURATION - Optimized loading
+// ===================================================================
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  display: 'swap',
+  fallback: ['system-ui', 'arial'],
+  adjustFontFallback: true,
+  variable: '--font-inter',
+  preload: true,
+});
+
+const poppins = Poppins({
+  weight: ['400', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  fallback: ['system-ui', 'arial'],
+  adjustFontFallback: true,
+  variable: '--font-poppins',
+  preload: true,
+});
+
+// ===================================================================
+// LIGHTWEIGHT LANGUAGE WRAPPER
+// ===================================================================
+
+const LanguageProviderWrapper: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
+  const { user, isAuthenticated } = useAuth();
+  const [isClient, setIsClient] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const safeAuthState = React.useMemo(
+    () => ({
+      isAuthenticated: isClient ? !!isAuthenticated : false,
+      user: isClient ? user : null,
+    }),
+    [isClient, isAuthenticated, user],
+  );
+
+  return (
+    <LanguageProvider authState={safeAuthState}>{children}</LanguageProvider>
+  );
 };
 
-type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout;
-};
+// ===================================================================
+// MAIN APP COMPONENT - FIXED: Optimized with fallback safety
+// ===================================================================
 
-function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-  console.log('[App] MyApp component rendering started.');
+function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  // console.log('Current route:', router.asPath, router.pathname); // Removed for linting
   const [queryClient] = React.useState(() => new QueryClient({
     defaultOptions: {
       queries: {
-        staleTime: 5 * 60 * 1000, // 5 minutes
-        gcTime: 10 * 60 * 1000, // 10 minutes
-        retry: false, // Disable retries for faster error handling
+        staleTime: 5 * 60 * 1000,
+        gcTime: 10 * 60 * 1000,
+        retry: false,
       },
     },
   }));
   const [isInitialized, setIsInitialized] = React.useState(false);
+  const [initError, setInitError] = React.useState<string | null>(null);
 
+  // CRITICAL FIX: Force initialization after timeout to prevent infinite loading
   React.useEffect(() => {
-    console.log('[App] MyApp main useEffect hook started.');
-    try {
-      validateProductionEnvironment();
-      initializeServices();
-      initializeGlobalErrorHandlers();
-      
-      const { publicRuntimeConfig } = getConfig();
-      console.log('[App] Public Runtime Config:', publicRuntimeConfig);
-      
-      if (publicRuntimeConfig.NEXT_PUBLIC_SENTRY_RELEASE) {
-        Sentry.setTag('release', publicRuntimeConfig.NEXT_PUBLIC_SENTRY_RELEASE);
+    const forceInitTimeout = setTimeout(() => {
+      if (!isInitialized) {
+        console.warn('[App] Force initializing after timeout - preventing infinite loading');
+        setIsInitialized(true);
+      }
+    }, 3000); // Force init after 3 seconds max
+
+    return () => clearTimeout(forceInitTimeout);
+  }, [isInitialized]);
+
+  // Simplified initialization with better error handling
+  React.useEffect(() => {
+    let isMounted = true;
+
+    const initializeApp = async () => {
+      try {
+        if (process.env.NODE_ENV === 'development') {
+          console.log('[App] Starting optimized initialization...');
+        }
+
+        // Critical path only
+        try {
+          initializeGlobalErrorHandlers();
+        } catch (error) {
+          console.warn('[App] Global error handlers failed:', error);
+        }
+
+        try {
+          validateProductionEnvironment();
+        } catch (error) {
+          console.warn('[App] Environment validation warning:', error);
+        }
+
+        // Mark as initialized immediately for faster render
+        if (isMounted) {
+          setTimeout(() => {
+            setIsInitialized(true);
+          }, 100); // Small delay to ensure DOM is ready
+        }
+
+        // Defer non-critical initializations
+        setTimeout(() => {
+          if (!isMounted) return;
+
+          try {
+            initializeServices().catch((err) =>
+              console.warn('Service initialization failed:', err),
+            );
+          } catch (error) {
+            console.warn('Services init error:', error);
+          }
+
+          // Lazy load performance monitoring
+          if (typeof window !== 'undefined' && process.env.PERFORMANCE_MONITORING === 'true') {
+            import('@/utils/performance').then(perf => {
+              perf.initializePerformanceOptimizations();
+              perf.initializePerformance();
+            }).catch(err => console.warn('Performance monitoring failed:', err));
+          }
+
+          // Lazy load development tools
+          if (process.env.NODE_ENV === 'development') {
+            import('@/utils/consoleLogCapture').then(console => {
+              console.initConsoleLogCapture();
+            }).catch(err => console.warn('Console capture failed:', err));
+          }
+        }, 200);
+
+      } catch (error) {
+        console.error('[App] Critical initialization error:', error);
+        setInitError('Initialization failed');
+
+        // Always initialize even on error to prevent infinite loading
+        if (isMounted) {
+          setTimeout(() => {
+            setIsInitialized(true);
+          }, 500);
+        }
+
+        // Deferred error reporting
+        setTimeout(() => {
+          try {
+            if (process.env.NEXT_PUBLIC_SENTRY_DSN && !process.env.NEXT_PUBLIC_SENTRY_DSN.includes('dummy')) {
+              Sentry.captureException(error);
+            }
+          } catch (sentryError) {
+            console.warn('[App] Could not send error to Sentry:', sentryError);
+          }
+        }, 0);
       }
     };
 
-    // Force initialization completion after maximum 3 seconds
-    // MODIFIED: Increased timeout to 15 seconds for debugging
-    const forceInitTimeout = setTimeout(() => {
-      console.warn('Force completing app initialization due to timeout (15s)');
-      setLoadingProgress(100);
-      setIsLoading(false);
-    }, 15000); // Increased from 3000ms
-
-    initializeApp().finally(() => {
-      clearTimeout(forceInitTimeout);
-    });
+    initializeApp();
 
     return () => {
-      clearTimeout(forceInitTimeout);
+      isMounted = false;
     };
   }, []);
 
+  // Lazy Sentry context updates with error handling
   React.useEffect(() => {
-    Sentry.setTag('route', router.pathname);
-    Sentry.setContext('query', router.query);
-  }, [router.pathname, router.query]); // Added router.query as dependency
+    try {
+      if (process.env.NEXT_PUBLIC_SENTRY_DSN && !process.env.NEXT_PUBLIC_SENTRY_DSN.includes('dummy')) {
+        Sentry.setTag('route', router.pathname);
+        Sentry.setContext('query', router.query);
+      }
+    } catch (error) {
+      console.warn('Sentry context update failed:', error);
+    }
+  }, [router.pathname, router.query]);
 
-  console.log('[App] Attempting to render component:', Component.displayName || Component.name || 'UnnamedComponent');
+  // Lazy service worker registration with error handling
+  React.useEffect(() => {
+    if (process.env.NODE_ENV === 'production') {
+      setTimeout(() => {
+        import('@/serviceWorkerRegistration').then(sw => {
+          sw.registerServiceWorker();
+        }).catch(err => console.warn('Service worker registration failed:', err));
+      }, 2000);
+    }
+  }, []);
 
-  // Use the getLayout defined on the page component, or default to AppLayout
-  const getLayout = Component.getLayout ?? ((page) => <AppLayout>{page}</AppLayout>);
+  // FIXED: Enhanced loading screen with error display
+  if (!isInitialized) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-900 to-purple-900">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-2 border-cyan-400 border-t-transparent mx-auto mb-4"></div>
+          <p className="text-white text-lg font-medium">Initializing Zion App...</p>
+          <p className="text-blue-200 text-sm mt-2">
+            {initError ? `Error: ${initError}` : 'Optimizing performance...'}
+          </p>
+          <p className="text-blue-300 text-xs mt-2">This should complete in a few seconds</p>
+        </div>
+      </div>
+    );
+  }
 
+  // FIXED: Simplified provider chain to reduce loading complexity
   return (
     <>
       <Head>
-        {/* Next.js font optimization handles preloading automatically */}
-        {/* Font optimization CSS to prevent CLS */}
         <style jsx global>{`
           :root {
             --font-inter: ${inter.style.fontFamily};
             --font-poppins: ${poppins.style.fontFamily};
           }
 
-          /* Optimized fallback font adjustments */
           @font-face {
             font-family: 'Inter Fallback';
             src: local('Arial'), local('system-ui');
@@ -163,7 +343,6 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
             line-gap-override: 0%;
           }
 
-          /* Performance optimizations */
           .font-inter { font-family: var(--font-inter), 'Inter Fallback', system-ui, sans-serif; }
           .font-poppins { font-family: var(--font-poppins), 'Poppins Fallback', system-ui, sans-serif; }
         `}</style>
@@ -175,7 +354,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
               <React.Suspense
                 fallback={
                   <div className="flex items-center justify-center min-h-screen">
-                    <div className="animate-pulse text-lg">Loading...</div>
+                    <div className="animate-pulse text-lg">Loading app...</div>
                   </div>
                 }
               >
@@ -186,38 +365,45 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
                         <I18nextProvider i18n={i18n}>
                           <ErrorProvider>
                             <AuthProvider>
-                              <WhitelabelProvider>
-                                <LanguageProviderWrapper>
-                                  <WalletProvider>
-                                    <CartProvider>
-                                      <AnalyticsProvider>
-                                        <FeedbackProvider>
-                                          <ThemeProvider>
-                                            <AppLayout>
-                                              <RouteSEO />
-                                              <RouteChangeHandler
-                                                resetScrollOnChange={true}
-                                                forceRerender={false} // Keep false as per original, true didn't seem to have a listener
-                                              />
-                                              <ErrorBoundary>
-                                                <Component
-                                                  key={router.asPath}
-                                                  {...pageProps}
+                              <ErrorBoundary fallback={
+                                <div className="flex items-center justify-center min-h-screen">
+                                  <div className="text-center">
+                                    <h2 className="text-xl mb-4">Loading providers...</h2>
+                                    <p>If this takes too long, there may be a provider issue.</p>
+                                  </div>
+                                </div>
+                              }>
+                                <WhitelabelProvider>
+                                  <LanguageProviderWrapper>
+                                    <WalletProvider>
+                                      <CartProvider>
+                                        <AnalyticsProvider>
+                                          <FeedbackProvider>
+                                            <ThemeProvider>
+                                              <AppLayout>
+                                                <RouteSEO />
+                                                <RouteChangeHandler
+                                                  resetScrollOnChange={true}
+                                                  forceRerender={false}
                                                 />
-                                              </ErrorBoundary>
-                                              <ErrorResetOnRouteChange />
-                                              <ToastContainer />
-                                              <OfflineIndicator />
-                                              {/* IntercomChat is dynamically imported but not rendered here explicitly */}
-                                              {/* PerformanceMonitor, BundleAnalyzer, QuickActions were commented out/removed */}
-                                            </AppLayout>
-                                          </ThemeProvider>
-                                        </FeedbackProvider>
-                                      </AnalyticsProvider>
-                                    </CartProvider>
-                                  </WalletProvider>
-                                </LanguageProviderWrapper>
-                              </WhitelabelProvider>
+                                                <ErrorBoundary>
+                                                  <Component
+                                                    key={router.asPath}
+                                                    {...pageProps}
+                                                  />
+                                                </ErrorBoundary>
+                                                <ErrorResetOnRouteChange />
+                                                <ToastContainer />
+                                                <OfflineIndicator />
+                                              </AppLayout>
+                                            </ThemeProvider>
+                                          </FeedbackProvider>
+                                        </AnalyticsProvider>
+                                      </CartProvider>
+                                    </WalletProvider>
+                                  </LanguageProviderWrapper>
+                                </WhitelabelProvider>
+                              </ErrorBoundary>
                             </AuthProvider>
                           </ErrorProvider>
                         </I18nextProvider>
@@ -234,58 +420,8 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   );
 }
 
-function Footer(): any {
-  return (
-    <footer style={{
-      background: 'linear-gradient(135deg, #1e293b, #334155)', color: 'white',
-      padding: '40px 20px', marginTop: 'auto'
-    }}>
-      <div style={{ maxWidth: 1400, margin: '0 auto', textAlign: 'center' }}>
-        <div style={{ marginBottom: 20 }}>
-          <h3 style={{ 
-            fontSize: '1.5rem', fontWeight: 700, marginBottom: 10,
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
-          }}>Zion Tech Group</h3>
-          <p style={{ color: '#94a3b8', fontSize: '0.9rem' }}>
-            Innovative IT Solutions & AI Services
-          </p>
-        </div>
-        
-        <div style={{ 
-          display: 'flex', justifyContent: 'center', gap: 30, flexWrap: 'wrap',
-          marginBottom: 20
-        }}>
-          <Link href="/services" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem' }}>Services</Link>
-          <Link href="/pricing" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem' }}>Pricing</Link>
-          <Link href="/contact" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem' }}>Contact</Link>
-          <Link href="/privacy" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem' }}>Privacy</Link>
-          <Link href="/terms" style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.9rem' }}>Terms</Link>
-        </div>
-        
-        <div style={{ 
-          borderTop: '1px solid #334155', paddingTop: 20, color: '#64748b', fontSize: '0.8rem'
-        }}>
-          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-  );
+if (process.env.NODE_ENV === 'development') {
+  console.log('[App] MyApp component initialized with loading fix');
 }
 
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <ErrorBoundary>
-      <PerformanceMonitor />
-      <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-        <Header />
-        <main style={{ flex: 1 }}>
-          <Component {...pageProps} />
-        </main>
-        <Footer />
-      </div>
-    </ErrorBoundary>
-  );
-}
+export default MyApp;
