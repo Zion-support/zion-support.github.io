@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { ENHANCED_INNOVATIVE_SERVICES } from '../data/enhancedInnovativeServices';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '../components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { Badge } from '../components/ui/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
 import { 
   Search, 
   Filter, 
@@ -109,9 +113,26 @@ const EnhancedServicesShowcase: React.FC = () => {
               animationDuration: `${20 + Math.random() * 10}s`
             }}
           >
-            {Math.random() > 0.5 ? '1' : '0'}
-          </div>
-        ))}
+            All Services
+          </Button>
+          {categories.map((category) => (
+            <Button
+              key={category}
+              variant={selectedCategory === category ? 'default' : 'outline'}
+              onClick={() => setSelectedCategory(category)}
+              className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+            >
+              {category}
+            </Button>
+          ))}
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service) => (
+            <ServiceCard key={service.id} service={service} />
+          ))}
+        </div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -128,90 +149,241 @@ const EnhancedServicesShowcase: React.FC = () => {
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Discover our comprehensive range of cutting-edge technology solutions designed to transform your business with AI, quantum computing, cybersecurity, and more
           </p>
-          
-          {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center p-4 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10"
-              >
-                <div className="flex justify-center mb-2">
-                  <stat.icon className="w-8 h-8 text-cyan-400" />
-                </div>
-                <div className="text-2xl font-bold text-cyan-400 mb-1">{stat.value}</div>
-                <div className="text-sm font-medium text-white mb-1">{stat.label}</div>
-                <div className="text-xs text-gray-400">{stat.description}</div>
-              </motion.div>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
+            <CardContent className="p-8">
+              <Brain className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
+              <h3 className="text-2xl font-bold text-white mb-4">AI-First Approach</h3>
+              <p className="text-zion-cyan-light">
+                We leverage the latest AI technologies to create intelligent, scalable solutions that adapt to your business needs.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
+            <CardContent className="p-8">
+              <Shield className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
+              <p className="text-zion-cyan-light">
+                Our security-first approach ensures your data and systems are protected with industry-leading security measures.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
+            <CardContent className="p-8">
+              <Users className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
+              <h3 className="text-2xl font-bold text-white mb-4">Expert Team</h3>
+              <p className="text-zion-cyan-light">
+                Our certified professionals bring years of experience in delivering successful technology solutions across industries.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-zion-cyan-light mb-8 max-w-3xl mx-auto">
+            Let's discuss how our innovative solutions can drive your digital transformation and business growth.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-cyan px-8 py-3">
+              <Phone className="mr-2 h-5 w-5" />
+              Schedule a Consultation
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-3">
+              <Mail className="mr-2 h-5 w-5" />
+              Request a Quote
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="bg-zion-blue-dark py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-xl font-bold text-white mb-4">Zion Tech Group</h3>
+              <p className="text-zion-cyan-light">
+                Premier IT services and AI solutions provider helping businesses thrive in the digital age.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
+              <div className="space-y-2 text-zion-cyan-light">
+                <p>+1 302 464 0950</p>
+                <p>kleber@ziontechgroup.com</p>
+                <p>364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
+              <div className="space-y-2 text-zion-cyan-light">
+                <p>AI & Automation</p>
+                <p>Cybersecurity</p>
+                <p>Cloud Services</p>
+                <p>Data Analytics</p>
+              </div>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>
+              <div className="space-y-2">
+                <Link to="https://ziontechgroup.com" className="flex items-center text-zion-cyan hover:text-zion-cyan-light">
+                  <Globe className="h-4 w-4 mr-2" />
+                  Website
+                </Link>
+                <Button variant="outline" size="sm" className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  View All Services
+                </Button>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-zion-blue-light mt-8 pt-8 text-center text-zion-cyan-light">
+            <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+// Service Card Component
+function ServiceCard({ service }) {
+  const [showDetails, setShowDetails] = useState(false);
+
+  return (
+    <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
+      <CardHeader>
+        <div className="flex items-start justify-between mb-2">
+          <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
+            {service.category}
+          </Badge>
+          <Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
+            {service.subcategory}
+          </Badge>
+        </div>
+        <CardTitle className="text-xl text-white mb-2">{service.title}</CardTitle>
+        <CardDescription className="text-zion-cyan-light">
+          {service.description}
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-4">
+          {/* Price and Rating */}
+          <div className="flex items-center justify-between">
+            <div className="text-2xl font-bold text-zion-cyan">
+              {service.currency}{service.price?.toLocaleString()}
+            </div>
+            <div className="flex items-center gap-1">
+              <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+              <span className="text-white">{service.rating}</span>
+              <span className="text-zion-cyan-light">({service.reviewCount})</span>
+            </div>
+          </div>
+
+          {/* AI Score */}
+          <div className="flex items-center justify-between">
+            <span className="text-zion-cyan-light">AI Score:</span>
+            <div className="flex items-center gap-2">
+              <div className="w-16 bg-zion-blue-light rounded-full h-2">
+                <div 
+                  className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" 
+                  style={{ width: `${service.aiScore}%` }}
+                ></div>
+              </div>
+              <span className="text-zion-cyan font-semibold">{service.aiScore}%</span>
+            </div>
+          </div>
+
+          {/* Tags */}
+          <div className="flex flex-wrap gap-2">
+                          {service.tags.slice(0, 3).map((tag) => (
+              <Badge key={tag} variant="outline" className="text-xs border-zion-cyan/30 text-zion-cyan-light">
+                {tag}
+              </Badge>
             ))}
           </div>
-          
-          {/* Search and Filter Section */}
-          <div className="max-w-4xl mx-auto mb-8">
-            <div className="flex flex-col md:flex-row gap-4 mb-6">
-              {/* Search Bar */}
-              <div className="flex-1 relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Search services by name, description, or tags..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 backdrop-blur-sm"
-                />
-              </div>
-              
-              {/* Category Filter */}
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 backdrop-blur-sm"
-              >
-                {categories.map((category) => (
-                  <option key={category} value={category} className="bg-gray-800 text-white">
-                    {category === 'all' ? 'All Categories' : category}
-                  </option>
-                ))}
-              </select>
-              
-              {/* Sort Options */}
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 backdrop-blur-sm"
-              >
-                <option value="name" className="bg-gray-800 text-white">Sort by Name</option>
-                <option value="price-low" className="bg-gray-800 text-white">Price: Low to High</option>
-                <option value="price-high" className="bg-gray-800 text-white">Price: High to Low</option>
-                <option value="category" className="bg-gray-800 text-white">Sort by Category</option>
-              </select>
-              
-              {/* View Mode Toggle */}
-              <div className="flex bg-white/10 rounded-lg p-1 border border-cyan-500/30">
-                <button
-                  onClick={() => setViewMode('grid')}
-                  className={`px-3 py-2 rounded-md transition-colors ${
-                    viewMode === 'grid' 
-                      ? 'bg-cyan-500 text-white' 
-                      : 'text-gray-400 hover:text-white'
-                  }`}
-                >
-                  Grid
-                </button>
-                <button
-                  onClick={() => setViewMode('list')}
-                  className={`px-3 py-2 rounded-md transition-colors ${
-                    viewMode === 'list' 
-                      ? 'bg-cyan-500 text-white' 
-                      : 'text-gray-400 hover:text-white'
-                  }`}
-                >
-                  List
-                </button>
-              </div>
+
+          {/* Delivery */}
+          <div className="flex items-center gap-2 text-zion-cyan-light">
+            <Clock className="h-4 w-4" />
+            <span className="text-sm">Delivery: {service.estimatedDelivery}</span>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex gap-2">
+            <Button 
+              className="flex-1 bg-zion-purple hover:bg-zion-purple-dark text-white"
+              onClick={() => setShowDetails(!showDetails)}
+            >
+              {showDetails ? 'Hide Details' : 'View Details'}
+            </Button>
+            <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+              <Phone className="h-4 w-4 mr-2" />
+              Contact
+            </Button>
+          </div>
+
+          {/* Detailed Information */}
+          {showDetails && (
+            <div className="mt-4 p-4 bg-white/5 rounded-lg border border-zion-cyan/20">
+              <Accordion type="single" collapsible>
+                <AccordionItem value="features">
+                  <AccordionTrigger className="text-zion-cyan hover:text-zion-cyan-light">
+                    Features & Benefits
+                  </AccordionTrigger>
+                  <AccordionContent className="text-zion-cyan-light">
+                    <div className="space-y-2">
+                      <h4 className="font-semibold text-white mb-2">Features:</h4>
+                                              {service.features.map((feature, index) => (
+                        <div key={index} className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-green-400" />
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                      <h4 className="font-semibold text-white mb-2 mt-4">Benefits:</h4>
+                                              {service.benefits.map((benefit, index) => (
+                        <div key={index} className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-green-400" />
+                          <span>{benefit}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="contact">
+                  <AccordionTrigger className="text-zion-cyan hover:text-zion-cyan-light">
+                    Get Started
+                  </AccordionTrigger>
+                  <AccordionContent className="text-zion-cyan-light">
+                    <div className="space-y-3">
+                      <p>Ready to implement this solution?</p>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2">
+                          <Phone className="h-4 w-4 text-zion-cyan" />
+                          <span>{service.contactInfo.phone}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Mail className="h-4 w-4 text-zion-cyan" />
+                          <span>{service.contactInfo.email}</span>
+                        </div>
+                      </div>
+                      <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white">
+                        Schedule Consultation
+                      </Button>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
           </div>
         </motion.div>
