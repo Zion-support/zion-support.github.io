@@ -1,157 +1,128 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export interface SEOProps {
-	title?: string;
-	description?: string;
-	canonical?: string;
-	ogImage?: string;
-	keywords?: string | string[];
-	image?: string;
-	url?: string;
-	type?: 'website' | 'article' | 'product';
-	publishedTime?: string;
-	modifiedTime?: string;
-	author?: string;
-	section?: string;
-	tags?: string[];
-	structuredData?: unknown;
-	noindex?: boolean;
-	nofollow?: boolean;
-}
-
-const DEFAULTS = {
-	title: 'Zion Tech Group - AI, Cloud, and Cybersecurity Solutions',
-	description: 'We build autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business.',
-	url: 'https://ziontechgroup.com',
-	image: '/og-image.svg',
-};
-
-function toAbsoluteUrl(baseUrl: string, urlOrPath: string | undefined): string | undefined {
-	if (!urlOrPath) return undefined;
-	if (/^(https?:)?\/\//.test(urlOrPath)) return urlOrPath;
-	const base = baseUrl.replace(/\/$/, '');
-	return base + (urlOrPath.startsWith('/') ? urlOrPath : `/${urlOrPath}`);
-}
-
-function withTrailingSlash(u: string): string {
-	return u.endsWith('/') ? u : `${u}/`;
+interface SEOProps {
+  title: string;
+  description: string;
+  keywords?: string[];
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'company';
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
 }
 
 export const SEO: React.FC<SEOProps> = ({
-	title,
-	description,
-	canonical,
-	ogImage,
-	keywords,
-	image,
-	url,
-	type = 'website',
-	publishedTime,
-	modifiedTime,
-	author = 'Zion Tech Group',
-	section,
-	tags = [],
-	structuredData,
-	noindex = false,
-	nofollow = false,
+  title,
+  description,
+  keywords = [],
+  image = '/images/zion-tech-group-og.jpg',
+  url = 'https://ziontechgroup.com',
+  type = 'website',
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
+  section,
+  tags = []
 }) => {
-	const baseUrl = DEFAULTS.url;
+  const fullTitle = `${title} | Zion Tech Group`;
+  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
+  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
 
-	const pageTitle = title || DEFAULTS.title;
-	const pageDescription = description || DEFAULTS.description;
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": type === 'company' ? 'Organization' : type === 'article' ? 'Article' : 'WebPage',
+    "name": fullTitle,
+    "description": description,
+    "url": fullUrl,
+    "image": fullImage,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ziontechgroup.com/images/zion-logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": fullUrl
+    },
+    ...(type === 'article' && {
+      "author": {
+        "@type": "Person",
+        "name": author
+      },
+      "datePublished": publishedTime,
+      "dateModified": modifiedTime,
+      "articleSection": section,
+      "keywords": [...keywords, ...tags].join(', ')
+    }),
+    ...(type === 'company' && {
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com"
+      }
+    })
+  };
 
-	const derivedCanonicalRaw = baseUrl.replace(/\/$/, '') + (window.location.pathname.startsWith('/') ? window.location.pathname : `/${window.location.pathname}`);
-	const derivedCanonical = withTrailingSlash(derivedCanonicalRaw.split('#')[0].split('?')[0]);
-	const canonicalUrl = withTrailingSlash(
-		canonical ? (toAbsoluteUrl(baseUrl, canonical) as string) : derivedCanonical
-	);
-
-	const chosenImage = image || ogImage || DEFAULTS.image;
-	const absoluteImage = toAbsoluteUrl(baseUrl, chosenImage) as string;
-	const robotsContent = `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`;
-
-	return (
-		<Helmet>
-			<title>{pageTitle}</title>
-			<meta name="description" content={pageDescription} />
-			{keywords ? (
-				<meta name="keywords" content={Array.isArray(keywords) ? keywords.join(', ') : keywords} />
-			) : null}
-			<meta name="author" content={author} />
-			<meta name="robots" content={robotsContent} />
-			<link rel="canonical" href={canonicalUrl} />
-			<link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
-			<link rel="alternate" hrefLang="en" href={canonicalUrl} />
-
-			<meta property="og:title" content={pageTitle} />
-			<meta property="og:description" content={pageDescription} />
-			<meta property="og:type" content={type} />
-			<meta property="og:url" content={canonicalUrl} />
-			<meta property="og:image" content={absoluteImage} />
-			<meta property="og:site_name" content="Zion Tech Group" />
-			<meta property="og:locale" content="en_US" />
-
-			<meta name="twitter:card" content="summary_large_image" />
-			<meta name="twitter:title" content={pageTitle} />
-			<meta name="twitter:description" content={pageDescription} />
-			<meta name="twitter:image" content={absoluteImage} />
-
-			{type === 'article' && publishedTime ? (
-				<meta property="article:published_time" content={publishedTime} />
-			) : null}
-			{type === 'article' && modifiedTime ? (
-				<meta property="article:modified_time" content={modifiedTime} />
-			) : null}
-			{type === 'article' && author ? (
-				<meta property="article:author" content={author} />
-			) : null}
-			{type === 'article' && section ? (
-				<meta property="article:section" content={section} />
-			) : null}
-			{type === 'article' && tags?.length
-				? tags.map((tag, index) => <meta key={index} property="article:tag" content={tag} />)
-				: null}
-
-			{structuredData ? (
-				<script
-					type="application/ld+json"
-					dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-				/>
-			) : (
-				<script
-					type="application/ld+json"
-					dangerouslySetInnerHTML={{
-						__html: JSON.stringify([
-							{
-								"@context": "https://schema.org",
-								"@type": "Organization",
-								"name": "Zion Tech Group",
-								"url": baseUrl,
-								"logo": `${baseUrl.replace(/\/$/, '')}/favicon.svg`,
-								"sameAs": [
-									"https://www.linkedin.com/company/zion-tech-group",
-									"https://github.com/Zion-Holdings",
-									"https://twitter.com/ziontechgroup",
-								],
-							},
-							{
-								"@context": "https://schema.org",
-								"@type": "WebSite",
-								"url": baseUrl,
-								"name": "Zion Tech Group",
-								"potentialAction": {
-									"@type": "SearchAction",
-									"target": `${baseUrl.replace(/\/$/, '')}/search?q={search_term_string}`,
-									"query-input": "required name=search_term_string",
-								},
-							},
-						]),
-					}}
-				/>
-			)}
-		</Helmet>
-	);
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="author" content={author} />
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={fullImage} />
+      <meta property="og:url" content={fullUrl} />
+      <meta property="og:type" content={type} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={fullImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      
+      {/* Additional Meta Tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#0ea5e9" />
+      <meta name="msapplication-TileColor" content="#0ea5e9" />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={fullUrl} />
+      
+      {/* Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
+    </Helmet>
+  );
 };
-
-export default SEO;
