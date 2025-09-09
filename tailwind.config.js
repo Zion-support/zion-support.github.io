@@ -1,13 +1,14 @@
+import forms from '@tailwindcss/forms';
+import typography from '@tailwindcss/typography';
+import aspectRatio from '@tailwindcss/aspect-ratio';
+
 /** @type {import('tailwindcss').Config} */
-// eslint-disable-next-line @typescript-eslint/no-require-imports, no-undef
-module.exports = {
-  darkMode: ['class'],;
-  content: [;
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',;
-    './components/**/*.{js,ts,jsx,tsx,mdx}',;
-    './app/**/*.{js,ts,jsx,tsx,mdx}',;
-    './src/**/*.{js,ts,jsx,tsx,mdx}',;
-  ],;
+export default {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
     extend: {
       colors: {
@@ -36,11 +37,8 @@ module.exports = {
     },
   },
   plugins: [
-    // eslint-disable-next-line @typescript-eslint/no-require-imports, no-undef
-    require('@tailwindcss/forms'),
-    // eslint-disable-next-line @typescript-eslint/no-require-imports, no-undef
-    require('@tailwindcss/typography'),
-    // eslint-disable-next-line @typescript-eslint/no-require-imports, no-undef
-    require('@tailwindcss/aspect-ratio'),
+    forms,
+    typography,
+    aspectRatio,
   ],
 }
