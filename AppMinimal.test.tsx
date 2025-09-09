@@ -5,12 +5,16 @@ import UnknownComponent from './AppMinimal';
 describe('UnknownComponent', () => {
   it('renders without crashing', () => {
     render(<UnknownComponent />);
-    expect(screen.getByRole('main')).toBeInTheDocument()});
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
 
   it('displays correct content', () => {
     render(<UnknownComponent />);
-    // Add specific content checks based on component functionality});
+    // Add specific content checks based on component functionality
+  });
 
   it('handles user interactions', () => {
     render(<UnknownComponent />);
-    // Add interaction tests based on component functionality})});
+    // Add interaction tests based on component functionality
+  });
+});
