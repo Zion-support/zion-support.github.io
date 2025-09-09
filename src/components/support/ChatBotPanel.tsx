@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Button } from "@/components/ui/Button";
+import { logError, logDev } from '@/utils/productionLogger';
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { toast } from "@/hooks/use-toast";
@@ -72,7 +73,7 @@ export function ChatBotPanel() {
 
       setMessages(prev => [...prev, botMessage]);
     } catch (error) {
-      console.error("Error in AI chat:", error);
+      logError("Error in AI chat:", error);
       toast({
         title: "Communication Error",
         description: "We're having trouble connecting to our support service.",
@@ -83,11 +84,67 @@ export function ChatBotPanel() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (inputValue.trim()) {
-      handleSendMessage(inputValue);
-      setInputValue("");
+  const sendToAIAssistant = async (message: string) => {
+    try {
+      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ 
+          messages: [{ role: "user", content: message }] 
+        }),
+      });
+      
+      if (!response.ok) {
+        return {
+          success: false,
+          message: "I'm having trouble connecting to my knowledge base right now."
+        };
+      }
+      
+      const data = await response.json();
+      return {
+        success: true,
+        message: data.message
+      };
+    } catch (error) {
+      logError("Error in AI chat:", error);
+      return {
+        success: false,
+        message: "I'm experiencing technical difficulties. Please try again later."
+      };
+    }
+  };
+
+  const suggestEscalation = () => {
+    const escalationMessage: Message = {
+      id: `bot-escalation-${Date.now()}`,
+      content: 
+        "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
+      sender: "bot",
+      timestamp: new Date(),
+    };
+    
+    setMessages((prev) => [...prev, escalationMessage]);
+    
+    // Log this interaction for the support team
+    logSupportEscalation();
+  };
+
+  const logSupportEscalation = async () => {
+    try {
+      // Send the conversation to the backend for logging
+      // This would be implemented in a real system
+      logDev("Support escalation triggered", {
+        conversationHistory: messages.map(m => ({
+          content: m.content,
+          sender: m.sender,
+          timestamp: m.timestamp
+        }))
+      });
+    } catch (error) {
+      logError("Failed to log support escalation:", error);
     }
   };
 

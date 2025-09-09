@@ -1,4 +1,4 @@
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import { logInfo, logError } from '@/utils/productionLogger';
 
 declare global {
   interface Window {
@@ -50,7 +50,7 @@ export const initPostHog = () => {
 export const captureEvent = (name: string, properties?: Record<string, any>) => {
   if (typeof window === 'undefined') return;
   if (!window.posthog?.capture) {
-    logErrorToProduction('PostHog not initialized. Call initPostHog() first.', new Error('PostHog not initialized'), { eventName: name });
+    logError('PostHog not initialized. Call initPostHog() first.');
     return;
   }
   window.posthog.capture(name, properties);
