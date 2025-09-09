@@ -6,8 +6,6 @@ import { Button } from '@/components/ui/button';
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'; // Adjust path
 import { Badge } from '@/components/ui/badge'; // Adjust path
 import ConnectWalletButton from '@/components/ConnectWalletButton'; // Assuming this is the correct path
-import { captureException } from '@/utils/sentry';
-import { useAuth } from '@/hooks/useAuth';
 // import MainLayout from '@/components/layout/MainLayout';
 
 // Types (should ideally be shared)
