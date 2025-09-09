@@ -113,10 +113,6 @@ temp/
 *.sln
 *.sw?
 
-# Core dumps and large files
-core
-*.core
-core.*
-
-# Git submodules (prevent submodule checkout errors)
-.gitmodules
+# Build output folder
+out/
+.next/
