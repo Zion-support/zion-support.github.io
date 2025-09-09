@@ -35,7 +35,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "SHARP_IGNORE_GLOBAL_LIBVIPS=1 vite build",
     "start": "vite preview",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
