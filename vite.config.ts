@@ -20,6 +20,9 @@ export default defineConfig({
 			output: {
 				manualChunks: {
 					'react-vendor': ['react', 'react-dom'],
+					'animation-vendor': ['framer-motion'],
+					'icons-vendor': ['lucide-react'],
+					'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority']
 				},
 				chunkFileNames: 'js/[name]-[hash].js',
 				entryFileNames: 'js/[name]-[hash].js',
@@ -44,7 +47,15 @@ export default defineConfig({
 		chunkSizeWarningLimit: 1000,
 	},
 	optimizeDeps: {
-		include: ['react', 'react-dom', 'react-router-dom'],
+		include: [
+			'react',
+			'react-dom',
+			'react-router-dom',
+			'framer-motion',
+			'lucide-react',
+			'clsx',
+			'tailwind-merge'
+		]
 	},
 	css: { devSourcemap: false },
 	server: { port: 3000, host: true, open: true, cors: true, hmr: { overlay: false } },
