@@ -1,20 +1,20 @@
 import { jsx as _jsx } from "react/jsx-runtime";
 import { createContext, useContext } from 'react';
-const defaultWhitelabelContext = {
+const WhitelabelContext = createContext({
     isWhitelabel: false,
-    brandName: 'Zion Tech Group',
-    brandLogo: '/logo.png',
-    primaryColor: '#3B82F6'
-};
-const WhitelabelContext = createContext(defaultWhitelabelContext);
+    primaryColor: '#22ddd2', // Default Zion cyan
+});
 export const useWhitelabel = () => {
     const context = useContext(WhitelabelContext);
-    if (!context) {
+    if (context === undefined) {
         throw new Error('useWhitelabel must be used within a WhitelabelProvider');
     }
     return context;
 };
-export const WhitelabelProvider = ({ children, value = {} }) => {
-    const contextValue = Object.assign(Object.assign({}, defaultWhitelabelContext), value);
-    return (_jsx(WhitelabelContext.Provider, { value: contextValue, children: children }));
+export const WhitelabelProvider = ({ children }) => {
+    const value = {
+        isWhitelabel: false,
+        primaryColor: '#22ddd2',
+    };
+    return (_jsx(WhitelabelContext.Provider, { value: value, children: children }));
 };
