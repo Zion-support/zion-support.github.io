@@ -4,121 +4,112 @@ import { Helmet } from 'react-helmet-async';
 interface SEOProps {
   title?: string;
   description?: string;
-  keywords?: string[];
-  author?: string;
+  keywords?: string;
   image?: string;
   url?: string;
-  type?: 'website' | 'article' | 'product' | 'service';
+  type?: string;
+  author?: string;
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
   tags?: string[];
-  canonical?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
 }
 
-const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - AI-Powered Business Solutions & IT Services',
-  description = 'Transform your business with Zion Tech Group\'s cutting-edge AI solutions, comprehensive IT services, and sustainable Green IT practices. Drive innovation and digital transformation.',
-  keywords = [
-    'AI solutions',
-    'business intelligence',
-    'IT services',
-    'cloud computing',
-    'digital transformation',
-    'machine learning',
-    'cybersecurity',
-    'Green IT',
-    'sustainable technology',
-    'Zion Tech Group'
-  ],
-  author = 'Zion Tech Group',
-  image = '/images/zion-tech-group-og.jpg',
-  url = window.location.href,
-  type = 'website',
+export const SEO: React.FC<SEOProps> = ({
+  title = "Zion Tech Group - Innovative AI, Quantum Computing & Cybersecurity Solutions",
+  description = "Leading technology solutions provider offering cutting-edge AI, quantum computing, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with Zion Tech Group.",
+  keywords = "AI services, quantum computing, cybersecurity, cloud infrastructure, digital transformation, IT consulting, machine learning, blockchain, Web3, healthcare AI, legal tech, fintech",
+  image = "/images/zion-tech-group-og.jpg",
+  url = "https://ziontechgroup.com",
+  type = "website",
+  author = "Zion Tech Group",
   publishedTime,
   modifiedTime,
   section,
-  tags = [],
-  canonical,
-  noindex = false,
-  nofollow = false
+  tags = []
 }) => {
-  const siteName = 'Zion Tech Group';
-  const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
-  const fullDescription = description.length > 160 ? `${description.substring(0, 157)}...` : description;
-  
-  // Structured data for organization
-  const organizationSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/images/zion-logo.png',
-    description: 'AI-Powered Business Solutions & IT Services',
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'US'
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/images/zion-logo.png",
+    "description": description,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
     },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'customer service',
-      email: 'contact@ziontechgroup.com'
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
     },
-    sameAs: [
-      'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup'
-    ]
-  };
-
-  // Structured data for website
-  const websiteSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    description: 'AI-Powered Business Solutions & IT Services',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: 'https://ziontechgroup.com/search?q={search_term_string}',
-      'query-input': 'required name=search_term_string'
+    "sameAs": [
+      "https://linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup",
+      "https://facebook.com/ziontechgroup"
+    ],
+    "foundingDate": "2020",
+    "numberOfEmployees": "50+",
+    "serviceArea": "Worldwide",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Technology Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI & Machine Learning Services",
+            "description": "Advanced AI solutions for business intelligence, automation, and analytics"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Quantum Computing Services",
+            "description": "Quantum computing solutions for complex problem solving"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cybersecurity Services",
+            "description": "Advanced security solutions with AI-powered threat detection"
+          }
+        }
+      ]
     }
   };
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={fullDescription} />
-      <meta name="keywords" content={keywords.join(', ')} />
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
       
-      {/* Robots */}
-      {noindex && <meta name="robots" content="noindex" />}
-      {nofollow && <meta name="robots" content="nofollow" />}
-      {!noindex && !nofollow && <meta name="robots" content="index, follow" />}
-      
-      {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={canonical} />}
-      
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={fullDescription} />
-      <meta property="og:url" content={url} />
-      <meta property="og:site_name" content={siteName} />
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={type} />
+      <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={fullDescription} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       
       {/* Additional Meta Tags */}
@@ -126,45 +117,41 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="theme-color" content="#22ddd2" />
       <meta name="msapplication-TileColor" content="#22ddd2" />
       
-      {/* Article specific meta tags */}
-      {type === 'article' && publishedTime && (
-        <meta property="article:published_time" content={publishedTime} />
-      )}
-      {type === 'article' && modifiedTime && (
-        <meta property="article:modified_time" content={modifiedTime} />
-      )}
-      {type === 'article' && section && (
-        <meta property="article:section" content={section} />
-      )}
-      {type === 'article' && tags.length > 0 && (
-        tags.map((tag, index) => (
-          <meta key={index} property="article:tag" content={tag} />
-        ))
-      )}
+      {/* Additional Meta Tags */}
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="googlebot" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#0ea5e9" />
+      <meta name="msapplication-TileColor" content="#0ea5e9" />
       
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      {/* Canonical URL */}
+      <link rel="canonical" href={url} />
       
-      {/* Manifest */}
-      <link rel="manifest" href="/site.webmanifest" />
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://cdn.gpteng.co" />
       
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
+      {/* DNS Prefetch for performance */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//cdn.gpteng.co" />
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(organizationSchema)}
+        {JSON.stringify(structuredData)}
       </script>
-      <script type="application/ld+json">
-        {JSON.stringify(websiteSchema)}
-      </script>
+      
+      {/* Additional SEO Meta Tags */}
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+      {section && <meta property="article:section" content={section} />}
+      {tags.map((tag, index) => (
+        <meta key={index} property="article:tag" content={tag} />
+      ))}
+      
+      {/* Performance Hints */}
+      <link rel="preload" href="/fonts/Orbitron-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      <link rel="preload" href="/fonts/Orbitron-Bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
     </Helmet>
   );
 };
