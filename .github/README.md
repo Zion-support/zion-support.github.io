@@ -1,128 +1,84 @@
-# GitHub Actions Workflows
+# PM2 Automation System
 
-This directory contains all the GitHub Actions workflows for the Zion Tech Group website.
+This directory contains configuration and documentation for the PM2-based automation system that has replaced GitHub Actions workflows.
 
-## Workflows Overview
+## Automation Overview
 
-### 1. CI (Continuous Integration)
-**File**: `.github/workflows/ci.yml`
-- **Trigger**: Push to main branch or pull requests
-- **Purpose**: Build, test, and validate code changes
-- **Jobs**:
-  - Build: Install dependencies, lint, type-check, and build the project
-  - Test: Run tests and upload build artifacts
+All previously GitHub Actions-based workflows have been migrated to PM2 processes that run continuously and automatically.
 
-### 2. Test
-**File**: `.github/workflows/test.yml`
-- **Trigger**: Push to main branch or pull requests
-- **Purpose**: Comprehensive testing and validation
-- **Jobs**:
-  - Main: Build, test, and verify the application
+### 🔄 PM2 Automation Processes
 
-### 3. Deploy
-**File**: `.github/workflows/deploy.yml`
-- **Trigger**: Push to main branch or manual dispatch
-- **Purpose**: Deploy the application to production
-- **Jobs**:
-  - Deploy: Build and deploy to Netlify/Vercel (if configured)
+The following automation processes are managed by PM2 and run continuously:
 
-### 4. Security
-**File**: `.github/workflows/security.yml`
-- **Trigger**: Push to main branch, pull requests, or weekly schedule
-- **Purpose**: Security vulnerability scanning
-- **Jobs**:
-  - Security: Run npm audit and security checks
+#### High Priority (Every 15 minutes)
+- **console-error-fixer**: Automatically fixes console errors and JavaScript issues
 
-### 5. CodeQL
-**File**: `.github/workflows/codeql.yml`
-- **Trigger**: Push to main/develop branches, pull requests, or weekly schedule
-- **Purpose**: Static code analysis for security vulnerabilities
-- **Jobs**:
-  - Analyze: CodeQL analysis for JavaScript/TypeScript
+#### Regular Intervals
+- **link-checker**: Runs every 30 minutes to check for broken links
+- **continuous-improvement**: Runs every 2 hours for automated improvements
+- **daily-build-test**: Runs every hour for build verification and testing
+- **security-audit**: Runs every 4 hours for security scanning
+- **performance-monitor**: Runs every 2 hours for performance monitoring
+- **quality-checks**: Runs every 3 hours for code quality assurance
+- **link-integrity**: Runs every 2 hours for link integrity verification
+- **front-maximizer**: Runs every 4 hours for frontend optimization
+- **sitemap-runner**: Runs every 6 hours for sitemap generation
+- **dependency-updates**: Runs every 6 hours for dependency management
 
-### 6. Continuous Improvement
-**File**: `.github/workflows/continuous-improvement.yml`
-- **Trigger**: Every 4 hours or manual dispatch
-- **Purpose**: Automated code quality improvements
-- **Jobs**:
-  - Improve: Run linting, type checking, and create improvement PRs
+### 🚀 Main Applications
+- **zion-app**: Main frontend application
+- **zion-backend**: Backend server
 
-### 7. Link Checker
-**File**: `.github/workflows/agent-factory.yml`
-- **Trigger**: Every 6 hours or manual dispatch
-- **Purpose**: Check for broken links on the website
-- **Jobs**:
-  - Check-links: Verify internal and external links
+## PM2 Management
 
-## Required Secrets
-
-### For Deployment
-- `NETLIFY_AUTH_TOKEN`: Netlify authentication token
-- `NETLIFY_SITE_ID`: Netlify site ID
-- `VERCEL_TOKEN`: Vercel authentication token
-- `VERCEL_ORG_ID`: Vercel organization ID
-- `VERCEL_PROJECT_ID`: Vercel project ID
-
-### For Testing (Optional)
-- `CODECOV_TOKEN`: Codecov token for test coverage
-- `CYPRESS_TEST_USER_EMAIL`: Test user email for Cypress
-- `CYPRESS_TEST_USER_PASSWORD`: Test user password for Cypress
-
-## Local Development
-
-To test workflows locally, you can use [act](https://github.com/nektos/act):
-
+### Check Status
 ```bash
-# Install act
-brew install act
-
-# Run a specific workflow
-act -W .github/workflows/ci.yml
-
-# Run with specific event
-act push -W .github/workflows/ci.yml
+pm2 status
 ```
 
-## Workflow Dependencies
+### View Logs
+```bash
+pm2 logs [process-name]
+```
 
-The workflows are designed to work together:
-1. **CI** runs on every push/PR
-2. **Test** provides comprehensive testing
-3. **Security** runs security checks
-4. **Deploy** deploys successful builds
-5. **Continuous Improvement** maintains code quality
-6. **Link Checker** ensures website integrity
+### Restart All Processes
+```bash
+pm2 restart all
+```
 
-## Troubleshooting
+### Stop All Processes
+```bash
+pm2 stop all
+```
 
-### Common Issues
+### Start All Processes
+```bash
+pm2 start ecosystem.config.cjs
+```
 
-1. **Build Failures**: Check Node.js version compatibility and dependency issues
-2. **Test Failures**: Ensure all tests pass locally before pushing
-3. **Deployment Issues**: Verify deployment secrets are configured correctly
-4. **Security Alerts**: Review npm audit output and update vulnerable dependencies
+## Configuration
 
-### Debugging
+The PM2 configuration is defined in `ecosystem.config.cjs` at the root of the project.
 
-- Check workflow logs in the Actions tab
-- Use `act` for local testing
-- Review artifact uploads for debugging information
-- Check issue creation for automated reports
+## Benefits of PM2 over GitHub Actions
 
-## Contributing
+1. **Continuous Operation**: Processes run continuously instead of being triggered by events
+2. **Real-time Monitoring**: Immediate visibility into automation status
+3. **Resource Efficiency**: Better resource utilization and monitoring
+4. **Faster Response**: No waiting for GitHub Actions to trigger
+5. **Local Control**: Full control over automation without external dependencies
 
-When adding new workflows:
-1. Follow the existing naming conventions
-2. Include proper error handling
-3. Add appropriate permissions
-4. Document the workflow purpose
-5. Test locally with `act`
+## Migration Notes
+
+- All GitHub Actions workflows have been replaced with PM2 processes
+- Automation now runs continuously instead of on-demand
+- Better error handling and recovery mechanisms
+- Improved monitoring and logging capabilities
 
 ## Best Practices
 
-- Use Node.js 20 for consistency
-- Cache npm dependencies for faster builds
-- Upload artifacts for debugging
-- Use appropriate permissions (principle of least privilege)
-- Include proper error handling and continue-on-error where appropriate
-- Use concurrency groups to prevent workflow conflicts
+For automation issues:
+1. Check PM2 status: `pm2 status`
+2. Review process logs: `pm2 logs [process-name]`
+3. Restart processes if needed: `pm2 restart [process-name]`
+4. Check the main PM2 automation documentation in the project root
