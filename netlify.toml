@@ -1,5 +1,5 @@
-# Netlify rebuild trigger (minor touch to force deploy) - 2025-09-09 v4.53
-[build] # touch v4.53 to trigger Netlify rebuild
+# Netlify rebuild trigger (minor touch to force deploy) - 2025-09-09 v4.54
+[build] # touch v4.54 to trigger Netlify rebuild
   # Build the site with Vite and publish the dist folder
   command = "npm ci --no-audit --no-fund --include=optional && npm run build:ci"
   publish = "dist"
