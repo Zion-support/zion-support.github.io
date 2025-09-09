@@ -1,6 +1,19 @@
-import React, { memo, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNotification } from '../context/NotificationContext';
+import { useState } from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card } from "@/components/ui/card";
+import { toast } from "@/components/ui/use-toast";
+import z from "zod";
+import { ChatAssistant } from "@/components/ChatAssistant";
+import { logError } from "@/utils/logError";
+import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 
 // Contact info card component
 const ContactInfoCard = memo<{ 
@@ -348,12 +361,13 @@ const Contact: React.FC = memo(() => {
               and 24/7 technical support to ensure your solution continues to perform optimally.
             </p>
           </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-bold text-white mb-3">What technologies do you work with?</h3>
-            <p className="text-blue-200">
-              We work with a wide range of modern technologies including React, Node.js, Python, AI/ML frameworks, 
-              cloud platforms (AWS, Azure, GCP), and more. We choose the best technology stack for your specific needs.
+
+          <div className="mt-12 text-center">
+            <p className="text-zion-slate-light text-lg">
+              Looking for more details about our platform? Visit our{' '}
+              <Link href="/services" className="text-zion-cyan underline">services page</Link>{' '}
+              or explore the{' '}
+              <Link href="/blog" className="text-zion-cyan underline">Zion blog</Link> for additional insights.
             </p>
           </div>
         </div>

@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { 
   ArrowRight, 
@@ -69,8 +69,8 @@ export function QuickAccess() {
           {quickLinks.map((link, index) => (
             <Link 
               key={index} 
-              to={link.link} 
-              className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/70 rounded-lg p-4 transition-all duration-300 flex flex-col items-center text-center hover:scale-[1.03] focus:scale-[1.03] hover:shadow-[0_0_20px_0px_rgba(112,0,255,0.4)] focus:shadow-[0_0_20px_0px_rgba(112,0,255,0.4)]"
+              href={link.link}
+              className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-4 transition-all duration-300 flex flex-col items-center text-center"
             >
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3">
                 {link.icon}

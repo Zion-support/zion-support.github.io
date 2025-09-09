@@ -1,8 +1,8 @@
 
 import { GradientHeading } from "./GradientHeading";
-import { Link } from "react-router-dom";
-import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Star } from "lucide-react";
-import { motion } from "framer-motion";
+import Link from "next/link";
+import { Briefcase, HardDrive, Lightbulb, Users, HelpCircle } from "lucide-react"; // Added HelpCircle for default icon
+import { cn } from "@/lib/utils";
 
 const categories = [
   {
@@ -129,43 +129,17 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           </motion.div>
         )}
         
-        <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {categories.map((category, index) => (
-            <motion.div key={category.title} variants={itemVariants}>
-              <Link to={category.link} className="group block">
-                <div className="rounded-xl overflow-hidden h-full border border-zion-blue-light/30 bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm p-6 transition-all duration-500 hover:border-zion-purple/50 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-zion-purple/20 group-hover:scale-[1.02]">
-                  <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                    <div className="text-white">
-                      {category.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-white text-xl font-bold mb-3 group-hover:text-zion-cyan transition-colors duration-300">
-                    {category.title}
-                  </h3>
-                  <p className="text-zion-slate-light mb-4 leading-relaxed">
-                    {category.description}
-                  </p>
-                  
-                  {/* Feature list */}
-                  <ul className="space-y-2 mb-4">
-                    {category.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-zion-cyan/70">
-                        <Star className="w-3 h-3 fill-current" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  {/* Arrow indicator */}
-                  <div className="flex items-center justify-between">
-                    <span className="text-zion-cyan text-sm font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4 text-zion-cyan group-hover:translate-x-1 transition-transform duration-300" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {displayCategories.map((category) => (
+            <Link
+              key={category.id}
+              href={category.link || '#'}
+              className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+            >
+              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
+                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="text-white">
+                    {category.icon}
                   </div>
                 </div>
               </Link>

@@ -1,5 +1,6 @@
-import React from 'react';
-import { useNavigate, Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { useRouter } from "next/router"; // Changed from react-router-dom
+import Link from "next/link"; // Added for potential Link usage, though not explicitly used in original for navigation actions
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/Button";
 import { ProductListing } from "@/types/listings";
@@ -24,7 +25,8 @@ export function ProductListingCard({
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) {
   const isGrid = view === 'grid';
-  const navigate = useNavigate();
+  const router = useRouter(); // Changed from useNavigate
+  const [loading, setLoading] = useState(false);
   
   // Get the first image or use a placeholder
   const imageUrl = listing.images && listing.images.length > 0 
@@ -44,7 +46,18 @@ export function ProductListingCard({
   
   // Handle navigating to listing detail
   const handleViewListing = () => {
-    navigate(`${detailBasePath}/${listing.id}`);
+    router.push(`${detailBasePath}/${listing.id}`);
+  };
+
+  const dispatch = useDispatch<AppDispatch>();
+
+  const addToCart = () => {
+    setLoading(true);
+    dispatch(
+      addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
+    );
+    setLoading(false);
+    router.push('/cart');
   };
   
   // Handle request quote button click
@@ -56,7 +69,7 @@ export function ProductListingCard({
       onRequestQuote(listing.id);
     } else {
       // Default behavior if no handler provided
-      navigate(`/request-quote?listing=${listing.id}`);
+      router.push(`/request-quote?listing=${listing.id}`);
     }
   };
   

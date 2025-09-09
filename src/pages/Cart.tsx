@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
@@ -113,49 +113,12 @@ export default function CartPage() {
   // Empty cart state
   if (items.length === 0) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-12 px-4">
-        <div className="container mx-auto max-w-2xl">
-          <motion.div 
-            className="text-center py-20"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <div className="mb-8">
-              <ShoppingCart className="mx-auto h-24 w-24 text-zion-slate-light mb-4" />
-              <h1 className="text-3xl font-bold text-white mb-4">Your Cart is Empty</h1>
-              <p className="text-zion-slate-light text-lg">
-                Ready to start shopping? Browse our equipment and add items to your cart.
-              </p>
-            </div>
-            
-            <div className="space-y-4">
-              <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue">
-                <Link href="/equipment">
-                  <Package className="h-4 w-4 mr-2" />
-                  Browse Equipment
-                </Link>
-              </Button>
-              
-              <div className="grid md:grid-cols-2 gap-4 mt-8">
-                <Card className="bg-zion-blue-light/50 border-zion-cyan/20">
-                  <CardContent className="p-6 text-center">
-                    <Shield className="mx-auto h-8 w-8 text-zion-cyan mb-2" />
-                    <h3 className="text-white font-medium mb-1">Secure Payments</h3>
-                    <p className="text-zion-slate-light text-sm">All transactions are encrypted and secure</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-zion-blue-light/50 border-zion-cyan/20">
-                  <CardContent className="p-6 text-center">
-                    <Package className="mx-auto h-8 w-8 text-zion-cyan mb-2" />
-                    <h3 className="text-white font-medium mb-1">Fast Shipping</h3>
-                    <p className="text-zion-slate-light text-sm">Free shipping on orders over $100</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+      <div className="container py-10 text-center">
+        <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" />
+        <p>Your cart is empty</p>
+        <Button asChild className="mt-4">
+          <Link href="/marketplace">Browse Marketplace</Link>
+        </Button>
       </div>
     );
   }

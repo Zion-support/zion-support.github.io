@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 import { GradientHeading } from "@/components/GradientHeading";
 import { ProductListingCard } from "@/components/ProductListingCard";
 import { Button } from "@/components/ui/Button";
@@ -50,7 +50,7 @@ export function DynamicListingPage({
   detailBasePath = '/marketplace/listing',
   itemsPerPage,
 }: DynamicListingPageProps) {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [view, setView] = useState<ListingView>("grid");
@@ -125,17 +125,20 @@ export function DynamicListingPage({
           title: "Quote Requested",
           description: `Your quote request for ${listing.title} has been sent.`
         });
-        
-        navigate("/request-quote", {
-          state: { 
-            serviceType: categorySlug, 
-            specificItem: {
-              id: listing.id,
-              title: listing.title,
-              category: listing.category,
-              image: listing.image?.[0]
-            }
-          }
+
+        // Serialize state to query parameters for Next.js navigation
+        const navigationState = {
+          serviceType: categorySlug,
+          specificItem: {
+            id: listing.id,
+            title: listing.title,
+            category: listing.category,
+            image: listing.images?.[0],
+          },
+        };
+        router.push({
+          pathname: "/request-quote",
+          query: { state: JSON.stringify(navigationState) },
         });
       }
     }, 500);
