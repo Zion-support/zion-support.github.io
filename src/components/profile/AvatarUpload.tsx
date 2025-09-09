@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { CldUploadButton } from 'next-cloudinary';
+import { CldUploadButton } from '../../stubs/next-cloudinary';
 
 type Props = {
   value?: string;
