@@ -4,7 +4,7 @@
 # Usage: ./scripts/monitor-netlify-build.sh
 
 SITE_ID="ziontechgroup"  # Update with your actual site ID
-COMMIT_SHA="95d851a3"    # The commit we just pushed
+COMMIT_SHA="8ab605f8d00c"    # The commit we just pushed
 
 echo "🔍 Monitoring Netlify build for commit: $COMMIT_SHA"
 echo "📊 Site: $SITE_ID"
