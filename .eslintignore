@@ -1,128 +1,223 @@
-# Build artifacts
+# Build outputs
 dist/
-out/
 build/
+.next/
+out/
 
-# Node modules
+# Dependencies
 node_modules/
 
-# Disabled/corrupted files
-src-disabled/
-src.broken/
-src_disabled_*/
+# Backup and corrupted files
+corrupted_backup/
+data_backup/
+backup*/
+lib.disabled/
+lib.broken/
 pages._archive_corrupted/
 pages.bak/
-*.disabled/
-*.backup/
-*.bak/
-
-# Test artifacts
-coverage/
-.nyc_output/
-
-# Generated files
-*.min.js
-*.bundle.js
-
-# Service workers (browser globals)
-public/sw*.js
-public/service-worker.js
-
-# Automation scripts
-*automation*.js
-*automation*.cjs
-*fix*.js
-*fix*.cjs
-*merge*.js
-*merge*.cjs
-*resolve*.js
-*resolve*.cjs
-*ultimate*.js
-*ultimate*.cjs
-*comprehensive*.js
-*comprehensive*.cjs
-
-# PM2 configs
-ecosystem*.js
-ecosystem*.cjs
-pm2-*.js
-pm2-*.cjs
-
-# Recovery/backup files
+public-backup/
 recovered-branches/
-backup/
-corrupted*/
-*_backup*/
-
-# Temporary files
-temp*/
-tmp*/
-*.tmp
-*.temp
-
-# Config files that may have syntax issues
-postcss.config*.js
-vite.config*.js
-vitest.config*.js
-next.config*.js
-
-# Media directory with broken symlinks
-media/
-
-# Backup and corrupted files
+test_build/
 netlify/functions-backup/
-*.backup
-*.bak
-*_backup*
-corrupted*/
-broken*/
-disabled*/
-*_disabled*
-*_broken*
-*_corrupted*
+deployments/
+src.disabled/
+src_disabled_*/
+src.broken/
+src-disabled/
 
-# Config files with syntax issues
-next-*.config.js
-*.config.js
-tailwind.config.js
-security*.js
-sentry*.js
-optimize*.js
-performance*.js
-seo*.js
-simple*.js
-test*.js
-workflow*.js
-website*.js
-trigger*.js
-step*.js
-start*.js
-restore*.js
-
-# Scripts directory (many corrupted files)
-scripts/
-
-# Utils directory (many corrupted files)
-utils/
-
-# Server directory
-server/
-
-# Test files
-tests/
-__tests__/
-
-# Public files
-public/
-
-# Root level problematic files
+# Temporary and working files
+temp_*/
+*.cjs
 *.js
 !src/**/*.js
+!src/**/*.ts
+!src/**/*.tsx
 !app/**/*.js
+!app/**/*.ts
+!app/**/*.tsx
 !components/**/*.js
-!lib/**/*.js
-!hooks/**/*.js
-!contexts/**/*.js
-!types/**/*.js
-!constants/**/*.js
-!styles/**/*.js
+!components/**/*.ts
+!components/**/*.tsx
+!scripts/**/*.js
+!scripts/**/*.ts
+!scripts/**/*.tsx
+!api/**/*.js
+!api/**/*.ts
+!api/**/*.tsx
+
+# Configuration files that are problematic
+next.config.*.js
+next.config.*.cjs
+vite.config.*.js
+postcss.config.*.js
+tailwind.config.*.js
+eslint.config.*.js
+ecosystem.*.js
+ecosystem.*.cjs
+
+# Test files that are problematic
+jest.setup.js
+test-*.js
+*test*.js
+
+# Automation and fix scripts
+fix-*.js
+fix-*.cjs
+*fix*.js
+*fix*.cjs
+resolve-*.js
+resolve-*.cjs
+merge-*.js
+merge-*.cjs
+ultimate-*.js
+ultimate-*.cjs
+final-*.js
+final-*.cjs
+comprehensive-*.js
+comprehensive-*.cjs
+enhanced-*.js
+enhanced-*.cjs
+simple-*.js
+simple-*.cjs
+working-*.js
+working-*.cjs
+execute-*.js
+execute-*.cjs
+run-*.js
+run-*.cjs
+quick-*.js
+quick-*.cjs
+security-*.js
+security-*.cjs
+monitoring-*.js
+monitoring-*.cjs
+performance-*.js
+performance-*.cjs
+optimize-*.js
+optimize-*.cjs
+deployment-*.js
+deployment-*.cjs
+env-*.js
+env-*.cjs
+maintenance-*.js
+maintenance-*.cjs
+syntax-*.js
+syntax-*.cjs
+automation-*.js
+automation-*.cjs
+orchestrator-*.js
+orchestrator-*.cjs
+suite-*.js
+suite-*.cjs
+cleanup-*.js
+cleanup-*.cjs
+conflict-*.js
+conflict-*.cjs
+merge-*.js
+merge-*.cjs
+pr-*.js
+pr-*.cjs
+github-*.js
+github-*.cjs
+git-*.js
+git-*.cjs
+trigger-*.js
+trigger-*.cjs
+extract*.js
+extract*.cjs
+move-*.js
+move-*.cjs
+restore-*.js
+restore-*.cjs
+structural-*.js
+structural-*.cjs
+temp-*.js
+temp-*.cjs
+test-*.js
+test-*.cjs
+tools/repair-*.js
+tools/repair-*.cjs
+
+# Specific problematic files
+critical-fix.js
+debug-next.js
+health-endpoint.js
+improve-app.js
+git-ops.js
+github-pr-manager.js
+github-pr-processor.js
+maintenance-scheduler.js
+merge-conflict-fixer.js
+merge-conflict-resolver.js
+merge-conflict-resolver.cjs
+merge-fix.js
+merge-prs-fixed.js
+merge-prs.js
+merge-resolver-fixed.js
+merge-resolver.js
+middleware/security.js
+monitoring-system.js
+selective-merge.js
+seo-improvements.js
+server/config/index.js
+server/routes/stripe.js
+test-automation.js
+test-server.js
+test-utils.js
+trigger-workflows-manual.js
+ultimate-automation-runner.js
+ultimate-conflict-resolver.js
+ultimate-fix.js
+ultimate-merge-conflict-resolver.js
+ultimate-syntax-fix.js
+
+# Hardhat and blockchain configs
+dao/
+token/
+*.hardhat.config.js
+*.hardhat.plugin.js
+
+# PM2 configs
+pm2-automation/
+
+# PostCSS configs
+postcss.config-backup.js
+
+# Vite configs
+vite.config.minimal.js
+vite.config.no-postcss.js
+
+# Next.js configs
+next.config.analyze.js
+next.config.analyzer.js
+next.config.complex.js
+next.config.minimal.js
+next.config.optimized.cjs
+next.config.original.js
+next.config.resolved.js
+next.config.simple.js
+
+# Ecosystem configs
+ecosystem-comprehensive-automation.config.cjs
+ecosystem-enhanced-error-fixing.config.cjs
+ecosystem-error-automation.config.cjs
+ecosystem-error-fixing.config.js
+ecosystem.config.cjs
+ecosystem.config.js
+ecosystem.enhanced-intelligent-v2.cjs
+ecosystem.enhanced.js
+ecosystem.simple.config.js
+ecosystem.working.config.js
+ecosystem.working.js
+
+# ESLint configs
+eslint.config.disabled.js
+eslint.config.minimal.js
+
+# Other config files
+csp-config.js
+security-config.js
+optimize-images.js
+optimized-build.js
+performance-optimization.js
+performance-optimizations.js
