@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Globe, Sun, Moon, Zap, Shield, Cloud, Brain, Database, Lock } from 'lucide-react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Search, User, Bell, Menu, X } from 'lucide-react';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -29,35 +28,37 @@ export function AppHeader() {
     // In a real app, this would toggle the theme
   };
 
-  const navigationItems = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { 
-      path: '/services', 
-      label: 'Services',
-      hasDropdown: true,
-      dropdownItems: [
-        { path: '/services', label: 'All Services' },
-        { path: '/enhanced-services', label: 'Enhanced Services' },
-        { path: '/comprehensive-services', label: 'Comprehensive Services' },
-        { path: '/services#ai', label: 'AI & Analytics' },
-        { path: '/services#cybersecurity', label: 'Cybersecurity' },
-        { path: '/services#cloud', label: 'Cloud Solutions' },
-        { path: '/services#consulting', label: 'IT Consulting' }
-      ]
-    },
-    { path: '/solutions', label: 'Solutions' },
-    { path: '/case-studies', label: 'Case Studies' },
-    { path: '/blog', label: 'Blog' },
-    { path: '/contact', label: 'Contact' }
+  const navigation = [
+    { name: 'Home', href: '/', current: true },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Services', href: '/services', current: false },
+    { name: 'Marketplace', href: '/marketplace', current: false },
+    { name: 'Talent', href: '/talent', current: false },
+    { name: 'Blog', href: '/blog', current: false },
+    { name: 'Contact', href: '/contact', current: false },
   ];
 
-  const isActiveRoute = (path) => {
-    if (path === '/') {
-      return location.pathname === '/';
-    }
-    return location.pathname.startsWith(path);
-  };
+  const servicesDropdown = [
+    { name: 'AI Solutions', href: '/services/ai' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity' },
+    { name: 'Cloud Services', href: '/services/cloud' },
+    { name: 'IT Consulting', href: '/services/consulting' },
+    { name: 'Green IT', href: '/green-it' },
+    { name: 'Micro SaaS', href: '/services/micro-saas' },
+  ];
+
+  return (
+    <header className="bg-slate-900 shadow-lg border-b border-slate-700">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link to="/" className="flex-shrink-0">
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Zion Tech Group
+              </h1>
+            </Link>
+          </div>
 
   return (
     <motion.header 
