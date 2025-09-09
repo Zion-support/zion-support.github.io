@@ -1,3 +1,4 @@
 /*    /index.html   200
 
-# (Headers belong in `_headers`, not `_redirects`)
+# Cache static assets aggressively
+# Moved to _headers; redirects file does not support header directives
