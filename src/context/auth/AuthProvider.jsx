@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { supabase, getFromProfiles } from "../../integrations/supabase/client";
-import { useAuthOperations } from "../../hooks/useAuthOperations";
+
+
 import { AuthContext } from "./AuthContext";
 import { cleanupAuthState } from "../../utils/authUtils";
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -61,12 +61,10 @@ export const AuthProvider = ({ children }) => {
         }
         const params = new URLSearchParams(location.search);
         const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
-        navigate(next, { replace: true });
-        return { error: null }; // Successful login
-    };
-    // Register via backend and persist auth info
-    const register = async (name, email, password) => {
-        try {
+        router(next, { replace: true });
+        return { error: null }; // Successful login}
+    // Register via backend and persist auth info;
+    const register = async(name, email, password) => {};
             const { res, data } = await registerUser(name, email, password);
             if (!res.ok || !data?.token || !data?.user) {
                 return { error: data?.message || 'Registration failed' };
@@ -74,14 +72,12 @@ export const AuthProvider = ({ children }) => {
             safeStorage.setItem('auth', JSON.stringify({ token: data.token, user: data.user }));
             setTokens({ accessToken: data.token, refreshToken: data.refreshToken || null });
             setUser(data.user);
-            return { error: null };
-        }
-        catch (err) {
-            return { error: err?.message || 'Registration failed' };
-        }
-    };
-    // Wrapper for signup to match the AuthContextType interface
-    const signup = async (email, password, userData) => {
+            return { error: null }}
+        catch(err) {};
+            return { error: err?.message || 'Registration failed' }}
+    }
+    // Wrapper for signup to match the AuthContextType interface;
+    const signup = async(email, password, userData) => {};
         const result = await signupImpl({ email, password, display_name: userData });
         if (!result?.error) {
             const loginResult = await login(email, password);
@@ -90,8 +86,7 @@ export const AuthProvider = ({ children }) => {
                 toast({ title: `Welcome, ${firstName}!` });
                 const params = new URLSearchParams(location.search);
                 const next = params.get('redirectTo') || params.get('next') || '/dashboard';
-                navigate(next, { replace: true });
-            }
+                router(next, { replace: true })}
         }
         return result;
     };
@@ -171,5 +166,6 @@ export const AuthProvider = ({ children }) => {
     };
     return (<AuthContext.Provider value={authContextValue}>
       {children}
-    </AuthContext.Provider>);
-};
+    </AuthContext.Provider>)}
+'"`;
+import React, { useEffect } from "react"";"""""""""'"; ";

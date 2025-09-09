@@ -58,7 +58,7 @@ export default function SmartContractRiskScanner(...args: any[]):  {;
       benefits: ['Code quality metrics', 'Gas optimization', 'Best practices', 'Performance analysis'];
     };
   ];
-;
+
   const scanningCapabilities = [;
     {;
       title: 'Reentrancy Attacks',;
@@ -85,7 +85,7 @@ export default function SmartContractRiskScanner(...args: any[]):  {;
       features: ['Business logic analysis', 'State machine validation', 'Flow control analysis', 'Edge case testing'];
     };
   ];
-;
+
   const pricing = [;
     {;
       name: 'Starter',;
@@ -170,7 +170,7 @@ export default function SmartContractRiskScanner(...args: any[]):  {;
     'Optimism',;
     'Base';
   ];
-;
+
   const securityStandards = [;
     'OWASP Top 10',;
     'Smart Contract Security Verification Standard',;
@@ -179,7 +179,7 @@ export default function SmartContractRiskScanner(...args: any[]):  {;
     'ISO 27001 Compliance',;
     'SOC 2 Type II';
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -686,53 +686,9 @@ export default function SmartContractRiskScanner(...args: any[]):  {;
           </motion.div>;
 ;
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">;
-            {pricing.map((((((((plan, index, index, index, index, index, index, index) => ({ ...((((((plan, index, index, index, index, index, index, key: index })) => ({ ...(((((plan, index, index, index, index, index, key: index })) => ({ ...((((plan, index, index, index, index, key: index })) => ({ ...(((plan, index, index, index, key: index })) => ({ ...((plan, index, index, key: index })) => ({ ...(plan, index, key: index }))  => (;
-              <motion.div;
-                key={index};
-                initial = {;
-  { opacity: 0,;
-  y: 20 ;
-;
-;
-;
-;
-;
-;
-}};
-                whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-;
-;
-;
-;
-;
-;
-}};
-                transition = {;
-  { duration: 0.6,;
-  delay: index * 0.1 ;
-;
-;
-;
-;
-;
-;
-}};
-                className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${;
-                  plan.popular;
-                    ? 'border-red-400 shadow-lg shadow-red-400/20';
-                    : 'border-slate-700';
-                }`};
-;
-                {plan.popular && (;
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                    <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium">;
-                      Most Popular;
-                    </div>;
-                  </div>;
-                )};
-;
+            {};
+                )}
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <div className="flex items-baseline justify-center space-x-1 mb-4">;
@@ -823,5 +779,10 @@ export default function SmartContractRiskScanner(...args: any[]):  {;
         </div>;
       </section>;
     </div>;
-  );
-}}}}}
+  )}}}}}
+
+export { SmartContractRiskScanner }
+export { SmartContractRiskScanner }
+export { SmartContractRiskScanner }
+export { SmartContractRiskScanner }
+export { SmartContractRiskScanner }

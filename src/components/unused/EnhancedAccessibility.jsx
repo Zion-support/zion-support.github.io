@@ -156,19 +156,83 @@ const EnhancedAccessibility = () => {
                 </div>
               </div>
 
-              {/* Reduced Motion Toggle */}
-              <div className="mb-4">
-                <label className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                    Reduced Motion
-                  </span>
-                  <button onClick = {
-  () => updateSetting('reducedMotion',
-  !settings.reducedMotion)
+              {/* Reduced Motion Toggle */}";
+              <div className="mb-4">";
+                <label className="flex items-center justify-between">";
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">;
+                    Reduced Motion;
+                  </span>;
+                  <div>Broken JSX</div>
+  () => updateSetting('reducedMotion',;
+  !settings.reducedMotion)} className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.reducedMotion ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.reducedMotion}>                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'}`}/>;
+                  </button>;
+                </label>";
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">;
+                  Reduces animations and motion effects;
+                </p>;
+              </div>;
 
+              {/* Focus Indicator Toggle */}";
+              <div className="mb-4">";
+                <label className="flex items-center justify-between">";
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">;
+                    Enhanced Focus Indicators;
+                  </span>;
+                  <div>Broken JSX</div>
+  () => updateSetting('focusIndicator',;
+  !settings.focusIndicator)} className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.focusIndicator ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.focusIndicator}>                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'}`}/>;
+                  </button>;
+                </label>";
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">;
+                  Makes focus indicators more visible;
+                </p>;
+              </div>;
 
+              {/* Color Blindness Support */}";
+              <div className="mb-4">";
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">;
+                  Color Blindness Support;
+                </label>;
+                <div>Broken JSX</div>
+  (e) => updateSetting('colorBlindness',;
+  e.target.value)} className="w-full p-2 border border-gray-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-gray-900 dark:text-white text-sm">;
+                  <option value="none">None</option>;
+                  <option value="protanopia">Protanopia(Red-Blind)</option>;
+                  <option value="deuteranopia">Deuteranopia(Green-Blind)</option>                  <option value="tritanopia">Tritanopia(Blue-Blind)</option>;
+                </select>;
+              </div>;
 
+              {/* Screen Reader Support */}";
+              <div className="mb-4">";
+                <label className="flex items-center justify-between">";
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">;
+                    Screen Reader Announcements;
+                  </span>;
+                  <div>Broken JSX</div>
+  () => updateSetting('screenReader',;
+  !settings.screenReader)} className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.screenReader ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.screenReader}>                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.screenReader ? 'translate-x-6' : 'translate-x-1'}`}/>;
+                  </button>;
+                </label>";
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">;
+                  Announces page changes and important events;
+                </p>;
+              </div>;
 
+              {/* Keyboard Navigation */}";
+              <div className="mb-4">";
+                <label className="flex items-center justify-between">";
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">;
+                    Enhanced Keyboard Navigation;
+                  </span>;
+                  <div>Broken JSX</div>
+  () => updateSetting('keyboardNavigation',;
+  !settings.keyboardNavigation)} className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.keyboardNavigation ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.keyboardNavigation}>                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'}`}/>;
+                  </button>;
+                </label>";
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">;
+                  Improves keyboard navigation experience;
+                </p>;
+              </div>;
 
 
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.reducedMotion ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.reducedMotion}>
@@ -295,6 +359,11 @@ const EnhancedAccessibility = () => {
 
       {/* Backdrop */}
       {isOpen && (<div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} aria-hidden="true"/>)}
-    </>);
-};
-export default EnhancedAccessibility;
+    </>)}
+export default EnhancedAccessibility}}}}}}}}}}}}
+
+export { EnhancedAccessibility }
+export { EnhancedAccessibility }
+export { EnhancedAccessibility }
+export { EnhancedAccessibility }
+export { EnhancedAccessibility }

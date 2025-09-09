@@ -1,10 +1,9 @@
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-
+const fs = require("fs");
+const path = require("path");
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  let content = fs.readFileSync(filePath, "utf8");
     let originalContent = content;
 
     // Fix missing types in interface definitions;
@@ -98,9 +97,8 @@ function fixFile(filePath) {
     );
 
     // Fix malformed object literals;
-    content = content.replace(/{\s*(\w+)\s*:\s*([^}]+)\s*}/g, '{ $1: $2 }');
-    content = content.replace(/{\s*(\w+)\s*:\s*([^}]+)\s*,/g, '{ $1: $2',);
-
+    content = content.replace(/{\s*(\w+)\s*:\s*([^}]+)\s*}/g, "{ $1: $2 }");
+    content = content.replace(/{\s*(\w+)\s*:\s*([^}]+)\s*,/g, "{ $1: $2,");
     // Fix specific missing types;
     content = content.replace(/forEach\(\(entry: \)/g, 'forEach((entry: any)');
     content = content.replace(/forEach\(\(entry: \)/g, 'forEach((entry: any)');
@@ -132,40 +130,38 @@ function fixFile(filePath) {
 
     // Write back if changed;
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content);
+  fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
-      return true}
+      return true;}
 
-    return false} catch (error) { 
-    console.error(`Error fixing ${filePath }:`, error.message);
-    return false}
+    return false;} catch (error) {
+  console.error(`Error fixing ${filePath }:`, error.message);
+    return false;}
 }
 
 function getAllFiles(dir) {
   const files = [];
   const items = fs.readdirSync(dir);
-
   for (const item of items) {
-    const fullPath = path.join(dir, item);
+  const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-
     if (stat.isDirectory()) {
-      files.push(...getAllFiles(fullPath))} else if (item.endsWith(`.tsx`) || item.endsWith('.ts')) {
-      files.push(fullPath)}
+  files.push(...getAllFiles(fullPath));} else if (item.endsWith(`.tsx`) || item.endsWith(".ts")) {
+  files.push(fullPath);}
   }
 
-  return files}
+  return files;}
 
 // Main execution;
 const srcDir = path.join(process.cwd(), `src`);
 if (fs.existsSync(srcDir)) {
   const files = getAllFiles(srcDir);
   let fixedCount = 0;
-
   for (const file of files) {
-    if (fixFile(file)) {
-      fixedCount++}
+  if (fixFile(file)) {
+  fixedCount++;}
   }
 
-  console.log(`\nFixed ${fixedCount} files.`)} else {
-  console.log(`src directory not found`)}
+  console.log(`\nFixed ${fixedCount} files.`);} else {
+  console.log(`src directory not found`);}
+}}}}}}}}}}}}}}}}}}}}}}))))))))))))))))

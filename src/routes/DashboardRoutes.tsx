@@ -9,7 +9,7 @@ export default function Page() {
 export default function Page() {
 import LoadingSpinner from '../components/LoadingSpinner';
 
-// Lazy load dashboard pages
+// Lazy load dashboard pages;
 const Dashboard = lazy(() => import('../pages/Dashboard'));
 const ClientDashboard = lazy(() => import('../pages/ClientDashboard'));
 const TalentDashboard = lazy(() => import('../pages/TalentDashboard'));
@@ -18,53 +18,50 @@ const Analytics = lazy(() => import('../pages/Analytics'));
 const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));
 const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));
 const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));
-
-const DashboardRoutes: React.FC = () => {
-  return (<Suspense fallback={<LoadingSpinner />}>
-      <Routes>
-        <Route path="/dashboard" element={
-          <ProtectedRoute>
-            <Dashboard />
-          </ProtectedRoute>
-        } />
-        <Route path="/client-dashboard" element={
-          <ProtectedRoute>
-            <ClientDashboard />
-          </ProtectedRoute>
-        } />
-        <Route path="/talent-dashboard" element={
-          <ProtectedRoute>
-            <TalentDashboard />
-          </ProtectedRoute>
-        } />
-        <Route path="/creator-dashboard" element={
-          <ProtectedRoute>
-            <CreatorDashboard />
-          </ProtectedRoute>
-        } />
-        <Route path="/analytics" element={
-          <ProtectedRoute>
-            <Analytics />
-          </ProtectedRoute>
-        } />
-        <Route path="/project-milestones" element={
-          <ProtectedRoute>
-            <ProjectMilestones />
-          </ProtectedRoute>
-        } />
-        <Route path="/project-details" element={
-          <ProtectedRoute>
-            <ProjectDetails />
-          </ProtectedRoute>
-        } />
-        <Route path="/project-room" element={
-          <ProtectedRoute>
-            <ProjectRoom />
-          </ProtectedRoute>
-        } />
-      </Routes>
-    </Suspense>
-  );
-};
-
+;
+const DashboardRoutes: React.FC = () => {};
+  return(<Suspense fallback={<LoadingSpinner />}>;
+      <Routes>;
+        <div>Broken JSX</div>
+          <ProtectedRoute>;
+            <Dashboard />;
+          </ProtectedRoute>;,
+} />;
+        <div>Broken JSX</div>
+          <ProtectedRoute>;
+            <ClientDashboard />;
+          </ProtectedRoute>;,
+} />;
+        <div>Broken JSX</div>
+          <ProtectedRoute>;
+            <TalentDashboard />;
+          </ProtectedRoute>;,
+} />;
+        <div>Broken JSX</div>
+          <ProtectedRoute>;
+            <CreatorDashboard />;
+          </ProtectedRoute>;,
+} />;
+        <div>Broken JSX</div>
+          <ProtectedRoute>;
+            <Analytics />;
+          </ProtectedRoute>;,
+} />;
+        <div>Broken JSX</div>
+          <ProtectedRoute>;
+            <ProjectMilestones />;
+          </ProtectedRoute>;,
+} />;
+        <div>Broken JSX</div>
+          <ProtectedRoute>;
+            <ProjectDetails />;
+          </ProtectedRoute>;,
+} />;
+        <div>Broken JSX</div>
+          <ProtectedRoute>;
+            <ProjectRoom />;
+          </ProtectedRoute>} />;
+      </Routes>;
+    </Suspense>;
+  )}
 export default DashboardRoutes;

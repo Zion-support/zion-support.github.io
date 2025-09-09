@@ -49,28 +49,21 @@ export const useJobApplications = (jobId?: string) => {
             .select("id")
             .eq("client_id", user.id);
 
-          if (jobIds && jobIds.length > 0) {
-            const jobIdArray = jobIds.map((job: any) => job.id);
-            query = query.in("job_id", jobIdArray);
-          }
+          if(jobIdsError) throw jobIdsError;
+;
+          if(jobIdsData && jobIdsData.length > 0) {};
+} else {};
+}
         }
       }
-      
       const { data, error: fetchError } = await query;
-      
-      if (fetchError) throw fetchError;
-      
-      // Transform the data to match our application types
-      const transformedData = data.map((app: any) => ({
-        ...app,
-        talent_profile: app.talent_profile ? {
-          ...app.talent_profile,
-          full_name: app.talent_profile.display_name,
-          profile_picture_url: app.talent_profile.avatar_url,
-          skills: []
-        } : undefined
-      }));
-      
+
+      if(fetchError) throw fetchError;
+      ;
+      const transformedData = data.map((app: unknown) => ({};
+} : undefined;,
+}));
+      ;
       setApplications(transformedData as JobApplication[]);
       setError(null);
     } catch (err: any) {
@@ -121,30 +114,18 @@ export const useJobApplications = (jobId?: string) => {
         })
         .select()
         .single();
-      
-      if (error) {
-        if (error.code === '23505') { // Unique violation
-          toast.error("You have already applied to this job");
-        } else {
-          throw error;
-        }
-        return false;
-      }
-      
-      // Add the new application to the local state
-      const newApplication = {
-        ...(data as JobApplication),
-        resume: resumeUrl
-          ? {
-              id: crypto.randomUUID(),
-              title: resumeFile?.name || 'Uploaded CV',
-              type: 'custom_upload',
-              file_url: resumeUrl
-            }
-          : (data as any).resume
-      } as JobApplication;
-      setApplications(prev => [newApplication, ...prev]);
-      
+      ;
+      if(error) {};
+} else {};
+}
+        return false;,
+}
+      ;
+      const newApplication = data as JobApplication;
+      // Optimistically update or refetch;
+      // For simplicity, refetching; could also add to state directly if data matches full type;
+      fetchApplications(); ;
+
       toast.success("Application submitted successfully");
       return true;
     } catch (err: any) {
@@ -160,14 +141,13 @@ export const useJobApplications = (jobId?: string) => {
         .from("job_applications")
         .update({ status })
         .eq("id", applicationId);
-      
-      if (error) throw error;
-      
-      // Update the local state
-      setApplications(prev => 
-        prev.map(app => app.id === applicationId ? { ...app, status } : app)
+
+      if(error) throw error;
+
+      setApplications(prev => ;
+        prev.map(app => app.id === applicationId ? { ...app, status } : app);
       );
-      
+
       toast.success(`Application status updated to ${status}`);
       return true;
     } catch (err: any) {
@@ -176,25 +156,21 @@ export const useJobApplications = (jobId?: string) => {
       return false;
     }
   };
-  
-  const markApplicationAsViewed = async (applicationId: string) => {
-    try {
-      const { error } = await supabase
-        .from("job_applications")
-        .update({ 
-          status: "viewed", 
-          viewed_at: new Date().toISOString() 
-        })
-        .eq("id", applicationId)
-        .is("viewed_at", null); // Only update if not already viewed
-      
-      if (error) throw error;
-      
-      // Update the local state
-      setApplications(prev => 
-        prev.map(app => app.id === applicationId ? 
-          { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app
-        )
+  ;
+  const markApplicationAsViewed = async(applicationId: string) => {};
+      const { error } = await supabase;
+        .from("job_applications");
+        .update({};
+});
+        .eq("id", applicationId);
+        .is("viewed_at", null); ;
+
+      if(error) throw error;
+
+      setApplications(prev => ;
+        prev.map(app => app.id === applicationId ? ;
+          { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app;
+        );
       );
       
       return true;

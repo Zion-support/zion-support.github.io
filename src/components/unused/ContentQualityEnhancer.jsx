@@ -1,187 +1,89 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
-export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, autoAnalyze = true, targetElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div[class*="content"]', 'article', 'section'] }) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [analysis, setAnalysis] = useState(null);
-    const [isAnalyzing, setIsAnalyzing] = useState(false);
-    const [activeTab, setActiveTab] = useState('overview');
-    const [selectedElement, setSelectedElement] = useState(null);
-    // Analyze content quality
-    const analyzeContent = useCallback(async () => {
-        setIsAnalyzing(true);
-        const issues = [];
-        const suggestions = [];
-        let wordCount = 0;
-        let readabilityScore = 100;
-        let seoScore = 100;
-        let engagementScore = 100;
-        // Get all content elements
-        const contentElements = document.querySelectorAll(targetElements.join(', '));
-        contentElements.forEach((element, index) => {
-            const text = element.textContent || '';
-            const words = text.trim().split(/\s+/).filter(word => word.length > 0);
-            wordCount += words.length;
-            // Check for empty content
-            if (words.length === 0) {
-                issues.push({
-                    id: `empty-content-${index}`,
-                    type: 'error',
-                    title: 'Empty Content',
-                    description: 'Element contains no meaningful content',
-                    severity: 'high',
-                    element: element,
-                    fixable: true,
-                    suggestion: 'Add relevant content or remove empty element',
-                    impact: 'seo'
-                });
-                seoScore -= 10;
-                engagementScore -= 10;
-            }
-            // Check for very short content
-            if (words.length > 0 && words.length < 10) {
-                issues.push({
-                    id: `short-content-${index}`,
-                    type: 'warning',
-                    title: 'Very Short Content',
-                    description: `Element contains only ${words.length} words`,
-                    severity: 'medium',
-                    element: element,
-                    fixable: true,
-                    suggestion: 'Expand content to provide more value to users',
-                    impact: 'engagement'
-                });
-                engagementScore -= 5;
-                seoScore -= 3;
-            }
-            // Check for very long paragraphs (hard to read)
-            if (words.length > 100) {
-                issues.push({
-                    id: `long-paragraph-${index}`,
-                    type: 'warning',
-                    title: 'Very Long Paragraph',
-                    description: `Paragraph contains ${words.length} words`,
-                    severity: 'medium',
-                    element: element,
-                    fixable: true,
-                    suggestion: 'Break into smaller paragraphs for better readability',
-                    impact: 'readability'
-                });
+import { motion, AnimatePresence  } from 'framer-motion';
+;
+export default function Page() {};
+  return null;
+}
+                    id: `long-paragraph-${index}`,;
+                    type: 'warning',;
+                    title: 'Very Long Paragraph',`;
+                    description: `Paragraph contains ${words.length} words`,;
+                    severity: 'medium',;
+                    element: element,;
+                    fixable: true,;
+                    suggestion: 'Break into smaller paragraphs for better readability',;
+                    impact: 'readability'});
                 readabilityScore -= 5;
-                engagementScore -= 3;
-            }
-            // Check for proper heading structure
-            if (element.tagName.match(/^H[1-6]$/)) {
-                const level = parseInt(element.tagName.charAt(1));
-                const previousHeadings = Array.from(contentElements).slice(0, index).filter(el => el.tagName.match(/^H[1-6]$/));
-                if (previousHeadings.length > 0) {
-                    const lastLevel = parseInt(previousHeadings[previousHeadings.length - 1].tagName.charAt(1));
-                    if (level - lastLevel > 1) {
-                        issues.push({
-                            id: `heading-skip-${index}`,
-                            type: 'warning',
-                            title: 'Heading Level Skipped',
-                            description: `Heading level jumps from h${lastLevel} to h${level}`,
-                            severity: 'medium',
-                            element: element,
-                            fixable: true,
-                            suggestion: 'Ensure heading levels follow logical sequence',
-                            impact: 'accessibility'
-                        });
-                        seoScore -= 3;
-                    }
+                engagementScore -= 3}
+            // Check for proper heading structure;
+            if(element.tagName.match(/^H[1-6]$/)) {};
+                            id: `heading-skip-${index}`,;
+                            type: 'warning',;
+                            title: 'Heading Level Skipped',`;
+                            description: `Heading level jumps from h${lastLevel} to h${level}`,;
+                            severity: 'medium',;
+                            element: element,;
+                            fixable: true,;
+                            suggestion: 'Ensure heading levels follow logical sequence',;
+                            impact: 'accessibility'});
+                        seoScore -= 3}
                 }
             }
             // Check for keyword stuffing
             const commonWords = text.toLowerCase().match(/\b\w+\b/g) || [];
-            const wordFrequency = {};
-            commonWords.forEach(word => {
-                wordFrequency[word] = (wordFrequency[word] || 0) + 1;
-            });
-            Object.entries(wordFrequency).forEach(([word, count]) => {
-                if (count > 5 && word.length > 3) {
-                    const density = (count / commonWords.length) * 100;
-                    if (density > 3) {
-                        issues.push({
-                            id: `keyword-stuffing-${index}-${word}`,
-                            type: 'warning',
-                            title: 'Potential Keyword Stuffing',
-                            description: `Word "${word}" appears ${count} times (${density.toFixed(1)}% density)`,
-                            severity: 'medium',
-                            element: element,
-                            fixable: true,
-                            suggestion: 'Reduce keyword density for more natural content',
-                            impact: 'seo'
-                        });
-                        seoScore -= 5;
-                    }
+            const wordFrequency = { /* empty */ };
+            commonWords.forEach(word => {};
+                wordFrequency[word] = (wordFrequency[word] || 0) + 1});
+            Object.entries(wordFrequency).forEach(([word, count]) => {};
+                            id: `keyword-stuffing-${index}-${word}`,;
+                            type: 'warning',;
+                            title: 'Potential Keyword Stuffing',"`;
+                            description: `Word "${word}" appears ${count} times (${density.toFixed(1)}% density)`,;
+                            severity: 'medium',;
+                            element: element,;
+                            fixable: true,;
+                            suggestion: 'Reduce keyword density for more natural content',;
+                            impact: 'seo'});
+                        seoScore -= 5}
                 }
             });
-            // Check for proper meta descriptions
-            if (element.tagName === 'META' && element.getAttribute('name') === 'description') {
-                const content = element.getAttribute('content') || '';
-                if (content.length < 50) {
-                    issues.push({
-                        id: `short-meta-${index}`,
-                        type: 'warning',
-                        title: 'Short Meta Description',
-                        description: `Meta description is only ${content.length} characters`,
-                        severity: 'medium',
-                        element: element,
-                        fixable: true,
-                        suggestion: 'Meta descriptions should be 150-160 characters for optimal display',
-                        impact: 'seo'
-                    });
-                    seoScore -= 5;
-                }
-                else if (content.length > 160) {
-                    issues.push({
-                        id: `long-meta-${index}`,
-                        type: 'warning',
-                        title: 'Long Meta Description',
-                        description: `Meta description is ${content.length} characters`,
-                        severity: 'low',
-                        element: element,
-                        fixable: true,
-                        suggestion: 'Meta descriptions should be 150-160 characters for optimal display',
-                        impact: 'seo'
-                    });
-                    seoScore -= 2;
-                }
+            // Check for proper meta descriptions';
+            if(element.tagName === 'META' && element.getAttribute('name') === 'description') {};
+                        id: `long-meta-${index}`,;
+                        type: 'warning',;
+                        title: 'Long Meta Description',`;
+                        description: `Meta description is ${content.length} characters`,;
+                        severity: 'low',;
+                        element: element,;
+                        fixable: true,;
+                        suggestion: 'Meta descriptions should be 150-160 characters for optimal display',;
+                        impact: 'seo'});
+                    seoScore -= 2}
             }
-            // Check for broken links
-            if (element.tagName === 'A') {
-                const href = element.getAttribute('href');
-                if (href && (href.startsWith('#') || href.startsWith('javascript:'))) {
-                    issues.push({
-                        id: `broken-link-${index}`,
-                        type: 'warning',
-                        title: 'Potential Broken Link',
-                        description: `Link "${href}" may not work properly`,
-                        severity: 'medium',
-                        element: element,
-                        fixable: true,
-                        suggestion: 'Ensure link points to valid URL or page section',
-                        impact: 'engagement'
-                    });
-                    engagementScore -= 3;
-                }
+            // Check for broken links';
+            if(element.tagName === 'A') {};
+                        id: `broken-link-${index}`,;
+                        type: 'warning',;
+                        title: 'Potential Broken Link',"`;
+                        description: `Link "${href}" may not work properly`,;
+                        severity: 'medium',;
+                        element: element,;
+                        fixable: true,;
+                        suggestion: 'Ensure link points to valid URL or page section',;
+                        impact: 'engagement'});
+                    engagementScore -= 3}
             }
-            // Check for images without alt text
-            if (element.tagName === 'IMG') {
-                const alt = element.getAttribute('alt');
-                if (!alt || alt.trim() === '') {
-                    issues.push({
-                        id: `missing-alt-${index}`,
-                        type: 'error',
-                        title: 'Missing Alt Text',
-                        description: 'Image has no alternative text for accessibility',
-                        severity: 'high',
-                        element: element,
-                        fixable: true,
-                        suggestion: 'Add descriptive alt text for better accessibility and SEO',
-                        impact: 'accessibility'
-                    });
+            // Check for images without alt text';
+            if(element.tagName === 'IMG') {};
+                        id: `missing-alt-${index}`,;
+                        type: 'error',;
+                        title: 'Missing Alt Text',;
+                        description: 'Image has no alternative text for accessibility',;
+                        severity: 'high',;
+                        element: element,;
+                        fixable: true,;
+                        suggestion: 'Add descriptive alt text for better accessibility and SEO',;
+                        impact: 'accessibility'});
                     seoScore -= 8;
                     engagementScore -= 5;
                 }
@@ -310,45 +212,25 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             return () => clearTimeout(timer);
         }
     }, [autoAnalyze, analyzeContent]);
-    // Get score color
-    const getScoreColor = (score) => {
-        if (score >= 80)
-            return 'text-green-600';
-        if (score >= 60)
-            return 'text-yellow-600';
-        return 'text-red-600';
-    };
-    // Get score background color
-    const getScoreBgColor = (score) => {
-        if (score >= 80)
-            return 'bg-green-100 dark:bg-green-900/20';
-        if (score >= 60)
-            return 'bg-yellow-100 dark:bg-yellow-900/20';
-        return 'bg-red-100 dark:bg-red-900/20';
-    };
-    // Get severity color
-    const getSeverityColor = (severity) => {
-        switch (severity) {
-            case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
-            case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
-            case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
-            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30';
-        }
-    };
-    // Get priority color
-    const getPriorityColor = (priority) => {
-        switch (priority) {
-            case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
-            case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
-            case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
-            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30';
-        }
-    };
-    return (<>
-      {/* Content Quality Toggle Button */}
-      <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-20 right-4 z-50 w-14 h-14 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${className}`} aria-label="Content Quality Analysis" aria-expanded={isOpen}>
-        <DocumentTextIcon className="w-6 h-6"      />
-      </motion.button>
+    // Get score color;
+    const getScoreColor = (score) => {};
+        return 'text-red-600'};
+    // Get score background color;
+    const getScoreBgColor = (score) => {};
+        return 'bg-red-100 dark:bg-red-900/20'};
+    // Get severity color;
+    const getSeverityColor = (severity) => {};
+            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
+    }
+    // Get priority color;
+    const getPriorityColor = (priority) => {};
+            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
+    }
+    return (<>;
+      {/* Content Quality Toggle Button */}"`;
+      <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-20 right-4 z-50 w-14 h-14 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${className}`}  aria-expanded={isOpen}>";
+        <DocumentTextIcon className="w-6 h-6"/>;
+      </motion.button>;
 
       {/* Content Quality Panel */}
       <AnimatePresence>
@@ -450,29 +332,22 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                       </div>
                     </>)}
 
-                  {/* Analyze Button */}
-                  <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">
+                  {/* Analyze Button */}";
+                  <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">;
                     {isAnalyzing ? 'Analyzing...' : 'Analyze Content'}
                   </button>
                 </div>)}
 
-              {/* Issues Tab */}
-              {activeTab === 'issues' && (<div className="space-y-4">
-                  {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">
-                      <ExclamationTriangleIcon className="w-12 h-12 mx-auto mb-3 text-yellow-500"      />
-                      <p>No analysis available</p>
-                    </div>) : analysis.issues.length === 0 ? (<div className="text-center text-gray-500 dark:text-gray-400">
-                      <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500"      />
-                      <p>No issues found! Great job!</p>
-                    </div>) : (<div className="space-y-3">
-                      {analysis.issues.map((((((((issue, index, index, index, index, index, index) => ({ ...((((((issue, index, index, index, index, index, key: index })) => ({ ...(((((issue, index, index, index, index, key: index })) => ({ ...((((issue, index, index, index, key: index })) => ({ ...(((issue, index, index, key: index })) => ({ ...((issue, index, key: index })) => ({ ...(issue, key: index })) => (<div key={issue.id} className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 transition-colors cursor-pointer" onClick={() => issue.element && highlightElement(issue.element)}>
-                          <div className="flex items-start gap-2">
-                            {issue.type === 'error' && (<ExclamationTriangleIcon className="w-4 h-4 text-red-600 mt-0.5"      />)}
-                            {issue.type === 'warning' && (<ExclamationTriangleIcon className="w-4 h-4 text-yellow-600 mt-0.5"      />)}
-                            {issue.type === 'info' && (<InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5"      />)}
-
-                            <div className="flex-1">
-                              <h4 className="font-medium text-gray-900 dark:text-white text-sm">
+              {/* Issues Tab */}'";
+              {};
+                      {analysis.issues.map((issue) => (<div key={issue.id} className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 transition-colors cursor-pointer" onClick={() => issue.element && highlightElement(issue.element)}>";
+                          <div className="flex items-start gap-2">'";
+                            {issue.type === 'error' && (<ExclamationTriangleIcon className="w-4 h-4 text-red-600 mt-0.5"/>)}'";
+                            {issue.type === 'warning' && (<ExclamationTriangleIcon className="w-4 h-4 text-yellow-600 mt-0.5"/>)}'";
+                            {issue.type === 'info' && (<InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5"/>)}
+";
+                            <div className="flex-1">";
+                              <h4 className="font-medium text-gray-900 dark:text-white text-sm">;
                                 {issue.title}
                               </h4>
                               <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
@@ -498,21 +373,14 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     </div>)}
                 </div>)}
 
-              {/* Suggestions Tab */}
-              {activeTab === 'suggestions' && (<div className="space-y-4">
-                  {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">
-                      <InformationCircleIcon className="w-12 h-12 mx-auto mb-3 text-blue-500"      />
-                      <p>No analysis available</p>
-                    </div>) : analysis.suggestions.length === 0 ? (<div className="text-center text-gray-500 dark:text-gray-400">
-                      <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500"      />
-                      <p>No suggestions available</p>
-                    </div>) : (<div className="space-y-3">
-                      {analysis.suggestions.map((((((((suggestion, index, index, index, index, index, index) => ({ ...((((((suggestion, index, index, index, index, index, key: index })) => ({ ...(((((suggestion, index, index, index, index, key: index })) => ({ ...((((suggestion, index, index, index, key: index })) => ({ ...(((suggestion, index, index, key: index })) => ({ ...((suggestion, index, key: index })) => ({ ...(suggestion, key: index })) => (<div key={suggestion.id} className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-blue-50 dark:bg-blue-900/20">
-                          <div className="flex items-start gap-2">
-                            <InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5"      />
-
-                            <div className="flex-1">
-                              <h4 className="font-medium text-gray-900 dark:text-white text-sm">
+              {/* Suggestions Tab */}'";
+              {};
+                      {analysis.suggestions.map((suggestion) => (<div key={suggestion.id} className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-blue-50 dark:bg-blue-900/20">";
+                          <div className="flex items-start gap-2">";
+                            <InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5"/>;
+";
+                            <div className="flex-1">";
+                              <h4 className="font-medium text-gray-900 dark:text-white text-sm">;
                                 {suggestion.title}
                               </h4>
                               <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
@@ -535,21 +403,16 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     </div>)}
                 </div>)}
 
-              {/* Actions Tab */}
-              {activeTab === 'actions' && (<div className="space-y-4">
-                  <div className="text-center text-gray-500 dark:text-gray-400">
-                    <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-purple-500"      />
-                    <p>Take action to improve content quality</p>
-                  </div>
-
-                  {/* Auto-fix Button */}
-                  {analysis && analysis.issues.filter(i => i.fixable).length > 0 && (<button onClick={autoFixIssues} className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">
-                      Auto-fix Issues
+              {/* Actions Tab */}'";
+              {};
+                  {/* Auto-fix Button */}";
+                  {analysis && analysis.issues.filter(i => i.fixable).length > 0 && (<button onClick={autoFixIssues} className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">;
+                      Auto-fix Issues;
                     </button>)}
 
-                  {/* Re-analyze Button */}
-                  <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">
-                    <ArrowPathIcon className="w-4 h-4 inline mr-2"      />
+                  {/* Re-analyze Button */}";
+                  <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">";
+                    <ArrowPathIcon className="w-4 h-4 inline mr-2"/>;
                     {isAnalyzing ? 'Analyzing...' : 'Re-analyze Content'}
                   </button>
 
@@ -571,15 +434,10 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
           </motion.div>)}
       </AnimatePresence>
 
-      {/* CSS for highlighting */}
-      <style>{`
-        .content-highlight {
-          outline: 3px solid #8b5cf6 !important;
-          outline-offset: 2px !important;
-          background-color: rgba(139, 92, 246, 0.1) !important;
-          transition: all 0.3s ease !important;
-        }
-      `}</style>
-    </>);
-};
-export default ContentQualityEnhancer;
+      {/* CSS for highlighting */}`;
+      <style>{};
+          transition: all 0.3s ease !important}`;
+      `}</style>;
+    </>)}
+export { ContentQualityEnhancer }
+export default ContentQualityEnhancer}}}}}}}}}'"`;

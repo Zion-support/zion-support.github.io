@@ -102,61 +102,43 @@ const AdvancedAIServicesHub: React.FC = () => {;
       features: ['Threat Detection', 'Automated Response', 'Security Monitoring', 'Incident Prevention'],;
       pricing: { starter: 179, professional: 449, enterprise: 899 },;
       icon: Shield,;
-      route: '/services / ai - cybersecurity',;
-      status: 'coming - soon';
-;
+      route: '/services/ai-cybersecurity',;
+      status: 'coming-soon'}
   ];
-;
-  const categories = [;
-    { id: 'all', name: 'All Services', icon: Cpu },;
-    { id: 'project - management', name: 'Project Management', icon: Brain },;
-    { id: 'customer - support', name: 'Customer Support', icon: Users },;
-    { id: 'finance', name: 'Financial Analytics', icon: TrendingUp },;
-    { id: 'marketing', name: 'Marketing Automation', icon: Globe },;
-    { id: 'analytics', name: 'Data Analytics', icon: Database },;
-    { id: 'security', name: 'Cybersecurity', icon: Shield };
-  ];
-;
-  const filteredServices = aiServices.filter (service => {;
-    const matchesSearch = service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
-                         service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
-    return matchesCategory && matchesSearch;
-  }) ;
-;
-  const sortedServices = [...filteredServices].sort ( (a, b) => {;
-    switch (sortBy) {;
-      case 'name':;
-        return a.name.localeCompare (b.name) ;
+
+    return matchesCategory && matchesSearch});
+
       case 'price':;
         return a.pricing.starter - b.pricing.starter;
       case 'popularity':;
         return b.status === 'active' ? 1 : -1;
       default:;
-        return 0;
-;
-  }) ;
-;
-  return (<div role="button" className = "min - h-screen bg - gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900">;
-      <div role="button" className="container mx - auto px - 4 py - 16">;
-        {/* Header */};
-        <motion.div;
-          initial = {;
-  { opacity: 0,;
-  y: 20 ;
-;
-}};
-          animate = {;
-  { opacity: 1,;
-  y: 0 ;
-;
-}};
-          className="text - center mb - 16";
-        >;
-          <h1 className="text - 5xl md:text - 7xl font - bold text - white mb - 6">;
-            AI Services Hub;
-          </h1>;
-          <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-            Discover and integrate cutting - edge AI - powered micro SAAS solutions designed to transform your business operations;
+        return 0}
+  });
+
+      case 'beta':;
+        return 'bg-yellow-100 text-yellow-800';
+      case 'coming-soon':;
+        return 'bg-gray-100 text-gray-800';
+      default:;
+        return 'bg-gray-100 text-gray-800'}
+  }
+      case 'beta':;
+        return 'Beta';
+      case 'coming-soon':;
+        return 'Coming Soon';
+      default:;
+        return 'Unknown'}
+  }
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-12">;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+        {/* Header */}
+        <div>Broken JSX</div>
+          className="text-center mb-16">;
+          <h1 className="text-5xl md:text-7xl font - bold text-white mb-6">;
+            AI Services Hub          </h1>;
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">;
+            Discover our cutting-edge AI-powered solutions designed to transform your business operations;
           </p>;
         </motion.div>;
 ;
@@ -359,5 +341,4 @@ const AdvancedAIServicesHub: React.FC = () => {;
           </div>;
         </motion.div>;
       </div>;
-    </div>;) ;
-};
+    </div>;) }

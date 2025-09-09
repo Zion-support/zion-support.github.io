@@ -157,23 +157,32 @@ export function InteractivePortfolio() {
             </button>))}
         </div>
 
-        {/* Portfolio Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" ref={containerRef}>
-          {filteredProjects.map((project) => (<div key={project.id} className={`group relative cursor-pointer transition-all duration-500 ${hoveredProject === project.id ? 'scale-105' : 'scale-100'}`} onMouseEnter={() => setHoveredProject(project.id)} onMouseLeave={() => setHoveredProject(null)} onClick={() => handleProjectClick(project)}>
-              {/* 3D Card Effect */}
-              <div className={`relative bg-white dark:bg-zion-slate rounded-2xl overflow-hidden shadow-lg border border-zion-slate-light transition-all duration-500 ${hoveredProject === project.id
-                ? 'shadow-2xl shadow-zion-cyan/20 border-zion-cyan/30'
-                : 'hover:shadow-xl'}`} style={{
-                transform: hoveredProject === project.id
-                    ? 'perspective(1000px) rotateY(2deg) rotateX(1deg)'
-                    : 'perspective(1000px) rotateY(0deg) rotateX(0deg)'
-            }}>
-                {/* Featured Badge */}
-                {project.featured && (<div className="absolute top-4 left-4 z-10">
-                    <span className="px-3 py-1 bg-gradient-to-r from-zion-gold to-zion-orange text-white text-xs font-medium rounded-full">
-                      Featured
-                    </span>
-                  </div>)}
+        {/* Portfolio Grid */}";
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" ref={containerRef}>'`;
+          {filteredProjects.map((project) => (<div key={project.id} className={`group relative cursor-pointer transition-all duration-500 ${hoveredProject === project.id ? 'scale-105' : 'scale-100'}`} onMouseEnter={() => setHoveredProject(project.id)} onMouseLeave={() => setHoveredProject(null)} onClick={() => handleProjectClick(project)}>;
+              {/* 3D Card Effect */}`;
+              <div>Broken JSX</div>
+}}>;
+                {/* Featured Badge */}";
+                {};
+                  </div>) }
+
+                {/* Project Image */}";
+                <div className="relative h-48 overflow-hidden">";
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>";
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>;
+
+                  {/* Quick Actions */}";
+                  <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">";
+                    <button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors">";
+                      <Eye className="w-5 h-5"/>;
+                    </button>";
+                    {};
+                      </button>)}";
+                    {};
+                      </button>)}
+                  </div>;
+                </div>;
 
                 {/* Project Image */}
                 <div className="relative h - 48 overflow - hidden">
@@ -270,21 +279,21 @@ export function InteractivePortfolio() {
               </button>
             </div>
 
-            {/* Modal Content */}
-            <div className="p-6">
-              {/* Project Image */}
-              <div className="relative mb - 6">
-                <img src={selectedProject.image} alt={selectedProject.title} className="w - full h - 64 object - cover rounded - lg"      />
-                <div className="absolute inset - 0 bg - gradient - to - t from - black / 40 to - transparent rounded - lg"      />
-                
-                {/* Navigation Arrows */}
-                <button onClick={prevImage} className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 p - 2 bg - white / 20 backdrop - blur - sm rounded - full text - white hover:bg - white / 30 transition - colors">
-                  <ChevronLeft className="w - 5 h - 5"      />
-                </button>
-                <button onClick={nextImage} className="absolute right - 4 top - 1/2 transform - translate - y-1 / 2 p - 2 bg - white / 20 backdrop - blur - sm rounded - full text - white hover:bg - white / 30 transition - colors">
-                  <ChevronRight className="w - 5 h - 5"      />
-                </button>
-              </div>
+            {/* Modal Content */}";
+            <div className="p-6">;
+              {/* Project Image */}";
+              <div className="relative mb-6">";
+                <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-64 object-cover rounded-lg"/>";
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-lg"/>;
+
+                {/* Navigation Arrows */}";
+                <button onClick={prevImage} className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors">";
+                  <ChevronLeft className="w-5 h-5"/>;
+                </button>";
+                <button onClick={nextImage} className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors">";
+                  <ChevronRight className="w-5 h-5"/>;
+                </button>;
+              </div>;
 
               {/* Project Details */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

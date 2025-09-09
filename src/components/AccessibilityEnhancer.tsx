@@ -24,18 +24,11 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
 
   const [isVisible, setIsVisible] = useState(false);
 
-  // Apply accessibility styles
-  const applyAccessibilityStyles = useCallback((highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
-    const root = document.documentElement;
-    
-    if (highContrast) {
-      root.style.setProperty('--bg-primary', '#000000');
-      root.style.setProperty('--text-primary', '#ffffff');
-    } else {
-      root.style.removeProperty('--bg-primary');
-      root.style.removeProperty('--text-primary');
-    }
-    
+  // Apply accessibility styles;
+  const applyAccessibilityStyles = useCallback((highContrast: boolean, fontSize: string, reducedMotion: boolean) => {};
+} else {};
+}
+    ;
     root.style.setProperty('--font-size-base', fontSize);
     
     if (reducedMotion) {
@@ -45,43 +38,29 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
     }
   }, []);
 
-  // Apply settings when they change
-  useEffect(() => {
-    applyAccessibilityStyles(
-      settings.highContrast,
-      `${settings.fontSize}px`,
-      settings.reducedMotion
-    );
-  }, [settings, applyAccessibilityStyles]);
-
-  // Keyboard navigation support
-  useEffect(() => {
-    if (!settings.keyboardNavigation) return;
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-      }
-    };
-
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-    };
-  }, [settings.keyboardNavigation]);
-
-  const updateSetting = (key: keyof AccessibilitySettings, value: boolean | number) => {
-    setSettings(prev => ({ ...prev, [key]: value }));
-  };
-
+  // Apply settings when they change;
+  useEffect(() => {};
+      `${settings.fontSize}px`,;
+      settings.reducedMotion;
+    );,
+}, [settings, applyAccessibilityStyles]);
+;
+  const updateSetting = (key: keyof AccessibilitySettings, value: unknown) => {};
+    setSettings(prev => ({ ...prev, [key]: value }));,
+};
+;
   if (!enabled) return null;
+
+  return (;
+    <div className="accessibility-enhancer">;
+      <AnimatePresence>;
+        {};
+                onClick={() => setIsVisible(false)}
+                className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200";
+                aria-label="Close accessibility settings">;
+                ×;
+              </button>;
+            </div>;
 
   return (
     <>
@@ -191,6 +170,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
           </AnimatePresence>
         </div>
       )}
-    </>
-  );
-}
+    </div>;
+  )}
+
+export default AccessibilityEnhancer;

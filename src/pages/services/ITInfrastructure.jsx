@@ -1,6 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+;
+const ITInfrastructure = () => {};
+};
+  const features = [;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+}
+  ];
+
+  const infrastructureAreas = [;
+    { area: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },;
+    { area: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },;
+    { area: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },;
+    { area: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
+  ];
+
+  return (;
+    <>;
+      <Helmet>;
+        <title>IT Infrastructure — Zion Tech Group | Network & System Management</title>;
+        <meta name="description" content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services."/>;
+        <meta property="og:title" content="IT Infrastructure — Zion Tech Group"/>;
+        <meta property="og:description" content="Leading IT infrastructure services including network design, server management, storage solutions, and security infrastructure."/>;
+        <meta property="og:url" content="https://ziontechgroup.com/services/it-infrastructure"/>;
+        <link rel="canonical" href="https://ziontechgroup.com/services/it-infrastructure"/>;
+      </Helmet>;
 
 const ITInfrastructure = () => {
   const features = [
@@ -315,26 +346,26 @@ const ITInfrastructure = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Build Your Infrastructure?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our infrastructure services can support your
-              business growth
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-            >
-              Get Infrastructure Consultation
-            </Link>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-};
-
+        <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">;
+          <div className="max-w-4xl mx-auto text-center">;
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
+              Ready to Build Your Infrastructure?;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8">;
+              Let's discuss how our infrastructure services can support your business growth;
+            </p>;
+            <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">;
+              Get Infrastructure Consultation;
+            </Link>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+  )}
 export default ITInfrastructure;
+
+export { ITInfrastructure }
+export { ITInfrastructure }
+export { ITInfrastructure }
+export { ITInfrastructure }
+export { ITInfrastructure }

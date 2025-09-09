@@ -33,26 +33,37 @@ import {
   Clock,
   DollarSign
 } from 'lucide-react';
-
-  return (<>
-      <SEO
-        title="Zion Tech Group - Leading AI & Technology Solutions"
-        description="Discover cutting - edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem."
-        canonical="/"
-        url="https://ziontechgroup.com"
-            />
-
-      <HeroSection       />
-      <QuickAccess       />
-      <FeatureCTAs       />
-      <FeatureHighlights       />
-      <CategoriesSection       />
-      <BenefitsSection       />
-      <HowItWorksSection       />
-      <FeaturedListingsSection       />
-      <ServicesShowcase       />
-      <NewsletterSection       />
-      <ITServiceRequestHero       />
-      <FloatingCTA       />
-    </>) ;
+;
+export default function Home() {};
+  return null;
 }
+},;
+    {};
+},;
+    {};
+},;
+    {};
+}
+  ];
+
+      <HeroSection />;
+      <QuickAccess />;
+      <FeatureCTAs />;
+      <FeatureHighlights />;
+      <CategoriesSection />;
+      <BenefitsSection />;
+      <HowItWorksSection />;
+      <FeaturedListingsSection />;
+      <ServicesShowcase />;
+      <NewsletterSection />;
+      <ITServiceRequestHero />;
+      <FloatingCTA />;
+    </>;
+  )}
+
+
+export { Home }
+export { Home }
+export { Home }
+export { Home }
+export { Home }

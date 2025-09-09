@@ -1,87 +1,53 @@
-import { DollarSign  } from 'lucide - react';
-import { useDispatch  } from 'react - redux.ts';
-import { useNavigate, Link  } from 'react - router - dom.ts';
-import React, { useState } from 'react.ts';
-import { addItem } from '@/store / cartSlice';
-import { Badge  } from '@/components / ui / badge';
-import { Button  } from '@/components / ui / button';
-import { FavoriteButton  } from '@/components / FavoriteButton';
-import { ProductListing  } from '@/types / listings';
-import { RatingStars  } from '@/components / RatingStars';
-import type { AppDispatch } from '@/store';
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default React.memo (ProductListingCard) ;
-;
-;
-// Regular img tag will be used instead of next / image;
-;
-  listing: ProductListing;
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
-  /**;
-   * Base path for linking to the detail page. Defaults to;
-   * `/marketplace / listing` to preserve existing behaviour.;
-   */;
-  detailBasePath?: string};
-;
-  const handleViewListing = useCallback ( () => {;
-    navigate (`${detailBasePath}/${listing.id}`) ;
-  };
-;
-  const handleRequestQuote = useCallback ( (e: React.MouseEvent) => {;
-    e.preventDefault () ;
-    e.stopPropagation () ;
-;
-    if (onRequestQuote) {;
-      onRequestQuote (listing.id) ;
-    } else {;
-      router (`/request - quote?listing=${listing.id}`) ;
-    };
-  };
-;
-  const imageContainerClasses = isGrid ? 'h - 48' : 'h - 32 w - 48';
-;
-  return (<div;
-      data - testid = "equipment - link";
-      className={`bg - card / 70 backdrop - blur - md border border - primary / 10 sm:border - primary / 20 rounded - lg overflow - hidden flex ${isGrid ? 'flex - col' : 'flex - row'} cursor - pointer focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary hover:animate - glowing - border transition - all duration - 300`};
-      onClick={handleViewListing};
-      tabIndex={0};
-      role="button";
-      onKeyDown={ (e) => {;
-        if (e.key === 'Enter' || e.key === ' ') {;
-          e.preventDefault () ;
-          handleViewListing () };
-      }};
-;
-      {/* Image */};
-      <div;
-        className = {isGrid ? 'block w - full' : 'block w - 48 flex - shrink - 0'};
-        onClick={handleViewListing} // Keep existing onClick for navigation;
-        role="button";
-        tabIndex={-1} // Remove from tab order as parent is focusable;
-        onKeyDown={ (e) => {;
-          if (e.key === 'Enter' || e.key === ' ') {;
-            e.preventDefault () ;
-            handleViewListing () };
-        }};
-      >;
-        <div className = {`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */};
-          <img;
-            src={imageSrc};
-            alt={listing.title};
-            className="w - full h - full object - cover";
-            onError={handleImageError};
-                />;
-          {listing.featured && (<Badge className="absolute top - 2 right - 2 bg - primary text - primary - foreground border - none">;
-              Featured;
-            </Badge>) };
-          <FavoriteButton itemId={listing.id} itemType="product"       />;
+import { DollarSign  } from 'lucide-react';
+export default function Page() {};
+  return null;
+}
+      router(`/request-quote?listing=${listing.id}`)}
+  }
+  return ();
+    <div>Broken JSX</div>
+      onKeyDown={};
+          handleViewListing () }
+      }}
+
+      {/* Image */}
+      <div>Broken JSX</div>
+        onKeyDown={};
+            handleViewListing () }
+        }}
+      >`;
+        <div className = {`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
+          <div>Broken JSX</div>
+          />;
+          {};
+          )}";
+          <FavoriteButton itemId={listing.id} itemType="product"  />        </div>;
+      </div>;
+
+      {/* Content */}'`;
+      <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>;
+        <div>;
+          {/* Category & Rating */}";
+          <div className="flex justify-between items-center mb-2">";
+            <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">;
+              {listing.category}
+            </Badge>;
+            {listing.rating && (<RatingStars value={listing.rating} count={listing.reviewCount}  />) }          </div>;
+
+          {/* Title & Description */}";
+          <div onClick={handleViewListing} className="block">";
+            <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">;
+              {listing.title}
+            </h3>;
+          </div>";
+          <p className="text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]">;
+            {listing.description}
+          </p>;
+
+          {/* Tags */}
+          {};
+                </span>) ) }
+            </div>) }
         </div>;
       </div>;
 ;
@@ -156,6 +122,14 @@ export default React.memo (ProductListingCard) ;
           </div>;
         </div>;
       </div>;
-    </div>;) ;
-};
-;
+    </div>;) }
+export default React.memo(ProductListingCard);
+
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+'"`;

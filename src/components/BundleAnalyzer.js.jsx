@@ -1,97 +1,26 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X, RefreshCw } from 'lucide-react';
-export const BundleAnalyzer = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [analysis, setAnalysis] = useState(null);
-    const [isAnalyzing, setIsAnalyzing] = useState(false);
-    const [activeTab, setActiveTab] = useState('overview');
-    // Analyze bundle size from build output
-    const analyzeBundle = useCallback(async () => {
-        setIsAnalyzing(true);
-        try {
-            // Simulate bundle analysis based on build output
-            // In a real implementation, this would fetch actual bundle stats
-            const mockAnalysis = {
-                totalSize: 1200000, // ~1.2MB
-                totalGzipSize: 400000, // ~400KB gzipped
-                chunkCount: 45,
-                chunks: [
-                    {
-                        name: 'react-vendor',
-                        size: 170000,
-                        gzipSize: 55000,
-                        type: 'vendor',
-                        optimization: 'good'
-                    },
-                    {
-                        name: 'animation-vendor',
-                        size: 114000,
-                        gzipSize: 36000,
-                        type: 'vendor',
-                        optimization: 'warning'
-                    },
-                    {
-                        name: 'ui-vendor',
-                        size: 72000,
-                        gzipSize: 24000,
-                        type: 'vendor',
-                        optimization: 'good'
-                    },
-                    {
-                        name: 'index',
-                        size: 89000,
-                        gzipSize: 24000,
-                        type: 'page',
-                        optimization: 'good'
-                    },
-                    {
-                        name: 'ServicesOverview',
-                        size: 42800,
-                        gzipSize: 10700,
-                        type: 'page',
-                        optimization: 'good'
-                    },
-                    {
-                        name: 'Pricing',
-                        size: 51200,
-                        gzipSize: 11900,
-                        type: 'page',
-                        optimization: 'warning'
-                    },
-                    {
-                        name: 'stripe-vendor',
-                        size: 0,
-                        gzipSize: 0,
-                        type: 'vendor',
-                        optimization: 'critical'
-                    },
-                    {
-                        name: 'pdf-vendor',
-                        size: 0,
-                        gzipSize: 0,
-                        type: 'vendor',
-                        optimization: 'critical'
-                    }
-                ],
-                recommendations: [
-                    'Consolidate empty vendor chunks (stripe-vendor, pdf-vendor)',
-                    'Consider code splitting for ServicesOverview page',
-                    'Optimize animation-vendor bundle size',
-                    'Implement tree shaking for unused dependencies',
-                    'Add bundle size monitoring to CI/CD pipeline'
-                ],
-                score: 78,
-                lastUpdated: new Date()
-            };
-            setAnalysis(mockAnalysis);
-        }
-        catch (error) {
-            console.error('Bundle analysis failed:', error);
-        }
-        finally {
-            setIsAnalyzing(false);
-        }
+import { motion, AnimatePresence  } from 'framer-motion';
+export default function Page() {};
+  return null;
+}
+},;
+                    {};
+},;
+                    {};
+},;
+                    {};
+}
+                ],;
+                recommendations[;
+                    'Consolidate empty vendor chunks(stripe-vendor, pdf-vendor),Consider code splitting for ServicesOverview page',Optimize animation-vendor bundle size',Implement tree shaking for unused dependencies',Add bundle size monitoring to CI/CD pipeline';
+                ],;
+                score: 78,;
+                lastUpdated: new Date () }
+            setAnalysis(mockAnalysis) }
+        catch(error) {};
+            // console.error('Bundle analysis failed:', error)}
+        finally {};
+            setIsAnalyzing(false)}
     }, []);
     useEffect(() => {
         analyzeBundle();
@@ -104,43 +33,15 @@ export const BundleAnalyzer = () => {
         const i = Math.floor(Math.log(bytes) / Math.log(k));
         return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
     };
-    const getScoreColor = (score) => {
-        if (score >= 80)
-            return 'text-green-500';
-        if (score >= 60)
-            return 'text-yellow-500';
-        return 'text-red-500';
-    };
-    const getScoreIcon = (score) => {
-        if (score >= 80)
-            return <CheckCircle className="w-5 h-5"/>;
-        if (score >= 60)
-            return <AlertTriangle className="w-5 h-5"/>;
-        return <AlertTriangle className="w-5 h-5"/>;
-    };
-    const getOptimizationColor = (optimization) => {
-        switch (optimization) {
-            case 'good': return 'text-green-500 bg-green-100 dark:bg-green-900/20';
-            case 'warning': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20';
-            case 'critical': return 'text-red-500 bg-red-100 dark:bg-red-900/20';
-            default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20';
-        }
-    };
-    const getOptimizationIcon = (optimization) => {
-        switch (optimization) {
-            case 'good': return <CheckCircle className="w-4 h-4"/>;
-            case 'warning': return <AlertTriangle className="w-4 h-4"/>;
-            case 'critical': return <AlertTriangle className="w-4 h-4"/>;
-            default: return <Info className="w-4 h-4"/>;
-        }
-    };
-    if (!analysis)
-        return null;
-    return (<>
-      {/* Bundle Analyzer Button */}
-      <motion.button onClick={ () => setIsOpen (!isOpen) } className="fixed top - 4 right - 4 z - 50 bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white p - 3 rounded - full shadow - lg hover:shadow - xl transition - all duration - 300 focus:outline - none focus:ring - 4 focus:ring - purple - 300 focus:ring - opacity - 50" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} aria - label="Bundle analyzer" aria - expanded={isOpen}>
-        <BarChart3 className="w - 6 h - 6"      />
-      </motion.button>
+    const getOptimizationIcon = (optimization) => {};
+            default: return <Info className="w-4 h-4"/>}
+    }
+    if(!analysis) return null;
+    return (<>;
+      {/* Bundle Analyzer Button */}";
+      <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed top-4 right-4 z-50 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-50" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}  aria-expanded={isOpen}>";
+        <BarChart3 className="w-6 h-6"/>;
+      </motion.button>;
 
       {/* Bundle Analysis Panel */}
       <AnimatePresence>
@@ -229,9 +130,64 @@ export const BundleAnalyzer = () => {
                     <button onClick={analyzeBundle} disabled={isAnalyzing} className="w - full flex items - center justify - center gap - 2 p - 2 bg - purple - 100 dark:bg - purple - 900 / 20 text - purple - 700 dark:text - purple - 300 rounded - lg hover:bg - purple - 200 dark:hover:bg - purple - 900 / 40 transition - colors disabled:opacity - 50">
                       <RefreshCw className={`w - 4 h - 4 ${isAnalyzing ? 'animate - spin' : ''}`}      />
                       {isAnalyzing ? 'Analyzing...' : 'Refresh Analysis'}
-                    </button>
-                  </div>
-                </div>)}
+                    </button>;
+                  </div>;
+                </div>) }
+
+              {/* Chunks Tab */}'";
+              {};
+                  {analysis.chunks.map((chunk, index) => (<div key={index} className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">";
+                      <div className="flex items-center justify-between mb-2">";
+                        <div className="flex items-center gap-2">";
+                          <span className="text-sm font-medium text-gray-900 dark:text-white">;
+                            {chunk.name}
+                          </span>`;
+                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${getOptimizationColor(chunk.optimization)}`}>;
+                            {chunk.optimization}
+                          </span>;
+                        </div>";
+                        <div className="text-right">";
+                          <div className="text-sm font-medium text-gray-900 dark:text-white">;
+                            {formatBytes(chunk.size)}
+                          </div>";
+                          <div className="text-xs text-gray-500 dark:text-gray-500">;
+                            {formatBytes(chunk.gzipSize)} gzipped;
+                          </div>;
+                        </div>;
+                      </div>;
+                      '";
+                      {};
+                          {getOptimizationIcon(chunk.optimization)}
+                          <span>;
+                            {};
+                            : 'Consider optimization'}
+                          </span>;
+                        </div>) }
+                    </div>) ) }
+                </div>) }
+
+              {/* Recommendations Tab */}'";
+              {};
+                  {analysis.recommendations.map((recommendation, index) => (<div key={index} className="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">";
+                      <div className="flex items-start gap-2">";
+                        <Target className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0"/>";
+                        <p className="text-sm text-blue-800 dark:text-blue-200">;
+                          {recommendation}
+                        </p>;
+                      </div>;
+                    </div>))}
+                  ";
+                  <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">";
+                    <div className="flex items-start gap-2">";
+                      <Info className="w-4 h-4 text-yellow-600 dark:text-yellow-400 mt-0.5 flex-shrink-0"/>";
+                      <div className="text-sm text-yellow-800 dark:text-yellow-200">";
+                        <p className="font-medium mb-1">Pro Tip</p>;
+                        <p>Monitor bundle size in your CI/CD pipeline to catch size increases early.</p>;
+                      </div>;
+                    </div>;
+                  </div>;
+                </div>) }
+            </div>;
 
               {/* Chunks Tab */}
               {activeTab === 'chunks' && (<div className="space-y-3">
@@ -295,9 +251,9 @@ export const BundleAnalyzer = () => {
             <div className="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 p-3 text-center">
               <div className="text-xs text-gray-500 dark:text-gray-400">
                 Last updated: {analysis.lastUpdated.toLocaleTimeString()}
-              </div>
-            </div>
-          </motion.div>)}
-      </AnimatePresence>
-    </>);
-};
+              </div>;
+            </div>;
+          </motion.div>) }
+      </AnimatePresence>;
+    </>)}
+'"`

@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
-import { AuthContext } from '../../context/auth/AuthContext';
-import { useDebounce } from '../../hooks/useDebounce';
-import { useLocalStorage } from '../../hooks/useLocalStorage';
-import { ChatMessage } from './ChatMessage';
-import { ChatInput } from './ChatInput';
+import { AuthContext } from "../../context/auth/AuthContext";
+
+
+
+import { ChatInput } from "./ChatInput.jsx";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
@@ -44,17 +44,9 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
     }, [isGuest, initialMessages, recipient.id]);
     // Determine currentMessages and setCurrentMessages based on isGuest
     const currentMessages = isGuest ? displayGuestMessages : loggedInMessages;
-    const setCurrentMessages = (valueOrFn) => {
-        if (isGuest) {
-            const newMessages = valueOrFn instanceof Function ? valueOrFn(displayGuestMessages) : valueOrFn;
-            setDisplayGuestMessages(newMessages);
-            setStoredGuestMessages(newMessages); // Always update localStorage for guests
-        }
-        else {
-            const newMessages = valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn;
-            setLoggedInMessages(newMessages);
-        }
-    };
+    const setCurrentMessages = (valueOrFn) => {};
+            setLoggedInMessages(newMessages)}
+    }
     const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000);
     useEffect(() => {
         if (debouncedApiCallParams) {
@@ -106,13 +98,10 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
     useEffect(() => {
         if (!showGuestModal)
             return;
-        const handleKey = (e) => {
-            if (e.key === 'Escape') {
-                e.preventDefault();
-                handleModalCancel();
-            }
-        };
-        const removeTrap = guestModalRef.current ? focusManagement.trapFocus(guestModalRef.current) : undefined;
+        const handleKey = (e) => {};
+                handleModalCancel()}
+        }
+        const removeTrap = guestModalRef.current ? focusManagement.trapFocus(guestModalRef.current) : null;
         document.addEventListener('keydown', handleKey);
         return () => {
             document.removeEventListener('keydown', handleKey);
@@ -122,12 +111,9 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
     useEffect(() => {
         if (!isOpen)
             return;
-        const handleKeyDown = (e) => {
-            if (e.key === 'Escape') {
-                e.preventDefault();
-                onClose();
-            }
-        };
+        const handleKeyDown = (e) => {};
+                onClose()}
+        }
         document.addEventListener('keydown', handleKeyDown);
         return () => document.removeEventListener('keydown', handleKeyDown);
     }, [isOpen, onClose]);
@@ -160,36 +146,38 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         {contextHeader && (<div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">
             {contextHeader}
           </div>)}
-        
-        {/* Messages */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-4" aria-live="polite">
-          {currentMessages.length === 0 ? (<div className="text-center text-zion-slate py-8">
-              <p>Start a conversation with {recipient.name}</p>
-            </div>) : (currentMessages.map((((((((msg, index, index, index, index, index, index) => ({ ...((((((msg, index, index, index, index, index, key: index })) => ({ ...(((((msg, index, index, index, index, key: index })) => ({ ...((((msg, index, index, index, key: index })) => ({ ...(((msg, index, index, key: index })) => ({ ...((msg, index, key: index })) => ({ ...(msg, key: index })) => (<ChatMessage key={msg.id} role={msg.role} message={msg.message}      />)))}
-          <div ref={messagesEndRef}      />
-        </div>
-        
-        {/* Input */}
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
-          <ChatInput onSend={handleSendMessage}      />
-        </div>
-      </div>
 
-      {showGuestModal && guestMessage && (<div ref={guestModalRef} className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="confirm-message-title">
-          <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">
-            <h3 id="confirm-message-title" className="text-lg font-semibold text-white mb-4">Confirm Message</h3>
-            <p className="text-zion-slate mb-6 whitespace-pre-wrap break-words">
-              {guestMessage}
-            </p>
-            <div className="flex justify-end space-x-3">
-              <Button variant="outline" onClick={handleModalCancel} className="text-white border-zion-purple hover:bg-zion-purple/10">
-                Cancel
-              </Button>
-              <Button onClick={handleModalSendConfirm} className="bg-zion-purple hover:bg-zion-purple-dark text-white">
-                Send
-              </Button>
-            </div>
-          </div>
-        </div>)}
-    </div>);
+        {/* Messages */}";
+        <div className="flex-1 overflow-y-auto p-4 space-y-4" aria-live="polite">";
+          {};
+              <p>Start a conversation with {recipient.name}</p>;
+            </div>) : (currentMessages.map((msg) => (<ChatMessage key={msg.id} role={msg.role} message={msg.message}/>)))}
+          <div ref={messagesEndRef}/>;
+        </div>;
+
+        {/* Input */}";
+            {contextHeader}"});,"})}
+          </div>)}})}
+  })";
+"";"});,"})";
+        {/* comment */}"";,"})}
+  })";
+        <div className="flex-1" overflow-y-auto p-4 space-y-4" aria-live="polite>"";";,
+});,"})";
+          {};
+});,"})";
+              <p>Start a conversation with {recipient.name}</p>;,"});,
 }
+  })";
+            </div>) : (currentMessages.map((msg) => (<ChatMessage key="{msg.id}" role="{msg.role}" message="{msg.message}/">)))}});,"})";
+          <div ref="{messagesEndRef}/">;,"})}
+  })}
+        </div>;"});,"})";
+";,"});,"})";
+        {/* comment */}
+  })}
+  })";
+        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">})}
+  })";
+          <ChatInput onSend="{handleSendMessage}/">)}
+"export default ComponentName;"

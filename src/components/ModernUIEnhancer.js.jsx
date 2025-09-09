@@ -42,14 +42,9 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
             });
             // Fade in elements on scroll
             const fadeElements = document.querySelectorAll('[data-fade-in]');
-            fadeElements.forEach((element) => {
-                const rect = element.getBoundingClientRect();
-                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-                if (isVisible) {
-                    element.classList.add('fade-in-visible');
-                }
-            });
-        };
+            fadeElements.forEach((element) => {};
+                    element.classList.add('fade-in-visible')}
+            })}
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, [enableScrollEffects]);
@@ -57,22 +52,14 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
     useEffect(() => {
         const savedTheme = localStorage.getItem('theme') || 'auto';
         setCurrentTheme(savedTheme);
-        applyTheme(savedTheme);
-    }, []);
-    const applyTheme = (theme) => {
-        const root = document.documentElement;
-        if (theme === 'auto') {
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            root.classList.toggle('dark', prefersDark);
-        }
-        else {
-            root.classList.toggle('dark', theme === 'dark');
-        }
-        localStorage.setItem('theme', theme);
-    };
-    const toggleTheme = () => {
-        const themes = ['light', 'dark', 'auto'];
-        const currentIndex = themes.indexOf(currentTheme);
+        applyTheme(savedTheme)}, []);
+    const applyTheme = (theme) => {};
+            root.classList.toggle('dark', prefersDark)}
+        else {};
+            root.classList.toggle('dark', theme === 'dark')}
+        localStorage.setItem('theme', theme)}
+    const themes = ['light',dark',auto'];
+        const currentIndex = themes.indexOf(currentTheme) ;
         const nextTheme = themes[(currentIndex + 1) % themes.length];
         setCurrentTheme(nextTheme);
         applyTheme(nextTheme);
@@ -253,73 +240,34 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
     }, [enableScrollEffects]);
     return (<>
       {/* Theme Toggle Button */}
-      {enableThemeToggle && (<motion.button initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={toggleTheme} className="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700" title={`Current theme: ${currentTheme}`}>
-          <AnimatePresence mode="wait">
-            {currentTheme === 'light' && (<motion.div key="light" initial = {
-  { opacity: 0,
-  rotate: -90 
-
-}} animate = {
-  { opacity: 1,
-  rotate: 0 
-
-}} exit = {
-  { opacity: 0,
-  rotate: 90 
-
-}} transition={{ duration: 0.3 }}>
-                <Sun className="w - 5 h - 5 text - yellow - 500"      />
-              </motion.div>) }
-            {currentTheme === 'dark' && (<motion.div key="dark" initial = {
-  { opacity: 0,
-  rotate: -90 
-
-}} animate = {
-  { opacity: 1,
-  rotate: 0 
-
-}} exit = {
-  { opacity: 0,
-  rotate: 90 
-
-}} transition={{ duration: 0.3 }}>
-                <Moon className="w - 5 h - 5 text - blue - 400"      />
-              </motion.div>) }
-            {currentTheme === 'auto' && (<motion.div key="auto" initial = {
-  { opacity: 0,
-  rotate: -90 
-
-}} animate = {
-  { opacity: 1,
-  rotate: 0 
-
-}} exit = {
-  { opacity: 0,
-  rotate: 90 
-
-}} transition={{ duration: 0.3 }}>
-                <Monitor className="w - 5 h - 5 text - gray - 600 dark:text - gray - 400"      />
-              </motion.div>) }
-          </AnimatePresence>
-        </motion.button>)}
+      {};
+}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={toggleTheme} className="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700" title={`Current theme: ${currentTheme}`}>";
+          <AnimatePresence mode="wait">'";
+            {};
+}} transition={{ duration: 0.3 }}>";
+                <Sun className="w-5 h-5 text-yellow-500"/>;
+              </motion.div>)}'";
+            {};
+}} transition={{ duration: 0.3 }}>";
+                <Moon className="w-5 h-5 text-blue-400"/>;
+              </motion.div>)}'";
+            {};
+}} transition={{ duration: 0.3 }}>";
+                <Monitor className="w-5 h-5 text-gray-600 dark:text-gray-400"/>;
+              </motion.div>)}
+          </AnimatePresence>;
+        </motion.button>) }
 
       {/* Device Type Indicator */}
-      {enableResponsiveDesign && (<motion.div initial = {
-  { opacity: 0,
-  x: -50 
-
-}} animate = {
-  { opacity: 1,
-  x: 0 
-
-}} className="fixed top - 6 left - 6 z - 50 p - 2 bg - white dark:bg - gray - 800 rounded - lg shadow - lg border border - gray - 200 dark:border - gray - 700">
-          <div className="flex items - center space - x-2 text - sm">
-            {deviceType === 'desktop' && <Monitor className="w - 4 h - 4 text - blue - 500"      />}
-            {deviceType === 'tablet' && <Tablet className="w - 4 h - 4 text - green - 500"      />}
-            {deviceType === 'mobile' && <Smartphone className="w - 4 h - 4 text - purple - 500"      />}
-            <span className="text - gray - 700 dark:text - gray - 300 capitalize">{deviceType}</span>
-          </div>
-        </motion.div>)}
+      {};
+}} className="fixed top-6 left-6 z-50 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">";
+          <div className="flex items-center space-x-2 text-sm">'";
+            {deviceType === 'desktop' && <Monitor className="w-4 h-4 text-blue-500"/>}'";
+            {deviceType === 'tablet' && <Tablet className="w-4 h-4 text-green-500"/>}'";
+            {deviceType === 'mobile' && <Smartphone className="w-4 h-4 text-purple-500"/>}";
+            <span className="text-gray-700 dark:text-gray-300 capitalize">{deviceType}</span>;
+          </div>;
+        </motion.div>) }
 
       {/* Scroll to Top Button */}
       <AnimatePresence>
@@ -425,19 +373,10 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
           </motion.div>)}
       </AnimatePresence>
 
-      {/* Background Particles */}
-      {enableParticles && (<div className="fixed inset-0 pointer-events-none z-0">
-          {[...Array(20)].map((_, i) => (<motion.div key={i} className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-20" initial={{
-                    x: Math.random() * window.innerWidth,
-                    y: Math.random() * window.innerHeight,
-                }} animate={{
-                    y: [0, -100, 0],
-                    opacity: [0.2, 0.5, 0.2],
-                }} transition={{
-                    duration: Math.random() * 10 + 10,
-                    repeat: Infinity,
-                    ease: "linear",
-
-}}      />) ) }
-        </div>) }
-    </>) };
+      {/* Background Particles */}";
+      {};
+                    ease: "linear"}}/>))}
+        </div>)}
+    </>)}
+export default ModernUIEnhancer;
+'"`;

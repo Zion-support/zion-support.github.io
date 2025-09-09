@@ -1,41 +1,29 @@
 import React, { useState, useEffect } from "react";
   User,;
-  ShoppingCart,;,
-} from "lucide-react";
-export default function EnhancedHeader() {;
+  ShoppingCart} from "lucide-react";
+export default function EnhancedHeader() {
 
-  const router = useRouter();,
-}
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);,
-}
-  const [searchQuery, setSearchQuery] = useState("");,
-}
-  const [scrolled, setScrolled] = useState(false);,
-}
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);,
-}
-  useEffect(() => {;
-    const handleScroll = () => {;
-      setScrolled(window.scrollY > 50);,
-}
-;
-    window.addEventListener("scroll", handleScroll);,
-}
-    return () => window.removeEventListener("scroll", handleScroll);,
-}
-  }, []);,
-}
+  const router = useRouter()}
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)}
+  const [searchQuery, setSearchQuery] = useState("")}
+  const [scrolled, setScrolled] = useState(false)}
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)}
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)}
+
+    window.addEventListener("scroll", handleScroll)}
+    return () => window.removeEventListener("scroll", handleScroll)}
+  }, [])}
   const handleSearch = async (e: React.FormEvent) => {,;
     e.preventDefault(),;
-    if (searchQuery.trim()) {;
-      router.push("/search?q="${encodeURIComponent(searchQuery.trim())}");";,
-}
-;
-  const toggleDropdown = (itemName: string) => {,,;
+    if (searchQuery.trim()) {
+      router.push("/search?q="${encodeURIComponent(searchQuery.trim())}");"}
+
+  const toggleDropdown = (itemName: string) => {,;
     setActiveDropdown(activeDropdown === itemName ? null : itemName)}
-;
-  const navigation = [],;,
-},;
+
+  const navigation = []},;
     {";
       name: "Solutions",";
       href: "/solutions",;
@@ -46,8 +34,7 @@ export default function EnhancedHeader() {;
         { name: "Event Management", href: "/solutions/event-management" },";
         { name: "Project Management", href: "/solutions/project-management" },";
         { name: "Workflow Automation", href: "/solutions/workflow-automation" },;
-      ],;,
-},";
+      ]},";
     { name: "About", href: "/about" },";
     { name: "Blog", href: "/blog" },";
     { name: "Careers", href: "/careers" },";
@@ -56,9 +43,8 @@ export default function EnhancedHeader() {;
 
   return (";
     <header className = "{"fixed" w-full z-50 transition-all duration-300 ${";
-        scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm">;,
-}"}
-;
+        scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm">}"}
+
     >";
       <div className = "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
         <div className="flex justify-between items-center py-4">,;
@@ -90,7 +76,7 @@ export default function EnhancedHeader() {;
                         router.pathname.startsWith(item.href + "/")";
                           ? "text-blue-600 bg-blue-50;
                           : "text-gray-700 hover: text-blue-600 hover:bg-gray-50"}"}
-;
+
                     >;
                       {item.name}";
                       <ChevronDown className=""ml-1" h-4 w-4"}       />;
@@ -102,16 +88,16 @@ export default function EnhancedHeader() {;
                             href="{dropdownItem.href}
                             className="{"block" px-4 py-2 text-sm text-gray-700 hover: bg-blue-50 hover:text-blue-600 transition-colors"">;
                             onClick="{()" => setActiveDropdown(null)}
-;
+
                           >;
                             {dropdownItem.name}
-;
+
                           </Link>;
                         ))}
-;
+
                       </div>;
                     )}
-;
+
                   </div>;
                 ) : (";
                   <Link href="{item.href}
@@ -119,16 +105,16 @@ export default function EnhancedHeader() {;
                       router.pathname === item.href";
                         ? "text-blue-600 bg-blue-50;
                         : "text-gray-700 hover: text-blue-600 hover:bg-gray-50"}"}
-;
+
                   >;
                     {item.name}
-;
+
                   </Link>;
                 )}
-;
+
               </div>;
             ))}
-;
+
           </nav>;
           {/* comment */}";
           <div className=""hidden" md: flex items-center space-x-4"}>";
@@ -161,11 +147,11 @@ export default function EnhancedHeader() {;
             ) : (";
               <Menu className="h-6 w-6"  />,;
             )}
-;
+
           </button>;
         </div>;
         {/* comment */}
-;
+
         {mobileMenuOpen && (";
           <div className="lg: hidden">";
             <div className="{"px-2" pt-2 pb-3 space-y-1 bg-white border-t">;
@@ -179,7 +165,7 @@ export default function EnhancedHeader() {;
                           router.pathname.startsWith(item.href + "/")";
                             ? "text-blue-600 bg-blue-50;
                             : "text-gray-700 hover: text-blue-600 hover:bg-gray-50"}"}
-;
+
                       >;
                         {item.name}";
                         <ChevronDown className=""h-4" w-4"}       />;
@@ -193,16 +179,16 @@ export default function EnhancedHeader() {;
                               onClick="{()" => {,;
                                 setMobileMenuOpen(false),;
                                 setActiveDropdown(null)}}
-;
+
                             >;
                               {dropdownItem.name}
-;
+
                             </Link>;
                           ))}
-;
+
                         </div>;
                       )}
-;
+
                     </div>;
                   ) : (";
                     <Link href="{item.href}
@@ -211,16 +197,16 @@ export default function EnhancedHeader() {;
                           ? "text-blue-600 bg-blue-50;
                           : "text-gray-700 hover: text-blue-600 hover:bg-gray-50"}"}";
                       onClick="{()" => setMobileMenuOpen(false)}
-;
+
                     >;
                       {item.name}
-;
+
                     </Link>;
                   )}
-;
+
                 </div>;
               ))}
-;
+
               {/* comment */}";
               <div className=""px-3" py-2"}>";
                 <form onSubmit="{handleSearch}" className="relative">";
@@ -248,9 +234,8 @@ export default function EnhancedHeader() {;
               </div>;
           </div>,;
         )}
-;
+
       </div>;
     </header>;
-  );,
-}
+  )}
 }

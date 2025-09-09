@@ -5,279 +5,374 @@ import {;
 import { motion } from 'framer - motion';
 ;
 ;
-  Search,;
-  Filter,;
-  Calendar,;
-  User,;
-  Eye,;
-  BookOpen,;
-  ArrowRight,;
-  Mail,;
-  Send,;
-} from 'lucide - react';
-;
-interface BlogPost {;
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  date: string;
-  category: string;
-  tags: string[];
-  readTime: string;
-  views: number;
-  featured: boolean;
-  image?: string;
-};
-;
-interface Category {;
-  id: string;
-  name: string;
-  count: number;
-};
-;
-const Blog: React.FC = () => {;
-  const [searchTerm, setSearchTerm] = useState ('') ;
-  const [selectedCategory, setSelectedCategory] = useState < string> ('all') ;
-;
-  const categories: Category[] = [;
-    { id: 'all', name: 'All Posts', count: 12 },;
-    { id: 'ai', name: 'AI & Machine Learning', count: 4 },;
-    { id: 'cybersecurity', name: 'Cybersecurity', count: 3 },;
-    { id: 'quantum', name: 'Quantum Computing', count: 2 },;
-    { id: 'saas', name: 'Micro SaaS', count: 2 },;
-    { id: 'business', name: 'Business Insights', count: 1 },;
+  const filteredPosts = blogPosts.filter(post => {};
+}
+  const regularPosts = blogPosts.filter(post => !post.featured);,
+}
+  return (;
+
+    <>";
+      <div>Broken JSX</div>
+        keywords="technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news">;
+     />;
+      ;";
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+        {/* comment */}";
+        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;";
+          <div className="container mx-auto px-4">;
+            <div>Broken JSX</div>
+              className="text-center max-w-4xl mx-auto">;
+            >;";
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,;
+                Technology Insights,;
+              </h1>,";
+              <p className = "text-xl text-gray-300 mb-8">,;
+                Stay ahead of the curve with expert insights on AI, quantum computing,;
+                cybersecurity, and the latest technology trends shaping our future.;
+              </p>;";
+              <div className="flex flex-wrap justify-center gap-4">;
+                {};
+                    {category.name}
+
+                  </span>;
+export default function Blog() {};
+  return null;
+}
+      featured: true}, { id: 2}, {};
+      featured: true}, { id: 3}, {};
+      featured: false}, { id: 4}, {};
+      featured: false}, { id: 5}, {};
+      featured: false}, { id: 6}, {};
+      featured: false}
+
+  ]&quot;
+  const categories = []&quot;
+";
+      title: "Cloud Infrastructure Best Practices for Global Enterprises", excerpt: "Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.",";
+      author: "Maria Santos", date: "2025-01-03",";
+      readTime: "9 min read", category: "Cloud Computing",";
+      tags: ["Cloud", "Infrastructure", "Enterprise"], image: "/api/placeholder/600/400",";
+      tags: ["Cloud,Infrastructure,Enterprise"], image: "/api/placeholder/600/400",;
+      featured: false}
+
   ];
-;
-  const blogPosts: BlogPost[] = [;
-    {;
-      id: '1',;
-      title: 'The Future of AI in Enterprise: 2024 Trends and Predictions',;
-      excerpt:;
-        "Explore the latest developments in AI technology and how they're reshaping enterprise operations.",;
-      content: 'Full article content here...',;
-      author: 'Dr. Sarah Johnson',;
-      date: '2024 - 01 - 15',;
-      category: 'ai',;
-      tags: ['AI', 'Enterprise', 'Technology', 'Innovation'],;
-      readTime: '5 min read',;
-      views: 1247,;
-      featured: true,;
-    },;
-    {;
-      id: '2',;
-      title: 'Quantum Computing: Breaking Down the Hype vs Reality',;
-      excerpt:;
-        "A comprehensive look at quantum computing's current state and practical applications.",;
-      content: 'Full article content here...',;
-      author: 'Michael Chen',;
-      date: '2024 - 01 - 10',;
-      category: 'quantum',;
-      tags: ['Quantum Computing', 'Technology', 'Research'],;
-      readTime: '8 min read',;
-      views: 892,;
-      featured: true,;
-    },;
-    {;
-      id: '3',;
-      title: 'Cybersecurity in the Age of AI: New Threats and Solutions',;
-      excerpt:;
-        'How AI is both creating new security challenges and providing innovative solutions.',;
-      content: 'Full article content here...',;
-      author: 'Emily Rodriguez',;
-      date: '2024 - 01 - 08',;
-      category: 'cybersecurity',;
-      tags: ['Cybersecurity', 'AI', 'Security'],;
-      readTime: '6 min read',;
-      views: 756,;
-      featured: false,;
-    },;
-    {;
-      id: '4',;
-      title: 'Building Successful Micro SaaS Products: Lessons Learned',;
-      excerpt:;
-        'Key insights from building and scaling micro SaaS solutions for modern businesses.',;
-      content: 'Full article content here...',;
-      author: 'David Kim',;
-      date: '2024 - 01 - 05',;
-      category: 'saas',;
-      tags: ['SaaS', 'Business', 'Startup'],;
-      readTime: '7 min read',;
-      views: 634,;
-      featured: false,;
-    },;
-  ];
-;
-  const filteredPosts = useMemo ( () => {;
-    return blogPosts.filter (post => {;
-      const matchesSearch = post.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
-        post.excerpt.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
-        post.tags.some (tag =>;
-          tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
-;
-      const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
-;
-      return matchesSearch && matchesCategory;
-    }) ;
-  }, [searchTerm, selectedCategory]) ;
-;
-  const formatDate = (dateString: string) => {;
-    return new Date (dateString) .toLocaleDateString ('en - US', {;
-      year: 'numeric',;
-      month: 'long',;
-      day: 'numeric',;
-    }) ;
-  };
-;
-  return (<div role="button" className="min - h-screen bg - gradient - to - br from - blue - 900 via - purple - 900 to - indigo - 900">;
-      {/* Header */};
-      <section className="pt - 32 pb - 16 px - 4">;
-        <div role="button" className="max - w-7xl mx - auto text - center">;
-          <motion.h1;
-            initial={{ opacity: 0, y: 20 }};
-            animate={{ opacity: 1, y: 0 }};
-            transition={{ duration: 0.6 }};
-            className="text - 5xl md:text - 6xl font - bold text - white mb - 6";
-          >;
-            Zion Tech Blog;
-          </motion.h1>;
-          <motion.p;
-            initial={{ opacity: 0, y: 20 }};
-            animate={{ opacity: 1, y: 0 }};
-            transition={{ duration: 0.6, delay: 0.1 }};
-            className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto";
-          >;
-            Insights, trends, and expert analysis on AI, cybersecurity, quantum;
-            computing, and business technology.;
-          </motion.p>;
-;
-          {/* Search Bar */};
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }};
-            animate={{ opacity: 1, y: 0 }};
-            transition={{ duration: 0.6, delay: 0.2 }};
-            className="max - w-2xl mx - auto";
-          >;
-            <div role="button" className="relative">;
-              <Search className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 w - 5 h - 5"       />;
-              <input;
-                type="text";
-                placeholder="Search articles...";
-                value={searchTerm};
-                onChange={e => setSearchTerm (e.target.value) };
-                className="w - full pl - 12 pr - 4 py - 4 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500";
-              />;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-;
-      {/* Featured Articles */};
-      {filteredPosts.filter (post => post.featured) .length > 0 && (<section className="py - 16 px - 4">;
-          <div role="button" className="max - w-7xl mx - auto">;
-            <motion.h2;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.6 }};
-              className="text - 3xl font - bold text - white mb - 12 text - center";
-            >;
-              Featured Articles;
-            </motion.h2>;
-;
-            <div role="button" className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
-              {filteredPosts;
-                .filter (post => post.featured) .map ( (post, index) => (<motion.article;
-                    key={post.id};
-                    initial={{ opacity: 0, y: 20 }};
-                    whileInView={{ opacity: 1, y: 0 }};
-                    viewport={{ once: true }};
-                    transition={{ duration: 0.6, delay: index * 0.1 }};
-                    className="bg - slate - 800 / 50 backdrop - blur - sm rounded - xl overflow - hidden border border - slate - 700 / 50 hover:border - slate - 600 / 50 transition - all duration - 300 group";
+  const categories = [];
+  const featuredPosts = blogPosts.filter(post => post.featured)}
+  const regularPosts = blogPosts.filter()}
+  return (;
+    <>";
+      <div>Broken JSX</div>
+        keywords="&quot;technology" blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news&quot>;
+     />&quot;";
+        title = "Blog - Zion Tech Group | Technology Insights & Industry News;
+        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group&apos;s expert team.;
+        keywords = "technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news;
+        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group"s expert team. ";
+        keywords="technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news" />;
+      ";
+      <div className="&quot;min-h-screen" bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>;
+        {/* comment */}&quot;";
+        <section className="&quot;py-20" bg-gradient-to-r from-blue-600/20 to-purple-600/20&quot;>&quot;
+          <div className="&quot;container" mx-auto px-4&quot;>&quot;";
+            <div>Broken JSX</div>
+              className="text-center max-w-4xl mx-auto">";
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,;
+                Technology Insights,";
+transition="{{" duration: 0.8 }}";
+              className="&quot;text-center" max-w-4xl mx-auto&quot;
+            >&quot;";
+              <h1 className="&quot;text-5xl" md: text-6xl font-bold text-white mb-6&quot,>;
+                Technology Insights&quot,;
+              </h1>",;
+              <p className = "&quot,text-xl" text-gray-300 mb-8&quot,>;
+                Stay ahead of the curve with expert insights on AI, quantum computing,;
+                cybersecurity, and the latest technology trends shaping our future.&quot;";
+              <p className = "text-xl text-gray-300 mb-8">;
+                Stay ahead of the curve with expert insights on AI, quantum computing, cybersecurity, and the latest technology trends shaping our future.;
+              </p>";
+              <div className="&quot;flex" flex-wrap justify-center gap-4&quot;>;
+                {categories.slice(0, 4).map((category, index) => (&quot}";
+                  <div>Broken JSX</div>
+                    className="&quot;px-4" py-2 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-sm&quot>;
                   >;
-                    <div role="button" className="aspect - video bg - gradient - to - br from - blue - 500 / 20 to - purple - 500 / 20 flex items - center justify - center">;
-                      <BookOpen className="w - 16 h - 16 text - blue - 400 opacity - 60"       />;
-                    </div>;
-                    <div role="button" className="p - 6">;
-                      <div role="button" className="flex items - center gap - 2 mb - 3">;
-                        <span className="px - 2 py - 1 bg - blue - 500 / 20 text - blue - 400 text - xs font - medium rounded">;
-                          {categories.find (c => c.id === post.category) ?.name};
-                        </span>;
-                        <span className="text - slate - 400 text - sm">•</span>;
-                        <span className="text - slate - 400 text - sm">;
-                          {post.readTime};
-                        </span>;
-                      </div>;
-;
-                      <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - blue - 400 transition - colors">;
-                        {post.title};
-                      </h3>;
-;
-                      <p className="text - slate - 300 mb - 4 line - clamp - 3">;
-                        {post.excerpt};
-                      </p>;
-;
-                      <div role="button" className="flex items - center justify - between">;
-                        <div role="button" className="flex items - center gap - 4 text - sm text - slate - 400">;
-                          <span className="flex items - center gap - 1">;
-                            <User className="w - 4 h - 4"       />;
-                            {post.author};
-                          </span>;
-                          <span className="flex items - center gap - 1">;
-                            <Calendar className="w - 4 h - 4"       />;
-                            {formatDate (post.date) };
-                          </span>;
-                        </div>;
-;
-                        <div role="button" className="flex items - center gap - 2 text - slate - 400 text - sm">;
-                          <Eye className="w - 4 h - 4"       />;
-                          {post.views};
-                        </div>;
-                      </div>;
-;
-                      <div role="button" className="mt - 4 flex flex - wrap gap - 2">;
-                        {post.tags.slice (0, 3) .map (tag => (<span;
-                            key={tag};
-                            className="px - 2 py - 1 bg - slate - 700 / 50 text - slate - 300 text - xs rounded";
-                          >;
-                            {tag};
-                          </span>) ) };
-                      </div>;
-;
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="text - zion - cyan hover:text - zion - cyan - light transition - colors group - hover:translate - x-1">;
-                        <ArrowRight className="w - 5 h - 5"       />;
-                      </button>;
-                    </div>;
-                  </motion.article>) ) };
-            </div>;
+                    {category.name}&quot;
+                  </span>;
+                ))}
+
+              </div>;
+            </motion.div>;
           </div>;
-        </section>) };
+        </section>;
+";
+        <div className="container mx-auto px-4 py-16">;";
+          <div className = "grid grid-cols-1 lg: grid-cols-4 gap-12">,;
+            {/* comment */}";
+            <div className="lg: col-span-3">,;
+              {/* comment */}
 ;
-      {/* All Posts Grid */};
-      <section className="py - 16 px - 4">;
-        <div role="button" className="max - w-7xl mx - auto">;
-          <div role="button" className="grid grid - cols - 1 lg:grid - cols - 4 gap - 8">;
-            {/* Sidebar */};
-            <div role="button" className="lg:col - span - 1">;
-              <div role="button" className="sticky top - 24 space - y-6">;
-                {/* Categories */};
-                <div role="button" className="bg - zion - blue - dark border border - zion - purple / 20 rounded - lg p - 6">;
-                  <h3 className="text - lg font - semibold text - white mb - 4 flex items - center gap - 2">;
-                    <Filter className="w - 5 h - 5 text - zion - cyan"       />;
-                    Categories;
-                  </h3>;
-                  <div role="button" className="space - y-2">;
-                    {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id};
-                        onClick={ () => setSelectedCategory (category.id) };
-                        className={`w - full text - left px - 3 py - 2 rounded - lg text - sm transition - colors flex items - center justify - between ${;
-                          selectedCategory === category.id;
-                            ? 'bg - zion - cyan text - zion - blue';
-                            : 'text - gray - 300 hover:bg - zion - purple / 20';
-                        }`};
-                      >;
-                        <span>{category.name}</span>;
-                        <span className="text - xs opacity - 75"> ({category.count}) </span>;
-                      </button>) ) };
+              {};
+            {/* comment */}&quot;";
+            <div className="&quot;lg:" col-span-3&quot,>";
+        <div className = "container mx-auto px-4 py-16">";
+          <div className="grid grid-cols-1 lg: grid-cols-4 gap-12">,;
+            {/* comment */}";
+            <div className="lg: col-span-3">,;
+              {/* comment */}
+
+              {featuredPosts.length > 0 && (&quot}";
+                <section className="&quot;mb-16&quot;">&quot;
+                  <h2 className="&quot;text-3xl" font-bold text-white mb-8 flex items-center&quot;>&quot;
+                    <TrendingUp className="&quot;w-8" h-8 mr-3 text-blue-400&quot;       />;
+                    Featured Articles&quot;
+                  </h2>";
+                  <div className="&quot;grid" grid-cols-1 md: grid-cols-2 gap-8&quot,>;
+                    {featuredPosts.map((post, index) => (&quot}
+;
+                      <div>Broken JSX</div>
+                        transition="{{" duration: 0.8, delay: index * 0.1 }}">;
+                        className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover: border-blue-400/50 transition-all duration-300 hover:scale-105",;
+                      >,",;
+                        <div className = "h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">,";
+                          <div className="text-6xl opacity-20">,";
+                            {post.category === "AI & Machine Learning" && <Brain  />}";
+                            {post.category === "Quantum Computing" && <Atom  />}";
+                            {post.category === "Micro SaaS" && <Rocket  />}";
+                            {post.category === "Cybersecurity" && <Shield  />}
+
+                          </div>;
+                        </div>;";
+                        <div className="p-6">;";
+                          <div className="flex items-center gap-4 mb-3">;";
+                            <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">;
+                              {post.category}
+
+                            </span>;";
+                            <span className="text-yellow-400 text-xs font-medium">Featured</span>;
+                          </div>;";
+                          <h3 className = "{};
+                            <Link to="{"/blog/${post.id}"}">{post.title}</Link>;
+                          </h3>;";
+                          <p className=""text-gray-300" mb-4 line-clamp-3"}>{post.excerpt}</p>;";
+                          <div className="flex items-center justify-between text-sm text-gray-400">;";
+                            <div className="flex items-center gap-4">;";
+                              <span className="flex items-center">;";
+                                <User className="w-4 h-4 mr-1"  />;
+                                {post.author}
+
+                              </span>;";
+                              <span className="flex items-center">;";
+                                <Calendar className="w-4 h-4 mr-1"  />;
+                                {new Date(post.date).toLocaleDateString()}
+
+                              </span>;
+                            </div>;";
+                            <span className="flex items-center">;";
+                              <Clock className="w-4 h-4 mr-1"  />;
+                              {post.readTime}
+
+                            </span>;
+                          </div>;
+                      </motion.article>;";
+                        className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hove,r: scale-105&quot;
+                      >&quot;";
+                        <div className="&quot;h-48" bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center&quot;>&quot,;
+                          <div className="&quot,text-6xl" opacity-20&quot,>",;
+                            {post.category === &quot,AI & Machine Learning&quot, &&"}&quot; <Brain  />}";
+                            {post.category === &quot;Quantum Computing&quot; &&"}&quot; <Atom  />}";
+                            {post.category === &quot;Micro SaaS&quot; &&"}&quot; <Rocket  />}";
+                            {post.category === &quot;Cybersecurity&quot; &&"}&quot; <Shield  />}
+
+                          </div>;
+                        </div>";
+                        <div className="&quot;p-6&quot;">&quot;
+                          <div className="&quot;flex" items-center gap-4 mb-3&quot;>&quot;
+                            <span className="&quot;px-3" py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs&quot;>;
+                              {post.category}&quot;
+                            </span>";
+                            <span className="&quot;text-yellow-400" text-xs font-medium&quot;>Featured&quot;</span>;
+                          </div>";
+                          <h3 className="&quot;text-xl" font-bold text-white mb-3 hover: text-blue-400 transition-colors&quot,>&quot,;
+                            <Link to = "{"/blog/${post.id}"}">{post.title}</Link>;
+                          </h3>";
+                          <p className="&quot;text-gray-300" mb-4 line-clamp-3&quot;>{post.excerpt}&quot;</p>";
+                          <div className="&quot;flex" items-center justify-between text-sm text-gray-400&quot;>&quot;
+                            <div className="&quot;flex" items-center gap-4&quot;>&quot;
+                              <span className="&quot;flex" items-center&quot;>&quot;
+                                <User className="&quot;w-4" h-4 mr-1&quot;       />;
+                                {post.author}&quot;
+                              </span>";
+                              <span className="&quot;flex" items-center&quot;>&quot;
+                                <Calendar className="&quot;w-4" h-4 mr-1&quot;       />;
+                                {new Date(post.date).toLocaleDateString()}&quot;
+                              </span>;
+                            </div>";
+                            <span className="&quot;flex" items-center&quot;>&quot;
+                              <Clock className="&quot;w-4" h-4 mr-1&quot;       />;
+                              {post.readTime}&quot;
+                            </span>;
+                          </div>;
+                      </motion.article>;
+                    ))}
+
+                  </div>;
+                </section>;
+              )}
+
+              {/* comment */}
+
+              <section>;";
+                <h2 className="text-3xl font-bold text-white mb-8">Latest Articles</h2>;";
+                <div className="space-y-8">;
+                  {};
+                  {regularPosts.map((post, index) => (&quot}
+;
+                    <div>Broken JSX</div>
+                      className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50 transition-all duration-300">;
+                    >,";
+                      <div className="flex flex-col md:flex-row gap-6">,",;
+                        <div className = "md:w-48 h-32 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">,";
+                          <div className="text-4xl opacity-20">,";
+                            {post.category === "AI & Machine Learning" && <Brain  />}";
+                            {post.category === "Quantum Computing" && <Atom  />}";
+                            {post.category === "Micro SaaS" && <Rocket  />}";
+                            {post.category === "Cybersecurity" && <Shield  />}";
+                            {post.category === "Digital Transformation" && <Globe  />}";
+                            {post.category === "Cloud Computing" && <Code  />}
+
+                          </div>;
+                        </div>;";
+                        <div className="flex-1">;";
+                          <div className="flex items-center gap-4 mb-3">;";
+                            <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">;
+                              {post.category}
+
+                            </span>;
+                          </div>;";
+                          <h3 className = "{};
+                            <Link to="{"/blog/${post.id}"}">{post.title}</Link>;
+                          </h3>;";
+                          <p className=""text-gray-300" mb-4"}>{post.excerpt}</p>;";
+                          <div className="flex items-center justify-between">;";
+                            <div className="flex items-center gap-4 text-sm text-gray-400">;";
+                              <span className="flex items-center">;";
+                                <User className="w-4 h-4 mr-1"  />;
+                                {post.author}
+
+                              </span>;";
+                              <span className="flex items-center">;";
+                                <Calendar className="w-4 h-4 mr-1"  />;
+                                {new Date(post.date).toLocaleDateString()}
+
+                              </span>;";
+                              <span className="flex items-center">;";
+                                <Clock className="{};
+                                {post.readTime}
+
+                              </span>;
+                            </div>;
+                            <div>Broken JSX</div>
+                              className=""flex" items-center text-blue-400 hover:text-blue-300 transition-colors"}>;
+                            >;
+                              Read More;";
+                              <ArrowRight className="w-4 h-4 ml-1"  />;
+                            </Link>;
+                          </div>;
+                    </motion.article>;";
+                      className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50 transition-all duration-300&quot,;
+                    >&quot,",;
+                      <div className="&quot;flex" flex-col md: flex-row gap-6&quot,>&quot,;
+                        <div className="&quot,m,d: " w-48 h-32 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0&quot;>&quot,;
+                          <div className="&quot,text-4xl" opacity-20&quot,>",;
+                            {post.category === &quot,AI & Machine Learning&quot, &&"}&quot; <Brain  />}";
+                            {post.category === &quot;Quantum Computing&quot; &&"}&quot; <Atom  />}";
+                            {post.category === &quot;Micro SaaS&quot; &&"}&quot; <Rocket  />}";
+                            {post.category === &quot;Cybersecurity&quot; &&"}&quot; <Shield  />}";
+                            {post.category === &quot;Digital Transformation&quot; &&"}&quot; <Globe  />}";
+                            {post.category === &quot;Cloud Computing&quot; &&"}&quot; <Code  />}
+
+                          </div>;
+                        </div>";
+                        <div className="&quot;flex-1&quot;">&quot;
+                          <div className="&quot;flex" items-center gap-4 mb-3&quot;>&quot;
+                            <span className="&quot;px-3" py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs&quot;>;
+                              {post.category}&quot;
+                            </span>;
+                          </div>";
+                          <h3 className="&quot;text-xl" font-bold text-white mb-3 hover: text-blue-400 transition-colors&quot,>&quot,;
+                            <Link to = "{"/blog/${post.id}"}">{post.title}</Link>;
+                          </h3>";
+                          <p className="&quot;text-gray-300" mb-4&quot;>{post.excerpt}&quot;</p>";
+                          <div className="&quot;flex" items-center justify-between&quot;>&quot;
+                            <div className="&quot;flex" items-center gap-4 text-sm text-gray-400&quot;>&quot;
+                              <span className="&quot;flex" items-center&quot;>&quot;
+                                <User className="&quot;w-4" h-4 mr-1&quot;       />;
+                                {post.author}&quot;
+                              </span>";
+                              <span className="&quot;flex" items-center&quot;>&quot;
+                                <Calendar className="&quot;w-4" h-4 mr-1&quot;       />;
+                                {new Date(post.date).toLocaleDateString()}&quot;
+                              </span>";
+                              <span className="&quot;flex" items-center&quot;>&quot;
+                                <Clock className="&quot;w-4" h-4 mr-1&quot;       />;
+                                {post.readTime}&quot;
+                              </span>;
+                            </div>";
+                            <Link to = "{"/blog/${post.id}"}"">;
+                              className="&quot;flex" items-center text-blue-400 hover: text-blue-300 transition-colors&quot,";
+                              className = ""flex" items-center text-blue-400 hover: text-blue-300 transition-colors">,;
+                              Read More&quot,",;
+                              <ArrowRight className="&quot;w-4" h-4 ml-1&quot,       />&quot,;
+                            </Link>;
+                          </div>;
+                    </motion.article>;
+                  ))}
+
+                </div>;
+              </section>;
+            </div>;
+            {/* comment */}";
+            <div className="lg: col-span-1">;";
+              <div className="sticky top-8 space-y-8">;";
+            <div className="&quot,lg:col-span-1&quot,">&quot,",;
+              <div className = "&quot,sticky" top-8 space-y-8&quot,>;
+                {/* comment */}&quot;";
+                <div className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50&quot;>&quot;
+                  <h3 className="&quot;text-xl" font-bold text-white mb-4&quot;>Categories&quot;</h3>";
+                  <div className="&quot;space-y-3&quot;">;
+                    {categories.map((category, index) => (&quot}";
+                      <Link key = "{category.name}"">;
+                        to="{"/blog/category/${category.name.toLowerCase().replace(/\s+/g," &apos;-&apos)}"}";
+                        className="&quot;flex" items-center justify-between p-3 rounded-lg hover: bg-slate-700/50 transition-colors group&quot>;
+                      >&quot;&apos;";
+                        <div className="&quot,flex" items-center&quot,>&quot,",;
+                          <category.icon className="&quot;w-5" h-5 text-blue-400 mr-3 group-hover: text-blue-300&quot, />&quot,";
+                          <span className="&quot,text-gray-300" group-hove,r: text-white&quot,>{category.name}&quot;</span>";
+            <div className = "lg: col-span-1">";
+              <div className="sticky top-8 space-y-8">,;
+                {/* comment */}";
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50">;";
+                  <h3 className="text-xl font-bold text-white mb-4">Categories</h3>;";
+                  <div className="{};
+                        className=""flex" items-center justify-between p-3 rounded-lg hover:bg-slate-700/50 transition-colors group"}>;
+                      >;";
+                        <div className="flex items-center">;";
+                          <category.icon className = "w-5 h-5 text-blue-400 mr-3 group-hover: text-blue-300" />,";
+                          <span className="text-gray-300 group-hover:text-white">{category.name}</span>;
+                        </div>;";
+                        <span className="{"text-sm" text-gray-400">{category.count}</span>;
+                      </Link>;";
+                        to = "{"/blog/category/${category.name.toLowerCase().replace(/\s+/g," "-')}"}";
+                        className=""flex" items-center justify-between p-3 rounded-lg hover: bg-slate-700/50 transition-colors group"}
+
+                      >";
+                        <div className="flex items-center">";
+                          <category.icon className="w-5 h-5 text-blue-400 mr-3 group-hover: text-blue-300" />",;
+                          <span className="text-gray-300 group-hover:text-white">{category.name}</span>;
+                        </div>";
+                        <span className="&quot;text-sm" text-gray-400&quot;>{category.count}&quot;</span>;
+                      </Link>;
+                    ))}
+
                   </div>;
                 </div>;
               </div>;

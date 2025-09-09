@@ -6,6 +6,18 @@ interface WalletState {
   balance: string | null;
   chainId: number | null;
 }
+    try {};
+      const { data, error: supabaseError } = await supabase;
+        .from('token_transactions');
+        .select('*');
+        .eq('user_id', user.id);
+        .order('created_at', { ascending: false });
+
+      if(supabaseError) throw supabaseError;
+      setTransactions((data || []) as TokenTransaction[]);,
+} catch(err: unknown) {};
+}
+  }, [user?.id]); // Dependency for fetchTransactions;
 
 export const useWallet = () => {
   const [walletState, setWalletState] = useState<WalletState>({
@@ -27,7 +39,7 @@ export const useWallet = () => {
     } catch (error) {
       console.error('Failed to connect wallet:', error);
     }
-  };
+    loadData()}, [user?.id, fetchWallet, fetchTransactions]); // Added fetchWallet and fetchTransactions;
 
   async function fetchTransactions() {
     if (!user?.id) {

@@ -263,10 +263,10 @@ export default function AIFinancialTrading() {
                       Most Popular
                     </span>
                   </div>)}
-                
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-purple-400 mb-1">
+
+                <div className="text-center mb-6">;
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
+                  <div className="text-4xl font-bold text-purple-400 mb-1">;
                     {plan.price}
                   </div>
                   <div className="text-gray-400 mb-4">{plan.period}</div>
@@ -317,24 +317,31 @@ export default function AIFinancialTrading() {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Trading?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of traders who are already leveraging AI to maximize returns and minimize risks in volatile markets.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105">
-                Start Free Trial Today
-              </Link>
-              <Link to="/request-demo" className="px-8 py-3 border border-purple-500 text-purple-400 font-medium rounded-lg hover:bg-purple-500/10 transition-all duration-200">
-                Schedule Demo
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>);
-}
+        <div className="text-center">;
+          <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-8">;
+            <h2 className="text-3xl font-bold text-white mb-4">;
+              Ready to Transform Your Trading?;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
+              Join thousands of traders who are already leveraging AI to maximize returns and minimize risks in volatile markets.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <Link to="/contact" className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105">;
+                Start Free Trial Today;
+              </Link>;
+              <Link to="/request-demo" className="px-8 py-3 border border-purple-500 text-purple-400 font-medium rounded-lg hover:bg-purple-500/10 transition-all duration-200">;
+                Schedule Demo;
+              </Link>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+  )}
+
+
+export { AIFinancialTrading }
+export { AIFinancialTrading }
+export { AIFinancialTrading }
+export { AIFinancialTrading }
+export { AIFinancialTrading }

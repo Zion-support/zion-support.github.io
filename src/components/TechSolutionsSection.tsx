@@ -1,14 +1,6 @@
-import { Link } from 'react - router - dom';
-export /**;
-export default TechSolutionsSection;
-export default TechSolutionsSection;
-export default TechSolutionsSection;
-import {;
-import { motion } from 'framer - motion';
-;
-;
- * TechSolutionsSection function;
- * @param {*} params - Function parameters;
+import {  import { motion  } from 'framer-motion';
+
+ params - Function parameters;
  * @returns {*} Function return value;
  */;
 function TechSolutionsSection(...args: any[]): any {;
@@ -211,9 +203,9 @@ const techSolutions = [;
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
-;
-            <span className="text - 2xl">→</span>;
+    </section>;) }
+export default TechSolutionsSection;";
+            <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
       </div>;

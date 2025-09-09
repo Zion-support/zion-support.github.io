@@ -56,3 +56,38 @@ export default function Home () {
       <FloatingCTA       />
     </>) ;
 }
+  return();
+    <>;
+      <div>Broken JSX</div>
+      />;
+
+      <HeroSection />;
+      <QuickAccess />;
+      <AIServicesShowcase />;
+      <FeatureCTAs />;
+      <FeatureHighlights />;
+      <CategoriesSection />;
+      <BenefitsSection />;
+      <HowItWorksSection />;
+      <TechSolutionsSection />;
+      <CaseStudiesSection />;
+      <TeamExpertiseSection />;
+      <GlobalPresenceSection />;
+      <InnovationResearchSection />;
+      <ClientSuccessStoriesSection />;
+      <InteractiveTestimonials />;
+      <TechnologyStackSection />;
+      <SecurityComplianceSection />;
+      <PricingSection />;
+      <FeaturedListingsSection />;
+      <NewsletterSection />;
+      <ITServiceRequestHero />;
+      <FloatingCTA />;
+    </>)}
+
+
+export { Home }
+export { Home }
+export { Home }
+export { Home }
+export { Home }

@@ -159,21 +159,15 @@ const AdvancedServicePortfolioDashboard = () => {
             default: return 'bg-gray-100 text-gray-800';
         }
     };
-    const getTechnologyMaturityColor = (maturity) => {
-        switch (maturity) {
-            case 'Emerging': return 'bg-blue-100 text-blue-800';
-            case 'Growing': return 'bg-green-100 text-green-800';
-            case 'Mature': return 'bg-orange-100 text-orange-800';
-            case 'Leading': return 'bg-purple-100 text-purple-800';
-            default: return 'bg-gray-100 text-gray-800';
-        }
-    };
-    const categories = [
-        { id: 'all', name: 'All Categories', count: portfolioData.length },
-        { id: 'ai', name: 'AI & Machine Learning', count: portfolioData.filter(s => s.category === 'ai').length },
-        { id: 'quantum', name: 'Quantum Computing', count: portfolioData.filter(s => s.category === 'quantum').length },
-        { id: 'space-tech', name: 'Space Technology', count: portfolioData.filter(s => s.category === 'space-tech').length },
-        { id: 'biotech-ai', name: 'Biotech AI', count: portfolioData.filter(s => s.category === 'biotech-ai').length },
+    const getTechnologyMaturityColor = (maturity) => {};
+            default: return 'bg-gray-100 text-gray-800'}
+    }
+    const categories = [';
+        { id: 'all', name: 'All Categories', count: portfolioData.length },;
+        { id: 'ai', name: 'AI & Machine Learning', count: portfolioData.filter(s => s.category === 'ai').length },;
+        { id: 'quantum', name: 'Quantum Computing', count: portfolioData.filter(s => s.category === 'quantum').length },;
+        { id: 'space-tech', name: 'Space Technology', count: portfolioData.filter(s => s.category === 'space-tech').length },;
+        { id: 'biotech-ai', name: 'Biotech AI', count: portfolioData.filter(s => s.category === 'biotech-ai').length },;
         { id: 'green-tech', name: 'Green Technology', count: portfolioData.filter(s => s.category === 'green-tech').length }
     ];
     return (<div className="max-w-7xl mx-auto p-6">
@@ -521,27 +515,33 @@ const AdvancedServicePortfolioDashboard = () => {
       </motion.div>
 
       {/* CTA Section */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="text-center">
-        <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">
-          <h3 className="text-3xl font-bold mb-4">Ready to Expand Your Portfolio?</h3>
-          <p className="text-xl mb-6 max-w-2xl mx-auto">
-            Our comprehensive service portfolio offers cutting-edge solutions across all major technology sectors. 
-            Contact us to discuss how we can help you achieve your business goals.
-          </p>
-          <div className="flex flex - col sm:flex - row gap - 4 justify - center">
-            <Button className="bg - white text - zion - purple hover:bg - zion - slate - light" onClick = { () => window.open ('mailto:kleber@ziontechgroup.com?subject = Portfolio Expansion Consultation',
-  '_blank') }>
-              <Users className="w - 5 h - 5 mr - 2"      />
-              Get Portfolio Consultation
-            </Button>
-            <Button variant="outline" className="border - white text - white hover:bg - white hover:text - zion - purple" onClick = { () => window.open ('tel:+13024640950',
-  '_blank') }>
-              <Zap className="w - 5 h - 5 mr - 2"      />
-              Call Now
-            </Button>
-          </div>
-        </div>
-      </motion.div>
-    </div>);
-};
-export default AdvancedServicePortfolioDashboard;
+      <div>Broken JSX</div>
+}} transition={{ delay: 0.5 }} className="text-center">";
+        <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">";
+          <h3 className="text-3xl font-bold mb-4">Ready to Expand Your Portfolio?</h3>";
+          <p className="text-xl mb-6 max-w-2xl mx-auto">;
+            Our comprehensive service portfolio offers cutting-edge solutions across all major technology sectors.Contact us to discuss how we can help you achieve your business goals.</p>";
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+            <div>Broken JSX</div>
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation',_blank');,
+}>";
+              <Users className="w-5 h-5 mr-2"/>;
+              Get Portfolio Consultation;
+            </Button>";
+            <div>Broken JSX</div>
+  () => window.open('tel:+13024640950',_blank');,
+}>";
+              <Zap className="w-5 h-5 mr-2"/>;
+              Call Now;
+            </Button>;
+          </div>;
+        </div>;
+      </motion.div>;
+    </div>)}
+export default AdvancedServicePortfolioDashboard}}}}}}
+
+export { AdvancedServicePortfolioDashboard }
+export { AdvancedServicePortfolioDashboard }
+export { AdvancedServicePortfolioDashboard }
+export { AdvancedServicePortfolioDashboard }
+export { AdvancedServicePortfolioDashboard }

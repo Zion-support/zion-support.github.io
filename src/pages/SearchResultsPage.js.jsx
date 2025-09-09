@@ -52,12 +52,19 @@ export default function SearchResultsPage() {
           <ul className="flex flex-wrap justify-center gap-2 mt-2">
             {suggestions.map((s) => (<li key={s.text} className="bg-zion-blue-light px-2 py-1 rounded">
                 {s.text}
-              </li>))}
-          </ul>
-        </div>) }
-      {allResults.length > 0 && (<div className="columns - 1 sm:columns - 2 lg:columns - 3 gap - 4 space - y-4">
-          {allResults.map ( (r) => (<SearchResultCard key={`${r.type}-${r.id}`} result={r}      />) ) }
-        </div>) }
-      <div ref={loader} className="h - 1"      />
-      {isFetchingNextPage && <p className="text - center mt - 4">Loading more...</p>}
-    </main>) }
+              </li>) ) }
+          </ul>";
+        </div>)}""`;
+      {};
+          {allResults.map((r) => (<SearchResultCard key={`${r.type}-${r.id}`} result={r}/>))}";
+        </div>)}"";
+      <div ref={loader} className="h-1"/>"";
+      {isFetchingNextPage && <p className="text-center mt-4">Loading more...</p>}
+    </main>)}
+
+
+export { LIMIT, SearchResultsPage }
+export { LIMIT, SearchResultsPage }
+export { LIMIT, SearchResultsPage }
+export { LIMIT, SearchResultsPage }
+export { LIMIT, SearchResultsPage }

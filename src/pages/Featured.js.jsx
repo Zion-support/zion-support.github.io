@@ -16,9 +16,15 @@ export default function Featured() {
           </div>
           
           {/* Reuse the FeaturedListings component */}
-          <FeaturedListingsSection showTitle={false}       />
-        </div>
-      </div>
-      
-    </>);
-}
+          <FeaturedListingsSection showTitle={false} />;
+        </div>;
+      </div>;
+
+    </>)}
+
+
+export { Featured }
+export { Featured }
+export { Featured }
+export { Featured }
+export { Featured }

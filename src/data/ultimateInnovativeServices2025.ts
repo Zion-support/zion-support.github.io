@@ -29,13 +29,9 @@ contactInfo: {;
     uptime: string;
     security: string[]};
   competitors?: string[];
-  caseStudies?: string[]};
-;
-export const SERVICE_CATEGORIES = [;
-  'AI & Automation',;
-  'Quantum Computing',;
-  'Blockchain & Web3',;
-  'Cybersecurity',;
+  caseStudies?: string[]}
+
+export ;
   'IoT & Edge Computing',;
   'Metaverse & AR/VR',;
   'Robotics & Automation',;

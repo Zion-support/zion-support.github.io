@@ -180,11 +180,10 @@ const navigationItems: NavigationItem[] = [;
       { label: 'Developer Portal', href: '/developer' },;
       { label: 'Training', href: '/training' },;
       { label: 'Webinars', href: '/webinars' },;
-      { label: 'White Papers', href: '/white - papers' },;
-      { label: 'Sitemap', href: '/sitemap' };
-    ];
-  },;
-  { label: 'Contact', href: '/contact' };
+      { label: 'White Papers', href: '/white-papers' },;
+      { label: 'Sitemap', href: '/sitemap' }
+    ]},;
+  { label: 'Contact', href: '/contact' }
 ];
 ;
 className:  '',;
@@ -260,46 +259,25 @@ className:  '',;
               </span>;
             </Link>;
           </div>;
-;
-          {/* Desktop Navigation */};
-          <div role="button" className="hidden lg: anyflex items - center space - x-8">;
-            {navigationItems.map ( (item) => (<div role="button" key={item.label} className="relative group">;
-                {item.children ? (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleDropdown (item.label) };
-                    className="flex items - center space - x-1 px - 3 py - 2 text - sm font - medium text - gray - 700 dark:text - gray - 300 hover:text - blue - 600 dark:hover:text - blue - 400 transition - colors";
-                  >;
-                    <span>{item.label}</span>;
-                    <ChevronDown className="w - 4 h - 4"       />;
-                  </button>) : (<Link;
-                    to={item.href};
-                    className="px - 3 py - 2 text - sm font - medium text - gray - 700 dark:text - gray - 300 hover:text - blue - 600 dark:hover:text - blue - 400 transition - colors";
-                  >;
-                    {item.label};
-                  </Link>) };
-;
-                {/* Dropdown Menu */};
-                {item.children && (<AnimatePresence>;
-                    {activeDropdown === item.label && (<motion.div;
-                        initial = {;
-  { opacity: 0,;
-  y: -10 ;
-;
-}};
-                        animate = {;
-  { opacity: 1,;
-  y: 0 ;
-;
-}};
-                        exit = {;
-  { opacity: 0,;
-  y: -10 ;
-;
-}};
-                        transition={{ duration: 0.2 }};
-                        className="absolute top - full left - 0 mt - 2 w - 80 bg - slate - 800 / 95 backdrop - blur - md border border - slate - 700 / 50 rounded - xl shadow - 2xl py - 2 z - 50";
-                      >;
-                        <div role="button" className="px - 4 py - 2 border - b border - slate - 700 / 50">;
-                          <h3 className="text - sm font - semibold text - cyan - 400 flex items - center space - x-2">;
-                            {item.icon};
+
+          {/* Desktop Navigation */}";
+          <div className="hidden lg: unknownflex items-center space-x-8">;
+            {};
+              <div key={item.label} className="relative group">;
+                {};
+                    onClick={() => toggleDropdown(item.label)}";
+                    className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">;
+                    <span>{item.label}</span>";
+                    <ChevronDown className="w-4 h-4"  />                  </button>;
+                ) : (;
+                  <div>Broken JSX</div>
+                    className="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">;
+                    {item.label}
+                  </Link>) }
+
+                {/* Dropdown Menu */}
+                {};
+                            {item.icon}
                             <span>{item.label}</span>;
                           </h3>;
                         </div>;
@@ -412,21 +390,30 @@ className:  '',;
                                     >;
                                       <div role="button" className="w - 1.5 h - 1.5 bg - slate - 500 rounded - full"></div>;
                                       <span>{child.label}</span>;
-                                    </Link>) ) };
-                                </motion.div>) };
-                            </div>) : (<Link;
-                              to={item.href};
-                              className="block text - slate - 300 hover:text - white px - 3 py - 2 rounded - md text - base font - medium transition - colors duration - 200 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:ring - offset - 2 focus:ring - offset - slate - 900";
-                            >;
-                              {item.label};
-                            </Link>) };
-                        </div>) ) };
-;
-              {/* Mobile Actions */};
-              <div role="button" className="pt - 4 border - t border - slate - 700 / 50 space - y-3">;
-                <div role="button" className="flex items - center space - x-4 text - slate - 400">;
-                  <Phone className="w - 4 h - 4"       />;
-                  <span>+1 (555) 123 - 4567</span>;
+                                    </Link>;
+                                  ))}
+                                </motion.div>;
+                              )}
+                            </div>;
+                          ) : (;
+                            <div>Broken JSX</div>
+                              className="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900">;
+                              {item.label}
+                            </Link>) }
+                        </div>) ) }
+
+              {/* Mobile Actions */}";
+              <div className="pt-4 border-t border-slate-700/50 space-y-3">";
+                <div className="flex items-center space-x-4 text-slate-400">";
+                  <Phone className="w-4 h-4"  />;
+                  <span>+1(555) 123-4567</span>;
+                </div>";
+                <div className="flex items-center space-x-4 text-slate-400">";
+                  <Mail className="w-4 h-4"  />;
+                  <span>info@ziontechgroup.com</span>;
+                </div>";
+                <div className="flex items-center space-x-4 text-slate-400">";
+                  <MapPin className="w-4 h-4"  />                  <span>123 Tech Street, Digital City</span>;
                 </div>;
                 <div role="button" className="flex items - center space - x-4 text - slate - 400">;
                   <Mail className="w - 4 h - 4"       />;
@@ -447,5 +434,7 @@ className:  '',;
             </div>;
           </motion.div>) };
       </AnimatePresence>;
-    </nav>) ;
-};
+    </nav>;
+  )};'"`;
+
+;,"});})";

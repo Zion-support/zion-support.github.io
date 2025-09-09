@@ -90,10 +90,9 @@ const testimonials: Testimonial[] = [;
   };
     company: "Healthcare Innovations",;
     content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
-    rating: 5,;
-    industry: "Healthcare",;
-    project: "Cloud Migration & Optimization";
-  };
+    rating: 5,;";
+    industry: "Healthcare",;";
+    project: "Cloud Migration & Optimization"}
 ];
 ;
 const stats = [;
@@ -119,22 +118,17 @@ const stats = [;
   };
 ;
   // Auto - play functionality;
-  React.useEffect ( () => {;
-    if (!isAutoPlaying) return;
-;
-    const interval = setInterval ( () => {;
-      nextTestimonial () ;
-    }, 5000) ;
-;
-    return () => clearInterval (interval) ;
-  }, [isAutoPlaying, currentTestimonial]) ;
-;
-  const current = testimonials[currentTestimonial];
-;
-  return (<section className = "py - 20 bg - zion - blue - dark">;
-      <div role="button" className="container mx - auto px - 4">;
-        <div role="button" className="text - center mb - 16">;
-          <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
+  React.useEffect(() => {};
+};,
+}, []);, []);
+    if(!isAutoPlaying) return}, 5000) ;
+
+    return () => clearInterval(interval) }, [isAutoPlaying, currentTestimonial]) ;
+
+  return (";
+    <section className="py-20 bg-zion-blue-dark">";
+      <div className="container mx-auto px-4">";
+        <div className="text-center mb-16">"          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
             What Our Users Say;
           </h2>;
           <p className="text - zion - slate - light text - lg max - w-2xl mx - auto">;
@@ -255,23 +249,21 @@ const stats = [;
                     <p className="text - sm text - gray - 400">{current.industry} Industry</p>;
                   </div>;
                 </div>;
-;
-                {/* Results and Verification */};
-                <div role="button" className="lg:w - 80 space - y-6">;
-                  {/* Verification Badge */};
-                  {current.verified && (<div role="button" className="flex items - center gap - 2 bg - green - 500 / 20 border border - green - 500 / 30 rounded - lg p - 3">;
-                      <CheckCircle className="w - 5 h - 5 text - green - 400"       />;
-                      <span className="text - green - 400 text - sm font - medium">Verified Customer</span>;
-                    </div>) };
-;
-                  {/* Results */};
-                  <div role="button" className="bg - white / 5 border border - white / 10 rounded - lg p - 4">;
-                    <h5 className="text - white font - semibold mb - 3">Key Results</h5>;
-                    <ul className="space - y-2">;
-                      {current.results.map ( (result, index) => (<li key={index} className="flex items - center gap - 2 text - sm text - gray - 300">;
-                          <CheckCircle className="w - 4 h - 4 text - cyan - 400 flex - shrink - 0"       />;
-                          {result};
-                        </li>) ) };
+
+                {/* Results and Verification */}";
+                <div className="lg:w-80 space-y-6">;
+                  {/* Verification Badge */}
+                  {};
+                  )}
+
+                  {/* Results */}";
+                  <div className="bg-white/5 border border-white/10 rounded-lg p-4">";
+                    <h5 className="text-white font-semibold mb-3">Key Results</h5>";
+                    <ul className="space-y-2">;
+                      {};
+                        <li key={index} className="flex items-center gap-2 text-sm text-gray-300">";
+                          <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0"  />                          {result}
+                        </li>) ) }
                     </ul>;
                   </div>;
 ;
@@ -351,5 +343,5 @@ const stats = [;
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-};
+    </section>;) }
+'"`;

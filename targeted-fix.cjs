@@ -1,9 +1,8 @@
-const fs = require('fs');
-const path = require('path');
-
+const fs = require("fs");
+const path = require("path");
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  let content = fs.readFileSync(filePath, "utf8");
     let originalContent = content;
     
     // Fix malformed function declarations;
@@ -19,21 +18,19 @@ function fixFile(filePath) {
     content = content.replace(/,\s*\(/g, '(');
     
     // Fix missing function declarations;
-    if (content.includes('import {') && !content.includes('export default function') && !content.includes('export function')) {
-      content = content.replace(/^\s*import\s+\{[^}]*\}\s+from\s+['"`][^'"`]*['"`];\s*$/gm, (match) => {
-        return match + "\nexport default function Page() {"})}
-    
+    if (content.includes("import {") && !content.includes("export default function") && !content.includes("export function")) {
+  content = content.replace(/^\s*import\s+\{[^}]*\}\s+from\s+[""`][^""`]*[""`];\s*$/gm, (match) => {
+  return match + "\nexport default function Page() {";});}
     // Fix missing closing braces;
-    if (content.includes('export default function') && !content.includes('}')) {
-      content += '\n}'}
-    
+    if (content.includes("export default function") && !content.includes("}")) {
+  content += "\n}";}
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, `utf8`);
+  fs.writeFileSync(filePath, content, `utf8`);
       console.log(`Fixed: ${filePath}`);
-      return true}
-    return false} catch (error) { 
-    console.error(`Error processing ${filePath }:`, error.message);
-    return false}
+      return true;}
+    return false;} catch (error) {
+  console.error(`Error processing ${filePath }:`, error.message);
+    return false;}
 }
 
 // Fix specific problematic files;
@@ -55,11 +52,10 @@ const problematicFiles = [
 
 console.log('Starting targeted syntax fixes...');
 let fixedCount = 0;
-
 problematicFiles.forEach(filePath => {
   if (fs.existsSync(filePath)) {
-    if (fixFile(filePath)) {
-      fixedCount++}
+  if (fixFile(filePath)) {
+  fixedCount++;}
   }
 });
 

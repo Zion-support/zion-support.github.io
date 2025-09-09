@@ -186,137 +186,135 @@ const DigitalTransformation = () => {
                       >
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {feature}
-                      </li>))}
-                  </ul>
-                </div>
-              </motion.div>))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Benefits of Digital Transformation
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Unlock new opportunities and competitive advantages
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  className="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                        />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Increased Efficiency</h3>
-              <p className="text-gray-300">Streamlined processes and automated workflows</p>
-            </motion.div>
-            
-            <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} viewport={{ once: true }}>
-              <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  className="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                        />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Better Customer Experience</h3>
-              <p className="text-gray-300">Enhanced engagement and satisfaction</p>
-            </motion.div>
-            
-            <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} viewport={{ once: true }}>
-              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  className="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                        />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Data-Driven Insights</h3>
-              <p className="text-gray-300">Informed decision making and strategy</p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Transformation Approach
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              A proven methodology for successful digital transformation
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {transformationApproach.map((((((((step, index, index, index, index, index, index, index) => ({ ...((((((step, index, index, index, index, index, index, key: index })) => ({ ...(((((step, index, index, index, index, index, key: index })) => ({ ...((((step, index, index, index, index, key: index })) => ({ ...(((step, index, index, index, key: index })) => ({ ...((step, index, index, key: index })) => ({ ...(step, index, key: index })) => (
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
-                  {step.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{step.step}</h3>
-                <p className="text-gray-300">{step.description}</p>
-              </motion.div>))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how digital transformation can drive your business forward
-          </p>
-          <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-            Start Your Transformation
-            <ArrowRight className="w-5 h-5 ml-2"       />
-          </Link>
-        </div>
-      </section>
-    </div>);
-};
+                      </li>;
+                    ))}
+                  </ul>;
+                </div>;
+              </motion.div>;
+            ))}
+          </div>;
+        </div>;
+      </section>;
+";
+      {/* Benefits Section */}"";
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">"";
+        <div className="max-w-7xl mx-auto">"";
+          <div className="text-center mb-16">"";
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
+              Benefits of Digital Transformation";
+            </h2>"";
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">;
+              Unlock new opportunities and competitive advantages;
+            </p>;
+          </div>";
+"";
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
+            <div>Broken JSX</div>
+              viewport={{ once: true }}">"";
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">";
+                <div>Broken JSX</div>
+                  viewBox="0 0 24 24">";
+                  <div>Broken JSX</div>
+                  />;
+                </svg>";
+              </div>"";
+              <h3 className="text-xl font-semibold text-white mb-3">;
+                Increased Efficiency";
+              </h3>"";
+              <p className="text-gray-300">;
+                Streamlined processes and automated workflows;
+              </p>;
+            </motion.div>;
+";
+            <div>Broken JSX</div>
+              viewport={{ once: true }}">"";
+              <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">";
+                <div>Broken JSX</div>
+                  viewBox="0 0 24 24">";
+                  <div>Broken JSX</div>
+                  />;
+                </svg>";
+              </div>"";
+              <h3 className="text-xl font-semibold text-white mb-3">;
+                Better Customer Experience";
+              </h3>"";
+              <p className="text-gray-300">;
+                Enhanced engagement and satisfaction;
+              </p>;
+            </motion.div>;
+";
+            <div>Broken JSX</div>
+              viewport={{ once: true }}">"";
+              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">";
+                <div>Broken JSX</div>
+                  viewBox="0 0 24 24">";
+                  <div>Broken JSX</div>
+                  />;
+                </svg>";
+              </div>"";
+              <h3 className="text-xl font-semibold text-white mb-3">;
+                Data-Driven Insights";
+              </h3>"";
+              <p className="text-gray-300">;
+                Informed decision making and strategy;
+              </p>;
+            </motion.div>;
+          </div>;
+        </div>;
+      </section>;
+";
+      {/* Process Section */}"";
+      <section className="py-20 px-4 sm:px-6 lg:px-8">"";
+        <div className="max-w-7xl mx-auto">"";
+          <div className="text-center mb-16">"";
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
+              Our Transformation Approach";
+            </h2>"";
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">;
+              A proven methodology for successful digital transformation;
+            </p>;
+          </div>";
+"";
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+            {};
+                viewport={{ once: true }}">"";
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">;
+                  {step.icon}";
+                </div>"";
+                <h3 className="text-xl font-semibold text-white mb-3">;
+                  {step.step}";
+                </h3>"";
+                <p className="text-gray-300">{step.description}</p>;
+              </motion.div>;
+            ))}
+          </div>;
+        </div>;
+      </section>;
+";
+      {/* CTA Section */}"";
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"";
+        <div className="max-w-4xl mx-auto text-center">"";
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
+            Ready to Transform Your Business?";
+          </h2>"";
+          <p className="text-xl text-gray-300 mb-8">';
+            Let's discuss how digital transformation can drive your business;
+            forward;
+          </p>";
+          <div>Broken JSX</div>
+            className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">";
+            Start Your Transformation"";
+            <ArrowRight className="w-5 h-5 ml-2" />;
+          </Link>;
+        </div>;
+      </section>;
+    </div>;
+  )}
 export default DigitalTransformation;
+
+
+export { DigitalTransformation }
+export { DigitalTransformation }
+export { DigitalTransformation }
+export { DigitalTransformation }
+export { DigitalTransformation }

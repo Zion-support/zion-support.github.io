@@ -15,32 +15,26 @@ export default function TenantOnboarding() {
     const { user } = useAuth();
     const [activeTab, setActiveTab] = useState("company");
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [formData, setFormData] = useState({
-        brand_name: "",
-        subdomain: "",
-        logo_url: "",
-        primary_color: "#9b87f5",
-        theme_preset: "light",
-        company_size: "",
-        industry: "",
-        custom_domain: "",
-        is_co_branded: true
-    });
-    // Check if user has admin role
+    const [formData, setFormData] = useState({}
+";
+"";
+        brand_name: ","";
+        subdomain: ","";
+        logo_url: ","";
+        primary_color: "#9b87f5","";
+        theme_preset: "light","";
+        comp_size: ","";
+        industry: ","";
+        custom_domain: ",;
+        is_co_branded: true});";
+    // Check if user has admin role"";
     const isAdmin = user?.role === "admin";
     if (!isAdmin) {
         return <Navigate to="/unauthorized"      />}
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
-    };
-    const handleSelectChange = (name, value) => {
-        setFormData(prev => ({ ...prev, [name]: value }));
-    };
-    const handleSwitchChange = (name, checked) => {
-        setFormData(prev => ({ ...prev, [name]: checked }));
-    };
-    const handleSubmit = async (e) => {
+        setFormData(prev => ({ ...prev, [name]: value }))}
+    const handleSubmit = async (e) => {}
         e.preventDefault();
         setIsSubmitting(true);
         try {

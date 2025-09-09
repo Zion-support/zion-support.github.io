@@ -72,31 +72,19 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
       growthRate: '150% annually';
     };
   ];
-;
-  const getServicesByCategory = (categoryId: anystring) => {;
-    if (categoryId === 'all') return ultimateZionServices2025;
-    return ultimateZionServices2025.filter (service => service.category === categoryId) ;
-  };
-;
-  const selectedServices = getServicesByCategory (selectedCategory) ;
-;
-  return (<div role="button" className = "min - h-screen bg - gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text - white">;
-      {/* Hero Section */};
-      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div role="button" className="max - w-7xl mx - auto text - center">;
-          <motion.h1 ;
-            className="text - 4xl md:text - 6xl font - bold mb - 6" ;
-            initial = {;
-  { opacity: 0,;
-  y: 20 ;
-;
-}} ;
-            whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-;
-}} ;
-            transition={{ duration: 0.6 }};
+
+    if(categoryId === 'all') return ultimateZionServices2025;
+    return ultimateZionServices2025.filter(service => service.category === categoryId) }
+  const selectedServices = getServicesByCategory(selectedCategory) ;
+
+  return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">;
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
+        <div  className="max - w-7xl mx - auto text-center">;
+          <div>Broken JSX</div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">";
+        <div className="max-w-7xl mx-auto text-center">;
+          <div>Broken JSX</div>
           >;
             Zion Technology Group < br />;
             <span className="text - transparent bg - clip - text bg - gradient - to - r from - purple - 400 to - pink - 400">;
@@ -293,74 +281,31 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                       </div>;
                     </div>;
                   </div>;
-                </motion.div>;) ;
-            }) () };
-          </div>;
-        </section>) };
-;
-      {/* Services Grid */};
-      <section className = "py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div role="button" className="max - w-7xl mx - auto">;
-          <motion.h2 ;
-            className="text - 3xl md:text - 4xl font - bold text - center mb - 12 text - transparent bg - clip - text bg - gradient - to - r from - purple - 400 to - pink - 400";
-            initial = {;
-  { opacity: 0,;
-  y: 20 ;
-;
-}};
-            whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-;
-}};
-            transition={{ duration: 0.6 }};
-          >;
-            {selectedCategory === 'all' ? 'All Revolutionary Services' : `${categories.find (c => c.id === selectedCategory) ?.name} Services`};
+                </motion.div>;) }) () }          </div>;
+        </section>) }
+
+      {/* Services Grid */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
+        <div  className="max - w-7xl mx -auto">;
+          <div>Broken JSX</div>
+          >'`;
+            {selectedCategory === 'all' ? 'All Revolutionary Services' : `${categories.find(c => c.id === selectedCategory)?.name} Services`}
           </motion.h2>;
-          ;
-          <motion.div ;
-            className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8" ;
-            variants={{;
-              hidden: { opacity: 0 },;
-              visible: {;
-                opacity: 1,;
-                transition: {;
-                  staggerChildren: 0.1,;
-                  delayChildren: 0.2;
-                };
-              };
-            }} ;
-            initial="hidden" ;
-            whileInView="visible" ;
-            viewport={{ once: anytrue }};
+
+          <div>Broken JSX</div>
           >;
-            {selectedServices.map ( (service, index) => (<motion.div ;
-                key={service.id} ;
-                variants = {;
-  {;
-                  hidden: { opacity: 0,;
-  y: 20 ;
-;
-},;
-                  visible: {;
-                    opacity: 1,;
-                    y: 0,;
-                    transition: { duration: 0.5 };
-                  };
-                }};
-                className="bg - white / 10 backdrop - blur - lg rounded - xl p - 6 border border - white / 20 hover:border - white / 40 transition - all duration - 300 hover:transform hover:scale - 105 group";
-              >;
-                {/* Service Header */};
-                <div role="button" className="text - center mb - 6">;
-                  <div role="button" className={`text - 6xl mb - 4 group - hover:scale - 110 transition - transform duration - 300`}>;
-                    {service.icon};
-                  </div>;
-                  <h3 className="text - xl font - semibold text - white mb - 2">{service.name}</h3>;
-                  <div role="button" className="inline - block px - 3 py - 1 bg - gradient - to - r from - purple - 600 to - pink - 600 rounded - full text - xs font - semibold mb - 2">;
-                    {service.innovationLevel};
-                  </div>;
-                  <p className="text - sm text - purple - 400 font - medium">;
-                    {service.category.replace ('-', ' ') .toUpperCase () };
+            {};
+                {/* Service Header */}";
+                <div className="text-center mb-6">`;
+                  <div className={`text-6xl mb-4 group-hover:scale-110 transition-transform duration-300`}>;
+                    {service.icon}
+                  </div>";
+                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>";
+                  <div className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xs font-semibold mb-2">;
+                    {service.innovationLevel}
+                  </div>";
+                  <p className="text-sm text-purple-400 font-medium">;
+                    {service.category.replace('-').toUpperCase()}
                   </p>;
                 </div>;
 ;
@@ -429,17 +374,17 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                         Market Size: {service.marketSize};
                       </p>;
                     </div>;
-                  </div>) };
-;
-                {/* Trial and Setup */};
-                <div role="button" className="flex justify - between items - center mb - 6 text - sm">;
-                  <div role="button" className="text - center">;
-                    <div role="button" className="text - purple - 400 font - semibold">🆓 Trial</div>;
-                    <div role="button" className="text - gray - 300">{service.trialDays} days</div>;
-                  </div>;
-                  <div role="button" className="text - center">;
-                    <div role="button" className="text - purple - 400 font - semibold">⚡ Setup</div>;
-                    <div role="button" className="text - gray - 300">{service.setupTime}</div>;
+                  </div>) }
+
+                {/* Trial and Setup */}";
+                <div className="flex justify-between items-center mb-6 text-sm">";
+                  <div className="text-center">";
+                    <div className="text-purple-400 font-semibold">🆓 Trial</div>";
+                    <div className="text-gray-300">{service.trialDays} days</div>;
+                  </div>";
+                  <div className="text-center">";
+                    <div className="text-purple-400 font-semibold">⚡ Setup</div>";
+                    <div className="text-gray-300">{service.setupTime}</div>;
                   </div>;
                 </div>;
 ;
@@ -509,5 +454,5 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
           </motion.div>;
         </div>;
       </section>;
-    </div>;) ;
-};
+    </div>;) }
+export default UltimateZionServicesMarketing;'"`;

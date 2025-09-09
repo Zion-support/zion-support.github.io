@@ -371,25 +371,31 @@ const AIMarketingAutomation = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Automate Your Marketing?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let our AI marketing experts help you implement intelligent automation that will 
-            transform your marketing performance and drive sustainable growth.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/contact" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300">
-              Schedule Consultation
-            </Link>
-            <Link to="/case-studies" className="border border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300">
-              View Case Studies
-            </Link>
-          </div>
-        </motion.div>
-      </div>
-    </div>);
-};
-export default AIMarketingAutomation;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
+        <div>Broken JSX</div>
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">;
+          <h2 className="text-4xl font-bold text-white mb-6">;
+            Ready to Automate Your Marketing?;
+          </h2>;
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
+            Let our AI marketing experts help you implement intelligent automation that will;
+            transform your marketing performance and drive sustainable growth.;
+          </p>;
+          <div className="flex flex-wrap justify-center gap-4">;
+            <Link to="/contact" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300">;
+              Schedule Consultation;
+            </Link>;
+            <Link to="/case-studies" className="border border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300">;
+              View Case Studies;
+            </Link>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </div>)}
+export default AIMarketingAutomation}}}}}}}}}
+
+export { AIMarketingAutomation }
+export { AIMarketingAutomation }
+export { AIMarketingAutomation }
+export { AIMarketingAutomation }
+export { AIMarketingAutomation }

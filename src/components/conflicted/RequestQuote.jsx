@@ -429,42 +429,48 @@ export default function RequestQuote() {
               </motion.div>
 
               {/* Process */}
-              <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.4 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-white mb-4">Our Process</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">1</div>
-                    <div>
-                      <div className="text-white font-medium">Quote Request</div>
-                      <div className="text-white/60 text-sm">Submit your requirements</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-purple-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">2</div>
-                    <div>
-                      <div className="text-white font-medium">Analysis</div>
-                      <div className="text-white/60 text-sm">We review your needs</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">3</div>
-                    <div>
-                      <div className="text-white font-medium">Detailed Quote</div>
-                      <div className="text-white/60 text-sm">Get comprehensive estimate</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">4</div>
-                    <div>
-                      <div className="text-white font-medium">Project Start</div>
-                      <div className="text-white/60 text-sm">Begin development</div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>);
-}
+              <div>Broken JSX</div>
+}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">;
+                <h3 className="text-xl font-bold text-white mb-4">Our Process</h3>;
+                <div className="space-y-4">;
+                  <div className="flex items-start">                    <div className="w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">1</div>;
+                    <div>";
+                      <div className="text-white font-medium">Quote Request</div>";
+                      <div className="text-white/60 text-sm">Submit your requirements</div>;
+                    </div>;
+                  </div>";
+                  <div className="flex items-start">";
+                    <div className="w-6 h-6 bg-purple-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">2</div>;
+                    <div>";
+                      <div className="text-white font-medium">Analysis</div>";
+                      <div className="text-white/60 text-sm">We review your needs</div>;
+                    </div>;
+                  </div>";
+                  <div className="flex items-start">";
+                    <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">3</div>;
+                    <div>";
+                      <div className="text-white font-medium">Detailed Quote</div>";
+                      <div className="text-white/60 text-sm">Get comprehensive estimate</div>;
+                    </div>;
+                  </div>";
+                  <div className="flex items-start">";
+                    <div className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">4</div>;
+                    <div>";
+                      <div className="text-white font-medium">Project Start</div>";
+                      <div className="text-white/60 text-sm">Begin development</div>;
+                    </div>;
+                  </div>;
+                </div>;
+              </motion.div>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>)}
+
+
+export { RequestQuote }
+export { RequestQuote }
+export { RequestQuote }
+export { RequestQuote }
+export { RequestQuote }

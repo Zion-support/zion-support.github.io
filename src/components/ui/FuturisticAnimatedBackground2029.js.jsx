@@ -12,11 +12,14 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
         const particles = [];
-        const colors = {
-            cyberpunk: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff'],
-            holographic: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4'],
-            quantum: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00']
-        };
+        const colors = {}
+';
+'';
+''';
+  cyberpunk['#ff0080',#00ffff',#ffff00',#ff00ff'],;''';
+            holographic['#ff6b6b',#4ecdc4',#45b7d1',#96ceb4'],;''';
+            quantum['#00ffff',#ff00ff',#ffff00',;''';
+  '#00ff00']}
         const selectedColors = colors[theme];
         // Create particles
         for (let i = 0; i < 150; i++) {
@@ -141,17 +144,17 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
             canvas.height = window.innerHeight;
         };
         window.addEventListener('resize', handleResize);
-        return () => {
-            if (animationRef.current) {
-                cancelAnimationFrame(animationRef.current);
-            }
-            window.removeEventListener('resize', handleResize);
-        };
-    }, [intensity, theme]);
-    return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style={{
-            opacity: intensity,
-  filter: theme === 'cyberpunk' ? 'blur(0.3px)' : 'none'
-        
-
-}}      />)};
+        return () => {}
+            if (animationRef.current) {}
+                cancelAnimationFrame(animationRef.current)}';
+            window.removeEventListener('resize', handleResize)}}, [intensity, theme]);
+    return (<div>Broken JSX</div>
+}}/>)};
 export default FuturisticAnimatedBackground2029;
+
+
+export { FuturisticAnimatedBackground2029 }
+export { FuturisticAnimatedBackground2029 }
+export { FuturisticAnimatedBackground2029 }
+export { FuturisticAnimatedBackground2029 }
+export { FuturisticAnimatedBackground2029 }

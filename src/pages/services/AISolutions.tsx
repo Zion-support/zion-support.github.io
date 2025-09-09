@@ -140,83 +140,33 @@ export function AISolutions(...args: any[]): any {;
       ],;
     },;
   ];
-;
-  const useCases = [;
-    {;
-      industry: 'Healthcare',;
-      icon: Heart,;
-      applications: [;
-        'Diagnostic assistance',;
-        'Patient monitoring',;
-        'Drug discovery',;
-      ],;
-      color: 'from-red-500 to-pink-600',;
-    },;
-    {;
-      industry: 'Finance',;
-      icon: DollarSign,;
-      applications: [;
-        'Fraud detection',;
-        'Risk assessment',;
-        'Trading algorithms',;
-      ],;
-      color: 'from-green-500 to-emerald-600',;
-    },;
-    {;
-      industry: 'Manufacturing',;
-      icon: Building,;
-      applications: [;
-        'Predictive maintenance',;
-        'Quality control',;
-        'Supply chain optimization',;
-      ],;
-      color: 'from-blue-500 to-cyan-600',;
-    },;
-    {;
-      industry: 'Retail',;
-      icon: ShoppingCart,;
-      applications: [;
-        'Customer segmentation',;
-        'Inventory management',;
-        'Personalized recommendations',;
-      ],;
-      color: 'from-purple-500 to-indigo-600',;
-    },;
+
+  const industries = [;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+}
   ];
-;
-  const technologies = [;
-    {;
-      name: 'TensorFlow',;
-      description: 'Open-source machine learning framework',;
-      icon: Brain,;
-    },;
-    {;
-      name: 'PyTorch',;
-      description: 'Deep learning platform with dynamic computation',;
-      icon: Brain,;
-    },;
-    {;
-      name: 'Scikit-learn',;
-      description: 'Machine learning library for Python',;
-      icon: Code,;
-    },;
-    {;
-      name: 'OpenAI GPT',;
-      description: 'Advanced language model for text generation',;
-      icon: FileText,;
-    },;
-    {;
-      name: 'Computer Vision APIs',;
-      description: 'Pre-trained models for image analysis',;
-      icon: Eye,;
-    },;
-    {;
-      name: 'Natural Language APIs',;
-      description: 'Text processing and understanding',;
-      icon: Users,;
-    },;
+
+  const benefits = [;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+}
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gray-900 text-white">;
       {/* Hero Section */};
@@ -277,37 +227,74 @@ export function AISolutions(...args: any[]): any {;
           </motion.div>;
 ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (;
-              <motion.div;
-                key={feature.title};
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }};
-                transition={{ duration: 0.5, delay: index * 0.1 }};
-                viewport={{ once: true }};
-                className="bg-gray-700/50 rounded-lg p-6 border border-gray-600 hover:border-cyan-500/50 transition-colors";
-              >;
-                <div className="flex items-center gap-3 mb-4">;
-                  <div className="p-2 bg-cyan-500/20 rounded-lg">;
-                    <feature.icon className="w-6 h-6 text-cyan-400"       />;
+            {};
+                    {solution.title}
+                  </h3>;
+                  <p className="text-gray-600 mb-4">;
+                    {solution.description}
+                  </p>;
+                  <ul className="space-y-2">;
+                    {};
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">;
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
+                        {feature}
+                      </li>;
+                    ))}
+                  </ul>;
+                </div>;
+              )})}
+          </div>;
+        </div>;
+      </section>;
+
+      {/* Industries Section */}
+      <section className="py-20 bg-white">;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+          <div className="text-center mb-16">;
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
+              AI Solutions Across Industries;
+            </h2>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              Our AI solutions are designed to address the unique challenges and opportunities in various industry sectors.;
+            </p>;
+          </div>;
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {};
+                    {industry.name}
+                  </h3>;
+                  <p className="text-gray-600">;
+                    {industry.description}
+                  </p>;
+                </div>;
+              )})}
+          </div>;
+        </div>;
+      </section>;
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-gray-50">;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+          <div className="text-center mb-16">;
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
+              Why Choose Our AI Solutions?;
+            </h2>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              Experience the transformative power of AI with our comprehensive solutions and expert support.;
+            </p>;
+          </div>;
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+            {};
+                <div key={index} className="text-center">;
+                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">;
+                    <Icon className="w-8 h-8 text-purple-600" />;
                   </div>;
                   <h3 className="text-xl font-semibold text-white">;
                     {feature.title};
                   </h3>;
                 </div>;
-                <p className="text-gray-300 mb-4">{feature.description}</p>;
-                <ul className="space-y-2">;
-                  {feature.benefits.map((((((((benefit, idx, index, index, index, index, index, index) => ({ ...((((((benefit, idx, index, index, index, index, index, key: index })) => ({ ...(((((benefit, idx, index, index, index, index, key: index })) => ({ ...((((benefit, idx, index, index, index, key: index })) => ({ ...(((benefit, idx, index, index, key: index })) => ({ ...((benefit, idx, index, key: index })) => ({ ...(benefit, idx, key: index })) => (;
-                    <li;
-                      key={idx};
-                      className="flex items-center gap-2 text-sm text-gray-400";
-                    >;
-                      <CheckCircle className="w-4 h-4 text-cyan-400"       />;
-                      {benefit};
-                    </li>;
-                  ))};
-                </ul>;
-              </motion.div>;
-            ))};
+              )})}
           </div>;
         </div>;
       </section>;
@@ -445,7 +432,5 @@ export function AISolutions(...args: any[]): any {;
         </div>;
       </section>;
     </div>;
-  );
-};
-;
+  )}
 export default AISolutions;

@@ -232,7 +232,5 @@ interface Testimonial {;
         </motion.div>;
       </div>;
     </section>;
-  );
-};
-;
-export default Testimonials;}}}
+  )}
+export default Testimonials}}}'"`;

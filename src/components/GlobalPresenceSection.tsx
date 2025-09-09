@@ -1,13 +1,6 @@
-export /**;
-export default GlobalPresenceSection;
-export default GlobalPresenceSection;
-export default GlobalPresenceSection;
-import {;
-import { motion } from 'framer - motion';
-;
-;
- * GlobalPresenceSection function;
- * @param {*} params - Function parameters;
+import {  import { motion  } from 'framer-motion';
+
+ params - Function parameters;
  * @returns {*} Function return value;
  */;
 function GlobalPresenceSection(...args: any[]): any {;
@@ -262,9 +255,9 @@ const globalStats = [;
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
-;
-            <span className="text - 2xl">→</span>;
+    </section>;) }
+export default GlobalPresenceSection;";
+            <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
       </div>;

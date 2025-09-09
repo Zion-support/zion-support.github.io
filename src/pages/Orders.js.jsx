@@ -68,5 +68,11 @@ export default function OrdersPage() {
               </TableRow>))}
           </TableBody>
         </Table>)}
-    </div>);
-}
+    </div>)}
+
+
+export { OrdersPage }
+export { OrdersPage }
+export { OrdersPage }
+export { OrdersPage }
+export { OrdersPage }

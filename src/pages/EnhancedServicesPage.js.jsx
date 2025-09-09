@@ -1,155 +1,149 @@
 import React, { useState } from 'react';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { SEO } from '@/components / SEO';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-export default function EnhancedServicesPage () {
-import {
-import {
-import {
-import {
-
-
-  ENHANCED_SERVICES,
-  ENHANCED_SERVICE_CATEGORIES,
-  SERVICE_PRICING_TIERS,
-  CONTACT_INFO,
-} from '@/data / enhancedServices';
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components / ui / select';
-  Search,
-  Star,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  TrendingUp,
-  Shield,
-  Cloud,
-  Brain,
-  Database,
-  Code,
-  Zap,
-  Heart,
-  DollarSign,
-  Link,
-  Users,
-  CheckCircle,
-} from 'lucide - react';
-  const [searchTerm, setSearchTerm] = useState ('') ;
-  const [selectedCategory, setSelectedCategory] = useState ('all') ;
-  const [selectedPriceRange, setSelectedPriceRange] = useState ('all') ;
-  const filteredServices = ENHANCED_SERVICES.filter (service => {
-    const matchesPrice = selectedPriceRange === 'all' || (selectedPriceRange === 'basic' && service.price <= 2000) || (selectedPriceRange === 'professional' &&
-        service.price > 2000 &&
-        service.price <= 8000) || (selectedPriceRange === 'enterprise' && service.price > 8000) ;
-    return matchesSearch && matchesCategory && matchesPrice;
-  }) ;
-  const getCategoryIcon = category => {
-    switch (category.toLowerCase () ) {
-      case 'ai automation':
-      case 'ai & machine learning':
-        return < Brain className="w - 5 h - 5" />;
-      case 'cloud management':
-      case 'cloud & infrastructure':
-        return < Cloud className="w - 5 h - 5" />;
-      case 'cybersecurity':
-      case 'security framework':
-        return < Shield className="w - 5 h - 5" />;
-      case 'data engineering':
-      case 'data & analytics':
-        return < Database className="w - 5 h - 5" />;
-      case 'business intelligence':
-        return < TrendingUp className="w - 5 h - 5" />;
-      case 'developer tools':
-      case 'development & devops':
-        return < Code className="w - 5 h - 5" />;
-      case 'digital transformation':
-        return < Zap className="w - 5 h - 5" />;
-      case 'healthcare technology':
-        return < Heart className="w - 5 h - 5" />;
-      case 'financial technology':
-        return < DollarSign className="w - 5 h - 5" />;
-      case 'blockchain':
-        return < Link className="w - 5 h - 5" />;
-      case 'quantum computing':
-        return < Zap className="w - 5 h - 5" />;
-      default:
-        return < Code className="w - 5 h - 5" />;
-    }
-  };
-  const getPriceRange = price => {
-    if (price <= 2000) return 'basic';
-    if (price <= 8000) return 'professional';
-    return 'enterprise';
-  };
-  return (<div className="min - h-screen bg - background">
-      <SEO
-        title="Enhanced IT & AI Services - Zion Tech Group"
-        description="Discover our comprehensive suite of AI services, IT solutions, and micro SAAS offerings. From AI automation to quantum computing readiness."
-        keywords="AI services, IT solutions, micro SAAS, cybersecurity, cloud computing, data analytics, Zion Tech Group"
-        canonical="https://ziontechgroup.com / enhanced - services"
-            />
-
-      {/* Hero Section */}
-      <div className="bg - gradient - to - r from - zion - blue to - zion - purple text - white py - 20">
-        <div className="container mx - auto px - 4 text - center">
-          <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">
-            Enhanced IT & AI Services
-          </h1>
-          <p className="text - xl md:text - 2xl text - zion - slate - light mb - 8 max - w-4xl mx - auto">
-            Comprehensive micro SAAS solutions, IT services, and AI - powered
-            innovations to transform your business
-          </p>
-          <div className="flex flex - wrap justify - center gap - 4">
-            <Button
-              size="lg"
-              className="bg - zion - cyan text - zion - blue - dark hover:bg - zion - cyan - light"
-              onClick={ () =>
-                document
-                  .getElementById ('services - grid') ?.scrollIntoView ({ behavior: 'smooth' }) }
-            >
-              Explore Services
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10"
-              onClick={ () =>
-                document
-                  .getElementById ('contact - section') ?.scrollIntoView ({ behavior: 'smooth' }) }
-            >
-              Get in Touch
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Pricing Tiers Overview */}
-      <section className="py - 16 bg - zion - blue - dark">
-        <div className="container mx - auto px - 4">
-          <h2 className="text - 3xl font - bold text - white text - center mb - 12">
-            Service Pricing Tiers
-          </h2>
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">
-            {Object.entries (SERVICE_PRICING_TIERS) .map ( ([tier, info]) => (<Card key={tier} className="bg - zion - blue border - zion - blue - light">
-                <CardHeader className="text - center">
-                  <CardTitle className="text - zion - cyan capitalize">
-                    {tier}
-                  </CardTitle>
-                  <CardDescription className="text - zion - slate - light">
+import {}
+  ENHANCED_SERVICES,;
+  ENHANCED_SERVICE_CATEGORIES,;
+  SERVICE_PRICING_TIERS,';
+  CONTACT_INFO} from '@/data/enhancedServices';';
+import { Button } from '@/components/ui/button';
+import {}
+  Card,;
+  CardContent,';
+  CardDescription,'';
+  CardHeader,''';
+  CardTitle} from '@/components/ui/card';''';
+import { Badge } from '@/components/ui/badge';''';
+import { Input } from '@/components/ui/input';
+import {}
+  Select,;
+  SelectContent,';
+  SelectItem,'';
+  SelectTrigger,''';
+  SelectValue} from '@/components/ui/select';''';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {}
+  Search,;
+  Star,;
+  Globe,;
+  Phone,;
+  Mail,;
+  MapPin,;
+  ExternalLink,;
+  TrendingUp,;
+  Shield,;
+  Cloud,;
+  Brain,;
+  Database,;
+  Code,;
+  Zap,;
+  Heart,;
+  DollarSign,';
+  Link,'';
+  Users,''';
+  CheckCircle} from 'lucide-react';''';
+import { SEO } from '@/components/SEO';
+export {};
+  return null;
+}
+';
+'';
+''';
+  const [searchTerm, setSearchTerm] = useState('');''';
+  const [selectedCategory, setSelectedCategory] = useState('all');''';
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const filteredServices = ENHANCED_SERVICES.filter(service => {}
+';
+'';
+''';
+    const matchesPrice ='''';
+      selectedPriceRange === 'all' ||'''';
+      (selectedPriceRange === 'basic' && service.price <div>Broken JSX</div>
+        service.price > 2000 &&''';
+        service.price <div>Broken JSX</div>
+      (selectedPriceRange === 'enterprise' && service.price > 8000);
+    return matchesSearch && matchesCategory && matchesPrice});
+  const getCategoryIcon = category => {}
+    switch (category.toLowerCase()) {}
+';
+      case 'ai automation':'';
+      case 'ai & machine learning': any;
+        return <Brain className="w-5 h-5" />;';
+      case 'cloud management':''";
+      case 'cloud & infrastructure':"";
+        return <Cloud className="w-5 h-5" />;';
+      case 'cybersecurity':''";
+      case 'security framework':"";
+        return <Shield className="w-5 h-5" />;';
+      case 'data engineering':''";
+      case 'data & analytics':"";
+        return <Database className="w-5 h-5" />;'";
+      case 'business intelligence':"";
+        return <TrendingUp className="w-5 h-5" />;';
+      case 'developer tools':''";
+      case 'development & devops':"";
+        return <Code className="w-5 h-5" />;'";
+      case 'digital transformation':"";
+        return <Zap className="w-5 h-5" />;'";
+      case 'healthcare technology':"";
+        return <Heart className="w-5 h-5" />;'";
+      case 'financial technology':"";
+        return <DollarSign className="w-5 h-5" />;'";
+      case 'blockchain':"";
+        return <Link className="w-5 h-5" />;'";
+      case 'quantum computing':"";
+        return <Zap className="w-5 h-5" />;";
+      default:"";
+        return <Code className="w-5 h-5" />}
+  }
+  const getPriceRange = price => {}
+';
+    if (price <div>Broken JSX</div>
+    <div className="min-h-screen bg-background">";
+      <div>Broken JSX</div>
+      />;
+";
+      {/* Hero Section */}"";
+      <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">"";
+        <div className="container mx-auto px-4 text-center">"";
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+            Enhanced IT & AI Services";
+          </h1>"";
+          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">;
+            Comprehensive micro SAAS solutions, IT services, and AI-powered;
+            innovations to transform your business";
+          </p>"";
+          <div className="flex flex-wrap justify-center gap-4">";
+            <div>Broken JSX</div>
+              onClick={};
+                  ?.scrollIntoView({ behavior: 'smooth' });,
+}
+            >;
+              Explore Services;
+            </Button>";
+            <div>Broken JSX</div>
+              onClick={};
+                  ?.scrollIntoView({ behavior: 'smooth' });,
+}
+            >;
+              Get in Touch;
+            </Button>;
+          </div>;
+        </div>;
+      </div>;
+";
+      {/* Pricing Tiers Overview */}"";
+      <section className="py-16 bg-zion-blue-dark">"";
+        <div className="container mx-auto px-4">"";
+          <h2 className="text-3xl font-bold text-white text-center mb-12">;
+            Service Pricing Tiers";
+          </h2>"";
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
+            {};
+              <Card key={tier} className="bg-zion-blue border-zion-blue-light">"";
+                <CardHeader className="text-center">"";
+                  <CardTitle className="text-zion-cyan capitalize">;
+                    {tier}";
+                  </CardTitle>"";
+                  <CardDescription className="text-zion-slate-light">;
                     {info.range}
                   </CardDescription>
                 </CardHeader>
@@ -349,168 +343,163 @@ import {
                           <div className="flex items - center justify - between">
                             <span className="text - zion - cyan font - bold">
                               {service.currency}
-                              {service.price?.toLocaleString () }
-                            </span>
-                            <Button
-                              size="sm"
-                              variant="outline"
-                              className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10"
-                            >
-                              Learn More
-                            </Button>
-                          </div>
-                        </CardContent>
-                      </Card>) ) }
-                </div>
-              </TabsContent>) ) }
-          </Tabs>
-        </div>
-      </section>
+                              {service.price?.toLocaleString()}
+                            </span>";
+                            <div>Broken JSX</div>
+                              className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">;
+                              Learn More;
+                            </Button>;
+                          </div>;
+                        </CardContent>;
+                      </Card>;
+                    ))}
+                </div>;
+              </TabsContent>;
+            ))}
+          </Tabs>;
+        </div>;
+      </section>;
+";
+      {/* Benefits Section */}"";
+      <section className="py-16 bg-zion-blue-dark">"";
+        <div className="container mx-auto px-4">"";
+          <h2 className="text-3xl font-bold text-white text-center mb-12">;
+            Why Choose Zion Tech Group Services?";
+          </h2>"";
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"";
+            <div className="text-center">"";
+              <div className="w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">"";
+                <CheckCircle className="w-8 h-8 text-white" />";
+              </div>"";
+              <h3 className="text-xl font-bold text-white mb-2">;
+                Proven Expertise";
+              </h3>"";
+              <p className="text-zion-slate-light">;
+                Industry-leading solutions with proven track records and;
+                customer success stories;
+              </p>";
+            </div>"";
+            <div className="text-center">"";
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">"";
+                <Zap className="w-8 h-8 text-white" />";
+              </div>"";
+              <h3 className="text-xl font-bold text-white mb-2">;
+                Innovation First";
+              </h3>"";
+              <p className="text-zion-slate-light">;
+                Cutting-edge AI and emerging technologies to keep you ahead of;
+                the competition;
+              </p>";
+            </div>"";
+            <div className="text-center">"";
+              <div className="w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">"";
+                <Users className="w-8 h-8 text-white" />";
+              </div>"";
+              <h3 className="text-xl font-bold text-white mb-2">;
+                Dedicated Support";
+              </h3>"";
+              <p className="text-zion-slate-light">;
+                Personalized service with dedicated account managers and 24/7;
+                technical support;
+              </p>";
+            </div>"";
+            <div className="text-center">"";
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">"";
+                <TrendingUp className="w-8 h-8 text-white" />";
+              </div>"";
+              <h3 className="text-xl font-bold text-white mb-2">ROI Focused</h3>"";
+              <p className="text-zion-slate-light">;
+                Measurable business outcomes and rapid return on investment for;
+                all solutions;
+              </p>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+";
+      {/* Contact Section */}"";
+      <section id="contact-section" className="py-16 bg-zion-blue">"";
+        <div className="container mx-auto px-4">"";
+          <div className="max-w-4xl mx-auto text-center">"";
+            <h2 className="text-3xl font-bold text-white mb-8">;
+              Ready to Transform Your Business?";
+            </h2>"";
+            <p className="text-xl text-zion-slate-light mb-12">;
+              Get in touch with our experts to discuss your needs and discover;
+              how our services can drive your success;
+            </p>";
+"";
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">"";
+              <div className="flex items-center justify-center gap-3 text-zion-cyan">"";
+                <Phone className="w-6 h-6" />"";
+                <div className="text-left">"";
+                  <div className="font-semibold">Phone</div>"";
+                  <div className="text-sm">{CONTACT_INFO.mobile}</div>;
+                </div>";
+              </div>"";
+              <div className="flex items-center justify-center gap-3 text-zion-cyan">"";
+                <Mail className="w-6 h-6" />"";
+                <div className="text-left">"";
+                  <div className="font-semibold">Email</div>"";
+                  <div className="text-sm">{CONTACT_INFO.email}</div>;
+                </div>";
+              </div>"";
+              <div className="flex items-center justify-center gap-3 text-zion-cyan">"";
+                <MapPin className="w-6 h-6" />"";
+                <div className="text-left">"";
+                  <div className="font-semibold">Address</div>"";
+                  <div className="text-sm">{CONTACT_INFO.address}</div>;
+                </div>;
+              </div>;
+            </div>";
+"";
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+              <div>Broken JSX</div>
+                onClick={};
+                  window.open(`tel:${CONTACT_INFO.mobile}`,_self');,
+}">"";
+                <Phone className="w-5 h-5 mr-2" />;
+                Call Now;
+              </Button>";
+              <div>Broken JSX</div>
+                onClick={};
+                  window.open(`mailto:${CONTACT_INFO.email}`,_self');,
+}">"";
+                <Mail className="w-5 h-5 mr-2" />;
+                Send Email;
+              </Button>";
+              <div>Broken JSX</div>
+                onClick={() => window.open(CONTACT_INFO.website,_blank')}">"";
+                <ExternalLink className="w-5 h-5 mr-2" />;
+                Visit Website;
+              </Button>;
+            </div>";
+"";
+            <div className="mt-12 p-6 bg-zion-blue-dark rounded-lg border border-zion-blue-light">"";
+              <h3 className="text-xl font-bold text-white mb-4">;
+                Special Enterprise Offerings";
+              </h3>"";
+              <p className="text-zion-slate-light mb-4">;
+                For enterprise clients, we offer custom solution development,;
+                dedicated support teams, and comprehensive implementation;
+                services.;
+              </p>";
+              <div>Broken JSX</div>
+                onClick={};
+                    `mailto:${CONTACT_INFO.email}?subject=Enterprise%20Inquiry`,_self';
+                  )}
+              >;
+                Request Enterprise Consultation;
+              </Button>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>)}
 
-      {/* Benefits Section */}
-      <section className="py - 16 bg - zion - blue - dark">
-        <div className="container mx - auto px - 4">
-          <h2 className="text - 3xl font - bold text - white text - center mb - 12">
-            Why Choose Zion Tech Group Services?
-          </h2>
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
-            <div className="text - center">
-              <div className="w - 16 h - 16 bg - zion - purple rounded - full flex items - center justify - center mx - auto mb - 4">
-                <CheckCircle className="w - 8 h - 8 text - white"       />
-              </div>
-              <h3 className="text - xl font - bold text - white mb - 2">
-                Proven Expertise
-              </h3>
-              <p className="text - zion - slate - light">
-                Industry - leading solutions with proven track records and
-                customer success stories
-              </p>
-            </div>
-            <div className="text - center">
-              <div className="w - 16 h - 16 bg - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Zap className="w - 8 h - 8 text - white"       />
-              </div>
-              <h3 className="text - xl font - bold text - white mb - 2">
-                Innovation First
-              </h3>
-              <p className="text - zion - slate - light">
-                Cutting - edge AI and emerging technologies to keep you ahead of
-                the competition
-              </p>
-            </div>
-            <div className="text - center">
-              <div className="w - 16 h - 16 bg - zion - purple rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Users className="w - 8 h - 8 text - white"       />
-              </div>
-              <h3 className="text - xl font - bold text - white mb - 2">
-                Dedicated Support
-              </h3>
-              <p className="text - zion - slate - light">
-                Personalized service with dedicated account managers and 24 / 7
-                technical support
-              </p>
-            </div>
-            <div className="text - center">
-              <div className="w - 16 h - 16 bg - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 4">
-                <TrendingUp className="w - 8 h - 8 text - white"       />
-              </div>
-              <h3 className="text - xl font - bold text - white mb - 2">ROI Focused</h3>
-              <p className="text - zion - slate - light">
-                Measurable business outcomes and rapid return on investment for
-                all solutions
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Contact Section */}
-      <section id="contact - section" className="py - 16 bg - zion - blue">
-        <div className="container mx - auto px - 4">
-          <div className="max - w-4xl mx - auto text - center">
-            <h2 className="text - 3xl font - bold text - white mb - 8">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text - xl text - zion - slate - light mb - 12">
-              Get in touch with our experts to discuss your needs and discover
-              how our services can drive your success
-            </p>
-
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 12">
-              <div className="flex items - center justify - center gap - 3 text - zion - cyan">
-                <Phone className="w - 6 h - 6"       />
-                <div className="text - left">
-                  <div className="font - semibold">Phone</div>
-                  <div className="text - sm">{CONTACT_INFO.mobile}</div>
-                </div>
-              </div>
-              <div className="flex items - center justify - center gap - 3 text - zion - cyan">
-                <Mail className="w - 6 h - 6"       />
-                <div className="text - left">
-                  <div className="font - semibold">Email</div>
-                  <div className="text - sm">{CONTACT_INFO.email}</div>
-                </div>
-              </div>
-              <div className="flex items - center justify - center gap - 3 text - zion - cyan">
-                <MapPin className="w - 6 h - 6"       />
-                <div className="text - left">
-                  <div className="font - semibold">Address</div>
-                  <div className="text - sm">{CONTACT_INFO.address}</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">
-              <Button
-                size="lg"
-                className="bg - zion - cyan text - zion - blue - dark hover:bg - zion - cyan - light"
-                onClick={ () =>
-                  window.open (`tel:${CONTACT_INFO.mobile}`, '_self') }
-              >
-                <Phone className="w - 5 h - 5 mr - 2"       />
-                Call Now
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10"
-                onClick={ () =>
-                  window.open (`mailto:${CONTACT_INFO.email}`, '_self') }
-              >
-                <Mail className="w - 5 h - 5 mr - 2"       />
-                Send Email
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10"
-                onClick={ () => window.open (CONTACT_INFO.website, '_blank') }
-              >
-                <ExternalLink className="w - 5 h - 5 mr - 2"       />
-                Visit Website
-              </Button>
-            </div>
-
-            <div className="mt - 12 p - 6 bg - zion - blue - dark rounded - lg border border - zion - blue - light">
-              <h3 className="text - xl font - bold text - white mb - 4">
-                Special Enterprise Offerings
-              </h3>
-              <p className="text - zion - slate - light mb - 4">
-                For enterprise clients, we offer custom solution development,
-                dedicated support teams, and comprehensive implementation
-                services.
-              </p>
-              <Button
-                className="bg - zion - purple hover:bg - zion - purple - dark text - white"
-                onClick={ () =>
-                  window.open (`mailto:${CONTACT_INFO.email}?subject = Enterprise%20Inquiry`,
-                    '_self') }
-              >
-                Request Enterprise Consultation
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>) ;
-}
+export { EnhancedServicesPage }
+export { EnhancedServicesPage }
+export { EnhancedServicesPage }
+export { EnhancedServicesPage }
+export { EnhancedServicesPage }

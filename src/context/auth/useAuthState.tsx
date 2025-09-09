@@ -1,19 +1,9 @@
 import React, { useState } from 'react';
 import { useState, useEffect } from 'react';
 ;
-interface User {;
-;
-  id: string;
-  email: string;
-  displayName?: string;
-  avatar?: string;
-  role?: string;
-  isEmailVerified?: boolean;
-  createdAt?: string;
-  updatedAt?: string};
-;
-interface AuthTokens {;
-;
+interface AuthTokens {};
+  refreshToken: string | null}
+
   accessToken: string | null;
   refreshToken: string | null};
 ;
@@ -39,18 +29,14 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
               setTokens({;
                 accessToken: parsed.token,;
                 refreshToken: parsed.refreshToken || null;
-        // // // // // // // console.error('Error checking auth state:', error);
-      } finally {;
-        setIsLoading(false);
-;
-              })};
-          };
-        };
-      } catch (error) {;
-        console.error('Error checking auth state:', error)} finally {;
-        setIsLoading(false)};
-    };
-;
+        // // // // // // // console.error('Error checking auth state:', error)} finally {};
+        setIsLoading(false)})}
+          }
+        }
+      } catch(error) {};
+        // console.error('Error checking auth state:', error)} finally {};
+        setIsLoading(false)}
+    }
     checkAuthState()}, []);
 ;
   return {;

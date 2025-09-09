@@ -108,21 +108,16 @@ interface NavigationLink {;
       key: 'contact',;
       href: '/contact',;
       name: 'Contact',;
-      matches: (path: string) => path.startsWith('/contact');
-    };
+      matches: (path: string) => path.startsWith('/contact')}
   ];
-;
-  const isActive = (link: NavigationLink)  => link.matches(location.pathname);
-;
+
               </div>;
             </motion.div>;
-          )};
+          )}
         </AnimatePresence>;
       </div>;
-    );
-  };
-;
-  return (;
+    )}
+  return ();
     <nav className = {`${className}`}>;
       {/* Desktop Navigation */};
       <div className="hidden lg: flex items-center space-x-1">;
@@ -258,7 +253,7 @@ interface NavigationLink {;
               </div>;
             </div>;
           </motion.div>;
-        )};
+        )}
       </AnimatePresence>;
     </nav>;
   );

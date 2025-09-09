@@ -247,25 +247,30 @@ const CloudDevOpsServices = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Modernize Your Infrastructure?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our cloud and DevOps expertise can transform your 
-            organization's technology landscape.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-              Start Your Transformation
-            </Link>
-            <Link to="/case-studies" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300">
-              View Case Studies
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>);
-};
-export default CloudDevOpsServices;
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
+          <h2 className="text-4xl font-bold mb-6">;
+            Ready to Modernize Your Infrastructure?;
+          </h2>;
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;
+            Let's discuss how our cloud and DevOps expertise can transform your;
+            organization's technology landscape.;
+          </p>;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+            <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">;
+              Start Your Transformation;
+            </Link>;
+            <Link to="/case-studies" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300">;
+              View Case Studies;
+            </Link>;
+          </div>;
+        </div>;
+      </section>;
+    </div>)}
+export default CloudDevOpsServices}}}
+
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }

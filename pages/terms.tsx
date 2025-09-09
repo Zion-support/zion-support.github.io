@@ -141,4 +141,22 @@ const Terms: NextPage = () => {
   );
 };
 
-export default Terms;
+            {/* Navigation */}
+            <div className="mt-12 text-center">;
+              <div className="flex flex-wrap justify-center gap-4">;
+                <a href="/privacy" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors">;
+                  Privacy Policy;
+                </a>;
+                <a href="/contact" className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors">;
+                  Contact Us;
+                </a>;
+                <a href="/" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors">;
+                  Back to Home;
+                </a>;
+              </div>;
+            </div>;
+          </div>;
+        </main>;
+      </div>;
+    </>;
+  )}

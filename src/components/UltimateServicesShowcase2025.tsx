@@ -161,34 +161,22 @@ function UltimateServicesShowcase2025(...args: any[]): any {;
           </div>;
         </div>;
       </section>;
-;
-      {/* Services Grid / List */};
-      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div role="button" className="max - w-7xl mx - auto">;
-          <motion.div ;
-            className={viewMode === 'grid' ;
-              ? "grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8";
-              : "space - y-6";
-            };
-            variants={containerVariants};
-            initial="hidden";
-            animate="visible";
-          >;
-            {sortedServices.map ( (service, index) => (<motion.div;
-                key={service.id};
-                variants={itemVariants};
-                className={viewMode === 'grid' ;
-                  ? "glass rounded - 2xl p - 6 border border - white / 20 hover:border - zion - cyan / 40 transition - all duration - 500 hover:transform hover:scale - 105 cursor - pointer group";
-                  : "glass rounded - 2xl p - 6 border border - white / 20 hover:border - zion - cyan / 40 transition - all duration - 500 cursor - pointer group";
-                };
-                onClick={ () => handleServiceClick (service) };
-                whileHover={{ y: -5 }};
-              >;
-                <div role="button" className="flex items - start justify - between mb - 4">;
-                  <div role="button" className="text - 4xl mb - 4 group - hover:scale - 110 transition - transform duration - 300">{service.icon}</div>;
-                  <div role="button" className="flex items - center gap - 1 text - yellow - 400">;
-                    {[...Array (5) ].map ( (_, i) => (<Star key={i} className={`w - 4 h - 4 ${i < Math.floor (service.rating) ? 'fill - current' : 'fill - gray - 600'}`}       />) ) };
-                    <span className="text - sm text - gray - 400 ml - 1"> ({service.reviews}) </span>;
+
+      {/* Services Grid / List */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
+        <div  className="max - w-7xl mx -auto">;
+          <div>Broken JSX</div>
+            animate="visible">;
+            {};
+                onClick={ () => handleServiceClick(service) }
+                whileHover={{ y: -5 }}
+              >";
+                <div className="flex items-start justify-between mb-4">";
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>";
+                  <div className="flex items-center gap-1 text-yellow-400">;
+                    {};
+                      <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current' : 'fill-gray-600'}`}  />;
+                    ))}"                    <span className="text-sm text-gray-400 ml-1">({service.reviews})</span>;
                   </div>;
                 </div>;
 ;
@@ -367,5 +355,5 @@ function UltimateServicesShowcase2025(...args: any[]): any {;
             </motion.div>;
           </motion.div>) };
       </AnimatePresence>;
-    </div>) ;
-};
+    </div>) }
+export default UltimateServicesShowcase2025;'"`;

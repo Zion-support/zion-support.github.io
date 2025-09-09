@@ -78,40 +78,13 @@ export default function Services() {
               </section>) ) }
           </div>
 
-          <section className="mt - 16">
-            <h2 className="text - 2xl md:text - 3xl font - semibold text - white mb - 4">
-              Contact Us
-            </h2>
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">
-              <div className="bg - zion - blue - dark border border - zion - blue - light rounded - 2xl p - 6">
-                <div className="flex items - center gap - 3 text - white">
-                  <Phone className="w - 5 h - 5"       />
-                  <span>{contact.mobile}</span>
-                </div>
-              </div>
-              <div className="bg - zion - blue - dark border border - zion - blue - light rounded - 2xl p - 6">
-                <div className="flex items - center gap - 3 text - white">
-                  <Mail className="w - 5 h - 5"       />
-                  <span>{contact.email}</span>
-                </div>
-              </div>
-              <div className="bg - zion - blue - dark border border - zion - blue - light rounded - 2xl p - 6">
-                <div className="flex items - center gap - 3 text - white">
-                  <MapPin className="w - 5 h - 5"       />
-                  <span>{contact.address}</span>
-                </div>
-              </div>
-            </div>
-            <div className="mt - 6">
-              <Link
-                to="/contact"
-                className="inline - flex items - center gap - 2 text - white underline"
-              >
-                Go to contact page
-              </Link>
-            </div>
-          </section>
-        </div>
-      </main>
-    </>) ;
-}
+				</div>;
+			</main>;
+		</>)}
+
+
+export { Services }
+export { Services }
+export { Services }
+export { Services }
+export { Services }

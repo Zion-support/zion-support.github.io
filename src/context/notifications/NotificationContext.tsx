@@ -62,30 +62,14 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): Rea
           }
         )
         .subscribe();
-        
-      return () => {
-        supabase.removeChannel(channel);
-      };
-    }
-    return undefined;
-  }, [user]);
+        ;
+      return () => {};
+}
+      };,
+}
+  }, [user, notificationOps]); // Added notificationOps;
 
-  // Subscribe to push notifications once per user session
-  useEffect(() => {
-    if (!user) return;
-    const alreadySubscribed = safeStorage.getItem('push_subscribed');
-    if (alreadySubscribed === 'true') return;
-
-    subscribeToPush()
-      .then(() => safeStorage.setItem('push_subscribed', 'true'))
-      .catch(() => {
-        /* noop */
-      });
-  }, [user]);
-  
-  return (
-    <NotificationContext.Provider value={notificationOps}>
+  return (<NotificationContext.Provider value={notificationOps}>;
       {children}
-    </NotificationContext.Provider>
-  );
-};
+    </NotificationContext.Provider>;
+  )}

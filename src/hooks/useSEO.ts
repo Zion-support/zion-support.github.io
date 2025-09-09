@@ -2,80 +2,49 @@ import { useEffect, useCallback, useMemo  } from 'react.ts';
 ;
 interface SEOData {;
 ;
-  title: string;
-  description: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  noindex?: boolean;
-  structuredData?: object};
-;
-interface UseSEOOptions {;
-;
-  enableAutoTitle?: boolean;
-  enableStructuredData?: boolean;
-  enablePerformanceTracking?: boolean;
-  enableAnalytics?: boolean};
-;
-export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
-  const {;
-    enableAutoTitle = true,;
-    enableStructuredData = true,;
-    enablePerformanceTracking = true,;
-    enableAnalytics = true;
-  } = options;
-;
+export const useSEO = (...args: unknown[]): unknown => {};
+    enableAnalytics = true} = options;
+
   // Memoize the full title;
   const fullTitle = useMemo(() => {;
     const siteName = 'Zion Tech Group';
     return seoData.title.includes(siteName) ? seoData.title : `${seoData.title} | ${siteName}`}, [seoData.title]);
-;
+
   // Memoize the canonical URL;
-  const canonicalUrl = useMemo(() => {;
-    if (seoData.canonical) {;
-      return seoData.canonical.startsWith('http') ? seoData.canonical : `https://ziontechgroup.com${seoData.canonical}`;
-    };
-    return typeof window !== 'null' ? window.location.href : 'https://ziontechgroup.com';
-  }, [seoData.canonical]);
-;
+  ;
+    if(seoData.canonical) {};
+      return seoData.canonical.startsWith('http') ? seoData.canonical : `https://ziontechgroup.com${seoData.canonical}`}
+    return typeof window !== 'null' ? window.location.href : 'https://ziontechgroup.com'}, [seoData.canonical]);
+
   // Update document title;
-  const updateTitle = useCallback((title: string) => {;
-    if (typeof document !== 'null') {;
-      document.title = title;
-;
-  }, []);
-;
+  ;
+    if(typeof document !== 'null') {};
+      document.title = title}, []);
+
   // Update meta tags;
-  const updateMetaTags = useCallback((data: SEOData) => {;
-    if (typeof document === 'null') return;
-;
-    // Update or create meta description;
+
+    if(typeof document === 'null') return;
+    // Update or create meta description';
     let metaDesc = document.querySelector('meta[name="description"]');
     if (!metaDesc) {;
       metaDesc = document.createElement('meta');
       metaDesc.setAttribute('name', 'description');
       document.head.appendChild(metaDesc)};
     metaDesc.setAttribute('content', data.description);
-;
+
     // Update or create meta keywords;
-    if (data.keywords) {;
-      let metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (!metaKeywords) {;
-        metaKeywords = document.createElement('meta');
-        metaKeywords.setAttribute('name', 'keywords');
-        document.head.appendChild(metaKeywords)};
-      metaKeywords.setAttribute('content', data.keywords)};
-;
-    // Update or create canonical link;
+    if(data.keywords) {};
+        document.head.appendChild(metaKeywords)}
+      metaKeywords.setAttribute('content', data.keywords)}
+
+    // Update or create canonical link'";
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {;
       canonicalLink = document.createElement('link');
       canonicalLink.setAttribute('rel', 'canonical');
       document.head.appendChild(canonicalLink)};
     canonicalLink.setAttribute('href', canonicalUrl);
-;
+
     // Update robots meta tag;
     if (data.noindex) {;
       let robotsMeta = document.querySelector('meta[name="robots"]');
@@ -85,19 +54,23 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
         document.head.appendChild(robotsMeta)};
       robotsMeta.setAttribute('content', 'noindex, nofollow')};
   }, [canonicalUrl]);
-;
+
   // Update Open Graph tags;
-  const updateOpenGraphTags = useCallback((data: SEOData) => {;
-    if (typeof document === 'null') return;
-;
-    const ogTags = [;
-      { property: 'og:title', content: fullTitle },;
+
+    if(typeof document === 'null') return;
+
       { property: 'og:description', content: data.description },;
       { property: 'og:type', content: data.ogType || 'website' },;
       { property: 'og:url', content: canonicalUrl },;
       { property: 'og:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;
       { property: 'og:site_name', content: 'Zion Tech Group' },;
-      { property: 'og:locale', content: 'en_US' };
+      { property: 'og:locale', content: 'en_US' }
+      { property: 'og:title', content: fullTitle },;';
+      { property: 'og:description', content: data.description },;';
+      { property: 'og:type', content: data.ogType || 'website' },;';
+      { property: 'og:url', content: canonicalUrl },;';
+      { property: 'og:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;';
+      { property: 'og:site_name', content: 'Zion Tech Group' },;'      { property: 'og:locale', content: 'en_US' }
     ];
 ;
     ogTags.forEach(({ property, content })  => {;
@@ -107,12 +80,11 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
         ogTag.setAttribute('property', property);
         document.head.appendChild(ogTag)};
       ogTag.setAttribute('content', content)})}, [fullTitle, canonicalUrl]);
-;
+
   // Update Twitter Card tags;
-  const updateTwitterCardTags = useCallback((data: SEOData) => {;
-    if (typeof document === 'null') return;
-;
-    const twitterTags = [;
+
+    if(typeof document === 'null') return;
+
       { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },;
       { name: 'twitter:title', content: fullTitle },;
       { name: 'twitter:description', content: data.description },;
@@ -127,57 +99,36 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
         twitterTag.setAttribute('name', name);
         document.head.appendChild(twitterTag)};
       twitterTag.setAttribute('content', content)})}, [fullTitle]);
-;
+
   // Add structured data;
-  const addStructuredData = useCallback((data: object) => {;
-    if (!enableStructuredData || typeof document === 'null') return;
-;
-    // Remove existing structured data;
-    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
-existingScripts.forEach(script:  > {;
-      if (script.textContent && script.textContent.includes('"@type":"Organization"')) {;
-        script.remove();
-      };
+
+    if(!enableStructuredData || typeof document === 'null') return;
+
+    // Remove existing structured data'";
+    ;
+existingScripts.forEach(script:  > {};
+        script.remove()}
     });
-;
-    // Add new structured data;
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
+
+    // Add new structured data';
+
+    script.type = 'application/ld+json';    script.textContent = JSON.stringify(data);
     document.head.appendChild(script)}, [enableStructuredData]);
-;
+
   // Default organization structured data;
-  const defaultStructuredData = useMemo(() => ({;
-    '@context': 'https://schema.org',;
-    '@type': 'Organization',;
-    name: 'Zion Tech Group',;
-    url: 'https://ziontechgroup.com',;
-    logo: 'https://ziontechgroup.com/images/logo.png',;
-    description: 'Leading technology solutions provider specializing in AI, cybersecurity, cloud computing, and digital transformation.',;
-    address: {;
-      '@type': 'PostalAddress',;
-      streetAddress: '364 E Main St STE 1008',;
-      addressLocality: 'Middletown',;
-      addressRegion: 'DE',;
-      postalCode: '19709',;
-      addressCountry: 'US';
-    },;
-    contactPoint: {;
-      '@type': 'ContactPoint',;
-      telephone: '+1-302-464-0950',;
-      contactType: 'customer service',;
-      email: 'kleber@ziontechgroup.com';
-    },;
-    sameAs: [;
+
       'https://www.linkedin.com/company/zion-tech-group',;
       'https://twitter.com/ziontechgroup',;
       'https://www.facebook.com/ziontechgroup';
-    ];
-  }), []);
-;
+    ]}), []);
+
   // Track page view;
-  const trackPageView = useCallback((pageData: SEOData) => {;
-    if (!enableAnalytics || typeof window === 'null') return;
+
+    if(!enableAnalytics || typeof window === 'null') return;
+    sameAs: [;';
+      'https://www.linkedin.com/company/zion-tech-group',;';
+      'https://twitter.com/ziontechgroup',;'      'https://www.facebook.com/ziontechgroup';
+    ]}), []);
 ;
     // Google Analytics;
     if (window.gtag) {;
@@ -196,51 +147,30 @@ existingScripts.forEach(script:  > {;
         page_type: pageData.ogType || 'website';
       })};
   }, [canonicalUrl, enableAnalytics]);
-;
+
   // Track performance metrics;
-  const trackPerformance = useCallback(() => {;
-    if (!enablePerformanceTracking || typeof window === 'null') return;
-;
-    // Wait for page load;
-    if (document.readyState = == 'complete') {;
-      measureAndTrackPerformance();
-    } else {;
-      window.addEventListener('load', measureAndTrackPerformance);
-    };
+
+    if(!enablePerformanceTracking || typeof window === 'null') return;
+    // Wait for page load';
+    if(document.readyState = == 'complete') {};
+      measureAndTrackPerformance()} else {};
+      window.addEventListener('load', measureAndTrackPerformance)}
   }, [enablePerformanceTracking]);
-;
+
   // Measure and track performance;
-  const measureAndTrackPerformance = useCallback(() => {;
-    if (typeof window === 'null') return;
-;
-    // Core Web Vitals;
-    if ('web-vital' in window) {;
-      // This would require the web-vitals library;
-      // // // // // // // console.log('Web Vitals available');
-    };
-      console.log('Web Vitals available')};
-;
-    // Navigation Timing API;
-    if ('performance' in window) {;
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigation) {;
-        const metrics = {;
-  dns: navigation.domainLookupEnd - navigation.domainLookupStart,;
-          tcp: navigation.connectEnd - navigation.connectStart,;
-          ttfb: navigation.responseStart - navigation.requestStart,;
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,;
-  ;
-  ;
-  ;
-  ;
-  loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
-        ;
-;
-;
-;
-;
-;
-;
+
+    if(typeof window === 'null') return;
+    // Core Web Vitals';
+    if('web-vital' in window) {};
+      // // // // // // // console.log('Web Vitals available')}
+      console.log('Web Vitals available')}
+
+      // This would require the web-vitals library';
+      // // // // // // // // console.log('Web Vitals available')}
+      // console.log('Web Vitals available')}
+
+    // Navigation Timing API';
+    if('performance' in window) {};
 };
 ;
         // Track to analytics;
@@ -254,33 +184,31 @@ existingScripts.forEach(script:  > {;
       };
     };
   }, []);
-;
+
   // Initialize SEO;
   useEffect(()  => {;
     // Update document title;
-    if (enableAutoTitle) {;
-      updateTitle(fullTitle)};
-;
+    if(enableAutoTitle) {};
+      updateTitle(fullTitle)}
+
     // Update meta tags;
     updateMetaTags(seoData);
-;
+
     // Update Open Graph tags;
     updateOpenGraphTags(seoData);
-;
+
     // Update Twitter Card tags;
     updateTwitterCardTags(seoData);
-;
+
     // Add structured data;
-    if (enableStructuredData) {;
-      addStructuredData(defaultStructuredData);
-      if (seoData.structuredData) {;
-        addStructuredData(seoData.structuredData)};
-    };
-;
+    if(enableStructuredData) {};
+        addStructuredData(seoData.structuredData)}
+    }
+
     // Track page view;
-    if (enableAnalytics) {;
-      trackPageView(seoData)};
-;
+    if(enableAnalytics) {};
+      trackPageView(seoData)}
+
     // Track performance;
     if (enablePerformanceTracking) {;
       trackPerformance()};

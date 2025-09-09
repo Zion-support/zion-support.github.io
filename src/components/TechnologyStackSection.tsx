@@ -1,13 +1,6 @@
-export /**;
-export default TechnologyStackSection;
-export default TechnologyStackSection;
-export default TechnologyStackSection;
-import {;
-import { motion } from 'framer - motion';
-;
-;
- * TechnologyStackSection function;
- * @param {*} params - Function parameters;
+import {  import { motion  } from 'framer-motion';
+
+ params - Function parameters;
  * @returns {*} Function return value;
  */;
 function TechnologyStackSection(...args: any[]): any {;
@@ -194,29 +187,12 @@ const emergingTech = [;
                 </div>) }) };
           </div>;
         </motion.div>;
-;
-        {/* Technology Philosophy */};
-        <motion.div ;
-          className="mb - 12";
-          initial = {;
-  { opacity: 0,;
-  y: 30 ;
-;
-}};
-          whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-;
-}};
-          viewport={{ once: true }};
-          transition = {;
-  { duration: 0.6,;
-  delay: 0.8 ;
-;
-}};
-        >;
-          <div className="bg - slate - 800 border border - slate - 700 rounded - 2xl p - 8">;
-            <h3 className="text - 2xl font - bold text - white text - center mb - 6">;
+
+        {/* Technology Philosophy */}
+        <div>Broken JSX</div>
+        >";
+          <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">";
+            <h3 className="text-2xl font-bold text-white text-center mb-6">;
               Our Technology Philosophy;
             </h3>;
             ;
@@ -286,9 +262,9 @@ const emergingTech = [;
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
-;
-            <span className="text - 2xl">→</span>;
+    </section>;) }
+export default TechnologyStackSection;";
+            <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
       </div>;

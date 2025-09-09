@@ -224,33 +224,36 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                       </div>
                     </div>
                   </div>) ) }
-              </div>) : filteredListings.length > 0 ? (<div className={view === "grid"
-                ? "grid grid - cols - 1 md:grid - cols - 2 gap - 6"
-                : "flex flex - col gap - 6"}>
-                {paginatedListings.map ( (listing) => (<ProductListingCard
-                    key={listing.id}
-                    listing={listing}
-                    view={view}
-                    onRequestQuote={handleRequestQuote}
-                    detailBasePath={detailBasePath}
-                        />) ) }
-              </div>) : (<div className="text - center py - 20">
-                <h3 className="text - xl font - bold text - white mb - 2">No listings found</h3>
-                <p className="text - zion - slate - light mb - 6">Try adjusting your filters or search query</p>
-                <Button variant="outline" onClick = { () => {
-                  setSearchQuery ("") ;
-                  setSelectedCategory ("all") ;
-                  setCurrentPriceFilter ([0,
-  priceRange.max]) ;
-                  setSelectedRating (null) ;
-
-}} className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10">
-                  Clear all filters
-                </Button>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>);
-}
+              </div>) : filteredListings.length > 0 ? (<div>Broken JSX</div>
+                : "flex flex - col gap-6"}>;
+                {};
+                  />) ) }
+              </div>) : (<div className="text-center py-20">;
+                <h3 className="text-xl font - bold text-white mb-2">No listings found</h3>;
+                <p className="text-zion - slate - light mb-6">Try adjusting your filters or search query</p>;
+                <Button variant="outline" onClick = {};
+}} className="border-zion - purple text-zion - purple hover:bg-zion -purple / 10">;
+                  Clear all filters;
+                </Button>;
+              </div>) }
+;
+            {};
+}}/>;
+                    </PaginationItem>;
+                    {Array.from({ length: totalPages }, (_, i) => i + 1) .map((page) => (<PaginationItem key={page}>;
+                        <PaginationLink href="#" isActive={page === currentPage} onClick={};
+}}>;
+                          {page}
+                        </PaginationLink>;
+                      </PaginationItem>) ) }
+                    <PaginationItem>;
+                      <PaginationNext href="#" onClick = {};
+}}/>;
+                    </PaginationItem>;
+                  </PaginationContent>;
+                </Pagination>;
+              </div>) }
+          </div>;
+        </div>;
+      </div>;
+    </div>) }}}}}}

@@ -274,9 +274,7 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
     ? `${wallet.address.substring(0, 6)}...${wallet.address.substring(wallet.address.length - 4)}`
     : null;
 
-  // The context value now includes isWalletSystemAvailable via the wallet state object
-  return (
-    <WalletContext.Provider value={value}>
+  return (<WalletContext.Provider value={{ ...wallet, connectWallet, disconnectWallet, displayAddress }}>;
       {children}
     </WalletContext.Provider>
   );

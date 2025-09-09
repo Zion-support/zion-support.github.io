@@ -4,82 +4,68 @@ import { motion } from 'framer-motion';
 import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, BarChart3, MessageSquare, Phone, Mail, Lock, Cpu, HardDrive, Wifi, TrendingUp, DollarSign } from 'lucide-react';
 export default function CloudInfrastructure() {
     const [selectedProvider, setSelectedProvider] = useState('aws');
-    const cloudProviders = [
-        {
-            id: 'aws',
-            name: 'Amazon Web Services',
-            logo: 'AWS',
-            description: 'Leading cloud platform with comprehensive services',
-            features: ['EC2, S3, Lambda', 'RDS, DynamoDB', 'CloudFront, Route 53'],
-            icon: Cloud
-        },
-        {
-            id: 'azure',
-            name: 'Microsoft Azure',
-            logo: 'Azure',
-            description: 'Enterprise-grade cloud solutions',
-            features: ['Virtual Machines', 'Azure SQL', 'App Service, Functions'],
-            icon: Server
-        },
-        {
-            id: 'gcp',
-            name: 'Google Cloud Platform',
-            logo: 'GCP',
-            description: 'Innovative cloud technologies',
-            features: ['Compute Engine', 'Cloud Storage', 'BigQuery, AI Platform'],
-            icon: Globe
-        }
-    ];
-    const cloudServices = [
-        {
-            title: 'Infrastructure as Code',
-            description: 'Automate cloud infrastructure deployment and management',
-            icon: Code,
-            features: ['Terraform', 'CloudFormation', 'ARM Templates', 'Deployment Automation']
-        },
-        {
-            title: 'Container Orchestration',
-            description: 'Manage and scale containerized applications',
-            icon: Cpu,
-            features: ['Kubernetes', 'Docker', 'ECS/EKS', 'Azure AKS', 'GKE']
-        },
-        {
-            title: 'Serverless Computing',
-            description: 'Build and run applications without managing servers',
-            icon: Zap,
-            features: ['AWS Lambda', 'Azure Functions', 'Cloud Functions', 'Event-driven Architecture']
-        },
-        {
-            title: 'Database Solutions',
-            description: 'Managed database services for optimal performance',
-            icon: Database,
-            features: ['RDS, Aurora', 'Azure SQL', 'Cloud SQL', 'NoSQL Options']
-        },
-        {
-            title: 'Security & Compliance',
-            description: 'Enterprise-grade security and compliance features',
-            icon: Shield,
-            features: ['IAM & Access Control', 'Encryption', 'Compliance Frameworks', 'Security Monitoring']
-        },
-        {
-            title: 'Monitoring & Analytics',
-            description: 'Comprehensive monitoring and observability',
-            icon: BarChart3,
-            features: ['CloudWatch', 'Azure Monitor', 'Stackdriver', 'Log Management']
-        }
-    ];
-    const benefits = [
-        { title: 'Scalability', description: 'Scale resources up or down based on demand', icon: TrendingUp },
-        { title: 'Cost Optimization', description: 'Pay only for what you use with smart resource management', icon: DollarSign },
-        { title: 'High Availability', description: '99.9%+ uptime with multi-region deployments', icon: Shield },
-        { title: 'Security', description: 'Enterprise-grade security with compliance certifications', icon: Lock },
-        { title: 'Performance', description: 'Global CDN and edge computing for optimal speed', icon: Zap },
-        { title: 'Disaster Recovery', description: 'Automated backup and recovery solutions', icon: HardDrive }
-    ];
-    const stats = [
-        { number: '99.9%', label: 'Uptime SLA', icon: Shield },
-        { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
-        { number: '10x', label: 'Faster Deployment', icon: Zap },
+    const cloudServices = [];
+        {}
+';
+'';
+''';
+            title: 'Infrastructure as Code',''';
+            description: 'Automate cloud infrastructure deployment and management','';
+            icon: Code,''';
+            features['Terraform',CloudFormation',ARM Templates',Deployment Automation']},;
+        {}
+';
+'';
+''';
+            title: 'Container Orchestration',''';
+            description: 'Manage and scale containerized applications','';
+            icon: Cpu,''';
+            features['Kubernetes',Docker',ECS/EKS',Azure AKS',GKE']},;
+        {}
+';
+'';
+''';
+            title: 'Serverless Computing',''';
+            description: 'Build and run applications without managing servers','';
+            icon: Zap,''';
+            features['AWS Lambda',Azure Functions',Cloud Functions',Event-driven Architecture']},;
+        {}
+';
+'';
+''';
+            title: 'Database Solutions',''';
+            description: 'Managed database services for optimal performance','';
+            icon: Database,''';
+            features['RDS, Aurora',Azure SQL',Cloud SQL',NoSQL Options']},;
+        {}
+';
+'';
+''';
+            title: 'Security & Compliance',''';
+            description: 'Enterprise-grade security and compliance features','';
+            icon: Shield,''';
+            features['IAM & Access Control',Encryption',Compliance Frameworks',Security Monitoring']},;
+        {}
+';
+'';
+''';
+            title: 'Monitoring & Analytics',''';
+            description: 'Comprehensive monitoring and observability','';
+            icon: BarChart3,''';
+            features['CloudWatch',Azure Monitor',Stackdriver',Log Management'];'}'';
+    ];''';
+    const benefits = ['''';
+        { title: 'Scalability', description: 'Scale resources up or down based on demand', icon: TrendingUp },''';
+        { title: 'Cost Optimization', description: 'Pay only for what you use with smart resource management', icon: DollarSign },''';
+        { title: 'High Availability', description: '99.9%+ uptime with multi-region deployments', icon: Shield },''';
+        { title: 'Security', description: 'Enterprise-grade security with compliance certifications', icon: Lock },''';
+        { title: 'Performance', description: 'Global CDN and edge computing for optimal speed', icon: Zap },''';
+        { title: 'Disaster Recovery', description: 'Automated backup and recovery solutions', icon: HardDrive }'';
+    ];''';
+    const stats = ['''';
+        { number: '99.9%', label: 'Uptime SLA', icon: Shield },''';
+        { number: '50%', label: 'Cost Reduction', icon: TrendingUp },''';
+        { number: '10x', label: 'Faster Deployment', icon: Zap },''';
         { number: '24/7', label: 'Monitoring', icon: Wifi }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -194,25 +180,26 @@ export default function CloudInfrastructure() {
           </div>
 
           {/* Provider Details */}
-          <motion.div key={selectedProvider} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="p-8 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
-            <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold text-white mb-4">
-                {cloudProviders.find(p => p.id === selectedProvider)?.name} Solutions
-              </h3>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Comprehensive cloud infrastructure solutions tailored for {cloudProviders.find(p => p.id === selectedProvider)?.name} 
-                with best practices, security, and cost optimization.
-              </p>
-            </div>
-            
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">
-              {cloudServices.map ( (service, index) => (<div key={service.title} className="p - 6 bg - white / 5 rounded - lg border border - white / 10">
-                  <div className="w - 12 h - 12 bg - gradient - to - br from - cyan - 400 to - purple - 600 rounded - lg flex items - center justify - center mb - 4">
-                    <service.icon className="w - 6 h - 6 text - white"      />
-                  </div>
-                  <h4 className="text-lg font-semibold text-white mb-3">{service.title}</h4>
-                  <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                  <ul className="space-y-2">
+          <div>Broken JSX</div>
+}} className="p-8 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">"";
+            <div className="text-center mb-8">"";
+              <h3 className="text-3xl font-bold text-white mb-4">;
+                {cloudProviders.find(p => p.id === selectedProvider)?.name} Solutions";
+              </h3>"";
+              <p className="text-gray-300 max-w-2xl mx-auto">;
+                Comprehensive cloud infrastructure solutions tailored for {cloudProviders.find(p => p.id === selectedProvider)?.name}
+                with best practices, security, and cost optimization.;
+              </p>;
+            </div>";
+            "";
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"";
+              {cloudServices.map((service, index) => (<div key={service.title} className="p-6 bg-white/5 rounded-lg border border-white/10">"";
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">"";
+                    <service.icon className="w-6 h-6 text-white"/>";
+                  </div>"";
+                  <h4 className="text-lg font-semibold text-white mb-3">{service.title}</h4>"";
+                  <p className="text-gray-300 text-sm mb-4">{service.description}</p>"";
+                  <ul className="space-y-2">"";
                     {service.features.map((feature, idx) => (<li key={idx} className="text-xs text-gray-400">• {feature}</li>))}
                   </ul>
                 </div>))}
@@ -273,59 +260,22 @@ export default function CloudInfrastructure() {
         </div>
       </section>
 
-      {/* Contact Info */}
-      <section className="py - 16">
-        <div className="max - w-4xl mx - auto px - 4">
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 text - center">
-            <motion.div initial = {
-  { opacity: 0,
-  y: 20 
+            <div>Broken JSX</div>
+}} viewport={{ once: true }} transition={{ delay: 0.2 }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">"";
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">"";
+                <Globe className="w-8 h-8 text-white"/>";
+              </div>"";
+              <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"";
+              <p className="text-gray-300">Delaware, United States</p>;
+            </motion.div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>)}
 
-}} whileInView = {
-  { opacity: 1,
-  y: 0 
 
-}} viewport={{ once: true }} className="p - 6 bg - white / 10 backdrop - blur - md rounded - lg border border - white / 20">
-              <div className="w - 16 h - 16 bg - gradient - to - br from - cyan - 400 to - purple - 600 rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Phone className="w - 8 h - 8 text - white"      />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-              <p className="text-gray-300">+1 (302) 464-0950</p>
-            </motion.div>
-
-            <motion.div initial = {
-  { opacity: 0,
-  y: 20 
-
-}} whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}} viewport={{ once: true }} transition={{ delay: 0.1 }} className="p - 6 bg - white / 10 backdrop - blur - md rounded - lg border border - white / 20">
-              <div className="w - 16 h - 16 bg - gradient - to - br from - cyan - 400 to - purple - 600 rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Mail className="w - 8 h - 8 text - white"      />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-              <p className="text-gray-300">kleber@ziontechgroup.com</p>
-            </motion.div>
-
-            <motion.div initial = {
-  { opacity: 0,
-  y: 20 
-
-}} whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}} viewport={{ once: true }} transition={{ delay: 0.2 }} className="p - 6 bg - white / 10 backdrop - blur - md rounded - lg border border - white / 20">
-              <div className="w - 16 h - 16 bg - gradient - to - br from - cyan - 400 to - purple - 600 rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Globe className="w - 8 h - 8 text - white"      />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-              <p className="text-gray-300">Delaware, United States</p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-    </div>);
-}
+export { CloudInfrastructure }
+export { CloudInfrastructure }
+export { CloudInfrastructure }
+export { CloudInfrastructure }
+export { CloudInfrastructure }

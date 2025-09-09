@@ -1,42 +1,11 @@
-import { Link, useLocation } from 'react - router - dom';
-import React, { useState, useEffect, useRef } from 'react';
-export const EnhancedMobileNavigation: React.FC = () => {;
-import { ;
-import { motion, AnimatePresence } from 'framer - motion';
-;
-;
-  Menu, ;
-  X, ;
-  ChevronDown, ;
-  Home, ;
-  Users, ;
-  Briefcase, ;
-  Phone, ;
-  Info,;
-  Settings,;
-  HelpCircle,;
-  FileText,;
-  Globe,;
-  Zap,;
-  Shield,;
-  Cloud,;
-  Brain,;
-  Smartphone,;
-  Monitor,;
-  Server,;
-  Database,;
-  Lock,;
-  Code,;
-  Rocket,;
-  Star,;
-  TrendingUp,;
-  Award,;
-  BookOpen,;
-  MessageCircle,;
-  Mail,;
-  MapPin,;
-  Clock;
- } from 'lucide - react';
+import { Link, useLocation  } from 'react-router-dom';
+ from 'react';
+export const EnhancedMobileNavigation: React.FC = () => {};
+import { motion, AnimatePresence  } from 'framer-motion';
+
+ from 'lucide-react';
+
+>} from 'lucide-react';
 ;
 interface NavigationItem {;
 ;
@@ -160,67 +129,67 @@ const quickActions = [;
       };
     };
 ;
-    if (isOpen) {;
-      document.addEventListener ('mousedown', handleClickOutside) ;
-      document.body.style.overflow = 'hidden'};
-;
-    return () => {;
-      document.removeEventListener ('mousedown', handleClickOutside) ;
-      document.body.style.overflow = 'unset'}}, [isOpen]) ;
-;
-  const toggleExpanded = (label: string) => {;
-    setExpandedItems (prev => {;
-      const newSet = new Set (prev) ;
-      if (newSet.has (label) ) {;
-        newSet.delete (label) } else {;
-        newSet.add (label) };
-      return newSet}) };
+export default function EnhancedMobileNavigation() {};
+  return null;
+}
+},;
+    {};
+        { label: 'AI Solutions', path: '/ai-services', icon: Brain },;
+        { label: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },;
+        { label: 'Cybersecurity', path: '/services/ai-cybersecurity-suite', icon: Shield },;
+        { label: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },;
+        { label: 'IoT & Edge', path: '/services/edge-computing-platform', icon: Zap },;
+        { label: 'Blockchain', path: '/services/blockchain-enterprise-solutions', icon: Database }
+      ];,
+},;
+    {};
+},;
+    {};
+},;
+    {};
+}
+  ];
+
+  // Close mobile menu when route changes;
+  useEffect(() => {};
+};,
+}, []);, []);
+    setIsOpen(false);
+    setActiveSubmenu(null)}, [location.pathname]);
+
+  // Prevent body scroll when menu is open;
+  useEffect(() => {};
+};,
+}, []);, []);
+    if(isOpen) {};
+      document.body.style.overflow = 'hidden'}
 ;
   const handleNavigation = useCallback ( (path: string) => {;
     setIsOpen (false) ;
     setExpandedItems (new Set () ) };
 ;
-  const isActive = (path: string) => {;
-    if (path === '/') {;
-  const isActive = (path: string) => {;
-    if (path === '/') {;
-      return activePath === '/';
-;
-    return activePath.startsWith (path) ;
-  };
-;
-  const renderNavigationItem = (item: NavigationItem, depth: number = 0) => {;
-    const isExpanded = expandedItems.has (item.label) ;
-    const hasChildren = item.children && item.children.length > 0;
-    const isItemActive = isActive (item.path) ;
-;
-    return (<div role="button" key = {item.label} className="w - full">;
-        <motion.div;
-          initial={false};
-          animate = {;
-  { backgroundColor: isItemActive ? 'rgba (34, 221, 210,;
-  0.1) ' : 'transparent' ;
-;
-}};
-          className={`relative ${depth > 0 ? 'ml - 4' : ''}`};
-;
-          <Link;
-            to={item.path};
-            onClick={ () => handleNavigation (item.path) };
-            className={`flex items - center justify - between w - full p - 4 text - left transition - all duration - 200 ${;
-              isItemActive;
-                ? 'text - zion - cyan border - l-2 border - zion - cyan';
-                : 'text - white hover:text - zion - cyan';
-            }`};
-;
-            <div role="button" className="flex items - center gap - 3">;
-              <item.icon;
-                size={20};
-                className={isItemActive ? 'text - zion - cyan' : 'text - zion - slate - light'};
-                    />;
-              <div>;
-                <span className="font - medium">{item.label}</span>;
-                {item.description && (<p className="text - sm text - zion - slate - light mt - 1">{item.description}</p>) };
+  const toggleExpanded = (label: string) => {};
+        newSet.delete(label)} else {};
+        newSet.add(label)}
+      return newSet})}
+    setExpandedItems(new Set())}
+    if(path === '/') {}
+    return ()      <div key = {item.label} className="w-full">;
+        <div>Broken JSX</div>
+          className={`relative ${depth > 0 ? 'ml-4' : ''}`}
+          <div>Broken JSX</div>
+            onClick={() => handleNavigation(item.path)}`;
+            className={};
+}`}
+";
+            <div className="flex items-center gap-3">;
+              <div>Broken JSX</div>
+              />;
+              <div>";
+                <span className="font-medium">{item.label}</span>;
+                {};
+                  <p className="text-sm text-zion-slate-light mt-1">{item.description}</p>;
+                )}
               </div>;
             </div>;
             {hasChildren && (<ChevronDown;
@@ -273,18 +242,17 @@ const quickActions = [;
                 <div role="button" className="border - l border - zion - slate - light / 20 ml - 4">;
                   {item.children!.map (child => renderNavigationItem (child, depth + 1) ) };
                 </div>;
-              </motion.div>;) };
-          </AnimatePresence>;) };
-      </div>;) ;
-  };
-;
-  return (<>;
-      {/* Mobile Menu Toggle */};
-      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = { () => setIsOpen (true) };
-        className="lg:hidden p - 2 text - white hover:text - zion - cyan transition - colors focus:outline - none focus:ring - 2 focus:ring - zion - cyan / 50 rounded - lg";
-        aria - label="Open mobile navigation menu";
-;
-        <Menu size={24}       />;
+              </motion.div>;) }
+          </AnimatePresence>;) }
+      </div>;) }
+  return ();
+    <>;
+      {/* Mobile Menu Toggle */}
+      <div>Broken JSX</div>
+        onClick = {() => setIsOpen(true)}";
+        className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded-lg";
+
+        <Menu size={24}   />;
       </button>;
 ;
       {/* Mobile Navigation Overlay */};
@@ -326,12 +294,12 @@ const quickActions = [;
                   <X size={24}       />;
                 </button>;
               </div>;
-;
-              {/* Navigation Content */};
-              <div role="button" className="flex - 1 overflow - y-auto">;
-                {/* Quick Actions */};
-                <div role="button" className="p - 6 border - b border - zion - slate - light / 20">;
-                  <h3 className="text - sm font - semibold text - zion - slate - light uppercase tracking - wider mb - 4">;
+
+              {/* Navigation Content */}";
+              <div className="flex-1 overflow-y-auto">;
+                {/* Quick Actions */}";
+                <div className="p-6 border-b border-zion-slate-light/20">;";
+                  <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">;
                     Quick Actions;
                   </h3>;
                   <div role="button" className="grid grid - cols - 3 gap - 3">;
@@ -398,8 +366,9 @@ const quickActions = [;
                 </div>;
               </div>;
             </motion.div>;
-          </motion.div>;) };
+          </motion.div>;) }
       </AnimatePresence>;
-    </>;) ;
-};
-};
+    </>;
+  )}}
+'"`;
+}

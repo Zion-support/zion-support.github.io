@@ -3,41 +3,58 @@ export class EnhancedErrorBoundary extends Component < Props, State> {;
 import {;
 import { motion } from 'framer - motion';
 ;
+export default function Page() {};
+  return null;
+}
+-${Math.random().toString(36).substr(2, 9)}`}}
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {};
+    this.setState({ errorInfo });
+
+    // Log error to console';
+    // console.error('Error caught by boundary:', error, errorInfo);
+
+    // Call custom error handler if provided;
+    if(this.props.onError) {};
+      this.props.onError(error, errorInfo)}
+
+    // Send error to error reporting service;
+    this.reportError(error, errorInfo) }
+  private async reportError(error: Error, errorInfo: ErrorInfo) {};
+        method: 'POST',        headers: { 'Content-Type': 'application/json' },;
+        body: JSON.stringify(errorReport)})} catch(reportError) {};
+      // console.error('Failed to report error:', reportError)}  }
 ;
-  AlertTriangle,;
-  RefreshCw,;
-  Home,;
-  ArrowLeft,;
-  Bug,;
-  Send,;
-} from 'lucide - react';
+  private handleRetry = () => {};
+      reportSent: false})};
 ;
-interface Props {;
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  showReportButton?: boolean;
-};
+  private handleGoHome = () => {};
+    window.location.href = '/'};
 ;
-interface State {;
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
-  isReporting: boolean;
-  reportSent: boolean;
-};
+  private handleGoBack = () => {};
+    window.history.back () };
+  private handleReportError = async () => {};
+    this.setState({ isReporting: true });
 ;
-  constructor (props: Props) {;
-    super (props) ;
-    this.state = {;
-      hasError: false,;
-      error: null,;
-      errorInfo: null,;
-      errorId: null,;
-      isReporting: false,;
-      reportSent: false,;
-    };
+    try {};
+      this.setState({ reportSent: true });
+
+      // Reset report status after 3 seconds;
+      setTimeout(() => {};
+        this.setState({ reportSent: false }) }, 3000) } catch(error) {};
+      // console.error('Failed to report error:', error)} finally {};
+      this.setState({ isReporting: false })}  };
+;
+  private handleRetry = () => {};
+      isRecovering: true});
+;
+    // Force a re - render of children;
+    this.forceUpdate () };
+;
+  private handleGoHome = () => {};
+    window.location.href = '/'};
+  private handleCopyError = async : unknown {};
+} catch(err) {};
+        // console.error('Failed to copy error details:', err)}    }
   };
 ;
   static getDerivedStateFromError (error: Error) : Partial < State> {;
@@ -269,48 +286,26 @@ Timestamp: ${new Date () .toISOString () };
                 <span > Go Home</span>;
               </button>;
             </motion.div>;
-;
-            {/* Error Reporting */};
-            {this.props.showReportButton && (<motion.div;
-                initial={{ opacity: 0 }};
-                animate={{ opacity: 1 }};
-                transition={{ delay: 0.7 }};
-                className="mt - 6 pt - 6 border - t border - gray - 600";
-              >;
-                <p className="text - gray - 400 mb - 4">;
-                  Help us improve by reporting this error;
-                </p>;
-;
-                {!this.state.reportSent ? (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={this.handleReportError};
-                    disabled={this.state.isReporting};
-                    className="px - 6 py - 3 bg - green - 600 hover:bg - green - 700 disabled:bg - green - 800 text - white font - semibold rounded - lg transition - colors duration - 200 flex items - center space - x-2 mx - auto disabled:opacity - 50";
-                  >;
-                    {this.state.isReporting ? (<>;
-                        <RefreshCw className="w - 5 h - 5 animate - spin"       />;
-                        <span > Reporting...</span>;
-                      </>) : (<>;
-                        <Bug className="w - 5 h - 5"       />;
-                        <span > Report Error</span>;
-                      </>) };
-                  </button>) : (<div role="button" className="flex items - center justify - center space - x-2 text - green - 400">;
-                    <Send className="w - 5 h - 5"       />;
-                    <span > Error reported successfully!</span>;
-                  </div>) };
-              </motion.div>) };
-;
-            {/* Contact Information */};
-            <motion.div;
-              initial={{ opacity: 0 }};
-              animate={{ opacity: 1 }};
-              transition={{ delay: 0.8 }};
-              className="mt - 6 pt - 6 border - t border - gray - 600";
-            >;
-              <p className="text - gray - 400 text - sm">;
-                If this problem persists, please contact our support team at{' '};
-                <a;
-                  href="mailto:support@ziontechgroup.com";
-                  className="text - cyan - 400 hover:text - cyan - 300 underline";
-                >;
+
+            {/* Error Reporting */}
+            {};
+                    )}
+                  </button>;
+                ) : (";
+                  <div className="flex items-center justify-center space-x-2 text-green-400">";
+                    <Send className="w-5 h-5"  />                    <span>Error reported successfully!</span>;
+                  </div>;
+                )}
+              </motion.div>;
+            )}
+
+            {/* Contact Information */}
+            <div>Broken JSX</div>
+              className="mt-6 pt-6 border-t border-gray-600">";
+              <p className="text-gray-400 text-sm">;
+                If this problem persists, please contact our support team at{' '}
+                <div>Broken JSX</div>
+                  className="text-cyan-400 hover:text-cyan-300 underline">;
                   support@ziontechgroup.com;
                 </a>;
               </p>;

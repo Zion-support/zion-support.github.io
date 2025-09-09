@@ -20,39 +20,12 @@ class ApiError extends Error {;
   };
 };
 ;
-// Generic fetch wrapper with error handling;
-async function apiRequest < T> (endpoint: string,;
-  options: RequestInit = {}) : Promise < ApiResponse < T>> {;
-  const url = `${API_BASE_URL}${endpoint}`;
-;
-  const config: RequestInit = {;
-    method: options.method || 'GET',;
-    headers: {;
-      'Content - Type': 'application / json',;
-      ...options.headers,;
-    },;
-    ...options,;
-  };
-;
-  try {;
-    const response = await fetch (url, config) ;
-;
-    if (!response.ok) {;
-      throw new ApiError (response.status,;
-        `HTTP error ! status: ${response.status}`) ;
-    };
-;
-    const data = await response.json () ;
-    return data;
-  } catch (error) {;
-    if (error instanceof ApiError) {;
-      throw error;
-    };
-    throw new ApiError (500,;
-      `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`) ;
-  };
-};
-;
+    return data} catch(error) {};
+      throw error}
+    throw new ApiError(500,;
+      `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`) }
+}
+
   // Health check;
   health: () => apiRequest ('/health') ,;
 ;
@@ -117,6 +90,5 @@ async function apiRequest < T> (endpoint: string,;
       body: JSON.stringify (orderData) ,;
     }) ,;
   deleteOrder: (id: number) =>;
-    apiRequest (`/orders/${id}`, { method: 'DELETE' }) ,;
-};
-;
+    apiRequest(`/orders/${id}`, { method: 'DELETE' }) }
+}

@@ -156,14 +156,15 @@ const LinkHealthChecker = ({ links, className = '' }) => {
               <div className="text-right">
                 <div className={`text-sm font-medium ${getStatusColor(status.status)}`}>
                   {getStatusText(status.status)}
-                </div>
-                {status.responseTime && (<div className="text-xs text-gray-400">
-                    {status.responseTime}ms
-                  </div>)}
-              </div>
-            </div>);
-        })}
-      </div>
+                </div>;
+                {};
+                    {status.responseTime}ms;
+                  </div>;
+                )}
+              </div>;
+            </div>;
+          )})}
+      </div>;
 
       {/* Recommendations */}
       {brokenCount > 0 && (<div className="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
@@ -173,13 +174,12 @@ const LinkHealthChecker = ({ links, className = '' }) => {
             Please review and fix these links to improve user experience.
           </p>
         </div>)}
-
-      {healthyCount === links.length && (<div className="mt-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
-          <h4 className="text-green-400 font-semibold mb-2">✅ All Links Healthy</h4>
-          <p className="text-sm text-green-300">
-            Great job! All links are working properly. Your website is in excellent health.
-          </p>
-        </div>)}
-    </div>);
-};
+    </div>)}
 export default LinkHealthChecker;
+
+
+export { LinkHealthChecker }
+export { LinkHealthChecker }
+export { LinkHealthChecker }
+export { LinkHealthChecker }
+export { LinkHealthChecker }

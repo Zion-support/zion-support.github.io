@@ -102,13 +102,12 @@ title:  "Data Analytics Dashboard",;
       color: 'text - purple - 400';
     };
   ]) ;
-;
+
   // Simulate data refresh;
-  const refreshData = async () => {;
-    setIsLoading (true) ;
-    // Simulate API call;
-    await new Promise (resolve => setTimeout (resolve, 1000) ) ;
-;
+
+    setIsLoading(true) ;    // Simulate API call;
+    await new Promise(resolve => setTimeout (resolve, 1000) ) ;
+
     // Update chart data with new random values;
 setChartData (prev:  > ({;
       ...prev,;

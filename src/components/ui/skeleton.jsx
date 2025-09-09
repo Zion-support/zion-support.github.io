@@ -1,10 +1,14 @@
-import { cn } from "@/lib/utils";
-function Skeleton({ className, ...props }) {
-  return (
-    <div
-      className={cn('animate-pulse rounded-md bg-muted', className)}
-      {...props}
-          />
-  );
+import { cn } from '@/lib/utils';
+function Skeleton({ className, ...props }) {}
+  return null;
 }
-export { Skeleton };
+  return()';
+    <div>Broken JSX</div>
+    />;
+  )}
+export { Skeleton }
+export { Skeleton }
+export { Skeleton }
+export { Skeleton }
+export { Skeleton }
+export { Skeleton }

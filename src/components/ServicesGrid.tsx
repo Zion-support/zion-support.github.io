@@ -40,34 +40,29 @@ interface ServicesGridProps extends React.PropsWithChildren<{}> {;
               </h3>;
             </div>;
           </div>;
-;
-          <p className="text - gray - 400 mb - 6 leading - relaxed group - hover:text - gray - 300 transition - colors">;
-            {service.description};
+
+          <p className="text-gray-400 mb-6 leading-relaxed group-hover:text-gray-300 transition-colors">;
+            {service.description}
           </p>;
-;
-          <div className="grid grid - cols - 2 gap - 3 mb - 6">;
-            {service.features.map (feature => (<motion.div;
-                key={feature};
-                className="flex items - center space - x-2 text - sm text - gray - 300 group - hover:text - gray - 200 transition - colors";
-                whileHover={{ x: 5 }};
-                transition={{ duration: 0.2 }};
-              >;
-                <CheckCircle className="w - 4 h - 4 text - cyan - 400 flex - shrink - 0"       />;
+
+          <div className="grid grid-cols-2 gap-3 mb-6">;
+            {};
                 <span className="truncate">{feature}</span>;
-              </motion.div>) ) };
+              </div>;
+            ))}
           </div>;
-;
-          <Link;
-            to={service.href};
-            className="inline - flex items - center space - x-2 text - cyan - 400 hover:text - cyan - 300 transition - colors font - medium group / link";
-            aria - label={`Learn more about ${service.title}`};
+
+          <div>Broken JSX</div>
           >;
-            <span > Learn More</span>;
-            <motion.div className="group - hover / link:translate - x-1 transition - transform duration - 200">;
-              <ArrowRight className="w - 4 h - 4"       />;
-            </motion.div>;
+            <span>Learn More</span>;
+            <div className="group-hover/link:translate-x-1 transition-transform duration-200">;
+              <ArrowRight className="w-4 h-4" />;
+            </div>;
           </Link>;
-        </motion.div>) ) };
-    </div>) ;
-};
-;
+        </div>;
+      ))}
+    </div>;
+  )}
+
+export default ServicesGrid;
+}))

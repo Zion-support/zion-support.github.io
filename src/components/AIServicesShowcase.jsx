@@ -1,20 +1,67 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Code, 
-  Database, 
-  Zap, 
-  ArrowRight, 
-  CheckCircle, 
-  TrendingUp,
-  Shield,
-  Globe,
-  Cpu,
-  Network,
-  Bot
-} from 'lucide-react';
+import { motion, AnimatePresence  } from 'framer-motion';
+
+ from 'framer-motion';
+import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan import { Link  } from 'react-router-dom';
+,;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+            beta: { color: 'bg-yellow-500', text: 'Beta' },;
+            new: { color: 'bg-blue-500', text: 'New' }
+        }
+        const config = statusConfig[status];
+        return (<span className={`${config.color} text-white text-xs px-2 py-1 rounded-full font - medium`}>;
+        {config.text}
+      </span>) };
+    const containerVariants = {};
+        hidden: { opacity: 0 },;
+        visible: {};
+};
+    const itemVariants = {};
+},;
+        visible: {};
+};";
+    return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">;
+      {/* Enhanced background with animated gradients */}";
+      <div className="absolute inset-0">";
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20 animate-pulse"></div>";
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-bounce"></div>";
+        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-ping"></div>;
+      </div>;
+";
+      <div className="container mx-auto px-4 relative z-10">;
+        {/* Header Section */}";
+        <div>Broken JSX</div>
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>";
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6">";
+            <Zap className="w-5 h-5 text-purple-400"/>";
+            <span className="text-purple-300 font-medium">Latest AI Services</span>;
+          </div>;
+";
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">;
+            Discover the Future of";
+            <span className="block bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">;
+              Artificial Intelligence;
+            </span>;
+          </h2>;
+";
+          <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">;
+            Experience cutting-edge AI solutions designed to transform your business operations and drive innovation;
+          </p>";
+          <div className="mt-6">";
+            <Link to="/services" className="text-zion-cyan underline">Browse all services</Link>;
+          </div>;
+        </motion.div>;
 
 const aiServices = [
   {

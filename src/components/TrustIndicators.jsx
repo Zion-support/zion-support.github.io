@@ -79,58 +79,37 @@ export function TrustIndicators({ className, showStats = true, showCertification
                   </div>
                   <div className="text-zion-slate-light text-sm">
                     {stat.label}
-                  </div>
-                </div>))}
-            </div>
-          </div>)}
+                  </div>;
+                </div>) ) }
+            </div>;
+          </div>) }
 
-        {/* Certifications Section */}
-        {showCertifications && (<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <h3 className="text-2xl font-bold text-white text-center mb-8">
-              Certifications & Compliance
-            </h3>
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">
-              {certifications.map ( (cert, index) => (<div key={index} className="text - center p - 4 bg - white / 5 rounded - lg border border - white / 10">
-                  <div className="w - 12 h - 12 bg - zion - cyan / 20 rounded - full flex items - center justify - center mx - auto mb - 3">
-                    <CheckCircle className="w - 6 h - 6 text - zion - cyan"      />
-                  </div>
-                  <h4 className="font-semibold text-white mb-1">{cert.name}</h4>
-                  <div className="text-zion-cyan text-sm font-medium mb-1">{cert.status}</div>
-                  <div className="text-zion-slate-light text-xs">{cert.year}</div>
+        {/* Certifications Section */}";
+        {};
+              {certifications.map((cert, index) => (<div key={index} className="text-center p-4 bg-white/5 rounded-lg border border-white/10">";
+                  <div className="w-12 h-12 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-3">";
+                    <CheckCircle className="w-6 h-6 text-zion-cyan"/>;
+                  </div>";
+                  <h4 className="font-semibold text-white mb-1">{cert.name}</h4>";
+                  <div className="text-zion-cyan text-sm font-medium mb-1">{cert.status}</div>";
+                  <div className="text-zion-slate-light text-xs">{cert.year}</div>;
                 </div>))}
-            </div>
-          </div>)}
+            </div>;
+          </div>) }
 
-        {/* Customer Testimonials Preview */}
-        <div className="mt - 16 text - center">
-          <div className="flex justify - center items - center gap - 2 mb - 4">
-            {[...Array (5) ].map ( (_, i) => (<Star key={i} className="w - 5 h - 5 text - yellow - 400 fill - current"      />) ) }
-          </div>
-          <p className="text-zion-slate-light mb-2">
-            "Zion Tech Group has transformed how we source tech talent. The platform's security and reliability give us complete confidence."
-          </p>
-          <p className="text-white font-medium">- Sarah Chen, CTO at TechCorp</p>
-        </div>
-      </div>
-    </section>);
-}
-// Compact version for smaller spaces
-    return (<div className={`flex flex - wrap justify - center gap - 6 ${className || ''}`}>
-      <div className="flex items - center gap - 2 text - zion - cyan text - sm">
-        <Shield className="w - 4 h - 4"      />
-        <span > SOC 2 Certified</span>
-      </div>
-      <div className="flex items - center gap - 2 text - zion - purple text - sm">
-        <Lock className="w - 4 h - 4"      />
-        <span > GDPR Compliant</span>
-      </div>
-      <div className="flex items - center gap - 2 text - zion - cyan text - sm">
-        <Users className="w - 4 h - 4"      />
-        <span > 10K + Verified</span>
-      </div>
-      <div className="flex items - center gap - 2 text - zion - purple text - sm">
-        <Zap className="w - 4 h - 4"      />
-        <span > 99.9% Uptime</span>
-      </div>
-    </div>);
+        {/* Customer Testimonials Preview */}";
+        <div className="mt-16 text-center">";
+          <div className="flex justify-center items-center gap-2 mb-4">";
+            {[...Array(5)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current"/>))}
+          </div>";
+          <p className="text-zion-slate-light mb-2">'";
+            "Zion Tech Group has transformed how we source tech talent.The platform's security and reliability give us complete confidence.";
+          </p>";
+          <p className="text-white font-medium">- Sarah Chen, CTO at TechCorp</p>;
+        </div>;
+      </div>;
+    </section>) }
+// Compact version for smaller spaces;
+export function TrustIndicatorsCompact({ className }) {};
+  return null;
 }
