@@ -14,6 +14,9 @@ import AccessibilityEnhancements from './components/AccessibilityEnhancements';
 import PerformanceOptimizations from './components/PerformanceOptimizations';
 import { NotificationToast } from './components/NotificationToast';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import OptimizedSuspense from './components/OptimizedSuspense';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import { bundleOptimizer } from './utils/bundleOptimizer';
 import './App.css';
 
 // Create QueryClient instance with optimized settings
@@ -87,6 +90,8 @@ const App = memo(() => {
   // Setup global error handling
   useEffect(() => {
     setupGlobalErrorHandling();
+    // Initialize bundle optimization
+    bundleOptimizer.preloadCriticalResources();
   }, []);
 
   return (
@@ -106,7 +111,7 @@ const App = memo(() => {
                     
                     <div className="min-h-screen bg-background text-foreground" id="main-content">
                       <PerformanceOptimizations>
-                        <Suspense fallback={<LoadingSpinner />}>
+                        <OptimizedSuspense>
                           <Routes>
                             {/* Main Routes */}
                             <Route path="/" element={<Home />} />
@@ -160,13 +165,14 @@ const App = memo(() => {
                             {/* 404 Route */}
                             <Route path="*" element={<NotFound />} />
                           </Routes>
-                        </Suspense>
+                        </OptimizedSuspense>
                       </PerformanceOptimizations>
                     </div>
                   </PerformanceWrapper>
                 </Router>
                 <NotificationToast />
                 <PerformanceMonitor />
+                <PerformanceDashboard />
               </AccessibilityEnhancements>
             </AccessibilityEnhancer>
           </ThemeProvider>

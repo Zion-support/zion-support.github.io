@@ -11,7 +11,8 @@ export default defineConfig(({ mode }) => ({
       // Optimize JSX runtime
       jsxRuntime: 'automatic',
     }),
-  ],
+    // Bundle analyzer would go here if needed
+  ].filter(Boolean),
   build: {
     // Output directory for Netlify compatibility
     outDir: 'dist',
