@@ -1,63 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable React strict mode for better development experience
-  reactStrictMode: true,
-  
-  // Enable experimental features for better performance
   experimental: {
-    // Enable modern JavaScript features
-    esmExternals: true,
-    
-    // Enable optimized package imports
-    optimizePackageImports: ['framer-motion', 'lucide-react'],
+    serverComponentsExternalPackages: ['@prisma/client'],
   },
-
-  // Image optimization
   images: {
-    domains: ['ziontechgroup.com'],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    domains: ['localhost', 'ziontechgroup.com'],
+    unoptimized: true,
   },
-
-  // Webpack configuration for performance
-  webpack: (config, { dev, isServer }) => {
-    // Optimize bundle splitting
-    if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-          common: {
-            name: 'common',
-            minChunks: 2,
-            chunks: 'all',
-            enforce: true,
-          },
-        },
-      };
-    }
-
-    // Optimize for production
-    if (!dev) {
-      config.optimization.minimize = true;
-      config.optimization.minimizer = config.optimization.minimizer || [];
-    }
-
-    return config;
-  },
-
-  // Headers for security and performance
   async headers() {
     return [
       {
         source: '/(.*)',
         headers: [
-          // Security headers
           {
             key: 'X-Frame-Options',
             value: 'DENY',
@@ -78,8 +32,11 @@ const nextConfig = {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
           },
-          
-          // Performance headers
+        ],
+      },
+      {
+        source: '/_next/static/(.*)',
+        headers: [
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
@@ -87,16 +44,7 @@ const nextConfig = {
         ],
       },
       {
-        source: '/api/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'no-cache, no-store, must-revalidate',
-          },
-        ],
-      },
-      {
-        source: '/(.*).(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)',
+        source: '/logos/(.*)',
         headers: [
           {
             key: 'Cache-Control',
@@ -106,59 +54,66 @@ const nextConfig = {
       },
     ];
   },
-
-  // Redirects for better SEO
   async redirects() {
     return [
       {
-        source: '/home',
-        destination: '/',
-        permanent: true,
+        source: '/services',
+        destination: '/services',
+        permanent: false,
       },
       {
-        source: '/index.html',
-        destination: '/',
-        permanent: true,
+        source: '/about',
+        destination: '/about',
+        permanent: false,
+      },
+      {
+        source: '/contact',
+        destination: '/contact',
+        permanent: false,
+      },
+      {
+        source: '/blog',
+        destination: '/blog',
+        permanent: false,
+      },
+      {
+        source: '/talent',
+        destination: '/talent',
+        permanent: false,
+      },
+      {
+        source: '/autonomy',
+        destination: '/autonomy',
+        permanent: false,
+      },
+      {
+        source: '/products',
+        destination: '/products',
+        permanent: false,
       },
     ];
   },
-
-  // Rewrites for API routes
   async rewrites() {
     return [
       {
-        source: '/api/analytics',
-        destination: '/api/analytics',
-      },
-      {
-        source: '/api/error-reporting',
-        destination: '/api/error-reporting',
+        source: '/api/:path*',
+        destination: '/api/:path*',
       },
     ];
   },
-
-  // Environment variables
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Add custom webpack configuration here if needed
+    return config;
+  },
   env: {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
   },
-
-  // Compression
-  compress: true,
-
-  // Powered by header
   poweredByHeader: false,
-
-  // Trailing slash
-  trailingSlash: false,
-
-  // Base path
-  basePath: '',
-
-  // Asset prefix
-  assetPrefix: '',
-
-  // Output configuration
-  output: 'standalone',
+  compress: true,
+  generateEtags: true,
+  httpAgentOptions: {
+    keepAlive: true,
+  },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
