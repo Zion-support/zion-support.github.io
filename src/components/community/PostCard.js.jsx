@@ -1,5 +1,21 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-const PostCard = () => {
-    return (_jsx("div", { className: "bg-zion-blue-dark/50 backdrop-blur-sm rounded-xl p-6 border border-zion-blue-light/30", children: _jsxs("div", { className: "text-center", children: [_jsx("h3", { className: "text-xl font-semibold text-white mb-4", children: "Post Card" }), _jsx("p", { className: "text-zion-slate-light", children: "Coming soon - post cards will be displayed here." })] }) }));
-};
-export default PostCard;
+import React from 'react';
+export default function PostCard({ post }) {
+    return (<div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4">
+      <div className="flex items-start space-x-4">
+        <img src={post.author.avatar} alt={post.author.name} className="w-10 h-10 rounded-full"/>
+        <div className="flex-1">
+          <h3 className="text-lg font-semibold text-zion-cyan mb-2">{post.title}</h3>
+          <p className="text-zion-slate-light mb-3 line-clamp-3">{post.content}</p>
+          <div className="flex items-center justify-between text-sm text-zion-slate-light">
+            <span>By {post.author.name}</span>
+            <span>{new Date(post.createdAt).toLocaleDateString()}</span>
+          </div>
+          <div className="flex items-center space-x-4 mt-2 text-sm text-zion-slate-light">
+            <span>{post.replies.length} replies</span>
+            <span>{post.likes} likes</span>
+            <span>{post.views} views</span>
+          </div>
+        </div>
+      </div>
+    </div>);
+}

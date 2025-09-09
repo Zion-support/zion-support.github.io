@@ -36,16 +36,61 @@ const benefits: Benefit[] = [
   }
 ];
 
-export default function BenefitsSection() {
+const additionalStats = [
+  { icon: <Star className="w-6 h-6" />, value: "4.9/5", label: "Customer Rating" },
+  { icon: <Award className="w-6 h-6" />, value: "50+", label: "Industry Awards" },
+  { icon: <Globe className="w-6 h-6" />, value: "100+", label: "Countries Served" },
+  { icon: <Lock className="w-6 h-6" />, value: "1000+", label: "Projects Completed" }
+];
+
+export function BenefitsSection() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const statsVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.4,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-<<<<<<< HEAD
-    <section className="py-20 bg-gradient-to-br from-zion-blue-light to-zion-blue">
-      <div className="container mx-auto px-4">
-=======
-    <section className="py-20 bg-zion-blue-light">
-      <div className="container mx-auto px-4">
-        {/* Header */}
->>>>>>> main
+    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
+        <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -53,31 +98,15 @@ export default function BenefitsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-<<<<<<< HEAD
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
-            Why Choose Zion Tech Group?
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            Why Choose <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Zion</span>
           </h2>
-          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
+          <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto leading-relaxed">
             Experience the next generation of tech marketplace with features designed to maximize efficiency and value
           </p>
         </motion.div>
-        
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-=======
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-            Why Choose Zion Tech Group?
-          </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Experience the next generation of tech solutions with features designed to maximize efficiency and value
-          </p>
-        </motion.div>
 
-        {/* Benefits Grid */}
+        {/* Additional Stats */}
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
           variants={containerVariants}
@@ -86,6 +115,22 @@ export default function BenefitsSection() {
           viewport={{ once: true }}
 >>>>>>> main
         >
+          {additionalStats.map((stat, index) => (
+            <motion.div
+              key={index}
+              variants={statsVariants}
+              className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
+            >
+              <div className="text-zion-cyan mb-2 flex justify-center">
+                {stat.icon}
+              </div>
+              <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+              <div className="text-zion-slate-light text-sm">{stat.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
@@ -201,7 +246,7 @@ export default function BenefitsSection() {
               <div className="text-lg font-semibold mb-2 text-white">{stat.label}</div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Call to action */}
         <motion.div 
@@ -223,3 +268,5 @@ export default function BenefitsSection() {
     </section>
   );
 }
+
+

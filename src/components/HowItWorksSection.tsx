@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Step {
   icon: React.ReactNode;
@@ -21,93 +22,43 @@ interface Stat {
 
 const steps: Step[] = [
   {
-    icon: <Search className="w-8 h-8" />,
-    title: "Discover",
-    description: "Browse our comprehensive catalog of services, talent, and solutions",
-    color: "from-zion-cyan to-zion-cyan-dark",
-    bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
-    details: [
-      "AI-powered search and filtering",
-      "Curated service categories",
-      "Expert talent matching",
-      "Real-time availability"
-    ],
-    duration: "1-2 hours",
-    success: "95% match rate"
+    number: '01',
+    title: 'Discovery & Assessment',
+    description: 'We begin by understanding your business needs, current infrastructure, and goals for transformation.',
+    icon: '🔍',
+    color: 'from-blue-500 to-cyan-500'
   },
   {
-    icon: <Users className="w-8 h-8" />,
-    title: "Connect",
-    description: "Get matched with the perfect team or service for your project",
-    color: "from-zion-purple to-zion-purple-dark",
-    bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
-    details: [
-      "Smart matching algorithm",
-      "Profile verification",
-      "Portfolio review",
-      "Direct communication"
-    ],
-    duration: "2-4 hours",
-    success: "98% satisfaction"
+    number: '02',
+    title: 'Strategy & Planning',
+    description: 'Our experts develop a comprehensive roadmap tailored to your specific requirements and timeline.',
+    icon: '📋',
+    color: 'from-purple-500 to-pink-500'
   },
   {
-    icon: <FileText className="w-8 h-8" />,
-    title: "Plan",
-    description: "Collaborate on project requirements, timeline, and deliverables",
-    color: "from-zion-blue to-zion-blue-dark",
-    bgColor: "from-zion-blue/20 to-zion-blue-dark/20",
-    details: [
-      "Interactive project planning",
-      "Timeline optimization",
-      "Resource allocation",
-      "Risk assessment"
-    ],
-    duration: "4-8 hours",
-    success: "90% on-time delivery"
+    number: '03',
+    title: 'Implementation',
+    description: 'We execute the plan with precision, ensuring minimal disruption to your ongoing operations.',
+    icon: '⚙️',
+    color: 'from-green-500 to-emerald-500'
   },
   {
-    icon: <Rocket className="w-8 h-8" />,
-    title: "Execute",
-    description: "Watch your vision come to life with our expert execution",
-    color: "from-zion-cyan-light to-zion-cyan",
-    bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
-    details: [
-      "Agile development process",
-      "Regular progress updates",
-      "Quality assurance",
-      "Performance monitoring"
-    ],
-    duration: "1-4 weeks",
-    success: "99% quality score"
+    number: '04',
+    title: 'Testing & Optimization',
+    description: 'Rigorous testing and performance optimization to ensure everything works flawlessly.',
+    icon: '🧪',
+    color: 'from-yellow-500 to-orange-500'
   },
   {
-    icon: <CheckCircle className="w-8 h-8" />,
-    title: "Deliver",
-    description: "Receive your completed project with ongoing support and maintenance",
-    color: "from-zion-purple-light to-zion-purple",
-    bgColor: "from-zion-purple-light/20 to-zion-purple/20",
-    details: [
-      "Comprehensive testing",
-      "Documentation delivery",
-      "Training and handover",
-      "Post-launch support"
-    ],
-    duration: "Ongoing",
-    success: "100% client retention"
+    number: '05',
+    title: 'Launch & Support',
+    description: 'Go-live with confidence, backed by our ongoing support and maintenance services.',
+    icon: '🚀',
+    color: 'from-red-500 to-pink-500'
   }
 ];
 
-const stats: Stat[] = [
-  { icon: <Clock className="w-6 h-6" />, value: "3x Faster", label: "Project Delivery" },
-  { icon: <Target className="w-6 h-6" />, value: "99.9%", label: "Success Rate" },
-  { icon: <TrendingUp className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },
-  { icon: <Award className="w-6 h-6" />, value: "1000+", label: "Projects Completed" }
-];
-
-export default function HowItWorksSection() {
-  const [hoveredStep, setHoveredStep] = useState<number | null>(null);
-  const [activeStep, setActiveStep] = useState<number>(0);
-
+export function HowItWorksSection() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -118,31 +69,22 @@ export default function HowItWorksSection() {
       }
     }
   };
-<<<<<<< HEAD
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { y: 30, opacity: 0 },
     visible: {
-      opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
-  };
-=======
->>>>>>> main
-
-  const statsVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
       opacity: 1,
-      scale: 1,
-      transition: { duration: 0.5, ease: "easeOut" }
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
     }
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
-      {/* Enhanced background pattern */}
+    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark relative overflow-hidden">
+      {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
@@ -150,159 +92,95 @@ export default function HowItWorksSection() {
         }} />
       </div>
 
-      {/* Floating decorative elements */}
-      <div className="absolute inset-0">
-        <motion.div 
-          className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
-          animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div 
-          className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30"
-          animate={{ rotate: -360 }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div 
-          className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20"
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
-          className="text-center mb-20"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            How It <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Works</span>
+            How We <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Work</span>
           </h2>
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
-            Our streamlined process ensures your project success from concept to completion. 
-            Experience the Zion difference with our proven methodology.
+            Our proven methodology ensures successful project delivery and maximum value for your business. 
+            We follow a systematic approach that guarantees results.
           </p>
         </motion.div>
-
-        {/* Stats section */}
-        <motion.div 
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {stats.map((stat, index) => (
-            <motion.div 
-              key={index} 
-              variants={statsVariants}
-              className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
-            >
-              <div className="text-zion-cyan mb-2 flex justify-center">
-                {stat.icon}
-              </div>
-              <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-              <div className="text-zion-slate-light text-sm">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
         
-        <motion.div 
-          className="relative"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {/* Enhanced connection line */}
-          <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden lg:block">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
-          </div>
-
-          {/* Steps grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative">
+        <div className="relative">
+          {/* Connection line */}
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan transform -translate-y-1/2 z-0"></div>
+          
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {steps.map((step, index) => (
-              <motion.div
-                key={index}
+              <motion.div 
+                key={index} 
+                className="text-center group"
                 variants={itemVariants}
-                className="relative group"
-                onHoverStart={() => setHoveredStep(index)}
-                onHoverEnd={() => setHoveredStep(null)}
-                onClick={() => setActiveStep(index)}
+                whileHover={{ y: -8 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
-                {/* Step number */}
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white font-bold text-sm z-10">
-                  {index + 1}
-                </div>
-
-                {/* Step card */}
-                <div className={`h-full p-6 rounded-2xl border-2 transition-all duration-500 cursor-pointer ${
-                  hoveredStep === index || activeStep === index
-                    ? 'border-zion-cyan shadow-2xl shadow-zion-cyan/25 bg-white/20'
-                    : 'border-white/20 bg-white/10 hover:border-zion-cyan/50'
-                }`}>
+                <div className="relative">
+                  {/* Step number background */}
+                  <div className={`w-20 h-20 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-xl`}>
+                    {step.number}
+                  </div>
+                  
                   {/* Icon */}
-                  <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r ${step.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
-                    <div className="text-white">
-                      {step.icon}
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                      {step.title}
-                    </h3>
-                    <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
-                      {step.description}
-                    </p>
-
-                    {/* Details */}
-                    <div className="space-y-2 mb-4">
-                      {step.details.map((detail, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs">
-                          <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
-                          <span>{detail}</span>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Stats */}
-                    <div className="grid grid-cols-2 gap-2 text-xs">
-                      <div className="text-center">
-                        <div className="text-zion-cyan font-semibold">{step.duration}</div>
-                        <div className="text-zion-slate-light/60">Duration</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-zion-cyan font-semibold">{step.success}</div>
-                        <div className="text-zion-slate-light/60">Success</div>
-                      </div>
-                    </div>
+                  <div className="w-16 h-16 bg-zion-slate-dark rounded-full flex items-center justify-center text-3xl mx-auto mb-4 shadow-md border-2 border-zion-cyan/20 group-hover:border-zion-cyan/40 transition-all duration-300">
+                    {step.icon}
                   </div>
                 </div>
+                
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                  {step.title}
+                </h3>
+                
+                <p className="text-zion-slate-light text-sm leading-relaxed">
+                  {step.description}
+                </p>
               </motion.div>
             ))}
-          </div>
-        </motion.div>
-
-        {/* CTA Section */}
+          </motion.div>
+        </div>
+        
         <motion.div 
-          className="text-center mt-20"
+          className="text-center mt-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
-            <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
-              <p className="text-white text-lg mb-4">
-                Ready to start your project?
-              </p>
-              <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
-                Get Started Today
-              </button>
+          <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h3>
+            <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
+              Our team is ready to guide you through every step of your digital transformation journey
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-300 shadow-lg hover:shadow-zion-cyan/25"
+              >
+                Schedule Consultation
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-3 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+              >
+                View Our Services
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
             </div>
           </div>
         </motion.div>

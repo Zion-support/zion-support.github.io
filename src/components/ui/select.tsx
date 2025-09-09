@@ -39,7 +39,7 @@ export interface SelectTriggerProps
 
 export function SelectItem({ children, value }: SelectItemProps) {
   return (
-    <option value={value} className="bg-zion-slate-dark text-white">
+    <option value={value}>
       {children}
     </option>
   )

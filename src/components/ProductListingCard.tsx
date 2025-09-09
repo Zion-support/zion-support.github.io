@@ -6,6 +6,10 @@ import { Button } from "@/components/ui/Button";
 import { ProductListing } from "@/types/listings";
 import { Star, DollarSign } from "lucide-react";
 import { FavoriteButton } from "@/components/FavoriteButton";
+import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem } from '@/store/cartSlice';
+// Regular img tag will be used instead of next/image
 
 interface ProductListingCardProps {
   listing: ProductListing;
@@ -98,10 +102,21 @@ export function ProductListingCard({
       tabIndex={0}
     >
       {/* Image */}
-      <div className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'} onClick={handleViewListing}>
-        <div className={`relative ${isGrid ? 'h-48' : 'h-32 w-48'}`}>
+      <div
+        className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+        onClick={handleViewListing} // Keep existing onClick for navigation
+        role="button"
+        tabIndex={-1} // Remove from tab order as parent is focusable
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleViewListing();
+          }
+        }}
+      >
+        <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
           <img
-            src={imageUrl}
+            src={imageSrc}
             alt={listing.title}
             className="w-full h-full object-cover"
             onError={handleImageError}
@@ -202,4 +217,8 @@ export function ProductListingCard({
       </div>
     </div>
   );
-}
+};
+
+const MemoizedProductListingCard = React.memo(ProductListingCard);
+MemoizedProductListingCard.displayName = 'ProductListingCard';
+export default MemoizedProductListingCard;

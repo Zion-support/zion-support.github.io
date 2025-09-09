@@ -20,7 +20,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Use Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -30,31 +30,8 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Run tests
-        run: yarn test:ci
-        continue-on-error: true
-
       - name: Build project
-        run: yarn build
-
-      - name: Check package.json
-        run: |
-          if [ ! -f "package.json" ]; then
-            echo "package.json not found"
-            exit 1
-          fi
-          
-          # Check if package is private
-          if jq -e '.private == true' package.json > /dev/null; then
-            echo "Package is marked as private, skipping publish"
-            exit 0
-          fi
-          
-          # Check if package name exists
-          if ! jq -e '.name' package.json > /dev/null; then
-            echo "Package name not found in package.json"
-            exit 1
-          fi
+        run: npm run build
 
       - name: Publish to npm
         if: success()

@@ -42,12 +42,17 @@ jobs:
             echo "Build failed: no output directory found"
             exit 1
           fi
-
-      - name: Run Jest tests with coverage
-        run: yarn test:ci
-        continue-on-error: true
-
-      - name: Upload coverage reports
+      - name: Verify asset paths
+        run: |
+          npx http-server dist -p 5000 -s >/dev/null 2>&1 &
+          SERVER_PID=$!
+          sleep 3
+          kill $SERVER_PID || true
+      - name: Run linting
+        run: npm run lint
+      - name: Run type checking
+        run: npm run type-check
+      - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report

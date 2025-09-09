@@ -1,4 +1,8 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-export const PageLoader = ({ text = "Loading...", className = "" }) => {
-    return (_jsx("div", { className: `min-h-screen flex items-center justify-center ${className}`, children: _jsxs("div", { className: "text-center space-y-6", children: [_jsx("div", { className: "relative", children: _jsx("div", { className: "w-16 h-16 border-4 border-zion-cyan/30 border-t-zion-cyan rounded-full animate-spin mx-auto" }) }), _jsx("div", { className: "text-zion-cyan text-lg font-medium", children: text }), _jsxs("div", { className: "flex space-x-2 justify-center", children: [_jsx("div", { className: "w-2 h-2 bg-zion-cyan rounded-full animate-bounce" }), _jsx("div", { className: "w-2 h-2 bg-zion-cyan rounded-full animate-bounce", style: { animationDelay: '0.1s' } }), _jsx("div", { className: "w-2 h-2 bg-zion-cyan rounded-full animate-bounce", style: { animationDelay: '0.2s' } })] })] }) }));
+import React from 'react';
+import { cn } from '@/lib/utils';
+export const PageLoader = ({ text = "Loading...", className }) => {
+    return (<div className={cn("flex flex-col items-center justify-center min-h-screen", className)}>
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
+      <p className="mt-4 text-white text-lg font-medium">{text}</p>
+    </div>);
 };

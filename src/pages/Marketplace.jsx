@@ -5,7 +5,7 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { FilterSidebar } from "@/components/search/FilterSidebar";
 import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar";
 import { ProductListingCard } from "@/components/ProductListingCard";
-import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData";
+import { marketplaceData, filterOptions } from "@/data/marketplaceData";
 import { generateRandomListing } from "@/utils/generateRandomListing";
 import { toast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
@@ -17,7 +17,7 @@ export default function Marketplace() {
     const [selectedLocations, setSelectedLocations] = useState([]);
     const [selectedAvailability, setSelectedAvailability] = useState([]);
     const [selectedRating, setSelectedRating] = useState(null);
-    const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
+    const [listings, setListings] = useState(marketplaceData);
     const [isLoading, setIsLoading] = useState(false);
     const [view, setView] = useState(() => localStorage.getItem('marketplaceView') || 'grid');
     // Automatically append a new listing every 2 minutes
@@ -27,8 +27,8 @@ export default function Marketplace() {
         }, 120000); // 2 minutes
         return () => clearInterval(interval);
     }, []);
-    const searchSuggestions = generateSearchSuggestions();
-    const filterOptions = useMemo(() => generateFilterOptions(listings), [listings]);
+    const searchSuggestions = ['AI', 'Cybersecurity', 'Cloud', 'Machine Learning', 'IoT', 'Consulting'];
+    const filterOptionsData = useMemo(() => filterOptions, []);
     useEffect(() => {
         setIsLoading(true);
         const timeout = setTimeout(() => setIsLoading(false), 300);
@@ -141,7 +141,7 @@ export default function Marketplace() {
             selectedLocations,
             selectedAvailability,
             selectedRating
-        }} filterOptions={filterOptions} onFilterChange={handleFilterChange} onRatingChange={setSelectedRating} onClearFilters={clearAllFilters}/>
+        }} filterOptions={filterOptionsData} onFilterChange={handleFilterChange} onRatingChange={setSelectedRating} onClearFilters={clearAllFilters}/>
           </div>
           
           {/* Main content */}

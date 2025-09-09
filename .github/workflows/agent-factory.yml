@@ -122,27 +122,25 @@ jobs:
             exit 0
           fi
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install linkinator
+        run: npm install -g linkinator
       - name: Run crawler (linkinator) on shard
         run: |
           set -e
           urls=$(paste -sd' ' shard_urls.txt || true)
-          
           if [ -z "$urls" ]; then 
-            echo '{}' > report.json
+            echo '{"links":[]}' > report.json
             exit 0
           fi
           
-          echo "Running linkinator on $urls"
-          
           # Run linkinator with error handling
-          npx --yes linkinator $urls \
-            --recurse \
-            --concurrency 10 \
-            --skip '.*(logout|signout|admin).*' \
-            --format json > report.json 2>/dev/null || {
+          if ! npx linkinator $urls --recurse --concurrency 20 --skip '.*(logout|signout).*' --format json > report.json 2>/dev/null; then
             echo "Linkinator failed, creating empty report"
-            echo '{}' > report.json
-          }
+            echo '{"links":[]}' > report.json
+          fi
 
       - name: Generate report
         run: |

@@ -1,78 +1,76 @@
 import React from 'react';
-import { AlertCircle, CheckCircle, Info, X } from 'lucide-react';
+import { AlertCircle, CheckCircle, Info, XCircle, AlertTriangle } from 'lucide-react';
 
 interface AlertProps {
-  variant?: 'default' | 'destructive' | 'success' | 'info';
+  variant?: 'default' | 'destructive' | 'success' | 'warning' | 'info';
+  title?: string;
   children: React.ReactNode;
   className?: string;
-  onClose?: () => void;
 }
 
-const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
-  ({ variant = 'default', children, className = '', onClose, ...props }, ref) => {
-    const baseClasses = 'relative w-full rounded-lg border p-4';
-    
-    const variantClasses = {
-      default: 'bg-background text-foreground border-border',
-      destructive: 'border-destructive/50 text-destructive bg-destructive/10',
-      success: 'border-green-500/50 text-green-700 bg-green-50',
-      info: 'border-blue-500/50 text-blue-700 bg-blue-50'
-    };
+const alertVariants = {
+  default: {
+    container: 'bg-zion-slate-dark/50 border-zion-cyan/20 text-zion-slate-light',
+    icon: 'text-zion-cyan',
+    title: 'text-white'
+  },
+  destructive: {
+    container: 'bg-red-500/10 border-red-500/20 text-red-400',
+    icon: 'text-red-500',
+    title: 'text-red-100'
+  },
+  success: {
+    container: 'bg-green-500/10 border-green-500/20 text-green-400',
+    icon: 'text-green-500',
+    title: 'text-green-100'
+  },
+  warning: {
+    container: 'bg-yellow-500/10 border-yellow-500/20 text-yellow-400',
+    icon: 'text-yellow-500',
+    title: 'text-yellow-100'
+  },
+  info: {
+    container: 'bg-blue-500/10 border-blue-500/20 text-blue-400',
+    icon: 'text-blue-500',
+    title: 'text-blue-100'
+  }
+};
 
-    const iconMap = {
-      default: Info,
-      destructive: AlertCircle,
-      success: CheckCircle,
-      info: Info
-    };
+const alertIcons = {
+  default: AlertCircle,
+  destructive: XCircle,
+  success: CheckCircle,
+  warning: AlertTriangle,
+  info: Info
+};
 
-    const Icon = iconMap[variant];
+export function Alert({ variant = 'default', title, children, className = '' }: AlertProps) {
+  const variantStyles = alertVariants[variant];
+  const IconComponent = alertIcons[variant];
 
-    return (
-      <div
-        ref={ref}
-        className={`${baseClasses} ${variantClasses[variant]} ${className}`}
-        {...props}
-      >
-        <div className="flex items-start">
-          <Icon className="h-4 w-4 mt-0.5 mr-2 flex-shrink-0" />
-          <div className="flex-1">{children}</div>
-          {onClose && (
-            <button
-              onClick={onClose}
-              className="ml-2 text-current opacity-70 hover:opacity-100"
-            >
-              <X className="h-4 w-4" />
-            </button>
+  return (
+    <div className={`border rounded-lg p-4 ${variantStyles.container} ${className}`}>
+      <div className="flex items-start gap-3">
+        <IconComponent className={`w-5 h-5 mt-0.5 flex-shrink-0 ${variantStyles.icon}`} />
+        <div className="flex-1">
+          {title && (
+            <h5 className={`font-medium mb-1 ${variantStyles.title}`}>
+              {title}
+            </h5>
           )}
+          <div className="text-sm">
+            {children}
+          </div>
         </div>
       </div>
-    );
-  }
-);
+    </div>
+  );
+}
 
-Alert.displayName = 'Alert';
-
-const AlertTitle = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLHeadingElement>>(
-  ({ className = '', ...props }, ref) => (
-    <h5
-      ref={ref}
-      className={`mb-1 font-medium leading-none tracking-tight ${className}`}
-      {...props}
-    />
-  )
-);
-AlertTitle.displayName = 'AlertTitle';
-
-const AlertDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(
-  ({ className = '', ...props }, ref) => (
-    <div
-      ref={ref}
-      className={`text-sm [&_p]:leading-relaxed ${className}`}
-      {...props}
-    />
-  )
-);
-AlertDescription.displayName = 'AlertDescription';
-
-export { Alert, AlertTitle, AlertDescription };
+export function AlertDescription({ children, className = '' }: { children: React.ReactNode; className?: string }) {
+  return (
+    <div className={`text-sm ${className}`}>
+      {children}
+    </div>
+  );
+}
