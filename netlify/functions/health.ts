@@ -7,5 +7,5 @@ export const handler: Handler = async () => {
     body: JSON.stringify({ ok: true, service: 'health', timestamp: Date.now() }),
   }
 }
-
+;
 ;
