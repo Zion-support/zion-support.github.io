@@ -131,10 +131,12 @@ try {
         console.log('  ❌ Build command not configured');
     }
     
-    if (netlifyToml.includes('NODE_VERSION = "20"')) {
-        console.log('  ✅ Node version configured');
+    // Accept any Node 20.x declaration (e.g., 20, 20.19.0)
+    const node20Regex = /NODE_VERSION\s*=\s*"20(\.|"|$)/;
+    if (node20Regex.test(netlifyToml)) {
+        console.log('  ✅ Node version configured (20.x)');
     } else {
-        console.log('  ❌ Node version not configured');
+        console.log('  ❌ Node version not configured to 20.x');
     }
 } catch (error) {
     console.log('  ❌ Could not read netlify.toml');
