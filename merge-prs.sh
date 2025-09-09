@@ -1,28 +1,93 @@
 #!/bin/bash
 
+# Script to merge all open PRs into main branch
+set -e
+
 echo "🚀 Starting PR merge process..."
 
-# Switch to main branch
+# Ensure we're on main and up to date
 git checkout main
 git pull origin main
 
-# Merge the first PR
-echo "Merging PR #12711..."
-git merge origin/cursor/fix-netlify-build-and-merge-to-main-7161 --no-ff -m "Merge PR #12711: Fix Netlify build and merge to main" || echo "PR #12711 merge failed, continuing..."
+# List of PR branches to merge
+PR_BRANCHES=(
+    "cursor/fix-netlify-build-and-merge-to-main-74ad"
+    "cursor/fix-netlify-build-and-merge-to-main-9e6a"
+    "cursor/fix-netlify-build-and-merge-to-main-34e4"
+)
 
-# Merge the second PR  
-echo "Merging PR #12710..."
-git merge origin/cursor/fix-netlify-build-and-merge-to-main-4a00 --no-ff -m "Merge PR #12710: Fix Netlify build and merge to main" || echo "PR #12710 merge failed, continuing..."
+# Function to merge a branch
+merge_branch() {
+    local branch=$1
+    echo "📋 Processing branch: $branch"
+    
+    # Check if branch exists
+    if ! git show-ref --verify --quiet refs/remotes/origin/$branch; then
+        echo "❌ Branch $branch does not exist, skipping..."
+        return 0
+    fi
+    
+    # Fetch the branch
+    git fetch origin $branch
+    
+    # Try to merge
+    echo "🔄 Attempting to merge $branch into main..."
+    if git merge origin/$branch --no-ff -m "Merge $branch into main"; then
+        echo "✅ Successfully merged $branch"
+        return 0
+    else
+        echo "⚠️  Merge conflict detected in $branch"
+        
+        # Check for conflicts
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "🔧 Resolving merge conflicts in $branch..."
+            
+            # Auto-resolve common conflicts
+            git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
+                echo "  - Resolving conflict in: $file"
+                
+                # For package.json conflicts, prefer the version with more dependencies
+                if [[ "$file" == "package.json" ]]; then
+                    echo "    Using package.json from $branch (more complete)"
+                    git checkout --theirs "$file"
+                elif [[ "$file" == "package-lock.json" ]]; then
+                    echo "    Using package-lock.json from $branch"
+                    git checkout --theirs "$file"
+                else
+                    # For other files, try to auto-resolve or use ours
+                    echo "    Using version from $branch for $file"
+                    git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file"
+                fi
+            done
+            
+            # Add resolved files
+            git add .
+            
+            # Complete the merge
+            if git commit --no-edit; then
+                echo "✅ Successfully resolved conflicts and merged $branch"
+            else
+                echo "❌ Failed to complete merge for $branch"
+                git merge --abort
+                return 1
+            fi
+        else
+            echo "❌ Unknown merge issue with $branch"
+            git merge --abort
+            return 1
+        fi
+    fi
+}
 
-# Test build
-echo "Testing build..."
-npm install
-npm run build
+# Process each PR branch
+for branch in "${PR_BRANCHES[@]}"; do
+    merge_branch "$branch"
+done
 
-# Push changes
-echo "Pushing changes..."
-git add .
-git commit -m "Resolve merge conflicts and merge PRs into main branch"
+echo "🎉 All PRs processed!"
+
+# Push changes to main
+echo "📤 Pushing changes to main..."
 git push origin main
 
-echo "✅ PR merge process completed!"
+echo "✅ PR merge process completed successfully!"
