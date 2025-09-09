@@ -2,15 +2,17 @@ import React from "react";
 
 interface ChatMessageProps {
   message: string;
-  isUser: boolean;
+  role?: 'user' | 'assistant';
+  isUser?: boolean;
   timestamp?: Date;
 }
 
-export const ChatMessage: React.FC<ChatMessageProps> = ({ message, isUser, timestamp }) => {
+export const ChatMessage: React.FC<ChatMessageProps> = ({ message, role, isUser, timestamp }) => {
+  const isUserMessage = isUser !== undefined ? isUser : role === 'user';
   return (
-    <div className={`flex ${isUser ? "justify-end" : "justify-start"} mb-4`}>
+    <div className={`flex ${isUserMessage ? "justify-end" : "justify-start"} mb-4`}>
       <div className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
-        isUser 
+        isUserMessage 
           ? "bg-blue-500 text-white" 
           : "bg-gray-200 text-gray-800"
       }`}>
