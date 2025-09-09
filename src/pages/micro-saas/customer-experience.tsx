@@ -2,22 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  BarChart3, 
-  TrendingUp, 
+  Users, 
+  MessageCircle, 
+  Heart, 
   Target, 
+  Zap, 
   CheckCircle, 
   ArrowRight,
   Star,
-  Users,
   Clock,
   Shield,
   Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
+  BarChart3,
+  TrendingUp,
   Eye,
   Search,
   Filter,
@@ -26,116 +23,131 @@ import {
   Settings,
   Play,
   Pause,
-  RefreshCw
+  RefreshCw,
+  Smile,
+  ThumbsUp,
+  Award,
+  Headphones,
+  Smartphone,
+  Monitor
 } from 'lucide-react';
 
 const features = [
   {
-    icon: Brain,
-    title: 'Machine Learning Models',
-    description: 'Custom ML models trained on your data for predictive analytics and insights.',
-    benefits: ['Predictive modeling', 'Pattern recognition', 'Anomaly detection', 'Recommendation engines']
+    icon: MessageCircle,
+    title: 'Intelligent Chatbots',
+    description: 'AI-powered chatbots that provide instant, accurate responses and escalate complex issues to human agents.',
+    benefits: ['24/7 availability', 'Multi-language support', 'Seamless handoffs', 'Learning capabilities']
+  },
+  {
+    icon: Heart,
+    title: 'Customer Journey Mapping',
+    description: 'Visualize and optimize every touchpoint in your customer\'s experience from awareness to advocacy.',
+    benefits: ['Journey visualization', 'Pain point identification', 'Optimization recommendations', 'ROI tracking']
   },
   {
     icon: BarChart3,
-    title: 'Real-time Analytics',
-    description: 'Live dashboards and real-time data processing for instant decision-making.',
-    benefits: ['Live data streaming', 'Real-time alerts', 'Instant insights', 'Performance monitoring']
-  },
-  {
-    icon: TrendingUp,
-    title: 'Business Intelligence',
-    description: 'Transform raw data into actionable business insights and strategic recommendations.',
-    benefits: ['Data visualization', 'KPI tracking', 'Trend analysis', 'Strategic planning']
+    title: 'Feedback Analytics',
+    description: 'Collect, analyze, and act on customer feedback across all channels in real-time.',
+    benefits: ['Sentiment analysis', 'Trend identification', 'Actionable insights', 'Performance tracking']
   },
   {
     icon: Target,
-    title: 'Predictive Analytics',
-    description: 'Forecast future trends and outcomes using advanced statistical models.',
-    benefits: ['Demand forecasting', 'Risk assessment', 'Customer behavior', 'Market trends']
+    title: 'Personalization Engine',
+    description: 'Deliver tailored experiences based on customer behavior, preferences, and history.',
+    benefits: ['Dynamic content', 'Behavioral targeting', 'A/B testing', 'Conversion optimization']
   }
 ];
 
 const useCases = [
   {
+    title: 'E-commerce',
+    description: 'Enhance online shopping with personalized recommendations and seamless support.',
+    icon: ShoppingCart,
+    metrics: ['Cart abandonment reduction', 'Customer lifetime value', 'Support ticket resolution']
+  },
+  {
+    title: 'SaaS Platforms',
+    description: 'Improve user onboarding and reduce churn with intelligent automation.',
+    icon: Monitor,
+    metrics: ['Onboarding completion', 'Feature adoption', 'Churn prediction']
+  },
+  {
     title: 'Financial Services',
-    description: 'Risk assessment, fraud detection, and portfolio optimization.',
+    description: 'Build trust and loyalty through personalized financial guidance and support.',
     icon: Shield,
-    metrics: ['Risk modeling', 'Fraud detection', 'Portfolio optimization', 'Market analysis']
+    metrics: ['Customer satisfaction', 'Product adoption', 'Cross-selling success']
   },
   {
     title: 'Healthcare',
-    description: 'Patient diagnosis, treatment optimization, and resource planning.',
-    icon: Users,
-    metrics: ['Diagnostic support', 'Treatment planning', 'Resource optimization', 'Patient outcomes']
-  },
-  {
-    title: 'Retail & E-commerce',
-    description: 'Customer segmentation, demand forecasting, and inventory optimization.',
-    icon: Globe,
-    metrics: ['Customer insights', 'Demand forecasting', 'Inventory optimization', 'Personalization']
-  },
-  {
-    title: 'Manufacturing',
-    description: 'Predictive maintenance, quality control, and supply chain optimization.',
-    icon: Cpu,
-    metrics: ['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Efficiency gains']
+    description: 'Improve patient experience with streamlined communication and care coordination.',
+    icon: Heart,
+    metrics: ['Patient satisfaction', 'Appointment adherence', 'Care coordination']
   }
 ];
 
 const pricingPlans = [
   {
     name: 'Starter',
-    price: '$2,999',
+    price: '$199',
     period: '/month',
-    description: 'Perfect for small businesses starting their AI analytics journey.',
+    description: 'Perfect for small businesses starting their customer experience journey.',
     features: [
-      'Basic ML models',
-      'Standard dashboards',
-      'Data integration',
+      'Up to 1,000 customers',
+      'Basic chatbot',
       'Email support',
-      'Monthly reports',
-      'Basic training'
+      'Standard analytics',
+      '2 team members',
+      'Basic integrations'
     ],
     popular: false
   },
   {
     name: 'Professional',
-    price: '$7,999',
+    price: '$399',
     period: '/month',
-    description: 'Ideal for growing businesses with advanced analytics needs.',
+    description: 'Ideal for growing businesses with advanced CX needs.',
     features: [
-      'Advanced ML models',
-      'Custom dashboards',
-      'Real-time analytics',
+      'Up to 10,000 customers',
+      'Advanced chatbot',
       'Priority support',
-      'Advanced training',
-      'API access',
-      'Custom integrations',
-      'Performance optimization'
+      'Advanced analytics',
+      '5 team members',
+      'Advanced integrations',
+      'Journey mapping',
+      'Personalization engine'
     ],
     popular: true
   },
   {
     name: 'Enterprise',
-    price: '$19,999',
+    price: '$899',
     period: '/month',
-    description: 'For large organizations requiring enterprise-grade AI solutions.',
+    description: 'For large organizations requiring enterprise-grade CX solutions.',
     features: [
-      'Custom ML models',
-      'Advanced analytics',
+      'Unlimited customers',
+      'Custom chatbot',
       '24/7 support',
-      'Custom development',
-      'Advanced security',
+      'Custom analytics',
+      'Unlimited team members',
+      'Custom integrations',
+      'Advanced journey mapping',
+      'AI-powered personalization',
       'White-label options',
-      'Dedicated team',
-      'Custom training'
+      'Dedicated account manager'
     ],
     popular: false
   }
 ];
 
-export default function AIAnalytics() {
+// Missing icon component
+const ShoppingCart = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m6 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
+  </svg>
+);
+
+export default function CustomerExperience() {
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -149,21 +161,21 @@ export default function AIAnalytics() {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-6">
-              <Brain className="w-10 h-10 text-white" />
+              <Users className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-gradient mb-6">
-              AI Analytics
+              Customer Experience
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Transform your business with AI-powered analytics and machine learning. 
-              Unlock insights from your data and make data-driven decisions with confidence.
+              Transform customer interactions with AI-powered automation and personalization. 
+              Build lasting relationships and drive loyalty through exceptional experiences.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
               >
-                Get Started
+                Start Free Trial
               </Link>
               <Link
                 to="/demo"
@@ -186,11 +198,11 @@ export default function AIAnalytics() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              AI Analytics Capabilities
+              Powerful CX Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our comprehensive AI analytics platform combines cutting-edge machine learning 
-              with powerful visualization tools to deliver actionable insights.
+              Our comprehensive platform combines cutting-edge AI technology with proven 
+              customer experience strategies to deliver exceptional results.
             </p>
           </motion.div>
 
@@ -237,8 +249,8 @@ export default function AIAnalytics() {
               Industry Applications
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover how businesses across industries are leveraging AI analytics 
-              to drive growth and operational excellence.
+              Discover how businesses across different sectors are leveraging our CX platform 
+              to create exceptional customer experiences and drive growth.
             </p>
           </motion.div>
 
@@ -285,7 +297,7 @@ export default function AIAnalytics() {
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Flexible pricing options designed to scale with your business needs. 
-              Start your AI analytics journey today.
+              Start with our free trial and upgrade as you grow.
             </p>
           </motion.div>
 
@@ -354,18 +366,18 @@ export default function AIAnalytics() {
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Unlock AI Analytics?
+              Ready to Transform Customer Experience?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our AI analytics platform to 
-              make data-driven decisions and drive growth.
+              Join thousands of businesses already using our CX platform to create 
+              exceptional customer experiences and drive loyalty.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
               >
-                Get Started
+                Start Free Trial
               </Link>
               <Link
                 to="/demo"

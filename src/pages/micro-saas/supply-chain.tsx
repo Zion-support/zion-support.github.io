@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  BarChart3, 
-  TrendingUp, 
+  Globe, 
+  Truck, 
+  Package, 
   Target, 
   CheckCircle, 
   ArrowRight,
@@ -12,130 +12,134 @@ import {
   Users,
   Clock,
   Shield,
-  Globe,
+  BarChart3,
+  TrendingUp,
   Cpu,
   Database,
   Network,
   Lock,
   Code,
+  MapPin,
+  Route,
+  Calendar,
+  AlertTriangle,
   Eye,
   Search,
   Filter,
   Download,
   Share2,
-  Settings,
-  Play,
-  Pause,
-  RefreshCw
+  Settings
 } from 'lucide-react';
 
 const features = [
   {
-    icon: Brain,
-    title: 'Machine Learning Models',
-    description: 'Custom ML models trained on your data for predictive analytics and insights.',
-    benefits: ['Predictive modeling', 'Pattern recognition', 'Anomaly detection', 'Recommendation engines']
+    icon: Globe,
+    title: 'Global Supply Chain Visibility',
+    description: 'Real-time tracking and monitoring of your entire supply chain from suppliers to customers.',
+    benefits: ['End-to-end visibility', 'Real-time updates', 'Multi-tier tracking', 'Geographic mapping']
   },
   {
-    icon: BarChart3,
-    title: 'Real-time Analytics',
-    description: 'Live dashboards and real-time data processing for instant decision-making.',
-    benefits: ['Live data streaming', 'Real-time alerts', 'Instant insights', 'Performance monitoring']
+    icon: Truck,
+    title: 'Intelligent Route Optimization',
+    description: 'AI-powered route planning that minimizes costs and maximizes efficiency.',
+    benefits: ['Dynamic routing', 'Cost optimization', 'Time constraints', 'Multi-modal transport']
   },
   {
-    icon: TrendingUp,
-    title: 'Business Intelligence',
-    description: 'Transform raw data into actionable business insights and strategic recommendations.',
-    benefits: ['Data visualization', 'KPI tracking', 'Trend analysis', 'Strategic planning']
+    icon: Package,
+    title: 'Inventory Management',
+    description: 'Smart inventory control with demand forecasting and automated reordering.',
+    benefits: ['Demand forecasting', 'Safety stock management', 'Automated reordering', 'ABC analysis']
   },
   {
     icon: Target,
-    title: 'Predictive Analytics',
-    description: 'Forecast future trends and outcomes using advanced statistical models.',
-    benefits: ['Demand forecasting', 'Risk assessment', 'Customer behavior', 'Market trends']
+    title: 'Risk Assessment',
+    description: 'Identify and mitigate supply chain risks before they impact your operations.',
+    benefits: ['Risk scoring', 'Early warning systems', 'Contingency planning', 'Supplier evaluation']
   }
 ];
 
 const useCases = [
   {
-    title: 'Financial Services',
-    description: 'Risk assessment, fraud detection, and portfolio optimization.',
-    icon: Shield,
-    metrics: ['Risk modeling', 'Fraud detection', 'Portfolio optimization', 'Market analysis']
-  },
-  {
-    title: 'Healthcare',
-    description: 'Patient diagnosis, treatment optimization, and resource planning.',
-    icon: Users,
-    metrics: ['Diagnostic support', 'Treatment planning', 'Resource optimization', 'Patient outcomes']
+    title: 'Manufacturing',
+    description: 'Optimize production planning and raw material procurement.',
+    icon: Cpu,
+    metrics: ['Production efficiency', 'Material costs', 'Lead times', 'Quality control']
   },
   {
     title: 'Retail & E-commerce',
-    description: 'Customer segmentation, demand forecasting, and inventory optimization.',
-    icon: Globe,
-    metrics: ['Customer insights', 'Demand forecasting', 'Inventory optimization', 'Personalization']
+    description: 'Streamline inventory management and order fulfillment.',
+    icon: Package,
+    metrics: ['Stock availability', 'Order fulfillment', 'Customer satisfaction', 'Cost reduction']
   },
   {
-    title: 'Manufacturing',
-    description: 'Predictive maintenance, quality control, and supply chain optimization.',
-    icon: Cpu,
-    metrics: ['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Efficiency gains']
+    title: 'Logistics & Transportation',
+    description: 'Optimize routes and improve delivery performance.',
+    icon: Truck,
+    metrics: ['Route efficiency', 'Delivery times', 'Fuel costs', 'Customer satisfaction']
+  },
+  {
+    title: 'Healthcare & Pharmaceuticals',
+    description: 'Ensure critical supplies reach patients safely and on time.',
+    icon: Shield,
+    metrics: ['Supply availability', 'Temperature monitoring', 'Regulatory compliance', 'Patient safety']
   }
 ];
 
 const pricingPlans = [
   {
     name: 'Starter',
-    price: '$2,999',
+    price: '$249',
     period: '/month',
-    description: 'Perfect for small businesses starting their AI analytics journey.',
+    description: 'Perfect for small businesses with basic supply chain needs.',
     features: [
-      'Basic ML models',
-      'Standard dashboards',
-      'Data integration',
+      'Up to 100 SKUs',
+      'Basic inventory tracking',
+      'Standard reporting',
       'Email support',
-      'Monthly reports',
-      'Basic training'
+      'Basic integrations',
+      'Mobile app access'
     ],
     popular: false
   },
   {
     name: 'Professional',
-    price: '$7,999',
+    price: '$599',
     period: '/month',
-    description: 'Ideal for growing businesses with advanced analytics needs.',
+    description: 'Ideal for growing businesses with complex supply chain operations.',
     features: [
-      'Advanced ML models',
-      'Custom dashboards',
-      'Real-time analytics',
+      'Up to 1,000 SKUs',
+      'Advanced inventory management',
+      'Demand forecasting',
       'Priority support',
-      'Advanced training',
-      'API access',
-      'Custom integrations',
-      'Performance optimization'
+      'Advanced integrations',
+      'Route optimization',
+      'Risk assessment',
+      'API access'
     ],
     popular: true
   },
   {
     name: 'Enterprise',
-    price: '$19,999',
+    price: '$1,499',
     period: '/month',
-    description: 'For large organizations requiring enterprise-grade AI solutions.',
+    description: 'For large organizations with global supply chain operations.',
     features: [
-      'Custom ML models',
-      'Advanced analytics',
+      'Unlimited SKUs',
+      'Custom inventory solutions',
+      'Advanced forecasting',
       '24/7 support',
-      'Custom development',
-      'Advanced security',
+      'Custom integrations',
+      'Advanced analytics',
+      'Custom ML models',
       'White-label options',
-      'Dedicated team',
-      'Custom training'
+      'Advanced security',
+      'Dedicated account manager'
     ],
     popular: false
   }
 ];
 
-export default function AIAnalytics() {
+export default function SupplyChain() {
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -149,21 +153,21 @@ export default function AIAnalytics() {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-6">
-              <Brain className="w-10 h-10 text-white" />
+              <Globe className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-gradient mb-6">
-              AI Analytics
+              Supply Chain Optimization
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Transform your business with AI-powered analytics and machine learning. 
-              Unlock insights from your data and make data-driven decisions with confidence.
+              Transform your supply chain with AI-powered optimization, real-time visibility, 
+              and intelligent risk management. Reduce costs and improve efficiency.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
               >
-                Get Started
+                Start Free Trial
               </Link>
               <Link
                 to="/demo"
@@ -186,11 +190,11 @@ export default function AIAnalytics() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              AI Analytics Capabilities
+              Supply Chain Excellence
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our comprehensive AI analytics platform combines cutting-edge machine learning 
-              with powerful visualization tools to deliver actionable insights.
+              Our comprehensive platform provides the tools and insights needed to optimize 
+              every aspect of your supply chain operations.
             </p>
           </motion.div>
 
@@ -234,11 +238,11 @@ export default function AIAnalytics() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Solutions
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover how businesses across industries are leveraging AI analytics 
-              to drive growth and operational excellence.
+              Our supply chain platform is designed to meet the unique challenges 
+              of different industries and business models.
             </p>
           </motion.div>
 
@@ -284,8 +288,8 @@ export default function AIAnalytics() {
               Choose Your Plan
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Flexible pricing options designed to scale with your business needs. 
-              Start your AI analytics journey today.
+              Flexible pricing options designed to scale with your supply chain complexity. 
+              Start optimizing today and see results immediately.
             </p>
           </motion.div>
 
@@ -354,18 +358,18 @@ export default function AIAnalytics() {
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Unlock AI Analytics?
+              Ready to Optimize Your Supply Chain?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our AI analytics platform to 
-              make data-driven decisions and drive growth.
+              Join thousands of businesses already using our platform to reduce costs, 
+              improve efficiency, and gain competitive advantages.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
               >
-                Get Started
+                Start Free Trial
               </Link>
               <Link
                 to="/demo"

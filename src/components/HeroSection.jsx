@@ -123,40 +123,53 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group" size="lg" asChild>
-              <Link to="/contact" role="button" aria-label="Get Started Today" className="flex items-center gap-2">
-                <Rocket className="h-5 w-5 group-hover:animate-bounce"/>
-                Get Started Today
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform"/>
-              </Link>
-            </Button>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button 
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transform transition-all duration-300 group" 
+                size="lg" 
+                asChild
+              >
+                <Link to="/contact" role="button" aria-label="Get Started Today" className="flex items-center gap-2">
+                  Get Started Today
+                  <Rocket className="w-5 h-5 group-hover:translate-x-1 transition-transform"/>
+                </Link>
+              </Button>
+            </motion.div>
             
-            <Link to="/services" className="group border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-              <Search className="h-5 w-5 group-hover:rotate-12 transition-transform"/>
-              Explore Services
-            </Link>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button 
+                variant="outline" 
+                className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white text-lg py-6 px-8 transition-all duration-300" 
+                size="lg" 
+                asChild
+              >
+                <Link to="/services" role="button" aria-label="Explore Services">
+                  Explore Services
+                </Link>
+              </Button>
+            </motion.div>
           </motion.div>
 
-          {/* Trust Metrics */}
-          <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-8">
-            {trustMetrics.map((metric, index) => (
-              <motion.div key={index} className="text-center group hover:scale-105 transition-transform duration-300" variants={itemVariants}>
+          {/* Trust indicators with enhanced animations */}
+          <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {[
+              { icon: Users, label: "10K+ Users", value: "Trusted by thousands" },
+              { icon: TrendingUp, label: "95% Success", value: "Project completion rate" },
+              { icon: Shield, label: "Enterprise", value: "Fortune 500 clients" },
+              { icon: Star, label: "24/7 Support", value: "Always available" }
+            ].map((metric, index) => (
+              <motion.div 
+                key={index}
+                className="text-center group"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
                 <div className="flex justify-center mb-2">
-                  <metric.icon className="h-8 w-8 text-zion-cyan group-hover:animate-pulse"/>
+                  <metric.icon className="w-8 h-8 text-zion-cyan group-hover:text-zion-purple transition-colors"/>
                 </div>
-                <div className="text-zion-cyan font-bold text-lg">{metric.label}</div>
+                <div className="text-white font-bold text-lg mb-1">{metric.label}</div>
                 <div className="text-zion-slate-light text-sm">{metric.value}</div>
               </motion.div>
-            ))}
-          </motion.div>
-
-          {/* Feature Badges */}
-          <motion.div variants={itemVariants} className="flex flex-wrap justify-center items-center gap-6 text-zion-slate-light text-sm">
-            {featureBadges.map((badge, index) => (
-              <div key={index} className="flex items-center gap-2 group">
-                <div className={`w-2 h-2 bg-${badge.color} rounded-full group-hover:animate-pulse`}/>
-                <span className="group-hover:text-white transition-colors">{badge.label}</span>
-              </div>
             ))}
           </motion.div>
         </motion.div>

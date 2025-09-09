@@ -2,140 +2,144 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  BarChart3, 
-  TrendingUp, 
+  Users, 
+  Briefcase, 
   Target, 
+  BarChart3, 
   CheckCircle, 
   ArrowRight,
   Star,
-  Users,
   Clock,
   Shield,
   Globe,
+  TrendingUp,
   Cpu,
   Database,
   Network,
   Lock,
   Code,
-  Eye,
+  UserCheck,
+  FileText,
+  Calendar,
+  Award,
+  Heart,
+  MessageCircle,
+  Settings,
   Search,
   Filter,
   Download,
-  Share2,
-  Settings,
-  Play,
-  Pause,
-  RefreshCw
+  Share2
 } from 'lucide-react';
 
 const features = [
   {
-    icon: Brain,
-    title: 'Machine Learning Models',
-    description: 'Custom ML models trained on your data for predictive analytics and insights.',
-    benefits: ['Predictive modeling', 'Pattern recognition', 'Anomaly detection', 'Recommendation engines']
+    icon: Users,
+    title: 'Recruitment AI',
+    description: 'Streamline hiring with AI-powered candidate screening and matching.',
+    benefits: ['Resume parsing', 'Skill matching', 'Interview scheduling', 'Candidate ranking']
   },
   {
     icon: BarChart3,
-    title: 'Real-time Analytics',
-    description: 'Live dashboards and real-time data processing for instant decision-making.',
-    benefits: ['Live data streaming', 'Real-time alerts', 'Instant insights', 'Performance monitoring']
+    title: 'Performance Analytics',
+    description: 'Track employee performance and provide data-driven insights.',
+    benefits: ['KPI tracking', 'Goal management', 'Performance reviews', '360 feedback']
   },
   {
-    icon: TrendingUp,
-    title: 'Business Intelligence',
-    description: 'Transform raw data into actionable business insights and strategic recommendations.',
-    benefits: ['Data visualization', 'KPI tracking', 'Trend analysis', 'Strategic planning']
+    icon: Heart,
+    title: 'Employee Engagement',
+    description: 'Measure and improve employee satisfaction and retention.',
+    benefits: ['Surveys', 'Pulse checks', 'Recognition programs', 'Wellness tracking']
   },
   {
-    icon: Target,
-    title: 'Predictive Analytics',
-    description: 'Forecast future trends and outcomes using advanced statistical models.',
-    benefits: ['Demand forecasting', 'Risk assessment', 'Customer behavior', 'Market trends']
+    icon: Shield,
+    title: 'Compliance Management',
+    description: 'Ensure HR compliance with automated tracking and reporting.',
+    benefits: ['Policy management', 'Training tracking', 'Audit trails', 'Regulatory updates']
   }
 ];
 
 const useCases = [
   {
-    title: 'Financial Services',
-    description: 'Risk assessment, fraud detection, and portfolio optimization.',
-    icon: Shield,
-    metrics: ['Risk modeling', 'Fraud detection', 'Portfolio optimization', 'Market analysis']
-  },
-  {
-    title: 'Healthcare',
-    description: 'Patient diagnosis, treatment optimization, and resource planning.',
+    title: 'Small Business',
+    description: 'Streamline HR processes for growing companies with limited resources.',
     icon: Users,
-    metrics: ['Diagnostic support', 'Treatment planning', 'Resource optimization', 'Patient outcomes']
+    metrics: ['Employee onboarding', 'Time tracking', 'Basic reporting', 'Policy management']
   },
   {
-    title: 'Retail & E-commerce',
-    description: 'Customer segmentation, demand forecasting, and inventory optimization.',
+    title: 'Enterprise',
+    description: 'Manage complex HR operations across multiple locations and departments.',
+    icon: Briefcase,
+    metrics: ['Multi-location support', 'Advanced analytics', 'Custom workflows', 'Integration support']
+  },
+  {
+    title: 'Remote Teams',
+    description: 'Support distributed teams with cloud-based HR solutions.',
     icon: Globe,
-    metrics: ['Customer insights', 'Demand forecasting', 'Inventory optimization', 'Personalization']
+    metrics: ['Remote onboarding', 'Virtual collaboration', 'Time zone management', 'Digital signatures']
   },
   {
-    title: 'Manufacturing',
-    description: 'Predictive maintenance, quality control, and supply chain optimization.',
-    icon: Cpu,
-    metrics: ['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Efficiency gains']
+    title: 'Compliance-Focused',
+    description: 'Ensure regulatory compliance in highly regulated industries.',
+    icon: Shield,
+    metrics: ['Audit trails', 'Compliance reporting', 'Training management', 'Policy enforcement']
   }
 ];
 
 const pricingPlans = [
   {
     name: 'Starter',
-    price: '$2,999',
+    price: '$149',
     period: '/month',
-    description: 'Perfect for small businesses starting their AI analytics journey.',
+    description: 'Perfect for small businesses with basic HR needs.',
     features: [
-      'Basic ML models',
-      'Standard dashboards',
-      'Data integration',
+      'Up to 50 employees',
+      'Basic recruitment tools',
+      'Employee database',
       'Email support',
-      'Monthly reports',
-      'Basic training'
+      'Standard reports',
+      'Mobile app access'
     ],
     popular: false
   },
   {
     name: 'Professional',
-    price: '$7,999',
+    price: '$399',
     period: '/month',
-    description: 'Ideal for growing businesses with advanced analytics needs.',
+    description: 'Ideal for growing businesses with advanced HR requirements.',
     features: [
-      'Advanced ML models',
-      'Custom dashboards',
-      'Real-time analytics',
+      'Up to 500 employees',
+      'Advanced recruitment',
+      'Performance management',
       'Priority support',
-      'Advanced training',
-      'API access',
-      'Custom integrations',
-      'Performance optimization'
+      'Advanced analytics',
+      'Custom workflows',
+      'Integration support',
+      'API access'
     ],
     popular: true
   },
   {
     name: 'Enterprise',
-    price: '$19,999',
+    price: '$999',
     period: '/month',
-    description: 'For large organizations requiring enterprise-grade AI solutions.',
+    description: 'For large organizations requiring enterprise-grade HR solutions.',
     features: [
-      'Custom ML models',
+      'Unlimited employees',
+      'Custom HR solutions',
       'Advanced analytics',
       '24/7 support',
-      'Custom development',
-      'Advanced security',
+      'Custom integrations',
+      'Advanced ML models',
       'White-label options',
-      'Dedicated team',
-      'Custom training'
+      'Advanced security',
+      'Dedicated infrastructure',
+      'Dedicated account manager'
     ],
     popular: false
   }
 ];
 
-export default function AIAnalytics() {
+export default function HRPlatform() {
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -149,21 +153,21 @@ export default function AIAnalytics() {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-6">
-              <Brain className="w-10 h-10 text-white" />
+              <Users className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-gradient mb-6">
-              AI Analytics
+              HR Platform
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Transform your business with AI-powered analytics and machine learning. 
-              Unlock insights from your data and make data-driven decisions with confidence.
+              Streamline HR processes with intelligent automation and analytics. 
+              From recruitment to retention, manage your workforce efficiently.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
               >
-                Get Started
+                Start Free Trial
               </Link>
               <Link
                 to="/demo"
@@ -186,11 +190,11 @@ export default function AIAnalytics() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              AI Analytics Capabilities
+              HR Management Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our comprehensive AI analytics platform combines cutting-edge machine learning 
-              with powerful visualization tools to deliver actionable insights.
+              Our comprehensive HR platform provides everything you need to manage 
+              your workforce efficiently and drive employee engagement.
             </p>
           </motion.div>
 
@@ -234,11 +238,11 @@ export default function AIAnalytics() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Business Solutions
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover how businesses across industries are leveraging AI analytics 
-              to drive growth and operational excellence.
+              Our HR platform is designed to meet the unique needs of different 
+              business sizes and industries.
             </p>
           </motion.div>
 
@@ -284,8 +288,8 @@ export default function AIAnalytics() {
               Choose Your Plan
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Flexible pricing options designed to scale with your business needs. 
-              Start your AI analytics journey today.
+              Flexible pricing options designed to scale with your business size. 
+              Start optimizing your HR processes today.
             </p>
           </motion.div>
 
@@ -354,18 +358,18 @@ export default function AIAnalytics() {
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Unlock AI Analytics?
+              Ready to Transform Your HR Operations?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our AI analytics platform to 
-              make data-driven decisions and drive growth.
+              Join thousands of businesses already using our HR platform to streamline 
+              processes and improve employee engagement.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
               >
-                Get Started
+                Start Free Trial
               </Link>
               <Link
                 to="/demo"

@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  BarChart3, 
-  TrendingUp, 
-  Target, 
+  FileText, 
+  PenTool, 
+  Image, 
+  Video, 
   CheckCircle, 
   ArrowRight,
   Star,
@@ -13,129 +13,134 @@ import {
   Clock,
   Shield,
   Globe,
+  BarChart3,
+  TrendingUp,
   Cpu,
   Database,
   Network,
   Lock,
   Code,
-  Eye,
-  Search,
-  Filter,
+  Type,
+  Palette,
+  Camera,
+  Mic,
+  Play,
   Download,
   Share2,
   Settings,
-  Play,
-  Pause,
-  RefreshCw
+  Search,
+  Filter
 } from 'lucide-react';
 
 const features = [
   {
-    icon: Brain,
-    title: 'Machine Learning Models',
-    description: 'Custom ML models trained on your data for predictive analytics and insights.',
-    benefits: ['Predictive modeling', 'Pattern recognition', 'Anomaly detection', 'Recommendation engines']
+    icon: FileText,
+    title: 'AI Writing Assistant',
+    description: 'Generate high-quality content with AI-powered writing tools and templates.',
+    benefits: ['Content generation', 'Grammar checking', 'Style optimization', 'Multi-language support']
   },
   {
-    icon: BarChart3,
-    title: 'Real-time Analytics',
-    description: 'Live dashboards and real-time data processing for instant decision-making.',
-    benefits: ['Live data streaming', 'Real-time alerts', 'Instant insights', 'Performance monitoring']
+    icon: Image,
+    title: 'Visual Content Creation',
+    description: 'Create stunning images, graphics, and visual content with AI tools.',
+    benefits: ['Image generation', 'Graphic design', 'Brand consistency', 'Template library']
   },
   {
-    icon: TrendingUp,
-    title: 'Business Intelligence',
-    description: 'Transform raw data into actionable business insights and strategic recommendations.',
-    benefits: ['Data visualization', 'KPI tracking', 'Trend analysis', 'Strategic planning']
+    icon: Video,
+    title: 'Video Production',
+    description: 'Produce professional videos with automated editing and AI enhancement.',
+    benefits: ['Video editing', 'Auto-captioning', 'Transitions', 'Effects library']
   },
   {
-    icon: Target,
-    title: 'Predictive Analytics',
-    description: 'Forecast future trends and outcomes using advanced statistical models.',
-    benefits: ['Demand forecasting', 'Risk assessment', 'Customer behavior', 'Market trends']
+    icon: PenTool,
+    title: 'Content Optimization',
+    description: 'Optimize content for SEO and engagement with AI-powered insights.',
+    benefits: ['SEO optimization', 'Engagement analysis', 'A/B testing', 'Performance tracking']
   }
 ];
 
 const useCases = [
   {
-    title: 'Financial Services',
-    description: 'Risk assessment, fraud detection, and portfolio optimization.',
-    icon: Shield,
-    metrics: ['Risk modeling', 'Fraud detection', 'Portfolio optimization', 'Market analysis']
+    title: 'Marketing Content',
+    description: 'Create compelling marketing materials that drive engagement and conversions.',
+    icon: TrendingUp,
+    metrics: ['Email campaigns', 'Social media posts', 'Landing pages', 'Ad copy']
   },
   {
-    title: 'Healthcare',
-    description: 'Patient diagnosis, treatment optimization, and resource planning.',
+    title: 'Blog & Articles',
+    description: 'Generate engaging blog posts and articles with AI assistance.',
+    icon: FileText,
+    metrics: ['Blog posts', 'News articles', 'Product descriptions', 'Case studies']
+  },
+  {
+    title: 'Social Media',
+    description: 'Create engaging social media content that builds brand awareness.',
+    icon: Share2,
+    metrics: ['Social posts', 'Stories', 'Reels', 'Carousel content']
+  },
+  {
+    title: 'Educational Content',
+    description: 'Develop educational materials and training content efficiently.',
     icon: Users,
-    metrics: ['Diagnostic support', 'Treatment planning', 'Resource optimization', 'Patient outcomes']
-  },
-  {
-    title: 'Retail & E-commerce',
-    description: 'Customer segmentation, demand forecasting, and inventory optimization.',
-    icon: Globe,
-    metrics: ['Customer insights', 'Demand forecasting', 'Inventory optimization', 'Personalization']
-  },
-  {
-    title: 'Manufacturing',
-    description: 'Predictive maintenance, quality control, and supply chain optimization.',
-    icon: Cpu,
-    metrics: ['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Efficiency gains']
+    metrics: ['Training materials', 'Documentation', 'Tutorials', 'Presentations']
   }
 ];
 
 const pricingPlans = [
   {
     name: 'Starter',
-    price: '$2,999',
+    price: '$99',
     period: '/month',
-    description: 'Perfect for small businesses starting their AI analytics journey.',
+    description: 'Perfect for individuals and small teams starting with content creation.',
     features: [
-      'Basic ML models',
-      'Standard dashboards',
-      'Data integration',
+      'Up to 100 content pieces/month',
+      'Basic AI writing',
+      'Standard templates',
       'Email support',
-      'Monthly reports',
-      'Basic training'
+      'Basic integrations',
+      'Mobile app access'
     ],
     popular: false
   },
   {
     name: 'Professional',
-    price: '$7,999',
+    price: '$299',
     period: '/month',
-    description: 'Ideal for growing businesses with advanced analytics needs.',
+    description: 'Ideal for growing businesses with advanced content creation needs.',
     features: [
-      'Advanced ML models',
-      'Custom dashboards',
-      'Real-time analytics',
+      'Up to 1,000 content pieces/month',
+      'Advanced AI writing',
+      'Custom templates',
       'Priority support',
-      'Advanced training',
-      'API access',
-      'Custom integrations',
-      'Performance optimization'
+      'Advanced integrations',
+      'SEO optimization',
+      'Performance analytics',
+      'API access'
     ],
     popular: true
   },
   {
     name: 'Enterprise',
-    price: '$19,999',
+    price: '$799',
     period: '/month',
-    description: 'For large organizations requiring enterprise-grade AI solutions.',
+    description: 'For large organizations requiring enterprise-grade content solutions.',
     features: [
-      'Custom ML models',
-      'Advanced analytics',
+      'Unlimited content creation',
+      'Custom AI models',
+      'Advanced templates',
       '24/7 support',
-      'Custom development',
-      'Advanced security',
+      'Custom integrations',
+      'Advanced analytics',
       'White-label options',
-      'Dedicated team',
-      'Custom training'
+      'Advanced security',
+      'Dedicated infrastructure',
+      'Dedicated account manager'
     ],
     popular: false
   }
 ];
 
-export default function AIAnalytics() {
+export default function ContentCreation() {
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -149,21 +154,21 @@ export default function AIAnalytics() {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-6">
-              <Brain className="w-10 h-10 text-white" />
+              <FileText className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-gradient mb-6">
-              AI Analytics
+              Content Creation
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Transform your business with AI-powered analytics and machine learning. 
-              Unlock insights from your data and make data-driven decisions with confidence.
+              Generate high-quality content with AI-powered tools for writing, design, and video. 
+              Create engaging content that drives results across all channels.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
               >
-                Get Started
+                Start Free Trial
               </Link>
               <Link
                 to="/demo"
@@ -186,11 +191,11 @@ export default function AIAnalytics() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              AI Analytics Capabilities
+              Content Creation Tools
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our comprehensive AI analytics platform combines cutting-edge machine learning 
-              with powerful visualization tools to deliver actionable insights.
+              Our comprehensive platform provides everything you need to create, optimize, 
+              and distribute high-quality content across all channels.
             </p>
           </motion.div>
 
@@ -234,11 +239,11 @@ export default function AIAnalytics() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Content Applications
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover how businesses across industries are leveraging AI analytics 
-              to drive growth and operational excellence.
+              Discover how businesses across industries are using our content creation 
+              platform to drive engagement and achieve their marketing goals.
             </p>
           </motion.div>
 
@@ -284,8 +289,8 @@ export default function AIAnalytics() {
               Choose Your Plan
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Flexible pricing options designed to scale with your business needs. 
-              Start your AI analytics journey today.
+              Flexible pricing options designed to scale with your content creation needs. 
+              Start creating amazing content today with our AI-powered tools.
             </p>
           </motion.div>
 
@@ -354,18 +359,18 @@ export default function AIAnalytics() {
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Unlock AI Analytics?
+              Ready to Create Amazing Content?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our AI analytics platform to 
-              make data-driven decisions and drive growth.
+              Join thousands of businesses already using our content creation platform to 
+              generate engaging content that drives results.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
               >
-                Get Started
+                Start Free Trial
               </Link>
               <Link
                 to="/demo"

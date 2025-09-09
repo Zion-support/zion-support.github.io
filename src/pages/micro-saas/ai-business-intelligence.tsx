@@ -6,6 +6,7 @@ import {
   BarChart3, 
   TrendingUp, 
   Target, 
+  Zap, 
   CheckCircle, 
   ArrowRight,
   Star,
@@ -13,11 +14,10 @@ import {
   Clock,
   Shield,
   Globe,
-  Cpu,
   Database,
-  Network,
-  Lock,
-  Code,
+  PieChart,
+  LineChart,
+  Activity,
   Eye,
   Search,
   Filter,
@@ -32,110 +32,112 @@ import {
 const features = [
   {
     icon: Brain,
-    title: 'Machine Learning Models',
-    description: 'Custom ML models trained on your data for predictive analytics and insights.',
-    benefits: ['Predictive modeling', 'Pattern recognition', 'Anomaly detection', 'Recommendation engines']
+    title: 'AI-Powered Analytics',
+    description: 'Advanced machine learning algorithms that automatically identify patterns and trends in your data.',
+    benefits: ['Predictive insights', 'Automated anomaly detection', 'Intelligent recommendations']
   },
   {
     icon: BarChart3,
-    title: 'Real-time Analytics',
-    description: 'Live dashboards and real-time data processing for instant decision-making.',
-    benefits: ['Live data streaming', 'Real-time alerts', 'Instant insights', 'Performance monitoring']
+    title: 'Real-time Dashboards',
+    description: 'Live monitoring dashboards that update in real-time with customizable widgets and KPIs.',
+    benefits: ['Live data streaming', 'Customizable layouts', 'Mobile responsive design']
   },
   {
     icon: TrendingUp,
-    title: 'Business Intelligence',
-    description: 'Transform raw data into actionable business insights and strategic recommendations.',
-    benefits: ['Data visualization', 'KPI tracking', 'Trend analysis', 'Strategic planning']
+    title: 'Predictive Modeling',
+    description: 'Forecast future trends and outcomes using historical data and advanced statistical models.',
+    benefits: ['Trend forecasting', 'Risk assessment', 'Scenario planning']
   },
   {
     icon: Target,
-    title: 'Predictive Analytics',
-    description: 'Forecast future trends and outcomes using advanced statistical models.',
-    benefits: ['Demand forecasting', 'Risk assessment', 'Customer behavior', 'Market trends']
+    title: 'Goal Tracking',
+    description: 'Set, monitor, and track progress towards business objectives with automated alerts.',
+    benefits: ['KPI monitoring', 'Progress tracking', 'Automated notifications']
   }
 ];
 
 const useCases = [
   {
-    title: 'Financial Services',
-    description: 'Risk assessment, fraud detection, and portfolio optimization.',
-    icon: Shield,
-    metrics: ['Risk modeling', 'Fraud detection', 'Portfolio optimization', 'Market analysis']
+    title: 'Sales Performance',
+    description: 'Track sales metrics, forecast revenue, and identify growth opportunities.',
+    icon: TrendingUp,
+    metrics: ['Conversion rates', 'Sales velocity', 'Pipeline analysis']
   },
   {
-    title: 'Healthcare',
-    description: 'Patient diagnosis, treatment optimization, and resource planning.',
+    title: 'Customer Analytics',
+    description: 'Understand customer behavior, preferences, and lifetime value.',
     icon: Users,
-    metrics: ['Diagnostic support', 'Treatment planning', 'Resource optimization', 'Patient outcomes']
+    metrics: ['Customer segmentation', 'Churn prediction', 'LTV analysis']
   },
   {
-    title: 'Retail & E-commerce',
-    description: 'Customer segmentation, demand forecasting, and inventory optimization.',
-    icon: Globe,
-    metrics: ['Customer insights', 'Demand forecasting', 'Inventory optimization', 'Personalization']
+    title: 'Financial Intelligence',
+    description: 'Monitor financial health, cash flow, and profitability metrics.',
+    icon: BarChart3,
+    metrics: ['Cash flow analysis', 'Profit margins', 'Budget tracking']
   },
   {
-    title: 'Manufacturing',
-    description: 'Predictive maintenance, quality control, and supply chain optimization.',
-    icon: Cpu,
-    metrics: ['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Efficiency gains']
+    title: 'Operational Efficiency',
+    description: 'Optimize processes, reduce costs, and improve productivity.',
+    icon: Zap,
+    metrics: ['Process optimization', 'Resource utilization', 'Performance metrics']
   }
 ];
 
 const pricingPlans = [
   {
     name: 'Starter',
-    price: '$2,999',
+    price: '$299',
     period: '/month',
-    description: 'Perfect for small businesses starting their AI analytics journey.',
+    description: 'Perfect for small businesses getting started with AI analytics.',
     features: [
-      'Basic ML models',
-      'Standard dashboards',
-      'Data integration',
+      'Up to 5 users',
+      'Basic dashboards',
+      'Standard reports',
       'Email support',
-      'Monthly reports',
-      'Basic training'
+      'Data integration (3 sources)',
+      'Basic AI insights'
     ],
     popular: false
   },
   {
     name: 'Professional',
-    price: '$7,999',
+    price: '$599',
     period: '/month',
     description: 'Ideal for growing businesses with advanced analytics needs.',
     features: [
-      'Advanced ML models',
-      'Custom dashboards',
-      'Real-time analytics',
+      'Up to 25 users',
+      'Advanced dashboards',
+      'Custom reports',
       'Priority support',
-      'Advanced training',
-      'API access',
-      'Custom integrations',
-      'Performance optimization'
+      'Data integration (10 sources)',
+      'Advanced AI insights',
+      'Predictive analytics',
+      'API access'
     ],
     popular: true
   },
   {
     name: 'Enterprise',
-    price: '$19,999',
+    price: '$1,299',
     period: '/month',
-    description: 'For large organizations requiring enterprise-grade AI solutions.',
+    description: 'For large organizations requiring enterprise-grade solutions.',
     features: [
-      'Custom ML models',
-      'Advanced analytics',
+      'Unlimited users',
+      'Custom dashboards',
+      'Advanced reporting',
       '24/7 support',
-      'Custom development',
-      'Advanced security',
+      'Unlimited data sources',
+      'Full AI suite',
+      'Custom ML models',
       'White-label options',
-      'Dedicated team',
-      'Custom training'
+      'Advanced security',
+      'Dedicated account manager'
     ],
     popular: false
   }
 ];
 
-export default function AIAnalytics() {
+export default function AIBusinessIntelligence() {
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -152,18 +154,18 @@ export default function AIAnalytics() {
               <Brain className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-gradient mb-6">
-              AI Analytics
+              AI Business Intelligence
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Transform your business with AI-powered analytics and machine learning. 
-              Unlock insights from your data and make data-driven decisions with confidence.
+              Transform your business data into actionable insights with our AI-powered analytics platform. 
+              Make data-driven decisions with confidence using advanced machine learning and predictive analytics.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
               >
-                Get Started
+                Start Free Trial
               </Link>
               <Link
                 to="/demo"
@@ -186,11 +188,11 @@ export default function AIAnalytics() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              AI Analytics Capabilities
+              Powerful Features for Modern Business
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our comprehensive AI analytics platform combines cutting-edge machine learning 
-              with powerful visualization tools to deliver actionable insights.
+              Our AI-powered platform combines cutting-edge technology with intuitive design 
+              to deliver insights that drive business growth.
             </p>
           </motion.div>
 
@@ -234,10 +236,10 @@ export default function AIAnalytics() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Real-World Applications
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover how businesses across industries are leveraging AI analytics 
+              Discover how businesses across industries are leveraging AI-powered analytics 
               to drive growth and operational excellence.
             </p>
           </motion.div>
@@ -285,7 +287,7 @@ export default function AIAnalytics() {
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Flexible pricing options designed to scale with your business needs. 
-              Start your AI analytics journey today.
+              Start with our free trial and upgrade as you grow.
             </p>
           </motion.div>
 
@@ -354,18 +356,18 @@ export default function AIAnalytics() {
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Unlock AI Analytics?
+              Ready to Unlock Your Data's Potential?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our AI analytics platform to 
-              make data-driven decisions and drive growth.
+              Join thousands of businesses already using AI-powered analytics to make 
+              smarter decisions and drive growth.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
               >
-                Get Started
+                Start Free Trial
               </Link>
               <Link
                 to="/demo"

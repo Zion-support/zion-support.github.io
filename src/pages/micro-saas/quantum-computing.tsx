@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
+  Rocket, 
   Brain, 
-  BarChart3, 
-  TrendingUp, 
+  Zap, 
   Target, 
   CheckCircle, 
   ArrowRight,
@@ -13,129 +13,131 @@ import {
   Clock,
   Shield,
   Globe,
+  BarChart3,
+  TrendingUp,
   Cpu,
   Database,
   Network,
   Lock,
   Code,
-  Eye,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Settings,
-  Play,
-  Pause,
-  RefreshCw
+  Atom,
+  CircuitBoard,
+  Microscope,
+  Beaker,
+  TestTube,
+  Calculator,
+  Gauge
 } from 'lucide-react';
 
 const features = [
   {
-    icon: Brain,
-    title: 'Machine Learning Models',
-    description: 'Custom ML models trained on your data for predictive analytics and insights.',
-    benefits: ['Predictive modeling', 'Pattern recognition', 'Anomaly detection', 'Recommendation engines']
+    icon: Atom,
+    title: 'Quantum Algorithms',
+    description: 'Access to cutting-edge quantum algorithms for optimization, simulation, and machine learning.',
+    benefits: ['Grover\'s algorithm', 'Shor\'s algorithm', 'Quantum Fourier Transform', 'Quantum machine learning']
   },
   {
-    icon: BarChart3,
-    title: 'Real-time Analytics',
-    description: 'Live dashboards and real-time data processing for instant decision-making.',
-    benefits: ['Live data streaming', 'Real-time alerts', 'Instant insights', 'Performance monitoring']
+    icon: CircuitBoard,
+    title: 'Quantum Simulation',
+    description: 'Simulate quantum systems and quantum chemistry for research and development.',
+    benefits: ['Molecular modeling', 'Material science', 'Drug discovery', 'Quantum chemistry']
   },
   {
-    icon: TrendingUp,
-    title: 'Business Intelligence',
-    description: 'Transform raw data into actionable business insights and strategic recommendations.',
-    benefits: ['Data visualization', 'KPI tracking', 'Trend analysis', 'Strategic planning']
+    icon: Calculator,
+    title: 'Optimization Tools',
+    description: 'Solve complex optimization problems using quantum annealing and variational algorithms.',
+    benefits: ['Portfolio optimization', 'Supply chain optimization', 'Route planning', 'Scheduling problems']
   },
   {
-    icon: Target,
-    title: 'Predictive Analytics',
-    description: 'Forecast future trends and outcomes using advanced statistical models.',
-    benefits: ['Demand forecasting', 'Risk assessment', 'Customer behavior', 'Market trends']
+    icon: Gauge,
+    title: 'Performance Monitoring',
+    description: 'Real-time monitoring of quantum system performance and error rates.',
+    benefits: ['Error correction', 'Performance metrics', 'System health', 'Optimization insights']
   }
 ];
 
 const useCases = [
   {
     title: 'Financial Services',
-    description: 'Risk assessment, fraud detection, and portfolio optimization.',
-    icon: Shield,
-    metrics: ['Risk modeling', 'Fraud detection', 'Portfolio optimization', 'Market analysis']
+    description: 'Optimize trading strategies, risk assessment, and portfolio management.',
+    icon: BarChart3,
+    metrics: ['Portfolio optimization', 'Risk modeling', 'Algorithmic trading', 'Fraud detection']
   },
   {
-    title: 'Healthcare',
-    description: 'Patient diagnosis, treatment optimization, and resource planning.',
-    icon: Users,
-    metrics: ['Diagnostic support', 'Treatment planning', 'Resource optimization', 'Patient outcomes']
+    title: 'Pharmaceutical Research',
+    description: 'Accelerate drug discovery and molecular modeling with quantum simulation.',
+    icon: Beaker,
+    metrics: ['Molecular dynamics', 'Drug design', 'Protein folding', 'Chemical reactions']
   },
   {
-    title: 'Retail & E-commerce',
-    description: 'Customer segmentation, demand forecasting, and inventory optimization.',
+    title: 'Logistics & Supply Chain',
+    description: 'Optimize complex routing and scheduling problems for maximum efficiency.',
     icon: Globe,
-    metrics: ['Customer insights', 'Demand forecasting', 'Inventory optimization', 'Personalization']
+    metrics: ['Route optimization', 'Inventory management', 'Scheduling', 'Resource allocation']
   },
   {
-    title: 'Manufacturing',
-    description: 'Predictive maintenance, quality control, and supply chain optimization.',
-    icon: Cpu,
-    metrics: ['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Efficiency gains']
+    title: 'Machine Learning',
+    description: 'Enhance AI models with quantum computing capabilities for better performance.',
+    icon: Brain,
+    metrics: ['Quantum neural networks', 'Feature selection', 'Pattern recognition', 'Classification']
   }
 ];
 
 const pricingPlans = [
   {
     name: 'Starter',
-    price: '$2,999',
+    price: '$499',
     period: '/month',
-    description: 'Perfect for small businesses starting their AI analytics journey.',
+    description: 'Perfect for researchers and small teams exploring quantum computing.',
     features: [
-      'Basic ML models',
-      'Standard dashboards',
-      'Data integration',
+      'Up to 100 quantum operations/month',
+      'Basic quantum algorithms',
+      'Standard simulation tools',
       'Email support',
-      'Monthly reports',
-      'Basic training'
+      'Basic API access',
+      'Community forum access'
     ],
     popular: false
   },
   {
     name: 'Professional',
-    price: '$7,999',
+    price: '$1,299',
     period: '/month',
-    description: 'Ideal for growing businesses with advanced analytics needs.',
+    description: 'Ideal for growing organizations with advanced quantum computing needs.',
     features: [
-      'Advanced ML models',
-      'Custom dashboards',
-      'Real-time analytics',
+      'Up to 1,000 quantum operations/month',
+      'Advanced quantum algorithms',
+      'Custom simulation tools',
       'Priority support',
-      'Advanced training',
-      'API access',
-      'Custom integrations',
-      'Performance optimization'
+      'Advanced API access',
+      'Performance analytics',
+      'Custom optimization',
+      'White-label options'
     ],
     popular: true
   },
   {
     name: 'Enterprise',
-    price: '$19,999',
+    price: '$2,999',
     period: '/month',
-    description: 'For large organizations requiring enterprise-grade AI solutions.',
+    description: 'For large organizations requiring enterprise-grade quantum solutions.',
     features: [
-      'Custom ML models',
-      'Advanced analytics',
+      'Unlimited quantum operations',
+      'Custom quantum algorithms',
+      'Advanced simulation tools',
       '24/7 support',
-      'Custom development',
+      'Custom API development',
+      'Advanced analytics',
+      'Custom ML models',
+      'Dedicated infrastructure',
       'Advanced security',
-      'White-label options',
-      'Dedicated team',
-      'Custom training'
+      'Dedicated account manager'
     ],
     popular: false
   }
 ];
 
-export default function AIAnalytics() {
+export default function QuantumComputing() {
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -149,21 +151,21 @@ export default function AIAnalytics() {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-6">
-              <Brain className="w-10 h-10 text-white" />
+              <Rocket className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-gradient mb-6">
-              AI Analytics
+              Quantum Computing
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Transform your business with AI-powered analytics and machine learning. 
-              Unlock insights from your data and make data-driven decisions with confidence.
+              Harness the power of quantum mechanics to solve complex problems that are 
+              impossible for classical computers. Access cutting-edge quantum algorithms and tools.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
               >
-                Get Started
+                Start Free Trial
               </Link>
               <Link
                 to="/demo"
@@ -186,11 +188,11 @@ export default function AIAnalytics() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              AI Analytics Capabilities
+              Quantum Computing Capabilities
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our comprehensive AI analytics platform combines cutting-edge machine learning 
-              with powerful visualization tools to deliver actionable insights.
+              Our platform provides access to state-of-the-art quantum computing resources 
+              and algorithms designed for real-world applications.
             </p>
           </motion.div>
 
@@ -237,8 +239,8 @@ export default function AIAnalytics() {
               Industry Applications
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover how businesses across industries are leveraging AI analytics 
-              to drive growth and operational excellence.
+              Discover how quantum computing is revolutionizing industries and solving 
+              previously intractable problems.
             </p>
           </motion.div>
 
@@ -284,8 +286,8 @@ export default function AIAnalytics() {
               Choose Your Plan
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Flexible pricing options designed to scale with your business needs. 
-              Start your AI analytics journey today.
+              Access quantum computing resources with flexible pricing options designed 
+              to meet your research and development needs.
             </p>
           </motion.div>
 
@@ -354,18 +356,18 @@ export default function AIAnalytics() {
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Unlock AI Analytics?
+              Ready to Explore Quantum Computing?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our AI analytics platform to 
-              make data-driven decisions and drive growth.
+              Join the quantum revolution and solve problems that were once impossible. 
+              Start your quantum computing journey today.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
               >
-                Get Started
+                Start Free Trial
               </Link>
               <Link
                 to="/demo"
