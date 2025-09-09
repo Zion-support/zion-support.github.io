@@ -1,6 +1,6 @@
 import * as Sentry from '@sentry/nextjs';
 import { z } from 'zod';
-import { logInfo, logWarn } from '@/utils/productionLogger';
+import { logInfo, logWarn } from './productionLogger';
 
 
 interface EnvironmentConfig {

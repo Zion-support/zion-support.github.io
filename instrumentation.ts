@@ -28,9 +28,9 @@ async function initializeSentryOrMock() {
     console.log(
       'instrumentation.ts: Edge runtime detected. Forcing Sentry mock.',
     );
-    const mockSentry = await import('./src/utils/sentry-mock'); // Ensure this path is correct
+    const mockSentry = await import('./src/utils/sentry-mock');
     Sentry = mockSentry.default;
-    onRequestError = mockSentry.onRequestError; // Ensure mock provides this if used
+    onRequestError = mockSentry.onRequestError;
   } else if (typeof window === 'undefined') {
     // Node.js server environment
     console.log('instrumentation.ts: Node.js runtime detected.');
@@ -55,8 +55,6 @@ async function initializeSentryOrMock() {
         );
         const sentryModule = await import('@sentry/nextjs');
         Sentry = sentryModule;
-        // If ./sentry has specific onRequestError, it should be imported here too.
-        // For now, assuming @sentry/nextjs covers it or it's not critical for this path.
         console.log(
           'instrumentation.ts: Actual Sentry SDK loaded for Node.js.',
         );
@@ -70,31 +68,17 @@ async function initializeSentryOrMock() {
       Sentry = mockSentry.default;
       onRequestError = mockSentry.onRequestError;
       console.log('Using Sentry mock (Smart Detection)');
-    } else {
-      // Dynamic imports to replace require() calls
-      const sentryModule = await import("@sentry/nextjs");
-      Sentry = sentryModule;
-      const sentryConfig = await import('./sentry');
-      onRequestError = sentryConfig.onRequestError;
-    }
-  } catch (error) {
-    console.warn('Sentry import failed, using mock:', error);
-    // Fallback to mock if import fails
-    try {
-      const mockSentry = await import('./src/utils/sentry-mock');
-      Sentry = mockSentry.default;
-      onRequestError = mockSentry.onRequestError;
-    } catch (mockError) {
-      console.error('Mock Sentry also failed:', mockError);
     }
   } else {
     // Client-side environment, Sentry is typically handled by _app.tsx or similar client-specific setup.
-    // The instrumentation hook (register function) primarily runs server-side (Node or Edge).
     console.log(
       'instrumentation.ts: Client-side context detected, Sentry init deferred to client-specific logic.',
     );
   }
 }
+
+// Initialize Sentry
+const sentryInitializationPromise = initializeSentryOrMock();
 
 export { onRequestError };
 

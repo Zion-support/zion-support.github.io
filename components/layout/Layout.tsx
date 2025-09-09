@@ -227,7 +227,7 @@ export default function Layout({
                 <span className="text-sm">You are offline</span>
               </div>
             </div>
-          </div>
+          )}
         </div>
 
         {/* Theme Toggle Floating Button */}

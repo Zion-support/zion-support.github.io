@@ -368,6 +368,7 @@
   "dependencies": {
     "@hello-pangea/dnd": "^18.0.1",
     "@hookform/resolvers": "^3.3.4",
+    "@prisma/client": "^6.15.0",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-aspect-ratio": "^1.0.3",
@@ -388,14 +389,17 @@
     "@radix-ui/react-tabs": "^1.0.4",
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-tooltip": "^1.0.7",
+    "@sentry/nextjs": "^10.11.0",
     "@stripe/stripe-js": "^2.3.0",
     "@supabase/supabase-js": "^2.39.3",
     "@tanstack/react-query": "^5.17.19",
+    "autoprefixer": "^10.4.21",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "cmdk": "^0.2.1",
     "date-fns": "^3.3.1",
     "embla-carousel-react": "^8.0.0-rc19",
+    "ethers": "^6.15.0",
     "framer-motion": "^11.0.3",
     "i18next": "^23.7.16",
     "i18next-browser-languagedetector": "^7.2.0",
@@ -404,6 +408,7 @@
     "jspdf-autotable": "^3.8.1",
     "lucide-react": "^0.541.0",
     "next": "^15.5.0",
+    "next-auth": "^4.24.11",
     "next-themes": "^0.4.6",
     "react": "^18.2.0",
     "react-day-picker": "^9.9.0",
@@ -414,6 +419,7 @@
     "react-router-dom": "^6.20.1",
     "recharts": "^2.12.0",
     "sonner": "^1.4.0",
+    "stripe": "^18.5.0",
     "tailwind-merge": "^2.2.1",
     "vaul": "^0.9.0",
     "zod": "^3.22.4"
@@ -422,6 +428,7 @@
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.32.0",
+    "@svgr/webpack": "^8.1.0",
     "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^16.3.0",
     "@types/node": "^24.3.0",
@@ -445,9 +452,9 @@
     "ts-jest": "^29.1.1",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
-    "vitest": "^1.4.0"
+    "vitest": "^1.4.0",
+    "webpack-bundle-analyzer": "^4.10.2"
   },
-
   "overrides": {
     "glob": "^10.4.5",
     "rimraf": "^5.0.5"
