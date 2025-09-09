@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { SEO } from '@/components/SEO';
 import { 
-  Mail, 
   Phone, 
+  Mail, 
   MapPin, 
   Clock, 
   Send,
   CheckCircle,
-  MessageSquare,
-  Globe
+  AlertCircle
 } from 'lucide-react';
 
-const Contact = () => {
+export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,25 +20,62 @@ const Contact = () => {
     service: '',
     message: ''
   });
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
+  const validateForm = () => {
+    const newErrors = {};
     
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+    }
+    
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+    
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      setSubmitStatus('success');
       setFormData({
         name: '',
         email: '',
@@ -47,349 +84,327 @@ const Contact = () => {
         service: '',
         message: ''
       });
-    }, 3000);
+      
+      // Reset status after 5 seconds
+      setTimeout(() => setSubmitStatus(null), 5000);
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
     {
-      icon: Mail,
-      title: 'Email Us',
-      details: 'hello@ziontechgroup.com',
-      description: 'Send us an email anytime'
+      icon: Phone,
+      title: 'Phone',
+      value: '+1 302 464 0950',
+      description: 'Available Mon-Fri, 9AM-6PM EST'
     },
     {
-      icon: Phone,
-      title: 'Call Us',
-      details: '+1 (555) 123-4567',
-      description: 'Mon-Fri from 8am to 6pm'
+      icon: Mail,
+      title: 'Email',
+      value: 'kleber@ziontechgroup.com',
+      description: 'We respond within 24 hours'
     },
     {
       icon: MapPin,
-      title: 'Visit Us',
-      details: 'Global • Remote First',
-      description: 'We work with clients worldwide'
+      title: 'Address',
+      value: '364 E Main St STE 1008, Middletown DE 19709',
+      description: 'Headquarters location'
     },
     {
       icon: Clock,
-      title: 'Response Time',
-      details: '< 24 hours',
-      description: 'We respond to all inquiries quickly'
+      title: 'Business Hours',
+      value: 'Monday - Friday',
+      description: '9:00 AM - 6:00 PM EST'
     }
   ];
 
   const services = [
-    'AI Solutions',
-    'Cloud & DevOps',
+    'AI & Machine Learning',
     'Cybersecurity',
+    'Cloud Solutions',
+    'Data Analytics',
     'Digital Transformation',
-    'Infrastructure',
-    'Consulting',
+    'Custom Software Development',
+    'IT Consulting',
     'Other'
   ];
 
   return (
-    <div className="min-h-screen py-20">
-      {/* Hero Section */}
-      <section className="px-4 mb-20">
-        <div className="container mx-auto text-center">
-          <motion.h1 
+    <>
+      <SEO 
+        title="Contact Zion Tech Group - Get In Touch"
+        description="Ready to transform your business? Contact Zion Tech Group today to discuss your technology needs and discover how our AI solutions can drive your success."
+      />
+      
+      <div className="min-h-screen bg-futuristic py-20">
+        <div className="container mx-auto px-4">
+          {/* Header */}
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent"
+            className="text-center mb-16"
           >
-            Get in Touch
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed"
-          >
-            Ready to transform your business with cutting-edge technology? Let's discuss how Zion Tech Group 
-            can help you achieve your goals.
-          </motion.p>
-        </div>
-      </section>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Get In <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Touch</span>
+            </h1>
+            <p className="text-zion-slate-light text-lg md:text-xl max-w-3xl mx-auto">
+              Ready to transform your business? Let's discuss your technology needs and discover how our 
+              cutting-edge solutions can drive your success.
+            </p>
+          </motion.div>
 
-      {/* Contact Form & Info */}
-      <section className="px-4 mb-20">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-zion-slate-darker p-8 rounded-2xl border border-zion-slate-light/20"
             >
-              <h2 className="text-3xl font-bold text-white mb-8">Send us a Message</h2>
-              
-              {isSubmitted ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-12"
-                >
-                  <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
-                  <h3 className="text-2xl font-bold text-white mb-4">Message Sent!</h3>
+              <div className="bg-zion-blue-dark/50 p-8 rounded-lg border border-zion-cyan/20">
+                <div className="mb-8">
+                  <h2 className="text-2xl font-semibold text-white mb-4">
+                    Send Us a Message
+                  </h2>
                   <p className="text-zion-slate-light">
-                    Thank you for reaching out. We'll get back to you within 24 hours.
+                    Fill out the form below and we'll get back to you within 24 hours.
                   </p>
-                </motion.div>
-              ) : (
+                </div>
+                
+                {submitStatus === 'success' && (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3"
+                  >
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span className="text-green-400">Thank you! Your message has been sent successfully.</span>
+                  </motion.div>
+                )}
+                
+                {submitStatus === 'error' && (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center gap-3"
+                  >
+                    <AlertCircle className="w-5 h-5 text-red-400" />
+                    <span className="text-red-400">Something went wrong. Please try again.</span>
+                  </motion.div>
+                )}
+                
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-2">
-                        Full Name *
+                      <label className="block text-sm font-medium text-white mb-2">
+                        Name *
                       </label>
                       <input
                         type="text"
-                        id="name"
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-slate-light/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
-                        placeholder="Enter your full name"
+                        className={`w-full px-4 py-3 bg-zion-slate-dark/50 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-colors ${
+                          errors.name ? 'border-red-500' : 'border-zion-cyan/20'
+                        }`}
+                        placeholder="Your full name"
                       />
+                      {errors.name && (
+                        <p className="text-red-400 text-sm mt-1">{errors.name}</p>
+                      )}
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-2">
-                        Email Address *
+                      <label className="block text-sm font-medium text-white mb-2">
+                        Email *
                       </label>
                       <input
                         type="email"
-                        id="email"
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-slate-light/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
-                        placeholder="Enter your email"
+                        className={`w-full px-4 py-3 bg-zion-slate-dark/50 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-colors ${
+                          errors.email ? 'border-red-500' : 'border-zion-cyan/20'
+                        }`}
+                        placeholder="your.email@example.com"
                       />
+                      {errors.email && (
+                        <p className="text-red-400 text-sm mt-1">{errors.email}</p>
+                      )}
                     </div>
                   </div>
-
+                  
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-2">
+                      <label className="block text-sm font-medium text-white mb-2">
                         Company
                       </label>
                       <input
                         type="text"
-                        id="company"
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-slate-light/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
-                        placeholder="Enter your company name"
+                        className="w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-colors"
+                        placeholder="Your company name"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-zion-slate-light mb-2">
-                        Phone Number
+                      <label className="block text-sm font-medium text-white mb-2">
+                        Phone
                       </label>
                       <input
                         type="tel"
-                        id="phone"
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-slate-light/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
-                        placeholder="Enter your phone number"
+                        className="w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-colors"
+                        placeholder="Your phone number"
                       />
                     </div>
                   </div>
-
+                  
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-zion-slate-light mb-2">
+                    <label className="block text-sm font-medium text-white mb-2">
                       Service of Interest
                     </label>
                     <select
-                      id="service"
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-slate-light/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-colors"
                     >
                       <option value="">Select a service</option>
-                      {services.map((service) => (
-                        <option key={service} value={service}>{service}</option>
+                      {services.map((service, index) => (
+                        <option key={index} value={service}>{service}</option>
                       ))}
                     </select>
                   </div>
-
+                  
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-2">
+                    <label className="block text-sm font-medium text-white mb-2">
                       Message *
                     </label>
                     <textarea
-                      id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      required
-                      rows={5}
-                      className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-slate-light/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 resize-none"
-                      placeholder="Tell us about your project or how we can help..."
+                      rows={4}
+                      className={`w-full px-4 py-3 bg-zion-slate-dark/50 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-colors resize-none ${
+                        errors.message ? 'border-red-500' : 'border-zion-cyan/20'
+                      }`}
+                      placeholder="Tell us about your project, goals, or how we can help..."
                     />
+                    {errors.message && (
+                      <p className="text-red-400 text-sm mt-1">{errors.message}</p>
+                    )}
                   </div>
-
-                  <button
+                  
+                  <motion.button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan/90 hover:to-zion-blue/90 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-cyan/25 flex items-center justify-center gap-2"
+                    disabled={isSubmitting}
+                    className={`w-full px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
+                      isSubmitting 
+                        ? 'opacity-50 cursor-not-allowed' 
+                        : 'hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25'
+                    }`}
+                    whileHover={!isSubmitting ? { scale: 1.02 } : {}}
+                    whileTap={!isSubmitting ? { scale: 0.98 } : {}}
                   >
-                    <Send className="w-5 h-5" />
-                    Send Message
-                  </button>
+                    {isSubmitting ? (
+                      <>
+                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5" />
+                        Send Message
+                      </>
+                    )}
+                  </motion.button>
                 </form>
-              )}
+              </div>
             </motion.div>
 
             {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
+              className="space-y-8"
             >
-              <h2 className="text-3xl font-bold text-white mb-8">Contact Information</h2>
-              
-              <div className="space-y-8">
-                {contactInfo.map((info, index) => (
-                  <motion.div
-                    key={info.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className="flex items-start space-x-4 group"
-                  >
-                    <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <info.icon className="w-6 h-6 text-zion-cyan" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
-                        {info.title}
-                      </h3>
-                      <p className="text-zion-cyan font-medium mb-1">
-                        {info.details}
-                      </p>
-                      <p className="text-zion-slate-light text-sm">
-                        {info.description}
-                      </p>
-                    </div>
-                  </motion.div>
-                ))}
+              <div>
+                <h2 className="text-2xl font-semibold text-white mb-6">
+                  Contact Information
+                </h2>
+                <div className="space-y-6">
+                  {contactInfo.map((info, index) => (
+                    <motion.div
+                      key={index}
+                      className="flex items-start gap-4"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                    >
+                      <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
+                        <info.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-1">{info.title}</h3>
+                        <p className="text-zion-cyan font-medium mb-1">{info.value}</p>
+                        <p className="text-zion-slate-light text-sm">{info.description}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
 
-              {/* Additional Info */}
-              <div className="mt-12 p-6 bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10 rounded-2xl border border-zion-cyan/20">
-                <h3 className="text-xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>
-                <ul className="space-y-3 text-zion-slate-light">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                    <span>Expert team with 10+ years of experience</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                    <span>Proven track record of successful projects</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                    <span>24/7 support and maintenance</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                    <span>Competitive pricing and flexible solutions</span>
-                  </li>
-                </ul>
+              {/* Office Hours */}
+              <div className="bg-zion-blue-dark/30 p-6 rounded-lg border border-zion-cyan/20">
+                <h3 className="text-xl font-semibold text-white mb-4">Office Hours</h3>
+                <div className="space-y-2 text-zion-slate-light">
+                  <div className="flex justify-between">
+                    <span>Monday - Friday</span>
+                    <span>9:00 AM - 6:00 PM EST</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Saturday</span>
+                    <span>10:00 AM - 2:00 PM EST</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Sunday</span>
+                    <span>Closed</span>
+                  </div>
+                </div>
+                <p className="text-zion-cyan text-sm mt-4">
+                  * Emergency support available 24/7 for existing clients
+                </p>
+              </div>
+
+              {/* Quick Response */}
+              <div className="bg-gradient-to-r from-zion-cyan to-zion-purple p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-white mb-3">Need Immediate Help?</h3>
+                <p className="text-white/90 mb-4">
+                  For urgent matters or existing client support, call our emergency line:
+                </p>
+                <div className="text-center">
+                  <a 
+                    href="tel:+13024640950"
+                    className="inline-block px-6 py-3 bg-white text-zion-blue rounded-lg font-semibold hover:scale-105 transition-transform"
+                  >
+                    +1 (302) 464-0950
+                  </a>
+                </div>
               </div>
             </motion.div>
           </div>
         </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="px-4 mb-20 bg-zion-slate-dark py-20">
-        <div className="container mx-auto">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Get answers to common questions about our services and process
-            </p>
-          </motion.div>
-          
-          <div className="max-w-4xl mx-auto space-y-6">
-            {[
-              {
-                question: "How quickly can you start working on my project?",
-                answer: "We typically begin projects within 1-2 weeks of contract signing. For urgent projects, we can expedite the process."
-              },
-              {
-                question: "Do you provide ongoing support after project completion?",
-                answer: "Yes, we offer comprehensive support packages including maintenance, updates, and 24/7 technical assistance."
-              },
-              {
-                question: "What industries do you specialize in?",
-                answer: "We work across various industries including healthcare, finance, manufacturing, retail, and technology."
-              },
-              {
-                question: "Can you work with my existing technology stack?",
-                answer: "Absolutely! We're experts at integrating with existing systems and can work with any technology stack."
-              }
-            ].map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-slate-darker p-6 rounded-xl border border-zion-slate-light/20"
-              >
-                <h3 className="text-lg font-bold text-white mb-3">{faq.question}</h3>
-                <p className="text-zion-slate-light">{faq.answer}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="px-4">
-        <div className="container mx-auto text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-zion-cyan-dark to-zion-blue-dark p-12 rounded-2xl"
-          >
-            <h2 className="text-4xl font-bold mb-6 text-white">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Let's discuss how we can help transform your business with cutting-edge technology solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="bg-white text-zion-blue-dark hover:bg-zion-slate-light font-bold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                Schedule a Call
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-zion-blue-dark font-bold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105">
-                Download Brochure
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+      </div>
+    </>
   );
 };
 
