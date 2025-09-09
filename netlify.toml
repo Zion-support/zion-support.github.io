@@ -1,8 +1,8 @@
 # Netlify rebuild trigger (minor touch to force deploy) - 2025-09-09 v4.48
 [build] # touch v4.48 to trigger Netlify rebuild
-  # Build the Next.js project on Netlify
+  # Build the Vite project on Netlify
   command = "npm ci --no-audit --no-fund --include=optional && npm run build:ci"
-  publish = ".next"
+  publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
   # Skip TypeScript checking during build
@@ -75,8 +75,4 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# SPA fallback handled via Netlify redirects since public/_redirects is gitignored
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# SPA fallback handled via public/_redirects already; remove duplicate here
