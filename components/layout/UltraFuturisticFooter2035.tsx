@@ -2,11 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Phone, Mail, MapPin, 
-  Brain, Atom, Shield, Rocket, BookOpen,
-  Star, Sparkles, BarChart3, 
-  Twitter, Linkedin, Facebook, Instagram, Youtube, Github, 
-  ArrowUp, Building
+  Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
+  Brain, Atom, Shield, Rocket, Target, BookOpen, Users,
+  Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb,
+  Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare,
+  ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2,
+  Palette, Music, Film, BookOpenCheck, HelpCircle, FileText, Video, Headphones
 } from 'lucide-react';
 
 const contactInfo = {
@@ -31,13 +32,14 @@ const footerSections = [
       { name: 'Content Automation', href: '/intelligent-content-automation-platform' },
       { name: 'CRM Intelligence Suite', href: '/smart-crm-intelligence-suite' },
       { name: 'AI Evaluation Orchestrator', href: '/ai-evaluation-orchestrator', featured: true },
-              { name: 'SEO Automation Suite', href: '/seo-automation-suite' },
-              { name: 'IT Asset Discovery Agent', href: '/it-asset-discovery-agent' },
-              { name: 'Managed Postgres HA', href: '/managed-postgres-ha' },
-              { name: 'DORA Metrics Dashboard', href: '/dora-metrics-dashboard' },
-              { name: 'Kubernetes Cost Guardrails', href: '/kubernetes-cost-guardrails' },
-              { name: 'OpenTelemetry Quickstart', href: '/opentelemetry-quickstart' },
-              { name: 'API Usage Billing Meter', href: '/api-usage-billing-meter' }
+      { name: 'SEO Automation Suite', href: '/seo-automation-suite' },
+      { name: 'IT Asset Discovery Agent', href: '/it-asset-discovery-agent' },
+      { name: 'Managed Postgres HA', href: '/managed-postgres-ha' },
+      { name: 'RAG Evaluation Lab', href: '/rag-evaluation-lab' },
+      { name: 'Browser Automation Cloud', href: '/browser-automation-cloud' },
+      { name: 'Secrets Rotation Automation', href: '/secrets-rotation-automation' },
+      { name: 'API Performance Testing', href: '/api-performance-testing' },
+      { name: 'SOC 2 Compliance Automation', href: '/soc2-compliance-automation' }
     ]
   },
   {
@@ -125,46 +127,21 @@ const footerSections = [
     icon: <BookOpen className="w-5 h-5 text-cyan-400" />,
     links: [
       { name: 'Blog', href: '/blog' },
-      { name: 'Resources Hub', href: '/resources' },
       { name: 'Case Studies', href: '/case-studies' },
       { name: 'Support Center', href: '/support' },
       { name: 'Training & Certification', href: '/training' },
       { name: 'Market Pricing', href: '/market-pricing' },
-      { name: 'Services Advertising', href: '/services-advertising' },
-      { name: 'RAG Evaluation Lab', href: '/rag-evaluation-lab' },
-      { name: 'SOC 2 Compliance Automation', href: '/soc2-compliance-automation' },
-      { name: 'Browser Automation Cloud', href: '/browser-automation-cloud' },
-      { name: 'Secrets Rotation Automation', href: '/secrets-rotation-automation' },
-      { name: 'API Performance Testing', href: '/api-performance-testing' }
-    ]
-  },
-  {
-    title: 'Company',
-    description: 'About Zion Tech Group',
-    icon: <Building className="w-5 h-5 text-gray-400" />,
-    links: [
-      { name: 'About Us', href: '/about', description: 'Our story and mission' },
-      { name: 'Careers', href: '/careers', description: 'Join our team' },
-      { name: 'Contact', href: '/contact', description: 'Get in touch' },
-      { name: 'Get Started', href: '/get-started', description: 'Start your journey' },
-      { name: 'Quote Request', href: '/quote', description: 'Request pricing' },
-      { name: 'Book Demo', href: '/demo', description: 'Schedule a demo' },
-      { name: 'Support', href: '/support', description: 'Technical support' },
-      { name: 'Partners', href: '/partners', description: 'Partnership opportunities' },
-      { name: 'News', href: '/news', description: 'Company updates' },
-      { name: 'Privacy Policy', href: '/privacy', description: 'Privacy information' },
-      { name: 'Terms of Service', href: '/terms', description: 'Terms and conditions' },
-      { name: 'Cookie Policy', href: '/cookies', description: 'Cookie information' }
+      { name: 'Services Advertising', href: '/services-advertising' }
     ]
   }
 ];
 
 const socialLinks = [
-  { name: 'Twitter', href: '/social/twitter', icon: <Twitter className="w-5 h-5" /> },
-  { name: 'LinkedIn', href: '/social/linkedin', icon: <Linkedin className="w-5 h-5" /> },
-  { name: 'Facebook', href: '/social/facebook', icon: <Facebook className="w-5 h-5" /> },
-  { name: 'Instagram', href: '/social/instagram', icon: <Instagram className="w-5 h-5" /> },
-  { name: 'YouTube', href: '/social/youtube', icon: <Youtube className="w-5 h-5" /> },
+  { name: 'X', href: 'https://x.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: <Linkedin className="w-5 h-5" /> },
+  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" /> },
+  { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
+  { name: 'YouTube', href: 'https://www.youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> }
 ];
 

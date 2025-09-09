@@ -1,6 +1,8 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import { SEO } from "@/components/SEO";
+import React, { useEffect, useState } from 'react';
+import { useParams, Navigate } from 'react-router-dom';
+import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
+import type { TalentProfile as TalentProfileType } from '@/types/talent';
+import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 
 const TalentDetail: React.FC = () => {
   const router = useRouter();

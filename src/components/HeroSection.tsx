@@ -37,54 +37,21 @@ export function HeroSection() {
       {/* Enhanced background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-90"></div>
       
-      {/* Animated floating particles with enhanced effects */}
-      <div className="absolute inset-0">
-        <motion.div 
-          className="absolute top-1/4 left-1/4 w-3 h-3 rounded-full bg-zion-purple-light opacity-60"
-          animate={{ 
-            y: [0, -20, 0],
-            opacity: [0.6, 0.3, 0.6]
-          }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div 
-          className="absolute top-1/3 right-1/3 w-4 h-4 rounded-full bg-zion-cyan opacity-40"
-          animate={{ 
-            y: [0, 15, 0],
-            opacity: [0.4, 0.1, 0.4]
-          }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        />
-        <motion.div 
-          className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-50"
-          animate={{ 
-            y: [0, -25, 0],
-            opacity: [0.5, 0.2, 0.5]
-          }}
-          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-        />
-        <motion.div 
-          className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-cyan-light opacity-30"
-          animate={{ 
-            y: [0, 20, 0],
-            opacity: [0.3, 0.1, 0.3]
-          }}
-          transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-        />
+      {/* Animated Grid */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,197,94,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,197,94,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
       </div>
-      
-      <motion.div 
-        className="container relative z-10 px-4 mx-auto text-center"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        {/* Enhanced hero title with sparkles */}
-        <motion.div variants={itemVariants} className="mb-6">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Sparkles className="w-8 h-8 text-zion-purple-light" />
-            <span className="text-zion-cyan-light text-lg font-medium">#1 AI & Tech Marketplace</span>
-            <Sparkles className="w-8 h-8 text-zion-purple-light" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Hero Content */}
+        <div className={`transition-all duration-1000 ease-in-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
+          {/* Icon */}
+          <div className="mb-8">
+            <div className={`w-24 h-24 mx-auto bg-gradient-to-br ${currentSlideData.color} rounded-2xl flex items-center justify-center shadow-2xl shadow-green-500/25`}>
+              <currentSlideData.icon className="w-12 h-12 text-white" />
+            </div>
           </div>
           <GradientHeading className="text-5xl md:text-7xl font-bold leading-tight">
             {t('home.hero_title')}

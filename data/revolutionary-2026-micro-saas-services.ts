@@ -1,38 +1,41 @@
-export const revolutionary2026MicroSaasServices = [
+export interface Revolutionary2026MicroSaasService {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+  };
+}
+
+export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasService[] = [
   {
-    name: 'Revolutionary 2026 Micro-SaaS Platform',
-    path: '/services/revolutionary-2026-micro-saas-platform',
-    description: 'Next-generation 2026 micro-SaaS development and deployment',
-    icon: 'Rocket',
-    category: 'Micro-SaaS',
+    id: "2026-revolutionary-micro-saas",
+    name: "2026 Revolutionary Micro SAAS Platform",
+    tagline: "Revolutionary micro SAAS for 2026",
+    price: "$149/month",
+    description: "Revolutionary micro SAAS platform that transforms how businesses operate in 2026.",
     features: [
-      'Advanced development framework',
-      'AI-powered optimization',
-      'Scalable architecture',
-      'Performance monitoring'
+      "Revolutionary features",
+      "Transformative capabilities",
+      "Advanced technology",
+      "Innovation platform",
+      "Future-ready solutions"
     ],
-    pricing: {
-      starter: '$299/month',
-      professional: '$599/month',
-      enterprise: 'Custom'
-    }
-  },
-  {
-    name: 'Revolutionary 2026 SaaS Analytics',
-    path: '/services/revolutionary-2026-saas-analytics',
-    description: 'Intelligent 2026 SaaS performance and user analytics',
-    icon: 'BarChart3',
-    category: 'Analytics',
-    features: [
-      'AI-powered insights',
-      'Predictive analytics',
-      'Real-time monitoring',
-      'Advanced reporting'
-    ],
-    pricing: {
-      starter: '$149/month',
-      professional: '$299/month',
-      enterprise: 'Custom'
+    link: "/services/2026-revolutionary-micro-saas",
+    category: "Revolutionary 2026 Micro SAAS",
+    realImplementation: true,
+    contactInfo: {
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];

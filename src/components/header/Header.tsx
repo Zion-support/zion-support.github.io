@@ -1,19 +1,16 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
+
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
 import { UserMenu } from './UserMenu';
 import { LanguageSelector } from './LanguageSelector';
-import { ModeToggle } from "@/components/ModeToggle";
 import { MainNavigation } from '@/layout/MainNavigation';
 import { useAuth } from '@/hooks/useAuth';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { slugify } from "@/lib/slugify";
-import { useRouter } from "next/router"; // Changed from react-router-dom
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import { useTranslation } from 'react-i18next';
-import { logInfo } from '@/utils/productionLogger';
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export interface HeaderProps {
   hideLogin?: boolean;
@@ -58,7 +55,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   
   return (
     <header 
-      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md"
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-xl shadow-2xl shadow-zion-purple/10"
       style={headerStyle}
     >
       <div className="container flex h-16 items-center px-4 sm:px-6">
