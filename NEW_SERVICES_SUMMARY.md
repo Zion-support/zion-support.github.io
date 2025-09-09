@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 # Zion Tech Group - New Innovative Services Summary
@@ -910,4 +908,3 @@ Zion Tech Group has significantly expanded its portfolio with **25+ new innovati
 *This comprehensive service portfolio positions Zion Tech Group as a leading provider of cutting-edge technology solutions across multiple high-growth markets. All services are designed to deliver substantial ROI while maintaining the highest standards of quality and innovation.*
 
 
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
