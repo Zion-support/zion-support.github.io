@@ -11,8 +11,7 @@ export default defineConfig(({ mode }) => ({
       // Optimize JSX runtime
       jsxRuntime: 'automatic',
     }),
-    // Bundle analyzer removed - package not available
-  ].filter(Boolean),
+  ],
   build: {
     // Disable source maps in production for smaller bundle
     sourcemap: false,
@@ -31,6 +30,11 @@ export default defineConfig(({ mode }) => ({
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
           query: ['@tanstack/react-query'],
+          ui: ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-avatar'],
+          utils: ['axios', 'date-fns', 'lodash.debounce'],
+          forms: ['react-hook-form', 'formik', 'yup', 'zod'],
+          motion: ['framer-motion'],
+          icons: ['lucide-react'],
         },
         // Optimize chunk file names
         chunkFileNames: 'assets/[name]-[hash].js',

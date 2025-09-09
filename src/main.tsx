@@ -7,7 +7,7 @@ import './index.css';
 import './i18n';
 
 // Register service worker
-import { registerServiceWorker } from './serviceWorkerRegistration';
+import { register } from './serviceWorkerRegistration';
 
 // Error handling function
 // const showApiError = (error: unknown): void => {
@@ -61,7 +61,7 @@ try {
 
   // Register service worker in production
   if (import.meta.env.PROD) {
-    registerServiceWorker();
+    register();
   }
 } catch (error) {
   handleGlobalError(error as Error);

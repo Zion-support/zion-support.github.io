@@ -8,6 +8,8 @@ import './App.css';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import { NotificationToast } from './components/NotificationToast';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Create QueryClient instance
 const queryClient = new QueryClient({
@@ -116,6 +118,8 @@ const App: React.FC = () => {
               </main>
             </div>
             <NotificationToast />
+            <PerformanceMonitor />
+            <AccessibilityEnhancer />
           </Router>
         </HelmetProvider>
       </QueryClientProvider>
