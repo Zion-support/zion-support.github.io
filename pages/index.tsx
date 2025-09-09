@@ -19,8 +19,14 @@ export default function Home() {
               Transform Your Business with
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Zion Tech Group</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200">
-              Leading technology solutions provider helping businesses innovate and scale with cutting-edge AI, cloud architecture, and digital transformation services.
+            <p className="text-xl md:text-2xl text-slate-300 mb-8">
+              Innovative Micro SaaS, AI Services & IT Solutions
+            </p>
+            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
+              We deliver cutting-edge technology solutions with 150+ micro SaaS products, 
+              100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
+              to AI automation, quantum computing to blockchain solutions, we help businesses scale 
+              efficiently and securely in the digital age.
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
@@ -36,6 +42,24 @@ export default function Home() {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </span>
               </Link>
+              <Link href="/contact" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+                Get Quote
+              </Link>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                <h3 className="text-2xl font-bold text-blue-400 mb-2">150+</h3>
+                <p className="text-slate-300">Micro SaaS Products</p>
+              </div>
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                <h3 className="text-2xl font-bold text-purple-400 mb-2">100+</h3>
+                <p className="text-slate-300">AI Services</p>
+              </div>
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                <h3 className="text-2xl font-bold text-green-400 mb-2">100+</h3>
+                <p className="text-slate-300">IT Solutions</p>
+              </div>
             </div>
           </div>
         </div>
