@@ -1,95 +1,56 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Globe, 
-  Cpu, 
-  Zap, 
-  Shield, 
-  Database, 
-  BarChart3, 
-  Network, 
-  Cloud,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Rocket,
-  Users,
-  Building
-} from 'lucide-react';
+import { Globe, Cpu, BarChart3, Zap, Target, Shield, Users, Eye } from 'lucide-react';
 
 const DigitalTwinPage = () => {
   const services = [
     {
-      title: 'Digital Twin Development',
-      description: 'Create comprehensive digital replicas of physical assets, processes, and systems.',
-      features: ['3D Modeling', 'Real-time Data Integration', 'Simulation Engine', 'Predictive Analytics'],
-      price: '$25,000/month',
       icon: Globe,
-      category: 'Development'
+      title: '3D Modeling',
+      description: 'High-fidelity 3D models that accurately represent physical assets and environments.'
     },
     {
-      title: 'IoT Integration',
-      description: 'Connect physical assets with digital twins through advanced IoT sensors and networks.',
-      features: ['Sensor Networks', 'Data Collection', 'Real-time Monitoring', 'Edge Computing'],
-      price: '$15,000/month',
       icon: Cpu,
-      category: 'IoT'
+      title: 'Real-time Monitoring',
+      description: 'Live data integration and monitoring for continuous asset performance tracking.'
     },
     {
-      title: 'Predictive Maintenance',
-      description: 'Leverage digital twins for predictive maintenance and asset optimization.',
-      features: ['Condition Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Performance Optimization'],
-      price: '$18,000/month',
-      icon: Zap,
-      category: 'Maintenance'
-    },
-    {
-      title: 'Simulation & Testing',
-      description: 'Virtual testing and simulation capabilities for complex systems and scenarios.',
-      features: ['Virtual Testing', 'Scenario Modeling', 'Performance Analysis', 'Risk Assessment'],
-      price: '$20,000/month',
       icon: BarChart3,
-      category: 'Simulation'
+      title: 'Predictive Analytics',
+      description: 'AI-powered predictive models for maintenance, optimization, and risk assessment.'
     },
     {
-      title: 'Data Analytics',
-      description: 'Advanced analytics and insights from digital twin data for informed decision-making.',
-      features: ['Real-time Analytics', 'Historical Analysis', 'Trend Detection', 'Custom Dashboards'],
-      price: '$12,000/month',
-      icon: Database,
-      category: 'Analytics'
+      icon: Zap,
+      title: 'Simulation & Testing',
+      description: 'Virtual testing environments for scenarios that would be costly or dangerous in reality.'
     },
     {
-      title: 'Enterprise Integration',
-      description: 'Seamless integration with existing enterprise systems and workflows.',
-      features: ['ERP Integration', 'PLM Systems', 'MES Integration', 'Custom APIs'],
-      price: '$22,000/month',
-      icon: Building,
-      category: 'Integration'
+      icon: Target,
+      title: 'Performance Optimization',
+      description: 'Data-driven insights for improving efficiency and reducing operational costs.'
+    },
+    {
+      icon: Shield,
+      title: 'Risk Management',
+      description: 'Proactive risk identification and mitigation through digital twin analysis.'
     }
   ];
 
-  const benefits = [
-    'Reduce operational costs by 40%',
-    'Improve asset performance by 60%',
-    'Enable predictive maintenance',
-    'Accelerate innovation cycles'
-  ];
-
-  const industries = [
-    'Manufacturing',
-    'Healthcare',
-    'Energy',
-    'Transportation',
-    'Smart Cities',
-    'Aerospace'
+  const applications = [
+    'Manufacturing & Industrial',
+    'Smart Cities & Infrastructure',
+    'Healthcare & Medical Devices',
+    'Energy & Utilities',
+    'Transportation & Logistics',
+    'Buildings & Real Estate',
+    'Agriculture & Farming',
+    'Aerospace & Defense'
   ];
 
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-20 pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
         <div className="container-responsive relative z-10">
           <motion.div
@@ -98,36 +59,32 @@ const DigitalTwinPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="flex items-center justify-center mb-6">
-              <Globe className="w-16 h-16 text-zion-cyan mr-4" />
-              <h1 className="text-5xl md:text-6xl font-bold text-gradient">
-                Digital Twin Solutions
-              </h1>
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
+                <Globe className="w-10 h-10 text-white" />
+              </div>
             </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-6">
+              Digital Twin Solutions
+            </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Create virtual replicas of your physical world with cutting-edge digital twin technology. 
-              Monitor, simulate, and optimize your assets in real-time for unprecedented insights.
+              Create virtual replicas of your physical assets and systems. Monitor, analyze, and optimize 
+              performance in real-time with our advanced digital twin technology.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/contact"
-                className="btn-neon px-8 py-4 text-lg font-semibold"
-              >
-                Start Digital Twin
-              </Link>
-              <Link
-                to="/request-quote"
-                className="btn-futuristic px-8 py-4 text-lg font-semibold"
-              >
-                Get Twin Assessment
-              </Link>
+              <button className="btn-futuristic px-8 py-3 text-lg">
+                Digital Twin Assessment
+              </button>
+              <button className="btn-neon px-8 py-3 text-lg">
+                View Demo
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20">
+      {/* Services Section */}
+      <section className="py-20 bg-zion-slate-dark/50">
         <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -135,12 +92,11 @@ const DigitalTwinPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Complete Digital Twin Solutions
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Digital Twin Services
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              From development to deployment, we provide end-to-end digital twin solutions 
-              that revolutionize how you monitor and manage your physical assets.
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              From concept to implementation, we provide comprehensive digital twin development and management.
             </p>
           </motion.div>
 
@@ -151,59 +107,80 @@ const DigitalTwinPage = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
+                className="bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <span className="text-sm font-medium text-zion-cyan bg-zion-cyan/10 px-3 py-1 rounded-full">
-                      {service.category}
-                    </span>
-                  </div>
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-white" />
                 </div>
-                
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300">
-                  {service.title}
-                </h3>
-                
-                <p className="text-zion-slate-light mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-                
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center text-zion-slate-light">
-                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <div className="text-2xl font-bold text-zion-cyan">
-                    {service.price}
-                  </div>
-                  <Link
-                    to="/contact"
-                    className="flex items-center text-zion-cyan hover:text-white transition-colors duration-300 group"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Link>
-                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
+                <p className="text-zion-slate-light leading-relaxed">{service.description}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Applications Section */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Industry Applications
+              </h2>
+              <p className="text-lg text-zion-slate-light mb-8 leading-relaxed">
+                Digital twins are transforming industries by providing unprecedented visibility and control 
+                over complex systems and processes.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {applications.map((application, index) => (
+                  <motion.div
+                    key={application}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex items-center space-x-3 text-zion-slate-light"
+                  >
+                    <div className="w-6 h-6 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span>{application}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-3xl p-8 border border-zion-cyan/30">
+                <div className="text-center">
+                  <Eye className="w-16 h-16 text-zion-cyan mx-auto mb-6" />
+                  <h3 className="text-2xl font-semibold text-white mb-4">
+                    Digital Twin Strategy
+                  </h3>
+                  <p className="text-zion-slate-light mb-6">
+                    Get a comprehensive assessment and implementation roadmap for digital twins.
+                  </p>
+                  <button className="btn-futuristic px-6 py-3">
+                    Get Strategy
+                  </button>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-zion-slate-dark/30">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
         <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -211,102 +188,78 @@ const DigitalTwinPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Digital Twins?
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Experience the transformative power of digital twin technology and unlock new possibilities.
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Transform your operations with real-time insights and predictive capabilities.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={benefit}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Star className="w-8 h-8 text-white" />
-                </div>
-                <p className="text-lg text-zion-slate-light leading-relaxed">
-                  {benefit}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Real-time Monitoring</h3>
+              <p className="text-zion-slate-light">Continuous visibility into asset performance and system health.</p>
+            </motion.div>
 
-      {/* Industries Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Industries We Transform
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our digital twin solutions are designed to revolutionize operations across diverse industries.
-            </p>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Target className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Predictive Maintenance</h3>
+              <p className="text-zion-slate-light">Anticipate issues before they occur and optimize maintenance schedules.</p>
+            </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {industries.map((industry, index) => (
-              <motion.div
-                key={industry}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300 group"
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Globe className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors duration-300">
-                  {industry}
-                </h3>
-              </motion.div>
-            ))}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Collaborative Decision Making</h3>
+              <p className="text-zion-slate-light">Enable teams to work together using shared digital models.</p>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20">
-        <div className="container-responsive">
+        <div className="container-responsive text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20 border border-zion-cyan/30 rounded-3xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Create Your Digital Twin?
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Transform your physical assets into intelligent, connected digital replicas. Our expert team 
-              is ready to help you build the future of asset management and optimization.
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+              Discover how digital twins can revolutionize your operations and provide unprecedented insights.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/contact"
-                className="btn-neon px-8 py-4 text-lg font-semibold"
-              >
-                Start Digital Twin Project
-              </Link>
-              <Link
-                to="/request-quote"
-                className="btn-futuristic px-8 py-4 text-lg font-semibold"
-              >
-                Get Digital Twin Quote
-              </Link>
+              <button className="btn-futuristic px-8 py-4 text-lg">
+                Schedule Consultation
+              </button>
+              <button className="btn-neon px-8 py-4 text-lg">
+                View Case Studies
+              </button>
             </div>
           </motion.div>
         </div>
