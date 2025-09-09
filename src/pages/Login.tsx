@@ -1,22 +1,21 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
-const ServicesPage: React.FC = () => {
+const Login: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Services - Zion Tech Group" 
-        description="Comprehensive range of IT and AI services to transform your business operations."
+        title="Login - Zion Tech Group" 
+        description="Sign in to your Zion Tech Group account to access your dashboard and services."
       />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
-              Services
+              Login
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive range of IT and AI services to transform your business operations.
-              From automation to cybersecurity, we've got you covered.
+              Sign in to your Zion Tech Group account to access your dashboard and services.
             </p>
           </div>
           
@@ -26,7 +25,7 @@ const ServicesPage: React.FC = () => {
                 Coming Soon
               </h2>
               <p className="text-zion-slate-light mb-6">
-                Our services page is currently under development.
+                Our login system is currently under development.
               </p>
             </div>
           </div>
@@ -36,4 +35,4 @@ const ServicesPage: React.FC = () => {
   );
 };
 
-export default ServicesPage;
+export default Login;

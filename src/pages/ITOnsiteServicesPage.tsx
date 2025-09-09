@@ -1,22 +1,22 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
-const ServicesPage: React.FC = () => {
+const ITOnsiteServicesPage: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Services - Zion Tech Group" 
-        description="Comprehensive range of IT and AI services to transform your business operations."
+        title="IT Onsite Services - Zion Tech Group" 
+        description="Professional IT services delivered directly to your location for maximum convenience and efficiency."
       />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
-              Services
+              IT Onsite Services
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive range of IT and AI services to transform your business operations.
-              From automation to cybersecurity, we've got you covered.
+              Professional IT services delivered directly to your location for maximum 
+              convenience and efficiency. Our expert technicians come to you.
             </p>
           </div>
           
@@ -26,7 +26,7 @@ const ServicesPage: React.FC = () => {
                 Coming Soon
               </h2>
               <p className="text-zion-slate-light mb-6">
-                Our services page is currently under development.
+                Our IT onsite services page is currently under development.
               </p>
             </div>
           </div>
@@ -36,4 +36,4 @@ const ServicesPage: React.FC = () => {
   );
 };
 
-export default ServicesPage;
+export default ITOnsiteServicesPage;

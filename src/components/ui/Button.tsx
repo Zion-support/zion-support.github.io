@@ -1,11 +1,9 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { ButtonProps } from '../../types/components';
+import LoadingSpinner from '../LoadingSpinner';
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from "class-variance-authority";
-
-// Lazy load LoadingSpinner to avoid static import conflicts
-const LoadingSpinner = lazy(() => import('../LoadingSpinner'));
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed",

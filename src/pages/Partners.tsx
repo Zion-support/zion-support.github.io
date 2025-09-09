@@ -1,22 +1,22 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
-const ServicesPage: React.FC = () => {
+const Partners: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Services - Zion Tech Group" 
-        description="Comprehensive range of IT and AI services to transform your business operations."
+        title="Partners - Zion Tech Group" 
+        description="Strategic partnerships and collaborations with leading technology companies."
       />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
-              Services
+              Partners
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive range of IT and AI services to transform your business operations.
-              From automation to cybersecurity, we've got you covered.
+              Strategic partnerships and collaborations with leading technology companies.
+              Together, we're building the future of technology.
             </p>
           </div>
           
@@ -26,7 +26,7 @@ const ServicesPage: React.FC = () => {
                 Coming Soon
               </h2>
               <p className="text-zion-slate-light mb-6">
-                Our services page is currently under development.
+                Our partners page is currently under development.
               </p>
             </div>
           </div>
@@ -36,4 +36,4 @@ const ServicesPage: React.FC = () => {
   );
 };
 
-export default ServicesPage;
+export default Partners;
