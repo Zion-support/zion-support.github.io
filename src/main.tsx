@@ -36,7 +36,8 @@ import './i18n';
 import { register } from './serviceWorkerRegistration';
 
 // Performance monitoring
-import { performanceMonitor, setupGlobalErrorHandlers } from './utils/performance-monitor';
+import { performanceMonitor } from './utils/performance-monitor';
+import { setupGlobalErrorHandlers } from './utils/error-handler';
 import ErrorBoundary from './components/ErrorBoundary';
 
 // Create QueryClient
