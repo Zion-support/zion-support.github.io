@@ -3,11 +3,12 @@ import { cn } from '@/lib/utils';
 import { Button } from './Button';
 import { ChevronDown } from 'lucide-react';
 
-interface SelectProps {
+interface SelectProps extends React.HTMLAttributes<HTMLDivElement> {
   value?: string;
   onValueChange?: (value: string) => void;
   children: React.ReactNode;
   className?: string;
+  name?: string;
 }
 
 const Select = React.forwardRef<HTMLDivElement, SelectProps>(

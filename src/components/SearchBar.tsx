@@ -5,14 +5,19 @@ interface SearchBarProps {
   placeholder?: string;
   onSearch?: (query: string) => void;
   className?: string;
+  value?: string;
+  onChange?: (value: string) => void;
 }
 
 export const SearchBar: React.FC<SearchBarProps> = ({
   placeholder = "Search...",
   onSearch,
-  className = ""
+  className = "",
+  value,
+  onChange
 }) => {
-  const [query, setQuery] = useState('');
+  const [internalQuery, setInternalQuery] = useState('');
+  const query = value !== undefined ? value : internalQuery;
   const { trackEvent } = useAnalytics();
 
   const handleSearch = useCallback((searchQuery: string) => {
@@ -29,7 +34,11 @@ export const SearchBar: React.FC<SearchBarProps> = ({
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    setQuery(value);
+    if (onChange) {
+      onChange(value);
+    } else {
+      setInternalQuery(value);
+    }
     
     // Auto-search as user types (debounced)
     if (value.length > 2) {
@@ -42,7 +51,11 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   };
 
   const handleClear = () => {
-    setQuery('');
+    if (onChange) {
+      onChange('');
+    } else {
+      setInternalQuery('');
+    }
     trackEvent('click', { element: 'search_clear' });
   };
 

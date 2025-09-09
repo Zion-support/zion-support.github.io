@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import JSZip from 'jszip';
-import { saveAs } from 'file-saver';
+import { saveAs } from '@/utils/file-saver-stub';
 import { AppLayout } from '@/layout/AppLayout';
 import { NextSeo } from '@/components/NextSeo';
 import { Button } from '@/components/ui/button';
