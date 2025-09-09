@@ -1,2 +1,2 @@
-export { LoginForm as LoginContent } from './LoginForm.jsx';
-export { default as LoginErrorFallback } from './LoginErrorFallback.jsx';
+export { LoginForm as LoginContent } from './LoginForm';
+export { default as LoginErrorFallback } from './LoginErrorFallback';

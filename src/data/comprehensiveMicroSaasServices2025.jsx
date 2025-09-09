@@ -768,4 +768,27 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         customizationLevel: "Industry-specific manufacturing workflows and IoT integration"
     }
 ];
+
+// Service categories for filtering
+export const SERVICE_CATEGORIES = [
+    'AI & Machine Learning',
+    'Cybersecurity & Compliance',
+    'Cloud & DevOps',
+    'Data Analytics & BI',
+    'IoT & Edge Computing',
+    'Blockchain & Web3',
+    'Mobile & Web Development',
+    'Enterprise Software',
+    'Industry Solutions',
+    'Emerging Technology'
+];
+
+// Pricing tiers for filtering
+export const PRICING_TIERS = {
+    'budget': [99, 299],
+    'mid-range': [300, 699],
+    'premium': [700, 1499],
+    'enterprise': [1500, 5000]
+};
+
 export default COMPREHENSIVE_MICRO_SAAS_SERVICES_2025;
