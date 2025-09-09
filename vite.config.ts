@@ -1,0 +1,247 @@
+// @ts-nocheck
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
+import { fileURLToPath } from 'url'
+import { optimizePreloads } from './plugins/optimize-preloads.js'
+
+// Ensure __dirname is available in ESM
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+// Disable complex manual chunking on CI/Netlify to avoid occasional hangs during
+// Rollup's chunk rendering phase. Can be overridden locally by setting
+// DISABLE_MANUAL_CHUNKS=false or enabling ANALYZE.
+const disableManualChunks = (
+  process.env.NETLIFY === 'true' ||
+  process.env.CI === 'true' ||
+  process.env.DISABLE_MANUAL_CHUNKS === 'true'
+) && process.env.ANALYZE !== 'true'
+
+// Determine if we're running in CI/Netlify
+const isCI = process.env.NETLIFY === 'true' || process.env.CI === 'true'
+
+// https://vitejs.dev/config/
+export default defineConfig(({ mode }) => ({
+  base: '/',
+  plugins: [
+    react({
+      jsxRuntime: 'automatic',
+    }),
+    // Custom plugin to optimize preload links
+    optimizePreloads(),
+    // Bundle analyzer would go here if needed
+  ].filter(Boolean),
+  // Explicitly set the build target to prevent ES2024 issues
+  build: {
+    // Output directory for Netlify compatibility
+    outDir: 'dist',
+    // Disable source maps in production for smaller bundle
+    sourcemap: false,
+    // Prefer esbuild for fast, reliable CI minification
+    minify: 'esbuild',
+    // Use esbuild for CSS minification to avoid heavy PostCSS/CSSNano work on CI
+    cssMinify: 'esbuild',
+    // Optimize module preload to reduce warnings
+    modulePreload: {
+      polyfill: true,
+      // Only preload the most critical dependencies to avoid warnings
+      resolveDependencies: (filename, deps, { hostId, hostType }) => {
+        // Only preload the main entry point and critical React chunks
+        return deps.filter(dep => {
+          // Only preload the main entry and react-core for faster initial load
+          return dep.includes('index-') || dep.includes('react-core-');
+        });
+      }
+    },
+    // Chunk size warning limit
+    chunkSizeWarningLimit: 500,
+    // Assets inline limit - smaller for better caching
+    assetsInlineLimit: 2048,
+    // Enable tree shaking
+    treeshake: true,
+    // Optimize chunk splitting
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      },
+      onwarn(warning, warn) {
+        // Suppress TypeScript warnings
+        if (warning.code === 'UNRESOLVED_IMPORT') return;
+        warn(warning);
+      },
+      output: {
+        // Enable optimized manual chunking for better performance
+        manualChunks: disableManualChunks ? undefined : (id) => {
+          // Vendor chunks - more granular splitting
+          if (id.includes('node_modules')) {
+            // React ecosystem - core
+            if (id.includes('react') && !id.includes('react-router')) {
+              return 'react-core';
+            }
+            // React DOM
+            if (id.includes('react-dom')) {
+              return 'react-dom';
+            }
+            // Router
+            if (id.includes('react-router')) {
+              return 'router';
+            }
+            // Query library
+            if (id.includes('@tanstack/react-query')) {
+              return 'query';
+            }
+            // UI libraries - split by size
+            if (id.includes('@radix-ui')) {
+              return 'radix-ui';
+            }
+            if (id.includes('lucide-react')) {
+              return 'icons';
+            }
+            // Forms
+            if (id.includes('react-hook-form') || id.includes('formik') || id.includes('yup') || id.includes('zod')) {
+              return 'forms';
+            }
+            // Animation - large library
+            if (id.includes('framer-motion')) {
+              return 'motion';
+            }
+            // Utilities - split by usage
+            if (id.includes('axios')) {
+              return 'http';
+            }
+            if (id.includes('date-fns')) {
+              return 'date-utils';
+            }
+            if (id.includes('lodash') || id.includes('clsx') || id.includes('class-variance-authority')) {
+              return 'utils';
+            }
+            // Large external libraries
+            if (id.includes('@stripe') || id.includes('@supabase') || id.includes('ethers')) {
+              return 'external';
+            }
+            // Everything else
+            return 'vendor';
+          }
+          // Component chunks - split by feature
+          if (id.includes('/src/components/')) {
+            if (id.includes('/ui/')) {
+              return 'ui-components';
+            }
+            if (id.includes('/auth/') || id.includes('/login/')) {
+              return 'auth-components';
+            }
+            if (id.includes('/talent/') || id.includes('/profile/')) {
+              return 'talent-components';
+            }
+            return 'components';
+          }
+          // Page chunks - split by route group
+          if (id.includes('/src/pages/')) {
+            if (id.includes('Home') || id.includes('About') || id.includes('Contact')) {
+              return 'main-pages';
+            }
+            if (id.includes('Services') || id.includes('Pricing')) {
+              return 'service-pages';
+            }
+            if (id.includes('Talent') || id.includes('AIMatcher')) {
+              return 'talent-pages';
+            }
+            if (id.includes('Login') || id.includes('Signup')) {
+              return 'auth-pages';
+            }
+            return 'pages';
+          }
+        },
+        // Optimize chunk file names
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
+      },
+    },
+    // Optimize build target - ensure compatibility with esbuild
+    target: 'es2020',
+    // Enable CSS code splitting
+    cssCodeSplit: true,
+    // Avoid gzip size computation entirely to prevent extra work on CI
+    reportCompressedSize: false,
+    // Optimize for production
+    emptyOutDir: true,
+  },
+  // Reduce module preload generation on CI which can appear to hang
+  experimental: {
+    renderBuiltUrl(filename) {
+      return { relative: true };
+    },
+  },
+  esbuild: {
+    target: 'es2020',
+    // Disable TypeScript checking during build
+    logLevel: 'error',
+    // Strip debugging noise and mark common logging as pure
+    drop: ['console', 'debugger'],
+    pure: ['console.log', 'console.info', 'console.debug'],
+    // Explicitly set supported targets for esbuild
+    supported: {
+      'top-level-await': false
+    },
+    // Force esbuild to use the correct target and format
+    format: 'esm',
+    // Additional safeguards to prevent ES2024 issues
+    platform: 'browser',
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+      'next/router': path.resolve(__dirname, './src/stubs/next-router.ts'),
+      'next/link': path.resolve(__dirname, './src/stubs/next-link.ts'),
+      'next/image': path.resolve(__dirname, './src/stubs/next-image.ts'),
+      'next/head': path.resolve(__dirname, './src/stubs/next-head.ts'),
+      'next-cloudinary': path.resolve(__dirname, './src/stubs/next-cloudinary.ts'),
+      '@supabase/ssr': path.resolve(__dirname, './src/stubs/supabase-ssr.ts'),
+      '@datadog/browser-logs': path.resolve(__dirname, './src/utils/datadog-logs-shim.ts'),
+      'logrocket': path.resolve(__dirname, './src/utils/logrocket-shim.ts')
+    }
+  },
+  server: {
+    port: 3000,
+    host: true,
+    open: true,
+    cors: true,
+    // Enable HMR for better development experience
+    hmr: {
+      overlay: true,
+    },
+  },
+  define: {
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    'process.env.BUILD_TARGET': JSON.stringify('es2022'),
+  },
+  // Optimize dependencies
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom',
+      'react-router-dom',
+      'axios',
+      'date-fns',
+      'framer-motion',
+      'lucide-react',
+      '@tanstack/react-query',
+      '@radix-ui/react-slot',
+      'clsx',
+      'tailwind-merge',
+    ],
+    // Exclude problematic dependencies
+    exclude: ['@vite/client', '@vite/env'],
+    // Force pre-bundling for better performance
+    force: true,
+    // Ensure esbuild target compatibility
+    esbuildOptions: {
+      target: 'es2020',
+    },
+  },
+  // Performance optimizations
+  css: {
+    devSourcemap: true,
+  },
+}))

@@ -1,0 +1,169 @@
+{
+  "timestamp": "2025-09-09T11:59:55.578Z",
+  "analysis": {
+    "totalSize": 768200,
+    "totalSizeKB": 750.2,
+    "totalSizeMB": 0.73,
+    "assetCount": 98,
+    "jsAssets": {
+      "count": 14,
+      "totalSize": 454896,
+      "largest": [
+        {
+          "name": "assets/react-core-DvVYlbsT.js",
+          "path": "/workspace/dist/assets/react-core-DvVYlbsT.js",
+          "size": 166554,
+          "sizeKB": 162.65,
+          "extension": ".js",
+          "type": "JavaScript"
+        },
+        {
+          "name": "assets/pages-DDF5DlEO.js",
+          "path": "/workspace/dist/assets/pages-DDF5DlEO.js",
+          "size": 84767,
+          "sizeKB": 82.78,
+          "extension": ".js",
+          "type": "JavaScript"
+        },
+        {
+          "name": "assets/vendor-brSL4JYy.js",
+          "path": "/workspace/dist/assets/vendor-brSL4JYy.js",
+          "size": 57665,
+          "sizeKB": 56.31,
+          "extension": ".js",
+          "type": "JavaScript"
+        },
+        {
+          "name": "assets/service-pages-DZUJBGtW.js",
+          "path": "/workspace/dist/assets/service-pages-DZUJBGtW.js",
+          "size": 42778,
+          "sizeKB": 41.78,
+          "extension": ".js",
+          "type": "JavaScript"
+        },
+        {
+          "name": "assets/components-DJalVqDb.js",
+          "path": "/workspace/dist/assets/components-DJalVqDb.js",
+          "size": 32229,
+          "sizeKB": 31.47,
+          "extension": ".js",
+          "type": "JavaScript"
+        }
+      ]
+    },
+    "cssAssets": {
+      "count": 1,
+      "totalSize": 168038,
+      "largest": [
+        {
+          "name": "assets/index-zx0jCj5b.css",
+          "path": "/workspace/dist/assets/index-zx0jCj5b.css",
+          "size": 168038,
+          "sizeKB": 164.1,
+          "extension": ".css",
+          "type": "CSS"
+        }
+      ]
+    },
+    "imageAssets": {
+      "count": 39,
+      "totalSize": 57344
+    },
+    "fontAssets": {
+      "count": 0,
+      "totalSize": 0
+    },
+    "largestAssets": [
+      {
+        "name": "assets/index-zx0jCj5b.css",
+        "path": "/workspace/dist/assets/index-zx0jCj5b.css",
+        "size": 168038,
+        "sizeKB": 164.1,
+        "extension": ".css",
+        "type": "CSS"
+      },
+      {
+        "name": "assets/react-core-DvVYlbsT.js",
+        "path": "/workspace/dist/assets/react-core-DvVYlbsT.js",
+        "size": 166554,
+        "sizeKB": 162.65,
+        "extension": ".js",
+        "type": "JavaScript"
+      },
+      {
+        "name": "assets/pages-DDF5DlEO.js",
+        "path": "/workspace/dist/assets/pages-DDF5DlEO.js",
+        "size": 84767,
+        "sizeKB": 82.78,
+        "extension": ".js",
+        "type": "JavaScript"
+      },
+      {
+        "name": "assets/vendor-brSL4JYy.js",
+        "path": "/workspace/dist/assets/vendor-brSL4JYy.js",
+        "size": 57665,
+        "sizeKB": 56.31,
+        "extension": ".js",
+        "type": "JavaScript"
+      },
+      {
+        "name": "assets/service-pages-DZUJBGtW.js",
+        "path": "/workspace/dist/assets/service-pages-DZUJBGtW.js",
+        "size": 42778,
+        "sizeKB": 41.78,
+        "extension": ".js",
+        "type": "JavaScript"
+      },
+      {
+        "name": "logos/zion-logo.png",
+        "path": "/workspace/dist/logos/zion-logo.png",
+        "size": 42575,
+        "sizeKB": 41.58,
+        "extension": ".png",
+        "type": "Image"
+      },
+      {
+        "name": "assets/components-DJalVqDb.js",
+        "path": "/workspace/dist/assets/components-DJalVqDb.js",
+        "size": 32229,
+        "sizeKB": 31.47,
+        "extension": ".js",
+        "type": "JavaScript"
+      },
+      {
+        "name": "sitemap.xml",
+        "path": "/workspace/dist/sitemap.xml",
+        "size": 29053,
+        "sizeKB": 28.37,
+        "extension": ".xml",
+        "type": "Other"
+      },
+      {
+        "name": "assets/main-pages-C6ir5lCX.js",
+        "path": "/workspace/dist/assets/main-pages-C6ir5lCX.js",
+        "size": 21717,
+        "sizeKB": 21.21,
+        "extension": ".js",
+        "type": "JavaScript"
+      },
+      {
+        "name": "assets/index-CH0E2hWa.js",
+        "path": "/workspace/dist/assets/index-CH0E2hWa.js",
+        "size": 13580,
+        "sizeKB": 13.26,
+        "extension": ".js",
+        "type": "JavaScript"
+      }
+    ]
+  },
+  "recommendations": [],
+  "summary": {
+    "score": 90,
+    "grade": "A",
+    "totalAssets": 98,
+    "totalSize": "0.73MB",
+    "jsFiles": 14,
+    "cssFiles": 1,
+    "imageFiles": 39
+  }
+}
