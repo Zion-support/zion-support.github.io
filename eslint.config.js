@@ -4,11 +4,6 @@ import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 
-const typescriptParser = tseslint.parser;
-const typescript = tseslint.plugin;
-const react = pluginReact;
-const reactHooks = pluginReactHooks;
-
 export default [
   { ...js.configs.recommended, files: ['app/**/*.{js,jsx,ts,tsx}', 'components/**/*.{js,jsx,ts,tsx}', 'src/**/*.{js,jsx,ts,tsx}'] },
   {

@@ -1,114 +1,202 @@
-import React, { useEffect, useState } from 'react';''';
-import { useTranslation } from 'react-i18next';''';
-import { useForm } from 'react-hook-form';''';
-import { useNavigate } from 'react-router-dom';''';
-import { safeStorage } from '@/utils/safeStorage';''';
-import { getCartKey } from '@/utils/cartUtils';''';
-import { getStripe } from '@/utils/getStripe';''';
-import { apiClient } from '@/utils/apiClient';
-export {};
-  return null;
-}
-    const navigate = useNavigate();
-    const { t } = useTranslation();
-    const [items, setItems] = useState([]);
-    const form = useForm({}
-';
-'';
-''';
-        defaultValues: { name: '', email: '', address: '', city: '', country: '' }});
-    useEffect(() => {}
-        if (sku) {}
-            setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
-            return}
-        const stored = safeStorage.getItem(getCartKey (user?.id) ) ;
-        if(stored) {}
-            try {}
-                setItems(JSON.parse (stored) ) }
-            catch {}
-                setItems([]) }
-        }
-    }, [sku]) ;
-    const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0) ;
-    const onSubmit = async(data) => {}
-        try {}
-            const result = await res.json();
-            if (!res.ok)';
-                throw new Error(result.error || 'Failed');
-            const stripe = await getStripe();
-            if (stripe && result.clientSecret) {}
-                const payment = await stripe.confirmCardPayment(result.clientSecret, {}
-                    payment_method: {}
-';
-'';
-''';
-                        card: { token: 'tok_visa' },;
-                        billing_details: { name: data.name, email: data.email }
-                    }
-                }) ;
-                if(payment.error) throw payment.error;
-                if(user?.id) {}
-                    try {}
-';
-                        await fetch('/api/points/add', {}
-';
-'';
-''';
-                            method: 'POST',''';
-                            headers: { 'Content-Type': 'application/json' },'';
-                            body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id }),''';
-                        // // // // // // // // console.error('Failed to add points', e)}
-                        }) }
-                    catch (e) {}
-';
-'';
-''';
-                        // console.error('Failed to add points', e)}'}'';
-                safeStorage.removeItem(getCartKey(user?.id));''';
-            // // // // // // // // console.error('Payment failed', err)}
-                router(`/orders/${result.id}`) }
-        }
-        catch (err) {}
-';
-'';
-''';
-            // console.error('Payment failed', err)}
-    }
-    return (<div className="max-w-2xl mx-auto p-6">"";
-      <h1 className="text-2xl font-bold mb-6">Checkout</h1>"";
-      <CheckoutProgress currentStep={0} className="mb-6"/>;
-";
-      {/* Order Summary */}"";
-      <div className="bg-gray-50 p-4 rounded-md mb-6">"";
-        <h2 className="font-semibold mb-3">Order Summary</h2>"";
-        {items.map(item => (<div key={item.id} className="flex justify-between items-center py-2">;
-            <span>{item.name} (x{item.quantity})</span>;
-            <span>${(item.price * item.quantity).toFixed(2)}</span>";
-          </div>))}"";
-        <div className="border-t pt-2 mt-2">"";
-          <div className="flex justify-between text-sm text-gray-600 mb-1">;
-            <span>Subtotal:</span>;
-            <span>${subtotal.toFixed(2)}</span>";
-          </div>"";
-          <div className="flex justify-between text-sm text-gray-600 mb-1">;
-            <span>Tax (8%):</span>;
-            <span>${tax.toFixed(2)}</span>";
-          </div>"";
-          <div className="flex justify-between text-sm text-gray-600 mb-2">'`;
-            <span>Shipping:</span>'`'`;
-            <span>{shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`}</span>";
-          </div>"";
-          <div className="flex justify-between font-bold text-lg">;
-            <span>Total:</span>;
-            <span>${total.toFixed(2)}</span>;
-          </div>;
-        </div>;
-      </div>;
-    </div>)}
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import SEO from "@/components/SEO";
 
+const Checkout = () => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    address: '',
+    city: '',
+    zipCode: '',
+    cardNumber: '',
+    expiryDate: '',
+    cvv: ''
+  });
 
-export { CheckoutPage }
-export { CheckoutPage }
-export { CheckoutPage }
-export { CheckoutPage }
-export { CheckoutPage }
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Process payment logic here
+    console.log('Processing payment...', formData);
+    // Redirect to success page
+    navigate('/checkout/success');
+  };
+
+  return (
+    <>
+      <SEO
+        title="Checkout"
+        description="Complete your purchase securely"
+        canonical="/checkout"
+      />
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Checkout</h1>
+          
+          <form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Billing Information</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="firstName">First Name</Label>
+                      <Input
+                        id="firstName"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="lastName">Last Name</Label>
+                      <Input
+                        id="lastName"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <Label htmlFor="email">Email</Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="address">Address</Label>
+                    <Input
+                      id="address"
+                      name="address"
+                      value={formData.address}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="city">City</Label>
+                      <Input
+                        id="city"
+                        name="city"
+                        value={formData.city}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="zipCode">ZIP Code</Label>
+                      <Input
+                        id="zipCode"
+                        name="zipCode"
+                        value={formData.zipCode}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle>Payment Information</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div>
+                    <Label htmlFor="cardNumber">Card Number</Label>
+                    <Input
+                      id="cardNumber"
+                      name="cardNumber"
+                      value={formData.cardNumber}
+                      onChange={handleInputChange}
+                      placeholder="1234 5678 9012 3456"
+                      required
+                    />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="expiryDate">Expiry Date</Label>
+                      <Input
+                        id="expiryDate"
+                        name="expiryDate"
+                        value={formData.expiryDate}
+                        onChange={handleInputChange}
+                        placeholder="MM/YY"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="cvv">CVV</Label>
+                      <Input
+                        id="cvv"
+                        name="cvv"
+                        value={formData.cvv}
+                        onChange={handleInputChange}
+                        placeholder="123"
+                        required
+                      />
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Order Summary</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="flex justify-between">
+                      <span>Subtotal</span>
+                      <span>$99.99</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Shipping</span>
+                      <span>Free</span>
+                    </div>
+                    <div className="flex justify-between font-semibold text-lg">
+                      <span>Total</span>
+                      <span>$99.99</span>
+                    </div>
+                  </div>
+                  <Button type="submit" className="w-full mt-6 bg-blue-600 text-white hover:bg-blue-700">
+                    Complete Purchase
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </form>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Checkout;

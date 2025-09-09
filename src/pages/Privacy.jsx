@@ -1,54 +1,45 @@
-// import { Header } from "@/components/header/Header";
-import { Footer } from '@/components/Footer';''';
-import { SEO } from '@/components/SEO';''';
-import { GradientHeading } from '@/components/ui/GradientHeading';
-;
-export {};
-  return null;
-}
-  return();
-    <>";
-      <div>Broken JSX</div>
-      />";
-      {/* <Header /> */}"";
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">"";
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">"";
-          <div className="text-center mb-16">";
-            <GradientHeading>Privacy Policy</GradientHeading>"";
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
-              Your privacy is important to us. This page explains how we;
-              collect, use, and safeguard your information.;
-            </p>";
-          </div>"";
-          <div className="space-y-6 text-zion-slate-light text-lg">;
-            <p>;
-              We collect personal information you provide when creating an;
-              account or using our services. This may include your name, email,;
-              and other details required to deliver our marketplace features.;
-            </p>;
-            <p>;
-              Zion Tech Group uses this data solely to operate and improve our;
-              platform. We do not sell your personal information to third;
-              parties.;
-            </p>;
-            <p>';
-              If you have questions about our privacy practices, please contact'';
-              us at{' '}";
-              <div>Broken JSX</div>
-                className="text-zion-cyan hover:underline">;
-                support@ziontechgroup.com;
-              </a>;
-              .;
-            </p>;
-          </div>;
-        </main>;
-        <Footer />;
-      </>;
-    )}
+import React from 'react';
+import { Footer } from '@/components/Footer';
+import SEO from "@/components/SEO";
 
+const Privacy = () => {
+  return (
+    <>
+      <SEO
+        title="Privacy Policy"
+        description="Our privacy policy and data protection practices"
+        canonical="/privacy"
+      />
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Privacy Policy</h1>
+          
+          <div className="prose max-w-none">
+            <p className="text-lg text-gray-600 mb-6">
+              This privacy policy describes how we collect, use, and protect your information.
+            </p>
+            
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Information We Collect</h2>
+            <p className="text-gray-600 mb-6">
+              We collect information you provide directly to us, such as when you create an account, 
+              contact us, or use our services.
+            </p>
+            
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">How We Use Your Information</h2>
+            <p className="text-gray-600 mb-6">
+              We use the information we collect to provide, maintain, and improve our services.
+            </p>
+            
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contact Us</h2>
+            <p className="text-gray-600">
+              If you have any questions about this privacy policy, please contact us.
+            </p>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
-export { Privacy }
-export { Privacy }
-export { Privacy }
-export { Privacy }
-export { Privacy }
+export default Privacy;

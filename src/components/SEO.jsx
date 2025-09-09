@@ -1,27 +1,34 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-      <link rel="canonical" href="{canonical}" /">import { Helmet } from &apos;react-helmet-async";&apos;&apos;
-  title = &apos;Zion Tech Group&apos,;
-  description = &apos;Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.&apos,;
-  canonical = &apos;https: // comment;
-  keywords = &apos;AI, cybersecurity, cloud, devops, consulting, Zion Tech Group&apos}) {};
-  return (&apos}
+const SEO = ({
+  title = 'Zion Tech Group',
+  description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',
+  canonical = 'https://ziontechgroup.com',
+  keywords = 'AI, cybersecurity, cloud, devops, consulting, Zion Tech Group',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg'
+}) => {
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <link rel="canonical" href={canonical} />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:url" content={canonical} />
+      <meta property="og:type" content="website" />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+    </Helmet>
+  );
+};
 
-    <Helmet>;
-      <title>{title}</title>";
-      <meta name="&apos;description&apos;" content="{description}"  />&apos;";
-      <meta name="&apos;keywords&apos;" content="{keywords}"  />&apos;";
-      <link rel="&apos;canonical&apos;" href="{canonical}"  />&apos;
-    </Helmet>;
-  )}
-);
-export default SEO;
-  keywords = "AI, cybersecurity, cloud, devops, consulting, Zion Tech Group"}) {};
-      <title>{title}</title>";
-      <meta name="description" content="{description}" /  >";
-      <meta name="keywords" content="{keywords}" /  >";
-      <link rel="canonical" href="{canonical}" /  >";
-    </Helmet>  )}';
-export default SEO;
-"
+export { SEO };
