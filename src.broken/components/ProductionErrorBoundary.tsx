@@ -7,3 +7,5 @@ export function ProductionErrorBoundary() {
     </div>
   )
 }
+  );
+};

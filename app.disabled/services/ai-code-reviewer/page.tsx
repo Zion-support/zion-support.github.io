@@ -205,4 +205,5 @@ export default function ServicePage() {
               <li>• Real-time feedback</li>
             </ul>
           </div>
-
+  );
+};

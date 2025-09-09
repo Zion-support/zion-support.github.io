@@ -33,4 +33,5 @@ export function SidebarGroup({ className, children, ...props }: SidebarGroupProp
       {children}
 import React from './react';'
 import { cn  } from '@/lib / utils';
-
+  );
+};

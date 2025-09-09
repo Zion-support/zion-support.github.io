@@ -5,3 +5,4 @@ export default function CaseStudy({
   description,
   metrics
 }: CaseStudyProps) {
+;

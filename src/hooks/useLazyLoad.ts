@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, RefObject, ComponentType } from 'react';
 
 interface UseLazyLoadOptions {
   rootMargin?: string;
@@ -7,7 +7,7 @@ interface UseLazyLoadOptions {
 }
 
 interface UseLazyLoadReturn {
-  ref: React.RefObject<HTMLElement>;
+  ref: RefObject<HTMLElement>;
   isVisible: boolean;
   hasBeenVisible: boolean;
 }
@@ -103,7 +103,7 @@ export const useLazyImage = (src: string, options: UseLazyLoadOptions = {}) => {
 /**
  * Hook for lazy loading components
  */
-export const useLazyComponent = <T extends React.ComponentType<any>>(
+export const useLazyComponent = <T extends ComponentType<any>>(
   importFn: () => Promise<{ default: T }>,
   options: UseLazyLoadOptions = {}
 ) => {

@@ -13,184 +13,198 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #0A1024 0%, #141A3C 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
+        }
+        
+        .container {
+            max-width: 600px;
             padding: 2rem;
         }
         
-        .offline-container {
-            max-width: 500px;
-            width: 100%;
-        }
-        
-        .offline-icon {
-            font-size: 4rem;
-            margin-bottom: 2rem;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
+        .icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
         }
         
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            background: linear-gradient(45deg, #00FFFF, #A450FF);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-weight: 700;
         }
         
         p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
-            color: #94A3B8;
+            opacity: 0.9;
             line-height: 1.6;
         }
         
-        .retry-button {
-            background: linear-gradient(45deg, #00FFFF, #A450FF);
+        .status {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            font-family: monospace;
+        }
+        
+        .retry-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
             color: white;
-            border: none;
             padding: 1rem 2rem;
-            border-radius: 50px;
+            border-radius: 8px;
             font-size: 1.1rem;
-            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin-right: 1rem;
+            text-decoration: none;
+            display: inline-block;
         }
         
-        .retry-button:hover {
+        .retry-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
         }
         
-        .offline-features {
+        .features {
             margin-top: 3rem;
             text-align: left;
         }
         
-        .offline-features h3 {
-            color: #00FFFF;
+        .features h3 {
             margin-bottom: 1rem;
+            font-size: 1.5rem;
         }
         
-        .offline-features ul {
+        .features ul {
             list-style: none;
             padding: 0;
         }
         
-        .offline-features li {
+        .features li {
             padding: 0.5rem 0;
-            color: #94A3B8;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        .offline-features li:before {
+        .features li:before {
             content: "✓";
-            color: #00FFFF;
+            color: #4ade80;
             font-weight: bold;
             margin-right: 0.5rem;
         }
         
-        .status-indicator {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            background: #ff6b6b;
-            border-radius: 50%;
-            margin-right: 0.5rem;
-            animation: blink 1s infinite;
-        }
-        
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0.3; }
-        }
-        
-        .connection-status {
-            margin-top: 2rem;
-            padding: 1rem;
-            background: rgba(255, 107, 107, 0.1);
-            border: 1px solid rgba(255, 107, 107, 0.3);
-            border-radius: 8px;
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+            
+            .icon {
+                width: 80px;
+                height: 80px;
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="offline-container">
-        <div class="offline-icon">📡</div>
+    <div class="container">
+        <div class="icon">📡</div>
         <h1>You're Offline</h1>
-        <p>It looks like you've lost your internet connection. Don't worry, we've got you covered!</p>
+        <p>It looks like you've lost your internet connection. Don't worry, some features are still available offline!</p>
         
-        <button class="retry-button" onclick="window.location.reload()">
-            🔄 Try Again
-        </button>
+        <div class="status">
+            <div>Status: <span id="status">Checking connection...</span></div>
+            <div>Last online: <span id="lastOnline">Unknown</span></div>
+        </div>
         
-        <div class="offline-features">
-            <h3>What you can still do:</h3>
+        <a href="/" class="retry-btn" onclick="retryConnection()">Try Again</a>
+        
+        <div class="features">
+            <h3>Available Offline:</h3>
             <ul>
                 <li>View previously loaded pages</li>
                 <li>Access cached content</li>
-                <li>Use basic app features</li>
+                <li>Use basic app functionality</li>
                 <li>View your saved data</li>
             </ul>
-        </div>
-        
-        <div class="connection-status">
-            <span class="status-indicator"></span>
-            <span>No internet connection detected</span>
         </div>
     </div>
 
     <script>
-        // Check for internet connection
-        function checkConnection() {
+        // Check connection status
+        function updateStatus() {
+            const statusEl = document.getElementById('status');
+            const lastOnlineEl = document.getElementById('lastOnline');
+            
             if (navigator.onLine) {
+                statusEl.textContent = 'Connected';
+                statusEl.style.color = '#4ade80';
+                // Redirect to main app when online
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 1000);
+            } else {
+                statusEl.textContent = 'Offline';
+                statusEl.style.color = '#f87171';
+            }
+            
+            // Show last online time
+            const lastOnline = localStorage.getItem('lastOnline');
+            if (lastOnline) {
+                lastOnlineEl.textContent = new Date(parseInt(lastOnline)).toLocaleString();
+            }
+        }
+        
+        // Retry connection
+        function retryConnection() {
+            if (navigator.onLine) {
+                window.location.href = '/';
+            } else {
+                // Try to reload the page
                 window.location.reload();
             }
         }
         
-        // Listen for online event
-        window.addEventListener('online', checkConnection);
+        // Listen for online/offline events
+        window.addEventListener('online', () => {
+            updateStatus();
+        });
+        
+        window.addEventListener('offline', () => {
+            updateStatus();
+        });
+        
+        // Update last online time when connection is restored
+        window.addEventListener('online', () => {
+            localStorage.setItem('lastOnline', Date.now().toString());
+        });
+        
+        // Initial status check
+        updateStatus();
         
         // Check connection every 5 seconds
-        setInterval(checkConnection, 5000);
-        
-        // Show connection status
-        function updateConnectionStatus() {
-            const statusElement = document.querySelector('.connection-status span:last-child');
-            const indicator = document.querySelector('.status-indicator');
-            
-            if (navigator.onLine) {
-                statusElement.textContent = 'Internet connection restored!';
-                indicator.style.background = '#00ff88';
-                indicator.style.animation = 'none';
-                
-                // Reload after 2 seconds
-                setTimeout(() => {
-                    window.location.reload();
-                }, 2000);
-            } else {
-                statusElement.textContent = 'No internet connection detected';
-                indicator.style.background = '#ff6b6b';
-                indicator.style.animation = 'blink 1s infinite';
-            }
-        }
-        
-        // Update status on load
-        updateConnectionStatus();
-        
-        // Update status when connection changes
-        window.addEventListener('online', updateConnectionStatus);
-        window.addEventListener('offline', updateConnectionStatus);
+        setInterval(updateStatus, 5000);
     </script>
 </body>
 </html>

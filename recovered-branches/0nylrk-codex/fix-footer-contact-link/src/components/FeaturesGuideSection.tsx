@@ -141,3 +141,5 @@ import {;
   ArrowRight,;
   BarChart3,;
   Plus,;
+  );
+};

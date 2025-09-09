@@ -7,3 +7,5 @@ export function ProjectReviewSection() {
     </div>
   )
 }
+  );
+};

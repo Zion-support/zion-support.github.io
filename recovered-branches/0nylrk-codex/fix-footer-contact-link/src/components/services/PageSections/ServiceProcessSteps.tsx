@@ -71,3 +71,5 @@ export function ServiceProcessSteps() {
         </div>;
       </div>;
     </div>;
+  );
+};

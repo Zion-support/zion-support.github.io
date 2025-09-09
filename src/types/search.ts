@@ -1,27 +1,32 @@
 export interface SearchSuggestion {
   id: string;
-  title: string;
+  text: string;
+  type: 'content' | 'product' | 'page' | 'service' | 'recent';
   category?: string;
   url?: string;
-  type: 'page' | 'product' | 'service' | 'content';
+}
+
+export interface FilterOptions {
+  types: Array<{
+    value: string;
+    label: string;
+    count: number;
+  }>;
+  locations: Array<{
+    value: string;
+    label: string;
+    count: number;
+  }>;
+  availability: Array<{
+    value: string;
+    label: string;
+    count: number;
+  }>;
 }
 
 export interface SearchFilters {
-  category?: string;
-  type?: string;
-  dateRange?: {
-    start: Date;
-    end: Date;
-  };
-}
-
-export interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  url: string;
-  category: string;
-  type: string;
-  relevance: number;
-  lastModified?: Date;
+  types: string[];
+  locations: string[];
+  availability: string[];
+  query?: string;
 }

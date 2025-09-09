@@ -73,5 +73,5 @@ const AIEmailResponde,
       </div>
     </div>
   )}
-
-
+  );
+};

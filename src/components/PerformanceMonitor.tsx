@@ -1,68 +1,145 @@
-import React, { useEffect, useState, memo } from 'react';
+import React, { useEffect, useState } from 'react'
+import { useAnalytics } from '../context/AnalyticsContext'
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage?: number;
-  bundleSize: number;
+  loadTime: number
+  firstContentfulPaint: number
+  largestContentfulPaint: number
+  firstInputDelay: number
+  cumulativeLayoutShift: number
+  memoryUsage?: number
 }
 
-const PerformanceMonitor: React.FC = memo(() => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    // Only show in development or when explicitly enabled
-    const shouldShow = import.meta.env.DEV || 
-      localStorage.getItem('showPerformanceMonitor') === 'true';
-    
-    if (!shouldShow) return;
+export const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
+  const [isVisible, setIsVisible] = useState(false)
+  const { trackEvent } = useAnalytics()
 
+  useEffect(() => {
     const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
+      if (typeof window === 'undefined' || !('performance' in window)) return
+
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const paintEntries = performance.getEntriesByType('paint')
       
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-      const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+      const loadTime = navigation.loadEventEnd - navigation.loadEventStart
+      const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
       
-      // Estimate bundle size (this would be more accurate with webpack-bundle-analyzer)
-      const bundleSize = performance.getEntriesByType('resource')
-        .filter(entry => entry.name.includes('.js'))
-        .reduce((total, entry) => total + (entry.transferSize || 0), 0);
-
-      setMetrics({
-        loadTime: Math.round(loadTime),
-        renderTime: Math.round(renderTime),
-        memoryUsage: (performance as any).memory?.usedJSHeapSize,
-        bundleSize: Math.round(bundleSize / 1024) // Convert to KB
-      });
-    };
-
-    // Measure after a short delay to ensure all resources are loaded
-    const timer = setTimeout(measurePerformance, 1000);
-    
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Toggle visibility with keyboard shortcut
-  useEffect(() => {
-    const handleKeyPress = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        setIsVisible(prev => !prev);
-        localStorage.setItem('showPerformanceMonitor', (!isVisible).toString());
+      // Get LCP if available
+      let largestContentfulPaint = 0
+      if ('PerformanceObserver' in window) {
+        try {
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries()
+            const lastEntry = entries[entries.length - 1]
+            largestContentfulPaint = lastEntry.startTime
+          })
+          observer.observe({ entryTypes: ['largest-contentful-paint'] })
+        } catch (e) {
+          console.warn('LCP not supported:', e)
+        }
       }
-    };
 
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [isVisible]);
+      // Get FID if available
+      let firstInputDelay = 0
+      if ('PerformanceObserver' in window) {
+        try {
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries()
+            entries.forEach((entry: any) => {
+              firstInputDelay = entry.processingStart - entry.startTime
+            })
+          })
+          observer.observe({ entryTypes: ['first-input'] })
+        } catch (e) {
+          console.warn('FID not supported:', e)
+        }
+      }
 
-  if (!metrics || !isVisible) return null;
+      // Get CLS if available
+      let cumulativeLayoutShift = 0
+      if ('PerformanceObserver' in window) {
+        try {
+          const observer = new PerformanceObserver((list) => {
+            let clsValue = 0
+            for (const entry of list.getEntries()) {
+              if (!(entry as any).hadRecentInput) {
+                clsValue += (entry as any).value
+              }
+            }
+            cumulativeLayoutShift = clsValue
+          })
+          observer.observe({ entryTypes: ['layout-shift'] })
+        } catch (e) {
+          console.warn('CLS not supported:', e)
+        }
+      }
+
+      // Get memory usage if available
+      let memoryUsage: number | undefined
+      if ('memory' in performance) {
+        memoryUsage = (performance as any).memory.usedJSHeapSize / 1024 / 1024 // MB
+      }
+
+      const performanceMetrics: PerformanceMetrics = {
+        loadTime,
+        firstContentfulPaint,
+        largestContentfulPaint,
+        firstInputDelay,
+        cumulativeLayoutShift,
+        memoryUsage
+      }
+
+      setMetrics(performanceMetrics)
+
+      // Track performance metrics
+      trackEvent('performance_metrics', {
+        load_time: loadTime,
+        fcp: firstContentfulPaint,
+        lcp: largestContentfulPaint,
+        fid: firstInputDelay,
+        cls: cumulativeLayoutShift,
+        memory_usage: memoryUsage
+      })
+
+      // Log performance issues
+      if (loadTime > 3000) {
+        console.warn('Slow page load detected:', loadTime + 'ms')
+      }
+      if (firstContentfulPaint > 1800) {
+        console.warn('Slow FCP detected:', firstContentfulPaint + 'ms')
+      }
+      if (cumulativeLayoutShift > 0.1) {
+        console.warn('High CLS detected:', cumulativeLayoutShift)
+      }
+    }
+
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      measurePerformance()
+    } else {
+      window.addEventListener('load', measurePerformance)
+    }
+
+    return () => {
+      window.removeEventListener('load', measurePerformance)
+    }
+  }, [trackEvent])
+
+  // Show performance monitor in development
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development') {
+      setIsVisible(true)
+    }
+  }, [])
+
+  if (!isVisible || !metrics) return null
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm text-white p-4 rounded-lg border border-white/20 text-xs font-mono z-50">
-      <div className="flex items-center justify-between mb-2">
-        <h4 className="font-semibold">Performance Monitor</h4>
-        <button 
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono max-w-xs z-50">
+      <div className="flex justify-between items-center mb-2">
+        <span className="font-bold">Performance</span>
+        <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-white"
         >
@@ -70,21 +147,17 @@ const PerformanceMonitor: React.FC = memo(() => {
         </button>
       </div>
       <div className="space-y-1">
-        <div>Load Time: {metrics.loadTime}ms</div>
-        <div>Render Time: {metrics.renderTime}ms</div>
-        <div>Bundle Size: {metrics.bundleSize}KB</div>
+        <div>Load: {metrics.loadTime.toFixed(0)}ms</div>
+        <div>FCP: {metrics.firstContentfulPaint.toFixed(0)}ms</div>
+        <div>LCP: {metrics.largestContentfulPaint.toFixed(0)}ms</div>
+        <div>FID: {metrics.firstInputDelay.toFixed(0)}ms</div>
+        <div>CLS: {metrics.cumulativeLayoutShift.toFixed(3)}</div>
         {metrics.memoryUsage && (
-          <div>Memory: {Math.round(metrics.memoryUsage / 1024 / 1024)}MB</div>
+          <div>Memory: {metrics.memoryUsage.toFixed(1)}MB</div>
         )}
       </div>
-      <div className="mt-2 text-gray-400 text-xs">
-        Press Ctrl+Shift+P to toggle
-      </div>
     </div>
-  );
-});
+  )
+}
 
-PerformanceMonitor.displayName = 'PerformanceMonitor';
-
-export { PerformanceMonitor };
-export default PerformanceMonitor;
+export default PerformanceMonitor

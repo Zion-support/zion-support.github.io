@@ -271,4 +271,3 @@ export {Menubar,MenubarMenu,MenubarTrigger,MenubarContent,MenubarItem,MenubarSep
     />
   )
 }
-

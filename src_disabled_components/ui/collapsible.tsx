@@ -14,3 +14,4 @@ const Collapsible = React.forwardRef<
 Collapsible.displayName = "Collapsible"
 
 export { Collapsible }
+;

@@ -13,7 +13,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const projectRoot = path.join(__dirname, '..');
 
-// Colors for console output
 const colors = {
   reset: '\x1b[0m',
   bright: '\x1b[1m',
@@ -23,6 +22,7 @@ const colors = {
   blue: '\x1b[34m',
   magenta: '\x1b[35m',
   cyan: '\x1b[36m',
+  white: '\x1b[37m'
 };
 
 function log(message, color = 'reset') {
@@ -33,7 +33,7 @@ function analyzeBundleSize() {
   const distPath = path.join(projectRoot, 'dist');
   
   if (!fs.existsSync(distPath)) {
-    log('❌ Dist folder not found. Run npm run build first.', 'red');
+    log('❌ Dist directory not found. Run build first.', 'red');
     return;
   }
 
@@ -98,30 +98,6 @@ function analyzeBundleSize() {
   };
 }
 
-function checkDependencies() {
-  log('\n🔍 Dependency Analysis:', 'cyan');
-  log('='.repeat(50), 'cyan');
-
-  const packageJsonPath = path.join(projectRoot, 'package.json');
-  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-  
-  const dependencies = {
-    ...packageJson.dependencies,
-    ...packageJson.devDependencies
-  };
-
-  const importantDeps = [
-    'react', 'react-dom', 'react-router-dom',
-    '@tanstack/react-query', 'framer-motion', 'lucide-react'
-  ];
-
-  importantDeps.forEach(dep => {
-    if (dependencies[dep]) {
-      log(`  ✓ ${dep}: ${dependencies[dep]}`, 'green');
-    }
-  });
-}
-
 function checkBuildConfig() {
   log('\n🔧 Build Configuration Check', 'cyan');
   log('='.repeat(50), 'cyan');
@@ -170,6 +146,24 @@ function generateReport(analysis) {
   log('  4. Optimize images and assets', 'blue');
   log('  5. Remove unused dependencies', 'blue');
 }
+
+function checkDependencies() {
+  log('\n🔍 Dependency Analysis:', 'cyan');
+  log('='.repeat(50), 'cyan');
+  
+  const packageJsonPath = path.join(projectRoot, 'package.json');
+  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+  
+  const keyDeps = ['react', 'react-dom', 'react-router-dom', '@tanstack/react-query', 'framer-motion', 'lucide-react'];
+  
+  keyDeps.forEach(dep => {
+    if (packageJson.dependencies[dep]) {
+      log(`  ✓ ${dep}: ${packageJson.dependencies[dep]}`, 'green');
+    }
+  });
+}
+
+
 
 function main() {
   log('\n🚀 Build Optimization Report', 'bright');

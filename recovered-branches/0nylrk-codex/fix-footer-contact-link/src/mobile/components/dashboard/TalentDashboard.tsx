@@ -14,18 +14,5 @@ import { Link } from "react-router-dom",export function TalentDashboard() {
           <h2 className="text-lg font-medium">New Job Matches</h2>"
           <Link to="/mobile/browse">"
             <Button variant="ghost" size="sm" className="h-8 gap-1">"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  );
+};

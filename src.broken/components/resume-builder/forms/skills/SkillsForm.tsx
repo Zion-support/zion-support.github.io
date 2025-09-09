@@ -7,3 +7,5 @@ export function SkillsForm() {
     </div>
   )
 }
+  );
+};

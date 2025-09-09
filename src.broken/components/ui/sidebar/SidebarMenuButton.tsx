@@ -7,3 +7,5 @@ export function SidebarMenuButton() {
     </div>
   )
 }
+  );
+};

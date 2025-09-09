@@ -32,6 +32,5 @@ import { useTheme } from "@/hooks/useTheme",
       )}>
         <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
         <div className={cn(
-
-
-
+  );
+};

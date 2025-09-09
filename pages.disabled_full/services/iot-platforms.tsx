@@ -18,4 +18,5 @@ export default function Iotplatforms() {return (<div />;
 ursor/automate-test-improve-and-merge-code-646c;
 =>;
 interface IotplatformsProps {
-
+  );
+};

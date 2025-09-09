@@ -7,4 +7,5 @@ return ( <> <SEO title=\'News - Zion Tech Group\' />\'; <"div": className=\'min-
 
 
 }
-
+  );
+};

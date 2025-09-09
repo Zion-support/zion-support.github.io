@@ -433,3 +433,5 @@ export default function IndustrySolutionsPage() {
       </div>
     </$1>
 }
+  );
+};

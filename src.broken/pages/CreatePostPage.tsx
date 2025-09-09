@@ -7,3 +7,5 @@ export function CreatePostPage() {
     </div>
   )
 }
+  );
+};

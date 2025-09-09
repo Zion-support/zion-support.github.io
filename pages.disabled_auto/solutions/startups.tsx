@@ -252,5 +252,5 @@
         </div>
       </section>
     </MainLayout>
-
-
+  );
+};

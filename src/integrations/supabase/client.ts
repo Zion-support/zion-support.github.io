@@ -2,52 +2,34 @@
 export const supabase = {
   from: (table: string) => ({
     select: () => ({
-      eq: () => ({
+      eq: (column: string, value: any) => ({
         single: () => Promise.resolve({
-          data: null,
+          data: null, // Mock data
           error: null
         }),
-        data: Promise.resolve({
-          data: [],
-          error: null
+        limit: (count: number) => ({
+          order: (column: string, options?: { ascending?: boolean }) => Promise.resolve({
+            data: [], // Mock data
+            error: null
+          })
         })
       })
     }),
-    insert: () => ({
-      select: () => Promise.resolve({
-        data: null,
+    insert: (data: any) => Promise.resolve({
+      data: [], // Mock data
+      error: null
+    }),
+    update: (data: any) => ({
+      eq: (column: string, value: any) => Promise.resolve({
+        data: [], // Mock data
         error: null
-      })
-    }),
-    update: () => ({
-      eq: () => ({
-        select: () => Promise.resolve({
-          data: null,
-          error: null
-        })
       })
     }),
     delete: () => ({
-      eq: () => Promise.resolve({
-        data: null,
+      eq: (column: string, value: any) => Promise.resolve({
+        data: [], // Mock data
         error: null
       })
     })
-  }),
-  auth: {
-    signIn: () => Promise.resolve({
-      data: { user: null },
-      error: null
-    }),
-    signUp: () => Promise.resolve({
-      data: { user: null },
-      error: null
-    }),
-    signOut: () => Promise.resolve({
-      error: null
-    }),
-    onAuthStateChange: () => ({
-      data: { subscription: { unsubscribe: () => {} } }
-    })
-  }
+  })
 };

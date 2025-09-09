@@ -7,3 +7,5 @@ export function ResultsHeader() {
     </div>
   )
 }
+  );
+};

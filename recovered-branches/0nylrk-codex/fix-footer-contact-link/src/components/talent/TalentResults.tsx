@@ -63,4 +63,5 @@ export function TalentResults({}
 export function TalentResults(): any ({;      />;
 }
 ;
-
+  );
+};

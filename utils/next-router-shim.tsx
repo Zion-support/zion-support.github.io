@@ -24,5 +24,3 @@ export const useHistory = () => ({ push: (ur,
     l: string) => (window.location.href = url) })
 
 export const useParams = () => ({})
-
-

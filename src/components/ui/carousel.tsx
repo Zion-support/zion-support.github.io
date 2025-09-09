@@ -258,4 +258,4 @@ export {
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
-}
+};

@@ -24,3 +24,5 @@ interface VideoCallRoomProps {
 }
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
   return (
+  );
+};

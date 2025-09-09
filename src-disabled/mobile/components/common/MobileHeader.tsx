@@ -134,3 +134,5 @@ import { cn } from "@/lib/utils",import { Button } from "@/components/ui/button"
               <Bell className='h-5 w-5' />;
               <span className='sr-only'>Notifications</span>;
         <div className="flex items-center space-x-2">;
+  );
+};

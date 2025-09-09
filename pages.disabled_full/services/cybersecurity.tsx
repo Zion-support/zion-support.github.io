@@ -3,3 +3,5 @@ const type { NextPage } from "next"; import Head from "next/head"; import Link f
 import React from 'react';
 interface CybersecurityProps {
   // Add props here as needed
+  );
+};

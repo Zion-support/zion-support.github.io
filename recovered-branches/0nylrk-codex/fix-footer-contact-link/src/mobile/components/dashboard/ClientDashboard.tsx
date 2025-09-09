@@ -7,4 +7,5 @@ import { Link } from "react-router-dom";
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react",
 import { Link } from "react-router-dom",export function ClientDashboard() {
   return (
-
+  );
+};

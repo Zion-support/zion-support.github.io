@@ -19,4 +19,4 @@ export: interface AdvancedInnovativeService2026 {
    innovationLevel: string;
    contactInfo: { phone: string;
    email: string;
-
+}

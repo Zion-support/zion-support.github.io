@@ -24,3 +24,5 @@ export function MobileFilterDrawer({;
     <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>;
       <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">;
         <FilterSidebar;
+  );
+};

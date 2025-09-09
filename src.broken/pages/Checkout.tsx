@@ -7,3 +7,5 @@ export function Checkout() {
     </div>
   )
 }
+  );
+};

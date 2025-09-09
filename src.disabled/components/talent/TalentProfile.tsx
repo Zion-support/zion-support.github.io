@@ -5,5 +5,4 @@ import: React from;
     e: string;
    bio?: string;
    skills?: string[];
-
-
+}

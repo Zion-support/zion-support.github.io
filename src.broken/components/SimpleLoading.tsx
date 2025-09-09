@@ -7,3 +7,5 @@ export function SimpleLoading() {
     </div>
   )
 }
+  );
+};

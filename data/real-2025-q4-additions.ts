@@ -1,6 +1,4 @@
-
-
-export interface Q4Service {
+export interface RealQ4Service {
   id: string;
   name: string;
   tagline: string;

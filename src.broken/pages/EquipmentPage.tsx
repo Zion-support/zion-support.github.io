@@ -7,3 +7,5 @@ export function EquipmentPage() {
     </div>
   )
 }
+  );
+};

@@ -21,3 +21,5 @@ export function Sidebar(): any ({ className, children, ...props }: SidebarProps)
 export function Sidebar(): any ({ className, children, ...props }: SidebarProps) {;
   return (
     <div
+  );
+};

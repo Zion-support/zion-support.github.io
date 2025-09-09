@@ -1,133 +1,85 @@
-import React, { Suspense, lazy, ComponentType } from 'react';
-import LoadingSpinner from '../components/LoadingSpinner';
+import { lazy, ComponentType } from 'react';
 
-// Loading fallback component
-const LoadingFallback = ({ size = 'medium' }: { size?: 'small' | 'medium' | 'large' }) => (
-  <div className="flex items-center justify-center p-4">
-    <LoadingSpinner size={size} />
-  </div>
-);
-
-// Higher-order component for lazy loading
-export const withLazyLoad = <P extends object>(
-  Component: ComponentType<P>,
-  fallbackSize: 'small' | 'medium' | 'large' = 'medium'
-) => {
-  return (props: P) => (
-    <Suspense fallback={<LoadingFallback size={fallbackSize} />}>
-      <Component {...props} />
-    </Suspense>
+/**
+ * Enhanced lazy loading utility with error boundaries and retry logic
+ */
+export function createLazyComponent<T extends ComponentType<any>>(
+  importFn: () => Promise<{ default: T }>,
+  fallback?: ComponentType
+) {
+  return lazy(() =>
+    importFn().catch((error) => {
+      console.error('Failed to load component:', error);
+      return {
+        default: fallback || (() => (
+          <div className="flex items-center justify-center p-8">
+            <div className="text-center">
+              <h3 className="text-lg font-semibold text-red-600 mb-2">
+                Failed to load component
+              </h3>
+              <p className="text-gray-600 mb-4">
+                There was an error loading this page. Please try refreshing.
+              </p>
+              <button
+                onClick={() => window.location.reload()}
+                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+              >
+                Refresh Page
+              </button>
+            </div>
+          </div>
+        )),
+      };
+    })
   );
-};
-
-// Lazy loaded pages
-export const LazyHome = lazy(() => import('../pages/Home'));
-export const LazyAbout = lazy(() => import('../pages/About'));
-export const LazyContact = lazy(() => import('../pages/Contact'));
-export const LazyNotFound = lazy(() => import('../pages/NotFound'));
-// Lazy load components
-export const LazyAnalytics = lazy(() => import('../components/Analytics'));
-export const LazyPerformanceMonitor = lazy(() => import('../components/PerformanceMonitor'));
-
-// Utility function to preload components
-export const preloadComponent = (importFn: () => Promise<any>) => {
-  const link = document.createElement('link');
-  link.rel = 'preload';
-  link.as = 'script';
-  link.href = importFn.toString();
-  document.head.appendChild(link);
-};
-
-// Intersection Observer for lazy loading images
-export const useIntersectionObserver = (
-  ref: React.RefObject<HTMLElement>,
-  options: IntersectionObserverInit = {}
-) => {
-  const [isIntersecting, setIsIntersecting] = React.useState(false);
-
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsIntersecting(entry.isIntersecting);
-      },
-      { threshold: 0.1, ...options }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, [ref, options]);
-
-  return isIntersecting;
-};
-
-// Lazy image component
-interface LazyImageProps {
-  src: string;
-  alt: string;
-  className?: string;
-  placeholder?: string;
-  onLoad?: () => void;
-  onError?: () => void;
 }
 
-export const LazyImage: React.FC<LazyImageProps> = ({
-  src,
-  alt,
-  className = '',
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+',
-  onLoad,
-  onError,
-}) => {
-  const [imageSrc, setImageSrc] = React.useState(placeholder);
-  const [isLoaded, setIsLoaded] = React.useState(false);
-  const imgRef = React.useRef<HTMLImageElement>(null);
-  const isIntersecting = useIntersectionObserver(imgRef);
+/**
+ * Retry logic for failed imports
+ */
+export function retryImport<T>(
+  importFn: () => Promise<T>,
+  retries = 3,
+  delay = 1000
+): Promise<T> {
+  return new Promise((resolve, reject) => {
+    const attempt = (attemptNumber: number) => {
+      importFn()
+        .then(resolve)
+        .catch((error) => {
+          if (attemptNumber < retries) {
+            console.warn(`Import attempt ${attemptNumber} failed, retrying...`, error);
+            setTimeout(() => attempt(attemptNumber + 1), delay * attemptNumber);
+          } else {
+            reject(error);
+          }
+        });
+    };
+    attempt(1);
+  });
+}
 
-  React.useEffect(() => {
-    if (isIntersecting && !isLoaded) {
-      const img = new Image();
-      img.onload = () => {
-        setImageSrc(src);
-        setIsLoaded(true);
-        onLoad?.();
-      };
-      img.onerror = () => {
-        onError?.();
-      };
-      img.src = src;
-    }
-  }, [isIntersecting, src, isLoaded, onLoad, onError]);
+/**
+ * Preload component for better UX
+ */
+export function preloadComponent(importFn: () => Promise<any>) {
+  const link = document.createElement('link');
+  link.rel = 'modulepreload';
+  link.href = importFn.toString();
+  document.head.appendChild(link);
+}
 
-  return (
-    <img
-      ref={imgRef}
-      src={imageSrc}
-      alt={alt}
-      className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-50'} ${className}`}
-    />
+/**
+ * Dynamic import with loading state
+ */
+export function dynamicImport<T extends ComponentType<any>>(
+  importFn: () => Promise<{ default: T }>,
+  loadingComponent?: ComponentType
+) {
+  return lazy(() =>
+    Promise.all([
+      importFn(),
+      new Promise((resolve) => setTimeout(resolve, 100)) // Minimum loading time
+    ]).then(([module]) => module)
   );
-};
-
-export default {
-  withLazyLoad,
-  LazyHome,
-  LazyAbout,
-  LazyContact,
-  LazyNotFound,
-  LazyAnalytics,
-  LazyPerformanceMonitor,
-  preloadComponent,
-  useIntersectionObserver,
-  LazyImage,
-};
-
-// Lazy loaded components
-export const LazyAnalytics = lazy(() => import('../components/PerformanceDashboard'));
-export const LazyPerformanceMonitor = lazy(() => import('../components/PerformanceOptimizations'));
+}

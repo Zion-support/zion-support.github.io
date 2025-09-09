@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
-import { Button } from './ui/button';
+import { Button } from './ui/Button';
 import { Star, ExternalLink, Zap, Shield, Clock, Users } from 'lucide-react';
 
 interface MicroSAASCardProps {
