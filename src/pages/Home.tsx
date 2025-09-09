@@ -11,6 +11,11 @@ const ServiceCard = memo<{
 }>(({ title, description, icon, link, features }) => {
   const [isHovered, setIsHovered] = useState(false);
 
+export default function Home() {
+  const { t } = useTranslation();
+  const { user } = useAuth();
+  const firstName =
+    user?.displayName?.split(' ')[0] || 'User';
   return (
     <Link 
       href={link}

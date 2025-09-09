@@ -14,8 +14,9 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage
-} from "@/components/ui/form";
+  FormMessage,
+} from '@/components/ui/form';
+import { ControllerRenderProps } from 'react-hook-form';
 import { WorkExperience } from '@/types/resume';
 
 
@@ -196,7 +197,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
               <FormField
                 control={form.control}
                 name="company_name"
-                render={({ field }: { field: any }) => (
+                render={({ field }: { field: ControllerRenderProps<WorkExperienceFormValues, "company_name"> }) => (
                   <FormItem>
                     <FormLabel>Company Name</FormLabel>
                     <FormControl>
@@ -210,7 +211,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
               <FormField
                 control={form.control}
                 name="role_title"
-                render={({ field }: { field: any }) => (
+                render={({ field }: { field: ControllerRenderProps<WorkExperienceFormValues, "role_title"> }) => (
                   <FormItem>
                     <FormLabel>Job Title</FormLabel>
                     <FormControl>
@@ -226,7 +227,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
               <FormField
                 control={form.control}
                 name="start_date"
-                render={({ field }: { field: any }) => (
+                render={({ field }: { field: ControllerRenderProps<WorkExperienceFormValues, "start_date"> }) => (
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
                     <FormControl>
@@ -245,7 +246,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 <FormField
                   control={form.control}
                   name="is_current"
-                  render={({ field }: { field: any }) => (
+                  render={({ field }: { field: ControllerRenderProps<WorkExperienceFormValues, "is_current"> }) => (
                     <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
                       <FormControl>
                         <Checkbox
@@ -264,7 +265,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   <FormField
                     control={form.control}
                     name="end_date"
-                    render={({ field }: { field: any }) => (
+                    render={({ field }: { field: ControllerRenderProps<WorkExperienceFormValues, "end_date"> }) => (
                       <FormItem>
                         <FormLabel>End Date</FormLabel>
                         <FormControl>
@@ -285,7 +286,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
             <FormField
               control={form.control}
               name="location"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: ControllerRenderProps<WorkExperienceFormValues, "location"> }) => (
                 <FormItem>
                   <FormLabel>Location (Optional)</FormLabel>
                   <FormControl>
@@ -299,7 +300,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
             <FormField
               control={form.control}
               name="description"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: ControllerRenderProps<WorkExperienceFormValues, "description"> }) => (
                 <FormItem>
                   <FormLabel className="flex justify-between">
                     <span>Job Description</span>

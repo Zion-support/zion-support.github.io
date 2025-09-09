@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import { useForm, ControllerRenderProps } from "react-hook-form";
 import { z } from "zod";
 import { WorkExperience } from "@/types/resume";
 import { Button } from "@/components/ui/Button";
@@ -94,7 +94,7 @@ export function WorkExperienceItemForm({
             <FormField
               control={form.control}
               name="company_name"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: ControllerRenderProps<FormValues, "company_name"> }) => (
                 <FormItem>
                   <FormLabel>Company Name</FormLabel>
                   <FormControl>
@@ -108,7 +108,7 @@ export function WorkExperienceItemForm({
             <FormField
               control={form.control}
               name="role_title"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: ControllerRenderProps<FormValues, "role_title"> }) => (
                 <FormItem>
                   <FormLabel>Role Title</FormLabel>
                   <FormControl>
@@ -124,7 +124,7 @@ export function WorkExperienceItemForm({
             <FormField
               control={form.control}
               name="location"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: ControllerRenderProps<FormValues, "location"> }) => (
                 <FormItem>
                   <FormLabel>Location</FormLabel>
                   <FormControl>
@@ -138,7 +138,7 @@ export function WorkExperienceItemForm({
             <FormField
               control={form.control}
               name="is_current"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: ControllerRenderProps<FormValues, "is_current"> }) => (
                 <FormItem className="flex flex-col">
                   <FormLabel>Current Position</FormLabel>
                   <div className="flex items-center gap-2 h-10">
@@ -162,7 +162,7 @@ export function WorkExperienceItemForm({
             <FormField
               control={form.control}
               name="start_date"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: ControllerRenderProps<FormValues, "start_date"> }) => (
                 <FormItem className="flex flex-col">
                   <FormLabel>Start Date</FormLabel>
                   <Popover>
@@ -205,7 +205,7 @@ export function WorkExperienceItemForm({
               <FormField
                 control={form.control}
                 name="end_date"
-                render={({ field }: { field: any }) => (
+                render={({ field }: { field: ControllerRenderProps<FormValues, "end_date"> }) => (
                   <FormItem className="flex flex-col">
                     <FormLabel>End Date</FormLabel>
                     <Popover>
@@ -250,7 +250,7 @@ export function WorkExperienceItemForm({
           <FormField
             control={form.control}
             name="description"
-            render={({ field }: { field: any }) => (
+            render={({ field }: { field: ControllerRenderProps<FormValues, "description"> }) => (
               <FormItem>
                 <div className="flex justify-between items-center">
                   <FormLabel>Description</FormLabel>

@@ -33,8 +33,11 @@ export const initGA = () => {
     return;
   }
 
-  if (window.gtag) {
+  // Initialize GA4
+  if (typeof window.gtag === 'function') {
     window.gtag('config', measurementId);
+  } else {
+    console.warn("GA4 gtag function not found. 'config' not sent.");
   }
 };
 export const fireEvent = async (

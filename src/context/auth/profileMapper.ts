@@ -8,6 +8,7 @@ import type { UserProfile } from "@/types/auth";
 export interface SupabaseUser {
   id: string;
   email?: string | null;
+  email_confirmed_at?: string | null; // Added email_confirmed_at
 }
 
 /**
@@ -28,16 +29,16 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
     id: user.id,
     email: user.email || "",
     displayName: profile.display_name || "",
-    userType: userType || undefined,
+    userType: (profile.user_type as "creator" | "jobSeeker" | "employer" | "buyer" | "admin") || "buyer", // Default to "buyer"
     profileComplete: Boolean(profile.profile_complete),
-    created_at: (profile.created_at && !isNaN(new Date(profile.created_at).getTime())) ? new Date(profile.created_at).toISOString() : new Date().toISOString(),
-    updated_at: (profile.updated_at && !isNaN(new Date(profile.updated_at).getTime())) ? new Date(profile.updated_at).toISOString() : new Date().toISOString(),
-    avatarUrl: profile.avatar_url || undefined,
-    name: profile.display_name || "",
-    role: userType || "", // Map user_type to role for backward compatibility
+    createdAt: new Date(profile.created_at).toISOString(),
+    updatedAt: new Date(profile.updated_at).toISOString(),
+    bio: profile.bio || undefined,
+    headline: profile.headline || undefined,
+    avatar_url: profile.avatar_url || undefined,
+    avatarUrl: profile.avatar_url || undefined, // Add for compatibility
+    role: profile.user_type || undefined, // Ensure null becomes undefined
     points: profile.points ?? 0,
-    emailVerified: profile.email_verified ?? false,
-    interests: profile.interests || [],
-    preferredCategories: profile.preferred_categories || []
+    emailVerified: !!user.email_confirmed_at, // Map email_confirmed_at
   };
 }

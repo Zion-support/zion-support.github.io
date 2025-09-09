@@ -89,22 +89,12 @@ export default function Dashboard() {
   }
 
   const handleTestNotification = async () => {
-    try {
-      const { createTestNotification } = await loadNotificationFunctions();
-      const result = await createTestNotification(user?.id ?? "");
-      if (result.success) {
-        toast({
-          title: "Test notification created",
-          description: "Check your notification center",
-        });
-      } else {
-        toast({
-          title: "Error creating test notification",
-          description: "Something went wrong",
-          variant: "destructive",
-        });
-      }
-    } catch (error) {
+    if (!user || !user.id) {
+      toast({ title: "Error", description: "User ID not found.", variant: "destructive" });
+      return;
+    }
+    const result = await createTestNotification(user.id);
+    if (result.success) {
       toast({
         title: "Error loading notification system",
         description: "Please try again",
@@ -124,10 +114,10 @@ export default function Dashboard() {
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
                 <div className="flex flex-col items-center text-center">
                   <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4">
-                    {userWithExtendedProps?.displayName?.split(' ').map((name: string) => name[0]).join('') || userWithExtendedProps?.email?.charAt(0).toUpperCase()}
+                    {(user.displayName || 'User').split(' ').map(name => name[0]).join('')}
                   </div>
-                  <h2 className="text-xl font-bold text-white">{userWithExtendedProps?.displayName || userWithExtendedProps?.email}</h2>
-                  <p className="text-zion-slate-light mb-2">{user?.email}</p>
+                  <h2 className="text-xl font-bold text-white">{user.displayName || 'User'}</h2>
+                  <p className="text-zion-slate-light mb-2">{user.email}</p>
                   
                   <Badge
                     className="bg-zion-purple text-white mb-4"
@@ -189,24 +179,19 @@ export default function Dashboard() {
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
-                        try {
-                          const { createOnboardingNotification } = await loadNotificationFunctions();
-                          await createOnboardingNotification({
-                            userId: user?.id ?? "",
-                            missingMilestone: 'profile_completed',
-                            userRole: roleForTour
-                          });
-                          toast({
-                            title: "Onboarding notification sent",
-                            description: "Check your notification center"
-                          });
-                        } catch (error) {
-                          toast({
-                            title: "Error sending notification",
-                            description: "Please try again",
-                            variant: "destructive",
-                          });
+                        if (!user || !user.id) {
+                          toast({ title: "Error", description: "User ID not found.", variant: "destructive" });
+                          return;
                         }
+                        await createOnboardingNotification({
+                          userId: user.id,
+                          missingMilestone: 'profile_completed',
+                          userRole: user.userType === 'employer' || user.userType === 'buyer' ? 'client' : 'talent'
+                        });
+                        toast({
+                          title: "Onboarding notification sent",
+                          description: "Check your notification center"
+                        });
                       }}
                     >
                       <Settings size={16} className="text-zion-purple" />
@@ -217,26 +202,21 @@ export default function Dashboard() {
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
-                        try {
-                          const { createSystemNotification } = await loadNotificationFunctions();
-                          await createSystemNotification({
-                            userId: user?.id ?? "",
-                            title: "New Feature Available!",
-                            message: "We've added a new notification center to help you stay updated with important information.",
-                            actionUrl: "/notifications",
-                            actionText: "Explore Now"
-                          });
-                          toast({
-                            title: "System notification sent",
-                            description: "Check your notification center"
-                          });
-                        } catch (error) {
-                          toast({
-                            title: "Error sending notification",
-                            description: "Please try again",
-                            variant: "destructive",
-                          });
+                        if (!user || !user.id) {
+                          toast({ title: "Error", description: "User ID not found.", variant: "destructive" });
+                          return;
                         }
+                        await createSystemNotification({
+                          userId: user.id,
+                          title: "New Feature Available!",
+                          message: "We've added a new notification center to help you stay updated with important information.",
+                          actionUrl: "/notifications",
+                          actionText: "Explore Now"
+                        });
+                        toast({
+                          title: "System notification sent",
+                          description: "Check your notification center"
+                        });
                       }}
                     >
                       <Bell size={16} className="text-yellow-500" />
@@ -283,7 +263,7 @@ export default function Dashboard() {
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">
                   <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light">
-                    <h3 className="text-lg font-medium text-white">Welcome, {userWithExtendedProps?.displayName?.split(' ')[0] || 'User'}</h3>
+                    <h3 className="text-lg font-medium text-white">Welcome, {(user.displayName || 'User').split(' ')[0]}</h3>
                     <p className="text-zion-slate-light mt-1">Your journey on Zion has just begun!</p>
                   </div>
                   <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-cyan/30 border border-zion-blue-light">

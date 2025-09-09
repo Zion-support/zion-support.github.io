@@ -29,11 +29,10 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     switch (action.type) {
       case 'ADD_ITEM':
         reduxDispatch(
-          addItem({
-            // Assuming action.payload for ADD_ITEM includes id, name, and price
-            id: (action.payload as any).id,
-            title: (action.payload as any).name,
-            price: (action.payload as any).price,
+          addItem({ // addItem from cartSlice expects { id, title, price }
+            id: action.payload.id,
+            title: action.payload.title, // action.payload is now { id, title, price, quantity? }
+            price: action.payload.price,
           })
         );
         break;

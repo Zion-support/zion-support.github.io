@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/Button';
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
+import { ControllerRenderProps } from 'react-hook-form'; // Added import
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -206,92 +207,57 @@ function CheckoutInner() {
       </div>
 
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(handleCheckout)} className="space-y-4">
-          <FormField
-            control={form.control}
-            name="name"
-            render={({ field }: { field: any }) => (
-              <FormItem>
-                <FormLabel>Full Name *</FormLabel>
-                <FormControl>
-                  <Input {...field} placeholder="Enter your full name" autoComplete="name" />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }: { field: any }) => (
-              <FormItem>
-                <FormLabel>Email Address *</FormLabel>
-                <FormControl>
-                  <Input {...field} type="email" placeholder="Enter your email" autoComplete="email" />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          
-          <FormField
-            control={form.control}
-            name="address"
-            render={({ field }: { field: any }) => (
-              <FormItem>
-                <FormLabel>Address *</FormLabel>
-                <FormControl>
-                  <Input {...field} placeholder="Enter your address" autoComplete="street-address" />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          
-          <FormField
-            control={form.control}
-            name="city"
-            render={({ field }: { field: any }) => (
-              <FormItem>
-                <FormLabel>City *</FormLabel>
-                <FormControl>
-                  <Input {...field} placeholder="Enter your city" autoComplete="address-level2" />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          
-          <FormField
-            control={form.control}
-            name="country"
-            render={({ field }: { field: any }) => (
-              <FormItem>
-                <FormLabel>Country *</FormLabel>
-                <FormControl>
-                  <Input {...field} placeholder="Enter your country" autoComplete="country-name" />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          
-          <Button
-            type="submit"
-            className="w-full mt-6"
-            disabled={isSubmitting}
-            size="lg"
-          >
-            {isSubmitting ? (
-              <>
-                <LoadingSpinner size="sm" className="mr-2" />
-                Processing...
-              </>
-            ) : (
-              `Continue to Payment ($${total.toFixed(2)})`
-            )}
-          </Button>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          <FormField name="name" control={form.control} render={({ field }: { field: ControllerRenderProps<CheckoutFormData, "name"> }) => (
+            <FormItem>
+              <FormLabel>Name</FormLabel>
+              <FormControl><Input {...field} /></FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+          <FormField name="email" control={form.control} render={({ field }: { field: ControllerRenderProps<CheckoutFormData, "email"> }) => (
+            <FormItem>
+              <FormLabel>Email</FormLabel>
+              <FormControl><Input type="email" {...field} /></FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+          <FormField name="address" control={form.control} render={({ field }: { field: ControllerRenderProps<CheckoutFormData, "address"> }) => (
+            <FormItem>
+              <FormLabel>Address</FormLabel>
+              <FormControl><Input {...field} /></FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+          <FormField name="city" control={form.control} render={({ field }: { field: ControllerRenderProps<CheckoutFormData, "city"> }) => (
+            <FormItem>
+              <FormLabel>City</FormLabel>
+              <FormControl><Input {...field} /></FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+          <FormField name="country" control={form.control} render={({ field }: { field: ControllerRenderProps<CheckoutFormData, "country"> }) => (
+            <FormItem>
+              <FormLabel>Country</FormLabel>
+              <FormControl><Input {...field} /></FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+          {intent ? (
+            <div className="space-y-2 text-center">
+              <p className="font-semibold">Payment Successful!</p>
+              <p>Confirmation ID: {intent.id}</p>
+            </div>
+          ) : (
+            <Elements stripe={getStripe()}>
+              <CardForm amount={subtotal} onSuccess={setIntent} />
+            </Elements>
+          )}
+          {!intent && (
+            <p className="text-xs text-zion-slate-light">
+              Use test card 4242 4242 4242 4242 with any future date and CVC.
+            </p>
+          )}
         </form>
       </Form>
       

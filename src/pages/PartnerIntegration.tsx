@@ -20,7 +20,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useForm } from "react-hook-form";
+import { useForm, ControllerRenderProps } from "react-hook-form"; // Added ControllerRenderProps
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { UseFormRegisterReturn } from "react-hook-form";
@@ -82,7 +82,7 @@ export default function PartnerIntegration() {
                 <FormField
                   control={form.control}
                   name="name"
-                  render={({ field }: { field: UseFormRegisterReturn }) => (
+                  render={({ field }: { field: ControllerRenderProps<FormValues, "name"> }) => (
                     <FormItem>
                       <FormLabel>Institution Name</FormLabel>
                       <FormControl>
@@ -96,7 +96,7 @@ export default function PartnerIntegration() {
                 <FormField
                   control={form.control}
                   name="entityType"
-                  render={({ field }: { field: UseFormRegisterReturn }) => (
+                  render={({ field }: { field: ControllerRenderProps<FormValues, "entityType"> }) => (
                     <FormItem>
                       <FormLabel>Entity Type</FormLabel>
                       <Select onValueChange={(value) => field.onChange({ target: { value } } as any)} value={form.watch('entityType')}>
@@ -120,7 +120,7 @@ export default function PartnerIntegration() {
                 <FormField
                   control={form.control}
                   name="contact"
-                  render={({ field }: { field: UseFormRegisterReturn }) => (
+                  render={({ field }: { field: ControllerRenderProps<FormValues, "contact"> }) => (
                     <FormItem>
                       <FormLabel>Point of Contact Email</FormLabel>
                       <FormControl>
@@ -134,7 +134,7 @@ export default function PartnerIntegration() {
                 <FormField
                   control={form.control}
                   name="useCase"
-                  render={({ field }: { field: UseFormRegisterReturn }) => (
+                  render={({ field }: { field: ControllerRenderProps<FormValues, "useCase"> }) => (
                     <FormItem>
                       <FormLabel>Use Case</FormLabel>
                       <Select onValueChange={(value) => field.onChange({ target: { value } } as any)} value={form.watch('useCase')}>
@@ -158,7 +158,7 @@ export default function PartnerIntegration() {
                 <FormField
                   control={form.control}
                   name="message"
-                  render={({ field }: { field: UseFormRegisterReturn }) => (
+                  render={({ field }: { field: ControllerRenderProps<FormValues, "message"> }) => (
                     <FormItem>
                       <FormLabel>Additional Details</FormLabel>
                       <FormControl>

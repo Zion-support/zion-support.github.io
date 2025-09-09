@@ -69,10 +69,8 @@ export default function FounderBackupVault() {
     if (!encrypted) return alert('Export first');
     const pass = prompt('Enter vault password') || '';
     try {
-      const arrayBuffer = new ArrayBuffer(encrypted.buffer.byteLength);
-      new Uint8Array(arrayBuffer).set(new Uint8Array(encrypted.buffer));
-      const decrypted = await decryptData(arrayBuffer, pass);
-      logInfo('Decrypted:', { data: decrypted });
+      const decrypted = await decryptData(encrypted.buffer as ArrayBuffer, pass); // Added type assertion
+      console.log('Decrypted:', decrypted);
       alert('Recovery successful');
       setFailCount(0);
     } catch (err) {
