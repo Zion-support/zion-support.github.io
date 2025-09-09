@@ -10,6 +10,8 @@
   [build.environment]
     NODE_VERSION = "20.18.1"
     SKIP_TYPE_CHECK = "true"
+    # Ensure devDependencies (e.g., Vite) are installed during CI
+    NPM_FLAGS = "--include=dev"
 
 # Trigger: trivial edit to confirm Netlify picks up config and rebuilds
 
