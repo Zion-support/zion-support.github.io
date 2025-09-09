@@ -1,7 +1,10 @@
 export interface TalentProfile {
   id: string;
   name: string;
+  fullName?: string;
+  full_name?: string;
   title: string;
+  professionalTitle?: string;
   bio: string;
   skills: string[];
   experience: number;
@@ -17,6 +20,12 @@ export interface TalentProfile {
   completedProjects?: number;
   responseTime?: string;
   verified?: boolean;
+  key_projects?: Array<{
+    id: string;
+    title: string;
+    description: string;
+    url?: string;
+  }>;
   createdAt: string;
   updatedAt: string;
 }
