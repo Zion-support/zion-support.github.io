@@ -13,10 +13,14 @@ export function MainNavigation({ className }) {
       
       {/* Services Dropdown */}
       <div className="relative group">
-        <button onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)} className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
-          <Zap className="w-4 h-4"/>
+        <button
+          onMouseEnter={() => setIsServicesOpen(true)}
+          onMouseLeave={() => setIsServicesOpen(false)}
+          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
+        >
+          <Zap className="w-4 h-4"       />
           <span>Services</span>
-          <ChevronDown className="w-3 h-3"/>
+          <ChevronDown className="w-3 h-3"       />
         </button>
         
         {isServicesOpen && (<div onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)} className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
@@ -24,7 +28,7 @@ export function MainNavigation({ className }) {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
-                    <Zap className="w-4 h-4 mr-2"/>
+                    <Zap className="w-4 h-4 mr-2"       />
                     Micro SAAS
                   </h4>
                   <ul className="space-y-2 text-sm">
@@ -36,7 +40,7 @@ export function MainNavigation({ className }) {
                 </div>
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
-                    <Shield className="w-4 h-4 mr-2"/>
+                    <Shield className="w-4 h-4 mr-2"       />
                     IT Services
                   </h4>
                   <ul className="space-y-2 text-sm">
@@ -50,7 +54,7 @@ export function MainNavigation({ className }) {
               <div className="mt-4 pt-4 border-t border-zion-purple/20">
                 <Link to="/enhanced-services" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
                   View All Services
-                  <TrendingUp className="w-4 h-4 ml-2"/>
+                  <TrendingUp className="w-4 h-4 ml-2"       />
                 </Link>
               </div>
             </div>
@@ -59,10 +63,14 @@ export function MainNavigation({ className }) {
       
       {/* Solutions Dropdown */}
       <div className="relative group">
-        <button onMouseEnter={() => setIsSolutionsOpen(true)} onMouseLeave={() => setIsSolutionsOpen(false)} className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
-          <Brain className="w-4 h-4"/>
+        <button
+          onMouseEnter={() => setIsSolutionsOpen(true)}
+          onMouseLeave={() => setIsSolutionsOpen(false)}
+          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
+        >
+          <Brain className="w-4 h-4"       />
           <span>Solutions</span>
-          <ChevronDown className="w-3 h-3"/>
+          <ChevronDown className="w-3 h-3"       />
         </button>
         
         {isSolutionsOpen && (<div onMouseEnter={() => setIsSolutionsOpen(true)} onMouseLeave={() => setIsSolutionsOpen(false)} className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
@@ -70,7 +78,7 @@ export function MainNavigation({ className }) {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
-                    <Users className="w-4 h-4 mr-2"/>
+                    <Users className="w-4 h-4 mr-2"       />
                     Talent
                   </h4>
                   <ul className="space-y-2 text-sm">
@@ -82,7 +90,7 @@ export function MainNavigation({ className }) {
                 </div>
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
-                    <HardDrive className="w-4 h-4 mr-2"/>
+                    <HardDrive className="w-4 h-4 mr-2"       />
                     Resources
                   </h4>
                   <ul className="space-y-2 text-sm">
@@ -96,7 +104,7 @@ export function MainNavigation({ className }) {
               <div className="mt-4 pt-4 border-t border-zion-purple/20">
                 <Link to="/request-quote" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
                   Get Custom Quote
-                  <TrendingUp className="w-4 h-4 ml-2"/>
+                  <TrendingUp className="w-4 h-4 ml-2"       />
                 </Link>
               </div>
             </div>

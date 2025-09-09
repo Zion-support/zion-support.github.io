@@ -72,9 +72,25 @@ const EnhancedComprehensiveServicesShowcase = () => {
           {/* Search and Filter */}
           <div className="max-w-2xl mx-auto mb-8">
             <div className="relative">
-              <input type="text" placeholder="Search services, features, or technologies..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"/>
-              <svg className="absolute right-3 top-3 h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              <input
+                type="text"
+                placeholder="Search services, features, or technologies..."
+                value={searchTerm}
+                onChange={e => setSearchTerm (e.target.value) }
+                className="w - full px - 4 py - 3 bg - white / 10 backdrop - blur - lg border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 400"
+              />
+              <svg
+                className="absolute right - 3 top - 3 h - 6 w - 6 text - gray - 400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l - 6-6m2 - 5a7 7 0 11 - 14 0 7 7 0 0114 0z"
+                      />
               </svg>
             </div>
           </div>
@@ -203,18 +219,27 @@ const EnhancedComprehensiveServicesShowcase = () => {
       </section>
 
       {/* Service Detail Modal */}
-      {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-slate-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-            <div className="p-6">
-              <div className="flex justify-between items-start mb-6">
-                <div>
-                  <div className="text-4xl mb-4">{selectedService.icon}</div>
-                  <h2 className="text-3xl font-bold text-white mb-2">{selectedService.name}</h2>
-                  <p className="text-xl text-gray-300 mb-4">{selectedService.tagline}</p>
-                </div>
-                <button onClick={closeModal} className="text-gray-400 hover:text-white transition-colors duration-300">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/>
+      {selectedService && (<div className="fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4">
+          <div className="bg - slate - 900 border border - white / 20 rounded - 2xl max - w-4xl w - full max - h-[90vh] overflow - y-auto">
+            <div className="p - 8">
+              <div className="flex items - center justify - between mb - 6">
+                <div className="text - 4xl">{selectedService.icon}</div>
+                <button
+                  onClick={closeModal}
+                  className="text - white / 60 hover:text - white transition - colors"
+                >
+                  <svg
+                    className="w - 6 h - 6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                          />
                   </svg>
                 </button>
               </div>
@@ -245,48 +270,56 @@ const EnhancedComprehensiveServicesShowcase = () => {
                 </div>
 
                 <div>
-                  <div className="bg-white/10 rounded-lg p-6 mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-4">Pricing & Plans</h4>
-                    <div className="text-3xl font-bold text-green-400 mb-2">{selectedService.price}</div>
-                    <div className="text-gray-400 mb-4">{selectedService.period}</div>
-                    
-                    {selectedService.setupFee && (<div className="mb-2">
-                        <span className="text-gray-400">Setup Fee: </span>
-                        <span className="text-white">{selectedService.setupFee}</span>
-                      </div>)}
-                    
-                    {selectedService.annualDiscount && (<div className="mb-2">
-                        <span className="text-gray-400">Annual Discount: </span>
-                        <span className="text-white">{selectedService.annualDiscount}</span>
-                      </div>)}
+                  <h3 className="text - xl font - semibold text - white mb - 4">
+                    Key Features
+                  </h3>
+                  <div className="space - y-3">
+                    {selectedService.features
+                      ?.slice (0, 5) .map ( (feature, index) => (<div
+                          key={index}
+                          className="flex items - center space - x-2"
+                        >
+                          <svg
+                            className="w - 4 h - 4 text - green - 400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                                  />
+                          </svg>
+                          <span className="text - gray - 300">{feature}</span>
+                        </div>) ) }
                   </div>
 
-                  <div className="bg-white/10 rounded-lg p-6 mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-4">Business Impact</h4>
-                    <div className="mb-4">
-                      <h5 className="text-blue-400 font-semibold mb-2">ROI</h5>
-                      <p className="text-gray-300 text-sm">{selectedService.roi}</p>
-                    </div>
-                    <div className="mb-4">
-                      <h5 className="text-blue-400 font-semibold mb-2">Market Position</h5>
-                      <p className="text-gray-300 text-sm">{selectedService.marketPosition}</p>
-                    </div>
-                    <div>
-                      <h5 className="text-blue-400 font-semibold mb-2">Target Audience</h5>
-                      <p className="text-gray-300 text-sm">{selectedService.targetAudience}</p>
-                    </div>
-                  </div>
-
-                  <div className="bg-white/10 rounded-lg p-6">
-                    <h4 className="text-lg font-semibold text-white mb-4">Get Started</h4>
-                    <div className="space-y-3">
-                      <a href={`mailto:${selectedService.contactInfo.email}?subject=Inquiry about ${selectedService.name}`} className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-                        Request Demo
-                      </a>
-                      <a href={`tel:${selectedService.contactInfo.mobile}`} className="block w-full text-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
-                        Call Us: {selectedService.contactInfo.mobile}
-                      </a>
-                    </div>
+                  <h3 className="text - xl font - semibold text - white mb - 4 mt - 6">
+                    Benefits
+                  </h3>
+                  <div className="space - y-3">
+                    {selectedService.benefits
+                      ?.slice (0, 3) .map ( (benefit, index) => (<div
+                          key={index}
+                          className="flex items - center space - x-2"
+                        >
+                          <svg
+                            className="w - 4 h - 4 text - blue - 400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M13 10V3L4 14h7v7l9 - 11h - 7z"
+                                  />
+                          </svg>
+                          <span className="text - gray - 300">{benefit}</span>
+                        </div>) ) }
                   </div>
                 </div>
               </div>

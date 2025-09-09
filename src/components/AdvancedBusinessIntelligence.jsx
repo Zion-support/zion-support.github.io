@@ -214,43 +214,42 @@ export function AdvancedBusinessIntelligence() {
         return new Intl.NumberFormat('en-US').format(value);
     };
     if (!isOpen) {
-        return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Business Intelligence Dashboard">
-        <Brain className="w-6 h-6"/>
-      </button>);
-    }
+        return (<button onClick={ () => setIsOpen (true) } className="fixed bottom - 4 right - 4 bg - gradient - to - r from - zion - purple to - zion - cyan text - white p - 4 rounded - full shadow - 2xl hover:shadow - 3xl transition - all duration - 300 hover:scale - 110 z - 40" title="Open Business Intelligence Dashboard">
+        <Brain className="w - 6 h - 6"      />
+      </button>) }
     if (isMinimized) {
-        return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
-        <div className="flex items-center gap-2 p-3">
-          <Brain className="w-5 h-5 text-zion-purple"/>
-          <span className="text-sm font-medium text-zion-slate">BI Dashboard</span>
-          <button onClick={() => setIsMinimized(false)} className="ml-auto p-1 hover:bg-zion-slate-light rounded">
-            <Maximize2 className="w-4 h-4"/>
+        return (<div className="fixed bottom - 4 right - 4 bg - white dark:bg - zion - slate border border - zion - slate - light rounded - lg shadow - xl z - 50">
+        <div className="flex items - center gap - 2 p - 3">
+          <Brain className="w - 5 h - 5 text - zion - purple"      />
+          <span className="text - sm font - medium text - zion - slate">BI Dashboard</span>
+          <button onClick={ () => setIsMinimized (false) } className="ml - auto p - 1 hover:bg - zion - slate - light rounded">
+            <Maximize2 className="w - 4 h - 4"      />
           </button>
         </div>
       </div>);
     }
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1200px] h-[800px]'}`} ref={containerRef}>
       {/* Header */}
-      <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <Brain className="w-6 h-6"/>
+      <div className="bg - gradient - to - r from - zion - purple to - zion - cyan text - white p - 4 flex items - center justify - between">
+        <div className="flex items - center gap - 3">
+          <Brain className="w - 6 h - 6"      />
           <div>
             <h2 className="text-lg font-bold">Advanced Business Intelligence</h2>
             <p className="text-sm opacity-90">AI-Powered Insights & Analytics</p>
           </div>
         </div>
-        <div className="flex items-center gap-2">
-          <button onClick={() => setAutoRefresh(!autoRefresh)} className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`} title={autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'}>
-            <RefreshCw className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`}/>
+        <div className="flex items - center gap - 2">
+          <button onClick={ () => setAutoRefresh (!autoRefresh) } className={`p - 2 rounded - lg transition - colors ${autoRefresh ? 'bg - white / 20' : 'hover:bg - white / 10'}`} title={autoRefresh ? 'Auto - refresh enabled' : 'Auto - refresh disabled'}>
+            <RefreshCw className={`w - 4 h - 4 ${autoRefresh ? 'animate - spin' : ''}`}      />
           </button>
-          <button onClick={() => setIsMinimized(true)} className="p-2 hover:bg-white/10 rounded-lg transition-colors">
-            <Minimize2 className="w-4 h-4"/>
+          <button onClick={ () => setIsMinimized (true) } className="p - 2 hover:bg - white / 10 rounded - lg transition - colors">
+            <Minimize2 className="w - 4 h - 4"      />
           </button>
-          <button onClick={() => setIsFullscreen(!isFullscreen)} className="p-2 hover:bg-white/10 rounded-lg transition-colors">
-            {isFullscreen ? <Minimize2 className="w-4 h-4"/> : <Maximize2 className="w-4 h-4"/>}
+          <button onClick={ () => setIsFullscreen (!isFullscreen) } className="p - 2 hover:bg - white / 10 rounded - lg transition - colors">
+            {isFullscreen ? <Minimize2 className="w - 4 h - 4"      /> : <Maximize2 className="w - 4 h - 4"      />}
           </button>
-          <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-white/10 rounded-lg transition-colors">
-            <X className="w-4 h-4"/>
+          <button onClick={ () => setIsOpen (false) } className="p - 2 hover:bg - white / 10 rounded - lg transition - colors">
+            <X className="w - 4 h - 4"      />
           </button>
         </div>
       </div>
@@ -269,8 +268,8 @@ export function AdvancedBusinessIntelligence() {
                   {range.label}
                 </option>))}
             </select>
-            <button onClick={refreshData} disabled={isRefreshing} className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors disabled:opacity-50 flex items-center gap-2">
-              <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`}/>
+            <button onClick={refreshData} disabled={isRefreshing} className="px - 4 py - 2 bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 90 transition - colors disabled:opacity - 50 flex items - center gap - 2">
+              <RefreshCw className={`w - 4 h - 4 ${isRefreshing ? 'animate - spin' : ''}`}      />
               Refresh
             </button>
           </div>
@@ -279,8 +278,8 @@ export function AdvancedBusinessIntelligence() {
               <input type="checkbox" checked={showPredictions} onChange={(e) => setShowPredictions(e.target.checked)} className="rounded"/>
               Show Predictions
             </label>
-            <button className="px-4 py-2 bg-zion-purple text-white rounded-lg hover:bg-zion-purple/90 transition-colors flex items-center gap-2">
-              <Download className="w-4 h-4"/>
+            <button className="px - 4 py - 2 bg - zion - purple text - white rounded - lg hover:bg - zion - purple / 90 transition - colors flex items - center gap - 2">
+              <Download className="w - 4 h - 4"      />
               Export Report
             </button>
           </div>
@@ -296,10 +295,10 @@ export function AdvancedBusinessIntelligence() {
             { id: 'analytics', label: 'Analytics', icon: TrendingUp }
         ].map(tab => {
             const Icon = tab.icon;
-            return (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id
-                    ? 'border-zion-purple text-zion-purple bg-zion-purple/5'
-                    : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>
-              <Icon className="w-4 h-4"/>
+            return (<button key={tab.id} onClick={ () => setActiveTab (tab.id) } className={`flex items - center gap - 2 px - 6 py - 3 border - b-2 transition - colors ${activeTab === tab.id
+                    ? 'border - zion - purple text - zion - purple bg - zion - purple / 5'
+                    : 'border - transparent text - zion - slate - light hover:text - zion - slate hover:bg - zion - slate - light / 20'}`}>
+              <Icon className="w - 4 h - 4"      />
               {tab.label}
             </button>);
         })}
@@ -336,9 +335,9 @@ export function AdvancedBusinessIntelligence() {
             </div>
 
             {/* Quick Actions */}
-            <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">
-              <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">
-                <Zap className="w-5 h-5 text-zion-cyan"/>
+            <div className="bg - gradient - to - r from - zion - cyan / 10 to - zion - purple / 10 p - 4 rounded - xl border border - zion - cyan / 20">
+              <h3 className="font - semibold text - zion - slate mb - 3 flex items - center gap - 2">
+                <Zap className="w - 5 h - 5 text - zion - cyan"      />
                 Quick Actions
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -349,8 +348,8 @@ export function AdvancedBusinessIntelligence() {
                 { label: 'Export Data', icon: Download, action: () => { } }
             ].map((item, index) => {
                 const Icon = item.icon;
-                return (<button key={index} onClick={item.action} className="p-3 bg-white dark:bg-zion-slate rounded-lg border border-zion-slate-light hover:border-zion-cyan transition-colors text-sm font-medium text-zion-slate hover:text-zion-cyan">
-                      <Icon className="w-4 h-4 mx-auto mb-2"/>
+                return (<button key={index} onClick={item.action} className="p - 3 bg - white dark:bg - zion - slate rounded - lg border border - zion - slate - light hover:border - zion - cyan transition - colors text - sm font - medium text - zion - slate hover:text - zion - cyan">
+                      <Icon className="w - 4 h - 4 mx - auto mb - 2"      />
                       {item.label}
                     </button>);
             })}
@@ -423,11 +422,11 @@ export function AdvancedBusinessIntelligence() {
               </div>))}
           </div>)}
 
-        {activeTab === 'analytics' && (<div className="space-y-6">
-            <div className="text-center text-zion-slate-light">
-              <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50"/>
-              <h3 className="text-lg font-semibold mb-2">Advanced Analytics</h3>
-              <p>Detailed analytics and custom reports coming soon...</p>
+        {activeTab === 'analytics' && (<div className="space - y-6">
+            <div className="text - center text - zion - slate - light">
+              <TrendingUp className="w - 16 h - 16 mx - auto mb - 4 opacity - 50"      />
+              <h3 className="text - lg font - semibold mb - 2">Advanced Analytics</h3>
+              <p > Detailed analytics and custom reports coming soon...</p>
             </div>
           </div>)}
       </div>

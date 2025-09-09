@@ -1,159 +1,151 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-}
-
-export const SEO: React.FC<SEOProps> = ({
-  title = "Zion Tech Group - Innovative AI, Quantum Computing & Cybersecurity Solutions",
-  description = "Leading technology solutions provider offering cutting-edge AI, quantum computing, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with Zion Tech Group.",
-  keywords = "AI services, quantum computing, cybersecurity, cloud infrastructure, digital transformation, IT consulting, machine learning, blockchain, Web3, healthcare AI, legal tech, fintech",
-  image = "/images/zion-tech-group-og.jpg",
-  url = "https://ziontechgroup.com",
-  type = "website",
-  author = "Zion Tech Group",
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = []
-}) => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/images/zion-logo.png",
-    "description": description,
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
-    "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup",
-      "https://facebook.com/ziontechgroup"
-    ],
-    "foundingDate": "2020",
-    "numberOfEmployees": "50+",
-    "serviceArea": "Worldwide",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Technology Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "AI & Machine Learning Services",
-            "description": "Advanced AI solutions for business intelligence, automation, and analytics"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Quantum Computing Services",
-            "description": "Quantum computing solutions for complex problem solving"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Cybersecurity Services",
-            "description": "Advanced security solutions with AI-powered threat detection"
-          }
-        }
-      ]
-    }
+import { Helmet } from 'react - helmet - async';
+import React, { useEffect, useMemo } from 'react';
+            import ('web - vitals') .then ( ({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {;
+export /**;
+;
+;
+ * SEO function;
+ * @param {*} params - Function parameters;
+ * @returns {*} Function return value;
+ */;
+function SEO(...args: any[]): any {;
+  const fullTitle = title.includes ('Zion Tech Group') ? title;
+    : `${title} | Zion Tech Group`;
+  const fullDescription = description.length > 160;
+      ? description.substring (0, 157) + '...';
+      : description;
+;
+  // Structured data for organization;
+  const organizationSchema = {;
+    '@context': 'https://schema.org',;
+    '@type': 'Organization',;
+    name: 'Zion Tech Group',;
+    url: 'https://ziontechgroup.com',;
+    logo: 'https://ziontechgroup.com / images / zion - logo.png',;
+    description:;
+      'Leading provider of AI - powered enterprise solutions and cybersecurity services',;
+    foundingDate: '2010',;
+    address: {;
+      '@type': 'PostalAddress',;
+      addressCountry: 'US',;
+    },;
+    contactPoint: {;
+      '@type': 'ContactPoint',;
+      contactType: 'customer service',;
+      email: 'info@ziontechgroup.com',;
+    },;
+    sameAs: [;
+      'https://linkedin.com / company / ziontechgroup',;
+      'https://twitter.com / ziontechgroup',;
+    ],;
   };
-
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#22ddd2" />
-      <meta name="msapplication-TileColor" content="#22ddd2" />
-      
-      {/* Additional Meta Tags */}
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#0ea5e9" />
-      <meta name="msapplication-TileColor" content="#0ea5e9" />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
-      
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://cdn.gpteng.co" />
-      
-      {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//cdn.gpteng.co" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
-      
-      {/* Additional SEO Meta Tags */}
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {section && <meta property="article:section" content={section} />}
-      {tags.map((tag, index) => (
-        <meta key={index} property="article:tag" content={tag} />
-      ))}
-      
-      {/* Performance Hints */}
-      <link rel="preload" href="/fonts/Orbitron-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      <link rel="preload" href="/fonts/Orbitron-Bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-    </Helmet>
-  );
+;
+  // Structured data for website;
+  const websiteSchema = {;
+    '@context': 'https://schema.org',;
+    '@type': 'WebSite',;
+    name: 'Zion Tech Group',;
+    url: 'https://ziontechgroup.com',;
+    potentialAction: {;
+      '@type': 'SearchAction',;
+      target: 'https://ziontechgroup.com / search?q={search_term_string}',;
+      'query - input': 'required name = search_term_string',;
+    },;
+  };
+;
+  return (<Helmet>;
+      {/* Basic HTML tags */};
+      <title>{title}</title>;
+      <html lang={language}       />;
+;
+      {/* Meta tags */};
+      {metaTags.map ( (tag, index) => (<meta key={index} {...tag}       />) ) };
+;
+      {/* Link tags */};
+      {linkTags.map ( (link, index) => (<link key={index} {...link}       />) ) };
+;
+      {/* Script tags for structured data */};
+      {scriptTags.map ( (script, index) => (<script key={index} {...script}       />) ) };
+;
+      {/* Additional performance optimizations */};
+      <style>;
+        {`;
+          /* Critical CSS for above - the - fold content */;
+          .hero - section {;
+            background: linear - gradient (135deg, #22ddd2 0%, #8c15e9 100%) ;
+            min - height: 100vh;
+            display: flex;
+            align - items: center;
+            justify - content: center;
+            color: white;
+            text - align: center;
+          };
+          ;
+          /* Optimize font loading */;
+          @font - face {;
+            font - family: 'Orbitron';
+            font - display: swap;
+            src: url ('/fonts / orbitron - v16 - latin - 400.woff2') format ('woff2') ;
+            font - weight: 400;
+            font - style: normal;
+          };
+          ;
+          @font - face {;
+            font - family: 'Orbitron';
+            font - display: swap;
+            src: url ('/fonts / orbitron - v16 - latin - 600.woff2') format ('woff2') ;
+            font - weight: 600;
+            font - style: normal;
+          };
+          ;
+          /* Reduce layout shift */;
+          img {;
+            max - width: 100%;
+            height: auto;
+          };
+          ;
+          /* Optimize animations */;
+          @media (prefers - reduced - motion: reduce) {;
+            *, *::before, *::after {;
+              animation - duration: 0.01ms ! important;
+              animation - iteration - count: 1 ! important;
+              transition - duration: 0.01ms ! important;
+            };
+          };
+        `};
+      </style>;
+;
+      {/* Performance monitoring */};
+      <script>;
+        {`;
+          // Performance monitoring;
+          if ('performance' in window) {;
+            window.addEventListener ('load', () => {;
+              const navigation = performance.getEntriesByType ('navigation') [0];
+              if (navigation) {;
+                const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+                console.log ('Page load time:', loadTime + 'ms') ;
+                ;
+                // Send to analytics if available;
+                if (window.gtag) {;
+                  window.gtag ('event', 'timing_complete', {;
+                    name: 'load',;
+                    value: Math.round (loadTime) }) ;
+                };
+              };
+            }) ;
+          };
+          ;
+          // Core Web Vitals monitoring;
+          if ('web - vital' in window) {;
+              getCLS (console.log) ;
+              getFID (console.log) ;
+              getFCP (console.log) ;
+              getLCP (console.log) ;
+              getTTFB (console.log) ;
+            }) ;
+          };
+        `};
+      </script>;
+    </Helmet>) ;
 };
-
-export default SEO;

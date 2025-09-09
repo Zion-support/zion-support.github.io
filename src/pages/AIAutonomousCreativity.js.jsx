@@ -3,10 +3,19 @@ import { Helmet } from 'react-helmet-async';
 const AIAutonomousCreativity = () => {
     return (<>
       <Helmet>
-        <title>AI Autonomous Creativity Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous creativity platform that continuously generates ideas, creates content, and produces innovative solutions with advanced AI capabilities and autonomous operation."/>
-        <meta name="keywords" content="AI creativity, autonomous creativity, content generation, idea creation, autonomous operations, AI creativity platform"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-creativity"/>
+        <title > AI Autonomous Creativity Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Revolutionary AI autonomous creativity platform that continuously generates ideas, creates content, and produces innovative solutions with advanced AI capabilities and autonomous operation."
+              />
+        <meta
+          name="keywords"
+          content="AI creativity, autonomous creativity, content generation, idea creation, autonomous operations, AI creativity platform"
+              />
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com / ai - autonomous - creativity"
+              />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-fuchsia-900 to-slate-900">

@@ -27,22 +27,22 @@ const serviceCategories = [
   {
     id: 'micro-saas',
     name: 'Micro SAAS Solutions',
-    icon: <Rocket className="w-6 h-6" />,
-    color: 'from-purple-600 to-pink-600',
+    icon: <Rocket className="w - 6 h - 6"       />,
+    color: 'from - purple - 600 to - pink - 600',
     services: revolutionary2027AdvancedMicroSaasServices
   },
   {
     id: 'it-infrastructure',
     name: 'IT Infrastructure & Cybersecurity',
-    icon: <Shield className="w-6 h-6" />,
-    color: 'from-red-600 to-orange-600',
+    icon: <Shield className="w - 6 h - 6"       />,
+    color: 'from - red - 600 to - orange - 600',
     services: revolutionary2027ITInfrastructureCybersecurityServices
   },
   {
     id: 'ai-innovation',
     name: 'AI Innovation Services',
-    icon: <Brain className="w-6 h-6" />,
-    color: 'from-blue-600 to-cyan-600',
+    icon: <Brain className="w - 6 h - 6"       />,
+    color: 'from - blue - 600 to - cyan - 600',
     services: revolutionary2027AIInnovationServices
   }
 ];
@@ -108,20 +108,20 @@ export function ComprehensiveServicesShowcase() {
           </p>
           
           {/* Contact Information */}
-          <div className="mt-8 p-6 bg-zion-slate-dark/50 rounded-2xl border border-zion-cyan/20">
-            <h3 className="text-2xl font-semibold text-zion-cyan mb-4">Ready to Transform Your Business?</h3>
-            <div className="grid md:grid-cols-3 gap-6 text-sm">
-              <div className="flex items-center justify-center space-x-2">
-                <Clock className="w-5 h-5 text-zion-cyan" />
-                <span className="text-white">24/7 Support Available</span>
+          <div className="mt - 8 p - 6 bg - zion - slate - dark / 50 rounded - 2xl border border - zion - cyan / 20">
+            <h3 className="text - 2xl font - semibold text - zion - cyan mb - 4">Ready to Transform Your Business?</h3>
+            <div className="grid md:grid - cols - 3 gap - 6 text - sm">
+              <div className="flex items - center justify - center space - x-2">
+                <Clock className="w - 5 h - 5 text - zion - cyan"       />
+                <span className="text - white">24 / 7 Support Available</span>
               </div>
-              <div className="flex items-center justify-center space-x-2">
-                <Target className="w-5 h-5 text-zion-cyan" />
-                <span className="text-white">Custom Solutions</span>
+              <div className="flex items - center justify - center space - x-2">
+                <Target className="w - 5 h - 5 text - zion - cyan"       />
+                <span className="text - white">Custom Solutions</span>
               </div>
-              <div className="flex items-center justify-center space-x-2">
-                <Award className="w-5 h-5 text-zion-cyan" />
-                <span className="text-white">Proven Results</span>
+              <div className="flex items - center justify - center space - x-2">
+                <Award className="w - 5 h - 5 text - zion - cyan"       />
+                <span className="text - white">Proven Results</span>
               </div>
             </div>
             <div className="mt-4 text-center">
@@ -199,16 +199,16 @@ export function ComprehensiveServicesShowcase() {
                 </p>
 
                 {/* Pricing */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-2">
-                    <DollarSign className="w-5 h-5 text-zion-cyan" />
-                    <span className="text-2xl font-bold text-white">{service.price}</span>
-                    <span className="text-zion-cyan-light">{service.period}</span>
+                <div className="flex items - center justify - between mb - 4">
+                  <div className="flex items - center space - x-2">
+                    <DollarSign className="w - 5 h - 5 text - zion - cyan"       />
+                    <span className="text - 2xl font - bold text - white">{service.price}</span>
+                    <span className="text - zion - cyan - light">{service.period}</span>
                   </div>
-                  <div className="flex items-center space-x-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span className="text-white text-sm">{service.rating}</span>
-                    <span className="text-zion-cyan-light text-sm">({service.reviews})</span>
+                  <div className="flex items - center space - x-1">
+                    <Star className="w - 4 h - 4 text - yellow - 400 fill - current"       />
+                    <span className="text - white text - sm">{service.rating}</span>
+                    <span className="text - zion - cyan - light text - sm"> ({service.reviews}) </span>
                   </div>
                 </div>
 
@@ -249,8 +249,8 @@ export function ComprehensiveServicesShowcase() {
                     to={service.link}
                     className="flex items-center space-x-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-300 group-hover:scale-105"
                   >
-                    <span>Learn More</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <span > Learn More</span>
+                    <ArrowRight className="w - 4 h - 4 group - hover:translate - x-1 transition - transform"       />
                   </Link>
                   <div className="text-xs text-zion-cyan-light">
                     {service.trialDays} day trial
@@ -326,14 +326,12 @@ export function ComprehensiveServicesShowcase() {
 
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">Features</h3>
-                  <ul className="space-y-2">
-                    {selectedService.features.map((feature, index) => (
-                      <li key={index} className="flex items-center space-x-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                        <span className="text-zion-cyan-light">{feature}</span>
-                      </li>
-                    ))}
+                  <h3 className="text - xl font - semibold text - white mb - 4">Features</h3>
+                  <ul className="space - y-2">
+                    {selectedService.features.map ( (feature, index) => (<li key={index} className="flex items - center space - x-2">
+                        <CheckCircle className="w - 5 h - 5 text - green - 400 flex - shrink - 0"       />
+                        <span className="text - zion - cyan - light">{feature}</span>
+                      </li>) ) }
                   </ul>
                 </div>
 

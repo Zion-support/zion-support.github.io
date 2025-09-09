@@ -3,10 +3,19 @@ import { Helmet } from 'react-helmet-async';
 const AIAutonomousWorkflow = () => {
     return (<>
       <Helmet>
-        <title>AI Autonomous Workflow Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous workflow platform that automates business processes, optimizes workflows, and provides intelligent workflow management with advanced AI capabilities."/>
-        <meta name="keywords" content="AI workflow, autonomous workflow, workflow automation, business process automation, AI workflow management"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-workflow"/>
+        <title > AI Autonomous Workflow Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Revolutionary AI autonomous workflow platform that automates business processes, optimizes workflows, and provides intelligent workflow management with advanced AI capabilities."
+              />
+        <meta
+          name="keywords"
+          content="AI workflow, autonomous workflow, workflow automation, business process automation, AI workflow management"
+              />
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com / ai - autonomous - workflow"
+              />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">

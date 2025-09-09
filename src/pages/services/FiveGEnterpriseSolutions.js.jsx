@@ -96,93 +96,12 @@ const technologies = [
 
 export default function FiveGEnterpriseSolutions() {
   return (
-    <>
-      <SEO 
-        title="5G Enterprise Solutions | Zion Tech Group"
-        description="Transform your enterprise with 5G technology. Private networks, edge computing, IoT solutions, and network integration for the next generation of business operations."
-        canonical="https://ziontechgroup.com/services/5g-solutions"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Signal className="w-12 h-12 text-white" />
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                5G <span className="bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent">Enterprise Solutions</span>
-              </h1>
-              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-                Transform your enterprise with next-generation 5G technology. 
-                Private networks, edge computing, and IoT solutions for the future of business.
-              </p>
-              
-              <div className="flex flex-wrap justify-center gap-4">
-                <a 
-                  href="/contact" 
-                  className="btn-primary px-8 py-3 text-lg font-semibold"
-                >
-                  Get Started
-                </a>
-                <a 
-                  href="#services" 
-                  className="btn-outline-white px-8 py-3 text-lg font-semibold"
-                >
-                  View Services
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                5G Enterprise Services
-              </h2>
-              <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-                Comprehensive 5G solutions designed to transform enterprise operations 
-                and enable next-generation business capabilities.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {fiveGServices.map((service, index) => (
-                <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-zion-slate-dark/50 border border-blue-500/20 rounded-xl p-6 hover:border-blue-500/40 transition-all duration-300"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-4">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                  <p className="text-zion-slate-light mb-4">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-blue-500 flex-shrink-0" />
-                        <span className="text-zion-slate-light text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex justify-center mb-6">
+            <div className="p-3 bg-blue-600/20 rounded-full">
+              <SignalIcon className="h-12 w-12 text-blue-400"       />
             </div>
           </div>
         </section>

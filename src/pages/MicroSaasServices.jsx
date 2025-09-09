@@ -19,22 +19,22 @@ const categoryIcons = {
 };
 const benefits = [
     {
-        icon: <Zap className="h-6 w-6"/>,
+        icon: <Zap className="h - 6 w - 6"      />,
         title: "Immediate Deployment",
         description: "All services are ready for immediate deployment with no setup delays"
     },
     {
-        icon: <Shield className="h-6 w-6"/>,
+        icon: <Shield className="h - 6 w - 6"      />,
         title: "Enterprise Security",
         description: "Bank-level security with SOC 2 compliance and 24/7 monitoring"
     },
     {
-        icon: <Users className="h-6 w-6"/>,
+        icon: <Users className="h - 6 w - 6"      />,
         title: "Dedicated Support",
         description: "24/7 technical support with dedicated account managers"
     },
     {
-        icon: <TrendingUp className="h-6 w-6"/>,
+        icon: <TrendingUp className="h - 6 w - 6"      />,
         title: "Proven ROI",
         description: "Average 300% ROI within 6 months of implementation"
     }
@@ -65,13 +65,13 @@ export default function MicroSaasServices() {
             Transform your business with our comprehensive suite of AI-powered micro SAAS services. 
             From automation to analytics, we provide enterprise-grade solutions at startup prices.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-white text-zion-blue hover:bg-gray-100">
-              <Globe className="h-5 w-5 mr-2"/>
+          <div className="flex flex - wrap justify - center gap - 4">
+            <Button size="lg" className="bg - white text - zion - blue hover:bg - gray - 100">
+              <Globe className="h - 5 w - 5 mr - 2"      />
               View All Services
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue">
-              <Phone className="h-5 w-5 mr-2"/>
+            <Button size="lg" variant="outline" className="border - white text - white hover:bg - white hover:text - zion - blue">
+              <Phone className="h - 5 w - 5 mr - 2"      />
               Contact Sales
             </Button>
           </div>

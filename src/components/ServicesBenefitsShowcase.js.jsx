@@ -7,10 +7,10 @@ export function ServicesBenefitsShowcase() {
     const serviceBenefits = [
         {
             category: "AI Services",
-            icon: <Brain className="w-12 h-12"/>,
-            color: "from-purple-500 to-indigo-600",
-            description: "Transform your business with cutting-edge artificial intelligence and machine learning solutions",
-            benefits: [
+            icon: <Brain className="w - 12 h - 12"      />,
+            color: "from - purple - 500 to - indigo - 600",
+            description: "Transform your business with cutting - edge artificial intelligence and machine learning solutions",
+            benefits[;
                 "Advanced AI algorithms and models",
                 "Real-time data processing and insights",
                 "Scalable machine learning infrastructure",
@@ -37,10 +37,10 @@ export function ServicesBenefitsShowcase() {
         },
         {
             category: "IT Services",
-            icon: <Cloud className="w-12 h-12"/>,
-            color: "from-cyan-500 to-blue-600",
-            description: "Enterprise-grade IT infrastructure and consulting services for modern businesses",
-            benefits: [
+            icon: <Cloud className="w - 12 h - 12"      />,
+            color: "from - cyan - 500 to - blue - 600",
+            description: "Enterprise - grade IT infrastructure and consulting services for modern businesses",
+            benefits[;
                 "Cloud migration and optimization",
                 "Cybersecurity and compliance",
                 "DevOps automation and CI/CD",
@@ -67,12 +67,12 @@ export function ServicesBenefitsShowcase() {
         },
         {
             category: "Micro SAAS",
-            icon: <Zap className="w-12 h-12"/>,
-            color: "from-emerald-500 to-green-600",
-            description: "Specialized software-as-a-service solutions designed for specific business needs",
-            benefits: [
-                "Ready-to-use business applications",
-                "Cloud-based accessibility",
+            icon: <Zap className="w - 12 h - 12"      />,
+            color: "from - emerald - 500 to - green - 600",
+            description: "Specialized software - as - a-service solutions designed for specific business needs",
+            benefits[;
+                "Ready - to - use business applications",
+                "Cloud - based accessibility",
                 "Automatic updates and maintenance",
                 "Scalable user management",
                 "API integrations",
@@ -139,13 +139,13 @@ export function ServicesBenefitsShowcase() {
               <CardContent className="space-y-6">
                 {/* Key Benefits */}
                 <div>
-                  <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-cyan-400"/>
+                  <h4 className="text - white font - semibold mb - 3 flex items - center gap - 2">
+                    <CheckCircle className="w - 4 h - 4 text - cyan - 400"      />
                     Key Benefits
                   </h4>
-                  <ul className="space-y-2">
-                    {service.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="text-slate-300 text-sm flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"/>
+                  <ul className="space - y-2">
+                    {service.benefits.map ( (benefit, benefitIndex) => (<li key={benefitIndex} className="text - slate - 300 text - sm flex items - start gap - 2">
+                        <div className="w - 1.5 h - 1.5 bg - cyan - 400 rounded - full mt - 2 flex - shrink - 0"      />
                         {benefit}
                       </li>))}
                   </ul>
@@ -153,13 +153,13 @@ export function ServicesBenefitsShowcase() {
 
                 {/* Use Cases */}
                 <div>
-                  <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                    <TrendingUp className="w-4 h-4 text-cyan-400"/>
+                  <h4 className="text - white font - semibold mb - 3 flex items - center gap - 2">
+                    <TrendingUp className="w - 4 h - 4 text - cyan - 400"      />
                     Common Use Cases
                   </h4>
-                  <ul className="space-y-2">
-                    {service.useCases.map((useCase, useCaseIndex) => (<li key={useCaseIndex} className="text-slate-300 text-sm flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"/>
+                  <ul className="space - y-2">
+                    {service.useCases.map ( (useCase, useCaseIndex) => (<li key={useCaseIndex} className="text - slate - 300 text - sm flex items - start gap - 2">
+                        <div className="w - 1.5 h - 1.5 bg - cyan - 400 rounded - full mt - 2 flex - shrink - 0"      />
                         {useCase}
                       </li>))}
                   </ul>
@@ -188,7 +188,7 @@ export function ServicesBenefitsShowcase() {
                 {/* CTA Button */}
                 <Button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
                   Explore {service.category}
-                  <ArrowRight className="w-4 h-4 ml-2"/>
+                  <ArrowRight className="w - 4 h - 4 ml - 2"      />
                 </Button>
               </CardContent>
             </Card>))}
@@ -199,31 +199,31 @@ export function ServicesBenefitsShowcase() {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Competitive Advantages
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-white"/>
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">
+            <div className="text - center p - 6 bg - slate - 800 / 50 rounded - xl border border - slate - 700">
+              <div className="w - 16 h - 16 bg - gradient - to - br from - purple - 500 to - pink - 600 rounded - full flex items - center justify - center mx - auto mb - 4">
+                <Shield className="w - 8 h - 8 text - white"      />
               </div>
               <h4 className="text-white font-semibold mb-2">Enterprise Security</h4>
               <p className="text-slate-300 text-sm">SOC 2, ISO 27001, GDPR compliant with enterprise-grade security</p>
             </div>
-            <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white"/>
+            <div className="text - center p - 6 bg - slate - 800 / 50 rounded - xl border border - slate - 700">
+              <div className="w - 16 h - 16 bg - gradient - to - br from - green - 500 to - emerald - 600 rounded - full flex items - center justify - center mx - auto mb - 4">
+                <Users className="w - 8 h - 8 text - white"      />
               </div>
               <h4 className="text-white font-semibold mb-2">Expert Team</h4>
               <p className="text-slate-300 text-sm">Certified professionals with 10+ years of industry experience</p>
             </div>
-            <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-8 h-8 text-white"/>
+            <div className="text - center p - 6 bg - slate - 800 / 50 rounded - xl border border - slate - 700">
+              <div className="w - 16 h - 16 bg - gradient - to - br from - orange - 500 to - red - 600 rounded - full flex items - center justify - center mx - auto mb - 4">
+                <Globe className="w - 8 h - 8 text - white"      />
               </div>
               <h4 className="text-white font-semibold mb-2">Global Reach</h4>
               <p className="text-slate-300 text-sm">Serving clients in 50+ countries with localized support</p>
             </div>
-            <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
-              <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-white"/>
+            <div className="text - center p - 6 bg - slate - 800 / 50 rounded - xl border border - slate - 700">
+              <div className="w - 16 h - 16 bg - gradient - to - br from - yellow - 500 to - orange - 600 rounded - full flex items - center justify - center mx - auto mb - 4">
+                <Star className="w - 8 h - 8 text - white"      />
               </div>
               <h4 className="text-white font-semibold mb-2">Proven Results</h4>
               <p className="text-slate-300 text-sm">95% client satisfaction rate with measurable business outcomes</p>
@@ -263,17 +263,17 @@ export function ServicesBenefitsShowcase() {
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
             Join hundreds of satisfied clients who have transformed their businesses with our innovative solutions.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
-              <Phone className="w-4 h-4 mr-2"/>
+          <div className="flex flex - wrap justify - center gap - 4">
+            <Button size="lg" className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700">
+              <Phone className="w - 4 h - 4 mr - 2"      />
               {CONTACT_INFO.mobile}
             </Button>
-            <Button size="lg" variant="outline" className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white">
-              <Mail className="w-4 h-4 mr-2"/>
+            <Button size="lg" variant="outline" className="border - cyan - 400 text - cyan - 400 hover:bg - cyan - 400 hover:text - white">
+              <Mail className="w - 4 h - 4 mr - 2"      />
               {CONTACT_INFO.email}
             </Button>
-            <Button size="lg" variant="ghost" className="text-cyan-400 hover:text-white">
-              <ExternalLink className="w-4 h-4 mr-2"/>
+            <Button size="lg" variant="ghost" className="text - cyan - 400 hover:text - white">
+              <ExternalLink className="w - 4 h - 4 mr - 2"      />
               Schedule Demo
             </Button>
           </div>

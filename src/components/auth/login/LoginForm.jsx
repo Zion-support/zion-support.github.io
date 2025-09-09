@@ -54,31 +54,54 @@ export function LoginForm() {
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
               <FormControl>
                 <div className="relative">
-                  <Input placeholder="you@example.com" className="bg-zion-blue pl-10 placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {...field} autoComplete="off" // Disable browser autofill
-        />
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>
+                  <Input
+                    placeholder="you@example.com"
+                    className="bg-zion-blue pl-10 placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                    {...field}
+                    autoComplete="off"
+                        />
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"       />
                 </div>
               </FormControl>
-              <FormMessage className="text-red-400"/>
-            </FormItem>)}/>
+              <FormMessage className="text-red-400"       />
+            </FormItem>
+          )}
+        />
 
         <FormField control={form.control} name="password" render={({ field }) => (<FormItem>
               <FormLabel className="text-zion-slate-light">Password</FormLabel>
               <FormControl>
                 <div className="relative">
-                  <Input type={showPassword ? "text" : "password"} placeholder="••••••••" className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple" {...field} autoComplete="off" // Disable browser autofill
-        />
-                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>
-                  <Button type="button" variant="ghost" size="sm" className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan" onClick={() => setShowPassword(!showPassword)}>
-                    {showPassword ? (<EyeOff className="h-4 w-4"/>) : (<Eye className="h-4 w-4"/>)}
+                  <Input
+                    type={showPassword ? 'text' : 'password'}
+                    placeholder="••••••••"
+                    className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple"
+                    {...field}
+                    autoComplete="off"
+                        />
+                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"       />
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="sm"
+                    className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
+                    onClick={() => setShowPassword(!showPassword)}
+                  >
+                    {showPassword ? (
+                      <EyeOff className="h-4 w-4"       />
+                    ) : (
+                      <Eye className="h-4 w-4"       />
+                    )}
                     <span className="sr-only">
                       {showPassword ? "Hide password" : "Show password"}
                     </span>
                   </Button>
                 </div>
               </FormControl>
-              <FormMessage className="text-red-400"/>
-            </FormItem>)}/>
+              <FormMessage className="text-red-400"       />
+            </FormItem>
+          )}
+        />
 
         <div className="flex items-center justify-between">
           <div className="text-sm">
@@ -88,8 +111,22 @@ export function LoginForm() {
           </div>
         </div>
 
-        <Button type="submit" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" disabled={isLoading || isSubmitting}>
-          {isLoading || isSubmitting ? "Logging in..." : "Login"}
+        <Button
+          type="submit"
+          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white"
+          disabled={isSubmitting || isLoading}
+        >
+          {isSubmitting ? (
+            <>
+              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+              Signing in...
+            </>
+          ) : (
+            <>
+              <LogIn className="h-4 w-4 mr-2"       />
+              Sign in
+            </>
+          )}
         </Button>
       </form>
       <LoadingOverlay visible={isLoading || isSubmitting}/>

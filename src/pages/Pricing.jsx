@@ -1,14 +1,125 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { CogIcon } from '@heroicons/react/24/outline';
-const $page = () => {
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-3 bg-blue-600/20 rounded-full">
-              <CogIcon className="h-12 w-12 text-blue-400"/>
-            </div>
+export default Pricing;
+import { SEO } from '../components / SEO';
+
+
+const Pricing = () => {
+  const pricingTiers = [
+    {
+      name: 'Starter',
+      price: '$19',
+      period: '/month',
+      description:
+        'Perfect for individuals and small teams getting started with AI tools',
+      features: [
+        'AI Content Generation (100 credits / month) ',
+        'Basic AI Image Editing',
+        'AI Meeting Assistant (5 hours / month) ',
+        'Email Support',
+        'Basic Analytics Dashboard',
+        'Mobile App Access',
+      ],
+      popular: false,
+      cta: 'Start Free Trial',
+      link: '/signup?plan = starter',
+    },
+    {
+      name: 'Professional',
+      price: '$49',
+      period: '/month',
+      description: 'Ideal for growing businesses and professional teams',
+      features: [
+        'Everything in Starter',
+        'AI Content Generation (500 credits / month) ',
+        'Advanced AI Image & Video Editing',
+        'AI Code Assistant (Basic) ',
+        'AI Meeting Assistant (20 hours / month) ',
+        'AI Translation (10 languages) ',
+        'Priority Support',
+        'Advanced Analytics',
+        'API Access (1000 calls / month) ',
+        'Team Collaboration Tools',
+      ],
+      popular: true,
+      cta: 'Start Free Trial',
+      link: '/signup?plan = professional',
+    },
+    {
+      name: 'Business',
+      price: '$99',
+      period: '/month',
+      description: 'Comprehensive solution for established businesses',
+      features: [
+        'Everything in Professional',
+        'AI Content Generation (2000 credits / month) ',
+        'AI Code Assistant (Advanced) ',
+        'AI Data Analytics Platform',
+        'AI Threat Detection',
+        'Multi - Cloud Management',
+        'AI - Powered CRM',
+        'Business Process Automation',
+        'AI Meeting Assistant (Unlimited) ',
+        'AI Translation (100 + languages) ',
+        '24 / 7 Support',
+        'Custom Integrations',
+        'API Access (10000 calls / month) ',
+        'Advanced Security Features',
+      ],
+      popular: false,
+      cta: 'Start Free Trial',
+      link: '/signup?plan = business',
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description:
+        'Tailored solutions for large organizations with specific requirements',
+      features: [
+        'Everything in Business',
+        'Unlimited AI Content Generation',
+        'Custom AI Model Training',
+        'Zero Trust Security Suite',
+        'Edge Computing Solutions',
+        'AI Market Research Platform',
+        'AI Legal Document Review',
+        'AI Financial Advisor',
+        'AI Healthcare Assistant',
+        'Dedicated Account Manager',
+        'Custom Development',
+        'On - Premise Deployment',
+        'SLA Guarantees',
+        'Compliance Certifications',
+      ],
+      popular: false,
+      cta: 'Contact Sales',
+      link: '/contact',
+    },
+  ];
+
+  return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
+      <SEO
+        title="Pricing - Zion Tech Group | AI & Technology Solutions"
+        description="Choose the perfect plan for your AI and technology needs. Flexible pricing options for individuals, teams, and enterprises."
+        keywords="pricing, AI services, technology solutions, subscription plans, enterprise pricing"
+        canonical="https://ziontechgroup.com / pricing"
+            />
+
+      {/* Hero Section */}
+      <section className="pt - 24 pb - 16 px - 4 sm:px - 6 lg:px - 8">
+        <div className="max - w-7xl mx - auto text - center">
+          <div className="mb - 8">
+            <h1 className="text - 4xl md:text - 6xl font - bold text - white mb - 6">
+              Simple, Transparent{' '}
+              <span className="bg - gradient - to - r from - blue - 400 to - cyan - 400 bg - clip - text text - transparent">
+                {' '}
+                Pricing
+              </span>
+            </h1>
+            <p className="text - xl text - gray - 300 max - w-3xl mx - auto mb - 8">
+              Choose the perfect plan for your AI and technology needs. Start
+              with a free trial and scale as you grow.
+            </p>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             $page

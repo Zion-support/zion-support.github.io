@@ -22,10 +22,11 @@ const ServiceCard = ({ service, index, isVisible }) => {
                 duration: 3 + Math.random() * 2,
                 repeat: Infinity,
                 ease: "easeInOut",
-            }} style={{
-                left: `${20 + Math.random() * 60}%`,
-                top: `${20 + Math.random() * 60}%`,
-            }}/>))}
+
+}} style={{
+                left: `${20 + Math.random () * 60}%`,
+                top: `${20 + Math.random () * 60}%`,
+            }}      />) ) }
           </div>
 
           {/* Service Header */}
@@ -126,7 +127,7 @@ const ServiceCard = ({ service, index, isVisible }) => {
           </div>
 
           {/* Hover Effects */}
-          <motion.div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" initial={false}/>
+          <motion.div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 via - blue - 500 / 5 to - purple - 500 / 5 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500" initial={false}      />
         </div>
       </div>
     </motion.div>);
@@ -150,14 +151,14 @@ export const FuturisticServicesShowcase = () => {
     }, [filteredServices]);
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">
       {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>
-        {[...Array(20)].map((_, i) => (<div key={i} className="absolute w-2 h-2 bg-cyan-400/20 rounded-full animate-float" style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${3 + Math.random() * 4}s`,
-            }}/>))}
+      <div className="absolute inset - 0 overflow - hidden">
+        <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 via - blue - 500 / 5 to - purple - 500 / 5"></div>
+        {[...Array (20) ].map ( (_, i) => (<div key={i} className="absolute w - 2 h - 2 bg - cyan - 400 / 20 rounded - full animate - float" style={{
+                left: `${Math.random () * 100}%`,
+                top: `${Math.random () * 100}%`,
+                animationDelay: `${Math.random () * 5}s`,
+                animationDuration: `${3 + Math.random () * 4}s`,
+            }}      />) ) }
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -196,7 +197,7 @@ export const FuturisticServicesShowcase = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           <AnimatePresence>
-            {filteredServices.map((service, index) => (<ServiceCard key={service.id} service={service} index={index} isVisible={visibleServices.has(index)}/>))}
+            {filteredServices.map ( (service, index) => (<ServiceCard key={service.id} service={service} index={index} isVisible={visibleServices.has (index) }      />) ) }
           </AnimatePresence>
         </div>
 

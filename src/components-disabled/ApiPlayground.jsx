@@ -58,12 +58,28 @@ export function ApiPlayground({ method, path, params = [] }) {
     };
     return (<div className="space-y-4">
       <Input value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="API Key"/>
-      {params.map((p) => (<Input key={p.name} value={paramValues[p.name] || ""} onChange={(e) => handleParamChange(p.name, e.target.value)} placeholder={p.name}/>))}
+      {params.map((((((((p, index, index, index, index, index, index) => ({ ...((((((p, index, index, index, index, index, key: index })) => ({ ...(((((p, index, index, index, index, key: index })) => ({ ...((((p, index, index, index, key: index })) => ({ ...(((p, index, index, key: index })) => ({ ...((p, index, key: index })) => ({ ...(p, key: index })) => (<Input key={p.name} value={paramValues[p.name] || ""} onChange = {
+  (e) => handleParamChange(p.name,
+  e.target.value)
+
+
+
+
+
+
+} placeholder={p.name}/>))}
       {method !== "GET" && method !== "DELETE" && (<Textarea value={body} onChange={(e) => setBody(e.target.value)} className="font-mono"/>)}
       <Button onClick={sendRequest} disabled={loading}>
         {loading ? "Sending..." : "Send Request"}
       </Button>
-      {response && <CodeBlock code={response} language="json"/>}
-    </div>);
-}
+      {response && <CodeBlock code={response} language="json"      />}
+    </div>)}
+export default ApiPlayground;
+
+export default ApiPlayground;
+export default ApiPlayground;
+export default ApiPlayground;
+export default ApiPlayground;
+export default ApiPlayground;
+export default ApiPlayground;
 export default ApiPlayground;

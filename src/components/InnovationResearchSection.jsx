@@ -5,8 +5,8 @@ const researchAreas = [
     {
         id: 1,
         title: "Artificial Intelligence & Machine Learning",
-        icon: <Brain className="w-8 h-8"/>,
-        color: "from-zion-purple to-zion-purple-dark",
+        icon: <Brain className="w - 8 h - 8"      />,
+        color: "from - zion - purple to - zion - purple - dark",
         description: "Advanced AI research in computer vision, natural language processing, and autonomous systems",
         projects: 25,
         researchers: 18,
@@ -26,9 +26,9 @@ const researchAreas = [
     {
         id: 2,
         title: "Quantum Computing & Cryptography",
-        icon: <Atom className="w-8 h-8"/>,
-        color: "from-zion-cyan to-zion-blue",
-        description: "Pioneering research in quantum algorithms, quantum-safe cryptography, and quantum machine learning",
+        icon: <Atom className="w - 8 h - 8"      />,
+        color: "from - zion - cyan to - zion - blue",
+        description: "Pioneering research in quantum algorithms, quantum - safe cryptography, and quantum machine learning",
         projects: 18,
         researchers: 12,
         publications: 8,
@@ -47,8 +47,8 @@ const researchAreas = [
     {
         id: 3,
         title: "Blockchain & Distributed Systems",
-        icon: <Network className="w-8 h-8"/>,
-        color: "from-zion-cyan-light to-zion-cyan",
+        icon: <Network className="w - 8 h - 8"      />,
+        color: "from - zion - cyan - light to - zion - cyan",
         description: "Research in blockchain scalability, consensus mechanisms, and decentralized applications",
         projects: 22,
         researchers: 15,
@@ -68,9 +68,9 @@ const researchAreas = [
     {
         id: 4,
         title: "Cybersecurity & Privacy",
-        icon: <Shield className="w-8 h-8"/>,
-        color: "from-zion-purple-light to-zion-purple",
-        description: "Advanced research in threat detection, privacy-preserving technologies, and secure systems",
+        icon: <Shield className="w - 8 h - 8"      />,
+        color: "from - zion - purple - light to - zion - purple",
+        description: "Advanced research in threat detection, privacy - preserving technologies, and secure systems",
         projects: 20,
         researchers: 14,
         publications: 9,
@@ -89,8 +89,8 @@ const researchAreas = [
     {
         id: 5,
         title: "Edge Computing & IoT",
-        icon: <Cpu className="w-8 h-8"/>,
-        color: "from-zion-cyan to-zion-purple",
+        icon: <Cpu className="w - 8 h - 8"      />,
+        color: "from - zion - cyan to - zion - purple",
         description: "Research in edge computing architectures, IoT security, and distributed intelligence",
         projects: 16,
         researchers: 11,
@@ -110,8 +110,8 @@ const researchAreas = [
     {
         id: 6,
         title: "Sustainable Technology",
-        icon: <Globe className="w-8 h-8"/>,
-        color: "from-zion-purple to-zion-cyan",
+        icon: <Globe className="w - 8 h - 8"      />,
+        color: "from - zion - purple to - zion - cyan",
         description: "Research in green computing, renewable energy systems, and sustainable AI",
         projects: 14,
         researchers: 9,
@@ -130,12 +130,12 @@ const researchAreas = [
     }
 ];
 const innovationStats = [
-    { icon: <Lightbulb className="w-6 h-6"/>, value: "120+", label: "Research Projects" },
-    { icon: <Users className="w-6 h-6"/>, value: "80+", label: "Researchers" },
-    { icon: <Award className="w-6 h-6"/>, value: "50+", label: "Publications" },
-    { icon: <Target className="w-6 h-6"/>, value: "30+", label: "Patents Filed" },
-    { icon: <TrendingUp className="w-6 h-6"/>, value: "$10M+", label: "Research Funding" },
-    { icon: <Star className="w-6 h-6"/>, value: "15+", label: "Industry Partners" }
+    { icon: <Lightbulb className="w - 6 h - 6"      />, value: "120+", label: "Research Projects" },
+    { icon: <Users className="w - 6 h - 6"      />, value: "80+", label: "Researchers" },
+    { icon: <Award className="w - 6 h - 6"      />, value: "50+", label: "Publications" },
+    { icon: <Target className="w - 6 h - 6"      />, value: "30+", label: "Patents Filed" },
+    { icon: <TrendingUp className="w - 6 h - 6"      />, value: "$10M+", label: "Research Funding" },
+    { icon: <Star className="w - 6 h - 6"      />, value: "15+", label: "Industry Partners" }
 ];
 const researchLabs = [
     {
@@ -282,7 +282,7 @@ export function InnovationResearchSection() {
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                       View Research Details
                     </span>
-                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                    <ArrowRight className="w - 4 h - 4 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"      />
                   </div>
 
                   {/* Expanded details */}
@@ -331,11 +331,23 @@ export function InnovationResearchSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Research <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Labs</span>
           </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {researchLabs.map((lab, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} onHoverStart={() => setHoveredLab(index)} onHoverEnd={() => setHoveredLab(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-zion-cyan to-zion-purple mb-4 shadow-lg">
-                  <TestTube className="w-6 h-6 text-white"/>
+
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">
+            {researchLabs.map ( (lab, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.4,
+  delay: index * 0.1 
+
+}} onHoverStart={ () => setHoveredLab (index) } onHoverEnd={ () => setHoveredLab (null) } whileHover={{ y: -4 }} className="p - 6 rounded - 2xl bg - gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 30 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - lg hover:shadow - zion - cyan / 20">
+                <div className="inline - flex items - center justify - center w - 12 h - 12 rounded - xl bg - gradient - to - br from - zion - cyan to - zion - purple mb - 4 shadow - lg">
+                  <TestTube className="w - 6 h - 6 text - white"      />
                 </div>
                 
                 <h4 className="text-lg font-bold text-white mb-2">{lab.name}</h4>

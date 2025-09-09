@@ -8,432 +8,91 @@ import { Helmet } from 'react-helmet-async';
 import { Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer } from 'lucide-react';
 import { Clock } from 'lucide-react';
 const AIPoweredITAssetManagement = () => {
-    const features = [
-        {
-            description: "AI-powered discovery and mapping of all IT assets across your infrastructure",
-            icon: Database,
-            title: "Intelligent Asset Discovery",
-            description: "AI-powered automatic discovery and classification of all IT assets across your network infrastructure."
-        },
-        {
-            icon: Zap,
-            title: "Real-time Monitoring",
-            import: { Link }, from, 'react-router-dom': ,
-            import: { Monitor, Shield, TrendingUp, Database, ArrowRight, CheckCircle, Star, BarChart3, Zap }, from, 'lucide-react': ,
-            function: AIPoweredITAssetManagement()
-        }, {
-            const: features = [
-                {
-                    icon: Monitor,
-                    title: "Intelligent Asset Discovery",
-                    description: "AI-powered scanning and discovery of all IT assets across your infrastructure"
-                },
-                {
-                    icon: Shield,
-                    title: "Security & Compliance",
-                    description: "Continuous monitoring of asset health, performance, and utilization with instant alerts and notifications."
-                },
-                {
-                    icon: Target,
-                    title: "Predictive Maintenance",
-                    description: "AI algorithms predict potential failures and maintenance needs before they impact your operations."
-                },
-                {
-                    icon: Shield,
-                    title: "Security & Compliance",
-                    description: "Automated security monitoring, vulnerability assessment, and compliance reporting for all assets."
-                },
-                {
-                    icon: Rocket,
-                    title: "Lifecycle Management",
-                    description: "Complete asset lifecycle tracking from procurement to retirement with optimization recommendations."
-                },
-                {
-                    icon: Globe,
-                    title: "Multi-Platform Support",
-                    description: "Unified management across Windows, Linux, macOS, cloud platforms, and mobile devices."
-                }
-            ],
-            const: capabilities = [
-                {
-                    icon: Cpu,
-                    title: "Intelligent Asset Discovery",
-                    description: "AI-powered scanning and discovery of all IT assets across your infrastructure."
-                },
-                {
-                    icon: Shield,
-                    title: "Security Monitoring",
-                    description: "Continuous security assessment and threat detection for all managed assets.",
-                    description: "Automated security monitoring and compliance reporting for all assets"
-                },
-                {
-                    icon: TrendingUp,
-                    title: "Performance Analytics",
-                    description: "Real-time performance monitoring and predictive maintenance insights"
-                },
-                {
-                    icon: Database,
-                    title: "Centralized Management",
-                    icon: Monitor,
-                    title: 'Real-time Asset Monitoring',
-                    description: 'Continuous monitoring of all IT assets with AI-powered anomaly detection and predictive maintenance.'
-                },
-                {
-                    icon: Shield,
-                    title: 'Intelligent Security',
-                    description: 'AI-driven threat detection and automated security response for all managed IT assets.'
-                },
-                {
-                    icon: TrendingUp,
-                    title: 'Performance Analytics',
-                    description: 'Advanced analytics and reporting for asset performance optimization and capacity planning.'
-                },
-                {
-                    icon: Database,
-                    title: 'Centralized Management',
-                    description: 'Single platform for managing all IT assets across your entire infrastructure.'
-                },
-                {
-                    icon: Network,
-                    title: 'Network Optimization',
-                    description: 'AI-powered network performance optimization and bandwidth management.'
-                },
-                {
-                    icon: Cpu,
-                    title: 'Resource Optimization',
-                    description: 'Intelligent resource allocation and workload balancing across your IT infrastructure.',
-                    icon: Cpu,
-                    title: "Intelligent Asset Discovery",
-                    description: "Automatically discover and catalog all IT assets across your infrastructure."
-                },
-                {
-                    icon: Database,
-                    title: "Smart Inventory Management",
-                    description: "AI-powered inventory tracking with predictive maintenance scheduling.",
-                    import: { Link }, from, 'react-router-dom': ,
-                    import: { Monitor, Shield, BarChart3, Zap, Database, Network, Cpu, HardDrive }, from, 'lucide-react': ,
-                    const: AIPoweredITAssetManagement, React, : .FC = () => {
-                        const features = [
-                            {
-                                icon: Monitor,
-                                title: "Real-time Asset Monitoring",
-                                description: "Continuous monitoring of all IT assets with AI-powered anomaly detection"
-                            },
-                            {
-                                icon: Shield,
-                                title: "Security Compliance",
-                                icon: Server,
-                                title: "Servers & Infrastructure",
-                                description: "Physical and virtual servers, storage systems, and network infrastructure management."
-                            },
-                            {
-                                icon: Monitor,
-                                title: "End User Devices",
-                                description: "Desktops, laptops, tablets, and mobile devices with user assignment tracking."
-                            },
-                            {
-                                icon: Network,
-                                title: "Network Equipment",
-                                description: "Routers, switches, firewalls, and wireless access points with performance monitoring."
-                            },
-                            {
-                                icon: Printer,
-                                title: "Peripheral Devices",
-                                description: "Printers, scanners, and other office equipment with usage analytics."
-                            },
-                            {
-                                icon: Cloud,
-                                title: "Cloud Resources",
-                                description: "Automated security audits and compliance reporting for all assets"
-                            },
-                            {
-                                icon: BarChart3,
-                                title: "Predictive Analytics",
-                                description: "AI-driven insights to predict maintenance needs and optimize asset lifecycle"
-                            },
-                            {
-                                icon: Zap,
-                                title: "Automated Management",
-                                description: "Intelligent automation of routine IT asset management tasks"
-                            },
-                            {
-                                icon: Database,
-                                title: "Centralized Inventory",
-                                description: "Comprehensive asset database with real-time updates and tracking"
-                            },
-                            {
-                                icon: Network,
-                                title: "Network Discovery",
-                                description: "Automatic discovery and mapping of network-connected assets"
-                            }
-                        ];
-                        const assetTypes = [
-                            {
-                                category: "Hardware Assets",
-                                items: ["Servers", "Workstations", "Laptops", "Mobile Devices", "Network Equipment", "Storage Devices"],
-                                icon: Cpu
-                            },
-                            {
-                                category: "Software Assets",
-                                items: ["Operating Systems", "Applications", "Licenses", "Cloud Services", "Development Tools", "Security Software"],
-                                icon: Monitor
-                            },
-                            {
-                                category: "Network Assets",
-                                items: ["Routers", "Switches", "Firewalls", "Access Points", "Cables", "Network Security"],
-                                icon: Network
-                            },
-                            {
-                                category: "Data Assets",
-                                items: ["Databases", "File Systems", "Backups", "Archives", "Cloud Storage", "Data Security"],
-                                icon: HardDrive
-                            }
-                        ];
-                        const benefits = [
-                            {
-                                title: "Cost Optimization",
-                                description: "Reduce IT costs by identifying underutilized assets and optimizing resource allocation."
-                            },
-                            {
-                                title: "Risk Mitigation",
-                                description: "Proactively identify security vulnerabilities and compliance issues."
-                            },
-                            {
-                                title: "Operational Efficiency",
-                                description: "Streamline IT operations with automated asset management workflows."
-                            },
-                            {
-                                title: "Strategic Planning",
-                                description: "Data-driven insights for informed IT investment and planning decisions.",
-                                "Complete visibility into all IT assets across your organization": ,
-                                "Reduced asset downtime through predictive maintenance": ,
-                                "Optimized asset utilization and cost savings": ,
-                                "Automated compliance reporting and audit preparation": ,
-                                "Streamlined procurement and retirement processes": ,
-                                "Enhanced security through continuous monitoring": {
-                                    title: "Cost Optimization",
-                                    description: "Reduce IT costs by 25-40% through better asset utilization",
-                                    metric: "25-40%"
-                                },
-                            },
-                            {
-                                title: "Risk Reduction",
-                                description: "Minimize security risks and compliance violations",
-                                metric: "90%"
-                            },
-                            {
-                                title: "Efficiency Gain",
-                                description: "Improve IT team productivity and response times",
-                                metric: "3x"
-                            },
-                            {
-                                title: "Lifecycle Management",
-                                description: "Extend asset lifespan through predictive maintenance",
-                                metric: "2x"
-                            }
-                        ];
-                        const capabilities = [
-                            {
-                                description: "Cloud instances, storage, and SaaS applications management."
-                            },
-                            {
-                                title: "Network Infrastructure",
-                                description: "Switches, routers, firewalls, and network security devices."
-                            },
-                            description, "Single platform to manage all IT assets with comprehensive visibility"
-                        ];
-                    }
-                }
-            ],
-            const: capabilities = [
-                "Automated Asset Discovery & Inventory",
-                "Real-time Asset Monitoring",
-                "Predictive Maintenance Alerts",
-                "Security Vulnerability Assessment",
-                "Compliance & Audit Reporting",
-                "Cost Optimization & ROI Analysis",
-                "Asset Lifecycle Management",
-                "Integration with Existing Systems"
-            ],
-            const: benefits = [
-                "Reduce IT asset management costs by 40%",
-                "Improve asset utilization by 60%",
-                "Prevent security breaches with AI monitoring",
-                "Automate compliance reporting",
-                "Optimize asset lifecycle decisions",
-                "Real-time visibility across all assets",
-                "Predictive maintenance to prevent downtime",
-                "Streamlined procurement processes"
-            ],
-            const: assetTypes = [
-                "Hardware Assets",
-                "Software Licenses",
-                "Cloud Resources",
-                "Network Equipment",
-                "Security Devices",
-                "Mobile Devices",
-                "Reduced IT asset costs",
-                "Improved security posture",
-                "Enhanced compliance",
-                "Better resource utilization",
-                "Automated asset lifecycle",
-                "Real-time visibility"
-            ],
-            const: useCases = [
-                {
-                    title: "Enterprise Organizations",
-                    description: "Manage complex IT infrastructures with thousands of assets"
-                },
-                {
-                    title: "Healthcare Institutions",
-                    description: "Ensure compliance and security for critical medical IT systems"
-                },
-                {
-                    title: "Financial Services",
-                    description: "Maintain security and compliance for financial IT infrastructure"
-                },
-                {
-                    title: "Educational Institutions",
-                    description: "Optimize IT resources across multiple campuses and departments",
-                    'Reduced IT costs by 30-40%': ,
-                    'Improved asset utilization': ,
-                    'Predictive maintenance': ,
-                    'Enhanced security posture': ,
-                    'Automated compliance': ,
-                    'Real-time visibility': 
-                }
-            ],
-            const: assetTypes = [
-                {
-                    title: 'Hardware Assets',
-                    description: 'Servers, workstations, networking equipment, and mobile devices with comprehensive lifecycle management.'
-                },
-                {
-                    title: 'Software Assets',
-                    description: 'License management, software deployment, and compliance tracking across your organization.'
-                },
-                {
-                    title: 'Cloud Resources',
-                    description: 'Multi-cloud resource monitoring, cost optimization, and performance management.'
-                },
-                {
-                    title: 'Network Infrastructure',
-                    description: 'Network devices, bandwidth monitoring, and connectivity optimization.'
-                }
-            ],
-            import: { Database, Brain, Shield, TrendingUp, ArrowRight, Users, Target, Clock, BarChart3, Zap }, from, 'lucide-react': ,
-            const: AIPoweredITAssetManagement, React, : .FC = () => {
-                const features = [
-                    {
-                        title: "Intelligent Discovery",
-                        description: "AI-powered asset discovery and inventory management",
-                        icon: "🔍"
-                    },
-                    {
-                        title: "Predictive Maintenance",
-                        description: "Forecast equipment failures and optimize maintenance schedules",
-                        icon: "🔮"
-                    },
-                    {
-                        title: "Lifecycle Management",
-                        description: "End-to-end asset lifecycle tracking and optimization",
-                        icon: "📊"
-                    },
-                    {
-                        title: "Cost Optimization",
-                        description: "AI-driven cost analysis and budget optimization",
-                        icon: "💰"
-                    }
-                ];
-                const assetTypes = [
-                    {
-                        category: "Hardware Assets",
-                        assets: ["Servers", "Workstations", "Network devices", "Mobile devices", "Peripherals"]
-                    },
-                    {
-                        category: "Software Assets",
-                        assets: ["Licenses", "Applications", "Operating systems", "Cloud services", "Custom software"]
-                    },
-                    {
-                        category: "Network Assets",
-                        assets: ["Routers", "Switches", "Firewalls", "Cables", "Wireless equipment"]
-                    },
-                    {
-                        category: "Cloud Assets",
-                        assets: ["Virtual machines", "Storage", "Databases", "API services", "Serverless functions"]
-                    }
-                ];
-                const capabilities = [
-                    {
-                        title: "Automated Discovery",
-                        description: "Automatically discover and catalog all IT assets",
-                        icon: "🤖"
-                    },
-                    {
-                        title: "Real-time Monitoring",
-                        description: "Continuous monitoring of asset health and performance",
-                        icon: "📡"
-                    },
-                    {
-                        title: "Compliance Tracking",
-                        description: "Track compliance with licensing and regulatory requirements",
-                        icon: "✅"
-                    },
-                    {
-                        title: "Risk Assessment",
-                        description: "Identify and assess security and operational risks",
-                        icon: "⚠️"
-                    }
-                ];
-                const benefits = [
-                    {
-                        title: "Cost Reduction",
-                        description: "Reduce IT asset costs through optimization",
-                        metric: "25%"
-                    },
-                    {
-                        title: "Efficiency Gains",
-                        description: "Improve asset management efficiency",
-                        metric: "40%"
-                    },
-                    {
-                        title: "Risk Mitigation",
-                        description: "Reduce security and compliance risks",
-                        metric: "60%"
-                    },
-                    {
-                        title: "Uptime Improvement",
-                        description: "Increase system availability and reliability",
-                        metric: "99.9%"
-                    }
-                ];
-                return (<section className="pt-32 pb-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-import {motion} from 'framer-motion';
-import {Server, Shield, BarChart3, Zap, Users, Globe, Settings, Database} from 'lucide-react';
+  const features = [
+    {
+      icon: Monitor,
+      title: "Intelligent Asset Discovery",
+      description: "AI - powered automatic discovery and classification of all IT assets across your network infrastructure."
+    },
+    {
+      icon: Shield,
+      title: "Security & Compliance",
+      description: "Continuous monitoring of asset health, performance, and utilization with instant alerts and notifications."
+    },
+    {
+      icon: Target,
+      title: "Predictive Maintenance",
+      description: "AI algorithms predict potential failures and maintenance needs before they impact your operations."
+    },
+    {
+      icon: Rocket,
+      title: "Lifecycle Management",
+      description: "Complete asset lifecycle tracking from procurement to retirement with optimization recommendations."
+    },
+    {
+      icon: Globe,
+      title: "Multi - Platform Support",
+      description: "Unified management across Windows, Linux, macOS, cloud platforms, and mobile devices."
+
+  ];
+
+  const capabilities = [
+    {
+      icon: Cpu,
+      title: "Intelligent Asset Discovery",
+      description: "AI - powered scanning and discovery of all IT assets across your infrastructure."
+    },
+    {
+      icon: Shield,
+      title: "Security Monitoring",
+      description: "Continuous security assessment and threat detection for all managed assets."
+    },
+    {
+      icon: TrendingUp,
+      title: "Performance Analytics",
+      description: "Real - time performance monitoring and predictive maintenance insights."
+    },
+    {
+      icon: Database,
+      title: "Centralized Management",
+      description: "Single platform for managing all IT assets across your entire infrastructure."
+    },
+    {
+      icon: Network,
+      title: "Network Optimization",
+      description: "AI - powered network performance optimization and bandwidth management."
+
+  ];
+
+  return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text - white">
+      <SEOHead
+        title="AI - Powered IT Asset Management | Zion Tech Group"
+        description="Intelligent IT asset management powered by AI for comprehensive monitoring, security, and optimization of your infrastructure."
+        keywords="AI asset management, IT infrastructure, predictive maintenance, security monitoring, asset discovery"
+            />
 
 const AIPoweredITAssetManagement: React.FC = () => {}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20"/>
-        <div className="relative z-10 container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI-Powered IT Asset
-              <span className="block bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                Management
-              </span>
-            </h1>
-      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-6">
-              <Server className="w-12 h-12 text-cyan-400 mr-3"/>
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                AI-Powered IT Asset Management
-              </h1>
+      <section className="pt - 24 pb - 16 px - 4 sm:px - 6 lg:px - 8">
+        <div className="max - w-7xl mx - auto text - center">
+          <motion.div 
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+}}
+            transition={{ duration: 0.6 }}
+            className="flex justify - center mb - 6"
+
+            <div className="p - 3 bg - blue - 600 / 20 rounded - full">
+              <Server className="h - 12 w - 12 text - blue - 400"      />
             </div>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
               Transform your IT asset management with intelligent automation and AI-powered insights. 
@@ -620,64 +279,50 @@ const AIPoweredITAssetManagement: React.FC = () => {}
       </section>
 
       {/* Features Section */}
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI-Powered
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}IT Asset Management
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your IT asset management with AI-powered intelligence. 
-              Discover, track, optimize, and secure all your technology assets 
-              with unprecedented accuracy and efficiency.
-            </p>
-          </div>
-          
-          {/* Key Features */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">AI-Powered Asset Intelligence</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {features.map((feature, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
-                  <div className="text-4xl mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 text-sm">{feature.description}</p>
-                </div>))}
-            </div>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Discover how AI-powered asset management transforms your IT operations.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
-                <h3 className="text-2xl font-semibold text-white mb-4">{benefit.title}</h3>
-                <p className="text-gray-300 text-lg">{benefit.description}</p>
-              </div>))}
-      {/* Benefits Section */}
-      <section className="py-16 px-4 bg-gray-800/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Business Impact</h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              See measurable improvements in your IT asset management and security.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              {benefits.map((benefit, index) => (<div key={index} className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
+      <section className="py - 16 px - 4 sm:px - 6 lg:px - 8">;
+        <div className="max - w-7xl mx - auto">
+          <motion.h2 
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text - 3xl font - bold text - center mb - 12"
+
+            Key Features
+          </motion.h2>
+
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
+            {features.map ( (feature, index) => (<motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+}}
+                viewport={{ once: true }}
+                className="bg - white / 10 backdrop - blur - lg rounded - xl p - 6 border border - white / 20 hover:border - white / 40 transition - all duration - 300"
+
+                <div className="flex items - center mb - 4">
+                  <div className="p - 2 bg - blue - 600 / 20 rounded - lg mr - 4">
+                    <feature.icon className="h - 6 w - 6 text - blue - 400"      />
                   </div>
                   <p className="text-gray-300">{benefit}</p>
                 </div>))}
@@ -1061,60 +706,52 @@ const AIPoweredITAssetManagement: React.FC = () => {}
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Asset Management
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From hardware to software, network to cloud, our platform manages every aspect 
-              of your IT infrastructure.
-            </p>
-          </div>
-          
-      {/* Capabilities Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Advanced Capabilities</h2>
-            <p className="text-xl text-gray-400">Powerful tools to manage your IT infrastructure effectively</p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {capabilities.map((capability, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50">
-                <h3 className="text-2xl font-semibold mb-4">{capability.title}</h3>
-                <p className="text-gray-400 text-lg mb-6">{capability.description}</p>
-                <div className="grid grid-cols-2 gap-3">
-                  {capability.features.map((feature, featureIndex) => (<div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
-                      {feature}
-      {/* Capabilities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-purple-900/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Comprehensive Asset Management
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Our AI platform provides end-to-end IT asset management capabilities, 
-                from discovery and monitoring to optimization and retirement planning.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {capabilities.map((capability, index) => (<div key={index} className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0"/>
-                    <span className="text-gray-300 text-sm">{capability}</span>
-                  </div>))}
-              </div>
-            </div>
-            
-            <div className="relative">
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">
-                <div className="text-center mb-6">
-                  <BarChart3 className="w-12 h-12 text-purple-400 mx-auto mb-4"/>
-                  <h3 className="text-2xl font-bold text-white mb-2">Key Benefits</h3>
-                  <p className="text-gray-300">Transform your IT asset management</p>
+      <section className="py - 16 px - 4 sm:px - 6 lg:px - 8 bg - white / 5">;
+        <div className="max - w-7xl mx - auto">
+          <motion.h2 
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text - 3xl font - bold text - center mb - 12"
+
+            Advanced Capabilities
+          </motion.h2>
+
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
+            {capabilities.map ( (capability, index) => (<motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+}}
+                viewport={{ once: true }}
+                className="bg - white / 10 backdrop - blur - lg rounded - xl p - 6 border border - white / 20 hover:border - white / 40 transition - all duration - 300"
+
+                <div className="flex items - center mb - 4">
+                  <div className="p - 2 bg - cyan - 600 / 20 rounded - lg mr - 4">
+                    <capability.icon className="h - 6 w - 6 text - cyan - 400"      />
+                  </div>
+                  <h3 className="text - xl font - semibold">{capability.title}</h3>
                 </div>
                 
                 <div className="space-y-3">

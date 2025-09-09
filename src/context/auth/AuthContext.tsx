@@ -1,36 +1,47 @@
-import React, { createContext, useContext } from 'react';
-
-interface User {
+import React, { createContext, useContext } from 'react.ts';
+;
+interface User {;
+;
   id: string;
   email: string;
   name?: string;
   avatar?: string;
-}
-
-interface AuthContextType {
+  role?: string;
+  isEmailVerified?: boolean;
+  createdAt?: string;
+  updatedAt?: string};
+;
+interface AuthTokens {;
+;
+  accessToken: string | null;
+  refreshToken: string | null};
+;
+interface AuthContextType {;
+;
   user: User | null;
   isLoading: boolean;
-  login: (email: string, password: string) => Promise<{ error: string | null }>;
-  register: (name: string, email: string, password: string) => Promise<{ error: string | null }>;
-  signup: (email: string, password: string, userData: any) => Promise<any>;
-  logout: () => Promise<void>;
-  resetPassword: (email: string) => Promise<void>;
-  updateProfile: (data: any) => Promise<void>;
-  loginWithGoogle: () => Promise<void>;
-  loginWithFacebook: () => Promise<void>;
-  loginWithTwitter: () => Promise<void>;
-  loginWithWeb3: () => Promise<void>;
-}
-
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
-
-export const useAuth = () => {
+  onboardingStep: number;
+  tokens: AuthTokens;
+login: (email: string, password: string)  => Promise<any>;
+  register: (name: string, email: string, password: string)  => Promise<any>;
+  signup: (email: string, password: string, userData)  => Promise<any>;
+  logout: ()  => Promise<any>;
+  resetPassword: (email: string)  => Promise<any>;
+  updateProfile: (updates: Partial<User>)  => Promise<any>;
+  loginWithGoogle: ()  => Promise<any>;
+  loginWithFacebook: ()  => Promise<any>;
+  loginWithTwitter: ()  => Promise<any>;
+  loginWithWeb3: ()  => Promise<any>};
+;
+const AuthContext = createContext<AuthContextType | null>(null);
+;
+export const useAuth = () => {;
   const context = useContext(AuthContext);
   if (context === undefined) {
     throw new Error('useAuth must be used within an AuthProvider');
-  }
+;
   return context;
 };
-
+;
 export { AuthContext };
 export type { AuthContextType, User };

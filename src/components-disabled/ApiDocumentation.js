@@ -34,7 +34,7 @@ export function ApiDocumentation() {
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
         <CardTitle className="text-xl flex items-center">
-          <BookOpen className="mr-2" size={20} /> API Documentation
+          <BookOpen className="mr-2" size={20}       /> API Documentation
         </CardTitle>
         <CardDescription className="text-zinc-400">
           Reference documentation for integrating with the Zion Marketplace API.
@@ -43,7 +43,7 @@ export function ApiDocumentation() {
       
       <CardContent>
         <Alert className="bg-blue-900/30 border-blue-800 mb-6">
-          <Terminal className="h-4 w-4" />
+          <Terminal className="h-4 w-4"       />
           <AlertDescription>
             Make sure to include your API key in all requests as a Bearer token in the Authorization header.
           </AlertDescription>
@@ -128,8 +128,8 @@ print(data)`
   }
 }`
               }}
-            />
-            
+                  />
+
             <EndpointSection
               method="GET"
               endpoint="/api/jobs/:id"
@@ -190,8 +190,8 @@ print(data)`
   }
 }`
               }}
-            />
-            
+                  />
+
             <EndpointSection
               method="POST"
               endpoint="/api/jobs"
@@ -295,7 +295,7 @@ print(data)`
   }
 }`
               }}
-            />
+                  />
           </TabsContent>
           
           <TabsContent value="talent" className="space-y-6">
@@ -314,7 +314,86 @@ print(data)`
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent?skills=react,typescript" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
-                javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/talent?skills=react,typescript', {
+                javascript: `const response = await fetch('https://ziontechgroup.com/api/v1/talent?skills=react,typescript', {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+  'Content-Type': 'application/json'
+  
+
+}
+});
+
+const data = await response.json();
+console.log(data);`,
+                python: `import requests
+
+headers = {
+  'Authorization': 'Bearer YOUR_API_KEY',
+  'Content-Type': 'application/json'
+
+
+}
+
+response = requests.get(
+    'https://ziontechgroup.com/api/v1/talent',
+    params = {
+  'skills': 'react,
+  typescript'
+
+},
+    headers=headers
+)
+
+data = response.json()
+print(data)`,
+              }}
+              responseExamples={{
+                success: `{
+  "data"[
+    {
+      "id": "talent_abc123",
+      "display_name": "Jane Smith",
+      "headline": "Senior Frontend Developer",
+      "skills"["react", "typescript", "javascript"],
+      "availability": "available",
+      "average_rating": 4.8,
+  "rating_count": 15
+    
+
+},
+    // More talent profiles...
+  ],
+  "meta": {
+    "total": 28,
+    "page": 1,
+    "limit": 20
+  }
+}`,
+              }}
+                  />
+
+            <EndpointSection
+              method="GET"
+              endpoint="/api/talent/:id"
+              description="Get detailed information about a specific talent profile."
+              note=""
+              params={[
+                {
+                  name: 'id',
+                  type: 'string',
+                  description: 'The talent ID',
+                  required: true,
+                },
+              ]}
+              codeExamples={{
+                curl: `curl -X GET "https://ziontechgroup.com/api/v1/talent/talent_abc123" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json"`,
+                javascript: `const talentId = 'talent_abc123';
+const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talentId
+
+}\`, {
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -432,7 +511,7 @@ print(data)`
   }
 }`
               }}
-            />
+                  />
           </TabsContent>
           
           <TabsContent value="quotes" className="space-y-6">
@@ -537,8 +616,8 @@ print(data)`
   }
 }`
               }}
-            />
-            
+                  />
+
             <EndpointSection
               method="GET"
               endpoint="/api/quotes"
@@ -601,7 +680,7 @@ print(data)`
   }
 }`
               }}
-            />
+                  />
           </TabsContent>
           
           <TabsContent value="webhooks" className="space-y-6">
@@ -703,7 +782,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 }`}
                 language="json"
                 showLineNumbers={true}
-              />
+                    />
             </div>
           </TabsContent>
           
@@ -782,8 +861,8 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   }
 }`}
                 language="json"
-              />
-              
+                    />
+
               <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>
               <p className="text-zinc-400 mb-4">
                 The Zion API implements rate limiting to protect our infrastructure and ensure fair usage.
@@ -861,8 +940,13 @@ function EndpointSection({
               </tr>
             </thead>
             <tbody>
-              {params.map((param, index) => (
-                <tr key={index} className={index < params.length - 1 ? "border-b border-zinc-800" : ""}>
+              {params.map((((((((param, index, index, index, index, index, index, index) => ({ ...((((((param, index, index, index, index, index, index, key: index })) => ({ ...(((((param, index, index, index, index, index, key: index })) => ({ ...((((param, index, index, index, index, key: index })) => ({ ...(((param, index, index, index, key: index })) => ({ ...((param, index, index, key: index })) => ({ ...(param, index, key: index })) => (
+                <tr
+                  key={index}
+                  className={
+                    index < params.length - 1 ? 'border-b border-zinc-800' : ''
+                  }
+                >
                   <td className="py-2 font-mono text-sm">
                     {param.name}
                     {param.required && <span className="text-red-500">*</span>}
@@ -881,7 +965,7 @@ function EndpointSection({
           <div className="flex items-center mb-2">
             <h4 className="font-medium">Request Example</h4>
             <div className="ml-auto flex border border-zinc-700 rounded-md overflow-hidden">
-              {Object.keys(codeExamples).map((lang) => (
+              {Object.keys(codeExamples).map(((((((lang => (
                 <button
                   key={lang}
                   className={`px-3 py-1 text-xs font-medium ${
@@ -889,27 +973,72 @@ function EndpointSection({
                       ? "bg-zinc-700 text-white" 
                       : "text-zinc-400 hover:bg-zinc-800"
                   }`}
-                  onClick={() => setActiveTab(lang)}
+                  onClick={(, index, index, index, index, index, index) => ({ ...(((((lang => (
+                <button
+                  key={lang}
+                  className={`px-3 py-1 text-xs font-medium ${
+                    activeTab === lang
+                      ? 'bg-zinc-700 text-white'
+                      : 'text-zinc-400 hover:bg-zinc-800'
+                  }`}
+                  onClick={(, index, index, index, index, index, key: index })) => ({ ...((((lang => (
+                <button
+                  key={lang}
+                  className={`px-3 py-1 text-xs font-medium ${
+                    activeTab === lang
+                      ? 'bg-zinc-700 text-white'
+                      : 'text-zinc-400 hover:bg-zinc-800'
+                  }`}
+                  onClick={(, index, index, index, index, key: index })) => ({ ...(((lang => (
+                <button
+                  key={lang}
+                  className={`px-3 py-1 text-xs font-medium ${
+                    activeTab === lang
+                      ? 'bg-zinc-700 text-white'
+                      : 'text-zinc-400 hover:bg-zinc-800'
+                  }`}
+                  onClick={(, index, index, index, key: index })) => ({ ...((lang => (
+                <button
+                  key={lang}
+                  className={`px-3 py-1 text-xs font-medium ${
+                    activeTab === lang
+                      ? 'bg-zinc-700 text-white'
+                      : 'text-zinc-400 hover:bg-zinc-800'
+                  }`}
+                  onClick={(, index, index, key: index })) => ({ ...(lang => (
+                <button
+                  key={lang}
+                  className={`px-3 py-1 text-xs font-medium ${
+                    activeTab === lang
+                      ? 'bg-zinc-700 text-white'
+                      : 'text-zinc-400 hover:bg-zinc-800'
+                  }`}
+                  onClick={(, index, key: index })) => ({ ...lang => (
+                <button
+                  key={lang}
+                  className={`px-3 py-1 text-xs font-medium ${
+                    activeTab === lang
+                      ? 'bg-zinc-700 text-white'
+                      : 'text-zinc-400 hover:bg-zinc-800'
+                  }`}
+                  onClick={(, key: index })) => setActiveTab(lang)}
                 >
                   {lang === "curl" ? "cURL" : lang === "javascript" ? "JavaScript" : "Python"}
                 </button>
               ))}
             </div>
           </div>
-          <CodeBlock 
-            code={codeExamples[activeTab] || "// Code example not available"}
-            language={activeTab === "curl" ? "bash" : activeTab}
-          />
+          <CodeBlock
+            code={codeExamples[activeTab]}
+            language={activeTab === 'curl' ? 'bash' : activeTab}
+                />
         </div>
       )}
       
       {responseExamples && (
         <div className="border-t border-zinc-800 p-4">
           <h4 className="font-medium mb-2">Response</h4>
-          <CodeBlock
-            code={responseExamples.success}
-            language="json"
-          />
+          <CodeBlock code={responseExamples.success} language="json"       />
         </div>
       )}
     </div>

@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
-import SEO from '@/components/SEO';
-export default function DisputeManagement() {
-    const [activeTab, setActiveTab] = useState('overview');
-    return (<>
-      <SEO title="Dispute Management | Zion Tech Group" description="Admin dashboard for managing and resolving marketplace disputes and conflicts" keywords="dispute management, admin dashboard, conflict resolution, marketplace admin, Zion Tech Group" canonical="https://ziontechgroup.com/admin/disputes"/>
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+  import SEO from '../SEO';
+export default function DisputeManagement () {
+
+
+  const [activeTab, setActiveTab] = useState ('overview') ;
+  return (<>
+      <SEO
+        title="Dispute Management | Zion Tech Group"
+        description="Admin dashboard for managing and resolving marketplace disputes and conflicts"
+        keywords="dispute management, admin dashboard, conflict resolution, marketplace admin, Zion Tech Group"
+        canonical="https://ziontechgroup.com / admin / disputes"
+            />
+      <main className="min - h-screen bg - zion - blue pt - 24 pb - 20">
+        <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">
           {/* Header */}
           <div className="mb-8">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -52,9 +59,19 @@ export default function DisputeManagement() {
                       <p className="text-zion-slate-light text-sm">Total Disputes</p>
                       <p className="text-3xl font-bold text-white">24</p>
                     </div>
-                    <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
-                      <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    <div className="w - 12 h - 12 bg - blue - 500 / 20 rounded - full flex items - center justify - center">
+                      <svg
+                        className="w - 6 h - 6 text - blue - 400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 12h6m - 6 4h6m2 5H7a2 2 0 01 - 2-2V5a2 2 0 012 - 2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01 - 2 2z"
+                              />
                       </svg>
                     </div>
                   </div>
@@ -69,9 +86,19 @@ export default function DisputeManagement() {
                       <p className="text-zion-slate-light text-sm">Active Disputes</p>
                       <p className="text-3xl font-bold text-white">8</p>
                     </div>
-                    <div className="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center">
-                      <svg className="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    <div className="w - 12 h - 12 bg - yellow - 500 / 20 rounded - full flex items - center justify - center">
+                      <svg
+                        className="w - 6 h - 6 text - yellow - 400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 8v4l3 3m6 - 3a9 9 0 11 - 18 0 9 9 0 0118 0z"
+                              />
                       </svg>
                     </div>
                   </div>
@@ -86,9 +113,19 @@ export default function DisputeManagement() {
                       <p className="text-zion-slate-light text-sm">Resolved This Month</p>
                       <p className="text-3xl font-bold text-white">16</p>
                     </div>
-                    <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
-                      <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    <div className="w - 12 h - 12 bg - green - 500 / 20 rounded - full flex items - center justify - center">
+                      <svg
+                        className="w - 6 h - 6 text - green - 400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 12l2 2 4 - 4m6 2a9 9 0 11 - 18 0 9 9 0 0118 0z"
+                              />
                       </svg>
                     </div>
                   </div>
@@ -104,9 +141,19 @@ export default function DisputeManagement() {
                       <p className="text-3xl font-bold text-white">3.2</p>
                       <p className="text-zion-slate-light text-sm">days</p>
                     </div>
-                    <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
-                      <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    <div className="w - 12 h - 12 bg - purple - 500 / 20 rounded - full flex items - center justify - center">
+                      <svg
+                        className="w - 6 h - 6 text - purple - 400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M13 10V3L4 14h7v7l9 - 11h - 7z"
+                              />
                       </svg>
                     </div>
                   </div>

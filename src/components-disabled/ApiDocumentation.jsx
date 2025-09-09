@@ -9,7 +9,7 @@ export function ApiDocumentation() {
     return (<Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
         <CardTitle className="text-xl flex items-center">
-          <BookOpen className="mr-2" size={20}/> API Documentation
+          <BookOpen className="mr-2" size={20}      /> API Documentation
         </CardTitle>
         <CardDescription className="text-zinc-400">
           Reference documentation for integrating with the Zion Marketplace API.
@@ -18,7 +18,7 @@ export function ApiDocumentation() {
       
       <CardContent>
         <Alert className="bg-blue-900/30 border-blue-800 mb-6">
-          <Terminal className="h-4 w-4"/>
+          <Terminal className="h-4 w-4"      />
           <AlertDescription>
             Make sure to include your API key in all requests as a Bearer token in the Authorization header.
           </AlertDescription>
@@ -95,11 +95,14 @@ print(data)`
     "limit": 10
   }
 }`
-        }}/>
-            
-            <EndpointSection method="GET" endpoint="/api/jobs/:id" description="Get detailed information about a specific job." note="" params={[
-            { name: "id", type: "string", description: "The job ID", required: true }
-        ]} codeExamples={{
+        }}      />
+            <EndpointSection method="GET" endpoint="/api/jobs/:id" description="Get detailed information about a specific job." note="" params = {
+  [
+            { name: "id", type: "string", description: "The job ID",
+  required: true 
+}
+        ]} codeExamples = {
+  {
             curl: `curl -X GET "https://ziontechgroup.com/api/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
@@ -149,10 +152,12 @@ print(data)`
     "application_count": 12
   }
 }`
-        }}/>
-            
-            <EndpointSection method="POST" endpoint="/api/jobs" description="Create a new job listing." note="Requires jobs:write scope" params={[
-            { name: "title", type: "string", description: "Job title", required: true },
+        }}      />
+            <EndpointSection method="POST" endpoint="/api/jobs" description="Create a new job listing." note="Requires jobs:write scope" params = {
+  [
+            { name: "title", type: "string", description: "Job title",
+  required: true 
+},
             { name: "description", type: "string", description: "Detailed job description", required: true },
             { name: "category", type: "string", description: "Job category", required: true },
             { name: "skills", type: "string[]", description: "Required skills", required: true },
@@ -246,7 +251,7 @@ print(data)`
     "deadline": "2025-06-30T23:59:59Z"
   }
 }`
-        }}/>
+        }}      />
           </TabsContent>
           
           <TabsContent value="talent" className="space-y-6">
@@ -304,11 +309,14 @@ print(data)`
     "limit": 20
   }
 }`
-        }}/>
-            
-            <EndpointSection method="GET" endpoint="/api/talent/:id" description="Get detailed information about a specific talent profile." note="" params={[
-            { name: "id", type: "string", description: "The talent ID", required: true }
-        ]} codeExamples={{
+        }}      />
+            <EndpointSection method="GET" endpoint="/api/talent/:id" description="Get detailed information about a specific talent profile." note="" params = {
+  [
+            { name: "id", type: "string", description: "The talent ID",
+  required: true 
+}
+        ]} codeExamples = {
+  {
             curl: `curl -X GET "https://ziontechgroup.com/api/v1/talent/talent_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
@@ -367,7 +375,7 @@ print(data)`
     ]
   }
 }`
-        }}/>
+        }}      />
           </TabsContent>
           
           <TabsContent value="quotes" className="space-y-6">
@@ -464,10 +472,12 @@ print(data)`
     "created_at": "2025-05-16T14:30:15Z"
   }
 }`
-        }}/>
-            
-            <EndpointSection method="GET" endpoint="/api/quotes" description="List quote requests that you've created." note="" params={[
-            { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
+        }}      />
+            <EndpointSection method="GET" endpoint="/api/quotes" description="List quote requests that you've created." note="" params = {
+  [
+            { name: "page", type: "integer",
+  description: "Page number for pagination (default: 1)" 
+},
             { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
             { name: "status", type: "string", description: "Filter by status (new, viewed, replied, archived)" }
         ]} codeExamples={{
@@ -520,7 +530,7 @@ print(data)`
     "limit": 20
   }
 }`
-        }}/>
+        }}      />
           </TabsContent>
           
           <TabsContent value="webhooks" className="space-y-6">

@@ -3,10 +3,22 @@ import { Helmet } from 'react-helmet-async';
 const AIAutonomousNetworkSecurity = () => {
     return (<>
       <Helmet>
-        <title>AI Autonomous Network Security Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous network security platform that continuously monitors networks, detects threats, and protects infrastructure with advanced AI capabilities and autonomous operation."/>
-        <meta name="keywords" content="AI network security, autonomous network security, network monitoring, threat detection, autonomous operations, AI network security platform"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-network-security"/>
+        <title>
+          {' '}
+          AI Autonomous Network Security Platform | Zion Tech Group
+        </title>
+        <meta
+          name="description"
+          content="Revolutionary AI autonomous network security platform that continuously monitors networks, detects threats, and protects infrastructure with advanced AI capabilities and autonomous operation."
+              />
+        <meta
+          name="keywords"
+          content="AI network security, autonomous network security, network monitoring, threat detection, autonomous operations, AI network security platform"
+              />
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com / ai - autonomous - network - security"
+              />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">

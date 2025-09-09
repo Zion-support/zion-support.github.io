@@ -1,239 +1,288 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle, Zap, Shield, Users, Clock, TrendingUp, Star, Award, Globe, Lock } from 'lucide-react';
-const benefits = [
-    {
-        icon: <Zap className="w-8 h-8"/>,
-        title: "Lightning Fast",
-        description: "Get your projects delivered in record time with our efficient development process",
-        color: "from-zion-cyan to-zion-blue",
-        bgColor: "from-zion-cyan/20 to-zion-blue/20",
-        stats: "3x Faster",
-        features: ["Rapid Prototyping", "Quick Deployment", "Fast Iteration"]
-    },
-    {
-        icon: <Shield className="w-8 h-8"/>,
-        title: "Enterprise Security",
-        description: "Bank-grade security measures to protect your data and applications",
-        color: "from-zion-purple to-zion-purple-dark",
-        bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
-        stats: "99.99% Uptime",
-        features: ["SOC 2 Compliant", "GDPR Ready", "End-to-End Encryption"]
-    },
-    {
-        icon: <Users className="w-8 h-8"/>,
-        title: "Expert Team",
-        description: "Work with certified professionals with years of industry experience",
-        color: "from-zion-cyan-light to-zion-cyan",
-        bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
-        stats: "500+ Experts",
-        features: ["Certified Professionals", "Global Network", "Industry Veterans"]
-    },
-    {
-        icon: <Clock className="w-8 h-8"/>,
-        title: "24/7 Support",
-        description: "Round-the-clock assistance whenever you need help or have questions",
-        color: "from-zion-purple-light to-zion-purple",
-        bgColor: "from-zion-purple-light/20 to-zion-purple/20",
-        stats: "24/7",
-        features: ["Live Chat", "Phone Support", "Email Response"]
-    },
-    {
-        icon: <TrendingUp className="w-8 h-8"/>,
-        title: "Scalable Solutions",
-        description: "Built to grow with your business, from startup to enterprise",
-        color: "from-zion-cyan to-zion-purple",
-        bgColor: "from-zion-cyan/20 to-zion-purple/20",
-        stats: "10x Growth",
-        features: ["Auto-scaling", "Load Balancing", "Performance Monitoring"]
-    },
-    {
-        icon: <CheckCircle className="w-8 h-8"/>,
-        title: "Quality Guaranteed",
-        description: "100% satisfaction guarantee with our comprehensive testing process",
-        color: "from-zion-purple to-zion-cyan",
-        bgColor: "from-zion-purple/20 to-zion-cyan/20",
-        stats: "100% Success",
-        features: ["Comprehensive Testing", "Quality Assurance", "Satisfaction Guarantee"]
-    }
+export /**;
+export default BenefitsSection;}}}}</motion.div></motion.div></motion.div>};
+import { GradientHeading } from './ui / GradientHeading';
+import { motion, AnimatePresence } from 'framer - motion';
+;
+;
+ * BenefitsSection function;
+ * @param {*} params - Function parameters;
+ * @returns {*} Function return value;
+ */;
+function BenefitsSection(...args: any[]): any {;
+;
+interface Benefit {;
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  color: string;
+  bgColor: string;
+  stats: string;
+  features: string[];
+;
+const benefits: Benefit[] = [;
+  {;
+    title: "AI - Powered Matchmaking",;
+    description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",;
+    icon: <Bot className="w - 8 h - 8"       />,;
+    color: "from - zion - cyan to - zion - cyan - dark",;
+    bgColor: "from - zion - cyan / 20 to - zion - cyan - dark / 20",;
+    stats: "95% Match Rate",;
+    features: [;
+      "Intelligent service matching",;
+      "Real - time availability",;
+      "Expert talent matching",;
+      "Personalized recommendations";
+    ];
+  },;
+  {;
+    title: "Global Availability",;
+    description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",;
+    icon: <Globe className="w - 8 h - 8"       />,;
+    color: "from - zion - purple to - zion - purple - dark",;
+    bgColor: "from - zion - purple / 20 to - zion - purple - dark / 20",;
+    stats: "150 + Countries",;
+    features: [;
+      "Worldwide talent pool",;
+      "24 / 7 availability",;
+      "Multi - language support",;
+      "Local expertise access";
+    ];
+  },;
+  {;
+    title: "24 / 7 Support",;
+    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",;
+    icon: <Clock className="w - 8 h - 8"       />,;
+    color: "from - zion - blue to - zion - blue - dark",;
+    bgColor: "from - zion - blue / 20 to - zion - blue - dark / 20",;
+    stats: "99.9% Uptime",;
+    features: [;
+      "Round - the - clock assistance",;
+      "Expert technical support",;
+      "Rapid response times",;
+      "Proactive monitoring";
+    ];
+  },;
+  {;
+    title: "Cost Reduction",;
+    description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",;
+    icon: <TrendingDown className="w - 8 h - 8"       />,;
+    color: "from - zion - green to - zion - green - dark",;
+    bgColor: "from - zion - green / 20 to - zion - green - dark / 20",;
+    stats: "40% Cost Savings",;
+    features: [;
+      "Direct provider connections",;
+      "Competitive pricing",;
+      "Bulk discount options",;
+      "Transparent cost structure";
+    ];
+;
 ];
-const additionalStats = [
-    { icon: <Star className="w-6 h-6"/>, value: "4.9/5", label: "Customer Rating" },
-    { icon: <Award className="w-6 h-6"/>, value: "50+", label: "Industry Awards" },
-    { icon: <Globe className="w-6 h-6"/>, value: "100+", label: "Countries Served" },
-    { icon: <Lock className="w-6 h-6"/>, value: "1000+", label: "Projects Completed" }
-];
-export function BenefitsSection() {
-    const [hoveredIndex, setHoveredIndex] = useState(null);
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.15,
-                delayChildren: 0.2
-            }
-        }
-    };
-    const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.6,
-                ease: "easeOut"
-            }
-        }
-    };
-    const statsVariants = {
-        hidden: { opacity: 0, scale: 0.8 },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-                duration: 0.5,
-                ease: "easeOut"
-            }
-        }
-    };
-    return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
-      {/* Enhanced background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 75% 75%, currentColor 1px, transparent 1px)`,
-            backgroundSize: '60px 60px'
-        }}/>
-      </div>
-      
-      {/* Floating decorative elements */}
-      <div className="absolute inset-0">
-        <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}/>
-        <motion.div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" animate={{ rotate: -360 }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }}/>
-        <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}/>
-      </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Why Choose <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Zion</span>
-          </h2>
-          <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto leading-relaxed">
-            Experience the next generation of tech marketplace with features designed to maximize efficiency and value
-          </p>
-        </motion.div>
-
-        {/* Additional stats section */}
-        <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {additionalStats.map((stat, index) => (<motion.div key={index} variants={statsVariants} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
-              <div className="text-zion-cyan mb-2 flex justify-center">
-                {stat.icon}
-              </div>
-              <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-              <div className="text-zion-slate-light text-sm">{stat.label}</div>
-            </motion.div>))}
-        </motion.div>
-        
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {benefits.map((benefit, index) => (
-            <motion.div key={index} variants={itemVariants} onHoverStart={() => setHoveredIndex(index)} onHoverEnd={() => setHoveredIndex(null)} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }}>
-              <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group h-full">
-                {/* Icon with enhanced background */}
-                <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${benefit.color} mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
-                  <div className="text-white">
-                    {benefit.icon}
-                  </div>
-                </div>
-
-                {/* Content */}
-                <h3 className="text-2xl font-bold text-white mb-4">{benefit.title}</h3>
-                <p className="text-zion-slate-light mb-6 leading-relaxed">{benefit.description}</p>
-
-                {/* Stats */}
-                <div className={`text-3xl font-bold bg-gradient-to-r ${benefit.color} bg-clip-text text-transparent mb-4`}>
-                  {benefit.stats}
-                </div>
-
-                {/* Features */}
-                <AnimatePresence>
-                  {hoveredIndex === index && (
-                    <motion.div className="space-y-2" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3 }}>
-                      {benefit.features.map((feature, idx) => (
-                        <motion.div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-sm" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: idx * 0.1 }}>
-                          <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                          <span>{feature}</span>
-                        </motion.div>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-
-                {/* Hover indicator */}
-                <div className="mt-4 text-zion-cyan/60 text-xs">
-                  {hoveredIndex === index ? "Hover to see details" : "Hover for details"}
->>>>>>> main
-                </div>
-                <h3 className="text-2xl font-bold text-white">{benefit.title}</h3>
-              </div>
-              
-              <p className="text-zion-slate-light mb-6 leading-relaxed">
-                {benefit.description}
-              </p>
-              
-              <div className="space-y-3">
-                {benefit.features.map((feature, idx) => (
-                  <motion.div 
-                    key={idx} 
-                    className="flex items-center gap-3 text-zion-slate-light/80 text-sm"
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: idx * 0.1 }}
-                  >
-                    <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                    <span>{feature}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Additional Stats */}
-        <motion.div 
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {additionalStats.map((stat, index) => (
-            <motion.div
-              key={index}
-              className="text-center"
-              variants={statsVariants}
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                {stat.icon}
-              </div>
-              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>
-              <div className="text-lg font-semibold mb-2 text-white">{stat.label}</div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Call to action */}
-        <motion.div className="text-center mt-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
-          <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
-            <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
-              <p className="text-white text-lg mb-4">
-                Ready to experience the Zion difference?
-              </p>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>);
-}
-
-
+;
+  const [hoveredIndex, setHoveredIndex] = useState < number | null> (null) ;
+;
+  const containerVariants = {;
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.2,;
+        delayChildren: 0.1;
+;
+  };
+;
+  const statsVariants = {;
+    hidden: { opacity: 0, y: 20 },;
+    visible: { opacity: 1, y: 0 };
+  };
+;
+  const itemVariants = {;
+    hidden: { opacity: 0, x: -20 },;
+    visible: { opacity: 1, x: 0 };
+  };
+;
+  const stats = [;
+    { value: "500+", label: "Projects Delivered", icon: <Rocket className="w - 6 h - 6"       /> },;
+    { value: "50+", label: "Expert Team Members", icon: <Users className="w - 6 h - 6"       /> },;
+    { value: "99.9%", label: "Client Satisfaction", icon: <Star className="w - 6 h - 6"       /> },;
+    { value: "24 / 7", label: "Support Availability", icon: <Clock className="w - 6 h - 6"       /> };
+  ];
+;
+  return (<section className="py - 20 bg - gradient - to - br from - zion - blue via - zion - slate - dark to - zion - blue - dark relative overflow - hidden">;
+      {/* Background pattern */};
+      <div className="absolute inset - 0 opacity - 5">;
+        <div className="absolute inset - 0" style={{;
+          backgroundImage: `radial - gradient (circle at 50% 50%, currentColor 1px, transparent 1px) `,;
+          backgroundSize: '40px 40px';
+        }}       />;
+      </div>;
+;
+      {/* Floating decorative elements */};
+      <div className="absolute inset - 0">;
+        <motion.div;
+          className="absolute top - 20 left - 20 w - 32 h - 32 border border - zion - cyan / 20 rounded - full opacity - 30";
+          animate={{ rotate: 360 }};
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }};
+              />;
+        <motion.div;
+          className="absolute bottom - 20 right - 20 w - 24 h - 24 border border - zion - purple / 20 rounded - full opacity - 30";
+          animate={{ rotate: -360 }};
+          transition={{ duration: 25, repeat: Infinity, ease: "linear" }};
+              />;
+        <motion.div;
+          className="absolute top - 1/2 left - 1/2 w - 16 h - 16 border border - zion - cyan - light / 20 rounded - full opacity - 20";
+          animate={{ scale: [1, 1.2, 1] }};
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }};
+              />;
+      </div>;
+;
+      <div className="container mx - auto px - 4 relative z - 10">;
+        <motion.div;
+          className="text - center mb - 20";
+          initial={{ opacity: 0, y: 20 }};
+          whileInView={{ opacity: 1, y: 0 }};
+          viewport={{ once: true }};
+          transition={{ duration: 0.6 }};
+        >;
+          <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 4 bg - gradient - to - r from - zion - cyan to - zion - purple bg - clip - text text - transparent">;
+            Why Choose Zion?;
+          </h2>;
+          <p className="text - zion - slate - light text - lg md:text - xl max - w-4xl mx - auto leading - relaxed">;
+            Experience the next generation of tech marketplace with features designed to maximize efficiency and value;
+          </p>;
+        </motion.div>;
+;
+        {/* Stats section */};
+        <motion.div;
+          className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 16 max - w-4xl mx - auto";
+          variants={containerVariants};
+          initial="hidden";
+          whileInView="visible";
+          viewport={{ once: true }};
+;
+          {stats.map ( (stat, index) => (;
+            <motion.div;
+              key={index};
+              variants={statsVariants};
+              className="text - center p - 4 rounded - xl bg - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 20";
+;
+              <div className="text - zion - cyan mb - 2 flex justify - center">;
+                {stat.icon};
+              </div>;
+              <div className="text - 2xl font - bold text - white mb - 1">{stat.value}</div>;
+              <div className="text - zion - slate - light text - sm">{stat.label}</div>;
+            </motion.div>;) ) };
+        </motion.div>;
+;
+        <motion.div;
+          className="relative";
+          variants={containerVariants};
+          initial="hidden";
+          whileInView="visible";
+          viewport={{ once: true }};
+;
+          {/* Enhanced connection line */};
+          <div className="absolute top - 1/2 left - 0 right - 0 h - 1 bg - gradient - to - r from - zion - cyan via - zion - purple to - zion - blue transform - translate - y-1 / 2 hidden lg:block">;
+            <div className="absolute inset - 0 bg - gradient - to - r from - zion - cyan via - zion - purple to - zion - blue opacity - 20 blur - sm"></div>;
+          </div>;
+;
+          {/* Benefits */};
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8 max - w-5xl mx - auto">;
+            {benefits.map ( (benefit, index) => (<motion.div;
+                key={index};
+                className="relative group";
+                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }};
+                whileInView={{ opacity: 1, x: 0 }};
+                viewport={{ once: true }};
+                transition={{ duration: 0.6, delay: index * 0.1 }};
+                onHoverStart={ () => setHoveredIndex (index) };
+                onHoverEnd={ () => setHoveredIndex (null) };
+              >;
+                {/* Connection point */};
+                <div className="absolute top - 1/2 left - 1/2 w - 4 h - 4 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - full transform - translate - x-1 / 2 -translate - y-1 / 2 hidden lg:block">;
+                  <div className="absolute inset - 0 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - full animate - ping opacity - 75"></div>;
+                </div>;
+;
+                <motion.div;
+                  className="relative p - 8 rounded - 2xl bg - gradient - to - br from - zion - slate - dark / 80 to - zion - blue - dark / 80 backdrop - blur - sm border border - zion - cyan / 20 hover:border - zion - cyan / 40 transition - all duration - 300 group - hover:scale - 105";
+                  whileHover={{ y: -10 }};
+                >;
+                  {/* Icon */};
+                  <div className={`w - 16 h - 16 bg - gradient - to - r ${benefit.bgColor} rounded - 2xl flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300`}>;
+                    <div className={`text - gradient ${benefit.color}`}>;
+                      {benefit.icon};
+                    </div>;
+                  </div>;
+;
+                  {/* Content */};
+                  <h3 className="text - 2xl font - bold text - white mb - 4 group - hover:text - zion - cyan transition - colors duration - 300">;
+                    {benefit.title};
+                  </h3>;
+                  <p className="text - zion - slate - light mb - 6 leading - relaxed">;
+                    {benefit.description};
+                  </p>;
+;
+                  {/* Stats */};
+                  <div className="inline - block px - 4 py - 2 bg - gradient - to - r from - zion - cyan / 20 to - zion - purple / 20 border border - zion - cyan / 30 rounded - lg mb - 6">;
+                    <span className="text - zion - cyan font - semibold">{benefit.stats}</span>;
+                  </div>;
+;
+                  {/* Features */};
+                  <ul className="space - y-3">;
+                    {benefit.features.map ( (feature, featureIndex) => (<li key={featureIndex} className="flex items - center gap - 3 text - zion - slate - light">;
+                        <div className="w - 2 h - 2 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - full"></div>;
+                        {feature};
+                      </li>) ) };
+                  </ul>;
+;
+                  {/* Hover effect overlay */};
+                  <AnimatePresence>;
+                    {hoveredIndex === index && (<motion.div;
+                        className="absolute inset - 0 bg - gradient - to - br from - zion - cyan / 10 to - zion - purple / 10 rounded - 2xl";
+                        initial={{ opacity: 0 }};
+                        animate={{ opacity: 1 }};
+                        exit={{ opacity: 0 }};
+                        transition={{ duration: 0.3 }};
+                            />) };
+                  </AnimatePresence>;
+                </motion.div>;
+              </motion.div>) ) };
+          </div>;
+        </motion.div>;
+                  {React.createElement (stat.icon, { className: "w - 10 h - 10 text - white" }) };
+                </div>;
+                <div className="text - 4xl font - bold text - cyan - 400 mb - 2">{stat.value}</div>;
+                <div className="text - gray - 300 font - medium">{stat.label}</div>;
+              </motion.div>) ) };
+          </div>;
+        </motion.div>;
+;
+        {/* CTA Section */};
+        <motion.div;
+          initial={{ opacity: 0, y: 20 }};
+          whileInView={{ opacity: 1, y: 0 }};
+          transition={{ duration: 0.6, delay: 0.6 }};
+          className="text - center mt - 16";
+;
+          <div className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 600 / 10 rounded - 2xl p - 8 border border - cyan - 500 / 20">;
+            <h3 className="text - 2xl font - bold text - white mb - 4">Ready to Transform Your Business?</h3>;
+            <p className="text - gray - 300 mb - 6 max - w-2xl mx - auto">;
+              Join hundreds of satisfied clients who have already experienced the Zion Tech Group difference;
+            </p>;
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow - cyan - 500 / 25">;
+                Get Started Today;
+              </button>;
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 hover:text - white transition - all duration - 300">;
+                Schedule a Demo;
+              </button>;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>) ;
+</div>};
+;
+      </div>;
+    </section>) ;
+};

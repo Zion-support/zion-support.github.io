@@ -92,10 +92,10 @@ export function AdvancedDataVisualization() {
             <div className="w-16 bg-gradient-to-t from-zion-cyan to-zion-purple rounded-t-lg transition-all duration-500 hover:scale-110 cursor-pointer" style={{
                     height: `${(item.value / maxValue) * 280}px`,
                     backgroundColor: colors[index % colors.length]
-                }} title={`${item.name}: ${item.value.toLocaleString()}`}/>
-            <div className="mt-2 text-center">
-              <div className="text-xs font-medium text-zion-slate">{item.name}</div>
-              <div className="text-xs text-zion-slate-light">{item.value.toLocaleString()}</div>
+                }} title={`${item.name}: ${item.value.toLocaleString () }`}      />
+            <div className="mt - 2 text - center">
+              <div className="text - xs font - medium text - zion - slate">{item.name}</div>
+              <div className="text - xs text - zion - slate - light">{item.value.toLocaleString () }</div>
             </div>
           </div>))}
       </div>);
@@ -103,10 +103,14 @@ export function AdvancedDataVisualization() {
     const renderLineChart = () => {
         const maxValue = Math.max(...filteredData.map(item => item.value));
         const colors = colorPalettes[selectedColorPalette];
-        return (<div className="h-80 p-6 relative">
-        <svg className="w-full h-full">
-          <polyline fill="none" stroke={colors[0]} strokeWidth="3" points={filteredData.map((item, index) => `${(index / (filteredData.length - 1)) * 800},${280 - (item.value / maxValue) * 280}`).join(' ')}/>
-          {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length - 1)) * 800} cy={280 - (item.value / maxValue) * 280} r="6" fill={colors[0]} className="cursor-pointer hover:r-8 transition-all duration-200"/>))}
+        return (<div className="h - 80 p - 6 relative">
+        <svg className="w - full h - full">
+          <polyline fill="none" stroke={colors[0]} strokeWidth="3" points = {
+  filteredData.map ( (item,
+  index) => `${ (index / (filteredData.length - 1) ) * 800
+
+},${280 - (item.value / maxValue) * 280}`) .join (' ') }/>
+          {filteredData.map ( (item, index) => (<circle key={item.id} cx={ (index / (filteredData.length - 1) ) * 800} cy={280 - (item.value / maxValue) * 280} r="6" fill={colors[0]} className="cursor - pointer hover:r - 8 transition - all duration - 200"      />) ) }
         </svg>
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
@@ -126,14 +130,15 @@ export function AdvancedDataVisualization() {
                     .reduce((sum, prevItem) => sum + (prevItem.value / total) * 360, 0);
                 return (<div key={item.id} className="absolute inset-0 rounded-full border-8 border-transparent" style={{
                         borderTopColor: colors[index % colors.length],
-                        transform: `rotate(${prevAngle}deg)`,
-                        clipPath: `polygon(50% 50%, 50% 0%, ${50 + Math.cos((angle * Math.PI) / 180) * 50}% ${50 + Math.sin((angle * Math.PI) / 180) * 50}%)`
-                    }} title={`${item.name}: ${percentage.toFixed(1)}%`}/>);
-            })}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-zion-slate">{total.toLocaleString()}</div>
-              <div className="text-sm text-zion-slate-light">Total</div>
+  transform: `rotate (${prevAngle
+
+}deg) `,
+                        clipPath: `polygon (50% 50%, 50% 0%, ${50 + Math.cos ( (angle * Math.PI) / 180) * 50}% ${50 + Math.sin ( (angle * Math.PI) / 180) * 50}%) `
+                    }} title={`${item.name}: ${percentage.toFixed (1) }%`}      />) }) }
+          <div className="absolute inset - 0 flex items - center justify - center">
+            <div className="text - center">
+              <div className="text - 2xl font - bold text - zion - slate">{total.toLocaleString () }</div>
+              <div className="text - sm text - zion - slate - light">Total</div>
             </div>
           </div>
         </div>
@@ -154,9 +159,9 @@ export function AdvancedDataVisualization() {
     const renderScatterChart = () => {
         const maxValue = Math.max(...filteredData.map(item => item.value));
         const colors = colorPalettes[selectedColorPalette];
-        return (<div className="h-80 p-6 relative">
-        <svg className="w-full h-full">
-          {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length - 1)) * 800} cy={280 - (item.value / maxValue) * 280} r="8" fill={colors[index % colors.length]} className="cursor-pointer hover:r-12 transition-all duration-200"/>))}
+        return (<div className="h - 80 p - 6 relative">
+        <svg className="w - full h - full">
+          {filteredData.map ( (item, index) => (<circle key={item.id} cx={ (index / (filteredData.length - 1) ) * 800} cy={280 - (item.value / maxValue) * 280} r="8" fill={colors[index % colors.length]} className="cursor - pointer hover:r - 12 transition - all duration - 200"      />) ) }
         </svg>
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
@@ -164,18 +169,17 @@ export function AdvancedDataVisualization() {
       </div>);
     };
     if (!isOpen) {
-        return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-68 p-3 bg-zion-cyan hover:bg-zion-cyan-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Advanced Data Visualization">
-        <BarChart3 className="w-5 h-5"/>
-      </button>);
-    }
+        return (<button onClick={ () => setIsOpen (true) } className="fixed bottom - 4 right - 68 p - 3 bg - zion - cyan hover:bg - zion - cyan - light text - white rounded - full shadow - lg hover:shadow - xl transition - all duration - 300 z - 50" title="Advanced Data Visualization">
+        <BarChart3 className="w - 5 h - 5"      />
+      </button>) }
     if (isMinimized) {
-        return (<div className="fixed bottom-4 right-68 z-50">
-        <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">
-          <div className="flex items-center gap-3">
-            <div className="w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>
-            <span className="text-sm text-zion-slate">Data Visualization</span>
-            <button onClick={() => setIsMinimized(false)} className="text-zion-slate-light hover:text-zion-slate transition-colors">
-              <Maximize2 className="w-4 h-4"/>
+        return (<div className="fixed bottom - 4 right - 68 z - 50">
+        <div className="bg - white dark:bg - zion - slate border border - zion - slate - light rounded - lg shadow - lg p - 3">
+          <div className="flex items - center gap - 3">
+            <div className="w - 3 h - 3 bg - zion - cyan rounded - full animate - pulse"></div>
+            <span className="text - sm text - zion - slate">Data Visualization</span>
+            <button onClick={ () => setIsMinimized (false) } className="text - zion - slate - light hover:text - zion - slate transition - colors">
+              <Maximize2 className="w - 4 h - 4"      />
             </button>
           </div>
         </div>
@@ -183,23 +187,23 @@ export function AdvancedDataVisualization() {
     }
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1000px] h-[700px]'}`} ref={containerRef}>
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
-        <div className="flex items-center gap-3">
-          <div className="w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>
-          <div className="flex items-center gap-2">
-            <BarChart3 className="w-5 h-5 text-zion-cyan"/>
-            <span className="font-semibold text-zion-slate">Advanced Data Visualization</span>
+      <div className="flex items - center justify - between p - 4 border - b border - zion - slate - light bg - gradient - to - r from - zion - cyan / 10 to - zion - purple / 10">
+        <div className="flex items - center gap - 3">
+          <div className="w - 3 h - 3 bg - zion - cyan rounded - full animate - pulse"></div>
+          <div className="flex items - center gap - 2">
+            <BarChart3 className="w - 5 h - 5 text - zion - cyan"      />
+            <span className="font - semibold text - zion - slate">Advanced Data Visualization</span>
           </div>
         </div>
-        <div className="flex items-center gap-2">
-          <button onClick={() => setIsFullscreen(!isFullscreen)} className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors" title={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}>
-            {isFullscreen ? <Minimize2 className="w-4 h-4"/> : <Maximize2 className="w-4 h-4"/>}
+        <div className="flex items - center gap - 2">
+          <button onClick={ () => setIsFullscreen (!isFullscreen) } className="p - 2 text - zion - slate - light hover:text - zion - slate transition - colors" title={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}>
+            {isFullscreen ? <Minimize2 className="w - 4 h - 4"      /> : <Maximize2 className="w - 4 h - 4"      />}
           </button>
-          <button onClick={() => setIsMinimized(true)} className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors" title="Minimize">
-            <Minimize2 className="w-4 h-4"/>
+          <button onClick={ () => setIsMinimized (true) } className="p - 2 text - zion - slate - light hover:text - zion - slate transition - colors" title="Minimize">
+            <Minimize2 className="w - 4 h - 4"      />
           </button>
-          <button onClick={() => setIsOpen(false)} className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors" title="Close">
-            <X className="w-4 h-4"/>
+          <button onClick={ () => setIsOpen (false) } className="p - 2 text - zion - slate - light hover:text - zion - slate transition - colors" title="Close">
+            <X className="w - 4 h - 4"      />
           </button>
         </div>
       </div>
@@ -238,13 +242,13 @@ export function AdvancedDataVisualization() {
 
             {/* Color Palette */}
             <div>
-              <h3 className="text-sm font-medium text-zion-slate mb-3">Color Palette</h3>
-              <div className="grid grid-cols-2 gap-2">
-                {colorPalettes.map((palette, index) => (<button key={index} onClick={() => setSelectedColorPalette(index)} className={`p-2 rounded-lg border transition-all duration-200 ${selectedColorPalette === index
-                ? 'border-zion-cyan bg-zion-cyan/10'
-                : 'border-zion-slate-light hover:border-zion-cyan'}`}>
-                    <div className="flex gap-1">
-                      {palette.map((color, colorIndex) => (<div key={colorIndex} className="w-4 h-4 rounded" style={{ backgroundColor: color }}/>))}
+              <h3 className="text - sm font - medium text - zion - slate mb - 3">Color Palette</h3>
+              <div className="grid grid - cols - 2 gap - 2">
+                {colorPalettes.map ( (palette, index) => (<button key={index} onClick={ () => setSelectedColorPalette (index) } className={`p - 2 rounded - lg border transition - all duration - 200 ${selectedColorPalette === index
+                ? 'border - zion - cyan bg - zion - cyan / 10'
+                : 'border - zion - slate - light hover:border - zion - cyan'}`}>
+                    <div className="flex gap - 1">
+                      {palette.map ( (color, colorIndex) => (<div key={colorIndex} className="w - 4 h - 4 rounded" style={{ backgroundColor: color }}      />) ) }
                     </div>
                   </button>))}
               </div>
@@ -277,10 +281,10 @@ export function AdvancedDataVisualization() {
             <div className="space-y-3">
               <button onClick={refreshData} disabled={isRefreshing} className="w-full px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">
                 {isRefreshing ? (<>
-                    <RefreshCw className="w-4 h-4 animate-spin"/>
+                    <RefreshCw className="w - 4 h - 4 animate - spin"      />
                     Refreshing...
                   </>) : (<>
-                    <RefreshCw className="w-4 h-4"/>
+                    <RefreshCw className="w - 4 h - 4"      />
                     Refresh Data
                   </>)}
               </button>

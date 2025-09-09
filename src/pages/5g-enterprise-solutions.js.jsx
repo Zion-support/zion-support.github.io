@@ -76,9 +76,9 @@ const FiveGEnterpriseSolutions = () => {
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
       <Helmet>
-        <title>5G Enterprise Solutions - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary 5G enterprise solutions for ultra-fast connectivity, low latency, and massive IoT support across all industries."/>
-        <meta name="keywords" content="5G enterprise, 5G solutions, enterprise connectivity, IoT, network slicing, Zion Tech Group"/>
+        <title > 5G Enterprise Solutions - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary 5G enterprise solutions for ultra - fast connectivity, low latency, and massive IoT support across all industries."      />
+        <meta name="keywords" content="5G enterprise, 5G solutions, enterprise connectivity, IoT, network slicing, Zion Tech Group"      />
       </Helmet>
 
       {/* Hero Section */}
@@ -118,10 +118,22 @@ const FiveGEnterpriseSolutions = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white"/>
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
+            {features.map ( (feature, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+}} className="bg - white / 5 backdrop - blur - sm rounded - xl p - 6 border border - white / 10 hover:border - white / 20 transition - all duration - 300">
+                <div className="w - 12 h - 12 bg - gradient - to - r from - teal - 500 to - blue - 500 rounded - lg flex items - center justify - center mb - 4">
+                  <feature.icon className="w - 6 h - 6 text - white"      />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -169,10 +181,22 @@ const FiveGEnterpriseSolutions = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white"/>
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">
+            {benefits.map ( (benefit, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+}} className="text - center">
+                <div className="w - 16 h - 16 bg - gradient - to - r from - teal - 500 to - blue - 500 rounded - full flex items - center justify - center mx - auto mb - 4">
+                  <benefit.icon className="w - 8 h - 8 text - white"      />
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
@@ -199,9 +223,21 @@ const FiveGEnterpriseSolutions = () => {
             { icon: Cpu, name: "Edge Computing", description: "Distributed edge nodes" },
             { icon: Lock, name: "Security Layer", description: "Enterprise-grade security" },
             { icon: Workflow, name: "Management", description: "Network orchestration" }
-        ].map((tech, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: index * 0.1 }} className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-teal-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-teal-500/30">
-                  <tech.icon className="w-10 h-10 text-teal-400"/>
+        ].map ( (tech, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+}} whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+}} transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+}} className="text - center">
+                <div className="w - 20 h - 20 bg - gradient - to - r from - teal - 500 / 20 to - blue - 500 / 20 rounded - xl flex items - center justify - center mx - auto mb - 4 border border - teal - 500 / 30">
+                  <tech.icon className="w - 10 h - 10 text - teal - 400"      />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
                 <p className="text-gray-300 text-sm">{tech.description}</p>
@@ -228,9 +264,21 @@ const FiveGEnterpriseSolutions = () => {
             { icon: Settings, title: "Planning", description: "Design 5G network architecture and deployment strategy" },
             { icon: Wifi, title: "Deployment", description: "Install and configure 5G infrastructure" },
             { icon: BarChart3, title: "Optimization", description: "Monitor performance and optimize network" }
-        ].map((step, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: index * 0.2 }} className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-teal-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-teal-500/30">
-                  <step.icon className="w-10 h-10 text-teal-400"/>
+        ].map ( (step, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+}} whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+}} transition = {
+  { duration: 0.8,
+  delay: index * 0.2 
+
+}} className="text - center">
+                <div className="w - 20 h - 20 bg - gradient - to - r from - teal - 500 / 20 to - blue - 500 / 20 rounded - xl flex items - center justify - center mx - auto mb - 4 border border - teal - 500 / 30">
+                  <step.icon className="w - 10 h - 10 text - teal - 400"      />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
                 <p className="text-gray-300 text-sm">{step.description}</p>

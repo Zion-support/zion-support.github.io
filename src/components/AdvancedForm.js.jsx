@@ -196,58 +196,48 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
           {field.required && <span className="text-red-500 ml-1">*</span>}
         </label>
 
-        <div className="relative">
-          {/* Field Icon */}
-          <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
-            {getFieldIcon(field)}
+            {/* Password Toggle */}
+            {isPasswordField && (<button
+                type="button"
+                onClick={ () => togglePasswordVisibility (field.name) }
+                className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 hover:text - gray - 600 transition - colors"
+              >
+                {showPassword[field.name] ? (<EyeOff className="w - 4 h - 4"       />) : (<Eye className="w - 4 h - 4"       />) }
+              </button>) }
+
+            {/* Validation Icon */}
+            {fieldValidation?.isTouched && (<div className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2">
+                {fieldValidation.isValid ? (<CheckCircle className="w - 5 h - 5 text - green - 500"       />) : (<AlertCircle className="w - 5 h - 5 text - red - 500"       />) }
+              </div>) }
           </div>
 
-          {/* Input Field */}
-          {field.type === 'textarea' ? (<textarea name={field.name} value={fieldValue} onChange={(e) => handleFieldChange(field.name, e.target.value)} onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched
-                    ? fieldValidation.isValid
-                        ? 'border-green-500 focus:ring-green-200'
-                        : 'border-red-500 focus:ring-red-200'
-                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`} rows={4}/>) : field.type === 'select' ? (<select name={field.name} value={fieldValue} onChange={(e) => handleFieldChange(field.name, e.target.value)} onBlur={() => handleFieldBlur(field.name)} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched
-                    ? fieldValidation.isValid
-                        ? 'border-green-500 focus:ring-green-200'
-                        : 'border-red-500 focus:ring-red-200'
-                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}>
-              <option value="">Select an option</option>
-              {field.options?.map(option => (<option key={option.value} value={option.value}>
-                  {option.label}
-                </option>))}
-            </select>) : field.type === 'checkbox' ? (<div className="flex items-center space-x-3">
-              <input type="checkbox" name={field.name} checked={fieldValue} onChange={(e) => handleFieldChange(field.name, e.target.checked)} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
-              <span className="text-sm text-gray-600 dark:text-gray-400">
-                {field.placeholder}
-              </span>
-            </div>) : (<input type={isPasswordField && showPassword[field.name] ? 'text' : field.type} name={field.name} value={fieldValue} onChange={(e) => handleFieldChange(field.name, e.target.value)} onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched
-                    ? fieldValidation.isValid
-                        ? 'border-green-500 focus:ring-green-200'
-                        : 'border-red-500 focus:ring-red-200'
-                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}/>)}
-
-          {/* Password Toggle */}
-          {isPasswordField && (<button type="button" onClick={() => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors">
-              {showPassword[field.name] ? <EyeOff className="w-4 h-4"/> : <Eye className="w-4 h-4"/>}
-            </button>)}
-
-          {/* Validation Icon */}
-          {fieldValidation?.isTouched && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-              {fieldValidation.isValid ? (<CheckCircle className="w-5 h-5 text-green-500"/>) : (<AlertCircle className="w-5 h-5 text-red-500"/>)}
-            </div>)}
-        </div>
-
-        {/* Validation Message */}
-        {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} className="text-sm text-red-600 dark:text-red-400">
-            {fieldValidation.message}
-          </motion.p>)}
-      </motion.div>);
-    }, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]);
-    if (isSubmitted) {
-        return (<motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="text-center p-8 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">
-        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"/>
-        <h3 className="text-2xl font-bold text-green-800 dark:text-green-200 mb-2">
+          {/* Validation Message */}
+          {fieldValidation?.isTouched && fieldValidation.message && (<motion.p
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              className="text - sm text - red - 600 dark:text - red - 400"
+            >
+              {fieldValidation.message}
+            </motion.p>) }
+        </motion.div>) ;
+    },
+    [
+      formData,
+      validation,
+      showPassword,
+      getFieldIcon,
+      handleFieldChange,
+      handleFieldBlur,
+      togglePasswordVisibility,
+    ]) ;
+  if (isSubmitted) {
+    return (<motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="text - center p - 8 bg - green - 50 dark:bg - green - 900 / 20 rounded - xl border border - green - 200 dark:border - green - 700"
+      >
+        <CheckCircle className="w - 16 h - 16 text - green - 500 mx - auto mb - 4"       />
+        <h3 className="text - 2xl font - bold text - green - 800 dark:text - green - 200 mb - 2">
           Thank You!
         </h3>
         <p className="text-green-600 dark:text-green-300">
@@ -268,8 +258,12 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             <span>Form Progress</span>
             <span>{Math.round(progress)}%</span>
           </div>
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-            <motion.div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300" initial={{ width: 0 }} animate={{ width: `${progress}%` }}/>
+          <div className="w - full bg - gray - 200 dark:bg - gray - 700 rounded - full h - 2">
+            <motion.div
+              className="bg - gradient - to - r from - blue - 500 to - purple - 500 h - 2 rounded - full transition - all duration - 300"
+              initial={{ width: 0 }}
+              animate={{ width: `${progress}%` }}
+                  />
           </div>
         </div>)}
 
@@ -284,10 +278,10 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             ? 'bg-gray-400 cursor-not-allowed'
             : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}>
           {isSubmitting ? (<>
-              <Loader2 className="w-5 h-5 animate-spin"/>
+              <Loader2 className="w - 5 h - 5 animate - spin"       />
               Sending...
             </>) : (<>
-              <Send className="w-5 h-5"/>
+              <Send className="w - 5 h - 5"       />
               {submitText}
             </>)}
         </motion.button>

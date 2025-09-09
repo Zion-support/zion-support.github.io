@@ -188,29 +188,39 @@ const AdvancedServicePortfolioDashboard = () => {
               Comprehensive insights into our cutting-edge service portfolio, performance metrics, and strategic analysis
             </p>
           </div>
-          
-          <div className="flex gap-2">
-            {['overview', 'detailed', 'analytics'].map((mode) => (<Button key={mode} variant={viewMode === mode ? 'default' : 'outline'} size="sm" onClick={() => setViewMode(mode)}>
-                {mode === 'overview' && <Eye className="w-4 h-4 mr-2"/>}
-                {mode === 'detailed' && <BarChart3 className="w-4 h-4 mr-2"/>}
-                {mode === 'analytics' && <PieChart className="w-4 h-4 mr-2"/>}
-                {mode.charAt(0).toUpperCase() + mode.slice(1)}
-              </Button>))}
+
+          <div className="flex gap - 2">
+            {['overview', 'detailed', 'analytics'].map (mode => (<Button
+                key={mode}
+                variant={viewMode === mode ? 'default' : 'outline'}
+                size="sm"
+                onClick={ () => setViewMode (mode) }
+              >
+                {mode === 'overview' && <Eye className="w - 4 h - 4 mr - 2"       />}
+                {mode === 'detailed' && <BarChart3 className="w - 4 h - 4 mr - 2"       />}
+                {mode === 'analytics' && <PieChart className="w - 4 h - 4 mr - 2"       />}
+                {mode.charAt (0) .toUpperCase () + mode.slice (1) }
+              </Button>) ) }
           </div>
         </div>
       </motion.div>
 
       {/* Portfolio Metrics */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <Card className="hover:shadow-lg transition-shadow">
-          <CardHeader className="pb-3">
-            <div className="flex items-center justify-between">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center text-white">
-                <Rocket className="w-6 h-6"/>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+        className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6 mb - 8"
+      >
+        <Card className="hover:shadow - lg transition - shadow">
+          <CardHeader className="pb - 3">
+            <div className="flex items - center justify - between">
+              <div className="w - 12 h - 12 bg - gradient - to - r from - blue - 500 to - cyan - 600 rounded - lg flex items - center justify - center text - white">
+                <Rocket className="w - 6 h - 6"       />
               </div>
-              <div className="flex items-center gap-1">
-                <ArrowUpRight className="w-4 h-4 text-green-500"/>
-                <span className="text-sm font-medium text-green-600">
+              <div className="flex items - center gap - 1">
+                <ArrowUpRight className="w - 4 h - 4 text - green - 500"       />
+                <span className="text - sm font - medium text - green - 600">
                   +{portfolioMetrics.portfolioGrowth}%
                 </span>
               </div>
@@ -226,16 +236,16 @@ const AdvancedServicePortfolioDashboard = () => {
           </CardContent>
         </Card>
 
-        <Card className="hover:shadow-lg transition-shadow">
-          <CardHeader className="pb-3">
-            <div className="flex items-center justify-between">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center text-white">
-                <DollarSign className="w-6 h-6"/>
+        <Card className="hover:shadow - lg transition - shadow">
+          <CardHeader className="pb - 3">
+            <div className="flex items - center justify - between">
+              <div className="w - 12 h - 12 bg - gradient - to - r from - green - 500 to - emerald - 600 rounded - lg flex items - center justify - center text - white">
+                <DollarSign className="w - 6 h - 6"       />
               </div>
-              <div className="flex items-center gap-1">
-                <ArrowUpRight className="w-4 h-4 text-green-500"/>
-                <span className="text-sm font-medium text-green-600">
-                  +{Math.round(portfolioMetrics.portfolioGrowth)}%
+              <div className="flex items - center gap - 1">
+                <ArrowUpRight className="w - 4 h - 4 text - green - 500"       />
+                <span className="text - sm font - medium text - green - 600">
+                  +{Math.round (portfolioMetrics.portfolioGrowth) }%
                 </span>
               </div>
             </div>
@@ -250,16 +260,16 @@ const AdvancedServicePortfolioDashboard = () => {
           </CardContent>
         </Card>
 
-        <Card className="hover:shadow-lg transition-shadow">
-          <CardHeader className="pb-3">
-            <div className="flex items-center justify-between">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center text-white">
-                <Users className="w-6 h-6"/>
+        <Card className="hover:shadow - lg transition - shadow">
+          <CardHeader className="pb - 3">
+            <div className="flex items - center justify - between">
+              <div className="w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - pink - 600 rounded - lg flex items - center justify - center text - white">
+                <Users className="w - 6 h - 6"       />
               </div>
-              <div className="flex items-center gap-1">
-                <ArrowUpRight className="w-4 h-4 text-green-500"/>
-                <span className="text-sm font-medium text-green-600">
-                  +{Math.round(portfolioMetrics.portfolioGrowth)}%
+              <div className="flex items - center gap - 1">
+                <ArrowUpRight className="w - 4 h - 4 text - green - 500"       />
+                <span className="text - sm font - medium text - green - 600">
+                  +{Math.round (portfolioMetrics.portfolioGrowth) }%
                 </span>
               </div>
             </div>
@@ -274,16 +284,16 @@ const AdvancedServicePortfolioDashboard = () => {
           </CardContent>
         </Card>
 
-        <Card className="hover:shadow-lg transition-shadow">
-          <CardHeader className="pb-3">
-            <div className="flex items-center justify-between">
-              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-lg flex items-center justify-center text-white">
-                <Target className="w-6 h-6"/>
+        <Card className="hover:shadow - lg transition - shadow">
+          <CardHeader className="pb - 3">
+            <div className="flex items - center justify - between">
+              <div className="w - 12 h - 12 bg - gradient - to - r from - orange - 500 to - yellow - 600 rounded - lg flex items - center justify - center text - white">
+                <Target className="w - 6 h - 6"       />
               </div>
-              <div className="flex items-center gap-1">
-                <ArrowUpRight className="w-4 h-4 text-green-500"/>
-                <span className="text-sm font-medium text-green-600">
-                  +{Math.round(portfolioMetrics.portfolioGrowth)}%
+              <div className="flex items - center gap - 1">
+                <ArrowUpRight className="w - 4 h - 4 text - green - 500"       />
+                <span className="text - sm font - medium text - green - 600">
+                  +{Math.round (portfolioMetrics.portfolioGrowth) }%
                 </span>
               </div>
             </div>
@@ -338,14 +348,18 @@ const AdvancedServicePortfolioDashboard = () => {
             <Input placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full"/>
           </div>
 
-          <div className="flex items-end">
-            <Button variant="outline" className="w-full" onClick={() => {
-            setSelectedCategory('all');
-            setSelectedStatus('all');
-            setSelectedComplexity('all');
-            setSearchTerm('');
-        }}>
-              <Filter className="w-4 h-4 mr-2"/>
+          <div className="flex items - end">
+            <Button
+              variant="outline"
+              className="w - full"
+              onClick={ () => {
+                setSelectedCategory ('all') ;
+                setSelectedStatus ('all') ;
+                setSelectedComplexity ('all') ;
+                setSearchTerm ('') ;
+              }}
+            >
+              <Filter className="w - 4 h - 4 mr - 2"       />
               Clear Filters
             </Button>
           </div>
@@ -356,13 +370,13 @@ const AdvancedServicePortfolioDashboard = () => {
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="mb-8">
         <Card>
           <CardHeader>
-            <div className="flex items-center justify-between">
-              <CardTitle className="flex items-center gap-2">
-                <BarChart3 className="w-5 h-5 text-zion-cyan"/>
+            <div className="flex items - center justify - between">
+              <CardTitle className="flex items - center gap - 2">
+                <BarChart3 className="w - 5 h - 5 text - zion - cyan"       />
                 Service Portfolio Overview
               </CardTitle>
               <Button variant="outline" size="sm">
-                <Download className="w-4 h-4 mr-2"/>
+                <Download className="w - 4 h - 4 mr - 2"       />
                 Export Data
               </Button>
             </div>
@@ -415,8 +429,31 @@ const AdvancedServicePortfolioDashboard = () => {
                           </span>
                         </div>
                       </td>
-                      <td className="py-3 px-4">
-                        <Badge className={getComplexityColor(service.complexity)}>
+                      <td className="py - 3 px - 4">
+                        <span className="font - medium">
+                          {service.clientCount}
+                        </span>
+                      </td>
+                      <td className="py - 3 px - 4">
+                        <span className="font - medium">
+                          ${ (service.revenue / 1000000) .toFixed (1) }M
+                        </span>
+                      </td>
+                      <td className="py - 3 px - 4">
+                        <div className="flex items - center gap - 1">
+                          {service.growth > 0 ? (<ArrowUpRight className="w - 4 h - 4 text - green - 500"       />) : (<ArrowDownRight className="w - 4 h - 4 text - red - 500"       />) }
+                          <span
+                            className={`text - sm font - medium ${service.growth > 0 ? 'text - green - 600' : 'text - red - 600'}`}
+                          >
+                            {service.growth > 0 ? '+' : ''}
+                            {service.growth}%
+                          </span>
+                        </div>
+                      </td>
+                      <td className="py - 3 px - 4">
+                        <Badge
+                          className={getComplexityColor (service.complexity) }
+                        >
                           {service.complexity}
                         </Badge>
                       </td>
@@ -438,8 +475,8 @@ const AdvancedServicePortfolioDashboard = () => {
         {/* Category Distribution */}
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <PieChart className="w-5 h-5 text-zion-purple"/>
+            <CardTitle className="flex items - center gap - 2">
+              <PieChart className="w - 5 h - 5 text - zion - purple"       />
               Service Category Distribution
             </CardTitle>
           </CardHeader>
@@ -472,15 +509,15 @@ const AdvancedServicePortfolioDashboard = () => {
         {/* Portfolio Insights */}
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Brain className="w-5 h-5 text-zion-cyan"/>
+            <CardTitle className="flex items - center gap - 2">
+              <Brain className="w - 5 h - 5 text - zion - cyan"       />
               Portfolio Insights
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3 p-3 bg-zion-green/10 rounded-lg">
-                <TrendingUp className="w-5 h-5 text-zion-green mt-1"/>
+            <div className="space - y-4">
+              <div className="flex items - start gap - 3 p - 3 bg - zion - green / 10 rounded - lg">
+                <TrendingUp className="w - 5 h - 5 text - zion - green mt - 1"       />
                 <div>
                   <h4 className="font-semibold text-zion-slate-dark">High Growth Services</h4>
                   <p className="text-sm text-zion-slate-light">
@@ -488,9 +525,9 @@ const AdvancedServicePortfolioDashboard = () => {
                   </p>
                 </div>
               </div>
-              
-              <div className="flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg">
-                <Star className="w-5 h-5 text-zion-blue mt-1"/>
+
+              <div className="flex items - start gap - 3 p - 3 bg - zion - blue / 10 rounded - lg">
+                <Star className="w - 5 h - 5 text - zion - blue mt - 1"       />
                 <div>
                   <h4 className="font-semibold text-zion-slate-dark">Top Performers</h4>
                   <p className="text-sm text-zion-slate-light">
@@ -498,9 +535,9 @@ const AdvancedServicePortfolioDashboard = () => {
                   </p>
                 </div>
               </div>
-              
-              <div className="flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg">
-                <Award className="w-5 h-5 text-zion-purple mt-1"/>
+
+              <div className="flex items - start gap - 3 p - 3 bg - zion - purple / 10 rounded - lg">
+                <Award className="w - 5 h - 5 text - zion - purple mt - 1"       />
                 <div>
                   <h4 className="font-semibold text-zion-slate-dark">Market Leaders</h4>
                   <p className="text-sm text-zion-slate-light">
@@ -521,13 +558,22 @@ const AdvancedServicePortfolioDashboard = () => {
             Our comprehensive service portfolio offers cutting-edge solutions across all major technology sectors. 
             Contact us to discuss how we can help you achieve your business goals.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation', '_blank')}>
-              <Users className="w-5 h-5 mr-2"/>
+          <div className="flex flex - col sm:flex - row gap - 4 justify - center">
+            <Button
+              className="bg - white text - zion - purple hover:bg - zion - slate - light"
+              onClick={ () =>
+                window.open ('mailto:kleber@ziontechgroup.com?subject = Portfolio Expansion Consultation',
+                  '_blank') }
+            >
+              <Users className="w - 5 h - 5 mr - 2"       />
               Get Portfolio Consultation
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+13024640950', '_blank')}>
-              <Zap className="w-5 h-5 mr-2"/>
+            <Button
+              variant="outline"
+              className="border - white text - white hover:bg - white hover:text - zion - purple"
+              onClick={ () => window.open ('tel:+13024640950', '_blank') }
+            >
+              <Zap className="w - 5 h - 5 mr - 2"       />
               Call Now
             </Button>
           </div>

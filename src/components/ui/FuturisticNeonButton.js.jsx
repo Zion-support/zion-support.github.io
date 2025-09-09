@@ -66,22 +66,33 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
         ${className}
       `} whileHover={!disabled ? { scale: 1.05 } : {}} whileTap={!disabled ? { scale: 0.95 } : {}} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
       {/* Animated background */}
-      <motion.div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent" initial={{ x: '-100%' }} animate={{ x: '100%' }} transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: 'easeInOut'
-        }}/>
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
+        initial={{ x: '-100%' }}
+        animate={{ x: '100%' }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+            />
 
       {/* Content */}
       <div className="relative flex items-center justify-center gap-2">
-        {loading && (<motion.div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full" animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}/>)}
+        {loading && (
+          <motion.div
+            className="w-4 h-4 border-2 border-current border-t-transparent rounded-full"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                />
+        )}
         {icon && !loading && icon}
         {children}
       </div>
 
       {/* Neon glow effect */}
       <div className="absolute inset-0 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-300">
-        <div className={`absolute inset-0 rounded-lg ${styles.glow}`}/>
+        <div className={`absolute inset-0 rounded-lg ${styles.glow}`}       />
       </div>
     </motion.button>);
 };

@@ -78,10 +78,84 @@ export default function TokenManager() {
               </TabsList>
               <TabsContent value="history">
                 <ul className="space-y-2">
-                  {transactions.map(tx => (<li key={tx.id} className="flex justify-between border-b py-2 text-white">
+                  {transactions.map(((((((tx => (
+                    <li
+                      key={tx.id}
+                      className="flex justify-between border-b py-2 text-white"
+                    >
                       <span>{tx.user_id}</span>
-                      <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>
-                    </li>))}
+                      <span>
+                        {tx.transaction_type === 'earn' ? '+' : '-'}
+                        {tx.amount}
+                      </span>
+                    </li>
+                  , index, index, index, index, index, index) => ({ ...(((((tx => (
+                    <li
+                      key={tx.id}
+                      className="flex justify-between border-b py-2 text-white"
+                    >
+                      <span>{tx.user_id}</span>
+                      <span>
+                        {tx.transaction_type === 'earn' ? '+' : '-'}
+                        {tx.amount}
+                      </span>
+                    </li>
+                  , index, index, index, index, index, key: index })) => ({ ...((((tx => (
+                    <li
+                      key={tx.id}
+                      className="flex justify-between border-b py-2 text-white"
+                    >
+                      <span>{tx.user_id}</span>
+                      <span>
+                        {tx.transaction_type === 'earn' ? '+' : '-'}
+                        {tx.amount}
+                      </span>
+                    </li>
+                  , index, index, index, index, key: index })) => ({ ...(((tx => (
+                    <li
+                      key={tx.id}
+                      className="flex justify-between border-b py-2 text-white"
+                    >
+                      <span>{tx.user_id}</span>
+                      <span>
+                        {tx.transaction_type === 'earn' ? '+' : '-'}
+                        {tx.amount}
+                      </span>
+                    </li>
+                  , index, index, index, key: index })) => ({ ...((tx => (
+                    <li
+                      key={tx.id}
+                      className="flex justify-between border-b py-2 text-white"
+                    >
+                      <span>{tx.user_id}</span>
+                      <span>
+                        {tx.transaction_type === 'earn' ? '+' : '-'}
+                        {tx.amount}
+                      </span>
+                    </li>
+                  , index, index, key: index })) => ({ ...(tx => (
+                    <li
+                      key={tx.id}
+                      className="flex justify-between border-b py-2 text-white"
+                    >
+                      <span>{tx.user_id}</span>
+                      <span>
+                        {tx.transaction_type === 'earn' ? '+' : '-'}
+                        {tx.amount}
+                      </span>
+                    </li>
+                  , index, key: index })) => ({ ...tx => (
+                    <li
+                      key={tx.id}
+                      className="flex justify-between border-b py-2 text-white"
+                    >
+                      <span>{tx.user_id}</span>
+                      <span>
+                        {tx.transaction_type === 'earn' ? '+' : '-'}
+                        {tx.amount}
+                      </span>
+                    </li>
+                  , key: index })))}
                 </ul>
               </TabsContent>
             </Tabs>

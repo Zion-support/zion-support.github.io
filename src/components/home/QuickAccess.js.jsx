@@ -57,12 +57,19 @@ export const QuickAccess = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {quickLinks.map((link, index) => (<a key={index} href={link.href} className="group bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">
+          {quickLinks.map((((((((link, index, index, index, index, index, index, index) => ({ ...((((((link, index, index, index, index, index, index, key: index })) => ({ ...(((((link, index, index, index, index, index, key: index })) => ({ ...((((link, index, index, index, index, key: index })) => ({ ...(((link, index, index, index, key: index })) => ({ ...((link, index, index, key: index })) => ({ ...(link, index, key: index })) => (
+            <a
+              key={index}
+              href={link.href}
+              className="group bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
+            >
               <div className="flex items-start justify-between mb-4">
-                <div className={`w-12 h-12 bg-gradient-to-r ${link.color} rounded-lg flex items-center justify-center`}>
-                  <link.icon className="w-6 h-6 text-white"/>
+                <div
+                  className={`w-12 h-12 bg-gradient-to-r ${link.color} rounded-lg flex items-center justify-center`}
+                >
+                  <link.icon className="w-6 h-6 text-white"       />
                 </div>
-                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300"/>
+                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300"       />
               </div>
               
               <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
@@ -78,7 +85,7 @@ export const QuickAccess = () => {
         <div className="text-center mt-12">
           <a href="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
             View All Services
-            <ArrowRight className="w-5 h-5 ml-2"/>
+            <ArrowRight className="w-5 h-5 ml-2"       />
           </a>
         </div>
       </div>

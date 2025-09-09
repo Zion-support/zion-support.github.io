@@ -3,8 +3,11 @@ import { Helmet } from 'react-helmet-async';
 const OpenApp = () => {
     return (<>
       <Helmet>
-        <title>Open App - Zion Tech Group</title>
-        <meta name="description" content="Open Zion Tech Group applications. Access our web and mobile apps for seamless service delivery."/>
+        <title > Open App - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Open Zion Tech Group applications. Access our web and mobile apps for seamless service delivery."
+              />
       </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-12">

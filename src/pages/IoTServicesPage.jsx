@@ -159,23 +159,23 @@ const iotUseCases = [
     {
         title: "Smart Manufacturing",
         description: "Monitor production lines, predict maintenance needs, and optimize manufacturing processes",
-        icon: <Cpu className="h-6 w-6"/>
+        icon: <Cpu className="h - 6 w - 6"      />
     },
     {
         title: "Smart Cities",
         description: "Manage traffic, utilities, and public services with connected IoT infrastructure",
-        icon: <Globe className="h-6 w-6"/>
+        icon: <Globe className="h - 6 w - 6"      />
     },
     {
         title: "Connected Healthcare",
         description: "Remote patient monitoring, medical device management, and healthcare analytics",
-        icon: <Activity className="h-6 w-6"/>
+        icon: <Activity className="h - 6 w - 6"      />
     },
     {
         title: "Smart Agriculture",
         description: "Precision farming, environmental monitoring, and automated irrigation systems",
-        icon: <Settings className="h-6 w-6"/>
-    }
+        icon: <Settings className="h - 6 w - 6"      />
+
 ];
 export default function IoTServicesPage() {
     return (<div className="min-h-screen bg-background">
@@ -264,10 +264,10 @@ export default function IoTServicesPage() {
               Choose from our comprehensive range of IoT solutions designed to address your specific business needs
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {iotServices.map((service) => (<Card key={service.id} className="overflow-hidden hover:shadow-lg transition-all duration-300">
-                <div className="aspect-video overflow-hidden">
-                  <img src={service.image} alt={service.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"/>
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">
+            {iotServices.map ( (service) => (<Card key={service.id} className="overflow - hidden hover:shadow - lg transition - all duration - 300">
+                <div className="aspect - video overflow - hidden">
+                  <img src={service.image} alt={service.title} className="w - full h - full object - cover hover:scale - 105 transition - transform duration - 300"      />
                 </div>
                 <CardHeader className="pb-3">
                   <div className="flex justify-between items-start mb-2">
@@ -295,9 +295,9 @@ export default function IoTServicesPage() {
                     </span>
                     <span className="text-muted-foreground">{service.period}</span>
                   </div>
-                  <ul className="space-y-2">
-                    {service.features.slice(0, 3).map((feature, index) => (<li key={index} className="flex items-center gap-2 text-sm">
-                        <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0"/>
+                  <ul className="space - y-2">
+                    {service.features.slice (0, 3) .map ( (feature, index) => (<li key={index} className="flex items - center gap - 2 text - sm">
+                        <CheckCircle className="h - 4 w - 4 text - green - 500 flex - shrink - 0"      />
                         <span>{feature}</span>
                       </li>))}
                   </ul>
@@ -346,6 +346,5 @@ export default function IoTServicesPage() {
         </div>
       </section>
 
-      <TrustedBySection />
-    </div>);
-}
+      <TrustedBySection       />
+    </div>) }

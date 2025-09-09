@@ -4,43 +4,43 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 const defaultContent = {
-    products: {
-        icon: <ShoppingCart className="w-16 h-16 text-gray-500"/>,
+  products: {
+        icon: <ShoppingCart className="w-16 h-16 text-gray-500"      />,
         title: 'No Products Available',
         description: 'We\'re loading our marketplace products. If this persists, there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!',
     },
     categories: {
-        icon: <Lightbulb className="w-16 h-16 text-gray-500"/>,
+        icon: <Lightbulb className="w-16 h-16 text-gray-500"      />,
         title: 'No Categories Found',
         description: 'Categories are being organized. Please try refreshing the page or come back later.',
     },
     talent: {
-        icon: <Users className="w-16 h-16 text-gray-500"/>,
+        icon: <Users className="w-16 h-16 text-gray-500"      />,
         title: 'No Talent Profiles',
         description: 'No talent profiles match your criteria. Try adjusting your filters or search terms.',
     },
     equipment: {
-        icon: <Wrench className="w-16 h-16 text-gray-500"/>,
+        icon: <Wrench className="w-16 h-16 text-gray-500"      />,
         title: 'No Equipment Available',
         description: 'Equipment listings are being updated. Please check back soon for the latest hardware offerings.',
     },
     search: {
-        icon: <ShoppingCart className="w-16 h-16 text-gray-500"/>,
+        icon: <ShoppingCart className="w-16 h-16 text-gray-500"      />,
         title: 'No Results Found',
         description: 'Try adjusting your search terms or browse our categories to discover what we have available.',
     },
     error: {
-        icon: <Server className="w-16 h-16 text-red-400"/>,
+        icon: <Server className="w-16 h-16 text-red-400"      />,
         title: 'Unable to Load Data',
         description: 'We\'re experiencing technical difficulties. Our team has been notified and is working on a fix.',
     },
     network: {
-        icon: <Wifi className="w-16 h-16 text-orange-400"/>,
+        icon: <Wifi className="w-16 h-16 text-orange-400"      />,
         title: 'Connection Issue',
         description: 'Please check your internet connection and try again. If the problem persists, our servers might be temporarily unavailable.',
     },
     loading: {
-        icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin"/>,
+        icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin"      />,
         title: 'Loading...',
         description: 'We\'re fetching the latest data for you. This should only take a moment.',
     },
@@ -65,7 +65,7 @@ export function EmptyState({ type, title, description, action, icon }) {
       </p>
       
       {action && (<Button onClick={action.onClick} variant="outline" className="flex items-center gap-2">
-          <RefreshCw className="w-4 h-4"/>
+          <RefreshCw className="w-4 h-4"      />
           {action.label}
         </Button>)}
       
@@ -98,23 +98,76 @@ export function ProductsEmptyState({ onRetry, onAddProduct, isAuthenticated = fa
     const customDescription = isAuthenticated
         ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
         : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
-    return (<EmptyState type="products" action={action} description={customDescription}/>);
-}
+    return (<EmptyState type="products" action={action} description={customDescription}      />)}
 export function CategoriesEmptyState({ onRetry }) {
-    return (<EmptyState type="categories" action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}/>);
+    return (<EmptyState type="categories" action = {
+  onRetry ? { label: 'Refresh Categories',
+  onClick: onRetry 
+
+
+
+
+
+
+} : null}      />);
 }
 export function TalentEmptyState({ onRetry }) {
-    return (<EmptyState type="talent" action={onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined}/>);
+    return (<EmptyState type="talent" action = {
+  onRetry ? { label: 'Reset Filters',
+  onClick: onRetry 
+
+
+
+
+
+
+} : null}      />);
 }
 export function EquipmentEmptyState({ onRetry }) {
-    return (<EmptyState type="equipment" action={onRetry ? { label: 'Refresh Listings', onClick: onRetry } : undefined}/>);
+    return (<EmptyState type="equipment" action = {
+  onRetry ? { label: 'Refresh Listings',
+  onClick: onRetry 
+
+
+
+
+
+
+} : null}      />);
 }
 export function SearchEmptyState({ onRetry }) {
-    return (<EmptyState type="search" action={onRetry ? { label: 'Clear Search', onClick: onRetry } : undefined}/>);
+    return (<EmptyState type="search" action = {
+  onRetry ? { label: 'Clear Search',
+  onClick: onRetry 
+
+
+
+
+
+
+} : null}      />);
 }
 export function NetworkErrorState({ onRetry }) {
-    return (<EmptyState type="network" action={onRetry ? { label: 'Try Again', onClick: onRetry } : undefined}/>);
+    return (<EmptyState type="network" action = {
+  onRetry ? { label: 'Try Again',
+  onClick: onRetry 
+
+
+
+
+
+
+} : null}      />);
 }
 export function ServerErrorState({ onRetry }) {
-    return (<EmptyState type="error" action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}/>);
+    return (<EmptyState type="error" action = {
+  onRetry ? { label: 'Retry',
+  onClick: onRetry 
+
+
+
+
+
+
+} : null}      />);
 }

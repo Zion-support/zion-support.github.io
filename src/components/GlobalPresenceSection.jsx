@@ -94,12 +94,12 @@ const globalOffices = [
     }
 ];
 const globalStats = [
-    { icon: <Globe className="w-6 h-6"/>, value: "25+", label: "Countries Served" },
-    { icon: <Building className="w-6 h-6"/>, value: "6", label: "Global Offices" },
-    { icon: <Users className="w-6 h-6"/>, value: "170+", label: "Global Team" },
-    { icon: <Award className="w-6 h-6"/>, value: "500+", label: "Projects Delivered" },
-    { icon: <Star className="w-6 h-6"/>, value: "4.8/5", label: "Global Rating" },
-    { icon: <TrendingUp className="w-6 h-6"/>, value: "98%", label: "Client Satisfaction" }
+    { icon: <Globe className="w - 6 h - 6"      />, value: "25+", label: "Countries Served" },
+    { icon: <Building className="w - 6 h - 6"      />, value: "6", label: "Global Offices" },
+    { icon: <Users className="w - 6 h - 6"      />, value: "170+", label: "Global Team" },
+    { icon: <Award className="w - 6 h - 6"      />, value: "500+", label: "Projects Delivered" },
+    { icon: <Star className="w - 6 h - 6"      />, value: "4.8 / 5", label: "Global Rating" },
+    { icon: <TrendingUp className="w - 6 h - 6"      />, value: "98%", label: "Client Satisfaction" }
 ];
 const partnerships = [
     {
@@ -274,27 +274,39 @@ export function GlobalPresenceSection() {
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                       View Office Details
                     </span>
-                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                    <ArrowRight className="w - 4 h - 4 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"      />
                   </div>
 
                   {/* Expanded details */}
                   <AnimatePresence>
-                    {selectedOffice === office.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
-                        <div className="space-y-3 mb-4">
-                          <div className="flex items-center gap-2 text-zion-slate-light/80 text-sm">
-                            <MapPin className="w-4 h-4 text-zion-cyan"/>
+                    {selectedOffice === office.id && (<motion.div className="mt - 6 p - 4 rounded - xl bg - zion - blue - dark / 60 backdrop - blur - sm border border - zion - cyan / 30" initial = {
+  { opacity: 0, height: 0,
+  y: 10 
+
+}} animate = {
+  { opacity: 1, height: "auto",
+  y: 0 
+
+}} exit = {
+  { opacity: 0, height: 0,
+  y: 10 
+
+}} transition={{ duration: 0.3 }}>
+                        <div className="space - y-3 mb - 4">
+                          <div className="flex items - center gap - 2 text - zion - slate - light / 80 text - sm">
+                            <MapPin className="w - 4 h - 4 text - zion - cyan"      />
                             <span>{office.address}</span>
                           </div>
-                          <div className="flex items-center gap-2 text-zion-slate-light/80 text-sm">
-                            <Clock className="w-4 h-4 text-zion-cyan"/>
+                          <div className="flex items - center gap - 2 text - zion - slate - light / 80 text - sm">
+                            <Clock className="w - 4 h - 4 text - zion - cyan"      />
                             <span>{office.timezone}</span>
                           </div>
-                          <div className="flex items-center gap-2 text-zion-slate-light/80 text-sm">
-                            <Users className="w-4 h-4 text-zion-cyan"/>
+                          <div className="flex items - center gap - 2 text - zion - slate - light / 80 text - sm">
+                            <Users className="w - 4 h - 4 text - zion - cyan"      />
                             <span>{office.clients} clients served</span>
                           </div>
-                          <div className="flex items-center gap-2 text-zion-slate-light/80 text-sm">
-                            <Star className="w-4 h-4 text-yellow-400"/>
+                          <div className="flex items - center gap - 2 text - zion - slate - light / 80 text - sm">
+                            <Star className="w - 4 h - 4 text - yellow - 400"      />
                             <span>{office.rating} rating</span>
                           </div>
                         </div>
@@ -315,9 +327,9 @@ export function GlobalPresenceSection() {
             {partnerships.map((partnership, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedPartnership(selectedPartnership === index ? null : index)}>
                   {/* Header */}
-                  <div className="text-center mb-4">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-zion-cyan to-zion-purple mb-3 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                      <Building className="w-8 h-8 text-white"/>
+                  <div className="text - center mb - 4">
+                    <div className="inline - flex items - center justify - center w - 16 h - 16 rounded - 2xl bg - gradient - to - br from - zion - cyan to - zion - purple mb - 3 shadow - lg group - hover:shadow - xl transition - all duration - 300">
+                      <Building className="w - 8 h - 8 text - white"      />
                     </div>
                     <h4 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                       {partnership.name}
@@ -344,10 +356,22 @@ export function GlobalPresenceSection() {
 
                   {/* Expanded details */}
                   <AnimatePresence>
-                    {selectedPartnership === index && (<motion.div className="mt-4 p-3 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
-                        <div className="flex items-center gap-2 text-zion-cyan text-sm">
-                          <CheckCircle className="w-4 h-4"/>
-                          <span>Partnership Active</span>
+                    {selectedPartnership === index && (<motion.div className="mt - 4 p - 3 rounded - xl bg - zion - blue - dark / 60 backdrop - blur - sm border border - zion - cyan / 30" initial = {
+  { opacity: 0, height: 0,
+  y: 10 
+
+}} animate = {
+  { opacity: 1, height: "auto",
+  y: 0 
+
+}} exit = {
+  { opacity: 0, height: 0,
+  y: 10 
+
+}} transition={{ duration: 0.3 }}>
+                        <div className="flex items - center gap - 2 text - zion - cyan text - sm">
+                          <CheckCircle className="w - 4 h - 4"      />
+                          <span > Partnership Active</span>
                         </div>
                       </motion.div>)}
                   </AnimatePresence>

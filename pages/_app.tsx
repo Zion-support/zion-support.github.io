@@ -4,9 +4,15 @@ import Layout from '../components/Layout';
 import ErrorBoundary from '../components/ui/ErrorBoundary';
 import PageLoader from '../components/ui/PageLoader';
 import '../styles/globals.css';
-
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
-
-export default MyApp;
+import EnhancedNavigation from '../components/layout/EnhancedNavigation';
+import EnhancedFooter from '../components/layout/EnhancedFooter';
+;
+export default function App(...args: any[]): any {;
+  return (;
+    <>;
+      <EnhancedNavigation       />;
+      <Component {...pageProps}       />;
+      <EnhancedFooter       />;
+    </>;
+  );
+};

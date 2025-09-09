@@ -28,47 +28,41 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
         {/* {product && product.id && <p className="text-xs text-muted-foreground">ID: {product.id}</p>} */}
       </div>);
     }
-    const active = isWishlisted(product.id);
-    const dispatch = useDispatch();
-    // Title is now guaranteed to be a non-empty string by the check above.
-    const productTitle = product.title;
-    const addToCart = () => {
-        dispatch(addItem({
-            id: product.id,
-            title: productTitle,
-            price: product.price ?? 0,
-            image: imageUrl || undefined,
-        }));
-    };
-    const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
-    const imageAltText = productTitle;
-    const handleImageError = (error) => {
-        if (!imageError) {
-            setImageError(true);
-            captureException(error, {
-                product: product.id,
-                imageUrl,
-            });
-        }
-    };
-    const isMobile = useMediaQuery('(max-width: 768px)');
-    const isTablet = useMediaQuery('(max-width: 1200px)');
-    const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
-    return (<div className="relative border rounded-lg bg-card p-4" data-testid="product-card">
-      <button className="absolute top-2 right-2 p-1 rounded-full bg-background/70" onClick={() => toggle(product.id)} aria-label={active ? 'Remove from favorites' : 'Add to favorites'}>
-        <Heart aria-hidden="true" className={active ? 'text-red-500 fill-red-500' : 'text-gray-500'}/>
+  };
+  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
+  return (<div
+      className="relative border rounded - lg bg - card p - 4"
+      data - testid="product - card"
+    >
+      <button
+        className="absolute top - 2 right - 2 p - 1 rounded - full bg - background / 70"
+        onClick={ () => toggle (product.id) }
+        aria - label={active ? 'Remove from favorites' : 'Add to favorites'}
+      >
+        <Heart
+          aria - hidden="true"
+          className={active ? 'text - red - 500 fill - red - 500' : 'text - gray - 500'}
+              />
       </button>
 
-    <div className="w-full h-40 relative mb-2">
-      {imageUrl && !imageError ? (<Image src={imageUrl} alt={imageAltText} fill style={{ objectFit: 'cover' }} onError={(e) => handleImageError(e)} priority={false} sizes={imageSizes}/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center">
-          <span className="text-gray-500">No Image</span>
-        </div>)}
-      {active && (<div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">
-          <Heart aria-hidden="true" className="text-red-500 fill-red-500"/>
-        </div>)}
-    </div>
-      <Link href={`/marketplace/listing/${product.id}`}>
-        <h3 className="font-semibold mb-1">{productTitle}</h3>
+      <div className="w - full h - 40 relative mb - 2">
+        {imageUrl && !imageError ? (<Image
+            src={imageUrl}
+            alt={imageAltText}
+            fill
+            style={{ objectFit: 'cover' }}
+            onError={e => handleImageError (e) }
+            priority={false}
+            sizes={imageSizes}
+          />) : (<div className="w - full h - full bg - gray - 200 flex items - center justify - center">
+            <span className="text - gray - 500">No Image</span>
+          </div>) }
+        {active && (<div className="absolute top - 2 left - 2 p - 1 rounded - full bg - background / 70">
+            <Heart aria - hidden="true" className="text - red - 500 fill - red - 500"       />
+          </div>) }
+      </div>
+      <Link href={`/marketplace / listing/${product.id}`}>
+        <h3 className="font - semibold mb - 1">{productTitle}</h3>
       </Link>
       {product.price != null && (<p className="text-sm text-muted-foreground">
           {product.currency}

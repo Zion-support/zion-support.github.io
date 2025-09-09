@@ -176,21 +176,21 @@ export function InteractivePortfolio() {
                   </div>)}
 
                 {/* Project Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
+                <div className="relative h - 48 overflow - hidden">
+                  <img src={project.image} alt={project.title} className="w - full h - full object - cover transition - transform duration - 500 group - hover:scale - 110"      />
+                  <div className="absolute inset - 0 bg - gradient - to - t from - black / 60 via - transparent to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300"      />
                   
                   {/* Quick Actions */}
-                  <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors">
-                      <Eye className="w-5 h-5"/>
+                  <div className="absolute inset - 0 flex items - center justify - center gap - 4 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300">
+                    <button className="p - 3 bg - white / 20 backdrop - blur - sm rounded - full text - white hover:bg - white / 30 transition - colors">
+                      <Eye className="w - 5 h - 5"      />
                     </button>
-                    {project.liveUrl && (<button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors">
-                        <ExternalLink className="w-5 h-5"/>
-                      </button>)}
-                    {project.githubUrl && (<button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors">
-                        <Github className="w-5 h-5"/>
-                      </button>)}
+                    {project.liveUrl && (<button className="p - 3 bg - white / 20 backdrop - blur - sm rounded - full text - white hover:bg - white / 30 transition - colors">
+                        <ExternalLink className="w - 5 h - 5"      />
+                      </button>) }
+                    {project.githubUrl && (<button className="p - 3 bg - white / 20 backdrop - blur - sm rounded - full text - white hover:bg - white / 30 transition - colors">
+                        <Github className="w - 5 h - 5"      />
+                      </button>) }
                   </div>
                 </div>
 
@@ -200,9 +200,9 @@ export function InteractivePortfolio() {
                     <span className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full">
                       {project.category}
                     </span>
-                    <div className="flex items-center gap-1 text-zion-gold">
-                      <Star className="w-3 h-3 fill-current"/>
-                      <span className="text-xs">{project.rating}</span>
+                    <div className="flex items - center gap - 1 text - zion - gold">
+                      <Star className="w - 3 h - 3 fill - current"      />
+                      <span className="text - xs">{project.rating}</span>
                     </div>
                   </div>
 
@@ -225,20 +225,20 @@ export function InteractivePortfolio() {
                   </div>
 
                   {/* Project Stats */}
-                  <div className="flex items-center justify-between text-xs text-zion-slate-light">
-                    <div className="flex items-center gap-1">
-                      <Users className="w-3 h-3"/>
-                      <span>{project.users.toLocaleString()}</span>
+                  <div className="flex items - center justify - between text - xs text - zion - slate - light">
+                    <div className="flex items - center gap - 1">
+                      <Users className="w - 3 h - 3"      />
+                      <span>{project.users.toLocaleString () }</span>
                     </div>
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-3 h-3"/>
-                      <span>{new Date(project.completionDate).toLocaleDateString()}</span>
+                    <div className="flex items - center gap - 1">
+                      <Calendar className="w - 3 h - 3"      />
+                      <span>{new Date (project.completionDate) .toLocaleDateString () }</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Hover Effect Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"/>
+                <div className="absolute inset - 0 bg - gradient - to - br from - zion - cyan / 5 to - zion - purple / 5 rounded - 2xl opacity - 0 transition - opacity duration - 300 group - hover:opacity - 100"      />
               </div>
             </div>))}
         </div>
@@ -263,26 +263,26 @@ export function InteractivePortfolio() {
       {isModalOpen && selectedProject && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={closeModal} onKeyDown={handleKeyPress} tabIndex={0}>
           <div className="bg-white dark:bg-zion-slate rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
             {/* Modal Header */}
-            <div className="flex items-center justify-between p-6 border-b border-zion-slate-light">
-              <h2 className="text-2xl font-bold text-zion-slate">{selectedProject.title}</h2>
-              <button onClick={closeModal} className="text-zion-slate-light hover:text-zion-slate transition-colors">
-                <X className="w-6 h-6"/>
+            <div className="flex items - center justify - between p - 6 border - b border - zion - slate - light">
+              <h2 className="text - 2xl font - bold text - zion - slate">{selectedProject.title}</h2>
+              <button onClick={closeModal} className="text - zion - slate - light hover:text - zion - slate transition - colors">
+                <X className="w - 6 h - 6"      />
               </button>
             </div>
 
             {/* Modal Content */}
             <div className="p-6">
               {/* Project Image */}
-              <div className="relative mb-6">
-                <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-64 object-cover rounded-lg"/>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-lg"/>
+              <div className="relative mb - 6">
+                <img src={selectedProject.image} alt={selectedProject.title} className="w - full h - 64 object - cover rounded - lg"      />
+                <div className="absolute inset - 0 bg - gradient - to - t from - black / 40 to - transparent rounded - lg"      />
                 
                 {/* Navigation Arrows */}
-                <button onClick={prevImage} className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors">
-                  <ChevronLeft className="w-5 h-5"/>
+                <button onClick={prevImage} className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 p - 2 bg - white / 20 backdrop - blur - sm rounded - full text - white hover:bg - white / 30 transition - colors">
+                  <ChevronLeft className="w - 5 h - 5"      />
                 </button>
-                <button onClick={nextImage} className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors">
-                  <ChevronRight className="w-5 h-5"/>
+                <button onClick={nextImage} className="absolute right - 4 top - 1/2 transform - translate - y-1 / 2 p - 2 bg - white / 20 backdrop - blur - sm rounded - full text - white hover:bg - white / 30 transition - colors">
+                  <ChevronRight className="w - 5 h - 5"      />
                 </button>
               </div>
 
@@ -310,15 +310,15 @@ export function InteractivePortfolio() {
                 </div>
 
                 {/* Project Stats */}
-                <div className="space-y-6">
-                  <div className="bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 p-6 rounded-xl border border-zion-cyan/20">
-                    <h4 className="text-lg font-semibold text-zion-slate mb-4">Project Stats</h4>
-                    <div className="space-y-4">
-                      <div className="flex items-center justify-between">
-                        <span className="text-zion-slate-light">Rating</span>
-                        <div className="flex items-center gap-1">
-                          <Star className="w-4 h-4 text-zion-gold fill-current"/>
-                          <span className="font-semibold">{selectedProject.rating}</span>
+                <div className="space - y-6">
+                  <div className="bg - gradient - to - br from - zion - cyan / 10 to - zion - blue / 10 p - 6 rounded - xl border border - zion - cyan / 20">
+                    <h4 className="text - lg font - semibold text - zion - slate mb - 4">Project Stats</h4>
+                    <div className="space - y-4">
+                      <div className="flex items - center justify - between">
+                        <span className="text - zion - slate - light">Rating</span>
+                        <div className="flex items - center gap - 1">
+                          <Star className="w - 4 h - 4 text - zion - gold fill - current"      />
+                          <span className="font - semibold">{selectedProject.rating}</span>
                         </div>
                       </div>
                       <div className="flex items-center justify-between">
@@ -335,13 +335,13 @@ export function InteractivePortfolio() {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="space-y-3">
-                    {selectedProject.liveUrl && (<a href={selectedProject.liveUrl} target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-200">
-                        <ExternalLink className="w-4 h-4"/>
+                  <div className="space - y-3">
+                    {selectedProject.liveUrl && (<a href={selectedProject.liveUrl} target="_blank" rel="noopener noreferrer" className="w - full flex items - center justify - center gap - 2 px - 4 py - 3 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - lg hover:from - zion - cyan - light hover:to - zion - purple - light transition - all duration - 200">
+                        <ExternalLink className="w - 4 h - 4"      />
                         View Live Demo
-                      </a>)}
-                    {selectedProject.githubUrl && (<a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-zion-slate text-white rounded-lg hover:bg-zion-slate-light transition-all duration-200">
-                        <Github className="w-4 h-4"/>
+                      </a>) }
+                    {selectedProject.githubUrl && (<a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer" className="w - full flex items - center justify - center gap - 2 px - 4 py - 3 bg - zion - slate text - white rounded - lg hover:bg - zion - slate - light transition - all duration - 200">
+                        <Github className="w - 4 h - 4"      />
                         View Source Code
                       </a>)}
                   </div>

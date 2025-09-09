@@ -1,4 +1,6 @@
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import React from 'react';
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react / jsx - runtime";
+import { TrendingUp, Users, Briefcase, ShoppingCart, DollarSign, Activity, ArrowUpRight, ArrowDownRight, Calendar, Bell, Settings, BarChart3, PieChart, LineChart } from 'lucide - react';
 import { useState } from 'react';
 import { TrendingUp, Users, Briefcase, ShoppingCart, DollarSign, Activity, ArrowUpRight, ArrowDownRight, Calendar, Bell, Settings, BarChart3, PieChart, LineChart } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';

@@ -3,88 +3,159 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Zap, Shield, Users, Rocket, Clock, Target, TrendingUp, Award } from 'lucide-react';
 
 const benefits = [
-    {
-        icon: <Zap className="w-10 h-10"/>,
-        title: "AI-Powered Innovation",
-        description: "Cutting-edge artificial intelligence solutions that transform your business operations and drive growth.",
-        color: "from-zion-cyan to-zion-cyan-dark",
-        bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
-        stats: "40% Efficiency Boost",
-        features: [
-            "Machine learning algorithms",
-            "Predictive analytics",
-            "Automated workflows",
-            "Real-time insights"
-        ]
-    },
-    {
-        icon: <Shield className="w-10 h-10"/>,
-        title: "Enterprise Security",
-        description: "Military-grade security protocols and compliance standards to protect your most sensitive data.",
-        color: "from-zion-purple to-zion-purple-dark",
-        bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
-        stats: "99.99% Uptime",
-        features: [
-            "SOC 2 Type II certified",
-            "GDPR compliance",
-            "End-to-end encryption",
-            "24/7 monitoring"
-        ]
-    },
-    {
-        icon: <Users className="w-10 h-10"/>,
-        title: "Expert Team",
-        description: "World-class developers, designers, and consultants with proven track records in enterprise solutions.",
-        color: "from-zion-blue to-zion-blue-dark",
-        bgColor: "from-zion-blue/20 to-zion-blue-dark/20",
-        stats: "15+ Years Experience",
-        features: [
-            "Certified professionals",
-            "Agile methodology",
-            "Continuous support",
-            "Knowledge transfer"
-        ]
-    },
-    {
-        icon: <Rocket className="w-10 h-10"/>,
-        title: "Rapid Deployment",
-        description: "Accelerated development cycles and deployment processes that get your solutions to market faster.",
-        color: "from-zion-cyan-light to-zion-cyan",
-        bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
-        stats: "3x Faster Delivery",
-        features: [
-            "CI/CD pipelines",
-            "Cloud-native architecture",
-            "Microservices design",
-            "Automated testing"
-        ]
-    }
+  {
+    icon: <Zap className="w - 10 h - 10"       />,
+    title: 'Lightning Fast Delivery',
+    description:
+      'Get your projects delivered in record time with our streamlined development process.',
+    stats: '50% Faster',
+    color: 'from - yellow - 500 to - orange - 500',
+    bgColor: 'from - yellow - 500 / 20 to - orange - 500 / 20',
+    features: [
+      'Agile development methodology',
+      'Parallel development teams',
+      'Automated testing pipeline',
+      'Continuous deployment',
+    ],
+  },
+  {
+    icon: <Shield className="w - 10 h - 10"       />,
+    title: 'Enterprise Security',
+    description:
+      'Bank - level security with SOC 2 compliance and 24 / 7 monitoring.',
+    stats: '99.9% Secure',
+    color: 'from - blue - 500 to - cyan - 500',
+    bgColor: 'from - blue - 500 / 20 to - cyan - 500 / 20',
+    features: [
+      'SOC 2 Type II compliant',
+      'End - to - end encryption',
+      'Regular security audits',
+      'GDPR compliance',
+    ],
+  },
+  {
+    icon: <TrendingUp className="w - 10 h - 10"       />,
+    title: 'Proven ROI',
+    description: 'Average 300% ROI within 6 months of implementation.',
+    stats: '300% ROI',
+    color: 'from - green - 500 to - emerald - 500',
+    bgColor: 'from - green - 500 / 20 to - emerald - 500 / 20',
+    features: [
+      'Performance optimization',
+      'Cost reduction strategies',
+      'Revenue growth solutions',
+      'Efficiency improvements',
+    ],
+  },
+  {
+    icon: <CheckCircle className="w - 10 h - 10"       />,
+    title: 'Quality Guaranteed',
+    description: '30 - day money - back guarantee with free migration support.',
+    stats: '100% Quality',
+    color: 'from - purple - 500 to - pink - 500',
+    bgColor: 'from - purple - 500 / 20 to - pink - 500 / 20',
+    features: [
+      'Comprehensive testing',
+      'Code quality standards',
+      'Performance benchmarks',
+      'User experience focus',
+    ],
+  },
 ];
 
 const additionalStats = [
-    { icon: <Clock className="w-6 h-6"/>, value: "24/7", label: "Support" },
-    { icon: <Target className="w-6 h-6"/>, value: "500+", label: "Projects" },
-    { icon: <TrendingUp className="w-6 h-6"/>, value: "95%", label: "Success Rate" },
-    { icon: <Award className="w-6 h-6"/>, value: "50+", label: "Awards" }
+  {
+    icon: <Users className="w - 8 h - 8"       />,
+    value: '500+',
+    label: 'Happy Clients',
+  },
+  { icon: <Clock className="w - 8 h - 8"       />, value: '24 / 7', label: 'Support' },
+  { icon: <Star className="w - 8 h - 8"       />, value: '4.9 / 5', label: 'Rating' },
+  { icon: <Award className="w - 8 h - 8"       />, value: '50+', label: 'Awards' },
 ];
 
-export function BenefitsSection() {
-    const [hoveredIndex, setHoveredIndex] = useState(null);
-    
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.1
-            }
-        }
-    };
-    
-    const itemVariants = {
-        hidden: { opacity: 0, y: 30 },
-        visible: {
+  const [hoveredIndex, setHoveredIndex] = (useState < number) | (null > null) ;
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: 'easeOut',
+      },
+    },
+  };
+
+  const statsVariants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.4,
+        ease: 'easeOut',
+      },
+    },
+  };
+
+  return (<section className="py - 20 bg - gradient - to - br from - zion - slate - dark via - zion - blue - dark to - zion - blue relative overflow - hidden">
+      {/* Enhanced background pattern */}
+      <div className="absolute inset - 0 opacity - 5">
+        <div
+          className="absolute inset - 0"
+          style={{
+            backgroundImage: `radial - gradient (circle at 75% 75%, currentColor 1px, transparent 1px) `,
+            backgroundSize: '60px 60px',
+          }}
+              />
+      </div>
+
+      {/* Floating decorative elements */}
+      <div className="absolute inset - 0">
+        <motion.div
+          className="absolute top - 20 left - 20 w - 32 h - 32 border border - zion - cyan / 20 rounded - full opacity - 30"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+              />
+        <motion.div
+          className="absolute bottom - 20 right - 20 w - 24 h - 24 border border - zion - purple / 20 rounded - full opacity - 30"
+          animate={{ rotate: -360 }}
+          transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
+              />
+        <motion.div
+          className="absolute top - 1/2 left - 1/2 w - 16 h - 16 border border - zion - cyan - light / 20 rounded - full opacity - 20"
+          animate={{
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+              />
+      </div>
+
+      <div className="container mx - auto px - 4 relative z - 10">
+        <motion.div
+          className="text - center mb - 20"
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          whileInView={{
             opacity: 1,
             y: 0,
             transition: {

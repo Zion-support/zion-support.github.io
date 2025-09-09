@@ -157,130 +157,79 @@ const Webinars = () => {
                 </div>
             </section>
 
-            {/* Webinars Grid */}
-            <section className="py-20">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                            Upcoming & Recorded Webinars
-                        </h2>
-                        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                            Access our library of expert-led webinars and register for upcoming live sessions
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {filteredWebinars.map((webinar, index) => (
-                            <motion.div
-                                key={webinar.id}
-                                className="bg-slate-800/50 rounded-xl border border-slate-700 p-6 hover:border-blue-500/50 transition-all duration-300 group"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                viewport={{ once: true }}
-                            >
-                                <div className="flex items-center justify-between mb-4">
-                                    <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium">
-                                        {webinar.category}
-                                    </span>
-                                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                                        webinar.isLive 
-                                            ? 'bg-green-500/20 text-green-400' 
-                                            : 'bg-gray-500/20 text-gray-400'
-                                    }`}>
-                                        {webinar.isLive ? 'Live' : 'Recorded'}
-                                    </span>
-                                </div>
-                                
-                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
-                                    {webinar.title}
-                                </h3>
-                                
-                                <p className="text-gray-300 mb-4 line-clamp-3">{webinar.description}</p>
-                                
-                                <div className="space-y-3 mb-4">
-                                    <div className="flex items-center text-gray-300 text-sm">
-                                        <Calendar className="w-4 h-4 mr-2 text-blue-400" />
-                                        {webinar.date}
-                                    </div>
-                                    <div className="flex items-center text-gray-300 text-sm">
-                                        <Clock className="w-4 h-4 mr-2 text-blue-400" />
-                                        {webinar.time} ({webinar.duration})
-                                    </div>
-                                    <div className="flex items-center text-gray-300 text-sm">
-                                        <User className="w-4 h-4 mr-2 text-blue-400" />
-                                        {webinar.speaker}
-                                    </div>
-                                </div>
-                                
-                                <div className="flex items-center justify-between">
-                                    {webinar.isLive ? (
-                                        <Link
-                                            to={webinar.registrationUrl}
-                                            className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-medium transition-colors duration-300"
-                                        >
-                                            <Play className="w-4 h-4 mr-2" />
-                                            Register
-                                        </Link>
-                                    ) : (
-                                        <Link
-                                            to={webinar.recordingUrl}
-                                            className="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 rounded-lg text-white font-medium transition-colors duration-300"
-                                        >
-                                            <Video className="w-4 h-4 mr-2" />
-                                            Watch Recording
-                                        </Link>
-                                    )}
-                                    <Link
-                                        to={webinar.registrationUrl}
-                                        className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors group-hover:underline"
-                                    >
-                                        Learn More
-                                        <ArrowRight className="w-4 h-4 ml-1" />
-                                    </Link>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                    
-                    {filteredWebinars.length === 0 && (
-                        <div className="text-center py-12">
-                            <Video className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                            <h3 className="text-xl font-semibold text-gray-300 mb-2">No webinars found</h3>
-                            <p className="text-gray-400">Try adjusting your search terms or category filter</p>
-                        </div>
-                    )}
-                </div>
-            </section>
-
-            {/* Newsletter Signup */}
-            <section className="py-20 bg-gradient-to-r from-blue-900/20 to-cyan-900/20">
-                <div className="max-w-4xl mx-auto px-6 text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
+                <div className="space - y-2 mb - 4">
+                  <p className="text - gray - 400 text - sm flex items - center">
+                    <svg
+                      className="w - 4 h - 4 mr - 2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
                     >
-                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                            Stay Informed
-                        </h2>
-                        <p className="text-xl text-gray-300 mb-8">
-                            Subscribe to our webinar series and never miss an opportunity to learn from industry experts and technology leaders.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                            <input
-                                type="email"
-                                placeholder="Enter your email"
-                                className="flex-1 px-6 py-4 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M8 7V3m8 4V3m - 9 8h10M5 21h14a2 2 0 002 - 2V7a2 2 0 00 - 2-2H5a2 2 0 00 - 2 2v12a2 2 0 002 2z"
                             />
-                            <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg font-semibold text-white hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
-                                Subscribe
-                            </button>
-                        </div>
-                    </motion.div>
+                    </svg>
+                    {webinar.date}
+                  </p>
+                  <p className="text - gray - 400 text - sm flex items - center">
+                    <svg
+                      className="w - 4 h - 4 mr - 2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 8v4l3 3m6 - 3a9 9 0 11 - 18 0 9 9 0 0118 0z"
+                            />
+                    </svg>
+                    {webinar.duration}
+                  </p>
+                  <p className="text - gray - 400 text - sm flex items - center">
+                    <svg
+                      className="w - 4 h - 4 mr - 2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M16 7a4 4 0 11 - 8 0 4 4 0 018 0zM12 14a7 7 0 00 - 7 7h14a7 7 0 00 - 7-7z"
+                            />
+                    </svg>
+                    {webinar.speaker}
+                  </p>
                 </div>
             </section>
+
+                <Link
+                  to="/contact"
+                  className="inline - flex items - center text - blue - 400 hover:text - blue - 300 transition - colors duration - 300"
+                >
+                  Register Now{' '}
+                  <svg
+                    className="ml - 2 h - 4 w - 4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7 - 7 7"
+                          />
+                  </svg>
+                </Link>
+              </div>) ) }
+          </div>
 
             {/* CTA Section */}
             <section className="py-20">

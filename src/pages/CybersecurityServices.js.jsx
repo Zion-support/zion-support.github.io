@@ -36,32 +36,32 @@ export default function CybersecurityServices() {
         {
             title: "Network Security",
             description: "Firewall configuration, intrusion detection, and network monitoring",
-            icon: <Network className="h-8 w-8 text-zion-cyan"/>
+            icon: <Network className="h - 8 w - 8 text - zion - cyan"      />
         },
         {
             title: "Endpoint Protection",
             description: "Advanced antivirus, malware protection, and device security",
-            icon: <Smartphone className="h-8 w-8 text-zion-purple"/>
+            icon: <Smartphone className="h - 8 w - 8 text - zion - purple"      />
         },
         {
             title: "Cloud Security",
             description: "AWS, Azure, and Google Cloud security assessment and hardening",
-            icon: <Cloud className="h-8 w-8 text-zion-blue"/>
+            icon: <Cloud className="h - 8 w - 8 text - zion - blue"      />
         },
         {
             title: "Data Protection",
             description: "Encryption, backup security, and data loss prevention",
-            icon: <Database className="h-8 w-8 text-zion-cyan"/>
+            icon: <Database className="h - 8 w - 8 text - zion - cyan"      />
         },
         {
             title: "Server Security",
             description: "Server hardening, access control, and monitoring",
-            icon: <Server className="h-8 w-8 text-zion-purple"/>
+            icon: <Server className="h - 8 w - 8 text - zion - purple"      />
         },
         {
             title: "Compliance",
-            description: "GDPR, HIPAA, SOC 2, and industry-specific compliance",
-            icon: <Shield className="h-8 w-8 text-zion-blue"/>
+            description: "GDPR, HIPAA, SOC 2, and industry - specific compliance",
+            icon: <Shield className="h - 8 w - 8 text - zion - blue"      />
         }
     ];
     const pricingPlans = [
@@ -130,8 +130,8 @@ export default function CybersecurityServices() {
             rating: 5
         }
     ];
-    return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
-      <SEO title="Cybersecurity Services - Zion Tech Group" description="Protect your business with comprehensive cybersecurity services including penetration testing, security audits, and incident response." keywords="cybersecurity, penetration testing, security audit, incident response, Zion Tech Group" canonical="https://ziontechgroup.com/cybersecurity-services"/>
+    return (<div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - blue - dark to - zion - slate - dark">
+      <SEO title="Cybersecurity Services - Zion Tech Group" description="Protect your business with comprehensive cybersecurity services including penetration testing, security audits, and incident response." keywords="cybersecurity, penetration testing, security audit, incident response, Zion Tech Group" canonical="https://ziontechgroup.com / cybersecurity - services"      />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">
@@ -254,9 +254,9 @@ export default function CybersecurityServices() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-3 mb-6">
-                    {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-zion-slate-light">
-                        <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0"/>
+                  <ul className="space - y-3 mb - 6">
+                    {plan.features.map ( (feature, featureIndex) => (<li key={featureIndex} className="flex items - center text - zion - slate - light">
+                        <CheckCircle className="h - 5 w - 5 text - zion - cyan mr - 3 flex - shrink - 0"      />
                         {feature}
                       </li>))}
                   </ul>
@@ -283,11 +283,11 @@ export default function CybersecurityServices() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
-                <CardContent className="pt-6">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="h-5 w-5 text-yellow-400 fill-current"/>))}
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 max - w-6xl mx - auto">
+            {testimonials.map ( (testimonial, index) => (<Card key={index} className="bg - zion - slate - dark / 50 border - zion - purple / 20 hover:border - zion - purple / 40 transition - all duration - 300">
+                <CardContent className="pt - 6">
+                  <div className="flex mb - 4">
+                    {[...Array (testimonial.rating) ].map ( (_, i) => (<Star key={i} className="h - 5 w - 5 text - yellow - 400 fill - current"      />) ) }
                   </div>
                   <p className="text-zion-slate-light mb-4 italic">"{testimonial.content}"</p>
                   <div>

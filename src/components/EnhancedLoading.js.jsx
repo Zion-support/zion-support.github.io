@@ -33,9 +33,10 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
             }} transition={{
                 duration: 1.2,
                 repeat: Infinity,
-                delay: i * 0.1
-            }}/>))}
-    </div>);
+  delay: i * 0.1
+
+}}      />) ) }
+    </div>) ;
     const renderVariant = () => {
         switch (variant) {
             case 'dots':

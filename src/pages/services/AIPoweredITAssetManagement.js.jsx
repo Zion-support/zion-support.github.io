@@ -94,93 +94,12 @@ const responseTimes = [
 
 export default function ITOnsiteServices() {
   return (
-    <>
-      <SEO 
-        title="IT Onsite Services | Zion Tech Group"
-        description="Professional on-site IT support and services. Hardware installation, emergency support, staff training, and technical expertise delivered to your location."
-        canonical="https://ziontechgroup.com/services/onsite-support"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="w-24 h-24 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Wrench className="w-12 h-12 text-white" />
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                IT <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Onsite Services</span>
-              </h1>
-              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-                Professional IT support and services delivered directly to your location. 
-                From hardware installation to emergency support, we bring expertise to you.
-              </p>
-              
-              <div className="flex flex-wrap justify-center gap-4">
-                <a 
-                  href="/contact" 
-                  className="btn-primary px-8 py-3 text-lg font-semibold"
-                >
-                  Schedule Service
-                </a>
-                <a 
-                  href="#services" 
-                  className="btn-outline-white px-8 py-3 text-lg font-semibold"
-                >
-                  View Services
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Onsite IT Services
-              </h2>
-              <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-                Comprehensive on-site IT support covering hardware, software, networking, 
-                and training needs for your organization.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {onsiteServices.map((service, index) => (
-                <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                  <p className="text-zion-slate-light mb-4">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                        <span className="text-zion-slate-light text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex justify-center mb-6">
+            <div className="p-3 bg-blue-600/20 rounded-full">
+              <CogIcon className="h-12 w-12 text-blue-400"       />
             </div>
           </div>
         </section>

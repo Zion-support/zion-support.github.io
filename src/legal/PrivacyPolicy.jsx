@@ -25,9 +25,15 @@ Questions about this policy can be sent to [privacy@ziontechgroup.com](mailto:pr
 `;
 const draft = true;
 export default function PrivacyPolicy() {
-    return (<>
-      <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https://app.ziontechgroup.com/privacy" noindex={draft}/>
-      <Header />
+  return (
+    <>
+      <SEO
+        title="Privacy Policy"
+        description="Learn how Zion Tech Group handles your data and protects your privacy."
+        canonical="https://app.ziontechgroup.com/privacy"
+        noindex={draft}
+            />
+      <Header       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ReactMarkdown className="prose dark:prose-invert max-w-none">
@@ -35,6 +41,7 @@ export default function PrivacyPolicy() {
           </ReactMarkdown>
         </div>
       </main>
-      <Footer />
-    </>);
+      <Footer       />
+    </>
+  );
 }

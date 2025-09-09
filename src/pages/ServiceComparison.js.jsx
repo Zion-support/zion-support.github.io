@@ -5,35 +5,39 @@ import { AdvancedServiceComparison } from '../components/AdvancedServiceComparis
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 const ServiceComparison = () => {
-    const features = [
-        {
-            icon: <BarChart3 className="w-6 h-6 text-zion-cyan"/>,
-            title: 'Advanced Filtering',
-            description: 'Filter services by category, complexity, price range, and technology stack'
-        },
-        {
-            icon: <Target className="w-6 h-6 text-zion-purple"/>,
-            title: 'Smart Comparison',
-            description: 'Compare multiple services side-by-side with detailed feature analysis'
-        },
-        {
-            icon: <TrendingUp className="w-6 h-6 text-zion-green"/>,
-            description: 'Real-time ratings and popularity indicators to guide your decision'
-        },
-        {
-            icon: <Award className="w-6 h-6 text-zion-orange"/>,
-            title: 'Expert Insights',
-            description: 'Get detailed insights into each service\'s capabilities and target audience'
-        }
-    ];
-    const benefits = [
-        'Make informed decisions with comprehensive service comparisons',
-        'Find the perfect service tier for your business needs and budget',
-        'Understand complexity levels and implementation requirements',
-        'Compare pricing, features, and benefits across different solutions',
-        'Get personalized recommendations based on your requirements'
-    ];
-    return (<div className="min-h-screen bg-zion-blue-dark">
+  const features = [
+    {
+      icon: <BarChart3 className="w - 6 h - 6 text - zion - cyan"       />,
+      title: 'Advanced Filtering',
+      description:
+        'Filter services by category, complexity, price range, and technology stack',
+    },
+    {
+      icon: <Target className="w - 6 h - 6 text - zion - purple"       />,
+      title: 'Smart Comparison',
+      description:
+        'Compare multiple services side - by - side with detailed feature analysis',
+    },
+    {
+      icon: <TrendingUp className="w - 6 h - 6 text - zion - green"       />,
+      description:
+        'Real - time ratings and popularity indicators to guide your decision',
+    },
+    {
+      icon: <Award className="w - 6 h - 6 text - zion - orange"       />,
+      title: 'Expert Insights',
+      description:
+        "Get detailed insights into each service's capabilities and target audience",
+    },
+  ];
+  const benefits = [
+    'Make informed decisions with comprehensive service comparisons',
+    'Find the perfect service tier for your business needs and budget',
+    'Understand complexity levels and implementation requirements',
+    'Compare pricing, features, and benefits across different solutions',
+    'Get personalized recommendations based on your requirements',
+  ];
+  return (<div className="min - h-screen bg - zion - blue - dark">
       {/* Hero Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -111,11 +115,18 @@ const ServiceComparison = () => {
             </p>
           </motion.div>
 
-          <div className="space-y-4">
-            {benefits.map((benefit, index) => (<motion.div key={index} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0"/>
-                <span className="text-zion-slate-dark">{benefit}</span>
-              </motion.div>))}
+          <div className="space - y-4">
+            {benefits.map ( (benefit, index) => (<motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items - start gap - 3"
+              >
+                <CheckCircle className="w - 5 h - 5 text - zion - cyan mt - 1 flex - shrink - 0"       />
+                <span className="text - zion - slate - dark">{benefit}</span>
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -133,7 +144,7 @@ const ServiceComparison = () => {
             </p>
           </motion.div>
 
-          <AdvancedServiceComparison />
+          <AdvancedServiceComparison       />
         </div>
       </section>
 
@@ -148,13 +159,21 @@ const ServiceComparison = () => {
               Our expert team is here to help you navigate through our services 
               and find the perfect solution for your business needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Service Selection Help', '_blank')}>
-                <Users className="w-5 h-5 mr-2"/>
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center">
+              <Button
+                className="bg - white text - zion - purple hover:bg - zion - slate - light text - lg px - 8 py - 4"
+                onClick={ () =>
+                  window.open ('mailto:kleber@ziontechgroup.com?subject = Service Selection Help',
+                    '_blank') }
+              >
+                <Users className="w - 5 h - 5 mr - 2"       />
                 Get Expert Consultation
               </Button>
-              <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick={() => window.open('tel:+13024640950', '_blank')}>
-                <Zap className="w-5 h-5 mr-2"/>
+              <Button
+                className="border - white text - white hover:bg - white hover:text - zion - purple text - lg px - 8 py - 4"
+                onClick={ () => window.open ('tel:+13024640950', '_blank') }
+              >
+                <Zap className="w - 5 h - 5 mr - 2"       />
                 Call Now
               </Button>
             </div>

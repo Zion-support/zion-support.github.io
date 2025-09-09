@@ -4,21 +4,21 @@ import { Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, 
 export function MicroSaasShowcase() {
     const [activeCategory, setActiveCategory] = useState('all');
     const categories = [
-        { id: 'all', name: 'All Services', icon: <Sparkles className="h-5 w-5"/> },
-        { id: 'ai-ml', name: 'AI & ML', icon: <Cpu className="h-5 w-5"/> },
-        { id: 'security', name: 'Security', icon: <Shield className="h-5 w-5"/> },
-        { id: 'analytics', name: 'Analytics', icon: <BarChart3 className="h-5 w-5"/> },
-        { id: 'automation', name: 'Automation', icon: <Zap className="h-5 w-5"/> },
-        { id: 'cloud', name: 'Cloud', icon: <Cloud className="h-5 w-5"/> }
+        { id: 'all', name: 'All Services', icon: <Sparkles className="h - 5 w - 5"      /> },
+        { id: 'ai - ml', name: 'AI & ML', icon: <Cpu className="h - 5 w - 5"      /> },
+        { id: 'security', name: 'Security', icon: <Shield className="h - 5 w - 5"      /> },
+        { id: 'analytics', name: 'Analytics', icon: <BarChart3 className="h - 5 w - 5"      /> },
+        { id: 'automation', name: 'Automation', icon: <Zap className="h - 5 w - 5"      /> },
+        { id: 'cloud', name: 'Cloud', icon: <Cloud className="h - 5 w - 5"      /> }
     ];
     const microSaasServices = [
         {
             id: 'ai-content-optimizer',
             title: 'AI Content Optimizer Pro',
-            description: 'Advanced AI-powered content optimization tool that analyzes, improves, and optimizes your content for SEO, readability, and engagement.',
-            icon: <Cpu className="h-8 w-8"/>,
-            category: 'ai-ml',
-            price: '$29/month',
+            description: 'Advanced AI - powered content optimization tool that analyzes, improves, and optimizes your content for SEO, readability, and engagement.',
+            icon: <Cpu className="h - 8 w - 8"      />,
+            category: 'ai - ml',
+            price: '$29 / month',
             rating: 4.9,
             features: ['SEO optimization', 'Readability scoring', 'Content suggestions', 'Performance analytics'],
             badge: 'Popular',
@@ -27,8 +27,8 @@ export function MicroSaasShowcase() {
         {
             id: 'cyber-threat-monitor',
             title: 'Cyber Threat Monitor',
-            description: 'Real-time cybersecurity threat detection and monitoring system with AI-powered analysis and automated response capabilities.',
-            icon: <Shield className="h-8 w-8"/>,
+            description: 'Real - time cybersecurity threat detection and monitoring system with AI - powered analysis and automated response capabilities.',
+            icon: <Shield className="h - 8 w - 8"      />,
             category: 'security',
             price: '$99/month',
             rating: 4.8,
@@ -40,7 +40,7 @@ export function MicroSaasShowcase() {
             id: 'data-visualization-studio',
             title: 'Data Visualization Studio',
             description: 'Interactive data visualization platform that transforms complex datasets into actionable insights with customizable dashboards and reports.',
-            icon: <BarChart3 className="h-8 w-8"/>,
+            icon: <BarChart3 className="h - 8 w - 8"      />,
             category: 'analytics',
             price: '$49/month',
             rating: 4.7,
@@ -51,8 +51,8 @@ export function MicroSaasShowcase() {
         {
             id: 'smart-email-marketing',
             title: 'Smart Email Marketing Platform',
-            description: 'AI-driven email marketing solution for personalized campaigns, automated workflows, and advanced audience segmentation.',
-            icon: <Users className="h-8 w-8"/>,
+            description: 'AI - driven email marketing solution for personalized campaigns, automated workflows, and advanced audience segmentation.',
+            icon: <Users className="h - 8 w - 8"      />,
             category: 'automation',
             price: '$39/month',
             rating: 4.6,
@@ -63,10 +63,10 @@ export function MicroSaasShowcase() {
         {
             id: 'ai-customer-support',
             title: 'AI Customer Support Assistant',
-            description: 'Intelligent chatbot and virtual assistant for 24/7 customer support, automated query resolution, and personalized user experience.',
-            icon: <Zap className="h-8 w-8"/>,
-            category: 'ai-ml',
-            price: '$59/month',
+            description: 'Intelligent chatbot and virtual assistant for 24 / 7 customer support, automated query resolution, and personalized user experience.',
+            icon: <Zap className="h - 8 w - 8"      />,
+            category: 'ai - ml',
+            price: '$59 / month',
             rating: 4.9,
             features: ['24/7 availability', 'AI-powered responses', 'Multi-language support', 'Integration APIs'],
             badge: 'AI',
@@ -76,7 +76,7 @@ export function MicroSaasShowcase() {
             id: 'smart-invoice-manager',
             title: 'Smart Invoice Manager',
             description: 'Automated invoicing and billing system with smart reminders, expense tracking, and financial reporting for small to medium businesses.',
-            icon: <Database className="h-8 w-8"/>,
+            icon: <Database className="h - 8 w - 8"      />,
             category: 'automation',
             price: '$19/month',
             rating: 4.5,
@@ -88,7 +88,7 @@ export function MicroSaasShowcase() {
             id: 'cloud-infrastructure-manager',
             title: 'Cloud Infrastructure Manager',
             description: 'Comprehensive cloud infrastructure management platform with monitoring, optimization, and cost management capabilities.',
-            icon: <Cloud className="h-8 w-8"/>,
+            icon: <Cloud className="h - 8 w - 8"      />,
             category: 'cloud',
             price: '$79/month',
             rating: 4.8,
@@ -100,9 +100,9 @@ export function MicroSaasShowcase() {
             id: 'ai-seo-analyzer',
             title: 'AI SEO Analyzer',
             description: 'Advanced SEO analysis tool powered by AI that provides actionable insights, competitor analysis, and optimization recommendations.',
-            icon: <Globe className="h-8 w-8"/>,
-            category: 'ai-ml',
-            price: '$45/month',
+            icon: <Globe className="h - 8 w - 8"      />,
+            category: 'ai - ml',
+            price: '$45 / month',
             rating: 4.7,
             features: ['AI-powered analysis', 'Competitor insights', 'Keyword research', 'Performance tracking'],
             badge: 'SEO',
@@ -115,28 +115,28 @@ export function MicroSaasShowcase() {
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark/50 via-zion-slate/30 to-zion-blue-dark/50">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <Sparkles className="h-8 w-8 text-zion-cyan"/>
-            <h2 className="text-4xl font-bold tracking-tight text-white">Micro SAAS Solutions</h2>
-            <Sparkles className="h-8 w-8 text-zion-cyan"/>
+        <div className="text - center mb - 16">
+          <div className="flex items - center justify - center gap - 3 mb - 6">
+            <Sparkles className="h - 8 w - 8 text - zion - cyan"      />
+            <h2 className="text - 4xl font - bold tracking - tight text - white">Micro SAAS Solutions</h2>
+            <Sparkles className="h - 8 w - 8 text - zion - cyan"      />
           </div>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
             Transform your business with our curated collection of intelligent, innovative, and cost-effective micro SAAS services.
             From AI-powered tools to enterprise security solutions.
           </p>
-          <div className="flex items-center justify-center gap-4">
-            <div className="flex items-center gap-2 text-zion-slate-light">
-              <TrendingUp className="h-5 w-5 text-zion-cyan"/>
-              <span>12 Categories</span>
+          <div className="flex items - center justify - center gap - 4">
+            <div className="flex items - center gap - 2 text - zion - slate - light">
+              <TrendingUp className="h - 5 w - 5 text - zion - cyan"      />
+              <span > 12 Categories</span>
             </div>
-            <div className="flex items-center gap-2 text-zion-slate-light">
-              <Star className="h-5 w-5 text-yellow-400"/>
-              <span>4.8★ Rating</span>
+            <div className="flex items - center gap - 2 text - zion - slate - light">
+              <Star className="h - 5 w - 5 text - yellow - 400"      />
+              <span > 4.8★ Rating</span>
             </div>
-            <div className="flex items-center gap-2 text-zion-slate-light">
-              <Users className="h-5 w-5 text-zion-purple"/>
-              <span>24/7 Support</span>
+            <div className="flex items - center gap - 2 text - zion - slate - light">
+              <Users className="h - 5 w - 5 text - zion - purple"      />
+              <span > 24 / 7 Support</span>
             </div>
           </div>
         </div>
@@ -184,11 +184,11 @@ export function MicroSaasShowcase() {
               </div>
 
               {/* Price and Rating */}
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-lg font-bold text-white">{service.price}</span>
-                <div className="flex items-center gap-1">
-                  <Star className="h-4 w-4 fill-yellow-400 text-yellow-400"/>
-                  <span className="text-sm text-zion-slate-light">{service.rating}</span>
+              <div className="flex items - center justify - between mb - 4">
+                <span className="text - lg font - bold text - white">{service.price}</span>
+                <div className="flex items - center gap - 1">
+                  <Star className="h - 4 w - 4 fill - yellow - 400 text - yellow - 400"      />
+                  <span className="text - sm text - zion - slate - light">{service.rating}</span>
                 </div>
               </div>
 
@@ -201,11 +201,10 @@ export function MicroSaasShowcase() {
         </div>
 
         {/* View All Button */}
-        <div className="text-center">
-          <Link to="/micro-saas-services" className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/25">
-            <Sparkles className="h-5 w-5"/>
-            View All Micro SAAS Services
-            <ArrowRight className="h-5 w-5"/>
+        <div className="text - center">
+          <Link to="/micro - saas - services" className="inline - flex items - center gap - 2 bg - gradient - to - r from - zion - purple to - zion - cyan hover:from - zion - purple - light hover:to - zion - cyan - light text - white px - 8 py - 4 rounded - lg font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl hover:shadow - zion - purple / 25">
+            <Sparkles className="h - 5 w - 5"      />
+            View All Micro SAAS Services < ArrowRight className="h - 5 w - 5"/>
           </Link>
         </div>
       </div>

@@ -6,14 +6,14 @@ const AdvancedServices = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
-          {[...Array(30)].map((_, i) => (<div key={i} className="absolute w-2 h-2 bg-cyan-400/20 rounded-full animate-float" style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${3 + Math.random() * 4}s`,
-            }}/>))}
+        <div className="absolute inset - 0">
+          <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 10 via - blue - 500 / 10 to - purple - 500 / 10"></div>
+          {[...Array (30) ].map ( (_, i) => (<div key={i} className="absolute w - 2 h - 2 bg - cyan - 400 / 20 rounded - full animate - float" style={{
+                left: `${Math.random () * 100}%`,
+                top: `${Math.random () * 100}%`,
+                animationDelay: `${Math.random () * 5}s`,
+                animationDuration: `${3 + Math.random () * 4}s`,
+            }}      />) ) }
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -66,7 +66,7 @@ const AdvancedServices = () => {
       </section>
 
       {/* Services Showcase */}
-      <FuturisticServicesShowcase />
+      <FuturisticServicesShowcase       />
 
       {/* Technology Stack Section */}
       <section className="py-20 relative">

@@ -74,10 +74,25 @@ const ComprehensivePricing2026 = () => {
           </motion.p>
 
           {/* Billing Toggle */}
-          <motion.div className="flex items-center justify-center gap-4 mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
-            <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
-            <button onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')} className={`relative w-16 h-8 bg-white/20 rounded-full p-1 transition-all duration-300 ${billingCycle === 'annual' ? 'bg-cyan-500' : ''}`}>
-              <div className={`w-6 h-6 bg-white rounded-full transition-all duration-300 ${billingCycle === 'annual' ? 'translate-x-8' : ''}`}/>
+          <motion.div
+            className="flex items - center justify - center gap - 4 mb - 8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <span
+              className={`text - lg ${billingCycle === 'monthly' ? 'text - white' : 'text - gray - 400'}`}
+            >
+              Monthly
+            </span>
+            <button
+              onClick={ () =>
+                setBillingCycle (billingCycle === 'monthly' ? 'annual' : 'monthly') }
+              className={`relative w - 16 h - 8 bg - white / 20 rounded - full p - 1 transition - all duration - 300 ${billingCycle === 'annual' ? 'bg - cyan - 500' : ''}`}
+            >
+              <div
+                className={`w - 6 h - 6 bg - white rounded - full transition - all duration - 300 ${billingCycle === 'annual' ? 'translate - x-8' : ''}`}
+                    />
             </button>
             <span className={`text-lg ${billingCycle === 'annual' ? 'text-white' : 'text-gray-400'}`}>
               Annual <span className="text-cyan-400 text-sm">(Save 20%)</span>

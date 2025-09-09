@@ -12,9 +12,26 @@ function withAuth(Component) {
         }, [isLoggedIn, router]);
         if (!isLoggedIn) {
             return null;
-        }
-        return <Component {...props}/>;
+
+        return <Component {...props}      />;
     };
     return Wrapped;
-}
+
+export default withAuth;
+}}}
+                router('/login?next=/community/new');
+            }
+        }, [isLoggedIn, router]);
+        if (!isLoggedIn) {
+            return null}
+        return <Component {...props}      />};
+    return Wrapped}
+export default withAuth;
+
+export default withAuth;
+export default withAuth;
+export default withAuth;
+export default withAuth;
+export default withAuth;
+export default withAuth;
 export default withAuth;

@@ -1,38 +1,60 @@
 import React, { useState } from 'react';
-import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Star, Mail, Phone, MapPin, TrendingUp, Shield, Zap, Globe, Clock, DollarSign, Users, Award } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-export default function PricingGuidePage() {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const filteredServices = selectedCategory === 'all'
-        ? EXPANDED_SERVICES
-        : EXPANDED_SERVICES.filter(service => service.category === selectedCategory);
-    const getCategoryStats = (category) => {
-        const services = EXPANDED_SERVICES.filter(s => s.category === category);
-        const avgPrice = services.reduce((sum, s) => sum + (s.price || 0), 0) / services.length;
-        const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length;
-        return { count: services.length, avgPrice, avgRating };
-    };
-    const formatPrice = (price) => {
-        if (price >= 1000) {
-            return `$${(price / 1000).toFixed(1)}K`;
-        }
-        return `$${price}`;
-    };
-    const getServiceTier = (price) => {
-        if (price < 2000)
-            return { tier: "Starter", color: "bg-green-100 text-green-800" };
-        if (price < 5000)
-            return { tier: "Professional", color: "bg-blue-100 text-blue-800" };
-        if (price < 10000)
-            return { tier: "Enterprise", color: "bg-purple-100 text-purple-800" };
-        return { tier: "Premium", color: "bg-orange-100 text-orange-800" };
-    };
-    return (<div className="min-h-screen bg-background">
-      <SEO title="Service Pricing Guide - Zion Tech Group" description="Complete pricing guide for all our IT and AI services. Compare prices, features, and choose the perfect solution for your business needs." keywords="service pricing, IT services cost, AI development pricing, cybersecurity pricing, cloud migration cost" canonical="https://ziontechgroup.com/pricing"/>
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data / expandedServices';
+import { SEO } from '@/components / SEO';
+export default function PricingGuidePage () {
+import {
+import {
+
+
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+  Star,
+  Mail,
+  Phone,
+  MapPin,
+  TrendingUp,
+  Shield,
+  Zap,
+  Globe,
+  Clock,
+  DollarSign,
+  Users,
+  Award,
+} from 'lucide - react';
+  const [selectedCategory, setSelectedCategory] = useState ('all') ;
+  const filteredServices = selectedCategory === 'all'
+      ? EXPANDED_SERVICES
+      : EXPANDED_SERVICES.filter (service => service.category === selectedCategory) ;
+  const getCategoryStats = category => {
+    const services = EXPANDED_SERVICES.filter (s => s.category === category) ;
+    const avgRating = services.reduce ( (sum, s) => sum + (s.rating || 0) , 0) / services.length;
+    return { count: services.length, avgPrice, avgRating };
+  };
+  const formatPrice = price => {
+    if (price >= 1000) {
+      return `$${ (price / 1000) .toFixed (1) }K`;
+    }
+    return `$${price}`;
+  };
+  const getServiceTier = price => {
+    if (price < 2000) return { tier: 'Starter', color: 'bg - green - 100 text - green - 800' };
+    if (price < 5000) return { tier: 'Professional', color: 'bg - blue - 100 text - blue - 800' };
+    if (price < 10000) return { tier: 'Enterprise', color: 'bg - purple - 100 text - purple - 800' };
+    return { tier: 'Premium', color: 'bg - orange - 100 text - orange - 800' };
+  };
+  return (<div className="min - h-screen bg - background">
+      <SEO
+        title="Service Pricing Guide - Zion Tech Group"
+        description="Complete pricing guide for all our IT and AI services. Compare prices, features, and choose the perfect solution for your business needs."
+        keywords="service pricing, IT services cost, AI development pricing, cybersecurity pricing, cloud migration cost"
+        canonical="https://ziontechgroup.com / pricing"
+            />
 
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
@@ -69,20 +91,20 @@ export default function PricingGuidePage() {
           </div>
 
           {/* Contact Information */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4">Need Custom Pricing?</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-zion-cyan"/>
+          <div className="bg - white / 10 backdrop - blur - sm rounded - lg p - 6 max - w-2xl mx - auto">
+            <h3 className="text - xl font - semibold mb - 4">Need Custom Pricing?</h3>
+            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 text - sm">
+              <div className="flex items - center space - x-2">
+                <Phone className="w - 4 h - 4 text - zion - cyan"       />
                 <span>+1 302 464 0950</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4 text-zion-cyan"/>
-                <span>kleber@ziontechgroup.com</span>
+              <div className="flex items - center space - x-2">
+                <Mail className="w - 4 h - 4 text - zion - cyan"       />
+                <span > kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4 text-zion-cyan"/>
-                <span>Middletown, DE</span>
+              <div className="flex items - center space - x-2">
+                <MapPin className="w - 4 h - 4 text - zion - cyan"       />
+                <span > Middletown, DE</span>
               </div>
             </div>
           </div>
@@ -124,27 +146,33 @@ export default function PricingGuidePage() {
             const tier = getServiceTier(service.price || 0);
             return (<Card key={service.id} className="h-full hover:shadow-lg transition-shadow duration-300">
                 <div className="relative">
-                  <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
-                  <div className="absolute top-2 left-2">
-                    <Badge className={tier.color}>
-                      {tier.tier}
-                    </Badge>
+                  <img
+                    src={service.images[0]}
+                    alt={service.title}
+                    className="w - full h - 48 object - cover rounded - t-lg"
+                        />
+                  <div className="absolute top - 2 left - 2">
+                    <Badge className={tier.color}>{tier.tier}</Badge>
                   </div>
-                  {service.featured && (<Badge className="absolute top-2 right-2 bg-zion-purple text-white">
-                      <Star className="w-3 h-3 mr-1"/>
+                  {service.featured && (<Badge className="absolute top - 2 right - 2 bg - zion - purple text - white">
+                      <Star className="w - 3 h - 3 mr - 1"       />
                       Featured
                     </Badge>)}
                 </div>
 
-                <CardHeader className="pb-3">
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <CardTitle className="text-lg leading-tight mb-2">{service.title}</CardTitle>
-                      <div className="flex items-center space-x-2 mb-2">
-                        <div className="flex items-center space-x-1">
-                          <Star className="w-4 h-4 fill-yellow-400 text-yellow-400"/>
-                          <span className="text-sm text-gray-600">{service.rating}</span>
-                          <span className="text-sm text-gray-500">({service.reviewCount})</span>
+                <CardHeader className="pb - 3">
+                  <div className="flex items - start justify - between">
+                    <div className="flex - 1">
+                      <CardTitle className="text - lg leading - tight mb - 2">
+                        {service.title}
+                      </CardTitle>
+                      <div className="flex items - center space - x-2 mb - 2">
+                        <div className="flex items - center space - x-1">
+                          <Star className="w - 4 h - 4 fill - yellow - 400 text - yellow - 400"       />
+                          <span className="text - sm text - gray - 600">
+                            {service.rating}
+                          </span>
+                          <span className="text - sm text - gray - 500"> ({service.reviewCount}) </span>
                         </div>
                         {service.aiScore && (<Badge variant="outline" className="text-xs">
                             AI: {service.aiScore}
@@ -166,18 +194,18 @@ export default function PricingGuidePage() {
                   </CardDescription>
 
                   {/* Service Details */}
-                  <div className="space-y-2 text-sm text-gray-600 mb-4">
-                    <div className="flex items-center space-x-2">
-                      <Clock className="w-4 h-4"/>
-                      <span>Delivery: {service.availability}</span>
+                  <div className="space - y-2 text - sm text - gray - 600 mb - 4">
+                    <div className="flex items - center space - x-2">
+                      <Clock className="w - 4 h - 4"       />
+                      <span > Delivery: {service.availability}</span>
                     </div>
-                    <div className="flex items-center space-x-2">
-                      <Globe className="w-4 h-4"/>
-                      <span>Location: {service.location}</span>
+                    <div className="flex items - center space - x-2">
+                      <Globe className="w - 4 h - 4"       />
+                      <span > Location: {service.location}</span>
                     </div>
-                    <div className="flex items-center space-x-2">
-                      <DollarSign className="w-4 h-4"/>
-                      <span>Category: {service.category}</span>
+                    <div className="flex items - center space - x-2">
+                      <DollarSign className="w - 4 h - 4"       />
+                      <span > Category: {service.category}</span>
                     </div>
                   </div>
 
@@ -221,37 +249,37 @@ export default function PricingGuidePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-green-600"/>
+          <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 8">
+            <div className="text - center">
+              <div className="w - 16 h - 16 bg - green - 100 rounded - full flex items - center justify - center mx - auto mb - 4">
+                <TrendingUp className="w - 8 h - 8 text - green - 600"       />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Starter</h3>
               <p className="text-gray-600 mb-2">$0 - $2K</p>
               <p className="text-gray-600 text-sm">Basic implementations and simple integrations</p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-blue-600"/>
+            <div className="text - center">
+              <div className="w - 16 h - 16 bg - blue - 100 rounded - full flex items - center justify - center mx - auto mb - 4">
+                <Users className="w - 8 h - 8 text - blue - 600"       />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Professional</h3>
               <p className="text-gray-600 mb-2">$2K - $5K</p>
               <p className="text-gray-600 text-sm">Standard business solutions with customization</p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-purple-600"/>
+            <div className="text - center">
+              <div className="w - 16 h - 16 bg - purple - 100 rounded - full flex items - center justify - center mx - auto mb - 4">
+                <Award className="w - 8 h - 8 text - purple - 600"       />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise</h3>
               <p className="text-gray-600 mb-2">$5K - $10K</p>
               <p className="text-gray-600 text-sm">Complex solutions with advanced features</p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-orange-600"/>
+            <div className="text - center">
+              <div className="w - 16 h - 16 bg - orange - 100 rounded - full flex items - center justify - center mx - auto mb - 4">
+                <TrendingUp className="w - 8 h - 8 text - orange - 600"       />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Premium</h3>
               <p className="text-gray-600 mb-2">$10K+</p>
@@ -267,27 +295,27 @@ export default function PricingGuidePage() {
           <h2 className="text-3xl font-bold text-white mb-8">
             Why Our Pricing is Competitive
           </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-white"/>
+
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 max - w-4xl mx - auto">
+            <div className="text - center">
+              <div className="w - 16 h - 16 bg - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 4">
+                <Shield className="w - 8 h - 8 text - white"       />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">No Hidden Fees</h3>
               <p className="text-zion-slate-light">Transparent pricing with all costs clearly outlined upfront</p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-white"/>
+            <div className="text - center">
+              <div className="w - 16 h - 16 bg - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 4">
+                <Zap className="w - 8 h - 8 text - white"       />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Rapid Delivery</h3>
               <p className="text-zion-slate-light">Faster turnaround times mean lower overall project costs</p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-8 h-8 text-white"/>
+            <div className="text - center">
+              <div className="w - 16 h - 16 bg - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 4">
+                <Globe className="w - 8 h - 8 text - white"       />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Global Expertise</h3>
               <p className="text-zion-slate-light">Access to world-class talent without premium location costs</p>
@@ -305,15 +333,22 @@ export default function PricingGuidePage() {
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Contact us for a custom quote tailored to your specific requirements
           </p>
-          
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-white">
-              <Mail className="w-5 h-5 mr-2"/>
+
+          <div className="flex flex - col sm:flex - row justify - center gap - 4">
+            <Button
+              size="lg"
+              className="bg - zion - cyan hover:bg - zion - cyan - dark text - white"
+            >
+              <Mail className="w - 5 h - 5 mr - 2"       />
               Request Custom Quote
             </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-              <Phone className="w-5 h-5 mr-2"/>
-              Call +1 302 464 0950
+            <Button
+              size="lg"
+              variant="outline"
+              className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10"
+            >
+              <Phone className="w - 5 h - 5 mr - 2"       />
+              Call + 1 302 464 0950
             </Button>
           </div>
 

@@ -1,26 +1,340 @@
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/Button";
-import { Leaf, Server, Cloud } from "lucide-react";
-import { Link } from "react-router-dom";
-export default function GreenIT() {
-    const greenITSolutions = [
-        {
-            title: "Energy-Efficient Hardware",
-            description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
-            icon: Server,
-        },
-        {
-            title: "Optimized Cooling Systems",
-            description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
-            icon: Cloud,
-        },
-        {
-            title: "Renewable Energy Integration",
-            description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
-            icon: Leaf,
-        }
-    ];
-    return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: "Green IT Solutions - Sustainable Technology", description: "Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance.", keywords: "green IT, sustainable technology, eco-friendly computing, energy efficient hardware", canonical: "https://ziontechgroup.com/green-it" }), _jsx("main", { className: "min-h-screen bg-zion-blue pt-24 pb-20", children: _jsxs("div", { className: "container mx-auto px-4 sm:px-6 lg:px-8", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsx(GradientHeading, { children: "Green IT Solutions" }), _jsx("p", { className: "mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto", children: "Sustainable technology solutions that reduce environmental impact without compromising performance" })] }), _jsxs("div", { className: "mb-16", children: [_jsx("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16", children: _jsxs("div", { className: "grid grid-cols-1 lg:grid-cols-2 gap-12 items-center", children: [_jsxs("div", { children: [_jsx("h2", { className: "text-3xl font-bold text-white mb-6", children: "Sustainable IT for a Better Future" }), _jsx("p", { className: "text-zion-slate-light text-lg mb-6", children: "As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure while maintaining performance and reliability." }), _jsx("p", { className: "text-zion-slate-light text-lg mb-6", children: "From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions for reducing your carbon footprint." }), _jsx("div", { className: "mt-8", children: _jsx(Button, { className: "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple", children: "Explore Green IT Solutions" }) })] }), _jsx("div", { className: "rounded-lg overflow-hidden", children: _jsx("img", { src: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600", alt: "Green IT sustainability", className: "object-cover w-full h-full" }) })] }) }), _jsxs("div", { className: "mb-16", children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-8", children: "Our Green IT Solutions" }), _jsx("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-8", children: greenITSolutions.map((solution, index) => (_jsxs("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors", children: [_jsx("div", { className: "flex justify-center mb-4", children: _jsx(solution.icon, { className: "h-12 w-12 text-zion-cyan" }) }), _jsx("h3", { className: "text-white font-medium text-xl text-center mb-3", children: solution.title }), _jsx("p", { className: "text-zion-slate-light text-center", children: solution.description })] }, index))) })] }), _jsxs("div", { className: "mb-16", children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-6", children: "Why Choose Green IT?" }), _jsxs("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-8", children: [_jsxs("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6", children: [_jsx("h3", { className: "text-white font-medium text-xl mb-4", children: "Environmental Benefits" }), _jsxs("ul", { className: "text-zion-slate-light space-y-2", children: [_jsx("li", { children: "• Reduced carbon footprint and greenhouse gas emissions" }), _jsx("li", { children: "• Lower energy consumption and resource utilization" }), _jsx("li", { children: "• Decreased electronic waste through better lifecycle management" }), _jsx("li", { children: "• Support for renewable energy initiatives" })] })] }), _jsxs("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6", children: [_jsx("h3", { className: "text-white font-medium text-xl mb-4", children: "Business Benefits" }), _jsxs("ul", { className: "text-zion-slate-light space-y-2", children: [_jsx("li", { children: "• Significant cost savings on energy and cooling" }), _jsx("li", { children: "• Enhanced brand reputation and stakeholder relations" }), _jsx("li", { children: "• Compliance with emerging environmental regulations" }), _jsx("li", { children: "• Improved operational efficiency and performance" })] })] })] })] })] }), _jsxs("div", { className: "bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center", children: [_jsx("h2", { className: "text-3xl font-bold text-white mb-6", children: "Ready to implement Green IT solutions?" }), _jsx("p", { className: "text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto", children: "Connect with our experts to discuss how we can help you build a more sustainable IT infrastructure." }), _jsx(Button, { className: "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple", asChild: true, children: _jsx(Link, { to: "/contact", children: "Contact Our Team" }) })] })] }) })] }));
+import { Link } from 'react - router - dom';
+import React from 'react';
+  import {
+export default function Partners () {
+
+
+    Users,
+    Globe,
+    Building2,
+    Award,
+    Star,
+    ArrowRight,
+    CheckCircle,
+    Zap,
+    Shield,
+    Rocket,
+    Target,
+    TrendingUp,
+    Heart,
+    Crown,
+    Sparkles,
+    Flame,
+    Sun,
+    Moon,
+    Infinity,
+  } from 'lucide - react';
+  const partnershipTypes = [
+    {
+      title: 'Technology Partners',
+      description:
+        'Collaborate with leading tech companies to deliver cutting - edge solutions',
+      icon: '🔧',
+      benefits: [
+        'Access to latest technologies',
+        'Joint product development',
+        'Shared marketing opportunities',
+      ],
+    },
+    {
+      title: 'Channel Partners',
+      description:
+        'Expand your reach through our global network of resellers and distributors',
+      icon: '🌐',
+      benefits: [
+        'Increased market presence',
+        'Revenue sharing programs',
+        'Training and certification',
+      ],
+    },
+    {
+      title: 'Strategic Partners',
+      description:
+        'Form long - term alliances for mutual growth and market expansion',
+      icon: '🤝',
+      benefits: [
+        'Joint ventures',
+        'Market expansion support',
+        'Shared R & D initiatives',
+      ],
+    },
+    {
+      title: 'Academic Partners',
+      description:
+        'Partner with universities and research institutions for innovation',
+      icon: '🎓',
+      benefits: [
+        'Research collaboration',
+        'Talent pipeline',
+        'Innovation programs',
+      ],
+    },
+  ];
+  const existingPartners = [
+    {
+      name: 'Microsoft',
+      logo: 'https://images.unsplash.com / photo - 1634942537034 - 2531766767d9?w = 200 & h=200 & fit = crop',
+      category: 'Technology Partner',
+      description: 'Leading cloud and AI solutions provider',
+      year: '2020',
+    },
+    {
+      name: 'Amazon Web Services',
+      logo: 'https://images.unsplash.com / photo - 1558618666 - fcd25c85cd64?w = 200 & h=200 & fit = crop',
+      category: 'Cloud Partner',
+      description: "World's most comprehensive cloud platform",
+      year: '2021',
+    },
+    {
+      name: 'Google Cloud',
+      logo: 'https://images.unsplash.com / photo - 1611162617213 - 2d3e1baee311?w = 200 & h=200 & fit = crop',
+      category: 'AI Partner',
+      description: 'Advanced AI and machine learning solutions',
+      year: '2022',
+    },
+    {
+      name: 'IBM',
+      logo: 'https://images.unsplash.com / photo - 1612815154858 - 60aa4c59eaa6?w = 200 & h=200 & fit = crop',
+      category: 'Enterprise Partner',
+      description: 'Enterprise AI and quantum computing',
+      year: '2021',
+    },
+    {
+      name: 'Stanford University',
+      logo: 'https://images.unsplash.com / photo - 1541339907198 - e08756dedf3f?w = 200 & h=200 & fit = crop',
+      category: 'Academic Partner',
+      description: 'Research collaboration in AI and technology',
+      year: '2023',
+    },
+    {
+      name: 'MIT',
+      logo: 'https://images.unsplash.com / photo - 1562774053 - 701939374585?w = 200 & h=200 & fit = crop',
+      category: 'Research Partner',
+      description: 'Innovation in emerging technologies',
+      year: '2022',
+    },
+  ];
+  const benefits = [
+    {
+      icon: TrendingUp,
+      title: 'Revenue Growth',
+      description:
+        'Access new markets and customer segments through our global network',
+    },
+    {
+      icon: Users,
+      title: 'Network Expansion',
+      description:
+        'Connect with industry leaders and potential customers worldwide',
+    },
+    {
+      icon: Award,
+      title: 'Brand Recognition',
+      description: 'Leverage our established reputation in the tech industry',
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description:
+        'Expand your business presence across multiple countries and regions',
+    },
+  ];
+  return (<div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt - 20">
+      {/* Hero Section */}
+      <section className="py - 16 bg - gradient - to - r from - zion - cyan to - zion - purple">
+        <div className="container mx - auto px - 4 text - center">
+          <h1 className="text - 4xl md:text - 6xl font - bold text - white mb - 6">
+            Partner with Zion Tech Group
+          </h1>
+          <p className="text - xl text - white / 90 mb - 8 max - w-3xl mx - auto">
+            Join our ecosystem of innovative partners and together we'll shape
+            the future of technology
+          </p>
+          <div className="flex flex - col sm:flex - row gap - 4 justify - center">
+            <Link to="/contact">
+              <button className="px - 8 py - 4 bg - white text - zion - blue rounded - lg font - semibold hover:scale - 105 transition - transform">
+                Become a Partner
+              </button>
+            </Link>
+            <Link to="#partnership - types">
+              <button className="px - 8 py - 4 border border - white text - white rounded - lg font - semibold hover:bg - white hover:text - zion - blue transition - colors">
+                Learn More
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
+      {/* Partnership Types */}
+      <section id="partnership - types" className="py - 16">
+        <div className="container mx - auto px - 4">
+          <h2 className="text - 3xl font - bold text - white text - center mb - 12">
+            Partnership Opportunities
+          </h2>
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
+            {partnershipTypes.map ( (type, index) => (<div
+                key={index}
+                className="bg - zion - blue - dark / 50 p - 6 rounded - lg border border - zion - cyan / 20 hover:border - zion - cyan / 50 transition - all duration - 300 hover:scale - 105"
+              >
+                <div className="text - 4xl mb - 4">{type.icon}</div>
+                <h3 className="text - xl font - semibold text - white mb - 3">
+                  {type.title}
+                </h3>
+                <p className="text - zion - slate - light text - sm mb - 4">
+                  {type.description}
+                </p>
+                <ul className="space - y-2">
+                  {type.benefits.map ( (benefit, benefitIndex) => (<li
+                      key={benefitIndex}
+                      className="flex items - center text - zion - slate - light text - sm"
+                    >
+                      <CheckCircle className="w - 4 h - 4 text - zion - cyan mr - 2 flex - shrink - 0"       />
+                      {benefit}
+                    </li>) ) }
+                </ul>
+              </div>) ) }
+          </div>
+        </div>
+      </section>
+      {/* Benefits */}
+      <section className="py - 16 bg - zion - slate - dark">
+        <div className="container mx - auto px - 4">
+          <h2 className="text - 3xl font - bold text - white text - center mb - 12">
+            Why Partner With Us?
+          </h2>
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
+            {benefits.map ( (benefit, index) => (<div key={index} className="text - center">
+                <div className="w - 16 h - 16 bg - zion - cyan / 20 rounded - full flex items - center justify - center mx - auto mb - 4">
+                  <benefit.icon className="w - 8 h - 8 text - zion - cyan"       />
+                </div>
+                <h3 className="text - lg font - semibold text - white mb - 2">
+                  {benefit.title}
+                </h3>
+                <p className="text - zion - slate - light text - sm">
+                  {benefit.description}
+                </p>
+              </div>) ) }
+          </div>
+        </div>
+      </section>
+      {/* Existing Partners */}
+      <section className="py - 16">
+        <div className="container mx - auto px - 4">
+          <h2 className="text - 3xl font - bold text - white text - center mb - 12">
+            Our Trusted Partners
+          </h2>
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
+            {existingPartners.map ( (partner, index) => (<div
+                key={index}
+                className="bg - zion - blue - dark / 50 p - 6 rounded - lg border border - zion - cyan / 20 hover:border - zion - cyan / 50 transition - all duration - 300"
+              >
+                <div className="flex items - center space - x-4 mb - 4">
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="w - 16 h - 16 rounded - lg object - cover"
+                        />
+                  <div>
+                    <h3 className="text - lg font - semibold text - white">
+                      {partner.name}
+                    </h3>
+                    <span className="text - sm text - zion - cyan bg - zion - cyan / 10 px - 2 py - 1 rounded - full">
+                      {partner.category}
+                    </span>
+                  </div>
+                </div>
+                <p className="text - zion - slate - light text - sm mb - 3">
+                  {partner.description}
+                </p>
+                <div className="flex items - center justify - between">
+                  <span className="text - xs text - zion - slate - light">
+                    Partner since {partner.year}
+                  </span>
+                  <button className="text - zion - cyan hover:text - zion - cyan - light transition - colors text - sm">
+                    Learn More
+                  </button>
+                </div>
+              </div>) ) }
+          </div>
+        </div>
+      </section>
+      {/* Partnership Process */}
+      <section className="py - 16 bg - zion - slate - dark">
+        <div className="container mx - auto px - 4">
+          <h2 className="text - 3xl font - bold text - white text - center mb - 12">
+            How to Become a Partner
+          </h2>
+          <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 8">
+            <div className="text - center">
+              <div className="w - 16 h - 16 bg - zion - cyan text - white rounded - full flex items - center justify - center text - 2xl font - bold mx - auto mb - 4">
+                1
+              </div>
+              <h3 className="text - lg font - semibold text - white mb - 2">
+                Initial Contact
+              </h3>
+              <p className="text - zion - slate - light text - sm">
+                Reach out to discuss partnership opportunities
+              </p>
+            </div>
+            <div className="text - center">
+              <div className="w - 16 h - 16 bg - zion - cyan text - white rounded - full flex items - center justify - center text - 2xl font - bold mx - auto mb - 4">
+                2
+              </div>
+              <h3 className="text - lg font - semibold text - white mb - 2">
+                Evaluation
+              </h3>
+              <p className="text - zion - slate - light text - sm">
+                We assess mutual benefits and alignment
+              </p>
+            </div>
+            <div className="text - center">
+              <div className="w - 16 h - 16 bg - zion - cyan text - white rounded - full flex items - center justify - center text - 2xl font - bold mx - auto mb - 4">
+                3
+              </div>
+              <h3 className="text - lg font - semibold text - white mb - 2">
+                Agreement
+              </h3>
+              <p className="text - zion - slate - light text - sm">
+                Finalize partnership terms and conditions
+              </p>
+            </div>
+            <div className="text - center">
+              <div className="w - 16 h - 16 bg - zion - cyan text - white rounded - full flex items - center justify - center text - 2xl font - bold mx - auto mb - 4">
+                4
+              </div>
+              <h3 className="text - lg font - semibold text - white mb - 2">
+                Launch
+              </h3>
+              <p className="text - zion - slate - light text - sm">
+                Begin collaboration and joint initiatives
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py - 16 bg - gradient - to - r from - zion - cyan to - zion - purple">
+        <div className="container mx - auto px - 4 text - center">
+          <h2 className="text - 3xl font - bold text - white mb - 4">
+            Ready to Join Our Partner Network?
+          </h2>
+          <p className="text - white / 90 mb - 8 max - w-2xl mx - auto">
+            Let's explore how we can work together to create innovative
+            solutions and drive mutual success in the technology industry.
+          </p>
+          <div className="flex flex - col sm:flex - row gap - 4 justify - center">
+            <Link to="/contact">
+              <button className="px - 8 py - 4 bg - white text - zion - blue rounded - lg font - semibold hover:scale - 105 transition - transform flex items - center space - x-2">
+                <span > Start Partnership Discussion</span>
+                <ArrowRight className="w - 5 h - 5"       />
+              </button>
+            </Link>
+            <Link to="/about">
+              <button className="px - 8 py - 4 border border - white text - white rounded - lg font - semibold hover:bg - white hover:text - zion - blue transition - colors">
+                Learn About Zion Tech
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>) ;
 }

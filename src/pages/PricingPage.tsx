@@ -1,465 +1,328 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, PRICING_TIERS, CONTACT_INFO } from "@/data/microSaasServices";
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, CheckCircle, X, Phone, Mail, MapPin, Globe, ArrowRight, Zap, Users, TrendingUp } from "lucide-react";
-import { Link } from "react-router-dom";
-const categoryIcons = {
-    'AI Business Solutions': Brain,
-    'IT Infrastructure': Cloud,
-    'Data Analytics': BarChart3,
-    'AI Development': Code,
-    'FinTech': DollarSign,
-    'HealthTech': Heart,
-    'E-commerce': ShoppingCart,
-    'EdTech': GraduationCap
+export default PricingPage;
+export function PricingPage(...args: any[]): any {;
+import {;
+import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data / comprehensivePricingGuide2025';
+import { motion } from 'framer - motion';
+;
+;
+  CheckCircle,;
+  Star,;
+  DollarSign,;
+  Clock,;
+  TrendingUp,;
+  Shield,;
+  Zap,;
+  Users,;
+  Globe,;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Sparkles,;
+  Award,;
+  Rocket,;
+  Brain,;
+  Atom,;
+  Code,;
+  Cloud,;
+  TrendingUp as TrendingUpIcon,;
+} from 'lucide - react';
+;
+  const [selectedCategory, setSelectedCategory] = useState ('all') ;
+  const [billingCycle, setBillingCycle] = useState ('monthly') ;
+;
+  const categories = [;
+    {;
+      id: 'all',;
+      name: 'All Categories',;
+      icon: Globe,;
+      color: 'from - blue - 500 to - cyan - 600',;
+    },;
+    {;
+      id: 'AI & Analytics',;
+      name: 'AI & Analytics',;
+      icon: Brain,;
+      color: 'from - purple - 500 to - pink - 600',;
+    },;
+    {;
+      id: 'Quantum Computing',;
+      name: 'Quantum Computing',;
+      icon: Atom,;
+      color: 'from - cyan - 500 to - blue - 600',;
+    },;
+    {;
+      id: 'Cybersecurity',;
+      name: 'Cybersecurity',;
+      icon: Shield,;
+      color: 'from - red - 500 to - orange - 600',;
+    },;
+    {;
+      id: 'Blockchain & Web3',;
+      name: 'Blockchain & Web3',;
+      icon: Code,;
+      color: 'from - green - 500 to - emerald - 600',;
+    },;
+    {;
+      id: 'Marketing & Sales',;
+      name: 'Marketing & Sales',;
+      icon: TrendingUp,;
+      color: 'from - yellow - 500 to - orange - 600',;
+    },;
+  ];
+;
+  const filteredServices = COMPREHENSIVE_PRICING_GUIDE_2025.filter (service =>;
+      selectedCategory === 'all' || service.category === selectedCategory) ;
+;
+  const getCategoryIcon = (category: string) => {;
+    const categoryData = categories.find (cat => cat.id === category) ;
+    return categoryData ? categoryData.icon : Globe;
+  };
+;
+  const getCategoryColor = (category: string) => {;
+    const categoryData = categories.find (cat => cat.id === category) ;
+    return categoryData ? categoryData.color : 'from - gray - 500 to - slate - 600';
+  };
+;
+  const getPriceColor = (price: number) => {;
+    if (price < 1000) return 'text - green - 400';
+    if (price <= 3000) return 'text - yellow - 400';
+    return 'text - red - 400';
+  };
+;
+  return (<div role="button" className="min - h-screen py - 8">;
+      <div role="button" className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+        {/* Header */};
+        <div role="button" className="text - center mb - 12">;
+          <motion.div;
+            initial={{ opacity: 0, y: 20 }};
+            animate={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.6 }};
+          >;
+            <h1 className="text - 5xl font - bold text - white mb - 4">;
+              Transparent Pricing for Revolutionary Services;
+            </h1>;
+            <p className="text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
+              Choose the perfect plan for your business needs. Our pricing is;
+              designed to provide maximum value with flexible options that scale;
+              with your growth.;
+            </p>;
+            <div role="button" className="mt - 8 flex justify - center space - x-4">;
+              <div role="button" className="flex items - center space - x-2 text - cyan - 400">;
+                <Sparkles className="w - 5 h - 5"       />;
+                <span > No Hidden Fees</span>;
+              </div>;
+              <div role="button" className="flex items - center space - x-2 text - green - 400">;
+                <Award className="w - 5 h - 5"       />;
+                <span > Proven ROI</span>;
+              </div>;
+              <div role="button" className="flex items - center space - x-2 text - purple - 400">;
+                <Rocket className="w - 5 h - 5"       />;
+                <span > Fast Implementation</span>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+;
+        {/* Category Filter */};
+        <div role="button" className="flex justify - center mb - 8">;
+          <div role="button" className="bg - gray - 800 rounded - xl p - 2 border border - gray - 700">;
+            {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id};
+                onClick={ () => setSelectedCategory (category.id) };
+                className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 300 ${;
+                  selectedCategory === category.id;
+                    ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
+                    : 'text - gray - 400 hover:text - white hover:bg - gray - 700';
+                }`};
+              >;
+                <div role="button" className="flex items - center space - x-2">;
+                  {React.createElement (category.icon, { className: 'w - 4 h - 4' }) };
+                  <span>{category.name}</span>;
+                </div>;
+              </button>) ) };
+          </div>;
+        </div>;
+;
+        {/* Services Pricing */};
+        <div role="button" className="space - y-12">;
+          {filteredServices.map ( (service, serviceIndex) => (<motion.div;
+              key={service.id};
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.6, delay: serviceIndex * 0.1 }};
+              className="bg - gray - 800 rounded - 2xl p - 8 border border - gray - 700";
+            >;
+              {/* Service Header */};
+              <div role="button" className="text - center mb - 8">;
+                <div role="button" className="flex justify - center mb - 4">;
+                  <div role="button" className={`w - 20 h - 20 bg - gradient - to - r ${getCategoryColor (service.category) } rounded - 2xl flex items - center justify - center`};
+                  >;
+                    {React.createElement (getCategoryIcon (service.category) , {;
+                      className: 'w - 10 h - 10 text - white',;
+                    }) };
+                  </div>;
+                </div>;
+                <h2 className="text - 3xl font - bold text - white mb - 2">;
+                  {service.title};
+                </h2>;
+                <p className="text - gray - 400 text - lg max - w-3xl mx - auto">;
+                  {service.description};
+                </p>;
+                <div role="button" className="mt - 4 flex justify - center space - x-6 text - sm text - gray - 500">;
+                  <div role="button" className="flex items - center space - x-2">;
+                    <TrendingUpIcon className="w - 4 h - 4"       />;
+                    <span > ROI: {service.roi}</span>;
+                  </div>;
+                  <div role="button" className="flex items - center space - x-2">;
+                    <Clock className="w - 4 h - 4"       />;
+                    <span > Delivery: {service.estimatedDelivery}</span>;
+                  </div>;
+                  <div role="button" className="flex items - center space - x-2">;
+                    <Users className="w - 4 h - 4"       />;
+                    <span > Support: {service.supportLevel}</span>;
+                  </div>;
+                </div>;
+              </div>;
+;
+              {/* Pricing Tiers */};
+              <div role="button" className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
+                {service.pricingTiers.map ( (tier, tierIndex) => (<motion.div;
+                    key={tier.id};
+                    initial={{ opacity: 0, scale: 0.9 }};
+                    animate={{ opacity: 1, scale: 1 }};
+                    transition={{ duration: 0.4, delay: tierIndex * 0.1 }};
+                    className={`relative bg - gray - 700 rounded - xl p - 6 border - 2 transition - all duration - 300 hover:scale - 105 ${;
+                      tier.popular;
+                        ? 'border - cyan - 500 bg - gradient - to - br from - gray - 700 to - gray - 800';
+                        : 'border - gray - 600 hover:border - cyan - 500';
+                    }`};
+                  >;
+                    {tier.popular && (<div role="button" className="absolute - top - 3 left - 1/2 transform - translate - x-1 / 2">;
+                        <span className="bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white px - 4 py - 1 rounded - full text - sm font - semibold">;
+                          Most Popular;
+                        </span>;
+                      </div>) };
+;
+                    {/* Tier Header */};
+                    <div role="button" className="text - center mb - 6">;
+                      <h3 className="text - xl font - bold text - white mb - 2">;
+                        {tier.name};
+                      </h3>;
+                      <div role="button" className="text - 3xl font - bold text - white mb - 1">;
+                        ${tier.price.toLocaleString () };
+                        <span className="text - lg text - gray - 400 font - normal">;
+                          /{tier.billingCycle};
+                        </span>;
+                      </div>;
+                      <p className="text - gray - 400 text - sm">{tier.bestFor}</p>;
+                    </div>;
+;
+                    {/* Features */};
+                    <div role="button" className="space - y-3 mb - 6">;
+                      {tier.features.map ( (feature, featureIndex) => (<div role="button" key={featureIndex};
+                          className="flex items - start space - x-3";
+                        >;
+                          <CheckCircle className="w - 5 h - 5 text - cyan - 400 flex - shrink - 0 mt - 0.5"       />;
+                          <span className="text - gray - 300 text - sm">;
+                            {feature};
+                          </span>;
+                        </div>) ) };
+                    </div>;
+;
+                    {/* Action Button */};
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white py - 3 px - 4 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300">;
+                      Get Started;
+                    </button>;
+                  </motion.div>) ) };
+              </div>;
+;
+              {/* Market Information */};
+              <div role="button" className="mt - 8 p - 6 bg - gray - 700 rounded - xl">;
+                <h4 className="text - lg font - semibold text - white mb - 4">;
+                  Market Information;
+                </h4>;
+                <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+                  <div role="button" className="flex items - center justify - between">;
+                    <span className="text - gray - 400">Market Price Range:</span>;
+                    <span className="text - white font - semibold">;
+                      {service.marketPrice};
+                    </span>;
+                  </div>;
+                  <div role="button" className="flex items - center justify - between">;
+                    <span className="text - gray - 400">Expected ROI:</span>;
+                    <span className="text - green - 400 font - semibold">;
+                      {service.roi};
+                    </span>;
+                  </div>;
+                  <div role="button" className="flex items - center justify - between">;
+                    <span className="text - gray - 400">Implementation Time:</span>;
+                    <span className="text - blue - 400 font - semibold">;
+                      {service.estimatedDelivery};
+                    </span>;
+                  </div>;
+                  <div role="button" className="flex items - center justify - between">;
+                    <span className="text - gray - 400">Support Level:</span>;
+                    <span className="text - purple - 400 font - semibold capitalize">;
+                      {service.supportLevel};
+                    </span>;
+                  </div>;
+                </div>;
+              </div>;
+;
+              {/* Contact Information */};
+              <div role="button" className="mt - 6 text - center">;
+                <div role="button" className="text - sm text - gray - 400 space - y-2">;
+                  <div role="button" className="flex justify - center space - x-6">;
+                    <div role="button" className="flex items - center space - x-2">;
+                      <Phone className="w - 4 h - 4"       />;
+                      <span>{service.contactInfo.phone}</span>;
+                    </div>;
+                    <div role="button" className="flex items - center space - x-2">;
+                      <Mail className="w - 4 h - 4"       />;
+                      <span>{service.contactInfo.email}</span>;
+                    </div>;
+                    <div role="button" className="flex items - center space - x-2">;
+                      <Globe className="w - 4 h - 4"       />;
+                      <span>{service.contactInfo.website}</span>;
+                    </div>;
+                  </div>;
+                </div>;
+              </div>;
+            </motion.div>) ) };
+        </div>;
+;
+        {/* Call to Action */};
+        <motion.div;
+          initial={{ opacity: 0, y: 20 }};
+          animate={{ opacity: 1, y: 0 }};
+          transition={{ duration: 0.6, delay: 0.5 }};
+          className="mt - 16 text - center";
+        >;
+          <div role="button" className="bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - 2xl p - 8">;
+            <h2 className="text - 3xl font - bold text - white mb - 4">;
+              Need a Custom Solution?;
+            </h2>;
+            <p className="text - xl text - cyan - 100 mb - 6 max - w-2xl mx - auto">;
+              Our team of experts can create a tailored solution that perfectly;
+              fits your business needs. Contact us today for a personalized;
+              consultation.;
+            </p>;
+            <div role="button" className="flex flex - col sm:flex - row justify - center space - y-4 sm:space - y-0 sm:space - x-4">;
+              <a;
+                href="mailto:kleber@ziontechgroup.com?subject = Custom Solution Inquiry";
+                className="bg - white text - cyan - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - all duration - 300";
+              >;
+                Request Custom Quote;
+              </a>;
+              <a;
+                href="tel:+13024640950";
+                className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - cyan - 600 transition - all duration - 300";
+              >;
+                Call for Consultation: +1 302 464 0950;
+              </a>;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </div>) ;
 };
-const pricingFeatures = {
-    basic: [
-        "Core service functionality",
-        "Standard support (8/5)",
-        "Basic integrations",
-        "Community documentation",
-        "Email support"
-    ],
-    professional: [
-        "All Basic features",
-        "Advanced analytics",
-        "Priority support (12/7)",
-        "Custom integrations",
-        "Phone & email support",
-        "Dedicated account manager",
-        "Training sessions"
-    ],
-    enterprise: [
-        "All Professional features",
-        "Custom development",
-        "24/7 dedicated support",
-        "White-label solutions",
-        "SLA guarantees",
-        "On-site training",
-        "Custom contracts",
-        "Dedicated infrastructure"
-    ]
-};
-const comparisonFeatures = [
-    "AI-Powered Automation",
-    "Real-time Analytics",
-    "Multi-cloud Support",
-    "API-First Architecture",
-    "Scalable Infrastructure",
-    "Custom Integrations",
-    "White-label Solutions",
-    "24/7 Technical Support",
-    "99.9% Uptime Guarantee",
-    "SOC 2 Type II Compliant",
-    "30-Day Money Back Guarantee",
-    "Free Migration Support"
-];
-export default function PricingPage() {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [billingCycle, setBillingCycle] = useState('monthly');
-    const filteredServices = selectedCategory === 'all'
-        ? MICRO_SAAS_SERVICES
-        : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory);
-    const getDiscountedPrice = (price) => {
-        return billingCycle === 'yearly' ? Math.round(price * 10 * 0.8) : price;
-    };
-    return (<div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Transparent Pricing
-          </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Choose the perfect plan for your business. All our micro SAAS services come with 
-            enterprise-grade features at startup-friendly prices.
-          </p>
-          
-          {/* Billing Toggle */}
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-zion-slate-light'}`}>
-              Monthly
-            </span>
-            <Button variant="outline" size="sm" className={`relative ${billingCycle === 'yearly' ? 'bg-white text-zion-blue' : 'border-white text-white'}`} onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}>
-              <div className="flex items-center gap-2">
-                {billingCycle === 'yearly' && (<Badge className="absolute -top-2 -right-2 bg-green-500 text-white text-xs">
-                    Save 20%
-                  </Badge>)}
-                {billingCycle === 'yearly' ? 'Yearly' : 'Monthly'}
-              </div>
-            ))}
-          </div>
-
-          {/* Add-ons Section */}
-          <div className="mb-20">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Add-ons</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {addOns.map((addon, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <h3 className="text-xl font-semibold text-white mb-2">{addon.name}</h3>
-                  <p className="text-zion-cyan text-2xl font-bold mb-3">{addon.price}</p>
-                  <p className="text-zion-slate-light text-sm">{addon.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* FAQ Section */}
-          <div className="mb-20">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-3">What's included in the price?</h3>
-                <p className="text-zion-slate-light">
-                  All plans include design, development, testing, deployment, and support. 
-                  You also get the complete source code and documentation.
-                </p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-3">How long does development take?</h3>
-                <p className="text-zion-slate-light">
-                  Typical timelines: Starter (2-4 weeks), Professional (6-8 weeks), 
-                  Enterprise (10-16 weeks). We provide detailed project timelines.
-                </p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-3">Do you offer maintenance?</h3>
-                <p className="text-zion-slate-light">
-                  Yes! All plans include support periods. We also offer ongoing 
-                  maintenance packages for long-term website care.
-                </p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-3">Can I upgrade my plan?</h3>
-                <p className="text-zion-slate-light">
-                  Absolutely! You can upgrade at any time. We'll work with you to 
-                  seamlessly transition to a higher plan.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Have questions about our pricing? Contact us for a personalized quote tailored to your specific needs.
-            </p>
-            <div className="flex gap-4 justify-center">
-              <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan/80">
-                <Link to="/contact">Get Custom Quote</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-zion-blue">
-                <Link to="/services">View Services</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Pricing Tiers */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-zion-blue mb-4">
-              Choose Your Plan
-            </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Start with Basic and scale up as your business grows. All plans include our core features.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {Object.entries(PRICING_TIERS).map(([key, tier]) => (<Card key={key} className={`relative ${key === 'professional' ? 'border-zion-purple border-2 scale-105 shadow-xl' : ''}`}>
-                {key === 'professional' && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <Badge className="bg-zion-purple text-white px-4 py-2">Most Popular</Badge>
-                  </div>)}
-                <CardHeader className="text-center">
-                  <CardTitle className="text-2xl text-zion-blue">{tier.name}</CardTitle>
-                  <CardDescription>
-                    Perfect for {key === 'basic' ? 'startups' : key === 'professional' ? 'growing businesses' : 'enterprises'}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <div className="mb-6">
-                    <span className="text-3xl font-bold text-zion-blue">{tier.multiplier}x</span>
-                    <span className="text-gray-600 ml-2">base pricing</span>
-                  </div>
-                  <ul className="text-left space-y-3 mb-8">
-                    {pricingFeatures[key].map((feature, index) => (<li key={index} className="flex items-center">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"/>
-                        <span className="text-sm">{feature}</span>
-                      </li>))}
-                  </ul>
-                  <Button className="w-full" variant={key === 'professional' ? 'default' : 'outline'}>
-                    Get Started
-                  </Button>
-                </CardContent>
-              </Card>))}
-          </div>
-        </div>
-      </section>
-
-      {/* Service Pricing by Category */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-zion-blue mb-4">
-              Service Pricing by Category
-            </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Explore our comprehensive range of micro SAAS solutions with transparent pricing
-            </p>
-          </div>
-          
-          <Tabs defaultValue="all" className="w-full" onValueChange={(value) => setSelectedCategory(value)}>
-            <TabsList className="grid w-full grid-cols-9 bg-zion-blue-dark border-zion-blue-light">
-              <TabsTrigger value="all" className="text-white">All</TabsTrigger>
-              {MICRO_SAAS_CATEGORIES.map((category) => {
-            const IconComponent = categoryIcons[category.label];
-            return (<TabsTrigger key={category.value} value={category.value} className="text-white">
-                    {IconComponent && <IconComponent className="h-4 w-4 mr-2"/>}
-                    {category.label.split(' ')[0]}
-                  </TabsTrigger>);
-        })}
-            </TabsList>
-            
-            <TabsContent value={selectedCategory} className="mt-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredServices.map((service) => (<Card key={service.id} className="bg-white hover:shadow-lg transition-all duration-300 hover:scale-105">
-                    <div className="relative">
-                      <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
-                      <Badge className="absolute top-4 right-4 bg-zion-purple">
-                        {service.category}
-                      </Badge>
-                    </div>
-                    <CardHeader>
-                      <CardTitle className="text-xl">{service.title}</CardTitle>
-                      <CardDescription className="text-gray-600">
-                        {service.description.substring(0, 120)}...
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center">
-                          <Star className="h-4 w-4 text-yellow-400 mr-1"/>
-                          <span className="text-sm">{service.rating}</span>
-                          <span className="text-gray-500 text-sm ml-1">({service.reviewCount})</span>
-                        </div>
-                        <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan">
-                          AI Score: {service.aiScore}
-                        </Badge>
-                      </div>
-                      <div className="flex items-center justify-between mb-4">
-                        <div>
-                          <div className="text-2xl font-bold text-zion-blue">
-                            ${getDiscountedPrice(service.price)}
-                            <span className="text-sm text-gray-500">
-                              /{billingCycle === 'yearly' ? 'year' : 'month'}
-                            </span>
-                          </div>
-                          {billingCycle === 'yearly' && (<div className="text-sm text-green-600">
-                              Save ${Math.round(service.price * 12 * 0.2)} annually
-                            </div>)}
-                        </div>
-                        <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-dark">
-                          Learn More
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>))}
-              </div>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </section>
-
-      {/* Feature Comparison */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-zion-blue mb-4">
-              Feature Comparison
-            </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              See how our plans stack up against each other and the competition
-            </p>
-          </div>
-          
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="border-b-2 border-zion-blue">
-                  <th className="text-left p-4 text-zion-blue font-bold">Features</th>
-                  <th className="text-center p-4 text-zion-blue font-bold">Basic</th>
-                  <th className="text-center p-4 text-zion-purple font-bold">Professional</th>
-                  <th className="text-center p-4 text-zion-blue font-bold">Enterprise</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonFeatures.map((feature, index) => (<tr key={index} className="border-b border-gray-200">
-                    <td className="p-4 font-medium">{feature}</td>
-                    <td className="p-4 text-center">
-                      {index < 4 ? (<CheckCircle className="h-5 w-5 text-green-500 mx-auto"/>) : (<X className="h-5 w-5 text-red-500 mx-auto"/>)}
-                    </td>
-                    <td className="p-4 text-center">
-                      {index < 7 ? (<CheckCircle className="h-5 w-5 text-green-500 mx-auto"/>) : (<X className="h-5 w-5 text-red-500 mx-auto"/>)}
-                    </td>
-                    <td className="p-4 text-center">
-                      <CheckCircle className="h-5 w-5 text-green-500 mx-auto"/>
-                    </td>
-                  </tr>))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-20 bg-zion-blue">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Zion Tech Group?
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-              We deliver enterprise-grade solutions with startup agility and proven results
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-            {
-                icon: <Zap className="h-8 w-8"/>,
-                title: "Immediate Deployment",
-                description: "All services ready for instant deployment"
-            },
-            {
-                icon: <Shield className="h-8 w-8"/>,
-                title: "Enterprise Security",
-                description: "SOC 2 compliance and 24/7 monitoring"
-            },
-            {
-                icon: <Users className="h-8 w-8"/>,
-                title: "Dedicated Support",
-                description: "24/7 technical support with account managers"
-            },
-            {
-                icon: <TrendingUp className="h-8 w-8"/>,
-                title: "Proven ROI",
-                description: "Average 300% ROI within 6 months"
-            }
-        ].map((benefit, index) => (<Card key={index} className="bg-zion-blue-dark border-zion-blue-light text-white">
-                <CardHeader className="text-center">
-                  <div className="mx-auto w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mb-4">
-                    {benefit.icon}
-                  </div>
-                  <CardTitle className="text-xl">{benefit.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-zion-slate-light">{benefit.description}</p>
-                </CardContent>
-              </Card>))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-zion-blue mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Get in touch with our team to discuss your needs and find the perfect plan for your business
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            <div>
-              <h3 className="text-2xl font-bold text-zion-blue mb-6">Contact Information</h3>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Phone className="h-5 w-5 text-zion-purple mr-3"/>
-                  <div>
-                    <p className="font-medium">Phone</p>
-                    <p className="text-gray-600">{CONTACT_INFO.mobile}</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="h-5 w-5 text-zion-purple mr-3"/>
-                  <div>
-                    <p className="font-medium">Email</p>
-                    <p className="text-gray-600">{CONTACT_INFO.email}</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="h-5 w-5 text-zion-purple mr-3"/>
-                  <div>
-                    <p className="font-medium">Address</p>
-                    <p className="text-gray-600">{CONTACT_INFO.address}</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <Globe className="h-5 w-5 text-zion-purple mr-3"/>
-                  <div>
-                    <p className="font-medium">Website</p>
-                    <a href={CONTACT_INFO.website} className="text-zion-cyan hover:underline">
-                      {CONTACT_INFO.website}
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-2xl font-bold text-zion-blue mb-6">Quick Actions</h3>
-              <div className="space-y-4">
-                <Link to="/request-quote">
-                  <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">
-                    Request Custom Quote
-                  </Button>
-                </Link>
-                <Link to="/contact">
-                  <Button variant="outline" className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white">
-                    Schedule Consultation
-                  </Button>
-                </Link>
-                <Link to="/micro-saas-services">
-                  <Button variant="outline" className="w-full border-zion-blue text-zion-blue hover:bg-zion-blue hover:text-white">
-                    View All Services
-                  </Button>
-                </Link>
-              </div>
-              
-              <div className="mt-8 p-6 bg-zion-blue/5 rounded-lg border border-zion-blue/20">
-                <h4 className="font-medium text-zion-blue mb-2">What's Included:</h4>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• 24/7 Technical Support</li>
-                  <li>• 99.9% Uptime Guarantee</li>
-                  <li>• SOC 2 Type II Compliant</li>
-                  <li>• 30-Day Money Back Guarantee</li>
-                  <li>• Free Migration Support</li>
-                  <li>• Custom Integration Services</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <div className="text-center mt-12">
-            <Link to="/micro-saas-services">
-              <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark">
-                Explore All Micro SAAS Services
-                <ArrowRight className="h-5 w-5 ml-2"/>
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>);
-}
+;

@@ -252,12 +252,12 @@ const developmentTools = [
     }
 ];
 const technologyStats = [
-    { icon: <Code className="w-6 h-6"/>, value: "50+", label: "Technologies" },
-    { icon: <Layers className="w-6 h-6"/>, value: "15+", label: "Categories" },
-    { icon: <Star className="w-6 h-6"/>, value: "4.9/5", label: "Expertise Rating" },
-    { icon: <TrendingUp className="w-6 h-6"/>, value: "1000+", label: "Projects Delivered" },
-    { icon: <GitBranch className="w-6 h-6"/>, value: "24/7", label: "Support Available" },
-    { icon: <Zap className="w-6 h-6"/>, value: "99.9%", label: "Uptime Guarantee" }
+    { icon: <Code className="w - 6 h - 6"      />, value: "50+", label: "Technologies" },
+    { icon: <Layers className="w - 6 h - 6"      />, value: "15+", label: "Categories" },
+    { icon: <Star className="w - 6 h - 6"      />, value: "4.9 / 5", label: "Expertise Rating" },
+    { icon: <TrendingUp className="w - 6 h - 6"      />, value: "1000+", label: "Projects Delivered" },
+    { icon: <GitBranch className="w - 6 h - 6"      />, value: "24 / 7", label: "Support Available" },
+    { icon: <Zap className="w - 6 h - 6"      />, value: "99.9%", label: "Uptime Guarantee" }
 ];
 export function TechnologyStackSection() {
     const [selectedTech, setSelectedTech] = useState(null);
@@ -340,10 +340,10 @@ export function TechnologyStackSection() {
             {currentTechnologies.map((tech, index) => (<motion.div key={tech.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedTech(selectedTech === index ? null : index)}>
                   {/* Header */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-zion-cyan to-zion-purple flex items-center justify-center">
-                        <Code className="w-6 h-6 text-white"/>
+                  <div className="flex items - center justify - between mb - 4">
+                    <div className="flex items - center gap - 3">
+                      <div className="w - 12 h - 12 rounded - xl bg - gradient - to - br from - zion - cyan to - zion - purple flex items - center justify - center">
+                        <Code className="w - 6 h - 6 text - white"      />
                       </div>
                       <div>
                         <h4 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors">
@@ -392,7 +392,7 @@ export function TechnologyStackSection() {
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                       View Technology Details
                     </span>
-                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                    <ArrowRight className="w - 4 h - 4 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"      />
                   </div>
 
                   {/* Expanded details */}

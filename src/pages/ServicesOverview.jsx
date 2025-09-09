@@ -188,8 +188,8 @@ export default function ServicesOverview() {
             }
         }
     };
-    return (<div className="min-h-screen bg-background">
-      <SEO title="All Services - Zion Tech Group Comprehensive Technology Solutions" description="Explore our complete range of technology services including AI, data analytics, IoT, blockchain, DevOps, and cybersecurity solutions." keywords="technology services, AI services, data analytics, IoT solutions, blockchain development, DevOps consulting, cybersecurity services" canonical="https://ziontechgroup.com/services"/>
+    return (<div className="min - h-screen bg - background">
+      <SEO title="All Services - Zion Tech Group Comprehensive Technology Solutions" description="Explore our complete range of technology services including AI, data analytics, IoT, blockchain, DevOps, and cybersecurity solutions." keywords="technology services, AI services, data analytics, IoT solutions, blockchain development, DevOps consulting, cybersecurity services" canonical="https://ziontechgroup.com / services"      />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white py-20">
@@ -206,12 +206,12 @@ export default function ServicesOverview() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            {stats.map((stat, index) => (<motion.div key={stat.label} variants={itemVariants} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-white"/>
+      <section className="py - 16 bg - white">
+        <div className="container mx - auto px - 4">
+          <motion.div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            {stats.map ( (stat, index) => (<motion.div key={stat.label} variants={itemVariants} className="text - center">
+                <div className="w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - full flex items - center justify - center mx - auto mb - 4">
+                  <stat.icon className="w - 8 h - 8 text - white"      />
                 </div>
                 <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
                 <div className="text-gray-600">{stat.label}</div>
@@ -230,12 +230,12 @@ export default function ServicesOverview() {
             </p>
           </motion.div>
 
-          <motion.div className="space-y-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            {serviceCategories.map((category, index) => (<motion.div key={category.name} variants={itemVariants} className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-                <div className={`bg-gradient-to-r ${category.color} p-8 text-white`}>
-                  <div className="flex items-center mb-4">
-                    <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mr-6">
-                      <category.icon className="w-8 h-8"/>
+          <motion.div className="space - y-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            {serviceCategories.map ( (category, index) => (<motion.div key={category.name} variants={itemVariants} className="bg - white rounded - 2xl shadow - lg border border - gray - 200 overflow - hidden">
+                <div className={`bg - gradient - to - r ${category.color} p - 8 text - white`}>
+                  <div className="flex items - center mb - 4">
+                    <div className="w - 16 h - 16 bg - white / 20 rounded - xl flex items - center justify - center mr - 6">
+                      <category.icon className="w - 8 h - 8"      />
                     </div>
                     <div>
                       <h3 className="text-3xl font-bold mb-2">{category.name}</h3>
@@ -281,10 +281,10 @@ export default function ServicesOverview() {
             </p>
           </motion.div>
 
-          <motion.div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <motion.div variants={itemVariants} className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-blue-600"/>
+          <motion.div className="grid md:grid - cols - 3 gap - 8 max - w-6xl mx - auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <motion.div variants={itemVariants} className="text - center">
+              <div className="w - 16 h - 16 bg - blue - 100 rounded - full flex items - center justify - center mx - auto mb - 4">
+                <Users className="w - 8 h - 8 text - blue - 600"      />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Expert Team</h3>
               <p className="text-gray-600">
@@ -292,9 +292,9 @@ export default function ServicesOverview() {
               </p>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-green-600"/>
+            <motion.div variants={itemVariants} className="text - center">
+              <div className="w - 16 h - 16 bg - green - 100 rounded - full flex items - center justify - center mx - auto mb - 4">
+                <Target className="w - 8 h - 8 text - green - 600"      />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Proven Results</h3>
               <p className="text-gray-600">
@@ -302,9 +302,9 @@ export default function ServicesOverview() {
               </p>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-purple-600"/>
+            <motion.div variants={itemVariants} className="text - center">
+              <div className="w - 16 h - 16 bg - purple - 100 rounded - full flex items - center justify - center mx - auto mb - 4">
+                <Zap className="w - 8 h - 8 text - purple - 600"      />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation Focus</h3>
               <p className="text-gray-600">

@@ -221,9 +221,17 @@ const AdvancedServiceRecommendation = () => {
       </motion.div>
 
       {/* Client Profile Form */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">
-        <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">
-          <Brain className="w-6 h-6 text-zion-cyan"/>
+      <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ delay: 0.1 }} className="bg - white rounded - lg shadow - lg p - 6 mb - 8">
+        <h2 className="text - 2xl font - bold text - zion - blue - dark mb - 6 flex items - center gap - 2">
+          <Brain className="w - 6 h - 6 text - zion - cyan"      />
           Tell Us About Your Business
         </h2>
         
@@ -309,7 +317,7 @@ const AdvancedServiceRecommendation = () => {
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                 Analyzing Your Profile...
               </>) : (<>
-                <Brain className="w-5 h-5 mr-2"/>
+                <Brain className="w - 5 h - 5 mr - 2"      />
                 Get AI Recommendations
               </>)}
           </Button>
@@ -362,21 +370,21 @@ const AdvancedServiceRecommendation = () => {
                   <CardContent>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                       <div>
-                        <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">
-                          <Lightbulb className="w-4 h-4 text-zion-purple"/>
+                        <h4 className="font - semibold text - zion - slate - dark mb - 3 flex items - center gap - 2">
+                          <Lightbulb className="w - 4 h - 4 text - zion - purple"      />
                           Why This Service Matches
                         </h4>
-                        <ul className="space-y-2">
-                          {rec.reasoning.map((reason, idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">
-                              <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"/>
+                        <ul className="space - y-2">
+                          {rec.reasoning.map ( (reason, idx) => (<li key={idx} className="text - sm text - zion - slate - light flex items - start gap - 2">
+                              <CheckCircle className="w - 4 h - 4 text - green - 500 mt - 0.5 flex - shrink - 0"      />
                               {reason}
                             </li>))}
                         </ul>
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">
-                          <BarChart3 className="w-4 h-4 text-zion-cyan"/>
+                        <h4 className="font - semibold text - zion - slate - dark mb - 3 flex items - center gap - 2">
+                          <BarChart3 className="w - 4 h - 4 text - zion - cyan"      />
                           Implementation Details
                         </h4>
                         <div className="space-y-3">
@@ -417,13 +425,15 @@ const AdvancedServiceRecommendation = () => {
                 Our expert team is ready to help you implement the perfect solution 
                 for your business needs. Contact us today for a personalized consultation.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation', '_blank')}>
-                  <Users className="w-5 h-5 mr-2"/>
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">
+                <Button className="bg - white text - zion - purple hover:bg - zion - slate - light" onClick = { () => window.open ('mailto:kleber@ziontechgroup.com?subject = Service Recommendation Consultation',
+  '_blank') }>
+                  <Users className="w - 5 h - 5 mr - 2"      />
                   Get Expert Consultation
                 </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+13024640950', '_blank')}>
-                  <Zap className="w-5 h-5 mr-2"/>
+                <Button variant="outline" className="border - white text - white hover:bg - white hover:text - zion - purple" onClick = { () => window.open ('tel:+13024640950',
+  '_blank') }>
+                  <Zap className="w - 5 h - 5 mr - 2"      />
                   Call Now
                 </Button>
               </div>

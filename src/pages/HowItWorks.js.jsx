@@ -109,13 +109,13 @@ export default function HowItWorks() {
         }
     ];
     return (<>
-      <SEO title="How It Works - Zion Tech Group Platform Guide" description="Learn how Zion's AI and tech marketplace works for both clients seeking services and talent offering their expertise." keywords="how it works, Zion platform, marketplace workflow, client guide, talent guide" canonical="https://ziontechgroup.com/how-it-works"/>
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <GradientHeading>How Zion Works</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Discover how our AI-powered marketplace connects talented professionals with innovative projects
+      <SEO title="How It Works - Zion Tech Group Platform Guide" description="Learn how Zion's AI and tech marketplace works for both clients seeking services and talent offering their expertise." keywords="how it works, Zion platform, marketplace workflow, client guide, talent guide" canonical="https://ziontechgroup.com / how - it - works"      />
+      <main className="min - h-screen bg - zion - blue pt - 24 pb - 20">
+        <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">
+          <div className="text - center mb - 16">
+            <GradientHeading > How Zion Works</GradientHeading>
+            <p className="mt - 4 text - zion - slate - light text - xl max - w-3xl mx - auto">
+              Discover how our AI - powered marketplace connects talented professionals with innovative projects
             </p>
           </div>
 
@@ -138,8 +138,8 @@ export default function HowItWorks() {
                   </Button>
                 </div>
               </div>
-              <div className="rounded-lg overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&h=600" alt="Team collaboration" className="object-cover w-full h-full"/>
+              <div className="rounded - lg overflow - hidden">
+                <img src="https://images.unsplash.com / photo - 1551434678 - e076c223a692?auto = format & fit = crop & w=800 & h=600" alt="Team collaboration" className="object - cover w - full h - full"      />
               </div>
             </div>
           </div>
@@ -150,9 +150,9 @@ export default function HowItWorks() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {clientSteps.map((step, index) => (<Card key={index} className="bg-zion-blue-dark border-zion-blue-light text-center">
                   <CardHeader>
-                    <div className="flex justify-center mb-4">
-                      <div className="bg-zion-blue inline-flex p-3 rounded-full">
-                        <step.icon className={`h-8 w-8 ${step.color}`}/>
+                    <div className="flex justify - center mb - 4">
+                      <div className="bg - zion - blue inline - flex p - 3 rounded - full">
+                        <step.icon className={`h - 8 w - 8 ${step.color}`}      />
                       </div>
                     </div>
                     <CardTitle className="text-white text-lg">{step.title}</CardTitle>
@@ -172,9 +172,9 @@ export default function HowItWorks() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {talentSteps.map((step, index) => (<Card key={index} className="bg-zion-blue-dark border-zion-blue-light text-center">
                   <CardHeader>
-                    <div className="flex justify-center mb-4">
-                      <div className="bg-zion-blue inline-flex p-3 rounded-full">
-                        <step.icon className={`h-8 w-8 ${step.color}`}/>
+                    <div className="flex justify - center mb - 4">
+                      <div className="bg - zion - blue inline - flex p - 3 rounded - full">
+                        <step.icon className={`h - 8 w - 8 ${step.color}`}      />
                       </div>
                     </div>
                     <CardTitle className="text-white text-lg">{step.title}</CardTitle>
@@ -194,9 +194,9 @@ export default function HowItWorks() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {platformFeatures.map((feature, index) => (<Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
                   <CardHeader>
-                    <div className="flex items-center gap-3">
-                      <feature.icon className={`h-6 w-6 ${feature.color}`}/>
-                      <CardTitle className="text-white">{feature.title}</CardTitle>
+                    <div className="flex items - center gap - 3">
+                      <feature.icon className={`h - 6 w - 6 ${feature.color}`}      />
+                      <CardTitle className="text - white">{feature.title}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -214,17 +214,17 @@ export default function HowItWorks() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {benefits.map((section, index) => (<Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
                   <CardHeader>
-                    <div className="flex items-center gap-3 mb-4">
-                      <section.icon className="h-6 w-6 text-zion-cyan"/>
-                      <CardTitle className="text-white text-xl">{section.title}</CardTitle>
+                    <div className="flex items - center gap - 3 mb - 4">
+                      <section.icon className="h - 6 w - 6 text - zion - cyan"      />
+                      <CardTitle className="text - white text - xl">{section.title}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <ul className="space-y-2">
-                      {section.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items-start gap-2">
-                          <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5 flex-shrink-0"/>
-                          <span className="text-zion-slate-light">{benefit}</span>
-                        </li>))}
+                    <ul className="space - y-2">
+                      {section.benefits.map ( (benefit, benefitIndex) => (<li key={benefitIndex} className="flex items - start gap - 2">
+                          <CheckCircle className="h - 5 w - 5 text - zion - cyan mt - 0.5 flex - shrink - 0"      />
+                          <span className="text - zion - slate - light">{benefit}</span>
+                        </li>) ) }
                     </ul>
                   </CardContent>
                 </Card>))}

@@ -45,46 +45,23 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-        <AppHeader />
-        
+        <AppHeader       />
         <main className="flex-1">
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<LoadingSpinner       />}>
             <Routes>
-              {/* Main pages */}
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/green-it" element={<GreenIT />} />
-              <Route path="/partners" element={<PartnersPage />} />
-              <Route path="/login" element={<Login />} />
-              
-              {/* Services and Marketplace */}
-              <Route path="/services" element={<Services />} />
-              <Route path="/marketplace" element={<Marketplace />} />
-              <Route path="/talent" element={<Talent />} />
-              <Route path="/equipment" element={<Equipment />} />
-              <Route path="/categories" element={<Categories />} />
-              
-              {/* Resources */}
-              <Route path="/help" element={<HelpCenter />} />
-              <Route path="/docs" element={<Documentation />} />
-              <Route path="/white-papers" element={<WhitePapers />} />
-              <Route path="/webinars" element={<Webinars />} />
-              <Route path="/training" element={<Training />} />
-              <Route path="/research" element={<Research />} />
-              
-              {/* Support */}
-              <Route path="/support" element={<Support />} />
-              <Route path="/security" element={<Security />} />
-              <Route path="/status" element={<SystemStatus />} />
-              <Route path="/accessibility" element={<Accessibility />} />
-              <Route path="/cookies" element={<Cookies />} />
+              <Route path="/" element={<Home       />} />
+              <Route path="/about" element={<About       />} />
+              <Route path="/contact" element={<Contact       />} />
+              <Route path="/blog" element={<BlogPage       />} />
+              <Route path="/partners" element={<PartnersPage       />} />
+              <Route path="/login" element={<Login       />} />
+              <Route path="/faq" element={<FAQ       />} />
+              <Route path="/careers" element={<Careers       />} />
+              <Route path="/sitemap" element={<Sitemap       />} />
+              <Route path="/pricing" element={<ComprehensivePricing       />} />
+
+              {/* Services routes */}
+              <Route path="/services" element={<ServicesPage       />} />
 
               {/* Catch-all route for 404 */}
               <Route path="*" element={
@@ -101,9 +78,8 @@ function App() {
             </Routes>
           </Suspense>
         </main>
-
-        <Footer />
-        <ChatAssistant />
+        <Footer       />
+        <ChatAssistant       />
       </div>
     </Router>
   );

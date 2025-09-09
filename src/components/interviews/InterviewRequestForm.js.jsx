@@ -95,7 +95,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
         <div className="flex items-center mb-6">
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">
-            <img loading="lazy" src={talent.profile_picture_url || "/placeholder.svg"} alt={talent.full_name} className="h-full w-full object-cover"/>
+            <img
+              loading="lazy"
+              src={talent.profile_picture_url || '/placeholder.svg'}
+              alt={talent.full_name}
+              className="h-full w-full object-cover"
+                  />
           </div>
           <div>
             <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>
@@ -106,10 +111,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
         <FormField control={form.control} name="title" render={({ field }) => (<FormItem>
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
-                <Input placeholder="Brief title for the interview" {...field}/>
+                <Input placeholder="Brief title for the interview" {...field}       />
               </FormControl>
-              <FormMessage />
-            </FormItem>)}/>
+              <FormMessage       />
+            </FormItem>
+          )}
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField control={form.control} name="date" render={({ field }) => (<FormItem className="flex flex-col">
@@ -117,9 +124,19 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
-                      <Button variant="outline" className={cn("w-full pl-3 text-left font-normal", !field.value && "text-muted-foreground")}>
-                        {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>)}
-                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50"/>
+                      <Button
+                        variant="outline"
+                        className={cn(
+                          'w-full pl-3 text-left font-normal',
+                          !field.value && 'text-muted-foreground'
+                        )}
+                      >
+                        {field.value ? (
+                          format(field.value, 'PPP')
+                        ) : (
+                          <span>Pick a date</span>
+                        )}
+                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50"       />
                       </Button>
                     </FormControl>
                   </PopoverTrigger>
@@ -127,25 +144,55 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                     <Calendar mode="single" selected={field.value} onSelect={field.onChange} disabled={(date) => date < new Date() || date > addDays(new Date(), 90)} initialFocus className="p-3 pointer-events-auto"/>
                   </PopoverContent>
                 </Popover>
-                <FormMessage />
-              </FormItem>)}/>
+                <FormMessage       />
+              </FormItem>
+            )}
+          />
 
           <FormField control={form.control} name="time" render={({ field }) => (<FormItem>
                 <FormLabel>Time</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select time"/>
+                      <SelectValue placeholder="Select time"       />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-[300px]">
-                    {timeSlots.map((time) => (<SelectItem key={time} value={time}>
+                    {timeSlots.map(((((((time => (
+                      <SelectItem key={time} value={time}>
                         {time}
-                      </SelectItem>))}
+                      </SelectItem>
+                    , index, index, index, index, index, index) => ({ ...(((((time => (
+                      <SelectItem key={time} value={time}>
+                        {time}
+                      </SelectItem>
+                    , index, index, index, index, index, key: index })) => ({ ...((((time => (
+                      <SelectItem key={time} value={time}>
+                        {time}
+                      </SelectItem>
+                    , index, index, index, index, key: index })) => ({ ...(((time => (
+                      <SelectItem key={time} value={time}>
+                        {time}
+                      </SelectItem>
+                    , index, index, index, key: index })) => ({ ...((time => (
+                      <SelectItem key={time} value={time}>
+                        {time}
+                      </SelectItem>
+                    , index, index, key: index })) => ({ ...(time => (
+                      <SelectItem key={time} value={time}>
+                        {time}
+                      </SelectItem>
+                    , index, key: index })) => ({ ...time => (
+                      <SelectItem key={time} value={time}>
+                        {time}
+                      </SelectItem>
+                    , key: index })))}
                   </SelectContent>
                 </Select>
-                <FormMessage />
-              </FormItem>)}/>
+                <FormMessage       />
+              </FormItem>
+            )}
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -154,7 +201,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select duration"/>
+                      <SelectValue placeholder="Select duration"       />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -164,15 +211,17 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                     <SelectItem value="60">60 minutes</SelectItem>
                   </SelectContent>
                 </Select>
-                <FormMessage />
-              </FormItem>)}/>
+                <FormMessage       />
+              </FormItem>
+            )}
+          />
 
           <FormField control={form.control} name="platform" render={({ field }) => (<FormItem>
                 <FormLabel>Platform</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select platform"/>
+                      <SelectValue placeholder="Select platform"       />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -182,25 +231,39 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                     <SelectItem value="other">Other</SelectItem>
                   </SelectContent>
                 </Select>
-                <FormMessage />
-              </FormItem>)}/>
+                <FormMessage       />
+              </FormItem>
+            )}
+          />
         </div>
 
         {form.watch('platform') !== 'in-app' && (<FormField control={form.control} name="meetingLink" render={({ field }) => (<FormItem>
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
-                  <Input placeholder={`Add your ${form.watch('platform')} link here`} {...field}/>
+                  <Input
+                    placeholder={`Add your ${form.watch('platform')} link here`}
+                    {...field}
+                        />
                 </FormControl>
-                <FormMessage />
-              </FormItem>)}/>)}
+                <FormMessage       />
+              </FormItem>
+            )}
+          />
+        )}
 
         <FormField control={form.control} name="notes" render={({ field }) => (<FormItem>
               <FormLabel>Notes (Optional)</FormLabel>
               <FormControl>
-                <Textarea placeholder="Share what you'd like to discuss in this interview" className="h-20" {...field}/>
+                <Textarea
+                  placeholder="Share what you'd like to discuss in this interview"
+                  className="h-20"
+                  {...field}
+                      />
               </FormControl>
-              <FormMessage />
-            </FormItem>)}/>
+              <FormMessage       />
+            </FormItem>
+          )}
+        />
 
         <div className="flex justify-end gap-4 pt-4">
           <Button variant="outline" onClick={onClose} type="button">
