@@ -1,58 +1,187 @@
 
 import React from 'react';
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="Request Quote - Zion Tech Group" 
-        description="Get a custom quote for your AI and tech project needs from Zion Tech Group."
-        keywords="quote, pricing, AI services, tech services, project quote, Zion Tech Group"
+import { SEO } from '@/components/SEO';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { QuoteRequestForm } from '@/components/QuoteRequestForm';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { CheckCircle, Clock, Users, Zap, Brain, Code, Shield, Cloud, Palette, Layers } from 'lucide-react';
+
+export default function RequestQuote() {
+  const serviceCategories = [
+    {
+      icon: Brain,
+      title: 'AI & Machine Learning',
+      description: 'Custom AI solutions, model development, and ML infrastructure',
+      services: [
+        'Custom AI model development',
+        'Machine learning consulting',
+        'AI infrastructure setup',
+        'Data science services'
+      ]
+    },
+    {
+      icon: Code,
+      title: 'Software Development',
+      description: 'Full-stack development for web, mobile, and desktop applications',
+      services: [
+        'Web application development',
+        'Mobile app development',
+        'API development',
+        'System architecture'
+      ]
+    },
+    {
+      icon: Shield,
+      title: 'IT Services',
+      description: 'Onsite IT support, infrastructure, and digital transformation',
+      services: [
+        'Onsite IT support',
+        'Infrastructure setup',
+        'Cloud migration',
+        'Cybersecurity services'
+      ]
+    },
+    {
+      icon: Users,
+      title: 'Talent & Hiring',
+      description: 'AI-powered talent matching and recruitment services',
+      services: [
+        'AI talent matching',
+        'Recruitment services',
+        'Team building',
+        'Skill assessment'
+      ]
+    },
+    {
+      icon: Cloud,
+      title: 'Equipment & Hardware',
+      description: 'High-tech equipment, servers, and specialized hardware',
+      services: [
+        'AI/ML hardware',
+        'Server infrastructure',
+        'Networking equipment',
+        'Green IT solutions'
+      ]
+    },
+    {
+      icon: Palette,
+      title: 'Consulting',
+      description: 'Strategic technology consulting and digital transformation',
+      services: [
+        'Technology strategy',
+        'Digital transformation',
+        'Process optimization',
+        'Innovation consulting'
+      ]
+    }
+  ];
+
+  return (
+    <>
+      <SEO
+        title="Request a Quote | Zion Tech Group"
+        description="Get customized quotes for AI services, IT solutions, talent hiring, and equipment. Fast, reliable, and tailored to your needs."
+        keywords="request quote, AI services, IT solutions, talent hiring, equipment quotes"
         canonical="https://ziontechgroup.com/request-quote"
       />
+      <Header />
       
-      <AppHeader />
-      
-      <main className="pt-16 pb-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Request a Custom Quote
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Get Your Custom Quote
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Tell us about your project and we'll connect you with the perfect talent and services for your needs
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
+              Whether you need AI services, IT solutions, top talent, or specialized equipment, 
+              we'll provide you with a detailed, competitive quote tailored to your specific requirements.
             </p>
           </div>
-          
-          {/* Benefits */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="flex flex-col items-center space-y-3 p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-zion-blue-light">
-              <Users className="h-8 w-8 text-zion-cyan" />
-              <h3 className="text-white font-semibold text-lg">Expert Network</h3>
-              <p className="text-zion-slate-light text-sm text-center">Access to verified professionals across all tech domains</p>
-            </div>
+
+          {/* Benefits Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
+              <CardHeader className="text-center">
+                <Zap className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
+                <CardTitle className="text-lg">Fast Response</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <CardDescription className="text-zion-slate-light">
+                  Get your quote within 24 hours
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
+              <CardHeader className="text-center">
+                <CheckCircle className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
+                <CardTitle className="text-lg">Customized</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <CardDescription className="text-zion-slate-light">
+                  Tailored to your specific needs
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
+              <CardHeader className="text-center">
+                <Users className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
+                <CardTitle className="text-lg">Expert Team</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <CardDescription className="text-zion-slate-light">
+                  Reviewed by industry experts
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
+              <CardHeader className="text-center">
+                <Clock className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
+                <CardTitle className="text-lg">No Obligation</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <CardDescription className="text-zion-slate-light">
+                  Free quotes with no commitment
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Services Overview */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              What We Can Quote For You
+            </h2>
             
-            <div className="flex flex-col items-center space-y-3 p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-zion-blue-light">
-              <Clock className="h-8 w-8 text-zion-cyan" />
-              <h3 className="text-white font-semibold text-lg">Quick Response</h3>
-              <p className="text-zion-slate-light text-sm text-center">Get quotes within 24 hours from qualified providers</p>
-            </div>
-            
-            <div className="flex flex-col items-center space-y-3 p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-zion-blue-light">
-              <CheckCircle className="h-8 w-8 text-zion-cyan" />
-              <h3 className="text-white font-semibold text-lg">Quality Assured</h3>
-              <p className="text-zion-slate-light text-sm text-center">All providers are vetted and rated by our community</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {serviceCategories.map((category, index) => (
+                <Card key={index} className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-3">
+                      <category.icon className="h-8 w-8 text-zion-cyan" />
+                      <CardTitle className="text-xl text-zion-cyan">{category.title}</CardTitle>
+                    </div>
+                    <CardDescription className="text-zion-slate-light">
+                      {category.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="text-zion-slate-light space-y-2">
+                      {category.services.map((service, serviceIndex) => (
+                        <li key={serviceIndex}>• {service}</li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
-        </div>
-import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Clock, Users, Zap } from "lucide-react";
 
-      {/* Quote Form */}
-      <div className="py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Quote Form Section */}
           <div className="max-w-4xl mx-auto">
             <Card className="bg-white/10 backdrop-blur-sm border-zion-blue-light">
               <CardHeader>
@@ -251,39 +380,6 @@ import { CheckCircle, Clock, Users, Zap } from "lucide-react";
 >>>>>>> origin/cursor/website-audit-and-enhancement-aa85
       </main>
       
-      <Footer />
-    </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-
-export default function RequestQuote() {
-  return (
-    <>
-      <SEO 
-        title="Request a Quote - Zion Tech Group"
-        description="Get a customized quote for your IT services, AI solutions, or tech projects. Our team will provide you with a detailed estimate tailored to your needs."
-        keywords="request quote, IT services quote, AI solutions quote, tech project estimate, custom pricing"
-        canonical="https://ziontechgroup.com/request-quote"
-      />
-      <Header />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Request a Custom Quote
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Get a personalized estimate for your IT services, AI solutions, or tech projects. 
-              Our team will analyze your requirements and provide you with a detailed quote.
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <QuoteRequestForm />
-          </div>
-        </div>
-      </main>
       <Footer />
     </>
 >>>>>>> origin/cursor/website-audit-and-enhancement-24ce

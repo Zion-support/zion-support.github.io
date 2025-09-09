@@ -41,12 +41,10 @@ jobs:
           
       - name: Install dependencies
         run: npm ci
-      - name: Run build verification
-        run: npm run build
-      - name: Run linting
-        run: npm run lint
-      - name: Run type checking
-        run: npm run type-check
+      - name: Run continuous improvement
+        run: |
+          echo "Continuous improvement placeholder - add actual automation scripts here"
+          echo "Diversification placeholder - add actual diversification scripts here"
       - name: Create Pull Request
         if: steps.changes.outputs.changes == 'true'
         id: cpr

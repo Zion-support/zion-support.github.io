@@ -16,51 +16,71 @@ interface AuthState {
   isLoading: boolean;
 }
 
-export const useAuth = () => {
+export function useAuth() {
   const [authState, setAuthState] = useState<AuthState>({
     user: null,
     isAuthenticated: false,
     isLoading: true,
   });
-export function useAuth() {
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate auth check
-    setLoading(false);
+    // Check if user is logged in (e.g., check localStorage, cookies, etc.)
+    const checkAuth = () => {
+      const storedUser = localStorage.getItem('zion_user');
+      if (storedUser) {
+        try {
+          const user = JSON.parse(storedUser);
+          setAuthState({
+            user,
+            isAuthenticated: true,
+            isLoading: false,
+          });
+        } catch (error) {
+          console.error('Error parsing stored user:', error);
+          setAuthState({
+            user: null,
+            isAuthenticated: false,
+            isLoading: false,
+          });
+        }
+      } else {
+        setAuthState({
+          user: null,
+          isAuthenticated: false,
+          isLoading: false,
+        });
+      }
+    };
+
+    checkAuth();
   }, []);
 
-  const login = async (email: string, password: string) => {
-    // Simulate login
-    setUser({
-      id: '1',
-      email,
-      name: 'User',
-      role: 'user'
-    };
-    
-    setUser(mockUser);
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    return mockUser;
   const login = async (email: string, _password: string) => {
     // In a real app, you would make an API call to your backend
+    const mockUser: User = {
+      id: '1',
+      email,
+      name: 'John Doe',
+      role: 'user',
+      userType: 'creator',
+    };
+    
     setAuthState({
-      user: {
-        id: '1',
-        email,
-        name: 'John Doe',
-        role: 'user',
-        userType: 'creator',
-      },
+      user: mockUser,
       isAuthenticated: true,
       isLoading: false,
     });
-    localStorage.setItem('authToken', 'dummy-token');
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    return mockUser;
   };
 
   const logout = () => {
-    setUser(null);
+    setAuthState({
+      user: null,
+      isAuthenticated: false,
+      isLoading: false,
+    });
+    localStorage.removeItem('zion_user');
   };
 
   const register = async (email: string, password: string, name: string) => {
@@ -72,16 +92,22 @@ export function useAuth() {
       role: 'user'
     };
     
-    setUser(mockUser);
+    setAuthState({
+      user: mockUser,
+      isAuthenticated: true,
+      isLoading: false,
+    });
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     return mockUser;
   };
 
   return {
-    user,
-    loading,
+    user: authState.user,
+    isLoading: authState.isLoading,
+    isAuthenticated: authState.isAuthenticated,
     login,
-    logout
+    logout,
+    register,
+    isAdmin: authState.user?.role === 'admin'
   };
-};
 }

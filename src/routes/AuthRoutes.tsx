@@ -1,15 +1,8 @@
-import { Fragment } from "react";
-import Login from "@/pages/Login";
-// Router components removed - convert to Next.js pages structure
-import Signup from "@/pages/Signup";
-import ForgotPassword from "@/pages/ForgotPassword";
-import UpdatePassword from "@/pages/UpdatePassword";
-import ResetPassword from "@/pages/ResetPassword";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import Onboarding from "@/pages/Onboarding";
-import TalentOnboarding from "@/pages/TalentOnboarding";
-import ServiceOnboarding from "@/pages/ServiceOnboarding";
-import { useRouter } from 'next/navigation';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Login from '@/pages/Login';
+import Signup from '@/pages/Signup';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
 
 const AuthRoutes = () => {
   const router = useRouter();
