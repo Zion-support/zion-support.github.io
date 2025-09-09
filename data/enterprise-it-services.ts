@@ -11,18 +11,8 @@ export interface EnterpriseItService {
   contactInfo: {
     mobile: string;
     email: string;
-export interface EnterpriseItService {;
-    address: string
-};
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,,
-  description: string,;
-  features: string[],;
-  link: string,;
-  category: string,;
-  realImplementation: boolean,;
+    address: string;
+  };
   contactInfo: {;
     mobile: string,;
     email: string,;
