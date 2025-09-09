@@ -1,34 +1,212 @@
 import React, { useMemo } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { extraServices } from '../data/extra-services';
+import { additionalEnhancedServices } from '../data/additional-real-services';
+import { newlyAddedServices } from '../data/newly-added-services';
+import { realMarketAugmentations2025 } from '../data/real-market-augmentations-2025';
+import { additionalLiveServices2025 } from '../data/additional-live-services-2025';
+import { augmentedServicesBatch3 } from '../data/real-augmented-services-2025-batch3';
+import { realServicesQ22025 } from '../data/real-services-q2-2025';
+import { realQ4Services2025, real2025Q4Additions } from '../data/real-2025-q4-additions';
+import { realMarketServicesExtended } from '../data/real-market-services-extended';
+import { real2026Additions } from '../data/real-2026-additions';
+import { added2026Q2Services } from '../data/added-2026-q2-services';
+import { real2026Q3Additions } from '../data/real-2026-q3-additions';
+import { real2026Q4Additions } from '../data/real-2026-q4-additions';
+import { real2026Q4NewServices } from '../data/real-2026-q4-new-services';
+import { real2027Q1Additions } from '../data/real-2027-q1-additions';
+import fs from 'fs';
+import path from 'path';
 
 export default function ServicePage() {
 	const router = useRouter();
 	const { slug } = router.query;
 
-	const service = useMemo(() => {
-		if (!slug) return undefined;
-		return {
-			id: slug as string,
-			name: 'Service',
-			description: 'Service description'
-		};
-	}, [slug]);
+function getAllServices(): Service[] {
+  return enhancedRealMicroSaasServices
+    .concat(
+      extraServices as Service[],
+      additionalEnhancedServices as Service[],
+      newlyAddedServices as Service[],
+      realMarketAugmentations2025 as Service[],
+      additionalLiveServices2025 as Service[],
+      augmentedServicesBatch3 as Service[],
+      realServicesQ22025 as Service[],
+      realQ4Services2025 as Service[],
+      real2025Q4Additions as Service[],
+      realMarketServicesExtended as Service[],
+      real2026Additions as Service[],
+      added2026Q2Services as Service[],
+      real2026Q3Additions as Service[],
+      real2026Q4Additions as Service[],
+      real2026Q4NewServices as Service[],
+      real2027Q1Additions as Service[]
+    );
+}
 
-	if (!service) {
-		return <div>Loading...</div>;
-	}
+function toSlug(value: string): string {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
 
-	return (
-		<>
-			<Head>
-				<title>{service.name} | Zion Tech Group</title>
-				<meta name="description" content={service.description} />
-			</Head>
-			<main className="min-h-screen bg-black text-white p-8">
-				<h1>{service.name}</h1>
-				<p>{service.description}</p>
-			</main>
-		</>
-	);
+function extractSlugFromLink(link: string): string | null {
+  try {
+    const url = new URL(link);
+    const path = url.pathname.replace(/^\/+|\/+$/g, '');
+    return path;
+  } catch {
+    return null;
+  }
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const services = getAllServices();
+  const candidateSlugs = new Set<string>();
+  const pageExtensions = ['.tsx', '.ts', '.jsx', '.js'];
+
+  function pageExists(slug: string): boolean {
+    try {
+      if (!slug || slug === 'index' || slug === '[slug]' || slug.startsWith('_')) return true;
+      for (const ext of pageExtensions) {
+        const filePath = path.join(process.cwd(), 'pages', `${slug}${ext}`);
+        if (fs.existsSync(filePath)) return true;
+      }
+      return false;
+    } catch {
+      return false;
+    }
+  }
+
+  for (const s of services) {
+    const fromLink = extractSlugFromLink((s as any).link);
+    if (fromLink) {
+      candidateSlugs.add(fromLink);
+    } else if (s.id) {
+      candidateSlugs.add(toSlug(s.id));
+    } else if (s.name) {
+      candidateSlugs.add(toSlug(s.name));
+    }
+  }
+
+  const uniqueSlugs = Array.from(candidateSlugs).filter((slug) => !pageExists(slug));
+
+  return {
+    paths: uniqueSlugs.map((slug) => ({ params: { slug } })),
+    fallback: true
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const services = getAllServices();
+  const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
+
+  let service: Service | undefined = services.find((s) => {
+    if (!s.link) return false;
+    const fromLink = extractSlugFromLink(s.link);
+    return fromLink === incomingSlug;
+  });
+
+  if (!service) {
+    service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
+  }
+
+  if (!service) {
+    return { notFound: true };
+  }
+
+  return {
+    props: { service }
+  };
+};
+
+export default function ServiceDetailPage({ service }: { service: Service }) {
+  const contactInfo = service.contactInfo || {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
+
+  if (!service) {
+    return (
+      <UltraFuturisticBackground>
+        <Head>
+          <title>Service Not Found | Zion Tech Group</title>
+          <meta name="robots" content="noindex" />
+        </Head>
+        <div className="container mx-auto px-4 py-24 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Service Not Found</h1>
+          <p className="text-gray-300 mb-8">This service link is no longer available. Explore our full catalog of services.</p>
+          <Button href="/services" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-xl">Browse Services</Button>
+        </div>
+      </UltraFuturisticBackground>
+    );
+  }
+
+  return (
+    <UltraFuturisticBackground variant="quantum" intensity="high">
+      <Head>
+        <title>{service.name} | Zion Tech Group</title>
+        <meta name="description" content={service.tagline || service.description} />
+        <link rel="canonical" href={service.link} />
+      </Head>
+
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-10">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+            {service.name}
+          </h1>
+          <p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+          <div className="lg:col-span-2 space-y-6">
+            <Card className="p-6 bg-black/40 border border-gray-700/50">
+              <h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
+              <p className="text-gray-300 leading-relaxed">{service.description}</p>
+            </Card>
+
+            <Card className="p-6 bg-black/40 border border-gray-700/50">
+              <h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
+              <ul className="space-y-2 text-gray-300">
+                {(service.features || []).slice(0, 12).map((f) => (
+                  <li key={f} className="flex items-start gap-2">
+                    <Check className="w-4 h-4 mt-0.5 text-emerald-400" />
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </Card>
+          </div>
+
+          <div className="space-y-6">
+            <Card className="p-6 bg-black/40 border border-gray-700/50">
+              <div className="text-sm text-gray-400 mb-1">Pricing</div>
+              <div className="text-3xl font-bold text-white">{service.price}<span className="text-base font-medium text-gray-400">{service.period}</span></div>
+              <div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'}</div>
+              <div className="mt-6 flex gap-3">
+                <Button href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Button>
+                <Button href={service.link} variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Learn More</Button>
+              </div>
+            </Card>
+
+            <Card className="p-6 bg-black/40 border border-gray-700/50">
+              <h3 className="text-white font-semibold mb-3">Contact</h3>
+              <div className="space-y-3 text-sm">
+                <div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:underline">{contactInfo.mobile}</a></div>
+                <div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={`mailto:${contactInfo.email}`} className="hover:underline">{contactInfo.email}</a></div>
+                <div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs hover:underline">{contactInfo.address}</a></div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </UltraFuturisticBackground>
+  );
 }

@@ -278,5 +278,3 @@ const Index: NextPage = () => {
     </UltraFuturisticBackground2029>
   );
 };
-
-export default Index;

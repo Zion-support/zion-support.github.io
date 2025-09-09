@@ -33,6 +33,7 @@ export default function UltraAdvancedFuturisticBackground({
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
+    // Particle system
     const particles: Array<{
       x: number;
       y: number;
