@@ -1,41 +1,69 @@
 import React, { useState } from 'react';
-import { ADVANCED_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from '@/data/advancedServices';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Search, Star, Clock, Globe, TrendingUp, Shield, Brain, Users, CheckCircle, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-export default function AdvancedServicesPage() {
-    const [searchQuery, setSearchQuery] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [sortBy, setSortBy] = useState('featured');
-    // Filter services based on search and category
-    const filteredServices = ADVANCED_SERVICES.filter(service => {
-        const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-        return matchesSearch && matchesCategory;
-    });
-    // Sort services
-    const sortedServices = [...filteredServices].sort((a, b) => {
-        switch (sortBy) {
-            case 'price-low':
-                return (a.price || 0) - (b.price || 0);
-            case 'price-high':
-                return (b.price || 0) - (a.price || 0);
-            case 'rating':
-                return (b.rating || 0) - (a.rating || 0);
-            case 'ai-score':
-                return (b.aiScore || 0) - (a.aiScore || 0);
-            default:
-                return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
-        }
-    });
-    const uniqueCategories = Array.from(new Set(ADVANCED_SERVICES.map(service => service.category)));
-    return (<div className="min-h-screen bg-background">
-      <SEO title="Advanced AI & IT Services - Zion Tech Group" description="Discover cutting-edge AI solutions, cybersecurity services, cloud optimization, and digital transformation services. Expert IT consulting and implementation." keywords="AI services, IT consulting, cybersecurity, cloud optimization, digital transformation, business automation" canonical="https://ziontechgroup.com/advanced-services"/>
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { SEO } from '@/components / SEO';
+export default function AdvancedServicesPage () {
+import {
+import {
+import {
+
+
+  ADVANCED_SERVICES,
+  SERVICE_CATEGORIES,
+  PRICING_TIERS,
+} from '@/data / advancedServices';
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+  Search,
+  Star,
+  Clock,
+  Globe,
+  TrendingUp,
+  Shield,
+  Brain,
+  Users,
+  CheckCircle,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+} from 'lucide - react';
+  const [searchQuery, setSearchQuery] = useState ('') ;
+  const [selectedCategory, setSelectedCategory] = useState ('all') ;
+  const [sortBy, setSortBy] = useState ('featured') ;
+  // Filter services based on search and category
+  const filteredServices = ADVANCED_SERVICES.filter (service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  }) ;
+  // Sort services
+  const sortedServices = [...filteredServices].sort ( (a, b) => {
+    switch (sortBy) {
+      case 'price - low':
+        return (a.price || 0) - (b.price || 0) ;
+      case 'price - high':
+        return (b.price || 0) - (a.price || 0) ;
+      case 'rating':
+        return (b.rating || 0) - (a.rating || 0) ;
+      case 'ai - score':
+        return (b.aiScore || 0) - (a.aiScore || 0) ;
+      default:
+        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0) ;
+    }
+  }) ;
+  const uniqueCategories = Array.from (new Set (ADVANCED_SERVICES.map (service => service.category) ) ) ;
+  return (<div className="min - h-screen bg - background">
+      <SEO
+        title="Advanced AI & IT Services - Zion Tech Group"
+        description="Discover cutting - edge AI solutions, cybersecurity services, cloud optimization, and digital transformation services. Expert IT consulting and implementation."
+        keywords="AI services, IT consulting, cybersecurity, cloud optimization, digital transformation, business automation"
+        canonical="https://ziontechgroup.com / advanced - services"
+            />
 
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
@@ -49,18 +77,18 @@ export default function AdvancedServicesPage() {
           </p>
           
           {/* Contact Information */}
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
-            <div className="flex items-center gap-2 text-zion-cyan">
-              <Phone className="w-5 h-5"/>
+          <div className="flex flex - wrap justify - center gap - 6 mb - 8">
+            <div className="flex items - center gap - 2 text - zion - cyan">
+              <Phone className="w - 5 h - 5"       />
               <span>+1 302 464 0950</span>
             </div>
-            <div className="flex items-center gap-2 text-zion-cyan">
-              <Mail className="w-5 h-5"/>
-              <span>kleber@ziontechgroup.com</span>
+            <div className="flex items - center gap - 2 text - zion - cyan">
+              <Mail className="w - 5 h - 5"       />
+              <span > kleber@ziontechgroup.com</span>
             </div>
-            <div className="flex items-center gap-2 text-zion-cyan">
-              <MapPin className="w-5 h-5"/>
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+            <div className="flex items - center gap - 2 text - zion - cyan">
+              <MapPin className="w - 5 h - 5"       />
+              <span > 364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
 
@@ -76,12 +104,17 @@ export default function AdvancedServicesPage() {
       </section>
 
       {/* Search and Filter Section */}
-      <section className="py-8 bg-zion-blue-dark border-b border-zion-blue-light">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-4 items-center">
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5"/>
-              <Input placeholder="Search services, technologies, or solutions..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light"/>
+      <section className="py - 8 bg - zion - blue - dark border - b border - zion - blue - light">
+        <div className="container mx - auto px - 4">
+          <div className="flex flex - col lg:flex - row gap - 4 items - center">
+            <div className="relative flex - 1 max - w-md">
+              <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - zion - slate - light w - 5 h - 5"       />
+              <Input
+                placeholder="Search services, technologies, or solutions..."
+                value={searchQuery}
+                onChange={e => setSearchQuery (e.target.value) }
+                className="pl - 10 bg - zion - blue border - zion - blue - light text - white placeholder:text - zion - slate - light"
+              />
             </div>
             
             <div className="flex gap-2">
@@ -143,8 +176,8 @@ export default function AdvancedServicesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sortedServices.map((service) => (<ServiceCard key={service.id} service={service}/>))}
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
+            {sortedServices.map (service => (<ServiceCard key={service.id} service={service}       />) ) }
           </div>
         </div>
       </section>
@@ -169,9 +202,12 @@ export default function AdvancedServicesPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-3">
-                    {tier.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center gap-2">
-                        <CheckCircle className="w-5 h-5 text-zion-cyan"/>
+                  <ul className="space - y-3">
+                    {tier.features.map ( (feature, featureIndex) => (<li
+                        key={featureIndex}
+                        className="flex items - center gap - 2"
+                      >
+                        <CheckCircle className="w - 5 h - 5 text - zion - cyan"       />
                         <span>{feature}</span>
                       </li>))}
                   </ul>
@@ -193,35 +229,35 @@ export default function AdvancedServicesPage() {
               Proven expertise, innovative solutions, and dedicated support
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Brain className="w-8 h-8 text-zion-blue"/>
+
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
+            <div className="text - center">
+              <div className="w - 16 h - 16 bg - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 4">
+                <Brain className="w - 8 h - 8 text - zion - blue"       />
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">AI Expertise</h3>
               <p className="text-zion-slate">Cutting-edge AI solutions with proven results</p>
             </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-zion-blue"/>
+
+            <div className="text - center">
+              <div className="w - 16 h - 16 bg - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 4">
+                <Shield className="w - 8 h - 8 text - zion - blue"       />
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Enterprise Security</h3>
               <p className="text-zion-slate">Bank-level security and compliance standards</p>
             </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-zion-blue"/>
+
+            <div className="text - center">
+              <div className="w - 16 h - 16 bg - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 4">
+                <Users className="w - 8 h - 8 text - zion - blue"       />
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Expert Team</h3>
               <p className="text-zion-slate">Certified professionals with industry experience</p>
             </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-zion-blue"/>
+
+            <div className="text - center">
+              <div className="w - 16 h - 16 bg - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 4">
+                <TrendingUp className="w - 8 h - 8 text - zion - blue"       />
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Proven Results</h3>
               <p className="text-zion-slate">Track record of successful implementations</p>
@@ -237,14 +273,21 @@ export default function AdvancedServicesPage() {
           <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
             Get in touch with our experts to discuss your specific needs and discover how our AI and IT solutions can drive your business forward.
           </p>
-          
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">
-              <Phone className="w-5 h-5 mr-2"/>
-              Call +1 302 464 0950
+
+          <div className="flex flex - wrap justify - center gap - 4 mb - 8">
+            <Button
+              size="lg"
+              className="bg - zion - cyan hover:bg - zion - cyan - dark text - zion - blue font - semibold"
+            >
+              <Phone className="w - 5 h - 5 mr - 2"       />
+              Call + 1 302 464 0950
             </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue">
-              <Mail className="w-5 h-5 mr-2"/>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan hover:text - zion - blue"
+            >
+              <Mail className="w - 5 h - 5 mr - 2"       />
               Email kleber@ziontechgroup.com
             </Button>
           </div>
@@ -265,8 +308,12 @@ export default function AdvancedServicesPage() {
 function ServiceCard({ service }) {
     return (<Card className="h-full hover:shadow-lg transition-all duration-300 border-zion-blue-light hover:border-zion-cyan">
       <div className="relative">
-        <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
-        {service.featured && (<Badge className="absolute top-3 right-3 bg-zion-cyan text-zion-blue">
+        <img
+          src={service.images[0]}
+          alt={service.title}
+          className="w - full h - 48 object - cover rounded - t-lg"
+              />
+        {service.featured && (<Badge className="absolute top - 3 right - 3 bg - zion - cyan text - zion - blue">
             Featured
           </Badge>)}
       </div>
@@ -296,21 +343,22 @@ function ServiceCard({ service }) {
         </div>
         
         {/* Service Details */}
-        <div className="grid grid-cols-2 gap-4 text-sm">
-          <div className="flex items-center gap-2 text-zion-slate">
-            <Star className="w-4 h-4 text-yellow-500"/>
-            <span>{service.rating} ({service.reviewCount} reviews)</span>
+        <div className="grid grid - cols - 2 gap - 4 text - sm">
+          <div className="flex items - center gap - 2 text - zion - slate">
+            <Star className="w - 4 h - 4 text - yellow - 500"       />
+            <span>
+              {service.rating} ({service.reviewCount} reviews) </span>
           </div>
-          <div className="flex items-center gap-2 text-zion-slate">
-            <Brain className="w-4 h-4 text-zion-cyan"/>
-            <span>AI Score: {service.aiScore}</span>
+          <div className="flex items - center gap - 2 text - zion - slate">
+            <Brain className="w - 4 h - 4 text - zion - cyan"       />
+            <span > AI Score: {service.aiScore}</span>
           </div>
-          <div className="flex items-center gap-2 text-zion-slate">
-            <Clock className="w-4 h-4 text-zion-cyan"/>
+          <div className="flex items - center gap - 2 text - zion - slate">
+            <Clock className="w - 4 h - 4 text - zion - cyan"       />
             <span>{service.availability}</span>
           </div>
-          <div className="flex items-center gap-2 text-zion-slate">
-            <Globe className="w-4 h-4 text-zion-cyan"/>
+          <div className="flex items - center gap - 2 text - zion - slate">
+            <Globe className="w - 4 h - 4 text - zion - cyan"       />
             <span>{service.location}</span>
           </div>
         </div>

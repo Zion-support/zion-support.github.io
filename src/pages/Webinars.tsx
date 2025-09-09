@@ -1,147 +1,379 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
-import { Video, Brain, Cpu, Shield, Zap, Rocket, Building } from 'lucide-react';
-export default function Webinars() {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [searchQuery, setSearchQuery] = useState('');
-    const [selectedStatus, setSelectedStatus] = useState('all');
-    const categories = [
-        { id: 'all', name: 'All Topics', icon: Video },
-        { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain },
-        { id: 'quantum', name: 'Quantum Technology', icon: Cpu },
-        { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
-        { id: 'cloud', name: 'Cloud & DevOps', icon: Zap },
-        { id: 'business', name: 'Business Solutions', icon: Building },
-        { id: 'emerging-tech', name: 'Emerging Tech', icon: Rocket }
-    ];
-    const statuses = [
-        { id: 'all', name: 'All Webinars' },
-        { id: 'upcoming', name: 'Upcoming' },
-        { id: 'live', name: 'Live Now' },
-        { id: 'recorded', name: 'Recorded' }
-    ];
-    const Webinars = () => {
-        const webinars = [
-            {
-                title: "AI-Powered Business Transformation",
-                date: "March 25, 2024",
-                duration: "60 minutes",
-                speaker: "Dr. Sarah Chen",
-                description: "Learn how AI is revolutionizing business operations and creating new opportunities for growth.",
-                category: "AI & Business"
-            },
-            {
-                title: "Cybersecurity Best Practices 2024",
-                date: "April 10, 2024",
-                duration: "45 minutes",
-                speaker: "Michael Rodriguez",
-                description: "Essential cybersecurity strategies to protect your business from evolving threats.",
-                category: "Security"
-            },
-            {
-                title: "Cloud Migration Strategies",
-                date: "April 25, 2024",
-                duration: "75 minutes",
-                speaker: "David Kim",
-                description: "Step-by-step guide to successful cloud migration and optimization.",
-                category: "Cloud & DevOps"
-            }
-        ];
-        return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Expert
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Webinars
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join industry experts for in-depth discussions on technology trends, 
-              best practices, and innovative solutions
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {webinars.map((webinar, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                <div className="mb-4">
-                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">{webinar.category}</span>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{webinar.title}</h3>
-                <p className="text-gray-300 mb-4">{webinar.description}</p>
-                
-                <div className="space-y-2 mb-4">
-                  <p className="text-gray-400 text-sm flex items-center">
-                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                    </svg>
-                    {webinar.date}
-                  </p>
-                  <p className="text-gray-400 text-sm flex items-center">
-                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                    {webinar.duration}
-                  </p>
-                  <p className="text-gray-400 text-sm flex items-center">
-                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                    </svg>
-                    {webinar.speaker}
-                  </p>
-                </div>
-                
-                <Link to="/contact" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">
-                  Register Now
-                  <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
-                  </svg>
-                </Link>
-              </div>))}
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4">Stay Informed</h3>
-              <p className="text-gray-300 mb-6">
-                Subscribe to our webinar series and never miss an opportunity to learn 
-                from industry experts and technology leaders.
-              </p>
-              <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-                Subscribe to Webinars
-              </Link>
-            </div>
-          </div>
-=======
-import {CogIcon} from '@heroicons/react/24/outline';
-
-const $page: React.FC = () => {}
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-3 bg-blue-600/20 rounded-full">
-              <CogIcon className="h-12 w-12 text-blue-400"/>
-            </div>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            $page
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            This page is under development. Contact us for more information.
-          </p>
-          <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">
-            Contact Us for More Information
-          </Link>
-        </div>
-      </section>
-    </div>
-  );
+export default Webinars;
+import {;
+import { motion } from 'framer - motion';
+import { SEO } from '../components / SEO';
+;
+;
+  BookOpen,;
+  Brain,;
+  Shield,;
+  Cloud,;
+  Rocket,;
+  Heart,;
+  Zap,;
+  Globe,;
+  Video,;
+  Database,;
+  Target,;
+  Calendar,;
+  Clock,;
+  Users,;
+  Play,;
+  ExternalLink,;
+  Search,;
+  Filter,;
+  Star,;
+  Eye,;
+  Download,;
+  Share2,;
+  ArrowRight,;
+  CheckCircle,;
+} from 'lucide - react';
+;
+const Webinars: React.FC = () => {;
+  const [searchQuery, setSearchQuery] = useState ('') ;
+  const [activeCategory, setActiveCategory] = useState ('all') ;
+  const [filterType, setFilterType] = useState ('all') ;
+;
+  const categories = [;
+    { id: 'all', name: 'All Categories', icon: Video, count: 0 },;
+    { id: 'ai - ml', name: 'AI & Machine Learning', icon: Brain, count: 6 },;
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 4 },;
+    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 3 },;
+    { id: 'data', name: 'Data & Analytics', icon: Database, count: 5 },;
+    { id: 'emerging', name: 'Emerging Technologies', icon: Zap, count: 2 },;
+    { id: 'strategy', name: 'Digital Strategy', icon: Target, count: 4 },;
+  ];
+;
+  const filterTypes = [;
+    { id: 'all', name: 'All Webinars', count: 0 },;
+    { id: 'upcoming', name: 'Upcoming', count: 0 },;
+    { id: 'on - demand', name: 'On - Demand', count: 0 },;
+    { id: 'live', name: 'Live Now', count: 0 },;
+  ];
+;
+  const upcomingWebinars = [;
+    {;
+      id: 1,;
+      title: 'AI - Powered Business Transformation: Real - World Success Stories',;
+      description:;
+        'Join industry experts as they share real - world case studies of successful AI implementations and the lessons learned along the way.',;
+      category: 'ai - ml',;
+      type: 'upcoming',;
+      date: '2025 - 02 - 10T14:00:00Z',;
+      duration: '75 min',;
+      speakers: ['Dr. Sarah Chen', 'Dr. Michael Rodriguez', 'AI Research Team'],;
+      maxAttendees: 600,;
+      currentAttendees: 487,;
+      featured: true,;
+      tags: [;
+        'AI Research',;
+        'Autonomous Systems',;
+        'Business Intelligence',;
+        'Innovation',;
+      ],;
+      thumbnail: '/images / webinars / ai - autonomous - research - 2025.jpg',;
+      registrationRequired: true,;
+      recordingAvailable: false,;
+    },;
+    {;
+      id: 2,;
+      title: 'AI Supply Chain Optimization: Reducing Costs by Up to 30%',;
+      description:;
+        'Learn how AI - powered supply chain optimization can predict demand, optimize inventory, and reduce costs significantly for your organization.',;
+      category: 'ai - ml',;
+      type: 'upcoming',;
+      date: '2025 - 02 - 12T15:00:00Z',;
+      duration: '60 min',;
+      speakers: [;
+        'Michael Rodriguez',;
+        'Supply Chain Experts',;
+        'AI Implementation Team',;
+      ],;
+      maxAttendees: 400,;
+      currentAttendees: 298,;
+      featured: true,;
+      tags: [;
+        'Supply Chain',;
+        'AI Optimization',;
+        'Cost Reduction',;
+        'Predictive Analytics',;
+      ],;
+      thumbnail: '/images / webinars / ai - supply - chain - 2025.jpg',;
+      registrationRequired: true,;
+      recordingAvailable: false,;
+    },;
+    {;
+      id: 3,;
+      title: 'Cloud - Native Security: Protecting Modern Applications',;
+      description:;
+        'Explore best practices for securing cloud - native applications and implementing zero - trust security models.',;
+      category: 'security',;
+      type: 'upcoming',;
+      date: '2025 - 02 - 15T16:00:00Z',;
+      duration: '90 min',;
+      speakers: ['Security Experts', 'Cloud Architecture Team'],;
+      maxAttendees: 350,;
+      currentAttendees: 245,;
+      featured: false,;
+      tags: [;
+        'Cloud Security',;
+        'Zero Trust',;
+        'Application Security',;
+        'DevSecOps',;
+      ],;
+      thumbnail: '/images / webinars / cloud - security - 2025.jpg',;
+      registrationRequired: true,;
+      recordingAvailable: false,;
+    },;
+  ];
+;
+  const onDemandWebinars = [;
+    {;
+      id: 4,;
+      title: 'Data - Driven Decision Making: From Insights to Action',;
+      description:;
+        'Learn how to transform raw data into actionable insights that drive business decisions and growth.',;
+      category: 'data',;
+      type: 'on - demand',;
+      date: '2024 - 12 - 15T10:00:00Z',;
+      duration: '60 min',;
+      speakers: ['Data Science Team', 'Business Intelligence Experts'],;
+      views: 1247,;
+      featured: true,;
+      tags: [;
+        'Data Analytics',;
+        'Business Intelligence',;
+        'Decision Making',;
+        'Data Strategy',;
+      ],;
+      thumbnail: '/images / webinars / data - driven - decisions - 2024.jpg',;
+      recordingAvailable: true,;
+      watchUrl: '/webinars / data - driven - decision - making',;
+    },;
+    {;
+      id: 5,;
+      title: 'Digital Twin Technology: Measuring ROI in Manufacturing',;
+      description:;
+        'Explore practical applications of digital twin technology and how to measure return on investment.',;
+      category: 'emerging',;
+      type: 'on - demand',;
+      date: '2024 - 11 - 20T14:00:00Z',;
+      duration: '75 min',;
+      speakers: ['IoT Specialists', 'Manufacturing Experts'],;
+      views: 892,;
+      featured: false,;
+      tags: ['Digital Twin', 'IoT', 'ROI', 'Digital Transformation'],;
+      thumbnail: '/images / webinars / digital - twin - 2024.jpg',;
+      recordingAvailable: true,;
+      watchUrl: '/webinars / digital - twin - technology - roi',;
+    },;
+  ];
+;
+  const filteredWebinars = [...upcomingWebinars, ...onDemandWebinars].filter (webinar => {;
+      const matchesSearch = webinar.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
+        webinar.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
+      const matchesCategory = activeCategory === 'all' || webinar.category === activeCategory;
+      const matchesType = filterType === 'all' || webinar.type === filterType;
+;
+      return matchesSearch && matchesCategory && matchesType;
+    }) ;
+;
+  return (<>;
+      <SEO;
+        title="Webinars - Zion Tech Group";
+        description="Join our expert - led webinars on AI, cloud computing, cybersecurity, and emerging technologies. Learn from industry leaders and stay ahead of the curve.";
+        keywords="webinars, AI, machine learning, cloud computing, cybersecurity, digital transformation, Zion Tech Group";
+            />;
+;
+      <div role="button" className="min - h-screen bg - gradient - to - br from - blue - 900 via - purple - 900 to - indigo - 900">;
+        {/* Header */};
+        <section className="pt - 32 pb - 16 px - 4">;
+          <div role="button" className="max - w-7xl mx - auto text - center">;
+            <motion.div;
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.6 }};
+            >;
+              <div role="button" className="flex items - center justify - center space - x-3 mb - 6">;
+                <div role="button" className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center">;
+                  <Video className="w - 8 h - 8 text - white"       />;
+                </div>;
+              </div>;
+              <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
+                Expert Webinars;
+              </h1>;
+              <p className="text - xl text - gray - 300 max - w-3xl mx - auto mb - 8">;
+                Join our expert - led webinars on cutting - edge technologies and;
+                industry insights. Learn from thought leaders and stay ahead of;
+                the curve.;
+              </p>;
+            </motion.div>;
+          </div>;
+        </section>;
+;
+        {/* Search and Filters */};
+        <section className="py - 8 px - 4">;
+          <div role="button" className="max - w-7xl mx - auto">;
+            <div role="button" className="bg - slate - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - slate - 700 / 50">;
+              {/* Search Bar */};
+              <div role="button" className="relative mb - 6">;
+                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 w - 5 h - 5"       />;
+                <input;
+                  type="text";
+                  placeholder="Search webinars...";
+                  value={searchQuery};
+                  onChange={e => setSearchQuery (e.target.value) };
+                  className="w - full pl - 10 pr - 4 py - 3 bg - slate - 700 / 50 border border - slate - 600 / 50 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
+                />;
+              </div>;
+;
+              {/* Category Filters */};
+              <div role="button" className="mb - 6">;
+                <h3 className="text - white font - semibold mb - 3">Categories</h3>;
+                <div role="button" className="flex flex - wrap gap - 2">;
+                  {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id};
+                      onClick={ () => setActiveCategory (category.id) };
+                      className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - colors ${;
+                        activeCategory === category.id;
+                          ? 'bg - blue - 500 text - white';
+                          : 'bg - slate - 700 / 50 text - gray - 300 hover:bg - slate - 600 / 50';
+                      }`};
+                    >;
+                      <div role="button" className="flex items - center gap - 2">;
+                        <category.icon className="w - 4 h - 4"       />;
+                        {category.name};
+                        <span className="text - xs opacity - 75"> ({category.count}) </span>;
+                      </div>;
+                    </button>) ) };
+                </div>;
+              </div>;
+;
+              {/* Type Filters */};
+              <div>;
+                <h3 className="text - white font - semibold mb - 3">Type</h3>;
+                <div role="button" className="flex flex - wrap gap - 2">;
+                  {filterTypes.map (type => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={type.id};
+                      onClick={ () => setFilterType (type.id) };
+                      className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - colors ${;
+                        filterType === type.id;
+                          ? 'bg - purple - 500 text - white';
+                          : 'bg - slate - 700 / 50 text - gray - 300 hover:bg - slate - 600 / 50';
+                      }`};
+                    >;
+                      {type.name};
+                      <span className="text - xs opacity - 75 ml - 1"> ({type.count}) </span>;
+                    </button>) ) };
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+;
+        {/* Webinars Grid */};
+        <section className="py - 16 px - 4">;
+          <div role="button" className="max - w-7xl mx - auto">;
+            <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+              {filteredWebinars.map ( (webinar, index) => (<motion.div;
+                  key={webinar.id};
+                  initial={{ opacity: 0, y: 20 }};
+                  whileInView={{ opacity: 1, y: 0 }};
+                  viewport={{ once: true }};
+                  transition={{ duration: 0.6, delay: index * 0.1 }};
+                  className="bg - slate - 800 / 50 backdrop - blur - sm rounded - xl border border - slate - 700 / 50 overflow - hidden hover:border - blue - 500 / 50 transition - all duration - 300";
+                >;
+                  {/* Thumbnail */};
+                  <div role="button" className="relative h - 48 bg - gradient - to - br from - slate - 700 to - slate - 800">;
+                    <div role="button" className="absolute inset - 0 flex items - center justify - center">;
+                      <Play className="w - 12 h - 12 text - white opacity - 50"       />;
+                    </div>;
+                    {webinar.featured && (<div role="button" className="absolute top - 3 left - 3">;
+                        <Star className="w - 5 h - 5 text - yellow - 400 fill - current"       />;
+                      </div>) };
+                    {webinar.type === 'live' && (<div role="button" className="absolute top - 3 right - 3 bg - red - 500 text - white px - 2 py - 1 rounded - full text - xs font - medium">;
+                        LIVE;
+                      </div>) };
+                  </div>;
+;
+                  {/* Content */};
+                  <div role="button" className="p - 6">;
+                    <div role="button" className="flex items - center gap - 2 mb - 3">;
+                      <span;
+                        className={`px - 2 py - 1 rounded - full text - xs font - medium ${;
+                          webinar.type === 'upcoming';
+                            ? 'bg - blue - 500 / 20 text - blue - 400';
+                            : webinar.type === 'on - demand';
+                              ? 'bg - green - 500 / 20 text - green - 400';
+                              : 'bg - red - 500 / 20 text - red - 400';
+                        }`};
+                      >;
+                        {webinar.type === 'upcoming';
+                          ? 'Upcoming';
+                          : webinar.type === 'on - demand';
+                            ? 'On - Demand';
+                            : 'Live'};
+                      </span>;
+                      <span className="text - gray - 400 text - sm">;
+                        {webinar.duration};
+                      </span>;
+                    </div>;
+;
+                    <h3 className="text - white font - semibold text - lg mb - 2 line - clamp - 2">;
+                      {webinar.title};
+                    </h3>;
+;
+                    <p className="text - gray - 300 text - sm mb - 4 line - clamp - 3">;
+                      {webinar.description};
+                    </p>;
+;
+                    {/* Speakers */};
+                    <div role="button" className="flex items - center gap - 2 mb - 4">;
+                      <Users className="w - 4 h - 4 text - gray - 400"       />;
+                      <span className="text - gray - 400 text - sm">;
+                        {Array.isArray (webinar.speakers) ? webinar.speakers.join (', ') : webinar.speakers};
+                      </span>;
+                    </div>;
+;
+                    {/* Tags */};
+                    <div role="button" className="flex flex - wrap gap - 1 mb - 4">;
+                      {webinar.tags.slice (0, 3) .map ( (tag, idx) => (<span;
+                          key={idx};
+                          className="px - 2 py - 1 bg - slate - 700 / 50 text - gray - 300 text - xs rounded";
+                        >;
+                          {tag};
+                        </span>) ) };
+                    </div>;
+;
+                    {/* Action Button */};
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - blue - 500 to - purple - 500 text - white py - 2 px - 4 rounded - lg font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300 flex items - center justify - center gap - 2">;
+                      {webinar.type === 'upcoming' ? (<>;
+                          <Calendar className="w - 4 h - 4"       />;
+                          Register Now;
+                        </>) : webinar.type === 'on - demand' ? (<>;
+                          <Play className="w - 4 h - 4"       />;
+                          Watch Now;
+                        </>) : (<>;
+                          <Eye className="w - 4 h - 4"       />;
+                          Join Live;
+                        </>) };
+                    </button>;
+                  </div>;
+                </motion.div>) ) };
+            </div>;
+;
+            {filteredWebinars.length === 0 && (<div role="button" className="text - center py - 12">;
+                <Search className="w - 16 h - 16 text - gray - 400 mx - auto mb - 4"       />;
+                <h3 className="text - white text - xl font - semibold mb - 2">;
+                  No webinars found;
+                </h3>;
+                <p className="text - gray - 400">;
+                  Try adjusting your search criteria or filters.;
+                </p>;
+              </div>) };
+          </div>;
+        </section>;
+      </div>;
+    </>) ;
 };
-
-export default $page;
-        </></></>);
-    };
-}
+;

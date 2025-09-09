@@ -132,23 +132,33 @@ const ComprehensivePricing = () => {
               </div>
             </div>
 
-            <div className="space-y-2">
-              <h4 className="text-sm font-semibold text-slate-300">Key Features:</h4>
-              <div className="space-y-1">
-                {service.features.slice(0, 5).map((feature, index) => (<div key={index} className="flex items-center text-sm text-slate-300">
-                    <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>
+            <div className="space - y-2">
+              <h4 className="text - sm font - semibold text - blue - 200">
+                Key Features:
+              </h4>
+              <div className="space - y-1">
+                {service.features.slice (0, 5) .map ( (feature, index) => (<div
+                    key={index}
+                    className="flex items - center text - sm text - blue - 200"
+                  >
+                    <Check className="h - 4 w - 4 text - green - 400 mr - 2 flex - shrink - 0"       />
                     {feature}
                   </div>))}
               </div>
             </div>
 
-            <div className="space-y-2">
-              <h4 className="text-sm font-semibold text-slate-300">Benefits:</h4>
-              <div className="space-y-1">
-                {service.benefits.slice(0, 3).map((benefit, index) => (<div key={index} className="flex items-center text-sm text-slate-300">
-                    <Star className="h-4 w-4 text-yellow-400 mr-2 flex-shrink-0"/>
-                    {benefit}
-                  </div>))}
+            <div className="space - y-2">
+              <h4 className="text - sm font - semibold text - blue - 200">
+                Technologies:
+              </h4>
+              <div className="space - y-1">
+                {service.technologies.slice (0, 3) .map ( (tech, index) => (<div
+                    key={index}
+                    className="flex items - center text - sm text - blue - 200"
+                  >
+                    <Code className="h - 4 w - 4 text - blue - 400 mr - 2 flex - shrink - 0"       />
+                    {tech}
+                  </div>) ) }
               </div>
             </div>
 
@@ -384,20 +394,33 @@ const ComprehensivePricing = () => {
       </section>
 
       {/* Pricing Tabs */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="grid w-full grid-cols-3 bg-slate-800/50 border border-slate-600/30 mb-12">
-              <TabsTrigger value="microsaas" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white">
-                <Zap className="h-4 w-4 mr-2"/>
+      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">
+        <div className="max - w-7xl mx - auto">
+          <Tabs
+            value={activeTab}
+            onValueChange={setActiveTab}
+            className="w - full"
+          >
+            <TabsList className="grid w - full grid - cols - 3 bg - slate - 800 / 50 border border - slate - 600 / 30 mb - 12">
+              <TabsTrigger
+                value="microsaas"
+                className="data-[state = active]:bg - blue - 600 data-[state = active]:text - white"
+              >
+                <Zap className="h - 4 w - 4 mr - 2"       />
                 Micro SAAS Services
               </TabsTrigger>
-              <TabsTrigger value="ai" className="data-[state=active]:bg-purple-600 data-[state=active]:text-white">
-                <Brain className="h-4 w-4 mr-2"/>
+              <TabsTrigger
+                value="ai"
+                className="data-[state = active]:bg - purple - 600 data-[state = active]:text - white"
+              >
+                <Brain className="h - 4 w - 4 mr - 2"       />
                 AI Services
               </TabsTrigger>
-              <TabsTrigger value="it" className="data-[state=active]:bg-indigo-600 data-[state=active]:text-white">
-                <Server className="h-4 w-4 mr-2"/>
+              <TabsTrigger
+                value="it"
+                className="data-[state = active]:bg - indigo - 600 data-[state = active]:text - white"
+              >
+                <Server className="h - 4 w - 4 mr - 2"       />
                 IT Services
               </TabsTrigger>
             </TabsList>
@@ -426,19 +449,19 @@ const ComprehensivePricing = () => {
           <p className="text-xl text-gray-300 mb-8">
             Contact our team to discuss pricing, customization, and implementation for your business
           </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="flex items-center justify-center gap-3 text-slate-300">
-              <Phone className="h-5 w-5 text-blue-400"/>
+
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8">
+            <div className="flex items - center justify - center gap - 3 text - slate - 300">
+              <Phone className="h - 5 w - 5 text - blue - 400"       />
               <span>+1 302 464 0950</span>
             </div>
-            <div className="flex items-center justify-center gap-3 text-slate-300">
-              <Mail className="h-5 w-5 text-blue-400"/>
-              <span>kleber@ziontechgroup.com</span>
+            <div className="flex items - center justify - center gap - 3 text - slate - 300">
+              <Mail className="h - 5 w - 5 text - blue - 400"       />
+              <span > kleber@ziontechgroup.com</span>
             </div>
-            <div className="flex items-center justify-center gap-3 text-slate-300">
-              <MapPin className="h-5 w-5 text-blue-400"/>
-              <span>364 E Main St STE 1008 Middletown DE 19709</span>
+            <div className="flex items - center justify - center gap - 3 text - slate - 300">
+              <MapPin className="h - 5 w - 5 text - blue - 400"       />
+              <span > 364 E Main St STE 1008 Middletown DE 19709</span>
             </div>
           </div>
 

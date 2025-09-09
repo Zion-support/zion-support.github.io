@@ -69,18 +69,17 @@ export function CollaborationPlatform() {
         setActiveChat(!activeChat);
     };
     if (!isOpen) {
-        return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-20 p-3 bg-zion-purple hover:bg-zion-purple-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Start Collaboration Session">
-        <Users className="w-5 h-5"/>
-      </button>);
-    }
+        return (<button onClick={ () => setIsOpen (true) } className="fixed bottom - 4 right - 20 p - 3 bg - zion - purple hover:bg - zion - purple - light text - white rounded - full shadow - lg hover:shadow - xl transition - all duration - 300 z - 50" title="Start Collaboration Session">
+        <Users className="w - 5 h - 5"      />
+      </button>) }
     if (isMinimized) {
-        return (<div className="fixed bottom-4 right-20 z-50">
-        <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">
-          <div className="flex items-center gap-3">
-            <div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>
-            <span className="text-sm text-zion-slate">Collaboration Active</span>
-            <button onClick={() => setIsMinimized(false)} className="text-zion-slate-light hover:text-zion-slate transition-colors">
-              <Maximize2 className="w-4 h-4"/>
+        return (<div className="fixed bottom - 4 right - 20 z - 50">
+        <div className="bg - white dark:bg - zion - slate border border - zion - slate - light rounded - lg shadow - lg p - 3">
+          <div className="flex items - center gap - 3">
+            <div className="w - 3 h - 3 bg - zion - emerald rounded - full animate - pulse"></div>
+            <span className="text - sm text - zion - slate">Collaboration Active</span>
+            <button onClick={ () => setIsMinimized (false) } className="text - zion - slate - light hover:text - zion - slate transition - colors">
+              <Maximize2 className="w - 4 h - 4"      />
             </button>
           </div>
         </div>
@@ -88,12 +87,12 @@ export function CollaborationPlatform() {
     }
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[800px] h-[600px]'}`} ref={containerRef}>
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10">
-        <div className="flex items-center gap-3">
-          <div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>
-          <div className="flex items-center gap-2">
-            <Users className="w-5 h-5 text-zion-purple"/>
-            <span className="font-semibold text-zion-slate">Collaboration Session</span>
+      <div className="flex items - center justify - between p - 4 border - b border - zion - slate - light bg - gradient - to - r from - zion - purple / 10 to - zion - cyan / 10">
+        <div className="flex items - center gap - 3">
+          <div className="w - 3 h - 3 bg - zion - emerald rounded - full animate - pulse"></div>
+          <div className="flex items - center gap - 2">
+            <Users className="w - 5 h - 5 text - zion - purple"      />
+            <span className="font - semibold text - zion - slate">Collaboration Session</span>
           </div>
           <div className="text-sm text-zion-slate-light">
             {formatTime(meetingDuration)}
@@ -105,14 +104,14 @@ export function CollaborationPlatform() {
             : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'}`} title={isRecording ? 'Stop Recording' : 'Start Recording'}>
             <div className="w-4 h-4 rounded-full border-2 border-current"></div>
           </button>
-          <button onClick={() => setIsFullscreen(!isFullscreen)} className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors" title={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}>
-            {isFullscreen ? <Minimize2 className="w-4 h-4"/> : <Maximize2 className="w-4 h-4"/>}
+          <button onClick={ () => setIsFullscreen (!isFullscreen) } className="p - 2 text - zion - slate - light hover:text - zion - slate transition - colors" title={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}>
+            {isFullscreen ? <Minimize2 className="w - 4 h - 4"      /> : <Maximize2 className="w - 4 h - 4"      />}
           </button>
-          <button onClick={() => setIsMinimized(true)} className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors" title="Minimize">
-            <Minimize2 className="w-4 h-4"/>
+          <button onClick={ () => setIsMinimized (true) } className="p - 2 text - zion - slate - light hover:text - zion - slate transition - colors" title="Minimize">
+            <Minimize2 className="w - 4 h - 4"      />
           </button>
-          <button onClick={() => setIsOpen(false)} className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors" title="Close">
-            <X className="w-4 h-4"/>
+          <button onClick={ () => setIsOpen (false) } className="p - 2 text - zion - slate - light hover:text - zion - slate transition - colors" title="Close">
+            <X className="w - 4 h - 4"      />
           </button>
         </div>
       </div>
@@ -139,13 +138,13 @@ export function CollaborationPlatform() {
                   </div>
 
                   {/* Status Indicators */}
-                  <div className="absolute top-2 right-2 flex gap-1">
-                    {!participant.isAudioOn && (<div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
-                        <MicOff className="w-3 h-3 text-white"/>
-                      </div>)}
-                    {participant.isScreenSharing && (<div className="w-6 h-6 bg-zion-cyan rounded-full flex items-center justify-center">
-                        <Monitor className="w-3 h-3 text-white"/>
-                      </div>)}
+                  <div className="absolute top - 2 right - 2 flex gap - 1">
+                    {!participant.isAudioOn && (<div className="w - 6 h - 6 bg - red - 500 rounded - full flex items - center justify - center">
+                        <MicOff className="w - 3 h - 3 text - white"      />
+                      </div>) }
+                    {participant.isScreenSharing && (<div className="w - 6 h - 6 bg - zion - cyan rounded - full flex items - center justify - center">
+                        <Monitor className="w - 3 h - 3 text - white"      />
+                      </div>) }
                   </div>
 
                   {/* Speaking Indicator */}
@@ -155,34 +154,34 @@ export function CollaborationPlatform() {
           </div>
 
           {/* Controls */}
-          <div className="p-4 border-t border-zion-slate-light bg-zion-slate-light/5">
-            <div className="flex items-center justify-center gap-4">
-              <button onClick={toggleVideo} className={`p-3 rounded-full transition-all duration-200 ${localUser.isVideoOn
-            ? 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'
-            : 'bg-red-500 text-white'}`} title={localUser.isVideoOn ? 'Turn Off Video' : 'Turn On Video'}>
-                {localUser.isVideoOn ? <Video className="w-5 h-5"/> : <VideoOff className="w-5 h-5"/>}
+          <div className="p - 4 border - t border - zion - slate - light bg - zion - slate - light / 5">
+            <div className="flex items - center justify - center gap - 4">
+              <button onClick={toggleVideo} className={`p - 3 rounded - full transition - all duration - 200 ${localUser.isVideoOn
+            ? 'bg - zion - slate - light / 20 text - zion - slate hover:bg - zion - slate - light / 30'
+            : 'bg - red - 500 text - white'}`} title={localUser.isVideoOn ? 'Turn Off Video' : 'Turn On Video'}>
+                {localUser.isVideoOn ? <Video className="w - 5 h - 5"      /> : <VideoOff className="w - 5 h - 5"      />}
               </button>
 
-              <button onClick={toggleAudio} className={`p-3 rounded-full transition-all duration-200 ${localUser.isAudioOn
-            ? 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'
-            : 'bg-red-500 text-white'}`} title={localUser.isAudioOn ? 'Mute' : 'Unmute'}>
-                {localUser.isAudioOn ? <Mic className="w-5 h-5"/> : <MicOff className="w-5 h-5"/>}
+              <button onClick={toggleAudio} className={`p - 3 rounded - full transition - all duration - 200 ${localUser.isAudioOn
+            ? 'bg - zion - slate - light / 20 text - zion - slate hover:bg - zion - slate - light / 30'
+            : 'bg - red - 500 text - white'}`} title={localUser.isAudioOn ? 'Mute' : 'Unmute'}>
+                {localUser.isAudioOn ? <Mic className="w - 5 h - 5"      /> : <MicOff className="w - 5 h - 5"      />}
               </button>
 
-              <button onClick={toggleScreenShare} className={`p-3 rounded-full transition-all duration-200 ${localUser.isScreenSharing
-            ? 'bg-zion-cyan text-white'
-            : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'}`} title={localUser.isScreenSharing ? 'Stop Sharing' : 'Share Screen'}>
-                <Monitor className="w-5 h-5"/>
+              <button onClick={toggleScreenShare} className={`p - 3 rounded - full transition - all duration - 200 ${localUser.isScreenSharing
+            ? 'bg - zion - cyan text - white'
+            : 'bg - zion - slate - light / 20 text - zion - slate hover:bg - zion - slate - light / 30'}`} title={localUser.isScreenSharing ? 'Stop Sharing' : 'Share Screen'}>
+                <Monitor className="w - 5 h - 5"      />
               </button>
 
-              <button onClick={toggleChat} className={`p-3 rounded-full transition-all duration-200 ${activeChat
-            ? 'bg-zion-purple text-white'
-            : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'}`} title="Toggle Chat">
-                <MessageSquare className="w-5 h-5"/>
+              <button onClick={toggleChat} className={`p - 3 rounded - full transition - all duration - 200 ${activeChat
+            ? 'bg - zion - purple text - white'
+            : 'bg - zion - slate - light / 20 text - zion - slate hover:bg - zion - slate - light / 30'}`} title="Toggle Chat">
+                <MessageSquare className="w - 5 h - 5"      />
               </button>
 
-              <button onClick={() => setIsOpen(false)} className="p-3 bg-red-500 hover:bg-red-600 text-white rounded-full transition-all duration-200" title="Leave Meeting">
-                <PhoneOff className="w-5 h-5"/>
+              <button onClick={ () => setIsOpen (false) } className="p - 3 bg - red - 500 hover:bg - red - 600 text - white rounded - full transition - all duration - 200" title="Leave Meeting">
+                <PhoneOff className="w - 5 h - 5"      />
               </button>
             </div>
           </div>

@@ -113,9 +113,24 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
         return null;
     return (<>
       {/* Toggle Button */}
-      <button onClick={onToggle} className="fixed bottom-4 left-4 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" aria-label="Toggle accessibility panel" title="Accessibility Settings">
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"/>
+      <button
+        onClick={onToggle}
+        className="fixed bottom - 4 left - 4 z - 50 bg - blue - 600 hover:bg - blue - 700 text - white p - 3 rounded - full shadow - lg transition - all duration - 300 hover:scale - 110 focus:outline - none focus:ring - 4 focus:ring - blue - 300"
+        aria - label="Toggle accessibility panel"
+        title="Accessibility Settings"
+      >
+        <svg
+          className="w - 6 h - 6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 6V4m0 2a2 2 0 100 4m0 - 4a2 2 0 110 4m - 6 8a2 2 0 100 - 4m0 4a2 2 0 100 4m0 - 4v2m0 - 6V4m6 6v10m6 - 2a2 2 0 100 - 4m0 4a2 2 0 100 4m0 - 4v2m0 - 6V4"
+                />
         </svg>
       </button>
 
@@ -123,12 +138,28 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
       <AnimatePresence>
         {isOpen && (<motion.div initial={{ opacity: 0, x: -400 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -400 }} className="fixed left-4 bottom-20 z-40 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-2xl border border-gray-200 dark:border-slate-700 overflow-hidden">
             {/* Header */}
-            <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4">
-              <div className="flex items-center justify-between">
-                <h2 className="text-lg font-semibold">Accessibility Settings</h2>
-                <button onClick={onToggle} className="text-white/80 hover:text-white transition-colors" aria-label="Close accessibility panel">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/>
+            <div className="bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white p - 4">
+              <div className="flex items - center justify - between">
+                <h2 className="text - lg font - semibold">
+                  Accessibility Settings
+                </h2>
+                <button
+                  onClick={onToggle}
+                  className="text - white / 80 hover:text - white transition - colors"
+                  aria - label="Close accessibility panel"
+                >
+                  <svg
+                    className="w - 5 h - 5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                          />
                   </svg>
                 </button>
               </div>

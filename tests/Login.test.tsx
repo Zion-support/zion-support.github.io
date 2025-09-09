@@ -1,27 +1,24 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { MemoryRouter, Routes, Route } from 'react-router-dom';
-import { vi } from 'vitest';
-import Login from '@/pages/auth/Login';
-import * as authApi from '@/services/auth';
-
-vi.mock('@/services/auth');
-
-describe('Login page', () => {
-  it('redirects to /dashboard on successful login', async () => {
-    vi.spyOn(authApi, 'login').mockResolvedValue({ status: 200, data: { token: 'x' } } as any);
-
-    render(
-      <MemoryRouter initialEntries={['/login']}>
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<div>Dashboard</div>} />
-        </Routes>
-      </MemoryRouter>
-
-    fireEvent.input(screen.getByLabelText(/email/i), { target: { value: 'a@b.com' } });
+import { render, screen, fireEvent } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import { LoginForm } from '@/components/auth/login';
+import * as authService from '@/services/authService';
+import * as authHook from '@/hooks/useAuth';
+jest.spyOn(authHook, 'useAuth').mockReturnValue({ isLoading: false, login: jest.fn() } as );
+describe('LoginForm', () => {;
+  it('shows server error on 401 response', async () => {;
+    jest.spyOn(authService, 'loginUser').mockResolvedValue({;
+      res: { status: 401 } as Response,;
+      data: { error: 'Invalid credentials' },;
+    });
+    render(;
+      <MemoryRouter>;
+        <LoginForm       />;
+      </MemoryRouter>;
+    );
+    fireEvent.input(screen.getByLabelText(/email address/i), { target: { value: 'a@b.com' } });
     fireEvent.input(screen.getByLabelText(/password/i), { target: { value: 'secret' } });
-    fireEvent.click(screen.getByRole('button', { name: /login/i }));
-
-    await waitFor(() => expect(screen.getByText('Dashboard')).toBeInTheDocument());
+    fireEvent.submit(screen.getByRole('button', { name: /login/i }));
+    // wait for error message to appear;
+    await screen.findByText('Invalid credentials');
   });
 });

@@ -88,7 +88,7 @@ export default function EditPostPage() {
             });
         }
     };
-    return (<SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post"/>
+    return (<SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post"      />
         ,
             <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
@@ -105,6 +105,5 @@ export default function EditPostPage() {
         
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>
         
-        <PostForm initialValues={initialValues} onSubmit={handleSubmit} isEditing={true}/>
-      </div>);
-}
+        <PostForm initialValues={initialValues} onSubmit={handleSubmit} isEditing={true}      />
+      </div>) }

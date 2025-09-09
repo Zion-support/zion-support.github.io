@@ -19,8 +19,8 @@ export default function ServiceOnboarding() {
               to get discovered on the Zion Marketplace.
             </p>
           </div>
-          
-          <ServiceProviderRegistrationForm />
+
+          <ServiceProviderRegistrationForm       />
         </div>
       </div>
       

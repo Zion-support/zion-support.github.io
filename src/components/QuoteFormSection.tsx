@@ -1,6 +1,6 @@
 
-import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/input";
+import { Button } from "./ui/Button";
+import { Input } from "./ui/input";
 import { GradientHeading } from "./GradientHeading";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";

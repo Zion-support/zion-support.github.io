@@ -127,10 +127,10 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
     }, [intensity, showParticles]);
     return (<div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
       {/* Quantum Matrix Canvas */}
-      {showParticles && (<canvas ref={canvasRef} className="absolute inset-0 w-full h-full" style={{ opacity: intensity === 'high' ? 0.8 : intensity === 'medium' ? 0.6 : 0.4 }}/>)}
+      {showParticles && (<canvas ref={canvasRef} className="absolute inset - 0 w - full h - full" style={{ opacity: intensity === 'high' ? 0.8 : intensity === 'medium' ? 0.6 : 0.4 }}      />) }
 
       {/* Cyber Grid Background */}
-      {showGrid && (<div className="absolute inset-0 cyber-grid-dense opacity-20"/>)}
+      {showGrid && (<div className="absolute inset - 0 cyber - grid - dense opacity - 20"      />) }
 
       {/* Holographic Projections */}
       {showHolograms && (<>
@@ -148,29 +148,48 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 ease: "easeInOut"
             }}/>
 
-          <motion.div className="absolute top-40 right-32 w-24 h-24" style={{
-                background: 'linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(59, 130, 246, 0.3))',
-                clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'
-            }} animate={{
-                y: [0, -20, 0],
-                rotate: [0, 360],
-                opacity: [0.4, 0.8, 0.4]
-            }} transition={{
+}}      />
+
+          <motion.div className="absolute top - 40 right - 32 w - 24 h - 24" style = {
+  {
+                background: 'linear - gradient (45deg, rgba (139, 92, 246, 0.3) , rgba (59, 130, 246, 0.3) ) ',
+                clipPath: 'polygon (50% 0%, 0% 100%,
+  100% 100%) ';
+
+}} animate = {
+  {
+                y[0, -20, 0],;
+                rotate[0, 360],;
+                opacity[0.4, 0.8,;
+  0.4]
+
+}} transition = {
+  {
                 duration: 6,
                 repeat: Infinity,
                 ease: "easeInOut"
             }}/>
 
-          <motion.div className="absolute bottom-32 left-1/4 w-20 h-20 rounded-full" style={{
-                background: 'conic-gradient(from 0deg, rgba(34, 221, 210, 0.4), rgba(139, 92, 246, 0.4), rgba(59, 130, 246, 0.4), rgba(34, 221, 210, 0.4))'
-            }} animate={{
-                scale: [1, 1.5, 1],
-                rotate: [0, 180, 360]
-            }} transition={{
+}}      />
+
+          <motion.div className="absolute bottom - 32 left - 1/4 w - 20 h - 20 rounded - full" style = {
+  {
+                background: 'conic - gradient (from 0deg, rgba (34, 221, 210, 0.4) , rgba (139, 92, 246, 0.4) , rgba (59, 130, 246, 0.4) , rgba (34, 221, 210,
+  0.4) ) ';
+
+}} animate = {
+  {
+                scale[1, 1.5, 1],;
+                rotate[0, 180,;
+  360]
+
+}} transition = {
+  {
                 duration: 10,
                 repeat: Infinity,
-                ease: "linear"
-            }}/>
+  ease: "linear"
+
+}}      />
 
           {/* Matrix Rain Effect */}
           <div className="absolute inset-0 overflow-hidden">
@@ -203,17 +222,27 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             ease: "easeInOut"
         }}/>
 
-        <motion.div className="absolute bottom-1/4 right-1/4 w-48 h-48 rounded-full" style={{
-            background: 'radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%)',
-            border: '1px solid rgba(139, 92, 246, 0.2)'
-        }} animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.1, 0.25, 0.1]
-        }} transition={{
+}}      />
+
+        <motion.div className="absolute bottom - 1/4 right - 1/4 w - 48 h - 48 rounded - full" style = {
+  {
+            background: 'radial - gradient (circle, rgba (139, 92, 246, 0.1) 0%, transparent 70%) ',
+            border: '1px solid rgba (139, 92, 246,
+  0.2) ';
+
+}} animate = {
+  {
+            scale[1, 1.3, 1],;
+            opacity[0.1, 0.25,;
+  0.1]
+
+}} transition = {
+  {
             duration: 15,
             repeat: Infinity,
-            ease: "easeInOut"
-        }}/>
+  ease: "easeInOut"
+
+}}      />
       </div>
 
       {/* Neural Network Nodes */}
@@ -227,8 +256,9 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             }} transition={{
                 duration: 4 + Math.random() * 4,
                 repeat: Infinity,
-                ease: "easeInOut"
-            }}/>))}
+  ease: "easeInOut"
+
+}}      />) ) }
       </div>
     </div>);
 };

@@ -118,24 +118,23 @@ export const CommunityDiscussion = () => {
                 body: newBody,
             },
             ...posts,
-        ]);
-        setNewTitle("");
-        setNewBody("");
-        setShowNew(false);
-    };
-    return (<div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
-      <div className="flex items-center gap-3 mb-4">
-        <MessageCircle aria-hidden="true" size={28} className="text-zion-cyan"/>
-        <span className="font-bold text-2xl text-white tracking-tight">
+        ]) ;
+        setNewTitle ("") ;
+        setNewBody ("") ;
+        setShowNew (false) };
+    return (<div className="w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in">
+      <div className="flex items - center gap - 3 mb - 4">
+        <MessageCircle aria - hidden="true" size={28} className="text - zion - cyan"      />
+        <span className="font - bold text - 2xl text - white tracking - tight">
           Community Discussion
         </span>
         <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0.5">
           {posts.length} posts
         </span>
       </div>
-      <Separator className="mb-6"/>
-      <div className="mb-4 flex justify-end">
-        <Button className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale" size="sm" onClick={() => setShowNew((v) => !v)}>
+      <Separator className="mb - 6"      />
+      <div className="mb - 4 flex justify - end">
+        <Button className="bg - zion - purple text - white hover:bg - zion - purple - light transition hover - scale" size="sm" onClick={ () => setShowNew ( (v) => !v) }>
           {showNew ? "Cancel" : "New Post"}
         </Button>
       </div>

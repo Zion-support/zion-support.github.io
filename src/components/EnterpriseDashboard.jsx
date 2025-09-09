@@ -231,13 +231,12 @@ export const EnterpriseDashboard = () => {
     };
     return (<div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-indigo-500 to-purple-500 p-6 text-white">
-        <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold flex items-center gap-3">
-            <Activity className="w-8 h-8"/>
-            Enterprise Dashboard
-            <div className="flex items-center gap-1 px-3 py-1 bg-white/20 rounded-full text-sm">
-              <Server className="w-4 h-4"/>
+      <div className="bg - gradient - to - r from - indigo - 500 to - purple - 500 p - 6 text - white">
+        <div className="flex items - center justify - between">
+          <h2 className="text - 2xl font - bold flex items - center gap - 3">
+            <Activity className="w - 8 h - 8"      />
+            Enterprise Dashboard < div className="flex items - center gap - 1 px - 3 py - 1 bg - white / 20 rounded - full text - sm">
+              <Server className="w - 4 h - 4"      />
               Production
             </div>
           </h2>
@@ -249,9 +248,9 @@ export const EnterpriseDashboard = () => {
               <option value={60}>1m</option>
               <option value={300}>5m</option>
             </select>
-            
-            <button onClick={refreshData} disabled={isRefreshing} className="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors flex items-center gap-2 disabled:opacity-50">
-              {isRefreshing ? (<Loader2 className="w-4 h-4 animate-spin"/>) : (<RefreshCw className="w-4 h-4"/>)}
+
+            <button onClick={refreshData} disabled={isRefreshing} className="px - 4 py - 2 bg - white / 20 hover:bg - white / 30 rounded - lg transition - colors flex items - center gap - 2 disabled:opacity - 50">
+              {isRefreshing ? (<Loader2 className="w - 4 h - 4 animate - spin"      />) : (<RefreshCw className="w - 4 h - 4"      />) }
               Refresh
             </button>
           </div>
@@ -268,10 +267,10 @@ export const EnterpriseDashboard = () => {
             { id: 'users', label: 'Users', icon: Users },
             { id: 'services', label: 'Services', icon: Server },
             { id: 'analytics', label: 'Analytics', icon: PieChart }
-        ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id
-                ? 'border-indigo-500 text-indigo-600 dark:text-indigo-400'
-                : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>
-              <Icon className="w-4 h-4"/>
+        ].map ( ({ id, label, icon: Icon }) => (<button key={id} onClick={ () => setActiveTab (id) } className={`flex items - center gap - 2 py - 4 px - 1 border - b-2 font - medium text - sm transition - colors ${activeTab === id
+                ? 'border - indigo - 500 text - indigo - 600 dark:text - indigo - 400'
+                : 'border - transparent text - gray - 500 hover:text - gray - 700 dark:text - gray - 400 dark:hover:text - gray - 300'}`}>
+              <Icon className="w - 4 h - 4"      />
               {label}
             </button>))}
         </nav>
@@ -296,13 +295,13 @@ export const EnterpriseDashboard = () => {
                     <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
                       {metric.value}{metric.unit}
                     </div>
-                    
-                    <div className="flex items-center gap-2 text-sm">
-                      <span className={`flex items-center gap-1 ${metric.trend === 'up' ? 'text-red-600' :
-                    metric.trend === 'down' ? 'text-green-600' : 'text-gray-600'}`}>
-                        {metric.trend === 'up' ? <TrendingUp className="w-4 h-4"/> :
-                    metric.trend === 'down' ? <TrendingDown className="w-4 h-4"/> :
-                        <Clock3 className="w-4 h-4"/>}
+
+                    <div className="flex items - center gap - 2 text - sm">
+                      <span className={`flex items - center gap - 1 ${metric.trend === 'up' ? 'text - red - 600' :
+                    metric.trend === 'down' ? 'text - green - 600' : 'text - gray - 600'}`}>
+                        {metric.trend === 'up' ? <TrendingUp className="w - 4 h - 4"      /> :
+                    metric.trend === 'down' ? <TrendingDown className="w - 4 h - 4"      /> :
+                        <Clock3 className="w - 4 h - 4"      />}
                         {metric.change > 0 ? '+' : ''}{metric.change}%
                       </span>
                       <span className="text-gray-500">
@@ -384,10 +383,22 @@ export const EnterpriseDashboard = () => {
               </div>
             </motion.div>)}
 
-          {activeTab === 'performance' && (<motion.div key="performance" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
-              <div className="text-center py-8">
-                <TrendingUp className="w-16 h-16 text-blue-500 mx-auto mb-4"/>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+          {activeTab === 'performance' && (<motion.div key="performance" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} exit = {
+  { opacity: 0,
+  y: -20 
+
+}} className="space - y-6">
+              <div className="text - center py - 8">
+                <TrendingUp className="w - 16 h - 16 text - blue - 500 mx - auto mb - 4"      />
+                <h3 className="text - xl font - semibold text - gray - 900 dark:text - white mb - 2">
                   Performance Monitoring
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400">
@@ -396,23 +407,23 @@ export const EnterpriseDashboard = () => {
               </div>
 
               {/* Performance Charts Placeholder */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
-                  <h4 className="font-medium text-gray-900 dark:text-white mb-4">CPU & Memory Usage</h4>
-                  <div className="h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center">
-                    <div className="text-center text-gray-500">
-                      <LineChart className="w-12 h-12 mx-auto mb-2"/>
-                      <p>Performance Chart</p>
+              <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">
+                <div className="bg - gray - 50 dark:bg - gray - 700 rounded - lg p - 6 border border - gray - 200 dark:border - gray - 600">
+                  <h4 className="font - medium text - gray - 900 dark:text - white mb - 4">CPU & Memory Usage</h4>
+                  <div className="h - 64 bg - gray - 100 dark:bg - gray - 600 rounded flex items - center justify - center">
+                    <div className="text - center text - gray - 500">
+                      <LineChart className="w - 12 h - 12 mx - auto mb - 2"      />
+                      <p > Performance Chart</p>
                     </div>
                   </div>
                 </div>
-                
-                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
-                  <h4 className="font-medium text-gray-900 dark:text-white mb-4">Response Time & Throughput</h4>
-                  <div className="h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center">
-                    <div className="text-center text-gray-500">
-                      <BarChart3 className="w-12 h-12 mx-auto mb-2"/>
-                      <p>Performance Chart</p>
+
+                <div className="bg - gray - 50 dark:bg - gray - 700 rounded - lg p - 6 border border - gray - 200 dark:border - gray - 600">
+                  <h4 className="font - medium text - gray - 900 dark:text - white mb - 4">Response Time & Throughput</h4>
+                  <div className="h - 64 bg - gray - 100 dark:bg - gray - 600 rounded flex items - center justify - center">
+                    <div className="text - center text - gray - 500">
+                      <BarChart3 className="w - 12 h - 12 mx - auto mb - 2"      />
+                      <p > Performance Chart</p>
                     </div>
                   </div>
                 </div>
@@ -496,12 +507,20 @@ export const EnterpriseDashboard = () => {
               </div>
 
               {/* User Activities */}
-              <div className="space-y-4">
-                {filteredUserActivities.map((activity) => (<motion.div key={activity.id} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="bg-white dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center">
-                          <Users className="w-5 h-5 text-indigo-600 dark:text-indigo-400"/>
+              <div className="space - y-4">
+                {filteredUserActivities.map ( (activity) => (<motion.div key={activity.id} initial = {
+  { opacity: 0,
+  x: 20 
+
+}} animate = {
+  { opacity: 1,
+  x: 0 
+
+}} className="bg - white dark:bg - gray - 700 rounded - lg p - 4 border border - gray - 200 dark:border - gray - 600">
+                    <div className="flex items - center justify - between mb - 3">
+                      <div className="flex items - center gap - 3">
+                        <div className="w - 10 h - 10 bg - indigo - 100 dark:bg - indigo - 900 / 30 rounded - full flex items - center justify - center">
+                          <Users className="w - 5 h - 5 text - indigo - 600 dark:text - indigo - 400"      />
                         </div>
                         <div>
                           <div className="font-medium text-gray-900 dark:text-white">
@@ -537,10 +556,22 @@ export const EnterpriseDashboard = () => {
               </div>
             </motion.div>)}
 
-          {activeTab === 'services' && (<motion.div key="services" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
-              <div className="text-center py-8">
-                <Server className="w-16 h-16 text-green-500 mx-auto mb-4"/>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+          {activeTab === 'services' && (<motion.div key="services" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} exit = {
+  { opacity: 0,
+  y: -20 
+
+}} className="space - y-6">
+              <div className="text - center py - 8">
+                <Server className="w - 16 h - 16 text - green - 500 mx - auto mb - 4"      />
+                <h3 className="text - xl font - semibold text - gray - 900 dark:text - white mb - 2">
                   Service Management
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400">
@@ -593,10 +624,22 @@ export const EnterpriseDashboard = () => {
               </div>
             </motion.div>)}
 
-          {activeTab === 'analytics' && (<motion.div key="analytics" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
-              <div className="text-center py-8">
-                <PieChart className="w-16 h-16 text-purple-500 mx-auto mb-4"/>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+          {activeTab === 'analytics' && (<motion.div key="analytics" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} exit = {
+  { opacity: 0,
+  y: -20 
+
+}} className="space - y-6">
+              <div className="text - center py - 8">
+                <PieChart className="w - 16 h - 16 text - purple - 500 mx - auto mb - 4"      />
+                <h3 className="text - xl font - semibold text - gray - 900 dark:text - white mb - 2">
                   Analytics & Insights
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400">
@@ -605,23 +648,23 @@ export const EnterpriseDashboard = () => {
               </div>
 
               {/* Analytics Charts Placeholder */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
-                  <h4 className="font-medium text-gray-900 dark:text-white mb-4">System Health Overview</h4>
-                  <div className="h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center">
-                    <div className="text-center text-gray-500">
-                      <PieChart className="w-12 h-12 mx-auto mb-2"/>
-                      <p>Analytics Chart</p>
+              <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">
+                <div className="bg - gray - 50 dark:bg - gray - 700 rounded - lg p - 6 border border - gray - 200 dark:border - gray - 600">
+                  <h4 className="font - medium text - gray - 900 dark:text - white mb - 4">System Health Overview</h4>
+                  <div className="h - 64 bg - gray - 100 dark:bg - gray - 600 rounded flex items - center justify - center">
+                    <div className="text - center text - gray - 500">
+                      <PieChart className="w - 12 h - 12 mx - auto mb - 2"      />
+                      <p > Analytics Chart</p>
                     </div>
                   </div>
                 </div>
-                
-                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
-                  <h4 className="font-medium text-gray-900 dark:text-white mb-4">Trend Analysis</h4>
-                  <div className="h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center">
-                    <div className="text-center text-gray-500">
-                      <LineChart className="w-12 h-12 mx-auto mb-2"/>
-                      <p>Analytics Chart</p>
+
+                <div className="bg - gray - 50 dark:bg - gray - 700 rounded - lg p - 6 border border - gray - 200 dark:border - gray - 600">
+                  <h4 className="font - medium text - gray - 900 dark:text - white mb - 4">Trend Analysis</h4>
+                  <div className="h - 64 bg - gray - 100 dark:bg - gray - 600 rounded flex items - center justify - center">
+                    <div className="text - center text - gray - 500">
+                      <LineChart className="w - 12 h - 12 mx - auto mb - 2"      />
+                      <p > Analytics Chart</p>
                     </div>
                   </div>
                 </div>

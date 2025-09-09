@@ -47,8 +47,9 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
     };
     return (<NotificationContext.Provider value={value}>
       {children}
-      <NotificationContainer position={position}/>
-    </NotificationContext.Provider>);
+      <NotificationContainer position={position}       />
+    </NotificationContext.Provider>
+  );
 }
 function NotificationContainer({ position }) {
     const { notifications, clearAll } = useNotifications();
@@ -76,7 +77,7 @@ function NotificationContainer({ position }) {
       {/* Header with clear all button */}
       {notifications.length > 1 && (<div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
-            <Bell className="w-4 h-4 text-zion-cyan"/>
+            <Bell className="w-4 h-4 text-zion-cyan"       />
             <span className="text-zinc-300 text-sm font-medium">
               {notifications.length} notifications
             </span>
@@ -89,63 +90,116 @@ function NotificationContainer({ position }) {
       {/* Notifications */}
       <div className="space-y-2">
         <AnimatePresence mode="popLayout">
-          {notifications.map((notification) => (<NotificationItem key={notification.id} notification={notification}/>))}
+          {notifications.map(((((((notification => (
+            <NotificationItem
+              key={notification.id}
+              notification={notification}
+                  />
+          , index, index, index, index, index, index) => ({ ...(((((notification => (
+            <NotificationItem
+              key={notification.id}
+              notification={notification}
+                  />
+          , index, index, index, index, index, key: index })) => ({ ...((((notification => (
+            <NotificationItem
+              key={notification.id}
+              notification={notification}
+                  />
+          , index, index, index, index, key: index })) => ({ ...(((notification => (
+            <NotificationItem
+              key={notification.id}
+              notification={notification}
+                  />
+          , index, index, index, key: index })) => ({ ...((notification => (
+            <NotificationItem
+              key={notification.id}
+              notification={notification}
+                  />
+          , index, index, key: index })) => ({ ...(notification => (
+            <NotificationItem
+              key={notification.id}
+              notification={notification}
+                  />
+          , index, key: index })) => ({ ...notification => (
+            <NotificationItem
+              key={notification.id}
+              notification={notification}
+                  />
+          , key: index })))}
         </AnimatePresence>
       </div>
     </div>);
 }
 function NotificationItem({ notification }) {
-    const { removeNotification } = useNotifications();
-    const getIcon = (type) => {
-        switch (type) {
-            case 'success':
-                return <CheckCircle className="w-5 h-5 text-green-400"/>;
-            case 'error':
-                return <AlertCircle className="w-5 h-5 text-red-400"/>;
-            case 'warning':
-                return <AlertTriangle className="w-5 h-5 text-yellow-400"/>;
-            case 'info':
-                return <Info className="w-5 h-5 text-blue-400"/>;
-            default:
-                return <Info className="w-5 h-5 text-blue-400"/>;
-        }
-    };
-    const getTypeClasses = (type) => {
-        switch (type) {
-            case 'success':
-                return 'border-green-500/30 bg-green-500/10';
-            case 'error':
-                return 'border-red-500/30 bg-red-500/10';
-            case 'warning':
-                return 'border-yellow-500/30 bg-yellow-500/10';
-            case 'info':
-                return 'border-blue-500/30 bg-blue-500/10';
-            default:
-                return 'border-zion-blue-light/30 bg-zion-blue/10';
-        }
-    };
-    const getProgressColor = (type) => {
-        switch (type) {
-            case 'success':
-                return 'bg-green-400';
-            case 'error':
-                return 'bg-red-400';
-            case 'warning':
-                return 'bg-yellow-400';
-            case 'info':
-                return 'bg-blue-400';
-            default:
-                return 'bg-zion-cyan';
-        }
-    };
-    return (<motion.div layout initial={{ opacity: 0, x: 300, scale: 0.8 }} animate={{ opacity: 1, x: 0, scale: 1 }} exit={{ opacity: 0, x: 300, scale: 0.8 }} transition={{
-            type: "spring",
-            stiffness: 500,
-            damping: 30,
-            opacity: { duration: 0.2 }
-        }} className={`relative overflow-hidden border rounded-xl p-4 backdrop-blur-sm ${getTypeClasses(notification.type)}`}>
+  const { removeNotification } = useNotifications();
+  const getIcon = type => {
+    switch (type) {
+      case 'success':
+        return <CheckCircle className="w-5 h-5 text-green-400"       />;
+      case 'error':
+        return <AlertCircle className="w-5 h-5 text-red-400"       />;
+      case 'warning':
+        return <AlertTriangle className="w-5 h-5 text-yellow-400"       />;
+      case 'info':
+        return <Info className="w-5 h-5 text-blue-400"       />;
+      default:
+        return <Info className="w-5 h-5 text-blue-400"       />;
+    }
+  };
+  const getTypeClasses = type => {
+    switch (type) {
+      case 'success':
+        return 'border-green-500/30 bg-green-500/10';
+      case 'error':
+        return 'border-red-500/30 bg-red-500/10';
+      case 'warning':
+        return 'border-yellow-500/30 bg-yellow-500/10';
+      case 'info':
+        return 'border-blue-500/30 bg-blue-500/10';
+      default:
+        return 'border-zion-blue-light/30 bg-zion-blue/10';
+    }
+  };
+  const getProgressColor = type => {
+    switch (type) {
+      case 'success':
+        return 'bg-green-400';
+      case 'error':
+        return 'bg-red-400';
+      case 'warning':
+        return 'bg-yellow-400';
+      case 'info':
+        return 'bg-blue-400';
+      default:
+        return 'bg-zion-cyan';
+    }
+  };
+  return (
+    <motion.div
+      layout
+      initial={{ opacity: 0, x: 300, scale: 0.8 }}
+      animate={{ opacity: 1, x: 0, scale: 1 }}
+      exit={{ opacity: 0, x: 300, scale: 0.8 }}
+      transition={{
+        type: 'spring',
+        stiffness: 500,
+        damping: 30,
+        opacity: { duration: 0.2 },
+      }}
+      className={`relative overflow-hidden border rounded-xl p-4 backdrop-blur-sm ${getTypeClasses(notification.type)}`}
+    >
       {/* Progress Bar */}
-      {notification.duration && notification.duration > 0 && (<motion.div className={`absolute top-0 left-0 h-1 ${getProgressColor(notification.type)}`} initial={{ width: '100%' }} animate={{ width: '0%' }} transition={{ duration: notification.duration / 1000, ease: "linear" }}/>)}
+      {notification.duration && notification.duration > 0 && (
+        <motion.div
+          className={`absolute top-0 left-0 h-1 ${getProgressColor(notification.type)}`}
+          initial={{ width: '100%' }}
+          animate={{ width: '0%' }}
+          transition={{
+            duration: notification.duration / 1000,
+            ease: 'linear',
+          }}
+              />
+      )}
 
       <div className="flex items-start gap-3">
         {/* Icon */}
@@ -171,9 +225,14 @@ function NotificationItem({ notification }) {
         </div>
 
         {/* Dismiss Button */}
-        {notification.dismissible && (<button onClick={() => removeNotification(notification.id)} className="flex-shrink-0 p-1 rounded hover:bg-white/10 transition-colors duration-200">
-            <X className="w-4 h-4 text-zinc-400 hover:text-white"/>
-          </button>)}
+        {notification.dismissible && (
+          <button
+            onClick={() => removeNotification(notification.id)}
+            className="flex-shrink-0 p-1 rounded hover:bg-white/10 transition-colors duration-200"
+          >
+            <X className="w-4 h-4 text-zinc-400 hover:text-white"       />
+          </button>
+        )}
       </div>
 
       {/* Timestamp */}

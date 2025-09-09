@@ -1,102 +1,81 @@
 export const comprehensivePricingAnalysis2025 = [
   {
-    serviceId: 'ai-business-solutions',
-    serviceName: 'AI & Business Solutions',
+    serviceId: 'ai-autonomous-business-manager',
+    serviceName: 'AI Autonomous Business Manager',
     basePrice: 2999,
-    currency: '$',
-    period: 'month',
-    marketAverage: 2500,
-    competitorPrices: [1800, 3200, 2800, 3500, 2200],
-    roi: 450,
-    paybackPeriod: 8,
-    marketSize: '15B',
-    growthRate: 35,
-    demandScore: 95,
-    complexity: 'High',
-    implementationTime: '8-12 weeks',
-    supportLevel: '24/7',
-    customizationOptions: ['Full', 'Partial', 'Standard'],
-    industryFit: ['Technology', 'Finance', 'Healthcare', 'Manufacturing']
+    currency: 'USD',
+    period: 'monthly',
+    pricingTiers: [
+      {
+        tier: 'Starter',
+        price: 1999,
+        features: ['Basic automation', 'Core analytics', 'Email support'],
+        recommended: false
+      },
+      {
+        tier: 'Professional',
+        price: 2999,
+        features: ['Full automation', 'Advanced analytics', 'Priority support', 'Custom integrations'],
+        recommended: true
+      },
+      {
+        tier: 'Enterprise',
+        price: 4999,
+        features: ['Custom AI models', 'Dedicated support', 'White-label options', 'SLA guarantees'],
+        recommended: false
+      }
+    ],
+    marketAnalysis: {
+      competitorPricing: {
+        average: 3500,
+        range: [2000, 8000]
+      },
+      valueProposition: '500% ROI with 40% operational cost reduction',
+      marketPosition: 'Premium autonomous business solution'
+    }
   },
   {
-    serviceId: 'cybersecurity-suite',
-    serviceName: 'Cybersecurity Suite',
-    basePrice: 1999,
-    currency: '$',
-    period: 'month',
-    marketAverage: 1800,
-    competitorPrices: [1500, 2200, 1900, 2500, 1700],
-    roi: 380,
-    paybackPeriod: 6,
-    marketSize: '12B',
-    growthRate: 28,
-    demandScore: 98,
-    complexity: 'High',
-    implementationTime: '6-10 weeks',
-    supportLevel: '24/7',
-    customizationOptions: ['Full', 'Partial', 'Standard'],
-    industryFit: ['Finance', 'Healthcare', 'Government', 'Technology']
-  },
-  {
-    serviceId: 'cloud-infrastructure',
-    serviceName: 'Cloud Infrastructure',
-    basePrice: 1499,
-    currency: '$',
-    period: 'month',
-    marketAverage: 1300,
-    competitorPrices: [1100, 1600, 1400, 1800, 1200],
-    roi: 320,
-    paybackPeriod: 5,
-    marketSize: '18B',
-    growthRate: 42,
-    demandScore: 92,
-    complexity: 'Medium',
-    implementationTime: '4-8 weeks',
-    supportLevel: 'Business Hours',
-    customizationOptions: ['Full', 'Partial', 'Standard'],
-    industryFit: ['Technology', 'E-commerce', 'SaaS', 'Enterprises']
+    serviceId: 'quantum-neural-network-platform',
+    serviceName: 'Quantum Neural Network Platform',
+    basePrice: 5999,
+    currency: 'USD',
+    period: 'monthly',
+    pricingTiers: [
+      {
+        tier: 'Research',
+        price: 3999,
+        features: ['Basic quantum access', 'Standard algorithms', 'Community support'],
+        recommended: false
+      },
+      {
+        tier: 'Professional',
+        price: 5999,
+        features: ['Full quantum access', 'Custom algorithms', 'Priority support', 'Training included'],
+        recommended: true
+      },
+      {
+        tier: 'Enterprise',
+        price: 9999,
+        features: ['Dedicated quantum resources', 'Custom development', '24/7 support', 'SLA guarantees'],
+        recommended: false
+      }
+    ],
+    marketAnalysis: {
+      competitorPricing: {
+        average: 7500,
+        range: [5000, 15000]
+      },
+      valueProposition: '1000x faster processing than classical systems',
+      marketPosition: 'Leading quantum AI platform'
+    }
   }
 ];
 
-export function getMarketInsights() {
-  return {
-    totalMarketSize: '$45B',
-    averageGrowthRate: '35%',
-    highestROI: '450%',
-    fastestPayback: '5 months',
-    mostDemandedService: 'Cybersecurity Suite',
-    averageImplementationTime: '8 weeks',
-    marketTrends: [
-      'AI adoption accelerating',
-      'Cloud migration increasing',
-      'Security concerns growing',
-      'Digital transformation expanding'
-    ]
-  };
-}
+export const getPricingAnalysis = (serviceId) => {
+  return comprehensivePricingAnalysis2025.find(service => service.serviceId === serviceId);
+};
 
-export function getCompetitiveLandscape() {
-  return {
-    'AI & Business Solutions': [
-      'IBM Watson',
-      'Microsoft Azure AI',
-      'Google Cloud AI',
-      'Amazon SageMaker',
-      'OpenAI Enterprise'
-    ],
-    'Cybersecurity Suite': [
-      'CrowdStrike',
-      'Palo Alto Networks',
-      'Fortinet',
-      'Check Point',
-      'Trend Micro'
-    ],
-    'Cloud Infrastructure': [
-      'AWS',
-      'Microsoft Azure',
-      'Google Cloud',
-      'IBM Cloud',
-      'Oracle Cloud'
-    ]
-  };
-}
+export const getAveragePricing = () => {
+  const total = comprehensivePricingAnalysis2025.reduce((sum, service) => sum + service.basePrice, 0);
+  return total / comprehensivePricingAnalysis2025.length;
+};

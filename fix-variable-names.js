@@ -1,3 +1,17 @@
+import fs from 'fs');
+import path from 'path');
+function toCamelCase(str) {
+  return str
+    .replace(/^[0-9]/, (match) => {
+      const numberWords = {
+  '5': 'Five',
+        '4': 'Four',
+        '3': 'Three',
+        '2': 'Two',
+        '1': 'One',
+  <<<<<<< HEAD
+        '0': 'Zero'
+      
 
 
 }

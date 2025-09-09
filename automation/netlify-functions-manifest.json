@@ -7,8 +7,5 @@
   "generatedAt": "2025-08-26T12:49:30.121Z",
 >>>>>>> 5d0d9b33be30b5e0e084636034f4596aec3e9abd
   "functions": [],
-  "note": "Placeholder manifest generated because scripts/generate-netlify-functions-manifest.cjs was missing."
-=======
-  "generatedAt": "2025-08-26T13:43:43.123Z",
-  "functions": []
+  "generatedAt": "2025-08-26T23:12:06.682Z"
 }

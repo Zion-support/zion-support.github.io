@@ -1,8 +1,9 @@
-import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { SEO } from "@/components/SEO";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { 
   PenTool, 
   FileText, 
@@ -10,101 +11,101 @@ import {
   Zap, 
   Target, 
   Users, 
-  DollarSign,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Globe,
-  Shield,
-  Type,
-  Image,
-  Video,
-  Mic,
+  ArrowRight, 
+  CheckCircle, 
+  Star, 
+  Globe, 
+  Shield, 
+  Type, 
+  Video, 
+  ShoppingBag, 
+  Mail,
+  Sparkles,
+  Clock,
+  TrendingUp,
   Palette,
-  ShoppingBag,
-  Mail
-} from "lucide-react";
-import { Link } from "react-router-dom";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
+  Languages,
+  Calendar,
+  BarChart3,
+  Settings,
+  Zap as ZapIcon
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-export default function AIContentGenerator() {
+const AIContentGenerator = () => {
+  const [selectedContentType, setSelectedContentType] = useState('blog');
+  const [generating, setGenerating] = useState(false);
+
   const features = [
     {
+      icon: Brain,
       title: "AI Writing Assistant",
       description: "Generate high-quality content for blogs, social media, and marketing campaigns",
-      icon: <PenTool className="h-6 w-6 text-zion-cyan" />
+      color: "from-blue-500 to-cyan-500"
     },
     {
+      icon: FileText,
       title: "Multi-Format Support",
       description: "Create content in various formats: text, images, videos, and audio",
-      icon: <FileText className="h-6 w-6 text-zion-purple" />
+      color: "from-purple-500 to-pink-500"
     },
     {
+      icon: Type,
       title: "Brand Voice Consistency",
       description: "Maintain your brand's unique voice across all content pieces",
-      icon: <Type className="h-6 w-6 text-zion-blue" />
+      color: "from-blue-500 to-indigo-500"
     },
     {
+      icon: Target,
       title: "SEO Optimization",
       description: "AI-powered SEO suggestions to improve content visibility and ranking",
-      icon: <Target className="h-6 w-6 text-zion-cyan" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
+      color: "from-green-500 to-emerald-500"
     }
   ];
 
   const contentTypes = [
     {
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Check, Brain, Zap, FileText, Globe, Users, Shield, Clock, Star } from "lucide-react";
-import { Link } from "react-router-dom";
-
-export default function AIContentGenerator() {
-  const features = [
-    "AI-powered content generation for any industry",
-    "SEO-optimized content with keyword research",
-    "Multiple content formats (blogs, social media, emails)",
-    "Brand voice customization and consistency",
-    "Plagiarism-free, original content",
-    "Real-time content optimization",
-    "Multi-language support (100+ languages)",
-    "Content calendar and scheduling",
-    "Performance analytics and insights",
-    "Team collaboration tools",
-    "API access for enterprise integration",
-    "24/7 customer support"
+      id: 'blog',
       title: "Blog Posts",
       description: "Long-form articles and blog content",
-      icon: <FileText className="h-8 w-8 text-zion-cyan" />
+      icon: FileText,
+      color: "from-blue-500 to-cyan-500"
     },
     {
+      id: 'social',
       title: "Social Media",
       description: "Posts for all major social platforms",
-      icon: <Users className="h-8 w-8 text-zion-purple" />
+      icon: Users,
+      color: "from-purple-500 to-pink-500"
     },
     {
+      id: 'marketing',
       title: "Marketing Copy",
       description: "Ads, landing pages, and promotional content",
-      icon: <Target className="h-8 w-8 text-zion-blue" />
+      icon: Target,
+      color: "from-blue-500 to-indigo-500"
     },
     {
+      id: 'product',
       title: "Product Descriptions",
       description: "Compelling product and service descriptions",
-      icon: <ShoppingBag className="h-8 w-8 text-zion-cyan" />
+      icon: ShoppingBag,
+      color: "from-green-500 to-emerald-500"
     },
     {
+      id: 'email',
       title: "Email Campaigns",
       description: "Newsletters and email marketing content",
-      icon: <Mail className="h-8 w-8 text-zion-purple" />
+      icon: Mail,
+      color: "from-purple-500 to-pink-500"
     },
     {
+      id: 'video',
       title: "Video Scripts",
       description: "Scripts for video content and presentations",
-      icon: <Video className="h-8 w-8 text-zion-blue" />
+      icon: Video,
+      color: "from-orange-500 to-red-500"
     }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
   ];
 
   const pricingPlans = [
@@ -119,7 +120,6 @@ export default function AIContentGenerator() {
         "Standard templates",
         "Email support",
         "Basic SEO suggestions"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
       ],
       popular: false
     },
@@ -136,30 +136,157 @@ export default function AIContentGenerator() {
         "Advanced SEO optimization",
         "Brand voice training",
         "Multi-language support"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      title: "Blog Content Creation",
-      description: "Generate engaging blog posts, articles, and long-form content optimized for SEO and reader engagement.",
-      icon: <FileText className="h-8 w-8 text-zion-cyan" />
+      price: "Custom",
+      period: "",
+      description: "Full-featured solution for large organizations",
+      features: [
+        "Unlimited content generation",
+        "Custom AI model training",
+        "API access",
+        "Dedicated account manager",
+        "Advanced analytics",
+        "White-label solutions",
+        "Custom integrations"
+      ],
+      popular: false
+    }
+  ];
+
+  const handleGenerateContent = () => {
+    setGenerating(true);
+    // Simulate content generation
+    setTimeout(() => {
+      setGenerating(false);
+    }, 3000);
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      <SEO 
+        title="AI Content Generator - Zion Tech Group"
+        description="Generate high-quality, SEO-optimized content with our AI-powered writing assistant. Create blogs, social media posts, marketing copy, and more."
+        keywords="AI content generator, content creation, AI writing, blog content, social media content, marketing copy"
+      />
+
+export default function AIContentGenerator() {
+  const [selectedTab, setSelectedTab] = useState('overview');
+
+  const features = [
+    {
+      title: "AI Writing Assistant",
+      description: "Generate high-quality content for blogs, social media, and marketing campaigns",
+      icon: PenTool,
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Social Media Marketing",
-      description: "Create compelling social media posts, captions, and campaigns across all platforms.",
-      icon: <Globe className="h-8 w-8 text-zion-purple" />
+      title: "Multi-Format Support",
+      description: "Create content in various formats: text, images, videos, and audio",
+      icon: FileText,
+      color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Email Marketing",
-      description: "Generate personalized email campaigns, newsletters, and automated sequences.",
-      icon: <Users className="h-8 w-8 text-zion-cyan" />
+      title: "Brand Voice Consistency",
+      description: "Maintain your brand's unique voice across all content pieces",
+      icon: Type,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "SEO Optimization",
+      description: "AI-powered SEO suggestions to improve content visibility and ranking",
+      icon: Target,
+      color: "from-red-500 to-orange-500"
+    },
+    {
+      title: "Real-time Analytics",
+      description: "Track content performance and optimize based on data insights",
+      icon: BarChart3,
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      title: "Multi-language Support",
+      description: "Create content in 100+ languages with native-level quality",
+      icon: Globe,
+      color: "from-yellow-500 to-orange-500"
+    }
+  ];
+
+  const contentTypes = [
+    {
+      title: "Blog Posts",
+      description: "Long-form articles and blog content optimized for SEO",
+      icon: FileText,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Social Media",
+      description: "Posts for all major social platforms with engagement optimization",
+      icon: Users,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Marketing Copy",
+      description: "Ads, landing pages, and promotional content that converts",
+      icon: Target,
+      color: "from-green-500 to-emerald-500"
     },
     {
       title: "Product Descriptions",
-      description: "Create compelling product descriptions, features, and marketing copy.",
-      icon: <Zap className="h-8 w-8 text-zion-purple" />
+      description: "Compelling product and service descriptions that drive sales",
+      icon: ShoppingBag,
+      color: "from-red-500 to-orange-500"
+    },
+    {
+      title: "Email Campaigns",
+      description: "Newsletters and email marketing content with personalization",
+      icon: Mail,
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      title: "Video Scripts",
+      description: "Scripts for video content and presentations",
+      icon: Video,
+      color: "from-yellow-500 to-orange-500"
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$49",
+      period: "/month",
+      description: "Perfect for individuals and small businesses",
+      features: [
+        "Up to 50 content pieces/month",
+        "Basic AI writing tools",
+        "Standard templates",
+        "Email support",
+        "Basic SEO suggestions"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$149",
+      period: "/month",
+      description: "Advanced content creation for growing businesses",
+      features: [
+        "Up to 200 content pieces/month",
+        "Advanced AI writing tools",
+        "Custom templates",
+        "Priority support",
+        "Advanced SEO optimization",
+        "Brand voice training",
+        "Multi-language support"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
       price: "$399",
       period: "/month",
       description: "Full-scale content creation for large organizations",
@@ -194,295 +321,371 @@ export default function AIContentGenerator() {
       role: "CEO, StartupXYZ",
       content: "We've saved countless hours on content creation. The ROI is immediate and substantial.",
       rating: 5
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-purple-dark to-zion-slate-dark">
-      <SEO 
-        title="AI Content Generator - Zion Tech Group" 
-        description="Create engaging, high-quality content with AI-powered writing tools. Generate blogs, social media posts, and marketing copy instantly."
-        keywords="AI content generator, content creation, AI writing, marketing copy, Zion Tech Group"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
-        canonical="https://ziontechgroup.com/ai-content-generator"
-      />
+  const benefits = [
+    "AI-powered content generation for any industry",
+    "SEO-optimized content with keyword research",
+    "Multiple content formats (blogs, social media, emails)",
+    "Brand voice customization and consistency",
+    "Plagiarism-free, original content",
+    "Real-time content optimization",
+    "Multi-language support (100+ languages)",
+    "Content calendar and scheduling",
+    "Performance analytics and insights",
+    "Team collaboration tools",
+    "API access for enterprise integration",
+    "24/7 customer support"
+  ];
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20 animate-pulse"></div>
-        <div className="container mx-auto relative z-10 text-center">
-          <Badge className="mb-6 bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
-            ✍️ AI-Powered Content Creation
-          </Badge>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-            AI Content Generator
-          </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Transform your content creation with AI-powered writing tools. Generate engaging blogs, social media posts, 
-            marketing copy, and more in seconds. Maintain your brand voice while scaling your content production.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 text-lg">
-              <Link to="/contact">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg">
-              <Link to="/contact">
-                Try Demo
-              </Link>
-            </Button>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
+  const renderContent = () => {
+    switch (selectedTab) {
+      case 'overview':
+        return (
+          <div className="space-y-12">
+            {/* Features Grid */}
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">Platform Features</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {features.map((feature, index) => (
+                  <motion.div
+                    key={feature.title}
+                    className="bg-zinc-800/50 rounded-lg border border-zinc-700/50 p-6 hover:border-zinc-600/50 transition-all duration-300"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className={`bg-gradient-to-r ${feature.color} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                      <feature.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-white font-semibold text-lg mb-3 text-center">{feature.title}</h3>
+                    <p className="text-zion-slate-light text-sm text-center">{feature.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Benefits */}
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">Key Benefits</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={benefit}
+                    className="flex items-center gap-3 bg-zinc-800/50 rounded-lg p-4 border border-zinc-700/50"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                  >
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span className="text-white">{benefit}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
+        );
+
+      case 'content-types':
+        return (
+          <div className="space-y-8">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Content Types We Support</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {contentTypes.map((type, index) => (
+                <motion.div
+                  key={type.title}
+                  className="bg-zinc-800/50 rounded-lg border border-zinc-700/50 p-6 hover:border-zinc-600/50 transition-all duration-300 text-center"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className={`bg-gradient-to-r ${type.color} w-20 h-20 rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                    <type.icon className="w-10 h-10 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold text-lg mb-3">{type.title}</h3>
+                  <p className="text-zion-slate-light text-sm">{type.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        );
+
+      case 'pricing':
+        return (
+          <div className="space-y-8">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Simple, Transparent Pricing</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricingPlans.map((plan, index) => (
+                <motion.div
+                  key={plan.name}
+                  className={`relative ${plan.popular ? 'border-blue-500 scale-105' : 'border-zinc-700'} bg-zinc-800/50 rounded-lg border p-6 transition-all duration-300 hover:shadow-2xl`}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                      Most Popular
+                    </div>
+                  )}
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl text-white font-bold mb-2">{plan.name}</h3>
+                    <div className="mb-4">
+                      <span className="text-4xl font-bold text-blue-400">{plan.price}</span>
+                      <span className="text-zion-slate-light">{plan.period}</span>
+                    </div>
+                    <p className="text-zion-slate-light">{plan.description}</p>
+                  </div>
+                  <ul className="space-y-3 mb-6">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-zion-slate-light">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link to="/contact" className="block w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300">
+                    Get Started
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        );
+
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mr-4">
+                <Brain className="h-8 w-8 text-white" />
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold text-white">
+                AI Content
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                  {" "}Generator
+                </span>
+              </h1>
+            </div>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Transform your content creation with AI-powered writing assistance. Generate engaging, 
+              SEO-optimized content for blogs, social media, marketing campaigns, and more in seconds.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                onClick={handleGenerateContent}
+                disabled={generating}
+                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+              >
+                {generating ? (
+                  <>
+                    <ZapIcon className="mr-2 h-5 w-5 animate-spin" />
+                    Generating...
+                  </>
+                ) : (
+                  <>
+                    <Sparkles className="mr-2 h-5 w-5" />
+                    Start Generating
+                  </>
+                )}
+              </Button>
+              <Link 
+                to="/demo"
+                className="px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                Watch Demo
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Powerful Features for Modern Content Creation
-            </h2>
-            <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
-              Our AI content generator combines cutting-edge technology with intuitive design to deliver exceptional results.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <Card key={index} className="bg-zion-slate/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-3">
-                    <Check className="h-5 w-5 text-zion-cyan mt-1 flex-shrink-0" />
-                    <span className="text-zion-slate-light">{feature}</span>
-                  </div>
-                </CardContent>
-              </Card>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
       {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Powerful Content Creation Features
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our AI platform combines natural language processing with creative intelligence to deliver content that resonates with your audience.
-            </p>
-          </div>
-          
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">Why Choose AI Content Generation?</h2>
+            <p className="text-lg text-gray-300">Unlock the power of AI to create compelling content faster than ever</p>
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20">
-                <CardHeader className="text-center">
-                  <div className="mx-auto mb-4 p-3 bg-zion-purple/10 rounded-full w-16 h-16 flex items-center justify-center">
-                    {feature.icon}
-                  </div>
-                  <CardTitle className="text-white">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-zion-slate-light text-center">
-                    {feature.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
+              <motion.div
+                key={feature.title}
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 + (index * 0.1) }}
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                  <feature.icon className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Use Cases */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Perfect for Every Content Need
-            </h2>
-            <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
-              Whether you're a marketer, business owner, or content creator, our AI content generator has you covered.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-              <Card key={index} className="bg-zion-slate/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 text-center">
-                <CardContent className="p-6">
-                  <div className="mb-4 flex justify-center">
-                    {useCase.icon}
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2 text-white">{useCase.title}</h3>
-                  <p className="text-zion-slate-light text-sm">{useCase.description}</p>
       {/* Content Types Section */}
-      <section className="py-20 px-4 bg-zion-slate-dark/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Create Any Type of Content
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              From blog posts to social media content, our AI handles all your content creation needs.
-            </p>
-          </div>
-          
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">Content Types We Generate</h2>
+            <p className="text-lg text-gray-300">From blog posts to video scripts, we cover all your content needs</p>
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {contentTypes.map((type, index) => (
-              <Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 text-center">
-                <CardHeader>
-                  <div className="mx-auto mb-4 p-3 bg-zion-purple/10 rounded-full w-20 h-20 flex items-center justify-center">
-                    {type.icon}
-                  </div>
-                  <CardTitle className="text-white">{type.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-zion-slate-light">
-                    {type.description}
-                  </CardDescription>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
-                </CardContent>
-              </Card>
+            {contentTypes.map((contentType, index) => (
+              <motion.div
+                key={contentType.id}
+                className={`bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 cursor-pointer ${
+                  selectedContentType === contentType.id ? 'ring-2 ring-blue-500' : ''
+                }`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 + (index * 0.1) }}
+                onClick={() => setSelectedContentType(contentType.id)}
+                whileHover={{ y: -5 }}
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${contentType.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                  <contentType.icon className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 text-center">{contentType.title}</h3>
+                <p className="text-gray-300 text-center">{contentType.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Choose the plan that fits your content creation needs. All plans include our core AI writing features.
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <Card key={index} className={`relative ${plan.popular ? 'border-zion-purple scale-105' : 'border-zion-slate-light'} bg-zion-slate-dark/50 transition-all duration-300 hover:shadow-2xl`}>
-                {plan.popular && (
-                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
-                    Most Popular
-                  </Badge>
-                )}
-                <CardHeader className="text-center">
-                  <CardTitle className="text-2xl text-white mb-2">{plan.name}</CardTitle>
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold text-zion-cyan">{plan.price}</span>
-                    <span className="text-zion-slate-light">{plan.period}</span>
-                  </div>
-                  <CardDescription className="text-zion-slate-light">
-                    {plan.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 mb-6">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-zion-slate-light">
-                        <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-                    <Link to="/contact">
-                      Get Started
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
-            ))}
-          </div>
-        </div>
-      </section>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
+            <p className="text-lg text-gray-300">Choose the plan that fits your content creation needs</p>
+          </motion.div>
 
-      {/* Contact Section */}
-      <section className="py-16 px-4 bg-zion-slate/30">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Ready to Transform Your Content Creation?
-          </h2>
-          <p className="text-lg text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Join thousands of businesses already using our AI content generator to create engaging, high-quality content at scale.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan text-white px-8 py-4 text-lg">
-              Start Your Free Trial
-            </Button>
-            <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10 px-8 py-4 text-lg">
-                Contact Sales
-              </Button>
-            </Link>
-          </div>
-          <div className="mt-8 text-zion-slate-light">
-            <p>Questions? Call us at <a href="tel:+13024640950" className="text-zion-cyan hover:underline">+1 302 464 0950</a></p>
-            <p>Or email us at <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a></p>
-          </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 bg-zion-slate-dark/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Trusted by Content Creators
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              See what our customers say about the transformative power of AI content generation.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
-                <CardContent className="pt-6">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                    ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={plan.name}
+                className={`relative bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 ${
+                  plan.popular ? 'ring-2 ring-blue-500' : ''
+                }`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.3 + (index * 0.1) }}
+                whileHover={{ y: -5 }}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <Badge className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2">
+                      Most Popular
+                    </Badge>
                   </div>
-                  <p className="text-zion-slate-light mb-4 italic">"{testimonial.content}"</p>
-                  <div>
-                    <p className="font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-sm text-zion-slate-light">{testimonial.role}</p>
+                )}
+                
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center mb-2">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-300 ml-1">{plan.period}</span>
                   </div>
-                </CardContent>
-              </Card>
+                  <p className="text-gray-300">{plan.description}</p>
+                </div>
+                
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <Button 
+                  className={`w-full ${
+                    plan.popular 
+                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700' 
+                      : 'bg-white/10 hover:bg-white/20'
+                  } text-white border-0`}
+                >
+                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20">
-        <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Content Creation?
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Join thousands of creators already using AI to scale their content production and engage their audience.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 text-lg">
-              <Link to="/contact">
-                Start Your Free Trial
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Content Creation?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join thousands of content creators who are already using AI to produce 
+              high-quality content faster and more efficiently than ever before.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+              >
+                Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg">
-              <Link to="/contact">
-                Contact Sales
+              <Link 
+                to="/ai-content-resources"
+                className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                Learn More
               </Link>
-            </Button>
-          </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default AIContentGenerator;

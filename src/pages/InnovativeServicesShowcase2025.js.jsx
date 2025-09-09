@@ -227,8 +227,8 @@ const InnovativeServicesShowcase2025 = () => {
       </section>
 
       {/* Services Showcase */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
-        <EnhancedComprehensiveServicesShowcase />
+      <section id="services" className="py - 20 px - 4 sm:px - 6 lg:px - 8">
+        <EnhancedComprehensiveServicesShowcase       />
       </section>
 
       {/* Contact & Get Started */}

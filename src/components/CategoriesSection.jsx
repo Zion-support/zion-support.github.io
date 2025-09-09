@@ -3,76 +3,76 @@ import { Link } from "react-router-dom";
 import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
 const categories = [
-    {
-        title: "Comprehensive Services",
-        description: "Micro SAAS, IT services, and AI solutions",
-        icon: <Briefcase className="w-10 h-10"/>,
-        link: "/services",
-        color: "from-zion-purple to-zion-purple-dark",
-        gradient: "from-zion-purple/20 to-zion-purple-dark/20",
-        features: ["24/7 Support", "Expert Team", "Custom Solutions"],
-        stats: "500+ Services"
-    },
-    {
-        title: "Talents",
-        description: "Connect with AI experts, developers, and tech specialists",
-        icon: <Users className="w-10 h-10"/>,
-        link: "/talent",
-        color: "from-zion-cyan to-zion-blue",
-        gradient: "from-zion-cyan/20 to-zion-blue/20",
-        features: ["AI Experts", "Global Network", "Verified Profiles"],
-        stats: "10K+ Experts"
-    },
-    {
-        title: "Equipment",
-        description: "Rent or buy specialized hardware, servers, and devices",
-        icon: <HardDrive className="w-10 h-10"/>,
-        link: "/equipment",
-        color: "from-zion-cyan-light to-zion-cyan",
-        gradient: "from-zion-cyan-light/20 to-zion-cyan/20",
-        features: ["High-Performance", "Flexible Rental", "24/7 Monitoring"],
-        stats: "1000+ Devices"
-    },
-    {
-        title: "Innovation",
-        description: "Discover cutting-edge solutions and tech breakthroughs",
-        icon: <Lightbulb className="w-10 h-10"/>,
-        link: "/category/innovation",
-        color: "from-zion-purple-light to-zion-purple",
-        gradient: "from-zion-purple-light/20 to-zion-purple/20",
-        features: ["Latest Tech", "AI Solutions", "Future-Ready"],
-        stats: "100+ Innovations"
-    },
+  {
+    title: 'Comprehensive Services',
+    description: 'Micro SAAS, IT services, and AI solutions',
+    icon: <Briefcase className="w - 10 h - 10"       />,
+    link: '/services',
+    color: 'from - zion - purple to - zion - purple - dark',
+    gradient: 'from - zion - purple / 20 to - zion - purple - dark / 20',
+    features: ['24 / 7 Support', 'Expert Team', 'Custom Solutions'],
+    stats: '500 + Services',
+  },
+  {
+    title: 'Talents',
+    description: 'Connect with AI experts, developers, and tech specialists',
+    icon: <Users className="w - 10 h - 10"       />,
+    link: '/talent',
+    color: 'from - zion - cyan to - zion - blue',
+    gradient: 'from - zion - cyan / 20 to - zion - blue / 20',
+    features: ['AI Experts', 'Global Network', 'Verified Profiles'],
+    stats: '10K + Experts',
+  },
+  {
+    title: 'Equipment',
+    description: 'Rent or buy specialized hardware, servers, and devices',
+    icon: <HardDrive className="w - 10 h - 10"       />,
+    link: '/equipment',
+    color: 'from - zion - cyan - light to - zion - cyan',
+    gradient: 'from - zion - cyan - light / 20 to - zion - cyan / 20',
+    features: ['High - Performance', 'Flexible Rental', '24 / 7 Monitoring'],
+    stats: '1000 + Devices',
+  },
+  {
+    title: 'Innovation',
+    description: 'Discover cutting - edge solutions and tech breakthroughs',
+    icon: <Lightbulb className="w - 10 h - 10"       />,
+    link: '/category / innovation',
+    color: 'from - zion - purple - light to - zion - purple',
+    gradient: 'from - zion - purple - light / 20 to - zion - purple / 20',
+    features: ['Latest Tech', 'AI Solutions', 'Future - Ready'],
+    stats: '100 + Innovations',
+  },
 ];
 const specialServices = [
-    {
-        title: "Enhanced AI & IT Services",
-        link: "/enhanced-services"
-    },
-    {
-        title: "IT Onsite Services",
-        link: "/it-onsite-services",
-        icon: <Shield className="w-5 h-5"/>,
-        description: "Professional on-site technical support"
-    },
-    {
-        title: "Comprehensive Services",
-        link: "/comprehensive-services",
-        icon: <Rocket className="w-5 h-5"/>,
-        description: "End-to-end technology solutions"
-    },
-    {
-        title: "AI Integration",
-        link: "/ai-integration",
-        icon: <Sparkles className="w-5 h-5"/>,
-        description: "Seamless AI implementation"
-    },
-    {
-        title: "Cloud Solutions",
-        link: "/cloud-solutions",
-        icon: <Zap className="w-5 h-5"/>,
-        description: "Scalable cloud infrastructure"
-    }
+  {
+    title: 'Enhanced AI & IT Services',
+    link: '/enhanced - services',
+  },
+  {
+    title: 'IT Onsite Services',
+    link: '/it - onsite - services',
+    icon: <Shield className="w - 5 h - 5"       />,
+    description: 'Professional on - site technical support',
+  },
+  {
+    title: 'Comprehensive Services',
+    link: '/comprehensive - services',
+    icon: <Rocket className="w - 5 h - 5"       />,
+    description: 'End - to - end technology solutions',
+  },
+  {
+    title: 'AI Integration',
+    link: '/ai - integration',
+    icon: <Sparkles className="w - 5 h - 5"       />,
+    description: 'Seamless AI implementation',
+  },
+  {
+    title: 'Cloud Solutions',
+    link: '/cloud - solutions',
+    icon: <Zap className="w - 5 h - 5"       />,
+    description: 'Scalable cloud infrastructure',
+  },
 ];
 export function CategoriesSection({ showTitle = true }) {
     const containerVariants = {
@@ -122,17 +122,27 @@ export function CategoriesSection({ showTitle = true }) {
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation. 
               Everything you need to accelerate your digital transformation in one place.
             </p>
-          </motion.div>)}
-        
-        <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {categories.map((category, index) => (<motion.div key={category.title} variants={itemVariants} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }}>
-              <Link to={category.link} className="group block h-full">
-                <motion.div className="rounded-2xl overflow-hidden h-full border border-zion-blue-light/30 bg-zion-blue-dark/80 backdrop-blur-sm p-8 transition-all duration-300 hover:border-zion-purple/50 hover:shadow-2xl hover:shadow-zion-purple/20 group-hover:bg-zion-blue-dark" variants={cardVariants} whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
-                  {/* Icon with enhanced background */}
-                  <div className={`rounded-2xl w-20 h-20 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-xl`}>
-                    <div className="text-white">
-                      {category.icon}
-                    </div>
+          </motion.div>) }
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8 mb - 16"
+        >
+          {categories.map ( (category, index) => (<motion.div
+              key={index}
+              variants={itemVariants}
+              className="group relative"
+            >
+              <Link to={category.link} className="block">
+                <div
+                  className={`bg - gradient - to - br ${category.gradient} border border - slate - 700 / 50 rounded - 2xl p - 6 h - full transition - all duration - 300 group - hover:border - slate - 600 / 50 group - hover:shadow - 2xl group - hover:shadow - purple - 500 / 10`}
+                >
+                  <div className="flex items - center justify - between mb - 4">
+                    <div className="text - slate - 300">{category.icon}</div>
+                    <ArrowRight className="w - 5 h - 5 text - slate - 400 group - hover:text - white transition - colors duration - 200"       />
                   </div>
 
                   {/* Title and description */}

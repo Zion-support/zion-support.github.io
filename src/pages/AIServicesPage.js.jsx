@@ -9,8 +9,8 @@ const AIServices = [
         title: "AI Strategy Consulting",
         description: "Strategic guidance for implementing AI solutions in your business",
         price: "$2,500 - $15,000",
-        features: ["AI readiness assessment", "ROI analysis", "Implementation roadmap", "Team training"],
-        icon: <Brain className="h-8 w-8 text-zion-cyan"/>,
+        features["AI readiness assessment", "ROI analysis", "Implementation roadmap", "Team training"],;
+        icon: <Brain className="h - 8 w - 8 text - zion - cyan"      />,
         category: "Strategy",
         badge: "Popular",
         link: "/request-quote?service=ai-strategy"
@@ -19,8 +19,8 @@ const AIServices = [
         title: "Custom AI Model Development",
         description: "Tailored machine learning models for your specific use case",
         price: "$5,000 - $50,000",
-        features: ["Data preprocessing", "Model training", "Performance optimization", "Deployment support"],
-        icon: <Server className="h-8 w-8 text-zion-purple"/>,
+        features["Data preprocessing", "Model training", "Performance optimization", "Deployment support"],;
+        icon: <Server className="h - 8 w - 8 text - zion - purple"      />,
         category: "Development",
         badge: "Premium",
         link: "/request-quote?service=custom-ai-models"
@@ -29,17 +29,17 @@ const AIServices = [
         title: "Data Labeling & Annotation",
         description: "High-quality data preparation for machine learning projects",
         price: "$0.50 - $5.00 per item",
-        features: ["Image annotation", "Text labeling", "Quality assurance", "Scalable workforce"],
-        icon: <FileText className="h-8 w-8 text-zion-blue"/>,
+        features["Image annotation", "Text labeling", "Quality assurance", "Scalable workforce"],;
+        icon: <FileText className="h - 8 w - 8 text - zion - blue"      />,
         category: "Data",
         link: "/request-quote?service=data-labeling"
     },
     {
         title: "AI-Powered Analytics",
         description: "Advanced business intelligence with machine learning insights",
-        price: "$1,500 - $8,000/month",
-        features: ["Predictive analytics", "Real-time dashboards", "Custom reports", "API integration"],
-        icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/>,
+        price: "$1,500 - $8,000 / month",
+        features["Predictive analytics", "Real - time dashboards", "Custom reports", "API integration"],;
+        icon: <BarChart3 className="h - 8 w - 8 text - zion - cyan"      />,
         category: "Analytics",
         badge: "New",
         link: "/request-quote?service=ai-analytics"
@@ -48,8 +48,8 @@ const AIServices = [
         title: "Computer Vision Solutions",
         description: "Image and video analysis for automation and quality control",
         price: "$3,000 - $25,000",
-        features: ["Object detection", "Image classification", "Video processing", "Edge deployment"],
-        icon: <Eye className="h-8 w-8 text-zion-purple"/>,
+        features["Object detection", "Image classification", "Video processing", "Edge deployment"],;
+        icon: <Eye className="h - 8 w - 8 text - zion - purple"      />,
         category: "Vision",
         link: "/request-quote?service=computer-vision"
     },
@@ -57,8 +57,8 @@ const AIServices = [
         title: "Natural Language Processing",
         description: "Text analysis, chatbots, and language understanding systems",
         price: "$2,000 - $20,000",
-        features: ["Sentiment analysis", "Text generation", "Language translation", "Chatbot development"],
-        icon: <MessageSquare className="h-8 w-8 text-zion-blue"/>,
+        features["Sentiment analysis", "Text generation", "Language translation", "Chatbot development"],;
+        icon: <MessageSquare className="h - 8 w - 8 text - zion - blue"      />,
         category: "NLP",
         link: "/request-quote?service=nlp"
     },
@@ -66,8 +66,8 @@ const AIServices = [
         title: "AI Ethics & Compliance",
         description: "Ensure your AI systems are fair, transparent, and compliant",
         price: "$1,500 - $10,000",
-        features: ["Bias detection", "Explainability", "Privacy compliance", "Audit reports"],
-        icon: <Shield className="h-8 w-8 text-zion-cyan"/>,
+        features["Bias detection", "Explainability", "Privacy compliance", "Audit reports"],;
+        icon: <Shield className="h - 8 w - 8 text - zion - cyan"      />,
         category: "Compliance",
         link: "/request-quote?service=ai-ethics"
     },
@@ -75,8 +75,8 @@ const AIServices = [
         title: "AI Model Optimization",
         description: "Improve performance and efficiency of existing AI models",
         price: "$1,000 - $15,000",
-        features: ["Performance tuning", "Model compression", "Inference optimization", "Cost reduction"],
-        icon: <Zap className="h-8 w-8 text-zion-purple"/>,
+        features["Performance tuning", "Model compression", "Inference optimization", "Cost reduction"],;
+        icon: <Zap className="h - 8 w - 8 text - zion - purple"      />,
         category: "Optimization",
         link: "/request-quote?service=model-optimization"
     },
@@ -84,8 +84,8 @@ const AIServices = [
         title: "AI Training & Workshops",
         description: "Custom training programs for your team on AI technologies",
         price: "$500 - $3,000 per person",
-        features: ["Hands-on workshops", "Custom curriculum", "Certification", "Ongoing support"],
-        icon: <Users className="h-8 w-8 text-zion-blue"/>,
+        features["Hands - on workshops", "Custom curriculum", "Certification", "Ongoing support"],;
+        icon: <Users className="h - 8 w - 8 text - zion - blue"      />,
         category: "Training",
         link: "/request-quote?service=ai-training"
     },
@@ -93,8 +93,8 @@ const AIServices = [
         title: "AI Integration Services",
         description: "Seamlessly integrate AI solutions into existing systems",
         price: "$2,000 - $20,000",
-        features: ["API development", "System integration", "Testing", "Maintenance"],
-        icon: <Code className="h-8 w-8 text-zion-cyan"/>,
+        features["API development", "System integration", "Testing", "Maintenance"],;
+        icon: <Code className="h - 8 w - 8 text - zion - cyan"      />,
         category: "Integration",
         link: "/request-quote?service=ai-integration"
     },
@@ -102,35 +102,35 @@ const AIServices = [
         title: "AI Security & Testing",
         description: "Comprehensive security testing for AI systems",
         price: "$1,500 - $12,000",
-        features: ["Adversarial testing", "Vulnerability assessment", "Security hardening", "Compliance checks"],
-        icon: <Lock className="h-8 w-8 text-zion-purple"/>,
+        features["Adversarial testing", "Vulnerability assessment", "Security hardening", "Compliance checks"],;
+        icon: <Lock className="h - 8 w - 8 text - zion - purple"      />,
         category: "Security",
         link: "/request-quote?service=ai-security"
     },
     {
         title: "AI Content Generation",
         description: "Automated content creation for marketing and communication",
-        price: "$500 - $5,000/month",
-        features: ["Blog posts", "Social media content", "Product descriptions", "Multilingual support"],
-        icon: <FileText className="h-8 w-8 text-zion-blue"/>,
+        price: "$500 - $5,000 / month",
+        features["Blog posts", "Social media content", "Product descriptions", "Multilingual support"],;
+        icon: <FileText className="h - 8 w - 8 text - zion - blue"      />,
         category: "Content",
         link: "/request-quote?service=ai-content"
     }
 ];
 const categories = [
-    { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },
-    { name: "Strategy", value: "strategy", icon: <CheckCircle className="h-4 w-4"/> },
-    { name: "Development", value: "development", icon: <Code className="h-4 w-4"/> },
-    { name: "Data", value: "data", icon: <Database className="h-4 w-4"/> },
-    { name: "Analytics", value: "analytics", icon: <BarChart3 className="h-4 w-4"/> },
-    { name: "Vision", value: "vision", icon: <Eye className="h-4 w-4"/> },
-    { name: "NLP", value: "nlp", icon: <MessageSquare className="h-4 w-4"/> },
-    { name: "Compliance", value: "compliance", icon: <Shield className="h-4 w-4"/> },
-    { name: "Optimization", value: "optimization", icon: <Zap className="h-4 w-4"/> },
-    { name: "Training", value: "training", icon: <Users className="h-4 w-4"/> },
-    { name: "Integration", value: "integration", icon: <Code className="h-4 w-4"/> },
-    { name: "Security", value: "security", icon: <Lock className="h-4 w-4"/> },
-    { name: "Content", value: "content", icon: <FileText className="h-4 w-4"/> }
+    { name: "All", value: "all", icon: <Globe className="h - 4 w - 4"      /> },
+    { name: "Strategy", value: "strategy", icon: <CheckCircle className="h - 4 w - 4"      /> },
+    { name: "Development", value: "development", icon: <Code className="h - 4 w - 4"      /> },
+    { name: "Data", value: "data", icon: <Database className="h - 4 w - 4"      /> },
+    { name: "Analytics", value: "analytics", icon: <BarChart3 className="h - 4 w - 4"      /> },
+    { name: "Vision", value: "vision", icon: <Eye className="h - 4 w - 4"      /> },
+    { name: "NLP", value: "nlp", icon: <MessageSquare className="h - 4 w - 4"      /> },
+    { name: "Compliance", value: "compliance", icon: <Shield className="h - 4 w - 4"      /> },
+    { name: "Optimization", value: "optimization", icon: <Zap className="h - 4 w - 4"      /> },
+    { name: "Training", value: "training", icon: <Users className="h - 4 w - 4"      /> },
+    { name: "Integration", value: "integration", icon: <Code className="h - 4 w - 4"      /> },
+    { name: "Security", value: "security", icon: <Lock className="h - 4 w - 4"      /> },
+    { name: "Content", value: "content", icon: <FileText className="h - 4 w - 4"      /> }
 ];
 export default function AIServicesPage() {
     const [selectedCategory, setSelectedCategory] = React.useState("all");
@@ -149,13 +149,13 @@ export default function AIServicesPage() {
             Transform your business with cutting-edge artificial intelligence services. 
             From strategy to implementation, we've got you covered.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-slate font-semibold">
-              <Search className="h-5 w-5 mr-2"/>
+          <div className="flex flex - wrap justify - center gap - 4">
+            <Button size="lg" className="bg - zion - cyan hover:bg - zion - cyan - light text - zion - slate font - semibold">
+              <Search className="h - 5 w - 5 mr - 2"      />
               Explore Services
             </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-              <MessageSquare className="h-5 w-5 mr-2"/>
+            <Button size="lg" variant="outline" className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10">
+              <MessageSquare className="h - 5 w - 5 mr - 2"      />
               Get Consultation
             </Button>
           </div>
@@ -222,13 +222,13 @@ export default function AIServicesPage() {
           <p className="text-lg text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Our expert team can design and implement custom AI solutions tailored to your specific business needs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-light text-white">
-              <MessageSquare className="h-5 w-5 mr-2"/>
+          <div className="flex flex - col sm:flex - row gap - 4 justify - center">
+            <Button size="lg" className="bg - zion - purple hover:bg - zion - purple - light text - white">
+              <MessageSquare className="h - 5 w - 5 mr - 2"      />
               Schedule Consultation
             </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-              <Code className="h-5 w-5 mr-2"/>
+            <Button size="lg" variant="outline" className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10">
+              <Code className="h - 5 w - 5 mr - 2"      />
               View Case Studies
             </Button>
           </div>

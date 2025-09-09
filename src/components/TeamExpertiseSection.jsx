@@ -102,8 +102,8 @@ const teamMembers = [
 const expertiseAreas = [
     {
         name: "Artificial Intelligence",
-        icon: <Brain className="w-8 h-8"/>,
-        color: "from-zion-purple to-zion-purple-dark",
+        icon: <Brain className="w - 8 h - 8"      />,
+        color: "from - zion - purple to - zion - purple - dark",
         description: "Machine learning, computer vision, NLP, and AI solutions",
         experts: 12,
         projects: 150,
@@ -111,8 +111,8 @@ const expertiseAreas = [
     },
     {
         name: "Cloud Infrastructure",
-        icon: <Cloud className="w-8 h-8"/>,
-        color: "from-zion-cyan to-zion-blue",
+        icon: <Cloud className="w - 8 h - 8"      />,
+        color: "from - zion - cyan to - zion - blue",
         description: "AWS, Azure, Google Cloud, and hybrid solutions",
         experts: 18,
         projects: 200,
@@ -120,8 +120,8 @@ const expertiseAreas = [
     },
     {
         name: "Web Development",
-        icon: <Globe className="w-8 h-8"/>,
-        color: "from-zion-cyan-light to-zion-cyan",
+        icon: <Globe className="w - 8 h - 8"      />,
+        color: "from - zion - cyan - light to - zion - cyan",
         description: "Modern web applications and progressive web apps",
         experts: 25,
         projects: 300,
@@ -129,17 +129,17 @@ const expertiseAreas = [
     },
     {
         name: "Mobile Development",
-        icon: <Zap className="w-8 h-8"/>,
-        color: "from-zion-purple-light to-zion-purple",
-        description: "iOS, Android, and cross-platform solutions",
+        icon: <Zap className="w - 8 h - 8"      />,
+        color: "from - zion - purple - light to - zion - purple",
+        description: "iOS, Android, and cross - platform solutions",
         experts: 20,
         projects: 180,
         success: "96%"
     },
     {
         name: "Data Analytics",
-        icon: <Database className="w-8 h-8"/>,
-        color: "from-zion-cyan to-zion-purple",
+        icon: <Database className="w - 8 h - 8"      />,
+        color: "from - zion - cyan to - zion - purple",
         description: "Business intelligence and predictive analytics",
         experts: 15,
         projects: 120,
@@ -147,8 +147,8 @@ const expertiseAreas = [
     },
     {
         name: "Cybersecurity",
-        icon: <Shield className="w-8 h-8"/>,
-        color: "from-zion-purple to-zion-cyan",
+        icon: <Shield className="w - 8 h - 8"      />,
+        color: "from - zion - purple to - zion - cyan",
         description: "Security auditing, compliance, and threat protection",
         experts: 10,
         projects: 80,
@@ -156,10 +156,10 @@ const expertiseAreas = [
     }
 ];
 const stats = [
-    { icon: <Users className="w-6 h-6"/>, value: "100+", label: "Expert Team Members" },
-    { icon: <Award className="w-6 h-6"/>, value: "500+", label: "Projects Completed" },
-    { icon: <Star className="w-6 h-6"/>, value: "4.9/5", label: "Average Rating" },
-    { icon: <Globe className="w-6 h-6"/>, value: "25+", label: "Countries Served" }
+    { icon: <Users className="w - 6 h - 6"      />, value: "100+", label: "Expert Team Members" },
+    { icon: <Award className="w - 6 h - 6"      />, value: "500+", label: "Projects Completed" },
+    { icon: <Star className="w - 6 h - 6"      />, value: "4.9 / 5", label: "Average Rating" },
+    { icon: <Globe className="w - 6 h - 6"      />, value: "25+", label: "Countries Served" }
 ];
 export function TeamExpertiseSection() {
     const [selectedMember, setSelectedMember] = useState(null);
@@ -305,7 +305,7 @@ export function TeamExpertiseSection() {
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                       View Profile
                     </span>
-                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                    <ArrowRight className="w - 4 h - 4 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"      />
                   </div>
 
                   {/* Expanded details */}
@@ -313,28 +313,38 @@ export function TeamExpertiseSection() {
                     {selectedMember === member.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
                         <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">{member.bio}</p>
                         
-                        <h5 className="text-zion-cyan font-semibold text-sm mb-2">Achievements:</h5>
-                        <div className="space-y-1 mb-4">
-                          {member.achievements.map((achievement, idx) => (<motion.div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: idx * 0.1 }}>
-                              <CheckCircle className="w-3 h-3 text-zion-cyan"/>
+                        <h5 className="text - zion - cyan font - semibold text - sm mb - 2">Achievements:</h5>
+                        <div className="space - y-1 mb - 4">
+                          {member.achievements.map ( (achievement, idx) => (<motion.div key={idx} className="flex items - center gap - 2 text - zion - slate - light / 80 text - xs" initial = {
+  { opacity: 0,
+  x: -10 
+
+}} animate = {
+  { opacity: 1,
+  x: 0 
+
+}} transition={{ delay: idx * 0.1 }}>
+                              <CheckCircle className="w - 3 h - 3 text - zion - cyan"      />
                               <span>{achievement}</span>
                             </motion.div>))}
                         </div>
 
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-1">
-                            <Star className="w-4 h-4 text-yellow-400 fill-current"/>
-                            <span className="text-white font-semibold text-sm">{member.rating}</span>
+                        <div className="flex items - center justify - between">
+                          <div className="flex items - center gap - 1">
+                            <Star className="w - 4 h - 4 text - yellow - 400 fill - current"      />
+                            <span className="text - white font - semibold text - sm">{member.rating}</span>
                           </div>
-                          <div className="flex gap-2">
-                            <a href={member.linkedin} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">
-                              <Linkedin className="w-4 h-4"/>
+                          <div className="flex gap - 2">
+                            <a href={member.linkedin} className="text - zion - cyan hover:text - zion - cyan - light transition - colors">
+                              <Linkedin className="w - 4 h - 4"      />
                             </a>
-                            <a href={member.github} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">
-                              <Github className="w-4 h-4"/>
+                            <a href={member.github} className="text - zion - cyan hover:text - zion - cyan - light transition - colors">
+                              <Github className="w - 4 h - 4"      />
                             </a>
-                            <a href={`mailto:${member.name.toLowerCase().replace(' ', '.')}@ziontechgroup.com`} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">
-                              <Mail className="w-4 h-4"/>
+                            <a href = {
+  `mailto:${member.name.toLowerCase () .replace (' ',
+  '.') }@ziontechgroup.com`} className="text - zion - cyan hover:text - zion - cyan - light transition - colors">
+                              <Mail className="w - 4 h - 4"      />
                             </a>
                           </div>
                         </div>

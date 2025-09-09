@@ -3,10 +3,19 @@ import { Helmet } from 'react-helmet-async';
 const AIAutonomousManufacturing = () => {
     return (<>
       <Helmet>
-        <title>AI Autonomous Manufacturing Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous manufacturing platform that automates production processes, optimizes quality control, and provides intelligent manufacturing management with 24/7 efficiency."/>
-        <meta name="keywords" content="AI manufacturing, autonomous manufacturing, smart factory, Industry 4.0, AI production, manufacturing automation"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-manufacturing"/>
+        <title > AI Autonomous Manufacturing Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Revolutionary AI autonomous manufacturing platform that automates production processes, optimizes quality control, and provides intelligent manufacturing management with 24 / 7 efficiency."
+              />
+        <meta
+          name="keywords"
+          content="AI manufacturing, autonomous manufacturing, smart factory, Industry 4.0, AI production, manufacturing automation"
+              />
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com / ai - autonomous - manufacturing"
+              />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

@@ -20,10 +20,8 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
             <Image
               src={company.logoUrl || "/placeholder.svg"}
               alt={company.name}
-              width={40} // Corresponds to max-h-10/max-w-10
-              height={40}
-              style={{ objectFit: "contain" }}
-            />
+              className="max-h-10 max-w-10"
+                  />
           </div>
           <div>
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
@@ -35,13 +33,13 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
         
         <div className="flex items-center gap-2">
           <Button variant="outline" size="icon" aria-label="Notifications">
-            <Bell className="h-4 w-4" />
+            <Bell className="h-4 w-4"       />
           </Button>
           <Button variant="outline" size="icon" aria-label="Team members">
-            <Users className="h-4 w-4" />
+            <Users className="h-4 w-4"       />
           </Button>
           <Button variant="outline" size="icon" aria-label="Workspace settings">
-            <Settings className="h-4 w-4" />
+            <Settings className="h-4 w-4"       />
           </Button>
         </div>
       </div>

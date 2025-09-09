@@ -46,22 +46,31 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
             }
         }}>
       {/* Image */}
-      <div className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'} onClick={handleViewListing} // Keep existing onClick for navigation
-     role="button" tabIndex={-1} // Remove from tab order as parent is focusable
-     onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                handleViewListing();
-            }
-        }}>
-        <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
-          <Image src={imageSrc} alt={listing.title} layout="fill" objectFit="cover" onError={handleImageError} priority={false} // Assuming these are not LCP images
-     sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
-    />
-          {listing.featured && (<Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
+      <div
+        className={isGrid ? 'block w - full' : 'block w - 48 flex - shrink - 0'}
+        onClick={handleViewListing} // Keep existing onClick for navigation
+        role="button"
+        tabIndex={-1} // Remove from tab order as parent is focusable
+        onKeyDown={e => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault () ;
+            handleViewListing () ;
+          }
+        }}
+      >
+        <div className={`relative ${imageContainerClasses}`}>
+          {' '}
+          {/* Ensure this container has dimensions */}
+          <img
+            src={imageSrc}
+            alt={listing.title}
+            className="w - full h - full object - cover"
+            onError={handleImageError}
+                />
+          {listing.featured && (<Badge className="absolute top - 2 right - 2 bg - primary text - primary - foreground border - none">
               Featured
-            </Badge>)}
-          <FavoriteButton itemId={listing.id} itemType="product"/>
+            </Badge>) }
+          <FavoriteButton itemId={listing.id} itemType="product"       />
         </div>
       </div>
       
@@ -73,7 +82,7 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
               {listing.category}
             </Badge>
-            {listing.rating && (<RatingStars value={listing.rating} count={listing.reviewCount}/>)}
+            {listing.rating && (<RatingStars value={listing.rating} count={listing.reviewCount}       />) }
           </div>
           
           {/* Title & Description */}
@@ -95,14 +104,12 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
         </div>
         
         {/* Footer with price and button */}
-        <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
-          <div className="text-sm font-medium">
-            {listing.price !== null ? (<div className="flex items-center text-primary">
-                <DollarSign className="h-4 w-4 mr-1"/>
-                {formatPrice()}
-              </div>) : (<span className="text-foreground/80">
-                {formatPrice()}
-              </span>)}
+        <div className="flex items - center justify - between mt - auto pt - 3 border - t border - primary / 10 sm:border - primary / 20">
+          <div className="text - sm font - medium">
+            {listing.price !== null ? (<div className="flex items - center text - primary">
+                <DollarSign className="h - 4 w - 4 mr - 1"       />
+                {formatPrice () }
+              </div>) : (<span className="text - foreground / 80">{formatPrice () }</span>) }
           </div>
           
           <div className="flex gap-2">

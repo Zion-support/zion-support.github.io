@@ -1,440 +1,509 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ThemeToggle } from './ThemeToggle.tsx';
-import { EnhancedSearch } from './EnhancedSearch.tsx';
-import { 
-  Menu, 
-  X, 
-  User, 
-  Bell, 
-  ChevronDown,
-  Brain,
-  Shield,
-  Cloud,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  BarChart3,
-  FileImage,
-  TrendingUp,
-  MessageCircle,
-  Video,
-  FileText,
-  Heart,
-  PanelLeft,
-  ShoppingCart,
-  Settings,
-  HelpCircle,
-  BookOpen,
-  Briefcase,
-  Award,
-  Target,
-  Lightbulb,
-  ShieldCheck,
-  Server,
-  Smartphone,
-  Monitor,
-  Wifi,
-  Bluetooth,
-  Satellite,
-  Atom,
-  Dna,
-  Microscope,
-  Flask,
-  TestTube,
-  Syringe,
-  Stethoscope,
-  HeartPulse,
-  BrainCircuit,
-  Eye,
-  Ear,
-  Hand,
-  Foot,
-  Bone,
-  Tooth,
-  Pill,
-  Bandage,
-  Thermometer,
-  Scale,
-  Calculator,
-  ChartBar,
-  PieChart,
-  LineChart,
-  Activity,
-  TrendingDown,
-  Minus,
-  Plus,
-  Equal,
-  Divide,
-  Percent,
-  DollarSign,
-  Euro,
-  Pound,
-  Yen,
-  Bitcoin,
-  Ethereum,
-  CreditCard,
-  Wallet,
-  Banknote,
-  Coins,
-  PiggyBank,
-  Safe,
-  Vault,
-  LockKeyhole,
-  Key,
-  Fingerprint,
-  QrCode,
-  Barcode,
-  Scan,
-  Camera,
-  VideoOff,
-  Mic,
-  MicOff,
-  Volume2,
-  VolumeX,
-  Home
-} from 'lucide-react';
-
-export function FuturisticNavigation() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+export const FuturisticNavigation: React.FC = () => {;
+import {;
+import { MobileSidebarToggle } from './MobileSidebarToggle';
+import { motion, AnimatePresence } from 'framer - motion';
+;
+;
+  Menu,;
+  X,;
+  Search,;
+  User,;
+  Bell,;
+  ChevronDown,;
+  Brain,;
+  Shield,;
+  Cloud,;
+  Zap,;
+  Globe,;
+  Cpu,;
+  Database,;
+  Network,;
+  Lock,;
+  Code,;
+  Rocket,;
+  Users,;
+  BarChart3,;
+  FileImage,;
+  TrendingUp,;
+  MessageCircle,;
+  Video,;
+  FileText,;
+  Heart,;
+  PanelLeft,;
+  ShoppingCart,;
+  Settings,;
+  HelpCircle,;
+  BookOpen,;
+  Briefcase,;
+  Award,;
+  Target,;
+  Lightbulb,;
+  ShieldCheck,;
+  Server,;
+  Smartphone,;
+  Monitor,;
+  Wifi,;
+  Bluetooth,;
+  Satellite,;
+  Atom,;
+  Dna,;
+  Microscope,;
+  Flask,;
+  TestTube,;
+  Syringe,;
+  Stethoscope,;
+  HeartPulse,;
+  BrainCircuit,;
+  Eye,;
+  Ear,;
+  Hand,;
+  Foot,;
+  Bone,;
+  Tooth,;
+  Pill,;
+  Bandage,;
+  Thermometer,;
+  Scale,;
+  Calculator,;
+  ChartBar,;
+  PieChart,;
+  LineChart,;
+  Activity,;
+  TrendingDown,;
+  Minus,;
+  Plus,;
+  Equal,;
+  Divide,;
+  Percent,;
+  DollarSign,;
+  Euro,;
+  Pound,;
+  Yen,;
+  Bitcoin,;
+  Ethereum,;
+  CreditCard,;
+  Wallet,;
+  Banknote,;
+  Coins,;
+  PiggyBank,;
+  Safe,;
+  Vault,;
+  LockKeyhole,;
+  Key,;
+  Fingerprint,;
+  QrCode,;
+  Barcode,;
+  Scan,;
+  Camera,;
+  VideoOff,;
+  Mic,;
+  MicOff,;
+  Volume2,;
+  VolumeX,;
+  Handshake,;
+  Play,;
+  Pause,;
+  Stop,;
+  SkipBack,;
+  SkipForward,;
+  Rewind,;
+  FastForward,;
+  Shuffle,;
+  Repeat,;
+  Repeat1,;
+  Shuffle2,;
+  SkipBack2,;
+  SkipForward2,;
+  PlayCircle,;
+  PauseCircle,;
+  StopCircle,;
+  SkipBackCircle,;
+  SkipForwardCircle,;
+  RewindCircle,;
+  FastForwardCircle,;
+  ShuffleCircle,;
+  RepeatCircle,;
+  Repeat1Circle,;
+  Shuffle2Circle,;
+  SkipBack2Circle,;
+  SkipForward2Circle,;
+  PlaySquare,;
+  PauseSquare,;
+  StopSquare,;
+  SkipBackSquare,;
+  SkipForwardSquare,;
+  RewindSquare,;
+  FastForwardSquare,;
+  ShuffleSquare,;
+  RepeatSquare,;
+  Repeat1Square,;
+  Shuffle2Square,;
+  SkipBack2Square,;
+  SkipForward2Square,;
+  PlayTriangle,;
+  PauseTriangle,;
+  StopTriangle,;
+  SkipBackTriangle,;
+  SkipForwardTriangle,;
+  RewindTriangle,;
+  FastForwardTriangle,;
+  ShuffleTriangle,;
+  RepeatTriangle,;
+  Repeat1Triangle,;
+  Shuffle2Triangle,;
+  SkipBack2Triangle,;
+  SkipForward2Triangle,;
+  PlayOctagon,;
+  PauseOctagon,;
+  StopOctagon,;
+  SkipBackOctagon,;
+  SkipForwardOctagon,;
+  RewindOctagon,;
+  FastForwardOctagon,;
+  ShuffleOctagon,;
+  RepeatOctagon,;
+  Repeat1Octagon,;
+  Shuffle2Octagon,;
+  SkipBack2Octagon,;
+  SkipForward2Octagon,;
+  PlayDodecagon,;
+  PauseDodecagon,;
+  StopDodecagon,;
+  SkipBackDodecagon,;
+  SkipForwardDodecagon,;
+  RewindDodecagon,;
+  FastForwardDodecagon,;
+  ShuffleDodecagon,;
+  RepeatDodecagon,;
+  Repeat1Dodecagon,;
+  Shuffle2Dodecagon,;
+  SkipBack2Dodecagon,;
+  SkipForward2Dodecagon;
+} from 'lucide - react';
+  const [searchQuery, setSearchQuery] = useState ('') ;
+  const [activeDropdown, setActiveDropdown] = useState < any> (null) ;
+  const [scrolled, setScrolled] = useState (false) ;
+  const location = useLocation () ;
+  useEffect ( () => {;
+    const handleScroll = useCallback ( () => {;
+      setScrolled (window.scrollY > 20) ;
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const navigationItems = [
-    {
-      title: "Home",
-      path: "/",
-      icon: Home
-    },
-    {
-      title: "Services",
-      path: "/services",
-      icon: Settings,
-      dropdown: [
-        {
-          title: "AI Services",
-          path: "/ai-services",
-          icon: Brain,
-          description: "Cutting-edge AI solutions",
-          services: [
-            { name: "Quantum-Classical Hybrid AI", path: "/ai-services/quantum-classical-hybrid-ai" },
-            { name: "Multimodal AI Platform", path: "/ai-services/multimodal-ai-platform" },
-            { name: "Autonomous AI Agents", path: "/ai-services/autonomous-ai-agents" },
-            { name: "AI Drug Discovery", path: "/ai-services/ai-drug-discovery" },
-            { name: "AI Financial Trading", path: "/ai-services/ai-financial-trading" }
-          ]
-        },
-        {
-          title: "Micro SAAS",
-          path: "/micro-saas",
-          icon: Code,
-          description: "Innovative micro SAAS solutions",
-          services: [
-            { name: "AI Business Intelligence", path: "/micro-saas/ai-business-intelligence" },
-            { name: "Customer Experience Hub", path: "/micro-saas/customer-experience-hub" },
-            { name: "Supply Chain Optimizer", path: "/micro-saas/supply-chain-optimizer" },
-            { name: "Cybersecurity Platform", path: "/micro-saas/cybersecurity-platform" }
-          ]
-        },
-        {
-          title: "IT Services",
-          path: "/it-services",
-          icon: Server,
-          description: "Advanced IT infrastructure",
-          services: [
-            { name: "6G Network Infrastructure", path: "/it-services/6g-network-infrastructure" },
-            { name: "Quantum-Secure Cloud", path: "/it-services/quantum-secure-cloud" },
-            { name: "AI Edge Computing", path: "/it-services/ai-edge-computing" },
-            { name: "Zero-Trust Security", path: "/it-services/zero-trust-security" }
-          ]
-        },
-        {
-          title: "Emerging Tech",
-          path: "/emerging-tech",
-          icon: Rocket,
-          description: "Breakthrough technologies",
-          services: [
-            { name: "Synthetic Biology AI", path: "/emerging-tech/synthetic-biology-ai" },
-            { name: "Holographic AR/VR", path: "/emerging-tech/holographic-ar-vr" },
-            { name: "Brain-Computer Interfaces", path: "/emerging-tech/brain-computer-interfaces" },
-            { name: "Space Technology", path: "/emerging-tech/space-technology" }
-          ]
-        }
-      ]
-    },
-    {
-      title: "About",
-      path: "/about",
-      icon: Users
-    },
-    {
-      title: "Blog",
-      path: "/blog",
-      icon: FileText
-    },
-    {
-      title: "Careers",
-      path: "/careers",
-      icon: Briefcase
-    },
-    {
-      title: "Contact",
-      path: "/contact",
-      icon: MessageCircle
-    }
+    window.addEventListener ('scroll', handleScroll) ;
+    return () => window.removeEventListener ('scroll', handleScroll) }, []) ;
+  useEffect ( () => {;
+    setActiveDropdown (null) ;
+  }, [location.pathname]) ;
+  const handleSearch = useCallback ( (e: React.FormEvent) => {;
+    e.preventDefault () ;
+    if (searchQuery.trim () ) {;
+      window.location.href = `/search?q=${encodeURIComponent (searchQuery.trim () ) }`;
+;
+  };
+  const toggleDropdown = (dropdown: string) => {;
+    setActiveDropdown (activeDropdown === dropdown ? null : dropdown) ;
+  };
+  const toggleDropdown = (dropdown: string) => {;
+    setActiveDropdown (activeDropdown === dropdown ? null : dropdown) };
+  // Enhanced service categories with better organization;
+  const serviceCategories = [;
+    {;
+      name: "AI & Machine Learning",;
+      icon: Brain,;
+      color: 'from - zion - cyan to - zion - blue',;
+      dropdown[;
+        { name: 'AI Autonomous Trading', href: '/ai - services / autonomous - trading', icon: DollarSign, description: 'AI - powered financial trading platform' },;
+        { name: 'AI Consciousness Simulator', href: '/ai - services / consciousness - simulator', icon: Brain, description: 'Quantum AI consciousness research' },;
+        { name: 'AI Business Operations', href: '/ai - services / business - operations', icon: Building, description: 'Autonomous business management' },;
+        { name: 'AI Healthcare Diagnosis', href: '/ai - services / healthcare - diagnosis', icon: Heart, description: 'AI - powered medical diagnosis' },;
+        { name: 'AI Content Creation', href: '/ai - services / content - creation', icon: FileText, description: 'Autonomous content generation' },;
+        { name: 'AI Supply Chain', href: '/ai - services / supply - chain', icon: Truck, description: 'AI - powered supply chain optimization' },;
+        { name: 'View All AI Services', href: '/ultimate - services - 2027', icon: Sparkles, description: 'Complete AI services showcase' },;
+        { name: 'Innovative Services 2028', href: '/innovative - services - 2028', icon: Crown, description: 'Latest innovative services for 2028' };
+      ];
+    },;
+    {;
+      name: "Micro SAAS Solutions",;
+      icon: Cloud,;
+      services[;
+        { name: "Micro SAAS Services", href: "/micro - saas" },;
+        { name: "Business Tools", href: "/micro - saas / business - tools" },;
+        { name: "Productivity Apps", href: "/micro - saas / productivity" },;
+        { name: "Industry Solutions", href: "/micro - saas / industry" },;
+        { name: "Custom Development", href: "/micro - saas / custom" },;
+        { name: "Marketplace", href: "/marketplace" };
+      ];
+    },;
+    {;
+      name: "IT Infrastructure",;
+      icon: Server,;
+      services[;
+        { name: "IT Services", href: "/it - services" },;
+        { name: "Cloud Solutions", href: "/it - services / cloud" },;
+        { name: "Cybersecurity", href: "/it - services / cybersecurity" },;
+        { name: "DevOps & Automation", href: "/it - services / devops" },;
+        { name: "Data Management", href: "/it - services / data" },;
+        { name: "Network Security", href: "/it - services / network - security" };
+      ];
+    },;
+    {;
+      name: "Emerging Technologies",;
+      icon: Rocket,;
+      services[;
+        { name: "Quantum Computing", href: "/emerging - tech / quantum" },;
+        { name: "Blockchain & Web3", href: "/emerging - tech / blockchain" },;
+        { name: "Edge Computing", href: "/emerging - tech / edge" },;
+        { name: "IoT Solutions", href: "/emerging - tech / iot" },;
+        { name: "Green Technology", href: "/green - it" },;
+        { name: "Space Technology", href: "/emerging - tech / space" };
+      ];
+    },;
+    {;
+      name: '2028 Services',;
+      href: '/innovative - services - 2028',;
+      icon: Crown,;
+      color: 'from - zion - cyan to - zion - purple',;
+      dropdown[;
+        { name: 'Innovative Services 2028', href: '/innovative - services - 2028', icon: Crown, description: 'Latest innovative services for 2028' },;
+        { name: 'Micro SAAS 2028', href: '/micro - saas - 2028', icon: Zap, description: 'Advanced micro SAAS solutions' },;
+        { name: 'IT Services 2028', href: '/it - services - 2028', icon: Server, description: 'Next - generation IT services' },;
+        { name: 'Pricing Guide 2028', href: '/comprehensive - pricing - guide - 2028', icon: Calculator, description: 'Complete pricing and ROI analysis' };
+      ];
+    };
   ];
-
-  const isActive = (path: string) => {
-    if (path === "/") {
-      return location.pathname === "/";
-    }
-    return location.pathname.startsWith(path);
-  };
-
-  const toggleDropdown = (title: string) => {
-    setActiveDropdown(activeDropdown === title ? null : title);
-  };
-
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20' 
-        : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <span className="text-white font-bold text-xl">Z</span>
-            </div>
-            <div className="hidden sm:block">
-              <div className="text-xl font-bold text-white">Zion Tech Group</div>
-              <div className="text-xs text-zion-cyan">Innovating Tomorrow</div>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <div key={item.title} className="relative">
-                {item.dropdown ? (
-                  <div className="relative">
-                    <button
-                      onClick={() => toggleDropdown(item.title)}
-                      className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
-                        isActive(item.path)
-                          ? 'text-zion-cyan bg-zion-cyan/10'
-                          : 'text-zion-slate-light hover:text-white hover:bg-zion-slate/20'
-                      }`}
-                    >
-                      <item.icon className="h-5 w-5" />
-                      <span>{item.title}</span>
-                      <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${
-                        activeDropdown === item.title ? 'rotate-180' : ''
-                      }`} />
-                    </button>
-
-                    <AnimatePresence>
-                      {activeDropdown === item.title && (
-                        <motion.div
-                          initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                          transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-96 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl overflow-hidden"
-                        >
-                          <div className="p-4">
-                            <div className="grid grid-cols-1 gap-4">
-                              {item.dropdown.map((dropdownItem) => (
-                                <div key={dropdownItem.title} className="group">
-                                  <Link
-                                    to={dropdownItem.path}
-                                    className="block p-4 rounded-lg hover:bg-zion-slate/20 transition-all duration-300"
-                                  >
-                                    <div className="flex items-start space-x-3">
-                                      <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <dropdownItem.icon className="h-5 w-5 text-white" />
-                                      </div>
-                                      <div className="flex-1 min-w-0">
-                                        <h3 className="text-white font-semibold group-hover:text-zion-cyan transition-colors">
-                                          {dropdownItem.title}
-                                        </h3>
-                                        <p className="text-zion-slate-light text-sm mt-1">
-                                          {dropdownItem.description}
-                                        </p>
-                                        {dropdownItem.services && (
-                                          <div className="mt-3 space-y-1">
-                                            {dropdownItem.services.slice(0, 3).map((service) => (
-                                              <div key={service.name} className="text-xs text-zion-cyan/80">
-                                                • {service.name}
-                                              </div>
-                                            ))}
-                                            {dropdownItem.services.length > 3 && (
-                                              <div className="text-xs text-zion-slate-light">
-                                                +{dropdownItem.services.length - 3} more services
-                                              </div>
-                                            )}
-                                          </div>
-                                        )}
-                                      </div>
-                                    </div>
-                                  </Link>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                ) : (
-                  <Link
-                    to={item.path}
-                    className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
-                      isActive(item.path)
-                        ? 'text-zion-cyan bg-zion-cyan/10'
-                        : 'text-zion-slate-light hover:text-white hover:bg-zion-slate/20'
-                    }`}
-                  >
-                    <item.icon className="h-5 w-5" />
-                    <span>{item.title}</span>
-                  </Link>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Right side actions */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <button className="p-2 text-zion-slate-light hover:text-white hover:bg-zion-slate/20 rounded-lg transition-all duration-300">
-              <Search className="h-5 w-5" />
-            </button>
-            <button className="p-2 text-zion-slate-light hover:text-white hover:bg-zion-slate/20 rounded-lg transition-all duration-300">
-              <Bell className="h-5 w-5" />
-            </button>
-            <Link
-              to="/contact"
-              className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-purple hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-zion-slate/20 rounded-lg transition-all duration-300"
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Navigation */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-zion-slate-dark/95 backdrop-blur-xl border-t border-zion-cyan/20"
-          >
-            <div className="px-4 py-6 space-y-4">
-              {navigationItems.map((item) => (
-                <div key={item.title}>
-                  {item.dropdown ? (
-                    <div>
-                      <button
-                        onClick={() => toggleDropdown(item.title)}
-                        className={`w-full flex items-center justify-between px-4 py-3 rounded-lg transition-all duration-300 ${
-                          isActive(item.path)
-                            ? 'text-zion-cyan bg-zion-cyan/10'
-                            : 'text-zion-slate-light hover:text-white hover:bg-zion-slate/20'
-                        }`}
-                      >
-                        <div className="flex items-center space-x-3">
-                          <item.icon className="h-5 w-5" />
-                          <span>{item.title}</span>
-                        </div>
-                        <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${
-                          activeDropdown === item.title ? 'rotate-180' : ''
-                        }`} />
-                      </button>
-
-                      <AnimatePresence>
-                        {activeDropdown === item.title && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3 }}
-                            className="mt-2 ml-8 space-y-2"
-                          >
-                            {item.dropdown.map((dropdownItem) => (
-                              <Link
-                                key={dropdownItem.title}
-                                to={dropdownItem.path}
-                                className="block px-4 py-2 text-zion-slate-light hover:text-white rounded-lg transition-all duration-300"
-                                onClick={() => setIsOpen(false)}
-                              >
-                                {dropdownItem.title}
-                              </Link>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.path}
-                      className={`block px-4 py-3 rounded-lg transition-all duration-300 ${
-                        isActive(item.path)
-                          ? 'text-zion-cyan bg-zion-cyan/10'
-                          : 'text-zion-slate-light hover:text-white hover:bg-zion-slate/20'
-                      }`}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <div className="flex items-center space-x-3">
-                        <item.icon className="h-5 w-5" />
-                        <span>{item.title}</span>
-                      </div>
-                    </Link>
-                  )}
-                </div>
-              ))}
-
-              <div className="pt-4 border-t border-zion-cyan/20">
-                <Link
-                  to="/contact"
-                  className="block w-full px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold text-center rounded-lg hover:from-zion-purple hover:to-zion-cyan transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
-  );
-}
+  return (<>;
+      <header className={`sticky top - 0 z - 50 w - full transition - all duration - 500 ${;
+        scrolled;
+          ? 'bg - zion - slate - dark / 95 backdrop - blur - xl border - b border - zion - cyan / 20 shadow - 2xl shadow - zion - cyan / 10';
+          : 'bg - transparent';
+      }`}>;
+        <div role="button" className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
+          <div role="button" className="flex h - 20 items - center justify - between">;
+            {/* Enhanced Logo */};
+            <motion.div;
+              className="flex items - center";
+              initial = {;
+  { opacity: 0,;
+  x: -20 ;
+;
+}};
+              animate = {;
+  { opacity: 1,;
+  x: 0 ;
+;
+}};
+              transition={{ duration: 0.5 }};
+;
+              <Link to="/" className="flex items - center space - x-3 group">;
+                <div role="button" className="relative">;
+                  <div role="button" className="w - 12 h - 12 bg - gradient - to - br from - zion - cyan via - zion - purple to - zion - blue rounded - xl flex items - center justify - center group - hover:scale - 110 transition - all duration - 300 shadow - lg shadow - zion - cyan / 25">;
+                    <span className="text - 2xl font - bold text - white">Z</span>;
+                  </div>;
+                  <div role="button" className="absolute inset - 0 bg - gradient - to - br from - zion - cyan via - zion - purple to - zion - blue rounded - xl blur - lg opacity - 50 group - hover:opacity - 75 transition - opacity duration - 300"></div>;
+                  <div role="button" className="absolute inset - 0 bg - gradient - to - br from - zion - cyan via - zion - purple to - zion - blue rounded - xl blur - xl opacity - 25 group - hover:opacity - 50 transition - opacity duration - 300"></div>;
+                </div>;
+                <div role="button" className="hidden sm:block">;
+                  <h1 className="text - 2xl font - bold bg - gradient - to - r from - zion - cyan via - zion - purple to - zion - blue bg - clip - text text - transparent">;
+                    ZION TECH GROUP;
+                  </h1>;
+                  <p className="text - xs text - zion - slate - light font - medium">Innovation • Intelligence • Impact</p>;
+                </div>;
+              </Link>;
+            </motion.div>;
+            {/* Desktop Navigation */};
+            <nav className="hidden lg:flex items - center space - x-1">;
+              {/* Main Navigation Links */};
+              <motion.div;
+                initial = {;
+  { opacity: 0,;
+  y: -20 ;
+;
+}};
+                animate = {;
+  { opacity: 1,;
+  y: 0 ;
+;
+}};
+                transition = {;
+  { duration: 0.5,;
+  delay: 0.1 ;
+;
+}};
+              >;
+                <Link;
+                  to="/about";
+                  className="nav - link flex items - center space - x-2 px - 4 py - 2 rounded - lg transition - all duration - 300 group hover:text - zion - cyan hover:bg - zion - cyan / 5 hover:shadow - lg hover:shadow - zion - cyan / 10";
+;
+                  <Users className="w - 4 h - 4 group - hover:scale - 110 transition - transform duration - 300"       />;
+                  <span className="font - medium">About</span>;
+                </Link>;
+              </motion.div>;
+              <motion.div;
+                initial = {;
+  { opacity: 0,;
+  y: -20 ;
+;
+}};
+                animate = {;
+  { opacity: 1,;
+  y: 0 ;
+;
+}};
+                transition = {;
+  { duration: 0.5,;
+  delay: 0.15 ;
+;
+}};
+              >;
+                <Link;
+                  to="/partners";
+                  className="nav - link flex items - center space - x-2 px - 4 py - 2 rounded - lg transition - all duration - 300 group hover:text - zion - cyan hover:bg - zion - cyan / 5 hover:shadow - lg hover:shadow - zion - cyan / 10";
+;
+                  <Handshake className="w - 4 h - 4 group - hover:scale - 110 transition - transform duration - 300"       />;
+                  <span className="font - medium">Partners</span>;
+                </Link>;
+              </motion.div>;
+              {/* Service Categories */};
+              {serviceCategories.map ( (category, index) => (<div role="button" key={category.name} className="relative">;
+                  <motion.button;
+                    initial = {;
+  { opacity: 0,;
+  y: -20 ;
+;
+}};
+                    animate = {;
+  { opacity: 1,;
+  y: 0 ;
+;
+}};
+                    transition = {;
+  { duration: 0.5,;
+  delay: (index + 2) * 0.1 ;
+;
+}};
+                    onClick={ () => toggleDropdown (category.name) };
+                    className={`nav - link flex items - center space - x-2 px - 4 py - 2 rounded - lg transition - all duration - 300 group ${;
+                      activeDropdown === category.name;
+                        ? 'text - zion - cyan bg - zion - cyan / 10 shadow - lg shadow - zion - cyan / 20';
+                        : 'hover:text - zion - cyan hover:bg - zion - cyan / 5 hover:shadow - lg hover:shadow - zion - cyan / 10';
+                    }`};
+;
+                    <category.icon className="w - 4 h - 4 group - hover:scale - 110 transition - transform duration - 300"       />;
+                    <span className="font - medium">{category.name}</span>;
+                    <ChevronDown className={`w - 3 h - 3 transition - transform duration - 300 ${;
+                      activeDropdown === category.name ? 'rotate - 180' : '';
+                    }`}       />;
+                  </motion.button>;
+                  {/* Enhanced Dropdown Menu */};
+                  <AnimatePresence>;
+                    {activeDropdown === category.name && (;
+                      <motion.div;
+                        initial = {;
+  { opacity: 0, y: -10,;
+  scale: 0.95 ;
+;
+}};
+                        animate = {;
+  { opacity: 1, y: 0,;
+  scale: 1 ;
+;
+}};
+                        exit = {;
+  { opacity: 0, y: -10,;
+  scale: 0.95 ;
+;
+}};
+                        transition={{ duration: 0.2 }};
+                        className="absolute top - full left - 0 mt - 2 w - 80 bg - zion - slate - dark / 95 backdrop - blur - xl border border - zion - cyan / 20 rounded - xl shadow - 2xl shadow - zion - cyan / 20 overflow - hidden";
+;
+                        <div role="button" className="p - 4">;
+                          <div role="button" className="mb - 4">;
+                            <h3 className="text - lg font - semibold text - zion - cyan mb - 2">{category.name}</h3>;
+                            <div role="button" className="w - 16 h - 1 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - full"></div>;
+                          </div>;
+                          <div role="button" className="space - y-2">;
+                            {category.services.map ( (service, subIndex) => (<motion.div;
+                                key={service.name};
+                                initial = {;
+  { opacity: 0,;
+  x: -20 ;
+;
+}};
+                                animate = {;
+  { opacity: 1,;
+  x: 0 ;
+;
+}};
+                                transition = {;
+  { duration: 0.3,;
+  delay: subIndex * 0.05 ;
+;
+}};
+                              >;
+                                <Link;
+                                  to={service.href};
+                                  className="flex items - start space - x-3 p - 3 rounded - lg hover:bg - zion - cyan / 10 transition - all duration - 300 group";
+;
+                                  <div role="button" className="w - 8 h - 8 bg - gradient - to - br from - zion - cyan / 20 to - zion - purple / 20 rounded - lg flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300">;
+                                    <Brain className="w - 4 h - 4 text - zion - cyan"       /> {/* Using Brain icon for consistency */};
+                                  </div>;
+                                  <div role="button" className="flex - 1">;
+                                    <h4 className="font - medium text - white group - hover:text - zion - cyan transition - colors duration - 300">;
+                                      {service.name};
+                                    </h4>;
+                                  </div>;
+                                </Link>;
+                              </motion.div>;) ) };
+                          </div>;
+                        </div>;
+                      </motion.div>) };
+                  </AnimatePresence>;
+                </div>) ) };
+            </nav>;
+            {/* Right side actions */};
+            <div role="button" className="flex items - center space - x-4">;
+              {/* Search */};
+              <form onSubmit={handleSearch} className="hidden md:block">;
+                <div role="button" className="relative">;
+                  <input;
+                    type="text";
+                    placeholder="Search services...";
+                    value={searchQuery};
+                    onChange={ (e) => setSearchQuery (e.target.value) };
+                    className="w - 64 px - 4 py - 2 pl - 10 bg - zion - slate - dark / 50 border border - zion - cyan / 20 rounded - lg text - white placeholder - zion - slate - light focus:outline - none focus:ring - 2 focus:ring - zion - cyan / 50 focus:border - zion - cyan / 50 transition - all duration - 300";
+                  />;
+                  <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 w - 4 h - 4 text - zion - slate - light"       />;
+                </div>;
+              </form>;
+              {/* User actions */};
+              <div role="button" className="flex items - center space - x-2">;
+                <motion.button;
+                  whileHover={{ scale: 1.05 }};
+                  whileTap={{ scale: 0.95 }};
+                  className="p - 2 text - zion - slate - light hover:text - zion - cyan hover:bg - zion - cyan / 10 rounded - lg transition - all duration - 300";
+;
+                  <Bell className="w - 5 h - 5"       />;
+                </motion.button>;
+                <motion.button;
+                  whileHover={{ scale: 1.05 }};
+                  whileTap={{ scale: 0.95 }};
+                  className="p - 2 text - zion - slate - light hover:text - zion - cyan hover:bg - zion - cyan / 10 rounded - lg transition - all duration - 300";
+;
+                  <User className="w - 5 h - 5"       />;
+                </motion.button>;
+                <motion.button;
+                  whileHover={{ scale: 1.05 }};
+                  whileTap={{ scale: 0.95 }};
+                  className="p - 2 text - zion - slate - light hover:text - zion - cyan hover:bg - zion - cyan / 10 rounded - lg transition - all duration - 300";
+;
+                  <ShoppingCart className="w - 5 h - 5"       />;
+                </motion.button>;
+              </div>;
+              {/* Mobile Sidebar Toggle */};
+              <MobileSidebarToggle       />;
+            </div>;
+          </div>;
+        </div>;
+      </header>;
+    </>;) ;
+};

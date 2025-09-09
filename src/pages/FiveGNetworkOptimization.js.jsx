@@ -4,20 +4,28 @@ import { Radio, Zap, Shield, ArrowRight, CheckCircle, BarChart3, Globe, Cpu } fr
 const FiveGNetworkOptimization = () => {
     return (<>
       <Helmet>
-        <title>5G Network Optimization - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G network optimization solutions for enhanced performance, coverage, and efficiency."/>
-        <meta name="keywords" content="5G optimization, network performance, telecommunications, 5G infrastructure, network efficiency"/>
+        <title > 5G Network Optimization - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Advanced 5G network optimization solutions for enhanced performance, coverage, and efficiency."
+              />
+        <meta
+          name="keywords"
+          content="5G optimization, network performance, telecommunications, 5G infrastructure, network efficiency"
+              />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-green-800/20 to-blue-800/20"></div>
-          <div className="max-w-7xl mx-auto relative z-10">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-green-500/20 rounded-full px-6 py-3 mb-6">
-                <Radio className="w-5 h-5 text-green-400"/>
-                <span className="text-green-300 font-medium">5G Network Optimization</span>
+        <section className="pt - 32 pb - 20 px - 4 relative overflow - hidden">
+          <div className="absolute inset - 0 bg - gradient - to - r from - green - 800 / 20 to - blue - 800 / 20"></div>
+          <div className="max - w-7xl mx - auto relative z - 10">
+            <div className="text - center mb - 16">
+              <div className="inline - flex items - center gap - 2 bg - green - 500 / 20 rounded - full px - 6 py - 3 mb - 6">
+                <Radio className="w - 5 h - 5 text - green - 400"       />
+                <span className="text - green - 300 font - medium">
+                  5G Network Optimization
+                </span>
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 Maximize Your
@@ -45,41 +53,54 @@ const FiveGNetworkOptimization = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {[
-            {
-                icon: Zap,
-                title: "Speed Enhancement",
-                description: "Optimize throughput and reduce latency with intelligent traffic management and resource allocation"
-            },
-            {
-                icon: Globe,
-                title: "Coverage Expansion",
-                description: "Maximize coverage area and eliminate dead zones with strategic optimization algorithms"
-            },
-            {
-                icon: BarChart3,
-                title: "Performance Analytics",
-                description: "Real-time monitoring and analytics to track network performance and identify optimization opportunities"
-            },
-            {
-                icon: Shield,
-                title: "Security Optimization",
-                description: "Enhanced security protocols and threat detection integrated into network optimization"
-            },
-            {
-                icon: Cpu,
-                title: "AI-Driven Optimization",
-                description: "Machine learning algorithms continuously optimize network parameters for peak performance"
-            },
-            {
-                icon: CheckCircle,
-                title: "Quality Assurance",
-                description: "Automated quality monitoring and self-healing capabilities for consistent service delivery"
-            }
-        ].map((feature, index) => (<div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-colors">
-                  <feature.icon className="w-12 h-12 text-green-400 mb-6"/>
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
-                </div>))}
+                {
+                  icon: Zap,
+                  title: 'Speed Enhancement',
+                  description:
+                    'Optimize throughput and reduce latency with intelligent traffic management and resource allocation',
+                },
+                {
+                  icon: Globe,
+                  title: 'Coverage Expansion',
+                  description:
+                    'Maximize coverage area and eliminate dead zones with strategic optimization algorithms',
+                },
+                {
+                  icon: BarChart3,
+                  title: 'Performance Analytics',
+                  description:
+                    'Real - time monitoring and analytics to track network performance and identify optimization opportunities',
+                },
+                {
+                  icon: Shield,
+                  title: 'Security Optimization',
+                  description:
+                    'Enhanced security protocols and threat detection integrated into network optimization',
+                },
+                {
+                  icon: Cpu,
+                  title: 'AI - Driven Optimization',
+                  description:
+                    'Machine learning algorithms continuously optimize network parameters for peak performance',
+                },
+                {
+                  icon: CheckCircle,
+                  title: 'Quality Assurance',
+                  description:
+                    'Automated quality monitoring and self - healing capabilities for consistent service delivery',
+                },
+              ].map ( (feature, index) => (<div
+                  key={index}
+                  className="bg - white / 5 backdrop - blur - lg rounded - 2xl p - 8 border border - white / 10 hover:border - green - 500 / 50 transition - colors"
+                >
+                  <feature.icon className="w - 12 h - 12 text - green - 400 mb - 6"       />
+                  <h3 className="text - xl font - semibold text - white mb - 4">
+                    {feature.title}
+                  </h3>
+                  <p className="text - gray - 300 leading - relaxed">
+                    {feature.description}
+                  </p>
+                </div>) ) }
             </div>
           </div>
         </section>

@@ -1,95 +1,139 @@
 import React from 'react';
-<div className="min-h-screen bg-background">
-      <SEO title="Request Quote - Zion Tech Group" description="Get a custom quote for your AI and tech project needs from Zion Tech Group." keywords="quote, pricing, AI services, tech services, project quote, Zion Tech Group" canonical="https://ziontechgroup.com/request-quote"/>
-      
-      <AppHeader />
-      
-      <main className="pt-16 pb-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Request a Custom Quote
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Tell us about your project and we'll connect you with the perfect talent and services for your needs
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <QuoteRequestForm />
-          </div>
-        </div>
-import {SEO} from "@/components/SEO";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {QuoteRequestForm} from "@/components/QuoteRequestForm";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {CheckCircle, Clock, Users, Zap} from "lucide-react";
+import { motion } from 'framer-motion';
+import { CheckCircle, Clock, Users, Zap, Mail, Phone, MessageSquare } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
-export default function RequestQuote() {}
+const RequestQuote = () => {
+  const [formData, setFormData] = React.useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    serviceType: '',
+    projectDescription: '',
+    timeline: '',
+    budget: '',
+    additionalInfo: ''
+  });
+
+  const handleInputChange = (field, value) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  return (<div className="min - h-screen bg - zion - blue">
+      <EnhancedSEO
+        title="Request a Quote | Zion Tech Group"
+        description="Get customized quotes for AI services, IT solutions, talent hiring, and equipment. Fast, reliable, and tailored to your needs."
+        keywords="request quote, AI services, IT solutions, talent hiring, equipment quotes"
+        canonical="https://ziontechgroup.com / request - quote"
+            />
+      <Header       />
+
+  const serviceTypes = [
+    'AI & Machine Learning',
+    'Web Development',
+    'Mobile Development',
+    'Cloud Services',
+    'Cybersecurity',
+    'Data Analytics',
+    'DevOps & Infrastructure',
+    'Digital Transformation',
+    'Custom Software',
+    'Consulting',
+    'Other'
+  ];
+
+  const timelines = [
+    'Immediate (1-2 weeks)',
+    'Short-term (1-3 months)',
+    'Medium-term (3-6 months)',
+    'Long-term (6+ months)',
+    'Flexible'
+  ];
+
+  const budgets = [
+    'Under $10,000',
+    '$10,000 - $25,000',
+    '$25,000 - $50,000',
+    '$50,000 - $100,000',
+    '$100,000 - $250,000',
+    '$250,000+',
+    'To be discussed'
+  ];
+
   return (
-    <div className="min-h-screen bg-zion-blue">
-      <SEO title="Request a Quote | Zion Tech Group" description="Get customized quotes for AI services, IT solutions, talent hiring, and equipment. Fast, reliable, and tailored to your needs." keywords="request quote, AI services, IT solutions, talent hiring, equipment quotes" canonical="https://ziontechgroup.com/request-quote"/>
-      <Header />
-      
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Get Your Custom Quote
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Get Your Custom
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                {" "}Quote
+              </span>
             </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Whether you need AI services, IT solutions, top talent, or specialized equipment, 
               we'll provide you with a detailed, competitive quote tailored to your specific requirements.
             </p>
-          </div>
+          </motion.div>
+        </div>
+      </section>
 
           {/* Benefits Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
-              <CardHeader className="text-center">
-                <Zap className="h-12 w-12 text-zion-cyan mx-auto mb-4"/>
-                <CardTitle className="text-lg">Fast Response</CardTitle>
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6 mb - 16">
+            <Card className="bg - zion - blue - dark border - zion - purple / 20 text - white">
+              <CardHeader className="text - center">
+                <Zap className="h - 12 w - 12 text - zion - cyan mx - auto mb - 4"       />
+                <CardTitle className="text - lg">Fast Response</CardTitle>
               </CardHeader>
-              <CardContent className="text-center">
-                <CardDescription className="text-zion-slate-light">
+              <CardContent className="text - center">
+                <CardDescription className="text - zion - slate - light">
                   Get your quote within 24 hours
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
-              <CardHeader className="text-center">
-                <CheckCircle className="h-12 w-12 text-zion-cyan mx-auto mb-4"/>
-                <CardTitle className="text-lg">Customized</CardTitle>
+            <Card className="bg - zion - blue - dark border - zion - purple / 20 text - white">
+              <CardHeader className="text - center">
+                <CheckCircle className="h - 12 w - 12 text - zion - cyan mx - auto mb - 4"       />
+                <CardTitle className="text - lg">Customized</CardTitle>
               </CardHeader>
-              <CardContent className="text-center">
-                <CardDescription className="text-zion-slate-light">
+              <CardContent className="text - center">
+                <CardDescription className="text - zion - slate - light">
                   Tailored to your specific needs
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
-              <CardHeader className="text-center">
-                <Users className="h-12 w-12 text-zion-cyan mx-auto mb-4"/>
-                <CardTitle className="text-lg">Expert Team</CardTitle>
+            <Card className="bg - zion - blue - dark border - zion - purple / 20 text - white">
+              <CardHeader className="text - center">
+                <Users className="h - 12 w - 12 text - zion - cyan mx - auto mb - 4"       />
+                <CardTitle className="text - lg">Expert Team</CardTitle>
               </CardHeader>
-              <CardContent className="text-center">
-                <CardDescription className="text-zion-slate-light">
+              <CardContent className="text - center">
+                <CardDescription className="text - zion - slate - light">
                   Reviewed by industry experts
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
-              <CardHeader className="text-center">
-                <Clock className="h-12 w-12 text-zion-cyan mx-auto mb-4"/>
-                <CardTitle className="text-lg">No Obligation</CardTitle>
+            <Card className="bg - zion - blue - dark border - zion - purple / 20 text - white">
+              <CardHeader className="text - center">
+                <Clock className="h - 12 w - 12 text - zion - cyan mx - auto mb - 4"       />
+                <CardTitle className="text - lg">No Obligation</CardTitle>
               </CardHeader>
-              <CardContent className="text-center">
-                <CardDescription className="text-zion-slate-light">
+              <CardContent className="text - center">
+                <CardDescription className="text - zion - slate - light">
                   Free quotes with no commitment
                 </CardDescription>
               </CardContent>
@@ -97,179 +141,125 @@ export default function RequestQuote() {}
           </div>
 
           {/* Services Overview */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              What We Can Quote For You
+          <div className="mb - 16">
+            <h2 className="text - 3xl font - bold text - white mb - 8 text - center">
+              Our Services
             </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
+            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">
+              <Card className="bg - zion - blue - dark border - zion - purple / 20 text - white hover:border - zion - purple / 40 transition - colors">
                 <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">AI & Machine Learning</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    Custom AI solutions, model development, and ML infrastructure
+                  <CardTitle className="text - xl text - zion - cyan">
+                    AI & Machine Learning
+                  </CardTitle>
+                  <CardDescription className="text - zion - slate - light">
+                    Custom AI solutions and machine learning models
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• Custom AI model development</li>
-                    <li>• Machine learning consulting</li>
-                    <li>• AI infrastructure setup</li>
-                    <li>• Data science services</li>
-                  </ul>
+                <CardContent className="text-center">
+                  <CardDescription className="text-gray-300">
+                    Get your quote within 24 hours
+                  </CardDescription>
                 </CardContent>
               </Card>
+            </motion.div>
 
-              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
-                <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">IT Services</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    Onsite IT support, infrastructure, and digital transformation
-                  </CardDescription>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <Card className="bg-white/10 backdrop-blur-lg border-white/20 text-white hover:border-white/40 transition-all duration-300">
+                <CardHeader className="text-center">
+                  <CheckCircle className="h-12 w-12 text-green-400 mx-auto mb-4"/>
+                  <CardTitle className="text-lg">Customized</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• Onsite IT support</li>
-                    <li>• Infrastructure setup</li>
-                    <li>• Cloud migration</li>
-                    <li>• Cybersecurity services</li>
-                  </ul>
+                <CardContent className="text-center">
+                  <CardDescription className="text-gray-300">
+                    Tailored to your specific needs
+                  </CardDescription>
                 </CardContent>
               </Card>
+            </motion.div>
 
-              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
-                <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">Talent & Hiring</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    AI-powered talent matching and recruitment services
-                  </CardDescription>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
+              <Card className="bg-white/10 backdrop-blur-lg border-white/20 text-white hover:border-white/40 transition-all duration-300">
+                <CardHeader className="text-center">
+                  <Users className="h-12 w-12 text-purple-400 mx-auto mb-4"/>
+                  <CardTitle className="text-lg">Expert Team</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• AI talent matching</li>
-                    <li>• Recruitment services</li>
-                    <li>• Team building</li>
-                    <li>• Skill assessment</li>
-                  </ul>
+                <CardContent className="text-center">
+                  <CardDescription className="text-gray-300">
+                    Reviewed by industry experts
+                  </CardDescription>
                 </CardContent>
               </Card>
+            </motion.div>
 
-              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
-                <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">Equipment & Hardware</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    High-tech equipment, servers, and specialized hardware
-                  </CardDescription>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              <Card className="bg-white/10 backdrop-blur-lg border-white/20 text-white hover:border-white/40 transition-all duration-300">
+                <CardHeader className="text-center">
+                  <Clock className="h-12 w-12 text-orange-400 mx-auto mb-4"/>
+                  <CardTitle className="text-lg">No Obligation</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• AI/ML hardware</li>
-                    <li>• Server infrastructure</li>
-                    <li>• Networking equipment</li>
-                    <li>• Green IT solutions</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
-                <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">Consulting</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    Strategic technology consulting and digital transformation
+                <CardContent className="text-center">
+                  <CardDescription className="text-gray-300">
+                    Free quotes with no commitment
                   </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• Technology strategy</li>
-                    <li>• Digital transformation</li>
-                    <li>• Process optimization</li>
-                    <li>• Innovation consulting</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
-                <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">Custom Solutions</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    Tailored solutions for unique business requirements
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• Custom software development</li>
-                    <li>• Integration services</li>
-                    <li>• API development</li>
-                    <li>• Legacy system modernization</li>
-                  </ul>
                 </CardContent>
               </Card>
             </div>
           </div>
 
           {/* Quote Form Section */}
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-white mb-4">
+          <div className="max - w-4xl mx - auto">
+            <div className="text - center mb - 8">
+              <h2 className="text - 3xl font - bold text - white mb - 4">
                 Request Your Quote
               </h2>
-              <p className="text-zion-slate-light text-lg">
-                Fill out the form below and we'll get back to you with a detailed quote within 24 hours.
+              <p className="text - zion - slate - light text - lg">
+                Fill out the form below and we'll get back to you with a
+                detailed quote within 24 hours.
               </p>
             </div>
-            
-            <QuoteRequestForm />
+
+            <QuoteRequestForm       />
           </div>
 
           {/* Additional Information */}
-          <div className="mt-16 text-center">
-            <h3 className="text-2xl font-bold text-white mb-6">
+          <div className="mt - 16 text - center">
+            <h3 className="text - 2xl font - bold text - white mb - 6">
               Need Immediate Assistance?
             </h3>
-            <p className="text-zion-slate-light mb-6">
-              For urgent requests or to speak with our team directly, contact us:
+            <p className="text - zion - slate - light mb - 6">
+              For urgent requests or to speak with our team directly, contact
+              us:
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="mailto:commercial@ziontechgroup.com" className="inline-flex items-center px-6 py-3 bg-zion-cyan text-zion-blue-dark font-semibold rounded-lg hover:bg-zion-cyan/90 transition-colors">
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center">
+              <a
+                href="mailto:commercial@ziontechgroup.com"
+                className="inline - flex items - center px - 6 py - 3 bg - zion - cyan text - zion - blue - dark font - semibold rounded - lg hover:bg - zion - cyan / 90 transition - colors"
+              >
                 Email Us
               </a>
-              <a href="/contact" className="inline-flex items-center px-6 py-3 border border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple/10 transition-colors">
+              <a
+                href="/contact"
+                className="inline - flex items - center px - 6 py - 3 border border - zion - purple text - zion - purple font - semibold rounded - lg hover:bg - zion - purple / 10 transition - colors"
+              >
                 Contact Page
               </a>
             </div>
           </div>
         </div>
-      </main>
-      
-      <Footer />
-    </div>
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
+      </section>
 
-export default function RequestQuote() {}
-  return (
-    <>
-      <SEO title="Request a Quote - Zion Tech Group" description="Get a customized quote for your IT services, AI solutions, or tech projects. Our team will provide you with a detailed estimate tailored to your needs." keywords="request quote, IT services quote, AI solutions quote, tech project estimate, custom pricing" canonical="https://ziontechgroup.com/request-quote"/>
-      <Header />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Request a Custom Quote
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Get a personalized estimate for your IT services, AI solutions, or tech projects. 
-              Our team will analyze your requirements and provide you with a detailed quote.
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <QuoteRequestForm />
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
+      <Footer       />
+    </div>) ;
 }
-</></>;

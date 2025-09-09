@@ -3,8 +3,11 @@ import { Helmet } from 'react-helmet-async';
 const Settings = () => {
     return (<>
       <Helmet>
-        <title>Settings - Zion Tech Group</title>
-        <meta name="description" content="Configure your Zion Tech Group account settings. Customize notifications, security, and preferences."/>
+        <title > Settings - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Configure your Zion Tech Group account settings. Customize notifications, security, and preferences."
+              />
       </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-12">

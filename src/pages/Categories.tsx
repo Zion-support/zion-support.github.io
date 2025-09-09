@@ -1,322 +1,445 @@
 import React, { useState } from 'react';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
-import { Link } from 'react-router-dom';
-import { 
-  Search, 
-  Code, 
-  Brain, 
-  Database, 
-  Shield, 
-  Cloud, 
-  Smartphone, 
-  Globe, 
-  Zap, 
-  Cpu,
-  Network,
-  Server,
-  Monitor,
-  Smartphone as Mobile,
-  Palette,
-  BarChart3,
-  Lock,
-  Rocket,
-  Lightbulb,
-  Target,
-  TrendingUp,
-  Users,
-  Settings,
-  Wrench,
-  Layers
-} from 'lucide-react';
-
-interface Category {
-  id: string;
-  name: string;
-  description: string;
-  icon: React.ComponentType<{ className?: string }>;
-  color: string;
-  serviceCount: number;
-  popularServices: string[];
-  tags: string[];
-}
-
-export default function Categories() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
-  const categories: Category[] = [
-    {
-      id: 'ai-development',
-      name: 'AI Development',
-      description: 'Cutting-edge artificial intelligence solutions including machine learning, natural language processing, and computer vision.',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      serviceCount: 1247,
-      popularServices: ['Machine Learning Models', 'ChatGPT Integration', 'Computer Vision', 'Predictive Analytics'],
-      tags: ['Machine Learning', 'Deep Learning', 'Neural Networks', 'AI Models']
-    },
-    {
-      id: 'software-development',
-      name: 'Software Development',
-      description: 'Full-stack development services for web, mobile, and desktop applications using modern technologies.',
-      icon: Code,
-      color: 'from-blue-500 to-cyan-500',
-      serviceCount: 2156,
-      popularServices: ['Web Applications', 'Mobile Apps', 'API Development', 'System Architecture'],
-      tags: ['React', 'Node.js', 'Python', 'Java', 'Mobile Development']
-    },
-    {
-      id: 'data-science',
-      name: 'Data Science',
-      description: 'Data analysis, visualization, and insights to drive business decisions and optimize operations.',
-      icon: Database,
-      color: 'from-green-500 to-teal-500',
-      serviceCount: 892,
-      popularServices: ['Data Analysis', 'Business Intelligence', 'Statistical Modeling', 'Data Visualization'],
-      tags: ['Python', 'R', 'SQL', 'Tableau', 'Power BI']
-    },
-    {
-      id: 'cybersecurity',
-      name: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      serviceCount: 567,
-      popularServices: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'],
-      tags: ['Security', 'Compliance', 'Auditing', 'Penetration Testing']
-    },
-    {
-      id: 'cloud-services',
-      name: 'Cloud Services',
-      description: 'Cloud infrastructure, migration, and management services for scalable and reliable solutions.',
-      icon: Cloud,
-      color: 'from-indigo-500 to-purple-500',
-      serviceCount: 743,
-      popularServices: ['AWS Migration', 'Azure Solutions', 'DevOps', 'Container Orchestration'],
-      tags: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes']
-    },
-    {
-      id: 'mobile-development',
-      name: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android platforms.',
-      icon: Mobile,
-      color: 'from-pink-500 to-rose-500',
-      serviceCount: 634,
-      popularServices: ['iOS Apps', 'Android Apps', 'React Native', 'Flutter Development'],
-      tags: ['iOS', 'Android', 'React Native', 'Flutter', 'Mobile UI/UX']
-    },
-    {
-      id: 'web-development',
-      name: 'Web Development',
-      description: 'Modern web applications with responsive design and cutting-edge technologies.',
-      icon: Globe,
-      color: 'from-cyan-500 to-blue-500',
-      serviceCount: 1892,
-      popularServices: ['Frontend Development', 'Backend Systems', 'E-commerce', 'Progressive Web Apps'],
-      tags: ['React', 'Vue.js', 'Angular', 'Node.js', 'Full Stack']
-    },
-    {
-      id: 'devops',
-      name: 'DevOps & Infrastructure',
-      description: 'Automation, deployment, and infrastructure management for modern software development.',
-      icon: Settings,
-      color: 'from-gray-500 to-slate-500',
-      serviceCount: 456,
-      popularServices: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring', 'Automation'],
-      tags: ['Docker', 'Kubernetes', 'Jenkins', 'Terraform', 'Monitoring']
-    },
-    {
-      id: 'ui-ux-design',
-      name: 'UI/UX Design',
-      description: 'User-centered design solutions that create engaging and intuitive user experiences.',
-      icon: Palette,
-      color: 'from-yellow-500 to-orange-500',
-      serviceCount: 378,
-      popularServices: ['User Research', 'Wireframing', 'Prototyping', 'Design Systems'],
-      tags: ['User Experience', 'User Interface', 'Design Systems', 'Prototyping']
-    },
-    {
-      id: 'blockchain',
-      name: 'Blockchain & Web3',
-      description: 'Decentralized applications, smart contracts, and blockchain infrastructure development.',
-      icon: Layers,
-      color: 'from-emerald-500 to-green-500',
-      serviceCount: 234,
-      popularServices: ['Smart Contracts', 'DApps', 'DeFi Solutions', 'NFT Development'],
-      tags: ['Ethereum', 'Smart Contracts', 'DeFi', 'Web3', 'Blockchain']
-    },
-    {
-      id: 'iot-development',
-      name: 'IoT Development',
-      description: 'Internet of Things solutions for connected devices and smart systems.',
-      icon: Cpu,
-      color: 'from-blue-600 to-indigo-600',
-      serviceCount: 189,
-      popularServices: ['Sensor Integration', 'Device Management', 'Data Collection', 'Smart Home'],
-      tags: ['IoT', 'Embedded Systems', 'Sensors', 'Smart Devices']
-    },
-    {
-      id: 'consulting',
-      name: 'IT Consulting',
-      description: 'Strategic technology consulting to help businesses make informed decisions.',
-      icon: Users,
-      color: 'from-purple-600 to-pink-600',
-      serviceCount: 445,
-      popularServices: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Vendor Selection'],
-      tags: ['Strategy', 'Consulting', 'Digital Transformation', 'Process Improvement']
-    }
+export default Categories;
+import {;
+import { motion } from 'framer - motion';
+import { SEO } from '../components / SEO';
+;
+;
+  Brain,;
+  Cloud,;
+  Shield,;
+  Database,;
+  Code,;
+  Network,;
+  Eye,;
+  Cpu,;
+  Target,;
+  Rocket,;
+  Zap,;
+  Lock,;
+  BarChart3,;
+  Globe,;
+  Smartphone,;
+  Palette,;
+  ArrowRight,;
+  Search,;
+  Filter,;
+  Users,;
+  Settings,;
+  TrendingUp,;
+} from 'lucide - react';
+;
+const Categories: React.FC = () => {;
+  const [searchQuery, setSearchQuery] = useState ('') ;
+  const [activeCategory, setActiveCategory] = useState ('all') ;
+;
+  const categories = [;
+    {;
+      id: 'ai - ml',;
+      name: 'AI & Machine Learning',;
+      description:;
+        'Advanced artificial intelligence and machine learning solutions',;
+      icon: Brain,;
+      color: 'from - purple - 500 to - pink - 500',;
+      count: 44,;
+    },;
+    {;
+      id: 'cloud',;
+      name: 'Cloud & Infrastructure',;
+      description: 'Scalable cloud solutions and infrastructure management',;
+      icon: Cloud,;
+      color: 'from - blue - 500 to - cyan - 500',;
+      count: 32,;
+    },;
+    {;
+      id: 'cybersecurity',;
+      name: 'Cybersecurity',;
+      description: 'Comprehensive security and threat protection',;
+      icon: Shield,;
+      color: 'from - red - 500 to - orange - 500',;
+      count: 28,;
+    },;
+    {;
+      id: 'data',;
+      name: 'Data & Analytics',;
+      description: 'Data processing, analytics, and business intelligence',;
+      icon: Database,;
+      color: 'from - green - 500 to - emerald - 500',;
+      count: 41,;
+    },;
+    {;
+      id: 'development',;
+      name: 'Software Development',;
+      description: 'Custom software development and programming services',;
+      icon: Code,;
+      color: 'from - indigo - 500 to - purple - 500',;
+      count: 41,;
+    },;
+    {;
+      id: 'iot',;
+      name: 'IoT & Edge Computing',;
+      description: 'Internet of Things and edge computing solutions',;
+      icon: Network,;
+      color: 'from - yellow - 500 to - orange - 500',;
+      count: 23,;
+    },;
   ];
-
-  const filteredCategories = categories.filter(category =>
-    category.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    category.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    category.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-  );
-
-  const displayedCategories = selectedCategory === 'all' 
-    ? filteredCategories 
-    : filteredCategories.filter(category => category.id === selectedCategory);
-
-  return (
-    <>
-      <SEO
-        title="Service Categories - Zion Tech Group"
-        description="Explore our comprehensive range of AI and technology service categories. Find the perfect solution for your business needs."
-        keywords="service categories, AI services, tech services, software development, data science, cybersecurity"
-        canonical="https://ziontechgroup.com/categories"
-      />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <GradientHeading>Service Categories</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Explore our comprehensive range of AI and technology services organized by category
-            </p>
-            
-            {/* Search Bar */}
-            <div className="mt-8 max-w-md mx-auto">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-                <Input
-                  type="text"
-                  placeholder="Search categories..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-zion-blue-dark/50 border border-zion-blue-light text-white placeholder:text-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Category Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {displayedCategories.map((category) => (
-              <Card key={category.id} className="bg-zion-blue-dark border-zion-blue-light hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-r ${category.color}`}>
-                      <category.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <Badge variant="secondary" className="bg-zion-blue-light/20 text-zion-cyan">
-                      {category.serviceCount.toLocaleString()}
-                    </Badge>
-                  </div>
-                  <CardTitle className="text-xl text-white mb-2">{category.name}</CardTitle>
-                  <CardDescription className="text-zion-slate-light text-sm leading-relaxed">
-                    {category.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  {/* Popular Services */}
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-zion-cyan mb-2">Popular Services</h4>
-                    <div className="space-y-1">
-                      {category.popularServices.slice(0, 3).map((service, index) => (
-                        <div key={index} className="text-xs text-zion-slate-light">
-                          • {service}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Tags */}
-                  <div className="mb-6">
-                    <div className="flex flex-wrap gap-2">
-                      {category.tags.slice(0, 4).map((tag, index) => (
-                        <Badge key={index} variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Action Buttons */}
-                  <div className="flex gap-2">
-                    <Button asChild className="flex-1 bg-zion-purple hover:bg-zion-purple-dark">
-                      <Link to={`/marketplace?category=${category.id}`}>
-                        Browse Services
-                      </Link>
-                    </Button>
-                    <Button asChild variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
-                      <Link to={`/marketplace?category=${category.id}&view=grid`}>
-                        View All
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Category Navigation */}
-          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6 mb-16">
-            <h3 className="text-xl font-bold text-white mb-6 text-center">Quick Category Navigation</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id === selectedCategory ? 'all' : category.id)}
-                  className={`p-3 rounded-lg text-center transition-all duration-200 ${
-                    selectedCategory === category.id
-                      ? 'bg-zion-purple/20 border border-zion-purple text-zion-cyan'
-                      : 'bg-zion-blue-light/10 border border-transparent text-zion-slate-light hover:bg-zion-blue-light/20 hover:text-white'
-                  }`}
-                >
-                  <category.icon className="w-6 h-6 mx-auto mb-2" />
-                  <div className="text-xs font-medium">{category.name}</div>
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="text-center">
-            <Card className="bg-gradient-to-r from-zion-blue-dark to-zion-purple/20 border border-zion-purple/30">
-              <CardContent className="pt-8">
-                <h2 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h2>
-                <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-                  Explore our marketplace to find the perfect AI and technology services for your business needs. 
-                  All basic services are completely free to access.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild className="bg-zion-cyan hover:bg-zion-cyan/80 text-zion-blue-dark">
-                    <Link to="/marketplace">Browse Marketplace</Link>
-                  </Button>
-                  <Button asChild variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
-                    <Link to="/contact">Get Custom Quote</Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </main>
-    </>
-  );
-}
+;
+  const subCategories = {;
+    'ai - ml': [;
+      {;
+        name: 'Natural Language Processing',;
+        description: 'Text analysis, language models, and conversational AI',;
+        icon: Brain,;
+        services: 12,;
+        talent: 8,;
+        equipment: 3,;
+      },;
+      {;
+        name: 'Computer Vision',;
+        description: 'Image recognition, object detection, and visual AI',;
+        icon: Eye,;
+        services: 9,;
+        talent: 6,;
+        equipment: 4,;
+      },;
+      {;
+        name: 'Machine Learning Platforms',;
+        description: 'ML model training, deployment, and management',;
+        icon: Cpu,;
+        services: 15,;
+        talent: 12,;
+        equipment: 7,;
+      },;
+      {;
+        name: 'AI Consulting',;
+        description: 'Strategic AI implementation and optimization',;
+        icon: Target,;
+        services: 8,;
+        talent: 5,;
+        equipment: 1,;
+      },;
+    ],;
+    cloud: [;
+      {;
+        name: 'Cloud Migration',;
+        description: 'Legacy system migration and cloud transformation',;
+        icon: Rocket,;
+        services: 11,;
+        talent: 7,;
+        equipment: 2,;
+      },;
+      {;
+        name: 'DevOps & CI / CD',;
+        description: 'Automated deployment and infrastructure management',;
+        icon: Zap,;
+        services: 14,;
+        talent: 9,;
+        equipment: 3,;
+      },;
+      {;
+        name: 'Serverless Computing',;
+        description: 'Event - driven and serverless architecture',;
+        icon: Cloud,;
+        services: 7,;
+        talent: 4,;
+        equipment: 1,;
+      },;
+    ],;
+    cybersecurity: [;
+      {;
+        name: 'Threat Detection',;
+        description: 'Advanced threat detection and response systems',;
+        icon: Shield,;
+        services: 13,;
+        talent: 8,;
+        equipment: 5,;
+      },;
+      {;
+        name: 'Compliance & Governance',;
+        description: 'Security compliance and policy management',;
+        icon: Lock,;
+        services: 9,;
+        talent: 6,;
+        equipment: 2,;
+      },;
+      {;
+        name: 'Penetration Testing',;
+        description: 'Security assessment and vulnerability testing',;
+        icon: Target,;
+        services: 6,;
+        talent: 4,;
+        equipment: 3,;
+      },;
+    ],;
+    data: [;
+      {;
+        name: 'Business Intelligence',;
+        description: 'Data visualization and business analytics',;
+        icon: BarChart3,;
+        services: 18,;
+        talent: 11,;
+        equipment: 4,;
+      },;
+      {;
+        name: 'Big Data Processing',;
+        description: 'Large - scale data processing and analytics',;
+        icon: Database,;
+        services: 12,;
+        talent: 8,;
+        equipment: 6,;
+      },;
+      {;
+        name: 'Data Engineering',;
+        description: 'Data pipeline and ETL process development',;
+        icon: Settings,;
+        services: 11,;
+        talent: 7,;
+        equipment: 3,;
+      },;
+    ],;
+    development: [;
+      {;
+        name: 'Web Development',;
+        description: 'Modern web applications and frontend development',;
+        icon: Globe,;
+        services: 16,;
+        talent: 12,;
+        equipment: 2,;
+      },;
+      {;
+        name: 'Mobile Development',;
+        description: 'iOS and Android mobile applications',;
+        icon: Smartphone,;
+        services: 13,;
+        talent: 9,;
+        equipment: 3,;
+      },;
+      {;
+        name: 'Backend Development',;
+        description: 'Server - side development and API design',;
+        icon: Code,;
+        services: 12,;
+        talent: 8,;
+        equipment: 1,;
+      },;
+    ],;
+    iot: [;
+      {;
+        name: 'IoT Device Management',;
+        description: 'IoT device connectivity and management',;
+        icon: Network,;
+        services: 8,;
+        talent: 5,;
+        equipment: 7,;
+      },;
+      {;
+        name: 'Edge Computing',;
+        description: 'Edge processing and real - time analytics',;
+        icon: Cpu,;
+        services: 9,;
+        talent: 6,;
+        equipment: 4,;
+      },;
+      {;
+        name: 'Smart Cities',;
+        description: 'Urban IoT solutions and smart infrastructure',;
+        icon: Globe,;
+        services: 6,;
+        talent: 4,;
+        equipment: 5,;
+      },;
+    ],;
+  };
+;
+  const filteredCategories = categories.filter (category => {;
+    const matchesSearch = category.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
+      category.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
+    const matchesCategory = activeCategory === 'all' || category.id === activeCategory;
+    return matchesSearch && matchesCategory;
+  }) ;
+;
+  return (<>;
+      <SEO;
+        title="Technology Categories - Zion Tech Group";
+        description="Explore our comprehensive technology categories including AI, cloud computing, cybersecurity, data analytics, software development, and IoT solutions.";
+        keywords="technology categories, AI, cloud computing, cybersecurity, data analytics, software development, IoT, Zion Tech Group";
+            />;
+;
+      <div role="button" className="min - h-screen bg - gradient - to - br from - blue - 900 via - purple - 900 to - indigo - 900">;
+        {/* Header */};
+        <section className="pt - 32 pb - 16 px - 4">;
+          <div role="button" className="max - w-7xl mx - auto text - center">;
+            <motion.div;
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.6 }};
+            >;
+              <div role="button" className="flex items - center justify - center space - x-3 mb - 6">;
+                <div role="button" className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center">;
+                  <Target className="w - 8 h - 8 text - white"       />;
+                </div>;
+              </div>;
+              <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
+                Technology Categories;
+              </h1>;
+              <p className="text - xl text - gray - 300 max - w-3xl mx - auto mb - 8">;
+                Explore our comprehensive technology categories and find the;
+                perfect solutions for your business needs.;
+              </p>;
+            </motion.div>;
+          </div>;
+        </section>;
+;
+        {/* Search and Filters */};
+        <section className="py - 8 px - 4">;
+          <div role="button" className="max - w-7xl mx - auto">;
+            <div role="button" className="bg - slate - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - slate - 700 / 50">;
+              {/* Search Bar */};
+              <div role="button" className="relative mb - 6">;
+                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 w - 5 h - 5"       />;
+                <input;
+                  type="text";
+                  placeholder="Search categories...";
+                  value={searchQuery};
+                  onChange={e => setSearchQuery (e.target.value) };
+                  className="w - full pl - 10 pr - 4 py - 3 bg - slate - 700 / 50 border border - slate - 600 / 50 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
+                />;
+              </div>;
+;
+              {/* Category Filters */};
+              <div>;
+                <h3 className="text - white font - semibold mb - 3">Categories</h3>;
+                <div role="button" className="flex flex - wrap gap - 2">;
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveCategory ('all') };
+                    className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - colors ${;
+                      activeCategory === 'all';
+                        ? 'bg - blue - 500 text - white';
+                        : 'bg - slate - 700 / 50 text - gray - 300 hover:bg - slate - 600 / 50';
+                    }`};
+                  >;
+                    All Categories;
+                  </button>;
+                  {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id};
+                      onClick={ () => setActiveCategory (category.id) };
+                      className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - colors ${;
+                        activeCategory === category.id;
+                          ? 'bg - blue - 500 text - white';
+                          : 'bg - slate - 700 / 50 text - gray - 300 hover:bg - slate - 600 / 50';
+                      }`};
+                    >;
+                      {category.name};
+                    </button>) ) };
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+;
+        {/* Categories Grid */};
+        <section className="py - 16 px - 4">;
+          <div role="button" className="max - w-7xl mx - auto">;
+            <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+              {filteredCategories.map ( (category, index) => (<motion.div;
+                  key={category.id};
+                  initial={{ opacity: 0, y: 20 }};
+                  whileInView={{ opacity: 1, y: 0 }};
+                  viewport={{ once: true }};
+                  transition={{ duration: 0.6, delay: index * 0.1 }};
+                  className="bg - slate - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - slate - 700 / 50 hover:border - blue - 500 / 50 transition - all duration - 300";
+                >;
+                  {/* Category Header */};
+                  <div role="button" className="flex items - center gap - 4 mb - 6">;
+                    <div role="button" className={`w - 12 h - 12 bg - gradient - to - r ${category.color} rounded - xl flex items - center justify - center`};
+                    >;
+                      <category.icon className="w - 6 h - 6 text - white"       />;
+                    </div>;
+                    <div>;
+                      <h3 className="text - white font - semibold text - lg">;
+                        {category.name};
+                      </h3>;
+                      <p className="text - gray - 400 text - sm">;
+                        {category.count} services;
+                      </p>;
+                    </div>;
+                  </div>;
+;
+                  {/* Description */};
+                  <p className="text - gray - 300 text - sm mb - 6">;
+                    {category.description};
+                  </p>;
+;
+                  {/* Subcategories */};
+                  {subCategories[category.id as keyof typeof subCategories] && (<div role="button" className="space - y-3 mb - 6">;
+                      <h4 className="text - white font - medium text - sm">;
+                        Subcategories;
+                      </h4>;
+                      <div role="button" className="space - y-2">;
+                        {subCategories[;
+                          category.id as keyof typeof subCategories;
+                        ];
+                          .slice (0, 3) .map ( (sub, idx) => (<div role="button" key={idx};
+                              className="flex items - center justify - between text - sm";
+                            >;
+                              <div role="button" className="flex items - center gap - 2">;
+                                <sub.icon className="w - 4 h - 4 text - gray - 400"       />;
+                                <span className="text - gray - 300">;
+                                  {sub.name};
+                                </span>;
+                              </div>;
+                              <span className="text - gray - 400 text - xs">;
+                                {sub.services} services;
+                              </span>;
+                            </div>) ) };
+                      </div>;
+                    </div>) };
+;
+                  {/* Stats */};
+                  <div role="button" className="grid grid - cols - 3 gap - 4 mb - 6">;
+                    <div role="button" className="text - center">;
+                      <div role="button" className="text - white font - semibold">;
+                        {category.count};
+                      </div>;
+                      <div role="button" className="text - gray - 400 text - xs">Services</div>;
+                    </div>;
+                    <div role="button" className="text - center">;
+                      <div role="button" className="text - white font - semibold">;
+                        {subCategories[;
+                          category.id as keyof typeof subCategories;
+                        ]?.reduce ( (acc, sub) => acc + sub.talent, 0) || 0};
+                      </div>;
+                      <div role="button" className="text - gray - 400 text - xs">Experts</div>;
+                    </div>;
+                    <div role="button" className="text - center">;
+                      <div role="button" className="text - white font - semibold">;
+                        {subCategories[;
+                          category.id as keyof typeof subCategories;
+                        ]?.reduce ( (acc, sub) => acc + sub.equipment, 0) || 0};
+                      </div>;
+                      <div role="button" className="text - gray - 400 text - xs">Tools</div>;
+                    </div>;
+                  </div>;
+;
+                  {/* Action Button */};
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - blue - 500 to - purple - 500 text - white py - 2 px - 4 rounded - lg font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300 flex items - center justify - center gap - 2">;
+                    Explore {category.name};
+                    <ArrowRight className="w - 4 h - 4"       />;
+                  </button>;
+                </motion.div>) ) };
+            </div>;
+;
+            {filteredCategories.length === 0 && (<div role="button" className="text - center py - 12">;
+                <Search className="w - 16 h - 16 text - gray - 400 mx - auto mb - 4"       />;
+                <h3 className="text - white text - xl font - semibold mb - 2">;
+                  No categories found;
+                </h3>;
+                <p className="text - gray - 400">;
+                  Try adjusting your search criteria or filters.;
+                </p>;
+              </div>) };
+          </div>;
+        </section>;
+      </div>;
+    </>) ;
+};
+;

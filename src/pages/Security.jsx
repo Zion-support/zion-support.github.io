@@ -1,323 +1,342 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
-import { Shield, Lock, Eye, CheckCircle, AlertTriangle, FileText, Award, Users, Globe, Server } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+  Shield, 
+  Lock, 
+  Eye, 
+  Key, 
+  Server, 
+  Users, 
+  FileText, 
+  CheckCircle,
+  AlertTriangle,
+  ArrowRight,
+  Globe,
+  Database,
+  Network,
+  Fingerprint
+} from 'lucide-react';
 
 export default function Security() {
   const securityFeatures = [
     {
-      id: 1,
-      title: "End-to-End Encryption",
-      description: "All data is encrypted in transit and at rest using industry-standard AES-256 encryption.",
-      icon: Lock,
-      status: "Active"
+      icon: <Shield className="w-8 h-8" />,
+      title: "Enterprise-Grade Security",
+      description: "Bank-level encryption and security protocols protect your data and transactions.",
+      features: ["256-bit SSL encryption", "PCI DSS compliance", "SOC 2 Type II certified"]
     },
     {
-      id: 2,
+      icon: <Lock className="w-8 h-8" />,
       title: "Multi-Factor Authentication",
-      description: "Enhanced security with SMS, email, and authenticator app verification options.",
-      icon: Shield,
-      status: "Active"
+      description: "Enhanced account protection with multiple verification methods.",
+      features: ["SMS verification", "Authenticator apps", "Hardware security keys"]
     },
     {
-      id: 3,
-      title: "Zero-Knowledge Architecture",
-      description: "We cannot access your encrypted data, ensuring complete privacy and control.",
-      icon: Eye,
-      status: "Active"
+      icon: <Eye className="w-8 h-8" />,
+      title: "Privacy Protection",
+      description: "Your personal information is protected with strict privacy controls.",
+      features: ["GDPR compliance", "Data anonymization", "User consent management"]
     },
     {
-      id: 4,
-      title: "Regular Security Audits",
-      description: "Third-party security assessments and penetration testing conducted quarterly.",
-      icon: CheckCircle,
-      status: "Active"
-    },
-    {
-      id: 5,
-      title: "SOC 2 Type II Compliance",
-      description: "Certified compliance with industry security and privacy standards.",
-      icon: Award,
-      status: "Active"
-    },
-    {
-      id: 6,
-      title: "24/7 Security Monitoring",
-      description: "Continuous threat detection and response with dedicated security operations center.",
-      icon: Server,
-      status: "Active"
+      icon: <Server className="w-8 h-8" />,
+      title: "Secure Infrastructure",
+      description: "Built on secure cloud infrastructure with redundant systems.",
+      features: ["AWS/Azure security", "Regular security audits", "24/7 monitoring"]
     }
   ];
 
   const complianceStandards = [
     {
       name: "SOC 2 Type II",
-      description: "Service Organization Control 2 compliance for security, availability, and confidentiality.",
+      description: "Service Organization Control 2 compliance for data security",
       status: "Certified",
-      lastAudit: "2024-12-01",
-      nextAudit: "2025-06-01"
-    },
-    {
-      name: "ISO 27001",
-      description: "Information security management system certification.",
-      status: "Certified",
-      lastAudit: "2024-11-15",
-      nextAudit: "2025-11-15"
-    },
-    {
-      name: "GDPR",
-      description: "General Data Protection Regulation compliance for EU data protection.",
-      status: "Compliant",
-      lastAudit: "2024-10-01",
-      nextAudit: "Ongoing"
-    },
-    {
-      name: "HIPAA",
-      description: "Health Insurance Portability and Accountability Act compliance for healthcare data.",
-      status: "Compliant",
-      lastAudit: "2024-09-01",
-      nextAudit: "Ongoing"
+      icon: <CheckCircle className="w-5 h-5 text-green-400" />
     },
     {
       name: "PCI DSS",
-      description: "Payment Card Industry Data Security Standard for payment processing.",
-      status: "Level 1",
-      lastAudit: "2024-08-01",
-      nextAudit: "2025-08-01"
+      description: "Payment Card Industry Data Security Standard",
+      status: "Compliant",
+      icon: <CheckCircle className="w-5 h-5 text-green-400" />
+    },
+    {
+      name: "GDPR",
+      description: "General Data Protection Regulation compliance",
+      status: "Compliant",
+      icon: <CheckCircle className="w-5 h-5 text-green-400" />
+    },
+    {
+      name: "ISO 27001",
+      description: "Information Security Management System",
+      status: "In Progress",
+      icon: <AlertTriangle className="w-5 h-5 text-yellow-400" />
     }
   ];
 
-  const securityIncidents = [
+  const securityMeasures = [
     {
-      year: 2024,
-      incidents: 0,
-      severity: "None",
-      status: "Clean"
+      category: "Data Protection",
+      measures: [
+        "End-to-end encryption for all data transmission",
+        "Data encryption at rest using AES-256",
+        "Regular automated backups with encryption",
+        "Data retention policies and automated deletion"
+      ]
     },
     {
-      year: 2023,
-      incidents: 0,
-      severity: "None",
-      status: "Clean"
+      category: "Access Control",
+      measures: [
+        "Role-based access control (RBAC)",
+        "Just-in-time access provisioning",
+        "Session management and timeout controls",
+        "IP whitelisting and geolocation restrictions"
+      ]
     },
     {
-      year: 2022,
-      incidents: 0,
-      severity: "None",
-      status: "Clean"
+      category: "Network Security",
+      measures: [
+        "DDoS protection and mitigation",
+        "Web Application Firewall (WAF)",
+        "Intrusion detection and prevention systems",
+        "Regular vulnerability assessments and penetration testing"
+      ]
+    },
+    {
+      category: "Incident Response",
+      measures: [
+        "24/7 security monitoring and alerting",
+        "Automated threat detection and response",
+        "Incident response team and procedures",
+        "Regular security incident reporting and analysis"
+      ]
     }
   ];
 
-  const privacyFeatures = [
-    "Data minimization and purpose limitation",
-    "Right to access and portability",
-    "Right to erasure and rectification",
-    "Transparent data processing",
-    "Privacy by design principles",
-    "Regular privacy impact assessments",
-    "Data protection officer oversight",
-    "Incident response procedures"
+  const securityTips = [
+    {
+      title: "Strong Passwords",
+      description: "Use unique, complex passwords for each account and enable two-factor authentication.",
+      icon: <Key className="w-5 h-5" />
+    },
+    {
+      title: "Regular Updates",
+      description: "Keep your software and devices updated with the latest security patches.",
+      icon: <CheckCircle className="w-5 h-5" />
+    },
+    {
+      title: "Secure Connections",
+      description: "Always use HTTPS connections and avoid public Wi-Fi for sensitive transactions.",
+      icon: <Globe className="w-5 h-5" />
+    },
+    {
+      title: "Monitor Activity",
+      description: "Regularly review your account activity and report any suspicious behavior.",
+      icon: <Eye className="w-5 h-5" />
+    }
   ];
 
   return (
-    <>
-      <SEO 
-        title="Security & Compliance - Zion Tech Group Trust & Safety" 
-        description="Learn about our comprehensive security measures, compliance certifications, and commitment to protecting your data and privacy." 
-        canonical="/security" 
-        url="https://ziontechgroup.com/security"
-      />
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">
+      <div className="container mx-auto px-4 py-12">
+        {/* Header */}
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+            Your <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Security</span> is Our Priority
+          </h1>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
+            At Zion Tech Group, we implement enterprise-grade security measures to protect your data, 
+            transactions, and privacy. Learn about our comprehensive security framework and compliance standards.
+          </p>
+        </motion.div>
 
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Security & Compliance
-            </h1>
-            <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Your trust is our priority. We implement industry-leading security measures 
-              and maintain rigorous compliance standards to protect your data.
-            </p>
-          </div>
-
-          {/* Security Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 text-center">
-              <div className="text-3xl font-bold text-zion-cyan mb-2">99.99%</div>
-              <div className="text-zion-slate-light text-sm">Uptime</div>
-            </div>
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 text-center">
-              <div className="text-3xl font-bold text-zion-cyan mb-2">0</div>
-              <div className="text-zion-slate-light text-sm">Security Breaches</div>
-            </div>
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 text-center">
-              <div className="text-3xl font-bold text-zion-cyan mb-2">5</div>
-              <div className="text-zion-slate-light text-sm">Compliance Certifications</div>
-            </div>
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 text-center">
-              <div className="text-3xl font-bold text-zion-cyan mb-2">24/7</div>
-              <div className="text-zion-slate-light text-sm">Security Monitoring</div>
-            </div>
-          </div>
-
-          {/* Security Features */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              Security Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {securityFeatures.map((feature) => (
-                <div key={feature.id} className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 hover:border-zion-cyan transition-all duration-300">
-                  <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mb-4">
-                    <feature.icon className="w-8 h-8 text-zion-cyan" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-zion-slate-light text-sm mb-4">
-                    {feature.description}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="px-3 py-1 bg-green-500/20 text-green-400 text-sm rounded-full">
-                      {feature.status}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Compliance Standards */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              Compliance & Certifications
-            </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {complianceStandards.map((standard, index) => (
-                <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-semibold text-white">
-                      {standard.name}
-                    </h3>
-                    <span className="px-3 py-1 bg-green-500/20 text-green-400 text-sm rounded-full">
-                      {standard.status}
-                    </span>
-                  </div>
-                  <p className="text-zion-slate-light text-sm mb-4">
-                    {standard.description}
-                  </p>
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div>
-                      <span className="text-zion-slate-light">Last Audit:</span>
-                      <div className="text-white">{standard.lastAudit}</div>
-                    </div>
-                    <div>
-                      <span className="text-zion-slate-light">Next Audit:</span>
-                      <div className="text-white">{standard.nextAudit}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Security Track Record */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              Security Track Record
-            </h2>
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-8">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {securityIncidents.map((record, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-4xl font-bold text-zion-cyan mb-2">
-                      {record.incidents}
-                    </div>
-                    <div className="text-zion-slate-light text-sm mb-2">
-                      Security Incidents in {record.year}
-                    </div>
-                    <div className="text-white font-medium">
-                      {record.status}
-                    </div>
-                  </div>
+        {/* Security Features Grid */}
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          {securityFeatures.map((feature, index) => (
+            <div key={index} className="bg-zinc-800/50 border border-zion-cyan/20 rounded-lg p-8 hover:border-zion-cyan/40 transition-all duration-300">
+              <div className="text-zion-cyan mb-6">{feature.icon}</div>
+              <h3 className="text-white font-semibold text-2xl mb-4">{feature.title}</h3>
+              <p className="text-zion-slate-light mb-6 leading-relaxed">{feature.description}</p>
+              <ul className="space-y-2">
+                {feature.features.map((item, idx) => (
+                  <li key={idx} className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
+                    <span className="text-sm">{item}</span>
+                  </li>
                 ))}
-              </div>
-              <div className="text-center mt-8">
-                <p className="text-zion-slate-light text-lg">
-                  Zero security breaches since company inception
-                </p>
-              </div>
+              </ul>
             </div>
-          </section>
+          ))}
+        </motion.div>
 
-          {/* Privacy Features */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              Privacy & Data Protection
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  Privacy Features
+        {/* Compliance Standards */}
+        <motion.div 
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Security Compliance & Certifications</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {complianceStandards.map((standard, index) => (
+              <div key={index} className="bg-zinc-800/50 border border-zion-cyan/20 rounded-lg p-6 text-center">
+                <div className="flex justify-center mb-4">{standard.icon}</div>
+                <h3 className="text-white font-semibold text-lg mb-2">{standard.name}</h3>
+                <p className="text-zion-slate-light text-sm mb-3">{standard.description}</p>
+                <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
+                  standard.status === 'Certified' || standard.status === 'Compliant' 
+                    ? 'bg-green-500/20 text-green-400' 
+                    : 'bg-yellow-500/20 text-yellow-400'
+                }`}>
+                  {standard.status}
+                </span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Security Measures */}
+        <motion.div 
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Comprehensive Security Measures</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {securityMeasures.map((category, index) => (
+              <div key={index} className="bg-zinc-800/50 border border-zion-cyan/20 rounded-lg p-6">
+                <h3 className="text-zion-cyan font-semibold text-xl mb-4 flex items-center">
+                  <Shield className="w-5 h-5 mr-2" />
+                  {category.category}
                 </h3>
                 <ul className="space-y-3">
-                  {privacyFeatures.map((feature, index) => (
-                    <li key={index} className="flex items-center gap-3 text-zion-slate-light text-sm">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan" />
-                      {feature}
+                  {category.measures.map((measure, idx) => (
+                    <li key={idx} className="flex items-start text-zion-slate-light">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm leading-relaxed">{measure}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  Data Protection
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3 text-zion-slate-light text-sm">
-                    <Globe className="w-4 h-4 text-zion-cyan" />
-                    <span>Global data centers with local compliance</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-zion-slate-light text-sm">
-                    <Users className="w-4 h-4 text-zion-cyan" />
-                    <span>Role-based access control</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-zion-slate-light text-sm">
-                    <FileText className="w-4 h-4 text-zion-cyan" />
-                    <span>Comprehensive audit logging</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-zion-slate-light text-sm">
-                    <AlertTriangle className="w-4 h-4 text-zion-cyan" />
-                    <span>Automated threat detection</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+            ))}
+          </div>
+        </motion.div>
 
-          {/* Call to Action */}
-          <div className="text-center">
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-8">
-              <h2 className="text-2xl font-semibold text-white mb-4">
-                Trust & Transparency
-              </h2>
-              <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-                We believe in complete transparency about our security practices. 
-                Download our security whitepaper or schedule a security review with our team.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium">
-                  Download Security Whitepaper
-                </button>
-                <Link to="/contact" className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-medium">
-                  Schedule Security Review
-                </Link>
+        {/* Security Tips */}
+        <motion.div 
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Security Best Practices</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {securityTips.map((tip, index) => (
+              <div key={index} className="bg-zinc-800/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="text-zion-cyan mb-4 flex justify-center">{tip.icon}</div>
+                <h3 className="text-white font-semibold text-lg mb-3">{tip.title}</h3>
+                <p className="text-zion-slate-light text-sm leading-relaxed">{tip.description}</p>
               </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Security Resources */}
+        <motion.div 
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.0 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Security Resources</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <Link 
+              to="/privacy" 
+              className="bg-zinc-800/50 border border-zion-cyan/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
+            >
+              <div className="text-zion-cyan mb-4 flex justify-center">
+                <Eye className="w-8 h-8" />
+              </div>
+              <h3 className="text-white font-semibold text-lg mb-2">Privacy Policy</h3>
+              <p className="text-zion-slate-light mb-4">Learn how we protect and handle your personal information</p>
+              <span className="text-zion-cyan group-hover:text-zion-cyan-light transition-colors font-medium">
+                Read Policy →
+              </span>
+            </Link>
+
+            <Link 
+              to="/terms" 
+              className="bg-zinc-800/50 border border-zion-cyan/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
+            >
+              <div className="text-zion-cyan mb-4 flex justify-center">
+                <FileText className="w-8 h-8" />
+              </div>
+              <h3 className="text-white font-semibold text-lg mb-2">Terms of Service</h3>
+              <p className="text-zion-slate-light mb-4">Understand our service terms and security commitments</p>
+              <span className="text-zion-cyan group-hover:text-zion-cyan-light transition-colors font-medium">
+                View Terms →
+              </span>
+            </Link>
+
+            <Link 
+              to="/contact" 
+              className="bg-zinc-800/50 border border-zion-cyan/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
+            >
+              <div className="text-zion-cyan mb-4 flex justify-center">
+                <Users className="w-8 h-8" />
+              </div>
+              <h3 className="text-white font-semibold text-lg mb-2">Security Team</h3>
+              <p className="text-zion-slate-light mb-4">Contact our security team for questions or concerns</p>
+              <span className="text-zion-cyan group-hover:text-zion-cyan-light transition-colors font-medium">
+                Contact Us →
+              </span>
+            </Link>
+          </div>
+        </motion.div>
+
+        {/* Security Commitment */}
+        <motion.div 
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.2 }}
+        >
+          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 rounded-lg p-12 max-w-4xl mx-auto">
+            <Shield className="w-16 h-16 text-zion-cyan mx-auto mb-6" />
+            <h2 className="text-3xl font-bold text-white mb-6">Our Security Commitment</h2>
+            <p className="text-zion-slate-light text-lg mb-8 leading-relaxed">
+              We are committed to maintaining the highest standards of security and privacy protection. 
+              Our security framework is continuously updated to address emerging threats and maintain 
+              compliance with industry standards and regulations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-transform inline-flex items-center"
+              >
+                Contact Security Team
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+              <Link 
+                to="/faq" 
+                className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-colors"
+              >
+                Security FAQ
+              </Link>
             </div>
           </div>
-        </div>
-      </main>
-    </>
+        </motion.div>
+      </div>
+    </div>
   );
 }

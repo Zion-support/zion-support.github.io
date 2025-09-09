@@ -105,20 +105,22 @@ export const AICodeGenerator = () => {
     }, [clearHistory, trackEvent]);
     return (<div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">
-        <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold flex items-center gap-3">
-            <Code className="w-8 h-8"/>
-            AI Code Generator
-            <div className="flex items-center gap-1 px-3 py-1 bg-white/20 rounded-full text-sm">
-              <Sparkles className="w-4 h-4"/>
+      <div className="bg - gradient - to - r from - purple - 500 to - blue - 500 p - 6 text - white">
+        <div className="flex items - center justify - between">
+          <h2 className="text - 2xl font - bold flex items - center gap - 3">
+            <Code className="w - 8 h - 8"       />
+            AI Code Generator < div className="flex items - center gap - 1 px - 3 py - 1 bg - white / 20 rounded - full text - sm">
+              <Sparkles className="w - 4 h - 4"       />
               Powered by AI
             </div>
           </h2>
-          
-          <div className="flex items-center gap-2">
-            <button onClick={() => exportCode('json')} className="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors flex items-center gap-2">
-              <Download className="w-4 h-4"/>
+
+          <div className="flex items - center gap - 2">
+            <button
+              onClick={ () => exportCode ('json') }
+              className="px - 4 py - 2 bg - white / 20 hover:bg - white / 30 rounded - lg transition - colors flex items - center gap - 2"
+            >
+              <Download className="w - 4 h - 4"       />
               Export
             </button>
           </div>
@@ -133,11 +135,17 @@ export const AICodeGenerator = () => {
             { id: 'analyze', label: 'Analyze', icon: Eye },
             { id: 'optimize', label: 'Optimize', icon: Zap },
             { id: 'tests', label: 'Tests', icon: TestTube },
-            { id: 'docs', label: 'Docs', icon: FileText }
-        ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id
-                ? 'border-purple-500 text-purple-600 dark:text-purple-400'
-                : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>
-              <Icon className="w-4 h-4"/>
+            { id: 'docs', label: 'Docs', icon: FileText },
+          ].map ( ({ id, label, icon: Icon }) => (<button
+              key={id}
+              onClick={ () => setActiveTab (id) }
+              className={`flex items - center gap - 2 py - 4 px - 1 border - b-2 font - medium text - sm transition - colors ${
+                activeTab === id
+                  ? 'border - purple - 500 text - purple - 600 dark:text - purple - 400'
+                  : 'border - transparent text - gray - 500 hover:text - gray - 700 dark:text - gray - 400 dark:hover:text - gray - 300'
+              }`}
+            >
+              <Icon className="w - 4 h - 4"       />
               {label}
             </button>))}
         </nav>
@@ -216,32 +224,54 @@ export const AICodeGenerator = () => {
                 </div>
 
                 {/* Advanced Options Toggle */}
-                <button type="button" onClick={() => setShowAdvanced(!showAdvanced)} className="flex items-center gap-2 text-sm text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300">
-                  <Settings className="w-4 h-4"/>
+                <button
+                  type="button"
+                  onClick={ () => setShowAdvanced (!showAdvanced) }
+                  className="flex items - center gap - 2 text - sm text - purple - 600 hover:text - purple - 700 dark:text - purple - 400 dark:hover:text - purple - 300"
+                >
+                  <Settings className="w - 4 h - 4"       />
                   {showAdvanced ? 'Hide' : 'Show'} Advanced Options
                 </button>
 
                 {/* Advanced Options */}
                 {showAdvanced && (<motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="grid grid-cols-2 md:grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     {[
-                    { key: 'includeTests', label: 'Tests', icon: TestTube },
-                    { key: 'includeDocs', label: 'Docs', icon: FileText },
-                    { key: 'includeErrorHandling', label: 'Error Handling', icon: AlertCircle },
-                    { key: 'includeLogging', label: 'Logging', icon: Info },
-                    { key: 'includeMetrics', label: 'Metrics', icon: Gauge }
-                ].map(({ key, label, icon: Icon }) => (<label key={key} className="flex items-center gap-2 cursor-pointer">
-                        <input type="checkbox" checked={form[key]} onChange={(e) => setForm(prev => ({ ...prev, [key]: e.target.checked }))} className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-                        <Icon className="w-4 h-4 text-gray-600 dark:text-gray-400"/>
-                        <span className="text-sm text-gray-700 dark:text-gray-300">{label}</span>
-                      </label>))}
-                  </motion.div>)}
+                      { key: 'includeTests', label: 'Tests', icon: TestTube },
+                      { key: 'includeDocs', label: 'Docs', icon: FileText },
+                      {
+                        key: 'includeErrorHandling',
+                        label: 'Error Handling',
+                        icon: AlertCircle,
+                      },
+                      { key: 'includeLogging', label: 'Logging', icon: Info },
+                      { key: 'includeMetrics', label: 'Metrics', icon: Gauge },
+                    ].map ( ({ key, label, icon: Icon }) => (<label
+                        key={key}
+                        className="flex items - center gap - 2 cursor - pointer"
+                      >
+                        <input
+                          type="checkbox"
+                          checked={form[key]}
+                          onChange={e =>
+                            setForm (prev => ({
+                              ...prev,
+                              [key]: e.target.checked,
+                            }) ) }
+                          className="w - 4 h - 4 text - purple - 600 bg - gray - 100 border - gray - 300 rounded focus:ring - purple - 500 dark:focus:ring - purple - 600 dark:ring - offset - gray - 800 focus:ring - 2 dark:bg - gray - 700 dark:border - gray - 600"
+                        />
+                        <Icon className="w - 4 h - 4 text - gray - 600 dark:text - gray - 400"       />
+                        <span className="text - sm text - gray - 700 dark:text - gray - 300">
+                          {label}
+                        </span>
+                      </label>) ) }
+                  </motion.div>) }
 
                 <button type="submit" disabled={isGenerating || !form.prompt.trim()} className="w-full py-3 px-6 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">
                   {isGenerating ? (<>
-                      <Loader2 className="w-5 h-5 animate-spin"/>
+                      <Loader2 className="w - 5 h - 5 animate - spin"       />
                       Generating Code...
                     </>) : (<>
-                      <Sparkles className="w-5 h-5"/>
+                      <Sparkles className="w - 5 h - 5"       />
                       Generate Code
                     </>)}
                 </button>
@@ -253,13 +283,19 @@ export const AICodeGenerator = () => {
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                       Generated Code
                     </h3>
-                    <div className="flex items-center gap-2">
-                      <button onClick={() => copyToClipboard(generatedCode)} className="px-3 py-1 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded text-sm transition-colors flex items-center gap-2">
-                        {copied ? <CheckCircle className="w-4 h-4"/> : <Copy className="w-4 h-4"/>}
+                    <div className="flex items - center gap - 2">
+                      <button
+                        onClick={ () => copyToClipboard (generatedCode) }
+                        className="px - 3 py - 1 bg - gray - 100 hover:bg - gray - 200 dark:bg - gray - 700 dark:hover:bg - gray - 600 text - gray - 700 dark:text - gray - 300 rounded text - sm transition - colors flex items - center gap - 2"
+                      >
+                        {copied ? (<CheckCircle className="w - 4 h - 4"       />) : (<Copy className="w - 4 h - 4"       />) }
                         {copied ? 'Copied!' : 'Copy'}
                       </button>
-                      <button onClick={() => exportCode('txt')} className="px-3 py-1 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900/30 dark:hover:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded text-sm transition-colors flex items-center gap-2">
-                        <Download className="w-4 h-4"/>
+                      <button
+                        onClick={ () => exportCode ('txt') }
+                        className="px - 3 py - 1 bg - blue - 100 hover:bg - blue - 200 dark:bg - blue - 900 / 30 dark:hover:bg - blue - 900 / 50 text - blue - 700 dark:text - blue - 300 rounded text - sm transition - colors flex items - center gap - 2"
+                      >
+                        <Download className="w - 4 h - 4"       />
                         Export
                       </button>
                     </div>
@@ -283,10 +319,10 @@ export const AICodeGenerator = () => {
 
               <button onClick={handleAnalyzeCustomCode} disabled={isAnalyzing || !customCode.trim()} className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">
                 {isAnalyzing ? (<>
-                    <Loader2 className="w-5 h-5 animate-spin"/>
+                    <Loader2 className="w - 5 h - 5 animate - spin"       />
                     Analyzing Code...
                   </>) : (<>
-                    <Eye className="w-5 h-5"/>
+                    <Eye className="w - 5 h - 5"       />
                     Analyze Code
                   </>)}
               </button>
@@ -296,17 +332,47 @@ export const AICodeGenerator = () => {
                   {/* Metrics Overview */}
                   <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                     {[
-                    { key: 'complexity', label: 'Complexity', icon: Code, color: 'red' },
-                    { key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'blue' },
-                    { key: 'security', label: 'Security', icon: Shield, color: 'green' },
-                    { key: 'performance', label: 'Performance', icon: Gauge, color: 'yellow' },
-                    { key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'purple' }
-                ].map(({ key, label, icon: Icon, color }) => {
-                    const value = codeAnalysis[key];
-                    if (typeof value === 'number') {
-                        return (<div key={key} className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                            <Icon className={`w-8 h-8 mx-auto mb-2 text-${color}-500`}/>
-                            <div className="text-2xl font-bold text-gray-900 dark:text-white">
+                      {
+                        key: 'complexity',
+                        label: 'Complexity',
+                        icon: Code,
+                        color: 'red',
+                      },
+                      {
+                        key: 'maintainability',
+                        label: 'Maintainability',
+                        icon: Wrench,
+                        color: 'blue',
+                      },
+                      {
+                        key: 'security',
+                        label: 'Security',
+                        icon: Shield,
+                        color: 'green',
+                      },
+                      {
+                        key: 'performance',
+                        label: 'Performance',
+                        icon: Gauge,
+                        color: 'yellow',
+                      },
+                      {
+                        key: 'accessibility',
+                        label: 'Accessibility',
+                        icon: Eye,
+                        color: 'purple',
+                      },
+                    ].map ( ({ key, label, icon: Icon, color }) => {
+                      const value = codeAnalysis[key];
+                      if (typeof value === 'number') {
+                        return (<div
+                            key={key}
+                            className="text - center p - 4 bg - gray - 50 dark:bg - gray - 700 rounded - lg"
+                          >
+                            <Icon
+                              className={`w - 8 h - 8 mx - auto mb - 2 text-${color}-500`}
+                                  />
+                            <div className="text - 2xl font - bold text - gray - 900 dark:text - white">
                               {value}/10
                             </div>
                             <div className="text-sm text-gray-600 dark:text-gray-400">{label}</div>
@@ -330,15 +396,24 @@ export const AICodeGenerator = () => {
                   </div>
 
                   {/* Issues */}
-                  {codeAnalysis.issues.length > 0 && (<div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-                      <h4 className="font-medium text-gray-900 dark:text-white mb-3">Issues Found</h4>
-                      <div className="space-y-2">
-                        {codeAnalysis.issues.map((issue, index) => (<div key={index} className={`flex items-start gap-3 p-3 rounded-lg ${issue.severity === 'error' ? 'bg-red-50 dark:bg-red-900/30' :
-                            issue.severity === 'warning' ? 'bg-yellow-50 dark:bg-yellow-900/30' :
-                                'bg-blue-50 dark:bg-blue-900/30'}`}>
-                            {issue.severity === 'error' ? (<AlertCircle className="w-5 h-5 text-red-500 mt-0.5"/>) : issue.severity === 'warning' ? (<AlertCircle className="w-5 h-5 text-yellow-500 mt-0.5"/>) : (<Info className="w-5 h-5 text-blue-500 mt-0.5"/>)}
-                            <div className="flex-1">
-                              <div className="text-sm font-medium text-gray-900 dark:text-white">
+                  {codeAnalysis.issues.length > 0 && (<div className="bg - gray - 50 dark:bg - gray - 700 rounded - lg p - 4">
+                      <h4 className="font - medium text - gray - 900 dark:text - white mb - 3">
+                        Issues Found
+                      </h4>
+                      <div className="space - y-2">
+                        {codeAnalysis.issues.map ( (issue, index) => (<div
+                            key={index}
+                            className={`flex items - start gap - 3 p - 3 rounded - lg ${
+                              issue.severity === 'error'
+                                ? 'bg - red - 50 dark:bg - red - 900 / 30'
+                                : issue.severity === 'warning'
+                                  ? 'bg - yellow - 50 dark:bg - yellow - 900 / 30'
+                                  : 'bg - blue - 50 dark:bg - blue - 900 / 30'
+                            }`}
+                          >
+                            {issue.severity === 'error' ? (<AlertCircle className="w - 5 h - 5 text - red - 500 mt - 0.5"       />) : issue.severity === 'warning' ? (<AlertCircle className="w - 5 h - 5 text - yellow - 500 mt - 0.5"       />) : (<Info className="w - 5 h - 5 text - blue - 500 mt - 0.5"       />) }
+                            <div className="flex - 1">
+                              <div className="text - sm font - medium text - gray - 900 dark:text - white">
                                 {issue.message}
                               </div>
                               {issue.line && (<div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
@@ -351,10 +426,16 @@ export const AICodeGenerator = () => {
                 </motion.div>)}
             </motion.div>)}
 
-          {activeTab === 'optimize' && (<motion.div key="optimize" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
-              <div className="text-center py-8">
-                <Zap className="w-16 h-16 text-yellow-500 mx-auto mb-4"/>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+          {activeTab === 'optimize' && (<motion.div
+              key="optimize"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="space - y-6"
+            >
+              <div className="text - center py - 8">
+                <Zap className="w - 16 h - 16 text - yellow - 500 mx - auto mb - 4"       />
+                <h3 className="text - xl font - semibold text - gray - 900 dark:text - white mb - 2">
                   Code Optimization
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400">
@@ -364,23 +445,60 @@ export const AICodeGenerator = () => {
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {[
-                { key: 'performance', label: 'Performance', icon: Gauge, color: 'blue' },
-                { key: 'security', label: 'Security', icon: Shield, color: 'green' },
-                { key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'purple' },
-                { key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'indigo' }
-            ].map(({ key, label, icon: Icon, color }) => (<button key={key} onClick={() => handleOptimizeCode(key)} disabled={!generatedCode && !customCode} className={`p-6 text-center rounded-lg border-2 transition-all ${!generatedCode && !customCode
-                    ? 'border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 cursor-not-allowed'
-                    : 'border-gray-200 dark:border-gray-600 hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 cursor-pointer'}`}>
-                    <Icon className={`w-12 h-12 mx-auto mb-3 text-${color}-500`}/>
-                    <div className="font-medium text-gray-900 dark:text-white">{label}</div>
-                  </button>))}
+                  {
+                    key: 'performance',
+                    label: 'Performance',
+                    icon: Gauge,
+                    color: 'blue',
+                  },
+                  {
+                    key: 'security',
+                    label: 'Security',
+                    icon: Shield,
+                    color: 'green',
+                  },
+                  {
+                    key: 'maintainability',
+                    label: 'Maintainability',
+                    icon: Wrench,
+                    color: 'purple',
+                  },
+                  {
+                    key: 'accessibility',
+                    label: 'Accessibility',
+                    icon: Eye,
+                    color: 'indigo',
+                  },
+                ].map ( ({ key, label, icon: Icon, color }) => (<button
+                    key={key}
+                    onClick={ () => handleOptimizeCode (key) }
+                    disabled={!generatedCode && !customCode}
+                    className={`p - 6 text - center rounded - lg border - 2 transition - all ${
+                      !generatedCode && !customCode
+                        ? 'border - gray - 200 dark:border - gray - 600 bg - gray - 50 dark:bg - gray - 700 cursor - not - allowed'
+                        : 'border - gray - 200 dark:border - gray - 600 hover:border - purple - 500 hover:bg - purple - 50 dark:hover:bg - purple - 900 / 20 cursor - pointer'
+                    }`}
+                  >
+                    <Icon
+                      className={`w - 12 h - 12 mx - auto mb - 3 text-${color}-500`}
+                          />
+                    <div className="font - medium text - gray - 900 dark:text - white">
+                      {label}
+                    </div>
+                  </button>) ) }
               </div>
             </motion.div>)}
 
-          {activeTab === 'tests' && (<motion.div key="tests" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
-              <div className="text-center py-8">
-                <TestTube className="w-16 h-16 text-green-500 mx-auto mb-4"/>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+          {activeTab === 'tests' && (<motion.div
+              key="tests"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="space - y-6"
+            >
+              <div className="text - center py - 8">
+                <TestTube className="w - 16 h - 16 text - green - 500 mx - auto mb - 4"       />
+                <h3 className="text - xl font - semibold text - gray - 900 dark:text - white mb - 2">
                   Generate Tests
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400">
@@ -388,16 +506,26 @@ export const AICodeGenerator = () => {
                 </p>
               </div>
 
-              <button onClick={handleGenerateTests} disabled={!generatedCode && !customCode} className="w-full py-4 px-6 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">
-                <TestTube className="w-5 h-5"/>
+              <button
+                onClick={handleGenerateTests}
+                disabled={!generatedCode && !customCode}
+                className="w - full py - 4 px - 6 bg - green - 600 hover:bg - green - 700 disabled:bg - gray - 400 text - white font - medium rounded - lg transition - colors flex items - center justify - center gap - 2 disabled:cursor - not - allowed"
+              >
+                <TestTube className="w - 5 h - 5"       />
                 Generate Test Suite
               </button>
             </motion.div>)}
 
-          {activeTab === 'docs' && (<motion.div key="docs" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
-              <div className="text-center py-8">
-                <FileText className="w-16 h-16 text-indigo-500 mx-auto mb-4"/>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+          {activeTab === 'docs' && (<motion.div
+              key="docs"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="space - y-6"
+            >
+              <div className="text - center py - 8">
+                <FileText className="w - 16 h - 16 text - indigo - 500 mx - auto mb - 4"       />
+                <h3 className="text - xl font - semibold text - gray - 900 dark:text - white mb - 2">
                   Generate Documentation
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400">
@@ -405,8 +533,12 @@ export const AICodeGenerator = () => {
                 </p>
               </div>
 
-              <button onClick={handleGenerateDocs} disabled={!generatedCode && !customCode} className="w-full py-4 px-6 bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">
-                <FileText className="w-5 h-5"/>
+              <button
+                onClick={handleGenerateDocs}
+                disabled={!generatedCode && !customCode}
+                className="w - full py - 4 px - 6 bg - indigo - 600 hover:bg - indigo - 700 disabled:bg - gray - 400 text - white font - medium rounded - lg transition - colors flex items - center justify - center gap - 2 disabled:cursor - not - allowed"
+              >
+                <FileText className="w - 5 h - 5"       />
                 Generate Documentation
               </button>
             </motion.div>)}
@@ -462,13 +594,19 @@ export const AICodeGenerator = () => {
           </motion.div>)}
 
         {/* History Panel */}
-        {history.length > 0 && (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                Generation History ({history.length})
-              </h3>
-              <button onClick={handleClearHistory} className="px-3 py-1 bg-red-100 hover:bg-red-200 dark:bg-red-900/30 dark:hover:bg-red-900/50 text-red-700 dark:text-red-300 rounded text-sm transition-colors flex items-center gap-2">
-                <Trash2 className="w-4 h-4"/>
+        {history.length > 0 && (<motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mt - 8 border - t border - gray - 200 dark:border - gray - 700 pt - 6"
+          >
+            <div className="flex items - center justify - between mb - 4">
+              <h3 className="text - lg font - semibold text - gray - 900 dark:text - white">
+                Generation History ({history.length}) </h3>
+              <button
+                onClick={handleClearHistory}
+                className="px - 3 py - 1 bg - red - 100 hover:bg - red - 200 dark:bg - red - 900 / 30 dark:hover:bg - red - 900 / 50 text - red - 700 dark:text - red - 300 rounded text - sm transition - colors flex items - center gap - 2"
+              >
+                <Trash2 className="w - 4 h - 4"       />
                 Clear History
               </button>
             </div>

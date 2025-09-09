@@ -1,21 +1,19 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import PerformanceMonitor from './ui/PerformanceMonitor';
+import EnhancedNavigation from './layout/EnhancedNavigation';
+import EnhancedFooter from './layout/EnhancedFooter';
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
-export default function Layout({ children }: LayoutProps) {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
-      <Header />
-      <main className="pt-20">
+    <div className="min-h-screen flex flex-col">
+      <EnhancedNavigation />
+      <main className="flex-grow">
         {children}
       </main>
-      <Footer />
-      <PerformanceMonitor showMetrics={process.env.NODE_ENV === 'development'} />
+      <EnhancedFooter />
     </div>
   );
 }

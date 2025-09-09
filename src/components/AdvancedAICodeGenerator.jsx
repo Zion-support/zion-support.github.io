@@ -340,23 +340,22 @@ export function AdvancedAICodeGenerator() {
         navigator.clipboard.writeText(text);
     };
     if (!isOpen) {
-        return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-110 z-50">
-        <Code className="w-6 h-6"/>
-      </button>);
-    }
+        return (<button onClick={ () => setIsOpen (true) } className="fixed bottom - 4 right - 4 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white p - 4 rounded - full shadow - 2xl hover:shadow - blue - 500 / 50 transition - all duration - 300 hover:scale - 110 z - 50">
+        <Code className="w - 6 h - 6"      />
+      </button>) }
     if (isMinimized) {
-        return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">
-        <div className="flex items-center justify-between p-3 border-b border-zion-slate-light">
-          <div className="flex items-center space-x-2">
-            <Code className="w-5 h-5 text-blue-600"/>
-            <span className="text-sm font-medium">AI Code Generator</span>
+        return (<div className="fixed bottom - 4 right - 4 bg - white dark:bg - zion - slate border border - zion - slate - light rounded - lg shadow - 2xl z - 50">
+        <div className="flex items - center justify - between p - 3 border - b border - zion - slate - light">
+          <div className="flex items - center space - x-2">
+            <Code className="w - 5 h - 5 text - blue - 600"      />
+            <span className="text - sm font - medium">AI Code Generator</span>
           </div>
-          <div className="flex items-center space-x-1">
-            <button onClick={() => setIsMinimized(false)} className="p-1 hover:bg-zion-slate-light rounded">
-              <Maximize2 className="w-4 h-4"/>
+          <div className="flex items - center space - x-1">
+            <button onClick={ () => setIsMinimized (false) } className="p - 1 hover:bg - zion - slate - light rounded">
+              <Maximize2 className="w - 4 h - 4"      />
             </button>
-            <button onClick={() => setIsOpen(false)} className="p-1 hover:bg-zion-slate-light rounded">
-              <X className="w-4 h-4"/>
+            <button onClick={ () => setIsOpen (false) } className="p - 1 hover:bg - zion - slate - light rounded">
+              <X className="w - 4 h - 4"      />
             </button>
           </div>
         </div>
@@ -364,23 +363,23 @@ export function AdvancedAICodeGenerator() {
     }
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="flex items-center space-x-3">
-          <Code className="w-6 h-6"/>
+      <div className="flex items - center justify - between p - 4 border - b border - zion - slate - light bg - gradient - to - r from - blue - 600 to - purple - 600 text - white">
+        <div className="flex items - center space - x-3">
+          <Code className="w - 6 h - 6"      />
           <div>
             <h2 className="text-lg font-bold">Advanced AI-Powered Code Generator</h2>
             <p className="text-sm text-blue-100">Intelligent code generation, analysis & development assistance</p>
           </div>
         </div>
-        <div className="flex items-center space-x-2">
-          <button onClick={() => setIsMinimized(true)} className="p-2 hover:bg-blue-700 rounded-lg transition-colors">
-            <Minimize2 className="w-4 h-4"/>
+        <div className="flex items - center space - x-2">
+          <button onClick={ () => setIsMinimized (true) } className="p - 2 hover:bg - blue - 700 rounded - lg transition - colors">
+            <Minimize2 className="w - 4 h - 4"      />
           </button>
-          <button onClick={() => setIsFullscreen(!isFullscreen)} className="p-2 hover:bg-blue-700 rounded-lg transition-colors">
-            {isFullscreen ? <Minimize2 className="w-4 h-4"/> : <Maximize2 className="w-4 h-4"/>}
+          <button onClick={ () => setIsFullscreen (!isFullscreen) } className="p - 2 hover:bg - blue - 700 rounded - lg transition - colors">
+            {isFullscreen ? <Minimize2 className="w - 4 h - 4"      /> : <Maximize2 className="w - 4 h - 4"      />}
           </button>
-          <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-blue-700 rounded-lg transition-colors">
-            <X className="w-4 h-4"/>
+          <button onClick={ () => setIsOpen (false) } className="p - 2 hover:bg - blue - 700 rounded - lg transition - colors">
+            <X className="w - 4 h - 4"      />
           </button>
         </div>
       </div>
@@ -402,56 +401,56 @@ export function AdvancedAICodeGenerator() {
             <option value="medium">Medium</option>
             <option value="high">High</option>
           </select>
-          <div className="flex items-center space-x-2">
-            <input type="text" placeholder="Search code snippets..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-sm w-64"/>
-            <Search className="w-4 h-4 text-gray-400"/>
+          <div className="flex items - center space - x-2">
+            <input type="text" placeholder="Search code snippets..." value={searchQuery} onChange={ (e) => setSearchQuery (e.target.value) } className="px - 3 py - 2 border border - zion - slate - light rounded - lg bg - white dark:bg - zion - slate text - sm w - 64"/>
+            <Search className="w - 4 h - 4 text - gray - 400"      />
           </div>
         </div>
-        <div className="flex items-center space-x-2">
-          <button onClick={() => setShowSuggestions(!showSuggestions)} className={`p-2 rounded-lg transition-colors ${showSuggestions ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-700'}`}>
-            {showSuggestions ? <Eye className="w-4 h-4"/> : <EyeOff className="w-4 h-4"/>}
+        <div className="flex items - center space - x-2">
+          <button onClick={ () => setShowSuggestions (!showSuggestions) } className={`p - 2 rounded - lg transition - colors ${showSuggestions ? 'bg - green - 100 text - green - 700' : 'bg - gray - 100 text - gray - 700'}`}>
+            {showSuggestions ? <Eye className="w - 4 h - 4"      /> : <EyeOff className="w - 4 h - 4"      />}
           </button>
-          <button className="p-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-            <RefreshCw className="w-4 h-4"/>
+          <button className="p - 2 bg - blue - 600 text - white rounded - lg hover:bg - blue - 700 transition - colors">
+            <RefreshCw className="w - 4 h - 4"      />
           </button>
         </div>
       </div>
 
       {/* Tabs */}
-      <div className="flex border-b border-zion-slate-light">
-        <button onClick={() => setActiveTab('generator')} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === 'generator'
-            ? 'border-b-2 border-blue-600 text-blue-600'
-            : 'text-gray-600 hover:text-gray-800'}`}>
-          <Code className="w-4 h-4 inline mr-2"/>
+      <div className="flex border - b border - zion - slate - light">
+        <button onClick={ () => setActiveTab ('generator') } className={`px - 6 py - 3 text - sm font - medium transition - colors ${activeTab === 'generator'
+            ? 'border - b-2 border - blue - 600 text - blue - 600'
+            : 'text - gray - 600 hover:text - gray - 800'}`}>
+          <Code className="w - 4 h - 4 inline mr - 2"      />
           AI Generator
         </button>
-        <button onClick={() => setActiveTab('snippets')} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === 'snippets'
-            ? 'border-b-2 border-blue-600 text-blue-600'
-            : 'text-gray-600 hover:text-gray-800'}`}>
-          <FileText className="w-4 h-4 inline mr-2"/>
+        <button onClick={ () => setActiveTab ('snippets') } className={`px - 6 py - 3 text - sm font - medium transition - colors ${activeTab === 'snippets'
+            ? 'border - b-2 border - blue - 600 text - blue - 600'
+            : 'text - gray - 600 hover:text - gray - 800'}`}>
+          <FileText className="w - 4 h - 4 inline mr - 2"      />
           Code Snippets
         </button>
-        <button onClick={() => setActiveTab('analysis')} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === 'analysis'
-            ? 'border-b-2 border-blue-600 text-blue-600'
-            : 'text-gray-600 hover:text-gray-800'}`}>
-          <BarChart3 className="w-4 h-4 inline mr-2"/>
+        <button onClick={ () => setActiveTab ('analysis') } className={`px - 6 py - 3 text - sm font - medium transition - colors ${activeTab === 'analysis'
+            ? 'border - b-2 border - blue - 600 text - blue - 600'
+            : 'text - gray - 600 hover:text - gray - 800'}`}>
+          <BarChart3 className="w - 4 h - 4 inline mr - 2"      />
           Code Analysis
         </button>
-        <button onClick={() => setActiveTab('ai')} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === 'ai'
-            ? 'border-b-2 border-blue-600 text-blue-600'
-            : 'text-gray-600 hover:text-gray-800'}`}>
-          <Brain className="w-4 h-4 inline mr-2"/>
+        <button onClick={ () => setActiveTab ('ai') } className={`px - 6 py - 3 text - sm font - medium transition - colors ${activeTab === 'ai'
+            ? 'border - b-2 border - blue - 600 text - blue - 600'
+            : 'text - gray - 600 hover:text - gray - 800'}`}>
+          <Brain className="w - 4 h - 4 inline mr - 2"      />
           AI Generations
         </button>
       </div>
 
       {/* Content */}
-      <div className="flex-1 overflow-auto p-6">
-        {activeTab === 'generator' && (<div className="space-y-6">
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-              <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
-                <Brain className="w-5 h-5 inline mr-2"/>
-                AI-Powered Code Generation
+      <div className="flex - 1 overflow - auto p - 6">
+        {activeTab === 'generator' && (<div className="space - y-6">
+            <div className="bg - gradient - to - r from - blue - 50 to - purple - 50 dark:from - blue - 900 / 20 dark:to - purple - 900 / 20 p - 6 rounded - lg border border - blue - 200 dark:border - blue - 800">
+              <h3 className="text - lg font - semibold text - blue - 900 dark:text - blue - 100 mb - 4">
+                <Brain className="w - 5 h - 5 inline mr - 2"      />
+                AI - Powered Code Generation
               </h3>
               <div className="space-y-4">
                 <div>
@@ -469,12 +468,12 @@ export function AdvancedAICodeGenerator() {
                   </select>
                   <button onClick={generateCode} disabled={isGenerating || !aiPrompt.trim()} className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center space-x-2">
                     {isGenerating ? (<>
-                        <RefreshCw className="w-4 h-4 animate-spin"/>
-                        <span>Generating...</span>
+                        <RefreshCw className="w - 4 h - 4 animate - spin"      />
+                        <span > Generating...</span>
                       </>) : (<>
-                        <Zap className="w-4 h-4"/>
-                        <span>Generate Code</span>
-                      </>)}
+                        <Zap className="w - 4 h - 4"      />
+                        <span > Generate Code</span>
+                      </>) }
                   </button>
                 </div>
               </div>
@@ -485,12 +484,12 @@ export function AdvancedAICodeGenerator() {
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                     Generated Code
                   </h4>
-                  <div className="flex items-center space-x-2">
-                    <button onClick={() => copyToClipboard(generatedCode)} className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-200 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors">
-                      <Copy className="w-4 h-4"/>
+                  <div className="flex items - center space - x-2">
+                    <button onClick={ () => copyToClipboard (generatedCode) } className="p - 2 text - gray - 600 hover:text - gray - 800 hover:bg - gray - 200 dark:text - gray - 400 dark:hover:text - gray - 200 dark:hover:bg - gray - 800 rounded - lg transition - colors">
+                      <Copy className="w - 4 h - 4"      />
                     </button>
-                    <button className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-200 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors">
-                      <Download className="w-4 h-4"/>
+                    <button className="p - 2 text - gray - 600 hover:text - gray - 800 hover:bg - gray - 200 dark:text - gray - 400 dark:hover:text - gray - 200 dark:hover:bg - gray - 800 rounded - lg transition - colors">
+                      <Download className="w - 4 h - 4"      />
                     </button>
                   </div>
                 </div>
@@ -522,12 +521,12 @@ export function AdvancedAICodeGenerator() {
                       </span>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <button className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors">
-                      <Copy className="w-4 h-4"/>
+                  <div className="flex items - center space - x-2">
+                    <button className="p - 2 text - gray - 600 hover:text - gray - 800 hover:bg - gray - 100 dark:text - gray - 400 dark:hover:text - gray - 200 dark:hover:bg - gray - 800 rounded - lg transition - colors">
+                      <Copy className="w - 4 h - 4"      />
                     </button>
-                    <button className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors">
-                      <Download className="w-4 h-4"/>
+                    <button className="p - 2 text - gray - 600 hover:text - gray - 800 hover:bg - gray - 100 dark:text - gray - 400 dark:hover:text - gray - 200 dark:hover:bg - gray - 800 rounded - lg transition - colors">
+                      <Download className="w - 4 h - 4"      />
                     </button>
                   </div>
                 </div>
@@ -547,12 +546,12 @@ export function AdvancedAICodeGenerator() {
               </div>))}
           </div>)}
 
-        {activeTab === 'analysis' && (<div className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
-                <div className="flex items-center space-x-3">
-                  <div className="p-2 bg-green-100 dark:bg-green-900 rounded-lg">
-                    <CheckCircle className="w-6 h-6 text-green-600 dark:text-green-400"/>
+        {activeTab === 'analysis' && (<div className="space - y-6">
+            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 4">
+              <div className="bg - white dark:bg - zion - slate border border - zion - slate - light rounded - lg p - 4">
+                <div className="flex items - center space - x-3">
+                  <div className="p - 2 bg - green - 100 dark:bg - green - 900 rounded - lg">
+                    <CheckCircle className="w - 6 h - 6 text - green - 600 dark:text - green - 400"      />
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Average Quality</p>
@@ -560,10 +559,10 @@ export function AdvancedAICodeGenerator() {
                   </div>
                 </div>
               </div>
-              <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
-                <div className="flex items-center space-x-3">
-                  <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
-                    <Activity className="w-6 h-6 text-blue-600 dark:text-blue-400"/>
+              <div className="bg - white dark:bg - zion - slate border border - zion - slate - light rounded - lg p - 4">
+                <div className="flex items - center space - x-3">
+                  <div className="p - 2 bg - blue - 100 dark:bg - blue - 900 rounded - lg">
+                    <Activity className="w - 6 h - 6 text - blue - 600 dark:text - blue - 400"      />
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Performance</p>
@@ -571,10 +570,10 @@ export function AdvancedAICodeGenerator() {
                   </div>
                 </div>
               </div>
-              <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
-                <div className="flex items-center space-x-3">
-                  <div className="p-2 bg-purple-100 dark:bg-purple-900 rounded-lg">
-                    <Shield className="w-6 h-6 text-purple-600 dark:text-purple-400"/>
+              <div className="bg - white dark:bg - zion - slate border border - zion - slate - light rounded - lg p - 4">
+                <div className="flex items - center space - x-3">
+                  <div className="p - 2 bg - purple - 100 dark:bg - purple - 900 rounded - lg">
+                    <Shield className="w - 6 h - 6 text - purple - 600 dark:text - purple - 400"      />
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Security</p>
@@ -582,10 +581,10 @@ export function AdvancedAICodeGenerator() {
                   </div>
                 </div>
               </div>
-              <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
-                <div className="flex items-center space-x-3">
-                  <div className="p-2 bg-yellow-100 dark:bg-yellow-900 rounded-lg">
-                    <Gauge className="w-6 h-6 text-yellow-600 dark:text-yellow-400"/>
+              <div className="bg - white dark:bg - zion - slate border border - zion - slate - light rounded - lg p - 4">
+                <div className="flex items - center space - x-3">
+                  <div className="p - 2 bg - yellow - 100 dark:bg - yellow - 900 rounded - lg">
+                    <Gauge className="w - 6 h - 6 text - yellow - 600 dark:text - yellow - 400"      />
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Maintainability</p>
@@ -635,10 +634,10 @@ export function AdvancedAICodeGenerator() {
                         {new Date(analysis.timestamp).toLocaleDateString()}
                       </span>
                     </div>
-                    
-                    {showSuggestions && analysis.suggestions.length > 0 && (<div className="mb-4">
-                        <h5 className="text-sm font-medium text-green-700 dark:text-green-400 mb-2">
-                          <CheckCircle className="w-4 h-4 inline mr-1"/>
+
+                    {showSuggestions && analysis.suggestions.length > 0 && (<div className="mb - 4">
+                        <h5 className="text - sm font - medium text - green - 700 dark:text - green - 400 mb - 2">
+                          <CheckCircle className="w - 4 h - 4 inline mr - 1"      />
                           Suggestions
                         </h5>
                         <ul className="space-y-1">
@@ -649,8 +648,8 @@ export function AdvancedAICodeGenerator() {
                       </div>)}
                     
                     {analysis.warnings.length > 0 && (<div>
-                        <h5 className="text-sm font-medium text-yellow-700 dark:text-yellow-400 mb-2">
-                          <AlertCircle className="w-4 h-4 inline mr-1"/>
+                        <h5 className="text - sm font - medium text - yellow - 700 dark:text - yellow - 400 mb - 2">
+                          <AlertCircle className="w - 4 h - 4 inline mr - 1"      />
                           Warnings
                         </h5>
                         <ul className="space-y-1">
@@ -664,12 +663,12 @@ export function AdvancedAICodeGenerator() {
             </div>
           </div>)}
 
-        {activeTab === 'ai' && (<div className="space-y-4">
-            {aiGenerations.map((generation) => (<div key={generation.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex-1">
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                      <Brain className="w-5 h-5 inline mr-2 text-purple-600"/>
+        {activeTab === 'ai' && (<div className="space - y-4">
+            {aiGenerations.map ( (generation) => (<div key={generation.id} className="bg - white dark:bg - zion - slate border border - zion - slate - light rounded - lg p - 4">
+                <div className="flex items - start justify - between mb - 4">
+                  <div className="flex - 1">
+                    <h4 className="text - lg font - semibold text - gray - 900 dark:text - gray - 100 mb - 2">
+                      <Brain className="w - 5 h - 5 inline mr - 2 text - purple - 600"      />
                       AI Generation
                     </h4>
                     <p className="text-gray-600 dark:text-gray-400 mb-3">
@@ -687,12 +686,12 @@ export function AdvancedAICodeGenerator() {
                       </span>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <button onClick={() => copyToClipboard(generation.generatedCode)} className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors">
-                      <Copy className="w-4 h-4"/>
+                  <div className="flex items - center space - x-2">
+                    <button onClick={ () => copyToClipboard (generation.generatedCode) } className="p - 2 text - gray - 600 hover:text - gray - 800 hover:bg - gray - 100 dark:text - gray - 400 dark:hover:text - gray - 200 dark:hover:bg - gray - 800 rounded - lg transition - colors">
+                      <Copy className="w - 4 h - 4"      />
                     </button>
-                    <button className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors">
-                      <Download className="w-4 h-4"/>
+                    <button className="p - 2 text - gray - 600 hover:text - gray - 800 hover:bg - gray - 100 dark:text - gray - 400 dark:hover:text - gray - 200 dark:hover:bg - gray - 800 rounded - lg transition - colors">
+                      <Download className="w - 4 h - 4"      />
                     </button>
                   </div>
                 </div>

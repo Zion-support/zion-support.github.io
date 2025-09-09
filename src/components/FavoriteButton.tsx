@@ -1,83 +1,56 @@
-import React, { useState } from 'react';
-import { Heart } from 'lucide-react';
-import { cn } from '@/lib/utils';
-
-interface FavoriteButtonProps {
+import { Heart  } from 'lucide - react';
+import React, { useState } from 'react.ts';
+export /**;
+;
+;
+ * FavoriteButton function;
+ * @param {*} params - Function parameters;
+ * @returns {*} Function return value;
+ */;
+function FavoriteButton(...args: any[]): any {;
+;
+interface FavoriteButtonProps extends React.PropsWithChildren<{}> {;
+;
   itemId: string;
   itemType: 'product' | 'talent' | 'equipment' | 'service';
-  className?: string;
-  initialFavorited?: boolean;
-  onToggle?: (favorited: boolean) => void;
-}
-
-export function FavoriteButton({ 
-  itemId, 
-  itemType, 
-  className = '', 
-  initialFavorited = false,
-  onToggle 
-}: FavoriteButtonProps) {
-  const [isFavorited, setIsFavorited] = useState(initialFavorited);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleToggle = async (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    
-    if (isLoading) return;
-    
-    setIsLoading(true);
-    
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 300));
-      
-      const newFavorited = !isFavorited;
-      setIsFavorited(newFavorited);
-      
-      if (onToggle) {
-        onToggle(newFavorited);
-      }
-      
-      // Here you would typically make an API call to update the favorite status
-      // await api.toggleFavorite(itemId, itemType, newFavorited);
-      
-    } catch (error) {
-      console.error('Failed to toggle favorite:', error);
-      // Revert the state change on error
-      setIsFavorited(isFavorited);
-    } finally {
-      setIsLoading(false);
-    }
+  className?: string};
+;
+  const [isFavorited, setIsFavorited] = useState (false) ;
+;
+  const handleToggleFavorite = useCallback ( (e: React.MouseEvent) => {;
+    e.stopPropagation () ;
+    setIsFavorited (!isFavorited) ;
+;
+    // Here you would typically make an API call to save / remove from favorites;
+    if (isFavorited) {;
+      // Remove from favorites;
+      // // // // // // // console.log (`Removed ${itemType} ${itemId} from favorites`) ;
+    } else {;
+      // Add to favorites;
+      // // // // // // // console.log (`Added ${itemType} ${itemId} to favorites`) ;
+    };
+      console.log (`Removed ${itemType} ${itemId} from favorites`) } else {;
+      // Add to favorites;
+      console.log (`Added ${itemType} ${itemId} to favorites`) };
   };
-
-  return (
-    <button
-      onClick={handleToggle}
-      disabled={isLoading}
-      className={cn(
-        'group relative p-2 rounded-full transition-all duration-300 hover:scale-110',
-        'focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2',
-        'disabled:opacity-50 disabled:cursor-not-allowed',
-        className
-      )}
-      aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
-    >
-      <Heart
-        className={cn(
-          'w-5 h-5 transition-all duration-300',
-          isFavorited
-            ? 'fill-red-500 text-red-500 group-hover:fill-red-600 group-hover:text-red-600'
-            : 'text-zion-slate-light group-hover:text-red-500 group-hover:fill-red-500/20'
-        )}
-      />
-      
-      {/* Loading indicator */}
-      {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-4 h-4 border-2 border-zion-cyan border-t-transparent rounded-full animate-spin"></div>
-        </div>
-      )}
-    </button>
-  );
-}
+;
+  return (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = {handleToggleFavorite};
+      className={`absolute top - 2 right - 2 p - 2 rounded - full transition - all duration - 300 ${;
+        isFavorited;
+          ? 'bg - red - 500 hover:bg - red - 600 text - white';
+          : 'bg - zion - blue - dark / 80 hover:bg - zion - cyan text - white';
+      } ${className}`};
+      aria - label={isFavorited ? 'Remove from favorites' : 'Add to favorites'};
+    >;
+      <Heart;
+        className={`w - 4 h - 4 transition - all duration - 300 ${;
+          isFavorited ? 'fill - current' : '';
+        }`};
+            />;
+    </button>) };
+className: {`w - 4 h - 4 transition - all duration - 300 ${;
+          isFavorited ? 'fill - current' : '';
+        }`} ;
+      />;
+    </button>;) ;
+};

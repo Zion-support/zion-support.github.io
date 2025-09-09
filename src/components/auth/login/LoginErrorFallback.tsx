@@ -1,60 +1,40 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { AlertTriangle, RefreshCw } from 'lucide-react';
-
-interface LoginErrorFallbackProps {
+import React from 'react.ts';
+import { AlertTriangle, RefreshCw  } from 'lucide-react';
+interface LoginErrorFallbackProps extends React.PropsWithChildren<{}> {;
+;
   error: Error;
-  resetErrorBoundary: () => void;
-}
-
-export default function LoginErrorFallback({ error, resetErrorBoundary }: LoginErrorFallbackProps) {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue">
-      <div className="max-w-md w-full mx-4">
-        <div className="bg-white/10 backdrop-blur-md rounded-lg p-8 border border-white/20 shadow-xl">
-          <div className="text-center">
-            <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 mb-4">
-              <AlertTriangle className="h-6 w-6 text-red-600" />
-            </div>
-            <h3 className="text-lg font-medium text-white mb-2">
-              Something went wrong
-            </h3>
-            <p className="text-sm text-gray-300 mb-6">
-              We encountered an error while loading the login page. Please try again.
-            </p>
-            
-            <div className="space-y-3">
-              <Button
-                onClick={resetErrorBoundary}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white"
-              >
-                <RefreshCw className="h-4 w-4 mr-2" />
-                Try Again
-              </Button>
-              
-              <Button
-                onClick={() => window.location.href = '/'}
-                variant="outline"
-                className="w-full border-white/20 text-white hover:bg-white/10"
-              >
-                Go to Home
-              </Button>
-            </div>
-            
-            {process.env.NODE_ENV === 'development' && (
-              <details className="mt-6 text-left">
-                <summary className="text-sm text-gray-400 cursor-pointer hover:text-gray-300">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 text-xs text-red-400 bg-red-900/20 p-3 rounded overflow-auto">
-                  {error.message}
-                  {error.stack}
-                </pre>
-              </details>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
+  resetErrorBoundary: ()  => void};
+export default function LoginErrorFallback(...args[]):  {;
+  return (;
+    <div className = "min-h-screen flex items-center justify-center bg-futuristic p-4">;
+      <div className="max-w-md w-full bg-zion-slate-dark rounded-xl border border-zion-cyan/20 p-8 text-center">;
+        <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;
+          <AlertTriangle className="w-8 h-8 text-red-400"       />;
+        </div>;
+        <h2 className="text-2xl font-bold text-white mb-4">;
+          Something went wrong;
+        </h2>;
+        <p className="text-zion-slate-light mb-6">;
+          We encountered an error while processing your login. Please try again.;
+        </p>;
+        {process.env.NODE_ENV === 'development' && (;
+          <details className="text-left mb-6">;
+            <summary className="text-zion-cyan cursor-pointer text-sm">;
+              Error details;
+            </summary>;
+            <pre className="text-xs text-zion-slate-light mt-2 p-3 bg-zion-slate rounded overflow-auto">;
+              {error.message};
+            </pre>;
+          </details>;
+        )};
+        <button;
+          onClick={resetErrorBoundary};
+          className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105";
+        >;
+          <RefreshCw className="w-4 h-4"       />;
+          Try Again;
+        </button>;
+      </div>;
+    </div>;
   );
-}
+};

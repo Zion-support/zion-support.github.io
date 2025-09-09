@@ -52,10 +52,10 @@ export function SecurityHeaders({ className }) {
         </div>
 
         {/* Security Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {securityFeatures.map((feature, index) => (<div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105">
-              <div className={`mx-auto w-16 h-16 bg-zion-cyan/10 rounded-full flex items-center justify-center mb-4`}>
-                <feature.icon className={`w-8 h-8 ${feature.color}`}/>
+        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8 mb - 16">
+          {securityFeatures.map ( (feature, index) => (<div key={index} className="text - center p - 6 bg - white / 5 backdrop - blur - sm rounded - xl border border - white / 10 hover:border - zion - cyan / 30 transition - all duration - 300 hover:transform hover:scale - 105">
+              <div className={`mx - auto w - 16 h - 16 bg - zion - cyan / 10 rounded - full flex items - center justify - center mb - 4`}>
+                <feature.icon className={`w - 8 h - 8 ${feature.color}`}      />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">
                 {feature.title}
@@ -63,9 +63,9 @@ export function SecurityHeaders({ className }) {
               <p className="text-zion-slate-light text-sm leading-relaxed">
                 {feature.description}
               </p>
-              <div className="mt-3 flex items-center justify-center gap-2">
-                <CheckCircle className="w-4 h-4 text-zion-cyan"/>
-                <span className="text-xs text-zion-cyan font-medium">Verified</span>
+              <div className="mt - 3 flex items - center justify - center gap - 2">
+                <CheckCircle className="w - 4 h - 4 text - zion - cyan"      />
+                <span className="text - xs text - zion - cyan font - medium">Verified</span>
               </div>
             </div>))}
         </div>
@@ -75,14 +75,14 @@ export function SecurityHeaders({ className }) {
           <h3 className="text-2xl font-bold text-white text-center mb-8">
             Compliance & Certifications
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {complianceBadges.map((badge, index) => (<div key={index} className="text-center p-4 bg-white/5 rounded-lg border border-white/10">
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 ${badge.status === 'Certified' || badge.status === 'Compliant'
-                ? 'bg-zion-cyan/20'
-                : 'bg-yellow-500/20'}`}>
-                  <badge.icon className={`w-6 h-6 ${badge.status === 'Certified' || badge.status === 'Compliant'
-                ? 'text-zion-cyan'
-                : 'text-yellow-500'}`}/>
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 5 gap - 6">
+            {complianceBadges.map ( (badge, index) => (<div key={index} className="text - center p - 4 bg - white / 5 rounded - lg border border - white / 10">
+                <div className={`w - 12 h - 12 rounded - full flex items - center justify - center mx - auto mb - 3 ${badge.status === 'Certified' || badge.status === 'Compliant'
+                ? 'bg - zion - cyan / 20'
+                : 'bg - yellow - 500 / 20'}`}>
+                  <badge.icon className={`w - 6 h - 6 ${badge.status === 'Certified' || badge.status === 'Compliant'
+                ? 'text - zion - cyan'
+                : 'text - yellow - 500'}`}      />
                 </div>
                 <h4 className="font-semibold text-white mb-1">{badge.name}</h4>
                 <div className={`text-sm font-medium mb-1 ${badge.status === 'Certified' || badge.status === 'Compliant'
@@ -127,23 +127,22 @@ export function SecurityHeaders({ className }) {
     </section>);
 }
 // Compact version for smaller spaces
-export function SecurityHeadersCompact({ className }) {
-    return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>
-      <div className="flex items-center gap-2 text-zion-cyan text-sm">
-        <Shield className="w-4 h-4"/>
-        <span>SOC 2 Certified</span>
+    return (<div className={`flex flex - wrap justify - center gap - 6 ${className || ''}`}>
+      <div className="flex items - center gap - 2 text - zion - cyan text - sm">
+        <Shield className="w - 4 h - 4"      />
+        <span > SOC 2 Certified</span>
       </div>
-      <div className="flex items-center gap-2 text-zion-purple text-sm">
-        <Lock className="w-4 h-4"/>
-        <span>256-bit AES</span>
+      <div className="flex items - center gap - 2 text - zion - purple text - sm">
+        <Lock className="w - 4 h - 4"      />
+        <span > 256 - bit AES</span>
       </div>
-      <div className="flex items-center gap-2 text-zion-cyan text-sm">
-        <CheckCircle className="w-4 h-4"/>
-        <span>GDPR Compliant</span>
+      <div className="flex items - center gap - 2 text - zion - cyan text - sm">
+        <CheckCircle className="w - 4 h - 4"      />
+        <span > GDPR Compliant</span>
       </div>
-      <div className="flex items-center gap-2 text-zion-purple text-sm">
-        <Shield className="w-4 h-4"/>
-        <span>Zero-Knowledge</span>
+      <div className="flex items - center gap - 2 text - zion - purple text - sm">
+        <Shield className="w - 4 h - 4"      />
+        <span > Zero - Knowledge</span>
       </div>
     </div>);
 }

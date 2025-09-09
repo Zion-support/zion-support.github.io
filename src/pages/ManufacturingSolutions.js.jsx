@@ -82,11 +82,11 @@ export default function ManufacturingSolutions() {
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-3 bg-gradient-to-r from-orange-500 to-red-600 rounded-full">
-              <Factory className="w-8 h-8 text-white"/>
+      <section className="relative pt - 32 pb - 20 px - 4 sm:px - 6 lg:px - 8">
+        <div className="max - w-7xl mx - auto text - center">
+          <div className="flex justify - center mb - 6">
+            <div className="p - 3 bg - gradient - to - r from - orange - 500 to - red - 600 rounded - full">
+              <Factory className="w - 8 h - 8 text - white"      />
             </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -120,16 +120,16 @@ export default function ManufacturingSolutions() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutions.map((solution, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-orange-500 transition-all duration-300">
-                <div className="p-3 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg w-fit mb-4">
-                  <solution.icon className="w-6 h-6 text-white"/>
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
+            {solutions.map ( (solution, index) => (<div key={index} className="bg - gray - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - gray - 700 hover:border - orange - 500 transition - all duration - 300">
+                <div className="p - 3 bg - gradient - to - r from - orange - 500 to - red - 600 rounded - lg w - fit mb - 4">
+                  <solution.icon className="w - 6 h - 6 text - white"      />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{solution.title}</h3>
-                <p className="text-gray-300 mb-4">{solution.description}</p>
-                <ul className="space-y-2">
-                  {solution.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0"/>
+                <h3 className="text - xl font - semibold text - white mb - 3">{solution.title}</h3>
+                <p className="text - gray - 300 mb - 4">{solution.description}</p>
+                <ul className="space - y-2">
+                  {solution.features.map ( (feature, featureIndex) => (<li key={featureIndex} className="flex items - center text - sm text - gray - 300">
+                      <CheckCircle className="w - 4 h - 4 text - orange - 500 mr - 2 flex - shrink - 0"      />
                       {feature}
                     </li>))}
                 </ul>
@@ -172,18 +172,18 @@ export default function ManufacturingSolutions() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (<div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-orange-500 mt-1 flex-shrink-0"/>
-                  <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>))}
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
+            <div className="space - y-6">
+              {benefits.slice (0, 3) .map ( (benefit, index) => (<div key={index} className="flex items - start space - x-3">
+                  <CheckCircle className="w - 6 h - 6 text - orange - 500 mt - 1 flex - shrink - 0"      />
+                  <p className="text - gray - 300 text - lg">{benefit}</p>
+                </div>) ) }
             </div>
-            <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (<div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-orange-500 mt-1 flex-shrink-0"/>
-                  <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>))}
+            <div className="space - y-6">
+              {benefits.slice (3) .map ( (benefit, index) => (<div key={index} className="flex items - start space - x-3">
+                  <CheckCircle className="w - 6 h - 6 text - orange - 500 mt - 1 flex - shrink - 0"      />
+                  <p className="text - gray - 300 text - lg">{benefit}</p>
+                </div>) ) }
             </div>
           </div>
         </div>

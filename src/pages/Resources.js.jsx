@@ -3,8 +3,11 @@ import { Helmet } from 'react-helmet-async';
 const Resources = () => {
     return (<>
       <Helmet>
-        <title>Resources - Zion Tech Group</title>
-        <meta name="description" content="Access valuable resources, tools, and insights from Zion Tech Group. Download whitepapers, guides, and more."/>
+        <title > Resources - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Access valuable resources, tools, and insights from Zion Tech Group. Download whitepapers, guides, and more."
+              />
       </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-12">

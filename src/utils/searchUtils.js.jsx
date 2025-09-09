@@ -1,12 +1,10 @@
 /**
  * Highlight search terms in text with HTML mark tags
  */
-export const highlightSearchTerms = (text, searchTerm) => {
-    if (!searchTerm.trim())
-        return text;
-    const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const regex = new RegExp(`(${escaped})`, 'gi');
-    return text.replace(regex, '<mark class="bg-yellow-200 text-black px-1 rounded">$1</mark>');
+    if (!searchTerm.trim () ) return text;
+    const escaped = searchTerm.replace (/[.*+?^${} () |[\]\\]/g, '\\$&') ;
+    const regex = new RegExp (` (${escaped}) `, 'gi') ;
+    return text.replace (regex, '<mark className="bg - yellow - 200 text - black px - 1 rounded">$1</mark>') ;
 };
 /**
  * Check if a text contains the search term (case-insensitive)

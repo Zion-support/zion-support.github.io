@@ -78,415 +78,614 @@ export default function HelpCenter() {
     return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: "Help Center - Zion Tech Group Support", description: "Get help and support for using Zion's AI and technology marketplace platform.", keywords: "help center, support, Zion Tech Group, customer service, FAQ, documentation", canonical: "https://ziontechgroup.com/help" }), _jsx(Header, {}), _jsx("main", { className: "min-h-screen bg-zion-blue pt-24 pb-20", children: _jsxs("div", { className: "container mx-auto px-4 sm:px-6 lg:px-8", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsx(GradientHeading, { children: "Help Center" }), _jsx("p", { className: "mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto", children: "Find answers, get support, and learn how to make the most of Zion's platform" })] }), _jsx("div", { className: "max-w-2xl mx-auto mb-16", children: _jsxs("div", { className: "relative", children: [_jsx(Search, { className: "absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" }), _jsx("input", { type: "text", placeholder: "Search for help articles, guides, and support...", className: "w-full pl-12 pr-4 py-4 bg-zion-blue-dark border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-purple" })] }) }), _jsxs("div", { className: "mb-16", children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-8 text-center", children: "Quick Actions" }), _jsx("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto", children: quickActions.map((action, index) => (_jsxs("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors", children: [_jsxs("div", { className: "flex items-center mb-4", children: [_jsx(action.icon, { className: "w-8 h-8 text-zion-cyan mr-3" }), _jsx("h3", { className: "text-xl font-semibold text-white", children: action.title })] }), _jsx("p", { className: "text-zion-slate-light mb-4", children: action.description }), action.external ? (_jsx("a", { href: action.action, className: "inline-flex items-center text-zion-cyan hover:text-zion-purple transition-colors", children: "Get Started \u2192" })) : (_jsx(Link, { to: action.action, className: "inline-flex items-center text-zion-cyan hover:text-zion-purple transition-colors", children: "Get Started \u2192" }))] }, index))) })] }), _jsxs("div", { className: "mb-16", children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-8 text-center", children: "Help Categories" }), _jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6", children: helpCategories.map((category, index) => (_jsxs("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-all hover:shadow-lg", children: [_jsxs("div", { className: "flex items-center mb-4", children: [_jsx("div", { className: `p-3 rounded-lg bg-gradient-to-r ${category.color} mr-4`, children: _jsx(category.icon, { className: "w-6 h-6 text-white" }) }), _jsx("h3", { className: "text-xl font-semibold text-white", children: category.title })] }), _jsx("p", { className: "text-zion-slate-light mb-4", children: category.description }), _jsx(Link, { to: category.link, className: "inline-flex items-center text-zion-cyan hover:text-zion-purple transition-colors", children: "Learn More \u2192" })] }, index))) })] }), _jsxs("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 text-center", children: [_jsx("h2", { className: "text-3xl font-bold text-white mb-6", children: "Still need help?" }), _jsx("p", { className: "text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto", children: "Our support team is here to help you succeed. Don't hesitate to reach out for personalized assistance." }), _jsxs("div", { className: "flex flex-col sm:flex-row gap-4 justify-center", children: [_jsx(Button, { className: "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple", asChild: true, children: _jsx(Link, { to: "/contact", children: "Contact Support" }) }), _jsx(Button, { variant: "outline", className: "border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white", asChild: true, children: _jsx(Link, { to: "/faq", children: "View FAQ" }) })] })] })] }) }), _jsx(Footer, {})] }));
 =======
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  FileText, 
-  Users, 
-  ShoppingCart, 
-  User, 
-  Settings,
-  HelpCircle,
-  BookOpen,
-  Video,
-  Download,
-  ExternalLink,
-  ChevronRight,
-  Star,
-  Clock,
-  CheckCircle
-} from 'lucide-react';
-
-const helpCategories = [
-  {
-    id: 'getting-started',
-    name: 'Getting Started',
-    description: 'Learn the basics and set up your account',
-    icon: BookOpen,
-    articles: [
-      { title: 'How to create your first account', readTime: '3 min', popular: true },
-      { title: 'Setting up your profile', readTime: '5 min', popular: false },
-      { title: 'Navigating the marketplace', readTime: '4 min', popular: true },
-      { title: 'Understanding pricing plans', readTime: '6 min', popular: false }
-    ]
-  },
-  {
-    id: 'marketplace',
-    name: 'Marketplace',
-    description: 'Buy, sell, and manage marketplace activities',
-    icon: ShoppingCart,
-    articles: [
-      { title: 'How to list a product or service', readTime: '8 min', popular: true },
-      { title: 'Making secure transactions', readTime: '5 min', popular: true },
-      { title: 'Managing your listings', readTime: '6 min', popular: false },
-      { title: 'Understanding fees and commissions', readTime: '7 min', popular: false }
-    ]
-  },
-  {
-    id: 'ai-services',
-    name: 'AI Services',
-    description: 'Using AI tools and services effectively',
-    icon: Settings,
-    articles: [
-      { title: 'Getting started with AI tools', readTime: '10 min', popular: true },
-      { title: 'AI service integration guide', readTime: '12 min', popular: false },
-      { title: 'Troubleshooting AI services', readTime: '8 min', popular: false },
-      { title: 'Best practices for AI implementation', readTime: '15 min', popular: true }
-    ]
-  },
-  {
-    id: 'account-management',
-    name: 'Account & Billing',
-    description: 'Manage your account, billing, and settings',
-    icon: User,
-    articles: [
-      { title: 'Updating account information', readTime: '4 min', popular: false },
-      { title: 'Managing subscription plans', readTime: '6 min', popular: true },
-      { title: 'Payment methods and billing', readTime: '7 min', popular: true },
-      { title: 'Account security settings', readTime: '5 min', popular: false }
-    ]
-  }
-];
-
-const faqs = [
-  {
-    question: 'How do I get started with Zion Tech Group?',
-    answer: 'Getting started is easy! Simply create an account, complete your profile, and start exploring our marketplace. You can browse services, connect with experts, or list your own offerings.',
-    category: 'Getting Started'
-  },
-  {
-    question: 'What payment methods do you accept?',
-    answer: 'We accept all major credit cards, PayPal, and bank transfers for enterprise accounts. All transactions are secured with bank-level encryption and fraud protection.',
-    category: 'Billing & Payments'
-  },
-  {
-    question: 'How do I contact customer support?',
-    answer: 'You can reach our support team through live chat, email at support@ziontechgroup.com, or phone at +1 302 464 0950. We typically respond within 2-4 hours.',
-    category: 'Support'
-  },
-  {
-    question: 'Is my data secure on your platform?',
-    answer: 'Absolutely. We use enterprise-grade security measures including SOC 2 compliance, end-to-end encryption, and regular security audits to protect your data and privacy.',
-    category: 'Security'
-  },
-  {
-    question: 'Can I cancel my subscription at any time?',
-    answer: 'Yes, you can cancel your subscription at any time with no cancellation fees. You\'ll continue to have access to your plan until the end of your current billing period.',
-    category: 'Billing & Payments'
-  },
-  {
-    question: 'Do you offer refunds?',
-    answer: 'We offer a 30-day money-back guarantee for all paid plans. If you\'re not satisfied with our services, contact our support team for a full refund.',
-    category: 'Billing & Payments'
-  }
-];
-
-const supportChannels = [
-  {
-    name: 'Live Chat',
-    description: 'Get instant help from our support team',
-    icon: MessageCircle,
-    responseTime: '2-5 minutes',
-    available: '24/7',
-    href: '#chat'
-  },
-  {
-    name: 'Email Support',
-    description: 'Send us a detailed message for complex issues',
-    icon: Mail,
-    responseTime: '2-4 hours',
-    available: '24/7',
-    href: 'mailto:support@ziontechgroup.com'
-  },
-  {
-    name: 'Phone Support',
-    description: 'Speak directly with our support specialists',
-    icon: Phone,
-    responseTime: 'Immediate',
-    available: 'Mon-Fri 9AM-6PM EST',
-    href: 'tel:+13024640950'
-  },
-  {
-    name: 'Knowledge Base',
-    description: 'Browse our comprehensive help articles',
-    icon: FileText,
-    responseTime: 'Instant',
-    available: '24/7',
-    href: '#knowledge-base'
-  }
-];
-
-export default function HelpCenter() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle search logic
-    console.log('Searching for:', searchQuery);
+export default HelpCenter;
+export function HelpCenter(...args: any[]): any {;
+import {;
+import { motion, AnimatePresence } from 'framer - motion';
+;
+;
+  Search,;
+  HelpCircle,;
+  MessageCircle,;
+  Phone,;
+  Mail,;
+  BookOpen,;
+  Video,;
+  FileText,;
+  ChevronDown,;
+  ChevronRight,;
+  Star,;
+  ChevronDown,;
+  ChevronRight,;
+  ExternalLink,;
+  Lightbulb,;
+  TrendingUp,;
+  Target,;
+  Heart,;
+  Building,;
+  Cpu,;
+  Lock,;
+  Atom,;
+  Network,;
+  Eye,;
+  BarChart3,;
+  MessageSquare,;
+  Calendar,;
+  Clock,;
+  CheckCircle,;
+  AlertCircle,;
+  Info;
+} from 'lucide - react';
+;
+interface HelpSection {;
+  id: string;
+  title: string;
+  icon: unknown;
+  description: string;
+  articles: Array<{;
+    title: string;
+    description: string;
+    path?: string;
+    external?: boolean;
+    difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
+    readTime: string;
+  }>;
+};
+;
+interface FAQItem {;
+  question: string;
+  answer: string;
+  category: string;
+};
+;
+const helpSections: HelpSection[] = [;
+  {;
+    title: 'Getting Started',;
+    icon: Zap,;
+    description: 'Essential information to begin using our services',;
+    articles: [;
+      {;
+        title: 'Welcome to Zion Tech Group',;
+        description: 'Introduction to our platform and services',;
+        path: '/about',;
+        difficulty: 'Beginner',;
+        readTime: '5 min';
+      },;
+      {;
+        title: 'Setting Up Your Account',;
+        description: 'Step - by - step account creation and configuration',;
+        path: '/signup',;
+        difficulty: 'Beginner',;
+        readTime: '10 min';
+      },;
+      {;
+        title: 'First Steps with AI Services',;
+        description: 'Quick start guide for AI - powered solutions',;
+        path: '/ai - services',;
+        difficulty: 'Beginner',;
+        readTime: '15 min';
+      },;
+      {;
+        title: 'Understanding Our Pricing',;
+        description: 'Complete pricing structure and plans',;
+        path: '/pricing',;
+        difficulty: 'Beginner',;
+        readTime: '8 min';
+      };
+    ];
+  },;
+  {;
+    id: 'ai - services',;
+    title: 'AI Services',;
+    icon: Brain,;
+    description: 'Artificial Intelligence and Machine Learning solutions',;
+    articles: [;
+      {;
+        title: 'AI Business Intelligence Guide',;
+        description: 'How to leverage AI for business insights',;
+        path: '/services / ai - business - intelligence',;
+        difficulty: 'Intermediate',;
+        readTime: '20 min';
+      },;
+      {;
+        title: 'AI Compliance Assistant Setup',;
+        description: 'Configuring automated compliance monitoring',;
+        path: '/services / ai - compliance - assistant',;
+        difficulty: 'Intermediate',;
+        readTime: '25 min';
+      },;
+      {;
+        title: 'AI Sales Copilot Integration',;
+        description: 'Integrating AI sales optimization tools',;
+        path: '/services / ai - sales - copilot',;
+        difficulty: 'Intermediate',;
+        readTime: '18 min';
+      },;
+      {;
+        title: 'AI Content Marketing Suite',;
+        description: 'Creating content with AI assistance',;
+        path: '/services / ai - content - marketing - suite',;
+        difficulty: 'Beginner',;
+        readTime: '12 min';
+      };
+    ];
+  },;
+  {;
+    id: 'cloud - infrastructure',;
+    title: 'Cloud & Infrastructure',;
+    icon: Cloud,;
+    description: 'Cloud computing and infrastructure services',;
+    articles: [;
+      {;
+        title: 'Cloud DevOps Best Practices',;
+        description: 'DevOps implementation in cloud environments',;
+        path: '/services / cloud - devops',;
+        difficulty: 'Advanced',;
+        readTime: '30 min';
+      },;
+      {;
+        title: 'IT Infrastructure Planning',;
+        description: 'Strategic infrastructure design and implementation',;
+        path: '/services / it - infrastructure',;
+        difficulty: 'Advanced',;
+        readTime: '35 min';
+      },;
+      {;
+        title: 'FinOps Cost Optimization',;
+        description: 'Managing and optimizing cloud costs',;
+        path: '/services / finops - advisor',;
+        difficulty: 'Intermediate',;
+        readTime: '22 min';
+      },;
+      {;
+        title: 'Digital Transformation Guide',;
+        description: 'Strategic technology transformation planning',;
+        path: '/services / digital - transformation',;
+        difficulty: 'Advanced',;
+        readTime: '40 min';
+      };
+    ];
+  },;
+  {;
+    id: 'cybersecurity',;
+    title: 'Cybersecurity',;
+    icon: Shield,;
+    description: 'Security and compliance solutions',;
+    articles: [;
+      {;
+        title: 'AI Cybersecurity Platform',;
+        description: 'AI - powered security threat detection',;
+        path: '/services / ai - cybersecurity - platform',;
+        difficulty: 'Advanced',;
+        readTime: '28 min';
+      },;
+      {;
+        title: 'Security Headers & CSP Setup',;
+        description: 'Web security configuration and hardening',;
+        path: '/services / security - headers - csp',;
+        difficulty: 'Intermediate',;
+        readTime: '20 min';
+      },;
+      {;
+        title: 'Zero Trust Network Architecture',;
+        description: 'Implementing modern security frameworks',;
+        path: '/services / zero - trust - network - access',;
+        difficulty: 'Advanced',;
+        readTime: '35 min';
+      },;
+      {;
+        title: 'GDPR / CCPA Compliance Guide',;
+        description: 'Privacy regulation compliance automation',;
+        path: '/services / dsr - portal',;
+        difficulty: 'Intermediate',;
+        readTime: '25 min';
+      };
+    ];
+  },;
+  {;
+    id: 'micro - saas',;
+    title: 'Micro SaaS Solutions',;
+    icon: ShoppingCart,;
+    description: 'Niche software solutions and platforms',;
+    articles: [;
+      {;
+        title: 'Micro SaaS Platform Overview',;
+        description: 'Understanding our micro SaaS ecosystem',;
+        path: '/micro - saas',;
+        difficulty: 'Beginner',;
+        readTime: '15 min';
+      },;
+      {;
+        title: 'Micro CRM Implementation',;
+        description: 'Setting up customer relationship management',;
+        path: '/services / micro - crm',;
+        difficulty: 'Intermediate',;
+        readTime: '20 min';
+      },;
+      {;
+        title: 'Helpdesk Platform Setup',;
+        description: 'Customer support system configuration',;
+        path: '/services / helpdesk',;
+        difficulty: 'Intermediate',;
+        readTime: '18 min';
+      },;
+      {;
+        title: 'Website Analytics Dashboard',;
+        description: 'Performance tracking and insights setup',;
+        path: '/services / website - analytics',;
+        difficulty: 'Beginner',;
+        readTime: '12 min';
+      };
+    ];
+  },;
+  {;
+    id: 'emerging - tech',;
+    title: 'Emerging Technologies',;
+    icon: Atom,;
+    description: 'Cutting - edge and future technologies',;
+    articles: [;
+      {;
+        title: 'Quantum Computing Primer',;
+        description: 'Introduction to quantum computing concepts',;
+        path: '/services / quantum - computing',;
+        difficulty: 'Advanced',;
+        readTime: '45 min';
+      },;
+      {;
+        title: 'IoT Edge Computing Guide',;
+        description: 'Internet of Things and edge computing',;
+        path: '/services / iot - edge - computing',;
+        difficulty: 'Intermediate',;
+        readTime: '25 min';
+      },;
+      {;
+        title: 'AI Quantum Hybrid Platform',;
+        description: 'Combining AI and quantum computing',;
+        path: '/services / ai - quantum - hybrid - platform',;
+        difficulty: 'Advanced',;
+        readTime: '40 min';
+      },;
+      {;
+        title: 'Space Technology Solutions',;
+        description: 'Space - based technology applications',;
+        path: '/space - tech',;
+        difficulty: 'Advanced',;
+        readTime: '30 min';
+      };
+    ];
   };
-
-  const filteredCategories = selectedCategory === 'all' 
-    ? helpCategories 
-    : helpCategories.filter(cat => cat.id === selectedCategory);
-
-  return (
-    <div className="min-h-screen bg-futuristic">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>
-        <div className="container-responsive relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-6">
-              Help Center
-            </h1>
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Find answers to your questions, learn how to use our platform, and get the support you need 
-              to succeed with Zion Tech Group.
-            </p>
-            
-            {/* Search Bar */}
-            <form onSubmit={handleSearch} className="max-w-2xl mx-auto mb-8">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search for help articles, guides, and FAQs..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl px-6 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-lg"
-                />
-                <button
-                  type="submit"
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-lg hover:shadow-lg transition-all duration-300"
-                >
-                  <Search className="h-5 w-5" />
-                </button>
-              </div>
-            </form>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Support Channels */}
-      <section className="py-16 bg-zion-slate-dark/50">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Get Help Fast
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Choose the support channel that works best for you. We're here to help 24/7.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {supportChannels.map((channel, index) => (
-              <motion.div
-                key={channel.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 rounded-xl border border-zion-cyan/20 p-6 hover:border-zion-cyan/40 transition-all duration-300 text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <channel.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{channel.name}</h3>
-                <p className="text-zion-slate-light text-sm mb-4">{channel.description}</p>
-                <div className="space-y-2 text-xs text-zion-slate-light">
-                  <div className="flex items-center justify-center">
-                    <Clock className="w-3 h-3 mr-1" />
-                    <span>Response: {channel.responseTime}</span>
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <CheckCircle className="w-3 h-3 mr-1" />
-                    <span>Available: {channel.available}</span>
-                  </div>
-                </div>
-                <a
-                  href={channel.href}
-                  className="inline-flex items-center mt-4 text-zion-cyan hover:text-zion-purple transition-colors text-sm font-medium"
-                >
-                  Get Help
-                  <ChevronRight className="w-4 h-4 ml-1" />
-                </a>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Help Categories */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Help Categories
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Browse our organized help content by category to find exactly what you need.
-            </p>
-          </motion.div>
-
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <button
-              onClick={() => setSelectedCategory('all')}
-              className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                selectedCategory === 'all'
-                  ? 'bg-zion-cyan text-white'
-                  : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-cyan/10 hover:text-zion-cyan'
-              }`}
-            >
-              All Categories
-            </button>
-            {helpCategories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-zion-cyan text-white'
-                    : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-cyan/10 hover:text-zion-cyan'
-                }`}
-              >
-                {category.name}
-              </button>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {filteredCategories.map((category, index) => (
-              <motion.div
-                key={category.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 rounded-xl border border-zion-cyan/20 p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
-                  <category.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
-                <p className="text-zion-slate-light mb-6">{category.description}</p>
-                
-                <div className="space-y-3">
-                  {category.articles.map((article, idx) => (
-                    <div key={idx} className="flex items-start justify-between p-3 bg-zion-slate-dark/30 rounded-lg">
-                      <div className="flex-1">
-                        <h4 className="text-sm font-medium text-white mb-1">{article.title}</h4>
-                        <div className="flex items-center text-xs text-zion-slate-light">
-                          <Clock className="w-3 h-3 mr-1" />
-                          <span>{article.readTime}</span>
-                          {article.popular && (
-                            <div className="flex items-center ml-2">
-                              <Star className="w-3 h-3 text-yellow-400 fill-current mr-1" />
-                              <span className="text-yellow-400">Popular</span>
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                      <ChevronRight className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 bg-zion-slate-dark/50">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Find quick answers to the most common questions about our platform and services.
-            </p>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-zion-slate-dark/50 rounded-xl border border-zion-cyan/20 p-6 hover:border-zion-cyan/40 transition-all duration-300"
-                >
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-lg font-semibold text-white">{faq.question}</h3>
-                    <span className="text-xs text-zion-cyan bg-zion-cyan/10 px-2 py-1 rounded-full">
-                      {faq.category}
-                    </span>
-                  </div>
-                  <p className="text-zion-slate-light leading-relaxed">{faq.answer}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Support CTA */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
-        <div className="container-responsive text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Still Need Help?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Our support team is here to help you succeed. Don't hesitate to reach out for personalized assistance.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/contact"
-                className="btn-futuristic px-8 py-4 text-lg"
-              >
-                Contact Support
-              </Link>
-              <a
-                href="mailto:support@ziontechgroup.com"
-                className="btn-neon px-8 py-4 text-lg"
-              >
-                Send Email
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
+];
+;
+const faqData: FAQItem[] = [;
+  {;
+    question: 'What services does Zion Tech Group offer?',;
+    answer: 'We offer a comprehensive range of technology services including AI and machine learning solutions, cloud infrastructure, cybersecurity, emerging technologies like quantum computing, and micro SaaS platforms. Our services are designed to help businesses of all sizes leverage cutting - edge technology.',;
+    category: 'General';
+  },;
+  {;
+    question: 'How do I get started with your AI services?',;
+    answer: 'Getting started is easy ! Begin by exploring our AI services overview page, then contact our team for a consultation. We\'ll assess your needs and recommend the best AI solutions for your business. We also offer comprehensive onboarding and training.',;
+    category: 'AI Services';
+  },;
+  {;
+    question: 'What is your pricing structure?',;
+    answer: 'Our pricing varies based on the service and your specific requirements. We offer flexible plans including pay - as - you - go, subscription models, and enterprise custom pricing. Contact us for a detailed quote tailored to your needs.',;
+    category: 'Pricing';
+  },;
+  {;
+    question: 'Do you provide support and training?',;
+    answer: 'Yes ! We provide comprehensive support including 24 / 7 technical assistance, detailed documentation, video tutorials, and personalized training sessions. Our team is committed to ensuring your success with our solutions.',;
+    category: 'Support';
+  },;
+  {;
+    question: 'Are your services suitable for small businesses?',;
+    answer: 'Absolutely ! We design our services to be scalable and accessible to businesses of all sizes. Our micro SaaS solutions are particularly well - suited for small businesses, offering enterprise - grade technology at accessible price points.',;
+    category: 'General';
+  },;
+  {;
+    question: 'How do you ensure data security and compliance?',;
+    answer: 'Security is our top priority. We implement industry - leading security measures including encryption, regular security audits, and compliance with GDPR, CCPA, and other regulations. Our AI - powered security platforms provide real - time threat detection and response.',;
+    category: 'Security';
+  };
+];
+;
+  const [searchQuery, setSearchQuery] = useState ('') ;
+  const [expandedSections, setExpandedSections] = useState < Set < string>> (new Set (['getting - started']) ) ;
+  const [selectedCategory, setSelectedCategory] = useState < string> ('All') ;
+;
+  const handleSearch = useCallback ( (query: string) => {;
+    setSearchQuery (query) ;
+    if (query.trim () === '') {;
+      setFilteredFAQs (faqData) ;
+      return;
+;
+    const filtered = faqData.filter (faq =>;
+      faq.question.toLowerCase () .includes (query.toLowerCase () ) ||;
+      faq.answer.toLowerCase () .includes (query.toLowerCase () ) ||;
+      faq.tags.some (tag => tag.toLowerCase () .includes (query.toLowerCase () ) ) ) ;
+    setFilteredFAQs (filtered) ;
+  };
+;
+  const filteredFAQ = selectedCategory === 'All' ;
+    ? faqData ;
+    : faqData.filter (item => item.category === selectedCategory) ;
+;
+  const categories = ['All', ...Array.from (new Set (faqData.map (item => item.category) ) ) ];
+;
+  return (<div role="button" className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light pt - 24">;
+      <div role="button" className="container - responsive">;
+        {/* Header */};
+        <motion.div;
+          className="text - center mb - 12";
+          initial={{ opacity: 0, y: 20 }};
+          animate={{ opacity: 1, y: 0 }};
+          transition={{ duration: 0.6 }};
+;
+          <h1 className="text - 4xl font - bold text - white mb - 4">Help Center</h1>;
+          <p className="text - zion - slate - light text - lg max - w-3xl mx - auto">;
+            Find answers to your questions, learn how to use our services, and get the support you need to succeed with Zion Tech Group.;
+          </p>;
+        </motion.div>;
+;
+        {/* Search Bar */};
+        <motion.div;
+          className="max - w-2xl mx - auto mb - 12";
+          initial={{ opacity: 0, y: 20 }};
+          animate={{ opacity: 1, y: 0 }};
+          transition={{ duration: 0.6, delay: 0.1 }};
+;
+          <div role="button" className="relative">;
+            <input;
+              type="text";
+              placeholder="Search for help articles, FAQs, or guides...";
+              value={searchQuery};
+              onChange={ (e) => handleSearch (e.target.value) };
+              className="w - full bg - white / 10 backdrop - blur - xl border border - zion - cyan / 30 rounded - 2xl px - 6 py - 4 text - white placeholder - zion - slate - light focus:outline - none focus:ring - 2 focus:ring - zion - cyan focus:border - transparent transition - all duration - 300 text - lg";
+            />;
+            <Search className="absolute right - 4 top - 1/2 transform - translate - y-1 / 2 text - zion - slate - light h - 6 w - 6"       />;
+          </div>;
+        </motion.div>;
+;
+        {/* Help Categories */};
+        <motion.div;
+          className="mb - 16";
+          initial={{ opacity: 0, y: 20 }};
+          animate={{ opacity: 1, y: 0 }};
+          transition={{ duration: 0.6, delay: 0.2 }};
+;
+          <h2 className="text - 2xl font - bold text - white mb - 8 text - center">Browse Help Topics</h2>;
+          <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+            {helpCategories.map ( (category, index) => (<motion.div;
+                key={category.id};
+                initial={{ opacity: 0, y: 20 }};
+                animate={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }};
+;
+                <Link;
+                  to={category.path};
+                  className="block bg - white / 5 backdrop - blur - xl border border - zion - cyan / 20 rounded - 2xl p - 6 hover:bg - white / 10 hover:border - zion - cyan / 40 transition - all duration - 300 group";
+;
+                  <div role="button" className={`w - 16 h - 16 bg - gradient - to - br ${category.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4 group - hover:scale - 110 transition - transform duration - 300`}>;
+                    <category.icon className="h - 8 w - 8 text - white"       />;
+                  </div>;
+                  <h3 className="text - white font - semibold text - lg mb - 2 text - center">{category.title}</h3>;
+                  <p className="text - zion - slate - light text - sm mb - 4 text - center">{category.description}</p>;
+                  <div role="button" className="flex items - center justify - center text - zion - cyan group - hover:text - zion - cyan - light transition - colors">;
+                    <span className="text - sm font - medium">{category.articleCount} articles</span>;
+                    <ArrowRight className="h - 4 w - 4 ml - 2 group - hover:translate - x-1 transition - transform duration - 300"       />;
+                  </div>;
+                </Link>;
+              </motion.div>) ) };
+          </div>;
+        </motion.div>;
+;
+        {/* Support Options */};
+        <motion.div;
+          className="mb - 16";
+          initial={{ opacity: 0, y: 20 }};
+          animate={{ opacity: 1, y: 0 }};
+          transition={{ duration: 0.6, delay: 0.4 }};
+;
+          <h2 className="text - 2xl font - bold text - white mb - 8 text - center">Get Support</h2>;
+          <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
+            {supportOptions.map ( (option, index) => (<motion.div;
+                key={option.title};
+                initial={{ opacity: 0, y: 20 }};
+                animate={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }};
+;
+                <Link;
+                  to={option.path};
+                  className="block bg - white / 5 backdrop - blur - xl border border - zion - cyan / 20 rounded - 2xl p - 6 hover:bg - white / 10 hover:border - zion - cyan / 40 transition - all duration - 300 text - center group";
+;
+                  <div role="button" className={`w - 16 h - 16 bg - gradient - to - br ${option.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4 group - hover:scale - 110 transition - transform duration - 300`}>;
+                    <option.icon className="h - 8 w - 8 text - white"       />;
+                  </div>;
+                  <h3 className="text - white font - semibold text - lg mb - 2">{option.title}</h3>;
+                  <p className="text - zion - slate - light text - sm mb - 4">{option.description}</p>;
+                  <div role="button" className="inline - flex items - center bg - gradient - to - r from - zion - cyan to - zion - purple text - white px - 4 py - 2 rounded - lg text - sm font - medium group - hover:from - zion - cyan - dark group - hover:to - zion - purple - dark transition - all duration - 300">;
+                    {option.action};
+                  </div>;
+                </Link>;
+              </motion.div>) ) };
+          </div>;
+        </motion.div>;
+;
+        {/* FAQ Section */};
+        <motion.div;
+          className="mb - 16";
+          initial={{ opacity: 0, y: 20 }};
+          animate={{ opacity: 1, y: 0 }};
+          transition={{ duration: 0.6, delay: 0.6 }};
+;
+          <div role="button" className="max - w-4xl mx - auto">;
+            <h2 className="text - 2xl font - bold text - white mb - 8 text - center">Frequently Asked Questions</h2>;
+;
+            {/* Category Filter */};
+            <div role="button" className="flex flex - wrap justify - center gap - 3 mb - 8">;
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedCategory ('all') };
+                className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 300 ${;
+                  selectedCategory === 'all';
+                    ? 'bg - zion - cyan text - white';
+                    : 'bg - white / 10 text - zion - slate - light hover:bg - white / 20';
+                }`};
+;
+                All Categories;
+              </button>;
+              {helpCategories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id};
+                  onClick={ () => setSelectedCategory (category.id) };
+                  className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 300 ${;
+                    selectedCategory === category.id;
+                      ? 'bg - zion - cyan text - white';
+                      : 'bg - white / 10 text - zion - slate - light hover:bg - white / 20';
+                  }`};
+;
+                  {category.title};
+                </button>) ) };
+            </div>;
+          </motion.div>;
+        </div>;
+      </div>;
+;
+      {/* Main Content */};
+      <div role="button" className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12">;
+        <div role="button" className="grid lg:grid - cols - 3 gap - 8">;
+          {/* Help Sections */};
+          <div role="button" className="lg:col - span - 2">;
+            <motion.div;
+              initial={{ opacity: 0, x: -20 }};
+              animate={{ opacity: 1, x: 0 }};
+              transition={{ duration: 0.6, delay: 0.3 }};
+            >;
+              <h2 className="text - 2xl font - bold text - white mb - 6">Help Articles & Tutorials</h2>;
+              ;
+              <div role="button" className="space - y-6">;
+                {helpSections.map ( (section, index) => (<motion.div;
+                    key={section.id};
+                    initial={{ opacity: 0, y: 20 }};
+                    animate={{ opacity: 1, y: 0 }};
+                    transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }};
+                    className="bg - zion - slate - dark / 50 backdrop - blur - sm border border - cyan - 400 / 20 rounded - xl overflow - hidden";
+                  >;
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSection (section.id) };
+                      className="w - full p - 6 text - left hover:bg - zion - slate - dark / 70 transition - colors";
+                    >;
+                      <div role="button" className="flex items - center justify - between">;
+                        <div role="button" className="flex items - center space - x-4">;
+                          <div role="button" className="p - 3 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - lg">;
+                            <section.icon className="w - 6 h - 6 text - white"       />;
+                          </div>;
+                          <div>;
+                            <h3 className="text - xl font - semibold text - white">{section.title}</h3>;
+                            <p className="text - cyan - 300">{section.description}</p>;
+                          </div>;
+                        </div>;
+                        {expandedSections.has (section.id) ? (<ChevronDown className="w - 5 h - 5 text - cyan - 400"       />) : (<ChevronRight className="w - 5 h - 5 text - cyan - 400"       />) };
+                      </div>;
+                    </button>;
+;
+                    <AnimatePresence>;
+                      {expandedSections.has (section.id) && (<motion.div;
+                          initial={{ opacity: 0, height: 0 }};
+                          animate={{ opacity: 1, height: 'auto' }};
+                          exit={{ opacity: 0, height: 0 }};
+                          transition={{ duration: 0.3 }};
+                          className="border - t border - cyan - 400 / 20";
+                        >;
+                          <div role="button" className="p - 6 space - y-4">;
+                            {section.articles.map ( (article, articleIndex) => (<motion.div;
+                                key={article.title};
+                                initial={{ opacity: 0, x: -20 }};
+                                animate={{ opacity: 1, x: 0 }};
+                                transition={{ duration: 0.3, delay: articleIndex * 0.1 }};
+                                className="group";
+                              >;
+                                {article.path ? (<Link;
+                                    to={article.path};
+                                    className="block p - 4 bg - zion - slate - dark / 30 hover:bg - zion - slate - dark / 50 border border - cyan - 400 / 10 hover:border - cyan - 400 / 30 rounded - lg transition - all duration - 300";
+                                  >;
+                                    <div role="button" className="flex items - start justify - between">;
+                                      <div role="button" className="flex - 1">;
+                                        <h4 className="font - semibold text - white group - hover:text - cyan - 300 transition - colors">;
+                                          {article.title};
+                                        </h4>;
+                                        <p className="text - gray - 400 mt - 1">{article.description}</p>;
+                                        <div role="button" className="flex items - center space - x-4 mt - 3">;
+                                          <span className={`px - 2 py - 1 rounded - full text - xs font - medium ${;
+                                            article.difficulty === 'Beginner' ? 'bg - green - 500 / 20 text - green - 400' :;
+                                            article.difficulty === 'Intermediate' ? 'bg - yellow - 500 / 20 text - yellow - 400' :;
+                                            'bg - red - 500 / 20 text - red - 400';
+                                          }`}>;
+                                            {article.difficulty};
+                                          </span>;
+                                          <span className="text - gray - 500 text - sm flex items - center">;
+                                            <Clock className="w - 4 h - 4 mr - 1"       />;
+                                            {article.readTime};
+                                          </span>;
+                                        </div>;
+                                      </div>;
+                                      <ChevronRight className="w - 5 h - 5 text - cyan - 400 group - hover:translate - x-1 transition - transform"       />;
+                                    </div>;
+                                  </Link>) : (<div role="button" className="p - 4 bg - zion - slate - dark / 30 border border - cyan - 400 / 10 rounded - lg">;
+                                    <h4 className="font - semibold text - white">{article.title}</h4>;
+                                    <p className="text - gray - 400 mt - 1">{article.description}</p>;
+                                    <div role="button" className="flex items - center space - x-4 mt - 3">;
+                                      <span className={`px - 2 py - 1 rounded - full text - xs font - medium ${;
+                                        article.difficulty === 'Beginner' ? 'bg - green - 500 / 20 text - green - 400' :;
+                                        article.difficulty === 'Intermediate' ? 'bg - yellow - 500 / 20 text - yellow - 400' :;
+                                        'bg - red - 500 / 20 text - red - 400';
+                                      }`}>;
+                                        {article.difficulty};
+                                      </span>;
+                                      <span className="text - gray - 500 text - sm flex items - center">;
+                                        <Clock className="w - 4 h - 4 mr - 1"       />;
+                                        {article.readTime};
+                                      </span>;
+                                    </div>;
+                                  </div>) };
+                              </motion.div>) ) };
+                          </div>;
+                        </motion.div>) };
+                    </AnimatePresence>;
+                  </motion.div>) ) };
+              </div>;
+            </motion.div>;
+          </div>;
+;
+        {/* Contact Support */};
+        <motion.div;
+          className="text - center";
+          initial={{ opacity: 0, y: 20 }};
+          animate={{ opacity: 1, y: 0 }};
+          transition={{ duration: 0.6, delay: 0.7 }};
+          className="mt - 16";
+        >;
+          <h2 className="text - 2xl font - bold text - white mb - 6">Frequently Asked Questions</h2>;
+          ;
+          <div role="button" className="grid gap - 4">;
+            {filteredFAQ.map ( (faq, index) => (<motion.div;
+                key={faq.question};
+                initial={{ opacity: 0, y: 20 }};
+                animate={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }};
+                className="bg - zion - slate - dark / 50 backdrop - blur - sm border border - cyan - 400 / 20 rounded - xl p - 6";
+              >;
+                <div role="button" className="flex items - start space - x-4">;
+                  <div role="button" className="p - 2 bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded - lg">;
+                    <HelpCircle className="w - 5 h - 5 text - cyan - 400"       />;
+                  </div>;
+                  <div role="button" className="flex - 1">;
+                    <h3 className="text - lg font - semibold text - white mb - 2">{faq.question}</h3>;
+                    <p className="text - gray - 300">{faq.answer}</p>;
+                    <span className="inline - block mt - 3 px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - sm rounded - full">;
+                      {faq.category};
+                    </span>;
+                  </div>;
+                </div>;
+              </motion.div>) ) };
+          </div>;
+        </motion.div>;
+      </div>;
+    </div>) ;
+};
+;
