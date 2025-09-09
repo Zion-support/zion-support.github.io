@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import SEO from '@/components/SEO';
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import { Footer } from '@/components/Footer';
 
 export default function FAQ() {
   const [openItems, setOpenItems] = useState(new Set());
