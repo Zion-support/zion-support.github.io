@@ -11,17 +11,29 @@ interface User {
   updatedAt?: string;
 }
 
+interface AuthTokens {
+  accessToken: string | null;
+  refreshToken: string | null;
+}
+
 export const useAuthEventHandlers = () => {
-  const handleSignIn = useCallback((user: User) => {
-    console.log('User signed in:', user);
+  const handleLogin = useCallback((user: User, tokens: AuthTokens) => {
+    localStorage.setItem('user', JSON.stringify(user));
+    localStorage.setItem('tokens', JSON.stringify(tokens));
   }, []);
 
-  const handleSignOut = useCallback(() => {
-    console.log('User signed out');
+  const handleLogout = useCallback(() => {
+    localStorage.removeItem('user');
+    localStorage.removeItem('tokens');
+  }, []);
+
+  const handleTokenRefresh = useCallback((newTokens: AuthTokens) => {
+    localStorage.setItem('tokens', JSON.stringify(newTokens));
   }, []);
 
   return {
-    handleSignIn,
-    handleSignOut
+    handleLogin,
+    handleLogout,
+    handleTokenRefresh,
   };
 };

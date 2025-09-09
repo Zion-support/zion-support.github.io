@@ -3,7 +3,30 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './components/ThemeProvider';
+<<<<<<< HEAD
+import { ErrorBoundary, setupGlobalErrorHandling } from './components/ErrorHandling';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import ScrollToTop from './components/ScrollToTop';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceWrapper from './components/PerformanceWrapper';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import LoadingSpinner from './components/LoadingSpinner';
+import EnhancedLoadingSpinner from './components/EnhancedLoadingSpinner';
+import { SEO, HomePageSEO } from './components/SEO';
+import EnhancedSEO from './components/EnhancedSEO';
+import AccessibilityEnhancements from './components/AccessibilityEnhancements';
+import { PerformanceOptimizations } from './components/PerformanceOptimizations';
+import { NotificationToast } from './components/NotificationToast';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import OptimizedSuspense from './components/OptimizedSuspense';
+import { PerformanceDashboard } from './components/PerformanceDashboard';
+import EnhancedNavigation from './components/EnhancedNavigation';
+import { bundleOptimizer } from './utils/bundleOptimizer';
+import { PrivateRoute } from './components/PrivateRoute';
+import { CommunityProvider } from './context/CommunityContext';
+=======
 import ErrorBoundary from './components/ErrorBoundary';
+>>>>>>> main
 import './App.css';
 
 // Create QueryClient instance

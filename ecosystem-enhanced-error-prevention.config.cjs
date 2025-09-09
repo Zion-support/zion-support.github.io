@@ -12,11 +12,11 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+        NODE_OPTIONS: '--max-old-space-size=6144'
       },
       env_production: {
         NODE_ENV: 'production',
-        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+        NODE_OPTIONS: '--max-old-space-size=6144'
       }
     },
     

@@ -1,4 +1,16 @@
+<<<<<<< HEAD
+import { FooterNewsletter } from "@/components/FooterNewsletter";
+import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowUp, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+=======
 import React from 'react';
+>>>>>>> main
 
 const Footer = () => {
   return (
@@ -31,6 +43,10 @@ const Footer = () => {
       </div>
     </footer>
   );
+<<<<<<< HEAD
+}
+=======
 };
+>>>>>>> main
 
 export default Footer;
