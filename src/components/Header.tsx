@@ -17,13 +17,82 @@ export function Header() {
   }, []);
 
   const navigationItems = [
-    { name: 'Home', path: '/', icon: '🏠' },
-    { name: 'Services', path: '/services', icon: '🚀' },
-    { name: 'AI Solutions', path: '/ai-solutions', icon: '🤖' },
-    { name: 'Micro SAAS', path: '/micro-saas', icon: '💻' },
-    { name: 'IT Services', path: '/it-services', icon: '🖥️' },
-    { name: 'About', path: '/about', icon: 'ℹ️' },
-    { name: 'Contact', path: '/contact', icon: '📞' }
+    { 
+      path: '/', 
+      label: 'Home', 
+      icon: '🏠',
+      description: 'Welcome to Zion Tech Group'
+    },
+    { 
+      path: '/services', 
+      label: 'Services', 
+      icon: '🤖',
+      description: 'Explore our comprehensive service offerings',
+      hasDropdown: true,
+      dropdownItems: [
+        { path: '/services/ai-autonomous-systems', label: 'AI & Autonomous Systems', icon: '🧠' },
+        { path: '/services/quantum-technology', label: 'Quantum Technology', icon: '⚛️' },
+        { path: '/services/cybersecurity', label: 'Cybersecurity', icon: '🔒' },
+        { path: '/services/it-infrastructure', label: 'IT Infrastructure', icon: '🏗️' },
+        { path: '/services/micro-saas-solutions', label: 'Micro-SaaS Solutions', icon: '☁️' },
+        { path: '/services/industry-solutions', label: 'Industry Solutions', icon: '🏭' },
+        { path: '/services/innovative-new-services', label: 'Innovative Services', icon: '💡' },
+        { path: '/services/specialized-it-infrastructure', label: 'Specialized IT', icon: '⚙️' }
+      ]
+    },
+    { 
+      path: '/solutions/enterprise', 
+      label: 'Solutions', 
+      icon: '💼',
+      description: 'Industry-specific solutions',
+      hasDropdown: true,
+      dropdownItems: [
+        { path: '/solutions/enterprise', label: 'Enterprise Solutions', icon: '🏢' },
+        { path: '/solutions/healthcare', label: 'Healthcare Solutions', icon: '🏥' },
+        { path: '/solutions/financial', label: 'Financial Solutions', icon: '💰' },
+        { path: '/solutions/manufacturing', label: 'Manufacturing Solutions', icon: '🏭' },
+        { path: '/solutions/retail', label: 'Retail Solutions', icon: '🛍️' },
+        { path: '/solutions/education', label: 'Education Solutions', icon: '🎓' }
+      ]
+    },
+    { 
+      path: '/ai-solutions', 
+      label: 'AI Solutions', 
+      icon: '🧠',
+      description: 'Cutting-edge AI and machine learning solutions',
+      hasDropdown: true,
+      dropdownItems: [
+        { path: '/ai-solutions', label: 'AI Overview', icon: '🤖' },
+        { path: '/quantum-neural-network-platform', label: 'Quantum Neural Networks', icon: '⚛️' },
+        { path: '/ai-autonomous-research-assistant', label: 'AI Research Assistant', icon: '🔬' },
+        { path: '/ai-powered-it-asset-management', label: 'AI Asset Management', icon: '💻' },
+        { path: '/autonomous-business-operations-platform', label: 'Autonomous Operations', icon: '⚡' }
+      ]
+    },
+    { 
+      path: '/pricing', 
+      label: 'Pricing', 
+      icon: '💰',
+      description: 'Transparent pricing plans'
+    },
+    { 
+      path: '/about', 
+      label: 'About', 
+      icon: 'ℹ️',
+      description: 'Learn about our company'
+    },
+    { 
+      path: '/careers', 
+      label: 'Careers', 
+      icon: '🚀',
+      description: 'Join our team'
+    },
+    { 
+      path: '/contact', 
+      label: 'Contact', 
+      icon: '📞',
+      description: 'Get in touch with us'
+    }
   ];
 
   const isActive = (path: string) => {
@@ -34,114 +103,166 @@ export function Header() {
   };
 
   return (
-    <header className="bg-white shadow-sm border-b">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
-              <h1 className="text-xl font-bold text-gray-900">Zion Tech Group</h1>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-black/90 backdrop-blur-xl border-b border-zion-cyan/20' : 'bg-transparent'
+    }`}>
+      {/* Enhanced Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-zion-blue-dark to-black opacity-80"></div>
+      <div className="absolute inset-0 bg-quantum-mesh opacity-30"></div>
+      
+      {/* Matrix Rain Effect */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(15)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute text-zion-cyan text-xs animate-matrix-rain"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 20}s`,
+              animationDuration: `${20 + Math.random() * 10}s`
+            }}
+          >
+            {Math.random() > 0.5 ? '1' : '0'}
+          </div>
+        ))}
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <div className="flex items-center space-x-4">
+            <Link to="/" className="flex items-center space-x-3 group">
+              <div className="relative">
+                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl font-bold text-white">Z</span>
+                </div>
+                <div className="absolute inset-0 w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl opacity-50 blur-xl group-hover:opacity-75 transition-opacity duration-300"></div>
+              </div>
+              <div className="hidden sm:block">
+                <h1 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors duration-300">
+                  Zion Tech Group
+                </h1>
+                <p className="text-xs text-zion-slate-light">Innovation • Technology • Future</p>
+              </div>
             </Link>
           </div>
-          
-          <nav className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
-              Home
-            </Link>
-            
-            <div className="relative group">
-              <button className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium flex items-center">
-                Services
-                <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div className="py-2">
-                  <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    All Services
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-8">
+            {navigationItems.map((item) => (
+              <div key={item.path} className="relative group">
+                {item.hasDropdown ? (
+                  <div className="relative">
+                    <button
+                      onClick={() => setActiveDropdown(activeDropdown === item.path ? null : item.path)}
+                      className="flex items-center space-x-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-zion-blue-light/20"
+                    >
+                      <span>{item.icon}</span>
+                      <span className="font-medium">{item.label}</span>
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
+                        activeDropdown === item.path ? 'rotate-180' : ''
+                      }`} />
+                    </button>
+                    
+                    {/* Dropdown Menu */}
+                    {activeDropdown === item.path && (
+                      <div className="absolute top-full left-0 mt-2 w-64 bg-black/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl overflow-hidden">
+                        <div className="p-4">
+                          {item.dropdownItems?.map((dropdownItem) => (
+                            <Link
+                              key={dropdownItem.path}
+                              to={dropdownItem.path}
+                              className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zion-blue-light/20 transition-colors duration-300 group/item"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              <span className="text-lg">{dropdownItem.icon}</span>
+                              <span className="text-zion-slate-light group-hover/item:text-zion-cyan transition-colors duration-300">
+                                {dropdownItem.label}
+                              </span>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className="flex items-center space-x-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-zion-blue-light/20"
+                  >
+                    <span>{item.icon}</span>
+                    <span className="font-medium">{item.label}</span>
                   </Link>
-                  <Link to="/micro-saas-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Micro SAAS Services
-                  </Link>
-                  <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    AI & Machine Learning
-                  </Link>
-                  <Link to="/cloud-devops-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Cloud & DevOps
-                  </Link>
-                  <Link to="/cybersecurity" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Cybersecurity
-                  </Link>
-                  <Link to="/enterprise-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Enterprise Solutions
-                  </Link>
-                  <Link to="/it-onsite-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    IT Onsite Services
-                  </Link>
-                </div>
+                )}
               </div>
-            </div>
-            
-            <div className="relative group">
-              <button className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium flex items-center">
-                Solutions
-                <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div className="py-2">
-                  <Link to="/ai-business-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    AI Business Solutions
-                  </Link>
-                  <Link to="/digital-transformation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Digital Transformation
-                  </Link>
-                  <Link to="/industry-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Industry Solutions
-                  </Link>
-                  <Link to="/green-it" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Green IT Solutions
-                  </Link>
-                  <Link to="/5g-enterprise-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    5G Enterprise Solutions
-                  </Link>
-                </div>
-              </div>
-            </div>
-            
-            <Link to="/about" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
-              About
-            </Link>
-            
-            <Link to="/blog" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
-              Blog
-            </Link>
-            
-            <Link to="/contact" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
-              Contact
-            </Link>
+            ))}
           </nav>
-          
+
+          {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
-            <Link to="/faq">
-              <Button variant="outline" size="sm">
-                Help
-              </Button>
+            {/* Search */}
+            <div className="hidden md:flex items-center space-x-2">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-64 px-4 py-2 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 backdrop-blur-sm transition-all duration-300"
+                />
+                <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-cyan" />
+              </div>
+            </div>
+
+            {/* Contact Info */}
+            <div className="hidden lg:flex items-center space-x-4 text-zion-slate-light">
+              <div className="flex items-center space-x-2 hover:text-zion-cyan transition-colors duration-300 cursor-pointer">
+                <Phone className="w-4 h-4" />
+                <span className="text-sm">+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center space-x-2 hover:text-zion-cyan transition-colors duration-300 cursor-pointer">
+                <Mail className="w-4 h-4" />
+                <span className="text-sm">kleber@ziontechgroup.com</span>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <Link
+              to="/contact"
+              className="hidden md:inline-flex items-center space-x-2 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan/90 hover:to-zion-blue/90 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25"
+            >
+              <span>Get Started</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link to="/login">
-              <Button variant="outline" size="sm">
-                Sign In
-              </Button>
-            </Link>
-            <Link to="/signup">
-              <Button size="sm">
-                Get Started
-              </Button>
-            </Link>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsSidebarOpen(true)}
+              className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Enhanced Mobile Search Bar */}
+      {isScrolled && (
+        <div className="lg:hidden border-t border-zion-cyan/20 bg-black/95 backdrop-blur-xl">
+          <div className="max-w-7xl mx-auto px-4 py-3">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full px-4 py-2 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 backdrop-blur-sm"
+              />
+              <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-cyan" />
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
