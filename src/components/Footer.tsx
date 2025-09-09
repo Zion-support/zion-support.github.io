@@ -116,21 +116,58 @@ export function Footer() {
     {
       title: 'Support',
       links: [
-        { name: 'Help Center', href: '/help' },
-        { name: 'FAQ', href: '/faq' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'Status Page', href: '/status' },
-        { name: 'Support Ticket', href: '/support' }
+        { name: 'AI Workflow Automation', path: '/services/ai-workflow-automation', icon: Zap },
+        { name: 'AI Virtual Assistant', path: '/services/ai-virtual-assistant', icon: Users },
+        { name: 'AI Data Analytics', path: '/services/ai-data-analytics', icon: BarChart3 },
+        { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain },
+        { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
+        { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: TrendingUp },
+        { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
+        { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
+        { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp }
       ]
     },
     {
       title: 'Legal',
       links: [
-        { name: 'Privacy Policy', href: '/privacy' },
-        { name: 'Terms of Service', href: '/terms' },
-        { name: 'Cookie Policy', href: '/cookies' },
-        { name: 'GDPR Compliance', href: '/gdpr' },
-        { name: 'Security', href: '/security' }
+        { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Cpu },
+        { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
+        { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Cpu },
+        { name: 'Space Technology', path: '/services/space-tech', icon: Rocket },
+        { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu },
+        { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Activity },
+        { name: 'Green IT Solutions', path: '/services/green-it', icon: Heart },
+        { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: Shield }
+      ]
+    },
+    {
+      title: 'Core Services',
+      icon: Zap,
+      links: [
+        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
+        { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
+        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Rocket },
+        { name: 'IT Services', path: '/it-services', icon: Building },
+        { name: 'Micro SaaS Solutions', path: '/micro-saas-solutions', icon: Zap },
+        { name: 'Innovative Services 2025', path: '/innovative-services-showcase-2025', icon: Sparkles },
+        { name: 'Enterprise Solutions', path: '/enterprise', icon: Building },
+        { name: 'All Services', path: '/services', icon: Zap }
+      ]
+    },
+    {
+      title: 'Innovation Hub',
+      icon: Sparkles,
+      links: [
+        { name: 'Innovative Services 2028', path: '/innovative-services-showcase-2028', icon: Sparkles },
+        { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', icon: DollarSign },
+        { name: 'Ultimate Services 2026', path: '/ultimate-services-showcase-2026', icon: Rocket },
+        { name: 'Services 2026', path: '/services-2026', icon: Target },
+        { name: 'New Services 2025', path: '/new-services-showcase-2025', icon: TrendingUp },
+        { name: 'Ultimate Services 2025', path: '/ultimate-services-showcase-2025', icon: Award },
+        { name: 'Comprehensive Services 2025', path: '/comprehensive-services-landing-2025', icon: Globe }
       ]
     }
   ];
