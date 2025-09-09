@@ -34,14 +34,38 @@ function analyzeBundleSize() {
   
   if (!fs.existsSync(distPath)) {
     log('❌ Dist directory not found. Run build first.', 'red');
-    return;
+    return {
+      totalSize: 0,
+      totalSizeKB: 0,
+      totalSizeMB: 0,
+      fileSizes: [],
+    };
   }
 
   log('\n📊 Bundle Size Analysis', 'cyan');
   log('='.repeat(50), 'cyan');
 
   const assetsPath = path.join(distPath, 'assets');
+  if (!fs.existsSync(assetsPath)) {
+    log('ℹ️  No assets directory found in dist. Skipping bundle file analysis.', 'yellow');
+    return {
+      totalSize: 0,
+      totalSizeKB: 0,
+      totalSizeMB: 0,
+      fileSizes: [],
+    };
+  }
+
   const files = fs.readdirSync(assetsPath);
+  if (!files || files.length === 0) {
+    log('ℹ️  No assets found in dist/assets. Skipping bundle file analysis.', 'yellow');
+    return {
+      totalSize: 0,
+      totalSizeKB: 0,
+      totalSizeMB: 0,
+      fileSizes: [],
+    };
+  }
   
   let totalSize = 0;
   const fileSizes = [];
