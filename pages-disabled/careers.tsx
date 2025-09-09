@@ -21,5 +21,4 @@ export default function CareersPage() {;
         "Strong background in machine learning algorithms"
       ];
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
-
-
+}

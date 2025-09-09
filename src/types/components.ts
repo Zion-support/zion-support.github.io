@@ -36,6 +36,7 @@ export interface ButtonProps extends BaseComponentProps {
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   fullWidth?: boolean;
+  asChild?: boolean;
 }
 
 // Input props
@@ -74,8 +75,13 @@ export interface CardProps extends BaseComponentProps {
 
 // Form props
 export interface FormProps extends BaseComponentProps {
+<<<<<<< HEAD
   onSubmit: (data: Record<string, unknown>) => void;
   initialValues?: Record<string, unknown>;
+=======
+  onSubmit: (data: Record<string, any>) => void;
+  initialValues?: Record<string, any>;
+>>>>>>> f4b09ea04ba03ec91ac9f9f038743c939fe2b361
   validationSchema?: unknown;
   loading?: boolean;
 }

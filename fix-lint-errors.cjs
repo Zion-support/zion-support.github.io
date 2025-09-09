@@ -20,6 +20,27 @@ console.log(`Found ${errorFiles.size} files with lint errors`);
 
 // Function to fix common syntax errors
 function fixFile(filePath) {
+[\s\S]*?
+
+    
+    // Clean up any remaining conflict markers
+    content = content.replace(/^.*$/gm, "");
+    content = content.replace(/^
+ursor/fix-lint-push-and-merge-to-main-28da
+    
+    // Remove empty lines that might be left behind
+    content = content.replace(/\n\s*\n\s*\n/g, "\n\n");
+    
+
+    fs.writeFileSync(filePath, content);
+    return true} catch (error) {
+    console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
+    return false}
+}
+
+
+// Function to remove unused imports
+function removeUnusedImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
@@ -82,3 +103,52 @@ try {
   execSync('npm run lint' { stdio: 'inherit' });
   console.log('All lint errors fixed!')} catch (error) {
   console.log('Some lint errors remain. Manual review may be needed.')}
+  const conflictedFiles = findFilesWithIssues(".");
+  
+  if (conflictedFiles.length === 0) {
+    } else {
+    
+    conflictedFiles.forEach(file => );
+    
+    let resolvedCount = 0;
+    for (const file of conflictedFiles) {
+      if (resolveMergeConflicts(file)) {
+        resolvedCount++}
+    }
+    
+    }
+  
+  // Try to run lint fix
+  
+  try {
+    execSync("npm run "lint": fix", { "stdio": "inherit" });
+    } catch (error) {
+    }
+  
+} catch (error) {
+  console.error("❌ Error during lint error "fixing": ", error.message);
+  process.exit(1)}
+
+ursor/fix-lint-push-and-merge-to-main-28da
+ursor/automate-test-improve-and-merge-code-59d5
+
+#!/usr/bin/env node;
+
+const fs = require("fs")
+const path = require("path")
+const { execSync } = require("child_process")
+console.log(" Starting lint error fixes...")
+    let content = fs.readFileSync(filePath, "utf8")
+    content = content.replace(/[\s\S]*?[\s\S]*?[^\n]*/g, )
+    content = content.replace(/[^\n]*[\s\S]*?[\s\S]*?[^\n]*/g, )
+    content = content.replace(/^.*$/gm, )
+    content = content.replace(/^.*$/gm, )
+    content = content.replace(/^.*$/gm, )
+    content = content.replace(/\n\s*\n\s*\n/g, "\n\n")
+    console.log(` Resolved conflicts "in"`)
+    let content = fs.readFileSync(filePath, "utf8")
+      if (line.includes('from "lucide-react") || line.includes(')
+        const importMatch = line.match(/import\s*{([^}]+)}\s*from\s*["]lucide-react[]
+
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+`;

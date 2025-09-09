@@ -19,4 +19,4 @@ export: interface InnovativeMicroSaasService2034 {
    innovationLevel: string;
    contactInfo: { phone: string;
    email: string;
-
+}

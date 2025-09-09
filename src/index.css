@@ -4,220 +4,313 @@
 
 @layer base {
   :root {
-    --font-sans: 'Orbitron', system-ui, sans-serif; /* Keep existing font */
+    --font-sans: 'Orbitron', system-ui, sans-serif;
 
-    /* Dark Theme Base (zion-slate) */
-    --background: 260 70% 10%; /* zion-slate */
-    --foreground: 0 0% 85%;    /* Light Gray Text */
+    --background: 0 0% 7%;
+    --foreground: 142 71% 45%;
 
-    --card: 260 70% 12%;       /* Slightly lighter zion-slate */
-    --card-foreground: 0 0% 85%; /* Light Gray Text */
+    --card: 0 0% 7%;
+    --card-foreground: 142 71% 45%;
 
-    --popover: 260 70% 12%;    /* Slightly lighter zion-slate */
-    --popover-foreground: 0 0% 85%; /* Light Gray Text */
+    --popover: 0 0% 7%;
+    --popover-foreground: 142 71% 45%;
 
-    --primary: 217 82% 55%;    /* zion-blue */
-    --primary-foreground: 0 0% 100%; /* white */
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 7%;
 
-    --secondary: 273 82% 50%;  /* zion-purple */
-    --secondary-foreground: 0 0% 100%; /* white */
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 142 71% 45%;
 
-    --muted: 260 70% 20%;      /* Darker muted zion-slate */
-    --muted-foreground: 0 0% 60%; /* Muted gray text */
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 63%;
 
-    --accent: 177 70% 50%;     /* zion-cyan */
-    --accent-foreground: 260 70% 10%; /* zion-slate (for contrast on cyan) */
+    --accent: 0 0% 14%;
+    --accent-foreground: 142 71% 45%;
 
-    --destructive: 0 70% 55%;   /* Adjusted Red for dark theme */
-    --destructive-foreground: 0 0% 100%; /* white */
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 7%;
 
-    --border: 260 70% 20%;     /* Muted zion-slate for borders */
-    --input: 260 70% 15%;      /* Slightly different from border for input bg */
-    --ring: 217 82% 55%;       /* zion-blue for focus rings */
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 142 71% 45%;
 
-    --radius: 0.5rem; /* Keep existing radius */
-
-    /* Dark Theme Sidebar */
-    --sidebar-background: 260 70% 8%;  /* Even darker zion-slate */
-    --sidebar-foreground: 0 0% 85%;    /* Light Gray Text */
-    --sidebar-primary: 217 82% 55%;    /* zion-blue */
-    --sidebar-primary-foreground: 0 0% 100%; /* white */
-    --sidebar-accent: 177 70% 50%;     /* zion-cyan */
-    --sidebar-accent-foreground: 260 70% 10%; /* zion-slate */
-    --sidebar-border: 260 70% 15%;     /* Muted zion-slate for sidebar borders */
-    --sidebar-ring: 217 82% 55%;       /* zion-blue */
+    --radius: 0.5rem;
   }
 
-  .dark { /* Ensure .dark mirrors :root for dark theme consistency */
-    --background: 260 70% 10%; /* zion-slate */
-    --foreground: 0 0% 85%;    /* Light Gray Text */
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 142 71% 45%;
 
-    --card: 260 70% 12%;       /* Slightly lighter zion-slate */
-    --card-foreground: 0 0% 85%; /* Light Gray Text */
+    --card: 0 0% 7%;
+    --card-foreground: 142 71% 45%;
 
-    --popover: 260 70% 12%;    /* Slightly lighter zion-slate */
-    --popover-foreground: 0 0% 85%; /* Light Gray Text */
+    --popover: 0 0% 7%;
+    --popover-foreground: 142 71% 45%;
 
-    --primary: 217 82% 55%;    /* zion-blue */
-    --primary-foreground: 0 0% 100%; /* white */
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 7%;
 
-    --secondary: 273 82% 50%;  /* zion-purple */
-    --secondary-foreground: 0 0% 100%; /* white */
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 142 71% 45%;
 
-    --muted: 260 70% 20%;      /* Darker muted zion-slate */
-    --muted-foreground: 0 0% 60%; /* Muted gray text */
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 63%;
 
-    --accent: 177 70% 50%;     /* zion-cyan */
-    --accent-foreground: 260 70% 10%; /* zion-slate (for contrast on cyan) */
+    --accent: 0 0% 14%;
+    --accent-foreground: 142 71% 45%;
 
-    --destructive: 0 70% 55%;   /* Adjusted Red for dark theme */
-    --destructive-foreground: 0 0% 100%; /* white */
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 7%;
 
-    --border: 260 70% 20%;     /* Muted zion-slate for borders */
-    --input: 260 70% 15%;      /* Slightly different from border for input bg */
-    --ring: 217 82% 55%;       /* zion-blue for focus rings */
-
-    /* Dark Theme Sidebar */
-    --sidebar-background: 260 70% 8%;  /* Even darker zion-slate */
-    --sidebar-foreground: 0 0% 85%;    /* Light Gray Text */
-    --sidebar-primary: 217 82% 55%;    /* zion-blue */
-    --sidebar-primary-foreground: 0 0% 100%; /* white */
-    --sidebar-accent: 177 70% 50%;     /* zion-cyan */
-    --sidebar-accent-foreground: 260 70% 10%; /* zion-slate */
-    --sidebar-border: 260 70% 15%;     /* Muted zion-slate for sidebar borders */
-    --sidebar-ring: 217 82% 55%;       /* zion-blue */
-  }
-
-  .light {
-    /* Light Theme Base */
-    --background: 0 0% 100%;    /* white */
-    --foreground: 260 70% 15%;  /* Dark Gray Text (derived from zion-slate) */
-
-    --card: 0 0% 98%;         /* Very light gray for cards */
-    --card-foreground: 260 70% 15%; /* Dark Gray Text */
-
-    --popover: 0 0% 98%;      /* Very light gray for popovers */
-    --popover-foreground: 260 70% 15%; /* Dark Gray Text */
-
-    --primary: 217 82% 55%;    /* zion-blue */
-    --primary-foreground: 0 0% 100%; /* white */
-
-    --secondary: 273 82% 50%;  /* zion-purple */
-    --secondary-foreground: 0 0% 100%; /* white */
-
-    --muted: 0 0% 90%;         /* Light muted gray */
-    --muted-foreground: 0 0% 40%; /* Darker muted gray text */
-
-    --accent: 177 70% 50%;     /* zion-cyan */
-    --accent-foreground: 260 70% 10%; /* zion-slate (for contrast on cyan) */
-
-    --destructive: 0 70% 50%;   /* Adjusted Red for light theme */
-    --destructive-foreground: 0 0% 100%; /* white */
-
-    --border: 0 0% 85%;       /* Light gray border */
-    --input: 0 0% 90%;        /* Slightly different from border for input bg */
-    --ring: 217 82% 55%;       /* zion-blue for focus rings */
-
-    --radius: 0.5rem; /* Keep existing radius */
-
-    /* Light Theme Sidebar */
-    --sidebar-background: 0 0% 96%;  /* Light gray for sidebar */
-    --sidebar-foreground: 260 70% 15%;  /* Dark Gray Text */
-    --sidebar-primary: 217 82% 55%;    /* zion-blue */
-    --sidebar-primary-foreground: 0 0% 100%; /* white */
-    --sidebar-accent: 177 70% 50%;     /* zion-cyan */
-    --sidebar-accent-foreground: 260 70% 10%; /* zion-slate */
-    --sidebar-border: 0 0% 80%;       /* Slightly darker gray for sidebar borders */
-    --sidebar-ring: 217 82% 55%;       /* zion-blue */
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 142 71% 45%;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
   }
+}
 
-  a {
-    @apply text-primary hover:text-accent focus-visible:outline-accent transition-colors duration-150;
+/* Zion Tech Group Custom Styles */
+:root {
+  --zion-blue-dark: #0a0e27;
+  --zion-blue-darker: #050811;
+  --zion-blue-light: #1a1f3a;
+  --zion-cyan: #00d4ff;
+  --zion-purple: #8b5cf6;
+  --zion-gray-light: #94a3b8;
+  --zion-gray-dark: #475569;
+}
+
+body {
+  font-family: 'Orbitron', system-ui, sans-serif;
+  background: linear-gradient(135deg, var(--zion-blue-dark) 0%, var(--zion-blue-darker) 100%);
+  color: white;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--zion-blue-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--zion-cyan);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--zion-purple);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply text-foreground font-semibold;
-  }
-
-  p {
-    @apply text-foreground/90; /* Using 90% opacity for foreground */
-  }
-
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
-  }
-
-  .pulse {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-
-  /* Custom scrollbar for webkit browsers */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: theme('colors.zion.blue.DEFAULT');
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: theme('colors.zion.purple.dark');
-    border-radius: 5px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: theme('colors.zion.purple.DEFAULT');
-  }
-
-  /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth;
-  }
-
-  /* LiveKit UI overrides */
-  [data-lk-theme='default'] {
-    --lk-color-accent: #06B6D4;
-    --lk-button-background: #06B6D4;
-    --lk-button-background-hover: #0891B2;
-    --lk-bg1: #0B1120;
-    --lk-bg2: #0F172A;
-  }
-
-  /* Skip link styles */
-  .skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #ffffff;
-    color: #000000;
-    padding: 0.5rem 1rem;
-    z-index: 1000;
-    transition: top 0.3s;
-  }
-
-  .skip-link:focus {
-    top: 0;
-  }
-
-  /* Improved placeholder contrast */
-  input::placeholder,
-  textarea::placeholder {
-    color: #b3b3b3;
+  to {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+/* Utility classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.6s ease-out;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.6s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--zion-cyan) 0%, var(--zion-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Neon glow effect */
+.neon-glow {
+  box-shadow: 0 0 20px var(--zion-cyan), 0 0 40px var(--zion-cyan), 0 0 60px var(--zion-cyan);
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--zion-cyan) 0%, var(--zion-purple) 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--zion-cyan);
+  padding: 12px 24px;
+  border: 2px solid var(--zion-cyan);
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: var(--zion-cyan);
+  color: var(--zion-blue-dark);
+}
+
+/* Card styles */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Form styles */
+.form-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: white;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--zion-cyan);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+}
+
+.form-input::placeholder {
+  color: var(--zion-gray-light);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .text-4xl {
+    font-size: 2rem;
+  }
+  
+  .text-5xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-6xl {
+    font-size: 3rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
   }
 }

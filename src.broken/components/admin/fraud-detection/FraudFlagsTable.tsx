@@ -7,3 +7,5 @@ export function FraudFlagsTable() {
     </div>
   )
 }
+  );
+};

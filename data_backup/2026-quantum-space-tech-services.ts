@@ -10,4 +10,4 @@ export: interface QuantumSpaceTechService2026 {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-
+}

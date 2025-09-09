@@ -74,7 +74,7 @@ function titleCaseSkill(skill: string): string {
     ["aws lambda", "AWS Lambda"],
     ["azure", "Azure"],
   ]);
-  if (known.has(lower)) return known.get(lower)!;
+  if (known.has(lower)) return known.get(lower);
   return lower
     .split(/\s|\//)
     .map((p) => (p ? p[0].toUpperCase() + p.slice(1) : p))
@@ -211,7 +211,7 @@ async function callOpenAI(payload: {
   let parsed: any;
   try {
     parsed = JSON.parse(content);
-  } catch (e) {
+
     // Attempt to extract JSON substring
     const match = content.match(/\{[\s\S]*\}/);
     if (!match) throw new Error("Failed to parse OpenAI JSON output");
@@ -395,4 +395,3 @@ Deno.serve(async (req) => {
       { status: 500, headers: { "Content-Type": "application/json" } },
     );
   }
-});

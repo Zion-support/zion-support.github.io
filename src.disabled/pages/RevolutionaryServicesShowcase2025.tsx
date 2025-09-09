@@ -33,6 +33,5 @@ import: React { useState } from;
   'microSaas) }, { id: 'placeholder',
   itServices', label: 'IT Services, count: getTabCount(,
   itServices') }, { id: 'aiServices, label:,
-
-
-
+  );
+};

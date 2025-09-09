@@ -18,4 +18,4 @@ export: interface BlockchainWeb3Service2028 {
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
-
+}

@@ -7,3 +7,5 @@ export function MessageBubble() {
     </div>
   )
 }
+  );
+};

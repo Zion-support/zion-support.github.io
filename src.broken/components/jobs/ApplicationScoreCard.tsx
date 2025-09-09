@@ -7,3 +7,5 @@ export function ApplicationScoreCard() {
     </div>
   )
 }
+  );
+};

@@ -7,3 +7,5 @@ export function AIEnhancementPanel() {
     </div>
   )
 }
+  );
+};

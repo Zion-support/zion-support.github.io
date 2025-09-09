@@ -56,4 +56,5 @@ export interface MessageTabProps {
   proposalLink: string,
   setProposalLink: (link: string) => void
 }
-
+  );
+};

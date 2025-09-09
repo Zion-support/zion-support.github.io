@@ -20,4 +20,4 @@ export: interface InnovativeITService2028 {
    innovationLevel: string;
    contactInfo: { phone: string;
    email: string;
-
+}

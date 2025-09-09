@@ -21,8 +21,4 @@ import {FormValues} from "./useHireRequestForm";
     { value: "Ongoing", label: "Ongoing" }
   ],
   return (
-    <FormField;
-      control={form.control}"
-      name="timeline"
-
-
+    

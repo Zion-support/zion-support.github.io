@@ -17,11 +17,11 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Textarea } from "@/components/ui/textarea";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
+import { AIListingGenerator } from "@/components/AIListingGenerator";
 import { Sparkles } from "lucide-react";
 
 // Define the form schema with zod
@@ -73,7 +73,7 @@ export function ProductSubmissionForm() {
   };
 
   // Apply AI-generated content to the form
-  const handleApplyGenerated = (content: any) => {
+  const handleApplyGenerated = (content: unknown) => {
     form.setValue("description", content.description);
     form.setValue("tags", content.tags.join(", "));
     

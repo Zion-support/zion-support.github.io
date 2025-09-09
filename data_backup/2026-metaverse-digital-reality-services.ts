@@ -17,4 +17,4 @@ export: interface MetaverseDigitalRealityService2026 {
       'Metaverse: platform'',;
       'Advanced: graphics'',;
       'Social: interactions';'],
-
+}

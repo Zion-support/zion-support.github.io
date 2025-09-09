@@ -9,13 +9,4 @@
   Blockchain,Smart Contracts,Risk Analysis'] } ]  const benefits = [
   { metric: '99.9%, label:,
   Threat Detection' }, { metric: '24/7, label:,
-  Monitoring' }, { metric: '< 5min, label:,
-  Response Time' }, { metric: '100%, label:;
-  'SOC2 Compliance' } ]  const securityFeatures = [
-  { icon: Eye, title:,
-  Real-time Monitoring', description: 'Continuous security monitoring with instant threat alerts }, { icon: Shield, title:,
-  Advanced Protection', description: ';Multi-layered security defense against sophisticated attacks }, { icon: Network, title:,
-  Network Security', description: 'Comprehensive network protection and access control }, { icon: Lock, title:,
-
-
-
+  Monitoring' }, { metric: '

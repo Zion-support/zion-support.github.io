@@ -7,3 +7,5 @@ export function LandingPage() {
     </div>
   )
 }
+  );
+};

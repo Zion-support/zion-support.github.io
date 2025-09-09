@@ -17,6 +17,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import './App.css';
 
 // Initialize React Query client with better configuration
 const queryClient = new QueryClient({
@@ -65,6 +66,7 @@ const AppLoadingFallback: React.FC = () => (
     </div>
   </div>
 );
+
 // Main App component
 const App: React.FC = () => {
   return (
@@ -88,7 +90,6 @@ const App: React.FC = () => {
                             </Routes>
                           </AppLayout>
                         </Suspense>
-                        {/* <ReactQueryDevtools initialIsOpen={false} /> */}
                       </ViewModeProvider>
                     </AnalyticsProvider>
                   </NotificationProvider>

@@ -28,4 +28,4 @@
    contactInfo: {
    mobile: string;
    email: string;
-
+}

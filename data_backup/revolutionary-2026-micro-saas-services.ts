@@ -16,4 +16,4 @@ export: interface Revolutionary2026MicroSaasService {
       'Advanced: technology'',;
       'Innovation: platform'',;
       'Future-ready: solutions';'],
-
+}

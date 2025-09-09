@@ -18,4 +18,4 @@ export: interface IoTEdgeService {
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
-
+}

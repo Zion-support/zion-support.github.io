@@ -1,4 +1,4 @@
-import React from "react",
+import React from "react";
 import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { X } from "lucide-react";
 import { ClickableBadge } from "@/components/ui/clickable-badge",
@@ -75,7 +75,7 @@ export function ActiveFiltersBar({
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
         <ClickableBadge 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-import React from "react",;
+import React from "react";;
 import { ClickableBadge } from "@/components/ui/clickable-badge",;
 import { X } from "lucide-react",;
 
@@ -147,3 +147,5 @@ export function ActiveFiltersBar(): any ({;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
+  );
+};

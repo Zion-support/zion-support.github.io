@@ -210,3 +210,5 @@ const TermsOfService: NextPage = () => {
   )};
 
 export default TermsOfService;
+  );
+};

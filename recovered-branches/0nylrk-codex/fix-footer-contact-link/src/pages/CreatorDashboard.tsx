@@ -28,7 +28,5 @@ import { Footer } from "@/components/Footer",export default function CreatorDash
                       <svg width="28" height="28">"
                         <use href="#lucide-bar-chart" />
                       </svg>
-
-
-
-
+  );
+};

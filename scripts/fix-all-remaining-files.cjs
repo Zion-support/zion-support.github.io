@@ -1,17 +1,16 @@
+
+
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 =======
 const fs = require('fs');
 const path = require('path');
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
-=======
 const fs = require('fs')
 const path = require('path')
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> merged-prs-20250907-203621
 // console.log(' Fixing All Remaining Files...')
 console.log('=====')
 const problematicFiles = ['pages/docs/integration-examples.tsx'];
@@ -20,10 +19,10 @@ const problematicFiles = ['pages/docs/integration-examples.tsx'];
   'pages/services/blockchain.tsx'
   'pages/signup.tsx'
 <<<<<<< HEAD
-let content = '';
 =======
+let content = '';
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
     let content = ''
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     if (filePath === 'pages/docs/integration-examples.tsx')
       content = "
     "firstName"

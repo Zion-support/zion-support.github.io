@@ -7,3 +7,5 @@ export function safecomponentloader() {
     </div>
   )
 }
+  );
+};

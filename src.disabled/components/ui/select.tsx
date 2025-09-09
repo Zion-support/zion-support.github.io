@@ -26,4 +26,5 @@ export function Select(...args: any[]): any {'
 }
 interface: SelectValueProps extends React.PropsWithChildren<{}> {
   placeholder?: string}
-
+  );
+};
