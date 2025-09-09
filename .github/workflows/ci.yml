@@ -31,3 +31,50 @@ jobs:
           SKIP_TYPE_CHECK: 'true'
           ROLLUP_SKIP_NODEJS_NATIVE: 'true'
         run: npm run build:ci
+
+      - name: Upload build artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.0
+          cache: 'npm'
+
+      - name: Install dependencies (clean)
+        run: npm ci --no-audit --no-fund --include=optional
+
+      - name: ESLint
+        run: npm run lint
+
+  typecheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.0
+          cache: 'npm'
+
+      - name: Install dependencies (clean)
+        run: npm ci --no-audit --no-fund --include=optional
+
+      - name: TypeScript Check (no emit)
+        run: npm run type-check
