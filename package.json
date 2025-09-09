@@ -10,13 +10,24 @@
     "type": "git",
     "url": "git+https://github.com/Zion-Holdings/zion.app.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "zion",
+    "tech",
+    "services",
+    "marketplace",
+    "ai",
+    "blockchain",
+    "web3",
+    "react",
+    "vite",
+    "typescript"
+  ],
+  "author": "Zion Holdings <contact@ziontechgroup.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Zion-Holdings/zion.app/issues"
   },
-  "homepage": "https://github.com/Zion-Holdings/zion.app#readme",
+  "homepage": "https://ziontechgroup.com",
   "packageManager": "npm@10.8.2",
   "engines": {
     "node": ">=20.18.1",
@@ -56,7 +67,11 @@
     "optimize:advanced": "node scripts/advanced-optimize.js",
     "build:optimize": "npm run build && npm run optimize",
     "build:advanced": "npm run build && npm run optimize:advanced",
-    "postinstall": "npm rebuild rollup @rollup/rollup-linux-x64-gnu || true"
+    "postinstall": "npm rebuild rollup @rollup/rollup-linux-x64-gnu || true",
+    "deploy": "npm run build && netlify deploy --prod",
+    "deploy:preview": "npm run build && netlify deploy",
+    "health": "curl -f https://ziontechgroup.com/api/health || exit 1",
+    "validate": "npm run type-check && npm run lint && npm run build:ci"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.26.0",

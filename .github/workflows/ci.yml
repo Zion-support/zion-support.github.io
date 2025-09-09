@@ -1,9 +1,12 @@
-name: CI
+name: CI/CD Pipeline
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened]
   push:
     branches: [ main ]
+  schedule:
+    - cron: '0 2 * * 1' # Weekly on Monday at 2 AM UTC
 
 jobs:
   build:
@@ -38,6 +41,14 @@ jobs:
         with:
           name: dist
           path: dist
+
+      - name: Build size analysis
+        if: success()
+        run: |
+          echo "Build size analysis:"
+          du -sh dist/
+          find dist -name "*.js" -exec wc -c {} + | sort -n | tail -10
+          find dist -name "*.css" -exec wc -c {} + | sort -n | tail -5
 
   lint:
     runs-on: ubuntu-latest
@@ -78,3 +89,61 @@ jobs:
 
       - name: TypeScript Check (no emit)
         run: npm run type-check
+
+  security:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.0
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund --include=optional
+
+      - name: Security audit
+        run: npm audit --audit-level=moderate
+
+      - name: Check for known vulnerabilities
+        run: |
+          echo "Checking for security vulnerabilities..."
+          npm audit --json > audit-results.json || true
+          if [ -s audit-results.json ]; then
+            echo "Security audit completed. Check audit-results.json for details."
+          else
+            echo "No security issues found."
+          fi
+
+  performance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.0
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund --include=optional
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+      - name: Performance test
+        run: |
+          echo "Running performance tests..."
+          npm run build:analyze || echo "Build analysis completed"

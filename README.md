@@ -1,265 +1,219 @@
-# Zion Tech Group - AI-Powered IT Solutions Platform
+# Zion Tech Group - Advanced Technology Services Platform
 
-A modern, full-stack web application built with React, TypeScript, and Vite, providing comprehensive IT solutions and AI-powered services.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/your-site-id/deploy-status)](https://app.netlify.com/sites/your-site-name/deploys)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D20.18.1-brightgreen)](https://nodejs.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A cutting-edge technology services platform offering AI, blockchain, web3, and enterprise solutions. Built with modern web technologies and deployed on Netlify.
 
 ## 🚀 Features
 
-- **Modern Tech Stack**: React 18, TypeScript, Vite, Tailwind CSS
-- **AI Integration**: Google Generative AI, OpenAI integration
-- **Authentication**: Supabase Auth with multiple providers
-- **UI Components**: Radix UI components with custom styling
-- **State Management**: React Query for server state, Context API for client state
-- **Performance**: Optimized builds, code splitting, lazy loading
-- **Testing**: Vitest, Cypress, Playwright for comprehensive testing
-- **Deployment**: Netlify-ready with serverless functions
+- **AI & Machine Learning Services** - Advanced AI solutions for businesses
+- **Blockchain & Web3 Integration** - Decentralized applications and smart contracts
+- **Enterprise IT Solutions** - Comprehensive business technology services
+- **Micro-SaaS Platform** - Scalable software-as-a-service offerings
+- **Modern Tech Stack** - React, TypeScript, Vite, and more
+- **Responsive Design** - Mobile-first, accessible user interface
+- **Performance Optimized** - Fast loading and efficient builds
 
 ## 🛠️ Tech Stack
 
-### Frontend
-- **React 18** with TypeScript
-- **Vite** for fast development and optimized builds
-- **Tailwind CSS** for styling
-- **Radix UI** for accessible components
-- **React Router** for navigation
-- **React Query** for data fetching and caching
-
-### Backend & Services
-- **Supabase** for authentication and database
-- **Netlify Functions** for serverless API
-- **Stripe** for payments
-- **Google Analytics** for tracking
-
-### Development Tools
-- **TypeScript** for type safety
-- **ESLint** for code linting
-- **Prettier** for code formatting
-- **Vitest** for unit testing
-- **Cypress** for E2E testing
-- **Playwright** for cross-browser testing
+- **Frontend**: React 18, TypeScript, Vite
+- **UI Framework**: Chakra UI, Radix UI
+- **Styling**: Tailwind CSS, Emotion
+- **State Management**: Redux Toolkit, React Query
+- **Authentication**: NextAuth.js, Supabase
+- **Blockchain**: Ethers.js, Web3 integration
+- **Deployment**: Netlify, Netlify Functions
+- **Testing**: Vitest, Jest, Cypress
+- **Linting**: ESLint, Prettier
 
 ## 📦 Installation
+
+### Prerequisites
+
+- Node.js >= 20.18.1
+- npm >= 10.0.0
+
+### Setup
 
 1. **Clone the repository**
    ```bash
    git clone https://github.com/Zion-Holdings/zion.app.git
    cd zion.app
    ```
+
 2. **Install dependencies**
    ```bash
-   npm install
+   npm ci --no-audit --no-fund --include=optional
    ```
 
-3. **Set up environment variables**
+3. **Environment setup**
    ```bash
    cp .env.example .env.local
+   # Edit .env.local with your configuration
    ```
-   Fill in the required environment variables.
 
 4. **Start development server**
    ```bash
    npm run dev
    ```
 
-### Build
-
-```bash
-npm run build
-```
-
-### Testing
-
-```bash
-# Unit tests
-npm run test
-
-# E2E tests
-npm run test:e2e
-
-# Coverage
-npm run test:coverage
-```
-
-## 📁 Project Structure
-
-```
-src/
-├── components/          # Reusable UI components
-├── pages/              # Page components
-├── context/            # React context providers
-├── hooks/              # Custom React hooks
-├── utils/              # Utility functions
-├── types/              # TypeScript type definitions
-└── test-utils.tsx      # Testing utilities
-```
-
-## 🔧 Configuration
-
-- **Vite**: Build tool and dev server configuration
-- **ESLint**: Code linting rules
-- **TypeScript**: Type checking configuration
-- **Tailwind**: CSS framework configuration
-
 ## 🚀 Deployment
 
-The application is configured for deployment on Netlify with:
+### Netlify (Recommended)
 
-- Automatic builds on push to main
-- Environment variable management
-- Redirect rules for SPA routing
-- Performance optimizations
+The project is configured for automatic deployment on Netlify:
 
-## 📊 Performance
+```bash
+# Deploy to preview
+npm run deploy:preview
 
-- Bundle size optimization
-- Code splitting
-- Lazy loading
-- Image optimization
-- Caching strategies
+# Deploy to production
+npm run deploy
+```
 
-## 🔒 Security
+### Manual Build
 
-- Input sanitization
-- XSS protection
-- CSRF tokens
-- Content Security Policy
-- Secure headers
+```bash
+# Production build
+npm run build:ci
 
-## 🚀 Available Scripts
+# Build with analysis
+npm run build:analyze
+```
 
-### Development
-- `npm run dev` - Start development server
-- `npm run dev:check` - Start dev server with type checking
-- `npm run build` - Build for production
-- `npm run build:check` - Build with type checking
-- `npm run build:clean` - Clean build (removes dist and rebuilds)
-- `npm run build:analyze` - Build with bundle analysis
-- `npm run preview` - Preview production build
+## 📜 Available Scripts
 
-### Code Quality
-- `npm run lint` - Run ESLint
-- `npm run lint:fix` - Fix ESLint issues
-- `npm run type-check` - Run TypeScript type checking
-- `npm run format` - Format code with Prettier
-- `npm run format:check` - Check code formatting
-
-### Testing
-- `npm run test` - Run unit tests
-- `npm run test:watch` - Run tests in watch mode
-- `npm run test:coverage` - Run tests with coverage
-- `npm run test:ui` - Run tests with UI
-- `npm run test:e2e` - Run E2E tests
-- `npm run cypress:open` - Open Cypress test runner
-- `npm run cypress:run` - Run Cypress tests
-
-### Utilities
-- `npm run clean` - Clean build artifacts
-- `npm run analyze` - Analyze bundle size
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run build:ci` | CI-optimized build |
+| `npm run build:analyze` | Build with bundle analysis |
+| `npm run test` | Run test suite |
+| `npm run test:coverage` | Run tests with coverage |
+| `npm run lint` | Run ESLint |
+| `npm run lint:fix` | Fix ESLint issues |
+| `npm run type-check` | Run TypeScript checks |
+| `npm run validate` | Run all validation checks |
+| `npm run deploy` | Deploy to production |
+| `npm run health` | Check application health |
 
 ## 🏗️ Project Structure
 
 ```
-src/
-├── components/          # Reusable UI components
-│   ├── ui/             # Base UI components
-│   ├── auth/           # Authentication components
-│   ├── forms/          # Form components
-│   └── layout/         # Layout components
-├── pages/              # Page components
-├── hooks/              # Custom React hooks
-├── context/            # React Context providers
-├── services/           # API services
-├── utils/              # Utility functions
-├── types/              # TypeScript type definitions
-└── assets/             # Static assets
+zion.app/
+├── app/                    # Next.js app directory
+├── components/             # Reusable React components
+├── pages/                  # Application pages
+├── public/                 # Static assets
+├── styles/                 # Global styles
+├── utils/                  # Utility functions
+├── types/                  # TypeScript type definitions
+├── netlify/                # Netlify functions
+├── scripts/                # Build and utility scripts
+├── tests/                  # Test files
+├── vite.config.ts          # Vite configuration
+├── netlify.toml            # Netlify configuration
+└── package.json            # Dependencies and scripts
 ```
 
 ## 🔧 Configuration
 
-### TypeScript
-The project uses strict TypeScript configuration for better type safety:
-- Strict mode enabled
-- Unused variables/parameters detection
-- Strict null checks
-- No implicit any
+### Netlify Configuration
 
-### Vite
-Optimized Vite configuration with:
-- ESBuild for fast minification
-- Manual chunk splitting for better caching
-- CSS code splitting
-- Bundle analysis support
+The project uses `netlify.toml` for deployment configuration:
 
-### Netlify
-Configured for seamless deployment:
-- Build command: `npm run build`
-- Publish directory: `dist`
-- Node.js 20
-- Serverless functions support
+- **Build Command**: `npm ci --no-audit --no-fund --include=optional && npm run build:ci`
+- **Publish Directory**: `dist`
+- **Functions Directory**: `netlify/functions`
+- **Node Version**: 20.19.0
 
-## 🚀 Deployment
+### Environment Variables
 
-### Netlify (Recommended)
-1. Connect your GitHub repository to Netlify
-2. Set build command: `npm run build`
-3. Set publish directory: `dist`
-4. Configure environment variables
-5. Deploy!
+Key environment variables (see `.env.example`):
 
-### Manual Deployment
-1. Build the project: `npm run build`
-2. Upload the `dist` folder to your hosting provider
-3. Configure your server to serve the SPA
+```env
+NODE_ENV=production
+NEXT_PUBLIC_SITE_URL=https://ziontechgroup.com
+NEXT_PUBLIC_API_URL=https://api.ziontechgroup.com
+# Add other required variables
+```
 
 ## 🧪 Testing
 
-The project includes comprehensive testing setup:
+```bash
+# Run all tests
+npm run test
 
-- **Unit Tests**: Vitest for component and utility testing
-- **E2E Tests**: Playwright for end-to-end testing
-- **Component Tests**: Cypress for component testing
-- **Accessibility Tests**: Automated a11y testing
+# Run tests with coverage
+npm run test:coverage
 
-## 📈 Performance
+# Run E2E tests
+npm run cypress:run
 
-- **Code Splitting**: Automatic and manual chunk splitting
-- **Lazy Loading**: Components and routes loaded on demand
-- **Bundle Optimization**: Tree shaking and dead code elimination
-- **Caching**: Optimized caching strategies for assets and API calls
+# Run accessibility tests
+npm run test:accessibility
+```
 
-## ♿ Accessibility
+## 📊 Performance
 
-- WCAG 2.1 compliance
-- Screen reader support
-- Keyboard navigation
-- Focus management
-- ARIA attributes
+The application is optimized for performance:
 
-## 📈 Analytics
+- **Bundle Analysis**: `npm run build:analyze`
+- **Performance Monitoring**: Built-in performance tracking
+- **Image Optimization**: Automatic image optimization
+- **Code Splitting**: Dynamic imports for optimal loading
 
-- Google Analytics integration
-- Performance monitoring
-- Error tracking
-- User behavior analytics
+## 🔒 Security
+
+- **Content Security Policy**: Configured in `netlify.toml`
+- **Security Headers**: Comprehensive security headers
+- **Dependency Scanning**: Regular security audits
+- **Environment Protection**: Secure environment variable handling
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+### Development Guidelines
+
+- Follow TypeScript best practices
+- Write tests for new features
+- Ensure accessibility compliance
+- Maintain performance standards
+- Follow the established code style
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🆘 Support
+## 🌐 Live Demo
 
-For support, email support@ziontechgroup.com or join our Discord community.
+- **Production**: [https://ziontechgroup.com](https://ziontechgroup.com)
+- **Staging**: [https://staging.ziontechgroup.com](https://staging.ziontechgroup.com)
 
-## 🔗 Links
+## 📞 Support
 
-- [Live Demo](https://zion.app)
-- [Documentation](https://docs.zion.app)
-- [API Reference](https://api.zion.app/docs)
-- [Community](https://discord.gg/zion)
+- **Email**: contact@ziontechgroup.com
+- **Issues**: [GitHub Issues](https://github.com/Zion-Holdings/zion.app/issues)
+- **Documentation**: [Wiki](https://github.com/Zion-Holdings/zion.app/wiki)
+
+## 🏢 About Zion Tech Group
+
+Zion Tech Group is a leading technology services company specializing in:
+
+- Artificial Intelligence & Machine Learning
+- Blockchain & Web3 Development
+- Enterprise IT Solutions
+- Cloud Infrastructure
+- Digital Transformation
+
+---
+
+**Built with ❤️ by the Zion Tech Group Team**
