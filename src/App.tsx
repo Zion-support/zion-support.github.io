@@ -4,21 +4,13 @@ import { AppHeader } from './layout/AppHeader.tsx';
 import { Footer } from './components/Footer.tsx';
 import { ChatAssistant } from './components/ChatAssistant.tsx';
 
-// Lazy load pages - only import existing ones
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
-const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const PartnersPage = React.lazy(() => import('./pages/Partners'));
-const Login = React.lazy(() => import('./pages/Login'));
-const FAQ = React.lazy(() => import('./pages/FAQ'));
-const Careers = React.lazy(() => import('./pages/Careers'));
-const Privacy = React.lazy(() => import('./pages/Privacy'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
-const Demo = React.lazy(() => import('./pages/Demo'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const AllServices2025 = React.lazy(() => import('./pages/AllServices2025'));
+// Lazy load pages
+const Home = React.lazy(() => import('./pages/Home.jsx'));
+const About = React.lazy(() => import('./pages/About.jsx'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage.jsx'));
+const ComprehensiveServices = React.lazy(() => import('./pages/ComprehensiveServices.jsx'));
+const Contact = React.lazy(() => import('./pages/Contact.jsx'));
+const Login = React.lazy(() => import('./pages/Login.jsx'));
 
 // New service pages
 const ServicesIndex = React.lazy(() => import('./pages/services/index'));
@@ -105,6 +97,8 @@ function App() {
               {/* Main pages */}
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />

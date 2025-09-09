@@ -392,6 +392,324 @@ const SERVICE_LISTINGS = [
         rating: 4.9,
         reviewCount: 124,
     },
+    
+    // Emerging Technology Services
+    {
+        id: "blockchain-development",
+        title: "Blockchain & Web3 Development",
+        description: "Custom blockchain solutions, smart contracts, DeFi applications, and Web3 integration services for modern businesses.",
+        category: "Emerging Tech",
+        price: 89,
+        currency: "$",
+        tags: ["Blockchain", "Smart Contracts", "DeFi", "Web3"],
+        author: {
+            name: "Zion Blockchain Labs",
+            id: "zion-blockchain",
+            avatarUrl: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-05T08:30:00.000Z",
+        aiScore: 96,
+        rating: 4.8,
+        reviewCount: 89,
+    },
+    {
+        id: "iot-platform",
+        title: "IoT Platform & Analytics",
+        description: "End-to-end IoT solutions including device management, data collection, real-time analytics, and predictive maintenance.",
+        category: "Emerging Tech",
+        price: 69,
+        currency: "$",
+        tags: ["IoT", "Device Management", "Real-time Analytics", "Predictive Maintenance"],
+        author: {
+            name: "Zion IoT Solutions",
+            id: "zion-iot",
+            avatarUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-06T11:15:00.000Z",
+        aiScore: 93,
+        rating: 4.7,
+        reviewCount: 67,
+    },
+    {
+        id: "quantum-computing",
+        title: "Quantum Computing Solutions",
+        description: "Quantum algorithm development, optimization problems, and quantum-ready applications for research and enterprise.",
+        category: "Emerging Tech",
+        price: 299,
+        currency: "$",
+        tags: ["Quantum Computing", "Algorithm Development", "Optimization", "Research"],
+        author: {
+            name: "Zion Quantum Labs",
+            id: "zion-quantum",
+            avatarUrl: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-07T14:20:00.000Z",
+        aiScore: 97,
+        rating: 4.9,
+        reviewCount: 34,
+    },
+    
+    // Industry-Specific Solutions
+    {
+        id: "healthcare-ai",
+        title: "Healthcare AI Platform",
+        description: "HIPAA-compliant AI solutions for medical imaging, patient data analysis, drug discovery, and clinical decision support.",
+        category: "Healthcare",
+        price: 199,
+        currency: "$",
+        tags: ["Healthcare AI", "Medical Imaging", "HIPAA Compliant", "Clinical Support"],
+        author: {
+            name: "Zion Health Tech",
+            id: "zion-health-tech",
+            avatarUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-08T09:45:00.000Z",
+        aiScore: 95,
+        rating: 4.8,
+        reviewCount: 156,
+    },
+    {
+        id: "fintech-solutions",
+        title: "FinTech AI Platform",
+        description: "AI-powered financial services including fraud detection, risk assessment, algorithmic trading, and regulatory compliance.",
+        category: "Finance",
+        price: 149,
+        currency: "$",
+        tags: ["FinTech", "Fraud Detection", "Risk Assessment", "Regulatory Compliance"],
+        author: {
+            name: "Zion FinTech",
+            id: "zion-fintech",
+            avatarUrl: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-09T13:30:00.000Z",
+        aiScore: 94,
+        rating: 4.9,
+        reviewCount: 203,
+    },
+    {
+        id: "education-ai",
+        title: "AI-Powered Education Platform",
+        description: "Personalized learning experiences, adaptive curriculum, student performance analytics, and automated assessment tools.",
+        category: "Education",
+        price: 79,
+        currency: "$",
+        tags: ["Education AI", "Personalized Learning", "Adaptive Curriculum", "Student Analytics"],
+        author: {
+            name: "Zion EdTech",
+            id: "zion-edtech",
+            avatarUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-10T10:15:00.000Z",
+        aiScore: 92,
+        rating: 4.7,
+        reviewCount: 89,
+    },
+    
+    // Advanced AI Services
+    {
+        id: "computer-vision",
+        title: "Computer Vision Solutions",
+        description: "Advanced image and video analysis, object detection, facial recognition, and visual AI for automation and quality control.",
+        category: "Advanced AI",
+        price: 129,
+        currency: "$",
+        tags: ["Computer Vision", "Object Detection", "Facial Recognition", "Visual AI"],
+        author: {
+            name: "Zion Vision AI",
+            id: "zion-vision",
+            avatarUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-11T15:20:00.000Z",
+        aiScore: 96,
+        rating: 4.8,
+        reviewCount: 178,
+    },
+    {
+        id: "nlp-platform",
+        title: "Natural Language Processing Platform",
+        description: "Advanced NLP solutions for sentiment analysis, language translation, chatbots, and document processing automation.",
+        category: "Advanced AI",
+        price: 89,
+        currency: "$",
+        tags: ["NLP", "Sentiment Analysis", "Language Translation", "Chatbots"],
+        author: {
+            name: "Zion NLP Labs",
+            id: "zion-nlp",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-12T12:00:00.000Z",
+        aiScore: 95,
+        rating: 4.9,
+        reviewCount: 145,
+    },
+    
+    // Digital Transformation Services
+    {
+        id: "legacy-modernization",
+        title: "Legacy System Modernization",
+        description: "Transform outdated systems into modern, cloud-native applications with microservices architecture and API-first design.",
+        category: "Digital Transformation",
+        price: 399,
+        currency: "$",
+        tags: ["Legacy Modernization", "Microservices", "Cloud-Native", "API Design"],
+        author: {
+            name: "Zion Digital Transformation",
+            id: "zion-digital",
+            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-13T08:45:00.000Z",
+        aiScore: 91,
+        rating: 4.6,
+        reviewCount: 78,
+    },
+    {
+        id: "api-management",
+        title: "API Management & Integration",
+        description: "Comprehensive API development, management, and integration services for seamless system connectivity and data flow.",
+        category: "Digital Transformation",
+        price: 69,
+        currency: "$",
+        tags: ["API Management", "System Integration", "Data Flow", "Connectivity"],
+        author: {
+            name: "Zion API Solutions",
+            id: "zion-api",
+            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-14T11:30:00.000Z",
+        aiScore: 93,
+        rating: 4.7,
+        reviewCount: 112,
+    },
+    
+    // Compliance & Governance
+    {
+        id: "gdpr-compliance",
+        title: "GDPR & Data Privacy Compliance",
+        description: "Complete GDPR compliance solutions including data mapping, privacy impact assessments, and automated compliance monitoring.",
+        category: "Compliance",
+        price: 179,
+        currency: "$",
+        tags: ["GDPR", "Data Privacy", "Compliance Monitoring", "Privacy Impact"],
+        author: {
+            name: "Zion Compliance",
+            id: "zion-compliance",
+            avatarUrl: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-15T14:15:00.000Z",
+        aiScore: 94,
+        rating: 4.8,
+        reviewCount: 89,
+    },
+    {
+        id: "soc2-compliance",
+        title: "SOC2 Type II Compliance",
+        description: "SOC2 Type II certification services including security controls, monitoring, and continuous compliance management.",
+        category: "Compliance",
+        price: 299,
+        currency: "$",
+        tags: ["SOC2", "Security Controls", "Compliance Management", "Certification"],
+        author: {
+            name: "Zion Security Compliance",
+            id: "zion-security-compliance",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-16T09:00:00.000Z",
+        aiScore: 96,
+        rating: 4.9,
+        reviewCount: 67,
+    },
+    
+    // Performance & Monitoring
+    {
+        id: "apm-platform",
+        title: "Application Performance Monitoring",
+        description: "Real-time application performance monitoring, error tracking, and performance optimization for web and mobile applications.",
+        category: "Performance",
+        price: 49,
+        currency: "$",
+        tags: ["APM", "Performance Monitoring", "Error Tracking", "Optimization"],
+        author: {
+            name: "Zion Performance",
+            id: "zion-performance",
+            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-17T13:45:00.000Z",
+        aiScore: 92,
+        rating: 4.7,
+        reviewCount: 134,
+    },
+    {
+        id: "observability-platform",
+        title: "Full-Stack Observability",
+        description: "Comprehensive observability platform with distributed tracing, metrics collection, and intelligent alerting for modern applications.",
+        category: "Performance",
+        price: 79,
+        currency: "$",
+        tags: ["Observability", "Distributed Tracing", "Metrics Collection", "Intelligent Alerting"],
+        author: {
+            name: "Zion Observability",
+            id: "zion-observability",
+            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-18T10:30:00.000Z",
+        aiScore: 93,
+        rating: 4.8,
+        reviewCount: 98,
+    },
+    
+    // Data Services
+    {
+        id: "data-engineering",
+        title: "Data Engineering Platform",
+        description: "End-to-end data engineering solutions including ETL pipelines, data lakes, real-time streaming, and data quality management.",
+        category: "Data Services",
+        price: 159,
+        currency: "$",
+        tags: ["Data Engineering", "ETL Pipelines", "Data Lakes", "Real-time Streaming"],
+        author: {
+            name: "Zion Data Engineering",
+            id: "zion-data-engineering",
+            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-19T11:15:00.000Z",
+        aiScore: 95,
+        rating: 4.8,
+        reviewCount: 167,
+    },
+    {
+        id: "real-time-analytics",
+        title: "Real-Time Analytics Platform",
+        description: "Real-time data processing, streaming analytics, and instant insights for time-sensitive business decisions and operations.",
+        category: "Data Services",
+        price: 119,
+        currency: "$",
+        tags: ["Real-time Analytics", "Streaming Analytics", "Instant Insights", "Time-sensitive"],
+        author: {
+            name: "Zion Real-time Analytics",
+            id: "zion-realtime",
+            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
+        },
+        images: ["https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-02-20T15:20:00.000Z",
+        aiScore: 94,
+        rating: 4.7,
+        reviewCount: 89,
+    },
     {
         id: "service-2",
         title: "Cloud Infrastructure Management",
@@ -574,6 +892,15 @@ const SERVICE_FILTERS = [
     { label: 'Business Intelligence', value: 'business-intelligence' },
     { label: 'Communication', value: 'communication' },
     { label: 'Specialized Tools', value: 'specialized-tools' },
+    { label: 'Emerging Tech', value: 'emerging-tech' },
+    { label: 'Healthcare', value: 'healthcare' },
+    { label: 'Finance', value: 'finance' },
+    { label: 'Education', value: 'education' },
+    { label: 'Advanced AI', value: 'advanced-ai' },
+    { label: 'Digital Transformation', value: 'digital-transformation' },
+    { label: 'Compliance', value: 'compliance' },
+    { label: 'Performance', value: 'performance' },
+    { label: 'Data Services', value: 'data-services' },
     { label: 'Development', value: 'development' },
     { label: 'Management', value: 'management' },
     { label: 'Security', value: 'security' },
@@ -613,10 +940,90 @@ export default function ServicesPage() {
 
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-zion-blue mb-4">IT & AI Services</h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Find expert technology service providers for your business needs, from AI development to infrastructure management.
+          <h1 className="text-4xl font-bold text-zion-blue mb-4">Comprehensive IT & AI Services</h1>
+          <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
+            Discover cutting-edge technology solutions across 20+ categories. From AI-powered applications to emerging technologies like blockchain and quantum computing, 
+            we provide enterprise-grade services with competitive pricing and proven results. All services include expert consultation, implementation support, and ongoing maintenance.
           </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-zion-slate-light">
+            <span className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-zion-cyan rounded-full"></span>
+              20+ Service Categories
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-zion-purple rounded-full"></span>
+              Enterprise-Grade Solutions
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-zion-blue rounded-full"></span>
+              Competitive Pricing
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              Expert Support
+            </span>
+          </div>
+        </div>
+
+        {/* Service Categories Overview */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold text-zion-blue mb-6 text-center">Service Categories Overview</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-gradient-to-br from-zion-blue to-zion-blue-dark p-6 rounded-lg text-white">
+              <h3 className="text-lg font-semibold mb-3">AI & Machine Learning</h3>
+              <p className="text-sm opacity-90 mb-4">Advanced AI solutions for content generation, analytics, and automation</p>
+              <div className="text-xs opacity-75">Starting from $19/month</div>
+            </div>
+            <div className="bg-gradient-to-br from-zion-purple to-zion-purple-dark p-6 rounded-lg text-white">
+              <h3 className="text-lg font-semibold mb-3">Emerging Technologies</h3>
+              <p className="text-sm opacity-90 mb-4">Blockchain, IoT, and quantum computing solutions</p>
+              <div className="text-xs opacity-75">Starting from $69/month</div>
+            </div>
+            <div className="bg-gradient-to-br from-zion-cyan to-blue-600 p-6 rounded-lg text-white">
+              <h3 className="text-lg font-semibold mb-3">Industry Solutions</h3>
+              <p className="text-sm opacity-90 mb-4">Healthcare, finance, and education-specific AI platforms</p>
+              <div className="text-xs opacity-75">Starting from $79/month</div>
+            </div>
+            <div className="bg-gradient-to-br from-green-500 to-green-700 p-6 rounded-lg text-white">
+              <h3 className="text-lg font-semibold mb-3">Compliance & Security</h3>
+              <p className="text-sm opacity-90 mb-4">GDPR, SOC2, and cybersecurity compliance services</p>
+              <div className="text-xs opacity-75">Starting from $99/month</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Why Choose Zion Tech Group */}
+        <div className="mb-12 bg-gradient-to-r from-zinc-50 to-zinc-100 p-8 rounded-lg">
+          <h2 className="text-2xl font-bold text-zion-blue mb-6 text-center">Why Choose Zion Tech Group?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-zion-blue mb-2">Cutting-Edge Technology</h3>
+              <p className="text-zion-slate-light">Latest AI, blockchain, and emerging tech solutions</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-zion-blue mb-2">Enterprise-Grade Quality</h3>
+              <p className="text-zion-slate-light">Professional solutions with proven track records</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-zion-blue mb-2">Expert Support Team</h3>
+              <p className="text-zion-slate-light">24/7 technical support and consultation</p>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -649,6 +1056,65 @@ export default function ServicesPage() {
                 </Button>
               </Link>
             </div>))}
+        </div>
+
+        {/* Call to Action Section */}
+        <div className="mt-16 bg-gradient-to-r from-zion-blue to-zion-blue-dark p-8 rounded-lg text-white text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+          <p className="text-xl opacity-90 mb-6 max-w-2xl mx-auto">
+            Get started with our cutting-edge technology solutions today. Our expert team is ready to help you choose the right services and implement them successfully.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact">
+              <Button className="bg-white text-zion-blue hover:bg-zinc-100 px-8 py-3 text-lg">
+                Get Free Consultation
+              </Button>
+            </Link>
+            <a href="tel:+13024640950" className="inline-flex items-center gap-2 bg-zion-cyan text-white px-8 py-3 rounded-lg hover:bg-zion-cyan-dark transition-colors">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call Now: +1 302 464 0950
+            </a>
+          </div>
+        </div>
+
+        {/* Contact Information */}
+        <div className="mt-12 bg-white p-8 rounded-lg shadow-lg">
+          <h2 className="text-2xl font-bold text-zion-blue mb-6 text-center">Contact Zion Tech Group</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-zion-blue mb-2">Phone</h3>
+              <p className="text-zion-slate-light">+1 302 464 0950</p>
+              <p className="text-sm text-zion-slate-light">Available 24/7</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-zion-blue mb-2">Email</h3>
+              <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>
+              <p className="text-sm text-zion-slate-light">Quick response guaranteed</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-zion-blue mb-2">Address</h3>
+              <p className="text-zion-slate-light">364 E Main St STE 1008</p>
+              <p className="text-zion-slate-light">Middletown DE 19709</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>);
