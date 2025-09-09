@@ -2,88 +2,96 @@ import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
-  Users, Handshake, Globe, Target, Star, ArrowRight,
+  Rocket, BarChart3, Globe, Zap, Target, Users, 
+  Satellite, Brain, Clock, Star, ArrowRight,
   CheckCircle, Play, BookOpen, MessageCircle, Phone,
-  Building, Award, Zap, Shield, Brain, Rocket
+  Cpu, Database, Network, Server, Monitor, MapPin
 } from 'lucide-react';
 
-const Partners: React.FC = () => {
-  const partnershipTypes = [
+const SpaceDataAnalyticsPlatform: React.FC = () => {
+  const features = [
     {
-      icon: <Building className="w-6 h-6" />,
-      title: 'Technology Partners',
-      description: 'Collaborate on cutting-edge technology solutions and joint product development.',
-      benefits: [
-        'Access to our technology stack',
-        'Joint go-to-market strategies',
-        'Shared R&D resources',
-        'Co-innovation opportunities'
-      ]
+      icon: <Satellite className="w-6 h-6" />,
+      title: 'Satellite Data Processing',
+      description: 'Advanced algorithms for processing and analyzing satellite imagery and telemetry data.'
+    },
+    {
+      icon: <Brain className="w-6 h-6" />,
+      title: 'AI-Powered Insights',
+      description: 'Machine learning models that extract meaningful patterns from complex space data.'
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: 'Channel Partners',
-      description: 'Distribute our solutions through your established sales channels and networks.',
-      benefits: [
-        'Competitive commission structure',
-        'Marketing and sales support',
-        'Training and certification',
-        'Dedicated partner success team'
-      ]
+      title: 'Global Coverage',
+      description: 'Comprehensive data collection from satellites, ground stations, and space missions.'
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: 'Strategic Partners',
-      description: 'Long-term strategic relationships for market expansion and innovation.',
-      benefits: [
-        'Exclusive partnership agreements',
-        'Shared intellectual property',
-        'Joint venture opportunities',
-        'Board-level collaboration'
-      ]
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: 'Real-time Analytics',
+      description: 'Live data processing and visualization for immediate decision-making.'
     },
     {
-      icon: <Rocket className="w-6 h-6" />,
-      title: 'Startup Partners',
-      description: 'Support emerging technology companies with mentorship and resources.',
-      benefits: [
-        'Access to our innovation lab',
-        'Mentorship from industry experts',
-        'Investment opportunities',
-        'Market access support'
-      ]
+      icon: <MapPin className="w-6 h-6" />,
+      title: 'Geospatial Analysis',
+      description: 'Advanced mapping and spatial analysis tools for Earth observation data.'
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: 'Predictive Modeling',
+      description: 'Forecast space weather, orbital dynamics, and environmental changes.'
     }
   ];
 
-  const industries = [
-    'Artificial Intelligence & Machine Learning',
-    'Quantum Computing & Cryptography',
-    'Space Technology & Satellite Systems',
-    'Blockchain & Web3 Solutions',
-    'Edge Computing & IoT',
-    'Metaverse & Virtual Reality',
-    'Cybersecurity & Privacy',
-    'Cloud Infrastructure & DevOps'
+  const applications = [
+    'Climate Change Monitoring',
+    'Disaster Response',
+    'Agricultural Intelligence',
+    'Urban Planning',
+    'Oceanography Research',
+    'Atmospheric Science',
+    'Space Debris Tracking',
+    'Satellite Constellation Management'
   ];
 
-  const successStories = [
+  const pricing = [
     {
-      company: 'TechCorp Solutions',
-      industry: 'AI & Machine Learning',
-      result: 'Increased revenue by 300% through joint AI solution development',
-      testimonial: 'Working with Zion Tech Group has transformed our AI capabilities and market position.'
+      name: 'Explorer',
+      price: '$1,899',
+      period: 'month',
+      features: [
+        'Basic satellite data access',
+        'Standard analytics tools',
+        'Email support',
+        'Monthly reports',
+        'Up to 10GB data storage'
+      ]
     },
     {
-      company: 'QuantumSecure Inc',
-      industry: 'Quantum Technology',
-      result: 'Launched breakthrough quantum encryption product in 6 months',
-      testimonial: 'The partnership accelerated our time-to-market by leveraging Zion\'s quantum expertise.'
+      name: 'Professional',
+      price: '$3,999',
+      period: 'month',
+      features: [
+        'Advanced data processing',
+        'AI-powered insights',
+        'Priority support',
+        'Custom dashboards',
+        'Up to 100GB data storage',
+        'API access'
+      ],
+      popular: true
     },
     {
-      company: 'SpaceData Systems',
-      industry: 'Space Technology',
-      result: 'Expanded to 15 new markets with satellite data solutions',
-      testimonial: 'Zion\'s global reach and technical expertise opened doors we never thought possible.'
+      name: 'Enterprise',
+      price: '$7,999',
+      period: 'month',
+      features: [
+        'Full platform access',
+        'Custom AI models',
+        'Dedicated support team',
+        'Unlimited data storage',
+        'Custom integrations',
+        'SLA guarantees'
+      ]
     }
   ];
 
@@ -99,33 +107,33 @@ const Partners: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-400 text-sm font-medium mb-6">
-                <Handshake className="w-4 h-4 mr-2" />
-                Partnership Opportunities
+                <Rocket className="w-4 h-4 mr-2" />
+                Space Technology
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Partner With Zion Tech Group
+                Space Data Analytics Platform
               </h1>
               
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Join our global network of technology partners and together we'll shape the future 
-                of AI, quantum computing, space technology, and beyond.
+                Comprehensive platform for processing, analyzing, and visualizing satellite and space data 
+                with AI-powered insights for Earth observation and space exploration.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
-                  Become a Partner
+                  Start Free Trial
                 </button>
                 <button className="px-8 py-4 border border-cyan-400/20 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all duration-200">
                   <Play className="w-5 h-5 inline mr-2" />
-                  Watch Partnership Overview
+                  Watch Demo
                 </button>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Partnership Types Section */}
+        {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -136,47 +144,39 @@ const Partners: React.FC = () => {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Partnership Opportunities
+                Advanced Space Data Capabilities
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Choose the partnership model that best fits your business goals and objectives
+                Harness the power of space data with cutting-edge analytics and AI
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {partnershipTypes.map((type, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gray-900/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300"
+                  className="bg-gray-900/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-6">
-                    {type.icon}
+                  <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4">
+                    {feature.icon}
                   </div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">
-                    {type.title}
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {feature.title}
                   </h3>
-                  <p className="text-gray-400 mb-6">
-                    {type.description}
+                  <p className="text-gray-400">
+                    {feature.description}
                   </p>
-                  <ul className="space-y-3">
-                    {type.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                        <span className="text-gray-300">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Industries Section */}
+        {/* Applications Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -187,15 +187,15 @@ const Partners: React.FC = () => {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Industries We Serve
+                Real-World Applications
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Partner with us across diverse technology sectors and markets
+                From climate research to urban planning, our platform serves diverse industries
               </p>
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {industries.map((industry, index) => (
+              {applications.map((application, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -205,16 +205,16 @@ const Partners: React.FC = () => {
                   className="text-center"
                 >
                   <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Star className="w-8 h-8 text-cyan-400" />
+                    <Globe className="w-8 h-8 text-cyan-400" />
                   </div>
-                  <p className="text-white font-medium text-sm">{industry}</p>
+                  <p className="text-white font-medium">{application}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Success Stories Section */}
+        {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -225,31 +225,59 @@ const Partners: React.FC = () => {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Partner Success Stories
+                Choose Your Data Access Level
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                See how our partners have achieved remarkable results through collaboration
+                Flexible plans to match your space data analytics needs
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {successStories.map((story, index) => (
+              {pricing.map((plan, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gray-900/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6"
+                  className={`relative bg-gray-900/50 backdrop-blur-sm border rounded-xl p-8 ${
+                    plan.popular 
+                      ? 'border-cyan-400/40 bg-cyan-400/5' 
+                      : 'border-cyan-400/20'
+                  }`}
                 >
-                  <div className="mb-4">
-                    <h3 className="text-xl font-semibold text-white mb-2">{story.company}</h3>
-                    <p className="text-cyan-400 text-sm">{story.industry}</p>
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold rounded-full">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
+                    <div className="mb-6">
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400">/{plan.period}</span>
+                    </div>
                   </div>
-                  <p className="text-gray-300 mb-4">{story.result}</p>
-                  <blockquote className="text-gray-400 italic text-sm">
-                    "{story.testimonial}"
-                  </blockquote>
+
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
+                      : 'border border-cyan-400/20 text-cyan-400 hover:bg-cyan-400/10'
+                  }`}>
+                    Get Started
+                  </button>
                 </motion.div>
               ))}
             </div>
@@ -266,20 +294,20 @@ const Partners: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Partner With Us?
+                Ready to Explore Space Data?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join our global network and together we'll create the technologies of tomorrow
+                Join the space data revolution and unlock insights from Earth observation and space exploration
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
-                  Start Partnership Discussion
+                  Start Free Trial
                 </button>
                 <a
                   href="/contact"
                   className="px-8 py-4 border border-cyan-400/20 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all duration-200"
                 >
-                  Contact Partnership Team
+                  Contact Sales
                 </a>
               </div>
             </motion.div>
@@ -290,4 +318,4 @@ const Partners: React.FC = () => {
   );
 };
 
-export default Partners;
+export default SpaceDataAnalyticsPlatform;
