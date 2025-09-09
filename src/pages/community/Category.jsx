@@ -6,7 +6,7 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import { Alert } from '@/components/ui/alert';
 import PostCard from '@/components/community/PostCard';
 import Empty from '@/components/community/Empty';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import {logErrorToProduction} from '@/utils/productionLogger';
 
 

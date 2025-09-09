@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from useParams, useNavigate
 import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'; // Assuming this component exists
 import { toast } from '@/hooks/use-toast'; // Assuming this hook exists

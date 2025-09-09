@@ -1,5 +1,5 @@
 
-import { Button } from "./ui/button";
+import { Button } from "./ui/Button";
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
 
 
