@@ -214,7 +214,7 @@ export const PerformanceMonitor = memo(() => {
 });
 
 // Main performance optimizations wrapper
-export const PerformanceOptimizations: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const PerformanceOptimizations: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <ErrorBoundary>
       <Suspense fallback={<LoadingSpinner />}>

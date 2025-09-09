@@ -15,7 +15,7 @@ interface PerformanceMetrics {
   metrics: Record<string, number>;
 }
 
-export const PerformanceDashboard: React.FC = () => {
+const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     fid: null,
@@ -181,3 +181,5 @@ export const PerformanceDashboard: React.FC = () => {
     </div>
   );
 };
+
+export default PerformanceDashboard;

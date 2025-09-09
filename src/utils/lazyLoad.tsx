@@ -115,6 +115,10 @@ export const LazyImage: React.FC<LazyImageProps> = ({
   );
 };
 
+// Lazy loaded components for performance dashboard
+export const LazyPerformanceDashboard = lazy(() => import('../components/PerformanceDashboard'));
+export const LazyPerformanceOptimizations = lazy(() => import('../components/PerformanceOptimizations'));
+
 export default {
   withLazyLoad,
   LazyHome,
@@ -123,6 +127,8 @@ export default {
   LazyNotFound,
   LazyAnalytics,
   LazyPerformanceMonitor,
+  LazyPerformanceDashboard,
+  LazyPerformanceOptimizations,
   preloadComponent,
   useIntersectionObserver,
   LazyImage,
