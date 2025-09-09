@@ -28,6 +28,7 @@ export default defineConfig({
     target: 'esnext',
     minify: 'terser',
     sourcemap: false,
+    reportCompressedSize: false,
     terserOptions: {
       compress: {
         drop_console: true,
@@ -43,7 +44,13 @@ export default defineConfig({
         hoist_funs: true,
         hoist_vars: true,
         reduce_vars: true,
-        side_effects: false
+        side_effects: false,
+        dead_code: true,
+        conditionals: true,
+        evaluate: true,
+        loops: true,
+        sequences: true,
+        unused: true
       },
       mangle: {
         toplevel: true,
@@ -114,7 +121,24 @@ export default defineConfig({
       'clsx',
       'tailwind-merge',
       'react-helmet-async',
-      'react-error-boundary'
+      'react-error-boundary',
+      '@radix-ui/react-accordion',
+      '@radix-ui/react-avatar',
+      '@radix-ui/react-checkbox',
+      '@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-label',
+      '@radix-ui/react-popover',
+      '@radix-ui/react-progress',
+      '@radix-ui/react-radio-group',
+      '@radix-ui/react-scroll-area',
+      '@radix-ui/react-select',
+      '@radix-ui/react-separator',
+      '@radix-ui/react-slider',
+      '@radix-ui/react-slot',
+      '@radix-ui/react-switch',
+      '@radix-ui/react-tabs',
+      '@radix-ui/react-toast',
+      '@radix-ui/react-tooltip'
     ],
     exclude: ['@vite/client', '@vite/env']
   },
