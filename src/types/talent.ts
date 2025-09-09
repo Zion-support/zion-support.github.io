@@ -28,10 +28,6 @@ export interface TalentProfile {
   }>;
   createdAt: string;
   updatedAt: string;
-  fullName?: string;
-  professionalTitle?: string;
-  key_projects?: string[];
-  full_name?: string;
 }
 
 export interface TalentFilter {

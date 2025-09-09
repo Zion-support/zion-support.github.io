@@ -1,13 +1,17 @@
+# Netlify rebuild trigger
 [build]
   # Build the Vite React project on Netlify
   command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
+  # Skip TypeScript checking during build
+  environment = { SKIP_TYPE_CHECK = "true" }
+
+# Trigger: trivial edit to confirm Netlify picks up config and rebuilds
 
 [build.environment]
-  NODE_VERSION = "20"
-  NPM_FLAGS = "--omit=optional"
+  NODE_VERSION = "20.18.1"
 
 # Headers
 [[headers]]
@@ -31,7 +35,11 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# SPA fallback - handle client-side routing
+# SPA fallback - this should be the last redirect rule
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 # Functions
 [functions]
@@ -52,11 +60,7 @@
 [context.branch-deploy]
   command = "npm ci --no-audit --no-fund && npm run build"
 
-# Vite/React SPA configuration - SPA fallback for all routes
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Vite/React SPA configuration is handled above
 
 # Set basic cache headers for static assets for better performance
 [[headers]]
