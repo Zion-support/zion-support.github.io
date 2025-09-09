@@ -1,235 +1,353 @@
 import Link from 'next/link';
 
-export default function ServicesPage() {
-  const services = [
-    {
-      icon: '🤖',
-      title: 'AI-Powered Automation',
-      description: 'Intelligent systems that learn, adapt, and optimize your business processes automatically.',
-      features: [
-        'Machine Learning Models',
-        'Natural Language Processing',
-        'Predictive Analytics',
-        'Intelligent Decision Making',
-        'Automated Workflows'
-      ],
-      color: 'bg-gradient-to-br from-fuchsia-500 to-purple-600',
-      textColor: 'text-fuchsia-400',
-      gradient: 'from-fuchsia-400 to-purple-500',
-      pricing: 'Starting at $299/month',
-      marketPrice: '$200-500/month',
-      link: 'https://zapier.com/pricing',
-      competitor: 'Zapier'
-    },
-    {
-      icon: '☁️',
-      title: 'Cloud Infrastructure',
-      description: 'Scalable, secure, and high-performance cloud solutions designed for modern applications.',
-      features: [
-        'Multi-Cloud Strategy',
-        'Auto-Scaling Systems',
-        'Load Balancing',
-        'Disaster Recovery',
-        'Performance Optimization'
-      ],
-      color: 'bg-gradient-to-br from-cyan-500 to-blue-600',
-      textColor: 'text-cyan-400',
-      gradient: 'from-cyan-400 to-blue-500',
-      pricing: 'Starting at $199/month',
-      marketPrice: '$150-400/month',
-      link: 'https://aws.amazon.com/pricing/',
-      competitor: 'AWS'
-    },
-    {
-      icon: '🔒',
-      title: 'Security & Compliance',
-      description: 'Comprehensive security solutions that protect your data and ensure regulatory compliance.',
-      features: [
-        'Threat Detection',
-        'Vulnerability Assessment',
-        'Compliance Monitoring',
-        'Data Encryption',
-        'Access Control'
-      ],
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      textColor: 'text-green-400',
-      gradient: 'from-green-400 to-emerald-500',
-      pricing: 'Starting at $399/month',
-      marketPrice: '$300-800/month',
-      link: 'https://www.crowdstrike.com/pricing/',
-      competitor: 'CrowdStrike'
-    },
-    {
-      icon: '📊',
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics and visualization.',
-      features: [
-        'Real-time Analytics',
-        'Business Intelligence',
-        'Data Visualization',
-        'Predictive Modeling',
-        'Performance Metrics'
-      ],
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      textColor: 'text-orange-400',
-      gradient: 'from-orange-400 to-red-500',
-      pricing: 'Starting at $249/month',
-      marketPrice: '$200-600/month',
-      link: 'https://www.tableau.com/pricing',
-      competitor: 'Tableau'
-    },
-    {
-      icon: '🚀',
-      title: 'DevOps & CI/CD',
-      description: 'Streamline your development process with automated pipelines and deployment strategies.',
-      features: [
-        'Continuous Integration',
-        'Automated Testing',
-        'Deployment Automation',
-        'Infrastructure as Code',
-        'Monitoring & Alerting'
-      ],
-      color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
-      textColor: 'text-indigo-400',
-      gradient: 'from-indigo-400 to-purple-500',
-      pricing: 'Starting at $179/month',
-      marketPrice: '$150-350/month',
-      link: 'https://www.atlassian.com/software/jira/pricing',
-      competitor: 'Atlassian'
-    },
-    {
-      icon: '🌐',
-      title: 'Digital Transformation',
-      description: 'Modernize your business with cutting-edge digital solutions and strategic consulting.',
-      features: [
-        'Technology Strategy',
-        'Process Optimization',
-        'Change Management',
-        'Digital Innovation',
-        'Legacy Modernization'
-      ],
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
-      textColor: 'text-teal-400',
-      gradient: 'from-teal-400 to-cyan-500',
-      pricing: 'Starting at $599/month',
-      marketPrice: '$500-1200/month',
-      link: 'https://www.accenture.com/us-en/services/technology/technology-consulting-index',
-      competitor: 'Accenture'
-    },
-    // New Micro SaaS Services
-    {
-      icon: '📧',
-      title: 'Email Marketing Automation',
-      description: 'Advanced email marketing with AI-powered personalization, automation workflows, and analytics.',
-      features: [
-        'AI-Powered Personalization',
-        'Automated Email Sequences',
-        'Advanced Segmentation',
-        'A/B Testing Tools',
-        'ROI Analytics'
-      ],
-      color: 'bg-gradient-to-br from-pink-500 to-rose-600',
-      textColor: 'text-pink-400',
-      gradient: 'from-pink-400 to-rose-500',
-      pricing: 'Starting at $89/month',
-      marketPrice: '$75-200/month',
-      link: 'https://mailchimp.com/pricing/',
-      competitor: 'Mailchimp'
-    },
-    {
-      icon: '💳',
-      title: 'Payment Processing & Billing',
-      description: 'Secure payment processing, subscription billing, and financial management solutions.',
-      features: [
-        'Multi-Payment Gateway Support',
-        'Subscription Billing',
-        'Recurring Payments',
-        'Fraud Detection',
-        'Financial Reporting'
-      ],
-      color: 'bg-gradient-to-br from-emerald-500 to-green-600',
-      textColor: 'text-emerald-400',
-      gradient: 'from-emerald-400 to-green-500',
-      pricing: 'Starting at $49/month + 2.9%',
-      marketPrice: '$29-99/month + 2.5-3.5%',
-      link: 'https://stripe.com/pricing',
-      competitor: 'Stripe'
-    },
-    {
-      icon: '🎯',
-      title: 'Customer Relationship Management',
-      description: 'Comprehensive CRM solution with sales automation, lead management, and customer insights.',
-      features: [
-        'Lead Management',
-        'Sales Pipeline Tracking',
-        'Customer Analytics',
-        'Email Integration',
-        'Mobile App'
-      ],
-      color: 'bg-gradient-to-br from-violet-500 to-purple-600',
-      textColor: 'text-violet-400',
-      gradient: 'from-violet-400 to-purple-500',
-      pricing: 'Starting at $25/month/user',
-      marketPrice: '$20-50/month/user',
-      link: 'https://www.salesforce.com/crm/pricing/',
-      competitor: 'Salesforce'
-    },
-    {
-      icon: '📱',
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile app development with modern frameworks and cloud backend.',
-      features: [
-        'iOS & Android Development',
-        'Cross-Platform Solutions',
-        'Cloud Backend Integration',
-        'Push Notifications',
-        'App Store Optimization'
-      ],
-      color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
-      textColor: 'text-blue-400',
-      gradient: 'from-blue-400 to-indigo-500',
-      pricing: 'Starting at $5,000/project',
-      marketPrice: '$3,000-15,000/project',
-      link: 'https://www.mobomo.com/mobile-app-development-cost/',
-      competitor: 'Mobomo'
-    },
-    {
-      icon: '🛒',
-      title: 'E-commerce Platform',
-      description: 'Complete e-commerce solution with inventory management, payment processing, and analytics.',
-      features: [
-        'Product Catalog Management',
-        'Shopping Cart & Checkout',
-        'Inventory Tracking',
-        'Order Management',
-        'Analytics Dashboard'
-      ],
-      color: 'bg-gradient-to-br from-amber-500 to-orange-600',
-      textColor: 'text-amber-400',
-      gradient: 'from-amber-400 to-orange-500',
-      pricing: 'Starting at $79/month',
-      marketPrice: '$29-299/month',
-      link: 'https://www.shopify.com/pricing',
-      competitor: 'Shopify'
-    },
-    {
-      icon: '📈',
-      title: 'SEO & Content Marketing',
-      description: 'Search engine optimization and content marketing services to improve online visibility.',
-      features: [
-        'Keyword Research & Analysis',
-        'On-Page SEO Optimization',
-        'Content Strategy & Creation',
-        'Link Building',
-        'Performance Tracking'
-      ],
-      color: 'bg-gradient-to-br from-red-500 to-pink-600',
-      textColor: 'text-red-400',
-      gradient: 'from-red-400 to-pink-500',
-      pricing: 'Starting at $299/month',
-      marketPrice: '$200-800/month',
-      link: 'https://www.semrush.com/prices/',
-      competitor: 'SEMrush'
+// Import our new 2025 service data
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
+import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
+import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+import { innovativeAIAutonomousServices2025 } from '../data/2025-innovative-ai-autonomous-services';
+
+// Import our new practical and specialized services
+import { realPracticalMicroSaasServices2025 } from '../data/2025-real-practical-micro-saas-services';
+import { advancedAIITSpecializedServices2025 } from '../data/2025-advanced-ai-it-specialized-services';
+
+// Import our new 2025 enterprise services
+import { realEnterpriseMicroSaas2025 } from '../data/2025-real-enterprise-micro-saas';
+
+// Import our new 2025 advanced services
+import { advancedBusinessIntelligenceServices2025 } from '../data/2025-advanced-business-intelligence-services';
+import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
+
+// Import our new real services
+import { realMicroSaas2025Expansion } from '../data/real-micro-saas-2025-expansion';
+import { realITServices2025Expansion } from '../data/real-it-services-2025-expansion';
+import { realAIServices2025Expansion } from '../data/real-ai-services-2025-expansion';
+
+// Import our new service data
+import { enterpriseITSolutions } from '../data/2034-enterprise-it-solutions';
+import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions';
+import { cuttingEdgeAIServices } from '../data/2034-cutting-edge-ai-services';
+import { real2025Q4AugmentedBatch } from '../data/real-2025-q4-augmented-batch';
+import { real2029Q3Additions } from '../data/real-2029-q3-additions';
+import { validatedServices2025Q4 } from '../data/real-validated-2025-q4-additions';
+import { real2035Q2Additions } from '../data/real-2035-q2-additions';
+import { real2036ServiceExpansions } from '../data/real-2036-service-expansions';
+import { innovative2036MicroSaasServices } from '../data/innovative-2036-micro-saas-services';
+import { innovative2036ITServices } from '../data/innovative-2036-it-services';
+import { innovative2037MicroSaasServices } from '../data/innovative-2037-micro-saas-services';
+import { innovative2037ITServices } from '../data/innovative-2037-it-services';
+import { innovative2037AIServices } from '../data/innovative-2037-ai-services';
+import { innovative2038CuttingEdgeServices } from '../data/innovative-2038-cutting-edge-services';
+import { innovative2038ITInfrastructureServices } from '../data/innovative-2038-it-infrastructure-services';
+import { innovative2037Services } from '../data/innovative-2037-services';
+import { advanced2038Services } from '../data/advanced-2038-services';
+import { revolutionary2039Services } from '../data/revolutionary-2039-services';
+import { revolutionary2040FuturisticServices } from '../data/revolutionary-2040-futuristic-services';
+import { revolutionary2041AdvancedServices } from '../data/revolutionary-2041-advanced-services';
+import { advanced2041EnterpriseServices } from '../data/advanced-2041-enterprise-services';
+import { revolutionary2042MicroSaasServices } from '../data/revolutionary-2042-micro-saas-services';
+
+// Import our new 2025 ultimate services expansion
+import { ultimate2025MicroSaasExpansion } from '../data/2025-ultimate-micro-saas-expansion';
+import { ultimate2025ITServicesExpansion } from '../data/2025-ultimate-it-services-expansion';
+import { ultimate2025AIServicesExpansion } from '../data/2025-ultimate-ai-services-expansion';
+
+// Import our new 2025 Q4 innovative services
+import { innovative2025Q4NewServices } from '../data/innovative-2025-q4-new-services';
+
+
+// Import our new innovative 2040 services
+import { innovative2040ITServices } from '../data/innovative-2040-it-services';
+import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
+
+// Import our new 2025 advanced enterprise services
+import { advancedEnterpriseServices } from '../data/2025-advanced-enterprise-services-expansion';
+import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
+
+// Import our new 2025 cutting-edge futuristic services
+import { cuttingEdgeFuturisticServices } from '../data/2025-cutting-edge-futuristic-services';
+import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
+
+// Import our new 2025 cutting-edge innovative services expansion
+import { cuttingEdgeInnovativeServices2025 } from '../data/2025-cutting-edge-innovative-services-expansion';
+import { advancedITInfrastructureSolutions2025 } from '../data/2025-advanced-it-infrastructure-solutions';
+import { advancedAIAutomationSolutions2025 } from '../data/2025-advanced-ai-automation-solutions';
+
+// Import existing service data
+import { realMicroSaasServices } from '../data/real-micro-saas-services';
+import { innovativeAIServices } from '../data/innovative-ai-services';
+import { enterpriseITServices } from '../data/enterprise-it-services';
+import { emergingTechServices } from '../data/emerging-tech-services';
+import { newRealServices } from '../data/new-real-services';
+import { realOperationalServices } from '../data/real-operational-services';
+import { marketReadyServices } from '../data/market-ready-services';
+import { marketValidatedServices } from '../data/market-validated-services';
+import { industryRealServices } from '../data/industry-real-services';
+
+// Helper function to get service category
+const getServiceCategory = (service: any) => {
+  if (service.category) return service.category;
+  if (service.type) return service.type;
+  return 'Other';
+};
+
+// Helper function to get service pricing
+const getServicePricing = (service: any) => {
+  if (service.pricing?.starter) return service.pricing.starter;
+  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
+  if (service.price?.monthly) return `$${service.price.monthly}/month`;
+  return 'Contact for pricing';
+};
+
+// Helper function to get service features
+const getServiceFeatures = (service: any) => {
+  if (service.features) return service.features;
+  if (service.keyFeatures) return service.keyFeatures;
+  return [];
+};
+
+// Helper function to get service description
+const getServiceDescription = (service: any) => {
+  if (service.description) return service.description;
+  if (service.tagline) return service.tagline;
+  return 'No description available';
+};
+
+// Combine all services including new ones
+const allServices = [
+  // New practical and specialized services
+  ...realPracticalMicroSaasServices2025,
+  ...advancedAIITSpecializedServices2025,
+  
+  // Our new 2025 services
+  ...advancedAIAutomationServices2025,
+  ...innovativeITInfrastructureServices2025,
+  ...innovativeMicroSaasSolutions2025,
+  ...cuttingEdgeAIServices2025,
+  ...realEnterpriseMicroSaas2025,
+      ...innovativeAIAutonomousServices2025,
+  
+  // Our new 2025 advanced services
+  ...advancedBusinessIntelligenceServices2025,
+  ...advancedITInfrastructureServices2025,
+  
+  // Our new real services 2025
+  ...realMicroSaas2025Expansion,
+  ...realITServices2025Expansion,
+  ...realAIServices2025Expansion,
+  
+  // Existing services
+  ...enterpriseITSolutions,
+  ...innovativeMicroSaasSolutions,
+  ...cuttingEdgeAIServices,
+  ...realMicroSaasServices,
+  ...innovativeAIServices,
+  ...enterpriseITServices,
+  ...cuttingEdgeFuturisticServices,
+  ...advancedAIAutomationServices,
+  ...emergingTechServices,
+  ...newRealServices,
+  ...realOperationalServices,
+  ...marketReadyServices,
+  ...marketValidatedServices,
+  // Our new 2025 Q4 innovative services
+  ...innovative2025Q4NewServices,
+  ...advancedITInfrastructureServices2025,
+  ...industryRealServices,
+  ...real2025Q4AugmentedBatch,
+  ...real2029Q3Additions,
+  ...validatedServices2025Q4,
+  ...real2035Q2Additions,
+  ...real2036ServiceExpansions,
+  ...innovative2036MicroSaasServices,
+  ...innovative2036ITServices,
+  ...innovative2037MicroSaasServices,
+  ...innovative2037ITServices,
+  ...innovative2037AIServices,
+  ...innovative2038CuttingEdgeServices,
+  ...innovative2038ITInfrastructureServices,
+  ...innovative2037Services,
+  ...advanced2038Services,
+  ...revolutionary2039Services,
+  ...revolutionary2040FuturisticServices,
+  ...revolutionary2041AdvancedServices,
+  ...advanced2041EnterpriseServices,
+  ...revolutionary2042MicroSaasServices,
+  ...ultimate2025MicroSaasExpansion,
+  ...ultimate2025ITServicesExpansion,
+  ...ultimate2025AIServicesExpansion,
+  ...innovative2040ITServices,
+  ...innovative2040FuturisticServices,
+  ...advancedEnterpriseServices,
+  ...cuttingEdgeITInfrastructureServices,
+  
+  // Our new 2025 cutting-edge innovative services expansion
+  ...cuttingEdgeInnovativeServices2025,
+  ...advancedITInfrastructureSolutions2025,
+  ...advancedAIAutomationSolutions2025
+];
+
+const categories = [
+  {
+    id: 'all',
+    name: 'All Services',
+    icon: <Grid className="w-6 h-6" />,
+    color: 'from-gray-500 to-slate-500',
+    description: 'Complete portfolio of all services'
+  },
+  {
+    id: 'ai-automation',
+    name: 'AI Automation',
+    icon: <Brain className="w-6 h-6" />,
+    color: 'from-blue-500 to-purple-500',
+    description: 'AI-powered automation solutions'
+  },
+  {
+    id: 'it-infrastructure',
+    name: 'IT Infrastructure',
+    icon: <Building className="w-6 h-6" />,
+    color: 'from-indigo-500 to-purple-500',
+    description: 'Enterprise infrastructure and cloud solutions'
+  },
+  {
+    id: 'micro-saas',
+    name: 'Micro SAAS',
+    icon: <Target className="w-6 h-6" />,
+    color: 'from-green-500 to-emerald-500',
+    description: 'Innovative business solutions'
+  },
+  {
+    id: 'ai-services',
+    name: 'AI Services',
+    icon: <Cpu className="w-6 h-6" />,
+    color: 'from-purple-500 to-pink-500',
+    description: 'Cutting-edge AI and machine learning services'
+  },
+  {
+    id: 'business-intelligence',
+    name: 'Business Intelligence',
+    icon: <Target className="w-6 h-6" />,
+    color: 'from-emerald-500 to-teal-500',
+    description: 'Advanced analytics and business intelligence solutions'
+  },
+  {
+    id: 'enterprise-it',
+    name: 'Enterprise IT',
+    icon: <Building className="w-6 h-6" />,
+    color: 'from-blue-500 to-purple-500',
+    description: 'Enterprise solutions and infrastructure'
+  },
+  {
+    id: 'ai-consciousness',
+    name: 'AI & Consciousness',
+    icon: <Brain className="w-6 h-6" />,
+    color: 'from-cyan-500 to-blue-500',
+    description: 'Revolutionary AI consciousness and emotional intelligence'
+  },
+  {
+    id: 'quantum-emerging',
+    name: 'Quantum & Emerging Tech',
+    icon: <Atom className="w-6 h-6" />,
+    color: 'from-purple-500 to-pink-500',
+    description: 'Quantum computing and breakthrough technologies'
+  },
+  {
+    id: 'space-metaverse',
+    name: 'Space & Metaverse',
+    icon: <Rocket className="w-6 h-6" />,
+    color: 'from-pink-500 to-rose-500',
+    description: 'Space exploration and virtual worlds'
+  },
+  {
+    id: 'creative-media',
+    name: 'Creative & Media',
+    icon: <Palette className="w-6 h-6" />,
+    color: 'from-indigo-500 to-purple-500',
+    description: 'AI-powered creative solutions'
+  },
+  {
+    id: 'healthcare-biotech',
+    name: 'Healthcare & Biotech',
+    icon: <Heart className="w-6 h-6" />,
+    color: 'from-red-500 to-pink-500',
+    description: 'Advanced healthcare solutions'
+  },
+  {
+    id: 'transportation-logistics',
+    name: 'Transportation & Logistics',
+    icon: <Truck className="w-6 h-6" />,
+    color: 'from-blue-500 to-cyan-500',
+    description: 'Smart transportation solutions'
+  },
+  {
+    id: 'education-research',
+    name: 'Education & Research',
+    icon: <GraduationCap className="w-6 h-6" />,
+    color: 'from-yellow-500 to-orange-500',
+    description: 'Learning and research platforms'
+  }
+];
+
+const sortOptions = [
+  { value: 'name', label: 'Name A-Z' },
+  { value: 'price-low', label: 'Price: Low to High' },
+  { value: 'price-high', label: 'Price: High to Low' },
+  { value: 'popular', label: 'Most Popular' },
+  { value: 'newest', label: 'Newest First' },
+  { value: 'rating', label: 'Highest Rated' }
+];
+
+export default function Services() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('name');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+  const pageSize = 18;
+
+  // Simulate loading state for better UX
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+      setIsVisible(true);
+    }, 800);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Filter services based on search and category
+  const filteredServices = allServices.filter(service => {
+    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         getServiceDescription(service).toLowerCase().includes(searchQuery.toLowerCase());
+    
+    if (selectedCategory === 'all') return matchesSearch;
+    
+    const serviceCategory = getServiceCategory(service).toLowerCase();
+    const categoryName = categories.find(cat => cat.id === selectedCategory)?.name.toLowerCase();
+    
+    return matchesSearch && serviceCategory.includes(categoryName || '');
+  });
+
+  // Sort services
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'name':
+        return a.name.localeCompare(b.name);
+      case 'price-low':
+        return (parseInt(getServicePricing(a).replace(/[^0-9]/g, '')) || 0) - 
+               (parseInt(getServicePricing(b).replace(/[^0-9]/g, '')) || 0);
+      case 'price-high':
+        return (parseInt(getServicePricing(b).replace(/[^0-9]/g, '')) || 0) - 
+               (parseInt(getServicePricing(a).replace(/[^0-9]/g, '')) || 0);
+      case 'newest':
+        return new Date((b as any).launchDate || '2020-01-01').getTime() - 
+               new Date((a as any).launchDate || '2020-01-01').getTime();
+      case 'rating':
+        return (((b as any).rating || 0) as number) - (((a as any).rating || 0) as number);
+      default:
+        return 0;
     }
   ];
 
