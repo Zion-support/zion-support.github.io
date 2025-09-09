@@ -32,237 +32,278 @@ import {
   PieChart,
   PenTool,
   Shield,
-  Cloud
+  Cloud,
+  Globe,
+  Lock,
+  Sparkles,
+  Rocket,
+  Target,
+  Award
 } from "lucide-react";
+import { motion } from "framer-motion";
 
-interface Feature {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  link: string;
-  badge?: string;
-  details: string;
-}
-
-export default function FeatureCTAs() {
-  const features: Feature[] = [
+export function FeatureCTAs() {
+  const features = [
     {
-      title: "AI Content Optimizer Pro",
-      description: "Advanced AI-powered content optimization tool that analyzes, improves, and optimizes your content for SEO, readability, and engagement.",
-      icon: <Sparkles className="h-10 w-10 p-2 rounded-md bg-gradient-to-br from-purple-100 to-cyan-100 text-purple-700" />,
-      link: "/micro-saas-services",
-      badge: "New",
-      price: "$29/month",
-      category: "AI & ML",
-      details: "Improve SEO rankings by 40%, increase content engagement by 60%, and save 5+ hours per content piece."
-    },
-    {
-      title: "Cyber Threat Monitor",
-      description: "Real-time cybersecurity threat detection and monitoring system with AI-powered analysis and automated response capabilities.",
-      icon: <Shield className="h-10 w-10 p-2 rounded-md bg-gradient-to-br from-red-100 to-orange-100 text-red-700" />,
-      link: "/micro-saas-services",
-      badge: "Popular",
-      price: "$99/month",
-      category: "Security",
-      details: "Detect threats 3x faster, reduce false positives by 70%, and provide 24/7 automated monitoring."
-    },
-    {
-      title: "Data Visualization Studio",
-      description: "Interactive data visualization platform that transforms complex data into actionable insights with customizable dashboards.",
-      icon: <BarChart3 className="h-10 w-10 p-2 rounded-md bg-gradient-to-br from-blue-100 to-indigo-100 text-blue-700" />,
-      link: "/micro-saas-services",
-      badge: "Featured",
-      details: "Drive growth with data-driven marketing strategies, conversion optimization, and comprehensive digital marketing solutions."
-    },
-    {
-      title: "Business Solutions & Consulting",
-      description: "Strategic business consulting, process optimization, and digital transformation services.",
-      icon: <CheckCircle className="h-10 w-10 p-2 rounded-md bg-green-100 text-green-700" />,
-      link: "/business-solutions",
-      details: "Our business consultants help you optimize operations, implement automation, and achieve sustainable growth through strategic planning."
-    },
-    {
-      title: "AI Talent Matching",
-      description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
-      icon: <Search className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" />,
-      link: "/marketplace",
-      badge: "Popular",
-      details: "Leveraging advanced machine learning, our matching system analyzes over 100+ data points to create perfect connections between talents and opportunities."
-    },
-    {
-      title: "Talent Directory",
-      description: "Browse our extensive database of verified AI and tech specialists, filtered by expertise and availability.",
-      icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />,
-      link: "/talent",
-      details: "Every talent in our directory undergoes a rigorous verification process to ensure quality, authenticity, and reliability."
-    },
-    {
-      title: "AI Services Hub",
-      description: "Cutting-edge AI solutions including chatbots, image generation, video editing, and data analytics.",
-      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />,
+      title: "AI-Powered Business Intelligence",
+      description: "Transform your data into actionable insights with our advanced AI analytics platform. Get real-time dashboards, predictive modeling, and automated reporting.",
+      icon: <Brain className="h-12 w-12 p-2 rounded-xl bg-gradient-to-br from-cyan-100 to-blue-100 text-cyan-700" />,
       link: "/ai-services",
-      badge: "New",
-      details: "From AI chatbots to advanced analytics, our AI services help businesses leverage artificial intelligence for competitive advantage."
+      badge: "Most Popular",
+      details: "Leverage machine learning algorithms to uncover hidden patterns, predict trends, and make data-driven decisions that drive business growth.",
+      benefits: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "Automated Insights"]
     },
     {
-      title: "Equipment Catalog",
-      description: "Find specialized hardware and tech equipment for AI development and research.",
-      icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />,
-      link: "/equipment",
-      details: "Access cutting-edge technology with flexible options to buy, rent, or lease specialized equipment for your tech projects."
+      title: "Enterprise Cybersecurity Suite",
+      description: "Comprehensive security solutions including threat detection, incident response, compliance management, and 24/7 monitoring.",
+      icon: <Shield className="h-12 w-12 p-2 rounded-xl bg-gradient-to-br from-red-100 to-orange-100 text-red-700" />,
+      link: "/cybersecurity",
+      badge: "Enterprise",
+      details: "Protect your business with enterprise-grade cybersecurity that adapts to evolving threats and ensures compliance with industry standards.",
+      benefits: ["Threat Detection", "Incident Response", "Compliance Management", "24/7 Monitoring"]
     },
     {
-      title: "Community Hub",
-      description: "Connect with like-minded professionals, share insights, and stay updated with industry trends.",
-      icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />,
-      link: "/community",
-      details: "Join thousands of tech professionals in discussions, AMAs with industry leaders, and exclusive community events."
+      title: "Cloud Migration & Optimization",
+      description: "Seamlessly migrate to the cloud with our proven methodology. Optimize costs, improve performance, and enhance scalability.",
+      icon: <Cloud className="h-12 w-12 p-2 rounded-xl bg-gradient-to-br from-blue-100 to-indigo-100 text-blue-700" />,
+      link: "/cloud-services",
+      badge: "Cost-Saving",
+      details: "Our cloud experts ensure zero-downtime migration while optimizing your infrastructure for maximum efficiency and cost savings.",
+      benefits: ["Zero-downtime Migration", "Cost Optimization", "Performance Tuning", "Auto-scaling"]
     },
     {
-      title: "Enterprise Solutions",
-      description: "Custom-branded hiring portal, dedicated talent pool, and powerful admin controls for your organization.",
-      icon: <Building className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />,
-      link: "/enterprise",
-      details: "Scale your talent acquisition with white-labeled solutions, analytics dashboards, and dedicated account managers."
+      title: "AI Talent Matching Platform",
+      description: "Connect with the perfect AI and tech specialists using our intelligent matching algorithm. Find talent that fits your project needs.",
+      icon: <Search className="h-12 w-12 p-2 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100 text-purple-700" />,
+      link: "/talent",
+      badge: "AI-Powered",
+      details: "Our AI matching system analyzes skills, experience, and project requirements to create perfect connections between clients and talent.",
+      benefits: ["Smart Matching", "Skill Verification", "Portfolio Review", "Direct Communication"]
     },
     {
-      title: "Mobile Experience",
-      description: "Take Zion with you on the go with our mobile app for iOS and Android devices.",
-      icon: <Smartphone className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" />,
-      link: "/mobile-launch",
-      badge: "Featured",
-      details: "Manage your projects, communicate with clients or talents, and receive real-time updates wherever you are."
+      title: "Digital Transformation Consulting",
+      description: "Strategic guidance to modernize your business operations, implement automation, and leverage emerging technologies for growth.",
+      icon: <Rocket className="h-12 w-12 p-2 rounded-xl bg-gradient-to-br from-green-100 to-emerald-100 text-green-700" />,
+      link: "/consulting",
+      badge: "Strategic",
+      details: "Transform your business with expert guidance on digital strategy, process optimization, and technology implementation.",
+      benefits: ["Digital Strategy", "Process Optimization", "Change Management", "ROI Tracking"]
     },
     {
-      title: "IT Services Hub",
-      description: "Comprehensive IT solutions including cloud migration, cybersecurity, network infrastructure, and 24/7 support.",
-      icon: <Building className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />,
-      link: "/it-services",
-      details: "From cloud migration to cybersecurity audits, our IT services help businesses modernize their infrastructure and enhance security."
+      title: "IoT & Smart City Solutions",
+      description: "Build connected ecosystems with our IoT platform. Monitor, analyze, and optimize operations in real-time.",
+      icon: <Network className="h-12 w-12 p-2 rounded-xl bg-gradient-to-br from-teal-100 to-cyan-100 text-teal-700" />,
+      link: "/iot-solutions",
+      badge: "Innovation",
+      details: "Create intelligent systems that collect data, provide insights, and automate processes across your infrastructure.",
+      benefits: ["Real-time Monitoring", "Predictive Analytics", "Automated Control", "Data Integration"]
     },
     {
-      title: "Developer Tools",
-      description: "Access our API documentation, SDKs, and integration guides to build on top of the Zion platform.",
-      icon: <Code className="h-10 w-10 p-2 rounded-md bg-gray-100 text-gray-700" />,
-      link: "/developers",
-      details: "Leverage our robust API with comprehensive documentation, code examples, and developer support."
+      title: "Blockchain & Web3 Development",
+      description: "Build decentralized applications, smart contracts, and blockchain infrastructure for the future of digital business.",
+      icon: <Code className="h-12 w-12 p-2 rounded-xl bg-gradient-to-br from-yellow-100 to-orange-100 text-yellow-700" />,
+      link: "/blockchain",
+      badge: "Future-Ready",
+      details: "Stay ahead of the curve with blockchain solutions that provide transparency, security, and new business opportunities.",
+      benefits: ["Smart Contracts", "DApp Development", "DeFi Solutions", "NFT Platforms"]
     },
     {
-      title: "Learning Resources",
-      description: "Access tutorials, courses, and documentation to enhance your skills in AI and tech.",
-      icon: <BookOpen className="h-10 w-10 p-2 rounded-md bg-teal-100 text-teal-700" />,
-      link: "/blog",
-      details: "From beginner guides to advanced technical content, our learning resources help you stay at the cutting edge of technology."
+      title: "AI Content Generation",
+      description: "Create high-quality content, code, and documentation using advanced AI models tailored to your industry and brand voice.",
+      icon: <PenTool className="h-12 w-12 p-2 rounded-xl bg-gradient-to-br from-pink-100 to-rose-100 text-pink-700" />,
+      link: "/ai-content",
+      badge: "Productivity",
+      details: "Generate engaging content, technical documentation, and marketing copy while maintaining your unique brand identity.",
+      benefits: ["Content Creation", "Code Generation", "Documentation", "Brand Consistency"]
     },
     {
-      title: "Project Management",
-      description: "Streamlined tools to manage projects, track milestones, and ensure successful delivery.",
-      icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />,
-      link: "/dashboard/projects",
-      details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion."
+      title: "Data Privacy & Compliance",
+      description: "Ensure your business meets GDPR, CCPA, and other privacy regulations with automated compliance tools and expert guidance.",
+      icon: <Lock className="h-12 w-12 p-2 rounded-xl bg-gradient-to-br from-emerald-100 to-green-100 text-emerald-700" />,
+      link: "/compliance",
+      badge: "Compliance",
+      details: "Navigate complex privacy regulations with automated tools, audit trails, and expert compliance consulting.",
+      benefits: ["GDPR Compliance", "CCPA Compliance", "Audit Trails", "Expert Guidance"]
     },
     {
-      title: "Micro SAAS Hub",
-      description: "Affordable software solutions for growing businesses including CRM, project management, and marketing tools.",
-      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />,
-      link: "/micro-saas",
-      badge: "New",
-      details: "Discover powerful, affordable software solutions designed to help your business scale without breaking the bank."
+      title: "AI-Powered Testing & QA",
+      description: "Automate your testing processes with intelligent test case generation, bug detection, and quality assurance workflows.",
+      icon: <Monitor className="h-12 w-12 p-2 rounded-xl bg-gradient-to-br from-violet-100 to-purple-100 text-violet-700" />,
+      link: "/ai-testing",
+      badge: "Quality",
+      details: "Improve software quality with AI-driven testing that identifies issues faster and ensures comprehensive coverage.",
+      benefits: ["Test Automation", "Bug Detection", "Coverage Analysis", "Performance Testing"]
+    },
+    {
+      title: "Financial AI & Analytics",
+      description: "Get personalized financial insights, investment recommendations, and risk assessment using advanced machine learning algorithms.",
+      icon: <BarChart3 className="h-12 w-12 p-2 rounded-xl bg-gradient-to-br from-sky-100 to-blue-100 text-sky-700" />,
+      link: "/financial-ai",
+      badge: "FinTech",
+      details: "Make informed financial decisions with AI-powered analytics, risk modeling, and predictive financial insights.",
+      benefits: ["Risk Assessment", "Investment Analysis", "Financial Planning", "Market Insights"]
+    },
+    {
+      title: "Healthcare AI Solutions",
+      description: "Transform healthcare delivery with AI-powered diagnostic tools, patient monitoring, and clinical decision support systems.",
+      icon: <Target className="h-12 w-12 p-2 rounded-xl bg-gradient-to-br from-rose-100 to-pink-100 text-rose-700" />,
+      link: "/healthcare-ai",
+      badge: "Healthcare",
+      details: "Improve patient outcomes with AI solutions that enhance diagnostic accuracy and streamline clinical workflows.",
+      benefits: ["Diagnostic Support", "Patient Monitoring", "Clinical Decision Support", "HIPAA Compliance"]
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark relative overflow-hidden">
-      {/* Background decorative elements */}
+    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
+      {/* Enhanced background pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 right-20 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
+          backgroundSize: '40px 40px'
+        }} />
+      </div>
+
+      {/* Floating decorative elements */}
+      <div className="absolute inset-0">
+        <motion.div 
+          className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div 
+          className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30"
+          animate={{ rotate: -360 }}
+          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div 
+          className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20"
+          animate={{ scale: [1, 1.2, 1] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-6">
-            <Zap className="w-4 h-4" />
-            <span>Featured Services</span>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center px-4 py-2 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm font-medium border border-zion-cyan/20 mb-6"
+          >
+            <Sparkles className="w-4 h-4 mr-2" />
+            Comprehensive Technology Solutions
+          </motion.div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Discover Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Complete Solution Suite</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            Discover Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Services</span>
           </h2>
-          
-          <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-            From AI-powered solutions to comprehensive IT services, we provide everything you need to transform your business and stay ahead of the competition.
+          <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
+            Explore our comprehensive suite of technology solutions designed to transform your business, 
+            accelerate growth, and drive innovation in the digital age
           </p>
         </div>
-
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="group bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 hover:border-zion-cyan/40 hover:bg-zion-slate-dark/70 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25">
-              <CardHeader className="pb-4">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="group-hover:scale-110 transition-transform duration-300">
-                    {feature.icon}
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Card className="bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 group hover:shadow-2xl hover:shadow-zion-cyan/25 h-full">
+                <CardHeader className="pb-4">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="p-3 rounded-xl bg-zion-blue-light/20 group-hover:bg-zion-cyan/20 transition-colors duration-300">
+                      {feature.icon}
+                    </div>
+                    {feature.badge && (
+                      <Badge className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white border-0">
+                        {feature.badge}
+                      </Badge>
+                    )}
                   </div>
-                  {feature.badge && (
-                    <Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
-                      {feature.badge}
-                    </Badge>
-                  )}
-                </div>
-                <CardTitle className="text-xl text-white group-hover:text-zion-cyan transition-colors duration-200">
-                  {feature.title}
-                </CardTitle>
-                <CardDescription className="text-zion-slate-light leading-relaxed">
-                  {feature.description}
-                </CardDescription>
-              </CardHeader>
-              
-              <CardContent className="pb-4">
-                <p className="text-zion-slate-light text-sm leading-relaxed">
-                  {feature.details}
-                </p>
-              </CardContent>
-              
-              <CardFooter className="pt-0">
-                <Link to={feature.link} className="w-full">
-                  <Button 
-                    variant="outline" 
-                    className="w-full border-zion-cyan/20 text-zion-cyan hover:bg-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-zion-cyan/25"
+                  <CardTitle className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors duration-300">
+                    {feature.title}
+                  </CardTitle>
+                  <CardDescription className="text-zion-slate-light leading-relaxed">
+                    {feature.description}
+                  </CardDescription>
+                </CardHeader>
+                
+                <CardContent className="pb-4">
+                  <p className="text-zion-slate-light/80 text-sm leading-relaxed mb-4">
+                    {feature.details}
+                  </p>
+                  
+                  {/* Benefits */}
+                  <div className="space-y-2">
+                    <h4 className="text-zion-cyan text-sm font-semibold mb-2">Key Benefits:</h4>
+                    <div className="grid grid-cols-2 gap-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <div key={idx} className="flex items-center text-xs text-zion-slate-light">
+                          <CheckCircle className="w-3 h-3 text-zion-cyan mr-2 flex-shrink-0" />
+                          {benefit}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </CardContent>
+                
+                <CardFooter className="pt-0">
+                  <Link
+                    to={feature.link}
+                    className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300 group-hover:shadow-lg group-hover:shadow-zion-cyan/25"
                   >
                     Learn More
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-                  </Button>
-                </Link>
-              </CardFooter>
-            </Card>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Link>
+                </CardFooter>
+              </Card>
+            </motion.div>
           ))}
         </div>
-
+        
         {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-zion-slate-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-              Join thousands of businesses that have already accelerated their growth with Zion Tech Group's comprehensive solutions.
+        <motion.div 
+          className="text-center mt-20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="bg-gradient-to-br from-zion-blue-dark/80 to-zion-purple-dark/80 backdrop-blur-sm rounded-3xl p-12 border border-zion-blue-light/30 shadow-2xl">
+            <div className="flex items-center justify-center mb-6">
+              <Award className="w-12 h-12 text-zion-cyan mr-4" />
+              <h3 className="text-3xl md:text-4xl font-bold text-white">
+                Ready to Transform Your Business?
+              </h3>
+            </div>
+            <p className="text-zion-slate-light text-lg mb-8 max-w-3xl mx-auto leading-relaxed">
+              Join hundreds of successful companies that have revolutionized their operations with Zion Tech Group. 
+              Our expert team is ready to guide you through every step of your digital transformation journey.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-zion-cyan/25">
-                  Get Started Today
-                </Button>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-bold rounded-xl hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Schedule Free Consultation
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link to="/services">
-                <Button variant="outline" className="border-zion-cyan/20 text-zion-cyan hover:bg-zion-cyan/20 px-8 py-3 rounded-xl font-semibold transition-all duration-300">
-                  Explore All Services
-                </Button>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-bold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
+              >
+                View All Services
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
