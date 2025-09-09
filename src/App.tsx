@@ -24,35 +24,19 @@ const ITServicesMain = React.lazy(() => import('./pages/ITServicesMain'));
 const AIAnalytics = React.lazy(() => import('./pages/services/AIAnalytics'));
 const Cybersecurity = React.lazy(() => import('./pages/services/Cybersecurity'));
 
-// New service pages
-const AIAnalytics = React.lazy(() => import('./pages/services/ai-analytics'));
-const Cybersecurity = React.lazy(() => import('./pages/services/cybersecurity'));
-const CloudDevOps = React.lazy(() => import('./pages/services/cloud-devops'));
-const IoTEdge = React.lazy(() => import('./pages/services/iot-edge'));
-const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
-const Blockchain = React.lazy(() => import('./pages/services/blockchain'));
-const DigitalTwin = React.lazy(() => import('./pages/services/digital-twin'));
-const Sustainability = React.lazy(() => import('./pages/services/sustainability'));
+// New innovative services
+const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const QuantumAIPlatform = React.lazy(() => import('./pages/services/QuantumAIPlatform'));
+const BlockchainWeb3Platform = React.lazy(() => import('./pages/services/BlockchainWeb3Platform'));
+const ServicesOverview = React.lazy(() => import('./pages/services/ServicesOverview'));
 
-// New pages
-const MicroSAAS = React.lazy(() => import('./pages/micro-saas'));
-const Marketplace = React.lazy(() => import('./pages/marketplace'));
-const ITServices = React.lazy(() => import('./pages/it-services'));
-const Team = React.lazy(() => import('./pages/team'));
-const Signup = React.lazy(() => import('./pages/signup'));
-const Security = React.lazy(() => import('./pages/security'));
-const Terms = React.lazy(() => import('./pages/terms'));
-const Cookies = React.lazy(() => import('./pages/cookies'));
-
-// Loading component
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-futuristic">
-    <div className="relative">
-      <div className="w-32 h-32 border-4 border-zion-cyan/20 rounded-full"></div>
-      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold">
-        ZION
-      </div>
+// Enhanced loading component with skeleton
+const LoadingFallback = () => (
+  <div className="min-h-screen bg-background flex items-center justify-center">
+    <div className="text-center space-y-4">
+      <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto"></div>
+      <p className="text-zion-cyan text-lg font-medium">Loading Zion...</p>
+      <p className="text-muted-foreground text-sm">Preparing your AI marketplace experience</p>
     </div>
   </div>
 );
@@ -83,31 +67,12 @@ function App() {
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/services-advertising" element={<ServicesAdvertising />} />
-              <Route path="/solutions" element={<Solutions />} />
-              <Route path="/research-development" element={<ResearchDevelopment />} />
-              <Route path="/news" element={<News />} />
-              <Route path="/request-quote" element={<RequestQuote />} />
               
-              {/* Service routes */}
-              <Route path="/services/ai-analytics" element={<AIAnalytics />} />
-              <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-              <Route path="/services/cloud-devops" element={<CloudDevOps />} />
-              <Route path="/services/iot-edge" element={<IoTEdge />} />
-              <Route path="/services/quantum-computing" element={<QuantumComputing />} />
-              <Route path="/services/blockchain" element={<Blockchain />} />
-              <Route path="/services/digital-twin" element={<DigitalTwin />} />
-              <Route path="/services/sustainability" element={<Sustainability />} />
-              
-              {/* New main routes */}
-              <Route path="/micro-saas" element={<MicroSAAS />} />
-              <Route path="/marketplace" element={<Marketplace />} />
-              <Route path="/it-services" element={<ITServices />} />
-              <Route path="/team" element={<Team />} />
-              <Route path="/security" element={<Security />} />
-              <Route path="/cookies" element={<Cookies />} />
+              {/* New innovative services */}
+              <Route path="/services" element={<ServicesOverview />} />
+              <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+              <Route path="/services/quantum-ai-platform" element={<QuantumAIPlatform />} />
+              <Route path="/services/blockchain-web3-platform" element={<BlockchainWeb3Platform />} />
             </Routes>
           </Suspense>
         </main>

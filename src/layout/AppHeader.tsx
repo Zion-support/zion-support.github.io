@@ -75,38 +75,16 @@ export function AppHeader() {
       href: '/ai-services',
       icon: Brain,
       dropdown: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: BarChart3, description: 'Advanced analytics and insights' },
-        { name: 'AI Content Creation', href: '/services/ai-content-creation', icon: FileText, description: 'Generate content with AI' },
-        { name: 'AI Customer Experience', href: '/services/ai-customer-experience', icon: MessageCircle, description: 'Personalized customer interactions' },
-        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield, description: 'Intelligent threat detection' },
-        { name: 'AI DevOps', href: '/services/ai-devops', icon: Code, description: 'Automated development operations' },
-        { name: 'AI Analytics Dashboard', href: '/services/ai-analytics-dashboard', icon: TrendingUp, description: 'Real-time data visualization' }
-      ]
-    },
-    {
-      name: 'Emerging Tech',
-      href: '/emerging-tech',
-      icon: Rocket,
-      dropdown: [
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket, description: 'Next-gen computational power' },
-        { name: 'Blockchain Platform', href: '/services/blockchain-platform', icon: Lock, description: 'Decentralized solutions' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Cpu, description: 'Smart device management' },
-        { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe, description: 'Virtual asset replicas' },
-        { name: '5G Enterprise', href: '/services/5g-enterprise', icon: Network, description: 'Ultra-fast connectivity' },
-        { name: 'Sustainable Tech', href: '/services/sustainable-technology', icon: Heart, description: 'Green technology solutions' }
-      ]
-    },
-    {
-      name: 'IT Services',
-      href: '/it-services',
-      icon: Database,
-      dropdown: [
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Scalable infrastructure' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Advanced security solutions' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap, description: 'Business modernization' },
-        { name: 'Infrastructure', href: '/services/infrastructure', icon: Database, description: 'Enterprise systems' },
-        { name: 'Onsite Support', href: '/services/onsite-support', icon: Users, description: 'Local technical assistance' },
-        { name: 'Green IT', href: '/services/green-it', icon: Heart, description: 'Eco-friendly technology' }
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Brain },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', icon: Rocket },
+        { name: 'Blockchain Web3 Platform', href: '/services/blockchain-web3-platform', icon: Lock },
+        { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+        { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket },
+        { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe },
+        { name: 'Sustainability', href: '/services/sustainability', icon: Heart }
       ]
     },
     {
