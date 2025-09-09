@@ -33,13 +33,17 @@ export default defineConfig(({ mode }) => ({
         warn(warning);
       },
       output: {
-        // Manual chunk splitting for better caching
+        // Manual chunk splitting for better caching and performance
         manualChunks: (id) => {
-          // Vendor chunks
+          // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
-            // React ecosystem
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'react-vendor';
+            // React ecosystem - core
+            if (id.includes('react') && !id.includes('react-router')) {
+              return 'react-core';
+            }
+            // React DOM
+            if (id.includes('react-dom')) {
+              return 'react-dom';
             }
             // Router
             if (id.includes('react-router')) {
@@ -49,35 +53,65 @@ export default defineConfig(({ mode }) => ({
             if (id.includes('@tanstack/react-query')) {
               return 'query';
             }
-            // UI libraries
-            if (id.includes('@radix-ui') || id.includes('lucide-react')) {
-              return 'ui';
+            // UI libraries - split by size
+            if (id.includes('@radix-ui')) {
+              return 'radix-ui';
+            }
+            if (id.includes('lucide-react')) {
+              return 'icons';
             }
             // Forms
             if (id.includes('react-hook-form') || id.includes('formik') || id.includes('yup') || id.includes('zod')) {
               return 'forms';
             }
-            // Animation
+            // Animation - large library
             if (id.includes('framer-motion')) {
               return 'motion';
             }
-            // Utilities
-            if (id.includes('axios') || id.includes('date-fns') || id.includes('lodash')) {
+            // Utilities - split by usage
+            if (id.includes('axios')) {
+              return 'http';
+            }
+            if (id.includes('date-fns')) {
+              return 'date-utils';
+            }
+            if (id.includes('lodash') || id.includes('clsx') || id.includes('class-variance-authority')) {
               return 'utils';
             }
-            // Large libraries
+            // Large external libraries
             if (id.includes('@stripe') || id.includes('@supabase') || id.includes('ethers')) {
               return 'external';
             }
             // Everything else
             return 'vendor';
           }
-          // Component chunks
+          // Component chunks - split by feature
           if (id.includes('/src/components/')) {
+            if (id.includes('/ui/')) {
+              return 'ui-components';
+            }
+            if (id.includes('/auth/') || id.includes('/login/')) {
+              return 'auth-components';
+            }
+            if (id.includes('/talent/') || id.includes('/profile/')) {
+              return 'talent-components';
+            }
             return 'components';
           }
-          // Page chunks
+          // Page chunks - split by route group
           if (id.includes('/src/pages/')) {
+            if (id.includes('Home') || id.includes('About') || id.includes('Contact')) {
+              return 'main-pages';
+            }
+            if (id.includes('Services') || id.includes('Pricing')) {
+              return 'service-pages';
+            }
+            if (id.includes('Talent') || id.includes('AIMatcher')) {
+              return 'talent-pages';
+            }
+            if (id.includes('Login') || id.includes('Signup')) {
+              return 'auth-pages';
+            }
             return 'pages';
           }
         },
@@ -131,9 +165,14 @@ export default defineConfig(({ mode }) => ({
       'framer-motion',
       'lucide-react',
       '@tanstack/react-query',
+      '@radix-ui/react-slot',
+      'clsx',
+      'tailwind-merge',
     ],
     // Exclude problematic dependencies
     exclude: ['@vite/client', '@vite/env'],
+    // Force pre-bundling for better performance
+    force: true,
   },
   // Performance optimizations
   css: {

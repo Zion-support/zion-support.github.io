@@ -9,6 +9,9 @@ import './i18n';
 // Register service worker
 import { register } from './serviceWorkerRegistration';
 
+// Performance monitoring
+import { performanceMonitor } from './utils/performance';
+
 // Error handling function
 // const showApiError = (error: unknown): void => {
 //   console.error('API Error:', error);

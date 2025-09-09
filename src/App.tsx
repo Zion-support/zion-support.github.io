@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, lazy, useEffect, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { HelmetProvider } from 'react-helmet-async';
@@ -16,23 +16,30 @@ import { NotificationToast } from './components/NotificationToast';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import './App.css';
 
-// Create QueryClient instance
+// Create QueryClient instance with optimized settings
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 5 * 60 * 1000,
+      staleTime: 5 * 60 * 1000, // 5 minutes
+      cacheTime: 10 * 60 * 1000, // 10 minutes
+      retry: 1,
+      refetchOnWindowFocus: false,
+      refetchOnMount: false,
+      refetchOnReconnect: false,
+    },
+    mutations: {
       retry: 1,
     },
   },
 });
 
-// Lazy load pages for better performance
-const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
-const Services = lazy(() => import('./pages/Services'));
-const Contact = lazy(() => import('./pages/Contact'));
-const Pricing = lazy(() => import('./pages/Pricing'));
-const NotFound = lazy(() => import('./pages/NotFound'));
+// Lazy load pages for better performance with error boundaries
+const Home = lazy(() => import('./pages/Home').catch(() => ({ default: () => <div>Error loading Home page</div> })));
+const About = lazy(() => import('./pages/About').catch(() => ({ default: () => <div>Error loading About page</div> })));
+const Services = lazy(() => import('./pages/Services').catch(() => ({ default: () => <div>Error loading Services page</div> })));
+const Contact = lazy(() => import('./pages/Contact').catch(() => ({ default: () => <div>Error loading Contact page</div> })));
+const Pricing = lazy(() => import('./pages/Pricing').catch(() => ({ default: () => <div>Error loading Pricing page</div> })));
+const NotFound = lazy(() => import('./pages/NotFound').catch(() => ({ default: () => <div>Error loading NotFound page</div> })));
 
 // Additional pages from comprehensive improvements
 const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
@@ -76,7 +83,7 @@ const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const Support = lazy(() => import('./pages/Support'));
 
-function App() {
+const App = memo(() => {
   // Setup global error handling
   useEffect(() => {
     setupGlobalErrorHandling();
@@ -167,6 +174,8 @@ function App() {
       </ErrorBoundary>
     </QueryClientProvider>
   );
-}
+});
+
+App.displayName = 'App';
 
 export default App;
