@@ -1,71 +1,76 @@
-# Monitoring Service
+# Monitoring and Alerting System
 
-This directory contains a small Node.js service dedicated to monitoring URL performance and health for the Zion platform.
+This directory contains modules related to application monitoring, including performance checks and alerting.
 
-## Overview
+## Hourly Notifications
 
-The service periodically checks several URLs, measures response times, verifies availability and logs the results. Alerts can be sent if latency thresholds are exceeded.
+The system can send hourly notifications summarizing key operational data. This is typically triggered by a scheduled job (e.g., a GitHub Actions workflow like `.github/workflows/hourly-jest.yml`).
 
-## Core Technologies
+### Features
 
-- Node.js & TypeScript
-- [axios](https://github.com/axios/axios) for HTTP requests
-- [node-cron](https://github.com/node-cron/node-cron) for scheduling hourly checks
-- [winston](https://github.com/winstonjs/winston) for structured logging
+The hourly notification can include:
+-   **Slow Endpoints**: A list of application endpoints that have exceeded latency thresholds. (Note: Data for this needs to be populated into `notification_data/slow_endpoints.json` by a separate process if desired for the hourly summary).
+-   **Patched Packages**: A list of npm packages that were automatically updated by `npm audit fix`.
+-   **Test Status**: A summary of the latest automated test run, including pass/fail counts and code coverage percentage.
+-   **Commit Link**: A direct link to the latest commit in the repository at the time of the notification.
+-   **Custom Message**: A general message can also be included.
 
-## Key Features
+### Configuration
 
-- URL health checking for several endpoints
-- Response time measurement and logging to `logs/perf`
-- Alerting via webhook (`ALERT_WEBHOOK_URL`) when latency exceeds a threshold
-- Optional service restart through PM2 for non-Kubernetes services
-- Endpoints configured via environment variables (see `.env.example`)
+To enable and configure the hourly notifications, the following environment variables must be set in the environment where the notification script (`scripts/gather-notification-data.sh` which then calls `monitoring/src/send-alert-cli.ts`) is executed:
 
-## Setup and Local Development
+-   `ALERT_WEBHOOK_URL`: **Required**. The webhook URL for the desired notification channel (e.g., Slack, Discord). The notification is sent as a JSON payload with a `text` field containing the formatted message.
+-   `GITHUB_REPOSITORY`: **Recommended**. The owner and repository name (e.g., `your-org/your-repo`). Used to construct direct commit links. Automatically available in GitHub Actions.
+-   `GITHUB_SERVER_URL`: **Recommended**. The base URL of the GitHub instance (e.g., `https://github.com`). Used to construct direct commit links. Automatically available in GitHub Actions.
+-   `GITHUB_WORKSPACE`: **Recommended (for local testing, auto in Actions)**. The path to the root of the repository. Used by scripts to define temporary data paths (e.g., for `notification_data/`). Automatically available in GitHub Actions.
 
-1.  **Prerequisites:**
-    *   Node.js (refer to project's Node version).
-    *   npm or yarn.
 
-2.  **Install Dependencies:**
-    *   Navigate to this `monitoring/` directory.
-    *   If it has its own `package.json`:
-        ```bash
-        cd monitoring
-        npm install
-        ```
-    *   If dependencies are managed in the root `package.json`, they should already be installed.
+### How it Works
 
-3.  **Configure Environment Variables:**
-    *   Copy `.env.example` to `.env` and adjust values as needed.
-    *   Variables include:
-        *   `DJANGO_API_BASE_URL`, `NEXTJS_API_BASE_URL`, `CUSTOM_SERVER_BASE_URL` – base URLs for monitored services
-        *   `ALERT_WEBHOOK_URL` – where alert notifications are sent
-        *   `LOG_LEVEL` – logging verbosity
+1.  **Data Collection Scripts** (typically run in this order by a CI job):
+    -   `scripts/hourly-npm-audit.sh`: Runs `npm audit fix --force --json`, extracts information about packages that were actually patched, and saves it to `$GITHUB_WORKSPACE/notification_data/patched_packages.json`.
+    -   `scripts/run-hourly-tests.sh`: Runs Jest tests with coverage. This script also ensures Jest outputs its full results to `logs/tests/hourly-jest-results.json` and coverage reports (including `coverage-summary.json`) are generated.
+    -   `scripts/check_coverage_and_notify.js` (called by `run-hourly-tests.sh`): Reads the Jest results from `logs/tests/hourly-jest-results.json` (for test counts) and `coverage-summary.json` (for coverage percentage). It then saves a formatted test status object to `$GITHUB_WORKSPACE/notification_data/test_status.json`.
 
-4.  **Running the Service:**
-    *   There might be an npm script in `monitoring/package.json` or the root `package.json`.
-    *   Example:
-        ```bash
-        npm run start:monitoring
-        # or
-        node monitoring/index.js # (or whatever the entry point is)
-        ```
+2.  **Notification Assembly**:
+    -   `scripts/gather-notification-data.sh`: This script is run after all data collection scripts. It:
+        - Reads the JSON files created by the previous scripts (`patched_packages.json`, `test_status.json`).
+        - Optionally reads `slow_endpoints.json` if populated by another process.
+        - Gets the latest commit hash and constructs a commit link using `GITHUB_REPOSITORY` and `GITHUB_SERVER_URL`.
+        - Assembles a comprehensive JSON payload (`NotificationPayload`).
 
-## Running Tests
+3.  **Notification Dispatch**:
+    -   If the assembled payload is not empty (i.e., it contains more than just a default commit link or empty data arrays) and `ALERT_WEBHOOK_URL` is set, `scripts/gather-notification-data.sh` calls the CLI: `node ./monitoring/dist/send-alert-cli.js "$PAYLOAD_JSON"` (or uses `ts-node` as a fallback).
+    -   `monitoring/src/send-alert-cli.ts` (compiled to `.js`): Parses the JSON payload argument.
+    -   It then uses the `sendWebhookNotification` function from `monitoring/src/alerter.ts` to send the assembled payload to the configured `ALERT_WEBHOOK_URL`.
 
-This submodule currently has no automated tests. Running `npm test` will execute
-the placeholder script defined in `package.json`.
+### `alerter.ts` Module
 
-## Deployment
+-   **`sendWebhookNotification(payload: NotificationPayload)`**: This is the core function responsible for formatting the final message string from the `NotificationPayload` and sending it via an HTTP POST request (using `axios`) to the `ALERT_WEBHOOK_URL`.
+-   **`triggerAlerts(result: EndpointTestResult)`**: This function is designed for real-time high-latency alerts. If an endpoint's latency exceeds `ALERT_THRESHOLD_MS`, it calls `sendWebhookNotification` with a payload focused on that specific slow endpoint and can also attempt to restart the associated service (e.g., via `pm2 restart`). This function is not directly part of the hourly aggregated notification but uses the same underlying `sendWebhookNotification` mechanism.
+-   **Interfaces**: Defines `NotificationPayload`, `PatchedPackageInfo`, `TestStatusInfo` which structure the data for notifications.
 
-The service is designed to run as a background process. The default cron schedule
-in `src/index.ts` triggers the monitoring job hourly. In production it can be
-run either via `node index.js` or packaged into a container and launched via a
-scheduler (e.g., a system cron job or CI runner).
+### Customization
 
-## Integration with Other Systems
+-   **Message Format**: The detailed message formatting logic is located in `monitoring/src/alerter.ts` within the `sendWebhookNotification` function. This can be customized (e.g., to use Slack's Block Kit UI instead of plain text) by modifying the message construction part of this function.
+-   **Data Sources**: To add more information to the hourly notification:
+    1.  Create or modify a script to collect the new data and save it as a JSON file in the `${GITHUB_WORKSPACE:-/tmp}/notification_data` directory.
+    2.  Update `scripts/gather-notification-data.sh` to read this new JSON file and merge its content into the main payload.
+    3.  If necessary, update the `NotificationPayload` interface in `monitoring/src/alerter.ts` to include a type definition for the new data.
+    4.  Update `sendWebhookNotification` in `monitoring/src/alerter.ts` to include the new data in its formatted output.
+-   **Alerting Thresholds**: The high-latency alert threshold (`ALERT_THRESHOLD_MS`) is defined in `monitoring/src/alerter.ts`. Coverage thresholds (`COVERAGE_THRESHOLD`) are in `scripts/check_coverage_and_notify.js`.
 
-Latency alerts are sent to the webhook configured in `ALERT_WEBHOOK_URL`. If a
-service is not Kubernetes managed the monitor attempts a PM2 restart when
-latency exceeds the threshold.
+### Local Testing of Notifications
+
+1.  Compile the TypeScript files in `monitoring/src/` to JavaScript in `monitoring/dist/` (e.g., using `tsc -p monitoring/tsconfig.json`).
+2.  Manually create JSON files in a `notification_data` directory (e.g., `/tmp/notification_data/test_status.json` with some test data).
+3.  Set the required environment variables:
+    ```bash
+    export ALERT_WEBHOOK_URL="your_test_webhook_url"
+    export GITHUB_REPOSITORY="your-org/your-repo"
+    export GITHUB_SERVER_URL="https://github.com"
+    export GITHUB_WORKSPACE="/path/to/your/local/repo/root" # Or where notification_data is
+    ```
+4.  Run the gather script: `bash scripts/gather-notification-data.sh`
+    This will attempt to send a notification to your test webhook URL. Check the script's output for the payload it constructed and any errors.
+```
