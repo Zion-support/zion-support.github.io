@@ -33,11 +33,11 @@ import {}
 
 
                 </li>
-              ));
+              )) 
             </ul>
 
                 </li>
-              ));
+              )) 
             </ul>
           </div>
 
@@ -46,7 +46,7 @@ import {}
               <div'key={f}                className='p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm>'
                 <Brain className='w-6 h-6 text-red-600 mb-3'  />                <div className='text-zion-slate-dark font-semibold'>{f}</div>
               </div>
-            ));
+            )) 
           </div>
 
               <p className='text-sm text-zion-slate-light'>
@@ -61,10 +61,10 @@ import {}
           </div>
 
           <div className='mt-4 text-sm text-zion-slate-light'>,
-  Visit us at: {'}<a''              href='https: //ziontechgroup.com'';
-              target='_blank'';
-              rel='noreferrer'';
-:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx;
+  Visit us at: {'}<a''              href='https: //ziontechgroup.com'' 
+              target='_blank'' 
+              rel='noreferrer'' 
+:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx 
               className='text-red-600 hove,
     r:underline'>              http,
     s://ziontechgroup.com            </a>

@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../components/Layout';
-import { Code, BookOpen, Shield, Zap, ChevronRight, ExternalLink, Copy, Check } from 'lucide-react';
+import { motion } from 'framer-motion' 
+import Link from 'next/link' 
+import Layout from '../components/Layout' 
+import { Code, BookOpen, Shield, Zap, ChevronRight, ExternalLink, Copy, Check } from 'lucide-react' 
 
 const endpoints = [
   {
@@ -57,11 +57,11 @@ const endpoints = [
       }
     }
   }
-];
+] 
 
 export default function APIDocumentationPage() {
-  const [copiedCode, setCopiedCode] = useState(null);
-  const [activeTab, setActiveTab] = useState('overview');
+  const [copiedCode, setCopiedCode] = useState(null) 
+  const [activeTab, setActiveTab] = useState('overview') 
 
   const apiEndpoints = [
     {
@@ -216,7 +216,7 @@ export default function APIDocumentationPage() {
         }
       ]
     }
-  ];
+  ] 
 
   const codeExamples = {
     javascript: `// JavaScript/Node.js Example
@@ -229,9 +229,9 @@ const response = await fetch('https://api.ziontechgroup.com/api/v1/auth/login', 
     email: 'user@example.com',
     password: 'your-password'
   })
-});
+}) 
 
-const data = await response.json();
+const data = await response.json() 
 console.log(data);`,
     python: `# Python Example
 import requests
@@ -252,13 +252,13 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
     "email": "user@example.com",
     "password": "your-password"
   }'`
-  };
+  } 
 
   const copyToClipboard = (code, language) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(language);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
+    navigator.clipboard.writeText(code) 
+    setCopiedCode(language) 
+    setTimeout(() => setCopiedCode(null), 2000) 
+  } 
 
   const tabs = [
     { id: 'overview', label: 'Overview', icon: Globe },
@@ -266,7 +266,7 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
     { id: 'endpoints', label: 'Endpoints', icon: Code },
     { id: 'examples', label: 'Examples', icon: Terminal },
     { id: 'errors', label: 'Errors', icon: XCircle }
-  ];
+  ] 
 
   return (
     <MainLayout
@@ -783,5 +783,5 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
         </section>
       </div>
     </Layout>
-  );
+  ) 
 }

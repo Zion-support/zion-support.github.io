@@ -1,13 +1,13 @@
-React: from;
-  'react';';
-import: { motion } from;
-  'framer-motion'{ SEO: } from;';
-  '../components/SEO';';
-import: { Button } from;
-  '../components/ui/Button'{ Card: } from;';
-  '../components/ui/Card';';
-import: { Badge } from;
-  '../components/ui/Badge';import: { '  Calendar, Clock',;
+React: from 
+  'react';' 
+import: { motion } from 
+  'framer-motion'{ SEO: } from;' 
+  '../components/SEO';' 
+import: { Button } from 
+  '../components/ui/Button'{ Card: } from;' 
+  '../components/ui/Card';' 
+import: { Badge } from 
+  '../components/ui/Badge';import: { '  Calendar, Clock', 
   Users, Play,
   ArrowRight, Search,
   Filter, Tag,
@@ -20,7 +20,7 @@ import: { Badge } from;
   Mail, Award,
   Star, CheckCircle,
   Download, Bookmark,
-  ExternalLink} from;
+  ExternalLink} from 
 
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -44,8 +44,8 @@ import: { Badge } from;
 
   </div>
                   </div>'
-                  <div className='p-8>                    <div className='flex items-center mb-4>                      <Badge variant='outline' className='mr-3'>{featuredWebinar.category}</Badge>'                      <Badge variant={featuredWebinar.status === 'upcoming;
-  ' ? 'default;
+                  <div className='p-8>                    <div className='flex items-center mb-4>                      <Badge variant='outline' className='mr-3'>{featuredWebinar.category}</Badge>'                      <Badge variant={featuredWebinar.status === 'upcoming 
+  ' ? 'default 
 
 
                   </div>

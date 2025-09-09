@@ -23,7 +23,7 @@ import {}
               </span>
 :pages.disabled/pages/services/DigitalTransformation.tsx'
             </h1>'''            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
-              Transform your business for the digital age with our comprehensive;
+              Transform your business for the digital age with our comprehensive 
 
                 <Settings className='w-5 h-5 mr-2'  />                Schedule Consultation</button>            </div>
           </motion.div>
@@ -33,11 +33,11 @@ import {}
 '{/* Features Section */}      <section className='py-20>''
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/DigitalTransformation.tsx;
+:pages.disabled/pages/services/DigitalTransformation.tsx 
             transition={{ duration: 0.8 }}>'''
             <h2 className='text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent>
               Our Transformation Services'</h2>''            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
@@ -59,8 +59,8 @@ import {}
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {services.map(servic,
-    e: unknown, index: unknown();
-              <motion.div;
+    e: unknown, index: unknown() 
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.5, delay: index * 0.1 }}                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-200>'
@@ -82,8 +82,8 @@ import {}
         </div>
       </section>
 
-          <motion.div'';
-            className='text-center mb-16';
+          <motion.div'' 
+            className='text-center mb-16' 
 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -95,8 +95,8 @@ import {}
             </p>
 
             <div className='space-y-6'>
-              {benefits.slice(0, 3).map(benefit: unknown, index: unknown();
-                <motion.div;
+              {benefits.slice(0, 3).map(benefit: unknown, index: unknown() 
+                <motion.div 
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.5, delay: index * 0.1 }}                  className='flex items-start space-x-3>'
@@ -105,9 +105,9 @@ import {}
 :pages.disabled/pages/services/DigitalTransformation.tsx))}
             </div>'''
             <div className='space-y-6'>
-              {benefits.slice(3).map(benefit: unknown, index: unknown();
+              {benefits.slice(3).map(benefit: unknown, index: unknown() 
 
-                <motion.div;
+                <motion.div 
                   key={index + 3}
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.5, delay: index * 0.1 }}                  className='flex items-start space-x-3>'
@@ -120,9 +120,9 @@ import {}
         </div>
       </section>
 
-              <motion.div';
-                key={index};
-                className='text-center';
+              <motion.div' 
+                key={index} 
+                className='text-center' 
 
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -138,7 +138,7 @@ import {}
         </div>
       </section>
 
-              Join organizations worldwide that use our digital transformation;
+              Join organizations worldwide that use our digital transformation 
 
 
               </button>

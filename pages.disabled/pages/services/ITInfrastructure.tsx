@@ -1,4 +1,4 @@
-:pages.disabled/pages/services/ITInfrastructure.tsx;
+:pages.disabled/pages/services/ITInfrastructure.tsx 
 import: {}
   Server,
   Shield,
@@ -11,16 +11,16 @@ import: {}
   Cpu,
   HardDrive,
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/ITInfrastructure.tsx;
+:pages.disabled/pages/services/ITInfrastructure.tsx 
 
               <span className='block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple'>
                 Solutions
               </span>'
             </h1>'''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed'>
-              Build robust, scalable, and secure IT infrastructure that powers;
+              Build robust, scalable, and secure IT infrastructure that powers 
               your business growth. Our expert team delivers enterprise-grade
               solutions with 99.9% uptime guarantee.
             </p>
@@ -33,13 +33,13 @@ import: {}
       <section className='py-20 bg-zion-slate-dark>''
         <div className='container mx-auto px-4'>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
             whileInView={{ opacity:  ,1, y: 0 }}
-:pages.disabled/pages/services/ITInfrastructure.tsx;
+:pages.disabled/pages/services/ITInfrastructure.tsx 
 
             <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>
-              From server management to cloud optimization, we provide;
+              From server management to cloud optimization, we provide 
               end-to-end IT infrastructure solutions that ensure your business
               runs smoothly and efficiently.
             </p>
@@ -50,12 +50,12 @@ import: {}
           <div className='grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-3 gap-8 max-w-7xl mx-auto'>
             {services.map((service, index
-              <motion.div;
+              <motion.div 
 
                 key={index}
                 initial={{ opacity:  ,0, y: 20 }}
                 whileInView={{ opacity:  ,1, y: 0 }}
-:pages.disabled/pages/services/ITInfrastructure.tsx;
+:pages.disabled/pages/services/ITInfrastructure.tsx 
 
                       {feature}
                     </li>
@@ -66,10 +66,10 @@ import: {}
           </div>
         </div>
 
-            <motion.div;
+            <motion.div 
               initial={{ opacity:  ,0, y: 20 }}
               whileInView={{ opacity:  ,1, y: 0 }}
-:pages.disabled/pages/services/ITInfrastructure.tsx;
+:pages.disabled/pages/services/ITInfrastructure.tsx 
 
               <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>
                 Experience enterprise-grade infrastructure with unmatched
@@ -80,14 +80,14 @@ import: {}
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }};
+                  viewport={{ once: true }} 
             </motion.div>'
 '''
             <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-6'>
               {benefits.map(benefi,
     t: unknown, index: unknown(
-                <motion.div;
+                <motion.div 
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -98,15 +98,15 @@ import: {}
                   </div>'                  <span className='text-white font-medium'>{benefit}</span>
 
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </div>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
             whileInView={{ opacity:  ,1, y: 0 }}
-:pages.disabled/pages/services/ITInfrastructure.tsx;
+:pages.disabled/pages/services/ITInfrastructure.tsx 
 
               Ready to Transform Your IT Infrastructure?'
             </h2>'''

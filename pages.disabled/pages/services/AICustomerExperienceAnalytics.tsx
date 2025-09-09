@@ -20,9 +20,9 @@ import {}
   PieChart,
   Activity,
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx;
+:pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx 
 
                 <ArrowRight className='w-5 h-5 mr-2'  />                Watch Demo</Link>            </div>
           </motion.div>
@@ -32,13 +32,13 @@ import {}
 '{/* Features Section */}      <section className='py-24 bg-black/20>''
         <div className='container mx-auto px-4'>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx;
+:pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx 
 
             {features.map((feature, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
                   <feature.icon className='w-6 h-6 text-white' />'
@@ -53,11 +53,11 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx;
+:pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx 
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 text-center''>''
@@ -72,18 +72,18 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx;
+:pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx 
 
               <motion.divkey={index}                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-:pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx;
+:pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx 
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${`
-  tier.popular'';
-                    ?;
-  'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10'';
+  tier.popular'' 
+                    ? 
+  'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10'' 
   '`: 'border-white/10``}`}`
               >'{tier.popular && (''                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
                     <span className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
@@ -108,11 +108,11 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx;
+:pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx 
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='text-center''>''
@@ -131,9 +131,9 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx;
+:pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx 
 
                 <Play className='w-5 h-5 mr-2'  />                Schedule Demo</Link>            </div>
           </motion.div>
@@ -153,7 +153,7 @@ import {}
 
 
                 <br />
-                Middletown DE 19709;
+                Middletown DE 19709 
               </p>            </div>
           </div>
         </div>

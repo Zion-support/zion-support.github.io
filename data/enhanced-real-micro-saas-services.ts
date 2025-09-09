@@ -1,4 +1,4 @@
-export interface SimpleMicroSaasService {
+export interface EnhancedRealMicroSaasService {
   id: string;
   name: string;
   tagline: string;
@@ -13,22 +13,25 @@ export interface SimpleMicroSaasService {
   link: string;
   marketPosition: string;
   targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  realImplementation: boolean;
 }
 
-export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [];
-export const serviceCategories: string[] = ['All'];
-
-export const getPopularServices = () => {
-	return enhancedRealMicroSaasServices.filter(service => true);
-};
+export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
+  {
+    id: 'enhanced-service',
+    name: 'Enhanced Service',
+    tagline: 'Enhanced micro SaaS service',
+    price: '$49',
+    period: '/month',
+    description: 'An enhanced micro SaaS service.',
+    features: ['Feature 1', 'Feature 2', 'Feature 3'],
+    popular: true,
+    icon: '⚡',
+    color: 'blue',
+    textColor: 'white',
+    link: '/services/enhanced-service',
+    marketPosition: 'Leading',
+    targetAudience: 'SMBs',
+    realImplementation: true
+  }
+];

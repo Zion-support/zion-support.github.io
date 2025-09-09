@@ -2,7 +2,7 @@ rank: number,
   name: string,
   referrals: number
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card 
 import { Award } from 'lucide-react
 
 interface LeaderboardEntry {
@@ -58,7 +58,7 @@ export function ReferralLeaderboard() {
                       ? "bg-amber-200 text-amber-800"
                       : "bg-muted text-muted-foreground"
                   }`}
-                >;
+                > 
                   {entry.rank}
                 </div>
                 <span className="font-medium>{entry.name}</span>
@@ -73,35 +73,35 @@ export function ReferralLeaderboard() {
     </Card>
 
 
-                          : bg-muted text-muted-foreground                  }`}>;
+                          : bg-muted text-muted-foreground                  }`}> 
                   {entry && entry.rank}
-                </div>;
-                <span className='font-medium'>{entry && entry.name}</span>;
-              </div>;
-              <span className=text-sm>;
-                {entry && entry.referrals} referral{entry && entry.referrals !== 1 ? 's' : }              </span>                      ? "bg-slate-200 text-slate-800;
-                      : entry && entry.rank === 3;
-                      ? bg-amber-200 text-amber-800";
-                      : "bg-muted text-muted-foreground;
-                >;
+                </div> 
+                <span className='font-medium'>{entry && entry.name}</span> 
+              </div> 
+              <span className=text-sm> 
+                {entry && entry.referrals} referral{entry && entry.referrals !== 1 ? 's' : }              </span>                      ? "bg-slate-200 text-slate-800 
+                      : entry && entry.rank === 3 
+                      ? bg-amber-200 text-amber-800" 
+                      : "bg-muted text-muted-foreground 
+                > 
                   {entry && entry.rank}
-                </div>;
-                <span className='font-medium'>{entry && entry.name}</span>;
-              </div>;
-              <span className=text-sm>;
-                {entry && entry.referrals} referral{entry && entry.referrals !== 1 ? 's' : ''}                <span className=font-medium">{entry && entry.name}</span>;
-              </div>;
-              <span className="text-sm>;
+                </div> 
+                <span className='font-medium'>{entry && entry.name}</span> 
+              </div> 
+              <span className=text-sm> 
+                {entry && entry.referrals} referral{entry && entry.referrals !== 1 ? 's' : ''}                <span className=font-medium">{entry && entry.name}</span> 
+              </div> 
+              <span className="text-sm> 
                 {entry && entry.referrals} referral{entry && entry.referrals !== 1 ? s" : ""}
-            </div>;
+            </div> 
           ))}
-        </div>;
-      </CardContent>;
-    </Card>;
+        </div> 
+      </CardContent> 
+    </Card> 
   )})}</div>))}
-        </div>;
-      </CardContent>;
-    </Card>);
+        </div> 
+      </CardContent> 
+    </Card>) 
 }
   )
 }

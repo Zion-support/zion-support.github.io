@@ -36,18 +36,18 @@
 
         logWarn("User not authenticated."),
         return
-      } catch (error) {;
-        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching saved talents' }),;
-        toast({;
-          title: "Error",;
-          description: "Failed to load saved talents. Please try again later.",;
-          variant: "destructive"});
-      } finally {;
-        setIsLoading(false);
+      } catch (error) { 
+        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching saved talents' }), 
+        toast({ 
+          title: "Error", 
+          description: "Failed to load saved talents. Please try again later.", 
+          variant: "destructive"}) 
+      } finally { 
+        setIsLoading(false) 
       }
-    },;
-    fetchSavedTalents();
-  }, [user]),;
+    }, 
+    fetchSavedTalents() 
+  }, [user]), 
 
         if (error) {
           throw error
@@ -60,7 +60,7 @@
           .eq('id', talentId)
 
 
-export default function SavedTalentsPage() {;
+export default function SavedTalentsPage() { 
 
   
         if (talentError) {
@@ -122,35 +122,35 @@ export default function SavedTalentsPage() {;
                 onRequestHire={handleRequestHire}
                 isAuthenticated={!!user}
 
-              />;
+              /> 
 
 
 
             ))}
-          </div>;
+          </div> 
         )}
 
-      <SEO;
-        title='Saved Talents | Zion AI Marketplace';
-        description='View and manage your saved talents in the Zion AI Marketplace';
-      />;
-      <div className='container mx - auto px - 4 py - 8'>;
-        <h1 className='text - 3xl font - bold mb - 4'>Saved Talents</h1>;
-        <p className='text - muted - foreground'>;
-          Here are the talents you've saved for future reference.;
-        </p>;
+      <SEO 
+        title='Saved Talents | Zion AI Marketplace' 
+        description='View and manage your saved talents in the Zion AI Marketplace' 
+      /> 
+      <div className='container mx - auto px - 4 py - 8'> 
+        <h1 className='text - 3xl font - bold mb - 4'>Saved Talents</h1> 
+        <p className='text - muted - foreground'> 
+          Here are the talents you've saved for future reference. 
+        </p> 
         {is_loading ? (
           <div className='text - center py - 8'>Loading saved talents...</div>) : saved_talents.length === 0 ? (
-          <div className='py - 8'>;
-            <EmptyState;
+          <div className='py - 8'> 
+            <EmptyState 
               icon={<Heart className='h - 8 w - 8' />}
-              title='No Saved Talents'              description="You haven't saved any talents yet.";
+              title='No Saved Talents'              description="You haven't saved any talents yet." 
               action={{ text: 'Browse Talent', href: '/talent' }}
-              className='border - none bg - transparent text - center';
-            />;
+              className='border - none bg - transparent text - center' 
+            /> 
           </div>) : (
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 mt - 8'>;
-            {saved_talents.map (talent => (              <TalentCard;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 mt - 8'> 
+            {saved_talents.map (talent => (              <TalentCard 
                 key = {talent.id, }
                 talent = {talent, }
                 onViewProfile = {handleViewProfile, }
@@ -158,23 +158,23 @@ export default function SavedTalentsPage() {;
                 is_authenticated = {!!user, }
               />))}
           </div>)}
-      </div>;
-    </>);
-}, [user, router]);
-  data, error;
-}= await supabase .from ("saved talents") user id;
-full name;
-professional title;
-profile picture url;
-hourly rate;
-bio;
-years experience;
-key projects;
-skills;
-location;
-availability;
-is verified) `);
+      </div> 
+    </>) 
+}, [user, router]) 
+  data, error 
+}= await supabase .from ("saved talents") user id 
+full name 
+professional title 
+profile picture url 
+hourly rate 
+bio 
+years experience 
+key projects 
+skills 
+location 
+availability 
+is verified) `) 
 }finally {
-  setIsLoading (false);
+  setIsLoading (false) 
 
 

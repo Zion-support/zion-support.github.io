@@ -1,8 +1,8 @@
-:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
-:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
-<:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
-import: React from 'react.ts';';
-import: { motion  } from 'framer-motion.ts';';
+:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx 
+:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx 
+<:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx 
+import: React from 'react.ts';' 
+import: { motion  } from 'framer-motion.ts';' 
 import: { Brain,
   TrendingUp,
   BarChart3,
@@ -10,7 +10,7 @@ import: { Brain,
   Shield,
   Users,
   Globe,
-=;
+= 
 import: { Brain,
   TrendingUp,
   BarChart3,
@@ -30,26 +30,26 @@ import: { Brain,
   Target,
   PieChart,
   LineChart,
-  Activity'} from 'lucide-react';';
+  Activity'} from 'lucide-react';' 
 export: { function }
 export default function AIBusinessIntelligencePlatform(...args[]):  {}
     },
 
-:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
-        'API: access';';
+:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx 
+        'API: access';' 
         'API: access'';'] ],
       popular: fals,e}
-  ];
-:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
+  ] 
+:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx 
 
       description: 'Demand forecasting, customer segmentation, and store performance analysis'}  ]
   return ('''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx
-<:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
-      <SEO;
-=;
+<:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx 
+      <SEO 
+= 
 
               <span className='bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'> Actionable Intelligence</span>'
             </h1>'''
@@ -79,12 +79,12 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
     g:grid-cols-3 gap-8'>
             {features.map((feature, index(
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
-:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx 
+:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx 
+  y: 20 
 
                   <feature.icon className='h-6 w-6 text-white' />'
                 </div>'''
@@ -94,7 +94,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
                 <p className='text-gray-300'>{feature.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -106,15 +106,15 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
             {benefits.map(benefi,
     t: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
-:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
-  x: -20;
+:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx 
+:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx 
+  x: -20 
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -126,12 +126,12 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
             {pricingTiers.map(tie,
     r: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
-:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx 
+:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx 
+  y: 20 
 
                     </li>
                   ))}
@@ -139,22 +139,22 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
                 </ul>``
                 <Button```
                   className={`w-full ${`
-';
-                    tier.popular'';
+' 
+                    tier.popular'' 
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hove,
     r:to-blue-700'''`;`
                       : 'bg-slate-700 hove,
     r:bg-slate-600'``}`}
-                  Get Started;
+                  Get Started 
                 </ul>`
                 <Button``
                   className={`w-full ${}`
-                    tier.popular';
+                    tier.popular' 
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hove,
-    r:to-blue-700'';
+    r:to-blue-700'' 
                       : 'bg-slate-700 hove,
     r:bg-slate-600'`}`}
-                  Get Started;
+                  Get Started 
 
                 </Button>
               </motion.div>
@@ -170,17 +170,17 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
             {useCases.map(useCas,
     e: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
-:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx 
+:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx 
+  y: 20 
 
                 <p className='text-gray-300'>{useCase.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 

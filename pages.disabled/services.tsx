@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react' 
+import Head from 'next/head' 
+import { motion } from 'framer-motion' 
 import { 
   Search, Filter, Grid, List, Star, 
   TrendingUp, Zap, Brain, Shield, Globe,
   ArrowRight, ExternalLink, Check, Cpu
-} from 'lucide-react';
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../data/extra-services';
-import { additionalEnhancedServices } from '../data/additional-real-services';
-import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
-import { advancedAIServices } from '../data/advanced-ai-services';
-import { blockchainEmergingTechServices } from '../data/blockchain-emerging-tech-services';
+} from 'lucide-react' 
+import Button from '../components/ui/Button' 
+import Card from '../components/ui/Card' 
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services' 
+import { extraServices } from '../data/extra-services' 
+import { additionalEnhancedServices } from '../data/additional-real-services' 
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services' 
+import { advancedAIServices } from '../data/advanced-ai-services' 
+import { blockchainEmergingTechServices } from '../data/blockchain-emerging-tech-services' 
 
 export default function ServicesPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popular');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
+  const [searchTerm, setSearchTerm] = useState('') 
+  const [selectedCategory, setSelectedCategory] = useState('all') 
+  const [sortBy, setSortBy] = useState('popular') 
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid') 
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity') 
 
   // Combine all services
   const allServices = useMemo(() => [
@@ -30,17 +30,17 @@ export default function ServicesPage() {
     ...innovativeMicroSaasServices,
     ...advancedAIServices,
     ...blockchainEmergingTechServices
-  ], []);
+  ], []) 
 
   // Get unique categories
   const categories = useMemo(() => {
-    const cats = [...new Set(allServices.map(service => service.category))];
-    return ['all', ...cats.sort()];
-  }, [allServices]);
+    const cats = [...new Set(allServices.map(service => service.category))] 
+    return ['all', ...cats.sort()] 
+  }, [allServices]) 
 
   // Filter and sort services
   const filteredServices = useMemo(() => {
-    let filtered = allServices;
+    let filtered = allServices 
 
     // Filter by search term
     if (searchTerm) {
@@ -49,41 +49,41 @@ export default function ServicesPage() {
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      ) 
     }
 
     // Filter by category
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
+      filtered = filtered.filter(service => service.category === selectedCategory) 
     }
 
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'name':
-          return a.name.localeCompare(b.name);
+          return a.name.localeCompare(b.name) 
         case 'price': {
-          const priceA = parseFloat(a.price.replace(/[^0-9.]/g, ''));
-          const priceB = parseFloat(b.price.replace(/[^0-9.]/g, ''));
-          return priceA - priceB;
+          const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) 
+          const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) 
+          return priceA - priceB 
         }
         case 'rating':
-          return (b.rating || 0) - (a.rating || 0);
+          return (b.rating || 0) - (a.rating || 0) 
         case 'popularity':
         default:
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0) 
       }
-    });
+    }) 
 
-    return filtered;
-  }, [allServices, searchTerm, selectedCategory, sortBy]);
+    return filtered 
+  }, [allServices, searchTerm, selectedCategory, sortBy]) 
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  } 
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -432,8 +432,8 @@ export default function ServicesPage() {
               </p>
               <Button
                 onClick={() => {
-                  setSearchTerm('');
-                  setSelectedCategory('all');
+                  setSearchTerm('') 
+                  setSelectedCategory('all') 
                 }}
                 variant="primary"
               >
@@ -500,5 +500,5 @@ export default function ServicesPage() {
         </div>
       </section>
     </div>
-  );
+  ) 
 }

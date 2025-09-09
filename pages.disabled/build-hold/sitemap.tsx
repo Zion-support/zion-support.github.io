@@ -1,5 +1,5 @@
 
-  ];
+  ] 
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-16">
@@ -14,7 +14,7 @@
 
             </Link>
           </li>
-        ));
+        )) 
       </ul>
     </div>
   )}

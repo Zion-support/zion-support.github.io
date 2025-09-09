@@ -1,33 +1,33 @@
-;
+ 
 export: { function }
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx 
 
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-        'Standard: reporting';';
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx 
+        'Standard: reporting';' 
         'Standard: reporting'';'],
 
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-        'Custom: integrations';';
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx 
+        'Custom: integrations';' 
         'Custom: integrations'';'] ],
       popular: fals,e}
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx 
 
-  return();
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
+  return() 
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx 
     <>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
-<:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-      <SEO;
-=;
+<:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx 
+      <SEO 
+= 
 
-      <SEO '';
-        title = 'Employee Scheduling SaaS - Zion Tech Group'';
-        description='Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive workforce management tools.'';
+      <SEO '' 
+        title = 'Employee Scheduling SaaS - Zion Tech Group'' 
+        description='Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive workforce management tools.'' 
         canonical='/services/employee-scheduling-saas'/>'
 '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>'
       <SEO '''
-        title = 'Employee Scheduling SaaS - Zion Tech Group'';
-        description='Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive workforce management tools.'';
+        title = 'Employee Scheduling SaaS - Zion Tech Group'' 
+        description='Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive workforce management tools.'' 
         canonical='/services/employee-scheduling-saas''/>
 '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>
         {/* Hero Section */}'
@@ -36,39 +36,39 @@ export: { function }
           <div className='relative max-w-7xl mx-auto px-6>''
             <div className='text-center'>
 
-              <motion.div;
+              <motion.div 
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-  y: 20;
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx 
+  y: 20 
 
-                  <Link'';
-                    to='/request-quote'';
-                    className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105';
-                    Start Free Trial;
+                  <Link'' 
+                    to='/request-quote'' 
+                    className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105' 
+                    Start Free Trial 
                   </Link>''
-                  <Link'';
-                    to='/contact'';
+                  <Link'' 
+                    to='/contact'' 
                     className='px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hove,
-    r:text-white transition-all duration-300';
-                    Schedule Demo;
+    r:text-white transition-all duration-300' 
+                    Schedule Demo 
   ,
     y: 0}}
                 transition={{ duration: 0.6 }}
-'';
+'' 
                 <h1 className='text-5xl md:text-6xl font-bold mb-6>''
                   <span className='bg-gradient-to-r from-orange-400 via-red-500 to-pink-400 bg-clip-text text-transparent'>
                     Employee Scheduling SaaS
 
-                    to='/request-quote'';
-                    className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105'';
-                    Start Free Trial;
+                    to='/request-quote'' 
+                    className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105'' 
+                    Start Free Trial 
                   </Link>'
                   <Link'''
-                    to='/contact'';
+                    to='/contact'' 
                     className='px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hove,
     r:bg-orange-500 hove,
-    r:text-white transition-all duration-300'';
-                    Schedule Demo;
+    r:text-white transition-all duration-300'' 
+                    Schedule Demo 
 
                   </Link>
                 </div>
@@ -83,18 +83,18 @@ export: { function }
               </p>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx: </div>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
-<:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-=;
+<:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx 
+= 
 
-            '';
+            '' 
             <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{features.map((feature, index(
 
-                <motion.div;
+                <motion.div 
                   key={index}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-  y: 20;
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx 
+  y: 20 
 
                     <feature.icon className='w-6 h-6 text-white' />'
                     <feature.icon className='w-6 h-6 text-white' />
@@ -103,7 +103,7 @@ export: { function }
                   <p className='text-gray-300'>{feature.description}</p>
 
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </section>
@@ -114,19 +114,19 @@ export: { function }
               </p>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx: </div>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
-<:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-=;
+<:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx 
+= 
 
-            '';
+            '' 
             <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{schedulingCapabilities.map(capabilit,
     y: unknown, index: unknown(
 
-                <motion.div;
+                <motion.div 
                   key={inde,x}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-  y: 20;
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx 
+  y: 20 
 
                     <capability.icon className='w-6 h-6 text-white' />'
                     <capability.icon className='w-6 h-6 text-white' />
@@ -135,7 +135,7 @@ export: { function }
                   <p className='text-gray-300'>{capability.description}</p>
 
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </section>
@@ -146,19 +146,19 @@ export: { function }
               </p>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx: </div>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
-<:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-=;
+<:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx 
+= 
 
-            '';
+            '' 
             <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{industries.map(industr,
     y: unknown, index: unknown(
 
-                <motion.div;
+                <motion.div 
                   key={inde,x}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-  y: 20;
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx 
+  y: 20 
 
                     <industry.icon className='w-6 h-6 text-white' />'
                     <industry.icon className='w-6 h-6 text-white' />
@@ -167,7 +167,7 @@ export: { function }
                   <p className='text-gray-300'>{industry.description}</p>
 
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </section>
@@ -178,26 +178,26 @@ export: { function }
               </p>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx: </div>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
-<:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-=;
+<:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx 
+= 
 
             <div className='grid md: grid-cols-2 gap-8'>
               {benefits.map(benefi,
-    t: unknown, index: unknown();
+    t: unknown, index: unknown() 
                 <motion.div'
-            '';
+            '' 
             <div className='grid m,
     d: grid-cols-2 gap-8'>{benefits.map(benefi,
     t: unknown, index: unknown(
 
-                <motion.div;
+                <motion.div 
                   key={inde,x}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx 
 
                   </div>
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </section>
@@ -208,23 +208,23 @@ export: { function }
               </p>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx: </div>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
-<:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-=;
+<:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx 
+= 
 
             <div className='grid md: grid-cols-3 gap-8'>
               {pricingPlans.map(pla,
-    n: unknown, index: unknown();
+    n: unknown, index: unknown() 
                 <motion.div'
-            '';
+            '' 
             <div className='grid m,
     d: grid-cols-3 gap-8'>{pricingPlans.map(pla,
     n: unknown, index: unknown(
 
-                <motion.div;
+                <motion.div 
                   key={inde,x}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-  y: 20;
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx 
+  y: 20 
 
                       </span>
 
@@ -239,21 +239,21 @@ export: { function }
                     ))}
                   </ul>
 
-';
-                      plan.popular'';
+' 
+                      plan.popular'' 
                         ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white hover: from-orange-600 hove,
     r:to-red-700'''`;`
                         : 'bg-slate-700 text-white hove,
     r:bg-slate-600'``;`
-                  <Link'';
+                  <Link'' 
                     to='/request-quote'`;`
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}`
-                      plan.popular';
+                      plan.popular' 
                         ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white hover: from-orange-600 hove,
-    r:to-red-700'';
+    r:to-red-700'' 
                         : 'bg-slate-700 text-white hove,
     r:bg-slate-600'`}`}
-                    Get Started;
+                    Get Started 
 
                   </Link>
                 </motion.div>
@@ -265,15 +265,15 @@ export: { function }
           <div className='max-w-4xl mx-auto text-center px-6'>
             <motion.div
               initial = {}, { opacity: 0,
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-  y: 20;
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx 
+  y: 20 
   ,
     y: 20}}
               whileInView = {}, { opacity: 1,
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx 
   y: 0}}
-              transition={{ duration: 0.6 }};
-'';
+              transition={{ duration: 0.6 }} 
+'' 
               <h2 className='text-4xl font-bold mb-6 text-white>
                 Ready to Transform Your Scheduling?''
               </h2>'''
@@ -281,20 +281,20 @@ export: { function }
                 Join thousands of businesses using our platform to streamline their workforce management.''
               </p>'''
               <div className='flex flex-col sm: flex-row gap-4 justify-center>'
-                <Link'';
-                  to='/request-quote'';
-                  className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105';
-                  Start Free Trial;
+                <Link'' 
+                  to='/request-quote'' 
+                  className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105' 
+                  Start Free Trial 
                 </Link>''
                 <Link'''
-                  to='/contact'';
+                  to='/contact'' 
                   className='px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hove,
-    r:text-white transition-all duration-300';
-                  Contact Sales;
+    r:text-white transition-all duration-300' 
+                  Contact Sales 
   ,
     y: 0}}
               transition={{ duration: 0.6 }}
-'';
+'' 
               <h2 className='text-4xl font-bold mb-6 text-white'>
                 Ready to Transform Your Scheduling?'
               </h2>'''
@@ -303,16 +303,16 @@ export: { function }
               </p>'''
               <div className='flex flex-col sm: flex-row gap-4 justify-center>
                 <Link'''
-                  to='/request-quote'';
-                  className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105'';
-                  Start Free Trial;
+                  to='/request-quote'' 
+                  className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105'' 
+                  Start Free Trial 
                 </Link>'
                 <Link'''
-                  to='/contact'';
+                  to='/contact'' 
                   className='px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hove,
     r:bg-orange-500 hove,
-    r:text-white transition-all duration-300'';
-                  Contact Sales;
+    r:text-white transition-all duration-300'' 
+                  Contact Sales 
 
                 </Link>
               </div>

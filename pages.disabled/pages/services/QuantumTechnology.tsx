@@ -1,14 +1,14 @@
 
-:pages.disabled/pages/services/QuantumTechnology.tsx];
-:pages.disabled/pages/services/QuantumTechnology.tsx;
+:pages.disabled/pages/services/QuantumTechnology.tsx] 
+:pages.disabled/pages/services/QuantumTechnology.tsx 
   '{''
-      name: 'Quantum Communications',;
-      description: 'Secure communication using quantum principles',;
-      icon: Globe,;
+      name: 'Quantum Communications', 
+      description: 'Secure communication using quantum principles', 
+      icon: Globe, 
       features: ['Quantum key distribution', 'Entanglement', 'Secure channels', 'Quantum networks']}
-  ];
+  ] 
 
-              Harness the power of quantum computing to solve complex problems that are impossible;
+              Harness the power of quantum computing to solve complex problems that are impossible 
               for classical computers. Experience the future of computation.''
             </p>'''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>''
@@ -119,6 +119,6 @@
       </section>
     </div>
   ,)}
-:pages.disabled/pages/services/QuantumTechnology.tsx;
+:pages.disabled/pages/services/QuantumTechnology.tsx 
 
 

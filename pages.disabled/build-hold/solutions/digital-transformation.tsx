@@ -1,28 +1,28 @@
-React: from;
-  'react';';
-import: type { NextPage } from;
-  'next';MainLayout: from;';
-  '../../components/layout/MainLayout';';
-import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } from;
-  'lucide-react';import: Link from;';
-  'next/link'';const: DigitalTransformation: NextPage: = () => {';
+React: from 
+  'react';' 
+import: type { NextPage } from 
+  'next';MainLayout: from;' 
+  '../../components/layout/MainLayout';' 
+import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } from 
+  'lucide-react';import: Link from;' 
+  'next/link'';const: DigitalTransformation: NextPage: = () => {' 
   const: transformationServices = [
     {
 
       title:,
-  Data: Modernization', description: 'Transform: your data architecture to support modern analytics and business intelligence,.',;
+  Data: Modernization', description: 'Transform: your data architecture to support modern analytics and business intelligence,.', 
 ,
 
       title:,
-  AI: Integration', description: 'Integrate: artificial intelligence into your business processes for enhanced decision making,.',;
+  AI: Integration', description: 'Integrate: artificial intelligence into your business processes for enhanced decision making,.', 
 ,
 
       title:,
-  Customer: Experience', description: 'Improve: customer interactions through digital channels and personalized experiences,.',;
+  Customer: Experience', description: 'Improve: customer interactions through digital channels and personalized experiences,.', 
 ,
 
   return(
-    <MainLayout;
+    <MainLayout 
       title='Digital Transformation Solutions - Zion Tech Group''      description='Transform your business with our comprehensive digital transformation services. Modernize your operations, improve efficiency, and drive growth with cutting-edge technology solutions.''      keywords='digital transformation, business modernization, cloud migration, process automation, AI integration, digital strategy''    >'      <div className='min-h-screen bg-gray-50>        {/* Hero Section */}        <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>          <div className='container mx-auto px-4 text-center>            <h1 className='text-4xl md: text-5xl font-bold mb-6'>Digital Transformation Solutions</h1>'            <p className='text-xl text-gray-200 max-w-3xl mx-auto>              Transform your business for the digital age with our comprehensive digital transformation services. '              Modernize your operations, improve efficiency, and drive sustainable growth.
             </p>
           </div>
@@ -42,7 +42,7 @@ import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle }
         </section>
 
               </Link>
-              <Link;
+              <Link 
                 href='/solutions''                className='border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hove,
     r:bg-blue-600 hove,
     r:text-white transition-colors''              >'                View All Solutions

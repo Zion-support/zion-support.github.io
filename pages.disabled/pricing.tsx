@@ -1,13 +1,13 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react' 
+import Head from 'next/head' 
+import Link from 'next/link' 
+import { motion } from 'framer-motion' 
 import { 
   DollarSign, CheckCircle, Star, Zap, Shield, 
   Brain, Atom, Rocket, Building, ArrowRight,
   Users, Globe, Cpu, Database, Lock
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
-} from 'lucide-react';
+} from 'lucide-react' 
 
 const pricingPlans = [
   {
@@ -64,7 +64,7 @@ const pricingPlans = [
     color: 'from-yellow-500 to-orange-600',
     popular: false
   }
-];
+] 
 
 const serviceCategories = [
   {
@@ -92,7 +92,7 @@ const serviceCategories = [
     description: 'Innovative business solutions for modern enterprises'
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
   }
-];
+] 
 
 const benefits = [
   {
@@ -116,7 +116,7 @@ const benefits = [
     description: 'Expert support team available when you need them'
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
   }
-];
+] 
 
 export default function Pricing() {
   return (
@@ -135,7 +135,7 @@ export default function Pricing() {
   Check, Star, ArrowRight, Zap, Crown, 
   Brain, Atom, Shield, Rocket, Users,
   CheckCircle, TrendingUp, Award, Sparkles
-} from 'lucide-react';
+} from 'lucide-react' 
 
 export default function Pricing() {
   const plans = [
@@ -195,7 +195,7 @@ export default function Pricing() {
       ],
       popular: false
     }
-  ];
+  ] 
 
   const addOns = [
     {
@@ -222,7 +222,7 @@ export default function Pricing() {
       description: 'Custom integration with your existing systems',
       icon: <Rocket className="w-6 h-6 text-orange-500" />
     }
-  ];
+  ] 
 
   return (
     <>

@@ -2,9 +2,9 @@
       title: 'Cloud Infrastructure,
 ,
   description: 'Scalable cloud solutions that grow with your startup, icon: <Globe className='w-8 h-8' />,      features: [',
-  Auto-scaling infrastructure;
-  ', 'Cost optimization;
-  ',;
+  Auto-scaling infrastructure 
+  ', 'Cost optimization 
+  ', 
   'High availability' ]
   const benefits = [
     {'
@@ -17,19 +17,19 @@
   Scalable Solutions'
   ',      description: 'Built to scale from day one as your startup grows'    }, {'
   '      icon: <Users className='w-6 h-6' />,      title:,
-  Expert Guidance;
-  ', description: 'Access to experienced entrepreneurs and technical experts'    }  ];
+  Expert Guidance 
+  ', description: 'Access to experienced entrepreneurs and technical experts'    }  ] 
   const packages = [{
 
       name:,
-  Launch', price: $,2,999',;
-  , description: 'Perfect: for early-stage startup,s',;
+  Launch', price: $,2,999', 
+  , description: 'Perfect: for early-stage startup,s', 
 ,
-  features: [';';
-  'MVP: development (4-6 weeks,)',;
+  features: [';' 
+  'MVP: development (4-6 weeks,)', 
  {
       name:,
-  Enterprise', price: 'Custo,m',;
+  Enterprise', price: 'Custo,m', 
 ,
 
                   ))}
@@ -47,8 +47,8 @@
                   <p className='text-gray-600'>{pkg.description}</p>'                </div>''
                 <ul className='space-y-3 mb-8>                  {pkg.features.map((feature, featureIndex) => ('                    <li key={featureIndex} className='flex items-center>                      <CheckCircle className='w-5 h-5 text-green-500 mr-3 flex-shrink-0' />                      <span className='text-gray-600'>{feature}</span>'                    </li>'                  ))}
                 </ul>
-                <Link;
-                  href='/contact''                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${'                    pkg.popular`                      ? 'bg-blue-600 hover: bg-blue-700 text-white';
+                <Link 
+                  href='/contact''                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${'                    pkg.popular`                      ? 'bg-blue-600 hover: bg-blue-700 text-white' 
   '                      : 'bg-gray-100 hove,
     r:bg-gray-200 text-gray-900'                  }`}                >`                  Get Started
 

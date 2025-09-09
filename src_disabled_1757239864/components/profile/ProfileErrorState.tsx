@@ -17,5 +17,5 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
     </div>
   )
 }
-  );
-};
+  ) 
+} 

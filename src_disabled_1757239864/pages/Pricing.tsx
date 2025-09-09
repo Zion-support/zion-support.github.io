@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react' 
 
 const Pricing: React.FC = () => {
   const plans = [
@@ -49,7 +49,7 @@ const Pricing: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ] 
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50>
@@ -118,7 +118,7 @@ const Pricing: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  ) 
+} 
 
-export default Pricing;
+export default Pricing 

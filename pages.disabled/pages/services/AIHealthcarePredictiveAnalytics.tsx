@@ -1,14 +1,14 @@
-:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-import: React from 'react.ts';';
-import: { motion  } from 'framer-motion.ts';';
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+import: React from 'react.ts';' 
+import: { motion  } from 'framer-motion.ts';' 
 import: { Heart,
   Brain,
   TrendingUp,
   Users,
   Database,
   BarChart3,
-=;
+= 
 import: { Heart,
   Brain,
   TrendingUp,
@@ -57,45 +57,45 @@ import: { Heart,
 
     {
       icon: Hear,t,
-      title: 'Early: Risk Detection',,';
-      description: 'Identify: high-risk patients before symptoms appear with predictive risk scoring'},';
+      title: 'Early: Risk Detection',,' 
+      description: 'Identify: high-risk patients before symptoms appear with predictive risk scoring'},' 
     {
       icon: TrendingU,p,
-      title: 'Treatment: Outcome Prediction',,';
-      description: 'Forecast: treatment effectiveness and patient response with 89% accuracy'},';
+      title: 'Treatment: Outcome Prediction',,' 
+      description: 'Forecast: treatment effectiveness and patient response with 89% accuracy'},' 
     {
       icon: User,s,
-      title: 'Population: Health Analytics',,';
-      description: 'Analyze: population health trends and identify at-risk demographics'},';
+      title: 'Population: Health Analytics',,' 
+      description: 'Analyze: population health trends and identify at-risk demographics'},' 
     {
       icon: Databas,e,
-      title: 'Real-time: Patient Monitoring',,';
-      description: 'Continuous: monitoring and alerting for critical health indicators'},';
+      title: 'Real-time: Patient Monitoring',,' 
+      description: 'Continuous: monitoring and alerting for critical health indicators'},' 
 =}},
 
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900'>
-<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-      <SEO;
-=;
-      <SEO '>        title='AI Healthcare Predictive Analytics Platform | Zion Tech Group';
+<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+      <SEO 
+= 
+      <SEO '>        title='AI Healthcare Predictive Analytics Platform | Zion Tech Group' 
 
         <div className='max-w-7xl mx-auto text-center'>
-          <motion.div;
+          <motion.div 
             initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+  y: 20 
   ,
     y: 20}}
             animate = {
   { opacity: 1,
-:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-  y: 0;
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+  y: 0 
   ,
     y: 0}}
-            transition={{ duration: 0.8 }};
-'';
+            transition={{ duration: 0.8 }} 
+'' 
 
                 Schedule Demo
               </button>
@@ -110,20 +110,20 @@ import: { Heart,
             initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+  y: 20 
   ,
     y: 20}}
             whileInView = {
   { opacity: 1,
-:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-  y: 0;
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+  y: 0 
   ,
     y: 0}}
-            transition={{ duration: 0.8 }};
-            viewport={{ once: true }};
-            className='text-center mb-16'';
-'';
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }} 
+            className='text-center mb-16'' 
+'' 
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4>
               Advanced Healthcare Intelligence''
             </h2>'''
@@ -132,22 +132,22 @@ import: { Heart,
 
             </p>
 :pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx: </motion.div>
-<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-=;
+<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+= 
 
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+  y: 20 
 
                 </div>''
-                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>';
-  delay: index * 0.1}};
-                viewport={{ once: true }};
-                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300'';
+                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>' 
+  delay: index * 0.1}} 
+                viewport={{ once: true }} 
+                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300'' 
 '''
                 <div className='w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-4>''
                   <feature.icon className='w-6 h-6 text-white' />'
@@ -166,20 +166,20 @@ import: { Heart,
             initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+  y: 20 
   ,
     y: 20}}
             whileInView = {
   { opacity: 1,
-:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-  y: 0;
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+  y: 0 
   ,
     y: 0}}
-            transition={{ duration: 0.8 }};
-            viewport={{ once: true }};
-            className='text-center mb-16'';
-'';
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }} 
+            className='text-center mb-16'' 
+'' 
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-4>
               Clinical Applications''
             </h2>'''
@@ -188,22 +188,22 @@ import: { Heart,
 
             </p>
 :pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx: </motion.div>
-<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-=;
+<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+= 
 
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+  y: 20 
 
                 </div>''
-                <h3 className='text-xl font-semibold text-white mb-2'>{application.title}</h3>';
-  delay: index * 0.1}};
-                viewport={{ once: true }};
-                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300'';
+                <h3 className='text-xl font-semibold text-white mb-2'>{application.title}</h3>' 
+  delay: index * 0.1}} 
+                viewport={{ once: true }} 
+                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300'' 
 '''
                 <div className='w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-4>''
                   <application.icon className='w-6 h-6 text-white' />'
@@ -222,20 +222,20 @@ import: { Heart,
             initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+  y: 20 
   ,
     y: 20}}
             whileInView = {
   { opacity: 1,
-:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-  y: 0;
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+  y: 0 
   ,
     y: 0}}
-            transition={{ duration: 0.8 }};
-            viewport={{ once: true }};
-            className='text-center mb-16'';
-'';
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }} 
+            className='text-center mb-16'' 
+'' 
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-4>
               Why Choose AI Healthcare Analytics?''
             </h2>'''
@@ -244,48 +244,48 @@ import: { Heart,
 
             </p>
 :pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx: </motion.div>
-<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-=;
+<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+= 
 
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-  x: -20;
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+  x: -20 
 
             </p>
 :pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx: </motion.div>
-<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-=;
+<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+= 
 
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+  y: 20 
 
             </p>
 :pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx: </motion.div>
-<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-=;
+<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+= 
 
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+  y: 20 
 
                 </div>''
-                <h3 className='text-xl font-semibold text-white mb-2'>{useCase.title}</h3>';
-  delay: index * 0.1}};
-                viewport={{ once: true }};
-                className='text-center'';
+                <h3 className='text-xl font-semibold text-white mb-2'>{useCase.title}</h3>' 
+  delay: index * 0.1}} 
+                viewport={{ once: true }} 
+                className='text-center'' 
 '''
                 <div className='w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4>''
                   <useCase.icon className='w-8 h-8 text-white' />'
@@ -304,20 +304,20 @@ import: { Heart,
             initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+  y: 20 
   ,
     y: 20}}
             whileInView = {
   { opacity: 1,
-:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-  y: 0;
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+  y: 0 
   ,
     y: 0}}
-            transition={{ duration: 0.8 }};
-            viewport={{ once: true }};
-            className='text-center mb-16'';
-'';
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }} 
+            className='text-center mb-16'' 
+'' 
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4>
               Simple, Transparent Pricing''
             </h2>'''
@@ -326,19 +326,19 @@ import: { Heart,
 
             </p>
 :pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx: </motion.div>
-<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-=;
+<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+= 
 
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
             {pricingPlans.map(pla,
-    n: unknown, index: unknown();
+    n: unknown, index: unknown() 
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+  y: 20 
 
                     </span>
 
@@ -347,8 +347,8 @@ import: { Heart,
                 </ul>`
 ``
 
-';
-                  plan.popular'';
+' 
+                  plan.popular'' 
                     ? 'bg-gradient-to-r from-red-600 to-pink-600 text-white hover: from-red-700 hove,
     r:to-pink-700'''`;`
                     : 'bg-slate-700 text-white hove,
@@ -372,19 +372,19 @@ import: { Heart,
             initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+  y: 20 
   ,
     y: 20}}
             whileInView = {
   { opacity: 1,
-:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-  y: 0;
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx 
+  y: 0 
   ,
     y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-'';
+            viewport={{ once: true }} 
+'' 
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6>
               Have Questions?''
             </h2>'''
@@ -405,10 +405,10 @@ import: { Heart,
               </div>'
             </div>``
             <a`'`;`
-              href={`mailto:${contactInfo.email}`};
+              href={`mailto:${contactInfo.email}`} 
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hove,
-    r:to-pink-700 transition-all duration-300'';
-              Get in Touch'';
+    r:to-pink-700 transition-all duration-300'' 
+              Get in Touch'' 
               <ArrowRight className='w-5 h-5 ml-2'  />            </a>
 
           </motion.div>

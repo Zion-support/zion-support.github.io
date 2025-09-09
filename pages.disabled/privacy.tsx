@@ -1,8 +1,8 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, Database, Mail, Phone, MapPin } from 'lucide-react';
-import MainLayout from '../src/components/layout/MainLayout';
+import Head from 'next/head' 
+import Link from 'next/link' 
+import { motion } from 'framer-motion' 
+import { Shield, Lock, Eye, Database, Mail, Phone, MapPin } from 'lucide-react' 
+import MainLayout from '../src/components/layout/MainLayout' 
 
 export default function PrivacyPage() {
   return (
@@ -140,5 +140,5 @@ export default function PrivacyPage() {
         </section>
       </div>
     </main>
-  );
+  ) 
 }

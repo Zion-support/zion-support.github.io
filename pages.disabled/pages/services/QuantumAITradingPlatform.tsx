@@ -38,10 +38,10 @@ import {}
   useEffect(() => {}
 
         <div className='absolute inset-0'>
-          {[...Array(25)].map(_: unknown, i: unknown();
+          {[...Array(25)].map(_: unknown, i: unknown() 
             <motion.div''
-              key={i};
-              className='absolute w-1 h-1 bg-purple-400 rounded-full opacity-80 shadow-lg shadow-purple-400/50';
+              key={i} 
+              className='absolute w-1 h-1 bg-purple-400 rounded-full opacity-80 shadow-lg shadow-purple-400/50' 
               animate={{x: [0, 120, 0],                y: [0, -120, 0],
 
                 opacity: [0.4, 1, 0.4],
@@ -58,7 +58,7 @@ import {}
   ease: 'easeInOut}}
         />
 
-          className='absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl';
+          className='absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl' 
           animate={{scale: [1.2, 1, 1.2],            opacity: [0.5, 0.2, 0.5]}}
 
           transition={{}
@@ -77,7 +77,7 @@ import {}
           </motion.div>
 
           {/* Key Metrics */}
-          <motion.div;
+          <motion.div 
 
                 99.999%'</div>''              <div className='text-gray-300'>Uptime</div>
 
@@ -86,7 +86,7 @@ import {}
           </motion.div>
 
           {/* CTA Buttons */}
-          <motion.div;
+          <motion.div 
 
         </div>
       </section>
@@ -94,18 +94,18 @@ import {}
 '{/* Navigation Tabs */}''
       <section className='relative py-8 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
-          <div className='flex flex-wrap justify-center gap-2 mb-8'> {['overview;
-  ',features',pricing;
+          <div className='flex flex-wrap justify-center gap-2 mb-8'> {['overview 
+  ',features',pricing 
   ',technical',contact
   '].map()
 
 
               tab => (
-                <button;
+                <button 
                   key={tab}`;`
                   onClick={() => setActiveTab(tab)}``;`
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${`
-'                    activeTab === tab';
+'                    activeTab === tab' 
 
 
 
@@ -116,22 +116,22 @@ import {}
         </div>
       </section>
 
-              <motion.div'';
-                key='overview';
+              <motion.div'' 
+                key='overview' 
                 initial={{ opacit,
     y: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }};
-                transition={{ duration: 0.5 }};
+                exit={{ opacity: 0, y: -20 }} 
+                transition={{ duration: 0.5 }} 
                 className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center>'
                 <div>'''
                   <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent>
                     Quantum Advantage in Trading''
                   </h2>'''
                   <p className='text-lg text-gray-300 mb-6 leading-relaxed'>
-                    Our Quantum AI Hybrid Trading Platform represents the;
-                    pinnacle of financial technology. By combining quantum;
-                    computing power with advanced AI algorithms, we deliver;
+                    Our Quantum AI Hybrid Trading Platform represents the 
+                    pinnacle of financial technology. By combining quantum 
+                    computing power with advanced AI algorithms, we deliver 
 
                       <CheckCircle className='w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0'  />'
                       <div>'''
@@ -179,8 +179,8 @@ import {}
               </motion.div>
             )}
 
-  ' && ('              <motion.div'';
-                key='features';
+  ' && ('              <motion.div'' 
+                key='features' 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}transition={{ duration: 0.5 }}                className='space-y-8>'
@@ -197,7 +197,7 @@ import {}
 
                   {features.map((feature, index) => (
 
-                    <motion.div;
+                    <motion.div 
                       key={index}
 
                       </h3>'                      <p className='text-gray-400 text-sm'>
@@ -212,8 +212,8 @@ import {}
               </motion.div>
             )}
 
-              <motion.div'';
-                key='pricing';
+              <motion.div'' 
+                key='pricing' 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}transition={{ duration: 0.5 }}                className='space-y-8>'
@@ -289,8 +289,8 @@ import {}
                 </div>
               </motion.div>
 
-  ' && ('              <motion.div'';
-                key='technical';
+  ' && ('              <motion.div'' 
+                key='technical' 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}transition={{ duration: 0.5 }}                className='space-y-8>'
@@ -304,8 +304,8 @@ import {}
 
                       <div className='grid grid-cols-2 gap-3'>
                         {technicalSpecs.technology.map((tech, index) => ('
-                          <div';
-                            key={index};
+                          <div' 
+                            key={index} 
                             className='bg-zion-slate/50 rounded-lg px-3 py-2 text-center text-sm text-gray-300'>                            {tech}
                           </div>
                         ))}
@@ -351,23 +351,23 @@ import {}
                 </div>
               </motion.div>
             )}
-:pages.disabled/pages/services/QuantumAITradingPlatform.tsx;
+:pages.disabled/pages/services/QuantumAITradingPlatform.tsx 
 
-              <motion.div'';
-                key='contact';
+              <motion.div'' 
+                key='contact' 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
 
-                    Ready to revolutionize your trading capabilities? Contact;
-                    our team to learn more about implementing the Quantum AI;
+                    Ready to revolutionize your trading capabilities? Contact 
+                    our team to learn more about implementing the Quantum AI 
                     Hybrid Trading Platform for your organization.
                   </p>
 
 
                         <span>
-                          364 E Main St STE 1008;
+                          364 E Main St STE 1008 
                           <br />
-                          Middletown DE 19709;
+                          Middletown DE 19709 
                         </span>                      </div>
                     </div>
 

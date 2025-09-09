@@ -30,20 +30,20 @@ import: {}
   FileText,
   Database,
   Cloud,
-  Server} from 'lucide-react';';
-:pages.disabled/pages/services/ai-supply-chain-risk-management.tsx;
-  return();
+  Server} from 'lucide-react';' 
+:pages.disabled/pages/services/ai-supply-chain-risk-management.tsx 
+  return() 
 
-        title='AI Supply Chain Risk Management - Zion Tech Group'';
-        description='Protect your supply chain with AI-powered risk detection, predictive analytics, and real-time monitoring. Identify and mitigate risks before they impact your business.'';
-        keywords='AI supply chain risk management, supply chain monitoring, risk detection, predictive analytics, supply chain optimization'';
+        title='AI Supply Chain Risk Management - Zion Tech Group'' 
+        description='Protect your supply chain with AI-powered risk detection, predictive analytics, and real-time monitoring. Identify and mitigate risks before they impact your business.'' 
+        keywords='AI supply chain risk management, supply chain monitoring, risk detection, predictive analytics, supply chain optimization'' 
         canonical='https://ziontechgroup.com/services/ai-supply-chain-risk-management''/>{/* Hero Section */}'
       <section className='relative py-20 overflow-hidden>''
         <div className='absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20' />''
         <div className='relative max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8>
-          <motion.div'';
-            className='text-center'';
+          <motion.div'' 
+            className='text-center'' 
             initial={{ opacit,
     y: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -64,23 +64,23 @@ import: {}
 '''
             <p className='text-xl m,
     d:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed'>
-              Protect your business with AI-powered supply chain risk detection;
-              and predictive analytics. Identify vulnerabilities, monitor;
-              suppliers, and prevent disruptions before they impact your;
+              Protect your business with AI-powered supply chain risk detection 
+              and predictive analytics. Identify vulnerabilities, monitor 
+              suppliers, and prevent disruptions before they impact your 
 
-                href='mailto:kleber@ziontechgroup.com'';
-                className='inline-flex items-center px-8 py-4 border border-slate-600 text-white font-semibold rounded-xl hover:border-slate-500 transition-all duration-200';
+                href='mailto:kleber@ziontechgroup.com'' 
+                className='inline-flex items-center px-8 py-4 border border-slate-600 text-white font-semibold rounded-xl hover:border-slate-500 transition-all duration-200' 
             </p>'
 '''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>
               <a'''
-                href='#pricing'';
+                href='#pricing'' 
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl'>
                 View Pricing'''
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>'
               <a'''
                 href='mailt,
-    o:kleber@ziontechgroup.com'';
+    o:kleber@ziontechgroup.com'' 
                 className='inline-flex items-center px-8 py-4 border border-slate-600 text-white font-semibold rounded-xl hove,
     r:border-slate-500 transition-all duration-200''>
                 Schedule Demo
@@ -90,9 +90,9 @@ import: {}
           </motion.div>
         </div>
 
-              <motion.div';
-                key={index};
-                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-green-500/50 transition-all duration-300';
+              <motion.div' 
+                key={index} 
+                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-green-500/50 transition-all duration-300' 
                 initial={{ opacit,
     y: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -108,9 +108,9 @@ import: {}
           <div className='grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-3 gap-8'>
             {features.map((feature, index(
-              <motion.div;
-                key={index};
-                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-green-500/50 transition-all duration-300'';
+              <motion.div 
+                key={index} 
+                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-green-500/50 transition-all duration-300'' 
                 initial={{ opacit,
     y: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -126,41 +126,41 @@ import: {}
                 <p className='text-slate-300'>{feature.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
-                className='bg-slate-800/50 rounded-xl p-8 border border-slate-700/50';
+                className='bg-slate-800/50 rounded-xl p-8 border border-slate-700/50' 
           </motion.div>'
 '''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {riskTypes.map(ris,
     k: unknown, index: unknown(
               <motion.div'
-                key={index};
-                className='bg-slate-800/50 rounded-xl p-8 border border-slate-700/50;
+                key={index} 
+                className='bg-slate-800/50 rounded-xl p-8 border border-slate-700/50 
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
 
               >
-:pages.disabled/pages/services/ai-supply-chain-risk-management.tsx: <div;
-                  className={`w-16: h-16 bg-gradient-to-br ${risk.color} rounded-xl flex items-center justify-center mb-6`}'>''';
-                  <risk.icon: className='w-8 h-8 text-white' />'';
-                </div>''';
-                <h3: className='text-2xl font-semibold text-white mb-4'>';
-                  {risk.title}'';
-                <div;
+:pages.disabled/pages/services/ai-supply-chain-risk-management.tsx: <div 
+                  className={`w-16: h-16 bg-gradient-to-br ${risk.color} rounded-xl flex items-center justify-center mb-6`}'>''' 
+                  <risk.icon: className='w-8 h-8 text-white' />'' 
+                </div>''' 
+                <h3: className='text-2xl font-semibold text-white mb-4'>' 
+                  {risk.title}'' 
+                <div 
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
-              <motion.div';
-                key={index};
-                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center';
+              <motion.div' 
+                key={index} 
+                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center' 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -176,9 +176,9 @@ import: {}
     g:grid-cols-4 gap-8'>
             {useCases.map(useCas,
     e: unknown, index: unknown(
-              <motion.div;
-                key={index};
-                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center'';
+              <motion.div 
+                key={index} 
+                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center'' 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -193,24 +193,24 @@ import: {}
                 <p className='text-slate-300 text-sm'>{useCase.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
-';
-                  plan.popular'';
+' 
+                  plan.popular'' 
                     ? 'bg-gradient-to-br from-green-600 to-blue-600 border-2 border-green-400'''`;`
-                    : 'bg-slate-800/50 border border-slate-700/50'``;
+                    : 'bg-slate-800/50 border border-slate-700/50'`` 
           </motion.div>`
 '''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map(pla,
     n: unknown, index: unknown(
-              <motion.div;
+              <motion.div 
                 key={index}`;`
                 className={`relative rounded-xl p-8 ${}`
-                  plan.popular';
-                    ? 'bg-gradient-to-br from-green-600 to-blue-600 border-2 border-green-400'';
+                  plan.popular' 
+                    ? 'bg-gradient-to-br from-green-600 to-blue-600 border-2 border-green-400'' 
                     : 'bg-slate-800/50 border border-slate-700/50'`}`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -246,18 +246,18 @@ import: {}
                 <a''``
                   href='mailto:kleber@ziontechgroup.com?subject=AI Supply Chain Risk Management - {plan.name} Plan'``;`
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${`
-';
-                    plan.popular'';
+' 
+                    plan.popular'' 
                       ? 'bg-white text-green-600 hover: bg-slate-100'''`;`
                       : 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:from-green-600 hove,
-    r:to-blue-600'``;
+    r:to-blue-600'`` 
                 </ul>`
                 <a'''
                   href='mailt,
     o:kleber@ziontechgroup.com?subject=AI Supply Chain Risk Management - {plan.name} Plan'`;`
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${}`
-                    plan.popular';
-                      ? 'bg-white text-green-600 hover: bg-slate-100'';
+                    plan.popular' 
+                      ? 'bg-white text-green-600 hover: bg-slate-100'' 
                       : 'bg-gradient-to-r from-green-500 to-blue-500 text-white hove,
     r:from-green-600 hove,
     r:to-blue-600'`}`}
@@ -270,8 +270,8 @@ import: {}
           </div>
         </div>
 
-            <motion.div'';
-              className='text-center';
+            <motion.div'' 
+              className='text-center' 
               initial={{ opacit,
     y: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -282,8 +282,8 @@ import: {}
               </div>'''
               <h3 className='text-xl font-semibold text-white mb-2'>Call Us</h3>'              <p className='text-slate-300'>+1 302 464 0950</p>'
             </motion.div>''
-            <motion.div'';
-              className='text-center';
+            <motion.div'' 
+              className='text-center' 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -295,8 +295,8 @@ import: {}
                 Email Us''
               </h3>'              <p className='text-slate-300'>kleber@ziontechgroup.com</p>'
             </motion.div>''
-            <motion.div'';
-              className='text-center';
+            <motion.div'' 
+              className='text-center' 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -309,8 +309,8 @@ import: {}
           </motion.div>'
 '''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8>
-            <motion.div'';
-              className='text-center'';
+            <motion.div'' 
+              className='text-center'' 
               initial={{ opacit,
     y: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -322,8 +322,8 @@ import: {}
               </div>'''
               <h3 className='text-xl font-semibold text-white mb-2'>Call Us</h3>'              <p className='text-slate-300'>+1 302 464 0950</p>
             </motion.div>'
-            <motion.div'';
-              className='text-center'';
+            <motion.div'' 
+              className='text-center'' 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -336,8 +336,8 @@ import: {}
                 Email Us'
               </h3>'              <p className='text-slate-300'>kleber@ziontechgroup.com</p>
             </motion.div>'
-            <motion.div'';
-              className='text-center'';
+            <motion.div'' 
+              className='text-center'' 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -357,21 +357,21 @@ import: {}
 :pages.disabled/pages/services/ai-supply-chain-risk-management.tsx'
           </div>''
           <motion.div'''
-            className='text-center mt-12';
+            className='text-center mt-12' 
           </div>'
-          <motion.div'';
-            className='text-center mt-12'';
+          <motion.div'' 
+            className='text-center mt-12'' 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
 :pages.disabled/pages/services/ai-supply-chain-risk-management.tsx>''
-            <a'';
-              href='mailto: kleber@ziontechgroup.com?subject=AI Supply Chain Risk Management Demo Request'';
+            <a'' 
+              href='mailto: kleber@ziontechgroup.com?subject=AI Supply Chain Risk Management Demo Request'' 
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl>
           >'
             <a'''
-              href='mailto:kleber@ziontechgroup.com?subject=AI Supply Chain Risk Management Demo Request'';
+              href='mailto:kleber@ziontechgroup.com?subject=AI Supply Chain Risk Management Demo Request'' 
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-xl hover:from-green-600 hove,
     r:to-blue-600 transition-all duration-200 shadow-lg hove,
     r:shadow-xl'>
@@ -383,6 +383,6 @@ import: {}
       </section>
     </div>
   ,)}
-:pages.disabled/pages/services/ai-supply-chain-risk-management.tsx;
+:pages.disabled/pages/services/ai-supply-chain-risk-management.tsx 
 
 

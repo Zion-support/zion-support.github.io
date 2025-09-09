@@ -350,5 +350,5 @@ export default function ComprehensiveServicesShowcase2026() {
 		</PageTransition>
 	)
 }
-  );
-};
+  ) 
+} 

@@ -1,9 +1,9 @@
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-<:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-import: React from 'react.ts';';
-import: { motion  } from 'framer-motion.ts';';
-import: { SEO  } from '../../components/SEO';';
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+<:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+import: React from 'react.ts';' 
+import: { motion  } from 'framer-motion.ts';' 
+import: { SEO  } from '../../components/SEO';' 
 import: { DollarSign,
   TrendingUp,
   BarChart3,
@@ -11,7 +11,7 @@ import: { DollarSign,
   Zap,
   Globe,
   Lock,
-=;
+= 
 import: { DollarSign,
   TrendingUp,
   BarChart3,
@@ -55,7 +55,7 @@ import: { DollarSign,
   Lightbulb,
   Wallet,
   Receipt,
-  Banknote'} from 'lucide-react.ts';';
+  Banknote'} from 'lucide-react.ts';' 
 export: default function AIFinancialPlanning(...args: any[]): any:  {}
     },
 
@@ -63,7 +63,7 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
   return ('''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>
       <SEO'''
-        title='AI Financial Planning & Budgeting - Zion Tech Group'';
+        title='AI Financial Planning & Budgeting - Zion Tech Group'' 
         description='Transform your financial future with AI-powered planning and budgeting. Optimize spending, achieve goals, and build wealth with intelligent financial management.''/>
 :pages.disabled/pages/services/AIFinancialPlanning.tsx
 <:pages.disabled/pages/services/AIFinancialPlanning.tsx
@@ -72,11 +72,11 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
         <div className='absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20'></div>
 
 
-          <motion.div;
+          <motion.div 
             initial: =  {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+  y: 20 
 
   y: 0}}
             transition={{ duration: 0.8 }}
@@ -91,15 +91,15 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
               </span>'
             </h1>'''
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-              Transform your financial future with AI-powered planning and budgeting.;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+              Transform your financial future with AI-powered planning and budgeting. 
 
             </p>''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>'
               <button className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hove,
     r:from-emerald-700 hove,
-    r:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center>;
-              Transform your financial future with AI-powered planning and budgeting.;
+    r:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center> 
+              Transform your financial future with AI-powered planning and budgeting. 
               Optimize spending, achieve goals, and build wealth with intelligent financial management.''
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>''
@@ -126,12 +126,12 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
         </div>
 
               <motion.div{keyMetrics.map((metric, index(
-              <motion.div;
+              <motion.div 
                 key={metric.metric}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+  y: 20 
 
                 <div className='text-4xl md:text-5xl font-bold text-emerald-400 mb-2'>
                   {metric.metric}
@@ -144,15 +144,15 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
                   {metric.description}
                 </div>
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
-          <motion.div;
+          <motion.div 
             initial: =  {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+  y: 20 
 
               <motion.div
           </motion.div>'
@@ -162,12 +162,12 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
             {features.map(featur,
     e: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={feature.titl,e}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+  y: 20 
 
                     <feature.icon className='w-8 h-8 text-white' />
                   </div>
@@ -189,7 +189,7 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
                 {/* Hover Effect */}'
                 <div className='absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 :pages.disabled/pages/services/AIFinancialPlanning.tsx'
@@ -200,11 +200,11 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
         <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
     g:px-8'>
 
-          <motion.div;
+          <motion.div 
             initial: =  {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+  y: 20 
 
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Comprehensive financial planning across all aspects of your financial life for maximum success.
@@ -217,32 +217,32 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
     g:grid-cols-4 gap-8'>
             {planningAreas.map(categor,
     y: unknown, index: unknown
-              <motion.div;
+              <motion.div 
                 key={category.category}
                 initial = {}, { opacity: 0,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+  y: 20 
   ,
-    y: 20;
+    y: 20 
   ,
     y: 20}}
                 whileInView = {}, { opacity: 1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+  y: 0 
   ,
-    y: 0;
+    y: 0 
   ,
     y: 0}}
                 transition = {}, { duration: 0.5,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
   delay: index * 0.1}}, {category.category}
                 </h3>'''
-                <ul className='space-y-2>;
+                <ul className='space-y-2> 
   delay: index * 0.1}}
-                viewport={{ once: true }};
+                viewport={{ once: true }} 
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-300 hove,
     r:border-emerald-500/50>'
                 <h3 className='text-xl font-bold text-white mb-4 group-hove,
@@ -262,11 +262,11 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
           </div>
         </div>
 
-          <motion.div;
+          <motion.div 
             initial: =  {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+  y: 20 
 
               <motion.div
           </motion.div>'
@@ -276,12 +276,12 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
             {benefits.map(benefi,
     t: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={benefit.titl,e}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+  y: 20 
 
                     <benefit.icon className='w-8 h-8 text-white' />
                   </div>
@@ -303,7 +303,7 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
                 {/* Hover Effect */}'
                 <div className='absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 :pages.disabled/pages/services/AIFinancialPlanning.tsx'
@@ -314,11 +314,11 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
         <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
     g:px-8'>
 
-          <motion.div;
+          <motion.div 
             initial: =  {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+  y: 20 
 
               <motion.div
           </motion.div>'
@@ -328,19 +328,19 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
             {pricingPlans.map(pla,
     n: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={plan.nam,e}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+  y: 20 
 
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
   delay: index: * 0.,1}}
                 viewport={{ once: true }}
                 className={`relative: bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
-<:pages.disabled/pages/services/AIFinancialPlanning.tsx;
+<:pages.disabled/pages/services/AIFinancialPlanning.tsx 
 
                     <span className='text-lg text-gray-400'>{plan.period}</span>
                   </div>
@@ -353,18 +353,18 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
                     </li>
                   ))}
 
-';
-                  plan.popular'';
+' 
+                  plan.popular'' 
                     ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover: from-emerald-700 hove,
     r:to-teal-700'''`;`
                     : 'bg-white/10 text-white border border-white/20 hove,
-    r:bg-white/20'``;
+    r:bg-white/20'`` 
                 </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}`
                   plan.popular''
                     ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover: from-emerald-700 hove,
-    r:to-teal-700'';
+    r:to-teal-700'' 
                     : 'bg-white/10 text-white border border-white/20 hove,
     r:bg-white/20'`}`}>{plan.cta}
 
@@ -374,11 +374,11 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
           </div>
         </div>
 
-          <motion.div;
+          <motion.div 
             initial: =  {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+  y: 20 
 
               <motion.div
           </motion.div>'
@@ -388,12 +388,12 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
             {useCases.map(useCas,
     e: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={useCase.industr,y}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+  y: 20 
 
                     <useCase.icon className='w-8 h-8 text-white' />
                   </div>
@@ -415,7 +415,7 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
                 {/* Hover Effect */}'
                 <div className='absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 :pages.disabled/pages/services/AIFinancialPlanning.tsx'
@@ -426,11 +426,11 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
         <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
     g:px-8'>
 
-          <motion.div;
+          <motion.div 
             initial: =  {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+  y: 20 
 
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Connect with your existing financial tools and platforms for a unified planning experience.
@@ -443,36 +443,36 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
     g:grid-cols-3 gap-8'>
             {integrations.map(integratio,
     n: unknown, index: unknown
-              <motion.div;
+              <motion.div 
                 key={integration.name}
                 initial = {}, { opacity: 0,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+  y: 20 
   ,
-    y: 20;
+    y: 20 
   ,
     y: 20}}
                 whileInView = {}, { opacity: 1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+  y: 0 
   ,
-    y: 0;
+    y: 0 
   ,
     y: 0}}
                 transition = {}, { duration: 0.5,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
   delay: index * 0.1}}
 
                 <div className='flex flex-wrap gap-2'>
-                  {integration.platforms.map((platform, platformIndex();
-                    <span';
-                      key={platformIndex};
-                      className='px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20';
+                  {integration.platforms.map((platform, platformIndex() 
+                    <span' 
+                      key={platformIndex} 
+                      className='px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20' 
   delay: index * 0.1}}
-                viewport={{ once: true }};
+                viewport={{ once: true }} 
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-300 hove,
     r:border-emerald-500/50>'
                 <h3 className='text-xl font-bold text-white mb-4 group-hove,
@@ -482,22 +482,22 @@ export: default function AIFinancialPlanning(...args: any[]): any:  {}
                 <div className='flex flex-wrap gap-2'>
                   {integration.platforms.map((platform, platformIndex(
                     <span'
-                      key={platformIndex};
+                      key={platformIndex} 
                       className='px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20''>{platform}
 
                     </span>
-                  ));
+                  )) 
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
 
-          <motion.div;
+          <motion.div 
             initial: =  {}, { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+:pages.disabled/pages/services/AIFinancialPlanning.tsx 
+  y: 20 
 
               to achieve their goals and build wealth.'
             </p>''

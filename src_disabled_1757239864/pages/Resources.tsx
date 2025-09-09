@@ -1,6 +1,6 @@
-import React, { useState } from 'react;
-import { motion } from framer-motion';
-import Link from 'next/link;
+import React, { useState } from 'react 
+import { motion } from framer-motion' 
+import Link from 'next/link 
 import { 
   BookOpen, 
   Target, 
@@ -35,29 +35,29 @@ import {
   Headphones,
   Bookmark,
   Share2
-} from 'lucide-react';
-import SEO from '@/components/SEO';
+} from 'lucide-react' 
+import SEO from '@/components/SEO' 
 
 interface Resource {
-  id: number;
-  title: string;
-  category: string;
-  type: string;
-  description?: string;
-  excerpt?: string;
-  author: string;
-  date?: string;
-  readTime?: string;
-  downloads?: number;
-  featured?: boolean;
-  tags?: string[];
-  image?: string;
-  href: string;
+  id: number 
+  title: string 
+  category: string 
+  type: string 
+  description?: string 
+  excerpt?: string 
+  author: string 
+  date?: string 
+  readTime?: string 
+  downloads?: number 
+  featured?: boolean 
+  tags?: string[] 
+  image?: string 
+  href: string 
 }
 
 export default function Resources() {
-  const [activeCategory, setActiveCategory] = useState('all);
-  const [searchQuery, setSearchQuery] = useState(');
+  const [activeCategory, setActiveCategory] = useState('all) 
+  const [searchQuery, setSearchQuery] = useState(') 
 
   const categories = [
     { id: 'all, name: All Resources', icon: BookOpen, count: 150 },
@@ -67,7 +67,7 @@ export default function Resources() {
     { id: 'webinars, name: Webinars', icon: Users, count: 15 },
     { id: 'documentation, name: Documentation', icon: Code, count: 30 },
     { id: 'faq, name: FAQ & Support', icon: HelpCircle, count: 15 }
-  ];
+  ] 
 
   const featuredResources = [
     {
@@ -115,7 +115,7 @@ export default function Resources() {
       image: /images/cloud-migration-stories.jpg',
       href: '/case-studies/cloud-migration-success-stories
     }
-  ];
+  ] 
 
   const blogPosts = [
     {
@@ -151,7 +151,7 @@ export default function Resources() {
       tags: ['Sustainability, Green IT', 'Environment, Technology'],
       href: '/blog/sustainable-technology-green-it-solutions
     }
-  ];
+  ] 
 
   const webinars = [
     {
@@ -178,7 +178,7 @@ export default function Resources() {
       registration: Open',
       href: '/webinars/cybersecurity-threat-landscape-2024
     }
-  ];
+  ] 
 
   const documentation = [
     {
@@ -199,13 +199,13 @@ export default function Resources() {
       lastUpdated: 2024-01-10',
       href: '/docs/developer-guide
     }
-  ];
+  ] 
 
   const filteredResources = (): Resource[] => {
-    let resources: Resource[] = [...featuredResources, ...blogPosts, ...webinars, ...documentation];
+    let resources: Resource[] = [...featuredResources, ...blogPosts, ...webinars, ...documentation] 
     
     if (activeCategory !== all') {
-      resources = resources.filter(resource => resource.category === activeCategory);
+      resources = resources.filter(resource => resource.category === activeCategory) 
     }
     
     if (searchQuery) {
@@ -214,19 +214,19 @@ export default function Resources() {
         resource.description?.toLowerCase().includes(searchQuery.toLowerCase()) ||
         resource.excerpt?.toLowerCase().includes(searchQuery.toLowerCase()) ||
         resource.tags?.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      );
+      ) 
     }
     
-    return resources;
+    return resources 
   }
 
   const getCategoryIcon = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.icon : BookOpen;
+    const category = categories.find(cat => cat.id === categoryId) 
+    return category ? category.icon : BookOpen 
   }
 
   const getCategoryName = (categoryId: string) => {
-    return category ? category.name : 'Unknown;
+    return category ? category.name : 'Unknown 
   }
 
   return (
@@ -443,5 +443,5 @@ export default function Resources() {
         </div>
       </section>
     </div>
-  );
+  ) 
 }

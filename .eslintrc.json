@@ -2,8 +2,7 @@
   "root": true,
   "env": { "browser": true, "es2020": true },
   "extends": [
-    "eslint:recommended",
-    "@typescript-eslint/recommended"
+    "next/core-web-vitals"
   ],
   "ignorePatterns": [
     "dist/**/*",
@@ -61,19 +60,7 @@
     "!tailwind.config.js",
     "!postcss.config.js"
   ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-  "plugins": ["react-refresh"],
   "rules": {
-    "react-refresh/only-export-components": [
-      "warn",
-      { "allowConstantExport": true }
-    ]
+    "no-console": "warn"
   }
 }

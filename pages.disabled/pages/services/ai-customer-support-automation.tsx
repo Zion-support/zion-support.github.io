@@ -53,24 +53,24 @@ import {}
   Monitor,
   Laptop,
 
-              <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='bg-gradient-to-r: from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-blue-500/25 hover: shadow-xl: hover:shadow-blue-500/40: transition-all duration-300'>';';
-                Start: Free Trial''';
-                <ArrowRight: className='inline ml-2 w-5 h-5'  />              </motion.button>';
-              <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='border: border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-blue-400: hover:text-white: transition-all duration-300'>                Schedule Demo';
+              <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='bg-gradient-to-r: from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-blue-500/25 hover: shadow-xl: hover:shadow-blue-500/40: transition-all duration-300'>';' 
+                Start: Free Trial''' 
+                <ArrowRight: className='inline ml-2 w-5 h-5'  />              </motion.button>' 
+              <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='border: border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-blue-400: hover:text-white: transition-all duration-300'>                Schedule Demo' 
               </motion.button>
             </div>
 
                 <ArrowRight className='inline ml-2 w-5 h-5'  />              </motion.button>
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 hove,
     r:text-white transition-all duration-300'>                Schedule Demo
               </motion.button>
@@ -105,7 +105,7 @@ import {}
       </section>
 
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='flex items-start>'
@@ -152,25 +152,25 @@ import {}
               Start leveraging the power of AI customer support automation today
               and see immediate improvements in customer satisfaction and
 
-              Start leveraging the power of AI customer support automation today;
-              and see immediate improvements in customer satisfaction and;
+              Start leveraging the power of AI customer support automation today 
+              and see immediate improvements in customer satisfaction and 
               operational efficiency.''
             </p>'''
             <div className='flex flex-col s,
     m:flex-row gap-4 justify-center'>
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-blue-500/25 hover: shadow-xl hove,
-    r:shadow-blue-500/40 transition-all duration-300>;
+    r:shadow-blue-500/40 transition-all duration-300> 
                 Get Started Now'''
 
                 <ArrowRight className='inline ml-2 w-5 h-5'  />              </motion.button>
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 hove,
     r:text-white transition-all duration-300'>                Contact Sales
 

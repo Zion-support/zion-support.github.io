@@ -1,13 +1,13 @@
-React: from;
-  'react';';
-import: { motion } from;
-  'framer-motion'{ SEO: } from;';
-  '../components/SEO';';
-import: { Button } from;
-  '../components/ui/Button'{ Card: } from;';
-  '../components/ui/Card';';
-import: { Badge } from;
-  '../components/ui/Badge';import: { '  CheckCircle, Star',;
+React: from 
+  'react';' 
+import: { motion } from 
+  'framer-motion'{ SEO: } from;' 
+  '../components/SEO';' 
+import: { Button } from 
+  '../components/ui/Button'{ Card: } from;' 
+  '../components/ui/Card';' 
+import: { Badge } from 
+  '../components/ui/Badge';import: { '  CheckCircle, Star', 
   Zap, Shield,
   Users, Globe,
   Phone, Mail,
@@ -17,7 +17,7 @@ import: { Badge } from;
   Brain, Server,
   Cloud, Lock,
   BarChart3, Rocket,
-  Heart, Sparkles} from;
+  Heart, Sparkles} from 
 
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -36,7 +36,7 @@ import: { Badge } from;
             transition={{ duration: 0.6, delay: 0.2 }}
             className='grid grid-cols-1 md:grid-cols-3 gap-8''          >'            {pricingPlans.map((plan, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={plan.name}
                 initial={{ opacity:  ,0, y: 20 }}
                 animate={{ opacity:  ,1, y: 0 }}

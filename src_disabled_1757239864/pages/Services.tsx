@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react' 
 
 const Services: React.FC = () => {
   const services = [
@@ -38,7 +38,7 @@ const Services: React.FC = () => {
       icon: '🚀,
       features: [Process Automation', 'Workflow Optimization, Digital Strategy', 'Change Management']
     }
-  ];
+  ] 
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen>
@@ -72,7 +72,7 @@ const Services: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  ) 
+} 
 
-export default Services;
+export default Services 

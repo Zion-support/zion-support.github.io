@@ -1,9 +1,9 @@
 
-import { describe, it, expect } from '@jest/globals';
+import { describe, it, expect } from '@jest/globals' 
 
 describe('usePostsByCategory', () => {
   it('should work', () => {
-    expect(true).toBe(true);
-  });
-});
+    expect(true).toBe(true) 
+  }) 
+}) 
 

@@ -147,7 +147,7 @@ const EnhancedContactForm: React.FC = () => {;
   };
 ;
   if (isSubmitted) {;
-    return (;
+    return (
       <motion.div;
         initial={{ opacity: 0, scale: 0.9 }};
         animate={{ opacity: 1, scale: 1 }};
@@ -188,7 +188,7 @@ const EnhancedContactForm: React.FC = () => {;
     );
   };
 ;
-  return (;
+  return (
     <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">;
       <div className="container mx-auto px-4">;
         <motion.div;
