@@ -8,7 +8,13 @@ import {
 } from 'lucide-react';
 
 // Import our new revolutionary services
-import { revolutionary2045AdvancedRealMicroSaas } from '../data/revolutionary-2045-advanced-real-micro-saas';
+import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas';
+import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services';
+import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services';
+import { realEnterpriseMicroSaas2025 } from '../data/2025-real-enterprise-micro-saas';
+import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
+import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
+import { revolutionary2045AdvancedAIServices } from '../data/revolutionary-2045-advanced-ai-services';
 import { revolutionary2045AdvancedITServices } from '../data/revolutionary-2045-advanced-it-services';
 import { revolutionary2045AdvancedAIServices } from '../data/revolutionary-2045-advanced-ai-services';
 
@@ -71,12 +77,15 @@ const Homepage2045: React.FC = () => {
     };
   }, []);
 
-  // Combine all revolutionary services with memoization for performance
-  const allRevolutionaryServices = useMemo(() => [
-    ...revolutionary2045AdvancedRealMicroSaas,
-    ...revolutionary2045AdvancedITServices,
-    ...revolutionary2045AdvancedAIServices
-  ], []);
+  // Combine all revolutionary services
+  const allRevolutionaryServices = [
+    ...revolutionary2044AdvancedMicroSaas,
+    ...revolutionary2044ITServices,
+    ...revolutionary2044AIServices,
+    ...realEnterpriseMicroSaas2025,
+    ...innovative2025ITInfrastructureServices,
+    ...innovative2025AIAutonomousServices
+  ];
 
   // Get featured services for rotation
   const featuredServices = useMemo(() => allRevolutionaryServices.slice(0, 6), [allRevolutionaryServices]);
