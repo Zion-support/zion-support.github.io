@@ -1,39 +1,40 @@
 #!/usr/bin/env node
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 
-console.log('🔧 Fixing syntax issues...');
+console.log('🔧 Running comprehensive syntax fixer...');
 
-const files = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" | head -100', { encoding: 'utf8' })
-  .split('\n')
-  .filter(f => f.trim());
-
-let fixedCount = 0;
-
-for (const file of files) {
-  try {
-    let content = fs.readFileSync(file, 'utf8');
-    let originalContent = content;
-    
-    // Fix common issues
-    content = content.replace(/import React from "react",/g, 'import React from "react";');
-    content = content.replace(/} from 'lucide-react',/g, "} from 'lucide-react';");
-    content = content.replace(/} from 'framer-motion',/g, "} from 'framer-motion';");
-    content = content.replace(/<<<<<<< [^
-]+[sS]*?=======[sS]*?>>>>>>> [^
-]+/g, '');
-    content = content.replace(/<<<<<<< [^
-]+[sS]*?=======/g, '');
-    content = content.replace(/=======[sS]*?>>>>>>> [^
-]+/g, '');
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(file, content);
-      fixedCount++;
+function fixSyntaxErrors() {
+  const files = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" | head -100', { encoding: 'utf8' })
+    .split('\n')
+    .filter(f => f.trim());
+  
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    try {
+      let content = fs.readFileSync(file, 'utf8');
+      let originalContent = content;
+      
+      // Fix common syntax issues
+      content = content.replace(/import React from "react",/g, 'import React from "react";');
+      content = content.replace(/import Head from 'next\/head',/g, "import Head from 'next/head';");
+      content = content.replace(/import Link from 'next\/link',/g, "import Link from 'next/link';");
+      content = content.replace(/} from 'lucide-react',/g, "} from 'lucide-react';");
+      content = content.replace(/} from 'framer-motion',/g, "} from 'framer-motion';");
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(file, content);
+        fixedCount++;
+        console.log(`✅ Fixed ${file}`);
+      }
+    } catch (error) {
+      console.log(`❌ Error fixing ${file}: ${error.message}`);
     }
-  } catch (error) {
-    // Ignore errors
   }
+  
+  console.log(`\n📊 Fixed ${fixedCount} files`);
 }
 
-console.log(`Fixed ${fixedCount} files`);
+fixSyntaxErrors();
