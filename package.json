@@ -136,5 +136,8 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.50.1"
   }
 }
