@@ -50,7 +50,8 @@
     "optimize": "node scripts/optimize-build.js",
     "optimize:advanced": "node scripts/advanced-optimize.js",
     "build:optimize": "npm run build && npm run optimize",
-    "build:advanced": "npm run build && npm run optimize:advanced"
+    "build:advanced": "npm run build && npm run optimize:advanced",
+    "postinstall": "npm rebuild rollup @rollup/rollup-linux-x64-gnu || true"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
