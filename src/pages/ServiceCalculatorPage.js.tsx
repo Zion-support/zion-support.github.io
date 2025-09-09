@@ -54,7 +54,7 @@ export default function ServiceCalculatorPage() {
             enterprise: 1.4
         };
         // Calculate base cost
-        let baseCost = service.price * sizeMultiplier[inputs.companySize];
+        const baseCost = service.price * sizeMultiplier[inputs.companySize];
         // Add custom features cost
         const customFeaturesCost = inputs.customFeatures * 500;
         // Calculate implementation cost
