@@ -1,0 +1,31 @@
+[2025-09-06T20:18:37.177Z] [INFO] Starting Performance Monitor...
+[2025-09-06T20:18:37.178Z] [INFO] Measuring build time...
+[2025-09-06T20:18:43.676Z] [INFO] Build completed in 6498ms
+[2025-09-06T20:18:43.677Z] [INFO] Measuring bundle size...
+[2025-09-06T20:18:43.677Z] [INFO] Bundle size: 1222KB (1.19MB)
+[2025-09-06T20:18:43.677Z] [INFO] Measuring memory usage...
+[2025-09-06T20:18:43.678Z] [INFO] Memory usage: 4MB
+[2025-09-06T20:18:43.678Z] [INFO] Counting source files...
+[2025-09-06T20:18:43.684Z] [INFO] Source files: 563
+[2025-09-06T20:18:43.684Z] [INFO] Checking dependencies...
+[2025-09-06T20:18:43.684Z] [INFO] Dependencies: 95, Dev Dependencies: 49
+[2025-09-06T20:18:43.685Z] [INFO] 
+=== PERFORMANCE MONITOR REPORT ===
+[2025-09-06T20:18:43.685Z] [INFO] Duration: 7s
+[2025-09-06T20:18:43.685Z] [INFO] Build Time: 6498ms
+[2025-09-06T20:18:43.685Z] [INFO] Bundle Size: 1222KB (1.19MB)
+[2025-09-06T20:18:43.685Z] [INFO] Memory Usage: 4MB
+[2025-09-06T20:18:43.685Z] [INFO] Source Files: 563
+[2025-09-06T20:18:43.685Z] [INFO] Total Metrics: 6
+[2025-09-06T20:18:43.685Z] [INFO] 
+All Metrics:
+[2025-09-06T20:18:43.685Z] [INFO]   1. Build Time: 6498 ms
+[2025-09-06T20:18:43.685Z] [INFO]   2. Bundle Size: 1222KB (1.19MB) bytes
+[2025-09-06T20:18:43.685Z] [INFO]   3. Memory Usage: 4MB bytes
+[2025-09-06T20:18:43.685Z] [INFO]   4. Source Files: 563 files
+[2025-09-06T20:18:43.685Z] [INFO]   5. Dependencies: 95 packages
+[2025-09-06T20:18:43.685Z] [INFO]   6. Dev Dependencies: 49 packages
+[2025-09-06T20:18:43.685Z] [INFO] 
+Full report saved to: /workspace/performance-report.json
+[2025-09-06T20:18:43.685Z] [INFO] 
+Performance Monitor completed!

@@ -1,24 +1,32 @@
 import React from 'react';
-import Script from 'next/script';
 
-export default function Analytics() {
-  const domain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN || 'ziontechgroup.com';
-  const disableAnalytics = process.env.NEXT_PUBLIC_DISABLE_ANALYTICS === 'true';
-  const noindex = process.env.NEXT_PUBLIC_NOINDEX === 'true';
-  if (disableAnalytics || noindex) return null;
+interface AnalyticsProps {
+  trackingId: string;
+}
+
+const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
+  if (typeof window === 'undefined') {
+    return null;
+  }
+
   return (
     <>
-      <Script
-        strategy="afterInteractive"
-        data-domain={domain}
-        src="https://plausible.io/js/script.js"
+      <script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${trackingId}`}
       />
-      {/* Enable outbound link tracking */}
-      <Script
-        strategy="afterInteractive"
-        data-domain={domain}
-        src="https://plausible.io/js/script.outbound-links.js"
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${trackingId}');
+          `,
+        }}
       />
     </>
   );
-}
+};
+
+export default Analytics;
