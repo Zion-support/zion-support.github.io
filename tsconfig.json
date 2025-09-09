@@ -7,23 +7,9 @@
     "moduleResolution": "bundler",
     "esModuleInterop": true,
     "resolveJsonModule": true,
-<<<<<<< HEAD
-    "strict": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-    "allowSyntheticDefaultImports": true
-  },
-  "include": ["src"],
-=======
     "isolatedModules": true,
     "noEmit": false,
     "jsx": "preserve",
-    /* Linting */
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -41,13 +27,17 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true,
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    "strictNullChecks": true
+    ]
   },
   "include": [
     "next-env.d.ts",
@@ -59,12 +49,6 @@
     "*.ts",
     "*.tsx"
   ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ],
->>>>>>> cursor/check-fix-push-and-merge-to-main-73b8
   "exclude": [
     "node_modules",
     "api-backup",
