@@ -28,10 +28,10 @@ import {
   FileText,
   Heart,
   PanelLeft,
+  ShoppingCart,
   Phone,
   Mail,
-  MapPin,
-  Building
+  MapPin
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 
@@ -71,33 +71,29 @@ export function AppHeader() {
 
   const navigationItems = [
     {
-      name: 'Services',
-      href: '/services',
-      icon: Zap,
+      name: 'AI Services',
+      href: '/ai-services',
+      icon: Brain,
       dropdown: [
-        { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain, description: 'Advanced AI solutions' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Enterprise security' },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Cloud infrastructure' },
-        { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, description: 'Edge computing' },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket, description: 'Quantum solutions' },
-        { name: 'Blockchain', href: '/services/blockchain', icon: Lock, description: 'Web3 & DeFi' },
-        { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe, description: 'Virtual replicas' },
-        { name: 'Sustainability', href: '/services/sustainability', icon: Heart, description: 'Green IT' }
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: BarChart3, description: 'Advanced analytics and insights' },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation', icon: FileText, description: 'Generate content with AI' },
+        { name: 'AI Customer Experience', href: '/services/ai-customer-experience', icon: MessageCircle, description: 'Personalized customer interactions' },
+        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield, description: 'Intelligent threat detection' },
+        { name: 'AI DevOps', href: '/services/ai-devops', icon: Code, description: 'Automated development operations' },
+        { name: 'AI Analytics Dashboard', href: '/services/ai-analytics-dashboard', icon: TrendingUp, description: 'Real-time data visualization' }
       ]
     },
     {
-      name: 'Micro SAAS',
-      href: '/micro-saas',
-      icon: Code,
+      name: 'Emerging Tech',
+      href: '/emerging-tech',
+      icon: Rocket,
       dropdown: [
-        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', description: 'Smart analytics' },
-        { name: 'Customer Experience', href: '/micro-saas/customer-experience', description: 'CX optimization' },
-        { name: 'Quantum Computing', href: '/micro-saas/quantum-computing', description: 'Quantum advantage' },
-        { name: 'Supply Chain', href: '/micro-saas/supply-chain', description: 'Chain optimization' },
-        { name: 'Cybersecurity', href: '/micro-saas/cybersecurity', description: 'Security solutions' },
-        { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge', description: 'Edge intelligence' },
-        { name: 'Content Creation', href: '/micro-saas/content-creation', description: 'AI content' },
-        { name: 'HR Platform', href: '/micro-saas/hr-platform', description: 'Talent management' }
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket, description: 'Next-gen computational power' },
+        { name: 'Blockchain Platform', href: '/services/blockchain-platform', icon: Lock, description: 'Decentralized solutions' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Cpu, description: 'Smart device management' },
+        { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe, description: 'Virtual asset replicas' },
+        { name: '5G Enterprise', href: '/services/5g-enterprise', icon: Network, description: 'Ultra-fast connectivity' },
+        { name: 'Sustainable Tech', href: '/services/sustainable-technology', icon: Heart, description: 'Green technology solutions' }
       ]
     },
     {
@@ -105,10 +101,25 @@ export function AppHeader() {
       href: '/it-services',
       icon: Database,
       dropdown: [
-        { name: 'Infrastructure', href: '/it-services/infrastructure', description: 'IT infrastructure' },
-        { name: 'Consulting', href: '/it-services/consulting', description: 'Strategic guidance' },
-        { name: 'Support', href: '/it-services/support', description: '24/7 support' },
-        { name: 'Migration', href: '/it-services/migration', description: 'Cloud migration' }
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Scalable infrastructure' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Advanced security solutions' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap, description: 'Business modernization' },
+        { name: 'Infrastructure', href: '/services/infrastructure', icon: Database, description: 'Enterprise systems' },
+        { name: 'Onsite Support', href: '/services/onsite-support', icon: Users, description: 'Local technical assistance' },
+        { name: 'Green IT', href: '/services/green-it', icon: Heart, description: 'Eco-friendly technology' }
+      ]
+    },
+    {
+      name: 'Micro SAAS',
+      href: '/micro-saas',
+      icon: Code,
+      dropdown: [
+        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', icon: BarChart3, description: 'Smart business insights' },
+        { name: 'Customer Experience', href: '/micro-saas/customer-experience', icon: MessageCircle, description: 'Enhanced customer engagement' },
+        { name: 'Supply Chain', href: '/micro-saas/supply-chain', icon: TrendingUp, description: 'Optimized logistics' },
+        { name: 'HR Platform', href: '/micro-saas/hr-platform', icon: Users, description: 'Human resources management' },
+        { name: 'Content Creation', href: '/micro-saas/content-creation', icon: FileImage, description: 'Creative content tools' },
+        { name: 'Financial Solutions', href: '/micro-saas/financial-solutions', icon: BarChart3, description: 'Financial management tools' }
       ]
     },
     {
@@ -116,10 +127,10 @@ export function AppHeader() {
       href: '/solutions',
       icon: Rocket,
       dropdown: [
-        { name: 'Enterprise', href: '/solutions/enterprise', description: 'Large scale solutions' },
-        { name: 'SMB', href: '/solutions/smb', description: 'Small business solutions' },
-        { name: 'Startup', href: '/solutions/startup', description: 'Startup acceleration' },
-        { name: 'Government', href: '/solutions/government', description: 'Public sector' }
+        { name: 'Products', href: '/marketplace/products', icon: Code, description: 'Software solutions' },
+        { name: 'Talent', href: '/marketplace/talent', icon: Users, description: 'Expert professionals' },
+        { name: 'Equipment', href: '/marketplace/equipment', icon: Cpu, description: 'Hardware solutions' },
+        { name: 'Services', href: '/marketplace/services', icon: Zap, description: 'Professional services' }
       ]
     },
     {
@@ -127,11 +138,12 @@ export function AppHeader() {
       href: '/about',
       icon: Users,
       dropdown: [
-        { name: 'About Us', href: '/about', description: 'Our story' },
-        { name: 'Team', href: '/team', description: 'Meet our team' },
-        { name: 'Careers', href: '/careers', description: 'Join us' },
-        { name: 'Partners', href: '/partners', description: 'Partnerships' },
-        { name: 'News', href: '/news', description: 'Latest updates' }
+        { name: 'About Us', href: '/about', icon: Users, description: 'Our story and mission' },
+        { name: 'Team', href: '/team', icon: Users, description: 'Meet our experts' },
+        { name: 'Careers', href: '/careers', icon: TrendingUp, description: 'Join our team' },
+        { name: 'Partners', href: '/partners', icon: Users, description: 'Strategic partnerships' },
+        { name: 'Blog', href: '/blog', icon: FileText, description: 'Latest insights' },
+        { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch' }
       ]
     }
   ];
@@ -206,37 +218,38 @@ export function AppHeader() {
                   }`} />
                 </button>
 
-                {/* Dropdown Menu */}
-                <AnimatePresence>
-                  {activeDropdown === item.name && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-80 bg-zion-slate/95 backdrop-blur-md border border-zion-cyan/20 rounded-xl shadow-2xl overflow-hidden"
-                    >
-                      <div className="p-4">
-                        <div className="grid grid-cols-1 gap-2">
-                          {item.dropdown.map((subItem) => (
-                            <Link
-                              key={subItem.name}
-                              to={subItem.href}
-                              className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-colors duration-200 group"
-                            >
-                              <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                                <subItem.icon className="w-5 h-5 text-zion-cyan" />
-                              </div>
-                              <div className="flex-1">
-                                <h3 className="font-medium text-white group-hover:text-zion-cyan transition-colors">
-                                  {subItem.name}
-                                </h3>
-                                <p className="text-sm text-zion-cyan/70 mt-1">
-                                  {subItem.description}
-                                </p>
-                              </div>
-                            </Link>
-                          ))}
+                  {/* Enhanced Dropdown Menu */}
+                  <AnimatePresence>
+                    {activeDropdown === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl shadow-2xl shadow-zion-cyan/25 overflow-hidden"
+                      >
+                        <div className="p-4">
+                          <div className="grid grid-cols-1 gap-2">
+                            {item.dropdown.map((subItem) => (
+                              <Link
+                                key={subItem.name}
+                                to={subItem.href}
+                                className="group flex items-start space-x-3 p-3 rounded-xl hover:bg-zion-cyan/10 transition-all duration-300"
+                              >
+                                <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                  <subItem.icon className="w-4 h-4 text-white" />
+                                </div>
+                                <div className="flex-1">
+                                  <div className="font-medium text-white group-hover:text-zion-cyan transition-colors duration-300">
+                                    {subItem.name}
+                                  </div>
+                                  <div className="text-sm text-zion-slate-light mt-1">
+                                    {subItem.description}
+                                  </div>
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </motion.div>
@@ -246,127 +259,167 @@ export function AppHeader() {
             ))}
           </nav>
 
-          {/* Right Side Actions */}
-          <div className="flex items-center space-x-4">
-            {/* Search */}
-            <form onSubmit={handleSearch} className="hidden md:flex items-center">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-cyan/50" />
+            {/* Right side actions */}
+            <div className="flex items-center space-x-4">
+              {/* Search */}
+              <form onSubmit={handleSearch} className="hidden md:block relative">
                 <input
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-64 pl-10 pr-4 py-2 bg-zion-slate/50 border border-zion-cyan/30 rounded-lg text-white placeholder-zion-cyan/50 focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300 backdrop-blur-sm"
+                  className="w-64 px-4 py-2 bg-zion-slate-dark/50 border border-zion-slate-light/30 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan/50 focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
                 />
+                <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
+              </form>
+
+              {/* Contact Info */}
+              <div className="hidden xl:flex items-center space-x-4 text-zion-slate-light text-sm">
+                <div className="flex items-center space-x-2">
+                  <Phone className="w-4 h-4 text-zion-cyan" />
+                  <span>+1 302 464 0950</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Mail className="w-4 h-4 text-zion-cyan" />
+                  <span>kleber@ziontechgroup.com</span>
+                </div>
               </div>
-            </form>
 
-            {/* CTA Button */}
-            <Link
-              to="/contact"
-              className="hidden md:inline-flex items-center space-x-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-medium py-2 px-6 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-cyan/25"
-            >
-              <MessageCircle className="w-4 h-4" />
-              <span>Contact Us</span>
-            </Link>
+              {/* User actions */}
+              <div className="flex items-center space-x-2">
+                {user ? (
+                  <div className="flex items-center space-x-2">
+                    <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
+                      <Bell className="w-5 h-5" />
+                    </button>
+                    <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
+                      <User className="w-5 h-5" />
+                    </button>
+                    <button
+                      onClick={logout}
+                      className="px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-lg hover:bg-zion-cyan/30 transition-all duration-300"
+                    >
+                      Logout
+                    </button>
+                  </div>
+                ) : (
+                  <div className="flex items-center space-x-2">
+                    <Link
+                      to="/login"
+                      className="px-4 py-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300"
+                    >
+                      Login
+                    </Link>
+                    <Link
+                      to="/contact"
+                      className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+                    >
+                      Get Started
+                    </Link>
+                  </div>
+                )}
+              </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors"
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+              {/* Mobile menu button */}
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300"
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-zion-slate/95 backdrop-blur-md border-t border-zion-cyan/20"
-          >
-            <div className="container mx-auto px-4 py-6">
-              {/* Mobile Search */}
-              <form onSubmit={handleSearch} className="mb-6">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-cyan/50" />
+        {/* Mobile Navigation */}
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="lg:hidden bg-zion-slate-dark/95 backdrop-blur-xl border-t border-zion-cyan/20"
+            >
+              <div className="container-responsive py-6">
+                {/* Mobile Search */}
+                <form onSubmit={handleSearch} className="mb-6">
                   <input
                     type="text"
                     placeholder="Search services..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-zion-slate/50 border border-zion-cyan/30 rounded-lg text-white placeholder-zion-cyan/50 focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-slate-light/30 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan/50 focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
                   />
-                </div>
-              </form>
+                </form>
 
-              {/* Mobile Navigation */}
-              <nav className="space-y-4">
-                {navigationItems.map((item) => (
-                  <div key={item.name}>
-                    <button
-                      onClick={() => toggleDropdown(item.name)}
-                      className="flex items-center justify-between w-full text-left text-white hover:text-zion-cyan transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-zion-cyan/10"
-                    >
-                      <div className="flex items-center space-x-3">
-                        <item.icon className="w-5 h-5" />
-                        <span className="font-medium">{item.name}</span>
-                      </div>
-                      <ChevronDown 
-                        size={16} 
-                        className={`transition-transform duration-200 ${
+                {/* Mobile Navigation Items */}
+                <div className="space-y-4">
+                  {navigationItems.map((item) => (
+                    <div key={item.name}>
+                      <button
+                        onClick={() => toggleDropdown(item.name)}
+                        className="w-full flex items-center justify-between p-3 text-left text-white hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
+                      >
+                        <div className="flex items-center space-x-3">
+                          <item.icon className="w-5 h-5 text-zion-cyan" />
+                          <span>{item.name}</span>
+                        </div>
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
                           activeDropdown === item.name ? 'rotate-180' : ''
-                        }`} 
-                      />
-                    </button>
+                        }`} />
+                      </button>
+                      
+                      <AnimatePresence>
+                        {activeDropdown === item.name && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="ml-6 mt-2 space-y-2"
+                          >
+                            {item.dropdown.map((subItem) => (
+                              <Link
+                                key={subItem.name}
+                                to={subItem.href}
+                                className="block p-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
+                              >
+                                <div className="font-medium">{subItem.name}</div>
+                                <div className="text-sm text-zion-slate-light mt-1">
+                                  {subItem.description}
+                                </div>
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ))}
+                </div>
 
-                    {/* Mobile Dropdown */}
-                    <AnimatePresence>
-                      {activeDropdown === item.name && (
-                        <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="ml-8 mt-2 space-y-2"
-                        >
-                          {item.dropdown.map((subItem) => (
-                            <Link
-                              key={subItem.name}
-                              to={subItem.href}
-                              className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-colors duration-200"
-                            >
-                              <subItem.icon className="w-4 h-4 text-zion-cyan" />
-                              <span className="text-zion-cyan/90">{subItem.name}</span>
-                            </Link>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                {/* Mobile Contact Info */}
+                <div className="mt-8 pt-6 border-t border-zion-slate-light/20">
+                  <div className="space-y-3 text-zion-slate-light text-sm">
+                    <div className="flex items-center space-x-3">
+                      <Phone className="w-4 h-4 text-zion-cyan" />
+                      <span>+1 302 464 0950</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Mail className="w-4 h-4 text-zion-cyan" />
+                      <span>kleber@ziontechgroup.com</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <MapPin className="w-4 h-4 text-zion-cyan" />
+                      <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                    </div>
                   </div>
-                ))}
-              </nav>
-
-              {/* Mobile CTA */}
-              <div className="mt-6 pt-6 border-t border-zion-cyan/20">
-                <Link
-                  to="/contact"
-                  className="block w-full text-center bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-medium py-3 px-6 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300"
-                >
-                  Get Started Today
-                </Link>
+                </div>
               </div>
-            </div>
-          </div>
-        )}
-      </AnimatePresence>
-    </header>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </header>
+    </>
   );
 }
