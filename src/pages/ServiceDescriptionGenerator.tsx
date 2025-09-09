@@ -1,18 +1,18 @@
 
 import React, { useState } from "react";
-import { Header } from "@/components/Header";
+import { Header } from "@/components/header";
 import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm";
 import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay";
 import { SEO } from "@/components/SEO";
 import { useAuth } from "@/hooks/useAuth";
-import { useRouter } from "next/router";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function ServiceDescriptionGenerator() {
-  const { isAuthenticated, isLoading } = useAuth();
+  const { user, loading } = useAuth();
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
   
   // Show loading while checking authentication
-  if (isLoading) {
+  if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">
         <div className="animate-pulse text-zion-purple text-lg">
@@ -23,8 +23,8 @@ export default function ServiceDescriptionGenerator() {
   }
   
   // Redirect to login if not authenticated
-  if (!isAuthenticated) {
-    return null // Redirect handled by useRouter;
+  if (!user) {
+    return null // Redirect handled by useNavigate;
   }
 
   const handleDescriptionSave = (editedDescription: string) => {

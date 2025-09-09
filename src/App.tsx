@@ -23,7 +23,61 @@ import EnhancedNavigation from './components/EnhancedNavigation';
 import { bundleOptimizer } from './utils/bundleOptimizer';
 import './App.css';
 
-function RootErrorFallback({ resetErrorBoundary }: FallbackProps) {
+// Lazy load all components first
+const Home = lazy(() => import('./pages/Home').catch(() => ({ default: () => <div>Error loading Home page</div> })));
+const About = lazy(() => import('./pages/About').catch(() => ({ default: () => <div>Error loading About page</div> })));
+const Services = lazy(() => import('./pages/Services').catch(() => ({ default: () => <div>Error loading Services page</div> })));
+const Contact = lazy(() => import('./pages/Contact').catch(() => ({ default: () => <div>Error loading Contact page</div> })));
+const Pricing = lazy(() => import('./pages/Pricing').catch(() => ({ default: () => <div>Error loading Pricing page</div> })));
+const NotFound = lazy(() => import('./pages/NotFound').catch(() => ({ default: () => <div>Error loading NotFound page</div> })));
+
+// Additional lazy-loaded components
+const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
+const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
+const TalentsPage = lazy(() => import('./pages/TalentsPage'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const EquipmentPage = lazy(() => import('./pages/EquipmentPage'));
+const EquipmentDetail = lazy(() => import('./pages/EquipmentDetail'));
+const Analytics = lazy(() => import('./pages/Analytics'));
+const MobileLaunchPage = lazy(() => import('./pages/MobileLaunchPage'));
+const Categories = lazy(() => import('./pages/Categories'));
+const Blog = lazy(() => import('./pages/Blog'));
+const PartnersPage = lazy(() => import('./pages/Partners'));
+const Login = lazy(() => import('./pages/Login'));
+const Signup = lazy(() => import('./pages/Signup'));
+const ITOnsiteServicesPage = lazy(() => import('./pages/ITOnsiteServicesPage'));
+const ContactPage = lazy(() => import('./pages/Contact'));
+const ZionHireAI = lazy(() => import('./pages/ZionHireAI'));
+const RequestQuotePage = lazy(() => import('./pages/RequestQuote'));
+const ExpandedServicesPage = lazy(() => import('./pages/ExpandedServicesPage'));
+const ServiceComparisonPage = lazy(() => import('./pages/ServiceComparisonPage'));
+const ServiceCalculatorPage = lazy(() => import('./pages/ServiceCalculatorPage'));
+const AllServicesOverviewPage = lazy(() => import('./pages/AllServicesOverviewPage'));
+const ServiceAnalyticsDashboard = lazy(() => import('./pages/ServiceAnalyticsDashboard'));
+const ServiceMarketplace = lazy(() => import('./pages/ServiceMarketplace'));
+
+// Service-specific pages
+const AIServices = lazy(() => import('./pages/AIServices'));
+const ITServices = lazy(() => import('./pages/ITServices'));
+const MicroSaaS = lazy(() => import('./pages/MicroSaaS'));
+const Cybersecurity = lazy(() => import('./pages/Cybersecurity'));
+const CloudMigration = lazy(() => import('./pages/CloudMigration'));
+const MobileDevelopment = lazy(() => import('./pages/MobileDevelopment'));
+
+// Additional pages
+const FAQ = lazy(() => import('./pages/FAQ'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
+const Support = lazy(() => import('./pages/Support'));
+
+// Missing components - add placeholder components
+const AllCategoriesPage = lazy(() => import('./pages/Categories').catch(() => ({ default: () => <div>All Categories</div> })));
+const SimpleSignup = lazy(() => import('./pages/SimpleSignup').catch(() => ({ default: () => <div>Simple Signup</div> })));
+const OAuthCallback = lazy(() => import('./pages/OAuthCallback').catch(() => ({ default: () => <div>OAuth Callback</div> })));
+const MoreTalentsPage = lazy(() => import('./pages/TalentsPage').catch(() => ({ default: () => <div>More Talents</div> })));
+const AdditionalTalentsPage = lazy(() => import('./pages/TalentsPage').catch(() => ({ default: () => <div>Additional Talents</div> })));
+
+function RootErrorFallback({ resetErrorBoundary }: { resetErrorBoundary: () => void }) {
   return (
     <div role="alert" className="p-4 text-center space-y-2">
       <p>Something went wrong</p>
@@ -102,55 +156,7 @@ const queryClient = new QueryClient({
   },
 });
 
-// Lazy load pages for better performance with error boundaries
-const Home = lazy(() => import('./pages/Home').catch(() => ({ default: () => <div>Error loading Home page</div> })));
-const About = lazy(() => import('./pages/About').catch(() => ({ default: () => <div>Error loading About page</div> })));
-const Services = lazy(() => import('./pages/Services').catch(() => ({ default: () => <div>Error loading Services page</div> })));
-const Contact = lazy(() => import('./pages/Contact').catch(() => ({ default: () => <div>Error loading Contact page</div> })));
-const Pricing = lazy(() => import('./pages/Pricing').catch(() => ({ default: () => <div>Error loading Pricing page</div> })));
-const NotFound = lazy(() => import('./pages/NotFound').catch(() => ({ default: () => <div>Error loading NotFound page</div> })));
-
-// Additional pages from comprehensive improvements
-const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
-const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
-const TalentsPage = lazy(() => import('./pages/TalentsPage'));
-const ServicesPage = lazy(() => import('./pages/ServicesPage'));
-const EquipmentPage = lazy(() => import('./pages/EquipmentPage'));
-const EquipmentDetail = lazy(() => import('./pages/EquipmentDetail'));
-const Analytics = lazy(() => import('./pages/Analytics'));
-const MobileLaunchPage = lazy(() => import('./pages/MobileLaunchPage'));
-// const CommunityPage = lazy(() => import('./pages/CommunityPage')); // Page not found
-const Categories = lazy(() => import('./pages/Categories'));
-const Blog = lazy(() => import('./pages/Blog'));
-// const BlogPost = lazy(() => import('./pages/BlogPost')); // Page not found
-const PartnersPage = lazy(() => import('./pages/Partners'));
-const Login = lazy(() => import('./pages/Login'));
-const Signup = lazy(() => import('./pages/Signup'));
-const ITOnsiteServicesPage = lazy(() => import('./pages/ITOnsiteServicesPage'));
-// const OpenAppRedirect = lazy(() => import('./pages/OpenAppRedirect')); // Page not found
-const ContactPage = lazy(() => import('./pages/Contact'));
-const ZionHireAI = lazy(() => import('./pages/ZionHireAI'));
-const RequestQuotePage = lazy(() => import('./pages/RequestQuote'));
-const ExpandedServicesPage = lazy(() => import('./pages/ExpandedServicesPage'));
-const ServiceComparisonPage = lazy(() => import('./pages/ServiceComparisonPage'));
-const ServiceCalculatorPage = lazy(() => import('./pages/ServiceCalculatorPage'));
-const AllServicesOverviewPage = lazy(() => import('./pages/AllServicesOverviewPage'));
-const ServiceAnalyticsDashboard = lazy(() => import('./pages/ServiceAnalyticsDashboard'));
-const ServiceMarketplace = lazy(() => import('./pages/ServiceMarketplace'));
-
-// Service Pages - Lazy loaded for better performance
-const AIServices = lazy(() => import('./pages/AIServices'));
-const ITServices = lazy(() => import('./pages/ITServices'));
-const MicroSaaS = lazy(() => import('./pages/MicroSaaS'));
-const Cybersecurity = lazy(() => import('./pages/Cybersecurity'));
-const CloudMigration = lazy(() => import('./pages/CloudMigration'));
-const MobileDevelopment = lazy(() => import('./pages/MobileDevelopment'));
-
-// Additional Pages - Lazy loaded for better performance
-const FAQ = lazy(() => import('./pages/FAQ'));
-const Privacy = lazy(() => import('./pages/Privacy'));
-const Terms = lazy(() => import('./pages/Terms'));
-const Support = lazy(() => import('./pages/Support'));
+// Duplicate component declarations removed - components are already declared above
 
 const App = memo(() => {
   // Setup global error handling

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { SearchResultCard } from '@/components/search/SearchResultCard';
 import { SearchBar } from '@/components/SearchBar';
 import { SearchEmptyState } from '@/components/marketplace/EmptyState';

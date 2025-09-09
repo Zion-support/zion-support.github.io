@@ -12,6 +12,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import useSWRMutation from "swr/mutation";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useDelayedError } from '@/hooks/useDelayedError';
+import { SEO } from "@/components/SEO";
 
 // The EQUIPMENT_LISTINGS constant has been removed as it was commented out
 // and the page primarily relies on API calls and dynamic data generation.
@@ -165,7 +166,6 @@ export default function EquipmentPage() {
     );
   }
 
-const EquipmentPage: React.FC = () => {
   return (
     <>
       <SEO 
@@ -204,19 +204,7 @@ const EquipmentPage: React.FC = () => {
             </div>
           </div>
         </div>
-      ) : (
-        <DynamicListingPage
-          title="Datacenter Equipment"
-          description="Browse professional hardware for modern datacenter and network deployments."
-          categorySlug="equipment"
-          listings={equipment || []} // Pass empty array if equipment is undefined to prevent errors in DynamicListingPage
-          categoryFilters={EQUIPMENT_FILTERS}
-          initialPrice={{ min: 400, max: 50000 }}
-          detailBasePath="/equipment"
-        />
-      )}
+      </div>
     </>
   );
-};
-
-export default EquipmentPage;
+}
