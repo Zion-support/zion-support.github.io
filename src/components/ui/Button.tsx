@@ -49,7 +49,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                       size as 'sm' | 'md' | 'lg';
     
     const classes = cn(buttonVariants({ 
-      variant: mappedVariant, 
+      variant: mappedVariant as "primary" | "secondary" | "outline" | "ghost" | "danger", 
       size: mappedSize, 
       className 
     }));
