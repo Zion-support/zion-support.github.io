@@ -9,151 +9,163 @@ const AIMatcher = () => {
     const [currentStep, setCurrentStep] = useState (1) ;
     const [answers, setAnswers] = useState ({}) ;
     const [recommendations, setRecommendations] = useState ([]) ;
-    const questions = [
-        {
-            id: 'industry',
-            question: 'What industry are you in?',
-            options[;
-                'Technology & Software',
-                'Healthcare & Life Sciences',
-                'Financial Services',
-                'Manufacturing & Industrial',
-                'Retail & E-commerce',
-                'Education & Training',
-                'Government & Public Sector',
-                'Other'
-            ]
-        },;
-        {
-            id: 'comp_size',
-            question: 'What is your comp size?',
-            options[;
-                'Startup (1 - 50 employees) ',
-                'Small Business (51 - 200 employees) ',
-                'Medium Business (201 - 1000 employees) ',
-                'Enterprise (1000 + employees) '
-            ]
-        },;
-        {
-            id: 'ai_goals',
-            question: 'What are your primary AI goals?',
-            options[;
-                'Automate repetitive tasks',
-                'Improve customer experience',
-                'Enhance decision making',
-                'Optimize operations',
-                'Increase revenue',
-                'Reduce costs',
-                'Innovate products / services'
-            ]
-        },;
-        {
-            id: 'budget',
-            question: 'What is your budget range for AI implementation?',
-            options[;
-                'Under $10,000',
-                '$10,000 - $50,000',
-                '$50,000 - $200,000',
-                '$200,000 - $1,000,000',
-                'Over $1,000,000'
-            ]
-        },;
-        {
-            id: 'timeline',
-            question: 'What is your implementation timeline?',
-            options[;
-                'Immediate (0 - 3 months) ',
-                'Short - term (3 - 6 months) ',
-                'Medium - term (6 - 12 months) ',
-                'Long - term (1 + years) '
-            ]
-        }
+    const questions = [];
+        {}
+';
+'';
+''';
+            id: 'industry',''';
+            question: 'What industry are you in?','';
+            options[;''';
+                'Technology & Software',Healthcare & Life Sciences',Financial Services',Manufacturing & Industrial',Retail & E-commerce',Education & Training',Government & Public Sector',Other';
+            ]},;
+        {}
+';
+'';
+''';
+            id: 'comp_size',''';
+            question: 'What is your comp size?','';
+            options[;''';
+                'Startup (1-50 employees),Small Business (51-200 employees),Medium Business (201-1000 employees),Enterprise (1000+ employees);
+            ]},;
+        {}
+';
+'';
+''';
+            id: 'ai_goals',''';
+            question: 'What are your primary AI goals?','';
+            options[;''';
+                'Automate repetitive tasks',Improve customer experience',Enhance decision making',Optimize operations',Increase revenue',Reduce costs',Innovate products/services';
+            ]},;
+        {}
+';
+'';
+''';
+            id: 'budget',''';
+            question: 'What is your budget range for AI implementation?','';
+            options[;''';
+                'Under $10,000',$10,000 - $50,000',$50,000 - $200,000',$200,000 - $1,000,000',Over $1,000,000';
+            ]},;
+        {}
+';
+'';
+''';
+            id: 'timeline',''';
+            question: 'What is your implementation timeline?','';
+            options[;''';
+                'Immediate (0-3 months),Short-term (3-6 months),Medium-term (6-12 months),Long-term (1+ years);
+            ]}
     ];
-    const aiSolutions = [
-        {
-            name: 'AI Business Intelligence',
-            description: 'Advanced analytics and business intelligence powered by artificial intelligence',
-            category: 'Analytics & Insights',
-            bestFor['Data - driven decision making', 'Performance tracking', 'Market analysis'],;
-            features['Predictive Analytics', 'Real - time Dashboards', 'Custom Reports'],;
-            href: '/services / ai - business - intelligence',
-            icon: TrendingUp
-        },
-        {
-            name: 'AI Marketing Automation',
-            description: 'Intelligent marketing automation with AI - driven optimization',
-            category: 'Marketing & Sales',
-            bestFor['Customer acquisition', 'Campaign optimization', 'Lead generation'],;
-            features['Campaign Automation', 'Customer Segmentation', 'ROI Optimization'],;
-            href: '/services / ai - marketing - automation',
-            icon: Target
-        },
-        {
-            name: 'AI Workflow Automation',
-            description: 'Streamline business processes with intelligent automation',
-            category: 'Process Automation',
-            bestFor['Operational efficiency', 'Error reduction', 'Cost savings'],;
-            features['Process Optimization', 'Workflow Design', 'Integration'],;
-            href: '/services / ai - workflow - automation',
-            icon: Zap
-        },
-        {
-            name: 'AI - Powered IT Asset Management',
-            description: 'Intelligent IT asset lifecycle management',
-            category: 'IT Management',
-            bestFor['Asset optimization', 'Cost management', 'Compliance'],;
-            features['Asset Tracking', 'Predictive Maintenance', 'Cost Analytics'],;
-            href: '/ai - powered - it - asset - management',
-            icon: Cloud
-        },
-        {
-            name: 'Autonomous Business Operations',
-            description: 'AI - driven business process automation platform',
-            category: 'Business Operations',
-            bestFor['End - to - end automation', 'Scalability', 'Innovation'],;
-            features['Process Automation', 'Decision Support', 'Performance Analytics'],;
-            href: '/autonomous - business - operations - platform',
-            icon: Brain
-        },
-        {
-            name: 'AI Customer Service Automation',
-            description: 'Intelligent customer service and support automation',
-            category: 'Customer Experience',
-            bestFor['24 / 7 support', 'Response time improvement', 'Customer satisfaction'],;
-            features['Chatbot Integration', 'Ticket Routing', 'Knowledge Management'],;
-            href: '/services / ai - customer - service - automation',
-            icon: Users
-        }
+    const aiSolutions = [];
+        {}
+';
+'';
+''';
+            name: 'AI Business Intelligence',''';
+            description: 'Advanced analytics and business intelligence powered by artificial intelligence',''';
+            category: 'Analytics & Insights',''';
+            bestFor['Data-driven decision making',Performance tracking',Market analysis'],;''';
+            features['Predictive Analytics',Real-time Dashboards',Custom Reports'],;''';
+            href: '/services/ai-business-intelligence',;
+            icon: TrendingUp},;
+        {}
+';
+'';
+''';
+            name: 'AI Marketing Automation',''';
+            description: 'Intelligent marketing automation with AI-driven optimization',''';
+            category: 'Marketing & Sales',''';
+            bestFor['Customer acquisition',Campaign optimization',Lead generation'],;''';
+            features['Campaign Automation',Customer Segmentation',ROI Optimization'],;''';
+            href: '/services/ai-marketing-automation',;
+            icon: Target},;
+        {}
+';
+'';
+''';
+            name: 'AI Workflow Automation',''';
+            description: 'Streamline business processes with intelligent automation',''';
+            category: 'Process Automation',''';
+            bestFor['Operational efficiency',Error reduction',Cost savings'],;''';
+            features['Process Optimization',Workflow Design',Integration'],;''';
+            href: '/services/ai-workflow-automation',;
+            icon: Zap},;
+        {}
+';
+'';
+''';
+            name: 'AI-Powered IT Asset Management',''';
+            description: 'Intelligent IT asset lifecycle management',''';
+            category: 'IT Management',''';
+            bestFor['Asset optimization',Cost management',Compliance'],;''';
+            features['Asset Tracking',Predictive Maintenance',Cost Analytics'],;''';
+            href: '/ai-powered-it-asset-management',;
+            icon: Cloud},;
+        {}
+';
+'';
+''';
+            name: 'Autonomous Business Operations',''';
+            description: 'AI-driven business process automation platform',''';
+            category: 'Business Operations',''';
+            bestFor['End-to-end automation',Scalability',Innovation'],;''';
+            features['Process Automation',Decision Support',Performance Analytics'],;''';
+            href: '/autonomous-business-operations-platform',;
+            icon: Brain},;
+        {}
+';
+'';
+''';
+            name: 'AI Customer Service Automation',''';
+            description: 'Intelligent customer service and support automation',''';
+            category: 'Customer Experience',''';
+            bestFor['24/7 support',Response time improvement',Customer satisfaction'],;''';
+            features['Chatbot Integration',Ticket Routing',Knowledge Management'],;''';
+            href: '/services/ai-customer-service-automation',;
+            icon: Users}
     ];
-    const handlePrevious = () => {
-        if (currentStep > 1) {
-            setCurrentStep (currentStep - 1) }
-    };
-    const generateRecommendations = () => {
-        // Simple recommendation logic based on answers
+    const handlePrevious = () => {}
+  return <div>Component</div>;
+};
+        if (currentStep > 1) {}
+            setCurrentStep(currentStep - 1)}
+    }
+    const generateRecommendations = () => {}
+  return <div>Component</div>;
+};
+        // Simple recommendation logic based on answers;
         const industry = answers.industry;
         const compSize = answers.comp_size;
         const goals = answers.ai_goals;
-        let filteredSolutions = aiSolutions;
-        // Filter based on industry
-        if (industry === 'Healthcare & Life Sciences') {
-            filteredSolutions = filteredSolutions.filter (s => s.name.includes ('Healthcare') || s.category === 'Analytics & Insights') }
-        else if (industry === 'Financial Services') {
-            filteredSolutions = filteredSolutions.filter (s => s.name.includes ('Financial') || s.category === 'Analytics & Insights') }
-        // Filter based on comp size
-        if (compSize === 'Startup (1 - 50 employees) ') {
-            filteredSolutions = filteredSolutions.filter (s => s.name.includes ('Micro') || s.name.includes ('Workflow') ) }
-        // Filter based on goals
-        if (goals === 'Automate repetitive tasks') {
-            filteredSolutions = filteredSolutions.filter (s => s.category === 'Process Automation') }
-        else if (goals === 'Improve customer experience') {
-            filteredSolutions = filteredSolutions.filter (s => s.category === 'Customer Experience') }
-        setRecommendations (filteredSolutions.slice (0, 3) ) ;
-        setCurrentStep (questions.length + 1) };
-    const resetQuiz = () => {
+        let filteredSolutions = aiSolutions;';
+        // Filter based on industry'';
+        if (industry === 'Healthcare & Life Sciences') {}
+';
+            filteredSolutions = filteredSolutions.filter(s => s.name.includes('Healthcare') || s.category === 'Analytics & Insights')}';
+        else if (industry === 'Financial Services') {}
+';
+            filteredSolutions = filteredSolutions.filter(s => s.name.includes('Financial') || s.category === 'Analytics & Insights')}';
+        // Filter based on comp size'';
+        if (compSize === 'Startup (1-50 employees)) {}
+';
+            filteredSolutions = filteredSolutions.filter(s => s.name.includes('Micro') || s.name.includes('Workflow'))}';
+        // Filter based on goals'';
+        if (goals === 'Automate repetitive tasks') {}
+';
+            filteredSolutions = filteredSolutions.filter(s => s.category === 'Process Automation')}';
+        else if (goals === 'Improve customer experience') {}
+';
+'';
+''';
+            filteredSolutions = filteredSolutions.filter(s => s.category === 'Customer Experience')}
+        setRecommendations(filteredSolutions.slice(0, 3));
+        setCurrentStep(questions.length + 1)}
+    const resetQuiz = () => {}
+  return <div>Component</div>;
+};
         setCurrentStep (1) ;
         setAnswers ({}) ;
-        setRecommendations ([]) };
+        setRecommendations ([]) }
     const progressPercentage = (currentStep / questions.length) * 100;
     return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
       {/* Hero Section */}
@@ -302,47 +314,48 @@ const AIMatcher = () => {
                     Learn More < ArrowRight className="ml - 2 w - 4 h - 4 group - hover:translate - x-1 transition - transform duration - 300"/>
                   </Link>
                 </motion.div>) ) }
-            </div>
-
-            <div className="text - center mt - 12">
-              <button onClick={resetQuiz} className="bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white px - 8 py - 3 rounded - lg font - semibold hover:from - blue - 700 hover:to - cyan - 700 transition - all duration - 300 mr - 4">
-                Take Quiz Again
-              </button>
-              <Link to="/contact" className="border border - blue - 400 text - blue - 400 px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 400 hover:text - white transition - all duration - 300">
-                Get Expert Consultation
-              </Link>
-            </div>
+            </div>";
+"";
+            <div className="text-center mt-12">"";
+              <button onClick={resetQuiz} className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 mr-4">;
+                Take Quiz Again";
+              </button>"";
+              <Link to="/contact" className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">;
+                Get Expert Consultation;
+              </Link>;
+            </div>;
           </motion.div>) }
-      </div>
+      </div>;
+";
+      {/* CTA Section */}"";
+      <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">"";
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
+          <div>Broken JSX</div>
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">"";
+            <h2 className="text-4xl font-bold text-white mb-6">;
+              Need More Personalized Guidance?";
+            </h2>"";
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
+              Our AI experts are ready to provide customized recommendations and implementation strategies;
+              tailored specifically to your business requirements.";
+            </p>"";
+            <div className="flex flex-wrap justify-center gap-4">"";
+              <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">;
+                Schedule Free Consultation";
+              </Link>"";
+              <Link to="/services-showcase" className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">;
+                Explore All Services;
+              </Link>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </div>;
+    </div>)}
+export default AIMatcher;
 
-      {/* CTA Section */}
-      <div className="bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20 border - t border - blue - 500 / 20">
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20">
-          <motion.div initial = {
-  { opacity: 0,
-  y: 20 
 
-}} whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text - center">
-            <h2 className="text - 4xl font - bold text - white mb - 6">
-              Need More Personalized Guidance?
-            </h2>
-            <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">
-              Our AI experts are ready to provide customized recommendations and implementation strategies 
-              tailored specifically to your business requirements.
-            </p>
-            <div className="flex flex - wrap justify - center gap - 4">
-              <Link to="/contact" className="bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white px - 8 py - 3 rounded - lg font - semibold hover:from - blue - 700 hover:to - cyan - 700 transition - all duration - 300">
-                Schedule Free Consultation
-              </Link>
-              <Link to="/services - showcase" className="border border - blue - 400 text - blue - 400 px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 400 hover:text - white transition - all duration - 300">
-                Explore All Services
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </div>) };
+export { AIMatcher }
+export { AIMatcher }
+export { AIMatcher }
+export { AIMatcher }
+export { AIMatcher }

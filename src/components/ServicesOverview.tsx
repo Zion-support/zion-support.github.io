@@ -120,11 +120,12 @@ import { motion } from 'framer - motion';
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter (s => s.category.includes ('Healthcare') ) ;
     };
   ];
-;
-  return (<div className = "py - 20 bg - futuristic relative overflow - hidden">;
-      {/* Background effects */};
-      <div className="absolute inset - 0 opacity - 10">;
-        <div className="cyber - grid w - full h - full"></div>;
+
+  return ();
+    <div className="py-20 bg-futuristic relative overflow-hidden">;
+      {/* Background effects */}";
+      <div className="absolute inset-0 opacity-10">";
+        <div className="cyber-grid w-full h-full"></div>;
       </div>;
 ;
       <div className="container - responsive relative z - 10">;

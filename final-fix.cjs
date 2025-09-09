@@ -1,9 +1,8 @@
-const fs = require('fs');
-const path = require('path');
-
+const fs = require("fs");
+const path = require("path");
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  let content = fs.readFileSync(filePath, "utf8");
     let originalContent = content;
 
     // Remove duplicate export statements;
@@ -63,49 +62,46 @@ function fixFile(filePath) {
     );
 
     // Fix missing function declarations;
-    content = content.replace(
-      /^\s*import\s+\{[^}]*\}\s+from\s+['"`][^'"`]*['"`];\s*$/gm,
+    content = content.replace(;
+      /^\s*import\s+\{[^}]*\}\s+from\s+[""`][^""`]*[""`];\s*$/gm,;
       match => {
-        return match + '\nexport default function Page() {'}
+  return match + "\nexport default function Page() {";}
     );
 
     // Fix missing closing braces;
-    if (content.includes('export default function') && !content.includes('}')) {
-      content += '\n}'}
+    if (content.includes("export default function") && !content.includes("}")) {
+  content += "\n}";}
 
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, `utf8`);
+  fs.writeFileSync(filePath, content, `utf8`);
       console.log(`Fixed: ${filePath}`);
-      return true}
-    return false} catch (error) { 
-    console.error(`Error processing ${filePath }:`, error.message);
-    return false}
+      return true;}
+    return false;} catch (error) {
+  console.error(`Error processing ${filePath }:`, error.message);
+    return false;}
 }
 
 function processDirectory(dirPath) {
   const files = fs.readdirSync(dirPath);
   let fixedCount = 0;
-
   files.forEach(file => {
-    const filePath = path.join(dirPath, file);
+  const filePath = path.join(dirPath, file);
     const stat = fs.statSync(filePath);
-
     if (stat.isDirectory()) {
-      if (![`node_modules`, '.git', '.next', 'out', 'dist'].includes(file)) {
-        fixedCount += processDirectory(filePath)}
-    } else if (
-      file.endsWith('.tsx') ||
-      file.endsWith('.ts') ||
-      file.endsWith('.jsx') ||
-      file.endsWith('.js')
+  if (![`node_modules`, ".git", ".next", "out", "dist"].includes(file)) {
+  fixedCount += processDirectory(filePath);}
+    } else if (;
+      file.endsWith(".tsx") ||;
+      file.endsWith(".ts") ||;
+      file.endsWith(".jsx") ||;
+      file.endsWith(".js");
     ) {
-      if (fixFile(filePath)) {
-        fixedCount++}
+  if (fixFile(filePath)) {
+  fixedCount++;}
     }
   });
+  return fixedCount;}
 
-  return fixedCount}
-
-console.log('Starting final syntax fixes...');
-const fixedCount = processDirectory('./src');
-console.log(`Fixed ${fixedCount} files.`);
+console.log("Starting final syntax fixes...");
+const fixedCount = processDirectory("./src');
+console.log(`Fixed ${fixedCount} files.`)}}))

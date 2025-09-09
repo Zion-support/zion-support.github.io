@@ -1,6 +1,6 @@
 import { GradientHeading } from "./GradientHeading";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "./ui/Button";
+import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { BLOG_POSTS } from "@/data/blog-posts";
 import Image from 'next/image';

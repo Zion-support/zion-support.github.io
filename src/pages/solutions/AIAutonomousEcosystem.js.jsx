@@ -229,75 +229,88 @@ const AIAutonomousEcosystem = () => {
                   <li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
                     {benefit}
-                  </li>))}
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl p-8 border border-purple-500/30">
-              <div className="text-center">
-                <Lightbulb className="w-24 h-24 text-purple-400 mx-auto mb-4"       />
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  Unified Intelligence
-                </h3>
-                <p className="text-gray-300 mb-6">
-                  Connect all your AI systems into one intelligent ecosystem 
-                  that learns and adapts together.
-                </p>
-                <div className="text-sm text-gray-400">
-                  <p>• Seamless integration</p>
-                  <p>• Shared intelligence</p>
-                  <p>• Unified management</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Implementation Process */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Implementation Process
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            A structured approach to building and deploying your AI ecosystem 
-            with minimal disruption to existing operations.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {implementation.map((((((((phase, index, index, index, index, index, index, index) => ({ ...((((((phase, index, index, index, index, index, index, key: index })) => ({ ...(((((phase, index, index, index, index, index, key: index })) => ({ ...((((phase, index, index, index, index, key: index })) => ({ ...(((phase, index, index, index, key: index })) => ({ ...((phase, index, index, key: index })) => ({ ...(phase, index, key: index })) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                  {index + 1}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{phase.phase}</h3>
-                <p className="text-gray-300 mb-2">{phase.description}</p>
-                <p className="text-sm text-purple-400">{phase.duration}</p>
-              </div>))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Build Your AI Ecosystem?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Transform your organization with a unified AI ecosystem that 
-            drives innovation and efficiency across all operations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-              Start Building
-            </a>
-            <a href="/solutions" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-              View All Solutions
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>);
-};
+                  </li>;
+                ))}
+              </ul>";
+            </div>"";
+            <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl p-8 border border-purple-500/30">"";
+              <div className="text-center">"";
+                <Lightbulb className="w-24 h-24 text-purple-400 mx-auto mb-4" />"";
+                <h3 className="text-2xl font-bold text-white mb-2">;
+                  Unified Intelligence";
+                </h3>"";
+                <p className="text-gray-300 mb-6">;
+                  Connect all your AI systems into one intelligent ecosystem;
+                  that learns and adapts together.";
+                </p>"";
+                <div className="text-sm text-gray-400">;
+                  <p>• Seamless integration</p>;
+                  <p>• Shared intelligence</p>;
+                  <p>• Unified management</p>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+";
+      {/* Implementation Process */}"";
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">"";
+        <div className="max-w-4xl mx-auto text-center">"";
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
+            Implementation Process";
+          </h2>"";
+          <p className="text-xl text-gray-300 mb-8">;
+            A structured approach to building and deploying your AI ecosystem;
+            with minimal disruption to existing operations.;
+          </p>";
+"";
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
+            {};
+              <div key={index} className="text-center">"";
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">;
+                  {index + 1}";
+                </div>"";
+                <h3 className="text-xl font-semibold text-white mb-2">;
+                  {phase.phase}";
+                </h3>"";
+                <p className="text-gray-300 mb-2">{phase.description}</p>"";
+                <p className="text-sm text-purple-400">{phase.duration}</p>;
+              </div>;
+            ))}
+          </div>;
+        </div>;
+      </section>;
+";
+      {/* CTA Section */}"";
+      <section className="py-16 px-4 sm:px-6 lg:px-8">"";
+        <div className="max-w-4xl mx-auto text-center">"";
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
+            Ready to Build Your AI Ecosystem?";
+          </h2>"";
+          <p className="text-xl text-gray-300 mb-8">;
+            Transform your organization with a unified AI ecosystem that drives;
+            innovation and efficiency across all operations.";
+          </p>"";
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+            <div>Broken JSX</div>
+              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">;
+              Start Building;
+            </a>";
+            <div>Broken JSX</div>
+              className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
+              View All Solutions;
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  )}
 export default AIAutonomousEcosystem;
+
+
+export { AIAutonomousEcosystem }
+export { AIAutonomousEcosystem }
+export { AIAutonomousEcosystem }
+export { AIAutonomousEcosystem }
+export { AIAutonomousEcosystem }

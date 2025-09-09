@@ -1,22 +1,22 @@
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx;
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx 
 import: { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity const AIPredictiveMaintenance: React.FC: = props {
 import { Wrenc,h, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity const AIPredictiveMaintenance: React.FC: = props  {}
     }, {
 
-  ];
-  return();
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx;
-    <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
+  ] 
+  return() 
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx 
+    <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>' 
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx
-<:pages.disabled/pages/services/ai-predictive-maintenance.tsx;
-      <SEO;
-=;
+<:pages.disabled/pages/services/ai-predictive-maintenance.tsx 
+      <SEO 
+= 
 
-          <motion.div;
+          <motion.div 
             initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx;
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx 
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx 
+  y: 20 
 
               <span className='block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-pink-400'>
                 Maintenance
@@ -26,7 +26,7 @@ import { Wrenc,h, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, 
             </h1>'
 '''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
-              Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment;
+              Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment 
 
                 Get Started'
             </p>'
@@ -59,16 +59,16 @@ import { Wrenc,h, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, 
     g:grid-cols-4 gap-8'>
             {features.map((feature, index(
 
-              <motion.div;
+              <motion.div 
                 key={feature.title}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx;
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx 
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx 
+  y: 20 
 
                   <feature.icon className='w-6 h-6 text-orange-400' />'
                 </div>'''
-                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'';
+                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'' 
 
                   <feature.icon className='w-6 h-6 text-orange-400' />
                 </div>'''
@@ -76,7 +76,7 @@ import { Wrenc,h, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, 
                 <p className='text-gray-300'>{feature.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -89,7 +89,7 @@ import { Wrenc,h, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, 
 
           <div className='grid md:grid-cols-2 gap-8'>
             {applications.map(applicatio,
-    n: unknown, index: unknown();
+    n: unknown, index: unknown() 
               <motion.div
           </motion.div>'
 '''
@@ -98,18 +98,18 @@ import { Wrenc,h, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, 
             {applications.map(applicatio,
     n: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={application.titl,e}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx;
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx;
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx 
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx 
 
                     <p className='text-gray-300'>{application.description}</p>
 
                   </div>
                 </div>
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -125,30 +125,30 @@ import { Wrenc,h, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, 
 '''
           <div className='grid md:grid-cols-2 gap-8'>
 
-            <motion.div;
+            <motion.div 
               initial: =  {}, { opacity:  ,0,
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx;
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx;
-  x: -20;
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx 
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx 
+  x: -20 
 
 
                   </li>
                 ))}
               </ul>
             </motion.div>
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx: <motion.div;
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx: <motion.div 
               initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx;
-  x: 20;
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx 
+  x: 20 
   ,
-    x: 20;
-            <motion.div;
+    x: 20 
+            <motion.div 
               initial: =  {}, { opacity:  ,0,
   x: 2,0}}
               whileInView: = {}, { opacity:  ,1,
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx;
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx;
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx 
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx 
 
               <p className='text-gray-300 mb-6'>
                 Ready to transform your maintenance operations? Our AI predictive maintenance experts can help you

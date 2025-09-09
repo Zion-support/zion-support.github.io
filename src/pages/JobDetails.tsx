@@ -12,7 +12,7 @@ import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from 'lucide-react
 
 
 import { formatDistanceToNow } from 'date-fns';
-import { useToast } from '@/hooks/use-toast';
+import { toast } from 'sonner';
 import { useAuth } from '@/hooks/useAuth';
 import useJobDetails from '@/hooks/useJobDetails';
 import { ApplyToJobModal } from '@/components/messaging/job-application';
@@ -34,22 +34,29 @@ interface Job {
 }
 
 export default function JobDetails() {
-    // Cast to specify the expected route param type since useParams may be untyped
-    const { jobId } = useParams();
-    const { job, isLoading, error } = useJobDetails(jobId);
-    const { user, isAuthenticated } = useAuth();
-    const navigate = useNavigate();
-    const { isWhitelabel, brandName } = useWhitelabel();
-    const { toast } = useToast();
-    const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
-    if (isLoading) {
-        return (<div className="flex items-center justify-center min-h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
-      </div>);
-    }
-    if (error || !job) {
-        return (<>
-        
+  const router = useRouter(); // Init router
+  const { jobId: rawJobId } = router.query; // Get jobId from query
+  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined;
+  const { job, isLoading, error } = useJobDetails(jobId) as { job: Job | undefined, isLoading: boolean, error: any };
+  const { user, isAuthenticated } = useAuth();
+  // navigate is now router
+  const { isWhitelabel, brandName } = useWhitelabel();
+  
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
+
+  const formatBudget = (budget: any) => {
+    if (!budget) return "Not specified";
+    return `$${budget.min} - $${budget.max}`;
+  };
+
+  if (isLoading) {
+    return <JobDetailsSkeleton />;
+  }
+
+  if (error || !job) {
+    return (
+      <>
+        <Header />
         <div className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>
           <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>
@@ -194,9 +201,9 @@ export default function JobDetails() {
             id: job.id,
             title: job.title,
             description: job.description,
-            company_name: "Company", // Placeholder as job object doesn't have company_name directly
-            budget: formatBudget(job.budget), // Format budget object to string
-            client_id: job.client_id
+            company_name: job.company_name ?? "Company",
+            budget: formatBudget(job.budget),
+            client_id: job.client_id,
           }}
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}

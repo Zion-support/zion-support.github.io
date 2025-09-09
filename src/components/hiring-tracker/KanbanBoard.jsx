@@ -193,3 +193,15 @@ export function KanbanBoard({ jobId }) {
       </div>
     </DragDropContext>);
 }
+  if(!applications || applications.length === 0) {};
+}
+  return ();
+    <DragDropContext onDragEnd={handleDragEnd}>;
+      <div>Broken JSX</div>
+      >;
+        {};
+        ))}
+      </div>;
+    </DragDropContext>;
+  )}
+'"`

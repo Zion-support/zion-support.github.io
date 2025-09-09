@@ -1,65 +1,21 @@
-import React, { useState } from 'react';
-import { useState, useEffect } from 'react';
-;
-interface User {;
-;
-  id: string;
-  email: string;
-  displayName?: string;
-  avatar?: string;
-  role?: string;
-  isEmailVerified?: boolean;
-  createdAt?: string;
-  updatedAt?: string};
-;
-interface AuthTokens {;
-;
-  accessToken: string | null;
-  refreshToken: string | null};
-;
-export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {;
-  const [user, setUser] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [onboardingStep, setOnboardingStep] = useState(0);
-  const [tokens, setTokens] = useState<any>({;
-    accessToken: null,;
-    refreshToken: null;
-  });
-;
-  useEffect(()  => {;
-    // Check for existing auth state on mount;
-    const checkAuthState = async () => {;
-      try {;
-        if (typeof window !== 'null') {;
-          const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
-          if (auth) {;
-            const parsed = JSON.parse(auth);
-            if (parsed.user && parsed.token) {;
-              setUser(parsed.user);
-              setTokens({;
-                accessToken: parsed.token,;
-                refreshToken: parsed.refreshToken || null;
-        // // // // // // // console.error('Error checking auth state:', error);
-      } finally {;
-        setIsLoading(false);
-;
-              })};
-          };
-        };
-      } catch (error) {;
-        console.error('Error checking auth state:', error)} finally {;
-        setIsLoading(false)};
-    };
-;
-    checkAuthState()}, []);
-;
-  return {;
-    user,;
-    setUser,;
-    isLoading,;
-    setIsLoading,;
-    onboardingStep,;
-    setOnboardingStep,;
-    tokens,;
-    setTokens;
-  }};
+
+import { useState } from "react";
+import type { UserProfile } from "@/types/auth";
+
+/**
+ * Custom hook to manage auth state
+ */
+export function useAuthState() {
+  const [user, setUser] = useState<UserProfile | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [onboardingStep, setOnboardingStep] = useState<string | null>(null);
+  
+  return {
+    user,
+    setUser,
+    isLoading,
+    setIsLoading,
+    onboardingStep,
+    setOnboardingStep
+  };
+}

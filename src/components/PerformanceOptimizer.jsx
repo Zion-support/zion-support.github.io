@@ -1,95 +1,40 @@
 import React, { useEffect, useMemo, useCallback, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 
-export const PerformanceOptimizer = ({ children }) => {
+export default function PerformanceOptimizer({ children }) {
   const location = useLocation();
   const observerRef = useRef(null);
-  const preloadQueue = useRef(new Set());
 
-  // Enhanced preloading strategy
+  // Preload critical resources on route change
   useEffect(() => {
     const preloadCriticalResources = () => {
-      // Preload critical CSS with higher priority
-      const criticalCSS = document.createElement('link');
-      criticalCSS.rel = 'preload';
-      criticalCSS.as = 'style';
-      criticalCSS.href = '/src/index.css';
-      criticalCSS.fetchPriority = 'high';
-      document.head.appendChild(criticalCSS);
-
-      // Preload critical fonts with display swap
-      const criticalFonts = document.createElement('link');
-      criticalFonts.rel = 'preload';
-      criticalFonts.as = 'font';
-      criticalFonts.href = '/fonts/inter-var.woff2';
-      criticalFonts.crossOrigin = 'anonymous';
-      criticalFonts.fetchPriority = 'high';
-      document.head.appendChild(criticalFonts);
-
-      // Preload next route resources
-      preloadNextRouteResources();
-    };
-
-    preloadCriticalResources();
-  }, []);
-
-  // Preload resources for next likely routes
-  const preloadNextRouteResources = useCallback(() => {
-    const nextRoutes = ['/services', '/about', '/contact'];
-    const currentPath = location.pathname;
-    
-    nextRoutes.forEach(route => {
-      if (route !== currentPath && !preloadQueue.current.has(route)) {
-        preloadQueue.current.add(route);
-        
-        // Preload route-specific resources
-        const link = document.createElement('link');
-        link.rel = 'prefetch';
-        link.href = route;
-        document.head.appendChild(link);
+      // Preload critical CSS
+      const criticalCSS = document.querySelector('link[data-critical]');
+      if (criticalCSS && !criticalCSS.href.includes('loaded')) {
+        criticalCSS.href = criticalCSS.href + '?loaded=true';
       }
-    });
-  }, [location.pathname]);
 
-  // Enhanced image optimization
-  useEffect(() => {
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      
-      images.forEach((img) => {
-        // Add loading="lazy" to images below the fold
-        if (img.getBoundingClientRect().top > window.innerHeight) {
-          img.loading = 'lazy';
-        }
-        
-        // Add decoding="async" for better performance
-        img.decoding = 'async';
-        
-        // Add error handling with fallback
-        img.onerror = () => {
-          if (!img.dataset.fallback) {
-            img.style.display = 'none';
-          } else {
-            img.src = img.dataset.fallback;
-          }
-        };
-
-        // Add intersection observer for better lazy loading
-        if ('IntersectionObserver' in window && observerRef.current) {
-          observerRef.current.observe(img);
+      // Preload critical images
+      const criticalImages = document.querySelectorAll('img[data-critical]');
+      criticalImages.forEach(img => {
+        if (img.dataset.src && !img.src) {
+          img.src = img.dataset.src;
         }
       });
     };
 
     // Use requestIdleCallback for non-critical optimization
     if ('requestIdleCallback' in window) {
-      requestIdleCallback(optimizeImages, { timeout: 2000 });
+      requestIdleCallback(preloadCriticalResources, { timeout: 2000 });
     } else {
-      setTimeout(optimizeImages, 100);
+      setTimeout(preloadCriticalResources, 100);
     }
   }, [location.pathname]);
 
-  // Enhanced scroll performance with passive listeners
+  // Memoize expensive computations
+  const optimizedChildren = useMemo(() => children, [children]);
+
+  // Optimize scroll performance
   const handleScroll = useCallback(() => {
     if (!window.scrollTimeout) {
       window.scrollTimeout = setTimeout(() => {
@@ -104,7 +49,7 @@ export const PerformanceOptimizer = ({ children }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
-  // Enhanced service worker registration
+  // Service Worker registration for caching
   useEffect(() => {
     if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
       navigator.serviceWorker
@@ -132,7 +77,7 @@ export const PerformanceOptimizer = ({ children }) => {
     }
   }, []);
 
-  // Enhanced intersection observer for lazy loading
+  // Intersection Observer for lazy loading
   useEffect(() => {
     if ('IntersectionObserver' in window) {
       observerRef.current = new IntersectionObserver((entries) => {
@@ -167,13 +112,17 @@ export const PerformanceOptimizer = ({ children }) => {
         threshold: 0.1,
       });
 
+      // Observe all images with data-src
+      const lazyImages = document.querySelectorAll('img[data-src]');
+      lazyImages.forEach(img => observerRef.current.observe(img));
+
       return () => {
         if (observerRef.current) {
           observerRef.current.disconnect();
         }
       };
     }
-  }, []);
+  }, [location.pathname]);
 
   // Memory optimization
   useEffect(() => {
@@ -197,8 +146,21 @@ export const PerformanceOptimizer = ({ children }) => {
     };
   }, []);
 
-  // Memoize children to prevent unnecessary re-renders
-  const optimizedChildren = useMemo(() => children, [children]);
-
   return <>{optimizedChildren}</>;
-};
+}
+
+// Add global performance optimizations
+if (typeof window !== 'undefined') {
+  // Optimize memory usage
+  if ('memory' in performance) {
+    setInterval(() => {
+      const memory = performance.memory;
+      if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.9) {
+        // Trigger garbage collection if available
+        if (window.gc) {
+          window.gc();
+        }
+      }
+    }, 30000); // Check every 30 seconds
+  }
+}

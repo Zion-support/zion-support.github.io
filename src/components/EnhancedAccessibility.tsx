@@ -71,10 +71,9 @@ interface EnhancedAccessibilityProps {;
   }) ;
 ;
   // Apply accessibility settings to document;
-  const applySettings = useCallback ( (newSettings: AccessibilitySettings) => {;
-  const [isVisible, setIsVisible] = useState (false) ;
-  const timeoutRef = useRef < NodeJS.Timeout> () ;
-;
+
+  const [isVisible, setIsVisible] = useState(false);
+
   // Auto - hide accessibility panel;
   useEffect ( () => {;
     if (isOpen) {;
@@ -84,7 +83,7 @@ interface EnhancedAccessibilityProps {;
       timeoutRef.current = setTimeout ( () => setIsVisible (false) , 300) ;
     };
   }, [isOpen]) ;
-;
+
   // Apply accessibility settings;
   useEffect ( () => {;
     const root = document.documentElement;
@@ -124,57 +123,42 @@ interface EnhancedAccessibilityProps {;
     };
     root.style.fontSize = fontSizeMap[settings.fontSize];
 ;
-  }, [settings]) ;
+    if(settings.largeText) {};
+      document.documentElement.classList.add('large-text')} else {};
+      document.documentElement.classList.remove('large-text')}
+
+    // Save settings to localStorage';
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
 ;
-    };
-;
-    if (settings.reducedMotion) {;
-      document.documentElement.classList.add ('reduced - motion') } else {;
-      document.documentElement.classList.remove ('reduced - motion') };
-;
-    if (settings.largeText) {;
-      document.documentElement.classList.add ('large - text') } else {;
-      document.documentElement.classList.remove ('large - text') };
-;
-    // Save settings to localStorage;
-    localStorage.setItem ('accessibility - settings', JSON.stringify (settings) ) }, [settings]) ;
-;
-  useEffect ( () => {;
-    // Load saved settings;
-    const saved = localStorage.getItem ('accessibility - settings') ;
-    if (saved) {;
-      setSettings (JSON.parse (saved) ) };
-  }, []) ;
-;
-  const toggleSetting = (key: keyof AccessibilitySettings) => {;
-    setSettings (prev => ({;
-      ...prev,;
-      [key]: !prev[key];
-    }) ) };
-;
-  // Screen reader announcements;
-  const announcement = document.createElement ('div') ;
-    announcement.setAttribute ('aria - live', 'polite') ;
-    announcement.setAttribute ('aria - atomic', 'true') ;
-    announcement.className = 'sr - only';
-    announcement.textContent = message;
-;
-    document.body.appendChild (announcement) ;
-;
+  useEffect(() => {};
+};,
+}, []);, []);
+    // Load saved settings';
+    const saved = localStorage.getItem('accessibility-settings');    if(saved) {};
+      setSettings(JSON.parse(saved))}
+  }, []);
+
+      [key]: !prev[key]}) ) }
+  // Screen reader announcements';
+
+    announcement.setAttribute('aria-live',polite');
+    announcement.setAttribute('aria-atomic',true');
+    announcement.className="sr-only";    announcement.textContent = message;
+
+    document.body.appendChild(announcement) ;
+
     // Remove after announcement;
-    setTimeout ( () => {;
-      document.body.removeChild (announcement) ;
-    }, 1000) ;
-;
-    setAnnouncements (prev => [...prev, message]) ;
-  }, []) ;
-;
+    setTimeout(() => {};
+      document.body.removeChild(announcement) }, 1000) ;
+
+    setAnnouncements(prev => [...prev, message]) }, []) ;
   // Enhanced keyboard navigation;
-  useEffect ( () => {;
-    if (!settings.keyboardNavigation) return;
-;
-    const handleKeyDown = (e: KeyboardEvent) => {;
-      const target = e.target as HTMLElement;
+  useEffect(() => {};
+};,
+}, []);, []);
+    if(!settings.keyboardNavigation) return;
+
+      // Skip if in input/textarea'      if(target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
 ;
       // Skip if in input / textarea;
       if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
@@ -191,73 +175,45 @@ interface EnhancedAccessibilityProps {;
             target.style.outlineOffset = '';
           }, 2000) ;
           break;
-;
-        case 'Enter':;
-        case ' ':;
-          if (target.tagName = == 'BUTTON' || target.getAttribute ('role') === 'button') {;
-            e.preventDefault () ;
-            target.click () ;
-            announce (`Activated ${target.textContent || target.getAttribute ('aria - label') || 'button'}`) ;
-;
+        case 'Enter':';
+        case ' ':';
+          if(target.tagName = == 'BUTTON' || target.getAttribute('role') === 'button') {};
+            announce(`Activated ${target.textContent || target.getAttribute('aria-label') || 'button'}`);
+
           break;
-;
+
         case 'Escape':;
-          // Close modals, dropdowns, etc.;
-          const modals = document.querySelectorAll ('[role="dialog"], [data - modal]') ;
-modals.forEach (modal:  > {;
-            if (modal.getAttribute ('aria - hidden') === 'false') {; (modal as HTMLElement) .click () ;
-;
-          }) ;
-          break;
-;
+          // Close modals, dropdowns, etc.';
+          ;
+modals.forEach(modal:  > {};
+              (modal as HTMLElement).click()}) ;          break;
+
   // Keyboard navigation support;
   useEffect ( () => {;
     if (!settings.keyboardNavigation) return;
 ;
-    const handleKeyDown = (e: KeyboardEvent) => {;
-      // Skip to main content;
-      if (e.key === 'Tab' && e.altKey) {;
-        e.preventDefault () ;
-        const mainContent = document.querySelector ('main') ;
-        if (mainContent) { (mainContent as HTMLElement) .focus () ;
-        };
-      };
-;
-      // Skip to navigation;
-      if (e.key === 'Tab' && e.shiftKey && e.altKey) {;
-        e.preventDefault () ;
-        const navigation = document.querySelector ('nav') ;
-        if (navigation) { (navigation as HTMLElement) .focus () ;
-        };
-      };
-    };
-;
-    document.addEventListener ('keydown', handleKeyDown) ;
-    return () => document.removeEventListener ('keydown', handleKeyDown) ;
-  }, [settings.keyboardNavigation]) ;
-;
-        const label = target.getAttribute ('aria - label') || ;
-                     target.getAttribute ('title') || ;
-                     target.textContent;
-        if (label) announce (`Focused on ${label}`) ;
-;
-    };
-;
-    const handleFocusOut = (e: FocusEvent) => {;
-      const target = e.target as HTMLElement;
+        if(mainContent) {};
+          (mainContent as HTMLElement).focus()}      }
+
+      // Skip to navigation';
+      if(e.key === 'Tab' && e.shiftKey && e.altKey) {};
+          (navigation as HTMLElement).focus()}
+      }
+    }
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
+
+                     target.getAttribute('title') || ;
+                     target.textContent;`;
+        if(label) announce(`Focused on ${label}`)}
       target.style.outline = '';
-      target.style.outlineOffset = '';
-    };
+      target.style.outlineOffset = ''}
+    document.addEventListener('focusin', handleFocusIn);
+    document.addEventListener('focusout', handleFocusOut);
 ;
-    document.addEventListener ('focusin', handleFocusIn) ;
-    document.addEventListener ('focusout', handleFocusOut) ;
-;
-    return () => {;
-      document.removeEventListener ('focusin', handleFocusIn) ;
-      document.removeEventListener ('focusout', handleFocusOut) ;
-    };
-  }, [settings.focusIndicator, settings.screenReader, announce]) ;
-;
+    return () => {};
+      document.removeEventListener('focusout', handleFocusOut)}}, [settings.focusIndicator, settings.screenReader, announce]) ;
+
   // Skip to main content link;
   useEffect ( () => {;
     const skipLink = document.createElement ('a') ;

@@ -1,393 +1,212 @@
 module.exports = {
-  apps: [
-    // Main application
+  apps: [;
+    // Main application;
     {
-      name: 'zion-app',
-      script: 'npm',
-      args: 'start',
-      cwd: './',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
+      name: 'zion-website-enhanced',;
+      script: 'npm',;
+      args: 'start',;
+      cwd: './',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '1G',;
       env: {
-        NODE_ENV: 'production',
-        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
-      },
+        NODE_ENV: 'production',;
+        PORT: 3000},;
       env_production: {
-        NODE_ENV: 'production',
-        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
-      }
-    },
-    
-    // Backend server
-    {
-      name: 'zion-backend',
-      script: 'npm',
-      args: 'start',
-      cwd: './server',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
-      }
-    },
+        NODE_ENV: 'production',;
+        PORT: 3000},;
+      log_file: './logs/zion-website-enhanced.log',;
+      error_file: './logs/zion-website-enhanced-error.log',;
+      out_file: './logs/zion-website-enhanced-out.log',;
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
 
-    // 🆕 NEW: Unused Import Cleaner - runs every 30 minutes (HIGH PRIORITY)
+    // Enhanced Error Monitor;
     {
-      name: 'unused-import-cleaner',
-      script: './scripts/automation/unused-import-cleaner.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
+      name: 'enhanced-error-monitor',;
+      script: './scripts/automation/error-monitor.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '512M',;
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
-      }
-    },
+        NODE_ENV: 'production',;
+        ENHANCED_MODE: 'true'},;
+      cron_restart: '0 */2 * * *', // Restart every 2 hours;
+      log_file: './logs/enhanced-error-monitor.log',;
+      error_file: './logs/enhanced-error-monitor-error.log',;
+      out_file: './logs/enhanced-error-monitor-out.log',;
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
 
-    // 🆕 NEW: TypeScript Error Fixer - runs every 15 minutes (HIGHEST PRIORITY)
+    // Enhanced Syntax Fixer;
     {
-      name: 'typescript-error-fixer',
-      script: './scripts/automation/typescript-error-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
+      name: 'enhanced-syntax-fixer',;
+      script: './scripts/automation/syntax-fixer.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '512M',;
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '900000' // 15 minutes
-      }
-    },
+        NODE_ENV: 'production',;
+        ENHANCED_MODE: 'true'},;
+      cron_restart: '0 */6 * * *', // Restart every 6 hours;
+      log_file: './logs/enhanced-syntax-fixer.log',;
+      error_file: './logs/enhanced-syntax-fixer-error.log',;
+      out_file: './logs/enhanced-syntax-fixer-out.log',;
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
 
-    // 🆕 NEW: Code Quality Automator - runs every 10 minutes (HIGHEST PRIORITY)
+    // Enhanced Dependency Manager;
     {
-      name: 'code-quality-automator',
-      script: './scripts/automation/code-quality-automator.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
+      name: 'enhanced-dependency-manager',;
+      script: './scripts/automation/dependency-manager.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '512M',;
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '600000' // 10 minutes
-      }
-    },
+        NODE_ENV: 'production',;
+        ENHANCED_MODE: 'true'},;
+      cron_restart: '0 8 * * *', // Restart daily at 8 AM;
+      log_file: './logs/enhanced-dependency-manager.log',;
+      error_file: './logs/enhanced-dependency-manager-error.log',;
+      out_file: './logs/enhanced-dependency-manager-out.log',;
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
 
-    // 🧠 Intelligent Predictive Monitor - runs every 5 minutes (HIGHEST PRIORITY)
+    // Enhanced Build Monitor;
     {
-      name: 'intelligent-predictive-monitor',
-      script: './scripts/automation/intelligent-predictive-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
+      name: 'enhanced-build-monitor',;
+      script: './scripts/automation/build-monitor.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '512M',;
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '300000' // 5 minutes
-      }
-    },
+        NODE_ENV: 'production',;
+        ENHANCED_MODE: 'true'},;
+      cron_restart: '0 */4 * * *', // Restart every 4 hours;
+      log_file: './logs/enhanced-build-monitor.log',;
+      error_file: './logs/enhanced-build-monitor-error.log',;
+      out_file: './logs/enhanced-build-monitor-out.log',;
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
 
-    // 🤖 AI Code Optimizer - runs every hour
+    // AI Code Analyzer;
     {
-      name: 'ai-code-optimizer',
-      script: './scripts/automation/ai-code-optimizer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
+      name: 'ai-code-analyzer',;
+      script: './scripts/automation/ai-code-analyzer.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '1G',;
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
-      }
-    },
+        NODE_ENV: 'production',;
+        AI_ANALYSIS_MODE: 'true',;
+        AUTO_FIX_ENABLED: 'true',;
+        ANALYSIS_INTERVAL: '300000', // 5 minutes},;
+      cron_restart: '0 */2 * * *', // Restart every 2 hours;
+      log_file: './logs/ai-code-analyzer.log',;
+      error_file: './logs/ai-code-analyzer-error.log',;
+      out_file: './logs/ai-code-analyzer-out.log',;
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
 
-    // 📦 Smart Dependency Manager - runs every 6 hours
+    // Smart Performance Optimizer;
     {
-      name: 'smart-dependency-manager',
-      script: './scripts/automation/smart-dependency-manager.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
+      name: 'smart-performance-optimizer',;
+      script: './scripts/automation/smart-performance-optimizer.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '1G',;
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '21600000' // 6 hours
-      }
-    },
+        NODE_ENV: 'production',;
+        PERFORMANCE_OPTIMIZATION_MODE: 'true',;
+        BUNDLE_ANALYSIS_ENABLED: 'true',;
+        OPTIMIZATION_INTERVAL: '600000', // 10 minutes},;
+      cron_restart: '0 */3 * * *', // Restart every 3 hours;
+      log_file: './logs/smart-performance-optimizer.log',;
+      error_file: './logs/smart-performance-optimizer-error.log',;
+      out_file: './logs/smart-performance-optimizer-out.log',;
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
 
-    // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
+
     {
-      name: 'console-error-fixer',
-      script: './scripts/automation/console-error-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
+      name: 'enhanced-ci-cd-automation',;
+      script: './scripts/automation/enhanced-ci-cd-automation.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '1G',;
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '900000' // 15 minutes
-      }
-    },
+        NODE_ENV: 'production',;
+        CI_CD_AUTOMATION_MODE: 'true',;
+        PIPELINE_ORCHESTRATION: 'true',;
+        ENVIRONMENT_MANAGEMENT: 'true'},;
 
-    // Continuous link checker - runs every 30 minutes
+      log_file: './logs/enhanced-ci-cd-automation.log',;
+      error_file: './logs/enhanced-ci-cd-automation-error.log',;
+      out_file: './logs/enhanced-ci-cd-automation-out.log',;
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
+
+
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '1G',;
+      env: {
+        NODE_ENV: 'production',;
+
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
+
+
     {
-      name: 'link-checker',
-      script: './scripts/automation/link-checker.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
+      name: 'advanced-development-intelligence',;
+      script: './scripts/automation/advanced-development-intelligence.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '1G',;
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
-      }
-    },
+        NODE_ENV: 'production',;
 
-    // Continuous improvement - runs every 2 hours
-    {
-      name: 'continuous-improvement',
-      script: './scripts/automation/continuous-improvement.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
-    },
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
 
-    // Continuous build and test - runs every hour
-    {
-      name: 'daily-build-test',
-      script: './scripts/automation/daily-build-test.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
-      }
-    },
 
-    // Continuous security audit - runs every 4 hours
-    {
-      name: 'security-audit',
-      script: './scripts/automation/security-audit.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '14400000' // 4 hours
-      }
-    },
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
+  ],;
 
-    // Continuous dependency updates - runs every 6 hours
-    {
-      name: 'dependency-updates',
-      script: './scripts/automation/dependency-updates.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '21600000' // 6 hours
-      }
-    },
-
-    // Continuous performance monitoring - runs every 2 hours
-    {
-      name: 'performance-monitor',
-      script: './scripts/automation/performance-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
-    },
-
-    // Continuous quality checks - runs every 3 hours
-    {
-      name: 'quality-checks',
-      script: './scripts/automation/quality-checks.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '10800000' // 3 hours
-      }
-    },
-
-    // Continuous link integrity checker - runs every 2 hours
-    {
-      name: 'link-integrity',
-      script: './scripts/automation/link-integrity.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
-    },
-
-    // Continuous front maximizer - runs every 4 hours
-    {
-      name: 'front-maximizer',
-      script: './scripts/automation/front-maximizer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '14400000' // 4 hours
-      }
-    },
-
-    // Continuous sitemap runner - runs every 6 hours
-    {
-      name: 'sitemap-runner',
-      script: './scripts/automation/sitemap-runner.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '21600000' // 6 hours
-      }
-    },
-
-    // AI Code Analyzer - runs every 4 hours
-    {
-      name: 'ai-code-analyzer',
-      script: './scripts/automation/ai-code-analyzer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '14400000' // 4 hours
-      }
-    },
-
-    // Smart Deployment Optimizer - runs every 6 hours
-    {
-      name: 'smart-deployment-optimizer',
-      script: './scripts/automation/smart-deployment-optimizer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '21600000' // 6 hours
-      }
-    },
-
-    // Adaptive Test Generator - runs every 8 hours
-    {
-      name: 'adaptive-test-generator',
-      script: './scripts/automation/adaptive-test-generator.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '28800000' // 8 hours
-      }
-    },
-
-    // Intelligent Code Refactorer - runs every 12 hours
-    {
-      name: 'intelligent-code-refactorer',
-      script: './scripts/automation/intelligent-code-refactorer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '43200000' // 12 hours
-      }
-    },
-
-    // Smart Documentation Generator - runs every 24 hours
-    {
-      name: 'smart-documentation-generator',
-      script: './scripts/automation/smart-documentation-generator.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '86400000' // 24 hours
-      }
-    },
-
-    // Predictive Maintenance Monitor - runs every 2 hours
-    {
-      name: 'predictive-maintenance-monitor',
-      script: './scripts/automation/predictive-maintenance-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
-    }
-  ],
-
+  // PM2 Configuration;
   deploy: {
     production: {
-      user: 'miami2',
-      host: 'localhost',
-      ref: 'origin/main',
-      repo: 'https://github.com/Zion-Holdings/zion.app.git',
-      path: '/Users/miami2/zion-app-clone',
-      'pre-deploy-local': '',
-      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.enhanced.cjs --env production',
-      'pre-setup': ''
-    },
+      user: 'node',;
+      host: 'localhost',;
+      ref: 'origin/main',;
+      repo: 'git@github.com:Zion-Holdings/zion.app.git',;
+      path: '/var/www/production',;
+      'post-deploy': 'npm install && pm2 reload ecosystem.enhanced.cjs --env production'},;
     staging: {
-      user: 'miami2',
-      host: 'localhost',
-      ref: 'origin/staging',
-      repo: 'https://github.com/Zion-Holdings/zion.app.git',
-      path: '/Users/miami2/zion-app-staging',
-      'pre-deploy-local': '',
-      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.enhanced.cjs --env staging',
-      'pre-setup': ''
-    },
-    development: {
-      user: 'miami2',
-      host: 'localhost',
-      ref: 'origin/develop',
-      repo: 'https://github.com/Zion-Holdings/zion.app.git',
-      path: '/Users/miami2/zion-app-dev',
-      'pre-deploy-local': '',
-      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.enhanced.cjs --env development',
-      'pre-setup': ''
-    }
-  }
-};
+      user: 'node',;
+      host: 'localhost'}},;
+
+  // PM2 Settings;
+  pm2: {
+    max_memory_restart: '2G',;
+    node_args: '--max-old-space-size=2048',;
+    instances: 'max',;
+    exec_mode: 'cluster',;
+    watch: false,;
+    ignore_watch: ['node_modules', 'logs', '*.log'],;
+    merge_logs: true,;
+    log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
+    error_file: './logs/pm2-error.log',;
+    out_file: './logs/pm2-out.log',;
+    log_file: './logs/pm2-combined.log'}}

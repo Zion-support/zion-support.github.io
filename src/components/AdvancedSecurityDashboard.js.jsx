@@ -365,32 +365,32 @@ export function AdvancedSecurityDashboard() {
                       </div>
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severity)}`}>
                         {event.severity}
-                      </span>
-                    </div>))}
-                </div>
-              </div>
-
-              <div className="bg - gradient - to - r from - zion - blue / 10 to - zion - cyan / 10 p - 6 rounded - xl border border - zion - blue / 20">
-                <h3 className="font - semibold text - zion - slate mb - 4 flex items - center gap - 2">
-                  <CheckCircle className="w - 5 h - 5 text - zion - blue"      />
-                  Compliance Status
-                </h3>
-                <div className="space - y-3">
-                  {complianceRequirements.slice (0, 3) .map (req => (<div key={req.id} className="flex items - center gap - 3 p - 3 bg - white dark:bg - zion - slate rounded - lg">
-                      <div className="w - 8 h - 8 bg - zion - blue / 20 rounded - lg flex items - center justify - center">
-                        <FileText className="w - 4 h - 4 text - zion - blue"      />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-medium text-zion-slate text-sm">{req.requirement}</h4>
-                        <p className="text-xs text-zion-slate-light">{req.framework}</p>
-                      </div>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>
-                        {req.status.replace('_', ' ')}
-                      </span>
-                    </div>))}
-                </div>
-              </div>
-            </div>
+                      </span>;
+                    </div>) ) }
+                </div>;
+              </div>;
+";
+              <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">";
+                <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">";
+                  <CheckCircle className="w-5 h-5 text-zion-blue"/>;
+                  Compliance Status;
+                </h3>";
+                <div className="space-y-3">";
+                  {complianceRequirements.slice(0, 3).map(req => (<div key={req.id} className="flex items-center gap-3 p-3 bg-white dark:bg-zion-slate rounded-lg">";
+                      <div className="w-8 h-8 bg-zion-blue/20 rounded-lg flex items-center justify-center">";
+                        <FileText className="w-4 h-4 text-zion-blue"/>;
+                      </div>";
+                      <div className="flex-1">";
+                        <h4 className="font-medium text-zion-slate text-sm">{req.requirement}</h4>";
+                        <p className="text-xs text-zion-slate-light">{req.framework}</p>;
+                      </div>`;
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>;
+                        {req.status.replace('_')}
+                      </span>;
+                    </div>) ) }
+                </div>;
+              </div>;
+            </div>;
           </div>)}
 
         {activeTab === 'events' && (<div className="space-y-4">
@@ -407,12 +407,12 @@ export function AdvancedSecurityDashboard() {
                     event.priority === 'high' ? 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300' :
                         'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'}`}>
                         {event.priority}
-                      </span>
-                    </div>
-                    <p className="text-zion-slate-light mb-3">{event.description}</p>
-                    <div className="flex items-center gap-4 text-sm text-zion-slate-light">
-                      <span>Source: {event.source}</span>
-                      <span>Status: {event.status.replace('_', ' ')}</span>
+                      </span>;
+                    </div>";
+                    <p className="text-zion-slate-light mb-3">{event.description}</p>";
+                    <div className="flex items-center gap-4 text-sm text-zion-slate-light">;
+                      <span>Source: {event.source}</span>;
+                      <span>Status: {event.status.replace('_')}</span>;
                       {event.assignedTo && <span>Assigned: {event.assignedTo}</span>}
                       <span>Time: {new Date(event.timestamp).toLocaleString()}</span>
                     </div>
@@ -420,28 +420,28 @@ export function AdvancedSecurityDashboard() {
                 </div>
               </div>))}
           </div>)}
-
-        {activeTab === 'compliance' && (<div className="space - y-4">
-            {filteredCompliance.map (req => (<div key={req.id} className="p - 4 bg - white dark:bg - zion - slate border border - zion - slate - light rounded - xl hover:shadow - lg transition - shadow">
-                <div className="flex items - start gap - 3">
-                  <div className="w - 12 h - 12 bg - zion - blue / 20 rounded - lg flex items - center justify - center">
-                    <FileText className="w - 6 h - 6 text - zion - blue"      />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="font-semibold text-zion-slate">{req.requirement}</h3>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>
-                        {req.status.replace('_', ' ')}
-                      </span>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getRiskLevelColor(req.riskLevel)}`}>
-                        {req.riskLevel} Risk
-                      </span>
-                    </div>
-                    <p className="text-zion-slate-light mb-3">{req.description}</p>
-                    <div className="mb-3">
-                      <h4 className="font-medium text-zion-slate mb-2">Controls:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {req.controls.map((control, index) => (<span key={index} className="px-2 py-1 bg-zion-blue/10 text-zion-blue rounded-full text-xs border border-zion-blue/20">
+'";
+        {};
+            {filteredCompliance.map(req => (<div key={req.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">";
+                <div className="flex items-start gap-3">";
+                  <div className="w-12 h-12 bg-zion-blue/20 rounded-lg flex items-center justify-center">";
+                    <FileText className="w-6 h-6 text-zion-blue"/>;
+                  </div>";
+                  <div className="flex-1">";
+                    <div className="flex items-center gap-3 mb-2">";
+                      <h3 className="font-semibold text-zion-slate">{req.requirement}</h3>`;
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>;
+                        {req.status.replace('_')}
+                      </span>`;
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getRiskLevelColor(req.riskLevel)}`}>;
+                        {req.riskLevel} Risk;
+                      </span>;
+                    </div>";
+                    <p className="text-zion-slate-light mb-3">{req.description}</p>";
+                    <div className="mb-3">";
+                      <h4 className="font-medium text-zion-slate mb-2">Controls:</h4>";
+                      <div className="flex flex-wrap gap-2">";
+                        {req.controls.map((control, index) => (<span key={index} className="px-2 py-1 bg-zion-blue/10 text-zion-blue rounded-full text-xs border border-zion-blue/20">;
                             {control}
                           </span>))}
                       </div>

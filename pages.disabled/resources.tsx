@@ -1,13 +1,13 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react' 
+import Head from 'next/head' 
+import Link from 'next/link' 
+import { motion } from 'framer-motion' 
 import { 
   FileText, Download, ArrowRight, Star, Users, 
   Brain, Atom, Shield, Rocket, Globe,
   TrendingUp, Award, Sparkles, ExternalLink,
   BookOpen, Video, Presentation, Database
-} from 'lucide-react';
+} from 'lucide-react' 
 
 export default function Resources() {
   const resources = [
@@ -77,7 +77,7 @@ export default function Resources() {
       featured: false,
       downloadUrl: '/resources/ai-cybersecurity-2025.pdf'
     }
-  ];
+  ] 
 
   const categories = [
     { name: 'All Resources', count: resources.length, active: true },
@@ -87,14 +87,14 @@ export default function Resources() {
     { name: 'IT Management', count: 1, active: false },
     { name: 'Quantum AI', count: 1, active: false },
     { name: 'Cybersecurity', count: 1, active: false }
-  ];
+  ] 
 
   const resourceTypes = [
     { name: 'Whitepapers', icon: <FileText className="w-6 h-6" />, count: 1 },
     { name: 'Guides', icon: <BookOpen className="w-6 h-6" />, count: 2 },
     { name: 'Reports', icon: <TrendingUp className="w-6 h-6" />, count: 2 },
     { name: 'Technical Papers', icon: <Database className="w-6 h-6" />, count: 1 }
-  ];
+  ] 
 
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
   return (
@@ -336,5 +336,5 @@ export default function Resources() {
         </section>
       </div>
     </>
-  );
+  ) 
 }

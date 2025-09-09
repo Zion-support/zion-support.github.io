@@ -162,50 +162,22 @@ const categories = [;
       },;
       { threshold: 0.1 }) ;
 ;
-    const element = document.getElementById ('service - showcase') ;
-    if (element) {;
-      observer.observe (element) };
-;
-    return () => observer.disconnect () }, []) ;
-;
-  const filteredServices = selectedCategory === 'All Services';
-    ? services;
-    : services.filter (service => service.category === selectedCategory) ;
-;
-  const renderStars = (rating: number) => {;
-    return Array.from ({ length: 5 }, (_, i) => (<Star;
-        key={i};
-        className={`w - 4 h - 4 ${;
-          i < Math.floor (rating) ? 'text - yellow - 400 fill - current';
-            : 'text - gray - 400';
-        }`};
-            />;) ) };
-          i < Math.floor (rating) ;
-            ? 'text - yellow - 400 fill - current' ;
-            : 'text - gray - 400';
-        }`};
-      />;) ) ;
-  };
-;
-  return (<section id = "service - showcase" className="py - 20 bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light">;
-      <div role="button" className="max - w-7xl mx - auto px - 6">;
-        {/* Header */};
-        <motion.div;
-          initial = {;
-  { opacity: 0,;
-  y: 20 ;
-;
-}};
-          animate = {;
-  isVisible ? { opacity: 1,;
-  y: 0 ;
-;
-} : { opacity: 0, y: 20 }};
-          transition={{ duration: 0.6 }};
-          className="text - center mb - 16";
-;
-          <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
-            Our < span className="bg - gradient - to - r from - zion - cyan to - zion - blue bg - clip - text text - transparent">;
+    if(element) {};
+      observer.observe(element)}
+
+    return () => observer.disconnect()}, []);
+
+      />;
+    ))};
+          i <div>Broken JSX</div>
+      />;) ) };
+  return ();
+    <section id = "service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">";
+      <div className="max-w-7xl mx-auto px-6">;
+        {/* Header */}
+        <div>Broken JSX</div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">";
+            Our <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">;
               Services;
             </span>;
           </h2>;
@@ -258,33 +230,20 @@ const categories = [;
           className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8";
 ;
           <AnimatePresence mode="wait">;
-            {filteredServices.map ( (service, index) => (<motion.div;
-                key={service.id};
-                initial={{ opacity: 0, y: 20 }};
-                animate={{ opacity: 1, y: 0 }};
-                exit={{ opacity: 0, y: -20 }};
-                transition={{;
-                  duration: 0.6,;
-                  delay: index * 0.1,;
-                  type: "spring",;
-  stiffness: 100;
-;
-}};
-                whileHover={{ y: -10 }};
-                onHoverStart={ () => setHoveredService (service.id) };
-                onHoverEnd={ () => setHoveredService (null) };
+            {};
+                onHoverStart={() => setHoveredService(service.id)}
+                onHoverEnd={() => setHoveredService(null)}";
                 className="relative group";
-;
-                <Link to={service.link}>;
-                  <div role="button" className="bg - gradient - to - br from - zion - slate to - zion - slate - light p - 8 rounded - 2xl border border - zion - cyan / 20 hover:border - zion - cyan / 40 transition - all duration - 300 hover:shadow - 2xl hover:shadow - zion - cyan / 10 h - full">;
-                    {/* Popular Badge */};
-                    {service.popular && (<div role="button" className="absolute - top - 3 -right - 3 bg - gradient - to - r from - zion - cyan to - zion - blue text - black px - 4 py - 1 rounded - full text - sm font - bold">;
-                        Popular;
-                      </div>) };
-;
-                    {/* Service Icon */};
-                    <div role="button" className={`w - 16 h - 16 bg - gradient - to - r ${service.color} rounded - 2xl flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300`}>;
-                      <service.icon className="w - 8 h - 8 text - white"       />;
+
+                <Link to={service.link}>";
+                  <div className="bg-gradient-to-br from-zion-slate to-zion-slate-light p-8 rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10 h-full">;
+                    {/* Popular Badge */}
+                    {};
+                      </div>) }
+
+                    {/* Service Icon */}`;
+                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;";
+                      <service.icon className="w-8 h-8 text-white" />;
                     </div>;
 ;
                     {/* Service Info */};
@@ -380,5 +339,5 @@ const categories = [;
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-};
+    </section>;) }
+'"`;

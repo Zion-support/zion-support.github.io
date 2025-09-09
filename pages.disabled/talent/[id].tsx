@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
-import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
-import type { TalentProfile as TalentProfileType } from '@/types/talent';
+import React, { useEffect, useState } from 'react' 
+import { useParams, useNavigate } from 'react-router-dom' 
+import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState' 
+import { ProfileErrorState } from '@/components/profile/ProfileErrorState' 
+import type { TalentProfile as TalentProfileType } from '@/types/talent' 
 
 interface TalentProfileWithSocial extends TalentProfileType {
-  social?: Record<string, string>;
+  social?: Record<string, string> 
 }
 
 // Simple error component for 404
@@ -17,47 +17,47 @@ const NotFoundError = () => (
       <p className="text-zion-slate-light">The talent profile you're looking for doesn't exist or has been removed.</p>
     </div>
   </div>
-);
+) 
 
 const TalentProfilePage: React.FC = () => {
-  const { id } = useParams();
-  const navigate = useNavigate();
-  const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const { id } = useParams() 
+  const navigate = useNavigate() 
+  const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null) 
+  const [loading, setLoading] = useState(true) 
+  const [error, setError] = useState<string | null>(null) 
 
   useEffect(() => {
     const fetchProfile = async () => {
-      if (!id) return;
-      setLoading(true);
-      setError(null);
+      if (!id) return 
+      setLoading(true) 
+      setError(null) 
       try {
-        const res = await fetch(`/api/talent/${id}`);
+        const res = await fetch(`/api/talent/${id}`) 
         if (res.status === 404) {
-          setError('Talent not found');
-          setProfile(null);
-          return;
+          setError('Talent not found') 
+          setProfile(null) 
+          return 
         }
-        if (!res.ok) throw new Error('Failed to load profile');
-        const data = await res.json();
-        setProfile(data.profile);
+        if (!res.ok) throw new Error('Failed to load profile') 
+        const data = await res.json() 
+        setProfile(data.profile) 
       } catch (err) {
-        setError('Talent not found');
+        setError('Talent not found') 
       } finally {
-        setLoading(false);
+        setLoading(false) 
       }
-    };
+    } 
 
     if (id) {
-      fetchProfile();
+      fetchProfile() 
     }
-  }, [id]);
+  }, [id]) 
 
-  if (loading) return <ProfileLoadingState />;
+  if (loading) return <ProfileLoadingState /> 
   if (error || !profile) {
     // Redirect to 404 page or show error state
-    navigate('/404', { replace: true });
-    return null;
+    navigate('/404', { replace: true }) 
+    return null 
   }
 
   return (
@@ -81,7 +81,7 @@ const TalentProfilePage: React.FC = () => {
         )}
       </div>
     </main>
-  );
-};
+  ) 
+} 
 
-export default TalentProfilePage;
+export default TalentProfilePage 

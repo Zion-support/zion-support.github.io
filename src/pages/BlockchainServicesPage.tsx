@@ -37,31 +37,66 @@ import { motion } from 'framer - motion';
       image: "https://images.unsplash.com / photo - 1639762681485 - 074b7f938ba0?auto = format & fit = crop & w=800 & h=500";
     };
   ];
-;
-  const categories = [;
-    { id: 'all', name: 'All Services', count: blockchainServices.length },;
-              };
-            ].map ( (feature, index) => (<motion.div;
-                key={index};
-                initial = {;
-  { opacity: 0,;
-  y: 20 ;
+
+  const blockchainPlatforms = [;
+    'Ethereum', 'Polygon', 'Solana', 'Cardano', 'Polkadot', 'Hyperledger', 'Corda', 'Quorum';
+  ];
 ;
 }};
                 animate = {;
   { opacity: 1,;
   y: 0 ;
 ;
-}};
-                transition = {;
-  { duration: 0.5,;
-  delay: index * 0.1 ;
-;
-}};
-                className="bg - zion - blue - dark / 50 backdrop - blur - sm border border - zion - cyan / 20 rounded - xl p - 6 text - center hover:border - zion - cyan / 40 transition - all duration - 300";
-;
-                <div className="w - 16 h - 16 bg - gradient - to - r from - zion - cyan to - zion - purple rounded - 2xl flex items - center justify - center mx - auto mb - 6">;
-                  <feature.icon className="w - 8 h - 8 text - white"       />;
+  const itemVariants = {};
+    hidden: { opacity: 0, y: 20 },;
+    visible: {};
+}
+    }
+  }
+  return (;
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">;
+      <div className="container mx-auto px-4 py-12">;
+        {/* Hero Section */}
+        <div>Broken JSX</div>
+          className="text-center mb-16">;
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6">;
+            <Database className="w-10 h-10 text-white" />;
+          </div>;
+          <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">;
+            <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
+              Blockchain;
+            </span> Services;
+          </h1>;
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed mb-8">;
+            Transform your business with blockchain technology. From smart contracts to DeFi solutions, ;
+            we help you build secure, transparent, and decentralized applications.;
+          </p>;
+
+          {/* Quick Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">;
+            <div className="text-center">;
+              <div className="text-3xl font-bold text-zion-cyan mb-2">100%</div>;
+              <div className="text-zion-slate-light">Transparency</div>;
+            </div>;
+            <div className="text-center">;
+              <div className="text-3xl font-bold text-zion-purple mb-2">Immutable</div>;
+              <div className="text-zion-slate-light">Data Security</div>;
+            </div>;
+            <div className="text-center">;
+              <div className="text-3xl font-bold text-zion-blue mb-2">Decentralized</div>;
+              <div className="text-zion-slate-light">Architecture</div>;
+            </div>;
+          </div>;
+        </motion.div>;
+
+        {/* Blockchain Services Grid */}
+        <div>Broken JSX</div>
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">;
+          {};
+              {/* Service Header */}
+              <div className="flex items-start justify-between mb-4">;
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center text-white mb-4">;
+                  {service.icon}
                 </div>;
 ;
                 <h3 className="text - xl font - bold text - white mb - 4">{feature.title}</h3>;

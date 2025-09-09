@@ -57,8 +57,7 @@ largestChunk: {;
           };
         };
       }) ;
-;
-      const averageChunkSize = chunkCount > 0 ? totalSize / chunkCount : 0;
+
       const gzipSavings = totalSize * 0.7; // Estimate 70% savings with gzip;
 ;
       setMetrics ({;
@@ -70,13 +69,13 @@ largestChunk: {;
       }) ;
 ;
       // Log performance insights;
-      console.group ('🚀 Bundle Analysis') ;
-      console.log (`Total Bundle Size: ${ (totalSize / 1024 / 1024) .toFixed (2) } MB`) ;
-      console.log (`Chunk Count: ${chunkCount}`) ;
-      console.log (`Largest Chunk: ${largestChunk.name} (${ (largestChunk.size / 1024 / 1024) .toFixed (2) } MB) `) ;
-      console.log (`Average Chunk Size: ${ (averageChunkSize / 1024 / 1024) .toFixed (2) } MB`) ;
-      console.log (`Estimated Gzip Savings: ${ (gzipSavings / 1024 / 1024) .toFixed (2) } MB`) ;
-      ;
+      console.group('🚀 Bundle Analysis') ;
+      console.log(`Total Bundle Size: ${(totalSize / 1024 / 1024) .toFixed(2) } MB`) ;
+      console.log(`Chunk Count: ${chunkCount}`) ;
+      console.log(`Largest Chunk: ${largestChunk.name} (${(largestChunk.size / 1024 / 1024) .toFixed(2) } MB) `) ;
+      console.log(`Average Chunk Size: ${(averageChunkSize / 1024 / 1024) .toFixed(2) } MB`) ;
+      console.log(`Estimated Gzip Savings: ${(gzipSavings / 1024 / 1024) .toFixed(2) } MB`) ;
+
       // Performance recommendations;
       if (totalSize > 5 * 1024 * 1024) { // 5MB;
         console.warn ('⚠️ Bundle size is large. Consider code splitting and lazy loading.') ;
@@ -113,31 +112,31 @@ largestChunk: {;
       optimizations.push ('Use webpack chunk optimization') ;
     };
 ;
-    if (metrics.largestChunk.size > 2 * 1024 * 1024) {;
-      optimizations.push ('Split large components') ;
-      optimizations.push ('Implement tree shaking') ;
-    };
-;
+    if(metrics.largestChunk.size > 2 * 1024 * 1024) {};
+      optimizations.push('Implement tree shaking')}
+
     // Apply optimizations;
     optimizations.forEach (optimization => {;
       console.log (`🔧 Optimization: any${optimization}`) ;
     }) ;
 ;
-    return optimizations;
-  }, [enabled, metrics]) ;
-;
-  useEffect ( () => {;
-    if (!enabled) return;
-;
+    return optimizations}, [enabled, metrics]) ;
+  useEffect(() => {};
+}, []);
+    if(!enabled) return;
+
     // Analyze bundle after page load;
     const timer = setTimeout (analyzeBundle, 2000) ;
     ;
     return () => clearTimeout (timer) ;
   }, [enabled, analyzeBundle]) ;
 ;
-  useEffect ( () => {;
-    if (!enabled) return;
-;
+    return () => clearTimeout(timer) ;,
+}, [enabled, analyzeBundle]) ;
+  useEffect(() => {};
+}, []);
+    if(!enabled) return;
+
     // Run optimization analysis;
     const optimizations = optimizeBundle () ;
     ;

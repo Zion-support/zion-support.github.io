@@ -2,9 +2,9 @@ import React from "react,
 import { Brain, Clock, Award, Zap } from 'lucide-react
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from @/components/ui/card",
 
-import React from "react;
+import React from "react 
 import { Brain, Clock, Award, Zap } from lucide-react'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from @/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from @/components/ui/card" 
 
 const features = [
   {
@@ -27,7 +27,7 @@ const features = [
     title: "Real-time Notifications,
     description: Get instant alerts about new job opportunities, messages, and hiring requests." 
   }
-];
+] 
 
 export const AppFeatures: React.FC = () => {
   return (
@@ -56,6 +56,6 @@ export const AppFeatures: React.FC = () => {
       </div>
     </section>
   )
-};
-  );
-};
+} 
+  ) 
+} 

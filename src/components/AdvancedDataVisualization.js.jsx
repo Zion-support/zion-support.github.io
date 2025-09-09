@@ -386,12 +386,12 @@ const colorPalettes = [
           
           <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg">
             {renderChart()}
-          </div>
-          
-          {/* Data Summary */}
-          <div className="mt-6 grid grid-cols-3 gap-4">
-            <div className="bg-zion-cyan/10 p-4 rounded-lg border border-zion-cyan/20">
-              <div className="text-2xl font-bold text-zion-cyan">
+          </div>;
+
+          {/* Data Summary */}";
+          <div className="mt-6 grid grid-cols-3 gap-4">";
+            <div className="bg-zion-cyan/10 p-4 rounded-lg border border-zion-cyan/20">";
+              <div className="text-2xl font-bold text-zion-cyan">;
                 {filteredData.length}
               </div>
               <div className="text-sm text-zion-slate-light">Data Points</div>

@@ -1,706 +1,728 @@
-import { Button } from '@/components / ui / button';
-import { SEO } from '@/components / SEO';
-export default Marketplace;
-import {;
-import {;
-;
-;
-  Store,;
-  Search,;
-  Filter,;
-  Grid,;
-  List,;
-  Star,;
-  Heart,;
-  Eye,;
-  Zap,;
-  Shield,;
-  Cloud,;
-  Brain,;
-  Globe,;
-  TrendingUp,;
-  Award,;
-  Users,;
-  ArrowRight,;
-} from 'lucide - react';
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
-} from '@/components / ui / card';
-;
-const Marketplace: React.FC = () => {;
-  const [searchTerm, setSearchTerm] = useState ('') ;
-  const [selectedCategory, setSelectedCategory] = useState ('all') ;
-  const [selectedType, setSelectedType] = useState ('all') ;
-  const [viewMode, setViewMode] = useState<'grid' | 'list'> ('grid') ;
-  const [expandedItem, setExpandedItem] = useState < string | null> (null) ;
-;
-  const categories = [;
-    { id: 'all', name: 'All Solutions', count: 45, icon: Globe },;
-    { id: 'ai', name: 'AI & Machine Learning', count: 18, icon: Brain },;
-    { id: 'quantum', name: 'Quantum Computing', count: 8, icon: Zap },;
-    { id: 'cybersecurity', name: 'Cybersecurity', count: 12, icon: Shield },;
-    { id: 'cloud', name: 'Cloud & DevOps', count: 15, icon: Cloud },;
-    { id: 'iot', name: 'IoT & Edge Computing', count: 10, icon: Zap },;
-    { id: 'blockchain', name: 'Blockchain', count: 6, icon: Globe },;
-    { id: 'healthcare', name: 'Healthcare Tech', count: 9, icon: Brain },;
-  ];
-;
-  const types = [;
-    { id: 'all', name: 'All Types', count: 48 },;
-    { id: 'software', name: 'Software', count: 25 },;
-    { id: 'service', name: 'Services', count: 15 },;
-    { id: 'hardware', name: 'Hardware', count: 8 },;
-  ];
-;
-  const marketplaceItems = [;
-    // AI & Machine Learning;
-    {;
-      id: 1,;
-      name: 'Quantum AI Optimization Platform',;
-      category: 'quantum',;
-      description:;
-        'Revolutionary quantum - classical hybrid algorithms for real - time optimization solving. 1000x faster than classical computers.',;
-      price: '$15,000 / month',;
-      rating: 4.9,;
-      reviews: 127,;
-      users: 45,;
-      features: [;
-        'Quantum algorithms',;
-        'Real - time optimization',;
-        'Hybrid computing',;
-        'Enterprise scaling',;
-      ],;
-      image: '🔮',;
-      badge: 'Most Popular',;
-      vendor: 'QuantumTech Solutions',;
-      deployment: 'Cloud & On - Premise',;
-      support: '24 / 7 Enterprise Support',;
-    },;
-    {;
-      id: 2,;
-      name: 'AI Cybersecurity Suite',;
-      category: 'cybersecurity',;
-      description:;
-        'Advanced AI - powered threat detection and response system with 99.9% accuracy and real - time protection.',;
-      price: '$8,500 / month',;
-      rating: 4.8,;
-      reviews: 89,;
-      users: 67,;
-      features: [;
-        'AI threat detection',;
-        'Real - time response',;
-        'Zero - day protection',;
-        'Compliance ready',;
-      ],;
-      image: '🛡️',;
-      badge: 'Best Seller',;
-      vendor: 'SecureAI Systems',;
-      deployment: 'Cloud & Hybrid',;
-      support: '24 / 7 Security Support',;
-    },;
-    {;
-      id: 3,;
-      name: 'Edge Computing Platform',;
-      category: 'iot',;
-      description:;
-        'Ultra - low latency edge computing solution with 90% latency reduction and real - time data processing.',;
-      price: '$9,500 / month',;
-      rating: 4.7,;
-      reviews: 156,;
-      users: 89,;
-      features: [;
-        'Edge processing',;
-        'Low latency',;
-        'Real - time analytics',;
-        'Scalable infrastructure',;
-      ],;
-      image: '⚡',;
-      badge: 'Trending',;
-      vendor: 'EdgeFlow Technologies',;
-      deployment: 'Edge & Cloud',;
-      support: 'Business Hours Support',;
-    },;
-    {;
-      id: 'ml - pipeline',;
-      name: 'ML Pipeline Automation',;
-      category: 'ai - ml',;
-      type: 'software',;
-      icon: BarChart3,;
-      description: 'Automated machine learning pipeline for data scientists',;
-      features: [;
-        'AutoML capabilities',;
-        'Model versioning',;
-        'A / B testing',;
-        'Performance monitoring',;
-        'Scalable infrastructure',;
-        'Cloud deployment',;
-      ],;
-      pricing: '$499 / month',;
-      rating: 4.9,;
-      reviews: 89,;
-      downloads: 567,;
-      status: 'popular',;
-      tags: ['Machine Learning', 'Automation', 'Data Science', 'MLOps'],;
-      image: '/api / placeholder / 400 / 300',;
-      demo: 'https://demo.ziontechgroup.com / ml - pipeline',;
-      documentation: 'https://docs.ziontechgroup.com / ml - pipeline',;
-    },;
-    {;
-      id: 'computer - vision',;
-      name: 'Computer Vision API',;
-      category: 'ai - ml',;
-      type: 'service',;
-      icon: Eye,;
-      description:;
-        'Advanced computer vision services for image and video analysis',;
-      features: [;
-        'Object detection',;
-        'Face recognition',;
-        'Image classification',;
-        'Video analysis',;
-        'Real - time processing',;
-        'Custom model training',;
-      ],;
-      pricing: '$0.01 per image',;
-      rating: 4.7,;
-      reviews: 203,;
-      users: 34,;
-      image: '🏥',;
-      badge: 'New',;
-      vendor: 'HealthAI Innovations',;
-      deployment: 'Cloud & On - Premise',;
-      support: '24 / 7 Healthcare Support',;
-    },;
-    {;
-      id: 'kubernetes - manager',;
-      name: 'Kubernetes Management Platform',;
-      category: 'cloud',;
-      type: 'software',;
-      icon: Server,;
-      description: 'Enterprise - grade Kubernetes cluster management solution',;
-      features: [;
-        'Multi - cluster management',;
-        'Auto - scaling',;
-        'Monitoring & alerting',;
-        'Security policies',;
-        'Backup & recovery',;
-        'Cost optimization',;
-      ],;
-      pricing: '$199 / month',;
-      rating: 4.8,;
-      reviews: 134,;
-      downloads: 456,;
-      status: 'popular',;
-      tags: ['Kubernetes', 'Container Orchestration', 'DevOps', 'Cloud Native'],;
-      image: '/api / placeholder / 400 / 300',;
-      demo: 'https://demo.ziontechgroup.com / kubernetes - manager',;
-      documentation: 'https://docs.ziontechgroup.com / kubernetes - manager',;
-    },;
-    // Security & Compliance;
-    {;
-      id: 'threat - detection',;
-      name: 'Advanced Threat Detection',;
-      category: 'security',;
-      type: 'software',;
-      icon: Shield,;
-      description: 'AI - powered threat detection and response system',;
-      features: [;
-        'Real - time monitoring',;
-        'Behavioral analysis',;
-        'Threat intelligence',;
-        'Automated response',;
-        'Compliance reporting',;
-        '24 / 7 SOC support',;
-      ],;
-      pricing: '$399 / month',;
-      rating: 4.9,;
-      reviews: 178,;
-      downloads: 678,;
-      status: 'featured',;
-      tags: ['Cybersecurity', 'Threat Detection', 'AI Security', 'SOC'],;
-      image: '/api / placeholder / 400 / 300',;
-      demo: 'https://demo.ziontechgroup.com / threat - detection',;
-      documentation: 'https://docs.ziontechgroup.com / threat - detection',;
-    },;
-    {;
-      id: 'compliance - audit',;
-      name: 'Compliance Audit Service',;
-      category: 'security',;
-      type: 'service',;
-      icon: CheckCircle,;
-      description:;
-        'Comprehensive compliance auditing and certification services',;
-      features: [;
-        'SOC 2 Type II',;
-        'ISO 27001',;
-        'GDPR compliance',;
-        'HIPAA assessment',;
-        'PCI DSS validation',;
-        'Ongoing monitoring',;
-      ],;
-      pricing: 'Starting from $25,000',;
-      rating: 4.8,;
-      reviews: 45,;
-      downloads: 123,;
-      status: 'popular',;
-      tags: ['Compliance', 'Security', 'Audit', 'Certification'],;
-      image: '/api / placeholder / 400 / 300',;
-      demo: 'https://demo.ziontechgroup.com / compliance - audit',;
-      documentation: 'https://docs.ziontechgroup.com / compliance - audit',;
-    },;
-    // Data & Analytics;
-    {;
-      id: 'data - warehouse',;
-      name: 'Data Warehouse Solution',;
-      category: 'data',;
-      type: 'software',;
-      icon: Database,;
-      description: 'Scalable data warehouse with advanced analytics',;
-      features: [;
-        'Multi - cloud support',;
-        'Real - time processing',;
-        'Advanced analytics',;
-        'Data governance',;
-        'Security & encryption',;
-        'Auto - scaling',;
-      ],;
-      pricing: '$599 / month',;
-      rating: 4.7,;
-      reviews: 92,;
-      downloads: 345,;
-      status: 'trending',;
-      tags: [;
-        'Data Warehouse',;
-        'Big Data',;
-        'Analytics',;
-        'Business Intelligence',;
-      ],;
-      image: '/api / placeholder / 400 / 300',;
-      demo: 'https://demo.ziontechgroup.com / data - warehouse',;
-      documentation: 'https://docs.ziontechgroup.com / data - warehouse',;
-    },;
-    {;
-      id: 'bi - dashboard',;
-      name: 'Business Intelligence Dashboard',;
-      category: 'data',;
-      type: 'software',;
-      icon: BarChart3,;
-      description: 'Interactive BI dashboard for data visualization',;
-      features: [;
-        'Drag & drop interface',;
-        'Real - time data',;
-        'Custom widgets',;
-        'Mobile responsive',;
-        'Export capabilities',;
-        'Collaboration tools',;
-      ],;
-      pricing: '$149 / month',;
-      rating: 4.6,;
-      reviews: 78,;
-      users: 23,;
-      image: '🔗',;
-      badge: 'Innovative',;
-      vendor: 'ChainAI Solutions',;
-      deployment: 'Cloud & Hybrid',;
-      support: 'Business Hours Support',;
-    },;
-    // Development Tools;
-    {;
-      id: 'code - generator',;
-      name: 'AI Code Generator',;
-      category: 'development',;
-      type: 'software',;
-      icon: Code,;
-      description: 'AI - powered code generation and assistance tool',;
-      features: [;
-        'Multi - language support',;
-        'Code completion',;
-        'Bug detection',;
-        'Documentation generation',;
-        'Code review',;
-        'Integration with IDEs',;
-      ],;
-      pricing: '$99 / month',;
-      rating: 4.8,;
-      reviews: 234,;
-      users: 156,;
-      image: '☁️',;
-      badge: 'Cost Effective',;
-      vendor: 'CloudOpt Solutions',;
-      deployment: 'Multi - Cloud',;
-      support: '24 / 7 Cloud Support',;
-    },;
-  ];
-;
-  const filteredSolutions = solutions.filter (solution => {;
-    const matchesCategory = selectedCategory === 'all' || solution.category === selectedCategory;
-    const matchesSearch = solution.name.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
-      solution.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
-      solution.vendor.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
-    return matchesCategory && matchesSearch;
-  }) ;
-;
-  const sortedSolutions = [...filteredSolutions].sort ( (a, b) => {;
-    switch (sortBy) {;
-      case 'rating':;
-        return b.rating - a.rating;
-      case 'price':;
-        return (parseFloat (a.price.replace (/[^0 - 9.]/g, '') ) -;
-          parseFloat (b.price.replace (/[^0 - 9.]/g, '') ) ) ;
-      case 'reviews':;
-        return b.reviews - a.reviews;
-      case 'users':;
-        return b.users - a.users;
-      default:;
-        return b.reviews - a.reviews; // popularity;
-    };
-  }) ;
-;
-  const getTypeColor = (type: string) => {;
-    switch (type) {;
-      case 'software':;
-        return 'bg - blue - 500 / 20 text - blue - 400';
-      case 'service':;
-        return 'bg - green - 500 / 20 text - green - 400';
-      case 'hardware':;
-        return 'bg - orange - 500 / 20 text - orange - 400';
-      default:;
-        return 'bg - slate - 500 / 20 text - slate - 400';
-    };
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Search, 
+  Filter, 
+  Grid, 
+  List, 
+  Star, 
+  ShoppingCart, 
+  Heart, 
+  Eye,
+  ArrowRight,
+  Zap,
+  Shield,
+  Globe,
+  Users,
+  TrendingUp,
+  Award,
+  Clock,
+  DollarSign,
+  Tag,
+  FolderOpen as Category,
+  SortAsc,
+  SortDesc,
+  Download
+} from 'lucide-react';
+import { SEO } from '@/components/SEO';
+
+interface Product {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  price: number;
+  originalPrice?: number;
+  rating: number;
+  reviewCount: number;
+  image: string;
+  tags: string[];
+  features: string[];
+  vendor: {
+    name: string;
+    verified: boolean;
+    rating: number;
   };
-;
-  const getStatusColor = (status: string) => {;
-    switch (status) {;
-      case 'featured':;
-        return 'bg - yellow - 500 / 20 text - yellow - 400';
-      case 'popular':;
-        return 'bg - blue - 500 / 20 text - blue - 400';
-      case 'trending':;
-        return 'bg - green - 500 / 20 text - green - 400';
-      default:;
-        return 'bg - slate - 500 / 20 text - slate - 400';
-    };
+  type: 'AI Tool' | 'API Service' | 'Template' | 'Plugin' | 'Dataset' | 'Course';
+  status: 'Active' | 'Beta' | 'New' | 'Popular';
+  downloads: number;
+  lastUpdated: string;
+}
+
+const products: Product[] = [
+  {
+    id: '1',
+    name: 'ZionGPT Pro',
+    description: 'Advanced AI-powered content generation and analysis tool with multi-language support and enterprise-grade security.',
+    category: 'AI Tools',
+    price: 99.99,
+    originalPrice: 149.99,
+    rating: 4.8,
+    reviewCount: 1247,
+    image: '/api/placeholder/400/300',
+    tags: ['AI', 'Content Generation', 'Multi-language', 'Enterprise'],
+    features: [
+      'Advanced GPT-4 integration',
+      'Multi-language support (50+ languages)',
+      'Enterprise security & compliance',
+      'Custom model training',
+      'API access included'
+    ],
+    vendor: {
+      name: 'Zion Tech Group',
+      verified: true,
+      rating: 4.9
+    },
+    type: 'AI Tool',
+    status: 'Popular',
+    downloads: 15420,
+    lastUpdated: '2 days ago'
+  },
+  {
+    id: '2',
+    name: 'DataViz Pro Suite',
+    description: 'Comprehensive data visualization and analytics platform with real-time dashboards and advanced reporting.',
+    category: 'Analytics',
+    price: 79.99,
+    rating: 4.6,
+    reviewCount: 892,
+    image: '/api/placeholder/400/300',
+    tags: ['Data Visualization', 'Analytics', 'Dashboards', 'Real-time'],
+    features: [
+      'Interactive dashboards',
+      'Real-time data streaming',
+      'Advanced chart types',
+      'Custom reporting',
+      'Team collaboration'
+    ],
+    vendor: {
+      name: 'DataFlow Solutions',
+      verified: true,
+      rating: 4.7
+    },
+    type: 'Plugin',
+    status: 'Active',
+    downloads: 8920,
+    lastUpdated: '1 week ago'
+  },
+  {
+    id: '3',
+    name: 'SecureAPI Gateway',
+    description: 'Enterprise-grade API management and security platform with rate limiting and authentication.',
+    category: 'API Services',
+    price: 149.99,
+    rating: 4.9,
+    reviewCount: 567,
+    image: '/api/placeholder/400/300',
+    tags: ['API Management', 'Security', 'Rate Limiting', 'Authentication'],
+    features: [
+      'Advanced security protocols',
+      'Rate limiting & throttling',
+      'OAuth 2.0 & JWT support',
+      'API analytics & monitoring',
+      'Developer portal'
+    ],
+    vendor: {
+      name: 'SecureNet Systems',
+      verified: true,
+      rating: 4.8
+    },
+    type: 'API Service',
+    status: 'New',
+    downloads: 3450,
+    lastUpdated: '3 days ago'
+  },
+  {
+    id: '4',
+    name: 'React Enterprise Starter',
+    description: 'Production-ready React application template with TypeScript, testing, and CI/CD setup.',
+    category: 'Templates',
+    price: 29.99,
+    rating: 4.7,
+    reviewCount: 1234,
+    image: '/api/placeholder/400/300',
+    tags: ['React', 'TypeScript', 'Template', 'Enterprise'],
+    features: [
+      'TypeScript configuration',
+      'Testing setup (Jest, RTL)',
+      'CI/CD pipeline',
+      'Docker configuration',
+      'Documentation included'
+    ],
+    vendor: {
+      name: 'DevTemplates Pro',
+      verified: true,
+      rating: 4.6
+    },
+    type: 'Template',
+    status: 'Active',
+    downloads: 15670,
+    lastUpdated: '2 weeks ago'
+  },
+  {
+    id: '5',
+    name: 'ML Dataset Collection',
+    description: 'Curated machine learning datasets for computer vision, NLP, and predictive analytics.',
+    category: 'Datasets',
+    price: 49.99,
+    rating: 4.5,
+    reviewCount: 456,
+    image: '/api/placeholder/400/300',
+    tags: ['Machine Learning', 'Datasets', 'Computer Vision', 'NLP'],
+    features: [
+      '10,000+ labeled images',
+      'Text corpus (1M+ documents)',
+      'Time series data',
+      'Data validation scripts',
+      'Usage examples'
+    ],
+    vendor: {
+      name: 'DataScience Hub',
+      verified: true,
+      rating: 4.5
+    },
+    type: 'Dataset',
+    status: 'Active',
+    downloads: 6780,
+    lastUpdated: '1 month ago'
+  },
+  {
+    id: '6',
+    name: 'AI Business Course',
+    description: 'Comprehensive course on implementing AI solutions in business with practical case studies.',
+    category: 'Education',
+    price: 199.99,
+    originalPrice: 299.99,
+    rating: 4.9,
+    reviewCount: 789,
+    image: '/api/placeholder/400/300',
+    tags: ['AI', 'Business', 'Course', 'Case Studies'],
+    features: [
+      '20+ hours of content',
+      'Practical exercises',
+      'Real business cases',
+      'Certificate included',
+      'Lifetime access'
+    ],
+    vendor: {
+      name: 'AI Academy Pro',
+      verified: true,
+      rating: 4.9
+    },
+    type: 'Course',
+    status: 'Popular',
+    downloads: 2340,
+    lastUpdated: '1 week ago'
+  }
+];
+
+const categories = [
+  'All Categories',
+  'AI Tools',
+  'Analytics',
+  'API Services',
+  'Templates',
+  'Datasets',
+  'Education',
+  'Security',
+  'Development'
+];
+
+const sortOptions = [
+  { value: 'popular', label: 'Most Popular', icon: TrendingUp },
+  { value: 'rating', label: 'Highest Rated', icon: Star },
+  { value: 'newest', label: 'Newest', icon: Clock },
+  { value: 'price-low', label: 'Price: Low to High', icon: SortAsc },
+  { value: 'price-high', label: 'Price: High to Low', icon: SortDesc }
+];
+
+export default function Marketplace() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All Categories');
+  const [sortBy, setSortBy] = useState('popular');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [cart, setCart] = useState<Set<string>>(new Set());
+  const [wishlist, setWishlist] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    let filtered = products;
+
+    // Filter by search query
+    if (searchQuery) {
+      filtered = filtered.filter(product =>
+        product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        product.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+      );
+    }
+
+    // Filter by category
+    if (selectedCategory !== 'All Categories') {
+      filtered = filtered.filter(product => product.category === selectedCategory);
+    }
+
+    // Sort products
+    filtered.sort((a, b) => {
+      switch (sortBy) {
+        case 'popular':
+          return b.downloads - a.downloads;
+        case 'rating':
+          return b.rating - a.rating;
+        case 'newest':
+          return new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime();
+        case 'price-low':
+          return a.price - b.price;
+        case 'price-high':
+          return b.price - a.price;
+        default:
+          return 0;
+      }
+    });
+
+    setFilteredProducts(filtered);
+  }, [searchQuery, selectedCategory, sortBy]);
+
+  const addToCart = (productId: string) => {
+    setCart(prev => new Set([...prev, productId]));
   };
-;
-  const renderStars = (rating: number) => {;
-    const stars = [];
-    const fullStars = Math.floor (rating) ;
-    const hasHalfStar = rating % 1 !== 0;
-;
-    for (let i = 0; i < fullStars; i++) {;
-      stars.push (<Star key={i} className="w - 4 h - 4 text - yellow - 400 fill - current"       />) ;
-    };
-;
-    if (hasHalfStar) {;
-      stars.push (<Star key="half" className="w - 4 h - 4 text - yellow - 400 fill - current"       />) ;
-    };
-;
-    const emptyStars = 5 - Math.ceil (rating) ;
-    for (let i = 0; i < emptyStars; i++) {;
-      stars.push (<Star key={`empty-${i}`} className="w - 4 h - 4 text - gray - 400"       />) ;
-    };
-;
-    return stars;
+
+  const toggleWishlist = (productId: string) => {
+    setWishlist(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(productId)) {
+        newSet.delete(productId);
+      } else {
+        newSet.add(productId);
+      }
+      return newSet;
+    });
   };
-;
-  const getCategoryIcon = (categoryId: string) => {;
-    const category = categories.find (cat => cat.id === categoryId) ;
-    return category ? category.icon : Globe;
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'New':
+        return 'bg-green-500/20 text-green-400';
+      case 'Popular':
+        return 'bg-orange-500/20 text-orange-400';
+      case 'Beta':
+        return 'bg-blue-500/20 text-blue-400';
+      default:
+        return 'bg-gray-500/20 text-gray-400';
+    }
   };
-;
-  const getCategoryName = (categoryId: string) => {;
-    const category = categories.find (cat => cat.id === categoryId) ;
-    return category ? category.name : 'General';
-  };
-;
-  const getBadgeColor = (badge: string) => {;
-    switch (badge) {;
-      case 'Most Popular':;
-        return 'bg - gradient - to - r from - yellow - 500 to - orange - 500';
-      case 'Best Seller':;
-        return 'bg - gradient - to - r from - green - 500 to - emerald - 500';
-      case 'Trending':;
-        return 'bg - gradient - to - r from - purple - 500 to - pink - 500';
-      case 'New':;
-        return 'bg - gradient - to - r from - blue - 500 to - cyan - 500';
-      case 'Innovative':;
-        return 'bg - gradient - to - r from - indigo - 500 to - purple - 500';
-      case 'Cost Effective':;
-        return 'bg - gradient - to - r from - teal - 500 to - green - 500';
-      default:;
-        return 'bg - gradient - to - r from - gray - 500 to - slate - 500';
-    };
-  };
-;
-  return (<>;
-      <SEO;
-        title="Technology Marketplace - Zion Tech Group";
-        description="Discover cutting - edge AI, quantum computing, cybersecurity, and cloud solutions from leading technology vendors in our curated marketplace.";
-        keywords="technology marketplace, AI solutions, quantum computing, cybersecurity, cloud platforms, enterprise software, Zion Tech Group";
-            />;
-;
-      <div role="button" className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light">;
-        {/* Hero Section */};
-        <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8 overflow - hidden">;
-          <div role="button" className="absolute inset - 0 bg - gradient - to - r from - zion - purple / 20 to - zion - blue / 20"></div>;
-          <div role="button" className="relative z - 10 max - w-7xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-            >;
-              <div role="button" className="inline - flex items - center px - 4 py - 2 rounded - full bg - zion - purple / 20 border border - zion - purple / 30 mb - 6">;
-                <Globe className="w - 5 h - 5 text - zion - purple mr - 2"       />;
-                <span className="text - zion - purple font - medium">;
-                  Technology Marketplace;
-                </span>;
-              </div>;
-;
-              <h1 className="text - 4xl md:text - 6xl font - bold text - white mb - 6">;
-                Technology Solutions Marketplace;
-              </h1>;
-;
-              <p className="text - xl md:text - 2xl text - zion - cyan - light max - w-4xl mx - auto leading - relaxed mb - 8">;
-                Discover cutting - edge AI, quantum computing, cybersecurity, and;
-                cloud solutions from leading technology vendors. All solutions;
-                are vetted and enterprise - ready.;
-              </p>;
-;
-              {/* Search Bar */};
-              <div role="button" className="max - w-2xl mx - auto mb - 8">;
-                <div role="button" className="relative">;
-                  <Search className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 w - 5 h - 5 text - zion - cyan - light"       />;
-                  <input;
-                    type="text";
-                    placeholder="Search solutions, vendors, or technologies...";
-                    value={searchTerm};
-                    onChange={e => setSearchTerm (e.target.value) };
-                    className="w - full pl - 12 pr - 4 py - 4 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - xl text - white placeholder - zion - cyan - light focus:outline - none focus:ring - 2 focus:ring - zion - purple focus:border - transparent";
-                  />;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-;
-        {/* Categories Filter */};
-        <section className="py - 12 px - 4 sm:px - 6 lg:px - 8">;
-          <div role="button" className="max - w-7xl mx - auto">;
-            <div role="button" className="flex flex - wrap justify - center gap - 4">;
-              {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id};
-                  onClick={ () => setSelectedCategory (category.id) };
-                  className={`flex items - center space - x-2 px - 6 py - 3 rounded - xl font - medium transition - all duration - 300 ${;
-                    selectedCategory === category.id;
-                      ? 'bg - zion - purple text - white shadow - lg';
-                      : 'bg - white / 10 text - zion - cyan - light hover:bg - white / 20 border border - white / 20';
-                  }`};
-                >;
-                  <category.icon className="w - 5 h - 5"       />;
-                  <span>{category.name}</span>;
-                  <span className="text - sm opacity - 75"> ({category.count}) </span>;
-                </button>) ) };
-            </div>;
-          </div>;
-        </section>;
-;
-        {/* Sort Options */};
-        <section className="py - 8 px - 4 sm:px - 6 lg:px - 8">;
-          <div role="button" className="max - w-7xl mx - auto">;
-            <div role="button" className="flex flex - wrap items - center justify - between gap - 4">;
-              <div role="button" className="flex items - center space - x-4">;
-                <span className="text - white font - medium">Sort by:</span>;
-                <select;
-                  value={sortBy};
-                  onChange={e => setSortBy (e.target.value) };
-                  className="px - 4 py - 2 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - zion - purple focus:border - transparent";
-                >;
-                  <option value="popularity">Popularity</option>;
-                  <option value="rating">Rating</option>;
-                  <option value="price">Price</option>;
-                  <option value="reviews">Reviews</option>;
-                  <option value="users">Users</option>;
-                </select>;
-              </div>;
-;
-              <div role="button" className="text - zion - cyan - light">;
-                {filteredSolutions.length} solutions found;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-;
-        {/* Solutions Grid */};
-        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-          <div role="button" className="max - w-7xl mx - auto">;
-            {filteredSolutions.length === 0 ? (<motion.div;
-                initial={{ opacity: 0 }};
-                animate={{ opacity: 1 }};
-                className="text - center py - 20";
-              >;
-                <Globe className="w - 16 h - 16 text - zion - cyan - light mx - auto mb - 4"       />;
-                <h3 className="text - xl font - semibold text - white mb - 2">;
-                  No solutions found;
-                </h3>;
-                <p className="text - zion - cyan - light">;
-                  Try adjusting your search terms or category filter.;
-                </p>;
-              </motion.div>) : (<div role="button" className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-                {sortedSolutions.map ( (solution, index) => (<motion.div;
-                    key={solution.id};
-                    initial={{ opacity: 0, y: 30 }};
-                    whileInView={{ opacity: 1, y: 0 }};
-                    transition={{ duration: 0.6, delay: index * 0.1 }};
-                    viewport={{ once: true }};
-                    className="group";
-                  >;
-                    <Card className="h - full bg - white / 5 backdrop - blur - sm border - white / 20 hover:border - zion - purple / 50 transition - all duration - 300 hover:scale - 105">;
-                      <CardHeader>;
-                        <div role="button" className="flex items - start justify - between mb - 4">;
-                          <div role="button" className="text - 4xl">{solution.image}</div>;
-                          <div role="button" className={`px - 3 py - 1 rounded - full text - xs font - semibold text - white ${getBadgeColor (solution.badge) }`};
-                          >;
-                            {solution.badge};
-                          </div>;
-                        </div>;
-;
-                        <div role="button" className="flex items - center space - x-2 mb - 3">;
-                          <div role="button" className="inline - flex items - center px - 3 py - 1 rounded - full bg - zion - purple / 20 border border - zion - purple / 30">;
-                            <span className="text - zion - purple text - sm font - medium">;
-                              {getCategoryName (solution.category) };
-                            </span>;
-                          </div>;
-                        </div>;
-;
-                        <CardTitle className="text - xl font - bold text - white group - hover:text - zion - purple transition - colors duration - 300">;
-                          {solution.name};
-                        </CardTitle>;
-;
-                        <CardDescription className="text - zion - cyan - light leading - relaxed">;
-                          {solution.description};
-                        </CardDescription>;
-;
-                        <div role="button" className="flex items - center justify - between">;
-                          <div role="button" className="text - 2xl font - bold text - zion - cyan">;
-                            {solution.price};
-                          </div>;
-                          <div role="button" className="flex items - center space - x-1">;
-                            <Star className="w - 5 h - 5 text - yellow - 400 fill - current"       />;
-                            <span className="text - white font - medium">;
-                              {solution.rating};
-                            </span>;
-                            <span className="text - zion - cyan - light text - sm"> ({solution.reviews}) </span>;
-                          </div>;
-                        </div>;
-                      </CardHeader>;
-;
-                      <CardContent>;
-                        <div role="button" className="mb - 6">;
-                          <h4 className="text - white font - semibold mb - 3">;
-                            Key Features:;
-                          </h4>;
-                          <div role="button" className="grid grid - cols - 2 gap - 2">;
-                            {solution.features.map ( (feature, featureIndex) => (<div role="button" key={featureIndex};
-                                className="flex items - center space - x-2 text - sm";
-                              >;
-                                <div role="button" className="w - 2 h - 2 bg - zion - cyan rounded - full"></div>;
-                                <span className="text - gray - 300">{feature}</span>;
-                              </div>) ) };
-                          </div>;
-                        </div>;
-;
-                        <div role="button" className="space - y-3 mb - 6 text - sm">;
-                          <div role="button" className="flex items - center justify - between">;
-                            <span className="text - zion - cyan - light">;
-                              Vendor:;
-                            </span>;
-                            <span className="text - white">;
-                              {solution.vendor};
-                            </span>;
-                          </div>;
-                          <div role="button" className="flex items - center justify - between">;
-                            <span className="text - zion - cyan - light">;
-                              Deployment:;
-                            </span>;
-                            <span className="text - white">;
-                              {solution.deployment};
-                            </span>;
-                          </div>;
-                          <div role="button" className="flex items - center justify - between">;
-                            <span className="text - zion - cyan - light">;
-                              Support:;
-                            </span>;
-                            <span className="text - white">;
-                              {solution.support};
-                            </span>;
-                          </div>;
-                        </div>;
-;
-                        <div role="button" className="flex items - center justify - between mb - 4">;
-                          <div role="button" className="flex items - center space - x-4 text - sm text - zion - cyan - light">;
-                            <div role="button" className="flex items - center space - x-1">;
-                              <Users className="w - 4 h - 4"       />;
-                              <span>{solution.users} users</span>;
-                            </div>;
-                          </div>;
-                        </div>;
-;
-                        <div role="button" className="flex space - x-2">;
-                          <Button className="flex - 1 bg - gradient - to - r from - zion - purple to - zion - blue hover:from - zion - purple / 80 hover:to - zion - blue / 80 text - white">;
-                            Learn More < ArrowRight className="w - 4 h - 4 ml - 2" />;
-                          </Button>;
-                          <Button;
-                            variant="outline";
-                            size="sm";
-                            className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan hover:text - zion - slate - dark";
-                          >;
-                            <Heart className="w - 4 h - 4"       />;
-                          </Button>;
-                        </div>;
-                      </CardContent>;
-                    </Card>;
-                  </motion.div>) ) };
-              </div>) };
-          </div>;
-        </section>;
-;
-        {/* CTA Section */};
-        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-          <div role="button" className="max - w-4xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
-            >;
-              <h2 className="text - 4xl font - bold text - white mb - 6">;
-                Can't Find What You're Looking For?;
-              </h2>;
-              <p className="text - xl text - zion - cyan - light mb - 8 max - w-3xl mx - auto">;
-                Our technology experts can help you find the perfect solution or;
-                even develop a custom solution tailored to your specific needs.;
-              </p>;
-;
-              <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Button className="bg - gradient - to - r from - zion - purple to - zion - blue hover:from - zion - purple / 80 hover:to - zion - blue / 80 text - white">;
-                  <Search className="w - 5 h - 5 mr - 2"       />;
-                  Get Custom Recommendation;
-                </Button>;
-;
-                <Button;
-                  variant="outline";
-                  className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan hover:text - zion - slate - dark";
-                >;
-                  <Users className="w - 5 h - 5 mr - 2"       />;
-                  Talk to Our Experts;
-                </Button>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </>) ;
-};
-;
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Marketplace - Zion Tech Group"
+        description="Explore our marketplace of AI-powered technology solutions and services. Find the perfect tools, APIs, templates, and datasets for your business needs."
+      />
+      
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 lg:py-32">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20"></div>
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl"
+            >
+              AI Technology
+              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"> Marketplace</span>
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto"
+            >
+              Discover cutting-edge AI tools, APIs, templates, and datasets. 
+              Find the perfect solutions to accelerate your business and stay ahead of the competition.
+            </motion.p>
+          </div>
+        </div>
+      </section>
+
+      {/* Search and Filters */}
+      <section className="py-8 bg-slate-800/50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Search Bar */}
+            <div className="relative flex-1 max-w-2xl">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search for AI tools, APIs, templates..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:border-zion-cyan focus:ring-1 focus:ring-zion-cyan"
+              />
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex items-center gap-4">
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:border-zion-cyan focus:ring-1 focus:ring-zion-cyan"
+              >
+                {categories.map(category => (
+                  <option key={category} value={category}>{category}</option>
+                ))}
+              </select>
+
+              {/* Sort Options */}
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white focus:border-zion-cyan focus:ring-1 focus:ring-zion-cyan"
+              >
+                {sortOptions.map(option => (
+                  <option key={option.value} value={option.value}>{option.label}</option>
+                ))}
+              </select>
+
+              {/* View Mode Toggle */}
+              <div className="flex bg-slate-700 rounded-xl p-1">
+                <button
+                  onClick={() => setViewMode('grid')}
+                  className={`p-2 rounded-lg transition-colors ${
+                    viewMode === 'grid' ? 'bg-zion-cyan text-slate-900' : 'text-gray-400 hover:text-white'
+                  }`}
+                >
+                  <Grid className="h-5 w-5" />
+                </button>
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`p-2 rounded-lg transition-colors ${
+                    viewMode === 'list' ? 'bg-zion-cyan text-slate-900' : 'text-gray-400 hover:text-white'
+                  }`}
+                >
+                  <List className="h-5 w-5" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Products Grid */}
+      <section className="py-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Results Count */}
+          <div className="flex items-center justify-between mb-8">
+            <p className="text-gray-300">
+              Showing {filteredProducts.length} of {products.length} products
+            </p>
+            <div className="flex items-center gap-4">
+              <span className="text-gray-400">Cart: {cart.size} items</span>
+              <span className="text-gray-400">Wishlist: {wishlist.size} items</span>
+            </div>
+          </div>
+
+          {/* Products */}
+          {viewMode === 'grid' ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredProducts.map((product, index) => (
+                <motion.div
+                  key={product.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-slate-700/50 rounded-2xl overflow-hidden border border-slate-600/50 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
+                >
+                  {/* Product Image */}
+                  <div className="relative h-48 bg-gradient-to-br from-slate-600 to-slate-700 flex items-center justify-center">
+                    <div className="text-gray-400 text-sm">Product Image</div>
+                    <div className="absolute top-3 right-3 flex gap-2">
+                      <button
+                        onClick={() => toggleWishlist(product.id)}
+                        className={`p-2 rounded-lg transition-colors ${
+                          wishlist.has(product.id) 
+                            ? 'bg-red-500 text-white' 
+                            : 'bg-slate-800/80 text-gray-400 hover:text-white'
+                        }`}
+                      >
+                        <Heart className="h-4 w-4" />
+                      </button>
+                      <button className="p-2 rounded-lg bg-slate-800/80 text-gray-400 hover:text-white transition-colors">
+                        <Eye className="h-4 w-4" />
+                      </button>
+                    </div>
+                    {product.status !== 'Active' && (
+                      <span className={`absolute top-3 left-3 px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(product.status)}`}>
+                        {product.status}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Product Info */}
+                  <div className="p-6">
+                    <div className="flex items-start justify-between mb-3">
+                      <div className="flex-1">
+                        <h3 className="text-xl font-semibold text-white mb-2">{product.name}</h3>
+                        <p className="text-gray-300 text-sm mb-3 line-clamp-2">{product.description}</p>
+                      </div>
+                    </div>
+
+                    {/* Vendor Info */}
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-sm text-gray-400">{product.vendor.name}</span>
+                      {product.vendor.verified && (
+                        <Shield className="h-4 w-4 text-zion-cyan" />
+                      )}
+                      <div className="flex items-center gap-1">
+                        <Star className="h-4 w-4 text-yellow-400 fill-current" />
+                        <span className="text-sm text-gray-300">{product.vendor.rating}</span>
+                      </div>
+                    </div>
+
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {product.tags.slice(0, 3).map(tag => (
+                        <span key={tag} className="px-2 py-1 bg-slate-600/50 text-gray-300 text-xs rounded-lg">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Price and Actions */}
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <span className="text-2xl font-bold text-white">${product.price}</span>
+                        {product.originalPrice && (
+                          <span className="text-gray-400 line-through">${product.originalPrice}</span>
+                        )}
+                      </div>
+                      <button
+                        onClick={() => addToCart(product.id)}
+                        className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 flex items-center gap-2"
+                      >
+                        <ShoppingCart className="h-4 w-4" />
+                        Add to Cart
+                      </button>
+                    </div>
+
+                    {/* Additional Info */}
+                    <div className="flex items-center justify-between mt-4 pt-4 border-t border-slate-600/50 text-sm text-gray-400">
+                      <div className="flex items-center gap-1">
+                        <Star className="h-4 w-4 text-yellow-400 fill-current" />
+                        <span>{product.rating}</span>
+                        <span>({product.reviewCount})</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Download className="h-4 w-4" />
+                        <span>{product.downloads.toLocaleString()}</span>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          ) : (
+            <div className="space-y-6">
+              {filteredProducts.map((product, index) => (
+                <motion.div
+                  key={product.id}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-slate-700/50 rounded-2xl p-6 border border-slate-600/50 hover:border-zion-cyan/50 transition-all duration-300"
+                >
+                  <div className="flex gap-6">
+                    {/* Product Image */}
+                    <div className="relative w-32 h-32 bg-gradient-to-br from-slate-600 to-slate-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <div className="text-gray-400 text-xs text-center">Product Image</div>
+                      {product.status !== 'Active' && (
+                        <span className={`absolute top-2 left-2 px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(product.status)}`}>
+                          {product.status}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Product Details */}
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between mb-3">
+                        <div className="flex-1">
+                          <h3 className="text-2xl font-semibold text-white mb-2">{product.name}</h3>
+                          <p className="text-gray-300 mb-3">{product.description}</p>
+                        </div>
+                        <div className="flex gap-2 ml-4">
+                          <button
+                            onClick={() => toggleWishlist(product.id)}
+                            className={`p-2 rounded-lg transition-colors ${
+                              wishlist.has(product.id) 
+                                ? 'bg-red-500 text-white' 
+                                : 'bg-slate-600 text-gray-400 hover:text-white'
+                            }`}
+                          >
+                            <Heart className="h-5 w-5" />
+                          </button>
+                          <button className="p-2 rounded-lg bg-slate-600 text-gray-400 hover:text-white transition-colors">
+                            <Eye className="h-5 w-5" />
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* Vendor and Rating */}
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="flex items-center gap-2">
+                          <span className="text-gray-400">{product.vendor.name}</span>
+                          {product.vendor.verified && (
+                            <Shield className="h-4 w-4 text-zion-cyan" />
+                          )}
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Star className="h-4 w-4 text-yellow-400 fill-current" />
+                          <span className="text-gray-300">{product.rating}</span>
+                          <span className="text-gray-400">({product.reviewCount} reviews)</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Download className="h-4 w-4 text-gray-400" />
+                          <span className="text-gray-400">{product.downloads.toLocaleString()} downloads</span>
+                        </div>
+                      </div>
+
+                      {/* Tags */}
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {product.tags.map(tag => (
+                          <span key={tag} className="px-3 py-1 bg-slate-600/50 text-gray-300 text-sm rounded-lg">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Price and Actions */}
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-4">
+                          <div className="flex items-center gap-2">
+                            <span className="text-3xl font-bold text-white">${product.price}</span>
+                            {product.originalPrice && (
+                              <span className="text-gray-400 line-through text-lg">${product.originalPrice}</span>
+                            )}
+                          </div>
+                          <span className="text-gray-400">•</span>
+                          <span className="text-gray-400">{product.type}</span>
+                          <span className="text-gray-400">•</span>
+                          <span className="text-gray-400">Updated {product.lastUpdated}</span>
+                        </div>
+                        <button
+                          onClick={() => addToCart(product.id)}
+                          className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 flex items-center gap-2"
+                        >
+                          <ShoppingCart className="h-5 w-5" />
+                          Add to Cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
+
+          {/* No Results */}
+          {filteredProducts.length === 0 && (
+            <div className="text-center py-20">
+              <div className="text-gray-400 text-6xl mb-4">🔍</div>
+              <h3 className="text-2xl font-semibold text-white mb-2">No products found</h3>
+              <p className="text-gray-400 mb-6">
+                Try adjusting your search terms or filters to find what you're looking for.
+              </p>
+              <button
+                onClick={() => {
+                  setSearchQuery('');
+                  setSelectedCategory('All Categories');
+                }}
+                className="px-6 py-3 bg-zion-cyan text-slate-900 rounded-lg hover:bg-zion-cyan/90 transition-colors"
+              >
+                Clear Filters
+              </button>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+              Why Choose Our Marketplace?
+            </h2>
+            <p className="mt-4 text-xl text-gray-300">
+              We curate the best AI and technology solutions to help your business succeed
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: Shield,
+                title: 'Verified Vendors',
+                description: 'All vendors are thoroughly vetted and verified for quality and reliability'
+              },
+              {
+                icon: Zap,
+                title: 'Latest Technology',
+                description: 'Access to cutting-edge AI tools and the newest technological innovations'
+              },
+              {
+                icon: Globe,
+                title: 'Global Community',
+                description: 'Connect with developers and businesses from around the world'
+              },
+              {
+                icon: Award,
+                title: 'Quality Guaranteed',
+                description: 'Every product meets our strict quality standards and requirements'
+              }
+            ].map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center p-6 rounded-2xl bg-slate-700/50 hover:bg-slate-700/70 transition-all duration-300"
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl mb-4">
+                  <feature.icon className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+              Ready to Get Started?
+            </h2>
+            <p className="mt-4 text-xl text-gray-300 max-w-2xl mx-auto">
+              Explore our marketplace and find the perfect AI solutions for your business needs. 
+              Start building the future today.
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 transform hover:scale-105">
+                Browse All Products
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="inline-flex items-center px-8 py-4 text-lg font-semibold text-gray-300 border-2 border-slate-600 rounded-xl hover:border-zion-cyan hover:text-zion-cyan transition-all duration-300">
+                Become a Vendor
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -19,15 +19,15 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
   const searchRef = useRef(null);
   const inputRef = useRef(null);
 
-  // Sample search suggestions
-  const allSuggestions = [
-    { type: 'service', text: 'IT Support Services', icon: Users, category: 'Services' },
-    { type: 'service', text: 'Network Security', icon: Building, category: 'Security' },
-    { type: 'service', text: 'Cloud Solutions', icon: Globe, category: 'Cloud' },
-    { type: 'service', text: 'Data Recovery', icon: TrendingUp, category: 'Data' },
-    { type: 'service', text: 'Hardware Installation', icon: Building, category: 'Hardware' },
-    { type: 'service', text: 'Software Support', icon: Users, category: 'Software' },
-    { type: 'service', text: 'IT Consulting', icon: TrendingUp, category: 'Consulting' },
+  // Sample search suggestions;
+  const allSuggestions = [';
+    { type: 'service', text: 'IT Support Services', icon: Users, category: 'Services' },;
+    { type: 'service', text: 'Network Security', icon: Building, category: 'Security' },;
+    { type: 'service', text: 'Cloud Solutions', icon: Globe, category: 'Cloud' },;
+    { type: 'service', text: 'Data Recovery', icon: TrendingUp, category: 'Data' },;
+    { type: 'service', text: 'Hardware Installation', icon: Building, category: 'Hardware' },;
+    { type: 'service', text: 'Software Support', icon: Users, category: 'Software' },;
+    { type: 'service', text: 'IT Consulting', icon: TrendingUp, category: 'Consulting' },;
     { type: 'service', text: 'Managed IT Services', icon: Building, category: 'Managed Services' }
   ];
 
@@ -36,8 +36,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
       if (searchRef.current && !searchRef.current.contains(event.target)) {
         setIsOpen(false);
         setActiveIndex(-1)}
-    };
-
+    }
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
 
@@ -167,34 +166,16 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
           )}
 
           {/* Recent Searches */}
-          {recentSearches.length > 0 && (
-            <div className="p-4 border-b border-gray-200">
-              <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">
-                <Clock className="w-4 h-4 mr-2"       />
-                Recent Searches
-              </h3>
-              <div className="space-y-1">
-                {recentSearches.map((((((((search, index, index, index, index, index, index, index) => ({ ...((((((search, index, index, index, index, index, index, key: index })) => ({ ...(((((search, index, index, index, index, index, key: index })) => ({ ...((((search, index, index, index, index, key: index })) => ({ ...(((search, index, index, index, key: index })) => ({ ...((search, index, index, key: index })) => ({ ...(search, index, key: index })) => (
-                  <button
-                    key={index}
-                    onClick={() => handleRecentSearchClick(search)}
-                    className="w-full flex items-center justify-between px-3 py-2 rounded-md text-left hover:bg-gray-50 group"
-
-                    <span className="text-sm text-gray-700">{search}</span>
-                    <button
-                      onClick = {
-  (e) => removeRecentSearch(search,
-  e)
-
-
-
-
-
-
-}
-                      className="opacity-0 group-hover:opacity-100 p-1 hover:bg-gray-200 rounded"
-
-                      <X className="w-3 h-3 text-gray-400"       />
+          {};
+                    onClick={() => handleRecentSearchClick(search)}";
+                    className="w-full flex items-center justify-between px-3 py-2 rounded-md text-left hover:bg-gray-50 group";
+";
+                    <span className="text-sm text-gray-700">{search}</span>;
+                    <div>Broken JSX</div>
+  (e) => removeRecentSearch(search,;
+  e)}                      className="opacity-0 group-hover:opacity-100 p-1 hover:bg-gray-200 rounded";
+";
+                      <X className="w-3 h-3 text-gray-400" />;
                     </button>;
                   </button>
                 ))}
@@ -202,18 +183,16 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
             </div>
           )}
 
-          {/* Trending Searches */}
-          <div className="p-4">
-            <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">
-              <TrendingUp className="w-4 h-4 mr-2"       />
-              Trending Searches
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {trendingSearches.map((((((((search, index, index, index, index, index, index, index) => ({ ...((((((search, index, index, index, index, index, index, key: index })) => ({ ...(((((search, index, index, index, index, index, key: index })) => ({ ...((((search, index, index, index, index, key: index })) => ({ ...(((search, index, index, index, key: index })) => ({ ...((search, index, index, key: index })) => ({ ...(search, index, key: index })) => (
-                <button
-                  key={index}
-                  onClick={() => handleTrendingSearchClick(search)}
-                  className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200 transition-colors"
+          {/* Trending Searches */}";
+          <div className="p-4">";
+            <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">";
+              <TrendingUp className="w-4 h-4 mr-2" />;
+              Trending Searches;
+            </h3>";
+            <div className="flex flex-wrap gap-2">;
+              {};
+                  onClick={() => handleTrendingSearchClick(search)}";
+                  className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200 transition-colors";
 
                   {search}
                 </button>
@@ -233,5 +212,6 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
           </div>
         </div>
       )}
-    </div>
-  )};
+    </div>;
+  )}
+'"`

@@ -8,7 +8,7 @@
       userFeedback: '',
 
 
-      ...error;
+      ...error 
       componentStack: errorInfo.componentStack,
       errorBoundary: this.props.context || 'GlobalErrorBoundary',
       timestamp: new Date().toISOString(),
@@ -17,17 +17,17 @@
       userId: this.getUserId(),
       buildInfo: this.getBuildInfo()
 
-export class GlobalErrorBoundary extends Component<;
+export class GlobalErrorBoundary extends Component< 
   ErrorBoundaryProps,
-  ErrorBoundaryState;
+  ErrorBoundaryState 
 > {
-  private retry_timeouts: NodeJS.Timeout[] = [];
+  private retry_timeouts: NodeJS.Timeout[] = [] 
   constructor (props: ErrorBoundaryProps) {
-    super (props);
+    super (props) 
 export class GlobalErrorBoundary extends Component < ErrorBoundaryProps, ErrorBoundaryState> {
-  private retry_timeouts: NodeJS.Timeout[] = [];
+  private retry_timeouts: NodeJS.Timeout[] = [] 
   constructor (props: ErrorBoundaryProps) {
-    super (props);
+    super (props) 
     this.state = {
       has_error: false,
       error: null,
@@ -37,7 +37,7 @@ export class GlobalErrorBoundary extends Component < ErrorBoundaryProps, ErrorBo
       user_feedback: '',
       show_details: false,
     } }    , }
-      show_details: false;
+      show_details: false 
     }
   }
   static getDerivedStateFromError (error: Error): Partial < ErrorBoundaryState> {
@@ -47,16 +47,16 @@ export class GlobalErrorBoundary extends Component < ErrorBoundaryProps, ErrorBo
     }
   }
   componentDidCatch (error: Error, error_info: ErrorInfo) {
-    const error_id = this.generateErrorId ();
+    const error_id = this.generateErrorId () 
   }
   componentDidCatch (error: Error, error_info: ErrorInfo) {
-    const error_id = this.generateErrorId ();
-    // Enhanced error logging;
+    const error_id = this.generateErrorId () 
+    // Enhanced error logging 
     const enhanced_error = {
       ...error,
-    // Enhanced error logging;
+    // Enhanced error logging 
     const enhanced_error = {
-      ...error,      component_stack: error_info.component_stack,      ...error;
+      ...error,      component_stack: error_info.component_stack,      ...error 
       component_stack: error_info.component_stack,
       error_boundary: this.props.context || 'GlobalErrorBoundary',
       timestamp: new Date ().toISOString (),
@@ -65,40 +65,40 @@ export class GlobalErrorBoundary extends Component < ErrorBoundaryProps, ErrorBo
       user_id: this.getUserId (),
       build_info: this.getBuildInfo (),
     }
-    // Log to console in development;
+    // Log to console in development 
     // Check condition
 if ( {) {
   $2
 }
-      console.group ('🚨 Error Boundary Caught Error');
-      logErrorToProduction ('Error:', { data: error });
-      logErrorToProduction ('Error Info:', { data: error_info });
-      logErrorToProduction ('Enhanced Error:', { data: enhanced_error });
-      console.group_end ();
+      console.group ('🚨 Error Boundary Caught Error') 
+      logErrorToProduction ('Error:', { data: error }) 
+      logErrorToProduction ('Error Info:', { data: error_info }) 
+      logErrorToProduction ('Enhanced Error:', { data: enhanced_error }) 
+      console.group_end () 
     }
     })
-;
-  componentWillUnmount() {;
-    // Clear any pending retry timeouts;
-    this.retryTimeouts.forEach(timeout => clearTimeout(timeout));
+ 
+  componentWillUnmount() { 
+    // Clear any pending retry timeouts 
+    this.retryTimeouts.forEach(timeout => clearTimeout(timeout)) 
   }
-;
-  private generateErrorId():string {;
-    return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+ 
+  private generateErrorId():string { 
+    return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}` 
   }
-;
-  private getUserId():string | null {;
-    // Try to get user ID from various sources;
-    if (typeof window !== 'undefined') {;
-      try {;
-        // Check localStorage, sessionStorage, or cookies;
-        return localStorage.getItem('userId') || ;
-               sessionStorage.getItem('userId') || ;
-               null;
-      } catch {;
-        return null;
+ 
+  private getUserId():string | null { 
+    // Try to get user ID from various sources 
+    if (typeof window !== 'undefined') { 
+      try { 
+        // Check localStorage, sessionStorage, or cookies 
+        return localStorage.getItem('userId') ||  
+               sessionStorage.getItem('userId') ||  
+               null 
+      } catch { 
+        return null 
       }    }
-    return null;
+    return null 
   }
   }
     }
@@ -208,7 +208,7 @@ if ( {) {
                     <p className="text-sm text-orange-600 dark:text-orange-400">
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
 
-                    </p>;
+                    </p> 
                   )}
                 </div>
                 {/* Action Buttons */}
@@ -228,7 +228,7 @@ if ( {) {
 
 
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
-                    </p>;
+                    </p> 
                 </div>
                 {/* Action Buttons */}
 
@@ -271,15 +271,15 @@ if ( {) {
                             size='sm'
                           >
                             <Clipboard className='h-4 w-4 mr-2' />
-                        <div className='flex gap-2'>;
+                        <div className='flex gap-2'> 
                           <Button
                             onClick={this && this.copyErrorDetails}
                             variant='outline'
-                            size='sm'>;
-                            <Clipboard className='h-4 w-4 mr-2' />;
-                            Copy Details;
-                          </Button>;
-                          {this && this.props.showReportButton !== false && (;
+                            size='sm'> 
+                            <Clipboard className='h-4 w-4 mr-2' /> 
+                            Copy Details 
+                          </Button> 
+                          {this && this.props.showReportButton !== false && ( 
                             <Button
                               onClick={this && this.reportError}
                               variant='outline'

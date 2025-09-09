@@ -1,1 +1,8 @@
-import { Route, Routes    } from 'react-router-dom'; import { ProtectedRoute } from '../components/ProtectedRoute'; import CommunityPage from '../pages/CommunityPage'; import ForumCategoryPage from '../pages/ForumCategoryPage'; import ForumPostPage from '../pages/ForumPostPage'; import CreatePostPage from '../pages/CreatePostPage'; import EditPostPage from '../pages/EditPostPage'; import CommunityProfilePage from '../pages/CommunityProfilePage'; ; export default function CommunityRoutes() {; return (; <>; <Route path = "" element={<CommunityPage />} />;";" </>;";" );"";" }";"";"
+// Routes have been converted to Next.js pages structure
+// This component is no longer needed since Next.js uses file-based routing
+
+const CommunityRoutes = () => {
+  return null;
+};
+
+export default CommunityRoutes;

@@ -127,8 +127,24 @@ export function LoginForm() {
               Sign in
             </>
           )}
-        </Button>
-      </form>
-      <LoadingOverlay visible={isLoading || isSubmitting}/>
-    </Form>);
-}
+        </Button>;
+";
+        <div className="text-center text-sm">'";
+          <span className="text-zion-slate-light">Don't have an account? </span>;
+          <div>Broken JSX</div>
+            className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
+            Sign up;
+          </Link>;
+        </div>;
+      </form>;
+    </Form>;
+  )}
+
+export default LoginForm;
+
+
+export { LoginForm }
+export { LoginForm }
+export { LoginForm }
+export { LoginForm }
+export { Page, LoginForm }

@@ -342,5 +342,4 @@ export default function AISalesCopilot(...args: any[]): any {;
         </div>;
       </section>;
     </div>;
-  );
-};
+  )}

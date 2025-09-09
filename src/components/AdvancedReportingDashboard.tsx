@@ -189,10 +189,10 @@ showMetrics:  true,;
         rating: 4.6;
 ;
     ];
-;
-    setReports (sampleReports) ;
-    setFilteredReports (sampleReports) }, []) ;
-;
+
+    setReports(sampleReports) ;
+    setFilteredReports(sampleReports) }, []) ;
+
   // Filter and sort reports;
   useEffect ( () => {;
     let filtered = reports;
@@ -206,17 +206,14 @@ showMetrics:  true,;
     if (selectedStatus !== 'all') {;
       filtered = filtered.filter (r => r.status === selectedStatus) };
 ;
-    if (searchQuery) {;
-      filtered = filtered.filter (r =>;
-        r.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
-        r.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
-        r.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ) };
-      filtered = filtered.filter (r => ;
-        r.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
-        r.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
-        r.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ;) ;
-    };
-;
+    if(searchQuery) {};
+      )};
+      filtered = filtered.filter(r => ;
+        r.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      )}
+
     // Sort reports;
     filtered.sort ( (a, b) => {;
       let aValue: unknown, bValue: unknown;

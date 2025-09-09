@@ -5,147 +5,44 @@ import { innovativeServices2027 } from '../data / innovativeServices2027";
 import { motion, AnimatePresence } from 'framer - motion';
 import { servicesCatalog } from '../data / servicesCatalog";
 ;
-;
-  DollarSign,;
-  TrendingUp,;
-  Clock,;
-  Users,;
-  Star,;
-  CheckCircle,;
-  ArrowRight,;
-  ExternalLink,;
-  Search,;
-  Filter,;
-  Download,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Calculator,;
-  BarChart3,;
-  Target,;
-  Zap,;
-  Shield,;
-  Brain,;
-  Rocket;
-} from 'lucide - react';
-;
-  const [searchQuery, setSearchQuery] = useState ('') ;
-  const [selectedCategory, setSelectedCategory] = useState < any> ('All') ;
-  const [priceRange, setPriceRange] = useState < any> ('All') ;
-  const [sortBy, setSortBy] = useState < any> ('name') ;
-  const [isVisible, setIsVisible] = useState (false) ;
-;
-  useEffect ( () => {;
-        };
-      },;
-      { threshold: 0.1 }) ;
-;
-    const element = document.getElementById ('comprehensive - pricing - guide') ;
-    if (element) {;
-      observer.observe (element) };
-;
+export default function Page() {};
+  return null;
+}
+      observer.observe(element)}
+
     return () => observer.disconnect () }, []) ;
-;
+
   // Combine all services;
-  const allServices = [;
-    ...servicesCatalog.flatMap (category =>;
-      category.items.map (item => ({;
-        ...item,;
-        source: 'catalog',;
-        category: category.name;
-      }) ) ) ,;
-    ...innovativeServices2027.map (service  => ({;
-      ...service,;
+
       source: 'innovative',;
       category: service.category,;
       features: service.features || [],;
       ctaLabel: service.ctaLabel || 'Get Started',;
-      href: service.href || '/contact';
-    }) ) ;
-  ];
-;
+      href: service.href || '/contact'}) ) ;  ];
+
   // Filter services based on search and category;
-  const filteredServices = allServices.filter (service => {;
-    const matchesSearch = service.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
-                         service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
-                         service.category.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
-;
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-;
-    const matchesPrice = priceRange === 'All' || (priceRange === 'Low' && parseFloat (service.price.replace (/[^0 - 9.]/g, '') ) < 100) || (priceRange === 'Medium' && parseFloat (service.price.replace (/[^0 - 9.]/g, '') ) >= 100 && parseFloat (service.price.replace (/[^0 - 9.]/g, '') ) < 1000) || (priceRange === 'High' && parseFloat (service.price.replace (/[^0 - 9.]/g, '') ) >= 1000) ;
-;
+
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         service.category.toLowerCase().includes(searchQuery.toLowerCase());
+
     return matchesSearch && matchesCategory && matchesPrice}) ;
-;
+
   // Sort services;
-  const sortedServices = [...filteredServices].sort ( (a, b) => {;
-    switch (sortBy) {;
-      case 'name':;
-        return a.title.localeCompare (b.title) ;
-      case 'price':;
-        return parseFloat (a.price.replace (/[^0 - 9.]/g, '') ) - parseFloat (b.price.replace (/[^0 - 9.]/g, '') ) ;
-      case 'category':;
-        return a.category.localeCompare (b.category) ;
-      default:;
-        return 0};
-  }) ;
-;
-  const categories = ['All', ...Array.from (new Set (allServices.map (s => s.category) ) ) ];
-  const priceRanges = ['All', 'Low (<$100) ', 'Medium ($100-$999) ', 'High ($1000+) '];
-;
-  const contactInfo = {;
-  phone: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
   ;
-  ;
-  ;
-  ;
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  ;
-;
-;
-;
-;
-};
-;
-  const getPriceRange = (price: string) => {;
-    const numPrice = parseFloat (price.replace (/[^0 - 9.]/g, '') ) ;
-    if (numPrice < 100) return 'Low';
-    if (numPrice < 1000) return 'Medium';
-    return 'High'};
-;
-      default: return 'text - white'};
-  };
-;
-  const getCategoryIcon = (category: string) => {;
-    const iconMap: { [key: string]: React.ComponentType < any> } = {;
-      'AI Solutions': Brain,;
-      'Micro SaaS': Zap,;
-      'IT Services': Shield,;
-      'Cybersecurity': Shield,;
-      'Data & Analytics': BarChart3,;
-      'Cloud & DevOps': Cloud,;
-      'Quantum Computing': Atom,;
-      'Blockchain Solutions': Lock,;
-      'IoT & Edge Computing': Network,;
-      'FinTech Solutions': DollarSign,;
-      'HealthTech Solutions': Heart,;
-      'EdTech Solutions': BookOpen,;
-      'GreenTech Solutions': Leaf,;
-      'SpaceTech Solutions': Rocket,;
-      'Robotics & Automation': Cpu,;
-      'AR / VR Solutions': Eye,;
-      'Biotech Solutions': Dna,;
-      'LegalTech Solutions': Scale,;
-      'Real Estate Tech': Home,;
-      'Supply Chain Solutions': Truck;
-    };
-    return iconMap[category] || Target};
-;
-  return (<section id = "comprehensive - pricing - guide" className="py - 20 bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light relative overflow - hidden">;
-      {/* Animated Background */};
-      <div className="absolute inset - 0 overflow - hidden">;
-        <div className="absolute - top - 40 - right - 40 w - 80 h - 80 bg - gradient - to - br from - zion - cyan / 20 to - zion - purple / 20 rounded - full blur - 3xl animate - pulse"></div>;
-        <div className="absolute - bottom - 40 - left - 40 w - 80 h - 80 bg - gradient - to - tr from - zion - purple / 20 to - zion - cyan / 20 rounded - full blur - 3xl animate - pulse delay - 1000"></div>;
+    switch(sortBy) {};
+        return 0}
+  });
+
+';
+  phone: '+1 302 464 0950',';
+    email: 'kleber@ziontechgroup.com',;  ;
+
+    if(numPrice <div>Broken JSX</div>
+    <section id = "comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">;
+      {/* Animated Background */}";
+      <div className="absolute inset-0 overflow-hidden">";
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-full blur-3xl animate-pulse"></div>";
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-zion-purple/20 to-zion-cyan/20 rounded-full blur-3xl animate-pulse delay-1000"></div>;
       </div>;
 ;
       <div className="max - w-7xl mx - auto px - 6 relative z - 10">;
@@ -261,116 +158,66 @@ import { servicesCatalog } from '../data / servicesCatalog";
             </div>;
           </div>;
         </motion.div>;
-;
-        {/* Services Grid */};
-        <motion.div;
-          initial = {;
-  { opacity: 0,;
-  y: 30 ;
-;
-}};
-          animate = {;
-  isVisible ? { opacity: 1,;
-  y: 0 ;
-;
-} : { opacity: 0, y: 30 }};
-          transition = {;
-  { duration: 0.8,;
-  delay: 0.4 ;
-;
-}};
-          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 16";
-        >;
-          {sortedServices.map ( (service, index) => (;
-            <motion.div;
-              key={`${service.source}-${service.id}`};
-              initial = {;
-  { opacity: 0,;
-  y: 20 ;
-;
-}};
-              animate = {;
-  isVisible ? { opacity: 1,;
-  y: 0 ;
-;
-} : { opacity: 0, y: 20 }};
-              transition = {;
-  { duration: 0.6,;
-  delay: index * 0.05 ;
-;
-}};
-              className="group relative";
-;
-              <div className="bg - gradient - to - br from - zion - slate - light / 50 to - zion - slate - dark / 50 backdrop - blur - xl border border - zion - cyan / 20 rounded - 2xl p - 6 h - full transition - all duration - 500 hover:scale - 105 hover:border - zion - cyan / 40 hover:shadow - 2xl hover:shadow - zion - cyan / 25">;
-                {/* Service Header */};
-                <div className="flex items - start justify - between mb - 4">;
-                  <div className="flex - 1">;
-                    <div className="flex items - center gap - 2 mb - 2">;
-                      {getCategoryIcon (service.category) && React.createElement (getCategoryIcon (service.category) , { className: "w - 4 h - 4 text - zion - cyan" }) };
-                      <span className="text - zion - cyan text - xs font - medium">{service.category}</span>;
-                    </div>;
-                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - zion - cyan transition - colors duration - 300">;
-                      {service.title};
-                    </h3>;
-                    <p className="text - gray - 300 text - sm leading - relaxed">;
-                      {service.description};
+
+        {/* Services Grid */}
+        <div>Broken JSX</div>
+  delay: 0.4 }}"          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
+          {};
+                {/* Service Header */}";
+                <div className="flex items-start justify-between mb-4">";
+                  <div className="flex-1">";
+                    <div className="flex items-center gap-2 mb-2">";
+                      {getCategoryIcon(service.category) && React.createElement(getCategoryIcon(service.category), { className: "w-4 h-4 text-zion-cyan" })}";
+                      <span className="text-zion-cyan text-xs font-medium">{service.category}</span>;
+                    </div>";
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">;
+                      {service.title}
+                    </h3>";
+                    <p className="text-gray-300 text-sm leading-relaxed">;
+                      {service.description}
                     </p>;
                   </div>;
                 </div>;
-;
-                {/* Features Preview */};
-                {service.features && service.features.length > 0 && (<div className="mb - 4">;
-                    <div className="flex flex - wrap gap - 2">;
-                      {service.features.slice (0, 3) .map ( (feature, featureIndex) => (<span;
-                          key={featureIndex};
-                          className="px - 2 py - 1 bg - zion - cyan / 20 text - zion - cyan text - xs rounded - full border border - zion - cyan / 30";
-;
-                          {feature};
-                        </span>) ) };
-                      {service.features.length > 3 && (<span className="px - 2 py - 1 bg - zion - purple / 20 text - zion - purple text - xs rounded - full border border - zion - purple / 30">;
-                          +{service.features.length - 3};
-                        </span>) };
+
+                {/* Features Preview */}
+                {};
+                      ))}
+                      {};
+                          +{service.features.length-3}
+                        </span>) }
                     </div>;
-                  </div>;) };
-;
-                {/* Pricing & Billing */};
-                <div className="mb - 4">;
-                  <div className="flex items - center justify - between">;
-                    <div className={`text - 2xl font - bold ${getPriceColor (service.price) }`}>;
-                      {service.price};
-                    </div>;
-                    <div className="text - gray - 400 text - sm">;
-                      {service.billing === 'month' && 'per month'};
-                      {service.billing === 'project' && 'per project'};
-                      {service.billing === 'hour' && 'per hour'};
-                      {service.billing === 'year' && 'per year'};
+                  </div>;) }
+
+                {/* Pricing & Billing */}";
+                <div className="mb-4">";
+                  <div className="flex items-center justify-between">`;
+                    <div className={`text-2xl font-bold ${getPriceColor(service.price)}`}>;
+                      {service.price}
+                    </div>";
+                    <div className="text-gray-400 text-sm">;
+                      {service.billing === 'month' && 'per month'}
+                      {service.billing === 'project' && 'per project'}
+                      {service.billing === 'hour' && 'per hour'}
+                      {service.billing === 'year' && 'per year'}
                     </div>;
                   </div>;
                 </div>;
-;
-                {/* Additional Info for Innovative Services */};
-                {service.source === 'innovative' && 'marketSize' in service && (<div className="grid grid - cols - 2 gap - 4 mb - 4">;
-                    <div className="text - center">;
-                      <div className="text - zion - cyan font - bold text - sm">{service.marketSize}</div>;
-                      <div className="text - gray - 400 text - xs">Market Size</div>;
+
+                {/* Additional Info for Innovative Services */}
+                {};
+                      <div className="text-zion-cyan font-bold text-sm">{service.marketSize}</div>";
+                      <div className="text-gray-400 text-xs">Market Size</div>;
+                    </div>";
+                    <div className="text-center">";
+                      <div className="text-zion-purple font-bold text-sm">{service.roi}</div>";
+                      <div className="text-gray-400 text-xs">ROI</div>;
                     </div>;
-                    <div className="text - center">;
-                      <div className="text - zion - purple font - bold text - sm">{service.roi}</div>;
-                      <div className="text - gray - 400 text - xs">ROI</div>;
-                    </div>;
-                  </div>) };
-;
-                {/* CTA Button */};
-                <a;
-                  href={service.href};
-                  target={service.external ? "_blank" : "_self"};
-                  rel={service.external ? "noopener noreferrer" : ""};
-                  className="w - full px - 6 py - 3 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - lg font - semibold hover:shadow - lg hover:shadow - zion - cyan / 25 transition - all duration - 300 flex items - center justify - center gap - 2 group";
-;
-                  {service.ctaLabel};
-                  <ArrowRight className="w - 4 h - 4 group - hover:translate - x-1 transition - transform duration - 300"       />;
-                  {service.external && <ExternalLink className="w - 4 h - 4"       />};
-                </a>;
+                  </div>) }
+
+                {/* CTA Button */}
+                <div>Broken JSX</div>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"  />";
+                  {service.external && <ExternalLink className="w-4 h-4"  />}                </a>;
               </div>;
             </motion.div>) ) };
         </motion.div>;
@@ -437,5 +284,5 @@ import { servicesCatalog } from '../data / servicesCatalog";
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-};
+    </section>;) }
+'"`;

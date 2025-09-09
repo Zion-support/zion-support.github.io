@@ -36,7 +36,7 @@ export default function AIProjectManagement(...args: any[]): any {;
       description: 'AI-powered risk identification and mitigation strategies',;
     },;
   ];
-;
+
   const benefits = [;
     'Reduce project delivery time by 30-50%',;
     'Improve resource utilization by 40-60%',;
@@ -45,7 +45,7 @@ export default function AIProjectManagement(...args: any[]): any {;
     'Eliminate manual reporting by 80%',;
     'Improve stakeholder communication by 50%',;
   ];
-;
+
   const solutions = [;
     {;
       title: 'AI Project Planning',;
@@ -81,7 +81,7 @@ export default function AIProjectManagement(...args: any[]): any {;
       price: 'From $6,000/month',;
     },;
   ];
-;
+
   const projectTypes = [;
     'Software Development',;
     'Construction & Engineering',;
@@ -90,15 +90,13 @@ export default function AIProjectManagement(...args: any[]): any {;
     'Research & Development',;
     'Event Management',;
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-      <SEO;
-        title="AI Project Management Services - Zion Tech Group";
-        description="Revolutionary AI-powered project management that optimizes planning, resource allocation, and risk management. Deliver projects faster, cheaper, and with higher success rates.";
-            />;
-;
-      {/* Hero Section */};
+      <div>Broken JSX</div>
+      />;
+
+      {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">;
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10"></div>;
         <div className="container mx-auto px-4 relative z-10">;
@@ -114,7 +112,7 @@ export default function AIProjectManagement(...args: any[]): any {;
                 AI Project Management;
               </span>;
             </div>;
-;
+
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">;
               <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">;
                 AI Project Management;
@@ -122,14 +120,14 @@ export default function AIProjectManagement(...args: any[]): any {;
               <br       />;
               <span className="text-white">That Delivers Results</span>;
             </h1>;
-;
+
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">;
               Transform your project delivery with AI-powered management that;
               optimizes planning, resource allocation, and risk management.;
               Deliver projects faster, cheaper, and with unprecedented success;
               rates.;
             </p>;
-;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <motion.button;
                 whileHover={{ scale: 1.05 }};
@@ -260,7 +258,7 @@ export default function AIProjectManagement(...args: any[]): any {;
                   {solution.title};
                 </h3>;
                 <p className="text-gray-300 mb-6">{solution.description}</p>;
-;
+
                 <div className="space-y-3 mb-6">;
                   {solution.features.map((((((((feature, featureIndex, index, index, index, index, index, index) => ({ ...((((((feature, featureIndex, index, index, index, index, index, key: index })) => ({ ...(((((feature, featureIndex, index, index, index, index, key: index })) => ({ ...((((feature, featureIndex, index, index, index, key: index })) => ({ ...(((feature, featureIndex, index, index, key: index })) => ({ ...((feature, featureIndex, index, key: index })) => ({ ...(feature, featureIndex, key: index })) => (;
                     <div;
@@ -276,6 +274,8 @@ export default function AIProjectManagement(...args: any[]): any {;
                 <div className="text-3xl font-bold text-orange-400 mb-6">;
                   {solution.price};
                 </div>;
+
+                <div className="text-3xl font-bold text-orange-400 mb-6">{solution.price}</div>;
                 <button className="w-full py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300">;
                   Get Started;
                 </button>;
@@ -361,5 +361,10 @@ export default function AIProjectManagement(...args: any[]): any {;
         </div>;
       </section>;
     </div>;
-  );
-};
+  )}
+
+export { AIProjectManagement }
+export { AIProjectManagement }
+export { AIProjectManagement }
+export { AIProjectManagement }
+export { AIProjectManagement }

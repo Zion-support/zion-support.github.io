@@ -9,9 +9,9 @@ import {}
   Clock,
   BarChart3,
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/ai-workflow-automation.tsx;
+:pages.disabled/pages/services/ai-workflow-automation.tsx 
 
 :pages.disabled/pages/services/ai-workflow-automation.tsx
               <Workflow className="w-4 h-4 mr-2"  />              AI-Powered Automation"
@@ -23,8 +23,8 @@ import {}
               Transform your business operations with intelligent, AI-powered
               workflow automation. Reduce manual tasks, improve efficiency, and
 
-              Transform your business operations with intelligent, AI-powered;
-              workflow automation. Reduce manual tasks, improve efficiency, and;
+              Transform your business operations with intelligent, AI-powered 
+              workflow automation. Reduce manual tasks, improve efficiency, and 
               scale your operations seamlessly.''
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>''
@@ -41,13 +41,13 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/ai-workflow-automation.tsx;
+:pages.disabled/pages/services/ai-workflow-automation.tsx 
 
             {features.map((feature, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
                   <feature.icon className='w-6 h-6 text-cyan-400' />'
@@ -64,8 +64,8 @@ import {}
         </div>
       </section>
 
-                Our AI workflow automation delivers measurable results that;
-                directly impact your bottom line. From cost reduction to;
+                Our AI workflow automation delivers measurable results that 
+                directly impact your bottom line. From cost reduction to 
 
 
                   </div>
@@ -73,7 +73,7 @@ import {}
               </div>
             </motion.div>
 
-            <motion.div;
+            <motion.div 
 
                     Schedule Demo
 
@@ -86,9 +86,9 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/ai-workflow-automation.tsx;
+:pages.disabled/pages/services/ai-workflow-automation.tsx 
 
 :pages.disabled/pages/services/ai-workflow-automation.tsx
               Ready to Automate Your Workflows?"
@@ -96,7 +96,7 @@ import {}
             <p className="text-xl text-slate-300 mb-8">
               Join hundreds of businesses that have already transformed their
 
-              Join hundreds of businesses that have already transformed their;
+              Join hundreds of businesses that have already transformed their 
               operations with AI workflow automation.''
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>''

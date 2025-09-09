@@ -1,23 +1,13 @@
-import React, { useState, useEffect } from 'react.ts';
-import { api, ApiResponse  } from '@/services / api';
-export default ApiDemo;}}}}}}};
-;
-;
-interface User {;
-;
-  id: number;
-  name: string;
-  email: string;
-  createdAt?: string;
-;
-const ApiDemo: React.FC = () : JSX.Element => {;
-  const [users, setUsers] = useState < any> ([]) ;
-  const [loading, setLoading] = useState (false) ;
-  const [error, setError] = useState < any> (null) ;
-const [newUser, setNewUser] = useState ({ name: '', email: '';
-}) ;
-  const [healthStatus, setHealthStatus] = useState < any> ('Checking...') ;
-;
+import React, { useState, useEffect } from 'react';
+import { api, ApiResponse } from '@/services / api';
+export default function Page() {};
+  return null;
+}
+}}}
+interface User {};
+const [newUser, setNewUser] = useState({ name: '', email: ''});
+  const [healthStatus, setHealthStatus] = useState<any>('Checking...');
+
   // Check API health on component mount;
   useEffect ( () => {;
     checkHealth () ;
@@ -120,21 +110,18 @@ const [newUser, setNewUser] = useState ({ name: '', email: '';
             </button>;
           </form>;
         </div>;
-;
-        {/* Error Display */};
-        {error && (<div role="button" className="mb - 6 p - 4 bg - red - 50 border border - red - 200 rounded - lg">;
-            <p className="text - red - 700">{error}</p>;
-          </div>) };
-;
-        {/* Users List */};
-        <div role="button" className="p - 4 bg - gray - 50 rounded - lg">;
-          <div role="button" className="flex justify - between items - center mb - 4">;
-            <h3 className="text - lg font - semibold text - gray - 700">Users ({users.length}) </h3>;
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={fetchUsers};
-              disabled={loading};
-              className="px - 3 py - 1 text - sm bg - gray - 600 text - white rounded - md hover:bg - gray - 700 disabled:opacity - 50";
-;
-              {loading ? 'Loading...' : 'Refresh'};
+
+        {/* Error Display */}
+        {};
+            <p className="text-red-700">{error}</p>;
+          </div>;
+        )}
+
+        {/* Users List */}";
+        <div className="p-4 bg-gray-50 rounded-lg">";
+          <div className="flex justify-between items-center mb-4">";
+            <h3 className="text-lg font-semibold text-gray-700">Users({users.length})</h3>;
+            <div>Broken JSX</div>
             </button>;
           </div>;
 ;
@@ -168,5 +155,5 @@ const [newUser, setNewUser] = useState ({ name: '', email: '';
           </div>;
         </div>;
       </div>;
-    </div>;) ;
-};
+    </div>;) }
+export default ApiDemo}}}}}}}'"`;

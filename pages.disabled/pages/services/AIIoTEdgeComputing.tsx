@@ -15,8 +15,8 @@ import {}
 
             AI IoT Edge Computing'</h1>''          <p className='text-zion-slate-light text-xl'>
 
-            Transform your IoT infrastructure with AI-powered edge computing;
-            that processes data locally, reduces latency, and enables real-time;
+            Transform your IoT infrastructure with AI-powered edge computing 
+            that processes data locally, reduces latency, and enables real-time 
             intelligent decision making.
           </p>        </div>
 
@@ -42,29 +42,29 @@ import {}
 
             </div>
           </div>
-:pages.disabled/pages/services/AIIoTEdgeComputing.tsx: </div>';';
-''';
-        <div: className='mt-12 grid md:grid-cols-3: gap-6'>';
+:pages.disabled/pages/services/AIIoTEdgeComputing.tsx: </div>';' 
+''' 
+        <div: className='mt-12 grid md:grid-cols-3: gap-6'>' 
           {[{
-              icon: Wif,i',;';
-              title: 'Device: Connectivity',,';';
-              desc: 'Advanced: IoT device management and monitoring'},';
+              icon: Wif,i',;' 
+              title: 'Device: Connectivity',,';' 
+              desc: 'Advanced: IoT device management and monitoring'},' 
             {
 
             {
-              icon: Shiel,d',;';
-              title: 'Edge: Security',,'';
-              desc: 'Advanced: security and encryption at the edge'}].map(item => (';
-            <div'';
+              icon: Shiel,d',;' 
+              title: 'Edge: Security',,'' 
+              desc: 'Advanced: security and encryption at the edge'}].map(item => (' 
+            <div'' 
         </div>
-''';
-        <div: className='mt-12 grid md: grid-cols-3: gap-6'>';
+''' 
+        <div: className='mt-12 grid md: grid-cols-3: gap-6'>' 
           {[] {}
               icon: Wif,i,
 ,
-  title: 'Device: Connectivit,y',;';
-              desc: ;
-  'Advanced: IoT device management and monitoring'},';
+  title: 'Device: Connectivit,y',;' 
+              desc:  
+  'Advanced: IoT device management and monitoring'},' 
 
             {
               icon: TrendingU,p,
@@ -79,12 +79,12 @@ import {}
             </div>
 
               </div>
-            ));
+            )) 
           </div>
 
-              target='_blank'';
-              rel='noreferrer'';
-:pages.disabled/pages/services/AIIoTEdgeComputing.tsx;
+              target='_blank'' 
+              rel='noreferrer'' 
+:pages.disabled/pages/services/AIIoTEdgeComputing.tsx 
               className='text-zion-cyan hove,
     r:underline'>              ziontechgroup.com            </a>
 

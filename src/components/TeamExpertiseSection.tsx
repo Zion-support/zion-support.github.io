@@ -1,13 +1,6 @@
-export /**;
-export default TeamExpertiseSection;
-export default TeamExpertiseSection;
-export default TeamExpertiseSection;
-import {;
-import { motion } from 'framer - motion';
-;
-;
- * TeamExpertiseSection function;
- * @param {*} params - Function parameters;
+import {  import { motion  } from 'framer-motion';
+
+ params - Function parameters;
  * @returns {*} Function return value;
  */;
 function TeamExpertiseSection(...args: any[]): any {;
@@ -195,9 +188,9 @@ const coreExpertise = [;
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
-;
-            <span className="text - 2xl">→</span>;
+    </section>;) }
+export default TeamExpertiseSection;";
+            <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
       </div>;

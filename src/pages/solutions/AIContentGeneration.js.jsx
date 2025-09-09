@@ -229,75 +229,88 @@ const AIContentGeneration = () => {
                   <li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></div>
                     {benefit}
-                  </li>))}
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl p-8 border border-emerald-500/30">
-              <div className="text-center">
-                <Lightbulb className="w-24 h-24 text-emerald-400 mx-auto mb-4"       />
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  Content Innovation
-                </h3>
-                <p className="text-gray-300 mb-6">
-                  Leverage AI to create engaging, high-quality content that 
-                  resonates with your audience and drives results.
-                </p>
-                <div className="text-sm text-gray-400">
-                  <p>• Quality content</p>
-                  <p>• Faster production</p>
-                  <p>• Consistent voice</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Implementation Process */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Implementation Process
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            A structured approach to implementing AI content generation 
-            in your organization.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {implementation.map((((((((phase, index, index, index, index, index, index, index) => ({ ...((((((phase, index, index, index, index, index, index, key: index })) => ({ ...(((((phase, index, index, index, index, index, key: index })) => ({ ...((((phase, index, index, index, index, key: index })) => ({ ...(((phase, index, index, index, key: index })) => ({ ...((phase, index, index, key: index })) => ({ ...(phase, index, key: index })) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                  {index + 1}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{phase.phase}</h3>
-                <p className="text-gray-300 mb-2">{phase.description}</p>
-                <p className="text-sm text-emerald-400">{phase.duration}</p>
-              </div>))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Content Creation?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Start generating high-quality content at scale with AI-powered 
-            content creation tools.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-              Start Creating
-            </a>
-            <a href="/solutions" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-              View All Solutions
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>);
-};
+                  </li>;
+                ))}
+              </ul>";
+            </div>"";
+            <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl p-8 border border-emerald-500/30">"";
+              <div className="text-center">"";
+                <Lightbulb className="w-24 h-24 text-emerald-400 mx-auto mb-4" />"";
+                <h3 className="text-2xl font-bold text-white mb-2">;
+                  Content Innovation";
+                </h3>"";
+                <p className="text-gray-300 mb-6">;
+                  Leverage AI to create engaging, high-quality content that;
+                  resonates with your audience and drives results.";
+                </p>"";
+                <div className="text-sm text-gray-400">;
+                  <p>• Quality content</p>;
+                  <p>• Faster production</p>;
+                  <p>• Consistent voice</p>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+";
+      {/* Implementation Process */}"";
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">"";
+        <div className="max-w-4xl mx-auto text-center">"";
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
+            Implementation Process";
+          </h2>"";
+          <p className="text-xl text-gray-300 mb-8">;
+            A structured approach to implementing AI content generation in your;
+            organization.;
+          </p>";
+"";
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
+            {};
+              <div key={index} className="text-center">"";
+                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">;
+                  {index + 1}";
+                </div>"";
+                <h3 className="text-xl font-semibold text-white mb-2">;
+                  {phase.phase}";
+                </h3>"";
+                <p className="text-gray-300 mb-2">{phase.description}</p>"";
+                <p className="text-sm text-emerald-400">{phase.duration}</p>;
+              </div>;
+            ))}
+          </div>;
+        </div>;
+      </section>;
+";
+      {/* CTA Section */}"";
+      <section className="py-16 px-4 sm:px-6 lg:px-8">"";
+        <div className="max-w-4xl mx-auto text-center">"";
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
+            Ready to Transform Your Content Creation?";
+          </h2>"";
+          <p className="text-xl text-gray-300 mb-8">;
+            Start generating high-quality content at scale with AI-powered;
+            content creation tools.";
+          </p>"";
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+            <div>Broken JSX</div>
+              className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">;
+              Start Creating;
+            </a>";
+            <div>Broken JSX</div>
+              className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
+              View All Solutions;
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  )}
 export default AIContentGeneration;
+
+
+export { AIContentGeneration }
+export { AIContentGeneration }
+export { AIContentGeneration }
+export { AIContentGeneration }
+export { AIContentGeneration }

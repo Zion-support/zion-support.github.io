@@ -1,102 +1,9 @@
-import { Link } from 'react - router - dom';
-export const EnhancedFuturisticFooter: React.FC = () => {;
-export const EnhancedFuturisticFooter: React.FC = () => {;
-import { ;
-import { motion } from 'framer - motion';
-;
-;
-  Phone, ;
-  Mail, ;
-  MapPin, ;
-  Globe, ;
-  Linkedin, ;
-  Twitter, ;
-  Facebook, ;
-  Instagram,;
-  Youtube,;
-  Github,;
-  ArrowRight,;
-  Star,;
-  Shield,;
-  Zap,;
-  Brain,;
-  Rocket,;
-  Heart,;
-  Atom,;
-  Crown,;
-  Sparkles,;
-  Flame,;
-  Sun,;
-  Moon,;
-  Globe2,;
-  ShieldCheck,;
-  Leaf,;
-  Scale,;
-  Building2,;
-  Car,;
-  Home,;
-  Factory,;
-  City,;
-  CheckCircle,;
-  ArrowUpRight,;
-  Play,;
-  MailIcon,;
-  Calendar,;
-  User,;
-  Handshake,;
-  Briefcase,;
-  FileText as FileTextIcon,;
-  Users as UsersIcon,;
-  Code as CodeIcon,;
-  HelpCircle as HelpCircleIcon,;
-  DollarSign as DollarSignIcon,;
-  Users as UsersIcon2,;
-  Calendar as CalendarIcon,;
-  Shield as ShieldIcon,;
-  BookOpen as BookOpenIcon,;
-  Factory as FactoryIcon,;
-  ShoppingCart as ShoppingCartIcon,;
-  Heart as HeartIcon,;
-  TrendingUp as TrendingUpIcon,;
-  Building as BuildingIcon,;
-  Rocket as RocketIcon,;
-  Atom as AtomIcon,;
-  Cloud as CloudIcon,;
-  Shield as ShieldIcon2,;
-  ShoppingCart as ShoppingCartIcon2,;
-  Users as UsersIcon3,;
-  BookOpen as BookOpenIcon2,;
-  FileText as FileTextIcon2,;
-  Users as UsersIcon4,;
-  Code as CodeIcon2,;
-  HelpCircle as HelpCircleIcon2,;
-  DollarSign as DollarSignIcon2,;
-  Users as UsersIcon5,;
-  Calendar as CalendarIcon2,;
-  Shield as ShieldIcon3,;
-  BookOpen as BookOpenIcon3,;
-  Factory as FactoryIcon2,;
-  ShoppingCart as ShoppingCartIcon3,;
-  Heart as HeartIcon2,;
-  TrendingUp as TrendingUpIcon2,;
-  Building as BuildingIcon2,;
-  Rocket as RocketIcon2,;
-  Atom as AtomIcon2,;
-  Cloud as CloudIcon2,;
-  Shield as ShieldIcon4,;
-  ShoppingCart as ShoppingCartIcon4,;
-  Users as UsersIcon6,;
-  BookOpen as BookOpenIcon4,;
-  FileText as FileTextIcon3,;
-  Users as UsersIcon7,;
-  Code as CodeIcon3,;
-  HelpCircle as HelpCircleIcon3,;
-  DollarSign as DollarSignIcon3,;
-  Users as UsersIcon8,;
-  Calendar as CalendarIcon3,;
-  Shield as ShieldIcon5,;
-  BookOpen as BookOpenIcon5;
-} from 'lucide - react';
+import { Link  } from 'react-router-dom';
+ from 'framer-motion';
+
+ from 'lucide-react';
+
+ from 'lucide-react';
 ;
   Search,;
   BookOpen,;
@@ -172,23 +79,42 @@ import { motion } from 'framer - motion';
     {;
         { name: 'Investor Relations', href: '/investors', featured: false },;
         { name: 'Press & Media', href: '/press', featured: false },;
-        { name: 'Legal & Privacy', href: '/legal', featured: false };
-      ];
-    };
+        { name: 'Legal & Privacy', href: '/legal', featured: false }
+      ]}
   ];
-;
-  const quickLinks = [;
-    { name: 'Services', href: '/services' },;
-    { name: 'Pricing', href: '/pricing' },;
-    { name: 'About Us', href: '/about' },;
-    { name: 'Our Team', href: '/team' },;
-    { name: 'Careers', href: '/careers' },;
-    { name: 'Partners', href: '/partners' },;
-    { name: 'News & Events', href: '/news' },;
-    { name: 'Case Studies', href: '/case - studies' },;
-    { name: 'Blog', href: '/blog' },;
-    { name: 'Careers', href: '/careers' },;
-    { name: 'Marketplace', href: '/marketplace' };
+
+  return ()    <footer className="relative bg-slate-950 border-t border-cyan-400/20 overflow-hidden">;
+      {/* Enhanced Animated Background */}";
+      <div className="absolute inset-0 bg-futuristic-enhanced">";
+        <div className="absolute inset-0 bg-cyber-grid animate-cyber-grid opacity-5"></div>";
+        <div className="absolute top-20 left-10 animate-float">";
+          <div className="w-4 h-4 bg-cyan-400 rounded-full opacity-60 neon-glow"></div>;
+        </div>";
+        <div className="absolute top-40 right-20 animate-float-delayed">";
+          <div className="w-3 h-3 bg-blue-400 rounded-full opacity-60 neon-glow"></div>;
+        </div>";
+        <div className="absolute bottom-40 left-20 animate-float">";
+          <div className="w-2 h-2 bg-purple-400 rounded-full opacity-60 neon-glow"></div>;
+        </div>;
+      </div>;
+
+  const quickLinks = [
+    { name: 'Services Overview', href: '/services-overview' },
+    { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+    { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
+    { name: 'Research & Development', href: '/research-development' },
+    { name: 'Pricing Guide', href: '/pricing' },
+    { name: 'Help Center', href: '/help' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'News', href: '/news' },
+    { name: 'Events', href: '/events' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Sitemap', href: '/sitemap' }
   ];
 ;
   const socialLinks = [;
@@ -548,38 +474,33 @@ import { motion } from 'framer - motion';
         { name: 'Security', href: '/security' },;
         { name: 'Compliance', href: '/compliance' },;
         { name: 'Accessibility', href: '/accessibility' },;
-        { name: 'Sitemap', href: '/sitemap' };
-      ];
-    };
+        { name: 'Sitemap', href: '/sitemap' }
+      ]}
   ];
-;
-  const quickLinks = [;
-    { name: 'Get Quote', href: '/request - quote', icon: DollarSign },;
-    { name: 'Schedule Demo', href: '/schedule - demo', icon: Calendar },;
+
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },;
     { name: 'Contact Support', href: '/support', icon: MessageCircle },;
     { name: 'View Status', href: '/status', icon: Gauge };
   ];
-;
-  const socialLinks = [;
-    { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text - blue - 400' },;
-    { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text - blue - 400' },;
-    { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text - blue - 600' },;
-    { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text - pink - 400' },;
-    { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text - red - 400' },;
-    { name: 'GitHub', href: '#', icon: Github, color: 'hover:text - gray - 400' };
+
+    { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },;
+    { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-600' },;
+    { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' },;
+    { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },;
+    { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
   ];
-;
-  const contactInfo = {;
-    phone: '+1 (555) 123 - 4567',;
+
     email: 'info@ziontechgroup.com',;
     address: '123 Innovation Drive, Tech City, TC 12345';
-  };
-;
-  return (<footer className="bg - slate - 900 text - white relative overflow - hidden">;
-      {/* Background Elements */};
-      <div role="button" className="absolute inset - 0">;
-        <div role="button" className="absolute top - 0 left - 0 w - 96 h - 96 bg - gradient - to - br from - cyan - 500 / 10 to - blue - 500 / 10 rounded - full blur - 3xl"></div>;
-        <div role="button" className="absolute bottom - 0 right - 0 w - 96 h - 96 bg - gradient - to - br from - purple - 500 / 10 to - pink - 500 / 10 rounded - full blur - 3xl"></div>;
+';
+    phone: '+1(555) 123-4567',;';
+    email: 'info@ziontechgroup.com','    address: '123 Innovation Drive, Tech City, TC 12345'}
+  return (";
+    <footer className="bg-slate-900 text-white relative overflow-hidden">;
+      {/* Background Elements */}";
+      <div className="absolute inset-0">";
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl"></div>";
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"></div>;
       </div>;
 ;
       <div role="button" className="relative z - 10">;
@@ -690,28 +611,19 @@ import { motion } from 'framer - motion';
           </div>;
         </section>;
       </div>;
-;
-      {/* Bottom Footer */};
-      <div role="button" className="border - t border - slate - 700 / 50">;
-        <div role="button" className="container - responsive py - 6">;
-          <div role="button" className="flex flex - col md:flex - row items - center justify - between gap - 4">;
-            <div role="button" className="flex items - center space - x-6 text - sm text - gray - 400">;
-              <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>;
-              <Link to = "/privacy" className="hover:text - cyan - 400 transition - colors">Privacy Policy</Link>;
-              <Link to="/terms" className="hover:text - cyan - 400 transition - colors">Terms of Service</Link>;
-              <Link to="/cookies" className="hover:text - cyan - 400 transition - colors">Cookie Policy</Link>;
-            </div>;
-            ;
-            <div role="button" className="flex items - center space - x-4">;
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={scrollToTop};
-                className="p - 2 bg - slate - 700 / 50 rounded - lg text - gray - 400 hover:text - cyan - 400 hover:bg - slate - 600 / 50 transition - all duration - 300 transform hover:scale - 110";
-                aria - label="Scroll to top";
-              >;
-                <ArrowUpRight className="w - 5 h - 5 rotate - 45"       />;
-              </button>;
+
+      {/* Bottom Footer */};";
+      <div className="border-t border-slate-700/50">;";
+        <div className="container-responsive py-6">;";
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">;";
+            <div className="flex items-center space-x-6 text-sm text-gray-400">;
+              <span>&copy; {currentYear} Zion Tech Group.All rights reserved.</span>";
+              <Link to = "/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>";
+              <Link to="/terms" className="hover:text-cyan-400 transition-colors">Terms of Service</Link>";
+              <Link to="/cookies" className="hover:text-cyan-400 transition-colors">Cookie Policy</Link>;
             </div>;
           </div>;
         </div>;
       </div>;
-    </footer>;) ;
-};
+    </footer>;) }
+'"`;

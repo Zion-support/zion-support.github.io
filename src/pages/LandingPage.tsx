@@ -1,6 +1,5 @@
 
-
-import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import { FloatingCTA } from "@/components/FloatingCTA";
@@ -81,7 +80,8 @@ export default function LandingPage() {
         keywords={t("home.seo_keywords")}
         canonical="https://app.ziontechgroup.com/"
       />
-              <HeroSection />
+      <Header />
+      <HeroSection />
       
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">

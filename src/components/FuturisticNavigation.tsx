@@ -206,70 +206,58 @@ import { motion, AnimatePresence } from 'framer - motion';
   const toggleDropdown = (dropdown: string) => {;
     setActiveDropdown (activeDropdown === dropdown ? null : dropdown) };
   // Enhanced service categories with better organization;
-  const serviceCategories = [;
-    {;
-      name: "AI & Machine Learning",;
-      icon: Brain,;
-      color: 'from - zion - cyan to - zion - blue',;
-      dropdown[;
-        { name: 'AI Autonomous Trading', href: '/ai - services / autonomous - trading', icon: DollarSign, description: 'AI - powered financial trading platform' },;
-        { name: 'AI Consciousness Simulator', href: '/ai - services / consciousness - simulator', icon: Brain, description: 'Quantum AI consciousness research' },;
-        { name: 'AI Business Operations', href: '/ai - services / business - operations', icon: Building, description: 'Autonomous business management' },;
-        { name: 'AI Healthcare Diagnosis', href: '/ai - services / healthcare - diagnosis', icon: Heart, description: 'AI - powered medical diagnosis' },;
-        { name: 'AI Content Creation', href: '/ai - services / content - creation', icon: FileText, description: 'Autonomous content generation' },;
-        { name: 'AI Supply Chain', href: '/ai - services / supply - chain', icon: Truck, description: 'AI - powered supply chain optimization' },;
-        { name: 'View All AI Services', href: '/ultimate - services - 2027', icon: Sparkles, description: 'Complete AI services showcase' },;
-        { name: 'Innovative Services 2028', href: '/innovative - services - 2028', icon: Crown, description: 'Latest innovative services for 2028' };
-      ];
-    },;
-    {;
-      name: "Micro SAAS Solutions",;
-      icon: Cloud,;
-      services[;
-        { name: "Micro SAAS Services", href: "/micro - saas" },;
-        { name: "Business Tools", href: "/micro - saas / business - tools" },;
-        { name: "Productivity Apps", href: "/micro - saas / productivity" },;
-        { name: "Industry Solutions", href: "/micro - saas / industry" },;
-        { name: "Custom Development", href: "/micro - saas / custom" },;
-        { name: "Marketplace", href: "/marketplace" };
-      ];
-    },;
-    {;
-      name: "IT Infrastructure",;
-      icon: Server,;
-      services[;
-        { name: "IT Services", href: "/it - services" },;
-        { name: "Cloud Solutions", href: "/it - services / cloud" },;
-        { name: "Cybersecurity", href: "/it - services / cybersecurity" },;
-        { name: "DevOps & Automation", href: "/it - services / devops" },;
-        { name: "Data Management", href: "/it - services / data" },;
-        { name: "Network Security", href: "/it - services / network - security" };
-      ];
-    },;
-    {;
-      name: "Emerging Technologies",;
-      icon: Rocket,;
-      services[;
-        { name: "Quantum Computing", href: "/emerging - tech / quantum" },;
-        { name: "Blockchain & Web3", href: "/emerging - tech / blockchain" },;
-        { name: "Edge Computing", href: "/emerging - tech / edge" },;
-        { name: "IoT Solutions", href: "/emerging - tech / iot" },;
-        { name: "Green Technology", href: "/green - it" },;
-        { name: "Space Technology", href: "/emerging - tech / space" };
-      ];
-    },;
-    {;
-      name: '2028 Services',;
-      href: '/innovative - services - 2028',;
-      icon: Crown,;
-      color: 'from - zion - cyan to - zion - purple',;
-      dropdown[;
-        { name: 'Innovative Services 2028', href: '/innovative - services - 2028', icon: Crown, description: 'Latest innovative services for 2028' },;
-        { name: 'Micro SAAS 2028', href: '/micro - saas - 2028', icon: Zap, description: 'Advanced micro SAAS solutions' },;
-        { name: 'IT Services 2028', href: '/it - services - 2028', icon: Server, description: 'Next - generation IT services' },;
-        { name: 'Pricing Guide 2028', href: '/comprehensive - pricing - guide - 2028', icon: Calculator, description: 'Complete pricing and ROI analysis' };
-      ];
-    };
+
+        { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },;
+        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },;
+        { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },;
+        { name: 'AI Healthcare Diagnosis', href: '/ai-services/healthcare-diagnosis', icon: Heart, description: 'AI-powered medical diagnosis' },;
+        { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' },;
+        { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },;
+        { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },;
+        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
+      dropdown[;';
+        { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },';
+        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },';
+        { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },';
+        { name: 'AI Healthcare Diagnosis', href: '/ai-services/healthcare-diagnosis', icon: Heart, description: 'AI-powered medical diagnosis' },';
+        { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' },';
+        { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },';
+        { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },'        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
+      ];,
+},;
+    {};
+        { name: "Micro SAAS Services", href: "/micro-saas" },";
+        { name: "Business Tools", href: "/micro-saas/business-tools" },";
+        { name: "Productivity Apps", href: "/micro-saas/productivity" },";
+        { name: "Industry Solutions", href: "/micro-saas/industry" },";
+        { name: "Custom Development", href: "/micro-saas/custom" },";
+        { name: "Marketplace", href: "/marketplace" }
+      ];,
+},;
+    {};
+        { name: "IT Services", href: "/it-services" },";
+        { name: "Cloud Solutions", href: "/it-services/cloud" },";
+        { name: "Cybersecurity", href: "/it-services/cybersecurity" },";
+        { name: "DevOps & Automation", href: "/it-services/devops" },";
+        { name: "Data Management", href: "/it-services/data" },";
+        { name: "Network Security", href: "/it-services/network-security" }
+      ];,
+},;
+    {};
+        { name: "Quantum Computing", href: "/emerging-tech/quantum" },";
+        { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },";
+        { name: "Edge Computing", href: "/emerging-tech/edge" },";
+        { name: "IoT Solutions", href: "/emerging-tech/iot" },";
+        { name: "Green Technology", href: "/green-it" },";
+        { name: "Space Technology", href: "/emerging-tech/space" }
+      ];,
+},;
+    {};
+        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },;
+        { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },;
+        { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },;
+        { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' }
+      ]}
   ];
   return (<>;
       <header className={`sticky top - 0 z - 50 w - full transition - all duration - 500 ${;
@@ -505,5 +493,8 @@ import { motion, AnimatePresence } from 'framer - motion';
           </div>;
         </div>;
       </header>;
-    </>;) ;
-};
+    </>;
+  )}
+'"`;
+
+;,"});})";

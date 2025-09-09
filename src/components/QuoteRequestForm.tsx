@@ -1,5 +1,6 @@
+
 import { useState } from "react";
-import { logDev, logError } from '@/utils/productionLogger';
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { useToast } from "@/hooks/use-toast";
 import { useRouter } from 'next/router';
 import { Button } from "@/components/ui/Button";
@@ -117,7 +118,7 @@ export function QuoteRequestForm() {
     
     try {
       // In a real application, you would send the data to your backend
-      logDev("Submitting form data:", formData);
+      logDebug("Submitting form data:", { data: formData });
       
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
@@ -163,7 +164,7 @@ export function QuoteRequestForm() {
       setCurrentStep("summary");
       setAutoFillOpen(false);
     } catch (err) {
-      logError("auto fill error", err as Error);
+      logErrorToProduction("Auto-fill API error", err as Error, { component: 'QuoteRequestForm', projectDescription: description });
       toast({
         title: "Auto-fill Failed",
         description: "We couldn't process your request. Please try again.",

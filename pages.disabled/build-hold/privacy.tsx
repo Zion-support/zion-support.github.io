@@ -1,19 +1,19 @@
-React: from;
-  'react';';
-import: { motion } from;
-  'framer-motion'{ SEO: } from;';
-  '../components/SEO';';
-import: { Card } from;
-  '../components/ui/Card'{ Badge: } from;';
-  '../components/ui/Badge';';
-import: { '  Shield, Lock',;
+React: from 
+  'react';' 
+import: { motion } from 
+  'framer-motion'{ SEO: } from;' 
+  '../components/SEO';' 
+import: { Card } from 
+  '../components/ui/Card'{ Badge: } from;' 
+  '../components/ui/Badge';' 
+import: { '  Shield, Lock', 
   Eye, Database,
   Users, Mail,
   Phone, Calendar,
   FileText, CheckCircle,
   AlertTriangle, Globe,
   Settings, Trash2,
-  Download, ArrowRight} from;
+  Download, ArrowRight} from 
 
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -31,7 +31,7 @@ import: { '  Shield, Lock',;
     y: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className='text-center mb-8''          >'            <h2 className='text-2xl font-bold text-white mb-4'>Quick Navigation</h2>'            <div className='flex flex-wrap justify-center gap-4>              {sections.map((section, index) => ('                <a;
+            className='text-center mb-8''          >'            <h2 className='text-2xl font-bold text-white mb-4'>Quick Navigation</h2>'            <div className='flex flex-wrap justify-center gap-4>              {sections.map((section, index) => ('                <a 
                   key={section.id}
                   href={`#${section.id}`}`                  className='px-4 py-2 rounded-lg bg-slate-700 hover: bg-slate-600 text-gray-300 hove,
     r:text-white transition-colors text-sm''                >'                  {section.title}

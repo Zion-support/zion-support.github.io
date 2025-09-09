@@ -1,112 +1,153 @@
-import React from 'react.ts';
-import { Filter, X  } from 'lucide-react';
-;
-interface FilterOption {;
-;
-  value: string;
-  label: string;
-  count?: number};
-;
-interface FilterGroup {;
-;
-  title: string;
-  key: string;
-  options: FilterOption[];
-  type: 'checkbox' | 'radio' | 'range'};
-;
-interface FilterSidebarProps extends React.PropsWithChildren<{}> {;
-;
-  filters: FilterGroup[];
-  selectedFilters: Record<string, any>;
-  onFilterChange: (key: string, value: string, checked: boolean)  => void;
-  onClearFilters: ()  => void;
-  isOpen: boolean;
-  onClose: ()  => void};
-;
-export function FilterSidebar(...args: any[]):  {;
-  return (;
-    <>;
-      {/* Mobile overlay */};
-      {isOpen && (;
-        <div;
-          className="fixed inset-0 bg-black/50 z-40 lg: hidden";
-          onClick={onClose};
-              />;
-      )};
-;
-      {/* Sidebar */};
-      <div className={`;
-        fixed lg: static inset-y-0 left-0 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-blue-light/20 transform transition-transform duration-300 lg: transform-none;
-        ${isOpen ? 'translate-x-0' : '-translate-x-full lg: translate-x-0'};
-      `}>;
-        <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/20">;
-          <h3 className="text-lg font-semibold text-white flex items-center gap-2">;
-            <Filter className="w-5 h-5"       />;
-            Filters;
-          </h3>;
-          <button;
-            onClick={onClose};
-            className="lg: hidden p-2 hover: bg-zion-blue-light/20 rounded-lg transition-colors";
-;
-            <X className="w-5 h-5 text-zion-slate-light"       />;
-          </button>;
-        </div>;
-;
-        <div className="p-4 space-y-6">;
-          {/* Clear all button */};
-          <div className="flex justify-between items-center">;
-            <span className="text-sm text-zion-slate-light">Active filters</span>;
-            <button;
-              onClick={onClearFilters};
-              className="text-sm text-zion-cyan hover: text-zion-cyan-light transition-colors underline";
-            >;
-              Clear all;
-            </button>;
-          </div>;
-;
-          {/* Filter groups */};
-          {filters.map((((((((group, index, index, index, index, index, index) => ({ ...((((((group, index, index, index, index, index, key: index })) => ({ ...(((((group, index, index, index, index, key: index })) => ({ ...((((group, index, index, index, key: index })) => ({ ...(((group, index, index, key: index })) => ({ ...((group, index, key: index })) => ({ ...(group, key: index })) => (;
-            <div key={group.key} className="space-y-3">;
-              <h4 className="font-medium text-white">{group.title}</h4>;
-              ;
-              <div className="space-y-2">;
-                {group.options.map((((((((option, index, index, index, index, index, index) => ({ ...((((((option, index, index, index, index, index, key: index })) => ({ ...(((((option, index, index, index, index, key: index })) => ({ ...((((option, index, index, index, key: index })) => ({ ...(((option, index, index, key: index })) => ({ ...((option, index, key: index })) => ({ ...(option, key: index })) => {;
-                  const isSelected = selectedFilters[group.key]?.includes(option.value) || false;
-;
-                  return (;
-                    <label key = {option.value} className="flex items-center gap-3 cursor-pointer">;
-                      <input;
-                        type={group.type === 'radio' ? 'radio' : 'checkbox'};
-                        name={group.key};
-                        value={option.value};
-                        checked={isSelected};
-                        onChange = {;
-  (e) => onFilterChange(group.key, option.value,;
-  e.target.checked);
-;
-;
-;
-;
-;
-;
-};
-                        className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus: ring-zion-cyan focus: ring-2";
-                      />;
-                      <span className="text-sm text-zion-slate-light">;
-                        {option.label};
-                        {option.count && (;
-                          <span className="ml-2 text-zion-slate-light/60">;
-                            ({option.count});
-                          </span>;
-                        )};
-                      </span>;
-                    </label>;
-                  );
-                })};
-              </div>;
-            </div>;
-          ))};
-        </div>;
-      </div>;
-    </>;
-  )};
+
+import React from "react";
+import { Button } from "@/components/ui/Button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Filter, Star } from "lucide-react";
+import { FilterOptions } from "@/types/search";
+
+interface FilterSidebarProps {
+  filters: {
+    selectedProductTypes: string[];
+    selectedLocations: string[];
+    selectedAvailability: string[];
+    selectedRating: number | null;
+  };
+  filterOptions: FilterOptions;
+  onFilterChange: (filterType: string, value: string) => void;
+  onRatingChange: (rating: number | null) => void;
+  onClearFilters: () => void;
+}
+
+export function FilterSidebar({
+  filters,
+  filterOptions,
+  onFilterChange,
+  onRatingChange,
+  onClearFilters
+}: FilterSidebarProps) {
+  return (
+    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-lg font-medium text-white flex items-center">
+          <Filter className="mr-2 h-5 w-5" /> Filters
+        </h3>
+        <Button 
+          variant="outline" 
+          size="sm"
+          className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+          onClick={onClearFilters}
+        >
+          Clear All
+        </Button>
+      </div>
+      
+      {/* Product Type Filter */}
+      <div className="mb-6">
+        <label className="text-sm font-medium text-zion-slate-light block mb-2">
+          Product Type
+        </label>
+        <div className="space-y-2">
+          {filterOptions.productTypes.map((type) => (
+            <div key={type.value} className="flex items-center space-x-2">
+              <Checkbox 
+                id={`type-${type.value}`} 
+                checked={filters.selectedProductTypes.includes(type.value)}
+                onCheckedChange={() => onFilterChange('productTypes', type.value)}
+                className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+              />
+              <label 
+                htmlFor={`type-${type.value}`}
+                className="text-sm text-zion-slate-light cursor-pointer hover:text-white"
+              >
+                {type.label}
+              </label>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      {/* Location Filter */}
+      <div className="mb-6">
+        <label className="text-sm font-medium text-zion-slate-light block mb-2">
+          Location
+        </label>
+        <div className="space-y-2 max-h-40 overflow-y-auto pr-2">
+          {filterOptions.locations.map((location) => (
+            <div key={location.value} className="flex items-center space-x-2">
+              <Checkbox 
+                id={`location-${location.value}`} 
+                checked={filters.selectedLocations.includes(location.value)}
+                onCheckedChange={() => onFilterChange('locations', location.value)}
+                className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+              />
+              <label 
+                htmlFor={`location-${location.value}`}
+                className="text-sm text-zion-slate-light cursor-pointer hover:text-white"
+              >
+                {location.label}
+              </label>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      {/* Availability Filter */}
+      <div className="mb-6">
+        <label className="text-sm font-medium text-zion-slate-light block mb-2">
+          Availability
+        </label>
+        <div className="space-y-2">
+          {filterOptions.availabilityOptions.map((availability) => (
+            <div key={availability.value} className="flex items-center space-x-2">
+              <Checkbox 
+                id={`availability-${availability.value}`} 
+                checked={filters.selectedAvailability.includes(availability.value)}
+                onCheckedChange={() => onFilterChange('availability', availability.value)}
+                className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+              />
+              <label 
+                htmlFor={`availability-${availability.value}`}
+                className="text-sm text-zion-slate-light cursor-pointer hover:text-white"
+              >
+                {availability.label}
+              </label>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      {/* Rating Filter */}
+      <div className="mb-6">
+        <label className="text-sm font-medium text-zion-slate-light block mb-2">
+          Minimum Rating
+        </label>
+        <div className="flex flex-wrap gap-2">
+          {[null, ...filterOptions.ratingOptions].map((rating) => (
+            <Button
+              key={rating === null ? 'any' : rating}
+              variant="outline"
+              size="sm"
+              onClick={() => onRatingChange(rating)}
+              className={`${
+                filters.selectedRating === rating 
+                  ? "bg-zion-purple/20 border-zion-purple text-zion-purple" 
+                  : "border-zion-blue-light text-zion-slate-light"
+              }`}
+            >
+              {rating === null ? (
+                "Any"
+              ) : (
+                <div className="flex items-center">
+                  {[...Array(rating)].map((_, i) => (
+                    <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />
+                  ))}
+                  <span className="ml-1">& Up</span>
+                </div>
+              )}
+            </Button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}

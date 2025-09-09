@@ -4,22 +4,24 @@
 // Core Innovative Services;
 export { EXPANDED_INNOVATIVE_SERVICES_2025 } from "./expandedInnovativeServices2025";
 export type { ExpandedInnovativeService } from "./expandedInnovativeServices2025";
-;
-// Emerging Technology Services;
-export { EMERGING_TECH_SERVICES_2025 } from "./emergingTechServices2025";
+
+// Emerging Technology Services";
+export { EMERGING_TECH_SERVICES_2025 } from "./emergingTechServices2025";";
 export type { EmergingTechService } from "./emergingTechServices2025";
-;
-// Ultimate Micro SAAS Services;
-export { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "./ultimateMicroSaasServices2025";
+
+// Ultimate Micro SAAS Services";
+export { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "./ultimateMicroSaasServices2025";";
 export type { UltimateMicroSaasService } from "./ultimateMicroSaasServices2025";
-;
+
+:src/data/comprehensiveServicesIndex.tsx;
 // Combined Services Array;
 export const ALL_COMPREHENSIVE_SERVICES = [;
   ...EXPANDED_INNOVATIVE_SERVICES_2025,;
   ...EMERGING_TECH_SERVICES_2025,;
   ...ULTIMATE_MICRO_SAAS_SERVICES_2025;
 ];
-;
+
+:src/data/comprehensiveServicesIndex.tsx;
 // Service Categories;
 export const SERVICE_CATEGORIES = [;
   'AI & Analytics',;
@@ -44,97 +46,83 @@ export const SERVICE_CATEGORIES = [;
   'Sustainability & Energy',;
   'Autonomous Vehicles & Fleet Management';
 ];
-;
+
 // Innovation Levels;
 export const INNOVATION_LEVELS = [;
   'Cutting-edge',;
   'Advanced',;
   'Professional';
 ];
-;
+
 // Support Levels;
 export const SUPPORT_LEVELS = [;
   'enterprise',;
   'professional',;
   'basic';
 ];
-;
+
 // Pricing Models;
-export const PRICING_MODELS = [;
+export ;
+  'monthly',;
+  'annual',;
+  'one-time',;  'usage-based';
+];
+
+// Contact Information;
+export ;
+export ;
   'monthly',;
   'annual',;
   'one-time',;
   'usage-based';
 ];
-;
+
 // Contact Information;
-export const CONTACT_INFO = {;
-  phone: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  website: 'https://ziontechgroup.com',;
-  address: '364 E Main St STE 1008,;
-  ;
-  ;
-  ;
-  ;
+export ;
+
+
+
+
   Middletown DE 19709';
-;
-;
-;
-;
-;
-;
-;
-};
-;
+
+}
+:src/data/comprehensiveServicesIndex.tsx;
 // Service Statistics;
-export const SERVICE_STATS = {;
-  totalServices: ALL_COMPREHENSIVE_SERVICES.length,;
-  categories: SERVICE_CATEGORIES.length,;
-  innovationLevels: INNOVATION_LEVELS.length,;
-  supportLevels: SUPPORT_LEVELS.length,;
-  ;
-  ;
-  ;
-  ;
-  pricingModels: PRICING_MODELS.length;
-;
-;
-;
-;
-;
-;
-;
-};
-;
+export ;
+// Service Statistics;
+export ;
+
+
+
+
+  pricingModels: PRICING_MODELS.length}
+:src/data/comprehensiveServicesIndex.tsx;
 // Helper Functions;
-export const getServicesByCategory = (category: string) => {;
-  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category);
-};
-;
-export const getServicesByInnovationLevel = (level: string) => {;
-  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level);
-};
-;
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
-  return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
-    service.price >= minPrice && service.price <= maxPrice;
-  );
-};
-;
-export const getServicesByTags = (tags: string[]) => {;
+export ;
+  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category)}
+export ;
+  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level)}
+export }
+export ;
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
     tags.some(tag => service.tags.includes(tag));
-  );
-};
-;
-export const searchTerm = query.toLowerCase();
+  )}
+export ;
+// Helper Functions;
+export ;
+  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category)}
+export ;
+  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level)}
+export }
+export ;
+  return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
+    tags.some(tag => service.tags.includes(tag));
+  )}
+export ;
   return ALL_COMPREHENSIVE_SERVICES.filter(service = >;
     service.title.toLowerCase().includes(searchTerm) ||;
     service.description.toLowerCase().includes(searchTerm) ||;
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||;
     service.category.toLowerCase().includes(searchTerm);
-  );
-};
-;
-export default ALL_COMPREHENSIVE_SERVICES;
+  )}
+export default ALL_COMPREHENSIVE_SERVICES;'";

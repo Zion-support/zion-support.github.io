@@ -1,66 +1,23 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye, EyeOff } from 'lucide-react';
-const mockNotifications = [
-    {
-        id: '1',
-        title: 'Project Milestone Achieved',
-        message: 'AI E-commerce Platform has reached 75% completion milestone',
-        type: 'success',
-        priority: 'medium',
-        category: 'project',
-        timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
-        isRead: false,
-        isArchived: false,
-        actions: [
-            { label: 'View Details', action: () => console.log('View project'), variant: 'primary' },
-            { label: 'Archive', action: () => console.log('Archive'), variant: 'secondary' }
-        ]
-    },
-    {
-        id: '2',
-        title: 'Security Alert',
-        message: 'Unusual login attempt detected from new IP address',
-        type: 'warning',
-        priority: 'high',
-        category: 'security',
-        timestamp: new Date(Date.now() - 1000 * 60 * 5), // 5 minutes ago
-        isRead: false,
-        isArchived: false,
-        actions: [
-            { label: 'Review Activity', action: () => console.log('Review security'), variant: 'primary' },
-            { label: 'Dismiss', action: () => console.log('Dismiss'), variant: 'secondary' }
-        ]
-    },
-    {
-        id: '3',
-        title: 'Performance Issue Detected',
-        message: 'API response time increased by 200% in the last hour',
-        type: 'error',
-        priority: 'critical',
-        category: 'performance',
-        timestamp: new Date(Date.now() - 1000 * 60 * 2), // 2 minutes ago
-        isRead: false,
-        isArchived: false,
-        actions: [
-            { label: 'Investigate', action: () => console.log('Investigate'), variant: 'primary' },
-            { label: 'Acknowledge', action: () => console.log('Acknowledge'), variant: 'secondary' }
-        ]
-    },
-    {
-        id: '4',
-        title: 'System Update Available',
-        message: 'New version v2.1.0 is ready for deployment',
-        type: 'info',
-        priority: 'low',
-        category: 'system',
-        timestamp: new Date(Date.now() - 1000 * 60 * 60 * 2), // 2 hours ago
-        isRead: true,
-        isArchived: false,
-        actions: [
-            { label: 'Deploy Now', action: () => console.log('Deploy'), variant: 'primary' },
-            { label: 'Schedule', action: () => console.log('Schedule'), variant: 'secondary' }
-        ]
-    }
+import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye, EyeOff  } from 'lucide-react';
+,;
+            { label: 'Archive', action: () => // console.log('Archive'), variant: 'secondary' }
+        ];,
+},;
+    {};
+            { label: 'Review Activity', action: () => // console.log('Review security'), variant: 'primary' },;
+            { label: 'Dismiss', action: () => // console.log('Dismiss'), variant: 'secondary' }
+        ];,
+},;
+    {};
+            { label: 'Investigate', action: () => // console.log('Investigate'), variant: 'primary' },;
+            { label: 'Acknowledge', action: () => // console.log('Acknowledge'), variant: 'secondary' }
+        ];,
+},;
+    {};
+            { label: 'Deploy Now', action: () => // console.log('Deploy'), variant: 'primary' },;
+            { label: 'Schedule', action: () => // console.log('Schedule'), variant: 'secondary' }
+        ]}
 ];
 export function AdvancedNotificationSystem() {
     const [notifications, setNotifications] = useState(mockNotifications);
@@ -257,35 +214,33 @@ export function AdvancedNotificationSystem() {
                       
                       <p className="text-sm text-zion-slate-light mb-3 line-clamp-2">
                         {notification.message}
-                      </p>
-                      
-                      {/* Actions */}
-                      {notification.actions && (<div className="flex items-center gap-2">
-                          {notification.actions.map((action, index) => (<button key={index} onClick={action.action} className={`px-3 py-1 text-xs rounded transition-colors ${action.variant === 'primary' ? 'bg-zion-emerald text-white hover:bg-zion-emerald-light' :
-                            action.variant === 'secondary' ? 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30' :
-                                'bg-red-500 text-white hover:bg-red-600'}`}>
+                      </p>;
+
+                      {/* Actions */}";
+                      {};
+                                'bg-red-500 text-white hover:bg-red-600'}`}>;
                               {action.label}
-                            </button>))}
-                        </div>)}
-                    </div>
-                  </div>
-                  
-                  {/* Notification Actions */}
-                  <div className="flex items-center justify-between mt-3 pt-3 border-t border-zion-slate-light/20">
-                    <div className="flex items-center gap-2">
-                      {!notification.isRead && (<button onClick={() => markAsRead(notification.id)} className="text-xs text-zion-cyan hover:text-zion-cyan-light transition-colors">
-                          Mark as read
-                        </button>)}
-                      <button onClick={() => archiveNotification(notification.id)} className="text-xs text-zion-slate-light hover:text-zion-slate transition-colors">
-                        Archive
-                      </button>
-                    </div>
-                    
-                    <button onClick={ () => deleteNotification (notification.id) } className="text - xs text - red - 500 hover:text - red - 600 transition - colors">
-                      <Trash2 className="w - 3 h - 3"      />
-                    </button>
-                  </div>
-                </div>
+                            </button>) ) }
+                        </div>) }
+                    </div>;
+                  </div>;
+
+                  {/* Notification Actions */}";
+                  <div className="flex items-center justify-between mt-3 pt-3 border-t border-zion-slate-light/20">";
+                    <div className="flex items-center gap-2">";
+                      {!notification.isRead && (<button onClick={() => markAsRead(notification.id)} className="text-xs text-zion-cyan hover:text-zion-cyan-light transition-colors">;
+                          Mark as read;
+                        </button>)}";
+                      <button onClick={() => archiveNotification(notification.id)} className="text-xs text-zion-slate-light hover:text-zion-slate transition-colors">;
+                        Archive;
+                      </button>;
+                    </div>;
+                    ";
+                    <button onClick={() => deleteNotification(notification.id)} className="text-xs text-red-500 hover:text-red-600 transition-colors">";
+                      <Trash2 className="w-3 h-3"/>;
+                    </button>;
+                  </div>;
+                </div>;
               </div>))}
           </div>))}
         

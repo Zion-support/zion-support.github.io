@@ -7,7 +7,7 @@ class ErrorBoundary extends React.Component {
   }
   constructor(props) {
     }
-    super(props);
+    super(props) 
 
   }
   
@@ -15,10 +15,10 @@ class ErrorBoundary extends React.Component {
     }
     if (this.state.hasError) {
       }
-      return <div>Something went wrong.</div>;
+      return <div>Something went wrong.</div> 
     }
     
-    return this.props.children;
+    return this.props.children 
   }
 }
 

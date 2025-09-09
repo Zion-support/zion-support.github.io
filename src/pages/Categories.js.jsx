@@ -21,8 +21,15 @@ export default function Categories () {
           </div>
 
           {/* Reuse the Categories Section component */}
-          <CategoriesSection showTitle={false}       />
-        </div>
-      </div>
-    </>) ;
-}
+          <CategoriesSection showTitle={false} />;
+        </div>;
+      </div>;
+
+    </>)}
+
+
+export { Categories }
+export { Categories }
+export { Categories }
+export { Categories }
+export { Categories }

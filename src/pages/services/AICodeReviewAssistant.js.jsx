@@ -3,96 +3,118 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star, ArrowRight } from 'lucide-react';
-const AICodeReviewAssistant = () => {
-    const features = [
-        {
-            title: "Automated Security Vulnerability Detection",
-            description: "AI-powered scanning identifies security flaws, SQL injections, and common vulnerabilities before they reach production",
-            icon: <Shield className="w-6 h-6"      />
-        },
-        {
-            title: "Code Quality Scoring & Metrics",
-            description: "Comprehensive code quality assessment with detailed metrics and improvement recommendations",
-            icon: <BarChart3 className="w-6 h-6"      />
-        },
-        {
-            title: "Best Practice Recommendations",
-            description: "Intelligent suggestions for code improvements, design patterns, and industry best practices",
-            icon: <CheckCircle className="w-6 h-6"      />
-        },
-        {
-            title: "Git Integration & Automation",
-            description: "Seamless integration with GitHub, GitLab, and Bitbucket with automated PR comments and reviews",
-            icon: <GitBranch className="w-6 h-6"      />
-        }
+const AICodeReviewAssistant = () => {}
+  return <div>Component</div>;
+};
+    const features = [];
+        {}
+            title: "Automated Security Vulnerability Detection","";
+            description: "AI-powered scanning identifies security flaws, SQL injections, and common vulnerabilities before they reach production","";
+            icon: <Shield className="w-6 h-6"/>},;
+        {}
+";
+"";
+            title: "Code Quality Scoring & Metrics","";
+            description: "Comprehensive code quality assessment with detailed metrics and improvement recommendations","";
+            icon: <BarChart3 className="w-6 h-6"/>},;
+        {}
+";
+"";
+            title: "Best Practice Recommendations","";
+            description: "Intelligent suggestions for code improvements, design patterns, and industry best practices","";
+            icon: <CheckCircle className="w-6 h-6"/>},;
+        {}
+";
+"";
+            title: "Git Integration & Automation","";
+            description: "Seamless integration with GitHub, GitLab, and Bitbucket with automated PR comments and reviews","";
+            icon: <GitBranch className="w-6 h-6"/>}
     ];
-    const benefits = [
-        {
-            metric: "40-60%",
-            description: "Reduction in code review time",
-            icon: <Clock className="w-5 h-5"      />
-        },
-        {
-            metric: "25%",
-            description: "Improvement in code quality",
-            icon: <TrendingUp className="w-5 h-5"      />
-        },
-        {
-            metric: "90%",
-            description: "Security issues caught early",
-            icon: <Shield className="w-5 h-5"      />
-        },
-        {
-            metric: "24/7",
-            description: "Automated review coverage",
-            icon: <Zap className="w-5 h-5"      />
-        }
+    const benefits = [];
+        {}
+";
+"";
+            metric: "40-60%","";
+            description: "Reduction in code review time","";
+            icon: <Clock className="w-5 h-5"/>},;
+        {}
+";
+"";
+            metric: "25%","";
+            description: "Improvement in code quality","";
+            icon: <TrendingUp className="w-5 h-5"/>},;
+        {}
+";
+"";
+            metric: "90%","";
+            description: "Security issues caught early","";
+            icon: <Shield className="w-5 h-5"/>},;
+        {}
+";
+"";
+            metric: "24/7","";
+            description: "Automated review coverage","";
+            icon: <Zap className="w-5 h-5"/>}
     ];
-    const pricingPlans = [
-        {
-            name: "Starter",
-            price: "$199",
-            period: "/month",
-            description: "Perfect for small development teams",
-            features: [
-                "Up to 10 developers",
-                "Basic security scanning",
-                "GitHub integration",
-                "Standard reporting",
-                "Email support"
-            ],
-            popular: false
-        },
-        {
-            name: "Professional",
-            price: "$399",
-            period: "/month",
-            description: "Ideal for growing development teams",
-            features: [
-                "Up to 25 developers",
-                "Advanced security scanning",
-                "Multi-repo support",
-                "Custom rule sets",
-                "Priority support",
-                "Team analytics"
-            ],
-            popular: true
-        },
-        {
-            name: "Enterprise",
-            price: "Custom",
-            period: "",
-            description: "For large organizations with complex needs",
-            features: [
-                "Unlimited developers",
-                "Custom integrations",
-                "Advanced compliance",
-                "Dedicated support",
-                "Custom training",
-                "SLA guarantees"
-            ],
-            popular: false
-        }
+    const pricingPlans = [];
+        {}
+";
+"";
+            name: "Starter","";
+            price: "$199","";
+            period: "/month","";
+            description: "Perfect for small development teams",";
+            features[;"";
+                "Up to 10 developers","";
+                "Basic security scanning","";
+                "GitHub integration","";
+                "Standard reporting","";
+                "Email support";
+            ],;
+            popular: false},;
+        {}
+";
+"";
+            name: "Professional","";
+            price: "$399","";
+            period: "/month","";
+            description: "Ideal for growing development teams",";
+            features[;"";
+                "Up to 25 developers","";
+                "Advanced security scanning","";
+                "Multi-repo support","";
+                "Custom rule sets","";
+                "Priority support","";
+                "Team analytics";
+            ],;
+            popular: true},;
+        {}
+";
+"";
+            name: "Enterprise","";
+            price: "Custom","";
+            period: ","";
+            description: "For large organizations with complex needs",";
+            features[;"";
+                "Unlimited developers","";
+                "Custom integrations","";
+                "Advanced compliance","";
+                "Dedicated support","";
+                "Custom training","";
+                "SLA guarantees";
+            ],;
+            popular: false}
+    ];";
+    const integrations = ["";
+        "GitHub", "GitLab", "Bitbucket", "Jira", "Slack", "Microsoft Teams", "Discord", "Email";
+    ];";
+    const useCases = ["";
+        "Code quality improvement","";
+        "Security compliance","";
+        "Team productivity enhancement","";
+        "DevOps automation","";
+        "Code standardization","";
+        "Technical debt reduction";
     ];
     const integrations = [
         "GitHub", "GitLab", "Bitbucket", "Jira", "Slack", "Microsoft Teams", "Discord", "Email"
@@ -269,62 +291,73 @@ const AICodeReviewAssistant = () => {
                       <Star className="w-5 h-5 text-yellow-400 mr-3"      />
                       <span className="text-gray-300">{useCase}</span>
                     </div>))}
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.h2 className="text-3xl md:text-4xl font-bold text-white mb-6" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              Ready to Transform Your Code Review Process?
-            </motion.h2>
-            <motion.p className="text-xl text-gray-300 mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-              Join hundreds of development teams already using our AI-powered code review assistant
-            </motion.p>
-            
-            <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
-              <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-                Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5"      />
-              </Link>
-              <a href="tel:+13024640950" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
-                Call: +1 302 464 0950
-              </a>
-            </motion.div>
-
-            <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }}>
-              <h3 className="text-lg font-semibold text-white mb-4">Why Choose Our AI Code Review Assistant?</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">
-                <div className="flex items-center">
-                  <span className="text-green-400 mr-2">✓</span>
-                  AI-Powered Security Scanning
-                </div>
-                <div className="flex items-center">
-                  <span className="text-green-400 mr-2">✓</span>
-                  Seamless Git Integration
-                </div>
-                <div className="flex items-center">
-                  <span className="text-green-400 mr-2">✓</span>
-                  Custom Rule Configuration
-                </div>
-                <div className="flex items-center">
-                  <span className="text-green-400 mr-2">✓</span>
-                  24/7 Automated Coverage
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div className="mt-8 text-sm text-gray-400" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.8 }}>
-              <p>Email: kleber@ziontechgroup.com</p>
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">https://ziontechgroup.com</a></p>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>);
-};
+                </div>;
+              </motion.div>;
+            </div>;
+          </div>;
+        </section>;
+";
+        {/* CTA Section */}"";
+        <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"";
+          <div className="max-w-4xl mx-auto text-center">"";
+            <div>Broken JSX</div>
+}} transition={{ duration: 0.6 }}>;
+              Ready to Transform Your Code Review Process?";
+            </motion.h2>"";
+            <div>Broken JSX</div>
+}}>;
+              Join hundreds of development teams already using our AI-powered code review assistant;
+            </motion.p>";
+            "";
+            <div>Broken JSX</div>
+}}>"";
+              <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">";
+                Start Free Trial"";
+                <ArrowRight className="ml-2 w-5 h-5"/>";
+              </Link>"";
+              <a href="tel:+13024640950" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">;
+                Call: +1 302 464 0950;
+              </a>;
+            </motion.div>";
+"";
+            <div>Broken JSX</div>
+}}>"";
+              <h3 className="text-lg font-semibold text-white mb-4">Why Choose Our AI Code Review Assistant?</h3>"";
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">"";
+                <div className="flex items-center">"";
+                  <span className="text-green-400 mr-2">✓</span>;
+                  AI-Powered Security Scanning";
+                </div>"";
+                <div className="flex items-center">"";
+                  <span className="text-green-400 mr-2">✓</span>;
+                  Seamless Git Integration";
+                </div>"";
+                <div className="flex items-center">"";
+                  <span className="text-green-400 mr-2">✓</span>;
+                  Custom Rule Configuration";
+                </div>"";
+                <div className="flex items-center">"";
+                  <span className="text-green-400 mr-2">✓</span>;
+                  24/7 Automated Coverage;
+                </div>;
+              </div>;
+            </motion.div>";
+"";
+            <div>Broken JSX</div>
+}}>;
+              <p>Email: kleber@ziontechgroup.com</p>";
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>"";
+              <p>Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">https://ziontechgroup.com</a></p>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>)}
 export default AICodeReviewAssistant;
+
+
+export { AICodeReviewAssistant }
+export { AICodeReviewAssistant }
+export { AICodeReviewAssistant }
+export { AICodeReviewAssistant }
+export { AICodeReviewAssistant }

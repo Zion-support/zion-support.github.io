@@ -397,7 +397,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
       reviews: 167;
     };
   ];
-;
+
   const categories = [;
     { id: any'all', name: 'All Services', icon: Star, count: services.length },;
     { id: 'AI & ML', name: 'AI & Machine Learning', icon: Brain, count: services.filter (s  => s.category === 'AI & ML') .length },;
@@ -489,25 +489,24 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
           </div>;
         </div>;
       </section>;
-;
-      {/* Filters and Search */};
-      <section className="py - 8 bg - white / 5 backdrop - blur - sm">;
-        <div role="button" className="container mx - auto px - 4">;
-          <div role="button" className="flex flex - col lg:flex - row gap - 6 items - center justify - between">;
-            {/* Category Filters */};
-            <div role="button" className="flex flex - wrap gap - 3">;
-              {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id};
-                  onClick={ () => setSelectedCategory (category.id) };
-                  className={`flex items - center gap - 2 px - 4 py - 2 rounded - full transition - all duration - 300 ${;
-                    selectedCategory === category.id;
-                      ? 'bg - zion - blue text - white';
-                      : 'bg - zion - slate text - zion - blue - light hover:bg - zion - slate - light';
-                  }`};
-                >;
-                  <category.icon className="w - 4 h - 4"       />;
-                  <span>{category.name}</span>;
-                  <span className="bg - white / 20 px - 2 py - 1 rounded - full text - xs">;
-                    {category.count};
+";
+      {/* Filters and Search */}"";
+      <section className="py-8 bg-white/5 backdrop-blur-sm">"";
+        <div className="container mx-auto px-4">"";
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">";
+            {/* Category Filters */}"";
+            <div className="flex flex-wrap gap-3">;
+              {};
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${}
+';
+                    selectedCategory === category.id'';
+                      ? 'bg-zion-blue text-white'''`;
+                      : 'bg-zion-slate text-zion-blue-light hover:bg-zion-slate-light'``}`}">"";
+                  <category.icon className="w-4 h-4" />";
+                  <span>{category.name}</span>"";
+                  <span className="bg-white/20 px-2 py-1 rounded-full text-xs">;
+                    {category.count}
                   </span>;
                 </button>) ) };
             </div>;
@@ -680,5 +679,11 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
           </motion.div>;
         </div>;
       </section>;
-    </div>) ;
-}
+    </div>;
+  )}
+
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }

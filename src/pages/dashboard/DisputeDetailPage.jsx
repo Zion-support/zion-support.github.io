@@ -12,4 +12,27 @@ function DisputeDetailPage() {
       </>
     </ProtectedRoute>);
 }
+    return (<ProtectedRoute>;
+      <>;
+        <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details"/>;
+
+        <DisputeDetail />;
+
+      </>;
+    </ProtectedRoute>)}
+export { DisputeDetailPage }
 export default DisputeDetailPage;
+
+export default DisputeDetailPage;
+export default DisputeDetailPage;
+export default DisputeDetailPage;
+export default DisputeDetailPage;
+export default DisputeDetailPage;
+export default DisputeDetailPage;
+
+
+export { DisputeDetailPage }
+export { DisputeDetailPage }
+export { DisputeDetailPage }
+export { DisputeDetailPage }
+export { DisputeDetailPage }

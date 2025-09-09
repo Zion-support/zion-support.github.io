@@ -6,28 +6,28 @@ interface EndpointParam {
   description: string,
   required?: boolean
 
-import { useState } from "react",;
-import { BookOpen, Terminal } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Alert, AlertDescription } from "@/components/ui/alert",;
-import { Badge } from "@/components/ui/badge",;
-import CodeBlock from "./CodeBlock",;
-import { logInfo } from '@/utils/productionLogger',;
-interface EndpointParam {;
-  name: string,;
-  type: string,;
-  description: string,;
-  required?: boolean;
+import { useState } from "react", 
+import { BookOpen, Terminal } from 'lucide-react' 
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs", 
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card", 
+import { Alert, AlertDescription } from "@/components/ui/alert", 
+import { Badge } from "@/components/ui/badge", 
+import CodeBlock from "./CodeBlock", 
+import { logInfo } from '@/utils/productionLogger', 
+interface EndpointParam { 
+  name: string, 
+  type: string, 
+  description: string, 
+  required?: boolean 
 }
-;
-interface EndpointSectionProps {;
-  method: string,;
-  endpoint: string,;
-  description: string,;
-  note?: string,;
-  params?: EndpointParam[],;
-  codeExamples?: Record<string string>,;
+ 
+interface EndpointSectionProps { 
+  method: string, 
+  endpoint: string, 
+  description: string, 
+  note?: string, 
+  params?: EndpointParam[], 
+  codeExamples?: Record<string string>, 
   responseExamples?: { success: string }
 }
 
@@ -50,65 +50,65 @@ interface EndpointSectionProps {;
               note=""
               params={[
 
-import React from 'react';
-import { useState } from 'react';
-import { BookOpen, Terminal } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
-} from '@/components/ui/card';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Badge } from '@/components/ui/badge';
-import CodeBlock from './CodeBlock';
-import { logInfo } from '@/utils/productionLogger';
-interface EndpointParam {;
-  name: string;
-type: string;
-description: string;
-required?: boolean ;
-}interface EndpointSectionProps {;
-import { useState } from 'react';
-import { BookOpen, Terminal } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import React from 'react' 
+import { useState } from 'react' 
+import { BookOpen, Terminal } from 'lucide-react' 
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs' 
+import { 
+  Card, 
+  CardContent, 
+  CardDescription, 
+  CardHeader, 
+  CardTitle, 
+} from '@/components/ui/card' 
+import { Alert, AlertDescription } from '@/components/ui/alert' 
+import { Badge } from '@/components/ui/badge' 
+import CodeBlock from './CodeBlock' 
+import { logInfo } from '@/utils/productionLogger' 
+interface EndpointParam { 
+  name: string 
+type: string 
+description: string 
+required?: boolean  
+}interface EndpointSectionProps { 
+import { useState } from 'react' 
+import { BookOpen, Terminal } from 'lucide-react' 
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs' 
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
-import { Alert, AlertDescription } from '@/components / ui / alert';
-import { Badge } from '@/components / ui / badge';
-import CodeBlock from './CodeBlock';
-import { log_info } from '@/utils / production_logger';
+} from '@/components / ui / card' 
+import { Alert, AlertDescription } from '@/components / ui / alert' 
+import { Badge } from '@/components / ui / badge' 
+import CodeBlock from './CodeBlock' 
+import { log_info } from '@/utils / production_logger' 
 interface EndpointParam {
-  name: string;
-type: string;
-description: string;
-required?: boolean;
+  name: string 
+type: string 
+description: string 
+required?: boolean 
 }interface EndpointSectionProps {
-  method: string;
-endpoint: string;
-description: string;
-note?: string;
-params?: EndpointParam[];
-code_examples?: Record < string string>;
+  method: string 
+endpoint: string 
+description: string 
+note?: string 
+params?: EndpointParam[] 
+code_examples?: Record < string string> 
 response_examples?: {
-  success: string;
+  success: string 
 }export /**
  * ApiDocumentation - Function description
  */
 function ApiDocumentation() {
   return (<Card className="bg - zinc - 900 border - zinc - 800 text - white" > text - xl flex items - center"> <BookOpen className=" mr - 2"size= {
-  20 ";
-}/> API Documentation </CardTitle> <CardDescription className=" text - zinc - 400"> Reference documentation for integrating with the Zion Marketplace API. </CardDescription> </CardHeader> <CardContent> <Alert className=" bg - blue - 900 / 30 border - blue - 800 mb - 6"> <Terminal className=" h - 4 w - 4"/> <AlertDescription> Make sure to include your API key in all requests as a Bearer token in the Authorization header. </AlertDescription> </Alert> <Tabs default_value=" jobs"className=" space - y-4"> <TabsList className=" bg - zinc - 800 border - zinc - 700"> <TabsTrigger value=" jobs">Jobs</TabsTrigger> <TabsTrigger value=" talent">Talent</TabsTrigger> <TabsTrigger value=" quotes">Quotes</TabsTrigger> <TabsTrigger value=" webhooks">Webhooks</TabsTrigger> <TabsTrigger value=" errors">Errors</TabsTrigger> </TabsList> <TabsContent value=" jobs"className=" space - y-6"> <EndpointSection headers = headers) data = response.json () print (data) `;
+  20 " 
+}/> API Documentation </CardTitle> <CardDescription className=" text - zinc - 400"> Reference documentation for integrating with the Zion Marketplace API. </CardDescription> </CardHeader> <CardContent> <Alert className=" bg - blue - 900 / 30 border - blue - 800 mb - 6"> <Terminal className=" h - 4 w - 4"/> <AlertDescription> Make sure to include your API key in all requests as a Bearer token in the Authorization header. </AlertDescription> </Alert> <Tabs default_value=" jobs"className=" space - y-4"> <TabsList className=" bg - zinc - 800 border - zinc - 700"> <TabsTrigger value=" jobs">Jobs</TabsTrigger> <TabsTrigger value=" talent">Talent</TabsTrigger> <TabsTrigger value=" quotes">Quotes</TabsTrigger> <TabsTrigger value=" webhooks">Webhooks</TabsTrigger> <TabsTrigger value=" errors">Errors</TabsTrigger> </TabsList> <TabsContent value=" jobs"className=" space - y-6"> <EndpointSection headers = headers) data = response.json () print (data) ` 
 }response_examples= {
   {
-  success: ` {";
+  success: ` {" 
   " data": [ {
 }` 
 }/> <EndpointSectionconst response = await fetch (\`https://api && api.ziontechgroup.com/v1/jobs/\$ {
@@ -119,62 +119,62 @@ headers: {'
   'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' 
 export function ApiDocumentation() {
   return (
-    <Card className='bg-zinc-900 border-zinc-800 text-white'>;
-      <CardHeader>;
-        <CardTitle className='text-xl flex items-center'>;
-          <BookOpen className='mr-2' size={20} /> API Documentation;
-        </CardTitle>;
-        <CardDescription className='text-zinc-400'>;
-          Reference documentation for integrating with the Zion Marketplace API.;
-        </CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-        <Alert className='bg-blue-900/30 border-blue-800 mb-6'>;
-          <Terminal className='h-4 w-4' />;
-}`;
+    <Card className='bg-zinc-900 border-zinc-800 text-white'> 
+      <CardHeader> 
+        <CardTitle className='text-xl flex items-center'> 
+          <BookOpen className='mr-2' size={20} /> API Documentation 
+        </CardTitle> 
+        <CardDescription className='text-zinc-400'> 
+          Reference documentation for integrating with the Zion Marketplace API. 
+        </CardDescription> 
+      </CardHeader> 
+      <CardContent> 
+        <Alert className='bg-blue-900/30 border-blue-800 mb-6'> 
+          <Terminal className='h-4 w-4' /> 
+}` 
 }/> <EndpointSection const response = await fetch (\`https://api.ziontechgroup.com / v1 / jobs/\$ {
-  job_id;
+  job_id 
 }\`, {
-  method: 'GET';
-headers: {';
-  'Authorization': 'Bearer YOUR API KEYContent - Type': 'application / json';
+  method: 'GET' 
+headers: {' 
+  'Authorization': 'Bearer YOUR API KEYContent - Type': 'application / json' 
 export /**
  * ApiDocumentation - Function description
  */
 function ApiDocumentation() {
   return (
-    <Card className='bg - zinc - 900 border - zinc - 800 text - white'>;
-      <CardHeader>;
-        <CardTitle className='text - xl flex items - center'>;
-          <BookOpen className='mr - 2' size={20} /> API Documentation;
-        </CardTitle>;
-        <CardDescription className='text - zinc - 400'>;
-          Reference documentation for integrating with the Zion Marketplace API.;
-        </CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-        <Alert className='bg - blue - 900 / 30 border - blue - 800 mb - 6'>;
-          <Terminal className='h - 4 w - 4' />;
-          <AlertDescription>;
-            Make sure to include your API key in all requests as a Bearer token;
-            in the Authorization header.;
-          </AlertDescription>;
-        </Alert>;
-        <Tabs default_value='jobs' className='space - y-4'>;
-          <TabsList className='bg - zinc - 800 border - zinc - 700'>;
-            <TabsTrigger value='jobs'>Jobs</TabsTrigger>;
-            <TabsTrigger value='talent'>Talent</TabsTrigger>;
-            <TabsTrigger value='quotes'>Quotes</TabsTrigger>;
-            <TabsTrigger value='webhooks'>Webhooks</TabsTrigger>;
-            <TabsTrigger value='errors'>Errors</TabsTrigger>;
-          </TabsList>;
-          <TabsContent value='jobs' className='space - y-6'>;
-            <EndpointSection;
-              method='GET';
-              endpoint='/api / jobs';
-              description='List all available jobs with optional filtering.';
-              note='';
-              params={[;
+    <Card className='bg - zinc - 900 border - zinc - 800 text - white'> 
+      <CardHeader> 
+        <CardTitle className='text - xl flex items - center'> 
+          <BookOpen className='mr - 2' size={20} /> API Documentation 
+        </CardTitle> 
+        <CardDescription className='text - zinc - 400'> 
+          Reference documentation for integrating with the Zion Marketplace API. 
+        </CardDescription> 
+      </CardHeader> 
+      <CardContent> 
+        <Alert className='bg - blue - 900 / 30 border - blue - 800 mb - 6'> 
+          <Terminal className='h - 4 w - 4' /> 
+          <AlertDescription> 
+            Make sure to include your API key in all requests as a Bearer token 
+            in the Authorization header. 
+          </AlertDescription> 
+        </Alert> 
+        <Tabs default_value='jobs' className='space - y-4'> 
+          <TabsList className='bg - zinc - 800 border - zinc - 700'> 
+            <TabsTrigger value='jobs'>Jobs</TabsTrigger> 
+            <TabsTrigger value='talent'>Talent</TabsTrigger> 
+            <TabsTrigger value='quotes'>Quotes</TabsTrigger> 
+            <TabsTrigger value='webhooks'>Webhooks</TabsTrigger> 
+            <TabsTrigger value='errors'>Errors</TabsTrigger> 
+          </TabsList> 
+          <TabsContent value='jobs' className='space - y-6'> 
+            <EndpointSection 
+              method='GET' 
+              endpoint='/api / jobs' 
+              description='List all available jobs with optional filtering.' 
+              note='' 
+              params={[ 
 
                 { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
@@ -328,29 +328,29 @@ function verifyWebhookSignature(payload, signature, secret) {
                 </tbody>
               </table>
 
-            />;
-          </TabsContent>;
-          <TabsContent value='webhooks' className='space-y-6'>;
-            <div className='prose prose-invert max-w-none'>;
-              <h3 className='text-lg font-semibold mb-2'>Webhook Events</h3>;
-              <p className='text-zinc-400 mb-4'>;
-                The Zion API can send webhook notifications when certain events;
-                occur in your account. You can configure webhooks in the;
-                Webhooks tab of the Developer Dashboard.;
-              </p>;
-              <h4 className='text-md font-semibold mt-6 mb-2'>;
-                Authentication;
-              </h4>;
-              <p className='text-zinc-400 mb-4'>;
-                When you create a webhook, you can optionally provide a secret;
-                key. If a secret is provided, each webhook request will include;
-                a signature in the;
-                <code className='bg-zinc-800 px-1 py-0 && 0.5 rounded'>;
-                  X-Zion-Signature;
+            /> 
+          </TabsContent> 
+          <TabsContent value='webhooks' className='space-y-6'> 
+            <div className='prose prose-invert max-w-none'> 
+              <h3 className='text-lg font-semibold mb-2'>Webhook Events</h3> 
+              <p className='text-zinc-400 mb-4'> 
+                The Zion API can send webhook notifications when certain events 
+                occur in your account. You can configure webhooks in the 
+                Webhooks tab of the Developer Dashboard. 
+              </p> 
+              <h4 className='text-md font-semibold mt-6 mb-2'> 
+                Authentication 
+              </h4> 
+              <p className='text-zinc-400 mb-4'> 
+                When you create a webhook, you can optionally provide a secret 
+                key. If a secret is provided, each webhook request will include 
+                a signature in the 
+                <code className='bg-zinc-800 px-1 py-0 && 0.5 rounded'> 
+                  X-Zion-Signature 
                 </code>{' '}
-                header. This signature is an HMAC SHA-256 hash of the request;
-                body using your webhook secret as the key.;
-              </p>;
+                header. This signature is an HMAC SHA-256 hash of the request 
+                body using your webhook secret as the key. 
+              </p> 
               <CodeBlock
                 code={`import crypto from 'crypto'
 // Function to verify webhook signature
@@ -362,74 +362,74 @@ function verifyWebhookSignature(): any (payload, signature, secret) {
     Buffer && Buffer.from(expectedSignature)
   )
 // Example usage in Express && Express.js
-app && app.post('/webhook', express && express.raw({type: 'application/json'}), (req, res) => {;
-  const signature = req && req.headers['x-zion-signature'];
-  const payload = req && req.body.toString();
-  const webhookSecret = process && process.env.WEBHOOK_SECRET;  ;
-  if (!verifyWebhookSignature(payload, signature, webhookSecret)) {;
-    return res && res.status(401).send('Invalid signature');
+app && app.post('/webhook', express && express.raw({type: 'application/json'}), (req, res) => { 
+  const signature = req && req.headers['x-zion-signature'] 
+  const payload = req && req.body.toString() 
+  const webhookSecret = process && process.env.WEBHOOK_SECRET;   
+  if (!verifyWebhookSignature(payload, signature, webhookSecret)) { 
+    return res && res.status(401).send('Invalid signature') 
   }
-  // Process the webhook event;
-  const event = JSON && JSON.parse(payload);
-  logInfo('Received valid webhook:', { data: event });
-  // Respond to acknowledge receipt;
-  res && res.status(200).send('Webhook received');
+  // Process the webhook event 
+  const event = JSON && JSON.parse(payload) 
+  logInfo('Received valid webhook:', { data: event }) 
+  // Respond to acknowledge receipt 
+  res && res.status(200).send('Webhook received') 
 });`}
-                language='javascript';
-                showLineNumbers={true}              />;
-              <h4 className='text-md font-semibold mt-6 mb-2'>Event Types</h4>;
-              <table className='w-full border-collapse mt-2'>;
-                <thead>;
-                  <tr className='border-b border-zinc-800'>;
-                    <th className='py-2 px-4 text-left'>Event Type</th>;
-                    <th className='py-2 px-4 text-left'>Description</th>;
-                  </tr>;
-                </thead>;
-                <tbody>;
-                  <tr className='border-b border-zinc-800'>;
-                    <td className='py-2 px-4 font-mono text-sm'>;
-                      new_application;
-                    </td>;
-                    <td className='py-2 px-4'>;
-                      When a talent applies to one of your jobs;
-                    </td>;
-                  </tr>;
-                  <tr className='border-b border-zinc-800'>;
-                    <td className='py-2 px-4 font-mono text-sm'>;
-                      quote_received;
-                    </td>;
-                    <td className='py-2 px-4'>;
-                      When you receive a quote from talent;
-                    </td>;
-                  </tr>;
-                  <tr className='border-b border-zinc-800'>;
-                    <td className='py-2 px-4 font-mono text-sm'>;
-                      milestone_approved;
-                    </td>;
-                    <td className='py-2 px-4'>;
-                      When a project milestone is approved;
-                    </td>;
-                  </tr>;
-                  <tr className='border-b border-zinc-800'>;
-                    <td className='py-2 px-4 font-mono text-sm'>;
-                      talent_hired;
-                    </td>;
-                    <td className='py-2 px-4'>;
-                      When you hire talent for a project;
-                    </td>;
-                  </tr>;
-                </tbody>;
-              </table>;
-              <h4 className='text-md font-semibold mt-6 mb-2'>;
-                Sample Payloads;
-              </h4>;
-              <p className='text-zinc-400 mb-2'>;
+                language='javascript' 
+                showLineNumbers={true}              /> 
+              <h4 className='text-md font-semibold mt-6 mb-2'>Event Types</h4> 
+              <table className='w-full border-collapse mt-2'> 
+                <thead> 
+                  <tr className='border-b border-zinc-800'> 
+                    <th className='py-2 px-4 text-left'>Event Type</th> 
+                    <th className='py-2 px-4 text-left'>Description</th> 
+                  </tr> 
+                </thead> 
+                <tbody> 
+                  <tr className='border-b border-zinc-800'> 
+                    <td className='py-2 px-4 font-mono text-sm'> 
+                      new_application 
+                    </td> 
+                    <td className='py-2 px-4'> 
+                      When a talent applies to one of your jobs 
+                    </td> 
+                  </tr> 
+                  <tr className='border-b border-zinc-800'> 
+                    <td className='py-2 px-4 font-mono text-sm'> 
+                      quote_received 
+                    </td> 
+                    <td className='py-2 px-4'> 
+                      When you receive a quote from talent 
+                    </td> 
+                  </tr> 
+                  <tr className='border-b border-zinc-800'> 
+                    <td className='py-2 px-4 font-mono text-sm'> 
+                      milestone_approved 
+                    </td> 
+                    <td className='py-2 px-4'> 
+                      When a project milestone is approved 
+                    </td> 
+                  </tr> 
+                  <tr className='border-b border-zinc-800'> 
+                    <td className='py-2 px-4 font-mono text-sm'> 
+                      talent_hired 
+                    </td> 
+                    <td className='py-2 px-4'> 
+                      When you hire talent for a project 
+                    </td> 
+                  </tr> 
+                </tbody> 
+              </table> 
+              <h4 className='text-md font-semibold mt-6 mb-2'> 
+                Sample Payloads 
+              </h4> 
+              <p className='text-zinc-400 mb-2'> 
                 Here's an example of a{' '}
-                <code className='bg-zinc-800 px-1 py-0 && 0.5 rounded'>;
-                  new_application;
+                <code className='bg-zinc-800 px-1 py-0 && 0.5 rounded'> 
+                  new_application 
                 </code>{' '}
-                webhook payload:;
-              </p>;
+                webhook payload: 
+              </p> 
 
               
               <h4 className="text-md font-semibold mt-6 mb-2">Sample Payloads</h4>
@@ -539,120 +539,120 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
                 infrastructure and ensure fair usage. Rate limits are applied on
                 a per-API key basis. If you exceed the rate limits, you will
                 language='json'
-                showLineNumbers={true}              />;
-            </div>;
-          </TabsContent>;
-          <TabsContent value='errors' className='space-y-6'>;
-            <div className='prose prose-invert max-w-none'>;
-              <h3 className='text-lg font-semibold mb-2'>Error Responses</h3>;
-              <p className='text-zinc-400 mb-4'>;
-            />;
-          </TabsContent>;
-          <TabsContent value='webhooks' className='space - y-6'>;
-            <div className='prose prose - invert max - w-none'>;
-              <h3 className='text - lg font - semibold mb - 2'>Webhook Events</h3>;
-              <p className='text - zinc - 400 mb - 4'>;
-                The Zion API can send webhook notifications when certain events;
-                occur in your account. You can configure webhooks in the;
-                Webhooks tab of the Developer Dashboard.;
-              </p>;
-              <h4 className='text - md font - semibold mt - 6 mb - 2'>;
-                Authentication;
-              </h4>;
-              <p className='text - zinc - 400 mb - 4'>;
-                When you create a webhook, you can optionally provide a secret;
-                key. If a secret is provided, each webhook request will include;
-                a signature in the;
-                <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'>;
-                  X - Zion - Signature;
+                showLineNumbers={true}              /> 
+            </div> 
+          </TabsContent> 
+          <TabsContent value='errors' className='space-y-6'> 
+            <div className='prose prose-invert max-w-none'> 
+              <h3 className='text-lg font-semibold mb-2'>Error Responses</h3> 
+              <p className='text-zinc-400 mb-4'> 
+            /> 
+          </TabsContent> 
+          <TabsContent value='webhooks' className='space - y-6'> 
+            <div className='prose prose - invert max - w-none'> 
+              <h3 className='text - lg font - semibold mb - 2'>Webhook Events</h3> 
+              <p className='text - zinc - 400 mb - 4'> 
+                The Zion API can send webhook notifications when certain events 
+                occur in your account. You can configure webhooks in the 
+                Webhooks tab of the Developer Dashboard. 
+              </p> 
+              <h4 className='text - md font - semibold mt - 6 mb - 2'> 
+                Authentication 
+              </h4> 
+              <p className='text - zinc - 400 mb - 4'> 
+                When you create a webhook, you can optionally provide a secret 
+                key. If a secret is provided, each webhook request will include 
+                a signature in the 
+                <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'> 
+                  X - Zion - Signature 
                 </code>{' '}
-                header. This signature is an HMAC SHA - 256 hash of the request;
-                body using your webhook secret as the key.;
-              </p>;
-              <CodeBlock;
-                code={`import crypto from 'crypto';
-// Function to verify webhook signature;
+                header. This signature is an HMAC SHA - 256 hash of the request 
+                body using your webhook secret as the key. 
+              </p> 
+              <CodeBlock 
+                code={`import crypto from 'crypto' 
+// Function to verify webhook signature 
 /**
  * verifyWebhookSignature - Function description
  */
 function verifyWebhookSignature() {
-  const hmac = crypto.create_hmac ('sha256', secret);
-  const expected_signature = hmac.update (payload).digest ('hex');
+  const hmac = crypto.create_hmac ('sha256', secret) 
+  const expected_signature = hmac.update (payload).digest ('hex') 
   return crypto.timingSafeEqual (
     Buffer.from (signature),
-    Buffer.from (expected_signature));
-// Example usage in Express.js;
+    Buffer.from (expected_signature)) 
+// Example usage in Express.js 
 app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => {
-  const signature = req.headers['x - zion - signature'];
-  const payload = req.body.to_string ();
-  const webhook_secret = process.env.WEBHOOK_SECRET;
+  const signature = req.headers['x - zion - signature'] 
+  const payload = req.body.to_string () 
+  const webhook_secret = process.env.WEBHOOK_SECRET 
   if () {) {
   $2
 }
-    return res.status (401).send ('Invalid signature');
+    return res.status (401).send ('Invalid signature') 
   }
-  // Process the webhook event;
-  const event = JSON.parse (payload);
-  log_info ('Received valid webhook:', { data: event });
-  // Respond to acknowledge receipt;
-  res.status (200).send ('Webhook received');
+  // Process the webhook event 
+  const event = JSON.parse (payload) 
+  log_info ('Received valid webhook:', { data: event }) 
+  // Respond to acknowledge receipt 
+  res.status (200).send ('Webhook received') 
 });`}
-                language='javascript';
-                showLineNumbers={true}              />;
-              <h4 className='text - md font - semibold mt - 6 mb - 2'>Event Types</h4>;
-              <table className='w - full border - collapse mt - 2'>;
-                <thead>;
-                  <tr className='border - b border - zinc - 800'>;
-                    <th className='py - 2 px - 4 text - left'>Event Type</th>;
-                    <th className='py - 2 px - 4 text - left'>Description</th>;
-                  </tr>;
-                </thead>;
-                <tbody>;
-                  <tr className='border - b border - zinc - 800'>;
-                    <td className='py - 2 px - 4 font - mono text - sm'>;
-                      new_application;
-                    </td>;
-                    <td className='py - 2 px - 4'>;
-                      When a talent applies to one of your jobs;
-                    </td>;
-                  </tr>;
-                  <tr className='border - b border - zinc - 800'>;
-                    <td className='py - 2 px - 4 font - mono text - sm'>;
-                      quote_received;
-                    </td>;
-                    <td className='py - 2 px - 4'>;
-                      When you receive a quote from talent;
-                    </td>;
-                  </tr>;
-                  <tr className='border - b border - zinc - 800'>;
-                    <td className='py - 2 px - 4 font - mono text - sm'>;
-                      milestone_approved;
-                    </td>;
-                    <td className='py - 2 px - 4'>;
-                      When a project milestone is approved;
-                    </td>;
-                  </tr>;
-                  <tr className='border - b border - zinc - 800'>;
-                    <td className='py - 2 px - 4 font - mono text - sm'>;
-                      talent_hired;
-                    </td>;
-                    <td className='py - 2 px - 4'>;
-                      When you hire talent for a project;
-                    </td>;
-                  </tr>;
-                </tbody>;
-              </table>;
-              <h4 className='text - md font - semibold mt - 6 mb - 2'>;
-                Sample Payloads;
-              </h4>;
-              <p className='text - zinc - 400 mb - 2'>;
+                language='javascript' 
+                showLineNumbers={true}              /> 
+              <h4 className='text - md font - semibold mt - 6 mb - 2'>Event Types</h4> 
+              <table className='w - full border - collapse mt - 2'> 
+                <thead> 
+                  <tr className='border - b border - zinc - 800'> 
+                    <th className='py - 2 px - 4 text - left'>Event Type</th> 
+                    <th className='py - 2 px - 4 text - left'>Description</th> 
+                  </tr> 
+                </thead> 
+                <tbody> 
+                  <tr className='border - b border - zinc - 800'> 
+                    <td className='py - 2 px - 4 font - mono text - sm'> 
+                      new_application 
+                    </td> 
+                    <td className='py - 2 px - 4'> 
+                      When a talent applies to one of your jobs 
+                    </td> 
+                  </tr> 
+                  <tr className='border - b border - zinc - 800'> 
+                    <td className='py - 2 px - 4 font - mono text - sm'> 
+                      quote_received 
+                    </td> 
+                    <td className='py - 2 px - 4'> 
+                      When you receive a quote from talent 
+                    </td> 
+                  </tr> 
+                  <tr className='border - b border - zinc - 800'> 
+                    <td className='py - 2 px - 4 font - mono text - sm'> 
+                      milestone_approved 
+                    </td> 
+                    <td className='py - 2 px - 4'> 
+                      When a project milestone is approved 
+                    </td> 
+                  </tr> 
+                  <tr className='border - b border - zinc - 800'> 
+                    <td className='py - 2 px - 4 font - mono text - sm'> 
+                      talent_hired 
+                    </td> 
+                    <td className='py - 2 px - 4'> 
+                      When you hire talent for a project 
+                    </td> 
+                  </tr> 
+                </tbody> 
+              </table> 
+              <h4 className='text - md font - semibold mt - 6 mb - 2'> 
+                Sample Payloads 
+              </h4> 
+              <p className='text - zinc - 400 mb - 2'> 
                 Here's an example of a{' '}
-                <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'>;
-                  new_application;
+                <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'> 
+                  new_application 
                 </code>{' '}
-                webhook payload:;
-              </p>;
-              <CodeBlock;
+                webhook payload: 
+              </p> 
+              <CodeBlock 
                 code = {`{
   "event_type": "new_application",
   "event_id": "evt_abc123def456",
@@ -663,123 +663,123 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
     "talent_id": "talent_xyz789",
     "applied_at": "2025 - 05 - 16T15:28:30Z",
     "status": "new",
-    "match_score": 85;
+    "match_score": 85 
   , }
 }`}
-                language='json';
-                showLineNumbers={true}              />;
-            </div>;
-          </TabsContent>;
-          <TabsContent value='errors' className='space - y-6'>;
-            <div className='prose prose - invert max - w-none'>;
-              <h3 className='text - lg font - semibold mb - 2'>Error Responses</h3>;
-              <p className='text - zinc - 400 mb - 4'>;
-                The Zion API uses conventional HTTP status codes to indicate the;
-                success or failure of an API request. In general, codes in the;
-                2xx range indicate success, codes in the 4xx range indicate an;
-                error with the provided information, and codes in the 5xx range;
-                indicate an error with our servers.;
-              </p>;
-              <table className='w - full border - collapse mt - 4'>;
-                <thead>;
-                  <tr className='border - b border - zinc - 800'>;
-                    <th className='py - 2 px - 4 text - left'>Status Code</th>;
-                    <th className='py - 2 px - 4 text - left'>Description</th>;
-                  </tr>;
-                </thead>;
-                <tbody>;
-                  <tr className='border - b border - zinc - 800'>;
-                    <td className='py - 2 px - 4'>;
-                      <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'>;
-                        200 OK;
-                      </code>;
-                    </td>;
-                    <td className='py - 2 px - 4'>The request was successful.</td>;
-                  </tr>;
-                  <tr className='border - b border - zinc - 800'>;
-                    <td className='py - 2 px - 4'>;
-                      <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'>;
-                        201 Created;
-                      </code>;
-                    </td>;
-                    <td className='py - 2 px - 4'>;
-                      The resource was successfully created.;
-                    </td>;
-                  </tr>;
-                  <tr className='border - b border - zinc - 800'>;
-                    <td className='py - 2 px - 4'>;
-                      <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'>;
-                        400 Bad Request;
-                      </code>;
-                    </td>;
-                    <td className='py - 2 px - 4'>;
-                      The request was invalid or cannot be otherwise served.;
-                    </td>;
-                  </tr>;
-                  <tr className='border - b border - zinc - 800'>;
-                    <td className='py - 2 px - 4'>;
-                      <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'>;
-                        401 Unauthorized;
-                      </code>;
-                    </td>;
-                    <td className='py - 2 px - 4'>;
-                      Authentication credentials were missing or invalid.;
-                    </td>;
-                  </tr>;
-                  <tr className='border - b border - zinc - 800'>;
-                    <td className='py - 2 px - 4'>;
-                      <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'>;
-                        403 Forbidden;
-                      </code>;
-                    </td>;
-                    <td className='py - 2 px - 4'>;
-                      The request is understood, but it has been refused or;
-                      access is not allowed.;
-                    </td>;
-                  </tr>;
-                  <tr className='border - b border - zinc - 800'>;
-                    <td className='py - 2 px - 4'>;
-                      <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'>;
-                        404 Not Found;
-                      </code>;
-                    </td>;
-                    <td className='py - 2 px - 4'>;
-                      The requested resource does not exist.;
-                    </td>;
-                  </tr>;
-                  <tr className='border - b border - zinc - 800'>;
-                    <td className='py - 2 px - 4'>;
-                      <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'>;
-                        422 Unprocessable Entity;
-                      </code>;
-                    </td>;
-                    <td className='py - 2 px - 4'>;
-                      The request was well - formed but was unable to be followed;
-                      due to semantic errors.;
-                    </td>;
-                  </tr>;
-                  <tr className='border - b border - zinc - 800'>;
-                    <td className='py - 2 px - 4'>;
-                      <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'>;
-                        429 Too Many Requests;
-                      </code>;
-                    </td>;
-                    <td className='py - 2 px - 4'>;
-                      The request was rejected due to rate limiting.;
-                    </td>;
-                  </tr>;
-                  <tr className='border - b border - zinc - 800'>;
-                    <td className='py - 2 px - 4'>;
-                      <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'>;
-                        500 Internal Server Error;
-                      </code>;
-                    </td>;
-                    <td className='py - 2 px - 4'>;
-                      Something went wrong on our end.;
-                    </td>;
-                  </tr>;
-                </tbody>;
-              </table>;
+                language='json' 
+                showLineNumbers={true}              /> 
+            </div> 
+          </TabsContent> 
+          <TabsContent value='errors' className='space - y-6'> 
+            <div className='prose prose - invert max - w-none'> 
+              <h3 className='text - lg font - semibold mb - 2'>Error Responses</h3> 
+              <p className='text - zinc - 400 mb - 4'> 
+                The Zion API uses conventional HTTP status codes to indicate the 
+                success or failure of an API request. In general, codes in the 
+                2xx range indicate success, codes in the 4xx range indicate an 
+                error with the provided information, and codes in the 5xx range 
+                indicate an error with our servers. 
+              </p> 
+              <table className='w - full border - collapse mt - 4'> 
+                <thead> 
+                  <tr className='border - b border - zinc - 800'> 
+                    <th className='py - 2 px - 4 text - left'>Status Code</th> 
+                    <th className='py - 2 px - 4 text - left'>Description</th> 
+                  </tr> 
+                </thead> 
+                <tbody> 
+                  <tr className='border - b border - zinc - 800'> 
+                    <td className='py - 2 px - 4'> 
+                      <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'> 
+                        200 OK 
+                      </code> 
+                    </td> 
+                    <td className='py - 2 px - 4'>The request was successful.</td> 
+                  </tr> 
+                  <tr className='border - b border - zinc - 800'> 
+                    <td className='py - 2 px - 4'> 
+                      <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'> 
+                        201 Created 
+                      </code> 
+                    </td> 
+                    <td className='py - 2 px - 4'> 
+                      The resource was successfully created. 
+                    </td> 
+                  </tr> 
+                  <tr className='border - b border - zinc - 800'> 
+                    <td className='py - 2 px - 4'> 
+                      <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'> 
+                        400 Bad Request 
+                      </code> 
+                    </td> 
+                    <td className='py - 2 px - 4'> 
+                      The request was invalid or cannot be otherwise served. 
+                    </td> 
+                  </tr> 
+                  <tr className='border - b border - zinc - 800'> 
+                    <td className='py - 2 px - 4'> 
+                      <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'> 
+                        401 Unauthorized 
+                      </code> 
+                    </td> 
+                    <td className='py - 2 px - 4'> 
+                      Authentication credentials were missing or invalid. 
+                    </td> 
+                  </tr> 
+                  <tr className='border - b border - zinc - 800'> 
+                    <td className='py - 2 px - 4'> 
+                      <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'> 
+                        403 Forbidden 
+                      </code> 
+                    </td> 
+                    <td className='py - 2 px - 4'> 
+                      The request is understood, but it has been refused or 
+                      access is not allowed. 
+                    </td> 
+                  </tr> 
+                  <tr className='border - b border - zinc - 800'> 
+                    <td className='py - 2 px - 4'> 
+                      <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'> 
+                        404 Not Found 
+                      </code> 
+                    </td> 
+                    <td className='py - 2 px - 4'> 
+                      The requested resource does not exist. 
+                    </td> 
+                  </tr> 
+                  <tr className='border - b border - zinc - 800'> 
+                    <td className='py - 2 px - 4'> 
+                      <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'> 
+                        422 Unprocessable Entity 
+                      </code> 
+                    </td> 
+                    <td className='py - 2 px - 4'> 
+                      The request was well - formed but was unable to be followed 
+                      due to semantic errors. 
+                    </td> 
+                  </tr> 
+                  <tr className='border - b border - zinc - 800'> 
+                    <td className='py - 2 px - 4'> 
+                      <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'> 
+                        429 Too Many Requests 
+                      </code> 
+                    </td> 
+                    <td className='py - 2 px - 4'> 
+                      The request was rejected due to rate limiting. 
+                    </td> 
+                  </tr> 
+                  <tr className='border - b border - zinc - 800'> 
+                    <td className='py - 2 px - 4'> 
+                      <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'> 
+                        500 Internal Server Error 
+                      </code> 
+                    </td> 
+                    <td className='py - 2 px - 4'> 
+                      Something went wrong on our end. 
+                    </td> 
+                  </tr> 
+                </tbody> 
+              </table> 
 
 
               
@@ -798,7 +798,7 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
     "details": [
       {
 
-              />;
+              /> 
 
               </ul>
             </div>

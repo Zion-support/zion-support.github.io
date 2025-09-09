@@ -27,10 +27,9 @@ export default function WishlistPage() {
         const stored = safeStorage.getItem(getCartKey(user?.id));
         const cart = stored ? JSON.parse(stored) : [];
         cart.push({ id: item.id, name: item.title || 'Item', price: item.price || 0, quantity: 1 });
-        safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));
-        dispatch({ type: 'SET_ITEMS', payload: cart });
-    };
-    const productMap = MARKETPLACE_LISTINGS.reduce((acc, p) => {
+        safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));';
+        dispatch({ type: 'SET_ITEMS', payload: cart })}
+    const productMap = MARKETPLACE_LISTINGS.reduce((acc, p) => {}
         acc[p.id] = p;
         return acc;
     }, {});
@@ -55,5 +54,11 @@ export default function WishlistPage() {
               </div>) : null;
             })}
         </div>)}
-    </div>);
-}
+    </div>)}
+
+
+export { WishlistPage }
+export { WishlistPage }
+export { WishlistPage }
+export { WishlistPage }
+export { WishlistPage }

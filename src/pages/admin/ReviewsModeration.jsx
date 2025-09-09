@@ -17,26 +17,35 @@ function ReviewsModerationContent() {
             // For now, let's simulate a delay and return empty data
             await new Promise(resolve => setTimeout(resolve, 1000));
             setReviews([]);
-            setIsLoading(false);
-        }
-        catch (error) {
-            console.error("Error fetching reviews:", error);
-            toast({
-                title: "Error",
-                description: "Failed to load reviews. Please try again later.",
-                variant: "destructive",
-            });
-            setIsLoading(false);
-        }
-    };
-    useEffect(() => {
-        fetchReviews();
-    }, [activeTab]);
-    const handleRefresh = () => {
-        fetchReviews();
-    };
-    return (<>
-      <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace"      />
+            setIsLoading(false)}
+        catch (error) {}
+";
+"";
+            // // // // // // // // console.error("Error fetching reviews:", error);
+            toast({}
+";
+"";
+                title: "Error","";
+                description: "Failed to load reviews. Please try again later.","";
+                variant: "destructive"});
+            setIsLoading(false)}
+    }
+    useEffect(() => {}
+        fetchReviews()}, [activeTab]);
+    const handleRefresh = () => {}
+  return <div>Component</div>;
+};
+        fetchReviews()};";
+    return (<>"";
+      <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace"/>";
+"";
+      <main className="container mx-auto px-4 py-8">"";
+        <div className="flex justify-between items-center mb-8">";
+          <div>"";
+            <h1 className="text-3xl font-bold">Review Moderation</h1>"";
+            <p className="text-muted-foreground mt-1">Manage, approve, or reject reviews</p>;
+          </div>;
+        </div>;
 
       <main className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">
@@ -87,3 +96,10 @@ export default function ReviewsModeration() {
     return (<ProtectedRoute>
       <ReviewsModerationContent       />
     </ProtectedRoute>)}
+
+
+export { ReviewsModerationContent, ReviewsModeration }
+export { ReviewsModerationContent, ReviewsModeration }
+export { ReviewsModerationContent, ReviewsModeration }
+export { ReviewsModerationContent, ReviewsModeration }
+export { ReviewsModerationContent, ReviewsModeration }

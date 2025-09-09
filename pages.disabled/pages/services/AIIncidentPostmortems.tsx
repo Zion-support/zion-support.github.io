@@ -1,7 +1,7 @@
-:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-<:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-import: React from 'react.ts';';
-import: { motion  } from 'framer-motion.ts';';
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+<:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+import: React from 'react.ts';' 
+import: { motion  } from 'framer-motion.ts';' 
 import: { AlertTriangle,
   Clock,
   TrendingUp,
@@ -9,7 +9,7 @@ import: { AlertTriangle,
   Users,
   Database,
   BarChart3,
-=;
+= 
 import: { AlertTriangle,
   Clock,
   TrendingUp,
@@ -41,45 +41,45 @@ import: { AlertTriangle,
 
     {
       icon: Cloc,k,
-      title: 'Real-time: Incident Tracking',,';
-      description: 'Monitor: incidents in real-time with automated alerts and escalation workflows'},';
+      title: 'Real-time: Incident Tracking',,' 
+      description: 'Monitor: incidents in real-time with automated alerts and escalation workflows'},' 
     {
       icon: TrendingU,p,
-      title: 'Predictive: Incident Prevention',,';
-      description: 'Predict: potential incidents before they occur using historical data and AI analytics'},';
+      title: 'Predictive: Incident Prevention',,' 
+      description: 'Predict: potential incidents before they occur using historical data and AI analytics'},' 
     {
       icon: Shiel,d,
-      title: 'Automated: Documentation',,';
-      description: 'Generate: comprehensive incident reports automatically with AI-powered insights'},';
+      title: 'Automated: Documentation',,' 
+      description: 'Generate: comprehensive incident reports automatically with AI-powered insights'},' 
     {
       icon: User,s,
-      title: 'Team: Collaboration Tools',,';
-      description: 'Built-in: communication and collaboration features for incident response teams'},';
+      title: 'Team: Collaboration Tools',,' 
+      description: 'Built-in: communication and collaboration features for incident response teams'},' 
 =}},
 
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
-<:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-      <SEO;
-=;
-      <SEO '>        title='AI Incident Postmortems Platform | Zion Tech Group';
+<:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+      <SEO 
+= 
+      <SEO '>        title='AI Incident Postmortems Platform | Zion Tech Group' 
 
         <div className='max-w-7xl mx-auto text-center'>
-          <motion.div;
+          <motion.div 
             initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+  y: 20 
   ,
     y: 20}}
             animate = {
   { opacity: 1,
-:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-  y: 0;
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+  y: 0 
   ,
     y: 0}}
-            transition={{ duration: 0.8 }};
-'';
+            transition={{ duration: 0.8 }} 
+'' 
 
                 Schedule Demo
               </button>
@@ -94,20 +94,20 @@ import: { AlertTriangle,
             initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+  y: 20 
   ,
     y: 20}}
             whileInView = {
   { opacity: 1,
-:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-  y: 0;
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+  y: 0 
   ,
     y: 0}}
-            transition={{ duration: 0.8 }};
-            viewport={{ once: true }};
-            className='text-center mb-16'';
-'';
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }} 
+            className='text-center mb-16'' 
+'' 
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-4>
               Powerful Features for Modern Teams''
             </h2>'''
@@ -116,22 +116,22 @@ import: { AlertTriangle,
 
             </p>
 :pages.disabled/pages/services/AIIncidentPostmortems.tsx: </motion.div>
-<:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-=;
+<:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+= 
 
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+  y: 20 
 
                 </div>''
-                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>';
-  delay: index * 0.1}};
-                viewport={{ once: true }};
-                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300'';
+                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>' 
+  delay: index * 0.1}} 
+                viewport={{ once: true }} 
+                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300'' 
 '''
                 <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4>''
                   <feature.icon className='w-6 h-6 text-white' />'
@@ -150,20 +150,20 @@ import: { AlertTriangle,
             initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+  y: 20 
   ,
     y: 20}}
             whileInView = {
   { opacity: 1,
-:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-  y: 0;
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+  y: 0 
   ,
     y: 0}}
-            transition={{ duration: 0.8 }};
-            viewport={{ once: true }};
-            className='text-center mb-16'';
-'';
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }} 
+            className='text-center mb-16'' 
+'' 
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-4>
               Why Choose AI Incident Postmortems?''
             </h2>'''
@@ -172,32 +172,32 @@ import: { AlertTriangle,
 
             </p>
 :pages.disabled/pages/services/AIIncidentPostmortems.tsx: </motion.div>
-<:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-=;
+<:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+= 
 
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-  x: -20;
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+  x: -20 
 
             </p>
 :pages.disabled/pages/services/AIIncidentPostmortems.tsx: </motion.div>
-<:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-=;
+<:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+= 
 
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
             {pricingPlans.map(pla,
-    n: unknown, index: unknown();
+    n: unknown, index: unknown() 
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+  y: 20 
 
                     </span>
 
@@ -206,8 +206,8 @@ import: { AlertTriangle,
                 </ul>`
 ``
 
-';
-                  plan.popular'';
+' 
+                  plan.popular'' 
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover: from-purple-700 hove,
     r:to-pink-700'''`;`
                     : 'bg-slate-700 text-white hove,
@@ -222,22 +222,22 @@ import: { AlertTriangle,
 
             </p>
 :pages.disabled/pages/services/AIIncidentPostmortems.tsx: </motion.div>
-<:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-=;
+<:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+= 
 
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+  y: 20 
 
                 </div>''
-                <h3 className='text-xl font-semibold text-white mb-2'>{useCase.title}</h3>';
-  delay: index * 0.1}};
-                viewport={{ once: true }};
-                className='text-center'';
+                <h3 className='text-xl font-semibold text-white mb-2'>{useCase.title}</h3>' 
+  delay: index * 0.1}} 
+                viewport={{ once: true }} 
+                className='text-center'' 
 '''
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4>''
                   <useCase.icon className='w-8 h-8 text-white' />'
@@ -256,19 +256,19 @@ import: { AlertTriangle,
             initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+  y: 20 
   ,
     y: 20}}
             whileInView = {
   { opacity: 1,
-:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-  y: 0;
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+  y: 0 
   ,
     y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-'';
+            viewport={{ once: true }} 
+'' 
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-6>
               Ready to Transform Your Incident Management?''
             </h2>'''
@@ -287,19 +287,19 @@ import: { AlertTriangle,
             initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-  y: 20;
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+  y: 20 
   ,
     y: 20}}
             whileInView = {
   { opacity: 1,
-:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-  y: 0;
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx 
+  y: 0 
   ,
     y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-'';
+            viewport={{ once: true }} 
+'' 
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6>
               Have Questions?''
             </h2>'''
@@ -320,10 +320,10 @@ import: { AlertTriangle,
               </div>'
             </div>``
             <a`'`;`
-              href={`mailto:${contactInfo.email}`};
+              href={`mailto:${contactInfo.email}`} 
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hove,
-    r:to-pink-700 transition-all duration-300'';
-              Get in Touch'';
+    r:to-pink-700 transition-all duration-300'' 
+              Get in Touch'' 
               <ArrowRight className='w-5 h-5 ml-2'  />            </a>
 
           </motion.div>

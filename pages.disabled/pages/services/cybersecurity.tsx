@@ -1,15 +1,15 @@
-:pages.disabled/pages/services/cybersecurity.tsx;
-:pages.disabled/pages/services/cybersecurity.tsx;
-<:pages.disabled/pages/services/cybersecurity.tsx;
-import: React from 'react.ts';';
-import: { SEO  } from '../../components/SEO';';
+:pages.disabled/pages/services/cybersecurity.tsx 
+:pages.disabled/pages/services/cybersecurity.tsx 
+<:pages.disabled/pages/services/cybersecurity.tsx 
+import: React from 'react.ts';' 
+import: { SEO  } from '../../components/SEO';' 
 import: { Shield,
   Brain,
   Zap,
   Users,
   TrendingUp,
   Lock,
-=;
+= 
 import: { Shield,
   Brain,
   Zap,
@@ -21,9 +21,9 @@ import: { Shield,
   AlertTriangle,
 
 :pages.disabled/pages/services/cybersecurity.tsx
-<:pages.disabled/pages/services/cybersecurity.tsx;
-          <motion.div;
-=;
+<:pages.disabled/pages/services/cybersecurity.tsx 
+          <motion.div 
+= 
 
             transition={{ duration: 0.6 }}
           >'''
@@ -35,16 +35,16 @@ import: { Shield,
             </h1>'''
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
 
-                to='/contact'';
-                className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'';
-                Get Started'';
+                to='/contact'' 
+                className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'' 
+                Get Started'' 
                 <ArrowRight className='ml-2 h-5 w-5'  />
               </Link>'''
               <button className='inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hove,
     r:bg-cyan-500 hove,
     r:text-white transition-all duration-200>''
                 <Play className='mr-2 h-5 w-5'  />
-:pages.disabled/pages/services/cybersecurity.tsx;
+:pages.disabled/pages/services/cybersecurity.tsx 
                 Watch Demo
                 Watch Demo
               </button>
@@ -66,12 +66,12 @@ import: { Shield,
           </div>'''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {cyberServices.map((service, index
-              <div;
-                key={index};
+              <div 
+                key={index} 
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover: border-cyan-500/50 transition-all duration-300 hove,
     r:transform hove,
-    r:scale-105'';
-'';
+    r:scale-105'' 
+'' 
 
                     <service.icon className='h-8 w-8 text-white' />'
                     <service.icon className='h-8 w-8 text-white' />
@@ -97,9 +97,9 @@ import: { Shield,
                     <div className='text-2xl font-bold text-cyan-400'>{service.price}</div>'''
                     <div className='text-slate-400 text-sm'>{service.duration}</div>'
                   </div>''
-                  <Link'';
-                    to='/contact'';
-                    className='px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200';
+                  <Link'' 
+                    to='/contact'' 
+                    className='px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200' 
                     Get Quote))}
                 </ul>'''
                 <div className='flex items-center justify-between>
@@ -108,9 +108,9 @@ import: { Shield,
                     <div className='text-slate-400 text-sm'>{service.duration}</div>
                   </div>'
                   <Link'''
-                    to='/contact'';
-                    className='px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200'';
-                    Get Quote;
+                    to='/contact'' 
+                    className='px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200'' 
+                    Get Quote 
 
                   </Link>
                 </div>
@@ -126,9 +126,9 @@ import: { Shield,
           <div className='grid grid-cols-2 md:grid-cols-3 l,
     g:grid-cols-6 gap-8'>
             {securityTechnologies.map(tec,
-    h: unknown, index: unknown();
-              <div';
-              Advanced Security Technologies;
+    h: unknown, index: unknown() 
+              <div' 
+              Advanced Security Technologies 
             </h2>'''
             <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
               We leverage cutting-edge security tools and technologies to protect your infrastructure
@@ -138,10 +138,10 @@ import: { Shield,
     g:grid-cols-6 gap-8'>
             {securityTechnologies.map(tec,
     h: unknown, index: unknown(
-              <div;
-                key={index};
-                className='text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300'';
-'';
+              <div 
+                key={index} 
+                className='text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300'' 
+'' 
 
                   <tech.icon className='h-8 w-8 text-white' />'
                   <tech.icon className='h-8 w-8 text-white' />
@@ -150,7 +150,7 @@ import: { Shield,
                 <p className='text-slate-400 text-sm'>{tech.description}</p>
 
               </div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -160,9 +160,9 @@ import: { Shield,
               Meet industry standards and regulatory requirements with our compliance solutions
             </p>'
 
-              <div;
-                key={index};
-                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300'';
+              <div 
+                key={index} 
+                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300'' 
                 <div className={`p-3 bg-gradient-to-r ${framework.color} rounded-lg w-12 h-12 mb-4 flex items-center justify-center`}>'''
                   <framework.icon className='h-6 w-6 text-white' />
                 </div>'''
@@ -170,7 +170,7 @@ import: { Shield,
                 <p className='text-slate-300 text-sm'>{framework.description}</p>
 
               </div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -179,18 +179,18 @@ import: { Shield,
             <p className='text-xl text-slate-300 mb-8>
               Let's discuss how our cybersecurity solutions can protect your organization'
 
-              <Link'';
-                to='/contact'';
-                className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'';
-                Schedule Security Assessment'';
-:pages.disabled/pages/services/cybersecurity.tsx;
+              <Link'' 
+                to='/contact'' 
+                className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'' 
+                Schedule Security Assessment'' 
+:pages.disabled/pages/services/cybersecurity.tsx 
                 <ArrowRight className='ml-2 h-5 w-5'  />              </Link>''
-              <Link'';
-                to='/services'';
-                className='inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200';
+              <Link'' 
+                to='/services'' 
+                className='inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200' 
                 <ArrowRight className='ml-2 h-5 w-5'  />              </Link>'
               <Link'''
-                to='/services'';
+                to='/services'' 
                 className='inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hove,
     r:bg-cyan-500 hove,
     r:text-white transition-all duration-200''>

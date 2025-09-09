@@ -461,21 +461,39 @@ export function AdvancedAIBusinessProcessAutomation() {
                   </span>
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getPriorityColor(process.priority)}`}>
                     {process.priority}
-                  </span>
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getAutomationLevelColor(process.automationLevel)}`}>
-                    {process.automationLevel.replace('-', ' ')}
-                  </span>
-                </div>
-
-                {showAIInsights && (<div className="mb - 4">
-                    <h4 className="font - medium text - sm mb - 2 flex items - center gap - 2">
-                      <Brain className="w - 4 h - 4 text - zion - blue"      />
-                      AI Insights
-                    </h4>
-                    <div className="space - y-2">
-                      {process.aiInsights.map ( (insight, idx) => (<div key={idx} className="flex items - start gap - 2 text - sm">
-                          <Lightbulb className="w - 4 h - 4 text - yellow - 500 mt - 0.5 flex - shrink - 0"      />
-                          <span className="text - zion - slate">{insight}</span>
+                  </span>`;
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getAutomationLevelColor(process.automationLevel)}`}>;
+                    {process.automationLevel.replace('-')}
+                  </span>;
+                </div>;
+";
+                {};
+                      {process.aiInsights.map((insight, idx) => (<div key={idx} className="flex items-start gap-2 text-sm">";
+                          <Lightbulb className="w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0"/>";
+                          <span className="text-zion-slate">{insight}</span>;
+                        </div>))}
+                    </div>;
+                  </div>) }
+;
+                {};
+                      {process.rules.map(rule => (<div key={rule.id} className="p-3 bg-zion-slate-light/10 rounded-lg">";
+                          <div className="flex items-center justify-between mb-2">";
+                            <span className="font-medium text-sm">{rule.name}</span>`;
+                            <div>Broken JSX</div>
+                            : 'bg-red-100 text-red-700 dark:bg-red-900/20 dark:text-red-400'}`}>;
+                              {rule.isActive ? 'Active' : 'Inactive'}
+                            </span>;
+                          </div>";
+                          <p className="text-xs text-zion-slate-light mb-2">If: {rule.condition}</p>";
+                          <p className="text-xs text-zion-slate-light">Then: {rule.action}</p>";
+                          <div className="flex items-center justify-between mt-2">";
+                            <span className="text-xs text-zion-slate-light">;
+                              Priority: {rule.priority}
+                            </span>";
+                            <span className="text-xs text-zion-slate-light">;
+                              Triggered: {rule.triggerCount} times;
+                            </span>;
+                          </div>;
                         </div>) ) }
                     </div>
                   </div>)}

@@ -38,18 +38,8 @@ export default function NextGenInnovativeServices() {
                 staggerChildren: 0.1
             }
         }
-    };
-    const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.5
-            }
-        }
-    };
-    return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+    }
+    return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">;
       {/* Header Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
@@ -230,17 +220,18 @@ export default function NextGenInnovativeServices() {
             </motion.div>))}
         </motion.div>
 
-        {/* No Results */}
-        {filteredServices.length === 0 && (<div className="text-center py-12">
-            <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>
-            <button onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('all');
-            }} className="text-blue-400 hover:text-blue-300 transition-colors">
-              Clear filters
-            </button>
-          </div>)}
-      </div>
+        {/* No Results */}";
+        {};
+              onClick={() => {}
+';
+                setSearchTerm('');';
+                setSelectedCategory('all');"}}"";
+              className="text-blue-400 hover:text-blue-300 transition-colors">;
+              Clear filters;
+            </button>;
+          </div>;
+        )}
+      </div>;
 
       {/* Service Detail Modal */}
       {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
@@ -255,194 +246,223 @@ export default function NextGenInnovativeServices() {
                     </span>
                     <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full">
                       {selectedService.subcategory}
-                    </span>
-                  </div>
-                  <h2 className="text-3xl font-bold text-white mb-3">{selectedService.title}</h2>
-                  <p className="text-gray-300 text-lg leading-relaxed">{selectedService.description}</p>
-                </div>
-                <button onClick={() => setSelectedService(null)} className="text-gray-400 hover:text-white transition-colors ml-4">
-                  ✕
-                </button>
-              </div>
-
-              {/* Price and Support */}
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-white/10 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-white mb-4">Pricing & Support</h3>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Monthly Price:</span>
-                      <span className="text-2xl font-bold text-blue-400">
-                        {formatPrice(selectedService.price, selectedService.currency)}
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Market Price:</span>
-                      <span className="text-white">{selectedService.marketPrice}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Support Level:</span>
-                      <span className={`px-2 py-1 text-xs text-white rounded ${getSupportLevelColor(selectedService.supportLevel)}`}>
+                    </span>";
+                  </div>"";
+                  <h2 className="text-3xl font-bold text-white mb-3">;
+                    {selectedService.title}";
+                  </h2>"";
+                  <p className="text-gray-300 text-lg leading-relaxed">;
+                    {selectedService.description}
+                  </p>;
+                </div>;
+                <div>Broken JSX</div>
+                  onClick={() => setSelectedService(null)}"";
+                  className="text-gray-400 hover:text-white transition-colors ml-4">;
+                  ✕;
+                </button>;
+              </div>;
+";
+              {/* Price and Support */}"";
+              <div className="grid md:grid-cols-2 gap-6 mb-8">"";
+                <div className="bg-white/10 rounded-lg p-6">"";
+                  <h3 className="text-xl font-bold text-white mb-4">;
+                    Pricing & Support";
+                  </h3>"";
+                  <div className="space-y-3">"";
+                    <div className="flex justify-between">"";
+                      <span className="text-gray-400">Monthly Price:</span>"";
+                      <span className="text-2xl font-bold text-blue-400">;
+                        {};
+                        )}
+                      </span>";
+                    </div>"";
+                    <div className="flex justify-between">"";
+                      <span className="text-gray-400">Market Price:</span>"";
+                      <span className="text-white">;
+                        {selectedService.marketPrice}
+                      </span>";
+                    </div>"";
+                    <div className="flex justify-between">"";
+                      <span className="text-gray-400">Support Level:</span>`;
+                      <div>Broken JSX</div>
+                      >;
                         {selectedService.supportLevel}
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Delivery Time:</span>
-                      <span className="text-white">{selectedService.estimatedDelivery}</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white/10 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-white mb-4">Business Impact</h3>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">ROI:</span>
-                      <span className="text-green-400 font-semibold">{selectedService.roi}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Market Size:</span>
-                      <span className="text-white">{selectedService.marketSize}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Implementation:</span>
-                      <span className="text-white">{selectedService.implementationTime}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Features and Benefits */}
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div>
-                  <h3 className="text - xl font - bold text - white mb - 4 flex items - center">
-                    <CheckCircle size={20} className="mr - 2 text - green - 400"       />
-                    Key Features
-                  </h3>
-                  <ul className="space-y-2">
-                    {selectedService.features.map((feature, index) => (<li key={index} className="flex items-start text-gray-300">
-                        <div className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                      </span>";
+                    </div>"";
+                    <div className="flex justify-between">"";
+                      <span className="text-gray-400">Delivery Time:</span>"";
+                      <span className="text-white">;
+                        {selectedService.estimatedDelivery}
+                      </span>;
+                    </div>;
+                  </div>;
+                </div>";
+"";
+                <div className="bg-white/10 rounded-lg p-6">"";
+                  <h3 className="text-xl font-bold text-white mb-4">;
+                    Business Impact";
+                  </h3>"";
+                  <div className="space-y-3">"";
+                    <div className="flex justify-between">"";
+                      <span className="text-gray-400">ROI:</span>"";
+                      <span className="text-green-400 font-semibold">;
+                        {selectedService.roi}
+                      </span>";
+                    </div>"";
+                    <div className="flex justify-between">"";
+                      <span className="text-gray-400">Market Size:</span>"";
+                      <span className="text-white">;
+                        {selectedService.marketSize}
+                      </span>";
+                    </div>"";
+                    <div className="flex justify-between">"";
+                      <span className="text-gray-400">Implementation:</span>"";
+                      <span className="text-white">;
+                        {selectedService.implementationTime}
+                      </span>;
+                    </div>;
+                  </div>;
+                </div>;
+              </div>;
+";
+              {/* Features and Benefits */}"";
+              <div className="grid md:grid-cols-2 gap-8 mb-8">";
+                <div>"";
+                  <h3 className="text-xl font-bold text-white mb-4 flex items-center">"";
+                    <CheckCircle size={20} className="mr-2 text-green-400" />;
+                    Key Features";
+                  </h3>"";
+                  <ul className="space-y-2">;
+                    {};
                         {feature}
-                      </li>))}
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text - xl font - bold text - white mb - 4 flex items - center">
-                    <TrendingUp size={20} className="mr - 2 text - blue - 400"       />
-                    Benefits
-                  </h3>
-                  <ul className="space-y-2">
-                    {selectedService.benefits.map((benefit, index) => (<li key={index} className="flex items-start text-gray-300">
-                        <div className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                      </li>;
+                    ))}
+                  </ul>;
+                </div>;
+";
+                <div>"";
+                  <h3 className="text-xl font-bold text-white mb-4 flex items-center">"";
+                    <TrendingUp size={20} className="mr-2 text-blue-400" />;
+                    Benefits";
+                  </h3>"";
+                  <ul className="space-y-2">;
+                    {};
                         {benefit}
-                      </li>))}
-                  </ul>
-                </div>
-              </div>
-
-              {/* Use Cases and Target Audience */}
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Use Cases</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedService.useCases.map((useCase, index) => (<span key={index} className="px-3 py-1 bg-purple-400/20 text-purple-400 rounded-full text-sm">
+                      </li>;
+                    ))}
+                  </ul>;
+                </div>;
+              </div>;
+";
+              {/* Use Cases and Target Audience */}"";
+              <div className="grid md:grid-cols-2 gap-8 mb-8">";
+                <div>"";
+                  <h3 className="text-xl font-bold text-white mb-4">;
+                    Use Cases";
+                  </h3>"";
+                  <div className="flex flex-wrap gap-2">;
+                    {};
                         {useCase}
-                      </span>))}
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Target Audience</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedService.targetAudience.map((audience, index) => (<span key={index} className="px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-sm">
+                      </span>;
+                    ))}
+                  </div>;
+                </div>;
+";
+                <div>"";
+                  <h3 className="text-xl font-bold text-white mb-4">;
+                    Target Audience";
+                  </h3>"";
+                  <div className="flex flex-wrap gap-2">;
+                    {};
                         {audience}
-                      </span>))}
-                  </div>
-                </div>
-              </div>
+                      </span>;
+                    ))}
+                  </div>;
+                </div>;
+              </div>;
+";
+              {/* Competitive Advantage */}"";
+              <div className="bg-white/10 rounded-lg p-6 mb-8">"";
+                <h3 className="text-xl font-bold text-white mb-4 flex items-center">"";
+                  <Award size={20} className="mr-2 text-yellow-400" />;
+                  Competitive Advantage";
+                </h3>"";
+                <p className="text-gray-300 text-lg">;
+                  {selectedService.competitiveAdvantage}
+                </p>;
+              </div>;
+";
+              {/* CTA Buttons */}"";
+              <div className="flex flex-col sm:flex-row gap-4">`;
+                <div>Broken JSX</div>
+                  className="flex-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg text-center font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center"">"";
+                  <Mail size={20} className="mr-2" />;
+                  Get Quote;
+                </a>`;
+                <div>Broken JSX</div>
+                  className="flex-1 bg-gray-700 text-white px-6 py-3 rounded-lg text-center font-semibold hover:bg-gray-600 transition-all duration-300 flex items-center justify-center"">"";
+                  <Phone size={20} className="mr-2" />;
+                  Call Now;
+                </a>;
+                {};
+                    <ExternalLink size={20} className="mr-2" />;
+                    View Demo;
+                  </a>;
+                )}
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      )}
+";
+      {/* Contact CTA */}"";
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">;
+        <div>Broken JSX</div>
+          className="text-center"">"";
+          <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-12">"";
+            <h2 className="text-4xl font-bold text-white mb-6">;
+              Ready to Innovate?";
+            </h2>"";
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+              Our team of technology experts is ready to help you implement;
+              cutting-edge AI solutions that will give you a competitive;
+              advantage. Get in touch today to start your innovation journey.";
+            </p>"";
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+              <div>Broken JSX</div>
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center"">"";
+                <Phone size={24} className="mr-2" />;
+                Call +1 302 464 0950;
+              </a>";
+              <div>Broken JSX</div>
+                className="bg-gray-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-600 transition-all duration-300 flex items-center justify-center"">"";
+                <Mail size={24} className="mr-2" />;
+                Email Us;
+              </a>";
+              <div>Broken JSX</div>
+                className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300 flex items-center justify-center"">"";
+                <Globe size={24} className="mr-2" />;
+                Visit Website;
+              </a>";
+            </div>"";
+            <div className="mt-8 text-gray-400">;
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
+              <p>';
+                Website:{' '}";
+                <div>Broken JSX</div>
+                  className="text-blue-400 hover:text-blue-300">;
+                  https://ziontechgroup.com;
+                </a>;
+              </p>;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </div>)}
 
-              {/* Competitive Advantage */}
-              <div className="bg - white / 10 rounded - lg p - 6 mb - 8">
-                <h3 className="text - xl font - bold text - white mb - 4 flex items - center">
-                  <Award size={20} className="mr - 2 text - yellow - 400"       />
-                  Competitive Advantage
-                </h3>
-                <p className="text-gray-300 text-lg">{selectedService.competitiveAdvantage}</p>
-              </div>
 
-              {/* CTA Buttons */}
-              <div className="flex flex - col sm:flex - row gap - 4">
-                <a
-                  href={`mailto:${selectedService.contactInfo.email}?subject = Inquiry about ${selectedService.title}`}
-                  className="flex - 1 bg - gradient - to - r from - blue - 500 to - purple - 500 text - white px - 6 py - 3 rounded - lg text - center font - semibold hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300 flex items - center justify - center"
-                >
-                  <Mail size={20} className="mr - 2"       />
-                  Get Quote
-                </a>
-                <a
-                  href={`tel:${selectedService.contactInfo.phone}`}
-                  className="flex - 1 bg - gray - 700 text - white px - 6 py - 3 rounded - lg text - center font - semibold hover:bg - gray - 600 transition - all duration - 300 flex items - center justify - center"
-                >
-                  <Phone size={20} className="mr - 2"       />
-                  Call Now
-                </a>
-                {selectedService.demoUrl && (<a
-                    href={selectedService.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex - 1 border - 2 border - blue - 400 text - blue - 400 px - 6 py - 3 rounded - lg text - center font - semibold hover:bg - blue - 400 hover:text - white transition - all duration - 300 flex items - center justify - center"
-                  >
-                    <ExternalLink size={20} className="mr - 2"       />
-                    View Demo
-                  </a>)}
-              </div>
-            </div>
-          </motion.div>
-        </div>)}
-
-      {/* Contact CTA */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.5 }} className="text-center">
-          <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-12">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Innovate?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Our team of technology experts is ready to help you implement cutting-edge AI solutions that will give you a competitive advantage. 
-              Get in touch today to start your innovation journey.
-            </p>
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">
-              <a
-                href="tel:+13024640950"
-                className="bg - gradient - to - r from - blue - 500 to - purple - 500 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300 flex items - center justify - center"
-              >
-                <Phone size={24} className="mr - 2"       />
-                Call + 1 302 464 0950
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="bg - gray - 700 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - gray - 600 transition - all duration - 300 flex items - center justify - center"
-              >
-                <Mail size={24} className="mr - 2"       />
-                Email Us
-              </a>
-              <a
-                href="https://ziontechgroup.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border - 2 border - blue - 400 text - blue - 400 px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - blue - 400 hover:text - white transition - all duration - 300 flex items - center justify - center"
-              >
-                <Globe size={24} className="mr - 2"       />
-                Visit Website
-              </a>
-            </div>
-            <div className="mt-8 text-gray-400">
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">https://ziontechgroup.com</a></p>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </div>);
-}
+export { NextGenInnovativeServices }
+export { NextGenInnovativeServices }
+export { NextGenInnovativeServices }
+export { NextGenInnovativeServices }
+export { NextGenInnovativeServices }

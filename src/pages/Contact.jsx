@@ -30,86 +30,27 @@ export default function Contact() {
     timeline: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    if (!validateForm()) {
-      return;
-    }
-
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitted(true);
-      setIsSubmitting(false);
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: '',
-        budget: '',
-        timeline: ''
-      });
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => setIsSubmitted(false), 5000);
-    }, 2000);
-  };
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const contactMethods = [
-    {
-      icon: <Phone className="w-6 h-6" />,
-      title: "Phone",
-      details: "+1 302 464 0950",
-      description: "Call us directly for immediate assistance",
-      action: "tel:+13024640950",
-      color: "from-zion-cyan to-zion-blue"
-    },
-    {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email",
-      details: "kleber@ziontechgroup.com",
-      description: "Send us a detailed message anytime",
-      action: "mailto:kleber@ziontechgroup.com",
-      color: "from-zion-purple to-zion-purple-dark"
-    },
-    {
-      icon: <MapPin className="w-6 h-6" />,
-      title: "Office",
-      details: "364 E Main St STE 1008, Middletown DE 19709",
-      description: "Visit our headquarters for in-person meetings",
-      action: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709",
-      color: "from-zion-green to-zion-cyan"
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Business Hours",
-      details: "Monday - Friday: 9:00 AM - 6:00 PM EST",
-      description: "Available for consultations and support",
-      color: "from-zion-purple to-zion-pink"
-    }
+  const contactMethods = [;
+    {};
+},;
+    {};
+},;
+    {};
+},;
+    {};
+}
   ];
 
-  const socialLinks = [
-    { icon: <Linkedin className="w-5 h-5" />, href: "https://www.linkedin.com/company/zion-tech-group", label: "LinkedIn", color: "hover:text-blue-600" },
-    { icon: <Twitter className="w-5 h-5" />, href: "https://twitter.com/ziontechgroup", label: "Twitter", color: "hover:text-blue-400" },
-    { icon: <Facebook className="w-5 h-5" />, href: "https://www.facebook.com/ziontechgroup", label: "Facebook", color: "hover:text-blue-500" },
-    { icon: <Instagram className="w-5 h-5" />, href: "https://www.instagram.com/ziontechgroup", label: "Instagram", color: "hover:text-pink-500" },
-    { icon: <Github className="w-5 h-5" />, href: "https://github.com/ziontechgroup", label: "GitHub", color: "hover:text-gray-400" },
-    { icon: <Globe className="w-5 h-5" />, href: "https://ziontechgroup.com", label: "Website", color: "hover:text-zion-cyan" }
+  const services = [;
+    "AI & Machine Learning",;
+    "Cloud Solutions",;
+    "Cybersecurity",;
+    "Digital Transformation",;
+    "Software Development",;
+    "Consulting",;
+    "Other";
   ];
 
   const services = [
@@ -418,84 +359,74 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-6">Connect With Us</h3>
-                <div className="flex flex-wrap gap-4">
-                  {socialLinks.map((social, index) => (
-                    <motion.a
-                      key={index}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`p-3 bg-white/10 border border-zion-cyan/20 rounded-lg text-zion-slate-light ${social.color} transition-all duration-300 hover:bg-white/20 hover:scale-110`}
-                      aria-label={social.label}
-                      title={social.label}
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <social.icon className="w - 5 h - 5"       />
-                    </a>) ) }
-                </div>
-              </div>
+              <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-xl p-6">;
+                <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>;
+                <ul className="space-y-3 text-gray-300">;
+                  <li className="flex items-center gap-3">;
+                    <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />;
+                    <span>Expert team with 20+ years combined experience</span>;
+                  </li>;
+                  <li className="flex items-center gap-3">;
+                    <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />;
+                    <span>Proven track record of successful projects</span>;
+                  </li>;
+                  <li className="flex items-center gap-3">;
+                    <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />;
+                    <span>Cutting-edge technology solutions</span>;
+                  </li>;
+                  <li className="flex items-center gap-3">;
+                    <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />;
+                    <span>24/7 support and maintenance</span>;
+                  </li>;
+                </ul>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </div>;
+      </section>;
+";
+      {/* Map Section */}"";
+      <section className="py-20 bg-zion-blue-dark/50">"";
+        <div className="container-responsive">;
+          <div>Broken JSX</div>
+            className="text-center mb-16"">"";
+            <h2 className="text-4xl font-bold text-white mb-4">;
+              Visit Our Office";
+            </h2>"";
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
+              Located in the heart of Middletown, Delaware, our office is easily;
+              accessible and ready to welcome you for in-person meetings and;
+              consultations.;
+            </p>;
+          </motion.div>";
+"";
+          <div className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 text-center">"";
+            <div className="w-full h-64 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-xl flex items-center justify-center mb-6">"";
+              <div className="text-center">"";
+                <MapPin className="w-16 h-16 text-zion-cyan mx-auto mb-4" />"";
+                <p className="text-zion-slate-light">;
+                  Interactive Map Coming Soon;
+                </p>;
+              </div>";
+            </div>"";
+            <div className="text-center">"";
+              <h3 className="text-xl font-bold text-white mb-2">;
+                Zion Tech Group";
+              </h3>"";
+              <p className="text-zion-cyan">364 E Main St STE 1008</p>"";
+              <p className="text-zion-slate-light">Middletown, DE 19709</p>"";
+              <p className="text-zion-slate-light text-sm mt-2">;
+                United States;
+              </p>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  )}
 
-              <div className="bg - gradient - to - r from - zion - cyan / 10 to - zion - purple / 10 border border - zion - cyan / 20 rounded - 2xl p - 6">
-                <h3 className="text - xl font - bold text - white mb - 4">
-                  Why Choose Us?
-                </h3>
-                <ul className="space - y-3 text - zion - slate - light">
-                  <li className="flex items - center gap - 3">
-                    <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0"       />
-                    <span > Expert team with 20 + years combined experience</span>
-                  </li>
-                  <li className="flex items - center gap - 3">
-                    <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0"       />
-                    <span > Proven track record of successful projects</span>
-                  </li>
-                  <li className="flex items - center gap - 3">
-                    <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0"       />
-                    <span > Cutting - edge technology solutions</span>
-                  </li>
-                  <li className="flex items - center gap - 3">
-                    <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0"       />
-                    <span > 24 / 7 support and maintenance</span>
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
-      {/* Map Section */}
-      <section className="py-16 bg-zion-slate-dark">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Visit Our Office</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Located in the heart of Delaware, our office is easily accessible and ready to welcome you for in-person meetings.
-            </p>
-          </motion.div>
-
-          <div className="bg - zion - blue - dark / 30 border border - zion - cyan / 20 rounded - 2xl p - 8 text - center">
-            <div className="w - full h - 64 bg - gradient - to - br from - zion - cyan / 20 to - zion - purple / 20 rounded - xl flex items - center justify - center mb - 6">
-              <div className="text - center">
-                <MapPin className="w - 16 h - 16 text - zion - cyan mx - auto mb - 4"       />
-                <p className="text - zion - slate - light">
-                  Interactive Map Coming Soon
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default Contact;
+export { Contact }
+export { Contact }
+export { Contact }
+export { Contact }

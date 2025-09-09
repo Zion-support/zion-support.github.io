@@ -1,9 +1,15 @@
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
 import { toast } from '@/hooks/use-toast';
-// import { Button } from '@/components/ui/button'; // Unused
-// import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react'; // Unused
+import { Button } from '@/components/ui/Button';
+import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
+
+
+
+
+
 import * as Sentry from '@sentry/nextjs';
-import { logError as appLogError } from '@/utils/productionLogger'; // Renamed to avoid conflict with param
+import {logErrorToProduction} from '@/utils/productionLogger';
+
 
 interface ErrorContextType {
   reportError: (error: Error, context?: any) => void;
@@ -25,7 +31,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
   const reportError = useCallback((error: Error, context?: any) => {
     // Log to console for development
     if (process.env.NODE_ENV === 'development') {
-      appLogError('Global Error Handler:', { data: { error, context }}); // Use appLogError and pass context in data
+      logErrorToProduction('Global Error Handler:', error, context);
     }
 
     // Report to Sentry for production

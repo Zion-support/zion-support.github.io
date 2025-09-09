@@ -35,7 +35,7 @@ const QuantumAIPlatform = () => {;
       ];
     };
   ];
-;
+
   const pricingPlans = [;
     {;
       name: "Quantum Starter",;
@@ -78,7 +78,7 @@ const QuantumAIPlatform = () => {;
       popular: false;
     };
   ];
-;
+
   const useCases = [;
     {;
       name: "Financial Services",;
@@ -108,7 +108,7 @@ const QuantumAIPlatform = () => {;
       ];
     };
   ];
-;
+
   const quantumAdvantages = [;
     {;
       title: "Exponential Speedup",;
@@ -135,7 +135,7 @@ const QuantumAIPlatform = () => {;
       metric: "100%";
     };
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -644,7 +644,12 @@ const QuantumAIPlatform = () => {;
         </div>;
       </section>;
     </div>;
-  );
-};
-;
+  )}
 export default QuantumAIPlatform;
+
+
+export { QuantumAIPlatform }
+export { QuantumAIPlatform }
+export { QuantumAIPlatform }
+export { QuantumAIPlatform }
+export { QuantumAIPlatform }

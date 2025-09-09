@@ -103,83 +103,44 @@ const ServiceComparison = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-16 px-6 bg-zion-blue-light/5">
-        <div className="max-w-4xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-lg text-zion-slate-light">
-              Discover how our comparison tool can transform your decision-making process
-            </p>
-          </motion.div>
-
-          <div className="space - y-4">
-            {benefits.map ( (benefit, index) => (<motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items - start gap - 3"
-              >
-                <CheckCircle className="w - 5 h - 5 text - zion - cyan mt - 1 flex - shrink - 0"       />
-                <span className="text - zion - slate - dark">{benefit}</span>
-              </motion.div>) ) }
-          </div>
-        </div>
-      </section>
-
-      {/* Comparison Tool Section */}
-      <section id="comparison-tool" className="py-16 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
-              Start Comparing Services
-            </h2>
-            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
-              Use our advanced comparison tool to evaluate different service tiers, 
-              features, and pricing options to find your perfect match.
-            </p>
-          </motion.div>
-
-          <AdvancedServiceComparison       />
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Need Help Choosing?
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Our expert team is here to help you navigate through our services 
-              and find the perfect solution for your business needs.
-            </p>
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">
-              <Button
-                className="bg - white text - zion - purple hover:bg - zion - slate - light text - lg px - 8 py - 4"
-                onClick={ () =>
-                  window.open ('mailto:kleber@ziontechgroup.com?subject = Service Selection Help',
-                    '_blank') }
-              >
-                <Users className="w - 5 h - 5 mr - 2"       />
-                Get Expert Consultation
-              </Button>
-              <Button
-                className="border - white text - white hover:bg - white hover:text - zion - purple text - lg px - 8 py - 4"
-                onClick={ () => window.open ('tel:+13024640950', '_blank') }
-              >
-                <Zap className="w - 5 h - 5 mr - 2"       />
-                Call Now
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>);
-};
+          <AdvancedServiceComparison />;
+        </div>;
+      </section>;
+";
+      {/* CTA Section */}"";
+      <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan">"";
+        <div className="max-w-4xl mx-auto text-center">;
+          <div>Broken JSX</div>
+            viewport={{ once: true }}">"";
+            <h2 className="text-4xl font-bold text-white mb-6">;
+              Need Help Choosing?";
+            </h2>"";
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">;
+              Our expert team is here to help you navigate through our services;
+              and find the perfect solution for your business needs.";
+            </p>"";
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+              <div>Broken JSX</div>
+                onClick={};
+}">"";
+                <Users className="w-5 h-5 mr-2" />;
+                Get Expert Consultation;
+              </Button>";
+              <div>Broken JSX</div>
+                onClick={() => window.open('tel:+13024640950',_blank')}">"";
+                <Zap className="w-5 h-5 mr-2" />;
+                Call Now;
+              </Button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>)}
 export default ServiceComparison;
+
+
+export { ServiceComparison }
+export { ServiceComparison }
+export { ServiceComparison }
+export { ServiceComparison }
+export { ServiceComparison }

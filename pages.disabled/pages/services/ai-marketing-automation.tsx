@@ -26,25 +26,25 @@ import {}
               <h1 className='text-4xl lg:text-6xl font-bold text-white mb-6'>
                 AI Marketing Automation'
               </h1>'''              <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-                Revolutionize your marketing with intelligent AI automation.;
+                Revolutionize your marketing with intelligent AI automation. 
 
-                Personalize campaigns, optimize ROI, and scale your marketing;
+                Personalize campaigns, optimize ROI, and scale your marketing 
 
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
 
-                <motion.button;
+                <motion.button 
                   whileHover={{ scal,
-    e: 1.05 }};
-                  whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                  whileTap={{ scale: 0.95 }} 
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hove,
     r:shadow-cyan-500/25'>                  Start Free Trial
                 </motion.button>
 :pages.disabled/pages/services/ai-marketing-automation.tsx
 
-                <motion.button;
+                <motion.button 
                   whileHover={{ scal,
-    e: 1.05 }};
-                  whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                  whileTap={{ scale: 0.95 }} 
                   className='px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300'>                  Schedule Demo
 
                 </motion.button>
@@ -53,18 +53,18 @@ import {}
           </div>
         </section>
 
-            <motion.div;
+            <motion.div 
               initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/ai-marketing-automation.tsx;
+:pages.disabled/pages/services/ai-marketing-automation.tsx 
 
-                Our AI marketing automation platform combines advanced machine;
-                learning with intelligent workflows to deliver personalized;
+                Our AI marketing automation platform combines advanced machine 
+                learning with intelligent workflows to deliver personalized 
                 customer experiences at scale.
               </p>
 
               {features.map((feature, index) => (
 
-                <motion.div;
+                <motion.div 
                   key={feature.title}
 
                     <feature.icon className='w-6 h-6 text-cyan-400' />'
@@ -79,13 +79,13 @@ import {}
           </div>
         </section>
 
-            <motion.div;
+            <motion.div 
               initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/ai-marketing-automation.tsx;
+:pages.disabled/pages/services/ai-marketing-automation.tsx 
 
               {marketingChannels.map((channel, index) => (
 
-                <motion.div;
+                <motion.div 
                   key={channel.title}
 
                     <channel.icon className='w-6 h-6 text-purple-400' />'
@@ -100,13 +100,13 @@ import {}
           </div>
         </section>
 
-            <motion.div;
+            <motion.div 
               initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/ai-marketing-automation.tsx;
+:pages.disabled/pages/services/ai-marketing-automation.tsx 
 
               {useCases.map((useCase, index) => (
 
-                <motion.div;
+                <motion.div 
                   key={useCase.title}
 
                     <useCase.icon className='w-8 h-8 text-cyan-400' />'
@@ -121,13 +121,13 @@ import {}
           </div>
         </section>
 
-            <motion.div;
+            <motion.div 
               initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/ai-marketing-automation.tsx;
+:pages.disabled/pages/services/ai-marketing-automation.tsx 
 
               <div className='space-y-6'>
-                {benefits.slice(0, 4).map(benefit: unknown, index: unknown();
-                  <motion.div;
+                {benefits.slice(0, 4).map(benefit: unknown, index: unknown() 
+                  <motion.div 
                     key={benefit}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.8, delay: index * 0.1 }}                    className='flex items-center space-x-3>'
@@ -136,9 +136,9 @@ import {}
 :pages.disabled/pages/services/ai-marketing-automation.tsx))}
               </div>'''
               <div className='space-y-6'>
-                {benefits.slice(4).map(benefit: unknown, index: unknown();
+                {benefits.slice(4).map(benefit: unknown, index: unknown() 
 
-                  <motion.div;
+                  <motion.div 
                     key={benefit}
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.8, delay: index * 0.1 }}                    className='flex items-center space-x-3>'
@@ -151,9 +151,9 @@ import {}
           </div>
         </section>
 
-            <motion.div;
+            <motion.div 
               initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/ai-marketing-automation.tsx;
+:pages.disabled/pages/services/ai-marketing-automation.tsx 
 
 :pages.disabled/pages/services/ai-marketing-automation.tsx
                 Ready to Transform Your Marketing?"
@@ -162,26 +162,26 @@ import {}
                 Join thousands of marketers already using AI to automate and
                 optimize their campaigns. Start your free trial today and
 
-                Join thousands of marketers already using AI to automate and;
-                optimize their campaigns. Start your free trial today and;
+                Join thousands of marketers already using AI to automate and 
+                optimize their campaigns. Start your free trial today and 
                 experience the future of marketing automation.''
               </p>'''
               <div className='flex flex-col s,
     m:flex-row gap-4 justify-center'>
 
-                <motion.button;
+                <motion.button 
                   whileHover={{ scal,
-    e: 1.05 }};
-                  whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                  whileTap={{ scale: 0.95 }} 
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hove,
     r:shadow-cyan-500/25'>                  Start Free Trial
                 </motion.button>
 :pages.disabled/pages/services/ai-marketing-automation.tsx
 
-                <motion.button;
+                <motion.button 
                   whileHover={{ scal,
-    e: 1.05 }};
-                  whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                  whileTap={{ scale: 0.95 }} 
                   className='px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300'>                  Schedule Demo
 
                 </motion.button>

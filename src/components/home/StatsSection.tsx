@@ -46,9 +46,9 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
 ;
       return () => clearTimeout(timer)};
   }, [isInView, stats]);
-;
-  return (;
-    <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/80 to-zion-slate-dark" role="region" aria-labelledby="stats-heading">;
+
+  return ();
+    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/80 to-zion-slate-dark" role="region" aria-labelledby="stats-heading">";
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <motion.div;
           className="text-center mb-16";
@@ -173,11 +173,9 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
               {/* Hover indicator */};
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-500"       />;
             </motion.div>;
-          ))};
+          ))}
         </div>;
       </div>;
     </section>;
-  );
-};
-;
-export default StatsSection;}}}}}
+  )}
+export default StatsSection}}}}}'"`;

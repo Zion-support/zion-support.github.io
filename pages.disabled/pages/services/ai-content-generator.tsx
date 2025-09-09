@@ -9,10 +9,10 @@ import {}
   Headphones,
 
                 Revolutionary AI-powered content creation that writes,
-                optimizes, and scales your content strategy. Generate;
+                optimizes, and scales your content strategy. Generate 
 
-              <a'';
-                href='/contact'';
+              <a'' 
+                href='/contact'' 
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover: from-blue-700 hove,
     r:to-purple-700 transition-all duration-300 shadow-2xl hove,
     r:shadow-blue-500/25'>                Get Started with AI Content Generator
@@ -39,8 +39,8 @@ import {}
           <p className='text-xl text-gray-300 mb-12 max-w-3xl mx-auto'>
             Start generating high-quality, SEO-optimized content today'
           </p>''
-          <a'';
-            href='/contact'';
+          <a'' 
+            href='/contact'' 
             className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover: from-blue-700 hove,
     r:to-purple-700 transition-all duration-300 shadow-2xl hove,
     r:shadow-blue-500/25'>            Get Started with AI Content Generator

@@ -12,4 +12,27 @@ function DisputesPage() {
       </>
     </ProtectedRoute>);
 }
+    return (<ProtectedRoute>;
+      <>;
+        <SEO title="Dispute Resolution Center | Zion AI Marketplace" description="View and manage disputes between clients and talents"/>;
+
+        <DisputeDashboard />;
+
+      </>;
+    </ProtectedRoute>)}
+export { DisputesPage }
 export default DisputesPage;
+
+export default DisputesPage;
+export default DisputesPage;
+export default DisputesPage;
+export default DisputesPage;
+export default DisputesPage;
+export default DisputesPage;
+
+
+export { DisputesPage }
+export { DisputesPage }
+export { DisputesPage }
+export { DisputesPage }
+export { DisputesPage }

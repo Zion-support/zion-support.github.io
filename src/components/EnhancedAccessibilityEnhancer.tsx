@@ -65,21 +65,23 @@ interface AccessibilitySettings {;
       };
 ;
       // Apply reduced motion;
-      if (updatedSettings.reducedMotion) {;
-        document.documentElement.classList.add ('reduced - motion') ;
-      } else {;
-        document.documentElement.classList.remove ('reduced - motion') ;
-      };
-;
-      // Apply zoom level;
-      document.documentElement.style.fontSize = `${updatedSettings.zoomLevel}%`;
-;
+      if(updatedSettings.reducedMotion) {};
+        document.documentElement.classList.add('reduced-motion')} else {};
+        document.documentElement.classList.remove('reduced-motion')}
+
+    // Color blindness simulation;
+    if(newSettings.colorBlindness !== 'none') {};
+      root.classList.add(`color-blind-${newSettings.colorBlindness}`)} else {};
+      root.classList.remove('color-blind-protanopia',color-blind-deuteranopia',color-blind-tritanopia')}
+
       // Store settings in localStorage;
-      localStorage.setItem ('accessibility - settings',;
-        JSON.stringify (updatedSettings) ) ;
-    },;
-    [settings]) ;
-;
+      localStorage.setItem(';
+        'accessibility-settings',;
+        JSON.stringify(updatedSettings);
+      )},;
+    [settings];
+  );
+
   // Load saved settings;
   useEffect ( () => {;
     const savedSettings = localStorage.getItem ('accessibility - settings') ;
@@ -90,38 +92,29 @@ interface AccessibilitySettings {;
     };
   }, [applySettings]) ;
 ;
-  // Enhanced keyboard navigation;
-  useEffect ( () => {;
-    if (!settings.keyboardNavigation) return;
+    if(savedSettings) {};
+      applySettings(parsedSettings)}
+  }, [enabled, applySettings]);
+  // Screen reader announcements;
+
+    announcement.setAttribute('aria-live',polite');
+    announcement.setAttribute('aria-atomic',true');
+    announcement.className="sr-only";
+    announcement.textContent = message;
+
+    document.body.appendChild(announcement);
+    ;
+    setTimeout(() => {};
+      document.body.removeChild(announcement)}, 1000)}, [settings.screenReader]);
+
+  // Keyboard navigation enhancement;
+  useEffect(() => {};
+}, []);
+    if(!enabled || !settings.keyboardNavigation) return;
 ;
-    const handleKeyDown = (event: KeyboardEvent) => {;
-      const focusableElements = document.querySelectorAll ('button, [href], input, select, textarea, [tabindex]:not ([tabindex="-1"]) ') ;
-      const currentIndex = Array.from (focusableElements) .findIndex (el => el === document.activeElement) ;
-;
-      switch (event.key) {;
-        case 'ArrowDown':;
-        case 'ArrowRight':;
-          event.preventDefault () ;
-          const nextIndex = (currentIndex + 1) % focusableElements.length; (focusableElements[nextIndex] as HTMLElement) ?.focus () ;
-          break;
-        case 'ArrowUp':;
-        case 'ArrowLeft':;
-          event.preventDefault () ;
-          const prevIndex = currentIndex <= 0 ? focusableElements.length - 1 : currentIndex - 1; (focusableElements[prevIndex] as HTMLElement) ?.focus () ;
-          break;
-        case 'Home':;
-          event.preventDefault () ; (focusableElements[0] as HTMLElement) ?.focus () ;
-          break;
-        case 'End':;
-          event.preventDefault () ; (focusableElements[focusableElements.length - 1] as HTMLElement) ?.focus () ;
-          break;
-      };
-    };
-;
-    document.addEventListener ('keydown', handleKeyDown) ;
-    return () => document.removeEventListener ('keydown', handleKeyDown) ;
-  }, [settings.keyboardNavigation]) ;
-;
+      switch(event.key) {};
+    return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
+
   // Enhanced focus management;
   useEffect ( () => {;
     const handleFocusChange = (event: FocusEvent) => {;
@@ -145,19 +138,14 @@ interface AccessibilitySettings {;
     document.addEventListener ('focusin', handleFocusChange) ;
     document.addEventListener ('focusout', handleFocusOut) ;
 ;
-    return () => {;
-      document.removeEventListener ('focusin', handleFocusChange) ;
-      document.removeEventListener ('focusout', handleFocusOut) ;
-    };
-  }, [settings.focusIndicator]) ;
-;
+    return () => {};
+      document.removeEventListener('focusout', handleFocusOut)}}, [settings.focusIndicator]) ;
+
   // Screen reader announcements;
-  const announceToScreenReader = useCallback ( (message: string) => {;
-      if (settings.screenReader) {;
-        const announcement = document.createElement ('div') ;
-        announcement.setAttribute ('aria - live', 'polite') ;
-        announcement.setAttribute ('aria - atomic', 'true') ;
-        announcement.className = 'sr - only';
+
+        announcement.setAttribute('aria-live',polite');
+        announcement.setAttribute('aria-atomic',true');
+        announcement.className="sr-only";
         announcement.textContent = message;
         document.body.appendChild (announcement) ;
 ;
@@ -166,12 +154,12 @@ interface AccessibilitySettings {;
         }, 1000) ;
       };
     },;
-    [settings.screenReader]) ;
-;
+    [settings.screenReader];
+  );
+
   // Toggle settings;
-  const toggleSetting = useCallback ( (key: keyof AccessibilitySettings) => {;
-      const newValue = !settings[key];
-      applySettings ({ [key]: newValue }) ;
+
+      applySettings({ [key]: newValue });
 ;
       if (key === 'highContrast') {;
         announceToScreenReader (newValue;
@@ -181,34 +169,31 @@ interface AccessibilitySettings {;
         announceToScreenReader (newValue ? 'Large text mode enabled' : 'Large text mode disabled') ;
       };
     },;
-    [settings, applySettings, announceToScreenReader]) ;
-;
+    [settings, applySettings, announceToScreenReader];
+  );
+
   // Zoom controls;
-  const adjustZoom = useCallback ( (direction: 'in' | 'out') => {;
-      const newZoom = direction === 'in';
-          ? Math.min (settings.zoomLevel + 25, 200) : Math.max (settings.zoomLevel - 25, 75) ;
-;
-      applySettings ({ zoomLevel: newZoom }) ;
-      announceToScreenReader (`Zoom level ${newZoom}%`) ;
-    },;
-    [settings.zoomLevel, applySettings, announceToScreenReader]) ;
-;
-  return (<>;
-      {/* Accessibility Toggle Button */};
-      <motion.button;
-        initial={{ opacity: 0, scale: 0.8 }};
-        animate={{ opacity: 1, scale: 1 }};
-        whileHover={{ scale: 1.1 }};
-        whileTap={{ scale: 0.9 }};
-        onClick={ () => setIsVisible (!isVisible) };
-        className="fixed top - 4 right - 4 z - 50 p - 3 bg - blue - 600 text - white rounded - full shadow - lg hover:bg - blue - 700 transition - all duration - 200 focus:outline - none focus:ring - 2 focus:ring - blue - 400 focus:ring - offset - 2";
-        aria - label="Toggle accessibility options";
-        title="Accessibility Options";
-      >;
-        <Accessibility className="w - 5 h - 5"       />;
-      </motion.button>;
-;
-      {/* Accessibility Panel */};
+
+      applySettings({ zoomLevel: newZoom });`;
+      announceToScreenReader(`Zoom level ${newZoom}%`)},;
+    [settings.zoomLevel, applySettings, announceToScreenReader];
+  );
+
+  return ();
+    <>;
+      {/* Accessibility Toggle Button */}
+      <div>Broken JSX</div>
+        onClick={() => setIsVisible(!isVisible)}
+        className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group";
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={() => setIsVisible(!isVisible)}";
+        className="fixed top-4 right-4 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2";
+
+        title="Accessibility Options">";
+        <Accessibility className="w-5 h-5"  />      </motion.button>;
+
+      {/* Accessibility Panel */}
       <AnimatePresence>;
         {isVisible && (<motion.div;
             initial={{ opacity: 0, x: 300 }};
@@ -447,20 +432,11 @@ interface AccessibilitySettings {;
           border: 0;
         };
 ;
-        .high - contrast {;
-          filter: contrast (1.5) brightness (1.2) ;
-        };
-;
-        .large - text {;
-          font - size: 1.2em;
-        };
-;
-        .reduced - motion * {;
-          animation - duration: 0.01ms ! important;
-          animation - iteration - count: 1 ! important;
-          transition - duration: 0.01ms ! important;
-        };
-      `}</style>;
-    </>) ;
-};
-;
+        .large-text {};
+          font-size: 1.2em}
+        .reduced-motion * {};
+          transition-duration: 0.01ms !important}`      `}</style>;
+    </>;
+  )}
+export default EnhancedAccessibilityEnhancer;
+'"`;

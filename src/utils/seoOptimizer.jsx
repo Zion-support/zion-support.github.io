@@ -57,134 +57,67 @@ export class SEOOptimizer {
         const pathSegments = path.split('/').filter(Boolean);
         if (pathSegments.length === 0)
             return baseTitle;
-        const lastSegment = pathSegments[pathSegments.length - 1];
-        const formattedSegment = lastSegment
-            .split('-')
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+
+        const lastSegment = pathSegments[pathSegments.length-1];
+        const formattedSegment = lastSegment;
+            .split('-');
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1));
             .join(' ');
-        return `${formattedSegment} - ${baseTitle}`;
-    }
-    static generateDescription(path) {
-        return this.DEFAULT_META_DESCRIPTIONS[path] ||
-            'Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.';
-    }
-    static generateKeywords(path) {
-        return this.KEYWORD_MAPPINGS[path] ||
-            ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'];
-    }
-    static generateCanonicalUrl(path) {
-        const baseUrl = 'https://ziontechgroup.com';
-        return `${baseUrl}${path}`;
-    }
-    static generateStructuredData(path) {
-        const baseData = {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": this.generateTitle(path),
-            "description": this.generateDescription(path),
-            "url": this.generateCanonicalUrl(path),
-            "publisher": {
-                "@type": "Organization",
-                "name": "Zion Tech Group",
-                "url": "https://ziontechgroup.com",
-                "logo": "/favicon.svg"
-            }
-        };
-        // Add specific structured data based on page type
-        if (path === '/') {
-            return {
-                ...baseData,
-                "@type": "Organization",
-                "name": "Zion Tech Group",
-                "url": "https://ziontechgroup.com",
-                "logo": "/favicon.svg",
-                "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "364 E Main St STE 1008",
-                    "addressLocality": "Middletown",
-                    "addressRegion": "DE",
-                    "postalCode": "19709",
-                    "addressCountry": "US"
-                },
-                "contactPoint": {
-                    "@type": "ContactPoint",
-                    "telephone": "+1-302-464-0950",
-                    "contactType": "customer service",
-                    "email": "kleber@ziontechgroup.com"
-                }
-            };
-        }
-        if (path.startsWith('/services/')) {
-            return {
-                ...baseData,
-                "@type": "Service",
-                "serviceType": path.split('/').pop()?.replace(/-/g, ' '),
-                "provider": {
-                    "@type": "Organization",
-                    "name": "Zion Tech Group"
-                }
-            };
-        }
-        return baseData;
-    }
-    static analyzeContentQuality(content, page) {
-        const issues = [];
-        // Check for missing or short title
-        if (!content.includes('<title>') || content.includes('<title></title>')) {
-            issues.push({
-                page,
-                issue: 'missing-title',
-                severity: 'high',
-                suggestedFix: 'Add a descriptive title tag with relevant keywords'
-            });
-        }
-        // Check for missing meta description
-        if (!content.includes('name="description"')) {
-            issues.push({
-                page,
-                issue: 'missing-description',
-                severity: 'high',
-                suggestedFix: 'Add a meta description tag with compelling content'
-            });
-        }
-        // Check for short meta description
+`;
+        return `${formattedSegment} - ${baseTitle}`;,
+}
+;
+    static generateDescription(path) {};
+}
+;
+    static generateKeywords(path) {};
+}
+;
+    static generateCanonicalUrl(path) {};
+        return `${baseUrl}${path}`;,
+}
+;
+    static generateStructuredData(path) {};
+}
+        // Add specific structured data based on page type';
+        if(path === '/') {};
+},";
+                "contactPoint": {};
+}
+            };,
+}
+;
+        if(path.startsWith('/services/')) {};
+}
+            };,
+}
+;
+        return baseData;,
+}
+;
+    static analyzeContentQuality(content, page) {};
+});,
+}
+;
+        // Check for missing meta description'";
+        if(!content.includes('name="description"')) {};
+});,
+}
+;
+        // Check for short meta description";
         const descMatch = content.match(/name="description" content="([^"]+)"/);
-        if (descMatch && descMatch[1].length < 120) {
-            issues.push({
-                page,
-                issue: 'short-description',
-                severity: 'medium',
-                suggestedFix: 'Expand meta description to 120-160 characters for better SEO'
-            });
-        }
-        // Check for missing headings
-        if (!content.includes('<h1>') && !content.includes('<h2>') && !content.includes('<h3>')) {
-            issues.push({
-                page,
-                issue: 'no-headings',
-                severity: 'medium',
-                suggestedFix: 'Add proper heading structure (H1, H2, H3) for better content organization'
-            });
-        }
-        // Check for minimal content
-        const textContent = content.replace(/<[^>]*>/g, '').trim();
-        if (textContent.length < 300) {
-            issues.push({
-                page,
-                issue: 'minimal-content',
-                severity: 'medium',
-                suggestedFix: 'Add more relevant content to improve user experience and SEO value'
-            });
-        }
-        return issues;
-    }
-    static generateMetaTags(seoData) {
-        return `
-    <title>${seoData.title}</title>
-    <meta name="description" content="${seoData.description}"       />
-    <meta name="keywords" content="${seoData.keywords.join (', ') }"       />
-    <link rel="canonical" href="${seoData.canonicalUrl}"       />
+        if(descMatch && descMatch[1].length <div>Broken JSX</div>
+        if(!content.includes('<h1>) && !content.includes('<h2>) && !content.includes('<h3>)) {};
+});,
+}
+;
+        // Check for minimal content';
+        const textContent = content.replace(/<[^>]*>/g,).trim();
+        if(textContent.length <div>Broken JSX</div>
+    <title>${seoData.title}</title>";
+    <meta name="description" content="${seoData.description}" />'";
+    <meta name="keywords" content="${seoData.keywords.join(')}" />";
+    <link rel="canonical" href="${seoData.canonicalUrl}" />;
 
     <!-- Open Graph -->
     <meta property="og:title" content="${seoData.title}"       />
@@ -202,8 +135,11 @@ export class SEOOptimizer {
     <!-- Structured Data -->
     <script type="application/ld+json">
       ${JSON.stringify(seoData.structuredData, null, 2)}
-    </script>
-    `;
-    }
+    </script>`;
+    `}
 }
+
 export const seoOptimizer = new SEOOptimizer();
+
+export default SEOOptimizer;
+'"`}}

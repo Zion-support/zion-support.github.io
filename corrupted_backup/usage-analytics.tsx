@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
+import React, { useState, useEffect } from 'react' 
+import Head from 'next/head' 
 
-      setLoading(false);
-    }, 1000);
-  }, []);
+      setLoading(false) 
+    }, 1000) 
+  }, []) 
 
   return (
     <>

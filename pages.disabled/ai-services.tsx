@@ -1,13 +1,13 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react' 
+import Head from 'next/head' 
+import Link from 'next/link' 
+import { motion } from 'framer-motion' 
 import { 
   Brain, Zap, Shield, Sparkles, Atom, 
   Cpu, Target, Users, ArrowRight, Star,
   CheckCircle, Clock, DollarSign, TrendingUp
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
-} from 'lucide-react';
+} from 'lucide-react' 
 
 const aiServices = [
   {
@@ -54,7 +54,7 @@ const aiServices = [
     badge: 'New',
     color: 'from-pink-500 to-rose-600'
   }
-];
+] 
 
 const benefits = [
   {
@@ -78,7 +78,7 @@ const benefits = [
     description: 'Cutting-edge AI technologies that push the boundaries of possibility'
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
   }
-];
+] 
 
 export default function AIServices() {
   return (
@@ -98,7 +98,7 @@ export default function AIServices() {
   Shield, Rocket, Globe, Sparkles,
   Check, ArrowRight, Star, Award,
   Cpu, Database, Network, Lock, Eye
-} from 'lucide-react';
+} from 'lucide-react' 
 
 export default function AiServices() {
   const services = [
@@ -192,7 +192,7 @@ export default function AiServices() {
       color: 'from-teal-500 to-blue-600',
       link: '/ai-healthcare-diagnostics-pro'
     }
-  ];
+  ] 
 
   const capabilities = [
     {
@@ -219,7 +219,7 @@ export default function AiServices() {
       icon: <Rocket className="w-6 h-6" />,
       examples: ['Process Automation', 'Quality Assurance', 'Logistics', 'Manufacturing']
     }
-  ];
+  ] 
 
   const useCases = [
     {
@@ -242,7 +242,7 @@ export default function AiServices() {
       applications: ['Personalized Marketing', 'Inventory Management', 'Customer Experience', 'Demand Forecasting'],
       icon: <Globe className="w-6 h-6" />
     }
-  ];
+  ] 
 
   return (
     <>

@@ -1,8 +1,3 @@
-
-import { useRouter } from "next/router";
-import Link from "next/link";
-import { Header } from "@/components/header/Header";
-import { Footer } from "@/components/Footer";
 import { GradientHeading } from "@/components/GradientHeading";
 import { ProductListingCard } from "@/components/ProductListingCard";
 import { useState, useEffect, useRef, Suspense } from "react";
@@ -16,8 +11,16 @@ import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide
 
 
 import { MARKETPLACE_LISTINGS } from "@/data/listingData";
-import { useNavigate } from "react-router-dom";
-import { useToast } from "@/hooks/use-toast";
+import { ProductListing } from "@/types/listings";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { toast } from "@/hooks/use-toast";
+import { NextSeo } from '@/components/NextSeo';
+import { Header } from "@/components/Header";
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
+import {logErrorToProduction} from '@/utils/productionLogger';
+
+
 const AUTO_SERVICE_TITLES = [
   "AI-Powered Customer Support",
   "Cloud Infrastructure Management",
@@ -56,84 +59,99 @@ function generateInnovationListing(index: number): ProductListing {
     aiScore: Math.floor(Math.random() * 20) + 80
   };
 }
-export default function CategoryDetail() {
-    // Cast to specify the expected route param type since useParams may be untyped
-    const { slug } = useParams();
-    const navigate = useNavigate();
-    const { toast } = useToast();
-    const [isLoading, setIsLoading] = useState(true);
-    const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
-    const [category, setCategory] = useState({
-        title: "",
-        description: "",
-        icon: <Bot className="w-6 h-6"/>
-    });
-    const innovationCounterRef = useRef(0);
-    // Map of category slugs to their display data
-    const categoryData = {
-        'services': {
-            title: "Services",
-            description: "On-demand IT support, consulting, development, and more",
-            icon: <Briefcase className="w-6 h-6"/>
-        },
-        'talents': {
-            title: "Talents",
-            description: "Connect with AI experts, developers, and tech specialists",
-            icon: <Brain className="w-6 h-6"/>
-        },
-        'equipment': {
-            title: "Equipment",
-            description: "Rent or buy specialized hardware, servers, and devices",
-            icon: <Code className="w-6 h-6"/>
-        },
-        'innovation': {
-            title: "Innovation",
-            description: "Discover cutting-edge solutions and tech breakthroughs",
-            icon: <Bot className="w-6 h-6"/>
-        },
-        'ai-models-apis': {
-            title: "AI Models & APIs",
-            description: "Access cutting-edge AI models with easy integration",
-            icon: <Brain className="w-6 h-6"/>
-        },
-        'content-creation': {
-            title: "Content Creation",
-            description: "Generate high-quality content for your projects",
-            icon: <PenLine className="w-6 h-6"/>
-        },
-        'data-analysis': {
-            title: "Data Analysis",
-            description: "Extract insights from complex datasets",
-            icon: <BarChart className="w-6 h-6"/>
-        },
-        'computer-vision': {
-            title: "Computer Vision",
-            description: "Image and video processing solutions",
-            icon: <Eye className="w-6 h-6"/>
-        },
-        'virtual-assistants': {
-            title: "Virtual Assistants",
-            description: "Intelligent automation for your workflow",
-            icon: <Bot className="w-6 h-6"/>
-        },
-        'voice-speech': {
-            title: "Voice & Speech",
-            description: "Speech recognition and synthesis tools",
-            icon: <Mic className="w-6 h-6"/>
-        },
-        'developer-tools': {
-            title: "Developer Tools",
-            description: "AI-powered coding assistance and automation",
-            icon: <Code className="w-6 h-6"/>
-        },
-        'business-solutions': {
-            title: "Business Solutions",
-            description: "Enterprise AI integrations and services",
-            icon: <Briefcase className="w-6 h-6"/>
-        }
-    };
-    useEffect(() => {
-        setIsLoading(true);
+
+interface CategoryDetailProps {
+  slug?: string;
+}
+
+export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps = {}) {
+  const router = useRouter();
+  // Get slug from Next.js router query params
+  const params = router.query as { slug?: string };
+  const slug = slugProp ?? params.slug;
+
+  // Redirect to categories list if slug is missing
+  if (!slug) {
+    router.push('/categories');
+    return null;
+  }
+  const [isLoading, setIsLoading] = useState(true);
+  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
+  const [category, setCategory] = useState<{title: string, description: string, icon: React.JSX.Element}>({
+    title: "",
+    description: "",
+    icon: <Bot className="w-6 h-6" />
+  });
+  const innovationCounterRef = useRef(0);
+
+  // Map of category slugs to their display data
+  const categoryData = {
+    'services': {
+      title: "Services",
+      description: "On-demand IT support, consulting, development, and more",
+      icon: <Briefcase className="w-6 h-6" />
+    },
+    'talents': {
+      title: "Talents",
+      description: "Connect with AI experts, developers, and tech specialists",
+      icon: <Brain className="w-6 h-6" />
+    },
+    'equipment': {
+      title: "Equipment",
+      description: "Rent or buy specialized hardware, servers, and devices",
+      icon: <Code className="w-6 h-6" />
+    },
+    'innovation': {
+      title: "Innovation",
+      description: "Discover cutting-edge solutions and tech breakthroughs",
+      icon: <Bot className="w-6 h-6" />
+    },
+    'ai-models-apis': {
+      title: "AI Models & APIs",
+      description: "Access cutting-edge AI models with easy integration",
+      icon: <Brain className="w-6 h-6" />
+    },
+    'content-creation': {
+      title: "Content Creation",
+      description: "Generate high-quality content for your projects",
+      icon: <PenLine className="w-6 h-6" />
+    },
+    'data-analysis': {
+      title: "Data Analysis",
+      description: "Extract insights from complex datasets",
+      icon: <BarChart className="w-6 h-6" />
+    },
+    'computer-vision': {
+      title: "Computer Vision",
+      description: "Image and video processing solutions",
+      icon: <Eye className="w-6 h-6" />
+    },
+    'virtual-assistants': {
+      title: "Virtual Assistants",
+      description: "Intelligent automation for your workflow",
+      icon: <Bot className="w-6 h-6" />
+    },
+    'voice-speech': {
+      title: "Voice & Speech",
+      description: "Speech recognition and synthesis tools",
+      icon: <Mic className="w-6 h-6" />
+    },
+    'developer-tools': {
+      title: "Developer Tools",
+      description: "AI-powered coding assistance and automation",
+      icon: <Code className="w-6 h-6" />
+    },
+    'business-solutions': {
+      title: "Business Solutions",
+      description: "Enterprise AI integrations and services",
+      icon: <Briefcase className="w-6 h-6" />
+    }
+  };
+
+  useEffect(() => {
+    async function load() {
+      setIsLoading(true);
+      try {
         // Find the category data based on slug
         const currentCategory = categoryData[slug as keyof typeof categoryData] || {
           title: slug
@@ -215,18 +233,12 @@ export default function CategoryDetail() {
       });
       
       // Navigate to the quote request page with the listing information
-      const navigationState = {
+      const queryParams = new URLSearchParams({
         serviceType: listing.category,
-        specificItem: {
-            id: listing.id,
-            title: listing.title,
-            category: listing.category,
-            image: listing.images?.[0] // Removed comma
-          }
-      }; // navigationState correctly defined
-      router.push({
-        pathname: "/request-quote",
-        query: { state: JSON.stringify(navigationState) },
+        itemId: listing.id,
+        itemTitle: listing.title,
+        itemCategory: listing.category,
+        ...(listing.images?.[0] && { itemImage: listing.images[0] })
       });
       
       router.push(`/request-quote?${queryParams.toString()}`);

@@ -110,9 +110,8 @@ import { SEO } from '../components / SEO';
         'Detect fraud with 99.5% accuracy';
       ],;
       path: '/services / ai - financial - risk - management',;
-      category: 'AI & Finance';
-    },;
-    {;
+      category: 'AI & Finance'},;
+    {}
       id: 'ai - hr - talent - acquisition',;
       title: 'AI HR Talent Acquisition',;
       description: 'Revolutionize your hiring process with AI - powered talent acquisition that finds, screens, and matches the perfect candidates for your organization.',;
@@ -130,9 +129,8 @@ import { SEO } from '../components / SEO';
         'Reduce recruitment costs by 40%';
       ],;
       path: '/services / ai - hr - talent - acquisition',;
-      category: 'AI & HR';
-    },;
-    {;
+      category: 'AI & HR'},;
+    {}
       id: 'ai - iot - edge - computing',;
       title: 'AI IoT Edge Computing',;
       description: 'Transform your IoT infrastructure with AI - powered edge computing that processes data locally, reduces latency, and enables real - time intelligent decision making.',;
@@ -150,9 +148,8 @@ import { SEO } from '../components / SEO';
         'Improve device reliability by 75%';
       ],;
       path: '/services / ai - iot - edge - computing',;
-      category: 'AI & IoT';
-    },;
-    {;
+      category: 'AI & IoT'},;
+    {}
       id: 'ai - predictive - maintenance',;
       title: 'AI Predictive Maintenance',;
       description: 'Transform your maintenance operations with AI - powered predictive maintenance that prevents failures, reduces downtime, and optimizes equipment performance.',;
@@ -170,9 +167,8 @@ import { SEO } from '../components / SEO';
         'Extend equipment lifespan by 20 - 30%';
       ],;
       path: '/services / ai - predictive - maintenance',;
-      category: 'AI & Maintenance';
-    },;
-    {;
+      category: 'AI & Maintenance'},;
+    {}
       id: 'ai - sustainable - technology',;
       title: 'AI Sustainable Technology',;
       description: 'Transform your organization into a sustainability leader with AI - powered technology that optimizes energy, reduces waste, and minimizes environmental impact.',;
@@ -190,9 +186,8 @@ import { SEO } from '../components / SEO';
         'Improve resource efficiency by 35%';
       ],;
       path: '/services / ai - sustainable - technology',;
-      category: 'AI & Sustainability';
-    },;
-    {;
+      category: 'AI & Sustainability'},;
+    {}
       id: 'ai - quantum - machine - learning',;
       title: 'AI Quantum Machine Learning',;
       description: 'Revolutionize your computational capabilities with AI - powered quantum machine learning that solves previously impossible problems and accelerates innovation.',;
@@ -210,34 +205,42 @@ import { SEO } from '../components / SEO';
         'Enable previously impossible computational tasks';
       ],;
       path: '/services / ai - quantum - machine - learning',;
-      category: 'AI & Quantum Computing';
-    };
+      category: 'AI & Quantum Computing'}
   ];
-;
-  const categories = [...new Set (services.map (service => service.category) ) ];
-;
-  return (<div className="min - h-screen bg - white">;
-      <SEO ;
-        title="Innovative AI Services Showcase 2025 - Zion Tech Group";
-        description="Discover our cutting - edge AI - powered micro SAAS services and solutions. From workflow orchestration to quantum machine learning, transform your business with intelligent technology.";
-            />;
-      ;
-      <section className="bg - gradient - to - br from - zion - blue - dark via - zion - blue to - zion - slate - dark py - 20 text - center">;
-        <div className="max - w-5xl mx - auto px - 6">;
-          <motion.div ;
-            initial={{ opacity: 0, y: 20 }};
-            animate={{ opacity: 1, y: 0 }};
-            transition={{ duration: 0.6 }};
-            className="inline - flex items - center px - 4 py - 2 rounded - full bg - white / 10 text - white mb - 6";
-          >;
-            <Brain className="w - 4 h - 4 mr - 2"       /> Innovative AI Services 2025;
-          </motion.div>;
-          <motion.h1 ;
-            initial={{ opacity: 0, y: 20 }};
-            animate={{ opacity: 1, y: 0 }};
-            transition={{ duration: 0.6, delay: 0.1 }};
-            className="text - 4xl md:text - 6xl font - bold text - white mb - 4";
-          >;
+';
+  Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,'';
+  ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check''''} from 'lucide-react'};';
+'';
+  ''';
+      case 'IT Services': return Server;''';
+      case 'Micro SaaS': return ShoppingCart;''';
+      case 'Cybersecurity': return ShieldIcon;''';
+      case 'Data Analytics': return BarChart3;''';
+      case 'Cloud Services': return Cloud;''';
+      case 'Emerging Tech': return Rocket;
+      default: return Zap}
+  };';
+'';
+  ''';
+      case 'IT Services': return 'from-blue-600 to-cyan-600';''';
+      case 'Micro SaaS': return 'from-green-600 to-emerald-600';''';
+      case 'Cybersecurity': return 'from-red-600 to-orange-600';''';
+      case 'Data Analytics': return 'from-indigo-600 to-purple-600';''';
+      case 'Cloud Services': return 'from-cyan-600 to-blue-600';''';
+      case 'Emerging Tech': return 'from-yellow-600 to-orange-600';''';
+      default: return 'from-gray-600 to-slate-600'}
+  }
+  return();
+    <div className="min-h-screen bg-white">";
+      <div>Broken JSX</div>
+       />";
+      "";
+      <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">"        <div className="max-w-5xl mx-auto px-6">;
+          <div>Broken JSX</div>
+            className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6"">"";
+            <Brain className="w-4 h-4 mr-2"  /> Innovative AI Services 2025          </motion.div>;
+          <div>Broken JSX</div>
+            className="text-4xl md:text-6xl font-bold text-white mb-4">;
             Innovative AI Services Showcase 2025;
           </motion.h1>;
           <motion.p ;
@@ -614,5 +617,13 @@ import { SEO } from '../components / SEO';
               </motion.div>) ) };
         </div>;
       </section>;
-    </div>) ;
-};
+    </div>;
+  )}
+
+
+export { InnovativeServicesShowcase2025 }
+export { InnovativeServicesShowcase2025 }
+export { InnovativeServicesShowcase2025 }
+export { InnovativeServicesShowcase2025 }
+export { InnovativeServicesShowcase2025 }
+)

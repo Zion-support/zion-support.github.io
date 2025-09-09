@@ -93,7 +93,7 @@ const AIHealthcarePredictiveAnalytics = () => {;
         'Automated patient risk assessment and prioritization for care management',;
     },;
   ];
-;
+
   const pricingPlans = [;
     {;
       name: 'Starter',;
@@ -145,7 +145,7 @@ const AIHealthcarePredictiveAnalytics = () => {;
       popular: false,;
     },;
   ];
-;
+
   const useCases = [;
     {;
       title: 'Hospitals',;
@@ -168,7 +168,7 @@ const AIHealthcarePredictiveAnalytics = () => {;
       icon: Shield,;
     },;
   ];
-;
+
   const analyticsTypes = [;
     {;
       title: 'Clinical Analytics',;
@@ -199,7 +199,7 @@ const AIHealthcarePredictiveAnalytics = () => {;
       color: 'from-red-500 to-pink-500',;
     },;
   ];
-;
+
   const benefits = [;
     {;
       title: 'Improve Patient Outcomes',;
@@ -225,7 +225,7 @@ const AIHealthcarePredictiveAnalytics = () => {;
       icon: Lock,;
     },;
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO;
@@ -249,21 +249,21 @@ const AIHealthcarePredictiveAnalytics = () => {;
               <Heart className="w-4 h-4 mr-2"       />;
               AI-Powered Healthcare Analytics;
             </div>;
-;
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
               AI Healthcare;
               <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
                 Predictive Analytics;
               </span>;
             </h1>;
-;
+
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed">;
               Transform healthcare delivery with AI-powered predictive analytics;
               and patient monitoring. Improve patient outcomes, optimize;
               treatments, and reduce healthcare costs through intelligent;
               insights.;
             </p>;
-;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <a;
                 href="#pricing";
@@ -300,7 +300,7 @@ const AIHealthcarePredictiveAnalytics = () => {;
               Leverage cutting-edge AI technology to transform patient care;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (;
               <motion.div;
@@ -341,7 +341,7 @@ const AIHealthcarePredictiveAnalytics = () => {;
               Monitor all aspects of healthcare operations with our AI platform;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {analyticsTypes.map((((((((type, index, index, index, index, index, index, index) => ({ ...((((((type, index, index, index, index, index, index, key: index })) => ({ ...(((((type, index, index, index, index, index, key: index })) => ({ ...((((type, index, index, index, index, key: index })) => ({ ...(((type, index, index, index, key: index })) => ({ ...((type, index, index, key: index })) => ({ ...(type, index, key: index })) => (;
               <motion.div;
@@ -384,7 +384,7 @@ const AIHealthcarePredictiveAnalytics = () => {;
               Transform your healthcare operations with AI-powered insights;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {benefits.map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => (;
               <motion.div;
@@ -426,7 +426,7 @@ const AIHealthcarePredictiveAnalytics = () => {;
               institutions;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {useCases.map((((((((useCase, index, index, index, index, index, index, index) => ({ ...((((((useCase, index, index, index, index, index, index, key: index })) => ({ ...(((((useCase, index, index, index, index, index, key: index })) => ({ ...((((useCase, index, index, index, index, key: index })) => ({ ...(((useCase, index, index, index, key: index })) => ({ ...((useCase, index, index, key: index })) => ({ ...(useCase, index, key: index })) => (;
               <motion.div;
@@ -468,29 +468,10 @@ const AIHealthcarePredictiveAnalytics = () => {;
               needs;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {pricingPlans.map((((((((plan, index, index, index, index, index, index, index) => ({ ...((((((plan, index, index, index, index, index, index, key: index })) => ({ ...(((((plan, index, index, index, index, index, key: index })) => ({ ...((((plan, index, index, index, index, key: index })) => ({ ...(((plan, index, index, index, key: index })) => ({ ...((plan, index, index, key: index })) => ({ ...(plan, index, key: index })) => (;
-              <motion.div;
-                key={index};
-                className={`relative rounded-xl p-8 ${;
-                  plan.popular;
-                    ? 'bg-gradient-to-br from-blue-600 to-purple-600 border-2 border-blue-400';
-                    : 'bg-slate-800/50 border border-slate-700/50';
-                }`};
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }};
-                transition={{ duration: 0.6, delay: index * 0.1 }};
-                viewport={{ once: true }};
-              >;
-                {plan.popular && (;
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                    <span className="bg-gradient-to-r from-blue-400 to-purple-400 text-white px-4 py-2 rounded-full text-sm font-semibold">;
-                      Most Popular;
-                    </span>;
-                  </div>;
-                )};
-;
+            {};
+                )}
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">;
                     {plan.name};
@@ -503,7 +484,7 @@ const AIHealthcarePredictiveAnalytics = () => {;
                   </div>;
                   <p className="text-slate-300 mt-2">{plan.description}</p>;
                 </div>;
-;
+
                 <ul className="space-y-4 mb-8">;
                   {plan.features.map((((((((feature, featureIndex, index, index, index, index, index, index) => ({ ...((((((feature, featureIndex, index, index, index, index, index, key: index })) => ({ ...(((((feature, featureIndex, index, index, index, index, key: index })) => ({ ...((((feature, featureIndex, index, index, index, key: index })) => ({ ...(((feature, featureIndex, index, index, key: index })) => ({ ...((feature, featureIndex, index, key: index })) => ({ ...(feature, featureIndex, key: index })) => (;
                     <li key={featureIndex} className="flex items-center">;
@@ -547,7 +528,7 @@ const AIHealthcarePredictiveAnalytics = () => {;
               care;
             </p>;
           </motion.div>;
-;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <motion.div;
               className="text-center";
@@ -618,7 +599,11 @@ const AIHealthcarePredictiveAnalytics = () => {;
         </div>;
       </section>;
     </div>;
-  );
-};
-;
+  )}
 export default AIHealthcarePredictiveAnalytics;
+
+export { AIHealthcarePredictiveAnalytics }
+export { AIHealthcarePredictiveAnalytics }
+export { AIHealthcarePredictiveAnalytics }
+export { AIHealthcarePredictiveAnalytics }
+export { AIHealthcarePredictiveAnalytics }
