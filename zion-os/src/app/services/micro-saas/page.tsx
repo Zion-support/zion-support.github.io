@@ -1,0 +1,15 @@
+"use client",
+import { useState  } from './react';,
+interface MicroSAASService {}
+
+  id: string,
+  name: string,
+  description: string,
+  target_market: string[],
+  features: string[],
+  pricing: string,
+  starting_price: number,
+  contact_link: string,
+  icon: string,
+  benefits: string[],
+  integrations: string[],

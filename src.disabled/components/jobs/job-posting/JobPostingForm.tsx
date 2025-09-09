@@ -1,0 +1,5 @@
+interface: JobPostingFormProps {
+  jobId?: string;
+
+
+

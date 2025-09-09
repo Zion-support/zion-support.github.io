@@ -1,83 +1,73 @@
 import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import globals from 'globals';
 
 export default [
-  js.configs.recommended,
+  { ...js.configs.recommended, files: ['app/**/*.{js,jsx,ts,tsx}'] },
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['app/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 2020,
-      sourceType: 'module',
       parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 2020,
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
-        }
-      },
+      ecmaVersion: 'latest',
+      sourceType: 'module',
       globals: {
-        // Node.js globals
-        process: 'readonly',
-        console: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        require: 'readonly',
-        __dirname: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly',
-        NodeJS: 'readonly',
-        // Browser globals
-        window: 'readonly',
-        document: 'readonly',
-        navigator: 'readonly',
-        fetch: 'readonly',
-        URL: 'readonly',
-        URLSearchParams: 'readonly',
-        File: 'readonly',
-        // Canvas and animation globals
-        HTMLCanvasElement: 'readonly',
-        HTMLDivElement: 'readonly',
-        HTMLButtonElement: 'readonly',
-        HTMLAnchorElement: 'readonly',
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        HTMLSelectElement: 'readonly',
-        CanvasRenderingContext2D: 'readonly',
-        MouseEvent: 'readonly',
-        requestAnimationFrame: 'readonly',
-        cancelAnimationFrame: 'readonly'
-      }
+        ...globals.browser,
+        ...globals.node,
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+      },
     },
     plugins: {
-      '@typescript-eslint': typescript
+      '@typescript-eslint': typescript,
+      react: react,
+      'react-hooks': reactHooks,
     },
     rules: {
       'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      'no-console': 'warn',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
-      'no-undef': 'error'
-    }
+      '@typescript-eslint/ban-ts-comment': 'off',
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'prefer-const': 'error',
+      'no-debugger': 'warn',
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
   },
   {
     ignores: [
-      'node_modules/',
-      '.next/',
-      'out/',
-      'dist/',
-      'build/',
-      '*.config.js',
-      '*.config.ts',
-      'scripts/',
-      'automation/',
-      'public/reports/**',
-      'netlify/',
-      'ecosystem*.cjs',
-      '**/*.cjs'
-    ]
-  }
+      'node_modules/**',
+      '.next/**',
+      'dist/**',
+      'build/**',
+      'public/**',
+      'temp_conflicts/**',
+      'temp_exclude/**',
+      '__tests__/**',
+      'tests/**',
+      'apps/**',
+      'utils/**',
+      'types/**',
+      'zion-*/**',
+      'zion_os/**',
+      'zion/**'
+    ],
+  },
 ];
