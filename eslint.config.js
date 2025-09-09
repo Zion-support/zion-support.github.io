@@ -1,14 +1,27 @@
-import js from '@eslint/js';
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import globals from 'globals';
+import js from "@eslint/js";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+import pluginReact from "eslint-plugin-react";
+import pluginReactHooks from "eslint-plugin-react-hooks";
+import eslintConfigPrettier from "eslint-config-prettier";
+// import eslintConfigNext from 'eslint-config-next';
 
 export default [
   { ...js.configs.recommended, files: ['app/**/*.{js,jsx,ts,tsx}'] },
   {
-    files: ['app/**/*.{js,jsx,ts,tsx}'],
+    ignores: ["node_modules/**", "dist/**", "out/**", "coverage/**", "build/**", ".next/**", "public/build/**"],
+  },
+
+  // eslintConfigNext,
+
+  // Fallback for problematic files (non-type-aware TS linting)
+  {
+    files: [
+      "src/hooks/useAuth.tsx",
+      "src/components/ui/sidebar/index.tsx",
+      "src/types/pwa.d.ts",
+      "vite.config.d.ts"
+    ],
     languageOptions: {
       parser: typescriptParser,
       ecmaVersion: 'latest',
