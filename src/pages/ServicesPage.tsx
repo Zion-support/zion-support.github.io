@@ -50,9 +50,12 @@ import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Co
 import { useEffect, useState } from "react";
 import { SEO } from "@/components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
-import { InnovativeServicesShowcase } from "@/components/InnovativeServicesShowcase";
-import { ComprehensivePricingComparison } from "@/components/ComprehensivePricingComparison";
-import { EmergingTechnologyShowcase } from "@/components/EmergingTechnologyShowcase";
+import { ADVANCED_ENTERPRISE_SOLUTIONS_2025 } from "@/data/advancedEnterpriseSolutions2025";
+import { NEXT_GEN_AI_SERVICES_2025 } from "@/data/nextGenAIServices2025";
+import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "@/data/specializedIndustrySolutions2025";
+import { IOT_EDGE_COMPUTING_SERVICES_2025 } from "@/data/iotEdgeComputingServices2025";
+import { EMERGING_TECH_SERVICES_2026 } from "@/data/emergingTechServices2026";
+import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
 
 export default function ServicesPage() {
   const [listings, setListings] = useState<ProductListing[]>(SERVICE_LISTINGS);
@@ -64,19 +67,23 @@ export default function ServicesPage() {
     { id: 'quantum-computing', name: 'Quantum Computing', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
     { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },
     { id: 'iot-edge', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
+    { id: 'healthcare-ai', name: 'Healthcare AI', icon: Heart, color: 'from-zion-pink to-zion-purple' },
+    { id: 'legal-tech', name: 'Legal Tech', icon: Scale, color: 'from-zion-orange to-zion-purple' },
+    { id: 'financial-ai', name: 'Financial AI', icon: DollarSign, color: 'from-zion-green to-zion-blue' },
+    { id: 'manufacturing-ai', name: 'Manufacturing AI', icon: Factory, color: 'from-zion-green to-zion-blue' },
+    { id: 'space-tech', name: 'Space Technology', icon: Satellite, color: 'from-zion-purple to-zion-cyan' },
     { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' },
     { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' },
     { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
     { id: 'digital-twin', name: 'Digital Twin', icon: Server, color: 'from-zion-blue to-zion-purple' },
-    { id: 'fintech', name: 'FinTech', icon: DollarSign, color: 'from-zion-green to-zion-cyan' },
-    { id: 'healthcare-ai', name: 'Healthcare AI', icon: Brain, color: 'from-zion-red to-zion-purple' },
-    { id: 'legal-tech', name: 'Legal Tech', icon: Shield, color: 'from-zion-blue to-zion-purple' },
-    { id: 'edtech', name: 'EdTech', icon: BookOpen, color: 'from-zion-orange to-zion-blue' },
-    { id: 'marketing-ai', name: 'Marketing AI', icon: TrendingUp, color: 'from-zion-pink to-zion-cyan' },
-    { id: 'sales-ai', name: 'Sales AI', icon: Users, color: 'from-zion-green to-zion-purple' },
-    { id: 'customer-support-ai', name: 'Customer Support AI', icon: MessageCircle, color: 'from-zion-cyan to-zion-blue' },
-    { id: 'project-management-ai', name: 'Project Management AI', icon: Rocket, color: 'from-zion-purple to-zion-orange' },
-    { id: 'inventory-ai', name: 'Inventory AI', icon: Database, color: 'from-zion-blue to-zion-green' }
+    { id: 'neuromorphic', name: 'Neuromorphic Computing', icon: Brain, color: 'from-zion-purple to-zion-cyan' },
+    { id: 'synthetic-biology', name: 'Synthetic Biology', icon: Heart, color: 'from-zion-green to-zion-blue' },
+    { id: 'fusion-energy', name: 'Fusion Energy', icon: Zap, color: 'from-zion-orange to-zion-red' },
+    { id: 'brain-computer-interface', name: 'Brain-Computer Interface', icon: Brain, color: 'from-zion-pink to-zion-purple' },
+    { id: 'advanced-robotics', name: 'Advanced Robotics', icon: Cpu, color: 'from-zion-blue to-zion-green' },
+    { id: 'metaverse', name: 'Metaverse', icon: Globe, color: 'from-zion-purple to-zion-cyan' },
+    { id: 'autonomous-systems', name: 'Autonomous Systems', icon: Rocket, color: 'from-zion-green to-zion-blue' },
+    { id: 'quantum-sensing', name: 'Quantum Sensing', icon: Atom, color: 'from-zion-cyan to-zion-purple' }
   ];
 
   const priceRanges = [
@@ -92,6 +99,17 @@ export default function ServicesPage() {
     { id: 'price-high', name: 'Price: High to Low' },
     { id: 'newest', name: 'Newest' },
     { id: 'popular', name: 'Most Popular' }
+  ];
+
+  // Combine all services
+  const allServices = [
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+    ...ADVANCED_ENTERPRISE_SOLUTIONS_2025,
+    ...NEXT_GEN_AI_SERVICES_2025,
+    ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025,
+    ...IOT_EDGE_COMPUTING_SERVICES_2025,
+    ...EMERGING_TECH_SERVICES_2026,
+    ...ULTIMATE_INNOVATIVE_SERVICES_2026
   ];
 
   // Filter and sort services
