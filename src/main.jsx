@@ -18,43 +18,26 @@ import { AppLayout } from '@/layout/AppLayout';
 import { AuthProvider } from './context/auth/AuthProvider';
 import { NotificationProvider } from './context/notifications/NotificationContext';
 // Import analytics provider
-import { AnalyticsProvider } from './context/AnalyticsContext';
-import { ViewModeProvider } from './context/ViewModeContext';
+// import { AnalyticsProvider } from './context/AnalyticsContext';
+// import { ViewModeProvider } from '@/context/ViewModeContext';
 // Initialize a React Query client with global error handling
-const queryClient = new QueryClient({
-    defaultOptions: {
-        queries: {
-            retry: 1,
-            refetchOnWindowFocus: false,
-        },
-    },
-});
+// const queryClient = new QueryClient({
+//     defaultOptions: {
+//         queries: {
+//             retry: 1,
+//             refetchOnWindowFocus: false,
+//         },
+//     },
+// });
 const rootElement = document.getElementById('root');
 function renderApp() {
-    const app = (<React.StrictMode>
-      <HelmetProvider>
-        <QueryClientProvider client={queryClient}>
-          <WhitelabelProvider>
-            <Router>
-              <AuthProvider>
-                <NotificationProvider>
-                  <AnalyticsProvider>
-                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                      <ViewModeProvider>
-                        <AppLayout>
-                          <App />
-                        </AppLayout>
-                      </ViewModeProvider>
-                      <LanguageDetectionPopup />
-                    </LanguageProvider>
-                  </AnalyticsProvider>
-                </NotificationProvider>
-              </AuthProvider>
-            </Router>
-          </WhitelabelProvider>
-        </QueryClientProvider>
-      </HelmetProvider>
-    </React.StrictMode>);
+    const app = React.createElement(React.StrictMode, null,
+        React.createElement(HelmetProvider, null,
+            React.createElement(Router, null,
+                React.createElement(App, null)
+            )
+        )
+    );
     if (rootElement?.hasChildNodes()) {
         hydrateRoot(rootElement, app);
     }

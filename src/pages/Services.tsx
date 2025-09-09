@@ -4,481 +4,257 @@ import {
   Brain, 
   Shield, 
   Cloud, 
-  Database, 
-  Globe, 
+  Server, 
   Zap, 
-  Users, 
-  Code,
+  Globe, 
+  Code, 
+  Database,
   Lock,
-  Server,
+  Cpu,
   Network,
   Smartphone,
-  BarChart3,
-  Cpu,
   Rocket,
-  Target,
-  Award,
   Atom,
-  Satellite,
-  Microscope,
-  Dna,
-  Leaf,
-  Car,
-  Building2,
-  Factory,
-  ShoppingCart,
-  GraduationCap,
-  Heart,
-  Palette,
-  Music,
-  Camera,
-  Video,
-  Gamepad2,
-  BookOpen,
-  Newspaper,
-  Radio,
-  Tv,
-  Watch,
-  Headphones,
-  Speaker,
-  Printer,
-  Scanner,
-  Router,
-  Server,
-  HardDrive,
-  MemoryStick,
-  Keyboard,
-  Mouse,
-  Monitor,
-  Laptop,
-  Tablet,
-  Wifi,
-  Bluetooth,
-  Smartphone,
-  Zap,
-  Lightbulb,
-  Cog,
-  Settings,
-  Tool,
-  Wrench,
-  Hammer,
-  Screwdriver,
-  Drill,
-  Saw,
-  Paintbrush,
-  Ruler,
-  Calculator,
-  Chart,
-  Graph,
-  PieChart,
-  BarChart,
-  LineChart,
-  TrendingUp,
-  TrendingDown,
-  DollarSign,
-  CreditCard,
-  Wallet,
-  PiggyBank,
-  Coins,
-  Banknote,
-  Receipt,
-  Invoice,
-  Contract,
-  Document,
-  FileText,
-  File,
-  Folder,
-  Archive,
-  Download,
-  Upload,
-  Share,
-  Link,
-  ExternalLink,
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  Calendar,
-  Timer,
-  Stopwatch,
-  Hourglass,
-  Bell,
-  AlertTriangle,
-  Info,
-  HelpCircle,
-  CheckCircle,
-  XCircle,
-  MinusCircle,
-  PlusCircle,
-  Edit,
-  Trash2,
-  Copy,
-  Save,
-  Search,
-  Filter,
-  Sort,
-  Grid,
-  List,
-  Columns,
-  Rows,
-  Layout,
-  Sidebar,
-  Menu,
-  X,
-  ChevronDown,
-  ChevronUp,
-  ChevronLeft,
-  ChevronRight,
-  ArrowLeft,
-  ArrowRight,
-  ArrowUp,
-  ArrowDown,
-  Move,
-  RotateCw,
-  RotateCcw,
-  ZoomIn,
-  ZoomOut,
-  Maximize,
-  Minimize,
-  RefreshCw,
-  RefreshCw,
-  Power,
-  PowerOff,
-  Play,
-  Pause,
-  Stop,
-  SkipBack,
-  SkipForward,
-  Rewind,
-  FastForward,
-  Volume,
-  Volume1,
-  Volume2,
-  VolumeX,
-  Mute,
-  Unmute,
-  Mic,
-  MicOff,
-  Video,
-  VideoOff,
-  Camera,
-  CameraOff,
-  Image,
-  ImageOff,
-  FileImage,
-  FileVideo,
-  FileAudio,
-  FileCode,
-  FileArchive,
-  FilePdf,
-  FileWord,
-  FileExcel,
-  FilePowerpoint,
-  FileText,
-  File,
-  Folder,
-  FolderOpen,
-  FolderPlus,
-  FolderMinus,
-  FolderX,
-  FolderCheck,
-  FolderSearch,
-  FolderLock,
-  FolderUnlock,
-  FolderHeart,
-  FolderStar,
-  FolderGit,
-  FolderGit2,
-  FolderRoot,
-  FolderUp,
-  FolderDown,
-  FolderLeft,
-  FolderRight,
-  FolderTree,
-  FolderSymlink,
-  FolderSymlink2,
-  FolderClosed,
-  FolderOpen2,
-  FolderPlus2,
-  FolderMinus2,
-  FolderX2,
-  FolderCheck2,
-  FolderSearch2,
-  FolderLock2,
-  FolderUnlock2,
-  FolderHeart2,
-  FolderStar2,
-  FolderGit2,
-  FolderGit22,
-  FolderRoot2,
-  FolderUp2,
-  FolderDown2,
-  FolderLeft2,
-  FolderRight2,
-  FolderTree2,
-  FolderSymlink2,
-  FolderSymlink22,
-  FolderClosed2
+  Users,
+  Building
 } from 'lucide-react';
 
 export default function Services() {
-  const [activeCategory, setActiveCategory] = useState('all');
-
   const serviceCategories = [
-    { id: 'all', name: 'All Services', icon: Target },
-    { id: 'ai', name: 'AI & Machine Learning', icon: Brain },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud },
-    { id: 'infrastructure', name: 'IT Infrastructure', icon: Server },
-    { id: 'digital', name: 'Digital Transformation', icon: Rocket },
-    { id: 'consulting', name: 'Consulting', icon: Users },
-    { id: 'mobile', name: 'Mobile & Web', icon: Smartphone }
-  ];
-
-  const services = [
     {
-      id: 'ai-autonomous-systems',
-      title: 'AI Autonomous Systems',
-      description: 'Advanced AI systems that operate independently to solve complex business problems.',
-      category: 'ai',
+      title: "AI & Machine Learning",
       icon: Brain,
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      link: '/services/ai-autonomous-systems'
+      description: "Cutting-edge artificial intelligence and machine learning solutions",
+      services: [
+        { name: "AI Autonomous Systems", path: "/services/ai-autonomous-systems", description: "Self-learning AI systems for business automation" },
+        { name: "Machine Learning Models", path: "/services/ai-ml", description: "Custom ML models for data analysis and prediction" },
+        { name: "AI Business Intelligence", path: "/services/ai-business-intelligence", description: "AI-powered business analytics and insights" },
+        { name: "AI Marketing Automation", path: "/services/ai-marketing-automation", description: "Intelligent marketing campaign optimization" }
+      ]
     },
     {
-      id: 'cybersecurity-suite',
-      title: 'Comprehensive Cybersecurity',
-      description: 'End-to-end security solutions protecting your digital assets and infrastructure.',
-      category: 'cybersecurity',
+      title: "Cybersecurity",
       icon: Shield,
-      features: ['Threat Detection', 'Zero Trust Architecture', 'Incident Response', 'Security Audits'],
-      link: '/services/cybersecurity'
+      description: "Advanced security solutions to protect your digital assets",
+      services: [
+        { name: "AI Autonomous Security", path: "/services/ai-autonomous-security", description: "AI-driven threat detection and response" },
+        { name: "Cloud Security", path: "/services/cloud-security", description: "Comprehensive cloud infrastructure protection" },
+        { name: "Identity & Access Management", path: "/services/identity-security", description: "Secure user authentication and authorization" },
+        { name: "Incident Response", path: "/services/incident-response", description: "24/7 security monitoring and rapid response" }
+      ]
     },
     {
-      id: 'cloud-devops',
-      title: 'Cloud & DevOps Solutions',
-      description: 'Scalable cloud infrastructure and streamlined development operations.',
-      category: 'cloud',
+      title: "Cloud & DevOps",
       icon: Cloud,
-      features: ['AWS/Azure/GCP', 'Container Orchestration', 'CI/CD Pipelines', 'Infrastructure as Code'],
-      link: '/services/cloud-devops'
+      description: "Scalable cloud infrastructure and automated development operations",
+      services: [
+        { name: "Cloud Migration", path: "/services/cloud-migration", description: "Seamless transition to cloud platforms" },
+        { name: "DevOps Automation", path: "/services/devops-automation", description: "Streamlined development and deployment" },
+        { name: "Container Security", path: "/services/container-security", description: "Secure containerized application deployment" },
+        { name: "API Security", path: "/services/api-security", description: "Protected API development and management" }
+      ]
     },
     {
-      id: 'it-infrastructure',
-      title: 'IT Infrastructure Management',
-      description: 'Robust and scalable IT infrastructure solutions for modern businesses.',
-      category: 'infrastructure',
+      title: "IT Infrastructure",
       icon: Server,
-      features: ['Network Design', 'Data Centers', 'Virtualization', 'Backup & Recovery'],
-      link: '/services/infrastructure'
+      description: "Robust and scalable technology infrastructure solutions",
+      services: [
+        { name: "Network Infrastructure", path: "/services/network-infrastructure", description: "High-performance network design and implementation" },
+        { name: "Data Center Solutions", path: "/services/data-center", description: "Modern data center design and management" },
+        { name: "Edge Computing", path: "/services/edge-computing", description: "Distributed computing for improved performance" },
+        { name: "IoT Security", path: "/services/iot-security", description: "Secure Internet of Things implementation" }
+      ]
     },
     {
-      id: 'digital-transformation',
-      title: 'Digital Transformation',
-      description: 'Transform your business processes with cutting-edge digital solutions.',
-      category: 'digital',
-      icon: Rocket,
-      features: ['Process Automation', 'Legacy Modernization', 'Digital Strategy', 'Change Management'],
-      link: '/services/digital-transformation'
-    },
-    {
-      id: 'ai-business-solutions',
-      title: 'AI Business Solutions',
-      description: 'AI-powered tools and solutions designed to enhance business operations.',
-      category: 'ai',
-      icon: Cpu,
-      features: ['Business Intelligence', 'Process Optimization', 'Customer Analytics', 'Risk Management'],
-      link: '/services/ai-business-solutions'
-    },
-    {
-      id: 'quantum-computing',
-      title: 'Quantum Computing Services',
-      description: 'Next-generation quantum computing solutions for complex computational challenges.',
-      category: 'ai',
+      title: "Digital Transformation",
       icon: Zap,
-      features: ['Quantum Algorithms', 'Quantum Machine Learning', 'Optimization Problems', 'Research & Development'],
-      link: '/services/quantum-computing'
+      description: "Transform your business with cutting-edge digital solutions",
+      services: [
+        { name: "Business Process Automation", path: "/services/business-process-automation", description: "Streamline operations with intelligent automation" },
+        { name: "Legacy System Modernization", path: "/services/legacy-modernization", description: "Upgrade outdated systems to modern platforms" },
+        { name: "Digital Strategy Consulting", path: "/services/digital-strategy", description: "Strategic planning for digital transformation" },
+        { name: "Change Management", path: "/services/change-management", description: "Guide your team through digital transformation" }
+      ]
     },
     {
-      id: 'mobile-web-development',
-      title: 'Mobile & Web Development',
-      description: 'Custom mobile applications and web solutions for modern businesses.',
-      category: 'mobile',
-      icon: Smartphone,
-      features: ['React Native', 'Progressive Web Apps', 'Responsive Design', 'Performance Optimization'],
-      link: '/services/mobile-web-development'
-    },
-    {
-      id: 'data-analytics',
-      title: 'Data Analytics & BI',
-      description: 'Transform raw data into actionable insights for strategic decision-making.',
-      category: 'ai',
-      icon: BarChart3,
-      features: ['Data Warehousing', 'Real-time Analytics', 'Dashboard Creation', 'Predictive Modeling'],
-      link: '/services/data-analytics'
-    },
-    {
-      id: 'blockchain-solutions',
-      title: 'Blockchain & Web3',
-      description: 'Innovative blockchain solutions for secure and transparent business operations.',
-      category: 'digital',
-      icon: Lock,
-      features: ['Smart Contracts', 'DeFi Solutions', 'NFT Platforms', 'Supply Chain Tracking'],
-      link: '/services/blockchain'
-    },
-    {
-      id: 'edge-computing',
-      title: 'Edge Computing Solutions',
-      description: 'Distributed computing infrastructure for real-time data processing.',
-      category: 'infrastructure',
-      icon: Network,
-      features: ['IoT Integration', 'Real-time Processing', 'Low Latency', 'Distributed Networks'],
-      link: '/services/edge-computing'
-    },
-    {
-      id: 'api-development',
-      title: 'API Development & Integration',
-      description: 'Robust API solutions for seamless system integration and data exchange.',
-      category: 'mobile',
-      icon: Code,
-      features: ['RESTful APIs', 'GraphQL', 'API Gateway', 'Third-party Integration'],
-      link: '/services/api-development'
+      title: "Emerging Technologies",
+      icon: Rocket,
+      description: "Stay ahead with the latest technological innovations",
+      services: [
+        { name: "Quantum Technology", path: "/services/quantum-technology", description: "Next-generation quantum computing solutions" },
+        { name: "Blockchain & Web3", path: "/services/blockchain", description: "Decentralized technology implementation" },
+        { name: "Space Technology", path: "/services/space-technology", description: "Innovative space-based solutions" },
+        { name: "Green IT", path: "/services/green-it", description: "Sustainable technology solutions" }
+      ]
     }
   ];
 
-  const filteredServices = activeCategory === 'all' 
-    ? services 
-    : services.filter(service => service.category === activeCategory);
+  const featuredServices = [
+    {
+      name: "AI Autonomous Business Platform 2029",
+      description: "Next-generation AI platform for autonomous business operations",
+      path: "/services/ai-autonomous-business-platform-2029",
+      icon: Brain,
+      featured: true
+    },
+    {
+      name: "Micro SAAS Solutions",
+      description: "Scalable software-as-a-service solutions for growing businesses",
+      path: "/services/micro-saas-solutions",
+      icon: Code,
+      featured: true
+    },
+    {
+      name: "5G Enterprise Solutions",
+      description: "High-speed connectivity solutions for enterprise environments",
+      path: "/services/5g-enterprise-solutions",
+      icon: Network,
+      featured: true
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 text-center">
-        <div className="max-w-4xl mx-auto px-6">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-            Our Services
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Comprehensive technology solutions to transform your business
-          </p>
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-            From AI-powered automation to robust cybersecurity, we provide cutting-edge solutions 
-            that drive innovation and growth across all industries.
-          </p>
-        </div>
-      </section>
-
-      {/* Service Categories Filter */}
-      <section className="py-12 bg-black/30">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-wrap justify-center gap-4">
-            {serviceCategories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-full border transition-all duration-200 ${
-                  activeCategory === category.id
-                    ? 'border-cyan-500 bg-cyan-500/20 text-cyan-400'
-                    : 'border-slate-600 text-slate-300 hover:border-cyan-500 hover:text-cyan-400'
-                }`}
+      <div className="relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Our
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                {" "}Services
+              </span>
+            </h1>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
+              Comprehensive technology solutions designed to transform your business. 
+              From AI and cybersecurity to cloud infrastructure and digital transformation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
               >
-                <div className="inline-flex p-4 rounded-full mb-6 bg-gradient-to-r from-cyan-500 to-blue-600">
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                
-                <div className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-gray-400">
-                      <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <Link 
-                  to={service.link}
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-semibold"
-                >
-                  Learn More →
-                </Link>
-              </motion.div>
-            ))}
+                Get Started
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 border border-slate-600 text-base font-medium rounded-lg text-slate-300 hover:text-white hover:border-slate-500 transition-all duration-200"
+              >
+                Request Quote
+              </Link>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Services Grid */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
-              <div
-                key={service.id}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
-                    <service.icon className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                </div>
-                
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-medium text-cyan-400 mb-2">Key Features:</h4>
-                  <ul className="space-y-1">
-                    {service.features.slice(0, 3).map((feature, index) => (
-                      <li key={index} className="text-sm text-gray-400 flex items-center">
-                        <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <Link
-                  to={service.link}
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
-                >
-                  Learn More
-                  <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
+      {/* Featured Services */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 className="text-3xl font-bold text-white text-center mb-12">
+          Featured Services
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {featuredServices.map((service, index) => (
+            <div
+              key={index}
+              className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
+            >
+              <div className="flex items-center mb-4">
+                <service.icon className="h-12 w-12 text-cyan-400" />
+                <h3 className="text-xl font-semibold text-white ml-4">
+                  {service.name}
+                </h3>
               </div>
-            ))}
-          </div>
+              <p className="text-slate-300 mb-6">
+                {service.description}
+              </p>
+              <Link
+                to={service.path}
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
+              >
+                Learn More
+                <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
+
+      {/* Service Categories */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 className="text-3xl font-bold text-white text-center mb-12">
+          Service Categories
+        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {serviceCategories.map((category, index) => (
+            <div
+              key={index}
+              className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-8 border border-slate-700/30"
+            >
+              <div className="flex items-center mb-6">
+                <category.icon className="h-10 w-10 text-cyan-400" />
+                <h3 className="text-2xl font-semibold text-white ml-4">
+                  {category.title}
+                </h3>
+              </div>
+              <p className="text-slate-300 mb-6">
+                {category.description}
+              </p>
+              <div className="space-y-3">
+                {category.services.map((service, serviceIndex) => (
+                  <Link
+                    key={serviceIndex}
+                    to={service.path}
+                    className="block p-3 rounded-lg bg-slate-700/30 hover:bg-slate-700/50 transition-all duration-200 group"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h4 className="text-white font-medium group-hover:text-cyan-400 transition-colors duration-200">
+                          {service.name}
+                        </h4>
+                        <p className="text-slate-400 text-sm">
+                          {service.description}
+                        </p>
+                      </div>
+                      <svg className="h-5 w-5 text-slate-400 group-hover:text-cyan-400 transition-colors duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* CTA Section */}
-      <section className="py-20 bg-black/30">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center border border-cyan-500/30">
+          <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our services can help you achieve your technology goals.
+          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+            Let our experts help you implement the right technology solutions 
+            to drive growth and innovation in your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
+              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
             >
-              Get Started
+              Schedule Consultation
             </Link>
             <Link
-              to="/about"
-              className="px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
+              to="/case-studies"
+              className="inline-flex items-center px-8 py-3 border border-slate-600 text-base font-medium rounded-lg text-slate-300 hover:text-white hover:border-slate-500 transition-all duration-200"
             >
-              Learn More About Us
+              View Case Studies
             </Link>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
