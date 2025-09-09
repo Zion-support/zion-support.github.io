@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-// Archived: from pages/comprehensive-services-showcase-2026.tsx to avoid build issues.
-// Restore and adapt to Next.js Link if needed.
-export default function Placeholder() {
-  return null}
-;
-=======
 import React { useState } from 'react'
 import Link from 'next/link'
 import { ArrowRight, Star, Users, TrendingUp, Clock, Shield, Zap, Brain, Cloud, Database, Code, Building, Rocket } from 'lucide-react'
@@ -359,4 +352,3 @@ export default function ComprehensiveServicesShowcase2026() {
 }
   );
 };
->>>>>>> origin/chore/site-audit-and-nav-enhancements
