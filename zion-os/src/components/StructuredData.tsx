@@ -26,11 +26,11 @@ export function StructuredData() {
       ]
     },
     "featureList": [
-      "AI-Powered Digital Economies",
-      "Unified Deployment Protocol",
-      "Marketplace Integration",
-      "Governance Systems",
-      "Identity Management",
+      "Marketplace & Jobs",
+      "AI Governance",
+      "Token Systems",
+      "Identity & KYC",
+      "AI-Powered Tools",
       "Modular Architecture"
     ],
     "screenshot": "https://ziontechgroup.com/screenshot.png",
