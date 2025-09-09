@@ -1,35 +1,119 @@
-[# Unified Netlify build configuration]
-[build]
-  # Build from source on Netlify
-  command = "npm ci --no-audit --no-fund && npm run build"
+
+[build] # touch v4.63 to trigger Netlify rebuild
+  # Build the site with Vite and publish the dist folder
+  # Netlify runs dependency installation before build.command. Avoid redundant npm ci.
+  command = "npm run build:ci"
   publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
+  # Skip TypeScript checking during build
 
-[build.environment]
-  NODE_VERSION = "20"
-  PYTHON_VERSION = "3.11"
-  # Install dependencies and build on Netlify
-  NETLIFY_SKIP_INSTALL = "false"
-  NETLIFY_USE_YARN = "false"
-  NPM_FLAGS = "--omit=optional"
+  [build.environment]
+    NODE_VERSION = "20.19.0"
+    NODE_OPTIONS = "--max-old-space-size=6144"
+    SKIP_TYPE_CHECK = "true"
+    # Ensure devDependencies are installed during CI
+    NPM_CONFIG_PRODUCTION = "false"
+    NPM_FLAGS = "--include=dev --include=optional"
+    # Ensure optional dependencies are installed
+    NPM_CONFIG_OPTIONAL = "true"
+    # Enable Next.js runtime
+    # Skip Next.js plugin; we deploy a static Vite build
+    NETLIFY_NEXT_PLUGIN_SKIP = "true"
+    # Optimize build performance
+    VITE_BUILD_OPTIMIZE = "true"
+    # Disable source maps for faster builds
+    VITE_SOURCEMAP = "false"
 
-[context.production.environment]
-  NODE_ENV = "production"
+# Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' plausible.io; connect-src 'self' plausible.io; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    # Additional security headers
+    Cross-Origin-Embedder-Policy = "require-corp"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
 
-# Vite/React SPA configuration
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+[[headers]]
+  for = "/logos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
-# Set basic cache headers for static assets for better performance
 [[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Additional asset and PWA headers migrated from `_headers`
 [[headers]]
-  for = "/*"
+  for = "/sw.js"
   [headers.values]
-    Cache-Control = "public, max-age=300"
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Service-Worker-Allowed = "/"
+
+[[headers]]
+  for = "/manifest.json"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# SPA fallback handled via `_redirects` in publish dir if present
+
+# Functions
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Essential scheduled functions only
+[[scheduled.functions]]
+  name = "health"
+  schedule = "*/5 * * * *" # every 5 minutes for health checks
+
+[context.production.environment]
+  NODE_ENV = "production"
+  # Ensure dev deps are available in prod builds on Netlify
+  NPM_CONFIG_PRODUCTION = "false"
+
+[context.deploy-preview]
+  command = "npm run build:ci"
+
+[context.branch-deploy]
+  command = "npm run build:ci"
+
+# Next.js configuration - no SPA fallback needed

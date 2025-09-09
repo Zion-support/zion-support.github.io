@@ -57,7 +57,7 @@ function renderHtml(data, repoSlug = 'Zion-Holdings/zion.app') {
   const total = data.items.reduce((sum, f) => sum + f.findings.length, 0);
   const rows = data.items.map(item => {
     const fileLink = `https://github.com/${repoSlug}/blob/main/${item.file}`;
-    const lines = item.findings.slice(0, 5).map(m => `<div style="font-family:monospace;color:#ccd"><a style="color:#9ad" href="${fileLink}#L${m.line}">#${m.line}</a> ${m.text.replace(/</g,'&lt;')}</div>`).join('');
+    const lines = item.findings.slice(0, 5).map(m => `<div style="font-family:monospace;color:#ccd"><a style="color:#9ad" href="${fileLink}#L${m.line}">#${m.line}</a> ${m.text.replace(/</g,'<')}</div>`).join('');
     return `<tr>
       <td style="padding:8px;border-bottom:1px solid #223;"><a style="color:#9ad" href="${fileLink}">${item.file}</a></td>
       <td style="padding:8px;border-bottom:1px solid #223;">${item.findings.length}</td>

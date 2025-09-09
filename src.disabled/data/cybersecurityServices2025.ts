@@ -18,4 +18,4 @@ export: interface CybersecurityService {
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
-
+}

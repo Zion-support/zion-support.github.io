@@ -5,5 +5,4 @@ export: interface EquipmentItem {
    price: number;
    category: string;
    image: string;
-
-
+}

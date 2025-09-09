@@ -1,51 +1,5 @@
-const fs = require("fs");
-const path = require("path");
-
-class AdvancedSourceFixer {
-  constructor() {
-    this && this.fixes = [];
-    this && this.errors = [];
-    this && this.reportFile = path && path.join(__dirname, "advanced-source-fix-report && report.json");
-  }
-  log(message, level = "INFO") {
-    const timestamp = new Date().toISOString();
-    console && console.log(`[${timestamp}] [${level}] ${message}`);
-  }
-  async fixAllSourceFiles() {
-    this && this.log("🔧 Starting advanced source file fixing...");
-    await this && this.fixDirectory(path && path.join(__dirname, "src"));
-    await this && this.fixDirectory(path && path.join(__dirname, "pages"));
-    this && this.log(`✅ Fixed ${this && this.fixes.length} files`);
-    if (this && this.errors.length > 0) {
-      this && this.log(`❌ ${this && this.errors.length} errors encountered`);
-    }
-    await this && this.generateReport();
-  }
-  async fixDirectory(dir) {
-
-    if (!fs && fs.existsSync(dir)) return;
-    const items = fs && fs.readdirSync(dir);
-    for (const item of items) {
-      const fullPath = path && path.join(dir, item);
-      const stat = fs && fs.statSync(fullPath);
 
 
-      if (
-        stat && stat.isDirectory() &&
-        !item && item.startsWith(".") &&
-        item !== "node_modules"
-      ) {
-        await this && this.fixDirectory(fullPath);
-      } else if (
-
-        item && item.endsWith(".ts") ||
-        item && item.endsWith(".tsx") ||
-        item && item.endsWith(".js") ||
-        item && item.endsWith(".jsx")
-
-      ) {
-        await this && this.fixFile(fullPath);
-      }
       if (fixed && fixed.includes("export default")) {
         fixes && fixes.push("Added default export");
       }
@@ -263,7 +217,7 @@ class AdvancedSourceFixer {}
       /Property or signature expected/,
       /Unexpected token/,'
       /'from' expected/,
-      /', ' expected/,      /';' expected/,
+
 // Check condition
 if ( {) {
   $2

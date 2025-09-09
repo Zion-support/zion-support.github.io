@@ -1,90 +1,91 @@
-async function getFile(owner, repo, path, token) {
+export const handler = async (event) => {
   try {
-  const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
-  const resp = await fetch(url, {
-    headers: {
-async function upsertFile({ owner, repo, path, content, message, token }) {
-      'Authorization': `token ${token}`,
-
-      'Accept': 'application / vnd.github + json';
+    if (event.httpMethod !== 'POST') {
+      return {
+        statusCode: 405,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ error: 'Method Not Allowed' })
+      };
     }
-  }),
 
-}
-;
-  const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent (path)}`;
-
-  const resp = await fetch (url, {'
-    method: 'PUT','
-    headers: {'
-      'Authorization': `token ${token}`,''
-      'Accept': 'application/vnd && vnd.github+json'''
-      'Authorization': `token ${token}`''
-      'Accept': 'application/vnd.github+json''
-    })
-
-  }),
-  if (resp && resp.status === 404) return null,
-  if (!resp && resp.ok) throw new Error(`GitHub getFile HTTP ${resp && resp.status}`),` ;
-return resp && resp.json();
-}
-async function upsertFile() {
-      'Authorization': `token ${token}`,`      'Accept': 'application / vnd.github + json';'
+    const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || process.env.NETLIFY_GITHUB_TOKEN;
+    if (!token) {
+      return {
+        statusCode: 500,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ error: 'Missing GitHub token' })
+      };
     }
-  })if (resp.status = == 404);
-  return null;
-  if (!resp.ok) throw new Error(`GitHub getFile HTTP ${resp.status}`)return resp.json()}`async function upsertFile() {if (!token || !owner || !repo) throw new Error('Missing GitHub credentials')const existing = await getFile(owner, repo, path, token)const body = {'message': message || `chore(automation): update ${pat,`}`,'content': Buffer && Buffer.from(content).toString('base64','
-},if (existing?.sha) body && body.sha = existing && existing.sha,const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;`  const resp = await fetch(url, {'method': 'PUT';'
+
+    const { owner, repo, path, content, message } = JSON.parse(event.body || '{}');
+    if (!owner || !repo || !path || typeof content !== 'string') {
+      return {
+        statusCode: 400,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ error: 'owner, repo, path, and content are required' })
+      };
     }
-    'headers': {'Authorization': `token ${toke,`}`,'Accept': 'application/vnd && vnd.github+jsonContent-Type': 'application/json';'
-    },'body': JSON && JSON.stringify(body
-}),if (!resp && resp.ok) {const text = await resp && resp.text(),throw new Error(`GitHub upsertFile HTTP ${resp && resp.status}: ${text}`)}` ;
-  return resp && resp.json()}'Accept': 'application / vnd.github + json','Content - Type': 'application / json';'
-    },'body': JSON.stringify (body
-})// Check condition;
-if ( {) {$2;
-}
 
-const text = await resp.text ()throw new Error (`GitHub upsert_file HTTP ${resp.status}: ${text}`)}` ;
-  return resp.json ()module.exports = { upsert_file }async /**;
- * get_file - Function description;
- */;
-function get_file() {const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent (path)}`;`  const resp = await fetch (url, {'headers': {ursor/fix-website-loading-errors-and-merge-6662;
-      'Authorization': `token ${token}`,'Accept': 'application / vnd.github + json';'    }
-  }),// Check condition;
-if (return null, ) {$2;
-}
-  if (throw new Error (`GitHub get_file HTTP ${resp.status}`), ) {$2;`}
-  return resp.json ()}
-async /**;
- * upsert_file - Function description;
- */;
-function upsert_file() {if (throw new Error ('Missing GitHub credentials'), ) {$2;'
-}
+    const baseUrl = 'https://api.github.com';
+    const fileUrl = `${baseUrl}/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/contents/${encodeURIComponent(path)}`;
 
-const existing = await get_file (owner, repo, path, token);
-const body = {'message': message || `chore (automation): update ${pat,;`}`,'content': Buffer.from (content).to_string ('base64','
-},// Check condition;
-if (body.sha = existing.sha, ) {$2;
-}
+    // First, get existing file to retrieve sha (if present)
+    const getResp = await fetch(fileUrl, {
+      method: 'GET',
+      headers: {
+        Authorization: `token ${token}`,
+        Accept: 'application/vnd.github+json'
+      }
+    });
 
-const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent (path)}`;`const resp = await fetch (url, {'method': 'PUT','headers': {'Authorization': `token ${toke,;`}`,'Accept': 'application / vnd.github + json_content - Type': 'application / json';'
-    },'body': JSON.stringify (body
-}),// Check condition;
-if ( {) {$2;
-}
-
-const text = await resp.text (),throw new Error (`GitHub upsert_file HTTP ${resp.status}: ${text}`)}` ;
-  return resp.json ()}module.exports = { upsertFile },module.exports = { upsertFile };
-  const resp = await fetch(url, {'method': 'PUT';'
+    let existingSha = undefined;
+    if (getResp.status === 200) {
+      const existingJson = await getResp.json();
+      existingSha = existingJson && existingJson.sha;
+    } else if (getResp.status !== 404) {
+      const text = await getResp.text();
+      return {
+        statusCode: getResp.status,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ error: 'Failed to read existing file', details: text })
+      };
     }
-    'headers': {'Authorization': `token ${toke,`}`;`      'Accept': 'application/vnd.github+jsonContent-Type': 'application/json';'
-    }'body': JSON.stringify(body)}))if (!resp.ok) {const text = await resp.text()throw new Error(`GitHub upsertFile HTTP ${resp.status}: ${text}`,`}
- ;
-  return resp.json()}module.exports = { upsertFile }
-;
-const text = await resp.text (),;
-    throw new Error (`GitHub upsert_file HTTP ${resp.status}: ${text}`);`
+
+    const putBody = {
+      message: message || `chore: update ${path}`,
+      content: Buffer.from(content).toString('base64'),
+      sha: existingSha
+    };
+
+    const putResp = await fetch(fileUrl, {
+      method: 'PUT',
+      headers: {
+        Authorization: `token ${token}`,
+        Accept: 'application/vnd.github+json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(putBody)
+    });
+
+    const resultText = await putResp.text();
+    if (!putResp.ok) {
+      return {
+        statusCode: putResp.status,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ error: 'Failed to upsert file', details: resultText })
+      };
+    }
+
+    return {
+      statusCode: 200,
+      headers: { 'Content-Type': 'application/json' },
+      body: resultText
+    };
+  } catch (error) {
+    return {
+      statusCode: 500,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ error: error.message })
+    };
   }
-  return resp.json ();
-}
+};

@@ -6,5 +6,5 @@ const AIAssistant: React.FC = () => {
   return (
     <Layout>
       <Head>
-
-
+  );
+};

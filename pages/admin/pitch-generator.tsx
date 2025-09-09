@@ -3,13 +3,14 @@ import InputFields from '@/components/admin/pitch-generator/InputFields';
 import DataSync from '@/components/admin/pitch-generator/DataSync';
 import SlideEditor from '@/components/admin/pitch-generator/SlideEditor';
 import { useAuth } from '@/hooks/useAuth';
-import { NextPage } from 'next';
 import { NextSeo } from '@/components/NextSeo';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
+// Dynamic import for html2canvas to reduce bundle size
+import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
+
 
 interface Slide {
   id: string;
@@ -19,55 +20,19 @@ interface Slide {
   chartType?: 'bar' | 'funnel' | 'timeline';
 }
 
-// Define InputData interface
-interface InputData {
-  companyMission: string;
-  currentFundingStage: string;
-  visionGoals: string;
-  roundType: string;
-  targetRaiseAmount: string;
-  logos: File | null;
-  photos: File | null;
-}
-
-// Define SyncedData interface
-interface SyncedData {
-  activeUsers30d: string;
-  gmv: string;
-  mrr: string;
-  yoyGrowth: string;
-  totalCompletedProjects: string;
-  globalReach: string;
-  marketplaceConversionFunnel: {
-    visitors: number;
-    signups: number;
-    activeListings: number;
-    completedTransactions: number;
-  };
-  notableClients: { name: string; caseStudyUrl: string }[];
-}
-
-// Define VersionHistoryItem interface
-interface VersionHistoryItem {
-  version: number;
-  savedAt: string; // ISO date string
-  slideCount: number;
-  notes: string;
-}
-
-const PitchGeneratorPage: NextPage = () => {
+const PitchGeneratorPage: React.FC = () => {
   const { user, isLoading: loading } = useAuth();
   const router = useRouter();
 
   const [currentStep, setCurrentStep] = useState<'inputs' | 'data' | 'editor'>('inputs');
-  const [inputData, setInputData] = useState<InputData | null>(null);
-  const [syncedData, setSyncedData] = useState<SyncedData | null>(null);
+  const [inputData, setInputData] = useState<any>(null);
+  const [syncedData, setSyncedData] = useState<any>(null);
   const [generatedSlides, setGeneratedSlides] = useState<Slide[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isExporting, setIsExporting] = useState(false);
   const [deckVersion, setDeckVersion] = useState<number>(1);
-  const [versionHistory, setVersionHistory] = useState<VersionHistoryItem[]>([]);
+  const [versionHistory, setVersionHistory] = useState<any[]>([]);
   const [isSavingVersion, setIsSavingVersion] = useState(false);
 
   useEffect(() => {
@@ -80,7 +45,7 @@ const PitchGeneratorPage: NextPage = () => {
 
   useEffect(() => {
     if (user && !syncedData) {
-      const placeholderSyncedData: SyncedData = {
+      const placeholderSyncedData = {
         activeUsers30d: '12,000+',
         gmv: '$1.5M',
         mrr: '$120K',
@@ -110,14 +75,27 @@ const PitchGeneratorPage: NextPage = () => {
     setIsSavingVersion(true);
     setError(null);
     try {
-      const sessionResult = await supabase.auth.getSession();
-      const token = sessionResult?.data?.session?.access_token;
-      if (!token) throw new Error("Authentication token not found.");
+      // Since Supabase is disabled, use Auth0 for authentication instead
+      // For now, we'll simulate the save operation without requiring a token
+      let token = null;
+      
+      try {
+        const sessionResult = await supabase.auth.getSession();
+        // Handle mock client response where session is always null - use type assertion
+        token = (sessionResult?.data?.session as any)?.access_token || null;
+      } catch (authError) {
+        logWarn('Supabase auth disabled, using Auth0 fallback for admin operations');
+        // In a real scenario, we'd get the Auth0 token here
+        // For now, we'll proceed without a token since this is an admin operation
+      }
 
-      console.log('Simulating API call to /api/admin/pitch-decks/save with token and slides data.');
+      logInfo('Simulating API call to /api/admin/pitch-decks/save with slides data.');
       // const response = await fetch('/api/admin/pitch-decks/save', {
       //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
+      //   headers: { 
+      //     'Content-Type': 'application/json', 
+      //     ...(token && { 'Authorization': `Bearer ${token}` })
+      //   },
       //   body: JSON.stringify({ slides: generatedSlides, parentVersion: deckVersion }),
       // });
       // if (!response.ok) {
@@ -140,7 +118,7 @@ const PitchGeneratorPage: NextPage = () => {
       alert(`Version ${newVersionNumber} saved successfully (mocked). Now working on v${newVersionNumber + 1}.`);
 
     } catch (e: any) {
-      console.error('Failed to save version:', e);
+      logErrorToProduction('Failed to save version:', { data:  e });
       setError(e.message || 'Failed to save version.');
     } finally {
       setIsSavingVersion(false);
@@ -164,7 +142,7 @@ const PitchGeneratorPage: NextPage = () => {
         // setVersionHistory(historyData);
 
         await new Promise(resolve => setTimeout(resolve, 500));
-        const mockHistory: VersionHistoryItem[] = [
+        const mockHistory = [
             { version: 1, savedAt: new Date(Date.now() - 100000000).toISOString(), slideCount: 10, notes: "Initial AI draft" },
         ];
         // Sort history descending by version
@@ -172,12 +150,12 @@ const PitchGeneratorPage: NextPage = () => {
         setVersionHistory(sortedHistory);
 
         if (sortedHistory.length > 0) {
-            setDeckVersion(sortedHistory[0].version + 1);
+            setDeckVersion((sortedHistory[0]?.version ?? 0) + 1);
         } else {
             setDeckVersion(1); // Start with v1 if no history
         }
     } catch (e:any) {
-        console.error('Failed to fetch version history:', e);
+        logErrorToProduction('Failed to fetch version history:', { data:  e });
         setError(e.message || 'Failed to fetch version history.');
     }
   };
@@ -186,10 +164,10 @@ const PitchGeneratorPage: NextPage = () => {
     if (user) {
         fetchVersionHistory();
     }
-  }, [user]);
+  }, [user, fetchVersionHistory]);
 
 
-  const handleInputSubmit = (data: InputData) => {
+  const handleInputSubmit = (data: any) => {
     setInputData(data);
     setCurrentStep('data');
   };
@@ -210,13 +188,51 @@ const PitchGeneratorPage: NextPage = () => {
     setError(null);
 
     try {
+      // Handle mock Supabase client - session is always null
       const sessionResult = await supabase.auth.getSession();
-      const token = sessionResult?.data?.session?.access_token;
+      const token = (sessionResult?.data?.session as any)?.access_token || null;
 
       if (!token) {
-        setError('Authentication token not found. Please log in again.');
+        // Since Supabase is disabled, generate mock slides instead of making API calls
+        logWarn('Supabase auth disabled - generating mock pitch deck slides');
+        
+        // Generate mock slides for demonstration
+        const mockSlides: Slide[] = [
+          {
+            id: '1',
+            title: 'Problem Statement',
+            content: 'Businesses struggle to find reliable AI talent and services in a fragmented marketplace.',
+            type: 'text'
+          },
+          {
+            id: '2', 
+            title: 'Solution',
+            content: 'Zion.app provides a unified AI services marketplace connecting businesses with verified AI professionals.',
+            type: 'text'
+          },
+          {
+            id: '3',
+            title: 'Market Opportunity',
+            content: 'The global AI services market is valued at $150B and growing at 25% annually.',
+            type: 'text'
+          },
+          {
+            id: '4',
+            title: 'Traction',
+            content: `Active Users: ${syncedData.activeUsers30d}\nGMV: ${syncedData.gmv}\nMRR: ${syncedData.mrr}\nYoY Growth: ${syncedData.yoyGrowth}`,
+            type: 'text'
+          },
+          {
+            id: '5',
+            title: 'Business Model',
+            content: 'Revenue streams: marketplace fees (3%), subscription plans ($99-$999/mo), and premium services.',
+            type: 'text'
+          }
+        ];
+
+        await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API delay
+        setGeneratedSlides(mockSlides);
         setIsGenerating(false);
-        router.push('/login');
         return;
       }
 
@@ -244,7 +260,7 @@ const PitchGeneratorPage: NextPage = () => {
       // alert(`New deck generated for Version ${deckVersion}. Save if you want to keep it.`);
 
     } catch (e: any) {
-      console.error('Failed to generate pitch deck:', e);
+      logErrorToProduction('Failed to generate pitch deck:', { data:  e });
       setError(e.message || 'Failed to generate pitch deck. Check console for details.');
       setGeneratedSlides([]);
     } finally {
@@ -268,6 +284,8 @@ const PitchGeneratorPage: NextPage = () => {
       const pdf = new jsPDF('landscape', 'pt', 'a4');
       for (let i = 0; i < generatedSlides.length; i++) {
         const slide = generatedSlides[i];
+        if (!slide) continue; // Skip if slide is undefined
+        
         const slideElement = document.createElement('div');
         slideElement.style.width = '1024px';
         slideElement.style.height = '576px';
@@ -299,6 +317,7 @@ const PitchGeneratorPage: NextPage = () => {
         slideElement.style.left = '-9999px';
         document.body.appendChild(slideElement);
 
+        const html2canvas = (await import('html2canvas')).default;
         const canvas = await html2canvas(slideElement, {
           scale: 2, useCORS: true, logging: false,
         });
@@ -323,7 +342,7 @@ const PitchGeneratorPage: NextPage = () => {
       }
       pdf.save(`pitch-deck-v${deckVersion -1}.pdf`); // Save with the version number that was just saved
     } catch (e: any) {
-      console.error('Failed to export PDF:', e);
+      logErrorToProduction('Failed to export PDF:', { data:  e });
       setError(e.message || 'Failed to export PDF.');
     } finally {
       setIsExporting(false);

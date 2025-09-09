@@ -179,7 +179,7 @@ import: { Phone, Mail, MapPin, Clock, MessageSquare, Send } from;
 
   return(
     <MainLayout;
-      title='Contact Us - Zion Tech Group''      description='Get in touch with Zion Tech Group for technology solutions, consultations, and support. We&apos;re here to help transform your business.'';
+      title='Contact Us - Zion Tech Group''      description='Get in touch with Zion Tech Group for technology solutions, consultations, and support. We're here to help transform your business.'';
   '    >'      {/* Hero Section */}
 
 

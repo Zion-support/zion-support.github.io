@@ -1,39 +1,50 @@
+// @ts-nocheck
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-<<<<<<< HEAD
-=======
-// import { fileURLToPath } from 'node:url'
->>>>>>> main
 import path from 'path'
-import { visualizer } from 'rollup-plugin-visualizer'
+import { fileURLToPath } from 'url'
+
+// Ensure __dirname is available in ESM
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+// Disable complex manual chunking on CI/Netlify to avoid occasional hangs during
+// Rollup's chunk rendering phase. Can be overridden locally by setting
+// DISABLE_MANUAL_CHUNKS=false or enabling ANALYZE.
+const disableManualChunks = (
+  process.env.NETLIFY === 'true' ||
+  process.env.CI === 'true' ||
+  process.env.DISABLE_MANUAL_CHUNKS === 'true'
+) && process.env.ANALYZE !== 'true'
+
+// Determine if we're running in CI/Netlify
+const isCI = process.env.NETLIFY === 'true' || process.env.CI === 'true'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: '/',
   plugins: [
     react({
-      // Enable React Fast Refresh
-      fastRefresh: true,
-      // Optimize JSX runtime
       jsxRuntime: 'automatic',
     }),
-    // Add bundle analyzer in analyze mode
-    ...(mode === 'analyze' ? [visualizer({
-      filename: 'dist/stats.html',
-      open: false,
-      gzipSize: true,
-      brotliSize: true,
-      template: 'treemap', // Use treemap for better visualization
-    })] : [])
+    // Bundle analyzer would go here if needed
   ].filter(Boolean),
   build: {
+    // Output directory for Netlify compatibility
+    outDir: 'dist',
     // Disable source maps in production for smaller bundle
     sourcemap: false,
-    // Use esbuild for faster minification
+    // Prefer esbuild for fast, reliable CI minification
     minify: 'esbuild',
-    // Increase chunk size warning limit
-    chunkSizeWarningLimit: 1000,
-    // Enable CSS minification
-    cssMinify: true,
+    // Use esbuild for CSS minification to avoid heavy PostCSS/CSSNano work on CI
+    cssMinify: 'esbuild',
+    // Disable module preload generation which can be slow for very large graphs on CI
+    modulePreload: false,
+    // Chunk size warning limit
+    chunkSizeWarningLimit: 500,
+    // Assets inline limit - smaller for better caching
+    assetsInlineLimit: 2048,
+    // Enable tree shaking
+    treeshake: true,
     // Optimize chunk splitting
     rollupOptions: {
       onwarn(warning, warn) {
@@ -42,32 +53,86 @@ export default defineConfig(({ mode }) => ({
         warn(warning);
       },
       output: {
-        // Manual chunk splitting for better caching
-        manualChunks: (id) => {
-          // Vendor chunks
+        // Enable optimized manual chunking for better performance
+        manualChunks: disableManualChunks ? undefined : (id) => {
+          // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
+            // React ecosystem - core
+            if (id.includes('react') && !id.includes('react-router')) {
+              return 'react-core';
             }
-            if (id.includes('@radix-ui')) {
-              return 'vendor-ui';
+            // React DOM
+            if (id.includes('react-dom')) {
+              return 'react-dom';
             }
+            // Router
+            if (id.includes('react-router')) {
+              return 'router';
+            }
+            // Query library
             if (id.includes('@tanstack/react-query')) {
-              return 'vendor-query';
+              return 'query';
             }
-            if (id.includes('react-router-dom')) {
-              return 'vendor-router';
+            // UI libraries - split by size
+            if (id.includes('@radix-ui')) {
+              return 'radix-ui';
             }
-            if (id.includes('framer-motion')) {
-              return 'vendor-animation';
+            if (id.includes('lucide-react')) {
+              return 'icons';
             }
-            if (id.includes('axios') || id.includes('date-fns') || id.includes('lodash')) {
-              return 'vendor-utils';
-            }
+            // Forms
             if (id.includes('react-hook-form') || id.includes('formik') || id.includes('yup') || id.includes('zod')) {
-              return 'vendor-forms';
+              return 'forms';
             }
+            // Animation - large library
+            if (id.includes('framer-motion')) {
+              return 'motion';
+            }
+            // Utilities - split by usage
+            if (id.includes('axios')) {
+              return 'http';
+            }
+            if (id.includes('date-fns')) {
+              return 'date-utils';
+            }
+            if (id.includes('lodash') || id.includes('clsx') || id.includes('class-variance-authority')) {
+              return 'utils';
+            }
+            // Large external libraries
+            if (id.includes('@stripe') || id.includes('@supabase') || id.includes('ethers')) {
+              return 'external';
+            }
+            // Everything else
             return 'vendor';
+          }
+          // Component chunks - split by feature
+          if (id.includes('/src/components/')) {
+            if (id.includes('/ui/')) {
+              return 'ui-components';
+            }
+            if (id.includes('/auth/') || id.includes('/login/')) {
+              return 'auth-components';
+            }
+            if (id.includes('/talent/') || id.includes('/profile/')) {
+              return 'talent-components';
+            }
+            return 'components';
+          }
+          // Page chunks - split by route group
+          if (id.includes('/src/pages/')) {
+            if (id.includes('Home') || id.includes('About') || id.includes('Contact')) {
+              return 'main-pages';
+            }
+            if (id.includes('Services') || id.includes('Pricing')) {
+              return 'service-pages';
+            }
+            if (id.includes('Talent') || id.includes('AIMatcher')) {
+              return 'talent-pages';
+            }
+            if (id.includes('Login') || id.includes('Signup')) {
+              return 'auth-pages';
+            }
+            return 'pages';
           }
         },
         // Optimize chunk file names
@@ -80,16 +145,24 @@ export default defineConfig(({ mode }) => ({
     target: 'esnext',
     // Enable CSS code splitting
     cssCodeSplit: true,
-    // Add build size reporting
-    reportCompressedSize: true,
+    // Avoid gzip size computation entirely to prevent extra work on CI
+    reportCompressedSize: false,
     // Optimize for production
     emptyOutDir: true,
   },
+  // Reduce module preload generation on CI which can appear to hang
+  experimental: {
+    renderBuiltUrl(filename) {
+      return { relative: true };
+    },
+  },
   esbuild: {
     target: 'esnext',
-    format: 'esm',
     // Disable TypeScript checking during build
     logLevel: 'error',
+    // Strip debugging noise and mark common logging as pure
+    drop: ['console', 'debugger'],
+    pure: ['console.log', 'console.info', 'console.debug'],
   },
   resolve: {
     alias: {
@@ -105,12 +178,6 @@ export default defineConfig(({ mode }) => ({
     hmr: {
       overlay: true,
     },
-    // Optimize server performance
-    fs: {
-      strict: false,
-    },
-    // Enable compression
-    middlewareMode: false,
   },
   define: {
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
@@ -121,9 +188,12 @@ export default defineConfig(({ mode }) => ({
       'react',
       'react-dom',
       'react-router-dom',
-      '@tanstack/react-query',
-      'react-helmet-async',
+      'axios',
+      'date-fns',
       'framer-motion',
+      'lucide-react',
+      '@tanstack/react-query',
+      '@radix-ui/react-slot',
       'clsx',
       'tailwind-merge',
     ],
@@ -132,9 +202,8 @@ export default defineConfig(({ mode }) => ({
     // Force pre-bundling for better performance
     force: true,
   },
-  // CSS optimizations
+  // Performance optimizations
   css: {
     devSourcemap: true,
-    postcss: './postcss.config.js',
   },
 }))

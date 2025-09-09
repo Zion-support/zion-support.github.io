@@ -7,3 +7,5 @@ export function AppTestimonials() {
     </div>
   )
 }
+  );
+};

@@ -396,5 +396,5 @@ const WhitePapers: React.FC = () => {
         </div>
       </section>
     </div>
-
-
+  );
+};

@@ -19,4 +19,4 @@ export: interface RevolutionaryService2031 {
    innovationLevel: string;
    contactInfo: { phone: string;
    email: string;
-
+}

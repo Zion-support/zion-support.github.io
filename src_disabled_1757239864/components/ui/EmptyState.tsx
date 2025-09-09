@@ -40,4 +40,6 @@ export function EmptyState({
       )}
     </div>
   )
-} 
+}
+  );
+};

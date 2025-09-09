@@ -1,24 +1,39 @@
-import React from 'react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import React from 'react';
+import { SEO } from '@/components/SEO';
 
 const Partners: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <Card>
-        <CardHeader>
-          <CardTitle>Partners</CardTitle>
-          <CardDescription>
-            Our trusted partners and collaborators
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p className="text-muted-foreground">
-            Learn about our network of trusted partners who help us deliver exceptional services.
-          </p>
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
+    <>
+      <SEO 
+        title="Partners - Zion Tech Group" 
+        description="Strategic partnerships and collaborations with leading technology companies."
+      />
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Partners
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Strategic partnerships and collaborations with leading technology companies.
+              Together, we're building the future of technology.
+            </p>
+          </div>
+          
+          <div className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-xl p-8 border border-zion-blue-light/30">
+            <div className="text-center">
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                Coming Soon
+              </h2>
+              <p className="text-zion-slate-light mb-6">
+                Our partners page is currently under development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default Partners
+export default Partners;

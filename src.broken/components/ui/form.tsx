@@ -7,3 +7,5 @@ export function form() {
     </div>
   )
 }
+  );
+};

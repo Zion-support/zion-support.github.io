@@ -22,7 +22,5 @@ return (;
       <Head>;
         <title>DatabaseDesignChat - Zion Tech Solutions</title>;
         <meta name="description" content="DatabaseDesignChat service" />{" "}"
-
-
-
-
+  );
+};

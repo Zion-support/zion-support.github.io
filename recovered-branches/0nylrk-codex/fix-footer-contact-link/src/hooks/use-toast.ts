@@ -59,7 +59,7 @@ export const toast = baseToast as typeof baseToast & {
   error: (error: string) => void,
   success: (message: string) => void
 },
-import React from "react",;
+import React from "react";;
 import {;
   useToast as useToastHook,;
   Toast} from "@/components/ui/toast",;

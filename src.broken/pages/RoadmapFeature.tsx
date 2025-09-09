@@ -7,3 +7,5 @@ export function RoadmapFeature() {
     </div>
   )
 }
+  );
+};

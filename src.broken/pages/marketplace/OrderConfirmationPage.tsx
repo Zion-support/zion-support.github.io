@@ -7,3 +7,5 @@ export function OrderConfirmationPage() {
     </div>
   )
 }
+  );
+};

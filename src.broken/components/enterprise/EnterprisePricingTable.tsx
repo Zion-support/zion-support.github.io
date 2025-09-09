@@ -7,3 +7,5 @@ export function EnterprisePricingTable() {
     </div>
   )
 }
+  );
+};

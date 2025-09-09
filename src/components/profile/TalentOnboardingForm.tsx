@@ -74,7 +74,7 @@ export function TalentOnboardingForm() {
   const [cvFileName, setCvFileName] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessScreen, setShowSuccessScreen] = useState(false);
-  
+
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
   
   const totalSteps = 4;

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -5,7 +6,7 @@ import { ProductListingCard } from "@/components/ProductListingCard";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { Skeleton } from "@/components/ui/skeleton";
+import Skeleton from "@/components/ui/skeleton";
 import { Slider } from "@/components/ui/slider";
 import { ProductListing, ListingView } from "@/types/listings";
 import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";
@@ -132,7 +133,7 @@ export function DynamicListingPage({
               id: listing.id,
               title: listing.title,
               category: listing.category,
-              image: listing.images?.[0]
+              image: listing.image?.[0]
             }
           }
         });

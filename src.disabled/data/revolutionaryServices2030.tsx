@@ -70,4 +70,4 @@ export: interface RevolutionaryService2030 {
    aiScore: number;
    useCases: string[];
    innovationLevel: string;
-
+}

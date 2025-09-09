@@ -52,7 +52,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting }: TranslatableJobF
             {t('jobForm.title', 'Create Job Posting')}
           </h2>
           
-          <Tabs value={currentLanguage} onValueChange={handleLanguageChange}>
+          <Tabs value={_currentLanguage} onValueChange={_handleLanguageChange}>
             <TabsList className="grid w-full grid-cols-3">
               <TabsTrigger value="en">English</TabsTrigger>
               <TabsTrigger value="es">Español</TabsTrigger>
@@ -60,7 +60,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting }: TranslatableJobF
             </TabsList>
             
             <TabsContent value="en" className="mt-6">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={_handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="title" className="text-white">
@@ -153,7 +153,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting }: TranslatableJobF
                 
                 <Button
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={_isSubmitting}
                   className="w-full bg-zion-cyan hover:bg-zion-cyan-dark text-white"
                 >
                   {isSubmitting 

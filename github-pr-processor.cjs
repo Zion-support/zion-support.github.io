@@ -2,11 +2,14 @@
 
 const { execSync } = require('child_process');
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN || 'ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY';
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const REPO_OWNER = 'Zion-Holdings';
 const REPO_NAME = 'zion.app';
 
 function githubAPI(endpoint, method = 'GET', data = null) {
+  if (!GITHUB_TOKEN) {
+    throw new Error('Missing GITHUB_TOKEN');
+  }
   const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}${endpoint}`;
   
   let curlCommand = `curl -s -X ${method} \

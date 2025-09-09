@@ -7,3 +7,5 @@ export function WorkExperienceSection() {
     </div>
   )
 }
+  );
+};

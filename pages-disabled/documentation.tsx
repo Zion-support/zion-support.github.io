@@ -225,3 +225,5 @@ const Documentation: NextPage = () => {
   )};
 
 export default Documentation;
+  );
+};

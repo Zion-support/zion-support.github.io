@@ -416,4 +416,5 @@ const Webinars: React.FC = () => {
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
 
                         }`}
-
+  );
+};

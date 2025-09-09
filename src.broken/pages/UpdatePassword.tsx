@@ -7,3 +7,5 @@ export function UpdatePassword() {
     </div>
   )
 }
+  );
+};

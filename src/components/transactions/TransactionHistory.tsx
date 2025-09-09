@@ -92,7 +92,7 @@ export function TransactionHistory() {
       
       refetch();
     } catch (error) {
-      console.error("Error managing transaction:", error);
+      // console.error("Error managing transaction:", error);
       toast({
         title: "Error",
         description: error.message || "Failed to update transaction",

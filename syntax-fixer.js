@@ -7,7 +7,8 @@ console.log('🔧 Running comprehensive syntax fixer...');
 
 function fixSyntaxErrors() {
   const files = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" | head -100', { encoding: 'utf8' })
-    .split('\n')
+    .split('
+')
     .filter(f => f.trim());
   
   let fixedCount = 0;
@@ -34,7 +35,8 @@ function fixSyntaxErrors() {
     }
   }
   
-  console.log(`\n📊 Fixed ${fixedCount} files`);
+  console.log(`
+📊 Fixed ${fixedCount} files`);
 }
 
 fixSyntaxErrors();

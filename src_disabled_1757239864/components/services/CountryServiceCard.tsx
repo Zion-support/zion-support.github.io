@@ -250,3 +250,5 @@ import {Card,CardContent,CardFooter,CardHeader} from '@/components/ui/card';
     </Card>
   )
 }
+  );
+};

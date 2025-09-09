@@ -7,3 +7,5 @@ export function CommunityPage() {
     </div>
   )
 }
+  );
+};

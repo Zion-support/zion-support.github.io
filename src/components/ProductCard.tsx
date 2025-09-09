@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/Button';
+import _Button from '@/components/ui/_Button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { getStripe } from '@/utils/getStripe';
@@ -8,17 +8,17 @@ import { useAuth } from '@/hooks/useAuth';
 interface ProductCardProps {
   id: string;
   name: string;
-  price: number;
-  priceId: string;
+  _price: number;
+  __priceId: string;
 }
 
-export function ProductCard({ id, name, price, priceId }: ProductCardProps) {
+function ProductCard({ id, name, _price, __priceId }: ProductCardProps) {
   const { user } = useAuth();
   const [showGuest, setShowGuest] = useState(false);
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
 
-  const createSession = async (body: any) => {
+  const createSession = async (body: unknown) => {
     const res = await fetch('/api/create-checkout-session', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -36,19 +36,19 @@ export function ProductCard({ id, name, price, priceId }: ProductCardProps) {
       setShowGuest(true);
       return;
     }
-    await createSession({ priceId });
+    await createSession({ priceId: __priceId });
   };
 
   const handleGuest = async (e: React.FormEvent) => {
     e.preventDefault();
-    await createSession({ priceId, email, shipping: address });
+    await createSession({ priceId: __priceId, email, shipping: address });
   };
 
   return (
     <div className="border p-4 rounded-md space-y-3">
       <h3 className="font-bold">{name}</h3>
-      <p>${price.toFixed(2)}</p>
-      <Button onClick={handleBuy}>Buy Now</Button>
+      <p>${_price.toFixed(2)}</p>
+      <_Button onClick={handleBuy}>Buy Now</_Button>
 
       <Dialog open={showGuest} onOpenChange={setShowGuest}>
         <DialogContent>
@@ -60,7 +60,7 @@ export function ProductCard({ id, name, price, priceId }: ProductCardProps) {
             <Input aria-label="Email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
             <Input aria-label="Shipping" required value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Shipping Address" />
             <DialogFooter>
-              <Button type="submit" className="w-full">Checkout</Button>
+              <_Button type="submit" className="w-full">Checkout</_Button>
             </DialogFooter>
           </form>
         </DialogContent>
@@ -68,3 +68,5 @@ export function ProductCard({ id, name, price, priceId }: ProductCardProps) {
     </div>
   );
 }
+
+export default ProductCard;

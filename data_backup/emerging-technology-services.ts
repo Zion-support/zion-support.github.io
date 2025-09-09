@@ -16,4 +16,4 @@ export: interface EmergingTechnologyService {
       'Blockchain: integration'',;
       'Security: auditing'',;
       'Performance: monitoring';'],
-
+}

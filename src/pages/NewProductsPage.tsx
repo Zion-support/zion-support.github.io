@@ -1,24 +1,24 @@
-import React from 'react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { useState } from "react";
+import { DynamicListingPage } from "@/components/DynamicListingPage";
+import { ProductListing } from "@/types/listings";
+import { NEW_PRODUCTS } from "@/data/newProductsData";
 
-const NewProductsPage: React.FC = () => {
+const CATEGORY_FILTERS = Array.from(
+  new Set(NEW_PRODUCTS.map(p => p.category))
+).map(c => ({ label: c, value: c }));
+
+export default function NewProductsPage() {
+  const [listings] = useState<ProductListing[]>([...NEW_PRODUCTS]);
+
   return (
-    <div className="container mx-auto px-4 py-8">
-      <Card>
-        <CardHeader>
-          <CardTitle>New Products</CardTitle>
-          <CardDescription>
-            Discover our latest product offerings
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p className="text-muted-foreground">
-            Explore our newest products and services designed to help you succeed.
-          </p>
-        </CardContent>
-      </Card>
-    </div>
-  )
+    <DynamicListingPage
+      title="New Products"
+      description="Explore our latest products priced for today's market."
+      categorySlug="new-products"
+      listings={listings}
+      categoryFilters={CATEGORY_FILTERS}
+      initialPrice={{ min: 0, max: 5000 }}
+      detailBasePath="/product"
+    />
+  );
 }
-
-export default NewProductsPage

@@ -1,9 +1,4 @@
-import Link from 'next/link';
-import MainLayout from './components/layout/MainLayout';
 
-const Home = () => {
-  return (
-    <MainLayout 
       title="Zion Tech Group - Leading Technology Solutions Provider"
       description="Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence."
     >
@@ -14,8 +9,7 @@ const Home = () => {
               Welcome to Zion Tech Group
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-              Leading technology solutions provider helping businesses transform their digital presence 
-              with cutting-edge AI, cloud architecture, and innovative development services.
+
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-6 mb-12">
@@ -30,6 +24,7 @@ const Home = () => {
             <div className="grid md:grid-cols-3 gap-8 mt-16">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-colors">
                 <div className="text-4xl mb-4">🤖</div>
+
                 <h3 className="text-2xl font-semibold mb-4">AI & Machine Learning</h3>
                 <p className="text-lg">Custom AI solutions, chatbots, predictive analytics, and machine learning models tailored to your business needs.</p>
                 <div className="mt-4 text-sm text-blue-200">
@@ -39,35 +34,21 @@ const Home = () => {
                   <p>• Computer Vision Solutions</p>
                 </div>
                 <Link href="/services" className="text-blue-200 hover:text-white mt-4 inline-block font-semibold">
+
+
+
                   Learn More →
                 </Link>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-colors">
                 <div className="text-4xl mb-4">☁️</div>
                 <h3 className="text-2xl font-semibold mb-4">Cloud Solutions</h3>
-                <p className="text-lg">Scalable cloud architecture, migration services, and infrastructure design for modern applications and businesses.</p>
-                <div className="mt-4 text-sm text-blue-200">
-                  <p>• Cloud Migration & Architecture</p>
-                  <p>• DevOps & Automation</p>
-                  <p>• Container Orchestration</p>
-                  <p>• Serverless Solutions</p>
-                </div>
-                <Link href="/services" className="text-blue-200 hover:text-white mt-4 inline-block font-semibold">
-                  Learn More →
+
                 </Link>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-colors">
                 <div className="text-4xl mb-4">🚀</div>
-                <h3 className="text-2xl font-semibold mb-4">Micro SAAS Solutions</h3>
-                <p className="text-lg">Innovative micro SAAS applications including URL shorteners, invoice generators, password managers, and more.</p>
-                <div className="mt-4 text-sm text-blue-200">
-                  <p>• URL Shortener & Analytics</p>
-                  <p>• Invoice Generator & Billing</p>
-                  <p>• Password Manager & Security</p>
-                  <p>• Task Management Tools</p>
-                </div>
-                <Link href="/services" className="text-blue-200 hover:text-white mt-4 inline-block font-semibold">
-                  Learn More →
+
                 </Link>
               </div>
             </div>

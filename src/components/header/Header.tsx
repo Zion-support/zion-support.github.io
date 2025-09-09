@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Logo } from './Logo';
 import { UserMenu } from './UserMenu';
 import { LanguageSelector } from './LanguageSelector';
@@ -10,8 +10,6 @@ import { useAuth } from '@/hooks/useAuth';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 export interface HeaderProps {
   hideLogin?: boolean;
@@ -25,6 +23,8 @@ export interface HeaderProps {
 
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
   const { user } = useAuth();
+  const firstName =
+    (user && typeof user !== 'boolean' ? (user.displayName?.split(' ')[0] || user.name?.split(' ')[0]) : undefined) || '';
   const { isWhitelabel, primaryColor } = useWhitelabel();
   const navigate = useNavigate();
   const [query, setQuery] = useState("");

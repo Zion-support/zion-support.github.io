@@ -2,21 +2,26 @@ import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
 
-const stripe = new Stripe(Deno.env.get('STRIPE_SECRET_KEY') || '', {
-  apiVersion: '2023-10-16'
+const supabase = createClient(
+  Deno.env.get("SUPABASE_URL") ?? "",
+  Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
+  { auth: { persistSession: false } }
+);
+
+const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
+  apiVersion: "2025-05-28.basil", // Updated to the expected version
 });
 
 const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET') || '';
 
-const supabase = createClient(
-  Deno.env.get('SUPABASE_URL') || '',
-  Deno.env.get('SUPABASE_ANON_KEY') || ''
-);
-
+// const supabase = createClient(
+//   Deno.env.get('SUPABASE_URL') || '',
+//   Deno.env.get('SUPABASE_ANON_KEY') || ''
+// );
 serve(async (req) => {
   if (req.method === 'POST') {
     const body = await req.text();
-    const signature = req.headers.get('stripe-signature') || '';
+
 
     let event;
     try {
@@ -24,6 +29,11 @@ serve(async (req) => {
     } catch (err) {
       return new Response(`Webhook Error: ${err.message}`, { status: 400 });
     }
+
+    const supabase = createClient(
+      Deno.env.get('SUPABASE_URL') || '',
+      Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || ''
+    );
 
     if (event.type === 'checkout.session.completed') {
       const session = event.data.object as Stripe.Checkout.Session;
@@ -42,4 +52,3 @@ serve(async (req) => {
   }
 
   return new Response("Not found", { status: 404 });
-});

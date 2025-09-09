@@ -7,3 +7,5 @@ export function ZionHireAI() {
     </div>
   )
 }
+  );
+};

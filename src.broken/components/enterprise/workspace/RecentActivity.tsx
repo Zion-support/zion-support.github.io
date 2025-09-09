@@ -7,3 +7,5 @@ export function RecentActivity() {
     </div>
   )
 }
+  );
+};

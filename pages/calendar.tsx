@@ -92,7 +92,7 @@ const teamMembers = [
   }
 ];
 
-export default function CalendarIcon() {
+export default function Calendar() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Head>

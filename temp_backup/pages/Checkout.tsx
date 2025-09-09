@@ -1,18 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { safeStorage } from '@/utils/safeStorage';
-// import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { useNavigate } from 'react-router-dom';
-// import { getStripe } from '@/utils/getStripe';
-// import {
-//   Form,
-//   FormField,
-//   FormItem,
-//   FormLabel,
-//   FormControl,
-//   FormMessage,
-// } from '@/components/ui/form';
 
 interface CartItem {
   id: string;
@@ -56,23 +44,7 @@ export default function CheckoutPage() {
       });
       const result = await res.json();
       if (!res.ok) throw new Error(result.error || 'Failed');
-      // const stripe = await getStripe();
-      // const stripe = null; // Temporary fallback
-      // if (stripe && result.clientSecret) {
-      //   const payment = await stripe.confirmCardPayment(result.clientSecret, {
-      //     payment_method: {
-      //       card: { token: 'tok_visa' },
-      //       billing_details: { name: data.name, email: data.email },
-      //     },
-      //   });
-      //   if (payment.error) throw payment.error;
-      //   safeStorage.removeItem('cart');
-      //   navigate(`/orders/${result.id}`);
-      // }
-      // Temporary fallback - just clear cart and show success
-      safeStorage.removeItem('cart');
-      navigate('/orders/success');
-    } catch (err) {
+
       console.error('Payment failed', err);
     }
   };
@@ -81,7 +53,7 @@ export default function CheckoutPage() {
     <div className="container max-w-2xl py-10">
       <h1 className="text-3xl font-bold mb-6">Checkout</h1>
       <div className="grid gap-6">
-        {/* <Form {...form}>
+
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField name="name" control={form.control} render={({ field }) => (
               <FormItem>
@@ -138,6 +110,7 @@ export default function CheckoutPage() {
               </button>
             </div>
           </form>
+
         </Form> */}
         
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -171,6 +144,8 @@ export default function CheckoutPage() {
             </button>
           </div>
         </form>
+
+
       </div>
     </div>
   );
