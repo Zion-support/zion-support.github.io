@@ -1,8 +1,8 @@
-# Netlify rebuild trigger (minor touch to force deploy) - 2025-09-09 v4.47
-[build] # touch v4.47 to trigger Netlify rebuild
-  # Build the site with Vite and publish the dist folder
+# Netlify rebuild trigger (minor touch to force deploy) - 2025-09-09 v4.48
+[build] # touch v4.48 to trigger Netlify rebuild
+  # Build the Next.js project on Netlify
   command = "npm ci --no-audit --no-fund --include=optional && npm run build:ci"
-  publish = "dist"
+  publish = ".next"
   functions = "netlify/functions"
   command_timeout = "30m"
   # Skip TypeScript checking during build
