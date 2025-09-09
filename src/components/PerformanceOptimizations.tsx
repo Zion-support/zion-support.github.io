@@ -1,6 +1,8 @@
 import React, { Suspense, lazy, memo } from 'react';
-import { ErrorBoundary } from './ErrorBoundary';
-import LoadingSpinner from './LoadingSpinner';
+
+// Lazy load components to avoid static import conflicts
+const ErrorBoundary = lazy(() => import('./ErrorBoundary').then(m => ({ default: m.ErrorBoundary })));
+const LoadingSpinner = lazy(() => import('./LoadingSpinner'));
 
 // Lazy load heavy components (example - can be used for actual heavy components)
 // const HeavyComponent = lazy(() => import('./HeavyComponent'));

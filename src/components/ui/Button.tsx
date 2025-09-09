@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { ButtonProps } from '../../types/components';
-import LoadingSpinner from '../LoadingSpinner';
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from "class-variance-authority";
+
+// Lazy load LoadingSpinner to avoid static import conflicts
+const LoadingSpinner = lazy(() => import('../LoadingSpinner'));
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed",
@@ -45,10 +47,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {loading && (
-          <LoadingSpinner
-            size="sm"
-            className="mr-2"
-          />
+          <Suspense fallback={<div className="w-4 h-4 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin mr-2" />}>
+            <LoadingSpinner
+              size="sm"
+              className="mr-2"
+            />
+          </Suspense>
         )}
         {children}
       </Comp>

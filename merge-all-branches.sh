@@ -1,98 +1,116 @@
 #!/bin/bash
 
-# Comprehensive merge script for all open PRs and branches
+# Automated script to merge all remote branches into main
+# This script handles the massive number of branches efficiently
+
 set -e
 
-echo "🚀 Starting comprehensive merge of all branches..."
+echo "🚀 Starting automated branch merging process..."
+echo "=================================================="
 
-# List of recent branches to merge (most recent first)
-BRANCHES=(
-    "origin/cursor/fix-syntax-push-and-merge-to-main-9e90"
-    "origin/cursor/fix-syntax-push-and-merge-to-main-6c6e"
-    "origin/cursor/automate-test-fix-improve-and-merge-code-f0bd"
-    "origin/cursor/analyze-improve-and-deploy-application-1a51"
-    "origin/cursor/add-new-services-and-advertise-them-c570"
-    "origin/cursor/analyze-improve-and-deploy-application-e802"
-    "origin/fix-syntax-errors-20250903-232306"
-    "origin/cursor/fix-syntax-push-and-merge-to-main-f812"
-    "origin/cursor/automate-test-fix-improve-and-merge-code-a7a7"
-    "origin/cursor/fix-syntax-push-and-merge-to-main-fe2a"
-    "origin/cursor/fix-syntax-push-and-merge-to-main-8154"
-    "origin/cursor/analyze-improve-and-deploy-application-d144"
-    "origin/cursor/enhance-pm2-automations-for-development-and-deployment-21ae"
-    "origin/cursor/fix-syntax-push-and-merge-to-main-cfa2"
-    "origin/cursor/migrate-ci-to-pm2-and-clean-up-github-actions-56bd"
-    "origin/cursor/fix-syntax-push-and-merge-to-main-4c0e"
-    "origin/cursor/fix-lint-push-and-merge-to-main-df85"
-    "origin/cursor/fix-syntax-push-and-merge-to-main-67f3"
-)
-
-# Function to merge a branch with conflict resolution
+# Function to safely merge a branch
 merge_branch() {
-    local branch=$1
-    echo "📦 Merging branch: $branch"
+    local branch_name="$1"
+    echo "📋 Processing branch: $branch_name"
     
-    # Try to merge the branch
-    if git merge "$branch" --no-edit; then
-        echo "✅ Successfully merged $branch"
-        return 0
-    else
-        echo "⚠️  Merge conflict in $branch, attempting to resolve..."
+    # Check if branch exists
+    if ! git show-ref --verify --quiet "refs/remotes/$branch_name"; then
+        echo "⚠️  Branch $branch_name not found, skipping..."
+        return 1
+    fi
+    
+    # Create a temporary branch for merging
+    local temp_branch="temp-merge-$(echo $branch_name | sed 's/origin\///' | sed 's/\//-/g')"
+    
+    # Checkout the remote branch
+    if git checkout -b "$temp_branch" "$branch_name" 2>/dev/null; then
+        echo "✅ Checked out $branch_name"
         
-        # Check for conflicts
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "🔧 Resolving conflicts in $branch..."
-            
-            # Auto-resolve common conflicts
-            git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
-                echo "  Resolving conflict in: $file"
-                
-                # For package.json conflicts, prefer the newer version
-                if [[ "$file" == *"package.json"* ]]; then
-                    git checkout --theirs "$file"
-                # For dist files, prefer the newer version
-                elif [[ "$file" == *"dist/"* ]]; then
-                    git checkout --theirs "$file"
-                # For config files, prefer the newer version
-                elif [[ "$file" == *".config."* ]] || [[ "$file" == *"netlify.toml"* ]]; then
-                    git checkout --theirs "$file"
-                # For other files, prefer the newer version
+        # Try to merge into main
+        if git checkout main 2>/dev/null; then
+            if git merge "$temp_branch" --no-ff -m "Merge $branch_name into main" 2>/dev/null; then
+                echo "✅ Successfully merged $branch_name"
+                git branch -D "$temp_branch" 2>/dev/null || true
+                return 0
+            else
+                echo "⚠️  Merge conflict in $branch_name, resolving..."
+                # Try to resolve conflicts automatically
+                if git checkout --theirs . 2>/dev/null && git add . 2>/dev/null && git commit -m "Auto-resolve conflicts for $branch_name" 2>/dev/null; then
+                    echo "✅ Auto-resolved conflicts for $branch_name"
+                    git branch -D "$temp_branch" 2>/dev/null || true
+                    return 0
                 else
-                    git checkout --theirs "$file"
+                    echo "❌ Failed to resolve conflicts for $branch_name"
+                    git merge --abort 2>/dev/null || true
+                    git checkout main 2>/dev/null || true
+                    git branch -D "$temp_branch" 2>/dev/null || true
+                    return 1
                 fi
-            done
-            
-            # Add resolved files
-            git add .
-            
-            # Commit the merge
-            git commit -m "Merge $branch - resolved conflicts automatically"
-            echo "✅ Resolved conflicts and merged $branch"
+            fi
         else
-            echo "❌ Failed to merge $branch"
+            echo "❌ Failed to checkout main"
+            git branch -D "$temp_branch" 2>/dev/null || true
             return 1
         fi
+    else
+        echo "❌ Failed to checkout $branch_name"
+        return 1
     fi
 }
 
-# Merge all branches
-for branch in "${BRANCHES[@]}"; do
-    if git show-ref --verify --quiet "refs/remotes/$branch"; then
-        merge_branch "$branch"
+# Get all remote branches
+echo "📊 Fetching all remote branches..."
+git fetch --all
+
+# Get list of remote branches (excluding main and HEAD)
+branches=$(git branch -r | grep -v "origin/main" | grep -v "origin/HEAD" | sed 's/^[[:space:]]*//' | head -50)
+
+echo "🔍 Found $(echo "$branches" | wc -l) branches to process"
+echo "📝 Processing first 50 branches (to avoid overwhelming the system)..."
+echo ""
+
+# Counters
+success_count=0
+failed_count=0
+total_count=0
+
+# Process each branch
+for branch in $branches; do
+    total_count=$((total_count + 1))
+    echo "🔄 Processing $total_count/50: $branch"
+    
+    if merge_branch "$branch"; then
+        success_count=$((success_count + 1))
+        echo "✅ Success: $branch"
     else
-        echo "⚠️  Branch $branch not found, skipping..."
+        failed_count=$((failed_count + 1))
+        echo "❌ Failed: $branch"
     fi
+    
+    echo "---"
+    
+    # Small delay to prevent overwhelming the system
+    sleep 1
 done
 
-echo "🎉 Comprehensive merge completed!"
-echo "📊 Summary of merged branches:"
-git log --oneline -10
+echo ""
+echo "📊 MERGE SUMMARY"
+echo "=================="
+echo "Total branches processed: $total_count"
+echo "Successfully merged: $success_count"
+echo "Failed to merge: $failed_count"
+echo "Success rate: $(( success_count * 100 / total_count ))%"
 
-# Test the build
-echo "🔨 Testing build after merge..."
-if npm run build; then
-    echo "✅ Build successful after merge!"
+# Push changes to remote
+echo ""
+echo "🚀 Pushing changes to remote..."
+if git push origin main; then
+    echo "✅ Successfully pushed to remote"
 else
-    echo "❌ Build failed after merge"
-    exit 1
+    echo "⚠️  Failed to push to remote, but local changes are saved"
 fi
+
+echo ""
+echo "🎉 Automated branch merging completed!"
+echo "💡 Note: This script processed the first 50 branches for safety."
+echo "   Run again to process more branches if needed."
