@@ -17,8 +17,14 @@ export default defineConfig(({ mode }) => ({
     outDir: 'out',
     // Disable source maps in production for smaller bundle
     sourcemap: false,
-    // Use esbuild for faster minification
-    minify: 'esbuild',
+    // Use terser for better minification
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
     // Optimize chunk splitting
     rollupOptions: {
       onwarn(warning, warn) {
@@ -122,14 +128,14 @@ export default defineConfig(({ mode }) => ({
       'react-router-dom',
       'axios',
       'date-fns',
-      'lodash.debounce',
       'framer-motion',
+      'lucide-react',
+      '@tanstack/react-query',
     ],
     // Exclude problematic dependencies
     exclude: ['@vite/client', '@vite/env'],
   },
   // Performance optimizations
-  // CSS optimizations
   css: {
     devSourcemap: true,
   },
