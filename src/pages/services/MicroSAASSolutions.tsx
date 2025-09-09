@@ -1,6 +1,7 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { 
+  Brain,
   Code, 
   Zap, 
   Users, 
