@@ -371,30 +371,7 @@ const nextConfig = {
     
     // CRITICAL: Add comprehensive polyfills as the very first entry point
     if (!isServer) {
-      const originalEntry = config.entry;
-      config.entry = async () => {
-        const entries = await originalEntry();
-        
-        // Create comprehensive polyfill array
-        const polyfills = [
-          './src/utils/serverless-polyfill.ts',  // New serverless polyfill
-          './src/utils/env-polyfill.ts'         // Existing env polyfill
-        ];
-        
-        // Add polyfills to every entry point
-        Object.keys(entries).forEach(entryName => {
-          if (Array.isArray(entries[entryName])) {
-            polyfills.forEach(polyfill => {
-              if (!entries[entryName].includes(polyfill)) {
-                entries[entryName].unshift(polyfill);
-              }
-            });
-          }
-        });
-        
-        return entries;
-      };
-
+      // Do not mutate Next.js entry points; rely on standard runtime
       // DISABLED: FINAL NUCLEAR OPTION BannerPlugin causing module resolution issues
       // The BannerPlugin was injecting absolute paths '/opt/build/repo/src/utils/tslib-polyfill.js'
       // into third-party node_modules like @walletconnect, @peculiar, etc.
@@ -483,6 +460,9 @@ const nextConfig = {
         '@sentry/tracing': path.resolve(__dirname, 'src/utils/sentry-mock.ts'),
         '@sentry/react': path.resolve(__dirname, 'src/utils/sentry-mock.ts'),
         '@sentry/browser': path.resolve(__dirname, 'src/utils/sentry-mock.ts'),
+        // Provide shims for optional logging libraries so build doesn't fail
+        'logrocket': path.resolve(__dirname, 'src/utils/logrocket-shim.ts'),
+        '@datadog/browser-logs': path.resolve(__dirname, 'src/utils/datadog-logs-shim.ts'),
       };
     }
 
@@ -535,6 +515,14 @@ const nextConfig = {
 
     // Exclude native modules from server-side bundling to prevent build errors
     if (isServer) {
+      // Ensure 'self' exists and webpack chunk array is initialized during SSR
+      config.plugins.push(new webpack.BannerPlugin({ banner: 'var self=globalThis;globalThis.webpackChunk_N_E=globalThis.webpackChunk_N_E||[];', raw: true }));
+      // Define minimal globals to prevent SSR vendor bundles from referencing browser-only globals
+      config.plugins.push(
+        new webpack.DefinePlugin({
+          self: 'globalThis',
+        })
+      );
       // Add all problematic native modules as externals with commonjs type
       const nativeModules = [
         '@chainsafe/libp2p-noise',
@@ -747,12 +735,6 @@ const nextConfig = {
 
     // Only apply optimizations in production
     if (!dev && !isServer) {
-      // Sentry webpack plugin optimizations
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        '@sentry/tracing': '@sentry/tracing/esm',
-      };
-
       // Remove cacheUnaffected when usedExports is enabled to prevent conflicts
       if (config.cache && config.cache.cacheUnaffected !== undefined) {
         delete config.cache.cacheUnaffected;
@@ -778,31 +760,12 @@ const nextConfig = {
       config.cache.managedPaths = [path.resolve(__dirname, 'node_modules')];
     }
 
-    // Define feature flags for tree shaking
-    config.plugins.push(
-      new webpack.DefinePlugin({
-        __SENTRY_DEBUG__: false,
-        __SENTRY_TRACING__: true,
-      })
-    );
+    // Define feature flags for tree shaking (safe defaults)
+    config.plugins.push(new webpack.DefinePlugin({ __SENTRY_DEBUG__: false, __SENTRY_TRACING__: true }));
 
     // Note: Sentry replacement is handled via resolve.alias above for CI builds
 
-    // Handle date-fns ESM import issues
-    config.plugins.push(
-      new webpack.ProvidePlugin({
-        'date-fns': 'date-fns',
-      })
-    );
-
-    // Force certain packages to use ESM - Enhanced for Next.js 15
-    config.module.rules.push({
-      test: /\.m?js$/,
-      type: 'javascript/auto',
-      resolve: {
-        fullySpecified: false,
-      },
-    });
+    // Avoid forcing module type handling; use Next.js defaults
 
     // COMPREHENSIVE ESM FIX for Next.js 15 + React 19
     // Handle formik and lodash ESM issues with multiple strategies
@@ -818,19 +781,11 @@ const nextConfig = {
       'lodash/isArray': 'lodash-es/isArray',
       'lodash/isObject': 'lodash-es/isObject',
       'lodash': 'lodash-es',
-      // Force date-fns to use ESM version
-      'date-fns': 'date-fns/esm',
-      // Fix react-day-picker date-fns locale issues
-      'date-fns/esm/locale/enUS': 'date-fns/locale/enUS',
-      'date-fns/esm/locale/en-US': 'date-fns/locale/enUS',
+      // Use package default exports for date-fns v3
+      // Remove previous ESM aliasing which broke package exports
     };
 
-    // Override module resolution for problematic packages
-    config.resolve.extensionAlias = {
-      '.js': ['.js', '.ts', '.jsx', '.tsx'],
-      '.mjs': ['.mjs', '.mts'],
-      '.cjs': ['.cjs', '.cts'],
-    };
+    // Do not override extension aliasing
 
     // Add webpack rules to force ESM handling
     config.module.rules.push({
@@ -842,20 +797,8 @@ const nextConfig = {
     });
 
     // Enhanced rule for react-day-picker date-fns compatibility
-    config.module.rules.push({
-      test: /node_modules\/react-day-picker.*\.js$/,
-      use: {
-        loader: 'string-replace-loader',
-        options: {
-          multiple: [
-            { search: "require\\('date-fns/", replace: "require('date-fns/esm/", flags: 'g' },
-            { search: 'require\\("date-fns/', replace: 'require("date-fns/esm/', flags: 'g' },
-            { search: "/esm/locale/en-US", replace: "/locale/enUS", flags: 'g' },
-            { search: "/esm/locale/", replace: "/locale/", flags: 'g' },
-          ]
-        }
-      }
-    });
+    // Remove previous string replacements that forced date-fns ESM paths
+    // react-day-picker works with date-fns v3 default exports
 
     // Additional rule to handle lodash ESM imports specifically in formik
     config.module.rules.push({
@@ -872,12 +815,7 @@ const nextConfig = {
       }
     });
 
-    // Additional ESM handling for Next.js 15 compatibility
-    if (!isServer) {
-      // Ensure ESM modules are properly resolved
-      config.resolve.mainFields = ['module', 'main'];
-      config.resolve.conditionNames = ['import', 'require', 'default'];
-    }
+    // Keep default resolution fields/conditions
 
     // Add polyfills for Node.js APIs
     config.resolve.fallback = {
