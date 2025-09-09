@@ -8,17 +8,11 @@
 [build.processing]
   skip_processing = false
 
-# Explicitly disable Next.js plugin
+# Explicitly disable Next.js plugin since this is a Vite project
 [[plugins]]
   package = "@netlify/plugin-nextjs"
   [plugins.inputs]
     disable = true
-
-# Disable Next.js plugin since we're using Vite
-[build.processing]
-  skip_processing = false
-
-# Disable automatic Next.js detection and plugin
 [build.environment]
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   NETLIFY_USE_NEXTJS = "false"
@@ -27,6 +21,10 @@
   # Skip Sharp postinstall to avoid NAPI issues
   SHARP_IGNORE_GLOBAL_LIBVIPS = "1"
   SHARP_DIST_BASE_URL = "https://github.com/lovell/sharp-libvips/releases/download/v1.2.0/"
+  # Disable Next.js plugin detection
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  # Force Vite build
+  VITE_BUILD = "true"
 
 # SPA routing redirects for Vite build
 [[redirects]]
