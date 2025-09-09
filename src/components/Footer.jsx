@@ -1,5 +1,5 @@
 import React from 'react';
-import { FooterNewsletter } from "./FooterNewsletter";
+import { FooterNewsletter } from "@/components/FooterNewsletter";
 import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
