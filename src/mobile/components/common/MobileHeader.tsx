@@ -5,7 +5,7 @@ import { ChevronLeft, Bell, Settings } from 'lucide-react';
 
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 
 interface MobileHeaderProps {
   title: string;
