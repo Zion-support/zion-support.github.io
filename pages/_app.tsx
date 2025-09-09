@@ -84,7 +84,118 @@ function Header(): any {
           }}>Contact</Link>
         </div>
 
-        {/* Mobile Menu Button */}
+        // PERFORMANCE: Initialize Web Vitals monitoring in production
+        if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+          try {
+            const { onCLS, onFCP, onINP, onLCP, onTTFB } = await import('web-vitals');
+            const reportWebVitals = (metric: any) => {
+              // Report metrics to analytics service
+              if (typeof window !== 'undefined' && (window as any).gtag) {
+                (window as any).gtag('event', metric.name, {
+                  value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+                  event_label: metric.id,
+                  non_interaction: true,
+                });
+              }
+              
+              // Initialize comprehensive performance monitoring on first metric
+              if (!(global as any).performanceMonitorInitialized) {
+                (global as any).performanceMonitorInitialized = true;
+                import('@/utils/performance-monitor').then(({ default: performanceMonitor }) => {
+                  if (process.env.NODE_ENV === 'development') {
+                    console.log('🔧 Performance monitoring initialized');
+                  }
+                }).catch((error) => {
+                  console.warn('Failed to initialize performance monitoring:', error);
+                });
+              }
+            };
+            
+            onCLS(reportWebVitals);
+            onFCP(reportWebVitals);
+            onINP(reportWebVitals);
+            onLCP(reportWebVitals);
+            onTTFB(reportWebVitals);
+          } catch (webVitalsError) {
+            // Silently fail if web-vitals is not available
+          }
+        }
+        
+        setIsLoading(false);
+      } catch (error) {
+        console.error('App initialization error:', error);
+        setInitializationError('Failed to initialize application. Please refresh the page.');
+        setIsLoading(false);
+      }
+    };
+
+    // Force initialization completion after maximum 3 seconds
+    // MODIFIED: Increased timeout to 15 seconds for debugging
+    const forceInitTimeout = setTimeout(() => {
+      console.warn('Force completing app initialization due to timeout (15s)');
+      setLoadingProgress(100);
+      setIsLoading(false);
+    }, 15000); // Increased from 3000ms
+
+    initializeApp().finally(() => {
+      clearTimeout(forceInitTimeout);
+    });
+
+    return () => {
+      clearTimeout(forceInitTimeout);
+    };
+  }, []);
+
+  // Handle router events for page transitions
+  useEffect(() => {
+    const handleRouteChangeStart = () => {
+      // Could add route change loading if needed
+    };
+
+    const handleRouteChangeComplete = () => {
+      // Route change completed
+    };
+
+    const handleRouteChangeError = () => {
+      console.error('Route change error');
+    };
+
+    router.events.on('routeChangeStart', handleRouteChangeStart);
+    router.events.on('routeChangeComplete', handleRouteChangeComplete);
+    router.events.on('routeChangeError', handleRouteChangeError);
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChangeStart);
+      router.events.off('routeChangeComplete', handleRouteChangeComplete);
+      router.events.off('routeChangeError', handleRouteChangeError);
+    };
+  }, [router]);
+
+  // Show loading screen during initialization
+  if (isLoading) {
+    return (
+      <>
+        <Head>
+          <title>Loading - Zion App</title>
+          <meta name="description" content="Zion App is loading..." />
+        </Head>
+        <LoadingScreen progress={loadingProgress} />
+      </>
+    );
+  }
+
+  // Show error screen if initialization failed
+  if (initializationError) {
+    return (
+      <div style={{ 
+        padding: '2rem', 
+        textAlign: 'center',
+        maxWidth: '600px',
+        margin: '0 auto',
+        fontFamily: 'Arial, sans-serif'
+      }}>
+        <h2>🚫 Initialization Error</h2>
+        <p>{initializationError}</p>
         <button 
           style={{ 
             background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer',
