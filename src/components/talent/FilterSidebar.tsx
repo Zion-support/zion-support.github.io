@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Filter } from 'lucide-react';
 
 import { SearchFilter } from "./filters/SearchFilter";

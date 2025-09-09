@@ -9,7 +9,7 @@ import { Search, Filter, X, SortAsc, SortDesc, GridIcon, List, Loader2 } from 'l
 
 
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';

@@ -7,7 +7,7 @@ import { useAuth } from '@/hooks/useAuth';
 import Link from 'next/link';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { LoginModal } from '@/components/auth/LoginModal';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import {logErrorToProduction} from '@/utils/productionLogger';
 
 export function PointsBadge() {

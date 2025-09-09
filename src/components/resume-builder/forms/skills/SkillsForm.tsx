@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Skill } from '@/types/resume';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { useResume } from '@/hooks/useResume';
 import { SkillsFormProps } from './types';

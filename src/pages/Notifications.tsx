@@ -18,7 +18,7 @@ import { formatDistanceToNow } from 'date-fns';
 
 
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 import Skeleton from '@/components/ui/skeleton';

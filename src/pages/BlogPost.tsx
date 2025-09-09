@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { SEO } from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import ImageWithRetry from '@/components/ui/ImageWithRetry';
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
 

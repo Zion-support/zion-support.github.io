@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/badge';
@@ -190,7 +190,7 @@ export default function EnhancedHome() {
                   onClick={() => handleCTAClick('get_started')}
                   asChild
                 >
-                  <Link to="/contact">
+                  <Link href="/contact">
                     Get Started Today
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
@@ -265,7 +265,7 @@ export default function EnhancedHome() {
                     className="w-full group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600"
                     asChild
                   >
-                    <Link to={service.href}>
+                    <Link href={service.href}>
                       Learn More
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Link>
@@ -293,7 +293,7 @@ export default function EnhancedHome() {
               onClick={() => handleCTAClick('view_micro_saas')}
               asChild
             >
-              <Link to="/enhanced-micro-saas">
+              <Link href="/enhanced-micro-saas">
                 View All Services
                 <ExternalLink className="ml-2 w-4 h-4" />
               </Link>
@@ -399,7 +399,7 @@ export default function EnhancedHome() {
               onClick={() => handleCTAClick('contact_us')}
               asChild
             >
-              <Link to="/contact">
+              <Link href="/contact">
                 Get Free Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
@@ -411,7 +411,7 @@ export default function EnhancedHome() {
               onClick={() => handleCTAClick('view_pricing')}
               asChild
             >
-              <Link to="/pricing">
+              <Link href="/pricing">
                 View Pricing
               </Link>
             </Button>

@@ -5,7 +5,7 @@ import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react';
 
 
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { logWarn } from '@/utils/productionLogger';

@@ -8,7 +8,7 @@ import Link from "next/link";
 import { JobApplication } from "@/types/jobs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar"; // Renamed to avoid conflict
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Textarea } from "@/components/ui/textarea";
 
 

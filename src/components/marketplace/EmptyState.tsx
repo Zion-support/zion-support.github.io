@@ -7,7 +7,7 @@ import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 
 
 
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 

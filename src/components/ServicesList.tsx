@@ -3,7 +3,7 @@ import { ProductListing } from '@/types/listings';
 import { ProductListingCard } from '@/components/ProductListingCard';
 import ErrorBoundary from '@/components/GlobalErrorBoundary';
 import { SkeletonCard } from '@/components/ui';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { captureException } from '@/utils/sentry';
 
 async function fetchServices(): Promise<ProductListing[]> {

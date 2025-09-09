@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import {logErrorToProduction} from '@/utils/productionLogger';
 import { FileText, ChevronDown, Loader2, Download } from 'lucide-react';
 import {

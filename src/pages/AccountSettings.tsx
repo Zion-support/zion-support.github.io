@@ -4,7 +4,7 @@ import { useLocalStorage } from '@/hooks';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
 import { useAuth } from '@/hooks/useAuth';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/input';
 import { Wallet, Database, Save } from 'lucide-react';
 

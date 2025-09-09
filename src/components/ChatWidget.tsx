@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { MessageBubble } from '@/components/messaging/MessageBubble';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import type { Message } from '@/types/messaging';
 import { safeStorage } from '@/utils/safeStorage';
 import { logWarn } from '@/utils/productionLogger';

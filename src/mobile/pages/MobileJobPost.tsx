@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { MobileHeader } from "@/mobile/components/common/MobileHeader";
 import { BottomNavigation } from "@/mobile/components/common/BottomNavigation";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";

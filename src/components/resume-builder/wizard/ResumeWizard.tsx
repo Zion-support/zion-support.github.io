@@ -9,7 +9,7 @@ import { AlertCircle, FilePlus, Loader2 } from 'lucide-react';
 
 
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Resume } from '@/types/resume';
 
 // Import components

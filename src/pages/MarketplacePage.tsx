@@ -16,7 +16,7 @@ import { NextSeo } from '@/components/NextSeo';
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
 import { ProductListing } from '@/types/listings';
 import { SkeletonCard } from '@/components/ui/skeleton';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import Spinner from '@/components/ui/spinner';

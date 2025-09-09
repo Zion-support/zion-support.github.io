@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Star, ExternalLink } from 'lucide-react';
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 
 import { TalentProfile } from "@/types/talent";
 import { HireRequestModal } from "@/components/profile/hire-request";

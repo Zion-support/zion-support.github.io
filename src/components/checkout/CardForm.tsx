@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { mutate } from 'swr';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { useAuth } from '@/hooks/useAuth';
 import { logInfo } from '@/utils/productionLogger';
 

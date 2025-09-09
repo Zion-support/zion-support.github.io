@@ -259,6 +259,7 @@ const nextConfig = {
     'react-markdown',
     'date-fns',
     'react-day-picker',
+    'react-hot-toast',
     'sonner',
     'stripe',
     'swr',
@@ -271,6 +272,9 @@ const nextConfig = {
     'remark-parse',
     'remark-rehype',
     'formik',
+    'socket.io',
+    'unist-util-visit-parents',
+    'vfile-message',
     // UI libraries that need transpilation
     '@chakra-ui/react',
     '@radix-ui/react-accordion',
@@ -388,16 +392,12 @@ const nextConfig = {
       //
       // Solution: Rely only on document-level and runtime polyfills without webpack interference
 
-      // SIMPLIFIED DefinePlugin 
+      // Define only specific public env keys; never override entire process.env
       config.plugins.push(
         new webpack.DefinePlugin({
-          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),
-          'process.env': JSON.stringify({
-            NODE_ENV: process.env.NODE_ENV || 'production',
-            NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || '',
-            NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL || '',
-            NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '',
-          }),
+          'process.env.NEXT_PUBLIC_APP_URL': JSON.stringify(process.env.NEXT_PUBLIC_APP_URL || ''),
+          'process.env.NEXT_PUBLIC_SUPABASE_URL': JSON.stringify(process.env.NEXT_PUBLIC_SUPABASE_URL || ''),
+          'process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY': JSON.stringify(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''),
         })
       );
 
@@ -461,8 +461,8 @@ const nextConfig = {
         '@sentry/react': path.resolve(__dirname, 'src/utils/sentry-mock.ts'),
         '@sentry/browser': path.resolve(__dirname, 'src/utils/sentry-mock.ts'),
         // Provide shims for optional logging libraries so build doesn't fail
-        'logrocket': path.resolve(__dirname, 'src/utils/logrocket-shim.ts'),
-        '@datadog/browser-logs': path.resolve(__dirname, 'src/utils/datadog-logs-shim.ts'),
+        'logrocket': path.resolve(__dirname, 'src/utils/vendor-mocks/logrocket.ts'),
+        '@datadog/browser-logs': path.resolve(__dirname, 'src/utils/vendor-mocks/datadog-browser-logs.ts'),
       };
     }
 
@@ -911,7 +911,7 @@ const nextConfig = {
 
   // Handle ESM modules
   experimental: {
-    esmExternals: 'loose',
+    esmExternals: false,
   },
 
 

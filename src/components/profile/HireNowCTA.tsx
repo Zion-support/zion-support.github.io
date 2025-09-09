@@ -1,5 +1,5 @@
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { HireRequestModal } from "./hire-request";
 import { useState } from "react";
 import { TalentProfile } from "@/types/talent";

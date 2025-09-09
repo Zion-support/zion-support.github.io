@@ -3,7 +3,7 @@ import { Header } from '@/components/Header';
 import { NextSeo } from '@/components/NextSeo';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
 import Link from 'next/link'; // Changed from react-router-dom
