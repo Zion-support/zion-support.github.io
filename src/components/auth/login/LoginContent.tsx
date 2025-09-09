@@ -1,21 +1,26 @@
-import { LoginCard } from "./LoginCard";
+import React from 'react';
+import { LoginForm } from './LoginForm';
 
 export function LoginContent() {
   return (
-    <div className="flex min-h-screen bg-zion-blue mt-16">
-      <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
-        <LoginCard />
-      </div>
-      <div className="hidden lg:block relative w-0 flex-1">
-        <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-br from-zion-blue-dark via-zion-purple-dark to-zion-purple-light opacity-80">
-          <div className="flex flex-col justify-center items-center h-full px-8">
-            <div className="max-w-md text-center">
-              <h3 className="text-3xl font-bold text-white mb-4">Join the Zion Community</h3>
-              <p className="text-lg text-white/80">
-                Connect with thousands of AI professionals, discover new opportunities, and showcase your services to a global audience.
-              </p>
-            </div>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center p-4">
+      <div className="w-full max-w-md">
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-bold text-white mb-2">Welcome Back</h1>
+          <p className="text-zion-slate-light">Sign in to your Zion Tech Group account</p>
+        </div>
+        
+        <div className="bg-zion-blue-dark/80 backdrop-blur-sm rounded-2xl p-8 border border-zion-blue-light/30 shadow-2xl">
+          <LoginForm />
+        </div>
+        
+        <div className="text-center mt-6">
+          <p className="text-zion-slate-light">
+            Don't have an account?{' '}
+            <a href="/signup" className="text-zion-cyan hover:text-zion-cyan-light font-medium">
+              Sign up
+            </a>
+          </p>
         </div>
       </div>
     </div>

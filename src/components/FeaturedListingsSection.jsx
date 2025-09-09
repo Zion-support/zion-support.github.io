@@ -98,23 +98,73 @@ const featuredListings = [
     featured: false,
     technologies: ["IoT Sensors", "Apache Kafka", "Elasticsearch", "React", "Node.js"],
     highlights: ["Real-time Monitoring", "Predictive Analytics", "Scalable Architecture", "Dashboard"]
+  },
+  {
+    id: 6,
+    title: "Enterprise Data Analytics Dashboard",
+    category: "Data Analytics",
+    description: "Comprehensive business intelligence platform with advanced reporting and predictive analytics",
+    rating: 4.8,
+    reviews: 145,
+    views: 3120,
+    likes: 167,
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    price: "$25,000",
+    tags: ["Data Analytics", "Business Intelligence", "Dashboard", "Predictive"],
+    duration: "4-5 months",
+    team: "6 experts",
+    location: "Remote",
+    featured: false,
+    technologies: ["Python", "Tableau", "PostgreSQL", "Apache Spark", "React"],
+    highlights: ["Real-time Dashboards", "Predictive Models", "Data Integration", "Custom Reports"]
   }
 ];
 
+const categories = [
+  "All", "Web Development", "Mobile Development", "Cloud & DevOps", "AI & Machine Learning", "IoT Solutions", "Data Analytics"
+];
+
 export function FeaturedListingsSection() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredListing, setHoveredListing] = useState(null);
+  const [showFilters, setShowFilters] = useState(false);
+
+  const filteredListings = selectedCategory === "All"
+    ? featuredListings
+    : featuredListings.filter(listing => listing.category === selectedCategory);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  const renderStars = (rating) => {
+    return Array.from({ length: 5 }, (_, i) => (
+      <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
+        ★
+      </span>
+    ));
+  };
 
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Enhanced background pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div 
-          className="absolute inset-0" 
-          style={{
-            backgroundImage: `radial-gradient(circle at 75% 75%, currentColor 1px, transparent 1px)`,
-            backgroundSize: '60px 60px'
-          }}
-        />
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 75% 25%, currentColor 1px, transparent 1px)`,
+          backgroundSize: '60px 60px'
+        }}/>
       </div>
       
       {/* Floating decorative elements */}
@@ -138,7 +188,7 @@ export function FeaturedListingsSection() {
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
-          className="text-center mb-20" 
+          className="text-center mb-16" 
           initial={{ opacity: 0, y: 20 }} 
           whileInView={{ opacity: 1, y: 0 }} 
           viewport={{ once: true }} 
@@ -148,69 +198,96 @@ export function FeaturedListingsSection() {
             Featured <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Projects</span>
           </h2>
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
-            Discover our most successful and innovative projects that showcase our expertise 
-            and commitment to delivering exceptional results.
+            Discover our most popular and highly-rated projects that showcase our expertise and innovation. 
+            Each project represents our commitment to excellence and cutting-edge technology.
           </p>
         </motion.div>
 
-        {/* Featured listings grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
-          {featuredListings.map((listing, index) => (
-            <motion.div
-              key={listing.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              onHoverStart={() => setHoveredListing(listing.id)}
-              onHoverEnd={() => setHoveredListing(null)}
-              whileHover={{ y: -8 }}
-              className="group"
+        {/* Category filters */}
+        <motion.div 
+          className="flex flex-wrap justify-center gap-3 mb-12" 
+          initial={{ opacity: 0, y: 20 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }} 
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          {categories.map((category) => (
+            <button 
+              key={category} 
+              onClick={() => setSelectedCategory(category)} 
+              className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                selectedCategory === category
+                  ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'
+                  : 'bg-zion-blue-dark/40 text-zion-slate-light hover:bg-zion-blue-dark/60 hover:text-white border border-zion-blue-light/30'
+              }`}
             >
-              <div className="bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
-                {/* Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={listing.image} 
-                    alt={listing.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                  {listing.featured && (
-                    <div className="absolute top-4 left-4">
-                      <span className="inline-flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-xs font-semibold rounded-full">
-                        <Award className="w-3 h-3" />
-                        Featured
-                      </span>
-                    </div>
-                  )}
-                  <div className="absolute top-4 right-4">
-                    <span className="inline-flex items-center gap-1 px-3 py-1 bg-zion-blue-dark/80 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
-                      {listing.category}
-                    </span>
-                    <div className="flex items-center gap-1">
-                      {renderStars(listing.rating)}
-                      <span className="text-zion-slate-light text-sm ml-1">({listing.reviews})</span>
+              {category}
+            </button>
+          ))}
+        </motion.div>
+        
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" 
+          variants={containerVariants} 
+          initial="hidden" 
+          whileInView="visible" 
+          viewport={{ once: true }}
+        >
+          {filteredListings.map((listing) => (
+            <motion.div 
+              key={listing.id} 
+              variants={itemVariants} 
+              onHoverStart={() => setHoveredListing(listing.id)} 
+              onHoverEnd={() => setHoveredListing(null)} 
+              whileHover={{ y: -8 }} 
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <div className="group bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
+                {/* Featured badge */}
+                {listing.featured && (
+                  <div className="absolute top-4 left-4 z-10">
+                    <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
+                      <Award className="w-3 h-3 inline mr-1"/>
+                      Featured
                     </div>
                   </div>
-                </div>
+                )}
 
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img src={listing.image} alt={listing.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"/>
+                  <div className="absolute top-4 right-4">
+                    <button className="p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-cyan transition-colors duration-300">
+                      <Heart className="w-4 h-4 text-white"/>
+                    </button>
+                  </div>
+                </div>
+                
                 {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
+                <div className="p-6 flex flex-col h-full">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">
+                      {listing.category}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
                     {listing.title}
                   </h3>
-                  <p className="text-zion-slate-light text-sm mb-4 line-clamp-2">
+                  
+                  <p className="text-zion-slate-light text-sm mb-4 leading-relaxed flex-grow">
                     {listing.description}
                   </p>
-
-                  {/* Meta info */}
-                  <div className="flex items-center gap-4 mb-4 text-xs text-zion-slate-light">
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-3 h-3" />
+                  
+                  {/* Quick info */}
+                  <div className="grid grid-cols-2 gap-3 mb-4">
+                    <div className="flex items-center gap-2 text-zion-slate-light/80 text-xs">
+                      <Clock className="w-3 h-3"/>
                       <span>{listing.duration}</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Users className="w-3 h-3" />
+                    <div className="flex items-center gap-2 text-zion-slate-light/80 text-xs">
+                      <Users className="w-3 h-3"/>
                       <span>{listing.team}</span>
                     </div>
                   </div>
@@ -232,17 +309,17 @@ export function FeaturedListingsSection() {
                   {/* Stats */}
                   <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
                     <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <Star className="w-4 h-4 text-yellow-400 fill-current"/>
                       <span>{listing.rating}</span>
                       <span>({listing.reviews})</span>
                     </div>
                     <div className="flex items-center gap-4">
                       <div className="flex items-center gap-1">
-                        <Eye className="w-4 h-4" />
+                        <Eye className="w-4 h-4"/>
                         <span>{listing.views}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Heart className="w-4 h-4" />
+                        <Heart className="w-4 h-4"/>
                         <span>{listing.likes}</span>
                       </div>
                     </div>
@@ -253,9 +330,9 @@ export function FeaturedListingsSection() {
                     <span className="text-2xl font-bold text-zion-cyan">
                       {listing.price}
                     </span>
-                    <Link to={listing.link} className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+                    <button className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
                       View Details
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4"/>
                     </button>
                   </div>
 
@@ -304,9 +381,18 @@ export function FeaturedListingsSection() {
                   </AnimatePresence>
                 </div>
               </div>
+              
+              <div className="px-6 pb-6">
+                <Link 
+                  to={`/project/${listing.id}`} 
+                  className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg"
+                >
+                  Get Started
+                </Link>
+              </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
         
         {/* Enhanced bottom CTA */}
         <motion.div 
@@ -323,7 +409,7 @@ export function FeaturedListingsSection() {
               </p>
               <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
                 View All Projects
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"/>
               </button>
             </div>
           </div>
@@ -332,3 +418,5 @@ export function FeaturedListingsSection() {
     </section>
   );
 }
+
+export default FeaturedListingsSection;
