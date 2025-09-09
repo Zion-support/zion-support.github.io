@@ -1,3 +1,4 @@
+# Unified Netlify build configuration
 # touch v4.63 to trigger Netlify rebuild
 [build]
   # Build the site with Vite and publish the dist folder
