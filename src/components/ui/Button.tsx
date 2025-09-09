@@ -36,7 +36,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     // Map custom variants to cva variants
     const mappedVariant = variant === 'primary' ? 'primary' : 
                          variant === 'danger' ? 'danger' : 
-                         variant as 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
+                         variant === 'default' ? 'primary' :
+                         variant === 'destructive' ? 'danger' :
+                         variant === 'secondary' ? 'secondary' :
+                         variant === 'outline' ? 'outline' :
+                         variant === 'ghost' ? 'ghost' :
+                         variant === 'link' ? 'ghost' : 'primary';
     
     const mappedSize = size === 'md' ? 'md' : 
                       size === 'sm' ? 'sm' : 
