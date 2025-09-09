@@ -25,197 +25,50 @@ export default {
           DEFAULT: "var(--primary)",
           foreground: "var(--primary-foreground)",
         },
-        "zion-blue": {
-          DEFAULT: "#2e73ea",
-          light: "#5b8fef",
-          dark: "#1e4ea8",
-        },
-        "zion-cyan": {
-          DEFAULT: "#00e5ff",
-          light: "#7df9ff",
-          dark: "#00c4cc",
-        },
-        "zion-slate": {
-          DEFAULT: "#17072b",
-          light: "#451582",
-          dark: "#000000",
-        },
-        // Additional service category colors
-        "zion-green": {
-          DEFAULT: "#10b981",
-          light: "#34d399",
-          dark: "#059669",
-        },
-        "zion-orange": {
-          DEFAULT: "#f59e0b",
-          light: "#fbbf24",
-          dark: "#d97706",
-        },
-        "zion-red": {
-          DEFAULT: "#ef4444",
-          light: "#f87171",
-          dark: "#dc2626",
-        },
-        "zion-pink": {
-          DEFAULT: "#ec4899",
-          light: "#f472b6",
-          dark: "#db2777",
-        },
-        "zion-indigo": {
-          DEFAULT: "#6366f1",
-          light: "#818cf8",
-          dark: "#4f46e5",
-        },
-        "zion-emerald": {
-          DEFAULT: "#10b981",
-          light: "#34d399",
-          dark: "#059669",
-        },
-        "zion-teal": {
-          DEFAULT: "#14b8a6",
-          light: "#2dd4bf",
-          dark: "#0d9488",
-        },
-        "zion-amber": {
-          DEFAULT: "#f59e0b",
-          light: "#fbbf24",
-          dark: "#d97706",
-        },
-        "zion-yellow": {
-          DEFAULT: "#eab308",
-          light: "#facc15",
-          dark: "#ca8a04",
-        },
-        "zion-lime": {
-          DEFAULT: "#84cc16",
-          light: "#a3e635",
-          dark: "#65a30d",
-        },
-        "zion-rose": {
-          DEFAULT: "#f43f5e",
-          light: "#fb7185",
-          dark: "#e11d48",
-        },
-        "zion-violet": {
-          DEFAULT: "#8b5cf6",
-          light: "#a78bfa",
-          dark: "#7c3aed",
-        },
-        "zion-fuchsia": {
-          DEFAULT: "#d946ef",
-          light: "#e879f9",
-          dark: "#c026d3",
-        },
-        "zion-sky": {
-          DEFAULT: "#0ea5e9",
-          light: "#38bdf8",
-          dark: "#0284c7",
-        },
-        "zion-blue-light": {
-          DEFAULT: "#3b82f6",
-          light: "#60a5fa",
-          dark: "#2563eb",
-        },
-        "zion-cyan-light": {
-          DEFAULT: "#06b6d4",
-          light: "#22d3ee",
-          dark: "#0891b2",
-        },
-        "zion-neon": {
-          DEFAULT: "#22ddd2",
-          light: "#7aeae4",
-          dark: "#14847e",
-          glow: "#22ddd2",
-        },
-        "zion-purple": {
-          DEFAULT: "#8c15e9",
-          light: "#b971f2",
-          dark: "#7c3aed",
-        },
-        "zion-purple-light": {
-          DEFAULT: "#a855f7",
-          light: "#c084fc",
-          dark: "#9333ea",
-        },
-        "zion-green": {
-          DEFAULT: "#10b981",
-          light: "#34d399",
-          dark: "#059669",
-        },
-        "zion-orange": {
-          DEFAULT: "#f59e0b",
-          light: "#fbbf24",
-          dark: "#d97706",
-        },
-        "zion-red": {
-          DEFAULT: "#ef4444",
-          light: "#f87171",
-          dark: "#dc2626",
-        },
-        "zion-pink": {
-          DEFAULT: "#ec4899",
-          light: "#f472b6",
-          dark: "#db2777",
-        },
-        "zion-indigo": {
-          DEFAULT: "#6366f1",
-          light: "#818cf8",
-          dark: "#4f46e5",
-        },
-        "zion-emerald": {
-          DEFAULT: "#10b981",
-          light: "#34d399",
-          dark: "#059669",
-        },
-        "zion-teal": {
-          DEFAULT: "#14b8a6",
-          light: "#2dd4bf",
-          dark: "#0d9488",
-        },
-        "zion-amber": {
-          DEFAULT: "#f59e0b",
-          light: "#fbbf24",
-          dark: "#ca8a04",
-        },
-        "zion-yellow": {
-          DEFAULT: "#eab308",
-          light: "#facc15",
-          dark: "#ca8a04",
-        },
-        "zion-lime": {
-          DEFAULT: "#84cc16",
-          light: "#a3e635",
-          dark: "#65a30d",
-        },
-        "zion-rose": {
-          DEFAULT: "#f43f5e",
-          light: "#fb7185",
-          dark: "#e11d48",
-        },
-        "zion-violet": {
-          DEFAULT: "#8b5cf6",
-          light: "#a78bfa",
-          dark: "#7c3aed",
-        },
-        "zion-fuchsia": {
-          DEFAULT: "#d946ef",
-          light: "#e879f9",
-          dark: "#c026d3",
-        },
-        "zion-sky": {
-          DEFAULT: "#0ea5e9",
-          light: "#38bdf8",
-          dark: "#0284c7",
-        },
-        "zion-blue-light": {
-          DEFAULT: "#3b82f6",
-          light: "#60a5fa",
-          dark: "#2563eb",
-        },
-        "zion-cyan-light": {
-          DEFAULT: "#06b6d4",
-          light: "#22d3ee",
-          dark: "#0891b2",
+        // Enhanced Zion Tech Group color palette
+        "zion": {
+          blue: {
+            DEFAULT: "#2e73ea",
+            light: "#8ab1f3",
+            dark: "#172d67",
+            neon: "#00d4ff",
+          },
+          purple: {
+            DEFAULT: "#8c15e9",
+            light: "#b971f2",
+            dark: "#530c8b",
+            neon: "#b971f2",
+          },
+          cyan: {
+            DEFAULT: "#22ddd2",
+            light: "#7aeae4",
+            dark: "#14847e",
+            neon: "#22ddd2",
+          },
+          slate: {
+            DEFAULT: "#17072b",
+            light: "#451582",
+            dark: "#000000",
+            glow: "#2a1b3d",
+          },
+          green: {
+            DEFAULT: "#10b981",
+            light: "#34d399",
+            dark: "#059669",
+            neon: "#00ff88",
+          },
+          orange: {
+            DEFAULT: "#f59e0b",
+            light: "#fbbf24",
+            dark: "#d97706",
+            neon: "#ff6b35",
+          },
+          red: {
+            DEFAULT: "#ef4444",
+            light: "#f87171",
+            dark: "#dc2626",
+            neon: "#ff4757",
+          },
         },
       },
       borderRadius: {
@@ -225,6 +78,8 @@ export default {
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        mono: ["var(--font-mono)", ...fontFamily.mono],
+        display: ["var(--font-display)", ...fontFamily.sans],
       },
       keyframes: {
         "accordion-down": {
@@ -277,23 +132,17 @@ export default {
           from: { transform: "translateX(100%)" },
           to: { transform: "translateX(0)" },
         },
-        "pulse-glow": {
-          "0%, 100%": { 
-            boxShadow: "0 0 20px rgba(34, 221, 210, 0.5)",
-            transform: "scale(1)"
-          },
-          "50%": { 
-            boxShadow: "0 0 40px rgba(34, 221, 210, 0.8)",
-            transform: "scale(1.05)"
-          },
-        },
         "float": {
           "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" },
+          "50%": { transform: "translateY(-20px)" },
         },
-        "gradient-shift": {
-          "0%, 100%": { backgroundPosition: "0% 50%" },
-          "50%": { backgroundPosition: "100% 50%" },
+        "glow": {
+          "0%, 100%": { boxShadow: "0 0 20px rgba(34, 221, 210, 0.5)" },
+          "50%": { boxShadow: "0 0 40px rgba(34, 221, 210, 0.8)" },
+        },
+        "pulse-slow": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.5" },
         },
       },
       animation: {
@@ -309,10 +158,18 @@ export default {
         "slide-in-from-bottom": "slide-in-from-bottom 0.3s ease-out",
         "slide-in-from-left": "slide-in-from-left 0.3s ease-out",
         "slide-in-from-right": "slide-in-from-right 0.3s ease-out",
-        "slide-in": "slide-in 0.3s ease-out",
-        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
-        "float": "float 3s ease-in-out infinite",
-        "gradient-shift": "gradient-shift 3s ease infinite",
+        "float": "float 6s ease-in-out infinite",
+        "glow": "glow 2s ease-in-out infinite alternate",
+        "pulse-slow": "pulse-slow 3s ease-in-out infinite",
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "zion-gradient": "linear-gradient(135deg, #17072b 0%, #451582 50%, #8c15e9 100%)",
+        "zion-cyber": "linear-gradient(135deg, #22ddd2 0%, #2e73ea 50%, #8c15e9 100%)",
+      },
+      backdropBlur: {
+        xs: "2px",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

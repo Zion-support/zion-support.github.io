@@ -2,12 +2,7 @@
   "name": "bolt.new.zion.app",
   "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
-  "engines": {
-    "node": ">=14.17.0",
-    "npm": ">=6.14.0"
-  },
   "scripts": {
     "sitemap": "node scripts/generate-sitemap.mjs",
     "dev": "next dev",
