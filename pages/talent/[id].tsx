@@ -6,6 +6,59 @@ const TalentDetail: React.FC = () => {
   const router = useRouter();
   const { id } = router.query;
 
+// fetcher-like function for handling API responses
+const handleApiResponse = async (res: Response) => {
+  if (!res.ok) {
+    const error = new Error('An error occurred while fetching the data.');
+    try {
+      (error as any).info = await res.json();
+    } catch (e) {
+      (error as any).info = { message: await res.text() };
+    }
+    (error as any).status = res.status;
+    throw error;
+  }
+  return res.json();
+};
+
+const TalentPage: React.FC = () => {
+  const params = useParams();
+  const id = params.id as string;
+
+  const { data, error, isLoading } = useSWR<TalentProfileBasic>(
+    id ? `/api/talent/${id}` : null,
+    (url: string) => fetch(url).then(handleApiResponse)
+  );
+
+  if (isLoading || !id) {
+    return <TalentProfileSkeleton />;
+  }
+
+  // Specific 404 error from API
+  if (error && (error as any).status === 404) {
+    return <NotFound />;
+  }
+
+  // Other errors (non-404)
+  if (error) {
+    const err: any = error;
+    return (
+      <div className="flex flex-col items-center justify-center py-20 text-center">
+        <h2 className="text-2xl font-semibold mb-2">Error</h2>
+        <p>Failed to load talent profile.</p>
+        {err.status && <p>Status: {err.status}</p>}
+        <p>Message: {err.info?.error || err.info?.message || err.message}</p>
+      </div>
+    );
+  }
+
+  // API call was successful (no error thrown) but no profile found
+  // This also implies !isLoading at this point.
+  if (!data) {
+    return <NotFound />;
+  }
+
+  // If we reach here, talent data is available
   return (
     <div className="min-h-screen bg-gradient-to-b from-zion-blue-dark to-zion-blue-darker">
       <SEO 

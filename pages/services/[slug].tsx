@@ -7,11 +7,8 @@ import { slugify } from '@/lib/slugify';
 import Custom404 from '../404';
 
 const ServicePage: React.FC = () => {
-  const router = useRouter();
-  const { slug } = router.query as { slug?: string };
-  if (!slug) {
-    return <Custom404 />;
-  }
+  const params = useParams();
+  const slug = params.slug as string;
   const service = React.useMemo(
     () => SERVICES.find((s) => slugify(s.title) === slug) || null,
     [slug]
