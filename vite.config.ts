@@ -41,8 +41,10 @@ export default defineConfig(({ mode }) => ({
         warn(warning);
       },
       output: {
-        // Manual chunk splitting for better caching and performance
-        manualChunks: disableManualChunks ? undefined : (id) => {
+        // Force-disable manual chunking in CI/Netlify to avoid rare hangs during chunk rendering
+        // Keep default Rollup chunking which is more stable across environments
+        manualChunks: undefined,
+        /* manualChunks: disableManualChunks ? undefined : (id) => {
           // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
             // React ecosystem - core
@@ -122,7 +124,7 @@ export default defineConfig(({ mode }) => ({
             }
             return 'pages';
           }
-        },
+        }, */
         // Optimize chunk file names
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
@@ -133,8 +135,8 @@ export default defineConfig(({ mode }) => ({
     target: 'esnext',
     // Enable CSS code splitting
     cssCodeSplit: true,
-    // Avoid gzip size computation on CI (can appear to hang after "rendering chunks")
-    reportCompressedSize: process.env.CI !== 'true' && process.env.NETLIFY !== 'true',
+    // Avoid gzip size computation entirely to prevent extra work on CI
+    reportCompressedSize: false,
     // Optimize for production
     emptyOutDir: true,
   },
