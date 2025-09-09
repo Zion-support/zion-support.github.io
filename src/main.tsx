@@ -36,7 +36,8 @@ import './i18n';
 import { register } from './serviceWorkerRegistration';
 
 // Performance monitoring
-import { performanceMonitor } from './utils/performance';
+import { performanceMonitor, setupGlobalErrorHandlers } from './utils/performance-monitor';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Create QueryClient
 const queryClient = new QueryClient({
@@ -97,6 +98,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
 
 // Initialize global error handlers early
 initializeGlobalErrorHandlers();
+setupGlobalErrorHandlers();
 
 // Set up global error handlers
 window.addEventListener('error', (event) => {
@@ -178,6 +180,9 @@ try {
   if (import.meta.env.PROD) {
     register();
   }
+
+  // Initialize performance monitoring
+  performanceMonitor.reportMetrics();
 } catch (error) {
   console.error("Global error caught in main.tsx:", error);
   handleGlobalError(error as Error);

@@ -35,6 +35,7 @@
   },
   "scripts": {
     "dev": "vite",
+    "dev:optimize": "node scripts/dev-optimize.js && vite",
     "build": "ROLLUP_SKIP_NODEJS_NATIVE=true NODE_ENV=production SKIP_TYPE_CHECK=true vite build --logLevel info",
     "build:ci": "node scripts/build-with-target.js",
     "build:analyze": "ANALYZE=true vite build",
@@ -50,6 +51,7 @@
     "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui",
     "performance": "node scripts/performance-monitor.cjs",
+    "performance:monitor": "node -e \"console.log('Performance monitoring enabled. Check browser console for metrics.');\"",
     "analyze": "npm run build && npm run performance",
     "analyze:performance": "node scripts/performance-optimizer.js",
     "test:comprehensive": "node scripts/comprehensive-test.cjs",
