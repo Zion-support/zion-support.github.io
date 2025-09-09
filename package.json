@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-<<<<<<< HEAD
   "bin": {
     "zion": "scripts/cli.js"
   },
@@ -34,8 +33,6 @@
     "node": ">=20.18.1",
     "npm": ">=10.0.0"
   },
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3ded
   "scripts": {
     "dev": "vite",
     "dev:optimize": "node scripts/dev-optimize.js && vite",
@@ -80,7 +77,6 @@
     "validate": "npm run build:ci"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@chakra-ui/react": "^3.26.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
@@ -183,13 +179,6 @@
   },
   "optionalDependencies": {
     "@elastic/elasticsearch": "^8.12.0"
-=======
-    "framer-motion": "^12.23.12",
-    "lucide-react": "^0.543.0",
-    "next": "^13.4.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3ded
   },
   "devDependencies": {
     "@playwright/test": "^1.41.2",
