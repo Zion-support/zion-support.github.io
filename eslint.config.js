@@ -4,11 +4,6 @@ import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 
-const typescriptParser = tseslint.parser;
-const typescript = tseslint.plugin;
-const react = pluginReact;
-const reactHooks = pluginReactHooks;
-
 export default [
   { ...js.configs.recommended, files: ['app/**/*.{js,jsx,ts,tsx}', 'components/**/*.{js,jsx,ts,tsx}', 'src/**/*.{js,jsx,ts,tsx}'] },
   {
@@ -26,6 +21,19 @@ export default [
       "clean-build/**",
       "cache/**",
       "corrupted_backup/**",
+      "temp_backup/**",
+      "temp-disabled/**",
+      "temp_broken_components/**",
+      "temp_components.disabled/**",
+      "temp_essential_pages/**",
+      "temp_working/**",
+      "test-minimal/**",
+      "test_build/**",
+      "tests.disabled/**",
+      "token/**",
+      "tools/**",
+      "types.disabled/**",
+      "zion_academy/**",
       "*.cjs",
       "*.js",
       "api-backup/**",
@@ -174,6 +182,19 @@ export default [
       'public/**',
       'temp_conflicts/**',
       'temp_exclude/**',
+      'temp_backup/**',
+      'temp-disabled/**',
+      'temp_broken_components/**',
+      'temp_components.disabled/**',
+      'temp_essential_pages/**',
+      'temp_working/**',
+      'test-minimal/**',
+      'test_build/**',
+      'tests.disabled/**',
+      'token/**',
+      'tools/**',
+      'types.disabled/**',
+      'zion_academy/**',
       '__tests__/**',
       'tests/**',
       'apps/**',

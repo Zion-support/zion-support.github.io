@@ -270,8 +270,8 @@ const itServices = [
     targetUsers: 'C-Level Executives, IT Directors, Business Owners',
     roi: '200-400%',
     popular: false
-
-]
+  }
+];
 const industries = [
   {
     title: "Healthcare & Medical",
@@ -308,8 +308,8 @@ const industries = [
     description: "Secure, compliant IT solutions for government agencies and public organizations",
     icon: "🏛️",
     useCases: ["Citizen services", "Document management", "Security compliance", "Digital transformation"]
-
-]
+  }
+];
 export default function ITServicesPage() {
   return (
     <>
@@ -326,9 +326,9 @@ export default function ITServicesPage() {
           <div className='container mx-auto px-4'>
             <motion.div
               className='text-center max-w-4xl mx-auto'
-              initial={ opacity: 0, y: 30 }
-              animate={ opacity: 1, y: 0 }
-              transition={ duration: 0.8 }
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 IT Services & Solutions
@@ -360,10 +360,10 @@ export default function ITServicesPage() {
           <div className='container mx-auto px-4'>
             <motion.div
               className='text-center mb-16'
-              initial={ opacity: 0, y: 30 }
-              whileInView={ opacity: 1, y: 0 }
-              transition={ duration: 0.8 }
-              viewport={ once: true }
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our IT Services
@@ -378,11 +378,11 @@ export default function ITServicesPage() {
                 <motion.div
                   key={service.id}
                   className='bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 relative'
-                  initial={ opacity: 0, y: 30 }
-                  whileInView={ opacity: 1, y: 0 }
-                  transition={ duration: 0.8, delay: index * 0.1 }
-                  viewport={ once: true }
-                  whileHover={ y: -5 }
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
                 >
                   {service.popular && (
                     <div className='absolute -top-3 -right-3 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1'>
@@ -460,6 +460,7 @@ export default function ITServicesPage() {
                     <div className='text-sm text-gray-600'>
                       <strong>Target Users:</strong> {service.targetUsers}
                     </div>
+                  </div>
 
                   <div className='flex flex-col sm:flex-row gap-2'>
                     <Link
@@ -486,10 +487,10 @@ export default function ITServicesPage() {
           <div className='container mx-auto px-4'>
             <motion.div
               className='text-center mb-16'
-              initial={ opacity: 0, y: 30 }
-              whileInView={ opacity: 1, y: 0 }
-              transition={ duration: 0.8 }
-              viewport={ once: true }
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
                 Industries We Serve
@@ -504,10 +505,10 @@ export default function ITServicesPage() {
                 <motion.div
                   key={index}
                   className='bg-gray-50 p-8 rounded-xl hover:bg-gray-100 transition-colors'
-                  initial={ opacity: 0, y: 30 }
-                  whileInView={ opacity: 1, y: 0 }
-                  transition={ duration: 0.8, delay: index * 0.1 }
-                  viewport={ once: true }
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
                   <div className='text-4xl mb-4'>{industry.icon}</div>
                   <h3 className='text-xl font-semibold mb-2 text-gray-900'>{industry.title}</h3>
@@ -534,10 +535,10 @@ export default function ITServicesPage() {
           <div className='container mx-auto px-4'>
             <motion.div
               className='text-center mb-16'
-              initial={ opacity: 0, y: 30 }
-              whileInView={ opacity: 1, y: 0 }
-              transition={ duration: 0.8 }
-              viewport={ once: true }
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Our IT Services?
@@ -568,15 +569,15 @@ export default function ITServicesPage() {
                   icon: Clock,
                   title: "24/7 Support",
                   description: "Round-the-clock monitoring and support services"
-
+                }
               ].map((item, index) => (
                 <motion.div
                   key={index}
                   className='text-center'
-                  initial={ opacity: 0, y: 30 }
-                  whileInView={ opacity: 1, y: 0 }
-                  transition={ duration: 0.8, delay: index * 0.1 }
-                  viewport={ once: true }
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
                   <div className='bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <item.icon className='w-8 h-8 text-blue-600' />
@@ -593,10 +594,10 @@ export default function ITServicesPage() {
         <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white'>
           <div className='container mx-auto px-4 text-center'>
             <motion.div
-              initial={ opacity: 0, y: 30 }
-              whileInView={ opacity: 1, y: 0 }
-              transition={ duration: 0.8 }
-              viewport={ once: true }
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Modernize Your IT Infrastructure?
