@@ -1,12 +1,31 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  Globe, 
+  Zap, 
+  Shield, 
+  Cloud, 
+  Brain, 
+  Database, 
+  Users, 
+  Code, 
+  Lock, 
+  Rocket,
+  Search,
+  Phone,
+  Mail
+} from 'lucide-react';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [marketplaceDropdownOpen, setMarketplaceDropdownOpen] = useState(false);
-  const [companyDropdownOpen, setCompanyDropdownOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const location = useLocation();
 
   const toggleDropdown = (dropdownType) => {
     if (dropdownType === 'services') {
@@ -24,24 +43,39 @@ export function AppHeader() {
     }
   };
 
-  const closeAllDropdowns = () => {
-    setServicesDropdownOpen(false);
-    setMarketplaceDropdownOpen(false);
-    setCompanyDropdownOpen(false);
-  };
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+    setActiveDropdown(null);
+    setSearchOpen(false);
+  }, [location.pathname]);
 
-  return (
-    <header className="bg-slate-900 shadow-lg border-b border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Zion Tech Group
-              </h1>
-            </Link>
-          </div>
+  const navigationItems = [
+    { name: 'Home', path: '/', icon: null },
+    { 
+      name: 'Services', 
+      path: '/services', 
+      icon: null,
+      dropdown: [
+        { name: 'AI & Machine Learning', path: '/services?category=ai-ml', icon: Brain, color: 'from-purple-500 to-pink-500', description: 'Intelligent automation and insights' },
+        { name: 'Quantum Computing', path: '/services?category=quantum', icon: Zap, color: 'from-blue-500 to-cyan-500', description: 'Next-generation problem solving' },
+        { name: 'Blockchain & Web3', path: '/services?category=blockchain', icon: Lock, color: 'from-green-500 to-emerald-500', description: 'Decentralized solutions' },
+        { name: 'IoT & Edge Computing', path: '/services?category=iot', icon: Cloud, color: 'from-orange-500 to-red-500', description: 'Connected infrastructure' },
+        { name: 'AR/VR Development', path: '/services?category=ar-vr', icon: Users, color: 'from-indigo-500 to-purple-500', description: 'Immersive experiences' },
+        { name: 'FinTech Solutions', path: '/services?category=fintech', icon: Database, color: 'from-yellow-500 to-orange-500', description: 'Financial technology' },
+        { name: 'Green Technology', path: '/services?category=green-tech', icon: Shield, color: 'from-green-400 to-teal-500', description: 'Sustainable solutions' },
+        { name: 'Cybersecurity', path: '/services?category=cybersecurity', icon: Lock, color: 'from-red-500 to-pink-500', description: 'Advanced protection' },
+      ]
+    },
+    { name: 'About', path: '/about', icon: null },
+    { name: 'Contact', path: '/contact', icon: null },
+  ];
+
+  const isActive = (path) => location.pathname === path;
+
+  const handleDropdownToggle = (index) => {
+    setActiveDropdown(activeDropdown === index ? null : index);
+  };
 
   return (
     <motion.header 
@@ -97,230 +131,228 @@ export function AppHeader() {
 
           {/* Enhanced Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-white hover:text-zion-cyan transition-colors duration-300" onClick={closeAllDropdowns}>
-              Home
-            </Link>
-            
-            {/* Services Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown('services')}
-                className="flex items-center space-x-1 text-white hover:text-zion-cyan transition-colors duration-300"
-              >
-                <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {servicesDropdownOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-zinc-900/95 backdrop-blur-md border border-zion-cyan/20 rounded-lg shadow-xl py-4">
-                  <div className="grid grid-cols-2 gap-4 px-4">
-                    <div>
-                      <h3 className="text-zion-cyan font-semibold mb-3 text-sm uppercase tracking-wide">Core Services</h3>
-                      <ul className="space-y-2">
-                        <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">All Services</Link></li>
-                        <li><Link to="/ai-business-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">AI Solutions</Link></li>
-                        <li><Link to="/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Cybersecurity</Link></li>
-                        <li><Link to="/cloud-migration" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Cloud Migration</Link></li>
-                        <li><Link to="/digital-transformation" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Digital Transformation</Link></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h3 className="text-zion-cyan font-semibold mb-3 text-sm uppercase tracking-wide">Specialized</h3>
-                      <ul className="space-y-2">
-                        <li><Link to="/blockchain-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Blockchain</Link></li>
-                        <li><Link to="/quantum-technology" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Quantum Tech</Link></li>
-                        <li><Link to="/5g-enterprise-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">5G Solutions</Link></li>
-                        <li><Link to="/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Green IT</Link></li>
-                        <li><Link to="/it-onsite-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Onsite Services</Link></li>
-                      </ul>
-                    </div>
+            {navigationItems.map((item, index) => (
+              <div key={item.name} className="relative">
+                {item.dropdown ? (
+                  <div className="relative">
+                    <button
+                      onClick={() => handleDropdownToggle(index)}
+                      className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
+                        isActive(item.path) 
+                          ? 'text-zion-cyan bg-zion-cyan/10' 
+                          : 'text-white hover:text-zion-cyan hover:bg-zion-cyan/10'
+                      }`}
+                    >
+                      {item.name}
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
+                        activeDropdown === index ? 'rotate-180' : ''
+                      }`} />
+                    </button>
+                    
+                    <AnimatePresence>
+                      {activeDropdown === index && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                          transition={{ duration: 0.2 }}
+                          className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
+                        >
+                          <div className="p-4">
+                            <div className="grid grid-cols-1 gap-2">
+                              {item.dropdown.map((dropdownItem, idx) => (
+                                <Link
+                                  key={dropdownItem.name}
+                                  to={dropdownItem.path}
+                                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-colors duration-200 group"
+                                >
+                                  <div className={`w-10 h-10 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                                    <dropdownItem.icon className="w-5 h-5 text-white" />
+                                  </div>
+                                  <div className="flex-1 min-w-0">
+                                    <div className="font-medium text-white group-hover:text-zion-cyan transition-colors duration-200">
+                                      {dropdownItem.name}
+                                    </div>
+                                    <div className="text-sm text-zion-slate-light mt-1">
+                                      {dropdownItem.description}
+                                    </div>
+                                  </div>
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
-                  <div className="mt-4 pt-4 border-t border-zion-cyan/20 px-4">
-                    <Link to="/services-pricing" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium block">View Pricing →</Link>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Marketplace Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown('marketplace')}
-                className="flex items-center space-x-1 text-white hover:text-zion-cyan transition-colors duration-300"
-              >
-                <span>Marketplace</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${marketplaceDropdownOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {marketplaceDropdownOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-zinc-900/95 backdrop-blur-md border border-zion-cyan/20 rounded-lg shadow-xl py-4">
-                  <div className="grid grid-cols-2 gap-4 px-4">
-                    <div>
-                      <h3 className="text-zion-cyan font-semibold mb-3 text-sm uppercase tracking-wide">Products</h3>
-                      <ul className="space-y-2">
-                        <li><Link to="/marketplace" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">All Products</Link></li>
-                        <li><Link to="/equipment" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Equipment</Link></li>
-                        <li><Link to="/software" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Software</Link></li>
-                        <li><Link to="/hardware" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Hardware</Link></li>
-                        <li><Link to="/publish-product" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm block py-1 font-medium">Sell Product →</Link></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h3 className="text-zion-cyan font-semibold mb-3 text-sm uppercase tracking-wide">Talent</h3>
-                      <ul className="space-y-2">
-                        <li><Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Find Talent</Link></li>
-                        <li><Link to="/post-job" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Post Job</Link></li>
-                        <li><Link to="/portfolio-builder" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Portfolio Builder</Link></li>
-                        <li><Link to="/hiring-tracker" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Hiring Tracker</Link></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Company Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown('company')}
-                className="flex items-center space-x-1 text-white hover:text-zion-cyan transition-colors duration-300"
-              >
-                <span>Company</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${companyDropdownOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {companyDropdownOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-zinc-900/95 backdrop-blur-md border border-zion-cyan/20 rounded-lg shadow-xl py-4">
-                  <div className="grid grid-cols-2 gap-4 px-4">
-                    <div>
-                      <h3 className="text-zion-cyan font-semibold mb-3 text-sm uppercase tracking-wide">About</h3>
-                      <ul className="space-y-2">
-                        <li><Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">About Us</Link></li>
-                        <li><Link to="/mission" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Mission</Link></li>
-                        <li><Link to="/how-it-works" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">How It Works</Link></li>
-                        <li><Link to="/partners" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Partners</Link></li>
-                        <li><Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Careers</Link></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h3 className="text-zion-cyan font-semibold mb-3 text-sm uppercase tracking-wide">Resources</h3>
-                      <ul className="space-y-2">
-                        <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Blog</Link></li>
-                        <li><Link to="/events" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Events</Link></li>
-                        <li><Link to="/webinars" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Webinars</Link></li>
-                        <li><Link to="/case-studies" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">Case Studies</Link></li>
-                        <li><Link to="/faq" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm block py-1">FAQ</Link></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <Link to="/enterprise" className="text-white hover:text-zion-cyan transition-colors duration-300" onClick={closeAllDropdowns}>
-              Enterprise
-            </Link>
-            
-            <Link to="/developer" className="text-white hover:text-zion-cyan transition-colors duration-300" onClick={closeAllDropdowns}>
-              Developer
-            </Link>
-            
-            <Link to="/pricing" className="text-white hover:text-zion-cyan transition-colors duration-300" onClick={closeAllDropdowns}>
-              Pricing
-            </Link>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+                      isActive(item.path) 
+                        ? 'text-zion-cyan bg-zion-cyan/10' 
+                        : 'text-white hover:text-zion-cyan hover:bg-zion-cyan/10'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
+            ))}
           </nav>
 
-          {/* Enhanced Actions */}
+          {/* Right side actions */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link to="/contact" className="text-white hover:text-zion-cyan transition-colors duration-300" onClick={closeAllDropdowns}>
-              Contact
-            </Link>
-            <Link to="/login" className="text-white hover:text-zion-cyan transition-colors duration-300 font-medium" onClick={closeAllDropdowns}>
-              Login
-            </Link>
-            <Link to="/contact" className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-transform" onClick={closeAllDropdowns}>
-              Get Started
+            {/* Search button */}
+            <motion.button
+              onClick={() => setSearchOpen(!searchOpen)}
+              className="p-2 text-white hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Search className="w-5 h-5" />
+            </motion.button>
+
+            {/* Contact info */}
+            <div className="hidden xl:flex items-center space-x-4 text-sm">
+              <div className="flex items-center gap-2 text-zion-cyan">
+                <Phone className="w-4 h-4" />
+                <span className="text-white">+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center gap-2 text-zion-cyan">
+                <Mail className="w-4 h-4" />
+                <span className="text-white">kleber@ziontechgroup.com</span>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <Link to="/contact">
+              <motion.button 
+                className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:scale-105 transition-transform"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Get Started
+              </motion.button>
             </Link>
           </div>
 
-          {/* Enhanced Mobile Menu Button */}
-          <motion.button
+          {/* Mobile menu button */}
+          <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors duration-300 relative group"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            className="lg:hidden p-2 text-white hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-zion-cyan/20">
-            <nav className="flex flex-col space-y-4">
-              <Link to="/" className="text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
-                Home
-              </Link>
-              
-              {/* Mobile Services Section */}
-              <div>
-                <div className="text-zion-cyan font-medium mb-2">Services</div>
-                <div className="ml-4 space-y-2">
-                  <Link to="/services" className="text-white hover:text-zion-cyan transition-colors duration-300 block" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
-                  <Link to="/ai-business-solutions" className="text-white hover:text-zion-cyan transition-colors duration-300 block" onClick={() => setMobileMenuOpen(false)}>AI Solutions</Link>
-                  <Link to="/cybersecurity" className="text-white hover:text-zion-cyan transition-colors duration-300 block" onClick={() => setMobileMenuOpen(false)}>Cybersecurity</Link>
-                  <Link to="/cloud-migration" className="text-white hover:text-zion-cyan transition-colors duration-300 block" onClick={() => setMobileMenuOpen(false)}>Cloud Migration</Link>
-                  <Link to="/blockchain-services" className="text-white hover:text-zion-cyan transition-colors duration-300 block" onClick={() => setMobileMenuOpen(false)}>Blockchain</Link>
-                </div>
-              </div>
-
-              {/* Mobile Marketplace Section */}
-              <div>
-                <div className="text-zion-cyan font-medium mb-2">Marketplace</div>
-                <div className="ml-4 space-y-2">
-                  <Link to="/marketplace" className="text-white hover:text-zion-cyan transition-colors duration-300 block" onClick={() => setMobileMenuOpen(false)}>Products</Link>
-                  <Link to="/talent" className="text-white hover:text-zion-cyan transition-colors duration-300 block" onClick={() => setMobileMenuOpen(false)}>Talent</Link>
-                  <Link to="/equipment" className="text-white hover:text-zion-cyan transition-colors duration-300 block" onClick={() => setMobileMenuOpen(false)}>Equipment</Link>
-                </div>
-              </div>
-
-              {/* Mobile Company Section */}
-              <div>
-                <div className="text-zion-cyan font-medium mb-2">Company</div>
-                <div className="ml-4 space-y-2">
-                  <Link to="/about" className="text-white hover:text-zion-cyan transition-colors duration-300 block" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
-                  <Link to="/partners" className="text-white hover:text-zion-cyan transition-colors duration-300 block" onClick={() => setMobileMenuOpen(false)}>Partners</Link>
-                  <Link to="/careers" className="text-white hover:text-zion-cyan transition-colors duration-300 block" onClick={() => setMobileMenuOpen(false)}>Careers</Link>
-                  <Link to="/blog" className="text-white hover:text-zion-cyan transition-colors duration-300 block" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-                </div>
-              </div>
-
-              <Link to="/enterprise" className="text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
-                Enterprise
-              </Link>
-              
-              <Link to="/developer" className="text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
-                Developer
-              </Link>
-              
-              <Link to="/pricing" className="text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
-                Pricing
-              </Link>
-
-              <div className="pt-4 border-t border-zion-cyan/20">
-                <Link to="/login" className="block text-white hover:text-zion-cyan transition-colors duration-300 font-medium mb-2" onClick={() => setMobileMenuOpen(false)}>
-                  Login
-                </Link>
-                <Link to="/contact" className="block px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium text-center" onClick={() => setMobileMenuOpen(false)}>
-                  Get Started
-                </Link>
-              </div>
-            </nav>
-          </div>
-        )}
       </div>
 
-      {/* Click outside to close dropdowns */}
-      {(servicesDropdownOpen || marketplaceDropdownOpen || companyDropdownOpen) && (
-        <div className="fixed inset-0 z-40" onClick={closeAllDropdowns} />
-      )}
-    </header>
+      {/* Search overlay */}
+      <AnimatePresence>
+        {searchOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="bg-zion-slate-dark/95 backdrop-blur-xl border-t border-zion-cyan/20"
+          >
+            <div className="container mx-auto px-4 py-6">
+              <div className="max-w-2xl mx-auto">
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="Search our services, solutions, or expertise..."
+                    className="w-full px-4 py-3 pl-12 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
+                  />
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-cyan" />
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-zion-slate-dark/95 backdrop-blur-xl border-t border-zion-cyan/20"
+          >
+            <div className="container mx-auto px-4 py-6">
+              <nav className="space-y-4">
+                {navigationItems.map((item, index) => (
+                  <div key={item.name}>
+                    {item.dropdown ? (
+                      <div>
+                        <button
+                          onClick={() => handleDropdownToggle(index)}
+                          className={`w-full flex items-center justify-between px-4 py-3 rounded-lg transition-all duration-300 ${
+                            isActive(item.path) 
+                              ? 'text-zion-cyan bg-zion-cyan/10' 
+                              : 'text-white hover:text-zion-cyan hover:bg-zion-cyan/10'
+                          }`}
+                        >
+                          {item.name}
+                          <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
+                            activeDropdown === index ? 'rotate-180' : ''
+                          }`} />
+                        </button>
+                        
+                        <AnimatePresence>
+                          {activeDropdown === index && (
+                            <motion.div
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: 'auto' }}
+                              exit={{ opacity: 0, height: 0 }}
+                              transition={{ duration: 0.3 }}
+                              className="ml-4 mt-2 space-y-2"
+                            >
+                              {item.dropdown.map((dropdownItem, idx) => (
+                                <Link
+                                  key={dropdownItem.name}
+                                  to={dropdownItem.path}
+                                  className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan transition-colors duration-200"
+                                >
+                                  {dropdownItem.name}
+                                </Link>
+                              ))}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    ) : (
+                      <Link
+                        to={item.path}
+                        className={`block px-4 py-3 rounded-lg transition-all duration-300 ${
+                          isActive(item.path) 
+                            ? 'text-zion-cyan bg-zion-cyan/10' 
+                            : 'text-white hover:text-zion-cyan hover:bg-zion-cyan/10'
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    )}
+                  </div>
+                ))}
+                
+                {/* Mobile CTA */}
+                <div className="pt-4 border-t border-zion-cyan/20">
+                  <Link to="/contact">
+                    <button className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold">
+                      Get Started
+                    </button>
+                  </Link>
+                </div>
+              </nav>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
   );
 }
