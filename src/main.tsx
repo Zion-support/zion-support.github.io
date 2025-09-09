@@ -1,10 +1,9 @@
-console.log("main.tsx: Start");
 import React from 'react';
-import { createRoot, hydrateRoot } from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 import { I18nextProvider } from 'react-i18next';
-import i18n from './i18n'; // Adjust the path if your i18n.js is elsewhere
+import i18n from './i18n';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -12,31 +11,16 @@ import { showApiError } from '@/utils/apiErrorHandler';
 import './utils/globalFetchInterceptor';
 import './utils/consoleErrorToast';
 import ToastProvider from './components/ToastProvider';
-
-// Import i18n configuration
-import './i18n';
 import { LanguageProvider } from '@/context/LanguageContext';
-import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
 import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
-
-// Import auth and notification providers
 import { AuthProvider } from './context/auth/AuthProvider';
-import { NotificationProvider } from './context/notifications/NotificationContext';
-
-// Import analytics provider
+import { NotificationProvider } from './components/ui/notification';
 import { AnalyticsProvider } from './context/AnalyticsContext';
 import { ViewModeProvider } from './context/ViewModeContext';
 import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Initialize a React Query client with global error handling
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
-import App from './App'
-import './index.css'
-
-// Create a client
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -44,23 +28,26 @@ const queryClient = new QueryClient({
       refetchOnWindowFocus: false,
     },
   },
-})
+});
 
 // Performance monitoring setup
 if (import.meta.env.DEV) {
-  console.log('🚀 Zion Tech Group - Development Mode')
-  console.log('📊 Performance monitoring enabled')
-  console.log('🔧 Accessibility controls available')
+  console.log('🚀 Zion Tech Group - Development Mode');
+  console.log('📊 Performance monitoring enabled');
+  console.log('🔧 Accessibility controls available');
 }
 
 // Error handling for unhandled promise rejections
 window.addEventListener('unhandledrejection', (event) => {
-  console.error('Unhandled promise rejection:', event.reason)
+  console.error('Unhandled promise rejection:', event.reason);
   // In production, you might want to send this to an error reporting service
-})
+});
+
 const rootElement = document.getElementById('root');
 
-function renderApp() {
+if (rootElement) {
+  const root = createRoot(rootElement);
+  
   const app = (
     <React.StrictMode>
       <HelmetProvider>
@@ -69,16 +56,11 @@ function renderApp() {
             <Router>
               <AuthProvider>
                 <NotificationProvider>
-                  <AnalyticsProvider>
-                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                      <ViewModeProvider>
-                        <AppLayout>
-                          <App />
-                        </AppLayout>
-                      </ViewModeProvider>
-                      <LanguageDetectionPopup />
-                    </LanguageProvider>
-                  </AnalyticsProvider>
+                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                    <AppLayout>
+                      <App />
+                    </AppLayout>
+                  </LanguageProvider>
                 </NotificationProvider>
               </AuthProvider>
             </Router>
@@ -88,67 +70,10 @@ function renderApp() {
     </React.StrictMode>
   );
 
-// Error handling for uncaught errors
-window.addEventListener('error', (event) => {
-  console.error('Uncaught error:', event.error)
-  // In production, you might want to send this to an error reporting service
-})
-
-// Register service worker for PWA functionality
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-      .then((registration) => {
-        console.log('SW registered: ', registration)
-        
-        // Check for updates
-        registration.addEventListener('updatefound', () => {
-          const newWorker = registration.installing
-          if (newWorker) {
-            newWorker.addEventListener('statechange', () => {
-              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                // New content is available, show update prompt
-                if (confirm('New content is available! Would you like to update?')) {
-                  newWorker.postMessage({ type: 'SKIP_WAITING' })
-                  window.location.reload()
-                }
-              }
-            })
-          }
-        })
-      })
-      .catch((registrationError) => {
-        console.log('SW registration failed: ', registrationError)
-      })
-  })
+  root.render(app);
+  
+  // Register service worker for PWA functionality
+  registerServiceWorker();
+} else {
+  console.error('Root element not found');
 }
-
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <HelmetProvider>
-      <QueryClientProvider client={queryClient}>
-        <WhitelabelProvider>
-          <Router>
-            <AuthProvider>
-              <NotificationProvider>
-                <AnalyticsProvider>
-                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                    <AppLayout>
-                      <App />
-                    </AppLayout>
-                    <LanguageDetectionPopup />
-                  </LanguageProvider>
-                </AnalyticsProvider>
-              </NotificationProvider>
-            </AuthProvider>
-          </Router>
-        </WhitelabelProvider>
-        <BrowserRouter>
-          <AppWrapper>
-            <App />
-          </AppWrapper>
-        </BrowserRouter>
-      </QueryClientProvider>
-    </HelmetProvider>
-  </React.StrictMode>,
-)

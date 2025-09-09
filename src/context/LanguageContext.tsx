@@ -1,84 +1,33 @@
-import * as React from 'react';
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-
-interface LanguageContextType {
-  language: string;
-  setLanguage: (lang: string) => void;
-  t: (key: string) => string;
-  translateContent: (content: string) => Promise<string>;
-  isTranslating: boolean;
+import React, { createContext, useContext, useState } from 'react';
+const LanguageContext = createContext(undefined);
+export function LanguageProvider({ children }) {
+    const [language, setLanguage] = useState('en');
+    const translations = {
+        en: {
+            'welcome': 'Welcome',
+            'get_started': 'Get Started',
+            'learn_more': 'Learn More',
+            'contact_us': 'Contact Us'
+        },
+        es: {
+            'welcome': 'Bienvenido',
+            'get_started': 'Comenzar',
+            'learn_more': 'Saber Más',
+            'contact_us': 'Contáctanos'
+        }
+    };
+    const t = (key) => {
+        return translations[language]?.[key] || key;
+    };
+    const isRTL = language === 'ar' || language === 'he';
+    return (<LanguageContext.Provider value={{ language, setLanguage, t, isRTL }}>
+      {children}
+    </LanguageContext.Provider>);
 }
-
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
-
-export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [currentLanguage, setLanguage] = useState<SupportedLanguage>('en');
-  const [isTranslating, setIsTranslating] = useState(false);
-
-  const supportedLanguages: SupportedLanguage[] = ['en', 'es', 'fr'];
-
-  const translateText = async (text: string, targetLanguage: string): Promise<string> => {
-    setIsTranslating(true);
-    try {
-      // Stub implementation - in real app, this would call a translation API
-      await new Promise(resolve => setTimeout(resolve, 100));
-      return text; // Return original text for now
-    } finally {
-      setIsTranslating(false);
+export function useLanguage() {
+    const context = useContext(LanguageContext);
+    if (!context) {
+        throw new Error('useLanguage must be used within a LanguageProvider');
     }
-  };
-
-  const t = (key: string): string => {
-    // Stub implementation - in real app, this would use i18n
-    return key;
-  };
-
-  const translateContent = async (content: string): Promise<string> => {
-    return translateText(content, currentLanguage);
-  };
-
-  const value: LanguageContextType = {
-    currentLanguage,
-    setLanguage,
-    supportedLanguages,
-    translateText,
-    t,
-    translateContent,
-    isTranslating,
-  };
-
-  return (
-    <LanguageContext.Provider value={value}>
-      {children}
-    </LanguageContext.Provider>
-  );
-};
-
-export const useLanguage = () => {
-  const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
-  return context;
+    return context;
 }
-}
-
-const LanguageContext = React.createContext<LanguageContextType | undefined>(undefined);
-
-export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = React.useState('en');
-
-  return (
-    <LanguageContext.Provider value={{ language, setLanguage }}>
-      {children}
-    </LanguageContext.Provider>
-  );
-};
-
-export const useLanguage = (): LanguageContextType => {
-  const context = React.useContext(LanguageContext);
-  if (context === undefined) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
-  return context;
-};
