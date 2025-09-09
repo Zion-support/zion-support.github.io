@@ -3,7 +3,9 @@ import { useParams } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
 
 import { useState } from "react";
-import { useRouter } from 'next/router';
+import { useParams, useNavigate } from "react-router-dom";
+import Header from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";

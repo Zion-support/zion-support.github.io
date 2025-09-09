@@ -1,144 +1,322 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { SEO } from "@/components/SEO";
+import { UltimateServicesShowcase } from "@/components/UltimateServicesShowcase";
 import { 
   Brain, 
+  Cloud, 
+  Code, 
   Shield, 
   Cloud, 
   Server, 
   Zap, 
-  Globe, 
-  Code, 
-  Database,
-  Lock,
-  Cpu,
-  Network,
-  Smartphone,
-  Rocket,
-  Atom,
+  Star, 
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  TrendingUp,
   Users,
-  Building
+  Target,
+  Award,
+  Database
 } from 'lucide-react';
 
 export default function Services() {
-  const serviceCategories = [
+  const stats = [
     {
-      title: "AI & Machine Learning",
-      icon: Brain,
-      description: "Cutting-edge artificial intelligence and machine learning solutions",
-      services: [
-        { name: "AI Autonomous Systems", path: "/services/ai-autonomous-systems", description: "Self-learning AI systems for business automation" },
-        { name: "Machine Learning Models", path: "/services/ai-ml", description: "Custom ML models for data analysis and prediction" },
-        { name: "AI Business Intelligence", path: "/services/ai-business-intelligence", description: "AI-powered business analytics and insights" },
-        { name: "AI Marketing Automation", path: "/services/ai-marketing-automation", description: "Intelligent marketing campaign optimization" }
-      ]
+      icon: Users,
+      value: "500+",
+      label: "Global Clients",
+      description: "Serving businesses worldwide"
     },
     {
-      title: "Cybersecurity",
+      icon: Globe,
+      value: "25+",
+      label: "Countries",
+      description: "Global presence"
+    },
+    {
+      icon: Code,
+      value: "1000+",
+      label: "Projects",
+      description: "Successfully delivered"
+    },
+    {
       icon: Shield,
-      description: "Advanced security solutions to protect your digital assets",
-      services: [
-        { name: "AI Autonomous Security", path: "/services/ai-autonomous-security", description: "AI-driven threat detection and response" },
-        { name: "Cloud Security", path: "/services/cloud-security", description: "Comprehensive cloud infrastructure protection" },
-        { name: "Identity & Access Management", path: "/services/identity-security", description: "Secure user authentication and authorization" },
-        { name: "Incident Response", path: "/services/incident-response", description: "24/7 security monitoring and rapid response" }
+      value: "99.9%",
+      label: "Uptime",
+      description: "Reliable service"
+    }
+  ];
+
+  const categories = [
+    {
+      icon: Brain,
+      title: "AI & Autonomous Systems",
+      description: "Revolutionary AI platforms and autonomous business solutions",
+      color: "from-blue-600 to-purple-600",
+      benefits: [
+        "300% increase in business efficiency",
+        "80% reduction in operational costs",
+        "24/7 autonomous operation",
+        "Predictive analytics and insights"
       ]
     },
     {
-      title: "Cloud & DevOps",
-      icon: Cloud,
-      description: "Scalable cloud infrastructure and automated development operations",
-      services: [
-        { name: "Cloud Migration", path: "/services/cloud-migration", description: "Seamless transition to cloud platforms" },
-        { name: "DevOps Automation", path: "/services/devops-automation", description: "Streamlined development and deployment" },
-        { name: "Container Security", path: "/services/container-security", description: "Secure containerized application deployment" },
-        { name: "API Security", path: "/services/api-security", description: "Protected API development and management" }
+      icon: Database,
+      title: "IT Infrastructure & Enterprise",
+      description: "Enterprise-grade IT infrastructure and cloud solutions",
+      color: "from-green-600 to-emerald-600",
+      benefits: [
+        "99.9% uptime guarantee",
+        "Global infrastructure coverage",
+        "Military-grade security",
+        "Scalable cloud architecture"
       ]
     },
     {
-      title: "IT Infrastructure",
-      icon: Server,
-      description: "Robust and scalable technology infrastructure solutions",
-      services: [
-        { name: "Network Infrastructure", path: "/services/network-infrastructure", description: "High-performance network design and implementation" },
-        { name: "Data Center Solutions", path: "/services/data-center", description: "Modern data center design and management" },
-        { name: "Edge Computing", path: "/services/edge-computing", description: "Distributed computing for improved performance" },
-        { name: "IoT Security", path: "/services/iot-security", description: "Secure Internet of Things implementation" }
-      ]
-    },
-    {
-      title: "Digital Transformation",
-      icon: Zap,
-      description: "Transform your business with cutting-edge digital solutions",
-      services: [
-        { name: "Business Process Automation", path: "/services/business-process-automation", description: "Streamline operations with intelligent automation" },
-        { name: "Legacy System Modernization", path: "/services/legacy-modernization", description: "Upgrade outdated systems to modern platforms" },
-        { name: "Digital Strategy Consulting", path: "/services/digital-strategy", description: "Strategic planning for digital transformation" },
-        { name: "Change Management", path: "/services/change-management", description: "Guide your team through digital transformation" }
-      ]
-    },
-    {
-      title: "Emerging Technologies",
-      icon: Rocket,
-      description: "Stay ahead with the latest technological innovations",
-      services: [
-        { name: "Quantum Technology", path: "/services/quantum-technology", description: "Next-generation quantum computing solutions" },
-        { name: "Blockchain & Web3", path: "/services/blockchain", description: "Decentralized technology implementation" },
-        { name: "Space Technology", path: "/services/space-technology", description: "Innovative space-based solutions" },
-        { name: "Green IT", path: "/services/green-it", description: "Sustainable technology solutions" }
+      icon: Code,
+      title: "Micro SAAS Solutions",
+      description: "Innovative micro software-as-a-service solutions",
+      color: "from-orange-600 to-red-600",
+      benefits: [
+        "Rapid deployment and setup",
+        "Cost-effective pricing models",
+        "Seamless integrations",
+        "Continuous innovation updates"
       ]
     }
   ];
 
-  const featuredServices = [
+  const benefits = [
     {
-      name: "AI Autonomous Business Platform 2029",
-      description: "Next-generation AI platform for autonomous business operations",
-      path: "/services/ai-autonomous-business-platform-2029",
-      icon: Brain,
-      featured: true
+      icon: Star,
+      title: "Proven Results",
+      description: "Track record of delivering measurable business outcomes"
     },
     {
-      name: "Micro SAAS Solutions",
-      description: "Scalable software-as-a-service solutions for growing businesses",
-      path: "/services/micro-saas-solutions",
-      icon: Code,
-      featured: true
+      icon: Shield,
+      title: "Enterprise Security",
+      description: "Military-grade security and compliance standards"
     },
     {
-      name: "5G Enterprise Solutions",
-      description: "High-speed connectivity solutions for enterprise environments",
-      path: "/services/5g-enterprise-solutions",
-      icon: Network,
-      featured: true
+      icon: Globe,
+      title: "Global Support",
+      description: "24/7 support across multiple time zones"
+    },
+    {
+      icon: Zap,
+      title: "Innovation First",
+      description: "Cutting-edge technology and continuous innovation"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Our
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                {" "}Services
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+              Revolutionary{' '}
+              <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                Technology Services
               </span>
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
               Comprehensive technology solutions designed to transform your business. 
               From AI and cybersecurity to cloud infrastructure and digital transformation.
             </p>
+            
+            {/* Contact Information */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 mb-8 inline-block">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="flex items-center justify-center">
+                  <Phone className="h-5 w-5 text-blue-400 mr-2" />
+                  <span className="text-white">+1 302 464 0950</span>
+                </div>
+                <div className="flex items-center justify-center">
+                  <Mail className="h-5 w-5 text-green-400 mr-2" />
+                  <span className="text-white">kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center justify-center">
+                  <MapPin className="h-5 w-5 text-purple-400 mr-2" />
+                  <span className="text-white text-sm">364 E Main St STE 1008<br />Middletown DE 19709</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Key Statistics */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-4">
+                    <stat.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                  <div className="text-lg font-semibold text-zion-slate-light mb-1">{stat.label}</div>
+                  <div className="text-sm text-zion-slate-light">{stat.description}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Comprehensive Service Categories */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Comprehensive Service Categories
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Our services are organized into three main categories, each designed to address 
+              specific business needs and drive innovation across your organization.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {categories.map((category, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group"
+              >
+                <div className={`p-8 bg-gradient-to-br ${category.color} rounded-xl text-white text-center transform transition-all duration-300 group-hover:scale-105`}>
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-6">
+                    <category.icon className="h-10 w-10" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">{category.title}</h3>
+                  <p className="text-lg opacity-90 mb-6">{category.description}</p>
+                  
+                  <div className="space-y-3">
+                    {category.benefits.map((benefit, benefitIndex) => (
+                      <div key={benefitIndex} className="flex items-center justify-center">
+                        <CheckCircle className="h-5 w-5 text-white mr-2" />
+                        <span className="text-sm">{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Ultimate Services Showcase */}
+      <UltimateServicesShowcase />
+
+      {/* Why Choose Zion Tech Group */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              We combine cutting-edge technology with proven expertise to deliver 
+              solutions that transform businesses and drive innovation.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10"
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-4">
+                  <benefit.icon className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-zion-slate-light">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-zion-slate-light mb-8">
+              Join hundreds of companies already leveraging our cutting-edge technology solutions. 
+              Get started today with our special new customer offer.
+            </p>
+            
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 mb-8">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                🎉 Special New Customer Offer
+              </h3>
+              <p className="text-lg text-white/90 mb-6">
+                Get 30% off your first 3 months on any service. 
+                Plus, receive a free consultation and implementation plan.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                >
+                  Claim Your Offer
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
+                >
+                  Schedule Consultation
+                </Link>
+              </div>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-3 border border-slate-600 text-base font-medium rounded-lg text-slate-300 hover:text-white hover:border-slate-500 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-slate-dark transition-all duration-300"
               >
                 Request Quote
               </Link>

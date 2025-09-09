@@ -22,13 +22,11 @@ const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Services = React.lazy(() => import('./pages/Services'));
 const Careers = React.lazy(() => import('./pages/Careers'));
-const News = React.lazy(() => import('./pages/News'));
-const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
-
-// Lazy load service pages
-const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
-const QuantumDataAnalytics = React.lazy(() => import('./pages/services/QuantumDataAnalytics'));
-const BlockchainInfrastructure = React.lazy(() => import('./pages/services/BlockchainInfrastructure'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
 
 // New service pages
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));

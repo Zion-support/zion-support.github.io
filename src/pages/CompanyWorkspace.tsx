@@ -1,6 +1,7 @@
 
 import React from "react";
-import { Header } from "@/components/Header";
+import Header from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { CompanyDashboard } from "@/components/enterprise/workspace/CompanyDashboard";
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from "next/router"; // Changed to named import
