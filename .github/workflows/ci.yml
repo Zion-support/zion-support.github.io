@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main, develop ]
   pull_request:
-=======    branches: [ main, develop ]
+    branches: [ main, develop ]
 
 jobs:
   test:
@@ -15,13 +15,6 @@ jobs:
       matrix:
         node-version: [20.x]
     
-=======
-    branches: [ main ]
-
-jobs:
-  build-and-test:
-    runs-on: ubuntu-latest
-    >>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -29,18 +22,13 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}=======
         node-version: ${{ matrix.node-version }}
-=======
-        node-version: '20'
->>>>>>> origin/main
->>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
         cache: 'npm'
         
     - name: Install dependencies
       run: npm ci
       
-=======    - name: Run type checking
+    - name: Run type checking
       run: npm run type-check
       
     - name: Run linting
@@ -77,60 +65,38 @@ jobs:
         
     - name: Install dependencies
       run: npm ci
-=======
+      
     - name: Run linting
       run: npm run lint
       
     - name: Run tests
-      run: npm run test>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+      run: npm run test
       
     - name: Build application
       run: npm run build
       
     - name: Analyze bundle
       run: npm run analyze
-      =======
-    - name: Analyze bundle
-      run: npm run analyze
       
-=======
->>>>>>> origin/main
->>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
         name: build-files
         path: dist/
-=======        retention-days: 7
+        retention-days: 7
 
   security:
     name: Security Scan
     runs-on: ubuntu-latest
->>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
     
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
       
-=======
-        
-  deploy:
-    needs: build-and-test
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+    - name: Run security scan
+      run: npm audit --audit-level moderate
       
->>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
-    - name: Download build artifacts
-      uses: actions/download-artifact@v4
-      with:
-        name: build-files
-        path: dist/
-        
-=======    - name: Run performance tests
+    - name: Run performance tests
       run: npm run test:performance
       
     - name: Upload performance results
@@ -164,15 +130,12 @@ jobs:
       
     - name: Deploy to Netlify Staging
       uses: nwtgck/actions-netlify@v2.0
-=======
-    - name: Deploy to Netlify
-      uses: nwtgck/actions-netlify@v3.0>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       with:
         publish-dir: './dist'
         production-branch: main
         github-token: ${{ secrets.GITHUB_TOKEN }}
         deploy-message: "Deploy from GitHub Actions"
-=======        enable-pull-request-comment: false
+        enable-pull-request-comment: false
         enable-commit-comment: true
         overwrites-pull-request-comment: true
       env:
@@ -229,7 +192,3 @@ jobs:
         channel: '#deployments'
         webhook_url: ${{ secrets.SLACK_WEBHOOK }}
       if: always()
-=======
-      env:
-        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
