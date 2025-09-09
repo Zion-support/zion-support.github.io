@@ -116,3 +116,6 @@ temp/
 core
 *.core
 core.*
+
+# Git submodules (prevent submodule checkout errors)
+.gitmodules
