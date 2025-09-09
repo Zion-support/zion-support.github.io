@@ -1,8 +1,8 @@
-# Netlify rebuild trigger (minor touch to force deploy) - 2025-09-09 v4.43
-[build] # touch v4.28 to trigger Netlify rebuild
-  # Build the Vite React project on Netlify
-  command = "npm ci --no-audit --no-fund --include=optional && npm rebuild rollup @rollup/rollup-linux-x64-gnu || true && npm run build:ci"
-  publish = "dist"
+# Netlify rebuild trigger (minor touch to force deploy) - 2025-09-09 v4.44
+[build] # touch v4.44 to trigger Netlify rebuild
+  # Build the Next.js project on Netlify
+  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
+  publish = ".next"
   functions = "netlify/functions"
   command_timeout = "30m"
   # Skip TypeScript checking during build
@@ -11,17 +11,13 @@
     NODE_VERSION = "20.19.0"
     NODE_OPTIONS = "--max-old-space-size=6144"
     SKIP_TYPE_CHECK = "true"
-    DISABLE_MANUAL_CHUNKS = "true"
-    NEXT_RUNTIME_DISABLED = "1"
-    # Ensure devDependencies (e.g., Vite) are installed during CI
+    # Ensure devDependencies are installed during CI
     NPM_CONFIG_PRODUCTION = "false"
     NPM_FLAGS = "--include=dev --include=optional"
-    # Ensure optional native Rollup binaries are installed
+    # Ensure optional dependencies are installed
     NPM_CONFIG_OPTIONAL = "true"
-    # Force Rollup to skip native binary and use JS fallback to avoid npm optional bug
-    ROLLUP_SKIP_NODEJS_NATIVE = "true"
-    # Disable Netlify's automatic Next.js Runtime since this is a Vite SPA
-    NETLIFY_NEXT_PLUGIN_SKIP = "true"
+    # Enable Next.js runtime
+    NETLIFY_NEXT_PLUGIN_SKIP = "false"
 
 # Headers
 [[headers]]
@@ -60,23 +56,23 @@
   NPM_CONFIG_PRODUCTION = "false"
 
 [context.deploy-preview]
-  command = "npm ci --no-audit --no-fund --include=optional && npm rebuild rollup @rollup/rollup-linux-x64-gnu || true && npm run build:ci"
+  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
 
 [context.branch-deploy]
-  command = "npm ci --no-audit --no-fund --include=optional && npm rebuild rollup @rollup/rollup-linux-x64-gnu || true && npm run build:ci"
+  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
 
-# Vite/React SPA configuration - SPA fallback for all routes
-# Note: SPA fallback is handled in _redirects file to avoid conflicts
+# Next.js configuration - no SPA fallback needed
 
 # Set basic cache headers for static assets for better performance
 [[headers]]
-  for = "/assets/*"
+  for = "/_next/static/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*"
+  for = "/_next/image/*"
   [headers.values]
+<<<<<<< HEAD
     Cache-Control = "public, max-age=300"
 
 # SPA fallback handled via Netlify redirects since public/_redirects is gitignored
@@ -85,3 +81,7 @@
   to = "/index.html"
   status = 200
 # trigger: 2025-09-09T19:25:00Z
+=======
+    Cache-Control = "public, max-age=31536000, immutable"
+# trigger: 2025-09-09T19:10:00Z
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a6ac
