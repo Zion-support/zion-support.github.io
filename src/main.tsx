@@ -3,6 +3,19 @@ import ReactDOM from 'react-dom/client';
 import { ErrorBoundary } from 'react-error-boundary';
 import App from './App.tsx';
 import './index.css';
+// Removed feat/i18n-implementation and main markers
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n/index'; // Adjust the path if your i18n.js is elsewhere
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { QueryClient, QueryClientProvider, QueryCache, MutationCache } from '@tanstack/react-query';
+import { showApiError } from '@/utils/apiErrorHandler';
+import './utils/globalFetchInterceptor';
+import './utils/consoleErrorToast';
+import ToastProvider from './components/ToastProvider';
+import GlobalErrorBoundary from './components/GlobalErrorBoundary';
+import { GlobalSnackbarProvider } from './context/SnackbarContext';
+import { GlobalLoaderProvider } from '@/context/GlobalLoaderContext';
 
 // Import i18n configuration
 import './i18n';
