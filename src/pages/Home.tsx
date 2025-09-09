@@ -21,7 +21,7 @@ import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { NewsletterSection } from "@/components/NewsletterSection";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { SEO } from "@/components/SEO";
+import { EnhancedSEO } from "@/components/EnhancedSEO.tsx";
 import { HeroSection } from "@/components/HeroSection";
 import { QuickAccess } from "@/components/home/QuickAccess";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
@@ -256,11 +256,20 @@ export default function Home() {
 
   return (
     <>
-      <SEO 
-        title="Zion Tech Group - Leading AI & Technology Solutions"
-        description="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem."
-        canonical="/"
-        url="https://ziontechgroup.com"
+      <EnhancedSEO 
+        title="Zion Tech Group - Leading Technology Solutions & Innovation"
+        description="Transform your business with Zion Tech Group's cutting-edge technology solutions. AI, Cloud, Cybersecurity, and Digital Transformation services."
+        keywords={[
+          "technology solutions",
+          "AI",
+          "cloud computing", 
+          "cybersecurity",
+          "digital transformation",
+          "IT services",
+          "quantum computing",
+          "machine learning",
+          "blockchain solutions"
+        ]}
       />
       
       {/* Hero Section */}

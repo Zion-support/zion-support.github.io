@@ -4,7 +4,8 @@ import { FuturisticNavigation } from './components/FuturisticNavigation';
 import { FuturisticFooter } from './components/FuturisticFooter';
 import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 import { ChatAssistant } from './components/ChatAssistant';
-import { AuthProvider } from './hooks/useAuth';
+import { PerformanceMonitor } from './components/PerformanceMonitor.tsx';
+
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -119,6 +120,9 @@ function App() {
         
         {/* Chat Assistant */}
         <ChatAssistant />
+        
+        {/* Performance Monitor */}
+        <PerformanceMonitor />
       </div>
     </Router>
   );
