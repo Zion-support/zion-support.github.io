@@ -1,7 +1,8 @@
 
-[build] # touch v4.58 to trigger Netlify rebuild
+[build] # touch v4.61 to trigger Netlify rebuild
   # Build the site with Vite and publish the dist folder
-  command = "npm ci --no-audit --no-fund --include=optional && npm run build:ci"
+  # Netlify runs dependency installation before build.command. Avoid redundant npm ci.
+  command = "npm run build:ci"
   publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
@@ -39,6 +40,53 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Additional asset and PWA headers migrated from `_headers`
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Service-Worker-Allowed = "/"
+
+[[headers]]
+  for = "/manifest.json"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 # SPA fallback handled via `_redirects` in publish dir if present
 
 # Functions
@@ -57,9 +105,9 @@
   NPM_CONFIG_PRODUCTION = "false"
 
 [context.deploy-preview]
-  command = "npm ci --no-audit --no-fund --include=optional && npm run build:ci"
+  command = "npm run build:ci"
 
 [context.branch-deploy]
-  command = "npm ci --no-audit --no-fund --include=optional && npm run build:ci"
+  command = "npm run build:ci"
 
 # Next.js configuration - no SPA fallback needed
