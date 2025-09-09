@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './components/ThemeProvider';
-import { ErrorBoundary, setupGlobalErrorHandling } from './components/ErrorHandling';
+import { ErrorBoundary, setupGlobalErrorHandling, FallbackProps } from './components/ErrorHandling';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import ScrollToTop from './components/ScrollToTop';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -21,6 +21,7 @@ import OptimizedSuspense from './components/OptimizedSuspense';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import EnhancedNavigation from './components/EnhancedNavigation';
 import { bundleOptimizer } from './utils/bundleOptimizer';
+import { register as registerServiceWorker } from './serviceWorkerRegistration';
 import './App.css';
 
 function RootErrorFallback({ resetErrorBoundary }: FallbackProps) {
@@ -34,57 +35,6 @@ function RootErrorFallback({ resetErrorBoundary }: FallbackProps) {
   );
 }
 
-const baseRoutes = [
-  { path: '/', element: <Home /> },
-  { path: '/categories/all', element: <AllCategoriesPage /> },
-  { path: '/match', element: <AIMatcherPage /> },
-  { path: '/login', element: <Login /> },
-  { path: '/register', element: <Signup /> },
-  { path: '/signup', element: <SimpleSignup /> },
-  { path: '/oauth', element: <OAuthCallback /> },
-  { path: '/talent', element: <TalentDirectory /> },
-  { path: '/talents', element: <TalentsPage /> },
-  { path: '/more-talents', element: <MoreTalentsPage /> },
-  { path: '/additional-talents', element: <AdditionalTalentsPage /> },
-  { path: '/services', element: <ServicesPage /> },
-  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
-  { path: '/it-onsite-services/:country', element: <ITOnsiteServicesPage /> },
-  { path: '/categories', element: <Categories /> },
-  { path: '/equipment', element: <EquipmentPage /> },
-  { path: '/equipment/:id', element: <EquipmentDetail /> },
-  { path: '/new-products', element: <NewProductsPage /> },
-  { path: '/analytics', element: <Analytics /> },
-  { path: '/mobile-launch', element: <MobileLaunchPage /> },
-  { path: '/open-app', element: <OpenAppRedirect /> },
-  {
-    path: '/community',
-    element: (
-      <CommunityProvider>
-        <CommunityPage />
-      </CommunityProvider>
-    ),
-  },
-  { path: '/contact', element: <ContactPage /> },
-  { path: '/partners', element: <PartnersPage /> },
-  { path: '/sitemap', element: <Sitemap /> },
-  { path: '/help', element: <Help /> },
-  { path: '/zion-hire-ai', element: <ZionHireAI /> },
-  { path: '/hire-ai', element: <ZionHireAI /> },
-  { path: '/request-quote', element: <RequestQuotePage /> },
-  { path: '/blog', element: <Blog /> },
-  { path: '/blog/:slug', element: <BlogPost /> },
-  { path: '/favorites', element: <FavoritesPage /> },
-  { path: '/wishlist', element: <WishlistPage /> },
-  { path: '/cart', element: <PrivateRoute><CartPage /></PrivateRoute> },
-  { path: '/wallet', element: <PrivateRoute><Wallet /></PrivateRoute> },
-  { path: '/profile', element: <PrivateRoute><Profile /></PrivateRoute> },
-  { path: '/recommendations', element: <PrivateRoute><RecommendationsPage /></PrivateRoute> },
-  { path: '/checkout', element: <PrivateRoute><Checkout /></PrivateRoute> },
-  { path: '/forgot-password', element: <ForgotPassword /> },
-  { path: '/reset-password/:token', element: <ResetPassword /> },
-];
-
-// Removed duplicate App declaration (un-memoized version)
 
 // Create QueryClient instance with optimized settings
 const queryClient = new QueryClient({
