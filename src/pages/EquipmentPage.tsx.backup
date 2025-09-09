@@ -4,7 +4,7 @@ import { useEffect, useState, useMemo, useCallback } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from 'axios';
 import { generateRandomEquipment } from "@/utils/generateRandomEquipment";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Loader2, Sparkles, AlertTriangle, ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package } from "lucide-react";
 import Image from 'next/image';
 import { toast } from "@/hooks/use-toast";
