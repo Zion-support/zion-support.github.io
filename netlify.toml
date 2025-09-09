@@ -75,8 +75,4 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# SPA fallback handled via Netlify redirects since public/_redirects is gitignored
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# SPA fallback handled via public/_redirects already; remove duplicate here
