@@ -1,13 +1,16 @@
-import React, { Suspense, lazy, useState } from 'react';
+import React, { Suspense, lazy, useState, useMemo, useCallback } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { ErrorBoundary } from 'react-error-boundary';
+import ErrorBoundary from './components/ErrorBoundary';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './components/ThemeProvider';
 import { SEO } from './components/SEO';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import LoadingSpinner from './components/ui/LoadingSpinner';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import './App.css';
+import './styles/accessibility.css';
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/HomePage'));
@@ -21,51 +24,66 @@ const Cart = lazy(() => import('./pages/Cart'));
 const Checkout = lazy(() => import('./pages/Checkout'));
 const Wishlist = lazy(() => import('./pages/Wishlist'));
 
+// Memoized error fallback component
+const ErrorFallback = React.memo(() => (
+  <div className="min-h-screen flex items-center justify-center">
+    <div className="text-center">
+      <h1 className="text-2xl font-bold text-white mb-4">
+        Something went wrong
+      </h1>
+      <p className="text-gray-300">
+        Please refresh the page to try again.
+      </p>
+    </div>
+  </div>
+));
+
+ErrorFallback.displayName = 'ErrorFallback';
+
 function App() {
   const [isLoading, setIsLoading] = useState(false);
+
+  // Memoized routes configuration
+  const routes = useMemo(() => [
+    { path: "/", element: <Home /> },
+    { path: "/about", element: <About /> },
+    { path: "/services", element: <Services /> },
+    { path: "/contact", element: <Contact /> },
+    { path: "/blog", element: <Blog /> },
+    { path: "/marketplace", element: <Marketplace /> },
+    { path: "/profile", element: <Profile /> },
+    { path: "/cart", element: <Cart /> },
+    { path: "/checkout", element: <Checkout /> },
+    { path: "/wishlist", element: <Wishlist /> }
+  ], []);
+
+  // Memoized SEO props
+  const seoProps = useMemo(() => ({
+    title: "Zion Tech Group - Leading AI & IT Solutions Provider",
+    description: "Transform your business with cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. Trusted by 500+ businesses worldwide."
+  }), []);
 
   return (
     <HelmetProvider>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <SEO 
-          title="Zion Tech Group - Leading AI & IT Solutions Provider"
-          description="Transform your business with cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. Trusted by 500+ businesses worldwide."
-        />
+        <SEO {...seoProps} />
         <Header />
         
         <main className="min-h-screen">
-          <ErrorBoundary
-            fallback={
-              <div className="min-h-screen flex items-center justify-center">
-                <div className="text-center">
-                  <h1 className="text-2xl font-bold text-white mb-4">
-                    Something went wrong
-                  </h1>
-                  <p className="text-gray-300">
-                    Please refresh the page to try again.
-                  </p>
-                </div>
-              </div>
-            }
-          >
+          <ErrorBoundary fallback={<ErrorFallback />}>
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/marketplace" element={<Marketplace />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path="/checkout" element={<Checkout />} />
-                <Route path="/wishlist" element={<Wishlist />} />
+                {routes.map(({ path, element }) => (
+                  <Route key={path} path={path} element={element} />
+                ))}
               </Routes>
             </Suspense>
           </ErrorBoundary>
         </main>
         
         <Footer />
+        <PerformanceMonitor />
+        <AccessibilityEnhancer />
       </div>
     </HelmetProvider>
   );

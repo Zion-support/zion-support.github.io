@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
@@ -6,7 +6,7 @@ interface LoadingSpinnerProps {
   text?: string;
 }
 
-export default function LoadingSpinner({ 
+const LoadingSpinner = memo(function LoadingSpinner({ 
   size = 'md', 
   className = '', 
   text = 'Loading...' 
@@ -18,11 +18,13 @@ export default function LoadingSpinner({
   };
 
   return (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-zion-cyan border-t-transparent`}></div>
+    <div className={`flex flex-col items-center justify-center min-h-[200px] ${className}`}>
+      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-cyan-400 border-t-transparent`}></div>
       {text && (
-        <p className="mt-2 text-sm text-zion-slate-light">{text}</p>
+        <p className="mt-2 text-sm text-gray-300 animate-pulse">{text}</p>
       )}
     </div>
   );
-}
+});
+
+export default LoadingSpinner;
