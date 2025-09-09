@@ -63,13 +63,46 @@ export default defineConfig({
         assetFileNames: isProd ? 'assets/[name]-[hash].[ext]' : 'assets/[name].[ext]',
         
         // Manual chunk splitting for better performance
-        manualChunks: isProd ? {
-          // Vendor chunks
-          'react-vendor': ['react', 'react-dom'],
-          'ui-vendor': ['@radix-ui/react-slot', 'clsx', 'tailwind-merge'],
-          'utils-vendor': ['axios', 'date-fns', 'fuse.js'],
-          'animation-vendor': ['framer-motion'],
-          'query-vendor': ['@tanstack/react-query'],
+        manualChunks: isProd ? (id) => {
+          // Core React libraries
+          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
+            return 'react-vendor';
+          }
+          
+          // React Router
+          if (id.includes('node_modules/react-router')) {
+            return 'router-vendor';
+          }
+          
+          // UI Libraries
+          if (id.includes('@radix-ui') || id.includes('lucide-react')) {
+            return 'ui-vendor';
+          }
+          
+          // Animation libraries
+          if (id.includes('framer-motion') || id.includes('lottie')) {
+            return 'animation-vendor';
+          }
+          
+          // Form libraries
+          if (id.includes('react-hook-form') || id.includes('react-query')) {
+            return 'form-vendor';
+          }
+          
+          // Utility libraries
+          if (id.includes('axios') || id.includes('date-fns') || id.includes('lodash') || id.includes('fuse.js')) {
+            return 'utils-vendor';
+          }
+          
+          // Query libraries
+          if (id.includes('@tanstack/react-query') || id.includes('react-query')) {
+            return 'query-vendor';
+          }
+          
+          // Other node_modules
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
         } : undefined,
       },
       

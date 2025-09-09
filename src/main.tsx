@@ -38,6 +38,7 @@ import { register } from './serviceWorkerRegistration';
 // Performance monitoring
 import { performanceMonitor } from './utils/performance-monitor';
 import { setupGlobalErrorHandlers } from './utils/error-handler';
+import { performanceOptimizer, monitorWebVitals, registerServiceWorker as registerSW, inlineCriticalCSS } from './utils/performance-optimizations';
 import ErrorBoundary from './components/ErrorBoundary';
 
 // Create QueryClient
@@ -177,9 +178,15 @@ try {
 
   console.log("main.tsx: After ReactDOM.createRoot");
 
+  // Initialize performance optimizations
+  inlineCriticalCSS();
+  performanceOptimizer.initialize();
+  
   // Register service worker in production
   if (import.meta.env.PROD) {
     register();
+    registerSW();
+    monitorWebVitals();
   }
 
   // Initialize performance monitoring
