@@ -1,14 +1,10 @@
 /**
  * Test Setup Configuration
- * Configures the testing environment for Vitest
+ * Configures the testing environment for Jest
  */
 
-import { expect, afterEach, vi } from 'vitest'
 import { cleanup } from '@testing-library/react'
-import * as matchers from '@testing-library/jest-dom/matchers'
-
-// Extend Vitest's expect with jest-dom matchers
-expect.extend(matchers)
+import '@testing-library/jest-dom'
 
 // Cleanup after each test
 afterEach(() => {
@@ -18,59 +14,60 @@ afterEach(() => {
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
-  value: vi.fn().mockImplementation(query => ({
+  value: jest.fn().mockImplementation(query => ({
     matches: false,
     media: query,
     onchange: null,
-    addListener: vi.fn(), // deprecated
-    removeListener: vi.fn(), // deprecated
-    addEventListener: vi.fn(),
-    removeEventListener: vi.fn(),
-    dispatchEvent: vi.fn(),
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
   })),
 })
 
 // Mock IntersectionObserver
-global.IntersectionObserver = vi.fn().mockImplementation(() => ({
-  observe: vi.fn(),
-  unobserve: vi.fn(),
-  disconnect: vi.fn(),
+global.IntersectionObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
 }))
 
 // Mock ResizeObserver
-global.ResizeObserver = vi.fn().mockImplementation(() => ({
-  observe: vi.fn(),
-  unobserve: vi.fn(),
-  disconnect: vi.fn(),
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
 }))
 
 // Mock window.scrollTo
 Object.defineProperty(window, 'scrollTo', {
   writable: true,
-  value: vi.fn(),
+  value: jest.fn(),
 })
 
-// Mock window.location
-Object.defineProperty(window, 'location', {
-  value: {
-    href: 'http://localhost:3000',
-    origin: 'http://localhost:3000',
-    pathname: '/',
-    search: '',
-    hash: '',
-    assign: vi.fn(),
-    replace: vi.fn(),
-    reload: vi.fn(),
-  },
-  writable: true,
-})
+// Mock window.location (commented out to avoid issues)
+// Object.defineProperty(window, 'location', {
+//   value: {
+//     href: 'http://localhost:3000',
+//     origin: 'http://localhost:3000',
+//     pathname: '/',
+//     search: '',
+//     hash: '',
+//     assign: jest.fn(),
+//     replace: jest.fn(),
+//     reload: jest.fn(),
+//   },
+//   writable: true,
+//   configurable: true,
+// });
 
 // Mock localStorage
 const localStorageMock = {
-  getItem: vi.fn(),
-  setItem: vi.fn(),
-  removeItem: vi.fn(),
-  clear: vi.fn(),
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn(),
 }
 Object.defineProperty(window, 'localStorage', {
   value: localStorageMock,
@@ -78,37 +75,37 @@ Object.defineProperty(window, 'localStorage', {
 
 // Mock sessionStorage
 const sessionStorageMock = {
-  getItem: vi.fn(),
-  setItem: vi.fn(),
-  removeItem: vi.fn(),
-  clear: vi.fn(),
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn(),
 }
 Object.defineProperty(window, 'sessionStorage', {
   value: sessionStorageMock,
 })
 
 // Mock fetch
-global.fetch = vi.fn()
+global.fetch = jest.fn()
 
 // Mock console methods to reduce noise in tests
 const originalConsoleError = console.error
 const originalConsoleWarn = console.warn
 
 beforeEach(() => {
-  console.error = vi.fn()
-  console.warn = vi.fn()
+  console.error = jest.fn()
+  console.warn = jest.fn()
 })
 
 afterEach(() => {
   console.error = originalConsoleError
   console.warn = originalConsoleWarn
-  vi.clearAllMocks()
+  jest.clearAllMocks()
 })
 
 // Mock React Router
-vi.mock('react-router-dom', () => ({
-  ...vi.importActual('react-router-dom'),
-  useNavigate: () => vi.fn(),
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => jest.fn(),
   useLocation: () => ({
     pathname: '/',
     search: '',
@@ -119,46 +116,46 @@ vi.mock('react-router-dom', () => ({
 }))
 
 // Mock React Query
-vi.mock('@tanstack/react-query', () => ({
-  useQuery: vi.fn(() => ({
+jest.mock('@tanstack/react-query', () => ({
+  useQuery: jest.fn(() => ({
     data: null,
     isLoading: false,
     isError: false,
     error: null,
-    refetch: vi.fn(),
+    refetch: jest.fn(),
   })),
-  useMutation: vi.fn(() => ({
-    mutate: vi.fn(),
-    mutateAsync: vi.fn(),
+  useMutation: jest.fn(() => ({
+    mutate: jest.fn(),
+    mutateAsync: jest.fn(),
     isLoading: false,
     isError: false,
     error: null,
   })),
-  QueryClient: vi.fn(),
+  QueryClient: jest.fn(),
   QueryClientProvider: ({ children }: { children: React.ReactNode }) => children,
 }))
 
 // Mock Supabase
-vi.mock('@supabase/supabase-js', () => ({
-  createClient: vi.fn(() => ({
+jest.mock('@supabase/supabase-js', () => ({
+  createClient: jest.fn(() => ({
     auth: {
-      signIn: vi.fn(),
-      signOut: vi.fn(),
-      getUser: vi.fn(),
-      onAuthStateChange: vi.fn(),
+      signIn: jest.fn(),
+      signOut: jest.fn(),
+      getUser: jest.fn(),
+      onAuthStateChange: jest.fn(),
     },
-    from: vi.fn(() => ({
-      select: vi.fn().mockReturnThis(),
-      insert: vi.fn().mockReturnThis(),
-      update: vi.fn().mockReturnThis(),
-      delete: vi.fn().mockReturnThis(),
-      eq: vi.fn().mockReturnThis(),
+    from: jest.fn(() => ({
+      select: jest.fn().mockReturnThis(),
+      insert: jest.fn().mockReturnThis(),
+      update: jest.fn().mockReturnThis(),
+      delete: jest.fn().mockReturnThis(),
+      eq: jest.fn().mockReturnThis(),
     })),
   })),
 }))
 
 // Mock Framer Motion
-vi.mock('framer-motion', () => ({
+jest.mock('framer-motion', () => ({
   motion: {
     div: 'div',
     span: 'span',
@@ -167,67 +164,67 @@ vi.mock('framer-motion', () => ({
   },
   AnimatePresence: ({ children }: { children: React.ReactNode }) => children,
   useAnimation: () => ({
-    start: vi.fn(),
-    stop: vi.fn(),
-    set: vi.fn(),
+    start: jest.fn(),
+    stop: jest.fn(),
+    set: jest.fn(),
   }),
 }))
 
 // Mock React Helmet
-vi.mock('react-helmet-async', () => ({
+jest.mock('react-helmet-async', () => ({
   Helmet: ({ children }: { children: React.ReactNode }) => children,
   HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
 }))
 
-// Mock React Hot Toast
-vi.mock('react-hot-toast', () => ({
-  toast: {
-    success: vi.fn(),
-    error: vi.fn(),
-    loading: vi.fn(),
-    dismiss: vi.fn(),
-  },
-  Toaster: () => null,
-}))
+// Mock React Hot Toast (if needed)
+// jest.mock('react-hot-toast', () => ({
+//   toast: {
+//     success: jest.fn(),
+//     error: jest.fn(),
+//     loading: jest.fn(),
+//     dismiss: jest.fn(),
+//   },
+//   Toaster: () => null,
+// }))
 
 // Mock date-fns
-vi.mock('date-fns', () => ({
-  format: vi.fn((date) => date.toString()),
-  parseISO: vi.fn((date) => new Date(date)),
-  isToday: vi.fn(() => false),
-  isYesterday: vi.fn(() => false),
+jest.mock('date-fns', () => ({
+  format: jest.fn((date) => date.toString()),
+  parseISO: jest.fn((date) => new Date(date)),
+  isToday: jest.fn(() => false),
+  isYesterday: jest.fn(() => false),
 }))
 
-// Mock lodash.debounce
-vi.mock('lodash.debounce', () => ({
-  default: vi.fn((fn) => fn),
-}))
+// Mock lodash.debounce (if needed)
+// jest.mock('lodash.debounce', () => ({
+//   default: jest.fn((fn) => fn),
+// }))
 
-// Mock axios
-vi.mock('axios', () => ({
-  default: {
-    get: vi.fn(),
-    post: vi.fn(),
-    put: vi.fn(),
-    delete: vi.fn(),
-    patch: vi.fn(),
-    create: vi.fn(() => ({
-      get: vi.fn(),
-      post: vi.fn(),
-      put: vi.fn(),
-      delete: vi.fn(),
-      patch: vi.fn(),
-    })),
-  },
-}))
+// Mock axios (if needed)
+// jest.mock('axios', () => ({
+//   default: {
+//     get: jest.fn(),
+//     post: jest.fn(),
+//     put: jest.fn(),
+//     delete: jest.fn(),
+//     patch: jest.fn(),
+//     create: jest.fn(() => ({
+//       get: jest.fn(),
+//       post: jest.fn(),
+//       put: jest.fn(),
+//       delete: jest.fn(),
+//       patch: jest.fn(),
+//     })),
+//   },
+// }))
 
-// Mock environment variables
-vi.mock('import.meta.env', () => ({
-  VITE_SUPABASE_URL: 'https://test.supabase.co',
-  VITE_SUPABASE_ANON_KEY: 'test-key',
-  VITE_API_URL: 'https://api.test.com',
-  NODE_ENV: 'test',
-}))
+// Mock environment variables (if needed)
+// jest.mock('import.meta.env', () => ({
+//   VITE_SUPABASE_URL: 'https://test.supabase.co',
+//   VITE_SUPABASE_ANON_KEY: 'test-key',
+//   VITE_API_URL: 'https://api.test.com',
+//   NODE_ENV: 'test',
+// }))
 
 // Setup test utilities
 export const testUtils = {
@@ -243,7 +240,7 @@ export const testUtils = {
     ;(global.fetch as any).mockRejectedValueOnce(new Error(error))
   },
   clearMocks: () => {
-    vi.clearAllMocks()
+    jest.clearAllMocks()
     localStorageMock.getItem.mockClear()
     localStorageMock.setItem.mockClear()
     localStorageMock.removeItem.mockClear()

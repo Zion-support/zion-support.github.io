@@ -19,7 +19,11 @@ const LoadingSpinner = memo(function LoadingSpinner({
 
   return (
     <div className={`flex flex-col items-center justify-center min-h-[200px] ${className}`}>
-      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-cyan-400 border-t-transparent`}></div>
+      <div 
+        className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-cyan-400 border-t-transparent`}
+        role="status"
+        aria-label={text}
+      ></div>
       {text && (
         <p className="mt-2 text-sm text-gray-300 animate-pulse">{text}</p>
       )}
