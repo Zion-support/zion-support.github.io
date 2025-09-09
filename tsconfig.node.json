@@ -5,8 +5,7 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "noEmit": true
+    "strict": true
   },
   "exclude": ["./dist", "./node_modules", "./src"], // Explicitly exclude src
   "include": [
