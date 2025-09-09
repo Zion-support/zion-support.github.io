@@ -9,11 +9,6 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "axios": ["./src/lib/axios.ts"]
-    },
     "types": ["node", "react", "react-dom", "next", "next/types/global", "vitest/globals"],
 
     /* Bundler mode */
@@ -42,6 +37,11 @@
     "allowJs": true,
     "incremental": true,
     "noEmitOnError": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "axios": ["./src/lib/axios.ts"]
+    },
     "plugins": [
       {
         "name": "next"
