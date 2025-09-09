@@ -3,30 +3,15 @@ export interface ProductListing {
   title: string;
   description: string;
   price: number;
+  currency: string;
   category: string;
-  images: string[];
-  seller: {
-    id: string;
-    name: string;
-    rating: number;
-  };
   tags: string[];
-  availability: boolean;
-  createdAt: string;
-  updatedAt: string;
+  rating?: number;
+  reviewCount?: number;
+  featured?: boolean;
+  image?: string;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
-export interface ListingFilter {
-  category?: string;
-  minPrice?: number;
-  maxPrice?: number;
-  tags?: string[];
-  availability?: boolean;
-}
-
-export interface ListingSearchResult {
-  listings: ProductListing[];
-  total: number;
-  page: number;
-  limit: number;
-}
+export type ListingView = "grid" | "list";

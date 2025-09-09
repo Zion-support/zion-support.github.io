@@ -133,7 +133,7 @@ export function DynamicListingPage({
               id: listing.id,
               title: listing.title,
               category: listing.category,
-              image: listing.images?.[0]
+              image: listing.image?.[0]
             }
           }
         });
