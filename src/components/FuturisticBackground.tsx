@@ -1,166 +1,383 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 
-const FuturisticBackground: React.FC = () => {
+interface Particle {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  size: number;
+  opacity: number;
+  color: string;
+}
+
+export function FuturisticBackground() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const particlesRef = useRef<Particle[]>([]);
+  const animationRef = useRef<number>();
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Initialize particles
+    const initParticles = () => {
+      particlesRef.current = [];
+      const particleCount = Math.min(100, Math.floor((canvas.width * canvas.height) / 10000));
+
+      for (let i = 0; i < particleCount; i++) {
+        particlesRef.current.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5,
+          size: Math.random() * 2 + 1,
+          opacity: Math.random() * 0.5 + 0.1,
+          color: ['#22ddd2', '#1e3a8a', '#8c15e9', '#3b82f6'][Math.floor(Math.random() * 4)]
+        });
+      }
+    };
+
+    initParticles();
+
+    // Animation loop
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Update and draw particles
+      particlesRef.current.forEach((particle, index) => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+
+        // Draw particle
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = particle.color;
+        ctx.globalAlpha = particle.opacity;
+        ctx.fill();
+
+        // Draw connections
+        particlesRef.current.forEach((otherParticle, otherIndex) => {
+          if (index !== otherIndex) {
+            const distance = Math.sqrt(
+              Math.pow(particle.x - otherParticle.x, 2) + 
+              Math.pow(particle.y - otherParticle.y, 2)
+            );
+            
+            if (distance < 150) {
+              ctx.beginPath();
+              ctx.moveTo(particle.x, particle.y);
+              ctx.lineTo(otherParticle.x, otherParticle.y);
+              ctx.strokeStyle = particle.color;
+              ctx.globalAlpha = (150 - distance) / 150 * 0.1;
+              ctx.lineWidth = 1;
+              ctx.stroke();
+            }
+          }
+        });
+      });
+
+      // Draw grid lines
+      ctx.strokeStyle = '#22ddd2';
+      ctx.globalAlpha = 0.05;
+      ctx.lineWidth = 1;
+
+      const gridSize = 100;
+      for (let x = 0; x < canvas.width; x += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();
+      }
+      for (let y = 0; y < canvas.height; y += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();
+      }
+
+      // Draw scanning line effect
+      const scanY = (Date.now() * 0.05) % canvas.height;
+      ctx.strokeStyle = '#22ddd2';
+      ctx.globalAlpha = 0.3;
+      ctx.lineWidth = 2;
+      ctx.setLineDash([10, 10]);
+      ctx.beginPath();
+      ctx.moveTo(0, scanY);
+      ctx.lineTo(canvas.width, scanY);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
-      {/* Animated Grid Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,229,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,229,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+    <div className="fixed inset-0 pointer-events-none overflow-hidden">
+      <canvas
+        ref={canvasRef}
+        className="w-full h-full"
+        style={{ background: 'transparent' }}
+      />
+      
+      {/* Animated geometric shapes */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div
+          className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.2, 0.5, 0.2],
+            rotate: [0, 180, 360]
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        <motion.div
+          className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full"
+          animate={{
+            scale: [1.2, 1, 1.2],
+            opacity: [0.5, 0.2, 0.5],
+            rotate: [360, 180, 0]
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        <motion.div
+          className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-blue/20 rounded-full"
+          animate={{
+            scale: [1, 1.5, 1],
+            opacity: [0.3, 0.6, 0.3],
+            rotate: [0, 90, 180, 270, 360]
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
       </div>
 
-      {/* Floating Particles */}
+      {/* Floating neon elements */}
       <div className="absolute inset-0">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 3}s`
-            }}
-          />
-        ))}
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-2 h-2 bg-zion-cyan rounded-full shadow-lg shadow-zion-cyan/50"
+          animate={{
+            y: [-10, 10, -10],
+            opacity: [0.5, 1, 0.5]
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        <motion.div
+          className="absolute top-3/4 right-1/4 w-1.5 h-1.5 bg-zion-purple rounded-full shadow-lg shadow-zion-purple/50"
+          animate={{
+            y: [10, -10, 10],
+            opacity: [0.5, 1, 0.5]
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        <motion.div
+          className="absolute top-1/2 right-1/3 w-1 h-1 bg-zion-blue rounded-full shadow-lg shadow-zion-blue/50"
+          animate={{
+            y: [-5, 5, -5],
+            opacity: [0.3, 0.8, 0.3]
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
       </div>
 
-      {/* Matrix Rain Effect */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
-        {[...Array(50)].map((_, i) => (
-          <div
+      {/* Matrix rain effect */}
+      <div className="absolute inset-0 overflow-hidden">
+        {Array.from({ length: 20 }).map((_, i) => (
+          <motion.div
             key={i}
-            className="absolute text-cyan-400 text-xs font-mono animate-matrix-rain"
+            className="absolute top-0 text-zion-cyan/30 text-xs font-mono"
             style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 10}s`,
-              animationDuration: `${15 + Math.random() * 10}s`
-            }}
-          >
-            {String.fromCharCode(0x30A0 + Math.random() * 96)}
-          </div>
-        ))}
-      </div>
-
-      {/* Glowing Orbs */}
-      <div className="absolute inset-0">
-        {[...Array(8)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-32 h-32 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-full blur-3xl animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 4}s`,
-              animationDuration: `${6 + Math.random() * 4}s`
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Quantum Mesh Pattern */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,229,255,0.1)_0%,transparent_50%)] animate-pulse"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(168,85,247,0.1)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_75%,rgba(0,255,65,0.1)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '2s' }}></div>
-      </div>
-
-      {/* Holographic Lines */}
-      <div className="absolute inset-0">
-        {[...Array(5)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse"
-            style={{
-              top: `${20 + i * 15}%`,
-              left: '0',
-              right: '0',
+              left: `${(i * 5) % 100}%`,
               animationDelay: `${i * 0.5}s`
             }}
-          />
-        ))}
-        {[...Array(5)].map((_, i) => (
-          <div
-            key={i + 5}
-            className="absolute w-px bg-gradient-to-b from-transparent via-purple-400 to-transparent animate-pulse"
-            style={{
-              left: `${20 + i * 15}%`,
-              top: '0',
-              bottom: '0',
-              animationDelay: `${i * 0.5}s`
+            animate={{
+              y: ['-100vh', '100vh']
             }}
-          />
-        ))}
-      </div>
-
-      {/* Energy Waves */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/5 to-transparent animate-pulse" style={{ animationDuration: '4s' }}></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-400/5 to-transparent animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }}></div>
-      </div>
-
-      {/* Floating Tech Icons */}
-      <div className="absolute inset-0">
-        {[...Array(12)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute text-cyan-400/30 text-2xl animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 4}s`,
-              animationDuration: `${8 + Math.random() * 4}s`
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "linear",
+              delay: i * 0.5
             }}
           >
-            {['⚡', '🔮', '💎', '🌟', '🚀', '🎯', '🔬', '⚙️', '🎨', '🌐', '🔋', '📡'][i]}
-          </div>
+            {Array.from({ length: 20 }).map((_, j) => (
+              <div key={j} className="mb-1">
+                {String.fromCharCode(0x30A0 + Math.random() * 96)}
+              </div>
+            ))}
+          </motion.div>
         ))}
       </div>
 
-      {/* Quantum Entanglement Effect */}
+      {/* Holographic scan lines */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
-        <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-purple-400 rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
-        <div className="absolute bottom-1/4 left-1/4 w-2 h-2 bg-green-400 rounded-full animate-ping" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-pink-400 rounded-full animate-ping" style={{ animationDelay: '1.5s' }}></div>
+        {Array.from({ length: 10 }).map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan/20 to-transparent"
+            style={{
+              top: `${(i * 10) % 100}%`
+            }}
+            animate={{
+              opacity: [0, 1, 0]
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: i * 0.2
+            }}
+          />
+        ))}
       </div>
 
-      {/* Neural Network Connections */}
+      {/* Energy field effect */}
       <div className="absolute inset-0">
-        <svg className="w-full h-full opacity-20">
-          <defs>
-            <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#00e5ff" stopOpacity="0.5" />
-              <stop offset="100%" stopColor="#a855f7" stopOpacity="0.5" />
-            </linearGradient>
-          </defs>
-          {[...Array(8)].map((_, i) => (
-            <circle
-              key={i}
-              cx={`${20 + i * 10}%`}
-              cy={`${30 + Math.sin(i) * 20}%`}
-              r="2"
-              fill="url(#neuralGradient)"
-              className="animate-pulse"
-              style={{ animationDelay: `${i * 0.3}s` }}
-            />
-          ))}
-          {[...Array(6)].map((_, i) => (
-            <line
-              key={i}
-              x1={`${25 + i * 10}%`}
-              y1={`${25 + Math.sin(i) * 15}%`}
-              x2={`${35 + i * 10}%`}
-              y2={`${35 + Math.sin(i + 1) * 15}%`}
-              stroke="url(#neuralGradient)"
-              strokeWidth="1"
-              className="animate-pulse"
-              style={{ animationDelay: `${i * 0.2}s` }}
-            />
-          ))}
-        </svg>
+        <motion.div
+          className="absolute inset-0 border border-zion-cyan/10 rounded-full"
+          animate={{
+            scale: [1, 1.1, 1],
+            opacity: [0.1, 0.3, 0.1]
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        <motion.div
+          className="absolute inset-0 border border-zion-purple/10 rounded-full"
+          animate={{
+            scale: [1.1, 1, 1.1],
+            opacity: [0.3, 0.1, 0.3]
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
       </div>
     </div>
   );
-};
+}
 
-export default FuturisticBackground;
+export function FuturisticBackgroundOverlay() {
+  return (
+    <div className="fixed inset-0 pointer-events-none overflow-hidden">
+      {/* Gradient overlays */}
+      <div className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark/20 via-transparent to-zion-slate-light/20" />
+      <div className="absolute inset-0 bg-gradient-to-tl from-zion-cyan/5 via-transparent to-zion-purple/5" />
+      
+      {/* Animated light rays */}
+      <div className="absolute inset-0">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-zion-cyan/10 to-transparent"
+            style={{
+              left: `${(i * 12.5) + 6.25}%`,
+              transform: `rotate(${i * 45}deg)`
+            }}
+            animate={{
+              opacity: [0, 1, 0]
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: i * 0.4
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Floating orbs */}
+      <div className="absolute inset-0">
+        <motion.div
+          className="absolute top-1/4 left-1/3 w-4 h-4 bg-zion-cyan/30 rounded-full blur-sm"
+          animate={{
+            scale: [1, 1.5, 1],
+            opacity: [0.3, 0.6, 0.3],
+            x: [-20, 20, -20],
+            y: [-20, 20, -20]
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        <motion.div
+          className="absolute bottom-1/4 right-1/3 w-3 h-3 bg-zion-purple/30 rounded-full blur-sm"
+          animate={{
+            scale: [1.5, 1, 1.5],
+            opacity: [0.6, 0.3, 0.6],
+            x: [20, -20, 20],
+            y: [20, -20, 20]
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+      </div>
+    </div>
+  );
+}
