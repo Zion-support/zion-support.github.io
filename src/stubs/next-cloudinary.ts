@@ -23,14 +23,18 @@ export const CldUploadWidget = ({ children, ...props }: any) => {
 };
 
 export const CldUploadButton = ({ children, onUpload, uploadPreset, ...props }: any) => {
-  return React.createElement('button', {
-    onClick: () => {
-      // Mock upload functionality
-      console.log('Upload button clicked');
-      if (onUpload) {
-        onUpload({ info: { secure_url: 'https://via.placeholder.com/150' } });
+  const handleClick = () => {
+    // Mock upload functionality
+    const mockResult = {
+      info: {
+        secure_url: 'https://via.placeholder.com/150'
       }
-    },
+    };
+    onUpload?.(mockResult);
+  };
+
+  return React.createElement('button', {
+    onClick: handleClick,
     ...props,
   }, children);
 };

@@ -31,6 +31,7 @@ export default defineConfig(({ mode }) => ({
     optimizePreloads(),
     // Bundle analyzer would go here if needed
   ].filter(Boolean),
+  // Explicitly set the build target to prevent ES2024 issues
   build: {
     // Output directory for Netlify compatibility
     outDir: 'dist',
@@ -179,8 +180,13 @@ export default defineConfig(({ mode }) => ({
     // Strip debugging noise and mark common logging as pure
     drop: ['console', 'debugger'],
     pure: ['console.log', 'console.info', 'console.debug'],
-    // Ensure compatibility with older esbuild versions
+    // Explicitly set supported targets for esbuild
+    supported: {
+      'top-level-await': false
+    },
+    // Force esbuild to use the correct target and format
     format: 'esm',
+    // Additional safeguards to prevent ES2024 issues
     platform: 'browser',
   },
   resolve: {
@@ -208,6 +214,7 @@ export default defineConfig(({ mode }) => ({
   },
   define: {
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    'process.env.BUILD_TARGET': JSON.stringify('es2022'),
   },
   // Optimize dependencies
   optimizeDeps: {
