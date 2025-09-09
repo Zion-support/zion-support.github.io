@@ -1,6 +1,6 @@
 # Zion Tech Group - AI-Powered IT Solutions Platform
 
-A modern, full-stack web application built with React, TypeScript, and Vite, providing comprehensive IT solutions and AI-powered services.
+# Zion Tech Group - Modern Technology Solutions Platform
 
 ## 🚀 Features
 
@@ -15,13 +15,36 @@ A modern, full-stack web application built with React, TypeScript, and Vite, pro
 
 ## 🛠️ Tech Stack
 
-### Frontend
-- **React 18** with TypeScript
-- **Vite** for fast development and optimized builds
-- **Tailwind CSS** for styling
-- **Radix UI** for accessible components
-- **React Router** for navigation
-- **React Query** for data fetching and caching
+## ✨ Recent Improvements & Modernization
+
+### 🎯 What We've Accomplished
+
+1. **Complete Project Restructuring**
+   - Migrated from a complex, multi-framework setup to a clean, modern Vite + React architecture
+   - Eliminated dependency conflicts and outdated packages
+   - Streamlined build process for faster development and deployment
+
+2. **Modern Technology Stack**
+   - **Frontend**: React 18 with TypeScript
+   - **Build Tool**: Vite 5 for lightning-fast builds
+   - **Styling**: Tailwind CSS with custom animations and design system
+   - **Animations**: Framer Motion for smooth, professional animations
+   - **Icons**: Lucide React for consistent, scalable icons
+
+3. **Enhanced User Experience**
+   - Responsive, mobile-first design
+   - Smooth animations and transitions
+   - Modern, professional UI/UX
+   - Optimized performance with code splitting
+   - Accessibility improvements
+
+4. **Clean Architecture**
+   - Simplified component structure
+   - Removed unused dependencies
+   - Optimized bundle size
+   - Better code organization
+
+## 🌟 Our Service Portfolio
 
 ### Backend & Services
 - **Supabase** for authentication and database
@@ -49,217 +72,184 @@ A modern, full-stack web application built with React, TypeScript, and Vite, pro
    npm install
    ```
 
-3. **Set up environment variables**
-   ```bash
-   cp .env.example .env.local
-   ```
-   Fill in the required environment variables.
+## 🛠️ Technology Stack
 
-4. **Start development server**
-   ```bash
-   npm run dev
-   ```
+### Frontend
+- **React 18** - Modern React with hooks and concurrent features
+- **TypeScript** - Type-safe development
+- **Vite 5** - Lightning-fast build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Production-ready motion library
 
-### Build
+### Development Tools
+- **ESLint** - Code quality and consistency
+- **Prettier** - Code formatting
+- **Vitest** - Fast unit testing framework
 
+### Build & Deployment
+- **Vite** - Modern build tool with HMR
+- **Terser** - JavaScript minification
+- **PostCSS** - CSS processing
+- **Autoprefixer** - CSS vendor prefixing
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm 8+
+
+### Installation
 ```bash
+# Clone the repository
+git clone <repository-url>
+cd zion-tech-group
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
 npm run build
+
+# Preview production build
+npm run preview
 ```
 
-### Testing
-
+### Development Commands
 ```bash
-# Unit tests
-npm run test
-
-# E2E tests
-npm run test:e2e
-
-# Coverage
-npm run test:coverage
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run preview      # Preview production build
+npm run lint         # Run ESLint
+npm run test         # Run tests
 ```
 
 ## 📁 Project Structure
 
 ```
-src/
-├── components/          # Reusable UI components
-├── pages/              # Page components
-├── context/            # React context providers
-├── hooks/              # Custom React hooks
-├── utils/              # Utility functions
-├── types/              # TypeScript type definitions
-└── test-utils.tsx      # Testing utilities
+zion-tech-group/
+├── src/
+│   ├── App.tsx              # Main application component
+│   ├── main.tsx             # Application entry point
+│   ├── styles.css           # Global styles and Tailwind imports
+│   └── components/          # Reusable components
+├── public/                  # Static assets
+├── dist/                    # Production build output
+├── package.json             # Dependencies and scripts
+├── vite.config.ts           # Vite configuration
+├── tailwind.config.js       # Tailwind CSS configuration
+└── README.md               # This file
 ```
+
+## 🎨 Design System
+
+### Color Palette
+- **Primary**: Cyan (#22ddd2) - Technology and innovation
+- **Secondary**: Blue (#3b82f6) - Trust and reliability
+- **Accent**: Purple (#8b5cf6) - Creativity and excellence
+- **Neutral**: Slate grays for text and backgrounds
+
+### Typography
+- **Headings**: Bold, gradient text with modern fonts
+- **Body**: Clean, readable text optimized for screens
+- **Responsive**: Scales appropriately across all devices
+
+### Animations
+- **Entrance**: Smooth fade-in and slide-up animations
+- **Hover**: Interactive feedback with scale and color transitions
+- **Scroll**: Reveal animations triggered by viewport intersection
+
+## 📱 Responsive Design
+
+- **Mobile First**: Designed for mobile devices first
+- **Breakpoints**: Optimized for all screen sizes
+- **Touch Friendly**: Optimized for touch interactions
+- **Performance**: Fast loading on all devices
+
+## 🚀 Performance Features
+
+- **Code Splitting**: Automatic chunk splitting for optimal loading
+- **Lazy Loading**: Components load only when needed
+- **Optimized Images**: WebP support and responsive images
+- **Minification**: CSS and JavaScript minification for production
+- **Tree Shaking**: Unused code elimination
 
 ## 🔧 Configuration
 
-- **Vite**: Build tool and dev server configuration
-- **ESLint**: Code linting rules
-- **TypeScript**: Type checking configuration
-- **Tailwind**: CSS framework configuration
+### Environment Variables
+```bash
+# Development
+NODE_ENV=development
 
-## 🚀 Deployment
-
-The application is configured for deployment on Netlify with:
-
-- Automatic builds on push to main
-- Environment variable management
-- Redirect rules for SPA routing
-- Performance optimizations
-
-## 📊 Performance
-
-- Bundle size optimization
-- Code splitting
-- Lazy loading
-- Image optimization
-- Caching strategies
-
-## 🔒 Security
-
-- Input sanitization
-- XSS protection
-- CSRF tokens
-- Content Security Policy
-- Secure headers
-
-## 🚀 Available Scripts
-
-### Development
-- `npm run dev` - Start development server
-- `npm run dev:check` - Start dev server with type checking
-- `npm run build` - Build for production
-- `npm run build:check` - Build with type checking
-- `npm run build:clean` - Clean build (removes dist and rebuilds)
-- `npm run build:analyze` - Build with bundle analysis
-- `npm run preview` - Preview production build
-
-### Code Quality
-- `npm run lint` - Run ESLint
-- `npm run lint:fix` - Fix ESLint issues
-- `npm run type-check` - Run TypeScript type checking
-- `npm run format` - Format code with Prettier
-- `npm run format:check` - Check code formatting
-
-### Testing
-- `npm run test` - Run unit tests
-- `npm run test:watch` - Run tests in watch mode
-- `npm run test:coverage` - Run tests with coverage
-- `npm run test:ui` - Run tests with UI
-- `npm run test:e2e` - Run E2E tests
-- `npm run cypress:open` - Open Cypress test runner
-- `npm run cypress:run` - Run Cypress tests
-
-### Utilities
-- `npm run clean` - Clean build artifacts
-- `npm run analyze` - Analyze bundle size
-
-## 🏗️ Project Structure
-
-```
-src/
-├── components/          # Reusable UI components
-│   ├── ui/             # Base UI components
-│   ├── auth/           # Authentication components
-│   ├── forms/          # Form components
-│   └── layout/         # Layout components
-├── pages/              # Page components
-├── hooks/              # Custom React hooks
-├── context/            # React Context providers
-├── services/           # API services
-├── utils/              # Utility functions
-├── types/              # TypeScript type definitions
-└── assets/             # Static assets
+# Production
+NODE_ENV=production
 ```
 
-## 🔧 Configuration
-
-### TypeScript
-The project uses strict TypeScript configuration for better type safety:
-- Strict mode enabled
-- Unused variables/parameters detection
-- Strict null checks
-- No implicit any
-
-### Vite
-Optimized Vite configuration with:
-- ESBuild for fast minification
-- Manual chunk splitting for better caching
-- CSS code splitting
-- Bundle analysis support
-
-### Netlify
-Configured for seamless deployment:
-- Build command: `npm run build`
-- Publish directory: `dist`
-- Node.js 20
-- Serverless functions support
-
-## 🚀 Deployment
-
-### Netlify (Recommended)
-1. Connect your GitHub repository to Netlify
-2. Set build command: `npm run build`
-3. Set publish directory: `dist`
-4. Configure environment variables
-5. Deploy!
-
-### Manual Deployment
-1. Build the project: `npm run build`
-2. Upload the `dist` folder to your hosting provider
-3. Configure your server to serve the SPA
+### Build Optimization
+- **Bundle Analysis**: Built-in bundle analyzer
+- **Tree Shaking**: Automatic dead code elimination
+- **Minification**: Production-ready minified output
+- **Source Maps**: Optional source maps for debugging
 
 ## 🧪 Testing
 
-The project includes comprehensive testing setup:
+```bash
+# Run all tests
+npm run test
 
-- **Unit Tests**: Vitest for component and utility testing
-- **E2E Tests**: Playwright for end-to-end testing
-- **Component Tests**: Cypress for component testing
-- **Accessibility Tests**: Automated a11y testing
+# Run tests in watch mode
+npm run test:watch
 
-## 📈 Performance
+# Run tests with coverage
+npm run test:coverage
+```
 
-- **Code Splitting**: Automatic and manual chunk splitting
-- **Lazy Loading**: Components and routes loaded on demand
-- **Bundle Optimization**: Tree shaking and dead code elimination
-- **Caching**: Optimized caching strategies for assets and API calls
+## 📦 Deployment
 
-## ♿ Accessibility
+### Build for Production
+```bash
+npm run build
+```
 
-- WCAG 2.1 compliance
-- Screen reader support
-- Keyboard navigation
-- Focus management
-- ARIA attributes
+The build output will be in the `dist/` directory, ready for deployment to any static hosting service.
 
-## 📈 Analytics
-
-- Google Analytics integration
-- Performance monitoring
-- Error tracking
-- User behavior analytics
+### Deployment Options
+- **Netlify**: Drag and drop the `dist/` folder
+- **Vercel**: Connect your repository for automatic deployments
+- **AWS S3**: Upload to S3 bucket for static hosting
+- **GitHub Pages**: Deploy directly from GitHub
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is proprietary software owned by Zion Tech Group.
 
-## 🆘 Support
+## 📞 Contact & Support
 
-For support, email support@ziontechgroup.com or join our Discord community.
+- **Phone**: +1 302 464 0950
+- **Email**: kleber@ziontechgroup.com
+- **Address**: 364 E Main St STE 1008, Middletown DE 19709
+- **Website**: https://ziontechgroup.com
 
-## 🔗 Links
+## 🔄 Changelog
 
-- [Live Demo](https://zion.app)
-- [Documentation](https://docs.zion.app)
-- [API Reference](https://api.zion.app/docs)
-- [Community](https://discord.gg/zion)
+### Version 0.1.0 (Current)
+- ✅ Complete project modernization
+- ✅ Migration to Vite + React architecture
+- ✅ Modern UI/UX design implementation
+- ✅ Performance optimizations
+- ✅ Responsive design implementation
+- ✅ Clean, maintainable codebase
+
+---
+
+**Built with ❤️ by Zion Tech Group**
