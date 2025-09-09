@@ -61,7 +61,8 @@
 [context.branch-deploy]
   command = "npm ci --no-audit --no-fund && npm run build"
 
-# Vite/React SPA configuration is handled above
+# Vite/React SPA configuration - SPA fallback for all routes
+# Note: SPA fallback is handled in _redirects file to avoid conflicts
 
 # Set basic cache headers for static assets for better performance
 [[headers]]
