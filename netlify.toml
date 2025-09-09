@@ -13,7 +13,7 @@
     # Ensure devDependencies (e.g., Vite) are installed during CI
     NPM_CONFIG_PRODUCTION = "false"
     NPM_FLAGS = "--include=dev"
-    # Ensure optional deps (like rollup native) are installed
+    # Ensure optional native Rollup binaries are installed
     NPM_CONFIG_OPTIONAL = "true"
 
 # Headers
