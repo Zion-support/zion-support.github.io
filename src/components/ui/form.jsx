@@ -1,42 +1,41 @@
 import React from 'react';
 
-export const Form = ({ children, ...props }) => (
+export const Form = ({ children, ...props }) => {
+  return (
     <form {...props}>
-        {children}
+      {children}
     </form>
-);
-
-export const FormControl = ({ children }) => (
-    <div>
-        {children}
-    </div>
-);
-
-export const FormField = ({ control, name, render }) => {
-    return render({
-        field: {
-            name,
-            onChange: () => {},
-            onBlur: () => {},
-            value: '',
-        },
-    });
+  );
 };
 
-export const FormItem = ({ children }) => (
-    <div className="space-y-2">
-        {children}
+export const FormControl = ({ children }) => {
+  return <div className="form-control">{children}</div>;
+};
+
+export const FormField = ({ control, name, render }) => {
+  return render({ field: { name } });
+};
+
+export const FormItem = ({ children, className = '' }) => {
+  return (
+    <div className={`form-item ${className}`}>
+      {children}
     </div>
-);
+  );
+};
 
-export const FormLabel = ({ children, className = '' }) => (
-    <label className={`block text-sm font-medium ${className}`}>
-        {children}
+export const FormLabel = ({ children, className = '' }) => {
+  return (
+    <label className={`form-label ${className}`}>
+      {children}
     </label>
-);
+  );
+};
 
-export const FormMessage = ({ children, className = '' }) => (
-    <p className={`text-sm ${className}`}>
-        {children}
-    </p>
-);
+export const FormMessage = ({ children, className = '' }) => {
+  return (
+    <div className={`form-message ${className}`}>
+      {children}
+    </div>
+  );
+};
