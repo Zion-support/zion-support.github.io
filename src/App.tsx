@@ -21,8 +21,28 @@ import OptimizedSuspense from './components/OptimizedSuspense';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import EnhancedNavigation from './components/EnhancedNavigation';
 import { bundleOptimizer } from './utils/bundleOptimizer';
-import { register as registerServiceWorker } from './serviceWorkerRegistration';
+import { PrivateRoute } from './components/PrivateRoute';
 import './App.css';
+
+// Service worker registration
+const registerServiceWorker = () => {
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    });
+  }
+};
+
+// Type definitions
+interface FallbackProps {
+  resetErrorBoundary: () => void;
+}
 
 function RootErrorFallback({ resetErrorBoundary }: FallbackProps) {
   return (
@@ -102,6 +122,31 @@ const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const Support = lazy(() => import('./pages/Support'));
 
+// Additional missing components
+const AllCategoriesPage = lazy(() => import('./pages/AllCategoriesPage'));
+const SimpleSignup = lazy(() => import('./pages/SimpleSignup'));
+const OAuthCallback = lazy(() => import('./pages/OAuthCallback'));
+const MoreTalentsPage = lazy(() => import('./pages/MoreTalentsPage'));
+const AdditionalTalentsPage = lazy(() => import('./pages/AdditionalTalentsPage'));
+const NewProductsPage = lazy(() => import('./pages/NewProductsPage'));
+const OpenAppRedirect = lazy(() => import('./pages/OpenAppRedirect'));
+const CommunityPage = lazy(() => import('./pages/CommunityPage'));
+const Sitemap = lazy(() => import('./pages/Sitemap'));
+const Help = lazy(() => import('./pages/Help'));
+const FavoritesPage = lazy(() => import('./pages/Favorites'));
+const WishlistPage = lazy(() => import('./pages/Wishlist'));
+const CartPage = lazy(() => import('./pages/Cart'));
+const Wallet = lazy(() => import('./pages/Wallet'));
+const Profile = lazy(() => import('./pages/Profile'));
+const RecommendationsPage = lazy(() => import('./pages/SavedTalentsPage'));
+const Checkout = lazy(() => import('./pages/Checkout'));
+const ForgotPassword = lazy(() => import('./pages/ForgotPassword'));
+const ResetPassword = lazy(() => import('./pages/ResetPassword'));
+const BlogPost = lazy(() => import('./pages/BlogPost'));
+
+// Community Provider
+const CommunityProvider = lazy(() => import('./context/CommunityContext').then(module => ({ default: module.CommunityProvider })));
+
 const App = memo(() => {
   // Setup global error handling
   useEffect(() => {
@@ -160,14 +205,37 @@ const App = memo(() => {
                             <Route path="/equipment/:id" element={<EquipmentDetail />} />
                             <Route path="/analytics" element={<Analytics />} />
                             <Route path="/mobile-launch" element={<MobileLaunchPage />} />
-                            {/* <Route path="/open-app" element={<OpenAppRedirect />} /> */}
-                            {/* <Route path="/community" element={<CommunityPage />} /> */}
+                            <Route path="/open-app" element={<OpenAppRedirect />} />
+                            <Route path="/community" element={
+                              <CommunityProvider>
+                                <CommunityPage />
+                              </CommunityProvider>
+                            } />
                             <Route path="/partners" element={<PartnersPage />} />
                             <Route path="/zion-hire-ai" element={<ZionHireAI />} />
                             <Route path="/hire-ai" element={<ZionHireAI />} />
                             <Route path="/request-quote" element={<RequestQuotePage />} />
                             <Route path="/blog" element={<Blog />} />
-                            {/* <Route path="/blog/:slug" element={<BlogPost />} /> */}
+                            <Route path="/blog/:slug" element={<BlogPost />} />
+                            
+                            {/* Additional routes */}
+                            <Route path="/categories/all" element={<AllCategoriesPage />} />
+                            <Route path="/signup" element={<SimpleSignup />} />
+                            <Route path="/oauth" element={<OAuthCallback />} />
+                            <Route path="/more-talents" element={<MoreTalentsPage />} />
+                            <Route path="/additional-talents" element={<AdditionalTalentsPage />} />
+                            <Route path="/new-products" element={<NewProductsPage />} />
+                            <Route path="/sitemap" element={<Sitemap />} />
+                            <Route path="/help" element={<Help />} />
+                            <Route path="/favorites" element={<FavoritesPage />} />
+                            <Route path="/wishlist" element={<WishlistPage />} />
+                            <Route path="/cart" element={<PrivateRoute><CartPage /></PrivateRoute>} />
+                            <Route path="/wallet" element={<PrivateRoute><Wallet /></PrivateRoute>} />
+                            <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
+                            <Route path="/recommendations" element={<PrivateRoute><RecommendationsPage /></PrivateRoute>} />
+                            <Route path="/checkout" element={<PrivateRoute><Checkout /></PrivateRoute>} />
+                            <Route path="/forgot-password" element={<ForgotPassword />} />
+                            <Route path="/reset-password/:token" element={<ResetPassword />} />
                             
                             {/* Service Routes */}
                             <Route path="/services/ai-services" element={<AIServices />} />
