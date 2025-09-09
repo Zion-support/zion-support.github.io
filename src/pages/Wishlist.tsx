@@ -36,9 +36,9 @@ export default function WishlistPage() {
       type: 'ADD_ITEM',
       payload: {
         id: item.id,
-        name: item.title || 'Item',
-        price: item.price || 0,
-        quantity: 1
+        title: item.title || 'Item', // Changed name to title
+        price: item.price || 0
+        // quantity: 1 // Removed quantity
       }
     });
     toast.success(`1× ${item.title || 'Item'} added`);

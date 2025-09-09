@@ -20,23 +20,18 @@ export const AvatarMenu: React.FC = () => {
 
   if (!user) return null;
 
-  const initials = (user.displayName || user.name || 'U').charAt(0).toUpperCase();
+  const initials = (user.displayName || 'U').charAt(0);
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild data-testid="avatar-menu-trigger">
-        <button
-          className="flex items-center gap-2 rounded-full focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-          aria-label="Open user menu"
-        >
-          <Avatar className="h-8 w-8">
-            {avatarUrl ? (
-              <AvatarImage src={avatarUrl} alt={user.displayName || user.name || 'User avatar'} />
-            ) : (
-              <AvatarFallback>{initials}</AvatarFallback>
-            )}
-          </Avatar>
-        </button>
+      <DropdownMenuTrigger asChild>
+        <Avatar className="h-8 w-8 cursor-pointer">
+          {avatarUrl ? (
+            <AvatarImage src={avatarUrl} alt={user.displayName || 'User'} />
+          ) : (
+            <AvatarFallback>{initials}</AvatarFallback>
+          )}
+        </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56" align="end" data-testid="avatar-menu-content">
         <DropdownMenuLabel className="font-normal">

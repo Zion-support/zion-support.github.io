@@ -45,8 +45,8 @@ export function MilestoneManager({
       enqueueSnackbar("Milestone approved", { variant: 'success' });
       await refetch();
     } catch (error: any) {
-      logErrorToProduction('Error approving milestone:', { data: error });
-      enqueueSnackbar(error.message, { variant: 'error' });
+      console.error("Error approving milestone:", error);
+      enqueueSnackbar(error?.response?.data?.message || error.message, { variant: 'error' });
     }
   };
 
@@ -56,8 +56,8 @@ export function MilestoneManager({
       enqueueSnackbar("Milestone rejected", { variant: 'success' });
       await refetch();
     } catch (error: any) {
-      logErrorToProduction('Error rejecting milestone:', { data: error });
-      enqueueSnackbar(error.message, { variant: 'error' });
+      console.error("Error rejecting milestone:", error);
+      enqueueSnackbar(error?.response?.data?.message || error.message, { variant: 'error' });
     }
   };
 

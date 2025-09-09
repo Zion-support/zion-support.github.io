@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, ControllerRenderProps, FieldValues } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { CalendarIcon, Loader2 } from 'lucide-react';
@@ -124,7 +124,7 @@ export function AddMilestoneForm({
           <FormField
             control={form.control}
             name="title"
-            render={({ field }: { field: any }) => (
+            render={({ field }: { field: ControllerRenderProps<MilestoneFormValues, "title"> }) => (
               <FormItem>
                 <FormLabel>Title</FormLabel>
                 <FormControl>
@@ -138,7 +138,7 @@ export function AddMilestoneForm({
           <FormField
             control={form.control}
             name="description"
-            render={({ field }: { field: any }) => (
+            render={({ field }: { field: ControllerRenderProps<MilestoneFormValues, "description"> }) => (
               <FormItem>
                 <FormLabel>Description (optional)</FormLabel>
                 <FormControl>
@@ -157,7 +157,7 @@ export function AddMilestoneForm({
             <FormField
               control={form.control}
               name="due_date"
-              render={({ field }: { field: any }) => (
+            render={({ field }: { field: ControllerRenderProps<MilestoneFormValues, "due_date"> }) => (
                 <FormItem className="flex flex-col">
                   <FormLabel>Due Date (optional)</FormLabel>
                   <Popover>
@@ -196,7 +196,7 @@ export function AddMilestoneForm({
             <FormField
               control={form.control}
               name="amount"
-              render={({ field }: { field: any }) => (
+            render={({ field }: { field: ControllerRenderProps<MilestoneFormValues, "amount"> }) => (
                 <FormItem>
                   <FormLabel>Amount ($)</FormLabel>
                   <FormControl>

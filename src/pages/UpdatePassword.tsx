@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm, ControllerRenderProps } from "react-hook-form";
+import { useForm, ControllerRenderProps } from "react-hook-form"; // Added ControllerRenderProps
 import { z } from "zod";
 import { LockKeyhole } from 'lucide-react';
 
@@ -201,7 +201,7 @@ export default function UpdatePassword() {
                     <FormField
                       control={form.control}
                       name="confirmPassword"
-                      render={({ field }: { field: ControllerRenderProps<UpdatePasswordFormValues, "password"> }) => (
+                      render={({ field }: { field: ControllerRenderProps<UpdatePasswordFormValues, "confirmPassword"> }) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>
                           <FormControl>
