@@ -1,6 +1,6 @@
 
-import React, { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import React from 'react';
+import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant';
 import { useWhitelabel } from '@/context/WhitelabelContext';

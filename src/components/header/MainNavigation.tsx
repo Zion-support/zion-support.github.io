@@ -1,42 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+
+import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { cn } from "@/lib/utils";
-import { NavLink } from "react-router-dom";
-import { 
-  ChevronDown, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Users, 
-  HardDrive, 
-  TrendingUp, 
-  Building2, 
-  FileText, 
-  HelpCircle, 
-  BarChart3,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  Lock,
-  BarChart,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  Workflow,
-  Eye,
-  Sparkles,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity
-} from 'lucide-react';
 
 export function MainNavigation({ className }: { className?: string }) {
   const [isServicesOpen, setIsServicesOpen] = useState(false);

@@ -3,16 +3,17 @@ import { Routes, Route } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-// Route-based code splitting: lazily load page components
-const Home = React.lazy(() => import('../pages/Home'));
-const About = React.lazy(() => import('../pages/About'));
-const Services = React.lazy(() => import('../pages/Services'));
-const Products = React.lazy(() => import('../pages/Products'));
-const Blog = React.lazy(() => import('../pages/Blog'));
-const Contact = React.lazy(() => import('../pages/Contact'));
-const Talent = React.lazy(() => import('../pages/Talent'));
-const Autonomy = React.lazy(() => import('../pages/Autonomy'));
-import { AppConfig } from '../types/app';
+import React, { ReactNode, useState } from "react"; // Added useState
+import { Outlet } from "react-router-dom";
+// Assume useAuth hook exists and provides user object with emailVerified status and email
+import { useAuth } from '@/hooks/useAuth';
+import EmailVerificationBanner from '@/components/EmailVerificationBanner'; // Assuming path
+import { AppHeader } from "./AppHeader";
+import { Footer } from "@/components/Footer";
+import { SkipLink } from "@/components/SkipLink";
+import { useGlobalLoader } from '@/context/GlobalLoaderContext';
+import LoaderOverlay from '@/components/LoaderOverlay';
+import ErrorOverlay from '@/components/ErrorOverlay';
 
 interface AppLayoutProps {
   children?: React.ReactNode;
