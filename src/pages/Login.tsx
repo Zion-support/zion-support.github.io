@@ -1,57 +1,58 @@
-import React, { useEffect, ReactElement } from 'react'; // Added ReactElement
-import { useRouter } from 'next/router';
-import { useAuth } from '@/hooks/useAuth';
-import { safeStorage } from '@/utils/safeStorage';
-import { LoginContent } from '@/components/auth/login';
-import { AuthLayout } from '@/layout/AuthLayout'; // Keep AuthLayout import for getLayout
-import { ErrorBoundary } from 'react-error-boundary';
-import LoginErrorFallback from '@/components/auth/login/LoginErrorFallback';
-import { useCart } from '@/context/CartContext';
-// import { toast } from '@/hooks/use-toast'; // toast seems unused directly here after AuthProvider changes
+import React, { useState } from 'react';
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+export default function Login() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Handle login logic here
+        console.log('Login attempt:', { email, password });
+    };
+    return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <SEO title="Login" description="Access your Zion Tech Group account" keywords="login, sign in, account access, Zion Tech Group" canonical="https://ziontechgroup.com/login"/>
 
-// Define the main Login component
-const LoginPage = () => {
-  const { isAuthenticated, user, isLoading } = useAuth();
-  const router = useRouter();
-  const { dispatch } = useCart(); // dispatch seems unused, consider removing if not needed
+      <div className="container mx-auto px-4 py-12">
+        <div className="max-w-md mx-auto">
+          <div className="text-center mb-8">
+            <GradientHeading>Welcome Back</GradientHeading>
+            <p className="text-zion-slate-light mt-2">
+              Sign in to your account to continue
+            </p>
+          </div>
 
-  useEffect(() => {
-    const queryString = router.asPath.split('?')[1] || '';
-    const params = new URLSearchParams(queryString);
-    const token = params.get('token');
-    if (token) {
-      safeStorage.setItem('zion_token', token);
-      router.replace(router.pathname, undefined, { shallow: true });
-    }
-  }, [router]); // Simplified router dependency
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-2">
+                  Email Address
+                </label>
+                <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required className="w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan" placeholder="Enter your email"/>
+              </div>
 
-  useEffect(() => {
-    if (!isLoading && isAuthenticated) {
-      const redirectTo = router.query.redirectTo || '/dashboard';
-      router.replace(Array.isArray(redirectTo) ? redirectTo[0] : redirectTo);
-    }
-  }, [isAuthenticated, isLoading, router]);
+              <div>
+                <label htmlFor="password" className="block text-sm font-medium text-zion-slate-light mb-2">
+                  Password
+                </label>
+                <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required className="w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan" placeholder="Enter your password"/>
+              </div>
 
-  // Render LoginContent if not authenticated and auth is not loading
-  // AuthLayout will be applied by getLayout
-  if (!isAuthenticated && !isLoading) {
-    return (
-      <ErrorBoundary FallbackComponent={LoginErrorFallback}>
-        <LoginContent />
-      </ErrorBoundary>
-    );
-  }
+              <Button type="submit" className="w-full">
+                Sign In
+              </Button>
+            </form>
 
-  if (isLoading) {
-    return <div className="p-4 text-center text-foreground">Loading...</div>;
-  }
-
-  return null; // Or some other placeholder if needed before redirect
-};
-
-// Assign getLayout to the LoginPage component
-LoginPage.getLayout = function getLayout(page: ReactElement) {
-  return <AuthLayout>{page}</AuthLayout>;
-};
-
-export default LoginPage;
+            <div className="mt-6 text-center">
+              <p className="text-zion-slate-light">
+                Don't have an account?{' '}
+                <a href="/signup" className="text-zion-cyan hover:underline">
+                  Sign up
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>);
+}

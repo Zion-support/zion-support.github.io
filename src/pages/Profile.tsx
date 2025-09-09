@@ -1,114 +1,70 @@
-import { useState } from 'react';
-import type { GetServerSideProps } from 'next';
-// Removed GetServerSidePropsContext, NextApiRequestCookies from 'next'
-// Removed ParsedUrlQuery from 'querystring' as it's not directly used if context is simplified
-import { ProfileForm, ProfileValues } from '@/components/profile/ProfileForm';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import type { Order } from '@/hooks/useOrders';
-import Link from 'next/link';
-import type { IncomingMessage, IncomingHttpHeaders } from 'http'; // For req type
-
-import React, { useEffect } from 'react';
+import React from 'react';
+import { useEffect } from 'react';
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
-
-interface ProfileProps {
-  user: User;
-  orders?: Order[];
-}
-
-// Define a minimal context type focusing on what's used
-interface MySimpleServerSidePropsContext {
-  req: { headers: IncomingHttpHeaders }; // req.headers.cookie is used
-  // Add other context properties if they were used by the function:
-  // res?: ServerResponse; // from 'http'
-  // query?: ParsedUrlQuery; // from 'querystring'
-  // params?: ParsedUrlQuery;
-  // resolvedUrl?: string;
-  // locale?: string;
-  // locales?: string[];
-  // defaultLocale?: string;
-}
-
-export default function Profile({ user: initialUser, orders }: ProfileProps) {
-  const [user, setUser] = useState(initialUser);
-
-  const handleSubmit = async (values: ProfileValues) => {
-    const res = await fetch(`/api/users/${user.id}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(values),
-    });
-    const data = await res.json();
-    setUser(data);
-  };
-
-  return (
-    <div className="container mx-auto p-4 space-y-6">
-      <h1 className="text-2xl font-bold">Account</h1>
-      <Tabs defaultValue="profile" className="space-y-4">
-        <TabsList>
-          <TabsTrigger value="profile">Profile</TabsTrigger>
-          <TabsTrigger value="orders">Orders</TabsTrigger>
-          <TabsTrigger value="settings">Settings</TabsTrigger>
-        </TabsList>
-        <TabsContent value="profile" className="space-y-6">
-          <div className="flex items-center justify-between">
-            <h2 className="text-xl font-semibold">Profile</h2>
-            <PointsBadge />
+export default function Profile() {
+    const { user, isLoading, logout } = useAuth();
+    const navigate = useNavigate();
+    useEffect(() => {
+        if (!isLoading && !user) {
+            toast.error("Please log in to view your profile");
+            navigate("/login?redirect=/profile");
+        }
+    }, [user, isLoading, navigate]);
+    if (isLoading) {
+        return (<>
+        
+        <div className="min-h-screen bg-zion-blue flex items-center justify-center">
+          <div className="animate-pulse text-white">Loading profile...</div>
+        </div>
+        
+      </>);
+    }
+    if (!user) {
+        return (<>
+        
+        <div className="min-h-screen bg-zion-blue flex items-center justify-center">
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">
+            <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>
+            <p className="text-zion-slate mb-4">You need to be logged in to view your profile.</p>
+            <Button onClick={() => navigate("/login?redirect=/profile")} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+              Go to Login
+            </Button>
+          </div>
+        </div>
+        
+      </>);
+    }
+    return (<>
+      
+      <div className="min-h-screen bg-zion-blue">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-2xl font-bold text-white mb-8">My Profile</h1>
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="md:w-1/3">
+                <div className="w-32 h-32 rounded-full bg-zion-purple flex items-center justify-center text-3xl font-bold text-white mb-4 mx-auto md:mx-0">
+                  {user.displayName ? user.displayName.split(' ').map(name => name[0]).join('') : user.email?.charAt(0)}
+                </div>
+              </div>
+              <div className="md:w-2/3">
+                <h2 className="text-xl font-bold text-white">{user.displayName || "User"}</h2>
+                <p className="text-zion-slate-light mb-4">{user.email}</p>
+                <Button onClick={() => {
+            logout();
+            navigate("/");
+        }} variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
+                  Logout
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       
-const Profile: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Profile - Zion Tech Group</title>
-        <meta name="description" content="Manage your Zion Tech Group profile. Update your information, preferences, and account settings." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Profile</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Manage your account information, preferences, and settings in one place.
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <p className="text-gray-600 text-center">
-              Profile management coming soon. We're building comprehensive profile features.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+    </>);
 }
-
-export const getServerSideProps: GetServerSideProps<ProfileProps> = async (context: MySimpleServerSidePropsContext) => {
-  const { req } = context;
-  const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  
-  const [userRes, ordersRes] = await Promise.all([
-    fetch(`${base}/api/users/me`, { headers: { cookie: req?.headers.cookie || '' } }),
-    fetch(`${base}/api/orders?user_id=me`, { headers: { cookie: req?.headers.cookie || '' } })
-  ]);
-
-  if (userRes.status === 401) {
-    return { redirect: { destination: '/login', permanent: false } };
-  }
-
-  const user = await userRes.json();
-  let orders: Order[] = [];
-  if (ordersRes.ok) {
-    orders = await ordersRes.json();
-    orders = orders.slice(0, 3);
-  }
-
-  return { props: { user, orders } };
-};
+;
+export default Profile;
