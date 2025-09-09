@@ -43,6 +43,8 @@ const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/Innovati
 const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027'));
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 const EnhancedInnovativeServicesShowcase2027 = React.lazy(() => import('./pages/EnhancedInnovativeServicesShowcase2027'));
+const ExpandedServicesShowcase2027 = React.lazy(() => import('./pages/ExpandedServicesShowcase2027'));
+const ExpandedPricingGuide2027 = React.lazy(() => import('./pages/ExpandedPricingGuide2027'));
 
 // Enhanced loading component with better UX
 const LoadingSpinner = () => (
@@ -106,64 +108,34 @@ function App() {
               <Route path="/enhanced-services" element={<EnhancedServicesPage />} />
               <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/partners" element={<PartnersPage />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/enhanced-services" element={<EnhancedServices />} />
-              <Route path="/help" element={<Help />} />
-              <Route path="/security" element={<Security />} />
-              <Route path="/cookies" element={<Cookies />} />
               
-              {/* Services */}
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/services/ai-analytics" element={<AIServicesPage />} />
-              <Route path="/services/cybersecurity" element={<CybersecurityServicesPage />} />
-              <Route path="/services/cloud-devops" element={<CloudDevOpsServicesPage />} />
-              <Route path="/services/iot-edge" element={<IoTServicesPage />} />
-              <Route path="/services/quantum-computing" element={<QuantumComputingServicesPage />} />
-              <Route path="/services/blockchain" element={<BlockchainServicesPage />} />
-              <Route path="/services/digital-twin" element={<DigitalTwinServicesPage />} />
-              <Route path="/services/sustainability" element={<SustainabilityServicesPage />} />
-              <Route path="/green-it" element={<GreenIT />} />
+              {/* AI Services Routes */}
+              <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/ai-services/:service" element={<AIServicesPage />} />
               
-              {/* Micro SAAS */}
-              <Route path="/micro-saas" element={<MicroSAAS />} />
-              <Route path="/micro-saas/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-              <Route path="/micro-saas/customer-experience" element={<CustomerExperience />} />
-              <Route path="/micro-saas/quantum-computing" element={<QuantumComputing />} />
-              <Route path="/micro-saas/supply-chain" element={<SupplyChain />} />
-              <Route path="/micro-saas/cybersecurity" element={<Cybersecurity />} />
-              <Route path="/micro-saas/iot-edge" element={<IoTServices />} />
-              <Route path="/micro-saas/content-creation" element={<ContentCreation />} />
-              <Route path="/micro-saas/hr-platform" element={<HRPlatform />} />
+              {/* Micro SAAS Routes */}
+              <Route path="/micro-saas" element={<MicroSAASServicesPage />} />
+              <Route path="/micro-saas/:service" element={<MicroSAASServicesPage />} />
               
-              {/* IT Services */}
-              <Route path="/it-services" element={<ITServices />} />
-              <Route path="/it-services/infrastructure" element={<Infrastructure />} />
-              <Route path="/it-services/digital-transformation" element={<DigitalTransformation />} />
-              <Route path="/it-services/consulting" element={<Consulting />} />
-              <Route path="/it-services/onsite-support" element={<OnsiteSupport />} />
-              <Route path="/it-services/green-it" element={<GreenITServices />} />
-              <Route path="/it-services/5g-solutions" element={<FiveGSolutions />} />
+              {/* IT Services Routes */}
+              <Route path="/it-services" element={<ITServicesPage />} />
+              <Route path="/it-services/:service" element={<ITServicesPage />} />
               
-              {/* Marketplace */}
-              <Route path="/marketplace" element={<Marketplace />} />
-              <Route path="/marketplace/products" element={<Products />} />
-              <Route path="/marketplace/talent" element={<Talent />} />
-              <Route path="/marketplace/equipment" element={<Equipment />} />
-              <Route path="/marketplace/services" element={<MarketplaceServices />} />
+              {/* Innovative Services 2027 Routes */}
+              <Route path="/innovative-services-2027" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview2027 />} />
+              <Route path="/comprehensive-pricing-guide" element={<ComprehensivePricingGuide2027 />} />
+              <Route path="/enhanced-innovative-services-2027" element={<EnhancedInnovativeServicesShowcase2027 />} />
+              <Route path="/expanded-services-showcase-2027" element={<ExpandedServicesShowcase2027 />} />
+              <Route path="/expanded-pricing-guide-2027" element={<ExpandedPricingGuide2027 />} />
               
-              {/* Support and legal */}
-              <Route path="/help" element={<Help />} />
-              <Route path="/security" element={<Security />} />
-              <Route path="/status" element={<Status />} />
-              <Route path="/cookies" element={<Cookies />} />
+              {/* Emerging Tech Routes */}
+              <Route path="/emerging-tech" element={<Home />} />
+              <Route path="/emerging-tech/:service" element={<Home />} />
+              
+              {/* Marketplace Routes */}
+              <Route path="/marketplace" element={<Home />} />
+              <Route path="/marketplace/:service" element={<Home />} />
             </Routes>
           </Suspense>
         </main>

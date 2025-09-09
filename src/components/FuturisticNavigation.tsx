@@ -98,6 +98,7 @@ import {
   MicOff,
   Volume2,
   VolumeX,
+  Building,
   Play,
   Pause,
   Stop,
@@ -299,17 +300,18 @@ export const FuturisticNavigation: React.FC = () => {
       ]
     },
     {
-      name: 'Support',
-      href: '/help',
-      icon: HelpCircle,
-      color: 'from-zion-green to-zion-cyan',
+      name: 'Services Portfolio',
+      href: '/expanded-services-showcase-2027',
+      icon: Award,
+      color: 'from-zion-cyan to-zion-blue',
       dropdown: [
-        { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Comprehensive help resources' },
-        { name: 'FAQ', href: '/faq', icon: FileText, description: 'Frequently asked questions' },
-        { name: 'Security', href: '/security', icon: Shield, description: 'Security measures and protocols' },
-        { name: 'System Status', href: '/status', icon: Activity, description: 'Real-time system status' },
-        { name: 'Contact Support', href: '/contact', icon: MessageCircle, description: '24/7 customer support' },
-        { name: 'Training Resources', href: '/help/training', icon: BookOpen, description: 'Learning and training materials' }
+        { name: 'Expanded Services 2027', href: '/expanded-services-showcase-2027', icon: Award, description: 'Complete portfolio of innovative services' },
+        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Advanced AI and machine learning solutions' },
+        { name: 'Micro SAAS', href: '/micro-saas', icon: Code, description: 'Specialized micro SAAS platforms' },
+        { name: 'IT Services', href: '/it-services', icon: Network, description: 'Comprehensive IT infrastructure solutions' },
+        { name: 'Emerging Tech', href: '/emerging-tech', icon: Rocket, description: 'Cutting-edge technology solutions' },
+        { name: 'Enterprise Solutions', href: '/enhanced-innovative-services-2027', icon: Building, description: 'Enterprise-grade innovative solutions' },
+        { name: 'Expanded Pricing Guide', href: '/expanded-pricing-guide-2027', icon: DollarSign, description: 'Complete pricing information for all services' }
       ]
     }
   ];
