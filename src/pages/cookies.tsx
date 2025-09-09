@@ -1,482 +1,585 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
   Cookie, 
   Shield, 
   Settings, 
   Eye, 
-  EyeOff,
-  CheckCircle,
+  EyeOff, 
+  CheckCircle, 
   XCircle,
   Info,
   AlertTriangle,
-  ArrowRight,
-  ExternalLink,
-  Database,
-  Globe,
-  Smartphone,
-  Monitor
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
-const CookiesPage = () => {
-  const [cookiePreferences, setCookiePreferences] = useState({
-    essential: true,
-    analytics: false,
-    marketing: false,
-    functional: false
-  });
+interface CookieCategory {
+  id: string;
+  name: string;
+  description: string;
+  necessary: boolean;
+  enabled: boolean;
+  cookies: string[];
+}
 
-  const cookieTypes = [
-    {
-      type: 'Essential Cookies',
-      description: 'These cookies are necessary for the website to function and cannot be switched off in our systems.',
-      examples: ['Authentication', 'Security', 'Session management'],
-      icon: Shield,
-      required: true
-    },
-    {
-      type: 'Analytics Cookies',
-      description: 'These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.',
-      examples: ['Page views', 'User behavior', 'Performance metrics'],
-      icon: Database,
-      required: false
-    },
-    {
-      type: 'Marketing Cookies',
-      description: 'These cookies are used to track visitors across websites to display relevant and engaging advertisements.',
-      examples: ['Ad targeting', 'Campaign tracking', 'Social media integration'],
-      icon: Globe,
-      required: false
-    },
-    {
-      type: 'Functional Cookies',
-      description: 'These cookies enable enhanced functionality and personalization, such as language preferences and form data.',
-      examples: ['Language settings', 'Form preferences', 'User customization'],
-      icon: Settings,
-      required: false
-    }
-  ];
+const cookieCategories: CookieCategory[] = [
+  {
+    id: 'necessary',
+    name: 'Necessary Cookies',
+    description: 'These cookies are essential for the website to function properly. They cannot be disabled.',
+    necessary: true,
+    enabled: true,
+    cookies: ['session_id', 'csrf_token', 'language_preference']
+  },
+  {
+    id: 'analytics',
+    name: 'Analytics Cookies',
+    description: 'These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.',
+    necessary: false,
+    enabled: false,
+    cookies: ['_ga', '_gid', '_gat', 'analytics_session']
+  },
+  {
+    id: 'functional',
+    name: 'Functional Cookies',
+    description: 'These cookies enable enhanced functionality and personalization, such as remembering your preferences and settings.',
+    necessary: false,
+    enabled: false,
+    cookies: ['user_preferences', 'theme_selection', 'language_choice']
+  },
+  {
+    id: 'marketing',
+    name: 'Marketing Cookies',
+    description: 'These cookies are used to track visitors across websites to display relevant and engaging advertisements.',
+    necessary: false,
+    enabled: false,
+    cookies: ['_fbp', 'ads_prefs', 'marketing_tracking']
+  }
+];
 
-  const cookieDetails = [
-    {
-      name: '_ga',
-      purpose: 'Google Analytics - Used to distinguish unique users',
-      duration: '2 years',
-      provider: 'Google'
-    },
-    {
-      name: '_gid',
-      purpose: 'Google Analytics - Used to distinguish users',
-      duration: '24 hours',
-      provider: 'Google'
-    },
-    {
-      name: 'session_id',
-      purpose: 'Maintains user session and authentication state',
-      duration: 'Session',
-      provider: 'Zion Tech Group'
-    },
-    {
-      name: 'preferences',
-      purpose: 'Stores user preferences and settings',
-      duration: '1 year',
-      provider: 'Zion Tech Group'
-    },
-    {
-      name: 'marketing_consent',
-      purpose: 'Tracks user consent for marketing communications',
-      duration: '2 years',
-      provider: 'Zion Tech Group'
-    }
-  ];
+export default function Cookies() {
+  const [cookieSettings, setCookieSettings] = useState(cookieCategories);
+  const [showSettings, setShowSettings] = useState(false);
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
 
-  const handleCookieToggle = (type: string) => {
-    if (type === 'essential') return; // Essential cookies cannot be disabled
-    
-    setCookiePreferences(prev => ({
-      ...prev,
-      [type]: !prev[type as keyof typeof prev]
-    }));
+  const toggleCategory = (categoryId: string) => {
+    setExpandedCategories(prev => 
+      prev.includes(categoryId) 
+        ? prev.filter(id => id !== categoryId)
+        : [...prev, categoryId]
+    );
   };
 
-  const savePreferences = () => {
-    // In a real application, this would save to localStorage or send to server
-    localStorage.setItem('cookiePreferences', JSON.stringify(cookiePreferences));
-    alert('Cookie preferences saved successfully!');
+  const toggleCookieCategory = (categoryId: string, enabled: boolean) => {
+    setCookieSettings(prev => 
+      prev.map(category => 
+        category.id === categoryId 
+          ? { ...category, enabled }
+          : category
+      )
+    );
   };
 
   const acceptAll = () => {
-    setCookiePreferences({
-      essential: true,
-      analytics: true,
-      marketing: true,
-      functional: true
-    });
+    setCookieSettings(prev => 
+      prev.map(category => ({ ...category, enabled: true }))
+    );
   };
 
   const rejectAll = () => {
-    setCookiePreferences({
-      essential: true,
-      analytics: false,
-      marketing: false,
-      functional: false
-    });
+    setCookieSettings(prev => 
+      prev.map(category => ({ 
+        ...category, 
+        enabled: category.necessary 
+      }))
+    );
+  };
+
+  const savePreferences = () => {
+    // Here you would typically save preferences to localStorage or send to backend
+    localStorage.setItem('cookie-preferences', JSON.stringify(cookieSettings));
+    setShowSettings(false);
+  };
+
+  const getEnabledCookiesCount = () => {
+    return cookieSettings.filter(category => category.enabled).length;
+  };
+
+  const getTotalCookiesCount = () => {
+    return cookieSettings.reduce((total, category) => total + category.cookies.length, 0);
   };
 
   return (
-    <div className="min-h-screen bg-futuristic">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
-        <div className="container-responsive relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <div className="flex items-center justify-center mb-6">
-              <Cookie className="w-16 h-16 text-zion-cyan mr-4" />
-              <h1 className="text-5xl md:text-6xl font-bold text-gradient">
-                Cookie Policy
+    <>
+      <SEO 
+        title="Cookie Policy | Zion Tech Group"
+        description="Learn about how Zion Tech Group uses cookies and tracking technologies to improve your experience on our website."
+        canonical="https://ziontechgroup.com/cookies"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="w-24 h-24 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Cookie className="w-12 h-12 text-white" />
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Cookie <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Policy</span>
               </h1>
-            </div>
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Learn about how we use cookies and similar technologies to enhance your browsing experience 
-              and understand how you can control them.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button
-                onClick={acceptAll}
-                className="btn-neon px-8 py-4 text-lg font-semibold"
-              >
-                Accept All Cookies
-              </button>
-              <button
-                onClick={rejectAll}
-                className="btn-futuristic px-8 py-4 text-lg font-semibold"
-              >
-                Reject Non-Essential
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+                We use cookies and similar technologies to enhance your browsing experience, 
+                analyze site traffic, and personalize content. Learn more about how we use cookies.
+              </p>
+              
+              <div className="flex flex-wrap justify-center gap-4">
+                <button
+                  onClick={() => setShowSettings(true)}
+                  className="btn-primary px-8 py-3 text-lg font-semibold"
+                >
+                  Manage Cookie Preferences
+                </button>
+                <a 
+                  href="/privacy" 
+                  className="btn-outline-white px-8 py-3 text-lg font-semibold"
+                >
+                  Privacy Policy
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
-      {/* Cookie Preferences Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Manage Cookie Preferences
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Control which types of cookies you allow on our website. Essential cookies are always enabled 
-              as they are necessary for basic functionality.
-            </p>
-          </motion.div>
+        {/* Cookie Overview Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                What Are Cookies?
+              </h2>
+              <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+                Cookies are small text files that are stored on your device when you visit our website. 
+                They help us provide you with a better experience and understand how you use our site.
+              </p>
+            </motion.div>
 
-          <div className="max-w-4xl mx-auto space-y-6">
-            {cookieTypes.map((cookie, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <motion.div
-                key={cookie.type}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-center p-6 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl"
               >
-                <div className="flex items-start justify-between">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center flex-shrink-0">
-                      <cookie.icon className="w-6 h-6 text-white" />
+                <Shield className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Security</h3>
+                <p className="text-zion-slate-light">
+                  Essential cookies help secure your session and protect against fraud.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center p-6 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl"
+              >
+                <Settings className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Functionality</h3>
+                <p className="text-zion-slate-light">
+                  Functional cookies remember your preferences and enhance site features.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="text-center p-6 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl"
+              >
+                <Eye className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Analytics</h3>
+                <p className="text-zion-slate-light">
+                  Analytics cookies help us improve our website and user experience.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Cookie Categories Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/30">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Types of Cookies We Use
+              </h2>
+              <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+                We categorize cookies based on their purpose and necessity for website functionality.
+              </p>
+            </motion.div>
+
+            <div className="space-y-6">
+              {cookieCategories.map((category, index) => (
+                <motion.div
+                  key={category.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-3">
+                      {category.necessary ? (
+                        <Shield className="w-6 h-6 text-zion-cyan" />
+                      ) : (
+                        <Settings className="w-6 h-6 text-zion-cyan" />
+                      )}
+                      <h3 className="text-xl font-semibold text-white">{category.name}</h3>
+                      {category.necessary && (
+                        <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
+                          Required
+                        </span>
+                      )}
                     </div>
-                    <div className="flex-1">
-                      <div className="flex items-center space-x-3 mb-2">
-                        <h3 className="text-2xl font-bold text-white">{cookie.type}</h3>
-                        {cookie.required && (
-                          <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs font-medium rounded-full">
-                            Required
-                          </span>
-                        )}
-                      </div>
-                      <p className="text-zion-slate-light mb-4 leading-relaxed">
-                        {cookie.description}
-                      </p>
+                    <button
+                      onClick={() => toggleCategory(category.id)}
+                      className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
+                    >
+                      {expandedCategories.includes(category.id) ? (
+                        <ChevronUp className="w-5 h-5" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5" />
+                      )}
+                    </button>
+                  </div>
+                  
+                  <p className="text-zion-slate-light mb-4">{category.description}</p>
+                  
+                  {expandedCategories.includes(category.id) && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="border-t border-zion-cyan/20 pt-4"
+                    >
+                      <h4 className="text-sm font-medium text-zion-slate-light mb-2">Cookies in this category:</h4>
                       <div className="flex flex-wrap gap-2">
-                        {cookie.examples.map((example) => (
-                          <span
-                            key={example}
-                            className="px-3 py-1 bg-zion-slate-dark/50 text-zion-slate-light text-sm rounded-full border border-zion-cyan/20"
+                        {category.cookies.map(cookie => (
+                          <span 
+                            key={cookie}
+                            className="px-3 py-1 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-sm text-zion-cyan"
                           >
-                            {example}
+                            {cookie}
                           </span>
                         ))}
                       </div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-4 ml-6">
-                    {cookie.required ? (
-                      <div className="flex items-center text-zion-cyan">
-                        <CheckCircle className="w-5 h-5 mr-2" />
-                        <span className="text-sm font-medium">Always Active</span>
-                      </div>
-                    ) : (
-                      <label className="relative inline-flex items-center cursor-pointer">
-                        <input
-                          type="checkbox"
-                          checked={cookiePreferences[cookie.type.toLowerCase().replace(' ', '') as keyof typeof cookiePreferences]}
-                          onChange={() => handleCookieToggle(cookie.type.toLowerCase().replace(' ', ''))}
-                          className="sr-only peer"
-                        />
-                        <div className="w-11 h-6 bg-zion-slate-dark peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-zion-cyan/30 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-zion-cyan"></div>
-                      </label>
-                    )}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-center mt-12"
-          >
-            <button
-              onClick={savePreferences}
-              className="btn-neon px-8 py-4 text-lg font-semibold"
-            >
-              Save Preferences
-            </button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Cookie Details Section */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Detailed Cookie Information
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Specific details about the cookies we use, their purpose, and how long they remain active.
-            </p>
-          </motion.div>
-
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden">
-              <div className="grid grid-cols-1 lg:grid-cols-4 bg-zion-cyan/10 border-b border-zion-cyan/20">
-                <div className="p-4 font-semibold text-white">Cookie Name</div>
-                <div className="p-4 font-semibold text-white">Purpose</div>
-                <div className="p-4 font-semibold text-white">Duration</div>
-                <div className="p-4 font-semibold text-white">Provider</div>
-              </div>
-              
-              {cookieDetails.map((cookie, index) => (
-                <motion.div
-                  key={cookie.name}
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="grid grid-cols-1 lg:grid-cols-4 border-b border-zion-cyan/10 last:border-b-0 hover:bg-zion-slate-dark/30 transition-colors duration-300"
-                >
-                  <div className="p-4 font-mono text-zion-cyan">{cookie.name}</div>
-                  <div className="p-4 text-zion-slate-light">{cookie.purpose}</div>
-                  <div className="p-4 text-zion-slate-light">{cookie.duration}</div>
-                  <div className="p-4 text-zion-slate-light">{cookie.provider}</div>
+                    </motion.div>
+                  )}
                 </motion.div>
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* How to Control Cookies Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              How to Control Cookies
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Learn about different ways to manage cookies across various browsers and devices.
-            </p>
-          </motion.div>
+        {/* Cookie Management Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Manage Your Cookie Preferences
+              </h2>
+              <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+                You have control over which cookies are stored on your device. 
+                You can change your preferences at any time.
+              </p>
+            </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Browser Settings',
-                description: 'Most browsers allow you to control cookies through their settings menu.',
-                icon: Monitor,
-                steps: ['Open browser settings', 'Find privacy section', 'Manage cookie preferences']
-              },
-              {
-                title: 'Mobile Devices',
-                description: 'Control cookies on mobile devices through app settings and browser preferences.',
-                icon: Smartphone,
-                steps: ['Open device settings', 'Find app permissions', 'Manage data usage']
-              },
-              {
-                title: 'Third-Party Tools',
-                description: 'Use browser extensions and tools to manage cookies more granularly.',
-                icon: Settings,
-                steps: ['Install privacy extension', 'Configure preferences', 'Monitor cookie activity']
-              }
-            ].map((method, index) => (
-              <motion.div
-                key={method.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <method.icon className="w-8 h-8 text-white" />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-2xl p-8"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-4">Current Settings</h3>
+                  <div className="space-y-3">
+                    {cookieSettings.map(category => (
+                      <div key={category.id} className="flex items-center justify-between">
+                        <span className="text-zion-slate-light">{category.name}</span>
+                        <div className="flex items-center space-x-2">
+                          {category.necessary ? (
+                            <span className="text-zion-cyan text-sm">Required</span>
+                          ) : (
+                            <>
+                              <button
+                                onClick={() => toggleCookieCategory(category.id, true)}
+                                className={`p-1 rounded ${category.enabled ? 'text-green-500' : 'text-zion-slate-light'}`}
+                              >
+                                <CheckCircle className="w-5 h-5" />
+                              </button>
+                              <button
+                                onClick={() => toggleCookieCategory(category.id, false)}
+                                className={`p-1 rounded ${!category.enabled ? 'text-red-500' : 'text-zion-slate-light'}`}
+                              >
+                                <XCircle className="w-5 h-5" />
+                              </button>
+                            </>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">
-                  {method.title}
-                </h3>
-                
-                <p className="text-zion-slate-light mb-6 text-center leading-relaxed">
-                  {method.description}
+
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-4">Quick Actions</h3>
+                  <div className="space-y-3">
+                    <button
+                      onClick={acceptAll}
+                      className="w-full px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                    >
+                      Accept All Cookies
+                    </button>
+                    <button
+                      onClick={rejectAll}
+                      className="w-full px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+                    >
+                      Reject Non-Essential
+                    </button>
+                    <button
+                      onClick={() => setShowSettings(true)}
+                      className="w-full px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-light transition-colors"
+                    >
+                      Customize Settings
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-t border-zion-cyan/20 pt-6">
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-zion-slate-light">
+                    Cookies enabled: {getEnabledCookiesCount()} of {getTotalCookiesCount()}
+                  </span>
+                  <button
+                    onClick={savePreferences}
+                    className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-light transition-colors"
+                  >
+                    Save Preferences
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Browser Settings Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/30">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Browser Cookie Settings
+              </h2>
+              <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+                You can also manage cookies through your web browser settings. 
+                The process varies depending on your browser.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6"
+              >
+                <h3 className="text-lg font-semibold text-white mb-3">Chrome</h3>
+                <p className="text-zion-slate-light text-sm mb-3">
+                  Settings → Privacy and security → Cookies and other site data
                 </p>
-                
-                <ol className="space-y-2">
-                  {method.steps.map((step, stepIndex) => (
-                    <li key={stepIndex} className="flex items-start text-zion-slate-light">
-                      <span className="w-6 h-6 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                        {stepIndex + 1}
-                      </span>
-                      {step}
-                    </li>
-                  ))}
-                </ol>
+                <a 
+                  href="https://support.google.com/chrome/answer/95647" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-zion-cyan hover:text-zion-cyan-light text-sm"
+                >
+                  Learn more →
+                </a>
               </motion.div>
-            ))}
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6"
+              >
+                <h3 className="text-lg font-semibold text-white mb-3">Firefox</h3>
+                <p className="text-zion-slate-light text-sm mb-3">
+                  Options → Privacy & Security → Cookies and Site Data
+                </p>
+                <a 
+                  href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-zion-cyan hover:text-zion-cyan-light text-sm"
+                >
+                  Learn more →
+                </a>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6"
+              >
+                <h3 className="text-lg font-semibold text-white mb-3">Safari</h3>
+                <p className="text-zion-slate-light text-sm mb-3">
+                  Preferences → Privacy → Manage Website Data
+                </p>
+                <a 
+                  href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-zion-cyan hover:text-zion-cyan-light text-sm"
+                >
+                  Learn more →
+                </a>
+              </motion.div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Additional Information Section */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Additional Information
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              More resources to help you understand our cookie policy and privacy practices.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8"
+              transition={{ duration: 0.8 }}
+              className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl p-8 md:p-12"
             >
-              <div className="flex items-center mb-4">
-                <Info className="w-6 h-6 text-zion-cyan mr-3" />
-                <h3 className="text-2xl font-bold text-white">Updates to Policy</h3>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Questions About Cookies?
+              </h2>
+              <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+                If you have any questions about our cookie policy or how we use cookies, 
+                our team is here to help.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <a 
+                  href="/contact" 
+                  className="btn-white px-8 py-3 text-lg font-semibold"
+                >
+                  Contact Us
+                </a>
+                <a 
+                  href="/help" 
+                  className="btn-outline-white px-8 py-3 text-lg font-semibold"
+                >
+                  Help Center
+                </a>
               </div>
-              <p className="text-zion-slate-light leading-relaxed mb-4">
-                We may update this cookie policy from time to time to reflect changes in our practices 
-                or for other operational, legal, or regulatory reasons.
-              </p>
-              <p className="text-zion-slate-light leading-relaxed">
-                We will notify you of any material changes by posting the new policy on this page 
-                and updating the "Last Updated" date.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8"
-            >
-              <div className="flex items-center mb-4">
-                <AlertTriangle className="w-6 h-6 text-zion-cyan mr-3" />
-                <h3 className="text-2xl font-bold text-white">Contact Us</h3>
-              </div>
-              <p className="text-zion-slate-light leading-relaxed mb-4">
-                If you have any questions about our use of cookies or this cookie policy, 
-                please contact our privacy team.
-              </p>
-              <Link
-                to="/contact"
-                className="btn-futuristic inline-flex items-center"
-              >
-                Contact Privacy Team
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
             </motion.div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container-responsive">
+      {/* Cookie Settings Modal */}
+      {showSettings && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50"
+          onClick={() => setShowSettings(false)}
+        >
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20 border border-zion-cyan/30 rounded-3xl p-12 text-center"
+            initial={{ scale: 0.95, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.95, opacity: 0 }}
+            className="bg-zion-slate-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Your Privacy Matters
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              We're committed to transparency and giving you control over your data. 
-              Review our privacy policy to learn more about how we protect your information.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/privacy"
-                className="btn-neon px-8 py-4 text-lg font-semibold"
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-bold text-white">Cookie Preferences</h3>
+              <button
+                onClick={() => setShowSettings(false)}
+                className="text-zion-slate-light hover:text-white transition-colors"
               >
-                Read Privacy Policy
-              </Link>
-              <Link
-                to="/help"
-                className="btn-futuristic px-8 py-4 text-lg font-semibold"
+                <XCircle className="w-6 h-6" />
+              </button>
+            </div>
+
+            <div className="space-y-4 mb-6">
+              {cookieSettings.map(category => (
+                <div key={category.id} className="border border-zion-cyan/20 rounded-lg p-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <h4 className="text-lg font-semibold text-white">{category.name}</h4>
+                    {category.necessary ? (
+                      <span className="text-zion-cyan text-sm">Required</span>
+                    ) : (
+                      <label className="flex items-center space-x-2">
+                        <input
+                          type="checkbox"
+                          checked={category.enabled}
+                          onChange={(e) => toggleCookieCategory(category.id, e.target.checked)}
+                          className="w-4 h-4 text-zion-cyan bg-zion-slate-dark border-zion-cyan/20 rounded focus:ring-zion-cyan"
+                        />
+                        <span className="text-zion-slate-light">Enable</span>
+                      </label>
+                    )}
+                  </div>
+                  <p className="text-zion-slate-light text-sm">{category.description}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex justify-end space-x-3">
+              <button
+                onClick={() => setShowSettings(false)}
+                className="px-4 py-2 text-zion-slate-light hover:text-white transition-colors"
               >
-                Get Help
-              </Link>
+                Cancel
+              </button>
+              <button
+                onClick={savePreferences}
+                className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-light transition-colors"
+              >
+                Save Preferences
+              </button>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </motion.div>
+      )}
+    </>
   );
-};
-
-export default CookiesPage;
+}
