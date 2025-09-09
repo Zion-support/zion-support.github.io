@@ -1,114 +1,38 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Zap, AlertTriangle, CheckCircle, Clock, TrendingUp, Activity } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Activity, 
+  Zap, 
+  CheckCircle,
+  AlertTriangle
+} from 'lucide-react';
 
 interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  cls: number;
-  fid: number;
-  ttfb: number;
-  score: number;
-  grade: string;
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  timeToInteractive: number;
 }
 
 interface PerformanceOptimizerProps {
-  showDetails?: boolean;
-  className?: string;
+  showMetrics?: boolean;
+  autoOptimize?: boolean;
+  children: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
-  showDetails = false, 
-  className = '' 
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  showMetrics = false,
+  autoOptimize = true,
+  children
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: 0,
-    lcp: 0,
-    cls: 0,
-    fid: 0,
-    ttfb: 0,
-    score: 0,
-    grade: 'A'
-  });
-  const [isVisible, setIsVisible] = useState(false);
-  const [optimizations, setOptimizations] = useState<string[]>([]);
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isOptimizing, setIsOptimizing] = useState(false);
+  const [optimizations, setOptimizations] = useState<string[]>([]);
+  const [showOptimizationPanel, setShowOptimizationPanel] = useState(false);
 
-  // Calculate performance score and grade
-  const calculateScore = useCallback((fcp: number, lcp: number, cls: number, fid: number, ttfb: number): { score: number; grade: string } => {
-    let score = 100;
-    
-    // FCP scoring (target: < 1.5s)
-    if (fcp > 2500) score -= 30;
-    else if (fcp > 1500) score -= 15;
-    else if (fcp > 1000) score -= 5;
-    
-    // LCP scoring (target: < 2.5s)
-    if (lcp > 4000) score -= 30;
-    else if (lcp > 2500) score -= 15;
-    else if (lcp > 1500) score -= 5;
-    
-    // CLS scoring (target: < 0.1)
-    if (cls > 0.25) score -= 20;
-    else if (cls > 0.1) score -= 10;
-    
-    // FID scoring (target: < 100ms)
-    if (fid > 300) score -= 15;
-    else if (fid > 100) score -= 5;
-    
-    // TTFB scoring (target: < 600ms)
-    if (ttfb > 1000) score -= 10;
-    else if (ttfb > 600) score -= 5;
-    
-    score = Math.max(0, score);
-    
-    let grade = 'A';
-    if (score < 50) grade = 'F';
-    else if (score < 60) grade = 'D';
-    else if (score < 70) grade = 'C';
-    else if (score < 80) grade = 'B';
-    else if (score < 90) grade = 'A-';
-    
-    return { score, grade };
-  }, []);
-
-  // Generate optimization suggestions
-  const generateOptimizations = useCallback((metrics: PerformanceMetrics): string[] => {
-    const suggestions: string[] = [];
-    
-    if (metrics.fcp > 1500) {
-      suggestions.push('Optimize critical rendering path');
-      suggestions.push('Reduce server response time');
-    }
-    
-    if (metrics.lcp > 2500) {
-      suggestions.push('Optimize largest contentful paint');
-      suggestions.push('Implement lazy loading for images');
-    }
-    
-    if (metrics.cls > 0.1) {
-      suggestions.push('Fix layout shifts');
-      suggestions.push('Set explicit dimensions for media');
-    }
-    
-    if (metrics.fid > 100) {
-      suggestions.push('Reduce JavaScript execution time');
-      suggestions.push('Break up long tasks');
-    }
-    
-    if (metrics.ttfb > 600) {
-      suggestions.push('Optimize server response time');
-      suggestions.push('Use CDN for static assets');
-    }
-    
-    if (suggestions.length === 0) {
-      suggestions.push('Performance is excellent!');
-    }
-    
-    return suggestions;
-  }, []);
-
-  // Measure performance metrics
+  // Performance monitoring with throttling
   const measurePerformance = useCallback(() => {
     if ('performance' in window) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -371,6 +295,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                 </span>
               </div>
             </div>
+          </div>
+        </motion.div>
+      )}
 
             {/* Optimization Suggestions */}
             <div className="mt-4">
@@ -383,11 +310,29 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                   </div>
                 ))}
               </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
+            ))}
+          </div>
+          
+          <button
+            onClick={applyOptimizations}
+            disabled={isOptimizing}
+            className="w-full py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+          >
+            {isOptimizing ? (
+              <>
+                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                Optimizing...
+              </>
+            ) : (
+              <>
+                <CheckCircle className="w-4 h-4 mr-2" />
+                Apply Optimizations
+              </>
+            )}
+          </button>
+        </motion.div>
+      )}
+    </>
   );
 };
 

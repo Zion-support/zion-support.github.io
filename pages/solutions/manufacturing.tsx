@@ -4,7 +4,7 @@ import {
   Cpu, Brain, Shield, Zap, BarChart3, Settings, 
   CheckCircle, ArrowRight, Star, TrendingUp, Award, Clock
 } from 'lucide-react';
-import UltraFuturisticBackground2045 from '../../components/backgrounds/UltraFuturisticBackground2045';
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 
 const ManufacturingSolutionsPage: React.FC = () => {
   const solutions = [
@@ -184,7 +184,8 @@ const ManufacturingSolutionsPage: React.FC = () => {
             </button>
           </div>
         </section>
-      </div>
+        </div>
+      </UltraFuturisticBackground>
     </>
   );
 };

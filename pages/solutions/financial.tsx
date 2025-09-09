@@ -4,7 +4,7 @@ import {
   DollarSign, Brain, Shield, Zap, BarChart3, Cpu, 
   CheckCircle, ArrowRight, Star, TrendingUp, Award, Clock
 } from 'lucide-react';
-import UltraFuturisticBackground2045 from '../../components/backgrounds/UltraFuturisticBackground2045';
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 
 const FinancialSolutionsPage: React.FC = () => {
   const solutions = [
@@ -184,7 +184,8 @@ const FinancialSolutionsPage: React.FC = () => {
             </button>
           </div>
         </section>
-      </div>
+        </div>
+      </UltraFuturisticBackground>
     </>
   );
 };

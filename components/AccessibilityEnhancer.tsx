@@ -65,7 +65,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ className
     if (reducedMotion) {
       root.style.setProperty('--motion-reduce', '1');
     } else {
-      root.style.setProperty('--motion-reduce', '0');
+      root.style.removeProperty('--reduced-motion');
+    }
+    
+    // High saturation
+    if (newSettings.highSaturation) {
+      root.style.filter = 'saturate(1.5) contrast(1.2)';
+    } else {
+      root.style.filter = '';
     }
     
     // Focus indicator
