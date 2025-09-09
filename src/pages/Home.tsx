@@ -197,11 +197,16 @@ export default function Home() {
 
   const services = [
     {
-      title: "AI Solutions",
+      title: "AI Services",
       description: "Cutting-edge artificial intelligence services",
       icon: "🤖",
-      link: "/ultimate-services",
-      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
+      link: "/enhanced-services"
+    },
+    {
+      title: "Micro SAAS",
+      description: "Innovative micro SAAS solutions",
+      icon: "🚀",
+      link: "/micro-saas-showcase"
     },
     {
       title: "Quantum Computing",

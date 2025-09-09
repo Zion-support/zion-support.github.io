@@ -17,28 +17,13 @@ export const Footer: React.FC = () => {
     {
       title: "AI & ML Services",
       links: [
-        { label: "AI Workflow Automation", path: "/services/ai-workflow-automation" },
-        { label: "AI Content Generation", path: "/services" },
-        { label: "AI Analytics Platform", path: "/services" },
-        { label: "Machine Learning Solutions", path: "/services" }
-      ]
-    },
-    {
-      title: "Quantum & Blockchain",
-      links: [
-        { label: "Quantum Data Analytics", path: "/services/quantum-data-analytics" },
-        { label: "Blockchain Infrastructure", path: "/services/blockchain-infrastructure" },
-        { label: "NFT Marketplace", path: "/services" },
-        { label: "DeFi Solutions", path: "/services" }
-      ]
-    },
-    {
-      title: "Security & Cloud",
-      links: [
-        { label: "Zero Trust Security", path: "/services" },
-        { label: "SOC 2 Compliance", path: "/services" },
-        { label: "Cloud Migration", path: "/services" },
-        { label: "DevOps Automation", path: "/services" }
+        { label: "AI Services", path: "/enhanced-services" },
+        { label: "Micro SAAS", path: "/micro-saas-showcase" },
+        { label: "AI Solutions", path: "/services/ai" },
+        { label: "Cloud & DevOps", path: "/services/cloud" },
+        { label: "Cybersecurity", path: "/services/cybersecurity" },
+        { label: "IT Infrastructure", path: "/services/infrastructure" },
+        { label: "Digital Transformation", path: "/services/transformation" }
       ]
     },
     {
