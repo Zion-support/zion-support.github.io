@@ -1,7 +1,7 @@
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 import { useState, useEffect } from 'react';
 import { EXPANDED_SERVICES } from '@/data/expandedServices';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
@@ -54,7 +54,7 @@ export default function ServiceCalculatorPage() {
             enterprise: 1.4
         };
         // Calculate base cost
-        let baseCost = service.price * sizeMultiplier[inputs.companySize];
+        const baseCost = service.price * sizeMultiplier[inputs.companySize];
         // Add custom features cost
         const customFeaturesCost = inputs.customFeatures * 500;
         // Calculate implementation cost

@@ -1,5 +1,5 @@
 import { ModeToggle } from '@/components/ModeToggle';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 export function SummitHero() {

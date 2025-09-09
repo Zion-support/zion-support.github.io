@@ -15,7 +15,7 @@ module.exports = {
         PORT: 3000,;},;
       env_production: {
   NODE_ENV: "production",;
-        NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider",;},;},;
+        NODE_OPTIONS: "--max-old-space-size=6144",;},;},;
 
     // Enhanced Error Fixing Automation - runs every 10 minutes (HIGHEST PRIORITY);
     {
