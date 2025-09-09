@@ -3,61 +3,81 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield } from "lucide-react";
+import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield, Rocket, Search } from "lucide-react";
 import { useRef } from "react";
+
 export function HeroSection() {
-    const { t } = useTranslation();
-    const containerRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start start", "end start"]
-    });
-    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-    const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.1
-            }
-        }
-    };
-    const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.8,
-                ease: "easeOut"
-            }
-        }
-    };
-    const floatingVariants = {
-        animate: {
-            y: [-15, 15, -15],
-            rotate: [0, 5, 0],
-            transition: {
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut"
-            }
-        }
-    };
-    const pulseVariants = {
-        animate: {
-            scale: [1, 1.1, 1],
-            opacity: [0.5, 0.8, 0.5],
-            transition: {
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut"
-            }
-        }
-    };
-    return (<section ref={containerRef} className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
+  const { t } = useTranslation();
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const floatingVariants = {
+    animate: {
+      y: [-15, 15, -15],
+      rotate: [0, 5, 0],
+      transition: {
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  const pulseVariants = {
+    animate: {
+      scale: [1, 1.1, 1],
+      opacity: [0.5, 0.8, 0.5],
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  const trustMetrics = [
+    { icon: Star, label: "Trusted", value: "10K+ Users" },
+    { icon: TrendingUp, label: "Growing", value: "500+ Services" },
+    { icon: Shield, label: "Secure", value: "99.9% Uptime" },
+    { icon: Zap, label: "Fast", value: "<100ms Response" }
+  ];
+
+  const featureBadges = [
+    { color: "zion-cyan", label: "AI-Powered" },
+    { color: "zion-purple", label: "24/7 Support" },
+    { color: "zion-cyan-light", label: "Enterprise Ready" }
+  ];
+
+  return (
+    <section ref={containerRef} className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
       {/* Enhanced background with parallax effect */}
       <motion.div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90" style={{ y, opacity }}/>
       
@@ -66,7 +86,7 @@ export function HeroSection() {
         <motion.div className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-zion-purple-light opacity-60" variants={floatingVariants} animate="animate"/>
         <motion.div className="absolute top-1/3 right-1/3 w-6 h-6 rounded-full bg-zion-cyan opacity-50" variants={floatingVariants} animate="animate" style={{ animationDelay: '1s' }}/>
         <motion.div className="absolute bottom-1/4 left-1/2 w-3 h-3 rounded-full bg-zion-purple opacity-70" variants={floatingVariants} animate="animate" style={{ animationDelay: '2s' }}/>
-        <motion.div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light" variants={particleVariants} animate="animate" style={{ animationDelay: '0.5s' }}/>
+        <motion.div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light" variants={pulseVariants} animate="animate" style={{ animationDelay: '0.5s' }}/>
         <motion.div className="absolute top-3/4 left-1/6 w-2 h-2 rounded-full bg-zion-purple-light opacity-80" variants={floatingVariants} animate="animate" style={{ animationDelay: '1.5s' }}/>
         <motion.div className="absolute top-1/6 right-1/6 w-4 h-4 rounded-full bg-zion-cyan opacity-40" variants={floatingVariants} animate="animate" style={{ animationDelay: '2.5s' }}/>
       </div>
@@ -98,14 +118,14 @@ export function HeroSection() {
             <div className="p-2 bg-zion-cyan/20 rounded-full group-hover:bg-zion-cyan/30 transition-colors">
               <Sparkles className="w-6 h-6 text-zion-cyan"/>
             </div>
-            <span className="font-medium">AI-Powered Matching</span>
+            <span className="font-medium">AI-Powered</span>
           </motion.div>
           
           <motion.div className="flex items-center gap-3 group" whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400 }}>
             <div className="p-2 bg-zion-purple/20 rounded-full group-hover:bg-zion-purple/30 transition-colors">
               <Zap className="w-6 h-6 text-zion-purple"/>
             </div>
-            <span className="font-medium">Global Talent Pool</span>
+            <span className="font-medium">Lightning Fast</span>
           </motion.div>
           
           <motion.div className="flex items-center gap-3 group" whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400 }}>
@@ -168,136 +188,6 @@ export function HeroSection() {
           </motion.div>
         </motion.div>
       </motion.div>
-    </section>);
+    </section>
+  );
 }
-import React from 'react';
-import { Search, Rocket } from "lucide-react";
-export const HeroSection = () => {
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.1
-            }
-        }
-    };
-    const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.8,
-                ease: "easeOut"
-            }
-        }
-    };
-    const floatingVariants = {
-        animate: {
-            y: [-15, 15, -15],
-            rotate: [0, 5, -5, 0],
-            transition: {
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut"
-            }
-        }
-    };
-    const trustMetrics = [
-        { icon: Users, label: "10K+ Users", value: "Trusted by thousands" },
-        { icon: TrendingUp, label: "95% Success", value: "Project completion rate" },
-        { icon: Shield, label: "Enterprise", value: "Fortune 500 clients" },
-        { icon: Rocket, label: "24/7 Support", value: "Always available" }
-    ];
-    const featureBadges = [
-        { icon: Zap, label: "AI-Powered Matching", color: "zion-cyan" },
-        { icon: Star, label: "Verified Professionals", color: "zion-purple" },
-        { icon: Shield, label: "Secure Payments", color: "zion-cyan" },
-        { icon: Rocket, label: "Enterprise Security", color: "zion-purple" }
-    ];
-    return (<section className="relative overflow-hidden py-20 md:py-32 min-h-[90vh] flex items-center">
-      {/* Background Layers */}
-      <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-90"/>
-      <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-transparent to-zion-cyan/20 animate-pulse"/>
-      
-      {/* Floating Elements */}
-      <motion.div className="absolute inset-0" variants={containerVariants} initial="hidden" animate="visible">
-        <motion.div className="absolute top-1/4 left-1/4 w-3 h-3 rounded-full bg-zion-purple-light opacity-60" variants={floatingVariants} animate="animate"/>
-        <motion.div className="absolute top-1/3 right-1/3 w-4 h-4 rounded-full bg-zion-cyan opacity-50" variants={floatingVariants} animate="animate" style={{ animationDelay: "1s" }}/>
-        <motion.div className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-60" variants={floatingVariants} animate="animate" style={{ animationDelay: "2s" }}/>
-        <motion.div className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-cyan-light opacity-30" variants={floatingVariants} animate="animate" style={{ animationDelay: "3s" }}/>
-      </motion.div>
-
-      {/* Main Content */}
-      <div className="container relative z-10 px-4 mx-auto text-center">
-        <motion.div variants={containerVariants} initial="hidden" animate="visible">
-          {/* Badge */}
-          <motion.div variants={itemVariants} className="mb-6">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Sparkles className="h-8 w-8 text-zion-cyan animate-pulse"/>
-              <span className="text-zion-cyan text-lg font-medium">
-                AI-Powered Technology Solutions
-              </span>
-              <Sparkles className="h-8 w-8 text-zion-cyan animate-pulse"/>
-            </div>
-          </motion.div>
-
-          {/* Main Heading */}
-          <motion.div variants={itemVariants} className="mb-6">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white mb-4">
-              Transform Your Business with{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan animate-gradient">
-                AI
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light mt-4">
-              Leading the future of technology innovation
-            </p>
-          </motion.div>
-
-          {/* Description */}
-          <motion.p variants={itemVariants} className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-4xl mx-auto leading-relaxed">
-            Discover cutting-edge AI solutions, expert talent, and innovative services that drive digital transformation. 
-            From startups to enterprises, we deliver results that matter.
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group" size="lg" asChild>
-              <Link to="/contact" role="button" aria-label="Get Started Today" className="flex items-center gap-2">
-                <Rocket className="h-5 w-5 group-hover:animate-bounce"/>
-                Get Started Today
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform"/>
-              </Link>
-            </Button>
-            
-            <Link to="/services" className="group border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-              <Search className="h-5 w-5 group-hover:rotate-12 transition-transform"/>
-              Explore Services
-            </Link>
-          </motion.div>
-
-          {/* Trust Metrics */}
-          <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-8">
-            {trustMetrics.map((metric, index) => (<motion.div key={index} className="text-center group hover:scale-105 transition-transform duration-300" variants={itemVariants}>
-                <div className="flex justify-center mb-2">
-                  <metric.icon className="h-8 w-8 text-zion-cyan group-hover:animate-pulse"/>
-                </div>
-                <div className="text-zion-cyan font-bold text-lg">{metric.label}</div>
-                <div className="text-zion-slate-light text-sm">{metric.value}</div>
-              </motion.div>))}
-          </motion.div>
-
-          {/* Feature Badges */}
-          <motion.div variants={itemVariants} className="flex flex-wrap justify-center items-center gap-6 text-zion-slate-light text-sm">
-            {featureBadges.map((badge, index) => (<div key={index} className="flex items-center gap-2 group">
-                <div className={`w-2 h-2 bg-${badge.color} rounded-full group-hover:animate-pulse`}/>
-                <span className="group-hover:text-white transition-colors">{badge.label}</span>
-              </div>))}
-          </motion.div>
-        </motion.div>
-      </div>
-    </section>);
-};
