@@ -6,22 +6,62 @@ import pluginReactHooks from "eslint-plugin-react-hooks";
 import eslintConfigPrettier from "eslint-config-prettier";
 // import eslintConfigNext from 'eslint-config-next';
 
+const typescriptParser = tseslint.parser;
+const typescript = tseslint.plugin;
+const react = pluginReact;
+const reactHooks = pluginReactHooks;
+
 export default [
-  { ...js.configs.recommended, files: ['app/**/*.{js,jsx,ts,tsx}'] },
+  { ...js.configs.recommended, files: ['app/**/*.{js,jsx,ts,tsx}', 'components/**/*.{js,jsx,ts,tsx}', 'src/**/*.{js,jsx,ts,tsx}'] },
   {
-    ignores: ["node_modules/**", "dist/**", "out/**", "coverage/**", "build/**", ".next/**", "public/build/**"],
+    ignores: [
+      "node_modules/**", 
+      "dist/**", 
+      "out/**", 
+      "coverage/**", 
+      "build/**", 
+      ".next/**", 
+      "public/build/**",
+      "api/**",
+      "apps.backup/**",
+      "backup-merge-conflicts/**",
+      "clean-build/**",
+      "cache/**",
+      "corrupted_backup/**",
+      "*.cjs",
+      "*.js",
+      "api-backup/**",
+      "advanced-*.js",
+      "aggressive-*.js",
+      "analyze-*.js",
+      "automation/**",
+      "backup/**",
+      "build-reports/**",
+      "ci-cd-reports/**",
+      "comprehensive-*.js",
+      "conflict-*.js",
+      "create-*.js",
+      "debug-*.js",
+      "enhance-*.js",
+      "fix-*.js",
+      "improve-*.js",
+      "optimize-*.js",
+      "test-*.js",
+      "*.report.json",
+      "*.log",
+      "*.md",
+      "*.txt",
+      "*.tsv",
+      "*.html",
+      "*.json"
+    ],
   },
 
   // eslintConfigNext,
 
-  // Fallback for problematic files (non-type-aware TS linting)
+  // TypeScript configuration for main app files
   {
-    files: [
-      "src/hooks/useAuth.tsx",
-      "src/components/ui/sidebar/index.tsx",
-      "src/types/pwa.d.ts",
-      "vite.config.d.ts"
-    ],
+    files: ['app/**/*.{ts,tsx}', 'components/**/*.{ts,tsx}', 'src/**/*.{ts,tsx}'],
     languageOptions: {
       parser: typescriptParser,
       ecmaVersion: 'latest',
@@ -80,7 +120,33 @@ export default [
       'types/**',
       'zion-*/**',
       'zion_os/**',
-      'zion/**'
+      'zion/**',
+      '*.cjs',
+      '*.js',
+      'api-backup/**',
+      'advanced-*.js',
+      'aggressive-*.js',
+      'analyze-*.js',
+      'automation/**',
+      'backup/**',
+      'build-reports/**',
+      'ci-cd-reports/**',
+      'comprehensive-*.js',
+      'conflict-*.js',
+      'create-*.js',
+      'debug-*.js',
+      'enhance-*.js',
+      'fix-*.js',
+      'improve-*.js',
+      'optimize-*.js',
+      'test-*.js',
+      '*.report.json',
+      '*.log',
+      '*.md',
+      '*.txt',
+      '*.tsv',
+      '*.html',
+      '*.json'
     ],
   },
 ];
