@@ -1,14 +1,31 @@
-// Simple production logger utility
-export const logErrorToProduction = (message, error) => {
-  // In production, you might want to send errors to a logging service
-  // For now, we'll just use console.error in development
-  if (process.env.NODE_ENV === 'development') {
-    console.error(message, error);
+// Production logger utility
+export const productionLogger = {
+  log: (...args) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log(...args);
+    }
+  },
+  error: (...args) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.error(...args);
+    }
+  },
+  warn: (...args) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(...args);
+    }
+  },
+  info: (...args) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.info(...args);
+    }
   }
-  
-  // In production, you could send to:
-  // - Sentry
-  // - LogRocket
-  // - Custom logging service
-  // - Analytics service
+};
+
+// Export individual functions for backward compatibility
+export const logErrorToProduction = (error, context = '') => {
+  if (process.env.NODE_ENV === 'development') {
+    console.error('Production Error:', error, context);
+  }
+  // In production, you could send this to a logging service
 };

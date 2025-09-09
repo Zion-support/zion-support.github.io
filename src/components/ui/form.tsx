@@ -1,136 +1,81 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
 
-interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
+interface FormProps {
   children: React.ReactNode;
+  onSubmit?: (e: React.FormEvent) => void;
+  className?: string;
 }
 
-const Form = React.forwardRef<HTMLFormElement, FormProps>(
-  ({ className, children, ...props }, ref) => {
-    return (
-      <form
-        ref={ref}
-        className={cn("space-y-4", className)}
-        {...props}
-      >
-        {children}
-      </form>
-    );
-  }
-);
-Form.displayName = "Form";
+export function Form({ children, onSubmit, className = '' }: FormProps) {
+  return (
+    <form onSubmit={onSubmit} className={className}>
+      {children}
+    </form>
+  );
+}
 
-interface FormFieldProps extends React.HTMLAttributes<HTMLDivElement> {
+interface FormFieldProps {
   children: React.ReactNode;
   className?: string;
-  control?: any;
-  name?: string;
-  render?: (props: any) => React.ReactNode;
 }
 
-const FormField = React.forwardRef<HTMLDivElement, FormFieldProps>(
-  ({ className, children, ...props }, ref) => {
-    return (
-      <div
-        ref={ref}
-        className={cn("space-y-2", className)}
-        {...props}
-      >
-        {children}
-      </div>
-    );
-  }
-);
-FormField.displayName = "FormField";
+export function FormField({ children, className = '' }: FormFieldProps) {
+  return (
+    <div className={`space-y-2 ${className}`}>
+      {children}
+    </div>
+  );
+}
 
-interface FormLabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
+interface FormLabelProps {
   children: React.ReactNode;
+  htmlFor?: string;
+  className?: string;
 }
 
-const FormLabel = React.forwardRef<HTMLLabelElement, FormLabelProps>(
-  ({ className, children, ...props }, ref) => {
-    return (
-      <label
-        ref={ref}
-        className={cn(
-          "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
-          className
-        )}
-        {...props}
-      >
-        {children}
-      </label>
-    );
-  }
-);
-FormLabel.displayName = "FormLabel";
+export function FormLabel({ children, htmlFor, className = '' }: FormLabelProps) {
+  return (
+    <label htmlFor={htmlFor} className={`text-sm font-medium text-white ${className}`}>
+      {children}
+    </label>
+  );
+}
 
-interface FormControlProps extends React.HTMLAttributes<HTMLDivElement> {
+interface FormControlProps {
   children: React.ReactNode;
+  className?: string;
 }
 
-const FormControl = React.forwardRef<HTMLDivElement, FormControlProps>(
-  ({ className, children, ...props }, ref) => {
-    return (
-      <div
-        ref={ref}
-        className={cn("", className)}
-        {...props}
-      >
-        {children}
-      </div>
-    );
-  }
-);
-FormControl.displayName = "FormControl";
+export function FormControl({ children, className = '' }: FormControlProps) {
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  );
+}
 
-interface FormMessageProps extends React.HTMLAttributes<HTMLParagraphElement> {
+interface FormItemProps {
   children: React.ReactNode;
+  className?: string;
 }
 
-const FormMessage = React.forwardRef<HTMLParagraphElement, FormMessageProps>(
-  ({ className, children, ...props }, ref) => {
-    return (
-      <p
-        ref={ref}
-        className={cn("text-sm font-medium text-destructive", className)}
-        {...props}
-      >
-        {children}
-      </p>
-    );
-  }
-);
-FormMessage.displayName = "FormMessage";
+export function FormItem({ children, className = '' }: FormItemProps) {
+  return (
+    <div className={`space-y-2 ${className}`}>
+      {children}
+    </div>
+  );
+}
 
-const FormItem = React.forwardRef<HTMLDivElement, FormFieldProps>(
-  ({ className, children, ...props }, ref) => {
-    return (
-      <div
-        ref={ref}
-        className={cn("space-y-2", className)}
-        {...props}
-      >
-        {children}
-      </div>
-    );
-  }
-);
-FormItem.displayName = "FormItem";
+interface FormMessageProps {
+  children: React.ReactNode;
+  className?: string;
+}
 
-const FormDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(
-  ({ className, children, ...props }, ref) => {
-    return (
-      <p
-        ref={ref}
-        className={cn("text-sm text-muted-foreground", className)}
-        {...props}
-      >
-        {children}
-      </p>
-    );
-  }
-);
-FormDescription.displayName = "FormDescription";
-
-export { Form, FormField, FormItem, FormLabel, FormControl, FormMessage, FormDescription };
+export function FormMessage({ children, className = '' }: FormMessageProps) {
+  return (
+    <p className={`text-sm text-red-400 ${className}`}>
+      {children}
+    </p>
+  );
+}
