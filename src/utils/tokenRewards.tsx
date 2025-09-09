@@ -1,36 +1,48 @@
-import { apiClient } from '@/utils / apiClient';
-    export async function earnTokensForReferral (userId: string,;
-  export async function earnTokensForPurchase (userId: string,;
-export async function rewardOnboarding (...args: any[]) : any {;
-;
-;
-  await apiClient ('/functions / v1 / token - manager / earn', {;
-    method: 'POST',;
-    body: JSON.stringify ({ userId, action, amount }) ,;
-  }) ;
-;
-    purchaseAmount: number,;
-    purchaseType: string) : Promise < any> {;
-    await apiClient ('/functions / v1 / token - manager / earn', {;
-      method: 'POST',;
-      body: JSON.stringify ({;
-        userId,;
-        action: 'purchase',;
-        amount: purchaseAmount,;
-        purchaseType,;
-      }) ,;
-    }) ;
-;
-      referredUserId: string) : Promise < any> {;
-      await apiClient ('/functions / v1 / token - manager / earn', {;
-        method: 'POST',;
-        body: JSON.stringify ({;
-          userId,;
-          action: 'referral',;
-          referredUserId,;
-          amount: 100,;
-        }) ,;
-      }) ;
-    };
-  };
-};
+import { apiClient } from '@/utils/apiClient';
+
+export async function earnTokensForReferral(userId: string, referralId: string): Promise<any> {
+  return await apiClient('/functions/v1/token-manager/earn', {
+    method: 'POST',
+    body: JSON.stringify({ userId, action: 'referral', amount: 100, referralId }),
+  });
+}
+
+export async function earnTokensForPurchase(userId: string, amount: number): Promise<any> {
+  return await apiClient('/functions/v1/token-manager/earn', {
+    method: 'POST',
+    body: JSON.stringify({ userId, action: 'purchase', amount }),
+  });
+}
+
+export async function rewardOnboarding(userId: string): Promise<any> {
+  return await apiClient('/functions/v1/token-manager/earn', {
+    method: 'POST',
+    body: JSON.stringify({ userId, action: 'onboarding', amount: 50 }),
+  });
+}
+
+export async function rewardProfileCompletion(userId: string): Promise<any> {
+  return await apiClient('/functions/v1/token-manager/earn', {
+    method: 'POST',
+    body: JSON.stringify({ userId, action: 'profile_completion', amount: 25 }),
+  });
+}
+
+export async function rewardFirstService(userId: string): Promise<any> {
+  return await apiClient('/functions/v1/token-manager/earn', {
+    method: 'POST',
+    body: JSON.stringify({ userId, action: 'first_service', amount: 75 }),
+  });
+}
+
+export async function getTokenBalance(userId: string): Promise<number> {
+  const response = await apiClient(`/functions/v1/token-manager/balance/${userId}`);
+  return response.balance || 0;
+}
+
+export async function spendTokens(userId: string, amount: number, reason: string): Promise<any> {
+  return await apiClient('/functions/v1/token-manager/spend', {
+    method: 'POST',
+    body: JSON.stringify({ userId, amount, reason }),
+  });
+}

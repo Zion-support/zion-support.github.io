@@ -4,6 +4,8 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './components/ThemeProvider';
 import { SEO } from './components/SEO';
+import { Analytics } from './components/Analytics';
+import { ErrorTracking } from './components/ErrorTracking';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import LoadingSpinner from './components/ui/LoadingSpinner';
@@ -26,6 +28,8 @@ function App() {
 
   return (
     <HelmetProvider>
+      <Analytics trackingId="G-XXXXXXXXXX" />
+      <ErrorTracking enabled={true} />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <SEO 
           title="Zion Tech Group - Leading AI & IT Solutions Provider"

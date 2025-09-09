@@ -58,6 +58,9 @@
     <!-- Manifest for PWA -->
     <link rel="manifest" href="/manifest.json" />
     
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    
     <!-- Theme color -->
     <meta name="theme-color" content="#0f172a" />
     <meta name="msapplication-TileColor" content="#0f172a" />
@@ -148,6 +151,21 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
     
     <!-- Structured Data for WebPage -->
     <script type="application/ld+json">
