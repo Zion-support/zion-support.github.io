@@ -157,23 +157,26 @@ export function PerformanceOptimizer({
 
     // Dynamic imports for non-critical components
     const lazyComponents = document.querySelectorAll('[data-lazy-component]');
-    const componentObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const component = entry.target as HTMLElement;
-          const componentName = component.dataset.lazyComponent;
-          if (componentName) {
-            // Load component dynamically
-            import(`../components/${componentName}.tsx`).then((module) => {
-              component.innerHTML = module.default;
-            });
-            componentObserver.unobserve(component);
-          }
-        }
-      });
-    });
+    // Component lazy loading is disabled since we're using static imports
+    // const componentObserver = new IntersectionObserver((entries) => {
+    //   entries.forEach((entry) => {
+    //     if (entry.isIntersecting) {
+    //       const component = entry.target as HTMLElement;
+    //       const componentName = component.dataset.lazyComponent;
+    //       if (componentName) {
+    //         // Load component dynamically
+    //         import(`../components/${componentName}.tsx`).then((module) => {
+    //           component.innerHTML = module.default;
+    //         }).catch((error) => {
+    //           console.warn(`Failed to load component ${componentName}:`, error);
+    //         });
+    //         componentObserver.unobserve(component);
+    //       }
+    //     }
+    //   });
+    // });
 
-    lazyComponents.forEach((component) => componentObserver.observe(component));
+    // lazyComponents.forEach((component) => componentObserver.observe(component));
   }, [enableMonitoring]);
 
   useEffect(() => {

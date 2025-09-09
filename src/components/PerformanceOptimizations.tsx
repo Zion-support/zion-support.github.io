@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, memo } from 'react';
+import React, { Suspense, memo } from 'react';
 import { ErrorBoundary } from './ErrorBoundary';
 import LoadingSpinner from './LoadingSpinner';
 

@@ -1,6 +1,58 @@
-        if (conflictFiles.trim()) {            // Resolve conflicts by accepting our version
-            const files = conflictFiles.trim().split('\n');
-            for (const file of files) {
-                if (file.trim()) {
-#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); console.log('🚀 Starting merge process for all open PRs...'); try { execSync('git rev-parse --git-dir',{ stdio: 'pipe' }); console.log('✅ Git repository detected')} catch (error) { console.error('❌ Not in a git repository'); process.exit(1)} try { const status = execSync('git status --porcelain',{ encoding: 'utf8' }); if (status.trim()) { console.log('⚠️ Working directory has changes. Stashing...'); execSync('git stash push -m "Auto-stash before merge process"')} console.log('📥 Fetching latest changes...'); execSync('git fetch --all --prune'); console.log('🔄 Switching to main branch...'); execSync('git checkout main'); console.log('📥 Pulling latest changes from main...'); try { execSync('git pull origin main')} catch (error) { console.log('⚠️ Merge conflicts detected. Resolving...'); const conflictFiles = execSync('git diff --name-only --diff-filter=U',{ encoding: 'utf8' }); if (conflictFiles.trim()) { console.log('Found merge conflicts in:',conflictFiles.trim()); const files = conflictFiles.trim().split('\n'); for (const file of files) { if (file.trim()) { console.log(`Resolving conflicts in: ${file}`); try { execSync(`git checkout --ours "${file}"`)} catch (e) { execSync(`git checkout --theirs "${file}"`)} execSync(`git add "${file}"`)} } execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')} } console.log('📤 Pushing changes to remote...'); execSync('git push origin main'); console.log('✅ Merge process completed successfully!'); console.log('🎉 All changes have been merged into main branch')} catch (error) { console.error('❌ Error during merge process:',error.message); process.exit(1)}#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); console.log('🚀 Starting merge process for all open PRs...'); try { execSync('git rev-parse --git-dir',{ stdio: 'pipe' }); console.log('✅ Git repository detected')} catch (error) { console.error('❌ Not in a git repository'); process.exit(1)} try { const status = execSync('git status --porcelain',{ encoding: 'utf8' }); if (status.trim()) { console.log('⚠️ Working directory has changes. Stashing...'); execSync('git stash push -m "Auto-stash before merge process"')} console.log('📥 Fetching latest changes...'); execSync('git fetch --all --prune'); console.log('🔄 Switching to main branch...'); execSync('git checkout main'); console.log('📥 Pulling latest changes from main...'); try { execSync('git pull origin main')} catch (error) { console.log('⚠️ Merge conflicts detected. Resolving...'); const conflictFiles = execSync('git diff --name-only --diff-filter=U',{ encoding: 'utf8' }); if (conflictFiles.trim()) { console.log('Found merge conflicts in:',conflictFiles.trim()); const files = conflictFiles.trim().split('\n'); for (const file of files) { if (file.trim()) { console.log(`Resolving conflicts in: ${file}`); try { execSync(`git checkout --ours "${file}"`)} catch (e) { execSync(`git checkout --theirs "${file}"`)} execSync(`git add "${file}"`)} } execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')} } console.log('📤 Pushing changes to remote...'); execSync('git push origin main'); console.log('✅ Merge process completed successfully!'); console.log('🎉 All changes have been merged into main branch')} catch (error) { console.error('❌ Error during merge process:',error.message); process.exit(1)}
+const https = require('https');
+
+// Function to make HTTP requests
+function makeRequest(url, options = {}) {
+  return new Promise((resolve, reject) => {
+    const req = https.request(url, options, (res) => {
+      let data = '';
+      res.on('data', (chunk) => data += chunk);
+      res.on('end', () => {
+        try {
+          resolve(JSON.parse(data));
+        } catch (e) {
+          resolve(data);
+        }
+      });
+    });
+    
+    req.on('error', reject);
+    req.end();
+  });
 }
+
+// Get open PRs
+async function getOpenPRs() {
+  try {
+    const prs = await makeRequest('https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100');
+    console.log(`Found ${prs.length} open PRs`);
+    
+    for (const pr of prs) {
+      console.log(`PR #${pr.number}: ${pr.title}`);
+      console.log(`  Head: ${pr.head.ref}`);
+      console.log(`  Base: ${pr.base.ref}`);
+      console.log(`  Mergeable: ${pr.mergeable}`);
+      console.log(`  State: ${pr.state}`);
+      console.log('---');
+    }
+    
+    return prs;
+  } catch (error) {
+    console.error('Error fetching PRs:', error.message);
+    return [];
+  }
+}
+
+// Main function
+async function main() {
+  console.log('Checking open PRs...');
+  const prs = await getOpenPRs();
+  
+  if (prs.length === 0) {
+    console.log('No open PRs found');
+    return;
+  }
+  
+  console.log(`\nFound ${prs.length} open PRs to process`);
+}
+
+main().catch(console.error);
