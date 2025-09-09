@@ -7,3 +7,5 @@ export function Web3Login() {
     </div>
   )
 }
+  );
+};

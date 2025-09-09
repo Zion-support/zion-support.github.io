@@ -107,7 +107,7 @@ interface MobileHeaderProps  {title: string;  showBack?: boolean;  title: string
               <span className="sr-only">Settings</span>;}
 }
 }</Button>;
-import React from "react",import { useRouter } from 'next/router',import { ChevronLeft, Bell, Settings  } from 'lucide-react';
+import React from "react";import { useRouter } from 'next/router',import { ChevronLeft, Bell, Settings  } from 'lucide-react';
 import { cn } from "@/lib/utils",import { Button } from "@/components/ui/button",interface MobileHeaderProps  {title: string,showBack?: boolean,showNotifications?: boolean,showSettings?: boolean,className?: string,onNotificationsClick?: () => void,onSettingsClick?: () => void;
 }export function MobileHeader() {const router  = useRouter()>;
       <div className='flex items-center justify-between h-14 px-4'>;
@@ -134,3 +134,5 @@ import { cn } from "@/lib/utils",import { Button } from "@/components/ui/button"
               <Bell className='h-5 w-5' />;
               <span className='sr-only'>Notifications</span>;
         <div className="flex items-center space-x-2">;
+  );
+};

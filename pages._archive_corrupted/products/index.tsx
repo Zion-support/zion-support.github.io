@@ -271,3 +271,5 @@ const "Products": NextPage = () => {;
           </div>;
         </div>;
       </section>;
+  );
+};

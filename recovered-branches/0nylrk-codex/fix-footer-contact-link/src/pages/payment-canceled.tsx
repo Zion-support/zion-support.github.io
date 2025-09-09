@@ -13,7 +13,7 @@ export default function PaymentCanceled() {;
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useNavigate } from 'react-router-dom',
-import { XCircle } from 'lucide-react',
+import { XCircle } from 'lucide-react';
 export default function PaymentCanceled() {
   const navigate = useNavigate(),  return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">

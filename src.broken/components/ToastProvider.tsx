@@ -7,3 +7,5 @@ export function ToastProvider() {
     </div>
   )
 }
+  );
+};

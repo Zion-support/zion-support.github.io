@@ -16,4 +16,4 @@ export: interface ServiceExpansion2025 {
       'Workflow: analytics'',;
       'Integration: capabilities'',;
       'Custom: workflows';'],
-
+}

@@ -7,3 +7,5 @@ export function ProductsList() {
     </div>
   )
 }
+  );
+};

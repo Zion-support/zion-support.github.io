@@ -4,3 +4,5 @@ import _React from 'react' import dynamic from 'next/dynamic' import Head from '
 ;
 
 ;
+  );
+};

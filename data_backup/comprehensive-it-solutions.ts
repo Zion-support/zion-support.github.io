@@ -16,4 +16,4 @@ export: interface ComprehensiveItSolution {
       'Database: design'',;
       'DevOps: integration'',;
       'Testing: & deployment';'],
-
+}

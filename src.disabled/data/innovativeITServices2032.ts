@@ -29,4 +29,4 @@ export: interface InnovativeITService {
    i,
     d: string;
    avatarUrl?: string;
-
+}

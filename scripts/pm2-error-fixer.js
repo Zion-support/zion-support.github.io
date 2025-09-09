@@ -440,10 +440,10 @@ class PM2ErrorFixer {
       // Fix unescaped entities
       if (error.message.includes("can be escaped with")) {
         const fixed = content
-          .replace(/'/g, '&apos;')
-          .replace(/"/g, '&quot;')
-          .replace(/>/g, '&gt;')
-          .replace(/</g, '&lt;');
+          .replace(/'/g, ''')
+          .replace(/"/g, '"')
+          .replace(/>/g, '>')
+          .replace(/</g, '<');
         
         if (fixed !== content) {
           fs.writeFileSync(filePath, fixed);

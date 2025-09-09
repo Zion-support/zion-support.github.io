@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 <<<<<<< HEAD
+<<<<<<< HEAD
 const path = require('path');
 
 
@@ -32,6 +33,9 @@ function findAndFixTestFiles(dir) {
 =======
 =======
 >>>>>>> pr/11282
+=======
+
+>>>>>>> d874679f20143977455f26e6149d9817fe790262
 const path = require('path');
 
 class TestFileFixer {
@@ -182,6 +186,7 @@ describe('${fileName}', () => {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function walkDir(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
@@ -282,6 +287,8 @@ function walkDir(dir) {
       this.log(`❌ Test file fixes failed: ${error.message}`, 'ERROR');
       throw error;
 >>>>>>> pr/11282
+=======
+>>>>>>> d874679f20143977455f26e6149d9817fe790262
     }
 
 if (fixedFiles.length > 0) {
@@ -291,6 +298,7 @@ if (fixedFiles.length > 0) {
 console.log('Starting to fix test files...');
 const fixedCount = walkDir(testDir);
 console.log(`Fixed ${fixedCount} test files.`);
+<<<<<<< HEAD
 >>>>>>> origin/main
 <<<<<<< HEAD
 =======
@@ -299,3 +307,12 @@ module.exports = TestFileFixer;
 =======
 >>>>>>> merged-prs-20250907-203621
 >>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
+
+
+
+module.exports = TestFileFixer;
+
+
+
+>>>>>>> d874679f20143977455f26e6149d9817fe790262

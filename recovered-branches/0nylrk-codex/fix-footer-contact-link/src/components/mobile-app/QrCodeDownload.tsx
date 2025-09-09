@@ -33,3 +33,5 @@ export const QrCodeDownload: React.FC = () => {
               <AppStoreButtons
                 className="mb-8" 
             </div>;
+  );
+};

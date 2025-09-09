@@ -143,7 +143,7 @@ function IntegrationsSyncLog() {
   TableHeader;"
   TableRow} from "@/components/ui/table",""
 import { Badge } from "@/components/ui/badge";""
-import React from "react",""
+import React from "react";""
 import { Card } from "@/components/ui/card","
   // TODO: Implement
   Table,

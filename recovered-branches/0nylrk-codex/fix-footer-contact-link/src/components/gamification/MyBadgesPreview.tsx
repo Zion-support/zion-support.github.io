@@ -4,7 +4,7 @@
   { badge: "first_action", date: "2024-09-08" },
 ];
 
-import React from "react",
+import React from "react";
 import { BadgeEarned } from "./BadgeEarned",
 
 import { badgeList, BadgeKey } from "./badgeConfig",

@@ -7,3 +7,5 @@ export function ReferralLink() {
     </div>
   )
 }
+  );
+};

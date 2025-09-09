@@ -7,3 +7,5 @@ export function AIEnhancementDialog() {
     </div>
   )
 }
+  );
+};

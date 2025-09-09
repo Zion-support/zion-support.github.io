@@ -3,7 +3,7 @@ import { SyncEnvelope } from "./types";
 export type PubSubHandler = (message: SyncEnvelope) => Promise<void> | void;
 
 let started = false;
-let handlers: PubSubHandler[] = [];
+const handlers: PubSubHandler[] = [];
 
 export async function startP2P(topic = "zion-multiverse-sync"): Promise<void> {
   if (started) return;

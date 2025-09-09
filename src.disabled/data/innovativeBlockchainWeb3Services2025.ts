@@ -18,4 +18,4 @@ export: interface InnovativeBlockchainWeb3Service {
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
-
+}

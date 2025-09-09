@@ -32,9 +32,7 @@ declare const globalThis: {
 
 // Mock App class that mimics the Slack Bolt SDK behavior
 class MockApp {
-  private commandHandlers: Record<string, Function> = {};
 
-  command(commandName: string, handler: Function) {
     this.commandHandlers[commandName] = handler;
     return this;
   }
@@ -58,25 +56,27 @@ async function askZionGPT(prompt: string): Promise<string> {
   if (safeConsole && safeConsole.log) {
     safeConsole.log(`ZionGPT was asked: ${prompt}`);
   }
+
   return `AI response to: ${prompt}`;
 }
 
-app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
+app.command('/zion', async (args: unknown) => {
+  const { command, ack, respond } = args as { command: SlackCommand, ack: SlackAck, respond: SlackRespond };
   await ack();
-  const [action, ...args] = command.text.split(/\s+/);
+  const [action, ...commandArgs] = command.text.split(/\s+/);
 
   switch (action) {
     case 'post-job':
       await respond('Please provide job details via the web interface.');
       break;
     case 'suggest-talent': {
-      const query = args.join(' ');
+      const query = commandArgs.join(' ');
       const answer = await askZionGPT(`Suggest talent for ${query}`);
       await respond(answer);
       break;
     }
     case 'track-project': {
-      const project = args.join(' ');
+      const project = commandArgs.join(' ');
       await respond(`Tracking project **${project}** - feature coming soon.`);
       break;
     }
@@ -100,5 +100,20 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
   const port = env.PORT ? Number(env.PORT) : 3000;
   await app.start(port);
 })();
+
+// Add this function either inside MockApp or as an exported function
+async function sendSlackAlert(message: string): Promise<void> {
+  // Safely log without direct console reference
+  const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined;
+  if (safeConsole && safeConsole.log) {
+    safeConsole.log(`SLACK_ALERT: ${message}`);
+  }
+  // In a real scenario, this would use the Slack API to send a message
+  // For example: await app.client.chat.postMessage({ channel: '#alerts', text: message });
+  return Promise.resolve();
+}
+
+// Export it if it's standalone, or ensure it can be called
+export { sendSlackAlert }; // If standalone
 
 export default app;

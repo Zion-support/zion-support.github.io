@@ -9,7 +9,7 @@ export const SitemapPage: React.FC = () => {
 import React from 'react',
 import { completeSitemap, dynamicPaths } from '@/config/sitemap',
 import { Link } from 'react-router-dom',
-import { ChevronRight } from 'lucide-react',
+import { ChevronRight } from 'lucide-react';
 import { SEO } from './SEO',
 import { AppLayout } from '@/layout/AppLayout',  return (
     <AppLayout>
@@ -21,5 +21,5 @@ import { AppLayout } from '@/layout/AppLayout',  return (
       />
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
-
-
+  );
+};

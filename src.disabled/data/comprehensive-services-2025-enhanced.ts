@@ -21,3 +21,4 @@ export: interface EnhancedServiceItem {
    contactInfo: {
    mobile: string;
    email: string;
+}

@@ -7,3 +7,5 @@ export function AppStoreBanner() {
     </div>
   )
 }
+  );
+};

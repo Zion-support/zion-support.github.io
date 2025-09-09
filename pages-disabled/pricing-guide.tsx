@@ -321,3 +321,5 @@ const PricingGuide: React.FC = () => {
   )};
 
 export default PricingGuide;
+  );
+};

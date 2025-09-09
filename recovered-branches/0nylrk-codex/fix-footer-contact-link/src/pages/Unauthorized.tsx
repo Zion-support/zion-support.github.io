@@ -31,3 +31,5 @@ import { ShieldAlert } from "lucide-react",export default function Unauthorized(
         </div>;
       </div>;
       <Footer />;
+  );
+};

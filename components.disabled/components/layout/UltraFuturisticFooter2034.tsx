@@ -7,3 +7,5 @@ export default function UltraFuturisticFooter2034() {
 :components.disabled/components/layout/UltraFuturisticFooter2034.tsx
 }
 :components.disabled/components/layout/UltraFuturisticFooter2034.tsx
+  );
+};

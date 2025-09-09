@@ -1,225 +1,200 @@
 
+=======
+#!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+/**
+ * PM2 Sync Automation;
+ * Manages PM2 processes and ensures synchronization;
  */
-
-
 const fs = require('fs');
 const path = require('path');
-const { execSync, spawn } = require('child_process');
-const chokidar = require('chokidar');
-const glob = require('glob')};
-;
-    this.watcher = null;
-    this.isRunning = false;
-    this.lastSync = Date.now();
-    this.lastBuild = Date.now();
-    this.lastTest = Date.now();
-    this.lastSecurity = Date.now();
-    this.pendingChanges = new Set();
-    this.errorCount = 0;
-    this.successCount = 0;
-;
-    this.setupLogging();
-    this.initialize()}
-;
-  setupLogging() {;
-    const logDir = path.dirname(this.config.logFile);
-    if (!fs.existsSync(logDir)) {;
-      fs.mkdirSync(logDir { recursive: true })}
+const { execSync } = require('child_process');
 
-      const timestamp = new Date().toISOString();
-      const logMessage = `[${timestamp}] [${level}] ${message}`;
+=======
+class PM2SyncAutomation {}
+    constructor() {}
+        this.projectRoot = process.cwd();
 
-        fs.appendFileSync(this.config.logFile, logMessage + '\n')} catch (error) {;
-        console.error('Failed to write to log file:', error.message)}
+        if () {}
+            fs.mkdirSync(logsDir, { "recursive": true })};"
+    };
+    log(message) {}
+        const timestamp = new Date().toISOString() {}
+    ) {}"
+        const timestamp = new Date().toISOString(})
+});
+        const logMessage = `[${timestamp}] ${message}\;n;`;`
+        fs.appendFileSync(this.logFile, logMessage);
 
-    }}
+        console.log(message)};
+    checkPM2Status() {}
+        this.log('Checking PM2 status...');
+        try {}
+            const statusResult = execSync('pm2 status --json', { })
+                "cwd": this.projectRoot,
+                "encoding": 'utf8',
+                "stdio": 'pipe'
+            };);
+            const status = JSON.parse(statusResult;);
+            this.log(`Found ${status.length} PM2 processes`);
+=======
+        console.log(message)};
+    checkPM2Status() {}"
 
-        this.log('Not a git repository. Initializing...', 'WARN');
-        this.initializeGitRepository()}
-;
-      // Setup file watcher;
-      this.setupFileWatcher();
-      
-      // Start automation loops
-      this.startAutomationLoops();
-;
+            };);
+            const status = JSON.parse(statusResult;);`;
+            this.log(`Found ${status.length} PM2 processes`);
+            
+=======
+            return {;}
 
-      // Initial sync and build;
-      await this.performFullSync();
-      await this.performBuild();
-      await this.runTests();
-      await this.runSecurityScan();
+                "error": error.message;"
+            }};
+    };
+    syncPM2Processes() {}
+        this.log('Syncing PM2 processes...');
+        try {}
+            // Stop all processes;
+            execSync('pm2 stop all', { })
+                "cwd": this.projectRoot,
+                "stdio": 'pipe'
+            }
+});
+            // Delete all processes;
+            execSync('pm2 delete all', { })
+                "cwd": this.projectRoot,
+                "stdio": 'pipe'
+            }
+});
+            // Start processes from ecosystem file;
+            execSync('pm2 start ecosystem.config.cjs', { })
+                "cwd": this.projectRoot,
+                "stdio": 'pipe'
+            }
+});
+            }
+            // Delete all processes;
+            execSync('pm2 delete all', { })
+                "cwd": this.projectRoot, 
+                "stdio": 'pipe'
+            }
+});
+            
+            // Start processes from ecosystem file;
+            execSync('pm2 start ecosystem.config.cjs', { })
+                "cwd": this.projectRoot, 
+                "stdio": 'pipe'
+            }
+});
+            
+            this.log('PM2 processes synced successfully');
+            return { "status": 'success' }} catch (error) {}
+            this.log(`PM2 sync "failed": ${error.message}`);
+            return { "status": 'failed', "error": error.message }};
+    };
+    checkProcessHealth() {}
+        this.log('Checking process health...');
+        try {}
+            const statusResult = execSync('pm2 status --json', { })
+                "cwd": this.projectRoot,
+                "encoding": 'utf8',
+                "stdio": 'pipe'
+            };);
+            const processes = JSON.parse(statusResult;);
+            const healthyProcesses = processes.filter(p => p.pm2_env?.status === 'online';);
+            const unhealthyProcesses = processes.filter(p => p.pm2_env?.status !== 'online';);
+            this.log(`Healthy "processes": ${healthyProcesses.length}/${processes.length}`);
+            return {;}
+                "status": 'success',
+                "total": processes.length,
+                "healthy": healthyProcesses.length,
+                "unhealthy": unhealthyProcesses.length,
+                "processes": processes;
+            }} catch (error) {}
+            this.log(`Process health check "failed": ${error.message}`);
+            return { "status": 'failed', "error": error.message }};
+    };
+    restartUnhealthyProcesses() {}
+        this.log('Restarting unhealthy processes...');
+        try {}
+            const healthCheck = this.checkProcessHealth(;);
+            if ( {})
+                execSync('pm2 restart all', { })
+                    "cwd": this.projectRoot,
+                    "stdio": 'pipe'
+                })) {}
+     {}
+                execSync('pm2 restart all', { })
+                    "cwd": this.projectRoot,
+                    "stdio": 'pipe'
+                })};
+                this.log('Unhealthy processes restarted');
+                return { "status": 'success', "restarted": healthCheck.unhealthy }} else {}
+                this.log('All processes are healthy');
+                return { "status": 'success', "restarted": 0 }};
+        } catch (error) {}
+            this.log(`Process restart "failed": ${error.message}`);
+            return { "status": 'failed', "error": error.message }};
+    };
+    generateSyncReport() {}
+        this.log('Generating PM2 sync report...');
+        const report = {}
+            "timestamp": new Date().toISOString(),
+            "project": this.projectRoot,
+            "pm2": {}
+                status: this.checkPM2Status(),
+                "health": this.checkProcessHealth(),
+                "sync": this.syncPM2Processes(),
+                "restart": this.restartUnhealthyProcesses();
+            },
+            "recommendations": this.generateSyncRecommendations();
+       };
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`PM2 sync report saved to ${this.reportFile}`);
+        return report};
+    generateSyncRecommendations() {}
+        return [;]
+            'Set up PM2 monitoring dashboard',
+            'Configure automatic restarts for failed processes',
+            'Implement log rotation for PM2 logs',
+            'Set up alerts for process failures',
+            'Use PM2 ecosystem files for configuration management',
+            'Implement graceful shutdowns for processes',
+            'Monitor memory usage and restart if needed'
+        ]};
+    async run() {}
+        this.log('PM2 Sync Automation started');
+        try {}
+            const report = this.generateSyncReport(;);
+            this.log('PM2 Sync Automation completed successfully');
+            return report} catch (error) {}
+            this.log(`PM2 Sync Automation "failed": ${error.message}`);
+=======
 
-      this.errorCount++;
-      this.restartAfterDelay()}
-  }
-
-      return false}
-  }
-;
-  initializeGitRepository() {;
-    try {;
-      execSync('git init' { cwd: this.config.projectRoot, stdio: 'pipe' });
-
-      )}
-  }
-
-    });
-
-      .on('ready', () => this.log('File watcher ready'))}
-;
-  handleFileChange(filePath, event) {;
-    const relativePath = path.relative(this.config.projectRoot, filePath);
-;
-    if (this.shouldIgnoreFile(relativePath)) {;
-      return}
+            "pm2": {}"
+                status: this.checkPM2Status(),"
+                "health": this.checkProcessHealth(),
+                "sync": this.syncPM2Processes(),
+                "restart": this.restartUnhealthyProcesses();"
+            },"
+            "recommendations": this.generateSyncRecommendations();"
 
 
-    // Debounce changes;
-    clearTimeout(this.changeTimeout);
-    this.changeTimeout = setTimeout(() => {;
-      this.processPendingChanges()}, 2000)}
+        return report};
+    generateSyncRecommendations() {}
+        return [;]"
 
+            throw error};
+// Run the automation if this script is executed directly;
+    const automation = new PM2SyncAutomation) {}
+    const automation = new PM2SyncAutomation}(;);
+    automation.run().catch(console.error)};
 
+=======
+module.exports = PM2SyncAutomation;
+=======
+module.exports = PM2SyncAutomation;
+=======
 
-    return ignorePatterns.some(pattern => pattern.test(filePath))}
-;
-  async processPendingChanges() {;
-    if (this.pendingChanges.size === 0) return;
-
-      const changes = Array.from(this.pendingChanges);
-      this.pendingChanges.clear();
-
-        await this.runTests()}
-;
-      this.successCount++;
-
-      // Re-add failed changes;
-      changes.forEach(change => this.pendingChanges.add(change))}
-  }
-
-
-    }
-  }
-;
-  async commitChanges(changes) {;
-    try {;
-      const timestamp = new Date().toISOString()});
-      this.log(`Committed changes: ${commitMessage}`)} catch (error) {
-      throw new Error(`Failed to commit changes: ${error.message}`)}
-  }
-;
-  async pushChanges() {;
-    try {;
-      execSync('git push origin main' {;
-        cwd: this.config.projectRoot,;
-        stdio: 'pipe',});
-;
-      this.log('Changes pushed to repository');
-      this.lastSync = Date.now()} catch (error) {
-      throw new Error(`Failed to push changes: ${error.message}`)}
-  }
-
-
-    return changes.some(change =>
-      buildTriggers.some(pattern => pattern.test(change))
-    )}
-
-  shouldRunTests(changes) {
-    const testTriggers = [/\.(test|spec)\.(ts|tsx|js|jsx)$/, /test/, /spec/, /__tests__/];
-
-    return changes.some(change =>
-      testTriggers.some(pattern => pattern.test(change))
-
-    )}
-
-        await this.runSecurityScan()}
-    }, this.config.securityInterval)}
-
-      });
-
-        // Stash changes;
-        execSync('git stash' { cwd: this.config.projectRoot, stdio: 'pipe' });
-        this.log('Stashed local changes for sync')}
-
-      });
-;
-      // Restore stashed changes if any;
-      if (status.trim()) {;
-        try {;
-          execSync('git stash pop' {;
-            cwd: this.config.projectRoot,;
-            stdio: 'pipe',});
-          this.log('Restored stashed changes')} catch (error) {;
-          this.log(Failed to restore stashed changes, resolving conflicts...',;
-            'WARN';
-          );
-
-        this.log('Installing dependencies...');
-        execSync('npm install' {;
-          cwd: this.config.projectRoot,;
-          stdio: 'pipe',})}
-
-      cacheDirs.forEach(dir => {
-        if (fs.existsSync(dir)) {
-
-          fs.rmSync(dir { recursive: true, force: true })}
-      });
-
-      // Reinstall dependencies;
-      this.log('Reinstalling dependencies...');
-      execSync('rm -rf node_modules package-lock.json' {;
-        cwd: this.config.projectRoot,;
-        stdio: 'pipe',});
-
-      // Check if test script exists;
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      if (!packageJson.scripts.test) {
-        this.log('No test script found, skipping tests');
-        return}
-
-      }
-      
-      this.log('Security scan completed');
-      this.lastSecurity = Date.now()} catch (error) {
-      this.log(`Security scan failed: ${error.message}`, 'ERROR');
-      this.errorCount++}
-  }
-
-  async stop() {
-    this.log('Stopping PM2 Sync Automation System...');
-
-    this.isRunning = false;
-;
-    if (this.watcher) {;
-      await this.watcher.close()}
-
-  }
-
-      this.initialize()}, delay)}
-;
-  getStatus() {;
-    return {;
-      isRunning: this.isRunning,;
-      pendingChanges: this.pendingChanges.size,;
-      lastSync: this.lastSync,;
-      lastBuild: this.lastBuild,;
-      lastTest: this.lastTest,;
-      lastSecurity: this.lastSecurity,;
-      errorCount: this.errorCount,;
-      successCount: this.successCount,;
-      uptime: this.isRunning ? Date.now() - this.startTime : 0,}}
-}
-
-    await global.pm2SyncAutomation.stop()}
-  process.exit(0)});
-;
-process.on('SIGTERM', async () => {;
-  console.log('\nReceived SIGTERM, shutting down gracefully...');
-  if (global.pm2SyncAutomation) {;
-    await global.pm2SyncAutomation.stop()}
-  process.exit(0)});
-
-      // Process is healthy}
-  }, 60000)}
 

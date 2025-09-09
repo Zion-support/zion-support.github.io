@@ -1,5 +1,5 @@
 
-import React from "react",
+import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { cn } from "@/lib/utils",
 import { format } from "date-fns";
@@ -32,6 +32,5 @@ import { useTheme } from "@/hooks/useTheme",
       )}>
         <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
         <div className={cn(
-
-
-
+  );
+};

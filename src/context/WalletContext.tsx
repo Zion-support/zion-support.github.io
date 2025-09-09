@@ -11,7 +11,7 @@ import {
   useAppKitEvents,
 } from '@reown/appkit/react';
 import { EthersAdapter } from '@reown/appkit-adapter-ethers';
-import { mainnet, polygon, goerli, optimism, arbitrum, base } from '@reown/appkit/networks'; // Import necessary chain objects
+import { mainnet, polygon, goerli } from '@reown/appkit/networks'; // Import necessary chain objects
 
 // Define the shape of the wallet state and context
 interface WalletState {
@@ -142,10 +142,10 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
         await appKit.open(); // Opens the modal
         // State update will be handled by the subscription
       } catch (error) {
-        console.error('Error connecting wallet:', error);
+        // console.error('Error connecting wallet:', error);
       }
     } else {
-        console.error('AppKit not initialized');
+        // console.error('AppKit not initialized');
     }
   }, [appKit]);
 
@@ -155,7 +155,7 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
         await appKit.disconnect();
         // State update will be handled by the subscription
       } catch (error) {
-        console.error('Error disconnecting wallet:', error);
+        // console.error('Error disconnecting wallet:', error);
       }
     }
   }, [appKit]);

@@ -26,4 +26,5 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {  re
 
 import React from './react';
 import { Button  } from '@/components / ui / button';
-
+  );
+};

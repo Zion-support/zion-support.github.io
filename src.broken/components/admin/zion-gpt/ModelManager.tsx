@@ -7,3 +7,5 @@ export function ModelManager() {
     </div>
   )
 }
+  );
+};

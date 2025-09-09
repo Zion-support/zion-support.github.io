@@ -2,9 +2,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 function escapeHtml(input: string): string {
 	return String(input)
-		.replace(/</g, '&lt;')
-		.replace(/>/g, '&gt;')
-		.replace(/"/g, '&quot;')
+		.replace(/</g, '<')
+		.replace(/>/g, '>')
+		.replace(/"/g, '"')
 		.replace(/'/g, '&#039;');
 }
 

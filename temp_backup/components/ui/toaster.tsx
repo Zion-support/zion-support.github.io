@@ -7,6 +7,7 @@ export function HotToasts() {
     <HotToaster position="top-right" />
   );
 }
+
 import { cn } from '@/lib/utils';
 
 export interface Toast {

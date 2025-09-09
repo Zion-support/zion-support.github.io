@@ -93,3 +93,5 @@ title='Browser Automation Cloud''
 }
 	)
 }
+  );
+};

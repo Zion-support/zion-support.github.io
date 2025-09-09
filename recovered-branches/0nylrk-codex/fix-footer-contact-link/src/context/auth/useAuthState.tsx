@@ -2,5 +2,4 @@
  */
 export function useAuthState() {
   return {
-
-
+};

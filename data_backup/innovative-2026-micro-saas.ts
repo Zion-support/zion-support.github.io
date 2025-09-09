@@ -16,4 +16,4 @@ export: interface Innovative2026MicroSaas {
       'Scalable: platform'',;
       'Integration: capabilities'',;
       'Future-ready: architecture';'],
-
+}

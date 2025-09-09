@@ -7,3 +7,5 @@ export function SlideEditor() {
     </div>
   )
 }
+  );
+};
