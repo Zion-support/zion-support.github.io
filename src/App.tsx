@@ -1,12 +1,10 @@
 import React, { Suspense, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
-import { ChatAssistant } from './components/ChatAssistant';
-import { ErrorBoundary } from './components/ErrorBoundary';
-import { Accessibility } from './components/Accessibility';
-import { Analytics } from './components/Analytics';
-import { PageLoader } from './components/LoadingSpinner';
+import { EnhancedHeader } from './components/header/EnhancedHeader';
+import { EnhancedFooter } from './components/footer/EnhancedFooter';
+import { FuturisticAnimatedBackground } from './components/backgrounds/FuturisticAnimatedBackground';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import Analytics from './components/Analytics';
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home.jsx'));
@@ -239,8 +237,15 @@ function App() {
             </Routes>
           </Suspense>
         </main>
-        <Footer />
-        <ChatAssistant />
+        
+        {/* Enhanced Footer */}
+        <EnhancedFooter />
+        
+        {/* Performance Monitor */}
+        <PerformanceMonitor />
+        
+        {/* Analytics */}
+        <Analytics />
       </div>
     </Router>
   );

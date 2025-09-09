@@ -6,10 +6,18 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Disallow admin and private areas
 Disallow: /admin/
-Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/
+Disallow: /private/
+Disallow: /temp/
+
+# Allow important pages
+Allow: /services/
+Allow: /solutions/
+Allow: /about/
+Allow: /contact/
+Allow: /blog/
+Allow: /careers/
 
 # Allow important files
 Allow: /robots.txt
@@ -20,34 +28,34 @@ Allow: /manifest.json
 # Crawl delay (optional)
 Crawl-delay: 1
 
-# Additional directives for search engines
+# Specific rules for major search engines
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
+Crawl-delay: 2
 
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: Baiduspider
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-# Block bad bots
-User-agent: AhrefsBot
+# Block AI training bots
+User-agent: GPTBot
 Disallow: /
 
-User-agent: SemrushBot
+User-agent: ChatGPT-User
 Disallow: /
 
-User-agent: MJ12bot
+User-agent: CCBot
 Disallow: /
 
-User-agent: DotBot
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Omgilibot
 Disallow: /
