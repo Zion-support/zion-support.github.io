@@ -6,63 +6,32 @@ interface SystemHealth {
   timestamp: number;
   uptime: number;
   version: string;
-  environment: string;
-  checks: {
-    database?: { status: string; message: string; responseTime?: number };
-    memory?: { status: string; usage?: number; limit?: number };
-    disk?: { status: string; usage?: number; available?: number };
-    services?: { status: string; message: string };
-  };
-  metrics: {
-    requestsPerMinute?: number;
-    averageResponseTime?: number;
-    errorRate?: number;
-    activeConnections?: number;
-  };
-}
+  commit: string;
+  timestamp: string;
+};
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<SystemHealth | { error: string }>
-): Promise<void> {
-  try {
-    const startTime = Date.now();
-    
-    // Basic health checks
-    const healthChecks = await performHealthChecks();
-    
-    // Gather system metrics
-    const metrics = await gatherMetrics();
-    
-    // Calculate overall status
-    const overallStatus = calculateOverallStatus(healthChecks);
-    
-    const healthReport: SystemHealth = {
-      status: overallStatus,
-      timestamp: Date.now(),
-      uptime: process.uptime() * 1000, // Convert to milliseconds
-      version: process.env.npm_package_version || 'unknown',
-      environment: process.env.NODE_ENV || 'unknown',
-      checks: healthChecks,
-      metrics
-    };
+  res: NextApiResponse<HealthResponse | { error: string; status: string }>
+) {
+  if (req.method === 'GET') {
+    try {
+      const { publicRuntimeConfig } = getConfig();
 
-    // Set appropriate HTTP status code
-    const statusCode = getHttpStatusCode(overallStatus);
-    
-    // Set cache headers for health endpoint
-    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
-    res.setHeader('Pragma', 'no-cache');
-    res.setHeader('Expires', '0');
-    
-    res.status(statusCode).json(healthReport);
-
-  } catch (error) {
-    console.error('Health check failed:', error);
-    
-    res.status(503).json({
-      error: 'Health check failed',
-    });
+      let version = publicRuntimeConfig.NEXT_PUBLIC_APP_VERSION || "unknown";
+      if (version === "unknown") {
+        console.warn("Application version not set (NEXT_PUBLIC_APP_VERSION). Defaulting to 'unknown'.");
+      }
+      const commit = process.env.COMMIT_REF || "unknown"; // COMMIT_REF is not a public var
+      const timestamp = new Date().toISOString();
+      res.status(200).json({ status: 'ok', version, commit, timestamp });
+    } catch (error) {
+      console.error('Failed to retrieve health information:', error);
+      res.status(500).json({ error: 'Failed to retrieve health information.', status: 'error' });
+    }
+  } else {
+    res.setHeader('Allow', ['GET']);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }
 
