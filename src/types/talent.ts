@@ -40,6 +40,10 @@ export interface TalentFilter {
   rating?: number;
 }
 
+export interface TalentProfileWithSocial extends TalentProfile {
+  social?: Record<string, string>;
+}
+
 export interface TalentSearchResult {
   profiles: TalentProfile[];
   total: number;

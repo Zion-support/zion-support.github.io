@@ -9,10 +9,15 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
-    "types": ["vite/client", "react", "react-router-dom", "socket.io", "socket.io-client", "vitest/globals"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "axios": ["./src/lib/axios.ts"]
+    },
+    "types": ["node", "react", "react-dom", "next", "next/types/global", "vitest/globals"],
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -37,12 +42,6 @@
     "allowJs": true,
     "incremental": true,
     "noEmitOnError": false,
-    /* Path mapping */
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "axios": ["./src/lib/axios.ts"]
-    },
     "plugins": [
       {
         "name": "next"

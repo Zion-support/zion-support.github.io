@@ -4,14 +4,25 @@ interface User {
   id: string;
   email: string;
   name: string;
+  avatarUrl?: string;
+  displayName?: string;
+  userType?: string;
+  profileComplete?: boolean;
+  created_at?: string;
+  updatedAt?: string;
+  role?: string;
+  points?: number;
+  headline?: string;
 }
 
 interface AuthContextType {
   user: User | null;
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
-  isLoading: boolean;
+  loading: boolean;
   isAuthenticated: boolean;
+  isLoading: boolean;
+  setUser: (user: User | null) => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -23,6 +34,8 @@ interface AuthProviderProps {
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const loading = isLoading;
+  const isAuthenticated = !!user;
 
   useEffect(() => {
     // Check for existing session
@@ -68,8 +81,10 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     user,
     login,
     logout,
+    loading,
+    isAuthenticated,
     isLoading,
-    isAuthenticated: !!user,
+    setUser,
   };
 
   return (
