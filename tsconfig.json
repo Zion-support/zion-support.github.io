@@ -44,9 +44,19 @@
     ]
   },
   "include": [
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    ".next/types/**/*.ts",
     "src/**/*",
+    "pages/**/*",
     "*.ts",
     "*.tsx"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
   ],
   "exclude": [
     "node_modules"
