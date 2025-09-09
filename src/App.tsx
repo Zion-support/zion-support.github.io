@@ -38,26 +38,15 @@ const HomePage = () => {
     { value: "15+", label: "Years Experience", icon: <Star className="w-6 h-6" /> }
   ];
 
-  const services = [
-    {
-      title: "AI & Machine Learning",
-      description: "Custom AI solutions, predictive analytics, and intelligent automation",
-      price: "From $299/month",
-      features: ["Custom AI Models", "Predictive Analytics", "Process Automation", "24/7 Monitoring"]
-    },
-    {
-      title: "Cybersecurity Services",
-      description: "Comprehensive security solutions including threat detection and compliance",
-      price: "From $499/month",
-      features: ["Threat Detection", "Compliance Management", "Security Audits", "Incident Response"]
-    },
-    {
-      title: "Cloud Solutions",
-      description: "Multi-cloud management, optimization, and migration services",
-      price: "From $399/month",
-      features: ["Multi-Cloud Management", "Cost Optimization", "Migration Support", "Performance Monitoring"]
-    }
-  ];
+// New service pages
+const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
+const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
+const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
+const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
+const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const EnhancedInnovativeServicesShowcase2027 = React.lazy(() => import('./pages/EnhancedInnovativeServicesShowcase2027'));
+const Revolutionary2029ServicesOverview = React.lazy(() => import('./pages/Revolutionary2029ServicesOverview'));
 
 // Enhanced loading component with better UX
 const LoadingSpinner = () => (
@@ -70,36 +59,72 @@ const LoadingSpinner = () => (
 
 function App() {
   return (
-    <AuthProvider>
-      <Router>
-        <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-          <AppHeader />
-          
-          <main className="flex-1">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<BlogPost />} />
-                <Route path="/faq" element={<FAQ />} />
-                <Route path="/careers" element={<Careers />} />
-                <Route path="/privacy" element={<Privacy />} />
-                <Route path="/terms" element={<Terms />} />
-                <Route path="/sitemap" element={<Sitemap />} />
-                <Route path="/green-it" element={<GreenIT />} />
-                <Route path="/partners" element={<PartnersPage />} />
-                <Route path="/login" element={<Login />} />
-              </Routes>
-            </Suspense>
-          </main>
-          
-          <Footer />
-          <ChatAssistant />
-        </div>
-      </Router>
-    </AuthProvider>
+    <Router>
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative">
+        {/* Futuristic Animated Background */}
+        <FuturisticAnimatedBackground />
+        
+        {/* Navigation */}
+        <FuturisticNavigation />
+        
+        <main className="flex-1 relative z-10">
+          <Suspense fallback={<EnhancedLoadingSpinner />}>
+            <Routes>
+              {/* Main Routes */}
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/green-it" element={<GreenIT />} />
+              <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/enhanced-services" element={<EnhancedServices />} />
+              
+              {/* AI Services Routes */}
+              <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/ai-services/:service" element={<AIServicesPage />} />
+              
+              {/* Micro SAAS Routes */}
+              <Route path="/micro-saas" element={<MicroSAASServicesPage />} />
+              <Route path="/micro-saas/:service" element={<MicroSAASServicesPage />} />
+              
+              {/* IT Services Routes */}
+              <Route path="/it-services" element={<ITServicesPage />} />
+              <Route path="/it-services/:service" element={<ITServicesPage />} />
+              
+              {/* Innovative Services 2027 Routes */}
+              <Route path="/innovative-services-2027" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview2027 />} />
+              <Route path="/comprehensive-pricing-guide" element={<ComprehensivePricingGuide2027 />} />
+              <Route path="/enhanced-innovative-services-2027" element={<EnhancedInnovativeServicesShowcase2027 />} />
+              
+              {/* Revolutionary 2029 Services Routes */}
+              <Route path="/revolutionary-2029-services" element={<Revolutionary2029ServicesOverview />} />
+              
+              {/* Emerging Tech Routes */}
+              <Route path="/emerging-tech" element={<GreenIT />} />
+              <Route path="/emerging-tech/:service" element={<GreenIT />} />
+              
+              {/* Marketplace Routes */}
+              <Route path="/marketplace" element={<GreenIT />} />
+              <Route path="/marketplace/:service" element={<GreenIT />} />
+            </Routes>
+          </Suspense>
+        </main>
+        
+        {/* Footer */}
+        <FuturisticFooter />
+        
+        {/* Chat Assistant */}
+        <ChatAssistant />
+      </div>
+    </Router>
   );
 };
 

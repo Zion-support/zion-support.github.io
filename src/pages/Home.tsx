@@ -36,11 +36,23 @@ import SEOHead from '../components/SEOHead';
 import { SEOConfigs } from '../components/SEOHead';
 import { motion } from 'framer-motion';
 
-// Lazy load components for better performance
-const LazyServicesSection = React.lazy(() => import('../components/home/ServicesSection'));
-const LazyFeaturesSection = React.lazy(() => import('../components/home/FeaturesSection'));
-const LazyTestimonialsSection = React.lazy(() => import('../components/home/TestimonialsSection'));
-const LazyCTASection = React.lazy(() => import('../components/home/CTASection'));
+import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
+import { FloatingCTA } from "@/components/FloatingCTA";
+import { PricingSection } from "@/components/PricingSection";
+import { TechSolutionsSection } from "@/components/TechSolutionsSection";
+import { CaseStudiesSection } from "@/components/CaseStudiesSection";
+import { TeamExpertiseSection } from "@/components/TeamExpertiseSection";
+import { GlobalPresenceSection } from "@/components/GlobalPresenceSection";
+import { InnovationResearchSection } from "@/components/InnovationResearchSection";
+import { ClientSuccessStoriesSection } from "@/components/ClientSuccessStoriesSection";
+import { TechnologyStackSection } from "@/components/TechnologyStackSection";
+import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
+import { AIServicesShowcase } from "@/components/AIServicesShowcase";
+import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
+import { EnhancedInnovativeServicesShowcase } from "@/components/EnhancedInnovativeServicesShowcase";
+import { Revolutionary2029ServicesShowcase } from "@/components/Revolutionary2029ServicesShowcase";
+import { EnhancedPricingComparison } from "@/components/EnhancedPricingComparison";
 
 // Loading fallback component
 const LoadingFallback = ({ message }: { message: string }) => (
@@ -525,9 +537,11 @@ const StatsSection = memo(() => {
         <LazyServicesSection />
       </Suspense>
 
-      <Suspense fallback={<LoadingFallback message="Loading features..." />}>
-        <LazyFeaturesSection />
-      </Suspense>
+      {/* Revolutionary 2029 Services Showcase */}
+      <Revolutionary2029ServicesShowcase />
+
+      {/* Enhanced Pricing Comparison */}
+      <EnhancedPricingComparison />
 
       <Suspense fallback={<LoadingFallback message="Loading testimonials..." />}>
         <LazyTestimonialsSection />
