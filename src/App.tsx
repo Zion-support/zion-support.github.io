@@ -1,180 +1,143 @@
-import React, { Suspense, useState } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
+import { ErrorBoundary } from 'react-error-boundary';
+import { FuturisticNavigation } from './components/FuturisticNavigation';
+import { FuturisticFooter } from './components/FuturisticFooter';
+import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 import { ChatAssistant } from './components/ChatAssistant';
-import LoadingSpinner from './components/ui/LoadingSpinner';
-import SEO from './components/SEO';
-import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
-// Lazy load pages
-const Home = React.lazy(() => import('./pages/Home.jsx'));
-const About = React.lazy(() => import('./pages/About.jsx'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage.jsx'));
-const Contact = React.lazy(() => import('./pages/Contact.jsx'));
-const Login = React.lazy(() => import('./pages/Login.jsx'));
-const Signup = React.lazy(() => import('./pages/Signup.jsx'));
-const ForgotPassword = React.lazy(() => import('./pages/ForgotPassword.jsx'));
-const ResetPassword = React.lazy(() => import('./pages/ResetPassword.jsx'));
-const Dashboard = React.lazy(() => import('./pages/Dashboard.jsx'));
-const ProfilePage = React.lazy(() => import('./pages/ProfilePage.jsx'));
-const FAQ = React.lazy(() => import('./pages/FAQ.jsx'));
-const Privacy = React.lazy(() => import('./pages/Privacy.jsx'));
-const Terms = React.lazy(() => import('./pages/Terms.jsx'));
-const Cookies = React.lazy(() => import('./pages/Cookies.jsx'));
-const Careers = React.lazy(() => import('./pages/Careers.jsx'));
-const Partners = React.lazy(() => import('./pages/Partners.jsx'));
-const Blog = React.lazy(() => import('./pages/BlogPost.jsx'));
-const Marketplace = React.lazy(() => import('./pages/ProductPage.jsx'));
-const Talent = React.lazy(() => import('./pages/TalentOnboarding.jsx'));
-const Equipment = React.lazy(() => import('./pages/EquipmentPage.jsx'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT.jsx'));
-const ITOnsiteServices = React.lazy(() => import('./pages/ITOnsiteServicesPage.jsx'));
-const Help = React.lazy(() => import('./pages/Help.jsx'));
-const Security = React.lazy(() => import('./pages/Security.jsx'));
-const Status = React.lazy(() => import('./pages/Status.jsx'));
-const Accessibility = React.lazy(() => import('./pages/Accessibility.jsx'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap.jsx'));
-const Enterprise = React.lazy(() => import('./pages/Enterprise.jsx'));
-const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal.jsx'));
-const Pricing = React.lazy(() => import('./pages/Pricing.jsx'));
-const Community = React.lazy(() => import('./pages/CommunityPage.jsx'));
-const Events = React.lazy(() => import('./pages/Events.jsx'));
-const Webinars = React.lazy(() => import('./pages/Webinars.jsx'));
-const CaseStudies = React.lazy(() => import('./pages/CaseStudy.jsx'));
-const BlockchainServices = React.lazy(() => import('./pages/BlockchainServicesPage.jsx'));
-const Cybersecurity = React.lazy(() => import('./pages/Cybersecurity.jsx'));
-const CloudMigration = React.lazy(() => import('./pages/CloudMigrationServices.jsx'));
-const AIBusinessSolutions = React.lazy(() => import('./pages/AIBusinessSolutions.jsx'));
-const DigitalTransformation = React.lazy(() => import('./pages/DigitalTransformation.jsx'));
-const QuantumTechnology = React.lazy(() => import('./pages/QuantumTechnology.jsx'));
-const FiveGEnterpriseSolutions = React.lazy(() => import('./pages/5GEnterpriseSolutions.jsx'));
-const MicroSAASServices = React.lazy(() => import('./pages/MicroSAASServicesPage.jsx'));
-const FinancialSolutions = React.lazy(() => import('./pages/FinancialSolutions.jsx'));
-const ManufacturingSolutions = React.lazy(() => import('./pages/ManufacturingSolutions.jsx'));
-const Cart = React.lazy(() => import('./pages/Cart.jsx'));
-const Orders = React.lazy(() => import('./pages/Orders.jsx'));
-const OrderDetail = React.lazy(() => import('./pages/OrderDetail.jsx'));
-const OrderConfirmation = React.lazy(() => import('./pages/OrderConfirmation.jsx'));
-const RequestQuote = React.lazy(() => import('./pages/RequestQuote.jsx'));
-const HowItWorks = React.lazy(() => import('./pages/HowItWorks.jsx'));
-const Mission = React.lazy(() => import('./pages/Mission.jsx'));
-const Onboarding = React.lazy(() => import('./pages/Onboarding.jsx'));
-const ServiceOnboarding = React.lazy(() => import('./pages/ServiceOnboarding.jsx'));
-const PostJob = React.lazy(() => import('./pages/PostJob.jsx'));
-const JobDetails = React.lazy(() => import('./pages/JobDetails.jsx'));
-const HiringTracker = React.lazy(() => import('./pages/HiringTracker.jsx'));
-const PublishProduct = React.lazy(() => import('./pages/PublishProduct.jsx'));
-const PortfolioBuilder = React.lazy(() => import('./pages/PortfolioBuilder.jsx'));
-const ProjectDetails = React.lazy(() => import('./pages/ProjectDetails.jsx'));
-const ProjectRoom = React.lazy(() => import('./pages/ProjectRoom.jsx'));
-const VideoCall = React.lazy(() => import('./pages/VideoCall.jsx'));
-const Notifications = React.lazy(() => import('./pages/Notifications.jsx'));
-const CreatorDashboard = React.lazy(() => import('./pages/CreatorDashboard.jsx'));
-const EnterprisePlans = React.lazy(() => import('./pages/EnterprisePlans.jsx'));
-const EnterpriseAdmin = React.lazy(() => import('./pages/EnterpriseAdmin.jsx'));
-const EnterpriseBilling = React.lazy(() => import('./pages/EnterpriseBilling.jsx'));
-const EnterpriseDemo = React.lazy(() => import('./pages/EnterpriseDemo.jsx'));
-const EnterpriseIT = React.lazy(() => import('./pages/EnterpriseIT.jsx'));
-const AIAnalyticsDashboard = React.lazy(() => import('./pages/AIAnalyticsDashboard.jsx'));
-const AdvancedServicesPage = React.lazy(() => import('./pages/AdvancedServicesPage.jsx'));
-const ComprehensiveServices = React.lazy(() => import('./pages/ComprehensiveServices.jsx'));
-const ComprehensiveServicesOverview = React.lazy(() => import('./pages/ComprehensiveServicesOverview.jsx'));
-const ComprehensiveContact = React.lazy(() => import('./pages/ComprehensiveContact.jsx'));
-const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview.jsx'));
-const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage.jsx'));
-const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparisonPage.jsx'));
-const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage.jsx'));
-const EnhancedServicesShowcase = React.lazy(() => import('./pages/EnhancedServicesShowcase.jsx'));
-const NextGenInnovativeServices = React.lazy(() => import('./pages/NextGenInnovativeServices.jsx'));
-const NextGenServicesShowcase2025 = React.lazy(() => import('./pages/NextGenServicesShowcase2025.jsx'));
-const CuttingEdgeInnovativeServices2025 = React.lazy(() => import('./pages/CuttingEdgeInnovativeServices2025.jsx'));
-const CuttingEdgeServicesShowcase = React.lazy(() => import('./pages/CuttingEdgeServicesShowcase.jsx'));
-const CybersecuritySuite = React.lazy(() => import('./pages/CybersecuritySuite.jsx'));
-const CloudCostOptimizer = React.lazy(() => import('./pages/CloudCostOptimizer.jsx'));
-const ContentGenerator = React.lazy(() => import('./pages/ContentGenerator.jsx'));
-const AIContentGenerator = React.lazy(() => import('./pages/AIContentGenerator.jsx'));
-const ServiceDescriptionGenerator = React.lazy(() => import('./pages/ServiceDescriptionGenerator.jsx'));
-const AutonomousBusinessOperationsPlatform = React.lazy(() => import('./pages/AutonomousBusinessOperationsPlatform.jsx'));
-const TokenIntegrations = React.lazy(() => import('./pages/TokenIntegrations.jsx'));
-const UpdatePassword = React.lazy(() => import('./pages/UpdatePassword.jsx'));
-const ListingDetail = React.lazy(() => import('./pages/ListingDetail.jsx'));
-const CategoryDetail = React.lazy(() => import('./pages/CategoryDetail.jsx'));
-const ProductPage = React.lazy(() => import('./pages/ProductPage.jsx'));
-const MoreProductsPage = React.lazy(() => import('./pages/MoreProductsPage.jsx'));
-const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail.jsx'));
-const ForumCategoryPage = React.lazy(() => import('./pages/ForumCategoryPage.jsx'));
-const ForumPostPage = React.lazy(() => import('./pages/ForumPostPage.jsx'));
-const CreatePostPage = React.lazy(() => import('./pages/CreatePostPage.jsx'));
-const EditPostPage = React.lazy(() => import('./pages/EditPostPage.jsx'));
-const Featured = React.lazy(() => import('./pages/Featured.jsx'));
-const Developer = React.lazy(() => import('./pages/Developer.jsx'));
-const Documentation = React.lazy(() => import('./pages/Documentation.jsx'));
-const EmergingTech = React.lazy(() => import('./pages/EmergingTech.jsx'));
-const EnhancedHome = React.lazy(() => import('./pages/EnhancedHome.jsx'));
-const EnhancedInnovativeServices = React.lazy(() => import('./pages/EnhancedInnovativeServices.jsx'));
-const ErrorRoutes = React.lazy(() => import('./pages/ErrorRoutes.jsx'));
-
-// Additional pages that were missing
-const Careers = lazy(() => import('./pages/Careers'));
-const Solutions = lazy(() => import('./pages/Solutions'));
-const ResearchDevelopment = lazy(() => import('./pages/ResearchDevelopment'));
-const CaseStudies = lazy(() => import('./pages/CaseStudies'));
-const News = lazy(() => import('./pages/News'));
-const Events = lazy(() => import('./pages/Events'));
-const Blog = lazy(() => import('./pages/Blog'));
-const Documentation = lazy(() => import('./pages/Documentation'));
-const WhitePapers = lazy(() => import('./pages/WhitePapers'));
-const Webinars = lazy(() => import('./pages/Webinars'));
-const Training = lazy(() => import('./pages/Training'));
-const HelpCenter = lazy(() => import('./pages/HelpCenter'));
-const Support = lazy(() => import('./pages/Support'));
-const FAQ = lazy(() => import('./pages/FAQ'));
-const Privacy = lazy(() => import('./pages/Privacy'));
-const Terms = lazy(() => import('./pages/Terms'));
-const Sitemap = lazy(() => import('./pages/Sitemap'));
-const Partners = lazy(() => import('./pages/Partners'));
-
-// Service-specific pages
-const AIServices = lazy(() => import('./pages/services/AIServices'));
-const CloudServices = lazy(() => import('./pages/services/CloudServices'));
-const CybersecurityServices = lazy(() => import('./pages/services/CybersecurityServices'));
-const InfrastructureServices = lazy(() => import('./pages/services/InfrastructureServices'));
-const TransformationServices = lazy(() => import('./pages/services/TransformationServices'));
-const ConsultingServices = lazy(() => import('./pages/services/ConsultingServices'));
-
-// Loading spinner component
-const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center bg-slate-900">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500"></div>
+// Enhanced loading component with better UX
+const EnhancedLoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="relative">
+      <div className="w-32 h-32 border-4 border-cyan-400/20 rounded-full"></div>
+      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-400 font-bold text-lg">
+        ZION
+      </div>
+      <div className="mt-4 text-center">
+        <div className="text-cyan-400 text-sm animate-pulse">Loading amazing experiences...</div>
+      </div>
+    </div>
   </div>
 );
 
-// Micro SAAS pages
-const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
-const CustomerExperience = React.lazy(() => import('./pages/services/AICustomerServiceAutomation'));
-const SupplyChain = React.lazy(() => import('./pages/services/ManufacturingSolutions'));
-const ContentCreation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
-const HRPlatform = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
-const AIQuantumFinance = React.lazy(() => import('./pages/services/AIQuantumFinance'));
-const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
-const AISmartCitySolutions = React.lazy(() => import('./pages/services/AISmartCitySolutions'));
+// Error boundary component
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+    <div className="text-center max-w-md mx-auto px-6">
+      <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+        <span className="text-3xl">⚠️</span>
+      </div>
+      <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+      <p className="text-gray-400 mb-6">
+        We're sorry, but something unexpected happened. Please try refreshing the page.
+      </p>
+      <div className="space-y-3">
+        <button
+          onClick={resetErrorBoundary}
+          className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+        >
+          Try Again
+        </button>
+        <button
+          onClick={() => window.location.href = '/'}
+          className="w-full px-6 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+        >
+          Go Home
+        </button>
+      </div>
+      {process.env.NODE_ENV === 'development' && (
+        <details className="mt-6 text-left">
+          <summary className="text-cyan-400 cursor-pointer">Error Details</summary>
+          <pre className="mt-2 text-xs text-gray-400 bg-black/50 p-4 rounded overflow-auto">
+            {error.message}
+          </pre>
+        </details>
+      )}
+    </div>
+  </div>
+);
 
-// Marketplace pages
-const Marketplace = React.lazy(() => import('./pages/Marketplace'));
-const Products = React.lazy(() => import('./pages/Marketplace'));
-const Talent = React.lazy(() => import('./pages/Marketplace'));
-const Equipment = React.lazy(() => import('./pages/Marketplace'));
+// Lazy load pages with better error handling
+const Home = lazy(() => import('./pages/Home').catch(() => ({ default: () => <div>Error loading Home page</div> })));
+const About = lazy(() => import('./pages/About').catch(() => ({ default: () => <div>Error loading About page</div> })));
+const Contact = lazy(() => import('./pages/Contact').catch(() => ({ default: () => <div>Error loading Contact page</div> })));
+const Blog = lazy(() => import('./pages/Blog').catch(() => ({ default: () => <div>Error loading Blog page</div> })));
+const BlogPost = lazy(() => import('./pages/BlogPost').catch(() => ({ default: () => <div>Error loading Blog Post page</div> })));
+const PartnersPage = lazy(() => import('./pages/PartnersPage').catch(() => ({ default: () => <div>Error loading Partners page</div> })));
+const Login = lazy(() => import('./pages/Login').catch(() => ({ default: () => <div>Error loading Login page</div> })));
+const FAQ = lazy(() => import('./pages/FAQ').catch(() => ({ default: () => <div>Error loading FAQ page</div> })));
+const Careers = lazy(() => import('./pages/Careers').catch(() => ({ default: () => <div>Error loading Careers page</div> })));
+const Privacy = lazy(() => import('./pages/Privacy').catch(() => ({ default: () => <div>Error loading Privacy page</div> })));
+const Terms = lazy(() => import('./pages/Terms').catch(() => ({ default: () => <div>Error loading Terms page</div> })));
+const Sitemap = lazy(() => import('./pages/Sitemap').catch(() => ({ default: () => <div>Error loading Sitemap page</div> })));
+const Services = lazy(() => import('./pages/Services').catch(() => ({ default: () => <div>Error loading Services page</div> })));
+const GreenIT = lazy(() => import('./pages/GreenIT').catch(() => ({ default: () => <div>Error loading Green IT page</div> })));
+const EnhancedServices = lazy(() => import('./pages/EnhancedServices').catch(() => ({ default: () => <div>Error loading Enhanced Services page</div> })));
 
-// Company pages
-const Team = React.lazy(() => import('./pages/About'));
-const Signup = React.lazy(() => import('./pages/Signup'));
-const Help = React.lazy(() => import('./pages/HelpCenterPage'));
-const Security = React.lazy(() => import('./pages/Security'));
-const Status = React.lazy(() => import('./pages/Status'));
-const Cookies = React.lazy(() => import('./pages/Cookies'));
+// New service pages with error handling
+const AIServicesPage = lazy(() => import('./pages/AIServicesPage').catch(() => ({ default: () => <div>Error loading AI Services page</div> })));
+const MicroSAASServicesPage = lazy(() => import('./pages/MicroSAASServicesPage').catch(() => ({ default: () => <div>Error loading Micro SAAS Services page</div> })));
+const ITServicesPage = lazy(() => import('./pages/ITServicesPage').catch(() => ({ default: () => <div>Error loading IT Services page</div> })));
+const InnovativeServicesShowcase2027 = lazy(() => import('./pages/InnovativeServicesShowcase2027').catch(() => ({ default: () => <div>Error loading Innovative Services 2027 page</div> })));
+const ComprehensiveServicesOverview2027 = lazy(() => import('./pages/ComprehensiveServicesOverview2027').catch(() => ({ default: () => <div>Error loading Comprehensive Services Overview 2027 page</div> })));
+const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePricingGuide2027').catch(() => ({ default: () => <div>Error loading Comprehensive Pricing Guide 2027 page</div> })));
+const EnhancedInnovativeServicesShowcase2027 = lazy(() => import('./pages/EnhancedInnovativeServicesShowcase2027').catch(() => ({ default: () => <div>Error loading Enhanced Innovative Services 2027 page</div> })));
+const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview').catch(() => ({ default: () => <div>Error loading Comprehensive Services Overview page</div> })));
+const ComprehensivePricingGuide2027New = lazy(() => import('./pages/ComprehensivePricingGuide2027').catch(() => ({ default: () => <div>Error loading Comprehensive Pricing Guide 2027 New page</div> })));
+
+// Route configuration for better organization
+const routes = [
+  // Main Routes
+  { path: "/", element: Home, name: "Home" },
+  { path: "/about", element: About, name: "About" },
+  { path: "/contact", element: Contact, name: "Contact" },
+  { path: "/blog", element: Blog, name: "Blog" },
+  { path: "/blog/:slug", element: BlogPost, name: "Blog Post" },
+  { path: "/faq", element: FAQ, name: "FAQ" },
+  { path: "/careers", element: Careers, name: "Careers" },
+  { path: "/privacy", element: Privacy, name: "Privacy" },
+  { path: "/terms", element: Terms, name: "Terms" },
+  { path: "/sitemap", element: Sitemap, name: "Sitemap" },
+  { path: "/services", element: Services, name: "Services" },
+  { path: "/green-it", element: GreenIT, name: "Green IT" },
+  { path: "/partners", element: PartnersPage, name: "Partners" },
+  { path: "/login", element: Login, name: "Login" },
+  { path: "/enhanced-services", element: EnhancedServices, name: "Enhanced Services" },
+  
+  // AI Services Routes
+  { path: "/ai-services", element: AIServicesPage, name: "AI Services" },
+  { path: "/ai-services/:service", element: AIServicesPage, name: "AI Service Detail" },
+  
+  // Micro SAAS Routes
+  { path: "/micro-saas", element: MicroSAASServicesPage, name: "Micro SAAS Services" },
+  { path: "/micro-saas/:service", element: MicroSAASServicesPage, name: "Micro SAAS Service Detail" },
+  
+  // IT Services Routes
+  { path: "/it-services", element: ITServicesPage, name: "IT Services" },
+  { path: "/it-services/:service", element: ITServicesPage, name: "IT Service Detail" },
+  
+  // Innovative Services 2027 Routes
+  { path: "/innovative-services-2027", element: InnovativeServicesShowcase2027, name: "Innovative Services 2027" },
+  { path: "/comprehensive-services-overview", element: ComprehensiveServicesOverview2027, name: "Comprehensive Services Overview 2027" },
+  { path: "/comprehensive-pricing-guide", element: ComprehensivePricingGuide2027, name: "Comprehensive Pricing Guide 2027" },
+  { path: "/enhanced-innovative-services-2027", element: EnhancedInnovativeServicesShowcase2027, name: "Enhanced Innovative Services 2027" },
+  
+  // New Comprehensive Routes
+  { path: "/services-overview", element: ComprehensiveServicesOverview, name: "Services Overview" },
+  { path: "/pricing-guide", element: ComprehensivePricingGuide2027New, name: "Pricing Guide" },
+  
+  // Emerging Tech Routes
+  { path: "/emerging-tech", element: GreenIT, name: "Emerging Tech" },
+  { path: "/emerging-tech/:service", element: GreenIT, name: "Emerging Tech Service" },
+  
+  // Marketplace Routes
+  { path: "/marketplace", element: GreenIT, name: "Marketplace" },
+  { path: "/marketplace/:service", element: GreenIT, name: "Marketplace Service" }
+];
 
 function App() {
   const [toasts, setToasts] = useState<ToastProps[]>([]);
@@ -189,60 +152,43 @@ function App() {
   };
 
   return (
-    <HelmetProvider>
-      <ErrorBoundary>
-        <Router>
-          <div className="min-h-screen bg-futuristic">
-            <SEO />
-            <AppHeader />
-            
-            <main className="flex-1">
-              <Suspense fallback={<LoadingSpinner />}>
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/blog" element={<Blog />} />
-                  <Route path="/blog/:slug" element={<BlogPost />} />
-                  <Route path="/faq" element={<FAQ />} />
-                  <Route path="/careers" element={<Careers />} />
-                  <Route path="/privacy" element={<Privacy />} />
-                  <Route path="/terms" element={<Terms />} />
-                  <Route path="/sitemap" element={<Sitemap />} />
-                  <Route path="/green-it" element={<GreenIT />} />
-                  <Route path="/partners" element={<PartnersPage />} />
-                  <Route path="/login" element={<Login />} />
-                  <Route path="/signup" element={<Signup />} />
-                  <Route path="/search" element={<SearchPage />} />
-                  <Route path="/help-center" element={<HelpCenter />} />
-                  <Route path="/dashboard" element={<Dashboard />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/solutions" element={<Solutions />} />
-                  <Route path="/research-development" element={<ResearchDevelopment />} />
-                  <Route path="/news" element={<News />} />
-                  <Route path="/request-quote" element={<RequestQuote />} />
-                  <Route path="/marketplace" element={<Marketplace />} />
-                  
-                  {/* Service Routes - only for existing pages */}
-                  <Route path="/services/cloud-devops" element={<CloudDevOps />} />
-                  <Route path="/services/digital-twin" element={<DigitalTwin />} />
-                  <Route path="/services/data-analytics" element={<DataAnalytics />} />
-                  <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
-                  <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                  
-                  {/* Catch all route */}
-                  <Route path="*" element={<Home />} />
-                </Routes>
-              </Suspense>
-            </main>
-            
-            <Footer />
-            <ChatAssistant />
-            <PerformanceMonitor />
-          </div>
-        </Router>
-      </ErrorBoundary>
-    </HelmetProvider>
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <Router>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative">
+          {/* Futuristic Animated Background */}
+          <FuturisticAnimatedBackground />
+          
+          {/* Navigation */}
+          <FuturisticNavigation />
+          
+          <main className="flex-1 relative z-10">
+            <Suspense fallback={<EnhancedLoadingSpinner />}>
+              <Routes>
+                {routes.map((route) => (
+                  <Route
+                    key={route.path}
+                    path={route.path}
+                    element={<route.element />}
+                  />
+                ))}
+              </Routes>
+            </Suspense>
+          </main>
+          
+          {/* Footer */}
+          <FuturisticFooter />
+          
+          {/* Chat Assistant */}
+          <ChatAssistant />
+          
+          {/* Performance Monitor */}
+          <PerformanceMonitor enableReporting={true} />
+          
+          {/* Accessibility Enhancer */}
+          <AccessibilityEnhancer />
+        </div>
+      </Router>
+    </ErrorBoundary>
   );
 }
 
