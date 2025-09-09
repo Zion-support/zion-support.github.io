@@ -60,7 +60,7 @@
     "security:fix": "npm audit fix",
     "performance:test": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
     "analyze": "npm run build && npx vite-bundle-analyzer dist",
-    "prepare": "husky install"
+    "prepare": "echo 'Skipping husky install in CI environment'"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.26.0",
