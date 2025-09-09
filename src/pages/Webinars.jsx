@@ -1,266 +1,315 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Clock, Users, Play, ExternalLink, BookOpen } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Calendar, Clock, User, Play, ArrowRight, Video } from 'lucide-react';
 
-export default function Webinars() {
-  const upcomingWebinars = [
-    {
-      id: 1,
-      title: "AI-Powered Cybersecurity: Next-Generation Threat Detection",
-      description: "Join our cybersecurity experts as they demonstrate cutting-edge AI technologies for threat detection and response.",
-      date: "2025-01-15",
-      time: "14:00 EST",
-      duration: "60 min",
-      speaker: "Dr. Sarah Chen",
-      attendees: 1247,
-      category: "Cybersecurity",
-      isLive: true,
-      registrationUrl: "#"
-    },
-    {
-      id: 2,
-      title: "Green IT Implementation: Sustainable Technology Solutions",
-      description: "Learn practical strategies for implementing environmentally conscious IT practices in enterprise environments.",
-      date: "2025-01-22",
-      time: "15:30 EST",
-      duration: "45 min",
-      speaker: "Michael Rodriguez",
-      attendees: 892,
-      category: "Green IT",
-      isLive: true,
-      registrationUrl: "#"
-    },
-    {
-      id: 3,
-      title: "Micro SaaS Architecture: Building Scalable Solutions",
-      description: "Deep dive into micro SaaS architecture patterns and best practices for building maintainable applications.",
-      date: "2025-01-29",
-      time: "13:00 EST",
-      duration: "90 min",
-      speaker: "Alex Thompson",
-      attendees: 1567,
-      category: "Micro SaaS",
-      isLive: true,
-      registrationUrl: "#"
-    }
-  ];
+const Webinars = () => {
+    const [selectedCategory, setSelectedCategory] = useState('All');
+    const [searchTerm, setSearchTerm] = useState('');
 
-  const pastWebinars = [
-    {
-      id: 4,
-      title: "5G Enterprise Solutions: Network Optimization Strategies",
-      description: "Advanced strategies for optimizing 5G networks in enterprise environments with focus on performance and reliability.",
-      date: "2024-12-15",
-      time: "14:00 EST",
-      duration: "75 min",
-      speaker: "Dr. James Wilson",
-      attendees: 1892,
-      category: "5G Solutions",
-      recordingUrl: "#",
-      slidesUrl: "#"
-    },
-    {
-      id: 5,
-      title: "Data Privacy in AI Systems: Compliance and Best Practices",
-      description: "Comprehensive overview of data privacy requirements and best practices for AI-powered systems in regulated industries.",
-      date: "2024-12-08",
-      time: "15:30 EST",
-      duration: "60 min",
-      speaker: "Lisa Park",
-      attendees: 2987,
-      category: "AI & Privacy",
-      recordingUrl: "#",
-      slidesUrl: "#"
-    },
-    {
-      id: 6,
-      title: "Edge Computing and IoT: Building the Connected Future",
-      description: "Explore edge computing infrastructure and IoT integration for smart city and industrial applications.",
-      date: "2024-11-30",
-      time: "13:00 EST",
-      duration: "80 min",
-      speaker: "Dr. Emily Watson",
-      attendees: 1654,
-      category: "Edge Computing",
-      recordingUrl: "#",
-      slidesUrl: "#"
-    }
-  ];
+    const webinars = [
+        {
+            id: 1,
+            title: "AI-Powered Digital Transformation: Strategies for Success",
+            category: "AI & Machine Learning",
+            date: "February 25, 2025",
+            time: "2:00 PM - 3:30 PM EST",
+            duration: "90 minutes",
+            speaker: "Dr. Sarah Chen, CTO",
+            description: "Learn how to successfully implement AI-driven digital transformation in your organization with proven strategies and real-world case studies.",
+            isLive: true,
+            registrationUrl: "/contact",
+            recordingUrl: "#"
+        },
+        {
+            id: 2,
+            title: "Cybersecurity in the Age of AI: Threats and Defenses",
+            category: "Cybersecurity",
+            date: "February 20, 2025",
+            time: "1:00 PM - 2:30 PM EST",
+            duration: "90 minutes",
+            speaker: "Alex Thompson, Security Expert",
+            description: "Discover how AI is both enhancing cybersecurity threats and providing innovative defense mechanisms for modern organizations.",
+            isLive: false,
+            registrationUrl: "/contact",
+            recordingUrl: "#"
+        },
+        {
+            id: 3,
+            title: "Cloud Migration Best Practices: From Planning to Execution",
+            category: "Cloud & Infrastructure",
+            date: "February 15, 2025",
+            time: "3:00 PM - 4:30 PM EST",
+            duration: "90 minutes",
+            speaker: "David Kim, Cloud Architect",
+            description: "Comprehensive guide to successful cloud migration, including cost optimization, security considerations, and performance tuning.",
+            isLive: true,
+            registrationUrl: "/contact",
+            recordingUrl: "#"
+        },
+        {
+            id: 4,
+            title: "Quantum Computing: Enterprise Applications and Opportunities",
+            category: "Emerging Technology",
+            date: "February 10, 2025",
+            time: "11:00 AM - 12:30 PM EST",
+            duration: "90 minutes",
+            speaker: "Dr. James Wilson, Quantum Researcher",
+            description: "Explore the potential of quantum computing in enterprise environments and learn about early adoption strategies.",
+            isLive: false,
+            registrationUrl: "/contact",
+            recordingUrl: "#"
+        },
+        {
+            id: 5,
+            title: "Data Analytics & AI: Driving Business Intelligence",
+            category: "Data & Analytics",
+            date: "February 5, 2025",
+            time: "2:00 PM - 3:30 PM EST",
+            duration: "90 minutes",
+            speaker: "Marcus Rodriguez, Data Scientist",
+            description: "Learn how to leverage data analytics and AI to gain actionable business insights and drive strategic decision-making.",
+            isLive: true,
+            registrationUrl: "/contact",
+            recordingUrl: "#"
+        },
+        {
+            id: 6,
+            title: "DevOps & Automation: Building Efficient Development Pipelines",
+            category: "DevOps",
+            date: "January 30, 2025",
+            time: "1:00 PM - 2:30 PM EST",
+            duration: "90 minutes",
+            speaker: "Lisa Anderson, DevOps Engineer",
+            description: "Master the principles of DevOps and automation to build efficient, scalable development and deployment pipelines.",
+            isLive: false,
+            registrationUrl: "/contact",
+            recordingUrl: "#"
+        }
+    ];
 
-  const categories = ["All", "AI", "Cybersecurity", "Green IT", "Micro SaaS", "5G Solutions", "Edge Computing"];
+    const categories = [
+        { name: "All", count: webinars.length },
+        { name: "AI & Machine Learning", count: webinars.filter(w => w.category === "AI & Machine Learning").length },
+        { name: "Cybersecurity", count: webinars.filter(w => w.category === "Cybersecurity").length },
+        { name: "Cloud & Infrastructure", count: webinars.filter(w => w.category === "Cloud & Infrastructure").length },
+        { name: "Emerging Technology", count: webinars.filter(w => w.category === "Emerging Technology").length },
+        { name: "Data & Analytics", count: webinars.filter(w => w.category === "Data & Analytics").length },
+        { name: "DevOps", count: webinars.filter(w => w.category === "DevOps").length }
+    ];
 
-  return (
-    <>
-      <SEO 
-        title="Webinars - Zion Tech Group Live & On-Demand Sessions" 
-        description="Join our live webinars and access on-demand recordings covering AI, cybersecurity, green IT, and emerging technologies." 
-        canonical="/webinars" 
-        url="https://ziontechgroup.com/webinars"
-      />
+    const filteredWebinars = webinars.filter(webinar => {
+        const matchesSearch = webinar.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                            webinar.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                            webinar.speaker.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesCategory = selectedCategory === 'All' || webinar.category === selectedCategory;
+        return matchesSearch && matchesCategory;
+    });
 
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Webinars & Live Sessions
-            </h1>
-            <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Join our live webinars featuring industry experts and access on-demand recordings 
-              covering the latest in technology and innovation.
-            </p>
-          </div>
+    return (
+        <div className="min-h-screen bg-slate-900">
+            {/* Hero Section */}
+            <section className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                <div className="container mx-auto px-4 text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="max-w-4xl mx-auto"
+                    >
+                        <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full mb-6">
+                            <Video className="w-10 h-10 text-white" />
+                        </div>
+                        <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
+                            Expert Webinars
+                        </h1>
+                        <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                            Join industry experts for in-depth discussions on technology trends, best practices, and innovative solutions
+                        </p>
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category}
-                className="px-6 py-3 bg-zion-blue-dark border border-zion-blue-light rounded-lg text-white hover:border-zion-cyan transition-all duration-300"
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
-          {/* Upcoming Webinars */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              Upcoming Webinars
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {upcomingWebinars.map((webinar) => (
-                <div key={webinar.id} className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 hover:border-zion-cyan transition-all duration-300">
-                  <div className="mb-4">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full">
-                        {webinar.category}
-                      </span>
-                      {webinar.isLive && (
-                        <span className="inline-block px-3 py-1 bg-red-500/20 text-red-400 text-sm rounded-full animate-pulse">
-                          Live
-                        </span>
-                      )}
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2">
-                      {webinar.title}
-                    </h3>
-                    <p className="text-zion-slate-light text-sm mb-4 line-clamp-3">
-                      {webinar.description}
-                    </p>
-                  </div>
-
-                  {/* Meta Information */}
-                  <div className="space-y-2 mb-6">
-                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
-                      <Calendar className="w-4 h-4" />
-                      <span>{new Date(webinar.date).toLocaleDateString()}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
-                      <Clock className="w-4 h-4" />
-                      <span>{webinar.time} • {webinar.duration}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
-                      <Users className="w-4 h-4" />
-                      <span>{webinar.speaker}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
-                      <BookOpen className="w-4 h-4" />
-                      <span>{webinar.attendees} registered</span>
-                    </div>
-                  </div>
-
-                  {/* Registration Button */}
-                  <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-4 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium flex items-center justify-center gap-2">
-                    <Play className="w-5 h-5" />
-                    Register Now
-                  </button>
+                        {/* Search and Filters */}
+                        <div className="max-w-4xl mx-auto mb-8">
+                            <div className="flex flex-col lg:flex-row gap-4">
+                                <div className="relative flex-1">
+                                    <Video className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                                    <input
+                                        type="text"
+                                        placeholder="Search webinars..."
+                                        value={searchTerm}
+                                        onChange={(e) => setSearchTerm(e.target.value)}
+                                        className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    />
+                                </div>
+                                <select
+                                    value={selectedCategory}
+                                    onChange={(e) => setSelectedCategory(e.target.value)}
+                                    className="px-6 py-4 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                >
+                                    {categories.map((category) => (
+                                        <option key={category.name} value={category.name}>
+                                            {category.name} ({category.count})
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
-              ))}
-            </div>
-          </section>
+            </section>
 
-          {/* Past Webinars */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              Past Webinars
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {pastWebinars.map((webinar) => (
-                <div key={webinar.id} className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 hover:border-zion-cyan transition-all duration-300">
-                  <div className="mb-4">
-                    <span className="inline-block px-3 py-1 bg-zion-blue-light/30 text-zion-slate-light text-sm rounded-full mb-3">
-                      {webinar.category}
-                    </span>
-                    <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2">
-                      {webinar.title}
-                    </h3>
-                    <p className="text-zion-slate-light text-sm mb-4 line-clamp-3">
-                      {webinar.description}
-                    </p>
-                  </div>
+            {/* Webinars Grid */}
+            <section className="py-20">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                            Upcoming & Recorded Webinars
+                        </h2>
+                        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                            Access our library of expert-led webinars and register for upcoming live sessions
+                        </p>
+                    </div>
 
-                  {/* Meta Information */}
-                  <div className="space-y-2 mb-6">
-                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
-                      <Calendar className="w-4 h-4" />
-                      <span>{new Date(webinar.date).toLocaleDateString()}</span>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {filteredWebinars.map((webinar, index) => (
+                            <motion.div
+                                key={webinar.id}
+                                className="bg-slate-800/50 rounded-xl border border-slate-700 p-6 hover:border-blue-500/50 transition-all duration-300 group"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                            >
+                                <div className="flex items-center justify-between mb-4">
+                                    <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium">
+                                        {webinar.category}
+                                    </span>
+                                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                                        webinar.isLive 
+                                            ? 'bg-green-500/20 text-green-400' 
+                                            : 'bg-gray-500/20 text-gray-400'
+                                    }`}>
+                                        {webinar.isLive ? 'Live' : 'Recorded'}
+                                    </span>
+                                </div>
+                                
+                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                                    {webinar.title}
+                                </h3>
+                                
+                                <p className="text-gray-300 mb-4 line-clamp-3">{webinar.description}</p>
+                                
+                                <div className="space-y-3 mb-4">
+                                    <div className="flex items-center text-gray-300 text-sm">
+                                        <Calendar className="w-4 h-4 mr-2 text-blue-400" />
+                                        {webinar.date}
+                                    </div>
+                                    <div className="flex items-center text-gray-300 text-sm">
+                                        <Clock className="w-4 h-4 mr-2 text-blue-400" />
+                                        {webinar.time} ({webinar.duration})
+                                    </div>
+                                    <div className="flex items-center text-gray-300 text-sm">
+                                        <User className="w-4 h-4 mr-2 text-blue-400" />
+                                        {webinar.speaker}
+                                    </div>
+                                </div>
+                                
+                                <div className="flex items-center justify-between">
+                                    {webinar.isLive ? (
+                                        <Link
+                                            to={webinar.registrationUrl}
+                                            className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-medium transition-colors duration-300"
+                                        >
+                                            <Play className="w-4 h-4 mr-2" />
+                                            Register
+                                        </Link>
+                                    ) : (
+                                        <Link
+                                            to={webinar.recordingUrl}
+                                            className="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 rounded-lg text-white font-medium transition-colors duration-300"
+                                        >
+                                            <Video className="w-4 h-4 mr-2" />
+                                            Watch Recording
+                                        </Link>
+                                    )}
+                                    <Link
+                                        to={webinar.registrationUrl}
+                                        className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors group-hover:underline"
+                                    >
+                                        Learn More
+                                        <ArrowRight className="w-4 h-4 ml-1" />
+                                    </Link>
+                                </div>
+                            </motion.div>
+                        ))}
                     </div>
-                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
-                      <Clock className="w-4 h-4" />
-                      <span>{webinar.time} • {webinar.duration}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
-                      <Users className="w-4 h-4" />
-                      <span>{webinar.speaker}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
-                      <BookOpen className="w-4 h-4" />
-                      <span>{webinar.attendees} attended</span>
-                    </div>
-                  </div>
-
-                  {/* Action Buttons */}
-                  <div className="flex gap-3">
-                    <button className="flex-1 bg-zion-cyan text-white py-3 px-4 rounded-lg hover:bg-zion-cyan-dark transition-all duration-300 font-medium flex items-center justify-center gap-2">
-                      <Play className="w-4 h-4" />
-                      Watch Recording
-                    </button>
-                    <button className="flex-1 bg-zion-blue-light/30 text-white py-3 px-4 rounded-lg hover:bg-zion-blue-light/50 transition-all duration-300 font-medium flex items-center justify-center gap-2">
-                      <ExternalLink className="w-4 h-4" />
-                      Slides
-                    </button>
-                  </div>
+                    
+                    {filteredWebinars.length === 0 && (
+                        <div className="text-center py-12">
+                            <Video className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                            <h3 className="text-xl font-semibold text-gray-300 mb-2">No webinars found</h3>
+                            <p className="text-gray-400">Try adjusting your search terms or category filter</p>
+                        </div>
+                    )}
                 </div>
-              ))}
-            </div>
-          </section>
+            </section>
 
-          {/* Call to Action */}
-          <div className="text-center">
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-8">
-              <h2 className="text-2xl font-semibold text-white mb-4">
-                Stay Updated with Webinar Schedule
-              </h2>
-              <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-                Get notified about upcoming webinars and access to exclusive content. 
-                Join our community of technology professionals and innovators.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="px-6 py-3 bg-zion-blue-light/30 border border-zion-blue-light/50 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent flex-1 max-w-md"
-                />
-                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </div>
+            {/* Newsletter Signup */}
+            <section className="py-20 bg-gradient-to-r from-blue-900/20 to-cyan-900/20">
+                <div className="max-w-4xl mx-auto px-6 text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                            Stay Informed
+                        </h2>
+                        <p className="text-xl text-gray-300 mb-8">
+                            Subscribe to our webinar series and never miss an opportunity to learn from industry experts and technology leaders.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                            <input
+                                type="email"
+                                placeholder="Enter your email"
+                                className="flex-1 px-6 py-4 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            />
+                            <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg font-semibold text-white hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+                                Subscribe
+                            </button>
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="py-20">
+                <div className="max-w-4xl mx-auto px-6 text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                        Request Custom Webinar
+                    </h2>
+                    <p className="text-xl text-gray-300 mb-8">
+                        Looking for a specific topic or have a particular area of interest? We can create custom webinars tailored to your needs.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Link
+                            to="/contact"
+                            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg font-semibold text-white hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+                        >
+                            Request Custom Webinar
+                            <ArrowRight className="w-5 h-5 ml-2" />
+                        </Link>
+                        <Link
+                            to="/events"
+                            className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
+                        >
+                            View All Events
+                        </Link>
+                    </div>
+                </div>
+            </section>
         </div>
-      </main>
-    </>
-  );
-}
+    );
+};
+
+export default Webinars;

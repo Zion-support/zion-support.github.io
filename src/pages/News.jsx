@@ -1,402 +1,289 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Calendar, 
-  User, 
-  Tag, 
-  ArrowRight, 
-  Search,
-  Filter,
-  Clock,
-  TrendingUp,
-  Globe,
-  Brain,
-  Shield,
-  Cloud
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import {
+    Calendar,
+    User,
+    Tag,
+    ArrowRight,
+    Search,
+    Filter,
+    Clock,
+    Eye,
+    ExternalLink,
+    TrendingUp,
+    Award,
+    Globe
 } from 'lucide-react';
 
 export default function News() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSource, setSelectedSource] = useState('All Sources');
-  const [selectedTimeframe, setSelectedTimeframe] = useState('All Time');
-
-  const categories = [
-    'All',
-    'Company News',
-    'Product Updates',
-    'Industry Insights',
-    'Awards & Recognition',
-    'Partnerships',
-    'Research & Development',
-    'Market Trends'
-  ];
-
-  const sources = [
-    'All Sources',
-    'Company Press Releases',
-    'Industry Reports',
-    'Technology News',
-    'Research Papers',
-    'Partner Updates',
-    'Customer Success Stories'
-  ];
-
-  const timeframes = [
-    'All Time',
-    'Last 24 Hours',
-    'Last Week',
-    'Last Month',
-    'Last 3 Months',
-    'Last Year'
-  ];
-
-  const newsArticles = [
-    {
-      id: 1,
-      title: "Zion Tech Group Launches Revolutionary AI Autonomous Business Platform 2029",
-      excerpt: "Our latest AI platform revolutionizes business operations with autonomous decision-making capabilities, setting new industry standards for intelligent automation.",
-      content: "Zion Tech Group is proud to announce the launch of our groundbreaking AI Autonomous Business Platform 2029. This revolutionary platform represents a paradigm shift in how businesses approach automation and decision-making processes.",
-      category: "Product Updates",
-      source: "Company Press Releases",
-      author: "Dr. Sarah Chen",
-      publishDate: "2024-01-15",
-      readTime: "5 min read",
-      featured: true,
-      tags: ["AI", "Automation", "Business Platform", "Innovation"]
-    },
-    {
-      id: 2,
-      title: "Zion Tech Group Achieves SOC 2 Type II Compliance Certification",
-      excerpt: "We've successfully obtained SOC 2 Type II compliance, demonstrating our commitment to the highest standards of security and data protection.",
-      content: "Zion Tech Group has achieved SOC 2 Type II compliance certification, a significant milestone that validates our commitment to maintaining the highest standards of security, availability, and confidentiality for our clients.",
-      category: "Company News",
-      source: "Company Press Releases",
-      author: "Michael Rodriguez",
-      publishDate: "2024-01-10",
-      readTime: "3 min read",
-      featured: false,
-      tags: ["Security", "Compliance", "SOC 2", "Certification"]
-    },
-    {
-      id: 3,
-      title: "New Partnership with Global Cloud Provider Expands Our Service Portfolio",
-      excerpt: "Strategic partnership enables us to offer enhanced cloud solutions and expanded global reach for our enterprise clients.",
-      content: "We're excited to announce a strategic partnership with a leading global cloud provider, significantly expanding our service portfolio and enabling us to deliver enhanced cloud solutions to our enterprise clients worldwide.",
-      category: "Partnerships",
-      source: "Company Press Releases",
-      author: "Lisa Thompson",
-      publishDate: "2024-01-08",
-      readTime: "4 min read",
-      featured: false,
-      tags: ["Partnership", "Cloud", "Enterprise", "Global Expansion"]
-    },
-    {
-      id: 4,
-      title: "AI in Healthcare: Transforming Patient Care and Medical Research",
-      excerpt: "Exploring how artificial intelligence is revolutionizing healthcare delivery and accelerating medical research breakthroughs.",
-      content: "Artificial intelligence is transforming healthcare in unprecedented ways, from improving diagnostic accuracy to accelerating drug discovery. Our research team explores the latest developments and their implications for the future of medicine.",
-      category: "Industry Insights",
-      source: "Research Papers",
-      author: "Dr. James Kim",
-      publishDate: "2024-01-05",
-      readTime: "8 min read",
-      featured: false,
-      tags: ["AI", "Healthcare", "Medical Research", "Innovation"]
-    },
-    {
-      id: 5,
-      title: "Zion Tech Group Named Top AI Solutions Provider by Industry Analyst",
-      excerpt: "Recognition as a leading AI solutions provider validates our expertise and commitment to delivering cutting-edge technology solutions.",
-      content: "We're honored to be recognized as a top AI solutions provider by a leading industry analyst firm. This recognition validates our expertise in artificial intelligence and our commitment to delivering cutting-edge technology solutions.",
-      category: "Awards & Recognition",
-      source: "Industry Reports",
-      author: "External Analyst",
-      publishDate: "2024-01-03",
-      readTime: "6 min read",
-      featured: false,
-      tags: ["Awards", "AI", "Recognition", "Industry Leadership"]
-    },
-    {
-      id: 6,
-      title: "The Future of Quantum Computing in Enterprise Applications",
-      excerpt: "Examining how quantum computing will transform enterprise applications and create new opportunities for business innovation.",
-      content: "Quantum computing represents the next frontier in computational power, promising to revolutionize enterprise applications across industries. Our research explores the practical applications and business implications of this emerging technology.",
-      category: "Research & Development",
-      source: "Research Papers",
-      author: "Dr. Elena Petrov",
-      publishDate: "2023-12-28",
-      readTime: "10 min read",
-      featured: false,
-      tags: ["Quantum Computing", "Enterprise", "Innovation", "Research"]
-    }
-  ];
-
-  const filteredArticles = newsArticles.filter(article => {
-    const matchesCategory = selectedCategory === 'All' || article.category === selectedCategory;
-    const matchesSource = selectedSource === 'All Sources' || article.source === selectedSource;
-    const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         article.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('All');
     
-    return matchesCategory && matchesSource && matchesSearch;
-  });
+    const categories = [
+        'All',
+        'Company News',
+        'Product Updates',
+        'Industry Insights',
+        'Awards & Recognition',
+        'Partnerships',
+        'Research & Development',
+        'Market Trends'
+    ];
+    
+    const sources = [
+        'All Sources',
+        'Company Press Releases',
+        'Industry Reports',
+        'Technology News',
+        'Research Papers',
+        'Partner Updates',
+        'Customer Success Stories'
+    ];
+    
+    const timeframes = [
+        'All Time',
+        'Last 24 Hours',
+        'Last Week',
+        'Last Month',
+        'Last 3 Months',
+        'Last Year'
+    ];
 
-  const featuredArticle = newsArticles.find(article => article.featured);
+    const newsArticles = [
+        {
+            id: 1,
+            title: 'Zion Tech Group Launches Revolutionary AI-Powered Cybersecurity Platform',
+            excerpt: 'Our latest innovation combines machine learning with advanced threat detection to provide unprecedented protection against cyber attacks.',
+            category: 'Product Updates',
+            source: 'Company Press Releases',
+            date: '2024-01-15',
+            readTime: '5 min read',
+            image: '/api/placeholder/400/250',
+            featured: true
+        },
+        {
+            id: 2,
+            title: 'Zion Tech Group Named Top 100 Technology Companies of 2024',
+            excerpt: 'Recognition for our commitment to innovation and excellence in the technology sector.',
+            category: 'Awards & Recognition',
+            source: 'Industry Reports',
+            date: '2024-01-10',
+            readTime: '3 min read',
+            image: '/api/placeholder/400/250',
+            featured: true
+        },
+        {
+            id: 3,
+            title: 'Strategic Partnership with Global Cloud Infrastructure Provider',
+            excerpt: 'Expanding our cloud services portfolio to deliver enhanced solutions to our clients worldwide.',
+            category: 'Partnerships',
+            source: 'Company Press Releases',
+            date: '2024-01-08',
+            readTime: '4 min read',
+            image: '/api/placeholder/400/250',
+            featured: false
+        }
+    ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Latest
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                {" "}News & Insights
-              </span>
-            </h1>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-              Stay updated with the latest developments in AI, technology, and industry insights. 
-              Discover how we're shaping the future of business technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-              >
-                Get Updates
-              </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-3 border border-slate-600 text-base font-medium rounded-lg text-slate-300 hover:text-white hover:border-slate-500 transition-all duration-200"
-              >
-                Explore Services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
+    const filteredArticles = newsArticles.filter(article => {
+        const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                            article.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesCategory = selectedCategory === 'All' || article.category === selectedCategory;
+        return matchesSearch && matchesCategory;
+    });
 
-      {/* Search and Filters */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-            {/* Search */}
-            <div className="lg:col-span-2">
-              <label htmlFor="search" className="block text-sm font-medium text-slate-300 mb-2">
-                Search Articles
-              </label>
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-slate-400" />
-                <input
-                  type="text"
-                  id="search"
-                  placeholder="Search by title, content, or tags..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-              </div>
-            </div>
-
-            {/* Category Filter */}
-            <div>
-              <label htmlFor="category" className="block text-sm font-medium text-slate-300 mb-2">
-                Category
-              </label>
-              <select
-                id="category"
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              >
-                {categories.map((category) => (
-                  <option key={category} value={category}>{category}</option>
-                ))}
-              </select>
-            </div>
-
-            {/* Source Filter */}
-            <div>
-              <label htmlFor="source" className="block text-sm font-medium text-slate-300 mb-2">
-                Source
-              </label>
-              <select
-                id="source"
-                value={selectedSource}
-                onChange={(e) => setSelectedSource(e.target.value)}
-                className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              >
-                {sources.map((source) => (
-                  <option key={source} value={source}>{source}</option>
-                ))}
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Featured Article */}
-      {featuredArticle && (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-2xl font-bold text-white mb-8 text-center">
-            Featured Article
-          </h2>
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
-                    {featuredArticle.category}
-                  </span>
-                  <span className="text-slate-400 text-sm">
-                    {featuredArticle.readTime}
-                  </span>
-                </div>
-                
-                <h3 className="text-3xl font-bold text-white leading-tight">
-                  {featuredArticle.title}
-                </h3>
-                
-                <p className="text-slate-300 text-lg leading-relaxed">
-                  {featuredArticle.excerpt}
-                </p>
-                
-                <div className="flex items-center gap-6 text-sm text-slate-400">
-                  <span className="flex items-center">
-                    <User className="h-4 w-4 mr-2" />
-                    {featuredArticle.author}
-                  </span>
-                  <span className="flex items-center">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    {new Date(featuredArticle.publishDate).toLocaleDateString()}
-                  </span>
-                </div>
-                
-                <div className="flex flex-wrap gap-2">
-                  {featuredArticle.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded-full"
+    return (
+        <div className="min-h-screen bg-slate-900">
+            {/* Hero Section */}
+            <section className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                <div className="container mx-auto px-4 text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="max-w-4xl mx-auto"
                     >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                
-                <Link
-                  to={`/news/${featuredArticle.id}`}
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 font-medium"
-                >
-                  Read Full Article
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-              
-              <div className="bg-slate-700/30 rounded-xl h-64 flex items-center justify-center">
-                <div className="text-center text-slate-400">
-                  <Globe className="h-16 w-16 mx-auto mb-4" />
-                  <p>Article Image</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+                        <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-full mb-6">
+                            <Globe className="w-10 h-10 text-white" />
+                        </div>
+                        <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">
+                            Latest News & Updates
+                        </h1>
+                        <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                            Stay informed about the latest developments, innovations, and insights from Zion Tech Group
+                        </p>
 
-      {/* News Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 className="text-3xl font-bold text-white mb-12 text-center">
-          Latest News
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredArticles.filter(article => !article.featured).map((article, index) => (
-            <article
-              key={article.id}
-              className="bg-slate-800/30 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300 hover:transform hover:scale-105"
-            >
-              <div className="bg-slate-700/30 h-48 flex items-center justify-center">
-                <div className="text-center text-slate-400">
-                  <Globe className="h-12 w-12 mx-auto mb-2" />
-                  <p className="text-sm">Article Image</p>
+                        {/* Search and Filters */}
+                        <div className="max-w-4xl mx-auto">
+                            <div className="flex flex-col lg:flex-row gap-4 mb-8">
+                                <div className="relative flex-1">
+                                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                                    <input
+                                        type="text"
+                                        placeholder="Search news articles..."
+                                        value={searchTerm}
+                                        onChange={(e) => setSearchTerm(e.target.value)}
+                                        className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                                    />
+                                </div>
+                                <select
+                                    value={selectedCategory}
+                                    onChange={(e) => setSelectedCategory(e.target.value)}
+                                    className="px-6 py-4 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                                >
+                                    {categories.map((category) => (
+                                        <option key={category} value={category}>{category}</option>
+                                    ))}
+                                </select>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
-              </div>
-              
-              <div className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">
-                    {article.category}
-                  </span>
-                  <span className="text-slate-400 text-sm">
-                    {article.readTime}
-                  </span>
+            </section>
+
+            {/* Featured News */}
+            <section className="py-20">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                            Featured Stories
+                        </h2>
+                        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                            Highlighting our most important news and announcements
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                        {newsArticles.filter(article => article.featured).map((article, index) => (
+                            <motion.article
+                                key={article.id}
+                                className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden hover:border-orange-500/50 transition-all duration-300 group"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                            >
+                                <div className="aspect-video bg-slate-700 group-hover:bg-slate-600 transition-colors duration-300"></div>
+                                <div className="p-6">
+                                    <div className="flex items-center gap-4 mb-4">
+                                        <span className="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm font-medium">
+                                            {article.category}
+                                        </span>
+                                        <span className="text-gray-400 text-sm">{article.date}</span>
+                                        <span className="text-gray-400 text-sm flex items-center gap-1">
+                                            <Clock className="w-4 h-4" />
+                                            {article.readTime}
+                                        </span>
+                                    </div>
+                                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
+                                        {article.title}
+                                    </h3>
+                                    <p className="text-gray-300 mb-4">{article.excerpt}</p>
+                                    <button className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors group-hover:underline">
+                                        Read More
+                                        <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                                    </button>
+                                </div>
+                            </motion.article>
+                        ))}
+                    </div>
                 </div>
-                
-                <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2">
-                  {article.title}
-                </h3>
-                
-                <p className="text-slate-300 text-sm mb-4 line-clamp-3">
-                  {article.excerpt}
-                </p>
-                
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center text-slate-400 text-sm">
-                    <User className="h-4 w-4 mr-1" />
-                    {article.author}
-                  </div>
-                  <div className="text-slate-400 text-sm">
-                    {new Date(article.publishDate).toLocaleDateString()}
-                  </div>
+            </section>
+
+            {/* All News */}
+            <section className="py-20 bg-black/50">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                            All News
+                        </h2>
+                        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                            Browse through all our latest news, updates, and insights
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {filteredArticles.map((article, index) => (
+                            <motion.article
+                                key={article.id}
+                                className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden hover:border-orange-500/50 transition-all duration-300 group"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                            >
+                                <div className="aspect-video bg-slate-700 group-hover:bg-slate-600 transition-colors duration-300"></div>
+                                <div className="p-6">
+                                    <div className="flex items-center gap-4 mb-4">
+                                        <span className="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm font-medium">
+                                            {article.category}
+                                        </span>
+                                        <span className="text-gray-400 text-sm">{article.date}</span>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
+                                        {article.title}
+                                    </h3>
+                                    <p className="text-gray-300 mb-4">{article.excerpt}</p>
+                                    <button className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors group-hover:underline">
+                                        Read More
+                                        <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                                    </button>
+                                </div>
+                            </motion.article>
+                        ))}
+                    </div>
                 </div>
-                
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {article.tags.slice(0, 3).map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full"
+            </section>
+
+            {/* Newsletter Signup */}
+            <section className="py-20">
+                <div className="max-w-4xl mx-auto px-6 text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
                     >
-                      {tag}
-                    </span>
-                  ))}
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                            Stay Updated
+                        </h2>
+                        <p className="text-xl text-gray-300 mb-8">
+                            Subscribe to our newsletter for the latest news, insights, and updates
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                            <input
+                                type="email"
+                                placeholder="Enter your email"
+                                className="flex-1 px-6 py-4 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                            />
+                            <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold text-white hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105">
+                                Subscribe
+                            </button>
+                        </div>
+                    </motion.div>
                 </div>
-                
-                <Link
-                  to={`/news/${article.id}`}
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
-                >
-                  Read More
-                  <ArrowRight className="ml-1 h-3 w-3" />
-                </Link>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
+            </section>
 
-      {/* Newsletter Signup */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center border border-cyan-500/30">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Stay Updated
-          </h2>
-          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            Subscribe to our newsletter for the latest insights, product updates, 
-            and industry trends delivered directly to your inbox.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-            />
-            <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-200">
-              Subscribe
-            </button>
-          </div>
+            {/* CTA Section */}
+            <section className="py-20 bg-gradient-to-r from-orange-900/20 to-red-900/20">
+                <div className="max-w-4xl mx-auto px-6 text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                        Get in Touch
+                    </h2>
+                    <p className="text-xl text-gray-300 mb-8">
+                        Have questions about our news or want to learn more? Contact our team
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold text-white hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105">
+                            Contact Us
+                            <ArrowRight className="w-5 h-5 ml-2" />
+                        </button>
+                        <button className="px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300">
+                            View All Services
+                        </button>
+                    </div>
+                </div>
+            </section>
         </div>
-      </div>
-    </div>
-  );
+    );
 }

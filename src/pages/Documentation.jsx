@@ -1,147 +1,10 @@
-import React, { useState } from 'react';
-import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
-import { BookOpen, Code, FileText, Download, Search, ExternalLink, Github, Globe, Database, Shield } from 'lucide-react';
+import React from 'react';
 
-export default function Documentation() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const documentationCategories = [
-    {
-      id: 'getting-started',
-      name: 'Getting Started',
-      description: 'Quick start guides and tutorials for new users',
-      icon: BookOpen,
-      articles: 12,
-      featured: true
-    },
-    {
-      id: 'api-reference',
-      name: 'API Reference',
-      description: 'Complete API documentation with examples',
-      icon: Code,
-      articles: 45,
-      featured: true
-    },
-    {
-      id: 'sdks',
-      name: 'SDKs & Libraries',
-      description: 'Client libraries and SDKs for various platforms',
-      icon: Download,
-      articles: 8,
-      featured: false
-    },
-    {
-      id: 'tutorials',
-      name: 'Tutorials',
-      description: 'Step-by-step guides and walkthroughs',
-      icon: FileText,
-      articles: 23,
-      featured: false
-    },
-    {
-      id: 'examples',
-      name: 'Code Examples',
-      description: 'Practical examples and sample code',
-      icon: Code,
-      articles: 34,
-      featured: false
-    },
-    {
-      id: 'troubleshooting',
-      name: 'Troubleshooting',
-      description: 'Common issues and solutions',
-      icon: Shield,
-      articles: 18,
-      featured: false
-    }
-  ];
-
-  const popularArticles = [
-    {
-      title: "Quick Start Guide",
-      description: "Get up and running with Zion Tech Group services in minutes",
-      category: "Getting Started",
-      readTime: "5 min read",
-      views: 1247
-    },
-    {
-      title: "Authentication & Authorization",
-      description: "Learn how to implement secure authentication in your applications",
-      category: "API Reference",
-      readTime: "12 min read",
-      views: 892
-    },
-    {
-      title: "Webhook Integration",
-      description: "Set up webhooks to receive real-time updates and notifications",
-      category: "Tutorials",
-      readTime: "8 min read",
-      views: 734
-    },
-    {
-      title: "Error Handling Best Practices",
-      description: "Implement robust error handling for production applications",
-      category: "Tutorials",
-      readTime: "10 min read",
-      views: 567
-    }
-  ];
-
-  const sdkDownloads = [
-    {
-      name: "JavaScript/Node.js",
-      version: "v2.1.0",
-      downloads: "15.2k",
-      icon: "📦",
-      github: "https://github.com/ziontechgroup/js-sdk",
-      npm: "https://npmjs.com/package/@ziontechgroup/sdk"
-    },
-    {
-      name: "Python",
-      version: "v1.8.2",
-      downloads: "8.7k",
-      icon: "🐍",
-      github: "https://github.com/ziontechgroup/python-sdk",
-      pypi: "https://pypi.org/project/ziontechgroup-sdk/"
-    },
-    {
-      name: "Java",
-      version: "v2.0.1",
-      downloads: "6.3k",
-      icon: "☕",
-      github: "https://github.com/ziontechgroup/java-sdk",
-      maven: "https://maven.org/repository/ziontechgroup-sdk/"
-    },
-    {
-      name: "Go",
-      version: "v1.5.0",
-      downloads: "4.1k",
-      icon: "🐹",
-      github: "https://github.com/ziontechgroup/go-sdk",
-      pkg: "https://pkg.go.dev/github.com/ziontechgroup/go-sdk"
-    }
-  ];
-
-  const categories = ["all", "getting-started", "api-reference", "sdks", "tutorials", "examples", "troubleshooting"];
-
-  const filteredCategories = selectedCategory === 'all' 
-    ? documentationCategories 
-    : documentationCategories.filter(cat => cat.id === selectedCategory);
-
-  return (
-    <>
-      <SEO 
-        title="Documentation - Zion Tech Group Developer Resources" 
-        description="Comprehensive documentation, API references, SDKs, and developer resources for building with Zion Tech Group services." 
-        canonical="/docs" 
-        url="https://ziontechgroup.com/docs"
-      />
-
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
+const Documentation = () => {
+    return (
+      
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Documentation
@@ -374,7 +237,7 @@ export default function Documentation() {
             </div>
           </div>
         </div>
-      </main>
-    </>
-  );
-}
+      </div>
+    );
+};
+export default Documentation;

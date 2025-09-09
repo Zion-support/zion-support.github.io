@@ -1,424 +1,302 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Calendar,
-  Clock,
-  MapPin,
-  Users,
-  Star,
-  ArrowRight,
-  Search,
-  Filter,
-  BookOpen,
-  Video,
-  Globe,
-  TrendingUp,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  CheckCircle
-} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Calendar, MapPin, Clock, Users, ExternalLink, ArrowRight } from 'lucide-react';
 
-export default function Events() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedDate, setSelectedDate] = useState('all');
+const Events = () => {
+    const [selectedCategory, setSelectedCategory] = useState('All');
+    const [searchTerm, setSearchTerm] = useState('');
 
-  const eventCategories = [
-    { id: 'all', name: 'All Events', count: 24 },
-    { id: 'webinars', name: 'Webinars', count: 8 },
-    { id: 'workshops', name: 'Workshops', count: 6 },
-    { id: 'conferences', name: 'Conferences', count: 4 },
-    { id: 'networking', name: 'Networking', count: 3 },
-    { id: 'training', name: 'Training', count: 3 }
-  ];
+    const events = [
+        {
+            id: 1,
+            title: "AI & Digital Transformation Summit 2025",
+            category: "Conference",
+            date: "March 15-17, 2025",
+            time: "9:00 AM - 6:00 PM",
+            location: "San Francisco Convention Center",
+            description: "Join industry leaders and experts for three days of insights on AI-driven digital transformation strategies, implementation best practices, and future trends.",
+            attendees: "500+",
+            price: "Free",
+            isVirtual: false,
+            registrationUrl: "/contact"
+        },
+        {
+            id: 2,
+            title: "Cybersecurity Workshop: Zero-Trust Architecture",
+            category: "Workshop",
+            date: "February 28, 2025",
+            time: "1:00 PM - 5:00 PM",
+            location: "Virtual Event",
+            description: "Learn about implementing zero-trust security architecture in your organization with hands-on exercises and real-world case studies.",
+            attendees: "100",
+            price: "$99",
+            isVirtual: true,
+            registrationUrl: "/contact"
+        },
+        {
+            id: 3,
+            title: "Cloud Migration Best Practices Webinar",
+            category: "Webinar",
+            date: "February 15, 2025",
+            time: "2:00 PM - 3:30 PM",
+            location: "Virtual Event",
+            description: "Discover proven strategies for successful cloud migration, including planning, execution, and optimization techniques.",
+            attendees: "250",
+            price: "Free",
+            isVirtual: true,
+            registrationUrl: "/contact"
+        },
+        {
+            id: 4,
+            title: "Quantum Computing in Enterprise",
+            category: "Seminar",
+            date: "January 30, 2025",
+            time: "10:00 AM - 12:00 PM",
+            location: "New York Tech Hub",
+            description: "Explore the potential of quantum computing in enterprise environments and learn about early adoption strategies.",
+            attendees: "75",
+            price: "$149",
+            isVirtual: false,
+            registrationUrl: "/contact"
+        },
+        {
+            id: 5,
+            title: "Data Analytics & AI Implementation",
+            category: "Training",
+            date: "January 20-22, 2025",
+            time: "9:00 AM - 4:00 PM",
+            location: "Austin Innovation Center",
+            description: "Comprehensive training on implementing data analytics and AI solutions in your business operations.",
+            attendees: "50",
+            price: "$599",
+            isVirtual: false,
+            registrationUrl: "/contact"
+        },
+        {
+            id: 6,
+            title: "Future of Work: AI & Automation",
+            category: "Panel Discussion",
+            date: "January 10, 2025",
+            time: "3:00 PM - 5:00 PM",
+            location: "Virtual Event",
+            description: "Join industry experts for a discussion on how AI and automation are reshaping the future of work.",
+            attendees: "300",
+            price: "Free",
+            isVirtual: true,
+            registrationUrl: "/contact"
+        }
+    ];
 
-  const dateFilters = [
-    { id: 'all', name: 'All Dates' },
-    { id: 'this-week', name: 'This Week' },
-    { id: 'this-month', name: 'This Month' },
-    { id: 'next-month', name: 'Next Month' }
-  ];
+    const categories = [
+        { name: "All", count: events.length },
+        { name: "Conference", count: events.filter(e => e.category === "Conference").length },
+        { name: "Workshop", count: events.filter(e => e.category === "Workshop").length },
+        { name: "Webinar", count: events.filter(e => e.category === "Webinar").length },
+        { name: "Seminar", count: events.filter(e => e.category === "Seminar").length },
+        { name: "Training", count: events.filter(e => e.category === "Training").length },
+        { name: "Panel Discussion", count: events.filter(e => e.category === "Panel Discussion").length }
+    ];
 
-  const upcomingEvents = [
-    {
-      id: 1,
-      title: "AI & Machine Learning Workshop",
-      category: "workshops",
-      date: "December 15, 2024",
-      time: "10:00 AM - 2:00 PM EST",
-      location: "Virtual Event",
-      description: "Learn the fundamentals of AI and machine learning with hands-on exercises and real-world applications.",
-      attendees: 45,
-      maxAttendees: 50,
-      featured: true,
-      image: "/images/events/ai-workshop.jpg",
-      speakers: ["Dr. Sarah Chen", "Prof. Michael Rodriguez"],
-      tags: ["AI", "Machine Learning", "Workshop", "Beginner"]
-    },
-    {
-      id: 2,
-      title: "Cybersecurity Best Practices Webinar",
-      category: "webinars",
-      date: "December 18, 2024",
-      time: "2:00 PM - 3:30 PM EST",
-      location: "Virtual Event",
-      description: "Discover essential cybersecurity practices to protect your business from evolving threats.",
-      attendees: 120,
-      maxAttendees: 200,
-      featured: false,
-      image: "/images/events/cybersecurity-webinar.jpg",
-      speakers: ["Alex Thompson", "Lisa Park"],
-      tags: ["Cybersecurity", "Best Practices", "Webinar", "Intermediate"]
-    },
-    {
-      id: 3,
-      title: "Cloud Migration Strategies Conference",
-      category: "conferences",
-      date: "December 22-23, 2024",
-      time: "9:00 AM - 5:00 PM EST",
-      location: "New York, NY",
-      description: "Two-day conference covering cloud migration strategies, best practices, and case studies.",
-      attendees: 85,
-      maxAttendees: 150,
-      featured: true,
-      image: "/images/events/cloud-conference.jpg",
-      speakers: ["Dr. James Wilson", "Maria Garcia", "David Kim"],
-      tags: ["Cloud Computing", "Migration", "Conference", "Advanced"]
-    },
-    {
-      id: 4,
-      title: "Digital Marketing Masterclass",
-      category: "training",
-      date: "December 25, 2024",
-      time: "11:00 AM - 4:00 PM EST",
-      location: "Virtual Event",
-      description: "Master digital marketing strategies including SEO, social media, and content marketing.",
-      attendees: 65,
-      maxAttendees: 80,
-      featured: false,
-      image: "/images/events/marketing-masterclass.jpg",
-      speakers: ["Jennifer Lee", "Robert Davis"],
-      tags: ["Digital Marketing", "SEO", "Social Media", "Training"]
-    },
-    {
-      id: 5,
-      title: "Blockchain Technology Summit",
-      category: "conferences",
-      date: "January 5-6, 2025",
-      time: "9:00 AM - 6:00 PM EST",
-      location: "San Francisco, CA",
-      description: "Explore the future of blockchain technology with industry leaders and innovators.",
-      attendees: 200,
-      maxAttendees: 300,
-      featured: true,
-      image: "/images/events/blockchain-summit.jpg",
-      speakers: ["Dr. Elena Rodriguez", "Mark Johnson", "Sarah Chen"],
-      tags: ["Blockchain", "Technology", "Summit", "Advanced"]
-    },
-    {
-      id: 6,
-      title: "Data Science Networking Mixer",
-      category: "networking",
-      date: "January 8, 2025",
-      time: "6:00 PM - 9:00 PM EST",
-      location: "Boston, MA",
-      description: "Connect with fellow data scientists, researchers, and industry professionals.",
-      attendees: 40,
-      maxAttendees: 60,
-      featured: false,
-      image: "/images/events/data-science-mixer.jpg",
-      speakers: [],
-      tags: ["Networking", "Data Science", "Professional Development"]
-    }
-  ];
+    const filteredEvents = events.filter(event => {
+        const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                            event.description.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesCategory = selectedCategory === 'All' || event.category === selectedCategory;
+        return matchesSearch && matchesCategory;
+    });
 
-  const filteredEvents = upcomingEvents.filter(event => {
-    const matchesSearch = event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         event.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         event.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || event.category === selectedCategory;
-    
-    // Simple date filtering logic
-    let matchesDate = true;
-    if (selectedDate === 'this-week') {
-      // Logic for this week filtering
-      matchesDate = true; // Simplified for now
-    } else if (selectedDate === 'this-month') {
-      // Logic for this month filtering
-      matchesDate = true; // Simplified for now
-    } else if (selectedDate === 'next-month') {
-      // Logic for next month filtering
-      matchesDate = true; // Simplified for now
-    }
-    
-    return matchesSearch && matchesCategory && matchesDate;
-  });
-
-  const getCategoryIcon = (category) => {
-    switch (category) {
-      case 'webinars': return Video;
-      case 'workshops': return BookOpen;
-      case 'conferences': return Users;
-      case 'networking': return Globe;
-      case 'training': return TrendingUp;
-      default: return Calendar;
-    }
-  };
-
-  const getCategoryColor = (category) => {
-    switch (category) {
-      case 'webinars': return 'from-blue-500 to-cyan-500';
-      case 'workshops': return 'from-purple-500 to-pink-500';
-      case 'conferences': return 'from-green-500 to-emerald-500';
-      case 'networking': return 'from-orange-500 to-red-500';
-      case 'training': return 'from-indigo-500 to-purple-500';
-      default: return 'from-gray-500 to-slate-500';
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="flex justify-center mb-6">
-              <div className="bg-gradient-to-r from-blue-500 to-cyan-500 p-4 rounded-full">
-                <Calendar className="w-12 h-12 text-white" />
-              </div>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Upcoming <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Events</span>
-            </h1>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Join us for exciting webinars, workshops, conferences, and networking events. Learn from industry experts and connect with fellow professionals.
-            </p>
-            
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mb-8">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search events, topics, or speakers..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-md border border-blue-400/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
-                />
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Filters */}
-      <section className="py-8">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            {/* Category Filter */}
-            <div className="flex flex-wrap gap-2">
-              {eventCategories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                    selectedCategory === category.id
-                      ? 'bg-blue-500 text-white'
-                      : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
-                  }`}
-                >
-                  {category.name} ({category.count})
-                </button>
-              ))}
-            </div>
-
-            {/* Date Filter */}
-            <div className="flex items-center gap-4">
-              <select
-                value={selectedDate}
-                onChange={(e) => setSelectedDate(e.target.value)}
-                className="bg-zinc-700/50 text-white border border-blue-400/20 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-              >
-                {dateFilters.map(filter => (
-                  <option key={filter.id} value={filter.id}>
-                    {filter.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Events Grid */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          {filteredEvents.length === 0 ? (
-            <div className="text-center py-16">
-              <Calendar className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">No events found</h3>
-              <p className="text-zion-slate-light mb-4">Try adjusting your search criteria or browse all events</p>
-              <button
-                onClick={() => {
-                  setSearchQuery('');
-                  setSelectedCategory('all');
-                  setSelectedDate('all');
-                }}
-                className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-              >
-                Clear Filters
-              </button>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredEvents.map((event, index) => (
-                <motion.div
-                  key={event.id}
-                  className="bg-zinc-800/50 rounded-lg border border-zinc-700/50 overflow-hidden hover:border-blue-400/50 transition-all duration-300"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  whileHover={{ y: -5 }}
-                >
-                  {/* Event Header */}
-                  <div className={`bg-gradient-to-r ${getCategoryColor(event.category)} p-6 text-center`}>
-                    <div className="flex justify-center mb-3">
-                      <div className="bg-white/20 p-3 rounded-full">
-                        {React.createElement(getCategoryIcon(event.category), { className: "w-8 h-8 text-white" })}
-                      </div>
-                    </div>
-                    <h3 className="text-white font-semibold text-lg mb-2">{event.title}</h3>
-                    {event.featured && (
-                      <span className="bg-yellow-500/20 text-yellow-300 text-xs px-2 py-1 rounded-full">
-                        Featured Event
-                      </span>
-                    )}
-                  </div>
-                  
-                  {/* Event Details */}
-                  <div className="p-6">
-                    <div className="space-y-3 mb-4">
-                      <div className="flex items-center text-zion-slate-light">
-                        <Calendar className="w-4 h-4 mr-2 text-blue-400" />
-                        <span className="text-sm">{event.date}</span>
-                      </div>
-                      <div className="flex items-center text-zion-slate-light">
-                        <Clock className="w-4 h-4 mr-2 text-blue-400" />
-                        <span className="text-sm">{event.time}</span>
-                      </div>
-                      <div className="flex items-center text-zion-slate-light">
-                        <MapPin className="w-4 h-4 mr-2 text-blue-400" />
-                        <span className="text-sm">{event.location}</span>
-                      </div>
-                      <div className="flex items-center text-zion-slate-light">
-                        <Users className="w-4 h-4 mr-2 text-blue-400" />
-                        <span className="text-sm">{event.attendees}/{event.maxAttendees} attendees</span>
-                      </div>
-                    </div>
-                    
-                    <p className="text-zion-slate-light text-sm mb-4">{event.description}</p>
-                    
-                    {/* Speakers */}
-                    {event.speakers.length > 0 && (
-                      <div className="mb-4">
-                        <h4 className="text-zion-cyan font-semibold text-sm mb-2">Speakers:</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {event.speakers.map((speaker, idx) => (
-                            <span key={idx} className="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded-full">
-                              {speaker}
-                            </span>
-                          ))}
+    return (
+        <div className="min-h-screen bg-slate-900">
+            {/* Hero Section */}
+            <section className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                <div className="container mx-auto px-4 text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="max-w-4xl mx-auto"
+                    >
+                        <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full mb-6">
+                            <Calendar className="w-10 h-10 text-white" />
                         </div>
-                      </div>
-                    )}
-                    
-                    {/* Tags */}
-                    <div className="mb-4">
-                      <div className="flex flex-wrap gap-2">
-                        {event.tags.map((tag, idx) => (
-                          <span key={idx} className="text-xs bg-zinc-700/50 text-zion-slate-light px-2 py-1 rounded-full">
-                            {tag}
-                          </span>
+                        <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
+                            Events & Webinars
+                        </h1>
+                        <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                            Join us for insightful events, workshops, and webinars on the latest technology trends and innovations
+                        </p>
+
+                        {/* Search and Filters */}
+                        <div className="max-w-4xl mx-auto mb-8">
+                            <div className="flex flex-col lg:flex-row gap-4">
+                                <div className="relative flex-1">
+                                    <Calendar className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                                    <input
+                                        type="text"
+                                        placeholder="Search events..."
+                                        value={searchTerm}
+                                        onChange={(e) => setSearchTerm(e.target.value)}
+                                        className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    />
+                                </div>
+                                <select
+                                    value={selectedCategory}
+                                    onChange={(e) => setSelectedCategory(e.target.value)}
+                                    className="px-6 py-4 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                >
+                                    {categories.map((category) => (
+                                        <option key={category.name} value={category.name}>
+                                            {category.name} ({category.count})
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* Events Grid */}
+            <section className="py-20">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                            Upcoming Events
+                        </h2>
+                        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                            Discover our upcoming events and register to secure your spot
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {filteredEvents.map((event, index) => (
+                            <motion.div
+                                key={event.id}
+                                className="bg-slate-800/50 rounded-xl border border-slate-700 p-6 hover:border-blue-500/50 transition-all duration-300 group"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                            >
+                                <div className="flex items-center justify-between mb-4">
+                                    <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium">
+                                        {event.category}
+                                    </span>
+                                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                                        event.isVirtual 
+                                            ? 'bg-green-500/20 text-green-400' 
+                                            : 'bg-orange-500/20 text-orange-400'
+                                    }`}>
+                                        {event.isVirtual ? 'Virtual' : 'In-Person'}
+                                    </span>
+                                </div>
+                                
+                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                                    {event.title}
+                                </h3>
+                                
+                                <div className="space-y-3 mb-4">
+                                    <div className="flex items-center text-gray-300 text-sm">
+                                        <Calendar className="w-4 h-4 mr-2 text-blue-400" />
+                                        {event.date}
+                                    </div>
+                                    <div className="flex items-center text-gray-300 text-sm">
+                                        <Clock className="w-4 h-4 mr-2 text-blue-400" />
+                                        {event.time}
+                                    </div>
+                                    <div className="flex items-center text-gray-300 text-sm">
+                                        <MapPin className="w-4 h-4 mr-2 text-blue-400" />
+                                        {event.location}
+                                    </div>
+                                    <div className="flex items-center text-gray-300 text-sm">
+                                        <Users className="w-4 h-4 mr-2 text-blue-400" />
+                                        {event.attendees} attendees
+                                    </div>
+                                </div>
+                                
+                                <p className="text-gray-300 mb-4 line-clamp-3">{event.description}</p>
+                                
+                                <div className="flex items-center justify-between">
+                                    <span className="text-lg font-semibold text-blue-400">{event.price}</span>
+                                    <Link
+                                        to={event.registrationUrl}
+                                        className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-medium transition-colors duration-300"
+                                    >
+                                        Register
+                                        <ArrowRight className="w-4 h-4 ml-2" />
+                                    </Link>
+                                </div>
+                            </motion.div>
                         ))}
-                      </div>
                     </div>
                     
-                    {/* Action Button */}
-                    <button className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-2 px-4 rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center gap-2">
-                      Register Now
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
+                    {filteredEvents.length === 0 && (
+                        <div className="text-center py-12">
+                            <Calendar className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                            <h3 className="text-xl font-semibold text-gray-300 mb-2">No events found</h3>
+                            <p className="text-gray-400">Try adjusting your search terms or category filter</p>
+                        </div>
+                    )}
+                </div>
+            </section>
 
-      {/* Newsletter Signup */}
-      <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Stay Updated on Upcoming Events
-            </h2>
-            <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Get notified about new events, early bird discounts, and exclusive invitations.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input 
-                type="email" 
-                placeholder="Enter your email address" 
-                className="flex-1 px-4 py-3 bg-white/10 border border-blue-400/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300">
-                Subscribe
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+            {/* Newsletter Signup */}
+            <section className="py-20 bg-gradient-to-r from-blue-900/20 to-cyan-900/20">
+                <div className="max-w-4xl mx-auto px-6 text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                            Stay Updated
+                        </h2>
+                        <p className="text-xl text-gray-300 mb-8">
+                            Never miss an important event. Subscribe to our newsletter for updates on upcoming events, webinars, and exclusive content.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                            <input
+                                type="email"
+                                placeholder="Enter your email"
+                                className="flex-1 px-6 py-4 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            />
+                            <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg font-semibold text-white hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+                                Subscribe
+                            </button>
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
 
-      {/* CTA Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Host Your Event With Us
-            </h2>
-            <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Interested in hosting a technology event, workshop, or conference? 
-              We'd love to collaborate and help bring your vision to life.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:scale-105 transition-transform">
-                Get in Touch
-              </Link>
-              <Link to="/services" className="px-8 py-4 border-2 border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-colors">
-                Our Services
-              </Link>
-            </div>
-          </motion.div>
+            {/* CTA Section */}
+            <section className="py-20">
+                <div className="max-w-4xl mx-auto px-6 text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                        Host Your Event With Us
+                    </h2>
+                    <p className="text-xl text-gray-300 mb-8">
+                        Interested in hosting a technology event, workshop, or conference? We'd love to collaborate and help bring your vision to life.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Link
+                            to="/contact"
+                            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg font-semibold text-white hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+                        >
+                            Get in Touch
+                            <ArrowRight className="w-5 h-5 ml-2" />
+                        </Link>
+                        <Link
+                            to="/services"
+                            className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
+                        >
+                            Our Services
+                        </Link>
+                    </div>
+                </div>
+            </section>
         </div>
-      </section>
-    </div>
-  );
-}
+    );
+};
+
+export default Events;

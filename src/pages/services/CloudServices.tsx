@@ -2,88 +2,95 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Brain, 
-  Robot, 
+  Cloud, 
+  Server, 
   Zap, 
   Shield, 
   TrendingUp, 
   Users, 
   CheckCircle,
   ArrowRight,
-  Play
+  Play,
+  Database,
+  Globe,
+  Lock
 } from 'lucide-react';
 
-export default function AIServices() {
-  const aiServices = [
+export default function CloudServices() {
+  const cloudServices = [
     {
-      title: "AI-Powered Analytics",
-      description: "Transform your data into actionable insights with advanced machine learning algorithms",
-      icon: Brain,
-      features: ["Predictive modeling", "Real-time analytics", "Custom dashboards", "Automated reporting"]
+      title: "Cloud Migration",
+      description: "Seamlessly migrate your infrastructure to the cloud with minimal downtime and maximum efficiency",
+      icon: Cloud,
+      features: ["Infrastructure assessment", "Migration planning", "Data migration", "Performance optimization"]
     },
     {
-      title: "Intelligent Automation",
-      description: "Streamline operations with AI-driven process automation and workflow optimization",
-      icon: Robot,
-      features: ["Process automation", "Workflow optimization", "Smart scheduling", "Resource allocation"]
-    },
-    {
-      title: "Natural Language Processing",
-      description: "Build intelligent chatbots and language understanding systems for enhanced customer experience",
+      title: "DevOps & CI/CD",
+      description: "Accelerate development with automated pipelines and continuous integration/deployment",
       icon: Zap,
-      features: ["Chatbot development", "Sentiment analysis", "Language translation", "Content generation"]
+      features: ["Pipeline automation", "Container orchestration", "Infrastructure as code", "Monitoring & alerting"]
     },
     {
-      title: "AI Security Solutions",
-      description: "Protect your systems with intelligent threat detection and automated security responses",
+      title: "Cloud Security",
+      description: "Protect your cloud assets with enterprise-grade security and compliance solutions",
       icon: Shield,
-      features: ["Threat detection", "Behavioral analysis", "Automated response", "Risk assessment"]
+      features: ["Identity management", "Data encryption", "Compliance auditing", "Threat detection"]
+    },
+    {
+      title: "Cloud Optimization",
+      description: "Optimize costs and performance with intelligent cloud resource management",
+      icon: TrendingUp,
+      features: ["Cost optimization", "Performance tuning", "Auto-scaling", "Resource monitoring"]
     }
   ];
 
   const benefits = [
     {
-      icon: TrendingUp,
-      title: "Increased Efficiency",
-      description: "Automate repetitive tasks and optimize processes for maximum productivity"
+      icon: Zap,
+      title: "Scalability",
+      description: "Scale your infrastructure up or down based on demand with cloud-native solutions"
     },
     {
       icon: Users,
-      title: "Enhanced Customer Experience",
-      description: "Provide personalized, intelligent interactions that improve customer satisfaction"
+      title: "Cost Efficiency",
+      description: "Reduce capital expenses and pay only for the resources you actually use"
     },
     {
       icon: CheckCircle,
-      title: "Data-Driven Decisions",
-      description: "Make informed decisions based on comprehensive AI-powered insights and predictions"
+      title: "Reliability",
+      description: "Achieve 99.9%+ uptime with redundant infrastructure and automated failover"
     },
     {
-      icon: Zap,
-      title: "Competitive Advantage",
-      description: "Stay ahead of the competition with cutting-edge AI capabilities and innovation"
+      icon: Globe,
+      title: "Global Reach",
+      description: "Deploy your applications globally with edge computing and CDN capabilities"
     }
   ];
 
-  const useCases = [
+  const platforms = [
     {
-      industry: "Healthcare",
-      description: "AI-powered diagnostics, patient monitoring, and predictive healthcare analytics",
-      icon: "🏥"
+      name: "AWS",
+      description: "Amazon Web Services - Comprehensive cloud platform with extensive service offerings",
+      icon: "☁️",
+      features: ["EC2, S3, Lambda", "RDS, DynamoDB", "CloudFormation", "CloudWatch"]
     },
     {
-      industry: "Finance",
-      description: "Fraud detection, risk assessment, and automated financial advisory services",
-      icon: "💳"
+      name: "Azure",
+      description: "Microsoft Azure - Enterprise-grade cloud platform with strong integration capabilities",
+      icon: "🔷",
+      features: ["Virtual Machines", "Azure SQL", "Functions", "Monitor"]
     },
     {
-      industry: "Manufacturing",
-      description: "Predictive maintenance, quality control, and supply chain optimization",
-      icon: "🏭"
+      name: "Google Cloud",
+      description: "Google Cloud Platform - Advanced AI/ML capabilities with global infrastructure",
+      icon: "🔵",
+      features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"]
     },
     {
-      industry: "Retail",
-      description: "Personalized recommendations, inventory management, and customer behavior analysis",
-      icon: "🛍️"
+      name: "Multi-Cloud",
+      description: "Hybrid and multi-cloud strategies for optimal performance and cost management",
+      icon: "🌐",
+      features: ["Load balancing", "Data replication", "Disaster recovery", "Cost optimization"]
     }
   ];
 
@@ -99,13 +106,13 @@ export default function AIServices() {
             className="max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-6">
-              <Brain className="w-10 h-10 text-white" />
+              <Cloud className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              AI Solutions
+              Cloud & DevOps
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge artificial intelligence solutions designed for the future
+              Transform your infrastructure with modern cloud solutions and DevOps practices
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -128,15 +135,15 @@ export default function AIServices() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Our AI Services
+              Our Cloud Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive artificial intelligence solutions tailored to your business needs
+              Comprehensive cloud solutions to modernize your infrastructure and accelerate development
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {aiServices.map((service, index) => (
+            {cloudServices.map((service, index) => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
@@ -169,10 +176,10 @@ export default function AIServices() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Why Choose AI?
+              Why Choose Cloud?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover the transformative benefits of integrating AI into your business operations
+              Discover the transformative benefits of cloud computing and DevOps practices
             </p>
           </div>
           
@@ -197,20 +204,20 @@ export default function AIServices() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Cloud Platforms Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Industry Applications
+              Cloud Platforms
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how AI is transforming various industries and creating new opportunities
+              We work with all major cloud providers to deliver the best solution for your needs
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {platforms.map((platform, index) => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
@@ -219,9 +226,59 @@ export default function AIServices() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="text-4xl mb-4">{useCase.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
-                <p className="text-gray-400 text-sm">{useCase.description}</p>
+                <div className="text-4xl mb-4">{platform.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{platform.name}</h3>
+                <p className="text-gray-400 text-sm mb-4">{platform.description}</p>
+                <ul className="space-y-1">
+                  {platform.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="text-xs text-gray-500">
+                      • {feature}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* DevOps Tools Section */}
+      <section className="py-20 bg-black/50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              DevOps Tools & Technologies
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Modern tools and practices to streamline your development and operations
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {[
+              { name: "Docker", icon: "🐳" },
+              { name: "Kubernetes", icon: "☸️" },
+              { name: "Terraform", icon: "🏗️" },
+              { name: "Jenkins", icon: "🔧" },
+              { name: "GitLab CI", icon: "🦊" },
+              { name: "Ansible", icon: "⚡" },
+              { name: "Prometheus", icon: "📊" },
+              { name: "Grafana", icon: "📈" },
+              { name: "ELK Stack", icon: "🔍" },
+              { name: "Vault", icon: "🔐" },
+              { name: "Consul", icon: "🏛️" },
+              { name: "Istio", icon: "🛡️" }
+            ].map((tool, index) => (
+              <motion.div
+                key={index}
+                className="bg-slate-800/50 p-4 rounded-lg border border-slate-700 hover:border-cyan-500 transition-all duration-300 text-center group hover:bg-slate-800/70"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-3xl mb-2">{tool.icon}</div>
+                <div className="text-sm text-gray-300 font-medium">{tool.name}</div>
               </motion.div>
             ))}
           </div>
@@ -232,17 +289,17 @@ export default function AIServices() {
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Harness the Power of AI?
+            Ready to Transform Your Infrastructure?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join the AI revolution and transform your business with intelligent solutions
+            Let's modernize your systems with cloud-native solutions and DevOps best practices
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
-              Start Your AI Journey
+              Start Your Cloud Journey
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link 
