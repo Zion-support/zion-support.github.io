@@ -14,7 +14,7 @@
       "@/*": ["./src/*"],
       "axios": ["./src/lib/axios.ts"]
     },
-    "types": ["node", "react", "react-dom", "next", "next/types/global", "socket.io", "socket.io-client", "vitest/globals"],
+    "types": ["node", "react", "react-dom", "next", "next/types/global", "vitest/globals"],
 
     /* Bundler mode */
     "moduleResolution": "node",
