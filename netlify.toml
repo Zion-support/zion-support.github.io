@@ -15,11 +15,8 @@
     NPM_FLAGS = "--include=dev --include=optional"
     # Ensure optional native Rollup binaries are installed
     NPM_CONFIG_OPTIONAL = "true"
-    # Reduce noise and avoid unnecessary checks in CI
-    NPM_CONFIG_AUDIT = "false"
-    NPM_CONFIG_FUND = "false"
-    # Help npm avoid omitting optional deps in some environments
-    NPM_CONFIG_INCLUDE = "optional"
+    # Force Rollup to skip native binary and use JS fallback to avoid npm optional bug
+    ROLLUP_SKIP_NODEJS_NATIVE = "true"
 
 # Headers
 [[headers]]
