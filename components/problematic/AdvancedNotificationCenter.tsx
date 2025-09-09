@@ -1,27 +1,27 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ;
-  Bell, ;
-  X, ;
-  CheckCircle, ;
-  AlertTriangle, ;
-  Info, ;
-  XCircle, ;
-  Settings, ;
-  Filter,;
-  Search,;
-  Archive,;
-  Trash2,;
-  Eye,;
-  EyeOff,;
-  Clock,;
-  Star,;
-  MessageSquare,;
-  Volume2,;
-  VolumeX;
+import {
+  Bell,
+  X,
+  CheckCircle,
+  AlertTriangle,
+  Info,
+  XCircle,
+  Settings,
+  Filter,
+  Search,
+  Archive,
+  Trash2,
+  Eye,
+  EyeOff,
+  Clock,
+  Star,
+  MessageSquare,
+  Volume2,
+  VolumeX
 } from 'lucide-react';
-;
-interface Notification {;
+
+interface Notification {
   id: string;
   title: string;
   message: string;

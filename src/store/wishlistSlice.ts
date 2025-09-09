@@ -1,12 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { safeStorage } from '@/utils/safeStorage';
+import { safeLocalStorage } from '@/utils/safeStorage';
 
 export interface WishlistState {
   items: string[];
 }
 
 const loadState = (): string[] => {
-  const stored = safeStorage.getItem('wishlist');
+  const storage = safeLocalStorage();
+  if (!storage) return [];
+  const stored = storage.getItem('wishlist');
   if (!stored) return [];
   try {
     return JSON.parse(stored) as string[];

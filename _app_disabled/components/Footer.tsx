@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  // const currentYear = new Date().getFullYear(); // Unused variable
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -70,6 +70,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
+              <li><a href="/about" className="text-gray-600 hover:text-gray-900">About Us</a></li>
+              <li><a href="/careers" className="text-gray-600 hover:text-gray-900">Careers</a></li>
+              <li><a href="/contact" className="text-gray-600 hover:text-gray-900">Contact</a></li>
+            </ul>
           </div>
         </div>
       </div>

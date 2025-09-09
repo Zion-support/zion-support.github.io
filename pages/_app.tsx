@@ -1,18 +1,13 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> pr-12866
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
+import { useState } from 'react';
+import Link from 'next/link';
+
 <<<<<<< HEAD
-import EnhancedNavigation from '../components/layout/EnhancedNavigation';
-import EnhancedFooter from '../components/layout/EnhancedFooter';
-
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <EnhancedNavigation />
-      <Component {...pageProps} />
-      <EnhancedFooter />
-    </>
-=======
-
 function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -312,11 +307,25 @@ function Footer(): any {
   );
 }
 
+function EnhancedLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <Header />
+      {children}
+      <Footer />
+    </>
+  );
+}
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <EnhancedLayout>
       <Component {...pageProps} />
     </EnhancedLayout>
->>>>>>> 56433e5950f86f3612ddbdabb654ab3429763be2
   );
 }
+=======
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
+>>>>>>> pr-12866
