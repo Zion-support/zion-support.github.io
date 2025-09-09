@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, memo } from 'react';
+import React, { Suspense, memo } from 'react';
 import { ErrorBoundary } from './ErrorBoundary';
 import LoadingSpinner from './LoadingSpinner';
 
@@ -214,7 +214,7 @@ export const PerformanceMonitor = memo(() => {
 });
 
 // Main performance optimizations wrapper
-export const PerformanceOptimizations: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const PerformanceOptimizations: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <ErrorBoundary>
       <Suspense fallback={<LoadingSpinner />}>

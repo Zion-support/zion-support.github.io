@@ -1,204 +1,89 @@
-import React, { useEffect, useCallback, useRef } from 'react';
-
-interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-}
+import React, { memo, useEffect, useCallback } from 'react';
+import { performanceMonitor, performanceUtils } from '../utils/performance';
 
 interface PerformanceOptimizerProps {
   enableMonitoring?: boolean;
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  children: React.ReactNode;
 }
 
-export function PerformanceOptimizer({ 
+const PerformanceOptimizer = memo<PerformanceOptimizerProps>(({ 
   enableMonitoring = false, 
-  onMetricsUpdate 
-}: PerformanceOptimizerProps) {
-  const metricsRef = useRef<Partial<PerformanceMetrics>>({});
-  const observersRef = useRef<PerformanceObserver[]>([]);
-
-  const measurePerformance = useCallback(() => {
-    if (!('PerformanceObserver' in window) || !enableMonitoring) return;
-
-    // First Contentful Paint
-    try {
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.name === 'first-contentful-paint') {
-            metricsRef.current.fcp = entry.startTime;
-            if (onMetricsUpdate) {
-              onMetricsUpdate(metricsRef.current as PerformanceMetrics);
-            }
-          }
-        });
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-      observersRef.current.push(fcpObserver);
-    } catch (error) {
-      console.warn('FCP observer failed:', error);
+  children 
+}) => {
+  const measureRender = useCallback(() => {
+    if (enableMonitoring) {
+      return performanceMonitor.measureRenderTime('PerformanceOptimizer');
     }
-
-    // Largest Contentful Paint
-    try {
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        if (lastEntry) {
-          metricsRef.current.lcp = lastEntry.startTime;
-          if (onMetricsUpdate) {
-            onMetricsUpdate(metricsRef.current as PerformanceMetrics);
-          }
-        }
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      observersRef.current.push(lcpObserver);
-    } catch (error) {
-      console.warn('LCP observer failed:', error);
-    }
-
-    // First Input Delay
-    try {
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          metricsRef.current.fid = entry.processingStart - entry.startTime;
-          if (onMetricsUpdate) {
-            onMetricsUpdate(metricsRef.current as PerformanceMetrics);
-          }
-        });
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-      observersRef.current.push(fidObserver);
-    } catch (error) {
-      console.warn('FID observer failed:', error);
-    }
-
-    // Cumulative Layout Shift
-    try {
-      const clsObserver = new PerformanceObserver((list) => {
-        let clsValue = 0;
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-          }
-        });
-        metricsRef.current.cls = clsValue;
-        if (onMetricsUpdate) {
-          onMetricsUpdate(metricsRef.current as PerformanceMetrics);
-        }
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-      observersRef.current.push(clsObserver);
-    } catch (error) {
-      console.warn('CLS observer failed:', error);
-    }
-
-    // Time to First Byte
-    try {
-      const ttfbObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (entry.entryType === 'navigation') {
-            metricsRef.current.ttfb = entry.responseStart - entry.requestStart;
-            if (onMetricsUpdate) {
-              onMetricsUpdate(metricsRef.current as PerformanceMetrics);
-            }
-          }
-        });
-      });
-      ttfbObserver.observe({ entryTypes: ['navigation'] });
-      observersRef.current.push(ttfbObserver);
-    } catch (error) {
-      console.warn('TTFB observer failed:', error);
-    }
-  }, [enableMonitoring, onMetricsUpdate]);
-
-  const optimizeImages = useCallback(() => {
-    if (!enableMonitoring) return;
-
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
-          imageObserver.unobserve(img);
-        }
-      });
-    });
-
-    images.forEach((img) => imageObserver.observe(img));
-  }, [enableMonitoring]);
-
-  const preloadCriticalResources = useCallback(() => {
-    if (!enableMonitoring) return;
-
-    // Preload critical CSS
-    const criticalCSS = document.querySelector('link[rel="preload"][as="style"]');
-    if (criticalCSS) {
-      (criticalCSS as HTMLLinkElement).rel = 'stylesheet';
-    }
-
-    // Preload critical fonts
-    const fontPreloads = document.querySelectorAll('link[rel="preload"][as="font"]');
-    fontPreloads.forEach((link) => {
-      (link as HTMLLinkElement).rel = 'stylesheet';
-    });
-  }, [enableMonitoring]);
-
-  const optimizeBundle = useCallback(() => {
-    if (!enableMonitoring) return;
-
-    // Dynamic imports for non-critical components
-    const lazyComponents = document.querySelectorAll('[data-lazy-component]');
-    const componentObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const component = entry.target as HTMLElement;
-          const componentName = component.dataset.lazyComponent;
-          if (componentName) {
-            // Load component dynamically
-            import(`../components/${componentName}.tsx`).then((module) => {
-              component.innerHTML = module.default;
-            });
-            componentObserver.unobserve(component);
-          }
-        }
-      });
-    });
-
-    lazyComponents.forEach((component) => componentObserver.observe(component));
+    return () => {};
   }, [enableMonitoring]);
 
   useEffect(() => {
-    if (enableMonitoring) {
-      measurePerformance();
-      optimizeImages();
-      preloadCriticalResources();
-      optimizeBundle();
-    }
+    const cleanup = measureRender();
+    
+    // Preload critical resources
+    if (typeof window !== 'undefined') {
+      // Preload critical CSS
+      const criticalCSS = document.querySelector('link[rel="preload"][as="style"]');
+      if (!criticalCSS) {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'style';
+        link.href = '/assets/index.css';
+        document.head.appendChild(link);
+      }
 
-    return () => {
-      // Cleanup observers
-      observersRef.current.forEach((observer) => {
-        try {
-          observer.disconnect();
-        } catch (error) {
-          console.warn('Failed to disconnect observer:', error);
+      // Preload critical fonts
+      const criticalFonts = [
+        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+      ];
+      
+      criticalFonts.forEach(fontUrl => {
+        if (!document.querySelector(`link[href="${fontUrl}"]`)) {
+          const link = document.createElement('link');
+          link.rel = 'preload';
+          link.as = 'style';
+          link.href = fontUrl;
+          document.head.appendChild(link);
         }
       });
-      observersRef.current = [];
+    }
+
+    return cleanup;
+  }, [measureRender]);
+
+  // Optimize scroll performance
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const optimizedScrollHandler = performanceUtils.throttle(() => {
+      // Handle scroll events efficiently
+    }, 16); // ~60fps
+
+    window.addEventListener('scroll', optimizedScrollHandler, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', optimizedScrollHandler);
     };
-  }, [measurePerformance, optimizeImages, preloadCriticalResources, optimizeBundle]);
+  }, []);
 
-  // Return null since this is a utility component
-  return null;
-}
+  // Optimize resize performance
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
 
-export default PerformanceOptimizer;
+    const optimizedResizeHandler = performanceUtils.debounce(() => {
+      // Handle resize events efficiently
+    }, 250);
+
+    window.addEventListener('resize', optimizedResizeHandler);
+    
+    return () => {
+      window.removeEventListener('resize', optimizedResizeHandler);
+    };
+  }, []);
+
+  return <>{children}</>;
+});
+
+PerformanceOptimizer.displayName = 'PerformanceOptimizer';
+
+export { PerformanceOptimizer };

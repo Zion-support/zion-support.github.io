@@ -32,7 +32,9 @@ declare const globalThis: {
 
 // Mock App class that mimics the Slack Bolt SDK behavior
 class MockApp {
+  private commandHandlers: Record<string, (command: SlackCommand, ack: SlackAck, respond: SlackRespond) => void> = {};
 
+  command(commandName: string, handler: (command: SlackCommand, ack: SlackAck, respond: SlackRespond) => void): MockApp {
     this.commandHandlers[commandName] = handler;
     return this;
   }

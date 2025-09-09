@@ -1,222 +1,188 @@
-import React, { useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 
 interface AccessibilityEnhancementsProps {
   children: React.ReactNode;
 }
 
-const AccessibilityEnhancements: React.FC<AccessibilityEnhancementsProps> = ({ children }) => {
+const AccessibilityEnhancements = memo<AccessibilityEnhancementsProps>(({ children }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [fontSize, setFontSize] = useState(16);
-  const [isKeyboardNavigation, setIsKeyboardNavigation] = useState(false);
 
   useEffect(() => {
-    // Check for high contrast preference
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
-    setIsHighContrast(highContrastQuery.matches);
+    // Check for user preferences
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
     
-    // Check for reduced motion preference
-    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setIsReducedMotion(reducedMotionQuery.matches);
+    setIsReducedMotion(prefersReducedMotion);
+    setIsHighContrast(prefersHighContrast);
+
+    // Listen for changes
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const contrastQuery = window.matchMedia('(prefers-contrast: high)');
     
-    // Listen for preference changes
-    const handleHighContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
-    const handleReducedMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
+    const handleMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
+    const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
     
-    highContrastQuery.addEventListener('change', handleHighContrastChange);
-    reducedMotionQuery.addEventListener('change', handleReducedMotionChange);
-    
-    // Keyboard navigation detection
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
-        setIsKeyboardNavigation(true);
-      }
-    };
-    
-    const handleMouseDown = () => {
-      setIsKeyboardNavigation(false);
-    };
-    
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-    
-    // Load saved preferences
+    motionQuery.addEventListener('change', handleMotionChange);
+    contrastQuery.addEventListener('change', handleContrastChange);
+
+    // Load saved font size
     const savedFontSize = localStorage.getItem('accessibility-font-size');
     if (savedFontSize) {
       setFontSize(parseInt(savedFontSize, 10));
     }
-    
-    // Apply initial styles
-    applyAccessibilityStyles();
-    
+
     return () => {
-      highContrastQuery.removeEventListener('change', handleHighContrastChange);
-      reducedMotionQuery.removeEventListener('change', handleReducedMotionChange);
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
+      motionQuery.removeEventListener('change', handleMotionChange);
+      contrastQuery.removeEventListener('change', handleContrastChange);
     };
   }, []);
 
   useEffect(() => {
-    applyAccessibilityStyles();
-  }, [isHighContrast, isReducedMotion, fontSize, isKeyboardNavigation]);
-
-  const applyAccessibilityStyles = () => {
+    // Apply accessibility styles
     const root = document.documentElement;
     
-    // Apply high contrast styles
+    // Font size
+    root.style.setProperty('--accessibility-font-size', `${fontSize}px`);
+    
+    // High contrast
     if (isHighContrast) {
-      root.style.setProperty('--text-color', '#ffffff');
-      root.style.setProperty('--background-color', '#000000');
-      root.style.setProperty('--border-color', '#ffffff');
-      root.style.setProperty('--accent-color', '#ffff00');
+      root.classList.add('high-contrast');
     } else {
-      root.style.removeProperty('--text-color');
-      root.style.removeProperty('--background-color');
-      root.style.removeProperty('--border-color');
-      root.style.removeProperty('--accent-color');
+      root.classList.remove('high-contrast');
     }
     
-    // Apply reduced motion styles
+    // Reduced motion
     if (isReducedMotion) {
-      root.style.setProperty('--animation-duration', '0s');
-      root.style.setProperty('--transition-duration', '0s');
+      root.classList.add('reduced-motion');
     } else {
-      root.style.removeProperty('--animation-duration');
-      root.style.removeProperty('--transition-duration');
+      root.classList.remove('reduced-motion');
     }
-    
-    // Apply font size
-    root.style.setProperty('--base-font-size', `${fontSize}px`);
-    
-    // Apply keyboard navigation styles
-    if (isKeyboardNavigation) {
-      root.classList.add('keyboard-navigation');
-    } else {
-      root.classList.remove('keyboard-navigation');
-    }
-  };
+  }, [isHighContrast, isReducedMotion, fontSize]);
 
-  const increaseFontSize = () => {
-    const newSize = Math.min(fontSize + 2, 24);
-    setFontSize(newSize);
-    localStorage.setItem('accessibility-font-size', newSize.toString());
-  };
-
-  const decreaseFontSize = () => {
-    const newSize = Math.max(fontSize - 2, 12);
-    setFontSize(newSize);
-    localStorage.setItem('accessibility-font-size', newSize.toString());
-  };
-
-  const resetFontSize = () => {
-    setFontSize(16);
-    localStorage.removeItem('accessibility-font-size');
-  };
-
-  const toggleHighContrast = () => {
-    setIsHighContrast(!isHighContrast);
-  };
-
-  const announceToScreenReader = (message: string) => {
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-    
-    document.body.appendChild(announcement);
-    
-    setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
-  };
-
-  // Add keyboard shortcuts
+  // Keyboard navigation enhancements
   useEffect(() => {
-    const handleKeyboardShortcuts = (e: KeyboardEvent) => {
-      // Alt + 1: Increase font size
-      if (e.altKey && e.key === '1') {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Skip to main content (Alt + M)
+      if (e.altKey && e.key === 'm') {
         e.preventDefault();
-        increaseFontSize();
-        announceToScreenReader(`Font size increased to ${fontSize + 2} pixels`);
+        const mainContent = document.getElementById('main-content');
+        if (mainContent) {
+          mainContent.focus();
+          mainContent.scrollIntoView({ behavior: 'smooth' });
+        }
       }
       
-      // Alt + 2: Decrease font size
-      if (e.altKey && e.key === '2') {
+      // Skip to navigation (Alt + N)
+      if (e.altKey && e.key === 'n') {
         e.preventDefault();
-        decreaseFontSize();
-        announceToScreenReader(`Font size decreased to ${fontSize - 2} pixels`);
-      }
-      
-      // Alt + 3: Reset font size
-      if (e.altKey && e.key === '3') {
-        e.preventDefault();
-        resetFontSize();
-        announceToScreenReader('Font size reset to default');
-      }
-      
-      // Alt + 4: Toggle high contrast
-      if (e.altKey && e.key === '4') {
-        e.preventDefault();
-        toggleHighContrast();
-        announceToScreenReader(`High contrast ${isHighContrast ? 'disabled' : 'enabled'}`);
+        const nav = document.querySelector('nav');
+        if (nav) {
+          const firstLink = nav.querySelector('a') as HTMLElement;
+          if (firstLink) {
+            firstLink.focus();
+          }
+        }
       }
     };
-    
-    document.addEventListener('keydown', handleKeyboardShortcuts);
-    
-    return () => {
-      document.removeEventListener('keydown', handleKeyboardShortcuts);
-    };
-  }, [fontSize, isHighContrast]);
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   return (
     <>
       {children}
       
-      {/* Accessibility Controls */}
-      <div className="accessibility-controls">
-        <button
-          onClick={increaseFontSize}
-          className="accessibility-btn"
-          title="Increase font size (Alt + 1)"
-          aria-label="Increase font size"
+      {/* Skip links */}
+      <div className="sr-only focus-within:not-sr-only">
+        <a 
+          href="#main-content" 
+          className="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded z-50 focus:outline-none focus:ring-2 focus:ring-white"
         >
-          A+
-        </button>
-        <button
-          onClick={decreaseFontSize}
-          className="accessibility-btn"
-          title="Decrease font size (Alt + 2)"
-          aria-label="Decrease font size"
+          Skip to main content
+        </a>
+        <a 
+          href="#navigation" 
+          className="absolute top-4 left-32 bg-blue-600 text-white px-4 py-2 rounded z-50 focus:outline-none focus:ring-2 focus:ring-white"
         >
-          A-
-        </button>
-        <button
-          onClick={resetFontSize}
-          className="accessibility-btn"
-          title="Reset font size (Alt + 3)"
-          aria-label="Reset font size"
-        >
-          A
-        </button>
-        <button
-          onClick={toggleHighContrast}
-          className="accessibility-btn"
-          title="Toggle high contrast (Alt + 4)"
-          aria-label="Toggle high contrast"
-        >
-          {isHighContrast ? '🌙' : '☀️'}
-        </button>
+          Skip to navigation
+        </a>
       </div>
       
-      {/* Screen reader only content */}
-      <div className="sr-only" aria-live="polite" aria-atomic="true">
-        Accessibility enhancements loaded. Use Alt + 1 to 4 for quick controls.
+      {/* Accessibility controls */}
+      <div className="fixed bottom-4 right-4 z-40">
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 border border-white/20">
+          <button
+            onClick={() => {
+              const newSize = Math.min(24, Math.max(12, fontSize + 2));
+              setFontSize(newSize);
+              localStorage.setItem('accessibility-font-size', newSize.toString());
+            }}
+            className="block w-full px-3 py-2 text-sm text-white hover:bg-white/20 rounded mb-1"
+            title="Increase font size"
+          >
+            A+
+          </button>
+          <button
+            onClick={() => {
+              const newSize = Math.min(24, Math.max(12, fontSize - 2));
+              setFontSize(newSize);
+              localStorage.setItem('accessibility-font-size', newSize.toString());
+            }}
+            className="block w-full px-3 py-2 text-sm text-white hover:bg-white/20 rounded mb-1"
+            title="Decrease font size"
+          >
+            A-
+          </button>
+          <button
+            onClick={() => setIsHighContrast(!isHighContrast)}
+            className={`block w-full px-3 py-2 text-sm rounded ${
+              isHighContrast 
+                ? 'bg-blue-600 text-white' 
+                : 'text-white hover:bg-white/20'
+            }`}
+            title="Toggle high contrast"
+          >
+            C
+          </button>
+        </div>
       </div>
+      
+      <style jsx>{`
+        :root {
+          --accessibility-font-size: ${fontSize}px;
+        }
+        
+        .high-contrast {
+          --tw-bg-opacity: 1;
+          --tw-text-opacity: 1;
+        }
+        
+        .high-contrast * {
+          background-color: var(--tw-bg-opacity) !important;
+          color: var(--tw-text-opacity) !important;
+          border-color: currentColor !important;
+        }
+        
+        .reduced-motion * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+        
+        .reduced-motion *::before,
+        .reduced-motion *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      `}</style>
     </>
   );
-};
+});
+
+AccessibilityEnhancements.displayName = 'AccessibilityEnhancements';
 
 export default AccessibilityEnhancements;

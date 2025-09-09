@@ -1,11 +1,11 @@
 
 import React from 'react';
-import { _useQuery } from "@tanstack/react-query";
-import { _supabase } from "@/integrations/supabase/client";
-import { _Card, _CardContent, _CardDescription, _CardHeader, _CardTitle } from "@/components/ui/card";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Skeleton from "@/components/ui/skeleton";
-import { _Select, _SelectContent, _SelectItem, _SelectTrigger, _SelectValue } from "@/components/ui/select";
-import { _useState } from "react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useState } from "react";
 import { _AnalyticsChart } from "./AnalyticsChart";
 
 type TimeRange = '7d' | '30d' | '90d' | '365d';

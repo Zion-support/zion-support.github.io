@@ -18,66 +18,27 @@ The Zion Tech Group website is a modern React.js application built with Vite, fe
 ## Project Structure
 
 ```
-zion-website/
-├── public/
-│   ├── favicon.ico
-│   └── vite.svg
-├── src/
-│   ├── components/
-│   │   ├── ui/                    # Radix UI components
-│   │   │   ├── accordion.jsx
-│   │   │   ├── dialog.jsx
-│   │   │   ├── dropdown-menu.jsx
-│   │   │   ├── select.jsx
-│   │   │   ├── tabs.jsx
-│   │   │   └── toast.jsx
-│   │   ├── FuturisticNavigation.tsx    # Main navigation header
-│   │   ├── FuturisticFooter.tsx        # Main footer
-│   │   ├── FuturisticAnimatedBackground.tsx
-│   │   ├── ChatAssistant.tsx
-│   │   ├── SEOHead.tsx                 # SEO meta tags component
-│   │   └── header/
-│   │       └── Header.jsx              # Legacy header (corrupted, replaced)
-│   ├── pages/                    # Main page components
-│   │   ├── Home.tsx              # Landing page
-│   │   ├── About.tsx             # Company information
-│   │   ├── Contact.tsx           # Contact form and information
-│   │   ├── Services.tsx          # Services overview
-│   │   ├── Solutions.tsx         # Technology solutions
-│   │   ├── ResearchDevelopment.tsx # R&D initiatives
-│   │   ├── CaseStudies.tsx       # Client success stories
-│   │   ├── Blog.tsx              # Blog listing
-│   │   ├── BlogPost.tsx          # Individual blog posts
-│   │   ├── FAQ.tsx               # Frequently asked questions
-│   │   ├── Careers.tsx           # Job opportunities
-│   │   ├── Privacy.jsx           # Privacy policy
-│   │   ├── Terms.jsx             # Terms of service
-│   │   ├── Sitemap.tsx           # Site navigation
-│   │   ├── PartnersPage.tsx      # Partnership opportunities
-│   │   ├── GreenIT.tsx           # Green IT services
-│   │   ├── Login.jsx             # User authentication
-│   │   ├── EnhancedServices.tsx  # Enhanced service offerings
-│   │   ├── AIServices.tsx        # AI services overview
-│   │   ├── AIServiceDetail.tsx   # Individual AI service details
-│   │   ├── MicroSaas.tsx         # Micro-SaaS overview
-│   │   ├── MicroSaasDetail.tsx   # Individual micro-SaaS details
-│   │   ├── ITServices.tsx        # IT services overview
-│   │   ├── ITServiceDetail.tsx   # Individual IT service details
-│   │   ├── EmergingTech.tsx      # Emerging technology overview
-│   │   ├── EmergingTechDetail.tsx # Individual emerging tech details
-│   │   └── Marketplace.tsx       # Technology marketplace
-│   ├── hooks/                    # Custom React hooks
-│   │   └── use-toast.ts
-│   ├── routes.js                 # Route configuration constants
-│   ├── App.tsx                   # Main application component
-│   ├── main.tsx                  # Application entry point
-│   └── index.css                 # Global styles
-├── package.json                  # Dependencies and scripts
-├── tailwind.config.js           # Tailwind CSS configuration
-├── vite.config.ts               # Vite build configuration
-├── tsconfig.json                # TypeScript configuration
-├── .eslintrc.cjs                # ESLint configuration
-└── README.md                    # Project documentation
+zion-tech-group-website/
+├── 📁 src/
+│   ├── 📁 components/
+│   │   ├── 📁 ui/                    # Reusable UI components
+│   │   ├── 📁 layout/                # Layout components
+│   │   ├── 📁 home/                  # Homepage-specific components
+│   │   ├── 📁 auth/                  # Authentication components
+│   │   └── 📁 services/              # Service-related components
+│   ├── 📁 pages/                     # Page components
+│   ├── 📁 data/                      # Data files and service definitions
+│   ├── 📁 hooks/                     # Custom React hooks
+│   ├── 📁 utils/                     # Utility functions
+│   ├── 📁 store/                     # Redux store configuration
+│   ├── 📁 types/                     # TypeScript type definitions
+│   ├── 📁 i18n/                      # Internationalization
+│   └── 📁 layout/                    # Layout components
+├── 📁 public/                        # Static assets
+├── 📁 styles/                        # Global styles and CSS
+├── 📁 tests/                         # Test files
+├── 📁 .github/                       # PM2 automation documentation
+└── 📁 docs/                          # Documentation
 ```
 
 ## Navigation Structure

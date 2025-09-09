@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { usePerformanceMonitor } from '../utils/performance';import { useErrorHandler } from '../utils/errorHandler';
+import { performanceMonitor } from '../utils/performance';
+import { useErrorHandler } from '../utils/errorHandler';
 
 interface AnalyticsProps {
   trackingId?: string;
@@ -14,7 +15,7 @@ export const Analytics: React.FC<AnalyticsProps> = ({
   enableErrorTracking = true,
   enablePageViewTracking = true,
 }) => {
-  const { metrics, reportMetrics } = usePerformanceMonitor();  const { handleError } = useErrorHandler();
+  const { handleError } = useErrorHandler();
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -74,18 +75,19 @@ export const Analytics: React.FC<AnalyticsProps> = ({
 
   // Track performance metrics
   useEffect(() => {
-    if (enablePerformanceTracking && metrics && window.gtag) {
+    if (enablePerformanceTracking && window.gtag) {
+      const summary = performanceMonitor.getSummary();
       window.gtag('event', 'performance_metrics', {
-        load_time: Math.round(metrics.loadTime || 0),
-        first_contentful_paint: metrics.firstContentfulPaint ? Math.round(metrics.firstContentfulPaint) : undefined,
-        largest_contentful_paint: metrics.largestContentfulPaint ? Math.round(metrics.largestContentfulPaint) : undefined,
-        first_input_delay: metrics.firstInputDelay ? Math.round(metrics.firstInputDelay) : undefined,
-        cumulative_layout_shift: metrics.cumulativeLayoutShift ? Math.round(metrics.cumulativeLayoutShift * 1000) / 1000 : undefined,
-        time_to_interactive: metrics.timeToInteractive ? Math.round(metrics.timeToInteractive) : undefined,
-        memory_usage: metrics.memoryUsage ? Math.round(metrics.memoryUsage) : undefined,
+        load_time: Math.round(summary.firstContentfulPaint || 0),
+        first_contentful_paint: summary.firstContentfulPaint ? Math.round(summary.firstContentfulPaint) : undefined,
+        largest_contentful_paint: summary.largestContentfulPaint ? Math.round(summary.largestContentfulPaint) : undefined,
+        first_input_delay: summary.firstInputDelay ? Math.round(summary.firstInputDelay) : undefined,
+        cumulative_layout_shift: summary.cumulativeLayoutShift ? Math.round(summary.cumulativeLayoutShift * 1000) / 1000 : undefined,
+        total_metrics: summary.totalMetrics,
+        resource_load_times: summary.resourceLoadTimes,
       });
     }
-  }, [metrics, enablePerformanceTracking]);
+  }, [enablePerformanceTracking]);
 
   // Track errors
   useEffect(() => {

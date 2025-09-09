@@ -79,19 +79,19 @@ export function TalentCard({
           {/* Avatar */}
           <div className="relative mr-4">
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
-              {talent.profile_picture_url ? (
+              {talent.profilePicture ? (
                 <img 
-                  src={talent.profile_picture_url} 
-                  alt={talent.full_name} 
+                  src={talent.profilePicture} 
+                  alt={talent.fullName || 'Talent'} 
                   className="w-full h-full object-cover" 
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
-                  {talent.full_name?.charAt(0) || "T"}
+                  {talent.fullName?.charAt(0) || "T"}
                 </div>
               )}
             </div>
-            {talent.is_verified && (
+            {talent.verified && (
               <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">
                 <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
               </div>
@@ -101,7 +101,7 @@ export function TalentCard({
           {/* Main Info */}
           <div className="flex-1">
             <div className="flex justify-between items-start">
-              <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>
+              <h3 className="text-lg font-bold text-white">{talent.fullName}</h3>
               <Button
                 variant="ghost"
                 size="sm"
@@ -112,7 +112,7 @@ export function TalentCard({
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
               </Button>
             </div>
-            <p className="text-white font-medium">{talent.professional_title}</p>
+            <p className="text-white font-medium">{talent.professionalTitle}</p>
             
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
@@ -122,10 +122,10 @@ export function TalentCard({
                   <span>{talent.location}</span>
                 </div>
               )}
-              {talent.availability_type && (
+              {talent.availability && (
                 <div className="flex items-center text-zion-slate-light">
                   <Clock className="h-4 w-4 mr-1" />
-                  <span>{talent.availability_type}</span>
+                  <span>{talent.availability}</span>
                 </div>
               )}
             </div>
@@ -156,9 +156,9 @@ export function TalentCard({
         {/* Hourly Rate & Actions */}
         <div className="mt-5 flex items-center justify-between">
           <div>
-            {talent.hourly_rate ? (
+            {talent.hourlyRate ? (
               <div className="text-white font-bold">
-                ${talent.hourly_rate}
+                ${talent.hourlyRate}
                 <span className="text-zion-slate-light font-normal">/hr</span>
               </div>
             ) : (

@@ -1,4 +1,9 @@
 
+import React, { memo } from 'react';
+import { SEO } from "@/components/SEO";
+
+const InfoCard: React.FC<{ children: React.ReactNode }> = memo(({ children }) => (
+  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
     {children}
   </div>
 ));

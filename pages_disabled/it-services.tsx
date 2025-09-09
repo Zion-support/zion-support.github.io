@@ -1418,282 +1418,6 @@ const additionalServices = [
         'Cost-effective compliance management'
       ],
       category: 'Compliance'
-    },
-    {
-      icon: Cpu,
-      name: 'Quantum Computing Infrastructure',
-      description: 'Quantum computing infrastructure setup, algorithm development, and quantum-classical hybrid systems.',
-      features: [
-        'Quantum hardware integration and setup',
-        'Quantum algorithm development and optimization',
-        'Quantum-classical hybrid system architecture',
-        'Quantum error correction and fault tolerance',
-        'Quantum software development frameworks',
-        'Quantum security and cryptography implementation'
-      ],
-      pricing: '$500,000 – $5,000,000 project',
-      projectPricing: 'Custom pricing based on quantum requirements',
-      timeline: '24–52 weeks',
-      benefits: [
-        'Exponential computational capabilities',
-        'Advanced optimization and simulation',
-        'Enhanced security through quantum cryptography',
-        'Cutting-edge competitive advantage'
-      ],
-      category: 'Quantum Computing'
-    },
-    {
-      icon: Globe,
-      name: 'Edge Computing & IoT Infrastructure',
-      description: 'Distributed edge computing infrastructure with IoT device management and real-time data processing.',
-      features: [
-        'Edge computing infrastructure deployment',
-        'IoT device management and monitoring',
-        'Real-time data processing and analytics',
-        'Edge AI and machine learning deployment',
-        '5G network integration and optimization',
-        'Distributed system architecture design'
-      ],
-      pricing: '$50,000 – $500,000 project',
-      projectPricing: '$5,000 – $50,000/month managed',
-      timeline: '8–20 weeks',
-      benefits: [
-        'Reduced latency and improved performance',
-        'Enhanced data privacy and security',
-        'Scalable IoT device management',
-        'Real-time decision making capabilities'
-      ],
-      category: 'Edge Computing'
-    },
-    {
-      icon: Shield,
-      name: 'Zero Trust Security Architecture',
-      description: 'Comprehensive zero trust security implementation with identity verification and micro-segmentation.',
-      features: [
-        'Zero trust network architecture design',
-        'Identity and access management (IAM)',
-        'Micro-segmentation and network isolation',
-        'Continuous security monitoring and analytics',
-        'Privileged access management (PAM)',
-        'Security orchestration and automation'
-      ],
-      pricing: '$100,000 – $1,000,000 project',
-      projectPricing: '$10,000 – $100,000/month managed',
-      timeline: '12–24 weeks',
-      benefits: [
-        'Enhanced security posture',
-        'Reduced attack surface',
-        'Improved compliance and governance',
-        'Automated threat response'
-      ],
-      category: 'Security'
-    },
-    {
-      icon: Database,
-      name: 'Blockchain & Distributed Ledger Solutions',
-      description: 'Blockchain infrastructure, smart contract development, and decentralized application deployment.',
-      features: [
-        'Blockchain infrastructure setup and management',
-        'Smart contract development and auditing',
-        'DeFi and NFT platform development',
-        'Cryptocurrency wallet and exchange integration',
-        'Blockchain analytics and monitoring',
-        'Regulatory compliance and governance'
-      ],
-      pricing: '$75,000 – $750,000 project',
-      projectPricing: '$5,000 – $50,000/month managed',
-      timeline: '16–32 weeks',
-      benefits: [
-        'Enhanced transparency and trust',
-        'Reduced transaction costs',
-        'Improved data integrity',
-        'Decentralized system architecture'
-      ],
-      category: 'Blockchain'
-    },
-    {
-      icon: Cloud,
-      name: 'Multi-Cloud & Hybrid Cloud Management',
-      description: 'Comprehensive multi-cloud and hybrid cloud strategy with unified management and optimization.',
-      features: [
-        'Multi-cloud architecture design and implementation',
-        'Hybrid cloud integration and management',
-        'Cloud cost optimization and FinOps',
-        'Cross-cloud data migration and synchronization',
-        'Unified monitoring and management platform',
-        'Disaster recovery and business continuity'
-      ],
-      pricing: '$150,000 – $1,500,000 project',
-      projectPricing: '$15,000 – $150,000/month managed',
-      timeline: '16–32 weeks',
-      benefits: [
-        'Reduced vendor lock-in',
-        'Optimized cloud costs',
-        'Enhanced flexibility and scalability',
-        'Improved disaster recovery capabilities'
-      ],
-      category: 'Cloud & Infrastructure'
-    },
-    {
-      icon: Smartphone,
-      name: '5G Network Infrastructure & Optimization',
-      description: '5G network deployment, optimization, and application development for next-generation connectivity.',
-      features: [
-        '5G network infrastructure deployment',
-        'Network slicing and optimization',
-        '5G application development and testing',
-        'Edge computing integration with 5G',
-        'Network performance monitoring and analytics',
-        'IoT and smart city connectivity solutions'
-      ],
-      pricing: '$200,000 – $2,000,000 project',
-      projectPricing: '$20,000 – $200,000/month managed',
-      timeline: '20–40 weeks',
-      benefits: [
-        'Ultra-low latency connectivity',
-        'Massive IoT device support',
-        'Enhanced mobile broadband',
-        'Next-generation application capabilities'
-      ],
-      category: 'Network Infrastructure'
-    },
-    {
-      icon: Brain,
-      name: 'AI/ML Infrastructure & MLOps',
-      description: 'Complete AI/ML infrastructure setup with MLOps pipelines, model deployment, and monitoring.',
-      features: [
-        'AI/ML infrastructure design and deployment',
-        'MLOps pipeline development and automation',
-        'Model training and deployment platforms',
-        'AI model monitoring and governance',
-        'Data pipeline and feature store setup',
-        'AI ethics and bias monitoring'
-      ],
-      pricing: '$100,000 – $1,000,000 project',
-      projectPricing: '$10,000 – $100,000/month managed',
-      timeline: '12–24 weeks',
-      benefits: [
-        'Accelerated AI model development',
-        'Automated ML operations',
-        'Scalable AI infrastructure',
-        'Enhanced model performance and reliability'
-      ],
-      category: 'AI Infrastructure'
-    },
-    {
-      icon: Server,
-      name: 'Serverless & Microservices Architecture',
-      description: 'Serverless architecture implementation with microservices design and API management.',
-      features: [
-        'Serverless architecture design and implementation',
-        'Microservices development and deployment',
-        'API gateway and management platform',
-        'Container orchestration and management',
-        'Event-driven architecture implementation',
-        'Performance monitoring and optimization'
-      ],
-      pricing: '$75,000 – $750,000 project',
-      projectPricing: '$5,000 – $50,000/month managed',
-      timeline: '12–24 weeks',
-      benefits: [
-        'Reduced infrastructure costs',
-        'Improved scalability and performance',
-        'Faster development and deployment',
-        'Enhanced system reliability'
-      ],
-      category: 'Architecture'
-    },
-    {
-      icon: Database,
-      name: 'Data Mesh & Data Fabric Architecture',
-      description: 'Modern data architecture with data mesh and data fabric implementation for enterprise data management.',
-      features: [
-        'Data mesh architecture design and implementation',
-        'Data fabric platform development',
-        'Data governance and cataloging',
-        'Real-time data streaming and processing',
-        'Data quality and lineage management',
-        'Self-service analytics platform'
-      ],
-      pricing: '$200,000 – $2,000,000 project',
-      projectPricing: '$20,000 – $200,000/month managed',
-      timeline: '20–40 weeks',
-      benefits: [
-        'Improved data accessibility and democratization',
-        'Enhanced data quality and governance',
-        'Faster time-to-insight',
-        'Scalable data architecture'
-      ],
-      category: 'Data Architecture'
-    },
-    {
-      icon: Shield,
-      name: 'DevSecOps & Security Automation',
-      description: 'Integrated security into DevOps pipelines with automated security testing and compliance.',
-      features: [
-        'DevSecOps pipeline integration',
-        'Automated security testing and scanning',
-        'Infrastructure as Code security',
-        'Compliance automation and reporting',
-        'Security monitoring and alerting',
-        'Vulnerability management and remediation'
-      ],
-      pricing: '$50,000 – $500,000 project',
-      projectPricing: '$5,000 – $50,000/month managed',
-      timeline: '8–16 weeks',
-      benefits: [
-        'Enhanced security throughout SDLC',
-        'Automated compliance and reporting',
-        'Reduced security vulnerabilities',
-        'Faster and more secure deployments'
-      ],
-      category: 'Security'
-    },
-    {
-      icon: Globe,
-      name: 'Green IT & Sustainable Technology',
-      description: 'Sustainable IT infrastructure with energy optimization, carbon footprint reduction, and green computing.',
-      features: [
-        'Energy-efficient infrastructure design',
-        'Carbon footprint monitoring and reduction',
-        'Green data center optimization',
-        'Sustainable software development practices',
-        'Renewable energy integration',
-        'Environmental impact assessment and reporting'
-      ],
-      pricing: '$100,000 – $1,000,000 project',
-      projectPricing: '$10,000 – $100,000/month managed',
-      timeline: '12–24 weeks',
-      benefits: [
-        'Reduced environmental impact',
-        'Lower energy costs',
-        'Enhanced corporate sustainability',
-        'Compliance with environmental regulations'
-      ],
-      category: 'Sustainability'
-    },
-    {
-      icon: Cpu,
-      name: 'High-Performance Computing (HPC)',
-      description: 'High-performance computing infrastructure for scientific research, simulations, and data-intensive applications.',
-      features: [
-        'HPC cluster design and deployment',
-        'Parallel computing optimization',
-        'GPU computing and acceleration',
-        'Scientific computing software stack',
-        'High-speed networking and storage',
-        'Performance monitoring and optimization'
-      ],
-      pricing: '$500,000 – $5,000,000 project',
-      projectPricing: '$50,000 – $500,000/month managed',
-      timeline: '24–48 weeks',
-      benefits: [
-        'Massive computational power',
-        'Accelerated research and development',
-        'Complex simulation capabilities',
-        'Advanced data processing and analysis'
-      ],
-      category: 'High-Performance Computing'
     }
   ];
 
@@ -1768,134 +1492,33 @@ export default function ITServicesPage() {
   return (
     <>
       <Head>
-        <title>IT Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including cloud DevOps, cybersecurity, data engineering, and more. Expert solutions for your technology needs." />
-        <link rel="canonical" href="https://ziontechgroup.com/it-services" />
+        <title>IT & Cloud Services — Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT and cloud services including DevOps, cybersecurity, cloud migration, and enterprise solutions. Transform your infrastructure with our expert team." />
+        <link rel="canonical" href={`${contact.site}/it-services`} />
       </Head>
-      <ErrorBoundary level='page'>
-        <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
-          {/* Hero Section */}
-          <section className='py-20 px-4 text-center' role='banner'>
-            <div className='max-w-4xl mx-auto'>
-              <h1                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >
-                IT Services
-              </h1>
-              <p
-                className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >
-                100+ Comprehensive IT Solutions
-              </p>
-              <p
-                className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >
-                Transform your business with our enterprise-grade IT services.
-                From cloud infrastructure to quantum computing, we provide
-                cutting-edge technology solutions that scale with your business
-                and drive innovation.              </p>
-            </div>
-          </section>
-          {/* Category Filter */}
-          <section className='py-8 px-4'>
-            <div className='max-w-6xl mx-auto'>
-              <div className='flex flex-wrap justify-center gap-4 mb-8'>
-                {categories.map(category => (                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      selectedCategory === category.id
-                        ? 'bg-green-600 text-white'
-                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-                    }`}>{category.name} ({category.count})
-                  </button>
-                ))}
-              </div>
-            </div>
-          </section>
-          {/* Services Grid */}
-          <section className='py-16 px-4' role='main'>
-            <div className='max-w-7xl mx-auto'>
-              <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-                {filteredServices.map((service, index) => (
-                  <div                    key={service.id}
-                    className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                    style={{ transitionDelay: `${index * 100}ms` }}>{service.popular && (
-                      <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
-                        Popular
-                      </div>
-                    )}
-                    <h3 className='text-xl font-bold mb-3'>{service.name}</h3>
-                    <p className='text-slate-300 mb-4 text-sm'>
-                      {service.description}
-                    </p>
-                    <div className='mb-4'>
-                      <h4 className='text-sm font-semibold text-green-400 mb-2'>
-                        Key Features:
-                      </h4>
-                      <ul className='text-slate-400 text-sm space-y-1'>
-                        {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className='flex items-center'>
-                            <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0'></span>                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className='mb-4'>
-                      <h4 className='text-sm font-semibold text-blue-400 mb-2'>
-                        Benefits:
-                      </h4>
-                      <div className='flex flex-wrap gap-1'>
-                        {service.benefits.map((benefit, benefitIndex) => (
-                          <span
-                            key={benefitIndex}
-                            className='text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded'
-                          >                            {benefit}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className='flex items-center justify-between mb-4'>
-                      <span className='text-2xl font-bold text-green-400'>
-                        {service.price}
-                      </span>
-                      <span className='text-xs text-slate-500 capitalize'>
-                        {service.category.replace('-', ' ')}
-                      </span>
-                    </div>
-                    <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>                      Learn More
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-          {/* Technology Stack Section */}
-          <section className='py-16 px-4 bg-slate-900/40'>
-            <div className='max-w-6xl mx-auto'>
-              <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>
-                Our Technology Stack
-              </h2>
-              <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
-                <div className='text-center'>
-                  <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-                    <svg
-                      className='w-8 h-8 text-white'
-                      fill='none'
-                      stroke='currentColor'
-                      viewBox='0 0 24 24'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth={2}
-                        d='M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
-                      />
-                    </svg>
-                  </div>
-                  <h3 className='text-xl font-bold mb-2'>Cloud Platforms</h3>
-                  <p className='text-slate-400'>
-                    AWS, Azure, GCP, and hybrid cloud solutions
-                  </p>
+
+      <header className="py-20 text-center px-4">
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+          IT & Cloud Services
+        </h1>
+        <p className="mt-4 text-slate-300 max-w-3xl mx-auto text-lg">
+          Comprehensive IT solutions and cloud services to modernize your infrastructure, 
+          enhance security, and optimize performance for your business needs.
+        </p>
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>
+          <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>
+          <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Get Quote</Link>
+        </div>
+      </header>
+
+      <main className="max-w-7xl mx-auto px-4 pb-24">
+        <div className="grid gap-8">
+          {itServices.map((service, index) => (
+            <div key={index} className="rounded-xl border border-white/10 bg-slate-900/60 p-8 hover:border-blue-500/40 transition-colors">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <service.icon className="w-6 h-6" />
                 </div>
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -2033,37 +1656,45 @@ whileHover={{ y: -5 }} ">
                       {service.category}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <div className="mb-4">
-<h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
-                  <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-600">
-<CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                  <p className="text-slate-300 text-lg">{service.description}</p>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 text-blue-400">Key Features</h3>
+                  <ul className="space-y-2 text-slate-300">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <span className="text-blue-400 mt-1">•</span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 text-green-400">Business Benefits</h3>
+                  <ul className="space-y-2 text-slate-300">
+                    {service.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <span className="text-green-400 mt-1">✓</span>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-6 pt-6 border-t border-white/10">
+                <div className="flex flex-wrap items-center gap-6">
+                  <div className="flex items-center gap-2">
+                    <span className="text-slate-400">Pricing:</span>
+                    <span className="font-semibold text-blue-400">{service.pricing}</span>
                   </div>
-                  <div className="mb-4">
-                  <span className="text-sm font-semibold text-green-600">{service.pricing}</span>
-                  </div>
-                  <Link
-                    href="/contact"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
-                  >
-                    <span>Get Quote</span>
-                  <ArrowRight className="w-3 h-3 ml-1" />
-                  </Link>
-                  </motion.div>
-              );
-            })}
-          </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-slate-400">Timeline:</span>
+                    <span className="font-semibold text-green-400">{service.timeline}</span>
                   </div>
                   </section>
       {/* Technologies Section */}

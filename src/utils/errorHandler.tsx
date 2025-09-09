@@ -3,6 +3,8 @@
  * Provides centralized error handling, logging, and user feedback
  */
 
+import React, { Component, ErrorInfo as ReactErrorInfo, ComponentType, ReactNode } from 'react';
+
 export interface ErrorInfo {
   message: string;
   code?: string;
@@ -94,7 +96,7 @@ class ErrorHandler {
    */
   public handleComponentError(
     error: Error,
-    errorInfo: React.ErrorInfo,
+    errorInfo: ReactErrorInfo,
     componentName?: string
   ): void {
     const context: ErrorContext = {
@@ -278,8 +280,8 @@ export const handleComponentError = (error: Error, errorInfo: React.ErrorInfo, c
 };
 
 // React Error Boundary component
-export class ErrorBoundary extends React.Component<
-  { children: React.ReactNode; fallback?: React.ComponentType<{ error: Error }> },
+export class ErrorBoundary extends Component<
+  { children: ReactNode; fallback?: ComponentType<{ error: Error }> },
   { hasError: boolean; error?: Error }
 > {
   constructor(props: any) {
@@ -306,7 +308,7 @@ export class ErrorBoundary extends React.Component<
 }
 
 // Default error fallback component
-const DefaultErrorFallback: React.FC<{ error: Error }> = ({ error }) => (
+const DefaultErrorFallback: ComponentType<{ error: Error }> = ({ error }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
     <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
       <div className="flex items-center mb-4">
@@ -448,36 +450,6 @@ export class Logger {
 
 export const logger = Logger.getInstance();
 
-export function handleError(error: unknown, context?: Record<string, unknown>): AppError {
-  if (error instanceof CustomError) {
-    logger.error('Custom error occurred', error, context);
-    return error;
-  }
-
-  if (error instanceof Error) {
-    const appError: AppError = {
-      ...error,
-      code: ErrorCodes.INTERNAL_ERROR,
-      statusCode: 500,
-      isOperational: false,
-      context,
-    };
-    logger.error('Unexpected error occurred', appError, context);
-    return appError;
-  }
-
-  const unknownError: AppError = {
-    name: 'UnknownError',
-    message: 'An unknown error occurred',
-    code: ErrorCodes.INTERNAL_ERROR,
-    statusCode: 500,
-    isOperational: false,
-    context,
-  };
-
-  logger.error('Unknown error occurred', unknownError, context);
-  return unknownError;
-}
 
 export function createError(
   message: string,
@@ -487,6 +459,22 @@ export function createError(
 ): CustomError {
   return new CustomError(message, code, statusCode, true, context);
 }
+
+// React hook for error handling
+export const useErrorHandler = () => {
+  const handleError = (error: Error | string, context?: ErrorContext, showToast = true) => {
+    errorHandler.handleError(error, context, showToast);
+  };
+
+  const handleApiError = (error: any, context?: ErrorContext) => {
+    errorHandler.handleApiError(error, context);
+  };
+
+  return {
+    handleError,
+    handleApiError,
+  };
+};
 
 export function isOperationalError(error: unknown): boolean {
   if (error instanceof CustomError) {
