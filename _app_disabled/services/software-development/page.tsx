@@ -19,18 +19,30 @@ export default function SoftwareDevelopmentPage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">💻</span>
+            <span className="text-2xl">🌐</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Custom Applications
+            Web Applications
           </h3>
           <p className="text-gray-600">
-            Tailored software solutions designed specifically for your business requirements.
+            Modern web applications built with cutting-edge technologies and best practices.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+            <span className="text-2xl">💻</span>
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            Desktop Software
+          </h3>
+          <p className="text-gray-600">
+            Cross-platform desktop applications for Windows, macOS, and Linux.
+          </p>
+        </div>
+
+        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+          <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
             <span className="text-2xl">🏢</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">

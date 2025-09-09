@@ -37,7 +37,19 @@ export default function FintechSolutionsPage() {
             Digital Banking
           </h3>
           <p className="text-gray-600">
-            Modern digital banking solutions with advanced security and user experience.
+            Modern digital banking platforms with advanced security and user experience.
+          </p>
+        </div>
+
+        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+          <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+            <span className="text-2xl">📈</span>
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            Financial Analytics
+          </h3>
+          <p className="text-gray-600">
+            Advanced analytics and reporting tools for data-driven financial decisions.
           </p>
         </div>
       </div>

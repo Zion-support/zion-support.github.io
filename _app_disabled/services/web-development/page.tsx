@@ -19,13 +19,13 @@ export default function WebDevelopmentPage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🌐</span>
+            <span className="text-2xl">📱</span>
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Responsive Websites
+            Responsive Design
           </h3>
           <p className="text-gray-600">
-            Modern, responsive websites that work perfectly on all devices.
+            Mobile-first responsive websites that work perfectly on all devices and screen sizes.
           </p>
         </div>
 
@@ -37,7 +37,19 @@ export default function WebDevelopmentPage() {
             E-commerce Platforms
           </h3>
           <p className="text-gray-600">
-            Custom e-commerce solutions with secure payment processing.
+            Complete e-commerce solutions with payment integration and inventory management.
+          </p>
+        </div>
+
+        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+          <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+            <span className="text-2xl">⚡</span>
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            Performance Optimization
+          </h3>
+          <p className="text-gray-600">
+            Fast-loading websites optimized for speed, SEO, and user experience.
           </p>
         </div>
       </div>

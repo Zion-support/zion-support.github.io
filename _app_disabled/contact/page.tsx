@@ -8,7 +8,7 @@ import {
   CheckCircleIcon,
   ExclamationTriangleIcon,
 } from '@heroicons/react/24/outline';
-import Link from 'next/link';
+// import Link from 'next/link'; // Removed unused import
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({

@@ -37,7 +37,19 @@ export default function ERPSolutionsPage() {
             HR Management
           </h3>
           <p className="text-gray-600">
-            Complete human resources management system for employee lifecycle.
+            Complete human resources management systems for employee lifecycle management.
+          </p>
+        </div>
+
+        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+          <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+            <span className="text-2xl">📊</span>
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            Supply Chain
+          </h3>
+          <p className="text-gray-600">
+            Optimize supply chain operations with advanced planning and execution tools.
           </p>
         </div>
       </div>

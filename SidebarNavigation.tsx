@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Home, User, Settings, Menu, X } from 'lucide-react';
+import { Home, User, Settings, Menu, X, LogOut } from 'lucide-react';
+import Link from 'next/link';
 
 const SidebarNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,16 +26,23 @@ const SidebarNavigation: React.FC = () => {
         
         <nav className="mt-4">
           {navigationItems.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.href}
               className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 transition-colors"
             >
               <item.icon className="w-5 h-5" />
               {isOpen && <span className="ml-3">{item.name}</span>}
-            </a>
+            </Link>
           ))}
         </nav>
+        
+        <div className="absolute bottom-4 left-4 right-4">
+          <button className="flex items-center w-full p-4 text-gray-700 hover:bg-gray-100 transition-colors rounded-lg">
+            <LogOut className="w-6 h-6" />
+            {isOpen && <span className="ml-3">Logout</span>}
+          </button>
+        </div>
       </div>
       
       {/* Main content */}

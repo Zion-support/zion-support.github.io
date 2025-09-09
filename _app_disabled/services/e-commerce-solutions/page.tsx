@@ -37,7 +37,19 @@ export default function ECommerceSolutionsPage() {
             Payment Integration
           </h3>
           <p className="text-gray-600">
-            Secure payment processing with multiple gateway support.
+            Secure payment processing with support for multiple payment methods and currencies.
+          </p>
+        </div>
+
+        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+          <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+            <span className="text-2xl">📦</span>
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            Inventory Management
+          </h3>
+          <p className="text-gray-600">
+            Advanced inventory tracking and management systems for optimal stock control.
           </p>
         </div>
       </div>

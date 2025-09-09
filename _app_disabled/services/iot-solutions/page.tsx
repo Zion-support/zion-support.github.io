@@ -37,7 +37,19 @@ export default function IoTSolutionsPage() {
             Sensor Networks
           </h3>
           <p className="text-gray-600">
-            Advanced sensor network solutions for data collection and monitoring.
+            Advanced sensor network solutions for comprehensive data collection and monitoring.
+          </p>
+        </div>
+
+        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+          <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+            <span className="text-2xl">📊</span>
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            Real-time Analytics
+          </h3>
+          <p className="text-gray-600">
+            Real-time data processing and analytics for immediate insights and decision making.
           </p>
         </div>
       </div>

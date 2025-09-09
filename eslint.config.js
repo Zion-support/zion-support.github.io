@@ -59,7 +59,11 @@ export default [
       "*.txt",
       "*.tsv",
       "*.html",
-      "*.json"
+      "*.json",
+      "_app_disabled/**",
+      "**/*.disabled/**",
+      "**/*.broken/**",
+      "**/*.corrupted/**"
     ],
   },
 

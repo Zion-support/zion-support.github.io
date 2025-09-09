@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { PerformanceMonitor, usePerformanceMonitor } from '../utils/performance-monitor';
-import { ErrorBoundary } from '../utils/error-handler';
+import { usePerformanceMonitor } from '../utils/performance-monitor';
+import ErrorBoundary from './ErrorBoundary';
 
 interface PerformanceWrapperProps {
   children: React.ReactNode;
@@ -82,14 +82,14 @@ export const useComponentPerformance = (componentName: string) => {
     setMetrics(prev => ({ ...prev, [metricName]: value }));
   };
 
-  const trackFunction = <T extends any[], R>(
+  const trackFunction = <T extends unknown[], R>(
     functionName: string,
     fn: (...args: T) => R
   ) => {
     return measureFunction(`${componentName}_${functionName}`, fn);
   };
 
-  const trackAsyncFunction = <T extends any[], R>(
+  const trackAsyncFunction = <T extends unknown[], R>(
     functionName: string,
     fn: (...args: T) => Promise<R>
   ) => {

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   keywords: 'ai project manager, services, business, technology',
 };
 
-function FeatureCard({ title, details }: { title: string; details: string[] }) {
+export default function AiProjectManagerPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
