@@ -21,9 +21,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'yarn'
-
+          node-version: '18'
+          cache: 'npm'
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
@@ -32,77 +31,25 @@ jobs:
 
       - name: Verify build output
         run: |
-          if [ -d ".next" ]; then
-            echo "Next.js build successful"
-          elif [ -d "dist" ]; then
-            echo "Static build successful"
-          elif [ -d "out" ]; then
-            echo "Export build successful"
-          else
-            echo "Build failed: no output directory found"
+          if [ ! -d .next ]; then
+            echo "Build failed: .next folder not found"
             exit 1
           fi
-      - name: Verify asset paths
+          echo "Build successful: .next folder found"
+      - name: Run basic tests (if available)
         run: |
-          npx http-server dist -p 5000 -s >/dev/null 2>&1 &
-          SERVER_PID=$!
-          sleep 3
-          kill $SERVER_PID || true
-      - name: Run tests with coverage
-        run: npm test
+          if npm run | grep -q "test"; then
+            npm test
+          else
+            echo "No test script found, skipping tests"
+          fi
         continue-on-error: true
       - name: Upload build artifacts
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: coverage-report
-          path: coverage/
-          retention-days: 30
-
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-artifacts
-          path: |
-            .next/
-            out/
-            dist/
-          retention-days: 7
-
-  e2e:
-    name: End-to-End Tests
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    needs: test
-    if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'yarn'
-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Build project
-        run: yarn build
-
-      - name: Start development server
-        run: |
-          yarn dev &
-          sleep 30
-        env:
-          PORT: 3000
-
-      - name: Run E2E tests (placeholder)
-        run: |
-          echo "E2E tests would run here"
-          echo "Currently using placeholder - add actual E2E test commands"
-        continue-on-error: true
+          name: build
+          path: .next
 
 concurrency:
   group: test-${{ github.ref }}

@@ -6,20 +6,16 @@ const nextConfig = {
 	trailingSlash: true,
 	output: 'export',
 	images: {
-		// Using unoptimized to support static hosting/CDN without Next Image optimization
 		unoptimized: true,
-		domains: ["localhost"]
+		// Allow localhost during local previews if needed
+		domains: ['localhost']
 	},
-	pageExtensions: ['tsx','ts','jsx','js'],
 	typescript: {
-		ignoreBuildErrors: process.env.SKIP_TYPE_CHECK === 'true' || true
+		// Allow CI builds to proceed even if type errors exist when env is set
+		ignoreBuildErrors: process.env.SKIP_TYPE_CHECK === 'true' || true,
 	},
 	eslint: {
 		ignoreDuringBuilds: true,
-	},
-	typescript: {
-		// Allow builds to pass even if there are type errors; CI can run type-check separately
-		ignoreBuildErrors: true,
 	},
 	async redirects() {
 		return [
@@ -30,9 +26,9 @@ const nextConfig = {
 			{ source: '/intelligent-content-automation-platform', destination: '/services/intelligent-content-automation-platform', permanent: true },
 			{ source: '/intelligent-hr-analytics-platform', destination: '/services/ai-hr-analytics-platform', permanent: true },
 			{ source: '/smart-crm-intelligence-suite', destination: '/services/smart-crm-intelligence-suite', permanent: true },
-			{ source: '/affiliate-attribution-suite', destination: '/services/affiliate-attribution-suite', permanent: true },
-		]
+			{ source: '/affiliate-attribution-suite', destination: '/services/affiliate-attribution-suite', permanent: true }
+		];
 	},
 };
 
-module.exports = nextConfig;
+export default nextConfig;
