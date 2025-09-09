@@ -1,4 +1,4 @@
-# Netlify rebuild trigger (minor comment touch to force deploy)
+# Netlify rebuild trigger (minor comment touch to force deploy - ensure rebuild)
 [build]
   # Build the Vite React project on Netlify
   # Minor comment change to trigger Netlify redeploy - 2025-09-09
