@@ -47,9 +47,9 @@ export const innovativeAIServices: InnovativeAIService[] = [
     tagline: 'Revolutionary quantum - enhanced AI with human - like reasoning',
     price: '$2, 999',
     period: '/month',
-    description:;
+    description:
       "World's first quantum - enhanced AI with human - like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months. Advanced neural signal processing with quantum encryption.",
-    features: [;
+    features: [
       'Quantum neural signal processing',
       'Real - time brain activity monitoring',
       'AI - powered cognitive enhancement',
