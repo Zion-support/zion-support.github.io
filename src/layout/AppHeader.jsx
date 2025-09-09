@@ -1,60 +1,88 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  Search, 
+  User, 
+  Bell,
+  Globe,
+  Sun,
+  Moon
+} from 'lucide-react';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [searchQuery, setSearchQuery] = useState('');
+  const location = useLocation();
 
+  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { path: '/services', label: 'Services' },
-    { path: '/marketplace', label: 'Marketplace' },
-    { path: '/solutions', label: 'Solutions' },
-    { path: '/contact', label: 'Contact' },
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location]);
+
+  const navigation = [
+    { name: 'Home', href: '/', current: location.pathname === '/' },
+    { name: 'About', href: '/about', current: location.pathname === '/about' },
+    { name: 'Services', href: '/services', current: location.pathname === '/services' },
+    { name: 'Contact', href: '/contact', current: location.pathname === '/contact' }
   ];
 
-  return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      scrolled 
-        ? 'bg-black/95 backdrop-blur-xl border-b border-zion-cyan/30 shadow-2xl shadow-zion-cyan/20' 
-        : 'bg-black/80 backdrop-blur-md border-b border-zion-cyan/20'
-    }`}>
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-0 left-1/4 w-1 h-1 bg-zion-cyan rounded-full animate-pulse opacity-60"></div>
-          <div className="absolute top-4 right-1/3 w-2 h-2 bg-zion-purple rounded-full animate-pulse opacity-40"></div>
-          <div className="absolute top-8 left-1/2 w-1 h-1 bg-zion-cyan rounded-full animate-pulse opacity-50"></div>
-          <div className="absolute top-12 right-1/4 w-1.5 h-1.5 bg-zion-purple rounded-full animate-pulse opacity-30"></div>
-        </div>
-      </div>
+  const services = [
+    { name: 'AI & Machine Learning', href: '/services#ai' },
+    { name: 'Cybersecurity', href: '/services#security' },
+    { name: 'Cloud Solutions', href: '/services#cloud' },
+    { name: 'Digital Transformation', href: '/services#digital' }
+  ];
 
-      <div className="container mx-auto px-4 relative z-10">
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    // Here you would typically update the theme context
+  };
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      // Implement search functionality
+      console.log('Searching for:', searchQuery);
+    }
+  };
+
+  return (
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-black/95 backdrop-blur-md border-b border-zion-cyan/20 shadow-lg' 
+          : 'bg-black/80 backdrop-blur-sm'
+      }`}
+    >
+      <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <motion.div 
               className="relative"
               whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              transition={{ duration: 0.2 }}
             >
-              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
-                <span className="text-white font-bold text-lg lg:text-xl relative z-10">Z</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 animate-pulse"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <span className="text-white font-bold text-lg lg:text-xl">Z</span>
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
             </motion.div>
             <div className="hidden sm:block">
               <motion.div 
@@ -78,144 +106,231 @@ export function AppHeader() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item, index) => (
-              <motion.div
-                key={item.path}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * index }}
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`relative px-3 py-2 text-sm font-medium rounded-md transition-colors duration-300 ${
+                  item.current
+                    ? 'text-zion-cyan'
+                    : 'text-white hover:text-zion-cyan'
+                }`}
               >
-                <Link 
-                  to={item.path} 
-                  className="relative text-white hover:text-zion-cyan transition-colors duration-300 group"
-                >
-                  {item.label}
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-zion-cyan to-zion-purple group-hover:w-full transition-all duration-300"></div>
-                </Link>
-              </motion.div>
+                {item.name}
+                {item.current && (
+                  <motion.div
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-zion-cyan"
+                    layoutId="activeTab"
+                    initial={false}
+                    transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                  />
+                )}
+              </Link>
             ))}
+            
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button className="flex items-center text-white hover:text-zion-cyan transition-colors duration-300">
+                Services
+                <ChevronDown className="ml-1 w-4 h-4 group-hover:rotate-180 transition-transform duration-200" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark/95 backdrop-blur-md rounded-lg border border-zion-cyan/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100">
+                <div className="py-2">
+                  {services.map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.href}
+                      className="block px-4 py-2 text-sm text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors duration-200"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
           </nav>
 
-          {/* Actions */}
+          {/* Right Side Actions */}
           <div className="hidden lg:flex items-center space-x-4">
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-            >
-              <Link to="/login" className="text-white hover:text-zion-cyan transition-colors duration-300 font-medium">
-                Login
-              </Link>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
-            >
-              <Link 
-                to="/contact" 
-                className="relative px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-transform duration-300 overflow-hidden group"
+            {/* Search */}
+            <form onSubmit={handleSearch} className="relative">
+              <input
+                type="text"
+                placeholder="Search..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-48 px-4 py-2 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-colors"
+              />
+              <button
+                type="submit"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors"
               >
-                <span className="relative z-10">Get Started</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-zion-purple to-zion-cyan opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-              </Link>
-            </motion.div>
+                <Search className="w-4 h-4" />
+              </button>
+            </form>
+
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleDarkMode}
+              className="p-2 text-white hover:text-zion-cyan transition-colors duration-300"
+              aria-label="Toggle theme"
+            >
+              {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
+
+            {/* Language Selector */}
+            <button className="p-2 text-white hover:text-zion-cyan transition-colors duration-300">
+              <Globe className="w-5 h-5" />
+            </button>
+
+            {/* Notifications */}
+            <button className="p-2 text-white hover:text-zion-cyan transition-colors duration-300 relative">
+              <Bell className="w-5 h-5" />
+              <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
+            </button>
+
+            {/* User Menu */}
+            <Link to="/login" className="text-white hover:text-zion-cyan transition-colors duration-300 font-medium">
+              <User className="w-5 h-5" />
+            </Link>
+
+            {/* CTA Button */}
+            <Link 
+              to="/contact" 
+              className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-transform shadow-lg hover:shadow-zion-cyan/25"
+            >
+              Get Started
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <motion.button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors duration-300 relative"
-            whileTap={{ scale: 0.95 }}
+            className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors duration-300"
+            aria-label="Toggle mobile menu"
           >
-            <div className="w-6 h-6 relative">
-              <motion.div
-                className="absolute inset-0 flex flex-col justify-center items-center"
-                animate={mobileMenuOpen ? "open" : "closed"}
-              >
-                <motion.span
-                  className="w-6 h-0.5 bg-current transform origin-center transition-all duration-300"
-                  variants={{
-                    closed: { rotate: 0, y: 0 },
-                    open: { rotate: 45, y: 6 }
-                  }}
-                />
-                <motion.span
-                  className="w-6 h-0.5 bg-current transform origin-center transition-all duration-300 mt-1"
-                  variants={{
-                    closed: { opacity: 1 },
-                    open: { opacity: 0 }
-                  }}
-                />
-                <motion.span
-                  className="w-6 h-0.5 bg-current transform origin-center transition-all duration-300 mt-1"
-                  variants={{
-                    closed: { rotate: 0, y: 0 },
-                    open: { rotate: -45, y: -6 }
-                  }}
-                />
-              </motion.div>
-            </div>
-          </motion.button>
+            <AnimatePresence mode="wait">
+              {mobileMenuOpen ? (
+                <motion.div
+                  key="close"
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <X className="w-6 h-6" />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="menu"
+                  initial={{ rotate: 90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: -90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Menu className="w-6 h-6" />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </button>
         </div>
 
         {/* Mobile Menu */}
         <AnimatePresence>
           {mobileMenuOpen && (
-            <motion.div 
-              className="lg:hidden py-4 border-t border-zion-cyan/20"
+            <motion.div
+              className="lg:hidden"
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
+              animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              <nav className="flex flex-col space-y-4">
-                {navItems.map((item, index) => (
-                  <motion.div
-                    key={item.path}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 * index }}
-                  >
-                    <Link 
-                      to={item.path} 
-                      className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2 px-4 rounded-lg hover:bg-zion-cyan/10"
-                      onClick={() => setMobileMenuOpen(false)}
+              <div className="py-4 border-t border-zion-cyan/20">
+                {/* Mobile Search */}
+                <form onSubmit={handleSearch} className="mb-6">
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="Search..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                    />
+                    <button
+                      type="submit"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light"
                     >
-                      {item.label}
-                    </Link>
-                  </motion.div>
-                ))}
-                <div className="pt-4 border-t border-zion-cyan/20 space-y-3">
-                  <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.6 }}
-                  >
-                    <Link 
-                      to="/login" 
-                      className="block text-white hover:text-zion-cyan transition-colors duration-300 font-medium mb-3"
-                      onClick={() => setMobileMenuOpen(false)}
+                      <Search className="w-5 h-5" />
+                    </button>
+                  </div>
+                </form>
+
+                {/* Mobile Navigation */}
+                <nav className="space-y-2">
+                  {navigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className={`block px-4 py-3 rounded-lg transition-colors duration-200 ${
+                        item.current
+                          ? 'bg-zion-cyan/20 text-zion-cyan'
+                          : 'text-white hover:bg-zion-slate-dark/50'
+                      }`}
                     >
-                      Login
+                      {item.name}
                     </Link>
-                  </motion.div>
-                  <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.7 }}
-                  >
-                    <Link 
-                      to="/contact" 
-                      className="block px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium text-center hover:scale-105 transition-transform duration-300"
-                      onClick={() => setMobileMenuOpen(false)}
+                  ))}
+                  
+                  {/* Mobile Services */}
+                  <div className="px-4 py-3">
+                    <div className="text-zion-cyan font-medium mb-2">Services</div>
+                    <div className="space-y-2 ml-4">
+                      {services.map((service) => (
+                        <Link
+                          key={service.name}
+                          to={service.href}
+                          className="block py-2 text-sm text-zion-slate-light hover:text-zion-cyan transition-colors duration-200"
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </nav>
+
+                {/* Mobile Actions */}
+                <div className="mt-6 pt-6 border-t border-zion-cyan/20 space-y-3">
+                  <div className="flex items-center justify-center space-x-4">
+                    <button
+                      onClick={toggleDarkMode}
+                      className="p-2 text-white hover:text-zion-cyan transition-colors duration-300"
                     >
-                      Get Started
-                    </Link>
-                  </motion.div>
+                      {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                    </button>
+                    <button className="p-2 text-white hover:text-zion-cyan transition-colors duration-300">
+                      <Globe className="w-5 h-5" />
+                    </button>
+                    <button className="p-2 text-white hover:text-zion-cyan transition-colors duration-300 relative">
+                      <Bell className="w-5 h-5" />
+                      <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
+                    </button>
+                  </div>
+                  
+                  <Link 
+                    to="/login" 
+                    className="block w-full text-center px-4 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-colors duration-300"
+                  >
+                    Login
+                  </Link>
+                  
+                  <Link 
+                    to="/contact" 
+                    className="block w-full text-center px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-transform"
+                  >
+                    Get Started
+                  </Link>
                 </div>
-              </nav>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
