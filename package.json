@@ -38,6 +38,7 @@
     "dev:optimize": "node scripts/dev-optimize.js && vite",
     "build": "ROLLUP_SKIP_NODEJS_NATIVE=true NODE_ENV=production SKIP_TYPE_CHECK=true vite build --logLevel info",
     "build:ci": "node scripts/build-with-target.js",
+    "build:optimize": "npm run build && node scripts/build-optimizer.js",
     "build:analyze": "ANALYZE=true vite build",
     "build:preview": "npm run build && npm run start",
     "analyze:bundle": "node scripts/bundle-analyzer.js",
@@ -67,12 +68,12 @@
     "postbuild": "node scripts/copy-netlify-files.js && echo 'Build completed successfully' && node -e \"if(!(process.env.CI==='true'||process.env.NETLIFY==='true')){process.exit(1)}\" || npm run optimize",
     "optimize": "node scripts/optimize-build.js",
     "optimize:advanced": "node scripts/advanced-optimize.js",
-    "build:optimize": "npm run build && npm run optimize",
     "build:advanced": "npm run build && npm run optimize:advanced",
     "postinstall": "npm rebuild rollup @rollup/rollup-linux-x64-gnu || true",
     "deploy": "npm run build && netlify deploy --prod",
     "deploy:preview": "npm run build && netlify deploy",
     "health": "curl -f https://ziontechgroup.com/api/health || exit 1",
+    "health:local": "curl -f http://localhost:3000/api/health || exit 1",
     "validate": "npm run build:ci"
   },
   "dependencies": {
