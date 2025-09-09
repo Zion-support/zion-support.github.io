@@ -115,3 +115,6 @@ export function Footer() {
     </footer>
   );
 }
+
+// Also export as default for compatibility
+export default Footer;
