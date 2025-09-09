@@ -6,7 +6,7 @@ import { ServiceVariant } from '../types/service-variants',
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
 }
 
-marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' 
+marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' ;
 };
 
 //Healthcare AI Services {
@@ -22,7 +22,7 @@ import { ServiceVariant } from '../types/service-variants',
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
 }
 
-marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' 
+marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' ;
 };
 
 //Healthcare AI Services {
@@ -406,7 +406,7 @@ launch_date: '2024 - 03 - 10';
 import { ServiceVariant } from '../types/service-variants',
 
 
-
+;
 import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveMicroSaasService {
   id: string, name: string,
@@ -1145,7 +1145,7 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     reviews: 67,
     benefits: ['Operational efficiencySafety improvements', 'Cost reductionScalability'],
     capabilities: ['Multi-system coordinationAI optimization', 'Safety monitoringPerformance analytics'],
-    marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
+    marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems';
 import { ServiceVariant } from '../types/service-variants',;
 export interface ComprehensiveMicroSaasService {;
   id: string,;

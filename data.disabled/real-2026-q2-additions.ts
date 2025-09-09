@@ -360,7 +360,7 @@ export const real2026Q2Additions = [
 
     id: 'ai - synthetic - data - factory',
     name: 'AI Synthetic Data Factory',
-    category: 'AI & Data',
+    category: 'AI & Data',;
     tagline:;
       'Generate high - quality, private, and balanced datasets for ML training.',
     description:;
@@ -372,7 +372,7 @@ export const real2026Q2Additions = [
       'Bias and fairness testing with reports',
       'Evaluation dashboard with KS / JS metrics',
       'SDKs for Python / JS and API access',
-    ],
+    ],;
     use_cases: [;
       'MSPs and IT providers',
       'Internal IT for SMBs',
@@ -460,7 +460,7 @@ export const real2026Q2Additions = [
       'Bias and fairness testing with reports',
       'Evaluation dashboard with KS / JS metrics',
       'SDKs for Python / JS and API access',
-    ],
+    ],;
     use_cases: [;
       'Training data augmentation',
       'Privacy - preserving analytics',
@@ -1038,7 +1038,7 @@ export const real2026Q2Additions = [
     integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
     competitors: ['Atera', 'NinjaOne'],
     price: '$4',
-
+;
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
   },;
