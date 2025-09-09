@@ -16,17 +16,28 @@ interface AuthTokens {
   refreshToken: string | null;
 }
 
-export const useAuthState = (): [any, React.Dispatch<React.SetStateAction<any>>] => {
-  const [user, setUser] = useState<any>(null);
+export const useAuthState = (): [User | null, React.Dispatch<React.SetStateAction<User | null>>] => {
+  const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [onboardingStep, setOnboardingStep] = useState(0);
-  const [tokens, setTokens] = useState<any>({
+  const [tokens, setTokens] = useState<AuthTokens>({
     accessToken: null,
-    refreshToken: null
+    refreshToken: null,
   });
 
   useEffect(() => {
-    // Initialize auth state
+    // Initialize auth state from localStorage
+    const savedUser = localStorage.getItem('user');
+    const savedTokens = localStorage.getItem('tokens');
+    
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+    }
+    
+    if (savedTokens) {
+      setTokens(JSON.parse(savedTokens));
+    }
+    
     setIsLoading(false);
   }, []);
 

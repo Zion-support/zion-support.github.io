@@ -8,7 +8,7 @@ import {
 import { toggleFavorite as toggleFavoriteRequest } from '@/api/favorites';
 import {logErrorToProduction} from '@/utils/productionLogger';
 import { toast } from '@/hooks/use-toast';
-import { safeStorage } from '@/utils/safeStorage';
+import { safeLocalStorage } from '@/utils/safeStorage';
 
 export interface FavoritesContextType {
   favorites: Array<string | number>;
@@ -23,7 +23,9 @@ export function FavoritesProvider({ children }: { children: ReactNode }) {
   const [favorites, setFavorites] = useState<Array<string | number>>([]);
 
   useEffect(() => {
-    const stored = safeStorage.getItem('favorites');
+    const storage = safeLocalStorage();
+    if (!storage) return;
+    const stored = storage.getItem('favorites');
     if (stored) {
       try {
         const parsed: Array<string | number> = JSON.parse(stored);
@@ -35,7 +37,9 @@ export function FavoritesProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    safeStorage.setItem('favorites', JSON.stringify(favorites));
+    const storage = safeLocalStorage();
+    if (!storage) return;
+    storage.setItem('favorites', JSON.stringify(favorites));
   }, [favorites]);
 
   const toggleFavorite = async (productId: string) => {

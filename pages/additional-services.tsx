@@ -1,17 +1,93 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { DollarSign, CheckCircle, ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, DollarSign } from 'lucide-react';
+import PageTransition from '../src/components/PageTransition';
 
 export default function AdditionalServices() {
   const title = 'Additional Services - Zion Tech Group';
-  const description = 'Explore our expanded catalog of micro SaaS, AI, and IT solutions. Get fast quotes and tailored proposals for your business needs.';
+  const description = 'Explore our expanded catalog of micro SaaS, AI, and IT services. Get fast quotes and tailored solutions for your business needs.';
+
+  const sections = [
+    {
+      id: 'micro-saas',
+      title: 'Micro SaaS Products',
+      color: 'blue',
+      icon: Zap,
+      items: [
+        {
+          name: 'AI Content Generator',
+          blurb: 'Automated content creation for blogs, social media, and marketing materials',
+          price: '$299/month',
+          eta: '2-3 days',
+          link: '/micro-saas/ai-content-generator',
+          benefits: ['SEO optimized', 'Multi-language support', 'Brand voice training']
+        },
+        {
+          name: 'Lead Scoring System',
+          blurb: 'Intelligent lead qualification and scoring for sales teams',
+          price: '$199/month',
+          eta: '1-2 days',
+          link: '/micro-saas/lead-scoring',
+          benefits: ['CRM integration', 'Custom scoring rules', 'Real-time updates']
+        }
+      ]
+    },
+    {
+      id: 'ai-services',
+      title: 'AI Services',
+      color: 'purple',
+      icon: Star,
+      items: [
+        {
+          name: 'Chatbot Development',
+          blurb: 'Custom AI chatbots for customer support and lead generation',
+          price: '$499/month',
+          eta: '3-5 days',
+          link: '/ai-services/chatbot',
+          benefits: ['Natural language processing', 'Multi-channel support', 'Analytics dashboard']
+        },
+        {
+          name: 'Predictive Analytics',
+          blurb: 'Data-driven insights and forecasting for business decisions',
+          price: '$799/month',
+          eta: '5-7 days',
+          link: '/ai-services/predictive-analytics',
+          benefits: ['Custom models', 'Real-time predictions', 'Visual dashboards']
+        }
+      ]
+    },
+    {
+      id: 'it-services',
+      title: 'IT Services',
+      color: 'green',
+      icon: Users,
+      items: [
+        {
+          name: 'Cloud Migration',
+          blurb: 'Seamless migration to cloud platforms with zero downtime',
+          price: '$1,299/project',
+          eta: '1-2 weeks',
+          link: '/it-services/cloud-migration',
+          benefits: ['AWS/Azure certified', 'Security compliance', '24/7 support']
+        },
+        {
+          name: 'Cybersecurity Audit',
+          blurb: 'Comprehensive security assessment and vulnerability testing',
+          price: '$899/project',
+          eta: '3-5 days',
+          link: '/it-services/cybersecurity',
+          benefits: ['Penetration testing', 'Compliance report', 'Remediation plan']
+        }
+      ]
+    }
+  ];
 
   const phoneHref = 'tel:+13024640950';
   const emailHref = 'mailto:kleber@ziontechgroup.com';
 
   return (
-    <>
+    <PageTransition>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -41,45 +117,43 @@ export default function AdditionalServices() {
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8">
-            <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
-              <div className="flex items-center gap-x-3 mb-6">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600">
-                  <DollarSign className="h-7 w-7 text-white" />
-                </div>
-                <h2 className="text-xl font-semibold text-gray-900">Additional Services</h2>
-              </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="group relative rounded-xl border border-gray-200 p-6 hover:shadow-md transition-all">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Custom Development</h3>
-                  <p className="text-sm text-gray-600 mb-3">Tailored solutions for your specific business needs</p>
-                  <ul className="space-y-2 mb-4">
-                    <li className="flex items-center gap-2 text-sm text-gray-700">
-                      <CheckCircle className="h-4 w-4 text-blue-600" />
-                      <span>Custom web applications</span>
-                    </li>
-                    <li className="flex items-center gap-2 text-sm text-gray-700">
-                      <CheckCircle className="h-4 w-4 text-blue-600" />
-                      <span>API development</span>
-                    </li>
-                    <li className="flex items-center gap-2 text-sm text-gray-700">
-                      <CheckCircle className="h-4 w-4 text-blue-600" />
-                      <span>Database design</span>
-                    </li>
-                  </ul>
-                  <div className="flex items-center justify-between text-sm">
-                    <div className="text-gray-700">
-                      <span className="font-semibold">Starting at $5,000</span>
-                      <span className="text-gray-400 ml-2">•</span>
-                      <span className="ml-2">2-4 weeks delivery</span>
-                    </div>
-                    <Link href="/contact" className="inline-flex items-center font-semibold text-blue-600 hover:text-blue-500">
-                      Learn more
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
+            {sections.map((section) => (
+              <div key={section.id} className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
+                <div className="flex items-center gap-x-3 mb-6">
+                  <div className={`flex h-12 w-12 items-center justify-center rounded-lg bg-${section.color}-600`}>
+                    <section.icon className="h-7 w-7 text-white" />
                   </div>
+                  <h2 className="text-xl font-semibold text-gray-900">{section.title}</h2>
+                </div>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {section.items.map((item) => (
+                    <div key={item.name} className="group relative rounded-xl border border-gray-200 p-6 hover:shadow-md transition-all">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-1">{item.name}</h3>
+                      <p className="text-sm text-gray-600 mb-3">{item.blurb}</p>
+                      <ul className="space-y-2 mb-4">
+                        {item.benefits.map((benefit) => (
+                          <li key={benefit} className="flex items-center gap-2 text-sm text-gray-700">
+                            <CheckCircle className={`h-4 w-4 text-${section.color}-600`} />
+                            <span>{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="flex items-center justify-between text-sm">
+                        <div className="text-gray-700">
+                          <span className="font-semibold">{item.price}</span>
+                          <span className="text-gray-400 ml-2">•</span>
+                          <span className="ml-2">{item.eta} delivery</span>
+                        </div>
+                        <Link href={item.link} className={`inline-flex items-center font-semibold text-${section.color}-600 hover:text-${section.color}-500`}>
+                          Learn more
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
+            ))}
           </div>
 
           <div className="mt-10 rounded-xl bg-blue-50 border border-blue-200 p-6">
@@ -100,7 +174,6 @@ export default function AdditionalServices() {
           </div>
         </div>
       </section>
-    </>
+    </PageTransition>
   );
 }
-

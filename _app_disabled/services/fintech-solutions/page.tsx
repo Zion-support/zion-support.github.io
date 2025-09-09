@@ -1,8 +1,7 @@
 export const metadata = {
-  }
-  "title": "Fintech Solutions | Zion Tech Group","
-  "description": "Revolutionize financial services with cutting-edge fintech solutions, including payment processing, digital banking, and financial analytics.","
-  "keywords": "fintech solutions, financial technology, payment processing, digital banking, financial analytics""
+  title: "Fintech Solutions | Zion Tech Group",
+  description: "Revolutionize financial services with cutting-edge fintech solutions, including payment processing, digital banking, and financial analytics.",
+  keywords: "fintech solutions, financial technology, payment processing, digital banking, financial analytics"
 };
 
 export default function FintechSolutionsPage() {
