@@ -18,7 +18,10 @@ const ServicesComparison = lazy(() => import('./pages/ServicesComparison'));
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
-const UltimateServices = React.lazy(() => import('./pages/UltimateServices'));
+const Services = React.lazy(() => import('./pages/Services'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 
 // Lazy load service pages
 const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
@@ -112,9 +115,10 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
-              <Route path="/services-comparison" element={<ServicesComparison />} />
-              <Route path="*" element={<NotFound />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
             </Routes>
           </Suspense>
         </main>
