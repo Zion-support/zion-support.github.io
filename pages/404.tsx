@@ -1,32 +1,84 @@
-import React from 'react';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
-import SEO from '../components/SEO';
+import Layout from '../components/Layout';
+import { Home, ArrowLeft, Search } from 'lucide-react';
 
-export default function NotFoundPage() {
-	return (
-		<>
-			<SEO title="Page Not Found | Zion Tech Group" description="The page you’re looking for doesn’t exist. Explore our services or contact us for help." noindex nofollow />
-			<div className="min-h-[70vh] flex items-center">
-				<div className="max-w-4xl mx-auto px-6 lg:px-10 py-20">
-					<h1 className="text-4xl lg:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">Page not found</h1>
-					<p className="mt-4 text-gray-300 max-w-2xl">The page you’re looking for doesn’t exist or moved. Explore our services below or contact us and we’ll help you find it.</p>
+export default function Custom404() {
+  return (
+    <Layout
+      title="404 - Page Not Found | Zion Tech Group"
+      description="The page you're looking for doesn't exist. Return to our homepage or explore our services."
+      noIndex={true}
+    >
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="max-w-2xl mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            {/* 404 Animation */}
+            <motion.div
+              className="text-8xl md:text-9xl font-bold text-blue-600 mb-8"
+              animate={{
+                scale: [1, 1.1, 1],
+                rotate: [0, 5, -5, 0]
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                repeatType: "reverse"
+              }}
+            >
+              404
+            </motion.div>
 
-					<div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-						<Link href="/services" className="rounded-xl border border-white/10 bg-white/5 p-5 hover:border-cyan-400/40">Browse all services</Link>
-						<Link href="/comprehensive-services-showcase-2025" className="rounded-xl border border-white/10 bg-white/5 p-5 hover:border-fuchsia-400/40">Full services showcase</Link>
-						<Link href="/pricing" className="rounded-xl border border-white/10 bg-white/5 p-5 hover:border-emerald-400/40">Pricing</Link>
-						<Link href="/resources" className="rounded-xl border border-white/10 bg-white/5 p-5 hover:border-cyan-400/40">Resources</Link>
-						<Link href="/contact" className="rounded-xl border border-white/10 bg-white/5 p-5 hover:border-fuchsia-400/40">Contact sales</Link>
-						<Link href="/support" className="rounded-xl border border-white/10 bg-white/5 p-5 hover:border-emerald-400/40">Support</Link>
-					</div>
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Page Not Found
+            </h1>
+            
+            <p className="text-xl text-gray-600 mb-8">
+              Sorry, the page you're looking for doesn't exist or has been moved.
+            </p>
 
-					<div className="mt-12 flex flex-wrap items-center gap-4 text-sm text-gray-400">
-						<span>Mobile: +1 302 464 0950</span>
-						<a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>
-						<span>Address: 364 E Main St STE 1008 Middletown DE 19709</span>
-					</div>
-				</div>
-			</div>
-		</>
-	);
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link
+                href="/"
+                className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                <Home className="w-5 h-5" />
+                Go Home
+              </Link>
+              
+              <button
+                onClick={() => window.history.back()}
+                className="inline-flex items-center gap-2 bg-gray-600 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-colors"
+              >
+                <ArrowLeft className="w-5 h-5" />
+                Go Back
+              </button>
+            </div>
+
+            {/* Search Suggestion */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h2 className="text-lg font-semibold text-gray-900 mb-4">
+                Looking for something specific?
+              </h2>
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  placeholder="Search our website..."
+                  className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                  <Search className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </Layout>
+  );
 }
