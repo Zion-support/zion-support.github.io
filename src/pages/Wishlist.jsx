@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Heart, Star, MapPin, Clock, ShoppingCart, MessageCircle } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { Header } from '../components/Header';
-import Footer from '../components/Footer';
+import { Footer } from '../components/Footer';
 
 export default function WishlistPage() {
   const navigate = useNavigate();

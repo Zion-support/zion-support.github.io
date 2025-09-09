@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Smartphone, AppWindow, Globe, CheckCircle, ArrowRight, Star, FileText, Palette, Code, Users, Cloud, Award } from 'lucide-react';
 import SEO from '@/components/SEO';
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import { Footer } from '@/components/Footer';
 
 export default function MobileDevelopment() {
   const [selectedCategory, setSelectedCategory] = useState("All");
