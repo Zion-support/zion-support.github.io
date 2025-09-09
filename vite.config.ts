@@ -11,13 +11,13 @@ const disableManualChunks = (
   process.env.DISABLE_MANUAL_CHUNKS === 'true'
 ) && process.env.ANALYZE !== 'true'
 
+// Determine if we're running in CI/Netlify
+const isCI = process.env.NETLIFY === 'true' || process.env.CI === 'true'
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   plugins: [
     react({
-      // Enable React Fast Refresh
-      fastRefresh: true,
-      // Optimize JSX runtime
       jsxRuntime: 'automatic',
     }),
     // Bundle analyzer would go here if needed
@@ -140,19 +140,11 @@ export default defineConfig(({ mode }) => ({
   },
   esbuild: {
     target: 'esnext',
-    format: 'esm',
     // Disable TypeScript checking during build
     logLevel: 'error',
     // Strip debugging noise and mark common logging as pure
     drop: ['console', 'debugger'],
     pure: ['console.log', 'console.info', 'console.debug'],
-    // Skip TypeScript type checking during build
-    tsconfigRaw: {
-      compilerOptions: {
-        skipLibCheck: true,
-        noEmit: true,
-      },
-    },
   },
   resolve: {
     alias: {
