@@ -1,6 +1,6 @@
 // src/components/governance/ProposalCard.tsx
 import React from 'react';
-import Link from 'next/link';
+import Link from 'next/link'; // Changed from react-router-dom
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card'; // Adjust path if needed
 import { Badge } from '@/components/ui/badge'; // Adjust path
 import { Button } from '@/components/ui/Button'; // Adjust path

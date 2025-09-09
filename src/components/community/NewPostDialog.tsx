@@ -2,8 +2,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import PostForm from "./PostForm";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
-import { useRouter } from 'next/router';
-import { mutate } from 'swr';
+import { useRouter } from "next/router";
 import type { ForumCategory } from "@/types/community";
 
 interface NewPostDialogProps {
@@ -30,7 +29,7 @@ export function NewPostDialog({ open, onOpenChange, initialCategory }: NewPostDi
       }
       onOpenChange(false);
       router.push(`/community/category/${values.categoryId}`);
-    } catch (_error) {
+    } catch (error) {
       toast({ title: "Error", description: "There was a problem creating your post", variant: "destructive" });
     }
   };

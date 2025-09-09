@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/Button";
 import { GradientHeading } from "@/components/GradientHeading";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
 export function HeroSection() {
@@ -35,7 +35,7 @@ export function HeroSection() {
             asChild
           >
             <Link
-              to="/signup"
+              href="/signup"
               role="button"
               aria-label={t('auth.signup')}
               tabIndex={0}
@@ -46,8 +46,8 @@ export function HeroSection() {
           </Button>
           <Link
             id="browse-marketplace"
-            to="/marketplace"
-            className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-4 rounded-md inline-flex items-center justify-center transition-all duration-300 hover:shadow-[0_0_15px_2px_rgba(0,255,255,0.6)] focus:shadow-[0_0_15px_2px_rgba(0,255,255,0.6)]"
+            href="/marketplace"
+            className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground active:bg-primary/90 text-base py-4 px-4 sm:text-lg sm:py-6 sm:px-6 rounded-md inline-flex items-center justify-center"
           >
             {t('home.browse_marketplace')}
           </Link>

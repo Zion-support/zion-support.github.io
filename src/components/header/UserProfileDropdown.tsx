@@ -90,66 +90,20 @@ const UserProfileDropdown: React.FC = () => {
             minWidth: '150px',
           }}
         >
-          <ul
-            ref={menuRef}
-            style={{ listStyle: 'none', margin: 0, padding: '8px 0' }}
-            role="menu"
-            aria-label="User menu"
-            onKeyDown={(e) => {
-              const items = Array.from(menuRef.current?.querySelectorAll<HTMLElement>('a,button') || []);
-              const index = items.indexOf(document.activeElement as HTMLElement);
-              if (e.key === 'Escape') {
-                setIsOpen(false);
-                fireEvent('profile_dropdown_toggle', { open: false });
-                (e.target as HTMLElement).blur();
-              } else if (e.key === 'ArrowDown') {
-                e.preventDefault();
-                const next = items[(index + 1) % items.length];
-                next?.focus();
-              } else if (e.key === 'ArrowUp') {
-                e.preventDefault();
-                const prev = items[(index - 1 + items.length) % items.length];
-                prev?.focus();
-              }
-            }}
-          >
-            <li style={{ padding: '8px 16px', whiteSpace: 'nowrap' }} role="none">
-              <Link
-                href="/profile"
-                onClick={() => {
-                  setIsOpen(false);
-                  fireEvent('profile_dropdown_toggle', { open: false });
-                }}
-                style={{ textDecoration: 'none', color: 'inherit' }}
-                role="menuitem"
-              >
-              Profile
+          <ul style={{ listStyle: 'none', margin: 0, padding: '8px 0' }}>
+            <li style={{ padding: '8px 16px', whiteSpace: 'nowrap' }}>
+              <Link href="/profile" onClick={() => setIsOpen(false)} style={{ textDecoration: 'none', color: 'inherit' }}>
+                Profile
               </Link>
             </li>
-            <li style={{ padding: '8px 16px', whiteSpace: 'nowrap' }} role="none">
-              <Link
-                href="/orders"
-                onClick={() => {
-                  setIsOpen(false);
-                  fireEvent('profile_dropdown_toggle', { open: false });
-                }}
-                style={{ textDecoration: 'none', color: 'inherit' }}
-                role="menuitem"
-              >
-              Orders
+            <li style={{ padding: '8px 16px', whiteSpace: 'nowrap' }}>
+              <Link href="/orders" onClick={() => setIsOpen(false)} style={{ textDecoration: 'none', color: 'inherit' }}>
+                Orders
               </Link>
             </li>
-            <li style={{ padding: '8px 16px', whiteSpace: 'nowrap' }} role="none">
-              <Link
-                href="/settings"
-                onClick={() => {
-                  setIsOpen(false);
-                  fireEvent('profile_dropdown_toggle', { open: false });
-                }}
-                style={{ textDecoration: 'none', color: 'inherit' }}
-                role="menuitem"
-              >
-              Settings
+            <li style={{ padding: '8px 16px', whiteSpace: 'nowrap' }}>
+              <Link href="/wallet" onClick={() => setIsOpen(false)} style={{ textDecoration: 'none', color: 'inherit' }}>
+                Wallet
               </Link>
             </li>
             <li style={{ padding: '8px 0 8px 16px', borderTop: '1px solid #ccc' }} role="none">

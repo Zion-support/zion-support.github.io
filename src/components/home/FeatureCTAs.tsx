@@ -4,20 +4,20 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import { useTranslation } from "react-i18next";
-import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock } from 'lucide-react';
-
-
-
-
-
-
-
-
-
-
-
-
+import { 
+  ArrowRight, 
+  Users, 
+  Zap, 
+  Settings, 
+  Search, 
+  MessageSquare, 
+  Smartphone, 
+  Calendar,
+  BookOpen,
+  Code,
+  Building,
+  Clock
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface FeatureCTAsProps {
@@ -159,7 +159,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
                 <Button asChild className="w-full gap-1">
                   <Link
                     href={feature.link}
-                    aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
+                    aria-label={`Explore ${feature.title}`}
                     className="cursor-pointer"
                     {...(feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}
                   >
