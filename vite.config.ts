@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { optimizePreloads } from './plugins/optimize-preloads.js'
 
 // Ensure __dirname is available in ESM
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -26,6 +27,8 @@ export default defineConfig(({ mode }) => ({
     react({
       jsxRuntime: 'automatic',
     }),
+    // Custom plugin to optimize preload links
+    optimizePreloads(),
     // Bundle analyzer would go here if needed
   ].filter(Boolean),
   build: {
@@ -37,14 +40,15 @@ export default defineConfig(({ mode }) => ({
     minify: 'esbuild',
     // Use esbuild for CSS minification to avoid heavy PostCSS/CSSNano work on CI
     cssMinify: 'esbuild',
-    // Enable module preload with proper configuration
+    // Optimize module preload to reduce warnings
     modulePreload: {
       polyfill: true,
+      // Only preload the most critical dependencies to avoid warnings
       resolveDependencies: (filename, deps, { hostId, hostType }) => {
-        // Only preload critical dependencies
+        // Only preload the main entry point and critical React chunks
         return deps.filter(dep => {
-          // Preload only essential chunks
-          return dep.includes('react') || dep.includes('react-dom') || dep.includes('main');
+          // Only preload the main entry and react-core for faster initial load
+          return dep.includes('index-') || dep.includes('react-core-');
         });
       }
     },
