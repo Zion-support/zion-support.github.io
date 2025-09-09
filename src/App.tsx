@@ -1,10 +1,10 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { FuturisticNavigation } from './components/FuturisticNavigation';
-import { FuturisticFooter } from './components/FuturisticFooter';
-import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
-import { ChatAssistant } from './components/ChatAssistant';
-import { PerformanceMonitor } from './components/PerformanceMonitor.tsx';
+import { AppHeader } from './layout/AppHeader';
+import { Footer } from './components/Footer';
+import { ThemeToggle } from './components/ThemeToggle';
+import { AccessibilityMenu } from './components/AccessibilityMenu';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home.jsx'));
@@ -21,12 +21,9 @@ const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Services = React.lazy(() => import('./pages/Services'));
-const Careers = React.lazy(() => import('./pages/Careers'));
-const Privacy = React.lazy(() => import('./pages/Privacy'));
-const Terms = React.lazy(() => import('./pages/Terms'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const InnovativeServicesShowcase2026 = React.lazy(() => import('./pages/InnovativeServicesShowcase2026'));
+const ServicesOverview2026 = React.lazy(() => import('./pages/ServicesOverview2026'));
 
 // New service pages
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
@@ -119,20 +116,18 @@ function App() {
               <Route path="/micro-saas-showcase" element={<MicroSaasShowcase />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/services" element={<Services />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/news" element={<News />} />
-              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/innovative-services-2026" element={<InnovativeServicesShowcase2026 />} />
+              <Route path="/services-overview-2026" element={<ServicesOverview2026 />} />
             </Routes>
           </Suspense>
         </main>
         
-        {/* Footer */}
-        <FuturisticFooter />
+        <Footer />
         
-        {/* Chat Assistant */}
-        <ChatAssistant />
-        
-        {/* Performance Monitor */}
+        {/* Global Components */}
+        <ThemeToggle />
+        <AccessibilityMenu />
         <PerformanceMonitor />
       </div>
     </Router>
