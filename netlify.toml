@@ -1,7 +1,8 @@
 
 [build] # touch v4.60 to trigger Netlify rebuild
   # Build the site with Vite and publish the dist folder
-  command = "npm ci --no-audit --no-fund --include=optional && npm run build:ci"
+  # Netlify runs dependency installation before build.command. Avoid redundant npm ci.
+  command = "npm run build:ci"
   publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
@@ -62,9 +63,9 @@
   NPM_CONFIG_PRODUCTION = "false"
 
 [context.deploy-preview]
-  command = "npm ci --no-audit --no-fund --include=optional && npm run build:ci"
+  command = "npm run build:ci"
 
 [context.branch-deploy]
-  command = "npm ci --no-audit --no-fund --include=optional && npm run build:ci"
+  command = "npm run build:ci"
 
 # Next.js configuration - no SPA fallback needed
