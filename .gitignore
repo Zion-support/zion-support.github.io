@@ -97,6 +97,81 @@ temp/
 # Editor directories and files
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Automation logs
+automation/logs/*.log
+automation/logs/*.backup
+automation/logs/*.pid
+logs/*.log
+logs/*.backup
+logs/*.pid
+
+# Large files
+*.backup
+*.bak
+*.tmp
+*.temp
+
+# Build artifacts
+*.tgz
+*.tar.gz
+*.zip
+*.rar
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup files
+*.backup
+*.bak
+*.old
+*.orig
+
+# Cache directories
+.cache/
+.parcel-cache/
+.next/
+out/
+build/
+dist/
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+# Allow favicon files in public directory
+public/*
+!public/favicon.ico
+!public/favicon.svg
+!public/site.webmanifest
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Temporary folders
+tmp/
+temp/
+
+# Editor directories and files
+.vscode/
+.idea/
 *.suo
 *.ntvs*
 *.njsproj

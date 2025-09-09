@@ -2,17 +2,8 @@ import React, { memo, useState, useEffect } from 'react';
 import Link from 'next/link';
 
 import React from 'react';
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { BenefitsSection } from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection";
-import { NewsletterSection } from "@/components/NewsletterSection";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { SEO } from "@/components/SEO";
-import { HeroSection } from "@/components/home/HeroSection";
-import { QuickAccess } from "@/components/home/QuickAccess";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
-import { FeatureHighlights } from "@/components/home/FeatureHighlights";
-import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -20,93 +11,40 @@ export default function Home() {
   const firstName =
     user?.displayName?.split(' ')[0] || 'User';
   return (
-    <Link 
-      href={link}
-      className="group block"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <div className={`
-        bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 
-        hover:bg-white/20 hover:border-white/40 hover:shadow-2xl hover:shadow-blue-500/20
-        transition-all duration-300 transform hover:-translate-y-2
-        ${isHovered ? 'scale-105' : 'scale-100'}
-      `}>
-        <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-          {icon}
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="Zion - The Tech & AI Marketplace" 
+        description="Discover top AI and tech talent, services, and equipment in one place."
+        keywords="AI, technology, marketplace, services, talent"
+        canonical="https://ziontechgroup.com/"
+      />
+
+      <div className="py-20 bg-gradient-to-r from-zion-purple-dark via-zion-purple to-zion-cyan">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Zion Tech Group
+          </h1>
+          <p className="text-xl md:text-2xl text-zion-cyan-light mb-8 max-w-3xl mx-auto">
+            The world's first comprehensive marketplace dedicated to high-tech and artificial intelligence.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a 
+              href="/micro-saas-services"
+              className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-slate-dark font-semibold px-8 py-3 rounded-lg transition-colors"
+            >
+              Explore Micro SAAS Services
+            </a>
+            <a 
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 font-semibold px-8 py-3 rounded-lg transition-colors"
+            >
+              Contact Us
+            </a>
+          </div>
         </div>
-        <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-200 transition-colors">
-          {title}
-        </h3>
-        <p className="text-sm text-blue-200 mb-4 leading-relaxed">
-          {description}
-        </p>
-        <ul className="space-y-1">
-          {features.slice(0, 3).map((feature, index) => (
-            <li key={index} className="text-xs text-blue-300 flex items-center">
-              <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span>
-              {feature}
-            </li>
-          ))}
-        </ul>
-        <div className="mt-4 text-blue-400 text-sm font-medium group-hover:text-blue-300 transition-colors">
-          Learn more →
-        </div>
       </div>
-    </Link>
-  );
-});
 
-ServiceCard.displayName = 'ServiceCard';
-
-// Stats component for social proof
-const StatsSection = memo(() => {
-  const [counts, setCounts] = useState({ projects: 0, clients: 0, years: 0 });
-  
-  useEffect(() => {
-    const animateCounts = () => {
-      const targets = { projects: 500, clients: 150, years: 8 };
-      const duration = 2000;
-      const steps = 60;
-      const stepDuration = duration / steps;
-      
-      let step = 0;
-      const timer = setInterval(() => {
-        step++;
-        const progress = step / steps;
-        setCounts({
-          projects: Math.floor(targets.projects * progress),
-          clients: Math.floor(targets.clients * progress),
-          years: Math.floor(targets.years * progress)
-        });
-        
-        if (step >= steps) {
-          clearInterval(timer);
-          setCounts(targets);
-        }
-      }, stepDuration);
-      
-      return () => clearInterval(timer);
-    };
-    
-    const timer = setTimeout(animateCounts, 500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-16">
-      <div className="text-center">
-        <div className="text-4xl font-bold text-white mb-2">{counts.projects}+</div>
-        <div className="text-blue-300">Projects Delivered</div>
-      </div>
-      <div className="text-center">
-        <div className="text-4xl font-bold text-white mb-2">{counts.clients}+</div>
-        <div className="text-blue-300">Happy Clients</div>
-      </div>
-      <div className="text-center">
-        <div className="text-4xl font-bold text-white mb-2">{counts.years}+</div>
-        <div className="text-blue-300">Years Experience</div>
-      </div>
+      <FeatureCTAs />
     </div>
   );
 });
