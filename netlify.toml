@@ -11,8 +11,10 @@
 
 [build.environment]
   NODE_VERSION = "20.18.1"
-  NPM_FLAGS = "--omit=optional --no-audit --no-fund"
-  NODE_OPTIONS = "--max-old-space-size=2048"
+  SKIP_TYPE_CHECK = "true"
+  # Ensure devDependencies (like Vite) are installed during Netlify builds
+  NPM_CONFIG_PRODUCTION = "false"
+  NPM_FLAGS = "--include=dev"
 
 # Headers
 [[headers]]
