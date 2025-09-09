@@ -8,3 +8,7 @@ export const getStripe = () => {
   }
   return stripePromise;
 };
+
+export const isProdDomain = () => {
+  return process.env.NODE_ENV === 'production' && !window.location.hostname.includes('localhost');
+};

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -109,4 +109,4 @@ const Header: React.FC = () => {
   );
 };
 
-
+export default Header;
