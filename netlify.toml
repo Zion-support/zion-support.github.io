@@ -1,4 +1,4 @@
-
+# Unified Netlify build configuration
 [build] # touch v4.63 to trigger Netlify rebuild
   # Build the site with Vite and publish the dist folder
   # Netlify runs dependency installation before build.command. Avoid redundant npm ci.
