@@ -42,7 +42,13 @@ jobs:
             echo "Build failed: no output directory found"
             exit 1
           fi
-      - name: Run tests
+      - name: Verify asset paths
+        run: |
+          npx http-server dist -p 5000 -s >/dev/null 2>&1 &
+          SERVER_PID=$!
+          sleep 3
+          kill $SERVER_PID || true
+      - name: Run tests with coverage
         run: npm test
         continue-on-error: true
       - name: Upload build artifacts

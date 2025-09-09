@@ -1,138 +1,159 @@
-# GitHub Workflows - Zion Tech Group
+# GitHub Actions Workflows
 
-## 🚀 Overview
+This repository contains several GitHub Actions workflows to automate various aspects of development, testing, and deployment.
 
-This directory contains the remaining GitHub Actions workflows after migrating most automation tasks to PM2. The PM2 automation system provides continuous monitoring, maintenance, and improvement with better performance and resource efficiency.
+## Workflows Overview
 
-## 📋 Remaining Workflows
+### 🔄 CI (Continuous Integration)
+**File:** `ci.yml`
+- **Triggers:** Push to main, Pull requests to main
+- **Purpose:** Automated testing and building on every code change
+- **Jobs:**
+  - Build: Lint, type-check, build, and test
+  - Test: Separate test execution with timeout protection
 
-### CodeQL Security Analysis
-- **File**: `codeql.yml`
-- **Purpose**: Automated security code analysis using GitHub's CodeQL engine
-- **Triggers**: Push to main/develop branches, pull requests, weekly schedule
-- **Functionality**: 
-  - JavaScript/TypeScript code analysis
-  - Security vulnerability detection
-  - Automated security scanning
+### 🧪 Test
+**File:** `test.yml`
+- **Triggers:** Push to main, Pull requests to main
+- **Purpose:** Comprehensive testing with build verification
+- **Features:**
+  - Build verification
+  - Asset path validation
+  - Test execution with coverage
+  - Build artifact upload
 
-### Status Reporting
-- **File**: `status.yml`
-- **Purpose**: Status reporting for remaining workflows
-- **Triggers**: Completion of other workflows
-- **Functionality**: 
-  - Workflow status reporting
-  - PM2 automation information display
+### 🔒 Security
+**File:** `security.yml`
+- **Triggers:** Weekly schedule, Push to main, Pull requests to main
+- **Purpose:** Security vulnerability scanning and dependency review
+- **Features:**
+  - npm audit scanning
+  - Dependency vulnerability checks
+  - Automated dependency review on PRs
+  - Security report generation
 
-## 🔄 Migrated to PM2 Automation
+### 🚀 Deploy
+**File:** `deploy.yml`
+- **Triggers:** Push to main, Manual dispatch
+- **Purpose:** Production deployment automation
+- **Features:**
+  - Production build verification
+  - Sitemap generation
+  - Build artifact preparation
+  - Deployment platform integration ready
 
-The following tasks have been migrated from GitHub Actions to PM2 automation processes:
+### 🔗 Link Crawler Factory
+**File:** `agent-factory.yml`
+- **Triggers:** Every 30 minutes, Manual dispatch
+- **Purpose:** Automated link checking and site crawling
+- **Features:**
+  - Parallel link checking with configurable shards
+  - Broken link detection and reporting
+  - Queue management for large sites
+  - Automated issue creation for broken links
 
-| Task | PM2 Process | Frequency | Status |
-|------|-------------|-----------|---------|
-| **CI/CD Pipeline** | `daily-build-test` + `continuous-improvement` | Every hour + Every 2 hours | ✅ Running |
-| **Security Auditing** | `security-audit` | Every 4 hours | ✅ Running |
-| **Dependency Updates** | `dependency-updates` | Every 6 hours | ✅ Running |
-| **Performance Monitoring** | `performance-monitor` | Every 2 hours | ✅ Running |
-| **Quality Checks** | `quality-checks` | Every 3 hours | ✅ Running |
-| **Link Validation** | `link-checker` + `link-integrity` | Every 30 min + Every 2 hours | ✅ Running |
-| **Console Error Fixing** | `console-error-fixer` | Every 15 minutes | ✅ Running |
-| **Frontend Optimization** | `front-maximizer` | Every 4 hours | ✅ Running |
-| **Sitemap Generation** | `sitemap-runner` | Every 6 hours | ✅ Running |
+### 📦 NPM Publish
+**File:** `npm-publish.yml`
+- **Triggers:** Push to main (excluding markdown files)
+- **Purpose:** Automated npm package publishing
+- **Features:**
+  - Automatic testing before publish
+  - npm registry integration
+  - Secure token handling
 
-## 🛠️ PM2 Management Commands
+### 🔄 Continuous Improvement
+**File:** `continuous-improvement.yml`
+- **Triggers:** Every 4 hours, Manual dispatch
+- **Purpose:** Automated site improvement and analysis
+- **Features:**
+  - Site analysis automation
+  - Link scanning
+  - Automated PR creation
+  - Auto-merge capabilities
 
-```bash
-# Check automation status
-pm2 status
+## Workflow Dependencies
 
-# View automation logs
-pm2 logs
+### Required Secrets
+- `NPM_TOKEN`: For npm package publishing
+- `GITHUB_TOKEN`: Automatically provided by GitHub
 
-# Restart automation processes
-pm2 restart ecosystem.config.cjs
+### Required Scripts (package.json)
+The workflows depend on these npm scripts being available:
+- `npm run lint`: ESLint execution
+- `npm run typecheck`: TypeScript type checking
+- `npm run build`: Project build
+- `npm test`: Test execution
+- `npm run analyze:site`: Site analysis
+- `npm run links:scan`: Link scanning
+- `npm run sitemap`: Sitemap generation
 
-# Stop automation processes
-pm2 stop ecosystem.config.cjs
+## Usage
 
-# Start automation processes
-pm2 start ecosystem.config.cjs
+### Manual Workflow Dispatch
+Most workflows support manual triggering:
+1. Go to Actions tab in GitHub
+2. Select the workflow
+3. Click "Run workflow"
+4. Configure parameters if needed
+5. Click "Run workflow"
 
-# Monitor automation in real-time
-pm2 monit
-```
+### Workflow Concurrency
+- **CI workflows:** Cancel in-progress runs when new commits are pushed
+- **Link crawler:** Allow parallel execution for different shards
+- **Deployment:** Single deployment at a time
 
-## 📊 Benefits of PM2 Migration
+### Environment Protection
+- **Production deployment:** Requires environment approval
+- **Security scanning:** Fails on high-severity vulnerabilities
+- **Dependency review:** Blocks PRs with moderate+ severity issues
 
-### Performance Improvements
-- **Faster execution**: No GitHub Actions startup overhead
-- **Continuous operation**: 24/7 automation instead of scheduled runs
-- **Resource efficiency**: Lower memory and CPU usage
-- **Real-time monitoring**: Immediate feedback and status updates
+## Customization
 
-### Cost Reduction
-- **No GitHub Actions minutes**: Eliminates GitHub Actions usage costs
-- **Reduced external dependencies**: Self-contained automation system
-- **Better resource utilization**: Optimized for the specific environment
+### Adding New Workflows
+1. Create new `.yml` file in `.github/workflows/`
+2. Follow the established patterns
+3. Update this README
+4. Test with manual dispatch
 
-### Enhanced Capabilities
-- **Immediate response**: No waiting for GitHub Actions scheduling
-- **Custom automation**: Tailored to specific project needs
-- **Better error handling**: Graceful failure recovery and logging
-- **Real-time reporting**: Continuous status monitoring and alerts
+### Modifying Existing Workflows
+1. Update the workflow file
+2. Test changes with manual dispatch
+3. Update documentation if needed
+4. Monitor execution logs
 
-## 🔒 Security Considerations
+### Environment Variables
+- Use `${{ secrets.SECRET_NAME }}` for sensitive data
+- Use `${{ github.event.inputs.INPUT_NAME }}` for workflow inputs
+- Use `${{ needs.job_name.outputs.output_name }}` for job outputs
 
-- **CodeQL remains**: Security scanning continues via GitHub Actions
-- **PM2 isolation**: Each automation process runs independently
-- **Resource limits**: Memory and CPU limits prevent resource exhaustion
-- **Audit logging**: Full automation activity logging and monitoring
-
-## 📈 Monitoring and Maintenance
-
-### Daily Operations
-- Check PM2 status: `pm2 status`
-- Review automation logs: `pm2 logs`
-- Monitor resource usage: `pm2 monit`
-
-### Weekly Maintenance
-- Review automation performance
-- Check for process restarts
-- Analyze automation reports
-
-### Monthly Review
-- Performance optimization
-- Automation process updates
-- Resource usage analysis
-
-## 🆘 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
-1. **Process not starting**: Check PM2 installation and ecosystem config
-2. **High memory usage**: Review memory limits in ecosystem.config.cjs
-3. **Process errors**: Check logs with `pm2 logs <process-name>`
+1. **Build failures:** Check Node.js version compatibility
+2. **Permission errors:** Verify workflow permissions
+3. **Secret errors:** Ensure required secrets are configured
+4. **Timeout issues:** Adjust `timeout-minutes` in job configuration
 
-### Quick Fixes
-```bash
-# Restart all automation processes
-pm2 restart ecosystem.config.cjs
+### Debugging
+1. Check workflow run logs
+2. Verify script availability in package.json
+3. Test scripts locally
+4. Check GitHub Actions status page
 
-# Check specific process logs
-pm2 logs <process-name>
+## Best Practices
 
-# Auto-fix failed processes
-pm2 restart <failed-process>
-```
+1. **Keep workflows focused:** Each workflow should have a single responsibility
+2. **Use concurrency controls:** Prevent resource conflicts
+3. **Fail fast:** Stop execution on critical errors
+4. **Provide clear feedback:** Use descriptive step names and error messages
+5. **Cache dependencies:** Use GitHub's caching features for faster builds
+6. **Security first:** Always scan for vulnerabilities before deployment
 
-## 📚 Additional Resources
+## Support
 
-- [PM2 Documentation](https://pm2.keymetrics.io/docs/)
-- [PM2 Automation README](../PM2_AUTOMATION_README.md)
-- [Ecosystem Configuration](../ecosystem.config.cjs)
-- [Automation Scripts](../scripts/automation/)
-
----
-
-**Last Updated**: $(date)
-**Migration Status**: ✅ Complete
-**PM2 Status**: All automation processes operational
-**GitHub Actions**: Reduced from 40+ workflows to 2 essential workflows
+For workflow issues:
+1. Check the workflow logs
+2. Verify all required scripts exist
+3. Ensure secrets are properly configured
+4. Test workflows manually
+5. Review GitHub Actions documentation

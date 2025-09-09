@@ -183,7 +183,6 @@ export function BenefitsSection() {
             </motion.div>
           ))}
         </div>
-
         {/* Call to action */}
         <motion.div className="text-center mt-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">

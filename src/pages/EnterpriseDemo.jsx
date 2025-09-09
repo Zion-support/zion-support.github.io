@@ -38,8 +38,8 @@ export default function EnterpriseDemo() {
             <Card className="bg-zion-blue-dark border-zion-purple/20">
               <CardHeader className="text-center">
                 <div className="bg-zion-purple/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-6 h-6 text-zion-cyan" />
-                </div>
+                  <CheckCircle className="w-6 h-6 text-zion-cyan"/>
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-zion-slate-light">
@@ -51,8 +51,8 @@ export default function EnterpriseDemo() {
             <Card className="bg-zion-blue-dark border-zion-purple/20">
               <CardHeader className="text-center">
                 <div className="bg-zion-purple/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Star className="w-6 h-6 text-zion-cyan" />
-                </div>
+                  <Star className="w-6 h-6 text-zion-cyan"/>
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-zion-slate-light">
