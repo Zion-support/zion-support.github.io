@@ -1,206 +1,235 @@
 #!/usr/bin/env node
 
+/**
+ * Bundle Analyzer Script
+ * Provides detailed analysis of the built bundle
+ */
+
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const projectRoot = path.join(__dirname, '..');
 
-/**
- * Bundle analyzer for performance optimization
- */
-class BundleAnalyzer {
-  constructor() {
-    this.distPath = path.join(__dirname, '../dist');
-    this.analysis = {
-      totalSize: 0,
-      files: [],
-      recommendations: []
-    };
-  }
+const colors = {
+  reset: '\x1b[0m',
+  bright: '\x1b[1m',
+  red: '\x1b[31m',
+  green: '\x1b[32m',
+  yellow: '\x1b[33m',
+  blue: '\x1b[34m',
+  magenta: '\x1b[35m',
+  cyan: '\x1b[36m',
+  white: '\x1b[37m'
+};
 
-  analyze() {
-    console.log('🔍 Analyzing bundle...\n');
-    
-    this.analyzeFiles();
-    this.generateRecommendations();
-    this.printReport();
-  }
-
-  analyzeFiles() {
-    if (!fs.existsSync(this.distPath)) {
-      console.error('❌ Dist folder not found. Run npm run build first.');
-      return;
-    }
-
-    const files = this.getFilesRecursively(this.distPath);
-    
-    files.forEach(file => {
-      const stats = fs.statSync(file);
-      const size = stats.size;
-      const relativePath = path.relative(this.distPath, file);
-      
-      this.analysis.files.push({
-        path: relativePath,
-        size: size,
-        sizeKB: (size / 1024).toFixed(2),
-        type: this.getFileType(file)
-      });
-      
-      this.analysis.totalSize += size;
-    });
-
-    // Sort by size
-    this.analysis.files.sort((a, b) => b.size - a.size);
-  }
-
-  getFilesRecursively(dir) {
-    let files = [];
-    const items = fs.readdirSync(dir);
-    
-    items.forEach(item => {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        files = files.concat(this.getFilesRecursively(fullPath));
-      } else {
-        files.push(fullPath);
-      }
-    });
-    
-    return files;
-  }
-
-  getFileType(filePath) {
-    const ext = path.extname(filePath);
-    switch (ext) {
-      case '.js':
-        return 'JavaScript';
-      case '.css':
-        return 'CSS';
-      case '.html':
-        return 'HTML';
-      case '.png':
-      case '.jpg':
-      case '.jpeg':
-      case '.gif':
-      case '.svg':
-        return 'Image';
-      case '.woff':
-      case '.woff2':
-      case '.ttf':
-        return 'Font';
-      default:
-        return 'Other';
-    }
-  }
-
-  generateRecommendations() {
-    const { files, totalSize } = this.analysis;
-    
-    // Large files
-    const largeFiles = files.filter(f => f.size > 100 * 1024); // > 100KB
-    if (largeFiles.length > 0) {
-      this.analysis.recommendations.push({
-        type: 'warning',
-        message: `Found ${largeFiles.length} large files (>100KB)`,
-        files: largeFiles.map(f => f.path)
-      });
-    }
-
-    // JavaScript bundle size
-    const jsFiles = files.filter(f => f.type === 'JavaScript');
-    const totalJSSize = jsFiles.reduce((sum, f) => sum + f.size, 0);
-    
-    if (totalJSSize > 500 * 1024) { // > 500KB
-      this.analysis.recommendations.push({
-        type: 'error',
-        message: `JavaScript bundle is too large (${(totalJSSize / 1024).toFixed(2)}KB). Consider code splitting.`
-      });
-    }
-
-    // CSS bundle size
-    const cssFiles = files.filter(f => f.type === 'CSS');
-    const totalCSSSize = cssFiles.reduce((sum, f) => sum + f.size, 0);
-    
-    if (totalCSSSize > 100 * 1024) { // > 100KB
-      this.analysis.recommendations.push({
-        type: 'warning',
-        message: `CSS bundle is large (${(totalCSSSize / 1024).toFixed(2)}KB). Consider purging unused styles.`
-      });
-    }
-
-    // Image optimization
-    const imageFiles = files.filter(f => f.type === 'Image');
-    const largeImages = imageFiles.filter(f => f.size > 50 * 1024); // > 50KB
-    
-    if (largeImages.length > 0) {
-      this.analysis.recommendations.push({
-        type: 'info',
-        message: `Found ${largeImages.length} large images. Consider optimizing them.`,
-        files: largeImages.map(f => f.path)
-      });
-    }
-
-    // Total bundle size
-    if (totalSize > 1024 * 1024) { // > 1MB
-      this.analysis.recommendations.push({
-        type: 'error',
-        message: `Total bundle size is too large (${(totalSize / 1024 / 1024).toFixed(2)}MB). Consider optimization.`
-      });
-    }
-  }
-
-  printReport() {
-    const { files, totalSize, recommendations } = this.analysis;
-    
-    console.log('📊 Bundle Analysis Report');
-    console.log('='.repeat(50));
-    console.log(`Total Bundle Size: ${(totalSize / 1024).toFixed(2)} KB (${(totalSize / 1024 / 1024).toFixed(2)} MB)\n`);
-    
-    console.log('📁 File Breakdown:');
-    console.log('-'.repeat(50));
-    files.forEach(file => {
-      const sizeStr = file.sizeKB + ' KB';
-      const padding = ' '.repeat(12 - sizeStr.length);
-      console.log(`${sizeStr}${padding} ${file.path} (${file.type})`);
-    });
-    
-    console.log('\n💡 Recommendations:');
-    console.log('-'.repeat(50));
-    recommendations.forEach((rec, index) => {
-      const icon = rec.type === 'error' ? '❌' : rec.type === 'warning' ? '⚠️' : 'ℹ️';
-      console.log(`${icon} ${rec.message}`);
-      
-      if (rec.files && rec.files.length > 0) {
-        rec.files.forEach(file => {
-          console.log(`   - ${file}`);
-        });
-      }
-    });
-    
-    console.log('\n🎯 Optimization Tips:');
-    console.log('-'.repeat(50));
-    console.log('• Use dynamic imports for route-based code splitting');
-    console.log('• Implement lazy loading for heavy components');
-    console.log('• Optimize images (WebP, compression)');
-    console.log('• Remove unused CSS with PurgeCSS');
-    console.log('• Use tree shaking to eliminate dead code');
-    console.log('• Consider using a CDN for static assets');
-    
-    // Save report to file
-    this.saveReport();
-  }
-
-  saveReport() {
-    const reportPath = path.join(__dirname, '../bundle-analysis-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(this.analysis, null, 2));
-    console.log(`\n📄 Report saved to: ${reportPath}`);
-  }
+function log(message, color = 'reset') {
+  console.log(`${colors[color]}${message}${colors.reset}`);
 }
 
-// Run analysis
-const analyzer = new BundleAnalyzer();
-analyzer.analyze();
+function analyzeBundleStructure() {
+  const distPath = path.join(projectRoot, 'dist');
+  
+  if (!fs.existsSync(distPath)) {
+    log('❌ Dist directory not found. Run build first.', 'red');
+    return null;
+  }
+
+  log('\n🔍 Detailed Bundle Analysis', 'cyan');
+  log('='.repeat(60), 'cyan');
+
+  const assetsPath = path.join(distPath, 'assets');
+  const files = fs.readdirSync(assetsPath);
+  
+  const analysis = {
+    totalSize: 0,
+    jsFiles: [],
+    cssFiles: [],
+    otherFiles: [],
+    chunks: new Map(),
+    recommendations: []
+  };
+
+  files.forEach(file => {
+    const filePath = path.join(assetsPath, file);
+    const stats = fs.statSync(filePath);
+    const sizeKB = (stats.size / 1024).toFixed(2);
+    analysis.totalSize += stats.size;
+
+    const fileInfo = {
+      name: file,
+      size: stats.size,
+      sizeKB: parseFloat(sizeKB),
+      path: filePath
+    };
+
+    if (file.endsWith('.js')) {
+      analysis.jsFiles.push(fileInfo);
+      
+      // Analyze chunk names
+      const chunkName = extractChunkName(file);
+      if (chunkName) {
+        if (!analysis.chunks.has(chunkName)) {
+          analysis.chunks.set(chunkName, []);
+        }
+        analysis.chunks.get(chunkName).push(fileInfo);
+      }
+    } else if (file.endsWith('.css')) {
+      analysis.cssFiles.push(fileInfo);
+    } else {
+      analysis.otherFiles.push(fileInfo);
+    }
+  });
+
+  // Sort files by size
+  analysis.jsFiles.sort((a, b) => b.size - a.size);
+  analysis.cssFiles.sort((a, b) => b.size - a.size);
+
+  return analysis;
+}
+
+function extractChunkName(filename) {
+  // Extract chunk name from filename like "react-core-D1e13s5w.js"
+  const match = filename.match(/^([^-]+)-/);
+  return match ? match[1] : 'unknown';
+}
+
+function displayChunkAnalysis(analysis) {
+  log('\n📦 Chunk Analysis:', 'yellow');
+  log('='.repeat(40), 'yellow');
+
+  const chunks = Array.from(analysis.chunks.entries())
+    .map(([name, files]) => ({
+      name,
+      totalSize: files.reduce((sum, file) => sum + file.size, 0),
+      fileCount: files.length,
+      files
+    }))
+    .sort((a, b) => b.totalSize - a.totalSize);
+
+  chunks.forEach(chunk => {
+    const sizeKB = (chunk.totalSize / 1024).toFixed(2);
+    const percentage = ((chunk.totalSize / analysis.totalSize) * 100).toFixed(1);
+    
+    log(`\n${chunk.name}:`, 'blue');
+    log(`  Size: ${sizeKB} KB (${percentage}%)`, 'white');
+    log(`  Files: ${chunk.fileCount}`, 'white');
+    
+    chunk.files.forEach(file => {
+      const fileSizeKB = file.sizeKB.toFixed(2);
+      log(`    - ${file.name}: ${fileSizeKB} KB`, 'gray');
+    });
+  });
+}
+
+function generateOptimizationRecommendations(analysis) {
+  log('\n💡 Optimization Recommendations:', 'magenta');
+  log('='.repeat(50), 'magenta');
+
+  const recommendations = [];
+
+  // Large file recommendations
+  const largeFiles = analysis.jsFiles.filter(file => file.sizeKB > 100);
+  if (largeFiles.length > 0) {
+    recommendations.push({
+      type: 'warning',
+      message: `Found ${largeFiles.length} large JS files (>100KB)`,
+      action: 'Consider splitting these files or using dynamic imports'
+    });
+  }
+
+  // Chunk size recommendations
+  const largeChunks = Array.from(analysis.chunks.entries())
+    .filter(([name, files]) => {
+      const totalSize = files.reduce((sum, file) => sum + file.size, 0);
+      return totalSize > 200 * 1024; // >200KB
+    });
+
+  if (largeChunks.length > 0) {
+    recommendations.push({
+      type: 'warning',
+      message: `Found ${largeChunks.length} large chunks (>200KB)`,
+      action: 'Consider further splitting these chunks'
+    });
+  }
+
+  // CSS recommendations
+  if (analysis.cssFiles.length > 1) {
+    recommendations.push({
+      type: 'info',
+      message: `Found ${analysis.cssFiles.length} CSS files`,
+      action: 'Consider consolidating CSS files for better caching'
+    });
+  }
+
+  // Display recommendations
+  recommendations.forEach((rec, index) => {
+    const color = rec.type === 'warning' ? 'yellow' : 'blue';
+    log(`\n${index + 1}. ${rec.message}`, color);
+    log(`   Action: ${rec.action}`, 'white');
+  });
+
+  return recommendations;
+}
+
+function generateBundleReport(analysis) {
+  const reportPath = path.join(projectRoot, 'bundle-analysis-report.json');
+  
+  const report = {
+    timestamp: new Date().toISOString(),
+    summary: {
+      totalSize: analysis.totalSize,
+      totalSizeKB: (analysis.totalSize / 1024).toFixed(2),
+      totalSizeMB: (analysis.totalSize / 1024 / 1024).toFixed(2),
+      jsFileCount: analysis.jsFiles.length,
+      cssFileCount: analysis.cssFiles.length,
+      otherFileCount: analysis.otherFiles.length,
+      chunkCount: analysis.chunks.size
+    },
+    chunks: Object.fromEntries(
+      Array.from(analysis.chunks.entries()).map(([name, files]) => [
+        name,
+        {
+          totalSize: files.reduce((sum, file) => sum + file.size, 0),
+          fileCount: files.length,
+          files: files.map(file => ({
+            name: file.name,
+            size: file.size,
+            sizeKB: file.sizeKB
+          }))
+        }
+      ])
+    ),
+    largestFiles: {
+      js: analysis.jsFiles.slice(0, 10).map(file => ({
+        name: file.name,
+        sizeKB: file.sizeKB
+      })),
+      css: analysis.cssFiles.slice(0, 5).map(file => ({
+        name: file.name,
+        sizeKB: file.sizeKB
+      }))
+    }
+  };
+
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  log(`\n📄 Detailed report saved to: ${reportPath}`, 'green');
+}
+
+function main() {
+  log('\n🔍 Bundle Analyzer', 'bright');
+  log('='.repeat(40), 'bright');
+
+  const analysis = analyzeBundleStructure();
+  if (!analysis) return;
+
+  displayChunkAnalysis(analysis);
+  const recommendations = generateOptimizationRecommendations(analysis);
+  generateBundleReport(analysis);
+
+  log('\n✨ Bundle analysis complete!', 'green');
+}
+
+main();
