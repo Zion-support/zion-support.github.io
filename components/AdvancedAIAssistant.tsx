@@ -1,60 +1,60 @@
 import React, { useState } from "react";
-import { ;
-  Brain, ;
-  TrendingUp, ;
-  Zap, ;
-  MessageCircle, ;
-  Users, ;
-  Shield,;
-  CheckCircle,;
-  AlertCircle,;
-  Clock,;
-  Activity,;
-  Bot} from "lucide-react";
-
+import {
+  Brain,
+  TrendingUp,
+  Zap,
+  MessageCircle,
+  Users,
+  Shield,
+  CheckCircle,
+  AlertCircle,
+  Clock,
+  Activity,
+  Bot,
+} from "lucide-react";
 interface AIConversation {
   id: string;
-  type: 'chat' | 'task' | 'analysis' | 'recommendation';
+  type: "chat" | "task" | "analysis" | "recommendation";
   title: string;
   description: string;
-  status: 'active' | 'completed' | 'archived';
-  priority: 'low' | 'medium' | 'high' | 'critical';
+  status: "active" | "completed" | "archived";
+  priority: "low" | "medium" | "high" | "critical";
   createdAt: string;
-  lastUpdated: string}
-
+  lastUpdated: string;
+}
 interface AIInsight {
   id: string;
   title: string;
   description: string;
-  type: 'positive' | 'warning' | 'critical' | 'info';
-  impact: 'high' | 'medium' | 'low';
+  type: "positive" | "warning" | "critical" | "info";
+  impact: "high" | "medium" | "low";
   confidence: number;
   data: Record<string, string | number | boolean>;
-  createdAt: string}
-
+  createdAt: string;
+}
 interface AIFeature {
   id: string;
   name: string;
   description: string;
   icon: React.ReactNode;
-  status: 'active' | 'beta' | 'coming-soon';
+  status: "active" | "beta" | "coming-soon";
   usage: number;
-  accuracy: number}
-
+  accuracy: number;
+}
 const AdvancedAIAssistant: React.FC = () => {
   const [selectedView, setSelectedView] = useState<"overview" | "conversations" | "insights" | "features">("overview");
   const [searchQuery, setSearchQuery] = useState("");
-
-  const aiFeatures: AIFeature[] = [;
+  const aiFeatures: AIFeature[] = [
     {
-      id: "1",;
-      name: "Natural Language Processing",;
-      description: "Advanced NLP for understanding complex queries and context",;
-      icon: <Brain className="w-6 h-6" />,;
-      status: "active",;
-      usage: 95,;
-      accuracy: 94},;
-    {
+      id: "1",
+      name: "Natural Language Processing",
+      description: "Advanced NLP for understanding complex queries and context",
+      icon: <Brain className="w-6 h-6" />,
+      status: "active",
+      usage: 95,
+      accuracy: 94;,
+},;
+    {;
       id: "2",;
       name: "Predictive Analytics",;
       description: "AI-powered predictions for project outcomes and resource needs",;
