@@ -6,6 +6,13 @@ import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBac
 import { ChatAssistant } from './components/ChatAssistant';
 import { PerformanceMonitor } from './components/PerformanceMonitor.tsx';
 
+// Lazy load pages
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Contact = lazy(() => import('./pages/Contact'));
+const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
+const ServicesComparison = lazy(() => import('./pages/ServicesComparison'));
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -105,7 +112,9 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/ultimate-services" element={<UltimateServices />} />
+              <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
+              <Route path="/services-comparison" element={<ServicesComparison />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>
