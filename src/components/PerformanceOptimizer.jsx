@@ -1,83 +1,40 @@
-import React, { useEffect, useMemo, useCallback } from 'react';
-import { useLocation  } from 'react-router-dom';
-;
-export default function Page() {};
-  return null;
-}
-};,
-});,
-};
-;
-    // Use requestIdleCallback for non-critical optimization';
-    if('requestIdleCallback' in window) {};
-} else {};
-}
-  }, [location.pathname]);
+import React, { useEffect, useMemo, useCallback, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 
-  // Memoize expensive computations;
-  const optimizedChildren = useMemo(() => children, [children]);
-;
-  // Optimize scroll performance;
-  const handleScroll = useCallback(() => {};
-}, 16); // ~60fps;,
-}
-  }, []);
-;
-  useEffect(() => {};
-}, []);
-;
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll)}, [handleScroll]);
+export default function PerformanceOptimizer({ children }) {
+  const location = useLocation();
+  const observerRef = useRef(null);
 
-  // Service Worker registration for caching;
-  useEffect(() => {};
-}, []);
-;
-    if('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {};
-}
-              });,
-}
-          });,
-});
-        .catch(registrationError => {};
-});,
-}
-  }, []);
+  // Preload critical resources on route change
+  useEffect(() => {
+    const preloadCriticalResources = () => {
+      // Preload critical CSS
+      const criticalCSS = document.querySelector('link[data-critical]');
+      if (criticalCSS && !criticalCSS.href.includes('loaded')) {
+        criticalCSS.href = criticalCSS.href + '?loaded=true';
+      }
 
-  // Intersection Observer for lazy loading;
-  useEffect(() => {};
-}, []);
-;
-    if('IntersectionObserver' in window) {};
-}
-            }
-          });,
-},;
-        {};
-          threshold: 0.1}
-      );
+      // Preload critical images
+      const criticalImages = document.querySelectorAll('img[data-critical]');
+      criticalImages.forEach(img => {
+        if (img.dataset.src && !img.src) {
+          img.src = img.dataset.src;
+        }
+      });
+    };
 
-      // Observe all images with data-src';
-      const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach(img => observer.observe(img));
-
-      return () => observer.disconnect()}
-  }, [location.pathname]);
-
-  return <>{optimizedChildren}</>}
-// Add global performance optimizations';
-if(typeof window !== 'undefined') {};
-},;
-      { priority: 'background' }
-    )}
-
-  // Optimize memory usage';
-  if('memory' in performance) {};
-}
+    // Use requestIdleCallback for non-critical optimization
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(preloadCriticalResources, { timeout: 2000 });
+    } else {
+      setTimeout(preloadCriticalResources, 100);
     }
   }, [location.pathname]);
 
-  // Enhanced scroll performance with passive listeners
+  // Memoize expensive computations
+  const optimizedChildren = useMemo(() => children, [children]);
+
+  // Optimize scroll performance
   const handleScroll = useCallback(() => {
     if (!window.scrollTimeout) {
       window.scrollTimeout = setTimeout(() => {
@@ -92,7 +49,7 @@ if(typeof window !== 'undefined') {};
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
-  // Enhanced service worker registration
+  // Service Worker registration for caching
   useEffect(() => {
     if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
       navigator.serviceWorker
@@ -120,7 +77,7 @@ if(typeof window !== 'undefined') {};
     }
   }, []);
 
-  // Enhanced intersection observer for lazy loading
+  // Intersection Observer for lazy loading
   useEffect(() => {
     if ('IntersectionObserver' in window) {
       observerRef.current = new IntersectionObserver((entries) => {
@@ -155,13 +112,17 @@ if(typeof window !== 'undefined') {};
         threshold: 0.1,
       });
 
+      // Observe all images with data-src
+      const lazyImages = document.querySelectorAll('img[data-src]');
+      lazyImages.forEach(img => observerRef.current.observe(img));
+
       return () => {
         if (observerRef.current) {
           observerRef.current.disconnect();
         }
       };
     }
-  }, []);
+  }, [location.pathname]);
 
   // Memory optimization
   useEffect(() => {
@@ -185,8 +146,21 @@ if(typeof window !== 'undefined') {};
     };
   }, []);
 
-  // Memoize children to prevent unnecessary re-renders
-  const optimizedChildren = useMemo(() => children, [children]);
-
   return <>{optimizedChildren}</>;
-};
+}
+
+// Add global performance optimizations
+if (typeof window !== 'undefined') {
+  // Optimize memory usage
+  if ('memory' in performance) {
+    setInterval(() => {
+      const memory = performance.memory;
+      if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.9) {
+        // Trigger garbage collection if available
+        if (window.gc) {
+          window.gc();
+        }
+      }
+    }, 30000); // Check every 30 seconds
+  }
+}

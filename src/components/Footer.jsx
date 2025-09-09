@@ -1,12 +1,15 @@
 import { FooterNewsletter } from "@/components/FooterNewsletter";
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowUp } from "lucide-react";
+import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowUp, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+
 export function Footer() {
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-    return (<footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark border-t border-zion-blue-light pt-16 pb-8 relative overflow-hidden">
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark border-t border-zion-blue-light pt-16 pb-8 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan rounded-full"></div>
@@ -20,7 +23,11 @@ export function Footer() {
           {/* Company info */}
           <div className="lg:col-span-2">
             <div className="mb-6">
-              <motion.span className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent" whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400 }}>
+              <motion.span 
+                className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent" 
+                whileHover={{ scale: 1.05 }} 
+                transition={{ type: "spring", stiffness: 400 }}
+              >
                 ZION
               </motion.span>
             </div>
@@ -44,23 +51,67 @@ export function Footer() {
                 <span className="text-sm">Global • Remote First</span>
               </div>
             </div>
-          </motion.div>
 
             {/* Social media */}
             <div className="flex space-x-4">
-              <motion.a href="https://twitter.com/lovable_dev" target="_blank" rel="noopener noreferrer" className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full" aria-label="Twitter" title="Twitter" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+              <motion.a 
+                href="https://twitter.com/lovable_dev" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full" 
+                aria-label="Twitter" 
+                title="Twitter" 
+                whileHover={{ scale: 1.1 }} 
+                whileTap={{ scale: 0.95 }}
+              >
                 <Twitter className="h-5 w-5" aria-label="Twitter"/>
               </motion.a>
-              <motion.a href="https://www.linkedin.com/company/zion-marketplace" target="_blank" rel="noopener noreferrer" className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full" aria-label="LinkedIn" title="LinkedIn" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+              <motion.a 
+                href="https://www.linkedin.com/company/zion-marketplace" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full" 
+                aria-label="LinkedIn" 
+                title="LinkedIn" 
+                whileHover={{ scale: 1.1 }} 
+                whileTap={{ scale: 0.95 }}
+              >
                 <Linkedin className="h-5 w-5" aria-label="LinkedIn"/>
               </motion.a>
-              <motion.a href="https://www.facebook.com/zionmarketplace" target="_blank" rel="noopener noreferrer" className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full" aria-label="Facebook" title="Facebook" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+              <motion.a 
+                href="https://www.facebook.com/zionmarketplace" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full" 
+                aria-label="Facebook" 
+                title="Facebook" 
+                whileHover={{ scale: 1.1 }} 
+                whileTap={{ scale: 0.95 }}
+              >
                 <Facebook className="h-5 w-5" aria-label="Facebook"/>
               </motion.a>
-              <motion.a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full" aria-label="Instagram" title="Instagram" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+              <motion.a 
+                href="https://instagram.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full" 
+                aria-label="Instagram" 
+                title="Instagram" 
+                whileHover={{ scale: 1.1 }} 
+                whileTap={{ scale: 0.95 }}
+              >
                 <Instagram className="h-5 w-5" aria-label="Instagram"/>
               </motion.a>
-              <motion.a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full" aria-label="GitHub" title="GitHub" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+              <motion.a 
+                href="https://github.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full" 
+                aria-label="GitHub" 
+                title="GitHub" 
+                whileHover={{ scale: 1.1 }} 
+                whileTap={{ scale: 0.95 }}
+              >
                 <Github className="h-5 w-5" aria-label="GitHub"/>
               </motion.a>
             </div>
@@ -117,9 +168,11 @@ export function Footer() {
             <FooterNewsletter />
           </div>
         </div>
-      </motion.div>) /* Bottom section */;
-    { /* Bottom section */ }
-    <div className="pt-8 border-t border-zion-blue-light">
+      </div>
+
+      {/* Bottom section */}
+      <div className="pt-8 border-t border-zion-blue-light">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-0">
               <p className="text-zion-slate-light text-sm">
@@ -143,39 +196,21 @@ export function Footer() {
               <span>for the future of technology</span>
             </motion.div>
           </div>
-        </div>;
-    div >
-        { /* Scroll to top button */}
-        < motion.button;
-    onClick = { scrollToTop };
-    className = "fixed bottom-6 left-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 z-40";
-    whileHover = {};
-    {
-        scale: 1.1;
-    }
+        </div>
+      </div>
+
+      {/* Scroll to top button */}
+      <motion.button
+        onClick={scrollToTop}
+        className="fixed bottom-6 left-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 z-40"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1 }}
+      >
+        <ArrowUp className="w-5 h-5"/>
+      </motion.button>
+    </footer>
+  );
 }
-whileTap = {};
-{
-    scale: 0.95;
-}
-initial = {};
-{
-    opacity: 0, y;
-    20;
-}
-animate = {};
-{
-    opacity: 1, y;
-    0;
-}
-transition = {};
-{
-    delay: 1;
-}
-    >
-        <ArrowUp className="w-5 h-5"/>;
-motion.button >
-;
-footer >
-;
-;

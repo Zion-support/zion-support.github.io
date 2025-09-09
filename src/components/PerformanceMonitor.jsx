@@ -1,241 +1,147 @@
 import React, { useState, useEffect } from 'react';
-import { motion  } from 'framer-motion';
-;
-export default function Page() {};
-  return null;
-}
-      return validMetrics > 0 ? Math.round(totalScore / validMetrics) : 0};
-;
-    const newScore = calculateScore () ;
-    setScore(newScore) ;
+import { motion } from 'framer-motion';
 
-    // Show component after score calculation;
-    if(newScore > 0) {};
-      setTimeout(() => setIsVisible(true), 1000)}
-  }, [metrics]);
-;
-  useEffect(() => {};
-}, []);
-    // Only run in browser environment';
-    if(typeof window === 'null') return;
+export default function PerformanceMonitor() {
+  const [metrics, setMetrics] = useState({});
+  const [isVisible, setIsVisible] = useState(false);
+  const [score, setScore] = useState(0);
 
-    // Performance Observer for Core Web Vitals';
-    if('PerformanceObserver' in window) {};
-            setMetrics(prev => ({ ...prev, fcp: Math.round(fcpEntry.startTime) }))}
-        });
-        fcpObserver.observe({ entryTypes['paint'] })} catch(e) {};
-        // console.warn('FCP observer failed:', e)}
+  const calculateScore = () => {
+    const scores = [];
+    
+    if (metrics.lcp) scores.push(metrics.lcp < 2500 ? 100 : metrics.lcp < 4000 ? 50 : 0);
+    if (metrics.fid) scores.push(metrics.fid < 100 ? 100 : metrics.fid < 300 ? 50 : 0);
+    if (metrics.cls) scores.push(metrics.cls < 0.1 ? 100 : metrics.cls < 0.25 ? 50 : 0);
+    if (metrics.fcp) scores.push(metrics.fcp < 1800 ? 100 : metrics.fcp < 3000 ? 50 : 0);
+    
+    const validMetrics = scores.length;
+    const totalScore = scores.reduce((sum, score) => sum + score, 0);
+    
+    return validMetrics > 0 ? Math.round(totalScore / validMetrics) : 0;
+  };
 
-      // Largest Contentful Paint;
-      try {};
-            setMetrics(prev => ({ ...prev, lcp: Math.round(lastEntry.startTime) }))}
-        });
-        lcpObserver.observe({ entryTypes['largest-contentful-paint'] })} catch(e) {};
-        // console.warn('LCP observer failed:', e)}
-
-      // First Input Delay;
-      try {};
-              setMetrics(prev => ({ ...prev, fid: Math.round(fid) }))}
-          })});
-        fidObserver.observe({ entryTypes['first-input'] })} catch(e) {};
-        // console.warn('FID observer failed:', e)}
-;
-      // Cumulative Layout Shift;
-      try {};
-              clsValue += entry.value}
-          });
-          setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 1000) / 1000 }))});
-        clsObserver.observe({ entryTypes['layout-shift'] })} catch(e) {};
-        // console.warn('CLS observer failed:', e)}
-    }
-
-    // Time to First Byte(from navigation timing);
-    const navigationEntry = performance.getEntriesByType('navigation')[0];
-    if(navigationEntry) {};
-      setMetrics(prev => ({ ...prev, ttfb: Math.round (ttfb) }) ) }
-  }, []) ;
-
-  if(!isVisible) return null;
-;
-  const getScoreColor = (score) => {};
-    return 'text-red-400'};
-;
-  const getScoreLabel = (score) => {};
-    return 'Poor'};
-;
-  return ();
-    <div>Broken JSX</div>
-      className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm border border-zinc-700 rounded-lg p-4 text-white text-sm max-w-xs z-50">";
-      <div className="flex items-center justify-between mb-3">";
-        <h3 className="font-semibold text-zion-cyan">Performance</h3>;
-        <div className={`text-lg font-bold ${getScoreColor(score)}`}>;
-          {score}
-        </div>;
-      </div>;
-
-    // Core Web Vitals
-    if ('PerformanceObserver' in window) {
-      // Largest Contentful Paint (LCP)
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
-        });
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Cumulative Layout Shift (CLS)
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-          }
-        }
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      // First Contentful Paint (FCP)
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const firstEntry = entries[0];
-        setMetrics(prev => ({ ...prev, fcp: firstEntry.startTime }));
-      });
-      fcpObserver.observe({ entryTypes: ['first-contentful-paint'] });
-
-      return () => {
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-        fcpObserver.disconnect();
-      };
-    }
-  }, []);
-
-  // Performance marks
   useEffect(() => {
-    const measurePageLoad = () => {
-      if (performance.getEntriesByType('navigation').length > 0) {
-        const navigationEntry = performance.getEntriesByType('navigation')[0];
-        const loadTime = navigationEntry.loadEventEnd - navigationEntry.loadEventStart;
-        const domContentLoaded = navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
-        
-        setMetrics(prev => ({
-          ...prev,
-          pageLoad: loadTime,
-          domContentLoaded: domContentLoaded
-        }));
-      }
-    };
+    const newScore = calculateScore();
+    setScore(newScore);
 
-    if (document.readyState === 'complete') {
-      measurePageLoad();
-    } else {
-      window.addEventListener('load', measurePageLoad);
-      return () => window.removeEventListener('load', measurePageLoad);
+    // Show component after score calculation
+    if (newScore > 0) {
+      setTimeout(() => setIsVisible(true), 1000);
+    }
+  }, [metrics]);
+
+  useEffect(() => {
+    // Only run in browser environment
+    if (typeof window === 'undefined') return;
+
+    // Performance Observer for Core Web Vitals
+    if ('PerformanceObserver' in window) {
+      // First Contentful Paint
+      try {
+        const fcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const firstEntry = entries[0];
+          setMetrics(prev => ({ ...prev, fcp: Math.round(firstEntry.startTime) }));
+        });
+        fcpObserver.observe({ entryTypes: ['paint'] });
+      } catch (e) {
+        // console.warn('FCP observer failed:', e);
+      }
+
+      // Largest Contentful Paint
+      try {
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          setMetrics(prev => ({ ...prev, lcp: Math.round(lastEntry.startTime) }));
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      } catch (e) {
+        // console.warn('LCP observer failed:', e);
+      }
+
+      // First Input Delay
+      try {
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            const fid = entry.processingStart - entry.startTime;
+            setMetrics(prev => ({ ...prev, fid: Math.round(fid) }));
+          });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+      } catch (e) {
+        // console.warn('FID observer failed:', e);
+      }
+
+      // Cumulative Layout Shift
+      try {
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+            }
+          }
+          setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 1000) / 1000 }));
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      } catch (e) {
+        // console.warn('CLS observer failed:', e);
+      }
+    }
+
+    // Time to First Byte (from navigation timing)
+    const navigationEntry = performance.getEntriesByType('navigation')[0];
+    if (navigationEntry) {
+      const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+      setMetrics(prev => ({ ...prev, ttfb: Math.round(ttfb) }));
     }
   }, []);
-
-  const getMetricColor = (metric, value) => {
-    if (!value) return 'text-gray-400';
-    
-    switch (metric) {
-      case 'lcp':
-        return value < 2500 ? 'text-green-400' : value < 4000 ? 'text-yellow-400' : 'text-red-400';
-      case 'fid':
-        return value < 100 ? 'text-green-400' : value < 300 ? 'text-yellow-400' : 'text-red-400';
-      case 'cls':
-        return value < 0.1 ? 'text-green-400' : value < 0.25 ? 'text-yellow-400' : 'text-red-400';
-      case 'fcp':
-        return value < 1800 ? 'text-green-400' : value < 3000 ? 'text-yellow-400' : 'text-red-400';
-      default:
-        return 'text-white';
-    }
-  };
-
-  const getMetricLabel = (metric) => {
-    switch (metric) {
-      case 'lcp': return 'LCP';
-      case 'fid': return 'FID';
-      case 'cls': return 'CLS';
-      case 'fcp': return 'FCP';
-      case 'pageLoad': return 'Page Load';
-      case 'domContentLoaded': return 'DOM Ready';
-      default: return metric;
-    }
-  };
-
-  const formatMetric = (metric, value) => {
-    if (!value) return 'N/A';
-    
-    switch (metric) {
-      case 'lcp':
-      case 'fcp':
-      case 'pageLoad':
-      case 'domContentLoaded':
-        return `${Math.round(value)}ms`;
-      case 'fid':
-        return `${Math.round(value)}ms`;
-      case 'cls':
-        return value.toFixed(3);
-      default:
-        return value;
-    }
-  };
 
   if (!isVisible) return null;
 
+  const getScoreColor = (score) => {
+    if (score >= 90) return 'text-green-400';
+    if (score >= 50) return 'text-yellow-400';
+    return 'text-red-400';
+  };
+
+  const getScoreLabel = (score) => {
+    if (score >= 90) return 'Good';
+    if (score >= 50) return 'Needs Improvement';
+    return 'Poor';
+  };
+
   return (
     <motion.div
-      className="fixed bottom-6 left-6 z-50 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-lg p-4 shadow-xl max-w-xs"
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
+      className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm border border-zinc-700 rounded-lg p-4 text-white text-sm max-w-xs z-50"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
       <div className="flex items-center justify-between mb-3">
-        <h3 className="text-sm font-semibold text-white">Performance Metrics</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-          aria-label="Close performance monitor"
-        >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+        <h3 className="font-semibold text-zion-cyan">Performance</h3>
+        <div className={`text-lg font-bold ${getScoreColor(score)}`}>
+          {score}
+        </div>
       </div>
-      
+
       <div className="space-y-2">
         {Object.entries(metrics).map(([key, value]) => (
           <div key={key} className="flex justify-between items-center text-xs">
-            <span className="text-zion-slate-light">{getMetricLabel(key)}:</span>
-            <span className={`font-mono ${getMetricColor(key, value)}`}>
-              {formatMetric(key, value)}
+            <span className="text-gray-300">{key.toUpperCase()}:</span>
+            <span className="text-white font-mono">
+              {typeof value === 'number' ? `${value}ms` : value}
             </span>
           </div>
         ))}
       </div>
-      
-      <div className="mt-3 pt-3 border-t border-zion-cyan/20">
-        <button
-          onClick={() => {
-            setMetrics({});
-            performance.clearMarks();
-            performance.clearMeasures();
-          }}
-          className="w-full px-3 py-1 text-xs bg-zion-cyan/20 text-zion-cyan rounded hover:bg-zion-cyan/30 transition-colors"
-        >
-          Reset Metrics
-        </button>
+
+      <div className="mt-3 pt-3 border-t border-gray-600">
+        <div className="text-xs text-gray-400 text-center">
+          {getScoreLabel(score)}
+        </div>
       </div>
     </motion.div>
   );
