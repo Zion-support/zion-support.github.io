@@ -1,15 +1,1 @@
-import { render, screen } from '@testing - library / react';
-import WhitePapers from './WhitePapers';
-;
-;
-describe ('WhitePapers', () => {;
-  it ('renders without crashing', () => {;
-    render (<WhitePapers       />) ;
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
-  }) ;
-;
-  it ('displays expected content', () => {;
-    render (<WhitePapers       />) ;
-    // Add specific test assertions based on component content;
-  }) ;
-}) ;
+describe('WhitePapers', () => {}; '; it('renders without crashing', () => {}; render(<WhitePapers />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<WhitePapers />) ;
