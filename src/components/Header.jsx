@@ -20,8 +20,8 @@ export function Header() {
             <Link to="/" className="text-zion-slate-light hover:text-white transition-colors">
               Home
             </Link>
-          </div>
-          <MainNavigation       />
+          </nav>
+          <MainNavigation />
         </div>
       </div>
     </header>
