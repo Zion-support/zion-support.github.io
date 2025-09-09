@@ -1,11 +1,12 @@
+// Datadog browser logs shim for Vite compatibility
 export const datadogLogs = {
+  init: () => {},
   logger: {
-    error: (_message: string, _context?: Record<string, unknown>) => undefined,
-    warn: (_message: string, _context?: Record<string, unknown>) => undefined,
-    info: (_message: string, _context?: Record<string, unknown>) => undefined,
-    debug: (_message: string, _context?: Record<string, unknown>) => undefined,
+    debug: () => {},
+    info: () => {},
+    warn: () => {},
+    error: () => {},
   },
 };
 
 export default datadogLogs;
-

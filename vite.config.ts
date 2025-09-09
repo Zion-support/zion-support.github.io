@@ -166,7 +166,10 @@ export default defineConfig(({ mode }) => ({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
+      '@': path.resolve(__dirname, './src'),
+      'next/router': path.resolve(__dirname, './src/stubs/next-router.ts'),
+      '@datadog/browser-logs': path.resolve(__dirname, './src/utils/datadog-logs-shim.ts'),
+      'logrocket': path.resolve(__dirname, './src/utils/logrocket-shim.ts')
     }
   },
   server: {
