@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 
-interface LoadingProps {
+interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
   fullScreen?: boolean;
 }
 
-export default function Loading({ 
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   text = 'Loading...', 
   fullScreen = false 
-}: LoadingProps) {
+}) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
@@ -39,28 +39,6 @@ export default function Loading({
       {content}
     </div>
   );
-}
+};
 
-export function SkeletonCard() {
-  return (
-    <div className="animate-pulse bg-gray-200 rounded-lg p-4">
-      <div className="h-4 bg-gray-300 rounded w-3/4 mb-2"></div>
-      <div className="h-3 bg-gray-300 rounded w-1/2"></div>
-    </div>
-  );
-}
-
-export function SkeletonText({ lines = 3 }: { lines?: number }) {
-  return (
-    <div className="space-y-2">
-      {Array.from({ length: lines }).map((_, i) => (
-        <div
-          key={i}
-          className={`h-4 bg-gray-300 rounded ${
-            i === lines - 1 ? "w-2/3" : 'w-full'
-          }`}
-        />
-      ))}
-    </div>
-  );
-}
+export default LoadingSpinner;
