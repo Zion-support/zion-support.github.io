@@ -1,19 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { FooterNewsletter } from "@/components/FooterNewsletter";
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowUp, Heart } from "lucide-react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-
-function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-=======
 import React from 'react';
->>>>>>> main
-=======
-import { FooterNewsletter } from "@/components/FooterNewsletter";
+import { FooterNewsletter } from "./FooterNewsletter";
 import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -22,7 +8,6 @@ export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
->>>>>>> pr-12872
 
   return (
     <footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark border-t border-zion-blue-light pt-16 pb-8 relative overflow-hidden">
@@ -129,14 +114,4 @@ export function Footer() {
       </div>
     </footer>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> main
-
-export default Footer;
-=======
-}
->>>>>>> pr-12872
