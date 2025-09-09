@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { TalentProfile } from "@/types/talent";
 import { SmartContractInfo } from "@/types/smart-contracts";
 

@@ -5,7 +5,7 @@ import { Bell, Calendar, X } from 'lucide-react';
 
 
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";

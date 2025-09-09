@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react';
 import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { supabase } from '@/utils/supabase/client'; // Assuming supabase client is configured
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger'; // Assuming logger utility
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react' // Added useEffect for router.isReady
 import { useRouter } from 'next/router' // Changed from useParams, useNavigate
 import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/Button'
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states'
 import { toast } from '@/hooks/use-toast'
 import { resetPassword } from '@/services/auth'

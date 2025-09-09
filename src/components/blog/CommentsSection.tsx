@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { addComment, getComments, CommentEntry } from '@/services/commentService';
 
 interface CommentsSectionProps {

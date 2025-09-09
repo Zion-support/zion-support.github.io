@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Header } from '@/components/Header';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import {logErrorToProduction} from '@/utils/productionLogger';
 
 export default function PodcastHost() {

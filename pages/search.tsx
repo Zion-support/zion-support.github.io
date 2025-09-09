@@ -8,7 +8,7 @@ import { Search, Filter, GridIcon, List, Loader2, SortAsc } from 'lucide-react';
 
 
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';

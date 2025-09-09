@@ -1,7 +1,7 @@
 
 import { format } from "date-fns";
 import { Calendar } from "@/components/ui/calendar";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Label } from "@/components/ui/label";
 import { CalendarIcon } from 'lucide-react';
 

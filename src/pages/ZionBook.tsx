@@ -1,6 +1,6 @@
 import React from 'react';
 import { NextSeo } from '@/components/NextSeo';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { generateBookPdf } from '@/utils/generateBookPdf';
 
 export default function ZionBook() {

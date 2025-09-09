@@ -11,7 +11,7 @@ import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from 'lu
 
 import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";

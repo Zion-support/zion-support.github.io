@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'; // Changed from useParams
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { NEW_PRODUCTS } from '@/data/newProductsData';
 import { useCart } from '@/context/CartContext';
 import { toast } from '@/hooks/use-toast';

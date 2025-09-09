@@ -55,13 +55,13 @@ export const logError = (error: Error | AppError, errorInfo?: Partial<ErrorInfo>
   };
 
   // Log to console in development
-  if (import.meta.env.DEV) {
+  if (process.env.NODE_ENV === 'development') {
     console.error('🚨 Application Error:', errorData);
   }
 
   // In production, you might want to send this to an error tracking service
   // like Sentry, LogRocket, or your own error reporting endpoint
-  if (import.meta.env.PROD) {
+  if (process.env.NODE_ENV === 'production') {
     // Example: Send to error tracking service
     // sendToErrorService(errorData);
   }

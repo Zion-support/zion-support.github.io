@@ -4,7 +4,7 @@ import { MobileHeader } from "@/mobile/components/common/MobileHeader";
 import { BottomNavigation } from "@/mobile/components/common/BottomNavigation";
 import { BrowseFilters } from "@/mobile/components/browse/BrowseFilters";
 import { BrowseCards } from "@/mobile/components/browse/BrowseCards";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { useAuth } from "@/hooks/useAuth";
 import { logInfo } from '@/utils/productionLogger';
 

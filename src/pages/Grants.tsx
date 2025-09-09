@@ -20,7 +20,7 @@ import {
   SelectContent,
   SelectItem,
 } from '@/components/ui/select';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Card, CardHeader, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 

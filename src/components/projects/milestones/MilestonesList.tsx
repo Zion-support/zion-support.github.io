@@ -4,7 +4,7 @@ import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilest
 import { useAuth } from '@/hooks/useAuth';
 import { MilestoneCard } from './MilestoneCard';
 import { AddMilestoneForm } from './AddMilestoneForm';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Plus } from 'lucide-react';
 // lucide-react doesn't export PlusIcon, use our icon wrapper

@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Switch } from '@/components/ui/switch';
 import { orgMembers } from '@/data/orgMembers';

@@ -8,7 +8,7 @@ import { Search, Filter, Grid, List } from 'lucide-react';
 
 
 import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/input';
 import ProductCard from '@/components/ProductCard';
 import { TalentCard } from '@/components/talent/TalentCard';

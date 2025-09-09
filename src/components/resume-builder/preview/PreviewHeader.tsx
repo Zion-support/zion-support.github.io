@@ -1,5 +1,5 @@
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { ArrowLeft, FileText, Link } from 'lucide-react';
 
 

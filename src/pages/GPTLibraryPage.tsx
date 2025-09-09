@@ -3,7 +3,7 @@ import type { Prompt } from '@/types/prompts';
 import { GradientHeading } from '@/components/GradientHeading';
 import { PromptCard } from '@/components/prompts/PromptCard';
 import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { SEO } from '@/components/SEO';
 import { useState } from 'react';
 

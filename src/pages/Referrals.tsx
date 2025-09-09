@@ -10,7 +10,7 @@ import { ReferralGuide } from '@/components/referrals/ReferralGuide';
 import { ReferralLeaderboard } from '@/components/referrals/ReferralLeaderboard';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { toast } from '@/hooks/use-toast';
 import { Share, Users } from 'lucide-react';
 

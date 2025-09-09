@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Clipboard } from 'lucide-react';
 
 import Skeleton from '@/components/ui/skeleton';

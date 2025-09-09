@@ -3,7 +3,7 @@ import { Header } from '@/components/Header';
 import { NextSeo } from '@/components/NextSeo';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import SlideEditor from '@/components/admin/pitch-generator/SlideEditor';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';

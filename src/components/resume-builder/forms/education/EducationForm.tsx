@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Education } from '@/types/resume';
 import { useResume } from '@/hooks/useResume';
 import { format } from 'date-fns';

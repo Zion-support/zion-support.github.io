@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X } from 'lucide-react';
 
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { ChatMessage } from '@/components/ChatAssistant/ChatMessage';
 import { ChatInput } from '@/components/ChatAssistant/ChatInput';
 import {logErrorToProduction} from '@/utils/productionLogger';

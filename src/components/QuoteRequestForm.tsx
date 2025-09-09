@@ -3,7 +3,7 @@ import { useState } from "react";
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { useToast } from "@/hooks/use-toast";
 import { useRouter } from 'next/router';
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Card, CardContent } from "@/components/ui/card";
 import { GradientHeading } from "@/components/GradientHeading";
 import { StepProgress } from "@/components/QuoteRequestForm/StepProgress";

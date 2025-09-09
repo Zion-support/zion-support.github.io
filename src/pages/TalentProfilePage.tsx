@@ -12,7 +12,7 @@ import { StickyAction } from "@/components/ui/sticky-action";
 import { Handshake, MessageSquare } from 'lucide-react';
 
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { useAuth } from "@/hooks/useAuth";
 import { UserProfile } from "@/types/auth";
 import { toast } from "@/hooks/use-toast";

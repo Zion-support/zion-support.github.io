@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { getCapturedLogs, clearCapturedLogs, ConsoleLogEntry } from "@/utils/consoleLogCapture";
 
 export default function ActivityLogPage() {

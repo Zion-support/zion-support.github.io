@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { GradientHeading } from "@/components/GradientHeading";
 import { ListingScoreCard } from "@/components/ListingScoreCard";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
 import { useRouter } from 'next/router';
 import Link from 'next/link';

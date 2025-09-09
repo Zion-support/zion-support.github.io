@@ -8,7 +8,7 @@ import { LockKeyhole } from 'lucide-react';
 
 
 import { supabase } from "@/integrations/supabase/client";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/input";
 import {
   Form,
