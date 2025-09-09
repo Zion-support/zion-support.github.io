@@ -1,89 +1,48 @@
 import type { AppProps } from 'next/app';
-import Link from 'next/link';
-import { useState } from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-import PerformanceMonitor from '../components/PerformanceMonitor';
-import '../styles/globals.css';
+import { HelmetProvider } from 'react-helmet-async';
+import { AuthProvider } from '@/context/auth/AuthProvider';
+import { Provider as ReduxProvider } from 'react-redux';
+import { store } from '@/store'; // Changed to named import
+import { WhitelabelProvider } from '@/context/WhitelabelContext'; // Added WhitelabelProvider
+import { WalletProvider } from '@/context/WalletContext'; // Added WalletProvider
+import { AnalyticsProvider } from '@/context/AnalyticsContext'; // Added AnalyticsProvider
+import { CartProvider } from '@/context/CartContext'; // Added CartProvider
+import { RouterWrapper } from '@/components/RouterWrapper'; // Add this import
+import { I18nextProvider } from 'react-i18next';
+import i18n from '@/i18n';
+import { Toaster } from '@/components/ui/toaster';
+import CustomErrorBoundary from '@/components/CustomErrorBoundary'; // Import the new Error Boundary
+// If you have global CSS, import it here:
+// import '../styles/globals.css';
 
 function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header style={{
-      position: 'sticky', top: 0, zIndex: 50, background: 'rgba(11, 18, 32, 0.95)', 
-      backdropFilter: 'blur(10px)', color: 'white',
-      borderBottom: '1px solid rgba(255,255,255,0.1)',
-    }}>
-      <nav style={{
-        maxWidth: 1400, margin: '0 auto', padding: '12px 20px', display: 'flex',
-        alignItems: 'center', justifyContent: 'space-between', gap: 16}}>
-        <Link href="/" style={{ 
-          fontWeight: 800, letterSpacing: 0.3, fontSize: '1.25rem',
-          background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          textDecoration: 'none'
-        }}>Zion Tech Group</Link>
-        
-        {/* Desktop Navigation */}
-        <div style={{ 
-          display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center',
-          '@media (max-width: 768px)': { display: 'none' } as any
-        }}>
-          <Link href="/" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Home</Link>
-          <Link href="/services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>All Services</Link>
-          <Link href="/micro-saas" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Micro SaaS</Link>
-          <Link href="/ai-services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>AI Services</Link>
-          <Link href="/it-services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>IT Services</Link>
-          <Link href="/cloud-devops" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Cloud DevOps</Link>
-          <Link href="/cybersecurity" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Cybersecurity</Link>
-          <Link href="/quantum-computing" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Quantum</Link>
-          <Link href="/pricing" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Pricing</Link>
-          <Link href="/contact" style={{ 
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-            color: 'white', padding: '8px 16px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem', fontWeight: 600
-          }}>Contact</Link>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button 
-          style={{ 
-            background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer',
-            display: 'none',
-            '@media (max-width: 768px)': { display: 'block' } as any
-          }}
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle mobile menu"
-          aria-expanded={mobileMenuOpen}
-        >
-          ☰
-        </button>
-      </nav>
-      
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div style={{
-          position: 'absolute', top: '100%', left: 0, right: 0, background: 'rgba(11, 18, 32, 0.98)',
-          backdropFilter: 'blur(10px)', borderTop: '1px solid rgba(255,255,255,0.1)',
-          padding: '20px', display: 'flex', flexDirection: 'column', gap: 12
-        }}>
-          <Link href="/" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Home</Link>
-          <Link href="/services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>All Services</Link>
-          <Link href="/micro-saas" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Micro SaaS</Link>
-          <Link href="/ai-services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>AI Services</Link>
-          <Link href="/it-services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>IT Services</Link>
-          <Link href="/cloud-devops" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Cloud DevOps</Link>
-          <Link href="/cybersecurity" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Cybersecurity</Link>
-          <Link href="/quantum-computing" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Quantum</Link>
-          <Link href="/pricing" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Pricing</Link>
-          <Link href="/contact" style={{ 
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-            color: 'white', padding: '8px 16px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem', fontWeight: 600
-          }}>Contact</Link>
-        </div>
-      )}
-    </header>
+    <CustomErrorBoundary> {/* Wrap the entire application with CustomErrorBoundary */}
+      <QueryClientProvider client={queryClient}>
+        <ReduxProvider store={store}>
+          <HelmetProvider>
+            <RouterWrapper> {/* RouterWrapper should be the one wrapping AuthProvider and others */}
+              <AuthProvider>
+                <WhitelabelProvider>
+                  <I18nextProvider i18n={i18n}>
+                    <WalletProvider>
+                      <CartProvider>
+                        <AnalyticsProvider>
+                          <Component {...pageProps} />
+                        </AnalyticsProvider>
+                        <Toaster />
+                      </CartProvider>
+                    </WalletProvider>
+                  </I18nextProvider>
+                </WhitelabelProvider>
+              </AuthProvider>
+            </RouterWrapper>
+        </HelmetProvider>
+      </ReduxProvider>
+    </QueryClientProvider>
+    </CustomErrorBoundary>
   );
 }
 
