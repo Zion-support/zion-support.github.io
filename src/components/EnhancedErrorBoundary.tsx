@@ -1,9 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
 import { Button } from '@/components/ui/Button';
-=======
-import { Button } from './ui/Button';
->>>>>>> cursor/check-fix-push-and-merge-to-main-d695
 
 interface Props {
   children: ReactNode;

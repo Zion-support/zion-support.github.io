@@ -1,23 +1,21 @@
-// comment;
-export class authService {};
+// Authentication service
+export class AuthService {
+  constructor() {
+    this.baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api';
+  }
+
+  async get() {
+    try {
+      const response = await fetch(`${this.baseUrl}/auth`);
+      return await response.json();
+    } catch (error) {
+      throw error;
+    }
+  }
 }
-;
-  async get() {};
-      const response = await fetch("${this.baseUrl}/auth");,
-}
-      return await response.json();,
-}
-    } catch (error) {};
-}
-      throw error;,
-}
-;
-// Create and export a singleton instance;
+
+// Create and export a singleton instance
 const authService = new AuthService();
 export default authService;
 
-export { API_BASE_URL }
-export { API_BASE_URL }
-export { API_BASE_URL }
-export { API_BASE_URL }
-export { API_BASE_URL }
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api';

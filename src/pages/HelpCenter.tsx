@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/Footer";
@@ -6,7 +5,7 @@ import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/Button";
 import { Search, BookOpen, MessageCircle, Phone, FileText, Users, Settings, Shield, Zap } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 export default function HelpCenter() {
     const helpCategories = [
         {
