@@ -1,11 +1,11 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
+import { EnhancedHeader } from './components/header/EnhancedHeader';
+import { EnhancedFooter } from './components/EnhancedFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 
 // Lazy load pages
-const Home = React.lazy(() => import('./pages/Home'));
+const Home = React.lazy(() => import('./pages/Index'));
 const About = React.lazy(() => import('./pages/About'));
 const Careers = React.lazy(() => import('./pages/Careers'));
 const News = React.lazy(() => import('./pages/News'));
@@ -91,14 +91,12 @@ const Mobile = React.lazy(() => import('./pages/Mobile'));
 const QuantumTechnology = React.lazy(() => import('./pages/QuantumTechnology'));
 const SpaceTech = React.lazy(() => import('./pages/SpaceTech'));
 
-// Service pages from existing structure
-const CloudServices = React.lazy(() => import('./pages/services/Cloud'));
-const ITServices = React.lazy(() => import('./pages/services/ITServices'));
-const BlockchainServices = React.lazy(() => import('./pages/services/BlockchainServices'));
-const MobileServices = React.lazy(() => import('./pages/services/MobileServices'));
-const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
-const IndustrySolutions = React.lazy(() => import('./pages/services/IndustrySolutions'));
-const InfrastructureServices = React.lazy(() => import('./pages/services/InfrastructureServices'));
+// New 2027 Services Pages
+const UltimateInnovativeServices2027 = React.lazy(() => import('./pages/UltimateInnovativeServices2027'));
+const UltimatePricing2027 = React.lazy(() => import('./pages/UltimatePricing2027'));
+const AllServices2027 = React.lazy(() => import('./pages/AllServices2027'));
+
+const APIDocs = React.lazy(() => import('./pages/APIDocs'));
 
 // Additional pages
 const Contact = React.lazy(() => import('./pages/Contact'));
@@ -118,8 +116,9 @@ const LoadingSpinner = () => (
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-background">
-        <AppHeader />
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+        <EnhancedHeader />
+        
         <main className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
@@ -213,13 +212,19 @@ function App() {
               <Route path="/terms" element={<Terms />} />
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/green-it" element={<GreenIT />} />
+              <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/login" element={<Login />} />
               
-              {/* 404 */}
-              <Route path="*" element={<NotFound />} />
+              {/* New 2027 Services Routes */}
+              <Route path="/ultimate-innovative-services-2027" element={<UltimateInnovativeServices2027 />} />
+              <Route path="/ultimate-pricing-2027" element={<UltimatePricing2027 />} />
+              <Route path="/all-services-2027" element={<AllServices2027 />} />
             </Routes>
           </Suspense>
         </main>
-        <Footer />
+        
+        <EnhancedFooter />
         <ChatAssistant />
       </div>
     </Router>
