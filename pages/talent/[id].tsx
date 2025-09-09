@@ -1,9 +1,10 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useRouter } from 'next/router';
 import { SEO } from "@/components/SEO";
 
 const TalentDetail: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
+  const router = useRouter();
+  const { id } = router.query;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-zion-blue-dark to-zion-blue-darker">

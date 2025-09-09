@@ -1,4 +1,6 @@
 // Testing utilities and helpers
+import { vi } from 'vitest'
+import React, { ReactElement } from 'react'
 
 // Mock data generators
 export const generateMockUser = (overrides: Partial<any> = {}) => ({
@@ -45,7 +47,8 @@ export const mockApiError = (message: string = 'API Error', status: number = 500
 export const mockFetch = (responses: Record<string, any>) => {
   const originalFetch = global.fetch;
   
-  global.fetch = jest.fn((url: string) => {
+  global.fetch = vi.fn((input: RequestInfo | URL, init?: RequestInit) => {
+    const url = typeof input === 'string' ? input : input.toString();
     const response = responses[url];
     if (response) {
       return Promise.resolve({
@@ -137,7 +140,7 @@ export const checkAccessibility = (container: HTMLElement) => {
 };
 
 // Performance testing utilities
-export const measureRenderTime = async (component: React.ReactElement): Promise<number> => {
+export const measureRenderTime = async (component: ReactElement): Promise<number> => {
   const start = performance.now();
   // Render component here
   const end = performance.now();
@@ -153,7 +156,7 @@ export const measureMemoryUsage = (): number => {
 
 // Mock browser APIs
 export const mockIntersectionObserver = () => {
-  const mockIntersectionObserver = jest.fn();
+  const mockIntersectionObserver = vi.fn();
   mockIntersectionObserver.mockReturnValue({
     observe: () => null,
     unobserve: () => null,
@@ -164,7 +167,7 @@ export const mockIntersectionObserver = () => {
 };
 
 export const mockResizeObserver = () => {
-  const mockResizeObserver = jest.fn();
+  const mockResizeObserver = vi.fn();
   mockResizeObserver.mockReturnValue({
     observe: () => null,
     unobserve: () => null,
@@ -177,15 +180,15 @@ export const mockResizeObserver = () => {
 export const mockMatchMedia = (matches: boolean = false) => {
   Object.defineProperty(window, 'matchMedia', {
     writable: true,
-    value: jest.fn().mockImplementation(query => ({
+    value: vi.fn().mockImplementation(query => ({
       matches,
       media: query,
       onchange: null,
-      addListener: jest.fn(),
-      removeListener: jest.fn(),
-      addEventListener: jest.fn(),
-      removeEventListener: jest.fn(),
-      dispatchEvent: jest.fn(),
+      addListener: vi.fn(),
+      removeListener: vi.fn(),
+      addEventListener: vi.fn(),
+      removeEventListener: vi.fn(),
+      dispatchEvent: vi.fn(),
     })),
   });
 };
@@ -195,17 +198,17 @@ export const mockLocalStorage = () => {
   
   Object.defineProperty(window, 'localStorage', {
     value: {
-      getItem: jest.fn((key: string) => store[key] || null),
-      setItem: jest.fn((key: string, value: string) => {
+      getItem: vi.fn((key: string) => store[key] || null),
+      setItem: vi.fn((key: string, value: string) => {
         store[key] = value;
       }),
-      removeItem: jest.fn((key: string) => {
+      removeItem: vi.fn((key: string) => {
         delete store[key];
       }),
-      clear: jest.fn(() => {
+      clear: vi.fn(() => {
         Object.keys(store).forEach(key => delete store[key]);
       }),
-      key: jest.fn((index: number) => Object.keys(store)[index] || null),
+      key: vi.fn((index: number) => Object.keys(store)[index] || null),
     },
   });
 };
@@ -215,17 +218,17 @@ export const mockSessionStorage = () => {
   
   Object.defineProperty(window, 'sessionStorage', {
     value: {
-      getItem: jest.fn((key: string) => store[key] || null),
-      setItem: jest.fn((key: string, value: string) => {
+      getItem: vi.fn((key: string) => store[key] || null),
+      setItem: vi.fn((key: string, value: string) => {
         store[key] = value;
       }),
-      removeItem: jest.fn((key: string) => {
+      removeItem: vi.fn((key: string) => {
         delete store[key];
       }),
-      clear: jest.fn(() => {
+      clear: vi.fn(() => {
         Object.keys(store).forEach(key => delete store[key]);
       }),
-      key: jest.fn((index: number) => Object.keys(store)[index] || null),
+      key: vi.fn((index: number) => Object.keys(store)[index] || null),
     },
   });
 };
@@ -236,8 +239,8 @@ export const setupTestEnvironment = () => {
   const originalConsole = { ...console };
   
   beforeEach(() => {
-    console.warn = jest.fn();
-    console.error = jest.fn();
+    console.warn = vi.fn();
+    console.error = vi.fn();
   });
 
   afterEach(() => {

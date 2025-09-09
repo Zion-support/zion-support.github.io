@@ -120,7 +120,4 @@
 ---
 
 **🎉 Mission Accomplished!** All automation scripts have been run, tested, fixed, improved, and successfully integrated into the main branch. The Zion Tech Group application is now in a healthy state with comprehensive automation infrastructure in place.
-<<<<<<< HEAD
-=======
 
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425

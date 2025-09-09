@@ -1,6 +1,6 @@
 
 import React, { createContext, useContext, useState } from 'react';
-import { Notification, NotificationContextType } from './types';
+import { Notification, NotificationContextType } from '../notifications';
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 
@@ -22,6 +22,18 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
     setNotifications(prev => prev.filter(n => n.id !== id));
   };
 
+  const markAsRead = (id: string) => {
+    setNotifications(prev => 
+      prev.map(n => n.id === id ? { ...n, read: true } : n)
+    );
+  };
+
+  const markAllAsRead = () => {
+    setNotifications(prev => 
+      prev.map(n => ({ ...n, read: true }))
+    );
+  };
+
   const clearAll = () => {
     setNotifications([]);
   };
@@ -30,7 +42,9 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
     <NotificationContext.Provider value={{ 
       notifications, 
       addNotification, 
-      removeNotification, 
+      removeNotification,
+      markAsRead,
+      markAllAsRead,
       clearAll 
     }}>
       {children}

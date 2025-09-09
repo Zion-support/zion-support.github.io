@@ -1,214 +1,136 @@
-const CACHE_NAME = 'zion-tech-group-v1';
-const STATIC_CACHE = 'zion-static-v1';
-const DYNAMIC_CACHE = 'zion-dynamic-v1';
+const CACHE_NAME = 'zion-app-v1.0.0'
+const STATIC_CACHE = 'zion-static-v1.0.0'
+const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0'
 
-const STATIC_ASSETS = [
+// Files to cache for offline functionality
+const STATIC_FILES = [
   '/',
   '/index.html',
-  '/src/main.tsx',
-  '/src/index.css',
   '/manifest.json',
-  '/favicon.ico',
-  '/images/zion-logo-192.png',
-  '/images/zion-logo-512.png'
-];
+  '/offline.html'
+]
 
-// Install event - cache static assets
+// Install event - cache static files
 self.addEventListener('install', (event) => {
+  console.log('Service Worker: Installing...')
+  
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Caching static assets');
-        return cache.addAll(STATIC_ASSETS);
+        console.log('Service Worker: Caching static files')
+        return cache.addAll(STATIC_FILES)
       })
       .then(() => {
-        console.log('Static assets cached successfully');
-        return self.skipWaiting();
+        console.log('Service Worker: Installation complete')
+        return self.skipWaiting()
       })
-  );
-});
+      .catch((error) => {
+        console.error('Service Worker: Installation failed', error)
+      })
+  )
+})
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
+  console.log('Service Worker: Activating...')
+  
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Deleting old cache:', cacheName);
-              return caches.delete(cacheName);
+              console.log('Service Worker: Deleting old cache', cacheName)
+              return caches.delete(cacheName)
             }
           })
-        );
+        )
       })
       .then(() => {
-        console.log('Service worker activated');
-        return self.clients.claim();
+        console.log('Service Worker: Activation complete')
+        return self.clients.claim()
       })
-  );
-});
+  )
+})
 
 // Fetch event - serve from cache or network
 self.addEventListener('fetch', (event) => {
-  const { request } = event;
-  const url = new URL(request.url);
+  const { request } = event
+  const url = new URL(request.url)
 
   // Skip non-GET requests
   if (request.method !== 'GET') {
-    return;
+    return
   }
 
   // Skip chrome-extension and other non-http requests
   if (!url.protocol.startsWith('http')) {
-    return;
+    return
   }
 
-  // Handle different types of requests
-  if (isStaticAsset(request)) {
-    event.respondWith(handleStaticAsset(request));
-  } else if (isAPIRequest(request)) {
-    event.respondWith(handleAPIRequest(request));
-  } else {
-    event.respondWith(handleDynamicRequest(request));
-  }
-});
+  event.respondWith(
+    caches.match(request)
+      .then((cachedResponse) => {
+        // Return cached version if available
+        if (cachedResponse) {
+          console.log('Service Worker: Serving from cache', request.url)
+          return cachedResponse
+        }
 
-// Check if request is for a static asset
-function isStaticAsset(request) {
-  const url = new URL(request.url);
-  return (
-    url.pathname.startsWith('/images/') ||
-    url.pathname.startsWith('/fonts/') ||
-    url.pathname.startsWith('/css/') ||
-    url.pathname.startsWith('/js/') ||
-    url.pathname.endsWith('.ico') ||
-    url.pathname.endsWith('.png') ||
-    url.pathname.endsWith('.jpg') ||
-    url.pathname.endsWith('.svg')
-  );
-}
+        // Try to fetch from network
+        return fetch(request)
+          .then((response) => {
+            // Check if response is valid
+            if (!response || response.status !== 200 || response.type !== 'basic') {
+              return response
+            }
 
-// Check if request is for an API endpoint
-function isAPIRequest(request) {
-  const url = new URL(request.url);
-  return url.pathname.startsWith('/api/') || url.hostname === 'api.ziontechgroup.com';
-}
+            // Clone the response
+            const responseToCache = response.clone()
 
-// Handle static asset requests
-async function handleStaticAsset(request) {
-  try {
-    // Try cache first
-    const cachedResponse = await caches.match(request);
-    if (cachedResponse) {
-      return cachedResponse;
-    }
+            // Cache dynamic content
+            caches.open(DYNAMIC_CACHE)
+              .then((cache) => {
+                cache.put(request, responseToCache)
+              })
 
-    // Fallback to network
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      // Cache the response for future use
-      const cache = await caches.open(STATIC_CACHE);
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    console.log('Static asset fetch failed:', error);
-    // Return a fallback response
-    return new Response('Static asset not available', { status: 404 });
-  }
-}
+            return response
+          })
+          .catch((error) => {
+            console.log('Service Worker: Network request failed', request.url, error)
+            
+            // Return offline page for navigation requests
+            if (request.destination === 'document') {
+              return caches.match('/offline.html')
+            }
 
-// Handle API requests
-async function handleAPIRequest(request) {
-  try {
-    // Try network first for API requests
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      // Cache successful API responses
-      const cache = await caches.open(DYNAMIC_CACHE);
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    console.log('API request failed, trying cache:', error);
-    
-    // Try cache as fallback
-    const cachedResponse = await caches.match(request);
-    if (cachedResponse) {
-      return cachedResponse;
-    }
-    
-    // Return offline response
-    return new Response(
-      JSON.stringify({ 
-        error: 'Network unavailable',
-        message: 'Please check your connection and try again'
-      }), 
-      { 
-        status: 503,
-        headers: { 'Content-Type': 'application/json' }
-      }
-    );
-  }
-}
-
-// Handle dynamic requests (HTML pages)
-async function handleDynamicRequest(request) {
-  try {
-    // Try network first
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      // Cache HTML responses
-      const cache = await caches.open(DYNAMIC_CACHE);
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    console.log('Dynamic request failed, trying cache:', error);
-    
-    // Try cache as fallback
-    const cachedResponse = await caches.match(request);
-    if (cachedResponse) {
-      return cachedResponse;
-    }
-    
-    // Return offline page
-    return caches.match('/offline.html');
-  }
-}
+            // Return cached version if available
+            return caches.match(request)
+          })
+      })
+  )
+})
 
 // Background sync for offline actions
 self.addEventListener('sync', (event) => {
+  console.log('Service Worker: Background sync', event.tag)
+  
   if (event.tag === 'background-sync') {
-    event.waitUntil(doBackgroundSync());
+    event.waitUntil(
+      // Handle offline actions when connection is restored
+      handleBackgroundSync()
+    )
   }
-});
+})
 
-async function doBackgroundSync() {
-  try {
-    // Get any pending requests from IndexedDB
-    const pendingRequests = await getPendingRequests();
-    
-    for (const request of pendingRequests) {
-      try {
-        await fetch(request.url, request.options);
-        await removePendingRequest(request.id);
-      } catch (error) {
-        console.log('Background sync failed for request:', error);
-      }
-    }
-  } catch (error) {
-    console.log('Background sync failed:', error);
-  }
-}
-
-// Push notification handling
+// Push notifications
 self.addEventListener('push', (event) => {
+  console.log('Service Worker: Push received')
+  
   const options = {
-    body: event.data ? event.data.text() : 'New update available',
-    icon: '/images/zion-logo-192.png',
-    badge: '/images/zion-logo-192.png',
+    body: event.data ? event.data.text() : 'New notification from Zion Tech Group',
+    icon: '/icon-192x192.png',
+    badge: '/badge-72x72.png',
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
@@ -217,55 +139,120 @@ self.addEventListener('push', (event) => {
     actions: [
       {
         action: 'explore',
-        title: 'Explore',
-        icon: '/images/explore-icon.png'
+        title: 'View Details',
+        icon: '/icon-192x192.png'
       },
       {
         action: 'close',
         title: 'Close',
-        icon: '/images/close-icon.png'
+        icon: '/icon-192x192.png'
       }
     ]
-  };
+  }
 
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)
-  );
-});
+  )
+})
 
-// Notification click handling
+// Notification click handler
 self.addEventListener('notificationclick', (event) => {
-  event.notification.close();
+  console.log('Service Worker: Notification clicked')
+  
+  event.notification.close()
 
   if (event.action === 'explore') {
     event.waitUntil(
       clients.openWindow('/')
-    );
-  } else {
-    event.waitUntil(
-      clients.openWindow('/')
-    );
+    )
   }
-});
+})
 
-// Helper functions for IndexedDB operations
-async function getPendingRequests() {
-  // Implementation would depend on your IndexedDB setup
-  return [];
+// Handle background sync
+async function handleBackgroundSync() {
+  try {
+    // Get offline actions from IndexedDB
+    const offlineActions = await getOfflineActions()
+    
+    for (const action of offlineActions) {
+      try {
+        await fetch(action.url, {
+          method: action.method,
+          headers: action.headers,
+          body: action.body
+        })
+        
+        // Remove successful action from offline storage
+        await removeOfflineAction(action.id)
+      } catch (error) {
+        console.error('Service Worker: Failed to sync action', action, error)
+      }
+    }
+  } catch (error) {
+    console.error('Service Worker: Background sync failed', error)
+  }
 }
 
-async function removePendingRequest(id) {
-  // Implementation would depend on your IndexedDB setup
-  return Promise.resolve();
+// IndexedDB helpers for offline actions
+function getOfflineActions() {
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open('ZionOfflineDB', 1)
+    
+    request.onerror = () => reject(request.error)
+    
+    request.onsuccess = () => {
+      const db = request.result
+      const transaction = db.transaction(['actions'], 'readonly')
+      const store = transaction.objectStore('actions')
+      const getAllRequest = store.getAll()
+      
+      getAllRequest.onsuccess = () => resolve(getAllRequest.result)
+      getAllRequest.onerror = () => reject(getAllRequest.error)
+    }
+    
+    request.onupgradeneeded = () => {
+      const db = request.result
+      if (!db.objectStoreNames.contains('actions')) {
+        db.createObjectStore('actions', { keyPath: 'id', autoIncrement: true })
+      }
+    }
+  })
 }
 
-// Message handling for communication with main thread
+function removeOfflineAction(id) {
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open('ZionOfflineDB', 1)
+    
+    request.onerror = () => reject(request.error)
+    
+    request.onsuccess = () => {
+      const db = request.result
+      const transaction = db.transaction(['actions'], 'readwrite')
+      const store = transaction.objectStore('actions')
+      const deleteRequest = store.delete(id)
+      
+      deleteRequest.onsuccess = () => resolve()
+      deleteRequest.onerror = () => reject(deleteRequest.error)
+    }
+  })
+}
+
+// Message handler for communication with main thread
 self.addEventListener('message', (event) => {
+  console.log('Service Worker: Message received', event.data)
+  
   if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
+    self.skipWaiting()
   }
   
-  if (event.data && event.data.type === 'GET_VERSION') {
-    event.ports[0].postMessage({ version: CACHE_NAME });
+  if (event.data && event.data.type === 'CACHE_URLS') {
+    event.waitUntil(
+      caches.open(DYNAMIC_CACHE)
+        .then((cache) => {
+          return cache.addAll(event.data.urls)
+        })
+    )
   }
-});
+})
+
+console.log('Service Worker: Loaded')

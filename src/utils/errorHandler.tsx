@@ -3,6 +3,8 @@
  * Provides centralized error handling, logging, and user feedback
  */
 
+import React, { Component, ErrorInfo as ReactErrorInfo, ComponentType, ReactNode } from 'react';
+
 export interface ErrorInfo {
   message: string;
   code?: string;
@@ -94,7 +96,7 @@ class ErrorHandler {
    */
   public handleComponentError(
     error: Error,
-    errorInfo: React.ErrorInfo,
+    errorInfo: ReactErrorInfo,
     componentName?: string
   ): void {
     const context: ErrorContext = {
@@ -278,8 +280,8 @@ export const handleComponentError = (error: Error, errorInfo: React.ErrorInfo, c
 };
 
 // React Error Boundary component
-export class ErrorBoundary extends React.Component<
-  { children: React.ReactNode; fallback?: React.ComponentType<{ error: Error }> },
+export class ErrorBoundary extends Component<
+  { children: ReactNode; fallback?: ComponentType<{ error: Error }> },
   { hasError: boolean; error?: Error }
 > {
   constructor(props: any) {
@@ -306,7 +308,7 @@ export class ErrorBoundary extends React.Component<
 }
 
 // Default error fallback component
-const DefaultErrorFallback: React.FC<{ error: Error }> = ({ error }) => (
+const DefaultErrorFallback: ComponentType<{ error: Error }> = ({ error }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
     <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
       <div className="flex items-center mb-4">

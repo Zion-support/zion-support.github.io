@@ -1,183 +1,186 @@
 import React, { useState, useEffect } from 'react';
-import { Activity, Zap, Clock, Database } from 'lucide-react';
-import { usePerformance } from '../hooks/usePerformance';
-import { getMemoryUsage } from '../utils/performance';
+import { usePerformanceMonitoring } from '../hooks/usePerformanceMonitoring';
+import { bundleOptimizer } from '../utils/bundleOptimizer';
 
 interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  memory: {
-    used: number;
-    total: number;
-    percentage: number;
-  };
-  metrics: Record<string, number>;
+  loadTime: number;
+  bundleSize: number;
+  componentCount: number;
+  errorCount: number;
+  memoryUsage?: number;
+  renderTime?: number;
 }
 
-export const PerformanceDashboard: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    lcp: null,
-    fid: null,
-    cls: null,
-    memory: { used: 0, total: 0, percentage: 0 },
-    metrics: {},
-  });
+const PerformanceDashboard: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const { getMetrics } = usePerformance();
+  const { measureBundleSize } = usePerformanceMonitoring();
 
   useEffect(() => {
+    // Only show in development
+    if (process.env.NODE_ENV !== 'development') return;
+
     const updateMetrics = () => {
-      const memory = getMemoryUsage();
-      const performanceMetrics = getMetrics();
-      
-      setMetrics(prev => ({
-        ...prev,
-        memory,
-        metrics: performanceMetrics,
-      }));
+      const bundleAnalysis = bundleOptimizer.analyzeBundle();
+      if (bundleAnalysis) {
+        setMetrics({
+          loadTime: bundleAnalysis.resources.reduce((total, r) => total + r.duration, 0),
+          bundleSize: bundleAnalysis.totalSize,
+          componentCount: document.querySelectorAll('[data-component]').length,
+          errorCount: 0, // This would be tracked separately
+          memoryUsage: (performance as any).memory?.usedJSHeapSize,
+          renderTime: performance.now(),
+        });
+      }
     };
 
-    // Update metrics every 5 seconds
+    // Update metrics on load
+    updateMetrics();
+
+    // Update metrics periodically
     const interval = setInterval(updateMetrics, 5000);
-    updateMetrics(); // Initial update
 
     return () => clearInterval(interval);
-  }, [getMetrics]);
+  }, [measureBundleSize]);
 
-  useEffect(() => {
-    // Monitor Core Web Vitals
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-          } else if (entry.entryType === 'first-input') {
-            const fid = (entry as any).processingStart - entry.startTime;
-            setMetrics(prev => ({ ...prev, fid }));
-          } else if (entry.entryType === 'layout-shift') {
-            setMetrics(prev => ({ ...prev, cls: (entry as any).value }));
-          }
-        });
-      });
-
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-      } catch (e) {
-        console.warn('Performance Observer not supported:', e);
-      }
-
-      return () => observer.disconnect();
-    }
-  }, []);
-
-  const formatBytes = (bytes: number) => {
-    if (bytes === 0) return '0 Bytes';
-    const k = 1024;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-  };
-
-  const formatTime = (ms: number) => {
-    return `${ms.toFixed(2)}ms`;
-  };
-
-  if (!isVisible) {
+  if (process.env.NODE_ENV !== 'development' || !isVisible) {
     return (
       <button
         onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+        className="fixed bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full shadow-lg hover:bg-blue-600 z-50"
         title="Show Performance Dashboard"
       >
-        <Activity className="w-5 h-5" />
+        📊
       </button>
     );
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg border p-4 w-80 max-h-96 overflow-y-auto">
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold flex items-center">
-          <Activity className="w-5 h-5 mr-2" />
-          Performance
-        </h3>
+    <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 z-50">
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-lg font-semibold">Performance Dashboard</h3>
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-500 hover:text-gray-700"
         >
-          ×
+          ✕
         </button>
       </div>
 
-      <div className="space-y-4">
-        {/* Core Web Vitals */}
-        <div>
-          <h4 className="font-medium text-sm text-gray-700 mb-2">Core Web Vitals</h4>
-          <div className="space-y-2 text-sm">
-            <div className="flex justify-between">
-              <span>LCP:</span>
-              <span className={metrics.lcp && metrics.lcp > 2500 ? 'text-red-600' : 'text-green-600'}>
-                {metrics.lcp ? formatTime(metrics.lcp) : 'N/A'}
+      {metrics ? (
+        <div className="space-y-3">
+          <div className="grid grid-cols-2 gap-2 text-sm">
+            <div>
+              <span className="text-gray-600">Load Time:</span>
+              <span className="ml-2 font-mono">
+                {metrics.loadTime.toFixed(2)}ms
               </span>
             </div>
-            <div className="flex justify-between">
-              <span>FID:</span>
-              <span className={metrics.fid && metrics.fid > 100 ? 'text-red-600' : 'text-green-600'}>
-                {metrics.fid ? formatTime(metrics.fid) : 'N/A'}
+            <div>
+              <span className="text-gray-600">Bundle Size:</span>
+              <span className="ml-2 font-mono">
+                {(metrics.bundleSize / 1024).toFixed(2)}KB
               </span>
             </div>
-            <div className="flex justify-between">
-              <span>CLS:</span>
-              <span className={metrics.cls && metrics.cls > 0.1 ? 'text-red-600' : 'text-green-600'}>
-                {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
-              </span>
+            <div>
+              <span className="text-gray-600">Components:</span>
+              <span className="ml-2 font-mono">{metrics.componentCount}</span>
             </div>
+            <div>
+              <span className="text-gray-600">Errors:</span>
+              <span className="ml-2 font-mono text-red-600">{metrics.errorCount}</span>
+            </div>
+            {metrics.memoryUsage && (
+              <div className="col-span-2">
+                <span className="text-gray-600">Memory Usage:</span>
+                <span className="ml-2 font-mono">
+                  {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
+                </span>
+              </div>
+            )}
+          </div>
+
+          <div className="pt-2 border-t border-gray-200">
+            <div className="text-xs text-gray-600">
+              <div>Performance Score: {getPerformanceScore(metrics)}/100</div>
+              <div className="mt-1">
+                {getPerformanceRecommendations(metrics).map((rec, index) => (
+                  <div key={index} className="text-yellow-600">
+                    • {rec}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="pt-2 border-t border-gray-200">
+            <button
+              onClick={() => bundleOptimizer.generateBundleReport()}
+              className="w-full text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded"
+            >
+              Generate Bundle Report
+            </button>
           </div>
         </div>
-
-        {/* Memory Usage */}
-        <div>
-          <h4 className="font-medium text-sm text-gray-700 mb-2 flex items-center">
-            <Database className="w-4 h-4 mr-1" />
-            Memory
-          </h4>
-          <div className="space-y-2 text-sm">
-            <div className="flex justify-between">
-              <span>Used:</span>
-              <span>{formatBytes(metrics.memory.used)}</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Total:</span>
-              <span>{formatBytes(metrics.memory.total)}</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Usage:</span>
-              <span className={metrics.memory.percentage > 80 ? 'text-red-600' : 'text-green-600'}>
-                {metrics.memory.percentage.toFixed(1)}%
-              </span>
-            </div>
-          </div>
+      ) : (
+        <div className="text-sm text-gray-600">
+          Collecting performance data...
         </div>
-
-        {/* Custom Metrics */}
-        {Object.keys(metrics.metrics).length > 0 && (
-          <div>
-            <h4 className="font-medium text-sm text-gray-700 mb-2 flex items-center">
-              <Clock className="w-4 h-4 mr-1" />
-              Custom Metrics
-            </h4>
-            <div className="space-y-1 text-sm">
-              {Object.entries(metrics.metrics).map(([key, value]) => (
-                <div key={key} className="flex justify-between">
-                  <span className="truncate">{key}:</span>
-                  <span>{formatTime(value)}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
+      )}
     </div>
   );
 };
+
+function getPerformanceScore(metrics: PerformanceMetrics): number {
+  let score = 100;
+
+  // Deduct points for slow load time
+  if (metrics.loadTime > 3000) score -= 20;
+  else if (metrics.loadTime > 2000) score -= 10;
+  else if (metrics.loadTime > 1000) score -= 5;
+
+  // Deduct points for large bundle size
+  if (metrics.bundleSize > 1000000) score -= 30; // > 1MB
+  else if (metrics.bundleSize > 500000) score -= 20; // > 500KB
+  else if (metrics.bundleSize > 200000) score -= 10; // > 200KB
+
+  // Deduct points for errors
+  score -= metrics.errorCount * 10;
+
+  // Deduct points for high memory usage
+  if (metrics.memoryUsage && metrics.memoryUsage > 50000000) score -= 15; // > 50MB
+
+  return Math.max(0, score);
+}
+
+function getPerformanceRecommendations(metrics: PerformanceMetrics): string[] {
+  const recommendations: string[] = [];
+
+  if (metrics.loadTime > 2000) {
+    recommendations.push('Consider code splitting for faster initial load');
+  }
+
+  if (metrics.bundleSize > 500000) {
+    recommendations.push('Bundle size is large, consider lazy loading');
+  }
+
+  if (metrics.componentCount > 100) {
+    recommendations.push('Many components loaded, consider lazy loading');
+  }
+
+  if (metrics.errorCount > 0) {
+    recommendations.push('Fix errors to improve performance');
+  }
+
+  if (metrics.memoryUsage && metrics.memoryUsage > 50000000) {
+    recommendations.push('High memory usage, check for memory leaks');
+  }
+
+  if (recommendations.length === 0) {
+    recommendations.push('Performance looks good!');
+  }
+
+  return recommendations;
+}
+
+export default PerformanceDashboard;

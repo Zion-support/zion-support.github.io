@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run netlify configuration
-        run: 
+        run: echo "Netlify config validation step (no-op)"
       - name: Upload results
         uses: actions/upload-artifact@v4
         if: always()

@@ -9679,66 +9679,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 14,
     rating: 4.5,
     reviews: 5
-<<<<<<< HEAD
-    reviews: 5,
-    reviews: 5
-  },
-  {
-    id: 'ai-governance-policy-center',
-    name: 'AI Governance Policy Center',
-    tagline: 'Register models, risks, prompts, and controls in one place',
-    price: '$249',
-    period: '/month',
-    description:
-      'Catalog AI systems, track risks, evaluate prompts, and manage approvals with audit trails and policy templates.',
-    features: [
-      'System registry and ownership',
-      'Risk assessment and mitigations',
-      'Prompt evals and guardrails',
-      'Approval workflows and logs',
-      'Policy templates and training',
-    description: 'Catalog AI systems, track risks, evaluate prompts, and manage approvals with audit trails and policy templates.',
-    features: [
-      'System registry and ownershipRisk assessment and mitigations',
-      'Prompt evals and guardrailsApproval workflows and logs',
-      'Policy templates and training'
-    ],
-    popular: true,
-    icon: '📚',
-    color: 'from-blue-700 to-indigo-800',
-    textColor: 'text-blue-200',
-    link: 'https://ziontechgroup.com/services/ai-governance-policy-center',
-    marketPosition: 'Practical governance for teams shipping AI features.',
-    targetAudience: 'AI platform, legal, risk',
-    trialDays: 14,
-    setupTime: '2–5 days',
-    category: 'Quality & Monitoring',
-    realService: true,
-    technology: ['RegistryEvals', 'Workflows'],
-    integrations: ['GitHubJira', 'Slack'],
-    useCases: ['Model registryRisk tracking', 'Policy compliance'],
-    technology: ['Registry', 'Evals', 'Workflows'],
-    integrations: ['GitHub', 'Jira', 'Slack'],
-    useCases: ['Model registry', 'Risk tracking', 'Policy compliance'],
-    technology: ['RegistryEvals', 'Workflows'],
-    integrations: ['GitHubJira', 'Slack'],
-    useCases: ['Model registryRisk tracking', 'Policy compliance'],
-    roi: 'Reduce policy drift and audit risk',
-    competitors: ['Holistic AI (lite)'],
-    marketSize: '$1.5B AI governance',
-    growthRate: '21% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Registry + eval runners + approval flows.',
-    launchDate: '2025-08-15',
-    customers: 5,
-    rating: 4.6,
-reviews: 2,
-  },
-];
-    reviews: 2
-=======
   },
   {
     id: 'observability-slo-blueprint',
@@ -10285,7 +10225,6 @@ reviews: 2,
     customers: 7,
     rating: 4.5,
     reviews: 4
->>>>>>> origin/feat/add-new-services-ads
   }
 ];
 

@@ -101,6 +101,7 @@ public
 # Temporary folders
 tmp/
 temp/
+.n/
 
 # Editor directories and files
 .vscode/*
@@ -116,3 +117,6 @@ temp/
 core
 *.core
 core.*
+
+# Git submodules (prevent submodule checkout errors)
+.gitmodules

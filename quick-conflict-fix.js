@@ -21,24 +21,24 @@ function fixConflictsInFile(filePath) {
     
     let content = fs.readFileSync(filePath, 'utf8');
     
-    if (!content.includes('<<<<<<< HEAD')) {
+    if (!content.includes('')) {
       return false;
     }
     
     console.log(`🔧 Fixing: ${filePath}`);
     
-    // Simple resolution: keep the incoming changes (after =======)
+    // Simple resolution: keep the incoming changes (after )
     const lines = content.split('\n');
     const resolved = [];
     let inConflict = false;
     let keepIncoming = false;
     
     for (const line of lines) {
-      if (line.includes('<<<<<<< HEAD')) {
+      if (line.includes('')) {
         inConflict = true;
         keepIncoming = false;
         continue;
-      } else if (line.includes('=======')) {
+      } else if (line.includes('')) {
         keepIncoming = true;
         continue;
       } else if (line.includes('>>>>>>>')) {

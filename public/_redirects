@@ -1,5 +1,5 @@
-# Handle client-side routing for SPA - REMOVED as it was causing all pages to serve the same content
-# /*    /index.html   200
+# SPA fallback for client-side routing
+/*    /index.html   200
 
 # Normalize trailing slashes for key marketing pages
 /services      /services     301!
@@ -9,7 +9,7 @@
 /request-quote     /request-quote    301!
 /request-quote/    /request-quote    301!
 
-# Optional: Specific redirects for SEO/legacy URLs
+# Specific redirects for SEO/legacy URLs
 /ai-autonomous-ecosystem /ai-autonomous-ecosystem-manager 301
 /autonomous-it-operations /autonomous-it-operations-center 301
 /quantum-internet-security /quantum-internet-security-platform 301
