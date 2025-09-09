@@ -4,109 +4,78 @@ import { Card } from '@/components/ui/card';
 import { MapPin, Clock, CheckCircle2 } from 'lucide-react';
 import { FavoriteButton } from '@/components/FavoriteButton';
 import { useNavigate } from 'react-router-dom';
-export {};
-  return null;
-}
-  };
-  const handleBook = e => {}
+
+export default function TalentCard({ talent, onBook, onFavorite }) {
+  const navigate = useNavigate();
+
+  const handleBook = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    if(onBook) {}
-      onBook(talent)}
-  }
-  const handleViewProfile = () => {}
-  return <div>Component</div>;
-};
-`;
-``;
-    navigate(`/talent/${talent.id}`)}
-  // Extract skills - limit to 5 for display;
-  const skills = talent.skills?.slice(0, 5) || [];
-  return ();
-    <div>Broken JSX</div>
-      tabIndex={0}">"";
-      <div className="p-6">"";
-        <div className="flex items-start">";
-          {/* Avatar */}"";
-          <div className="relative mr-4">"";
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
-              {};
-                  {talent.full_name?.charAt(0) || 'T'}
-                </div>;
-              )}
-            </div>";
-            {};
-            )}
-          </div>;
-";
-          {/* Main Info */}"";
-          <div className="flex-1">"";
-            <div className="flex justify-between items-start">"";
-              <h3 className="text-lg font-bold text-white">;
-                {talent.full_name}
-              </h3>;
-              <div>Broken JSX</div>
-              />";
-            </div>"";
-            <p className="text-white font-medium">;
-              {talent.professional_title}
-            </p>;
-";
-            {/* Location & Availability */}"";
-            <div className="mt-2 flex flex-wrap gap-3 text-sm">";
-              {};
-                  <span>{talent.location}</span>;
-                </div>;
-              )}";
-              {};
-                  <span>{talent.availability_type}</span>;
-                </div>;
-              )}
-            </div>;
-          </div>;
-        </div>;
-        {/* Skills */}";
-        {};
-                  {skill}
-                </span>;
-              ))}";
-              {};
-                  +{(talent.skills?.length || 0) - 5} more;
-                </span>;
-              )}
-            </div>;
-          </div>;
-        )}
-";
-        {/* Hourly Rate & Actions */}"";
-        <div className="mt-5 flex items-center justify-between">;
-          <div>";
-            {};
-                ${talent.hourly_rate}"";
-                <span className="text-zion-slate-light font-normal">/hr</span>;
-              </div>";
-            ) : ("";
-              <div className="text-zion-slate-light">Rate not specified</div>;
-            )}
-          </div>";
-"";
-          <div className="flex items-center gap-2">;
-            {};
-                onClick={() => navigate('/login')}"";
-                size="sm"";
-                className="bg-zion-cyan hover:bg-zion-cyan-dark text-white">;
-                Sign In to Book;
-              </Button>;
-            )}
-          </div>;
-        </div>;
-      </div>;
-    </Card>;
-  )}
-export default TalentCardComponent;
+    if (onBook) {
+      onBook(talent);
+    }
+  };
 
-export { TalentCardComponent }
-export { TalentCardComponent }
-export { TalentCardComponent }
-export { TalentCardComponent }
-export { Page }
+  const handleCardClick = () => {
+    navigate(`/talent/${talent.id}`);
+  };
+
+  return (
+    <Card 
+      className="cursor-pointer hover:shadow-lg transition-shadow duration-300"
+      onClick={handleCardClick}
+    >
+      <div className="p-4">
+        <div className="flex items-start justify-between mb-3">
+          <div className="flex items-center space-x-3">
+            <img
+              src={talent.avatar || '/placeholder-avatar.jpg'}
+              alt={talent.name}
+              className="w-12 h-12 rounded-full object-cover"
+            />
+            <div>
+              <h3 className="font-semibold text-gray-900">{talent.name}</h3>
+              <p className="text-sm text-gray-600">{talent.title}</p>
+            </div>
+          </div>
+          <FavoriteButton 
+            isFavorited={talent.isFavorited}
+            onToggle={() => onFavorite && onFavorite(talent.id)}
+          />
+        </div>
+
+        <div className="space-y-2 mb-4">
+          {talent.location && (
+            <div className="flex items-center text-sm text-gray-600">
+              <MapPin className="w-4 h-4 mr-1" />
+              {talent.location}
+            </div>
+          )}
+          
+          {talent.availability && (
+            <div className="flex items-center text-sm text-gray-600">
+              <Clock className="w-4 h-4 mr-1" />
+              {talent.availability}
+            </div>
+          )}
+          
+          {talent.verified && (
+            <div className="flex items-center text-sm text-green-600">
+              <CheckCircle2 className="w-4 h-4 mr-1" />
+              Verified
+            </div>
+          )}
+        </div>
+
+        <div className="flex items-center justify-between">
+          <div className="text-lg font-semibold text-gray-900">
+            ${talent.hourlyRate}/hr
+          </div>
+          <Button onClick={handleBook} size="sm">
+            Book Now
+          </Button>
+        </div>
+      </div>
+    </Card>
+  );
+}
