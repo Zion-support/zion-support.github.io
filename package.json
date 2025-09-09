@@ -211,11 +211,11 @@
     "eslint": "^9.28.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.5",
-    "globalthis": "^1.0.4",
-    "has-proto": "^1.2.0",
-    "iterator.prototype": "^1.1.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.2.0",
+    "html2canvas": "^1.4.1",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jest-axe": "^8.0.0",
     "jest-environment-jsdom": "^29.7.0",
@@ -233,8 +233,11 @@
     "tailwindcss": "^3.4.1",
     "ts-jest": "^29.1.1",
     "typescript": "^5.8.3",
-    "vite": "^5.0.8",
-    "vitest": "^1.4.0"
+    "typescript-eslint": "^8.33.0",
+    "update-notifier": "^7.3.1",
+    "vite": "^6.3.5",
+    "vitest": "^3.2.1",
+    "whatwg-fetch": "^3.6.20"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
