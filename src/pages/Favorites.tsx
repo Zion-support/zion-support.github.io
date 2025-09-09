@@ -20,7 +20,13 @@ export default function FavoritesPage() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map(p => (
-            <ProductCard key={p.id} product={p} />
+            <ProductCard 
+              key={p.id} 
+              id={p.id} 
+              name={p.title} 
+              _price={p.price} 
+              __priceId={p.id} 
+            />
           ))}
         </div>
       )}
