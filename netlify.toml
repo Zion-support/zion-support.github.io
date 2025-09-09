@@ -1,6 +1,18 @@
 [build]
   publish = "dist"
   command = "npm ci && npm run build"
+  # Explicitly specify this is a Vite build, not Next.js
+  framework = "vite"
+
+# Disable automatic framework detection
+[build.processing]
+  skip_processing = false
+
+# Explicitly disable Next.js plugin
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  [plugins.inputs]
+    disable = true
 
 [build.environment]
   NODE_VERSION = "22.12.0"
