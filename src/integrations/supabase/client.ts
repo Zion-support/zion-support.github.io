@@ -1,11 +1,21 @@
 // Mock Supabase client for build
 export const supabase = {
-
-          error: null
-        })
-      })
+  from: (table: string) => ({
+    select: () => Promise.resolve({
+      data: [],
+      error: null
     }),
-
+    insert: () => Promise.resolve({
+      data: [],
+      error: null
+    }),
+    update: () => Promise.resolve({
+      data: [],
+      error: null
+    }),
+    delete: () => Promise.resolve({
+      data: [],
+      error: null
     })
   }),
   auth: {
