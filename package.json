@@ -8,8 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Zion-Holdings/zion.app.git"
+    "url": "git+https://github.com/Zion-Holdings/zion.app.git"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Zion-Holdings/zion.app/issues"
   },
