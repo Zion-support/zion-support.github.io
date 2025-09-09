@@ -2,13 +2,13 @@ import React, { Suspense, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 import { HelmetProvider } from 'react-helmet-async';
-import SEO from './components/SEO';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { SEO } from './components/SEO';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 import LoadingSpinner from './components/ui/LoadingSpinner';
 
 // Lazy load pages for better performance
-const Home = lazy(() => import('./pages/Home'));
+const Home = lazy(() => import('./pages/HomePage'));
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));

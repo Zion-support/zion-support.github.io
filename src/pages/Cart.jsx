@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import SEO from '@/components/SEO';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import { SEO } from '../components/SEO';
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
 
 export default function CartPage() {
   const navigate = useNavigate();
@@ -174,5 +174,4 @@ export default function CartPage() {
       <Footer />
     </>
   );
-}
 }
