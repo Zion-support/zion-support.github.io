@@ -21,7 +21,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "NODE_ENV=production vite build",
     "build:analyze": "ANALYZE=true next build",
     "build:preview": "npm run build && npm run start",
     "lint": "eslint .",
