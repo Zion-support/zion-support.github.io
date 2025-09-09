@@ -24,10 +24,14 @@ import {
   ArrowRight,
   Star,
   CheckCircle,
-  Play,
-  Phone,
-  Mail,
-  MapPin
+  Star,
+  Globe,
+  Lock,
+  Rocket,
+  Target,
+  Award,
+  Clock,
+  DollarSign
 } from 'lucide-react';
 
 export default function Home() {
@@ -45,24 +49,92 @@ export default function Home() {
     }
   };
 
-  const floatingAnimation = {
-    animate: {
-      y: [0, -20, 0],
-      transition: {
-        duration: 6,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
+  const services = [
+    {
+      icon: Brain,
+      title: "AI & Machine Learning",
+      description: "Cutting-edge artificial intelligence solutions for business automation and insights",
+      color: "from-purple-500 to-pink-500",
+      features: ["Predictive Analytics", "Natural Language Processing", "Computer Vision", "Automated Decision Making"]
+    },
+    {
+      icon: Shield,
+      title: "Cybersecurity",
+      description: "Advanced security solutions with zero-trust architecture and threat protection",
+      color: "from-red-500 to-orange-500",
+      features: ["Threat Intelligence", "Incident Response", "Compliance Management", "Security Automation"]
+    },
+    {
+      icon: Cloud,
+      title: "Cloud & Infrastructure",
+      description: "Scalable cloud solutions and DevOps automation for modern businesses",
+      color: "from-blue-500 to-cyan-500",
+      features: ["Multi-Cloud Management", "DevOps Automation", "Container Orchestration", "Serverless Architecture"]
+    },
+    {
+      icon: Zap,
+      title: "Quantum Computing",
+      description: "Next-generation quantum solutions for complex problem-solving",
+      color: "from-indigo-500 to-purple-500",
+      features: ["Quantum Algorithms", "Hybrid Systems", "Optimization Problems", "Financial Modeling"]
+    },
+    {
+      icon: Lock,
+      title: "Blockchain & Web3",
+      description: "Decentralized solutions for secure and transparent operations",
+      color: "from-green-500 to-emerald-500",
+      features: ["Smart Contracts", "DeFi Platforms", "NFT Solutions", "Identity Management"]
+    },
+    {
+      icon: Rocket,
+      title: "Digital Transformation",
+      description: "End-to-end digital transformation consulting and implementation",
+      color: "from-yellow-500 to-orange-500",
+      features: ["Process Automation", "Change Management", "Technology Strategy", "Legacy Modernization"]
     }
-  };
+  ];
+
+  const stats = [
+    { value: "500+", label: "Global Clients", icon: Globe },
+    { value: "25+", label: "Countries", icon: Globe },
+    { value: "1000+", label: "Projects", icon: Target },
+    { value: "99.9%", label: "Uptime", icon: Award },
+    { value: "24/7", label: "Support", icon: Clock },
+    { value: "200%+", label: "ROI Average", icon: DollarSign }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CTO, TechCorp",
+      content: "Zion Tech Group transformed our infrastructure with AI-powered automation. We've seen a 300% increase in efficiency.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      role: "CEO, InnovateLab",
+      content: "Their quantum computing solutions helped us solve problems we thought were impossible. Game-changing technology.",
+      rating: 5
+    },
+    {
+      name: "Dr. Emily Rodriguez",
+      role: "Research Director, BioTech Solutions",
+      content: "The AI diagnostic platform has improved our accuracy by 40% and reduced diagnosis time significantly.",
+      rating: 5
+    }
+  ];
 
   return (
-    <div className="min-h-screen bg-futuristic overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-80 h-80 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/2 w-96 h-96 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+    <div className="min-h-screen bg-futuristic">
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full animate-pulse delay-500"></div>
+          <div className="absolute top-1/3 right-1/3 w-20 h-20 border border-zion-purple-light rounded-full animate-pulse delay-1500"></div>
+        </div>
         
         {/* Floating Geometric Shapes */}
         <motion.div 
@@ -140,43 +212,47 @@ export default function Home() {
               </motion.button>
             </Link>
             
-            <Link to="/comprehensive-pricing">
-              <motion.button 
-                className="group px-10 py-5 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 relative overflow-hidden"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="relative z-10 flex items-center gap-2">
-                  <Play className="w-5 h-5" />
-                  View Pricing
-                </span>
-                <div className="absolute inset-0 bg-zion-cyan transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
-              </motion.button>
-            </Link>
-          </motion.div>
-
-          {/* Stats Section */}
-          <motion.div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.8 }}
-          >
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">500+</div>
-              <div className="text-zion-slate-light text-sm">AI Services</div>
+            {/* Trust indicators */}
+            <div className="flex flex-wrap justify-center items-center gap-6 mb-8 text-zion-slate-light">
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-5 h-5 text-zion-cyan" />
+                <span className="text-sm">ISO 27001 Certified</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="w-5 h-5 text-zion-cyan" />
+                <span className="text-sm">500+ Clients Worldwide</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Star className="w-5 h-5 text-zion-cyan" />
+                <span className="text-sm">4.9/5 Rating</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Award className="w-5 h-5 text-zion-cyan" />
+                <span className="text-sm">15+ Years Experience</span>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-zion-purple mb-2">1000+</div>
-              <div className="text-zion-slate-light text-sm">Happy Clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">99.9%</div>
-              <div className="text-zion-slate-light text-sm">Uptime</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-zion-purple mb-2">24/7</div>
-              <div className="text-zion-slate-light text-sm">Support</div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/services">
+                <motion.button 
+                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:scale-105 transition-transform flex items-center gap-2"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Explore Our Services
+                  <ArrowRight className="w-5 h-5" />
+                </motion.button>
+              </Link>
+              <Link to="/contact">
+                <motion.button 
+                  className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-colors flex items-center gap-2"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Get Free Consultation
+                  <TrendingUp className="w-5 h-5" />
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -196,166 +272,41 @@ export default function Home() {
               Cutting-Edge <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Innovation</span>
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover our revolutionary AI-powered solutions that are reshaping industries and driving the future of technology.
+              Comprehensive technology solutions designed to transform your business and drive innovation
             </p>
           </motion.div>
 
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            {/* Quantum AI */}
-            <motion.div 
-              className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-purple-dark/50 p-8 rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
-              variants={fadeInUp}
-              whileHover={{ y: -10 }}
-            >
-              <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center">
-                <Rocket className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors">
-                Quantum AI Platform
-              </h3>
-              <p className="text-zion-slate-light mb-6 leading-relaxed">
-                Revolutionary quantum computing integration with AI for solving complex optimization problems 1000x faster.
-              </p>
-              <div className="flex items-center justify-between">
-                <span className="text-zion-cyan font-semibold">From $8,500/month</span>
-                <ArrowRight className="w-5 h-5 text-zion-cyan group-hover:translate-x-2 transition-transform" />
-              </div>
-            </motion.div>
-
-            {/* Autonomous Business */}
-            <motion.div 
-              className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-cyan-dark/50 p-8 rounded-2xl border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20"
-              variants={fadeInUp}
-              whileHover={{ y: -10 }}
-            >
-              <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-purple transition-colors">
-                Autonomous Business Ops
-              </h3>
-              <p className="text-zion-slate-light mb-6 leading-relaxed">
-                Fully autonomous business operations platform with AI-driven decision making and optimization.
-              </p>
-              <div className="flex items-center justify-between">
-                <span className="text-zion-purple font-semibold">From $3,500/month</span>
-                <ArrowRight className="w-5 h-5 text-zion-purple group-hover:translate-x-2 transition-transform" />
-              </div>
-            </motion.div>
-
-            {/* Blockchain AI */}
-            <motion.div 
-              className="group relative bg-gradient-to-br from-zion-purple-dark/50 to-zion-cyan-dark/50 p-8 rounded-2xl border border-zion-blue/20 hover:border-zion-blue/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-blue/20"
-              variants={fadeInUp}
-              whileHover={{ y: -10 }}
-            >
-              <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-r from-zion-blue to-zion-cyan rounded-full flex items-center justify-center">
-                <Lock className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-blue transition-colors">
-                Blockchain AI Integration
-              </h3>
-              <p className="text-zion-slate-light mb-6 leading-relaxed">
-                Secure, transparent, and intelligent decentralized applications powered by AI and blockchain.
-              </p>
-              <div className="flex items-center justify-between">
-                <span className="text-zion-blue font-semibold">From $4,200/month</span>
-                <ArrowRight className="w-5 h-5 text-zion-blue group-hover:translate-x-2 transition-transform" />
-              </div>
-            </motion.div>
-
-            {/* Cybersecurity */}
-            <motion.div 
-              className="group relative bg-gradient-to-br from-zion-cyan-dark/50 to-zion-blue-dark/50 p-8 rounded-2xl border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20"
-              variants={fadeInUp}
-              whileHover={{ y: -10 }}
-            >
-              <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-blue rounded-full flex items-center justify-center">
-                <Shield className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-purple transition-colors">
-                AI Cybersecurity Defense
-              </h3>
-              <p className="text-zion-slate-light mb-6 leading-relaxed">
-                Next-generation threat detection and response using advanced AI algorithms and machine learning.
-              </p>
-              <div className="flex items-center justify-between">
-                <span className="text-zion-purple font-semibold">From $2,800/month</span>
-                <ArrowRight className="w-5 h-5 text-zion-purple group-hover:translate-x-2 transition-transform" />
-              </div>
-            </motion.div>
-
-            {/* IoT Edge Computing */}
-            <motion.div 
-              className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-purple-dark/50 p-8 rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
-              variants={fadeInUp}
-              whileHover={{ y: -10 }}
-            >
-              <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center">
-                <Cpu className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors">
-                IoT Edge AI Computing
-              </h3>
-              <p className="text-zion-slate-light mb-6 leading-relaxed">
-                Real-time intelligent decision making at the edge with AI-powered IoT devices and networks.
-              </p>
-              <div className="flex items-center justify-between">
-                <span className="text-zion-cyan font-semibold">From $3,200/month</span>
-                <ArrowRight className="w-5 h-5 text-zion-cyan group-hover:translate-x-2 transition-transform" />
-              </div>
-            </motion.div>
-
-            {/* Digital Twin */}
-            <motion.div 
-              className="group relative bg-gradient-to-br from-zion-purple-dark/50 to-zion-cyan-dark/50 p-8 rounded-2xl border border-zion-blue/20 hover:border-zion-blue/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-blue/20"
-              variants={fadeInUp}
-              whileHover={{ y: -10 }}
-            >
-              <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-r from-zion-blue to-zion-cyan rounded-full flex items-center justify-center">
-                <Globe className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-blue transition-colors">
-                AI Digital Twin Platform
-              </h3>
-              <p className="text-zion-slate-light mb-6 leading-relaxed">
-                Virtual replicas of physical systems for simulation, monitoring, and optimization using AI.
-              </p>
-              <div className="flex items-center justify-between">
-                <span className="text-zion-blue font-semibold">From $4,500/month</span>
-                <ArrowRight className="w-5 h-5 text-zion-blue group-hover:translate-x-2 transition-transform" />
-              </div>
-            </motion.div>
-          </motion.div>
-
-          <motion.div 
-            className="text-center mt-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <Link to="/comprehensive-services">
-              <motion.button 
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold hover:scale-105 transition-transform shadow-lg hover:shadow-zion-cyan/25"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={service.title}
+                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
               >
-                View All 500+ Services
-              </motion.button>
-            </Link>
-          </motion.div>
+                <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6`}>
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-zion-slate-light leading-relaxed mb-4">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-24 bg-gradient-to-br from-zion-blue-dark to-zion-slate-dark relative">
+      {/* Enhanced Stats Section */}
+      <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-blue">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -365,64 +316,75 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Zion Tech Group</span>
+              Why <span className="text-zion-slate-dark">Choose</span> Zion Tech Group?
+            </h2>
+            <p className="text-xl text-cyan-100 max-w-3xl mx-auto">
+              Proven results and measurable impact across industries worldwide
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-lg text-cyan-100">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-zion-slate-dark/30">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              What Our <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Clients</span> Say
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We combine cutting-edge technology with proven expertise to deliver solutions that drive real business transformation.
+              Real results from real businesses across the globe
             </p>
           </motion.div>
 
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            <motion.div 
-              className="text-center group"
-              variants={fadeInUp}
-            >
-              <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Brain className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">AI-First Approach</h3>
-              <p className="text-zion-slate-light">Leading-edge AI technology integrated into every solution we deliver.</p>
-            </motion.div>
-
-            <motion.div 
-              className="text-center group"
-              variants={fadeInUp}
-            >
-              <div className="w-20 h-20 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Shield className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Enterprise Security</h3>
-              <p className="text-zion-slate-light">Bank-level security and compliance standards for all our solutions.</p>
-            </motion.div>
-
-            <motion.div 
-              className="text-center group"
-              variants={fadeInUp}
-            >
-              <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Users className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Expert Team</h3>
-              <p className="text-zion-slate-light">World-class engineers and AI specialists with decades of experience.</p>
-            </motion.div>
-
-            <motion.div 
-              className="text-center group"
-              variants={fadeInUp}
-            >
-              <div className="w-20 h-20 bg-gradient-to-r from-zion-blue to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <TrendingUp className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Proven Results</h3>
-              <p className="text-zion-slate-light">Track record of delivering measurable business impact and ROI.</p>
-            </motion.div>
-          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={testimonial.name}
+                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-zion-slate-light mb-6 italic">"{testimonial.content}"</p>
+                <div>
+                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="text-sm text-zion-cyan">{testimonial.role}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -439,52 +401,28 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-              Join hundreds of companies already leveraging our AI-powered solutions to drive innovation, 
-              increase efficiency, and achieve competitive advantage.
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Let's discuss how our innovative solutions can drive your success and create measurable impact
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <motion.button 
-                  className="px-10 py-5 bg-white text-zion-blue rounded-xl font-semibold text-lg hover:scale-105 transition-transform shadow-lg"
+                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:scale-105 transition-transform"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Get Started Today
                 </motion.button>
               </Link>
-              
-              <div className="flex items-center gap-4">
-                <Phone className="w-5 h-5 text-white" />
-                <span className="text-white font-semibold">+1 302 464 0950</span>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-white font-semibold mb-2">Email Us</h3>
-                <p className="text-white/80 text-sm">kleber@ziontechgroup.com</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-white font-semibold mb-2">Visit Us</h3>
-                <p className="text-white/80 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Globe className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-white font-semibold mb-2">Website</h3>
-                <p className="text-white/80 text-sm">https://ziontechgroup.com</p>
-              </div>
+              <Link to="/services">
+                <motion.button 
+                  className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  View All Services
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
         </div>
