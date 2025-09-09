@@ -31,6 +31,7 @@ export default defineConfig(({ mode }) => ({
     optimizePreloads(),
     // Bundle analyzer would go here if needed
   ].filter(Boolean),
+  // Explicitly set the build target to prevent ES2024 issues
   build: {
     // Output directory for Netlify compatibility
     outDir: 'dist',
@@ -71,57 +72,89 @@ export default defineConfig(({ mode }) => ({
       output: {
         // Enable optimized manual chunking for better performance
         manualChunks: disableManualChunks ? undefined : (id) => {
-          // Vendor chunks - more granular splitting
+          // Vendor chunks - more granular splitting for better caching
           if (id.includes('node_modules')) {
-            // React ecosystem - core
-            if (id.includes('react') && !id.includes('react-router')) {
+            // React ecosystem - split more granularly
+            if (id.includes('react/') && !id.includes('react-dom') && !id.includes('react-router')) {
               return 'react-core';
             }
-            // React DOM
             if (id.includes('react-dom')) {
               return 'react-dom';
             }
-            // Router
             if (id.includes('react-router')) {
               return 'router';
             }
-            // Query library
+            
+            // Query and state management
             if (id.includes('@tanstack/react-query')) {
               return 'query';
             }
-            // UI libraries - split by size
-            if (id.includes('@radix-ui')) {
+            if (id.includes('@reduxjs/toolkit') || id.includes('react-redux')) {
+              return 'state-management';
+            }
+            
+            // UI libraries - split by usage frequency
+            if (id.includes('@radix-ui/react-slot') || id.includes('@radix-ui/react-dialog')) {
+              return 'radix-core';
+            }
+            if (id.includes('@radix-ui') && !id.includes('react-slot') && !id.includes('react-dialog')) {
               return 'radix-ui';
             }
             if (id.includes('lucide-react')) {
               return 'icons';
             }
-            // Forms
-            if (id.includes('react-hook-form') || id.includes('formik') || id.includes('yup') || id.includes('zod')) {
-              return 'forms';
+            
+            // Forms and validation
+            if (id.includes('react-hook-form')) {
+              return 'react-hook-form';
             }
-            // Animation - large library
+            if (id.includes('formik') || id.includes('yup') || id.includes('zod')) {
+              return 'forms-validation';
+            }
+            
+            // Animation and motion
             if (id.includes('framer-motion')) {
               return 'motion';
             }
-            // Utilities - split by usage
+            
+            // HTTP and data fetching
             if (id.includes('axios')) {
               return 'http';
             }
+            if (id.includes('swr')) {
+              return 'swr';
+            }
+            
+            // Date and utility libraries
             if (id.includes('date-fns')) {
               return 'date-utils';
             }
-            if (id.includes('lodash') || id.includes('clsx') || id.includes('class-variance-authority')) {
-              return 'utils';
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'class-utils';
             }
-            // Large external libraries
-            if (id.includes('@stripe') || id.includes('@supabase') || id.includes('ethers')) {
-              return 'external';
+            if (id.includes('class-variance-authority')) {
+              return 'cva';
             }
-            // Everything else
+            
+            // Large external libraries - split by size
+            if (id.includes('@stripe')) {
+              return 'stripe';
+            }
+            if (id.includes('@supabase')) {
+              return 'supabase';
+            }
+            if (id.includes('ethers')) {
+              return 'ethers';
+            }
+            if (id.includes('firebase')) {
+              return 'firebase';
+            }
+            
+            // Everything else goes to vendor
             return 'vendor';
           }
-          // Component chunks - split by feature
+          
+          // Component chunks - split by feature and usage
           if (id.includes('/src/components/')) {
             if (id.includes('/ui/')) {
               return 'ui-components';
@@ -132,23 +165,50 @@ export default defineConfig(({ mode }) => ({
             if (id.includes('/talent/') || id.includes('/profile/')) {
               return 'talent-components';
             }
+            if (id.includes('/community/')) {
+              return 'community-components';
+            }
             return 'components';
           }
-          // Page chunks - split by route group
+          
+          // Page chunks - split by route group for better code splitting
           if (id.includes('/src/pages/')) {
+            // Core pages - most frequently accessed
             if (id.includes('Home') || id.includes('About') || id.includes('Contact')) {
-              return 'main-pages';
+              return 'core-pages';
             }
-            if (id.includes('Services') || id.includes('Pricing')) {
+            // Service-related pages
+            if (id.includes('Services') || id.includes('Pricing') || id.includes('Service')) {
               return 'service-pages';
             }
-            if (id.includes('Talent') || id.includes('AIMatcher')) {
+            // Talent-related pages
+            if (id.includes('Talent') || id.includes('AIMatcher') || id.includes('Profile')) {
               return 'talent-pages';
             }
-            if (id.includes('Login') || id.includes('Signup')) {
+            // Auth pages
+            if (id.includes('Login') || id.includes('Signup') || id.includes('Auth')) {
               return 'auth-pages';
             }
+            // E-commerce pages
+            if (id.includes('Cart') || id.includes('Checkout') || id.includes('Wallet')) {
+              return 'ecommerce-pages';
+            }
+            // Blog and content pages
+            if (id.includes('Blog') || id.includes('Community')) {
+              return 'content-pages';
+            }
             return 'pages';
+          }
+          
+          // Utility and hook chunks
+          if (id.includes('/src/hooks/')) {
+            return 'hooks';
+          }
+          if (id.includes('/src/utils/')) {
+            return 'utils';
+          }
+          if (id.includes('/src/context/')) {
+            return 'context';
           }
         },
         // Optimize chunk file names
@@ -157,8 +217,8 @@ export default defineConfig(({ mode }) => ({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Optimize build target
-    target: 'es2022',
+    // Optimize build target - ensure compatibility with esbuild
+    target: 'es2020',
     // Enable CSS code splitting
     cssCodeSplit: true,
     // Avoid gzip size computation entirely to prevent extra work on CI
@@ -173,12 +233,20 @@ export default defineConfig(({ mode }) => ({
     },
   },
   esbuild: {
-    target: 'es2022',
+    target: 'es2020',
     // Disable TypeScript checking during build
     logLevel: 'error',
     // Strip debugging noise and mark common logging as pure
     drop: ['console', 'debugger'],
     pure: ['console.log', 'console.info', 'console.debug'],
+    // Explicitly set supported targets for esbuild
+    supported: {
+      'top-level-await': false
+    },
+    // Force esbuild to use the correct target and format
+    format: 'esm',
+    // Additional safeguards to prevent ES2024 issues
+    platform: 'browser',
   },
   resolve: {
     alias: {
@@ -205,6 +273,7 @@ export default defineConfig(({ mode }) => ({
   },
   define: {
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    'process.env.BUILD_TARGET': JSON.stringify('es2022'),
   },
   // Optimize dependencies
   optimizeDeps: {
@@ -225,6 +294,10 @@ export default defineConfig(({ mode }) => ({
     exclude: ['@vite/client', '@vite/env'],
     // Force pre-bundling for better performance
     force: true,
+    // Ensure esbuild target compatibility
+    esbuildOptions: {
+      target: 'es2020',
+    },
   },
   // Performance optimizations
   css: {

@@ -1,135 +1,169 @@
-// Bundle optimization utilities
-export const bundleOptimizer = {
-  // Preload critical resources
-  preloadCriticalResources: () => {
+/**
+ * Bundle optimization utilities for better performance
+ */
+
+interface PreloadResource {
+  href: string;
+  as: 'script' | 'style' | 'image' | 'font' | 'fetch';
+  crossorigin?: boolean;
+  rel?: 'preload' | 'prefetch' | 'dns-prefetch';
+}
+
+class BundleOptimizer {
+  private preloadedResources = new Set<string>();
+  private criticalResources: PreloadResource[] = [];
+
+  constructor() {
+    this.initializeCriticalResources();
+  }
+
+  private initializeCriticalResources() {
+    // Define critical resources that should be preloaded
+    this.criticalResources = [
+      {
+        href: '/assets/main-DJSPBlcx.css',
+        as: 'style',
+        rel: 'preload'
+      },
+      {
+        href: '/assets/react-core-CeWZUsTL.js',
+        as: 'script',
+        rel: 'preload'
+      },
+      {
+        href: '/assets/main-Bsz36TI1.js',
+        as: 'script',
+        rel: 'preload'
+      }
+    ];
+  }
+
+  /**
+   * Preload critical resources for faster initial page load
+   */
+  preloadCriticalResources() {
     if (typeof window === 'undefined') return;
 
-    const criticalResources = [
-      '/assets/index.css',
-      '/assets/index.js',
+    this.criticalResources.forEach(resource => {
+      if (this.preloadedResources.has(resource.href)) return;
+
+      const link = document.createElement('link');
+      link.rel = resource.rel || 'preload';
+      link.href = resource.href;
+      link.as = resource.as;
+      
+      if (resource.crossorigin) {
+        link.crossOrigin = 'anonymous';
+      }
+
+      document.head.appendChild(link);
+      this.preloadedResources.add(resource.href);
+    });
+  }
+
+  /**
+   * Prefetch non-critical resources when user is idle
+   */
+  prefetchNonCriticalResources() {
+    if (typeof window === 'undefined') return;
+
+    // Use requestIdleCallback for non-critical prefetching
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => {
+        this.prefetchSecondaryResources();
+      });
+    } else {
+      // Fallback for browsers without requestIdleCallback
+      setTimeout(() => {
+        this.prefetchSecondaryResources();
+      }, 2000);
+    }
+  }
+
+  private prefetchSecondaryResources() {
+    const secondaryResources = [
+      '/assets/forms-Bf7MfTMC.js',
+      '/assets/motion-CVrGpB4u.js',
+      '/assets/pages-G5uhS74l.js'
     ];
 
-    criticalResources.forEach(resource => {
+    secondaryResources.forEach(href => {
+      if (this.preloadedResources.has(href)) return;
+
       const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'script';
+      link.rel = 'prefetch';
+      link.href = href;
+      link.as = 'script';
+
       document.head.appendChild(link);
+      this.preloadedResources.add(href);
     });
-  },
+  }
 
-  // Lazy load non-critical resources
-  lazyLoadResource: (url: string, type: 'script' | 'style' | 'image' = 'script') => {
-    return new Promise((resolve, reject) => {
-      if (type === 'script') {
-        const script = document.createElement('script');
-        script.src = url;
-        script.async = true;
-        script.onload = () => resolve(script);
-        script.onerror = reject;
-        document.head.appendChild(script);
-      } else if (type === 'style') {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = url;
-        link.onload = () => resolve(link);
-        link.onerror = reject;
-        document.head.appendChild(link);
-      } else if (type === 'image') {
-        const img = new Image();
-        img.src = url;
-        img.onload = () => resolve(img);
-        img.onerror = reject;
-      }
-    });
-  },
+  /**
+   * Optimize images by lazy loading
+   */
+  optimizeImages() {
+    if (typeof window === 'undefined') return;
 
-  // Optimize images
-  optimizeImage: (src: string, options: {
-    width?: number;
-    height?: number;
-    quality?: number;
-    format?: 'webp' | 'avif' | 'jpeg' | 'png';
-  } = {}) => {
-    const { width, height, quality = 80, format = 'webp' } = options;
+    const images = document.querySelectorAll('img[data-src]');
     
-    // For now, return the original src
-    // In a real implementation, you'd use a service like Cloudinary or similar
-    return src;
-  },
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
 
-  // Tree shake unused exports
-  treeShakeExports: (moduleExports: Record<string, any>, usedExports: string[]) => {
-    const unusedExports = Object.keys(moduleExports).filter(
-      exportName => !usedExports.includes(exportName)
-    );
-    
-    if (unusedExports.length > 0) {
-      console.warn(`Unused exports detected: ${unusedExports.join(', ')}`);
+      images.forEach(img => imageObserver.observe(img));
+    } else {
+      // Fallback for browsers without IntersectionObserver
+      images.forEach(img => {
+        const imgElement = img as HTMLImageElement;
+        imgElement.src = imgElement.dataset.src || '';
+        imgElement.classList.remove('lazy');
+      });
     }
+  }
+
+  /**
+   * Clean up unused CSS and JavaScript
+   */
+  cleanupUnusedResources() {
+    if (typeof window === 'undefined') return;
+
+    // Remove unused CSS classes (basic implementation)
+    const usedClasses = new Set<string>();
+    const allElements = document.querySelectorAll('*');
     
-    return usedExports.reduce((acc, exportName) => {
-      if (moduleExports[exportName]) {
-        acc[exportName] = moduleExports[exportName];
-      }
-      return acc;
-    }, {} as Record<string, any>);
-  },
+    allElements.forEach(element => {
+      element.classList.forEach(className => {
+        usedClasses.add(className);
+      });
+    });
 
-  // Analyze bundle composition
-  analyzeBundle: () => {
-    if (typeof window === 'undefined') return null;
+    // This is a simplified version - in production, you'd want more sophisticated purging
+    console.log(`Found ${usedClasses.size} used CSS classes`);
+  }
 
-    const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
-    const jsResources = resources.filter(r => r.name.includes('.js'));
-    const cssResources = resources.filter(r => r.name.includes('.css'));
+  /**
+   * Initialize all optimizations
+   */
+  init() {
+    this.preloadCriticalResources();
+    this.prefetchNonCriticalResources();
+    this.optimizeImages();
     
-    const totalSize = resources.reduce((total, resource) => total + (resource.transferSize || 0), 0);
-    const jsSize = jsResources.reduce((total, resource) => total + (resource.transferSize || 0), 0);
-    const cssSize = cssResources.reduce((total, resource) => total + (resource.transferSize || 0), 0);
-
-    return {
-      totalSize,
-      jsSize,
-      cssSize,
-      jsCount: jsResources.length,
-      cssCount: cssResources.length,
-      resources: resources.map(r => ({
-        name: r.name,
-        size: r.transferSize || 0,
-        duration: r.duration,
-        type: r.name.split('.').pop(),
-      })),
-    };
-  },
-
-  // Generate bundle report
-  generateBundleReport: () => {
-    const analysis = bundleOptimizer.analyzeBundle();
-    if (!analysis) return null;
-
-    console.group('📊 Bundle Analysis Report');
-    console.log(`Total Size: ${(analysis.totalSize / 1024).toFixed(2)} KB`);
-    console.log(`JS Size: ${(analysis.jsSize / 1024).toFixed(2)} KB (${analysis.jsCount} files)`);
-    console.log(`CSS Size: ${(analysis.cssSize / 1024).toFixed(2)} KB (${analysis.cssCount} files)`);
-    console.log('Resources:', analysis.resources);
-    console.groupEnd();
-
-    return analysis;
-  },
-};
-
-// Initialize bundle optimization
-if (typeof window !== 'undefined') {
-  // Preload critical resources on page load
-  window.addEventListener('load', () => {
-    bundleOptimizer.preloadCriticalResources();
-  });
-
-  // Generate bundle report in development
-  if (process.env.NODE_ENV === 'development') {
+    // Run cleanup after a delay to allow page to fully load
     setTimeout(() => {
-      bundleOptimizer.generateBundleReport();
-    }, 2000);
+      this.cleanupUnusedResources();
+    }, 5000);
   }
 }
+
+export const bundleOptimizer = new BundleOptimizer();

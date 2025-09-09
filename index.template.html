@@ -18,8 +18,14 @@
     <!-- Critical JS preload with proper as attribute -->
     <link rel="preload" href="/assets/index.js" as="script">
     
-    <!-- Only preload the most critical modules -->
-    <link rel="modulepreload" href="/assets/react-core.js">
+    <!-- Module preloads for better performance (latest hashes) -->
+    <script type="module" crossorigin src="/assets/index-BHTumYWq.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-core-FjO-M6VU.js">
+    <link rel="modulepreload" crossorigin href="/assets/main-pages-D2kibj9v.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-DJSPBlcx.css">
+    
+    <!-- Fallback script for compatibility -->
+    <script type="module" crossorigin src="/assets/index-sksAzusS.js"></script>
   </head>
   <body>
     <div id="root"></div>

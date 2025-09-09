@@ -1,3 +1,4 @@
+# Unified Netlify build configuration
 # touch v4.63 to trigger Netlify rebuild
 [build]
   # Build the site with Vite and publish the dist folder
@@ -24,6 +25,9 @@
     VITE_BUILD_OPTIMIZE = "true"
     # Disable source maps for faster builds
     VITE_SOURCEMAP = "false"
+    # Force esbuild target to prevent ES2024 issues
+    ESBUILD_TARGET = "es2022"
+    BUILD_TARGET = "es2022"
 
 # Headers
 [[headers]]
