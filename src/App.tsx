@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
-import { FuturisticBackground, FuturisticBackgroundOverlay } from './components/FuturisticBackground';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { AccessibilityPanel } from './components/ui/accessibility-panel';
+import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -68,6 +70,22 @@ function App() {
           </Suspense>
         </main>
         <Footer />
+        <ChatAssistant />
+        <PerformanceOptimizer />
+        <AccessibilityPanel 
+          enabled={true}
+          defaultSettings={{
+            highContrast: false,
+            largeText: false,
+            reducedMotion: false,
+            focusIndicator: true,
+            keyboardNavigation: true
+          }}
+          onSettingsChange={(settings) => {
+            // Handle accessibility settings changes
+            console.log('Accessibility settings updated:', settings);
+          }}
+        />
       </div>
     </Router>
   )

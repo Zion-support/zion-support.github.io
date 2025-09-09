@@ -14,6 +14,7 @@ import { Provider as ReduxProvider } from 'react-redux';
 import { store } from '@/store';
 import { AuthProvider } from './context/auth/AuthProvider';
 import { NotificationProvider } from './components/ui/notification';
+import { ErrorBoundary } from './components/ErrorBoundary';
 
 const rootElement = document.getElementById('root')!;
 

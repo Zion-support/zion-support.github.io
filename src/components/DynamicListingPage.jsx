@@ -195,10 +195,12 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
               </p>
             </div>
 
-            {isLoading ? (<div className={view === "grid"
+            {isLoading ? (
+              <div className={view === "grid"
                 ? "grid grid-cols-1 md:grid-cols-2 gap-6"
                 : "flex flex-col gap-6"}>
-                {[1, 2, 3, 4].map((i) => (<div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">
+                {[1, 2, 3, 4].map((i) => (
+                  <div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">
                     <Skeleton className="h-48 w-full bg-zion-blue-light/20"/>
                     <div className="p-4">
                       <Skeleton className="h-6 w-1/3 mb-2 bg-zion-blue-light/20"/>
@@ -210,50 +212,65 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                         <Skeleton className="h-8 w-1/4 bg-zion-blue-light/20"/>
                       </div>
                     </div>
-                  </div>))}
-              </div>) : filteredListings.length > 0 ? (<div className={view === "grid"
-                ? "grid grid-cols-1 md:grid-cols-2 gap-6"
-                : "flex flex-col gap-6"}>
-                {paginatedListings.map((listing) => (<ProductListingCard key={listing.id} listing={listing} view={view} onRequestQuote={handleRequestQuote} detailBasePath={detailBasePath}/>))}
-              </div>)
-            :
-        }
-              {totalPages > 1 && (<div className="mt-8">
-                  <Pagination className="justify-center">
-                    <PaginationContent>
-                      <PaginationItem>
-                        <PaginationPrevious href="#" onClick={(e) => {
-                e.preventDefault();
-                setCurrentPage(Math.max(1, currentPage - 1));
-            }}/>
-                      </PaginationItem>
-                      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (<PaginationItem key={page}>
-                          <PaginationLink href="#" isActive={page === currentPage} onClick={(e) => {
-                    e.preventDefault();
-                    setCurrentPage(page);
-                }}>
-                            {page}
-                          </PaginationLink>
-                        </PaginationItem>))}
-                      <PaginationItem>
-                        <PaginationNext href="#" onClick={(e) => {
-                e.preventDefault();
-                setCurrentPage(Math.min(totalPages, currentPage + 1));
-            }}/>
-                      </PaginationItem>
-                    </PaginationContent>
-                  </Pagination>
-                </div>)}
+                  </div>
+                ))}
+              </div>
+            ) : filteredListings.length > 0 ? (
+              <>
+                <div className={view === "grid"
+                  ? "grid grid-cols-1 md:grid-cols-2 gap-6"
+                  : "flex flex-col gap-6"}>
+                  {paginatedListings.map((listing) => (
+                    <ProductListingCard 
+                      key={listing.id} 
+                      listing={listing} 
+                      view={view} 
+                      onRequestQuote={handleRequestQuote} 
+                      detailBasePath={detailBasePath}
+                    />
+                  ))}
+                </div>
+                {totalPages > 1 && (
+                  <div className="mt-8">
+                    <Pagination className="justify-center">
+                      <PaginationContent>
+                        <PaginationItem>
+                          <PaginationPrevious href="#" onClick={(e) => {
+                            e.preventDefault();
+                            setCurrentPage(Math.max(1, currentPage - 1));
+                          }}/>
+                        </PaginationItem>
+                        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                          <PaginationItem key={page}>
+                            <PaginationLink href="#" isActive={page === currentPage} onClick={(e) => {
+                              e.preventDefault();
+                              setCurrentPage(page);
+                            }}>
+                              {page}
+                            </PaginationLink>
+                          </PaginationItem>
+                        ))}
+                        <PaginationItem>
+                          <PaginationNext href="#" onClick={(e) => {
+                            e.preventDefault();
+                            setCurrentPage(Math.min(totalPages, currentPage + 1));
+                          }}/>
+                        </PaginationItem>
+                      </PaginationContent>
+                    </Pagination>
+                  </div>
+                )}
+              </>
             ) : (
               <div className="text-center py-20">
                 <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>
                 <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
                 <Button variant="outline" onClick={() => {
-            setSearchQuery("");
-            setSelectedCategory("all");
-            setCurrentPriceFilter([0, priceRange.max]);
-            setSelectedRating(null);
-        }} className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
+                  setSearchQuery("");
+                  setSelectedCategory("all");
+                  setCurrentPriceFilter([0, priceRange.max]);
+                  setSelectedRating(null);
+                }} className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
                   Clear all filters
                 </Button>
               </div>

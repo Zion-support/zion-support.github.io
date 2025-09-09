@@ -52,52 +52,25 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
   const isActive = (link) => link.matches(location.pathname);
 
   return (
-    <nav className={`flex items-center space-x-8 ${className}`}>
-      {baseLinks.map((link) => (
-        <Link
-          key={link.key}
-          to={link.href}
-          className={`text-sm font-medium transition-colors hover:text-blue-600 ${
-            isActive(link) ? 'text-blue-600' : 'text-gray-700'
-          }`}
-        >
-          {link.name}
-        </Link>
-      ))}
-      
-      {isAuthenticated && (
-        <div className="flex items-center space-x-4">
-          <Link
-            to="/dashboard"
-            className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
-          >
-            Dashboard
-          </Link>
-          <Link
-            to="/profile"
-            className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
-          >
-            Profile
-          </Link>
-        </div>
-      )}
-      
-      {!isAuthenticated && (
-        <div className="flex items-center space-x-4">
-          <Link
-            to="/login"
-            className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
-          >
-            Login
-          </Link>
-          <Link
-            to="/signup"
-            className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Sign Up
-          </Link>
-        </div>
-      )}
+    <nav className="hidden md:flex space-x-8">
+      <Link to="/" className="text-gray-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200">
+        Home
+      </Link>
+      <Link to="/services" className="text-gray-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200">
+        Services
+      </Link>
+      <Link to="/about" className="text-gray-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200">
+        About
+      </Link>
+      <Link to="/contact" className="text-gray-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200">
+        Contact
+      </Link>
+      <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200">
+        Pricing
+      </Link>
+      <Link to="/blog" className="text-gray-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200">
+        Blog
+      </Link>
     </nav>
   );
 }
