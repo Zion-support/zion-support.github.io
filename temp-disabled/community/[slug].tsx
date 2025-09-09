@@ -105,7 +105,27 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ initialPosts, initialNextCu
 
 export const getServerSideProps = async ({ req, params }: { req: any; params?: { slug?: string } }) => {
   const category = params?.slug as string;
-  
+  // Supabase client setup for SSR remains largely the same
+  const supabaseUrl =
+    process.env.SUPABASE_URL ||
+    process.env.NEXT_PUBLIC_SUPABASE_URL ||
+    '';
+  const anonKey =
+    process.env.SUPABASE_SERVICE_ROLE_KEY ||
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
+    '';
+  const token = req.cookies?.['sb-access-token'] || null;
+
+  let initialPostsData: ForumPost[] = [];
+  let initialNextCursor: string | null = null;
+
+  if (!supabaseUrl || !anonKey) {
+    // Return empty initialPosts if Supabase is not configured
+    return { props: { initialPosts: [], initialNextCursor: null, hasSession: Boolean(token), category } };
+  }
+
+  // const supabase = createClient(supabaseUrl, anonKey); // Not needed if calling service function
+
   try {
     const { posts, nextCursor } = await fetchPostsByCategory(category, undefined, POSTS_PER_PAGE);
     
