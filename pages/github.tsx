@@ -1,283 +1,222 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
-;
-const GitHub: React.FC = () => {};
-    { id: 'all', name: 'All Discussions', icon: '💬' },;
-    { id: 'announcements', name: 'Announcements', icon: '📢' },;
-    { id: 'general', name: 'General', icon: '🌐' },;
-    { id: 'ideas', name: 'Ideas', icon: '💡' },;
-    { id: 'help', name: 'Help', icon: '❓' },;
-    { id: 'showcase', name: 'Showcase', icon: '🎨' },;
+
+const GitHub: React.FC = () => {
+  const repositories = [
+    {
+      name: 'zion-app-core',
+      description: 'Core application framework and utilities',
+      language: 'TypeScript',
+      stars: 42,
+      forks: 8,
+      lastUpdated: '2 days ago',
+      topics: ['framework', 'typescript', 'react', 'nextjs']
+    },
+    {
+      name: 'zion-ui-components',
+      description: 'Reusable UI component library',
+      language: 'TypeScript',
+      stars: 28,
+      forks: 5,
+      lastUpdated: '1 week ago',
+      topics: ['ui', 'components', 'react', 'tailwind']
+    },
+    {
+      name: 'zion-api-sdk',
+      description: 'JavaScript SDK for Zion API integration',
+      language: 'JavaScript',
+      stars: 35,
+      forks: 12,
+      lastUpdated: '3 days ago',
+      topics: ['sdk', 'api', 'javascript', 'integration']
+    },
+    {
+      name: 'zion-docs',
+      description: 'Documentation and guides for Zion platform',
+      language: 'Markdown',
+      stars: 15,
+      forks: 3,
+      lastUpdated: '5 days ago',
+      topics: ['documentation', 'guides', 'markdown']
+    }
   ];
 
-  const discussions = [;
-    {};
-},;
-    {};
-},;
-    {};
-},;
-    {};
-},;
-    {};
-},;
-    {};
-},;
+  const contributions = [
+    {
+      date: '2024-01-15',
+      count: 8,
+      level: 4
+    },
+    {
+      date: '2024-01-14',
+      count: 12,
+      level: 4
+    },
+    {
+      date: '2024-01-13',
+      count: 5,
+      level: 2
+    },
+    {
+      date: '2024-01-12',
+      count: 15,
+      level: 4
+    },
+    {
+      date: '2024-01-11',
+      count: 3,
+      level: 1
+    }
   ];
 
-  const filteredDiscussions = discussions.filter(discussion => ;
-    activeCategory === 'all' || discussion.category === activeCategory;
-  );
-;
-  const getStatusColor = (status: string) => {};
-}
-  };
-;
-  return (;
-    <>;
-      <Head>;
-        <title>GitHub Discussions - Zion AI Marketplace</title>;
-        <meta name="description" content="Join GitHub discussions about AI integration, development, and marketplace features" />;
-        <meta name="keywords" content="github, discussions, AI, development, community" />;
-      </Head>;
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
+      <Head>
+        <title>GitHub - Zion App</title>
+        <meta name="description" content="Explore our open source projects and contributions on GitHub" />
+        <meta name="keywords" content="github, open source, repositories, code, development" />
+      </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">;
-        {/* Header */}
-        <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30">;
-          <div className="container mx-auto px-6 py-8">;
-            <div className="flex items-center justify-between">;
-              <div>;
-                <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
-                  GitHub Discussions;
-                </h1>;
-                <p className="text-xl text-gray-300 mt-4">;
-                  Join the conversation about AI development and marketplace features;
-                </p>;
-              </div>;
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-white mb-4">
+              Our GitHub
+            </h1>
+            <p className="text-xl text-gray-300">
+              Open source projects and contributions from the Zion team
+            </p>
+          </div>
 
-              <div className="text-right">;
-                <div className="text-6xl mb-4">🐙</div>;
-                <button className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600">;
-                  View on GitHub;
-                </button>;
-              </div>;
-            </div>;
-          </div>;
-        </header>;
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Repositories */}
+            <div className="lg:col-span-2">
+              <h2 className="text-2xl font-semibold text-white mb-6">Repositories</h2>
+              <div className="space-y-4">
+                {repositories.map((repo, index) => (
+                  <div key={index} className="bg-gray-800/50 rounded-lg p-6 border border-gray-700 hover:border-blue-500/50 transition-colors">
+                    <div className="flex items-start justify-between mb-3">
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-1">{repo.name}</h3>
+                        <p className="text-gray-300 text-sm">{repo.description}</p>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-gray-400 text-sm">⭐ {repo.stars}</span>
+                        <span className="text-gray-400 text-sm">🍴 {repo.forks}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
+                      <span className="flex items-center gap-1">
+                        <div className="w-3 h-3 rounded-full bg-blue-400"></div>
+                        {repo.language}
+                      </span>
+                      <span>Updated {repo.lastUpdated}</span>
+                    </div>
 
-        {/* Discussion Stats */}
-        <section className="container mx-auto px-6 py-12">;
-          <div className="bg-gray-800/50 rounded-lg p-8 border border-blue-500/30 text-center">;
-            <h2 className="text-3xl font-bold text-blue-400 mb-8">Community Activity</h2>;
-            <div className="grid md:grid-cols-4 gap-8">;
-              <div>;
-                <div className="text-4xl font-bold text-blue-400 mb-2">2,500+</div>;
-                <div className="text-gray-300">Total Discussions</div>;
-              </div>;
-              <div>;
-                <div className="text-4xl font-bold text-blue-400 mb-2">15,000+</div>;
-                <div className="text-gray-300">Total Replies</div>;
-              </div>;
-              <div>;
-                <div className="text-4xl font-bold text-blue-400 mb-2">50,000+</div>;
-                <div className="text-gray-300">Total Views</div>;
-              </div>;
-              <div>;
-                <div className="text-4xl font-bold text-blue-400 mb-2">1,200+</div>;
-                <div className="text-gray-300">Active Members</div>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-
-        {/* Category Filter */}
-        <section className="container mx-auto px-6 py-8">;
-          <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">;
-            <h2 className="text-2xl font-bold text-blue-400 mb-6">Discussion Categories</h2>;
-            <div className="flex flex-wrap gap-3">;
-              {};
-                  onClick={() => setActiveCategory(category.id)}
-                  className={};
-}`}
-                >;
-                  <span className="mr-2">{category.icon}</span>;
-                  {category.name}
-                </button>;
-              ))}
-            </div>;
-          </div>;
-        </section>;
-
-        {/* Discussions List */}
-        <main className="container mx-auto px-6 py-12">;
-          <div className="flex items-center justify-between mb-8">;
-            <h2 className="text-3xl font-bold text-blue-400">;
-              {activeCategory === 'all' ? 'All Discussions' : categories.find(c => c.id === activeCategory)?.name}
-            </h2>;
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">;
-              Start New Discussion;
-            </button>;
-          </div>;
-
-          <div className="space-y-4">;
-            {};
-              <article key={discussion.id} className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 hover:border-blue-400 transition-colors">;
-                <div className="flex items-start gap-4">;
-                  <div className="text-2xl">{discussion.authorAvatar}</div>;
-
-                  <div className="flex-1">;
-                    <div className="flex items-center gap-3 mb-2">;
-                      <h3 className="text-lg font-semibold text-white hover:text-blue-400 transition-colors cursor-pointer">;
-                        {discussion.title}
-                      </h3>;
-                      <span className={`text-xs px-2 py-1 rounded-full ${getStatusColor(discussion.status)}`}>;
-                        {discussion.status}
-                      </span>;
-                    </div>;
-
-                    <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">;
-                      <span>By {discussion.author}</span>;
-                      <span>•</span>;
-                      <span>{discussion.lastActivity}</span>;
-                    </div>;
-
-                    <div className="flex flex-wrap gap-2 mb-4">;
-                      {};
-                          #{tag}
-                        </span>;
+                    <div className="flex flex-wrap gap-1">
+                      {repo.topics.map((topic, idx) => (
+                        <span key={idx} className="bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded">
+                          {topic}
+                        </span>
                       ))}
-                    </div>;
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-                    <div className="flex items-center gap-6 text-sm text-gray-400">;
-                      <span className="flex items-center gap-1">;
-                        💬 {discussion.replies} replies;
-                      </span>;
-                      <span className="flex items-center gap-1">;
-                        👁️ {discussion.views} views;
-                      </span>;
-                      <button className="text-blue-400 hover:text-blue-300 font-medium">;
-                        View Discussion →;
-                      </button>;
-                    </div>;
-                  </div>;
-                </div>;
-              </article>;
-            ))}
-          </div>;
-        </main>;
+            {/* Sidebar */}
+            <div className="space-y-6">
+              {/* Profile Stats */}
+              <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
+                <h3 className="text-lg font-semibold text-white mb-4">Profile Stats</h3>
+                <div className="space-y-3">
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Repositories</span>
+                    <span className="text-white font-semibold">24</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Stars</span>
+                    <span className="text-white font-semibold">156</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Followers</span>
+                    <span className="text-white font-semibold">89</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Following</span>
+                    <span className="text-white font-semibold">42</span>
+                  </div>
+                </div>
+              </div>
 
-        {/* Popular Topics */}
-        <section className="container mx-auto px-6 py-16">;
-          <h2 className="text-3xl font-bold text-blue-400 mb-8 text-center">Popular Discussion Topics</h2>;
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 text-center">;
-              <div className="text-4xl mb-4">🚀</div>;
-              <h3 className="text-lg font-semibold text-white mb-2">API Integration</h3>;
-              <p className="text-gray-300 text-sm">Get help with API integration and development</p>;
-              <div className="mt-4">;
-                <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded-full">;
-                  500+ discussions;
-                </span>;
-              </div>;
-            </div>;
+              {/* Recent Activity */}
+              <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
+                <h3 className="text-lg font-semibold text-white mb-4">Recent Activity</h3>
+                <div className="space-y-3">
+                  <div className="text-sm">
+                    <p className="text-gray-300">Pushed to <span className="text-blue-400">zion-app-core</span></p>
+                    <p className="text-gray-500 text-xs">2 hours ago</p>
+                  </div>
+                  <div className="text-sm">
+                    <p className="text-gray-300">Created repository <span className="text-blue-400">zion-mobile-sdk</span></p>
+                    <p className="text-gray-500 text-xs">1 day ago</p>
+                  </div>
+                  <div className="text-sm">
+                    <p className="text-gray-300">Starred <span className="text-blue-400">react/next.js</span></p>
+                    <p className="text-gray-500 text-xs">3 days ago</p>
+                  </div>
+                </div>
+              </div>
 
-            <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 text-center">;
-              <div className="text-4xl mb-4">🤖</div>;
-              <h3 className="text-lg font-semibold text-white mb-2">AI Models</h3>;
-              <p className="text-gray-300 text-sm">Discuss AI models and their applications</p>;
-              <div className="mt-4">;
-                <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded-full">;
-                  300+ discussions;
-                </span>;
-              </div>;
-            </div>;
+              {/* Contribution Graph */}
+              <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
+                <h3 className="text-lg font-semibold text-white mb-4">Contributions</h3>
+                <div className="grid grid-cols-5 gap-1">
+                  {contributions.map((contribution, index) => (
+                    <div
+                      key={index}
+                      className={`h-3 rounded-sm ${
+                        contribution.level === 4 ? 'bg-green-500' :
+                        contribution.level === 3 ? 'bg-green-400' :
+                        contribution.level === 2 ? 'bg-green-300' :
+                        contribution.level === 1 ? 'bg-green-200' :
+                        'bg-gray-700'
+                      }`}
+                      title={`${contribution.count} contributions on ${contribution.date}`}
+                    ></div>
+                  ))}
+                </div>
+                <p className="text-gray-400 text-xs mt-2">Last 5 days</p>
+              </div>
+            </div>
+          </div>
 
-            <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 text-center">;
-              <div className="text-4xl mb-4">🔧</div>;
-              <h3 className="text-lg font-semibold text-white mb-2">Troubleshooting</h3>;
-              <p className="text-gray-300 text-sm">Find solutions to common issues</p>;
-              <div className="mt-4">;
-                <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded-full">;
-                  400+ discussions;
-                </span>;
-              </div>;
-            </div>;
+          {/* Call to Action */}
+          <div className="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-center">
+            <h2 className="text-2xl font-bold text-white mb-4">Follow Us on GitHub</h2>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Stay updated with our latest open source projects and contribute to the community.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://github.com/zion-app"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub
+              </a>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                Contribute
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-            <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 text-center">;
-              <div className="text-4xl mb-4">💡</div>;
-              <h3 className="text-lg font-semibold text-white mb-2">Feature Requests</h3>;
-              <p className="text-gray-300 text-sm">Suggest new features and improvements</p>;
-              <div className="mt-4">;
-                <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded-full">;
-                  200+ discussions;
-                </span>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-
-        {/* Join CTA */}
-        <section className="container mx-auto px-6 py-16">;
-          <div className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg p-8 text-center border border-gray-600">;
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Contribute?</h2>;
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">;
-              Join thousands of developers and AI enthusiasts in discussions about the future of AI technology. ;
-              Share your knowledge, ask questions, and help shape the platform.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <button className="bg-white text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">;
-                Join GitHub Discussions;
-              </button>;
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition-colors">;
-                View Guidelines;
-              </button>;
-            </div>;
-            <p className="text-gray-400 text-sm mt-4">;
-              Free to participate • Open source community • Developer friendly;
-            </p>;
-          </div>;
-        </section>;
-
-        {/* Community Guidelines */}
-        <section className="container mx-auto px-6 py-16">;
-          <h2 className="text-3xl font-bold text-blue-400 mb-8 text-center">Community Guidelines</h2>;
-          <div className="grid md:grid-cols-2 gap-8">;
-            <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">;
-              <h3 className="text-xl font-semibold text-white mb-4">Be Constructive</h3>;
-              <ul className="text-gray-300 space-y-2">;
-                <li>• Provide helpful and constructive feedback</li>;
-                <li>• Ask clear, specific questions</li>;
-                <li>• Share code examples when possible</li>;
-                <li>• Respect different skill levels</li>;
-              </ul>;
-            </div>;
-
-            <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">;
-              <h3 className="text-xl font-semibold text-white mb-4">Stay Organized</h3>;
-              <ul className="text-gray-300 space-y-2">;
-                <li>• Use appropriate categories for posts</li>;
-                <li>• Tag discussions with relevant topics</li>;
-                <li>• Search before starting new discussions</li>;
-                <li>• Mark solutions as resolved</li>;
-              </ul>;
-            </div>;
-          </div>;
-        </section>;
-
-        {/* Footer */}
-        <footer className="bg-black/20 backdrop-blur-sm border-t border-blue-500/30 mt-20">;
-          <div className="container mx-auto px-6 py-8">;
-            <div className="text-center text-gray-400">;
-              <p>Need help with GitHub discussions? Contact our community team</p>;
-              <p className="mt-2">;
-                <a href="/contact" className="text-blue-400 hover:text-blue-300">;
-                  Get Support →;
-                </a>;
-              </p>;
-            </div>;
-          </div>;
-        </footer>;
-      </div>;
-    </>;
-  )}
 export default GitHub;

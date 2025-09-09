@@ -1,228 +1,288 @@
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import {};
-} from "lucide-react";
+import React, { useState } from 'react';
+import Head from 'next/head';
 
-export default function EnhancedServices() {};
-  return null;
-}
-},;
-        {};
-},;
-        {};
-}
-      ];,
-},;
-    {};
-},;
-        {};
-},;
-        {};
-}
-      ];,
-},;
-    {};
-},;
-        {};
-},;
-        {};
-},;
-        {};
-},;
-        {};
-}
-      ];,
-}
+const EnhancedServices: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('overview');
+
+  const services = [
+    {
+      id: 'web-development',
+      title: 'Web Development',
+      description: 'Custom web applications built with modern technologies',
+      features: ['React/Next.js', 'TypeScript', 'Responsive Design', 'SEO Optimized'],
+      price: 'Starting at $5,000',
+      duration: '4-8 weeks'
+    },
+    {
+      id: 'mobile-apps',
+      title: 'Mobile Applications',
+      description: 'Native and cross-platform mobile app development',
+      features: ['React Native', 'iOS/Android', 'App Store Optimization', 'Push Notifications'],
+      price: 'Starting at $8,000',
+      duration: '6-12 weeks'
+    },
+    {
+      id: 'ecommerce',
+      title: 'E-commerce Solutions',
+      description: 'Complete online store setup and customization',
+      features: ['Shopify/WooCommerce', 'Payment Integration', 'Inventory Management', 'Analytics'],
+      price: 'Starting at $3,000',
+      duration: '3-6 weeks'
+    },
+    {
+      id: 'api-development',
+      title: 'API Development',
+      description: 'RESTful and GraphQL APIs for your applications',
+      features: ['Node.js/Python', 'Database Design', 'Authentication', 'Documentation'],
+      price: 'Starting at $2,500',
+      duration: '2-4 weeks'
+    },
+    {
+      id: 'cloud-solutions',
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and deployment',
+      features: ['AWS/Azure', 'Docker/Kubernetes', 'CI/CD Pipeline', 'Monitoring'],
+      price: 'Starting at $1,500',
+      duration: '2-3 weeks'
+    },
+    {
+      id: 'maintenance',
+      title: 'Maintenance & Support',
+      description: 'Ongoing maintenance and technical support',
+      features: ['Bug Fixes', 'Updates', 'Security Patches', 'Performance Optimization'],
+      price: 'Starting at $500/month',
+      duration: 'Ongoing'
+    }
   ];
 
-  const stats = [;
-    { label: "Projects Completed", value: "500+", icon: Award },;
-    { label: "Client Satisfaction", value: "99.9%", icon: Star },;
-    { label: "Uptime Guarantee", value: "99.9%", icon: Shield },;
-    { label: "Expert Team", value: "50+", icon: Users }
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      company: 'TechStart Inc.',
+      content: 'Zion App delivered an exceptional web application that exceeded our expectations. The team was professional and delivered on time.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      company: 'E-commerce Solutions',
+      content: 'Their mobile app development service helped us reach a wider audience. The app performance is outstanding.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      company: 'Digital Agency',
+      content: 'The API development service was exactly what we needed. Clean, well-documented, and highly performant.',
+      rating: 5
+    }
   ];
 
-  return (;
-    <>;
-      <Head>;
-        <title>Enhanced Services - Zion Tech Group</title>;
-        <meta name="description" content="Comprehensive technology services including AI, cloud, cybersecurity, and micro SaaS solutions." />;
-        <meta name="viewport" content="width=device-width, initial-scale=1" />;
-      </Head>;
+  const processSteps = [
+    {
+      step: 1,
+      title: 'Discovery & Planning',
+      description: 'We analyze your requirements and create a detailed project plan',
+      icon: '🔍'
+    },
+    {
+      step: 2,
+      title: 'Design & Prototyping',
+      description: 'Create wireframes and prototypes to visualize the solution',
+      icon: '🎨'
+    },
+    {
+      step: 3,
+      title: 'Development',
+      description: 'Build your solution using best practices and modern technologies',
+      icon: '⚙️'
+    },
+    {
+      step: 4,
+      title: 'Testing & Quality Assurance',
+      description: 'Thorough testing to ensure everything works perfectly',
+      icon: '🧪'
+    },
+    {
+      step: 5,
+      title: 'Deployment & Launch',
+      description: 'Deploy your solution and provide launch support',
+      icon: '🚀'
+    },
+    {
+      step: 6,
+      title: 'Maintenance & Support',
+      description: 'Ongoing support and maintenance to keep everything running smoothly',
+      icon: '🔧'
+    }
+  ];
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;
-        {/* Hero Section */}
-        <section className="py-20 px-4">;
-          <div className="max-w-6xl mx-auto text-center">;
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">;
-              Enhanced Technology Services;
-            </h1>;
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
-              Comprehensive technology solutions designed to accelerate your business growth, ;
-              enhance security, and drive innovation across all digital touchpoints.;
-            </p>;
-            <div className="flex justify-center space-x-4">;
-              <div>Broken JSX</div>
-                className="inline-flex items-center px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">;
-                <span>Get Started</span>;
-                <ArrowRight className="w-5 h-5 ml-2" />;
-              </Link>;
-              <div>Broken JSX</div>
-                className="inline-flex items-center px-8 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium rounded-lg transition-colors">;
-                <span>View Innovative Services</span>;
-              </Link>;
-            </div>;
-          </div>;
-        </section>;
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      <Head>
+        <title>Enhanced Services - Zion App</title>
+        <meta name="description" content="Comprehensive web development and digital solutions services" />
+        <meta name="keywords" content="web development, mobile apps, e-commerce, API development, cloud solutions" />
+      </Head>
 
-        {/* Stats Section */}
-        <section className="py-16 px-4 bg-white">;
-          <div className="max-w-6xl mx-auto">;
-            <div className="grid md:grid-cols-4 gap-8">;
-              {};
-                  <div key={index} className="text-center">;
-                    <IconComponent className="w-12 h-12 text-blue-600 mx-auto mb-4" />;
-                    <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>;
-                    <div className="text-gray-600">{stat.label}</div>;
-                  </div>;
-                )})}
-            </div>;
-          </div>;
-        </section>;
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Enhanced Services
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive digital solutions to help your business grow and succeed in the digital world
+            </p>
+          </div>
 
-        {/* Service Categories */}
-        <section className="py-16 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Our Service Categories</h2>;
-            <div className="space-y-16">;
-              {};
-                  <div key={category.id} className="bg-white rounded-lg shadow-lg p-8">;
-                    <div className="flex items-center mb-8">;
-                      <IconComponent className="w-16 h-16 text-blue-600 mr-6" />;
-                      <div>;
-                        <h3 className="text-3xl font-bold text-gray-900 mb-2">{category.name}</h3>;
-                        <p className="text-lg text-gray-600">{category.description}</p>;
-                      </div>;
-                    </div>;
+          <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <div className="flex flex-wrap gap-2 mb-6">
+              {['overview', 'services', 'process', 'testimonials', 'contact'].map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                    activeTab === tab
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                </button>
+              ))}
+            </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
-                      {};
-                        <div key={index} className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">;
-                          <h4 className="text-xl font-semibold text-gray-900 mb-3">{service.name}</h4>;
-                          <p className="text-gray-600 mb-4">{service.description}</p>;
+            {/* Overview Section */}
+            {activeTab === 'overview' && (
+              <div className="space-y-6">
+                <h2 className="text-2xl font-semibold text-gray-800 mb-4">Why Choose Our Services?</h2>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center p-6 bg-blue-50 rounded-lg">
+                    <div className="text-4xl mb-3">🚀</div>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Fast Delivery</h3>
+                    <p className="text-gray-600">Quick turnaround times without compromising quality</p>
+                  </div>
+                  <div className="text-center p-6 bg-green-50 rounded-lg">
+                    <div className="text-4xl mb-3">💎</div>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Premium Quality</h3>
+                    <p className="text-gray-600">High-quality solutions built with modern technologies</p>
+                  </div>
+                  <div className="text-center p-6 bg-purple-50 rounded-lg">
+                    <div className="text-4xl mb-3">🛡️</div>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Reliable Support</h3>
+                    <p className="text-gray-600">24/7 support and maintenance for all projects</p>
+                  </div>
+                </div>
+              </div>
+            )}
 
-                          <div className="mb-4">;
-                            <h5 className="font-semibold text-gray-900 mb-2">Key Features:</h5>;
-                            <ul className="text-sm text-gray-600 space-y-1">;
-                              {};
-                                <li key={featureIndex} className="flex items-center">;
-                                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                                  {feature}
-                                </li>;
-                              ))}
-                            </ul>;
-                          </div>;
+            {/* Services Section */}
+            {activeTab === 'services' && (
+              <div>
+                <h2 className="text-2xl font-semibold text-gray-800 mb-6">Our Services</h2>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {services.map((service) => (
+                    <div key={service.id} className="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+                      <h3 className="text-lg font-semibold text-gray-800 mb-2">{service.title}</h3>
+                      <p className="text-gray-600 mb-4">{service.description}</p>
+                      <div className="space-y-2 mb-4">
+                        {service.features.map((feature, index) => (
+                          <div key={index} className="text-sm text-gray-600 flex items-center">
+                            <span className="text-green-500 mr-2">✓</span>
+                            {feature}
+                          </div>
+                        ))}
+                      </div>
+                      <div className="flex justify-between items-center text-sm">
+                        <span className="text-blue-600 font-semibold">{service.price}</span>
+                        <span className="text-gray-500">{service.duration}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
-                          <div className="border-t pt-4 space-y-2">;
-                            <div className="flex items-center justify-between">;
-                              <span className="text-sm font-medium text-gray-700">Pricing:</span>;
-                              <span className="text-sm font-bold text-green-600">{service.pricing}</span>;
-                            </div>;
-                            <div className="flex items-center justify-between">;
-                              <span className="text-sm font-medium text-gray-700">Delivery:</span>;
-                              <span className="text-sm text-gray-600">{service.delivery}</span>;
-                            </div>;
-                            <div className="flex items-center justify-between">;
-                              <span className="text-sm font-medium text-gray-700">Expected ROI:</span>;
-                              <span className="text-sm font-bold text-blue-600">{service.roi}</span>;
-                            </div>;
-                          </div>;
+            {/* Process Section */}
+            {activeTab === 'process' && (
+              <div>
+                <h2 className="text-2xl font-semibold text-gray-800 mb-6">Our Process</h2>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {processSteps.map((step) => (
+                    <div key={step.step} className="bg-white p-6 rounded-lg border border-gray-200">
+                      <div className="text-4xl mb-3">{step.icon}</div>
+                      <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mb-3">
+                        {step.step}
+                      </div>
+                      <h3 className="text-lg font-semibold text-gray-800 mb-2">{step.title}</h3>
+                      <p className="text-gray-600 text-sm">{step.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
-                          <div className="mt-4 p-3 bg-blue-50 rounded-lg">;
-                            <p className="text-sm text-blue-800 font-medium">{service.benefits}</p>;
-                          </div>;
+            {/* Testimonials Section */}
+            {activeTab === 'testimonials' && (
+              <div>
+                <h2 className="text-2xl font-semibold text-gray-800 mb-6">What Our Clients Say</h2>
+                <div className="grid md:grid-cols-3 gap-6">
+                  {testimonials.map((testimonial, index) => (
+                    <div key={index} className="bg-gray-50 p-6 rounded-lg">
+                      <div className="flex items-center mb-3">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <span key={i} className="text-yellow-400">★</span>
+                        ))}
+                      </div>
+                      <p className="text-gray-600 mb-4">"{testimonial.content}"</p>
+                      <div>
+                        <p className="font-semibold text-gray-800">{testimonial.name}</p>
+                        <p className="text-sm text-gray-500">{testimonial.company}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
-                          <div>Broken JSX</div>
-                            className="mt-4 w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">;
-                            <span>Get Quote</span>;
-                            <ArrowRight className="w-4 h-4 ml-2" />;
-                          </Link>;
-                        </div>;
-                      ))}
-                    </div>;
-                  </div>;
-                )})}
-            </div>;
-          </div>;
-        </section>;
+            {/* Contact Section */}
+            {activeTab === 'contact' && (
+              <div>
+                <h2 className="text-2xl font-semibold text-gray-800 mb-6">Get Started Today</h2>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-4">Contact Information</h3>
+                    <div className="space-y-3">
+                      <div className="flex items-center">
+                        <span className="text-blue-600 mr-3">📧</span>
+                        <span>contact@zionapp.com</span>
+                      </div>
+                      <div className="flex items-center">
+                        <span className="text-blue-600 mr-3">📞</span>
+                        <span>+1 (555) 123-4567</span>
+                      </div>
+                      <div className="flex items-center">
+                        <span className="text-blue-600 mr-3">📍</span>
+                        <span>123 Tech Street, Digital City, DC 12345</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-blue-50 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-4">Ready to Start?</h3>
+                    <p className="text-gray-600 mb-4">
+                      Contact us today for a free consultation and project estimate.
+                    </p>
+                    <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                      Get Free Quote
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-        {/* Why Choose Us Section */}
-        <section className="py-16 px-4 bg-gray-100">;
-          <div className="max-w-6xl mx-auto">;
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Why Choose Zion Tech Group?</h2>;
-            <div className="grid md:grid-cols-3 gap-8">;
-              <div className="text-center">;
-                <Zap className="w-16 h-16 text-blue-600 mx-auto mb-6" />;
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Rapid Delivery</h3>;
-                <p className="text-gray-600">;
-                  We deliver high-quality solutions quickly without compromising on quality or security.;
-                </p>;
-              </div>;
-              <div className="text-center">;
-                <Award className="w-16 h-16 text-purple-600 mx-auto mb-6" />;
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Proven Expertise</h3>;
-                <p className="text-gray-600">;
-                  Our team has extensive experience in cutting-edge technologies and industry best practices.;
-                </p>;
-              </div>;
-              <div className="text-center">;
-                <Shield className="w-16 h-16 text-green-600 mx-auto mb-6" />;
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Enterprise Security</h3>;
-                <p className="text-gray-600">;
-                  All our solutions are built with security-first principles and enterprise-grade reliability.;
-                </p>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-
-        {/* Contact Section */}
-        <section className="bg-blue-600 text-white py-20 px-4">;
-          <div className="max-w-6xl mx-auto text-center">;
-            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>;
-            <p className="text-xl mb-8 max-w-3xl mx-auto">;
-              Let's discuss how our enhanced technology services can drive your business forward. ;
-              Contact us today for a free consultation.;
-            </p>;
-            <div className="grid md:grid-cols-3 gap-8 mb-8">;
-              <div className="text-center">;
-                <Phone className="w-8 h-8 mx-auto mb-4" />;
-                <h3 className="font-semibold mb-2">Phone</h3>;
-                <p>+1 302 464 0950</p>;
-              </div>;
-              <div className="text-center">;
-                <Mail className="w-8 h-8 mx-auto mb-4" />;
-                <h3 className="font-semibold mb-2">Email</h3>;
-                <p>kleber@ziontechgroup.com</p>;
-              </div>;
-              <div className="text-center">;
-                <Globe className="w-8 h-8 mx-auto mb-4" />;
-                <h3 className="font-semibold mb-2">Website</h3>;
-                <p>https://ziontechgroup.com</p>;
-              </div>;
-            </div>;
-            <div className="text-center mb-8">;
-              <p className="text-lg font-semibold">Address:</p>;
-              <p>364 E Main St STE 1008, Middletown DE 19709</p>;
-            </div>;
-            <div>Broken JSX</div>
-              className="inline-flex items-center px-8 py-3 bg-white hover:bg-gray-100 text-blue-600 font-medium rounded-lg transition-colors">;
-              <span>Contact Us Today</span>;
-              <ArrowRight className="w-5 h-5 ml-2" />;
-            </Link>;
-          </div>;
-        </section>;
-      </div>;
-    </>;
-  )}
+export default EnhancedServices;

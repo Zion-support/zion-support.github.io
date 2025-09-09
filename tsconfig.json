@@ -36,12 +36,20 @@
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "allowJs": true,
-    "incremental": true
+    "incremental": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
   "include": [
-    "next-env.d.ts", 
-    "app/**/*.ts", 
-    "app/**/*.tsx", 
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     ".next/types/**/*.ts",
     "src/**/*",
     "pages/**/*",
