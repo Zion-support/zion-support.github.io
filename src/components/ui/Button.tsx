@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { ButtonProps } from '../../types/components';
 import LoadingSpinner from '../LoadingSpinner';
@@ -32,9 +32,13 @@ const buttonVariants = cva(
 );
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, loading = false, disabled, onClick, children, ...props }, ref) => {
+  ({ className, variant = "default", size = "default", asChild = false, loading = false, disabled, onClick, children, ...props }, ref) => {
     const Comp = asChild ? Slot : 'button';
-    const classes = cn(buttonVariants({ variant, size, className }));
+    const classes = cn(buttonVariants({ 
+      variant: variant === 'primary' ? 'default' : variant === 'danger' ? 'destructive' : variant as any, 
+      size: size === 'md' ? 'default' : size as any, 
+      className 
+    }));
 
     return (
       <Comp

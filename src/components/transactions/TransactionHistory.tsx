@@ -1,16 +1,16 @@
 
-import React, { _useState, _useEffect } from "react";
-import { _useQuery } from "@tanstack/react-query";
-import { _supabase } from "@/integrations/supabase/client";
-import { _useAuth } from "@/hooks/useAuth";
-import { _useToast } from "@/hooks/use-toast";
-import { _Button } from "@/components/ui/Button";
-import { _Card, _CardContent, _CardDescription, _CardFooter, _CardHeader, _CardTitle } from "@/components/ui/card";
-import { _Badge } from "@/components/ui/badge";
+import React, { useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth";
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import Skeleton from "@/components/ui/skeleton";
-import { _ArrowLeft, _ArrowRight, _RefreshCcw, _CheckCircle2, _XCircle, _Clock, _AlertCircle, _ShieldAlert } from "lucide-react";
-import { _formatDistanceToNow } from "date-fns";
-import { _safeStorage } from "@/utils/safeStorage";
+import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle, ShieldAlert } from "lucide-react";
+import { formatDistanceToNow } from "date-fns";
+import { safeStorage } from "@/utils/safeStorage";
 
 interface Transaction {
   id: string;
@@ -34,8 +34,8 @@ interface Transaction {
 }
 
 export function TransactionHistory() {
-  const { _user } = useAuth();
-  const { _toast } = useToast();
+  const { user } = useAuth();
+  const { toast } = useToast();
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>(
     () => (safeStorage.getItem('transaction_filter') as any) || 'all'
   );
@@ -46,7 +46,7 @@ export function TransactionHistory() {
   
   const { data: transactions, isLoading, error, refetch } = useQuery({
     queryKey: ['transactions', user?.id, filter],
-    _queryFn: async () => {
+    queryFn: async () => {
       if (!user) return [];
       
       // Build the query based on filters
@@ -69,7 +69,7 @@ export function TransactionHistory() {
       
       query = query.order('created_at', { ascending: false });
       
-      const { _data, _error } = await query;
+      const { data, error } = await query;
       
       if (error) throw error;
       return data as Transaction[];
@@ -77,10 +77,10 @@ export function TransactionHistory() {
     enabled: !!user,
   });
 
-  const handleManageTransaction = async (transactionId: string, _action: 'release' | 'refund' | 'cancel') => {
+  const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
     try {
-      const { _data, _error } = await supabase.functions.invoke('manage-transaction', {
-        body: { _transactionId, _action }
+      const { data, error } = await supabase.functions.invoke('manage-transaction', {
+        body: { transactionId, action }
       });
       
       if (error) throw error;
@@ -101,7 +101,7 @@ export function TransactionHistory() {
     }
   };
   
-  const getStatusBadge = (status: string, _inEscrow: boolean) => {
+  const getStatusBadge = (status: string, inEscrow: boolean) => {
     switch(status) {
       case 'in_escrow':
         return (
@@ -158,7 +158,7 @@ export function TransactionHistory() {
     }
   };
   
-  const formatCurrency = (amount: number, _currency: string) => {
+  const formatCurrency = (amount: number, currency: string) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: currency.toUpperCase()
@@ -225,7 +225,7 @@ export function TransactionHistory() {
         
         {isLoading ? (
           Array(3).fill(0).map((_, i) => (
-            <div key={_i} className="mb-4">
+            <div key={i} className="mb-4">
               <Card className="bg-zion-blue-dark border-zion-blue-light">
                 <CardHeader className="pb-2">
                   <Skeleton className="h-6 w-3/4 bg-zion-blue-light" />
@@ -269,7 +269,7 @@ export function TransactionHistory() {
                         </CardTitle>
                         <CardDescription className="text-zion-slate-light">
                           {isClient ? (
-                            <span>Payment to <span className="text-zion-purple">{_counterpartyName}</span></span>
+                            <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>
                           ) : (
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>
                           )}
@@ -357,7 +357,7 @@ export function TransactionHistory() {
             <h3 className="text-xl font-medium text-white mb-2">No transactions found</h3>
             <p className="text-zion-slate-light max-w-md mx-auto">
               {filter !== 'all' 
-                ? `You don't have any ${_filter} transactions. Try changing the filter or make a new transaction.`
+                ? `You don't have any ${filter} transactions. Try changing the filter or make a new transaction.`
                 : "You haven't made any transactions yet. Once you make a payment or receive one, it will appear here."}
             </p>
           </div>
