@@ -11,7 +11,7 @@ import { PerformanceMonitor } from './components/PerformanceMonitor.tsx';
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
-const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
+const UltimateServices = React.lazy(() => import('./pages/UltimateServices'));
 
 // Lazy load service pages
 const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
@@ -105,12 +105,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/services" element={<ServicesOverview />} />
-              
-              {/* Service Routes */}
-              <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
-              <Route path="/services/quantum-data-analytics" element={<QuantumDataAnalytics />} />
-              <Route path="/services/blockchain-infrastructure" element={<BlockchainInfrastructure />} />
+              <Route path="/ultimate-services" element={<UltimateServices />} />
             </Routes>
           </Suspense>
         </main>

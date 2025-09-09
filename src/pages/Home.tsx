@@ -13,8 +13,8 @@ import {
   TrendingUp,
   Brain,
   Atom,
-  Link as LinkIcon,
-  Zap
+  Rocket,
+  Heart
 } from 'lucide-react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
@@ -197,60 +197,59 @@ export default function Home() {
 
   const services = [
     {
-      title: "AI Workflow Automation",
-      description: "Intelligent process automation with machine learning algorithms",
-      icon: Brain,
-      link: "/services/ai-workflow-automation",
-      color: "from-cyan-500 to-blue-600",
-      features: ["Process mapping", "Smart automation", "Cross-platform integration", "Intelligent chatbots"]
-    },
-    {
-      title: "Quantum Data Analytics",
-      description: "Revolutionary data processing with quantum computing power",
-      icon: Atom,
-      link: "/services/quantum-data-analytics",
-      color: "from-purple-500 to-cyan-600",
-      features: ["Quantum ML", "Database optimization", "AI models", "Data encryption"]
-    },
-    {
-      title: "Blockchain Infrastructure",
-      description: "Enterprise-grade blockchain development and deployment",
-      icon: LinkIcon,
-      link: "/services/blockchain-infrastructure",
-      color: "from-green-500 to-emerald-600",
-      features: ["Smart contracts", "DeFi infrastructure", "Database solutions", "Layer 2 scaling"]
-    },
-    {
-      title: "Cybersecurity Solutions",
-      description: "Advanced security and compliance automation",
-      icon: Shield,
-      link: "/services",
-      color: "from-red-500 to-orange-600",
-      features: ["Zero trust security", "SOC 2 compliance", "Threat detection", "Risk assessment"]
-    }
-  ];
-
-  const featuredServices = [
-    {
-      title: "AI-Powered Solutions",
-      description: "Cutting-edge artificial intelligence services for business transformation",
-      icon: Brain,
-      link: "/services",
-      stats: "40% efficiency increase"
+      title: "AI Solutions",
+      description: "Cutting-edge artificial intelligence services",
+      icon: "🤖",
+      link: "/ultimate-services",
+      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
     },
     {
       title: "Quantum Computing",
-      description: "Next-generation computational power for complex problem solving",
-      icon: Atom,
-      link: "/services",
-      stats: "1000x faster processing"
+      description: "Next-generation quantum solutions",
+      icon: "⚛️",
+      link: "/ultimate-services",
+      features: ["Quantum Algorithms", "Quantum Machine Learning", "Cryptography", "Optimization"]
     },
     {
-      title: "Blockchain Technology",
-      description: "Decentralized solutions for modern business needs",
-      icon: LinkIcon,
-      link: "/services",
-      stats: "100% transparency"
+      title: "Blockchain & Web3",
+      description: "Decentralized technology solutions",
+      icon: "🔗",
+      link: "/ultimate-services",
+      features: ["Smart Contracts", "DeFi Platforms", "NFT Solutions", "Supply Chain"]
+    },
+    {
+      title: "IoT & Edge Computing",
+      description: "Connected device intelligence",
+      icon: "🌐",
+      link: "/ultimate-services",
+      features: ["Smart Cities", "Industrial IoT", "Edge AI", "Real-time Analytics"]
+    }
+  ];
+
+  const innovativeCategories = [
+    {
+      title: "Healthcare AI",
+      icon: Heart,
+      description: "Revolutionary medical diagnostics and patient care",
+      color: "from-pink-500 to-red-500"
+    },
+    {
+      title: "Neuromorphic Computing",
+      icon: Brain,
+      description: "Brain-inspired computing architecture",
+      color: "from-purple-500 to-blue-500"
+    },
+    {
+      title: "Synthetic Biology",
+      icon: Atom,
+      description: "AI-powered biological engineering",
+      color: "from-green-500 to-blue-500"
+    },
+    {
+      title: "Advanced Robotics",
+      icon: Rocket,
+      description: "Intelligent automation and control systems",
+      color: "from-orange-500 to-red-500"
     }
   ];
 
@@ -292,8 +291,8 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/services" 
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                to="/ultimate-services" 
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Explore Our Services
               </Link>
@@ -364,10 +363,17 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-400 mb-4">{service.description}</p>
-                <div className="inline-flex items-center px-3 py-1 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm mb-4">
-                  <TrendingUp className="w-4 h-4 mr-2" />
-                  {service.stats}
+                
+                {/* Features */}
+                <div className="mb-4">
+                  {service.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-2 text-sm text-gray-400 mb-1">
+                      <CheckCircle className="w-3 h-3 text-green-400" />
+                      {feature}
+                    </div>
+                  ))}
                 </div>
+                
                 <Link 
                   to={service.link}
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -380,59 +386,72 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Core Services Section */}
-      <section className="py-20 bg-black/50">
+      {/* Innovative Categories Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Our Core Services
+              Cutting-Edge Innovation
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how artificial intelligence can transform your business operations and drive innovation
+              Explore our revolutionary technology categories that are shaping the future
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {innovativeCategories.map((category, index) => (
               <motion.div
                 key={index}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
+                className="group cursor-pointer"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                  </div>
-                  
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-semibold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-400 mb-4">{service.description}</p>
-                    
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    
-                    <Link 
-                      to={service.link}
-                      className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r ${service.color} hover:scale-105 transition-all duration-300`}
-                    >
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </div>
+                <div className={`p-6 rounded-xl bg-gradient-to-br ${category.color} mb-4 group-hover:scale-105 transition-transform duration-300`}>
+                  <category.icon className="w-12 h-12 text-white mx-auto" />
                 </div>
+                <h3 className="text-xl font-semibold text-white mb-2 text-center">{category.title}</h3>
+                <p className="text-gray-400 text-center text-sm">{category.description}</p>
               </motion.div>
             ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link 
+              to="/ultimate-services"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              View All Services
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join hundreds of companies already leveraging our cutting-edge technology solutions
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/ultimate-services"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Explore Services
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link 
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
       </section>
