@@ -1,4 +1,4 @@
-# Netlify rebuild trigger (minor touch to force deploy) - 2025-09-09 v4.39
+# Netlify rebuild trigger (minor touch to force deploy) - 2025-09-09 v4.40
 [build] # touch v4.28 to trigger Netlify rebuild
   # Build the Vite React project on Netlify
   command = "npm ci --no-audit --no-fund --include=optional && npm rebuild rollup @rollup/rollup-linux-x64-gnu || true && npm run build:ci"
@@ -82,4 +82,4 @@
   from = "/*"
   to = "/index.html"
   status = 200
-# trigger: 2025-09-09T18:25:00Z
+# trigger: 2025-09-09T18:45:00Z
