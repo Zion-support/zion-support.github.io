@@ -1,7 +1,7 @@
 # Netlify rebuild trigger (minor touch to force deploy) - 2025-09-09 v4
-[build] # touch v4.1 to trigger Netlify rebuild
+[build] # touch v4.2 to trigger Netlify rebuild
   # Build the Vite React project on Netlify
-  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
+  command = "npm ci --no-audit --no-fund --include=optional && npm rebuild rollup @rollup/rollup-linux-x64-gnu || true && npm run build"
   publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
@@ -12,9 +12,11 @@
     SKIP_TYPE_CHECK = "true"
     # Ensure devDependencies (e.g., Vite) are installed during CI
     NPM_CONFIG_PRODUCTION = "false"
-    NPM_FLAGS = "--include=dev"
+    NPM_FLAGS = "--include=dev --include=optional"
     # Ensure optional native Rollup binaries are installed
     NPM_CONFIG_OPTIONAL = "true"
+    # Help npm avoid omitting optional deps in some environments
+    NPM_CONFIG_INCLUDE = "optional"
 
 # Headers
 [[headers]]
@@ -58,10 +60,10 @@
   NODE_ENV = "production"
 
 [context.deploy-preview]
-  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
+  command = "npm ci --no-audit --no-fund --include=optional && npm rebuild rollup @rollup/rollup-linux-x64-gnu || true && npm run build"
 
 [context.branch-deploy]
-  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
+  command = "npm ci --no-audit --no-fund --include=optional && npm rebuild rollup @rollup/rollup-linux-x64-gnu || true && npm run build"
 
 # Vite/React SPA configuration - SPA fallback for all routes
 # Note: SPA fallback is handled in _redirects file to avoid conflicts
