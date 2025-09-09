@@ -2,6 +2,8 @@ module.exports = {
   extends: ['next/core-web-vitals'],
   rules: {
     'react/no-unescaped-entities': 'off',
-    '@next/next/no-img-element': 'warn'
+    '@next/next/no-html-link-for-pages': 'off',
+    '@next/next/no-img-element': 'off',
+    'no-unused-vars': 'warn'
   }
 };
