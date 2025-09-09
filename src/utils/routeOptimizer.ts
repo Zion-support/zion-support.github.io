@@ -1,4 +1,6 @@
 // Route optimization utilities for better code splitting
+import React from 'react';
+
 export const routeOptimizer = {
   // Preload routes based on user behavior
   preloadRoute: (routePath: string) => {
@@ -36,25 +38,21 @@ export const routeOptimizer = {
       importFunc().catch((error) => {
         console.error(`Failed to load component ${componentName}:`, error);
         // Return a fallback component
+        const FallbackComponent = () => React.createElement('div', {
+          className: "flex items-center justify-center min-h-[200px] p-8"
+        }, React.createElement('div', {
+          className: "text-center"
+        }, React.createElement('h3', {
+          className: "text-lg font-semibold text-red-600 mb-2"
+        }, `Failed to load ${componentName}`), React.createElement('p', {
+          className: "text-gray-600 mb-4"
+        }, "There was an error loading this section."), React.createElement('button', {
+          onClick: () => window.location.reload(),
+          className: "px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        }, "Retry")));
+        
         return {
-          default: () => (
-            <div className="flex items-center justify-center min-h-[200px] p-8">
-              <div className="text-center">
-                <h3 className="text-lg font-semibold text-red-600 mb-2">
-                  Failed to load {componentName}
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  There was an error loading this section.
-                </p>
-                <button
-                  onClick={() => window.location.reload()}
-                  className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-                >
-                  Retry
-                </button>
-              </div>
-            </div>
-          )
+          default: FallbackComponent as unknown as T
         };
       })
     );
@@ -78,7 +76,7 @@ export const routeOptimizer = {
     // Preload likely next routes
     const preloadLikelyRoutes = () => {
       const currentPath = window.location.pathname;
-      const likelyRoutes = getLikelyNextRoutes(currentPath, navigationHistory);
+      const likelyRoutes = routeOptimizer.getLikelyNextRoutes(currentPath, navigationHistory);
       
       likelyRoutes.forEach(route => {
         routeOptimizer.preloadRoute(route);
