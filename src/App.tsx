@@ -9,7 +9,8 @@ import { BackToTopButton } from './components/BackToTopButton.jsx';
 const Home = React.lazy(() => import('./pages/Home.jsx'));
 const About = React.lazy(() => import('./pages/About.jsx'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage.jsx'));
-const ComprehensiveServices = React.lazy(() => import('./pages/ComprehensiveServices.jsx'));
+const SolutionsPage = React.lazy(() => import('./pages/SolutionsPage.jsx'));
+const MarketplacePage = React.lazy(() => import('./pages/MarketplacePage.jsx'));
 const Contact = React.lazy(() => import('./pages/Contact.jsx'));
 const Login = React.lazy(() => import('./pages/Login.jsx'));
 
@@ -99,7 +100,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<ServicesPage />} />
-              <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
+              <Route path="/solutions" element={<SolutionsPage />} />
+              <Route path="/marketplace" element={<MarketplacePage />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
