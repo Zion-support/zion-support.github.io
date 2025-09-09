@@ -1,43 +1,15 @@
 import React, { useState } from 'react';
-import { Gift import { useAuth } from '@/hooks/useAuth';
-export default function Page() {};
-  return null;
+import { Gift } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+
+export default function PointsBadge() {
+  const { user } = useAuth();
+  const [points] = useState(user?.points || 0);
+
+  return (
+    <div className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full">
+      <Gift className="h-4 w-4" />
+      <span className="font-semibold">{points} points</span>
+    </div>
+  );
 }
-, { purchase: 0, post: 0, referral: 0 });
-    const handleLogout = async () => {};
-            await signOut()}
-        else if(logout) {};
-            await logout()}
-    }
-    return (<DropdownMenu>;
-      <TooltipProvider>;
-        <Tooltip>;
-          <DropdownMenuTrigger asChild>;
-            <TooltipTrigger asChild>;
-              <button type="button" className="flex items-center gap-1 text-xs text-muted-foreground">";
-                <Gift className="h-4 w-4"/>;
-                <span>{`${points} pts`}</span>;
-              </button>;
-            </TooltipTrigger>;
-          </DropdownMenuTrigger>;
-          <TooltipContent>";
-            <p className="text-sm font-medium">Point Breakdown</p>";
-            <ul className="text-xs mt-1 space-y-0.5">;
-              <li>Purchases: {breakdown.purchase}</li>;
-              <li>Posts: {breakdown.post}</li>;
-              <li>Referrals: {breakdown.referral}</li>;
-            </ul>;
-          </TooltipContent>;
-        </Tooltip>;
-      </TooltipProvider>";
-      <DropdownMenuContent align="end">;
-        <DropdownMenuItem asChild>";
-          <Link to="/profile">Profile</Link>;
-        </DropdownMenuItem>;
-        <DropdownMenuItem asChild>";
-          <Link to="/orders">Orders</Link>;
-        </DropdownMenuItem>;
-        <DropdownMenuItem onSelect={handleLogout}>Logout</DropdownMenuItem>;
-      </DropdownMenuContent>;
-    </DropdownMenu>)}
-'"`}

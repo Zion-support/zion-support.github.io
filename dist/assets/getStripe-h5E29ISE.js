@@ -1,1 +1,0 @@
-import{ak as e}from"./vendor-C4iVgg65.js";var t={};let o;const r=()=>(o||(o=e(t.REACT_APP_STRIPE_PUBLISHABLE_KEY||"")),o),n=()=>window.location.hostname==="ziontechgroup.com"||window.location.hostname==="www.ziontechgroup.com";export{r as g,n as i};

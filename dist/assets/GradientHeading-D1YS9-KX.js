@@ -1,1 +1,0 @@
-import{j as e}from"./react-vendor-ak-d_M54.js";function n({children:t,className:r=""}){return e.jsx("h1",{className:`bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent ${r}`,children:t})}export{n as G};
