@@ -129,7 +129,6 @@ jobs:
       - name: Analyze current scheduling
         run: |
           echo "## 📅 Current Workflow Schedule Analysis" >> $GITHUB_STEP_SUMMARY
-          
           echo "### Current Schedule Distribution:" >> $GITHUB_STEP_SUMMARY
           
           # Morning workflows (6-9 AM)
