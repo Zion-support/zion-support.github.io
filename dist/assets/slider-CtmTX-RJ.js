@@ -1,0 +1,1 @@
+import{j as o}from"./react-vendor-ak-d_M54.js";const u=({value:r=0,min:t=0,max:l=100,step:a=1,onChange:e,className:i=""})=>o.jsx("input",{type:"range",min:t,max:l,step:a,value:r,onChange:n=>e==null?void 0:e(Number(n.target.value)),className:`w-full h-2 bg-zion-blue-light rounded-lg appearance-none cursor-pointer slider ${i}`});export{u as S};
