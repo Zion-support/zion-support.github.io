@@ -18,3 +18,5 @@
 /ai-content-marketing-automation /ai-content-generator 301
 /ai-customer-success-automation /ai-customer-success-platform 301
 /browser-automation-cloud/ /browser-automation-cloud 301
+
+# Cache-related headers must be set in _headers, not _redirects
