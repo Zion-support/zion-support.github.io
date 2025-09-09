@@ -7,14 +7,14 @@ import { ChatAssistant } from './components/ChatAssistant';
 import { PerformanceMonitor } from './components/PerformanceMonitor.tsx';
 
 // Lazy load pages
-const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
-const Services = lazy(() => import('./pages/Services'));
-const EnhancedServices = lazy(() => import('./pages/EnhancedServices'));
-const MicroSaasShowcase = lazy(() => import('./pages/MicroSaasShowcase'));
-const Contact = lazy(() => import('./pages/Contact'));
-const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
-const ServicesComparison = lazy(() => import('./pages/ServicesComparison'));
+const Home = React.lazy(() => import('./pages/Home.jsx'));
+const About = React.lazy(() => import('./pages/About.jsx'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage.jsx'));
+const ComprehensiveServices = React.lazy(() => import('./pages/ComprehensiveServices.jsx'));
+const ComprehensivePricing = React.lazy(() => import('./pages/ComprehensivePricing.jsx'));
+const Contact = React.lazy(() => import('./pages/Contact.jsx'));
+const Login = React.lazy(() => import('./pages/Login.jsx'));
+const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027.tsx'));
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -120,10 +120,8 @@ function App() {
               <Route path="/enhanced-services" element={<EnhancedServices />} />
               <Route path="/micro-saas-showcase" element={<MicroSaasShowcase />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/innovative-services-2027" element={<InnovativeServicesShowcase2027 />} />
             </Routes>
           </Suspense>
         </main>
