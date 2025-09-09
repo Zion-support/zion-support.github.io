@@ -1,21 +1,67 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { GradientHeading } from "./GradientHeading";
+import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
-interface Category {
-  title: string;
-  description: string;
-  icon: string;
-  color: string;
-  link: string;
-  features: string[];
-}
+const categories = [
+  {
+    title: "Comprehensive Services",
+    description: "Micro SAAS, IT services, and AI solutions",
+    icon: <Briefcase className="w-10 h-10" />,
+    link: "/comprehensive-services",
+    color: "from-purple-500 to-indigo-600",
+    features: ["Micro SAAS Solutions", "IT Infrastructure", "AI Integration", "Cloud Services"]
+  },
+  {
+    title: "AI Solutions",
+    description: "Cutting-edge AI and machine learning services",
+    icon: <Brain className="w-10 h-10" />,
+    link: "/ai-solutions",
+    color: "from-pink-500 to-rose-600",
+    features: ["Machine Learning", "Computer Vision", "NLP", "Predictive Analytics"]
+  },
+  {
+    title: "Talents",
+    description: "Connect with AI experts, developers, and tech specialists",
+    icon: <Users className="w-10 h-10" />,
+    link: "/talent",
+    color: "from-cyan-500 to-blue-600",
+    features: ["AI Experts", "Developers", "Data Scientists", "DevOps Engineers"]
+  },
+  {
+    title: "Equipment",
+    description: "Rent or buy specialized hardware, servers, and devices",
+    icon: <HardDrive className="w-10 h-10" />,
+    link: "/equipment",
+    color: "from-amber-500 to-orange-600",
+    features: ["GPU Servers", "AI Hardware", "Cloud Infrastructure", "Networking"]
+  },
+];
 
-interface SpecialService {
-  title: string;
-  link: string;
-}
+const specialServices = [
+  {
+    title: "Enhanced AI & IT Services",
+    link: "/enhanced-services"
+  },
+  {
+    title: "IT Onsite Services",
+    link: "/it-onsite-services"
+  },
+  {
+    title: "AI Development",
+    link: "/ai-development"
+  },
+  {
+    title: "Cloud Migration",
+    link: "/cloud-migration"
+  },
+  {
+    title: "Cybersecurity",
+    link: "/cybersecurity"
+  }
+];
 
 interface CategoriesSectionProps {
   showTitle?: boolean;
@@ -63,30 +109,47 @@ const specialServices: SpecialService[] = [
   { title: "IoT Edge Computing", link: "/iot-edge" }
 ];
 
-export default function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+  const cardVariants = {
+    hidden: { scale: 0.95, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.4,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <section className="py-20 bg-zion-blue">
       <div className="container mx-auto px-4">
         {showTitle && (
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <GradientHeading className="mb-4">
               Explore Our Service Categories
             </h2>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">
               Discover comprehensive solutions across multiple domains
             </p>
-          </div>
+          </motion.div>
         )}
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {categories.map((category, index) => (
-            <motion.div 
-              key={category.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
+            <motion.div key={category.title} variants={itemVariants}>
               <Link to={category.link} className="group block h-full">
                 <div className="rounded-2xl overflow-hidden h-full border border-blue-400/30 bg-gradient-to-br from-slate-800/50 to-slate-800 p-8 transition-all duration-500 hover:border-blue-400/60 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-blue-400/20 backdrop-blur-sm">
                   <div className={`rounded-2xl w-20 h-20 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
@@ -123,9 +186,15 @@ export default function CategoriesSection({ showTitle = true }: CategoriesSectio
               </Link>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
         
-        <div className="mt-16">
+        <motion.div 
+          className="mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <h3 className="text-center text-2xl font-bold text-white mb-8">Premium Services</h3>
           <div className="flex flex-wrap justify-center gap-6">
             {specialServices.map((service) => (
@@ -138,26 +207,25 @@ export default function CategoriesSection({ showTitle = true }: CategoriesSectio
               </Link>
             ))}
           </div>
-        </div>
+        </motion.div>
         
-        <div className="mt-16 flex justify-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+        <motion.div 
+          className="mt-16 flex justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <Link 
+            to="/services" 
+            className="group inline-flex items-center gap-3 text-blue-400 border-b-2 border-blue-400 hover:border-blue-300 transition-colors text-lg font-medium py-2"
           >
-            <Link 
-              to="/comprehensive-services-showcase-2025"
-              className="group inline-flex items-center gap-3 text-blue-400 border-b-2 border-blue-400 hover:border-blue-300 transition-colors text-lg font-medium py-2"
-            >
-              View All Services
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </motion.div>
-        </div>
+            View All Services
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

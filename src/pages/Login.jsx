@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import { useNavigate, useLocation, useSearchParams } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { safeStorage } from '@/utils/safeStorage';
-import { LoginContent } from '@/components/auth/login';
+import { LoginContent } from '@/components/auth/login/LoginContent';
 import { ErrorBoundary } from 'react-error-boundary';
 import LoginErrorFallback from '@/components/auth/login/LoginErrorFallback';
 import { useCart } from '@/context/CartContext';
@@ -28,15 +28,15 @@ export default function Login() {
       // which should trigger the other useEffect.
       navigate(location.pathname, { replace: true });
     }
-  }, [searchParams, location.pathname, navigate]);
+  }, [location.search, location.pathname, navigate]);
 
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
       reduxDispatch(setLoggedIn(true));
-      const next = location.state?.from?.pathname || '/dashboard';
+      const next = new URLSearchParams(location.search).get('next') || '/dashboard';
       navigate(next, { replace: true });
     }
-  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.state]);
+  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.search]);
 
   // Render LoginContent if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {

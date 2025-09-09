@@ -1,46 +1,80 @@
 import React from 'react';
 
-// Basic Form components for compatibility
-export const Form = ({ children, ...props }: any) => (
-  <form {...props}>{children}</form>
-);
+interface FormProps {
+  children: React.ReactNode;
+  onSubmit?: (e: React.FormEvent) => void;
+  className?: string;
+}
 
-export const FormControl = ({ children }: any) => (
-  <div className="form-control">{children}</div>
-);
+interface FormFieldProps {
+  control: any;
+  name: string;
+  render: (props: any) => React.ReactNode;
+}
 
-export const FormDescription = ({ children, className = '' }: any) => (
-  <p className={`text-sm text-muted-foreground ${className}`}>{children}</p>
-);
+interface FormItemProps {
+  children: React.ReactNode;
+  className?: string;
+}
 
-export const FormField = ({ control, name, render }: any) => {
-  // Simple implementation - in a real app you'd use react-hook-form
-  return render({
-    field: {
-      name,
-      value: '',
-      onChange: () => {},
-      onBlur: () => {},
-    },
-    fieldState: {
-      error: undefined,
-      invalid: false,
-      isDirty: false,
-      isTouched: false,
-    },
-  });
-};
+interface FormLabelProps {
+  children: React.ReactNode;
+  className?: string;
+}
 
-export const FormItem = ({ children, className = '' }: any) => (
-  <div className={`form-item ${className}`}>{children}</div>
-);
+interface FormControlProps {
+  children: React.ReactNode;
+}
 
-export const FormLabel = ({ children, className = '' }: any) => (
-  <label className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${className}`}>
-    {children}
-  </label>
-);
+interface FormMessageProps {
+  children?: React.ReactNode;
+  className?: string;
+}
 
-export const FormMessage = ({ children, className = '' }: any) => (
-  <p className={`text-sm font-medium text-destructive ${className}`}>{children}</p>
-);
+export function Form({ children, onSubmit, className = '' }: FormProps) {
+  return (
+    <form onSubmit={onSubmit} className={className}>
+      {children}
+    </form>
+  );
+}
+
+export function FormField({ control, name, render }: FormFieldProps) {
+  // For now, just render the children directly
+  // In a real implementation, this would integrate with react-hook-form
+  return render({ field: { name } });
+}
+
+export function FormItem({ children, className = '' }: FormItemProps) {
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  );
+}
+
+export function FormLabel({ children, className = '' }: FormLabelProps) {
+  return (
+    <label className={className}>
+      {children}
+    </label>
+  );
+}
+
+export function FormControl({ children }: FormControlProps) {
+  return (
+    <div>
+      {children}
+    </div>
+  );
+}
+
+export function FormMessage({ children, className = '' }: FormMessageProps) {
+  if (!children) return null;
+  
+  return (
+    <p className={className}>
+      {children}
+    </p>
+  );
+}
