@@ -1,121 +1,148 @@
 
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Search, User, MessageSquare, Home, Store, Users, Settings } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-import { useTranslation } from 'react-i18next';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
+import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, ChevronRight } from 'lucide-react';
+
+interface NavigationItem {
+  name: string;
+  href: string;
+}
 
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
-  className?: string;
+  navigationItems: NavigationItem[];
 }
 
-export function MobileMenu({ isOpen, onClose, className }: MobileMenuProps) {
-  const { user, isAuthenticated } = useAuth();
-  const location = useLocation();
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const { t } = useTranslation();
+export function MobileMenu({ isOpen, onClose, navigationItems }: MobileMenuProps) {
+  const menuVariants = {
+    closed: {
+      opacity: 0,
+      x: '100%',
+      transition: {
+        duration: 0.3,
+        ease: 'easeInOut'
+      }
+    },
+    open: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.3,
+        ease: 'easeInOut'
+      }
+    }
+  };
 
-  const navigationItems = [
-    { href: '/', label: t('nav.home', 'Home'), icon: Home, matches: (path: string) => path === '/' },
-    { href: '/marketplace', label: t('nav.marketplace', 'Marketplace'), icon: Store, matches: (path: string) => path.startsWith('/marketplace') },
-    { href: '/talent', label: t('nav.talent', 'Talent'), icon: Users, matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard') },
-    { href: '/categories', label: t('nav.categories', 'Categories'), icon: Store, matches: (path: string) => path.startsWith('/categories') },
-    { href: '/equipment', label: t('nav.equipment', 'Equipment'), icon: Store, matches: (path: string) => path.startsWith('/equipment') },
-    { href: '/community', label: t('nav.community', 'Community'), icon: Users, matches: (path: string) => path.startsWith('/community') },
-    { href: '/services', label: t('nav.services', 'Services'), icon: Store, matches: (path: string) => path.startsWith('/services') },
-    { href: '/about', label: t('nav.about', 'About'), icon: Users, matches: (path: string) => path.startsWith('/about') },
-    { href: '/contact', label: t('nav.contact', 'Contact'), icon: MessageSquare, matches: (path: string) => path.startsWith('/contact') },
-  ];
-
-  if (isAuthenticated) {
-    navigationItems.push(
-      { href: '/dashboard', label: t('nav.dashboard', 'Dashboard'), icon: Settings, matches: (path: string) => path.startsWith('/dashboard') }
-    );
-  }
+  const backdropVariants = {
+    closed: { opacity: 0 },
+    open: { opacity: 1 }
+  };
 
   if (!isOpen) return null;
 
   return (
-    <div className={cn("md:hidden", className)}>
-      {/* Mobile menu overlay */}
-      <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
-        <div className="fixed inset-y-0 right-0 w-80 bg-zion-blue-dark border-l border-zion-purple/20">
-          <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">
-            <h2 className="text-lg font-semibold text-white">Menu</h2>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={onClose}
-              className="p-2 text-white hover:bg-zion-purple/20"
-            >
-              <X className="h-5 w-5" />
-            </Button>
-          </div>
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          {/* Backdrop */}
+          <motion.div
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+            variants={backdropVariants}
+            initial="closed"
+            animate="open"
+            exit="closed"
+            onClick={onClose}
+          />
+          
+          {/* Menu */}
+          <motion.div
+            className="fixed right-0 top-0 h-full w-80 max-w-[85vw] bg-zion-blue-dark border-l border-zion-purple/20 z-50"
+            variants={menuVariants}
+            initial="closed"
+            animate="open"
+            exit="closed"
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between p-6 border-b border-zion-purple/20">
+              <h2 className="text-xl font-semibold text-white">Menu</h2>
+              <button
+                onClick={onClose}
+                className="p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors"
+                aria-label="Close menu"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
 
-          {/* Navigation items */}
-          <nav className="p-4 space-y-2">
-            {navigationItems.map((item) => {
-              const Icon = item.icon;
-              const isActive = item.matches(location.pathname);
-              
-              return (
-                <Link
-                  key={item.href}
-                  to={item.href}
-                  onClick={onClose}
-                  className={cn(
-                    "flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors",
-                    isActive
-                      ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/40"
-                      : "hover:bg-zion-purple/10 hover:text-zion-cyan"
-                  )}
-                >
-                  <Icon className="w-5 h-5" />
-                  <span className="font-medium">{item.label}</span>
-                </Link>
-              );
-            })}
-          </nav>
+            {/* Navigation */}
+            <nav className="p-6">
+              <ul className="space-y-2">
+                {navigationItems.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      to={item.href}
+                      onClick={onClose}
+                      className="flex items-center justify-between p-3 text-white/80 hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors group"
+                    >
+                      <span className="font-medium">{item.name}</span>
+                      <ChevronRight className="h-4 w-4 text-zion-cyan group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
 
-          {/* User section */}
-          <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-zion-purple/20">
-            {isAuthenticated ? (
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-zion-purple/20 rounded-full flex items-center justify-center">
-                  <User className="w-4 h-4 text-zion-cyan" />
-                </div>
-                <div className="flex-1">
-                  <p className="text-sm font-medium text-white">{user?.name || 'User'}</p>
-                  <p className="text-xs text-zion-slate-light">{user?.email}</p>
+              {/* Additional Links */}
+              <div className="mt-8 pt-6 border-t border-zion-purple/20">
+                <div className="space-y-2">
+                  <Link
+                    to="/pricing"
+                    onClick={onClose}
+                    className="flex items-center justify-between p-3 text-white/80 hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors group"
+                  >
+                    <span className="font-medium">Pricing</span>
+                    <ChevronRight className="h-4 w-4 text-zion-cyan group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  
+                  <Link
+                    to="/careers"
+                    onClick={onClose}
+                    className="flex items-center justify-between p-3 text-white/80 hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors group"
+                  >
+                    <span className="font-medium">Careers</span>
+                    <ChevronRight className="h-4 w-4 text-zion-cyan group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  
+                  <Link
+                    to="/faq"
+                    onClick={onClose}
+                    className="flex items-center justify-between p-3 text-white/80 hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors group"
+                  >
+                    <span className="font-medium">FAQ</span>
+                    <ChevronRight className="h-4 w-4 text-zion-cyan group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
               </div>
-            ) : (
-              <div className="space-y-2">
+
+              {/* CTA Section */}
+              <div className="mt-8 p-4 bg-zion-purple/10 rounded-lg border border-zion-purple/20">
+                <h3 className="text-white font-semibold mb-2">Ready to get started?</h3>
+                <p className="text-zion-slate-light text-sm mb-4">
+                  Transform your business with our AI-powered solutions
+                </p>
                 <Link
-                  to="/login"
+                  to="/contact"
                   onClick={onClose}
-                  className="block w-full px-4 py-2 text-center bg-zion-purple/20 text-zion-cyan rounded-lg border border-zion-purple/40 hover:bg-zion-purple/30 transition-colors"
+                  className="block w-full bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark text-center py-3 px-4 rounded-lg font-medium transition-colors"
                 >
-                  Sign In
-                </Link>
-                <Link
-                  to="/signup"
-                  onClick={onClose}
-                  className="block w-full px-4 py-2 text-center bg-zion-cyan text-zion-blue-dark rounded-lg hover:bg-zion-cyan/90 transition-colors"
-                >
-                  Sign Up
+                  Contact Us
                 </Link>
               </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
+            </nav>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
   );
 }

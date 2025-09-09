@@ -1,62 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  Search, 
-  User, 
-  Bell, 
-  ChevronDown,
-  Brain,
-  Shield,
-  Cloud,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  BarChart3,
-  FileImage,
-  TrendingUp,
-  MessageCircle,
-  Video,
-  FileText,
-  Heart,
-  PanelLeft,
-  ShoppingCart,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Search, User, Bell, PanelLeft } from 'lucide-react';
+import { MobileMenu } from '@/components/header/MobileMenu';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 import { useAuth } from '@/hooks/useAuth';
+import { Logo } from '@/components/header/Logo';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const { user, logout } = useAuth();
-
-  // Handle scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Close mobile menu when route changes
-  useEffect(() => {
-    setMobileMenuOpen(false);
-    setActiveDropdown(null);
-  }, [location.pathname]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -65,339 +23,136 @@ export function AppHeader() {
     }
   };
 
-  const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
-
   const navigationItems = [
-    {
-      name: 'AI Services',
-      href: '/ai-services',
-      icon: Brain,
-      dropdown: [
-        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Brain },
-        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', icon: Rocket },
-        { name: 'Blockchain Web3 Platform', href: '/services/blockchain-web3-platform', icon: Lock },
-        { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
-        { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket },
-        { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe },
-        { name: 'Sustainability', href: '/services/sustainability', icon: Heart }
-      ]
-    },
-    {
-      name: 'Micro SAAS',
-      href: '/micro-saas',
-      icon: Code,
-      dropdown: [
-        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', icon: BarChart3, description: 'Smart business insights' },
-        { name: 'Customer Experience', href: '/micro-saas/customer-experience', icon: MessageCircle, description: 'Enhanced customer engagement' },
-        { name: 'Supply Chain', href: '/micro-saas/supply-chain', icon: TrendingUp, description: 'Optimized logistics' },
-        { name: 'HR Platform', href: '/micro-saas/hr-platform', icon: Users, description: 'Human resources management' },
-        { name: 'Content Creation', href: '/micro-saas/content-creation', icon: FileImage, description: 'Creative content tools' },
-        { name: 'Financial Solutions', href: '/micro-saas/financial-solutions', icon: BarChart3, description: 'Financial management tools' }
-      ]
-    },
-    {
-      name: 'Solutions',
-      href: '/solutions',
-      icon: Rocket,
-      dropdown: [
-        { name: 'Products', href: '/marketplace/products', icon: Code, description: 'Software solutions' },
-        { name: 'Talent', href: '/marketplace/talent', icon: Users, description: 'Expert professionals' },
-        { name: 'Equipment', href: '/marketplace/equipment', icon: Cpu, description: 'Hardware solutions' },
-        { name: 'Services', href: '/marketplace/services', icon: Zap, description: 'Professional services' }
-      ]
-    },
-    {
-      name: 'About',
-      href: '/about',
-      icon: Users,
-      dropdown: [
-        { name: 'About Us', href: '/about', icon: Users, description: 'Our story and mission' },
-        { name: 'Team', href: '/team', icon: Users, description: 'Meet our experts' },
-        { name: 'Careers', href: '/careers', icon: TrendingUp, description: 'Join our team' },
-        { name: 'Partners', href: '/partners', icon: Users, description: 'Strategic partnerships' },
-        { name: 'Blog', href: '/blog', icon: FileText, description: 'Latest insights' },
-        { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch' }
-      ]
-    }
+    { name: 'Services', href: '/services' },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' },
   ];
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
-
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-zion-slate/95 backdrop-blur-md border-b border-zion-cyan/20 shadow-2xl' 
-        : 'bg-transparent'
-    }`}>
-      {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border-b border-zion-cyan/10">
-        <div className="container mx-auto px-4 py-2">
-          <div className="flex items-center justify-between text-sm">
-            <div className="flex items-center space-x-6 text-zion-cyan">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4" />
-                <span className="hidden sm:inline">{contactInfo.phone}</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4" />
-                <span className="hidden sm:inline">{contactInfo.email}</span>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <Link to="/contact" className="text-zion-cyan hover:text-white transition-colors">
-                Get Quote
-              </Link>
-              <Link to="/login" className="text-zion-cyan hover:text-white transition-colors">
-                Login
-              </Link>
-            </div>
+    <>
+      <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-md">
+        <div className="container flex h-16 items-center px-4 sm:px-6">
+          {/* Sidebar Toggle */}
+          <button
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            className="mr-4 p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors"
+            aria-label="Toggle sidebar"
+          >
+            <PanelLeft className="h-5 w-5" />
+          </button>
+          
+          <Logo />
+          
+          {/* Search Bar - Hidden on mobile */}
+          <div className="hidden md:flex ml-6 flex-1 max-w-md">
+            <form onSubmit={handleSearch} className="relative w-full">
+              <input
+                type="text"
+                placeholder="Search services, talent, equipment..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              />
+              <button
+                type="submit"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors"
+              >
+                <Search className="h-4 w-4" />
+              </button>
+            </form>
           </div>
-        </div>
-      </div>
-
-      {/* Main Navigation */}
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="text-2xl font-bold gradient-text">ZION TECH GROUP</h1>
-              <p className="text-xs text-zion-cyan/70">Innovation • Technology • Solutions</p>
-            </div>
-          </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8 ml-8">
             {navigationItems.map((item) => (
-              <div key={item.name} className="relative group">
-                <button
-                  onClick={() => toggleDropdown(item.name)}
-                  className="flex items-center space-x-2 text-white hover:text-zion-cyan transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-zion-slate/50"
-                >
-                  <item.icon className="w-5 h-5" />
-                  <span className="font-medium">{item.name}</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                    activeDropdown === item.name ? 'rotate-180' : ''
-                  }`} />
-                </button>
-
-                  {/* Enhanced Dropdown Menu */}
-                  <AnimatePresence>
-                    {activeDropdown === item.name && (
-                      <motion.div
-                        initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl shadow-2xl shadow-zion-cyan/25 overflow-hidden"
-                      >
-                        <div className="p-4">
-                          <div className="grid grid-cols-1 gap-2">
-                            {item.dropdown.map((subItem) => (
-                              <Link
-                                key={subItem.name}
-                                to={subItem.href}
-                                className="group flex items-start space-x-3 p-3 rounded-xl hover:bg-zion-cyan/10 transition-all duration-300"
-                              >
-                                <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                  <subItem.icon className="w-4 h-4 text-white" />
-                                </div>
-                                <div className="flex-1">
-                                  <div className="font-medium text-white group-hover:text-zion-cyan transition-colors duration-300">
-                                    {subItem.name}
-                                  </div>
-                                  <div className="text-sm text-zion-slate-light mt-1">
-                                    {subItem.description}
-                                  </div>
-                                </div>
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+              <Link
+                key={item.name}
+                to={item.href}
+                className="text-white/80 hover:text-zion-cyan transition-colors duration-200 font-medium"
+              >
+                {item.name}
+              </Link>
             ))}
           </nav>
 
-            {/* Right side actions */}
-            <div className="flex items-center space-x-4">
-              {/* Search */}
-              <form onSubmit={handleSearch} className="hidden md:block relative">
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-64 px-4 py-2 bg-zion-slate-dark/50 border border-zion-slate-light/30 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan/50 focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
-                />
-                <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
-              </form>
+          {/* Right side actions */}
+          <div className="ml-auto flex items-center space-x-4">
+            {/* Notifications */}
+            <button className="p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors relative">
+              <Bell className="h-5 w-5" />
+              <span className="absolute -top-1 -right-1 w-3 h-3 bg-zion-cyan rounded-full"></span>
+            </button>
 
-              {/* Contact Info */}
-              <div className="hidden xl:flex items-center space-x-4 text-zion-slate-light text-sm">
-                <div className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4 text-zion-cyan" />
-                  <span>+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail className="w-4 h-4 text-zion-cyan" />
-                  <span>kleber@ziontechgroup.com</span>
-                </div>
+            {/* User menu */}
+            {user ? (
+              <div className="relative">
+                <button className="flex items-center space-x-2 p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors">
+                  <User className="h-5 w-5" />
+                  <span className="hidden sm:block">{user.name}</span>
+                </button>
               </div>
-
-              {/* User actions */}
+            ) : (
               <div className="flex items-center space-x-2">
-                {user ? (
-                  <div className="flex items-center space-x-2">
-                    <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
-                      <Bell className="w-5 h-5" />
-                    </button>
-                    <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
-                      <User className="w-5 h-5" />
-                    </button>
-                    <button
-                      onClick={logout}
-                      className="px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-lg hover:bg-zion-cyan/30 transition-all duration-300"
-                    >
-                      Logout
-                    </button>
-                  </div>
-                ) : (
-                  <div className="flex items-center space-x-2">
-                    <Link
-                      to="/login"
-                      className="px-4 py-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300"
-                    >
-                      Login
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
-                    >
-                      Get Started
-                    </Link>
-                  </div>
-                )}
+                <Link
+                  to="/login"
+                  className="text-white/80 hover:text-white transition-colors font-medium"
+                >
+                  Sign In
+                </Link>
+                <Link
+                  to="/signup"
+                  className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark px-4 py-2 rounded-lg font-medium transition-colors"
+                >
+                  Get Started
+                </Link>
               </div>
+            )}
 
-              {/* Mobile menu button */}
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300"
-              >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
-            </div>
+            {/* Mobile menu button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="lg:hidden p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors"
+              aria-label="Toggle mobile menu"
+            >
+              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="lg:hidden bg-zion-slate-dark/95 backdrop-blur-xl border-t border-zion-cyan/20"
-            >
-              <div className="container-responsive py-6">
-                {/* Mobile Search */}
-                <form onSubmit={handleSearch} className="mb-6">
-                  <input
-                    type="text"
-                    placeholder="Search services..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-slate-light/30 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan/50 focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
-                  />
-                </form>
-
-                {/* Mobile Navigation Items */}
-                <div className="space-y-4">
-                  {navigationItems.map((item) => (
-                    <div key={item.name}>
-                      <button
-                        onClick={() => toggleDropdown(item.name)}
-                        className="w-full flex items-center justify-between p-3 text-left text-white hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-                      >
-                        <div className="flex items-center space-x-3">
-                          <item.icon className="w-5 h-5 text-zion-cyan" />
-                          <span>{item.name}</span>
-                        </div>
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                          activeDropdown === item.name ? 'rotate-180' : ''
-                        }`} />
-                      </button>
-                      
-                      <AnimatePresence>
-                        {activeDropdown === item.name && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3 }}
-                            className="ml-6 mt-2 space-y-2"
-                          >
-                            {item.dropdown.map((subItem) => (
-                              <Link
-                                key={subItem.name}
-                                to={subItem.href}
-                                className="block p-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-                              >
-                                <div className="font-medium">{subItem.name}</div>
-                                <div className="text-sm text-zion-slate-light mt-1">
-                                  {subItem.description}
-                                </div>
-                              </Link>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Mobile Contact Info */}
-                <div className="mt-8 pt-6 border-t border-zion-slate-light/20">
-                  <div className="space-y-3 text-zion-slate-light text-sm">
-                    <div className="flex items-center space-x-3">
-                      <Phone className="w-4 h-4 text-zion-cyan" />
-                      <span>+1 302 464 0950</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <Mail className="w-4 h-4 text-zion-cyan" />
-                      <span>kleber@ziontechgroup.com</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <MapPin className="w-4 h-4 text-zion-cyan" />
-                      <span>364 E Main St STE 1008, Middletown DE 19709</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {/* Mobile Search Bar */}
+        {isMobile && (
+          <div className="lg:hidden px-4 pb-4">
+            <form onSubmit={handleSearch} className="relative">
+              <input
+                type="text"
+                placeholder="Search services, talent, equipment..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              />
+              <button
+                type="submit"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors"
+              >
+                <Search className="h-4 w-4" />
+              </button>
+            </form>
+          </div>
+        )}
       </header>
+
+      {/* Mobile Menu */}
+      <MobileMenu 
+        isOpen={mobileMenuOpen} 
+        onClose={() => setMobileMenuOpen(false)}
+        navigationItems={navigationItems}
+      />
+
+      {/* Mobile Bottom Navigation */}
+      {isMobile && <MobileBottomNav />}
     </>
   );
 }

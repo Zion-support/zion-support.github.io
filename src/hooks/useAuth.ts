@@ -1,47 +1,49 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createContext, useContext } from 'react';
 
 interface User {
   id: string;
-  email: string;
   name: string;
-  role: 'user' | 'admin' | 'moderator';
-  userType?: string;
-  displayName?: string;
-  avatarUrl?: string;
+  email: string;
+  role: string;
 }
 
-interface AuthState {
+interface AuthContextType {
   user: User | null;
   isAuthenticated: boolean;
-  isLoading: boolean;
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => void;
+  signup: (email: string, password: string, name: string) => Promise<void>;
 }
 
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
+
 export function useAuth() {
-  const [authState, setAuthState] = useState<AuthState>({
-    user: null,
-    isAuthenticated: false,
-    isLoading: true,
-  });
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+}
+
+export function AuthProvider({ children }: { children: React.ReactNode }) {
+  const [user, setUser] = useState<User | null>(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
-    // Check if user is logged in (e.g., check localStorage, cookies, etc.)
-    const checkAuth = () => {
-      const storedUser = localStorage.getItem('zion_user');
-      if (storedUser) {
+    // Check for existing session
+    const token = localStorage.getItem('auth_token');
+    if (token) {
+      // In a real app, validate token with backend
+      const savedUser = localStorage.getItem('user');
+      if (savedUser) {
         try {
-          const user = JSON.parse(storedUser);
-          setAuthState({
-            user,
-            isAuthenticated: true,
-            isLoading: false,
-          });
+          const userData = JSON.parse(savedUser);
+          setUser(userData);
+          setIsAuthenticated(true);
         } catch (error) {
-          console.error('Error parsing stored user:', error);
-          setAuthState({
-            user: null,
-            isAuthenticated: false,
-            isLoading: false,
-          });
+          console.error('Error parsing user data:', error);
+          localStorage.removeItem('auth_token');
+          localStorage.removeItem('user');
         }
       } else {
         setAuthState({
@@ -50,64 +52,69 @@ export function useAuth() {
           isLoading: false,
         });
       }
-    };
-
-    checkAuth();
+    }
   }, []);
 
-  const login = async (email: string, _password: string) => {
-    // In a real app, you would make an API call to your backend
-    const mockUser: User = {
-      id: '1',
-      email,
-      name: 'John Doe',
-      role: 'user',
-      userType: 'creator',
-    };
-    
-    setAuthState({
-      user: mockUser,
-      isAuthenticated: true,
-      isLoading: false,
-    });
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    return mockUser;
+  const login = async (email: string, password: string) => {
+    try {
+      // In a real app, make API call to backend
+      // For now, simulate successful login
+      const mockUser: User = {
+        id: '1',
+        name: 'Demo User',
+        email,
+        role: 'user'
+      };
+      
+      setUser(mockUser);
+      setIsAuthenticated(true);
+      localStorage.setItem('auth_token', 'mock_token');
+      localStorage.setItem('user', JSON.stringify(mockUser));
+    } catch (error) {
+      console.error('Login failed:', error);
+      throw error;
+    }
   };
 
   const logout = () => {
-    setAuthState({
-      user: null,
-      isAuthenticated: false,
-      isLoading: false,
-    });
-    localStorage.removeItem('zion_user');
+    setUser(null);
+    setIsAuthenticated(false);
+    localStorage.removeItem('auth_token');
+    localStorage.removeItem('user');
   };
 
-  const register = async (email: string, password: string, name: string) => {
-    // Implement actual registration logic here
-    const mockUser: User = {
-      id: '1',
-      email,
-      name,
-      role: 'user'
-    };
-    
-    setAuthState({
-      user: mockUser,
-      isAuthenticated: true,
-      isLoading: false,
-    });
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    return mockUser;
+  const signup = async (email: string, password: string, name: string) => {
+    try {
+      // In a real app, make API call to backend
+      // For now, simulate successful signup
+      const mockUser: User = {
+        id: '1',
+        name,
+        email,
+        role: 'user'
+      };
+      
+      setUser(mockUser);
+      setIsAuthenticated(true);
+      localStorage.setItem('auth_token', 'mock_token');
+      localStorage.setItem('user', JSON.stringify(mockUser));
+    } catch (error) {
+      console.error('Signup failed:', error);
+      throw error;
+    }
   };
 
-  return {
-    user: authState.user,
-    isLoading: authState.isLoading,
-    isAuthenticated: authState.isAuthenticated,
+  const value: AuthContextType = {
+    user,
+    isAuthenticated,
     login,
     logout,
-    register,
-    isAdmin: authState.user?.role === 'admin'
+    signup
   };
+
+  return (
+    <AuthContext.Provider value={value}>
+      {children}
+    </AuthContext.Provider>
+  );
 }
