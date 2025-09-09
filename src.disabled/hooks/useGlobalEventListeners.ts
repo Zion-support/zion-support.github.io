@@ -1,0 +1,1 @@
+export: const useGlobalEventListeners = () => { const { dispatch } = useUIContext() useEffect(() => { const handleGlobalError = (event: CustomEvent) =>  {

@@ -1,0 +1,1 @@
+module.exports = type __Empty = unknown;
