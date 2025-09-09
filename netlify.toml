@@ -2,7 +2,14 @@
   publish = "dist"
   command = "npm ci && npm run build"
 
+# Disable Next.js plugin since we're using Vite
+[build.processing]
+  skip_processing = false
+
+# Disable automatic Next.js detection and plugin
 [build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  NETLIFY_USE_NEXTJS = "false"
   NODE_VERSION = "22.12.0"
   NODE_OPTIONS = "--max-old-space-size=6144"
   # Skip Sharp postinstall to avoid NAPI issues
