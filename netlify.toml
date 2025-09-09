@@ -1,7 +1,7 @@
-# Netlify rebuild trigger
+# Netlify rebuild trigger (minor comment touch to force deploy)
 [build]
   # Build the Vite React project on Netlify
-  # Minor comment change to trigger Netlify redeploy
+  # Minor comment change to trigger Netlify redeploy - 2025-09-09
   command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
   functions = "netlify/functions"
