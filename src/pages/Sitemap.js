@@ -1,66 +1,90 @@
-const Sitemap = () => {
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { Link } from 'react-router-dom';
+import { Header } from '@/components/header/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Globe, MessageSquare, Star, Play, HelpCircle, Settings, Shield } from 'lucide-react';
+
+export default function Sitemap() {
     const sitemapSections = [
         {
-            title: "Main Pages",
+            title: 'Main Pages',
+            icon: Globe,
             links: [
-                { name: "Home", path: "/", description: "Welcome to Zion Tech Group" },
-                { name: "About Us", path: "/about", description: "Our story and mission" },
-                { name: "Contact", path: "/contact", description: "Get in touch with us" },
-                { name: "Pricing", path: "/pricing", description: "Our service pricing" },
-                { name: "Careers", path: "/careers", description: "Join our team" }
+                { name: 'Home', path: '/', description: 'Welcome to Zion Tech Group' },
+                { name: 'About Us', path: '/about', description: 'Our story and mission' },
+                { name: 'Contact', path: '/contact', description: 'Get in touch with us' },
+                { name: 'Pricing', path: '/pricing', description: 'Our service pricing' },
+                { name: 'Careers', path: '/careers', description: 'Join our team' }
             ]
         },
         {
-            title: "Services",
+            title: 'Services',
+            icon: Settings,
             links: [
-                { name: "All Services", path: "/services", description: "Complete service overview" },
-                { name: "AI Solutions", path: "/services/ai", description: "Artificial Intelligence services" },
-                { name: "Cloud & DevOps", path: "/services/cloud", description: "Cloud infrastructure and automation" },
-                { name: "Cybersecurity", path: "/services/cybersecurity", description: "Security and threat protection" },
-                { name: "IT Infrastructure", path: "/services/infrastructure", description: "Network and system management" },
-                { name: "Digital Transformation", path: "/services/transformation", description: "Business process optimization" },
-                { name: "Consulting", path: "/services/consulting", description: "Technology strategy and advisory" },
-                { name: "Quantum Technology", path: "/quantum-technology", description: "Next-generation computing" },
-                { name: "Space Tech", path: "/space-tech", description: "Space technology solutions" },
-                { name: "Micro SAAS", path: "/micro-saas", description: "Scalable software solutions" }
+                { name: 'All Services', path: '/services', description: 'Complete service overview' },
+                { name: 'AI Solutions', path: '/services/ai', description: 'Artificial Intelligence services' },
+                { name: 'Cloud & DevOps', path: '/services/cloud', description: 'Cloud infrastructure and automation' },
+                { name: 'Cybersecurity', path: '/services/cybersecurity', description: 'Security and threat protection' },
+                { name: 'IT Infrastructure', path: '/services/infrastructure', description: 'Network and system management' },
+                { name: 'Digital Transformation', path: '/services/transformation', description: 'Business process optimization' },
+                { name: 'Consulting', path: '/services/consulting', description: 'Technology strategy and advisory' },
+                { name: 'Quantum Technology', path: '/quantum-technology', description: 'Next-generation computing' },
+                { name: 'Space Tech', path: '/space-tech', description: 'Space technology solutions' },
+                { name: 'Micro SAAS', path: '/micro-saas', description: 'Scalable software solutions' }
             ]
         },
         {
-            title: "Company",
+            title: 'Company',
+            icon: Globe,
             links: [
-                { name: "Our Team", path: "/team", description: "Meet our experts" },
-                { name: "Partners", path: "/partners", description: "Strategic partnerships" },
-                { name: "Case Studies", path: "/case-studies", description: "Success stories" },
-                { name: "Research & Development", path: "/research-development", description: "Innovation hub" }
+                { name: 'Our Team', path: '/team', description: 'Meet our experts' },
+                { name: 'Partners', path: '/partners', description: 'Strategic partnerships' },
+                { name: 'Case Studies', path: '/case-studies', description: 'Success stories' },
+                { name: 'Research & Development', path: '/research-development', description: 'Innovation hub' }
             ]
         },
         {
-            title: "Resources",
+            title: 'Resources',
+            icon: Settings,
             links: [
-                { name: "Blog", path: "/blog", description: "Latest insights and news" },
-                { name: "Events", path: "/events", description: "Upcoming events" },
-                { name: "Webinars", path: "/webinars", description: "Educational content" },
-                { name: "White Papers", path: "/white-papers", description: "Research and analysis" },
-                { name: "Tutorials", path: "/tutorials", description: "Learning resources" }
+                { name: 'Blog', path: '/blog', description: 'Latest insights and news' },
+                { name: 'Events', path: '/events', description: 'Upcoming events' },
+                { name: 'Webinars', path: '/webinars', description: 'Educational content' },
+                { name: 'White Papers', path: '/white-papers', description: 'Research and analysis' },
+                { name: 'Tutorials', path: '/tutorials', description: 'Learning resources' }
             ]
         },
         {
-            title: "Support",
+            title: 'Support',
+            icon: Settings,
             links: [
-                { name: "Help Center", path: "/help", description: "Self-service support" },
-                { name: "Support Portal", path: "/support", description: "Technical support" },
-                { name: "FAQ", path: "/faq", description: "Frequently asked questions" },
-                { name: "Status", path: "/status", description: "Service status" }
+                { name: 'Help Center', path: '/help', description: 'Self-service support' },
+                { name: 'Support Portal', path: '/support', description: 'Technical support' },
+                { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
+                { name: 'Status', path: '/status', description: 'Service status' }
             ]
         },
         {
-            title: "Legal",
+            title: 'Legal & Compliance',
+            icon: Shield,
             links: [
-                { name: "Privacy Policy", path: "/privacy", description: "Data protection and privacy" },
-                { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },
-                { name: "Cookie Policy", path: "/cookies", description: "Cookie usage information" }
+                { name: 'Privacy Policy', path: '/privacy', description: 'Data protection and privacy' },
+                { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' },
+                { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage information' },
+                { name: 'GDPR Compliance', path: '/gdpr', description: 'Data protection compliance' },
+                { name: 'Accessibility', path: '/accessibility', description: 'Accessibility standards' },
             ]
         }
     ];
-};
-export {};
+
+    const quickLinks = [
+        { name: 'Get Started', path: '/get-started', icon: Star, color: 'bg-green-100 text-green-700' },
+        { name: 'Request Demo', path: '/demo', icon: Play, color: 'bg-blue-100 text-blue-700' },
+        { name: 'Contact Sales', path: '/contact-sales', icon: MessageSquare, color: 'bg-purple-100 text-purple-700' },
+        { name: 'Support', path: '/support', icon: HelpCircle, color: 'bg-orange-100 text-orange-700' },
+    ];
+
+    return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: "Sitemap - Zion Tech Group", description: "Complete site navigation guide for Zion Tech Group. Find all pages, services, and resources organized by category.", keywords: "sitemap, navigation, site structure, pages, services, Zion Tech Group" }), _jsx(Header, {}), _jsx("main", { className: "pt-32 pb-20", children: _jsxs("div", { className: "container mx-auto px-4", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsx("h1", { className: "text-4xl md:text-5xl font-bold text-gray-900 mb-6", children: "Site Navigation Guide" }), _jsx("p", { className: "text-xl text-gray-600 max-w-3xl mx-auto", children: "Explore our comprehensive website structure. Find all pages, services, and resources organized by category for easy navigation." })] }), _jsx("div", { className: "grid grid-cols-2 md:grid-cols-4 gap-4 mb-16", children: quickLinks.map((link, index) => (_jsxs(Link, { to: link.path, className: `${link.color} p-4 rounded-lg text-center hover:scale-105 transition-transform duration-200`, children: [_jsx(link.icon, { className: "h-8 w-8 mx-auto mb-2" }), _jsx("div", { className: "font-semibold text-sm", children: link.name })] }, index))) }), _jsx("div", { className: "grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8", children: sitemapSections.map((section, index) => (_jsxs(Card, { className: "hover:shadow-lg transition-shadow duration-300", children: [_jsx(CardHeader, { children: _jsxs("div", { className: "flex items-center space-x-3 mb-4", children: [_jsx("div", { className: "w-10 h-10 bg-zion-blue/10 rounded-lg flex items-center justify-center", children: _jsx(section.icon, { className: "h-5 w-5 text-zion-blue" }) }), _jsx(CardTitle, { className: "text-xl", children: section.title })] }) }), _jsx(CardContent, { children: _jsx("div", { className: "space-y-3", children: section.links.map((link, linkIndex) => (_jsxs("div", { className: "border-l-2 border-gray-200 pl-4", children: [_jsx(Link, { to: link.path, className: "block text-zion-blue hover:text-zion-blue-dark font-medium mb-1 transition-colors", children: link.name }), _jsx("p", { className: "text-sm text-gray-600", children: link.description })] }, linkIndex))) }) })] }, index))) }), _jsxs("div", { className: "mt-16 grid grid-cols-1 md:grid-cols-2 gap-8", children: [_jsxs(Card, { children: [_jsx(CardHeader, { children: _jsxs(CardTitle, { className: "flex items-center space-x-2", children: [_jsx(Globe, { className: "h-5 w-5 text-zion-blue" }), _jsx("span", { children: "Site Information" })] }) }), _jsx(CardContent, { children: _jsxs("div", { className: "space-y-3 text-sm text-gray-600", children: [_jsxs("div", { className: "flex justify-between", children: [_jsx("span", { children: "Total Pages:" }), _jsx("span", { className: "font-medium", children: "50+" })] }), _jsxs("div", { className: "flex justify-between", children: [_jsx("span", { children: "Last Updated:" }), _jsx("span", { className: "font-medium", children: new Date().toLocaleDateString() })] }), _jsxs("div", { className: "flex justify-between", children: [_jsx("span", { children: "Site Version:" }), _jsx("span", { className: "font-medium", children: "2.0.0" })] })] }) })] }), _jsxs(Card, { children: [_jsx(CardHeader, { children: _jsxs(CardTitle, { className: "flex items-center space-x-2", children: [_jsx(MessageSquare, { className: "h-5 w-5 text-zion-blue" }), _jsx("span", { children: "Need Help?" })] }) }), _jsx(CardContent, { children: [_jsx("p", { className: "text-sm text-gray-600 mb-4", children: "Can't find what you're looking for? Our support team is here to help." }), _jsxs("div", { className: "space-y-2", children: [_jsx(Link, { to: "/contact", className: "block text-zion-blue hover:text-zion-blue-dark text-sm font-medium", children: "Contact Support →" }), _jsx(Link, { to: "/help-center", className: "block text-zion-blue hover:text-zion-blue-dark text-sm font-medium", children: "Visit Help Center →" })] })] })] })] })] }) }), _jsx(Footer, {})] }));
+}

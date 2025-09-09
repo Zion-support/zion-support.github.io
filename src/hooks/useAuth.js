@@ -1,29 +1,86 @@
 import { useState, useEffect } from 'react';
-export const useAuth = () => {
+
+export function useAuth() {
     const [user, setUser] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
+
     useEffect(() => {
-        // Simulate auth check
-        setLoading(false);
+        // Check if user is logged in from localStorage or session
+        const storedUser = localStorage.getItem('zion_user');
+        if (storedUser) {
+            try {
+                setUser(JSON.parse(storedUser));
+            } catch (error) {
+                console.error('Error parsing stored user:', error);
+                localStorage.removeItem('zion_user');
+            }
+        }
+        setIsLoading(false);
     }, []);
+
     const login = async (email, password) => {
-        // Simulate login
-        setUser({
-            id: '1',
-            email,
-            name: 'User'
-        });
+        setIsLoading(true);
+        try {
+            // Simulate API call
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            const mockUser = {
+                id: '1',
+                name: 'Demo User',
+                email,
+                avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+            };
+            setUser(mockUser);
+            localStorage.setItem('zion_user', JSON.stringify(mockUser));
+        } catch (error) {
+            console.error('Login failed:', error);
+            throw error;
+        } finally {
+            setIsLoading(false);
+        }
     };
-    const logout = () => {
-        setUser(null);
+
+    const logout = async () => {
+        setIsLoading(true);
+        try {
+            // Simulate API call
+            await new Promise(resolve => setTimeout(resolve, 500));
+            setUser(null);
+            localStorage.removeItem('zion_user');
+        } catch (error) {
+            console.error('Logout failed:', error);
+            throw error;
+        } finally {
+            setIsLoading(false);
+        }
     };
+
+    const signup = async (email, password, name) => {
+        setIsLoading(true);
+        try {
+            // Simulate API call
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            const mockUser = {
+                id: '1',
+                name,
+                email,
+                avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+            };
+            setUser(mockUser);
+            localStorage.setItem('zion_user', JSON.stringify(mockUser));
+        } catch (error) {
+            console.error('Signup failed:', error);
+            throw error;
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
     return {
         user,
-        loading,
         login,
         logout,
-        register,
-        isAuthenticated: !!user,
-        isAdmin: user?.role === 'admin'
+        signup,
+        isLoading,
+        isAuthenticated: !!user
     };
 };

@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-export const Logo = () => {
-    return (<Link to="/" className="flex items-center group">
+
+export const Logo = ({ customLogo, customColor, isWhitelabel, brandName }) => {
+  const logoColor = customColor || 'from-zion-cyan via-zion-purple-light to-zion-purple';
+  
+  return (
+    <Link to="/" className="flex items-center group">
       <div className="flex items-center space-x-2">
         {/* Icon */}
         <div className="relative">
@@ -22,5 +26,6 @@ export const Logo = () => {
         </div>
       </div>
       <div className="text-xs lg:text-sm text-gray-300 font-medium">Group</div>
-    </Link>);
+    </Link>
+  );
 };
