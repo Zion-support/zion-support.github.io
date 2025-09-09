@@ -1,6 +1,31 @@
 import type { GetStaticProps, GetStaticPaths } from 'next'; // Updated import
 import type { ProductListing } from '@/types/listings';
 import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
+import { INITIAL_MARKETPLACE_PRODUCTS } from '@/data/initialMarketplaceProducts';
+import { SERVICES } from '@/data/servicesData';
+import * as Sentry from '@sentry/nextjs';
+import Head from 'next/head';
+import Link from 'next/link';
+import { RatingStars } from '@/components/RatingStars';
+import ProductReviews from '@/components/ProductReviews';
+import { ProductGallery } from '@/components/gallery/ProductGallery';
+import { useRouter } from 'next/router';
+import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem } from '@/store/cartSlice';
+import { toast } from '@/hooks/use-toast';
+import { getBreadcrumbsForPath } from '@/utils/routeUtils';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
+import { logInfo, logWarn, logError } from '@/utils/productionLogger';
+import { fetchProducts, validateProductData, ensureProductIntegrity } from '@/services/marketplace';
+// import { AppLayout } from '@/layout/AppLayout'; // Unused
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
 
 // Define ProductWithReviewStats here or import from a shared types file
 // This should match the type returned by `/api/products/[productId]/details`
@@ -21,18 +46,23 @@ interface RatingStarsProps {
   count?: number;
 }
 
-const ListingPage: React.FC<ListingProps> = ({ listing }) => {
+const ListingPage: React.FC<ListingPageProps> = ({ listing }) => {
+  const router = useRouter();
+  const dispatch = useDispatch<AppDispatch>(); // Moved hook to the top
+  
   if (!listing) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Listing Not Found</h1>
-          <p className="text-gray-600 mb-8">The listing you're looking for doesn't exist.</p>
-          <Link href="/marketplace" className="text-blue-600 hover:text-blue-800">
-            ← Back to Marketplace
-          </Link>
-        </div>
-      </div>
+    return <div className="max-w-3xl mx-auto py-8 px-4">Listing not found.</div>;
+  }
+
+  const canonicalUrl = `/marketplace/listing/${listing.id}`;
+  const breadcrumbs = getBreadcrumbsForPath(canonicalUrl);
+  // const dispatch = useDispatch<AppDispatch>(); // Original position
+
+  const handleAddToCart = () => {
+    // Ensure listing is not null before accessing its properties, though the early return should cover this.
+    if (!listing) return;
+    dispatch(
+      addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
     );
   }
 

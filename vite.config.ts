@@ -139,61 +139,7 @@ export default defineConfig({
 
   // Enhanced server configuration
   server: {
-    port: 3000,
-    host: true,
-    open: !isCI,
-    cors: true,
-    hmr: {
-      overlay: true,
-    },
-    // Optimize file watching
-    watch: {
-      usePolling: false,
-      interval: 100,
-    },
-  },
-
-  // Optimize dependencies
-  optimizeDeps: {
-    include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-      'axios',
-      'date-fns',
-      'framer-motion',
-      'lucide-react',
-      '@tanstack/react-query',
-      '@radix-ui/react-slot',
-      'clsx',
-      'tailwind-merge',
-    ],
-    exclude: ['@vite/client', '@vite/env'],
-    force: isDev,
-  },
-
-  // CSS configuration
-  css: {
-    devSourcemap: isDev,
-    // Enable CSS code splitting
-    modules: {
-      localsConvention: 'camelCase',
-    },
-  },
-
-  // Environment variables
-  define: {
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
-    'import.meta.env.DEV': isDev,
-    'import.meta.env.PROD': isProd,
-  },
-
-  // Performance optimizations
-  esbuild: {
-    target: 'esnext',
-    logLevel: 'error',
-    // Only drop console in production
-    drop: isProd ? ['console', 'debugger'] : [],
-    pure: isProd ? ['console.log', 'console.info', 'console.debug'] : [],
+    port: 5174,
+    // allowedHosts: ['devserver-preview--ziontechgroup.netlify.app'],
   },
 });

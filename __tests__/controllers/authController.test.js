@@ -1,19 +1,19 @@
-import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
-// Removed unused import: createClient
-import User from '../models/User';
-import { loginUser, registerUser } from '../../server/controllers/authController';
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+const { loginUser, registerUser } = require('../../server/controllers/authController');
+const User = require('../../server/models/User');
+const { vi, describe, it, expect, beforeEach } = require('vitest');
 
-jest.mock('../../server/models/User');
-jest.mock('bcryptjs');
-jest.mock('jsonwebtoken');
+vi.mock('../../server/models/User');
+vi.mock('bcryptjs');
+vi.mock('jsonwebtoken');
 
 describe('authController.loginUser', () => {
   const req = { body: { email: 'test@example.com', password: 'Password123' } };
-  const res = { status: jest.fn().mockReturnThis(), json: jest.fn() };
+  const res = { status: vi.fn().mockReturnThis(), json: vi.fn() };
 
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it('returns token when credentials are valid', async () => {
@@ -69,10 +69,10 @@ describe('authController.loginUser', () => {
 
 describe('authController.registerUser', () => {
   const req = { body: { name: 'Test', email: 'test@example.com', password: 'Password123' } };
-  const res = { status: jest.fn().mockReturnThis(), json: jest.fn() };
+  const res = { status: vi.fn().mockReturnThis(), json: vi.fn() };
 
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it('creates a new user and returns access token', async () => {
