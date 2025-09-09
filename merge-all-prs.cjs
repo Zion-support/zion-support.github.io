@@ -189,18 +189,17 @@ function createGitHubPRAutomation() {
 
 const { execSync } = require('child_process');
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN || 'ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY';
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const REPO_OWNER = 'Zion-Holdings';
 const REPO_NAME = 'zion.app';
 
 function githubAPI(endpoint, method = 'GET', data = null) {
+  if (!GITHUB_TOKEN) {
+    throw new Error('Missing GITHUB_TOKEN');
+  }
   const url = \`https://api.github.com/repos/\${REPO_OWNER}/\${REPO_NAME}\${endpoint}\`;
   
-  let curlCommand = \`curl -s -X \${method} \\
-    -H "Authorization: token \${GITHUB_TOKEN}" \\
-    -H "Accept: application/vnd.github.v3+json" \\
-    -H "Content-Type: application/json" \\
-    "\${url}"\`;
+  let curlCommand = \`curl -s -X \${method} \\\n    -H "Authorization: token \${GITHUB_TOKEN}" \\\n    -H "Accept: application/vnd.github.v3+json" \\\n    -H "Content-Type: application/json" \\\n    "\${url}"\`;
   
   if (data) {
     curlCommand += \` -d '\${JSON.stringify(data)}'\`;
@@ -216,7 +215,7 @@ function githubAPI(endpoint, method = 'GET', data = null) {
 }
 
 function listOpenPRs() {
-  console.log('\\n🔍 Fetching open pull requests...');
+  console.log('\n🔍 Fetching open pull requests...');
   const prs = githubAPI('/pulls?state=open&per_page=100');
   
   if (prs && Array.isArray(prs)) {
@@ -229,7 +228,7 @@ function listOpenPRs() {
 }
 
 function mergePR(prNumber, title) {
-  console.log(\`\\n🔄 Merging PR #\${prNumber}: \${title}\`);
+  console.log(\`\n🔄 Merging PR #\${prNumber}: \${title}\`);
   
   const mergeData = {
     commit_title: \`Merge PR #\${prNumber}: \${title}\`,
@@ -259,7 +258,7 @@ function processOpenPRs() {
   let failedCount = 0;
   
   for (const pr of openPRs) {
-    console.log(\`\\n📋 Processing PR #\${pr.number}: \${pr.title}\`);
+    console.log(\`\n📋 Processing PR #\${pr.number}: \${pr.title}\`);
     console.log(\`   Author: \${pr.user.login}\`);
     console.log(\`   State: \${pr.state}\`);
     console.log(\`   Head: \${pr.head.ref} -> Base: \${pr.base.ref}\`);
@@ -271,7 +270,7 @@ function processOpenPRs() {
     }
   }
   
-  console.log(\`\\n📊 PR Processing Summary:\`);
+  console.log('\n📊 PR Processing Summary:');
   console.log(\`✅ Successfully merged: \${mergedCount} PRs\`);
   console.log(\`❌ Failed to process: \${failedCount} PRs\`);
 }
@@ -297,7 +296,7 @@ console.log('🔧 Running comprehensive syntax fixer...');
 
 function fixSyntaxErrors() {
   const files = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" | head -100', { encoding: 'utf8' })
-    .split('\\n')
+    .split('\n')
     .filter(f => f.trim());
   
   let fixedCount = 0;
@@ -308,7 +307,7 @@ function fixSyntaxErrors() {
       let originalContent = content;
       
       // Fix common syntax issues
-      content = content.replace(/import React from "react",/g, 'import React from "react";');
+      content = content.replace(/import React from \"react\",/g, 'import React from \"react\";');
       content = content.replace(/import Head from 'next\\/head',/g, "import Head from 'next/head';");
       content = content.replace(/import Link from 'next\\/link',/g, "import Link from 'next/link';");
       content = content.replace(/} from 'lucide-react',/g, "} from 'lucide-react';");
@@ -324,7 +323,7 @@ function fixSyntaxErrors() {
     }
   }
   
-  console.log(\`\\n📊 Fixed \${fixedCount} files\`);
+  console.log(\`\n📊 Fixed \${fixedCount} files\`);
 }
 
 fixSyntaxErrors();`,
