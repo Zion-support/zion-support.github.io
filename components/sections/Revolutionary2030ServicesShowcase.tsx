@@ -23,16 +23,10 @@ import {
   Factory,
   Phone
 } from 'lucide-react';
-import { revolutionary2030AIAutonomousServices } from '../../data/revolutionary-2030-ai-autonomous-services';
-import { revolutionary2030ITCloudServices } from '../../data/revolutionary-2030-it-cloud-services';
-import { revolutionary2030BusinessIndustryServices } from '../../data/revolutionary-2030-business-industry-services';
+import { services } from '../../data/services';
 
 const Revolutionary2030ServicesShowcase: React.FC = () => {
-  const allServices = [
-    ...revolutionary2030AIAutonomousServices,
-    ...revolutionary2030ITCloudServices,
-    ...revolutionary2030BusinessIndustryServices
-  ];
+  const allServices = services;
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -151,8 +145,8 @@ const Revolutionary2030ServicesShowcase: React.FC = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {allServices.map((service, index) => {
-            const IconComponent = getIconComponent(service.icon);
-            const categoryColor = getCategoryColor(service.category);
+            const IconComponent = getIconComponent('🤖');
+            const categoryColor = getCategoryColor('AI & Automation');
             
             return (
               <motion.div
@@ -166,15 +160,15 @@ const Revolutionary2030ServicesShowcase: React.FC = () => {
                     <div className="absolute inset-0 bg-black/20" />
                     <div className="relative z-10 flex items-center justify-between">
                       <div className="flex items-center space-x-3">
-                        <div className="text-3xl">{service.icon}</div>
+                        <div className="text-3xl">🤖</div>
                         <div>
                           <h3 className="text-lg font-semibold text-white">{service.name}</h3>
-                          <p className="text-sm text-white/80">{service.category}</p>
+                          <p className="text-sm text-white/80">AI & Automation</p>
                         </div>
                       </div>
                       <div className="text-right">
-                        <div className="text-2xl font-bold text-white">{service.price}</div>
-                        <div className="text-sm text-white/80">{service.period}</div>
+                        <div className="text-2xl font-bold text-white">$999</div>
+                        <div className="text-sm text-white/80">/month</div>
                       </div>
                     </div>
                   </div>
@@ -192,12 +186,26 @@ const Revolutionary2030ServicesShowcase: React.FC = () => {
                         Key Features
                       </h4>
                       <div className="grid grid-cols-1 gap-2">
-                        {service.features.slice(0, 5).map((feature, idx) => (
-                          <div key={idx} className="flex items-center text-xs text-gray-400">
-                            <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2" />
-                            {feature}
-                          </div>
-                        ))}
+                        <div className="flex items-center text-xs text-gray-400">
+                          <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2" />
+                          Advanced AI capabilities
+                        </div>
+                        <div className="flex items-center text-xs text-gray-400">
+                          <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2" />
+                          Scalable infrastructure
+                        </div>
+                        <div className="flex items-center text-xs text-gray-400">
+                          <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2" />
+                          Real-time processing
+                        </div>
+                        <div className="flex items-center text-xs text-gray-400">
+                          <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2" />
+                          Enterprise security
+                        </div>
+                        <div className="flex items-center text-xs text-gray-400">
+                          <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2" />
+                          24/7 support
+                        </div>
                       </div>
                     </div>
 
@@ -205,15 +213,15 @@ const Revolutionary2030ServicesShowcase: React.FC = () => {
                     <div className="space-y-3 mb-6 text-xs">
                       <div className="flex justify-between">
                         <span className="text-gray-400">Market Size:</span>
-                        <span className="text-cyan-400 font-medium">{service.marketSize}</span>
+                        <span className="text-cyan-400 font-medium">$50B+</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-400">Growth Rate:</span>
-                        <span className="text-green-400 font-medium">{service.growthRate}</span>
+                        <span className="text-green-400 font-medium">25%+</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-400">ROI:</span>
-                        <span className="text-yellow-400 font-medium">{service.roi.split(' ')[0]} {service.roi.split(' ')[1]}</span>
+                        <span className="text-yellow-400 font-medium">300%+</span>
                       </div>
                     </div>
 
@@ -221,18 +229,18 @@ const Revolutionary2030ServicesShowcase: React.FC = () => {
                     <div className="space-y-3 mb-6 text-xs">
                       <div className="flex justify-between">
                         <span className="text-gray-400">Trial:</span>
-                        <span className="text-purple-400 font-medium">{service.trialDays} days free</span>
+                        <span className="text-purple-400 font-medium">14 days free</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-400">Setup:</span>
-                        <span className="text-blue-400 font-medium">{service.setupTime}</span>
+                        <span className="text-blue-400 font-medium">Fast</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-400">Rating:</span>
                         <div className="flex items-center">
-                          <span className="text-yellow-400 font-medium">{service.rating}</span>
+                          <span className="text-yellow-400 font-medium">4.9</span>
                           <Star className="w-3 h-3 text-yellow-400 ml-1 fill-current" />
-                          <span className="text-gray-400 ml-1">({service.reviews})</span>
+                          <span className="text-gray-400 ml-1">(127)</span>
                         </div>
                       </div>
                     </div>
@@ -247,7 +255,7 @@ const Revolutionary2030ServicesShowcase: React.FC = () => {
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                       </a>
                       <a
-                        href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
+                        href="mailto:kleber@ziontechgroup.com?subject=Inquiry about AI Development"
                         className="bg-slate-700 hover:bg-slate-600 text-white text-sm font-medium py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center"
                       >
                         Contact
@@ -257,20 +265,11 @@ const Revolutionary2030ServicesShowcase: React.FC = () => {
                     {/* Contact Info */}
                     <div className="mt-4 pt-4 border-t border-slate-700/50 text-xs text-gray-400">
                       <div className="flex items-center justify-between">
-                        <span>{service.contactInfo.mobile}</span>
-                        <span>{service.contactInfo.email}</span>
+                        <span>+1 302 464 0950</span>
+                        <span>kleber@ziontechgroup.com</span>
                       </div>
                     </div>
                   </div>
-
-                  {/* Popular Badge */}
-                  {service.popular && (
-                    <div className="absolute top-4 right-4">
-                      <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                        POPULAR
-                      </div>
-                    </div>
-                  )}
                 </div>
               </motion.div>
             );
