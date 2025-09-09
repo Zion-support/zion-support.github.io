@@ -1,11 +1,10 @@
 import js from "@eslint/js";
 import globals from "globals";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
-import tseslint from "@typescript-eslint/eslint-plugin";
-import tsparser from "@typescript-eslint/parser";
-import react from "eslint-plugin-react";
-import jsxA11y from "eslint-plugin-jsx-a11y";
+import tseslint from "typescript-eslint";
+import pluginReact from "eslint-plugin-react";
+import pluginReactHooks from "eslint-plugin-react-hooks";
+import eslintConfigPrettier from "eslint-config-prettier";
+// import eslintConfigNext from 'eslint-config-next';
 
 export default [
   {
@@ -145,7 +144,10 @@ export default [
       "**/ultimate-*"
     ]
   },
-  js.configs.recommended,
+
+  // eslintConfigNext,
+
+  // Fallback for problematic files (non-type-aware TS linting)
   {
     files: ["**/*.{js,jsx}"],
     languageOptions: {
