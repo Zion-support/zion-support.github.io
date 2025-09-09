@@ -10,20 +10,12 @@ import { AuthProvider } from './hooks/useAuth';
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
-const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const PartnersPage = React.lazy(() => import('./pages/Partners'));
-const Login = React.lazy(() => import('./pages/Login'));
-const FAQ = React.lazy(() => import('./pages/FAQ'));
-const Careers = React.lazy(() => import('./pages/Careers'));
-const Privacy = React.lazy(() => import('./pages/Privacy'));
-const Terms = React.lazy(() => import('./pages/Terms'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
-const Help = React.lazy(() => import('./pages/Help'));
-const Status = React.lazy(() => import('./pages/Status'));
-const Security = React.lazy(() => import('./pages/Security'));
+const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
+
+// Lazy load service pages
+const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const QuantumDataAnalytics = React.lazy(() => import('./pages/services/QuantumDataAnalytics'));
+const BlockchainInfrastructure = React.lazy(() => import('./pages/services/BlockchainInfrastructure'));
 
 // New service pages
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
@@ -112,46 +104,12 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/green-it" element={<GreenIT />} />
-              <Route path="/partners" element={<PartnersPage />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/enhanced-services" element={<EnhancedServices />} />
+              <Route path="/services" element={<ServicesOverview />} />
               
-              {/* AI Services Routes */}
-              <Route path="/ai-services" element={<AIServicesPage />} />
-              <Route path="/ai-services/:service" element={<AIServicesPage />} />
-              
-              {/* Micro SAAS Routes */}
-              <Route path="/micro-saas" element={<MicroSAASServicesPage />} />
-              <Route path="/micro-saas/:service" element={<MicroSAASServicesPage />} />
-              
-              {/* IT Services Routes */}
-              <Route path="/it-services" element={<ITServicesPage />} />
-              <Route path="/it-services/:service" element={<ITServicesPage />} />
-              
-              {/* Innovative Services 2027 Routes */}
-              <Route path="/innovative-services-2027" element={<InnovativeServicesShowcase2027 />} />
-              <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview2027 />} />
-              <Route path="/comprehensive-pricing-guide" element={<ComprehensivePricingGuide2027 />} />
-              <Route path="/enhanced-innovative-services-2027" element={<EnhancedInnovativeServicesShowcase2027 />} />
-              
-              {/* Revolutionary 2029 Services Routes */}
-              <Route path="/revolutionary-2029-services" element={<Revolutionary2029ServicesOverview />} />
-              
-              {/* Emerging Tech Routes */}
-              <Route path="/emerging-tech" element={<GreenIT />} />
-              <Route path="/emerging-tech/:service" element={<GreenIT />} />
-              
-              {/* Marketplace Routes */}
-              <Route path="/marketplace" element={<GreenIT />} />
-              <Route path="/marketplace/:service" element={<GreenIT />} />
+              {/* Service Routes */}
+              <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+              <Route path="/services/quantum-data-analytics" element={<QuantumDataAnalytics />} />
+              <Route path="/services/blockchain-infrastructure" element={<BlockchainInfrastructure />} />
             </Routes>
           </Suspense>
         </main>

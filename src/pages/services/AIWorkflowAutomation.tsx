@@ -2,78 +2,52 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Zap, 
   Brain, 
+  Zap, 
   Workflow, 
-  Target, 
+  Bot, 
   TrendingUp, 
   Shield, 
   Clock, 
-  Users, 
-  BarChart3, 
-  Cpu,
-  Database,
-  Globe,
-  Rocket,
+  DollarSign,
   CheckCircle,
-  Star,
   ArrowRight,
   Play,
-  Pause,
   Settings,
-  Monitor,
-  AlertTriangle,
-  FileText,
-  Code,
-  Palette,
-  MessageSquare,
-  Calendar,
-  Mail,
-  Phone,
-  MapPin
+  BarChart3,
+  Users,
+  Globe
 } from 'lucide-react';
 
 const AIWorkflowAutomation: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "Intelligent Process Recognition",
-      description: "AI-powered identification and mapping of complex business workflows",
-      benefits: ["Automated process discovery", "Smart workflow optimization", "Real-time process analysis"]
-    },
-    {
-      icon: Workflow,
-      title: "Visual Workflow Designer",
-      description: "Drag-and-drop interface for creating and modifying automation workflows",
-      benefits: ["No-code workflow creation", "Visual process mapping", "Interactive workflow editing"]
+      title: "Intelligent Process Mapping",
+      description: "AI-powered analysis of existing workflows to identify optimization opportunities",
+      benefits: ["Automated process discovery", "Efficiency analysis", "Bottleneck identification", "ROI calculation"]
     },
     {
       icon: Zap,
-      title: "Smart Automation Triggers",
-      description: "Intelligent event-driven automation based on business rules and conditions",
-      benefits: ["Event-based triggers", "Conditional logic", "Multi-step automation"]
+      title: "Smart Automation Rules",
+      description: "Machine learning algorithms that adapt and improve automation rules over time",
+      benefits: ["Self-learning automation", "Predictive workflows", "Dynamic rule adjustment", "Performance optimization"]
     },
     {
-      icon: Target,
-      title: "Predictive Analytics",
-      description: "AI-driven insights to optimize workflow performance and efficiency",
-      benefits: ["Performance forecasting", "Bottleneck identification", "Optimization recommendations"]
+      icon: Workflow,
+      title: "Cross-Platform Integration",
+      description: "Seamless integration with existing business tools and platforms",
+      benefits: ["API-first architecture", "Pre-built connectors", "Custom integrations", "Real-time sync"]
     },
     {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-level security with role-based access control and audit trails",
-      benefits: ["SOC 2 compliance", "End-to-end encryption", "Comprehensive audit logs"]
-    },
-    {
-      icon: Monitor,
-      title: "Real-time Monitoring",
-      description: "Live dashboard for tracking workflow execution and performance metrics",
-      benefits: ["Live status updates", "Performance metrics", "Alert notifications"]
+      icon: Bot,
+      title: "Intelligent Chatbots",
+      description: "AI-powered customer service and internal support automation",
+      benefits: ["Natural language processing", "Context awareness", "Multi-language support", "24/7 availability"]
     }
   ];
 
-  const pricingPlans = [
+  const pricing = [
     {
       name: "Starter",
       price: "$299",
@@ -81,130 +55,108 @@ const AIWorkflowAutomation: React.FC = () => {
       description: "Perfect for small teams getting started with automation",
       features: [
         "Up to 10 workflows",
-        "Basic AI capabilities",
-        "Standard integrations",
+        "Basic AI templates",
         "Email support",
+        "Standard integrations",
         "Basic analytics"
       ],
-      popular: false,
-      cta: "Start Free Trial"
+      cta: "Start Free Trial",
+      popular: false
     },
     {
       name: "Professional",
       price: "$799",
       period: "/month",
-      description: "Ideal for growing businesses with advanced automation needs",
+      description: "Advanced features for growing businesses",
       features: [
         "Up to 50 workflows",
-        "Advanced AI features",
-        "Premium integrations",
+        "Advanced AI models",
         "Priority support",
+        "Custom integrations",
         "Advanced analytics",
-        "Custom templates"
+        "Team collaboration"
       ],
-      popular: true,
-      cta: "Start Free Trial"
+      cta: "Start Free Trial",
+      popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
-      period: "/month",
-      description: "For large organizations requiring enterprise-grade automation",
+      price: "Custom",
+      period: "",
+      description: "Full-scale automation for large organizations",
       features: [
         "Unlimited workflows",
-        "Full AI capabilities",
-        "Custom integrations",
+        "Custom AI models",
         "Dedicated support",
-        "Enterprise analytics",
-        "Custom development",
-        "SLA guarantees"
+        "White-label solution",
+        "Advanced security",
+        "Custom training"
       ],
-      popular: false,
-      cta: "Contact Sales"
+      cta: "Contact Sales",
+      popular: false
     }
   ];
 
   const useCases = [
     {
-      title: "Customer Service Automation",
+      title: "Customer Service",
       description: "Automate ticket routing, response generation, and follow-up processes",
-      icon: MessageSquare,
-      roi: "300%",
-      timeSaved: "8 hours/day"
-    },
-    {
-      title: "Sales Process Automation",
-      description: "Streamline lead qualification, proposal generation, and contract management",
-      icon: Target,
-      roi: "250%",
-      timeSaved: "6 hours/day"
-    },
-    {
-      title: "HR Workflow Automation",
-      description: "Automate recruitment, onboarding, and employee lifecycle management",
       icon: Users,
-      roi: "200%",
-      timeSaved: "5 hours/day"
+      roi: "40% reduction in response time"
     },
     {
-      title: "Financial Process Automation",
+      title: "Sales Operations",
+      description: "Streamline lead qualification, follow-up sequences, and deal tracking",
+      icon: TrendingUp,
+      roi: "35% increase in conversion rate"
+    },
+    {
+      title: "HR Processes",
+      description: "Automate recruitment, onboarding, and employee management workflows",
+      icon: Users,
+      roi: "50% faster hiring process"
+    },
+    {
+      title: "Financial Operations",
       description: "Automate invoice processing, expense approvals, and financial reporting",
-      icon: BarChart3,
-      roi: "400%",
-      timeSaved: "10 hours/day"
+      icon: DollarSign,
+      roi: "60% reduction in processing time"
     }
-  ];
-
-  const technologies = [
-    { name: "Machine Learning", description: "Advanced ML algorithms for process optimization", icon: Brain },
-    { name: "Natural Language Processing", description: "AI-powered text analysis and generation", icon: FileText },
-    { name: "Computer Vision", description: "Image and document processing automation", icon: Palette },
-    { name: "Predictive Analytics", description: "Data-driven insights and forecasting", icon: TrendingUp },
-    { name: "Robotic Process Automation", description: "Rule-based task automation", icon: Cpu },
-    { name: "API Integration", description: "Seamless connectivity with existing systems", icon: Code }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan/20 rounded-full animate-pulse"></div>
-            <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-blue/20 rounded-full animate-pulse delay-2000"></div>
-          </div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <motion.div
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 animate-pulse-slow"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,212,255,0.1),transparent_50%)]"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
               AI-Powered Automation
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Workflow <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Automation</span>
+            
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              AI Workflow Automation
             </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8 leading-relaxed">
-              Transform your business operations with intelligent, AI-driven workflow automation. 
-              Reduce manual tasks by up to 80% and increase productivity across all departments.
+            
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business operations with intelligent automation that learns, adapts, and scales with your needs
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2" />
                 Start Free Trial
-              </Link>
-              <button className="inline-flex items-center px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan/10 transition-all duration-300">
-                <Play className="w-5 h-5 mr-2" />
+              </button>
+              <button className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300">
                 Watch Demo
               </button>
             </div>
@@ -212,51 +164,43 @@ const AIWorkflowAutomation: React.FC = () => {
         </div>
       </section>
 
-      {/* Key Benefits */}
-      <section className="py-20 bg-zion-slate-dark">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">AI Workflow Automation</span>
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Intelligent Automation Features
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Experience unprecedented efficiency and productivity gains with our intelligent automation platform
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Leverage cutting-edge AI to automate complex business processes with unprecedented intelligence
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group"
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
               >
-                <div className="bg-gradient-to-br from-zion-slate to-zion-slate-dark p-8 rounded-2xl border border-zion-slate-light hover:border-zion-cyan/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25">
-                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
-                    {feature.title}
-                  </h3>
-                  <p className="text-zion-slate-light mb-4 leading-relaxed">
-                    {feature.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-zion-slate-light">
-                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
+                
+                <h3 className="text-2xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-400 mb-6">{feature.description}</p>
+                
+                <ul className="space-y-3">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
@@ -264,162 +208,107 @@ const AIWorkflowAutomation: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gradient-to-br from-zion-slate to-zion-slate-dark">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Simple, <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Transparent Pricing</span>
+      <section className="py-20 bg-black/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Transparent Pricing
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Choose the plan that best fits your automation needs. All plans include a 14-day free trial.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your automation needs with no hidden fees
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricing.map((plan, index) => (
               <motion.div
                 key={index}
+                className={`relative p-8 rounded-xl border transition-all duration-300 hover:scale-105 ${
+                  plan.popular 
+                    ? 'bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-cyan-500/50' 
+                    : 'bg-slate-800/50 border-slate-700'
+                }`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative ${
-                  plan.popular 
-                    ? 'ring-2 ring-zion-cyan scale-105' 
-                    : ''
-                }`}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
-                <div className="bg-gradient-to-br from-zion-slate-dark to-zion-slate p-8 rounded-2xl border border-zion-slate-light hover:border-zion-cyan/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25">
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-zion-cyan">{plan.price}</span>
-                      <span className="text-zion-slate-light ml-1">{plan.period}</span>
-                    </div>
-                    <p className="text-zion-slate-light mt-2">{plan.description}</p>
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-semibold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-zion-slate-light">
-                        <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to={plan.name === "Enterprise" ? "/contact" : "/contact"}
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:shadow-lg hover:shadow-zion-cyan/25'
-                        : 'border border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10'
-                    }`}
-                  >
-                    {plan.cta}
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
+                  <p className="text-gray-400 mt-2">{plan.description}</p>
                 </div>
+                
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
+                    : 'bg-slate-700 text-white hover:bg-slate-600'
+                }`}>
+                  {plan.cta}
+                </button>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Use Cases */}
-      <section className="py-20 bg-zion-slate-dark">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Real-World <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Use Cases</span>
+      {/* Use Cases Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Real-World Applications
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              See how leading companies are transforming their operations with AI workflow automation
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See how AI workflow automation transforms different business functions
             </p>
-          </motion.div>
-
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group"
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
               >
-                <div className="bg-gradient-to-br from-zion-slate to-zion-slate-dark p-8 rounded-2xl border border-zion-slate-light hover:border-zion-cyan/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25">
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                      <useCase.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white">{useCase.title}</h3>
-                      <p className="text-zion-slate-light text-sm">{useCase.description}</p>
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                      <useCase.icon className="w-6 h-6 text-white" />
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="text-center p-4 bg-zion-cyan/10 rounded-xl">
-                      <div className="text-2xl font-bold text-zion-cyan">{useCase.roi}</div>
-                      <div className="text-sm text-zion-slate-light">ROI Increase</div>
-                    </div>
-                    <div className="text-center p-4 bg-zion-blue/10 rounded-xl">
-                      <div className="text-2xl font-bold text-zion-blue">{useCase.timeSaved}</div>
-                      <div className="text-sm text-zion-slate-light">Time Saved</div>
+                  
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>
+                    <p className="text-gray-400 mb-4">{useCase.description}</p>
+                    <div className="inline-flex items-center px-3 py-1 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm">
+                      <TrendingUp className="w-4 h-4 mr-2" />
+                      {useCase.roi}
                     </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technology Stack */}
-      <section className="py-20 bg-gradient-to-br from-zion-slate to-zion-slate-dark">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Powered by <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Cutting-Edge AI</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our platform leverages the latest advancements in artificial intelligence and machine learning
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group"
-              >
-                <div className="bg-gradient-to-br from-zion-slate-dark to-zion-slate p-6 rounded-2xl border border-zion-slate-light hover:border-zion-cyan/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25">
-                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <tech.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-2">{tech.name}</h3>
-                  <p className="text-zion-slate-light text-sm leading-relaxed">{tech.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -428,98 +317,22 @@ const AIWorkflowAutomation: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Automate</span> Your Workflows?
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Join thousands of companies already saving time and money with AI workflow automation
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan/10 transition-all duration-300"
-              >
-                Schedule Demo
-                <Calendar className="w-5 h-5 ml-2" />
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-20 bg-zion-slate-dark">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Get in <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Touch</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Ready to transform your business with AI workflow automation? Our experts are here to help.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
-              <p className="text-zion-cyan text-lg font-semibold">+1 302 464 0950</p>
-              <p className="text-zion-slate-light text-sm">Available 24/7</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
-              <p className="text-zion-cyan text-lg font-semibold">kleber@ziontechgroup.com</p>
-              <p className="text-zion-slate-light text-sm">Response within 2 hours</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
-              <p className="text-zion-slate-light text-sm">364 E Main St STE 1008</p>
-              <p className="text-zion-slate-light text-sm">Middletown DE 19709</p>
-            </motion.div>
+      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Automate Your Workflows?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join thousands of companies already saving time and money with intelligent automation
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+              Start Free Trial
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300">
+              Schedule Demo
+            </button>
           </div>
         </div>
       </section>

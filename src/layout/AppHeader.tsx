@@ -1,20 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, PanelLeft } from 'lucide-react';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { useAuth } from '@/hooks/useAuth';
-import { Logo } from '@/components/header/Logo';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, Search, User, Bell } from 'lucide-react';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  const { user, logout } = useAuth();
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,12 +15,11 @@ export function AppHeader() {
     }
   };
 
-  const navigationItems = [
-    { name: 'Services', href: '/services' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Blog', href: '/blog' },
+  const navigation = [
+    { name: 'Home', href: '/', current: location.pathname === '/' },
+    { name: 'About', href: '/about', current: location.pathname === '/about' },
+    { name: 'Services', href: '/services', current: location.pathname.startsWith('/services') },
+    { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
   ];
 
   return (
@@ -46,6 +37,23 @@ export function AppHeader() {
           
           <Logo />
           
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex ml-8 space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                  item.current 
+                    ? 'text-cyan-400 border-b-2 border-cyan-400' 
+                    : 'text-slate-300 hover:text-cyan-400'
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+
           {/* Search Bar - Hidden on mobile */}
           <div className="hidden md:flex ml-6 flex-1 max-w-md">
             <form onSubmit={handleSearch} className="relative w-full">
@@ -122,24 +130,36 @@ export function AppHeader() {
           </div>
         </div>
 
-        {/* Mobile Search Bar */}
-        {isMobile && (
-          <div className="lg:hidden px-4 pb-4">
-            <form onSubmit={handleSearch} className="relative">
-              <input
-                type="text"
-                placeholder="Search services, talent, equipment..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              />
-              <button
-                type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors"
-              >
-                <Search className="h-4 w-4" />
-              </button>
-            </form>
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 border-t border-slate-700/20">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
+                    item.current 
+                      ? 'text-cyan-400 bg-cyan-500/10 rounded-lg' 
+                      : 'text-slate-300 hover:text-cyan-400'
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              
+              {/* Mobile Search */}
+              <form onSubmit={handleSearch} className="px-3 py-2">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full bg-slate-700/50 border border-slate-600/50 rounded-lg px-3 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+              </form>
+            </div>
           </div>
         )}
       </header>
