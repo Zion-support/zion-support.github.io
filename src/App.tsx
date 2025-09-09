@@ -84,53 +84,7 @@ const baseRoutes = [
   { path: '/reset-password/:token', element: <ResetPassword /> },
 ];
 
-const App = () => {
-  console.log("App.tsx: Start");
-  // Ensure each navigation starts at the top of the page
-  useScrollToTop();
-  console.log("App.tsx: Rendering Tree");
-  return (
-    <ErrorBoundary
-      FallbackComponent={RootErrorFallback}
-      onError={(error, info) => {
-        captureException(error);
-        if (info?.componentStack) captureException(info.componentStack);
-      }}
-    >
-      <WhitelabelProvider>
-        <WalletProvider> {/* Added WalletProvider */}
-          <ThemeProvider defaultTheme="dark">
-            <ToastProvider>
-            <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
-              <LocalErrorBoundary>
-          <Routes>
-            {baseRoutes.map(({ path, element }) => (
-              <Route key={path} path={path} element={element} />
-            ))}
-            <Route path="/auth/*" element={<AuthRoutes />} />
-            <Route path="/dashboard/*" element={<DashboardRoutes />} />
-            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
-            <Route path="/talent/*" element={<TalentRoutes />} />
-            <Route path="/admin/*" element={<AdminRoutes />} />
-            <Route path="/mobile/*" element={<MobileAppRoutes />} />
-            <Route path="/content/*" element={<ContentRoutes />} />
-            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
-            <Route path="/community/*" element={<CommunityRoutes />} />
-            <Route path="/developers/*" element={<DeveloperRoutes />} />
-            <Route path="*" element={<ErrorRoutes />} />
-          </Routes>
-              </LocalErrorBoundary>
-        </Suspense>
-        <OfflineToast />
-        <SupportChatbot />
-        <InstallPrompt />
-          </ToastProvider>
-      </ThemeProvider>
-        </WalletProvider> {/* Added WalletProvider closing tag */}
-    </WhitelabelProvider>
-    </ErrorBoundary>
-  );
-};
+// Removed duplicate App declaration (un-memoized version)
 
 // Create QueryClient instance with optimized settings
 const queryClient = new QueryClient({

@@ -12,7 +12,6 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      // Removed "@/pages/*": ["./src/pages/*"] as it's likely incorrect for Next.js pages directory
       "axios": ["./src/lib/axios.ts"]
     },
     "types": ["vite/client", "react", "react-router-dom", "socket.io", "socket.io-client", "vitest/globals"],
@@ -44,12 +43,6 @@
     "incremental": true,
     "noEmitOnError": false,
     /* Path mapping */
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
     "plugins": [
       {
         "name": "next"
