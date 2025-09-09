@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  BarChart3, 
-  TrendingUp, 
+  Cpu, 
+  Wifi, 
+  Database, 
   Zap, 
   CheckCircle,
   ArrowRight,
@@ -12,46 +12,48 @@ import {
   MessageCircle,
   Globe,
   Server,
+  BarChart3,
   Settings,
   Code,
   Package,
   Monitor,
   Network,
-  Lock,
-  Users,
   Activity,
   Layers,
   PieChart,
-  Target
+  Target,
+  Cloud,
+  Shield,
+  TrendingUp
 } from 'lucide-react';
 
-const AIBusinessIntelligence: React.FC = () => {
+const IoTEdge: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Analytics',
-      description: 'Advanced machine learning algorithms for predictive insights and trend analysis.',
+      icon: Cpu,
+      title: 'Edge Computing',
+      description: 'Process data locally at the edge for faster response times and reduced latency.',
       color: 'text-blue-400',
       bgColor: 'bg-blue-600/20'
     },
     {
-      icon: BarChart3,
-      title: 'Real-time Dashboards',
-      description: 'Interactive dashboards with live data visualization and customizable widgets.',
+      icon: Wifi,
+      title: 'IoT Connectivity',
+      description: 'Connect and manage thousands of IoT devices with reliable communication.',
       color: 'text-green-400',
       bgColor: 'bg-green-600/20'
     },
     {
-      icon: TrendingUp,
-      title: 'Predictive Modeling',
-      description: 'Forecast future trends and outcomes using historical data and AI algorithms.',
+      icon: Database,
+      title: 'Data Processing',
+      description: 'Real-time data processing and analytics at the edge.',
       color: 'text-purple-400',
       bgColor: 'bg-purple-600/20'
     },
     {
       icon: Zap,
-      title: 'Automated Reporting',
-      description: 'Generate comprehensive reports automatically with intelligent insights.',
+      title: 'Automation',
+      description: 'Automate IoT operations and edge computing workflows.',
       color: 'text-orange-400',
       bgColor: 'bg-orange-600/20'
     }
@@ -59,75 +61,75 @@ const AIBusinessIntelligence: React.FC = () => {
 
   const capabilities = [
     {
-      title: 'Data Integration',
-      description: 'Connect to multiple data sources including databases, APIs, and cloud services.',
-      icon: Network,
-      features: ['Database connectors', 'API integration', 'Cloud storage', 'Real-time sync']
-    },
-    {
-      title: 'Advanced Analytics',
-      description: 'Deep dive into your data with statistical analysis and machine learning.',
-      icon: PieChart,
-      features: ['Statistical analysis', 'ML algorithms', 'Pattern recognition', 'Anomaly detection']
-    },
-    {
-      title: 'Custom Dashboards',
-      description: 'Build personalized dashboards tailored to your business needs.',
+      title: 'Device Management',
+      description: 'Centralized management of IoT devices and edge computing nodes.',
       icon: Monitor,
-      features: ['Drag & drop builder', 'Custom widgets', 'Role-based access', 'Mobile responsive']
+      features: ['Device provisioning', 'Remote monitoring', 'Firmware updates', 'Health monitoring']
     },
     {
-      title: 'Collaborative Insights',
-      description: 'Share insights and collaborate with team members across your organization.',
-      icon: Users,
-      features: ['Team sharing', 'Comment system', 'Export options', 'Scheduled reports']
+      title: 'Data Analytics',
+      description: 'Real-time analytics and insights from IoT and edge data.',
+      icon: BarChart3,
+      features: ['Stream processing', 'Predictive analytics', 'Data visualization', 'Machine learning']
+    },
+    {
+      title: 'Security & Privacy',
+      description: 'Enterprise-grade security for IoT devices and edge computing.',
+      icon: Shield,
+      features: ['Device authentication', 'Data encryption', 'Access control', 'Privacy compliance']
+    },
+    {
+      title: 'Integration',
+      description: 'Seamless integration with existing systems and cloud platforms.',
+      icon: Network,
+      features: ['API integration', 'Cloud connectivity', 'Protocol support', 'Custom connectors']
     }
   ];
 
   const benefits = [
     {
-      title: 'Data-Driven Decisions',
-      description: 'Make informed decisions based on real-time data and AI-powered insights.',
-      icon: Target,
-      metric: 'Better Decisions'
-    },
-    {
-      title: 'Time Savings',
-      description: 'Automate reporting and analysis tasks to focus on strategic initiatives.',
+      title: 'Reduced Latency',
+      description: 'Process data locally for faster response times and real-time insights.',
       icon: Zap,
-      metric: '80% Time Saved'
+      metric: '90% Faster'
     },
     {
-      title: 'Cost Reduction',
-      description: 'Identify inefficiencies and optimize operations to reduce costs.',
+      title: 'Cost Efficiency',
+      description: 'Reduce bandwidth costs and cloud computing expenses.',
+      icon: Target,
+      metric: '40% Cost Savings'
+    },
+    {
+      title: 'Scalability',
+      description: 'Easily scale from hundreds to millions of connected devices.',
       icon: TrendingUp,
-      metric: '25% Cost Reduction'
+      metric: 'Millions of Devices'
     },
     {
-      title: 'Competitive Advantage',
-      description: 'Gain insights that give you an edge over competitors.',
-      icon: Star,
-      metric: 'Competitive Edge'
+      title: 'Reliability',
+      description: 'Operate independently even when cloud connectivity is limited.',
+      icon: Shield,
+      metric: '99.9% Uptime'
     }
   ];
 
   const testimonials = [
     {
-      name: 'Jennifer Martinez',
-      role: 'Data Analyst, TechCorp',
-      content: 'AI Business Intelligence transformed our reporting process and provided insights we never had before.',
-      rating: 5
-    },
-    {
       name: 'Robert Chen',
-      role: 'Operations Manager, RetailChain',
-      content: 'The predictive analytics helped us optimize inventory and increase sales by 30%.',
+      role: 'IoT Director, SmartCity Corp',
+      content: 'The IoT platform enabled us to connect and manage thousands of smart city devices efficiently.',
       rating: 5
     },
     {
-      name: 'Amanda Wilson',
-      role: 'CFO, StartupXYZ',
-      content: 'Real-time dashboards give us immediate visibility into our financial performance.',
+      name: 'Lisa Thompson',
+      role: 'CTO, Manufacturing Inc',
+      content: 'Edge computing reduced our response times and improved operational efficiency significantly.',
+      rating: 5
+    },
+    {
+      name: 'Michael Rodriguez',
+      role: 'VP Technology, Energy Corp',
+      content: 'Real-time analytics from IoT sensors transformed our monitoring and maintenance operations.',
       rating: 5
     }
   ];
@@ -144,18 +146,18 @@ const AIBusinessIntelligence: React.FC = () => {
         >
           <div className="flex justify-center mb-6">
             <div className="p-4 bg-blue-600/20 rounded-full">
-              <Brain className="h-16 w-16 text-blue-400" />
+              <Cpu className="h-16 w-16 text-blue-400" />
             </div>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Business
+            IoT & Edge
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              {" "}Intelligence
+              {" "}Computing
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your business data into actionable insights with AI-powered business intelligence. 
-            Make data-driven decisions and stay ahead of the competition.
+            Connect, manage, and process IoT devices with intelligent edge computing. 
+            Real-time insights, reduced latency, and scalable IoT solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -244,7 +246,7 @@ const AIBusinessIntelligence: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose AI BI?</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose IoT & Edge?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -307,10 +309,10 @@ const AIBusinessIntelligence: React.FC = () => {
           transition={{ duration: 0.6, delay: 1.4 }}
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl p-12 border border-blue-500/30">
-            <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">Ready to Connect Your World?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses using AI-powered business intelligence to make better decisions, 
-              optimize operations, and drive growth.
+              Join thousands of businesses using our platform to build intelligent IoT solutions 
+              and leverage the power of edge computing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -340,4 +342,4 @@ const AIBusinessIntelligence: React.FC = () => {
   );
 };
 
-export default AIBusinessIntelligence;
+export default IoTEdge;
