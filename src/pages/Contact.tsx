@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { toast } from "@/components/ui/use-toast";
+import { useToast } from "@/components/ui/use-toast";
 import z from "zod";
 import { ChatAssistant } from "@/components/ChatAssistant";
 import { logError } from "@/utils/logError";
@@ -15,75 +15,8 @@ import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Contact info card component
-const ContactInfoCard = memo<{ 
-  icon: string; 
-  title: string; 
-  details: string; 
-  action?: string;
-}>(({ icon, title, details, action }) => (
-  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-    <div className="text-4xl mb-4">{icon}</div>
-    <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
-    <p className="text-blue-200 mb-4">{details}</p>
-    {action && (
-      <a 
-        href={action} 
-        className="text-blue-400 hover:text-blue-300 font-semibold transition-colors"
-      >
-        {action}
-      </a>
-    )}
-  </div>
-));
-
-ContactInfoCard.displayName = 'ContactInfoCard';
-
-// Form input component
-const FormInput = memo<{
-  label: string;
-  type: string;
-  name: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
-  placeholder: string;
-  required?: boolean;
-  multiline?: boolean;
-}>(({ label, type, name, value, onChange, placeholder, required = false, multiline = false }) => (
-  <div>
-    <label htmlFor={name} className="block text-sm font-medium text-blue-200 mb-2">
-      {label} {required && <span className="text-red-400">*</span>}
-    </label>
-    {multiline ? (
-      <textarea
-        id={name}
-        name={name}
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}
-        required={required}
-        rows={4}
-        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-      />
-    ) : (
-      <input
-        type={type}
-        id={name}
-        name={name}
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}
-        required={required}
-        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-      />
-    )}
-  </div>
-));
-
-FormInput.displayName = 'FormInput';
-
-const Contact: React.FC = memo(() => {
-  const { addNotification } = useNotification();
+export default function Contact() {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -99,9 +32,48 @@ const Contact: React.FC = memo(() => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
+
+    const schema = z.object({
+      name: z.string().min(2, "Name must be at least 2 characters"),
+      email: z.string().email("Invalid email address"),
+      subject: z.string().min(2, "Subject must be at least 2 characters"),
+      message: z.string().min(10, "Message must be at least 10 characters"),
+    });
+
+    const result = schema.safeParse(formData);
+    if (!result.success) {
+      const fieldErrors: Record<string, string> = {};
+      for (const err of result.error.errors) {
+        if (err.path[0]) {
+          fieldErrors[err.path[0] as string] = err.message;
+        }
+      }
+      setErrors(fieldErrors);
+      toast("error", result.error.errors[0].message, {});
+      return;
+    }
+
+    setErrors({});
+
     // Simulate form submission
+    setIsSubmitting(true);
+
+    setTimeout(() => {
+      setIsSubmitting(false);
+      toast("success", "We've received your message and will get back to you soon.", {});
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    }, 1500);
+  };
+
+  // Handle sending messages to the AI chat assistant
+  const handleSendMessage = async (message: string): Promise<void> => {
     try {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
@@ -172,52 +144,20 @@ const Contact: React.FC = memo(() => {
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <div className="text-center py-20">
-        <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-purple-300 bg-clip-text text-transparent">
-          Contact Us
-        </h1>
-        <p className="text-2xl md:text-3xl text-blue-200 mb-4 font-light">
-          Let's Build Something Amazing Together
-        </p>
-        <p className="text-lg text-blue-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-          Ready to transform your business with cutting-edge technology? Get in touch with our expert team 
-          and let's discuss how we can help you achieve your goals.
-        </p>
-      </div>
-
-      {/* Contact Info Cards */}
-      <div className="max-w-6xl mx-auto px-4 mb-20">
-        <div className="grid md:grid-cols-3 gap-8">
-          <ContactInfoCard
-            icon="📧"
-            title="Email Us"
-            details="Send us an email and we'll respond within 24 hours"
-            action="mailto:contact@ziontechgroup.com"
-          />
-          <ContactInfoCard
-            icon="📞"
-            title="Call Us"
-            details="Speak directly with our team for immediate assistance"
-            action="tel:+1-555-0123"
-          />
-          <ContactInfoCard
-            icon="💬"
-            title="Live Chat"
-            details="Chat with us in real-time for instant support"
-            action="#"
-          />
-        </div>
-      </div>
-
-      {/* Contact Form */}
-      <div className="max-w-4xl mx-auto px-4 mb-20">
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-          <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold text-white mb-4">Get a Free Quote</h2>
-            <p className="text-blue-200">
-              Tell us about your project and we'll provide a detailed proposal
+    <>
+      <SEO
+        title="Contact Us | Zion Tech Group"
+        description="Get in touch with the Zion team for support, partnerships, or any questions about our AI and tech marketplace."
+        keywords="contact, support, Zion Tech Group, AI marketplace, tech services"
+        canonical="https://ziontechgroup.com/contact"
+      />
+              <Header />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <GradientHeading>Contact Us</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+              Get in touch with our team for support, partnerships, or any questions about our platform
             </p>
           </div>
 
@@ -371,8 +311,13 @@ const Contact: React.FC = memo(() => {
             </p>
           </div>
         </div>
-      </div>
-    </div>
+      </main>
+
+      {/* AI Chat Assistant */}
+      <ChatAssistant />
+
+      <Footer />
+    </>
   );
 });
 

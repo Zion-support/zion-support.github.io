@@ -1,92 +1,57 @@
-
 import React from 'react';
-import { GradientHeading } from "./GradientHeading";
-import { Check, Handshake, Search, Send } from 'lucide-react';
 
+export function HowItWorksSection() {
+  const steps = [
+    {
+      number: '01',
+      title: 'Assess Your Needs',
+      description: 'We start by understanding your business requirements and objectives'
+    },
+    {
+      number: '02',
+      title: 'Design Solution',
+      description: 'Our experts design a tailored solution that fits your specific needs'
+    },
+    {
+      number: '03',
+      title: 'Implement & Test',
+      description: 'We implement the solution and thoroughly test it for quality assurance'
+    },
+    {
+      number: '04',
+      title: 'Launch & Support',
+      description: 'Go live with ongoing support and maintenance from our team'
+    }
+  ];
 
-
-
-import { cn } from "@/lib/utils";
-import { useTranslation } from "react-i18next";
-
-interface HowItWorksSectionProps {
-  className?: string;
-  style?: React.CSSProperties;
-}
-
-const getSteps = (t: any) => [
-  {
-    title: t('how_it_works.post'),
-    description: t('how_it_works.post_desc'),
-    icon: Send,
-  },
-  {
-    title: t('how_it_works.match'),
-    description: t('how_it_works.match_desc'),
-    icon: Search,
-  },
-  {
-    title: t('how_it_works.hire_buy'),
-    description: t('how_it_works.hire_buy_desc'),
-    icon: Handshake,
-  },
-  {
-    title: t('how_it_works.done'),
-    description: t('how_it_works.done_desc'),
-    icon: Check,
-  },
-];
-
-export function HowItWorksSection({ className, style }: HowItWorksSectionProps) {
-  const { t } = useTranslation();
-  const steps = getSteps(t);
-  
   return (
-    <section className={cn("py-20 bg-zion-blue", className)} style={style}>
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
-          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
-            {t('home.how_it_works_subtitle')}
+    <section className="py-16 bg-zion-blue-dark">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-4">How It Works</h2>
+          <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+            Our streamlined process ensures you get the best solutions efficiently and effectively
           </p>
         </div>
-
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
-          
-          <div className="space-y-12 md:space-y-0">
-            {steps.map((step, index) => (
-              <div 
-                key={step.title}
-                className={`flex flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
-                } relative`}
-              >
-                <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
-                  {index % 2 === 0 ? (
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
-                      <p className="text-zion-slate-light">{step.description}</p>
-                    </div>
-                  ) : null}
-                </div>
-                
-                <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">
-                  <step.icon className="w-6 h-6 text-zion-cyan" />
-                </div>
-
-                <div className="md:w-1/2 md:px-12 text-center md:text-left">
-                  {index % 2 !== 0 ? (
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
-                      <p className="text-zion-slate-light">{step.description}</p>
-                    </div>
-                  ) : null}
-                </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {steps.map((step, index) => (
+            <div key={index} className="text-center relative">
+              <div className="bg-zion-cyan text-zion-blue-dark w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                {step.number}
               </div>
-            ))}
-          </div>
+              <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
+              <p className="text-zion-slate-light text-sm leading-relaxed">
+                {step.description}
+              </p>
+              
+              {index < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-zion-cyan transform translate-x-1/2">
+                  <div className="w-3 h-3 bg-zion-cyan rounded-full absolute -top-1 right-0"></div>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>

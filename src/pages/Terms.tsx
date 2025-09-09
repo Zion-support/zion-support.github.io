@@ -1,21 +1,20 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { SEO } from "@/components/SEO";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import TermsOfService from "@/legal/TermsOfService";
 
 const Terms: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Terms of Service - Zion Tech Group</title>
-        <meta name="description" content="Our terms of service and usage guidelines." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6 text-center">
-            Terms of Service
-          </h1>
-          <p className="text-xl text-gray-600 text-center mb-12">
-            Our terms and conditions for using our services
-          </p>
+      <SEO
+        title="Terms of Service"
+        description="The terms and conditions for using the Zion platform."
+        canonical="https://ziontechgroup.com/terms"
+      />
+      <Header />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <TermsOfService />
         </div>
       </div>
     </>

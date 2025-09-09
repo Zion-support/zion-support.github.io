@@ -1,115 +1,89 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { ProductListingCard } from "@/components/ProductListingCard";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
-
-interface FeaturedListingsSectionProps {
-  showTitle?: boolean;
-  className?: string;
-  style?: React.CSSProperties;
-}
-
-export function FeaturedListingsSection({
-  showTitle = true,
-  className,
-  style,
-}: FeaturedListingsSectionProps) {
-  const featuredListings = [
+export function FeaturedListingsSection() {
+  const featuredServices = [
     {
-      id: "advanced-nlp-model",
-      title: "Advanced NLP Model for Text Analysis",
-      description: "State-of-the-art natural language processing with 98% accuracy",
-      price: 4999,
-      currency: "$",
-      category: "AI Models",
-      tags: ["AI", "NLP", "Machine Learning"],
-      images: ["https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"],
-      createdAt: "2023-11-15T14:48:00.000Z",
-      rating: 4.8,
-      reviewCount: 124,
-      author: {
-        name: "TechAI Labs",
-        id: "tech-ai-labs",
-        avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format"
-      }
+      id: 'ai-consulting',
+      title: 'AI Consulting Services',
+      description: 'Expert guidance on implementing AI solutions for your business',
+      price: 'From $150/hr',
+      category: 'AI Services',
+      path: '/ai-services'
     },
     {
-      id: "image-generation-service",
-      title: "AI Image Generation Service",
-      description: "Create stunning visuals with our advanced AI image generator",
-      price: 2499,
-      currency: "$",
-      category: "Content Creation",
-      tags: ["AI", "Images", "Generation"],
-      images: ["https://images.unsplash.com/photo-1579403124614-197f69d8187b?auto=format&fit=crop&w=800&h=500"],
-      createdAt: "2023-10-20T11:15:00.000Z",
-      rating: 4.7,
-      reviewCount: 89,
-      author: {
-        name: "VisualAI",
-        id: "visual-ai"
-      }
+      id: 'cyber-audit',
+      title: 'Cybersecurity Audit',
+      description: 'Comprehensive security assessment and vulnerability testing',
+      price: 'From $2,500',
+      category: 'Cybersecurity',
+      path: '/cybersecurity'
     },
     {
-      id: "fullstack-ai-dev",
-      title: "Full-Stack AI Development",
-      description: "End-to-end development for AI-powered applications",
-      price: null, // Custom pricing
-      currency: "$",
-      category: "Services",
-      tags: ["Development", "Full-stack", "AI"],
-      images: ["https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"],
-      createdAt: "2023-12-15T09:45:00.000Z",
-      rating: 4.9,
-      reviewCount: 56,
-      author: {
-        name: "DataMinds Consulting",
-        id: "dataminds-consulting"
-      }
+      id: 'it-infrastructure',
+      title: 'IT Infrastructure Setup',
+      description: 'Complete IT infrastructure design and implementation',
+      price: 'From $5,000',
+      category: 'IT Services',
+      path: '/expanded-services'
     },
     {
-      id: "sentiment-analysis-api",
-      title: "Sentiment Analysis API",
-      description: "Real-time sentiment analysis for social media monitoring",
-      price: 1299,
-      currency: "$",
-      category: "APIs",
-      tags: ["API", "Sentiment", "Analytics"],
-      images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-      createdAt: "2024-01-05T11:15:00.000Z",
-      rating: 4.6,
-      reviewCount: 72,
-      author: {
-        name: "SocialAI",
-        id: "social-ai"
-      }
-    },
+      id: 'green-solutions',
+      title: 'Green IT Solutions',
+      description: 'Sustainable technology solutions for eco-friendly businesses',
+      price: 'From $3,000',
+      category: 'Green IT',
+      path: '/green-it'
+    }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark to-zion-blue-dark">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Featured Listings
-          </h2>
-          <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-            Discover our handpicked selection of top services and solutions.
+    <section className="py-16 bg-zion-blue-dark">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-4">Featured Services</h2>
+          <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+            Discover our most popular and highly-rated services
           </p>
         </div>
         
-        <div className="mt-10 text-center">
-          <Button 
-            className="bg-gradient-to-r from-primary to-secondary hover:from-primary/80 hover:to-secondary/80 text-primary-foreground px-8 py-6"
-            asChild
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {featuredServices.map((service) => (
+            <Link
+              key={service.id}
+              to={service.path}
+              className="group bg-zion-blue border border-zion-blue-light rounded-lg p-6 hover:border-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20"
+            >
+              <div className="mb-4">
+                <span className="inline-block bg-zion-cyan/20 text-zion-cyan text-xs font-medium px-2 py-1 rounded">
+                  {service.category}
+                </span>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors">
+                {service.title}
+              </h3>
+              <p className="text-zion-slate-light text-sm mb-4">
+                {service.description}
+              </p>
+              <div className="text-zion-cyan font-semibold">
+                {service.price}
+              </div>
+            </Link>
+          ))}
+        </div>
+        
+        <div className="text-center mt-8">
+          <Link
+            to="/services"
+            className="inline-flex items-center px-6 py-3 bg-zion-cyan text-white rounded-lg font-medium hover:bg-zion-cyan/90 transition-colors"
           >
-            <Link href="/marketplace">View All Listings</Link>
-          </Button>
+            View All Services
+            <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>
   );
-};
+}

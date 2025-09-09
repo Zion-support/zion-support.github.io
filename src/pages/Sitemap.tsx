@@ -1,4 +1,5 @@
-import React from 'react';
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 
 const Sitemap: React.FC = () => {
@@ -9,37 +10,32 @@ const Sitemap: React.FC = () => {
         description="Navigate our website easily with our comprehensive sitemap of all pages and services."
         keywords="sitemap, navigation, website structure, pages"
       />
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">Sitemap</h1>
-          <p className="text-xl text-zion-blue-light max-w-3xl mx-auto">
-            Navigate our website easily with our comprehensive sitemap.
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-            <h2 className="text-3xl font-bold text-white mb-6">Website Structure</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-4">Main Pages</h3>
-                <ul className="space-y-2 text-zion-blue-light">
-                  <li><a href="/" className="hover:text-white">Home</a></li>
-                  <li><a href="/about" className="hover:text-white">About</a></li>
-                  <li><a href="/contact" className="hover:text-white">Contact</a></li>
-                  <li><a href="/services" className="hover:text-white">Services</a></li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-4">Services</h3>
-                <ul className="space-y-2 text-zion-blue-light">
-                  <li><a href="/services/ai-autonomous-systems" className="hover:text-white">AI Autonomous Systems</a></li>
-                  <li><a href="/services/cybersecurity" className="hover:text-white">Cybersecurity</a></li>
-                  <li><a href="/services/it-infrastructure" className="hover:text-white">IT Infrastructure</a></li>
-                  <li><a href="/services/micro-saas" className="hover:text-white">Micro SAAS</a></li>
-                </ul>
-              </div>
+      <Header />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl font-bold mb-8 text-white">Sitemap</h1>
+            <p className="text-zion-slate-light mb-8 text-lg">
+              Navigate through all the pages and sections of Zion Tech Group
+            </p>
+            
+            <div className="space-y-8">
+              {completeSitemap.map((section, sectionIndex) => (
+                <div key={sectionIndex} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">
+                  <h2 className="text-2xl font-semibold text-white mb-4">{section.title}</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {section.links.map((link, linkIndex) => (
+                      <Link 
+                        key={linkIndex}
+                        to={link.url} 
+                        className="text-zion-cyan hover:text-zion-purple-light transition-colors font-medium block p-3 rounded hover:bg-zion-blue/20"
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
