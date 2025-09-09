@@ -1,5 +1,5 @@
 
-[build] # touch v4.59 to trigger Netlify rebuild
+[build] # touch v4.60 to trigger Netlify rebuild
   # Build the site with Vite and publish the dist folder
   command = "npm ci --no-audit --no-fund --include=optional && npm run build:ci"
   publish = "dist"
