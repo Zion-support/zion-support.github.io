@@ -1,324 +1,403 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Eye, Ear, Hand, Brain, CheckCircle, AlertTriangle, FileText, Users, Globe, Shield } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+  Accessibility, 
+  Eye, 
+  Ear, 
+  MousePointer, 
+  Keyboard, 
+  Monitor, 
+  Smartphone, 
+  CheckCircle,
+  Info,
+  AlertTriangle,
+  ArrowRight,
+  Settings,
+  HelpCircle,
+  Users,
+  Globe
+} from 'lucide-react';
 
-export default function Accessibility() {
+export default function AccessibilityPage() {
+  const [expandedSections, setExpandedSections] = useState({});
+
+  const toggleSection = (sectionId) => {
+    setExpandedSections(prev => ({
+      ...prev,
+      [sectionId]: !prev[sectionId]
+    }));
+  };
+
   const accessibilityFeatures = [
     {
-      id: 1,
-      title: "Screen Reader Support",
-      description: "Full compatibility with popular screen readers including JAWS, NVDA, and VoiceOver.",
-      icon: Ear,
-      status: "Fully Supported"
+      icon: <Eye className="w-8 h-8" />,
+      title: "Visual Accessibility",
+      description: "Features to support users with visual impairments",
+      features: [
+        "High contrast mode",
+        "Adjustable font sizes",
+        "Screen reader compatibility",
+        "Alternative text for images",
+        "Color-blind friendly design",
+        "Focus indicators"
+      ]
     },
     {
-      id: 2,
-      title: "Keyboard Navigation",
-      description: "Complete keyboard accessibility with logical tab order and keyboard shortcuts.",
-      icon: Hand,
-      status: "Fully Supported"
+      icon: <Ear className="w-8 h-8" />,
+      title: "Auditory Accessibility",
+      description: "Support for users with hearing impairments",
+      features: [
+        "Closed captions for videos",
+        "Transcripts for audio content",
+        "Visual notifications",
+        "Haptic feedback options",
+        "Audio descriptions"
+      ]
     },
     {
-      id: 3,
-      title: "High Contrast Mode",
-      description: "High contrast color schemes and customizable text sizing for better visibility.",
-      icon: Eye,
-      status: "Fully Supported"
+      icon: <MousePointer className="w-8 h-8" />,
+      title: "Motor Accessibility",
+      description: "Features for users with motor impairments",
+      features: [
+        "Keyboard navigation",
+        "Voice control support",
+        "Large click targets",
+        "Customizable timing",
+        "One-handed operation"
+      ]
     },
     {
-      id: 4,
-      title: "Alternative Text",
-      description: "Comprehensive alt text for all images and descriptive text for interactive elements.",
-      icon: FileText,
-      status: "Fully Supported"
-    },
-    {
-      id: 5,
-      title: "Focus Indicators",
-      description: "Clear visual focus indicators for keyboard and assistive technology users.",
-      icon: Eye,
-      status: "Fully Supported"
-    },
-    {
-      id: 6,
-      title: "Semantic HTML",
-      description: "Proper semantic markup and ARIA labels for screen reader compatibility.",
-      icon: Code,
-      status: "Fully Supported"
+      icon: <Keyboard className="w-8 h-8" />,
+      title: "Cognitive Accessibility",
+      description: "Support for users with cognitive differences",
+      features: [
+        "Clear navigation structure",
+        "Consistent design patterns",
+        "Readable typography",
+        "Logical content flow",
+        "Error prevention"
+      ]
     }
   ];
 
   const complianceStandards = [
     {
-      name: "WCAG 2.1 AA",
-      description: "Web Content Accessibility Guidelines 2.1 Level AA compliance.",
+      name: "WCAG 2.1",
+      level: "AA",
+      description: "Web Content Accessibility Guidelines 2.1 Level AA compliance",
       status: "Compliant",
-      lastAudit: "2024-12-01",
-      nextAudit: "2025-06-01"
+      icon: <CheckCircle className="w-5 h-5 text-green-400" />
     },
     {
       name: "Section 508",
-      description: "U.S. federal accessibility requirements for electronic and information technology.",
+      description: "Federal accessibility requirements for electronic information",
       status: "Compliant",
-      lastAudit: "2024-11-15",
-      nextAudit: "2025-11-15"
+      icon: <CheckCircle className="w-5 h-5 text-green-400" />
     },
     {
       name: "ADA Title III",
-      description: "Americans with Disabilities Act compliance for digital accessibility.",
+      description: "Americans with Disabilities Act website accessibility",
       status: "Compliant",
-      lastAudit: "2024-10-01",
-      nextAudit: "Ongoing"
+      icon: <CheckCircle className="w-5 h-5 text-green-400" />
     },
     {
       name: "EN 301 549",
-      description: "European accessibility requirements for ICT products and services.",
-      status: "Compliant",
-      lastAudit: "2024-09-01",
-      nextAudit: "Ongoing"
+      description: "European accessibility standard for ICT products",
+      status: "In Progress",
+      icon: <AlertTriangle className="w-5 h-5 text-yellow-400" />
     }
   ];
 
-  const assistiveTechnologies = [
-    "Screen readers (JAWS, NVDA, VoiceOver, TalkBack)",
-    "Screen magnification software",
-    "Voice recognition software",
-    "Switch devices and alternative input methods",
-    "Braille displays",
-    "Speech-to-text software",
-    "High contrast and color adjustment tools",
-    "Text-to-speech software"
+  const accessibilityTools = [
+    {
+      name: "Accessibility Panel",
+      description: "Quick access to accessibility settings and features",
+      icon: <Settings className="w-6 h-6" />,
+      link: "#accessibility-panel"
+    },
+    {
+      name: "Screen Reader Support",
+      description: "Full compatibility with popular screen readers",
+      icon: <Monitor className="w-6 h-6" />,
+      link: "#screen-reader"
+    },
+    {
+      name: "Keyboard Shortcuts",
+      description: "Comprehensive keyboard navigation guide",
+      icon: <Keyboard className="w-6 h-6" />,
+      link: "#keyboard-shortcuts"
+    },
+    {
+      name: "Mobile Accessibility",
+      description: "Optimized for mobile assistive technologies",
+      icon: <Smartphone className="w-6 h-6" />,
+      link: "#mobile-accessibility"
+    }
   ];
 
-  const testingMethods = [
-    "Automated accessibility testing tools",
-    "Manual testing with screen readers",
-    "Keyboard-only navigation testing",
-    "Color contrast analysis",
-    "User testing with people with disabilities",
-    "Expert accessibility audits",
-    "Continuous monitoring and improvement",
-    "Regular compliance assessments"
+  const accessibilityTips = [
+    {
+      title: "Use Keyboard Navigation",
+      description: "Navigate through the site using Tab, Enter, and arrow keys for full accessibility.",
+      icon: <Keyboard className="w-5 h-5" />
+    },
+    {
+      title: "Enable Screen Reader",
+      description: "Use screen readers like NVDA, JAWS, or VoiceOver for audio navigation.",
+      icon: <Monitor className="w-5 h-5" />
+    },
+    {
+      title: "Adjust Display Settings",
+      description: "Use browser zoom and high contrast modes for better visibility.",
+      icon: <Eye className="w-5 h-5" />
+    },
+    {
+      title: "Contact Support",
+      description: "Reach out to our accessibility team for personalized assistance.",
+      icon: <HelpCircle className="w-5 h-5" />
+    }
   ];
 
   return (
-    <>
-      <SEO 
-        title="Accessibility - Zion Tech Group Inclusive Design" 
-        description="Learn about our commitment to digital accessibility, WCAG compliance, and inclusive design principles." 
-        canonical="/accessibility" 
-        url="https://ziontechgroup.com/accessibility"
-      />
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">
+      <div className="container mx-auto px-4 py-12">
+        {/* Header */}
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+            Digital <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Accessibility</span>
+          </h1>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
+            Zion Tech Group is committed to ensuring our website and services are accessible to all users, 
+            regardless of their abilities or disabilities. We strive to meet and exceed accessibility standards.
+          </p>
+        </motion.div>
 
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Accessibility
-            </h1>
-            <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">
-              We're committed to making our digital experiences accessible to everyone. 
-              Learn about our accessibility features and compliance standards.
+        {/* Accessibility Commitment */}
+        <motion.div 
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 rounded-lg p-12 max-w-6xl mx-auto text-center">
+            <Accessibility className="w-20 h-20 text-zion-cyan mx-auto mb-6" />
+            <h2 className="text-3xl font-bold text-white mb-6">Our Accessibility Commitment</h2>
+            <p className="text-zion-slate-light text-lg mb-8 leading-relaxed max-w-4xl mx-auto">
+              We believe that technology should be accessible to everyone. Our team continuously works to improve 
+              the accessibility of our platform, ensuring that users with disabilities can fully participate in the 
+              digital economy and access our services independently.
             </p>
-          </div>
-
-          {/* Commitment Statement */}
-          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-8 mb-16">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Our Accessibility Commitment
-              </h2>
-              <p className="text-zion-slate-light text-lg max-w-4xl mx-auto leading-relaxed">
-                Zion Tech Group is dedicated to ensuring that our website, applications, and digital services 
-                are accessible to people of all abilities. We believe that technology should be inclusive and 
-                usable by everyone, regardless of their physical or cognitive abilities. Our team continuously 
-                works to improve accessibility and maintain compliance with international accessibility standards.
-              </p>
-            </div>
-          </div>
-
-          {/* Accessibility Features */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              Accessibility Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {accessibilityFeatures.map((feature) => (
-                <div key={feature.id} className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 hover:border-zion-cyan transition-all duration-300">
-                  <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mb-4">
-                    <feature.icon className="w-8 h-8 text-zion-cyan" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-zion-slate-light text-sm mb-4">
-                    {feature.description}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="px-3 py-1 bg-green-500/20 text-green-400 text-sm rounded-full">
-                      {feature.status}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Compliance Standards */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              Compliance & Standards
-            </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {complianceStandards.map((standard, index) => (
-                <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-semibold text-white">
-                      {standard.name}
-                    </h3>
-                    <span className="px-3 py-1 bg-green-500/20 text-green-400 text-sm rounded-full">
-                      {standard.status}
-                    </span>
-                  </div>
-                  <p className="text-zion-slate-light text-sm mb-4">
-                    {standard.description}
-                  </p>
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div>
-                      <span className="text-zion-slate-light">Last Audit:</span>
-                      <div className="text-white">{standard.lastAudit}</div>
-                    </div>
-                    <div>
-                      <span className="text-zion-slate-light">Next Audit:</span>
-                      <div className="text-white">{standard.nextAudit}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Assistive Technologies */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              Supported Assistive Technologies
-            </h2>
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">
-                    Compatible Technologies
-                  </h3>
-                  <ul className="space-y-3">
-                    {assistiveTechnologies.slice(0, 4).map((tech, index) => (
-                      <li key={index} className="flex items-center gap-3 text-zion-slate-light text-sm">
-                        <CheckCircle className="w-4 h-4 text-zion-cyan" />
-                        {tech}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">
-                    Additional Support
-                  </h3>
-                  <ul className="space-y-3">
-                    {assistiveTechnologies.slice(4).map((tech, index) => (
-                      <li key={index} className="flex items-center gap-3 text-zion-slate-light text-sm">
-                        <CheckCircle className="w-4 h-4 text-zion-cyan" />
-                        {tech}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-zion-cyan mb-2">100%</div>
+                <div className="text-zion-slate-light">WCAG 2.1 AA Compliant</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-zion-purple mb-2">24/7</div>
+                <div className="text-zion-slate-light">Accessibility Support</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-400 mb-2">Continuous</div>
+                <div className="text-zion-slate-light">Improvement Process</div>
               </div>
             </div>
-          </section>
+          </div>
+        </motion.div>
 
-          {/* Testing & Quality Assurance */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              Testing & Quality Assurance
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  Testing Methods
-                </h3>
-                <ul className="space-y-3">
-                  {testingMethods.slice(0, 4).map((method, index) => (
-                    <li key={index} className="flex items-center gap-3 text-zion-slate-light text-sm">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan" />
-                      {method}
+        {/* Accessibility Features */}
+        <motion.div 
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Accessibility Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {accessibilityFeatures.map((feature, index) => (
+              <div key={index} className="bg-zinc-800/50 border border-zion-cyan/20 rounded-lg p-8 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="text-zion-cyan mb-6">{feature.icon}</div>
+                <h3 className="text-white font-semibold text-2xl mb-4">{feature.title}</h3>
+                <p className="text-zion-slate-light mb-6 leading-relaxed">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.features.map((item, idx) => (
+                    <li key={idx} className="flex items-center text-zion-slate-light">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
+                      <span className="text-sm">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  Quality Assurance
-                </h3>
-                <ul className="space-y-3">
-                  {testingMethods.slice(4).map((method, index) => (
-                    <li key={index} className="flex items-center gap-3 text-zion-slate-light text-sm">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan" />
-                      {method}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </section>
+            ))}
+          </div>
+        </motion.div>
 
-          {/* Accessibility Statement */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              Accessibility Statement
-            </h2>
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-8">
-              <div className="prose prose-invert max-w-none">
-                <p className="text-zion-slate-light mb-4">
-                  Zion Tech Group is committed to ensuring digital accessibility for people with disabilities. 
-                  We are continually improving the user experience for everyone and applying the relevant 
-                  accessibility standards.
-                </p>
-                <p className="text-zion-slate-light mb-4">
-                  Our website and applications are designed to meet WCAG 2.1 AA standards and comply with 
-                  applicable accessibility laws and regulations. We regularly test our digital properties 
-                  for accessibility and work with accessibility experts to ensure compliance.
-                </p>
-                <p className="text-zion-slate-light mb-4">
-                  We welcome feedback on the accessibility of our digital services. If you experience 
-                  accessibility barriers or have suggestions for improvement, please contact our accessibility team.
-                </p>
+        {/* Compliance Standards */}
+        <motion.div 
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Accessibility Compliance</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {complianceStandards.map((standard, index) => (
+              <div key={index} className="bg-zinc-800/50 border border-zion-cyan/20 rounded-lg p-6 text-center">
+                <div className="flex justify-center mb-4">{standard.icon}</div>
+                <h3 className="text-white font-semibold text-lg mb-2">{standard.name}</h3>
+                {standard.level && (
+                  <div className="text-zion-cyan text-sm mb-2">Level {standard.level}</div>
+                )}
+                <p className="text-zion-slate-light text-sm mb-3">{standard.description}</p>
+                <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
+                  standard.status === 'Compliant' 
+                    ? 'bg-green-500/20 text-green-400' 
+                    : 'bg-yellow-500/20 text-yellow-400'
+                }`}>
+                  {standard.status}
+                </span>
               </div>
-            </div>
-          </section>
+            ))}
+          </div>
+        </motion.div>
 
-          {/* Call to Action */}
-          <div className="text-center">
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-8">
-              <h2 className="text-2xl font-semibold text-white mb-4">
-                Help Us Improve Accessibility
-              </h2>
-              <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-                Your feedback helps us make our digital experiences more accessible. 
-                Report accessibility issues or share suggestions for improvement.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact" className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium">
-                  Report Accessibility Issue
-                </Link>
-                <button className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-medium">
-                  Download Accessibility Report
-                </button>
+        {/* Accessibility Tools */}
+        <motion.div 
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Accessibility Tools & Resources</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {accessibilityTools.map((tool, index) => (
+              <div key={index} className="bg-zinc-800/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="text-zion-cyan mb-4 flex justify-center">{tool.icon}</div>
+                <h3 className="text-white font-semibold text-lg mb-3">{tool.name}</h3>
+                <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">{tool.description}</p>
+                <a
+                  href={tool.link}
+                  className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium inline-flex items-center"
+                >
+                  Learn More <ArrowRight className="w-3 h-3 ml-1" />
+                </a>
               </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Accessibility Tips */}
+        <motion.div 
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.0 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Accessibility Tips for Users</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {accessibilityTips.map((tip, index) => (
+              <div key={index} className="bg-zinc-800/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="text-zion-cyan mb-4 flex justify-center">{tip.icon}</div>
+                <h3 className="text-white font-semibold text-lg mb-3">{tip.title}</h3>
+                <p className="text-zion-slate-light text-sm leading-relaxed">{tip.description}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Accessibility Resources */}
+        <motion.div 
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.2 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Additional Resources</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <Link 
+              to="/help" 
+              className="bg-zinc-800/50 border border-zion-cyan/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
+            >
+              <div className="text-zion-cyan mb-4 flex justify-center">
+                <HelpCircle className="w-8 h-8" />
+              </div>
+              <h3 className="text-white font-semibold text-lg mb-2">Help Center</h3>
+              <p className="text-zion-slate-light mb-4">Accessibility guides and tutorials</p>
+              <span className="text-zion-cyan group-hover:text-zion-cyan-light transition-colors font-medium">
+                Get Help →
+              </span>
+            </Link>
+
+            <Link 
+              to="/contact" 
+              className="bg-zinc-800/50 border border-zion-cyan/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
+            >
+              <div className="text-zion-cyan mb-4 flex justify-center">
+                <Users className="w-8 h-8" />
+              </div>
+              <h3 className="text-white font-semibold text-lg mb-2">Accessibility Team</h3>
+              <p className="text-zion-slate-light mb-4">Contact our accessibility specialists</p>
+              <span className="text-zion-cyan group-hover:text-zion-cyan-light transition-colors font-medium">
+                Contact Us →
+              </span>
+            </Link>
+
+            <a 
+              href="https://www.w3.org/WAI/WCAG21/quickref/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-zinc-800/50 border border-zion-cyan/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
+            >
+              <div className="text-zion-cyan mb-4 flex justify-center">
+                <Globe className="w-8 h-8" />
+              </div>
+              <h3 className="text-white font-semibold text-lg mb-2">WCAG Guidelines</h3>
+              <p className="text-zion-slate-light mb-4">Learn about accessibility standards</p>
+              <span className="text-zion-cyan group-hover:text-zion-cyan-light transition-colors font-medium">
+                Visit W3C →
+              </span>
+            </a>
+          </div>
+        </motion.div>
+
+        {/* Feedback Section */}
+        <motion.div 
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.4 }}
+        >
+          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 rounded-lg p-12 max-w-4xl mx-auto">
+            <Info className="w-16 h-16 text-zion-cyan mx-auto mb-6" />
+            <h2 className="text-3xl font-bold text-white mb-6">Help Us Improve</h2>
+            <p className="text-zion-slate-light text-lg mb-8 leading-relaxed">
+              We're committed to continuously improving our accessibility. If you encounter any accessibility 
+              barriers or have suggestions for improvement, please let us know. Your feedback helps us create 
+              a better experience for all users.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-transform inline-flex items-center"
+              >
+                Report Accessibility Issue
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+              <Link 
+                to="/help" 
+                className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-colors"
+              >
+                Accessibility Help
+              </Link>
             </div>
           </div>
-        </div>
-      </main>
-    </>
+        </motion.div>
+      </div>
+    </div>
   );
 }
