@@ -1,5 +1,7 @@
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
+import { services, getServicesByCategory } from '../data/services';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Phone, Mail, MapPin } from 'lucide-react';
 import Link from 'next/link';
 import { ArrowRight, Code, Cloud, Brain, Shield, Zap, Users, Target } from 'lucide-react';
 
@@ -174,6 +176,88 @@ export default function Home() {
               <div className="text-4xl font-bold text-red-400 mb-2">99%</div>
               <div className="text-gray-300">Client Satisfaction</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Ready to transform your business? Contact us today for a free consultation and discover how our innovative solutions can drive your success.
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                icon: Phone,
+                title: "Call Us",
+                details: "+1 302 464 0950",
+                link: "tel:+13024640950",
+                description: "Speak directly with our experts"
+              },
+              {
+                icon: Mail,
+                title: "Email Us",
+                details: "kleber@ziontechgroup.com",
+                link: "mailto:kleber@ziontechgroup.com",
+                description: "Get detailed project information"
+              },
+              {
+                icon: MapPin,
+                title: "Visit Us",
+                details: "364 E Main St STE 1008, Middletown DE 19709",
+                link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709",
+                description: "Our headquarters in Delaware"
+              },
+              {
+                icon: Clock,
+                title: "Business Hours",
+                details: "Mon-Fri: 9AM-6PM EST",
+                link: null,
+                description: "Available when you need us"
+              }
+            ].map((contact, index) => {
+              const IconComponent = contact.icon;
+              return (
+                <motion.div 
+                  key={contact.title}
+                  className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <div className="flex justify-center mb-4">
+                    <div className="p-3 bg-blue-100 rounded-full">
+                      <IconComponent className="w-6 h-6 text-blue-600" />
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{contact.title}</h3>
+                  <p className="text-gray-600 mb-2">{contact.description}</p>
+                  {contact.link ? (
+                    <a 
+                      href={contact.link} 
+                      className="text-blue-600 hover:text-blue-700 font-semibold transition-colors"
+                    >
+                      {contact.details}
+                    </a>
+                  ) : (
+                    <p className="text-gray-800 font-semibold">{contact.details}</p>
+                  )}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
