@@ -16,13 +16,15 @@ export default function Login() {
 
   useEffect(() => {
     // This effect handles token processing (e.g., from magic link)
-    // It runs when component mounts or location.search changes
+    // It runs when component mounts or location.search (containing query) changes
     const queryString = location.search;
     const params = new URLSearchParams(queryString);
     const token = params.get('token');
     if (token) {
       safeStorage.setItem('zion_token', token);
-      // Clear token from URL to prevent re-processing
+      // Clear token from URL to prevent re-processing and clean up history
+      // The actual authentication state will update via useAuth's listeners,
+      // which should trigger the other useEffect.
       navigate(location.pathname, { replace: true });
     }
   }, [location.search, location.pathname, navigate]);
