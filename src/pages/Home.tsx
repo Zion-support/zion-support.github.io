@@ -1,7 +1,7 @@
 import React from 'react';
 import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
-import { CategoriesSection } from "@/components/CategoriesSection";
+import CategoriesSection from "@/components/CategoriesSection";
 
 const Home: React.FC = () => {
   return (
