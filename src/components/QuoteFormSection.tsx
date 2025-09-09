@@ -1,5 +1,5 @@
 
-import { Button } from "./ui/Button";
+import { Button } from "@/components/ui/Button";
 import { Input } from "./ui/input";
 import { GradientHeading } from "./GradientHeading";
 import { useState } from "react";

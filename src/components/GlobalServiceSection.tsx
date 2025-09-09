@@ -7,7 +7,7 @@ import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
 
 
 
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/Button";
 
 const services = [
   {
