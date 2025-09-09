@@ -1,7 +1,5 @@
-import React, { memo, useState, Suspense, lazy } from 'react';
-
-// Lazy load SEO component to avoid static import conflicts
-const SEO = lazy(() => import("@/components/SEO").then(m => ({ default: m.SEO })));
+import React, { memo, useState } from 'react';
+import { SEO } from "@/components/SEO";
 
 // Contact info card component
 const ContactInfoCard = memo<{ 
@@ -80,13 +78,11 @@ const Contact: React.FC = memo(() => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-zion-blue-dark to-zion-blue-darker">
-      <Suspense fallback={null}>
-        <SEO 
-          title="Contact Us - Zion Tech Group"
-          description="Get in touch with our expert team for technology solutions, AI services, and IT consulting. We're here to help transform your business."
-          keywords="contact, technology consulting, AI services, IT solutions, support"
-        />
-      </Suspense>
+      <SEO 
+        title="Contact Us - Zion Tech Group"
+        description="Get in touch with our expert team for technology solutions, AI services, and IT consulting. We're here to help transform your business."
+        keywords="contact, technology consulting, AI services, IT solutions, support"
+      />
       
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
