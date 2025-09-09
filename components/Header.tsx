@@ -1,78 +1,62 @@
-'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
+import EnhancedNavigation from './ui/EnhancedNavigation';
+import { Star, Cloud, Shield, Zap, Users, BookOpen, Handshake, Phone } from 'lucide-react';
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
+export default function Header() {
+  const navigationItems = [
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      children: [
+        { name: 'AI Solutions', href: '/solutions/ai', description: 'Advanced AI and machine learning', icon: <Zap className="w-4 h-4" /> },
+        { name: 'Cloud Services', href: '/solutions/cloud', description: 'Scalable cloud infrastructure', icon: <Cloud className="w-4 h-4" /> },
+        { name: 'Cybersecurity', href: '/solutions/security', description: 'Comprehensive security solutions', icon: <Shield className="w-4 h-4" /> },
+        { name: 'Quantum Computing', href: '/solutions/quantum', description: 'Next-gen quantum solutions', icon: <Star className="w-4 h-4" /> }
+      ]
+    },
+    {
+      name: 'Services',
+      href: '/services',
+      children: [
+        { name: 'AI Development', href: '/services/ai-development', description: 'Custom AI solutions', icon: <Zap className="w-4 h-4" /> },
+        { name: 'Cloud Migration', href: '/services/cloud-migration', description: 'Seamless cloud transition', icon: <Cloud className="w-4 h-4" /> },
+        { name: 'Security Audits', href: '/services/security-audits', description: 'Comprehensive security review', icon: <Shield className="w-4 h-4" /> },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'End-to-end transformation', icon: <Star className="w-4 h-4" /> }
+      ]
+    },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Case Studies', href: '/case-studies' },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Contact', href: '/contact' },
+    {
+      name: 'Resources',
+      href: '#',
+      children: [
+        { name: 'Blog', href: '/blog', description: 'Latest insights and updates', icon: <BookOpen className="w-4 h-4" /> },
+        { name: 'Partners', href: '/partners', description: 'Strategic partnerships', icon: <Handshake className="w-4 h-4" /> },
+        { name: 'Support', href: '/support', description: '24/7 technical support', icon: <Phone className="w-4 h-4" /> }
+      ]
+    }
   ];
 
-  return (
-    <header className="bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-6">
-          <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0">
-              <span className="text-2xl font-bold text-blue-600">Zion Tech Group</span>
-            </Link>
-          </div>
-          
-          <nav className="hidden md:flex space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
-
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-600"
-            >
-              {isMenuOpen ? <X size={24}    /> : <Menu size={24}    />}
-            </button>
-          </div>
-        </div>
+  const logo = (
+    <div className="flex items-center space-x-2">
+      <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+        <Star className="w-5 h-5 text-white" />
       </div>
-
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden"
-          >
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
+      <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        Zion Tech Group
+      </span>
+    </div>
   );
-};
 
-export default Header;
+  return (
+    <EnhancedNavigation
+      items={navigationItems}
+      logo={logo}
+      ctaText="Get Started"
+      ctaHref="/contact"
+    />
+  );
+}

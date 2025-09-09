@@ -1,6 +1,5 @@
 import type { GetServerSideProps } from 'next';
 import type { NextPageContext } from 'next/types';
-import type {} from 'next';
 import Link from 'next/link';
 import Stripe from 'stripe';
 import {logErrorToProduction} from '@/utils/productionLogger';

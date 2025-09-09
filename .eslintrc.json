@@ -1,9 +1,7 @@
 {
-  "root": true,
-  "env": { "browser": true, "es2020": true },
   "extends": [
-    "eslint:recommended",
-    "@typescript-eslint/recommended"
+    "next/core-web-vitals",
+    "next/typescript"
   ],
   "ignorePatterns": [
     "dist/**/*",
@@ -89,18 +87,19 @@
     "api/**/*.js"
   ],
   "parser": "@typescript-eslint/parser",
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "semi": ["error", "always"],
+    "quotes": ["error", "single"],
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "import/no-anonymous-default-export": "off"
+  },
   "parserOptions": {
-    "ecmaVersion": "latest",
+    "ecmaVersion": 2020,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
     }
-  },
-  "plugins": ["react-refresh"],
-  "rules": {
-    "react-refresh/only-export-components": [
-      "warn",
-      { "allowConstantExport": true }
-    ]
   }
 }

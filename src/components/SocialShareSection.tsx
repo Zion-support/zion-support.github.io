@@ -1,11 +1,11 @@
 
-import { Button } from "@/components/ui/Button";
+import { Button } from "./ui/Button";
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
 
 
 
 
-import { toast } from "@/components/ui/use-toast";
+import { toast } from "./ui/use-toast";
 import { useTranslation } from 'react-i18next';
 
 export function SocialShareSection() {

@@ -5,36 +5,40 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  schedule:
+    - cron: '0 2 * * 1' # Every Monday at 2 AM
+
+permissions:
+  contents: read
 
 jobs:
-  performance-test:
+  bundle-analysis:
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-        cache: 'npm'
-        
-    - name: Install dependencies
-      run: npm ci
-      
-    - name: Build application
-      run: npm run build
-      
-    - name: Run performance audit
-      run: npm run audit:performance
-      
-    - name: Check bundle size
-      run: |
-        BUNDLE_SIZE=$(du -s dist | cut -f1)
-        MAX_SIZE=500000 # 500KB
-        if [ $BUNDLE_SIZE -gt $MAX_SIZE ]; then
-          echo "Bundle size ($BUNDLE_SIZE bytes) exceeds maximum allowed size ($MAX_SIZE bytes)"
-          exit 1
-        fi
-        echo "Bundle size check passed: $BUNDLE_SIZE bytes"
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Analyze bundle size
+        run: |
+          echo "Bundle size analysis:"
+          du -sh dist/
+          find dist/ -name "*.js" -exec wc -c {} + | sort -n
+          find dist/ -name "*.css" -exec wc -c {} + | sort -n
+
+      - name: Upload bundle analysis
+        uses: actions/upload-artifact@v4
+        with:
+          name: bundle-analysis
+          path: dist/

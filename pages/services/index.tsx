@@ -1,183 +1,116 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { NextPage } from 'next';
-
-const Services: NextPage = () => {
-  const serviceCategories = [
-    {
-      title: "AI & Machine Learning Services",
-      description: "Cutting-edge AI solutions to transform your business",
-      services: [
-        { name: "AI Model Development", href: "/services/ai-model-development", price: "Starting at $2,500/month" },
-        { name: "Chatbot Development", href: "/services/ai-chatbot-development", price: "Starting at $1,200/month" },
-        { name: "Predictive Analytics", href: "/services/predictive-analytics", price: "Starting at $3,000/month" },
-        { name: "Computer Vision", href: "/services/computer-vision", price: "Starting at $4,000/month" },
-        { name: "Natural Language Processing", href: "/services/nlp-services", price: "Starting at $2,800/month" }
-      ]
-    },
-    {
-      title: "Cloud & Infrastructure Services",
-      description: "Scalable cloud solutions for modern businesses",
-      services: [
-        { name: "Cloud Migration", href: "/services/cloud-migration", price: "Starting at $5,000/project" },
-        { name: "DevOps Implementation", href: "/services/devops-implementation", price: "Starting at $3,500/month" },
-        { name: "Container Orchestration", href: "/services/container-orchestration", price: "Starting at $2,000/month" },
-        { name: "Infrastructure as Code", href: "/services/infrastructure-as-code", price: "Starting at $1,800/month" }
-      ]
-    },
-    {
-      title: "Cybersecurity Services",
-      description: "Comprehensive security solutions to protect your business",
-      services: [
-        { name: "Security Audit", href: "/services/security-audit", price: "Starting at $2,500/audit" },
-        { name: "Penetration Testing", href: "/services/penetration-testing", price: "Starting at $3,000/test" },
-        { name: "Security Monitoring", href: "/services/security-monitoring", price: "Starting at $1,500/month" },
-        { name: "Compliance Consulting", href: "/services/compliance-consulting", price: "Starting at $200/hour" }
-      ]
-    },
-    {
-      title: "Blockchain & Web3 Services",
-      description: "Next-generation blockchain solutions",
-      services: [
-        { name: "Smart Contract Development", href: "/services/smart-contract-development", price: "Starting at $4,000/project" },
-        { name: "DeFi Platform Development", href: "/services/defi-platform", price: "Starting at $8,000/project" },
-        { name: "NFT Marketplace Development", href: "/services/nft-marketplace", price: "Starting at $8,000/project" },
-        { name: "Cryptocurrency Wallet Development", href: "/services/crypto-wallet", price: "Starting at $6,000/project" }
-      ]
-    }
-  ];
-
-  return (
-    <>
-      <Head>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including AI, cloud, cybersecurity, and blockchain solutions." />
-      </Head>
-      
-      <div style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
-        <h1 style={{ 
-          fontSize: '2.5rem', 
-          fontWeight: 'bold', 
-          marginBottom: '2rem',
-          textAlign: 'center',
-          background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text'
-        }}>
-          Our Services
-        </h1>
-        
-        <p style={{ 
-          fontSize: '1.125rem', 
-          color: '#6b7280', 
-          textAlign: 'center', 
-          marginBottom: '3rem',
-          maxWidth: '600px',
-          margin: '0 auto 3rem auto'
-        }}>
-          We offer comprehensive technology solutions to help your business thrive in the digital age.
-        </p>
-
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-          gap: '2rem' 
-        }}>
-          {serviceCategories.map((category, index) => (
-            <div key={index} style={{
-              backgroundColor: 'white',
-              borderRadius: '1rem',
-              padding: '2rem',
-              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-              border: '1px solid #e5e7eb'
-            }}>
-              <h3 style={{ 
-                fontSize: '1.5rem', 
-                fontWeight: '600', 
-                marginBottom: '1rem',
-                color: '#1f2937'
-              }}>
-                {category.title}
-              </h3>
-              
-              <p style={{ 
-                color: '#6b7280', 
-                marginBottom: '1.5rem',
-                lineHeight: '1.6'
-              }}>
-                {category.description}
-              </p>
-              
-              <ul style={{ listStyle: 'none', padding: 0 }}>
-                {category.services.map((service, serviceIndex) => (
-                  <li key={serviceIndex} style={{ 
-                    marginBottom: '0.75rem',
-                    padding: '0.75rem',
-                    backgroundColor: '#f9fafb',
-                    borderRadius: '0.5rem',
-                    border: '1px solid #e5e7eb'
-                  }}>
-                    <Link href={service.href} style={{
-                      textDecoration: 'none',
-                      color: '#3b82f6',
-                      fontWeight: '500'
-                    }}>
-                      {service.name}
-                    </Link>
-                    <div style={{ 
-                      fontSize: '0.875rem', 
-                      color: '#6b7280', 
-                      marginTop: '0.25rem' 
-                    }}>
-                      {service.price}
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <div style={{ 
-          textAlign: 'center', 
-          marginTop: '3rem',
-          padding: '2rem',
-          backgroundColor: '#f8fafc',
-          borderRadius: '1rem',
-          border: '1px solid #e2e8f0'
-        }}>
-          <h2 style={{ 
-            fontSize: '1.875rem', 
-            fontWeight: '600', 
-            marginBottom: '1rem',
-            color: '#1f2937'
-          }}>
-            Ready to Get Started?
-          </h2>
-          <p style={{ 
-            color: '#6b7280', 
-            marginBottom: '1.5rem',
-            fontSize: '1.125rem'
-          }}>
-            Contact us today to discuss your project requirements and get a custom quote.
-          </p>
-          <Link href="/contact" style={{
-            display: 'inline-block',
-            backgroundColor: '#3b82f6',
-            color: 'white',
-            padding: '0.75rem 2rem',
-            borderRadius: '0.5rem',
-            textDecoration: 'none',
-            fontWeight: '600',
-            transition: 'background-color 0.2s'
-          }}>
-            Contact Us
-          </Link>
-        </div>
-      </div>
-    </>
+import { servicesCatalog } from '../../src/data/servicesCatalog';
+;
+export default function ServicesIndex(...args[]):  {;
+  return (;
+    <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">;
+      <Helmet>;
+        <title>Services — Zion</title>;
+        <meta name="description" content="Futuristic, autonomous services to accelerate your roadmap."       />;
+      </Helmet>;
+;
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">;
+        <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float"       />;
+        <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow"       />;
+        <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast"       />;
+        <div className="absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,3rem_3rem,3rem_3rem] animate-grid"       />;
+        <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]"><div className="twinkle-field absolute inset-0"       /></div>;
+        <div className="absolute inset-0 beams opacity-[0.06]"       />;
+      </div>;
+;
+      <header className="relative z-10">;
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">;
+          <div className="text-2xl font-bold tracking-wide">;
+            <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</span>;
+          </div>;
+          <div className="hidden gap-6 md:flex text-white/80">;
+            <Link href="/"><a>Home</a></Link>;
+            <Link href="/automation"><a>Automations</a></Link>;
+            <Link href="/products"><a>Products</a></Link>;
+            <Link href="/contact"><a>Contact</a></Link>;
+          </div>;
+        </nav>;
+      </header>;
+;
+      <main className="relative z-10">;
+        <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-20 text-center">;
+          <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md">;
+            <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]"       />;
+            Autonomous delivery with safety guardrails;
+          </div>;
+          <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl"><span className="gradient-text">Services</span></h1>;
+          <p className="mx-auto mt-5 max-w-3xl text-lg text-white/80">Choose from specialized agents and blueprints to ship value faster.</p>;
+        </section>;
+;
+        {/* Expanded catalog pulled from data with prices and links */};
+        <section className="mx-auto max-w-7xl px-6 pb-20">;
+          <h2 className="mb-6 text-2xl font-bold">More Services</h2>;
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">;
+            {servicesCatalog;
+              .flatMap((c) => c.items.map((((((((item, index, index, index, index, index, index) => ({ ...((((((item, index, index, index, index, index, key: index })) => ({ ...(((((item, index, index, index, index, key: index })) => ({ ...((((item, index, index, index, key: index })) => ({ ...(((item, index, index, key: index })) => ({ ...((item, index, key: index })) => ({ ...(item, key: index })) => ({...item, categoryName: c.name})));
+              .slice(0, 18);
+              .map((((((((item, index, index, index, index, index, index) => ({ ...((((((item, index, index, index, index, index, key: index })) => ({ ...(((((item, index, index, index, index, key: index })) => ({ ...((((item, index, index, index, key: index })) => ({ ...(((item, index, index, key: index })) => ({ ...((item, index, key: index })) => ({ ...(item, key: index })) => (;
+                <a;
+                  key={item.id};
+                  href={item.href};
+                  target={item.external ? '_blank' : undefined};
+                  rel={item.external ? 'noreferrer' : undefined};
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30";
+                >;
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100"       />;
+                  <div className="flex items-start justify-between">;
+                    <h3 className="text-lg font-semibold">{item.title}</h3>;
+                    <span className="rounded-full border border-white/15 px-2 py-0.5 text-xs text-white/70">{item.categoryName}</span>;
+                  </div>;
+                  <p className="mt-1 text-sm text-white/75">{item.description}</p>;
+                  <div className="mt-4 text-sm text-white/80">Starting at <span className="font-semibold">{item.price}</span>/{item.billing}</div>;
+                  <ul className="mt-3 list-disc space-y-1 pl-5 text-xs text-white/70">;
+                    {item.features.slice(0,4).map((((((((f, i, index, index, index, index, index, index) => ({ ...((((((f, i, index, index, index, index, index, key: index })) => ({ ...(((((f, i, index, index, index, index, key: index })) => ({ ...((((f, i, index, index, index, key: index })) => ({ ...(((f, i, index, index, key: index })) => ({ ...((f, i, index, key: index })) => ({ ...(f, i, key: index })) => (;
+                      <li key={i}>{f}</li>;
+                    ))};
+                  </ul>;
+                  <div className="mt-4">;
+                    <span className="inline-block rounded-lg bg-white/90 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-white">{item.ctaLabel}</span>;
+                  </div>;
+                </a>;
+            ))};
+          </div>;
+        </section>;
+        <section className="mx-auto max-w-7xl px-6 pb-16">;
+          <div className="grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">;
+            {[;
+              { href: '/services/ai-seo-auditor', title: 'AI SEO Auditor', desc: 'Automate on-site SEO audits and fixes.' },;
+              { href: '/services/customer-support-chatbot', title: 'Customer Support Chatbot', desc: 'Deflect tickets with high-quality automated replies.' },;
+              { href: '/services/landing-page-generator', title: 'Landing Page Generator', desc: 'Spin up optimized pages with one prompt.' },;
+              { href: '/services/price-intelligence-service', title: 'Price Intelligence', desc: 'Continuously monitor and adapt pricing.' },;
+              { href: '/services/developer-productivity-copilot', title: 'Developer Productivity Copilot', desc: 'AI PR reviews, test gen, CI insights.' },;
+              { href: '/services/ai-sales-assistant', title: 'AI Sales Assistant', desc: 'Qualify leads and personalize outreach.' },;
+              { href: '/services/security-posture-guardian', title: 'Security Posture Guardian', desc: 'Misconfig and secret scanning with fixes.' },;
+              { href: '/services/ai-data-pipeline-optimizer', title: 'AI Data Pipeline Optimizer', desc: 'Optimize ETL/ELT and RAG pipelines.' },;
+            ].map((((((((s, index, index, index, index, index, index) => ({ ...((((((s, index, index, index, index, index, key: index })) => ({ ...(((((s, index, index, index, index, key: index })) => ({ ...((((s, index, index, index, key: index })) => ({ ...(((s, index, index, key: index })) => ({ ...((s, index, key: index })) => ({ ...(s, key: index }))  => (;
+              <Link key={s.href} href={s.href}>;
+                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">;
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100"       />;
+                  <h3 className="text-lg font-semibold">{s.title}</h3>;
+                  <p className="mt-1 text-sm text-white/75">{s.desc}</p>;
+                </a>;
+              </Link>;
+            ))};
+          </div>;
+        </section>;
+;
+        <section className="mx-auto max-w-7xl px-6 pb-24">;
+          <div className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl">;
+            <h3 className="text-2xl font-bold">Need something custom?</h3>;
+            <p className="mx-auto mt-2 max-w-2xl text-white/80">We can assemble domain-specific agent factories to match your goals.</p>;
+            <div className="mt-6 flex flex-wrap justify-center gap-3">;
+              <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Contact Us</a></Link>;
+              <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Explore Automations</a></Link>;
+            </div>;
+          </div>;
+        </section>;
+      </main>;
+    </div>;
   );
 };
-
-export default Services;

@@ -1,13 +1,11 @@
-
-import * as React from "react"
-
-// Export all components from the sidebar subcomponents
-export * from "./sidebar-context"
-export * from "./sidebar-trigger"
-export * from "./sidebar-main"
-export * from "./sidebar-content"
-export * from "./sidebar-group"
-export * from "./sidebar-menu"
-
-// Also export types 
-export type { SafeRef } from "../sidebar.types"
+export { Sidebar } from './Sidebar';
+export { SidebarContent } from './SidebarContent';
+export { SidebarGroup } from './SidebarGroup';
+export { SidebarGroupContent } from './SidebarGroupContent';
+export { SidebarGroupLabel } from './SidebarGroupLabel';
+export { SidebarItem } from './SidebarItem';
+export { SidebarMenu } from './SidebarMenu';
+export { SidebarMenuButton } from './SidebarMenuButton';
+export { SidebarProvider } from './SidebarProvider';
+export { SidebarSection } from './SidebarSection';
+export { SidebarTrigger } from './SidebarTrigger';

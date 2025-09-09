@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import path from 'path';
 import fs from 'fs';
+import { logError } from '@/utils/productionLogger'; // Import logError
 
 import {logErrorToProduction} from '@/utils/productionLogger';
 
@@ -77,7 +78,7 @@ export default async function handler(
     res.end(imageBuffer);
     
   } catch (error) {
-    logErrorToProduction('Image serving error:', error);
+    logError('Image serving error:', { data: error, params });
     res.status(500).json({ error: 'Internal server error' });
   }
 } 

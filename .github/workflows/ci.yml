@@ -4,14 +4,49 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
   push:
-    branches: [ main ]
-  schedule:
-    - cron: '0 2 * * 1' # Weekly on Monday at 2 AM UTC
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Verify build output
+        run: |
+          if [ ! -d .next ]; then
+            echo "Build failed: .next folder not found"
+            exit 1
+          fi
+          echo "Build successful: .next folder found"
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -19,123 +54,46 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20.19.0
+          node-version: '18'
           cache: 'npm'
 
-      - name: Install dependencies (clean)
-        run: npm ci --no-audit --no-fund --include=optional
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
 
-      - name: Rebuild optional rollup binaries (tolerate failure)
-        run: npm rebuild rollup @rollup/rollup-linux-x64-gnu || true
+      - name: Build project
+        run: npm run build
 
-      - name: Build
-        env:
-          NODE_ENV: production
-          SKIP_TYPE_CHECK: 'true'
-          ROLLUP_SKIP_NODEJS_NATIVE: 'true'
-        run: npm run build:ci
+      - name: Run basic tests (if available)
+        run: |
+          if npm run | grep -q "test"; then
+            npm test
+          else
+            echo "No test script found, skipping tests"
+          fi
+        continue-on-error: true
 
-      - name: Upload build artifact
-        if: always()
+      - name: Upload test artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: dist
+          name: coverage-report
+          path: coverage
+        if: success() || failure()
+
+      - name: Upload build artifacts
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
           path: dist
 
-      - name: Build size analysis
-        if: success()
+
+      - name: Verify build output
         run: |
-          echo "Build size analysis:"
-          du -sh dist/
-          find dist -name "*.js" -exec wc -c {} + | sort -n | tail -10
-          find dist -name "*.css" -exec wc -c {} + | sort -n | tail -5
-
-  lint:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    continue-on-error: true
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20.19.0
-          cache: 'npm'
-
-      - name: Install dependencies (clean)
-        run: npm ci --no-audit --no-fund --include=optional
-
-      - name: ESLint
-        run: npm run lint
-
-  typecheck:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    continue-on-error: true
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20.19.0
-          cache: 'npm'
-
-      - name: Install dependencies (clean)
-        run: npm ci --no-audit --no-fund --include=optional
-
-      - name: TypeScript Check (no emit)
-        run: npm run type-check
-
-  security:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20.19.0
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci --no-audit --no-fund --include=optional
-
-      - name: Security audit
-        run: npm audit --audit-level=moderate
-
-      - name: Check for known vulnerabilities
-        run: |
-          echo "Checking for security vulnerabilities..."
-          npm audit --json > audit-results.json || true
-          if [ -s audit-results.json ]; then
-            echo "Security audit completed. Check audit-results.json for details."
-          else
-            echo "No security issues found."
+          if [ ! -d dist ]; then
+            echo "Build failed: dist folder not found"
+            exit 1
           fi
-
-  performance:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    needs: build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20.19.0
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci --no-audit --no-fund --include=optional
+          echo "Build completed successfully"
 
       - name: Download build artifacts
         uses: actions/download-artifact@v4

@@ -1,0 +1,13 @@
+import React from 'react';''';
+import { Button } from '@/components/ui/button';
+export default function CreatePostButton({ categoryId }) {};
+  return null;
+}
+    </Button>)}
+
+
+export { CreatePostButton }
+export { CreatePostButton }
+export { CreatePostButton }
+export { CreatePostButton }
+export { CreatePostButton }

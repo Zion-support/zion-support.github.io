@@ -1,5 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { logErrorToProduction } from '@/utils/productionLogger';
+import fs from 'fs';
+import path from 'path';
+import * as Sentry from '@sentry/nextjs';
+import { logWarn, logError } from '@/utils/productionLogger'; // Import loggers
 
 interface LogEntry {
   level: 'debug' | 'info' | 'warn' | 'error';
@@ -7,9 +10,10 @@ interface LogEntry {
   context?: Record<string, unknown>;
   timestamp: string;
   sessionId: string;
+  correlationId?: string | null; // Added to match productionLogger's LogEntry
   url?: string;
   userAgent?: string;
-  userId?: string;
+  userId?: string | null; // Matched to productionLogger's LogEntry
 }
 
 interface LogsRequestBody {
@@ -40,20 +44,19 @@ export default async function handler(
         continue;
       }
 
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log(`[${entry.level.toUpperCase()}] ${entry.timestamp} - ${entry.message}`, entry.context || '');
+    // 3. Optional: Forward to external webhook if configured via env
+    if (process.env.NEXT_PUBLIC_AUTOFIX_WEBHOOK_URL) {
+      try {
+        const doFetch = typeof fetch !== 'undefined' ? fetch : (await import('node-fetch')).default as unknown as typeof fetch;
+        await doFetch(process.env.NEXT_PUBLIC_AUTOFIX_WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ entries }),
+        });
+      } catch (err) {
+        // swallow – do not break client logging on webhook failure
+         logWarn('Failed to forward logs to webhook:', { data: err });
       }
-
-      // Here you could add additional logging destinations:
-      // - Database storage
-      // - External logging services (Sentry, LogRocket, etc.)
-      // - File system logging
-      // - Real-time monitoring dashboards
-
-      // For now, we'll just acknowledge receipt
-      // In production, you might want to store these logs in a database
-      // or send them to an external logging service
     }
 
     return res.status(200).json({ 
@@ -63,10 +66,9 @@ export default async function handler(
     });
 
   } catch (error) {
-    logErrorToProduction('Error processing logs:', error);
-    return res.status(500).json({ 
-      message: 'Internal Server Error',
-      timestamp: new Date().toISOString()
-    });
+    // Log server-side failure
+    logError('Error in /api/logs:', { data: error });
+    Sentry.captureException(error);
+    return res.status(500).json({ message: 'Internal Server Error' });
   }
 }

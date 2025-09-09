@@ -1,14 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import type { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
-import { Search, Filter, GridIcon, List, Loader2, SortAsc } from 'lucide-react';
-
-
-
-
-
-
-import { Button } from '@/components/ui/Button';
+import Image from 'next/image'; // Import next/image
+import { Search, Filter, GridIcon, List } from 'lucide-react'; // Removed Loader2, SortAsc
+import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -106,11 +101,19 @@ const SearchResultCard: React.FC<{
   return (
     <div onClick={handleClick} className={cardClass}>
       {result.image && (
-        <div className={viewMode === 'grid' ? "mb-3" : "flex-shrink-0"}>
-          <img 
+        <div
+          className={`
+            ${viewMode === 'grid' ? "mb-3 w-full h-48" : "flex-shrink-0 w-20 h-20"}
+            relative overflow-hidden rounded
+          `}
+        >
+          <Image
             src={result.image} 
             alt={result.title}
-            className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
+            fill
+            style={{ objectFit: 'cover' }}
+            sizes={viewMode === 'grid' ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "80px"}
+            priority={false} // Consider setting to true for first few items if they are LCP candidates
           />
         </div>
       )}
@@ -300,7 +303,7 @@ const NoResultsState: React.FC<{ searchTerm: string; onNewSearch: (term: string)
         <Search className="mx-auto h-16 w-16 text-muted-foreground mb-4" />
         <h2 className="text-2xl font-semibold mb-2">No results found</h2>
         <p className="text-muted-foreground mb-6">
-          We couldn't find anything matching "{searchTerm}". Try adjusting your search or filters.
+          We couldn&apos;t find anything matching &quot;{searchTerm}&quot;. Try adjusting your search or filters.
         </p>
       </div>
 
@@ -550,7 +553,7 @@ const SearchPage = ({ products, talent, posts, docs, q }: SearchPageProps) => {
           <div>
             <h1 className="text-2xl font-bold">Search Results</h1>
             <p className="text-muted-foreground">
-              {filteredResults.length} results for "{searchTerm}"
+              {filteredResults.length} results for &quot;{searchTerm}&quot;
             </p>
           </div>
 

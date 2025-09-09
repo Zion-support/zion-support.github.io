@@ -5,7 +5,7 @@ const path = require('path');
 // Function to fix all remaining semicolons in JSX;
 function fixFinalSemicolons(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
 
     // More specific fixes for remaining semicolons;
@@ -23,22 +23,22 @@ function fixFinalSemicolons(filePath) {
       // Fix type semicolons;
       { pattern: /type='([^']*);'/g, replacement: "type='$1'" }, { pattern: /type="([^"]*);"/g, replacement: 'type="$1"' },
       // Fix import statements that got corrupted;
-      { pattern: /}\s*import\s+/g, replacement: '}\n\nimport ' } ];
+      { pattern: /}\s*import\s+/g, replacement: "}\n\nimport " },;
+    ];
 
     fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+  const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
-        content = newContent;
-        modified = true}
+  content = newContent;
+        modified = true;}
     });
-
     if (modified) {
-      fs.writeFileSync(filePath, content, `utf8`);
+  fs.writeFileSync(filePath, content, `utf8`);
       console.log(`Fixed final semicolons in: ${filePath}`);
-      return true}
-    return false} catch (error) { 
-    console.error(`Error fixing ${filePath }:`, error.message);
-    return false}
+      return true;}
+    return false;} catch (error) {
+  console.error(`Error fixing ${filePath }:`, error.message);
+    return false;}
 }
 
 // Specific files that need fixing;
@@ -51,11 +51,10 @@ const filesToFix = [
 
 console.log('🔧 Fixing final semicolons...');
 let fixedCount = 0;
-
 filesToFix.forEach(file => {
   if (fs.existsSync(file)) {
-    if (fixFinalSemicolons(file)) {
-      fixedCount++}
+  if (fixFinalSemicolons(file)) {
+  fixedCount++;}
   }
 });
 

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import SignupForm from '@/components/auth/SignupForm';
 import { AuthButtons } from '@/components/AuthButtons';
 import { fireEvent } from '@/lib/analytics';
-import { logInfo } from '@/utils/productionLogger';
+// import { logInfo } from '@/utils/productionLogger'; // Unused
 import { useRouter } from 'next/router';
 import { OptimizedImage } from '@/components/ui/OptimizedImage';
 
@@ -42,7 +42,11 @@ const RegisterPage = () => {
               alt="Zion Tech"
               width={48}
               height={48}
-              fallback="/logos/zion-logo-fallback.png"
+              onError={(e) => {
+                const target = e.currentTarget as HTMLImageElement;
+                // Attempt to load from a more generic path if the specific one fails or hide
+                target.style.display = 'none';
+              }}
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
               Create your account

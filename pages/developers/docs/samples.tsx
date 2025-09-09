@@ -1,14 +1,4 @@
-import { GetServerSideProps } from 'next';
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
-    redirect: {
-      destination: '/docs/sample-code',
-      permanent: false,
-    },
-  };
-};
-
-export default function SamplesRedirect() {
+// Placeholder for Developers Docs Samples Page
+export default function DevelopersDocsSamplesPage() {
   return null;
 }

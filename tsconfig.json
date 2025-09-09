@@ -3,20 +3,26 @@
     "target": "ES2022",
     "useDefineForClassFields": true,
     "lib": [
-      "ES2022",
+      "ES2020",
       "DOM",
       "DOM.Iterable"
     ],
     "module": "ESNext",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/pages/*": ["./src/pages/*"],
-      "axios": ["./src/lib/axios.ts"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@/pages/*": [
+        "./src/pages/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "axios": [
+        "./src/lib/axios.ts"
+      ]
     },
-    "skipLibCheck": true,
-    "types": ["vite/client", "react", "react-router-dom", "socket.io", "socket.io-client", "node", "react-dom", "next", "next/types/global", "vitest/globals"],
-
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -24,29 +30,13 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
+    /* Linting */
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": false,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": false,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "strictNullChecks": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
+    "noFallthroughCasesInSwitch": true,
     "allowJs": true,
-    "incremental": true,
-    "noEmitOnError": false,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "incremental": true
   },
   "include": [
     "next-env.d.ts", 
@@ -58,40 +48,12 @@
     "*.ts",
     "*.tsx"
   ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
   "exclude": [
-    "node_modules",
-    "dist",
-    "out",
-    "build",
-    "coverage",
-    "src-disabled",
-    "src.broken",
-    "src_disabled_*",
-    "pages._archive_corrupted",
-    "pages.bak",
-    "*.disabled",
-    "*.backup",
-    "*.bak",
-    "recovered-branches",
-    "backup",
-    "corrupted*",
-    "*_backup*",
-    "temp*",
-    "tmp*",
-    "*.tmp",
-    "*.temp",
-    "**/tests/**",
-    "__tests__/**",
-    "temp_*/**",
-    "temp-*/**",
-    "temp*/**",
-    "temp_conflicts/**",
-    "temp_exclude/**",
-    "zion-*/**",
-    "zion_os/**",
-    "zion/**",
-    "apps/**",
-    "utils/**",
-    "types/**"
+    "node_modules"
   ]
 }

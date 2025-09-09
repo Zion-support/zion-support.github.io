@@ -52,8 +52,8 @@ interface VoteResults {
 }
 
 const ProposalDetailPage: React.FC = () => {
-  const router = useRouter();
-  const proposalId = router.query.proposalId as string;
+  const params = useParams();
+  const proposalId = params.proposalId as string;
   const { address: connectedWalletAddress, isConnected, provider } = useWallet();
 
   const [proposal, setProposal] = useState<ProposalFull | null>(null);
@@ -99,7 +99,7 @@ const ProposalDetailPage: React.FC = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [proposalId]);
+  }, [proposalId, router.isReady]); // Added router.isReady
 
   useEffect(() => {
     if (router.isReady && proposalId) { // Ensure router is ready and proposalId is available

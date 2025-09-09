@@ -1,7 +1,7 @@
 "use client";
 
-import Link from 'next/link';
-import { ReactNode } from 'react';
+import Link from "next/link";
+import { ReactNode } from "react";
 
 interface FeatureCardProps {
   id: number;
@@ -14,15 +14,14 @@ interface FeatureCardProps {
   onClick: () => void;
 }
 
-export function FeatureCard({
-  id,
-  title,
-  description,
-  icon,
-  color,
-  href,
-  isActive,
-  onClick
+export function FeatureCard({ 
+  title, 
+  description, 
+  icon, 
+  color, 
+  href, 
+  isActive, 
+  onClick 
 }: FeatureCardProps) {
   const colorClasses = {
     blue: "bg-blue-500/20 hover:bg-blue-500/30 border-blue-500/30",
@@ -34,7 +33,7 @@ export function FeatureCard({
   };
 
   return (
-    <div
+    <div 
       className={`card group cursor-pointer transition-all duration-300 ${
         isActive ? 'scale-105 shadow-2xl' : 'hover:scale-105'
       } ${colorClasses[color as keyof typeof colorClasses]}`}
@@ -60,7 +59,7 @@ export function FeatureCard({
         {description}
       </p>
       <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-        <Link
+        <Link 
           href={href}
           className="text-sm font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded"
           onClick={(e) => e.stopPropagation()}

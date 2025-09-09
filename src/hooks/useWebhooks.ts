@@ -37,8 +37,8 @@ export function useWebhooks() {
     // chaining avoids a TypeError in those cases and falls back to process.env.
     // For Next.js, process.env is the primary source.
     const url =
-      process.env.NEXT_PUBLIC_SUPABASE_URL ||
-      process.env.SUPABASE_URL; // Fallback if NEXT_PUBLIC_ is not set but SUPABASE_URL is
+      env.NEXT_PUBLIC_SUPABASE_URL ||
+      env.SUPABASE_URL;
     return `${url}/functions/v1/webhook-manager`;
   };
 

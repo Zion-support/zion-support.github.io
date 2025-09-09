@@ -110,11 +110,15 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     integrations: ['Salesforce, HubSpot, Google Analytics, AWS, Azure, Slack'];
     useCases: ['Sales performance analysis, Customer behavior insights, Operational efficiency tracking'];
     roi: 'Increase data-driven decision making by 40% and reduce reporting time by 60%',
-    competitors: ['Tableau, Power BI, Looker, QlikView'];
-    marketSize: '$25B+ Business Intelligence market', growthRate: '15% YoY',
-    variant: 'ai-business-intelligence-enterprise', contactInfo: contact,
-    realImplementation: true, implementationDetails: 'Cloud-native platform with real-time data processing and AI model training',
-    launchDate: '2024-11-01', customers: 127,
+    competitors: ['Tableau, Power BI, Looker, QlikView'],
+    marketSize: '$25B+ Business Intelligence market',
+    growthRate: '15% YoY',
+    variant: 'ai-sales-intelligence-enterprise',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Cloud-native platform with real-time data processing and AI model training',
+    launchDate: '2024-11-01',
+    customers: 127,
     rating: 4.9,
     reviews: 89
   };
