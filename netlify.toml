@@ -39,7 +39,7 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# SPA fallback is defined in public/_redirects to avoid double handling
+# SPA fallback handled via `_redirects` in publish dir if present
 
 # Functions
 [functions]
