@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Rocket, 
-  Satellite, 
-  Globe, 
+  Shield, 
+  Building, 
   Brain, 
+  Cloud, 
   CheckCircle,
   ArrowRight,
   Database,
@@ -12,101 +12,76 @@ import {
   BarChart3,
   Workflow,
   Calendar,
+  Users,
+  FileText,
   Target,
   Zap,
-  TrendingUp,
-  Shield,
-  Star,
-  Award,
+  Globe,
   Cpu,
   Network,
-  FileText,
-  Search,
   Eye,
+  Search,
+  AlertTriangle,
   CheckSquare,
   Clipboard,
-  AlertTriangle,
-  Settings,
-  Gauge,
-  Activity,
-  Monitor,
-  Cog,
-  Wrench,
-  HardHat,
-  Truck,
-  Package,
-  BarChart,
-  PieChart,
-  LineChart,
-  Users,
+  Award,
+  Star,
+  Rocket,
   Heart,
-  ShoppingCart,
-  Building,
-  Atom,
-  Infinity,
-  Planet,
-  Telescope,
-  Orbit,
-  Antenna,
-  Signal,
-  Navigation,
-  Earth,
-  Moon,
-  Sun,
-  Binary
+  TrendingUp
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const SpaceTech = () => {
+const Government = () => {
   const features = [
     {
-      icon: Rocket,
-      title: 'Satellite Technology',
-      description: 'Advanced satellite systems and space infrastructure solutions',
+      icon: Shield,
+      title: 'FedRAMP Compliance',
+      description: 'Full compliance with federal security and compliance requirements',
       color: 'from-blue-500 to-indigo-500'
     },
     {
       icon: Brain,
-      title: 'AI Space Analytics',
-      description: 'Intelligent analytics for space data and satellite operations',
+      title: 'AI-Powered Analytics',
+      description: 'Advanced analytics for government decision making and insights',
       color: 'from-purple-500 to-cyan-500'
     },
     {
-      icon: Globe,
-      title: 'Earth Observation',
-      description: 'Satellite imagery and environmental monitoring solutions',
+      icon: Cloud,
+      title: 'Secure Cloud Infrastructure',
+      description: 'Government-grade cloud solutions with enhanced security',
       color: 'from-green-500 to-blue-500'
     },
     {
-      icon: Shield,
-      title: 'Space Security',
-      description: 'Cybersecurity and protection for space-based systems',
-      color: 'from-red-500 to-orange-500'
+      icon: Database,
+      title: 'Data Governance',
+      description: 'Comprehensive data management and governance frameworks',
+      color: 'from-orange-500 to-red-500'
     }
   ];
 
   const solutions = [
     {
-      title: 'Satellite Operations Platform',
-      description: 'Comprehensive platform for satellite management and operations',
-      features: ['Mission Control', 'Telemetry Analysis', 'Orbital Planning', 'System Monitoring'],
-      href: '/services/space-tech'
+      title: 'Government Cloud Platform',
+      description: 'FedRAMP-compliant cloud infrastructure for government agencies',
+      features: ['FedRAMP Authorization', 'Multi-Cloud Support', 'Security Hardening', 'Compliance Monitoring'],
+      href: '/services/cloud-devops'
     },
     {
-      title: 'Space Data Analytics',
-      description: 'AI-powered analytics for space data and satellite imagery',
-      features: ['Image Processing', 'Data Visualization', 'Predictive Analytics', 'Real-time Insights'],
+      title: 'AI Government Analytics',
+      description: 'Intelligent analytics platform for government decision making',
+      features: ['Predictive Analytics', 'Data Visualization', 'Real-time Insights', 'Custom Dashboards'],
       href: '/services/ai-business-intelligence'
     }
   ];
 
   const benefits = [
-    'Enhanced satellite operations and mission success',
-    'Improved space data analysis and insights',
-    'Advanced Earth observation capabilities',
-    'Secure and reliable space infrastructure',
-    'Real-time monitoring and control systems',
-    'Innovative space technology solutions'
+    'Enhanced security and compliance with federal standards',
+    'Improved operational efficiency and cost savings',
+    'Better citizen services and engagement',
+    'Streamlined regulatory reporting and compliance',
+    'Increased data security and privacy protection',
+    'Modern technology infrastructure for government agencies'
   ];
 
   return (
@@ -122,19 +97,18 @@ const SpaceTech = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-full px-4 py-2 mb-6">
-              <Rocket className="w-5 h-5 text-blue-400" />
-              <span className="text-blue-400 font-medium">Space Technology</span>
+              <Building className="w-5 h-5 text-blue-400" />
+              <span className="text-blue-400 font-medium">Government Solutions</span>
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              Advancing Space Technology with
+              Modernizing Government with
               <span className="bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent">
-                {' '}AI & Innovation
+                {' '}AI & Technology
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Zion Tech Group delivers cutting-edge space technology solutions that drive 
-              innovation in satellite operations, space analytics, and Earth observation. 
-              We're helping humanity explore and understand space.
+              Zion Tech Group delivers cutting-edge government technology solutions that enhance 
+              security, improve efficiency, and modernize public sector operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -166,10 +140,10 @@ const SpaceTech = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Space Technology Features
+              Government Technology Features
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our space technology solutions are built with innovation, reliability, and performance in mind
+              Our government solutions are built with security, compliance, and efficiency in mind
             </p>
           </motion.div>
           
@@ -205,10 +179,10 @@ const SpaceTech = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Space Technology Solutions
+              Government Solutions
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Comprehensive space technology solutions designed for modern space operations
+              Comprehensive technology solutions designed specifically for government agencies
             </p>
           </motion.div>
           
@@ -258,10 +232,10 @@ const SpaceTech = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Space Technology Benefits
+              Government Benefits
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Measurable improvements in space operations, data analysis, and mission success
+              Measurable improvements in security, compliance, and operational efficiency
             </p>
           </motion.div>
           
@@ -294,10 +268,10 @@ const SpaceTech = () => {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Ready to Advance Space Technology?
+              Ready to Modernize Government?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Let's discuss how Zion Tech Group can help you achieve your space technology goals
+              Let's discuss how Zion Tech Group can help you achieve your government technology goals
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -322,4 +296,4 @@ const SpaceTech = () => {
   );
 };
 
-export default SpaceTech;
+export default Government;
