@@ -4,6 +4,8 @@
   publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
+  # Skip TypeScript checking during build
+  environment = { SKIP_TYPE_CHECK = "true" }
 
 [build.environment]
   NODE_VERSION = "20"

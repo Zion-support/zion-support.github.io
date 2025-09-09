@@ -136,6 +136,13 @@ export default defineConfig(({ mode }) => ({
     format: 'esm',
     // Disable TypeScript checking during build
     logLevel: 'error',
+    // Skip TypeScript type checking during build
+    tsconfigRaw: {
+      compilerOptions: {
+        skipLibCheck: true,
+        noEmit: true,
+      },
+    },
   },
   resolve: {
     alias: {

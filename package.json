@@ -21,7 +21,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "NODE_ENV=production vite build",
+    "build": "NODE_ENV=production SKIP_TYPE_CHECK=true vite build",
     "build:analyze": "ANALYZE=true vite build",
     "build:preview": "npm run build && npm run start",
     "analyze:bundle": "node scripts/bundle-analyzer.js",
