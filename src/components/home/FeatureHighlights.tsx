@@ -1,77 +1,58 @@
+import React from 'react';
 
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Check } from 'lucide-react';
-
-import { cn } from "@/lib/utils";
-
-interface FeatureHighlightsProps {
-  className?: string;
-  style?: React.CSSProperties;
-}
-
-export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
-  const highlightsData = [
+export function FeatureHighlights() {
+  const highlights = [
     {
-      title: "For Talent Seekers",
-      features: [
-        "AI-powered talent matching based on your specific project requirements",
-        "Verified profiles with skills validation and credential checking",
-        "Transparent pricing and no hidden fees",
-        "Direct communication with potential candidates",
-        "Secure payment protection and dispute resolution",
-        "Post jobs and receive AI-matched applicants"
-      ]
+      icon: '⚡',
+      title: 'Lightning Fast',
+      description: 'Deploy solutions in days, not months with our streamlined processes'
     },
     {
-      title: "For Talent & Service Providers",
-      features: [
-        "Create a professional profile showcasing your skills and experience",
-        "Get matched with relevant projects that fit your expertise",
-        "Secure payment processing with on-time disbursements",
-        "Build your reputation through client reviews and ratings",
-        "Access to enterprise clients and high-value projects",
-        "Professional development resources and community support"
-      ]
+      icon: '🔒',
+      title: 'Enterprise Security',
+      description: 'Bank-level security protocols to protect your sensitive data'
     },
     {
-      title: "For Enterprise Clients",
-      features: [
-        "White-labeled talent portal with your company branding",
-        "Dedicated account management and priority support",
-        "Custom talent pools and preferred provider networks",
-        "Advanced analytics and reporting capabilities",
-        "API access for seamless integration with your HR systems",
-        "Customizable workflow and approval processes"
-      ]
+      icon: '🌍',
+      title: 'Global Support',
+      description: '24/7 support team available worldwide to assist you anytime'
+    },
+    {
+      icon: '📊',
+      title: 'Real-time Analytics',
+      description: 'Monitor performance and insights with comprehensive dashboards'
+    },
+    {
+      icon: '🔄',
+      title: 'Scalable Solutions',
+      description: 'Grow with confidence knowing our solutions scale with your business'
+    },
+    {
+      icon: '🎯',
+      title: 'Proven Results',
+      description: 'Track record of delivering measurable business outcomes'
     }
   ];
 
   return (
-    <section className={cn("py-16 bg-zion-blue", className)} style={style}>
-      <div className="container mx-auto px-4">
+    <section className="py-16 bg-zion-blue-dark">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-3">Tailored Solutions for Everyone</h2>
-          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-            Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed
+          <h2 className="text-3xl font-bold text-white mb-4">Key Features</h2>
+          <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+            Discover what makes Zion Tech Group the preferred choice for businesses worldwide
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {highlightsData.map((category, index) => (
-            <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-white mb-4">{category.title}</h3>
-                <ul className="space-y-3">
-                  {category.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-zion-slate-light">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {highlights.map((highlight, index) => (
+            <div key={index} className="bg-zion-blue border border-zion-blue-light rounded-lg p-6 hover:border-zion-cyan transition-all duration-300">
+              <div className="text-4xl mb-4">{highlight.icon}</div>
+              <h3 className="text-xl font-semibold text-white mb-3">{highlight.title}</h3>
+              <p className="text-zion-slate-light text-sm leading-relaxed">
+                {highlight.description}
+              </p>
+            </div>
           ))}
         </div>
       </div>

@@ -1,44 +1,50 @@
-import React, { Suspense, lazy, useEffect, memo } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { HelmetProvider } from 'react-helmet-async';
-import { ThemeProvider } from './components/ThemeProvider';
-import { ErrorBoundary, setupGlobalErrorHandling } from './components/ErrorHandling';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import ScrollToTop from './components/ScrollToTop';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceWrapper from './components/PerformanceWrapper';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import LoadingSpinner from './components/LoadingSpinner';
-import EnhancedLoadingSpinner from './components/EnhancedLoadingSpinner';
-import { SEO, HomePageSEO } from './components/SEO';
-import EnhancedSEO from './components/EnhancedSEO';
-import AccessibilityEnhancements from './components/AccessibilityEnhancements';
-import PerformanceOptimizations from './components/PerformanceOptimizations';
-import { NotificationToast } from './components/NotificationToast';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import OptimizedSuspense from './components/OptimizedSuspense';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import EnhancedNavigation from './components/EnhancedNavigation';
-import { bundleOptimizer } from './utils/bundleOptimizer';
-import { PrivateRoute } from './components/PrivateRoute';
-import { CommunityProvider } from './context/CommunityContext';
-import './App.css';
+import './index.css';
+import Home from './pages/Home';
+import ExpandedServicesPage from './pages/ExpandedServicesPage';
+import AIServicesPage from './pages/AIServicesPage';
+import CybersecurityServicesPage from './pages/CybersecurityServicesPage';
+import ComprehensiveServicesPage from './pages/ComprehensiveServicesPage';
+import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage';
+import ServicesComparisonPage from './pages/ServicesComparisonPage';
+import ServicesPage from './pages/ServicesPage';
+import Contact from './pages/Contact';
+import About from './pages/About';
+import GreenIT from './pages/GreenIT';
+import Privacy from './pages/Privacy';
+import Sitemap from './pages/Sitemap';
+import Terms from './pages/Terms';
+import NotFound from './pages/NotFound';
 
-// Service worker registration
-const registerServiceWorker = () => {
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          console.log('SW registered: ', registration);
-        })
-        .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError);
-        });
-    });
-  }
-};
+function App() {
+  return (
+    <HelmetProvider>
+      <Router>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/expanded-services" element={<ExpandedServicesPage />} />
+            <Route path="/ai-services" element={<AIServicesPage />} />
+            <Route path="/cybersecurity" element={<CybersecurityServicesPage />} />
+            <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
+            <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />
+            <Route path="/services-comparison" element={<ServicesComparisonPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/green-it" element={<GreenIT />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/sitemap" element={<Sitemap />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
+      </Router>
+    </HelmetProvider>
+  );
+}
 
 // Type definitions
 interface FallbackProps {

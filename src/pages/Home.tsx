@@ -1,15 +1,18 @@
 import React, { memo, useState, useEffect } from 'react';
 import Link from 'next/link';
 
-// Enhanced service card component with animations and better UX
-const ServiceCard = memo<{ 
-  title: string; 
-  description: string; 
-  icon: string;
-  link: string;
-  features: string[];
-}>(({ title, description, icon, link, features }) => {
-  const [isHovered, setIsHovered] = useState(false);
+import React from 'react';
+import { CategoriesSection } from "@/components/CategoriesSection";
+import { BenefitsSection } from "@/components/BenefitsSection";
+import { HowItWorksSection } from "@/components/HowItWorksSection";
+import { NewsletterSection } from "@/components/NewsletterSection";
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+import { SEO } from "@/components/SEO";
+import { HeroSection } from "@/components/home/HeroSection";
+import { QuickAccess } from "@/components/home/QuickAccess";
+import { FeatureCTAs } from "@/components/home/FeatureCTAs";
+import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 
 export default function Home() {
   const { t } = useTranslation();
