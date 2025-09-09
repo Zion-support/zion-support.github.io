@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client';
-import { logInfo, logErrorToProduction, logDebug } from '@/utils/productionLogger';
+import { logInfo, logError, logDev } from '@/utils/productionLogger';
 
 // Global Prisma instance for connection reuse
 let prisma: PrismaClient | null = null;
@@ -64,10 +64,10 @@ export async function executeWithTimeout<T>(
     
     return result;
   } catch (error) {
-    logErrorToProduction('Database query failed', error as Error);
+    logError('Database query failed:', error);
     
     if (fallbackData !== undefined) {
-      logDebug('Returning fallback data due to database error');
+      logDev('Returning fallback data due to database error');
       return fallbackData;
     }
     
@@ -85,7 +85,7 @@ export async function testDatabaseConnection(): Promise<boolean> {
     logInfo('Database connection successful');
     return true;
   } catch (error) {
-    logErrorToProduction('Database connection failed', error as Error);
+    logError('Database connection failed:', error);
     return false;
   }
 }
@@ -110,7 +110,7 @@ export async function getDatabaseStats() {
     
     return stats;
   } catch (error) {
-    logErrorToProduction('Failed to get database stats', error as Error);
+    logError('Failed to get database stats:', error);
     return {
       connected: false,
       error: error instanceof Error ? error.message : 'Unknown error'
@@ -128,7 +128,7 @@ export async function disconnectDatabase(): Promise<void> {
       prisma = null;
     logInfo('Database disconnected successfully');
     } catch (error) {
-    logErrorToProduction('Error disconnecting from database', error as Error);
+    logError('Error disconnecting from database:', error);
     }
   }
 }

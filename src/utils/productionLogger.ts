@@ -4,7 +4,7 @@
  */
 
 import type { LogContext, PerformanceMetrics } from '@/types/common';
-import { logError as reportExternalError } from './logError';
+import { getCorrelationId as fetchCorrelationId } from './correlationManager';
 
 type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 
@@ -14,9 +14,10 @@ interface LogEntry {
   context?: LogContext;
   timestamp: string;
   sessionId: string;
+  correlationId?: string | null;
   url?: string;
   userAgent?: string;
-  userId?: string;
+  userId?: string | null; // Already allows null from previous step, ensuring it's here
 }
 
 interface LoggerConfig {
@@ -25,7 +26,7 @@ interface LoggerConfig {
   enablePerformanceTracking: boolean;
   minLevel: LogLevel;
   sessionId: string;
-  userId?: string;
+  userId?: string | null; // Allow null for anonymous state
 }
 
 // Internal console methods to avoid circular dependencies
@@ -78,9 +79,10 @@ class ProductionLogger {
       context,
       timestamp: new Date().toISOString(),
       sessionId: this.config.sessionId,
+      correlationId: fetchCorrelationId(), // Get current correlation ID
       url: typeof window !== 'undefined' ? window.location.href : undefined,
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : undefined,
-      userId: this.config.userId,
+      userId: this.config.userId, // This is already string | null from LoggerConfig
     };
   }
 
@@ -133,7 +135,8 @@ class ProductionLogger {
               extra: entry.context,
               tags: {
                 sessionId: entry.sessionId,
-                userId: entry.userId,
+                userId: entry.userId ?? undefined, // Ensure undefined if null for Sentry tags
+                correlationId: entry.correlationId ?? undefined,
               },
             });
           } else if (sentry.captureMessage) {
@@ -360,7 +363,7 @@ class ProductionLogger {
   }
 
   // Utility methods
-  setUserId(userId: string): void {
+  setUserId(userId: string | null): void {
     this.config.userId = userId;
   }
 

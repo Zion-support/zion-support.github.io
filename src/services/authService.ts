@@ -1,14 +1,26 @@
-import { User } from '@/context/auth/AuthProvider';
+import axios from 'axios';
+import { toast } from '@/hooks/use-toast';
+import { safeStorage } from '@/utils/safeStorage';
+import { store } from '@/store';
+import { setToken } from '@/store/authSlice';
+import { logDev, logError } from '@/utils/productionLogger';
 
 export interface LoginCredentials {
   email: string;
   password: string;
 }
 
-export interface RegisterCredentials {
-  email: string;
-  password: string;
-  name: string;
+export async function registerUser(name: string, email: string, password: string) {
+  const endpoint = `${API_URL}/auth/register`;
+  try {
+    const res = await axios.post(endpoint, { name, email, password });
+    logDev('Register API Response Status:', res.status);
+    logDev('Register API Response Body:', res.data);
+    return { res, data: res.data };
+  } catch (err) {
+    logError('Register API error:', err);
+    throw err;
+  }
 }
 
 export interface AuthResponse {

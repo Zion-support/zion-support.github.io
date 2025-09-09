@@ -1,7 +1,6 @@
-
 import React from "react";
-import { logDebug } from '@/utils/productionLogger';
-import { Button } from "@/components/ui/Button";
+import { logDev } from '@/utils/productionLogger';
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react';
@@ -82,19 +81,19 @@ export function IntegrationCards() {
         title="Slack"
         description="Send notifications and interact with Zion from Slack."
         icon={<Slack className="h-5 w-5" />}
-        onConnect={() => logDebug('Connect Slack clicked')}
+        onConnect={() => logDev('Connect Slack')}
       />
       <IntegrationCard
         title="Salesforce"
         description="Sync leads and opportunities with Salesforce."
         icon={<Briefcase className="h-5 w-5" />}
-        onConnect={() => logDebug('Connect Salesforce clicked')}
+        onConnect={() => logDev('Connect Salesforce')}
       />
       <IntegrationCard
         title="Microsoft Teams"
         description="Receive updates through Microsoft Teams."
         icon={<Users className="h-5 w-5" />}
-        onConnect={() => logDebug('Connect Teams clicked')}
+        onConnect={() => logDev('Connect Teams')}
       />
     </div>
   );
