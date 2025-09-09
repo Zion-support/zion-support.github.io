@@ -1,14 +1,14 @@
 {
-  "totalSize": 1590827,
+  "totalSize": 1592164,
   "files": [
     {
-      "name": "assets/vendor-wlOTWG1x.js",
-      "size": 330791,
-      "sizeKB": 323.04,
+      "name": "assets/vendor-G_KKBONx.js",
+      "size": 330998,
+      "sizeKB": 323.24,
       "type": "JavaScript"
     },
     {
-      "name": "assets/react-dom-rwt1Trd2.js",
+      "name": "assets/react-dom-CNli2P6d.js",
       "size": 173068,
       "sizeKB": 169.01,
       "type": "JavaScript"
@@ -20,31 +20,31 @@
       "type": "CSS"
     },
     {
-      "name": "assets/motion-B3X5w6XL.js",
+      "name": "assets/motion-BiQJwef1.js",
       "size": 106807,
       "sizeKB": 104.3,
       "type": "JavaScript"
     },
     {
-      "name": "assets/service-pages-BGK9oKbH.js",
+      "name": "assets/service-pages-C6Sr9VaL.js",
       "size": 102143,
       "sizeKB": 99.75,
       "type": "JavaScript"
     },
     {
-      "name": "assets/forms-validation-a9mmn8Qx.js",
+      "name": "assets/forms-validation-BrEct-f9.js",
       "size": 99923,
       "sizeKB": 97.58,
       "type": "JavaScript"
     },
     {
-      "name": "assets/components-KLljuPmx.js",
-      "size": 84306,
-      "sizeKB": 82.33,
+      "name": "assets/components-DCYcru2Q.js",
+      "size": 83038,
+      "sizeKB": 81.09,
       "type": "JavaScript"
     },
     {
-      "name": "assets/pages-amWq50B6.js",
+      "name": "assets/pages-fIED1F3k.js",
       "size": 76136,
       "sizeKB": 74.35,
       "type": "JavaScript"
@@ -56,43 +56,43 @@
       "type": "Image"
     },
     {
+      "name": "assets/utils-BbZpS74i.js",
+      "size": 35419,
+      "sizeKB": 34.59,
+      "type": "JavaScript"
+    },
+    {
       "name": "assets/http-C7aFLusC.js",
       "size": 35259,
       "sizeKB": 34.43,
       "type": "JavaScript"
     },
     {
-      "name": "assets/utils-RDErvkzI.js",
-      "size": 33011,
-      "sizeKB": 32.24,
-      "type": "JavaScript"
-    },
-    {
-      "name": "assets/react-core-DCOKPPEG.js",
+      "name": "assets/react-core-BTew8liP.js",
       "size": 31284,
       "sizeKB": 30.55,
       "type": "JavaScript"
     },
     {
-      "name": "assets/ui-components-BmmF7otu.js",
+      "name": "assets/ui-components-B1OfESCG.js",
       "size": 23820,
       "sizeKB": 23.26,
       "type": "JavaScript"
     },
     {
-      "name": "assets/react-hook-form-1Y85Li9v.js",
+      "name": "assets/react-hook-form-DbF0HgNj.js",
       "size": 22755,
       "sizeKB": 22.22,
       "type": "JavaScript"
     },
     {
-      "name": "assets/core-pages-BHKLt52u.js",
+      "name": "assets/core-pages-nlAim9ls.js",
       "size": 21617,
       "sizeKB": 21.11,
       "type": "JavaScript"
     },
     {
-      "name": "assets/content-pages-CkT1IECJ.js",
+      "name": "assets/content-pages-B5LcGE0U.js",
       "size": 20637,
       "sizeKB": 20.15,
       "type": "JavaScript"
@@ -104,31 +104,31 @@
       "type": "JavaScript"
     },
     {
-      "name": "assets/main-IjpdjAEM.js",
+      "name": "assets/main-Cp7GjXfW.js",
       "size": 17561,
       "sizeKB": 17.15,
       "type": "JavaScript"
     },
     {
-      "name": "assets/radix-ui-6T2FTNqH.js",
+      "name": "assets/radix-ui-BN1tiLrK.js",
       "size": 16160,
       "sizeKB": 15.78,
       "type": "JavaScript"
     },
     {
-      "name": "assets/talent-pages-CQG4pCFb.js",
+      "name": "assets/talent-pages-DoRoRfvP.js",
       "size": 15813,
       "sizeKB": 15.44,
       "type": "JavaScript"
     },
     {
-      "name": "assets/ecommerce-pages-DDBlY6q8.js",
-      "size": 15805,
+      "name": "assets/ecommerce-pages-C_2plaw9.js",
+      "size": 15800,
       "sizeKB": 15.43,
       "type": "JavaScript"
     },
     {
-      "name": "assets/router-DCVVm-ED.js",
+      "name": "assets/router-Bi3QkSWT.js",
       "size": 12385,
       "sizeKB": 12.09,
       "type": "JavaScript"
@@ -140,13 +140,13 @@
       "type": "HTML"
     },
     {
-      "name": "assets/state-management-B7cVdSGR.js",
+      "name": "assets/state-management-hJ2ygXT2.js",
       "size": 9185,
       "sizeKB": 8.97,
       "type": "JavaScript"
     },
     {
-      "name": "assets/context-B92tNnlH.js",
+      "name": "assets/context-De_Od7PT.js",
       "size": 8376,
       "sizeKB": 8.18,
       "type": "JavaScript"
@@ -158,37 +158,37 @@
       "type": "JavaScript"
     },
     {
-      "name": "assets/hooks-DhlA-nlE.js",
-      "size": 7031,
-      "sizeKB": 6.87,
+      "name": "assets/hooks-D6m7sEGI.js",
+      "size": 7026,
+      "sizeKB": 6.86,
       "type": "JavaScript"
     },
     {
-      "name": "assets/auth-pages-CFt2AXH4.js",
+      "name": "assets/auth-pages-uxt6Z35B.js",
       "size": 6736,
       "sizeKB": 6.58,
       "type": "JavaScript"
     },
     {
-      "name": "assets/radix-core-t5dkraQs.js",
+      "name": "assets/radix-core-Cmj6xlB3.js",
       "size": 6519,
       "sizeKB": 6.37,
       "type": "JavaScript"
     },
     {
-      "name": "assets/auth-components-BjpqooZ5.js",
+      "name": "assets/auth-components-BLNQC_Wz.js",
       "size": 6496,
       "sizeKB": 6.34,
       "type": "JavaScript"
     },
     {
-      "name": "assets/talent-components-Bgl03x8L.js",
+      "name": "assets/talent-components-BM9rWCNn.js",
       "size": 5140,
       "sizeKB": 5.02,
       "type": "JavaScript"
     },
     {
-      "name": "assets/community-components-Og8kgnxX.js",
+      "name": "assets/community-components-DJdnl24T.js",
       "size": 4460,
       "sizeKB": 4.36,
       "type": "JavaScript"
@@ -200,7 +200,7 @@
       "type": "HTML"
     },
     {
-      "name": "assets/swr-CrHyXIdy.js",
+      "name": "assets/swr-CEzh6hc_.js",
       "size": 4111,
       "sizeKB": 4.01,
       "type": "JavaScript"
@@ -248,7 +248,7 @@
       "type": "JSON"
     },
     {
-      "name": "assets/query-DrbdMSBH.js",
+      "name": "assets/query-CjRF7Tmm.js",
       "size": 2225,
       "sizeKB": 2.17,
       "type": "JavaScript"
@@ -539,15 +539,15 @@
   "recommendations": [
     {
       "type": "large-file",
-      "file": "assets/vendor-wlOTWG1x.js",
-      "size": 323.04,
-      "suggestion": "Consider splitting assets/vendor-wlOTWG1x.js (323.04KB) into smaller chunks"
+      "file": "assets/vendor-G_KKBONx.js",
+      "size": 323.24,
+      "suggestion": "Consider splitting assets/vendor-G_KKBONx.js (323.24KB) into smaller chunks"
     },
     {
       "type": "large-file",
-      "file": "assets/react-dom-rwt1Trd2.js",
+      "file": "assets/react-dom-CNli2P6d.js",
       "size": 169.01,
-      "suggestion": "Consider splitting assets/react-dom-rwt1Trd2.js (169.01KB) into smaller chunks"
+      "suggestion": "Consider splitting assets/react-dom-CNli2P6d.js (169.01KB) into smaller chunks"
     },
     {
       "type": "large-file",
@@ -557,9 +557,9 @@
     },
     {
       "type": "large-file",
-      "file": "assets/motion-B3X5w6XL.js",
+      "file": "assets/motion-BiQJwef1.js",
       "size": 104.3,
-      "suggestion": "Consider splitting assets/motion-B3X5w6XL.js (104.3KB) into smaller chunks"
+      "suggestion": "Consider splitting assets/motion-BiQJwef1.js (104.3KB) into smaller chunks"
     },
     {
       "type": "bundle-size",
@@ -568,8 +568,8 @@
     },
     {
       "type": "js-optimization",
-      "size": "1301.83",
-      "suggestion": "JavaScript bundle is 1301.83KB. Consider tree shaking and removing unused code."
+      "size": "1303.13",
+      "suggestion": "JavaScript bundle is 1303.13KB. Consider tree shaking and removing unused code."
     },
     {
       "type": "css-optimization",
