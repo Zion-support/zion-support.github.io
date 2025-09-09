@@ -35,9 +35,11 @@ export default defineConfig(({ mode }) => ({
     // Prefer esbuild for fast, reliable CI minification
     minify: 'esbuild',
     // Chunk size warning limit
-    chunkSizeWarningLimit: 1000,
-    // Assets inline limit
-    assetsInlineLimit: 4096,
+    chunkSizeWarningLimit: 500,
+    // Assets inline limit - smaller for better caching
+    assetsInlineLimit: 2048,
+    // Enable tree shaking
+    treeshake: true,
     // Optimize chunk splitting
     rollupOptions: {
       onwarn(warning, warn) {
@@ -46,10 +48,8 @@ export default defineConfig(({ mode }) => ({
         warn(warning);
       },
       output: {
-        // Force-disable manual chunking in CI/Netlify to avoid rare hangs during chunk rendering
-        // Keep default Rollup chunking which is more stable across environments
-        manualChunks: undefined,
-        /* manualChunks: disableManualChunks ? undefined : (id) => {
+        // Enable optimized manual chunking for better performance
+        manualChunks: disableManualChunks ? undefined : (id) => {
           // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
             // React ecosystem - core
@@ -129,7 +129,7 @@ export default defineConfig(({ mode }) => ({
             }
             return 'pages';
           }
-        }, */
+        },
         // Optimize chunk file names
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',

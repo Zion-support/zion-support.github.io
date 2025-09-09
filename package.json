@@ -39,6 +39,7 @@
     "test:ui": "vitest --ui",
     "performance": "node scripts/performance-monitor.cjs",
     "analyze": "npm run build && npm run performance",
+    "analyze:performance": "node scripts/performance-optimizer.js",
     "test:comprehensive": "node scripts/comprehensive-test.cjs",
     "test:all": "npm run test:comprehensive",
     "cypress:open": "cypress open",
