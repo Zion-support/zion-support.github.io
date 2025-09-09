@@ -158,7 +158,7 @@ export default defineConfig(({ mode }) => ({
       },
     },
     // Optimize build target
-    target: 'es2022',
+    target: 'es2020',
     // Enable CSS code splitting
     cssCodeSplit: true,
     // Avoid gzip size computation entirely to prevent extra work on CI
@@ -173,7 +173,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   esbuild: {
-    target: 'es2022',
+    target: 'es2020',
     // Disable TypeScript checking during build
     logLevel: 'error',
     // Strip debugging noise and mark common logging as pure
