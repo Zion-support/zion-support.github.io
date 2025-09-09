@@ -21,23 +21,7 @@ function App() {
           <Route path="/services/innovative-2026-showcase" element={<Innovative2026Showcase />} />
         </Routes>
       </Suspense>
-    </Layout>
-  )
-}
-
-// Type definitions
-interface FallbackProps {
-  resetErrorBoundary: () => void;
-}
-
-function RootErrorFallback({ resetErrorBoundary }: FallbackProps) {
-  return (
-    <div role="alert" className="p-4 text-center space-y-2">
-      <p>Something went wrong</p>
-      <button onClick={resetErrorBoundary} className="underline">
-        Retry
-      </button>
-    </div>
+    </Router>
   );
 }
 

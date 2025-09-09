@@ -34,16 +34,10 @@
     "**/*.tsx"
   ],
   "exclude": [
-    "node_modules",
-    ".next",
-    "out",
-    "dist",
-    "build",
-    "automation",
-    "scripts",
-    "fix_*.js",
-    "fix_*.cjs",
-    "*.fix.js",
-    "*.fix.cjs"
+    "src/components.disabled",
+    "src/components.disabled/**/*",
+    "src_disabled/**/*",
+    "temp_components.disabled/**/*",
+    "node_modules"
   ]
 }
