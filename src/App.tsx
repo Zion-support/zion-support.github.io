@@ -43,15 +43,15 @@ const EquipmentPage = lazy(() => import('./pages/EquipmentPage'));
 const EquipmentDetail = lazy(() => import('./pages/EquipmentDetail'));
 const Analytics = lazy(() => import('./pages/Analytics'));
 const MobileLaunchPage = lazy(() => import('./pages/MobileLaunchPage'));
-const CommunityPage = lazy(() => import('./pages/CommunityPage'));
+// const CommunityPage = lazy(() => import('./pages/CommunityPage')); // Page not found
 const Categories = lazy(() => import('./pages/Categories'));
 const Blog = lazy(() => import('./pages/Blog'));
-const BlogPost = lazy(() => import('./pages/BlogPost'));
+// const BlogPost = lazy(() => import('./pages/BlogPost')); // Page not found
 const PartnersPage = lazy(() => import('./pages/Partners'));
 const Login = lazy(() => import('./pages/Login'));
 const Signup = lazy(() => import('./pages/Signup'));
 const ITOnsiteServicesPage = lazy(() => import('./pages/ITOnsiteServicesPage'));
-const OpenAppRedirect = lazy(() => import('./pages/OpenAppRedirect'));
+// const OpenAppRedirect = lazy(() => import('./pages/OpenAppRedirect')); // Page not found
 const ContactPage = lazy(() => import('./pages/Contact'));
 const ZionHireAI = lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = lazy(() => import('./pages/RequestQuote'));
@@ -127,14 +127,14 @@ function App() {
                             <Route path="/equipment/:id" element={<EquipmentDetail />} />
                             <Route path="/analytics" element={<Analytics />} />
                             <Route path="/mobile-launch" element={<MobileLaunchPage />} />
-                            <Route path="/open-app" element={<OpenAppRedirect />} />
-                            <Route path="/community" element={<CommunityPage />} />
+                            {/* <Route path="/open-app" element={<OpenAppRedirect />} /> */}
+                            {/* <Route path="/community" element={<CommunityPage />} /> */}
                             <Route path="/partners" element={<PartnersPage />} />
                             <Route path="/zion-hire-ai" element={<ZionHireAI />} />
                             <Route path="/hire-ai" element={<ZionHireAI />} />
                             <Route path="/request-quote" element={<RequestQuotePage />} />
                             <Route path="/blog" element={<Blog />} />
-                            <Route path="/blog/:slug" element={<BlogPost />} />
+                            {/* <Route path="/blog/:slug" element={<BlogPost />} /> */}
                             
                             {/* Service Routes */}
                             <Route path="/services/ai-services" element={<AIServices />} />
