@@ -1,7 +1,7 @@
 # Netlify rebuild trigger (minor touch to force deploy) - 2025-09-09
 [build]
   # Build the Vite React project on Netlify
-  command = "npm ci --no-audit --no-fund --omit=optional --include=dev && npm run build"
+  command = "npm ci --no-audit --no-fund --include=dev && npm run build"
   publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
@@ -13,6 +13,8 @@
     # Ensure devDependencies (e.g., Vite) are installed during CI
     NPM_CONFIG_PRODUCTION = "false"
     NPM_FLAGS = "--include=dev"
+    # Ensure optional native Rollup binaries are installed
+    NPM_CONFIG_OPTIONAL = "true"
 
 # Headers
 [[headers]]
