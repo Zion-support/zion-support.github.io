@@ -1,73 +1,113 @@
 import js from '@eslint/js';
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import globals from 'globals';
 
 export default [
-  { ...js.configs.recommended, files: ['app/**/*.{js,jsx,ts,tsx}'] },
   {
-    files: ['app/**/*.{js,jsx,ts,tsx}'],
+    ignores: [
+      'node_modules/',
+      '.next/',
+      'out/',
+      'dist/',
+      'build/',
+      'coverage/',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      '.prettierrc.js',
+      '.eslintrc.*',
+      '*.min.js',
+      '*.bundle.js',
+      'scripts/',
+      'automation/',
+      'automation_backup/',
+      'data_backup/',
+      'pm2-automation/',
+      '__tests__/',
+      'pages.disabled/',
+      'pages.corrupted.*/',
+      'pages.broken/',
+      'pages.bak/',
+      'pages.blog.disabled/',
+      'pages._archive_corrupted/',
+      'pages._quarantine/',
+      'pages-disabled/',
+      'pages-quarantine/',
+      'pages.__backup/',
+      'pages-backup/',
+      '*.test.js',
+      '*.test.ts',
+      '*.test.tsx',
+      '*.spec.js',
+      '*.spec.ts',
+      '*.spec.tsx'
+    ]
+  },
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      parser: typescriptParser,
-      ecmaVersion: 'latest',
+      ecmaVersion: 2021,
       sourceType: 'module',
       globals: {
-        ...globals.browser,
-        ...globals.node,
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        fetch: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
+        Blob: 'readonly',
+        CustomEvent: 'readonly',
+        Intl: 'readonly',
+        performance: 'readonly',
+        caches: 'readonly',
+        Notification: 'readonly',
+        ServiceWorker: 'readonly',
+        ServiceWorkerRegistration: 'readonly',
+        PushSubscription: 'readonly',
+        NotificationPermission: 'readonly',
+        process: 'readonly',
+        global: 'readonly',
         jest: 'readonly',
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
         expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly',
+        vi: 'readonly',
+        Deno: 'readonly',
+        React: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        exports: 'readonly'
       },
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
     },
     plugins: {
-      '@typescript-eslint': typescript,
-      react: react,
-      'react-hooks': reactHooks,
+      react,
+      'react-hooks': reactHooks
     },
     rules: {
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/ban-ts-comment': 'off',
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
-      'prefer-const': 'error',
-      'no-debugger': 'warn',
-      'react/react-in-jsx-scope': 'off',
+      ...js.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
       'react/prop-types': 'off',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  },
-  {
-    ignores: [
-      'node_modules/**',
-      '.next/**',
-      'dist/**',
-      'build/**',
-      'public/**',
-      'temp_conflicts/**',
-      'temp_exclude/**',
-      '__tests__/**',
-      'tests/**',
-      'apps/**',
-      'utils/**',
-      'types/**',
-      'zion-*/**',
-      'zion_os/**',
-      'zion/**'
-    ],
-  },
+      'react/react-in-jsx-scope': 'off'
+    }
+  }
 ];
