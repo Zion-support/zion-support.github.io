@@ -1,11 +1,12 @@
 import React, { Suspense, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
-import { ErrorBoundary } from './components/ErrorBoundary';
-import { ToastContainer } from './components/Toast';
-import { ToastProps } from './components/Toast';
+import { HelmetProvider } from 'react-helmet-async';
+import { AppHeader } from './layout/AppHeader.jsx';
+import { Footer } from './components/Footer.jsx';
+import { ChatAssistant } from './components/ChatAssistant.jsx';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { SEO } from './components/SEO';
+import { PageLoader } from './components/LoadingSpinner';
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home.jsx'));
@@ -17,34 +18,14 @@ const Contact = React.lazy(() => import('./pages/Contact.jsx'));
 const Login = React.lazy(() => import('./pages/Login.jsx'));
 const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027.tsx'));
 
-// Lazy load pages - only import existing ones
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
-const Services = React.lazy(() => import('./pages/Services'));
-const Blog = React.lazy(() => import('./pages/Blog'));
-const InnovativeServicesShowcase2026 = React.lazy(() => import('./pages/InnovativeServicesShowcase2026'));
-const ServicesOverview2026 = React.lazy(() => import('./pages/ServicesOverview2026'));
-
-// New service pages
-const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
-const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
-const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
-const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
-
-// Enhanced loading component with better UX
-const EnhancedLoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-    <div className="relative">
-      <div className="w-32 h-32 border-4 border-zion-cyan/20 rounded-full"></div>
-      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-lg">
-        ZION
-      </div>
-      <div className="mt-4 text-center">
-        <div className="text-zion-cyan text-sm animate-pulse">Loading amazing experiences...</div>
-      </div>
-    </div>
+// Enhanced loading spinner with accessibility
+const LoadingSpinner = () => (
+  <div 
+    className="min-h-screen bg-futuristic flex items-center justify-center"
+    role="status"
+    aria-label="Loading page content"
+  >
+    <PageLoader />
   </div>
 );
 
@@ -105,31 +86,31 @@ function App() {
   };
 
   return (
-    <ErrorBoundary>
+    <HelmetProvider>
       <Router>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+          <SEO />
           <AppHeader />
-          
-          <main className="flex-1">
+          <main className="flex-1" role="main">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/services" element={<ServicesPage />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/innovative-services-2026" element={<InnovativeServicesShowcase2026 />} />
-                <Route path="/services-overview-2026" element={<ServicesOverview2026 />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
+                <Route path="/services/pricing" element={<ComprehensivePricingGuide2027 />} />
+                <Route path="/services/showcase" element={<InnovativeServicesShowcase2027 />} />
               </Routes>
             </Suspense>
           </main>
-          
           <Footer />
-          
-          <ToastContainer toasts={toasts} onClose={removeToast} />
+          <ChatAssistant />
           <PerformanceMonitor />
         </div>
       </Router>
-    </ErrorBoundary>
+    </HelmetProvider>
   );
 }
 
