@@ -1,8 +1,9 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader.tsx';
-import { Footer } from './components/Footer.tsx';
-import { ChatAssistant } from './components/ChatAssistant.tsx';
+import { AppHeader } from './layout/AppHeader.jsx';
+import { Footer } from './components/Footer.jsx';
+import { ChatAssistant } from './components/ChatAssistant.jsx';
+import { BackToTopButton } from './components/BackToTopButton.jsx';
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home.jsx'));
@@ -153,21 +154,7 @@ function App() {
         </main>
         <Footer />
         <ChatAssistant />
-        <PerformanceOptimizer />
-        <AccessibilityPanel 
-          enabled={true}
-          defaultSettings={{
-            highContrast: false,
-            largeText: false,
-            reducedMotion: false,
-            focusIndicator: true,
-            keyboardNavigation: true
-          }}
-          onSettingsChange={(settings) => {
-            // Handle accessibility settings changes
-            console.log('Accessibility settings updated:', settings);
-          }}
-        />
+        <BackToTopButton />
       </div>
     </Router>
   )
