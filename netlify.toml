@@ -9,6 +9,7 @@
 
   [build.environment]
     NODE_VERSION = "20.19.0"
+    NODE_OPTIONS = "--max-old-space-size=4096"
     SKIP_TYPE_CHECK = "true"
     NEXT_RUNTIME_DISABLED = "1"
     # Ensure devDependencies (e.g., Vite) are installed during CI
