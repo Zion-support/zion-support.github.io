@@ -60,4 +60,16 @@ export default defineConfig({
 	css: { devSourcemap: false },
 	server: { port: 3000, host: true, open: true, cors: true, hmr: { overlay: false } },
 	preview: { port: 4173, host: true, open: true },
-})
+	define: {
+		__DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+		__PROD__: JSON.stringify(process.env.NODE_ENV === 'production')
+	},
+	esbuild: { 
+		drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
+		loader: 'tsx',
+		include: /src\/.*\.[tj]sx?$/,
+		exclude: []
+	},
+	worker: { format: 'es' },
+	envPrefix: ['VITE_', 'ZION_']
+});
