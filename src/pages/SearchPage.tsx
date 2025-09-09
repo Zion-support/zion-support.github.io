@@ -42,8 +42,9 @@ function highlight(text: string, term: string) {
 }
 
 export default function SearchPage() {
-  const router = useRouterReady(); // Use our custom hook
-  const [query, setQuery] = useState("");
+  const router = useRouter();
+  const initial = (router.query.q as string) || "";
+  const [query, setQuery] = useState(initial);
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
   const suggestions: SearchSuggestion[] = generateSearchSuggestions();
