@@ -8,64 +8,12 @@ import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
 
 // Lazy load pages
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
-const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const PartnersPage = React.lazy(() => import('./pages/Partners'));
-const Login = React.lazy(() => import('./pages/Login'));
-const FAQ = React.lazy(() => import('./pages/FAQ'));
-const Careers = React.lazy(() => import('./pages/Careers'));
-const Privacy = React.lazy(() => import('./pages/Privacy'));
-const Terms = React.lazy(() => import('./pages/Terms'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
-const Team = React.lazy(() => import('./pages/Team'));
-
-// Service pages
-const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
-const CybersecurityServicesPage = React.lazy(() => import('./pages/CybersecurityServicesPage'));
-const CloudDevOpsServicesPage = React.lazy(() => import('./pages/CloudDevOpsServices'));
-const IoTServicesPage = React.lazy(() => import('./pages/IoTServicesPage'));
-const QuantumComputingServicesPage = React.lazy(() => import('./pages/QuantumComputingServicesPage'));
-const BlockchainServicesPage = React.lazy(() => import('./pages/BlockchainServicesPage'));
-const DigitalTwinServicesPage = React.lazy(() => import('./pages/DigitalTwinServicesPage'));
-const SustainabilityServicesPage = React.lazy(() => import('./pages/SustainabilityServicesPage'));
-
-// Micro SAAS pages
-const MicroSAAS = React.lazy(() => import('./pages/MicroSAAS'));
-const AIBusinessIntelligence = React.lazy(() => import('./pages/MicroSAAS/AIBusinessIntelligence'));
-const CustomerExperience = React.lazy(() => import('./pages/MicroSAAS/CustomerExperience'));
-const QuantumComputing = React.lazy(() => import('./pages/MicroSAAS/QuantumComputing'));
-const SupplyChain = React.lazy(() => import('./pages/MicroSAAS/SupplyChain'));
-const Cybersecurity = React.lazy(() => import('./pages/MicroSAAS/Cybersecurity'));
-const IoTServices = React.lazy(() => import('./pages/MicroSAAS/IoTServices'));
-const ContentCreation = React.lazy(() => import('./pages/MicroSAAS/ContentCreation'));
-const HRPlatform = React.lazy(() => import('./pages/MicroSAAS/HRPlatform'));
-
-// IT Services pages
-const ITServices = React.lazy(() => import('./pages/ITServices'));
-const Infrastructure = React.lazy(() => import('./pages/ITServices/Infrastructure'));
-const DigitalTransformation = React.lazy(() => import('./pages/ITServices/DigitalTransformation'));
-const Consulting = React.lazy(() => import('./pages/ITServices/Consulting'));
-const OnsiteSupport = React.lazy(() => import('./pages/ITServices/OnsiteSupport'));
-const GreenITServices = React.lazy(() => import('./pages/ITServices/GreenIT'));
-const FiveGSolutions = React.lazy(() => import('./pages/ITServices/FiveGSolutions'));
-
-// Marketplace pages
-const Marketplace = React.lazy(() => import('./pages/Marketplace'));
-const Products = React.lazy(() => import('./pages/Marketplace/Products'));
-const Talent = React.lazy(() => import('./pages/Marketplace/Talent'));
-const Equipment = React.lazy(() => import('./pages/Marketplace/Equipment'));
-const MarketplaceServices = React.lazy(() => import('./pages/Marketplace/Services'));
-
-// Support and legal pages
-const Help = React.lazy(() => import('./pages/Help'));
-const Security = React.lazy(() => import('./pages/Security'));
-const Status = React.lazy(() => import('./pages/Status'));
-const Cookies = React.lazy(() => import('./pages/Cookies'));
+const Home = React.lazy(() => import('./pages/Home.jsx'));
+const About = React.lazy(() => import('./pages/About.jsx'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage.jsx'));
+const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage.jsx'));
+const Contact = React.lazy(() => import('./pages/Contact.jsx'));
+const Login = React.lazy(() => import('./pages/Login.jsx'));
 
 const LoadingSpinner = () => (
   <div className="min-h-screen bg-futuristic flex items-center justify-center" role="status" aria-label="Loading page content">
@@ -122,7 +70,8 @@ function App() {
               {/* Main pages */}
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/team" element={<Team />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/enhanced-services" element={<EnhancedServicesPage />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />

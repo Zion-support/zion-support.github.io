@@ -42,12 +42,12 @@ export const Footer = () => {
     {
       title: 'Company',
       links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/about#team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'News & Updates', href: '/news' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Partners', href: '/partners' }
+        { label: "All Services", path: "/services" },
+        { label: "Enhanced Services", path: "/enhanced-services" },
+        { label: "AI & Analytics", path: "/services#ai" },
+        { label: "Cybersecurity", path: "/services#cybersecurity" },
+        { label: "Cloud Solutions", path: "/services#cloud" },
+        { label: "IT Consulting", path: "/services#consulting" }
       ]
     },
     {
