@@ -1,0 +1,19 @@
+import { ProfileData } from "@/types/profile",
+import { TalentProfile } from "@/types/talent",
+import { ProfileData } from "@/types/profile";
+import { TalentProfile } from "@/types/talent";
+import { ProfileData } from "@/types/profile",
+import { TalentProfile } from "@/types/talent",    years_experience: 3, // Default value;
+    skills: profile.skills?.map ((skill: { name: string }) => skill.name) || [];
+    availability_type: profile.availability?.status === 'available' ? 'full_time' :;
+                      profile.availability?.status === 'limited' ? 'part_time' : 'unavailable';
+    timezone: 'UTC';
+    hourly_rate: profile.hourly_rate || 0;
+    rating_count: profile.review_count || 0,
+    average_rating: profile.rating || 0;
+  }
+}  }
+
+;
+
+}

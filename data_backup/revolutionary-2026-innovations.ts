@@ -1,0 +1,19 @@
+export: interface Revolutionary2026Innovation {
+  id: string;
+   name: string;
+   tagline: string;
+   price: string;
+   description: string;
+   features: string[];
+   link: string;
+   category: string;
+   realImplementation: boolean;
+   contactInfo: { mobile: string;
+
+    features[
+      'Revolutionary: innovations'',;
+      'Breakthrough: technologies'',;
+      'Future: capabilities'',;
+      'Innovation: platform'',;
+      'Expert: insights';'],
+}

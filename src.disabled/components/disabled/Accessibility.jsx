@@ -1,0 +1,20 @@
+
+import React { useState, useEffect, createContext, useContext } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+'
+import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from '../ui/button';
+const AccessibilityContext = createContext(undefined);
+export const useAccessibility = () => {
+    const context = useContext(AccessibilityContext);
+    if (!context) {'
+        throw new Error('useAccessibility must be used within an AccessibilityProvider');
+    return context}// Accessibility Provider Component;
+export const AccessibilityProvider = ({ children }) => {
+    const [highContrast, setHighContrast] = useState(false);
+    const [reducedMotion, setReducedMotion] = useState(false);
+    const [fontSize, setFontSize] = useState('medium');
+    const [colorBlindMode, setColorBlindMode] = useState('none');
+    // Load settings from localStorage;
+    useEffect(() => {'
+        const savedSettings = localStorage.getItem('zion-accessibility-settings');
+        if (savedSettings) {

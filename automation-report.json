@@ -1,0 +1,41 @@
+{
+  "timestamp": "2025-09-07T11:43:46.829Z",
+  "duration": "3s",
+  "results": {
+    "tests": {
+      "passed": 0,
+      "failed": 2,
+      "errors": [
+        "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n",
+        "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+      ]
+    },
+    "builds": {
+      "success": false,
+      "errors": [
+        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\n[SyntaxError: Unexpected token '<<']\n"
+      ]
+    },
+    "linting": {
+      "success": false,
+      "errors": [
+        "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nInvalid option '--ext' - perhaps you meant '-c'?\nYou're using eslint.config.js, some command line flags are no longer available. Please see https://eslint.org/docs/latest/use/command-line-interface for details.\n"
+      ]
+    },
+    "security": {
+      "issues": [],
+      "fixed": 0
+    },
+    "improvements": [
+      "Created performance monitoring script"
+    ]
+  },
+  "summary": {
+    "testsPassed": 0,
+    "testsFailed": 2,
+    "buildSuccess": false,
+    "lintingSuccess": false,
+    "securityIssuesFixed": 0,
+    "improvementsCreated": 1
+  }
+}

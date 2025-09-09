@@ -1,0 +1,121 @@
+{
+  "timestamp": "2025-09-06T05:13:45.836Z",
+  "systemHealth": {
+    "memory": {
+      "rss": 46,
+      "heapTotal": 5,
+      "heapUsed": 4,
+      "external": 1
+    },
+    "cpu": {
+      "user": 8526,
+      "system": 8526
+    },
+    "uptime": 0.014721951,
+    "platform": "linux",
+    "nodeVersion": "v22.16.0"
+  },
+  "applicationHealth": {
+    "buildExists": true,
+    "packageVersion": "1.0.0",
+    "missingFiles": [],
+    "dependencies": 100,
+    "devDependencies": 40
+  },
+  "performanceMetrics": {
+    "bundleSize": 149,
+    "performanceIssues": [
+      {
+        "type": "Too Many Dependencies",
+        "count": 100,
+        "severity": "low",
+        "recommendation": "Review and remove unused dependencies"
+      }
+    ],
+    "recommendations": [
+      "Bundle size is large - consider code splitting",
+      "Review and remove unused dependencies",
+      "Implement lazy loading for images and components",
+      "Use CDN for static assets",
+      "Enable gzip compression",
+      "Implement service worker for caching"
+    ]
+  },
+  "errorMetrics": {
+    "errorLogs": [],
+    "buildErrors": [
+      {
+        "type": "Build Error",
+        "message": "spawnSync /bin/sh ETIMEDOUT",
+        "severity": "high"
+      }
+    ],
+    "totalErrors": 1
+  },
+  "recommendations": [
+    "Optimize bundle size with code splitting",
+    "Address build and runtime errors",
+    "Set up continuous monitoring and alerting",
+    "Implement automated health checks",
+    "Add performance monitoring",
+    "Set up error tracking and reporting"
+  ],
+  "healthScore": 88,
+  "status": "healthy",
+  "summary": {
+    "systemHealth": {
+      "memory": {
+        "rss": 46,
+        "heapTotal": 5,
+        "heapUsed": 4,
+        "external": 1
+      },
+      "cpu": {
+        "user": 8526,
+        "system": 8526
+      },
+      "uptime": 0.014721951,
+      "platform": "linux",
+      "nodeVersion": "v22.16.0"
+    },
+    "applicationHealth": {
+      "buildExists": true,
+      "packageVersion": "1.0.0",
+      "missingFiles": [],
+      "dependencies": 100,
+      "devDependencies": 40
+    },
+    "performanceMetrics": {
+      "bundleSize": 149,
+      "performanceIssues": [
+        {
+          "type": "Too Many Dependencies",
+          "count": 100,
+          "severity": "low",
+          "recommendation": "Review and remove unused dependencies"
+        }
+      ],
+      "recommendations": [
+        "Bundle size is large - consider code splitting",
+        "Review and remove unused dependencies",
+        "Implement lazy loading for images and components",
+        "Use CDN for static assets",
+        "Enable gzip compression",
+        "Implement service worker for caching"
+      ]
+    },
+    "errorMetrics": {
+      "errorLogs": [],
+      "buildErrors": [
+        {
+          "type": "Build Error",
+          "message": "spawnSync /bin/sh ETIMEDOUT",
+          "severity": "high"
+        }
+      ],
+      "totalErrors": 1
+    },
+    "healthScore": 88,
+    "status": "healthy"
+  }
+}
