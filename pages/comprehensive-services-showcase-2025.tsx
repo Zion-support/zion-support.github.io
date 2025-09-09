@@ -1,26 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { 
-  Search, Grid, List, Filter, Star, Users, TrendingUp,
-  Brain, Atom, Shield, Target, Rocket, Palette, Heart, 
-  Truck, GraduationCap, Building, Globe, Zap, Lock,
-  ArrowRight, Check, Phone, Mail, MapPin, ExternalLink
+  Search, Grid, List, Filter, Star, CheckCircle, ArrowRight,
+  Brain, Atom, Shield, Target, Rocket, Zap, Globe, Cpu,
+  Building, Database, Cloud, Lock, Palette, Heart, Truck,
+  GraduationCap, Phone, Mail, MapPin, DollarSign, Users
 } from 'lucide-react';
-import Link from 'next/link';
+import Layout from '../components/layout/Layout';
 
 // Import all service data
+import { innovativeAIAutomationServices2025 } from '../data/2025-innovative-ai-automation-services';
+import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
+import { innovativeEmergingTechServices2025 } from '../data/2025-innovative-emerging-tech-services';
+import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
-import { advancedFuturisticMicroSaasServices2025 } from '../data/2025-advanced-futuristic-micro-saas';
-import { cuttingEdgeAIInnovations2025 } from '../data/2025-cutting-edge-ai-innovations';
-import { innovativeRealMicroSaasServices2025 as innovativeServices } from '../data/2025-innovative-real-micro-saas-services';
-import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
-import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
-import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
-import { advancedAIAutomationServices } from '../data/2025-advanced-ai-automation-services';
-import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
-import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
-import { ultimateInnovativeServices2025 } from '../data/2025-ultimate-innovative-services';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -29,61 +23,107 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 };
 
-// Import our new comprehensive services
-import { comprehensiveServicesExpansion } from '../data/2025-comprehensive-services-expansion';
-import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services';
+// Create comprehensive services array
+const allServices = [
+  ...innovativeAIAutomationServices2025,
+  ...innovativeITInfrastructureServices2025,
+  ...innovativeEmergingTechServices2025,
+  ...innovativeMicroSaasSolutions2025,
+  ...innovativeRealMicroSaasServices2025,
+  ...innovativeAIServicesEnhanced2025,
+  ...innovativeITServicesEnhanced2025,
+  ...emergingTechServicesEnhanced2025
+];
+
+const categories = [
+  {
+    id: 'all',
+    name: 'All Services',
+    icon: <Grid className="w-6 h-6" />,
+    color: 'from-gray-500 to-slate-500',
+    description: 'Complete portfolio of all services',
+    count: allServices.length
+  },
+  {
+    id: 'ai-automation',
+    name: 'AI & Automation',
+    icon: <Brain className="w-6 h-6" />,
+    color: 'from-cyan-500 to-blue-500',
+    description: 'Revolutionary AI automation and consciousness',
+    count: allServices.filter(s => s.category?.includes('AI') || s.tags?.some(tag => tag.includes('AI'))).length
+  },
+  {
+    id: 'quantum-emerging',
+    name: 'Quantum & Emerging Tech',
+    icon: <Atom className="w-6 h-6" />,
+    color: 'from-purple-500 to-pink-500',
+    description: 'Quantum computing and breakthrough technologies',
+    count: allServices.filter(s => s.category?.includes('Quantum') || s.category?.includes('Emerging') || s.tags?.some(tag => tag.includes('Quantum'))).length
+  },
+  {
+    id: 'enterprise-it',
+    name: 'Enterprise IT',
+    icon: <Shield className="w-6 h-6" />,
+    color: 'from-blue-500 to-purple-500',
+    description: 'Enterprise solutions and infrastructure',
+    count: allServices.filter(s => s.category?.includes('IT') || s.category?.includes('Enterprise') || s.tags?.some(tag => tag.includes('IT'))).length
+  },
+  {
+    id: 'micro-saas',
+    name: 'Micro SAAS',
+    icon: <Rocket className="w-6 h-6" />,
+    color: 'from-teal-500 to-emerald-500',
+    description: 'Innovative business solutions',
+    count: allServices.filter(s => s.category?.includes('SAAS') || s.category?.includes('Micro') || s.tags?.some(tag => tag.includes('SAAS'))).length
+  }
+];
 
 const ComprehensiveServicesShowcase2025: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'popular' | 'price' | 'rating' | 'newest'>('popular');
 
-  // Combine all services
-  const allServices = [...comprehensiveServicesExpansion, ...advancedInnovativeServices];
-
-  // Filter services based on search and category
   const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || 
+      service.category?.toLowerCase().includes(selectedCategory.replace('-', ' ')) ||
+      service.tags?.some(tag => tag.toLowerCase().includes(selectedCategory.replace('-', ' ')));
+    
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase().includes(selectedCategory.toLowerCase());
-    return matchesSearch && matchesCategory;
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.tags?.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    
+    return matchesCategory && matchesSearch;
   });
 
-  // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'popular':
-        return b.popular ? 1 : -1;
-      case 'price':
-        return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''));
-      case 'rating':
-        return b.rating - a.rating;
-      case 'newest':
-        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
-      default:
-        return 0;
-    }
-  });
-
-  // Get unique categories
-  const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
+  const getServicePricing = (service: any) => {
+    if (service.pricing?.starter?.price) return `$${service.pricing.starter.price}/month`;
+    if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
+    if (service.price?.monthly) return `$${service.price.monthly}/month`;
+    return 'Contact for pricing';
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO 
-        title="2025 Comprehensive Services Showcase - Zion Tech Group"
-        description="Discover our comprehensive portfolio of innovative micro SAAS, IT, and AI services. From quantum computing to AI-powered solutions, we deliver cutting-edge technology services."
-        keywords={["micro SAAS", "IT services", "AI services", "quantum computing", "blockchain", "cybersecurity", "automation", "Zion Tech Group"]}
-      />
+    <Layout>
+      <Head>
+        <title>Comprehensive Services Showcase 2025 - Zion Tech Group</title>
+        <meta name="description" content="Explore our comprehensive portfolio of 500+ cutting-edge technology solutions including AI, quantum computing, emerging technologies, and micro SAAS services." />
+        <meta name="keywords" content="AI services, quantum computing, emerging technology, micro SAAS, enterprise IT, technology solutions" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, follow" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Comprehensive Services Showcase 2025 - Zion Tech Group" />
+        <meta property="og:description" content="Explore our comprehensive portfolio of 500+ cutting-edge technology solutions." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/comprehensive-services-showcase-2025" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        
+        {/* Contact Information */}
+        <meta name="contact:phone" content="+1 302 464 0950" />
+        <meta name="contact:email" content="kleber@ziontechgroup.com" />
+        <meta name="contact:address" content="364 E Main St STE 1008 Middletown DE 19709" />
+      </Head>
 
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -220,7 +260,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
 
         {/* Services Grid/List */}
         <div className="mb-8">
@@ -419,4 +458,4 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
   );
 };
 
-export default ComprehensiveServicesShowcase;
+export default ComprehensiveServicesShowcase2025;

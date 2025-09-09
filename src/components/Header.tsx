@@ -95,9 +95,88 @@ export function Header() {
     }
   ];
 
-  const isActive = (path: string) => {
-    if (path === '/') {
-      return location.pathname === '/';
+  const serviceCategories = [
+    {
+      title: 'AI & Machine Learning',
+      icon: Brain,
+      description: 'Intelligent solutions powered by artificial intelligence',
+      services: [
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', description: 'Advanced autonomous AI systems' },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', description: 'AI-powered research automation' },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced analytics and insights' },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', description: 'Smart marketing optimization' },
+        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', description: 'Intelligent talent management' },
+        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', description: 'Automated legal processes' },
+        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', description: 'Patient care optimization' }
+      ]
+    },
+    {
+      title: 'Quantum Technology',
+      icon: Brain,
+      description: 'Next-generation quantum computing solutions',
+      services: [
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', description: 'Quantum-powered neural networks' },
+        { name: 'Quantum Computing', path: '/services/quantum-technology', description: 'Quantum computing platforms' },
+        { name: 'Quantum-Safe Security', path: '/services/quantum-security', description: 'Future-proof quantum security' }
+      ]
+    },
+    {
+      title: 'Business Operations',
+      icon: Building,
+      description: 'Streamlined business process automation',
+      services: [
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', description: 'Self-operating business systems' },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', description: 'Intelligent IT asset management' },
+        { name: 'Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced business analytics' }
+      ]
+    },
+    {
+      title: 'Cybersecurity',
+      icon: Shield,
+      description: 'Comprehensive security and compliance solutions',
+      services: [
+        { name: 'Cybersecurity Services', path: '/services/cybersecurity', description: 'Complete security solutions' },
+        { name: 'SOC2 Compliance Automation', path: '/soc2-compliance-automation', description: 'Automated compliance management' },
+        { name: 'Security Assessment', path: '/services/security-assessment', description: 'Security audit and testing' },
+        { name: 'Compliance & Audit', path: '/services/compliance-audit', description: 'Regulatory compliance support' },
+        { name: 'Threat Detection', path: '/services/threat-detection', description: 'Real-time security monitoring' }
+      ]
+    },
+    {
+      title: 'Cloud & Infrastructure',
+      icon: Cpu,
+      description: 'Scalable cloud solutions and infrastructure management',
+      services: [
+        { name: 'Cloud DevOps', path: '/cloud-devops', description: 'Cloud development and operations' },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', description: 'Complete IT infrastructure solutions' },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', description: 'High-speed 5G connectivity' },
+        { name: 'Cloud Migration', path: '/services/cloud-migration', description: 'Seamless cloud transition' },
+        { name: 'Network Infrastructure', path: '/services/network-infrastructure', description: 'Robust network solutions' },
+        { name: 'Managed IT Services', path: '/services/managed-it-services', description: '24/7 IT support' },
+        { name: 'DevOps Automation', path: '/services/devops-automation', description: 'Streamlined development' }
+      ]
+    },
+    {
+      title: 'Emerging Technologies',
+      icon: Rocket,
+      description: 'Cutting-edge solutions for tomorrow\'s challenges',
+      services: [
+        { name: 'Blockchain Solutions', path: '/services/blockchain-solutions', description: 'Decentralized applications' },
+        { name: 'IoT Platforms', path: '/services/iot-platforms', description: 'Connected device management' },
+        { name: 'Quantum Computing', path: '/services/quantum-computing', description: 'Next-generation computing' },
+        { name: 'AR/VR Solutions', path: '/services/ar-vr-solutions', description: 'Immersive experiences' }
+      ]
+    },
+    {
+      title: 'Industry Solutions',
+      icon: Building,
+      description: 'Tailored solutions for specific industries',
+      services: [
+        { name: 'Healthcare Technology', path: '/solutions/healthcare', description: 'Medical innovation' },
+        { name: 'Financial Services', path: '/solutions/financial', description: 'Fintech solutions' },
+        { name: 'Manufacturing Intelligence', path: '/solutions/manufacturing', description: 'Smart manufacturing' },
+        { name: 'Retail Technology', path: '/solutions/retail', description: 'Digital retail transformation' }
+      ]
     }
     return location.pathname.startsWith(path);
   };

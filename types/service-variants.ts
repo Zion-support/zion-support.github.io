@@ -1,4 +1,7 @@
-export type ServiceVariant =
+export type ServiceVariant = 
+  | 'default'
+  | 'holographic'
+  | 'quantum'
   | 'cyberpunk'
   | 'neural'
   | 'quantum-holographic'
@@ -82,14 +85,10 @@ export type ServiceVariant =
   | 'supply-chain-futuristic'
   | 'legal-futuristic'
   | 'healthcare-futuristic'
-  | 'biotech-futuristic'
-  | 'simulation-futuristic'
-  | 'space-futuristic'
-  | 'ai-business-intelligence'
-  | 'cybersecurity-compliance'
-  | 'cloud-devops'
-  | 'healthcare-biotech'
-  | 'financial-technology'
-  | 'retail-ecommerce'
-  | 'manufacturing-industrial'
-  | 'transportation-logistics';
+  | 'ai-content'
+  | 'ai-education'
+  | 'blockchain-futuristic'
+  | '5g-futuristic'
+  | 'biometric-futuristic'
+  | 'edge-futuristic'
+  | 'digital-twin-futuristic';

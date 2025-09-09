@@ -120,8 +120,22 @@ const config: Config = {
         'gradient-x': 'gradient-x 15s ease infinite',
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
-        'neon-pulse': 'neon-pulse 2s ease-in-out infinite alternate',
-      }
+      },
+      backgroundImage: {
+        'quantum-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        'neon-gradient': 'linear-gradient(45deg, #ff0080, #00ff41, #00e5ff, #a855f7)',
+        'holographic-gradient': 'linear-gradient(45deg, #ff0080, #00ff41, #00e5ff, #a855f7, #ff0080)',
+        'cyber-gradient': 'linear-gradient(135deg, #0a0f1f 0%, #1e263b 50%, #0a0f1f 100%)',
+        'quantum-mesh': 'radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.1) 0%, transparent 50%)',
+      },
+      backdropBlur: {
+        'xs': '2px',
+      },
+      boxShadow: {
+        'neon': '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
+        'quantum': '0 0 20px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.3)',
+        'holographic': '0 0 30px rgba(168, 85, 247, 0.6), 0 0 60px rgba(168, 85, 247, 0.4)',
+      },
     }
   },
   plugins: [],

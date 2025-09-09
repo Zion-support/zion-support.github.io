@@ -4,85 +4,145 @@ import '../styles/futuristic.css';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const footerSections = [
+    {
+      title: "AI & Technology Services",
+      icon: Brain,
+      links: [
+        { label: "AI Workflow Automation", path: "/services/ai-workflow-automation" },
+        { label: "AI Customer Intelligence", path: "/services/ai-customer-intelligence" },
+        { label: "AI Security & Compliance", path: "/services/ai-security-compliance" },
+        { label: "AI Data Analytics", path: "/services/ai-data-analytics" },
+        { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
+        { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
+        { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
+        { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
+        { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
+        { label: "Quantum Technology", path: "/services/quantum-technology" },
+        { label: "Machine Learning Solutions", path: "/services/ai-machine-learning" },
+        { label: "AI Business Intelligence", path: "/services/ai-business-intelligence" }
+      ]
+    },
+    {
+      title: "Infrastructure & Security",
+      icon: Shield,
+      links: [
+        { label: "IT Infrastructure", path: "/services/it-infrastructure" },
+        { label: "Cybersecurity", path: "/services/cybersecurity" },
+        { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
+        { label: "Cloud DevOps", path: "/cloud-devops" },
+        { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
+        { label: "Network Infrastructure", path: "/services/network-infrastructure" },
+        { label: "Managed IT Services", path: "/services/managed-it-services" },
+        { label: "Security Assessment", path: "/services/security-assessment" }
+      ]
+    },
+    {
+      title: "Industry Solutions",
+      icon: Building,
+      links: [
+        { label: "Enterprise Solutions", path: "/solutions/enterprise" },
+        { label: "Healthcare Solutions", path: "/solutions/healthcare" },
+        { label: "Financial Solutions", path: "/solutions/financial" },
+        { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
+        { label: "Retail Solutions", path: "/solutions/retail" },
+        { label: "Government Solutions", path: "/solutions/government" },
+        { label: "Digital Transformation", path: "/digital-transformation" },
+        { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" }
+      ]
+    },
+    {
+      title: "Company & Resources",
+      icon: Users,
+      links: [
+        { label: "About Us", path: "/about" },
+        { label: "Our Mission", path: "/mission" },
+        { label: "Team", path: "/team" },
+        { label: "Careers", path: "/careers" },
+        { label: "Partners", path: "/partners" },
+        { label: "Blog", path: "/blog" },
+        { label: "Case Studies", path: "/case-studies" },
+        { label: "Help Center", path: "/help" }
+      ]
+    }
+  ];
+
+  // Fixed social media links with proper URLs
+  const socialLinks = [
+    { 
+      name: 'LinkedIn', 
+      url: 'https://www.linkedin.com/company/ziontechgroup', 
+      icon: Linkedin,
+      fallback: 'https://linkedin.com'
+    },
+    { 
+      name: 'Twitter', 
+      url: 'https://twitter.com/ziontechgroup', 
+      icon: Twitter,
+      fallback: 'https://twitter.com'
+    },
+    { 
+      name: 'GitHub', 
+      url: 'https://github.com/ziontechgroup', 
+      icon: Github,
+      fallback: 'https://github.com'
+    },
+    { 
+      name: 'YouTube', 
+      url: 'https://youtube.com/@ziontechgroup', 
+      icon: Youtube,
+      fallback: 'https://youtube.com'
+    },
+    { 
+      name: 'Facebook', 
+      url: 'https://facebook.com/ziontechgroup', 
+      icon: Facebook,
+      fallback: 'https://facebook.com'
+    },
+    { 
+      name: 'Instagram', 
+      url: 'https://instagram.com/ziontechgroup', 
+      icon: Instagram,
+      fallback: 'https://instagram.com'
+    }
+  ];
+
+  const quickLinks = [
+    { label: "Pricing", path: "/pricing" },
+    { label: "Contact", path: "/contact" },
+    { label: "Support", path: "/help" },
+    { label: "Privacy Policy", path: "/privacy" },
+    { label: "Terms of Service", path: "/terms" },
+    { label: "Cookie Policy", path: "/cookies" }
+  ];
 
   return (
-    <footer className="bg-black text-white relative overflow-hidden">
-      {/* Enhanced Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-zion-blue-dark to-black"></div>
-      <div className="absolute inset-0 bg-quantum-mesh opacity-20"></div>
-      
-      {/* Matrix Rain Effect */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(25)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute text-zion-cyan text-xs animate-matrix-rain"
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 30}s`,
-              animationDuration: `${25 + Math.random() * 15}s`
-            }}
-          >
-            {Math.random() > 0.5 ? '1' : '0'}
-          </div>
-        ))}
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Footer Content */}
-        <div className="py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-            {/* Company Info */}
-            <div className="lg:col-span-1">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center">
-                    <span className="text-2xl font-bold text-white">Z</span>
-                  </div>
-                  <div className="absolute inset-0 w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl opacity-50 blur-xl"></div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
-                  <p className="text-sm text-zion-slate-light">Innovation • Technology • Future</p>
-                </div>
+    <footer className="bg-black text-white">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center space-x-2 mb-6">
+              <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">Z</span>
               </div>
-              
-              <p className="text-zion-slate-light mb-6 leading-relaxed">
-                Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.
-              </p>
-              
-              {/* Contact Information */}
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 cursor-pointer">
-                  <Phone className="w-4 h-4" />
-                  <span className="text-sm">+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 cursor-pointer">
-                  <Mail className="w-4 h-4" />
-                  <span className="text-sm">kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 cursor-pointer">
-                  <MapPin className="w-4 h-4" />
-                  <span className="text-sm">364 E Main St STE 1008<br />Middletown DE 19709</span>
-                </div>
+              <div>
+                <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
+                <p className="text-sm text-gray-400">AI-Powered Innovation</p>
               </div>
+            </div>
+            
+            <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+              Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.
+            </p>
 
-              {/* Social Links */}
-              <div className="flex space-x-4">
-                <a href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer" className="p-2 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-zion-cyan hover:bg-zion-cyan hover:text-black transition-all duration-300">
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a href="https://twitter.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="p-2 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-zion-cyan hover:bg-zion-cyan hover:text-black transition-all duration-300">
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a href="https://github.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="p-2 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-zion-cyan hover:bg-zion-cyan hover:text-black transition-all duration-300">
-                  <Github className="w-5 h-5" />
-                </a>
-                <a href="https://youtube.com/@ziontechgroup" target="_blank" rel="noopener noreferrer" className="p-2 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-zion-cyan hover:bg-zion-cyan hover:text-black transition-all duration-300">
-                  <Youtube className="w-5 h-5" />
+            {/* Contact Information */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center space-x-3 text-sm text-gray-300">
+                <Phone className="w-4 h-4 text-cyan-500" />
+                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+                  +1 (302) 464-0950
                 </a>
               </div>
             </div>
@@ -182,6 +242,6 @@ const Footer: React.FC = () => {
       </button>
     </footer>
   );
-};
+}
 
 export default Footer;

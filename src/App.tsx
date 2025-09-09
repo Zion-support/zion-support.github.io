@@ -4,7 +4,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Sidebar } from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
-import { PerformanceDashboard } from './components/PerformanceDashboard';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
@@ -12,44 +12,43 @@ import { AICodeGenerator } from './components/AICodeGenerator';
 import { EnterpriseDashboard } from './components/EnterpriseDashboard';
 import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
 import { MachineLearningDashboard } from './components/MachineLearningDashboard';
-import './App.css';
-import './styles/futuristic.css';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import { LinkHealthMonitor } from './components/LinkHealthMonitor';
+import { ThemeProvider } from "./components/ThemeProvider";
+import { useScrollToTop } from "./hooks";
+import { WhitelabelProvider } from "./context/WhitelabelContext";
+import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
+import EnhancedSEO from './components/EnhancedSEO';
+import EnhancedAccessibility from './components/EnhancedAccessibility';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
-// Import only the essential pages
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
-const FAQ = React.lazy(() => import('./pages/FAQ'));
-const Terms = React.lazy(() => import('./pages/Terms'));
-const Privacy = React.lazy(() => import('./pages/Privacy'));
-const Services = React.lazy(() => import('./pages/Services'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
-const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
-const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
-const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
-const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
-const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
-const Analytics = React.lazy(() => import('./pages/Analytics'));
-const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage'));
-const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
-const Categories = React.lazy(() => import('./pages/Categories'));
-const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const PartnersPage = React.lazy(() => import('./pages/Partners'));
-const Login = React.lazy(() => import('./pages/Login'));
-const Signup = React.lazy(() => import('./pages/Signup'));
-const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
-const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
-const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
-const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
-const MicroSaasServices = React.lazy(() => import('./pages/MicroSaasServices'));
-const PricingPage = React.lazy(() => import('./pages/PricingPage'));
+// Enhanced lazy loading with preloading hints
+const Home = lazy(() => import('./pages/Home'));
+const Services = lazy(() => import('./pages/Services'));
+const AISolutions = lazy(() => import('./pages/AISolutions'));
+const ServicesShowcase = lazy(() => import('./pages/ServicesShowcase'));
+const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
+const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
+const TalentsPage = lazy(() => import('./pages/TalentsPage'));
+const EmergingTech = lazy(() => import('./pages/EmergingTech'));
 
 // Service pages
 const AIServices = lazy(() => import('./pages/AIServices'));
 const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
 const EnterpriseSolutionsPage = lazy(() => import('./pages/EnterpriseSolutions'));
 const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
+const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
+
+// New innovative service pages
+const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
+const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'));
+const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
+
+// Enhanced innovative services page
+const EnhancedInnovativeServices = lazy(() => import('./pages/EnhancedInnovativeServices'));
 
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
@@ -255,13 +254,13 @@ const App = memo(() => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <PerformanceOptimizer>
-              <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
                   title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
                   description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
                   keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
+                  image="/images/zion-tech-group-og.jpg"
                   type="website"
                   url="https://ziontechgroup.com"
                 />
@@ -374,104 +373,32 @@ const App = memo(() => {
                       <PerformanceDashboard />
                     </div>
                     
-                    {/* Enhanced SEO Meta Tags */}
-                    <EnhancedSEO />
-                    
-                    {/* Enhanced Navigation */}
-                    <EnhancedNavigation />
-                    
-                    <div className="min-h-screen bg-background text-foreground pt-16" id="main-content">
-                      <PerformanceOptimizations>
-                        <OptimizedSuspense fallback={<EnhancedLoadingSpinner size="lg" text="Loading application..." />}>
-                          <Routes>
-                            {/* Main Routes */}
-                            <Route path="/" element={<Home />} />
-                            <Route path="/about" element={<About />} />
-                            <Route path="/services" element={<Services />} />
-                            <Route path="/contact" element={<Contact />} />
-                            <Route path="/pricing" element={<Pricing />} />
-                            
-                            {/* Comprehensive Service Routes */}
-                            <Route path="/match" element={<AIMatcherPage />} />
-                            <Route path="/login" element={<Login />} />
-                            <Route path="/register" element={<Signup />} />
-                            <Route path="/signup" element={<SimpleSignup />} />
-                            <Route path="/oauth" element={<OAuthCallback />} />
-                            <Route path="/talent" element={<TalentDirectory />} />
-                            <Route path="/talents" element={<TalentsPage />} />
-                            <Route path="/more-talents" element={<MoreTalentsPage />} />
-                            <Route path="/additional-talents" element={<AdditionalTalentsPage />} />
-                            <Route path="/services-page" element={<ServicesPage />} />
-                            <Route path="/expanded-services" element={<ExpandedServicesPage />} />
-                            <Route path="/all-services" element={<AllServicesOverviewPage />} />
-                            <Route path="/service-comparison" element={<ServiceComparisonPage />} />
-                            <Route path="/service-calculator" element={<ServiceCalculatorPage />} />
-                            <Route path="/service-analytics" element={<ServiceAnalyticsDashboard />} />
-                            <Route path="/service-marketplace" element={<ServiceMarketplace />} />
-                            <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />
-                            <Route path="/it-onsite-services/:country" element={<ITOnsiteServicesPage />} />
-                            <Route path="/categories" element={<Categories />} />
-                            <Route path="/categories/all" element={<AllCategoriesPage />} />
-                            <Route path="/equipment" element={<EquipmentPage />} />
-                            <Route path="/equipment/:id" element={<EquipmentDetail />} />
-                            <Route path="/new-products" element={<NewProductsPage />} />
-                            <Route path="/analytics" element={<Analytics />} />
-                            <Route path="/mobile-launch" element={<MobileLaunchPage />} />
-                            <Route path="/open-app" element={<OpenAppRedirect />} />
-                            <Route path="/community" element={
-                              <CommunityProvider>
-                                <CommunityPage />
-                              </CommunityProvider>
-                            } />
-                            <Route path="/partners" element={<PartnersPage />} />
-                            <Route path="/sitemap" element={<Sitemap />} />
-                            <Route path="/help" element={<Help />} />
-                            <Route path="/zion-hire-ai" element={<ZionHireAI />} />
-                            <Route path="/hire-ai" element={<ZionHireAI />} />
-                            <Route path="/request-quote" element={<RequestQuotePage />} />
-                            <Route path="/blog" element={<Blog />} />
-                            <Route path="/blog/:slug" element={<BlogPost />} />
-                            <Route path="/favorites" element={<FavoritesPage />} />
-                            <Route path="/wishlist" element={<WishlistPage />} />
-                            <Route path="/cart" element={<PrivateRoute><CartPage /></PrivateRoute>} />
-                            <Route path="/wallet" element={<PrivateRoute><Wallet /></PrivateRoute>} />
-                            <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
-                            <Route path="/recommendations" element={<PrivateRoute><RecommendationsPage /></PrivateRoute>} />
-                            <Route path="/checkout" element={<PrivateRoute><Checkout /></PrivateRoute>} />
-                            <Route path="/forgot-password" element={<ForgotPassword />} />
-                            <Route path="/reset-password/:token" element={<ResetPassword />} />
-                            
-                            {/* Service Routes */}
-                            <Route path="/services/ai-services" element={<AIServices />} />
-                            <Route path="/services/it-services" element={<ITServices />} />
-                            <Route path="/services/micro-saas" element={<MicroSaaS />} />
-                            <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-                            <Route path="/services/cloud-solutions" element={<CloudMigration />} />
-                            <Route path="/services/mobile-development" element={<MobileDevelopment />} />
-                            
-                            {/* Additional Routes */}
-                            <Route path="/faq" element={<FAQ />} />
-                            <Route path="/privacy" element={<Privacy />} />
-                            <Route path="/terms" element={<Terms />} />
-                            <Route path="/support" element={<Support />} />
-                            
-                            {/* 404 Route */}
-                            <Route path="*" element={<NotFound />} />
-                          </Routes>
-                        </OptimizedSuspense>
-                      </PerformanceOptimizations>
+                    {/* Analytics Dashboard */}
+                    <div className="fixed top-4 right-4 z-40">
+                      <AnalyticsDashboard />
                     </div>
-                  </PerformanceWrapper>
-                </Router>
-                <NotificationToast />
-                <PerformanceMonitor enableLogging={process.env.NODE_ENV === 'development'} />
-                <PerformanceDashboard />
-              </AccessibilityEnhancements>
-            </AccessibilityEnhancer>
-          </ThemeProvider>
-        </HelmetProvider>
-      </EnhancedErrorBoundary>
-    </QueryClientProvider>
+                    
+                    {/* Enterprise Dashboard */}
+                    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
+                      <EnterpriseDashboard />
+                    </div>
+                    
+                    {/* Security & Compliance Dashboard */}
+                    <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
+                      <SecurityComplianceDashboard />
+                    </div>
+                    
+                    {/* Machine Learning Dashboard */}
+                    <div className="fixed top-4 right-4 z-40">
+                      <MachineLearningDashboard />
+                    </div>
+                  </>
+                )}
+                              </div>
+            </Router>
+        </WhitelabelProvider>
+      </ThemeProvider>
+    </EnhancedErrorBoundary>
   );
 });
 
