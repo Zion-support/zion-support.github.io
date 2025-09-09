@@ -69,34 +69,31 @@ const Home: React.FC = () => {
 
   const heroSlides = [
     {
-      title: "AI-Powered Business Solutions",
-      subtitle: "Transform your business with cutting-edge artificial intelligence",
-      description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.",
+      title: "AI-Powered Business Transformation",
+      subtitle: "Revolutionize Your Business with Next-Generation AI Solutions",
+      description: "Unlock unprecedented growth with our cutting-edge AI platforms. From autonomous systems to quantum computing, we deliver the future of business technology today.",
       image: "/images/hero-ai-solutions.jpg",
-      cta: "Explore AI Solutions",
+      cta: "Start Your AI Journey",
       path: "/ai-solutions",
-      features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],
-      gradient: "from-blue-600 via-purple-600 to-cyan-600"
+      features: ["Autonomous AI Systems", "Quantum Computing", "Machine Learning", "Predictive Analytics"]
     },
     {
-      title: "Comprehensive IT Services",
-      subtitle: "End-to-end technology solutions for modern businesses",
-      description: "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.",
+      title: "Enterprise-Grade IT Infrastructure",
+      subtitle: "Scalable, Secure, and Future-Ready Technology Solutions",
+      description: "Build a technology foundation that grows with your business. Our enterprise solutions ensure 99.9% uptime, military-grade security, and seamless scalability.",
       image: "/images/hero-it-services.jpg",
-      cta: "View Our Services",
+      cta: "Explore Infrastructure",
       path: "/services",
-      features: ["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"],
-      gradient: "from-green-600 via-blue-600 to-purple-600"
+      features: ["Cloud-Native Architecture", "Zero-Trust Security", "DevOps Automation", "24/7 Global Support"]
     },
     {
-      title: "Micro-SaaS Solutions",
-      subtitle: "Scalable software solutions for growing businesses",
-      description: "Custom SaaS applications designed to streamline operations and boost productivity. Built with modern technologies and best practices.",
+      title: "Innovative Micro-SaaS Platform",
+      subtitle: "Custom Software Solutions That Drive Results",
+      description: "Transform your business processes with our innovative micro-SaaS solutions. Built for scale, designed for success, and optimized for your unique needs.",
       image: "/images/hero-saas.jpg",
-      cta: "Learn More",
+      cta: "Discover SaaS Solutions",
       path: "/services/micro-saas-solutions",
-      features: ["Custom Development", "Scalable Architecture", "API Integration", "User Management"],
-      gradient: "from-orange-600 via-red-600 to-pink-600"
+      features: ["Custom Development", "AI Integration", "Scalable Architecture", "Enterprise Security"]
     }
   ];
 
@@ -104,45 +101,126 @@ export function Home() {
   const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6);
   
   const stats = [
-    { label: "AI Solutions Deployed", value: "500+", icon: Brain, color: "text-blue-500" },
-    { label: "Enterprise Clients", value: "200+", icon: Building, color: "text-green-500" },
-    { label: "Success Rate", value: "98%", icon: CheckCircle, color: "text-purple-500" },
-    { label: "Global Reach", value: "25+ Countries", icon: Globe, color: "text-orange-500" }
+    { icon: Users, value: "1000+", label: "Global Clients", description: "Trusted by enterprises worldwide" },
+    { icon: TrendingUp, value: "98%", label: "Success Rate", description: "Proven track record of excellence" },
+    { icon: Award, value: "15+", label: "Years Experience", description: "Deep industry expertise & innovation" },
+    { icon: Globe, value: "50+", label: "Countries Served", description: "Global reach with local expertise" }
   ];
 
   const features = [
     {
+      title: "AI Autonomous Business Platform",
+      description: "Revolutionary AI platform that autonomously manages your entire business operations. From decision-making to process optimization, experience the future of business automation.",
       icon: Brain,
-      title: "AI-Powered Intelligence",
-      description: "Advanced machine learning algorithms that adapt and improve over time, providing deeper insights and better decision-making capabilities.",
-      color: "text-blue-500",
-      bgColor: "bg-blue-50"
+      path: "/services/ai-autonomous-systems",
+      category: "AI Solutions",
+      price: "$5,000/mo",
+      rating: 4.9,
+      reviewCount: 234,
+      highlights: ["Autonomous Operations", "AI Decision Making", "Real-time Optimization", "Predictive Analytics"],
+      features: ["Machine Learning", "Process Automation", "API Integration", "24/7 AI Support", "Custom AI Models", "Performance Monitoring"]
     },
     {
+      title: "Quantum-Safe Cybersecurity",
+      description: "Next-generation security platform built for the quantum era. Protect your data with quantum-resistant encryption and AI-powered threat detection.",
       icon: Shield,
-      title: "Enterprise Security",
-      description: "Military-grade security protocols and compliance frameworks to protect your most sensitive data and operations.",
-      color: "text-green-500",
-      bgColor: "bg-green-50"
+      path: "/services/cybersecurity",
+      category: "Security",
+      price: "$4,500/mo",
+      rating: 4.9,
+      reviewCount: 189,
+      highlights: ["Quantum-Safe Encryption", "AI Threat Detection", "Zero-Trust Security", "24/7 Monitoring"],
+      features: ["Quantum Cryptography", "Penetration Testing", "Incident Response", "Security Training", "Compliance Management", "Threat Intelligence"]
     },
     {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "SOC2 compliant with military-grade encryption and zero-trust architecture"
-    },
+      title: "Enterprise Cloud Platform",
+      description: "Multi-cloud infrastructure designed for enterprise scale and performance. Achieve 99.99% uptime with intelligent auto-scaling and cost optimization.",
+      icon: Cloud,
+      path: "/services/cloud-infrastructure",
+      category: "Infrastructure",
+      price: "$3,200/mo",
+      rating: 4.8,
+      reviewCount: 156,
+      highlights: ["99.99% Uptime", "Intelligent Scaling", "Cost Optimization", "Global CDN"],
+      features: ["Multi-Cloud Management", "Load Balancing", "Auto-scaling", "Monitoring", "Security Compliance", "Disaster Recovery"]
+    }
+  ];
+
+  const whyChooseUs = [
     {
       icon: Zap,
-      title: "Lightning Fast",
-      description: "Optimized performance with sub-second response times and 99.9% uptime guarantees for mission-critical applications.",
-      color: "text-purple-500",
-      bgColor: "bg-purple-50"
+      title: "Lightning Fast Performance",
+      description: "Optimized for speed with sub-100ms response times and 99.99% uptime guarantees"
     },
     {
-      icon: Users,
-      title: "24/7 Support",
-      description: "Round-the-clock expert support team ready to assist you with any technical challenges or questions.",
-      color: "text-orange-500",
-      bgColor: "bg-orange-50"
+      icon: Lock,
+      title: "Military-Grade Security",
+      description: "Zero-trust architecture with quantum-safe encryption and AI-powered threat detection"
+    },
+    {
+      icon: Cpu,
+      title: "Infinite Scalability",
+      description: "Auto-scaling infrastructure that grows with your business, from startup to enterprise"
+    },
+    {
+      icon: Database,
+      title: "AI-Powered Insights",
+      description: "Real-time analytics and predictive intelligence that transform data into actionable strategies"
+    }
+  ];
+
+  const trustSignals = [
+    { icon: Eye, label: "Transparent Pricing", description: "Clear, upfront costs with no hidden fees" },
+    { icon: Heart, label: "Customer Success", description: "Your growth and success drive everything we do" },
+    { icon: TargetIcon, label: "Results Guaranteed", description: "Measurable outcomes with performance guarantees" },
+    { icon: Sparkles, label: "Innovation Pioneer", description: "Leading the future of business technology" }
+  ];
+
+  const aiServices = [
+    {
+      title: "AI Autonomous Business Systems",
+      description: "Self-managing AI platforms that autonomously optimize your entire business operations",
+      icon: Bot,
+      path: "/services/ai-autonomous-systems",
+      features: ["Self-Learning AI", "Autonomous Decision Making", "Continuous Optimization", "Predictive Analytics"]
+    },
+    {
+      title: "Quantum Computing Solutions",
+      description: "Next-generation quantum computing for complex problem-solving and optimization",
+      icon: Microchip,
+      path: "/services/quantum-technology",
+      features: ["Quantum Processing", "Quantum-Safe Security", "Quantum Algorithms", "Hybrid Computing"]
+    },
+    {
+      title: "Advanced Machine Learning",
+      description: "Custom ML models and AI solutions tailored to your specific business challenges",
+      icon: Brain,
+      path: "/ai-solutions",
+      features: ["Custom AI Models", "Data Training", "Model Deployment", "AI Integration"]
+    }
+  ];
+
+  const industrySolutions = [
+    {
+      title: "Healthcare",
+      description: "AI-powered healthcare solutions",
+      icon: ShieldCheck,
+      path: "/solutions/healthcare",
+      features: ["Patient Care", "Diagnostics", "Administrative Efficiency"]
+    },
+    {
+      title: "Finance",
+      description: "Financial technology innovations",
+      icon: BarChart,
+      path: "/solutions/enterprise",
+      features: ["Risk Management", "Fraud Detection", "Automated Trading"]
+    },
+    {
+      title: "Manufacturing",
+      description: "Smart manufacturing solutions",
+      icon: Cpu,
+      path: "/solutions/enterprise",
+      features: ["Predictive Maintenance", "Quality Control", "Supply Chain Optimization"]
     }
   ];
 

@@ -64,6 +64,11 @@ interface Service {
   competitors?: string[];
   marketTrend?: string;
   innovationLevel?: string;
+  websiteUrl?: string;
+  demoUrl?: string;
+  caseStudies?: string[];
+  rating?: number;
+  innovationScore?: number;
 }
 
 const InnovativeMicroSaasServices: React.FC = () => {

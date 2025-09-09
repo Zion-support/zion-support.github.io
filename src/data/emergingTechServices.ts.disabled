@@ -23,6 +23,8 @@ export interface EmergingTechService {
   websiteUrl: string;
   demoUrl?: string;
   documentationUrl?: string;
+  rating?: number;
+  innovationScore?: number;
 }
 
 export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
