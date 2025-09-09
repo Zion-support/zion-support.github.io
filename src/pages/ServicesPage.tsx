@@ -126,21 +126,123 @@ const ServicesPage: React.FC = memo(() => {
     {
       id: 2,
       title: 'Web Development',
-
+      description: 'Modern, responsive web applications built with cutting-edge technologies.',
+      icon: '🌐',
+      price: 'From $3,000',
+      category: 'Web',
+      features: [
+        'React/Next.js Development',
+        'Responsive Design',
+        'API Integration',
+        'Performance Optimization',
+        'SEO Optimization',
+        'Progressive Web Apps'
+      ]
     },
     {
       id: 3,
       title: 'Mobile Development',
-
+      description: 'Native and cross-platform mobile applications for iOS and Android.',
+      icon: '📱',
+      price: 'From $4,000',
+      category: 'Mobile',
+      features: [
+        'React Native Development',
+        'iOS & Android Apps',
+        'Cross-platform Solutions',
+        'App Store Optimization',
+        'Push Notifications',
+        'Offline Functionality'
+      ]
+    },
+    {
+      id: 4,
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and migration services.',
+      icon: '☁️',
+      price: 'From $2,500',
+      category: 'Cloud',
+      features: [
+        'AWS/Azure/GCP Setup',
+        'Cloud Migration',
+        'Auto-scaling',
+        'Cost Optimization',
+        'Security Hardening',
+        '24/7 Monitoring'
+      ]
     },
     {
       id: 5,
       title: 'Cybersecurity',
-
+      description: 'Comprehensive security solutions to protect your digital assets.',
+      icon: '🔒',
+      price: 'From $3,500',
+      category: 'Security',
+      features: [
+        'Security Audits',
+        'Penetration Testing',
+        'Vulnerability Assessment',
+        'Security Training',
+        'Incident Response',
+        'Compliance Support'
+      ]
     },
     {
       id: 6,
       title: 'Data Analytics',
+      description: 'Transform your data into actionable insights and business intelligence.',
+      icon: '📊',
+      price: 'From $2,000',
+      category: 'Analytics',
+      features: [
+        'Data Visualization',
+        'Business Intelligence',
+        'Predictive Analytics',
+        'Data Warehousing',
+        'ETL Processes',
+        'Custom Dashboards'
+      ]
+    }
+  ];
 
+  const categories = ['All', 'AI', 'Web', 'Mobile', 'Cloud', 'Security', 'Analytics'];
+
+  const filteredServices = selectedCategory === 'All' 
+    ? services 
+    : services.filter(service => service.category === selectedCategory);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Our Services
+          </h1>
+          <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+            Comprehensive technology solutions tailored to your business needs
+          </p>
+        </div>
+
+        <CategoryFilter
+          categories={categories}
+          activeCategory={selectedCategory}
+          onCategoryChange={setSelectedCategory}
+        />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service) => (
+            <ServiceCard
+              key={service.id}
+              service={service}
+              onSelect={setSelectedService}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+});
+
+ServicesPage.displayName = 'ServicesPage';
 
 export default ServicesPage;
