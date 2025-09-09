@@ -30,10 +30,10 @@ function log(message, color = 'reset') {
 }
 
 function analyzeBundleSize() {
-  const distPath = path.join(projectRoot, 'out');
+  const distPath = path.join(projectRoot, 'dist');
   
   if (!fs.existsSync(distPath)) {
-    log('❌ Out directory not found. Run build first.', 'red');
+    log('❌ Dist directory not found. Run build first.', 'red');
     return;
   }
 

@@ -1,7 +1,7 @@
 [build]
   # Build the Vite React project on Netlify
   command = "npm ci --no-audit --no-fund && npm run build"
-  publish = "out"
+  publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
 
