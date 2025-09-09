@@ -1,114 +1,146 @@
 
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/Button";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, ChevronRight } from 'lucide-react';
 
-export interface MobileMenuProps {
-  unreadCount?: number;
-  onClose: () => void;
+interface NavigationItem {
+  name: string;
+  href: string;
 }
 
-export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
-  const location = useLocation();
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const { t } = useTranslation();
+interface MobileMenuProps {
+  isOpen: boolean;
+  onClose: () => void;
+  navigationItems: NavigationItem[];
+}
 
-  const baseItems = [
-    {
-      key: 'home',
-      href: '/',
-      icon: Home,
-      matches: (path: string) => path === '/'
+export function MobileMenu({ isOpen, onClose, navigationItems }: MobileMenuProps) {
+  const menuVariants = {
+    closed: {
+      opacity: 0,
+      x: '100%',
+      transition: {
+        duration: 0.3,
+        ease: 'easeInOut'
+      }
     },
-    {
-      key: 'explore',
-      href: '/talent',
-      icon: Search,
-      matches: (path: string) => path.startsWith('/talent') || path.startsWith('/categories') || path.startsWith('/marketplace')
-    },
-    {
-      key: 'community',
-      href: '/community',
-      icon: MessageCircle,
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
-    },
-    {
-      key: 'post_job',
-      href: '/post-job',
-      icon: BriefcaseIcon,
-      matches: (path: string) => path.startsWith('/post-job'),
-      authRequired: true
-    },
-    {
-      key: 'messages',
-      href: '/messages',
-      icon: MessageSquare,
-      matches: (path: string) => path.startsWith('/messages') || path.startsWith('/inbox'),
-      badge: unreadCount,
-      authRequired: true
-    },
-    {
-      key: 'dashboard',
-      href: '/dashboard',
-      icon: User,
-      matches: (path: string) => path.startsWith('/dashboard'),
-      authRequired: true
+    open: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.3,
+        ease: 'easeInOut'
+      }
     }
-  ];
+  };
 
-  const navItems = baseItems.map(item => ({
-    ...item,
-    name:
-      item.key === 'explore'
-        ? t('general.explore')
-        : t(`nav.${item.key}`)
-  }));
-
-  // Filter items based on auth status
-  const visibleItems = navItems.filter(item => 
-    !item.authRequired || (item.authRequired && isAuthenticated)
-  );
+  const backdropVariants = {
+    closed: { opacity: 0 },
+    open: { opacity: 1 }
+  };
 
   return (
-    <div className="py-6">
-      <div className="flex justify-between items-center px-6 mb-6">
-        <h2 className="text-xl font-bold">Menu</h2>
-        <Button variant="ghost" size="icon" onClick={onClose} aria-label="Close menu" title="Close menu">
-          <X className="h-5 w-5" />
-        </Button>
-      </div>
-      
-      <nav className="space-y-1">
-        {visibleItems.map(item => (
-          <Link
-            key={item.name}
-            to={item.href}
-            className={cn(
-              "flex items-center px-6 py-3 text-base font-medium transition-colors", // Added transition-colors
-              "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-background", // Added focus state, assuming mobile menu background is --background
-              item.matches(location.pathname)
-                ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan" // Active state - already good
-                : "text-slate-200 hover:bg-zion-purple/30 hover:text-white" // Default and Hover states
-            )}
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          {/* Backdrop */}
+          <motion.div
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+            variants={backdropVariants}
+            initial="closed"
+            animate="open"
+            exit="closed"
             onClick={onClose}
+          />
+          
+          {/* Menu */}
+          <motion.div
+            className="fixed right-0 top-0 h-full w-80 max-w-[85vw] bg-zion-blue-dark border-l border-zion-purple/20 z-50"
+            variants={menuVariants}
+            initial="closed"
+            animate="open"
+            exit="closed"
           >
-            <div className="relative mr-4">
-              <item.icon className="h-5 w-5" />
-              {item.badge && item.badge > 0 && (
-                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
-                  {item.badge > 9 ? '9+' : item.badge}
-                </span>
-              )}
+            {/* Header */}
+            <div className="flex items-center justify-between p-6 border-b border-zion-purple/20">
+              <h2 className="text-xl font-semibold text-white">Menu</h2>
+              <button
+                onClick={onClose}
+                className="p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors"
+                aria-label="Close menu"
+              >
+                <X className="h-5 w-5" />
+              </button>
             </div>
-            {item.name}
-          </Link>
-        ))}
-      </nav>
-    </div>
+
+            {/* Navigation */}
+            <nav className="p-6">
+              <ul className="space-y-2">
+                {navigationItems.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      to={item.href}
+                      onClick={onClose}
+                      className="flex items-center justify-between p-3 text-white/80 hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors group"
+                    >
+                      <span className="font-medium">{item.name}</span>
+                      <ChevronRight className="h-4 w-4 text-zion-cyan group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Additional Links */}
+              <div className="mt-8 pt-6 border-t border-zion-purple/20">
+                <div className="space-y-2">
+                  <Link
+                    to="/pricing"
+                    onClick={onClose}
+                    className="flex items-center justify-between p-3 text-white/80 hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors group"
+                  >
+                    <span className="font-medium">Pricing</span>
+                    <ChevronRight className="h-4 w-4 text-zion-cyan group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  
+                  <Link
+                    to="/careers"
+                    onClick={onClose}
+                    className="flex items-center justify-between p-3 text-white/80 hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors group"
+                  >
+                    <span className="font-medium">Careers</span>
+                    <ChevronRight className="h-4 w-4 text-zion-cyan group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  
+                  <Link
+                    to="/faq"
+                    onClick={onClose}
+                    className="flex items-center justify-between p-3 text-white/80 hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors group"
+                  >
+                    <span className="font-medium">FAQ</span>
+                    <ChevronRight className="h-4 w-4 text-zion-cyan group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* CTA Section */}
+              <div className="mt-8 p-4 bg-zion-purple/10 rounded-lg border border-zion-purple/20">
+                <h3 className="text-white font-semibold mb-2">Ready to get started?</h3>
+                <p className="text-zion-slate-light text-sm mb-4">
+                  Transform your business with our AI-powered solutions
+                </p>
+                <Link
+                  to="/contact"
+                  onClick={onClose}
+                  className="block w-full bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark text-center py-3 px-4 rounded-lg font-medium transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </nav>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
   );
 }
