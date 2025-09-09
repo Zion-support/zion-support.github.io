@@ -1,7 +1,7 @@
 # Netlify rebuild trigger (minor touch to force deploy) - 2025-09-09 v4.2
 [build] # touch v4.1 to trigger Netlify rebuild
   # Build the Vite React project on Netlify
-  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
+  command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
@@ -12,9 +12,8 @@
     SKIP_TYPE_CHECK = "true"
     # Ensure devDependencies (e.g., Vite) are installed during CI
     NPM_CONFIG_PRODUCTION = "false"
-    NPM_FLAGS = "--include=dev"
-    # Ensure optional native Rollup binaries are installed
-    NPM_CONFIG_OPTIONAL = "true"
+    # Ensure Netlify doesn't override npm with omit flags
+    NPM_FLAGS = ""
 
 # Headers
 [[headers]]
@@ -58,10 +57,10 @@
   NODE_ENV = "production"
 
 [context.deploy-preview]
-  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
+  command = "npm ci --no-audit --no-fund && npm run build"
 
 [context.branch-deploy]
-  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
+  command = "npm ci --no-audit --no-fund && npm run build"
 
 # Vite/React SPA configuration - SPA fallback for all routes
 # Note: SPA fallback is handled in _redirects file to avoid conflicts
