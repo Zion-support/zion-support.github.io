@@ -20,7 +20,7 @@ vi.mock('@/components/ui/avatar', () => ({
   ),
   AvatarFallback: ({ children }: { children: React.ReactNode }) => <div data-testid="avatar-fallback">{children}</div>,
 }));
-vi.mock('@/components/ui/Button', () => ({
+vi.mock('@/components/ui/button', () => ({
   Button: ({ children, onClick, variant, size, className }: { children: React.ReactNode, onClick?: () => void, variant?: string, size?: string, className?: string }) => (
     <button onClick={onClick} data-variant={variant} data-size={size} className={className}>
       {children}

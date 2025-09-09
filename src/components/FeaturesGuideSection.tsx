@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 <<<<<<< HEAD
 import { Button } from "./ui/Button";
 =======
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 >>>>>>> cursor/check-fix-push-and-merge-to-main-d695
 import { fireEvent } from '@/lib/analytics';
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';

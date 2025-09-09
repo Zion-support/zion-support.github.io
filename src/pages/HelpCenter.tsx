@@ -4,7 +4,7 @@ import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import { Search, BookOpen, MessageCircle, Phone, FileText, Users, Settings, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function HelpCenter() {

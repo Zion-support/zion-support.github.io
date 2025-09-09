@@ -4,7 +4,7 @@ import { ChatWidget } from "@/components/ChatWidget";";
 import { useNavigate } from 'react-router-dom';"";
 import { Badge } from "@/components/ui/badge";"";
 import { Button } from "@/components/ui/button";'";
-import ImageWithRetry from '@/components/ui/ImageWithRetry';"";
+import ImageWithRetry from '@/components/ui/imageWithRetry';"";
 import { Star, MessageSquare, Brain, Shield } from "lucide-react";"";
 import { cn } from "@/lib/utils";'";
 import { Link } from 'react-router-dom';"";

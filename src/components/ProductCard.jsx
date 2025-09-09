@@ -9,7 +9,7 @@ import {
   TooltipProvider,
   TooltipTrigger
 } from "@/components/ui/tooltip";
-import { useAuth } from "@/context/auth/AuthProvider";
+import { useAuth } from "@/context/auth/AuthContext";
 import { useWishlist } from "@/hooks/useWishlist";
 import { useDispatch } from "react-redux";
 import { addItem } from "@/store/cartSlice";

@@ -18,13 +18,13 @@ import {
   Target,
   Award,
   Atom,
-  Blockchain,
+  // Blockchain, // Not available in lucide-react
   Leaf,
   Satellite,
   Activity,
-  Robot,
+  // Robot, // Not available in lucide-react
   Eye,
-  Cube,
+  // Cube, // Not available in lucide-react
   EyeOff,
   Phone,
   Mail,
@@ -73,7 +73,7 @@ const INNOVATIVE_SERVICES_2025 = [
     title: "Enterprise Blockchain Platform",
     description: "Scalable enterprise blockchain platform with smart contract automation, DeFi integration, and regulatory compliance for financial institutions.",
     category: "Blockchain & Web3",
-    icon: Blockchain,
+    icon: Network, // Using Network as alternative to Blockchain
     color: "from-orange-500 to-red-600",
     price: "$8,500/month",
     marketPrice: "$8,500 - $25,000/month",
@@ -181,7 +181,7 @@ const INNOVATIVE_SERVICES_2025 = [
     title: "Advanced Robotics & Automation Platform",
     description: "Comprehensive robotics platform for industrial automation, autonomous systems, and intelligent manufacturing with AI-powered decision making.",
     category: "Robotics",
-    icon: Robot,
+    icon: Cpu, // Using Cpu as alternative to Robot
     color: "from-gray-600 to-slate-700",
     price: "$18,000/month",
     marketPrice: "$18,000 - $50,000/month",
@@ -235,7 +235,7 @@ const INNOVATIVE_SERVICES_2025 = [
     title: "Metaverse & Virtual Reality Platform",
     description: "Comprehensive metaverse platform for creating immersive virtual experiences, virtual events, and digital asset marketplaces.",
     category: "Metaverse",
-    icon: Cube,
+    icon: Globe, // Using Globe as alternative to Cube
     color: "from-teal-500 to-green-600",
     price: "$7,500/month",
     marketPrice: "$7,500 - $22,000/month",

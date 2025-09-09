@@ -9,7 +9,7 @@ import { Slider } from '@/components/ui/slider';
 import { TrendingUp, DollarSign, Clock, BarChart3, Mail, Phone, Globe } from 'lucide-react';
 import Calculator from 'lucide-react/dist/esm/icons/calculator';
 import Target from 'lucide-react/dist/esm/icons/target';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 export default function ServiceCalculatorPage() {
     const [selectedService, setSelectedService] = useState(null);
     const [inputs, setInputs] = useState({

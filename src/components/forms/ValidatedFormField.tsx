@@ -10,7 +10,7 @@ import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
 
 
 
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 
 interface ValidationRule {
   required?: boolean;

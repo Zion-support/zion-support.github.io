@@ -1,5 +1,5 @@
 import React, { useState, Suspense } from 'react';
-import { OptimizedImage } from '@/components/ui/OptimizedImage';
+import { OptimizedImage } from '@/components/ui/optimizedImage';
 import {
   Dialog,
   DialogContent,

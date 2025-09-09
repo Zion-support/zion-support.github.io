@@ -1,6 +1,6 @@
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 import React, { useState, useMemo } from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { Search, Star, Clock, Users, Zap, Shield, Cloud, Brain, Globe, Database } from 'lucide-react';
 import { EXPANDED_SERVICES } from '@/data/expandedServices';
 const ServiceMarketplace = () => {

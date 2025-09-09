@@ -1,6 +1,6 @@
 import React from 'react';
 import { Notification } from '@/context/notifications';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import { X, Check, AlertCircle, Info } from 'lucide-react';
 
 interface NotificationItemProps {

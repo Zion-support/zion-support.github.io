@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NextSeo } from '@/components/NextSeo';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 
 const modules = [
   {

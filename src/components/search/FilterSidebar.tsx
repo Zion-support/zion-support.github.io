@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Filter, Star } from "lucide-react";
 import { FilterOptions } from "@/types/search";

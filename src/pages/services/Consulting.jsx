@@ -1,7 +1,7 @@
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import { Target, Search, FileText, Handshake, Users, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 

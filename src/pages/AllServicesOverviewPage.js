@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Star, Clock, Shield, Zap, TrendingUp, Mail, Phone, CheckCircle, ArrowRight, Sparkles, BarChart3, Search } from 'lucide-react';
 import Calculator from 'lucide-react/dist/esm/icons/calculator';
 import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 export default function AllServicesOverviewPage() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchQuery, setSearchQuery] = useState('');

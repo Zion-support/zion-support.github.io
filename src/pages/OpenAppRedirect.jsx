@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 
 // This component handles deep linking to the mobile app
 const OpenAppRedirect = () => {

@@ -1,6 +1,6 @@
 
 import React, { useState, useRef } from "react";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useEnqueueSnackbar } from '@/context';
 import {logErrorToProduction} from '@/utils/productionLogger';

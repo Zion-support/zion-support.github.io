@@ -31,4 +31,4 @@ const SEO = ({
   );
 };
 
-export { SEO };
+export default SEO;

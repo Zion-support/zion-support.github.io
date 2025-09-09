@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Star, Mail, Phone, Globe, CheckCircle, X, BarChart3, Users } from 'lucide-react';
 import Target from 'lucide-react/dist/esm/icons/target';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 export default function ServiceComparisonPage() {
     const [selectedServices, setSelectedServices] = useState([]);
     const [comparisonServices, setComparisonServices] = useState([]);

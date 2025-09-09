@@ -1,9 +1,9 @@
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 import { useState } from 'react';
 import { TrendingUp, Users, Briefcase, ShoppingCart, DollarSign, Activity, ArrowUpRight, ArrowDownRight, Calendar, Bell, Settings, BarChart3, PieChart, LineChart } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
-import { Button } from '@/components/ui/Button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 export function Dashboard() {
     const [activeTab, setActiveTab] = useState('overview');
     const metrics = [

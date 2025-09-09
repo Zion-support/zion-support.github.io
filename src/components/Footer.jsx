@@ -3,7 +3,7 @@ import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, Ar
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-export function Footer() {
+function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -214,3 +214,5 @@ export function Footer() {
     </footer>
   );
 }
+
+export default Footer;

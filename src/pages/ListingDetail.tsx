@@ -4,9 +4,9 @@ import { useAuth } from "@/hooks/useAuth";
 import { ChatWidget } from "@/components/ChatWidget";
 import { useRouter } from "next/router";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import Skeleton from "@/components/ui/skeleton";
-import ImageWithRetry from '@/components/ui/ImageWithRetry';
+import ImageWithRetry from '@/components/ui/imageWithRetry';
 import { Star, MessageSquare, Brain, Shield } from 'lucide-react';
 
 

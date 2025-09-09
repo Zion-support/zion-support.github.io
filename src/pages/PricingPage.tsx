@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 const PricingPage: React.FC = () => {
