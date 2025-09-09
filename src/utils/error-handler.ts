@@ -67,7 +67,7 @@ export const logError = (error: Error | AppError, errorInfo?: Partial<ErrorInfo>
   }
 };
 
-export const handleAsyncError = <T>(
+export const handleAsyncError = async <T>(
   asyncFn: () => Promise<T>,
   fallback?: T,
   errorCode: string = errorCodes.INTERNAL_SERVER_ERROR

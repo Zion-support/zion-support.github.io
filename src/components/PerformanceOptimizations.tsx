@@ -1,5 +1,5 @@
 import React, { Suspense, memo } from 'react';
-import { ErrorBoundary } from './ErrorBoundary';
+import ErrorBoundary from './ErrorBoundary';
 import LoadingSpinner from './LoadingSpinner';
 
 // Lazy load heavy components (example - can be used for actual heavy components)
