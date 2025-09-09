@@ -100,18 +100,13 @@ jobs:
           if [ ! -f "$file" ]; then 
             mkdir -p state && echo '[]' > "$file"
           fi
-          
-          # Extract URLs for this shard
           jq -r --argjson s "$SHARD" --argjson n "$NUM_SHARDS" '
             to_entries | map(select(.key % $n == $s)) | map(.value) | .[]
           ' "$file" > shard_urls.txt || true
-          
-          url_count=$(wc -l < shard_urls.txt || echo "0")
-          echo "Shard $SHARD: $url_count URLs"
-          
+          wc -l shard_urls.txt || true
           if [ ! -s shard_urls.txt ]; then 
             echo "No URLs for this shard"
-            echo '{}' > report.json
+            echo '{"links":[]}' > report.json
             exit 0
           fi
 
@@ -122,13 +117,16 @@ jobs:
       
       - name: Install linkinator
         run: npm install -g linkinator
-
+      
       - name: Run crawler (linkinator) on shard
         run: |
           set -e
           urls=$(paste -sd' ' shard_urls.txt || true)
-          if [ -z "$urls" ]; then echo '{}' > report.json; exit 0; fi
-          linkinator $urls --recurse --concurrency 10 --skip '.*(logout|signout).*' --format json > report.json || true
+          if [ -z "$urls" ]; then 
+            echo '{"links":[]}' > report.json
+            exit 0
+          fi
+          linkinator $urls --recurse --concurrency 20 --skip '.*(logout|signout).*' --format json > report.json || echo '{"links":[]}' > report.json
 
       - name: Generate report
         run: |
