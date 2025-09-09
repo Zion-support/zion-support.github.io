@@ -157,10 +157,10 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>
           <div className="flex flex-wrap justify-center gap-4">
             {specialServices.map((service) => (
-              <Link 
-                key={service.title}
-                to={service.link}
-                className="group relative px-6 py-3 bg-gradient-to-r from-zion-blue-light to-zion-purple/30 hover:from-zion-purple/40 hover:to-zion-purple/60 border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-purple/25"
+              <Link
+                key={service.title} // Key was already here, ensure 'to' is used
+                to={service.link} // Changed href to to
+                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
               >
                 {service.title}
                 {service.badge && (
@@ -173,16 +173,10 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           </div>
         </motion.div>
         
-        <motion.div 
-          className="mt-12 flex justify-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <Link 
-            to="/categories" 
-            className="group inline-flex items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-dark transition-colors duration-300 text-lg font-medium"
+        <div className="mt-12 flex justify-center">
+          <Link
+            to="/categories/all" // Changed href to to
+            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
           >
             View All Categories
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
