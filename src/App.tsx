@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './components/ThemeProvider';
-import { ErrorBoundary, setupGlobalErrorHandling, FallbackProps } from './components/ErrorHandling';
+import { ErrorBoundary, setupGlobalErrorHandling } from './components/ErrorHandling';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import ScrollToTop from './components/ScrollToTop';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -22,6 +22,7 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 import EnhancedNavigation from './components/EnhancedNavigation';
 import { bundleOptimizer } from './utils/bundleOptimizer';
 import { PrivateRoute } from './components/PrivateRoute';
+import { CommunityProvider } from './context/CommunityContext';
 import './App.css';
 
 // Service worker registration
@@ -122,7 +123,7 @@ const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const Support = lazy(() => import('./pages/Support'));
 
-// Additional missing components
+// Missing components that are referenced in routes
 const AllCategoriesPage = lazy(() => import('./pages/AllCategoriesPage'));
 const SimpleSignup = lazy(() => import('./pages/SimpleSignup'));
 const OAuthCallback = lazy(() => import('./pages/OAuthCallback'));
@@ -138,14 +139,11 @@ const WishlistPage = lazy(() => import('./pages/Wishlist'));
 const CartPage = lazy(() => import('./pages/Cart'));
 const Wallet = lazy(() => import('./pages/Wallet'));
 const Profile = lazy(() => import('./pages/Profile'));
-const RecommendationsPage = lazy(() => import('./pages/SavedTalentsPage'));
+const RecommendationsPage = lazy(() => import('./pages/RecommendationsPage'));
 const Checkout = lazy(() => import('./pages/Checkout'));
 const ForgotPassword = lazy(() => import('./pages/ForgotPassword'));
 const ResetPassword = lazy(() => import('./pages/ResetPassword'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
-
-// Community Provider
-const CommunityProvider = lazy(() => import('./context/CommunityContext').then(module => ({ default: module.CommunityProvider })));
 
 const App = memo(() => {
   // Setup global error handling
@@ -189,9 +187,13 @@ const App = memo(() => {
                             {/* Comprehensive Service Routes */}
                             <Route path="/match" element={<AIMatcherPage />} />
                             <Route path="/login" element={<Login />} />
-                            <Route path="/signup" element={<Signup />} />
+                            <Route path="/register" element={<Signup />} />
+                            <Route path="/signup" element={<SimpleSignup />} />
+                            <Route path="/oauth" element={<OAuthCallback />} />
                             <Route path="/talent" element={<TalentDirectory />} />
                             <Route path="/talents" element={<TalentsPage />} />
+                            <Route path="/more-talents" element={<MoreTalentsPage />} />
+                            <Route path="/additional-talents" element={<AdditionalTalentsPage />} />
                             <Route path="/services-page" element={<ServicesPage />} />
                             <Route path="/expanded-services" element={<ExpandedServicesPage />} />
                             <Route path="/all-services" element={<AllServicesOverviewPage />} />
@@ -200,9 +202,12 @@ const App = memo(() => {
                             <Route path="/service-analytics" element={<ServiceAnalyticsDashboard />} />
                             <Route path="/service-marketplace" element={<ServiceMarketplace />} />
                             <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />
+                            <Route path="/it-onsite-services/:country" element={<ITOnsiteServicesPage />} />
                             <Route path="/categories" element={<Categories />} />
+                            <Route path="/categories/all" element={<AllCategoriesPage />} />
                             <Route path="/equipment" element={<EquipmentPage />} />
                             <Route path="/equipment/:id" element={<EquipmentDetail />} />
+                            <Route path="/new-products" element={<NewProductsPage />} />
                             <Route path="/analytics" element={<Analytics />} />
                             <Route path="/mobile-launch" element={<MobileLaunchPage />} />
                             <Route path="/open-app" element={<OpenAppRedirect />} />
@@ -212,21 +217,13 @@ const App = memo(() => {
                               </CommunityProvider>
                             } />
                             <Route path="/partners" element={<PartnersPage />} />
+                            <Route path="/sitemap" element={<Sitemap />} />
+                            <Route path="/help" element={<Help />} />
                             <Route path="/zion-hire-ai" element={<ZionHireAI />} />
                             <Route path="/hire-ai" element={<ZionHireAI />} />
                             <Route path="/request-quote" element={<RequestQuotePage />} />
                             <Route path="/blog" element={<Blog />} />
                             <Route path="/blog/:slug" element={<BlogPost />} />
-                            
-                            {/* Additional routes */}
-                            <Route path="/categories/all" element={<AllCategoriesPage />} />
-                            <Route path="/signup" element={<SimpleSignup />} />
-                            <Route path="/oauth" element={<OAuthCallback />} />
-                            <Route path="/more-talents" element={<MoreTalentsPage />} />
-                            <Route path="/additional-talents" element={<AdditionalTalentsPage />} />
-                            <Route path="/new-products" element={<NewProductsPage />} />
-                            <Route path="/sitemap" element={<Sitemap />} />
-                            <Route path="/help" element={<Help />} />
                             <Route path="/favorites" element={<FavoritesPage />} />
                             <Route path="/wishlist" element={<WishlistPage />} />
                             <Route path="/cart" element={<PrivateRoute><CartPage /></PrivateRoute>} />

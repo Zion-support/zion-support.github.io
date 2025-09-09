@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { optimizePreloads } from './plugins/optimize-preloads.js'
 
 // Ensure __dirname is available in ESM
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -26,8 +27,11 @@ export default defineConfig(({ mode }) => ({
     react({
       jsxRuntime: 'automatic',
     }),
+    // Custom plugin to optimize preload links
+    optimizePreloads(),
     // Bundle analyzer would go here if needed
   ].filter(Boolean),
+  // Explicitly set the build target to prevent ES2024 issues
   build: {
     // Output directory for Netlify compatibility
     outDir: 'dist',
@@ -37,8 +41,18 @@ export default defineConfig(({ mode }) => ({
     minify: 'esbuild',
     // Use esbuild for CSS minification to avoid heavy PostCSS/CSSNano work on CI
     cssMinify: 'esbuild',
-    // Disable module preload generation which can be slow for very large graphs on CI
-    modulePreload: false,
+    // Optimize module preload to reduce warnings
+    modulePreload: {
+      polyfill: true,
+      // Only preload the most critical dependencies to avoid warnings
+      resolveDependencies: (filename, deps, { hostId, hostType }) => {
+        // Only preload the main entry point and critical React chunks
+        return deps.filter(dep => {
+          // Only preload the main entry and react-core for faster initial load
+          return dep.includes('index-') || dep.includes('react-core-');
+        });
+      }
+    },
     // Chunk size warning limit
     chunkSizeWarningLimit: 500,
     // Assets inline limit - smaller for better caching
@@ -47,6 +61,9 @@ export default defineConfig(({ mode }) => ({
     treeshake: true,
     // Optimize chunk splitting
     rollupOptions: {
+      input: {
+        main: './index.html'
+      },
       onwarn(warning, warn) {
         // Suppress TypeScript warnings
         if (warning.code === 'UNRESOLVED_IMPORT') return;
@@ -141,8 +158,8 @@ export default defineConfig(({ mode }) => ({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Optimize build target
-    target: 'esnext',
+    // Optimize build target - ensure compatibility with esbuild
+    target: 'es2020',
     // Enable CSS code splitting
     cssCodeSplit: true,
     // Avoid gzip size computation entirely to prevent extra work on CI
@@ -157,16 +174,32 @@ export default defineConfig(({ mode }) => ({
     },
   },
   esbuild: {
-    target: 'esnext',
+    target: 'es2020',
     // Disable TypeScript checking during build
     logLevel: 'error',
     // Strip debugging noise and mark common logging as pure
     drop: ['console', 'debugger'],
     pure: ['console.log', 'console.info', 'console.debug'],
+    // Explicitly set supported targets for esbuild
+    supported: {
+      'top-level-await': false
+    },
+    // Force esbuild to use the correct target and format
+    format: 'esm',
+    // Additional safeguards to prevent ES2024 issues
+    platform: 'browser',
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
+      '@': path.resolve(__dirname, './src'),
+      'next/router': path.resolve(__dirname, './src/stubs/next-router.ts'),
+      'next/link': path.resolve(__dirname, './src/stubs/next-link.ts'),
+      'next/image': path.resolve(__dirname, './src/stubs/next-image.ts'),
+      'next/head': path.resolve(__dirname, './src/stubs/next-head.ts'),
+      'next-cloudinary': path.resolve(__dirname, './src/stubs/next-cloudinary.ts'),
+      '@supabase/ssr': path.resolve(__dirname, './src/stubs/supabase-ssr.ts'),
+      '@datadog/browser-logs': path.resolve(__dirname, './src/utils/datadog-logs-shim.ts'),
+      'logrocket': path.resolve(__dirname, './src/utils/logrocket-shim.ts')
     }
   },
   server: {
@@ -181,6 +214,7 @@ export default defineConfig(({ mode }) => ({
   },
   define: {
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    'process.env.BUILD_TARGET': JSON.stringify('es2022'),
   },
   // Optimize dependencies
   optimizeDeps: {
@@ -201,6 +235,10 @@ export default defineConfig(({ mode }) => ({
     exclude: ['@vite/client', '@vite/env'],
     // Force pre-bundling for better performance
     force: true,
+    // Ensure esbuild target compatibility
+    esbuildOptions: {
+      target: 'es2020',
+    },
   },
   // Performance optimizations
   css: {

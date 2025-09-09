@@ -10,5 +10,6 @@ export const getStripe = () => {
 };
 
 export const isProdDomain = () => {
-  return process.env.NODE_ENV === 'production' && !window.location.hostname.includes('localhost');
+  return window.location.hostname === 'ziontechgroup.com' || 
+         window.location.hostname === 'www.ziontechgroup.com';
 };

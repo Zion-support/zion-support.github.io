@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ES2024",
+    "target": "ES2022",
     "useDefineForClassFields": true,
     "lib": [
-      "ES2020",
+      "ES2022",
       "DOM",
       "DOM.Iterable"
     ],
@@ -15,7 +15,7 @@
       "axios": ["./src/lib/axios.ts"]
     },
     "skipLibCheck": true,
-    "types": ["vite/client", "react", "react-router-dom", "node", "react-dom", "next", "next/types/global", "vitest/globals"],
+    "types": ["vite/client", "react", "react-router-dom", "socket.io", "socket.io-client", "node", "react-dom", "next", "next/types/global", "vitest/globals"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",

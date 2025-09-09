@@ -10,7 +10,7 @@ import NewPostDialog from "@/components/community/NewPostDialog";
 import { ChatAssistantTrigger } from "@/components/ChatAssistantTrigger";
 import { useRequireAuth } from "@/hooks/useAuthGuard";
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
-import { useCommunity } from "@/context";
+import { useCommunity } from "@/context/CommunityContext";
 import type { ForumCategory } from "@/types/community";
 import { logErrorToProduction } from '@/utils/productionLogger';
 import { logInfo } from '@/utils/productionLogger';

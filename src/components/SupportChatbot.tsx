@@ -3,58 +3,9 @@ import { MessageSquare, X } from 'lucide-react';
 
 
 import { Button } from '@/components/ui/button';
+import { ChatMessage } from '@/components/ChatAssistant/ChatMessage';
+import { ChatInput } from '@/components/ChatAssistant/ChatInput';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-// Chat components
-interface ChatMessageProps {
-  role: 'user' | 'assistant';
-  message: string;
-}
-
-const ChatMessage = ({ role, message }: ChatMessageProps) => (
-  <div className={`flex ${role === 'user' ? 'justify-end' : 'justify-start'}`}>
-    <div className={`max-w-xs px-3 py-2 rounded-lg ${
-      role === 'user' 
-        ? 'bg-zion-purple text-white' 
-        : 'bg-gray-200 text-gray-800'
-    }`}>
-      {message}
-    </div>
-  </div>
-);
-
-interface ChatInputProps {
-  onSend: (message: string) => void;
-  disabled?: boolean;
-}
-
-const ChatInput = ({ onSend, disabled }: ChatInputProps) => {
-  const [message, setMessage] = useState('');
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (message.trim() && !disabled) {
-      onSend(message.trim());
-      setMessage('');
-    }
-  };
-
-  return (
-    <form onSubmit={handleSubmit} className="flex gap-2">
-      <input
-        type="text"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        placeholder="Type your message..."
-        disabled={disabled}
-        className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-purple"
-      />
-      <Button type="submit" disabled={disabled || !message.trim()} size="sm">
-        Send
-      </Button>
-    </form>
-  );
-};
 
 
 interface Msg { id: string; role: 'user' | 'assistant'; message: string; }
