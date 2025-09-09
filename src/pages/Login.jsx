@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, useSearchParams } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { safeStorage } from '@/utils/safeStorage';
 import { LoginContent } from '@/components/auth/login';
@@ -12,14 +12,13 @@ export default function Login() {
   const { isAuthenticated, user, isLoading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
+  const [searchParams] = useSearchParams();
   const { dispatch } = useCart();
 
   useEffect(() => {
     // This effect handles token processing (e.g., from magic link)
-    // It runs when component mounts or location.search (containing query) changes
-    const queryString = location.search;
-    const params = new URLSearchParams(queryString);
-    const token = params.get('token');
+    // It runs when component mounts or searchParams change
+    const token = searchParams.get('token');
     if (token) {
       safeStorage.setItem('zion_token', token);
       // Clear token from URL to prevent re-processing and clean up history
@@ -27,15 +26,15 @@ export default function Login() {
       // which should trigger the other useEffect.
       navigate(location.pathname, { replace: true });
     }
-  }, [location.search, location.pathname, navigate]);
+  }, [searchParams, location.pathname, navigate]);
 
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
       reduxDispatch(setLoggedIn(true));
-      const next = new URLSearchParams(location.search).get('next') || '/dashboard';
+      const next = searchParams.get('next') || '/dashboard';
       navigate(next, { replace: true });
     }
-  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.search]);
+  }, [isAuthenticated, isLoading, navigate, reduxDispatch, searchParams]);
 
   // Render LoginContent if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {
