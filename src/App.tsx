@@ -19,26 +19,18 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const Demo = React.lazy(() => import('./pages/Demo'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
-const AIAnalytics = React.lazy(() => import('./pages/services/ai-analytics'));
-const ServicesAdvertising = React.lazy(() => import('./pages/ServicesAdvertising'));
-const Pricing = React.lazy(() => import('./pages/Pricing'));
-const MicroSaasServices = React.lazy(() => import('./pages/MicroSaasServices.jsx'));
-const MicroSAAS = React.lazy(() => import('./pages/MicroSAAS'));
-const AIBusinessIntelligence = React.lazy(() => import('./pages/micro-saas/ai-business-intelligence'));
-const CustomerExperience = React.lazy(() => import('./pages/micro-saas/customer-experience'));
-const QuantumComputing = React.lazy(() => import('./pages/micro-saas/quantum-computing'));
-const SupplyChain = React.lazy(() => import('./pages/micro-saas/supply-chain'));
-const Cybersecurity = React.lazy(() => import('./pages/micro-saas/cybersecurity'));
-const IoTEdgeComputing = React.lazy(() => import('./pages/micro-saas/iot-edge'));
-const ContentCreation = React.lazy(() => import('./pages/micro-saas/content-creation'));
-const HRPlatform = React.lazy(() => import('./pages/micro-saas/hr-platform'));
-const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
-const Signup = React.lazy(() => import('./pages/Signup'));
-const NotFound = React.lazy(() => import('./pages/404.jsx'));
-const InnovativeServices2027 = React.lazy(() => import('./pages/InnovativeServices2027'));
-const ComprehensivePricing2027 = React.lazy(() => import('./pages/ComprehensivePricing2027'));
-const AllServices2027 = React.lazy(() => import('./pages/AllServices2027'));
+const AllServices2025 = React.lazy(() => import('./pages/AllServices2025'));
+
+// Enhanced loading component with skeleton
+const LoadingFallback = () => (
+  <div className="min-h-screen bg-background flex items-center justify-center">
+    <div className="text-center space-y-4">
+      <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto"></div>
+      <p className="text-zion-cyan text-lg font-medium">Loading Zion...</p>
+      <p className="text-muted-foreground text-sm">Preparing your AI marketplace experience</p>
+    </div>
+  </div>
+);
 
 function App() {
   return (
@@ -50,7 +42,7 @@ function App() {
         
         <AppHeader />
         
-        <main className="flex-1 relative z-10">
+        <main className="flex-1">
           <Suspense fallback={<LoadingFallback />}>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -67,27 +59,11 @@ function App() {
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/services/ai-analytics" element={<AIAnalytics />} />
-              <Route path="/services-advertising" element={<ServicesAdvertising />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/micro-saas-services" element={<MicroSaasServices />} />
-              <Route path="/micro-saas" element={<MicroSAAS />} />
-              <Route path="/micro-saas/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-              <Route path="/micro-saas/customer-experience" element={<CustomerExperience />} />
-              <Route path="/micro-saas/quantum-computing" element={<QuantumComputing />} />
-              <Route path="/micro-saas/supply-chain" element={<SupplyChain />} />
-              <Route path="/micro-saas/cybersecurity" element={<Cybersecurity />} />
-              <Route path="/micro-saas/iot-edge" element={<IoTEdgeComputing />} />
-              <Route path="/micro-saas/content-creation" element={<ContentCreation />} />
-              <Route path="/micro-saas/hr-platform" element={<HRPlatform />} />
-              <Route path="/zion-hire-ai" element={<ZionHireAI />} />
-              <Route path="/hire-ai" element={<ZionHireAI />} />
-              <Route path="/innovative-services-2027" element={<InnovativeServices2027 />} />
-              <Route path="/comprehensive-pricing-2027" element={<ComprehensivePricing2027 />} />
-              <Route path="/all-services-2027" element={<AllServices2027 />} />
-              <Route path="*" element={<NotFound />} />
+              
+              {/* New Services Routes */}
+              <Route path="/all-services-2025" element={<AllServices2025 />} />
+              <Route path="/services" element={<AllServices2025 />} />
+              <Route path="/comprehensive-services" element={<AllServices2025 />} />
             </Routes>
           </Suspense>
         </main>
@@ -97,4 +73,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
