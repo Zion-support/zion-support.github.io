@@ -2,7 +2,7 @@
 [build] # touch v4.53 to trigger Netlify rebuild
   # Build the Next.js project on Netlify
   command = "npm ci --no-audit --no-fund --include=optional && npm run build:ci"
-  publish = ".next"
+  publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
   # Skip TypeScript checking during build
