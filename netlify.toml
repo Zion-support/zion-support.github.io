@@ -1,25 +1,20 @@
-# Netlify rebuild trigger (minor touch to force deploy) - 2025-09-09 v4.44
-[build] # touch v4.44 to trigger Netlify rebuild
-  # Build the Next.js project on Netlify
+# Netlify build configuration (resolved)
+[build]
   command = "npm ci --no-audit --no-fund --include=optional && npm run build"
   publish = ".next"
   functions = "netlify/functions"
   command_timeout = "30m"
-  # Skip TypeScript checking during build
 
   [build.environment]
     NODE_VERSION = "20.19.0"
     NODE_OPTIONS = "--max-old-space-size=6144"
     SKIP_TYPE_CHECK = "true"
-    # Ensure devDependencies are installed during CI
     NPM_CONFIG_PRODUCTION = "false"
     NPM_FLAGS = "--include=dev --include=optional"
-    # Ensure optional dependencies are installed
     NPM_CONFIG_OPTIONAL = "true"
-    # Enable Next.js runtime
     NETLIFY_NEXT_PLUGIN_SKIP = "false"
 
-# Headers
+# Security headers
 [[headers]]
   for = "/*"
   [headers.values]
@@ -31,39 +26,7 @@
     Strict-Transport-Security = "max-age=31536000"
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' plausible.io; connect-src 'self' plausible.io; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
 
-
-
-[[headers]]
-  for = "/logos/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# SPA fallback is defined in public/_redirects to avoid double handling
-
-# Functions
-[functions]
-  directory = "netlify/functions"
-  node_bundler = "esbuild"
-
-# Essential scheduled functions only
-[[scheduled.functions]]
-  name = "health"
-  schedule = "*/5 * * * *" # every 5 minutes for health checks
-
-[context.production.environment]
-  NODE_ENV = "production"
-  # Ensure dev deps are available in prod builds on Netlify
-  NPM_CONFIG_PRODUCTION = "false"
-
-[context.deploy-preview]
-  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
-
-[context.branch-deploy]
-  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
-
-# Next.js configuration - no SPA fallback needed
-
-# Set basic cache headers for static assets for better performance
+# Static assets caching
 [[headers]]
   for = "/_next/static/*"
   [headers.values]
@@ -72,16 +35,27 @@
 [[headers]]
   for = "/_next/image/*"
   [headers.values]
-<<<<<<< HEAD
-    Cache-Control = "public, max-age=300"
-
-# SPA fallback handled via Netlify redirects since public/_redirects is gitignored
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-# trigger: 2025-09-09T19:25:00Z
-=======
     Cache-Control = "public, max-age=31536000, immutable"
-# trigger: 2025-09-09T19:10:00Z
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a6ac
+
+[[headers]]
+  for = "/logos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[scheduled.functions]]
+  name = "health"
+  schedule = "*/5 * * * *"
+
+[context.production.environment]
+  NODE_ENV = "production"
+  NPM_CONFIG_PRODUCTION = "false"
+
+[context.deploy-preview]
+  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
+
+[context.branch-deploy]
+  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
