@@ -1,17 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Mail, Phone, MapPin, Globe, ArrowUp } from 'lucide-react';
+import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Zap, Brain, Shield, Cloud, Rocket, Cpu, Lock, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, Star, TrendingUp, Award, Target, Lightbulb, FileText, BarChart3, Network, Server, Eye, TestTube, Handshake, HelpCircle, Twitter, Linkedin, Facebook, Instagram, Github } from 'lucide-react';
 
-export const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+// Contact information
+const contactInfo = [
+  { label: 'Email', value: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com', icon: Mail },
+  { label: 'Phone', value: '+1 (555) 123-4567', href: 'tel:+15551234567', icon: Phone },
+  { label: 'Address', value: '123 Tech Street, Innovation City, IC 12345', href: '#', icon: MapPin },
+  { label: 'Website', value: 'ziontechgroup.com', href: 'https://ziontechgroup.com', icon: Globe },
+];
 
-  const socialLinks = [
-    { name: "LinkedIn", url: "https://www.linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
-    { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦", color: "hover:bg-sky-500/20" },
-    { name: "GitHub", url: "https://github.com/Zion-Holdings", icon: "💻", color: "hover:bg-gray-600/20" },
-    { name: "YouTube", url: "https://www.youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },
-    { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮", color: "hover:bg-indigo-600/20" }
-  ];
+// Social media links
+const socialLinks = [
+  { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
+  { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-600' },
+  { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-500' },
+  { name: 'Instagram', url: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' },
+  { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },
+];
+
+// Current year
+const currentYear = new Date().getFullYear();
 
   const footerSections = [
     {
@@ -60,6 +69,13 @@ export const Footer: React.FC = () => {
         { label: "Request Quote", path: "/contact" }
       ]
     }
+  ];
+
+  const achievements = [
+    { icon: Award, label: "500+", description: "Projects Delivered" },
+    { icon: Users, label: "50+", description: "Expert Team Members" },
+    { icon: Star, label: "99.9%", description: "Client Satisfaction" },
+    { icon: TrendingUp, label: "200%", description: "Average ROI" }
   ];
 
   const contactInfo = [
@@ -185,23 +201,8 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Newsletter Section */}
-        <div className="border-t border-zion-purple/20 pt-8 mb-8">
-          <div className="max-w-md">
-            <h4 className="text-lg font-semibold mb-3">Stay Updated</h4>
-            <p className="text-zion-slate-light text-sm mb-4">
-              Get the latest insights on AI, technology trends, and industry updates.
-            </p>
-            <div className="flex space-x-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              />
-              <button className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark px-4 py-2 rounded-lg font-medium transition-colors">
-                Subscribe
-              </button>
-            </div>
+            {/* Navigation sections */}
+            {/* This section was removed as per the new_code, as the footerNavigation object was removed. */}
           </div>
         </div>
 

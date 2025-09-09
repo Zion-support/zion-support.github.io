@@ -1,59 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Server, 
-  Zap, 
-  Globe, 
-  Cpu, 
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  Search,
-  Filter,
-  Star,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  BookOpen,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,
-  Globe as GlobeIcon,
-  Sparkles,
-  Target,
-  BarChart3,
-  Palette,
-  Wrench,
-  Lightbulb,
-  Leaf,
-  Wifi,
-  Smartphone,
-  Monitor,
-  Laptop,
-  Tablet
-} from 'lucide-react';
-import { SEO } from "@/components/SEO";
-import { ENHANCED_SERVICES_2025 } from "@/data/enhancedServices2025";
-import { ADDITIONAL_INNOVATIVE_SERVICES } from "@/data/additionalInnovativeServices";
-import { IT_SERVICES } from "@/data/itServices";
-
-// Combine all services
-const ALL_SERVICES = [
-  ...ENHANCED_SERVICES_2025,
-  ...ADDITIONAL_INNOVATIVE_SERVICES,
-  ...IT_SERVICES
-];
+import React from 'react';
+import { EnhancedServicesShowcase } from '@/components/EnhancedServicesShowcase';
+import SEO from '@/components/SEO';
 
 export default function EnhancedServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
