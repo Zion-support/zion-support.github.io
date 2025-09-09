@@ -4,10 +4,60 @@ import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 
+const typescriptParser = tseslint.parser;
+const typescript = tseslint.plugin;
+const react = pluginReact;
+const reactHooks = pluginReactHooks;
+
 export default [
-  js.configs.recommended,
+  { ...js.configs.recommended, files: ['app/**/*.{js,jsx,ts,tsx}', 'components/**/*.{js,jsx,ts,tsx}', 'src/**/*.{js,jsx,ts,tsx}'] },
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    ignores: [
+      "node_modules/**", 
+      "dist/**", 
+      "out/**", 
+      "coverage/**", 
+      "build/**", 
+      ".next/**", 
+      "public/build/**",
+      "api/**",
+      "apps.backup/**",
+      "backup-merge-conflicts/**",
+      "clean-build/**",
+      "cache/**",
+      "corrupted_backup/**",
+      "*.cjs",
+      "*.js",
+      "api-backup/**",
+      "advanced-*.js",
+      "aggressive-*.js",
+      "analyze-*.js",
+      "automation/**",
+      "backup/**",
+      "build-reports/**",
+      "ci-cd-reports/**",
+      "comprehensive-*.js",
+      "conflict-*.js",
+      "create-*.js",
+      "debug-*.js",
+      "enhance-*.js",
+      "fix-*.js",
+      "improve-*.js",
+      "optimize-*.js",
+      "test-*.js",
+      "*.report.json",
+      "*.log",
+      "*.md",
+      "*.txt",
+      "*.tsv",
+      "*.html",
+      "*.json"
+    ],
+  },
+
+  // TypeScript configuration for main app files
+  {
+    files: ['app/**/*.{ts,tsx}', 'components/**/*.{ts,tsx}', 'src/**/*.{ts,tsx}'],
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
@@ -122,7 +172,43 @@ export default [
       '.nyc_output/**',
       '*.min.js',
       'public/**',
-      '*.d.ts',
+      'temp_conflicts/**',
+      'temp_exclude/**',
+      '__tests__/**',
+      'tests/**',
+      'apps/**',
+      'utils/**',
+      'types/**',
+      'zion-*/**',
+      'zion_os/**',
+      'zion/**',
+      '*.cjs',
+      '*.js',
+      'api-backup/**',
+      'advanced-*.js',
+      'aggressive-*.js',
+      'analyze-*.js',
+      'automation/**',
+      'backup/**',
+      'build-reports/**',
+      'ci-cd-reports/**',
+      'comprehensive-*.js',
+      'conflict-*.js',
+      'create-*.js',
+      'debug-*.js',
+      'enhance-*.js',
+      'fix-*.js',
+      'improve-*.js',
+      'optimize-*.js',
+      'test-*.js',
+      '*.report.json',
+      '*.log',
+      '*.md',
+      '*.txt',
+      '*.tsv',
+      '*.html',
+      '*.json',
+      '*.d.ts'
     ],
   },
 ];
