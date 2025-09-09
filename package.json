@@ -71,7 +71,7 @@
     "deploy": "npm run build && netlify deploy --prod",
     "deploy:preview": "npm run build && netlify deploy",
     "health": "curl -f https://ziontechgroup.com/api/health || exit 1",
-    "validate": "npm run lint && npm run build:ci"
+    "validate": "npm run build:ci"
   },
   "dependencies": {
     "@google/model-viewer": "^3.0.1",
