@@ -2,18 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import { 
-  Building, Heart, Factory, Shield, 
-  GraduationCap, ShoppingCart, Globe,
-  ArrowRight, Zap, Target, Users
+  Building, Car, Heart, DollarSign, GraduationCap, 
+  Shield, Factory, Globe, Brain, Atom, Rocket,
+  ArrowRight, CheckCircle, Star, Users, Zap, Cloud, BarChart3
 } from 'lucide-react';
 
 export default function Solutions() {
   const industrySolutions = [
     {
-      title: "Financial Services",
+      name: 'Enterprise',
+      description: 'Scalable solutions for large organizations with complex requirements',
       icon: Building,
-      color: "from-blue-500 to-cyan-500",
-      description: "Transform banking, insurance, and fintech with AI-powered solutions",
+      color: 'from-blue-400 to-cyan-500',
       solutions: [
         "AI-Powered Risk Assessment",
         "Fraud Detection & Prevention",

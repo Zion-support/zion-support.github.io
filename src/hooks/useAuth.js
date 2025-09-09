@@ -21,6 +21,9 @@ export const useAuth = () => {
         user,
         loading,
         login,
-        logout
+        logout,
+        register,
+        isAuthenticated: !!user,
+        isAdmin: user?.role === 'admin'
     };
 };

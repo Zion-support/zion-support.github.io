@@ -26,133 +26,18 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
     );
   };
 
-  const sidebarSections = [
-    {
-      id: 'ai-services',
-      title: 'AI & Consciousness',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      items: [
-        { label: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2044', badge: 'Hot', featured: true },
-        { label: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', badge: 'New' },
-        { label: 'AI Autonomous Research', href: '/ai-autonomous-research', badge: 'Trending' },
-        { label: 'AI Content Personalization', href: '/ai-content-personalization-engine' },
-        { label: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework' },
-        { label: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
-        { label: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance-platform' },
-        { label: 'AI Customer Success', href: '/ai-customer-success-platform' },
-        { label: 'AI Sales Intelligence', href: '/ai-sales-intelligence-platform' },
-        { label: 'AI Financial Intelligence', href: '/ai-financial-planning-platform' },
-        { label: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer' },
-        { label: 'AI Manufacturing Optimization', href: '/ai-manufacturing-optimization' },
-        { label: 'AI Market Research', href: '/ai-market-research' },
-        { label: 'AI Sustainability Platform', href: '/ai-sustainability-platform' },
-        { label: 'AI Autonomous Vehicle', href: '/ai-autonomous-vehicle-platform' }
-      ]
-    },
-    {
-      id: 'quantum-tech',
-      title: 'Quantum & Emerging Tech',
-      icon: Atom,
-      color: 'from-blue-500 to-cyan-500',
-      items: [
-        { label: 'Quantum Neural Ecosystem', href: '/quantum-neural-ecosystem-2040', badge: 'Revolutionary', featured: true },
-        { label: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform-2044', badge: 'Critical' },
-        { label: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
-        { label: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-2044' },
-        { label: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform' },
-        { label: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform' },
-        { label: 'Quantum Financial Intelligence', href: '/quantum-financial-trading-platform' },
-        { label: 'Quantum Supply Chain Optimizer', href: '/quantum-logistics-optimization' },
-        { label: 'Quantum Financial Trading', href: '/quantum-financial-trading' },
-        { label: 'Quantum Internet Security Platform', href: '/quantum-internet-security-platform' },
-        { label: 'Quantum Storage Solutions', href: '/quantum-storage-solutions-2044' },
-        { label: 'Quantum Workload Orchestration', href: '/quantum-workload-orchestration' }
-      ]
-    },
-    {
-      id: 'space-tech',
-      title: 'Space Technology',
-      icon: Globe,
-      color: 'from-indigo-500 to-purple-500',
-      items: [
-        { label: 'Space Resource Intelligence', href: '/space-resource-intelligence-2044', badge: 'Future', featured: true },
-        { label: 'Satellite Technology', href: '/satellite-technology' },
-        { label: 'Space Data Analytics', href: '/space-data-analytics' },
-        { label: 'Orbital Computing', href: '/orbital-computing' },
-        { label: 'Space Cybersecurity', href: '/space-cybersecurity' },
-        { label: 'Interplanetary Communication', href: '/interplanetary-communication' },
-        { label: 'Space Mining Platform', href: '/space-mining-platform' },
-        { label: 'Space Colonization Services', href: '/space-colonization-services' }
-      ]
-    },
-    {
-      id: 'enterprise-it',
-      title: 'Enterprise IT Solutions',
-      icon: Server,
-      color: 'from-green-500 to-emerald-500',
-      items: [
-        { label: 'IT Infrastructure', href: '/it-services', badge: 'Popular' },
-        { label: 'Cloud Platform', href: '/cloud-platform', badge: 'Scalable' },
-        { label: 'Cybersecurity', href: '/cybersecurity', badge: 'Critical' },
-        { label: 'Data Analytics', href: '/data-analytics', badge: 'Insights' },
-        { label: 'DevOps Automation', href: '/automation', badge: 'Efficient' },
-        { label: 'Mobile & Web Solutions', href: '/mobile-web-solutions', badge: 'Modern' },
-        { label: 'Zero Trust Security', href: '/zero-trust-security-platform' },
-        { label: 'Network Management', href: '/autonomous-network-management-2044' },
-        { label: 'Asset Management', href: '/it-asset-discovery-agent' },
-        { label: 'Performance Monitoring', href: '/browser-performance-monitor' }
-      ]
-    },
-    {
-      id: 'business-solutions',
-      title: 'Business Solutions',
-      icon: Target,
-      color: 'from-emerald-500 to-teal-500',
-      items: [
-        { label: 'Business Intelligence', href: '/ai-autonomous-business-intelligence-2044', badge: 'AI-Powered', featured: true },
-        { label: 'Customer Success', href: '/autonomous-customer-success-2044', badge: 'Automated' },
-        { label: 'Sales Automation', href: '/ai-autonomous-sales-platform', badge: 'Intelligent' },
-        { label: 'HR Management', href: '/ai-autonomous-hr-platform', badge: 'Smart' },
-        { label: 'Marketing Automation', href: '/ai-autonomous-marketing-platform', badge: 'AI-Driven' },
-        { label: 'Financial Planning', href: '/ai-financial-planning-platform', badge: 'Predictive' },
-        { label: 'Supply Chain', href: '/ai-supply-chain-optimization', badge: 'Optimized' },
-        { label: 'Content Factory', href: '/ai-autonomous-content-factory', badge: 'Automated' },
-        { label: 'Research Assistant', href: '/ai-autonomous-research-assistant', badge: 'AI-Powered' },
-        { label: 'Robotics Platform', href: '/ai-autonomous-robotics-platform', badge: 'Future' }
-      ]
-    },
-    {
-      id: 'industry-solutions',
-      title: 'Industry Solutions',
-      icon: Building,
-      color: 'from-orange-500 to-red-500',
-      items: [
-        { label: 'Healthcare & Biotech', href: '/solutions/healthcare', badge: 'Life Sciences', featured: true },
-        { label: 'Financial Services', href: '/solutions/financial', badge: 'Fintech' },
-        { label: 'Manufacturing', href: '/solutions/manufacturing', badge: 'Smart Factory' },
-        { label: 'Retail & E-commerce', href: '/solutions/retail', badge: 'Digital Commerce' },
-        { label: 'Education', href: '/solutions/education', badge: 'Edtech' },
-        { label: 'Government', href: '/solutions/government', badge: 'Public Sector' },
-        { label: 'Entertainment & Media', href: '/entertainment-media-solutions', badge: 'Creative Tech' },
-        { label: 'Energy & Utilities', href: '/energy-utilities-solutions', badge: 'Smart Energy' }
-      ]
-    },
-    {
-      id: 'resources',
-      title: 'Resources & Support',
-      icon: BookOpen,
-      color: 'from-yellow-500 to-orange-500',
-      items: [
-        { label: 'Documentation', href: '/docs', badge: 'Guides' },
-        { label: 'API Reference', href: '/api-docs', badge: 'Developer' },
-        { label: 'Blog & Insights', href: '/blog', badge: 'Latest' },
-        { label: 'Webinars', href: '/webinars', badge: 'Learning' },
-        { label: 'Case Studies', href: '/case-studies', badge: 'Success Stories' },
-        { label: 'Training Programs', href: '/training', badge: 'Skill Development' },
-        { label: 'Support Center', href: '/support', badge: 'Help' },
-        { label: 'Status Page', href: '/status', badge: 'System Health' }
-      ]
+  const filteredServices = sidebarItems.flatMap(item =>
+    item.children?.filter(child =>
+      child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      child.description?.toLowerCase().includes(searchQuery.toLowerCase())
+    ) || []
+  );
+  const toggleItem = (itemName: string) => {
+    const newExpanded = new Set(expandedItems);
+    if (newExpanded.has(itemName)) {
+      newExpanded.delete(itemName);
+    } else {
+      newExpanded.add(itemName);
     }
   ];
 
@@ -163,14 +48,14 @@ const EnhancedSidebar2025: React.FC<{ isOpen: boolean; onClose: () => void }> = 
     { label: 'Download Resources', href: '/resources', icon: Download, color: 'from-purple-500 to-pink-500' }
   ];
 
-  const filteredSections = searchQuery 
-    ? sidebarSections.map(section => ({
-        ...section,
-        items: section.items.filter(item => 
-          item.label.toLowerCase().includes(searchQuery.toLowerCase())
-        )
-      })).filter(section => section.items.length > 0)
-    : sidebarSections;
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  const isActive = (href: string) => router.pathname === href;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
 
   return (
     <AnimatePresence>

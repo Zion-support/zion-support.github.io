@@ -8,37 +8,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => <>
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
 export default function AutonomousManufacturingPage() {
-  const service = {
-    name: 'Autonomous Manufacturing Solutions',
-    description: 'Revolutionary AI-powered manufacturing automation that transforms production efficiency and quality control.',
-    tagline: 'Transform your manufacturing with intelligent automation and predictive analytics',
-    price: '$15,000',
-    period: '/month',
-    trialDays: 30,
-    setupTime: '2 weeks',
-    rating: 4.8,
-    marketSize: '$45B',
-    growthRate: '25% YoY',
-    features: [
-      'AI-Powered Quality Control',
-      'Predictive Maintenance',
-      'Automated Production Planning',
-      'Real-time Performance Monitoring',
-      'Supply Chain Optimization',
-      'Energy Efficiency Management',
-      'Worker Safety Systems',
-      'Inventory Management',
-      'Production Analytics',
-      'Remote Monitoring',
-      'Custom Workflow Automation',
-      'Integration with Existing Systems'
-    ],
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  };
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/autonomous-manufacturing'));
+  if (!service) return null;
+  const contactInfo = service.contactInfo;
 
   return (
     <Layout>
@@ -69,26 +41,18 @@ export default function AutonomousManufacturingPage() {
                   <div className="text-3xl font-bold text-white text-slate-400 text-base">{service.price}<span >{service.period}</span></div>
                   <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
                 </div>
-                <div className="flex items-center text-yellow-400">
-                  <Star className="w-4 h-4 mr-1" />
-                  {service.rating.toFixed(1)}
-                </div>
+                <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
+                <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
               <div className="text-slate-300 text-sm mb-4">Market: {service.marketSize}, Growth: {service.growthRate}</div>
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Get a Demo<ArrowRight /></a>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <span>{service.contactInfo.mobile}</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail className="w-4 h-4 text-purple-400" />
-                  <span>{service.contactInfo.email}</span>
-                </div>
-                <div className="flex items-start space-x-2">
-                  <MapPin className="w-4 h-4 text-green-400 mt-0.5" />
-                  <span className="text-xs">{service.contactInfo.address}</span>
-                </div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{contactInfo.mobile}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{contactInfo.email}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{contactInfo.mobile}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{contactInfo.email}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
               </div>
             </div>
           </div>

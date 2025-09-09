@@ -1,23 +1,5 @@
-import React, { useState, useEffect, useCallback, useRef, ReactNode } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, 
-  Zap, 
-  TrendingUp, 
-  TrendingDown, 
-  AlertTriangle, 
-  CheckCircle, 
-  Clock, 
-  Cpu, 
-  Wifi,
-  Settings,
-  X,
-  RefreshCw,
-  Info,
-  BarChart3,
-  Target,
-  Gauge
-} from 'lucide-react';
+import React, { useEffect, useMemo, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 
 interface PerformanceOptimizerProps {
   enableMonitoring?: boolean;
@@ -84,8 +66,199 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
       }
 
       // Preload critical fonts
-      const criticalFonts = [
-        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+      const criticalFonts = document.createElement('link');
+      criticalFonts.rel = 'preload';
+      criticalFonts.as = 'font';
+      criticalFonts.href = '/fonts/inter-var.woff2';
+      criticalFonts.crossOrigin = 'anonymous';
+      document.head.appendChild(criticalFonts);
+    };
+
+    preloadCriticalResources();
+  }, []);
+
+  // Optimize images on route change
+  useEffect(() => {
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach((img) => {
+        // Add loading="lazy" to images below the fold
+        if (img.getBoundingClientRect().top > window.innerHeight) {
+          img.loading = 'lazy';
+        }
+        
+        // Add decoding="async" for better performance
+        img.decoding = 'async';
+        
+        // Add error handling
+        img.onerror = () => {
+          img.style.display = 'none';
+        };
+      });
+    };
+
+    // Use requestIdleCallback for non-critical optimization
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(optimizeImages);
+    } else {
+      setTimeout(optimizeImages, 100);
+    }
+  }, [location.pathname]);
+
+  // Memoize expensive computations
+  const optimizedChildren = useMemo(() => children, [children]);
+
+  // Optimize scroll performance
+  const handleScroll = useCallback(() => {
+    // Throttle scroll events for better performance
+    if (!window.scrollTimeout) {
+      window.scrollTimeout = setTimeout(() => {
+        // Handle scroll-based optimizations here
+        window.scrollTimeout = null;
+      }, 16); // ~60fps
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
+
+  // Service Worker registration for caching
+  useEffect(() => {
+    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+  }, []);
+
+  // Intersection Observer for lazy loading
+  useEffect(() => {
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const target = entry.target as HTMLElement;
+              if (target.dataset.src) {
+                target.src = target.dataset.src;
+                target.removeAttribute('data-src');
+                observer.unobserve(target);
+              }
+            }
+          });
+        },
+        {
+          rootMargin: '50px',
+          threshold: 0.1,
+        }
+      );
+
+      // Observe all images with data-src
+      const lazyImages = document.querySelectorAll('img[data-src]');
+      lazyImages.forEach((img) => observer.observe(img));
+
+      return () => observer.disconnect();
+    }
+  }, [location.pathname]);
+
+  return <>{optimizedChildren}</>;
+};
+
+// Add global performance optimizations
+if (typeof window !== 'undefined') {
+  // Optimize long tasks
+  if ('scheduler' in window && 'postTask' in window.scheduler) {
+    window.scheduler.postTask(() => {
+      // Run non-critical tasks during idle time
+    }, { priority: 'background' });
+  }
+
+  // Optimize memory usage
+  if ('memory' in performance) {
+    const memoryThreshold = 50 * 1024 * 1024; // 50MB
+    if (performance.memory.usedJSHeapSize > memoryThreshold) {
+      // Trigger garbage collection if available
+      if ('gc' in window) {
+        (window as any).gc();
+      }
+    }
+  }
+}
+
+export default PerformanceOptimizer;
+import React, { useEffect, useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Progress } from '@/components/ui/progress';
+import { AlertTriangle, CheckCircle, Clock, Zap } from 'lucide-react';
+
+interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  overall: number;
+}
+
+export function PerformanceOptimizer() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Only show in development or when explicitly enabled
+    if (import.meta.env.DEV || localStorage.getItem('showPerformance') === 'true') {
+      setIsVisible(true);
+      measurePerformance();
+    }
+  }, []);
+
+  const measurePerformance = () => {
+    if ('PerformanceObserver' in window) {
+      // Measure Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'largest-contentful-paint') {
+            updateMetrics('lcp', entry.startTime);
+          } else if (entry.entryType === 'first-input') {
+            const firstInputEntry = entry as PerformanceEventTiming;
+            updateMetrics('fid', firstInputEntry.processingStart - firstInputEntry.startTime);
+          }
+        });
+      });
+
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+
+      // Measure other metrics
+      setTimeout(() => {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigation) {
+          updateMetrics('ttfb', navigation.responseStart - navigation.requestStart);
+        }
+      }, 1000);
+    }
+  };
+
+  const updateMetrics = (key: keyof PerformanceMetrics, value: number) => {
+    setMetrics(prev => {
+      if (!prev) return null;
+      const newMetrics = { ...prev, [key]: value };
+      
+      // Calculate overall score
+      const scores = [
+        newMetrics.fcp < 1800 ? 100 : Math.max(0, 100 - (newMetrics.fcp - 1800) / 10),
+        newMetrics.lcp < 2500 ? 100 : Math.max(0, 100 - (newMetrics.lcp - 2500) / 25),
+        newMetrics.fid < 100 ? 100 : Math.max(0, 100 - (newMetrics.fid - 100) / 2),
+        newMetrics.cls < 0.1 ? 100 : Math.max(0, 100 - newMetrics.cls * 1000),
+        newMetrics.ttfb < 800 ? 100 : Math.max(0, 100 - (newMetrics.ttfb - 800) / 8)
       ];
       
       criticalFonts.forEach(fontUrl => {
@@ -655,41 +828,3 @@ interface MetricCardProps {
   icon: React.ReactNode;
   status: 'good' | 'needs-improvement' | 'poor' | 'info';
 }
-
-const MetricCard: React.FC<MetricCardProps> = ({ title, value, description, icon, status }) => {
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'good': return 'text-green-600 bg-green-100';
-      case 'needs-improvement': return 'text-yellow-600 bg-yellow-100';
-      case 'poor': return 'text-red-600 bg-red-100';
-      default: return 'text-blue-600 bg-blue-100';
-    }
-  };
-
-  const getStatusText = (status: string) => {
-    switch (status) {
-      case 'good': return 'Good';
-      case 'needs-improvement': return 'Needs Improvement';
-      case 'poor': return 'Poor';
-      default: return 'Info';
-    }
-  };
-
-  return (
-    <div className="bg-gray-50 p-4 rounded-lg">
-      <div className="flex items-center justify-between mb-2">
-        <div className="flex items-center space-x-2">
-          {icon}
-          <span className="font-medium text-gray-900">{title}</span>
-        </div>
-        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(status)}`}>
-          {getStatusText(status)}
-        </span>
-      </div>
-      <div className="text-2xl font-bold text-gray-900 mb-1">{value}</div>
-      <p className="text-sm text-gray-600">{description}</p>
-    </div>
-  );
-};
-
-export default PerformanceOptimizer;

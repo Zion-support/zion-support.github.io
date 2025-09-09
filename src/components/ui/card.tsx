@@ -75,4 +75,13 @@ const CardFooter = React.forwardRef<
 ))
 CardFooter.displayName = "CardFooter"
 
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+const CardFooter: React.FC<CardProps> = ({ children, className = '' }) => {
+  return (
+    <div className={`flex items-center p-6 pt-0 ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+}

@@ -1,13 +1,16 @@
-
-import { useState } from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/components/ui/use-toast";
-import z from "zod";
-import { Mail } from 'lucide-react';
-
+import React from 'react';
+import Link from 'next/link';
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Clock, 
+  MessageSquare, 
+  ArrowRight,
+  Globe,
+  Shield,
+  Users
+} from 'lucide-react';
 
 export function ContactSection() {
   const [formData, setFormData] = useState({

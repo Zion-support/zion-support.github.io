@@ -60,9 +60,22 @@ const config: Config = {
           dark: "#00c4cc",
         },
         "zion-slate": {
-          DEFAULT: "#94A3B8",
-          light: "#CBD5E1",
-          dark: "#64748B",
+          DEFAULT: "#17072b",
+          light: "#451582",
+          dark: "#000000",
+        },
+        "zion-neon": {
+          DEFAULT: "#22ddd2",
+          light: "#7aeae4",
+          dark: "#14847e",
+          glow: "#22ddd2",
+        },
+        "zion-purple": {
+          DEFAULT: "#8c15e9",
+          light: "#b971f2",
+          dark: "#530c8b",
+          neon: "#b971f2",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
         },
       },
       borderRadius: {
@@ -87,10 +100,18 @@ const config: Config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
-        'gradient-x': {
-          '0%, 100%': {
-            'background-size': '200% 200%',
-            'background-position': 'left center'
+        "fade-in": {
+          from: { opacity: "0", transform: "translateY(10px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "slide-in": {
+          from: { transform: "translateX(-100%)" },
+          to: { transform: "translateX(0)" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { 
+            boxShadow: "0 0 20px rgba(34, 221, 210, 0.5)",
+            transform: "scale(1)"
           },
           '50%': {
             'background-size': '200% 200%',
@@ -115,11 +136,13 @@ const config: Config = {
         }
       },
       animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-        'gradient-x': 'gradient-x 15s ease infinite',
-        'float': 'float 6s ease-in-out infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.5s ease-out",
+        "slide-in": "slide-in 0.3s ease-out",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "float": "float 3s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 3s ease infinite",
       },
       backgroundImage: {
         'quantum-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',

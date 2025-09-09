@@ -1,4 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+// Switch component replaced with checkbox
+// Label component replaced with simple label
+// Separator component replaced with simple div
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/label';
+import { Separator } from '@/components/ui/separator';
 
 interface AccessibilitySettings {
   highContrast: boolean
@@ -179,40 +187,228 @@ export const AccessibilityEnhancer: React.FC = () => {
         </a>
       </div>
 
-      {/* Accessibility controls */}
-      {process.env.NODE_ENV === 'development' && (
-        <div className="fixed top-4 right-4 bg-white shadow-lg rounded-lg p-4 text-sm z-50">
-          <h3 className="font-bold mb-2">Accessibility Settings</h3>
-          <div className="space-y-2">
-            <label className="flex items-center">
-              <input
-                type="checkbox"
-                checked={settings.highContrast}
-                onChange={() => toggleSetting('highContrast')}
-                className="mr-2"
-              />
-              High Contrast
-            </label>
-            <label className="flex items-center">
-              <input
-                type="checkbox"
-                checked={settings.largeText}
-                onChange={() => toggleSetting('largeText')}
-                className="mr-2"
-              />
-              Large Text
-            </label>
-            <label className="flex items-center">
-              <input
-                type="checkbox"
-                checked={settings.focusVisible}
-                onChange={() => toggleSetting('focusVisible')}
-                className="mr-2"
-              />
-              Show Focus
-            </label>
-          </div>
-        </div>
+      {/* Accessibility Toggle Button */}
+      <Button
+        onClick={() => setIsOpen(!isOpen)}
+        variant="outline"
+        size="sm"
+        size="icon"
+        className="fixed top-4 right-4 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 hover:bg-zion-cyan/10"
+        aria-label="Accessibility Settings"
+      >
+        <span className="text-zion-cyan">A</span>
+      </Button>
+
+      {/* Accessibility Panel */}
+      {isOpen && (
+        <Card className="fixed top-16 right-4 w-80 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 shadow-2xl">
+          <CardHeader className="pb-3">
+            <div className="flex items-center justify-between">
+              <CardTitle className="text-lg flex items-center gap-2">
+                <span className="text-zion-cyan">A</span>
+                Accessibility Settings
+              </CardTitle>
+              <Button
+                variant="ghost"
+                size="sm"
+                size="icon"
+                onClick={() => setIsOpen(false)}
+                aria-label="Close accessibility settings"
+              >
+                ×
+              </Button>
+            </div>
+            <CardDescription>
+              Customize your experience for better accessibility
+            </CardDescription>
+          </CardHeader>
+          
+          <CardContent className="space-y-4">
+            {/* Visual Enhancements */}
+            <div className="space-y-3">
+              <h4 className="text-sm font-semibold flex items-center gap-2">
+                <span>👁️</span>
+                Visual Enhancements
+              </h4>
+              
+              <div className="flex items-center justify-between">
+                <Label htmlFor="high-contrast" className="text-sm">
+                  High Contrast
+                </Label>
+                <Switch
+                  id="high-contrast"
+                  checked={settings.highContrast}
+                  onCheckedChange={(checked) => handleSettingChange('highContrast', checked)}
+                />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <Label htmlFor="large-text" className="text-sm">
+                  Large Text
+                </Label>
+                <Switch
+                  id="large-text"
+                  checked={settings.largeText}
+                  onCheckedChange={(checked) => handleSettingChange('largeText', checked)}
+                />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <Label htmlFor="focus-indicator" className="text-sm">
+                  Enhanced Focus
+                </Label>
+                <Switch
+                  id="focus-indicator"
+                  checked={settings.focusIndicator}
+                  onCheckedChange={(checked) => handleSettingChange('focusIndicator', checked)}
+                />
+              </div>
+            </div>
+            
+            <Separator />
+                <label htmlFor="high-contrast" className="text-sm">
+                  High Contrast
+                </label>
+                <input
+                  type="checkbox"
+                  id="high-contrast"
+                  checked={settings.highContrast}
+                  onChange={(e) => handleSettingChange('highContrast', e.target.checked)}
+                  className="ml-2"
+                />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <label htmlFor="large-text" className="text-sm">
+                  Large Text
+                </label>
+                <input
+                  type="checkbox"
+                  id="large-text"
+                  checked={settings.largeText}
+                  onChange={(e) => handleSettingChange('largeText', e.target.checked)}
+                  className="ml-2"
+                />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <label htmlFor="focus-indicator" className="text-sm">
+                  Enhanced Focus
+                </label>
+                <input
+                  type="checkbox"
+                  id="focus-indicator"
+                  checked={settings.focusIndicator}
+                  onChange={(e) => handleSettingChange('focusIndicator', e.target.checked)}
+                  className="ml-2"
+                />
+              </div>
+            </div>
+            
+            <div className="border-t border-border my-2" />
+            
+            {/* Motion and Navigation */}
+            <div className="space-y-3">
+              <h4 className="text-sm font-semibold flex items-center gap-2">
+                <span>🖱️</span>
+                Navigation & Motion
+              </h4>
+              
+              <div className="flex items-center justify-between">
+                <Label htmlFor="reduced-motion" className="text-sm">
+                  Reduced Motion
+                </Label>
+                <Switch
+                  id="reduced-motion"
+                  checked={settings.reducedMotion}
+                  onCheckedChange={(checked) => handleSettingChange('reducedMotion', checked)}
+                />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <Label htmlFor="keyboard-nav" className="text-sm">
+                  Keyboard Navigation
+                </Label>
+                <Switch
+                  id="keyboard-nav"
+                  checked={settings.keyboardNavigation}
+                  onCheckedChange={(checked) => handleSettingChange('keyboardNavigation', checked)}
+                />
+              </div>
+            </div>
+            
+            <Separator />
+                <label htmlFor="reduced-motion" className="text-sm">
+                  Reduced Motion
+                </label>
+                <input
+                  type="checkbox"
+                  id="reduced-motion"
+                  checked={settings.reducedMotion}
+                  onChange={(e) => handleSettingChange('reducedMotion', e.target.checked)}
+                  className="ml-2"
+                />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <label htmlFor="keyboard-nav" className="text-sm">
+                  Keyboard Navigation
+                </label>
+                <input
+                  type="checkbox"
+                  id="keyboard-nav"
+                  checked={settings.keyboardNavigation}
+                  onChange={(e) => handleSettingChange('keyboardNavigation', e.target.checked)}
+                  className="ml-2"
+                />
+              </div>
+            </div>
+            
+            <div className="border-t border-border my-2" />
+            
+            {/* Screen Reader */}
+            <div className="space-y-3">
+              <h4 className="text-sm font-semibold flex items-center gap-2">
+                <span>🔊</span>
+                Screen Reader
+              </h4>
+              
+              <div className="flex items-center justify-between">
+                <label htmlFor="screen-reader" className="text-sm">
+                  Enhanced Support
+                </label>
+                <input
+                  type="checkbox"
+                  id="screen-reader"
+                  checked={settings.screenReader}
+                  onChange={(e) => handleSettingChange('screenReader', e.target.checked)}
+                  className="ml-2"
+                />
+                <Label htmlFor="screen-reader" className="text-sm">
+                  Enhanced Support
+                </Label>
+                <Switch
+                  id="screen-reader"
+                  checked={settings.screenReader}
+                  onCheckedChange={(checked) => handleSettingChange('screenReader', checked)}
+                />
+              </div>
+            </div>
+            
+            {/* Quick Actions */}
+            <div className="pt-2">
+              <Button
+                onClick={resetSettings}
+                variant="outline"
+                size="sm"
+                className="w-full"
+              >
+                <span className="mr-2">⚙️</span>
+                Reset to Defaults
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
       )}
     </div>
   )

@@ -195,31 +195,17 @@ export default function ComprehensiveServicesOverview() {
     return service.price?.monthly || 0;
   };
 
-  const getServiceCurrency = (service: any) => {
-    if (typeof service.price === 'number') {
-      return service.currency || '$';
-    }
-    return service.price?.currency || '$';
-  };
-
-  const getServicePricingModel = (service: any) => {
-    if (typeof service.price === 'number') {
-      return service.pricingModel || 'monthly';
-    }
-    return service.price?.pricingModel || 'monthly';
-  };
-
   return (
     <>
-              <EnhancedSEO
-          title="Comprehensive Services Overview | Zion Tech Group"
-          description="Explore our complete portfolio of AI-powered services, IT solutions, and innovative micro SAAS platforms. From legal tech to quantum computing, discover how we can transform your business."
-          keywords="AI services, IT solutions, micro SAAS, cybersecurity, quantum computing, legal tech, fintech, healthcare AI, supply chain, energy management, comprehensive services"
-          type="website"
-          image="/images/comprehensive-services-overview-og.jpg"
-          url="https://ziontechgroup.com/comprehensive-services-overview"
-          type="website"
-        />
+      <SEOHead 
+        title="Comprehensive Technology Services - Zion Tech Group"
+        description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions."
+        keywords="technology services, AI services, quantum computing, cybersecurity, IT infrastructure, micro SaaS, autonomous systems, space technology, neurotechnology"
+        image="/images/services-overview-og.jpg"
+        canonical="https://ziontechgroup.com/comprehensive-services-overview"
+      />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-8cbb
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-8cbb
       
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
         {/* Animated Background */}

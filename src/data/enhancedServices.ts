@@ -456,172 +456,41 @@ export const ENHANCED_SERVICES: EnhancedService[] = [
     subcategory: "Data Center",
     price: 799,
     currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Autonomous performance optimization",
-      "Energy efficiency management",
-      "Predictive maintenance",
-      "Resource allocation optimization",
-      "Security monitoring",
-      "Capacity planning",
-      "Cost optimization",
-      "Real-time analytics"
-    ],
-    benefits: [
-      "Reduce energy costs by 40%",
-      "Improve performance by 35%",
-      "Reduce downtime by 80%",
-      "Optimize resource utilization",
-      "Automate routine maintenance"
-    ],
-    useCases: [
-      "Enterprise data centers",
-      "Cloud providers",
-      "Colocation facilities",
-      "Edge computing sites",
-      "HPC facilities"
-    ],
-    targetAudience: [
-      "Data center managers",
-      "IT infrastructure teams",
-      "Cloud architects",
-      "System administrators",
-      "Facility managers"
-    ],
-    tags: ["Data Center", "AI", "Automation", "Energy Efficiency", "Performance"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$799 - $2,999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    tags: ["Blockchain", "Smart Contracts", "Supply Chain", "DApps"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
     },
-    aiScore: 91,
-    rating: 4.7,
-    reviewCount: 78,
+    images: ["https://images.unsplash.com/photo-1639762681485-074d7f9d5b1b?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-30T12:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 23,
     featured: true,
-    competitors: ["VMware vRealize", "Cisco Intersight", "HPE OneView"],
-    marketSize: "$12.4B",
-    growthRate: "16.8%"
+    location: "Global",
+    availability: "8-12 Weeks",
+    aiScore: 95
   },
-
-  // AI-Powered Legal Document Analysis
   {
-    id: "ai-legal-document-analysis",
-    title: "AI Legal Document Analysis Platform",
-    description: "Intelligent legal document analysis platform that uses AI to review contracts, identify risks, and provide legal insights with high accuracy.",
-    category: "AI Services",
-    subcategory: "Legal Tech",
-    price: 399,
+    id: "quantum-computing-readiness",
+    title: "Quantum Computing Readiness Assessment",
+    description: "Comprehensive assessment of business readiness for quantum computing adoption. Includes use case identification, technology evaluation, and implementation roadmap for quantum advantage.",
+    category: "Quantum Computing",
+    price: 14999,
     currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Contract analysis and review",
-      "Risk identification",
-      "Legal compliance checking",
-      "Document comparison",
-      "Legal research automation",
-      "Due diligence support",
-      "Regulatory updates",
-      "Expert system integration"
-    ],
-    benefits: [
-      "Reduce document review time by 80%",
-      "Improve accuracy by 95%",
-      "Identify risks faster",
-      "Reduce legal costs by 40%",
-      "Ensure compliance"
-    ],
-    useCases: [
-      "Law firms",
-      "Corporate legal departments",
-      "Compliance teams",
-      "Contract managers",
-      "Risk management"
-    ],
-    targetAudience: [
-      "Legal professionals",
-      "Compliance officers",
-      "Contract managers",
-      "Risk managers",
-      "Business executives"
-    ],
-    tags: ["AI", "Legal Tech", "Contract Analysis", "Compliance", "Risk Management"],
-    estimatedDelivery: "4-6 weeks",
-    supportLevel: "premium",
-    marketPrice: "$399 - $1,299/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    tags: ["Quantum Computing", "Technology Assessment", "Strategic Planning", "Innovation"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
     },
-    aiScore: 96,
+    images: ["https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-04-01T09:45:00.000Z",
     rating: 4.8,
-    reviewCount: 234,
-    featured: true,
-    competitors: ["Kira Systems", "Luminance", "eBrevia"],
-    marketSize: "$1.8B",
-    growthRate: "31.2%"
-  },
-
-  // Sustainable Tech Solutions
-  {
-    id: "sustainable-tech-solutions",
-    title: "Sustainable Technology Solutions",
-    description: "Comprehensive sustainability platform that helps organizations reduce their carbon footprint through AI-powered optimization and green technology implementation.",
-    category: "Green IT",
-    subcategory: "Sustainability",
-    price: 299,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Carbon footprint tracking",
-      "Energy optimization",
-      "Sustainable procurement",
-      "Waste reduction",
-      "Green building management",
-      "Sustainability reporting",
-      "Compliance monitoring",
-      "Stakeholder engagement"
-    ],
-    benefits: [
-      "Reduce carbon footprint by 30%",
-      "Lower energy costs by 25%",
-      "Improve ESG ratings",
-      "Meet sustainability goals",
-      "Enhance brand reputation"
-    ],
-    useCases: [
-      "Manufacturing companies",
-      "Real estate developers",
-      "Retail businesses",
-      "Government agencies",
-      "Educational institutions"
-    ],
-    targetAudience: [
-      "Sustainability managers",
-      "ESG officers",
-      "Facility managers",
-      "Business executives",
-      "Environmental consultants"
-    ],
-    tags: ["Sustainability", "Green Tech", "ESG", "Energy Efficiency", "Carbon Reduction"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$299 - $999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    aiScore: 88,
-    rating: 4.6,
-    reviewCount: 156,
-    featured: true,
-    competitors: ["Watershed", "Normative", "Persefoni"],
-    marketSize: "$3.2B",
-    growthRate: "28.7%"
+    reviewCount: 12,
+    location: "Global",
+    availability: "4-6 Weeks",
+    aiScore: 94
   }
 ];
 
@@ -636,26 +505,17 @@ export const SERVICE_CATEGORIES = [
   { id: "legal-tech", name: "Legal Tech", count: 2, icon: "⚖️", description: "AI-powered legal technology" }
 ];
 
-export const PRICING_TIERS = [
-  {
-    name: "Starter",
-    price: "$99",
-    period: "month",
-    features: ["Basic features", "Email support", "5 users", "Standard integrations"],
-    popular: false
-  },
-  {
-    name: "Professional",
-    price: "$299",
-    period: "month",
-    features: ["Advanced features", "Priority support", "25 users", "API access", "Custom integrations"],
-    popular: true
-  },
-  {
-    name: "Enterprise",
-    price: "$999",
-    period: "month",
-    features: ["All features", "24/7 support", "Unlimited users", "Custom development", "Dedicated account manager"],
-    popular: false
-  }
-];
+// Pricing tiers for different service levels
+export const SERVICE_PRICING_TIERS = {
+  basic: { range: "$500 - $2,000", description: "Essential services for small businesses" },
+  professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies" },
+  enterprise: { range: "$8,000 - $25,000+", description: "Custom enterprise solutions with dedicated support" }
+};
+
+// Contact information
+export const CONTACT_INFO = {
+  mobile: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709",
+  website: "https://ziontechgroup.com"
+};

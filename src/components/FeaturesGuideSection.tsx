@@ -1,18 +1,4 @@
-import Link from "next/link";
-import { GradientHeading } from "./GradientHeading";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/Button";
-import { fireEvent } from '@/lib/analytics';
-import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';
-
-
-
-
-
-
-
-
-
+import React from 'react';
 
 export function FeaturesGuideSection() {
   const features = [
@@ -134,6 +120,103 @@ export function FeaturesGuideSection() {
   return (
     <section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center text-white mb-12">
+          Platform Features
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, index) => (
+            <div key={index} className="text-center">
+              <div className="text-4xl mb-4">{feature.icon}</div>
+              <h3 className="text-xl font-semibold text-white mb-3">
+                {feature.title}
+              </h3>
+              <p className="text-zion-slate-light">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
+import { Badge } from '../ui/badge';
+import { 
+  Zap, 
+  Shield, 
+  TrendingUp, 
+  Users, 
+  Globe, 
+  Lock,
+  BarChart3,
+  Cpu
+} from 'lucide-react';
+
+interface Feature {
+  id: string;
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  category: string;
+  benefits: string[];
+}
+
+const FEATURES: Feature[] = [
+  {
+    id: '1',
+    title: 'AI-Powered Analytics',
+    description: 'Advanced analytics powered by machine learning algorithms for deeper business insights.',
+    icon: <BarChart3 className="w-8 h-8 text-blue-600" />,
+    category: 'Intelligence',
+    benefits: ['Predictive insights', 'Real-time monitoring', 'Automated reporting'],
+  },
+  {
+    id: '2',
+    title: 'Enterprise Security',
+    description: 'Bank-grade security with multi-factor authentication and end-to-end encryption.',
+    icon: <Shield className="w-8 h-8 text-green-600" />,
+    category: 'Security',
+    benefits: ['SOC 2 compliance', 'GDPR ready', '24/7 monitoring'],
+  },
+  {
+    id: '3',
+    title: 'Scalable Infrastructure',
+    description: 'Cloud-native architecture that scales automatically with your business growth.',
+    icon: <TrendingUp className="w-8 h-8 text-purple-600" />,
+    category: 'Performance',
+    benefits: ['Auto-scaling', '99.9% uptime', 'Global CDN'],
+  },
+  {
+    id: '4',
+    title: 'Team Collaboration',
+    description: 'Built-in tools for seamless team collaboration and project management.',
+    icon: <Users className="w-8 h-8 text-orange-600" />,
+    category: 'Collaboration',
+    benefits: ['Real-time editing', 'Role-based access', 'Activity tracking'],
+  },
+  {
+    id: '5',
+    title: 'Global Deployment',
+    description: 'Deploy your applications worldwide with our global infrastructure network.',
+    icon: <Globe className="w-8 h-8 text-red-600" />,
+    category: 'Global',
+    benefits: ['Multi-region', 'Edge computing', 'Local compliance'],
+  },
+  {
+    id: '6',
+    title: 'Advanced AI Processing',
+    description: 'State-of-the-art AI models for natural language processing and computer vision.',
+    icon: <Cpu className="w-8 h-8 text-indigo-600" />,
+    category: 'AI',
+    benefits: ['NLP capabilities', 'Computer vision', 'Custom training'],
+  },
+];
+
+export const FeaturesGuideSection: React.FC = () => {
+  return (
+    <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <GradientHeading>Your Complete Guide to Zion</GradientHeading>
           <p className="text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto">
@@ -217,4 +300,4 @@ export function FeaturesGuideSection() {
       </div>
     </section>
   );
-}
+};

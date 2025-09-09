@@ -206,11 +206,27 @@ export default function EquipmentDetail() {
       return;
     }
 
-    dispatch({
-      type: 'ADD_ITEM',
-      payload: { id: equipment.id, title: equipment.name, price: equipment.price } // quantity removed
-    });
-    router.push('/checkout');
+    setIsAdding(true);
+    try {
+      const response = await fetch('/api/checkout_sessions', {
+      const response = await fetch('/checkout/create-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ productId: equipmentId }),
+      });
+      const { sessionId } = await response.json();
+      const stripe = await getStripe();
+      if (stripe && sessionId) {
+        await stripe.redirectToCheckout({ sessionId });
+      const { url } = await response.json();
+      if (url) {
+        window.location.href = url as string;
+      }
+    } catch (err) {
+      toast({ title: 'Payment error', description: 'Could not start checkout.' });
+    } finally {
+      setIsAdding(false);
+    }
   };
 
   return (

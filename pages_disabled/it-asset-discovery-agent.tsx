@@ -1,56 +1,42 @@
-import React from 'react';
 import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Search } from 'lucide-react';
-const Layout = ({ children }: { children: React.ReactNode }) => <>
-  {children}
-</>;
 
-import { additionalRealServices } from '../data/additional-real-services';
-
-export default function ITAssetDiscoveryAgentPage() {
-  	const service = additionalRealServices.find(s => s.id === 'it-asset-discovery-agent');
-  if (!service) return null;
-
-  return (
-    <Layout>
-      <Head>
-        <title>{service.name} - Zion Tech Group</title>
-        <meta name="description" content={service.description} />
-        <link rel="canonical" href="https://ziontechgroup.com/it-asset-discovery-agent" />
-      </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent flex items-center justify-center gap-3 w-10 h-10"><Search />{service.name}</h1>
-            <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-            <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
-              <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>
-              <p className="text-slate-300 mb-6">{service.description}</p>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {service.features.slice(0, 12).map((feat, i) => (
-                  <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-cyan-400 mt-0.5"><Check /><span>{feat}</span></li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit">
-              <div className="flex items-end justify-between mb-3">
-                <div>
-                  <div className="text-3xl font-bold text-white text-slate-400 text-base">{service.price}<span >{service.period}</span></div>
-                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
-                </div>
-              </div>
-              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Start Discovery<ArrowRight /></a>
-              <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{service.contactInfo.address}</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Layout>
-  );
+export default function LLMGatewayPage() {
+	return (
+		<div className="min-h-screen bg-black text-white">
+			<Head>
+				<title>LLM Gateway & Cost Control | Zion Tech Group</title>
+				<link rel="canonical" href="https://ziontechgroup.com/llm-gateway" />
+				<meta name="description" content="Centralize access to multiple LLM providers with routing, guardrails, and cost controls. Starting at $299/mo." />
+			</Head>
+			<main className="container mx-auto px-6 py-16">
+				<h1 className="text-4xl md:text-5xl font-bold mb-4">LLM Gateway & Cost Control</h1>
+				<p className="text-white/80 mb-8 max-w-3xl">A single gateway for OpenAI, Anthropic, Groq, and more with policies, usage quotas, key vaulting, cost caps, and analytics.</p>
+				<div className="grid md:grid-cols-3 gap-6">
+					<div className="bg-white/10 rounded-xl p-6">
+						<h2 className="text-xl font-semibold mb-2">Pricing</h2>
+						<p className="text-3xl font-bold text-cyan-400">$299/mo</p>
+						<p className="text-sm text-white/60">Plus provider usage</p>
+					</div>
+					<div className="bg-white/10 rounded-xl p-6">
+						<h2 className="text-xl font-semibold mb-2">Features</h2>
+						<ul className="space-y-1 text-white/80 text-sm">
+							<li>• Routing and fallback across models</li>
+							<li>• Guardrails and PII redaction</li>
+							<li>• Cost caps, budgets, and alerts</li>
+							<li>• Per-team keys and quotas</li>
+							<li>• Detailed usage analytics</li>
+						</ul>
+					</div>
+					<div className="bg-white/10 rounded-xl p-6">
+						<h2 className="text-xl font-semibold mb-2">Get Started</h2>
+						<div className="space-y-2">
+							<a href="/contact" className="inline-block px-4 py-2 rounded-lg bg-cyan-500 text-black font-semibold">Talk to Sales</a>
+							<div className="text-sm text-white/70">Call +1 302 464 0950 • kleber@ziontechgroup.com</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	);
 }
+

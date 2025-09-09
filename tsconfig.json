@@ -1,38 +1,34 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "useDefineForClassFields": true,
     "lib": [
       "ES2020",
-      "DOM",
-      "DOM.Iterable"
+      "DOM"
     ],
     "module": "ESNext",
-    "skipLibCheck": true,
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
+    "strict": true,
+    "allowJs": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "strictNullChecks": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
     "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    },
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false
+    "noEmit": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
   },
   "include": [
     "next-env.d.ts",
@@ -45,12 +41,11 @@
     ".next",
     "out",
     "dist",
-    "build",
-    "automation",
-    "scripts",
-    "fix_*.js",
-    "fix_*.cjs",
-    "*.fix.js",
-    "*.fix.cjs"
+    "zion.app/recovered-content/**",
+    "contracts/**",
+    "temp_components/**",
+    "zion-os/**",
+    "automation/**",
+    "typechain-types/**"
   ]
 }
