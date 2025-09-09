@@ -187,13 +187,14 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
             animate();
         }
         return () => {
-            window.removeEventListener('resize', resizeCanvas);
-        };
-    }, [variant, intensity]);
-    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style={{
-            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)'
-        }}/>);
-}
+            window.removeEventListener('resize', resizeCanvas)}}, [variant, intensity]);
+    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style = {
+  {
+            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
+  #16213e 100%)';
+        
+
+}}      />)}
 // Neon text component
 export function NeonText({ children, color = '#00ffff', glowIntensity = 'medium', className = '' }) {
     const glowSize = glowIntensity === 'high' ? '0 0 20px' : glowIntensity === 'medium' ? '0 0 15px' : '0 0 10px';
@@ -216,16 +217,15 @@ export function FuturisticCard({ children, className = '', glowColor = '#00ffff'
             boxShadow: `0 0 ${glowSize} ${glowColor}`,
             borderColor: `${glowColor}40`
         }}>
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20"/>
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20"      />
       <div className="relative z-10 p-6">
         {children}
       </div>
       <div className="absolute inset-0 opacity-20" style={{
             background: `linear-gradient(45deg, transparent 30%, ${glowColor}20 50%, transparent 70%)`,
             animation: 'shimmer 3s ease-in-out infinite'
-        }}/>
-    </div>);
-}
+        }}      />
+    </div>)}
 // Add CSS animations
 const style = document.createElement('style');
 style.textContent = `

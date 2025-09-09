@@ -5,10 +5,10 @@ import { ProjectMilestonesContent } from '@/components/projects/milestones/Proje
 function ProjectMilestones() {
     return (<ProtectedRoute>
       <>
-        <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables"/>
-        
-        <ProjectMilestonesContent />
-        
+        <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables"      />
+
+        <ProjectMilestonesContent       />
+
       </>
     </ProtectedRoute>);
 }

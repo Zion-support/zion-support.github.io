@@ -203,10 +203,8 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
                     let pos = value.indexOf(query);
                     while (pos !== -1) {
                         highlightPositions.push(pos);
-                        pos = value.indexOf(query, pos + 1);
-                    }
-                    itemHighlights.push(...highlightPositions.map(p => `${String(field)}:${p}`));
-                }
+                        pos = value.indexOf(query, pos + 1)}
+                    itemHighlights.push(...highlightPositions.map(((((((p => `${String(field, index, index, index, index, index, index) => ({ ...(((((p => `${String(field, index, index, index, index, index, key: index })) => ({ ...((((p => `${String(field, index, index, index, index, key: index })) => ({ ...(((p => `${String(field, index, index, index, key: index })) => ({ ...((p => `${String(field, index, index, key: index })) => ({ ...(p => `${String(field, index, key: index })) => ({ ...p => `${String(field, key: index }))}:${p}`))}
             });
             if (isMatch) {
                 results.push(item);

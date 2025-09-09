@@ -48,9 +48,9 @@ export default function WishlistPage() {
                 }
                 const item = productMap[fav.item_id];
                 return item ? (<div key={fav.item_id} className="relative">
-                <ProductListingCard listing={item}/>
-                <Button size="sm" className="absolute bottom-2 right-2" onClick={() => addToCart(item)} disabled={items.some(i => i.id === item.id)}>
-                  {items.some(i => i.id === item.id) ? 'In Cart' : 'Add to Cart'}
+                <ProductListingCard listing={item}      />
+                <Button size="sm" className="absolute bottom - 2 right - 2" onClick={ () => addToCart (item) } disabled={items.some (i => i.id === item.id) }>
+                  {items.some (i => i.id === item.id) ? 'In Cart' : 'Add to Cart'}
                 </Button>
               </div>) : null;
             })}

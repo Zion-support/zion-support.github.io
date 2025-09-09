@@ -130,12 +130,12 @@ const securityFeatures = [
     }
 ];
 const securityStats = [
-    { icon: <Shield className="w-6 h-6"/>, value: "99.99%", label: "Uptime" },
-    { icon: <Lock className="w-6 h-6"/>, value: "256-bit", label: "Encryption" },
-    { icon: <Eye className="w-6 h-6"/>, value: "24/7", label: "Monitoring" },
-    { icon: <CheckCircle className="w-6 h-6"/>, value: "15+", label: "Certifications" },
-    { icon: <Users className="w-6 h-6"/>, value: "0", label: "Security Breaches" },
-    { icon: <Award className="w-6 h-6"/>, value: "100%", label: "Compliance" }
+    { icon: <Shield className="w - 6 h - 6"      />, value: "99.99%", label: "Uptime" },
+    { icon: <Lock className="w - 6 h - 6"      />, value: "256 - bit", label: "Encryption" },
+    { icon: <Eye className="w - 6 h - 6"      />, value: "24 / 7", label: "Monitoring" },
+    { icon: <CheckCircle className="w - 6 h - 6"      />, value: "15+", label: "Certifications" },
+    { icon: <Users className="w - 6 h - 6"      />, value: "0", label: "Security Breaches" },
+    { icon: <Award className="w - 6 h - 6"      />, value: "100%", label: "Compliance" }
 ];
 export function SecurityComplianceSection() {
     const [selectedStandard, setSelectedStandard] = useState(null);
@@ -202,10 +202,10 @@ export function SecurityComplianceSection() {
             {securityStandards.map((standard, index) => (<motion.div key={standard.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedStandard(selectedStandard === index ? null : index)}>
                   {/* Header */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-zion-cyan to-zion-purple flex items-center justify-center">
-                        <Shield className="w-6 h-6 text-white"/>
+                  <div className="flex items - center justify - between mb - 4">
+                    <div className="flex items - center gap - 3">
+                      <div className="w - 12 h - 12 rounded - xl bg - gradient - to - br from - zion - cyan to - zion - purple flex items - center justify - center">
+                        <Shield className="w - 6 h - 6 text - white"      />
                       </div>
                       <div>
                         <h4 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors">
@@ -254,7 +254,7 @@ export function SecurityComplianceSection() {
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                       View Certification Details
                     </span>
-                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                    <ArrowRight className="w - 4 h - 4 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"      />
                   </div>
 
                   {/* Expanded details */}
@@ -299,10 +299,10 @@ export function SecurityComplianceSection() {
             {complianceFrameworks.map((framework, index) => (<motion.div key={framework.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedFramework(selectedFramework === index ? null : index)}>
                   {/* Header */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-zion-cyan to-zion-purple flex items-center justify-center">
-                        <CheckCircle className="w-6 h-6 text-white"/>
+                  <div className="flex items - center justify - between mb - 4">
+                    <div className="flex items - center gap - 3">
+                      <div className="w - 12 h - 12 rounded - xl bg - gradient - to - br from - zion - cyan to - zion - purple flex items - center justify - center">
+                        <CheckCircle className="w - 6 h - 6 text - white"      />
                       </div>
                       <div>
                         <h4 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors">
@@ -351,7 +351,7 @@ export function SecurityComplianceSection() {
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                       View Framework Details
                     </span>
-                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                    <ArrowRight className="w - 4 h - 4 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"      />
                   </div>
 
                   {/* Expanded details */}

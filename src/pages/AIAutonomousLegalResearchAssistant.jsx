@@ -115,13 +115,13 @@ const AIAutonomousLegalResearchAssistant = () => {
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-violet-900/20"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
-              <Brain className="w-10 h-10 text-white"/>
+      <section className="relative py - 20 overflow - hidden">
+        <div className="absolute inset - 0 bg - gradient - to - r from - purple - 900 / 20 via - pink - 900 / 20 to - violet - 900 / 20"></div>
+        <div className="absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%,rgba (168,85,247,0.1) ,transparent_50%) ]"></div>
+        <div className="relative z - 10 container mx - auto px - 4 text - center">
+          <div className="flex justify - center mb - 6">
+            <div className="w - 20 h - 20 bg - gradient - to - r from - purple - 500 to - pink - 500 rounded - 2xl flex items - center justify - center">
+              <Brain className="w - 10 h - 10 text - white"      />
             </div>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
@@ -131,27 +131,27 @@ const AIAutonomousLegalResearchAssistant = () => {
             Advanced AI-powered legal research tool that autonomously analyzes case law, statutes, 
             and legal precedents to provide comprehensive legal insights and accelerate your research.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <Link to="/contact" className="btn-primary text-lg px-8 py-4 flex items-center space-x-2">
-              <span>Get Started</span>
-              <ArrowRight className="w-5 h-5"/>
+          <div className="flex flex - wrap justify - center gap - 4 mb - 8">
+            <Link to="/contact" className="btn - primary text - lg px - 8 py - 4 flex items - center space - x-2">
+              <span > Get Started</span>
+              <ArrowRight className="w - 5 h - 5"      />
             </Link>
             <Link to="/contact" className="btn-secondary text-lg px-8 py-4">
               Request Demo
             </Link>
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-gray-400">
-            <div className="flex items-center space-x-2">
-              <Star className="w-4 h-4 text-yellow-400"/>
-              <span>Trusted by 1000+ legal professionals</span>
+          <div className="flex flex - wrap justify - center items - center gap - 8 text - sm text - gray - 400">
+            <div className="flex items - center space - x-2">
+              <Star className="w - 4 h - 4 text - yellow - 400"      />
+              <span > Trusted by 1000 + legal professionals</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <Clock className="w-4 h-4 text-purple-400"/>
-              <span>90% faster research completion</span>
+            <div className="flex items - center space - x-2">
+              <Clock className="w - 4 h - 4 text - purple - 400"      />
+              <span > 90% faster research completion</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <TrendingUp className="w-4 h-4 text-green-400"/>
-              <span>99.5% accuracy rate</span>
+            <div className="flex items - center space - x-2">
+              <TrendingUp className="w - 4 h - 4 text - green - 400"      />
+              <span > 99.5% accuracy rate</span>
             </div>
           </div>
         </div>
@@ -168,10 +168,10 @@ const AIAutonomousLegalResearchAssistant = () => {
               Experience the future of legal research with our revolutionary AI technology
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (<div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Brain className="w-8 h-8 text-white"/>
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
+            {features.map ( (feature, index) => (<div key={index} className="text - center group">
+                <div className="w - 16 h - 16 bg - gradient - to - r from - purple - 500 to - pink - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4 group - hover:scale - 110 transition - transform duration - 300">
+                  <Brain className="w - 8 h - 8 text - white"      />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
               </div>))}
@@ -190,10 +190,10 @@ const AIAutonomousLegalResearchAssistant = () => {
               Transform your legal practice with the power of artificial intelligence
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (<div key={index} className="flex items-start space-x-4 group">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <benefit.icon className="w-6 h-6 text-white"/>
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
+            {benefits.map ( (benefit, index) => (<div key={index} className="flex items - start space - x-4 group">
+                <div className="w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - pink - 500 rounded - xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300">
+                  <benefit.icon className="w - 6 h - 6 text - white"      />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
@@ -215,10 +215,10 @@ const AIAutonomousLegalResearchAssistant = () => {
               Discover how AI legal research is revolutionizing various aspects of legal practice
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (<div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <useCase.icon className="w-8 h-8 text-white"/>
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
+            {useCases.map ( (useCase, index) => (<div key={index} className="text - center group">
+                <div className="w - 16 h - 16 bg - gradient - to - r from - violet - 500 to - purple - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4 group - hover:scale - 110 transition - transform duration - 300">
+                  <useCase.icon className="w - 8 h - 8 text - white"      />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
@@ -238,10 +238,10 @@ const AIAutonomousLegalResearchAssistant = () => {
               Our AI legal research assistant covers all major practice areas
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (<div key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <BarChart3 className="w-6 h-6 text-white"/>
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">
+            {industries.map ( (industry, index) => (<div key={index} className="bg - gray - 800 / 30 backdrop - blur - sm rounded - xl p - 6 border border - gray - 700 / 50 hover:border - purple - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105 text - center">
+                <div className="w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - pink - 500 rounded - xl flex items - center justify - center mx - auto mb - 4">
+                  <BarChart3 className="w - 6 h - 6 text - white"      />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{industry}</h3>
               </div>))}
@@ -277,11 +277,11 @@ const AIAutonomousLegalResearchAssistant = () => {
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"/>
-                      <span className="text-gray-300">{feature}</span>
-                    </li>))}
+                <ul className="space - y-3 mb - 8">
+                  {plan.features.map ( (feature, featureIndex) => (<li key={featureIndex} className="flex items - center space - x-3">
+                      <CheckCircle className="w - 5 h - 5 text - purple - 400 flex - shrink - 0"      />
+                      <span className="text - gray - 300">{feature}</span>
+                    </li>) ) }
                 </ul>
                 <Link to="/contact" className={`w-full py-3 px-6 rounded-lg font-medium text-center transition-all duration-300 ${plan.popular
                 ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'

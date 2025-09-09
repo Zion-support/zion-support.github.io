@@ -25,7 +25,14 @@ import {
 } from 'lucide-react';
 
 const Solutions = () => {
-  const [selectedIndustry, setSelectedIndustry] = useState('all');
+  return (<>
+      <Helmet>
+        <title > Custom Solutions - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Custom technology solutions tailored to your business needs. Zion Tech Group delivers innovative solutions that drive results."
+              />
+      </Helmet>
 
   const industries = [
     { id: 'all', name: 'All Industries', icon: Globe, count: 8 },

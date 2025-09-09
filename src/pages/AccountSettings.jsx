@@ -82,12 +82,12 @@ export default function AccountSettings() {
         }
     };
     return (<>
-      <SEO title="Account Settings" description="Manage your account"/>
-      
-      <main className="container mx-auto py-8 px-4">
-        <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
-        
-        <div className="grid gap-6 md:grid-cols-2">
+      <SEO title="Account Settings" description="Manage your account"      />
+
+      <main className="container mx - auto py - 8 px - 4">
+        <h1 className="text - 3xl font - bold mb - 6 text - white">Account Settings</h1>
+
+        <div className="grid gap - 6 md:grid - cols - 2">
           <Card>
             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
@@ -96,7 +96,7 @@ export default function AccountSettings() {
             <CardContent className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
-                <Input id="email" value={user?.email || ''} disabled className="bg-gray-100"/>
+                <Input id="email" value={user?.email || ''} disabled className="bg - gray - 100"      />
               </div>
               
               <div className="space-y-2">

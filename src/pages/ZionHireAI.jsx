@@ -326,28 +326,15 @@ export default function ZionHireAI() {
         </div>
       </section>
 
-      {/* Navigation Tabs */}
-      <section className="py-8">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-2">
-            {[
-              { id: 'overview', name: 'Overview', icon: Eye },
-              { id: 'use-cases', name: 'Use Cases', icon: Workflow },
-              { id: 'industries', name: 'Industries', icon: Globe }
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setSelectedTab(tab.id)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  selectedTab === tab.id
-                    ? 'bg-blue-500 text-white'
-                    : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
-                }`}
-              >
-                <tab.icon className="w-4 h-4" />
-                {tab.name}
-              </button>
-            ))}
+          {/* Demo Section */}
+          <div className="relative hidden md:block mb - 16">
+            <div className="absolute - top - 8 -left - 8 w - 72 h - 72 bg - zion - purple / 20 rounded - full filter blur - 3xl"></div>
+            <img
+              loading="lazy"
+              src="https://placehold.co / 600x400 / 192134 / 9b87f5?text = Zion + Hire + AI"
+              alt="Zion Hire AI Dashboard"
+              className="relative z - 10 rounded - lg shadow - xl mx - auto"
+                  />
           </div>
         </div>
       </section>
@@ -372,31 +359,37 @@ export default function ZionHireAI() {
             
             <div className="grid md:grid-cols-3 gap-6 text-center mb-8">
               <div>
-                <Phone className="w-8 h-8 text-blue-400 mx-auto mb-2"/>
-                <p className="text-white font-semibold">Phone</p>
-                <p className="text-zion-slate-light">+1 302 464 0950</p>
+                <Phone className="w - 8 h - 8 text - zion - cyan mx - auto mb - 2"      />
+                <p className="text - white font - semibold">Phone</p>
+                <p className="text - zion - slate - light">+1 302 464 0950</p>
               </div>
               <div>
-                <Mail className="w-8 h-8 text-blue-400 mx-auto mb-2"/>
-                <p className="text-white font-semibold">Email</p>
-                <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>
+                <Mail className="w - 8 h - 8 text - zion - cyan mx - auto mb - 2"      />
+                <p className="text - white font - semibold">Email</p>
+                <p className="text - zion - slate - light">kleber@ziontechgroup.com</p>
               </div>
               <div>
-                <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-2"/>
-                <p className="text-white font-semibold">Address</p>
-                <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <MapPin className="w - 8 h - 8 text - zion - cyan mx - auto mb - 2"      />
+                <p className="text - white font - semibold">Address</p>
+                <p className="text - zion - slate - light">364 E Main St STE 1008 < br />Middletown DE 19709</p>
               </div>
             </div>
-            
-            <div className="text-center">
-              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold rounded-lg transition-all duration-300">
-                Start Your Free Trial Today
-                <ArrowRight className="w-5 h-5 ml-2"/>
-              </Link>
+
+            <div className="text - center">
+              <a
+                href="https://ziontechgroup.com"
+                className="inline - flex items - center px - 8 py - 4 bg - zion - cyan hover:bg - zion - cyan - light text - white font - semibold rounded - lg transition - colors"
+                target="_blank"
+                rel="noopener noreferrer"
+
+                Start Your Free Trial Today < ArrowRight className="w - 5 h - 5 ml - 2"      />
+              </a>
             </div>
           </div>
         </div>
-      </section>
+      </main>
+      <Footer       />
+    </>) };
 
       {/* Feature Modal */}
       {selectedFeature && (

@@ -3,8 +3,11 @@ import { Helmet } from 'react-helmet-async';
 const Developer = () => {
     return (<>
       <Helmet>
-        <title>Developer Portal - Zion Tech Group</title>
-        <meta name="description" content="Access Zion Tech Group's developer portal for tools, SDKs, and integration resources."/>
+        <title > Developer Portal - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Access Zion Tech Group's developer portal for tools, SDKs, and integration resources."
+              />
       </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-12">

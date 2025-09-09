@@ -39,7 +39,7 @@ export function RedeemTokensCard() {
     return (<Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Gift aria-hidden="true" className="h-5 w-5"/> Redeem Rewards
+          <Gift aria-hidden="true" className="h-5 w-5"      /> Redeem Rewards
         </CardTitle>
         <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription>
       </CardHeader>
@@ -56,7 +56,7 @@ export function RedeemTokensCard() {
               </DialogDescription>
             </DialogHeader>
             <div className="space-y-4 py-4">
-              {REWARD_OPTIONS.map((option) => (<div key={option.id} className="flex justify-between items-center border-b pb-4">
+              {REWARD_OPTIONS.map((((((((option, index, index, index, index, index, index) => ({ ...((((((option, index, index, index, index, index, key: index })) => ({ ...(((((option, index, index, index, index, key: index })) => ({ ...((((option, index, index, index, key: index })) => ({ ...(((option, index, index, key: index })) => ({ ...((option, index, key: index })) => ({ ...(option, key: index })) => (<div key={option.id} className="flex justify-between items-center border-b pb-4">
                   <div>
                     <h3 className="font-medium">{option.title}</h3>
                     <p className="text-sm text-muted-foreground">{option.description}</p>
@@ -64,7 +64,7 @@ export function RedeemTokensCard() {
                   <div className="flex flex-col items-end gap-1">
                     <span className="text-sm font-bold">{option.cost} ZION$</span>
                     <Button size="sm" variant={wallet && wallet.balance >= option.cost ? "default" : "outline"} disabled={!wallet || wallet.balance < option.cost} onClick={() => handleRedeem(option)}>
-                      Redeem <ArrowRight aria-hidden="true" className="ml-1 h-3 w-3"/>
+                      Redeem <ArrowRight aria-hidden="true" className="ml-1 h-3 w-3"      />
                     </Button>
                   </div>
                 </div>))}
@@ -72,7 +72,7 @@ export function RedeemTokensCard() {
             <div className="flex justify-between">
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>
               <Button variant="ghost" size="sm">
-                Learn More <ExternalLink aria-hidden="true" className="ml-1 h-3 w-3"/>
+                Learn More <ExternalLink aria-hidden="true" className="ml-1 h-3 w-3"      />
               </Button>
             </div>
           </DialogContent>

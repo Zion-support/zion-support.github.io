@@ -112,12 +112,16 @@ const EnterpriseSolutions = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => {
-            const Icon = solution.icon;
-            return (<div key={index} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
+            {solutions.map((((((((solution, index, index, index, index, index, index, index) => ({ ...((((((solution, index, index, index, index, index, index, key: index })) => ({ ...(((((solution, index, index, index, index, index, key: index })) => ({ ...((((solution, index, index, index, index, key: index })) => ({ ...(((solution, index, index, index, key: index })) => ({ ...((solution, index, index, key: index })) => ({ ...(solution, index, key: index })) => {
+              const Icon = solution.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300"
+                >
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
-                      <Icon className="w-8 h-8 text-white"/>
+                      <Icon className="w-8 h-8 text-white"       />
                     </div>
                     <h3 className="text-2xl font-bold">{solution.title}</h3>
                   </div>
@@ -125,7 +129,11 @@ const EnterpriseSolutions = () => {
                   <p className="text-gray-300 mb-6">{solution.description}</p>
                   
                   <ul className="space-y-3 mb-6">
-                    {solution.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center space-x-3">
+                    {solution.features.map((((((((feature, featureIndex, index, index, index, index, index, index) => ({ ...((((((feature, featureIndex, index, index, index, index, index, key: index })) => ({ ...(((((feature, featureIndex, index, index, index, index, key: index })) => ({ ...((((feature, featureIndex, index, index, index, key: index })) => ({ ...(((feature, featureIndex, index, index, key: index })) => ({ ...((feature, featureIndex, index, key: index })) => ({ ...(feature, featureIndex, key: index })) => (
+                      <li
+                        key={featureIndex}
+                        className="flex items-center space-x-3"
+                      >
                         <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                         <span className="text-gray-300">{feature}</span>
                       </li>))}
@@ -133,8 +141,18 @@ const EnterpriseSolutions = () => {
                   
                   <Link to={solution.href} className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
                     Learn More
-                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
+                    <svg
+                      className="w-4 h-4 ml-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                            />
                     </svg>
                   </Link>
                 </div>);
@@ -151,12 +169,16 @@ const EnterpriseSolutions = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {industries.map((industry, index) => {
-            const Icon = industry.icon;
-            return (<div key={index} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
+            {industries.map((((((((industry, index, index, index, index, index, index, index) => ({ ...((((((industry, index, index, index, index, index, index, key: index })) => ({ ...(((((industry, index, index, index, index, index, key: index })) => ({ ...((((industry, index, index, index, index, key: index })) => ({ ...(((industry, index, index, index, key: index })) => ({ ...((industry, index, index, key: index })) => ({ ...(industry, index, key: index })) => {
+              const Icon = industry.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300"
+                >
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
-                      <Icon className="w-8 h-8 text-white"/>
+                      <Icon className="w-8 h-8 text-white"       />
                     </div>
                     <h3 className="text-2xl font-bold">{industry.name}</h3>
                   </div>
@@ -164,7 +186,11 @@ const EnterpriseSolutions = () => {
                   <p className="text-gray-300 mb-6">{industry.description}</p>
                   
                   <div className="grid grid-cols-1 gap-3">
-                    {industry.solutions.map((solution, solutionIndex) => (<div key={solutionIndex} className="bg-gray-700/50 rounded-lg p-3">
+                    {industry.solutions.map((((((((solution, solutionIndex, index, index, index, index, index, index) => ({ ...((((((solution, solutionIndex, index, index, index, index, index, key: index })) => ({ ...(((((solution, solutionIndex, index, index, index, index, key: index })) => ({ ...((((solution, solutionIndex, index, index, index, key: index })) => ({ ...(((solution, solutionIndex, index, index, key: index })) => ({ ...((solution, solutionIndex, index, key: index })) => ({ ...(solution, solutionIndex, key: index })) => (
+                      <div
+                        key={solutionIndex}
+                        className="bg-gray-700/50 rounded-lg p-3"
+                      >
                         <span className="text-gray-300">{solution}</span>
                       </div>))}
                   </div>
@@ -195,14 +221,16 @@ const EnterpriseSolutions = () => {
             },
             {
                 title: '24/7 Support',
-                description: 'Round-the-clock support with dedicated account managers.',
-                icon: Users
-            }
-        ].map((benefit, index) => {
-            const Icon = benefit.icon;
-            return (<div key={index} className="text-center">
+                description:
+                  'Round-the-clock support with dedicated account managers.',
+                icon: Users,
+              },
+            ].map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => {
+              const Icon = benefit.icon;
+              return (
+                <div key={index} className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <Icon className="w-10 h-10 text-white"/>
+                    <Icon className="w-10 h-10 text-white"       />
                   </div>
                   <h3 className="text-xl font-bold mb-4">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>

@@ -133,19 +133,59 @@ export default function SavedTalentsPage() {
                 variant: "destructive",
             });
         }
-    };
-    return (<>
-      <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace"/>
-      
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-4">Saved Talents</h1>
-        <p className="text-muted-foreground">
+        // Fetch the updated talent profile and add it to the list
+        const { data: talentData, error: talentError } = await supabase
+          .from ('talent_profiles') .select ('*') .eq ('id', talentId) .single () ;
+        if (talentError) {
+          // // // // // // // console.error ("Error fetching talent profile:", talentError) ;
+          toast ({
+            title: 'Error',
+            description:
+              'Failed to update saved talents. Please try again later.',
+            variant: 'destructive',
+          }) ;
+          return;
+        }
+        if (talentData) {
+          setSavedTalents (prevTalents => [...prevTalents, talentData]) ;
+          toast ({
+            title: 'Talent Saved',
+            description: 'Talent saved to your list.',
+          }) ;
+        }
+      }
+    } catch (error) {
+      // // // // // // // console.error ("Error toggling saved talent:", error) ;
+      toast ({
+        title: 'Error',
+        description: 'Failed to update saved talents. Please try again later.',
+        variant: 'destructive',
+      }) ;
+    }
+  };
+  return (<>
+      <SEO
+        title="Saved Talents | Zion AI Marketplace"
+        description="View and manage your saved talents in the Zion AI Marketplace"
+            />
+
+      <div className="container mx - auto px - 4 py - 8">
+        <h1 className="text - 3xl font - bold mb - 4">Saved Talents</h1>
+        <p className="text - muted - foreground">
           Here are the talents you've saved for future reference.
         </p>
-        
-        {isLoading ? (<div className="text-center py-8">Loading saved talents...</div>) : savedTalents.length === 0 ? (<div className="text-center py-8">No talents saved yet.</div>) : (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            {savedTalents.map((talent) => (<TalentCard key={talent.id} talent={talent} onViewProfile={handleViewProfile} onRequestHire={handleRequestHire} isSaved={true} onToggleSave={handleToggleSave} isAuthenticated={!!user}/>))}
-          </div>)}
+
+        {isLoading ? (<div className="text - center py - 8">Loading saved talents...</div>) : savedTalents.length === 0 ? (<div className="text - center py - 8">No talents saved yet.</div>) : (<div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 mt - 8">
+            {savedTalents.map (talent => (<TalentCard
+                key={talent.id}
+                talent={talent}
+                onViewProfile={handleViewProfile}
+                onRequestHire={handleRequestHire}
+                isSaved={true}
+                onToggleSave={handleToggleSave}
+                isAuthenticated={!!user}
+                    />) ) }
+          </div>) }
       </div>
       
     </>);

@@ -151,7 +151,7 @@ const LaunchToolkitPage = () => {
       <NextSeo
         title="Launch Operations Toolkit"
         description="Your complete toolkit for the Zion platform public release."
-      />
+            />
       <div className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-2 text-center">Launch Operations Toolkit</h1> {/* Reduced mb from 8 to 2 */}
         <div className="text-center mb-8"> {/* New div for button */}
@@ -204,8 +204,19 @@ const LaunchToolkitPage = () => {
                 <div>
                   <h4 className="font-medium">Zion Logo - Color</h4>
                   <div className="flex items-center space-x-4">
-                    <img src="/toolkit_assets/media_kit/logos/zion_logo_color.svg" alt="Zion Logo Color" className="h-10 border p-1 rounded" loading="lazy"/>
-                    <a href="/toolkit_assets/media_kit/logos/zion_logo_color.svg" download className="text-blue-600 hover:underline">Download (SVG)</a>
+                    <img
+                      loading="lazy"
+                      src="/toolkit_assets/media_kit/logos/zion_logo_color.svg"
+                      alt="Zion Logo Color"
+                      className="h-10 border p-1 rounded"
+                          />
+                    <a
+                      href="/toolkit_assets/media_kit/logos/zion_logo_color.svg"
+                      download
+                      className="text-blue-600 hover:underline"
+                    >
+                      Download (SVG)
+                    </a>
                   </div>
                 </div>
                 <div>
@@ -281,13 +292,35 @@ const LaunchToolkitPage = () => {
               <div className="space-y-3 mb-6">
                 <div>
                   <h4 className="font-medium">LinkedIn Banner</h4>
-                  <img src="/toolkit_assets/social_media_kit/banners/linkedin_banner.png" alt="LinkedIn Banner Placeholder" className="h-20 border p-1 rounded mb-1" loading="lazy"/>
-                  <a href="/toolkit_assets/social_media_kit/banners/linkedin_banner.png" download className="text-blue-600 hover:underline">Download (PNG)</a>
+                  <img
+                    loading="lazy"
+                    src="/toolkit_assets/social_media_kit/banners/linkedin_banner.png"
+                    alt="LinkedIn Banner Placeholder"
+                    className="h-20 border p-1 rounded mb-1"
+                        />
+                  <a
+                    href="/toolkit_assets/social_media_kit/banners/linkedin_banner.png"
+                    download
+                    className="text-blue-600 hover:underline"
+                  >
+                    Download (PNG)
+                  </a>
                 </div>
                 <div>
                   <h4 className="font-medium">Twitter Banner</h4>
-                  <img src="/toolkit_assets/social_media_kit/banners/twitter_banner.png" alt="Twitter Banner Placeholder" className="h-20 border p-1 rounded mb-1" loading="lazy"/>
-                  <a href="/toolkit_assets/social_media_kit/banners/twitter_banner.png" download className="text-blue-600 hover:underline">Download (PNG)</a>
+                  <img
+                    loading="lazy"
+                    src="/toolkit_assets/social_media_kit/banners/twitter_banner.png"
+                    alt="Twitter Banner Placeholder"
+                    className="h-20 border p-1 rounded mb-1"
+                        />
+                  <a
+                    href="/toolkit_assets/social_media_kit/banners/twitter_banner.png"
+                    download
+                    className="text-blue-600 hover:underline"
+                  >
+                    Download (PNG)
+                  </a>
                 </div>
               </div>
 
@@ -295,8 +328,19 @@ const LaunchToolkitPage = () => {
               <div className="space-y-3">
                 <div>
                   <h4 className="font-medium">Promotional GIF</h4>
-                  <img src="/toolkit_assets/social_media_kit/gifs/promo_banner.gif" alt="Promo GIF Placeholder" className="h-20 border p-1 rounded mb-1" loading="lazy"/>
-                  <a href="/toolkit_assets/social_media_kit/gifs/promo_banner.gif" download className="text-blue-600 hover:underline">Download (GIF)</a>
+                  <img
+                    loading="lazy"
+                    src="/toolkit_assets/social_media_kit/gifs/promo_banner.gif"
+                    alt="Promo GIF Placeholder"
+                    className="h-20 border p-1 rounded mb-1"
+                        />
+                  <a
+                    href="/toolkit_assets/social_media_kit/gifs/promo_banner.gif"
+                    download
+                    className="text-blue-600 hover:underline"
+                  >
+                    Download (GIF)
+                  </a>
                 </div>
               </div>
             </div>

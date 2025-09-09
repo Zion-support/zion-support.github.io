@@ -28,8 +28,8 @@ export function ProductActions({ onAddToCart }) {
         }
     };
     return (<Button onClick={addToCart} disabled={loading}>
-      {loading ? (<span className="flex items-center gap-2">
-          <Loader2 className="h-4 w-4 animate-spin"/>
+      {loading ? (<span className="flex items - center gap - 2">
+          <Loader2 className="h - 4 w - 4 animate - spin"      />
           {label}
         </span>) : (label)}
     </Button>);

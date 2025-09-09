@@ -3,10 +3,19 @@ import { Helmet } from 'react-helmet-async';
 const AIAutonomousMarketing = () => {
     return (<>
       <Helmet>
-        <title>AI Autonomous Marketing Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous marketing platform that provides intelligent campaign optimization, automated content creation, and personalized customer targeting with advanced AI capabilities."/>
-        <meta name="keywords" content="AI marketing, autonomous campaigns, marketing automation, AI content creation, personalized marketing, marketing AI"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-marketing"/>
+        <title > AI Autonomous Marketing Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Revolutionary AI autonomous marketing platform that provides intelligent campaign optimization, automated content creation, and personalized customer targeting with advanced AI capabilities."
+              />
+        <meta
+          name="keywords"
+          content="AI marketing, autonomous campaigns, marketing automation, AI content creation, personalized marketing, marketing AI"
+              />
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com / ai - autonomous - marketing"
+              />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">

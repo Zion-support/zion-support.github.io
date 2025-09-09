@@ -7,9 +7,9 @@ const caseStudies = [
         title: 'Healthcare AI Revolution',
         company: 'MedTech Solutions',
         industry: 'Healthcare',
-        icon: <Shield className="w-8 h-8"/>,
-        color: 'from-zion-cyan to-zion-blue',
-        bgColor: 'from-zion-cyan/20 to-zion-blue/20',
+        icon: <Shield className="w - 8 h - 8"      />,
+        color: 'from - zion - cyan to - zion - blue',
+        bgColor: 'from - zion - cyan / 20 to - zion - blue / 20',
         challenge: 'Needed to reduce diagnostic errors by 40% while improving patient outcomes',
         solution: 'Implemented custom AI diagnostic system with real-time learning capabilities',
         results: [
@@ -33,12 +33,12 @@ const caseStudies = [
         title: 'Next-Gen Fintech Platform',
         company: 'DigitalBank Pro',
         industry: 'Financial Services',
-        icon: <TrendingUp className="w-8 h-8"/>,
-        color: 'from-zion-purple to-zion-purple-dark',
-        bgColor: 'from-zion-purple/20 to-zion-purple-dark/20',
-        challenge: 'Required a scalable, secure platform to handle 10M+ daily transactions',
-        solution: 'Built enterprise-grade fintech platform with advanced security and real-time processing',
-        results: [
+        icon: <TrendingUp className="w - 8 h - 8"      />,
+        color: 'from - zion - purple to - zion - purple - dark',
+        bgColor: 'from - zion - purple / 20 to - zion - purple - dark / 20',
+        challenge: 'Required a scalable, secure platform to handle 10M + daily transactions',
+        solution: 'Built enterprise - grade fintech platform with advanced security and real - time processing',
+        results[
             { metric: 'Transaction Volume', value: '+300%', improvement: 'Increased from 3M to 12M daily transactions' },
             { metric: 'Security Score', value: '99.99%', improvement: 'Zero security breaches in 2 years' },
             { metric: 'Performance', value: '-85%', improvement: 'Reduced transaction time from 2s to 0.3s' },
@@ -59,10 +59,10 @@ const caseStudies = [
         title: 'Retail Digital Transformation',
         company: 'Global Retail Co.',
         industry: 'Retail',
-        icon: <Globe className="w-8 h-8"/>,
-        color: 'from-zion-cyan-light to-zion-cyan',
-        bgColor: 'from-zion-cyan-light/20 to-zion-cyan/20',
-        challenge: 'Needed to modernize 500+ store locations with unified digital experience',
+        icon: <Globe className="w - 8 h - 8"      />,
+        color: 'from - zion - cyan - light to - zion - cyan',
+        bgColor: 'from - zion - cyan - light / 20 to - zion - cyan / 20',
+        challenge: 'Needed to modernize 500 + store locations with unified digital experience',
         solution: 'Created comprehensive digital transformation strategy with omnichannel capabilities',
         results: [
             { metric: 'Online Sales', value: '+180%', improvement: 'E-commerce revenue increased dramatically' },
@@ -85,12 +85,12 @@ const caseStudies = [
         title: 'Smart Manufacturing IoT',
         company: 'Advanced Manufacturing Inc.',
         industry: 'Manufacturing',
-        icon: <Zap className="w-8 h-8"/>,
-        color: 'from-zion-purple-light to-zion-purple',
-        bgColor: 'from-zion-purple-light/20 to-zion-purple/20',
-        challenge: 'Required real-time monitoring and predictive maintenance for 200+ production lines',
-        solution: 'Implemented comprehensive IoT solution with AI-powered predictive analytics',
-        results: [
+        icon: <Zap className="w - 8 h - 8"      />,
+        color: 'from - zion - purple - light to - zion - purple',
+        bgColor: 'from - zion - purple - light / 20 to - zion - purple / 20',
+        challenge: 'Required real - time monitoring and predictive maintenance for 200 + production lines',
+        solution: 'Implemented comprehensive IoT solution with AI - powered predictive analytics',
+        results[
             { metric: 'Downtime Reduction', value: '-75%', improvement: 'Significantly reduced production interruptions' },
             { metric: 'Maintenance Costs', value: '-60%', improvement: 'Optimized maintenance schedules and costs' },
             { metric: 'Production Efficiency', value: '+45%', improvement: 'Increased overall production output' },
@@ -108,12 +108,12 @@ const caseStudies = [
     }
 ];
 const industries = [
-    { name: 'Healthcare', count: 25, icon: <Shield className="w-5 h-5"/> },
-    { name: 'Finance', count: 32, icon: <TrendingUp className="w-5 h-5"/> },
-    { name: 'Retail', count: 18, icon: <Globe className="w-5 h-5"/> },
-    { name: 'Manufacturing', count: 15, icon: <Zap className="w-5 h-5"/> },
-    { name: 'Education', count: 12, icon: <Users className="w-5 h-5"/> },
-    { name: 'Government', count: 8, icon: <Building className="w-5 h-5"/> }
+    { name: 'Healthcare', count: 25, icon: <Shield className="w - 5 h - 5"      /> },
+    { name: 'Finance', count: 32, icon: <TrendingUp className="w - 5 h - 5"      /> },
+    { name: 'Retail', count: 18, icon: <Globe className="w - 5 h - 5"      /> },
+    { name: 'Manufacturing', count: 15, icon: <Zap className="w - 5 h - 5"      /> },
+    { name: 'Education', count: 12, icon: <Users className="w - 5 h - 5"      /> },
+    { name: 'Government', count: 8, icon: <Building className="w - 5 h - 5"      /> }
 ];
 export function CaseStudiesSection() {
     const [selectedCase, setSelectedCase] = useState(null);
@@ -234,7 +234,7 @@ export function CaseStudiesSection() {
                   <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                     View Full Case Study
                   </span>
-                  <ArrowRight className="w-5 h-5 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                  <ArrowRight className="w - 5 h - 5 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"      />
                 </div>
 
                 {/* Expanded results */}
@@ -259,8 +259,8 @@ export function CaseStudiesSection() {
                             <div className="text-white font-semibold text-sm">{caseStudy.author}</div>
                             <div className="text-zion-slate-light text-xs">{caseStudy.role}</div>
                           </div>
-                          <div className="flex items-center gap-1">
-                            {[...Array(caseStudy.rating)].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill-current"/>))}
+                          <div className="flex items - center gap - 1">
+                            {[...Array (caseStudy.rating) ].map ( (_, i) => (<Star key={i} className="w - 4 h - 4 text - yellow - 400 fill - current"      />) ) }
                           </div>
                         </div>
                       </div>

@@ -1,344 +1,441 @@
-import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { 
-  TrendingUp, 
-  TrendingDown, 
-  Users, 
-  DollarSign, 
-  Activity,
-  Calendar,
-  BarChart3,
-  PieChart,
-  LineChart,
-  Target
-} from 'lucide-react';
-
-interface AnalyticsData {
-  totalUsers: number;
-  activeUsers: number;
-  revenue: number;
-  growthRate: number;
-  conversionRate: number;
-  topPages: Array<{ page: string; views: number; conversion: number }>;
-  userEngagement: Array<{ date: string; users: number; sessions: number }>;
-  demographics: Array<{ age: string; percentage: number }>;
-}
-
-export default function Analytics() {
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
-    totalUsers: 0,
-    activeUsers: 0,
-    revenue: 0,
-    growthRate: 0,
-    conversionRate: 0,
-    topPages: [],
-    userEngagement: [],
-    demographics: []
-  });
-
-  const [isLoading, setIsLoading] = useState(true);
-  const [timeRange, setTimeRange] = useState('7d');
-
-  useEffect(() => {
-    // Simulate loading analytics data
-    const loadAnalytics = async () => {
-      setIsLoading(true);
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      setAnalyticsData({
-        totalUsers: 15420,
-        activeUsers: 3247,
-        revenue: 125000,
-        growthRate: 12.5,
-        conversionRate: 3.2,
-        topPages: [
-          { page: '/marketplace', views: 15420, conversion: 4.2 },
-          { page: '/talent', views: 12850, conversion: 3.8 },
-          { page: '/services', views: 9870, conversion: 2.9 },
-          { page: '/about', views: 7650, conversion: 1.5 },
-          { page: '/contact', views: 5430, conversion: 2.1 }
-        ],
-        userEngagement: [
-          { date: '2024-01-01', users: 1200, sessions: 1800 },
-          { date: '2024-01-02', users: 1350, sessions: 2100 },
-          { date: '2024-01-03', users: 1100, sessions: 1650 },
-          { date: '2024-01-04', users: 1400, sessions: 2200 },
-          { date: '2024-01-05', users: 1250, sessions: 1900 },
-          { date: '2024-01-06', users: 1300, sessions: 2000 },
-          { date: '2024-01-07', users: 1450, sessions: 2300 }
-        ],
-        demographics: [
-          { age: '18-24', percentage: 15 },
-          { age: '25-34', percentage: 35 },
-          { age: '35-44', percentage: 25 },
-          { age: '45-54', percentage: 15 },
-          { age: '55+', percentage: 10 }
-        ]
-      });
-      
-      setIsLoading(false);
+import { Link } from 'react - router - dom';
+export default Analytics;}}};
+import {;
+import { motion } from 'framer - motion';
+import SEO from '../components / SEO';
+;
+;
+  BarChart3,;
+  TrendingUp,;
+  PieChart,;
+  Activity,;
+  Database,;
+  Zap,;
+  Shield,;
+  Users,;
+  CheckCircle,;
+  ArrowRight,;
+  Star,;
+  Globe,;
+  Target,;
+  Clock,;
+  Eye,;
+  Download,;
+  Filter,;
+  Search,;
+  Settings,;
+  RefreshCw,;
+  Calendar,;
+  DollarSign,;
+  ShoppingCart,;
+  Heart,;
+  MessageCircle,;
+  Bell,;
+  Wifi,;
+  Cpu,;
+  Server,;
+  Network,;
+  Lock,;
+  Key,;
+  FileText,;
+  BarChart,;
+  LineChart,;
+  AreaChart,;
+  ScatterPlot;
+} from 'lucide - react';
+;
+const Analytics: React.FC = () => {;
+  const analyticsFeatures = [;
+    {;
+      title: "Real - time Monitoring",;
+      description: "Monitor your business metrics and performance indicators in real - time",;
+      icon: Activity,;
+      color: "from - green - 400 to - emerald - 500";
+    },;
+    {;
+      title: "Advanced Visualizations",;
+      description: "Interactive charts, graphs, and dashboards for better insights",;
+      icon: BarChart3,;
+      color: "from - blue - 400 to - cyan - 500";
+    },;
+    {;
+      title: "Predictive Analytics",;
+      description: "AI - powered forecasting and trend analysis for strategic planning",;
+      icon: TrendingUp,;
+      color: "from - purple - 400 to - pink - 500";
+    },;
+    {;
+      title: "Custom Dashboards",;
+      description: "Build personalized dashboards tailored to your business needs",;
+      icon: Target,;
+      color: "from - orange - 400 to - red - 500";
     };
-
-    loadAnalytics();
-  }, [timeRange]);
-
-  const formatNumber = (num: number) => {
-    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
-    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
-    return num.toString();
-  };
-
-  const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0
-    }).format(amount);
-  };
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-zion-blue p-6">
-        <div className="container mx-auto">
-          <div className="animate-pulse">
-            <div className="h-8 bg-zion-blue-dark rounded w-1/4 mb-6"></div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              {[...Array(4)].map((_, i) => (
-                <div key={i} className="h-32 bg-zion-blue-dark rounded"></div>
-              ))}
-            </div>
-            <div className="h-96 bg-zion-blue-dark rounded"></div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="min-h-screen bg-zion-blue p-6">
-      <div className="container mx-auto">
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-white mb-2">Analytics Dashboard</h1>
-          <p className="text-zion-slate-light">Monitor your platform performance and user engagement</p>
-        </div>
-
-        {/* Time Range Selector */}
-        <div className="mb-6">
-          <div className="flex space-x-2">
-            {['1d', '7d', '30d', '90d', '1y'].map((range) => (
-              <Button
-                key={range}
-                variant={timeRange === range ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => setTimeRange(range)}
-                className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
-              >
-                {range}
-              </Button>
-            ))}
-          </div>
-        </div>
-
-        {/* Key Metrics */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <Card className="bg-zion-blue-dark border-zion-purple/20">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium text-zion-slate-light">Total Users</CardTitle>
-              <Users className="h-4 w-4 text-zion-cyan" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold text-white">{formatNumber(analyticsData.totalUsers)}</div>
-              <p className="text-xs text-zion-slate-light">
-                <span className="text-green-400">+{analyticsData.growthRate}%</span> from last period
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-zion-blue-dark border-zion-purple/20">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium text-zion-slate-light">Active Users</CardTitle>
-              <Activity className="h-4 w-4 text-zion-cyan" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold text-white">{formatNumber(analyticsData.activeUsers)}</div>
-              <p className="text-xs text-zion-slate-light">
-                <span className="text-green-400">+8.2%</span> from last period
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-zion-blue-dark border-zion-purple/20">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium text-zion-slate-light">Revenue</CardTitle>
-              <DollarSign className="h-4 w-4 text-zion-cyan" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold text-white">{formatCurrency(analyticsData.revenue)}</div>
-              <p className="text-xs text-zion-slate-light">
-                <span className="text-green-400">+15.3%</span> from last period
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-zion-blue-dark border-zion-purple/20">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium text-zion-slate-light">Conversion Rate</CardTitle>
-              <Target className="h-4 w-4 text-zion-cyan" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold text-white">{analyticsData.conversionRate}%</div>
-              <p className="text-xs text-zion-slate-light">
-                <span className="text-green-400">+0.8%</span> from last period
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Charts and Tables */}
-        <Tabs defaultValue="overview" className="space-y-6">
-          <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
-            <TabsTrigger value="overview" className="data-[state=active]:bg-zion-purple/10">
-              Overview
-            </TabsTrigger>
-            <TabsTrigger value="pages" className="data-[state=active]:bg-zion-purple/10">
-              Top Pages
-            </TabsTrigger>
-            <TabsTrigger value="engagement" className="data-[state=active]:bg-zion-purple/10">
-              User Engagement
-            </TabsTrigger>
-            <TabsTrigger value="demographics" className="data-[state=active]:bg-zion-purple/10">
-              Demographics
-            </TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="overview" className="space-y-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <Card className="bg-zion-blue-dark border-zion-purple/20">
-                <CardHeader>
-                  <CardTitle className="text-white">User Growth Trend</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    Daily active users over the selected period
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="h-64 flex items-center justify-center text-zion-slate-light">
-                    <div className="text-center">
-                      <LineChart className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
-                      <p>Chart visualization would go here</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-zion-blue-dark border-zion-purple/20">
-                <CardHeader>
-                  <CardTitle className="text-white">Revenue Distribution</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    Revenue breakdown by category
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="h-64 flex items-center justify-center text-zion-slate-light">
-                    <div className="text-center">
-                      <PieChart className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
-                      <p>Chart visualization would go here</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </TabsContent>
-
-          <TabsContent value="pages" className="space-y-6">
-            <Card className="bg-zion-blue-dark border-zion-purple/20">
-              <CardHeader>
-                <CardTitle className="text-white">Top Performing Pages</CardTitle>
-                <CardDescription className="text-zion-slate-light">
-                  Pages with highest views and conversion rates
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {analyticsData.topPages.map((page, index) => (
-                    <div key={page.page} className="flex items-center justify-between p-4 bg-zion-blue-light/10 rounded-lg">
-                      <div className="flex items-center space-x-4">
-                        <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan">
-                          #{index + 1}
-                        </Badge>
-                        <span className="text-white font-medium">{page.page}</span>
-                      </div>
-                      <div className="flex items-center space-x-6 text-sm">
-                        <span className="text-zion-slate-light">
-                          {formatNumber(page.views)} views
-                        </span>
-                        <span className="text-zion-cyan">
-                          {page.conversion}% conversion
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-
-          <TabsContent value="engagement" className="space-y-6">
-            <Card className="bg-zion-blue-dark border-zion-purple/20">
-              <CardHeader>
-                <CardTitle className="text-white">User Engagement Over Time</CardTitle>
-                <CardDescription className="text-zion-slate-light">
-                  Daily user activity and session data
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="h-64 flex items-center justify-center text-zion-slate-light">
-                  <div className="text-center">
-                    <BarChart3 className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
-                    <p>Chart visualization would go here</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-
-          <TabsContent value="demographics" className="space-y-6">
-            <Card className="bg-zion-blue-dark border-zion-purple/20">
-              <CardHeader>
-                <CardTitle className="text-white">User Demographics</CardTitle>
-                <CardDescription className="text-zion-slate-light">
-                  Age distribution of platform users
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {analyticsData.demographics.map((demo) => (
-                    <div key={demo.age} className="flex items-center justify-between">
-                      <span className="text-white">{demo.age}</span>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-32 bg-zion-blue-light/20 rounded-full h-2">
-                          <div 
-                            className="bg-zion-cyan h-2 rounded-full" 
-                            style={{ width: `${demo.percentage}%` }}
-                          ></div>
-                        </div>
-                        <span className="text-zion-cyan text-sm w-12 text-right">
-                          {demo.percentage}%
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-        </Tabs>
-      </div>
-    </div>
-  );
-}
+  ];
+;
+  const analyticsTypes = [;
+    {;
+      name: "Business Intelligence",;
+      description: "Comprehensive business analytics and reporting",;
+      icon: BarChart3,;
+      features: ["KPI tracking", "Performance metrics", "Business reports", "Executive dashboards"],;
+      path: "/services / ai - business - intelligence";
+    },;
+    {;
+      name: "Website Analytics",;
+      description: "Track website performance and user behavior",;
+      icon: Globe,;
+      features: ["Traffic analysis", "User engagement", "Conversion tracking", "SEO insights"],;
+      path: "/services / website - analytics";
+    },;
+    {;
+      name: "AI Data Analytics",;
+      description: "Advanced AI - powered data analysis and insights",;
+      icon: Zap,;
+      features: ["Machine learning", "Pattern recognition", "Predictive modeling", "Automated insights"],;
+      path: "/services / ai - data - analytics";
+    },;
+    {;
+      name: "Financial Analytics",;
+      description: "Financial performance tracking and optimization",;
+      icon: DollarSign,;
+      features: ["Revenue analysis", "Cost optimization", "Profit margins", "Financial forecasting"],;
+      path: "/services / ai - financial - analytics";
+    };
+  ];
+;
+  const metrics = [;
+    { icon: Users, value: "10K+", label: "Active Users", description: "Monthly active users" },;
+    { icon: TrendingUp, value: "95%", label: "Uptime", description: "System reliability" },;
+    { icon: Globe, value: "25+", label: "Countries", description: "Global reach" },;
+    { icon: Zap, value: "1M+", label: "Data Points", description: "Processed daily" };
+  ];
+;
+  const integrations = [;
+    { name: "Google Analytics", icon: "🔍", description: "Website traffic and user behavior" },;
+    { name: "Salesforce", icon: "☁️", description: "CRM data and sales metrics" },;
+    { name: "Stripe", icon: "💳", description: "Payment and revenue data" },;
+    { name: "Slack", icon: "💬", description: "Team communication metrics" },;
+    { name: "HubSpot", icon: "🎯", description: "Marketing and lead data" },;
+    { name: "AWS", icon: "☁️", description: "Cloud infrastructure metrics" };
+  ];
+;
+  return (<div className = "min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">;
+      <SEO ;
+        title="Analytics - Zion Tech Group";
+        description="Transform your data into actionable insights with our comprehensive analytics solutions. Real - time monitoring, AI - powered analysis, and custom dashboards.";
+        keywords="analytics, business intelligence, data analysis, AI analytics, Zion Tech Group";
+            />;
+;
+      {/* Hero Section */};
+      <section className="relative py - 20 overflow - hidden">;
+        <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 10 via - blue - 500 / 10 to - purple - 500 / 10"></div>;
+        <div className="relative z - 10 container mx - auto px - 4">;
+          <motion.div;
+            initial = {;
+  { opacity: 0,;
+  y: 30 ;
+;
+}};
+            animate = {;
+  { opacity: 1,;
+  y: 0 ;
+;
+}};
+            transition={{ duration: 0.8 }};
+            className="text - center max - w-4xl mx - auto";
+;
+            <div className="flex items - center justify - center mb - 6">;
+              <div className="w - 16 h - 16 bg - gradient - to - br from - cyan - 400 to - blue - 500 rounded - 2xl flex items - center justify - center mr - 4">;
+                <BarChart3 className="w - 8 h - 8 text - white"       />;
+              </div>;
+              <h1 className="text - 4xl font - bold text - white">Analytics</h1>;
+            </div>;
+;
+            <h2 className="text - 5xl md:text - 6xl font - bold text - white mb - 6 leading - tight">;
+              Data - Driven < span className="block bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent">;
+                Insights;
+              </span>;
+            </h2>;
+;
+            <p className="text - xl md:text - 2xl text - slate - 300 mb - 8 leading - relaxed">;
+              Transform your raw data into actionable insights with our comprehensive analytics platform.;
+              Monitor performance, track trends, and make informed decisions with real - time data.;
+            </p>;
+;
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+              <Link;
+                to="/contact";
+                className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - lg hover:from - cyan - 400 hover:to - blue - 500 transition - all duration - 200 hover:scale - 105 shadow - lg shadow - cyan - 500 / 25";
+;
+                Get Started < ArrowRight className="ml - 2 w - 5 h - 5"       />;
+              </Link>;
+              <Link;
+                to="/services";
+                className="inline - flex items - center px - 8 py - 4 border border - cyan - 400 / 30 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 400 / 10 transition - all duration - 200";
+;
+                Explore Services;
+              </Link>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+;
+      {/* Metrics Section */};
+      <section className="py - 16 bg - slate - 800 / 50">;
+        <div className="container mx - auto px - 4">;
+          <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8">;
+            {metrics.map ( (metric, index) => (<motion.div;
+                key={index};
+                initial = {;
+  { opacity: 0,;
+  y: 20 ;
+;
+}};
+                whileInView = {;
+  { opacity: 1,;
+  y: 0 ;
+;
+}};
+                transition = {;
+  { duration: 0.6,;
+  delay: index * 0.1 ;
+;
+}};
+                className="text - center";
+;
+                <div className="w - 16 h - 16 bg - gradient - to - br from - cyan - 400 / 20 to - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
+                  <metric.icon className="w - 8 h - 8 text - cyan - 400"       />;
+                </div>;
+                <div className="text - 3xl font - bold text - white mb - 2">{metric.value}</div>;
+                <div className="text - cyan - 400 font - semibold mb - 1">{metric.label}</div>;
+                <div className="text - sm text - slate - 400">{metric.description}</div>;
+              </motion.div>;) ) };
+          </div>;
+        </div>;
+      </section>;
+;
+      {/* Features Section */};
+      <section className="py - 20">;
+        <div className="container mx - auto px - 4">;
+          <motion.div;
+            initial = {;
+  { opacity: 0,;
+  y: 30 ;
+;
+}};
+            whileInView = {;
+  { opacity: 1,;
+  y: 0 ;
+;
+}};
+            transition={{ duration: 0.8 }};
+            className="text - center mb - 16";
+;
+            <h2 className="text - 4xl font - bold text - white mb - 6">;
+              Powerful < span className="text - cyan - 400">Analytics Features</span>;
+            </h2>;
+            <p className="text - xl text - slate - 300 max - w-3xl mx - auto">;
+              Our analytics platform provides everything you need to understand your data;
+              and make informed business decisions.;
+            </p>;
+          </motion.div>;
+;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
+            {analyticsFeatures.map ( (feature, index) => (<motion.div;
+                key={index};
+                initial = {;
+  { opacity: 0,;
+  y: 30 ;
+;
+}};
+                whileInView = {;
+  { opacity: 1,;
+  y: 0 ;
+;
+}};
+                transition = {;
+  { duration: 0.6,;
+  delay: index * 0.1 ;
+;
+}};
+                className="bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - xl p - 6 hover:border - cyan - 400 / 30 transition - all duration - 300 hover:scale - 105";
+;
+                <div className={`w - 12 h - 12 bg - gradient - to - br ${feature.color} rounded - lg flex items - center justify - center mb - 4`}>;
+                  <feature.icon className="w - 6 h - 6 text - white"       />;
+                </div>;
+;
+                <h3 className="text - xl font - bold text - white mb - 3">{feature.title}</h3>;
+                <p className="text - slate - 300">{feature.description}</p>;
+              </motion.div>;) ) };
+          </div>;
+        </div>;
+      </section>;
+;
+      {/* Analytics Types Section */};
+      <section className="py - 20 bg - slate - 800 / 50">;
+        <div className="container mx - auto px - 4">;
+          <motion.div;
+            initial = {;
+  { opacity: 0,;
+  y: 30 ;
+;
+}};
+            whileInView = {;
+  { opacity: 1,;
+  y: 0 ;
+;
+}};
+            transition={{ duration: 0.8 }};
+            className="text - center mb - 16";
+;
+            <h2 className="text - 4xl font - bold text - white mb - 6">;
+              Analytics < span className="text - cyan - 400">Solutions</span>;
+            </h2>;
+            <p className="text - xl text - slate - 300 max - w-3xl mx - auto">;
+              Choose from our comprehensive range of analytics solutions designed to meet;
+              every aspect of your business intelligence needs.;
+            </p>;
+          </motion.div>;
+;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
+            {analyticsTypes.map ( (type, index) => (<motion.div;
+                key={index};
+                initial = {;
+  { opacity: 0,;
+  x: index % 2 === 0 ? -30 : 30 ;
+;
+}};
+                whileInView = {;
+  { opacity: 1,;
+  x: 0 ;
+;
+}};
+                transition = {;
+  { duration: 0.6,;
+  delay: index * 0.1 ;
+;
+}};
+                className="bg - slate - 700 / 30 border border - slate - 600 / 30 rounded - xl p - 8 hover:border - cyan - 400 / 30 transition - all duration - 300";
+;
+                <div className="w - 16 h - 16 bg - gradient - to - br from - cyan - 400 / 20 to - blue - 500 / 20 rounded - xl flex items - center justify - center mb - 6">;
+                  <type.icon className="w - 8 h - 8 text - cyan - 400"       />;
+                </div>;
+;
+                <h3 className="text - 2xl font - bold text - white mb - 4">{type.name}</h3>;
+                <p className="text - slate - 300 mb - 6">{type.description}</p>;
+;
+                <div className="space - y-3 mb - 6">;
+                  {type.features.map ( (feature, featureIndex) => (<div key={featureIndex} className="flex items - center text - slate - 400">;
+                      <CheckCircle className="w - 4 h - 4 text - cyan - 400 mr - 3 flex - shrink - 0"       />;
+                      {feature};
+                    </div>) ) };
+                </div>;
+;
+                <Link;
+                  to={type.path};
+                  className="inline - flex items - center text - cyan - 400 hover:text - cyan - 300 font - medium transition - colors";
+;
+                  Learn More < ArrowRight className="ml - 2 w - 4 h - 4"       />;
+                </Link>;
+              </motion.div>) ) };
+          </div>;
+        </div>;
+      </section>;
+;
+      {/* Integrations Section */};
+      <section className="py - 20">;
+        <div className="container mx - auto px - 4">;
+          <motion.div;
+            initial = {;
+  { opacity: 0,;
+  y: 30 ;
+;
+}};
+            whileInView = {;
+  { opacity: 1,;
+  y: 0 ;
+;
+}};
+            transition={{ duration: 0.8 }};
+            className="text - center mb - 16";
+;
+            <h2 className="text - 4xl font - bold text - white mb - 6">;
+              Seamless < span className="text - cyan - 400">Integrations</span>;
+            </h2>;
+            <p className="text - xl text - slate - 300 max - w-3xl mx - auto">;
+              Connect with your favorite tools and platforms to centralize all your data;
+              and get a complete view of your business.;
+            </p>;
+          </motion.div>;
+;
+          <div className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 6">;
+            {integrations.map ( (integration, index) => (<motion.div;
+                key={index};
+                initial = {;
+  { opacity: 0,;
+  scale: 0.8 ;
+;
+}};
+                whileInView = {;
+  { opacity: 1,;
+  scale: 1 ;
+;
+}};
+                transition = {;
+  { duration: 0.6,;
+  delay: index * 0.1 ;
+;
+}};
+                className="bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - xl p - 6 text - center hover:border - cyan - 400 / 30 transition - all duration - 300 hover:scale - 105";
+;
+                <div className="text - 4xl mb - 3">{integration.icon}</div>;
+                <h3 className="text - white font - medium mb - 2">{integration.name}</h3>;
+                <p className="text - sm text - slate - 400">{integration.description}</p>;
+              </motion.div>;) ) };
+          </div>;
+        </div>;
+      </section>;
+;
+      {/* CTA Section */};
+      <section className="py - 20 bg - gradient - to - r from - cyan - 500 / 10 via - blue - 500 / 10 to - purple - 500 / 10">;
+        <div className="container mx - auto px - 4 text - center">;
+          <motion.div;
+            initial = {;
+  { opacity: 0,;
+  y: 30 ;
+;
+}};
+            whileInView = {;
+  { opacity: 1,;
+  y: 0 ;
+;
+}};
+            transition={{ duration: 0.8 }};
+;
+            <h2 className="text - 4xl font - bold text - white mb - 6">;
+              Ready to Unlock Your Data?;
+            </h2>;
+            <p className="text - xl text - slate - 300 mb - 8 max - w-2xl mx - auto">;
+              Start transforming your data into actionable insights today.;
+              Our analytics platform will help you make better decisions and drive growth.;
+            </p>;
+;
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+              <Link;
+                to="/contact";
+                className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - lg hover:from - cyan - 400 hover:to - blue - 500 transition - all duration - 200 hover:scale - 105 shadow - lg shadow - cyan - 500 / 25";
+;
+                Start Your Analytics Journey < ArrowRight className="ml - 2 w - 5 h - 5"       />;
+              </Link>;
+              <Link;
+                to="/request - quote";
+                className="inline - flex items - center px - 8 py - 4 border border - cyan - 400 / 30 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 400 / 10 transition - all duration - 200";
+              >;
+                Get Custom Quote;
+              </Link>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;) ;
+};

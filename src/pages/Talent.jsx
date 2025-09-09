@@ -3,8 +3,11 @@ import { Helmet } from 'react-helmet-async';
 const Talent = () => {
     return (<>
       <Helmet>
-        <title>Talent - Zion Tech Group</title>
-        <meta name="description" content="Find and hire top technology talent through Zion Tech Group. Connect with skilled professionals for your projects."/>
+        <title > Talent - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Find and hire top technology talent through Zion Tech Group. Connect with skilled professionals for your projects."
+              />
       </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-12">

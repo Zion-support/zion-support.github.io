@@ -58,7 +58,9 @@ export default function JobDetails() {
     };
     const isOwnJob = user?.id === job.client_id;
     return (<>
-      <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={job.description.substring(0, 160)}/>
+      <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description = {
+  job.description.substring (0,
+  160) }      />
       
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
@@ -73,10 +75,10 @@ export default function JobDetails() {
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
-                    <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>
-                    <div className="flex items-center text-muted-foreground">
-                      <Calendar className="mr-2 h-4 w-4"/>
-                      <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}</span>
+                    <CardTitle className="text - 2xl mb - 2">{job.title}</CardTitle>
+                    <div className="flex items - center text - muted - foreground">
+                      <Calendar className="mr - 2 h - 4 w - 4"      />
+                      <span > Posted {formatDistanceToNow (new Date (job.created_at) , { addSuffix: true }) }</span>
                     </div>
                   </div>
                   <Badge>{job.category}</Badge>
@@ -104,30 +106,30 @@ export default function JobDetails() {
           
           <div>
             <Card>
-              <CardContent className="pt-6 space-y-4">
-                <div className="flex items-start">
-                  <DollarSign className="mt-1 h-5 w-5 text-muted-foreground"/>
-                  <div className="ml-3">
-                    <p className="text-sm text-muted-foreground">Budget</p>
-                    <p className="font-medium">{formatBudget(job.budget)}</p>
+              <CardContent className="pt - 6 space - y-4">
+                <div className="flex items - start">
+                  <DollarSign className="mt - 1 h - 5 w - 5 text - muted - foreground"      />
+                  <div className="ml - 3">
+                    <p className="text - sm text - muted - foreground">Budget</p>
+                    <p className="font - medium">{formatBudget (job.budget) }</p>
                   </div>
                 </div>
-                
-                <div className="flex items-start">
-                  <Clock className="mt-1 h-5 w-5 text-muted-foreground"/>
-                  <div className="ml-3">
-                    <p className="text-sm text-muted-foreground">Deadline</p>
-                    <p className="font-medium">
-                      {job.deadline ? new Date(job.deadline).toLocaleDateString() : "Flexible"}
+
+                <div className="flex items - start">
+                  <Clock className="mt - 1 h - 5 w - 5 text - muted - foreground"      />
+                  <div className="ml - 3">
+                    <p className="text - sm text - muted - foreground">Deadline</p>
+                    <p className="font - medium">
+                      {job.deadline ? new Date (job.deadline) .toLocaleDateString () : "Flexible"}
                     </p>
                   </div>
                 </div>
-                
-                <div className="flex items-start">
-                  <Briefcase className="mt-1 h-5 w-5 text-muted-foreground"/>
-                  <div className="ml-3">
-                    <p className="text-sm text-muted-foreground">Job Type</p>
-                    <p className="font-medium">Freelance / Remote</p>
+
+                <div className="flex items - start">
+                  <Briefcase className="mt - 1 h - 5 w - 5 text - muted - foreground"      />
+                  <div className="ml - 3">
+                    <p className="text - sm text - muted - foreground">Job Type</p>
+                    <p className="font - medium">Freelance / Remote</p>
                   </div>
                 </div>
                 

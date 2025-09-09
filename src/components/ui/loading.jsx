@@ -34,14 +34,24 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
 }
 // Skeleton loading for content
 export function Skeleton({ className, ...props }) {
-    return (<div className={cn('animate-pulse rounded-md bg-zion-slate-light/20', className)} {...props}/>);
+  return (
+    <div
+      className={cn(
+        'animate-pulse rounded-md bg-zion-slate-light/20',
+        className
+      )}
+      {...props}
+          />
+  );
 }
 // Page loading component
 export function PageLoading() {
     return (<div className="min-h-screen flex items-center justify-center bg-background">
       <div className="text-center space-y-4">
-        <Loading size="xl" variant="spinner" className="text-zion-cyan"/>
-        <h2 className="text-xl font-semibold text-zion-slate-light">Loading Zion Tech Group</h2>
+        <Loading size="xl" variant="spinner" className="text-zion-cyan"       />
+        <h2 className="text-xl font-semibold text-zion-slate-light">
+          Loading Zion Tech Group
+        </h2>
         <p className="text-zion-slate-light">Preparing your experience...</p>
       </div>
     </div>);

@@ -99,53 +99,86 @@ export function FeatureHighlights() {
           </p>
         </motion.div>
 
-        {/* Feature Highlights Grid */}
-        <motion.div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {highlights.map((highlight, index) => (<motion.div key={index} variants={itemVariants} whileHover={{
-                y: -10,
-                scale: 1.02,
-                transition: { duration: 0.3 }
-            }} className="group">
-              <div className={`h-full p-8 rounded-3xl ${highlight.bgColor} ${highlight.borderColor} border-2 hover:border-opacity-40 transition-all duration-300 backdrop-blur-sm relative overflow-hidden`}>
-                {/* Background gradient overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${highlight.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                
-                <div className="relative z-10">
-                  {/* Icon */}
-                  <div className={`inline-flex p-4 rounded-2xl bg-white/10 mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <highlight.icon className="w-8 h-8 text-white"/>
-                  </div>
-
-                  {/* Content */}
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-200">
-                    {highlight.title}
-                  </h3>
-                  
-                  <p className="text-zion-slate-light leading-relaxed mb-6">
-                    {highlight.description}
-                  </p>
-
-                  {/* Features */}
-                  <ul className="space-y-3">
-                    {highlight.features.map((feature, idx) => (<li key={idx} className="flex items-center gap-3 text-zion-slate-light">
-                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"/>
-                        <span className="text-sm">{feature}</span>
-                      </li>))}
-                  </ul>
+        {/* Feature Grid */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {highlights.map((((((((highlight, index, index, index, index, index, index, index) => ({ ...((((((highlight, index, index, index, index, index, index, key: index })) => ({ ...(((((highlight, index, index, index, index, index, key: index })) => ({ ...((((highlight, index, index, index, index, key: index })) => ({ ...(((highlight, index, index, index, key: index })) => ({ ...((highlight, index, index, key: index })) => ({ ...(highlight, index, key: index })) => (
+            <motion.div key={index} variants={itemVariants} className="group">
+              <div
+                className={`${highlight.bgColor} ${highlight.borderColor} border rounded-2xl p-8 h-full transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 group-hover:scale-105`}
+              >
+                <div
+                  className={`w-16 h-16 bg-gradient-to-r ${highlight.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                >
+                  <highlight.icon className="w-8 h-8 text-white"       />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-200">
+                  {highlight.title}
+                </h3>
+                <p className="text-zion-slate-light mb-6 leading-relaxed">
+                  {highlight.description}
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {highlight.features.map((((((((feature, featureIndex, index, index, index, index, index, index) => ({ ...((((((feature, featureIndex, index, index, index, index, index, key: index })) => ({ ...(((((feature, featureIndex, index, index, index, index, key: index })) => ({ ...((((feature, featureIndex, index, index, index, key: index })) => ({ ...(((feature, featureIndex, index, index, key: index })) => ({ ...((feature, featureIndex, index, key: index })) => ({ ...(feature, featureIndex, key: index })) => (
+                    <li
+                      key={featureIndex}
+                      className="flex items-center text-zion-slate-light"
+                    >
+                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0"       />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex items-center text-zion-purple-light font-medium group-hover:text-zion-purple transition-colors duration-200">
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200"       />
                 </div>
               </div>
             </motion.div>))}
         </motion.div>
 
         {/* Achievements Section */}
-        <motion.div className="bg-gradient-to-r from-zion-blue/20 to-zion-purple/20 rounded-3xl p-8 md:p-12 border border-zion-blue-light/20 mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Proven Track Record
-            </h3>
-            <p className="text-zion-slate-light text-lg">
-              Our achievements speak volumes about our commitment to excellence
-            </p>
+        <motion.div
+          className="text-center mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          <h3 className="text-3xl font-bold text-white mb-12">
+            Trusted by Millions Worldwide
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {achievements.map((((((((achievement, index, index, index, index, index, index, index) => ({ ...((((((achievement, index, index, index, index, index, index, key: index })) => ({ ...(((((achievement, index, index, index, index, index, key: index })) => ({ ...((((achievement, index, index, index, index, key: index })) => ({ ...(((achievement, index, index, index, key: index })) => ({ ...((achievement, index, index, key: index })) => ({ ...(achievement, index, key: index })) => (
+              <motion.div
+                key={index}
+                variants={achievementVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div
+                  className={`w-20 h-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4`}
+                >
+                  <achievement.icon
+                    className={`w-10 h-10 ${achievement.color}`}
+                        />
+                </div>
+                <div className={`text-3xl font-bold ${achievement.color} mb-2`}>
+                  {achievement.number}
+                </div>
+                <div className="text-zion-slate-light text-sm">
+                  {achievement.label}
+                </div>
+              </motion.div>
+            ))}
           </div>
 
           <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -164,9 +197,17 @@ export function FeatureHighlights() {
           <h3 className="text-3xl font-bold text-white mb-8">
             Cutting-Edge Technology Stack
           </h3>
-          
-          <motion.div className="flex flex-wrap justify-center gap-4 mb-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            {technologies.map((tech, index) => (<motion.div key={index} variants={techVariants} className="px-6 py-3 bg-zion-blue/20 border border-zion-blue-light/30 rounded-full text-zion-cyan hover:bg-zion-blue/30 hover:border-zion-blue-light/50 transition-all duration-300 cursor-pointer" whileHover={{ scale: 1.05, y: -2 }}>
+          <div className="flex flex-wrap justify-center gap-4">
+            {technologies.map((((((((tech, index, index, index, index, index, index, index) => ({ ...((((((tech, index, index, index, index, index, index, key: index })) => ({ ...(((((tech, index, index, index, index, index, key: index })) => ({ ...((((tech, index, index, index, index, key: index })) => ({ ...(((tech, index, index, index, key: index })) => ({ ...((tech, index, index, key: index })) => ({ ...(tech, index, key: index })) => (
+              <motion.div
+                key={index}
+                variants={techVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="px-6 py-3 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-cyan hover:bg-zion-purple/20 hover:border-zion-purple/40 transition-all duration-200"
+              >
                 {tech}
               </motion.div>))}
           </motion.div>

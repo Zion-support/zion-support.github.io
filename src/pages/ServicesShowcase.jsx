@@ -146,13 +146,21 @@ const ServicesShowcase = () => {
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
+      <div className="relative overflow - hidden">;
+        <div className="absolute inset - 0 bg-[linear - gradient (rgba (34,221,210,0.1) _1px,transparent_1px) ,linear - gradient (90deg,rgba (34,221,210,0.1) _1px,transparent_1px) ] bg-[size:50px_50px]"      />
+
+        <div className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 pt - 32 pb - 20">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ duration: 0.8 }} className="text - center">
+            <h1 className="text - 5xl md:text - 6xl font - bold text - white mb - 6">
+              <span className="bg - gradient - to - r from - blue - 400 via - cyan - 400 to - blue - 600 bg - clip - text text - transparent">
                 Services Showcase
               </span>
             </h1>
@@ -173,12 +181,12 @@ const ServicesShowcase = () => {
       </div>
 
       {/* Services Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-16">
-          {services.map((category, categoryIndex) => (<motion.div key={category.category} variants={itemVariants}>
-              <div className="text-center mb-12">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mb-4">
-                  <category.icon className="w-8 h-8 text-white"/>
+      <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 pb - 20">;
+        <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space - y-16">
+          {services.map ( (category, categoryIndex) => (<motion.div key={category.category} variants={itemVariants}>
+              <div className="text - center mb - 12">
+                <div className="inline - flex items - center justify - center w - 16 h - 16 bg - gradient - to - r from - blue - 600 to - cyan - 600 rounded - full mb - 4">
+                  <category.icon className="w - 8 h - 8 text - white"      />
                 </div>
                 <h2 className="text-3xl font-bold text-white mb-4">{category.category}</h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto"></div>
@@ -204,11 +212,10 @@ const ServicesShowcase = () => {
                           </li>))}
                       </ul>
                     </div>
-                    
-                    <Link to={service.href} className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium text-sm group-hover:translate-x-1 transition-all duration-300">
-                      Learn More
-                      <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
+
+                    <Link to={service.href} className="inline - flex items - center text - blue - 400 hover:text - blue - 300 font - medium text - sm group - hover:translate - x-1 transition - all duration - 300">
+                      Learn More < svg className="ml - 2 w - 4 h - 4 group - hover:translate - x-1 transition - transform duration - 300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7 - 7 7"      />
                       </svg>
                     </Link>
                   </motion.div>))}

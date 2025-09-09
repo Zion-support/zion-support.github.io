@@ -7,22 +7,22 @@ import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card'
 const ServicePortfolioDashboard = () => {
     const features = [
         {
-            icon: <BarChart3 className="w-6 h-6 text-zion-cyan"/>,
+            icon: <BarChart3 className="w - 6 h - 6 text - zion - cyan"      />,
             title: 'Comprehensive Analytics',
             description: 'Real-time insights into service performance, revenue, and growth metrics'
         },
         {
-            icon: <PieChart className="w-6 h-6 text-zion-purple"/>,
+            icon: <PieChart className="w - 6 h - 6 text - zion - purple"      />,
             title: 'Portfolio Visualization',
             description: 'Interactive charts and graphs showing service distribution and trends'
         },
         {
-            icon: <TrendingUp className="w-6 h-6 text-zion-green"/>,
+            icon: <TrendingUp className="w - 6 h - 6 text - zion - green"      />,
             title: 'Performance Tracking',
             description: 'Monitor service performance, client satisfaction, and market demand'
         },
         {
-            icon: <Target className="w-6 h-6 text-zion-orange"/>,
+            icon: <Target className="w - 6 h - 6 text - zion - orange"      />,
             title: 'Strategic Insights',
             description: 'Data-driven recommendations for portfolio optimization and growth'
         }
@@ -39,27 +39,27 @@ const ServicePortfolioDashboard = () => {
         {
             label: 'Total Services',
             value: '52+',
-            description: 'Cutting-edge technology solutions',
-            icon: <Rocket className="w-8 h-8 text-zion-cyan"/>
+            description: 'Cutting - edge technology solutions',
+            icon: <Rocket className="w - 8 h - 8 text - zion - cyan"      />
         },
         {
             label: 'Technology Categories',
             value: '12+',
             description: 'Major technology sectors covered',
-            icon: <Brain className="w-8 h-8 text-zion-purple"/>
+            icon: <Brain className="w - 8 h - 8 text - zion - purple"      />
         },
         {
             label: 'Price Range',
             value: '$5K-$2M',
             description: 'Monthly service pricing',
-            icon: <DollarSign className="w-8 h-8 text-zion-green"/>
+            icon: <DollarSign className="w - 8 h - 8 text - zion - green"      />
         },
         {
             label: 'Market Coverage',
             value: '95%+',
             description: 'Technology market segments',
-            icon: <Globe className="w-8 h-8 text-zion-orange"/>
-        }
+            icon: <Globe className="w - 8 h - 8 text - zion - orange"      />
+
     ];
     return (<div className="min-h-screen bg-zion-blue-dark">
       {/* Hero Section */}
@@ -178,11 +178,23 @@ const ServicePortfolioDashboard = () => {
             </p>
           </motion.div>
 
-          <div className="space-y-4">
-            {benefits.map((benefit, index) => (<motion.div key={index} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0"/>
-                <span className="text-zion-slate-dark">{benefit}</span>
-              </motion.div>))}
+          <div className="space - y-4">
+            {benefits.map ( (benefit, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  x: -20 
+
+}} whileInView = {
+  { opacity: 1,
+  x: 0 
+
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+}} viewport={{ once: true }} className="flex items - start gap - 3">
+                <CheckCircle className="w - 5 h - 5 text - zion - cyan mt - 1 flex - shrink - 0"      />
+                <span className="text - zion - slate - dark">{benefit}</span>
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -200,7 +212,7 @@ const ServicePortfolioDashboard = () => {
             </p>
           </motion.div>
 
-          <AdvancedServicePortfolioDashboard />
+          <AdvancedServicePortfolioDashboard       />
         </div>
       </section>
 
@@ -215,13 +227,15 @@ const ServicePortfolioDashboard = () => {
               Our comprehensive portfolio dashboard provides the insights you need to make 
               informed decisions and drive strategic growth in your technology investments.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Optimization Consultation', '_blank')}>
-                <Rocket className="w-5 h-5 mr-2"/>
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center">
+              <Button className="bg - white text - zion - purple hover:bg - zion - slate - light text - lg px - 8 py - 4" onClick = { () => window.open ('mailto:kleber@ziontechgroup.com?subject = Portfolio Optimization Consultation',
+  '_blank') }>
+                <Rocket className="w - 5 h - 5 mr - 2"      />
                 Get Portfolio Strategy
               </Button>
-              <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick={() => window.open('tel:+13024640950', '_blank')}>
-                <Shield className="w-5 h-5 mr-2"/>
+              <Button className="border - white text - white hover:bg - white hover:text - zion - purple text - lg px - 8 py - 4" onClick = { () => window.open ('tel:+13024640950',
+  '_blank') }>
+                <Shield className="w - 5 h - 5 mr - 2"      />
                 Speak with an Expert
               </Button>
             </div>

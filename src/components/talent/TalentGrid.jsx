@@ -18,8 +18,16 @@ export function TalentGrid({ talents, isLoading, onTalentClick, isAuthenticated,
         }
     };
     if (isLoading) {
-        return <TalentSkeleton />;
-    }
+        return <TalentSkeleton       />;
+
+    const handleMessageInternal = (talent) => {
+        if (handleMessage) {
+            handleMessage(talent)}
+        else {
+            onTalentClick(talent.id)}
+    };
+    if (isLoading) {
+        return <TalentSkeleton       />}
     if (!talents || talents.length === 0) {
         return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">
       <p className="text-zion-slate-light mb-4">No talents found matching your criteria</p>
@@ -29,6 +37,5 @@ export function TalentGrid({ talents, isLoading, onTalentClick, isAuthenticated,
     </div>;
     }
     return (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {talents.map((talent) => (<TalentCard key={talent.id} talent={talent} onMessage={() => handleMessageInternal(talent)} onBook={() => handleBookInternal(talent)} isAuthenticated={isAuthenticated}/>))}
-    </div>);
-}
+      {talents.map((((((((talent, index, index, index, index, index, index) => ({ ...((((((talent, index, index, index, index, index, key: index })) => ({ ...(((((talent, index, index, index, index, key: index })) => ({ ...((((talent, index, index, index, key: index })) => ({ ...(((talent, index, index, key: index })) => ({ ...((talent, index, key: index })) => ({ ...(talent, key: index })) => (<TalentCard key={talent.id} talent={talent} onMessage={() => handleMessageInternal(talent)} onBook={() => handleBookInternal(talent)} isAuthenticated={isAuthenticated}/>))}
+    </div>)}

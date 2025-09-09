@@ -12,7 +12,14 @@ export const ServiceLandingTemplate = ({ title, subtitle, heroImage, description
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             {subtitle}
           </p>
-          {heroImage && (<img loading="lazy" src={heroImage} alt={title} className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl"/>)}
+          {heroImage && (
+            <img
+              loading="lazy"
+              src={heroImage}
+              alt={title}
+              className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl"
+                  />
+          )}
         </div>
       </section>
 
@@ -30,8 +37,13 @@ export const ServiceLandingTemplate = ({ title, subtitle, heroImage, description
             Benefits
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, idx) => (<div key={idx} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center">
-                {benefit.icon && (<div className="mb-4 flex justify-center text-zion-cyan">
+            {benefits.map((((((((benefit, idx, index, index, index, index, index, index) => ({ ...((((((benefit, idx, index, index, index, index, index, key: index })) => ({ ...(((((benefit, idx, index, index, index, index, key: index })) => ({ ...((((benefit, idx, index, index, index, key: index })) => ({ ...(((benefit, idx, index, index, key: index })) => ({ ...((benefit, idx, index, key: index })) => ({ ...(benefit, idx, key: index })) => (
+              <div
+                key={idx}
+                className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center"
+              >
+                {benefit.icon && (
+                  <div className="mb-4 flex justify-center text-zion-cyan">
                     {benefit.icon}
                   </div>)}
                 <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
@@ -47,13 +59,24 @@ export const ServiceLandingTemplate = ({ title, subtitle, heroImage, description
             What Our Clients Say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((t, idx) => (<Card key={idx} className="bg-zion-blue-dark border-zion-purple/30">
+            {testimonials.map((((((((t, idx, index, index, index, index, index, index) => ({ ...((((((t, idx, index, index, index, index, index, key: index })) => ({ ...(((((t, idx, index, index, index, index, key: index })) => ({ ...((((t, idx, index, index, index, key: index })) => ({ ...(((t, idx, index, index, key: index })) => ({ ...((t, idx, index, key: index })) => ({ ...(t, idx, key: index })) => (
+              <Card
+                key={idx}
+                className="bg-zion-blue-dark border-zion-purple/30"
+              >
                 <CardContent className="pt-6">
                   <p className="text-gray-200 mb-6">"{t.text}"</p>
                 </CardContent>
                 <CardFooter className="border-t border-zion-purple/20 pt-4">
                   <div className="flex items-center">
-                    {t.avatar && (<img loading="lazy" src={t.avatar} alt={t.name} className="h-10 w-10 rounded-full mr-4"/>)}
+                    {t.avatar && (
+                      <img
+                        loading="lazy"
+                        src={t.avatar}
+                        alt={t.name}
+                        className="h-10 w-10 rounded-full mr-4"
+                            />
+                    )}
                     <div>
                       <p className="font-semibold text-white">{t.name}</p>
                       {t.role && (<p className="text-sm text-gray-400">{t.role}</p>)}

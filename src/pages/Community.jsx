@@ -3,8 +3,11 @@ import { Helmet } from 'react-helmet-async';
 const Community = () => {
     return (<>
       <Helmet>
-        <title>Community - Zion Tech Group</title>
-        <meta name="description" content="Join the Zion Tech Group community. Connect with technology professionals, share knowledge, and stay updated on industry trends."/>
+        <title > Community - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Join the Zion Tech Group community. Connect with technology professionals, share knowledge, and stay updated on industry trends."
+              />
       </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-12">

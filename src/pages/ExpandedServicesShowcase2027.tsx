@@ -1,535 +1,574 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Zap, 
-  Shield, 
-  Brain, 
-  Globe, 
-  Cpu, 
-  Network, 
-  Database, 
-  Lock, 
-  Leaf, 
-  Scale, 
-  Stethoscope, 
-  Rocket, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  ExternalLink,
-  Star,
-  Users,
-  Target,
-  Clock,
-  BarChart3,
-  Award,
-  Lightbulb,
-  Code,
-  Cloud,
-  Server,
-  Smartphone,
-  Monitor,
-  Wifi,
-  Satellite,
-  Atom,
-  CircuitBoard,
-  Fingerprint,
-  Eye,
-  Heart,
-  Gavel,
-  LeafyGreen,
-  Wind,
-  Sun,
-  Droplets,
-  Search,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ChevronUp
-} from 'lucide-react';
-import { EXPANDED_INNOVATIVE_SERVICES_2027 } from '../data/expandedInnovativeServices2027';
-import { SPECIALIZED_ENTERPRISE_SERVICES_2027 } from '../data/specializedEnterpriseServices2027';
-
-const ExpandedServicesShowcase2027: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState('name');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-
-  // Combine all services
-  const allServices = [...EXPANDED_INNOVATIVE_SERVICES_2027, ...SPECIALIZED_ENTERPRISE_SERVICES_2027];
-
-  // Filter and sort services
-  const filteredServices = allServices
-    .filter(service => {
-      const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
-      return matchesSearch && matchesCategory;
-    })
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'price':
-          return a.price - b.price;
-        case 'name':
-          return a.title.localeCompare(b.title);
-        case 'category':
-          return a.category.localeCompare(b.category);
-        default:
-          return 0;
-      }
-    });
-
-  // Get unique categories
-  const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
-
-  const toggleServiceExpansion = (serviceId: string) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId);
+import { SEO } from '@/components / SEO';
+export default ExpandedServicesShowcase2027;}}}}};
+import {;
+import {;
+import { motion, AnimatePresence } from 'framer - motion';
+;
+;
+  Search,;
+  Filter,;
+  Grid3X3,;
+  List,;
+  ChevronDown,;
+  ChevronUp,;
+  Star,;
+  Users,;
+  Globe,;
+  Lock,;
+  Code,;
+  BarChart3,;
+  Target,;
+  Rocket,;
+  Lightbulb,;
+  Award,;
+  Clock,;
+  DollarSign,;
+  TrendingUp,;
+  Eye,;
+  Handshake,;
+  Building,;
+  ShieldCheck,;
+  Network2,;
+  Smartphone as Mobile,;
+  Server as Infrastructure,;
+  Monitor as Analytics,;
+  Zap as Lightning,;
+  Users2,;
+  Award as Trophy,;
+  Clock as Time,;
+  DollarSign as Money,;
+  TrendingUp as Growth,;
+  Eye as Vision,;
+  Handshake as Partnership,;
+  Building as Enterprise,;
+  Phone,;
+  Mail,;
+  MapPin,;
+  ExternalLink,;
+  CheckCircle,;
+  ArrowRight,;
+  Shield,;
+  Brain,;
+  Cloud,;
+  Database,;
+  Smartphone,;
+  Server,;
+  Monitor,;
+  Cpu,;
+  Network,;
+  Smartphone as IoT,;
+  Server as Edge,;
+  Monitor as Healthcare,;
+  Cpu as FinTech;
+  ALL_EXPANDED_SERVICES_2027,;
+  EXPANDED_SERVICE_CATEGORIES,;
+  getExpandedServicesByCategory,;
+  searchExpandedServices,;
+  type ExpandedService2027;
+} from '@/data / expandedInnovativeServices2027';
+;
+      services = searchExpandedServices (searchQuery) };
+    setFilteredServices (services) }, [selectedCategory, searchQuery]) ;
+;
+        return Rocket};
   };
-
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(price);
+;
+        return 'from - gray - 500 to - slate - 600'};
   };
-
-  const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: React.ReactNode } = {
-      'AI': <Brain className="w-5 h-5" />,
-      'Cybersecurity': <Shield className="w-5 h-5" />,
-      'Quantum': <Atom className="w-5 h-5" />,
-      'Healthcare': <Stethoscope className="w-5 h-5" />,
-      'Financial': <Scale className="w-5 h-5" />,
-      'Legal': <Gavel className="w-5 h-5" />,
-      'Marketing': <TrendingUp className="w-5 h-5" />,
-      'Customer': <Users className="w-5 h-5" />,
-      'IoT': <Wifi className="w-5 h-5" />,
-      'HR': <Users className="w-5 h-5" />,
-      'Supply Chain': <Globe className="w-5 h-5" />,
-      'Cloud': <Cloud className="w-5 h-5" />,
-      'Data': <Database className="w-5 h-5" />,
-      'Compliance': <CheckCircle className="w-5 h-5" />,
-      'Identity': <Fingerprint className="w-5 h-5" />,
-      'Project': <Target className="w-5 h-5" />,
-      'Business Intelligence': <BarChart3 className="w-5 h-5" />,
-      'Migration': <ArrowRight className="w-5 h-5" />
-    };
-
-    for (const [key, icon] of Object.entries(iconMap)) {
-      if (category.includes(key)) return icon;
-    }
-    return <Code className="w-5 h-5" />;
+;
+  const formatPrice = (pricing: ExpandedService2027['pricing']) => {;
+    if (pricing.model === 'Transaction Fees + Governance') {;
+      return 'Free + Transaction Fees';
+;
+    return `$${pricing.basePrice.toLocaleString () }/month`;
   };
-
-  const getCategoryColor = (category: string) => {
-    const colorMap: { [key: string]: string } = {
-      'AI': 'from-purple-500 to-pink-500',
-      'Cybersecurity': 'from-red-500 to-orange-500',
-      'Quantum': 'from-blue-500 to-cyan-500',
-      'Healthcare': 'from-green-500 to-emerald-500',
-      'Financial': 'from-yellow-500 to-orange-500',
-      'Legal': 'from-indigo-500 to-purple-500',
-      'Marketing': 'from-pink-500 to-rose-500',
-      'Customer': 'from-blue-500 to-indigo-500',
-      'IoT': 'from-teal-500 to-cyan-500',
-      'HR': 'from-emerald-500 to-teal-500',
-      'Supply Chain': 'from-orange-500 to-red-500',
-      'Cloud': 'from-sky-500 to-blue-500',
-      'Data': 'from-violet-500 to-purple-500',
-      'Compliance': 'from-green-500 to-emerald-500',
-      'Identity': 'from-amber-500 to-yellow-500',
-      'Project': 'from-indigo-500 to-purple-500',
-      'Business Intelligence': 'from-cyan-500 to-blue-500',
-      'Migration': 'from-emerald-500 to-green-500'
-    };
-
-    for (const [key, color] of Object.entries(colorMap)) {
-      if (category.includes(key)) return color;
-    }
-    return 'from-gray-500 to-slate-500';
+;
+  const renderServiceCard = (service: ExpandedService2027) => {;
+    const CategoryIcon = getCategoryIcon (service.category) ;
+    const categoryColor = getCategoryColor (service.category) ;
+;
+    return (<motion.div;
+        key = {service.id};
+        initial = {;
+  { opacity: 0,;
+  y: 20 ;
+;
+}};
+        animate = {;
+  { opacity: 1,;
+  y: 0 ;
+;
+}};
+        transition={{ duration: 0.5 }};
+        className="bg - white dark:bg - slate - 800 rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 border border - gray - 200 dark:border - slate - 700 overflow - hidden";
+;
+        {/* Header */};
+        <div role="button" className={`bg - gradient - to - r ${categoryColor} p - 6 text - white`}>;
+          <div role="button" className="flex items - center justify - between mb - 4">;
+            <div role="button" className="flex items - center space - x-3">;
+              <CategoryIcon className="w - 8 h - 8"       />;
+              <div>;
+                <h3 className="text - xl font - bold">{service.name}</h3>;
+                <p className="text - sm opacity - 90">{service.category}</p>;
+              </div>;
+            </div>;
+            <div role="button" className="flex items - center space - x-2">;
+              <Star className="w - 5 h - 5 fill - current"       />;
+              <span className="font - semibold">{service.rating}</span>;
+              <span className="text - sm opacity - 90"> ({service.reviews}) </span>;
+            </div>;
+          </div>;
+          <p className="text - sm opacity - 90">{service.subcategory}</p>;
+        </div>;
+;
+        {/* Content */};
+        <div role="button" className="p - 6">;
+          <p className="text - gray - 600 dark:text - gray - 300 mb - 4 line - clamp - 3">;
+            {service.description};
+          </p>;
+;
+          {/* Pricing */};
+          <div role="button" className="bg - gray - 50 dark:bg - slate - 700 rounded - lg p - 4 mb - 4">;
+            <div role="button" className="flex items - center justify - between">;
+              <div>;
+                <p className="text - sm text - gray - 500 dark:text - gray - 400">Starting Price</p>;
+                <p className="text - 2xl font - bold text - gray - 900 dark:text - white">;
+                  {formatPrice (service.pricing) };
+                </p>;
+              </div>;
+              <div role="button" className="text - right">;
+                <p className="text - sm text - gray - 500 dark:text - gray - 400">Market Price</p>;
+                <p className="text - sm font - semibold text - gray - 900 dark:text - white">;
+                  {service.marketPrice};
+                </p>;
+              </div>;
+            </div>;
+          </div>;
+;
+          {/* Key Features */};
+          <div role="button" className="mb - 4">;
+            <h4 className="font - semibold text - gray - 900 dark:text - white mb - 2">Key Features</h4>;
+            <div role="button" className="space - y-1">;
+              {service.features.slice (0, 3) .map ( (feature, index) => (<div role="button" key={index} className="flex items - center space - x-2">;
+                  <CheckCircle className="w - 4 h - 4 text - green - 500"       />;
+                  <span className="text - sm text - gray - 600 dark:text - gray - 300">{feature}</span>;
+                </div>) ) };
+              {service.features.length > 3 && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setExpandedService (expandedService === service.id ? null : service.id) };
+                  className="text - sm text - blue - 600 dark:text - blue - 400 hover:underline";
+;
+                  {expandedService === service.id ? 'Show less' : `+${service.features.length - 3} more features`};
+                </button>) };
+            </div>;
+          </div>;
+;
+          {/* Expanded Features */};
+          <AnimatePresence>;
+            {expandedService === service.id && (<motion.div;
+                initial = {;
+  { opacity: 0,;
+  height: 0 ;
+;
+}};
+                animate = {;
+  { opacity: 1,;
+  height: 'auto' ;
+;
+}};
+                exit = {;
+  { opacity: 0,;
+  height: 0 ;
+;
+}};
+                className="mb - 4";
+;
+                <div role="button" className="space - y-1">;
+                  {service.features.slice (3) .map ( (feature, index) => (<div role="button" key={index} className="flex items - center space - x-2">;
+                      <CheckCircle className="w - 4 h - 4 text - green - 500"       />;
+                      <span className="text - sm text - gray - 600 dark:text - gray - 300">{feature}</span>;
+                    </div>) ) };
+                </div>;
+              </motion.div>;) };
+          </AnimatePresence>;
+;
+          {/* Benefits */};
+          <div role="button" className="mb - 4">;
+            <h4 className="font - semibold text - gray - 900 dark:text - white mb - 2">Benefits</h4>;
+            <div role="button" className="grid grid - cols - 2 gap - 2">;
+              {service.benefits.slice (0, 4) .map ( (benefit, index) => (<div role="button" key={index} className="flex items - center space - x-2">;
+                  <div role="button" className="w - 2 h - 2 bg - green - 500 rounded - full"></div>;
+                  <span className="text - xs text - gray - 600 dark:text - gray - 300 line - clamp - 2">;
+                    {benefit};
+                  </span>;
+                </div>) ) };
+            </div>;
+          </div>;
+;
+          {/* Technical Specs */};
+          <div role="button" className="mb - 4">;
+            <h4 className="font - semibold text - gray - 900 dark:text - white mb - 2">Technical Specs</h4>;
+            <div role="button" className="grid grid - cols - 2 gap - 4 text - sm">;
+              <div>;
+                <p className="text - gray - 500 dark:text - gray - 400">Uptime</p>;
+                <p className="font - semibold text - gray - 900 dark:text - white">{service.technicalSpecs.uptime}</p>;
+              </div>;
+              <div>;
+                <p className="text - gray - 500 dark:text - gray - 400">API Endpoints</p>;
+                <p className="font - semibold text - gray - 900 dark:text - white">{service.technicalSpecs.apiEndpoints}</p>;
+              </div>;
+            </div>;
+          </div>;
+;
+          {/* ROI and Setup */};
+          <div role="button" className="grid grid - cols - 2 gap - 4 mb - 4 text - sm">;
+            <div>;
+              <p className="text - gray - 500 dark:text - gray - 400">ROI</p>;
+              <p className="font - semibold text - green - 600">{service.roi}</p>;
+            </div>;
+            <div>;
+              <p className="text - gray - 500 dark:text - gray - 400">Setup Time</p>;
+              <p className="font - semibold text - gray - 900 dark:text - white">{service.setupTime}</p>;
+            </div>;
+          </div>;
+;
+          {/* Contact and Actions */};
+          <div role="button" className="border - t border - gray - 200 dark:border - slate - 700 pt - 4">;
+            <div role="button" className="flex items - center justify - between mb - 3">;
+              <div role="button" className="flex items - center space - x-2 text - sm text - gray - 500 dark:text - gray - 400">;
+                <Phone className="w - 4 h - 4"       />;
+                <span>{service.contactInfo.phone}</span>;
+              </div>;
+              <span className={`px - 2 py - 1 rounded - full text - xs font - semibold ${;
+                service.status === 'active' ? 'bg - green - 100 text - green - 800' :;
+                service.status === 'beta' ? 'bg - yellow - 100 text - yellow - 800' :;
+                'bg - gray - 100 text - gray - 800';
+              }`}>;
+                {service.status.toUpperCase () };
+              </span>;
+            </div>;
+;
+            <div role="button" className="flex space - x-2">;
+              <a;
+                href={`mailto:${service.contactInfo.email}`};
+                className="flex - 1 bg - blue - 600 hover:bg - blue - 700 text - white text - center py - 2 px - 4 rounded - lg transition - colors duration - 200 flex items - center justify - center space - x-2";
+;
+                <Mail className="w - 4 h - 4"       />;
+                <span > Contact</span>;
+              </a>;
+              <a;
+                href={service.contactInfo.website};
+                target="_blank";
+                rel="noopener noreferrer";
+                className="flex - 1 bg - gray - 100 hover:bg - gray - 200 dark:bg - slate - 700 dark:hover:bg - slate - 600 text - gray - 700 dark:text - gray - 300 text - center py - 2 px - 4 rounded - lg transition - colors duration - 200 flex items - center justify - center space - x-2";
+;
+                <ExternalLink className="w - 4 h - 4"       />;
+                <span > Learn More</span>;
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </motion.div>;) ;
   };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-bold text-white mb-6"
-          >
-            <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-              Expanded Services Portfolio 2027
-            </span>
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8"
-          >
-            Discover our comprehensive suite of innovative micro SAAS services, IT solutions, and AI-powered platforms designed to transform your business operations and drive unprecedented growth.
-          </motion.p>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <div className="flex items-center space-x-2 text-zion-cyan">
-              <CheckCircle className="w-5 h-5" />
-              <span className="font-medium">{allServices.length} Innovative Services</span>
-            </div>
-            <div className="flex items-center space-x-2 text-zion-purple">
-              <Star className="w-5 h-5" />
-              <span className="font-medium">Enterprise-Grade Solutions</span>
-            </div>
-            <div className="flex items-center space-x-2 text-zion-blue">
-              <Award className="w-5 h-5" />
-              <span className="font-medium">Industry-Leading Technology</span>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Search and Filters */}
-      <section className="px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-zion-slate-dark/50 backdrop-blur-xl rounded-2xl p-6 border border-zion-cyan/20">
-            <div className="flex flex-col lg:flex-row gap-6 items-center">
-              {/* Search */}
-              <div className="flex-1 w-full lg:w-auto">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search services, features, or industries..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark/80 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50"
-                  />
-                </div>
-              </div>
-
-              {/* Category Filter */}
-              <div className="flex items-center space-x-4">
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-zion-slate-dark/80 border border-zion-cyan/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
-                >
-                  {categories.map(category => (
-                    <option key={category} value={category}>
-                      {category === 'all' ? 'All Categories' : category}
-                    </option>
-                  ))}
-                </select>
-
-                {/* Sort */}
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-3 bg-zion-slate-dark/80 border border-zion-cyan/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
-                >
-                  <option value="name">Sort by Name</option>
-                  <option value="price">Sort by Price</option>
-                  <option value="category">Sort by Category</option>
-                </select>
-
-                {/* View Mode */}
-                <div className="flex items-center space-x-2">
-                  <button
-                    onClick={() => setViewMode('grid')}
-                    className={`p-3 rounded-xl transition-all duration-300 ${
-                      viewMode === 'grid' 
-                        ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/50' 
-                        : 'bg-zion-slate-dark/80 text-zion-slate-light border border-zion-cyan/20 hover:bg-zion-cyan/10'
-                    }`}
-                  >
-                    <Grid className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={() => setViewMode('list')}
-                    className={`p-3 rounded-xl transition-all duration-300 ${
-                      viewMode === 'list' 
-                        ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/50' 
-                        : 'bg-zion-slate-dark/80 text-zion-slate-light border border-zion-cyan/20 hover:bg-zion-cyan/10'
-                    }`}
-                  >
-                    <List className="w-5 h-5" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="max-w-7xl mx-auto">
-          {filteredServices.length === 0 ? (
-            <div className="text-center py-20">
-              <div className="text-zion-slate-light text-xl mb-4">No services found matching your criteria</div>
-              <button
-                onClick={() => {
-                  setSearchQuery('');
-                  setSelectedCategory('all');
-                }}
-                className="px-6 py-3 bg-zion-cyan text-white rounded-xl hover:bg-zion-cyan/80 transition-colors duration-300"
-              >
-                Clear Filters
-              </button>
-            </div>
-          ) : (
-            <div className={`grid gap-8 ${
-              viewMode === 'grid' 
-                ? 'grid-cols-1 md:grid-cols-2 xl:grid-cols-3' 
-                : 'grid-cols-1'
-            }`}>
-              {filteredServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={`bg-zion-slate-dark/50 backdrop-blur-xl rounded-2xl border border-zion-cyan/20 overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${
-                    viewMode === 'list' ? 'flex flex-col lg:flex-row' : ''
-                  }`}
-                >
-                  {/* Service Header */}
-                  <div className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}>
-                    <div className="flex items-start justify-between mb-4">
-                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${getCategoryColor(service.category)} flex items-center justify-center`}>
-                        {getCategoryIcon(service.category)}
-                      </div>
-                      <div className="text-right">
-                        <div className="text-zion-cyan font-bold text-lg">
-                          {formatPrice(service.price)}
-                        </div>
-                        <div className="text-zion-slate-light text-sm">per month</div>
-                      </div>
-                    </div>
-
-                    <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                    <p className="text-zion-slate-light text-sm mb-4">{service.description}</p>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {service.tags.slice(0, 3).map((tag, tagIndex) => (
-                        <span
-                          key={tagIndex}
-                          className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-lg border border-zion-cyan/20"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <div className="text-zion-slate-light text-sm">
-                        <div className="flex items-center space-x-1">
-                          <Clock className="w-4 h-4" />
-                          <span>{service.estimatedDelivery}</span>
-                        </div>
-                      </div>
-                      <button
-                        onClick={() => toggleServiceExpansion(service.id)}
-                        className="flex items-center space-x-2 text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-300"
-                      >
-                        <span className="text-sm font-medium">
-                          {expandedService === service.id ? 'Show Less' : 'Learn More'}
-                        </span>
-                        {expandedService === service.id ? (
-                          <ChevronUp className="w-4 h-4" />
-                        ) : (
-                          <ChevronDown className="w-4 h-4" />
-                        )}
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Expanded Service Details */}
-                  {expandedService === service.id && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className={`border-t border-zion-cyan/20 bg-zion-slate-dark/30 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}
-                    >
-                      <div className="p-6">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                          {/* Features */}
-                          <div>
-                            <h4 className="text-lg font-semibold text-zion-cyan mb-3">Key Features</h4>
-                            <ul className="space-y-2">
-                              {service.features.slice(0, 5).map((feature, featureIndex) => (
-                                <li key={featureIndex} className="flex items-start space-x-2">
-                                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                                  <span className="text-zion-slate-light text-sm">{feature}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-
-                          {/* Benefits */}
-                          <div>
-                            <h4 className="text-lg font-semibold text-zion-cyan mb-3">Benefits</h4>
-                            <ul className="space-y-2">
-                              {service.benefits.slice(0, 5).map((benefit, benefitIndex) => (
-                                <li key={benefitIndex} className="flex items-start space-x-2">
-                                  <TrendingUp className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                                  <span className="text-zion-slate-light text-sm">{benefit}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-
-                        {/* Technical Specs */}
-                        {service.technicalSpecs && (
-                          <div className="mt-6 p-4 bg-zion-slate-dark/50 rounded-xl border border-zion-cyan/20">
-                            <h4 className="text-lg font-semibold text-zion-cyan mb-3">Technical Specifications</h4>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                              <div>
-                                <div className="text-zion-slate-light text-sm mb-2">Technology Stack</div>
-                                <div className="flex flex-wrap gap-2">
-                                  {service.technicalSpecs.technology.slice(0, 3).map((tech, techIndex) => (
-                                    <span key={techIndex} className="px-2 py-1 bg-zion-purple/10 text-zion-purple text-xs rounded-lg border border-zion-purple/20">
-                                      {tech}
-                                    </span>
-                                  ))}
-                                </div>
-                              </div>
-                              <div>
-                                <div className="text-zion-slate-light text-sm mb-2">Uptime & Security</div>
-                                <div className="space-y-1">
-                                  <div className="text-white text-sm">Uptime: {service.technicalSpecs.uptime}</div>
-                                  <div className="text-white text-sm">API Endpoints: {service.technicalSpecs.apiEndpoints}</div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        )}
-
-                        {/* Market Information */}
-                        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-                          <div className="text-center p-4 bg-zion-slate-dark/50 rounded-xl border border-zion-cyan/20">
-                            <div className="text-zion-slate-light text-sm mb-1">Market Price</div>
-                            <div className="text-zion-cyan font-semibold">{service.marketPrice}</div>
-                          </div>
-                          <div className="text-center p-4 bg-zion-slate-dark/50 rounded-xl border border-zion-cyan/20">
-                            <div className="text-zion-slate-light text-sm mb-1">ROI</div>
-                            <div className="text-zion-purple font-semibold">{service.roi}</div>
-                          </div>
-                          <div className="text-center p-4 bg-zion-slate-dark/50 rounded-xl border border-zion-cyan/20">
-                            <div className="text-zion-slate-light text-sm mb-1">Innovation Level</div>
-                            <div className="text-zion-blue font-semibold">{service.innovationLevel}</div>
-                          </div>
-                        </div>
-
-                        {/* Contact Information */}
-                        <div className="mt-6 p-4 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-xl border border-zion-cyan/30">
-                          <h4 className="text-lg font-semibold text-zion-cyan mb-3">Get Started Today</h4>
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="space-y-2">
-                              <div className="flex items-center space-x-2 text-zion-slate-light">
-                                <Phone className="w-4 h-4 text-zion-cyan" />
-                                <span className="text-sm">{service.contactInfo.phone}</span>
-                              </div>
-                              <div className="flex items-center space-x-2 text-zion-slate-light">
-                                <Mail className="w-4 h-4 text-zion-cyan" />
-                                <span className="text-sm">{service.contactInfo.email}</span>
-                              </div>
-                            </div>
-                            <div className="space-y-2">
-                              <div className="flex items-center space-x-2 text-zion-slate-light">
-                                <MapPin className="w-4 h-4 text-zion-cyan" />
-                                <span className="text-sm">{service.contactInfo.address}</span>
-                              </div>
-                              <div className="flex items-center space-x-2 text-zion-slate-light">
-                                <ExternalLink className="w-4 h-4 text-zion-cyan" />
-                                <a 
-                                  href={service.contactInfo.website} 
-                                  target="_blank" 
-                                  rel="noopener noreferrer"
-                                  className="text-zion-cyan hover:text-zion-cyan/80 text-sm"
-                                >
-                                  Visit Website
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </motion.div>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10 rounded-2xl p-12 border border-zion-cyan/20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Our team of experts is ready to help you implement the perfect solution for your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="flex items-center justify-center space-x-2 px-8 py-4 bg-zion-cyan text-white rounded-xl hover:bg-zion-cyan/80 transition-colors duration-300 font-semibold"
-              >
-                <Phone className="w-5 h-5" />
-                <span>Call +1 302 464 0950</span>
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="flex items-center justify-center space-x-2 px-8 py-4 bg-zion-purple text-white rounded-xl hover:bg-zion-purple/80 transition-colors duration-300 font-semibold"
-              >
-                <Mail className="w-5 h-5" />
-                <span>Email Us</span>
-              </a>
-            </div>
-            <div className="mt-8 text-zion-slate-light">
-              <p className="text-sm">
-                <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
-              </p>
-              <p className="text-sm mt-2">
-                <strong>Website:</strong>{' '}
-                <a 
-                  href="https://ziontechgroup.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-zion-cyan hover:text-zion-cyan/80"
-                >
-                  https://ziontechgroup.com
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+;
+  const renderServiceList = (service: ExpandedService2027) => {;
+    const CategoryIcon = getCategoryIcon (service.category) ;
+    const categoryColor = getCategoryColor (service.category) ;
+;
+    return (<motion.div;
+        key = {service.id};
+        initial = {;
+  { opacity: 0,;
+  x: -20 ;
+;
+}};
+        animate = {;
+  { opacity: 1,;
+  x: 0 ;
+;
+}};
+        transition={{ duration: 0.5 }};
+        className="bg - white dark:bg - slate - 800 rounded - lg shadow - md hover:shadow - lg transition - all duration - 300 border border - gray - 200 dark:border - slate - 700 p - 6";
+;
+        <div role="button" className="flex items - start space - x-4">;
+          {/* Icon and Category */};
+          <div role="button" className={`bg - gradient - to - r ${categoryColor} p - 3 rounded - lg text - white flex - shrink - 0`}>;
+            <CategoryIcon className="w - 6 h - 6"       />;
+          </div>;
+;
+          {/* Content */};
+          <div role="button" className="flex - 1 min - w-0">;
+            <div role="button" className="flex items - start justify - between mb - 2">;
+              <div>;
+                <h3 className="text - lg font - bold text - gray - 900 dark:text - white">{service.name}</h3>;
+                <p className="text - sm text - gray - 500 dark:text - gray - 400">{service.category} • {service.subcategory}</p>;
+              </div>;
+              <div role="button" className="flex items - center space - x-2">;
+                <Star className="w - 4 h - 4 text - yellow - 500 fill - current"       />;
+                <span className="text - sm font - semibold">{service.rating}</span>;
+                <span className="text - xs text - gray - 500"> ({service.reviews}) </span>;
+              </div>;
+            </div>;
+;
+            <p className="text - gray - 600 dark:text - gray - 300 mb - 3 line - clamp - 2">;
+              {service.description};
+            </p>;
+;
+            {/* Key Info */};
+            <div role="button" className="grid grid - cols - 4 gap - 4 mb - 3 text - sm">;
+              <div>;
+                <p className="text - gray - 500 dark:text - gray - 400">Price</p>;
+                <p className="font - semibold text - gray - 900 dark:text - white">{formatPrice (service.pricing) }</p>;
+              </div>;
+              <div>;
+                <p className="text - gray - 500 dark:text - gray - 400">ROI</p>;
+                <p className="font - semibold text - green - 600">{service.roi}</p>;
+              </div>;
+              <div>;
+                <p className="text - gray - 500 dark:text - gray - 400">Setup</p>;
+                <p className="font - semibold text - gray - 900 dark:text - white">{service.setupTime}</p>;
+              </div>;
+              <div>;
+                <p className="text - gray - 500 dark:text - gray - 400">Status</p>;
+                <span className={`px - 2 py - 1 rounded - full text - xs font - semibold ${;
+                  service.status === 'active' ? 'bg - green - 100 text - green - 800' :;
+                  service.status === 'beta' ? 'bg - yellow - 100 text - yellow - 800' :;
+                  'bg - gray - 100 text - gray - 800';
+                }`}>;
+                  {service.status.toUpperCase () };
+                </span>;
+              </div>;
+            </div>;
+;
+            {/* Actions */};
+            <div role="button" className="flex items - center space - x-3">;
+              <a;
+                href={`mailto:${service.contactInfo.email}`};
+                className="bg - blue - 600 hover:bg - blue - 700 text - white px - 4 py - 2 rounded - lg transition - colors duration - 200 flex items - center space - x-2";
+;
+                <Mail className="w - 4 h - 4"       />;
+                <span > Contact Sales</span>;
+              </a>;
+              <a;
+                href={service.contactInfo.website};
+                target="_blank";
+                rel="noopener noreferrer";
+                className="bg - gray - 100 hover:bg - gray - 200 dark:bg - slate - 700 dark:hover:bg - slate - 600 text - gray - 700 dark:text - gray - 300 px - 4 py - 2 rounded - lg transition - colors duration - 200 flex items - center space - x-2";
+;
+                <ExternalLink className="w - 4 h - 4"       />;
+                <span > Learn More</span>;
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </motion.div>;) ;
+  };
+;
+  return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 50 via - blue - 50 to - indigo - 100 dark:from - slate - 900 dark:via - slate - 800 dark:to - slate - 900">;
+      <SEO;
+        title="Expanded Innovative Services 2027 - Zion Tech Group";
+        description="Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services. From quantum cybersecurity to healthcare AI, explore cutting - edge solutions.";
+        keywords="micro SAAS, IT services, AI services, cybersecurity, data analytics, cloud DevOps, IoT, fintech, healthcare technology";
+            />;
+;
+      {/* Hero Section */};
+      <div role="button" className="relative overflow - hidden">;
+        <div role="button" className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 24">;
+          <div role="button" className="text - center">;
+            <motion.h1;
+              initial = {;
+  { opacity: 0,;
+  y: 20 ;
+;
+}};
+              animate = {;
+  { opacity: 1,;
+  y: 0 ;
+;
+}};
+              transition={{ duration: 0.8 }};
+              className="text - 4xl md:text - 6xl font - bold text - gray - 900 dark:text - white mb - 6";
+;
+              Expanded Innovative Services < span className="block text - transparent bg - clip - text bg - gradient - to - r from - blue - 600 to - purple - 600">;
+                2027;
+              </span>;
+            </motion.h1>;
+            <motion.p;
+              initial = {;
+  { opacity: 0,;
+  y: 20 ;
+;
+}};
+              animate = {;
+  { opacity: 1,;
+  y: 0 ;
+;
+}};
+              transition = {;
+  { duration: 0.8,;
+  delay: 0.2 ;
+;
+}};
+              className="text - xl text - gray - 600 dark:text - gray - 300 mb - 8 max - w-3xl mx - auto";
+            >;
+              Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services.;
+              From quantum cybersecurity to healthcare AI, explore cutting - edge solutions that drive innovation and growth.;
+            </motion.p>;
+;
+            {/* Contact Info */};
+            <motion.div;
+              initial = {;
+  { opacity: 0,;
+  y: 20 ;
+;
+}};
+              animate = {;
+  { opacity: 1,;
+  y: 0 ;
+;
+}};
+              transition = {;
+  { duration: 0.8,;
+  delay: 0.4 ;
+;
+}};
+              className="bg - white dark:bg - slate - 800 rounded - 2xl shadow - xl p - 6 inline - block";
+;
+              <div role="button" className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
+                <div role="button" className="flex items - center space - x-3">;
+                  <Phone className="w - 5 h - 5 text - blue - 600"       />;
+                  <div>;
+                    <p className="text - sm text - gray - 500 dark:text - gray - 400">Phone</p>;
+                    <p className="font - semibold text - gray - 900 dark:text - white">+1 302 464 0950</p>;
+                  </div>;
+                </div>;
+                <div role="button" className="flex items - center space - x-3">;
+                  <Mail className="w - 5 h - 5 text - blue - 600"       />;
+                  <div>;
+                    <p className="text - sm text - gray - 500 dark:text - gray - 400">Email</p>;
+                    <p className="font - semibold text - gray - 900 dark:text - white">kleber@ziontechgroup.com</p>;
+                  </div>;
+                </div>;
+                <div role="button" className="flex items - center space - x-3">;
+                  <MapPin className="w - 5 h - 5 text - blue - 600"       />;
+                  <div>;
+                    <p className="text - sm text - gray - 500 dark:text - gray - 400">Address</p>;
+                    <p className="font - semibold text - gray - 900 dark:text - white">364 E Main St STE 1008</p>;
+                    <p className="font - semibold text - gray - 900 dark:text - white">Middletown DE 19709</p>;
+                  </div>;
+                </div>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </div>;
+      </div>;
+;
+      {/* Services Section */};
+      <div role="button" className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 16">;
+        {/* Filters and Search */};
+        <div role="button" className="bg - white dark:bg - slate - 800 rounded - 2xl shadow - lg p - 6 mb - 8">;
+          <div role="button" className="flex flex - col lg:flex - row lg:items - center lg:justify - between space - y-4 lg:space - y-0">;
+            {/* Search */};
+            <div role="button" className="flex - 1 max - w-md">;
+              <div role="button" className="relative">;
+                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 w - 5 h - 5"       />;
+                <input;
+                  type="text";
+                  placeholder="Search services...";
+                  value={searchQuery};
+                  onChange={ (e) => setSearchQuery (e.target.value) };
+                  className="w - full pl - 10 pr - 4 py - 2 border border - gray - 300 dark:border - slate - 600 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent dark:bg - slate - 700 dark:text - white";
+                />;
+              </div>;
+            </div>;
+;
+            {/* Category Filter */};
+            <div role="button" className="flex items - center space - x-4">;
+              <select;
+                value={selectedCategory};
+                onChange={ (e) => setSelectedCategory (e.target.value) };
+                className="px - 4 py - 2 border border - gray - 300 dark: border - slate - 600 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent dark:bg - slate - 700 dark:text - white";
+              >;
+                {EXPANDED_SERVICE_CATEGORIES.map ( (category) => (<option key={category} value={category}>;
+                    {category};
+                  </option>) ) };
+              </select>;
+;
+              {/* View Mode Toggle */};
+              <div role="button" className="flex items - center space - x-2 bg - gray - 100 dark:bg - slate - 700 rounded - lg p - 1">;
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') };
+                  className={`p - 2 rounded - md transition - colors duration - 200 ${;
+                    viewMode === 'grid';
+                      ? 'bg - white dark:bg - slate - 600 text - gray - 900 dark:text - white shadow - sm';
+                      : 'text - gray - 500 dark:text - gray - 400 hover:text - gray - 700 dark:hover:text - gray - 300';
+                  }`};
+;
+                  <Grid3X3 className="w - 5 h - 5"       />;
+                </button>;
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') };
+                  className={`p - 2 rounded - md transition - colors duration - 200 ${;
+                    viewMode === 'list';
+                      ? 'bg - white dark:bg - slate - 600 text - gray - 900 dark:text - white shadow - sm';
+                      : 'text - gray - 500 dark:text - gray - 400 hover:text - gray - 700 dark:hover:text - gray - 300';
+                  }`};
+;
+                  <List className="w - 5 h - 5"       />;
+                </button>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+;
+        {/* Services Count */};
+        <div role="button" className="mb - 8">;
+          <p className="text - gray - 600 dark:text - gray - 300">;
+            Showing {filteredServices.length} of {ALL_EXPANDED_SERVICES_2027.length} services;
+          </p>;
+        </div>;
+;
+        {/* Services Grid / List */};
+        {filteredServices.length > 0 ? (<div role="button" className={viewMode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' : 'space - y-6'}>;
+            {filteredServices.map ( (service) =>;
+              viewMode === 'grid' ? renderServiceCard (service) : renderServiceList (service) ) };
+          </div>) : (<div role="button" className="text - center py - 16">;
+            <div role="button" className="text - gray - 400 dark:text - gray - 500 mb - 4">;
+              <Search className="w - 16 h - 16 mx - auto"       />;
+            </div>;
+            <h3 className="text - lg font - semibold text - gray - 900 dark:text - white mb - 2">No services found</h3>;
+            <p className="text - gray - 600 dark:text - gray - 300">;
+              Try adjusting your search criteria or category filter;
+            </p>;
+          </div>) };
+      </div>;
+;
+      {/* CTA Section */};
+      <div role="button" className="bg - gradient - to - r from - blue - 600 to - purple - 600 py - 16">;
+        <div role="button" className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
+          <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 6">;
+            Ready to Transform Your Business?;
+          </h2>;
+          <p className="text - xl text - blue - 100 mb - 8 max - w-2xl mx - auto">;
+            Our innovative services are designed to drive growth, efficiency, and competitive advantage.;
+            Contact us today to discuss how we can help you achieve your goals.;
+          </p>;
+          <div role="button" className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-4">;
+            <a;
+              href="mailto:kleber@ziontechgroup.com";
+              className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - colors duration - 200 flex items - center space - x-2";
+;
+              <Mail className="w - 5 h - 5"       />;
+              <span > Get Started</span>;
+            </a>;
+            <a;
+              href="tel:+13024640950";
+              className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors duration - 200 flex items - center space - x-2";
+;
+              <Phone className="w - 5 h - 5"       />;
+              <span > Call Now</span>;
+            </a>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;) ;
 };
 
 export default ExpandedServicesShowcase2027;

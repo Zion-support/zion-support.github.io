@@ -144,17 +144,9 @@ export default function Help() {
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
             Find answers to common questions, explore our resources, and get the support you need to succeed on Zion Tech Group.
           </p>
-        </motion.div>
-
-        {/* Search Bar */}
-        <motion.div 
-          className="max-w-2xl mx-auto mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <div className="relative">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+          {/* Search Bar */}
+          <div className="max - w-2xl mx - auto relative">
+            <Search className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 text - zion - slate - light w - 5 h - 5"       />
             <input
               type="text"
               placeholder="Search for help articles, guides, and FAQs..."
@@ -208,105 +200,162 @@ export default function Help() {
                   onClick={() => toggleSection(`faq-${index}`)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-zinc-700/50 transition-colors"
                 >
-                  <span className="text-white font-medium">{faq.question}</span>
-                  {expandedSections[`faq-${index}`] ? (
-                    <ChevronUp className="w-5 h-5 text-zion-cyan" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-zion-cyan" />
-                  )}
-                </button>
-                {expandedSections[`faq-${index}`] && (
-                  <div className="px-6 pb-4">
-                    <p className="text-zion-slate-light mb-3">{faq.answer}</p>
-                    <Link 
-                      to={faq.link} 
-                      className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium inline-flex items-center"
-                    >
-                      Learn more <ArrowRight className="w-3 h-3 ml-1" />
-                    </Link>
+                  <div className="flex items - center space - x-3">
+                    <category.icon className="w - 6 h - 6 text - zion - cyan"       />
+                    <h3 className="text - lg font - semibold text - white">
+                      {category.title}
+                    </h3>
                   </div>
-                )}
-              </div>
-            ))}
+                  {openCategories.includes (category.id) ? (<ChevronUp className="w - 5 h - 5 text - zion - cyan"       />) : (<ChevronDown className="w - 5 h - 5 text - zion - cyan"       />) }
+                </button>
+                {openCategories.includes (category.id) && (<div className="px - 6 pb - 4 border - t border - zion - cyan / 20">
+                    <div className="space - y-3 pt - 4">
+                      {category.articles.map ( (article, articleIndex) => (<div
+                          key={articleIndex}
+                          className="bg - zion - blue - dark / 30 p - 4 rounded - lg hover:bg - zion - cyan / 10 transition - colors"
+                        >
+                          <h4 className="text - white font - medium mb - 2">
+                            {article.title}
+                          </h4>
+                          <p className="text - zion - slate - light text - sm mb - 3">
+                            {article.description}
+                          </p>
+                          <Link
+                            to={article.url}
+                            className="inline - flex items - center space - x-2 text - zion - cyan hover:text - zion - cyan - light transition - colors text - sm font - medium"
+                          >
+                            <span > Read Article</span>
+                            <ArrowRight className="w - 4 h - 4"       />
+                          </Link>
+                        </div>) ) }
+                    </div>
+                  </div>) }
+              </div>) ) }
+            {filteredCategories.length === 0 && (<div className="text - center py - 16">
+                <FileText className="w - 16 h - 16 text - zion - slate - light mx - auto mb - 4"       />
+                <h3 className="text - xl font - bold text - white mb - 2">
+                  No help articles found
+                </h3>
+                <p className="text - zion - slate - light mb - 6">
+                  Try adjusting your search terms or contact our support team
+                  directly.
+                </p>
+              </div>) }
           </div>
-        </motion.div>
-
-        {/* Contact Methods */}
-        <motion.div 
-          className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Still need help? Contact us</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {contactMethods.map((method, index) => (
-              <div key={index} className="bg-zinc-800/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover:border-zion-cyan/40 transition-all duration-300">
-                <div className="text-zion-cyan mb-4 flex justify-center">{method.icon}</div>
-                <h3 className="text-white font-semibold text-lg mb-2">{method.title}</h3>
-                <p className="text-zion-slate-light mb-4">{method.description}</p>
-                <div className="text-zion-cyan font-medium mb-4">{method.contact}</div>
-                <a
-                  href={method.link}
-                  className="inline-block px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-transform"
-                >
-                  {method.action}
-                </a>
+        </div>
+      </section>
+      {/* Video Tutorials */}
+      <section className="py - 16">
+        <div className="container mx - auto px - 4">
+          <h2 className="text - 3xl font - bold text - white text - center mb - 12">
+            Video Tutorials
+          </h2>
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 max - w-6xl mx - auto">
+            <div className="bg - zion - blue - dark / 50 rounded - lg border border - zion - cyan / 20 overflow - hidden">
+              <div className="aspect - video bg - zion - blue - dark / 30 flex items - center justify - center">
+                <Video className="w - 16 h - 16 text - zion - cyan"       />
               </div>
-            ))}
+              <div className="p - 6">
+                <h3 className="text - lg font - semibold text - white mb - 2">
+                  Getting Started Guide
+                </h3>
+                <p className="text - zion - slate - light text - sm mb - 4">
+                  Learn the basics of using Zion Tech Group in this
+                  comprehensive tutorial.
+                </p>
+                <button className="text - zion - cyan hover:text - zion - cyan - light transition - colors text - sm font - medium">
+                  Watch Video →
+                </button>
+              </div>
+            </div>
+            <div className="bg - zion - blue - dark / 50 rounded - lg border border - zion - cyan / 20 overflow - hidden">
+              <div className="aspect - video bg - zion - blue - dark / 30 flex items - center justify - center">
+                <Video className="w - 16 h - 16 text - zion - cyan"       />
+              </div>
+              <div className="p - 6">
+                <h3 className="text - lg font - semibold text - white mb - 2">
+                  Marketplace Mastery
+                </h3>
+                <p className="text - zion - slate - light text - sm mb - 4">
+                  Master the art of listing services and finding opportunities.
+                </p>
+                <button className="text - zion - cyan hover:text - zion - cyan - light transition - colors text - sm font - medium">
+                  Watch Video →
+                </button>
+              </div>
+            </div>
+            <div className="bg - zion - blue - dark / 50 rounded - lg border border - zion - cyan / 20 overflow - hidden">
+              <div className="aspect - video bg - zion - blue - dark / 30 flex items - center justify - center">
+                <Video className="w - 16 h - 16 text - zion - cyan"       />
+              </div>
+              <div className="p - 6">
+                <h3 className="text - lg font - semibold text - white mb - 2">
+                  AI Services Overview
+                </h3>
+                <p className="text - zion - slate - light text - sm mb - 4">
+                  Discover how to leverage our AI and technology services.
+                </p>
+                <button className="text - zion - cyan hover:text - zion - cyan - light transition - colors text - sm font - medium">
+                  Watch Video →
+                </button>
+              </div>
+            </div>
           </div>
-        </motion.div>
-
-        {/* Additional Resources */}
-        <motion.div 
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
-        >
-          <h2 className="text-3xl font-bold text-white mb-8">Additional Resources</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <Link 
-              to="/faq" 
-              className="bg-zinc-800/50 border border-zion-cyan/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
-            >
-              <div className="text-zion-cyan mb-4 flex justify-center">
-                <FileText className="w-8 h-8" />
-              </div>
-              <h3 className="text-white font-semibold text-lg mb-2">Complete FAQ</h3>
-              <p className="text-zion-slate-light mb-4">Browse our comprehensive FAQ section for detailed answers</p>
-              <span className="text-zion-cyan group-hover:text-zion-cyan-light transition-colors font-medium">
-                View FAQ →
-              </span>
-            </Link>
-
-            <Link 
-              to="/blog" 
-              className="bg-zinc-800/50 border border-zion-cyan/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
-            >
-              <div className="text-zion-cyan mb-4 flex justify-center">
-                <BookOpen className="w-8 h-8" />
-              </div>
-              <h3 className="text-white font-semibold text-lg mb-2">Help Articles</h3>
-              <p className="text-zion-slate-light mb-4">Read detailed guides and tutorials in our blog</p>
-              <span className="text-zion-cyan group-hover:text-zion-cyan-light transition-colors font-medium">
-                Read Articles →
-              </span>
-            </Link>
-
-            <Link 
-              to="/contact" 
-              className="bg-zinc-800/50 border border-zion-cyan/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
-            >
-              <div className="text-zion-cyan mb-4 flex justify-center">
-                <MessageCircle className="w-8 h-8" />
-              </div>
-              <h3 className="text-white font-semibold text-lg mb-2">Contact Form</h3>
-              <p className="text-zion-slate-light mb-4">Send us a message and we'll get back to you quickly</p>
-              <span className="text-zion-cyan group-hover:text-zion-cyan-light transition-colors font-medium">
-                Contact Us →
-              </span>
-            </Link>
+        </div>
+      </section>
+      {/* Contact Support */}
+      <section className="py - 16 bg - zion - slate - dark">
+        <div className="container mx - auto px - 4 text - center">
+          <h2 className="text - 3xl font - bold text - white mb - 6">
+            Still Need Help?
+          </h2>
+          <p className="text - zion - slate - light mb - 8 max - w-2xl mx - auto">
+            Our support team is here to help you. Contact us through any of the
+            channels below and we'll get back to you as soon as possible.
+          </p>
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 max - w-4xl mx - auto">
+            <div className="bg - zion - blue - dark / 50 p - 6 rounded - lg border border - zion - cyan / 20">
+              <MessageCircle className="w - 12 h - 12 text - zion - cyan mx - auto mb - 4"       />
+              <h3 className="text - lg font - semibold text - white mb - 2">
+                Live Chat
+              </h3>
+              <p className="text - zion - slate - light text - sm mb - 4">
+                Chat with our support team in real - time
+              </p>
+              <button className="px - 4 py - 2 bg - zion - cyan text - white rounded - lg font - medium hover:bg - zion - cyan - light transition - colors">
+                Start Chat
+              </button>
+            </div>
+            <div className="bg - zion - blue - dark / 50 p - 6 rounded - lg border border - zion - cyan / 20">
+              <Phone className="w - 12 h - 12 text - zion - cyan mx - auto mb - 4"       />
+              <h3 className="text - lg font - semibold text - white mb - 2">
+                Phone Support
+              </h3>
+              <p className="text - zion - slate - light text - sm mb - 4">
+                Call us directly for immediate assistance
+              </p>
+              <a
+                href="tel:+13024640950"
+                className="px - 4 py - 2 bg - zion - cyan text - white rounded - lg font - medium hover:bg - zion - cyan - light transition - colors inline - block"
+              >
+                Call Now
+              </a>
+            </div>
+            <div className="bg - zion - blue - dark / 50 p - 6 rounded - lg border border - zion - cyan / 20">
+              <Mail className="w - 12 h - 12 text - zion - cyan mx - auto mb - 4"       />
+              <h3 className="text - lg font - semibold text - white mb - 2">
+                Email Support
+              </h3>
+              <p className="text - zion - slate - light text - sm mb - 4">
+                Send us a detailed message
+              </p>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="px - 4 py - 2 bg - zion - cyan text - white rounded - lg font - medium hover:bg - zion - cyan - light transition - colors inline - block"
+              >
+                Send Email
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>

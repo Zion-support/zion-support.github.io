@@ -1,9 +1,11 @@
 #!/bin/bash
 
-# PM2 Error Automation System Startup Script
-# This script manages the comprehensive error fixing and prevention automation system
+# Error Automation System Startup Script
+# This script starts the comprehensive error fixing automation system
 
 set -e
+
+echo "🚀 Starting Error Automation System..."
 
 # Colors for output
 RED='\033[0;31m'
@@ -12,208 +14,130 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-# Project root
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "$PROJECT_ROOT"
-
-log() {
-    echo -e "${BLUE}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
+# Function to print colored output
+print_status() {
+    echo -e "${BLUE}[$(date '+%Y-%m-%d %H:%M:%S')]${NC} $1"
 }
 
-success() {
+print_success() {
     echo -e "${GREEN}✅ $1${NC}"
 }
 
-warning() {
+print_warning() {
     echo -e "${YELLOW}⚠️  $1${NC}"
 }
 
-error() {
+print_error() {
     echo -e "${RED}❌ $1${NC}"
 }
 
-check_requirements() {
-    log "Checking system requirements..."
-    
-    # Check if Node.js is installed
-    if ! command -v node &> /dev/null; then
-        error "Node.js is not installed. Please install Node.js first."
-        exit 1
-    fi
-    
-    # Check if npm is installed
-    if ! command -v npm &> /dev/null; then
-        error "npm is not installed. Please install npm first."
-        exit 1
-    fi
-    
-    # Check if PM2 is installed
-    if ! command -v pm2 &> /dev/null; then
-        warning "PM2 is not installed. Installing PM2 globally..."
-        npm install -g pm2
-    fi
-    
-    success "All requirements met"
-}
+# Check if PM2 is installed
+if ! command -v pm2 &> /dev/null; then
+    print_error "PM2 is not installed. Installing PM2..."
+    npm install -g pm2
+    print_success "PM2 installed successfully"
+fi
 
-install_dependencies() {
-    log "Installing project dependencies..."
-    
-    if [ ! -d "node_modules" ]; then
-        npm install
-        success "Dependencies installed"
-    else
-        log "Dependencies already installed, checking for updates..."
-        npm update
-        success "Dependencies updated"
-    fi
-}
+# Create logs directory
+print_status "Creating logs directory..."
+mkdir -p logs
+mkdir -p error-reports
 
-start_automation_system() {
-    log "Starting PM2 Error Automation System..."
-    
-    # Check if PM2 is running
-    if pm2 list | grep -q "pm2-error-automation-orchestrator"; then
-        warning "Automation system is already running. Restarting..."
-        pm2 restart pm2-error-automation-orchestrator
-    else
-        # Start the automation system
-        pm2 start ecosystem.config.cjs
-        success "Automation system started"
-    fi
-    
-    # Show status
-    pm2 status
-}
+# Install dependencies if needed
+if [ ! -d "node_modules" ]; then
+    print_status "Installing dependencies..."
+    npm install --legacy-peer-deps
+    print_success "Dependencies installed"
+fi
 
-stop_automation_system() {
-    log "Stopping PM2 Error Automation System..."
-    
-    if pm2 list | grep -q "pm2-error-automation-orchestrator"; then
-        pm2 stop pm2-error-automation-orchestrator
-        success "Automation system stopped"
-    else
-        warning "Automation system is not running"
-    fi
-}
+# Stop any existing error automation processes
+print_status "Stopping existing error automation processes..."
+pm2 stop ecosystem.error-automation.config.cjs 2>/dev/null || true
+pm2 delete ecosystem.error-automation.config.cjs 2>/dev/null || true
 
-restart_automation_system() {
-    log "Restarting PM2 Error Automation System..."
-    
-    if pm2 list | grep -q "pm2-error-automation-orchestrator"; then
-        pm2 restart pm2-error-automation-orchestrator
-        success "Automation system restarted"
-    else
-        warning "Automation system is not running. Starting it..."
-        start_automation_system
-    fi
-}
+# Start the error automation system
+print_status "Starting error automation system..."
+pm2 start ecosystem.error-automation.config.cjs --update-env
 
-show_status() {
-    log "PM2 Error Automation System Status:"
-    echo ""
-    
-    if pm2 list | grep -q "pm2-error-automation-orchestrator"; then
-        pm2 status
-        echo ""
-        log "Recent logs:"
-        pm2 logs pm2-error-automation-orchestrator --lines 10
-    else
-        warning "Automation system is not running"
-    fi
-}
+# Wait a moment for processes to start
+sleep 3
 
-show_logs() {
-    log "Showing logs for PM2 Error Automation System..."
-    
-    if pm2 list | grep -q "pm2-error-automation-orchestrator"; then
-        pm2 logs pm2-error-automation-orchestrator --lines 50
-    else
-        error "Automation system is not running"
-    fi
-}
+# Check status
+print_status "Checking automation status..."
+pm2 status
 
-run_manual_fix() {
-    log "Running manual error fix..."
-    
-    if [ -f "scripts/automation/comprehensive-error-fixer.cjs" ]; then
-        node scripts/automation/comprehensive-error-fixer.cjs
-        success "Manual error fix completed"
-    else
-        error "Error fixer script not found"
-    fi
-}
+# Show logs
+print_status "Recent logs from error automation processes:"
+echo ""
 
-run_manual_prevention() {
-    log "Running manual error prevention..."
-    
-    if [ -f "scripts/automation/intelligent-error-prevention.cjs" ]; then
-        node scripts/automation/intelligent-error-prevention.cjs
-        success "Manual error prevention completed"
-    else
-        error "Error prevention script not found"
-    fi
-}
+# Show logs from key processes
+print_status "Console Error Fixer logs:"
+pm2 logs console-error-fixer --lines 5 2>/dev/null || print_warning "No logs available yet"
 
-show_help() {
-    echo "PM2 Error Automation System Management Script"
-    echo ""
-    echo "Usage: $0 [COMMAND]"
-    echo ""
-    echo "Commands:"
-    echo "  start     - Start the automation system"
-    echo "  stop      - Stop the automation system"
-    echo "  restart   - Restart the automation system"
-    echo "  status    - Show system status"
-    echo "  logs      - Show recent logs"
-    echo "  fix       - Run manual error fix"
-    echo "  prevent   - Run manual error prevention"
-    echo "  install   - Install dependencies"
-    echo "  help      - Show this help message"
-    echo ""
-    echo "Examples:"
-    echo "  $0 start          # Start the automation system"
-    echo "  $0 status         # Check system status"
-    echo "  $0 fix            # Run manual error fix"
-    echo ""
-}
+echo ""
+print_status "Comprehensive Error Fixer logs:"
+pm2 logs error-fixing-orchestrator --lines 5 2>/dev/null || print_warning "No logs available yet"
 
-# Main script logic
-case "${1:-help}" in
-    start)
-        check_requirements
-        install_dependencies
-        start_automation_system
-        ;;
-    stop)
-        stop_automation_system
-        ;;
-    restart)
-        restart_automation_system
-        ;;
-    status)
-        show_status
-        ;;
-    logs)
-        show_logs
-        ;;
-    fix)
-        run_manual_fix
-        ;;
-    prevent)
-        run_manual_prevention
-        ;;
-    install)
-        check_requirements
-        install_dependencies
-        ;;
-    help|--help|-h)
-        show_help
-        ;;
-    *)
-        error "Unknown command: $1"
-        echo ""
-        show_help
-        exit 1
-        ;;
-esac
+echo ""
+print_status "TypeScript Error Fixer logs:"
+pm2 logs typescript-error-fixer --lines 5 2>/dev/null || print_warning "No logs available yet"
+
+# Create monitoring script
+cat > monitor-error-automation.sh << 'EOF'
+#!/bin/bash
+echo "🔍 Error Automation System Monitor"
+echo "=================================="
+echo ""
+echo "PM2 Status:"
+pm2 status
+echo ""
+echo "Recent Logs:"
+pm2 logs --lines 20
+echo ""
+echo "Error Reports:"
+ls -la error-reports/ 2>/dev/null || echo "No error reports yet"
+echo ""
+echo "Log Files:"
+ls -la logs/ 2>/dev/null || echo "No log files yet"
+EOF
+
+chmod +x monitor-error-automation.sh
+
+# Create quick restart script
+cat > restart-error-automation.sh << 'EOF'
+#!/bin/bash
+echo "🔄 Restarting Error Automation System..."
+pm2 restart ecosystem.error-automation.config.cjs
+echo "✅ Error automation system restarted"
+EOF
+
+chmod +x restart-error-automation.sh
+
+# Create stop script
+cat > stop-error-automation.sh << 'EOF'
+#!/bin/bash
+echo "🛑 Stopping Error Automation System..."
+pm2 stop ecosystem.error-automation.config.cjs
+echo "✅ Error automation system stopped"
+EOF
+
+chmod +x stop-error-automation.sh
+
+print_success "Error automation system started successfully!"
+echo ""
+echo "📋 Available commands:"
+echo "  ./monitor-error-automation.sh  - Monitor the system"
+echo "  ./restart-error-automation.sh  - Restart the system"
+echo "  ./stop-error-automation.sh     - Stop the system"
+echo "  pm2 logs                       - View all logs"
+echo "  pm2 status                     - View process status"
+echo ""
+echo "🔄 The system will automatically:"
+echo "  • Fix TypeScript errors every 10 minutes"
+echo "  • Fix JSX errors every 12 minutes"
+echo "  • Fix build errors every 20 minutes"
+echo "  • Fix dependency issues every 30 minutes"
+echo "  • Run comprehensive error fixing every 15 minutes"
+echo "  • Monitor for critical errors every 3 minutes"
+echo ""
+print_success "Error automation system is now running and will automatically fix project errors!"

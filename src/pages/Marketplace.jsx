@@ -115,16 +115,62 @@ export default function Marketplace() {
     category.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark">
-        <div className="container mx-auto px-4 text-center">
-          <motion.h1 
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+      {/* Search and filter bar */}
+      <div className="bg - gray - 800 border border - gray - 700 rounded - lg p - 4 mb - 8">
+        <div className="flex flex - col md:flex - row gap - 4">
+          <div className="relative flex - 1">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={e => setSearchQuery (e.target.value) }
+              placeholder="Search services..."
+              className="w - full px - 4 py - 2 bg - gray - 700 border border - gray - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500"
+            />
+          </div>
+          <div className="flex gap - 2">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={ () => setView ('grid') }
+              className={
+                view === 'grid' ? 'text - blue - 400' : 'text - gray - 400'
+              }
+            >
+              <Grid3X3 className="h - 4 w - 4"       />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={ () => setView ('list') }
+              className={
+                view === 'list' ? 'text - blue - 400' : 'text - gray - 400'
+              }
+            >
+              <ListFilter className="h - 4 w - 4"       />
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Main content */}
+      <div className="lg:col - span - 3">
+        {/* Results count */}
+        <div className="mb - 6">
+          <p className="text - gray - 300">
+            Showing {filteredListings.length} results
+            {searchQuery && ` for "${searchQuery}"`}
+          </p>
+        </div>
+
+        {/* Display marketplace listings */}
+        {isLoading ? (<div className="flex justify - center py - 20">
+            <Loader2 className="h - 8 w - 8 animate - spin text - blue - 500"       />
+          </div>) : (<div
+            className={
+              view === 'grid'
+                ? 'grid grid - cols - 1 md:grid - cols - 2 gap - 6'
+                : 'flex flex - col gap - 6'
+            }
           >
             Zion Tech <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Marketplace</span>
           </motion.h1>

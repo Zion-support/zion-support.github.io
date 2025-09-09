@@ -20,23 +20,8 @@ export function Header() {
             <Link to="/" className="text-zion-slate-light hover:text-white transition-colors">
               Home
             </Link>
-            <Link to="/services" className="text-zion-slate-light hover:text-white transition-colors">
-              Services
-            </Link>
-            <Link to="/about" className="text-zion-slate-light hover:text-white transition-colors">
-              About
-            </Link>
-            <Link to="/contact" className="text-zion-slate-light hover:text-white transition-colors">
-              Contact
-            </Link>
-          </nav>
-          
-          <Link
-            to="/contact"
-            className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-purple hover:to-zion-cyan transition-all duration-300"
-          >
-            Get Started
-          </Link>
+          </div>
+          <MainNavigation       />
         </div>
       </div>
     </header>

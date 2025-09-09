@@ -61,14 +61,12 @@ const PerformanceOptimizedHero = memo(() => {
             </div>))}
         </div>)}
 
-      <div className="relative z-10 max-w-7xl mx-auto text-center">
-        <div className="animate-fade-in-up">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="neon-text">
-              Transform Your Business
-            </span>
-            <br />
-            <span className="text-white">With AI & Tech</span>
+      <div className="relative z - 10 max - w-7xl mx - auto text - center">
+        <div className="animate - fade - in - up">
+          <h1 className="text - 5xl md:text - 7xl font - bold mb - 6">
+            <span className="neon - text">Transform Your Business</span>
+            <br       />
+            <span className="text - white">With AI & Tech</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
@@ -86,7 +84,7 @@ const PerformanceOptimizedHero = memo(() => {
           </div>
 
           {/* Optimized Stats Component */}
-          <HeroStats stats={stats}/>
+          <HeroStats stats={stats}       />
         </div>
       </div>
 

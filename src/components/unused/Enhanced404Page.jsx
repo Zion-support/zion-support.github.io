@@ -16,7 +16,7 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
         {/* Error Icon */}
         <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.2, type: "spring", stiffness: 200 }} className="mb-8">
           <div className="relative">
-            <ExclamationTriangleIcon className="w-32 h-32 text-red-400 mx-auto"/>
+            <ExclamationTriangleIcon className="w-32 h-32 text-red-400 mx-auto"       />
             <div className="absolute inset-0 bg-red-400/20 rounded-full blur-3xl"></div>
           </div>
         </motion.div>
@@ -40,19 +40,33 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
         </motion.p>
 
         {/* Action Buttons */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Link to="/" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-            <HomeIcon className="w-5 h-5"/>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+        >
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+          >
+            <HomeIcon className="w-5 h-5"       />
             Go Home
           </Link>
 
-          <Link to="/services" className="inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-            <MagnifyingGlassIcon className="w-5 h-5"/>
+          <Link
+            to="/services"
+            className="inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+          >
+            <MagnifyingGlassIcon className="w-5 h-5"       />
             Browse Services
           </Link>
 
-          <button onClick={() => window.history.back()} className="inline-flex items-center gap-2 bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-            <ArrowLeftIcon className="w-5 h-5"/>
+          <button
+            onClick={() => window.history.back()}
+            className="inline-flex items-center gap-2 bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+          >
+            <ArrowLeftIcon className="w-5 h-5"       />
             Go Back
           </button>
         </motion.div>
@@ -64,8 +78,17 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {suggestions.map((route, index) => (<motion.div key={route} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.9 + index * 0.1 }}>
-                <Link to={route} className="block p-4 bg-gray-700/50 hover:bg-gray-600/50 rounded-lg text-gray-300 hover:text-white transition-all duration-300 border border-gray-600 hover:border-gray-500">
+            {suggestions.map((((((((route, index, index, index, index, index, index, index) => ({ ...((((((route, index, index, index, index, index, index, key: index })) => ({ ...(((((route, index, index, index, index, index, key: index })) => ({ ...((((route, index, index, index, index, key: index })) => ({ ...(((route, index, index, index, key: index })) => ({ ...((route, index, index, key: index })) => ({ ...(route, index, key: index })) => (
+              <motion.div
+                key={route}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.9 + index * 0.1 }}
+              >
+                <Link
+                  to={route}
+                  className="block p-4 bg-gray-700/50 hover:bg-gray-600/50 rounded-lg text-gray-300 hover:text-white transition-all duration-300 border border-gray-600 hover:border-gray-500"
+                >
                   {route === '/services' && 'Our Services'}
                   {route === '/ai-solutions' && 'AI Solutions'}
                   {route === '/about' && 'About Us'}

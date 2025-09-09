@@ -86,10 +86,10 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
     };
     return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-4 text-white">
-        <div className="flex items-center justify-between">
-          <h3 className="text-lg font-semibold flex items-center gap-2">
-            <BarChart3 className="w-5 h-5"/>
+      <div className="bg - gradient - to - r from - purple - 500 to - pink - 500 p - 4 text - white">
+        <div className="flex items - center justify - between">
+          <h3 className="text - lg font - semibold flex items - center gap - 2">
+            <BarChart3 className="w - 5 h - 5"       />
             Analytics Dashboard
           </h3>
           <div className="flex items-center gap-2">
@@ -121,9 +121,9 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
       <div className="p-4 border-b border-gray-200 dark:border-gray-700">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {/* Session Duration */}
-          <div className="text-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-            <div className="flex items-center justify-center mb-2">
-              <Clock className="w-5 h-5 text-purple-500"/>
+          <div className="text - center p - 3 bg - gray - 50 dark:bg - gray - 700 rounded - lg">
+            <div className="flex items - center justify - center mb - 2">
+              <Clock className="w - 5 h - 5 text - purple - 500"       />
             </div>
             <div className="text-2xl font-bold text-gray-900 dark:text-white">
               {analyticsSummary ? formatDuration(analyticsSummary.sessionDuration) : 'N/A'}
@@ -132,9 +132,9 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           </div>
 
           {/* Page Views */}
-          <div className="text-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-            <div className="flex items-center justify-center mb-2">
-              <Eye className="w-5 h-5 text-blue-500"/>
+          <div className="text - center p - 3 bg - gray - 50 dark:bg - gray - 700 rounded - lg">
+            <div className="flex items - center justify - center mb - 2">
+              <Eye className="w - 5 h - 5 text - blue - 500"       />
             </div>
             <div className="text-2xl font-bold text-gray-900 dark:text-white">
               {analyticsSummary?.pageViews || 0}
@@ -143,9 +143,9 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           </div>
 
           {/* Total Events */}
-          <div className="text-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-            <div className="flex items-center justify-center mb-2">
-              <Activity className="w-5 h-5 text-green-500"/>
+          <div className="text - center p - 3 bg - gray - 50 dark:bg - gray - 700 rounded - lg">
+            <div className="flex items - center justify - center mb - 2">
+              <Activity className="w - 5 h - 5 text - green - 500"       />
             </div>
             <div className="text-2xl font-bold text-gray-900 dark:text-white">
               {formatNumber(events.length)}
@@ -154,9 +154,9 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           </div>
 
           {/* Performance Score */}
-          <div className="text-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-            <div className="flex items-center justify-center mb-2">
-              <TrendingUp className="w-5 h-5 text-orange-500"/>
+          <div className="text - center p - 3 bg - gray - 50 dark:bg - gray - 700 rounded - lg">
+            <div className="flex items - center justify - center mb - 2">
+              <TrendingUp className="w - 5 h - 5 text - orange - 500"       />
             </div>
             <div className="text-2xl font-bold text-gray-900 dark:text-white">
               {getPerformanceScore()}
@@ -166,12 +166,12 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         </div>
       </div>
 
-      {/* Real-time Events Feed */}
-      <div className="p-4 border-b border-gray-200 dark:border-gray-700">
-        <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-          <Activity className="w-4 h-4"/>
-          Real-time Events
-          {showRealTime && (<div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>)}
+      {/* Real - time Events Feed */}
+      <div className="p - 4 border - b border - gray - 200 dark:border - gray - 700">
+        <h4 className="font - medium text - gray - 900 dark:text - white mb - 3 flex items - center gap - 2">
+          <Activity className="w - 4 h - 4"       />
+          Real - time Events
+          {showRealTime && (<div className="w - 2 h - 2 bg - green - 500 rounded - full animate - pulse"></div>) }
         </h4>
         
         <div className="space-y-2 max-h-32 overflow-y-auto">
@@ -269,21 +269,27 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         </div>)}
 
       {/* Controls */}
-      <div className="p-4 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
-        <div className="flex gap-2">
-          <button onClick={() => {
-            handleDashboardInteraction('refresh_clicked');
-            updateAnalyticsSummary();
-        }} className="flex-1 px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2">
-            <RefreshCw className="w-4 h-4"/>
+      <div className="p - 4 border - t border - gray - 200 dark:border - gray - 700 bg - gray - 50 dark:bg - gray - 800">
+        <div className="flex gap - 2">
+          <button
+            onClick={ () => {
+              handleDashboardInteraction ('refresh_clicked') ;
+              updateAnalyticsSummary () ;
+            }}
+            className="flex - 1 px - 3 py - 2 bg - blue - 500 hover:bg - blue - 600 text - white rounded - lg text - sm font - medium transition - colors flex items - center justify - center gap - 2"
+          >
+            <RefreshCw className="w - 4 h - 4"       />
             Refresh Data
           </button>
-          
-          <button onClick={() => {
-            handleTrackConversion();
-            handleDashboardInteraction('conversion_tracked');
-        }} className="px-3 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">
-            <Target className="w-4 h-4"/>
+
+          <button
+            onClick={ () => {
+              handleTrackConversion () ;
+              handleDashboardInteraction ('conversion_tracked') ;
+            }}
+            className="px - 3 py - 2 bg - green - 500 hover:bg - green - 600 text - white rounded - lg text - sm font - medium transition - colors flex items - center gap - 2"
+          >
+            <Target className="w - 4 h - 4"       />
             Track Goal
           </button>
         </div>

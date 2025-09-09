@@ -1,324 +1,604 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Clock, TrendingUp, ArrowRight, Sparkles } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-
-interface SearchResult {
+import { useNavigate } from 'react - router - dom';
+import { useNavigate } from 'react - router - dom';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useDebounce } from '@/hooks / useDebounce';
+export function EnhancedSearch ({ ;
+export function EnhancedSearch ({ ;
+import { motion, AnimatePresence } from 'framer - motion';
+import { motion, AnimatePresence } from 'framer - motion';
+;
+;
+interface SearchResult {;
+;
   id: string;
   title: string;
   description: string;
   type: 'service' | 'page' | 'blog' | 'product';
   url: string;
-  relevance: number;
-}
-
-interface SearchSuggestion {
+  type: 'service' | 'page' | 'blog' | 'case - study' | 'article' | 'ai - suggestion';
+  category: string;
+  tags: string[];
+  relevance: number};
+  icon?: React.ComponentType < any>;
+};
+;
+interface SearchFilter {;
+;
+  type: string[];
+  category: string[];
+  tags: string[];
+};
+;
+interface SearchSuggestion {;
   text: string;
-  type: 'recent' | 'trending' | 'suggestion';
-}
-
-export const EnhancedSearch: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
-  const [isSearching, setIsSearching] = useState(false);
-  const [recentSearches, setRecentSearches] = useState<string[]>([]);
-  const [trendingSearches] = useState<string[]>([
-    'AI Services',
-    'Quantum Computing',
-    'Cybersecurity',
-    'Digital Transformation',
-    'Blockchain Solutions'
-  ]);
-
-  const searchRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const navigate = useNavigate();
-
-  // Load recent searches from localStorage
-  useEffect(() => {
-    const saved = localStorage.getItem('zion-recent-searches');
-    if (saved) {
-      setRecentSearches(JSON.parse(saved));
-    }
-  }, []);
-
-  // Close search when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
+  type: 'recent' | 'trending' | 'ai';
+};
+;
+interface EnhancedSearchProps {;
+  className?: string;
+  placeholder?: string;
+  onSearch?: (query: string) => void;
+  variant?: 'default' | 'futuristic' | 'minimal';
+};
+;
+const searchData: SearchResult[] = [;
+  // Services;
+  {;
+    id: 'ai - solutions',;
+    title: 'AI Business Intelligence',;
+    description: 'Transform your business with AI - powered insights and analytics',;
+    url: '/services / ai - business - intelligence',;
+    type: 'service',;
+    category: 'AI Solutions',;
+    tags: ['AI', 'Business Intelligence', 'Analytics', 'Machine Learning'],;
+    relevance: 95;
+  },;
+  {;
+    id: 'cloud - devops',;
+    title: 'Cloud & DevOps Services',;
+    description: 'Scalable cloud infrastructure and automated deployment solutions',;
+    url: '/services / cloud - devops',;
+    type: 'service',;
+    category: 'Cloud & DevOps',;
+    tags: ['Cloud', 'DevOps', 'Infrastructure', 'Automation'],;
+    relevance: 90;
+  },;
+  {;
+    id: 'cybersecurity',;
+    title: 'AI Cybersecurity Suite',;
+    description: 'Advanced AI - powered security solutions for enterprise protection',;
+    url: '/services / ai - cybersecurity - suite',;
+    type: 'service',;
+    category: 'Cybersecurity',;
+    tags: ['Security', 'AI', 'Cybersecurity', 'Enterprise'],;
+    relevance: 88;
+  },;
+  // Pages;
+  {;
+    id: 'about',;
+    title: 'About Zion Tech Group',;
+    description: 'Learn about our mission, values, and commitment to innovation',;
+    url: '/about',;
+    type: 'page',;
+    category: 'Company',;
+    tags: ['About', 'Company', 'Mission', 'Values'],;
+    relevance: 85;
+  },;
+  {;
+    id: 'contact',;
+    title: 'Contact Us',;
+    description: 'Get in touch with our team for consultations and support',;
+    url: '/contact',;
+    type: 'page',;
+    category: 'Support',;
+    tags: ['Contact', 'Support', 'Consultation', 'Help'],;
+    relevance: 80;
+  },;
+  // Blog posts (example) {;
+    id: 'ai - trends - 2025',;
+    title: 'AI Trends in 2025',;
+    description: 'Discover the latest artificial intelligence trends shaping business',;
+    url: '/blog / ai - trends - 2025',;
+    type: 'blog',;
+    category: 'AI Insights',;
+    tags: ['AI', 'Trends', '2025', 'Business'],;
+    relevance: 75;
+;
+];
+;
+const categories = [;
+  { id: 'ai - solutions', name: 'AI Solutions', icon: Code, color: 'from - cyan - 500 to - blue - 600' },;
+  { id: 'cloud - devops', name: 'Cloud & DevOps', icon: Globe, color: 'from - blue - 500 to - purple - 600' },;
+  { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from - red - 500 to - orange - 600' },;
+  { id: 'digital - transformation', name: 'Digital Transformation', icon: Building, color: 'from - green - 500 to - cyan - 600' },;
+  { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from - orange - 500 to - green - 600' };
+];
+;
+  className = '',;
+  placeholder = 'Search for AI services, quantum solutions...',;
+  onSearch,;
+  variant = 'default';
+}: EnhancedSearchProps) {;
+  const [isOpen, setIsOpen] = useState (false) ;
+  const [query, setQuery] = useState ('') ;
+  const [results, setResults] = useState < SearchResult[]> ([]) ;
+  const [suggestions, setSuggestions] = useState < SearchSuggestion[]> ([]) ;
+  const [isLoading, setIsLoading] = useState (false) ;
+  const [selectedIndex, setSelectedIndex] = useState (-1) ;
+  const [filters, setFilters] = useState < SearchFilter> ({;
+    type: any[],;
+    category: any[],;
+    tags: any[];
+  }) ;
+  const [showFilters, setShowFilters] = useState (false) ;
+  const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
+  ;
+// Mock suggestions;
+const mockSuggestions: SearchSuggestion[] = [;
+  { text: 'AI compliance assistant', type: 'recent' },;
+  { text: 'Quantum machine learning', type: 'trending' },;
+  { text: 'Digital transformation consulting', type: 'ai' },;
+  { text: 'Cloud DevOps automation', type: 'trending' };
+];
+;
+  className = '',;
+  placeholder = 'Search for AI services, quantum solutions...',;
+  onSearch,;
+  variant = 'default';
+}: EnhancedSearchProps) {;
+  const [isOpen, setIsOpen] = useState (false) ;
+  const [query, setQuery] = useState ('') ;
+  const [results, setResults] = useState < SearchResult[]> ([]) ;
+  const [suggestions, setSuggestions] = useState < SearchSuggestion[]> ([]) ;
+  const [isLoading, setIsLoading] = useState (false) ;
+  const [selectedIndex, setSelectedIndex] = useState (-1) ;
+  const [filters, setFilters] = useState < SearchFilter> ({;
+    type: any[],;
+    category: any[],;
+    tags: any[];
+  }) ;
+  ;
+  const searchRef = useRef < HTMLDivElement> (null) ;
+  const inputRef = useRef < HTMLInputElement> (null) ;
+  const navigate = useNavigate () ;
+;
+  // Handle keyboard navigation;
+  useEffect ( () => {;
+    const handleKeyDown = (event: anyKeyboardEvent) => {;
+      if (event.key === 'Escape') {;
+        setIsOpen (false) ;
+        setSelectedIndex (-1) ;
+      } else if (event.key === 'ArrowDown') {;
+        event.preventDefault () ;
+        setSelectedIndex (prev => ;
+          prev < results.length - 1 ? prev + 1 : prev) ;
+      } else if (event.key === 'ArrowUp') {;
+        event.preventDefault () ;
+        setSelectedIndex (prev => prev > 0 ? prev - 1 : -1) ;
+      } else if (event.key === 'Enter' && selectedIndex >= 0) {;
+        event.preventDefault () ;
+        if (results[selectedIndex]) {;
+          handleResultClick (results[selectedIndex]) ;
+        };
+      };
     };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-  // Handle search input changes
-  useEffect(() => {
-    if (query.trim()) {
-      performSearch(query);
-      generateSuggestions(query);
-    } else {
-      setResults([]);
-      setSuggestions([]);
-    }
-  }, [query]);
-
-  const performSearch = async (searchQuery: string) => {
-    setIsSearching(true);
-    
-    // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 300));
-    
-    // Mock search results - in real app, this would call your search API
-    const mockResults: SearchResult[] = [
-      {
-        id: '1',
-        title: 'AI Business Intelligence Platform',
-        description: 'Advanced analytics with AI-powered insights for business growth',
-        type: 'service',
-        url: '/ai-services/business-intelligence',
-        relevance: 0.95
-      },
-      {
-        id: '2',
-        title: 'Quantum Computing Solutions',
-        description: 'Next-generation quantum computing services for complex problems',
-        type: 'service',
-        url: '/emerging-tech/quantum-computing',
-        relevance: 0.88
-      },
-      {
-        id: '3',
-        title: 'Cybersecurity Services',
-        description: 'Comprehensive security solutions for modern businesses',
-        type: 'service',
-        url: '/it-services/cybersecurity',
-        relevance: 0.82
-      }
-    ].filter(result => 
-      result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      result.description.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-
-    setResults(mockResults);
-    setIsSearching(false);
+;
+    if (isOpen) {;
+      document.addEventListener ('keydown', handleKeyDown) ;
+    };
+    return () => document.removeEventListener ('keydown', handleKeyDown) ;
+  }, [isOpen, results, selectedIndex]) ;
+;
+  // Search functionality;
+  useEffect ( () => {;
+    if (debouncedQuery.trim () .length < 2) {;
+      setResults ([]) ;
+      return};
+;
+    const searchResults = searchData;
+      .filter (item => {;
+        const matchesQuery = item.title.toLowerCase () .includes (debouncedQuery.toLowerCase () ) ||;
+                           item.description.toLowerCase () .includes (debouncedQuery.toLowerCase () ) ||;
+                           item.tags.some (tag => tag.toLowerCase () .includes (debouncedQuery.toLowerCase () ) ) ;
+        ;
+        const matchesFilters = filters.type.length === 0 || filters.type.includes (item.type) &&;
+                              filters.category.length === 0 || filters.category.includes (item.category) &&;
+                              filters.tags.length === 0 || filters.tags.some (tag => item.tags.includes (tag) ) ;
+        ;
+        return matchesQuery && matchesFilters}) .sort ( (a, b) => b.relevance - a.relevance) .slice (0, 10) ;
+;
+    setResults (searchResults) }, [debouncedQuery, filters]) ;
+;
+  // Handle click outside;
+  useEffect ( () => {;
+    const handleClickOutside = (event: MouseEvent) => {;
+      if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {;
+        setIsOpen (false) };
+      try {;
+        setRecentSearches (JSON.parse (saved) ) ;
+      } catch (error) {;
+        console.error ('Failed to parse recent searches:', error) ;
+      };
+    };
+  }, []) ;
+;
+  // Handle click outside;
+  useEffect ( () => {;
+    const handleClickOutside = (event: MouseEvent) => {;
+      if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {;
+        setIsOpen (false) ;
+        setSelectedIndex (-1) ;
+      };
+    };
+;
+    document.addEventListener ('mousedown', handleClickOutside) ;
+    return () => document.removeEventListener ('mousedown', handleClickOutside) }, []) ;
+;
+  // Handle keyboard navigation;
+  useEffect ( () => {;
+        inputRef.current?.focus () };
+    };
+;
+    document.addEventListener ('keydown', handleKeyDown) ;
+    return () => document.removeEventListener ('keydown', handleKeyDown) }, []) ;
+;
+  const handleSearch = useCallback ( (searchQuery: string) => {;
+    if (searchQuery.trim () ) {;
+      // Add to recent searches;
+      const updated = [searchQuery, ...recentSearches.filter (s => s !== searchQuery) ].slice (0, 5) ;
+      setRecentSearches (updated) ;
+      localStorage.setItem ('zion - recent - searches', JSON.stringify (updated) ) ;
+;
+      // Navigate to search results or close search;
+      setIsOpen (false) ;
+      setQuery ('') };
+  }, [recentSearches]) ;
+;
+  const handleResultClick = (result: SearchResult) => {;
+    handleSearch (result.title) ;
+    router (result.url) ;
+    const handleKeyDown = (event: KeyboardEvent) => {;
+      if (!isOpen) return;
+;
+      switch (event.key) {;
+        case 'ArrowDown':;
+          event.preventDefault () ;
+          setSelectedIndex (prev = > ;
+            prev < results.length - 1 ? prev + 1 : prev;) ;
+          break;
+        case 'ArrowUp':;
+          event.preventDefault () ;
+          setSelectedIndex (prev => prev > 0 ? prev - 1 : -1) ;
+          break;
+        case 'Enter':;
+          event.preventDefault () ;
+          if (selectedIndex >= 0 && results[selectedIndex]) {;
+            handleResultClick (results[selectedIndex]) ;
+          } else if (query.trim () ) {;
+            handleSearch () ;
+          };
+          break;
+        case 'Escape':;
+          setIsOpen (false) ;
+          setSelectedIndex (-1) ;
+          break;
+      };
+    };
+;
+    document.addEventListener ('keydown', handleKeyDown) ;
+    return () => document.removeEventListener ('keydown', handleKeyDown) ;
+  }, [isOpen, results, selectedIndex, query]) ;
+;
+  const handleSearch = useCallback (async () => {;
+    if (!query.trim () ) return;
+;
+    setIsLoading (true) ;
+    ;
+    // Simulate API call delay;
+    await new Promise (resolve => setTimeout (resolve, 300) ) ;
+;
+    // Filter search results based on query and filters;
+    const searchResults = searchData.filter (result => {;
+      const matchesQuery = result.title.toLowerCase () .includes (query.toLowerCase () ) ||;
+                          result.description.toLowerCase () .includes (query.toLowerCase () ) ||;
+                          result.tags.some (tag => tag.toLowerCase () .includes (query.toLowerCase () ) ) ;
+      ;
+      const matchesFilters = (filters.type.length === 0 || filters.type.includes (result.type) ) &&; (filters.category.length === 0 || filters.category.includes (result.category) ) &&; (filters.tags.length === 0 || filters.tags.some (tag => result.tags.includes (tag) ) ) ;
+;
+      return matchesQuery && matchesFilters;
+    }) ;
+;
+  const handleResultClick = (result: SearchResult) => {;
+    navigate (result.url) ;
+    setIsOpen (false) ;
+    setQuery ('') };
+;
+  const handleSuggestionClick = (suggestion: SearchSuggestion) => {;
+    setQuery (suggestion.text) ;
+    onSearch?. (suggestion.text) ;
   };
-
-  const generateSuggestions = (searchQuery: string) => {
-    const newSuggestions: SearchSuggestion[] = [];
-    
-    // Add recent searches that match
-    recentSearches
-      .filter(search => search.toLowerCase().includes(searchQuery.toLowerCase()))
-      .forEach(search => {
-        newSuggestions.push({ text: search, type: 'recent' });
-      });
-
-    // Add trending searches that match
-    trendingSearches
-      .filter(search => search.toLowerCase().includes(searchQuery.toLowerCase()))
-      .forEach(search => {
-        newSuggestions.push({ text: search, type: 'trending' });
-      });
-
-    setSuggestions(newSuggestions.slice(0, 5));
+;
+  const clearFilters = () => {;
+    setFilters ({ type[], category[], tags[] }) };
+;
+  const toggleFilter = (filterType: keyof SearchFilter, value: string) => {;
+setFilters (prev: > ({;
+      ...prev,;
+      [filterType]: prev[filterType].includes (value) ;
+        ? prev[filterType].filter (v => v !== value) ;
+        : [...prev[filterType], value];
+    }) ) ;
   };
-
-  const handleSearch = (searchQuery: string) => {
-    if (!searchQuery.trim()) return;
-
-    // Add to recent searches
-    const updatedRecent = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 10);
-    setRecentSearches(updatedRecent);
-    localStorage.setItem('zion-recent-searches', JSON.stringify(updatedRecent));
-
-    // Navigate to search results or perform search
-    navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
-    setIsOpen(false);
-    setQuery('');
+;
+  const clearFilters = () => {;
+    setFilters ({ type: any[], category: any[], tags: any[] }) ;
   };
-
-  const handleSuggestionClick = (suggestion: SearchSuggestion) => {
-    setQuery(suggestion.text);
-    handleSearch(suggestion.text);
+;
+  const getTypeIcon = (type: string) => {;
+    switch (type) {;
+      case 'service': return < Code className="h - 4 w - 4" />;
+      case 'page': return < Globe className="h - 4 w - 4" />;
+      case 'blog': return < TrendingUp className="h - 4 w - 4" />;
+      case 'case - study': return < Building className="h - 4 w - 4" />;
+  const handleInputFocus = () => {;
+    if (query.trim () || suggestions.length > 0) {;
+      setIsOpen (true) ;
+    };
   };
-
-  const handleResultClick = (result: SearchResult) => {
-    navigate(result.url);
-    setIsOpen(false);
-    setQuery('');
+;
+  const clearSearch = () => {;
+    setQuery ('') ;
+    setResults ([]) ;
+    setIsOpen (false) ;
+    setSelectedIndex (-1) ;
   };
-
-  const clearRecentSearches = () => {
-    setRecentSearches([]);
-    localStorage.removeItem('zion-recent-searches');
+;
+  const getVariantStyles = () => {;
+    switch (variant) {;
+      case 'futuristic':;
+        return 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 backdrop - blur - sm';
+      case 'minimal':;
+        return 'bg - white dark:bg - gray - 800 border border - gray - 200 dark:border - gray - 700';
+      default:;
+        return 'bg - white dark:bg - gray - 800 border border - gray - 200 dark:border - gray - 700 shadow - lg';
+    };
   };
-
-  return (
-    <>
-      {/* Search Trigger Button */}
-      <motion.button
-        onClick={() => setIsOpen(true)}
-        className="flex items-center justify-center w-12 h-12 bg-zion-slate-light/10 hover:bg-zion-slate-light/20 rounded-lg transition-all duration-300 border border-zion-cyan/20 hover:border-zion-cyan/40"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        aria-label="Open search"
-      >
-        <Search className="w-5 h-5 text-zion-cyan" />
-      </motion.button>
-
-      {/* Search Modal */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-start justify-center pt-20"
-          >
-            <motion.div
-              ref={searchRef}
-              initial={{ opacity: 0, scale: 0.95, y: -20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: -20 }}
-              transition={{ duration: 0.2 }}
-              className="w-full max-w-2xl mx-4 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
-            >
-              {/* Search Input */}
-              <div className="p-4 border-b border-zion-cyan/20">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-cyan" />
-                  <input
-                    ref={inputRef}
-                    type="text"
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Search for services, solutions, or insights..."
-                    className="w-full pl-10 pr-12 py-3 bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light/60 focus:outline-none focus:ring-2 focus:ring-zion-cyan/40 focus:border-zion-cyan/40"
-                    autoFocus
-                  />
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 hover:bg-zion-slate-light/20 rounded transition-colors"
-                  >
-                    <X className="w-4 h-4 text-zion-slate-light" />
-                  </button>
-                </div>
-              </div>
-
-              {/* Search Content */}
-              <div className="max-h-96 overflow-y-auto">
-                {query.trim() ? (
-                  // Search Results
-                  <div className="p-4">
-                    {isSearching ? (
-                      <div className="flex items-center justify-center py-8">
-                        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-zion-cyan"></div>
-                        <span className="ml-3 text-zion-slate-light">Searching...</span>
-                      </div>
-                    ) : results.length > 0 ? (
-                      <div className="space-y-3">
-                        {results.map((result) => (
-                          <motion.div
-                            key={result.id}
-                            onClick={() => handleResultClick(result)}
-                            className="p-3 rounded-lg hover:bg-zion-slate-light/10 cursor-pointer transition-colors border border-transparent hover:border-zion-cyan/20"
-                            whileHover={{ x: 4 }}
-                          >
-                            <div className="flex items-start space-x-3">
-                              <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-                                <Sparkles className="w-5 h-5 text-white" />
-                              </div>
-                              <div className="flex-1 min-w-0">
-                                <h4 className="text-white font-medium truncate">{result.title}</h4>
-                                <p className="text-zion-slate-light text-sm mt-1">{result.description}</p>
-                                <div className="flex items-center space-x-2 mt-2">
-                                  <span className="text-xs px-2 py-1 bg-zion-cyan/20 text-zion-cyan rounded-full">
-                                    {result.type}
-                                  </span>
-                                  <span className="text-xs text-zion-slate-light">
-                                    {Math.round(result.relevance * 100)}% match
-                                  </span>
-                                </div>
-                              </div>
-                              <ArrowRight className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                            </div>
-                          </motion.div>
-                        ))}
-                      </div>
-                    ) : (
-                      <div className="text-center py-8 text-zion-slate-light">
-                        <Search className="w-12 h-12 mx-auto mb-4 text-zion-slate-light/40" />
-                        <p>No results found for "{query}"</p>
-                        <p className="text-sm mt-2">Try different keywords or browse our services</p>
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  // Search Suggestions
-                  <div className="p-4">
-                    {/* Recent Searches */}
-                    {recentSearches.length > 0 && (
-                      <div className="mb-6">
-                        <div className="flex items-center justify-between mb-3">
-                          <h3 className="text-zion-cyan font-medium flex items-center">
-                            <Clock className="w-4 h-4 mr-2" />
-                            Recent Searches
-                          </h3>
-                          <button
-                            onClick={clearRecentSearches}
-                            className="text-xs text-zion-slate-light hover:text-zion-cyan transition-colors"
-                          >
-                            Clear all
-                          </button>
-                        </div>
-                        <div className="flex flex-wrap gap-2">
-                          {recentSearches.slice(0, 5).map((search, index) => (
-                            <motion.button
-                              key={index}
-                              onClick={() => handleSuggestionClick({ text: search, type: 'recent' })}
-                              className="px-3 py-1 bg-zion-slate-light/10 hover:bg-zion-cyan/20 text-zion-slate-light hover:text-zion-cyan rounded-full text-sm transition-colors border border-zion-cyan/20 hover:border-zion-cyan/40"
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                            >
-                              {search}
-                            </motion.button>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Trending Searches */}
-                    <div>
-                      <h3 className="text-zion-cyan font-medium flex items-center mb-3">
-                        <TrendingUp className="w-4 h-4 mr-2" />
-                        Trending Searches
-                      </h3>
-                      <div className="flex flex-wrap gap-2">
-                        {trendingSearches.map((search, index) => (
-                          <motion.button
-                            key={index}
-                            onClick={() => handleSuggestionClick({ text: search, type: 'trending' })}
-                            className="px-3 py-1 bg-zion-cyan/20 hover:bg-zion-cyan/30 text-zion-cyan rounded-full text-sm transition-colors border border-zion-cyan/40"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                          >
-                            {search}
-                          </motion.button>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
-  );
+;
+  return (<div role="button" ref = {searchRef} className={`relative ${className}`}>;
+      <div role="button" className={`relative rounded - xl ${getVariantStyles () }`}>;
+        <div role="button" className="flex items - center px - 4 py - 3">;
+          <Search className="w - 5 h - 5 text - gray - 400 mr - 3"       />;
+          <input;
+            ref={inputRef};
+            type="text";
+            value={query};
+            onChange={handleInputChange};
+            onFocus={handleInputFocus};
+            placeholder={placeholder};
+            className="flex - 1 bg - transparent text - gray - 900 dark:text - white placeholder - gray - 500 dark:placeholder - gray - 400 focus:outline - none";
+                />;
+          {query && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={clearSearch};
+              className="ml - 2 p - 1 rounded - full hover:bg - gray - 100 dark:hover:bg - gray - 700 transition - colors";
+            >;
+              <X className="w - 4 h - 4 text - gray - 400"       />;
+            </button>) };
+        </div>;
+      default: return < Search className="h - 4 w - 4" />;
+;
+  };
+;
+  const getVariantClasses = () => {;
+    switch (variant) {;
+      case 'futuristic':;
+        return 'bg - gradient - to - r from - purple - 500 / 10 to - blue - 500 / 10 border border - purple - 500 / 20 hover:border - purple - 500 / 40 focus - within:border - purple - 500 focus - within:ring - 2 focus - within:ring - purple - 500 / 20';
+      case 'minimal':;
+        return 'bg - gray - 100 border border - gray - 200 hover:border - gray - 300 focus - within:border - blue - 500 focus - within:ring - 2 focus - within:ring - blue - 500 / 20';
+      default:;
+        return 'bg - white border border - gray - 300 hover:border - gray - 400 focus - within:border - blue - 500 focus - within:ring - 2 focus - within:ring - blue - 500 / 20';
+    };
+  };
+;
+  return (<div role="button" ref = {searchRef} className={`relative ${className}`}>;
+      {/* Search Input */};
+      <div role="button" className={`relative flex items - center rounded - xl transition - all duration - 300 ${getVariantClasses () }`}>;
+        <Search className="absolute left - 4 h - 5 w - 5 text - gray - 400"       />;
+        <input;
+          ref={inputRef};
+          type="text";
+          value={query};
+          onChange={ (e) => setQuery (e.target.value) };
+          onFocus={ () => setIsOpen (true) };
+          placeholder={placeholder};
+          className="w - full pl - 12 pr - 12 py - 3 bg - transparent border - none outline - none text - gray - 900 placeholder - gray - 500";
+        />;
+        {query && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setQuery ('') };
+            className="absolute right - 4 p - 1 text - gray - 400 hover:text - gray - 600 transition - colors";
+          >;
+            <X className="h - 4 w - 4"       />;
+          </button>) };
+      </div>;
+;
+      <AnimatePresence>;
+        {isOpen && (<motion.div;
+            initial = {;
+  { opacity: 0,;
+  y: -10 ;
+;
+}};
+            animate = {;
+  { opacity: 1,;
+  y: 0 ;
+;
+}};
+            exit = {;
+  { opacity: 0,;
+  y: -10 ;
+;
+}};
+            className="absolute top - full left - 0 right - 0 mt - 2 bg - white border border - gray - 200 rounded - xl shadow - xl z - 50 max - h-96 overflow - hidden";
+          >;
+            {/* Filters Toggle */};
+            <div role="button" className="flex items - center justify - between p - 4 border - b border - gray - 200">;
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowFilters (!showFilters) };
+                className="flex items - center gap - 2 text - sm text - gray - 600 hover:text - gray - 900 transition - colors";
+              >;
+                <Filter className="h - 4 w - 4"       />;
+                Filters;
+              </button>;
+              { (filters.type.length > 0 || filters.category.length > 0 || filters.tags.length > 0) && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={clearFilters};
+                  className="text - sm text - red - 500 hover:text - red - 600 transition - colors";
+                >;
+                  Clear all;
+                </button>) };
+            </div>;
+;
+            {/* Filters Panel */};
+            <AnimatePresence>;
+              {showFilters && (<motion.div;
+                  initial = {;
+  { height: 0,;
+  opacity: 0 ;
+;
+}};
+                  animate = {;
+  { height: 'auto',;
+  opacity: 1 ;
+;
+}};
+                  exit = {;
+  { height: 0,;
+  opacity: 0 ;
+;
+}};
+                  className="border - b border - gray - 200 overflow - hidden";
+                >;
+                  <div role="button" className="p - 4 space - y-4">;
+                    {/* Type Filters */};
+                    <div>;
+                      <h4 className="text - sm font - medium text - gray - 900 mb - 2">Type</h4>;
+                      <div role="button" className="flex flex - wrap gap - 2">;
+                        {['service', 'page', 'blog', 'case - study'].map (type => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={type};
+                            onClick = { () => toggleFilter ('type',;
+  type) };
+                            className={`px - 3 py - 1 text - xs rounded - full transition - colors ${;
+                              filters.type.includes (type) ? 'bg - blue - 500 text - white';
+                                : 'bg - gray - 100 text - gray - 600 hover:bg - gray - 200';
+                            }`};
+                          >;
+                            {type.charAt (0) .toUpperCase () + type.slice (1) };
+                          </button>) ) };
+                      </div>;
+                    </div>;
+;
+                    {/* Category Filters */};
+                    <div>;
+                      <h4 className="text - sm font - medium text - gray - 900 mb - 2">Category</h4>;
+                      <div role="button" className="flex flex - wrap gap - 2">;
+                        {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id};
+                            onClick = { () => toggleFilter ('category',;
+  category.name) };
+                            className={`px - 3 py - 1 text - xs rounded - full transition - colors ${;
+                              filters.category.includes (category.name) ? 'bg - blue - 500 text - white';
+                                : 'bg - gray - 100 text - gray - 600 hover:bg - gray - 200';
+                            }`};
+                          >;
+                            {category.name};
+                          </button>) ) };
+                      </div>;
+                    </div>;
+                  </div>;
+                </motion.div>) };
+            </AnimatePresence>;
+;
+            {/* Search Results */};
+            <div role="button" className="max - h-96 overflow - y-auto">;
+              {query.trim () .length < 2 ? (<div role="button" className="p - 4 space - y-4">;
+                  {/* Recent Searches */};
+                  {recentSearches.length > 0 && (<div>;
+                      <h4 className="text - sm font - medium text - gray - 900 mb - 2 flex items - center gap - 2">;
+                        <Clock className="h - 4 w - 4"       />;
+                        Recent Searches;
+                      </h4>;
+                      <div role="button" className="space - y-2">;
+                        {recentSearches.map ( (search, index) => (;
+                          <button;
+                            key={index};
+                            onClick={ () => {;
+                              setQuery (search) ;
+                              handleSearch () ;
+                            }};
+                            className = "w - full text - left p - 2 text - sm text - gray - 600 hover:bg - gray - 50 rounded - lg transition - colors";
+                          >;
+                            {search};
+                          </button>) ) };
+                      </div>;
+                    </div>;) };
+;
+                  {/* Popular Searches */};
+                  <div>;
+                    <h4 className="text - sm font - medium text - gray - 900 mb - 2 flex items - center gap - 2">;
+                      <TrendingUp className="h - 4 w - 4"       />;
+                      Popular Searches;
+                    </h4>;
+                    <div role="button" className="flex flex - wrap gap - 2">;
+                      {popularSearches.map ( (search, index) => (;
+                        <button;
+                          key={index};
+                          onClick={ () => {;
+                            setQuery (search) ;
+                            handleSearch () ;
+                          }};
+                          className = "px - 3 py - 1 text - sm bg - gray - 100 text - gray - 600 rounded - full hover:bg - gray - 200 transition - colors";
+                        >;
+                          {search};
+                        </button>) ) };
+                    </div>;
+                  </div>;
+                </div>) : isLoading ? (;
+                <div role="button" className="p - 8 text - center">;
+                  <div role="button" className="animate - spin rounded - full h - 8 w - 8 border - b-2 border - blue - 500 mx - auto"></div>;
+                  <p className="text - gray - 600 mt - 2">Searching...</p>;
+                </div>) : results.length > 0 ? (<div role="button" className="p - 4 space - y-2">;
+                  {results.map ( (result, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={result.id};
+                      onClick={ () => handleResultClick (result) };
+                      className={`w - full text - left p - 3 hover:bg - gray - 50 rounded - lg transition - colors group ${;
+                        index === selectedIndex ? 'bg - blue - 50' : '';
+                      }`};
+                    >;
+                      <div role="button" className="flex items - start gap - 3">;
+                        <div role="button" className="flex - shrink - 0 mt - 1">;
+                          {getTypeIcon (result.type) };
+                        </div>;
+                        <div role="button" className="flex - 1 min - w-0">;
+                          <h4 className="text - sm font - medium text - gray - 900 group - hover:text - blue - 600 transition - colors">;
+                            {result.title};
+                          </h4>;
+                          <p className="text - sm text - gray - 600 mt - 1 line - clamp - 2">;
+                            {result.description};
+                          </p>;
+                          <div role="button" className="flex items - center gap - 2 mt - 2">;
+                            <span className="text - xs text - gray - 500 bg - gray - 100 px - 2 py - 1 rounded">;
+                              {result.category};
+                            </span>;
+                            <span className="text - xs text - gray - 500">;
+                              {result.type};
+                            </span>;
+                          </div>;
+                        </div>;
+                      </div>;
+                    </button>) ) };
+                </div>) : (<div role="button" className="p - 8 text - center">;
+                  <Search className="h - 12 w - 12 text - gray - 400 mx - auto mb - 4"       />;
+                  <h3 className="text - lg font - medium text - gray - 900 mb - 2">;
+                    No results found;
+                  </h3>;
+                  <p className="text - gray - 600">;
+                    Try adjusting your search terms or filters;
+                  </p>;
+                </div>) };
+            </div>;
+          </motion.div>;) };
+      </AnimatePresence>;
+    </div>;) ;
 };

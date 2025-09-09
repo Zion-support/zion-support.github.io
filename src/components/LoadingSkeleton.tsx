@@ -1,256 +1,137 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-
-interface SkeletonProps {
+import React from 'react.ts';
+export const CardSkeleton: React.FC<{ count?: number }> = ({ count = 3 }) => (<div className="grid grid - cols - 1 md: anygrid - cols - 2 lg:grid - cols - 3 gap - 6">;
+export const FormSkeleton: React.FC<{ count?: number }> = ({ count = 4 }) => (<LoadingSkeleton type="form" count={count}       />) ;
+export const HeroSkeleton: React.FC = () : JSX.Element => (<LoadingSkeleton type="hero"       />) ;
+export const LoadingSkeleton: React.FC < LoadingSkeletonProps> = ({;
+export const TableSkeleton: React.FC<{ count?: number }> = ({ count = 5 }) => (<LoadingSkeleton type="table" count={count}       />) ;
+export default LoadingSkeleton;
+import { motion } from 'framer - motion.ts';
+;
+;
+interface SkeletonProps extends React.PropsWithChildren<{}> {;
   className?: string;
-  lines?: number;
-}
-
-export const Skeleton: React.FC<SkeletonProps> = ({ className = '', lines = 1 }) => {
-  return (
-    <div className={`animate-pulse ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
-        <div
-          key={index}
-          className="h-4 bg-slate-700/50 rounded mb-2 last:mb-0"
-          style={{
-            width: `${Math.random() * 40 + 60}%`
-          }}
-        />
-      ))}
-    </div>
-  );
+  height?: string;
+  width?: string;
+  rounded?: boolean;
+  animated?: boolean;
 };
-
-export const CardSkeleton: React.FC = () => (
-  <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 animate-pulse">
-    <div className="w-16 h-16 bg-slate-700/50 rounded-full mb-4" />
-    <div className="h-6 bg-slate-700/50 rounded mb-3" />
-    <div className="space-y-2 mb-4">
-      <div className="h-4 bg-slate-700/50 rounded" />
-      <div className="h-4 bg-slate-700/50 rounded w-3/4" />
-    </div>
-    <div className="h-4 bg-slate-700/50 rounded w-1/2" />
-  </div>
-);
-
-export const HeroSkeleton: React.FC = () => (
-  <div className="py-20 animate-pulse">
-    <div className="max-w-4xl mx-auto px-4 text-center">
-      <div className="h-16 bg-slate-700/50 rounded mb-6" />
-      <div className="h-8 bg-slate-700/50 rounded mb-8 w-3/4 mx-auto" />
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <div className="h-12 bg-slate-700/50 rounded-lg w-48" />
-        <div className="h-12 bg-slate-700/50 rounded-lg w-32" />
-      </div>
-    </div>
-  </div>
-);
-
-interface ListSkeletonProps {
+;
+const Skeleton: React.FC < SkeletonProps> = ({;
+  className = '',;
+  height = 'h - 4',;
+  width = 'w - full',;
+  rounded = true,;
+  animated = true,;
+}) => {;
+  const baseClasses = `${height} ${width} bg - gray - 200 dark:bg - gray - 700 ${rounded ? 'rounded' : ''}`;
+  const classes = `${baseClasses} ${className}`;
+;
+  if (!animated) {;
+    return < div className={classes} />;
+  };
+;
+  return (<motion.div;
+      className={classes};
+      animate={{;
+        opacity: [0.5, 1, 0.5],;
+      }};
+      transition={{;
+        duration: 1.5,;
+        repeat: Infinity,;
+        ease: 'easeInOut',;
+      }};
+          />) ;
+};
+;
+interface LoadingSkeletonProps extends React.PropsWithChildren<{}> {;
+  type?: 'card' | 'list' | 'hero' | 'table' | 'form';
+  count?: number;
   className?: string;
-  items?: number;
-  showAvatar?: boolean;
-  showTitle?: boolean;
-  showSubtitle?: boolean;
-  showDescription?: boolean;
-}
-
-export function ListSkeleton({
-  className,
-  items = 3,
-  showAvatar = true,
-  showTitle = true,
-  showSubtitle = true,
-  showDescription = true
-}: ListSkeletonProps) {
-  return (
-    <div className={cn('space-y-4', className)}>
-      {Array.from({ length: items }).map((_, i) => (
-        <div key={i} className="flex gap-4 items-start">
-          {showAvatar && (
-            <Skeleton className="w-12 h-12 rounded-full flex-shrink-0" />
-          )}
-          
-          <div className="flex-1 space-y-2">
-            {showTitle && (
-              <Skeleton className="h-5 w-3/4" />
-            )}
-            
-            {showSubtitle && (
-              <Skeleton className="h-4 w-1/2" />
-            )}
-            
-            {showDescription && (
-              <div className="space-y-1">
-                <Skeleton className="h-4 w-full" />
-                <Skeleton className="h-4 w-2/3" />
-              </div>
-            )}
-          </div>
-        </div>
-      ))}
-    </div>
-    <div className="flex justify-between items-center mt-6">
-      <Skeleton height="h-8" width="w-24" rounded="rounded-lg" />
-      <Skeleton height="h-8" width="w-20" rounded="rounded-lg" />
-    </div>
-  </div>
-);
-
-export const TextSkeleton: React.FC<{ lines?: number; className?: string }> = ({ 
-  lines = 3, 
-  className = '' 
-}) => (
-  <div className={`space-y-3 ${className}`}>
-    {Array.from({ length: lines }).map((_, index) => (
-      <Skeleton 
-        key={index}
-        height="h-4" 
-        width={index === lines - 1 ? 'w-3/4' : 'w-full'} 
-      />
-    ))}
-  </div>
-);
-
-export const ImageSkeleton: React.FC<{ className?: string; aspectRatio?: string }> = ({ 
-  className = '', 
-  aspectRatio = 'aspect-video' 
-}) => (
-  <div className={`${aspectRatio} ${className}`}>
-    <Skeleton className="w-full h-full rounded-lg" />
-  </div>
-);
-
-export const TableSkeleton: React.FC<{ rows?: number; columns?: number; className?: string }> = ({ 
-  rows = 5, 
-  columns = 4, 
-  className = '' 
-}) => (
-  <div className={`bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden ${className}`}>
-    {/* Header */}
-    <div className="bg-zion-slate-light/10 px-6 py-4 border-b border-zion-cyan/20">
-      <div className="flex space-x-4">
-        {Array.from({ length: columns }).map((_, index) => (
-          <Skeleton key={index} height="h-4" width="w-20" />
-        ))}
-      </div>
-    </div>
-    
-    {/* Rows */}
-    <div className="divide-y divide-zion-cyan/20">
-      {Array.from({ length: rows }).map((_, rowIndex) => (
-        <div key={rowIndex} className="px-6 py-4">
-          <div className="flex space-x-4">
-            {Array.from({ length: columns }).map((_, colIndex) => (
-              <Skeleton 
-                key={colIndex} 
-                height="h-4" 
-                width={colIndex === 0 ? 'w-32' : 'w-24'} 
-              />
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-);
-
-export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({ 
-  items = 5, 
-  className = '' 
-}) => (
-  <div className={`space-y-3 ${className}`}>
-    {Array.from({ length: items }).map((_, index) => (
-      <div key={index} className="flex items-center space-x-3">
-        <Skeleton className="w-4 h-4 rounded-full" />
-        <Skeleton height="h-4" width="w-full" />
-      </div>
-    ))}
-  </div>
-);
-
-export const GridSkeleton: React.FC<{ 
-  items?: number; 
-  columns?: number; 
-  className?: string;
-  itemClassName?: string;
-}> = ({ 
-  items = 6, 
-  columns = 3, 
-  className = '',
-  itemClassName = ''
-}) => (
-  <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
-    {Array.from({ length: items }).map((_, index) => (
-      <CardSkeleton key={index} className={itemClassName} />
-    ))}
-  </div>
-);
-
-export const ProfileSkeleton: React.FC<{ className?: string }> = ({ className = '' }) => (
-  <div className={`bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 ${className}`}>
-    <div className="flex flex-col items-center text-center">
-      <Skeleton className="w-24 h-24 rounded-full mb-4" />
-      <Skeleton height="h-6" width="w-32" className="mb-2" />
-      <Skeleton height="h-4" width="w-48" className="mb-4" />
-      <div className="flex space-x-4 mb-6">
-        <Skeleton height="h-8" width="w-20" rounded="rounded-lg" />
-        <Skeleton height="h-8" width="w-20" rounded="rounded-lg" />
-      </div>
-      <div className="w-full space-y-3">
-        <Skeleton count={3} />
-      </div>
-    </div>
-  </div>
-);
-
-export const ChartSkeleton: React.FC<{ className?: string; height?: string }> = ({ 
-  className = '', 
-  height = 'h-64' 
-}) => (
-  <div className={`bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 ${className}`}>
-    <div className="flex items-center justify-between mb-6">
-      <Skeleton height="h-6" width="w-32" />
-      <Skeleton height="h-8" width="w-24" rounded="rounded-lg" />
-    </div>
-    <div className={`${height} bg-zion-slate-light/10 rounded-lg flex items-end justify-center space-x-2 p-4`}>
-      {Array.from({ length: 8 }).map((_, index) => (
-        <Skeleton 
-          key={index}
-          height="h-full" 
-          width="w-8" 
-          className="bg-zion-cyan/20"
-        />
-      ))}
-    </div>
-    <div className="flex justify-center space-x-8 mt-4">
-      {Array.from({ length: 4 }).map((_, index) => (
-        <div key={index} className="flex items-center space-x-2">
-          <Skeleton className="w-3 h-3 rounded-full" />
-          <Skeleton height="h-3" width="w-16" />
-        </div>
-      ))}
-    </div>
-  </div>
-);
-
-export const FormSkeleton: React.FC<{ fields?: number; className?: string }> = ({ 
-  fields = 5, 
-  className = '' 
-}) => (
-  <div className={`bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 ${className}`}>
-    <div className="space-y-6">
-      {Array.from({ length: fields }).map((_, index) => (
-        <div key={index} className="space-y-2">
-          <Skeleton height="h-4" width="w-24" />
-          <Skeleton height="h-10" width="w-full" rounded="rounded-lg" />
-        </div>
-      ))}
-      <div className="flex space-x-4 pt-4">
-        <Skeleton height="h-10" width="w-24" rounded="rounded-lg" />
-        <Skeleton height="h-10" width="w-20" rounded="rounded-lg" />
-      </div>
-    </div>
-  </div>
-);
+};
+;
+  type = 'card',;
+  count = 3,;
+  className = '',;
+}) => {;
+  const renderSkeleton = () => {;
+    switch (type) {;
+      case 'hero':;
+        return (<div className="space - y-6">;
+            <Skeleton height="h - 12" width="w - 3/4" className="mx - auto"       />;
+            <Skeleton height="h - 6" width="w - 1/2" className="mx - auto"       />;
+            <Skeleton height="h - 4" width="w - 2/3" className="mx - auto"       />;
+            <div className="flex justify - center space - x-4">;
+              <Skeleton height="h - 12" width="w - 32"       />;
+              <Skeleton height="h - 12" width="w - 32"       />;
+            </div>;
+          </div>) ;
+;
+      case 'card':;
+        return (<div className="space - y-4">;
+            <Skeleton height="h - 48" className="rounded - t-lg"       />;
+            <div className="p - 4 space - y-3">;
+              <Skeleton height="h - 6" width="w - 3/4"       />;
+              <Skeleton height="h - 4" width="w - full"       />;
+              <Skeleton height="h - 4" width="w - 2/3"       />;
+              <div className="flex justify - between items - center pt - 2">;
+                <Skeleton height="h - 8" width="w - 20"       />;
+                <Skeleton height="h - 8" width="w - 24"       />;
+              </div>;
+            </div>;
+          </div>) ;
+;
+      case 'list':;
+        return (<div className="space - y-4">;
+            {Array.from ({ length: anycount }) .map ( (_, index) => (<div;
+                key={index};
+                className="flex items - center space - x-4 p - 4 border rounded - lg";
+              >;
+                <Skeleton height="h - 12" width="w - 12" className="rounded - full"       />;
+                <div className="flex - 1 space - y-2">;
+                  <Skeleton height="h - 4" width="w - 3/4"       />;
+                  <Skeleton height="h - 3" width="w - 1/2"       />;
+                </div>;
+                <Skeleton height="h - 8" width="w - 20"       />;
+              </div>) ) };
+          </div>) ;
+;
+      case 'table':;
+        return (<div className="space - y-3">;
+            {/* Header */};
+            <div className="flex space - x-4 p - 4 bg - gray - 50 dark: anybg - gray - 800 rounded - t-lg">;
+              {Array.from ({ length: 4 }) .map ( (_, index) => (<Skeleton key={index} height="h - 4" width="w - 24"       />) ) };
+            </div>;
+            {/* Rows */};
+            {Array.from ({ length: anycount }) .map ( (_, index) => (<div key={index} className="flex space - x-4 p - 4 border - b">;
+                {Array.from ({ length: any4 }) .map ( (_, cellIndex) => (<Skeleton key={cellIndex} height="h - 4" width="w - 24"       />) ) };
+              </div>) ) };
+          </div>) ;
+;
+      case 'form':;
+        return (<div className="space - y-6">;
+            <Skeleton height="h - 8" width="w - 1/3"       />;
+            <div className="space - y-4">;
+              {Array.from ({ length: anycount }) .map ( (_, index) => (<div key={index} className="space - y-2">;
+                  <Skeleton height="h - 4" width="w - 24"       />;
+                  <Skeleton height="h - 10" width="w - full"       />;
+                </div>) ) };
+            </div>;
+            <div className="flex space - x-4 pt - 4">;
+              <Skeleton height="h - 10" width="w - 24"       />;
+              <Skeleton height="h - 10" width="w - 24"       />;
+            </div>;
+          </div>) ;
+;
+      default:;
+        return < Skeleton />;
+    };
+  };
+;
+  return < div className={`animate - pulse ${className}`}>{renderSkeleton () }</div>;
+};
+;
+// Specialized skeleton components;
+;
+    {Array.from ({ length: count }) .map ( (_, index) => (<LoadingSkeleton key={index} type="card"       />) ) };
+  </div>) ;
+;

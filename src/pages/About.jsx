@@ -93,35 +93,38 @@ export default function About() {
       />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue">
-        <motion.div 
-          className="container mx-auto px-4 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            About <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Zion Tech Group</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Pioneering the future of technology with 15+ years of expertise in AI, cybersecurity, 
-            and digital transformation. We're not just consultants – we're your innovation partners.
-          </p>
-        </motion.div>
+      <section className="relative pt - 24 pb - 16 px - 4 sm:px - 6 lg:px - 8">
+        <div className="max - w-7xl mx - auto text - center">
+          <div className="mb - 8">
+            <div className="inline - flex items - center px - 4 py - 2 bg - blue - 500 / 10 text - blue - 400 rounded - full text - sm font - medium mb - 6">
+              <Users className="w - 4 h - 4 mr - 2"       />
+              About Us
+            </div>
+            <h1 className="text - 4xl md:text - 6xl font - bold text - white mb - 6">
+              Pioneering the Future of{' '}
+              <span className="bg - gradient - to - r from - blue - 400 to - cyan - 400 bg - clip - text text - transparent">
+                {' '}
+                Technology
+              </span>
+            </h1>
+            <p className="text - xl text - gray - 300 max - w-3xl mx - auto mb - 8">
+              Zion Tech Group is a leading technology company dedicated to
+              transforming businesses through innovative AI solutions, quantum
+              computing, and cutting - edge digital technologies.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-zion-slate-dark">
-        <motion.div 
-          className="container mx-auto px-4"
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+      <section className="py - 16 px - 4 sm:px - 6 lg:px - 8">
+        <div className="max - w-7xl mx - auto">
+          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12">
+            <div className="bg - slate - 800 / 50 border border - white / 10 rounded - xl p - 8">
+              <div className="w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - cyan - 500 rounded - lg flex items - center justify - center mb - 6">
+                <Target className="w - 8 h - 8 text - white"       />
+              </div>
+              <h2 className="text - 3xl font - bold text - white mb - 4">
                 Our Mission
               </h2>
               <p className="text-xl text-zion-slate-light mb-6 leading-relaxed">
@@ -134,12 +137,10 @@ export default function About() {
                 challenges but anticipate tomorrow's opportunities.
               </p>
             </div>
-            <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
-                <Target className="w-32 h-32 text-white opacity-80" />
-              </div>
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-r from-zion-blue to-zion-cyan rounded-full flex items-center justify-center">
-                <Zap className="w-12 h-12 text-white" />
+
+            <div className="bg - slate - 800 / 50 border border - white / 10 rounded - xl p - 8">
+              <div className="w - 16 h - 16 bg - gradient - to - r from - purple - 500 to - pink - 500 rounded - lg flex items - center justify - center mb - 6">
+                <Lightbulb className="w - 8 h - 8 text - white"       />
               </div>
             </div>
           </div>
@@ -177,8 +178,8 @@ export default function About() {
                 className="text-center p-8 bg-zion-blue-dark/50 rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:scale-105"
                 variants={fadeInUp}
               >
-                <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
-                  <value.icon className="w-10 h-10 text-white" />
+                <div className="w - 12 h - 12 bg - gradient - to - r from - blue - 500 to - cyan - 500 rounded - lg flex items - center justify - center mx - auto mb - 4">
+                  <value.icon className="w - 6 h - 6 text - white"       />
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-4">{value.title}</h3>
                 <p className="text-zion-slate-light leading-relaxed">{value.description}</p>
@@ -188,22 +189,19 @@ export default function About() {
         </motion.div>
       </section>
 
-      {/* Company History */}
-      <section className="py-20 bg-zion-slate-dark">
-        <motion.div 
-          className="container mx-auto px-4"
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Journey
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              From a small startup to a global technology leader
-            </p>
+      {/* Statistics */}
+      <section className="py - 16 px - 4 sm:px - 6 lg:px - 8">
+        <div className="max - w-7xl mx - auto">
+          <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8">
+            {stats.map ( (stat, index) => (<div key={index} className="text - center">
+                <div className="w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - cyan - 500 rounded - lg flex items - center justify - center mx - auto mb - 4">
+                  <stat.icon className="w - 8 h - 8 text - white"       />
+                </div>
+                <div className="text - 3xl font - bold text - white mb - 2">
+                  {stat.number}
+                </div>
+                <div className="text - gray - 300 text - sm">{stat.label}</div>
+              </div>) ) }
           </div>
 
           <div className="relative">

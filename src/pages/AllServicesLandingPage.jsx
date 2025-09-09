@@ -51,8 +51,8 @@ export default function AllServicesLandingPage() {
             default: return <Settings className="h-5 w-5"/>;
         }
     };
-    return (<div className="min-h-screen bg-background">
-      <SEO title="Complete Tech Solutions - AI, Micro SAAS, IT & Digital Services | Zion Tech Group" description="Discover our comprehensive ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services. Expert solutions for modern businesses." keywords="AI services, micro SAAS, IT services, digital transformation, cloud migration, cybersecurity, DevOps, business automation, Zion Tech Group" canonical="https://ziontechgroup.com/services"/>
+    return (<div className="min - h-screen bg - background">
+      <SEO title="Complete Tech Solutions - AI, Micro SAAS, IT & Digital Services | Zion Tech Group" description="Discover our comprehensive ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services. Expert solutions for modern businesses." keywords="AI services, micro SAAS, IT services, digital transformation, cloud migration, cybersecurity, DevOps, business automation, Zion Tech Group" canonical="https://ziontechgroup.com / services"      />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark py-20">
@@ -64,14 +64,14 @@ export default function AllServicesLandingPage() {
             From cutting-edge AI automation to affordable micro SAAS solutions, comprehensive IT infrastructure, 
             and digital transformation services - we provide everything your business needs to thrive in the digital age.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="bg-white text-zion-purple hover:bg-gray-100">
-              <Phone className="h-5 w-5 mr-2"/>
-              Call +1 302 464 0950
+
+          <div className="flex flex - col sm:flex - row gap - 4 justify - center mb - 12">
+            <Button size="lg" className="bg - white text - zion - purple hover:bg - gray - 100">
+              <Phone className="h - 5 w - 5 mr - 2"      />
+              Call + 1 302 464 0950
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple">
-              <Mail className="h-5 w-5 mr-2"/>
+            <Button size="lg" variant="outline" className="border - white text - white hover:bg - white hover:text - zion - purple">
+              <Mail className="h - 5 w - 5 mr - 2"      />
               Get Free Consultation
             </Button>
           </div>
@@ -148,17 +148,17 @@ export default function AllServicesLandingPage() {
                       
                       <CardContent className="space-y-4">
                         {/* Rating and AI Score */}
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center space-x-2">
-                            <div className="flex items-center">
-                              <Star className="h-4 w-4 text-yellow-500 fill-current"/>
-                              <span className="ml-1 text-sm font-medium">{service.rating}</span>
-                              <span className="text-gray-500 text-sm ml-1">({service.reviewCount})</span>
+                        <div className="flex items - center justify - between">
+                          <div className="flex items - center space - x-2">
+                            <div className="flex items - center">
+                              <Star className="h - 4 w - 4 text - yellow - 500 fill - current"      />
+                              <span className="ml - 1 text - sm font - medium">{service.rating}</span>
+                              <span className="text - gray - 500 text - sm ml - 1"> ({service.reviewCount}) </span>
                             </div>
                           </div>
-                          <div className="flex items-center space-x-2">
-                            <Zap className="h-4 w-4 text-zion-purple"/>
-                            <span className="text-sm font-medium text-zion-purple">AI Score: {service.aiScore}</span>
+                          <div className="flex items - center space - x-2">
+                            <Zap className="h - 4 w - 4 text - zion - purple"      />
+                            <span className="text - sm font - medium text - zion - purple">AI Score: {service.aiScore}</span>
                           </div>
                         </div>
 
@@ -188,11 +188,11 @@ export default function AllServicesLandingPage() {
                         </div>
 
                         {/* Top Benefits */}
-                        <div className="space-y-2">
-                          <h4 className="font-semibold text-zion-blue-dark text-sm">Key Benefits:</h4>
-                          <ul className="space-y-1">
-                            {service.benefits.slice(0, 2).map((benefit, index) => (<li key={index} className="flex items-start space-x-2 text-sm text-gray-600">
-                                <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0"/>
+                        <div className="space - y-2">
+                          <h4 className="font - semibold text - zion - blue - dark text - sm">Key Benefits:</h4>
+                          <ul className="space - y-1">
+                            {service.benefits.slice (0, 2) .map ( (benefit, index) => (<li key={index} className="flex items - start space - x-2 text - sm text - gray - 600">
+                                <CheckCircle className="h - 4 w - 4 text - green - 500 mt - 0.5 flex - shrink - 0"      />
                                 <span>{benefit}</span>
                               </li>))}
                           </ul>
@@ -215,19 +215,19 @@ export default function AllServicesLandingPage() {
                         </div>
 
                         {/* Contact Information */}
-                        <div className="pt-4 border-t border-gray-200">
-                          <div className="space-y-2">
-                            <div className="flex items-center space-x-2 text-sm text-gray-600">
-                              <Phone className="h-4 w-4"/>
+                        <div className="pt - 4 border - t border - gray - 200">
+                          <div className="space - y-2">
+                            <div className="flex items - center space - x-2 text - sm text - gray - 600">
+                              <Phone className="h - 4 w - 4"      />
                               <span>{service.contactInfo.phone}</span>
                             </div>
-                            <div className="flex items-center space-x-2 text-sm text-gray-600">
-                              <Mail className="h-4 w-4"/>
+                            <div className="flex items - center space - x-2 text - sm text - gray - 600">
+                              <Mail className="h - 4 w - 4"      />
                               <span>{service.contactInfo.email}</span>
                             </div>
-                            <div className="flex items-center space-x-2 text-sm text-gray-600">
-                              <Globe className="h-4 w-4"/>
-                              <a href={service.contactInfo.website} target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:underline">
+                            <div className="flex items - center space - x-2 text - sm text - gray - 600">
+                              <Globe className="h - 4 w - 4"      />
+                              <a href={service.contactInfo.website} target="_blank" rel="noopener noreferrer" className="text - zion - cyan hover:underline">
                                 Visit Website
                               </a>
                             </div>
@@ -252,34 +252,34 @@ export default function AllServicesLandingPage() {
       </section>
 
       {/* Why Choose Zion Section */}
-      <section className="py-16 bg-zion-blue">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-12">Why Choose Zion Tech Group?</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="bg-zion-purple rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="h-8 w-8 text-white"/>
+      <section className="py - 16 bg - zion - blue">
+        <div className="container mx - auto px - 4 text - center">
+          <h2 className="text - 3xl font - bold text - white mb - 12">Why Choose Zion Tech Group?</h2>
+
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 max - w-4xl mx - auto">
+            <div className="text - center">
+              <div className="bg - zion - purple rounded - full w - 16 h - 16 flex items - center justify - center mx - auto mb - 4">
+                <TrendingUp className="h - 8 w - 8 text - white"      />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3>
               <p className="text-zion-slate-light">
                 Our services have helped businesses achieve significant improvements in efficiency, cost savings, and growth.
               </p>
             </div>
-            
-            <div className="text-center">
-              <div className="bg-zion-purple rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-white"/>
+
+            <div className="text - center">
+              <div className="bg - zion - purple rounded - full w - 16 h - 16 flex items - center justify - center mx - auto mb - 4">
+                <Users className="h - 8 w - 8 text - white"      />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
               <p className="text-zion-slate-light">
                 Certified professionals with years of experience in AI, IT, and digital transformation across various industries.
               </p>
             </div>
-            
-            <div className="text-center">
-              <div className="bg-zion-purple rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Shield className="h-8 w-8 text-white"/>
+
+            <div className="text - center">
+              <div className="bg - zion - purple rounded - full w - 16 h - 16 flex items - center justify - center mx - auto mb - 4">
+                <Shield className="h - 8 w - 8 text - white"      />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Reliable Support</h3>
               <p className="text-zion-slate-light">
@@ -299,14 +299,14 @@ export default function AllServicesLandingPage() {
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Get in touch with our experts to discuss your specific needs and discover how our services can drive your success.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" className="bg-white text-zion-purple hover:bg-gray-100">
-              <Phone className="h-5 w-5 mr-2"/>
-              Call +1 302 464 0950
+
+          <div className="flex flex - col sm:flex - row gap - 4 justify - center mb - 8">
+            <Button size="lg" className="bg - white text - zion - purple hover:bg - gray - 100">
+              <Phone className="h - 5 w - 5 mr - 2"      />
+              Call + 1 302 464 0950
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple">
-              <Mail className="h-5 w-5 mr-2"/>
+            <Button size="lg" variant="outline" className="border - white text - white hover:bg - white hover:text - zion - purple">
+              <Mail className="h - 5 w - 5 mr - 2"      />
               Email kleber@ziontechgroup.com
             </Button>
           </div>
@@ -318,6 +318,5 @@ export default function AllServicesLandingPage() {
         </div>
       </section>
 
-      <TrustedBySection />
-    </div>);
-}
+      <TrustedBySection       />
+    </div>) }

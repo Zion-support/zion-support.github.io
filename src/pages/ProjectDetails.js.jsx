@@ -155,35 +155,36 @@ function ProjectDetailsContent() {
     if (!project) {
         return (<div className="container mx-auto py-8">
         <Card>
-          <CardContent className="flex flex-col items-center justify-center py-10">
-            <AlertCircle className="h-10 w-10 text-muted-foreground mb-4"/>
-            <h2 className="text-xl font-bold mb-2">Project Not Found</h2>
-            <p className="text-muted-foreground mb-4">
-              The project you're looking for doesn't exist or you don't have access to it.
+          <CardContent className="flex flex - col items - center justify - center py - 10">
+            <AlertCircle className="h - 10 w - 10 text - muted - foreground mb - 4"       />
+            <h2 className="text - xl font - bold mb - 2">Project Not Found</h2>
+            <p className="text - muted - foreground mb - 4">
+              The project you're looking for doesn't exist or you don't have
+              access to it.
             </p>
             <Button onClick={() => router.push("/dashboard")}>
               Return to Dashboard
             </Button>
           </CardContent>
         </Card>
-      </div>);
-    }
-    // Check if user is either the client or the talent
-    const isClient = user?.id === project.client_id;
-    const isTalent = user?.id === project.talent_id;
-    if (!isClient && !isTalent) {
-        router.push("/unauthorized");
-        return null;
-    }
-    const isOfferPending = project.status === "offer_sent";
-    const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
-    const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
-    return (<>
-      <SEO title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} description="View and manage your project details and collaboration."/>
-      
-      <main className="container mx-auto px-4 py-8">
-        <div className="mb-6">
-          <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">
+      </div>) ;
+  }
+  // Check if user is either the client or the talent
+  const isTalent = user?.id === project.talent_id;
+  if (!isClient && !isTalent) {
+    router.push ('/unauthorized') ;
+    return null;
+  }
+  const isActiveProject = ['offer_accepted', 'in_progress'].includes (project.status) ;
+  return (<>
+      <SEO
+        title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`}
+        description="View and manage your project details and collaboration."
+            />
+
+      <main className="container mx - auto px - 4 py - 8">
+        <div className="mb - 6">
+          <div className="flex flex - col md:flex - row justify - between md:items - center gap - 4 mb - 2">
             <div>
               <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>
               <div className="flex items-center gap-2 mt-1">
@@ -200,7 +201,7 @@ function ProjectDetailsContent() {
                   <AlertDialog>
                     <AlertDialogTrigger asChild>
                       <Button variant="default">
-                        <CheckCircle2 className="mr-2 h-4 w-4"/> Accept Offer
+                        <CheckCircle2 className="mr - 2 h - 4 w - 4"       /> Accept Offer
                       </Button>
                     </AlertDialogTrigger>
                     <AlertDialogContent>
@@ -219,16 +220,20 @@ function ProjectDetailsContent() {
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
-                  
-                  <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
-                    <MessageSquare className="mr-2 h-4 w-4"/> Request Changes
+
+                  <Button
+                    variant="outline"
+                    onClick={ () => handleStatusChange ('changes_requested') }
+                  >
+                    <MessageSquare className="mr - 2 h - 4 w - 4"       /> Request Changes
                   </Button>
                 </>)}
               
               {(isClient || isTalent) && project.status === "in_progress" && (<AlertDialog>
                   <AlertDialogTrigger asChild>
                     <Button variant="default">
-                      <CheckCircle2 className="mr-2 h-4 w-4"/> Mark as Completed
+                      <CheckCircle2 className="mr - 2 h - 4 w - 4"       /> Mark as
+                      Completed
                     </Button>
                   </AlertDialogTrigger>
                   <AlertDialogContent>
@@ -250,19 +255,24 @@ function ProjectDetailsContent() {
               
               {isActiveProject && (<Button variant="default" asChild>
                   <Link href={`/project/${project.id}/milestones`}>
-                    <Layers className="mr-2 h-4 w-4"/> Milestones
+                    <Layers className="mr - 2 h - 4 w - 4"       /> Milestones
                   </Link>
                 </Button>)}
 
               {isActiveProject && (<Button variant="outline" asChild>
                   <Link href={`/project/${project.id}/room`}>
-                    <Video className="mr-2 h-4 w-4"/> Project Room
+                    <Video className="mr - 2 h - 4 w - 4"       /> Project Room
                   </Link>
-                </Button>)}
-              
-              {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (<Button variant="outline" onClick={() => router.push(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}>
-                  <MessageSquare className="mr-2 h-4 w-4"/> Message
-                </Button>)}
+                </Button>) }
+
+              { (isClient || isTalent) &&
+                ['offer_sent', 'offer_accepted', 'in_progress'].includes (project.status) && (<Button
+                    variant="outline"
+                    onClick={ () =>
+                      router.push (`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`) }
+                  >
+                    <MessageSquare className="mr - 2 h - 4 w - 4"       /> Message
+                  </Button>) }
             </div>
           </div>
         </div>
@@ -322,17 +332,17 @@ function ProjectDetailsContent() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="space-y-4">
-                      <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">
-                        <Calendar className="h-5 w-5 text-primary mt-0.5"/>
+                    <div className="space - y-4">
+                      <div className="flex items - start gap - 3 p - 3 bg - muted / 30 rounded - md">
+                        <Calendar className="h - 5 w - 5 text - primary mt - 0.5"       />
                         <div>
                           <h3 className="font-semibold">Start Date</h3>
                           <p>{format(new Date(project.start_date), "PPP")}</p>
                         </div>
                       </div>
-                      
-                      <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">
-                        <Clock className="h-5 w-5 text-primary mt-0.5"/>
+
+                      <div className="flex items - start gap - 3 p - 3 bg - muted / 30 rounded - md">
+                        <Clock className="h - 5 w - 5 text - primary mt - 0.5"       />
                         <div>
                           <h3 className="font-semibold">Project Status</h3>
                           <div className="mt-1">
@@ -354,9 +364,9 @@ function ProjectDetailsContent() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    {project.agreement_url ? (<div className="flex items-center justify-between bg-muted/30 p-4 rounded-md">
-                        <div className="flex items-center gap-3">
-                          <FileText className="h-5 w-5 text-primary"/>
+                    {project.agreement_url ? (<div className="flex items - center justify - between bg - muted / 30 p - 4 rounded - md">
+                        <div className="flex items - center gap - 3">
+                          <FileText className="h - 5 w - 5 text - primary"       />
                           <div>
                             <h3 className="font-semibold">Project Agreement</h3>
                             <p className="text-sm text-muted-foreground">
@@ -369,10 +379,10 @@ function ProjectDetailsContent() {
                             View
                           </a>
                         </Button>
-                      </div>) : (<div className="text-center py-8">
-                        <FileText className="h-10 w-10 text-muted-foreground mx-auto mb-2"/>
-                        <h3 className="font-semibold">No Documents Yet</h3>
-                        <p className="text-sm text-muted-foreground">
+                      </div>) : (<div className="text - center py - 8">
+                        <FileText className="h - 10 w - 10 text - muted - foreground mx - auto mb - 2"       />
+                        <h3 className="font - semibold">No Documents Yet</h3>
+                        <p className="text - sm text - muted - foreground">
                           No documents have been uploaded to this project.
                         </p>
                       </div>)}
@@ -389,12 +399,19 @@ function ProjectDetailsContent() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="space-y-4">
-                      <div className="space-y-4 max-h-[400px] overflow-y-auto mb-4">
-                        {notes.length > 0 ? (notes.map((note) => (<div key={note.id} className="bg-muted/30 p-3 rounded-md">
-                              <div className="flex items-center gap-2 mb-2">
-                                <Avatar className="h-6 w-6">
-                                  {note.created_by_profile?.avatar_url ? (<img loading="lazy" src={note.created_by_profile.avatar_url} alt={note.created_by_profile.display_name}/>) : (<User className="h-4 w-4"/>)}
+                    <div className="space - y-4">
+                      <div className="space - y-4 max - h-[400px] overflow - y-auto mb - 4">
+                        {notes.length > 0 ? (notes.map (note => (<div
+                              key={note.id}
+                              className="bg - muted / 30 p - 3 rounded - md"
+                            >
+                              <div className="flex items - center gap - 2 mb - 2">
+                                <Avatar className="h - 6 w - 6">
+                                  {note.created_by_profile?.avatar_url ? (<img
+                                      loading="lazy"
+                                      src={note.created_by_profile.avatar_url}
+                                      alt={note.created_by_profile.display_name}
+                                          />) : (<User className="h - 4 w - 4"       />) }
                                 </Avatar>
                                 <span className="font-medium text-sm">
                                   {note.created_by_profile?.display_name || "User"}
@@ -403,10 +420,12 @@ function ProjectDetailsContent() {
                                   {format(new Date(note.created_at), "PPp")}
                                 </span>
                               </div>
-                              <p className="text-sm whitespace-pre-wrap">{note.content}</p>
-                            </div>))) : (<div className="text-center py-8">
-                            <MessageSquare className="h-8 w-8 text-muted-foreground mx-auto mb-2"/>
-                            <p className="text-muted-foreground">
+                              <p className="text - sm whitespace - pre - wrap">
+                                {note.content}
+                              </p>
+                            </div>) ) ) : (<div className="text - center py - 8">
+                            <MessageSquare className="h - 8 w - 8 text - muted - foreground mx - auto mb - 2"       />
+                            <p className="text - muted - foreground">
                               No notes yet. Add the first note to this project.
                             </p>
                           </div>)}
@@ -424,7 +443,7 @@ function ProjectDetailsContent() {
               </TabsContent>
               
               <TabsContent value="reviews">
-                <ProjectReviewSection project={project}/>
+                <ProjectReviewSection project={project}       />
               </TabsContent>
             </Tabs>
           </div>
@@ -435,10 +454,14 @@ function ProjectDetailsContent() {
                 <CardTitle>Project Participants</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <Avatar className="h-10 w-10">
-                      {project.talent_profile?.profile_picture_url ? (<img loading="lazy" src={project.talent_profile.profile_picture_url} alt={project.talent_profile.full_name}/>) : (<User className="h-6 w-6"/>)}
+                <div className="space - y-6">
+                  <div className="flex items - start gap - 4">
+                    <Avatar className="h - 10 w - 10">
+                      {project.talent_profile?.profile_picture_url ? (<img
+                          loading="lazy"
+                          src={project.talent_profile.profile_picture_url}
+                          alt={project.talent_profile.full_name}
+                              />) : (<User className="h - 6 w - 6"       />) }
                     </Avatar>
                     <div>
                       <h3 className="font-semibold">
@@ -447,24 +470,42 @@ function ProjectDetailsContent() {
                       <p className="text-sm text-muted-foreground">
                         {project.talent_profile?.professional_title || "Professional"}
                       </p>
-                      {isClient && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}>
-                          <MessageSquare className="mr-1 h-3 w-3"/> Message
-                        </Button>)}
+                      {isClient && (<Button
+                          variant="outline"
+                          size="sm"
+                          className="mt - 2"
+                          onClick={ () =>
+                            router.push (`/messages?talentId=${project.talent_id}`) }
+                        >
+                          <MessageSquare className="mr - 1 h - 3 w - 3"       /> Message
+                        </Button>) }
                     </div>
                   </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <Avatar className="h-10 w-10">
-                      {project.talent_profile?.profile_picture_url ? (<img loading="lazy" src={project.talent_profile.profile_picture_url} alt={project.talent_profile.full_name}/>) : (<User className="h-6 w-6"/>)}
+
+                  <div className="flex items - start gap - 4">
+                    <Avatar className="h - 10 w - 10">
+                      {project.talent_profile?.profile_picture_url ? (<img
+                          loading="lazy"
+                          src={project.talent_profile.profile_picture_url}
+                          alt={project.talent_profile.full_name}
+                              />) : (<User className="h - 6 w - 6"       />) }
                     </Avatar>
                     <div>
                       <h3 className="font-semibold">
                         {project.talent_profile?.full_name || "Client"}
                       </h3>
-                      <p className="text-sm text-muted-foreground">Project Owner</p>
-                      {isTalent && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router.push(`/messages?clientId=${project.client_id}`)}>
-                          <MessageSquare className="mr-1 h-3 w-3"/> Message
-                        </Button>)}
+                      <p className="text - sm text - muted - foreground">
+                        Project Owner
+                      </p>
+                      {isTalent && (<Button
+                          variant="outline"
+                          size="sm"
+                          className="mt - 2"
+                          onClick={ () =>
+                            router.push (`/messages?clientId=${project.client_id}`) }
+                        >
+                          <MessageSquare className="mr - 1 h - 3 w - 3"       /> Message
+                        </Button>) }
                     </div>
                   </div>
                 </div>
@@ -500,12 +541,18 @@ function ProjectDetailsContent() {
               </CardContent>
               
               {/* Conditional Footer Based on Status */}
-              {project.status === "changes_requested" && isClient && (<CardFooter className="flex-col items-start gap-2 border-t pt-6">
-                  <p className="text-sm text-amber-600 flex items-center gap-1">
-                    <AlertCircle className="h-4 w-4"/> The talent has requested changes to this offer.
+              {project.status === 'changes_requested' && isClient && (<CardFooter className="flex - col items - start gap - 2 border - t pt - 6">
+                  <p className="text - sm text - amber - 600 flex items - center gap - 1">
+                    <AlertCircle className="h - 4 w - 4"       /> The talent has requested
+                    changes to this offer.
                   </p>
-                  <Button variant="outline" onClick={() => router.push(`/messages?talentId=${project.talent_id}`)} className="w-full">
-                    <MessageSquare className="mr-2 h-4 w-4"/> Discuss Changes
+                  <Button
+                    variant="outline"
+                    onClick={ () =>
+                      router.push (`/messages?talentId=${project.talent_id}`) }
+                    className="w - full"
+                  >
+                    <MessageSquare className="mr - 2 h - 4 w - 4"       /> Discuss Changes
                   </Button>
                 </CardFooter>)}
               
@@ -513,17 +560,19 @@ function ProjectDetailsContent() {
                   <p className="text-sm text-muted-foreground">
                     Waiting for the talent to accept your offer.
                   </p>
-                </CardFooter>)}
-              
-              {project.status === "completed" && (<CardFooter className="flex-col items-start gap-2 border-t pt-6">
-                  <p className="text-sm text-green-600 flex items-center gap-1">
-                    <CheckCircle2 className="h-4 w-4"/> This project has been completed.
+                </CardFooter>) }
+
+              {project.status === 'completed' && (<CardFooter className="flex - col items - start gap - 2 border - t pt - 6">
+                  <p className="text - sm text - green - 600 flex items - center gap - 1">
+                    <CheckCircle2 className="h - 4 w - 4"       /> This project has been
+                    completed.
                   </p>
-                </CardFooter>)}
-              
-              {project.status === "canceled" && (<CardFooter className="flex-col items-start gap-2 border-t pt-6">
-                  <p className="text-sm text-red-600 flex items-center gap-1">
-                    <XCircle className="h-4 w-4"/> This project has been canceled.
+                </CardFooter>) }
+
+              {project.status === 'canceled' && (<CardFooter className="flex - col items - start gap - 2 border - t pt - 6">
+                  <p className="text - sm text - red - 600 flex items - center gap - 1">
+                    <XCircle className="h - 4 w - 4"       /> This project has been
+                    canceled.
                   </p>
                 </CardFooter>)}
             </Card>
@@ -533,8 +582,7 @@ function ProjectDetailsContent() {
       
     </>);
 }
-export default function ProjectDetails() {
-    return (<ProtectedRoute>
-      <ProjectDetailsContent />
-    </ProtectedRoute>);
+  return (<ProtectedRoute>
+      <ProjectDetailsContent       />
+    </ProtectedRoute>) ;
 }

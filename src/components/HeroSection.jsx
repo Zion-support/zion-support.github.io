@@ -51,6 +51,41 @@ export default function HeroSection() {
     }
   };
 
+  const pulseVariants = {
+    animate: {
+      scale: [1, 1.1, 1],
+      opacity: [0.5, 0.8, 0.5],
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  const features = [
+    {
+      icon: <Star className="w - 6 h - 6"       />,
+      text: "AI - Powered Solutions",
+      color: "text - zion - cyan"
+    },
+    {
+      icon: <Zap className="w - 6 h - 6"       />,
+      text: "24 / 7 Support",
+      color: "text - zion - purple"
+    },
+    {
+      icon: <Shield className="w - 6 h - 6"       />,
+      text: "Enterprise Security",
+      color: "text - zion - cyan - light"
+    },
+    {
+      icon: <Users className="w - 6 h - 6"       />,
+      text: "Global Team",
+      color: "text - zion - purple - light"
+    }
+  ];
+
   const stats = [
     { value: "500+", label: "Projects Delivered", icon: Star },
     { value: "50+", label: "Expert Team", icon: Users },

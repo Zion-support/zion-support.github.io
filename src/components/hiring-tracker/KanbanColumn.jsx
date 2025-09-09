@@ -40,8 +40,19 @@ export function KanbanColumn({ id, title, description, applications, count }) {
       </CardHeader>
       <CardContent className="flex-grow p-3 overflow-y-auto">
         <Droppable droppableId={id}>
-          {(provided) => (<div ref={provided.innerRef} {...provided.droppableProps} className="min-h-full space-y-2">
-              {applications.map((application, index) => (<CandidateCard key={application.id} application={application} index={index}/>))}
+          {provided => (
+            <div
+              ref={provided.innerRef}
+              {...provided.droppableProps}
+              className="min-h-full space-y-2"
+            >
+              {applications.map((((((((application, index, index, index, index, index, index, index) => ({ ...((((((application, index, index, index, index, index, index, key: index })) => ({ ...(((((application, index, index, index, index, index, key: index })) => ({ ...((((application, index, index, index, index, key: index })) => ({ ...(((application, index, index, index, key: index })) => ({ ...((application, index, index, key: index })) => ({ ...(application, index, key: index })) => (
+                <CandidateCard
+                  key={application.id}
+                  application={application}
+                  index={index}
+                      />
+              ))}
               {provided.placeholder}
               
               {applications.length === 0 && (<div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">

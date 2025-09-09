@@ -72,9 +72,25 @@ const EnhancedComprehensiveServicesShowcase = () => {
           {/* Search and Filter */}
           <div className="max-w-2xl mx-auto mb-8">
             <div className="relative">
-              <input type="text" placeholder="Search services, features, or technologies..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"/>
-              <svg className="absolute right-3 top-3 h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              <input
+                type="text"
+                placeholder="Search services, features, or technologies..."
+                value={searchTerm}
+                onChange={e => setSearchTerm (e.target.value) }
+                className="w - full px - 4 py - 3 bg - white / 10 backdrop - blur - lg border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 400"
+              />
+              <svg
+                className="absolute right - 3 top - 3 h - 6 w - 6 text - gray - 400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l - 6-6m2 - 5a7 7 0 11 - 14 0 7 7 0 0114 0z"
+                      />
               </svg>
             </div>
           </div>
@@ -124,12 +140,16 @@ const EnhancedComprehensiveServicesShowcase = () => {
                   </ul>
                 </div>
 
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2">
-                    <div className="flex text-yellow-400">
-                      {[...Array(5)].map((_, i) => (<svg key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current' : 'fill-gray-600'}`} viewBox="0 0 20 20">
-                          <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                        </svg>))}
+                <div className="flex items - center justify - between">
+                  <div className="flex items - center space - x-2">
+                    <div className="flex text - yellow - 400">
+                      {[...Array (5) ].map ( (_, i) => (<svg
+                          key={i}
+                          className={`w - 4 h - 4 ${i < Math.floor (service.rating) ? 'fill - current' : 'fill - gray - 600'}`}
+                          viewBox="0 0 20 20"
+                        >
+                          <path d="M10 15l - 5.878 3.09 1.123 - 6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955 - 4.756 4.635 1.123 6.545z"       />
+                        </svg>) ) }
                     </div>
                     <span className="text-sm text-gray-400">({service.reviews})</span>
                   </div>
@@ -212,9 +232,22 @@ const EnhancedComprehensiveServicesShowcase = () => {
                   <h2 className="text-3xl font-bold text-white mb-2">{selectedService.name}</h2>
                   <p className="text-xl text-gray-300 mb-4">{selectedService.tagline}</p>
                 </div>
-                <button onClick={closeModal} className="text-gray-400 hover:text-white transition-colors duration-300">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/>
+                <button
+                  onClick={closeModal}
+                  className="text - gray - 400 hover:text - white transition - colors duration - 300"
+                >
+                  <svg
+                    className="w - 8 h - 8"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                          />
                   </svg>
                 </button>
               </div>

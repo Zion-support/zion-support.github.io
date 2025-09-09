@@ -82,10 +82,10 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
     };
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
-        <div className="flex items-center space-x-3">
-          <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
-            <Shield className="w-6 h-6 text-blue-600 dark:text-blue-400"/>
+      <div className="flex items - center justify - between p - 4 border - b border - gray - 200 dark:border - gray - 700">
+        <div className="flex items - center space - x-3">
+          <div className="p - 2 bg - blue - 100 dark:bg - blue - 900 rounded - lg">
+            <Shield className="w - 6 h - 6 text - blue - 600 dark:text - blue - 400"      />
           </div>
           <div>
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -97,45 +97,45 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
           </div>
         </div>
         
-        <div className="flex items-center space-x-2">
-          <button onClick={handleCheckCompliance} disabled={isComplianceChecking} className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 disabled:opacity-50">
-            {isComplianceChecking ? (<Loader2 className="w-4 h-4 animate-spin"/>) : (<RefreshCw className="w-4 h-4"/>)}
-            <span>Check Compliance</span>
+        <div className="flex items - center space - x-2">
+          <button onClick={handleCheckCompliance} disabled={isComplianceChecking} className="flex items - center space - x-2 px - 3 py - 2 text - sm font - medium text - gray - 700 dark:text - gray - 300 bg - gray - 100 dark:bg - gray - 800 rounded - lg hover:bg - gray - 200 dark:hover:bg - gray - 700 disabled:opacity - 50">
+            {isComplianceChecking ? (<Loader2 className="w - 4 h - 4 animate - spin"      />) : (<RefreshCw className="w - 4 h - 4"      />) }
+            <span > Check Compliance</span>
           </button>
           
-          <button onClick={() => setShowSettings(!showSettings)} className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
-            <Settings className="w-5 h-5"/>
+          <button onClick={ () => setShowSettings (!showSettings) } className="p - 2 text - gray - 500 hover:text - gray - 700 dark:text - gray - 400 dark:hover:text - gray - 200 rounded - lg hover:bg - gray - 100 dark:hover:bg - gray - 800">
+            <Settings className="w - 5 h - 5"      />
           </button>
         </div>
       </div>
 
       {/* Monitoring Status */}
-      <div className="p-4 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border-b border-gray-200 dark:border-gray-700">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}/>
-              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+      <div className="p - 4 bg - gradient - to - r from - blue - 50 to - indigo - 50 dark:from - blue - 900 / 20 dark:to - indigo - 900 / 20 border - b border - gray - 200 dark:border - gray - 700">
+        <div className="flex items - center justify - between">
+          <div className="flex items - center space - x-4">
+            <div className="flex items - center space - x-2">
+              <div className={`w - 3 h - 3 rounded - full ${isMonitoring ? 'bg - green - 500' : 'bg - red - 500'}`}      />
+              <span className="text - sm font - medium text - gray - 700 dark:text - gray - 300">
                 {isMonitoring ? 'Monitoring Active' : 'Monitoring Inactive'}
               </span>
             </div>
             
-            <div className="flex items-center space-x-2">
-              <Clock className="w-4 h-4 text-gray-500"/>
-              <span className="text-sm text-gray-600 dark:text-gray-400">
-                Last Check: {new Date().toLocaleTimeString()}
+            <div className="flex items - center space - x-2">
+              <Clock className="w - 4 h - 4 text - gray - 500"      />
+              <span className="text - sm text - gray - 600 dark:text - gray - 400">
+                Last Check: {new Date () .toLocaleTimeString () }
               </span>
             </div>
           </div>
           
-          <div className="flex space-x-2">
-            {!isMonitoring ? (<button onClick={handleStartMonitoring} className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover:bg-green-700">
-                <Play className="w-4 h-4"/>
-                <span>Start Monitoring</span>
-              </button>) : (<button onClick={handleStopMonitoring} className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-white bg-red-600 rounded-lg hover:bg-red-700">
-                <Square className="w-4 h-4"/>
-                <span>Stop Monitoring</span>
-              </button>)}
+          <div className="flex space - x-2">
+            {!isMonitoring ? (<button onClick={handleStartMonitoring} className="flex items - center space - x-2 px - 4 py - 2 text - sm font - medium text - white bg - green - 600 rounded - lg hover:bg - green - 700">
+                <Play className="w - 4 h - 4"      />
+                <span > Start Monitoring</span>
+              </button>) : (<button onClick={handleStopMonitoring} className="flex items - center space - x-2 px - 4 py - 2 text - sm font - medium text - white bg - red - 600 rounded - lg hover:bg - red - 700">
+                <Square className="w - 4 h - 4"      />
+                <span > Stop Monitoring</span>
+              </button>) }
           </div>
         </div>
       </div>
@@ -148,10 +148,10 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             { id: 'compliance', label: 'Compliance', icon: CheckCircle },
             { id: 'threats', label: 'Threats', icon: Shield },
             { id: 'reports', label: 'Reports', icon: FileText }
-        ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${activeTab === id
-                ? 'border-blue-500 text-blue-600 dark:text-blue-400'
-                : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'}`}>
-            <Icon className="w-4 h-4"/>
+        ].map ( ({ id, label, icon: Icon }) => (<button key={id} onClick={ () => setActiveTab (id) } className={`flex items - center space - x-2 px - 4 py - 3 text - sm font - medium border - b-2 transition - colors ${activeTab === id
+                ? 'border - blue - 500 text - blue - 600 dark:text - blue - 400'
+                : 'border - transparent text - gray - 500 hover:text - gray - 700 dark:text - gray - 400 dark:hover:text - gray - 200'}`}>
+            <Icon className="w - 4 h - 4"      />
             <span>{label}</span>
           </button>))}
       </div>
@@ -168,7 +168,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                       <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Total Events</p>
                       <p className="text-2xl font-bold text-gray-900 dark:text-white">{securityMetrics.totalEvents}</p>
                     </div>
-                    <AlertTriangle className="w-8 h-8 text-orange-500"/>
+                    <AlertTriangle className="w - 8 h - 8 text - orange - 500"      />
                   </div>
                 </div>
                 
@@ -178,7 +178,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                       <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Critical Events</p>
                       <p className="text-2xl font-bold text-red-600">{securityMetrics.criticalEvents}</p>
                     </div>
-                    <XCircle className="w-8 h-8 text-red-500"/>
+                    <XCircle className="w - 8 h - 8 text - red - 500"      />
                   </div>
                 </div>
                 
@@ -188,7 +188,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                       <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Compliance Score</p>
                       <p className="text-2xl font-bold text-green-600">{securityMetrics.complianceScore}%</p>
                     </div>
-                    <CheckCircle className="w-8 h-8 text-green-500"/>
+                    <CheckCircle className="w - 8 h - 8 text - green - 500"      />
                   </div>
                 </div>
                 
@@ -200,19 +200,19 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                         {securityMetrics.threatLevel.toUpperCase()}
                       </p>
                     </div>
-                    <Shield className="w-8 h-8 text-blue-500"/>
+                    <Shield className="w - 8 h - 8 text - blue - 500"      />
                   </div>
                 </div>
               </div>
 
               {/* Recent Events */}
-              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Recent Security Events</h3>
-                <div className="space-y-3">
-                  {securityEvents.slice(0, 5).map((event) => (<div key={event.id} className="flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded-lg">
-                      <div className="flex items-center space-x-3">
-                        <div className={`p-2 rounded-lg ${getSeverityColor(event.severity)}`}>
-                          <AlertTriangle className="w-4 h-4"/>
+              <div className="bg - gray - 50 dark:bg - gray - 800 p - 4 rounded - lg">
+                <h3 className="text - lg font - semibold text - gray - 900 dark:text - white mb - 4">Recent Security Events</h3>
+                <div className="space - y-3">
+                  {securityEvents.slice (0, 5) .map ( (event) => (<div key={event.id} className="flex items - center justify - between p - 3 bg - white dark:bg - gray - 700 rounded - lg">
+                      <div className="flex items - center space - x-3">
+                        <div className={`p - 2 rounded - lg ${getSeverityColor (event.severity) }`}>
+                          <AlertTriangle className="w - 4 h - 4"      />
                         </div>
                         <div>
                           <p className="font-medium text-gray-900 dark:text-white">{event.type.replace('_', ' ')}</p>
@@ -245,12 +245,12 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                 </button>
               </div>
               
-              <div className="space-y-3">
-                {securityEvents.map((event) => (<div key={event.id} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center space-x-3">
-                        <div className={`p-2 rounded-lg ${getSeverityColor(event.severity)}`}>
-                          <AlertTriangle className="w-4 h-4"/>
+              <div className="space - y-3">
+                {securityEvents.map ( (event) => (<div key={event.id} className="bg - gray - 50 dark:bg - gray - 800 p - 4 rounded - lg">
+                    <div className="flex items - center justify - between mb - 3">
+                      <div className="flex items - center space - x-3">
+                        <div className={`p - 2 rounded - lg ${getSeverityColor (event.severity) }`}>
+                          <AlertTriangle className="w - 4 h - 4"      />
                         </div>
                         <div>
                           <p className="font-medium text-gray-900 dark:text-white">
@@ -316,11 +316,11 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                         <span className="font-medium text-gray-900 dark:text-white">{rule.violations.length}</span>
                       </div>
                     </div>
-                    {rule.requirements.length > 0 && (<div className="mt-3">
-                        <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Requirements:</p>
-                        <ul className="space-y-1">
-                          {rule.requirements.map((req, index) => (<li key={index} className="text-sm text-gray-600 dark:text-gray-400 flex items-center space-x-2">
-                              <CheckCircle className="w-3 h-3 text-green-500"/>
+                    {rule.requirements.length > 0 && (<div className="mt - 3">
+                        <p className="text - sm font - medium text - gray - 700 dark:text - gray - 300 mb - 2">Requirements:</p>
+                        <ul className="space - y-1">
+                          {rule.requirements.map ( (req, index) => (<li key={index} className="text - sm text - gray - 600 dark:text - gray - 400 flex items - center space - x-2">
+                              <CheckCircle className="w - 3 h - 3 text - green - 500"      />
                               <span>{req}</span>
                             </li>))}
                         </ul>
@@ -381,14 +381,14 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                     Generate a comprehensive security report with current metrics and recommendations.
                   </p>
-                  <button onClick={handleGenerateReport} className="w-full px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">
-                    {copied ? (<span className="flex items-center justify-center space-x-2">
-                        <CheckCircle className="w-4 h-4"/>
-                        <span>Copied to Clipboard</span>
-                      </span>) : (<span className="flex items-center justify-center space-x-2">
-                        <FileText className="w-4 h-4"/>
-                        <span>Generate Report</span>
-                      </span>)}
+                  <button onClick={handleGenerateReport} className="w - full px - 4 py - 2 text - sm font - medium text - white bg - blue - 600 rounded - lg hover:bg - blue - 700">
+                    {copied ? (<span className="flex items - center justify - center space - x-2">
+                        <CheckCircle className="w - 4 h - 4"      />
+                        <span > Copied to Clipboard</span>
+                      </span>) : (<span className="flex items - center justify - center space - x-2">
+                        <FileText className="w - 4 h - 4"      />
+                        <span > Generate Report</span>
+                      </span>) }
                   </button>
                 </div>
                 
@@ -397,10 +397,10 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                     Export the complete security audit log for compliance and analysis purposes.
                   </p>
-                  <button onClick={handleExportAuditLog} className="w-full px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover:bg-green-700">
-                    <span className="flex items-center justify-center space-x-2">
-                      <Download className="w-4 h-4"/>
-                      <span>Export Audit Log</span>
+                  <button onClick={handleExportAuditLog} className="w - full px - 4 py - 2 text - sm font - medium text - white bg - green - 600 rounded - lg hover:bg - green - 700">
+                    <span className="flex items - center justify - center space - x-2">
+                      <Download className="w - 4 h - 4"      />
+                      <span > Export Audit Log</span>
                     </span>
                   </button>
                 </div>

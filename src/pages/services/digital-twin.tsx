@@ -1,262 +1,318 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Globe, 
-  Eye, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight,
-  Star,
-  Award,
-  Brain,
-  BarChart3,
-  Users,
-  Cpu,
-  Shield,
-  Database,
-  Network,
-  Monitor
-} from 'lucide-react';
-
-const DigitalTwinServicesPage = () => {
-  const services = [
-    {
-      title: 'Digital Twin Development',
-      description: 'Create virtual replicas of physical assets, processes, and systems for real-time monitoring and optimization.',
-      features: ['3D Modeling', 'Real-time Data Integration', 'Simulation Engine', 'Predictive Analytics'],
-      icon: Globe
-    },
-    {
-      title: 'IoT Integration',
-      description: 'Connect physical assets with sensors and IoT devices to feed real-time data to digital twins.',
-      features: ['Sensor Networks', 'Data Collection', 'Edge Computing', 'Real-time Streaming'],
-      icon: Cpu
-    },
-    {
-      title: 'Predictive Analytics',
-      description: 'Leverage AI and machine learning to predict maintenance needs and optimize performance.',
-      features: ['Machine Learning Models', 'Predictive Maintenance', 'Performance Optimization', 'Risk Assessment'],
-      icon: Brain
-    },
-    {
-      title: 'Visualization & Monitoring',
-      description: 'Interactive dashboards and 3D visualizations for comprehensive monitoring and control.',
-      features: ['3D Visualization', 'Real-time Dashboards', 'Mobile Access', 'Alert Systems'],
-      icon: Monitor
-    }
-  ];
-
-  const benefits = [
-    'Real-time monitoring and control',
-    'Predictive maintenance optimization',
-    'Reduced operational costs',
-    'Enhanced decision-making capabilities',
-    'Improved safety and compliance',
-    'Increased operational efficiency'
-  ];
-
-  const applications = [
-    'Manufacturing',
-    'Smart Cities',
-    'Healthcare',
-    'Energy & Utilities',
-    'Transportation',
-    'Construction'
-  ];
-
-  return (
-    <div className="min-h-screen bg-futuristic">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
-        <div className="container-responsive relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <div className="inline-flex items-center space-x-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full px-6 py-3 mb-8">
-              <Globe className="w-5 h-5 text-zion-cyan" />
-              <span className="text-zion-cyan font-medium">Digital Twin Services</span>
-            </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Bridge the Physical and
-              <span className="text-gradient"> Digital Worlds</span>
-            </h1>
-            
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Create virtual replicas of your physical assets and systems to enable real-time monitoring, 
-              predictive analytics, and intelligent optimization.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-futuristic px-8 py-4 text-lg">
-                Digital Twin Assessment
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="btn-neon px-8 py-4 text-lg">
-                View Digital Twin Solutions
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Digital Twin Solutions
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              From development to deployment, we provide end-to-end digital twin solutions 
-              that transform how you monitor and optimize your operations.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
-              >
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">{service.title}</h3>
-                </div>
-                
-                <p className="text-zion-slate-light mb-6 text-lg">
-                  {service.description}
-                </p>
-                
-                <ul className="space-y-3">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3 text-zion-slate-light">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our Digital Twin Services?
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Experience the future of asset management and operational optimization with our digital twin solutions.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Star className="w-8 h-8 text-white" />
-                </div>
-                <p className="text-lg text-zion-slate-light">{benefit}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Applications Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Digital Twin Applications
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover how digital twins can transform various industries and applications.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {applications.map((application, index) => (
-              <motion.div
-                key={application}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Eye className="w-6 h-6 text-white" />
-                </div>
-                <p className="text-sm font-medium text-white">{application}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-12 text-center"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Create Your Digital Twin?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Transform your operations with intelligent digital twins that provide real-time insights 
-              and predictive capabilities. Our experts are ready to help you build the future.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-futuristic px-8 py-4 text-lg">
-                Start Digital Twin Project
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="btn-neon px-8 py-4 text-lg">
-                Download Digital Twin Guide
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Link  } from 'react-router-dom.ts';
+;
+export default function DigitalTwin(...args: any[]):  {;
+  return (;
+    <>;
+      <Helmet>;
+        <title>Digital Twin Solutions - Zion Tech Group</title>;
+        <meta name = "description" content="Create virtual replicas of physical systems with our digital twin technology. Monitor, simulate, and optimize operations in real-time."       />;
+        <meta name="keywords" content="digital twin, virtual simulation, IoT monitoring, predictive maintenance, system optimization, real-time analytics"       />;
+      </Helmet>;
+;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
+        {/* Hero Section */};
+        <section className="relative pt-32 pb-20 overflow-hidden">;
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-600/10"></div>;
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <div className="text-center">;
+              <div className="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-8">;
+                <Cpu className="w-4 h-4 mr-2"       />;
+                Digital Twin Technology;
+              </div>;
+;
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
+                Digital;
+                <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"> Twin</span>;
+              </h1>;
+;
+              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">;
+                Create virtual replicas of your physical systems and assets. Monitor performance,;
+                simulate scenarios, and optimize operations with real-time digital twin technology.;
+              </p>;
+;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link;
+                  to="/contact";
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200 shadow-lg hover:shadow-xl";
+;
+                  Get Started;
+                  <ArrowRight className="ml-2 w-5 h-5"       />;
+                </Link>;
+                <button className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200">;
+                  <Play className="mr-2 w-5 h-5"       />;
+                  Watch Demo;
+                </button>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+;
+        {/* Features Section */};
+        <section className="py-20">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <div className="text-center mb-16">;
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
+                Virtual Replication Technology;
+              </h2>;
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">;
+                Our digital twin platform creates accurate virtual representations that enable;
+                real-time monitoring, simulation, and optimization.;
+              </p>;
+            </div>;
+;
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;
+              {[;
+                {;
+                  icon: Cpu,;
+                  title: "Real-time Monitoring",;
+                  description: "Continuous monitoring of physical assets with instant virtual representation updates.";
+                },;
+                {;
+                  icon: Eye,;
+                  title: "Predictive Analytics",;
+                  description: "AI-powered predictions for maintenance, performance, and failure prevention.";
+                },;
+                {;
+                  icon: Zap,;
+                  title: "Simulation & Testing",;
+                  description: "Test scenarios and changes in the virtual environment before physical implementation.";
+                },;
+                {;
+                  icon: Settings,;
+                  title: "Performance Optimization",;
+                  description: "Identify bottlenecks and optimize operations based on digital twin insights.";
+                },;
+                {;
+                  icon: Users,;
+                  title: "Collaborative Planning",;
+                  description: "Enable teams to work together on virtual models and simulations.";
+                },;
+                {;
+                  icon: Globe,;
+                  title: "IoT Integration",;
+                  description: "Seamlessly connect with IoT sensors and devices for real-time data.";
+                };
+              ].map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index }))  => (;
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">;
+                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">;
+                    <feature.icon className="w-6 h-6 text-white"       />;
+                  </div>;
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>;
+                  <p className="text-slate-300">{feature.description}</p>;
+                </div>;
+              ))};
+            </div>;
+          </div>;
+        </section>;
+;
+        {/* Applications Section */};
+        <section className="py-20 bg-slate-800/30">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <div className="text-center mb-16">;
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
+                Digital Twin Applications;
+              </h2>;
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">;
+                Discover how digital twin technology can revolutionize different industries and operations.;
+              </p>;
+            </div>;
+;
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;
+              {[;
+                {;
+                  title: "Manufacturing",;
+                  description: "Monitor production lines, predict maintenance, and optimize manufacturing processes.",;
+                  icon: Settings,;
+                  benefits: ["Production monitoring", "Predictive maintenance", "Quality control"];
+                },;
+                {;
+                  title: "Smart Cities",;
+                  description: "Manage urban infrastructure, traffic systems, and public services efficiently.",;
+                  icon: Globe,;
+                  benefits: ["Traffic optimization", "Infrastructure monitoring", "Public services"];
+                },;
+                {;
+                  title: "Healthcare",;
+                  description: "Patient monitoring, medical device management, and treatment optimization.",;
+                  icon: Users,;
+                  benefits: ["Patient monitoring", "Device management", "Treatment optimization"];
+                },;
+                {;
+                  title: "Energy & Utilities",;
+                  description: "Grid monitoring, renewable energy optimization, and infrastructure management.",;
+                  icon: Zap,;
+                  benefits: ["Grid monitoring", "Energy optimization", "Infrastructure management"];
+                },;
+                {;
+                  title: "Transportation",;
+                  description: "Fleet management, route optimization, and vehicle performance monitoring.",;
+                  icon: Target,;
+                  benefits: ["Fleet management", "Route optimization", "Performance monitoring"];
+                },;
+                {;
+                  title: "Buildings & Facilities",;
+                  description: "Building management, energy efficiency, and maintenance optimization.",;
+                  icon: Activity,;
+                  benefits: ["Building management", "Energy efficiency", "Maintenance optimization"];
+                };
+              ].map((((((((application, index, index, index, index, index, index, index) => ({ ...((((((application, index, index, index, index, index, index, key: index })) => ({ ...(((((application, index, index, index, index, index, key: index })) => ({ ...((((application, index, index, index, index, key: index })) => ({ ...(((application, index, index, index, key: index })) => ({ ...((application, index, index, key: index })) => ({ ...(application, index, key: index }))  => (;
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">;
+                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">;
+                    <application.icon className="w-6 h-6 text-white"       />;
+                  </div>;
+                  <h3 className="text-xl font-semibold text-white mb-2">{application.title}</h3>;
+                  <p className="text-slate-300 mb-4">{application.description}</p>;
+                  <ul className="space-y-1">;
+                    {application.benefits.map((((((((benefit, benefitIndex, index, index, index, index, index, index) => ({ ...((((((benefit, benefitIndex, index, index, index, index, index, key: index })) => ({ ...(((((benefit, benefitIndex, index, index, index, index, key: index })) => ({ ...((((benefit, benefitIndex, index, index, index, key: index })) => ({ ...(((benefit, benefitIndex, index, index, key: index })) => ({ ...((benefit, benefitIndex, index, key: index })) => ({ ...(benefit, benefitIndex, key: index })) => (;
+                      <li key={benefitIndex} className="text-sm text-emerald-400 flex items-center">;
+                        <CheckCircle className="w-3 h-3 mr-2"       />;
+                        {benefit};
+                      </li>;
+                    ))};
+                  </ul>;
+                </div>;
+              ))};
+            </div>;
+          </div>;
+        </section>;
+;
+        {/* Technology Stack Section */};
+        <section className="py-20">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <div className="text-center mb-16">;
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
+                Advanced Technology Stack;
+              </h2>;
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">;
+                Built on cutting-edge technologies for maximum performance, scalability, and reliability.;
+              </p>;
+            </div>;
+;
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
+              <div>;
+                <div className="space-y-6">;
+                  {[;
+                    "Real-time data processing and streaming analytics",;
+                    "3D visualization and augmented reality integration",;
+                    "Machine learning and AI-powered predictive models",;
+                    "IoT sensor integration and edge computing",;
+                    "Cloud-native architecture with microservices",;
+                    "Advanced security and data privacy controls";
+                  ].map((((((((technology, index, index, index, index, index, index, index) => ({ ...((((((technology, index, index, index, index, index, index, key: index })) => ({ ...(((((technology, index, index, index, index, index, key: index })) => ({ ...((((technology, index, index, index, index, key: index })) => ({ ...(((technology, index, index, index, key: index })) => ({ ...((technology, index, index, key: index })) => ({ ...(technology, index, key: index })) => (;
+                    <div key={index} className="flex items-start space-x-3">;
+                      <CheckCircle className="w-6 h-6 text-emerald-400 mt-0.5 flex-shrink-0"       />;
+                      <span className="text-slate-300">{technology}</span>;
+                    </div>;
+                  ))};
+                </div>;
+              </div>;
+;
+              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">;
+                <h3 className="text-2xl font-semibold text-white mb-4">Core Components</h3>;
+                <div className="space-y-4">;
+                  {[;
+                    { component: "Data Ingestion", icon: Database, color: "from-blue-500 to-cyan-500" },;
+                    { component: "Processing Engine", icon: Cpu, color: "from-purple-500 to-pink-500" },;
+                    { component: "Visualization", icon: Eye, color: "from-emerald-500 to-teal-500" },;
+                    { component: "Analytics", icon: BarChart3, color: "from-orange-500 to-red-500" };
+                  ].map((((((((item, index, index, index, index, index, index, index) => ({ ...((((((item, index, index, index, index, index, index, key: index })) => ({ ...(((((item, index, index, index, index, index, key: index })) => ({ ...((((item, index, index, index, index, key: index })) => ({ ...(((item, index, index, index, key: index })) => ({ ...((item, index, index, key: index })) => ({ ...(item, index, key: index }))  => (;
+                    <div key={index} className="flex items-center space-x-3">;
+                      <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>;
+                        <item.icon className="w-4 h-4 text-white"       />;
+                      </div>;
+                      <span className="text-slate-300">{item.component}</span>;
+                    </div>;
+                  ))};
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+;
+        {/* Benefits Section */};
+        <section className="py-20 bg-slate-800/30">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <div className="text-center mb-16">;
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
+                Transform Your Operations;
+              </h2>;
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">;
+                Experience unprecedented visibility, control, and optimization across your entire operation.;
+              </p>;
+            </div>;
+;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">;
+              <div>;
+                <h3 className="text-2xl font-semibold text-white mb-6">Operational Benefits</h3>;
+                <div className="space-y-4">;
+                  {[;
+                    "Reduce operational costs by up to 30% through predictive maintenance",;
+                    "Improve asset utilization by 25% with real-time optimization",;
+                    "Minimize downtime by 40% with proactive issue detection",;
+                    "Enhance decision-making with comprehensive data insights",;
+                    "Accelerate innovation through virtual testing and simulation",;
+                    "Improve safety with real-time risk assessment and monitoring";
+                  ].map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => (;
+                    <div key={index} className="flex items-start space-x-3">;
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0"       />;
+                      <span className="text-slate-300">{benefit}</span>;
+                    </div>;
+                  ))};
+                </div>;
+              </div>;
+;
+              <div>;
+                <h3 className="text-2xl font-semibold text-white mb-6">Strategic Advantages</h3>;
+                <div className="space-y-4">;
+                  {[;
+                    "Gain competitive advantage through operational excellence",;
+                    "Enable data-driven strategic planning and decision-making",;
+                    "Improve customer satisfaction with optimized service delivery",;
+                    "Support sustainability goals through efficient resource management",;
+                    "Enable remote monitoring and management capabilities",;
+                    "Facilitate digital transformation and Industry 4.0 adoption";
+                  ].map((((((((advantage, index, index, index, index, index, index, index) => ({ ...((((((advantage, index, index, index, index, index, index, key: index })) => ({ ...(((((advantage, index, index, index, index, index, key: index })) => ({ ...((((advantage, index, index, index, index, key: index })) => ({ ...(((advantage, index, index, index, key: index })) => ({ ...((advantage, index, index, key: index })) => ({ ...(advantage, index, key: index })) => (;
+                    <div key={index} className="flex items-start space-x-3">;
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0"       />;
+                      <span className="text-slate-300">{advantage}</span>;
+                    </div>;
+                  ))};
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+;
+        {/* CTA Section */};
+        <section className="py-20 bg-gradient-to-r from-emerald-500/10 to-teal-600/10">;
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
+              Ready to Create Your Digital Twin?;
+            </h2>;
+            <p className="text-xl text-slate-300 mb-8">;
+              Transform your physical operations with virtual intelligence and real-time optimization.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <Link;
+                to="/contact";
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200";
+;
+                Schedule a Consultation;
+                <ArrowRight className="ml-2 w-5 h-5"       />;
+              </Link>;
+              <Link;
+                to="/services";
+                className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200";
+              >;
+                Explore All Services;
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 };
 

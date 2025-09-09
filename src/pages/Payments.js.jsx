@@ -23,7 +23,7 @@ export default function Payments() {
             </TabsList>
             
             <TabsContent value="history">
-              <TransactionHistory />
+              <TransactionHistory       />
             </TabsContent>
             
             <TabsContent value="settings">
@@ -46,9 +46,12 @@ export default function Payments() {
                     <p className="text-zion-slate-light mb-4">
                       Set your preferences for escrow services. Escrow holds funds until both parties confirm the service has been completed satisfactorily.
                     </p>
-                    <div className="flex items-center space-x-2">
-                      <Switch id="escrow-default"/>
-                      <Label htmlFor="escrow-default" className="text-white">
+                    <div className="flex items - center space - x-2">
+                      <Switch id="escrow - default"       />
+                      <Label
+                        htmlFor="escrow - default"
+                        className="text - white"
+                      >
                         Use escrow by default
                       </Label>
                     </div>
@@ -59,16 +62,22 @@ export default function Payments() {
                     <p className="text-zion-slate-light mb-4">
                       Choose how you want to be notified about payments and transactions.
                     </p>
-                    <div className="space-y-2">
-                      <div className="flex items-center space-x-2">
-                        <Checkbox id="notify-email" defaultChecked/>
-                        <label htmlFor="notify-email" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white">
+                    <div className="space - y-2">
+                      <div className="flex items - center space - x-2">
+                        <Checkbox id="notify - email" defaultChecked       />
+                        <label
+                          htmlFor="notify - email"
+                          className="text - sm font - medium leading - none peer - disabled:cursor - not - allowed peer - disabled:opacity - 70 text - white"
+                        >
                           Email notifications
                         </label>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <Checkbox id="notify-push" defaultChecked/>
-                        <label htmlFor="notify-push" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white">
+                      <div className="flex items - center space - x-2">
+                        <Checkbox id="notify - push" defaultChecked       />
+                        <label
+                          htmlFor="notify - push"
+                          className="text - sm font - medium leading - none peer - disabled:cursor - not - allowed peer - disabled:opacity - 70 text - white"
+                        >
                           Push notifications
                         </label>
                       </div>

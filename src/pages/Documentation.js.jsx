@@ -3,8 +3,11 @@ import { Helmet } from 'react-helmet-async';
 const Documentation = () => {
     return (<>
       <Helmet>
-        <title>Documentation - Zion Tech Group</title>
-        <meta name="description" content="Access comprehensive documentation for Zion Tech Group services, APIs, and tools."/>
+        <title > Documentation - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Access comprehensive documentation for Zion Tech Group services, APIs, and tools."
+              />
       </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-12">

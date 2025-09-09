@@ -50,19 +50,38 @@ export default function ListingDetail() {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Images */}
-            <div className="lg:col-span-2">
-              <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
-                <div className="aspect-[16/9] w-full relative">
-                  {listing.images && listing.images.length > 0 ? (<ImageWithRetry src={listing.images[selectedImageIndex]} alt={listing.title} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg"/>) : (<div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
-                      <span className="text-zion-slate-light">No image available</span>
-                    </div>)}
+            <div className="lg:col - span - 2">
+              <div className="bg - zion - blue - dark rounded - lg overflow - hidden border border - zion - blue - light">
+                <div className="aspect-[16 / 9] w - full relative">
+                  {listing.images && listing.images.length > 0 ? (<ImageWithRetry
+                      src={listing.images[selectedImageIndex]}
+                      alt={listing.title}
+                      className="w - full h - full object - cover"
+                      fallbackSrc="/placeholder.svg"
+                          />) : (<div className="w - full h - full flex items - center justify - center bg - zion - blue - light / 20">
+                      <span className="text - zion - slate - light">
+                        No image available
+                      </span>
+                    </div>) }
                 </div>
-                
-                {listing.images && listing.images.length > 1 && (<div className="flex p-4 gap-2 overflow-x-auto">
-                    {listing.images.map((image, index) => (<div key={index} onClick={() => setSelectedImageIndex(index)} className={cn("w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2", index === selectedImageIndex ? "border-zion-purple" : "border-transparent")}>
-                        <ImageWithRetry src={image} alt={`${listing.title} - image ${index + 1}`} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg"/>
-                      </div>))}
-                  </div>)}
+
+                {listing.images && listing.images.length > 1 && (<div className="flex p - 4 gap - 2 overflow - x-auto">
+                    {listing.images.map ( (image, index) => (<div
+                        key={index}
+                        onClick={ () => setSelectedImageIndex (index) }
+                        className={cn ('w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2',
+                          index === selectedImageIndex
+                            ? 'border - zion - purple'
+                            : 'border - transparent') }
+                      >
+                        <ImageWithRetry
+                          src={image}
+                          alt={`${listing.title} - image ${index + 1}`}
+                          className="w - full h - full object - cover"
+                          fallbackSrc="/placeholder.svg"
+                              />
+                      </div>) ) }
+                  </div>) }
               </div>
 
               {/* Description Section */}
@@ -71,21 +90,23 @@ export default function ListingDetail() {
                 <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
                 
                 {/* Features */}
-                <div className="mt-8">
-                  <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="flex items-start gap-3">
-                      <div className="p-2 rounded-full bg-zion-purple/20">
-                        <Brain className="h-5 w-5 text-zion-purple"/>
+                <div className="mt - 8">
+                  <h3 className="text - xl font - bold text - white mb - 4">
+                    Key Features
+                  </h3>
+                  <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">
+                    <div className="flex items - start gap - 3">
+                      <div className="p - 2 rounded - full bg - zion - purple / 20">
+                        <Brain className="h - 5 w - 5 text - zion - purple"       />
                       </div>
                       <div>
                         <h4 className="font-medium text-white">Advanced AI</h4>
                         <p className="text-sm text-zion-slate-light">State-of-the-art machine learning techniques</p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <div className="p-2 rounded-full bg-zion-cyan/20">
-                        <Shield className="h-5 w-5 text-zion-cyan"/>
+                    <div className="flex items - start gap - 3">
+                      <div className="p - 2 rounded - full bg - zion - cyan / 20">
+                        <Shield className="h - 5 w - 5 text - zion - cyan"       />
                       </div>
                       <div>
                         <h4 className="font-medium text-white">Enterprise Security</h4>
@@ -118,12 +139,19 @@ export default function ListingDetail() {
                       Featured
                     </Badge>)}
                 </div>
-                
-                <h1 className="text-2xl font-bold text-white mb-4">{listing.title}</h1>
-                
-                {listing.rating && (<div className="flex items-center gap-2 mb-6">
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (<Star key={i} className={cn("h-5 w-5", i < Math.floor(listing.rating) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light")}/>))}
+
+                <h1 className="text - 2xl font - bold text - white mb - 4">
+                  {listing.title}
+                </h1>
+
+                {listing.rating && (<div className="flex items - center gap - 2 mb - 6">
+                    <div className="flex items - center">
+                      {[...Array (5) ].map ( (_, i) => (<Star
+                          key={i}
+                          className={cn ('h - 5 w - 5',
+                            i < Math.floor (listing.rating) ? 'text - zion - cyan fill - zion - cyan'
+                              : 'text - zion - slate - light') }
+                              />) ) }
                     </div>
                     <span className="text-sm text-zion-slate-light">
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
@@ -140,18 +168,34 @@ export default function ListingDetail() {
                 </div>
                 
                 {/* Action Buttons */}
-                <div className="space-y-3 mb-8">
-                  {listing.price !== null ? (<PaymentButton amount={listing.price} serviceId={listing.id} providerId={listing.author.id} buttonText="Buy Now" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6" onPaymentInitiated={() => {
-                toast({
-                    title: "Payment Processing",
-                    description: "Redirecting to secure checkout..."
-                });
-            }}/>) : (<Button onClick={handleContact} disabled={isLoading} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6">
-                      {isLoading ? "Processing..." : "Request Quote"}
-                    </Button>)}
-                  
-                  <Button variant="outline" onClick={handleContact} disabled={isLoading} className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                    <MessageSquare className="h-4 w-4 mr-2"/>
+                <div className="space - y-3 mb - 8">
+                  {listing.price !== null ? (<PaymentButton
+                      amount={listing.price}
+                      serviceId={listing.id}
+                      providerId={listing.author.id}
+                      buttonText="Buy Now"
+                      className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6"
+                      onPaymentInitiated={ () => {
+                        toast ({
+                          title: 'Payment Processing',
+                          description: 'Redirecting to secure checkout...',
+                        }) ;
+                      }}
+                    />) : (<Button
+                      onClick={handleContact}
+                      disabled={isLoading}
+                      className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6"
+                    >
+                      {isLoading ? 'Processing...' : 'Request Quote'}
+                    </Button>) }
+
+                  <Button
+                    variant="outline"
+                    onClick={handleContact}
+                    disabled={isLoading}
+                    className="w - full border - zion - purple text - zion - cyan hover:bg - zion - purple / 10"
+                  >
+                    <MessageSquare className="h - 4 w - 4 mr - 2"       />
                     Contact Publisher
                   </Button>
                 </div>
@@ -188,18 +232,27 @@ export default function ListingDetail() {
             </div>
           </div>
         </div>
-      </div>
-        ,
-            <ChatWidget roomId={listing.id} recipientId={listing.author.id} isOpen={isChatOpen} onClose={() => setIsChatOpen(false)}/>) /* Contact Dialog */;
-    { /* Contact Dialog */ }
-    <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
-        <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
-          <DialogHeader>
-            <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
-          </DialogHeader>
-          <ProfileContact email={listing.author.email} // TypeScript now knows this might be undefined
-     profileName={listing.author.name} profileType="service"/>
-        </DialogContent>
-      </Dialog>;
-    ;
+      </div>) , (<ChatWidget
+        roomId={listing.id}
+        recipientId={listing.author.id}
+        isOpen={isChatOpen}
+        onClose={ () => setIsChatOpen (false) }
+      />) ) /* Contact Dialog */;
+  {
+    /* Contact Dialog */
+  }
+  <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
+    <DialogContent className="bg - zion - blue - dark border border - zion - blue - light text - white sm:max - w-md">
+      <DialogHeader>
+        <DialogTitle className="text - xl font - bold text - white">
+          Contact Publisher
+        </DialogTitle>
+      </DialogHeader>
+      <ProfileContact
+        email={listing.author.email} // TypeScript now knows this might be null
+        profileName={listing.author.name}
+        profileType="service"
+            />
+    </DialogContent>
+  </Dialog>;
 }

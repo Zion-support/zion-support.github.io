@@ -120,7 +120,7 @@ export default function ComprehensiveServicesOverview() {
         }
     };
     return (<>
-      <SEOHead title="Comprehensive Technology Services - Zion Tech Group" description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions." keywords="technology services, AI services, quantum computing, cybersecurity, IT infrastructure, micro SaaS, autonomous systems, space technology, neurotechnology" image="/images/services-overview-og.jpg" canonical="https://ziontechgroup.com/comprehensive-services-overview"/>
+      <SEOHead title="Comprehensive Technology Services - Zion Tech Group" description="Explore our comprehensive portfolio of cutting - edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions." keywords="technology services, AI services, quantum computing, cybersecurity, IT infrastructure, micro SaaS, autonomous systems, space technology, neurotechnology" image="/images / services - overview - og.jpg" canonical="https://ziontechgroup.com / comprehensive - services - overview"      />
       
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
         {/* Animated Background */}
@@ -132,10 +132,10 @@ export default function ComprehensiveServicesOverview() {
 
         <div className="relative z-10 container mx-auto px-4 py-16 lg:py-20">
           {/* Hero Section */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-full px-6 py-3 mb-8">
-              <Sparkles className="h-5 w-5 text-zion-cyan"/>
-              <span className="text-zion-cyan font-medium">Complete Portfolio</span>
+          <div className="text - center mb - 20">
+            <div className="inline - flex items - center gap - 2 bg - gradient - to - r from - zion - purple / 20 to - zion - cyan / 20 border border - zion - purple / 30 rounded - full px - 6 py - 3 mb - 8">
+              <Sparkles className="h - 5 w - 5 text - zion - cyan"      />
+              <span className="text - zion - cyan font - medium">Complete Portfolio</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-zion-cyan to-zion-purple bg-clip-text text-transparent leading-tight">
@@ -146,18 +146,18 @@ export default function ComprehensiveServicesOverview() {
               Discover our complete portfolio of AI-powered services, IT solutions, and innovative micro SAAS platforms designed to transform your business operations and drive innovation.
             </p>
             
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="flex items-center gap-2 bg-zion-purple/20 border border-zion-purple/30 rounded-full px-4 py-2">
-                <CheckCircle className="h-4 w-4 text-zion-purple"/>
-                <span className="text-zion-purple text-sm font-medium">{ALL_SERVICES.length}+ Services</span>
+            <div className="flex flex - wrap justify - center gap - 4 mb - 8">
+              <div className="flex items - center gap - 2 bg - zion - purple / 20 border border - zion - purple / 30 rounded - full px - 4 py - 2">
+                <CheckCircle className="h - 4 w - 4 text - zion - purple"      />
+                <span className="text - zion - purple text - sm font - medium">{ALL_SERVICES.length}+ Services</span>
               </div>
-              <div className="flex items-center gap-2 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full px-4 py-2">
-                <Zap className="h-4 w-4 text-zion-cyan"/>
-                <span className="text-zion-cyan text-sm font-medium">AI-Powered</span>
+              <div className="flex items - center gap - 2 bg - zion - cyan / 20 border border - zion - cyan / 30 rounded - full px - 4 py - 2">
+                <Zap className="h - 4 w - 4 text - zion - cyan"      />
+                <span className="text - zion - cyan text - sm font - medium">AI - Powered</span>
               </div>
-              <div className="flex items-center gap-2 bg-zion-blue/20 border border-zion-blue/30 rounded-full px-4 py-2">
-                <Shield className="h-4 w-4 text-zion-blue"/>
-                <span className="text-zion-blue text-sm font-medium">Enterprise Ready</span>
+              <div className="flex items - center gap - 2 bg - zion - blue / 20 border border - zion - blue / 30 rounded - full px - 4 py - 2">
+                <Shield className="h - 4 w - 4 text - zion - blue"      />
+                <span className="text - zion - blue text - sm font - medium">Enterprise Ready</span>
               </div>
             </div>
           </div>
@@ -167,14 +167,14 @@ export default function ComprehensiveServicesOverview() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {/* Search */}
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light"/>
-                <Input placeholder="Search services..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-zion-slate-light"/>
+                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 h - 4 w - 4 text - zion - slate - light"      />
+                <Input placeholder="Search services..." value={searchQuery} onChange={ (e) => setSearchQuery (e.target.value) } className="pl - 10 bg - white / 10 border - white / 20 text - white placeholder:text - zion - slate - light"/>
               </div>
 
               {/* Category Filter */}
-              <Select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
-                <SelectTrigger className="bg-white/10 border-white/20 text-white">
-                  <SelectValue placeholder="All Categories"/>
+              <Select value={selectedCategory} onChange={ (e) => setSelectedCategory (e.target.value) }>
+                <SelectTrigger className="bg - white / 10 border - white / 20 text - white">
+                  <SelectValue placeholder="All Categories"      />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">All Categories</SelectItem>
@@ -183,9 +183,9 @@ export default function ComprehensiveServicesOverview() {
               </Select>
 
               {/* Price Range Filter */}
-              <Select value={priceRange} onChange={(e) => setPriceRange(e.target.value)}>
-                <SelectTrigger className="bg-white/10 border-white/20 text-white">
-                  <SelectValue placeholder="All Prices"/>
+              <Select value={priceRange} onChange={ (e) => setPriceRange (e.target.value) }>
+                <SelectTrigger className="bg - white / 10 border - white / 20 text - white">
+                  <SelectValue placeholder="All Prices"      />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">All Prices</SelectItem>
@@ -195,9 +195,9 @@ export default function ComprehensiveServicesOverview() {
               </Select>
 
               {/* Support Level Filter */}
-              <Select value={selectedSupportLevel} onChange={(e) => setSelectedSupportLevel(e.target.value)}>
-                <SelectTrigger className="bg-white/10 border-white/20 text-white">
-                  <SelectValue placeholder="All Support Levels"/>
+              <Select value={selectedSupportLevel} onChange={ (e) => setSelectedSupportLevel (e.target.value) }>
+                <SelectTrigger className="bg - white / 10 border - white / 20 text - white">
+                  <SelectValue placeholder="All Support Levels"      />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">All Support Levels</SelectItem>
@@ -239,13 +239,21 @@ export default function ComprehensiveServicesOverview() {
               </span>
             </div>
             
-            {filteredServices.length === 0 ? (<div className="text-center py-12">
-                <Search className="h-16 w-16 text-zion-slate-light mx-auto mb-4"/>
-                <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
-                <p className="text-zion-slate-light">Try adjusting your search criteria or filters</p>
-              </div>) : (<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                {filteredServices.map((service, index) => (<motion.div key={service.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: index * 0.05 }}>
-                    <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300 group">
+            {filteredServices.length === 0 ? (<div className="text - center py - 12">
+                <Search className="h - 16 w - 16 text - zion - slate - light mx - auto mb - 4"      />
+                <h3 className="text - xl font - semibold text - white mb - 2">No services found</h3>
+                <p className="text - zion - slate - light">Try adjusting your search criteria or filters</p>
+              </div>) : (<div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">
+                {filteredServices.map ( (service, index) => (<motion.div key={service.id} initial = {
+  { opacity: 0,
+  x: -20 
+
+}} animate = {
+  { opacity: 1,
+  x: 0 
+
+}} transition={{ delay: index * 0.05 }}>
+                    <Card className="bg - white / 5 backdrop - blur - lg border - white / 10 hover:bg - white / 10 transition - all duration - 300 group">
                       <CardHeader>
                         <div className="flex items-start justify-between mb-4">
                           <div className={`p-3 rounded-xl ${categoryColors[service.category] || 'from-gray-500 to-gray-600'}`}>
@@ -271,14 +279,14 @@ export default function ComprehensiveServicesOverview() {
                         </CardDescription>
                       </CardHeader>
                       
-                      <CardContent className="space-y-4">
-                        <div className="grid grid-cols-2 gap-4 text-sm">
-                          {service.estimatedDelivery && (<div className="flex items-center gap-2 text-zion-slate-light">
-                              <Clock className="h-4 w-4"/>
+                      <CardContent className="space - y-4">
+                        <div className="grid grid - cols - 2 gap - 4 text - sm">
+                          {service.estimatedDelivery && (<div className="flex items - center gap - 2 text - zion - slate - light">
+                              <Clock className="h - 4 w - 4"      />
                               <span>{service.estimatedDelivery}</span>
-                            </div>)}
-                          {service.marketPrice && (<div className="flex items-center gap-2 text-zion-slate-light">
-                              <Target className="h-4 w-4"/>
+                            </div>) }
+                          {service.marketPrice && (<div className="flex items - center gap - 2 text - zion - slate - light">
+                              <Target className="h - 4 w - 4"      />
                               <span>{service.marketPrice}</span>
                             </div>)}
                         </div>
@@ -320,13 +328,13 @@ export default function ComprehensiveServicesOverview() {
                           <div className="flex gap-2">
                             {'demoUrl' in service && service.demoUrl && (<Button variant="outline" size="sm" className="flex-1 bg-white/10 border-white/20 text-white hover:bg-white/20" asChild>
                                 <a href={service.demoUrl} target="_blank" rel="noopener noreferrer">
-                                  <Play className="mr-2 h-4 w-4"/>
+                                  <Play className="mr - 2 h - 4 w - 4"      />
                                   Demo
                                 </a>
                               </Button>)}
                             {'documentationUrl' in service && service.documentationUrl && (<Button variant="outline" size="sm" className="flex-1 bg-white/10 border-white/20 text-white hover:bg-white/20" asChild>
                                 <a href={service.documentationUrl} target="_blank" rel="noopener noreferrer">
-                                  <BookOpen className="mr-2 h-4 w-4"/>
+                                  <BookOpen className="mr - 2 h - 4 w - 4"      />
                                   Docs
                                 </a>
                               </Button>)}
@@ -345,34 +353,34 @@ export default function ComprehensiveServicesOverview() {
               Contact our team to learn more about these innovative services and how they can drive your business forward.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <Phone className="h-8 w-8 text-zion-cyan mx-auto mb-3"/>
-                <h4 className="font-semibold text-white mb-2">Phone</h4>
-                <p className="text-zion-slate-light">+1 302 464 0950</p>
+            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8">
+              <div className="text - center">
+                <Phone className="h - 8 w - 8 text - zion - cyan mx - auto mb - 3"      />
+                <h4 className="font - semibold text - white mb - 2">Phone</h4>
+                <p className="text - zion - slate - light">+1 302 464 0950</p>
               </div>
-              <div className="text-center">
-                <Mail className="h-8 w-8 text-zion-purple mx-auto mb-3"/>
-                <h4 className="font-semibold text-white mb-2">Email</h4>
-                <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>
+              <div className="text - center">
+                <Mail className="h - 8 w - 8 text - zion - purple mx - auto mb - 3"      />
+                <h4 className="font - semibold text - white mb - 2">Email</h4>
+                <p className="text - zion - slate - light">kleber@ziontechgroup.com</p>
               </div>
-              <div className="text-center">
-                <MapPin className="h-8 w-8 text-zion-blue mx-auto mb-3"/>
-                <h4 className="font-semibold text-white mb-2">Address</h4>
-                <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <div className="text - center">
+                <MapPin className="h - 8 w - 8 text - zion - blue mx - auto mb - 3"      />
+                <h4 className="font - semibold text - white mb - 2">Address</h4>
+                <p className="text - zion - slate - light">364 E Main St STE 1008 < br />Middletown DE 19709</p>
               </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple/80 hover:to-zion-cyan/80 text-white" asChild>
                 <a href="mailto:kleber@ziontechgroup.com">
-                  <Mail className="mr-2 h-4 w-4"/>
+                  <Mail className="mr - 2 h - 4 w - 4"      />
                   Get in Touch
                 </a>
               </Button>
               <Button variant="outline" className="border-white/20 text-white hover:bg-white/20" asChild>
                 <a href="tel:+13024640950">
-                  <Phone className="mr-2 h-4 w-4"/>
+                  <Phone className="mr - 2 h - 4 w - 4"      />
                   Call Us
                 </a>
               </Button>

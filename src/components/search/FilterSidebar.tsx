@@ -1,191 +1,112 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Check, X } from 'lucide-react';
-
-interface FilterSidebarProps {
-  filterOptions: {
-    productTypes: string[];
-    locations: string[];
-    availability: string[];
-  };
-  selectedProductTypes: string[];
-  selectedLocations: string[];
-  selectedAvailability: string[];
-  selectedRating: number | null;
-  onFilterChange: (filterType: string, value: string) => void;
-  onRatingChange: (rating: number | null) => void;
-  onClearAll: () => void;
-}
-
-export function FilterSidebar({
-  filterOptions,
-  selectedProductTypes,
-  selectedLocations,
-  selectedAvailability,
-  selectedRating,
-  onFilterChange,
-  onRatingChange,
-  onClearAll
-}: FilterSidebarProps) {
-  const hasActiveFilters = selectedProductTypes.length > 0 || 
-                          selectedLocations.length > 0 || 
-                          selectedAvailability.length > 0 || 
-                          selectedRating !== null;
-
-  return (
-    <div className="w-64 bg-white/5 backdrop-blur-md rounded-lg p-6 border border-white/10">
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-lg font-semibold text-white">Filters</h3>
-        {hasActiveFilters && (
-          <Button
-            onClick={onClearAll}
-            variant="ghost"
-            size="sm"
-            className="text-gray-400 hover:text-white"
-          >
-            Clear All
-          </Button>
-        )}
-      </div>
-
-      {/* Product Types */}
-      <div className="mb-6">
-        <h4 className="text-sm font-medium text-gray-300 mb-3">Product Types</h4>
-        <div className="space-y-2">
-          {filterOptions.productTypes.map((type) => (
-            <label key={type} className="flex items-center space-x-2 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={selectedProductTypes.includes(type)}
-                onChange={() => onFilterChange('productTypes', type)}
-                className="rounded border-gray-600 text-blue-600 focus:ring-blue-500"
-              />
-              <span className="text-sm text-gray-300">{type}</span>
-            </label>
-          ))}
-        </div>
-      </div>
-
-      {/* Locations */}
-      <div className="mb-6">
-        <h4 className="text-sm font-medium text-gray-300 mb-3">Locations</h4>
-        <div className="space-y-2">
-          {filterOptions.locations.map((location) => (
-            <label key={location} className="flex items-center space-x-2 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={selectedLocations.includes(location)}
-                onChange={() => onFilterChange('locations', location)}
-                className="rounded border-gray-600 text-blue-600 focus:ring-blue-500"
-              />
-              <span className="text-sm text-gray-300">{location}</span>
-            </label>
-          ))}
-        </div>
-      </div>
-
-      {/* Availability */}
-      <div className="mb-6">
-        <h4 className="text-sm font-medium text-gray-300 mb-3">Availability</h4>
-        <div className="space-y-2">
-          {filterOptions.availability.map((availability) => (
-            <label key={availability} className="flex items-center space-x-2 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={selectedAvailability.includes(availability)}
-                onChange={() => onFilterChange('availability', availability)}
-                className="rounded border-gray-600 text-blue-600 focus:ring-blue-500"
-              />
-              <span className="text-sm text-gray-300">{availability}</span>
-            </label>
-          ))}
-        </div>
-      </div>
-
-      {/* Rating Filter */}
-      <div className="mb-6">
-        <h4 className="text-sm font-medium text-gray-300 mb-3">Minimum Rating</h4>
-        <div className="space-y-2">
-          {[5, 4, 3, 2, 1].map((rating) => (
-            <label key={rating} className="flex items-center space-x-2 cursor-pointer">
-              <input
-                type="radio"
-                name="rating"
-                checked={selectedRating === rating}
-                onChange={() => onRatingChange(rating)}
-                className="border-gray-600 text-blue-600 focus:ring-blue-500"
-              />
-              <span className="text-sm text-gray-300">
-                {rating}+ stars
-              </span>
-            </label>
-          ))}
-          <label className="flex items-center space-x-2 cursor-pointer">
-            <input
-              type="radio"
-              name="rating"
-              checked={selectedRating === null}
-              onChange={() => onRatingChange(null)}
-              className="border-gray-600 text-blue-600 focus:ring-blue-500"
-            />
-            <span className="text-sm text-gray-300">Any rating</span>
-          </label>
-        </div>
-      </div>
-
-      {/* Active Filters Summary */}
-      {hasActiveFilters && (
-        <div className="pt-4 border-t border-white/10">
-          <h4 className="text-sm font-medium text-gray-300 mb-3">Active Filters</h4>
-          <div className="space-y-2">
-            {selectedProductTypes.map((type) => (
-              <Badge key={type} variant="secondary" className="mr-2 mb-2">
-                {type}
-                <button
-                  onClick={() => onFilterChange('productTypes', type)}
-                  className="ml-1 hover:text-red-400"
-                >
-                  <X className="w-3 h-3" />
-                </button>
-              </Badge>
-            ))}
-            {selectedLocations.map((location) => (
-              <Badge key={location} variant="secondary" className="mr-2 mb-2">
-                {location}
-                <button
-                  onClick={() => onFilterChange('locations', location)}
-                  className="ml-1 hover:text-red-400"
-                >
-                  <X className="w-3 h-3" />
-                </button>
-              </Badge>
-            ))}
-            {selectedAvailability.map((availability) => (
-              <Badge key={availability} variant="secondary" className="mr-2 mb-2">
-                {availability}
-                <button
-                  onClick={() => onFilterChange('availability', availability)}
-                  className="ml-1 hover:text-red-400"
-                >
-                  <X className="w-3 h-3" />
-                </button>
-              </Badge>
-            ))}
-            {selectedRating && (
-              <Badge variant="secondary" className="mr-2 mb-2">
-                {selectedRating}+ stars
-                <button
-                  onClick={() => onRatingChange(null)}
-                  className="ml-1 hover:text-red-400"
-                >
-                  <X className="w-3 h-3" />
-                </button>
-              </Badge>
-            )}
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
+import React from 'react.ts';
+import { Filter, X  } from 'lucide-react';
+;
+interface FilterOption {;
+;
+  value: string;
+  label: string;
+  count?: number};
+;
+interface FilterGroup {;
+;
+  title: string;
+  key: string;
+  options: FilterOption[];
+  type: 'checkbox' | 'radio' | 'range'};
+;
+interface FilterSidebarProps extends React.PropsWithChildren<{}> {;
+;
+  filters: FilterGroup[];
+  selectedFilters: Record<string, any>;
+  onFilterChange: (key: string, value: string, checked: boolean)  => void;
+  onClearFilters: ()  => void;
+  isOpen: boolean;
+  onClose: ()  => void};
+;
+export function FilterSidebar(...args: any[]):  {;
+  return (;
+    <>;
+      {/* Mobile overlay */};
+      {isOpen && (;
+        <div;
+          className="fixed inset-0 bg-black/50 z-40 lg: hidden";
+          onClick={onClose};
+              />;
+      )};
+;
+      {/* Sidebar */};
+      <div className={`;
+        fixed lg: static inset-y-0 left-0 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-blue-light/20 transform transition-transform duration-300 lg: transform-none;
+        ${isOpen ? 'translate-x-0' : '-translate-x-full lg: translate-x-0'};
+      `}>;
+        <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/20">;
+          <h3 className="text-lg font-semibold text-white flex items-center gap-2">;
+            <Filter className="w-5 h-5"       />;
+            Filters;
+          </h3>;
+          <button;
+            onClick={onClose};
+            className="lg: hidden p-2 hover: bg-zion-blue-light/20 rounded-lg transition-colors";
+;
+            <X className="w-5 h-5 text-zion-slate-light"       />;
+          </button>;
+        </div>;
+;
+        <div className="p-4 space-y-6">;
+          {/* Clear all button */};
+          <div className="flex justify-between items-center">;
+            <span className="text-sm text-zion-slate-light">Active filters</span>;
+            <button;
+              onClick={onClearFilters};
+              className="text-sm text-zion-cyan hover: text-zion-cyan-light transition-colors underline";
+            >;
+              Clear all;
+            </button>;
+          </div>;
+;
+          {/* Filter groups */};
+          {filters.map((((((((group, index, index, index, index, index, index) => ({ ...((((((group, index, index, index, index, index, key: index })) => ({ ...(((((group, index, index, index, index, key: index })) => ({ ...((((group, index, index, index, key: index })) => ({ ...(((group, index, index, key: index })) => ({ ...((group, index, key: index })) => ({ ...(group, key: index })) => (;
+            <div key={group.key} className="space-y-3">;
+              <h4 className="font-medium text-white">{group.title}</h4>;
+              ;
+              <div className="space-y-2">;
+                {group.options.map((((((((option, index, index, index, index, index, index) => ({ ...((((((option, index, index, index, index, index, key: index })) => ({ ...(((((option, index, index, index, index, key: index })) => ({ ...((((option, index, index, index, key: index })) => ({ ...(((option, index, index, key: index })) => ({ ...((option, index, key: index })) => ({ ...(option, key: index })) => {;
+                  const isSelected = selectedFilters[group.key]?.includes(option.value) || false;
+;
+                  return (;
+                    <label key = {option.value} className="flex items-center gap-3 cursor-pointer">;
+                      <input;
+                        type={group.type === 'radio' ? 'radio' : 'checkbox'};
+                        name={group.key};
+                        value={option.value};
+                        checked={isSelected};
+                        onChange = {;
+  (e) => onFilterChange(group.key, option.value,;
+  e.target.checked);
+;
+;
+;
+;
+;
+;
+};
+                        className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus: ring-zion-cyan focus: ring-2";
+                      />;
+                      <span className="text-sm text-zion-slate-light">;
+                        {option.label};
+                        {option.count && (;
+                          <span className="ml-2 text-zion-slate-light/60">;
+                            ({option.count});
+                          </span>;
+                        )};
+                      </span>;
+                    </label>;
+                  );
+                })};
+              </div>;
+            </div>;
+          ))};
+        </div>;
+      </div>;
+    </>;
+  )};

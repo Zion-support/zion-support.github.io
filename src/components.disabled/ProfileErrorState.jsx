@@ -7,7 +7,7 @@ export const ProfileErrorState = ({ error = 'Failed to load profile', onRetry })
       <Card>
         <CardHeader className="text-center">
           <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <AlertCircle className="w-8 h-8 text-red-600"/>
+            <AlertCircle className="w-8 h-8 text-red-600"       />
           </div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             Oops! Something went wrong
@@ -23,8 +23,12 @@ export const ProfileErrorState = ({ error = 'Failed to load profile', onRetry })
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              {onRetry && (<Button onClick={onRetry} className="flex items-center space-x-2">
-                  <RefreshCw className="w-4 h-4"/>
+              {onRetry && (
+                <Button
+                  onClick={onRetry}
+                  className="flex items-center space-x-2"
+                >
+                  <RefreshCw className="w-4 h-4"       />
                   <span>Try Again</span>
                 </Button>)}
               

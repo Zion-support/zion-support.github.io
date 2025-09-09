@@ -27,8 +27,14 @@ export default function RequestsPanel() {
         
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
-            <RequestsHeader unreadCount={unreadCount} statusFilter={statusFilter} setStatusFilter={setStatusFilter} archiveFilter={archiveFilter} setArchiveFilter={setArchiveFilter}/>
-            
+            <RequestsHeader
+              unreadCount={unreadCount}
+              statusFilter={statusFilter}
+              setStatusFilter={setStatusFilter}
+              archiveFilter={archiveFilter}
+              setArchiveFilter={setArchiveFilter}
+                  />
+
             {/* Main Content */}
             <Tabs defaultValue="active" className="mb-6">
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
@@ -37,11 +43,25 @@ export default function RequestsPanel() {
               </TabsList>
               
               <TabsContent value="active">
-                <QuoteRequestsList quotes={activeQuotes} isLoading={isLoading} isArchived={false} onViewDetails={handleViewDetails} onMarkAsResponded={markAsResponded} onToggleArchive={toggleArchive}/>
+                <QuoteRequestsList
+                  quotes={activeQuotes}
+                  isLoading={isLoading}
+                  isArchived={false}
+                  onViewDetails={handleViewDetails}
+                  onMarkAsResponded={markAsResponded}
+                  onToggleArchive={toggleArchive}
+                      />
               </TabsContent>
               
               <TabsContent value="archived">
-                <QuoteRequestsList quotes={archivedQuotes} isLoading={isLoading} isArchived={true} onViewDetails={handleViewDetails} onMarkAsResponded={markAsResponded} onToggleArchive={toggleArchive}/>
+                <QuoteRequestsList
+                  quotes={archivedQuotes}
+                  isLoading={isLoading}
+                  isArchived={true}
+                  onViewDetails={handleViewDetails}
+                  onMarkAsResponded={markAsResponded}
+                  onToggleArchive={toggleArchive}
+                      />
               </TabsContent>
             </Tabs>
           </div>

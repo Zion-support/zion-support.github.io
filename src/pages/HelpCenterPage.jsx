@@ -9,28 +9,28 @@ import { Link } from 'react-router-dom';
 export default function HelpCenterPage() {
     const helpCategories = [
         {
-            icon: <User className="w-8 h-8 text-zion-cyan"/>,
+            icon: <User className="w - 8 h - 8 text - zion - cyan"      />,
             title: "Getting Started",
             description: "Learn the basics of using Zion's marketplace platform",
             articles: ["Creating an account", "Setting up your profile", "First steps guide"],
             color: "text-zion-cyan"
         },
         {
-            icon: <ShoppingCart className="w-8 h-8 text-zion-purple"/>,
+            icon: <ShoppingCart className="w - 8 h - 8 text - zion - purple"      />,
             title: "Marketplace",
             description: "Buying and selling on our platform",
             articles: ["How to buy services", "Selling your services", "Payment methods"],
             color: "text-zion-purple"
         },
         {
-            icon: <Users className="w-8 h-8 text-zion-cyan"/>,
+            icon: <Users className="w - 8 h - 8 text - zion - cyan"      />,
             title: "Talent & Hiring",
             description: "Finding talent and getting hired",
             articles: ["Hiring process", "Creating job posts", "Talent profiles"],
             color: "text-zion-cyan"
         },
         {
-            icon: <Settings className="w-8 h-8 text-zion-purple"/>,
+            icon: <Settings className="w - 8 h - 8 text - zion - purple"      />,
             title: "Account & Settings",
             description: "Managing your account and preferences",
             articles: ["Account settings", "Privacy controls", "Security features"],
@@ -64,10 +64,10 @@ export default function HelpCenterPage() {
         }
     ];
     return (<>
-      <SEO title="Help Center - Zion Tech Group" description="Get help and support for using Zion's marketplace platform. Find answers to common questions and contact our support team." keywords="help center, support, FAQ, customer service, Zion Tech Group" canonical="https://ziontechgroup.com/help"/>
-      
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <SEO title="Help Center - Zion Tech Group" description="Get help and support for using Zion's marketplace platform. Find answers to common questions and contact our support team." keywords="help center, support, FAQ, customer service, Zion Tech Group" canonical="https://ziontechgroup.com / help"      />
+
+      <main className="min - h-screen bg - zion - blue pt - 24 pb - 20">
+        <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">
           {/* Hero Section */}
           <div className="text-center mb-16">
             <GradientHeading>Help Center</GradientHeading>
@@ -78,8 +78,8 @@ export default function HelpCenterPage() {
             {/* Search Bar */}
             <div className="mt-8 max-w-2xl mx-auto">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-5 w-5"/>
-                <Input type="text" placeholder="Search for help articles, FAQs, or topics..." className="pl-10 pr-4 py-3 bg-zion-blue-dark border-zion-blue-light text-white placeholder-zion-slate-light focus:border-zion-cyan"/>
+                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - zion - slate - light h - 5 w - 5"      />
+                <Input type="text" placeholder="Search for help articles, FAQs, or topics..." className="pl - 10 pr - 4 py - 3 bg - zion - blue - dark border - zion - blue - light text - white placeholder - zion - slate - light focus:border - zion - cyan"      />
               </div>
             </div>
           </div>
@@ -136,8 +136,8 @@ export default function HelpCenterPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <Card className="bg-zion-blue-dark border-zion-blue-light text-white text-center">
                 <CardHeader>
-                  <div className="flex justify-center mb-4">
-                    <MessageCircle className="w-12 h-12 text-zion-cyan"/>
+                  <div className="flex justify - center mb - 4">
+                    <MessageCircle className="w - 12 h - 12 text - zion - cyan"      />
                   </div>
                   <CardTitle className="text-zion-cyan">Live Chat</CardTitle>
                 </CardHeader>
@@ -153,8 +153,8 @@ export default function HelpCenterPage() {
 
               <Card className="bg-zion-blue-dark border-zion-blue-light text-white text-center">
                 <CardHeader>
-                  <div className="flex justify-center mb-4">
-                    <Mail className="w-12 h-12 text-zion-purple"/>
+                  <div className="flex justify - center mb - 4">
+                    <Mail className="w - 12 h - 12 text - zion - purple"      />
                   </div>
                   <CardTitle className="text-zion-purple">Email Support</CardTitle>
                 </CardHeader>
@@ -170,8 +170,8 @@ export default function HelpCenterPage() {
 
               <Card className="bg-zion-blue-dark border-zion-blue-light text-white text-center">
                 <CardHeader>
-                  <div className="flex justify-center mb-4">
-                    <Phone className="w-12 h-12 text-zion-cyan"/>
+                  <div className="flex justify - center mb - 4">
+                    <Phone className="w - 12 h - 12 text - zion - cyan"      />
                   </div>
                   <CardTitle className="text-zion-cyan">Phone Support</CardTitle>
                 </CardHeader>
@@ -196,17 +196,17 @@ export default function HelpCenterPage() {
                   Explore our comprehensive guides and documentation
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Link to="/api-docs">
-                    <Button variant="outline" className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-                      <FileText className="w-4 h-4 mr-2"/>
+              <CardContent className="space - y-4">
+                <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">
+                  <Link to="/api - docs">
+                    <Button variant="outline" className="w - full border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10">
+                      <FileText className="w - 4 h - 4 mr - 2"      />
                       API Documentation
                     </Button>
                   </Link>
                   <Link to="/developers">
-                    <Button variant="outline" className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10">
-                      <Users className="w-4 h-4 mr-2"/>
+                    <Button variant="outline" className="w - full border - zion - purple text - zion - purple hover:bg - zion - purple / 10">
+                      <Users className="w - 4 h - 4 mr - 2"      />
                       Developer Portal
                     </Button>
                   </Link>

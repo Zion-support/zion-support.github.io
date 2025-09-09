@@ -45,8 +45,14 @@ export default function OrderDetailPage() {
         <Skeleton className="h-6 w-full"/>
       </div>);
     }
-    return (<div className="container max-w-3xl py-10 space-y-6">
-      <h1 className="text-3xl font-bold">Order #{order.orderId}</h1>
+  };
+  if (isLoading || !order) {
+    return (<div className="container max - w-3xl py - 10">
+        <Skeleton className="h - 6 w - full"       />
+      </div>) ;
+  }
+  return (<div className="container max - w-3xl py - 10 space - y-6">
+      <h1 className="text - 3xl font - bold">Order #{order.orderId}</h1>
 
       <div>
         <h2 className="font-semibold mb-2">Items</h2>

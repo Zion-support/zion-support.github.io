@@ -145,9 +145,18 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
             cancelAnimationFrame(animationFrameId);
         };
     }, [variant]);
-    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style={{
-            background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)'
-        }}/>);
+    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style = {
+  {
+            background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%,
+  #0f172a 100%)';
+        
+
+
+
+
+
+
+}}      />);
 }
 // Neon glow effect component
 export function NeonGlow({ children, className = '', glowColor = '#8c15e9' }) {
@@ -161,14 +170,13 @@ export function NeonGlow({ children, className = '', glowColor = '#8c15e9' }) {
 // Floating particles component
 export function FloatingParticles({ count = 20, className = '' }) {
     return (<div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
-      {Array.from({ length: count }).map((_, i) => (<div key={i} className="absolute w-1 h-1 bg-zion-cyan rounded-full animate-pulse" style={{
+      {Array.from({ length: count }).map((((((((_, i, index, index, index, index, index, index) => ({ ...((((((_, i, index, index, index, index, index, key: index })) => ({ ...(((((_, i, index, index, index, index, key: index })) => ({ ...((((_, i, index, index, index, key: index })) => ({ ...(((_, i, index, index, key: index })) => ({ ...((_, i, index, key: index })) => ({ ...(_, i, key: index })) => (<div key={i} className="absolute w-1 h-1 bg-zion-cyan rounded-full animate-pulse" style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 2}s`,
                 animationDuration: `${2 + Math.random() * 2}s`,
-            }}/>))}
-    </div>);
-}
+            }}      />))}
+    </div>)}
 // Gradient border component
 export function GradientBorder({ children, className = '', borderWidth = '2px' }) {
     return (<div className={`relative ${className}`} style={{

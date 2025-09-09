@@ -188,13 +188,13 @@ export default function NewServicesOverview() {
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <div className="flex justify-center mb-6">
-              <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full">
-                <Sparkles className="h-8 w-8 text-white"/>
+      <div className="relative overflow - hidden">
+        <div className="absolute inset - 0 bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20"></div>
+        <div className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 24">
+          <div className="text - center">
+            <div className="flex justify - center mb - 6">
+              <div className="p - 3 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - full">
+                <Sparkles className="h - 8 w - 8 text - white"      />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -217,12 +217,12 @@ export default function NewServicesOverview() {
       </div>
 
       {/* Stats Section */}
-      <div className="py-16 bg-gray-900/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (<div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  <stat.icon className="h-12 w-12 text-blue-400"/>
+      <div className="py - 16 bg - gray - 900 / 50">
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
+          <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8">
+            {stats.map ( (stat, index) => (<div key={index} className="text - center">
+                <div className="flex justify - center mb - 4">
+                  <stat.icon className="h - 12 w - 12 text - blue - 400"      />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400">{stat.label}</div>
@@ -244,11 +244,11 @@ export default function NewServicesOverview() {
             </p>
           </div>
 
-          <div className="space-y-16">
-            {serviceCategories.map((category) => (<div key={category.id} className="bg-gray-800/30 border border-gray-700 rounded-2xl p-8">
-                <div className="flex items-center mb-8">
-                  <div className={`p-4 rounded-xl bg-gradient-to-r ${category.color} mr-6`}>
-                    <category.icon className="h-8 w-8 text-white"/>
+          <div className="space - y-16">
+            {serviceCategories.map ( (category) => (<div key={category.id} className="bg - gray - 800 / 30 border border - gray - 700 rounded - 2xl p - 8">
+                <div className="flex items - center mb - 8">
+                  <div className={`p - 4 rounded - xl bg - gradient - to - r ${category.color} mr - 6`}>
+                    <category.icon className="h - 8 w - 8 text - white"      />
                   </div>
                   <div>
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
@@ -274,11 +274,11 @@ export default function NewServicesOverview() {
                         <div className="text-sm text-gray-500">per month</div>
                       </div>
 
-                      <div className="mb-6">
-                        <h5 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h5>
-                        <div className="space-y-1">
-                          {service.features.map((feature, featureIndex) => (<div key={featureIndex} className="flex items-center text-sm text-gray-400">
-                              <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>
+                      <div className="mb - 6">
+                        <h5 className="text - sm font - semibold text - gray - 300 mb - 2">Key Features:</h5>
+                        <div className="space - y-1">
+                          {service.features.map ( (feature, featureIndex) => (<div key={featureIndex} className="flex items - center text - sm text - gray - 400">
+                              <CheckCircle className="h - 4 w - 4 text - green - 400 mr - 2 flex - shrink - 0"      />
                               {feature}
                             </div>))}
                         </div>
@@ -307,10 +307,10 @@ export default function NewServicesOverview() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (<div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  <benefit.icon className={`h-12 w-12 ${benefit.color}`}/>
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
+            {benefits.map ( (benefit, index) => (<div key={index} className="text - center">
+                <div className="flex justify - center mb - 4">
+                  <benefit.icon className={`h - 12 w - 12 ${benefit.color}`}      />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-400">{benefit.description}</p>
@@ -331,26 +331,26 @@ export default function NewServicesOverview() {
               Get in touch today to start your digital transformation journey.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div className="text-center">
-                <div className="flex justify-center mb-4">
-                  <Phone className="h-12 w-12 text-blue-400"/>
+            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 8">
+              <div className="text - center">
+                <div className="flex justify - center mb - 4">
+                  <Phone className="h - 12 w - 12 text - blue - 400"      />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
                 <p className="text-gray-300">+1 302 464 0950</p>
                 <p className="text-gray-400">Available 24/7</p>
               </div>
-              <div className="text-center">
-                <div className="flex justify-center mb-4">
-                  <Mail className="h-12 w-12 text-green-400"/>
+              <div className="text - center">
+                <div className="flex justify - center mb - 4">
+                  <Mail className="h - 12 w - 12 text - green - 400"      />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
                 <p className="text-gray-400">Response within 2 hours</p>
               </div>
-              <div className="text-center">
-                <div className="flex justify-center mb-4">
-                  <MapPin className="h-12 w-12 text-purple-400"/>
+              <div className="text - center">
+                <div className="flex justify - center mb - 4">
+                  <MapPin className="h - 12 w - 12 text - purple - 400"      />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
                 <p className="text-gray-300">364 E Main St STE 1008</p>

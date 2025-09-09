@@ -110,12 +110,12 @@ export default function ContentGenerator() {
                     Configure what type of content you want to generate.
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="contentType" className="text-white">Content Type</Label>
-                    <Select value={contentType} onValueChange={(value) => setContentType(value)}>
-                      <SelectTrigger id="contentType" className="bg-zion-blue border border-zion-blue-light text-white">
-                        <SelectValue placeholder="Select content type"/>
+                <CardContent className="space - y-6">
+                  <div className="space - y-2">
+                    <Label htmlFor="contentType" className="text - white">Content Type</Label>
+                    <Select value={contentType} onValueChange={ (value) => setContentType (value) }>
+                      <SelectTrigger id="contentType" className="bg - zion - blue border border - zion - blue - light text - white">
+                        <SelectValue placeholder="Select content type"      />
                       </SelectTrigger>
                       <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
                         <SelectItem value="blog" className="text-white">Blog Post</SelectItem>
@@ -135,14 +135,14 @@ export default function ContentGenerator() {
                   </div>
                   
                   {contentType === 'blog' && (<>
-                      <div className="flex items-center justify-between">
-                        <Label htmlFor="autoPublish" className="text-white">Auto-Publish</Label>
-                        <Switch id="autoPublish" checked={autoPublish} onCheckedChange={setAutoPublish}/>
+                      <div className="flex items - center justify - between">
+                        <Label htmlFor="autoPublish" className="text - white">Auto - Publish</Label>
+                        <Switch id="autoPublish" checked={autoPublish} onCheckedChange={setAutoPublish}      />
                       </div>
                       
-                      <div className="flex items-center justify-between">
-                        <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
-                        <Switch id="includeImage" checked={includeImage} onCheckedChange={setIncludeImage}/>
+                      <div className="flex items - center justify - between">
+                        <Label htmlFor="includeImage" className="text - white">Generate Image Prompt</Label>
+                        <Switch id="includeImage" checked={includeImage} onCheckedChange={setIncludeImage}      />
                       </div>
                     </>)}
                   
@@ -154,7 +154,7 @@ export default function ContentGenerator() {
                 <CardFooter>
                   <Button onClick={generateContent} disabled={isGenerating} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                     {isGenerating ? (<>
-                        <Loader2 className="mr-2 h-4 w-4 animate-spin"/>
+                        <Loader2 className="mr - 2 h - 4 w - 4 animate - spin"      />
                         Generating...
                       </>) : (<>Generate {contentType === 'blog' ? 'Blog Post' : 'Newsletter'}</>)}
                   </Button>
@@ -171,12 +171,12 @@ export default function ContentGenerator() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  {isGenerating ? (<div className="flex flex-col items-center justify-center py-12">
-                      <Loader2 className="h-8 w-8 animate-spin text-zion-purple mb-4"/>
-                      <p className="text-zion-slate-light">Generating content...</p>
-                    </div>) : previewContent ? (contentType === 'blog' ? (<div className="space-y-4">
-                        <Tabs defaultValue="preview" className="w-full">
-                          <TabsList className="bg-zion-blue-light/30 w-full">
+                  {isGenerating ? (<div className="flex flex - col items - center justify - center py - 12">
+                      <Loader2 className="h - 8 w - 8 animate - spin text - zion - purple mb - 4"      />
+                      <p className="text - zion - slate - light">Generating content...</p>
+                    </div>) : previewContent ? (contentType === 'blog' ? (<div className="space - y-4">
+                        <Tabs defaultValue="preview" className="w - full">
+                          <TabsList className="bg - zion - blue - light / 30 w - full">
                             <TabsTrigger value="preview">Preview</TabsTrigger>
                             <TabsTrigger value="markdown">Markdown</TabsTrigger>
                             <TabsTrigger value="metadata">Metadata</TabsTrigger>
@@ -247,14 +247,14 @@ export default function ContentGenerator() {
                             <TabsTrigger value="html">HTML</TabsTrigger>
                           </TabsList>
                           
-                          <TabsContent value="preview" className="pt-4">
-                            <div className="bg-white rounded-lg p-6 text-black">
-                              <h2 className="text-xl font-bold">{previewContent.subject}</h2>
-                              <p className="text-gray-500 text-sm mt-2">{previewContent.previewText}</p>
-                              <div className="border-t border-gray-200 my-4"></div>
-                              <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: previewContent.body }}/>
-                              <div className="mt-6">
-                                <Button className="bg-zion-purple hover:bg-zion-purple-dark text-white">
+                          <TabsContent value="preview" className="pt - 4">
+                            <div className="bg - white rounded - lg p - 6 text - black">
+                              <h2 className="text - xl font - bold">{previewContent.subject}</h2>
+                              <p className="text - gray - 500 text - sm mt - 2">{previewContent.previewText}</p>
+                              <div className="border - t border - gray - 200 my - 4"></div>
+                              <div className="prose max - w-none" dangerouslySetInnerHTML={{ __html: previewContent.body }}      />
+                              <div className="mt - 6">
+                                <Button className="bg - zion - purple hover:bg - zion - purple - dark text - white">
                                   {previewContent.cta || "Visit Zion Marketplace"}
                                 </Button>
                               </div>
@@ -275,13 +275,13 @@ export default function ContentGenerator() {
                             </ScrollArea>
                           </TabsContent>
                         </Tabs>
-                      </div>)) : (<div className="flex flex-col items-center justify-center py-12 text-center">
-                      <div className="bg-zion-blue-light/20 p-6 rounded-full mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-zion-purple">
-                          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
-                          <polyline points="14 2 14 8 20 8"/>
-                          <path d="M12 18v-6"/>
-                          <path d="M8 15h8"/>
+                      </div>) ) : (<div className="flex flex - col items - center justify - center py - 12 text - center">
+                      <div className="bg - zion - blue - light / 20 p - 6 rounded - full mb - 4">
+                        <svg xmlns="http://www.w3.org / 2000 / svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h - 8 w - 8 text - zion - purple">
+                          <path d="M14.5 2H6a2 2 0 0 0 - 2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2 - 2V7.5L14.5 2z"      />
+                          <polyline points="14 2 14 8 20 8"      />
+                          <path d="M12 18v - 6"      />
+                          <path d="M8 15h8"      />
                         </svg>
                       </div>
                       <h3 className="text-white font-medium mb-2">No Content Generated Yet</h3>

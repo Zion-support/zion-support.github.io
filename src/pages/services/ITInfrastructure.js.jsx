@@ -68,12 +68,29 @@ const ITInfrastructure = () => {
   return (
     <>
       <Helmet>
-        <title>IT Infrastructure — Zion Tech Group | Network & System Management</title>
-        <meta name="description" content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services."/>
-        <meta property="og:title" content="IT Infrastructure — Zion Tech Group"/>
-        <meta property="og:description" content="Leading IT infrastructure services including network design, server management, storage solutions, and security infrastructure."/>
-        <meta property="og:url" content="https://ziontechgroup.com/services/it-infrastructure"/>
-        <link rel="canonical" href="https://ziontechgroup.com/services/it-infrastructure"/>
+        <title>
+          IT Infrastructure — Zion Tech Group | Network & System Management
+        </title>
+        <meta
+          name="description"
+          content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services."
+              />
+        <meta
+          property="og:title"
+          content="IT Infrastructure — Zion Tech Group"
+              />
+        <meta
+          property="og:description"
+          content="Leading IT infrastructure services including network design, server management, storage solutions, and security infrastructure."
+              />
+        <meta
+          property="og:url"
+          content="https://ziontechgroup.com/services/it-infrastructure"
+              />
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com/services/it-infrastructure"
+              />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
@@ -112,23 +129,28 @@ const ITInfrastructure = () => {
                 Comprehensive solutions to build and maintain your IT foundation
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {infrastructureServices.map((service, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="text-5xl mb-6">{service.icon}</div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">
-                          <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                          {feature}
-                        </li>))}
-                    </ul>
-                  </div>
-                </div>))}
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
+                >
+                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.features.map((((((((item, idx, index, index, index, index, index, index) => ({ ...((((((item, idx, index, index, index, index, index, key: index })) => ({ ...(((((item, idx, index, index, index, index, key: index })) => ({ ...((((item, idx, index, index, index, key: index })) => ({ ...(((item, idx, index, index, key: index })) => ({ ...((item, idx, index, key: index })) => ({ ...(item, idx, key: index })) => (
+                      <li key={idx} className="text-gray-300 flex items-center">
+                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -146,10 +168,17 @@ const ITInfrastructure = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {infrastructureAreas.map((area, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                  <h3 className="text-xl font-semibold text-white mb-4">{area.area}</h3>
+              {infrastructureAreas.map((((((((area, index, index, index, index, index, index, index) => ({ ...((((((area, index, index, index, index, index, index, key: index })) => ({ ...(((((area, index, index, index, index, index, key: index })) => ({ ...((((area, index, index, index, index, key: index })) => ({ ...(((area, index, index, index, key: index })) => ({ ...((area, index, index, key: index })) => ({ ...(area, index, key: index })) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
+                >
+                  <h3 className="text-xl font-semibold text-white mb-4">
+                    {area.area}
+                  </h3>
                   <ul className="space-y-2">
-                    {area.solutions.map((solution, idx) => (<li key={idx} className="text-gray-300 flex items-center">
+                    {area.solutions.map((((((((solution, idx, index, index, index, index, index, index) => ({ ...((((((solution, idx, index, index, index, index, index, key: index })) => ({ ...(((((solution, idx, index, index, index, index, key: index })) => ({ ...((((solution, idx, index, index, index, key: index })) => ({ ...(((solution, idx, index, index, key: index })) => ({ ...((solution, idx, index, key: index })) => ({ ...(solution, idx, key: index })) => (
+                      <li key={idx} className="text-gray-300 flex items-center">
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
                         {solution}
                       </li>))}
@@ -174,8 +203,18 @@ const ITInfrastructure = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  <svg
+                    className="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Reliability</h3>
@@ -184,8 +223,18 @@ const ITInfrastructure = () => {
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 11l5-5m0 0l5 5m-5-5v12"/>
+                  <svg
+                    className="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M7 11l5-5m0 0l5 5m-5-5v12"
+                          />
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Scalability</h3>
@@ -194,8 +243,18 @@ const ITInfrastructure = () => {
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                  <svg
+                    className="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                          />
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Security</h3>

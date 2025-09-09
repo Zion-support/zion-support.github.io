@@ -1,43 +1,82 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Award, Users, Globe, Target, TrendingUp, Shield, CheckCircle, ArrowRight } from 'lucide-react';
-export function AboutSection() {
-    const achievements = [
-        { number: "10+", label: "Years of Experience", icon: <Award className="w-6 h-6"/> },
-        { number: "500+", label: "Projects Delivered", icon: <Target className="w-6 h-6"/> },
-        { number: "50+", label: "Enterprise Clients", icon: <Users className="w-6 h-6"/> },
-        { number: "25+", label: "Countries Served", icon: <Globe className="w-6 h-6"/> }
-    ];
-    const values = [
-        {
-            title: "Innovation First",
-            description: "We push the boundaries of what's possible, constantly exploring emerging technologies and novel approaches.",
-            icon: <TrendingUp className="w-8 h-8"/>
-        },
-        {
-            title: "Client Success",
-            description: "Your success is our success. We measure our achievements by the impact we create for your business.",
-            icon: <Target className="w-8 h-8"/>
-        },
-        {
-            title: "Excellence",
-            description: "We maintain the highest standards in everything we do, from code quality to client communication.",
-            icon: <Award className="w-8 h-8"/>
-        },
-        {
-            title: "Trust & Security",
-            description: "Your data and systems are protected with enterprise-grade security and compliance standards.",
-            icon: <Shield className="w-8 h-8"/>
-        }
-    ];
-    const technologies = [
-        "Artificial Intelligence & ML", "Cloud Computing", "Cybersecurity", "Data Analytics",
-        "Blockchain Technology", "IoT Solutions", "Mobile Development", "Web Applications",
-        "DevOps & Automation", "Quantum Computing", "Edge Computing", "5G Networks"
-    ];
-    return (<section className="py-20 bg-gradient-to-br from-slate-800 via-zion-blue-dark to-slate-900">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+  import {
+export function AboutSection () {
+
+
+    Award,
+    Users,
+    Globe,
+    Target,
+    TrendingUp,
+    Shield,
+    CheckCircle,
+    ArrowRight,
+  } from 'lucide - react';
+  const achievements = [
+    {
+      number: '10+',
+      label: 'Years of Experience',
+      icon: <Award className="w - 6 h - 6"       />,
+    },
+    {
+      number: '500+',
+      label: 'Projects Delivered',
+      icon: <Target className="w - 6 h - 6"       />,
+    },
+    {
+      number: '50+',
+      label: 'Enterprise Clients',
+      icon: <Users className="w - 6 h - 6"       />,
+    },
+    {
+      number: '25+',
+      label: 'Countries Served',
+      icon: <Globe className="w - 6 h - 6"       />,
+    },
+  ];
+  const values = [
+    {
+      title: 'Innovation First',
+      description:
+        "We push the boundaries of what's possible, constantly exploring emerging technologies and novel approaches.",
+      icon: <TrendingUp className="w - 8 h - 8"       />,
+    },
+    {
+      title: 'Client Success',
+      description:
+        'Your success is our success. We measure our achievements by the impact we create for your business.',
+      icon: <Target className="w - 8 h - 8"       />,
+    },
+    {
+      title: 'Excellence',
+      description:
+        'We maintain the highest standards in everything we do, from code quality to client communication.',
+      icon: <Award className="w - 8 h - 8"       />,
+    },
+    {
+      title: 'Trust & Security',
+      description:
+        'Your data and systems are protected with enterprise - grade security and compliance standards.',
+      icon: <Shield className="w - 8 h - 8"       />,
+    },
+  ];
+  const technologies = [
+    'Artificial Intelligence & ML',
+    'Cloud Computing',
+    'Cybersecurity',
+    'Data Analytics',
+    'Blockchain Technology',
+    'IoT Solutions',
+    'Mobile Development',
+    'Web Applications',
+    'DevOps & Automation',
+    'Quantum Computing',
+    'Edge Computing',
+    '5G Networks',
+  ];
+  return (<section className="py - 20 bg - gradient - to - br from - slate - 800 via - zion - blue - dark to - slate - 900">
+      <div className="container mx - auto px - 4">
+        <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 16 items - center mb - 20">
           {/* Left Column - Story */}
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-futuristic">
@@ -113,11 +152,14 @@ export function AboutSection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
-            {technologies.map((tech, index) => (<div key={index} className="flex items-center text-zion-slate-light">
-                <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0"/>
-                <span className="text-sm">{tech}</span>
-              </div>))}
+          <div className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 4 gap - 4 mb - 8">
+            {technologies.map ( (tech, index) => (<div
+                key={index}
+                className="flex items - center text - zion - slate - light"
+              >
+                <CheckCircle className="w - 4 h - 4 text - zion - cyan mr - 3 flex - shrink - 0"       />
+                <span className="text - sm">{tech}</span>
+              </div>) ) }
           </div>
 
           <div className="text-center">

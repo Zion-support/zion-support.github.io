@@ -124,11 +124,11 @@ export default function PricingPage() {
                     <span className="text-3xl font-bold text-zion-blue">{tier.multiplier}x</span>
                     <span className="text-gray-600 ml-2">base pricing</span>
                   </div>
-                  <ul className="text-left space-y-3 mb-8">
-                    {pricingFeatures[key].map((feature, index) => (<li key={index} className="flex items-center">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"/>
-                        <span className="text-sm">{feature}</span>
-                      </li>))}
+                  <ul className="text - left space - y-3 mb - 8">
+                    {pricingFeatures[key].map ( (feature, index) => (<li key={index} className="flex items - center">
+                        <CheckCircle className="h - 4 w - 4 text - green - 500 mr - 2 flex - shrink - 0"      />
+                        <span className="text - sm">{feature}</span>
+                      </li>) ) }
                   </ul>
                   <Button className="w-full" variant={key === 'professional' ? 'default' : 'outline'}>
                     Get Started
@@ -156,19 +156,18 @@ export default function PricingPage() {
               <TabsTrigger value="all" className="text-white">All</TabsTrigger>
               {MICRO_SAAS_CATEGORIES.map((category) => {
             const IconComponent = categoryIcons[category.label];
-            return (<TabsTrigger key={category.value} value={category.value} className="text-white">
-                    {IconComponent && <IconComponent className="h-4 w-4 mr-2"/>}
-                    {category.label.split(' ')[0]}
-                  </TabsTrigger>);
-        })}
+            return (<TabsTrigger key={category.value} value={category.value} className="text - white">
+                    {IconComponent && <IconComponent className="h - 4 w - 4 mr - 2"      />}
+                    {category.label.split (' ') [0]}
+                  </TabsTrigger>) }) }
             </TabsList>
             
             <TabsContent value={selectedCategory} className="mt-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredServices.map((service) => (<Card key={service.id} className="bg-white hover:shadow-lg transition-all duration-300 hover:scale-105">
                     <div className="relative">
-                      <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
-                      <Badge className="absolute top-4 right-4 bg-zion-purple">
+                      <img src={service.images[0]} alt={service.title} className="w - full h - 48 object - cover rounded - t-lg"      />
+                      <Badge className="absolute top - 4 right - 4 bg - zion - purple">
                         {service.category}
                       </Badge>
                     </div>
@@ -179,11 +178,11 @@ export default function PricingPage() {
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center">
-                          <Star className="h-4 w-4 text-yellow-400 mr-1"/>
-                          <span className="text-sm">{service.rating}</span>
-                          <span className="text-gray-500 text-sm ml-1">({service.reviewCount})</span>
+                      <div className="flex items - center justify - between mb - 4">
+                        <div className="flex items - center">
+                          <Star className="h - 4 w - 4 text - yellow - 400 mr - 1"      />
+                          <span className="text - sm">{service.rating}</span>
+                          <span className="text - gray - 500 text - sm ml - 1"> ({service.reviewCount}) </span>
                         </div>
                         <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan">
                           AI Score: {service.aiScore}
@@ -236,16 +235,16 @@ export default function PricingPage() {
                 </tr>
               </thead>
               <tbody>
-                {comparisonFeatures.map((feature, index) => (<tr key={index} className="border-b border-gray-200">
-                    <td className="p-4 font-medium">{feature}</td>
-                    <td className="p-4 text-center">
-                      {index < 4 ? (<CheckCircle className="h-5 w-5 text-green-500 mx-auto"/>) : (<X className="h-5 w-5 text-red-500 mx-auto"/>)}
+                {comparisonFeatures.map ( (feature, index) => (<tr key={index} className="border - b border - gray - 200">
+                    <td className="p - 4 font - medium">{feature}</td>
+                    <td className="p - 4 text - center">
+                      {index < 4 ? (<CheckCircle className="h - 5 w - 5 text - green - 500 mx - auto"      />) : (<X className="h - 5 w - 5 text - red - 500 mx - auto"      />) }
                     </td>
-                    <td className="p-4 text-center">
-                      {index < 7 ? (<CheckCircle className="h-5 w-5 text-green-500 mx-auto"/>) : (<X className="h-5 w-5 text-red-500 mx-auto"/>)}
+                    <td className="p - 4 text - center">
+                      {index < 7 ? (<CheckCircle className="h - 5 w - 5 text - green - 500 mx - auto"      />) : (<X className="h - 5 w - 5 text - red - 500 mx - auto"      />) }
                     </td>
-                    <td className="p-4 text-center">
-                      <CheckCircle className="h-5 w-5 text-green-500 mx-auto"/>
+                    <td className="p - 4 text - center">
+                      <CheckCircle className="h - 5 w - 5 text - green - 500 mx - auto"      />
                     </td>
                   </tr>))}
               </tbody>
@@ -269,22 +268,22 @@ export default function PricingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
             {
-                icon: <Zap className="h-8 w-8"/>,
+                icon: <Zap className="h - 8 w - 8"      />,
                 title: "Immediate Deployment",
                 description: "All services ready for instant deployment"
             },
             {
-                icon: <Shield className="h-8 w-8"/>,
+                icon: <Shield className="h - 8 w - 8"      />,
                 title: "Enterprise Security",
                 description: "SOC 2 compliance and 24/7 monitoring"
             },
             {
-                icon: <Users className="h-8 w-8"/>,
+                icon: <Users className="h - 8 w - 8"      />,
                 title: "Dedicated Support",
                 description: "24/7 technical support with account managers"
             },
             {
-                icon: <TrendingUp className="h-8 w-8"/>,
+                icon: <TrendingUp className="h - 8 w - 8"      />,
                 title: "Proven ROI",
                 description: "Average 300% ROI within 6 months"
             }
@@ -317,31 +316,31 @@ export default function PricingPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <div>
-              <h3 className="text-2xl font-bold text-zion-blue mb-6">Contact Information</h3>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Phone className="h-5 w-5 text-zion-purple mr-3"/>
+              <h3 className="text - 2xl font - bold text - zion - blue mb - 6">Contact Information</h3>
+              <div className="space - y-4">
+                <div className="flex items - center">
+                  <Phone className="h - 5 w - 5 text - zion - purple mr - 3"      />
                   <div>
                     <p className="font-medium">Phone</p>
                     <p className="text-gray-600">{CONTACT_INFO.mobile}</p>
                   </div>
                 </div>
-                <div className="flex items-center">
-                  <Mail className="h-5 w-5 text-zion-purple mr-3"/>
+                <div className="flex items - center">
+                  <Mail className="h - 5 w - 5 text - zion - purple mr - 3"      />
                   <div>
                     <p className="font-medium">Email</p>
                     <p className="text-gray-600">{CONTACT_INFO.email}</p>
                   </div>
                 </div>
-                <div className="flex items-center">
-                  <MapPin className="h-5 w-5 text-zion-purple mr-3"/>
+                <div className="flex items - center">
+                  <MapPin className="h - 5 w - 5 text - zion - purple mr - 3"      />
                   <div>
                     <p className="font-medium">Address</p>
                     <p className="text-gray-600">{CONTACT_INFO.address}</p>
                   </div>
                 </div>
-                <div className="flex items-center">
-                  <Globe className="h-5 w-5 text-zion-purple mr-3"/>
+                <div className="flex items - center">
+                  <Globe className="h - 5 w - 5 text - zion - purple mr - 3"      />
                   <div>
                     <p className="font-medium">Website</p>
                     <a href={CONTACT_INFO.website} className="text-zion-cyan hover:underline">

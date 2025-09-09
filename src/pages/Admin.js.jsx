@@ -3,8 +3,11 @@ import { Helmet } from 'react-helmet-async';
 const Admin = () => {
     return (<>
       <Helmet>
-        <title>Admin - Zion Tech Group</title>
-        <meta name="description" content="Administrative dashboard for Zion Tech Group. Manage users, services, and system configurations."/>
+        <title > Admin - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Administrative dashboard for Zion Tech Group. Manage users, services, and system configurations."
+              />
       </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-12">

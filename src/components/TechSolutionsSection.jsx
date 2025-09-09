@@ -5,11 +5,11 @@ const solutions = [
     {
         id: 'ai-ml',
         title: 'AI & Machine Learning',
-        description: 'Cutting-edge artificial intelligence and machine learning solutions',
-        icon: <Brain className="w-8 h-8"/>,
-        color: 'from-zion-purple to-zion-purple-dark',
-        bgColor: 'from-zion-purple/20 to-zion-purple-dark/20',
-        features: [
+        description: 'Cutting - edge artificial intelligence and machine learning solutions',
+        icon: <Brain className="w - 8 h - 8"      />,
+        color: 'from - zion - purple to - zion - purple - dark',
+        bgColor: 'from - zion - purple / 20 to - zion - purple - dark / 20',
+        features[
             'Custom AI model development',
             'Natural language processing',
             'Computer vision solutions',
@@ -30,12 +30,12 @@ const solutions = [
         id: 'cloud-infrastructure',
         title: 'Cloud Infrastructure',
         description: 'Scalable and secure cloud solutions for modern businesses',
-        icon: <Cloud className="w-8 h-8"/>,
-        color: 'from-zion-cyan to-zion-blue',
-        bgColor: 'from-zion-cyan/20 to-zion-blue/20',
-        features: [
-            'Multi-cloud architecture',
-            'Auto-scaling solutions',
+        icon: <Cloud className="w - 8 h - 8"      />,
+        color: 'from - zion - cyan to - zion - blue',
+        bgColor: 'from - zion - cyan / 20 to - zion - blue / 20',
+        features[
+            'Multi - cloud architecture',
+            'Auto - scaling solutions',
             'Disaster recovery',
             'Performance optimization',
             'Cost management'
@@ -54,10 +54,10 @@ const solutions = [
         id: 'cybersecurity',
         title: 'Cybersecurity',
         description: 'Comprehensive security solutions to protect your digital assets',
-        icon: <Shield className="w-8 h-8"/>,
-        color: 'from-zion-cyan-light to-zion-cyan',
-        bgColor: 'from-zion-cyan-light/20 to-zion-cyan/20',
-        features: [
+        icon: <Shield className="w - 8 h - 8"      />,
+        color: 'from - zion - cyan - light to - zion - cyan',
+        bgColor: 'from - zion - cyan - light / 20 to - zion - cyan / 20',
+        features[
             'Threat detection & response',
             'Vulnerability assessment',
             'Identity & access management',
@@ -78,11 +78,11 @@ const solutions = [
         id: 'data-analytics',
         title: 'Data Analytics',
         description: 'Transform raw data into actionable business insights',
-        icon: <Database className="w-8 h-8"/>,
-        color: 'from-zion-purple-light to-zion-purple',
-        bgColor: 'from-zion-purple-light/20 to-zion-purple/20',
-        features: [
-            'Real-time data processing',
+        icon: <Database className="w - 8 h - 8"      />,
+        color: 'from - zion - purple - light to - zion - purple',
+        bgColor: 'from - zion - purple - light / 20 to - zion - purple / 20',
+        features[
+            'Real - time data processing',
             'Advanced reporting dashboards',
             'Predictive modeling',
             'Data visualization',
@@ -102,10 +102,10 @@ const solutions = [
         id: 'iot-solutions',
         title: 'IoT Solutions',
         description: 'Connected devices and smart systems for the modern world',
-        icon: <Cpu className="w-8 h-8"/>,
-        color: 'from-zion-cyan to-zion-purple',
-        bgColor: 'from-zion-cyan/20 to-zion-purple/20',
-        features: [
+        icon: <Cpu className="w - 8 h - 8"      />,
+        color: 'from - zion - cyan to - zion - purple',
+        bgColor: 'from - zion - cyan / 20 to - zion - purple / 20',
+        features[
             'Device connectivity management',
             'Real-time monitoring',
             'Data collection & analysis',
@@ -125,11 +125,11 @@ const solutions = [
     {
         id: 'mobile-apps',
         title: 'Mobile Applications',
-        description: 'Native and cross-platform mobile solutions for all devices',
-        icon: <Smartphone className="w-8 h-8"/>,
-        color: 'from-zion-purple to-zion-cyan',
-        bgColor: 'from-zion-purple/20 to-zion-cyan/20',
-        features: [
+        description: 'Native and cross - platform mobile solutions for all devices',
+        icon: <Smartphone className="w - 8 h - 8"      />,
+        color: 'from - zion - purple to - zion - cyan',
+        bgColor: 'from - zion - purple / 20 to - zion - cyan / 20',
+        features[
             'iOS & Android development',
             'Cross-platform solutions',
             'UI/UX design',
@@ -148,12 +148,12 @@ const solutions = [
     }
 ];
 const industries = [
-    { name: 'Healthcare', icon: <Shield className="w-5 h-5"/>, projects: 80 },
-    { name: 'Finance', icon: <TrendingUp className="w-5 h-5"/>, projects: 120 },
-    { name: 'Retail', icon: <Globe className="w-5 h-5"/>, projects: 95 },
-    { name: 'Manufacturing', icon: <Cpu className="w-5 h-5"/>, projects: 75 },
-    { name: 'Education', icon: <Users className="w-5 h-5"/>, projects: 60 },
-    { name: 'Government', icon: <Lock className="w-5 h-5"/>, projects: 45 }
+    { name: 'Healthcare', icon: <Shield className="w - 5 h - 5"      />, projects: 80 },
+    { name: 'Finance', icon: <TrendingUp className="w - 5 h - 5"      />, projects: 120 },
+    { name: 'Retail', icon: <Globe className="w - 5 h - 5"      />, projects: 95 },
+    { name: 'Manufacturing', icon: <Cpu className="w - 5 h - 5"      />, projects: 75 },
+    { name: 'Education', icon: <Users className="w - 5 h - 5"      />, projects: 60 },
+    { name: 'Government', icon: <Lock className="w - 5 h - 5"      />, projects: 45 }
 ];
 export function TechSolutionsSection() {
     const [selectedSolution, setSelectedSolution] = useState(null);
@@ -241,10 +241,10 @@ export function TechSolutionsSection() {
                   </p>
 
                   {/* Rating and projects */}
-                  <div className="flex items-center justify-center gap-4 mb-4">
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current"/>
-                      <span className="text-white text-sm font-semibold">{solution.rating}</span>
+                  <div className="flex items - center justify - center gap - 4 mb - 4">
+                    <div className="flex items - center gap - 1">
+                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current"      />
+                      <span className="text - white text - sm font - semibold">{solution.rating}</span>
                     </div>
                     <div className="text-zion-slate-light text-sm">
                       {solution.projects} projects
@@ -258,9 +258,9 @@ export function TechSolutionsSection() {
                 </div>
 
                 {/* Features preview */}
-                <div className="space-y-2 mb-6">
-                  {solution.features.slice(0, 3).map((feature, idx) => (<div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-sm">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"/>
+                <div className="space - y-2 mb - 6">
+                  {solution.features.slice (0, 3) .map ( (feature, idx) => (<div key={idx} className="flex items - center gap - 2 text - zion - slate - light / 80 text - sm">
+                      <CheckCircle className="w - 4 h - 4 text - zion - cyan flex - shrink - 0"      />
                       <span>{feature}</span>
                     </div>))}
                   {solution.features.length > 3 && (<div className="text-zion-cyan/60 text-xs text-center">
@@ -273,7 +273,7 @@ export function TechSolutionsSection() {
                   <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                     Learn More
                   </span>
-                  <ArrowRight className="w-5 h-5 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                  <ArrowRight className="w - 5 h - 5 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"      />
                 </div>
 
                 {/* Expanded details */}

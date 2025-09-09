@@ -58,7 +58,7 @@ export function ITServiceRequestHero() {
           <motion.div variants={itemVariants} className="text-white">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-2 bg-zion-cyan/20 rounded-lg">
-                <Zap className="w-6 h-6 text-zion-cyan"/>
+                <Zap className="w-6 h-6 text-zion-cyan"       />
               </div>
               <span className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">
                 Global IT Services
@@ -109,48 +109,56 @@ export function ITServiceRequestHero() {
 
           {/* Right form */}
           <motion.div variants={itemVariants} className="relative">
-            <div className="relative">
-              {/* Glassmorphism form container */}
-              <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-8 shadow-2xl">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <MapPin className="w-8 h-8 text-zion-cyan"/>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Request Service</h3>
-                  <p className="text-zion-slate-light">Enter your location to get started</p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-8 shadow-2xl">
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-blue mb-4">
+                  <MapPin className="w-8 h-8 text-white"       />
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="relative">
-                    <Input value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Enter service location (e.g., New York, NY)" className="w-full bg-white/10 border-white/30 focus:border-zion-cyan focus:ring-zion-cyan text-white placeholder-zion-slate-light rounded-xl py-4 px-4 text-lg backdrop-blur-sm" required/>
-                    <MapPin className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-cyan/50"/>
-                  </div>
-
-                  <Button type="submit" className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-lg py-4 rounded-xl shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 group">
-                    <span className="flex items-center gap-2">
-                      Request Service Now
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200"/>
-                    </span>
-                  </Button>
-                </form>
-
-                {/* Trust indicators */}
-                <div className="mt-6 pt-6 border-t border-white/10">
-                  <div className="flex items-center justify-center gap-4 text-xs text-zion-slate-light">
-                    <div className="flex items-center gap-1">
-                      <Shield className="w-3 h-3 text-zion-cyan"/>
-                      <span>Secure</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-3 h-3 text-zion-purple"/>
-                      <span>Fast</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Globe className="w-3 h-3 text-zion-blue"/>
-                      <span>Global</span>
-                    </div>
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"       />
+                    <input
+                      type="text"
+                      id="location"
+                      value={location}
+                      onChange={e => setLocation(e.target.value)}
+                      placeholder="Enter city, address, or coordinates"
+                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
+                      required
+                    />
                   </div>
                 </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting || !location.trim()}
+                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                      Finding Technicians...
+                    </>
+                  ) : (
+                    <>
+                      Find IT Technicians
+                      <ArrowRight className="w-5 h-5"       />
+                    </>
+                  )}
+                </button>
+              </form>
+
+              {/* Features grid */}
+              <div className="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-white/10">
+                {features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <feature.icon className={`w-5 h-5 ${feature.color}`}       />
+                    <span className="text-sm text-zion-slate-light">
+                      {feature.text}
+                    </span>
+                  </div>
+                ))}
               </div>
 
               {/* Floating elements */}

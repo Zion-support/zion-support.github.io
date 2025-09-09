@@ -22,14 +22,15 @@ import {
 const Solutions: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
-  const categories = [
-    { id: 'all', label: 'All Solutions', icon: Zap },
-    { id: 'ai', label: 'AI & ML', icon: Brain },
-    { id: 'cloud', label: 'Cloud', icon: Cloud },
-    { id: 'security', label: 'Security', icon: Shield },
-    { id: 'infrastructure', label: 'Infrastructure', icon: Server },
-    { id: 'digital', label: 'Digital Transformation', icon: Rocket }
-  ];
+const Solutions = () => {
+  return (<>
+      <Helmet>
+        <title > Custom Solutions - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Custom technology solutions tailored to your business needs. Zion Tech Group delivers innovative solutions that drive results."
+              />
+      </Helmet>
 
   const solutions = [
     {

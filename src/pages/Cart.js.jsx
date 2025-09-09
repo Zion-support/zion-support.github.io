@@ -82,11 +82,45 @@ export default function CartPage() {
         <Skeleton className="h-32 w-full"/>
       </div>);
     }
-    if (showEmpty) {
-        return (<div className="container py-10 text-center">
-        <img loading="lazy" src="/images/empty-cart.svg" alt="Empty cart" className="mx-auto mb-4 w-48 h-36"/>
-        <p>{t('cart.empty')}</p>
-        <Button asChild className="mt-4">
+  }, [cartLoading, items]) ;
+  const updateQuantity = (id, qty) => {
+    dispatch (updateQuantityAction ({ id, quantity: qty }) ) ;
+  };
+  const removeItem = id => {
+    dispatch (removeItemAction (id) ) ;
+  };
+  const handleCheckout = () => {
+    router.push ('/checkout') ;
+  };
+  const applyCode = async () => {
+    try {
+      const res = await apiClient.post ('/coupons / validate', {
+        code,
+        amount: subtotal,
+      }) ;
+      setDiscount (res.data.discount || 0) ;
+    } catch (e) {
+      setDiscount (0) ;
+    }
+  };
+  const subtotal = items.reduce ( (sum, i) => sum + i.price * i.quantity, 0) ;
+  const total = subtotal - discount;
+  if (cartLoading) {
+    return (<div className="container py - 10 space - y-4">
+        <Skeleton className="h - 8 w - 1/3"       />
+        <Skeleton className="h - 32 w - full"       />
+      </div>) ;
+  }
+  if (showEmpty) {
+    return (<div className="container py - 10 text - center">
+        <img
+          loading="lazy"
+          src="/images / empty - cart.svg"
+          alt="Empty cart"
+          className="mx - auto mb - 4 w - 48 h - 36"
+              />
+        <p>{t ('cart.empty') }</p>
+        <Button asChild className="mt - 4">
           <Link href="/marketplace">Browse Marketplace</Link>
         </Button>
       </div>);

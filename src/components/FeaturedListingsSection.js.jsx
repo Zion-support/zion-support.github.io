@@ -153,39 +153,30 @@ export function FeaturedListingsSection() {
         }
     };
 
-    const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.6,
-                ease: "easeOut"
-            }
-        }
-    };
-
-    const renderStars = (rating) => {
-        return Array.from({ length: 5 }, (_, i) => (
-            <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
-                ★
-            </span>
-        ));
-    };
-    return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
-      {/* Enhanced background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 75% 25%, currentColor 1px, transparent 1px)`,
-            backgroundSize: '60px 60px'
-        }}/>
+}}      />
       </div>
 
       {/* Floating decorative elements */}
-      <div className="absolute inset-0">
-        <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}/>
-        <motion.div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" animate={{ rotate: -360 }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }}/>
-        <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}/>
+      <div className="absolute inset - 0">
+        <motion.div className="absolute top - 20 left - 20 w - 32 h - 32 border border - zion - cyan / 20 rounded - full opacity - 30" animate={{ rotate: 360 }} transition = {
+  { duration: 20, repeat: Infinity,
+  ease: "linear" 
+
+}}      />
+        <motion.div className="absolute bottom - 20 right - 20 w - 24 h - 24 border border - zion - purple / 20 rounded - full opacity - 30" animate={{ rotate: -360 }} transition = {
+  { duration: 25, repeat: Infinity,
+  ease: "linear" 
+
+}}      />
+        <motion.div className="absolute top - 1/2 left - 1/2 w - 16 h - 16 border border - zion - cyan - light / 20 rounded - full opacity - 20" animate = {
+  { scale[1, 1.2,;
+  1] 
+
+}} transition = {
+  { duration: 3, repeat: Infinity,
+  ease: "easeInOut" 
+
+}}      />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -208,23 +199,26 @@ export function FeaturedListingsSection() {
             </button>))}
         </motion.div>
         
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {filteredListings.map((listing) => (
-            <motion.div key={listing.id} variants={itemVariants} onHoverStart={() => setHoveredListing(listing.id)} onHoverEnd={() => setHoveredListing(null)}>
-              <div className="group bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
-                {/* Project Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={listing.image} 
-                    alt={listing.title} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  {listing.featured && (
-                    <div className="absolute top-4 right-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-xs font-semibold">
+        <motion.div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          {filteredListings.map ( (listing) => (<motion.div key={listing.id} variants={itemVariants} onHoverStart={ () => setHoveredListing (listing.id) } onHoverEnd={ () => setHoveredListing (null) }>
+              <div className="group bg - gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm rounded - 2xl overflow - hidden border border - zion - blue - light / 30 hover:border - zion - cyan / 50 transition - all duration - 500 hover:transform hover:scale-[1.02] hover:shadow - 2xl hover:shadow - zion - cyan / 20 h - full">
+                {/* Featured badge */}
+                {listing.featured && (<div className="absolute top - 4 left - 4 z - 10">
+                    <div className="bg - gradient - to - r from - zion - purple to - zion - cyan text - white px - 3 py - 1 rounded - full text - xs font - semibold shadow - lg">
+                      <Award className="w - 3 h - 3 inline mr - 1"      />
                       Featured
                     </div>
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-zion-blue-dark/80 to-transparent"/>
+                  </div>) }
+
+                {/* Image */}
+                <div className="relative h - 48 overflow - hidden">
+                  <img src={listing.image} alt={listing.title} className="w - full h - full object - cover group - hover:scale - 110 transition - transform duration - 500"      />
+                  <div className="absolute inset - 0 bg - gradient - to - t from - black / 60 to - transparent"      />
+                  <div className="absolute top - 4 right - 4">
+                    <button className="p - 2 rounded - full bg - zion - blue - dark / 80 hover:bg - zion - cyan transition - colors duration - 300">
+                      <Heart className="w - 4 h - 4 text - white"      />
+                    </button>
+                  </div>
                 </div>
 
                 {/* Project Content */}
@@ -241,15 +235,15 @@ export function FeaturedListingsSection() {
                   <p className="text-zion-slate-light text-sm leading-relaxed mb-4 line-clamp-2">
                     {listing.description}
                   </p>
-
-                  {/* Project Details */}
-                  <div className="grid grid-cols-2 gap-3 mb-4">
-                    <div className="flex items-center gap-2 text-zion-slate-light/80 text-xs">
-                      <Clock className="w-3 h-3"/>
+                  
+                  {/* Quick info */}
+                  <div className="grid grid - cols - 2 gap - 3 mb - 4">
+                    <div className="flex items - center gap - 2 text - zion - slate - light / 80 text - xs">
+                      <Clock className="w - 3 h - 3"      />
                       <span>{listing.duration}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-zion-slate-light/80 text-xs">
-                      <Users className="w-3 h-3"/>
+                    <div className="flex items - center gap - 2 text - zion - slate - light / 80 text - xs">
+                      <Users className="w - 3 h - 3"      />
                       <span>{listing.team}</span>
                     </div>
                   </div>
@@ -269,19 +263,19 @@ export function FeaturedListingsSection() {
                   </div>
                   
                   {/* Stats */}
-                  <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current"/>
+                  <div className="flex items - center justify - between mb - 4 text - sm text - zion - slate - light">
+                    <div className="flex items - center gap - 1">
+                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current"      />
                       <span>{listing.rating}</span>
                       <span>({listing.reviews})</span>
                     </div>
-                    <div className="flex items-center gap-4">
-                      <div className="flex items-center gap-1">
-                        <Eye className="w-4 h-4"/>
+                    <div className="flex items - center gap - 4">
+                      <div className="flex items - center gap - 1">
+                        <Eye className="w - 4 h - 4"      />
                         <span>{listing.views}</span>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <Heart className="w-4 h-4"/>
+                      <div className="flex items - center gap - 1">
+                        <Heart className="w - 4 h - 4"      />
                         <span>{listing.likes}</span>
                       </div>
                     </div>

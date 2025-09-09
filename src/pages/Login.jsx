@@ -44,11 +44,11 @@ export default function Login() {
 
   // Render LoginContent if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {
-    return (
-      <ErrorBoundary FallbackComponent={LoginErrorFallback}>
-        <LoginContent />
-      </ErrorBoundary>
-    );
+    return (<ErrorBoundary
+        fallback={<div > Something went wrong. Please try again.</div>}
+      >
+        <LoginContent       />
+      </ErrorBoundary>) ;
   }
 
   // Optional: Render a loading indicator while isLoading is true

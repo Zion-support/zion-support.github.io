@@ -1,286 +1,116 @@
-import React from 'react';
-import type { NextPage } from 'next';
 import Head from 'next/head';
-import { serviceCategories, getServicesByCategory } from '../../utils/data/services';
-
-const ServicesPage: NextPage = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      <Head>
-        <title>Our Services - Zion Tech Group | Comprehensive IT & AI Solutions</title>
-        <meta name="description" content="Explore Zion Tech Group's comprehensive range of IT services, AI solutions, and micro SAAS platforms. From AI development to cloud migration, we deliver cutting-edge technology solutions for modern businesses." />
-        <meta name="keywords" content="AI services, IT consulting, cloud migration, web development, mobile apps, cybersecurity, blockchain, SaaS development, Zion Tech Group" />
-      </Head>
-      
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-6">
-            Comprehensive Technology Solutions
-          </h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            From AI-powered chatbots to enterprise cloud migration, we deliver innovative technology solutions 
-            that drive business growth and digital transformation.
-          </p>
-          <div className="flex justify-center gap-4">
-            <a href="#services" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Explore Services
-            </a>
-            <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Get Quote
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Categories */}
-      <section id="services" className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Our Service Categories
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We offer a comprehensive range of technology services across multiple domains
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {serviceCategories.map((category) => (
-              <div key={category.id} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                  {category.name}
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  {getServicesByCategory(category.id).length} services available
-                </p>
-                <a 
-                  href={`#${category.id}`}
-                  className="text-blue-600 hover:text-blue-800 font-semibold"
-                >
-                  View Services →
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Detailed Services by Category */}
-      {serviceCategories.map((category) => (
-        <section key={category.id} id={category.id} className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-800 mb-4">
-                {category.name}
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Professional {category.name.toLowerCase()} to accelerate your business growth
-              </p>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-8">
-              {getServicesByCategory(category.id).map((service) => (
-                <div key={service.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                  <div className="p-8">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-600 mb-6">
-                      {service.description}
-                    </p>
-
-                    {/* Pricing */}
-                    <div className="bg-blue-50 rounded-lg p-4 mb-6">
-                      <div className="flex justify-between items-center">
-                        <div>
-                          <span className="text-2xl font-bold text-blue-600">
-                            ${service.pricing.from.toLocaleString()}
-                          </span>
-                          {service.pricing.to && (
-                            <span className="text-gray-600"> - ${service.pricing.to.toLocaleString()}</span>
-                          )}
-                          <span className="text-gray-600"> {service.pricing.currency}</span>
-                        </div>
-                        <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                          {service.pricing.type}
-                        </span>
-                      </div>
-                      {service.pricing.details && (
-                        <p className="text-sm text-gray-600 mt-2">{service.pricing.details}</p>
-                      )}
-                    </div>
-
-                    {/* Features */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-800 mb-3">Key Features:</h4>
-                      <div className="grid grid-cols-2 gap-2">
-                        {service.features.slice(0, 6).map((feature, index) => (
-                          <div key={index} className="flex items-center text-sm text-gray-600">
-                            <span className="text-green-500 mr-2">✓</span>
-                            {feature}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Benefits */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-800 mb-3">Benefits:</h4>
-                      <ul className="space-y-2">
-                        {service.benefits.slice(0, 3).map((benefit, index) => (
-                          <li key={index} className="text-sm text-gray-600 flex items-start">
-                            <span className="text-blue-500 mr-2 mt-1">•</span>
-                            {benefit}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Technologies */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-800 mb-3">Technologies:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {service.technologies.slice(0, 5).map((tech, index) => (
-                          <span key={index} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Delivery & Support */}
-                    <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
-                      <div>
-                        <span className="font-semibold text-gray-800">Delivery:</span>
-                        <p className="text-gray-600">{service.estimatedDelivery}</p>
-                      </div>
-                      <div>
-                        <span className="font-semibold text-gray-800">Support:</span>
-                        <p className="text-gray-600">{service.support}</p>
-                      </div>
-                    </div>
-
-                    {/* Contact Info */}
-                    <div className="bg-gray-50 rounded-lg p-4 mb-6">
-                      <h4 className="font-semibold text-gray-800 mb-3">Contact Information:</h4>
-                      <div className="space-y-2 text-sm">
-                        <div className="flex items-center">
-                          <span className="text-gray-600 w-16">Phone:</span>
-                          <a href={`tel:${service.contactInfo.phone}`} className="text-blue-600 hover:text-blue-800">
-                            {service.contactInfo.phone}
-                          </a>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="text-gray-600 w-16">Email:</span>
-                          <a href={`mailto:${service.contactInfo.email}`} className="text-blue-600 hover:text-blue-800">
-                            {service.contactInfo.email}
-                          </a>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="text-gray-600 w-16">Website:</span>
-                          <a href={service.contactInfo.website} className="text-blue-600 hover:text-blue-800">
-                            {service.contactInfo.website}
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* CTA Buttons */}
-                    <div className="flex gap-4">
-                      <a 
-                        href={`mailto:${service.contactInfo.email}?subject=Quote Request for ${service.title}`}
-                        className="flex-1 bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                      >
-                        Get Quote
-                      </a>
-                      <a 
-                        href={`tel:${service.contactInfo.phone}`}
-                        className="flex-1 border-2 border-blue-600 text-blue-600 text-center py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-                      >
-                        Call Now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      ))}
-
-      {/* Why Choose Us */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Why Choose Zion Tech Group?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We deliver exceptional value through expertise, innovation, and commitment to your success
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎯</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Expert Team</h3>
-              <p className="text-gray-600">
-                Certified professionals with years of experience in cutting-edge technologies
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">⚡</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Fast Delivery</h3>
-              <p className="text-gray-600">
-                Agile development methodology ensuring timely project delivery
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🛡️</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Quality Assurance</h3>
-              <p className="text-gray-600">
-                Rigorous testing and quality control processes for reliable solutions
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let&apos;s discuss how our technology solutions can drive your business forward. 
-            Contact us today for a free consultation.
-          </p>
-          <div className="flex justify-center gap-6">
-            <a 
-              href="/contact" 
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Get Started
-            </a>
-            <a 
-              href="tel:+13024640950" 
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              Call +1 302 464 0950
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
+import Link from 'next/link';
+import { servicesCatalog } from '../../src/data/servicesCatalog';
+;
+export default function ServicesIndex(...args[]):  {;
+  return (;
+    <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">;
+      <Helmet>;
+        <title>Services — Zion</title>;
+        <meta name="description" content="Futuristic, autonomous services to accelerate your roadmap."       />;
+      </Helmet>;
+;
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">;
+        <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float"       />;
+        <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow"       />;
+        <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast"       />;
+        <div className="absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,3rem_3rem,3rem_3rem] animate-grid"       />;
+        <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]"><div className="twinkle-field absolute inset-0"       /></div>;
+        <div className="absolute inset-0 beams opacity-[0.06]"       />;
+      </div>;
+;
+      <header className="relative z-10">;
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">;
+          <div className="text-2xl font-bold tracking-wide">;
+            <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</span>;
+          </div>;
+          <div className="hidden gap-6 md:flex text-white/80">;
+            <Link href="/"><a>Home</a></Link>;
+            <Link href="/automation"><a>Automations</a></Link>;
+            <Link href="/products"><a>Products</a></Link>;
+            <Link href="/contact"><a>Contact</a></Link>;
+          </div>;
+        </nav>;
+      </header>;
+;
+      <main className="relative z-10">;
+        <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-20 text-center">;
+          <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md">;
+            <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]"       />;
+            Autonomous delivery with safety guardrails;
+          </div>;
+          <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl"><span className="gradient-text">Services</span></h1>;
+          <p className="mx-auto mt-5 max-w-3xl text-lg text-white/80">Choose from specialized agents and blueprints to ship value faster.</p>;
+        </section>;
+;
+        {/* Expanded catalog pulled from data with prices and links */};
+        <section className="mx-auto max-w-7xl px-6 pb-20">;
+          <h2 className="mb-6 text-2xl font-bold">More Services</h2>;
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">;
+            {servicesCatalog;
+              .flatMap((c) => c.items.map((((((((item, index, index, index, index, index, index) => ({ ...((((((item, index, index, index, index, index, key: index })) => ({ ...(((((item, index, index, index, index, key: index })) => ({ ...((((item, index, index, index, key: index })) => ({ ...(((item, index, index, key: index })) => ({ ...((item, index, key: index })) => ({ ...(item, key: index })) => ({...item, categoryName: c.name})));
+              .slice(0, 18);
+              .map((((((((item, index, index, index, index, index, index) => ({ ...((((((item, index, index, index, index, index, key: index })) => ({ ...(((((item, index, index, index, index, key: index })) => ({ ...((((item, index, index, index, key: index })) => ({ ...(((item, index, index, key: index })) => ({ ...((item, index, key: index })) => ({ ...(item, key: index })) => (;
+                <a;
+                  key={item.id};
+                  href={item.href};
+                  target={item.external ? '_blank' : undefined};
+                  rel={item.external ? 'noreferrer' : undefined};
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30";
+                >;
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100"       />;
+                  <div className="flex items-start justify-between">;
+                    <h3 className="text-lg font-semibold">{item.title}</h3>;
+                    <span className="rounded-full border border-white/15 px-2 py-0.5 text-xs text-white/70">{item.categoryName}</span>;
+                  </div>;
+                  <p className="mt-1 text-sm text-white/75">{item.description}</p>;
+                  <div className="mt-4 text-sm text-white/80">Starting at <span className="font-semibold">{item.price}</span>/{item.billing}</div>;
+                  <ul className="mt-3 list-disc space-y-1 pl-5 text-xs text-white/70">;
+                    {item.features.slice(0,4).map((((((((f, i, index, index, index, index, index, index) => ({ ...((((((f, i, index, index, index, index, index, key: index })) => ({ ...(((((f, i, index, index, index, index, key: index })) => ({ ...((((f, i, index, index, index, key: index })) => ({ ...(((f, i, index, index, key: index })) => ({ ...((f, i, index, key: index })) => ({ ...(f, i, key: index })) => (;
+                      <li key={i}>{f}</li>;
+                    ))};
+                  </ul>;
+                  <div className="mt-4">;
+                    <span className="inline-block rounded-lg bg-white/90 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-white">{item.ctaLabel}</span>;
+                  </div>;
+                </a>;
+            ))};
+          </div>;
+        </section>;
+        <section className="mx-auto max-w-7xl px-6 pb-16">;
+          <div className="grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">;
+            {[;
+              { href: '/services/ai-seo-auditor', title: 'AI SEO Auditor', desc: 'Automate on-site SEO audits and fixes.' },;
+              { href: '/services/customer-support-chatbot', title: 'Customer Support Chatbot', desc: 'Deflect tickets with high-quality automated replies.' },;
+              { href: '/services/landing-page-generator', title: 'Landing Page Generator', desc: 'Spin up optimized pages with one prompt.' },;
+              { href: '/services/price-intelligence-service', title: 'Price Intelligence', desc: 'Continuously monitor and adapt pricing.' },;
+              { href: '/services/developer-productivity-copilot', title: 'Developer Productivity Copilot', desc: 'AI PR reviews, test gen, CI insights.' },;
+              { href: '/services/ai-sales-assistant', title: 'AI Sales Assistant', desc: 'Qualify leads and personalize outreach.' },;
+              { href: '/services/security-posture-guardian', title: 'Security Posture Guardian', desc: 'Misconfig and secret scanning with fixes.' },;
+              { href: '/services/ai-data-pipeline-optimizer', title: 'AI Data Pipeline Optimizer', desc: 'Optimize ETL/ELT and RAG pipelines.' },;
+            ].map((((((((s, index, index, index, index, index, index) => ({ ...((((((s, index, index, index, index, index, key: index })) => ({ ...(((((s, index, index, index, index, key: index })) => ({ ...((((s, index, index, index, key: index })) => ({ ...(((s, index, index, key: index })) => ({ ...((s, index, key: index })) => ({ ...(s, key: index }))  => (;
+              <Link key={s.href} href={s.href}>;
+                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">;
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100"       />;
+                  <h3 className="text-lg font-semibold">{s.title}</h3>;
+                  <p className="mt-1 text-sm text-white/75">{s.desc}</p>;
+                </a>;
+              </Link>;
+            ))};
+          </div>;
+        </section>;
+;
+        <section className="mx-auto max-w-7xl px-6 pb-24">;
+          <div className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl">;
+            <h3 className="text-2xl font-bold">Need something custom?</h3>;
+            <p className="mx-auto mt-2 max-w-2xl text-white/80">We can assemble domain-specific agent factories to match your goals.</p>;
+            <div className="mt-6 flex flex-wrap justify-center gap-3">;
+              <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Contact Us</a></Link>;
+              <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Explore Automations</a></Link>;
+            </div>;
+          </div>;
+        </section>;
+      </main>;
+    </div>;
   );
 };
-
-export default ServicesPage;

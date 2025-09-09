@@ -154,18 +154,30 @@ export default function NextGenServicesShowcase2025() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {featuredServices.map((service, index) => (<motion.div key={service.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.2 }} className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm group hover:border-cyan-500/50 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400/50' : ''}`}>
-                {service.popular && (<div className="absolute -top-3 left-8">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
-                      <Star className="h-4 w-4 mr-1"/>
+          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">
+            {featuredServices.map ( (service, index) => (<motion.div key={service.id} initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} transition = {
+  { duration: 0.8,
+  delay: index * 0.2 
+
+}} className={`relative bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 8 border border - gray - 700 / 50 backdrop - blur - sm group hover:border - cyan - 500 / 50 transition - all duration - 300 ${service.popular ? 'ring - 2 ring - cyan - 400 / 50' : ''}`}>
+                {service.popular && (<div className="absolute - top - 3 left - 8">
+                    <span className="bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white px - 4 py - 1 rounded - full text - sm font - semibold flex items - center">
+                      <Star className="h - 4 w - 4 mr - 1"      />
                       Most Popular
                     </span>
-                  </div>)}
-                
-                <div className="flex items-center mb-6">
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${service.gradient} mr-4`}>
-                    <service.icon className="h-8 w-8 text-white"/>
+                  </div>) }
+
+                <div className="flex items - center mb - 6">
+                  <div className={`p - 3 rounded - xl bg - gradient - to - r ${service.gradient} mr - 4`}>
+                    <service.icon className="h - 8 w - 8 text - white"      />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white">{service.title}</h3>
@@ -175,21 +187,21 @@ export default function NextGenServicesShowcase2025() {
 
                 <p className="text-gray-300 mb-6">{service.description}</p>
 
-                <div className="mb-6">
-                  <h4 className="text-white font-semibold mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>
+                <div className="mb - 6">
+                  <h4 className="text - white font - semibold mb - 3">Key Features:</h4>
+                  <ul className="space - y-2">
+                    {service.features.map ( (feature, idx) => (<li key={idx} className="flex items - center text - gray - 300">
+                        <CheckCircle className="h - 4 w - 4 text - green - 400 mr - 2 flex - shrink - 0"      />
                         {feature}
                       </li>))}
                   </ul>
                 </div>
 
-                <div className="mb-6">
-                  <h4 className="text-white font-semibold mb-3">Benefits:</h4>
-                  <ul className="space-y-2">
-                    {service.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-gray-300">
-                        <TrendingUp className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0"/>
+                <div className="mb - 6">
+                  <h4 className="text - white font - semibold mb - 3">Benefits:</h4>
+                  <ul className="space - y-2">
+                    {service.benefits.map ( (benefit, idx) => (<li key={idx} className="flex items - center text - gray - 300">
+                        <TrendingUp className="h - 4 w - 4 text - cyan - 400 mr - 2 flex - shrink - 0"      />
                         {benefit}
                       </li>))}
                   </ul>
@@ -200,9 +212,9 @@ export default function NextGenServicesShowcase2025() {
                     <p className="text-3xl font-bold text-white">{service.price}</p>
                     <p className="text-gray-400 text-sm">Enterprise pricing</p>
                   </div>
-                  <div className="flex gap-3">
-                    <a href={service.demoUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors">
-                      <Play className="h-4 w-4 mr-2"/>
+                  <div className="flex gap - 3">
+                    <a href={service.demoUrl} target="_blank" rel="noopener noreferrer" className="inline - flex items - center px - 4 py - 2 bg - gray - 700 text - white rounded - lg hover:bg - gray - 600 transition - colors">
+                      <Play className="h - 4 w - 4 mr - 2"      />
                       Demo
                     </a>
                     <Link to="/contact" className={`inline-flex items-center px-6 py-2 bg-gradient-to-r ${service.gradient} text-white font-semibold rounded-lg hover:opacity-90 transition-opacity`}>
@@ -237,10 +249,10 @@ export default function NextGenServicesShowcase2025() {
                   <p className="text-gray-300 text-sm">{service.description}</p>
                 </div>
 
-                <div className="mb-4">
-                  <ul className="space-y-1">
-                    {service.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="h-3 w-3 text-green-400 mr-2 flex-shrink-0"/>
+                <div className="mb - 4">
+                  <ul className="space - y-1">
+                    {service.features.map ( (feature, idx) => (<li key={idx} className="flex items - center text - gray - 300 text - sm">
+                        <CheckCircle className="h - 3 w - 3 text - green - 400 mr - 2 flex - shrink - 0"      />
                         {feature}
                       </li>))}
                   </ul>
@@ -282,10 +294,10 @@ export default function NextGenServicesShowcase2025() {
                   <p className="text-gray-300 text-sm">{service.description}</p>
                 </div>
 
-                <div className="mb-4">
-                  <ul className="space-y-1">
-                    {service.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300 text-sm">
-                        <Shield className="h-3 w-3 text-purple-400 mr-2 flex-shrink-0"/>
+                <div className="mb - 4">
+                  <ul className="space - y-1">
+                    {service.features.map ( (feature, idx) => (<li key={idx} className="flex items - center text - gray - 300 text - sm">
+                        <Shield className="h - 3 w - 3 text - purple - 400 mr - 2 flex - shrink - 0"      />
                         {feature}
                       </li>))}
                   </ul>
@@ -315,27 +327,27 @@ export default function NextGenServicesShowcase2025() {
             <p className="text-xl text-gray-300 mb-8">
               Contact our experts to discuss your specific needs and get a customized solution quote.
             </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-cyan-500 rounded-full mb-4">
-                  <Users className="h-6 w-6 text-white"/>
+
+            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 12">
+              <div className="text - center">
+                <div className="inline - flex items - center justify - center w - 12 h - 12 bg - cyan - 500 rounded - full mb - 4">
+                  <Users className="h - 6 w - 6 text - white"      />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Expert Consultation</h3>
                 <p className="text-gray-300 text-sm">Get personalized recommendations from our technology experts</p>
               </div>
-              
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-500 rounded-full mb-4">
-                  <Settings className="h-6 w-6 text-white"/>
+
+              <div className="text - center">
+                <div className="inline - flex items - center justify - center w - 12 h - 12 bg - purple - 500 rounded - full mb - 4">
+                  <Settings className="h - 6 w - 6 text - white"      />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Custom Solutions</h3>
                 <p className="text-gray-300 text-sm">Tailored implementations designed for your specific requirements</p>
               </div>
-              
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-green-500 rounded-full mb-4">
-                  <Rocket className="h-6 w-6 text-white"/>
+
+              <div className="text - center">
+                <div className="inline - flex items - center justify - center w - 12 h - 12 bg - green - 500 rounded - full mb - 4">
+                  <Rocket className="h - 6 w - 6 text - white"      />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Rapid Deployment</h3>
                 <p className="text-gray-300 text-sm">Fast implementation with dedicated support throughout the process</p>

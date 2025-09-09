@@ -150,7 +150,8 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
     }, [intensity, theme]);
     return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style={{
             opacity: intensity,
-            filter: theme === 'cyberpunk' ? 'blur(0.3px)' : 'none'
-        }}/>);
-};
+  filter: theme === 'cyberpunk' ? 'blur(0.3px)' : 'none'
+        
+
+}}      />)};
 export default FuturisticAnimatedBackground2029;

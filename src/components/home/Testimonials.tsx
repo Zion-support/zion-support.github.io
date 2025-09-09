@@ -1,186 +1,238 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Star, Quote } from 'lucide-react';
-
-interface Testimonial {
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { ChevronLeft, ChevronRight, Star, Quote  } from 'lucide-react';
+;
+interface Testimonial {;
+;
+  id: number;
   name: string;
   role: string;
   content: string;
   rating: number;
   avatar: string;
-}
-
-interface TestimonialsProps {
-  testimonials: Testimonial[];
-}
-
-const Testimonials: React.FC<TestimonialsProps> = ({ testimonials }) => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
+  industry: string};
+;
+  const nextTestimonial = () => {;
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50, scale: 0.9 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+;
+  const prevTestimonial = () => {;
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
-
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, index) => (
-      <Star
-        key={index}
-        className={`w-5 h-5 ${
-          index < rating 
-            ? 'text-yellow-400 fill-current' 
-            : 'text-zion-slate-light/30'
-        }`}
-        aria-hidden="true"
-      />
-    ));
+;
+  const goToTestimonial = (index: number) => {;
+    setCurrentIndex(index);
   };
-
-  return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate/50 to-zion-slate-dark/50 backdrop-blur-xl" role="region" aria-label="Customer testimonials">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            What Our <span className="text-gradient-primary">Clients Say</span>
-          </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Don't just take our word for it. Hear from the businesses that have transformed their operations with Zion Tech Group.
-          </p>
-        </motion.div>
-
-        {/* Testimonials Grid */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={testimonial.name}
-              className="group relative"
-              variants={itemVariants}
-              whileHover={{ 
-                y: -10,
-                transition: { duration: 0.3 }
-              }}
-            >
-              {/* Quote Icon */}
-              <div className="absolute -top-4 left-6 w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center z-10">
-                <Quote className="w-4 h-4 text-white" aria-hidden="true" />
-              </div>
-
-              {/* Testimonial Card */}
-              <div className="relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 pt-12 hover:border-zion-cyan/40 hover:bg-zion-slate-dark/70 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
-                {/* Rating */}
-                <div className="flex items-center gap-1 mb-4" role="img" aria-label={`${testimonial.rating} out of 5 stars`}>
-                  {renderStars(testimonial.rating)}
-                  <span className="ml-2 text-sm text-zion-slate-light">({testimonial.rating}.0)</span>
-                </div>
-
-                {/* Content */}
-                <blockquote className="text-zion-slate-light leading-relaxed mb-6 italic">
-                  "{testimonial.content}"
-                </blockquote>
-
-                {/* Author Info */}
-                <div className="flex items-center gap-4">
-                  {/* Avatar */}
-                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center text-2xl">
-                    {testimonial.avatar}
-                  </div>
-                  
-                  {/* Name and Role */}
-                  <div>
-                    <cite className="not-italic text-white font-semibold block">
-                      {testimonial.name}
-                    </cite>
-                    <span className="text-zion-slate-light text-sm">
-                      {testimonial.role}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Hover Effect Border */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Trust Indicators */}
-        <motion.div 
-          className="mt-20 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <div className="inline-flex flex-wrap items-center justify-center gap-6 px-8 py-6 bg-zion-slate-dark/30 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl">
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-              <span className="text-zion-slate-light text-sm">100% Satisfaction Guarantee</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
-              <span className="text-zion-slate-light text-sm">24/7 Expert Support</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
-              <span className="text-zion-slate-light text-sm">ISO 27001 Certified</span>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div 
-          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <p className="text-zion-slate-light mb-6">
-            Ready to join our satisfied clients?
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="btn-primary group">
-              Start Your Project
-              <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
-            </button>
-            <button className="btn-secondary">
-              View Case Studies
-            </button>
-          </div>
-        </motion.div>
-      </div>
-    </section>
+;
+  return (;
+    <section className = "py-20 bg-gradient-to-b from-zion-slate to-zion-slate-dark" role="region" aria-labelledby="testimonials-heading">;
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
+        <motion.div;
+          className="text-center mb-16";
+          initial = {;
+  { opacity: 0,;
+  y: 30 ;
+;
+;
+;
+;
+;
+;
+}};
+          whileInView = {;
+  { opacity: 1,;
+  y: 0 ;
+;
+;
+;
+;
+;
+;
+}};
+          transition={{ duration: 0.8 }};
+          viewport={{ once: true }};
+;
+          <div className="inline-flex items-center mb-4 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full">;
+            <Quote className="w-4 h-4 text-zion-cyan mr-2"       />;
+            <span className="text-zion-cyan text-sm font-medium">Client Success Stories</span>;
+          </div>;
+;
+          <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-bold text-white mb-6">;
+            What Our <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Clients Say</span>;
+          </h2>;
+;
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
+            Real results from real businesses. See how Zion Tech Group is transforming industries worldwide.;
+          </p>;
+        </motion.div>;
+;
+        {/* Testimonial Carousel */};
+        <div className="relative max-w-4xl mx-auto">;
+          <AnimatePresence mode="wait">;
+            <motion.div;
+              key={currentIndex};
+              initial = {;
+  { opacity: 0,;
+  x: 100 ;
+;
+;
+;
+;
+;
+;
+}};
+              animate = {;
+  { opacity: 1,;
+  x: 0 ;
+;
+;
+;
+;
+;
+;
+}};
+              exit = {;
+  { opacity: 0,;
+  x: -100 ;
+;
+;
+;
+;
+;
+;
+}};
+              transition={{ duration: 0.5 }};
+              className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden";
+;
+              {/* Background decoration */};
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 rounded-full blur-3xl"       />;
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-zion-purple/10 to-zion-cyan/10 rounded-full blur-3xl"       />;
+;
+              {/* Rating */};
+              <div className="flex justify-center mb-6">;
+                {[...Array(testimonials[currentIndex].rating)].map((((((((_, i, index, index, index, index, index, index) => ({ ...((((((_, i, index, index, index, index, index, key: index })) => ({ ...(((((_, i, index, index, index, index, key: index })) => ({ ...((((_, i, index, index, index, key: index })) => ({ ...(((_, i, index, index, key: index })) => ({ ...((_, i, index, key: index })) => ({ ...(_, i, key: index })) => (;
+                  <Star key={i} className="w-6 h-6 text-yellow-400 fill-current"       />;
+                ))};
+              </div>;
+;
+              {/* Quote */};
+              <blockquote className="text-xl md:text-2xl text-white mb-8 leading-relaxed italic">;
+                "{testimonials[currentIndex].content}";
+              </blockquote>;
+;
+              {/* Author */};
+              <div className="flex flex-col items-center">;
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mb-4 text-white font-bold text-xl">;
+                  {testimonials[currentIndex].name.charAt(0)};
+                </div>;
+                <h3 className="text-lg font-semibold text-white mb-1">;
+                  {testimonials[currentIndex].name};
+                </h3>;
+                <p className="text-zion-cyan font-medium mb-1">;
+                  {testimonials[currentIndex].role};
+                </p>;
+                <p className="text-zion-slate-light text-sm mb-2">;
+                  {testimonials[currentIndex].comp};
+                </p>;
+                <span className="inline-block px-3 py-1 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-xs font-medium">;
+                  {testimonials[currentIndex].industry};
+                </span>;
+              </div>;
+            </motion.div>;
+          </AnimatePresence>;
+;
+          {/* Navigation Arrows */};
+          <button;
+            onClick={prevTestimonial};
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50";
+            aria-label="Previous testimonial";
+;
+            <ChevronLeft className="w-6 h-6"       />;
+          </button>;
+;
+          <button;
+            onClick={nextTestimonial};
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50";
+            aria-label="Next testimonial";
+;
+            <ChevronRight className="w-6 h-6"       />;
+          </button>;
+        </div>;
+;
+        {/* Dots Indicator */};
+        <div className="flex justify-center mt-8 space-x-2">;
+          {testimonials.map((((((((_, index, index, index, index, index, index, index) => ({ ...((((((_, index, index, index, index, index, index, key: index })) => ({ ...(((((_, index, index, index, index, index, key: index })) => ({ ...((((_, index, index, index, index, key: index })) => ({ ...(((_, index, index, index, key: index })) => ({ ...((_, index, index, key: index })) => ({ ...(_, index, key: index })) => (;
+            <button;
+              key={index};
+              onClick={() => goToTestimonial(index)};
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${;
+                index === currentIndex;
+                  ? 'bg-zion-cyan scale-125';
+                  : 'bg-zion-slate-light hover:bg-zion-cyan/50';
+              }`};
+              aria-label={`Go to testimonial ${index + 1}`};
+            />;
+          ))};
+        </div>;
+;
+        {/* Trust Indicators */};
+        <motion.div;
+          className="mt-16 text-center";
+          initial = {;
+  { opacity: 0,;
+  y: 20 ;
+;
+;
+;
+;
+;
+;
+}};
+          whileInView = {;
+  { opacity: 1,;
+  y: 0 ;
+;
+;
+;
+;
+;
+;
+}};
+          transition = {;
+  { duration: 0.8,;
+  delay: 0.4 ;
+;
+;
+;
+;
+;
+;
+}};
+          viewport={{ once: true }};
+;
+          <p className="text-zion-slate-light text-sm mb-6">Join our growing list of satisfied clients</p>;
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">;
+            <div className="text-center">;
+              <div className="text-3xl font-bold text-zion-cyan mb-2">98%</div>;
+              <div className="text-zion-slate-light text-sm">Client Satisfaction</div>;
+            </div>;
+            <div className="text-center">;
+              <div className="text-3xl font-bold text-zion-blue mb-2">500+</div>;
+              <div className="text-zion-slate-light text-sm">Projects Delivered</div>;
+            </div>;
+            <div className="text-center">;
+              <div className="text-3xl font-bold text-zion-purple mb-2">24/7</div>;
+              <div className="text-zion-slate-light text-sm">Support Available</div>;
+            </div>;
+            <div className="text-center">;
+              <div className="text-3xl font-bold text-zion-cyan mb-2">50+</div>;
+              <div className="text-zion-slate-light text-sm">Expert Engineers</div>;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
   );
 };
-
-export default Testimonials;
+;
+export default Testimonials;}}}

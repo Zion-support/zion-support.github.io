@@ -63,8 +63,15 @@ export function AccessibilityMenu() {
     };
     return (<>
       {/* Toggle Button */}
-      <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-24 right-8 z-50 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label="Accessibility settings" aria-expanded={isOpen}>
-        <Settings className="h-5 w-5"/>
+      <motion.button
+        onClick={() => setIsOpen(!isOpen)}
+        className="fixed bottom-24 right-8 z-50 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        aria-label="Accessibility settings"
+        aria-expanded={isOpen}
+      >
+        <Settings className="h-5 w-5"       />
       </motion.button>
 
       {/* Menu Panel */}
@@ -81,13 +88,66 @@ export function AccessibilityMenu() {
               {/* Font Size */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
-                  <FileText className="h-4 w-4 text-zion-cyan"/>
+                  <FileText className="h-4 w-4 text-zion-cyan"       />
                   <span className="text-sm font-medium">Font Size</span>
                 </label>
                 <div className="flex gap-2">
-                  {['small', 'medium', 'large'].map((size) => (<Button key={size} variant={settings.fontSize === size ? "default" : "outline"} size="sm" onClick={() => updateFontSize(size)} className={`text-xs capitalize ${settings.fontSize === size
-                    ? 'bg-zion-cyan text-zion-blue-dark'
-                    : 'text-zion-slate-light hover:text-white'}`}>
+                  {['small', 'medium', 'large'].map(((((((size => (
+                    <Button
+                      key={size}
+                      variant={
+                        settings.fontSize === size ? 'default' : 'outline'
+                      }
+                      size="sm"
+                      onClick={(, index, index, index, index, index, index) => ({ ...(((((size => (
+                    <Button
+                      key={size}
+                      variant={
+                        settings.fontSize === size ? 'default' : 'outline'
+                      }
+                      size="sm"
+                      onClick={(, index, index, index, index, index, key: index })) => ({ ...((((size => (
+                    <Button
+                      key={size}
+                      variant={
+                        settings.fontSize === size ? 'default' : 'outline'
+                      }
+                      size="sm"
+                      onClick={(, index, index, index, index, key: index })) => ({ ...(((size => (
+                    <Button
+                      key={size}
+                      variant={
+                        settings.fontSize === size ? 'default' : 'outline'
+                      }
+                      size="sm"
+                      onClick={(, index, index, index, key: index })) => ({ ...((size => (
+                    <Button
+                      key={size}
+                      variant={
+                        settings.fontSize === size ? 'default' : 'outline'
+                      }
+                      size="sm"
+                      onClick={(, index, index, key: index })) => ({ ...(size => (
+                    <Button
+                      key={size}
+                      variant={
+                        settings.fontSize === size ? 'default' : 'outline'
+                      }
+                      size="sm"
+                      onClick={(, index, key: index })) => ({ ...size => (
+                    <Button
+                      key={size}
+                      variant={
+                        settings.fontSize === size ? 'default' : 'outline'
+                      }
+                      size="sm"
+                      onClick={(, key: index })) => updateFontSize(size)}
+                      className={`text-xs capitalize ${
+                        settings.fontSize === size
+                          ? 'bg-zion-cyan text-zion-blue-dark'
+                          : 'text-zion-slate-light hover:text-white'
+                      }`}
+                    >
                       {size}
                     </Button>))}
                 </div>
@@ -96,7 +156,7 @@ export function AccessibilityMenu() {
               {/* High Contrast */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
-                  <Eye className="h-4 w-4 text-zion-cyan"/>
+                  <Eye className="h-4 w-4 text-zion-cyan"       />
                   <span className="text-sm font-medium">High Contrast</span>
                 </label>
                 <Button variant={settings.highContrast ? "default" : "outline"} size="sm" onClick={() => toggleSetting('highContrast')} className={`w-full ${settings.highContrast
@@ -109,7 +169,7 @@ export function AccessibilityMenu() {
               {/* Reduced Motion */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
-                  <Zap className="h-4 w-4 text-zion-cyan"/>
+                  <Zap className="h-4 w-4 text-zion-cyan"       />
                   <span className="text-sm font-medium">Reduced Motion</span>
                 </label>
                 <Button variant={settings.reducedMotion ? "default" : "outline"} size="sm" onClick={() => toggleSetting('reducedMotion')} className={`w-full ${settings.reducedMotion
@@ -122,7 +182,11 @@ export function AccessibilityMenu() {
               {/* Sound Toggle */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
-                  {settings.soundEnabled ? (<Volume2 className="h-4 w-4 text-zion-cyan"/>) : (<VolumeX className="h-4 w-4 text-zion-cyan"/>)}
+                  {settings.soundEnabled ? (
+                    <Volume2 className="h-4 w-4 text-zion-cyan"       />
+                  ) : (
+                    <VolumeX className="h-4 w-4 text-zion-cyan"       />
+                  )}
                   <span className="text-sm font-medium">Sound Effects</span>
                 </label>
                 <Button variant={settings.soundEnabled ? "default" : "outline"} size="sm" onClick={() => toggleSetting('soundEnabled')} className={`w-full ${settings.soundEnabled

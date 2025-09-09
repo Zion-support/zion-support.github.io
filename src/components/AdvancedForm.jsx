@@ -228,14 +228,14 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                     : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}/>)}
 
           {/* Password Toggle */}
-          {isPasswordField && (<button type="button" onClick={() => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors">
-              {showPassword[field.name] ? <EyeOff className="w-4 h-4"/> : <Eye className="w-4 h-4"/>}
-            </button>)}
+          {isPasswordField && (<button type="button" onClick={ () => togglePasswordVisibility (field.name) } className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 hover:text - gray - 600 transition - colors">
+              {showPassword[field.name] ? <EyeOff className="w - 4 h - 4"      /> : <Eye className="w - 4 h - 4"      />}
+            </button>) }
 
           {/* Validation Icon */}
-          {fieldValidation?.isTouched && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-              {fieldValidation.isValid ? (<CheckCircle className="w-5 h-5 text-green-500"/>) : (<AlertCircle className="w-5 h-5 text-red-500"/>)}
-            </div>)}
+          {fieldValidation?.isTouched && (<div className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2">
+              {fieldValidation.isValid ? (<CheckCircle className="w - 5 h - 5 text - green - 500"      />) : (<AlertCircle className="w - 5 h - 5 text - red - 500"      />) }
+            </div>) }
         </div>
 
         {/* Validation Message */}
@@ -245,9 +245,17 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
       </motion.div>);
     }, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]);
     if (isSubmitted) {
-        return (<motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="text-center p-8 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">
-        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"/>
-        <h3 className="text-2xl font-bold text-green-800 dark:text-green-200 mb-2">
+        return (<motion.div initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+
+}} className="text - center p - 8 bg - green - 50 dark:bg - green - 900 / 20 rounded - xl border border - green - 200 dark:border - green - 700">
+        <CheckCircle className="w - 16 h - 16 text - green - 500 mx - auto mb - 4"      />
+        <h3 className="text - 2xl font - bold text - green - 800 dark:text - green - 200 mb - 2">
           Thank You!
         </h3>
         <p className="text-green-600 dark:text-green-300">
@@ -268,8 +276,8 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             <span>Form Progress</span>
             <span>{Math.round(progress)}%</span>
           </div>
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-            <motion.div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300" initial={{ width: 0 }} animate={{ width: `${progress}%` }}/>
+          <div className="w - full bg - gray - 200 dark:bg - gray - 700 rounded - full h - 2">
+            <motion.div className="bg - gradient - to - r from - blue - 500 to - purple - 500 h - 2 rounded - full transition - all duration - 300" initial={{ width: 0 }} animate={{ width: `${progress}%` }}      />
           </div>
         </div>)}
 
@@ -284,10 +292,10 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             ? 'bg-gray-400 cursor-not-allowed'
             : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}>
           {isSubmitting ? (<>
-              <Loader2 className="w-5 h-5 animate-spin"/>
+              <Loader2 className="w - 5 h - 5 animate - spin"      />
               Sending...
             </>) : (<>
-              <Send className="w-5 h-5"/>
+              <Send className="w - 5 h - 5"      />
               {submitText}
             </>)}
         </motion.button>

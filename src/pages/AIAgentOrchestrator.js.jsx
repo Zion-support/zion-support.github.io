@@ -4,20 +4,28 @@ import { Brain, Users, Cog, ArrowRight, CheckCircle, Zap, Shield, BarChart3 } fr
 const AIAgentOrchestrator = () => {
     return (<>
       <Helmet>
-        <title>AI Agent Orchestrator - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI agent orchestration platform for coordinating multiple AI systems and workflows seamlessly."/>
-        <meta name="keywords" content="AI orchestrator, agent management, AI workflow, automation, multi-agent systems"/>
+        <title > AI Agent Orchestrator - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Advanced AI agent orchestration platform for coordinating multiple AI systems and workflows seamlessly."
+              />
+        <meta
+          name="keywords"
+          content="AI orchestrator, agent management, AI workflow, automation, multi - agent systems"
+              />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-800/20 to-blue-800/20"></div>
-          <div className="max-w-7xl mx-auto relative z-10">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-purple-500/20 rounded-full px-6 py-3 mb-6">
-                <Brain className="w-5 h-5 text-purple-400"/>
-                <span className="text-purple-300 font-medium">AI Agent Orchestrator</span>
+        <section className="pt - 32 pb - 20 px - 4 relative overflow - hidden">
+          <div className="absolute inset - 0 bg - gradient - to - r from - purple - 800 / 20 to - blue - 800 / 20"></div>
+          <div className="max - w-7xl mx - auto relative z - 10">
+            <div className="text - center mb - 16">
+              <div className="inline - flex items - center gap - 2 bg - purple - 500 / 20 rounded - full px - 6 py - 3 mb - 6">
+                <Brain className="w - 5 h - 5 text - purple - 400"       />
+                <span className="text - purple - 300 font - medium">
+                  AI Agent Orchestrator
+                </span>
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 Orchestrate Your
@@ -45,41 +53,54 @@ const AIAgentOrchestrator = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {[
-            {
-                icon: Users,
-                title: "Multi-Agent Coordination",
-                description: "Seamlessly coordinate multiple AI agents working on complex tasks and workflows"
-            },
-            {
-                icon: Cog,
-                title: "Workflow Automation",
-                description: "Design and execute sophisticated automated workflows with intelligent routing"
-            },
-            {
-                icon: BarChart3,
-                title: "Performance Analytics",
-                description: "Monitor agent performance, resource utilization, and workflow efficiency in real-time"
-            },
-            {
-                icon: Shield,
-                title: "Security & Compliance",
-                description: "Enterprise-grade security with role-based access control and audit trails"
-            },
-            {
-                icon: Zap,
-                title: "Real-time Processing",
-                description: "Handle high-volume requests with low-latency agent communication and task distribution"
-            },
-            {
-                icon: CheckCircle,
-                title: "Quality Assurance",
-                description: "Built-in quality control mechanisms and validation frameworks for agent outputs"
-            }
-        ].map((feature, index) => (<div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-colors">
-                  <feature.icon className="w-12 h-12 text-purple-400 mb-6"/>
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
-                </div>))}
+                {
+                  icon: Users,
+                  title: 'Multi - Agent Coordination',
+                  description:
+                    'Seamlessly coordinate multiple AI agents working on complex tasks and workflows',
+                },
+                {
+                  icon: Cog,
+                  title: 'Workflow Automation',
+                  description:
+                    'Design and execute sophisticated automated workflows with intelligent routing',
+                },
+                {
+                  icon: BarChart3,
+                  title: 'Performance Analytics',
+                  description:
+                    'Monitor agent performance, resource utilization, and workflow efficiency in real - time',
+                },
+                {
+                  icon: Shield,
+                  title: 'Security & Compliance',
+                  description:
+                    'Enterprise - grade security with role - based access control and audit trails',
+                },
+                {
+                  icon: Zap,
+                  title: 'Real - time Processing',
+                  description:
+                    'Handle high - volume requests with low - latency agent communication and task distribution',
+                },
+                {
+                  icon: CheckCircle,
+                  title: 'Quality Assurance',
+                  description:
+                    'Built - in quality control mechanisms and validation frameworks for agent outputs',
+                },
+              ].map ( (feature, index) => (<div
+                  key={index}
+                  className="bg - white / 5 backdrop - blur - lg rounded - 2xl p - 8 border border - white / 10 hover:border - purple - 500 / 50 transition - colors"
+                >
+                  <feature.icon className="w - 12 h - 12 text - purple - 400 mb - 6"       />
+                  <h3 className="text - xl font - semibold text - white mb - 4">
+                    {feature.title}
+                  </h3>
+                  <p className="text - gray - 300 leading - relaxed">
+                    {feature.description}
+                  </p>
+                </div>) ) }
             </div>
           </div>
         </section>

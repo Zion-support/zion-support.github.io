@@ -101,7 +101,7 @@ export function PerformanceOptimizations() {
             Add Item
           </button>
         </div>
-        <MemoizedDataGrid data={data} onItemClick={handleItemClick}/>
+        <MemoizedDataGrid data={data} onItemClick={handleItemClick}      />
       </div>
 
       {/* Virtual Scrolling */}
@@ -124,10 +124,10 @@ export function PerformanceOptimizations() {
         <button onClick={() => setShowExpensive(!showExpensive)} className="bg-zion-purple hover:bg-zion-purple-dark text-white px-4 py-2 rounded-lg transition-colors">
           {showExpensive ? 'Hide' : 'Show'} Expensive Component
         </button>
-        
-        {showExpensive && (<Suspense fallback={<LoadingSpinner />}>
-            <div className="mt-4 p-4 bg-zion-slate/10 rounded-lg">
-              <LazyExpensiveComponent />
+
+        {showExpensive && (<Suspense fallback={<LoadingSpinner       />}>
+            <div className="mt - 4 p - 4 bg - zion - slate / 10 rounded - lg">
+              <LazyExpensiveComponent       />
             </div>
           </Suspense>)}
       </div>

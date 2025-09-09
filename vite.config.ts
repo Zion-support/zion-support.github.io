@@ -1,75 +1,111 @@
-import path from 'node:path'
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-// https://vitejs.dev/config/
-export default defineConfig({
-	plugins: [react()],
-	root: '.',
-	publicDir: 'public',
-	resolve: {
-		alias: {
-			'@': path.resolve(__dirname, './src'),
-		},
-	},
-	build: {
-		target: 'esnext',
-		minify: 'terser',
-		sourcemap: false,
-		rollupOptions: {
-			output: {
-				manualChunks: {
-					'react-vendor': ['react', 'react-dom'],
-					'animation-vendor': ['framer-motion'],
-					'icons-vendor': ['lucide-react'],
-					'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority']
-				},
-				chunkFileNames: 'js/[name]-[hash].js',
-				entryFileNames: 'js/[name]-[hash].js',
-				assetFileNames: (assetInfo) => {
-					const name = assetInfo.name || ''
-					if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]'
-					if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]'
-					if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]'
-					return 'assets/[name]-[hash].[ext]'
-				},
-			},
-			external: [],
-		},
-		terserOptions: {
-			compress: {
-				drop_console: true,
-				drop_debugger: true,
-				pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-			},
-			mangle: { safari10: true },
-		},
-		chunkSizeWarningLimit: 1000,
-	},
-	optimizeDeps: {
-		include: [
-			'react',
-			'react-dom',
-			'react-router-dom',
-			'framer-motion',
-			'lucide-react',
-			'clsx',
-			'tailwind-merge'
-		]
-	},
-	css: { devSourcemap: false },
-	server: { port: 3000, host: true, open: true, cors: true, hmr: { overlay: false } },
-	preview: { port: 4173, host: true, open: true },
-	define: {
-		__DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-		__PROD__: JSON.stringify(process.env.NODE_ENV === 'production')
-	},
-	esbuild: { 
-		drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
-		loader: 'tsx',
-		include: /src\/.*\.[tj]sx?$/,
-		exclude: []
-	},
-	worker: { format: 'es' },
-	envPrefix: ['VITE_', 'ZION_']
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
+;
+// https://vitejs.dev/config/;
+export default defineConfig({;
+  plugins: [react()],;
+  root: '.',;
+  base: '/',;
+  resolve: {;
+    alias: {;
+      '@': resolve(__dirname, 'src'),;
+      '@components': resolve(__dirname, 'src/components'),;
+      '@pages': resolve(__dirname, 'src/pages'),;
+      '@layout': resolve(__dirname, 'src/layout'),;
+      '@utils': resolve(__dirname, 'src/utils'),;
+      '@hooks': resolve(__dirname, 'src/hooks'),;
+      '@types': resolve(__dirname, 'src/types'),;
+      '@assets': resolve(__dirname, 'src/assets'),;
+      '@styles': resolve(__dirname, 'src/styles'),;
+      '@data': resolve(__dirname, 'src/data'),;
+      '@services': resolve(__dirname, 'src/services'),;
+      '@context': resolve(__dirname, 'src/context'),;
+      '@constants': resolve(__dirname, 'src/constants');
+    };
+  },;
+  build: {;
+    target: 'esnext',;
+    minify: 'terser',;
+    sourcemap: false,;
+    terserOptions: {;
+      compress: {;
+        drop_console: true,;
+        drop_debugger: true,;
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'];
+      };
+    },;
+    rollupOptions: {;
+      input: {;
+        main: './index.html';
+      },;
+      output: {;
+        manualChunks: {;
+          'react-vendor': ['react', 'react-dom'],;
+          'router-vendor': ['react-router-dom'],;
+          'ui-vendor': ['framer-motion', 'lucide-react'],;
+          'utils-vendor': ['date-fns', 'clsx', 'tailwind-merge'],;
+          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'];
+        },;
+        chunkFileNames: 'js/[name]-[hash].js',;
+        entryFileNames: 'js/[name]-[hash].js',;
+        assetFileNames: (assetInfo) => {;
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {;
+            return `images/[name]-[hash][extname]`;
+          };
+          if (/css/i.test(ext)) {;
+            return `css/[name]-[hash][extname]`;
+          };
+          return `assets/[name]-[hash][extname]`;
+        };
+      };
+    },;
+    chunkSizeWarningLimit: 1000;
+  },;
+;
+;
+  optimizeDeps: {;
+    include: [;
+      'react',;
+      'react-dom',;
+      'react-router-dom',;
+      'framer-motion',;
+      'lucide-react',;
+      'clsx',;
+      'tailwind-merge';
+    ],;
+  },;
+  server: {;
+    port: 3000,;
+    host: true,;
+    open: true,;
+    cors: true,;
+    hmr: {;
+      overlay: false;
+    },;
+    proxy: {;
+      '/api': {;
+        target: 'http://localhost:5000',;
+        changeOrigin: true,;
+        secure: false,;
+        rewrite: (path) => path.replace(/^\/api/, '/api');
+      };
+    };
+  },;
+  preview: {;
+    port: 4173,;
+    host: true,;
+    open: true;
+  },;
+  css: {;
+    devSourcemap: true,;
+    postcss: './postcss.config.js';
+  },;
+;
+  define: {;
+    __APP_VERSION__: JSON.stringify(process.env.npm_package_version),;
+    __BUILD_TIME__: JSON.stringify(new Date().toISOString());
+  };
 });

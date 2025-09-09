@@ -25,42 +25,42 @@ function TalentDashboardContent() {
         onboardingStatus.availabilitySet &&
         onboardingStatus.matchReceived;
     return (<>
-      <SEO title="Talent Dashboard | Zion AI Marketplace" description="Your personalized talent dashboard with job matches and professional opportunities."/>
-      
-      <main className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+      <SEO title="Talent Dashboard | Zion AI Marketplace" description="Your personalized talent dashboard with job matches and professional opportunities."      />
+
+      <main className="container mx - auto px - 4 py - 8">
+        <div className="flex flex - col md:flex - row justify - between items - start md:items - center gap - 4 mb - 8">
           <div>
             <h1 className="text-3xl font-bold">Talent Dashboard</h1>
             <p className="text-muted-foreground mt-1">Find opportunities matched to your skills and experience</p>
           </div>
           <div className="flex gap-4">
             <Button variant="outline" asChild>
-              <Link href="/settings/account">
-                <UserIcon className="h-4 w-4 mr-2"/>
+              <Link href="/settings / account">
+                <UserIcon className="h - 4 w - 4 mr - 2"      />
                 Profile Settings
               </Link>
             </Button>
             <Button asChild>
-              <Link href="/dashboard/talent/applications">
-                <Inbox className="h-4 w-4 mr-2"/> Application Tracker
+              <Link href="/dashboard / talent / applications">
+                <Inbox className="h - 4 w - 4 mr - 2"      /> Application Tracker
               </Link>
             </Button>
           </div>
         </div>
 
         {/* Project Offer Banner - Show pending offers */}
-        <ProjectOfferBanner />
+        <ProjectOfferBanner       />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div>
-            <Card className="mb-8">
-              <CardHeader className="pb-2">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <Avatar className="h-12 w-12 border">
-                      {user?.avatarUrl ? (<img loading="lazy" src={user.avatarUrl} alt={user.displayName || "User"}/>) : (<div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
-                          {user?.displayName?.charAt(0) || "U"}
-                        </div>)}
+            <Card className="mb - 8">
+              <CardHeader className="pb - 2">
+                <div className="flex items - center justify - between">
+                  <div className="flex items - center gap - 3">
+                    <Avatar className="h - 12 w - 12 border">
+                      {user?.avatarUrl ? (<img loading="lazy" src={user.avatarUrl} alt={user.displayName || "User"}      />) : (<div className="flex h - full w - full items - center justify - center bg - muted text - lg font - medium uppercase">
+                          {user?.displayName?.charAt (0) || "U"}
+                        </div>) }
                     </Avatar>
                     <div>
                       <CardTitle>{user?.displayName || "User"}</CardTitle>
@@ -71,10 +71,10 @@ function TalentDashboardContent() {
                 </div>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 gap-4 mt-4">
-                  <div className="flex flex-col items-center p-3 bg-muted/30 rounded-md">
-                    <div className="flex items-center gap-1 text-lg font-bold">
-                      <Star className="h-4 w-4 text-yellow-500"/>
+                <div className="grid grid - cols - 2 gap - 4 mt - 4">
+                  <div className="flex flex - col items - center p - 3 bg - muted / 30 rounded - md">
+                    <div className="flex items - center gap - 1 text - lg font - bold">
+                      <Star className="h - 4 w - 4 text - yellow - 500"      />
                       4.9
                     </div>
                     <span className="text-xs text-muted-foreground">Rating</span>
@@ -88,7 +88,7 @@ function TalentDashboardContent() {
                 <div className="mt-4">
                   <Button className="w-full" asChild>
                     <Link href="/messages">
-                      <MessageSquare className="h-4 w-4 mr-2"/>
+                      <MessageSquare className="h - 4 w - 4 mr - 2"      />
                       Messages
                     </Link>
                   </Button>
@@ -97,14 +97,14 @@ function TalentDashboardContent() {
             </Card>
             
             {/* New Onboarding Progress Tracker */}
-            <TalentOnboardingSteps />
-            {showAdvanced && (<div className="mt-6">
-                <AdvancedOnboardingSteps />
-              </div>)}
-            
+            <TalentOnboardingSteps       />
+            {showAdvanced && (<div className="mt - 6">
+                <AdvancedOnboardingSteps       />
+              </div>) }
+
             {/* Upcoming Interviews Card */}
-            <div className="mt-8">
-              <UpcomingInterviewsCard />
+            <div className="mt - 8">
+              <UpcomingInterviewsCard       />
             </div>
             
             <Card className="mt-8">
@@ -133,28 +133,28 @@ function TalentDashboardContent() {
               </CardContent>
             </Card>
           </div>
-          
-          <div className="lg:col-span-2">
-            <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>
-              <TabsList className="mb-6">
-                <TabsTrigger value="job-matches" className="flex items-center">
-                  <BriefcaseIcon className="h-4 w-4 mr-2"/>
+
+          <div className="lg:col - span - 2">
+            <Tabs defaultValue="job - matches" onValueChange={setActiveTab}>
+              <TabsList className="mb - 6">
+                <TabsTrigger value="job - matches" className="flex items - center">
+                  <BriefcaseIcon className="h - 4 w - 4 mr - 2"      />
                   AI Job Matches
                 </TabsTrigger>
                 <TabsTrigger value="applications">My Applications</TabsTrigger>
                 <TabsTrigger value="saved">Saved Jobs</TabsTrigger>
               </TabsList>
-              
-              <TabsContent value="job-matches" className="mt-0">
-                <SuggestedJobs />
+
+              <TabsContent value="job - matches" className="mt - 0">
+                <SuggestedJobs       />
               </TabsContent>
-              
-              <TabsContent value="applications" className="mt-0">
-                <MyApplications />
-                <div className="mt-4 flex justify-center">
+
+              <TabsContent value="applications" className="mt - 0">
+                <MyApplications       />
+                <div className="mt - 4 flex justify - center">
                   <Button variant="outline" asChild>
-                    <Link href="/dashboard/talent/applications">
-                      <Inbox className="h-4 w-4 mr-2"/> View Full Application Tracker
+                    <Link href="/dashboard / talent / applications">
+                      <Inbox className="h - 4 w - 4 mr - 2"      /> View Full Application Tracker
                     </Link>
                   </Button>
                 </div>
@@ -181,6 +181,5 @@ function TalentDashboardContent() {
 }
 export default function TalentDashboard() {
     return (<ProtectedRoute>
-      <TalentDashboardContent />
-    </ProtectedRoute>);
-}
+      <TalentDashboardContent       />
+    </ProtectedRoute>) }

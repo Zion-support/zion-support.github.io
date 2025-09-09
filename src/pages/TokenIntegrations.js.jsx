@@ -23,38 +23,39 @@ function suggestChain(region, stake) {
     if (region === 'europe')
         return 'polygon';
     return 'optimism';
-}
-export default function TokenIntegrations() {
-    const { address, isConnected } = useWallet();
-    const [fromChain, setFromChain] = useState('ethereum');
-    const [toChain, setToChain] = useState('polygon');
-    const [txHash, setTxHash] = useState(null);
-    const [status, setStatus] = useState(null);
-    const [region, setRegion] = useState('');
-    const [stake, setStake] = useState(0);
-    const [suggested, setSuggested] = useState(null);
-    const handleBridge = () => {
-        setStatus('Bridging...');
-        setTxHash(null);
-        // TODO: integrate actual LayerZero bridge logic
-        // Record onchain tx logs and enforce rate limits
-        // Use burn-and-mint model if tokens are wrapped
-        setTimeout(() => {
-            setTxHash('0xabc123');
-            setStatus(`ZION$ arrived on ${toChain} in 12s`);
-        }, 1200);
-    };
-    const handleSuggest = () => {
-        const chain = suggestChain(region.toLowerCase(), stake);
-        setSuggested(chain);
-    };
-    return (<div>
-      <Header />
-      <div className="min-h-screen bg-zion-blue pt-12 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-          <h1 className="text-3xl font-bold text-white">ZION$ Integrations</h1>
-          <ConnectWalletButton />
-          {isConnected && (<p className="text-white">Connected wallet: {address}</p>)}
+  }
+  const { address, isConnected } = useWallet () ;
+  const [fromChain, setFromChain] = useState ('ethereum') ;
+  const [toChain, setToChain] = useState ('polygon') ;
+  const [txHash, setTxHash] = useState (null) ;
+  const [status, setStatus] = useState (null) ;
+  const [region, setRegion] = useState ('') ;
+  const [stake, setStake] = useState (0) ;
+  const [suggested, setSuggested] = useState (null) ;
+  const handleBridge = () => {
+    setStatus ('Bridging...') ;
+    setTxHash (null) ;
+    // TODO: integrate actual LayerZero bridge logic
+    // Record onchain tx logs and enforce rate limits
+    // Use burn - and - mint model if tokens are wrapped
+    setTimeout ( () => {
+      setTxHash ('0xabc123') ;
+      setStatus (`ZION$ arrived on ${toChain} in 12s`) ;
+    }, 1200) ;
+  };
+  const handleSuggest = () => {
+    const chain = suggestChain (region.toLowerCase () , stake) ;
+    setSuggested (chain) ;
+  };
+  return (<div>
+      <Header       />
+      <div className="min - h-screen bg - zion - blue pt - 12 pb - 20">
+        <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8 space - y-10">
+          <h1 className="text - 3xl font - bold text - white">
+            ZION$ Integrations
+          </h1>
+          <ConnectWalletButton       />
+          {isConnected && (<p className="text - white">Connected wallet: {address}</p>) }
 
           <Card>
             <CardHeader>
@@ -63,26 +64,36 @@ export default function TokenIntegrations() {
             <CardContent className="space-y-4">
               <div className="flex gap-4">
                 <Select value={fromChain} onValueChange={setFromChain}>
-                  <SelectTrigger className="w-full">
-                    <SelectValue placeholder="From"/>
+                  <SelectTrigger className="w - full">
+                    <SelectValue placeholder="From"       />
                   </SelectTrigger>
                   <SelectContent>
-                    {CHAINS.map(c => (<SelectItem key={c.id} value={c.id}>
-                        <div className="flex items-center gap-2">
-                          <img loading="lazy" src={c.logo} alt={c.name} className="h-4"/>
+                    {CHAINS.map (c => (<SelectItem key={c.id} value={c.id}>
+                        <div className="flex items - center gap - 2">
+                          <img
+                            loading="lazy"
+                            src={c.logo}
+                            alt={c.name}
+                            className="h - 4"
+                                />
                           {c.name}
                         </div>
                       </SelectItem>))}
                   </SelectContent>
                 </Select>
                 <Select value={toChain} onValueChange={setToChain}>
-                  <SelectTrigger className="w-full">
-                    <SelectValue placeholder="To"/>
+                  <SelectTrigger className="w - full">
+                    <SelectValue placeholder="To"       />
                   </SelectTrigger>
                   <SelectContent>
-                    {CHAINS.map(c => (<SelectItem key={c.id} value={c.id}>
-                        <div className="flex items-center gap-2">
-                          <img loading="lazy" src={c.logo} alt={c.name} className="h-4"/>
+                    {CHAINS.map (c => (<SelectItem key={c.id} value={c.id}>
+                        <div className="flex items - center gap - 2">
+                          <img
+                            loading="lazy"
+                            src={c.logo}
+                            alt={c.name}
+                            className="h - 4"
+                                />
                           {c.name}
                         </div>
                       </SelectItem>))}
@@ -118,6 +129,6 @@ export default function TokenIntegrations() {
           </Card>
         </div>
       </div>
-      <Footer />
-    </div>);
+      <Footer       />
+    </div>) ;
 }

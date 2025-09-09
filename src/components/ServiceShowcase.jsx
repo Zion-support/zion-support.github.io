@@ -57,15 +57,17 @@ export function ServiceShowcase({ services }) {
                 </CardDescription>
               </CardHeader>
 
-              <CardContent className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <Star className="h-4 w-4 text-yellow-400 fill-current"/>
-                    <span className="text-zinc-300">{service.rating}</span>
+              <CardContent className="space - y-4">
+                <div className="flex items - center justify - between">
+                  <div className="flex items - center gap - 2">
+                    <Star className="h - 4 w - 4 text - yellow - 400 fill - current"       />
+                    <span className="text - zinc - 300">{service.rating}</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Zap className="h-4 w-4 text-zion-cyan"/>
-                    <span className="text-zion-cyan font-semibold">AI Score: {service.aiScore}</span>
+                  <div className="flex items - center gap - 2">
+                    <Zap className="h - 4 w - 4 text - zion - cyan"       />
+                    <span className="text - zion - cyan font - semibold">
+                      AI Score: {service.aiScore}
+                    </span>
                   </div>
                 </div>
 
@@ -93,8 +95,8 @@ export function ServiceShowcase({ services }) {
               </CardContent>
 
               {/* Hover Effect Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/5 to-zion-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"/>
-            </Card>))}
+              <div className="absolute inset - 0 bg - gradient - to - r from - zion - cyan / 5 to - zion - purple / 5 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none"       />
+            </Card>) ) }
         </div>
 
         <div className="text-center mt-12">
