@@ -4,6 +4,110 @@ import { FooterNewsletter } from './FooterNewsletter';
 import { Logo } from './header/Logo';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowRight, ArrowUp } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { 
+  Twitter, 
+  Linkedin, 
+  Facebook, 
+  Instagram, 
+  Github, 
+  Mail, 
+  Phone, 
+  MapPin, 
+  ArrowUp, 
+  Globe, 
+  Heart,
+  Zap,
+  Shield,
+  Cloud,
+  Brain,
+  Rocket,
+  Code,
+  Users,
+  Building,
+  Award,
+  Clock,
+  CheckCircle
+} from 'lucide-react';
+
+const footerNavigation = {
+  services: {
+    title: 'Services',
+    items: [
+      { name: 'All Services', href: '/enhanced-services', icon: Zap },
+      { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain },
+      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+      { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+      { name: 'IoT & Edge', href: '/services/iot-edge', icon: Zap },
+      { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket },
+      { name: 'Blockchain', href: '/services/blockchain', icon: Code },
+      { name: 'Digital Twin', href: '/services/digital-twin', icon: Building },
+      { name: 'Sustainability', href: '/services/sustainability', icon: Heart }
+    ],
+  },
+  microSaas: {
+    title: 'Micro SAAS',
+    items: [
+      { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence' },
+      { name: 'Customer Experience', href: '/micro-saas/customer-experience' },
+      { name: 'Quantum Computing', href: '/micro-saas/quantum-computing' },
+      { name: 'Supply Chain', href: '/micro-saas/supply-chain' },
+      { name: 'Cybersecurity', href: '/micro-saas/cybersecurity' },
+      { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge' },
+      { name: 'Content Creation', href: '/micro-saas/content-creation' },
+      { name: 'HR Platform', href: '/micro-saas/hr-platform' }
+    ],
+  },
+  marketplace: {
+    title: 'Marketplace',
+    items: [
+      { name: 'Products', href: '/marketplace' },
+      { name: 'Services', href: '/services' },
+      { name: 'Talent', href: '/talent' },
+      { name: 'Equipment', href: '/equipment' },
+      { name: 'Categories', href: '/categories' },
+      { name: 'Green IT', href: '/green-it' },
+      { name: 'IT Onsite Services', href: '/it-onsite-services' },
+    ],
+  },
+  company: {
+    title: 'Company',
+    items: [
+      { name: 'About Us', href: '/about' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Partners', href: '/partners' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'FAQ', href: '/faq' },
+      { name: 'Sitemap', href: '/sitemap' },
+    ],
+  },
+  support: {
+    title: 'Support & Resources',
+    items: [
+      { name: 'Help Center', href: '/help' },
+      { name: 'Contact Support', href: '/contact' },
+      { name: 'Terms of Service', href: '/terms' },
+      { name: 'Privacy Policy', href: '/privacy' },
+      { name: 'Security', href: '/security' },
+      { name: 'System Status', href: '/status' },
+    ],
+  },
+};
+
+const socialLinks = [
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-marketplace', icon: Linkedin },
+  { name: 'Facebook', href: 'https://www.facebook.com/zionmarketplace', icon: Facebook },
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
+  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
+];
+
+const contactInfo = {
+  phone: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
 
 export function Footer() {
   const currentYear = new Date().getFullYear();

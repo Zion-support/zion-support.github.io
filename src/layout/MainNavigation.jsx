@@ -4,20 +4,17 @@ import { Link } from 'react-router-dom';
 export function MainNavigation() {
   return (
     <nav className="hidden md:flex space-x-8">
-      <Link to="/services" className="text-gray-700 hover:text-zion-purple px-3 py-2 rounded-md text-sm font-medium transition-colors">
+      <Link to="/services" className="text-gray-700 hover:text-zion-purple transition-colors">
         Services
       </Link>
       <Link to="/about" className="text-gray-700 hover:text-zion-purple px-3 py-2 rounded-md text-sm font-medium transition-colors">
         About
       </Link>
-      <Link to="/contact" className="text-gray-700 hover:text-zion-purple px-3 py-2 rounded-md text-sm font-medium transition-colors">
+      <Link to="/contact" className="text-gray-700 hover:text-zion-purple transition-colors">
         Contact
       </Link>
-      <Link to="/blog" className="text-gray-700 hover:text-zion-purple px-3 py-2 rounded-md text-sm font-medium transition-colors">
-        Blog
-      </Link>
-      <Link to="/login" className="text-gray-700 hover:text-zion-purple px-3 py-2 rounded-md text-sm font-medium transition-colors">
-        Login
+      <Link to="/enhanced-services" className="text-gray-700 hover:text-zion-purple transition-colors">
+        All Services
       </Link>
     </nav>
   );

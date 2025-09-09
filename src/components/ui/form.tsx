@@ -1,81 +1,46 @@
 import React from 'react';
 
-interface FormProps {
-  children: React.ReactNode;
-  onSubmit?: (e: React.FormEvent) => void;
-  className?: string;
-}
+// Basic Form components for compatibility
+export const Form = ({ children, ...props }: any) => (
+  <form {...props}>{children}</form>
+);
 
-export function Form({ children, onSubmit, className = '' }: FormProps) {
-  return (
-    <form onSubmit={onSubmit} className={className}>
-      {children}
-    </form>
-  );
-}
+export const FormControl = ({ children }: any) => (
+  <div className="form-control">{children}</div>
+);
 
-interface FormFieldProps {
-  children: React.ReactNode;
-  className?: string;
-}
+export const FormDescription = ({ children, className = '' }: any) => (
+  <p className={`text-sm text-muted-foreground ${className}`}>{children}</p>
+);
 
-export function FormField({ children, className = '' }: FormFieldProps) {
-  return (
-    <div className={`space-y-2 ${className}`}>
-      {children}
-    </div>
-  );
-}
+export const FormField = ({ control, name, render }: any) => {
+  // Simple implementation - in a real app you'd use react-hook-form
+  return render({
+    field: {
+      name,
+      value: '',
+      onChange: () => {},
+      onBlur: () => {},
+    },
+    fieldState: {
+      error: undefined,
+      invalid: false,
+      isDirty: false,
+      isTouched: false,
+    },
+  });
+};
 
-interface FormLabelProps {
-  children: React.ReactNode;
-  htmlFor?: string;
-  className?: string;
-}
+export const FormItem = ({ children, className = '' }: any) => (
+  <div className={`form-item ${className}`}>{children}</div>
+);
 
-export function FormLabel({ children, htmlFor, className = '' }: FormLabelProps) {
-  return (
-    <label htmlFor={htmlFor} className={`text-sm font-medium text-white ${className}`}>
-      {children}
-    </label>
-  );
-}
+export const FormLabel = ({ children, className = '' }: any) => (
+  <label className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${className}`}>
+    {children}
+  </label>
+);
 
-interface FormControlProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export function FormControl({ children, className = '' }: FormControlProps) {
-  return (
-    <div className={className}>
-      {children}
-    </div>
-  );
-}
-
-interface FormItemProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export function FormItem({ children, className = '' }: FormItemProps) {
-  return (
-    <div className={`space-y-2 ${className}`}>
-      {children}
-    </div>
-  );
-}
-
-interface FormMessageProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export function FormMessage({ children, className = '' }: FormMessageProps) {
-  return (
-    <p className={`text-sm text-red-400 ${className}`}>
-      {children}
-    </p>
-  );
-}
+export const FormMessage = ({ children, className = '' }: any) => (
+  <p className={`text-sm font-medium text-destructive ${className}`}>{children}</p>
+);
