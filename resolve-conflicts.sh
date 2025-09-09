@@ -1,75 +1,36 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts in specific branches
+echo "🚀 Starting merge conflict resolution..."
 
-set -e
+# Find all files with merge conflicts
+echo "🔍 Scanning for files with merge conflicts..."
+conflict_files=$(find /workspace -type f \( -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" \) -exec grep -l "<<<<<<< HEAD\|=======\|>>>>>>>" {} \; 2>/dev/null)
 
-echo "Starting conflict resolution for failed merge branches..."
+echo "📊 Found $(echo "$conflict_files" | wc -l) files with merge conflicts"
 
-# Function to resolve conflicts in a specific branch
-resolve_branch_conflicts() {
-    local branch_name="$1"
-    echo "Resolving conflicts in branch: $branch_name"
-    
-    # Checkout the branch
-    git checkout -b "$branch_name" "origin/$branch_name"
-    
-    # Try to merge with main
-    if git merge main --no-edit; then
-        echo "Successfully resolved conflicts in $branch_name"
+# Resolve conflicts in each file
+resolved_count=0
+for file in $conflict_files; do
+    if [ -f "$file" ]; then
+        echo "🔧 Resolving conflicts in: $file"
         
-        # Push the resolved branch
-        if git push origin "$branch_name"; then
-            echo "Successfully pushed resolved $branch_name"
-            return 0
-        else
-            echo "Failed to push $branch_name"
-            return 1
-        fi
-    else
-        echo "Still have conflicts in $branch_name, attempting manual resolution..."
+        # Use sed to remove conflict markers and keep incoming changes
+        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+        sed -i '/>>>>>>>/d' "$file"
         
-        # List all conflicted files
-        git status --porcelain | grep "^UU" | while read -r line; do
-            file_path=$(echo "$line" | cut -c4-)
-            echo "Conflict in: $file_path"
-        done
-        
-        # For now, abort the merge and return to main
-        git merge --abort
-        echo "Aborted merge for $branch_name - manual resolution needed"
-        return 1
+        echo "✅ Resolved conflicts in: $file"
+        ((resolved_count++))
     fi
-}
-
-# Ensure we're on main and up to date
-git checkout main
-git pull origin main
-
-# List of branches with known conflicts
-CONFLICT_BRANCHES=(
-    "cursor/enhance-app-with-new-services-and-futuristic-design-7466"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-757c"
-)
-
-# Process each conflicted branch
-for branch in "${CONFLICT_BRANCHES[@]}"; do
-    echo "Processing conflicted branch: $branch"
-    
-    if resolve_branch_conflicts "$branch"; then
-        echo "Successfully resolved conflicts in $branch"
-    else
-        echo "Failed to resolve conflicts in $branch"
-    fi
-    
-    # Go back to main for next iteration
-    git checkout main
-    
-    # Clean up local branch
-    git branch -D "$branch" 2>/dev/null || true
-    
-    echo "----------------------------------------"
 done
 
-echo "Completed conflict resolution attempts!"
-echo "Note: Some branches may still need manual conflict resolution."
+echo "✅ Successfully resolved conflicts in $resolved_count files"
+echo "🎉 Merge conflict resolution completed!"
+
+# Try to add and commit the resolved files
+echo "📝 Adding resolved files to git..."
+git add . 2>/dev/null || echo "⚠️  Git add failed"
+
+echo "💾 Committing resolved conflicts..."
+git commit -m "Resolve merge conflicts automatically" 2>/dev/null || echo "⚠️  Git commit failed"
+
+echo "✅ Process completed!"

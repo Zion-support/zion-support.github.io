@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Shield, Eye, Lock, Database, Users, Globe,
-  CheckCircle, AlertTriangle, Info
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+import Link from 'next/link';
+import Layout from './components/Layout';
 
 export default function PrivacyPage() {
   const lastUpdated = 'January 15, 2025';
@@ -224,7 +217,7 @@ export default function PrivacyPage() {
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">
               <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
                 <Shield className="w-6 h-6 text-green-400 mr-3" />
-                Children&apos;s Privacy
+                Children's Privacy
               </h3>
               <p className="text-gray-300 leading-relaxed">
                 Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from 
@@ -246,7 +239,7 @@ export default function PrivacyPage() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Questions About Privacy?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              We&apos;re here to help. Contact our privacy team for any questions or concerns about your data.
+              We're here to help. Contact our privacy team for any questions or concerns about your data.
             </p>
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
@@ -278,23 +271,3 @@ export default function PrivacyPage() {
     </div>
   );
 }
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-export default function Placeholder() {
-  return (
-    <main className="min-h-screen p-8">
-      <Head>
-        <title>Privacy - Placeholder</title>
-        <meta name="robots" content="noindex" />
-      </Head>
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-2xl font-semibold mb-2">Privacy</h1>
-        <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/privacy</code>.</p>
-        <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></Link>
-      </div>
-    </main>
-  );
-}
->>>>>>> 6d7be8fce1d5e66d749ea8dd439e0663bfd83322

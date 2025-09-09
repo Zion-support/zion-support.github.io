@@ -1,199 +1,156 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Users, Target, Award, Globe, Zap, Shield } from 'lucide-react';
 
-const About: React.FC = () => {
+import React, { memo } from 'react';
+import { SEO } from "@/components/SEO";
+
+const InfoCard: React.FC<{ children: React.ReactNode }> = memo(({ children }) => (
+  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+    {children}
+  </div>
+));
+
+InfoCard.displayName = 'InfoCard';
+
+const About: React.FC = memo(() => {  const features = [
+    'Expert team with years of industry experience',
+    'Cutting-edge AI and machine learning solutions',
+    'Comprehensive IT support and cybersecurity',
+    'Scalable micro SAAS platforms',
+    '24/7 customer support and monitoring'
+  ];
+
   const stats = [
-    { label: 'Years of Experience', value: '15+', icon: Award },
-    { label: 'Projects Delivered', value: '500+', icon: Target },
-    { label: 'Team Members', value: '100+', icon: Users },
-    { label: 'Countries Served', value: '25+', icon: Globe },
-    { label: 'Technologies', value: '50+', icon: Zap },
-    { label: 'Security Certifications', value: '10+', icon: Shield }
-  ];
-
-  const values = [
-    {
-      title: 'Innovation First',
-      description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and cutting-edge solutions.',
-      icon: Zap
-    },
-    {
-      title: 'Client Success',
-      description: 'Your success is our success. We work as an extension of your team, ensuring every solution drives real business value.',
-      icon: Target
-    },
-    {
-      title: 'Excellence',
-      description: 'We maintain the highest standards of quality in everything we do, from code to customer service.',
-      icon: Award
-    },
-    {
-      title: 'Collaboration',
-      description: 'We believe in the power of partnership, working closely with clients to understand their unique challenges.',
-      icon: Users
-    }
-  ];
-
-  const team = [
-    {
-      name: 'Dr. Sarah Chen',
-      role: 'Chief Technology Officer',
-      bio: 'Leading our AI and quantum computing initiatives with 20+ years in advanced technology.',
-      image: '/team/sarah-chen.jpg'
-    },
-    {
-      name: 'Marcus Rodriguez',
-      role: 'Head of Innovation',
-      bio: 'Driving our R&D efforts and emerging technology partnerships.',
-      image: '/team/marcus-rodriguez.jpg'
-    },
-    {
-      name: 'Dr. Emily Watson',
-      role: 'Chief AI Scientist',
-      bio: 'Pioneering breakthrough AI solutions and machine learning architectures.',
-      image: '/team/emily-watson.jpg'
-    }
+    { label: 'Projects Completed', value: '500+' },
+    { label: 'Happy Clients', value: '200+' },
+    { label: 'Years Experience', value: '10+' },
+    { label: 'Team Members', value: '50+' }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Zion Tech Group</span>
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple text-white">
+      <div className="container mx-auto px-4 py-24">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-holographic-gradient bg-clip-text text-transparent">
+            About Zion Tech Group
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            We are a forward-thinking technology company dedicated to transforming businesses through innovative AI solutions, 
-            cutting-edge technology, and unparalleled expertise.
+          <p className="text-xl md:text-2xl text-zion-slate-light max-w-3xl mx-auto">
+            Leading the future of technology with innovative solutions and cutting-edge expertise
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-            >
-              Get in Touch
-            </Link>
-            <Link
-              to="/careers"
-              className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-            >
-              Join Our Team
-            </Link>
-          </div>
         </div>
-      </section>
 
-      {/* Stats Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  <stat.icon className="w-12 h-12 text-blue-400" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-400 text-sm">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
-              <p className="text-lg text-gray-300 mb-6">
-                To democratize access to cutting-edge technology solutions, enabling businesses of all sizes to leverage 
-                the power of AI, quantum computing, and emerging technologies to drive innovation and growth.
-              </p>
-              <p className="text-lg text-gray-300">
-                We believe that technology should be accessible, understandable, and transformative for every organization.
-              </p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <div className="w-16 h-16 bg-zion-blue-light rounded-lg flex items-center justify-center mb-6">
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />              </svg>
             </div>
-            <div>
-              <h2 className="text-4xl font-bold text-white mb-6">Our Vision</h2>
-              <p className="text-lg text-gray-300 mb-6">
-                To be the leading force in technological innovation, creating a future where AI and advanced technologies 
-                enhance human potential and solve the world's most complex challenges.
-              </p>
-              <p className="text-lg text-gray-300">
-                We envision a world where technology serves humanity, not the other way around.
-              </p>
+            <h3 className="text-2xl font-bold mb-4 text-white">Innovation First</h3>
+            <p className="text-zion-slate-light">
+              We pioneer cutting-edge technologies and solutions that transform industries and drive digital evolution.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <div className="w-16 h-16 bg-zion-purple rounded-lg flex items-center justify-center mb-6">
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />              </svg>
             </div>
+            <h3 className="text-2xl font-bold mb-4 text-white">Quality Assured</h3>
+            <p className="text-zion-slate-light">
+              Every solution undergoes rigorous testing and quality assurance to ensure optimal performance and reliability.
+            </p>
           </div>
-        </div>
-      </section>
 
-      {/* Values Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">Our Core Values</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="text-center p-6 rounded-xl bg-slate-700/50 hover:bg-slate-700/70 transition-all duration-300">
-                <div className="flex justify-center mb-4">
-                  <value.icon className="w-12 h-12 text-blue-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
-                <p className="text-gray-300">{value.description}</p>
-              </div>
-            ))}
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <div className="w-16 h-16 bg-zion-green rounded-lg flex items-center justify-center mb-6">
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />              </svg>
+            </div>
+            <h3 className="text-2xl font-bold mb-4 text-white">Expert Team</h3>
+            <p className="text-zion-slate-light">
+              Our team of industry experts brings decades of experience in technology, innovation, and business solutions.
+            </p>
           </div>
         </div>
-      </section>
 
-      {/* Team Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">Meet Our Leadership</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="text-center p-6 rounded-xl bg-slate-700/50 hover:bg-slate-700/70 transition-all duration-300">
-                <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
-                <p className="text-blue-400 mb-3">{member.role}</p>
-                <p className="text-gray-300 text-sm">{member.bio}</p>
-              </div>
-            ))}
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-12 border border-white/20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-6 text-white">Our Mission</h2>
+            <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
+              To empower businesses and organizations with transformative technology solutions that drive growth, 
+              efficiency, and innovation in an ever-evolving digital landscape.
+            </p>
           </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our innovative solutions can drive your success in the digital age.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-            >
-              Start a Conversation
-            </Link>
-            <Link
-              to="/services"
-              className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-            >
-              Explore Our Services
-            </Link>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-white">What We Do</h3>
+              <ul className="space-y-4 text-zion-slate-light">
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-zion-blue-light mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
+                  AI-Powered Business Solutions
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-zion-blue-light mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
+                  Quantum Computing Platforms
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-zion-blue-light mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
+                  Cybersecurity & Compliance
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-zion-blue-light mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
+                  Cloud Infrastructure & DevOps
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-zion-blue-light mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
+                  Micro SAAS Development
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-white">Why Choose Us</h3>
+              <ul className="space-y-4 text-zion-slate-light">
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-zion-purple mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
+                  Proven track record of successful projects
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-zion-purple mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
+                  Cutting-edge technology expertise
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-zion-purple mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
+                  24/7 support and monitoring
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-zion-purple mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
+                  Scalable and future-proof solutions
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-zion-purple mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
+                  Competitive pricing and flexible terms
+                </li>
+              </ul>
+            </div>
+
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
-};
+});
+
+About.displayName = 'About';
 
 export default About;

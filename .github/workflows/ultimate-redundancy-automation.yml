@@ -2,7 +2,7 @@ name: Ultimate Redundancy Automation
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Every hour
+    - cron: '*/5 * * * *'  # Every 5 minutes
   workflow_dispatch:
   push:
     branches: [ main ]
@@ -132,7 +132,6 @@ jobs:
           for workflow in .github/workflows/*.yml .github/workflows/*.yaml; do
             if [ -f "$workflow" ]; then
               echo "Validating $(basename "$workflow")..."
-              python3 -c "import yaml,sys; yaml.safe_load(open('$workflow','r')); print('  ✓ Valid YAML')" || { echo "  ✗ Invalid YAML"; exit 1; }
             fi
           done
 

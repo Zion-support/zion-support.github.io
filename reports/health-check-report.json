@@ -1,0 +1,118 @@
+{
+  "timestamp": "2025-08-30T03:24:33.327Z",
+  "overall": "unhealthy",
+  "services": {
+    "\u001b[1m\u001b[36m4\u001b[39m\u001b[22m": {
+      "status": "│",
+      "uptime": "build-error-fixer",
+      "memory": "│",
+      "cpu": "default",
+      "restarts": "│",
+      "healthy": false
+    },
+    "\u001b[1m\u001b[36m5\u001b[39m\u001b[22m": {
+      "status": "│",
+      "uptime": "dependency-error-fixer",
+      "memory": "│",
+      "cpu": "default",
+      "restarts": "│",
+      "healthy": false
+    },
+    "\u001b[1m\u001b[36m0\u001b[39m\u001b[22m": {
+      "status": "│",
+      "uptime": "enhanced-error-prevention-orchestrator",
+      "memory": "│",
+      "cpu": "default",
+      "restarts": "│",
+      "healthy": false
+    },
+    "\u001b[1m\u001b[36m8\u001b[39m\u001b[22m": {
+      "status": "│",
+      "uptime": "error-prevention-health-check",
+      "memory": "│",
+      "cpu": "default",
+      "restarts": "│",
+      "healthy": false
+    },
+    "\u001b[1m\u001b[36m6\u001b[39m\u001b[22m": {
+      "status": "│",
+      "uptime": "error-prevention-monitor",
+      "memory": "│",
+      "cpu": "default",
+      "restarts": "│",
+      "healthy": false
+    },
+    "\u001b[1m\u001b[36m3\u001b[39m\u001b[22m": {
+      "status": "│",
+      "uptime": "linting-error-fixer",
+      "memory": "│",
+      "cpu": "default",
+      "restarts": "│",
+      "healthy": false
+    },
+    "\u001b[1m\u001b[36m7\u001b[39m\u001b[22m": {
+      "status": "│",
+      "uptime": "scheduled-comprehensive-fixer",
+      "memory": "│",
+      "cpu": "default",
+      "restarts": "│",
+      "healthy": false
+    },
+    "\u001b[1m\u001b[36m1\u001b[39m\u001b[22m": {
+      "status": "│",
+      "uptime": "syntax-error-fixer",
+      "memory": "│",
+      "cpu": "default",
+      "restarts": "│",
+      "healthy": false
+    },
+    "\u001b[1m\u001b[36m2\u001b[39m\u001b[22m": {
+      "status": "│",
+      "uptime": "typescript-error-fixer",
+      "memory": "│",
+      "cpu": "default",
+      "restarts": "│",
+      "healthy": false
+    },
+    "disk": {
+      "status": "healthy",
+      "usedPercent": 11
+    },
+    "memory": {
+      "status": "healthy",
+      "usedPercent": 12,
+      "total": 16017,
+      "used": 1872
+    }
+  },
+  "errors": [
+    "\u001b[1m\u001b[36m4\u001b[39m\u001b[22m is not online (status: │)",
+    "\u001b[1m\u001b[36m5\u001b[39m\u001b[22m is not online (status: │)",
+    "\u001b[1m\u001b[36m0\u001b[39m\u001b[22m is not online (status: │)",
+    "\u001b[1m\u001b[36m8\u001b[39m\u001b[22m is not online (status: │)",
+    "\u001b[1m\u001b[36m6\u001b[39m\u001b[22m is not online (status: │)",
+    "\u001b[1m\u001b[36m3\u001b[39m\u001b[22m is not online (status: │)",
+    "\u001b[1m\u001b[36m7\u001b[39m\u001b[22m is not online (status: │)",
+    "\u001b[1m\u001b[36m1\u001b[39m\u001b[22m is not online (status: │)",
+    "\u001b[1m\u001b[36m2\u001b[39m\u001b[22m is not online (status: │)",
+    "enhanced-error-prevention-orchestrator-error.log has excessive errors (18)",
+    "linting-error-fixer-error.log has excessive errors (15)",
+    "Project health check failed: Command failed: npm run lint 2>&1"
+  ],
+  "warnings": [
+    "enhanced-error-prevention-orchestrator-error.log contains 18 error entries",
+    "linting-error-fixer-error.log contains 15 error entries"
+  ],
+  "recommendations": [
+    "Review and fix critical errors immediately",
+    "Address warnings to prevent future issues"
+  ],
+  "generatedAt": "2025-08-30T03:24:33.551Z",
+  "summary": {
+    "totalServices": 11,
+    "healthyServices": 0,
+    "errorCount": 12,
+    "warningCount": 2,
+    "recommendationCount": 2
+  }
+}
