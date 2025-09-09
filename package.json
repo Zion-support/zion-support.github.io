@@ -43,7 +43,7 @@
     "analyze:detailed": "npm run build && npm run analyze:bundle",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "type-check": "tsc --noEmit",
+    "type-check": "tsc --noEmit -p tsconfig.ci.json",
     "start": "next start",
     "test": "vitest",
     "test:watch": "vitest --watch",
