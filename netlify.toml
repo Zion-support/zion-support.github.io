@@ -8,7 +8,7 @@
   environment = { SKIP_TYPE_CHECK = "true" }
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "20.18.1"
   NPM_FLAGS = "--omit=optional"
 
 # Headers
