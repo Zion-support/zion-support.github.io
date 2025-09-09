@@ -74,3 +74,9 @@
   for = "/*"
   [headers.values]
     Cache-Control = "public, max-age=300"
+
+# SPA fallback handled via Netlify redirects since public/_redirects is gitignored
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
