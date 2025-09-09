@@ -1,41 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  Search, 
-  User, 
-  Bell, 
-  ChevronDown,
-  Brain,
-  Shield,
-  Cloud,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  BarChart3,
-  FileImage,
-  TrendingUp,
-  MessageCircle,
-  Video,
-  FileText,
-  Heart,
-  PanelLeft,
-  Building,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  Sparkles
-} from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
+import { ThemeToggle } from '../components/ThemeToggle';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -388,41 +354,15 @@ export function AppHeader() {
               </div>
             </form>
 
-            {/* User Actions */}
-            <div className="flex items-center gap-3">
-              {user ? (
-                <>
-                  <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors">
-                    <Bell className="w-5 h-5" />
-                  </button>
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center">
-                      <User className="w-4 h-4 text-white" />
-                    </div>
-                    <span className="text-white text-sm hidden sm:block">{user.name}</span>
-                  </div>
-                  <button
-                    onClick={logout}
-                    className="px-4 py-2 text-zion-cyan border border-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-colors duration-200"
-                  >
-                    Logout
-                  </button>
-                </>
-              ) : (
-                <>
-                  <Link to="/login">
-                    <button className="px-4 py-2 text-zion-cyan border border-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-colors duration-200">
-                      Login
-                    </button>
-                  </Link>
-                  <Link to="/contact">
-                    <button className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-zion-cyan/25">
-                      Get Started
-                    </button>
-                  </Link>
-                </>
-              )}
-            </div>
+          {/* Right side actions */}
+          <div className="ml-6 flex items-center space-x-4">
+            {/* Theme Toggle */}
+            <ThemeToggle />
+            
+            {/* Notifications */}
+            <button className="p-2 text-slate-400 hover:text-cyan-400 transition-colors">
+              <Bell className="h-5 w-5" />
+            </button>
 
             {/* Mobile Menu Button */}
             <button

@@ -95,6 +95,7 @@ import {
   Volume2,
   VolumeX
 } from 'lucide-react';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 
 export default function Home() {
   const stats = [
@@ -205,15 +206,26 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-8"
+    <div className="min-h-screen">
+      {/* Breadcrumbs */}
+      <div className="container mx-auto px-4 pt-24">
+        <Breadcrumbs />
+      </div>
+      
+      {/* Enhanced Hero Section */}
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent mb-6">
               Zion Tech Group

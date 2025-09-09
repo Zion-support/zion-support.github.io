@@ -1,9 +1,10 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
-import { ThemeToggle } from './components/ThemeToggle';
-import { AccessibilityMenu } from './components/AccessibilityMenu';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { ToastContainer } from './components/Toast';
+import { ToastProps } from './components/Toast';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
 
 // Lazy load pages
@@ -92,56 +93,43 @@ const Equipment = React.lazy(() => import('./pages/Marketplace/Equipment'));
 const Categories = React.lazy(() => import('./pages/Marketplace/Categories'));
 
 function App() {
+  const [toasts, setToasts] = useState<ToastProps[]>([]);
+
+  const addToast = (toast: Omit<ToastProps, 'id'>) => {
+    const id = Date.now().toString();
+    setToasts(prev => [...prev, { ...toast, id }]);
+  };
+
+  const removeToast = (id: string) => {
+    setToasts(prev => prev.filter(toast => toast.id !== id));
+  };
+
   return (
-    <Router>
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative">
-        {/* Futuristic Animated Background */}
-        <FuturisticAnimatedBackground />
-        
-        {/* Navigation */}
-        <FuturisticNavigation />
-        
-        <main className="flex-1 relative z-10">
-          <Suspense fallback={<EnhancedLoadingSpinner />}>
-            <Routes>
-              {/* Main Routes */}
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/enhanced-services" element={<EnhancedServices />} />
-              <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
-              
-              {/* AI Services Routes */}
-              <Route path="/ai-services" element={<AIServicesPage />} />
-              <Route path="/ai-services/:service" element={<AIServicesPage />} />
-              
-              {/* Micro SAAS Routes */}
-              <Route path="/micro-saas" element={<MicroSAASServicesPage />} />
-              <Route path="/micro-saas/:service" element={<MicroSAASServicesPage />} />
-              
-              {/* IT Services Routes */}
-              <Route path="/it-services" element={<ITServicesPage />} />
-              <Route path="/it-services/:service" element={<ITServicesPage />} />
-              
-              {/* Emerging Tech Routes */}
-              <Route path="/emerging-tech" element={<GreenIT />} />
-              <Route path="/emerging-tech/:service" element={<GreenIT />} />
-              
-              {/* Marketplace Routes */}
-              <Route path="/marketplace" element={<GreenIT />} />
-              <Route path="/marketplace/:service" element={<GreenIT />} />
-            </Routes>
-          </Suspense>
-        </main>
-        
-        <Footer />
-        
-        {/* Global Components */}
-        <ThemeToggle />
-        <AccessibilityMenu />
-        <PerformanceMonitor />
-      </div>
-    </Router>
+    <ErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+          <AppHeader />
+          
+          <main className="flex-1">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/innovative-services-2026" element={<InnovativeServicesShowcase2026 />} />
+                <Route path="/services-overview-2026" element={<ServicesOverview2026 />} />
+              </Routes>
+            </Suspense>
+          </main>
+          
+          <Footer />
+          
+          <ToastContainer toasts={toasts} onClose={removeToast} />
+          <PerformanceMonitor />
+        </div>
+      </Router>
+    </ErrorBoundary>
   );
 }
 
