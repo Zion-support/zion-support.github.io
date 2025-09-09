@@ -6,7 +6,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const user = parseUserFromRequest(req);
   try { 
     ensureAdmin(user); 
-  } catch (e: any) { 
+  } catch (e: unknown) { 
     return res.status(e.statusCode || 403).json({ error: 'Forbidden' }); 
   }
 

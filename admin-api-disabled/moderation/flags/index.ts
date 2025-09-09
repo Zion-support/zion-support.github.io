@@ -6,7 +6,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const user = parseUserFromRequest(req);
   try { 
     ensureAdmin(user); 
-  } catch (e: any) { 
+  } catch (e: unknown) { 
     return res.status(e.statusCode || 403).json({ error: 'Forbidden' }); 
   }
 
@@ -29,7 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       const flag = await createFlag(init);
       return res.status(201).json({ flag });
-    } catch (e: any) {
+    } catch {
       return res.status(500).json({ error: 'Failed to create flag' });
     }
   }

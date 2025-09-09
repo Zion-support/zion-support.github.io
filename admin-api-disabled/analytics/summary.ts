@@ -8,7 +8,7 @@ type EventRow = {
   userId: string;
 };
 
-function parseLines(start: string, end: string): EventRow[] {
+function parseLines(_start: string, _end: string): EventRow[] {
   try {
     const rows: EventRow[] = [];
     // Implementation would parse log files between start and end dates
