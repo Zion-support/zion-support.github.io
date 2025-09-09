@@ -42,7 +42,10 @@ import { TechnologyStackSection } from "@/components/TechnologyStackSection";
 import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
-import { AnimatedBackground, FloatingParticles } from "@/components/ui/AnimatedBackground";
+import { EnhancedInnovativeServicesShowcase } from "@/components/EnhancedInnovativeServicesShowcase";
+import { ComprehensiveServicesShowcase2026 } from "@/components/ComprehensiveServicesShowcase2026";
+import { ComprehensivePricingGuide2026 } from "@/components/ComprehensivePricingGuide2026";
+import { EnhancedPricingComparison } from "@/components/EnhancedPricingComparison";
 
 // Data definitions
 const stats = [
@@ -543,6 +546,20 @@ export default function Home() {
 
       <FeatureHighlights />
       <CategoriesSection />
+
+      {/* Enhanced Innovative Services Showcase */}
+      <EnhancedInnovativeServicesShowcase />
+
+      {/* Comprehensive Services Showcase 2026 */}
+      <ComprehensiveServicesShowcase2026 />
+
+      {/* Comprehensive Pricing Guide 2026 */}
+      <ComprehensivePricingGuide2026 />
+
+      {/* Enhanced Pricing Comparison */}
+      <EnhancedPricingComparison />
+
+      {/* Enhanced Benefits Section */}
       <BenefitsSection />
       <HowItWorksSection />
       <TechSolutionsSection />
