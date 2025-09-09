@@ -1,4 +1,5 @@
 import React from 'react';
+import { Badge } from '@/components/ui/badge';
 import { X } from 'lucide-react';
 
 interface ActiveFiltersBarProps {
@@ -6,10 +7,9 @@ interface ActiveFiltersBarProps {
   selectedLocations: string[];
   selectedAvailability: string[];
   selectedRating: number | null;
-  searchQuery: string;
-  onRemoveFilter: (filterType: string, value: string) => void;
-  onRemoveRating: () => void;
-  onClearSearch: () => void;
+  onFilterChange: (filterType: string, value: string) => void;
+  onRatingChange: (rating: number | null) => void;
+  onClearAll: () => void;
 }
 
 export function ActiveFiltersBar({
@@ -17,90 +17,78 @@ export function ActiveFiltersBar({
   selectedLocations,
   selectedAvailability,
   selectedRating,
-  searchQuery,
-  onRemoveFilter,
-  onRemoveRating,
-  onClearSearch
+  onFilterChange,
+  onRatingChange,
+  onClearAll
 }: ActiveFiltersBarProps) {
-  const hasActiveFilters = 
-    selectedProductTypes.length > 0 || 
-    selectedLocations.length > 0 || 
-    selectedAvailability.length > 0 || 
-    selectedRating !== null || 
-    searchQuery;
+  const hasActiveFilters = selectedProductTypes.length > 0 || 
+                          selectedLocations.length > 0 || 
+                          selectedAvailability.length > 0 || 
+                          selectedRating !== null;
 
   if (!hasActiveFilters) {
     return null;
   }
 
   return (
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-6">
-      <div className="flex flex-wrap items-center gap-2">
-        <span className="text-sm font-medium text-zion-slate-light mr-2">Active Filters:</span>
-        
-        {/* Search Query */}
-        {searchQuery && (
-          <div className="flex items-center gap-2 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full px-3 py-1">
-            <span className="text-sm text-zion-cyan">"{searchQuery}"</span>
-            <button
-              onClick={onClearSearch}
-              className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
-            >
-              <X className="w-3 h-3" />
-            </button>
-          </div>
-        )}
-
-        {/* Product Types */}
+    <div className="bg-white/5 backdrop-blur-md rounded-lg p-4 border border-white/10 mb-6">
+      <div className="flex items-center justify-between mb-3">
+        <h4 className="text-sm font-medium text-gray-300">Active Filters</h4>
+        <button
+          onClick={onClearAll}
+          className="text-sm text-blue-400 hover:text-blue-300 underline"
+        >
+          Clear All
+        </button>
+      </div>
+      
+      <div className="flex flex-wrap gap-2">
         {selectedProductTypes.map((type) => (
-          <div key={`type-${type}`} className="flex items-center gap-2 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full px-3 py-1">
-            <span className="text-sm text-zion-cyan">{type}</span>
+          <Badge key={type} variant="secondary" className="bg-blue-600/20 text-blue-300 border-blue-500/30">
+            Product: {type}
             <button
-              onClick={() => onRemoveFilter('selectedProductTypes', type)}
-              className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
+              onClick={() => onFilterChange('productTypes', type)}
+              className="ml-1 hover:text-red-400 transition-colors"
             >
               <X className="w-3 h-3" />
             </button>
-          </div>
+          </Badge>
         ))}
-
-        {/* Locations */}
+        
         {selectedLocations.map((location) => (
-          <div key={`location-${location}`} className="flex items-center gap-2 bg-zion-purple/20 border border-zion-purple/30 rounded-full px-3 py-1">
-            <span className="text-sm text-zion-purple">{location}</span>
+          <Badge key={location} variant="secondary" className="bg-green-600/20 text-green-300 border-green-500/30">
+            Location: {location}
             <button
-              onClick={() => onRemoveFilter('selectedLocations', location)}
-              className="text-zion-purple hover:text-zion-purple-light transition-colors"
+              onClick={() => onFilterChange('locations', location)}
+              className="ml-1 hover:text-red-400 transition-colors"
             >
               <X className="w-3 h-3" />
             </button>
-          </div>
+          </Badge>
         ))}
-
-        {/* Availability */}
+        
         {selectedAvailability.map((availability) => (
-          <div key={`availability-${availability}`} className="flex items-center gap-2 bg-zion-blue/20 border border-zion-blue/30 rounded-full px-3 py-1">
-            <span className="text-sm text-zion-blue">{availability}</span>
+          <Badge key={availability} variant="secondary" className="bg-purple-600/20 text-purple-300 border-purple-500/30">
+            {availability}
             <button
-              onClick={() => onRemoveFilter('selectedAvailability', availability)}
-              className="text-zion-blue hover:text-zion-blue-light transition-colors"
+              onClick={() => onFilterChange('availability', availability)}
+              className="ml-1 hover:text-red-400 transition-colors"
             >
               <X className="w-3 h-3" />
             </button>
-          </div>
+          </Badge>
         ))}
-
-        {/* Rating */}
+        
         {selectedRating && (
-          <div className="flex items-center gap-2 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full px-3 py-1">
-            <span className="text-sm text-zion-cyan">{selectedRating}+ Rating</span>
+          <Badge variant="secondary" className="bg-yellow-600/20 text-yellow-300 border-yellow-500/30">
+            {selectedRating}+ stars
             <button
-              onClick={onRemoveRating}
-              className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
+              onClick={() => onRatingChange(null)}
+              className="ml-1 hover:text-red-400 transition-colors"
             >
               <X className="w-3 h-3" />
             </button>
-          </div>
+          </Badge>
         )}
       </div>
     </div>
