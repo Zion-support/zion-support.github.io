@@ -1,38 +1,33 @@
-import React from 'react';
-import { SEO } from "@/components/SEO";
+import Categories, { CategoriesProps } from '../src/pages/Categories';
+// import type { GetServerSideProps } from 'next'; // No longer needed for getStaticProps if CategoriesProps is defined elsewhere or not used by getStaticProps
+import type { GetStaticProps } from 'next'; // Added import
 
-const Categories: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
-      <SEO 
-        title="Categories - Zion Tech Group"
-        description="Explore our comprehensive categories of technology services and solutions."
-        keywords="categories, services, technology, solutions"
-      />
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Categories
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Explore our comprehensive categories of technology services and solutions. Find exactly what you need for your business.
-          </p>
-        </div>
+// export const getServerSideProps: GetServerSideProps<CategoriesProps> = async () => {
+//   const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+//   try {
+//     const res = await fetch(`${appUrl}/api/services`);
+//     const categories = res.ok ? await res.json() : [];
+//     return { props: { categories } };
+//   } catch {
+//     return { props: { categories: [] } };
+//   }
+// };
 
-        <div className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-xl p-8 border border-zion-blue-light/30">
-          <div className="text-center">
-            <h2 className="text-2xl font-semibold text-white mb-4">
-              Coming Soon
-            </h2>
-            <p className="text-zion-slate-light mb-6">
-              Our categories page is currently under development.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+export const getStaticProps: GetStaticProps<CategoriesProps> = async () => {
+  // You can fetch data here if needed for static generation
+  // For now, returning empty props as a placeholder
+  // In a real app, you might fetch this from a CMS or local data source
+  // const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+  // try {
+  //   const res = await fetch(`${appUrl}/api/services`); // This won't work directly in getStaticProps if /api/services is part of the same app being built
+  //   const categories = res.ok ? await res.json() : [];
+  //   return { props: { categories } };
+  // } catch {
+  //   return { props: { categories: [] } };
+  // }
+  return {
+    props: { categories: [] }, // Ensure CategoriesProps is compatible or adjust
+  };
+}
 
 export default Categories;
