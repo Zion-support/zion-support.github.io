@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { Link, NavLink } from 'react-router-dom';
 import { cn } from "@/lib/utils";
 
 interface MainNavigationProps {
