@@ -1,75 +1,43 @@
-import React, { useEffect, useRef, useState } from "react";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { cn } from "@/lib/utils";
-import { TERMS_SECTIONS } from "./termsContent";
-
+import React from 'react';
 export default function TermsOfService() {
-  const [active, setActive] = useState(TERMS_SECTIONS[0].id);
-  const headingRefs = useRef({});
+    return (<div className="max-w-4xl mx-auto">
+      <h1 className="text-3xl font-bold text-white mb-8">Terms of Service</h1>
+      
+      <div className="space-y-6 text-zion-slate-light">
+        <section>
+          <h2 className="text-xl font-semibold text-white mb-3">1. Acceptance of Terms</h2>
+          <p>
+            By accessing and using Zion Tech Group's services, you accept and agree to be bound by the terms and provision of this agreement.
+          </p>
+        </section>
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id);
-          }
-        });
-      },
-      {
-        rootMargin: "0px 0px -70% 0px",
-        threshold: 0.1,
-      }
-    );
+        <section>
+          <h2 className="text-xl font-semibold text-white mb-3">2. Use License</h2>
+          <p>
+            Permission is granted to temporarily download one copy of the materials (information or software) on Zion Tech Group's website for personal, non-commercial transitory viewing only.
+          </p>
+        </section>
 
-    TERMS_SECTIONS.forEach((section) => {
-      const el = headingRefs.current[section.id];
-      if (el) observer.observe(el);
-    });
+        <section>
+          <h2 className="text-xl font-semibold text-white mb-3">3. Disclaimer</h2>
+          <p>
+            The materials on Zion Tech Group's website are provided on an 'as is' basis. Zion Tech Group makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+          </p>
+        </section>
 
-    return () => observer.disconnect();
-  }, [TERMS_SECTIONS]);
+        <section>
+          <h2 className="text-xl font-semibold text-white mb-3">4. Limitations</h2>
+          <p>
+            In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Zion Tech Group's website, even if Zion Tech Group or a Zion Tech Group authorized representative has been notified orally or in writing of the possibility of such damage.
+          </p>
+        </section>
 
-  return (
-    <div className="md:flex gap-8">
-      <aside className="md:w-1/4 mb-6 md:mb-0">
-        <ScrollArea className="sticky top-24 h-[calc(100vh-6rem)] pr-4">
-          <nav>
-            <ul className="space-y-2">
-              {TERMS_SECTIONS.map((section) => (
-                <li key={section.id}>
-                  <a
-                    href={`#${section.id}`}
-                    className={cn(
-                      "text-zion-slate-light hover:text-zion-cyan text-sm transition-colors",
-                      active === section.id && "text-zion-cyan font-semibold"
-                    )}
-                  >
-                    {section.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </ScrollArea>
-      </aside>
-      <div className="flex-1 space-y-8">
-        {TERMS_SECTIONS.map((section) => (
-          <section key={section.id}>
-            <h2
-              id={section.id}
-              ref={(el) => (headingRefs.current[section.id] = el)}
-              className="text-xl font-semibold text-white mb-2 scroll-mt-24"
-            >
-              {section.title}
-            </h2>
-            <div
-              className="space-y-4 text-zion-slate-light"
-              dangerouslySetInnerHTML={{ __html: section.content }}
-            />
-          </section>
-        ))}
+        <section>
+          <h2 className="text-xl font-semibold text-white mb-3">5. Revisions and Errata</h2>
+          <p>
+            The materials appearing on Zion Tech Group's website could include technical, typographical, or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate, complete or current.
+          </p>
+        </section>
       </div>
-    </div>
-  );
+    </div>);
 }
