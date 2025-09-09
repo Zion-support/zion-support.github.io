@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
+import Layout from '../components/Layout';
 import { 
   Brain, Atom,
   ArrowRight,
@@ -97,245 +98,181 @@ const HomePage: React.FC = () => {
 
 const Home: NextPage = () => {
   return (
-    <UltraFuturisticNeonBackground>
-      <SEO 
-        title="Zion Tech Group - Innovative AI, IT & Micro SAAS Solutions"
-        description="Transform your business with our cutting-edge AI autonomous systems, quantum computing infrastructure, and revolutionary micro SAAS solutions. Leading innovation since 2025."
-        keywords={[
-          'AI autonomous systems',
-          'quantum computing',
-          'IT infrastructure',
-          'micro SAAS',
-          'innovative technology',
-          'Zion Tech Group'
-        ]}
-      />
-
-      {/* Skip Link for Accessibility */}
-      <a href="#main-content" className="skip-link sr-only-focusable">
-        Skip to main content
-      </a>
-
-      {/* Futuristic Navigation */}
-      <UltraFuturisticNavigation2026 />
-
-      {/* Main Content */}
-      <main id="main-content">
+    <Layout>
+      <div className="text-white">
         {/* Hero Section */}
-        <motion.section 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.0 }}
-          className="relative min-h-screen flex items-center justify-center pt-32 pb-20"
-          aria-labelledby="hero-heading"
-        >
-          <div className="container mx-auto px-4 text-center relative z-10">
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, delay: 0.2 }}
-              className="max-w-6xl mx-auto"
+              transition={{ duration: 0.8 }}
+              className="text-center"
             >
-              {/* Main Heading */}
-              <h1 
-                id="hero-heading"
-                className="text-5xl md:text-7xl font-bold mb-6 text-gradient"
+              <motion.h1 
+                className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.2 }}
               >
                 Zion Tech Group
-              </h1>
-              
-              {/* Subtitle */}
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
+              </motion.h1>
+              <motion.p 
+                className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.0, delay: 0.4 }}
-                className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
+                transition={{ duration: 0.8, delay: 0.4 }}
               >
-                Pioneering the future of technology with revolutionary AI consciousness, 
-                quantum computing, and autonomous solutions that transform businesses worldwide.
+                Pioneering the future of autonomous business operations with cutting-edge AI, 
+                quantum computing, and emerging technologies.
               </motion.p>
-
-              {/* CTA Buttons */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
+              <motion.div 
+                className="flex flex-col sm:flex-row gap-4 justify-center"
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.0, delay: 0.6 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                transition={{ duration: 0.8, delay: 0.6 }}
               >
-                <button className="btn-primary text-lg px-8 py-4">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                   Explore Services
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                  <ArrowRight className="w-5 h-5" />
                 </button>
-                <button className="btn-secondary text-lg px-8 py-4">
-                  Get Started
+                <button className="border border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+                  Contact Us
                 </button>
               </motion.div>
             </motion.div>
           </div>
-        </motion.section>
+        </section>
 
-        {/* Services Overview Section */}
-        <motion.section 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.0 }}
-          viewport={{ once: true }}
-          className="py-20 bg-gray-900/50"
-          aria-labelledby="services-heading"
-        >
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 
-                id="services-heading"
-                className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
-              >
-                Our Revolutionary Services
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From AI autonomous systems to quantum computing infrastructure, 
-                we deliver cutting-edge solutions that drive innovation.
+        {/* Services Showcase */}
+        <section className="py-20 bg-black/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h2>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                Comprehensive solutions that drive innovation and transform businesses
               </p>
-            </div>
+            </motion.div>
 
-            {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-full border-2 transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? `bg-gradient-to-r ${category.color} border-transparent text-white`
-                      : 'border-gray-600 text-gray-300 hover:border-gray-500 hover:text-white'
-                  }`}
-                  aria-pressed={selectedCategory === category.id}
-                >
-                  <category.icon className="w-5 h-5" />
-                  <span>{category.name}</span>
-                </button>
-              ))}
-            </div>
-
-            {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredServices.map((service, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {services.map((service, index) => (
                 <motion.div
-                  key={service.id || index}
-                  initial={{ opacity: 0, y: 50 }}
+                  key={service.title}
+                  className={`relative p-6 rounded-xl bg-gradient-to-br ${service.color} hover:scale-105 transition-all duration-300 cursor-pointer`}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="card card-hover group"
+                  whileHover={{ scale: 1.05 }}
                 >
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                        {service.name}
-                      </h3>
-                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
-                        <Brain className="w-6 h-6 text-white" />
-                      </div>
-                    </div>
-                    
-                    <p className="text-gray-300 mb-4 line-clamp-3">
-                      {service.description || 'Revolutionary technology solution designed to transform your business operations and drive innovation.'}
-                    </p>
-                    
-                    <div className="flex items-center justify-between">
-                      <span className="text-cyan-400 font-semibold">
-                        {getServicePrice(service)}
-                      </span>
-                      <a
-                        href={getServiceWebsite(service)}
-                        className="text-cyan-400 hover:text-cyan-300 transition-colors flex items-center space-x-1"
-                        aria-label={`Learn more about ${service.name}`}
-                      >
-                        <span>Learn More</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </a>
-                    </div>
+                  <div className="text-white">
+                    <service.icon className="w-12 h-12 mb-4" />
+                    <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                    <p className="text-white/90">{service.description}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
 
-            {/* View All Services Button */}
-            <div className="text-center mt-12">
-              <button className="btn-primary text-lg px-8 py-4">
-                View All Services
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </button>
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Choose Zion Tech Group?</h2>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                Leading-edge technology with proven results
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={feature.title}
+                  className="flex items-start space-x-4 p-6 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-all duration-300"
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                    <p className="text-gray-400">{feature.description}</p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </motion.section>
+        </section>
 
-        {/* Contact Section */}
-        <motion.section 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.0 }}
-          viewport={{ once: true }}
-          className="py-20 bg-gray-800/50"
-          aria-labelledby="contact-heading"
-        >
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 
-                id="contact-heading"
-                className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
-              >
+        {/* Stats Section */}
+        <section className="py-20 bg-black/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  className="text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-400 font-medium">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Let's discuss how our innovative solutions can drive your success 
-                and position you at the forefront of technological advancement.
+              <p className="text-xl text-gray-400 mb-8">
+                Join the future of autonomous business operations with Zion Tech Group
               </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-                <p className="text-gray-300">+1 302 464 0950</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+                  Get Started Today
+                </button>
+                <button className="border border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+                  Schedule Demo
+                </button>
               </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-                <p className="text-gray-300">kleber@ziontechgroup.com</p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
-            </div>
-
-            <div className="text-center mt-12">
-              <button className="btn-primary text-lg px-8 py-4">
-                Get in Touch
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </button>
-            </div>
+            </motion.div>
           </div>
-        </motion.section>
-      </main>
-
-      {/* Futuristic Footer */}
-      <UltraFuturisticFooter2026 />
-
-      {/* Enhanced Components */}
-      <EnhancedPerformanceMonitor />
-      <EnhancedAccessibilityEnhancer />
-      <EnhancedSEO />
-    </UltraFuturisticNeonBackground>
+        </section>
+      </div>
+    </Layout>
   );
 };
 
