@@ -31,6 +31,20 @@ module.exports = {
     "\\.spec\\.[jt]s?(x)$" // Convention for Playwright spec files, to avoid conflict if any
   ],
   moduleNameMapper: {
+    // Specific aliases first
+    '^@/pages/(.*)$': '<rootDir>/pages/$1',
+    '^@/components/(.*)$': '<rootDir>/src/components/$1',
+    '^@/hooks/(.*)$': '<rootDir>/src/hooks/$1',
+    '^@/context/(.*)$': '<rootDir>/src/context/$1',
+    '^@/lib/(.*)$': '<rootDir>/src/lib/$1',
+    '^@/utils/(.*)$': '<rootDir>/src/utils/$1',
+    '^@/config/(.*)$': '<rootDir>/src/config/$1',
+    '^@/styles/(.*)$': '<rootDir>/src/styles/$1',
+    '^@/integrations/(.*)$': '<rootDir>/src/integrations/$1',
+    '^@/public/(.*)$': '<rootDir>/public/$1',
+    // General alias last
+    '^@/(.*)$': '<rootDir>/src/$1',
+    // 'vitest$': '<rootDir>/tests/vitest-mock.ts', // Removed vitest mock
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$': '<rootDir>/tests/__mocks__/fileMock.js',
     '^@/pages/api/(.*)$': '<rootDir>/pages/api/$1',
