@@ -1,17 +1,12 @@
 [build]
-  publish = "dist"
+  publish = "out"
   command = "npm ci && npm run build"
 
 [build.environment]
-  NODE_VERSION = "20.20.0"
-  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
-  # Skip Sharp postinstall to avoid NAPI issues
-  SHARP_IGNORE_GLOBAL_LIBVIPS = "1"
-  SHARP_DIST_BASE_URL = "https://github.com/lovell/sharp-libvips/releases/download/v1.2.0/"
-  # Remove Next.js plugin skip since this is a Vite project
-  # NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=6144"
 
-# SPA routing redirects for Vite
+# SPA routing redirects for Next.js static export
 [[redirects]]
   from = "/*"
   to = "/index.html"
