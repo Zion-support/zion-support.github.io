@@ -1,28 +1,14 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
 
-export default class MyDocument extends Document {
+class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
   }
 
   render() {
-    // Minimal client scripts
-    const themeScript = `(() => {
-      try {
-        var theme = localStorage.getItem('theme');
-        var isDark = theme === 'dark' || (theme === 'system' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
-        var className = isDark ? 'dark' : 'light';
-        var root = document.documentElement;
-        root.classList.add(className);
-        root.setAttribute('data-theme', className);
-      } catch(e) {}
-    })();`;
-
-    const loaderTimeoutScript = `setTimeout(function(){
-      var el = document.getElementById('initial-loader');
-      if (el) el.style.display = 'none';
-    }, 10000);`;
+    const themeScript = `(() => {try {var t=localStorage.getItem('theme');var d=t==='dark'||(t==='system'&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);var c=d?'dark':'light';var r=document.documentElement;r.classList.add(c);r.setAttribute('data-theme',c);} catch(e) {}})();`;
+    const loaderTimeoutScript = `setTimeout(function(){var el=document.getElementById('initial-loader');if(el) el.style.display='none';},10000);`;
 
     return (
       <Html lang="en">
@@ -38,3 +24,5 @@ export default class MyDocument extends Document {
     );
   }
 }
+
+export default MyDocument;
