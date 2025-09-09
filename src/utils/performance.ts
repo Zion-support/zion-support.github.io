@@ -56,10 +56,16 @@ class PerformanceMonitor {
     return () => {
       const end = performance.now();
       const renderTime = end - start;
-      this.metrics.renderTime = renderTime;
+      this.metrics.renderTime = Math.max(this.metrics.renderTime, renderTime);
       
       if (process.env.NODE_ENV === 'development') {
-        console.log(`${componentName} render time: ${renderTime.toFixed(2)}ms`);
+        const color = renderTime > 16 ? '🔴' : renderTime > 8 ? '🟡' : '🟢';
+        console.log(`${color} ${componentName} render time: ${renderTime.toFixed(2)}ms`);
+        
+        // Track slow renders
+        if (renderTime > 16) {
+          console.warn(`⚠️ Slow render detected: ${componentName} took ${renderTime.toFixed(2)}ms`);
+        }
       }
     };
   }
@@ -152,5 +158,108 @@ export const performanceUtils = {
       cache.set(key, result);
       return result;
     }) as T;
+  },
+
+  /**
+   * Preload resources for better performance
+   */
+  preloadResource(url: string, type: 'script' | 'style' | 'image' | 'font' = 'script') {
+    if (typeof window === 'undefined') return;
+    
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = url;
+    
+    switch (type) {
+      case 'script':
+        link.as = 'script';
+        break;
+      case 'style':
+        link.as = 'style';
+        break;
+      case 'image':
+        link.as = 'image';
+        break;
+      case 'font':
+        link.as = 'font';
+        link.crossOrigin = 'anonymous';
+        break;
+    }
+    
+    document.head.appendChild(link);
+  },
+
+  /**
+   * Lazy load images with intersection observer
+   */
+  lazyLoadImages() {
+    if (typeof window === 'undefined') return;
+    
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.classList.remove('lazy');
+          observer.unobserve(img);
+        }
+      });
+    });
+    
+    images.forEach(img => imageObserver.observe(img));
+  },
+
+  /**
+   * Optimize critical rendering path
+   */
+  optimizeCriticalRenderingPath() {
+    if (typeof window === 'undefined') return;
+    
+    // Remove render-blocking resources
+    const nonCriticalCSS = document.querySelectorAll('link[rel="stylesheet"]:not([media])');
+    nonCriticalCSS.forEach(link => {
+      (link as HTMLLinkElement).media = 'print';
+      (link as HTMLLinkElement).onload = function() {
+        this.media = 'all';
+      };
+    });
+  },
+
+  /**
+   * Monitor Core Web Vitals
+   */
+  monitorCoreWebVitals() {
+    if (typeof window === 'undefined') return;
+    
+    // Monitor Largest Contentful Paint (LCP)
+    if ('PerformanceObserver' in window) {
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        console.log('LCP:', lastEntry.startTime);
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // Monitor First Input Delay (FID)
+      const fidObserver = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          console.log('FID:', (entry as any).processingStart - entry.startTime);
+        });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // Monitor Cumulative Layout Shift (CLS)
+      const clsObserver = new PerformanceObserver((list) => {
+        let clsValue = 0;
+        list.getEntries().forEach((entry) => {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        });
+        console.log('CLS:', clsValue);
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+    }
   },
 };
