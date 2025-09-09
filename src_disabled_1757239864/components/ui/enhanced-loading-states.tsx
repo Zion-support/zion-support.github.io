@@ -104,10 +104,10 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 
   if (isLoading) {
     return (
-      <Badge variant='outline' className={cn ('text - xs', class_name)}>;
-        <LoadingSpinner size='sm' />;
-        <span className='ml - 1'>Loading...</span>;
-      </Badge>);
+      <Badge variant='outline' className={cn ('text - xs', class_name)}> 
+        <LoadingSpinner size='sm' /> 
+        <span className='ml - 1'>Loading...</span> 
+      </Badge>) 
   }
 
       {loadTime && (

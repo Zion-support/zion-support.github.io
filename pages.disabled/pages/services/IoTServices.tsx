@@ -1,14 +1,14 @@
 
-:pages.disabled/pages/services/IoTServices.tsx];
-:pages.disabled/pages/services/IoTServices.tsx;
+:pages.disabled/pages/services/IoTServices.tsx] 
+:pages.disabled/pages/services/IoTServices.tsx 
   '{''
-      name: 'Security & Privacy',;
-      description: 'Enterprise-grade IoT security solutions',;
-      icon: Shield,;
+      name: 'Security & Privacy', 
+      description: 'Enterprise-grade IoT security solutions', 
+      icon: Shield, 
       features: ['Device authentication', 'Data encryption', 'Secure updates', 'Privacy compliance']}
-  ];
+  ] 
 
-              Connect, monitor, and control your world with cutting-edge IoT solutions;
+              Connect, monitor, and control your world with cutting-edge IoT solutions 
               that drive innovation and operational excellence.''
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>''
@@ -98,7 +98,7 @@
       </section>
     </div>
 
-export { IoTServices };
+export { IoTServices } 
 
 export default IoTServices}}}
   '''""

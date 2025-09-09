@@ -1,85 +1,74 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
-import Layout from './components/layout/Layout';
-import Header from './components/header/Header';
-import { Footer } from './components/layout/Footer';
-import LoadingSpinner from './components/ui/loading-spinner';
+import { HelmetProvider } from 'react-helmet-async';
+import { ThemeProvider } from './components/ThemeProvider';
+import { SEO } from './components/SEO';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import LoadingSpinner from './components/ui/LoadingSpinner';
+import './App.css';
 
 // Lazy load pages for better performance
-const HomePage = lazy(() => import('./pages/index'));
-const AboutPage = lazy(() => import('./pages/about'));
-const ContactPage = lazy(() => import('./pages/contact'));
-const ServicesPage = lazy(() => import('./pages/services'));
-const SolutionsPage = lazy(() => import('./pages/solutions'));
-const ServicesOverview = lazy(() => import('./pages/services-overview'));
+const Home = lazy(() => import('./pages/HomePage'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Blog = lazy(() => import('./pages/Blog'));
+const Marketplace = lazy(() => import('./pages/Marketplace'));
+const Profile = lazy(() => import('./pages/Profile'));
+const Cart = lazy(() => import('./pages/Cart'));
+const Checkout = lazy(() => import('./pages/Checkout'));
+const Wishlist = lazy(() => import('./pages/Wishlist'));
 
-// Service pages
-const AIContentGenerationSuite = lazy(() => import('./pages/services/ai-content-generation-suite'));
-const CloudMigrationServices = lazy(() => import('./pages/services/cloud-migration-services'));
-const SmartCRMPlatform = lazy(() => import('./pages/services/smart-crm-platform'));
-const ComprehensiveMicroSaasShowcase = lazy(() => import('./pages/services/comprehensive-micro-saas-showcase'));
-;
-// Simple Header component;
-const Header = () => (;
-  <header className="bg-zion-slate-dark text-white p-4 shadow-lg">;
-    <div className="container mx-auto">;
-      <h1 className="text-2xl font-bold">Zion Tech Group</h1>;
-      <nav className="mt-2">;
-        <a href="/" className="mr-4 hover:text-cyan-400">Home</a>;
-        <a href="/about" className="mr-4 hover:text-cyan-400">About</a>;
-        <a href="/services" className="mr-4 hover:text-cyan-400">Services</a>;
-        <a href="/contact" className="hover:text-cyan-400">Contact</a>;
-      </nav>;
-      <div className="mt-2 text-sm text-gray-300">;
-        <a href="tel:+13024640950" className="mr-4 hover:text-cyan-400">+1 302 464 0950</a>;
-        <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400">kleber@ziontechgroup.com</a>;
-      </div>;
-    </div>;
-  </header>;
-);
-;
-// Simple Footer component;
-const Footer = () => (;
-  <footer className="bg-zion-slate-dark text-white p-4 mt-auto">;
-    <div className="container mx-auto text-center">;
-      <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>;
-      <div className="mt-2 text-sm text-gray-300">;
-        <p>Phone: <a href="tel:+13024640950" className="hover:text-cyan-400">+1 302 464 0950</a></p>;
-        <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400">kleber@ziontechgroup.com</a></p>;
-        <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>;
-        <p>Website: <a href="https://ziontechgroup.com" className="hover:text-cyan-400">https://ziontechgroup.com</a></p>;
-      </div>;
-    </div>;
-  </footer>;
-);
-;
-function App() {;
-  return (;
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;
-      <Header />;
-      <main className="flex-1">;
-        <Suspense fallback={<LoadingSpinner />}>;
-          <Routes>;
-            <Route path="/" element={<HomePage />} />;
-            <Route path="/about" element={<AboutPage />} />;
-            <Route path="/contact" element={<ContactPage />} />;
-            <Route path="/services" element={<ServicesPage />} />;
-            <Route path="/services-overview" element={<ServicesOverview />} />;
-            <Route path="/solutions" element={<SolutionsPage />} />;
-            {/* Service pages */}
-            <Route path="/services/ai-content-generation-suite" element={<AIContentGenerationSuite />} />;
-            <Route path="/services/cloud-migration-services" element={<CloudMigrationServices />} />;
-            <Route path="/services/smart-crm-platform" element={<SmartCRMPlatform />} />;
-            <Route path="/services/comprehensive-micro-saas-showcase" element={<ComprehensiveMicroSaasShowcase />} />;
-            <Route path="*" element={<HomePage />} />;
-          </Routes>;
-        </Suspense>;
-      </main>;
-      <Footer />;
-    </div>;
-  );,
+function App() {
+  const [isLoading, setIsLoading] = useState(false);
+
+  return (
+    <HelmetProvider>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <SEO 
+          title="Zion Tech Group - Leading AI & IT Solutions Provider"
+          description="Transform your business with cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. Trusted by 500+ businesses worldwide."
+        />
+        <Header />
+        
+        <main className="min-h-screen">
+          <ErrorBoundary
+            fallback={
+              <div className="min-h-screen flex items-center justify-center">
+                <div className="text-center">
+                  <h1 className="text-2xl font-bold text-white mb-4">
+                    Something went wrong
+                  </h1>
+                  <p className="text-gray-300">
+                    Please refresh the page to try again.
+                  </p>
+                </div>
+              </div>
+            }
+          >
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/marketplace" element={<Marketplace />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/checkout" element={<Checkout />} />
+                <Route path="/wishlist" element={<Wishlist />} />
+              </Routes>
+            </Suspense>
+          </ErrorBoundary>
+        </main>
+        
+        <Footer />
+      </div>
+    </HelmetProvider>
+  );
 }
 
 export default App;

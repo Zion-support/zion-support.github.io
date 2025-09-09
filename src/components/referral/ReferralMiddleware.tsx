@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
-import { safeStorage } from '@/utils/safeStorage';
+import { safeLocalStorage } from '@/utils/safeStorage';
 import {logErrorToProduction} from '@/utils/productionLogger';
 
 
@@ -14,8 +14,30 @@ export function ReferralMiddleware({ children }: Props) {
     const params = new URLSearchParams(window.location.search);
     const code = params.get('ref');
     if (code) {
-      safeStorage.setItem('referralCode', code);
+      const storage = safeLocalStorage();
+      if (storage) {
+        storage.setItem('referralCode', code);
+      }
     }
-    sendReferral()}, [user?.id, user?.email]); // Added user?.email;
+  }, []);
 
-  return <>{children}</>}
+  useEffect(() => {
+    async function sendReferral() {
+      const storage = safeLocalStorage();
+      if (!storage) return;
+      const code = storage.getItem('referralCode');
+      if (!code || !user?.id) return;
+      try {
+        await supabase.functions.invoke('track-referral', {
+          body: { refCode: code, userId: user.id, email: user.email },
+        });
+        storage.removeItem('referralCode');
+      } catch (err) {
+        logErrorToProduction('Error tracking referral', { data: err });
+      }
+    }
+    sendReferral();
+  }, [user?.id]);
+
+  return <>{children}</>;
+}

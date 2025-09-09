@@ -1,18 +1,7 @@
-// Performance monitoring utilities for better application insights
-
-export interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint?: number;
-  largestContentfulPaint?: number;
-  firstInputDelay?: number;
-  cumulativeLayoutShift?: number;
-  memoryUsage?: number;
-  timestamp: number;
-}
-
+// Performance monitoring utilities
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
-  private metrics: PerformanceMetrics[] = [];
+  private metrics: Map<string, number> = new Map();
   private observers: PerformanceObserver[] = [];
 
   private constructor() {
@@ -27,90 +16,62 @@ export class PerformanceMonitor {
   }
 
   private initializeObservers() {
-    // Only run in browser environment
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
       return;
     }
 
+    // Monitor Core Web Vitals
     try {
-      // First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-        if (fcpEntry) {
-          this.recordMetric('firstContentfulPaint', fcpEntry.startTime);
+      const vitalsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          this.recordMetric(entry.name, entry.startTime);
         }
       });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-      this.observers.push(fcpObserver);
-
-      // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        this.recordMetric('largestContentfulPaint', lastEntry.startTime);
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      this.observers.push(lcpObserver);
-
-      // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          this.recordMetric('firstInputDelay', entry.processingStart - entry.startTime);
-        });
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-      this.observers.push(fidObserver);
-
-      // Cumulative Layout Shift
-      const clsObserver = new PerformanceObserver((list) => {
-        let clsValue = 0;
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-          }
-        });
-        this.recordMetric('cumulativeLayoutShift', clsValue);
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-      this.observers.push(clsObserver);
-
+      vitalsObserver.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
+      this.observers.push(vitalsObserver);
     } catch (error) {
-      console.warn('Performance monitoring initialization failed:', error);
+      console.warn('Performance monitoring not available:', error);
+    }
+
+    // Monitor resource loading
+    try {
+      const resourceObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'resource') {
+            const resource = entry as PerformanceResourceTiming;
+            this.recordMetric(`resource_${resource.name}`, resource.duration);
+          }
+        }
+      });
+      resourceObserver.observe({ entryTypes: ['resource'] });
+      this.observers.push(resourceObserver);
+    } catch (error) {
+      console.warn('Resource monitoring not available:', error);
     }
   }
 
-  private recordMetric(key: keyof PerformanceMetrics, value: number) {
-    const currentMetrics = this.getCurrentMetrics();
-    (currentMetrics as any)[key] = value;
-  }
-
-  private getCurrentMetrics(): PerformanceMetrics {
-    const now = Date.now();
-    const loadTime = now - performance.timeOrigin;
+  public recordMetric(name: string, value: number): void {
+    this.metrics.set(name, value);
     
-    return {
-      loadTime,
-      timestamp: now,
-    };
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`Performance Metric: ${name} = ${value}ms`);
+    }
   }
 
-  public getMetrics(): PerformanceMetrics[] {
-    return [...this.metrics];
+  public getMetric(name: string): number | undefined {
+    return this.metrics.get(name);
   }
 
-  public getLatestMetrics(): PerformanceMetrics | null {
-    return this.metrics.length > 0 ? this.metrics[this.metrics.length - 1] : null;
+  public getAllMetrics(): Record<string, number> {
+    return Object.fromEntries(this.metrics);
   }
 
   public measureFunction<T>(name: string, fn: () => T): T {
     const start = performance.now();
     const result = fn();
     const end = performance.now();
-    
-    console.log(`⏱️ ${name} took ${(end - start).toFixed(2)}ms`);
+    this.recordMetric(name, end - start);
     return result;
   }
 
@@ -118,70 +79,64 @@ export class PerformanceMonitor {
     const start = performance.now();
     const result = await fn();
     const end = performance.now();
-    
-    console.log(`⏱️ ${name} took ${(end - start).toFixed(2)}ms`);
+    this.recordMetric(name, end - start);
     return result;
   }
 
-  public measureResourceLoad(url: string): Promise<number> {
-    return new Promise((resolve) => {
-      const start = performance.now();
-      
-      const img = new Image();
-      img.onload = () => {
-        const end = performance.now();
-        resolve(end - start);
-      };
-      img.onerror = () => {
-        const end = performance.now();
-        resolve(end - start);
-      };
-      img.src = url;
-    });
-  }
-
-  public getMemoryUsage(): number | null {
-    if ('memory' in performance) {
-      return (performance as any).memory.usedJSHeapSize;
-    }
-    return null;
-  }
-
-  public reportMetrics(): void {
-    const metrics = this.getLatestMetrics();
-    if (!metrics) return;
-
-    const report = {
-      ...metrics,
-      memoryUsage: this.getMemoryUsage(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
+  public getCoreWebVitals() {
+    return {
+      FCP: this.getMetric('first-contentful-paint'),
+      LCP: this.getMetric('largest-contentful-paint'),
+      FID: this.getMetric('first-input-delay'),
+      CLS: this.getMetric('cumulative-layout-shift'),
+      TTFB: this.getMetric('time-to-first-byte'),
     };
-
-    console.log('📊 Performance Metrics:', report);
-
-    // In production, you might want to send this to an analytics service
-    if (import.meta.env.PROD) {
-      // Example: Send to analytics service
-      // sendToAnalytics(report);
-    }
   }
 
-  public cleanup(): void {
+  public cleanup() {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
   }
 }
 
-// Convenience functions
-export const performanceMonitor = PerformanceMonitor.getInstance();
+// React hook for performance monitoring
+export function usePerformanceMonitor() {
+  const monitor = PerformanceMonitor.getInstance();
+  
+  return {
+    recordMetric: monitor.recordMetric.bind(monitor),
+    measureFunction: monitor.measureFunction.bind(monitor),
+    measureAsyncFunction: monitor.measureAsyncFunction.bind(monitor),
+    getCoreWebVitals: monitor.getCoreWebVitals.bind(monitor),
+  };
+}
 
-export const measurePerformance = <T>(name: string, fn: () => T): T => {
-  return performanceMonitor.measureFunction(name, fn);
-};
+// Error boundary for performance monitoring
+export class PerformanceErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
-export const measureAsyncPerformance = <T>(name: string, fn: () => Promise<T>): Promise<T> => {
-  return performanceMonitor.measureAsyncFunction(name, fn);
-};
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true };
+  }
 
-export default performanceMonitor;
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    const monitor = PerformanceMonitor.getInstance();
+    monitor.recordMetric('error_boundary_triggered', 1);
+    
+    console.error('Performance Error Boundary caught an error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong. Please refresh the page.</div>;
+    }
+
+    return this.props.children;
+  }
+}

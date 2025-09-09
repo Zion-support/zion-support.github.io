@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import SEO from '../components/SEO';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
+import React from 'react' 
+import { motion } from 'framer-motion' 
+import SEO from '../components/SEO' 
+import { Button } from '../components/ui/Button' 
+import { Card } from '../components/ui/Card' 
+import { Badge } from '../components/ui/Badge' 
 import {
   CheckCircle,
   Star,
@@ -32,7 +32,7 @@ import {
   BookOpen,
   Lightbulb,
   HelpCircle,
-  Network } from 'lucide-react';
+  Network } from 'lucide-react' 
 const PricingGuide: React.FC = () => {
   const pricingFactors = [
     {
@@ -70,7 +70,7 @@ const PricingGuide: React.FC = () => {
         'Rush delivery (50% faster): +30% cost',
         'Emergency delivery (75% faster): +50% cost' ],
       icon: Clock,
-      color: 'from-orange-500 to-red-500' } ];
+      color: 'from-orange-500 to-red-500' } ] 
   const pricingExamples = [
     {
       scenario: 'Small Business Automation',
@@ -105,7 +105,7 @@ const PricingGuide: React.FC = () => {
         'Training and certification' ],
       price: '$15,000 - $35,000',
       timeline: '8-12 weeks',
-      roi: '400% ROI within 8 months' } ];
+      roi: '400% ROI within 8 months' } ] 
   const costSavingTips = [
     {
       tip: 'Start with MVP',
@@ -120,7 +120,7 @@ const PricingGuide: React.FC = () => {
       savings: 'Improve cash flow and reduce risk' }, {
       tip: 'Long-term Partnership',
       description: 'Sign annual contracts for ongoing development and support',
-      savings: 'Get 20% discount on all services' } ];
+      savings: 'Get 20% discount on all services' } ] 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
@@ -343,8 +343,8 @@ const PricingGuide: React.FC = () => {
         </div>
       </section>
     </div>
-  )};
+  )} 
 
-export default PricingGuide;
-  );
-};
+export default PricingGuide 
+  ) 
+} 

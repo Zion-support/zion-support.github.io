@@ -1,4 +1,4 @@
-:pages.disabled/pages/services/AI.tsx;
+:pages.disabled/pages/services/AI.tsx 
 
   Brain,
   Cpu,
@@ -20,7 +20,7 @@
   Heart,
   DollarSign,
   Factory,
-  ShoppingCart'} from 'lucide-react';';
+  ShoppingCart'} from 'lucide-react';' 
 export: { function }
 export default function AIServices(...args[]):  {}
 
@@ -33,11 +33,11 @@ export default function AIServices(...args[]):  {}
               we deliver AI solutions that drive real results.'
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>
-              <Link'';
-                to='/contact'';
-                className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'';
-                Get Started'';
-:pages.disabled/pages/services/AI.tsx;
+              <Link'' 
+                to='/contact'' 
+                className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'' 
+                Get Started'' 
+:pages.disabled/pages/services/AI.tsx 
                 <ArrowRight className='ml-2 h-5 w-5'  />'
               </Link>'''
               <button className='inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200>''
@@ -70,7 +70,7 @@ export default function AIServices(...args[]):  {}
         <div className='max-w-7xl mx-auto>''
           <div className='text-center mb-16>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AI.tsx;
+:pages.disabled/pages/services/AI.tsx 
 
               <div'
           </div>'
@@ -78,12 +78,12 @@ export default function AIServices(...args[]):  {}
           <div className='grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-2 gap-8'>
             {aiServices.map((service, index
-              <div;
-                key={index};
+              <div 
+                key={index} 
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover: border-cyan-500/50 transition-all duration-300 hove,
     r:transform hove,
-    r:scale-105'';
-'';
+    r:scale-105'' 
+'' 
 
                     <service.icon className='h-8 w-8 text-white' />'
                     <service.icon className='h-8 w-8 text-white' />
@@ -93,9 +93,9 @@ export default function AIServices(...args[]):  {}
                     <p className='text-slate-400'>{service.description}</p>
                   </div>
 
-                    to='/contact'';
-                    className='px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200';
-                    Get Quote;
+                    to='/contact'' 
+                    className='px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200' 
+                    Get Quote 
                 </ul>'
 '''
                 <div className='flex items-center justify-between>
@@ -104,9 +104,9 @@ export default function AIServices(...args[]):  {}
                     <div className='text-slate-400 text-sm'>{service.duration}</div>
                   </div>'
                   <Link'''
-                    to='/contact'';
-                    className='px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200'';
-                    Get Quote;
+                    to='/contact'' 
+                    className='px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200'' 
+                    Get Quote 
 
                   </Link>
                 </div>
@@ -122,10 +122,10 @@ export default function AIServices(...args[]):  {}
     g:grid-cols-6 gap-8'>
             {aiTechnologies.map(tec,
     h: unknown, index: unknown(
-              <div;
-                key={index};
-                className='text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300'';
-'';
+              <div 
+                key={index} 
+                className='text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300'' 
+'' 
 
                   <tech.icon className='h-8 w-8 text-white' />'
                   <tech.icon className='h-8 w-8 text-white' />
@@ -134,7 +134,7 @@ export default function AIServices(...args[]):  {}
                 <p className='text-slate-400 text-sm'>{tech.description}</p>
 
               </div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -145,10 +145,10 @@ export default function AIServices(...args[]):  {}
     g:grid-cols-4 gap-8'>
             {useCases.map(useCas,
     e: unknown, index: unknown
-              <div;
-                key={index};
-                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300'';
-'';
+              <div 
+                key={index} 
+                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300'' 
+'' 
 
                   <useCase.icon className='h-6 w-6 text-white' />'
                 </div>'''
@@ -176,23 +176,23 @@ export default function AIServices(...args[]):  {}
             <p className='text-xl text-slate-300 mb-8>
               Let's discuss how AI can transform your business operations and drive growth'
 
-              <Link'';
-                to='/contact'';
-                className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'';
-                Schedule Consultation'';
-:pages.disabled/pages/services/AI.tsx;
+              <Link'' 
+                to='/contact'' 
+                className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'' 
+                Schedule Consultation'' 
+:pages.disabled/pages/services/AI.tsx 
                 <ArrowRight className='ml-2 h-5 w-5'  />              </Link>''
-              <Link'';
-                to='/services'';
-                className='inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200';
-                Explore All Services;
+              <Link'' 
+                to='/services'' 
+                className='inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200' 
+                Explore All Services 
                 <ArrowRight className='ml-2 h-5 w-5'  />              </Link>'
               <Link'''
-                to='/services'';
+                to='/services'' 
                 className='inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hove,
     r:bg-cyan-500 hove,
-    r:text-white transition-all duration-200'';
-                Explore All Services;
+    r:text-white transition-all duration-200'' 
+                Explore All Services 
 
               </Link>
             </div>

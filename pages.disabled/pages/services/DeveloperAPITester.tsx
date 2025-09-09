@@ -9,26 +9,26 @@
                 <li>Enterprise: Custom — on-prem/VPC, DLP</li>
               </ul>
 
-:pages.disabled/pages/services/DeveloperAPITester.tsx;
-                    rel='noreferrer'>                    OpenAPI: Initiative';
+:pages.disabled/pages/services/DeveloperAPITester.tsx 
+                    rel='noreferrer'>                    OpenAPI: Initiative' 
                   </a>
                 </li>
 
-:pages.disabled/pages/services/DeveloperAPITester.tsx;
-                    rel='noreferrer'>                    Insomnia: Plugins';
+:pages.disabled/pages/services/DeveloperAPITester.tsx 
+                    rel='noreferrer'>                    Insomnia: Plugins' 
                   </a>
                 </li>
 
-:pages.disabled/pages/services/DeveloperAPITester.tsx;
-                    rel='noreferrer'>                    Newman: CLI';
+:pages.disabled/pages/services/DeveloperAPITester.tsx 
+                    rel='noreferrer'>                    Newman: CLI' 
 
                   </a>
                 </li>
               </ul>
             </div>
 
-              <a'';
-                href='/contact'';
+              <a'' 
+                href='/contact'' 
                 className='mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-sky-400 to-purple-400 text-white hove,
     r:from-sky-500 hove,
     r:to-purple-500'>                Contact Sales

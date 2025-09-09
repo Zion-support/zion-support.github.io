@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
+import React, { useState, useEffect } from 'react' 
+import Head from 'next/head' 
 
 interface KYCSubmission {
-  id: string;
-  userId: string;
-  status: 'pending' | 'approved' | 'rejected' | 'needs_info';
-  submittedAt: string;
+  id: string 
+  userId: string 
+  status: 'pending' | 'approved' | 'rejected' | 'needs_info' 
+  submittedAt: string 
   documents: Array<{
-    id: string;
-    kind: string;
-    filename: string;
-    uploadedAt: string;
-  }>;
+    id: string 
+    kind: string 
+    filename: string 
+    uploadedAt: string 
+  }> 
 }
 
 const mockKYCData: KYCSubmission[] = [
@@ -29,19 +29,19 @@ const mockKYCData: KYCSubmission[] = [
       }
     ]
   }
-];
+] 
 
 const AdminKYCPage: React.FC = () => {
-  const [submissions, setSubmissions] = useState<KYCSubmission[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [submissions, setSubmissions] = useState<KYCSubmission[]>([]) 
+  const [loading, setLoading] = useState(true) 
 
   useEffect(() => {
     // Simulate loading data
     setTimeout(() => {
-      setSubmissions(mockKYCData);
-      setLoading(false);
-    }, 1000);
-  }, []);
+      setSubmissions(mockKYCData) 
+      setLoading(false) 
+    }, 1000) 
+  }, []) 
 
   return (
     <>

@@ -372,7 +372,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
         aria-label="Accessibility settings"
       >
         Skip to main content
-      </a>
+      </motion.button>
 
       {/* Accessibility toggle button */}
       <button

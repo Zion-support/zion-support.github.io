@@ -1,6 +1,6 @@
-;
+ 
 
-          A collaborative content workspace with AI-assisted briefs, long-form drafting, SEO optimization, and;
+          A collaborative content workspace with AI-assisted briefs, long-form drafting, SEO optimization, and 
 
             <ul className='space-y-2 text-sm text-zion-slate-light'>
 

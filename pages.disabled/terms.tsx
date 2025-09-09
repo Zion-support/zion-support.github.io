@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
@@ -76,6 +77,14 @@ const Terms: NextPage = () => {
             </div>;
           </div>;
         </section>;
+=======
+import React from 'react' 
+import Head from 'next/head' 
+import Link from 'next/link' 
+import { motion } from 'framer-motion' 
+import { FileText, Shield, AlertCircle, Scale, Mail, Phone, MapPin } from 'lucide-react' 
+import MainLayout from '../src/components/layout/MainLayout' 
+>>>>>>> cursor/check-fix-push-and-merge-to-main-649b
 
 export default function TermsPage() {
   return (
@@ -441,5 +450,10 @@ export default function TermsPage() {
       </section>;
     </MainLayout>;
   )}
+<<<<<<< HEAD
   )}
 
+=======
+  ) 
+} 
+>>>>>>> cursor/check-fix-push-and-merge-to-main-649b

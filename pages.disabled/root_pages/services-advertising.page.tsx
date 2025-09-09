@@ -1,7 +1,7 @@
-import: React from 'react.ts';';
-import: Head from 'next/head.ts';';
-import: { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin  } from 'lucide-react';';
-import: Link from 'next/link.ts';';
+import: React from 'react.ts';' 
+import: Head from 'next/head.ts';' 
+import: { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin  } from 'lucide-react';' 
+import: Link from 'next/link.ts';' 
 export: { function }
 export default function ServicesAdvertisingPage(...args[]):  {
 
@@ -236,7 +236,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
     s: {ext('http,
     s://openai.com/safety')}, {ext('https://github.com/guardrails-ai/guardrails')}</li>
             </ul>'
-          </section>';
+          </section>' 
 '''
           <section className='space-y-6>''
             <h2 className='text-2xl font-semibold text-white'>Identity & SSO/SCIM</h2>'''
@@ -246,7 +246,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
               <li>References: {ext('http,
     s://auth0.com/pricing')}, {ext('https://workos.com/pricing')}, {ext('https://www.okta.com/pricing/')}</li>
             </ul>'
-          </section>';
+          </section>' 
 '''
           <section className='space-y-6>''
             <h2 className='text-2xl font-semibold text-white'>Status Page & SLO Monitor</h2>'''
@@ -287,7 +287,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
     s: {ext('http,
     s://stripe.com/pricing')}, {ext('https://pay.google.com/about/business/')}, {ext('https://partnerstack.com/')}</li>
             </ul>'
-          </section>';
+          </section>' 
 '''
           <section className='space-y-6>''
             <h2 className='text-2xl font-semibold text-white'>API Security Scanner</h2>'''
@@ -357,7 +357,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
     s: {ext('http,
     s://mailshake.com/pricing')}, {ext('https://www.gmass.co/pricing')}</li>
             </ul>'
-          </section>';
+          </section>' 
 '''
           <div className='pt-4 text-slate-400 text-sm'>See also: <a className='text-cyan-400 underline' href='/market-pricing'>Market Pricing</a> for a broader list of benchmarks and links.</div>'''
           <section id='ai-email-responder' className='space-y-6>''

@@ -1,16 +1,16 @@
 
-  2.1.0;
-  ', icon: '🟨 }, { name:',;
-  Python;
-  ', version: '1.8.,2, icon:',;
-  🐍;
+  2.1.0 
+  ', icon: '🟨 }, { name:', 
+  Python 
+  ', version: '1.8.,2, icon:', 
+  🐍 
 
-  1.2.0;
-  ', icon: '🐹 }, { name:',;
-  Ruby;
+  1.2.0 
+  ', icon: '🐹 }, { name:', 
+  Ruby 
 
   return(
-    <MainLayout;
+    <MainLayout 
       title='API Reference - Zion Tech Group''      description='Complete API reference and documentation for Zion Tech Group services.''    >'      {/* Hero Section */}
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>        <div className='container mx-auto px-4 text-center>          <h1 className='text-5xl md: text-6xl font-bold mb-6>            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'>API Reference</span>'          </h1>'          <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200>            Complete API documentation for integrating with Zion Tech Group services.'          </p>'
           <div className='flex flex-col sm:flex-row justify-center gap-4>            <button className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors>              Get API Key'            </button>'

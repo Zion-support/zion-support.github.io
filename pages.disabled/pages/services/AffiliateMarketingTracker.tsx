@@ -1,31 +1,31 @@
-;
+ 
 export: { function }
-:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
+:pages.disabled/pages/services/AffiliateMarketingTracker.tsx 
 export: default function AffiliateMarketingTracker(...args[]):  {
 export: default function AffiliateMarketingTracker(...args[]):  {}
     }, {
 
-:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
-        'Fraud: detection';';
+:pages.disabled/pages/services/AffiliateMarketingTracker.tsx 
+        'Fraud: detection';' 
         'Fraud: detection'';'] ],
       popular: fals,e}
-:pages.disabled/pages/services/AffiliateMarketingTracker.tsx];
-  return();
-:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
+:pages.disabled/pages/services/AffiliateMarketingTracker.tsx] 
+  return() 
+:pages.disabled/pages/services/AffiliateMarketingTracker.tsx 
     <>
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx
-<:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
-      <SEO;
-=;
+<:pages.disabled/pages/services/AffiliateMarketingTracker.tsx 
+      <SEO 
+= 
 
-      <SEO '';
-        title = 'Affiliate Marketing Tracker - Zion Tech Group'';
-        description='Advanced affiliate marketing tracking platform with AI-powered analytics, fraud detection, and real-time reporting. Boost your affiliate program ROI.'';
+      <SEO '' 
+        title = 'Affiliate Marketing Tracker - Zion Tech Group'' 
+        description='Advanced affiliate marketing tracking platform with AI-powered analytics, fraud detection, and real-time reporting. Boost your affiliate program ROI.'' 
         canonical='/services/affiliate-marketing-tracker'/>'
 '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>'
       <SEO '''
-        title = 'Affiliate Marketing Tracker - Zion Tech Group'';
-        description='Advanced affiliate marketing tracking platform with AI-powered analytics, fraud detection, and real-time reporting. Boost your affiliate program ROI.'';
+        title = 'Affiliate Marketing Tracker - Zion Tech Group'' 
+        description='Advanced affiliate marketing tracking platform with AI-powered analytics, fraud detection, and real-time reporting. Boost your affiliate program ROI.'' 
         canonical='/services/affiliate-marketing-tracker''/>
 '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>
         {/* Hero Section */}'
@@ -34,39 +34,39 @@ export: default function AffiliateMarketingTracker(...args[]):  {}
           <div className='relative max-w-7xl mx-auto px-6>''
             <div className='text-center'>
 
-              <motion.div;
+              <motion.div 
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
-  y: 20;
+:pages.disabled/pages/services/AffiliateMarketingTracker.tsx 
+  y: 20 
 
-                  <Link'';
-                    to='/request-quote'';
-                    className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105';
-                    Get Started;
+                  <Link'' 
+                    to='/request-quote'' 
+                    className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105' 
+                    Get Started 
                   </Link>''
-                  <Link'';
-                    to='/contact'';
+                  <Link'' 
+                    to='/contact'' 
                     className='px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hove,
-    r:text-white transition-all duration-300';
-                    Schedule Demo;
+    r:text-white transition-all duration-300' 
+                    Schedule Demo 
   ,
     y: 0}}
                 transition={{ duration: 0.6 }}
-'';
+'' 
                 <h1 className='text-5xl md:text-6xl font-bold mb-6>''
                   <span className='bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent'>
                     Affiliate Marketing Tracker
 
-                    to='/request-quote'';
-                    className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'';
-                    Get Started;
+                    to='/request-quote'' 
+                    className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'' 
+                    Get Started 
                   </Link>'
                   <Link'''
-                    to='/contact'';
+                    to='/contact'' 
                     className='px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hove,
     r:bg-blue-500 hove,
-    r:text-white transition-all duration-300'';
-                    Schedule Demo;
+    r:text-white transition-all duration-300'' 
+                    Schedule Demo 
 
                   </Link>
                 </div>
@@ -81,18 +81,18 @@ export: default function AffiliateMarketingTracker(...args[]):  {}
               </p>
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx: </div>
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx
-<:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
-=;
+<:pages.disabled/pages/services/AffiliateMarketingTracker.tsx 
+= 
 
-            '';
+            '' 
             <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{features.map((feature, index(
 
-                <motion.div;
+                <motion.div 
                   key={index}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
-  y: 20;
+:pages.disabled/pages/services/AffiliateMarketingTracker.tsx 
+  y: 20 
 
                     <feature.icon className='w-6 h-6 text-white' />'
                     <feature.icon className='w-6 h-6 text-white' />
@@ -101,7 +101,7 @@ export: default function AffiliateMarketingTracker(...args[]):  {}
                   <p className='text-gray-300'>{feature.description}</p>
 
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </section>
@@ -112,26 +112,26 @@ export: default function AffiliateMarketingTracker(...args[]):  {}
               </p>
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx: </div>
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx
-<:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
-=;
+<:pages.disabled/pages/services/AffiliateMarketingTracker.tsx 
+= 
 
             <div className='grid md: grid-cols-2 gap-8'>
               {benefits.map(benefi,
-    t: unknown, index: unknown();
+    t: unknown, index: unknown() 
                 <motion.div'
-            '';
+            '' 
             <div className='grid m,
     d: grid-cols-2 gap-8'>{benefits.map(benefi,
     t: unknown, index: unknown(
 
-                <motion.div;
+                <motion.div 
                   key={inde,x}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
+:pages.disabled/pages/services/AffiliateMarketingTracker.tsx 
 
                   </div>
                 </motion.div>
-              ));
+              )) 
             </div>
           </div>
         </section>
@@ -142,23 +142,23 @@ export: default function AffiliateMarketingTracker(...args[]):  {}
               </p>
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx: </div>
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx
-<:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
-=;
+<:pages.disabled/pages/services/AffiliateMarketingTracker.tsx 
+= 
 
             <div className='grid md: grid-cols-3 gap-8'>
               {pricingPlans.map(pla,
-    n: unknown, index: unknown();
+    n: unknown, index: unknown() 
                 <motion.div'
-            '';
+            '' 
             <div className='grid m,
     d: grid-cols-3 gap-8'>{pricingPlans.map(pla,
     n: unknown, index: unknown(
 
-                <motion.div;
+                <motion.div 
                   key={inde,x}
                   initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
-  y: 20;
+:pages.disabled/pages/services/AffiliateMarketingTracker.tsx 
+  y: 20 
 
                       </span>
 
@@ -173,21 +173,21 @@ export: default function AffiliateMarketingTracker(...args[]):  {}
                     ))}
                   </ul>
 
-';
-                      plan.popular'';
+' 
+                      plan.popular'' 
                         ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover: from-blue-600 hove,
     r:to-purple-700'''`;`
                         : 'bg-slate-700 text-white hove,
     r:bg-slate-600'``;`
-                  <Link'';
+                  <Link'' 
                     to='/request-quote'`;`
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}`
-                      plan.popular';
+                      plan.popular' 
                         ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover: from-blue-600 hove,
-    r:to-purple-700'';
+    r:to-purple-700'' 
                         : 'bg-slate-700 text-white hove,
     r:bg-slate-600'`}`}
-                    Get Started;
+                    Get Started 
 
                   </Link>
                 </motion.div>
@@ -199,15 +199,15 @@ export: default function AffiliateMarketingTracker(...args[]):  {}
           <div className='max-w-4xl mx-auto text-center px-6'>
             <motion.div
               initial = {}, { opacity: 0,
-:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
-  y: 20;
+:pages.disabled/pages/services/AffiliateMarketingTracker.tsx 
+  y: 20 
   ,
     y: 20}}
               whileInView = {}, { opacity: 1,
-:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
+:pages.disabled/pages/services/AffiliateMarketingTracker.tsx 
   y: 0}}
-              transition={{ duration: 0.6 }};
-'';
+              transition={{ duration: 0.6 }} 
+'' 
               <h2 className='text-4xl font-bold mb-6 text-white>
                 Ready to Transform Your Affiliate Marketing?''
               </h2>'''
@@ -215,20 +215,20 @@ export: default function AffiliateMarketingTracker(...args[]):  {}
                 Join thousands of businesses using our platform to optimize their affiliate programs and increase revenue.''
               </p>'''
               <div className='flex flex-col sm: flex-row gap-4 justify-center>'
-                <Link'';
-                  to='/request-quote'';
-                  className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105';
-                  Start Free Trial;
+                <Link'' 
+                  to='/request-quote'' 
+                  className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105' 
+                  Start Free Trial 
                 </Link>''
                 <Link'''
-                  to='/contact'';
+                  to='/contact'' 
                   className='px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hove,
-    r:text-white transition-all duration-300';
-                  Contact Sales;
+    r:text-white transition-all duration-300' 
+                  Contact Sales 
   ,
     y: 0}}
               transition={{ duration: 0.6 }}
-'';
+'' 
               <h2 className='text-4xl font-bold mb-6 text-white'>
                 Ready to Transform Your Affiliate Marketing?'
               </h2>'''
@@ -237,16 +237,16 @@ export: default function AffiliateMarketingTracker(...args[]):  {}
               </p>'''
               <div className='flex flex-col sm: flex-row gap-4 justify-center>
                 <Link'''
-                  to='/request-quote'';
-                  className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'';
-                  Start Free Trial;
+                  to='/request-quote'' 
+                  className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'' 
+                  Start Free Trial 
                 </Link>'
                 <Link'''
-                  to='/contact'';
+                  to='/contact'' 
                   className='px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hove,
     r:bg-blue-500 hove,
-    r:text-white transition-all duration-300'';
-                  Contact Sales;
+    r:text-white transition-all duration-300'' 
+                  Contact Sales 
 
                 </Link>
               </div>

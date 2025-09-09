@@ -18,15 +18,15 @@ import {}
   Eye,
   Target,
 
-              <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='bg-gradient-to-r: from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: shadow-lg: hover:shadow-cyan-500/25: transition-all duration-300'>                Get Started Today';
+              <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='bg-gradient-to-r: from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: shadow-lg: hover:shadow-cyan-500/25: transition-all duration-300'>                Get Started Today' 
               </motion.button>
-:pages.disabled/pages/services/AIBlockchainIntegration.tsx: <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='border: border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-cyan-400/10: transition-all duration-300'>                Watch Demo';
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx: <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='border: border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-cyan-400/10: transition-all duration-300'>                Watch Demo' 
 
               </motion.button>
             </div>
@@ -34,14 +34,14 @@ import {}
         </div>
       </section>
 
-              Our AI Blockchain Integration platform combines cutting-edge;
-              artificial intelligence with blockchain technology to deliver;
+              Our AI Blockchain Integration platform combines cutting-edge 
+              artificial intelligence with blockchain technology to deliver 
               unprecedented capabilities.
             </p>
 
             {features.map((feature, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
                   <feature.icon className='w-8 h-8 text-white' />'
@@ -58,7 +58,7 @@ import {}
 
             {benefits.map((benefit, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
 
@@ -70,7 +70,7 @@ import {}
 
             {pricing.map((plan, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
                     </span>
@@ -83,10 +83,10 @@ import {}
                   whileHover={{ scale: 1.05 }}`;`
                   whileTap={{ scale: 0.95 }}``;`
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${`
-  index === 1';
-  ';
+  index === 1' 
+  ' 
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover: shadow-lg hove,
-    r:shadow-cyan-500/25'';
+    r:shadow-cyan-500/25'' 
   '`;`
                       : 'border border-cyan-400 text-cyan-400 hove,
     r:bg-cyan-400/10``}`}                >
@@ -100,15 +100,15 @@ import {}
         </div>
       </section>
 
-              <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='bg-gradient-to-r: from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: shadow-lg: hover:shadow-cyan-500/25: transition-all duration-300'>                Start Free Trial';
+              <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='bg-gradient-to-r: from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: shadow-lg: hover:shadow-cyan-500/25: transition-all duration-300'>                Start Free Trial' 
               </motion.button>
-:pages.disabled/pages/services/AIBlockchainIntegration.tsx: <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='border: border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-cyan-400/10: transition-all duration-300'>                Contact Sales';
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx: <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='border: border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-cyan-400/10: transition-all duration-300'>                Contact Sales' 
 
               </motion.button>
             </div>

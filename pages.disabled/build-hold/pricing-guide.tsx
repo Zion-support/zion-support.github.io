@@ -1,14 +1,14 @@
-:pages/pricing-guide.tsx;
-React: from;
-  'react';';
-import: { motion } from;
-  'framer-motion'{ SEO: } from;';
-  '../components/SEO';';
-import: { Button } from;
-  '../components/ui/Button'{ Card: } from;';
-  '../components/ui/Card';';
-import: { Badge } from;
-  '../components/ui/Badge';import: { '  CheckCircle, Star',;
+:pages/pricing-guide.tsx 
+React: from 
+  'react';' 
+import: { motion } from 
+  'framer-motion'{ SEO: } from;' 
+  '../components/SEO';' 
+import: { Button } from 
+  '../components/ui/Button'{ Card: } from;' 
+  '../components/ui/Card';' 
+import: { Badge } from 
+  '../components/ui/Badge';import: { '  CheckCircle, Star', 
   Zap, Shield,
   Users, Globe,
   Phone, Mail,
@@ -21,7 +21,7 @@ import: { Badge } from;
   Rocket, Heart,
   Sparkles, Calculator,
   BookOpen, Lightbulb,
-  HelpCircle} from;
+  HelpCircle} from 
 
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}

@@ -1,5 +1,5 @@
 import { toast as sonnerToast } from 'sonner';
-import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
+import { info, warn, logErrorToProduction } from '@/utils/productionLogger';
 
 
 // Toast configuration constants
@@ -450,11 +450,11 @@ export class EnhancedGlobalErrorHandler {
 
       if (isLikelyUnauthenticated) {
         // Log suppression for debugging, but don't show the toast.
-        logWarn(`[EnhancedGlobalErrorHandler] Suppressing toast for ${type} with message "${errorMessage}" for assumed unauthenticated user.`);
+        warn(`[EnhancedGlobalErrorHandler] Suppressing toast for ${type} with message "${errorMessage}" for assumed unauthenticated user.`);
         return null;
       } else {
         if (process.env.NODE_ENV === 'development') {
-          logInfo(`[EnhancedGlobalErrorHandler] NOT suppressing "${errorMessage}" toast as user appears authenticated or check is inconclusive.`);
+          info(`[EnhancedGlobalErrorHandler] NOT suppressing "${errorMessage}" toast as user appears authenticated or check is inconclusive.`);
         }
       }
     }
@@ -466,7 +466,7 @@ export class EnhancedGlobalErrorHandler {
     }
 
     if (currentRetries >= this.maxRetries) {
-      logWarn(`Max retries exceeded for error: ${errorMessage}`);
+      warn(`Max retries exceeded for error: ${errorMessage}`);
       return null;
     }
 

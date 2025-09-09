@@ -4,19 +4,19 @@ import {}
   DollarSign,
   ExternalLink,
   Phone,
-  Mail} from;
-  'lucide-react.ts';';
-:pages.disabled/pages/services/LandingPageGenerator.tsx;
+  Mail} from 
+  'lucide-react.ts';' 
+:pages.disabled/pages/services/LandingPageGenerator.tsx 
 
-          Built-in copy, image generation, forms, analytics, and deployment to;
+          Built-in copy, image generation, forms, analytics, and deployment to 
 
             <div'
         </p>'
 '''
         <div className='mt-10 grid gap-6 sm: anygrid-cols-2 l,
     g:grid-cols-3>
-  '{['';
-  'On-brand copy and image generation',SEO-ready metadata and schema;
+  '{['' 
+  'On-brand copy and image generation',SEO-ready metadata and schema 
 
             <li>Setup: $2k–$8k (brand + components)</li>
 
@@ -24,7 +24,7 @@ import {}
       </section>
     </div>
   )}
-:pages.disabled/pages/services/LandingPageGenerator.tsx;
+:pages.disabled/pages/services/LandingPageGenerator.tsx 
 
 
 

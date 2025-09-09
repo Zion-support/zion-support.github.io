@@ -1,6 +1,6 @@
 
   return(
-    <MainLayout;
+    <MainLayout 
       title='AI & Machine Learning Services - Zion Tech Group''      description='Custom AI model development, process automation, analytics platforms, and chatbot solutions. Leverage the power of artificial intelligence to transform your business.''    >'      {/* Hero Section */}
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>        <div className='container mx-auto px-4>          <div className='max-w-4xl mx-auto text-center>            <h1 className='text-5xl md: text-6xl font-bold mb-6 leading-tight>              AI & Machine Learning Services'            </h1>'
             <p className='text-xl m,

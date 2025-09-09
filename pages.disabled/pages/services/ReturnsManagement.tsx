@@ -1,8 +1,8 @@
-:pages.disabled/pages/services/ReturnsManagement.tsx;
-          Reduce: support workload and increase customer satisfaction with a self‑serve, branded;
-          returns: portal that automates labels, RMAs, inspections, and refunds while syncing;
+:pages.disabled/pages/services/ReturnsManagement.tsx 
+          Reduce: support workload and increase customer satisfaction with a self‑serve, branded 
+          returns: portal that automates labels, RMAs, inspections, and refunds while syncing 
 function: ReturnsManagement(function ReturnsManagement() {): any: {}
-  return();
+  return() 
 
               <li>Instant label generation (UPS, USPS, FedEx, DHL)</li>
               <li>Auto RMA approval rules and fraud checks</li>
@@ -38,16 +38,16 @@ function: ReturnsManagement(function ReturnsManagement() {): any: {}
         </p>
       </section>
     </div>
-  );
+  ) 
 
 :pages.disabled/pages/services/ReturnsManagement.tsx
-<:pages.disabled/pages/services/ReturnsManagement.tsx;
-=>export: default ReturnsManagement;
-export: default ReturnsManagement;
-export: default ReturnsManagement;
-export: default ReturnsManagement;
-export: default ReturnsManagement;
-export: default ReturnsManagement;
-:pages.disabled/pages/services/ReturnsManagement.tsx;
+<:pages.disabled/pages/services/ReturnsManagement.tsx 
+=>export: default ReturnsManagement 
+export: default ReturnsManagement 
+export: default ReturnsManagement 
+export: default ReturnsManagement 
+export: default ReturnsManagement 
+export: default ReturnsManagement 
+:pages.disabled/pages/services/ReturnsManagement.tsx 
 
 

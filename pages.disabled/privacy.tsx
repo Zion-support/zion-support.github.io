@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react';
+=======
+import Head from 'next/head' 
+import Link from 'next/link' 
+import { motion } from 'framer-motion' 
+import { Shield, Lock, Eye, Database, Mail, Phone, MapPin } from 'lucide-react' 
+import MainLayout from '../src/components/layout/MainLayout' 
+>>>>>>> cursor/check-fix-push-and-merge-to-main-649b
 
 const Privacy: NextPage = () => {
   const lastUpdated = 'January 27, 2025';
@@ -199,6 +207,7 @@ const Privacy: NextPage = () => {
                   </div>
                 </div>
 
+<<<<<<< HEAD
               <h2 className="text-3xl font-bold mb-6 text-gray-800">7. International Data Transfers</h2>;
               <div className="bg-white rounded-lg shadow-lg p-8 mb-8">;
                 <p className="text-gray-600">;
@@ -254,3 +263,16 @@ const Privacy: NextPage = () => {
   )}
 
 }}
+=======
+                <p className="text-sm text-gray-600 mt-8">
+                  Last updated: January 2024
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </main>
+  ) 
+}
+>>>>>>> cursor/check-fix-push-and-merge-to-main-649b

@@ -21,9 +21,9 @@ import {}
   Phone,
   Mail,
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/AIWorkflowOrchestrator.tsx;
+:pages.disabled/pages/services/AIWorkflowOrchestrator.tsx 
 
                 <ArrowRight className='w-5 h-5 mr-2'  />                Watch Demo</Link>            </div>
           </motion.div>
@@ -33,11 +33,11 @@ import {}
 '{/* Features Section */}      <section className='py-24 bg-black/20>''
         <div className='container mx-auto px-4'>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/AIWorkflowOrchestrator.tsx;
+:pages.disabled/pages/services/AIWorkflowOrchestrator.tsx 
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-blue-400/50 transition-all duration-300''>''
@@ -56,18 +56,18 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/AIWorkflowOrchestrator.tsx;
+:pages.disabled/pages/services/AIWorkflowOrchestrator.tsx 
 
               <motion.divkey={index}                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-:pages.disabled/pages/services/AIWorkflowOrchestrator.tsx;
+:pages.disabled/pages/services/AIWorkflowOrchestrator.tsx 
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${`
-  tier.popular'';
-                    ?;
-  'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-purple-500/10'';
+  tier.popular'' 
+                    ? 
+  'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-purple-500/10'' 
   '`: 'border-white/10``}`}`
               >'{tier.popular && (''                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
                     <span className='bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
@@ -92,11 +92,11 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/AIWorkflowOrchestrator.tsx;
+:pages.disabled/pages/services/AIWorkflowOrchestrator.tsx 
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='text-center''>''
@@ -115,9 +115,9 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/AIWorkflowOrchestrator.tsx;
+:pages.disabled/pages/services/AIWorkflowOrchestrator.tsx 
 
                 <Play className='w-5 h-5 mr-2'  />                Schedule Demo</Link>            </div>
           </motion.div>
@@ -137,7 +137,7 @@ import {}
 
 
                 <br />
-                Middletown DE 19709;
+                Middletown DE 19709 
               </p>            </div>
           </div>
         </div>

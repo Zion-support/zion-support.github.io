@@ -1,67 +1,8 @@
-import { Route, Routes    } from 'react-router-dom';
-export default function Page() {
-export default function Page() {
-  import { Suspense, lazy } from 'react';
-export default function Page() {
-export default function Page() {
-  import { ProtectedRoute } from '../components/ProtectedRoute';
-export default function Page() {
-export default function Page() {
-import LoadingSpinner from '../components/LoadingSpinner';
+// Routes have been converted to Next.js pages structure
+// This component is no longer needed since Next.js uses file-based routing
 
-// Lazy load dashboard pages;
-const Dashboard = lazy(() => import('../pages/Dashboard'));
-const ClientDashboard = lazy(() => import('../pages/ClientDashboard'));
-const TalentDashboard = lazy(() => import('../pages/TalentDashboard'));
-const CreatorDashboard = lazy(() => import('../pages/CreatorDashboard'));
-const Analytics = lazy(() => import('../pages/Analytics'));
-const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));
-const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));
-const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));
-;
-const DashboardRoutes: React.FC = () => {};
-  return(<Suspense fallback={<LoadingSpinner />}>;
-      <Routes>;
-        <div>Broken JSX</div>
-          <ProtectedRoute>;
-            <Dashboard />;
-          </ProtectedRoute>;,
-} />;
-        <div>Broken JSX</div>
-          <ProtectedRoute>;
-            <ClientDashboard />;
-          </ProtectedRoute>;,
-} />;
-        <div>Broken JSX</div>
-          <ProtectedRoute>;
-            <TalentDashboard />;
-          </ProtectedRoute>;,
-} />;
-        <div>Broken JSX</div>
-          <ProtectedRoute>;
-            <CreatorDashboard />;
-          </ProtectedRoute>;,
-} />;
-        <div>Broken JSX</div>
-          <ProtectedRoute>;
-            <Analytics />;
-          </ProtectedRoute>;,
-} />;
-        <div>Broken JSX</div>
-          <ProtectedRoute>;
-            <ProjectMilestones />;
-          </ProtectedRoute>;,
-} />;
-        <div>Broken JSX</div>
-          <ProtectedRoute>;
-            <ProjectDetails />;
-          </ProtectedRoute>;,
-} />;
-        <div>Broken JSX</div>
-          <ProtectedRoute>;
-            <ProjectRoom />;
-          </ProtectedRoute>} />;
-      </Routes>;
-    </Suspense>;
-  )}
+const DashboardRoutes = () => {
+  return null;
+};
+
 export default DashboardRoutes;

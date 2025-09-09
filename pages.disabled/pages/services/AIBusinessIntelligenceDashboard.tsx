@@ -30,9 +30,9 @@ import {}
             </h1>'''            <p className='text-xl m,
     d:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed'>
 
-              Transform your business data into actionable insights with our;
-              AI-powered business intelligence platform. Get real-time;
-              analytics, predictive insights, and automated reporting that;
+              Transform your business data into actionable insights with our 
+              AI-powered business intelligence platform. Get real-time 
+              analytics, predictive insights, and automated reporting that 
 
                 <Play className='w-5 h-5 mr-2'  />                Watch Demo</a>            </div>
           </motion.div>
@@ -44,8 +44,8 @@ import {}
         </div>
       </section>
 
-          <motion.div'';
-            className='text-center mb-16';
+          <motion.div'' 
+            className='text-center mb-16' 
             initial={{ opacit,
     y: 0, y: 30 }}
 
@@ -62,7 +62,7 @@ import {}
 
             {features.map((feature, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
                     <feature.icon className='w-8 h-8 text-white' />'
@@ -81,8 +81,8 @@ import {}
         </div>
       </section>
 
-          <motion.div'';
-            className='text-center mb-16';
+          <motion.div'' 
+            className='text-center mb-16' 
             initial={{ opacit,
     y: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -101,7 +101,7 @@ import {}
 
             {useCases.map((useCase, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
                     <useCase.icon className='w-8 h-8 text-white' />'
@@ -120,8 +120,8 @@ import {}
         </div>
       </section>
 
-          <motion.div'';
-            className='text-center mb-16';
+          <motion.div'' 
+            className='text-center mb-16' 
             initial={{ opacit,
     y: 0, y: 30 }}
 
@@ -138,7 +138,7 @@ import {}
 
             {pricingPlans.map((plan, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
 
@@ -151,10 +151,10 @@ import {}
                     ))}
                   </ul>
 
-  plan.popular';
-  ';
+  plan.popular' 
+  ' 
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover: from-cyan-400 hove,
-    r:to-blue-400'';
+    r:to-blue-400'' 
   '`;`
                         : 'border border-cyan-400/30 text-cyan-400 hove,
     r:bg-cyan-400/10``}`}                  >
@@ -168,8 +168,8 @@ import {}
         </div>
       </section>
 
-          <motion.div'';
-            className='text-center mb-16';
+          <motion.div'' 
+            className='text-center mb-16' 
             initial={{ opacit,
     y: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -185,7 +185,7 @@ import {}
 
             {testimonials.map((testimonial, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}, {testimonial.name}
                     </div>'''
                     <div className='text-sm text-cyan-400>
@@ -207,7 +207,7 @@ import {}
         </div>
       </section>
 
-                href='tel:+13024640950'';
+                href='tel:+13024640950'' 
                 className='text-cyan-400 hover:text-cyan-300 transition-colors'>
                 +1 302 464 0950'
               </a>''
@@ -216,7 +216,7 @@ import {}
               <Mail className='w-8 h-8 text-cyan-400 mb-4'  />              <div className='text-white font-semibold'>Email</div>''
               <a'''
                 href='mailt,
-    o:kleber@ziontechgroup.com'';
+    o:kleber@ziontechgroup.com'' 
                 className='text-cyan-400 hove,
     r:text-cyan-300 transition-colors'>
                 kleber@ziontechgroup.com'
@@ -227,7 +227,7 @@ import {}
 
 
                 <br />
-                Middletown DE 19709;
+                Middletown DE 19709 
               </div>
             </div>
           </div>

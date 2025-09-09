@@ -108,9 +108,35 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       </div>;
 
       {/* Main content */}
-      <div id="main-content">;
+      <div id="main-content">
         {children}
-      </div>;
-    </>;
-  )}
+      </div>
+
+      <style jsx global>{`
+        .high-contrast {
+          --text-color: #ffffff;
+          --bg-color: #000000;
+          --border-color: #ffffff;
+        }
+
+        .high-contrast * {
+          color: var(--text-color) !important;
+          background-color: var(--bg-color) !important;
+          border-color: var(--border-color) !important;
+        }
+
+        .reduced-motion * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+
+        .accessibility-enhanced {
+          font-size: calc(1rem * var(--font-size-multiplier, 1));
+        }
+      `}</style>
+    </>
+  );
+}
+
 export default AccessibilityEnhancer;

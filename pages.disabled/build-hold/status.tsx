@@ -1,20 +1,20 @@
 
 ,
-  status: 'operationa,l, uptime:',;
-  99.8%;
+  status: 'operationa,l, uptime:', 
+  99.8% 
 
 ,
-  status: 'operationa,l, uptime:',;
-  99.7%;
+  status: 'operationa,l, uptime:', 
+  99.7% 
 
 ,
-  status: 'operationa,l, uptime:',;
-  100%;
+  status: 'operationa,l, uptime:', 
+  100% 
 
   'minor''    }
   '  ]
   return(
-    <MainLayout;
+    <MainLayout 
       title='System Status - Zion Tech Group''      description='Check the current status of Zion Tech Group services and infrastructure. Monitor uptime, performance, and any ongoing incidents.''      keywords='system status, uptime, service status, monitoring, incidents, performance''    >'      <div className='min-h-screen bg-gray-50>        {/* Hero Section */}        <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>          <div className='container mx-auto px-4 text-center>            <h1 className='text-4xl md: text-5xl font-bold mb-6'>System Status</h1>'            <p className='text-xl text-gray-200 max-w-3xl mx-auto>              Monitor the real-time status of our services and infrastructure. '              All systems are currently operational.
             </p>
           </div>
@@ -57,8 +57,8 @@
           </div>
         </section>
 
-  minor;
-  ' ? 'bg-yellow-100: text-yellow-800;';
+  minor 
+  ' ? 'bg-yellow-100: text-yellow-800;' 
   ': 'bg-red-100: text-red-800'                          }`}>'                            {incident.impact} impact`                          </span>
                         </div>
                       </div>

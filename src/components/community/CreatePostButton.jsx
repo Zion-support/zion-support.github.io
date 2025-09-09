@@ -1,13 +1,14 @@
-import React from 'react';''';
+import React from 'react';
 import { Button } from '@/components/ui/button';
-export default function CreatePostButton({ categoryId }) {};
-  return null;
-}
-    </Button>)}
+import { Plus } from 'lucide-react';
 
+const CreatePostButton = () => {
+  return (
+    <Button className="bg-blue-600 text-white hover:bg-blue-700">
+      <Plus className="w-4 h-4 mr-2" />
+      Create Post
+    </Button>
+  );
+};
 
-export { CreatePostButton }
-export { CreatePostButton }
-export { CreatePostButton }
-export { CreatePostButton }
-export { CreatePostButton }
+export default CreatePostButton;

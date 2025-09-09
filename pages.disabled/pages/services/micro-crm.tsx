@@ -25,7 +25,7 @@ import {}
             </h1>'''            <p className='text-xl text-slate-300 mb-8 leading-relaxed'>
 
               Streamline your customer relationships with our lightweight,
-              powerful CRM solution designed for small businesses and growing;
+              powerful CRM solution designed for small businesses and growing 
 
                 Watch Demo
 
@@ -61,7 +61,7 @@ import {}
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
 
-  ';
+  ' 
               Whether you're a small business owner or managing a growing sales
               team, our Micro CRM adapts to your needs.
 
@@ -94,7 +94,7 @@ import {}
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses that have improved their customer
 
-            Join thousands of businesses that have improved their customer;
+            Join thousands of businesses that have improved their customer 
             management with our Micro CRM solution.''
           </p>'''
           <div className='flex flex-col sm: flex-row gap-4 justify-center>''
