@@ -2,281 +2,341 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Truck, 
-  Zap, 
-  Target, 
-  ArrowRight,
+  Globe, 
+  BarChart3, 
+  Shield, 
   CheckCircle,
+  ArrowRight,
   Star,
-  Award,
-  Globe,
-  Shield,
-  Cloud,
-  BarChart3,
+  Play,
+  MessageCircle,
+  TrendingUp,
+  Server,
+  Settings,
+  Code,
   Package,
-  Lightbulb,
-  Rocket,
-  Brain,
-  TrendingUp
+  Monitor,
+  Network,
+  Lock,
+  Users,
+  Activity,
+  Layers,
+  PieChart,
+  Target,
+  MapPin
 } from 'lucide-react';
 
-const SupplyChain = () => {
+const SupplyChain: React.FC = () => {
   const features = [
     {
-      title: 'Inventory Management',
-      description: 'Real-time inventory tracking and optimization across your entire supply chain.',
-      icon: Package,
-      benefits: ['Real-time Tracking', 'Demand Forecasting', 'Automated Reordering', 'Stock Optimization']
+      icon: Truck,
+      title: 'Real-time Tracking',
+      description: 'Track shipments and inventory in real-time across your entire supply chain.',
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-600/20'
     },
     {
-      title: 'Logistics Optimization',
-      description: 'AI-powered route optimization and logistics management for cost efficiency.',
-      icon: Truck,
-      benefits: ['Route Planning', 'Cost Optimization', 'Delivery Tracking', 'Performance Analytics']
+      icon: Globe,
+      title: 'Global Visibility',
+      description: 'End-to-end visibility across multiple locations, suppliers, and distribution centers.',
+      color: 'text-green-400',
+      bgColor: 'bg-green-600/20'
+    },
+    {
+      icon: BarChart3,
+      title: 'Analytics & Insights',
+      description: 'Advanced analytics to optimize operations and identify improvement opportunities.',
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-600/20'
+    },
+    {
+      icon: Shield,
+      title: 'Risk Management',
+      description: 'Identify and mitigate supply chain risks with predictive analytics.',
+      color: 'text-orange-400',
+      bgColor: 'bg-orange-600/20'
+    }
+  ];
+
+  const capabilities = [
+    {
+      title: 'Inventory Management',
+      description: 'Optimize inventory levels and reduce carrying costs.',
+      icon: Package,
+      features: ['Demand forecasting', 'Safety stock management', 'ABC analysis', 'Reorder optimization']
     },
     {
       title: 'Supplier Management',
-      description: 'Comprehensive supplier relationship management and performance monitoring.',
-      icon: Globe,
-      benefits: ['Supplier Database', 'Performance Metrics', 'Risk Assessment', 'Contract Management']
+      description: 'Manage supplier relationships and performance effectively.',
+      icon: Users,
+      features: ['Supplier evaluation', 'Performance metrics', 'Contract management', 'Communication tools']
+    },
+    {
+      title: 'Logistics Optimization',
+      description: 'Optimize routes and transportation for cost and time efficiency.',
+      icon: MapPin,
+      features: ['Route optimization', 'Carrier selection', 'Freight management', 'Delivery tracking']
     },
     {
       title: 'Demand Planning',
-      description: 'Advanced analytics and machine learning for accurate demand forecasting.',
+      description: 'Accurate demand forecasting and planning capabilities.',
       icon: TrendingUp,
-      benefits: ['Predictive Analytics', 'Seasonal Patterns', 'Market Trends', 'Inventory Planning']
+      features: ['Statistical forecasting', 'Seasonal analysis', 'Collaborative planning', 'Scenario modeling']
     }
   ];
 
   const benefits = [
     {
       title: 'Cost Reduction',
-      description: 'Optimize operations to reduce costs across your entire supply chain.',
-      icon: Target
+      description: 'Reduce operational costs through optimization and efficiency improvements.',
+      icon: TrendingUp,
+      metric: '25% Cost Savings'
     },
     {
-      title: 'Improved Efficiency',
-      description: 'Streamline processes and eliminate bottlenecks for better performance.',
-      icon: Zap
+      title: 'Improved Visibility',
+      description: 'Real-time visibility into all supply chain operations and performance.',
+      icon: Monitor,
+      metric: '100% Visibility'
     },
     {
       title: 'Risk Mitigation',
-      description: 'Identify and address potential risks before they impact operations.',
-      icon: Shield
+      description: 'Identify and address supply chain risks before they impact operations.',
+      icon: Shield,
+      metric: 'Risk Reduction'
     },
     {
-      title: 'Data-Driven Insights',
-      description: 'Make informed decisions based on real-time data and analytics.',
-      icon: BarChart3
+      title: 'Customer Satisfaction',
+      description: 'Improve delivery performance and customer satisfaction scores.',
+      icon: Star,
+      metric: '95% Satisfaction'
     }
   ];
 
-  const industries = [
-    'Manufacturing',
-    'Retail',
-    'Healthcare',
-    'Food & Beverage',
-    'Automotive',
-    'Electronics',
-    'Pharmaceuticals',
-    'Logistics'
+  const testimonials = [
+    {
+      name: 'John Smith',
+      role: 'Supply Chain Director, Manufacturing Corp',
+      content: 'The supply chain platform reduced our logistics costs by 30% and improved delivery times.',
+      rating: 5
+    },
+    {
+      name: 'Maria Rodriguez',
+      role: 'Operations Manager, RetailChain',
+      content: 'Real-time tracking and analytics transformed our inventory management and reduced stockouts.',
+      rating: 5
+    },
+    {
+      name: 'David Chen',
+      role: 'VP Operations, TechStartup',
+      content: 'Supplier management tools helped us build stronger relationships and improve performance.',
+      rating: 5
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
-        <div className="container-responsive relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <div className="inline-flex items-center space-x-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full px-6 py-3 mb-8">
-              <Truck className="w-5 h-5 text-zion-cyan" />
-              <span className="text-zion-cyan font-medium">Supply Chain</span>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Hero Section */}
+        <motion.div 
+          className="text-center mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="flex justify-center mb-6">
+            <div className="p-4 bg-blue-600/20 rounded-full">
+              <Truck className="h-16 w-16 text-blue-400" />
             </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Supply Chain
-              <span className="text-gradient"> Management</span>
-            </h1>
-            
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Transform your supply chain operations with AI-powered insights, real-time 
-              tracking, and intelligent optimization for maximum efficiency and cost savings.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-futuristic px-8 py-4 text-lg">
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="btn-neon px-8 py-4 text-lg">
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Supply Chain
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              {" "}Management
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Optimize your supply chain operations with intelligent management tools. 
+            Gain visibility, reduce costs, and improve efficiency across your entire network.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
+            >
+              Start Free Trial
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
+            <a
+              href="#demo"
+              className="px-8 py-3 border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
+            >
+              <Play className="mr-2 h-5 w-5" />
+              Watch Demo
+            </a>
+          </div>
+        </motion.div>
 
-      {/* Features Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Supply Chain Solutions
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our comprehensive supply chain management platform provides end-to-end 
-              visibility and optimization for your operations.
-            </p>
-          </motion.div>
-
+        {/* Key Features */}
+        <motion.section 
+          className="mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
+                className={`${feature.bgColor} rounded-xl p-6 border border-slate-700`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
               >
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
+                <div className="flex items-center mb-4">
+                  <feature.icon className={`h-8 w-8 ${feature.color} mr-3`} />
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
-                
-                <p className="text-zion-slate-light mb-6 text-lg">
-                  {feature.description}
-                </p>
-                
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-zion-slate-light">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+        </motion.section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Supply Chain Management?
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our platform delivers measurable business value through improved efficiency, 
-              cost reduction, and risk mitigation across your supply chain.
-            </p>
-          </motion.div>
+        {/* Capabilities */}
+        <motion.section 
+          className="mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Capabilities</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {capabilities.map((capability, index) => (
+              <motion.div
+                key={capability.title}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+              >
+                <div className="flex items-center mb-4">
+                  <capability.icon className="h-8 w-8 text-blue-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{capability.description}</p>
+                <div className="space-y-2">
+                  {capability.features.map((feature) => (
+                    <div key={feature} className="flex items-center">
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                      <span className="text-gray-300 text-sm">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Benefits */}
+        <motion.section 
+          className="mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Supply Chain Management?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 text-center"
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 bg-blue-600/20 rounded-full">
+                    <benefit.icon className="h-12 w-12 text-blue-400" />
+                  </div>
                 </div>
-                
-                <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
-                <p className="text-zion-slate-light">{benefit.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300 mb-3">{benefit.description}</p>
+                <div className="text-2xl font-bold text-blue-400">{benefit.metric}</div>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+        </motion.section>
 
-      {/* Industries Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Industries We Serve
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our supply chain management platform is designed to meet the unique needs 
-              of various industries and business models.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
+        {/* Testimonials */}
+        <motion.section 
+          className="mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.2 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Customer Success Stories</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
               <motion.div
-                key={industry}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 text-center"
+                key={testimonial.name}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.3 + index * 0.1 }}
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Lightbulb className="w-6 h-6 text-white" />
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
                 </div>
-                <p className="text-white font-medium">{industry}</p>
+                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <div>
+                  <p className="text-white font-semibold">{testimonial.name}</p>
+                  <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                </div>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+        </motion.section>
 
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-12 text-center"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Supply Chain?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Start your free trial today and discover how our platform can revolutionize 
-              your supply chain operations and drive business growth.
+        {/* CTA Section */}
+        <motion.section 
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.4 }}
+        >
+          <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl p-12 border border-blue-500/30">
+            <h2 className="text-3xl font-bold text-white mb-6">Ready to Optimize Your Supply Chain?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join thousands of businesses using our platform to streamline supply chain operations, 
+              reduce costs, and improve efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-futuristic px-8 py-4 text-lg">
+              <a
+                href="/contact"
+                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors duration-200"
+              >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="btn-neon px-8 py-4 text-lg">
+              </a>
+              <a
+                href="/contact"
+                className="px-8 py-3 border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white rounded-lg font-semibold transition-colors duration-200"
+              >
+                Schedule Demo
+              </a>
+              <a
+                href="/contact"
+                className="px-8 py-3 border border-gray-600 text-gray-300 hover:border-gray-500 hover:text-white rounded-lg font-semibold transition-colors duration-200"
+              >
+                <MessageCircle className="inline mr-2 h-5 w-5" />
                 Contact Sales
-              </button>
+              </a>
             </div>
-          </motion.div>
-        </div>
-      </section>
+          </div>
+        </motion.section>
+      </div>
     </div>
   );
 };

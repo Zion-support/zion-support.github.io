@@ -464,61 +464,19 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Knowledge base"
     ],
     benefits: [
-      "Reduce response time by 90%",
-      "Handle 70% of queries automatically",
-      "Improve customer satisfaction by 45%",
-      "Reduce support costs by 60%"
+      "Reduce response time by 80%",
+      "Improve customer satisfaction by 60%",
+      "Handle 10x more support requests",
+      "24/7 automated support"
     ],
-    targetAudience: ["E-commerce businesses", "SaaS companies", "Service providers", "Enterprise"],
-    marketPrice: "$89-299/month",
+    targetAudience: ["Customer service teams", "E-commerce businesses", "SaaS companies", "Support agencies"],
+    marketPrice: "$89-199/month",
     website: "https://ziontechgroup.com/ai-customer-support",
     contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Customer Support", "AI Chatbot", "Ticket Management", "Sentiment Analysis"],
-    aiScore: 94,
-    rating: 4.8,
-    reviewCount: 123,
-    featured: true,
-    location: "Global",
-    availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      verified: true
-    },
-    images: ["https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-02-20T10:00:00.000Z"
-  },
-  {
-    id: "data-analytics-platform",
-    title: "Data Analytics Platform",
-    description: "Comprehensive data analytics and visualization platform for business intelligence and decision making.",
-    category: "Analytics & BI",
-    subcategory: "Data Analytics",
-    price: 49,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Data visualization tools",
-      "Custom dashboard builder",
-      "Real-time data streaming",
-      "Predictive analytics",
-      "Data export & sharing",
-      "Mobile app access"
-    ],
-    benefits: [
-      "Make data-driven decisions faster",
-      "Identify business opportunities",
-      "Optimize operations efficiency",
-      "Improve customer insights"
-    ],
-    targetAudience: ["Business analysts", "Data scientists", "Executives", "Marketing teams"],
-    marketPrice: "$49-149/month",
-    website: "https://ziontechgroup.com/data-analytics-platform",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Data Analytics", "Analytics Dashboard", "Real-time Analytics", "Predictive Analytics"],
+    tags: ["AI Support", "Customer Service", "Automation", "Sentiment Analysis"],
     aiScore: 92,
     rating: 4.7,
-    reviewCount: 189,
+    reviewCount: 89,
     featured: true,
     location: "Global",
     availability: "Immediate",
@@ -527,218 +485,8 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       id: "zion-tech-group",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-02-18T11:00:00.000Z"
-  },
-  {
-    id: "ai-recruitment-assistant",
-    title: "AI Recruitment Assistant",
-    description: "Intelligent hiring platform that automates candidate screening, matching, and interview scheduling.",
-    category: "HR & Recruitment",
-    subcategory: "HR & Recruitment",
-    price: 35,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered candidate screening",
-      "Skills assessment tools",
-      "Interview scheduling automation",
-      "Candidate scoring & ranking",
-      "Diversity & inclusion tools",
-      "Integration with job boards"
-    ],
-    benefits: [
-      "Reduce time-to-hire by 60%",
-      "Improve candidate quality by 40%",
-      "Save 20+ hours weekly on screening",
-      "Enhance diversity hiring"
-    ],
-    targetAudience: ["HR professionals", "Recruitment agencies", "Hiring managers", "Startups"],
-    marketPrice: "$35-135/month",
-    website: "https://ziontechgroup.com/ai-recruitment-assistant",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags: ["AI Recruitment", "Candidate Screening", "Interview Scheduling", "Diversity Hiring"],
-    aiScore: 91,
-    rating: 4.6,
-    reviewCount: 112,
-    featured: false,
-    location: "Global",
-    availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      verified: true
-    },
-    images: ["https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-02-22T09:30:00.000Z"
-  },
-  {
-    id: "cybersecurity-monitor",
-    title: "Cybersecurity Monitor",
-    description: "Real-time threat detection, vulnerability assessment, and security compliance monitoring.",
-    category: "Cybersecurity",
-    subcategory: "Cybersecurity",
-    price: 45,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Real-time threat detection",
-      "Vulnerability assessment",
-      "Compliance monitoring",
-      "Security incident response",
-      "Risk scoring & reporting",
-      "Integration with security tools"
-    ],
-    benefits: [
-      "Detect threats 90% faster",
-      "Reduce security incidents by 70%",
-      "Ensure compliance requirements",
-      "Protect sensitive data"
-    ],
-    targetAudience: ["IT security teams", "Compliance officers", "Small businesses", "Healthcare providers"],
-    marketPrice: "$45-195/month",
-    website: "https://ziontechgroup.com/cybersecurity-monitor",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Cybersecurity", "Threat Detection", "Vulnerability Assessment", "Compliance Monitoring"],
-    aiScore: 93,
-    rating: 4.7,
-    reviewCount: 105,
-    featured: false,
-    location: "Global",
-    availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      verified: true
-    },
-    images: ["https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-02-25T10:15:00.000Z"
-  },
-  {
-    id: "cloud-cost-optimizer",
-    title: "Cloud Cost Optimizer",
-    description: "Intelligent cloud cost management and optimization for AWS, Azure, and Google Cloud platforms.",
-    category: "Cloud Management",
-    subcategory: "Cloud Management",
-    price: 30,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Multi-cloud cost monitoring",
-      "Automated cost optimization",
-      "Resource utilization tracking",
-      "Budget management & alerts",
-      "Cost forecasting",
-      "ROI analysis"
-    ],
-    benefits: [
-      "Reduce cloud costs by 25-40%",
-      "Optimize resource utilization",
-      "Prevent budget overruns",
-      "Improve cloud ROI"
-    ],
-    targetAudience: ["DevOps engineers", "Cloud architects", "IT managers", "Startups"],
-    marketPrice: "$30-130/month",
-    website: "https://ziontechgroup.com/cloud-cost-optimizer",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Cloud Cost Optimization", "Resource Management", "Budget Management", "ROI Analysis"],
-    aiScore: 92,
-    rating: 4.6,
-    reviewCount: 98,
-    featured: false,
-    location: "Global",
-    availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      verified: true
-    },
-    images: ["https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-02-28T11:30:00.000Z"
-  },
-  {
-    id: "ai-marketing-automation",
-    title: "AI Marketing Automation",
-    description: "Intelligent marketing automation with AI-powered personalization, campaign optimization, and analytics.",
-    category: "Marketing Automation",
-    subcategory: "Marketing Automation",
-    price: 55,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered personalization",
-      "Multi-channel campaign management",
-      "Behavioral targeting",
-      "A/B testing automation",
-      "ROI optimization",
-      "Customer journey mapping"
-    ],
-    benefits: [
-      "Increase conversion rates by 50%",
-      "Reduce marketing costs by 30%",
-      "Improve customer engagement",
-      "Personalize customer experiences"
-    ],
-    targetAudience: ["Marketing teams", "E-commerce businesses", "B2B companies", "Digital agencies"],
-    marketPrice: "$55-255/month",
-    website: "https://ziontechgroup.com/ai-marketing-automation",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Marketing Automation", "AI Personalization", "Campaign Optimization", "A/B Testing"],
-    aiScore: 94,
-    rating: 4.8,
-    reviewCount: 145,
-    featured: true,
-    location: "Global",
-    availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      verified: true
-    },
-    images: ["https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-03-02T12:45:00.000Z"
-  },
-  {
-    id: "api-management-platform",
-    title: "API Management Platform",
-    description: "Comprehensive API development, testing, monitoring, and documentation platform for developers.",
-    category: "Developer Tools",
-    subcategory: "Developer Tools",
-    price: 40,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "API design & development",
-      "Automated testing suite",
-      "Performance monitoring",
-      "Developer documentation",
-      "Rate limiting & security",
-      "Analytics & insights"
-    ],
-    benefits: [
-      "Accelerate API development by 60%",
-      "Improve API reliability by 80%",
-      "Reduce development costs",
-      "Enhance developer experience"
-    ],
-    targetAudience: ["Developers", "API architects", "DevOps teams", "Startups"],
-    marketPrice: "$40-190/month",
-    website: "https://ziontechgroup.com/api-management-platform",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags: ["API Management", "API Development", "Testing Tools", "Performance Monitoring"],
-    aiScore: 93,
-    rating: 4.7,
-    reviewCount: 120,
-    featured: false,
-    location: "Global",
-    availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      verified: true
-    },
-    images: ["https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-03-05T14:00:00.000Z"
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-15T12:00:00.000Z"
   }
 ];
 
@@ -752,5 +500,66 @@ export const getMicroSaasServicesByCategory = (category: string): MicroSaasServi
 
 export const getMicroSaasCategories = (): string[] => {
   return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
+};
+
+// Add missing exports for MicroSaasServices page
+export const MICRO_SAAS_CATEGORIES = [
+  'AI Business Solutions',
+  'IT Infrastructure', 
+  'Data Analytics',
+  'AI Development',
+  'FinTech',
+  'HealthTech',
+  'E-commerce',
+  'EdTech'
+];
+
+export const PRICING_TIERS = [
+  {
+    name: 'Starter',
+    price: '$29',
+    period: 'month',
+    features: [
+      'Basic features',
+      'Email support',
+      '1 user',
+      'Basic integrations'
+    ],
+    popular: false
+  },
+  {
+    name: 'Professional',
+    price: '$99',
+    period: 'month',
+    features: [
+      'All Starter features',
+      'Priority support',
+      'Up to 5 users',
+      'Advanced integrations',
+      'Custom branding'
+    ],
+    popular: true
+  },
+  {
+    name: 'Enterprise',
+    price: '$299',
+    period: 'month',
+    features: [
+      'All Professional features',
+      '24/7 phone support',
+      'Unlimited users',
+      'Custom integrations',
+      'White-label solution',
+      'Dedicated account manager'
+    ],
+    popular: false
+  }
+];
+
+export const CONTACT_INFO = {
+  phone: '+1 (555) 123-4567',
+  email: 'sales@ziontechgroup.com',
+  address: '123 Tech Street, Innovation City, IC 12345',
+  hours: 'Monday - Friday: 9:00 AM - 6:00 PM EST',
+  supportEmail: 'support@ziontechgroup.com'
 };

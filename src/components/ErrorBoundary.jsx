@@ -116,3 +116,6 @@ export function withErrorBoundary(Component, errorBoundaryProps) {
       </ErrorBoundary>);
     };
 }
+
+// Add default export
+export default ErrorBoundary;

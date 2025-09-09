@@ -2,282 +2,343 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   PenTool, 
+  Image, 
+  Video, 
   Zap, 
-  Target, 
-  ArrowRight,
   CheckCircle,
+  ArrowRight,
   Star,
-  Award,
+  Play,
+  MessageCircle,
   Globe,
-  Shield,
-  Cloud,
+  Server,
   BarChart3,
-  Type,
-  Lightbulb,
-  Rocket,
-  Brain,
-  Image,
-  Video
+  Settings,
+  Code,
+  Package,
+  Monitor,
+  Network,
+  Activity,
+  Layers,
+  PieChart,
+  Target,
+  TrendingUp,
+  FileText,
+  Users,
+  Shield
 } from 'lucide-react';
 
-const ContentCreation = () => {
+const ContentCreation: React.FC = () => {
   const features = [
     {
-      title: 'AI Writing Assistant',
-      description: 'AI-powered writing tools for creating engaging content across formats.',
       icon: PenTool,
-      benefits: ['Content Generation', 'Grammar Checking', 'Style Optimization', 'Tone Adjustment']
+      title: 'AI Writing Assistant',
+      description: 'Generate high-quality content with AI-powered writing tools.',
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-600/20'
     },
     {
-      title: 'Visual Content Creation',
-      description: 'Create stunning visuals, graphics, and multimedia content.',
       icon: Image,
-      benefits: ['Template Library', 'Design Tools', 'Brand Consistency', 'Asset Management']
+      title: 'Visual Content Creation',
+      description: 'Create stunning images, graphics, and visual content.',
+      color: 'text-green-400',
+      bgColor: 'bg-green-600/20'
     },
     {
-      title: 'Video Production',
-      description: 'Professional video creation and editing tools.',
       icon: Video,
-      benefits: ['Video Templates', 'Editing Tools', 'Audio Integration', 'Export Options']
+      title: 'Video Production',
+      description: 'Professional video editing and production tools.',
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-600/20'
     },
     {
-      title: 'Content Management',
-      description: 'Organize, schedule, and manage all your content in one place.',
-      icon: Type,
-      benefits: ['Content Calendar', 'Workflow Management', 'Collaboration Tools', 'Analytics Dashboard']
+      icon: Zap,
+      title: 'Content Automation',
+      description: 'Automate content creation workflows and publishing.',
+      color: 'text-orange-400',
+      bgColor: 'bg-orange-600/20'
+    }
+  ];
+
+  const capabilities = [
+    {
+      title: 'Content Planning',
+      description: 'Plan and organize your content strategy effectively.',
+      icon: FileText,
+      features: ['Content calendar', 'Topic research', 'SEO optimization', 'Content briefs']
+    },
+    {
+      title: 'Multi-format Support',
+      description: 'Create content in multiple formats and channels.',
+      icon: Monitor,
+      features: ['Blog posts', 'Social media', 'Email campaigns', 'Landing pages']
+    },
+    {
+      title: 'Collaboration Tools',
+      description: 'Work together with your team on content creation.',
+      icon: Users,
+      features: ['Team editing', 'Review workflows', 'Version control', 'Comments']
+    },
+    {
+      title: 'Analytics & Insights',
+      description: 'Track content performance and optimize for better results.',
+      icon: BarChart3,
+      features: ['Performance metrics', 'Engagement tracking', 'A/B testing', 'ROI analysis']
     }
   ];
 
   const benefits = [
     {
       title: 'Increased Productivity',
-      description: 'Create more content in less time with AI-powered tools.',
-      icon: Zap
+      description: 'Create content faster with AI assistance and automation.',
+      icon: Zap,
+      metric: '5x Faster'
     },
     {
       title: 'Better Quality',
-      description: 'Improve content quality with professional tools and templates.',
-      icon: Target
+      description: 'Improve content quality with AI suggestions and tools.',
+      icon: Star,
+      metric: 'Higher Quality'
     },
     {
-      title: 'Cost Effective',
-      description: 'Reduce content creation costs while improving output quality.',
-      icon: Star
+      title: 'Cost Reduction',
+      description: 'Reduce content creation costs and agency fees.',
+      icon: Target,
+      metric: '60% Cost Savings'
     },
     {
-      title: 'Brand Consistency',
-      description: 'Maintain consistent brand voice and visual identity across all content.',
-      icon: Award
+      title: 'Consistent Branding',
+      description: 'Maintain consistent brand voice and visual identity.',
+      icon: Shield,
+      metric: 'Brand Consistency'
     }
   ];
 
-  const contentTypes = [
-    'Blog Posts',
-    'Social Media',
-    'Email Marketing',
-    'Landing Pages',
-    'Infographics',
-    'Videos',
-    'Whitepapers',
-    'Case Studies'
+  const testimonials = [
+    {
+      name: 'Jennifer Martinez',
+      role: 'Marketing Director, TechCorp',
+      content: 'The content creation platform increased our content output by 300% while maintaining quality.',
+      rating: 5
+    },
+    {
+      name: 'David Chen',
+      role: 'Content Manager, StartupXYZ',
+      content: 'AI writing assistant helped us create engaging content in half the time.',
+      rating: 5
+    },
+    {
+      name: 'Amanda Wilson',
+      role: 'Social Media Manager, RetailChain',
+      content: 'Visual content tools transformed our social media presence and engagement.',
+      rating: 5
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
-        <div className="container-responsive relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <div className="inline-flex items-center space-x-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full px-6 py-3 mb-8">
-              <PenTool className="w-5 h-5 text-zion-cyan" />
-              <span className="text-zion-cyan font-medium">Content Creation</span>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900 pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Hero Section */}
+        <motion.div 
+          className="text-center mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="flex justify-center mb-6">
+            <div className="p-4 bg-purple-600/20 rounded-full">
+              <PenTool className="h-16 w-16 text-purple-400" />
             </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Content
-              <span className="text-gradient"> Creation</span>
-            </h1>
-            
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Create compelling content that engages your audience and drives results. 
-              Our AI-powered platform makes content creation faster, easier, and more effective.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-futuristic px-8 py-4 text-lg">
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="btn-neon px-8 py-4 text-lg">
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Content
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              {" "}Creation
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Create engaging, high-quality content with AI-powered tools and automation. 
+            Streamline your content creation process and boost your marketing results.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
+            >
+              Start Free Trial
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
+            <a
+              href="#demo"
+              className="px-8 py-3 border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
+            >
+              <Play className="mr-2 h-5 w-5" />
+              Watch Demo
+            </a>
+          </div>
+        </motion.div>
 
-      {/* Features Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Content Creation Tools
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our comprehensive content creation platform provides everything you need to 
-              create engaging, high-quality content across all formats and channels.
-            </p>
-          </motion.div>
-
+        {/* Key Features */}
+        <motion.section 
+          className="mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
+                className={`${feature.bgColor} rounded-xl p-6 border border-slate-700`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
               >
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
+                <div className="flex items-center mb-4">
+                  <feature.icon className={`h-8 w-8 ${feature.color} mr-3`} />
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
-                
-                <p className="text-zion-slate-light mb-6 text-lg">
-                  {feature.description}
-                </p>
-                
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-zion-slate-light">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+        </motion.section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Content Creation?
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our platform delivers measurable business value through improved content 
-              quality, increased productivity, and better audience engagement.
-            </p>
-          </motion.div>
+        {/* Capabilities */}
+        <motion.section 
+          className="mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Capabilities</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {capabilities.map((capability, index) => (
+              <motion.div
+                key={capability.title}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+              >
+                <div className="flex items-center mb-4">
+                  <capability.icon className="h-8 w-8 text-purple-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{capability.description}</p>
+                <div className="space-y-2">
+                  {capability.features.map((feature) => (
+                    <div key={feature} className="flex items-center">
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                      <span className="text-gray-300 text-sm">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Benefits */}
+        <motion.section 
+          className="mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Content Creation?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 text-center"
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 bg-purple-600/20 rounded-full">
+                    <benefit.icon className="h-12 w-12 text-purple-400" />
+                  </div>
                 </div>
-                
-                <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
-                <p className="text-zion-slate-light">{benefit.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300 mb-3">{benefit.description}</p>
+                <div className="text-2xl font-bold text-purple-400">{benefit.metric}</div>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+        </motion.section>
 
-      {/* Content Types Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Content Types We Support
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Create any type of content you need with our versatile platform designed 
-              for marketers, creators, and businesses of all sizes.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {contentTypes.map((contentType, index) => (
+        {/* Testimonials */}
+        <motion.section 
+          className="mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.2 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Customer Success Stories</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
               <motion.div
-                key={contentType}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 text-center"
+                key={testimonial.name}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.3 + index * 0.1 }}
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Lightbulb className="w-6 h-6 text-white" />
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
                 </div>
-                <p className="text-white font-medium">{contentType}</p>
+                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <div>
+                  <p className="text-white font-semibold">{testimonial.name}</p>
+                  <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                </div>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+        </motion.section>
 
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-12 text-center"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Create Amazing Content?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Start your free trial today and discover how our content creation platform can 
-              transform your marketing and drive better results.
+        {/* CTA Section */}
+        <motion.section 
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.4 }}
+        >
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl p-12 border border-purple-500/30">
+            <h2 className="text-3xl font-bold text-white mb-6">Ready to Create Amazing Content?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join thousands of businesses using our platform to create engaging content, 
+              boost marketing results, and grow their audience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-futuristic px-8 py-4 text-lg">
+              <a
+                href="/contact"
+                className="px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition-colors duration-200"
+              >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="btn-neon px-8 py-4 text-lg">
+              </a>
+              <a
+                href="/contact"
+                className="px-8 py-3 border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white rounded-lg font-semibold transition-colors duration-200"
+              >
+                Schedule Demo
+              </a>
+              <a
+                href="/contact"
+                className="px-8 py-3 border border-gray-600 text-gray-300 hover:border-gray-500 hover:text-white rounded-lg font-semibold transition-colors duration-200"
+              >
+                <MessageCircle className="inline mr-2 h-5 w-5" />
                 Contact Sales
-              </button>
+              </a>
             </div>
-          </motion.div>
-        </div>
-      </section>
+          </div>
+        </motion.section>
+      </div>
     </div>
   );
 };

@@ -2,282 +2,342 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Users, 
+  FileText, 
+  Calendar, 
   Zap, 
-  Target, 
-  ArrowRight,
   CheckCircle,
+  ArrowRight,
   Star,
-  Award,
+  Play,
+  MessageCircle,
   Globe,
-  Shield,
-  Cloud,
+  Server,
   BarChart3,
-  UserCheck,
-  Lightbulb,
-  Rocket,
-  Brain,
-  FileText,
-  Calendar
+  Settings,
+  Code,
+  Package,
+  Monitor,
+  Network,
+  Activity,
+  Layers,
+  PieChart,
+  Target,
+  TrendingUp,
+  Shield,
+  Clock
 } from 'lucide-react';
 
-const HRPlatform = () => {
+const HRPlatform: React.FC = () => {
   const features = [
     {
-      title: 'Recruitment & Hiring',
-      description: 'Streamline your hiring process with AI-powered candidate screening.',
-      icon: UserCheck,
-      benefits: ['Job Posting', 'Candidate Screening', 'Interview Scheduling', 'Applicant Tracking']
-    },
-    {
-      title: 'Employee Management',
-      description: 'Comprehensive employee lifecycle management and HR operations.',
       icon: Users,
-      benefits: ['Employee Onboarding', 'Performance Reviews', 'Time Tracking', 'Leave Management']
+      title: 'Employee Management',
+      description: 'Comprehensive employee database and profile management.',
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-600/20'
     },
     {
-      title: 'Payroll & Benefits',
-      description: 'Automated payroll processing and benefits administration.',
       icon: FileText,
-      benefits: ['Payroll Processing', 'Tax Management', 'Benefits Administration', 'Compliance Reporting']
+      title: 'HR Documentation',
+      description: 'Digital document management and compliance tracking.',
+      color: 'text-green-400',
+      bgColor: 'bg-green-600/20'
     },
     {
-      title: 'HR Analytics',
-      description: 'Data-driven insights for better HR decision making.',
+      icon: Calendar,
+      title: 'Time & Attendance',
+      description: 'Track work hours, leave management, and scheduling.',
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-600/20'
+    },
+    {
+      icon: Zap,
+      title: 'Payroll Automation',
+      description: 'Automated payroll processing and tax calculations.',
+      color: 'text-orange-400',
+      bgColor: 'bg-orange-600/20'
+    }
+  ];
+
+  const capabilities = [
+    {
+      title: 'Recruitment & Onboarding',
+      description: 'Streamline hiring process and employee onboarding.',
+      icon: Users,
+      features: ['Job posting', 'Applicant tracking', 'Interview scheduling', 'Onboarding workflows']
+    },
+    {
+      title: 'Performance Management',
+      description: 'Track employee performance and conduct reviews.',
       icon: BarChart3,
-      benefits: ['Employee Analytics', 'Turnover Analysis', 'Performance Metrics', 'Predictive Insights']
+      features: ['Goal setting', 'Performance reviews', '360 feedback', 'Career development']
+    },
+    {
+      title: 'Benefits Administration',
+      description: 'Manage employee benefits and insurance plans.',
+      icon: Shield,
+      features: ['Benefits enrollment', 'Insurance management', 'Retirement plans', 'Wellness programs']
+    },
+    {
+      title: 'Compliance & Reporting',
+      description: 'Ensure HR compliance and generate reports.',
+      icon: FileText,
+      features: ['Regulatory compliance', 'Audit trails', 'Custom reports', 'Data analytics']
     }
   ];
 
   const benefits = [
     {
       title: 'Improved Efficiency',
-      description: 'Automate HR processes and reduce administrative overhead.',
-      icon: Zap
+      description: 'Automate HR processes and reduce manual work.',
+      icon: Zap,
+      metric: '80% Faster'
     },
     {
-      title: 'Better Employee Experience',
-      description: 'Provide self-service tools and streamlined processes for employees.',
-      icon: Users
+      title: 'Better Compliance',
+      description: 'Ensure compliance with labor laws and regulations.',
+      icon: Shield,
+      metric: '100% Compliant'
     },
     {
-      title: 'Compliance Ready',
-      description: 'Stay compliant with labor laws and regulations automatically.',
-      icon: Shield
+      title: 'Cost Reduction',
+      description: 'Reduce HR administrative costs and errors.',
+      icon: Target,
+      metric: '30% Cost Savings'
     },
     {
-      title: 'Data-Driven Decisions',
-      description: 'Make informed HR decisions based on real-time analytics and insights.',
-      icon: BarChart3
+      title: 'Employee Satisfaction',
+      description: 'Improve employee experience and engagement.',
+      icon: Star,
+      metric: 'Higher Satisfaction'
     }
   ];
 
-  const modules = [
-    'Recruitment',
-    'Onboarding',
-    'Performance Management',
-    'Time & Attendance',
-    'Payroll',
-    'Benefits',
-    'Learning & Development',
-    'Employee Self-Service'
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      role: 'HR Director, TechCorp',
+      content: 'The HR platform streamlined our entire hiring process and improved employee management.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      role: 'People Operations, StartupXYZ',
+      content: 'Automated payroll and time tracking saved us hours of manual work every month.',
+      rating: 5
+    },
+    {
+      name: 'Emily Davis',
+      role: 'HR Manager, Manufacturing Inc',
+      content: 'Compliance tracking and reporting tools helped us maintain regulatory standards.',
+      rating: 5
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
-        <div className="container-responsive relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <div className="inline-flex items-center space-x-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full px-6 py-3 mb-8">
-              <Users className="w-5 h-5 text-zion-cyan" />
-              <span className="text-zion-cyan font-medium">HR Platform</span>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Hero Section */}
+        <motion.div 
+          className="text-center mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="flex justify-center mb-6">
+            <div className="p-4 bg-blue-600/20 rounded-full">
+              <Users className="h-16 w-16 text-blue-400" />
             </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              HR
-              <span className="text-gradient"> Platform</span>
-            </h1>
-            
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Transform your HR operations with our comprehensive platform. Streamline 
-              processes, improve employee experience, and make data-driven decisions.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-futuristic px-8 py-4 text-lg">
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="btn-neon px-8 py-4 text-lg">
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            HR
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              {" "}Platform
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Streamline your human resources operations with comprehensive HR management tools. 
+            Automate processes, ensure compliance, and improve employee experience.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
+            >
+              Start Free Trial
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
+            <a
+              href="#demo"
+              className="px-8 py-3 border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
+            >
+              <Play className="mr-2 h-5 w-5" />
+              Watch Demo
+            </a>
+          </div>
+        </motion.div>
 
-      {/* Features Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              HR Platform Features
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our comprehensive HR platform provides everything you need to manage your 
-              workforce efficiently and effectively.
-            </p>
-          </motion.div>
-
+        {/* Key Features */}
+        <motion.section 
+          className="mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
+                className={`${feature.bgColor} rounded-xl p-6 border border-slate-700`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
               >
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
+                <div className="flex items-center mb-4">
+                  <feature.icon className={`h-8 w-8 ${feature.color} mr-3`} />
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
-                
-                <p className="text-zion-slate-light mb-6 text-lg">
-                  {feature.description}
-                </p>
-                
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-zion-slate-light">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+        </motion.section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose HR Platform?
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our platform delivers measurable business value through improved HR efficiency, 
-              better employee experience, and compliance automation.
-            </p>
-          </motion.div>
+        {/* Capabilities */}
+        <motion.section 
+          className="mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Capabilities</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {capabilities.map((capability, index) => (
+              <motion.div
+                key={capability.title}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+              >
+                <div className="flex items-center mb-4">
+                  <capability.icon className="h-8 w-8 text-blue-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{capability.description}</p>
+                <div className="space-y-2">
+                  {capability.features.map((feature) => (
+                    <div key={feature} className="flex items-center">
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                      <span className="text-gray-300 text-sm">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Benefits */}
+        <motion.section 
+          className="mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose HR Platform?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 text-center"
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 bg-blue-600/20 rounded-full">
+                    <benefit.icon className="h-12 w-12 text-blue-400" />
+                  </div>
                 </div>
-                
-                <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
-                <p className="text-zion-slate-light">{benefit.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300 mb-3">{benefit.description}</p>
+                <div className="text-2xl font-bold text-blue-400">{benefit.metric}</div>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+        </motion.section>
 
-      {/* Modules Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Platform Modules
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our modular HR platform allows you to choose the features you need and 
-              scale as your business grows.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {modules.map((module, index) => (
+        {/* Testimonials */}
+        <motion.section 
+          className="mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.2 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Customer Success Stories</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
               <motion.div
-                key={module}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 text-center"
+                key={testimonial.name}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.3 + index * 0.1 }}
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Lightbulb className="w-6 h-6 text-white" />
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
                 </div>
-                <p className="text-white font-medium">{module}</p>
+                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <div>
+                  <p className="text-white font-semibold">{testimonial.name}</p>
+                  <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                </div>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+        </motion.section>
 
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-12 text-center"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your HR?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Start your free trial today and discover how our HR platform can streamline 
-              your operations and improve employee experience.
+        {/* CTA Section */}
+        <motion.section 
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.4 }}
+        >
+          <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl p-12 border border-blue-500/30">
+            <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your HR Operations?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join thousands of businesses using our platform to streamline HR processes, 
+              ensure compliance, and improve employee experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-futuristic px-8 py-4 text-lg">
+              <a
+                href="/contact"
+                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors duration-200"
+              >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="btn-neon px-8 py-4 text-lg">
+              </a>
+              <a
+                href="/contact"
+                className="px-8 py-3 border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white rounded-lg font-semibold transition-colors duration-200"
+              >
+                Schedule Demo
+              </a>
+              <a
+                href="/contact"
+                className="px-8 py-3 border border-gray-600 text-gray-300 hover:border-gray-500 hover:text-white rounded-lg font-semibold transition-colors duration-200"
+              >
+                <MessageCircle className="inline mr-2 h-5 w-5" />
                 Contact Sales
-              </button>
+              </a>
             </div>
-          </motion.div>
-        </div>
-      </section>
+          </div>
+        </motion.section>
+      </div>
     </div>
   );
 };

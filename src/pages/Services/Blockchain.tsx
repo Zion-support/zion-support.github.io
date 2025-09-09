@@ -1,64 +1,56 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Wrench, 
-  Clock, 
+  Link, 
+  Shield, 
+  Database, 
+  Zap, 
   CheckCircle,
   ArrowRight,
   Star,
   Play,
   MessageCircle,
   Globe,
+  Server,
   BarChart3,
   Settings,
   Code,
   Package,
   Monitor,
-  Activity,
-  Layers,
-  PieChart,
-  TrendingUp,
   Cpu,
-  Cloud,
-  Shield,
-  Database,
-  Smartphone,
-  Workflow,
-  MapPin,
-  Phone,
-  Truck,
-  Server,
-  Printer,
-  Users
+  Network,
+  Lock,
+  Users,
+  TrendingUp
 } from 'lucide-react';
 
-const OnsiteSupport: React.FC = () => {
+const Blockchain: React.FC = () => {
   const services = [
     {
-      icon: Wrench,
-      title: 'Hardware Support',
-      description: 'Onsite hardware installation, repair, and maintenance services.',
+      icon: Link,
+      title: 'Smart Contracts',
+      description: 'Develop and deploy secure, audited smart contracts for various blockchain platforms.',
       color: 'text-blue-400',
       bgColor: 'bg-blue-600/20'
     },
     {
-      icon: Clock,
-      title: '24/7 Emergency Support',
-      description: 'Round-the-clock emergency onsite support for critical issues.',
+      icon: Shield,
+      title: 'DeFi Solutions',
+      description: 'Build decentralized finance applications with advanced security and compliance.',
       color: 'text-green-400',
       bgColor: 'bg-green-600/20'
     },
     {
-      icon: MapPin,
-      title: 'Multi-Location Support',
-      description: 'Support services across multiple office locations and sites.',
+      icon: Database,
+      title: 'NFT Platforms',
+      description: 'Create and manage NFT marketplaces, collections, and digital asset ecosystems.',
       color: 'text-purple-400',
       bgColor: 'bg-purple-600/20'
     },
     {
-      icon: Truck,
-      title: 'Equipment Deployment',
-      description: 'Onsite equipment delivery, setup, and configuration.',
+      icon: Zap,
+      title: 'Blockchain Infrastructure',
+      description: 'Design and implement scalable blockchain networks and infrastructure solutions.',
       color: 'text-orange-400',
       bgColor: 'bg-orange-600/20'
     }
@@ -66,92 +58,92 @@ const OnsiteSupport: React.FC = () => {
 
   const solutions = [
     {
-      title: 'Desktop & Laptop Support',
-      description: 'Comprehensive support for all desktop and laptop computers.',
-      icon: Monitor,
-      features: ['Hardware diagnostics', 'Software installation', 'Virus removal', 'Data recovery']
+      title: 'Supply Chain Transparency',
+      description: 'End-to-end traceability and verification for global supply chains.',
+      icon: Network,
+      features: ['Product tracking', 'Quality verification', 'Compliance monitoring', 'Audit trails']
     },
     {
-      title: 'Network Infrastructure',
-      description: 'Onsite network setup, troubleshooting, and maintenance.',
-      icon: Workflow,
-      features: ['Network installation', 'Cable management', 'Router configuration', 'Performance optimization']
+      title: 'Digital Identity',
+      description: 'Self-sovereign identity solutions for secure, privacy-preserving authentication.',
+      icon: Users,
+      features: ['Identity verification', 'Privacy protection', 'Access control', 'Credential management']
     },
     {
-      title: 'Server & Storage',
-      description: 'Onsite server maintenance and storage system support.',
-      icon: Server,
-      features: ['Server maintenance', 'Storage expansion', 'Backup systems', 'Performance tuning']
+      title: 'Cross-Border Payments',
+      description: 'Fast, secure, and cost-effective international payment solutions.',
+      icon: TrendingUp,
+      features: ['Instant transfers', 'Low fees', 'Multi-currency', 'Regulatory compliance']
     },
     {
-      title: 'Print & Peripheral',
-      description: 'Support for printers, scanners, and other peripheral devices.',
-      icon: Printer,
-      features: ['Device setup', 'Driver installation', 'Network printing', 'Maintenance']
+      title: 'Asset Tokenization',
+      description: 'Convert real-world assets into digital tokens for fractional ownership.',
+      icon: Package,
+      features: ['Real estate', 'Commodities', 'Art & collectibles', 'Investment vehicles']
     }
   ];
 
   const technologies = [
-    'Windows',
-    'macOS',
-    'Linux',
-    'Network Equipment',
-    'Storage Systems',
-    'Security Devices',
-    'Mobile Devices',
-    'Cloud Services'
+    'Ethereum',
+    'Polygon',
+    'Solana',
+    'Polkadot',
+    'Hyperledger',
+    'IPFS',
+    'Zero-Knowledge Proofs',
+    'Layer 2 Scaling'
   ];
 
   const benefits = [
     {
-      title: 'Fast Response',
-      description: 'Quick onsite response times for immediate issue resolution.',
-      icon: Clock,
-      metric: '2-4 Hour Response'
+      title: 'Transparency',
+      description: 'Immutable, auditable records visible to all network participants.',
+      icon: Monitor,
+      metric: '100% Transparent'
     },
     {
-      title: 'Expert Technicians',
-      description: 'Certified technicians with extensive onsite experience.',
-      icon: Users,
-      metric: 'Certified Experts'
-    },
-    {
-      title: 'Cost Effective',
-      description: 'Reduce downtime and avoid expensive emergency service calls.',
-      icon: TrendingUp,
-      metric: '40% Cost Savings'
-    },
-    {
-      title: 'Preventive Maintenance',
-      description: 'Regular onsite maintenance to prevent future issues.',
+      title: 'Security',
+      description: 'Cryptographic security and decentralized consensus mechanisms.',
       icon: Shield,
-      metric: 'Proactive Support'
+      metric: 'Bank-grade Security'
+    },
+    {
+      title: 'Efficiency',
+      description: 'Automated processes reducing intermediaries and operational costs.',
+      icon: Zap,
+      metric: '90% Cost Reduction'
+    },
+    {
+      title: 'Trust',
+      description: 'Decentralized trust without requiring third-party intermediaries.',
+      icon: Lock,
+      metric: 'Zero Trust Model'
     }
   ];
 
   const testimonials = [
     {
-      name: 'Robert Martinez',
-      role: 'IT Manager, Manufacturing Corp',
-      content: 'Zion Tech Group\'s onsite support team resolved our critical server issue in under 2 hours.',
+      name: 'Alex Thompson',
+      role: 'CTO, SupplyChain Corp',
+      content: 'Zion Tech Group\'s blockchain solution transformed our supply chain visibility and compliance.',
       rating: 5
     },
     {
-      name: 'Lisa Thompson',
-      role: 'Operations Director, Retail Chain',
-      content: 'Their 24/7 onsite support has been invaluable for our multi-location business.',
+      name: 'Maria Rodriguez',
+      role: 'CEO, FinTech Startup',
+      content: 'Their DeFi platform helped us launch innovative financial products in record time.',
       rating: 5
     },
     {
-      name: 'Michael Chen',
-      role: 'CTO, Healthcare Network',
-      content: 'The onsite team\'s expertise in healthcare IT compliance gives us peace of mind.',
+      name: 'David Kim',
+      role: 'VP Technology, Art Gallery',
+      content: 'The NFT marketplace they built increased our digital art sales by 300%.',
       rating: 5
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-orange-900 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}
         <motion.div 
@@ -161,31 +153,31 @@ const OnsiteSupport: React.FC = () => {
           transition={{ duration: 0.6 }}
         >
           <div className="flex justify-center mb-6">
-            <div className="p-4 bg-orange-600/20 rounded-full">
-              <Wrench className="h-16 w-16 text-orange-400" />
+            <div className="p-4 bg-blue-600/20 rounded-full">
+              <Link className="h-16 w-16 text-blue-400" />
             </div>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Onsite
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
-              {" "}Support
+            Blockchain
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              {" "}Solutions
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Professional onsite IT support services delivered to your location. 
-            Fast response times, expert technicians, and comprehensive solutions.
+            Transform your business with cutting-edge blockchain technology. 
+            Build trust, transparency, and efficiency with decentralized solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="px-8 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
+              className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
             >
-              Request Onsite Support
+              Explore Blockchain Solutions
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
             <a
               href="#demo"
-              className="px-8 py-3 border border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
+              className="px-8 py-3 border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
             >
               <Play className="mr-2 h-5 w-5" />
               Watch Demo
@@ -200,7 +192,7 @@ const OnsiteSupport: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Onsite Support Services</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Blockchain Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -227,7 +219,7 @@ const OnsiteSupport: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Support Solutions</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Industry Solutions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {solutions.map((solution, index) => (
               <motion.div
@@ -238,7 +230,7 @@ const OnsiteSupport: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
               >
                 <div className="flex items-center mb-4">
-                  <solution.icon className="h-8 w-8 text-orange-400 mr-3" />
+                  <solution.icon className="h-8 w-8 text-blue-400 mr-3" />
                   <h3 className="text-xl font-semibold text-white">{solution.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-4">{solution.description}</p>
@@ -264,10 +256,10 @@ const OnsiteSupport: React.FC = () => {
         >
           <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-white mb-4">Technologies We Support</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Blockchain Technologies</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Our onsite technicians are certified and experienced with a wide range 
-                of technologies and platforms.
+                We work with leading blockchain platforms and technologies to deliver 
+                robust, scalable, and secure solutions for your business needs.
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -293,7 +285,7 @@ const OnsiteSupport: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our Onsite Support?</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Blockchain?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -304,15 +296,76 @@ const OnsiteSupport: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
               >
                 <div className="flex justify-center mb-4">
-                  <div className="p-4 bg-orange-600/20 rounded-full">
-                    <benefit.icon className="h-12 w-12 text-orange-400" />
+                  <div className="p-4 bg-blue-600/20 rounded-full">
+                    <benefit.icon className="h-12 w-12 text-blue-400" />
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 mb-3">{benefit.description}</p>
-                <div className="text-2xl font-bold text-orange-400">{benefit.metric}</div>
+                <div className="text-2xl font-bold text-blue-400">{benefit.metric}</div>
               </motion.div>
             ))}
+          </div>
+        </motion.section>
+
+        {/* Blockchain Process */}
+        <motion.section 
+          className="mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.0 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Blockchain Development Process</h2>
+          <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 bg-blue-600/20 rounded-full">
+                    <Settings className="h-12 w-12 text-blue-400" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">1. Discovery & Planning</h3>
+                <p className="text-gray-300 text-sm">
+                  Understand requirements, choose appropriate blockchain platform, and design architecture
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 bg-green-600/20 rounded-full">
+                    <Code className="h-12 w-12 text-green-400" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">2. Development</h3>
+                <p className="text-gray-300 text-sm">
+                  Smart contract development, frontend integration, and blockchain infrastructure setup
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 bg-purple-600/20 rounded-full">
+                    <Shield className="h-12 w-12 text-purple-400" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">3. Testing & Audit</h3>
+                <p className="text-gray-300 text-sm">
+                  Comprehensive testing, security audits, and performance optimization
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 bg-orange-600/20 rounded-full">
+                    <Server className="h-12 w-12 text-orange-400" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">4. Deployment</h3>
+                <p className="text-gray-300 text-sm">
+                  Mainnet deployment, monitoring setup, and ongoing support and maintenance
+                </p>
+              </div>
+            </div>
           </div>
         </motion.section>
 
@@ -355,31 +408,31 @@ const OnsiteSupport: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.4 }}
         >
-          <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-2xl p-12 border border-orange-500/30">
-            <h2 className="text-3xl font-bold text-white mb-6">Need Onsite IT Support?</h2>
+          <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl p-12 border border-blue-500/30">
+            <h2 className="text-3xl font-bold text-white mb-6">Ready to Build on the Blockchain?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get fast, reliable onsite IT support when you need it most. 
-              Our expert technicians are ready to help at your location.
+              Join the blockchain revolution and transform your business with decentralized solutions. 
+              Partner with Zion Tech Group for innovative blockchain development.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="px-8 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-semibold transition-colors duration-200"
+                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors duration-200"
               >
-                Schedule Onsite Visit
+                Start Blockchain Project
               </a>
               <a
                 href="/contact"
-                className="px-8 py-3 border border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white rounded-lg font-semibold transition-colors duration-200"
+                className="px-8 py-3 border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white rounded-lg font-semibold transition-colors duration-200"
               >
-                Emergency Support
+                Schedule Consultation
               </a>
               <a
                 href="/contact"
                 className="px-8 py-3 border border-gray-600 text-gray-300 hover:border-gray-500 hover:text-white rounded-lg font-semibold transition-colors duration-200"
               >
-                <Phone className="inline mr-2 h-5 w-5" />
-                Call Support Hotline
+                <MessageCircle className="inline mr-2 h-5 w-5" />
+                Talk to Blockchain Expert
               </a>
             </div>
           </div>
@@ -389,4 +442,4 @@ const OnsiteSupport: React.FC = () => {
   );
 };
 
-export default OnsiteSupport;
+export default Blockchain;
