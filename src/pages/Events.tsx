@@ -1,568 +1,316 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   Calendar, 
   Clock, 
   MapPin, 
   Users, 
-  ArrowRight,
+  ArrowRight, 
   Search,
   Filter,
   Globe,
+  Award,
+  Rocket,
   Brain,
   Shield,
   Cloud,
   Zap,
-  TrendingUp,
-  Award,
-  Building,
-  Lightbulb,
-  BookOpen,
-  ExternalLink,
   Video,
-  Play,
-  Download,
-  Share2,
-  Heart,
-  Star,
-  CheckCircle,
-  Clock3
+  ExternalLink,
+  BookOpen,
+  Microphone,
+  Network,
+  Lightbulb
 } from 'lucide-react';
 
-const Events = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedTimeframe, setSelectedTimeframe] = useState('upcoming');
-  const [searchQuery, setSearchQuery] = useState('');
+const Events: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [activeFilter, setActiveFilter] = useState('all');
+  const [activeTab, setActiveTab] = useState('upcoming');
 
-  const categories = [
-    { id: 'all', name: 'All Events', icon: Globe, count: 18 },
-    { id: 'conferences', name: 'Conferences', icon: Building, count: 6 },
-    { id: 'workshops', name: 'Workshops', icon: Lightbulb, count: 8 },
-    { id: 'webinars', name: 'Webinars', icon: Video, count: 4 }
+  const filters = [
+    { id: 'all', label: 'All Events', icon: Globe, count: 18 },
+    { id: 'conference', label: 'Conferences', icon: Microphone, count: 6 },
+    { id: 'workshop', label: 'Workshops', icon: BookOpen, count: 8 },
+    { id: 'webinar', label: 'Webinars', icon: Video, count: 4 }
   ];
 
-  const timeframes = [
-    { id: 'upcoming', name: 'Upcoming', count: 12 },
-    { id: 'past', name: 'Past Events', count: 6 }
-  ];
-
-  const events = [
+  const upcomingEvents = [
     {
       id: 1,
-      title: 'AI Innovation Summit 2024',
-      description: 'Join industry leaders and AI experts for a comprehensive exploration of the latest developments in artificial intelligence, machine learning, and their transformative impact on business.',
-      category: 'conferences',
-      date: '2024-03-15',
+      title: 'AI & Machine Learning Summit 2025',
+      description: 'Join industry leaders and experts for a comprehensive exploration of AI and ML technologies, featuring keynote speakers, technical sessions, and networking opportunities.',
+      category: 'conference',
+      date: '2025-02-15',
       time: '09:00 AM - 06:00 PM',
       location: 'San Francisco Convention Center',
-      virtual: false,
+      type: 'In-Person',
       capacity: 500,
-      registered: 450,
       price: '$299',
       featured: true,
-      image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      speakers: [
-        { name: 'Dr. Sarah Chen', role: 'Chief Research Officer, Zion Tech Group' },
-        { name: 'Michael Rodriguez', role: 'CEO, Zion Tech Group' },
-        { name: 'Dr. Emily Watson', role: 'VP of Research, Zion Tech Group' }
-      ],
-      agenda: [
-        '09:00 AM - Keynote: The Future of AI in Enterprise',
-        '10:30 AM - Panel: AI Ethics and Responsible Development',
-        '02:00 PM - Workshop: Implementing AI Solutions',
-        '04:30 PM - Networking and Demo Showcase'
-      ],
-      tags: ['AI', 'Machine Learning', 'Innovation', 'Enterprise'],
-      registrationUrl: 'https://ai-summit-2024.ziontechgroup.com',
-      recordingUrl: null,
-      materialsUrl: null
+      tags: ['AI/ML', 'Summit', 'Networking', 'Keynotes'],
+      speakers: ['Dr. Sarah Chen', 'Prof. Michael Rodriguez', 'Lisa Wang'],
+      image: '🤖'
     },
     {
       id: 2,
-      title: 'Cybersecurity Best Practices Workshop',
-      description: 'Learn essential cybersecurity strategies and best practices to protect your organization from evolving threats in this hands-on workshop.',
-      category: 'workshops',
-      date: '2024-03-20',
+      title: 'Cybersecurity Workshop Series',
+      description: 'Hands-on workshop covering advanced cybersecurity techniques, threat detection, and incident response strategies for enterprise environments.',
+      category: 'workshop',
+      date: '2025-02-20',
       time: '10:00 AM - 04:00 PM',
-      location: 'Zion Tech Group HQ, New York',
-      virtual: true,
-      capacity: 100,
-      registered: 75,
-      price: '$149',
+      location: 'Zion Tech Group HQ',
+      type: 'In-Person',
+      capacity: 50,
+      price: '$199',
       featured: false,
-      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      speakers: [
-        { name: 'Alex Thompson', role: 'VP of Cybersecurity, Zion Tech Group' },
-        { name: 'Dr. Robert Kim', role: 'Security Research Lead' }
-      ],
-      agenda: [
-        '10:00 AM - Threat Landscape Overview',
-        '11:30 AM - Zero-Trust Architecture',
-        '01:30 PM - Hands-on Security Tools',
-        '03:00 PM - Incident Response Planning'
-      ],
-      tags: ['Cybersecurity', 'Workshop', 'Best Practices', 'Security'],
-      registrationUrl: 'https://cyber-workshop.ziontechgroup.com',
-      recordingUrl: null,
-      materialsUrl: null
+      tags: ['Cybersecurity', 'Hands-on', 'Enterprise', 'Threat Detection'],
+      speakers: ['Rachel Green', 'Alex Chen'],
+      image: '🔒'
     },
     {
       id: 3,
-      title: 'Quantum Computing Webinar Series',
-      description: 'Explore the revolutionary potential of quantum computing and its applications in solving complex computational problems.',
-      category: 'webinars',
-      date: '2024-03-25',
-      time: '02:00 PM - 03:30 PM',
+      title: 'Quantum Computing Webinar',
+      description: 'Virtual session exploring the future of quantum computing and its applications in solving complex business problems.',
+      category: 'webinar',
+      date: '2025-02-25',
+      time: '02:00 PM - 04:00 PM',
       location: 'Virtual Event',
-      virtual: true,
+      type: 'Online',
       capacity: 200,
-      registered: 180,
       price: 'Free',
       featured: false,
-      image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      speakers: [
-        { name: 'Dr. Sarah Chen', role: 'Chief Research Officer, Zion Tech Group' },
-        { name: 'Dr. Emily Watson', role: 'VP of Research, Zion Tech Group' }
-      ],
-      agenda: [
-        '02:00 PM - Introduction to Quantum Computing',
-        '02:30 PM - Quantum Algorithms and Applications',
-        '03:00 PM - Q&A and Discussion'
-      ],
-      tags: ['Quantum Computing', 'Webinar', 'Research', 'Technology'],
-      registrationUrl: 'https://quantum-webinar.ziontechgroup.com',
-      recordingUrl: null,
-      materialsUrl: null
+      tags: ['Quantum Computing', 'Virtual', 'Future Tech', 'Business Applications'],
+      speakers: ['Dr. James Wilson'],
+      image: '⚛️'
     },
     {
       id: 4,
       title: 'Digital Transformation Conference',
-      description: 'Discover how organizations are leveraging technology to transform their operations and achieve competitive advantage.',
-      category: 'conferences',
-      date: '2024-04-10',
+      description: 'Learn how organizations are leveraging technology to transform their operations and achieve competitive advantages.',
+      category: 'conference',
+      date: '2025-03-05',
       time: '08:00 AM - 05:00 PM',
-      location: 'Chicago Marriott Downtown',
-      virtual: false,
+      location: 'New York Marriott Marquis',
+      type: 'In-Person',
       capacity: 300,
-      registered: 220,
-      price: '$199',
-      featured: false,
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      speakers: [
-        { name: 'Jennifer Lee', role: 'VP of International Operations, Zion Tech Group' },
-        { name: 'David Chen', role: 'Technology Analyst, Zion Tech Group' }
-      ],
-      agenda: [
-        '08:00 AM - Registration and Networking',
-        '09:00 AM - Keynote: Digital Transformation Trends',
-        '10:30 AM - Case Studies and Success Stories',
-        '02:00 PM - Technology Showcase',
-        '04:00 PM - Networking Reception'
-      ],
-      tags: ['Digital Transformation', 'Conference', 'Technology', 'Business'],
-      registrationUrl: 'https://digital-transformation.ziontechgroup.com',
-      recordingUrl: null,
-      materialsUrl: null
+      price: '$399',
+      featured: true,
+      tags: ['Digital Transformation', 'Strategy', 'Case Studies', 'Leadership'],
+      speakers: ['Jennifer Kim', 'David Thompson', 'Mark Stevens'],
+      image: '🚀'
     },
     {
       id: 5,
-      title: 'Machine Learning Fundamentals Workshop',
-      description: 'Master the basics of machine learning with hands-on exercises and real-world examples in this comprehensive workshop.',
-      category: 'workshops',
-      date: '2024-04-15',
+      title: 'Cloud Infrastructure Workshop',
+      description: 'Practical workshop on designing and implementing scalable cloud infrastructure solutions for modern applications.',
+      category: 'workshop',
+      date: '2025-03-10',
       time: '09:00 AM - 05:00 PM',
-      location: 'Zion Tech Group HQ, Boston',
-      virtual: true,
-      capacity: 80,
-      registered: 65,
-      price: '$199',
+      location: 'Zion Tech Group Training Center',
+      type: 'In-Person',
+      capacity: 40,
+      price: '$249',
       featured: false,
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      speakers: [
-        { name: 'Dr. Emily Watson', role: 'VP of Research, Zion Tech Group' },
-        { name: 'Dr. Robert Kim', role: 'Industry Analyst, Zion Tech Group' }
-      ],
-      agenda: [
-        '09:00 AM - ML Fundamentals and Concepts',
-        '10:30 AM - Data Preprocessing and Feature Engineering',
-        '01:30 PM - Model Training and Evaluation',
-        '03:30 PM - Practical Applications and Projects'
-      ],
-      tags: ['Machine Learning', 'Workshop', 'Fundamentals', 'AI'],
-      registrationUrl: 'https://ml-workshop.ziontechgroup.com',
-      recordingUrl: null,
-      materialsUrl: null
+      tags: ['Cloud Computing', 'Infrastructure', 'Scalability', 'Hands-on'],
+      speakers: ['Alex Chen', 'Sarah Johnson'],
+      image: '☁️'
     },
     {
       id: 6,
-      title: 'Cloud Architecture Best Practices',
-      description: 'Learn how to design and implement scalable, secure, and cost-effective cloud solutions for your organization.',
-      category: 'webinars',
-      date: '2024-04-20',
-      time: '01:00 PM - 02:30 PM',
+      title: 'AI Ethics & Responsible Development',
+      description: 'Interactive webinar discussing the importance of ethical AI development and best practices for responsible technology deployment.',
+      category: 'webinar',
+      date: '2025-03-15',
+      time: '01:00 PM - 03:00 PM',
       location: 'Virtual Event',
-      virtual: true,
+      type: 'Online',
       capacity: 150,
-      registered: 120,
       price: 'Free',
       featured: false,
-      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      speakers: [
-        { name: 'Alex Thompson', role: 'VP of Cybersecurity, Zion Tech Group' },
-        { name: 'David Chen', role: 'Technology Analyst, Zion Tech Group' }
-      ],
-      agenda: [
-        '01:00 PM - Cloud Architecture Principles',
-        '01:30 PM - Security and Compliance',
-        '02:00 PM - Cost Optimization Strategies',
-        '02:30 PM - Q&A and Discussion'
-      ],
-      tags: ['Cloud Computing', 'Architecture', 'Best Practices', 'Webinar'],
-      registrationUrl: 'https://cloud-architecture.ziontechgroup.com',
-      recordingUrl: null,
-      materialsUrl: null
-    },
-    {
-      id: 7,
-      title: 'AI Ethics and Responsible Development',
-      description: 'Explore the critical importance of ethical AI development and learn frameworks for responsible technology deployment.',
-      category: 'workshops',
-      date: '2024-05-05',
-      time: '10:00 AM - 04:00 PM',
-      location: 'Zion Tech Group HQ, Seattle',
-      virtual: true,
-      capacity: 60,
-      registered: 45,
-      price: '$179',
-      featured: false,
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      speakers: [
-        { name: 'Dr. Sarah Chen', role: 'Chief Research Officer, Zion Tech Group' },
-        { name: 'Maria Garcia', role: 'HR Director, Zion Tech Group' }
-      ],
-      agenda: [
-        '10:00 AM - AI Ethics Fundamentals',
-        '11:30 AM - Bias Detection and Mitigation',
-        '01:30 PM - Responsible AI Frameworks',
-        '03:00 PM - Implementation Strategies'
-      ],
-      tags: ['AI Ethics', 'Responsible AI', 'Workshop', 'Ethics'],
-      registrationUrl: 'https://ai-ethics.ziontechgroup.com',
-      recordingUrl: null,
-      materialsUrl: null
-    },
-    {
-      id: 8,
-      title: 'Future of Technology Symposium',
-      description: 'Join thought leaders and innovators for a forward-looking discussion on emerging technologies and their societal impact.',
-      category: 'conferences',
-      date: '2024-05-15',
-      time: '09:00 AM - 06:00 PM',
-      location: 'Austin Convention Center',
-      virtual: false,
-      capacity: 400,
-      registered: 280,
-      price: '$399',
-      featured: true,
-      image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      speakers: [
-        { name: 'Michael Rodriguez', role: 'CEO, Zion Tech Group' },
-        { name: 'Dr. Sarah Chen', role: 'Chief Research Officer, Zion Tech Group' },
-        { name: 'Dr. Emily Watson', role: 'VP of Research, Zion Tech Group' }
-      ],
-      agenda: [
-        '09:00 AM - Opening Keynote: Technology Trends',
-        '10:30 AM - AI and Society Panel',
-        '02:00 PM - Emerging Technologies Showcase',
-        '04:00 PM - Future Workforce Discussion',
-        '05:30 PM - Networking Reception'
-      ],
-      tags: ['Future Technology', 'Symposium', 'Innovation', 'Society'],
-      registrationUrl: 'https://future-tech.ziontechgroup.com',
-      recordingUrl: null,
-      materialsUrl: null
+      tags: ['AI Ethics', 'Responsible AI', 'Best Practices', 'Virtual'],
+      speakers: ['Dr. Emily Watson'],
+      image: '⚖️'
     }
   ];
 
   const pastEvents = [
     {
-      id: 9,
-      title: 'AI in Healthcare Conference 2023',
-      description: 'Exploring the transformative impact of artificial intelligence on healthcare delivery and patient outcomes.',
-      category: 'conferences',
-      date: '2023-12-15',
-      time: '09:00 AM - 05:00 PM',
-      location: 'Virtual Event',
-      virtual: true,
-      capacity: 300,
-      registered: 250,
-      price: '$199',
-      featured: false,
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      speakers: [
-        { name: 'Dr. Sarah Chen', role: 'Chief Research Officer, Zion Tech Group' },
-        { name: 'Dr. Robert Kim', role: 'Industry Analyst, Zion Tech Group' }
-      ],
-      agenda: [
-        '09:00 AM - AI in Medical Imaging',
-        '10:30 AM - Predictive Analytics in Healthcare',
-        '02:00 PM - Ethical Considerations',
-        '04:00 PM - Future Outlook'
-      ],
-      tags: ['AI', 'Healthcare', 'Conference', 'Medical'],
-      registrationUrl: null,
-      recordingUrl: 'https://healthcare-ai-2023.ziontechgroup.com/recording',
-      materialsUrl: 'https://healthcare-ai-2023.ziontechgroup.com/materials'
+      id: 7,
+      title: 'Tech Innovation Summit 2024',
+      description: 'Our flagship event showcasing cutting-edge technologies and innovations that are shaping the future of business.',
+      category: 'conference',
+      date: '2024-12-10',
+      time: '09:00 AM - 06:00 PM',
+      location: 'Las Vegas Convention Center',
+      type: 'In-Person',
+      capacity: 800,
+      price: '$399',
+      featured: true,
+      tags: ['Innovation', 'Technology', 'Networking', 'Keynotes'],
+      speakers: ['Dr. Sarah Chen', 'Prof. Michael Rodriguez', 'Lisa Wang', 'David Thompson'],
+      image: '💡',
+      attendees: 750,
+      rating: 4.8
     },
     {
-      id: 10,
-      title: 'Cybersecurity Threat Intelligence Workshop',
-      description: 'Advanced workshop on threat intelligence and proactive cybersecurity strategies.',
-      category: 'workshops',
-      date: '2023-11-20',
+      id: 8,
+      title: 'Cybersecurity Best Practices Workshop',
+      description: 'Comprehensive workshop covering essential cybersecurity practices for small and medium businesses.',
+      category: 'workshop',
+      date: '2024-11-28',
       time: '10:00 AM - 04:00 PM',
-      location: 'Zion Tech Group HQ, New York',
-      virtual: true,
-      capacity: 80,
-      registered: 70,
-      price: '$149',
+      location: 'Zion Tech Group HQ',
+      type: 'In-Person',
+      capacity: 60,
+      price: '$179',
       featured: false,
-      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      speakers: [
-        { name: 'Alex Thompson', role: 'VP of Cybersecurity, Zion Tech Group' }
-      ],
-      agenda: [
-        '10:00 AM - Threat Intelligence Fundamentals',
-        '11:30 AM - Advanced Threat Detection',
-        '01:30 PM - Incident Response Planning',
-        '03:00 PM - Future Threat Landscape'
-      ],
-      tags: ['Cybersecurity', 'Threat Intelligence', 'Workshop', 'Security'],
-      registrationUrl: null,
-      recordingUrl: 'https://threat-intel-2023.ziontechgroup.com/recording',
-      materialsUrl: 'https://threat-intel-2023.ziontechgroup.com/materials'
+      tags: ['Cybersecurity', 'SMB', 'Best Practices', 'Hands-on'],
+      speakers: ['Rachel Green', 'Alex Chen'],
+      image: '🛡️',
+      attendees: 55,
+      rating: 4.9
+    },
+    {
+      id: 9,
+      title: 'AI in Healthcare Webinar',
+      description: 'Exploring the transformative impact of AI technologies in healthcare and medical applications.',
+      category: 'webinar',
+      date: '2024-11-20',
+      time: '02:00 PM - 04:00 PM',
+      location: 'Virtual Event',
+      type: 'Online',
+      capacity: 300,
+      price: 'Free',
+      featured: false,
+      tags: ['AI', 'Healthcare', 'Medical', 'Virtual'],
+      speakers: ['Dr. Robert Johnson'],
+      image: '🏥',
+      attendees: 280,
+      rating: 4.7
     }
   ];
 
-  const allEvents = [...events, ...pastEvents];
-  
-  const filteredEvents = allEvents.filter(event => {
-    const matchesCategory = selectedCategory === 'all' || event.category === selectedCategory;
-    const matchesTimeframe = selectedTimeframe === 'upcoming' 
-      ? new Date(event.date) >= new Date()
-      : new Date(event.date) < new Date();
-    const matchesSearch = event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         event.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         event.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesTimeframe && matchesSearch;
+  const filteredEvents = (activeTab === 'upcoming' ? upcomingEvents : pastEvents).filter(event => {
+    const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         event.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         event.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = activeFilter === 'all' || event.category === activeFilter;
+    return matchesSearch && matchesCategory;
   });
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
-      weekday: 'long',
       year: 'numeric', 
       month: 'long', 
       day: 'numeric' 
     });
   };
 
-  const isEventFull = (event: any) => event.registered >= event.capacity;
-  const isEventPast = (event: any) => new Date(event.date) < new Date();
+  const getEventTypeColor = (type: string) => {
+    switch (type) {
+      case 'In-Person':
+        return 'bg-zion-cyan text-zion-slate-dark';
+      case 'Online':
+        return 'bg-purple-500 text-white';
+      case 'Hybrid':
+        return 'bg-orange-500 text-white';
+      default:
+        return 'bg-zion-slate/50 text-zion-cyan';
+    }
+  };
 
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
-      <section className="px-4 mb-20">
-        <div className="container mx-auto text-center">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent"
+            className="text-5xl md:text-7xl font-bold text-white mb-6"
           >
-            Events & Workshops
+            Events & Conferences
           </motion.h1>
           <motion.p 
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-zion-cyan/80 max-w-4xl mx-auto leading-relaxed"
           >
-            Join us for cutting-edge conferences, hands-on workshops, and insightful webinars. 
-            Connect with industry experts and discover the latest innovations in technology.
+            Join us for cutting-edge conferences, hands-on workshops, and insightful webinars 
+            featuring industry experts and the latest technology innovations.
           </motion.p>
         </div>
       </section>
 
-      {/* Search and Filters */}
-      <section className="px-4 mb-20">
-        <div className="container mx-auto">
-          <div className="flex flex-col lg:flex-row gap-6 mb-8">
-            {/* Search Bar */}
-            <div className="flex-1">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-                <input
-                  type="text"
-                  placeholder="Search events and workshops..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-zion-slate-darker border border-zion-slate-light/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan/50 transition-colors duration-300"
-                />
-              </div>
-            </div>
-
-            {/* Timeframe Filter */}
-            <div className="flex gap-3">
-              {timeframes.map((timeframe) => (
-                <button
-                  key={timeframe.id}
-                  onClick={() => setSelectedTimeframe(timeframe.id)}
-                  className={`flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
-                    selectedTimeframe === timeframe.id
-                      ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/30'
-                      : 'bg-zion-slate-darker text-zion-slate-light hover:bg-zion-slate-light hover:text-white border border-zion-slate-light/20'
-                  }`}
-                >
-                  <Clock3 className="w-4 h-4" />
-                  <span>{timeframe.name}</span>
-                  <span className="text-sm opacity-75">({timeframe.count})</span>
-                </button>
-              ))}
+      {/* Search and Filter Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Search Bar */}
+          <div className="max-w-2xl mx-auto mb-12">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-cyan/60" />
+              <input
+                type="text"
+                placeholder="Search events, topics, or speakers..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-zion-slate/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl text-white placeholder-zion-cyan/60 focus:outline-none focus:border-zion-cyan/40 transition-all duration-300"
+              />
             </div>
           </div>
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap gap-3">
-            {categories.map((category) => (
+          {/* Category Filters */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {filters.map((filter) => (
               <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/30'
-                    : 'bg-zion-slate-darker text-zion-slate-light hover:bg-zion-slate-light hover:text-white border border-zion-slate-light/20'
+                key={filter.id}
+                onClick={() => setActiveFilter(filter.id)}
+                className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                  activeFilter === filter.id
+                    ? 'bg-zion-cyan text-zion-slate-dark'
+                    : 'bg-zion-slate/30 text-zion-cyan hover:bg-zion-slate/50 border border-zion-cyan/20'
                 }`}
               >
-                <category.icon className="w-4 h-4" />
-                <span>{category.name}</span>
-                <span className="text-sm opacity-75">({category.count})</span>
+                <filter.icon className="w-5 h-5" />
+                {filter.label}
+                <span className="bg-zion-slate/20 text-zion-slate-dark px-2 py-1 rounded-full text-xs font-bold">
+                  {filter.count}
+                </span>
               </button>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Events */}
-      {filteredEvents.filter(event => event.featured && selectedTimeframe === 'upcoming').length > 0 && (
-        <section className="px-4 mb-20">
-          <div className="container mx-auto">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-3xl font-bold text-white mb-8 text-center"
-            >
-              Featured Events
-            </motion.h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {filteredEvents.filter(event => event.featured && selectedTimeframe === 'upcoming').map((event, index) => (
-                <motion.div
-                  key={event.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-r from-zion-cyan-dark to-zion-blue-dark rounded-2xl overflow-hidden"
-                >
-                  {/* Event Image */}
-                  <div className="relative h-48 overflow-hidden">
-                    <img 
-                      src={event.image} 
-                      alt={event.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-zion-cyan-dark/80 to-zion-blue-dark/80" />
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 bg-white/20 text-white text-sm font-medium rounded-full border border-white/30">
-                        Featured
-                      </span>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">
-                        {categories.find(cat => cat.id === event.category)?.name}
-                      </span>
-                    </div>
-                  </div>
-                  
-                  {/* Event Content */}
-                  <div className="p-8">
-                    <div className="flex items-center gap-4 text-sm text-zion-slate-light mb-4">
-                      <span className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4" />
-                        {formatDate(event.date)}
-                      </span>
-                      <span className="flex items-center gap-2">
-                        <Clock className="w-4 h-4" />
-                        {event.time}
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
-                      {event.title}
-                    </h3>
-                    
-                    <p className="text-zion-slate-light mb-6 leading-relaxed">
-                      {event.description}
-                    </p>
-                    
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="flex items-center gap-2">
-                        <MapPin className="w-4 h-4 text-zion-cyan" />
-                        <span className="text-white text-sm">
-                          {event.virtual ? 'Virtual Event' : event.location}
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Users className="w-4 h-4 text-zion-cyan" />
-                        <span className="text-white text-sm">
-                          {event.registered}/{event.capacity} registered
-                        </span>
-                      </div>
-                    </div>
-                    
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {event.tags.slice(0, 3).map((tag, idx) => (
-                        <span
-                          key={idx}
-                          className="px-3 py-1 bg-white/20 text-white text-sm rounded-full border border-white/30"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    
-                    {/* CTA */}
-                    {isEventFull(event) ? (
-                      <div className="text-center py-3 bg-red-500/20 text-red-400 rounded-xl border border-red-500/30">
-                        Event Full
-                      </div>
-                    ) : (
-                      <a
-                        href={event.registrationUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-white text-zion-blue-dark hover:bg-zion-slate-light font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
-                      >
-                        Register Now
-                        <ArrowRight className="w-4 h-4" />
-                      </a>
-                    )}
-                  </div>
-                </motion.div>
-              ))}
+      {/* Tab Navigation */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex justify-center">
+            <div className="bg-zion-slate/30 backdrop-blur-sm rounded-2xl p-2 border border-zion-cyan/20">
+              <button
+                onClick={() => setActiveTab('upcoming')}
+                className={`px-8 py-3 rounded-xl font-medium transition-all duration-300 ${
+                  activeTab === 'upcoming'
+                    ? 'bg-zion-cyan text-zion-slate-dark'
+                    : 'text-zion-cyan hover:text-zion-cyan/80'
+                }`}
+              >
+                Upcoming Events
+              </button>
+              <button
+                onClick={() => setActiveTab('past')}
+                className={`px-8 py-3 rounded-xl font-medium transition-all duration-300 ${
+                  activeTab === 'past'
+                    ? 'bg-zion-cyan text-zion-slate-dark'
+                    : 'text-zion-cyan hover:text-zion-cyan/80'
+                }`}
+              >
+                Past Events
+              </button>
             </div>
           </div>
         </section>
@@ -739,35 +487,216 @@ const Events = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="px-4">
-        <div className="container mx-auto text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
+      {/* Featured Events */}
+      {filteredEvents.filter(event => event.featured).length > 0 && (
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">Featured Events</h2>
+              <p className="text-xl text-zion-cyan/80 max-w-3xl mx-auto">
+                Don't miss our most anticipated events featuring industry leaders and cutting-edge insights.
+              </p>
+            </motion.div>
+            
+            <div className="grid lg:grid-cols-2 gap-8">
+              {filteredEvents.filter(event => event.featured).map((event, index) => (
+                <motion.div
+                  key={event.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-zion-slate/30 backdrop-blur-sm rounded-2xl p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="bg-zion-cyan/20 text-zion-cyan px-3 py-1 rounded-full text-sm font-medium">
+                      {filters.find(f => f.id === event.category)?.label}
+                    </span>
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${getEventTypeColor(event.type)}`}>
+                      {event.type}
+                    </span>
+                  </div>
+                  
+                  <div className="text-6xl mb-6">{event.image}</div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-4">{event.title}</h3>
+                  <p className="text-zion-cyan/80 text-lg leading-relaxed mb-6">{event.description}</p>
+                  
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center gap-3 text-zion-cyan/80">
+                      <Calendar className="w-5 h-5" />
+                      <span>{formatDate(event.date)}</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-zion-cyan/80">
+                      <Clock className="w-5 h-5" />
+                      <span>{event.time}</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-zion-cyan/80">
+                      <MapPin className="w-5 h-5" />
+                      <span>{event.location}</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-zion-cyan/80">
+                      <Users className="w-5 h-5" />
+                      <span>Capacity: {event.capacity} • Price: {event.price}</span>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {event.tags.map((tag, idx) => (
+                      <span key={idx} className="bg-zion-slate/50 text-zion-cyan/80 px-3 py-1 rounded-full text-sm">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <div className="flex items-center justify-between pt-4 border-t border-zion-cyan/20">
+                    <div className="text-sm text-zion-cyan/60">
+                      Speakers: {event.speakers.join(', ')}
+                    </div>
+                    <button className="bg-zion-cyan hover:bg-zion-cyan/80 text-zion-slate-dark px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105">
+                      Register Now
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* All Events Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-zion-cyan-dark to-zion-blue-dark p-12 rounded-2xl"
+            className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold mb-6 text-white">
-              Host Your Event With Us
+            <h2 className="text-4xl font-bold text-white mb-6">
+              {activeTab === 'upcoming' ? 'All Upcoming Events' : 'Past Events'}
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Interested in hosting a technology event, workshop, or conference? 
-              Let's collaborate to create impactful learning experiences
+            <p className="text-xl text-zion-cyan/80 max-w-3xl mx-auto">
+              {activeTab === 'upcoming' 
+                ? 'Browse our complete calendar of upcoming events and secure your spot.'
+                : 'Explore our previous events and access recorded content where available.'
+              }
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                to="/contact"
-                className="bg-white text-zion-blue-dark hover:bg-zion-slate-light font-bold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                Get in Touch
-              </Link>
-              <Link
-                to="/about"
-                className="border-2 border-white text-white hover:bg-white hover:text-zion-blue-dark font-bold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Learn More
-              </Link>
+          </motion.div>
+          
+          {filteredEvents.filter(event => !event.featured).length > 0 ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredEvents.filter(event => !event.featured).map((event, index) => (
+                <motion.div
+                  key={event.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-zion-slate/30 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="bg-zion-cyan/20 text-zion-cyan px-3 py-1 rounded-full text-sm font-medium">
+                      {filters.find(f => f.id === event.category)?.label}
+                    </span>
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getEventTypeColor(event.type)}`}>
+                      {event.type}
+                    </span>
+                  </div>
+                  
+                  <div className="text-4xl mb-4">{event.image}</div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-3">{event.title}</h3>
+                  <p className="text-zion-cyan/80 text-sm leading-relaxed mb-4">{event.description}</p>
+                  
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-center gap-2 text-xs text-zion-cyan/60">
+                      <Calendar className="w-3 h-3" />
+                      <span>{formatDate(event.date)}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-zion-cyan/60">
+                      <MapPin className="w-3 h-3" />
+                      <span>{event.location}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-zion-cyan/60">
+                      <Users className="w-3 h-3" />
+                      <span>{event.capacity} • {event.price}</span>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {event.tags.slice(0, 3).map((tag, idx) => (
+                      <span key={idx} className="bg-zion-slate/50 text-zion-cyan/80 px-2 py-1 rounded-full text-xs">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  {activeTab === 'past' && 'attendees' in event && (
+                    <div className="flex items-center justify-between text-xs text-zion-cyan/60 mb-4">
+                      <span>{event.attendees} attendees</span>
+                      <span className="flex items-center gap-1">
+                        <span>★</span>
+                        {event.rating}
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="flex items-center justify-between pt-4 border-t border-zion-cyan/20">
+                    <div className="text-xs text-zion-cyan/60">
+                      {event.speakers.slice(0, 2).join(', ')}
+                      {event.speakers.length > 2 && ' + more'}
+                    </div>
+                    {activeTab === 'upcoming' ? (
+                      <button className="text-zion-cyan hover:text-zion-cyan/80 font-medium flex items-center gap-1 transition-colors duration-300 text-sm">
+                        Register
+                        <ArrowRight className="w-3 h-3" />
+                      </button>
+                    ) : (
+                      <button className="text-zion-cyan hover:text-zion-cyan/80 font-medium flex items-center gap-1 transition-colors duration-300 text-sm">
+                        View Recording
+                        <Video className="w-3 h-3" />
+                      </button>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-20">
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-2xl font-semibold text-zion-cyan/80 mb-2">No Events Found</h3>
+              <p className="text-zion-cyan/60">Try adjusting your search or filters to see more results.</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-zion-slate/30 backdrop-blur-sm rounded-2xl p-12 border border-zion-cyan/20 text-center"
+          >
+            <div className="text-6xl mb-6">🎯</div>
+            <h2 className="text-4xl font-bold text-white mb-6">Host Your Event With Us</h2>
+            <p className="text-xl text-zion-cyan/80 mb-8 max-w-2xl mx-auto">
+              Looking to host a technology conference, workshop, or networking event? 
+              Partner with Zion Tech Group to create impactful experiences for your audience.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-zion-cyan hover:bg-zion-cyan/80 text-zion-slate-dark px-8 py-4 rounded-2xl font-bold transition-all duration-300 transform hover:scale-105">
+                Partner With Us
+              </button>
+              <button className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark px-8 py-4 rounded-2xl font-bold transition-all duration-300">
+                Contact Events Team
+              </button>
             </div>
           </motion.div>
         </div>
