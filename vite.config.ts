@@ -30,10 +30,7 @@ export default defineConfig(({ mode }) => ({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          ui: ['@radix-ui/react-alert-dialog', '@radix-ui/react-avatar'],
-          utils: ['axios', 'date-fns', 'lodash.debounce'],
           query: ['@tanstack/react-query'],
-          forms: ['react-hook-form', 'formik', 'yup', 'zod'],
         },
         // Optimize chunk file names
         chunkFileNames: 'assets/[name]-[hash].js',
