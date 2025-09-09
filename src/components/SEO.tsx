@@ -5,7 +5,7 @@ interface SEOProps {
   title?: string;
   description?: string;
 
-  keywords?: string[];
+  keywords?: string[] | string;
   author?: string;
   canonical?: string;
   ogImage?: string;
@@ -58,7 +58,9 @@ export function SEO({
 }: SEOProps) {
   const seoTitle = title ? `${title} | Zion Tech Group` : defaultSEO.title;
   const seoDescription = description || defaultSEO.description;
-  const seoKeywords = keywords ? [...defaultSEO.keywords, ...keywords].join(', ') : defaultSEO.keywords.join(', ');
+  const seoKeywords = keywords 
+    ? [...defaultSEO.keywords, ...(Array.isArray(keywords) ? keywords : [keywords])].join(', ') 
+    : defaultSEO.keywords.join(', ');
   const seoAuthor = author || defaultSEO.author;
   const seoOgType = ogType || defaultSEO.ogType;
   const seoTwitterCard = twitterCard || defaultSEO.twitterCard;
