@@ -123,8 +123,14 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                   Price Range
                 </label>
                 <div className="mt-6 px-2">
+<<<<<<< HEAD
                   <Slider aria-label="Price range" defaultValue={[0, priceRange.max]}
 
+=======
+                  <Slider 
+                    aria-label="Price range" 
+                    defaultValue={[0, priceRange.max]}
+>>>>>>> main
                     min={0} 
                     max={priceRange.max} 
                     step={priceRange.max / 100} 
@@ -150,6 +156,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                       variant="outline" 
                       size="sm" 
                       onClick={() => {
+<<<<<<< HEAD
                         console.log("Rating selected:", rating);
                         setSelectedRating(rating);
                       }} 
@@ -168,6 +175,26 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                       )}
                     </Button>
                   ))}
+=======
+                console.log("Rating selected:", rating);
+                setSelectedRating(rating);
+              }}
+              aria-pressed={selectedRating === rating} 
+              className={`${selectedRating === rating
+                ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
+                : "border-zion-blue-light text-zion-slate-light"} focus-visible:ring-zion-purple`}
+            >
+              {rating === null ? "Any" : (
+                <div className="flex items-center">
+                  {[...Array(rating)].map((_, i) => (
+                    <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />
+                  ))}
+                  <span className="ml-1">& Up</span>
+                </div>
+              )}
+            </Button>
+          ))}
+>>>>>>> main
                 </div>
               </div>
               
@@ -184,6 +211,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
           </div>
 
           <div className="lg:col - span - 3">
+<<<<<<< HEAD
             <div className="bg - zion - blue - dark rounded - lg p - 4 mb - 6 border border - zion - blue - light">
               <div className="flex flex - col md:flex - row gap - 4">
                 <div className="relative flex - grow">
@@ -195,6 +223,22 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
             setSearchQuery (e.target.value) ;
 
 }} className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>
+=======
+            <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="relative flex-grow">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                  <Input 
+                    type="text" 
+                    placeholder="Search listings..." 
+                    value={searchQuery} 
+                    onChange={(e) => {
+                      console.log("Search query:", e.target.value);
+                      setSearchQuery(e.target.value);
+                    }} 
+                    className="pl-10 bg-zion-blue border border-zion-blue-light text-white" 
+                  />
+>>>>>>> main
                 </div>
 
                 <div className="flex items-center gap-2 ml-auto">
@@ -259,6 +303,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 ))}
               </div>
             ) : filteredListings.length > 0 ? (
+<<<<<<< HEAD
               <div className={view === "grid"
                 ? "grid grid-cols-1 md:grid-cols-2 gap-6"
                 : "flex flex-col gap-6"}>
@@ -272,6 +317,12 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                         <Button variant="outline" size="sm">View Details</Button>
                       </div>
                     </div>
+=======
+              <div className={view === "grid" ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" : "flex flex-col gap-6"}>
+                {filteredListings.map((listing) => (
+                  <div key={listing.id}>
+                    {/* Listing content */}
+>>>>>>> main
                   </div>
                 ))}
               </div>
@@ -283,9 +334,14 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                   variant="outline" 
                   onClick={() => {
                     setSearchQuery("");
+<<<<<<< HEAD
                     setSelectedCategory("all");
                     setCurrentPriceFilter([0, priceRange.max]);
                     setSelectedRating(null);
+=======
+                    setSelectedRating(null);
+                    setCurrentPriceFilter([0, priceRange.max]);
+>>>>>>> main
                   }} 
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                 >
@@ -293,6 +349,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 </Button>
               </div>
             )}
+<<<<<<< HEAD
 
             {filteredListings.length > 0 && (
               <div className="mt-8">
@@ -325,9 +382,17 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 </Pagination>
               </div>
             )}
+=======
+>>>>>>> main
           </div>
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default DynamicListingPage;
+>>>>>>> main

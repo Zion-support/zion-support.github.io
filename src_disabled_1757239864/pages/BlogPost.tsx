@@ -1,43 +1,43 @@
-import { useState, useEffect } from "react";
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { SEO } from "@/components/SEO";
-import JsonLd from "@/components/JsonLd";
-import { Button } from "@/components/ui/button";
-import ImageWithRetry from '@/components/ui/ImageWithRetry';
+import { useState, useEffect } from "react" 
+import { useRouter } from 'next/router' 
+import Link from 'next/link' 
+import { SEO } from "@/components/SEO" 
+import JsonLd from "@/components/JsonLd" 
+import { Button } from "@/components/ui/button" 
+import ImageWithRetry from '@/components/ui/ImageWithRetry' 
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
-import type { BlogPost as BlogPostType } from "@/types/blog";
-import { Separator } from "@/components/ui/separator";
+import type { BlogPost as BlogPostType } from "@/types/blog" 
+import { Separator } from "@/components/ui/separator" 
 
 // Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts";
+import { BLOG_POSTS } from "@/data/blog-posts" 
 export default function BlogPost() {
 
-  const router = useRouter();
+  const router = useRouter() 
   const { slug } = router.query as { slug: string },
-  const [post, setPost] = useState<BlogPostType | null>(null);
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
-  const [showShareMenu, setShowShareMenu] = useState(false);
+  const [post, setPost] = useState<BlogPostType | null>(null) 
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]) 
+  const [showShareMenu, setShowShareMenu] = useState(false) 
 
   useEffect(() => {
     // Find the current post by slug
-    const currentPost = BLOG_POSTS.find(p => p.slug === slug);
+    const currentPost = BLOG_POSTS.find(p => p.slug === slug) 
     if (currentPost) {
-      setPost(currentPost);
+      setPost(currentPost) 
       // Find related posts (same category, excluding current post)
       const related = BLOG_POSTS.filter(p => 
         p.id !== currentPost.id && 
         (p.category === currentPost.category || 
          p.tags.some(tag => currentPost.tags.includes(tag)))
-      ).slice(0, 3);
-      setRelatedPosts(related);
+      ).slice(0, 3) 
+      setRelatedPosts(related) 
     } else {
       // Post not found
-      navigate("/blog", { replace: true });
+      navigate("/blog", { replace: true }) 
     }
     // Scroll to top when post changes
-    window.scrollTo(0, 0);
-  }, [slug, navigate]);
+    window.scrollTo(0, 0) 
+  }, [slug, navigate]) 
   if (!post) {
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
@@ -48,20 +48,20 @@ export default function BlogPost() {
 
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
-    if (!post) return '';
+    if (!post) return '' 
     
-    const url = encodeURIComponent(window.location.href);
-    const title = encodeURIComponent(post.title);
+    const url = encodeURIComponent(window.location.href) 
+    const title = encodeURIComponent(post.title) 
     switch (platform) {
       case 'facebook':
-        return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+        return `https://www.facebook.com/sharer/sharer.php?u=${url}` 
       case 'twitter':
-        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+        return `https://twitter.com/intent/tweet?url=${url}&text=${title}` 
       case 'linkedin':
-        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
+        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}` 
       default: return '#'
     }
-  };
+  } 
 
   return (
     <>

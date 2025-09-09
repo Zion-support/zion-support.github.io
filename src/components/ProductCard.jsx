@@ -1,14 +1,22 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+>>>>>>> main
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger
 } from "@/components/ui/tooltip";
+<<<<<<< HEAD
 import { useAuth } from "@/context/auth/AuthContext";
 import { useWishlist } from "@/hooks/useWishlist";
 import { useDispatch } from "react-redux";
@@ -165,3 +173,26 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
 }
 
 export { ProductCard };
+=======
+
+export default function ProductCard({ product, onBuy, buyDisabled = false }) {
+  return (
+    <Card className="p-4">
+      <div className="space-y-2">
+        <h3 className="font-semibold">{product.name}</h3>
+        <p className="text-sm text-gray-600">{product.description}</p>
+        <div className="flex justify-between items-center">
+          <span className="font-bold">${product.price}</span>
+          <Button 
+            onClick={() => onBuy?.(product)} 
+            disabled={buyDisabled}
+            size="sm"
+          >
+            Buy
+          </Button>
+        </div>
+      </div>
+    </Card>
+  );
+}
+>>>>>>> main

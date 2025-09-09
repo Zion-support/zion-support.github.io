@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -183,6 +184,29 @@ const Help: NextPage = () => {
             </div>;
           </div>;
         </section>;
+=======
+import React from 'react' 
+import Head from 'next/head' 
+import Link from 'next/link' 
+import {
+  BookOpen,
+  Can,
+  CheckCircle,
+  Clock,
+  Common,
+  FileText,
+  Frequently,
+  HelpCircle,
+  Mail,
+  MessageCircle,
+  Phone,
+  Quick,
+  Search,
+  Users,
+  Video,
+  Within,
+  Yes } from 'lucide-react' 
+>>>>>>> cursor/check-fix-push-and-merge-to-main-649b
 
 export default function Help() {
   const faqs = [
@@ -204,7 +228,7 @@ export default function Help() {
         'We work with modern technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, blockchain platforms, and mobile development frameworks.' }, {
       question: 'How do you ensure data security?',
       answer:
-        'We implement industry-standard security measures including SSL encryption, secure data storage, regular security audits, and compliance with data protection regulations.' } ];
+        'We implement industry-standard security measures including SSL encryption, secure data storage, regular security audits, and compliance with data protection regulations.' } ] 
   const supportChannels = [
     {
       icon: Mail,
@@ -224,7 +248,7 @@ export default function Help() {
       description: 'Get instant help through our live chat',
       contact: 'Available on website',
       responseTime: 'Real-time',
-      color: 'purple' } ];
+      color: 'purple' } ] 
 
   const resources = [
     {
@@ -247,7 +271,7 @@ export default function Help() {
       icon: Users,
       title: 'Community Forum',
       description: 'Connect with other users and get peer support',
-      link: '/community' } ];
+      link: '/community' } ] 
   return (
     <>
       <Head>
@@ -464,4 +488,9 @@ export default function Help() {
       </section>;
     </MainLayout>;
   )}
+<<<<<<< HEAD
 export default Help;
+=======
+  ) 
+} 
+>>>>>>> cursor/check-fix-push-and-merge-to-main-649b

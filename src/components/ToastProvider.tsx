@@ -1,11 +1,22 @@
 import React from 'react';
-import { Toaster as SonnerToaster } from 'sonner';
+import { Toaster } from 'react-hot-toast';
 
-export default function ToastProvider({ children }: { children: React.ReactNode }) {
+const ToastProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <>
-      <SonnerToaster position="top-right" />
       {children}
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          duration: 4000,
+          style: {
+            background: '#363636',
+            color: '#fff',
+          },
+        }}
+      />
     </>
   );
-}
+};
+
+export default ToastProvider;

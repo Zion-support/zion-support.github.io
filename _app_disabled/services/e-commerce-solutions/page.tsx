@@ -1,8 +1,7 @@
 export const metadata = {
-  }
-  "title": "E-commerce Solutions | Zion Tech Group","
-  "description": "Build powerful e-commerce platforms with custom solutions, payment integration, inventory management, and seamless user experiences.","
-  "keywords": "e-commerce, online store, payment integration, inventory management, e-commerce platform""
+  title: "E-commerce Solutions | Zion Tech Group",
+  description: "Build powerful e-commerce platforms with custom solutions, payment integration, inventory management, and seamless user experiences.",
+  keywords: "e-commerce, online store, payment integration, inventory management, e-commerce platform"
 };
 
 export default function ECommerceSolutionsPage() {

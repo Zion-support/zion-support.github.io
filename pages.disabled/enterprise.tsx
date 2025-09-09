@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';
-import Layout from '../../components/Layout';
-import Link from 'next/link';
+import type { NextPage } from 'next' 
+import Layout from '../../components/Layout' 
+import Link from 'next/link' 
 import {
   Building,
   Users,
@@ -8,7 +8,7 @@ import {
   Zap,
   Database,
   Globe,
-  CheckCircle } from 'lucide-react';
+  CheckCircle } from 'lucide-react' 
 
 const EnterpriseSolutions: NextPage = () => {
   return (
@@ -581,7 +581,7 @@ const EnterpriseSolutions: NextPage = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => {
-              const IconComponent = feature.icon;
+              const IconComponent = feature.icon 
               return (
                 <motion.div
                   key={index}
@@ -596,7 +596,7 @@ const EnterpriseSolutions: NextPage = () => {
                   <h3 className="text-xl font-semibold mb-4 text-gray-900">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
-              );
+              ) 
             })}
           </div>
         </div>
@@ -678,6 +678,6 @@ const EnterpriseSolutions: NextPage = () => {
         </div>
       </section>
     </Layout>
-  )};
+  )} 
 
-export default EnterpriseSolutions;
+export default EnterpriseSolutions 

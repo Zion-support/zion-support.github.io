@@ -1,8 +1,8 @@
-:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx;
-<:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx;
-import: React from 'react.ts';';
-import: { motion  } from 'framer-motion.ts';';
-import: { SEO  } from '@/components/SEO';';
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx 
+<:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx 
+import: React from 'react.ts';' 
+import: { motion  } from 'framer-motion.ts';' 
+import: { SEO  } from '@/components/SEO';' 
 import: { Shield,
   Eye,
   AlertTriangle,
@@ -10,7 +10,7 @@ import: { Shield,
   Lock,
   Activity,
   CheckCircle,
-=;
+= 
 import: { Shield,
   Eye,
   AlertTriangle,
@@ -30,7 +30,7 @@ import: { Shield,
   Database,
   Cpu,
   Brain,
-  Users'} from 'lucide-react';';
+  Users'} from 'lucide-react';' 
 export: { function }
 export default function AICybersecurityThreatDetection(...args: []):  {
     }, {
@@ -40,7 +40,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
       popular: fals,e}
   ]}, {
       icon: BarChart,3,
-      title: '60% Cost: Reduction',,';
+      title: '60% Cost: Reduction',,' 
       description: 'Automated: security reduces manual intervention and operational costs'}']},
 
                 Security Assessment
@@ -56,20 +56,20 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx 
+  y: 20 
   ,
     y: 20}}
             whileInView = {
   { opacity: 1,
-:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx;
-  y: 0;
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx 
+  y: 0 
   ,
     y: 0}}
-            transition={{ duration: 0.8 }};
-            viewport={{ once: true }};
-            className='text-center mb-16'';
-'';
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }} 
+            className='text-center mb-16'' 
+'' 
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-4>
               Powered by Advanced AI''
             </h2>'''
@@ -77,18 +77,18 @@ export default function AICybersecurityThreatDetection(...args: []):  {
               Our platform leverages cutting-edge artificial intelligence to provide unmatched cybersecurity protection
 
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx 
+  y: 20 
 
                 </div>''
-                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>';
-  delay: index * 0.1}};
-                viewport={{ once: true }};
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-red-500 transition-all duration-300'';
+                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>' 
+  delay: index * 0.1}} 
+                viewport={{ once: true }} 
+                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-red-500 transition-all duration-300'' 
 '''
                 <div className='w-12 h-12 bg-gradient-to-r from-red-600 to-orange-600 rounded-lg flex items-center justify-center mb-4>''
                   <feature.icon className='w-6 h-6 text-white' />'
@@ -107,20 +107,20 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx 
+  y: 20 
   ,
     y: 20}}
             whileInView = {
   { opacity: 1,
-:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx;
-  y: 0;
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx 
+  y: 0 
   ,
     y: 0}}
-            transition={{ duration: 0.8 }};
-            viewport={{ once: true }};
-            className='text-center mb-16'';
-'';
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }} 
+            className='text-center mb-16'' 
+'' 
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-4>
               Proven Results''
             </h2>'''
@@ -128,18 +128,18 @@ export default function AICybersecurityThreatDetection(...args: []):  {
               Join thousands of organizations already protected by our AI-powered cybersecurity platform
 
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx 
+  y: 20 
 
                 </div>''
-                <h3 className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>';
-  delay: index * 0.1}};
-                viewport={{ once: true }};
-                className='text-center'';
+                <h3 className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>' 
+  delay: index * 0.1}} 
+                viewport={{ once: true }} 
+                className='text-center'' 
 '''
                 <div className='w-16 h-16 bg-gradient-to-r from-red-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4>''
                   <benefit.icon className='w-8 h-8 text-white' />'
@@ -158,20 +158,20 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx 
+  y: 20 
   ,
     y: 20}}
             whileInView = {
   { opacity: 1,
-:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx;
-  y: 0;
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx 
+  y: 0 
   ,
     y: 0}}
-            transition={{ duration: 0.8 }};
-            viewport={{ once: true }};
-            className='text-center mb-16'';
-'';
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }} 
+            className='text-center mb-16'' 
+'' 
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4>
               Comprehensive Threat Protection''
             </h2>'''
@@ -180,19 +180,19 @@ export default function AICybersecurityThreatDetection(...args: []):  {
 
           <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>
             {threatTypes.map(threa,
-    t: unknown, index: unknown();
+    t: unknown, index: unknown() 
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx;
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx 
 
                 </div>''
-                <h3 className='text-2xl font-semibold text-white mb-4'>{threat.title}</h3>';
-  delay: index * 0.1}};
-                viewport={{ once: true }};
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700'';
+                <h3 className='text-2xl font-semibold text-white mb-4'>{threat.title}</h3>' 
+  delay: index * 0.1}} 
+                viewport={{ once: true }} 
+                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700'' 
 '''
                 <div className='w-16 h-16 bg-gradient-to-r from-red-600 to-orange-600 rounded-lg flex items-center justify-center mb-6>''
                   <threat.icon className='w-8 h-8 text-white' />'
@@ -211,20 +211,20 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             initial = {
   { opacit,
     y: 0,
-:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx 
+  y: 20 
   ,
     y: 20}}
             whileInView = {
   { opacity: 1,
-:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx;
-  y: 0;
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx 
+  y: 0 
   ,
     y: 0}}
-            transition={{ duration: 0.8 }};
-            viewport={{ once: true }};
-            className='text-center mb-16'';
-'';
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }} 
+            className='text-center mb-16'' 
+'' 
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-4>
               Compliance & Certifications''
             </h2>'''
@@ -232,20 +232,20 @@ export default function AICybersecurityThreatDetection(...args: []):  {
               Meet industry standards and regulatory requirements with our certified security platform
 
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx 
+  y: 20 
 
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx 
+  y: 20 
 
                     </span>
 
@@ -254,8 +254,8 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                 </ul>`
 ``
 
-';
-                  plan.popular'';
+' 
+                  plan.popular'' 
                     ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover: from-red-700 hove,
     r:to-orange-700'''`;`
                     : 'bg-gray-700 text-white hove,
@@ -271,8 +271,8 @@ export default function AICybersecurityThreatDetection(...args: []):  {
 
               </button>
 :pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx: </div>
-<:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx;
-=;
+<:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx 
+= 
 
             <p className='text-gray-400 mt-6'>
               No credit card required • 30-day free trial • 24/7 security monitoring

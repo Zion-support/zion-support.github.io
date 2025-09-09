@@ -1,4 +1,4 @@
-:pages.disabled/pages/services/MicroSAAS.tsx;
+:pages.disabled/pages/services/MicroSAAS.tsx 
 
               <span className='bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent'> SAAS Empire</span>'
             </h1>'''

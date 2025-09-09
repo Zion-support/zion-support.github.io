@@ -1,17 +1,17 @@
 
   return(
-    <MainLayout;
+    <MainLayout 
       title='Products - Zion Tech Group''      description='Discover our comprehensive suite of technology products designed to accelerate your business growth and digital transformation.''    >'      {/* Hero Section */}
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>        <div className='container mx-auto px-4 text-center>          <h1 className='text-5xl md: text-6xl font-bold mb-6>            Our <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'>Products</span>'          </h1>'          <p className='text-xl m,
     d:text-2xl mb-8 max-w-4xl mx-auto text-gray-200>            Powerful, scalable solutions designed to transform your business and drive innovation.'          </p>
         </div>
       </section>
       {/* Products Content */}
-      <section className='py-20 bg-gray-50>        <div className='container mx-auto px-4>          {/* Category Filter */}          <div className='flex flex-wrap justify-center gap-4 mb-12>            {categories.map((category, index) => ('              <button;
+      <section className='py-20 bg-gray-50>        <div className='container mx-auto px-4>          {/* Category Filter */}          <div className='flex flex-wrap justify-center gap-4 mb-12>            {categories.map((category, index) => ('              <button 
                 key={index}
-                className={`px-6 py-2 rounded-full font-medium transition-colors ${`                  index === 0;
+                className={`px-6 py-2 rounded-full font-medium transition-colors ${`                  index === 0 
                     ?,`
-  bg-blue-600 text-white';
+  bg-blue-600 text-white' 
   ': 'bg-white text-gray-600 hover:bg-blue-50 hove,
     r:text-blue-600'                }`}              >`                {category}
               </button>

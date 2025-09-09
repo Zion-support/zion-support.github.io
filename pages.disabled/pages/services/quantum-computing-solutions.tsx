@@ -11,9 +11,9 @@ import {}
   Database,
   Cloud,
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+:pages.disabled/pages/services/quantum-computing-solutions.tsx 
 
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
               <Atom className="w-4 h-4 mr-2"  />              Next-Generation Computing"
@@ -25,8 +25,8 @@ import {}
               Harness the power of quantum computing to solve previously
               intractable problems, enhance machine learning capabilities, and
 
-              Harness the power of quantum computing to solve previously;
-              intractable problems, enhance machine learning capabilities, and;
+              Harness the power of quantum computing to solve previously 
+              intractable problems, enhance machine learning capabilities, and 
               gain competitive advantages in your industry.''
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>''
@@ -43,18 +43,18 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+:pages.disabled/pages/services/quantum-computing-solutions.tsx 
 
-              Our quantum computing solutions leverage cutting-edge quantum;
-              technologies to deliver unprecedented computational power and;
+              Our quantum computing solutions leverage cutting-edge quantum 
+              technologies to deliver unprecedented computational power and 
               problem-solving capabilities.
             </p>
 
             {features.map((feature, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
                   <feature.icon className='w-6 h-6 text-purple-400' />'
@@ -71,18 +71,18 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+:pages.disabled/pages/services/quantum-computing-solutions.tsx 
 
-              From algorithm development to cloud access, we provide end-to-end;
-              quantum computing solutions tailored to your specific needs and;
+              From algorithm development to cloud access, we provide end-to-end 
+              quantum computing solutions tailored to your specific needs and 
               industry requirements.
             </p>
 
             {solutions.map((solution, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
 
                   <solution.icon className='w-8 h-8 text-purple-400' />'
@@ -102,7 +102,7 @@ import {}
         </div>
       </section>
 
-                Quantum computing offers unprecedented capabilities that can;
+                Quantum computing offers unprecedented capabilities that can 
 
 
                   </div>
@@ -110,7 +110,7 @@ import {}
               </div>
             </motion.div>
 
-            <motion.div;
+            <motion.div 
 
                     Get Assessment
 
@@ -123,9 +123,9 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity:  ,0, y: 20 }}
-:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+:pages.disabled/pages/services/quantum-computing-solutions.tsx 
 
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
               Ready for the Quantum Future?"
@@ -133,7 +133,7 @@ import {}
             <p className="text-xl text-slate-300 mb-8">
               Join the quantum computing revolution and gain access to
 
-              Join the quantum computing revolution and gain access to;
+              Join the quantum computing revolution and gain access to 
               computational power that was previously unimaginable.''
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>''

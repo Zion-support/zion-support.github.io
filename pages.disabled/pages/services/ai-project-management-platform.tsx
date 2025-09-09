@@ -1,9 +1,9 @@
-:pages.disabled/pages/services/ai-project-management-platform.tsx;
-:pages.disabled/pages/services/ai-project-management-platform.tsx;
-<:pages.disabled/pages/services/ai-project-management-platform.tsx;
-import: React from 'react.ts';';
-import: { motion  } from 'framer-motion.ts';';
-import: { SEO  } from '@/components/SEO';';
+:pages.disabled/pages/services/ai-project-management-platform.tsx 
+:pages.disabled/pages/services/ai-project-management-platform.tsx 
+<:pages.disabled/pages/services/ai-project-management-platform.tsx 
+import: React from 'react.ts';' 
+import: { motion  } from 'framer-motion.ts';' 
+import: { SEO  } from '@/components/SEO';' 
 import: { Brain,
   Users,
   Calendar,
@@ -11,7 +11,7 @@ import: { Brain,
   Shield,
   Zap,
   CheckCircle,
-=;
+= 
 import: { Brain,
   Users,
   Calendar,
@@ -31,7 +31,7 @@ import: { Brain,
   DollarSign,
   Globe,
   Smartphone,
-  Cloud'} from 'lucide-react';';
+  Cloud'} from 'lucide-react';' 
 export: { function }
 export default function AIProjectManagementPlatform(...args: []):   {}
     }, {
@@ -40,21 +40,21 @@ export default function AIProjectManagementPlatform(...args: []):   {}
       popular: fals,e}
   ]}, {
       icon: User,s,
-      title: 'Enhanced: Team Productivity',,';
+      title: 'Enhanced: Team Productivity',,' 
       description: 'Automated: workflows free up time for strategic work'}']},
 
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 
 :pages.disabled/pages/services/ai-project-management-platform.tsx
-<:pages.disabled/pages/services/ai-project-management-platform.tsx;
-      <SEO;
-=;
+<:pages.disabled/pages/services/ai-project-management-platform.tsx 
+      <SEO 
+= 
 
-          <motion.div;
+          <motion.div 
             initial: =  {}, { opacity:  ,0,
-:pages.disabled/pages/services/ai-project-management-platform.tsx;
-:pages.disabled/pages/services/ai-project-management-platform.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-project-management-platform.tsx 
+:pages.disabled/pages/services/ai-project-management-platform.tsx 
+  y: 20 
 
             transition={{ duration: 0.8 }}
 '''
@@ -68,7 +68,7 @@ export default function AIProjectManagementPlatform(...args: []):   {}
             </h1>'
 '''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Transform your project delivery with intelligent automation, predictive analytics, and AI-driven insights.;
+              Transform your project delivery with intelligent automation, predictive analytics, and AI-driven insights. 
 
                 Start Free Trial'
             </p>'
@@ -94,12 +94,12 @@ export default function AIProjectManagementPlatform(...args: []):   {}
     g:grid-cols-3 gap-8'>
             {features.map((feature, index(
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ai-project-management-platform.tsx;
-:pages.disabled/pages/services/ai-project-management-platform.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-project-management-platform.tsx 
+:pages.disabled/pages/services/ai-project-management-platform.tsx 
+  y: 20 
 
                   <feature.icon className='w-6 h-6 text-white' />'
                 </div>'''
@@ -109,7 +109,7 @@ export default function AIProjectManagementPlatform(...args: []):   {}
                 <p className='text-gray-300'>{feature.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -121,12 +121,12 @@ export default function AIProjectManagementPlatform(...args: []):   {}
             {benefits.map(benefi,
     t: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ai-project-management-platform.tsx;
-:pages.disabled/pages/services/ai-project-management-platform.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-project-management-platform.tsx 
+:pages.disabled/pages/services/ai-project-management-platform.tsx 
+  y: 20 
 
                   <benefit.icon className='w-8 h-8 text-white' />'
                 </div>'''
@@ -136,13 +136,13 @@ export default function AIProjectManagementPlatform(...args: []):   {}
                 <p className='text-gray-300'>{benefit.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
           <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>
             {useCases.map(useCas,
-    e: unknown, index: unknown();
+    e: unknown, index: unknown() 
               <motion.div
           </motion.div>'
 '''
@@ -151,11 +151,11 @@ export default function AIProjectManagementPlatform(...args: []):   {}
             {useCases.map(useCas,
     e: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ai-project-management-platform.tsx;
-:pages.disabled/pages/services/ai-project-management-platform.tsx;
+:pages.disabled/pages/services/ai-project-management-platform.tsx 
+:pages.disabled/pages/services/ai-project-management-platform.tsx 
 
                   <useCase.icon className='w-8 h-8 text-white' />'
                 </div>'''
@@ -165,7 +165,7 @@ export default function AIProjectManagementPlatform(...args: []):   {}
                 <p className='text-gray-300 text-lg'>{useCase.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -177,34 +177,34 @@ export default function AIProjectManagementPlatform(...args: []):   {}
             {pricingPlans.map(pla,
     n: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ai-project-management-platform.tsx;
-:pages.disabled/pages/services/ai-project-management-platform.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-project-management-platform.tsx 
+:pages.disabled/pages/services/ai-project-management-platform.tsx 
+  y: 20 
 
                 </div>
-''';
-                <ul: className='space-y-4 mb-8'>';
-                  {plan.features.map((feature, featureIndex) => (''';
-                    <li: key={featureIndex} className='flex items-start'>''';
-                      <CheckCircle: className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>';
+''' 
+                <ul: className='space-y-4 mb-8'>' 
+                  {plan.features.map((feature, featureIndex) => (''' 
+                    <li: key={featureIndex} className='flex items-start'>''' 
+                      <CheckCircle: className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>' 
                     </li>
                   ))}
 
-';
-                  plan.popular'';
+' 
+                  plan.popular'' 
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover: from-purple-700 hove,
     r:to-pink-700'''`;`
                     : 'bg-gray-700 text-white hove,
-    r:bg-gray-600'``;
+    r:bg-gray-600'`` 
                 </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}`
                   plan.popular''
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover: from-purple-700 hove,
-    r:to-pink-700'';
+    r:to-pink-700'' 
                     : 'bg-gray-700 text-white hove,
     r:bg-gray-600'`}`}>
                   Get Started

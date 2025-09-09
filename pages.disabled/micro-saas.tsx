@@ -1,13 +1,13 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react' 
+import Head from 'next/head' 
+import Link from 'next/link' 
+import { motion } from 'framer-motion' 
 import { 
   Rocket, FileText, Users, Brain, Target, 
   Zap, Building, ArrowRight, Star, CheckCircle, 
   DollarSign, BarChart3, Settings, Cpu
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
-} from 'lucide-react';
+} from 'lucide-react' 
 
 const microSaasServices = [
   {
@@ -59,7 +59,7 @@ const microSaasServices = [
     badge: 'Premium',
     color: 'from-red-500 to-pink-600'
   }
-];
+] 
 
 const benefits = [
   {
@@ -83,7 +83,7 @@ const benefits = [
     description: 'Affordable solutions with high ROI and value'
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
   }
-];
+] 
 
 export default function MicroSaas() {
   return (
@@ -103,7 +103,7 @@ export default function MicroSaas() {
   Shield, Globe, Sparkles, TrendingUp,
   Check, ArrowRight, Star, Award,
   Code, Database, Network, Lock, Cpu, Building2, Brain
-} from 'lucide-react';
+} from 'lucide-react' 
 
 export default function MicroSaas() {
   const solutions = [
@@ -197,7 +197,7 @@ export default function MicroSaas() {
       color: 'from-yellow-500 to-orange-600',
       link: '/space-mining-platform'
     }
-  ];
+  ] 
 
   const benefits = [
     {
@@ -218,7 +218,7 @@ export default function MicroSaas() {
       icon: <Sparkles className="w-8 h-8" />,
       color: 'from-purple-500 to-pink-600'
     }
-  ];
+  ] 
 
   const useCases = [
     {
@@ -241,7 +241,7 @@ export default function MicroSaas() {
       applications: ['API Integration', 'Custom Development', 'White-label Solutions', 'Plugin Ecosystem'],
       icon: <Code className="w-6 h-6" />
     }
-  ];
+  ] 
 
   const features = [
     {
@@ -268,7 +268,7 @@ export default function MicroSaas() {
       icon: <Network className="w-6 h-6" />,
       examples: ['REST APIs', 'GraphQL', 'Webhooks', 'SDKs']
     }
-  ];
+  ] 
 
   return (
     <>

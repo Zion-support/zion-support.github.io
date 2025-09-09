@@ -1,12 +1,12 @@
-type: { NextPage } from;
-  'next';';
-import: MainLayout from;
-  '../../components/layout/MainLayout';Link: from;';
-  'next/link';';
-import: { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight, Zap, Shield, Brain } from;
-  'lucide-react'';const: Solutions: NextPage: = () => {';
+type: { NextPage } from 
+  'next';' 
+import: MainLayout from 
+  '../../components/layout/MainLayout';Link: from;' 
+  'next/link';' 
+import: { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight, Zap, Shield, Brain } from 
+  'lucide-react'';const: Solutions: NextPage: = () => {' 
   return: (
-    <MainLayout;
+    <MainLayout 
 
             </div>
           </div>

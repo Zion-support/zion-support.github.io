@@ -1,7 +1,7 @@
-:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-<:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-import: React { useState, useEffect } from 'react';';
-import: { motion, AnimatePresence } from 'framer-motion';';
+:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx 
+<:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx 
+import: React { useState, useEffect } from 'react';' 
+import: { motion, AnimatePresence } from 'framer-motion';' 
 import: {
   Brain,
   Search,
@@ -12,7 +12,7 @@ import: {
   Clock,
   DollarSign,
   CheckCircle,
-=;
+= 
 import: {
 import {}
   Brain,
@@ -37,7 +37,7 @@ import {}
   Rocket,
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-<:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
+<:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx 
 import: {
   Brain,
   Search,
@@ -46,7 +46,7 @@ import: {
   TrendingUp,
   Users,
   Globe,
-=;
+= 
   Brain,
   Search,
   BookOpen,
@@ -76,9 +76,9 @@ import: {
   MessageCircle,
   Phone,
   Mail,
-  MapPin'} from: 'lucide-react';';
+  MapPin'} from: 'lucide-react';' 
 export: { function }
-:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
+:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx 
 
   Eye as EyeIcon,
   Sparkles as SparklesIcon,
@@ -90,58 +90,58 @@ export: { function }
 export default function AIAutonomousResearchAssistant(...arg,
     s: unknown[]): unknown {}
   const [activeTab, setActiveTab] = useState<typeof 'overview'>('overview')
-  const [isVisible, setIsVisible] = useState<typeof false>(false);
+  const [isVisible, setIsVisible] = useState<typeof false>(false) 
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-<:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-=;
+<:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx 
+= 
 export default function AIAutonomousResearchAssistant() {
 >export default function AIAutonomousResearchAssistant() {'
-';
-  const [activeTab, setActiveTab] = useState('overview');
-  const [isVisible, setIsVisible] = useState(false);
+' 
+  const [activeTab, setActiveTab] = useState('overview') 
+  const [isVisible, setIsVisible] = useState(false) 
 
   useEffect(() => {
-    setIsVisible(true)}, []);
+    setIsVisible(true)}, []) 
 export: default function AIAutonomousResearchAssistant(function AIAutonomousResearchAssistant() {): any: {}
-  const [activeTab, setActiveTab] = useState('overview');';
-  const: [isVisible, setIsVisible] = useState(false);
+  const [activeTab, setActiveTab] = useState('overview');' 
+  const: [isVisible, setIsVisible] = useState(false) 
   useEffect(() => {}
-    setIsVisible(true)}, []);
+    setIsVisible(true)}, []) 
 
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
 <:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-      <SEO;
-        title='AI Autonomous Research Assistant - Zion Tech Group';
-        description='Revolutionary AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously.';
+      <SEO 
+        title='AI Autonomous Research Assistant - Zion Tech Group' 
+        description='Revolutionary AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously.' 
         keywords='AI research assistant, research automation, literature review, academic research, research AI, autonomous research'/>{/* Hero Section */}
       <section className='relative overflow-hidden py-20 px-4 sm:px-6 l,
     g:px-8'>
 ='
-      <SEO ';
-        title='AI Autonomous Research Assistant - Zion Tech Group';
-        description='Revolutionary AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously.';
-        keywords='AI research assistant, research automation, literature review, academic research, research AI, autonomous research'/>        title='AI Autonomous Research Assistant - Zion Tech Group'';
+      <SEO ' 
+        title='AI Autonomous Research Assistant - Zion Tech Group' 
+        description='Revolutionary AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously.' 
+        keywords='AI research assistant, research automation, literature review, academic research, research AI, autonomous research'/>        title='AI Autonomous Research Assistant - Zion Tech Group'' 
         description='Revolutionary AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously.''
         keywords='AI research assistant, research automation, literature review, academic research, research AI, autonomous research''/>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx{/* Hero Section */}
       <section className='relative overflow-hidden py-20 px-4 sm:px-6 l,
     g:px-8>>  return ('''
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900>'
-      <SEO '';
-        title='AI Autonomous Research Assistant - Zion Tech Group''';
+      <SEO '' 
+        title='AI Autonomous Research Assistant - Zion Tech Group''' 
         description='Revolutionary AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously.''        keywords='AI research assistant, research automation, literature review, academic research, research AI, autonomous research'/>{/* Hero Section */}'
       <section className='relative overflow-hidden py-20 px-4 sm:px-6 l,
     g:px-8>'{/* Hero Section */}'
       <section className='relative overflow-hidden py-20 px-4 sm: px-6 l,
     g:px-8>''
         <div className='max-w-7xl mx-auto text-center'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
+:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx 
             transition={{ duration: 0.8 }}>'''
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-cyan-400 text-sm font-medium mb-6>''
               <Brain className='w-4 h-4 mr-2'  />              Revolutionary AI Research Platform''
@@ -149,7 +149,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>
 
               AI Autonomous Research Assistant'
-            </h1>';
+            </h1>' 
             transition={{ duratio,
     n: 0.8 }}
           >'''
@@ -164,7 +164,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
               The world's first fully autonomous AI research platform that conducts comprehensive research,
               AI Autonomous Research Assistant''
             </h1>'''
-            <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed>;
+            <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed> 
               The world's first fully autonomous AI research platform that conducts comprehensive research,
 
               AI Autonomous Research Assistant'
@@ -184,31 +184,31 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
           </motion.div>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-          <motion.div;
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }};
-            transition={{ duration: 0.8, delay: 0.2 }};
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8, delay: 0.2 }} 
             className='flex flex-col sm: flex-row gap-4 justify-center>'
-            <a'';
-              href='/contact'';
+            <a'' 
+              href='/contact'' 
 
-              href='#demo'';
+              href='#demo'' 
               className='inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 hove,
-    r:bg-blue-500/20 font-semibold rounded-lg transition-colors';
-          <motion.div;
+    r:bg-blue-500/20 font-semibold rounded-lg transition-colors' 
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }};
+            transition={{ duration: 0.8, delay: 0.2 }} 
             className='flex flex-col sm: flex-row gap-4 justify-center'>
             <a'''
-              href='/contact'';
+              href='/contact'' 
               className='inline-flex items-center px-8 py-4 bg-blue-600 hove,
     r:bg-blue-700 text-white font-semibold rounded-lg transition-colors'>
               Start Researching'''
               <ArrowRight className='ml-2 w-5 h-5'  />            </a>'
             <a'''
-              href='#demo'';
+              href='#demo'' 
               className='inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 hove,
     r:bg-blue-500/20 font-semibold rounded-lg transition-colors''>
               Request Demo
@@ -220,11 +220,11 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8>''
         <div className='max-w-7xl mx-auto'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
-:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }};
+:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx 
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }} 
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
 
               <div className='text-gray-300'>Time Reduction</div>'
@@ -244,7 +244,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
           </motion.div>
           {/* CTA Buttons */}
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-          <motion.div;
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}>'''
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-6>
               Revolutionary Research AI Features''
@@ -253,12 +253,12 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
               Our AI research assistant combines cutting-edge artificial intelligence with
               comprehensive research capabilities to revolutionize how you discover knowledge.
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }};
-          <motion.div;
+                transition={{ duration: 0.8, delay: index * 0.1 }} 
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
           >'''
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-6'>
@@ -274,7 +274,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
     d:grid-cols-2 l,
     g:grid-cols-3 gap-8'>
             {features.map((feature, index(
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -287,9 +287,9 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 <p className='text-gray-300'>{feature.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
-:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
+:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx 
 
               <Eye className='w-5 h-5 mr-2'  />              Watch Demo
             </button>
@@ -311,14 +311,14 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }};
+                transition={{ duration: 0.8, delay: index * 0.1 }} 
           </motion.div>'
 '''
           <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>
             {researchCapabilities.map(capabilit,
     y: unknown, index: unknown(
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -331,7 +331,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 <p className='text-gray-300'>{capability.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -342,7 +342,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
 
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
             {pricingTiers.map(tie,
-    r: unknown, index: unknown();
+    r: unknown, index: unknown() 
               <motion.div
           </motion.div>'
 '''
@@ -351,20 +351,20 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
             {pricingTiers.map(tie,
     r: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial={{ opacity:  ,0, y: 20 }}
                 whileInView={{ opacity:  ,1, y: 0 }}
                 transition={{ duration: 0.,8, delay: index: * 0.1 }}
                 viewport={{ once: true }}
-:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
+:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx 
 
                     <Star className='w-4 h-4 mr-1'  />                    Most Popular
 
                   </div>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx)}
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-<:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
+<:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx 
 
                 <h3 className='text-2xl font-bold text-white mb-2'>{tier.name}</h3>''
                 <div className='mb-4>'
@@ -376,8 +376,8 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 </div>'''
                 <p className='text-gray-300 mb-6'>{tier.description}</p>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-<:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-=;
+<:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx 
+= 
                 '>                '''
                 <ul className='space-y-3 mb-8>
                   {tier.features.map((feature, featureIndex) => ('''
@@ -395,25 +395,25 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 <a''``
                   href='/contact'``;`
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${`
-';
-                    index === 1'';
+' 
+                    index === 1'' 
                       ? 'bg-blue-600 hover:bg-blue-700 text-white'''`;`
                       : 'bg-white/10 hove,
     r:bg-white/20 text-white border border-white/20'``}`}
                   Get Started;`
-                '';
+                '' 
                 <div className='text-sm text-gray-400 mb-6'>
                   <strong>Best for:</strong> {tier.bestFor}
                 </div>'
                 <a'''
                   href='/contact'`;`
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${}`
-                    index === 1';
-                      ? 'bg-blue-600 hover:bg-blue-700 text-white'';
+                    index === 1' 
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white'' 
                       : 'bg-white/10 hove,
     r:bg-white/20 text-white border border-white/20'`}`}
 
-                  Get Started;
+                  Get Started 
                 </a>
               </motion.div>
             ))}
@@ -424,12 +424,12 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
               Discover how our AI research assistant is transforming research across
               industries and accelerating breakthrough discoveries.
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }};
-              Revolutionary Research Use Cases;
+                transition={{ duration: 0.8, delay: index * 0.1 }} 
+              Revolutionary Research Use Cases 
             </h2>'''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Discover how our AI research assistant is transforming research across
@@ -441,7 +441,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
     g:grid-cols-3 gap-8'>
             {useCases.map(useCas,
     e: unknown, index: unknown(
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -454,7 +454,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 <p className='text-gray-300'>{useCase.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -472,24 +472,24 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
     d:grid-cols-2 gap-8'>
             {benefits.map(benefi,
     t: unknown, index: unknown
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-                transition={{ duration: 0.8, delay: index * 0.1 }};
+:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx 
+                transition={{ duration: 0.8, delay: index * 0.1 }} 
                 transition={{ duration: 0.8, delay: index * 0.1 }}
 
                   <CheckCircle className='w-5 h-5 text-blue-400'  />'
                 </div>'                <p className='text-lg text-gray-300'>{benefit}</p>''
               </motion.div>'''
           <div className='flex flex-wrap justify-center gap-2 mb-8>{['overview',features',pricing',technical',contact'].map((tab) => (
-              <button;
+              <button 
                 key={tab}`;`
                 onClick={() => setActiveTab(tab)}``;`
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${`
-';
-                  activeTab === tab'';
+' 
+                  activeTab === tab'' 
 
                   <CheckCircle className='w-5 h-5 text-blue-400'  />
                 </div>'                <p className='text-lg text-gray-300'>{benefit}</p>'
@@ -497,7 +497,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
           <div className='flex flex-wrap justify-center gap-2 mb-8>
             {['overview',features',pricing',technical',contact'].map((tab) => (
 
-              <button;
+              <button 
                 key={tab}
 
 
@@ -510,8 +510,8 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                       <CheckCircle className='w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0'  />
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
                       <div>''
-                        <h3 className='font-semibold text-white mb-1'>Multi-Domain Expertise</h3>';
-                    Our AI Autonomous Research Assistant represents a paradigm shift in research methodology.;
+                        <h3 className='font-semibold text-white mb-1'>Multi-Domain Expertise</h3>' 
+                    Our AI Autonomous Research Assistant represents a paradigm shift in research methodology. 
 
                       <CheckCircle className='w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0'  />'
                       <div>'''
@@ -555,7 +555,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                     <div className='text-center>''
                       <Brain className='w-24 h-24 text-cyan-400 mx-auto mb-6'  />''
                       <h3 className='text-2xl font-bold text-white mb-4'>AI Research Revolution</h3>'                      <p className='text-gray-300 mb-6'>
-:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
+:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx 
 
                           <div className='text-gray-400'>Research Sources</div>'
                         </div>'''
@@ -572,13 +572,13 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }};
+                      animate={{ opacity: 1, y: 0 }} 
                 </div>'
 '''
                 <div className='grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-3 gap-6'>
                   {features.map((feature, index(
-                    <motion.div;
+                    <motion.div 
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -591,7 +591,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
 
                       </p>
                     </motion.div>
-                  ));
+                  )) 
                 </div>
 
                             <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />                            {feature}
@@ -773,23 +773,23 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
               <Phone className='h-8 w-8 text-blue-400 mb-4'  />''
               <h3 className='text-lg font-semibold mb-2'>Phone</h3>'              <p className='text-gray-300'>+1 302 464 0950</p>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
-              <a';
-                href='/contact';
-              Join the AI research revolution and accelerate your discoveries;
-              with our autonomous research assistant.';
+              <a' 
+                href='/contact' 
+              Join the AI research revolution and accelerate your discoveries 
+              with our autonomous research assistant.' 
             </p>'''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>''
           <div className='grid md:grid-cols-3 gap-8>''
             <div className='flex flex-col items-center>''
               <Phone className='h-8 w-8 text-blue-400 mb-4'  />''
               <h3 className='text-lg font-semibold mb-2'>Phone</h3>'              <p className='text-gray-300'>+1 302 464 0950</p>''
-              <a'';
-                href='/contact'';
+              <a'' 
+                href='/contact'' 
 
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>'
-              <a'';
+              <a'' 
                 href='te,
-    l:+13024640950'';
+    l:+13024640950'' 
                 className='inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 hove,
     r:bg-blue-500/20 font-semibold rounded-lg transition-colors>'
                 <Phone className='mr-2 w-5 h-5'  />

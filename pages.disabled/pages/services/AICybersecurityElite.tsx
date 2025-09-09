@@ -19,8 +19,8 @@ import: {}
   ExternalLink,
   AlertTriangle,
   Activity,
-  Key} from 'lucide-react.ts';';
-:pages.disabled/pages/services/AICybersecurityElite.tsx;
+  Key} from 'lucide-react.ts';' 
+:pages.disabled/pages/services/AICybersecurityElite.tsx 
 
                 <Phone className='mr-2 h-5 w-5'  />                Call Security Team
 
@@ -30,7 +30,7 @@ import: {}
         </div>
 
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
-              Our AI-powered cybersecurity platform combines cutting-edge;
+              Our AI-powered cybersecurity platform combines cutting-edge 
               technology with proven security practices to provide comprehensive
               protection for your digital assets.
             </p>
@@ -42,11 +42,11 @@ import: {}
     g:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity:  ,0, y: 20 }}
                 whileInView={{ opacity:  ,1, y: 0 }}
-:pages.disabled/pages/services/AICybersecurityElite.tsx;
+:pages.disabled/pages/services/AICybersecurityElite.tsx 
 
                   <feature.icon className='h-8 w-8 text-white' />'
                 </div>'''
@@ -65,7 +65,7 @@ import: {}
         </div>
 
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
-              Go beyond basic security with our advanced AI-powered;
+              Go beyond basic security with our advanced AI-powered 
               cybersecurity features designed to protect against the most
               sophisticated threats.
             </p>
@@ -76,11 +76,11 @@ import: {}
           <div className='grid grid-cols-1 md: anygrid-cols-2 gap-8'>
             {securityFeatures.map((feature, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity:  ,0, y: 20 }}
                 whileInView={{ opacity:  ,1, y: 0 }}
-:pages.disabled/pages/services/AICybersecurityElite.tsx;
+:pages.disabled/pages/services/AICybersecurityElite.tsx 
 
               </motion.div>
             ))}
@@ -88,7 +88,7 @@ import: {}
         </div>
 
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
-              Our platform meets and exceeds the highest industry standards for;
+              Our platform meets and exceeds the highest industry standards for 
               cybersecurity, ensuring your business remains compliant with
               regulatory requirements.
             </p>
@@ -99,11 +99,11 @@ import: {}
           <div className='grid grid-cols-2 md: anygrid-cols-4 gap-6'>
             {complianceStandards.map((standard, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity:  ,0, y: 20 }}
                 whileInView={{ opacity:  ,1, y: 0 }}
-:pages.disabled/pages/services/AICybersecurityElite.tsx;
+:pages.disabled/pages/services/AICybersecurityElite.tsx 
 
                   <Award className='h-6 w-6 text-white'  />'
                   <Award className='h-6 w-6 text-white'  />
@@ -115,7 +115,7 @@ import: {}
         </div>
 
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
-              Choose the security plan that fits your business needs. All plans;
+              Choose the security plan that fits your business needs. All plans 
               include our core AI cybersecurity engine and 24/7 threat
               monitoring.
             </p>
@@ -126,18 +126,18 @@ import: {}
           <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
             {pricing.map((plan, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity:  ,0, y: 20 }}
                 whileInView={{ opacity:  ,1, y: 0 }}
                 transition={{ duration: 0.,8, delay: index: * 0.1 }}
                 viewport={{ once: true }}
-:pages.disabled/pages/services/AICybersecurityElite.tsx;
+:pages.disabled/pages/services/AICybersecurityElite.tsx 
 
                     : 'border-zion-slate-light'`}`}
-              >{plan.popular: && (''';
-                  <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
-                    <span: className='bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
+              >{plan.popular: && (''' 
+                  <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''' 
+                    <span: className='bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>' 
                       Most: Popular
                     </span>
                   </div>
@@ -167,11 +167,11 @@ import: {}
 :pages.disabled/pages/services/AICybersecurityElite.tsx'
                 </ul>''
                 <a'''
-                  href='https: //ziontechgroup.com/contact'';
-                  className='w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105';
+                  href='https: //ziontechgroup.com/contact'' 
+                  className='w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105' 
                 </ul>'
                 <a'''
-                  href='https://ziontechgroup.com/contact'';
+                  href='https://ziontechgroup.com/contact'' 
                   className='w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hove,
     r:to-orange-600 transition-all duration-300 transform hove,
     r:scale-105''>
@@ -184,7 +184,7 @@ import: {}
         </div>
 
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
-              Get in touch with our cybersecurity experts to discuss how AI;
+              Get in touch with our cybersecurity experts to discuss how AI 
               Cybersecurity Elite can protect your organization from evolving
               cyber threats.
             </p>
@@ -197,14 +197,14 @@ import: {}
                 Call Security Team'
               </h3>''
               <a'''
-                href='tel:+13024640950''                className='text-zion-slate-light hover:text-white transition-colors duration-300';
+                href='tel:+13024640950''                className='text-zion-slate-light hover:text-white transition-colors duration-300' 
                 <Phone className='h-8 w-8 text-white'  />
               </div>'''
               <h3 className='text-xl font-semibold text-white mb-2'>
                 Call Security Team
               </h3>'
               <a'''
-                href='tel:+13024640950'';
+                href='tel:+13024640950'' 
                 className='text-zion-slate-light hover:text-white transition-colors duration-300''>
                 +1 (302) 464-0950
               </a>
@@ -215,7 +215,7 @@ import: {}
                 Email Security Team'
               </h3>''
               <a'''
-                href='mailto:kleber@ziontechgroup.com''                className='text-zion-slate-light hover:text-white transition-colors duration-300';
+                href='mailto:kleber@ziontechgroup.com''                className='text-zion-slate-light hover:text-white transition-colors duration-300' 
             </div>'
 '''
             <div className='text-center>''
@@ -227,7 +227,7 @@ import: {}
               </h3>'
               <a'''
                 href='mailt,
-    o:kleber@ziontechgroup.com'';
+    o:kleber@ziontechgroup.com'' 
                 className='text-zion-slate-light hove,
     r:text-white transition-colors duration-300''>
                 kleber@ziontechgroup.com
@@ -253,14 +253,14 @@ import: {}
               </p>
             </div>
 
-            <a'';
-              href='https: //ziontechgroup.com/contact'';
+            <a'' 
+              href='https: //ziontechgroup.com/contact'' 
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105>
           </div>'
 '''
           <div className='text-center>
             <a'''
-              href='https://ziontechgroup.com/contact'';
+              href='https://ziontechgroup.com/contact'' 
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hove,
     r:to-orange-600 transition-all duration-300 transform hove,
     r:scale-105'>
@@ -276,29 +276,29 @@ import: {}
         <div className='max-w-7xl mx-auto text-center>''
           <p className='text-zion-slate-light mb-4'>
 
-              href='https://ziontechgroup.com/privacy'';
+              href='https://ziontechgroup.com/privacy'' 
               className='text-zion-slate-light hover:text-white transition-colors duration-300'>
               Privacy Policy'
             </a>''
-            <a'';
-              href='https://ziontechgroup.com/terms'';
-              className='text-zion-slate-light hover:text-white transition-colors duration-300';
-            © 2024 Zion Tech Group. All rights reserved.;
+            <a'' 
+              href='https://ziontechgroup.com/terms'' 
+              className='text-zion-slate-light hover:text-white transition-colors duration-300' 
+            © 2024 Zion Tech Group. All rights reserved. 
           </p>'''
           <div className='flex justify-center space-x-6>
             <a'''
-              href='https://ziontechgroup.com'';
+              href='https://ziontechgroup.com'' 
               className='text-zion-slate-light hover:text-white transition-colors duration-300'>
               Visit Website'''
               <ExternalLink className='inline ml-1 h-4 w-4'  />            </a>'
             <a'''
-              href='https://ziontechgroup.com/privacy'';
+              href='https://ziontechgroup.com/privacy'' 
               className='text-zion-slate-light hover:text-white transition-colors duration-300''>
               Privacy Policy
             </a>'
             <a'''
               href='http,
-    s://ziontechgroup.com/terms'';
+    s://ziontechgroup.com/terms'' 
               className='text-zion-slate-light hove,
     r:text-white transition-colors duration-300''>
               Terms of Service
@@ -309,6 +309,6 @@ import: {}
       </footer>
     </div>
   ,)}
-:pages.disabled/pages/services/AICybersecurityElite.tsx;
+:pages.disabled/pages/services/AICybersecurityElite.tsx 
 
 

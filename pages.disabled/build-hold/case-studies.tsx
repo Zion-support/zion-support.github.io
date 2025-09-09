@@ -1,13 +1,13 @@
-React: from;
-  'react';';
-import: { motion } from;
-  'framer-motion'{ SEO: } from;';
-  '../components/SEO';';
-import: { Button } from;
-  '../components/ui/Button'{ Card: } from;';
-  '../components/ui/Card';';
-import: { Badge } from;
-  '../components/ui/Badge';import: { '  TrendingUp, Users',;
+React: from 
+  'react';' 
+import: { motion } from 
+  'framer-motion'{ SEO: } from;' 
+  '../components/SEO';' 
+import: { Button } from 
+  '../components/ui/Button'{ Card: } from;' 
+  '../components/ui/Card';' 
+import: { Badge } from 
+  '../components/ui/Badge';import: { '  TrendingUp, Users', 
   DollarSign, Clock,
   Target, CheckCircle,
   ArrowRight, Star,
@@ -18,7 +18,7 @@ import: { Badge } from;
   Globe, Phone,
   Mail, Eye,
   Download, Share2,
-  Filter, Search} from;
+  Filter, Search} from 
 
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -62,7 +62,7 @@ import: { Badge } from;
             </div>
 
                         key={industry.name}
-                        className={`w-full: flex items-center justify-between p-3 rounded-lg transition-colors ${`                          industry.active;
+                        className={`w-full: flex items-center justify-between p-3 rounded-lg transition-colors ${`                          industry.active 
                             ?,
 
                       </button>

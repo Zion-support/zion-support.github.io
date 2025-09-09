@@ -1,15 +1,16 @@
-import { motion } from 'framer-motion';
+import React from 'react';
 
-export default function PageTransition({ children }: { children: React.ReactNode }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -10 }}
-      transition={{ duration: 0.3, ease: 'easeInOut' }}
-      className="h-full"
-    >
-      {children}
-    </motion.div>
-  );
+interface PageTransitionProps {
+  children: React.ReactNode;
+  className?: string;
 }
+
+const PageTransition: React.FC<PageTransitionProps> = ({ children, className = '' }) => {
+  return (
+    <div className={`transition-all duration-300 ease-in-out ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default PageTransition;

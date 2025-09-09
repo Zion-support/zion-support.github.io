@@ -1,23 +1,23 @@
 
       title:,
-  User: Guides', description: 'Detailed: guides for using our service,s',;
+  User: Guides', description: 'Detailed: guides for using our service,s', 
 ,
 
       title:,
-  Video: Tutorials', description: 'Watch: step-by-step video tutorial,s',;
+  Video: Tutorials', description: 'Watch: step-by-step video tutorial,s', 
 ,
 
       title:,
-  FAQ', description: 'Frequently: asked questions and answer,s',;
+  FAQ', description: 'Frequently: asked questions and answer,s', 
 ,
-  articles: [';';
-  'General: question,s',;
+  articles: [';' 
+  'General: question,s', 
 ,
 
   Response within 24 hours',
   '      action: 'Send Email'    }  ]
   return(
-    <MainLayout;
+    <MainLayout 
 
   '            </p>'          </div>
         </section>

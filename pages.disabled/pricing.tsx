@@ -1,9 +1,153 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
 const PricingPage: NextPage = () => {
   const pricingPlans = [;
+=======
+import React from 'react' 
+import Head from 'next/head' 
+import Link from 'next/link' 
+import { motion } from 'framer-motion' 
+import { 
+  DollarSign, CheckCircle, Star, Zap, Shield, 
+  Brain, Atom, Rocket, Building, ArrowRight,
+  Users, Globe, Cpu, Database, Lock
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+} from 'lucide-react' 
+
+const pricingPlans = [
+  {
+    name: 'Starter',
+    price: '$99',
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+    period: '/month',
+    description: 'Perfect for small businesses and startups',
+    features: [
+      'Basic AI Services',
+      'Standard Support',
+      '5 Projects',
+      '10GB Storage',
+      'Email Support'
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+    ],
+    color: 'from-blue-500 to-cyan-600',
+    popular: false
+  },
+  {
+    name: 'Professional',
+    price: '$299',
+    period: '/month',
+    description: 'Ideal for growing businesses and teams',
+    features: [
+      'Advanced AI Services',
+      'Priority Support',
+      'Unlimited Projects',
+      '100GB Storage',
+      'Phone & Email Support',
+      'Custom Integrations',
+      'Analytics Dashboard'
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+    ],
+    color: 'from-purple-500 to-pink-600',
+    popular: true
+  },
+  {
+    name: 'Enterprise',
+    price: 'Custom',
+    period: '',
+    description: 'Tailored solutions for large organizations',
+    features: [
+      'All AI & Quantum Services',
+      '24/7 Dedicated Support',
+      'Custom Development',
+      'Unlimited Storage',
+      'Dedicated Account Manager',
+      'SLA Guarantees',
+      'On-premise Options',
+      'Custom Training'
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+    ],
+    color: 'from-yellow-500 to-orange-600',
+    popular: false
+  }
+] 
+
+const serviceCategories = [
+  {
+    name: 'AI & Consciousness',
+    icon: <Brain className="w-6 h-6" />,
+    startingPrice: '$199',
+    description: 'Advanced AI consciousness and emotional intelligence'
+  },
+  {
+    name: 'Quantum & Emerging Tech',
+    icon: <Atom className="w-6 h-6" />,
+    startingPrice: '$399',
+    description: 'Breakthrough quantum computing and space technology'
+  },
+  {
+    name: 'Enterprise IT',
+    icon: <Shield className="w-6 h-6" />,
+    startingPrice: '$299',
+    description: 'Advanced enterprise infrastructure and security'
+  },
+  {
+    name: 'Micro SAAS',
+    icon: <Rocket className="w-6 h-6" />,
+    startingPrice: '$149',
+    description: 'Innovative business solutions for modern enterprises'
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+  }
+] 
+
+const benefits = [
+  {
+    icon: <DollarSign className="w-8 h-8 text-green-400" />,
+    title: 'Transparent Pricing',
+    description: 'Clear, upfront pricing with no hidden fees'
+  },
+  {
+    icon: <Zap className="w-8 h-8 text-yellow-400" />,
+    title: 'Flexible Plans',
+    description: 'Choose the plan that fits your business needs'
+  },
+  {
+    icon: <Shield className="w-8 h-8 text-blue-400" />,
+    title: 'Enterprise Security',
+    description: 'Bank-level security for all your data and operations'
+  },
+  {
+    icon: <Star className="w-8 h-8 text-purple-400" />,
+    title: 'Premium Support',
+    description: 'Expert support team available when you need them'
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+  }
+] 
+
+export default function Pricing() {
+  return (
+    <>
+      <Head>
+        <title>Pricing & Plans - Zion Tech Group</title>
+        <meta name="description" content="Transparent pricing and market comparisons for all our technology services. Choose the plan that fits your business needs." />
+        <meta name="keywords" content="pricing, plans, AI services, quantum services, enterprise IT, micro SAAS" />
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+        <link rel="canonical" href="https://ziontechgroup.com/pricing" />
+      </Head>
+
+      <div className="min-h-screen bg-black text-white">
+        {/* Hero Section */}
+        <section className="relative pt-32 pb-20 overflow-hidden">
+  Check, Star, ArrowRight, Zap, Crown, 
+  Brain, Atom, Shield, Rocket, Users,
+  CheckCircle, TrendingUp, Award, Sparkles
+} from 'lucide-react' 
+
+export default function Pricing() {
+  const plans = [
+>>>>>>> cursor/check-fix-push-and-merge-to-main-649b
     {
       name: 'Starter',;
       price: '$2,999',;
@@ -39,6 +183,7 @@ const PricingPage: NextPage = () => {
       cta: 'Most Popular',;
       color: 'from-zion-cyan to-blue-600'},;
     {
+<<<<<<< HEAD
       name: 'Enterprise',;
       price: 'Custom',;
       period: '',;
@@ -58,6 +203,28 @@ const PricingPage: NextPage = () => {
       cta: 'Contact Sales',;
       color: 'from-purple-500 to-purple-600'}
   ];
+=======
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'For large organizations with complex needs',
+      icon: <Star className="w-8 h-8 text-yellow-500" />,
+      color: 'from-yellow-500 to-orange-600',
+      features: [
+        'Everything in Professional',
+        'Full Quantum Neural Network Platform',
+        'Autonomous Business Operations',
+        'Dedicated account manager',
+        'Unlimited assets',
+        'Custom AI model training',
+        'On-premise deployment options',
+        'SLA guarantees',
+        'Custom development services'
+      ],
+      popular: false
+    }
+  ] 
+>>>>>>> cursor/check-fix-push-and-merge-to-main-649b
 
   const addOnServices = [;
     {
@@ -73,10 +240,19 @@ const PricingPage: NextPage = () => {
       price: '$4,000',;
       description: 'Business intelligence and data visualization solutions'},;
     {
+<<<<<<< HEAD
       name: 'Mobile App Development',;
       price: '$8,000',;
       description: 'Native iOS and Android applications'}
   ];
+=======
+      name: 'Custom Integration',
+      price: '$2,500',
+      description: 'Custom integration with your existing systems',
+      icon: <Rocket className="w-6 h-6 text-orange-500" />
+    }
+  ] 
+>>>>>>> cursor/check-fix-push-and-merge-to-main-649b
 
   const faqs = [;
     {

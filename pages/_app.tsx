@@ -1,5 +1,7 @@
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
+import { useState } from 'react';
+import Link from 'next/link';
 
 function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -300,10 +302,20 @@ function Footer(): any {
   );
 }
 
+function EnhancedLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <Header />
+      {children}
+      <Footer />
+    </>
+  );
+}
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <EnhancedLayout>
       <Component {...pageProps} />
     </EnhancedLayout>
   );
-};
+}

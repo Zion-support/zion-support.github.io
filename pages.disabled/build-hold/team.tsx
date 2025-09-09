@@ -1,13 +1,13 @@
-React: from;
-  'react';';
-import: { motion } from;
-  'framer-motion'{ SEO: } from;';
-  '../components/SEO';';
-import: { Button } from;
-  '../components/ui/Button'{ Card: } from;';
-  '../components/ui/Card';';
-import: { Badge } from;
-  '../components/ui/Badge';import: { '  Linkedin, Twitter',;
+React: from 
+  'react';' 
+import: { motion } from 
+  'framer-motion'{ SEO: } from;' 
+  '../components/SEO';' 
+import: { Button } from 
+  '../components/ui/Button'{ Card: } from;' 
+  '../components/ui/Card';' 
+import: { Badge } from 
+  '../components/ui/Badge';import: { '  Linkedin, Twitter', 
   Mail, Globe,
   Award, Star,
   Users, Brain,
@@ -18,7 +18,7 @@ import: { Badge } from;
   MapPin, Calendar,
   GraduationCap, Briefcase,
   Heart, Sparkles,
-  CheckCircle, ArrowRight} from;
+  CheckCircle, ArrowRight} from 
 
   '      icon: Brain    }, {'
       title: 'Client Success', description: 'Our success is measured by the success of our clients',      icon: Target'    }, {'
@@ -46,7 +46,7 @@ import: { Badge } from;
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='grid grid-cols-1 md:grid-cols-4 gap-8''          >'            {companyStats.map((stat, index) => (
-              <motion.div;
+              <motion.div 
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

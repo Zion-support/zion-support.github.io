@@ -1,14 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react' 
+import Head from 'next/head' 
+import Link from 'next/link' 
+import { motion } from 'framer-motion' 
 import { 
   Atom, Lock, Database, Cpu, Target, Flame, 
   Zap, Shield, Rocket, ArrowRight, Star,
   CheckCircle, Clock, DollarSign, TrendingUp,
   Globe, Network, Server, Cloud
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
-} from 'lucide-react';
+} from 'lucide-react' 
 
 const quantumServices = [
   {
@@ -61,7 +61,7 @@ const quantumServices = [
     color: 'from-cyan-500 to-blue-600'
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
   }
-];
+] 
 
 const benefits = [
   {
@@ -85,7 +85,7 @@ const benefits = [
     description: 'Quantum processing that solves complex problems in seconds'
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
   }
-];
+] 
 
 export default function QuantumServices() {
   return (
@@ -105,7 +105,7 @@ export default function QuantumServices() {
   Shield, Rocket, Globe, Sparkles,
   Check, ArrowRight, Star, Award,
   Database, Network, Lock, Brain
-} from 'lucide-react';
+} from 'lucide-react' 
 
 export default function QuantumServices() {
   const services = [
@@ -199,7 +199,7 @@ export default function QuantumServices() {
       color: 'from-yellow-500 to-orange-600',
       link: '/quantum-energy-platform'
     }
-  ];
+  ] 
 
   const capabilities = [
     {
@@ -226,7 +226,7 @@ export default function QuantumServices() {
       icon: <Rocket className="w-6 h-6" />,
       examples: ['Hybrid Algorithms', 'Resource Optimization', 'Performance Scaling', 'Flexible Deployment']
     }
-  ];
+  ] 
 
   const applications = [
     {
@@ -249,7 +249,7 @@ export default function QuantumServices() {
       useCases: ['Process Optimization', 'Quality Control', 'Predictive Maintenance', 'Design Optimization'],
       icon: <Cpu className="w-6 h-6" />
     }
-  ];
+  ] 
 
   const quantumAdvantages = [
     {
@@ -270,7 +270,7 @@ export default function QuantumServices() {
       icon: <Shield className="w-8 h-8" />,
       color: 'from-green-500 to-emerald-600'
     }
-  ];
+  ] 
 
   return (
     <>
