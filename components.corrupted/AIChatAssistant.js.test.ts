@@ -1,15 +1,17 @@
-import AIChatbotSystem from './AIChatbotSystem';
-describe('AIChatbotSystem', () => {
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import Page from './AIChatAssistant.js';
+describe('Page', () => {
   it('renders without crashing', () => {
-    render(<AIChatbotSystem />);
+    render(<Page />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
   it('displays correct content', () => {
-    render(<AIChatbotSystem />);
+    render(<Page />);
     // Add specific content checks based on component functionality
   });
   it('handles user interactions', () => {
-    render(<AIChatbotSystem />);
+    render(<Page />);
     // Add interaction tests based on component functionality
   });
 });
