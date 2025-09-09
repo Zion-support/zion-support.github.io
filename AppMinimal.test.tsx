@@ -17,4 +17,8 @@ describe('UnknownComponent', () => {
     render(<UnknownComponent />);
     // Add interaction tests based on component functionality
   });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> pr-12881

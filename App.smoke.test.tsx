@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { describe, it, expect } from 'vitest';
 
 describe('App Smoke Test', () => {
@@ -5,3 +6,9 @@ describe('App Smoke Test', () => {
     expect(true).toBe(true);
   });
 });
+=======
+import React from "react";
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import App from './App';
+>>>>>>> pr-12881
