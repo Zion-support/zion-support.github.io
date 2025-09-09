@@ -71,11 +71,7 @@
   to = "/products"
   status = 200
 
-# SPA fallback
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# SPA fallback - moved to end to avoid conflicts
 
 # Functions
 [functions]
@@ -334,7 +330,7 @@
 [context.branch-deploy]
   command = "npm ci --no-audit --no-fund && npm run build"
 
-# Vite/React SPA configuration
+# Vite/React SPA configuration - SPA fallback for all routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
