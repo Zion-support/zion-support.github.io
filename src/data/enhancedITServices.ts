@@ -591,4 +591,3 @@ export const getITServicesByCategory = (category: string): ITService[] => {
 export const getITServiceCategories = (): string[] => {
   return [...new Set(ENHANCED_IT_SERVICES.map(service => service.category))];
 };
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34

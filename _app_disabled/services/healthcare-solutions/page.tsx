@@ -1,8 +1,7 @@
 export const metadata = {
-  }
-  "title": "Healthcare Solutions | Zion Tech Group","
-  "description": "Transform healthcare delivery with innovative solutions including electronic health records, telemedicine platforms, and healthcare analytics.","
-  "keywords": "healthcare solutions, electronic health records, telemedicine, healthcare analytics, medical software""
+  title: "Healthcare Solutions | Zion Tech Group",
+  description: "Transform healthcare delivery with innovative solutions including electronic health records, telemedicine platforms, and healthcare analytics.",
+  keywords: "healthcare solutions, electronic health records, telemedicine, healthcare analytics, medical software"
 };
 
 export default function HealthcareSolutionsPage() {

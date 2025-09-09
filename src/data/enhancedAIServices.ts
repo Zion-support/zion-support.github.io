@@ -10,7 +10,6 @@ export interface AIService {
     currency: string;
     pricingModel: string;
   };
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -561,4 +560,3 @@ export const getAIServicesByCategory = (category: string): AIService[] => {
 export const getAIServiceCategories = (): string[] => {
   return [...new Set(ENHANCED_AI_SERVICES.map(service => service.category))];
 };
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34

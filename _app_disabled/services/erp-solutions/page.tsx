@@ -1,8 +1,7 @@
 export const metadata = {
-  }
-  "title": "ERP Solutions | Zion Tech Group","
-  "description": "Streamline your business operations with comprehensive ERP solutions, including financial management, HR systems, and supply chain optimization.","
-  "keywords": "erp solutions, enterprise resource planning, business management, financial systems, hr management""
+  title: "ERP Solutions | Zion Tech Group",
+  description: "Streamline your business operations with comprehensive ERP solutions, including financial management, HR systems, and supply chain optimization.",
+  keywords: "erp solutions, enterprise resource planning, business management, financial systems, hr management"
 };
 
 export default function ERPSolutionsPage() {

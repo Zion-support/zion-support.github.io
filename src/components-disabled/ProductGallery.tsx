@@ -1,6 +1,6 @@
 import React, { useState, Suspense } from 'react';
 import Image from 'next/image'; // Import next/image
-import { OptimizedImage } from '@/components/ui/OptimizedImage';
+import { OptimizedImage } from '@/components/ui/optimizedImage';
 import {
   Dialog,
   DialogContent,

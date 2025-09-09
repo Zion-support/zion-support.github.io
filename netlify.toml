@@ -11,7 +11,7 @@
   # Remove Next.js plugin skip since this is a Vite project
   # NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
-# SPA routing redirects for Vite
+# SPA routing redirects for Next.js static export
 [[redirects]]
   from = "/*"
   to = "/index.html"
