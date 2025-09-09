@@ -1,15 +1,12 @@
 import { toast as hotToast } from 'react-hot-toast';
 
-export const useToast = () => {
-  const toast = (message, options) => {
-    hotToast(message, options);
-  };
+export const useToast = () => ({ toast });
 
-  toast.success = (message) => hotToast.success(message);
-  toast.error = (message) => hotToast.error(message);
-  toast.loading = (message) => hotToast.loading(message);
+function toast(message, options) {
+  hotToast(message, options);
+}
 
-  return { toast };
-};
+toast.error = (message) => hotToast.error(message);
+toast.success = (message) => hotToast.success(message);
 
-export default useToast;
+export { toast };

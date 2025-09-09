@@ -1,257 +1,437 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Search, 
-  BookOpen, 
+  HelpCircle, 
   MessageCircle, 
   Phone, 
   Mail, 
-  HelpCircle, 
+  Clock, 
+  BookOpen, 
+  Video, 
   FileText, 
-  Video,
-  Users,
-  Globe,
-  Shield,
+  Users, 
+  ChevronDown,
+  ChevronRight,
+  ExternalLink,
+  CheckCircle,
+  AlertCircle,
+  Info,
+  Lightbulb,
   Zap,
-  Brain,
+  Shield,
   Cloud,
-  Lock
+  Brain,
+  Lock,
+  Rocket,
+  Cpu,
+  TrendingUp,
+  Leaf,
+  User,
+  Briefcase,
+  Wrench,
+  ShoppingCart
 } from 'lucide-react';
 
 export default function Help() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [expandedFAQ, setExpandedFAQ] = useState(null);
 
   const helpCategories = [
+    { id: 'all', name: 'All Topics', icon: HelpCircle, count: 156 },
+    { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 23 },
+    { id: 'marketplace', name: 'Marketplace', icon: ShoppingCart, count: 34 },
+    { id: 'services', name: 'Services', icon: Briefcase, count: 28 },
+    { id: 'account', name: 'Account & Billing', icon: User, count: 19 },
+    { id: 'technical', name: 'Technical Support', icon: Wrench, count: 32 },
+    { id: 'security', name: 'Security & Privacy', icon: Shield, count: 20 }
+  ];
+
+  const faqs = [
     {
-      id: 'getting-started',
-      title: 'Getting Started',
-      icon: Zap,
-      description: 'Learn the basics of using Zion Tech Group',
-      articles: [
-        { title: 'How to create an account', url: '/help/account-creation' },
-        { title: 'First steps after registration', url: '/help/first-steps' },
-        { title: 'Understanding the marketplace', url: '/help/marketplace-guide' },
-        { title: 'Profile setup guide', url: '/help/profile-setup' }
-      ]
+      id: 1,
+      question: "How do I get started with Zion Tech Group?",
+      answer: "Getting started is easy! Simply create an account, browse our marketplace for products and services, and contact our team for personalized assistance. We offer free consultations to help you find the right solutions for your business needs.",
+      category: "getting-started",
+      tags: ["onboarding", "account", "consultation"]
     },
     {
-      id: 'marketplace',
-      title: 'Marketplace',
-      icon: Globe,
-      description: 'Everything about buying and selling on our platform',
-      articles: [
-        { title: 'How to list a service', url: '/help/list-service' },
-        { title: 'Finding the right talent', url: '/help/find-talent' },
-        { title: 'Payment and billing', url: '/help/payments' },
-        { title: 'Dispute resolution', url: '/help/disputes' }
-      ]
+      id: 2,
+      question: "What types of services do you offer?",
+      answer: "We offer a comprehensive range of technology services including AI & Analytics, Cybersecurity, Cloud Solutions, Quantum Computing, Blockchain, IoT & Edge Computing, Digital Marketing, and more. Our services are tailored for businesses of all sizes.",
+      category: "services",
+      tags: ["services", "ai", "cybersecurity", "cloud"]
     },
     {
-      id: 'services',
-      title: 'Services',
-      icon: Brain,
-      description: 'Information about our AI and tech services',
-      articles: [
-        { title: 'AI Services overview', url: '/help/ai-services' },
-        { title: 'Cybersecurity solutions', url: '/help/cybersecurity' },
-        { title: 'Cloud infrastructure', url: '/help/cloud-services' },
-        { title: 'Quantum computing', url: '/help/quantum-computing' }
-      ]
+      id: 3,
+      question: "How do I purchase products from the marketplace?",
+      answer: "Browse our marketplace, add items to your cart, and proceed to checkout. We accept major credit cards, bank transfers, and offer flexible payment plans for enterprise customers. All transactions are secure and encrypted.",
+      category: "marketplace",
+      tags: ["purchase", "payment", "checkout", "security"]
     },
     {
-      id: 'account',
-      title: 'Account & Security',
-      icon: Shield,
-      description: 'Manage your account and security settings',
-      articles: [
-        { title: 'Password management', url: '/help/password-management' },
-        { title: 'Two-factor authentication', url: '/help/2fa' },
-        { title: 'Privacy settings', url: '/help/privacy-settings' },
-        { title: 'Account verification', url: '/help/verification' }
-      ]
+      id: 4,
+      question: "What is your refund and return policy?",
+      answer: "We offer a 30-day satisfaction guarantee for most products and services. Digital products may have different terms. Contact our support team within 30 days for refund requests. Enterprise contracts have specific terms outlined in your agreement.",
+      category: "account",
+      tags: ["refund", "return", "policy", "guarantee"]
     },
     {
-      id: 'technical',
-      title: 'Technical Support',
-      icon: Cloud,
-      description: 'Technical issues and troubleshooting',
-      articles: [
-        { title: 'Browser compatibility', url: '/help/browser-support' },
-        { title: 'API documentation', url: '/help/api-docs' },
-        { title: 'Performance optimization', url: '/help/performance' },
-        { title: 'Error codes explained', url: '/help/error-codes' }
-      ]
+      id: 5,
+      question: "How do I contact technical support?",
+      answer: "Technical support is available 24/7 through multiple channels: live chat on our website, email at support@ziontechgroup.com, or phone at +1 302 464 0950. For urgent issues, use our priority support line.",
+      category: "technical",
+      tags: ["support", "contact", "urgent", "24/7"]
+    },
+    {
+      id: 6,
+      question: "What security measures do you have in place?",
+      answer: "We implement enterprise-grade security including end-to-end encryption, multi-factor authentication, regular security audits, SOC 2 compliance, and advanced threat detection. Your data and transactions are protected by industry-leading security protocols.",
+      category: "security",
+      tags: ["security", "encryption", "compliance", "audit"]
+    },
+    {
+      id: 7,
+      question: "Do you offer custom development services?",
+      answer: "Yes! We specialize in custom software development, AI solutions, and technology consulting. Our team of experts can build tailored solutions for your specific business requirements. Contact us for a free consultation and quote.",
+      category: "services",
+      tags: ["custom", "development", "consulting", "quote"]
+    },
+    {
+      id: 8,
+      question: "What are your business hours?",
+      answer: "Our main office is open Monday-Friday, 9 AM - 6 PM EST. However, our support team and marketplace are available 24/7. For urgent matters outside business hours, use our emergency support line.",
+      category: "getting-started",
+      tags: ["hours", "support", "emergency", "availability"]
     }
   ];
 
-  const popularArticles = [
-    'How to get started with AI services',
-    'Understanding our pricing structure',
-    'Best practices for service listings',
-    'Security and privacy measures',
-    'Integration with existing systems'
+  const quickActions = [
+    {
+      title: "Create Account",
+      description: "Sign up for a free account to access our marketplace",
+      icon: User,
+      link: "/signup",
+      color: "from-zion-cyan to-zion-blue"
+    },
+    {
+      title: "Browse Services",
+      description: "Explore our comprehensive service offerings",
+      icon: Briefcase,
+      link: "/services",
+      color: "from-zion-purple to-zion-red"
+    },
+    {
+      title: "Contact Sales",
+      description: "Get in touch with our sales team for enterprise solutions",
+      icon: MessageCircle,
+      link: "/contact",
+      color: "from-zion-green to-zion-cyan"
+    },
+    {
+      title: "View Documentation",
+      description: "Access technical documentation and guides",
+      icon: BookOpen,
+      link: "/docs",
+      color: "from-zion-orange to-zion-purple"
+    }
   ];
 
-  const filteredCategories = helpCategories.filter(category => 
-    selectedCategory === 'all' || category.id === selectedCategory
-  );
+  const supportChannels = [
+    {
+      title: "Live Chat",
+      description: "Get instant help from our support team",
+      icon: MessageCircle,
+      availability: "24/7",
+      responseTime: "Instant",
+      color: "from-zion-cyan to-zion-blue"
+    },
+    {
+      title: "Email Support",
+      description: "Send us a detailed message for complex issues",
+      icon: Mail,
+      availability: "24/7",
+      responseTime: "Within 4 hours",
+      color: "from-zion-purple to-zion-red"
+    },
+    {
+      title: "Phone Support",
+      description: "Speak directly with our technical experts",
+      icon: Phone,
+      availability: "9 AM - 6 PM EST",
+      responseTime: "Immediate",
+      color: "from-zion-green to-zion-cyan"
+    },
+    {
+      title: "Video Call",
+      description: "Schedule a screen sharing session for complex issues",
+      icon: Video,
+      availability: "By appointment",
+      responseTime: "Within 24 hours",
+      color: "from-zion-orange to-zion-purple"
+    }
+  ];
+
+  const filteredFAQs = faqs.filter(faq => {
+    const matchesSearch = faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         faq.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  const toggleFAQ = (id) => {
+    setExpandedFAQ(expandedFAQ === id ? null : id);
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">
-      <div className="container mx-auto px-4 py-12">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            How can we help you?
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Find answers to common questions, learn how to use our platform, and get the support you need.
-          </p>
-        </div>
-
-        {/* Search Bar */}
-        <div className="max-w-2xl mx-auto mb-12">
-          <div className="relative">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-            <input
-              type="text"
-              placeholder="Search for help articles, guides, and FAQs..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 bg-zinc-800/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-            />
-          </div>
-        </div>
-
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          <button
-            onClick={() => setSelectedCategory('all')}
-            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-              selectedCategory === 'all'
-                ? 'bg-zion-cyan text-white'
-                : 'bg-zinc-800/50 text-zion-slate-light hover:bg-zinc-700/50'
-            }`}
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
+      {/* Hero Section */}
+      <section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark">
+        <div className="container mx-auto px-4 text-center">
+          <motion.h1 
+            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >
-            All Categories
-          </button>
-          {helpCategories.map(category => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                selectedCategory === category.id
-                  ? 'bg-zion-cyan text-white'
-                  : 'bg-zinc-800/50 text-zion-slate-light hover:bg-zinc-700/50'
-              }`}
-            >
-              {category.title}
-            </button>
-          ))}
-        </div>
-
-        {/* Help Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {filteredCategories.map(category => (
-            <div key={category.id} className="bg-zinc-800/30 border border-zion-cyan/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-colors">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mr-4">
-                  <category.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white">{category.title}</h3>
-              </div>
-              <p className="text-zion-slate-light mb-4">{category.description}</p>
-              <ul className="space-y-2">
-                {category.articles.map((article, index) => (
-                  <li key={index}>
-                    <Link 
-                      to={article.url}
-                      className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm flex items-center"
-                    >
-                      <FileText className="w-4 h-4 mr-2" />
-                      {article.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+            How Can We <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Help You?</span>
+          </motion.h1>
+          <motion.p 
+            className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Find answers to common questions, get technical support, and access resources to help you succeed with Zion Tech Group.
+          </motion.p>
+          
+          {/* Search Bar */}
+          <motion.div 
+            className="max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search for help topics, FAQs, or guides..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-md border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              />
             </div>
-          ))}
+          </motion.div>
         </div>
+      </section>
 
-        {/* Popular Articles */}
-        <div className="bg-zinc-800/30 border border-zion-cyan/20 rounded-lg p-8 mb-16">
-          <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
-            <BookOpen className="w-6 h-6 mr-3 text-zion-cyan" />
-            Popular Help Articles
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {popularArticles.map((article, index) => (
-              <Link
-                key={index}
-                to={`/help/article-${index + 1}`}
-                className="flex items-center p-4 bg-zinc-700/30 rounded-lg hover:bg-zinc-700/50 transition-colors group"
+      {/* Quick Actions */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <motion.h2 
+            className="text-3xl font-bold text-white text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Quick Actions
+          </motion.h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {quickActions.map((action, index) => (
+              <motion.div
+                key={action.title}
+                className="group cursor-pointer"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ scale: 1.05 }}
               >
-                <div className="w-8 h-8 bg-zion-cyan/20 rounded-full flex items-center justify-center mr-3 group-hover:bg-zion-cyan/30 transition-colors">
-                  <HelpCircle className="w-4 h-4 text-zion-cyan" />
-                </div>
-                <span className="text-white group-hover:text-zion-cyan transition-colors">{article}</span>
-              </Link>
+                <Link to={action.link}>
+                  <div className={`bg-gradient-to-br ${action.color} p-6 rounded-lg text-center group-hover:shadow-lg transition-all duration-300`}>
+                    <action.icon className="w-12 h-12 text-white mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                    <h3 className="text-white font-semibold mb-2">{action.title}</h3>
+                    <p className="text-white/80 text-sm">{action.description}</p>
+                  </div>
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
+      </section>
 
-        {/* Contact Support */}
-        <div className="bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">Still need help?</h2>
-          <p className="text-white/90 mb-6 max-w-2xl mx-auto">
-            Our support team is here to help you with any questions or issues you might have.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-6 py-3 bg-white text-zion-blue rounded-lg font-medium hover:scale-105 transition-transform"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Contact Support
-            </Link>
-            <a
-              href="mailto:support@ziontechgroup.com"
-              className="inline-flex items-center px-6 py-3 border border-white text-white rounded-lg font-medium hover:bg-white hover:text-zion-blue transition-colors"
-            >
-              <Mail className="w-5 h-5 mr-2" />
-              Email Support
-            </a>
+      {/* Support Channels */}
+      <section className="py-16 bg-zinc-800/50">
+        <div className="container mx-auto px-4">
+          <motion.h2 
+            className="text-3xl font-bold text-white text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Support Channels
+          </motion.h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {supportChannels.map((channel, index) => (
+              <motion.div
+                key={channel.title}
+                className="bg-zinc-800/50 rounded-lg border border-zion-cyan/20 p-6 hover:border-zion-cyan/40 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
+              >
+                <div className={`bg-gradient-to-br ${channel.color} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                  <channel.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-white font-semibold text-center mb-2">{channel.title}</h3>
+                <p className="text-zion-slate-light text-sm text-center mb-4">{channel.description}</p>
+                <div className="space-y-2 text-sm">
+                  <div className="flex items-center justify-between">
+                    <span className="text-zion-slate-light">Availability:</span>
+                    <span className="text-white">{channel.availability}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-zion-slate-light">Response:</span>
+                    <span className="text-white">{channel.responseTime}</span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* Additional Resources */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
-              <Video className="w-8 h-8 text-white" />
+      {/* FAQ Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="flex items-center justify-between mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl font-bold text-white">Frequently Asked Questions</h2>
+            <div className="flex items-center gap-4">
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="bg-zinc-700/50 text-white border border-zion-cyan/20 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              >
+                {helpCategories.map(category => (
+                  <option key={category.id} value={category.id}>
+                    {category.name} ({category.count})
+                  </option>
+                ))}
+              </select>
             </div>
-            <h3 className="text-xl font-semibold text-white mb-2">Video Tutorials</h3>
-            <p className="text-zion-slate-light">Watch step-by-step guides and tutorials</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
-              <Users className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-2">Community Forum</h3>
-            <p className="text-zion-slate-light">Connect with other users and experts</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
-              <FileText className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-2">Documentation</h3>
-            <p className="text-zion-slate-light">Comprehensive technical documentation</p>
+          </motion.div>
+
+          <div className="space-y-4">
+            {filteredFAQs.map((faq, index) => (
+              <motion.div
+                key={faq.id}
+                className="bg-zinc-800/50 rounded-lg border border-zion-cyan/20 overflow-hidden"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <button
+                  onClick={() => toggleFAQ(faq.id)}
+                  className="w-full p-6 text-left flex items-center justify-between hover:bg-zinc-700/50 transition-colors duration-200"
+                >
+                  <h3 className="text-white font-semibold text-lg">{faq.question}</h3>
+                  {expandedFAQ === faq.id ? (
+                    <ChevronDown className="w-5 h-5 text-zion-cyan" />
+                  ) : (
+                    <ChevronRight className="w-5 h-5 text-zion-cyan" />
+                  )}
+                </button>
+                {expandedFAQ === faq.id && (
+                  <motion.div
+                    className="px-6 pb-6"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <p className="text-zion-slate-light mb-4">{faq.answer}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {faq.tags.map((tag, idx) => (
+                        <span key={idx} className="text-xs bg-zion-cyan/20 text-zion-cyan px-2 py-1 rounded-full">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </motion.div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Contact Support */}
+      <section className="py-16 bg-zinc-800/50">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            className="max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Still Need Help?
+            </h2>
+            <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
+              Our support team is here to help you succeed. Contact us through any of our support channels for personalized assistance.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-zinc-700/50 rounded-lg p-6 border border-zion-cyan/20">
+                <Phone className="w-8 h-8 text-zion-cyan mx-auto mb-3" />
+                <h3 className="text-white font-semibold mb-2">Call Us</h3>
+                <p className="text-zion-slate-light text-sm mb-3">Speak with our experts</p>
+                <a href="tel:+13024640950" className="text-zion-cyan hover:text-zion-cyan-light transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              
+              <div className="bg-zinc-700/50 rounded-lg p-6 border border-zion-cyan/20">
+                <Mail className="w-8 h-8 text-zion-cyan mx-auto mb-3" />
+                <h3 className="text-white font-semibold mb-2">Email Us</h3>
+                <p className="text-zion-slate-light text-sm mb-3">Send us a detailed message</p>
+                <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:text-zion-cyan-light transition-colors">
+                  support@ziontechgroup.com
+                </a>
+              </div>
+              
+              <div className="bg-zinc-700/50 rounded-lg p-6 border border-zion-cyan/20">
+                <MessageCircle className="w-8 h-8 text-zion-cyan mx-auto mb-3" />
+                <h3 className="text-white font-semibold mb-2">Live Chat</h3>
+                <p className="text-zion-slate-light text-sm mb-3">Get instant help online</p>
+                <button className="text-zion-cyan hover:text-zion-cyan-light transition-colors">
+                  Start Chat
+                </button>
+              </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:scale-105 transition-transform">
+                Contact Support
+              </Link>
+              <Link to="/faq" className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-colors">
+                View All FAQs
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }
