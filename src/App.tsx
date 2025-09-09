@@ -4,18 +4,22 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './components/ThemeProvider';
 import { ErrorBoundary, setupGlobalErrorHandling } from './components/ErrorHandling';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import ScrollToTop from './components/ScrollToTop';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceWrapper from './components/PerformanceWrapper';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
+import EnhancedLoadingSpinner from './components/EnhancedLoadingSpinner';
 import { SEO, HomePageSEO } from './components/SEO';
+import EnhancedSEO from './components/EnhancedSEO';
 import AccessibilityEnhancements from './components/AccessibilityEnhancements';
 import PerformanceOptimizations from './components/PerformanceOptimizations';
 import { NotificationToast } from './components/NotificationToast';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import OptimizedSuspense from './components/OptimizedSuspense';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import EnhancedNavigation from './components/EnhancedNavigation';
 import { bundleOptimizer } from './utils/bundleOptimizer';
 import './App.css';
 
@@ -124,7 +128,7 @@ const App = memo(() => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <ErrorBoundary>
+      <EnhancedErrorBoundary>
         <HelmetProvider>
           <ThemeProvider>
             <AccessibilityEnhancer>
@@ -134,12 +138,15 @@ const App = memo(() => {
                   <PerformanceWrapper>
                     <PerformanceOptimizer enableMonitoring={process.env.NODE_ENV === 'development'} />
                     
-                    {/* SEO Meta Tags */}
-                    <HomePageSEO />
+                    {/* Enhanced SEO Meta Tags */}
+                    <EnhancedSEO />
                     
-                    <div className="min-h-screen bg-background text-foreground" id="main-content">
+                    {/* Enhanced Navigation */}
+                    <EnhancedNavigation />
+                    
+                    <div className="min-h-screen bg-background text-foreground pt-16" id="main-content">
                       <PerformanceOptimizations>
-                        <OptimizedSuspense>
+                        <OptimizedSuspense fallback={<EnhancedLoadingSpinner size="lg" text="Loading application..." />}>
                           <Routes>
                             {/* Main Routes */}
                             <Route path="/" element={<Home />} />
@@ -199,13 +206,13 @@ const App = memo(() => {
                   </PerformanceWrapper>
                 </Router>
                 <NotificationToast />
-                <PerformanceMonitor />
+                <PerformanceMonitor enableLogging={process.env.NODE_ENV === 'development'} />
                 <PerformanceDashboard />
               </AccessibilityEnhancements>
             </AccessibilityEnhancer>
           </ThemeProvider>
         </HelmetProvider>
-      </ErrorBoundary>
+      </EnhancedErrorBoundary>
     </QueryClientProvider>
   );
 });
