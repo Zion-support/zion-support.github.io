@@ -55,15 +55,15 @@ A modern, full-stack web application built with React, TypeScript, and Vite, pro
    ```
    Fill in the required environment variables.
 
-4. **Start development server**   ```bash
+4. **Start development server**
+   ```bash
    npm run dev
    ```
 
-=======
 ### Build
 
 ```bash
-npm run build>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+npm run build
 ```
 
 ### Testing
@@ -124,11 +124,6 @@ The application is configured for deployment on Netlify with:
 - Content Security Policy
 - Secure headers
 
-=======When tests run on GitHub Actions, the workflow uploads the `coverage` directory
-using `actions/upload-artifact@v4`. Visit a workflow run and download the
-`coverage-report` artifact to retrieve the generated HTML coverage report.
-# Trigger new build with clean netlify.toml
-=======
 ## 🚀 Available Scripts
 
 ### Development
@@ -230,7 +225,7 @@ The project includes comprehensive testing setup:
 - **Lazy Loading**: Components and routes loaded on demand
 - **Bundle Optimization**: Tree shaking and dead code elimination
 - **Caching**: Optimized caching strategies for assets and API calls
-=======
+
 ## ♿ Accessibility
 
 - WCAG 2.1 compliance
@@ -244,12 +239,12 @@ The project includes comprehensive testing setup:
 - Google Analytics integration
 - Performance monitoring
 - Error tracking
-- User behavior analytics>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+- User behavior analytics
 
 ## 🤝 Contributing
 
 1. Fork the repository
-=======2. Create a feature branch: `git checkout -b feature/amazing-feature`
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
 3. Commit your changes: `git commit -m 'Add amazing feature'`
 4. Push to the branch: `git push origin feature/amazing-feature`
 5. Open a Pull Request
@@ -268,13 +263,3 @@ For support, email support@ziontechgroup.com or join our Discord community.
 - [Documentation](https://docs.zion.app)
 - [API Reference](https://api.zion.app/docs)
 - [Community](https://discord.gg/zion)
->>>>>>> origin/main
-=======
-2. Create a feature branch
-3. Make your changes
-4. Add tests
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License.>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
