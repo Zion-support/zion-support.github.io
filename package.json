@@ -36,7 +36,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "ROLLUP_SKIP_NODEJS_NATIVE=true NODE_ENV=production SKIP_TYPE_CHECK=true vite build --logLevel info",
-    "build:ci": "DEBUG=vite:build ROLLUP_SKIP_NODEJS_NATIVE=true NODE_ENV=production SKIP_TYPE_CHECK=true vite build --logLevel info",
+    "build:ci": "DEBUG=vite:build ROLLUP_SKIP_NODEJS_NATIVE=true NODE_ENV=production SKIP_TYPE_CHECK=true vite build --logLevel info && node scripts/copy-netlify-files.js",
     "build:analyze": "ANALYZE=true vite build",
     "build:preview": "npm run build && npm run start",
     "analyze:bundle": "node scripts/bundle-analyzer.js",
