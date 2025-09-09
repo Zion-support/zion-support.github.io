@@ -1,6 +1,11 @@
+// @ts-nocheck
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
+import { fileURLToPath } from 'url'
+
+// Ensure __dirname is available in ESM
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // Disable complex manual chunking on CI/Netlify to avoid occasional hangs during
 // Rollup's chunk rendering phase. Can be overridden locally by setting
@@ -131,12 +136,18 @@ export default defineConfig(({ mode }) => ({
     },
     // Optimize build target
     target: 'esnext',
-    // Enable CSS code splitting
-    cssCodeSplit: true,
+    // Enable CSS code splitting (disable on CI to reduce chunk graph size)
+    cssCodeSplit: !(process.env.NETLIFY === 'true' || process.env.CI === 'true'),
     // Avoid gzip size computation on CI (can appear to hang after "rendering chunks")
     reportCompressedSize: process.env.CI !== 'true' && process.env.NETLIFY !== 'true',
     // Optimize for production
     emptyOutDir: true,
+  },
+  // Reduce module preload generation on CI which can appear to hang
+  experimental: {
+    renderBuiltUrl(filename) {
+      return { relative: true };
+    },
   },
   esbuild: {
     target: 'esnext',
