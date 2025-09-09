@@ -1,17 +1,17 @@
 
 
-  id: string;
-  targetType: string;
-  targetId: string;
-  text: string;
-  authorId: string;
-  createdAt: number;
-};
+// type Note = {
+//   id: string;
+//   targetType: string;
+//   targetId: string;
+//   text: string;
+//   authorId: string;
+//   createdAt: number;
+// };
 
-
-const notesStore: Note[] = [];
+// const notesStore: Note[] = []; // Removed unused variable
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { randomUUID } from 'crypto';
+// import { randomUUID } from 'crypto'; // Removed unused import
 
 
 

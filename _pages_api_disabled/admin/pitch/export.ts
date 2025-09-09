@@ -9,7 +9,7 @@ function escapeHtml(input: string): string {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-	const body = (req.body as any) || {};
+	const body = (req.body as Record<string, unknown>) || {};
 	const slides: Array<{ title?: string; content?: string }> = Array.isArray(body.slides) ? body.slides : [];
 	const version: string = typeof body.version === 'string' ? body.version : '';
 
