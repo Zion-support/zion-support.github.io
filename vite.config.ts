@@ -21,6 +21,7 @@ const isCI = process.env.NETLIFY === 'true' || process.env.CI === 'true'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: '/',
   plugins: [
     react({
       jsxRuntime: 'automatic',
