@@ -23,6 +23,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    // eslint-disable-next-line no-console
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.props.onError?.(error, errorInfo);
   }
@@ -35,7 +36,7 @@ class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       if (this.props.FallbackComponent) {
-        return <this.props.FallbackComponent error={this.state.error!} resetErrorBoundary={this.handleReset} />;
+        return <this.props.FallbackComponent error={this.state.error || new Error('Unknown error')} resetErrorBoundary={this.handleReset} />;
       }
 
       return (
