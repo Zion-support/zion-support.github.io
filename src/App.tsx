@@ -8,18 +8,54 @@ import { ChatAssistant } from './components/ChatAssistant';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
-// Enhanced loading component with better UX
-const EnhancedLoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-    <div className="relative">
-      <div className="w-32 h-32 border-4 border-cyan-400/20 rounded-full"></div>
-      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-400 font-bold text-lg">
-        ZION
-      </div>
-      <div className="mt-4 text-center">
-        <div className="text-cyan-400 text-sm animate-pulse">Loading amazing experiences...</div>
-      </div>
+// Lazy load pages with enhanced services
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const PartnersPage = React.lazy(() => import('./pages/Partners'));
+const Login = React.lazy(() => import('./pages/Login'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const Solutions = React.lazy(() => import('./pages/Solutions'));
+const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment'));
+const News = React.lazy(() => import('./pages/News'));
+const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
+const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
+const Dashboard = React.lazy(() => import('./pages/Dashboard'));
+
+// Enhanced services pages
+const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage.tsx'));
+const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027.tsx'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
+const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027.tsx'));
+const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025.tsx'));
+const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.tsx'));
+const EnhancedZionServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedZionServicesShowcase2025.tsx'));
+const ZionTechGroupMarketing2025 = React.lazy(() => import('./pages/ZionTechGroupMarketing2025.tsx'));
+const InnovativeServices2028 = React.lazy(() => import('./pages/InnovativeServices2028'));
+const Revolutionary2026ServicesShowcase = React.lazy(() => import('./pages/Revolutionary2026ServicesShowcase.tsx'));
+const Revolutionary2026PricingGuide = React.lazy(() => import('./pages/Revolutionary2026PricingGuide.tsx'));
+
+// Service pages - only import existing ones
+const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
+const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
+const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
+const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
+const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
+
+// Simple placeholder pages for missing ones
+const FAQ = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+    <SEO 
+      title="FAQ - Zion Tech Group"
+      description="Frequently asked questions about our AI-powered technology solutions and services."
+    />
+    <div className="text-center text-white">
+      <h1 className="text-4xl font-bold mb-4">FAQ</h1>
+      <p className="text-xl text-gray-300">Frequently asked questions</p>
     </div>
   </div>
 );
@@ -164,13 +200,52 @@ function App() {
           <main className="flex-1 relative z-10">
             <Suspense fallback={<EnhancedLoadingSpinner />}>
               <Routes>
-                {routes.map((route) => (
-                  <Route
-                    key={route.path}
-                    path={route.path}
-                    element={<route.element />}
-                  />
-                ))}
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/green-it" element={<GreenIT />} />
+                <Route path="/partners" element={<PartnersPage />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/search" element={<SearchPage />} />
+                <Route path="/help-center" element={<HelpCenter />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/solutions" element={<Solutions />} />
+                <Route path="/research-development" element={<ResearchDevelopment />} />
+                <Route path="/news" element={<News />} />
+                <Route path="/request-quote" element={<RequestQuote />} />
+                <Route path="/marketplace" element={<Marketplace />} />
+                
+                {/* Enhanced Services Routes */}
+                <Route path="/enhanced-services" element={<EnhancedServicesPage />} />
+                <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
+                <Route path="/services/pricing" element={<ComprehensivePricingGuide2027 />} />
+                <Route path="/services/showcase" element={<InnovativeServicesShowcase2027 />} />
+                <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
+                <Route path="/comprehensive-services-2025" element={<ComprehensiveServicesLanding2025 />} />
+                <Route path="/enhanced-zion-services-2025" element={<EnhancedZionServicesShowcase2025 />} />
+                <Route path="/zion-tech-group-marketing-2025" element={<ZionTechGroupMarketing2025 />} />
+                <Route path="/innovative-services-2028" element={<InnovativeServices2028 />} />
+                <Route path="/revolutionary-2026-services" element={<Revolutionary2026ServicesShowcase />} />
+                <Route path="/revolutionary-2026-pricing" element={<Revolutionary2026PricingGuide />} />
+                
+                {/* Service Routes - only for existing pages */}
+                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                <Route path="/services/digital-twin" element={<DigitalTwin />} />
+                <Route path="/services/data-analytics" element={<DataAnalytics />} />
+                <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+                <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                
+                {/* Catch all route */}
+                <Route path="*" element={<Home />} />
               </Routes>
             </Suspense>
           </main>
