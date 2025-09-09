@@ -1,128 +1,65 @@
-# Build artifacts
+# Dependencies
+node_modules/
 dist/
-out/
 build/
 
-# Node modules
-node_modules/
+# Backup and disabled files
+**/*.backup/**
+**/*.disabled/**
+**/*.temp/**
+**/*.old/**
+**/*.test.*
+**/*.spec.*
+tests/**
+__tests__/**
+cypress/**
+e2e/**
 
-# Disabled/corrupted files
-src-disabled/
-src.broken/
-src_disabled_*/
-pages._archive_corrupted/
-pages.bak/
-*.disabled/
-*.backup/
-*.bak/
+# Specific problematic files
+advanced-*.js
+advanced-*.cjs
+aggressive-*.js
+aggressive-*.cjs
+analyze-*.js
+app-*.js
+automated-*.js
+*.cjs
 
-# Test artifacts
-coverage/
-.nyc_output/
-
-# Generated files
-*.min.js
-*.bundle.js
-
-# Service workers (browser globals)
-public/sw*.js
-public/service-worker.js
-
-# Automation scripts
-*automation*.js
-*automation*.cjs
-*fix*.js
-*fix*.cjs
-*merge*.js
-*merge*.cjs
-*resolve*.js
-*resolve*.cjs
-*ultimate*.js
-*ultimate*.cjs
-*comprehensive*.js
-*comprehensive*.cjs
-
-# PM2 configs
-ecosystem*.js
-ecosystem*.cjs
-pm2-*.js
-pm2-*.cjs
-
-# Recovery/backup files
+# Directories to ignore
+api-backup/
+automation/
+pages-backup/
+components-disabled/
+components.disabled/
 recovered-branches/
-backup/
-corrupted*/
-*_backup*/
-
-# Temporary files
-temp*/
-tmp*/
-*.tmp
-*.temp
-
-# Config files that may have syntax issues
-postcss.config*.js
-vite.config*.js
-vitest.config*.js
-next.config*.js
-
-# Media directory with broken symlinks
-media/
-
-# Backup and corrupted files
-netlify/functions-backup/
-*.backup
-*.bak
-*_backup*
-corrupted*/
-broken*/
-disabled*/
-*_disabled*
-*_broken*
-*_corrupted*
-
-# Config files with syntax issues
-next-*.config.js
-*.config.js
-tailwind.config.js
-security*.js
-sentry*.js
-optimize*.js
-performance*.js
-seo*.js
-simple*.js
-test*.js
-workflow*.js
-website*.js
-trigger*.js
-step*.js
-start*.js
-restore*.js
-
-# Scripts directory (many corrupted files)
+temp-backup/
+temp_disabled/
+infra/
+monitoring/
+netlify/
+offworld/
+prisma/
+public-backup/
 scripts/
-
-# Utils directory (many corrupted files)
+services/
+simulator/
+solutions.disabled/
+stories/
+supabase/
+token/
+universe/
+vision/
+wiki/
+zion/
+zion_academy/
+zion-ai-assistant/
+zion-os/
+zion-website/
+src.disabled/
+src_disabled_*/
+temp_*/
+zion-*/
+zion_os/
+apps/
 utils/
-
-# Server directory
-server/
-
-# Test files
-tests/
-__tests__/
-
-# Public files
-public/
-
-# Root level problematic files
-*.js
-!src/**/*.js
-!app/**/*.js
-!components/**/*.js
-!lib/**/*.js
-!hooks/**/*.js
-!contexts/**/*.js
-!types/**/*.js
-!constants/**/*.js
-!styles/**/*.js
+types/
