@@ -12,13 +12,15 @@ export default function Login() {
   const { isAuthenticated, user, isLoading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const [searchParams] = useSearchParams();
   const { dispatch } = useCart();
+  const reduxDispatch = useDispatch();
 
   useEffect(() => {
     // This effect handles token processing (e.g., from magic link)
-    // It runs when component mounts or search params change
-    const token = searchParams.get('token');
+    // It runs when component mounts or location.search changes
+    const queryString = location.search;
+    const params = new URLSearchParams(queryString);
+    const token = params.get('token');
     if (token) {
       safeStorage.setItem('zion_token', token);
       // Clear token from URL to prevent re-processing and clean up history
@@ -31,10 +33,10 @@ export default function Login() {
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
       reduxDispatch(setLoggedIn(true));
-      const next = searchParams.get('next') || '/dashboard';
+      const next = location.state?.from?.pathname || '/dashboard';
       navigate(next, { replace: true });
     }
-  }, [isAuthenticated, isLoading, navigate, reduxDispatch, searchParams]);
+  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.state]);
 
   // Render LoginContent if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {
