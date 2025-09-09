@@ -12,7 +12,7 @@ import {
   Github, 
   Heart, 
   ArrowUp,
-  Heart,
+  ArrowRight,
   Zap,
   Shield,
   Cloud,
@@ -274,8 +274,19 @@ export function Footer() {
                     </div>
                   </Link>
                 </li>
-                <li>
-                  <Link to="/services/quantum-computing" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center gap-2 group">
+              ))}
+            </ul>
+          </div>
+
+          {/* Additional Services */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Code className="w-5 h-5 text-zion-cyan mr-2" />
+              Additional Services
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/services/quantum-computing" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center gap-2 group">
                     <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                     Quantum Computing
                   </Link>
@@ -299,7 +310,6 @@ export function Footer() {
                   </Link>
                 </li>
               </ul>
-            </motion.div>
           </div>
 
           {/* Company & Resources */}
@@ -335,32 +345,8 @@ export function Footer() {
                     {item.name}
                   </Link>
                 </li>
-                <li>
-                  <Link to="/services/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center gap-2 group">
-                    <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                    Cloud & DevOps
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services/iot-edge" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center gap-2 group">
-                    <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                    IoT Edge Computing
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services/infrastructure" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center gap-2 group">
-                    <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                    Infrastructure
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services/consulting" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center gap-2 group">
-                    <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                    IT Consulting
-                  </Link>
-                </li>
-              </ul>
-            </motion.div>
+              ))}
+            </ul>
           </div>
 
           {/* Support & Legal */}
@@ -396,32 +382,8 @@ export function Footer() {
                     {item.name}
                   </Link>
                 </li>
-                <li>
-                  <Link to="/leadership" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center gap-2 group">
-                    <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                    Leadership
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center gap-2 group">
-                    <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                    Careers
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center gap-2 group">
-                    <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/support" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center gap-2 group">
-                    <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                    Support
-                  </Link>
-                </li>
-              </ul>
-            </motion.div>
+              ))}
+            </ul>
           </div>
         </div>
 

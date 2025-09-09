@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Search, User, Bell, Menu, X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, User, Bell, Menu, X, ChevronDown, Sun, Moon, Brain, Shield, Cloud, Cpu, Globe, Briefcase } from 'lucide-react';
 
 export function AppHeader() {
+  const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [marketplaceDropdownOpen, setMarketplaceDropdownOpen] = useState(false);
   const [companyDropdownOpen, setCompanyDropdownOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(null);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Handle scroll effect
   useEffect(() => {
@@ -28,6 +33,10 @@ export function AppHeader() {
     // In a real app, this would toggle the theme
   };
 
+  const isActiveRoute = (path) => {
+    return window.location.pathname === path;
+  };
+
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'About', href: '/about', current: false },
@@ -38,6 +47,24 @@ export function AppHeader() {
     { name: 'Contact', href: '/contact', current: false },
   ];
 
+  const navigationItems = [
+    { path: '/about', label: 'About', hasDropdown: false },
+    { path: '/services', label: 'Services', hasDropdown: true, dropdownItems: [
+      { path: '/services/ai', label: 'AI Solutions', icon: <Brain className="w-4 h-4" /> },
+      { path: '/services/cybersecurity', label: 'Cybersecurity', icon: <Shield className="w-4 h-4" /> },
+      { path: '/services/cloud', label: 'Cloud Services', icon: <Cloud className="w-4 h-4" /> }
+    ]},
+    { path: '/marketplace', label: 'Marketplace', hasDropdown: true, dropdownItems: [
+      { path: '/talent', label: 'Talent', icon: <User className="w-4 h-4" /> },
+      { path: '/equipment', label: 'Equipment', icon: <Cpu className="w-4 h-4" /> }
+    ]},
+    { path: '/company', label: 'Company', hasDropdown: true, dropdownItems: [
+      { path: '/about', label: 'About Us', icon: <Globe className="w-4 h-4" /> },
+      { path: '/careers', label: 'Careers', icon: <Briefcase className="w-4 h-4" /> }
+    ]},
+    { path: '/contact', label: 'Contact', hasDropdown: false }
+  ];
+
   const servicesDropdown = [
     { name: 'AI Solutions', href: '/services/ai' },
     { name: 'Cybersecurity', href: '/services/cybersecurity' },
@@ -46,19 +73,6 @@ export function AppHeader() {
     { name: 'Green IT', href: '/green-it' },
     { name: 'Micro SaaS', href: '/services/micro-saas' },
   ];
-
-  return (
-    <header className="bg-slate-900 shadow-lg border-b border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Zion Tech Group
-              </h1>
-            </Link>
-          </div>
 
   return (
     <motion.header 
@@ -357,57 +371,9 @@ export function AppHeader() {
                   </div>
                 </nav>
               </div>
-
-              {/* Mobile Marketplace Section */}
-              <div className="border-l-2 border-zion-cyan/30 pl-4">
-                <div className="text-zion-cyan font-medium mb-2">Marketplace</div>
-                <div className="space-y-2 ml-4">
-                  <Link to="/marketplace" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
-                    Products
-                  </Link>
-                  <Link to="/talent" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
-                    Talent
-                  </Link>
-                  <Link to="/equipment" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
-                    Equipment
-                  </Link>
-                </div>
-              </div>
-
-              {/* Mobile Company Section */}
-              <div className="border-l-2 border-zion-cyan/30 pl-4">
-                <div className="text-zion-cyan font-medium mb-2">Company</div>
-                <div className="space-y-2 ml-4">
-                  <Link to="/about" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
-                    About Us
-                  </Link>
-                  <Link to="/blog" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
-                    Blog
-                  </Link>
-                  <Link to="/partners" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
-                    Partners
-                  </Link>
-                  <Link to="/careers" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
-                    Careers
-                  </Link>
-                </div>
-              </div>
-
-              <Link to="/faq" className="text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
-                FAQ
-              </Link>
-              
-              <div className="pt-4 border-t border-zion-cyan/20">
-                <Link to="/login" className="block text-white hover:text-zion-cyan transition-colors duration-300 font-medium mb-2" onClick={() => setMobileMenuOpen(false)}>
-                  Login
-                </Link>
-                <Link to="/contact" className="block px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium text-center" onClick={() => setMobileMenuOpen(false)}>
-                  Get Started
-                </Link>
-              </div>
-            </nav>
-          </div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </motion.header>
   );
