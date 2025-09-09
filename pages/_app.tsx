@@ -104,17 +104,23 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
       if (publicRuntimeConfig.NEXT_PUBLIC_SENTRY_RELEASE) {
         Sentry.setTag('release', publicRuntimeConfig.NEXT_PUBLIC_SENTRY_RELEASE);
       }
-      if (publicRuntimeConfig.NEXT_PUBLIC_SENTRY_ENVIRONMENT) {
-        Sentry.setTag('environment', publicRuntimeConfig.NEXT_PUBLIC_SENTRY_ENVIRONMENT);
-      }
-    } catch (error) {
-      console.error('[App] Critical initialization error:', error);
-      try {
-        Sentry.captureException(error);
-      } catch (sentryError) {
-        console.warn('[App] Could not send error to Sentry:', sentryError);
-      }
-    }
+    };
+
+    // Force initialization completion after maximum 3 seconds
+    // MODIFIED: Increased timeout to 15 seconds for debugging
+    const forceInitTimeout = setTimeout(() => {
+      console.warn('Force completing app initialization due to timeout (15s)');
+      setLoadingProgress(100);
+      setIsLoading(false);
+    }, 15000); // Increased from 3000ms
+
+    initializeApp().finally(() => {
+      clearTimeout(forceInitTimeout);
+    });
+
+    return () => {
+      clearTimeout(forceInitTimeout);
+    };
   }, []);
 
   React.useEffect(() => {
