@@ -37,17 +37,13 @@ export function AppHeader() {
       label: 'Services',
       hasDropdown: true,
       dropdownItems: [
-        { path: '/services#ai-ml', label: 'AI & Machine Learning', icon: <Brain className="w-4 h-4" /> },
-        { path: '/services#blockchain', label: 'Blockchain & Web3', icon: <Database className="w-4 h-4" /> },
-        { path: '/services#iot-edge', label: 'IoT & Edge Computing', icon: <Cloud className="w-4 h-4" /> },
-        { path: '/services#quantum', label: 'Quantum Computing', icon: <Zap className="w-4 h-4" /> },
-        { path: '/services#ar-vr', label: 'AR/VR & Metaverse', icon: <Globe className="w-4 h-4" /> },
-        { path: '/services#cybersecurity', label: 'Cybersecurity', icon: <Shield className="w-4 h-4" /> },
-        { path: '/services#cloud', label: 'Cloud & Infrastructure', icon: <Cloud className="w-4 h-4" /> },
-        { path: '/services#business-intelligence', label: 'Business Intelligence', icon: <Database className="w-4 h-4" /> },
-        { path: '/services#communication', label: 'Communication Tools', icon: <Globe className="w-4 h-4" /> },
-        { path: '/services#specialized', label: 'Specialized AI Tools', icon: <Brain className="w-4 h-4" /> },
-        { path: '/services#emerging', label: 'Emerging Technologies', icon: <Zap className="w-4 h-4" /> }
+        { path: '/services', label: 'All Services' },
+        { path: '/enhanced-services', label: 'Enhanced Services' },
+        { path: '/comprehensive-services', label: 'Comprehensive Services' },
+        { path: '/services#ai', label: 'AI & Analytics' },
+        { path: '/services#cybersecurity', label: 'Cybersecurity' },
+        { path: '/services#cloud', label: 'Cloud Solutions' },
+        { path: '/services#consulting', label: 'IT Consulting' }
       ]
     },
     { path: '/solutions', label: 'Solutions' },
