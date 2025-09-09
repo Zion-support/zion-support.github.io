@@ -1,57 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Search, 
-  User, 
-  Bell,
-  Globe,
-  Shield,
-  Zap
-} from 'lucide-react';
-
-// Enhanced navigation structure
-const navigation = [
-  {
-    name: 'Services',
-    href: '/services',
-    icon: Zap,
-    children: [
-      { name: 'AI Solutions', href: '/services/ai', description: 'Cutting-edge AI services' },
-      { name: 'Cloud & DevOps', href: '/services/cloud', description: 'Scalable infrastructure' },
-      { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Advanced security' },
-      { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business modernization' },
-      { name: 'Quantum Computing', href: '/services/quantum-computing', description: 'Next-gen computing' },
-    ]
-  },
-  {
-    name: 'Solutions',
-    href: '/solutions',
-    icon: Shield,
-    children: [
-      { name: 'Enterprise Solutions', href: '/enterprise', description: 'Large-scale implementations' },
-      { name: 'SMB Solutions', href: '/smb', description: 'Small business focused' },
-      { name: 'Startup Solutions', href: '/startup', description: 'Growth acceleration' },
-      { name: 'Government Solutions', href: '/government', description: 'Public sector expertise' },
-    ]
-  },
-  {
-    name: 'Company',
-    href: '/about',
-    icon: Globe,
-    children: [
-      { name: 'About Us', href: '/about', description: 'Our story and mission' },
-      { name: 'Careers', href: '/careers', description: 'Join our team' },
-      { name: 'News', href: '/news', description: 'Latest updates' },
-      { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-    ]
-  },
-  { name: 'Resources', href: '/resources' },
-  { name: 'Contact', href: '/contact' }
-];
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);

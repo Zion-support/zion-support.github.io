@@ -3,10 +3,15 @@ import { Button } from "@/components/ui/button";
 import { Grid3X3, ListFilter, Loader2 } from "lucide-react";
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { ProductListingCard } from "@/components/ProductListingCard";
-import { toast } from "@/hooks/use-toast";
+import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData";
+import { generateRandomListing } from "@/utils/generateRandomListing";
+import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
-
+import { useTranslation } from "react-i18next";
 export default function Marketplace() {
+    const navigate = useNavigate();
+    const { toast } = useToast();
+    const { t } = useTranslation();
     const [searchQuery, setSearchQuery] = useState("");
     const [listings, setListings] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
