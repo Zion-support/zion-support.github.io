@@ -1,0 +1,14 @@
+{
+  "timestamp": "2025-08-29T14:17:32.859Z",
+  "totalChecks": 2,
+  "results": [
+    {
+      "type": "sitemap-generation",
+      "result": "Sitemap generated using ./scripts/generate-sitemap.js"
+    },
+    {
+      "type": "sitemap-verification",
+      "result": "Sitemap.xml file exists"
+    }
+  ]
+}

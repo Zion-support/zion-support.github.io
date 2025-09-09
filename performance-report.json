@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-09-09T00:24:55.622Z",
+  "metrics": {
+    "bundleSize": 402001,
+    "buildTime": 0,
+    "fileCount": 42,
+    "dependencies": 126,
+    "vulnerabilities": 0,
+    "performanceScore": 97
+  },
+  "recommendations": [
+    "Audit and remove unused dependencies",
+    "Consider lighter alternatives for heavy packages"
+  ]
+}

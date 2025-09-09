@@ -1,0 +1,110 @@
+import React, { useState } from 'react';
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {WhitelabelRequestForm} from "@/components/admin/whitelabel/WhitelabelRequestForm";
+import {TenantsList} from "@/components/admin/whitelabel/TenantsList";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+export default function WhitelabelManager() {;
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("tenants");
+import React, { useState } from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm",
+import { TenantsList } from "@/components/admin/whitelabel/TenantsList",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
+export default function WhitelabelManager() {
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("tenants");
+
+  // Check if user has admin role
+  const isAdmin = user?.role === "admin";
+
+  if (!isAdmin) {
+    return <Navigate to="/unauthorized" />
+  }
+  return (
+
+import React, { useState } from 'react',;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { SEO } from "@/components/SEO",;
+import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm",;
+import { TenantsList } from "@/components/admin/whitelabel/TenantsList",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+export default function WhitelabelManager() {;
+  const { user } = useAuth(),;
+  const [activeTab, setActiveTab] = useState("tenants"),;
+  // Check if user has admin role;
+  const isAdmin = user?.role === "admin";
+  if (!isAdmin) {;;
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
+            <TabsList className="mb-8">;
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
+            <TabsList className="mb-8">;
+                </p>;
+                <table>;
+                  <thead>;
+                    <tr>;
+
+                      <th > Record Type</th>;
+                      <th > Name</th>;
+                      <th > Value</th>;
+                      <th > TTL</th>;                  including content, users, and analytics. Tenant admins cannot access data from other tenants.;
+                </p>;
+              </div>;
+            </TabsContent>;
+          </Tabs>;
+        </div>;
+      </main>;
+      <Footer />;
+
+}
+    </>);
+}
+                      <th > TTL</th>;
+                    </tr>;
+                  </thead>;
+                  <tbody>;
+
+                      <td > CNAME</td>;
+                      <td > marketplace</td>;
+                      <td > ziontechmarketplace.com</td>;
+                      <td > 3600</td>;
+                  </tbody>;
+                </table>;
+                <h3 > Email Templates</h3>;
+                <ul>;
+                  <li > Welcome Email</li>;
+                  <li > Password Reset</li>;
+                  <li > Quote Request</li>;
+                  <li > Invoice</li>;
+                  <li > Receipt</li>;
+                </ul>;
+                <h3 > Admin Access</h3>;
+              </div>;
+            ;
+      </main>;
+      <Footer />;
+
+pr-12325
+    </>);
+}
+    </>;
+  ),;}
+
+}
+</>);
+}
+</Footer>
+    </>);
+}
+}
+;
