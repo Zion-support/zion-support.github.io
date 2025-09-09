@@ -5,8 +5,7 @@
     "lib": [
       "ES2020",
       "DOM",
-      "DOM.Iterable",
-      "WebWorker"
+      "DOM.Iterable"
     ],
     "module": "ESNext",
     "baseUrl": ".",
@@ -24,38 +23,35 @@
         "./src/lib/axios.ts"
       ]
     },
+    /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
+    /* Linting */
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "allowJs": true,
-    "incremental": true,
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "strictNullChecks": true,
-    "types": [
-      "node",
-      "jest",
-      "@testing-library/jest-dom"
-    ]
+    "incremental": true
   },
   "include": [
-    "*.ts",
-    "*.tsx",
+    "next-env.d.ts", 
+    "app/**/*.ts", 
+    "app/**/*.tsx", 
+    ".next/types/**/*.ts",
     "src/**/*",
-    ".next/types/**/*.ts"
+    "pages/**/*",
+    "*.ts",
+    "*.tsx"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
   ],
   "exclude": [
     "node_modules"
