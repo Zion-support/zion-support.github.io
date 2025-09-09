@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { NextPage } from 'next';
+
 const Services: NextPage = () => {
   const serviceCategories = [
     {
@@ -10,10 +12,7 @@ const Services: NextPage = () => {
         { name: "Chatbot Development", href: "/services/ai-chatbot-development", price: "Starting at $1,200/month" },
         { name: "Predictive Analytics", href: "/services/predictive-analytics", price: "Starting at $3,000/month" },
         { name: "Computer Vision", href: "/services/computer-vision", price: "Starting at $4,000/month" },
-        { name: "Natural Language Processing", href: "/services/nlp-services", price: "Starting at $2,800/month" },
-        { name: "AI-Powered Document Processing", href: "/services/ai-document-processing", price: "Starting at $1,800/month" },
-        { name: "Intelligent Recommendation Systems", href: "/services/recommendation-systems", price: "Starting at $3,500/month" },
-        { name: "AI Voice Assistants", href: "/services/ai-voice-assistants", price: "Starting at $2,200/month" }
+        { name: "Natural Language Processing", href: "/services/nlp-services", price: "Starting at $2,800/month" }
       ]
     },
     {
@@ -21,206 +20,160 @@ const Services: NextPage = () => {
       description: "Scalable cloud solutions for modern businesses",
       services: [
         { name: "Cloud Migration", href: "/services/cloud-migration", price: "Starting at $5,000/project" },
-        { name: "DevOps Automation", href: "/services/devops-automation", price: "Starting at $3,500/month" },
-        { name: "Container Orchestration", href: "/services/container-orchestration", price: "Starting at $2,200/month" },
-        { name: "Serverless Architecture", href: "/services/serverless-architecture", price: "Starting at $1,800/month" },
-        { name: "Cloud Security", href: "/services/cloud-security", price: "Starting at $2,500/month" }
+        { name: "DevOps Implementation", href: "/services/devops-implementation", price: "Starting at $3,500/month" },
+        { name: "Container Orchestration", href: "/services/container-orchestration", price: "Starting at $2,000/month" },
+        { name: "Infrastructure as Code", href: "/services/infrastructure-as-code", price: "Starting at $1,800/month" }
       ]
     },
     {
-      title: "Software Development Services",
-      description: "Custom software solutions tailored to your needs",
+      title: "Cybersecurity Services",
+      description: "Comprehensive security solutions to protect your business",
       services: [
-        { name: "Web Application Development", href: "/services/web-development", price: "Starting at $4,000/project" },
-        { name: "Mobile App Development", href: "/services/mobile-development", price: "Starting at $6,000/project" },
-        { name: "API Development", href: "/services/api-development", price: "Starting at $2,000/project" },
-        { name: "Microservices Architecture", href: "/services/microservices", price: "Starting at $8,000/project" },
-        { name: "Legacy System Modernization", href: "/services/legacy-modernization", price: "Starting at $10,000/project" }
-      ]
-    },
-    {
-      title: "Data & Analytics Services",
-      description: "Transform data into actionable business insights",
-      services: [
-        { name: "Data Pipeline Engineering", href: "/services/data-pipeline-engineering", price: "Starting at $3,500/month" },
-        { name: "Business Intelligence", href: "/services/business-intelligence", price: "Starting at $2,800/month" },
-        { name: "Real-time Analytics", href: "/services/real-time-analytics", price: "Starting at $4,200/month" },
-        { name: "Data Visualization", href: "/services/data-visualization", price: "Starting at $2,000/project" },
-        { name: "Database Design", href: "/services/database-design", price: "Starting at $1,500/project" }
-      ]
-    },
-    {
-      title: "Security & Compliance Services",
-      description: "Protect your business with enterprise-grade security",
-      services: [
-        { name: "Security Auditing", href: "/services/security-auditing", price: "Starting at $3,000/audit" },
-        { name: "Network Security", href: "/services/network-security", price: "Starting at $2,500/month" },
-        { name: "Compliance Management", href: "/services/compliance-management", price: "Starting at $4,000/month" },
-        { name: "Penetration Testing", href: "/services/penetration-testing", price: "Starting at $5,000/test" },
-        { name: "Security Training", href: "/services/security-training", price: "Starting at $1,500/session" }
-      ]
-    },
-    {
-      title: "Automation & Integration Services",
-      description: "Streamline operations with intelligent automation",
-      services: [
-        { name: "Workflow Automation", href: "/services/workflow-automation", price: "Starting at $2,000/month" },
-        { name: "System Integration", href: "/services/system-integration", price: "Starting at $3,500/project" },
-        { name: "RPA Solutions", href: "/services/rpa-solutions", price: "Starting at $4,500/month" },
-        { name: "API Integration", href: "/services/api-integration", price: "Starting at $1,800/project" },
-        { name: "Process Optimization", href: "/services/process-optimization", price: "Starting at $2,200/month" }
-      ]
-    },
-    {
-      title: "Micro SAAS Solutions",
-      description: "Innovative micro applications for modern businesses",
-      services: [
-        { name: "Smart URL Shortener", href: "/services/url-shortener", price: "$29/month" },
-        { name: "AI Invoice Generator", href: "/services/invoice-generator", price: "$49/month" },
-        { name: "Enterprise Password Manager", href: "/services/password-manager", price: "$79/month" },
-        { name: "Business Analytics Dashboard", href: "/services/analytics-dashboard", price: "$99/month" },
-        { name: "Task Management System", href: "/services/task-management", price: "$39/month" },
-        { name: "Email Marketing Automation", href: "/services/email-marketing", price: "$59/month" },
-        { name: "Social Media Scheduler", href: "/services/social-scheduler", price: "$69/month" },
-        { name: "Customer Support Ticketing", href: "/services/support-ticketing", price: "$89/month" }
+        { name: "Security Audit", href: "/services/security-audit", price: "Starting at $2,500/audit" },
+        { name: "Penetration Testing", href: "/services/penetration-testing", price: "Starting at $3,000/test" },
+        { name: "Security Monitoring", href: "/services/security-monitoring", price: "Starting at $1,500/month" },
+        { name: "Compliance Consulting", href: "/services/compliance-consulting", price: "Starting at $200/hour" }
       ]
     },
     {
       title: "Blockchain & Web3 Services",
-      description: "Next-generation decentralized solutions",
+      description: "Next-generation blockchain solutions",
       services: [
-        { name: "Smart Contract Development", href: "/services/smart-contracts", price: "Starting at $5,000/project" },
-        { name: "DeFi Platform Development", href: "/services/defi-platform", price: "Starting at $15,000/project" },
+        { name: "Smart Contract Development", href: "/services/smart-contract-development", price: "Starting at $4,000/project" },
+        { name: "DeFi Platform Development", href: "/services/defi-platform", price: "Starting at $8,000/project" },
         { name: "NFT Marketplace Development", href: "/services/nft-marketplace", price: "Starting at $8,000/project" },
-        { name: "Cryptocurrency Wallet Development", href: "/services/crypto-wallet", price: "Starting at $6,000/project" },
-        { name: "Blockchain Consulting", href: "/services/blockchain-consulting", price: "Starting at $200/hour" }
+        { name: "Cryptocurrency Wallet Development", href: "/services/crypto-wallet", price: "Starting at $6,000/project" }
       ]
     }
   ];
-=======
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
-import { additionalEnhancedServices } from '../../data/additional-real-services';
-import { extraServices } from '../../data/extra-services';
-import { newlyAddedServices } from '../../data/newly-added-services';
-import { curatedMarketServices } from '../../data/curated-market-services';
-import { realMarketServices } from '../../data/real-market-services';
-import { new2025Services } from '../../data/new-2025-services';
-import { marketValidatedServices } from '../../data/market-validated-services';
-import { moreRealServices2025 } from '../../data/more-real-services-2025';
-import { realOperationalServices } from '../../data/real-operational-services';
-import { verified2025Additions } from '../../data/verified-2025-additions';
-import { realServicesQ12025 } from '../../data/real-services-q1-2025';
-import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
-import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
-import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
-import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
-import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
-import { real2025Q3Additions } from '../../data/real-2025-q3-additions';
 
-function toSlug(value: string) {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-}
-
-const categories = [
-  'AI & Data',
-  'Developer Tools',
-  'Cloud & FinOps',
-  'Observability',
-  'Quality & Monitoring',
-];
-
-export default function ServicesIndexPage() {
-  const all = (enhancedRealMicroSaasServices as unknown[])
-    .concat(
-      extraServices as unknown[],
-      additionalEnhancedServices as unknown[],
-      newlyAddedServices as unknown[],
-      curatedMarketServices as unknown[],
-      realMarketServices as unknown[],
-      new2025Services as unknown[],
-      marketValidatedServices as unknown[],
-      moreRealServices2025 as unknown[],
-      realOperationalServices as unknown[],
-      verified2025Additions as unknown[],
-      realServicesQ12025 as unknown[],
-      realEnterpriseServices2025 as unknown[],
-      realMarketAugmentations2025 as unknown[],
-      verifiedRealServices2025Batch2 as unknown[],
-      additionalLiveServices2025 as unknown[],
-      real2025Q2Additions as unknown[],
-      real2025Q3Additions as unknown[]
-    )
-    .filter((item: any) => item && item.name && item.description);
-
-  const anchorMap: Record<string, string> = {
-    'AI & Data': 'ai',
-    'Developer Tools': 'developer-tools',
-    'Cloud & FinOps': 'cloud',
-    'Observability': 'observability',
-    'Quality & Monitoring': 'quality',
-  };
-
-export default function ServicesIndex() {
   return (
     <>
       <Head>
-        <title>Our Services - Zion Tech Group | Comprehensive Technology Solutions</title>
-        <meta name="description" content="Explore our comprehensive range of technology services including AI development, cloud solutions, software development, data analytics, security, and automation services. Contact us at +1 302 464 0950." />
-        <meta name="keywords" content="AI services, cloud solutions, software development, data analytics, cybersecurity, automation, micro SAAS, technology consulting" />
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services including AI, cloud, cybersecurity, and blockchain solutions." />
       </Head>
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Our Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive IT solutions and services to help your business thrive in the digital age
-            </p>
-          </div>
+      
+      <div style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
+        <h1 style={{ 
+          fontSize: '2.5rem', 
+          fontWeight: 'bold', 
+          marginBottom: '2rem',
+          textAlign: 'center',
+          background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text'
+        }}>
+          Our Services
+        </h1>
+        
+        <p style={{ 
+          fontSize: '1.125rem', 
+          color: '#6b7280', 
+          textAlign: 'center', 
+          marginBottom: '3rem',
+          maxWidth: '600px',
+          margin: '0 auto 3rem auto'
+        }}>
+          We offer comprehensive technology solutions to help your business thrive in the digital age.
+        </p>
 
-          {categories.map((category) => (
-            <div key={category} className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-blue-500 pb-2">
-                {category}
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {grouped[category]?.map((service: any) => (
-                  <div
-                    key={service.id || service.name}
-                    className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6"
-                  >
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+          gap: '2rem' 
+        }}>
+          {serviceCategories.map((category, index) => (
+            <div key={index} style={{
+              backgroundColor: 'white',
+              borderRadius: '1rem',
+              padding: '2rem',
+              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+              border: '1px solid #e5e7eb'
+            }}>
+              <h3 style={{ 
+                fontSize: '1.5rem', 
+                fontWeight: '600', 
+                marginBottom: '1rem',
+                color: '#1f2937'
+              }}>
+                {category.title}
+              </h3>
+              
+              <p style={{ 
+                color: '#6b7280', 
+                marginBottom: '1.5rem',
+                lineHeight: '1.6'
+              }}>
+                {category.description}
+              </p>
+              
+              <ul style={{ listStyle: 'none', padding: 0 }}>
+                {category.services.map((service, serviceIndex) => (
+                  <li key={serviceIndex} style={{ 
+                    marginBottom: '0.75rem',
+                    padding: '0.75rem',
+                    backgroundColor: '#f9fafb',
+                    borderRadius: '0.5rem',
+                    border: '1px solid #e5e7eb'
+                  }}>
+                    <Link href={service.href} style={{
+                      textDecoration: 'none',
+                      color: '#3b82f6',
+                      fontWeight: '500'
+                    }}>
                       {service.name}
-                    </h3>
-                    <p className="text-gray-600 mb-4 line-clamp-3">
-                      {service.description}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-lg font-bold text-blue-600">
-                        {service.price}
-                      </span>
-                      <Link
-                        href={`/services/${toSlug(service.name)}`}
-                        className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-200"
-                      >
-                        Learn More
-                      </Link>
+                    </Link>
+                    <div style={{ 
+                      fontSize: '0.875rem', 
+                      color: '#6b7280', 
+                      marginTop: '0.25rem' 
+                    }}>
+                      {service.price}
                     </div>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           ))}
+        </div>
 
-          <div className="text-center mt-12">
-            <Link
-              href="/contact"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 text-lg font-semibold"
-            >
-              Get Started Today
-            </Link>
-          </div>
+        <div style={{ 
+          textAlign: 'center', 
+          marginTop: '3rem',
+          padding: '2rem',
+          backgroundColor: '#f8fafc',
+          borderRadius: '1rem',
+          border: '1px solid #e2e8f0'
+        }}>
+          <h2 style={{ 
+            fontSize: '1.875rem', 
+            fontWeight: '600', 
+            marginBottom: '1rem',
+            color: '#1f2937'
+          }}>
+            Ready to Get Started?
+          </h2>
+          <p style={{ 
+            color: '#6b7280', 
+            marginBottom: '1.5rem',
+            fontSize: '1.125rem'
+          }}>
+            Contact us today to discuss your project requirements and get a custom quote.
+          </p>
+          <Link href="/contact" style={{
+            display: 'inline-block',
+            backgroundColor: '#3b82f6',
+            color: 'white',
+            padding: '0.75rem 2rem',
+            borderRadius: '0.5rem',
+            textDecoration: 'none',
+            fontWeight: '600',
+            transition: 'background-color 0.2s'
+          }}>
+            Contact Us
+          </Link>
         </div>
       </div>
     </>
@@ -228,17 +181,3 @@ export default function ServicesIndex() {
 };
 
 export default Services;
-=======
-        <title>Services — Zion Tech Solutions</title>
-        <meta name="description" content="AI development, cloud, data analytics, and blockchain services." />
-      </Head>
-      <h1 className="text-3xl font-bold mb-6">Services</h1>
-      <ul className="grid md:grid-cols-2 gap-4">
-        <li className="enhanced-card"><Link href="/services/ai-development"><a className="underline">AI Development</a></Link></li>
-        <li className="enhanced-card"><Link href="/services/cloud-services"><a className="underline">Cloud & MLOps</a></Link></li>
-        <li className="enhanced-card"><Link href="/services/data-analytics"><a className="underline">Data Analytics</a></Link></li>
-        <li className="enhanced-card"><Link href="/services/blockchain"><a className="underline">Web3 & Blockchain</a></Link></li>
-      </ul>
-    </div>
-  );
-}
