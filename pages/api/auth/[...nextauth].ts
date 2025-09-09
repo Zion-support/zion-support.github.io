@@ -6,7 +6,29 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { withErrorLogging } from '@/utils/withErrorLogging';
 import { supabase } from '@/utils/supabase/client'; // Use centralized client
 import { verifyMessage } from 'ethers'; // Assuming ethers v6+
-import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
+
+// Initialize Supabase client (ensure these ENV vars are set)
+let supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL as string;
+// IMPORTANT: Use the SERVICE_ROLE_KEY for admin operations like user lookup if necessary,
+// but for signInWithPassword, anon key might be sufficient if RLS allows.
+// For robust auth provider, service role key might be needed for full control.
+// Here, we're verifying credentials, so signInWithPassword should be fine with anon key if it's public.
+// However, if creating users or more complex checks, service key is safer.
+// Let's assume public URL and anon key are fine for signIn, as it's a client-facing action.
+// If this [...nextauth].ts is ONLY for server-side session management after Supabase auth,
+// then Supabase client might not even be needed here if Supabase JWT is used as next-auth session token.
+// But typical CredentialsProvider does its own validation.
+let supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string;
+
+// Temporary workaround for build if .env.local has invalid placeholders
+if (supabaseUrl === 'your_supabase_url_here/' || supabaseUrl === 'your_supabase_url_here' || !supabaseUrl) {
+  supabaseUrl = 'http://localhost:54321'; // A valid placeholder URL
+}
+if (supabaseAnonKey === 'your_supabase_anon_key_here' || !supabaseAnonKey) {
+  supabaseAnonKey = 'test_anon_key'; // A valid placeholder key
+}
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
 
 // WalletConnect isn't natively supported by next-auth. We'll mock a basic credentials
 // provider that handles an address signature check. In a real app you'd verify

@@ -3,14 +3,14 @@ import { logInfo } from '@/utils/productionLogger';
 // src/utils/validateEnv.ts
 
 interface EssentialEnvVars {
-  NEXT_PUBLIC_REOWN_PROJECT_ID: string;
+  VITE_REOWN_PROJECT_ID: string;
   NEXT_PUBLIC_SUPABASE_URL: string;
   NEXT_PUBLIC_SUPABASE_ANON_KEY: string;
 }
 
 // List of critical environment variables that must be defined
 const CRITICAL_ENV_VARS: Array<keyof EssentialEnvVars> = [
-  'NEXT_PUBLIC_REOWN_PROJECT_ID',
+  'VITE_REOWN_PROJECT_ID',
   'NEXT_PUBLIC_SUPABASE_URL',
   'NEXT_PUBLIC_SUPABASE_ANON_KEY',
 ];
