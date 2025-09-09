@@ -67,24 +67,26 @@ export const logError = (error: Error | AppError, errorInfo?: Partial<ErrorInfo>
   }
 };
 
-export const handleAsyncError = async <T>(
+export const handleAsyncError = <T>(
   asyncFn: () => Promise<T>,
   fallback?: T,
   errorCode: string = errorCodes.INTERNAL_SERVER_ERROR
 ): Promise<T | undefined> => {
-  try {
-    return await asyncFn();
-  } catch (error) {
-    const appError = error instanceof AppError 
-      ? error 
-      : new AppError(
-          error instanceof Error ? error.message : 'Unknown error occurred',
-          errorCode
-        );
-    
-    logError(appError);
-    return fallback;
-  }
+  return (async () => {
+    try {
+      return await asyncFn();
+    } catch (error) {
+      const appError = error instanceof AppError 
+        ? error 
+        : new AppError(
+            error instanceof Error ? error.message : 'Unknown error occurred',
+            errorCode
+          );
+      
+      logError(appError);
+      return fallback;
+    }
+  })();
 };
 
 export const createErrorBoundary = (componentName: string) => {
