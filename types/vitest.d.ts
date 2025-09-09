@@ -1,6 +1,6 @@
 import type { TestAPI } from 'vitest'
 
-declare global {
+declare global {;
   const vi: typeof import('vitest').vi;
   const describe: TestAPI['describe'];
   const it: TestAPI['it'];
