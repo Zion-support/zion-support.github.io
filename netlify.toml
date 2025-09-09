@@ -1,5 +1,5 @@
-# Netlify rebuild trigger (minor touch to force deploy) - 2025-09-09 v4.11
-[build] # touch v4.11 to trigger Netlify rebuild
+# Netlify rebuild trigger (minor touch to force deploy) - 2025-09-09 v4.12
+[build] # touch v4.12 to trigger Netlify rebuild
   # Build the Vite React project on Netlify
   command = "npm ci --no-audit --no-fund --include=optional && npm rebuild rollup @rollup/rollup-linux-x64-gnu || true && npm run build"
   publish = "dist"
@@ -33,10 +33,7 @@
     Strict-Transport-Security = "max-age=31536000"
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' plausible.io; connect-src 'self' plausible.io; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
 
-[[headers]]
-  for = "/_next/static/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+
 
 [[headers]]
   for = "/logos/*"
