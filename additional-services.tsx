@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Brain, Code, Cloud, CheckCircle, ArrowRight, DollarSign } from 'lucide-react';
+import { Brain, Code, CheckCircle, ArrowRight, DollarSign } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
 export default function AdditionalServices() {

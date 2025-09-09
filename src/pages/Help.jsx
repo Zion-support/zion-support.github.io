@@ -3,7 +3,7 @@ import { Search, BookOpen, Users, Globe, Settings, CreditCard, Shield, ChevronDo
 import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import { Footer } from '@/components/Footer';
 
 export default function Help() {
   const [searchQuery, setSearchQuery] = useState("");

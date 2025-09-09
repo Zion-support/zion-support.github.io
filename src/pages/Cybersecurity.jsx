@@ -2,7 +2,7 @@ import React from 'react';
 import { CheckCircle, Zap, Target, BarChart3 } from 'lucide-react';
 import SEO from '@/components/SEO';
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import { Footer } from '@/components/Footer';
 
 export default function Cybersecurity() {
   const securityFeatures = [
