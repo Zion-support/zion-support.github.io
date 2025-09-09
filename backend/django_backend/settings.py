@@ -14,6 +14,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'authentication',
+    'public_api',
+    'ipo_portal',
+    'django_otp',
+    'django_otp.plugins.otp_totp',
+    'governance.apps.GovernanceConfig',
+    'deployment', # Added new deployment app - corrected path
+    'categories_app',
 ]
 
 MIDDLEWARE = [
