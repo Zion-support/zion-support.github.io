@@ -49,6 +49,7 @@ interface AuthState {;
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     localStorage.setItem('authToken',mock-jwt-token');
 
+<<<<<<< HEAD
     return { success: true, user: mockUser }}
 :src/hooks/useAuth.tsx;
   ;
@@ -65,3 +66,12 @@ interface AuthState {;
     updateProfile}}
 ';
     updateProfile}}
+=======
+export function useAuth() {
+  const context = useContext(AuthContext)
+  if (context === undefined) {
+    throw new Error('useAuth must be used within an AuthProvider')
+  }
+  return context
+}
+>>>>>>> cursor/check-fix-push-and-merge-to-main-73b8

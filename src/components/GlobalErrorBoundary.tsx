@@ -1,8 +1,17 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
+interface FallbackProps {
+  error: Error;
+  resetErrorBoundary: () => void;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+}
+
 function GlobalErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
-  // Removed: const navigate = useNavigate();
-  let specificMessage = "Please try again. If the problem continues, please contact support."; // Updated message
+  let specificMessage = "Please try again. If the problem continues, please contact support.";
   const errorMessage = error?.message?.toLowerCase() || "";
 
   if (
@@ -14,9 +23,10 @@ function GlobalErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
   }
 
   const displayErrorId = React.useMemo(() => Date.now().toString(36) + Math.random().toString(36).substring(2), []);
+
   return (
     <div role="alert" className="p-6 m-4 border border-red-300 rounded-md bg-red-50 text-center space-y-4">
-      <h2 className="text-xl font-semibold text-red-700">Oops! Something went wrong.</h2> {/* Updated title */}
+      <h2 className="text-xl font-semibold text-red-700">Oops! Something went wrong.</h2>
       <p className="text-red-600">{specificMessage}</p>
       {error?.message && (
         <details className="p-2 bg-red-100 rounded text-left text-sm">
@@ -27,32 +37,46 @@ function GlobalErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
         </details>
       )}
       <button
-        onClick={resetErrorBoundary} // Changed to use resetErrorBoundary
-        className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
+        onClick={resetErrorBoundary}
+        className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
       >
-        Retry {/* Changed button text */}
+        Try again
       </button>
-      <p className="text-sm text-gray-600 mt-2">If retrying doesn't resolve the issue, please contact support. You can provide them with the error details below and the following Reference ID.</p>
-      <p className="text-sm text-gray-500 mt-1">Error Reference ID: {displayErrorId}</p>
+      <p className="text-xs text-gray-500">Error ID: {displayErrorId}</p>
     </div>
   );
 }
 
-interface State {
-  hasError: boolean;
-  error?: Error;
-}
+// Simple logging function
+const logError = (error: Error, context?: any) => {
+  console.error('Error logged:', error, context);
+};
 
-  const handleError = (error: Error, info: React.ErrorInfo) => {
-    console.error("GlobalErrorBoundary caught an error:", error, info);
+// Simple snackbar function
+const getEnqueueSnackbar = () => {
+  return (message: string, options?: any) => {
+    console.log('Snackbar:', message, options);
+  };
+};
+
+export class GlobalErrorBoundary extends Component<{ children: ReactNode }, State> {
+  constructor(props: { children: ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('GlobalErrorBoundary caught an error:', error, errorInfo);
+    
     const errorId = Date.now().toString(36) + Math.random().toString(36).substring(2);
-    // Modified: logError call to not depend on location from react-router-dom
-    // You might want to get pathname via window.location.pathname if this is purely client-side,
-    // or pass it down as a prop if needed from a Next.js context.
-    // For now, removing the route from this specific log call.
+    
     logError(error, {
       route: typeof window !== 'undefined' ? window.location.pathname : 'Unknown route (SSR/SSG)',
-      componentStack: info.componentStack,
+      componentStack: errorInfo.componentStack,
       errorId: errorId
     });
 
@@ -67,33 +91,19 @@ interface State {
       enqueueSnackbar(displayMessage, { variant: 'error' });
     } catch (e) {
       console.error("Error in enqueueSnackbar:", e);
-      // noop if snackbar itself fails
     }
-  };
-
-  public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
   }
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('GlobalErrorBoundary caught an error:', error, errorInfo);
-  }
-
-  public render() {
+  render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="error-boundary">
-          <h1>Something went wrong.</h1>
-          <p>We're sorry, but something unexpected happened. Please try refreshing the page.</p>
-          <button onClick={() => window.location.reload()}>
-            Refresh Page
-          </button>
-        </div>
+      return (
+        <GlobalErrorFallback
+          error={this.state.error!}
+          resetErrorBoundary={() => this.setState({ hasError: false, error: undefined })}
+        />
       );
     }
 
     return this.props.children;
   }
 }
-
-export default ErrorBoundary;

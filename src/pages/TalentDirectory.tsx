@@ -199,5 +199,8 @@ const TalentDirectory = () => {
         </>
     );
 };
+<<<<<<< HEAD
 
 export default TalentDirectory;
+=======
+>>>>>>> cursor/check-fix-push-and-merge-to-main-73b8

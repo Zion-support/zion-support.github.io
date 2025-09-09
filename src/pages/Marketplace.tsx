@@ -418,6 +418,7 @@ const Marketplace: React.FC = () => {;
         return 'bg - slate - 500 / 20 text - slate - 400';
     };
   };
+<<<<<<< HEAD
 ;
   const getStatusColor = (status: string) => {;
     switch (status) {;
@@ -430,6 +431,39 @@ const Marketplace: React.FC = () => {;
       default:;
         return 'bg - slate - 500 / 20 text - slate - 400';
     };
+=======
+  type: 'AI Tool' | 'API Service' | 'Template' | 'Plugin' | 'Dataset' | 'Course';
+  status: 'Active' | 'Beta' | 'New' | 'Popular';
+  downloads: number;
+  lastUpdated: string;
+}
+
+const Marketplace: React.FC = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [cart, setCart] = useState<Set<string>>(new Set());
+  const [wishlist, setWishlist] = useState<Set<string>>(new Set());
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All Categories');
+  const [sortBy, setSortBy] = useState('popular');
+
+  async function fetchProducts() {
+    // Network errors are caught and logged here.
+    // The error is re-thrown to be handled by react-query.
+    try {
+      const res = await fetch('/api/marketplace?type=all');
+      if (!res.ok) {
+        throw new Error('Failed to fetch products');
+      }
+      return await res.json();
+    } catch (error) {
+      console.error('Error fetching products:', error);
+      throw error;
+    }
+  }
+
+  const addToCart = (productId: string) => {
+    setCart(prev => new Set([...prev, productId]));
+>>>>>>> cursor/check-fix-push-and-merge-to-main-73b8
   };
 ;
   const renderStars = (rating: number) => {;
@@ -457,6 +491,7 @@ const Marketplace: React.FC = () => {;
     const category = categories.find (cat => cat.id === categoryId) ;
     return category ? category.icon : Globe;
   };
+<<<<<<< HEAD
 ;
   const getCategoryName = (categoryId: string) => {;
     const category = categories.find (cat => cat.id === categoryId) ;
@@ -751,3 +786,32 @@ const Marketplace: React.FC = () => {;
     </>) ;
 };
 ;
+=======
+
+  return (
+    <div className="container py-8">
+      <h1 className="text-3xl font-bold mb-6">Marketplace</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {products
+          // Filter out products that are null/undefined or lack an 'id' property
+          // to prevent rendering errors and ensure data integrity for ProductCard.
+          .filter(p => p && p.id)
+          .map((p) => (
+            <ProductCard
+              key={p.id}
+              product={p}
+              onBuy={() => router.push(`/checkout/${p.id}`)} // Changed to router.push
+            />
+          ))}
+      </div>
+      {products.length === 0 && (
+        <div className="text-center text-gray-500">
+          <p>No products available.</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Marketplace;
+>>>>>>> cursor/check-fix-push-and-merge-to-main-73b8

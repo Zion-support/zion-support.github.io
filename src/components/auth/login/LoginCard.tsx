@@ -19,7 +19,7 @@ export function LoginCard() {
               Create account
             </a>
           </Link>
-        </p>
+        </div>
       </div>
 
       <div className="bg-zion-blue-dark rounded-lg p-6">

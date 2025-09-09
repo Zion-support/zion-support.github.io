@@ -16,8 +16,19 @@ import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide
 
 
 import { MARKETPLACE_LISTINGS } from "@/data/listingData";
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+=======
+import { ProductListing } from "@/types/listings";
+// useNavigate will be replaced by useRouter
+import { toast } from "@/hooks/use-toast";
+import { NextSeo } from '@/components/NextSeo';
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
+import {logErrorToProduction} from '@/utils/productionLogger';
+
+
+>>>>>>> cursor/check-fix-push-and-merge-to-main-73b8
 const AUTO_SERVICE_TITLES = [
   "AI-Powered Customer Support",
   "Cloud Infrastructure Management",

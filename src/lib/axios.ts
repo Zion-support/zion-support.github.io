@@ -26,7 +26,7 @@ const createAxiosInstance = (): any => {
     (error: any) => {
       return Promise.reject(error);
     }
-  }
+  );
 }
 
 export interface RequestConfig extends RequestInit {
