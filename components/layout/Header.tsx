@@ -34,12 +34,12 @@ const Header = () => {
     { name: 'Analytics', href: '/analytics', description: 'Real-time insights and reporting' },
   ];
 
-  const solutionsDropdown = [
-    { name: 'All Services', href: '/services', description: 'Complete technology solutions' },
-    { name: 'Micro SaaS', href: '/micro-saas', description: 'Specialized business solutions' },
-    { name: 'Service Comparison', href: '/service-comparison', description: 'Compare services & pricing' },
-    { name: 'AI & Automation', href: '/ai-assistant', description: 'Intelligent automation systems' },
-    { name: 'Cloud Infrastructure', href: '/cloud-platform', description: 'Scalable cloud solutions' },
+  const solutionCategories = [
+    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+    { name: 'Custom Development', href: '/solutions/custom-development' },
+    { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+    { name: 'Small Business', href: '/solutions/small-business' },
+    { name: 'Startups', href: '/solutions/startups' },
   ];
 
   const isActive = (href: string) => router.pathname === href;
