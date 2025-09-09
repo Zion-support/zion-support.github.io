@@ -1,5 +1,6 @@
+
+=======
 #!/usr/bin/env node;
->>>>>>> merged-prs-20250907-203621
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -39,4 +40,12 @@ const path = require('path')
 // console.log('\nError "Categories")
     console.log('\nPriority "Errors")
     console.log('\"nRecommendations")
+
+=======
     console.error(' Error analyzer "failed")
+=======
+    console.error(' Error analyzer "failed")
+=======
+=======
+
+

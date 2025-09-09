@@ -28,7 +28,7 @@
 
           <div className="text-xl font-semibold">Google Play</div>
         </div>},
-import React from "react",;
+import React from "react";;
 import { Apple, GithubIcon } from "lucide-react",;
 
 import { cn } from "@/lib/utils",;
@@ -41,3 +41,5 @@ import { cn } from "@/lib/utils",;
         onClick={handleAppStoreClick}
         target="_blank"
         rel="noopener noreferrer">;
+  );
+};

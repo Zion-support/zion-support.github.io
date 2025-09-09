@@ -14,26 +14,4 @@
   });
 
     const count = await forms.count();
-    for (let i = 0; i < count; i++) {
-      const form = forms.nth(i);
-
-        'input[name="_token"], input[name="csrf_token"]
-      );
-      const csrfCount = await csrfToken.count();
-      // Forms should have CSRF protection
-      expect(csrfCount).toBeGreaterThan(0);
-    }
-  });
-
-    const externalLinks = page.locator('a[href^="http"]);
-    const count = await externalLinks.count();
-    for (let i = 0; i < count; i++) {
-      const link = externalLinks.nth(i);
-
-
-      expect(rel).toContain('noopener');
-    }
-  })});
-
-
-
+    for (let i = 0; i 

@@ -22,7 +22,5 @@ return (;
       <Head>;
         <title>DataScienceChat - Zion Tech Solutions</title>;
         <meta name="description" content="DataScienceChat blog post" />{" "}"
-
-
-
-
+  );
+};

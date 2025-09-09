@@ -2,3 +2,4 @@
 // Restore and adapt to Next.js Link if needed.
 export default function Placeholder() {
   return null}
+;

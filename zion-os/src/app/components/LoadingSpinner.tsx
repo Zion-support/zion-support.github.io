@@ -22,3 +22,5 @@ interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
   text?: string,
   class_name?: string;
+  );
+};

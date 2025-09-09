@@ -221,5 +221,5 @@ import { GradientHeading } from "@/components/GradientHeading",export default fu
                 <h3 className="text-xl font-bold text-white mb-3">Trust</h3>""
                 <p className="text-zion-slate-light">"
 </p>
-
-
+  );
+};

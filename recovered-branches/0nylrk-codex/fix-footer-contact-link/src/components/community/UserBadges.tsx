@@ -52,4 +52,3 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
             </Tooltip>
           </TooltipProvider>
         )
-

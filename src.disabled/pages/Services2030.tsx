@@ -17,6 +17,5 @@
     r:scale-105 group ${ viewMode ===,
   grid;`
   ' ? 'p-6;
-
-
-
+  );
+};

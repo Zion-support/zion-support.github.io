@@ -7,3 +7,5 @@ export function Fundraising() {
     </div>
   )
 }
+  );
+};

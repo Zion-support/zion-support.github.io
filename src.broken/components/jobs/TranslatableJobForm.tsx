@@ -7,3 +7,5 @@ export function TranslatableJobForm() {
     </div>
   )
 }
+  );
+};

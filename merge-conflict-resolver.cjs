@@ -94,13 +94,8 @@ class MergeConflictResolver {
       // For other files, try to resolve conflicts automatically
       const content = fs.readFileSync(filePath, 'utf8');
       
-      if (content.includes('<<<<<<< HEAD') && content.includes('>>>>>>>')) {
-        this.log(`Resolving conflicts in ${filePath}`);
-        
-        // Simple conflict resolution: keep the HEAD version
-        const resolvedContent = content
-          .replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, '$1')
-          .replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$1');
+      if (content.includes('\n([\s\S]*?)\n
+          .replace(/
         
         fs.writeFileSync(filePath, resolvedContent);
         await this.runCommand(`git add "${filePath}"`, `Add resolved file ${filePath}`);

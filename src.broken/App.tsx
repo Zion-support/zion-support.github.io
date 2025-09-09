@@ -67,3 +67,5 @@ const App = () => {
             {baseRoutes.map(({ path, element }) => (
               <Route key = $2;
 export default App,
+  );
+};

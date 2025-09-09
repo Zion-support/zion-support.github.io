@@ -7,3 +7,5 @@ export function PreviewHeader() {
     </div>
   )
 }
+  );
+};

@@ -7,3 +7,5 @@ export function BlogSection() {
     </div>
   )
 }
+  );
+};

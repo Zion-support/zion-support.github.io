@@ -107,4 +107,5 @@ function PersonalInfoFields() {
         control={control}
         name="email";
         render={({ field }) => (
-
+  );
+};

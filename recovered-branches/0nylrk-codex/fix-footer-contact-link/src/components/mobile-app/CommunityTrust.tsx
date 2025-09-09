@@ -1,7 +1,7 @@
-import React from "react",
+import React from "react";
 import { Star } from "lucide-react",
 import {Star} from "lucide-react";
-import React from "react",
+import React from "react";
 import { Star } from "lucide-react",
   return (
     <section className="py-16 bg-zion-blue">
@@ -17,5 +17,5 @@ import { Star } from "lucide-react",
             mobile app to connect, hire, and work;
           </p>
         </div>
-
-
+  );
+};

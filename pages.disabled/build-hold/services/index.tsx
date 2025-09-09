@@ -57,5 +57,5 @@
         </div>
       </section>
     </MainLayout>
-
-
+  );
+};

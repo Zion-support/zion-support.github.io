@@ -12,7 +12,7 @@ import {BudgetFields} from "./BudgetFields";
 export interface HireRequestFormProps {;
   talent: TalentProfile,;
   onClose: () => void,;
-import React from "react",
+import React from "react";
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",
 import { Button } from "@/components/ui/button",
 import { DialogFooter } from "@/components/ui/dialog",
@@ -93,7 +93,7 @@ export interface HireRequestFormProps {;
     email?: string;
 
 "
-import React from "react",""
+import React from "react";""
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",""
 import { Button } from "@/components/ui/button",""
 import { DialogFooter } from "@/components/ui/dialog",""

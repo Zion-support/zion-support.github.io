@@ -7,3 +7,5 @@ export function DisputeDashboard() {
     </div>
   )
 }
+  );
+};

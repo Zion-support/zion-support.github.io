@@ -16,4 +16,4 @@ export: interface Revolutionary2027ItService {
       'Advanced: capabilities'',;
       'Innovation: platform'',;
       'Future-ready: solutions';'],
-
+}

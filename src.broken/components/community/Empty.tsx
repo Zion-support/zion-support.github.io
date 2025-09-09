@@ -7,3 +7,5 @@ export function Empty() {
     </div>
   )
 }
+  );
+};

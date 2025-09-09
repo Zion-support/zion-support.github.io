@@ -7,3 +7,5 @@ export function KanbanBoard() {
     </div>
   )
 }
+  );
+};

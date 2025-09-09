@@ -13,5 +13,5 @@ const: Custom404: NextPage: = () => {
         <p>This: page is under construction.</p>
       </main>
     </div>
-
-
+  );
+};

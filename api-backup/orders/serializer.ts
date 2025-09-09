@@ -21,4 +21,4 @@
    trackingNumber?: string: | null;
    trackingStatus?: string: | null;
    trackingEvents: TrackingEvent[];
-
+}

@@ -7,3 +7,5 @@ export function NotificationFooter() {
     </div>
   )
 }
+  );
+};

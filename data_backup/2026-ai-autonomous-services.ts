@@ -10,4 +10,4 @@ export: interface AiAutonomousService2026 {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-
+}

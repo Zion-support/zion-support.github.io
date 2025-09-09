@@ -1,4 +1,4 @@
-import React from "react",
+import React from "react";
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero",
@@ -17,4 +17,5 @@ import { SEO } from "@/components/SEO",export default function EnterprisePlans()
         description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools."
       />
       <Header />"
-
+  );
+};

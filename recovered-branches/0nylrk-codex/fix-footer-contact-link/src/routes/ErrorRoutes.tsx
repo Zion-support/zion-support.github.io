@@ -30,3 +30,5 @@ const ErrorRoutes = () => {
     <Routes>;
       {/* Error Routes */}
 export default ErrorRoutes;
+  );
+};

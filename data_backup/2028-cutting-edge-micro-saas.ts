@@ -16,4 +16,4 @@ export: interface CuttingEdgeMicroSaas2028 {
       'Advanced: technology'',;
       'Innovation: platform'',;
       'Future-ready: solutions';'],
-
+}

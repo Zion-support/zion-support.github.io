@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const fs = require("fs");"const path = require("path");"console.log(" Fixing remaining syntax errors.");const filesToFix = [" "/workspace/components/Footer.tsx"," "/workspace/pages/about.tsx"," "/workspace/pages/ai-services.tsx"," "/workspace/pages/index.tsx"," "/workspace/pages/it-services.tsx"];let totalFixes = 0;filesToFix.forEach(filePath => { if (fs.existsSync(filePath)) {" let content = fs.readFileSync(filePath, "utf8"); let modified = false; / Fix line breaks in className attributes" content = content.replace(/className="([^"]*)\n\s*([^"]*)"/g, "className="$1 $2""); / Fix any remaining unterminated strings"" content = content.replace(/className="([^"]*)\n\s*([^"]*)"\s*>/g, "className="$1 $2">"); / Fix missing closing tags" content = content.replace(/<div([^>]*)\s*>\s*$/gm, "<div$1>"); / Fix any remaining syntax issues" content = content.replace(/\s+\n\s*>/g, ">"); " if (content !== fs.readFileSync(filePath, "utf8")) { fs.writeFileSync(filePath, content);" console.log(` Fixed: ${path.relative("/workspace", filePath)}`); totalFixes++; modified = true; } }});`console.log(`\n Summary:`);`console.log(` Files processed: ${filesToFix.length}`);`console.log(` Files fixed: ${totalFixes}`);"console.log(" Syntax error fixes completed!");""`"`
->>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
-=======
+
 const fs = require("fs");"const path = require("path");"console.log(" Fixing remaining syntax errors.");const filesToFix = [" "/workspace/components/Footer.tsx"," "/workspace/pages/about.tsx"," "/workspace/pages/ai-services.tsx"," "/workspace/pages/index.tsx"," "/workspace/pages/it-services.tsx"];let totalFixes = 0;filesToFix.forEach(filePath => { if (fs.existsSync(filePath)) {" let content = fs.readFileSync(filePath, "utf8"); let modified = false; / Fix line breaks in className attributes" content = content.replace(/className="([^"]*)\n\s*([^"]*)"/g, "className="$1 $2""); / Fix any remaining unterminated strings"" content = content.replace(/className="([^"]*)\n\s*([^"]*)"\s*>/g, "className="$1 $2">"); / Fix missing closing tags" content = content.replace(/<div([^>]*)\s*>\s*$/gm, "<div$1>"); / Fix any remaining syntax issues" content = content.replace(/\s+\n\s*>/g, ">"); " if (content !== fs.readFileSync(filePath, "utf8")) { fs.writeFileSync(filePath, content);" console.log(` Fixed: ${path.relative("/workspace", filePath)}`); totalFixes++; modified = true; } }});`console.log(`\n Summary:`);`console.log(` Files processed: ${filesToFix.length}`);`console.log(` Files fixed: ${totalFixes}`);"console.log(" Syntax error fixes completed!");""`"`
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -35,24 +31,24 @@ function fixHoverSyntax(filePath) {
 });
     if (modified) {
       fs.writeFileSync(filePath, content);
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
+
+
+
       }`);
       totalFixes++;
       modified = true;
->>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
-=======
+
       }`);
       totalFixes++;
       modified = true;
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+
       console.log(`✅ Fixed syntax errors in ${filePath}`);
 
       console.log(`✅ Fixed syntax errors in ${filePath}`);
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
+
+
+
   );
 }`;
     }
@@ -60,9 +56,9 @@ function fixHoverSyntax(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
       console.log(`✅ Fixed: ${filePath}`);
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> merged-prs-20250907-203621
+
+
+
       return true;
     }
     return false;
@@ -98,19 +94,19 @@ function fixAllFiles() {
       // Skip directories that can't be read
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
+
+
+
 });
   return totalFixed;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
-=======
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+
+
+
+
+
 // Main execution
 async function main() {
   console.log('🚀 Starting syntax error resolution...');
@@ -134,12 +130,6 @@ try {
 } catch (error) {
   console.error('❌ Error:', error.message);
   process.exit(1);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 }
-=======
-}
->>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
-=======
-}
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e

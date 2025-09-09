@@ -54,3 +54,4 @@ import React from';react' "export": interface ServiceContact {';
    accuracy: string;
    trainingData: string;
    compliance: string[];
+}

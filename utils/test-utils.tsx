@@ -59,5 +59,3 @@ export const mockNextRouter = () => ({;
   isPreview: false;
 });
 export const createMockProps = (overrides = {}) => ({;
-
-});

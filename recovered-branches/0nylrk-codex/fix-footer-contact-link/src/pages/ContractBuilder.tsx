@@ -34,3 +34,5 @@ export default ContractBuilderPage;
 
 ;
 export default ContractBuilderPage;
+  );
+};

@@ -12,6 +12,8 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
 }
 export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
-  if (props.collapsible === &quot;none&quot;) {
+  if (props.collapsible === "none") {
     return (
       <div;
+  );
+};

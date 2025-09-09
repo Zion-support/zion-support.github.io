@@ -7,3 +7,5 @@ export function InputFields() {
     </div>
   )
 }
+  );
+};

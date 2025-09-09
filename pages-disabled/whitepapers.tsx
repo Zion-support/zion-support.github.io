@@ -342,3 +342,5 @@ const Whitepapers: NextPage = () => {
   )};
 
 export default Whitepapers;
+  );
+};

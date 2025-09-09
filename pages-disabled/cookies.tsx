@@ -239,3 +239,5 @@ const CookiePolicy: NextPage = () => {
   )};
 
 export default CookiePolicy;
+  );
+};

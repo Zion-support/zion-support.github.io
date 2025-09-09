@@ -1,116 +1,139 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { reportComponentError } from '../utils/errorReporting';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  resetOnPropsChange?: boolean;
-  resetKeys?: Array<string | number>;
 }
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  retryCount: number;
 }
 
-export class ErrorBoundary extends Component<Props, State> {
-  private resetTimeoutId?: number;
+class ErrorBoundary extends Component<Props, State> {
+  private maxRetries = 3;
 
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      retryCount: 0,
+    };
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+  static getDerivedStateFromError(error: Error): Partial<State> {
+    return {
+      hasError: true,
+      error,
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      error,
+      errorInfo,
+    });
+
+    // Log error to monitoring service
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
-    // Report error to error reporting system
-    reportComponentError(error, errorInfo, 'ErrorBoundary');
-    
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
+    // Call custom error handler
+    this.props.onError?.(error, errorInfo);
 
-    // Store error info for debugging
-    this.setState({ errorInfo });
-
-    // Auto-reset after 5 seconds if resetOnPropsChange is true
-    if (this.props.resetOnPropsChange) {
-      this.resetTimeoutId = window.setTimeout(() => {
-        this.resetError();
-      }, 5000);
-    }
-  }
-
-  componentDidUpdate(prevProps: Props) {
-    const { resetKeys, resetOnPropsChange } = this.props;
-    const { hasError } = this.state;
-
-    if (hasError && resetOnPropsChange && resetKeys) {
-      const hasResetKey = resetKeys.some((key, index) => {
-        return prevProps.resetKeys?.[index] !== key;
+    // Send error to analytics/monitoring service
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'exception', {
+        description: error.toString(),
+        fatal: false,
       });
-
-      if (hasResetKey) {
-        this.resetError();
-      }
     }
   }
 
-  componentWillUnmount() {
-    if (this.resetTimeoutId) {
-      clearTimeout(this.resetTimeoutId);
+  handleRetry = () => {
+    if (this.state.retryCount < this.maxRetries) {
+      this.setState(prevState => ({
+        hasError: false,
+        error: null,
+        errorInfo: null,
+        retryCount: prevState.retryCount + 1,
+      }));
+    } else {
+      // Reset to initial state after max retries
+      this.setState({
+        hasError: false,
+        error: null,
+        errorInfo: null,
+        retryCount: 0,
+      });
     }
-  }
+  };
 
-  resetError = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  handleGoHome = () => {
+    window.location.href = '/';
   };
 
   render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
-          <div className="text-center text-white p-8 max-w-md">
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="mb-6">
-              <div className="text-6xl mb-4">⚠️</div>
-              <h1 className="text-4xl font-bold mb-4">Something went wrong</h1>
-              <p className="text-xl mb-6">We're sorry, but something unexpected happened.</p>
+              <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
+              <h1 className="text-2xl font-bold text-gray-900 mb-2">
+                Oops! Something went wrong
+              </h1>
+              <p className="text-gray-600 mb-4">
+                We're sorry, but something unexpected happened. Please try again.
+              </p>
             </div>
-            
-            <div className="space-y-4">
+
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-left">
+                <h3 className="font-semibold text-red-800 mb-2">Error Details:</h3>
+                <pre className="text-sm text-red-700 whitespace-pre-wrap">
+                  {this.state.error.toString()}
+                </pre>
+                {this.state.errorInfo && (
+                  <pre className="text-sm text-red-700 whitespace-pre-wrap mt-2">
+                    {this.state.errorInfo.componentStack}
+                  </pre>
+                )}
+              </div>
+            )}
+
+            <div className="space-y-3">
               <button
-                onClick={() => window.location.reload()}
-                className="w-full bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                onClick={this.handleRetry}
+                className="w-full flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={this.state.retryCount >= this.maxRetries}
               >
-                Reload Page
+                <RefreshCw className="w-4 h-4 mr-2" />
+                {this.state.retryCount >= this.maxRetries ? 'Reset' : 'Try Again'}
               </button>
               
               <button
-                onClick={this.resetError}
-                className="w-full bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+                onClick={this.handleGoHome}
+                className="w-full flex items-center justify-center px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50"
               >
-                Try Again
+                <Home className="w-4 h-4 mr-2" />
+                Go Home
               </button>
             </div>
 
-            {import.meta.env.MODE === 'development' && this.state.error && (
-              <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm opacity-75 hover:opacity-100">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 text-xs bg-black bg-opacity-20 p-2 rounded overflow-auto max-h-32">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-              </details>
+            {this.state.retryCount > 0 && (
+              <p className="text-sm text-gray-500 mt-4">
+                Retry attempt: {this.state.retryCount}/{this.maxRetries}
+              </p>
             )}
           </div>
         </div>
@@ -120,3 +143,5 @@ export class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
+
+export { ErrorBoundary };

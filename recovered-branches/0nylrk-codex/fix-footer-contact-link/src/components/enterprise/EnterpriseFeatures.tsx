@@ -1,7 +1,7 @@
 
 import React from "react";
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
-import React from "react",
+import React from "react";
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",
 
 const features = [  {
@@ -23,7 +23,7 @@ const features = [  {
     title: "Admin Dashboards""
     description: "Powerful analytics and management tools for team leaders and administrators."
     icon: Settings}
-  {import React from "react",;
+  {import React from "react";;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",;
 
 const features = [;
@@ -74,7 +74,7 @@ export function EnterpriseFeatures() {;
 };
 
 "
-import React from "react",;"
+import React from "react";;"
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",;
 
 const features = [;
@@ -187,3 +187,5 @@ icon: Settings
 }
 ;
 ;
+  );
+};

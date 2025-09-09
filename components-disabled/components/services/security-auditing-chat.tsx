@@ -22,7 +22,5 @@ return (;
       <Head>;
         <title>SecurityAuditingChat - Zion Tech Solutions</title>;
         <meta name="description" content="SecurityAuditingChat service" />{" "}"
-
-
-
-
+  );
+};
