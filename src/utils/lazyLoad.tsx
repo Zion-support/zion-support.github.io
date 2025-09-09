@@ -2,7 +2,7 @@ import React, { Suspense, lazy, ComponentType } from 'react';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 // Loading fallback component
-const LoadingFallback = ({ size = 'medium' }: { size?: 'small' | 'medium' | 'large' }) => (
+const LoadingFallback = ({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) => (
   <div className="flex items-center justify-center p-4">
     <LoadingSpinner size={size} />
   </div>
@@ -11,7 +11,7 @@ const LoadingFallback = ({ size = 'medium' }: { size?: 'small' | 'medium' | 'lar
 // Higher-order component for lazy loading
 export const withLazyLoad = <P extends object>(
   Component: ComponentType<P>,
-  fallbackSize: 'small' | 'medium' | 'large' = 'medium'
+  fallbackSize: 'sm' | 'md' | 'lg' = 'md'
 ) => {
   return (props: P) => (
     <Suspense fallback={<LoadingFallback size={fallbackSize} />}>
@@ -128,6 +128,6 @@ export default {
   LazyImage,
 };
 
-// Lazy loaded components
-export const LazyAnalytics = lazy(() => import('../components/PerformanceDashboard'));
-export const LazyPerformanceMonitor = lazy(() => import('../components/PerformanceOptimizations'));
+// Additional lazy loaded components
+export const LazyPerformanceDashboard = lazy(() => import('../components/PerformanceDashboard'));
+export const LazyPerformanceOptimizations = lazy(() => import('../components/PerformanceOptimizations'));
