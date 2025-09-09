@@ -32,35 +32,6 @@ const BlockchainSolutions = () => {
           </div>
         </section>
 
-const BlockchainSolutions = () => {
-  return (
-    <>
-      <Head>
-        <title>Blockchain Solutions - Zion Tech Group</title>
-        <meta 
-          name="description" 
-          content="Comprehensive blockchain solutions including smart contracts, DeFi, NFTs, and cross-chain integration services." 
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      
-      <Layout 
-        title="Blockchain Solutions"
-        description="Transform your business with cutting-edge blockchain technology and decentralized solutions"
-      >
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                Blockchain
-              </span> Solutions
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with cutting-edge blockchain technology and decentralized solutions
-            </p>
-          </div>
-        </section>
-
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
