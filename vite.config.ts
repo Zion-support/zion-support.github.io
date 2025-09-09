@@ -60,6 +60,9 @@ export default defineConfig(({ mode }) => ({
     treeshake: true,
     // Optimize chunk splitting
     rollupOptions: {
+      input: {
+        main: './index.html'
+      },
       onwarn(warning, warn) {
         // Suppress TypeScript warnings
         if (warning.code === 'UNRESOLVED_IMPORT') return;
@@ -181,6 +184,11 @@ export default defineConfig(({ mode }) => ({
     alias: {
       '@': path.resolve(__dirname, './src'),
       'next/router': path.resolve(__dirname, './src/stubs/next-router.ts'),
+      'next/link': path.resolve(__dirname, './src/stubs/next-link.ts'),
+      'next/image': path.resolve(__dirname, './src/stubs/next-image.ts'),
+      'next/head': path.resolve(__dirname, './src/stubs/next-head.ts'),
+      'next-cloudinary': path.resolve(__dirname, './src/stubs/next-cloudinary.ts'),
+      '@supabase/ssr': path.resolve(__dirname, './src/stubs/supabase-ssr.ts'),
       '@datadog/browser-logs': path.resolve(__dirname, './src/utils/datadog-logs-shim.ts'),
       'logrocket': path.resolve(__dirname, './src/utils/logrocket-shim.ts')
     }
