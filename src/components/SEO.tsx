@@ -346,11 +346,10 @@ export function BlogPostSEO({
         dateModified: publishedDate,
         mainEntityOfPage: {
           '@type': 'WebPage',
-
-  };
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
+        }
+      }}
+    />
+  );
+}
 
 
