@@ -4,11 +4,6 @@ import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 
-const typescriptParser = tseslint.parser;
-const typescript = tseslint.plugin;
-const react = pluginReact;
-const reactHooks = pluginReactHooks;
-
 export default [
   { ...js.configs.recommended, files: ['app/**/*.{js,jsx,ts,tsx}', 'components/**/*.{js,jsx,ts,tsx}', 'src/**/*.{js,jsx,ts,tsx}'] },
   {
@@ -101,6 +96,37 @@ export default [
         vi: 'readonly',
         Deno: 'readonly',
         React: 'readonly',
+        // DOM types
+        HTMLElement: 'readonly',
+        HTMLDivElement: 'readonly',
+        HTMLImageElement: 'readonly',
+        HTMLLinkElement: 'readonly',
+        Element: 'readonly',
+        // Web APIs
+        crypto: 'readonly',
+        TextEncoder: 'readonly',
+        TextDecoder: 'readonly',
+        AbortController: 'readonly',
+        AbortSignal: 'readonly',
+        RequestInit: 'readonly',
+        Response: 'readonly',
+        RequestInfo: 'readonly',
+        IntersectionObserver: 'readonly',
+        IntersectionObserverInit: 'readonly',
+        PerformanceObserver: 'readonly',
+        PerformanceEntry: 'readonly',
+        PerformanceNavigationTiming: 'readonly',
+        PerformanceResourceTiming: 'readonly',
+        Image: 'readonly',
+        Buffer: 'readonly',
+        // Node.js types
+        NodeJS: 'readonly',
+        require: 'readonly',
+        // Testing globals
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        // Other globals
+        self: 'readonly',
       },
     },
     plugins: {
