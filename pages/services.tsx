@@ -1,592 +1,206 @@
 import Link from 'next/link';
 
-type Service = {
-  name: string;
-  summary: string;
-  pricing: string;
-  link: string;
-}
-const microSaaS: Service[] = [
-  {
-    name: 'Cloud Cost Guard (FinOps Assistant)',
-    summary: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
-    pricing: 'Typical: $299–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'LLM Evaluation & Safety Suite',
-    summary: 'Prompt evaluation, bias/toxicity checks, jailbreak tests and guardrail policies.',
-    pricing: 'Typical: $799–$3,500/month',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Customer Feedback & NPS Micro-App',
-    summary: 'Embed surveys, analyze sentiment and route issues to the right team automatically.',
-    pricing: 'Typical: $149–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'API Rate Limiter & Analytics',
-    summary: 'Intelligent rate limiting, usage analytics, and API monetization for SaaS platforms.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Document Processing',
-    summary: 'AI-powered OCR, data extraction, and document workflow automation for businesses.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Social Media Scheduler Pro',
-    summary: 'Multi-platform scheduling, content optimization, and engagement analytics.',
-    pricing: 'Typical: $99–$499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Email Deliverability Monitor',
-    summary: 'Real-time email reputation tracking, bounce analysis, and deliverability optimization.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Website Performance Optimizer',
-    summary: 'Automated Core Web Vitals monitoring, optimization suggestions, and performance alerts.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Lead Scoring & Qualification',
-    summary: 'AI-powered lead scoring, qualification workflows, and CRM integration.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Inventory Management AI',
-    summary: 'Predictive inventory optimization, demand forecasting, and automated reordering.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Employee Productivity Tracker',
-    summary: 'Non-invasive productivity analytics, time tracking, and performance insights.',
-    pricing: 'Typical: $99–$399/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Competitor Price Monitor',
-    summary: 'Real-time competitor pricing tracking, alerts, and dynamic pricing recommendations.',
-    pricing: 'Typical: $199–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'SEO Content Optimizer',
-    summary: 'AI-powered content optimization, keyword research, and SERP tracking.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Customer Churn Predictor',
-    summary: 'Machine learning models to predict and prevent customer churn with actionable insights.',
-    pricing: 'Typical: $399–$1,599/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Automated A/B Testing Platform',
-    summary: 'Statistical significance testing, multivariate experiments, and conversion optimization.',
-    pricing: 'Typical: $299–$1,199/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Invoice Processing & AP Automation',
-    summary: 'AI-powered invoice extraction, approval workflows, and automated payment processing.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Real-time Collaboration Workspace',
-    summary: 'Virtual whiteboards, document collaboration, and team productivity analytics.',
-    pricing: 'Typical: $99–$499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Code Review Assistant',
-    summary: 'Automated code quality analysis, security scanning, and performance optimization suggestions.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Dynamic Pricing Optimization Engine',
-    summary: 'Real-time pricing adjustments based on demand, competition, and market conditions.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Contract Management System',
-    summary: 'Contract lifecycle management, renewal tracking, and compliance monitoring.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered HR Analytics Platform',
-    summary: 'Employee performance insights, retention prediction, and workforce optimization.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Supply Chain Monitor',
-    summary: 'Real-time supply chain visibility, risk assessment, and disruption alerts.',
-    pricing: 'Typical: $499–$2,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Energy Management System',
-    summary: 'IoT-based energy monitoring, optimization, and cost reduction for facilities.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Legal Document Analyzer',
-    summary: 'Contract analysis, risk assessment, and compliance checking for legal teams.',
-    pricing: 'Typical: $399–$1,599/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Dynamic Content Personalization Engine',
-    summary: 'Real-time content customization based on user behavior and preferences.',
-    pricing: 'Typical: $299–$1,199/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Facility Management Platform',
-    summary: 'IoT sensors, predictive maintenance, and automated facility operations.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Market Research Assistant',
-    summary: 'Competitive intelligence, trend analysis, and market opportunity identification.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Customer Onboarding Platform',
-    summary: 'Automated onboarding workflows, progress tracking, and success optimization.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Compliance Monitoring System',
-    summary: 'Automated compliance checking, audit preparation, and regulatory reporting.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Financial Planning Tool',
-    summary: 'Budget forecasting, expense optimization, and financial health monitoring.',
-    pricing: 'Typical: $99–$499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Dynamic Workforce Scheduling System',
-    summary: 'AI-optimized scheduling, shift management, and labor cost optimization.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Quality Assurance Platform',
-    summary: 'Automated testing, quality metrics, and continuous improvement recommendations.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Vendor Management System',
-    summary: 'Vendor performance tracking, risk assessment, and relationship optimization.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Knowledge Management Platform',
-    summary: 'AI-powered search, content organization, and knowledge sharing optimization.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Email Marketing Automation',
-    summary: 'Intelligent email campaigns, personalization, and automated follow-up sequences.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Appointment Scheduling System',
-    summary: 'AI-optimized scheduling, calendar integration, and automated reminders.',
-    pricing: 'Typical: $99–$499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Real-Time Customer Feedback Analytics',
-    summary: 'Sentiment analysis, feedback categorization, and actionable insights dashboard.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Social Media Manager',
-    summary: 'Content scheduling, engagement optimization, and performance analytics.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Expense Management & Receipt OCR',
-    summary: 'Automated expense tracking, receipt processing, and compliance reporting.',
-    pricing: 'Typical: $99–$399/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Talent Acquisition Platform',
-    summary: 'Resume screening, candidate matching, and interview scheduling automation.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Project Management Assistant',
-    summary: 'Task automation, resource allocation, and deadline prediction.',
-    pricing: 'Typical: $199–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Onboarding Automation',
-    summary: 'Personalized onboarding flows, progress tracking, and success optimization.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Content Moderation System',
-    summary: 'Automated content filtering, toxicity detection, and community management.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Dynamic Pricing Intelligence Platform',
-    summary: 'Real-time market analysis, competitor tracking, and pricing optimization.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Inventory Forecasting Engine',
-    summary: 'Demand prediction, stock optimization, and automated reorder management.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Customer Success Platform',
-    summary: 'Health scoring, churn prediction, and automated intervention workflows.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Document Workflow Automation',
-    summary: 'Document routing, approval processes, and compliance tracking.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Analytics Dashboard Builder',
-    summary: 'No-code dashboard creation, data visualization, and KPI tracking.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Lead Generation Engine',
-    summary: 'Prospect identification, contact enrichment, and outreach automation.',
-    pricing: 'Typical: $299–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent A/B Testing Platform',
-    summary: 'Statistical significance testing, multivariate experiments, and optimization.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Compliance Monitoring System',
-    summary: 'Regulatory tracking, audit preparation, and compliance reporting automation.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Video Content Analyzer',
-    summary: 'Video transcription, sentiment analysis, and engagement metrics.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Workflow Orchestration Platform',
-    summary: 'Process automation, task routing, and business logic management.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Segmentation Engine',
-    summary: 'Behavioral analysis, persona creation, and targeted marketing automation.',
-    pricing: 'Typical: $199–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Voice Analytics Platform',
-    summary: 'Call transcription, sentiment analysis, and conversation insights.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Resource Planning System',
-    summary: 'Capacity planning, resource optimization, and utilization tracking.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Contract Lifecycle Manager',
-    summary: 'Contract analysis, renewal tracking, and compliance monitoring.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Market Intelligence Platform',
-    summary: 'Competitive analysis, trend monitoring, and opportunity identification.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Customer Journey Mapping',
-    summary: 'Touchpoint analysis, conversion optimization, and experience enhancement.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Data Quality Management',
-    summary: 'Data validation, cleansing, and quality monitoring automation.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Personalization Engine',
-    summary: 'Real-time content customization, product recommendations, and user experience optimization.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Incident Response System',
-    summary: 'Automated incident detection, escalation, and resolution workflows.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Vendor Performance Tracker',
-    summary: 'Vendor analytics, performance scoring, and relationship management.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Content Creation Suite',
-    summary: 'Automated content generation, optimization, and multi-channel distribution.',
-    pricing: 'Typical: $299–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Business Intelligence Platform',
-    summary: 'Advanced analytics, predictive insights, and executive reporting automation.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Support Ticket Router',
-    summary: 'Intelligent ticket classification, priority assignment, and agent matching.',
-    pricing: 'Typical: $199–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Financial Planning Assistant',
-    summary: 'Budget forecasting, expense optimization, and financial health monitoring.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Supply Chain Risk Monitor',
-    summary: 'Risk assessment, disruption prediction, and mitigation strategy recommendations.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Employee Engagement Platform',
-    summary: 'Sentiment analysis, engagement tracking, and retention optimization.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Quality Assurance System',
-    summary: 'Automated testing, defect detection, and quality metrics tracking.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Document Security Platform',
-    summary: 'Document encryption, access control, and security monitoring.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Energy Consumption Optimizer',
-    summary: 'Energy usage analysis, cost optimization, and sustainability reporting.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Customer Lifetime Value Predictor',
-    summary: 'CLV modeling, segmentation, and retention strategy optimization.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Workflow Analytics Platform',
-    summary: 'Process mining, bottleneck identification, and efficiency optimization.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Feedback Loop Manager',
-    summary: 'Feedback collection, analysis, and action item tracking automation.',
-    pricing: 'Typical: $199–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Sales Forecasting Engine',
-    summary: 'Revenue prediction, pipeline analysis, and quota optimization.',
-    pricing: 'Typical: $299–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Asset Management System',
-    summary: 'Asset tracking, maintenance scheduling, and lifecycle optimization.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Communication Platform',
-    summary: 'Multi-channel communication, response optimization, and engagement tracking.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Business Process Optimizer',
-    summary: 'Process analysis, automation recommendations, and efficiency improvements.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Customer Health Scoring',
-    summary: 'Health metrics, risk assessment, and proactive intervention triggers.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Data Integration Platform',
-    summary: 'Data pipeline automation, transformation, and synchronization.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Competitive Intelligence System',
-    summary: 'Market monitoring, competitor analysis, and strategic insights.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Customer Onboarding Optimizer',
-    summary: 'Onboarding flow analysis, conversion optimization, and success tracking.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Revenue Recognition Platform',
-    summary: 'Automated revenue tracking, compliance reporting, and financial analytics.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Customer Segmentation Engine',
-    summary: 'Advanced segmentation, persona development, and targeting optimization.',
-    pricing: 'Typical: $199–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Document Collaboration Platform',
-    summary: 'Real-time collaboration, version control, and workflow management.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Success Metrics Tracker',
-    summary: 'KPI monitoring, success scoring, and intervention automation.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Lead Nurturing Automation',
-    summary: 'Personalized nurturing sequences, engagement scoring, and conversion optimization.',
-    pricing: 'Typical: $299–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Business Continuity Manager',
-    summary: 'Disaster recovery planning, risk assessment, and continuity monitoring.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Feedback Analytics',
-    summary: 'Sentiment analysis, trend identification, and actionable insight generation.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Content Performance Optimizer',
-    summary: 'Content analysis, performance tracking, and optimization recommendations.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Customer Journey Optimizer',
-    summary: 'Journey mapping, touchpoint analysis, and experience enhancement.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Vendor Relationship Manager',
-    summary: 'Vendor performance tracking, contract management, and relationship optimization.',
-    pricing: 'Typical: $199–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Customer Retention Engine',
-    summary: 'Churn prediction, retention strategies, and loyalty program optimization.',
-    pricing: 'Typical: $299–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Business Intelligence Dashboard',
-    summary: 'Real-time analytics, predictive insights, and executive reporting.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Support Analytics',
-    summary: 'Support metrics, agent performance, and customer satisfaction optimization.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Customer Acquisition Platform',
-    summary: 'Lead generation, conversion optimization, and acquisition cost reduction.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Customer Data Platform',
-    summary: 'Data unification, customer profiles, and 360-degree view creation.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Experience Manager',
-    summary: 'Experience monitoring, optimization, and satisfaction improvement.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Customer Insights Engine',
-    summary: 'Behavioral analysis, preference learning, and predictive customer modeling.',
-    pricing: 'Typical: $299–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Customer Engagement Platform',
-    summary: 'Engagement scoring, personalization, and interaction optimization.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Success Automation',
-    summary: 'Success tracking, intervention triggers, and outcome optimization.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Customer Analytics Suite',
-    summary: 'Advanced analytics, segmentation, and customer intelligence.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Customer Relationship Optimizer',
-    summary: 'Relationship scoring, interaction optimization, and loyalty enhancement.',
-    pricing: 'Typical: $199–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Value Maximizer',
-    summary: 'Value optimization, upselling automation, and revenue enhancement.',
-    pricing: 'Typical: $299–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Customer Intelligence Platform',
-    summary: 'Customer profiling, behavior prediction, and strategic insights.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Customer Optimization Engine',
-    summary: 'End-to-end customer optimization, lifecycle management, and value maximization.',
-    pricing: 'Typical: $499–$2,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Video Content Creator',
-    summary: 'Automated video generation from text, images, and data with AI voice synthesis and dynamic editing.',
-    pricing: 'Typical: $199–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Compliance Monitor',
-    summary: 'Automated compliance tracking and reporting for GDPR, HIPAA, SOX, and industry-specific regulations.',
-    pricing: 'Typical: $399–$2,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Dynamic Pricing Optimizer',
-    summary: 'AI-driven pricing strategy optimization based on market conditions, competitor analysis, and demand patterns.',
-    pricing: 'Typical: $299–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Employee Wellness & Engagement Tracker',
-    summary: 'Comprehensive employee wellness monitoring with engagement analytics and burnout prevention.',
-    pricing: 'Typical: $149–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Multi-Channel Social Media Manager',
-    summary: 'Unified social media management with AI content optimization and cross-platform analytics.',
-    pricing: 'Typical: $99–$599/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'No-Code Workflow Automation Platform',
-    summary: 'Visual workflow builder for business process automation with integrations and custom triggers.',
-    pricing: 'Typical: $199–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Data Quality Monitor',
-    summary: 'Automated data quality assessment, cleansing, and validation with real-time monitoring.',
-    pricing: 'Typical: $299–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Email Marketing Suite',
-    summary: 'AI-powered email marketing with personalization, segmentation, and automated campaign optimization.',
-    pricing: 'Typical: $149–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Real-Time Business Intelligence Dashboard',
-    summary: 'Customizable BI dashboards with real-time data visualization and automated insights generation.',
-    pricing: 'Typical: $399–$2,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'}
+// Import our new 2025 service data
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
+import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
+import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+import { innovativeAIAutonomousServices2025 } from '../data/2025-innovative-ai-autonomous-services';
+
+// Import our new practical and specialized services
+import { realPracticalMicroSaasServices2025 } from '../data/2025-real-practical-micro-saas-services';
+import { advancedAIITSpecializedServices2025 } from '../data/2025-advanced-ai-it-specialized-services';
+
+// Import our new 2025 enterprise services
+import { realEnterpriseMicroSaas2025 } from '../data/2025-real-enterprise-micro-saas';
+
+// Import our new 2025 advanced services
+import { advancedBusinessIntelligenceServices2025 } from '../data/2025-advanced-business-intelligence-services';
+import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
+
+// Import our new real services
+import { realMicroSaas2025Expansion } from '../data/real-micro-saas-2025-expansion';
+import { realITServices2025Expansion } from '../data/real-it-services-2025-expansion';
+import { realAIServices2025Expansion } from '../data/real-ai-services-2025-expansion';
+
+// Import our new service data
+import { enterpriseITSolutions } from '../data/2034-enterprise-it-solutions';
+import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions';
+import { cuttingEdgeAIServices } from '../data/2034-cutting-edge-ai-services';
+import { real2025Q4AugmentedBatch } from '../data/real-2025-q4-augmented-batch';
+import { real2029Q3Additions } from '../data/real-2029-q3-additions';
+import { validatedServices2025Q4 } from '../data/real-validated-2025-q4-additions';
+import { real2035Q2Additions } from '../data/real-2035-q2-additions';
+import { real2036ServiceExpansions } from '../data/real-2036-service-expansions';
+import { innovative2036MicroSaasServices } from '../data/innovative-2036-micro-saas-services';
+import { innovative2036ITServices } from '../data/innovative-2036-it-services';
+import { innovative2037MicroSaasServices } from '../data/innovative-2037-micro-saas-services';
+import { innovative2037ITServices } from '../data/innovative-2037-it-services';
+import { innovative2037AIServices } from '../data/innovative-2037-ai-services';
+import { innovative2038CuttingEdgeServices } from '../data/innovative-2038-cutting-edge-services';
+import { innovative2038ITInfrastructureServices } from '../data/innovative-2038-it-infrastructure-services';
+import { innovative2037Services } from '../data/innovative-2037-services';
+import { advanced2038Services } from '../data/advanced-2038-services';
+import { revolutionary2039Services } from '../data/revolutionary-2039-services';
+import { revolutionary2040FuturisticServices } from '../data/revolutionary-2040-futuristic-services';
+import { revolutionary2041AdvancedServices } from '../data/revolutionary-2041-advanced-services';
+import { advanced2041EnterpriseServices } from '../data/advanced-2041-enterprise-services';
+import { revolutionary2042MicroSaasServices } from '../data/revolutionary-2042-micro-saas-services';
+
+// Import our new 2025 ultimate services expansion
+import { ultimate2025MicroSaasExpansion } from '../data/2025-ultimate-micro-saas-expansion';
+import { ultimate2025ITServicesExpansion } from '../data/2025-ultimate-it-services-expansion';
+import { ultimate2025AIServicesExpansion } from '../data/2025-ultimate-ai-services-expansion';
+
+// Import our new 2025 Q4 innovative services
+import { innovative2025Q4NewServices } from '../data/innovative-2025-q4-new-services';
+
+
+// Import our new innovative 2040 services
+import { innovative2040ITServices } from '../data/innovative-2040-it-services';
+import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
+
+// Import our new 2025 advanced enterprise services
+import { advancedEnterpriseServices } from '../data/2025-advanced-enterprise-services-expansion';
+import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
+
+// Import our new 2025 cutting-edge futuristic services
+import { cuttingEdgeFuturisticServices } from '../data/2025-cutting-edge-futuristic-services';
+import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
+
+// Import our new 2025 cutting-edge innovative services expansion
+import { cuttingEdgeInnovativeServices2025 } from '../data/2025-cutting-edge-innovative-services-expansion';
+import { advancedITInfrastructureSolutions2025 } from '../data/2025-advanced-it-infrastructure-solutions';
+import { advancedAIAutomationSolutions2025 } from '../data/2025-advanced-ai-automation-solutions';
+
+// Import our new innovative services
+import { advancedCybersecurityAutomationServices2025 } from '../data/2025-advanced-cybersecurity-automation-services';
+import { aiAutomationWorkflowServices2025 } from '../data/2025-ai-automation-workflow-services';
+import { cloudDevOpsAutomationServices2025 } from '../data/2025-cloud-devops-automation-services';
+import { businessIntelligenceAutomationServices2025 } from '../data/2025-business-intelligence-automation-services';
+import { marketingAutomationAIServices2025 } from '../data/2025-marketing-automation-ai-services';
+import { healthcareAISpecializedServices2025 } from '../data/2025-healthcare-ai-specialized-services';
+
+// Import existing service data
+import { realMicroSaasServices } from '../data/real-micro-saas-services';
+import { innovativeAIServices } from '../data/innovative-ai-services';
+import { enterpriseITServices } from '../data/enterprise-it-services';
+import { emergingTechServices } from '../data/emerging-tech-services';
+import { newRealServices } from '../data/new-real-services';
+import { realOperationalServices } from '../data/real-operational-services';
+import { marketReadyServices } from '../data/market-ready-services';
+import { marketValidatedServices } from '../data/market-validated-services';
+import { industryRealServices } from '../data/industry-real-services';
+
+// Helper function to get service category
+const getServiceCategory = (service: any) => {
+  if (service.category) return service.category;
+  if (service.type) return service.type;
+  return 'Other';
+};
+
+// Helper function to get service pricing
+const getServicePricing = (service: any) => {
+  if (service.pricing?.starter) return service.pricing.starter;
+  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
+  if (service.price?.monthly) return `$${service.price.monthly}/month`;
+  return 'Contact for pricing';
+};
+
+// Helper function to get service features
+const getServiceFeatures = (service: any) => {
+  if (service.features) return service.features;
+  if (service.keyFeatures) return service.keyFeatures;
+  return [];
+};
+
+// Helper function to get service description
+const getServiceDescription = (service: any) => {
+  if (service.description) return service.description;
+  if (service.tagline) return service.tagline;
+  return 'No description available';
+};
+
+// Combine all services including new ones
+const allServices = [
+  // Our new innovative services 2025
+  ...advancedCybersecurityAutomationServices2025,
+  ...aiAutomationWorkflowServices2025,
+  ...cloudDevOpsAutomationServices2025,
+  ...businessIntelligenceAutomationServices2025,
+  ...marketingAutomationAIServices2025,
+  ...healthcareAISpecializedServices2025,
+  
+  // New practical and specialized services
+  ...realPracticalMicroSaasServices2025,
+  ...advancedAIITSpecializedServices2025,
+  
+  // Our new 2025 services
+  ...advancedAIAutomationServices2025,
+  ...innovativeITInfrastructureServices2025,
+  ...innovativeMicroSaasSolutions2025,
+  ...cuttingEdgeAIServices2025,
+  ...realEnterpriseMicroSaas2025,
+  ...innovativeAIAutonomousServices2025,
+  
+  // Our new 2025 advanced services
+  ...advancedBusinessIntelligenceServices2025,
+  ...advancedITInfrastructureServices2025,
+  
+  // Our new real services 2025
+  ...realMicroSaas2025Expansion,
+  ...realITServices2025Expansion,
+  ...realAIServices2025Expansion,
+  
+  // Existing services
+  ...enterpriseITSolutions,
+  ...innovativeMicroSaasSolutions,
+  ...cuttingEdgeAIServices,
+  ...realMicroSaasServices,
+  ...innovativeAIServices,
+  ...enterpriseITServices,
+  ...cuttingEdgeFuturisticServices,
+  ...advancedAIAutomationServices,
+  ...emergingTechServices,
+  ...newRealServices,
+  ...realOperationalServices,
+  ...marketReadyServices,
+  ...marketValidatedServices,
+  // Our new 2025 Q4 innovative services
+  ...innovative2025Q4NewServices,
+  ...advancedITInfrastructureServices2025,
+  ...industryRealServices,
+  ...real2025Q4AugmentedBatch,
+  ...real2029Q3Additions,
+  ...validatedServices2025Q4,
+  ...real2035Q2Additions,
+  ...real2036ServiceExpansions,
+  ...innovative2036MicroSaasServices,
+  ...innovative2036ITServices,
+  ...innovative2037MicroSaasServices,
+  ...innovative2037ITServices,
+  ...innovative2037AIServices,
+  ...innovative2038CuttingEdgeServices,
+  ...innovative2038ITInfrastructureServices,
+  ...innovative2037Services,
+  ...advanced2038Services,
+  ...revolutionary2039Services,
+  ...revolutionary2040FuturisticServices,
+  ...revolutionary2041AdvancedServices,
+  ...advanced2041EnterpriseServices,
+  ...revolutionary2042MicroSaasServices,
+  ...ultimate2025MicroSaasExpansion,
+  ...ultimate2025ITServicesExpansion,
+  ...ultimate2025AIServicesExpansion,
+  ...innovative2040ITServices,
+  ...innovative2040FuturisticServices,
+  ...advancedEnterpriseServices,
+  ...cuttingEdgeITInfrastructureServices,
+  
+  // Our new 2025 cutting-edge innovative services expansion
+  ...cuttingEdgeInnovativeServices2025,
+  ...advancedITInfrastructureSolutions2025,
+  ...advancedAIAutomationSolutions2025
 ];
 
 const aiServices: Service[] = [
