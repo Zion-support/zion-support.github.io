@@ -1,328 +1,384 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { 
-  Search, 
-  Filter, 
-  Star, 
+  ShoppingCart, 
   Users, 
-  Building, 
   Package, 
-  Globe,
+  Wrench, 
+  CheckCircle, 
+  ArrowRight,
+  Star,
   Zap,
   Shield,
-  Cloud,
-  Brain,
-  Rocket
+  Globe,
+  Database,
+  Search,
+  Filter,
+  TrendingUp,
+  Target,
+  Award,
+  Building,
+  Code,
+  Cpu,
+  Heart
 } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
-const categories = [
-  { id: 'products', name: 'Products', icon: Package, count: 156, color: 'from-zion-cyan to-zion-blue' },
-  { id: 'services', name: 'Services', icon: Zap, count: 89, color: 'from-zion-purple to-zion-pink' },
-  { id: 'talent', name: 'Talent', icon: Users, count: 234, color: 'from-zion-green to-zion-cyan' },
-  { id: 'equipment', name: 'Equipment', icon: Building, count: 67, color: 'from-zion-orange to-zion-yellow' }
+const marketplaceCategories = [
+  {
+    id: 'products',
+    name: 'Products',
+    description: 'High-quality technology products and equipment for your business needs.',
+    icon: Package,
+    href: '/marketplace/products',
+    count: '500+',
+    items: ['Hardware', 'Software', 'Equipment', 'Devices']
+  },
+  {
+    id: 'talent',
+    name: 'Talent',
+    description: 'Expert professionals and consultants for your technology projects.',
+    icon: Users,
+    href: '/marketplace/talent',
+    count: '200+',
+    items: ['Developers', 'Consultants', 'Engineers', 'Designers']
+  },
+  {
+    id: 'equipment',
+    name: 'Equipment',
+    description: 'Professional-grade technology equipment and infrastructure solutions.',
+    icon: Cpu,
+    href: '/marketplace/equipment',
+    count: '300+',
+    items: ['Servers', 'Networking', 'Storage', 'Security']
+  },
+  {
+    id: 'services',
+    name: 'Services',
+    description: 'Professional services and solutions from certified providers.',
+    icon: Wrench,
+    href: '/marketplace/services',
+    count: '150+',
+    items: ['Consulting', 'Implementation', 'Support', 'Training']
+  }
 ];
 
 const featuredItems = [
   {
-    id: 1,
-    type: 'service',
-    title: 'AI-Powered Analytics Platform',
-    description: 'Enterprise-grade analytics solution with machine learning capabilities',
-    price: '$2,500/month',
+    id: 'ai-platform',
+    name: 'AI Business Intelligence Platform',
+    category: 'Products',
+    description: 'Enterprise-grade AI platform for business intelligence and analytics.',
+    price: '$2,999/month',
     rating: 4.9,
     reviews: 127,
-    category: 'AI Solutions',
-    image: '/images/marketplace/ai-analytics.jpg',
-    vendor: 'Zion Tech Group',
-    location: 'Global'
+    image: '/images/marketplace/ai-platform.jpg'
   },
   {
-    id: 2,
-    type: 'talent',
-    title: 'Senior Full-Stack Developer',
-    description: 'Expert React/Node.js developer with 8+ years experience',
-    price: '$120/hour',
+    id: 'cybersecurity-expert',
+    name: 'Senior Cybersecurity Consultant',
+    category: 'Talent',
+    description: 'Expert cybersecurity professional with 10+ years of experience.',
+    price: '$150/hour',
     rating: 4.8,
     reviews: 89,
-    category: 'Development',
-    image: '/images/marketplace/developer.jpg',
-    vendor: 'Tech Talent Hub',
-    location: 'Remote'
+    image: '/images/marketplace/cybersecurity-expert.jpg'
   },
   {
-    id: 3,
-    type: 'product',
-    title: 'Quantum Computing Workstation',
-    description: 'High-performance workstation optimized for quantum algorithms',
-    price: '$15,000',
+    id: 'quantum-server',
+    name: 'Quantum Computing Server',
+    category: 'Equipment',
+    description: 'High-performance quantum computing server for research and development.',
+    price: '$45,000',
     rating: 4.7,
     reviews: 23,
-    category: 'Hardware',
-    image: '/images/marketplace/quantum-workstation.jpg',
-    vendor: 'Quantum Systems Inc',
-    location: 'United States'
+    image: '/images/marketplace/quantum-server.jpg'
   },
   {
-    id: 4,
-    type: 'equipment',
-    title: 'IoT Sensor Network Kit',
-    description: 'Complete IoT solution with 50 sensors and gateway',
-    price: '$3,200',
-    rating: 4.6,
-    reviews: 45,
-    category: 'IoT',
-    image: '/images/marketplace/iot-kit.jpg',
-    vendor: 'Smart Sensors Co',
-    location: 'Germany'
+    id: 'digital-transformation',
+    name: 'Digital Transformation Service',
+    category: 'Services',
+    description: 'Comprehensive digital transformation consulting and implementation.',
+    price: '$15,000/project',
+    rating: 4.9,
+    reviews: 156,
+    image: '/images/marketplace/digital-transformation.jpg'
   }
 ];
 
-export default function MarketplacePage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+const benefits = [
+  {
+    icon: Shield,
+    title: 'Verified Quality',
+    description: 'All products and services are verified for quality and authenticity.'
+  },
+  {
+    icon: Globe,
+    title: 'Global Network',
+    description: 'Access to a worldwide network of technology providers and experts.'
+  },
+  {
+    icon: Zap,
+    title: 'Fast Delivery',
+    description: 'Quick turnaround times for products and rapid service deployment.'
+  },
+  {
+    icon: Heart,
+    title: 'Customer Support',
+    description: '24/7 customer support and satisfaction guarantee.'
+  }
+];
 
-  const filteredItems = featuredItems.filter(item => {
-    const matchesCategory = selectedCategory === 'all' || item.type === selectedCategory;
-    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
+export default function MarketplaceIndex() {
   return (
-    <div className="min-h-screen bg-zion-slate-dark">
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-              Zion Marketplace
-            </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-              The world's first free marketplace dedicated to high-tech and artificial intelligence
-            </p>
-            <p className="text-lg text-zion-slate-light/80 max-w-3xl mx-auto">
-              Connect with innovators, talent, and cutting-edge technology worldwide. 
-              Find the perfect solution for your business needs.
-            </p>
-          </motion.div>
+    <>
+      <SEO 
+        title="Marketplace | Zion Tech Group"
+        description="Discover high-quality technology products, talent, equipment, and services in our comprehensive marketplace. Connect with verified providers worldwide."
+        canonical="https://ziontechgroup.com/marketplace"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="w-24 h-24 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <ShoppingCart className="w-12 h-12 text-white" />
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Technology <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Marketplace</span>
+              </h1>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+                Discover high-quality technology products, talent, equipment, and services from verified providers worldwide. 
+                Your one-stop destination for all technology needs.
+              </p>
+              
+              {/* Search Bar */}
+              <div className="max-w-2xl mx-auto mb-8">
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="Search for products, services, talent, or equipment..."
+                    className="w-full bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl px-6 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                  />
+                  <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-lg hover:shadow-lg transition-all duration-300">
+                    <Search className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+              
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link 
+                  to="/marketplace/products" 
+                  className="btn-neon px-8 py-3 text-lg"
+                >
+                  Browse Products
+                </Link>
+                <Link 
+                  to="/marketplace/talent" 
+                  className="btn-outline px-8 py-3 text-lg"
+                >
+                  Find Talent
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
-          {/* Search Bar */}
-          <motion.div 
-            className="max-w-2xl mx-auto mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search for products, services, talent, or equipment..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-zion-slate-light/10 border border-zion-cyan/20 rounded-xl px-12 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              />
-            </div>
-          </motion.div>
+        {/* Categories Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Marketplace Categories
+              </h2>
+              <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+                Explore our comprehensive marketplace organized by category to find exactly what you need.
+              </p>
+            </motion.div>
 
-          {/* Stats */}
-          <motion.div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">546</div>
-              <div className="text-zion-slate-light">Total Items</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">89</div>
-              <div className="text-zion-slate-light">Vendors</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">24/7</div>
-              <div className="text-zion-slate-light">Support</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">Free</div>
-              <div className="text-zion-slate-light">No Commission</div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Categories Section */}
-      <section className="py-20 bg-zion-slate-dark">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">
-              Browse by Category
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Explore our comprehensive marketplace organized by category
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {categories.map((category, index) => (
-              <motion.div
-                key={category.id}
-                className="group cursor-pointer"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                onClick={() => setSelectedCategory(category.id)}
-              >
-                <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 h-full group-hover:shadow-2xl group-hover:shadow-zion-cyan/20`}>
-                  <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {marketplaceCategories.map((category, index) => (
+                <motion.div
+                  key={category.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-300"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
                     <category.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{category.name}</h3>
-                  <div className="text-3xl font-bold text-white mb-2">{category.count}</div>
-                  <p className="text-white/80">Items Available</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Items Section */}
-      <section className="py-20 bg-zion-blue-dark">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">
-              Featured Items
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover our top-rated products, services, and talent
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredItems.map((item, index) => (
-              <motion.div
-                key={item.id}
-                className="group relative"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <div className="relative p-6 rounded-2xl bg-gradient-to-br from-zion-slate-light/5 to-zion-slate-dark/50 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 h-full group-hover:shadow-2xl group-hover:shadow-zion-cyan/20">
-                  {/* Image Placeholder */}
-                  <div className="w-full h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-xl mb-6 flex items-center justify-center">
-                    <Package className="w-16 h-16 text-zion-cyan/50" />
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-xl font-semibold text-white">{category.name}</h3>
+                    <span className="text-zion-cyan font-semibold">{category.count}</span>
                   </div>
-
-                  {/* Content */}
+                  <p className="text-zion-slate-light mb-4">{category.description}</p>
+                  
                   <div className="mb-4">
-                    <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3 ${
-                      item.type === 'service' ? 'bg-zion-purple/20 text-zion-purple' :
-                      item.type === 'talent' ? 'bg-zion-green/20 text-zion-green' :
-                      item.type === 'product' ? 'bg-zion-cyan/20 text-zion-cyan' :
-                      'bg-zion-orange/20 text-zion-orange'
-                    }`}>
-                      {item.type.toUpperCase()}
-                    </span>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-zion-slate-light text-sm mb-4">
-                      {item.description}
-                    </p>
-                  </div>
-
-                  {/* Rating */}
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className={`w-4 h-4 ${i < Math.floor(item.rating) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light'}`} />
+                    <h4 className="text-sm font-medium text-zion-cyan mb-2">Includes:</h4>
+                    <ul className="space-y-1">
+                      {category.items.map((item, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-zion-slate-light">
+                          <CheckCircle className="w-3 h-3 text-zion-cyan mr-2 flex-shrink-0" />
+                          {item}
+                        </li>
                       ))}
+                    </ul>
+                  </div>
+
+                  <Link
+                    to={category.href}
+                    className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors"
+                  >
+                    Explore {category.name}
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Items Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/30">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Featured Items
+              </h2>
+              <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+                Handpicked high-quality products, services, and talent from our marketplace.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {featuredItems.map((item, index) => (
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-300"
+                >
+                  <div className="w-full h-32 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg mb-4 flex items-center justify-center">
+                    <Package className="w-12 h-12 text-white" />
+                  </div>
+                  
+                  <div className="mb-2">
+                    <span className="text-xs text-zion-cyan font-medium">{item.category}</span>
+                  </div>
+                  
+                  <h3 className="text-lg font-semibold text-white mb-2">{item.name}</h3>
+                  <p className="text-zion-slate-light text-sm mb-4">{item.description}</p>
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-zion-cyan font-semibold">{item.price}</span>
+                    <div className="flex items-center">
+                      <Star className="w-4 h-4 text-yellow-400 mr-1" />
+                      <span className="text-white text-sm">{item.rating}</span>
+                      <span className="text-zion-slate-light text-sm ml-1">({item.reviews})</span>
                     </div>
-                    <span className="text-zion-slate-light text-sm">({item.reviews})</span>
                   </div>
-
-                  {/* Vendor & Location */}
-                  <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
-                    <span>{item.vendor}</span>
-                    <span>{item.location}</span>
-                  </div>
-
-                  {/* Price */}
-                  <div className="text-2xl font-bold text-zion-cyan mb-4">
-                    {item.price}
-                  </div>
-
-                  {/* CTA */}
-                  <Link 
-                    to={`/marketplace/${item.type}/${item.id}`}
-                    className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-semibold group-hover:gap-2 transition-all duration-300"
+                  
+                  <Link
+                    to={`/marketplace/${item.category.toLowerCase()}/${item.id}`}
+                    className="block w-full text-center py-2 px-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:shadow-lg transition-all duration-300"
                   >
                     View Details
-                    <Zap className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Explore?
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using Zion Marketplace to find innovative solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="px-8 py-4 bg-white text-zion-cyan rounded-lg font-semibold hover:bg-zion-slate-light transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started
-              </Link>
-              <Link 
-                to="/services" 
-                className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-zion-cyan transition-all duration-300"
-              >
-                Learn More
-              </Link>
+                </motion.div>
+              ))}
             </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Marketplace?
+              </h2>
+              <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+                We provide a trusted platform that connects you with the best technology solutions and providers.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={benefit.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center p-6 rounded-xl bg-zion-slate-dark/50 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                  <p className="text-zion-slate-light">{benefit.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl p-8 md:p-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Discover Amazing Technology Solutions?
+              </h2>
+              <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+                Join thousands of businesses finding the perfect technology solutions in our marketplace.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link 
+                  to="/marketplace/products" 
+                  className="btn-white px-8 py-3 text-lg font-semibold"
+                >
+                  Start Shopping
+                </Link>
+                <Link 
+                  to="/contact" 
+                  className="btn-outline-white px-8 py-3 text-lg font-semibold"
+                >
+                  Get Help
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
