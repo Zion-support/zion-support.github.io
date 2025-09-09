@@ -13,6 +13,8 @@ export default defineConfig(({ mode }) => ({
     }),
   ],
   build: {
+    // Output directory for Netlify compatibility
+    outDir: 'out',
     // Disable source maps in production for smaller bundle
     sourcemap: false,
     // Use terser for better minification

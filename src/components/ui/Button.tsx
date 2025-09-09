@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { ButtonProps } from '../../types/components';
 import LoadingSpinner from '../LoadingSpinner';
@@ -10,31 +10,33 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        primary: "bg-primary text-primary-foreground hover:bg-primary/90",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+        danger: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
       },
       size: {
-        default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
+        md: "h-10 px-4 py-2",
         lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10",
       },
     },
     defaultVariants: {
-      variant: "default",
-      size: "default",
+      variant: "primary",
+      size: "md",
     },
   }
 );
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, loading = false, disabled, onClick, children, ...props }, ref) => {
+  ({ className, variant = "default", size = "default", asChild = false, loading = false, disabled, onClick, children, ...props }, ref) => {
     const Comp = asChild ? Slot : 'button';
-    const classes = cn(buttonVariants({ variant, size, className }));
+    const classes = cn(buttonVariants({ 
+      variant: variant === 'primary' ? 'default' : variant === 'danger' ? 'destructive' : variant as any, 
+      size: size === 'md' ? 'default' : size as any, 
+      className 
+    }));
 
     return (
       <Comp
