@@ -1,10 +1,13 @@
 import React, { Suspense, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { EnhancedHeader } from './components/header/EnhancedHeader';
-import { EnhancedFooter } from './components/footer/EnhancedFooter';
-import { FuturisticAnimatedBackground } from './components/backgrounds/FuturisticAnimatedBackground';
+import { HelmetProvider } from 'react-helmet-async';
+import { AppHeader } from './layout/AppHeader';
+import { Footer } from './components/Footer';
+import { ChatAssistant } from './components/ChatAssistant';
+import LoadingSpinner from './components/ui/LoadingSpinner';
+import SEO from './components/SEO';
+import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import Analytics from './components/Analytics';
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home.jsx'));
@@ -186,68 +189,60 @@ function App() {
   };
 
   return (
-    <Router>
-      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
-        <AppHeader />
-        <main className="flex-1">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              {/* Main Routes */}
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/contact" element={<Contact />} />
-              
-              {/* Company Pages */}
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/solutions" element={<Solutions />} />
-              <Route path="/research-development" element={<ResearchDevelopment />} />
-              <Route path="/case-studies" element={<CaseStudies />} />
-              <Route path="/news" element={<News />} />
-              <Route path="/events" element={<Events />} />
-              <Route path="/partners" element={<Partners />} />
-              
-              {/* Resource Pages */}
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/docs" element={<Documentation />} />
-              <Route path="/white-papers" element={<WhitePapers />} />
-              <Route path="/webinars" element={<Webinars />} />
-              <Route path="/training" element={<Training />} />
-              
-              {/* Support Pages */}
-              <Route path="/help" element={<HelpCenter />} />
-              <Route path="/support" element={<Support />} />
-              <Route path="/faq" element={<FAQ />} />
-              
-              {/* Legal Pages */}
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/sitemap" element={<Sitemap />} />
-              
-              {/* Service-Specific Routes */}
-              <Route path="/services/ai" element={<AIServices />} />
-              <Route path="/services/cloud" element={<CloudServices />} />
-              <Route path="/services/cybersecurity" element={<CybersecurityServices />} />
-              <Route path="/services/infrastructure" element={<InfrastructureServices />} />
-              <Route path="/services/transformation" element={<TransformationServices />} />
-              <Route path="/services/consulting" element={<ConsultingServices />} />
-              
-              {/* Catch all route */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
-        </main>
-        
-        {/* Enhanced Footer */}
-        <EnhancedFooter />
-        
-        {/* Performance Monitor */}
-        <PerformanceMonitor />
-        
-        {/* Analytics */}
-        <Analytics />
-      </div>
-    </Router>
+    <HelmetProvider>
+      <ErrorBoundary>
+        <Router>
+          <div className="min-h-screen bg-futuristic">
+            <SEO />
+            <AppHeader />
+            
+            <main className="flex-1">
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/blog" element={<Blog />} />
+                  <Route path="/blog/:slug" element={<BlogPost />} />
+                  <Route path="/faq" element={<FAQ />} />
+                  <Route path="/careers" element={<Careers />} />
+                  <Route path="/privacy" element={<Privacy />} />
+                  <Route path="/terms" element={<Terms />} />
+                  <Route path="/sitemap" element={<Sitemap />} />
+                  <Route path="/green-it" element={<GreenIT />} />
+                  <Route path="/partners" element={<PartnersPage />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/signup" element={<Signup />} />
+                  <Route path="/search" element={<SearchPage />} />
+                  <Route path="/help-center" element={<HelpCenter />} />
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/solutions" element={<Solutions />} />
+                  <Route path="/research-development" element={<ResearchDevelopment />} />
+                  <Route path="/news" element={<News />} />
+                  <Route path="/request-quote" element={<RequestQuote />} />
+                  <Route path="/marketplace" element={<Marketplace />} />
+                  
+                  {/* Service Routes - only for existing pages */}
+                  <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                  <Route path="/services/digital-twin" element={<DigitalTwin />} />
+                  <Route path="/services/data-analytics" element={<DataAnalytics />} />
+                  <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+                  <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                  
+                  {/* Catch all route */}
+                  <Route path="*" element={<Home />} />
+                </Routes>
+              </Suspense>
+            </main>
+            
+            <Footer />
+            <ChatAssistant />
+            <PerformanceMonitor />
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 }
 
