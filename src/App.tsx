@@ -3,12 +3,11 @@ import { Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './components/ThemeProvider';
-import ErrorBoundary from './components/ErrorBoundary';
 import { SEO } from './components/SEO';
 import { Header } from './components/Header';
-import Footer from './components/Footer';
+import { Footer } from './components/Footer';
 import LoadingSpinner from './components/ui/LoadingSpinner';
-// import './App.css'; // Using Tailwind CSS instead
+import './App.css';
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/HomePage'));
