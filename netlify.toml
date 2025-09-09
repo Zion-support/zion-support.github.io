@@ -34,7 +34,11 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# SPA fallback - handle client-side routing
+# SPA fallback - this should be the last redirect rule
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 # Functions
 [functions]
@@ -55,11 +59,7 @@
 [context.branch-deploy]
   command = "npm ci --no-audit --no-fund && npm run build"
 
-# Vite/React SPA configuration - SPA fallback for all routes
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Vite/React SPA configuration is handled above
 
 # Set basic cache headers for static assets for better performance
 [[headers]]
