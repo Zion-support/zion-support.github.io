@@ -1,6 +1,6 @@
 
   return(
-    <MainLayout;
+    <MainLayout 
       title='Micro SaaS Solutions - Zion Tech Group''      description='Powerful, affordable micro SaaS applications designed to solve specific business challenges. Streamline your operations with our innovative solutions.''    >'      {/* Hero Section */}
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>        <div className='container mx-auto px-4>          <div className='max-w-4xl mx-auto text-center>            <h1 className='text-5xl md: text-6xl font-bold mb-6 leading-tight>              Micro SaaS Solutions'            </h1>'
             <p className='text-xl m,

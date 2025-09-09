@@ -1,14 +1,14 @@
 
-:pages.disabled/pages/services/Transformation.tsx];
-:pages.disabled/pages/services/Transformation.tsx;
+:pages.disabled/pages/services/Transformation.tsx] 
+:pages.disabled/pages/services/Transformation.tsx 
   '{''
-      name: 'Technology',;
-      description: 'Modernize your technology stack and infrastructure',;
-      icon: BarChart3,;
+      name: 'Technology', 
+      description: 'Modernize your technology stack and infrastructure', 
+      icon: BarChart3, 
       features: ['Cloud migration', 'API integration', 'Data modernization', 'Security enhancement']}
-  ];
+  ] 
 
-              Modernize your business processes and operations with cutting-edge;
+              Modernize your business processes and operations with cutting-edge 
               technology solutions that drive growth and innovation.''
             </p>'''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>''
@@ -92,6 +92,6 @@
       </section>
     </div>
   ,)}
-:pages.disabled/pages/services/Transformation.tsx;
+:pages.disabled/pages/services/Transformation.tsx 
 
 

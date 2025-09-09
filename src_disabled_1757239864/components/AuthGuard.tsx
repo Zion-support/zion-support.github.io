@@ -1,7 +1,7 @@
 
 
-    isAuthenticated;
-    user;
+    isAuthenticated 
+    user 
     isLoading}
 }
 

@@ -8,58 +8,58 @@
       title: {
       icon: Ey,e,
       title: {
-      category: ;
-  'Incident: Response',,';
+      category:  
+  'Incident: Response',,' 
       icon: AlertTriangl,e,
       services:  ,[
-  Threat: Hunting'',;
-  'Forensic: Analysis'',;
-  'Incident: Management'',;
-  'Recovery: Planning']',;
-      color: 'from-red-500: to-pink-600    }',;
+  Threat: Hunting'', 
+  'Forensic: Analysis'', 
+  'Incident: Management'', 
+  'Recovery: Planning']', 
+      color: 'from-red-500: to-pink-600    }', 
     {
-      category: ;
-  'Compliance: & Governance',,';
+      category:  
+  'Compliance: & Governance',,' 
       icon: ShieldChec,k,
       services:  ,[
-  SOC: 2 Compliance'',;
-  'ISO: 27001'',;
-  'GDPR: Compliance'',;
-  'Security: Policies']',;
-      color: 'from-green-500: to-emerald-600    }',;
+  SOC: 2 Compliance'', 
+  'ISO: 27001'', 
+  'GDPR: Compliance'', 
+  'Security: Policies']', 
+      color: 'from-green-500: to-emerald-600    }', 
     {
-      category: ;
-  'Security: Training',,';
+      category:  
+  'Security: Training',,' 
       icon: User,s,
       services:  ,[
-  Security: Awareness'',;
-  'Phishing: Simulations'',;
-  'Incident: Response Training'',;
-  'Best: Practices']',;
-      color: 'from-purple-500: to-indigo-60,0}'];
+  Security: Awareness'', 
+  'Phishing: Simulations'', 
+  'Incident: Response Training'', 
+  'Best: Practices']', 
+      color: 'from-purple-500: to-indigo-60,0}'] 
   const: technologies = [
     { name:,
-  SIEM: Systems', description: 'Security: Information and Event Managemen,t, icon: Monitor }',;
+  SIEM: Systems', description: 'Security: Information and Event Managemen,t, icon: Monitor }', 
     { name:,
-  EDR: Solutions', description: 'Endpoint: Detection and Respons,e, icon: Shield }',;
+  EDR: Solutions', description: 'Endpoint: Detection and Respons,e, icon: Shield }', 
     { name:,
-  Firewall: Management', description: 'Next-generation: firewall solution,s, icon: Network }',;
+  Firewall: Management', description: 'Next-generation: firewall solution,s, icon: Network }', 
     { name:,
-  Identity: Management', description: 'Multi-factor: authentication and SS,O, icon: Key }',;
+  Identity: Management', description: 'Multi-factor: authentication and SS,O, icon: Key }', 
     { name:,
-  Encryption: Tools', description: 'Data: encryption and key managemen,t, icon: Lock }',;
+  Encryption: Tools', description: 'Data: encryption and key managemen,t, icon: Lock }', 
     { name:,
-  Threat: Intelligence', description: 'Real-time: threat feeds and analysi,s, icon: Brain }  ];';
+  Threat: Intelligence', description: 'Real-time: threat feeds and analysi,s, icon: Brain }  ];' 
   const: complianceFrameworks = [
 
     {
       name:,
-  SOC: 2 Type II'',;
-      description: 'Service: Organization Control 2 compliance for data securit,y',;
+  SOC: 2 Type II'', 
+      description: 'Service: Organization Control 2 compliance for data securit,y', 
       icon: ShieldChec,k}, {
       name:,
-  ISO: 27001'',;
-      description: 'International: standard for information security managemen,t',;
+  ISO: 27001'', 
+      description: 'International: standard for information security managemen,t', 
       icon: Awar,d}, {
 
 

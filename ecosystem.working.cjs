@@ -1,105 +1,172 @@
 module.exports = {
-  apps: [
-    // Health Monitor - Essential for monitoring system health
+  apps: [;
+    // AI-Powered Code Analyzer - Intelligent code analysis and auto-fixing;
     {
-      name: 'health-monitor',
-      script: 'scripts/pm2/health-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
+      name: 'ai-code-analyzer',;
+      script: './scripts/automation/ai-code-analyzer.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '512M',;
       env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '*/5 * * * *', // Every 5 minutes
-      log_file: 'logs/pm2/health-monitor.log',
-      error_file: 'logs/pm2/health-monitor-error.log',
-      out_file: 'logs/pm2/health-monitor-out.log',
-    },
-    
-    // CI/CD Automation - For continuous integration
+        NODE_ENV: 'production',;
+        AI_ANALYSIS_MODE: 'true'},;
+      log_file: './logs/ai-code-analyzer.log',;
+      error_file: './logs/ai-code-analyzer-error.log',;
+      out_file: './logs/ai-code-analyzer-out.log',;
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
+
+    // Smart Performance Optimizer - Bundle and runtime optimization;
     {
-      name: 'ci-cd-automation',
-      script: 'scripts/pm2/ci-cd-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
+      name: 'smart-performance-optimizer',;
+      script: './scripts/automation/smart-performance-optimizer.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '1G',;
       env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 */2 * * *', // Every 2 hours
-      log_file: 'logs/pm2/ci-cd-automation.log',
-      error_file: 'logs/pm2/ci-cd-automation-error.log',
-      out_file: 'logs/pm2/ci-cd-automation-out.log',
-    },
-    
-    // Performance Monitor - Monitor system performance
+        NODE_ENV: 'production',;
+        PERFORMANCE_OPTIMIZATION_MODE: 'true'},;
+      log_file: './logs/smart-performance-optimizer.log',;
+      error_file: './logs/smart-performance-optimizer-error.log',;
+      out_file: './logs/smart-performance-optimizer-out.log',;
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
+
+    // Intelligent Dependency Manager - Dependency analysis and management;
     {
-      name: 'performance-monitor',
-      script: 'scripts/pm2/performance-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
+      name: 'intelligent-dependency-manager',;
+      script: './scripts/automation/intelligent-dependency-manager.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '512M',;
       env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 */3 * * *', // Every 3 hours
-      log_file: 'logs/pm2/performance-monitor.log',
-      error_file: 'logs/pm2/performance-monitor-error.log',
-      out_file: 'logs/pm2/performance-monitor-out.log',
-    },
-    
-    // Security Audit - Regular security checks
+        NODE_ENV: 'production',;
+        DEPENDENCY_MANAGEMENT_MODE: 'true'},;
+      log_file: './logs/intelligent-dependency-manager.log',;
+      error_file: './logs/intelligent-dependency-manager-error.log',;
+      out_file: './logs/intelligent-dependency-manager-out.log',;
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
+
+    // Smart Deployment Automation - Intelligent deployment management;
     {
-      name: 'security-audit',
-      script: 'scripts/pm2/security-audit.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
+      name: 'smart-deployment-automation',;
+      script: './scripts/automation/smart-deployment-automation.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '1G',;
       env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      log_file: 'logs/pm2/security-audit.log',
-      error_file: 'logs/pm2/security-audit-error.log',
-      out_file: 'logs/pm2/security-audit-out.log',
-    },
-    
-    // Quality Checks - Code quality monitoring
+        NODE_ENV: 'production',;
+        DEPLOYMENT_AUTOMATION_MODE: 'true'},;
+      log_file: './logs/smart-deployment-automation.log',;
+      error_file: './logs/smart-deployment-automation-error.log',;
+      out_file: './logs/smart-deployment-automation-out.log',;
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
+
+    // Enhanced Security Automation - Advanced security monitoring;
     {
-      name: 'quality-checks',
-      script: 'scripts/pm2/quality-checks.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
+      name: 'enhanced-security-automation',;
+      script: './scripts/automation/enhanced-security-automation.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '512M',;
       env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 */4 * * *', // Every 4 hours
-      log_file: 'logs/pm2/quality-checks.log',
-      error_file: 'logs/pm2/quality-checks-error.log',
-      out_file: 'logs/pm2/quality-checks-out.log',
-    },
-    
-    // Dependency Updates - Monitor and update dependencies
+        NODE_ENV: 'production',;
+        SECURITY_MODE: 'true'},;
+      log_file: './logs/enhanced-security-automation.log',;
+      error_file: './logs/enhanced-security-automation-error.log',;
+      out_file: './logs/enhanced-security-automation-out.log',;
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
+
+    // Project Health Monitor - Comprehensive project health monitoring;
     {
-      name: 'dependency-updates',
-      script: 'scripts/pm2/dependency-updates.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
+      name: 'project-health-monitor',;
+      script: './scripts/automation/project-health-monitor.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '512M',;
       env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 2 * * *', // Daily at 2 AM
-      log_file: 'logs/pm2/dependency-updates.log',
-      error_file: 'logs/pm2/dependency-updates-error.log',
-      out_file: 'logs/pm2/dependency-updates-out.log',
-    }
-  ]
-};
+        NODE_ENV: 'production',;
+        HEALTH_MONITORING_MODE: 'true'},;
+      log_file: './logs/project-health-monitor.log',;
+      error_file: './logs/project-health-monitor-error.log',;
+      out_file: './logs/project-health-monitor-out.log',;
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
+
+    // PM2 Sync Automation - Core synchronization system;
+    {
+      name: 'pm2-sync-automation',;
+      script: './scripts/automation/pm2-sync-automation.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '1G',;
+      env: {
+        NODE_ENV: 'production',;
+        SYNC_MODE: 'true'},;
+      log_file: './logs/pm2-sync-automation.log',;
+      error_file: './logs/pm2-sync-automation-error.log',;
+      out_file: './logs/pm2-sync-automation-out.log',;
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
+
+    // Link Checker Automation - Link integrity monitoring;
+    {
+      name: 'link-checker-automation',;
+      script: './scripts/automation/link-checker-automation.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '512M',;
+      env: {
+        NODE_ENV: 'production',;
+        LINK_CHECKING_MODE: 'true'},;
+      log_file: './logs/link-checker-automation.log',;
+      error_file: './logs/link-checker-automation-error.log',;
+      out_file: './logs/link-checker-automation-out.log',;
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
+
+    // TypeScript Syntax Fixer - Code quality automation;
+    {
+      name: 'typescript-syntax-fixer',;
+      script: './scripts/automation/typescript-syntax-fixer.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '256M',;
+      env: {
+        NODE_ENV: 'production',;
+        SYNTAX_FIXING_MODE: 'true'},;
+      log_file: './logs/typescript-syntax-fixer.log',;
+      error_file: './logs/typescript-syntax-fixer-error.log',;
+      out_file: './logs/typescript-syntax-fixer-out.log',;
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
+
+    // Console Error Fixer - Runtime error automation;
+    {
+      name: 'console-error-fixer',;
+      script: './scripts/automation/console-error-fixer.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '256M',;
+      env: {
+        NODE_ENV: 'production',;
+        ERROR_FIXING_MODE: 'true'},;
+      log_file: './logs/console-error-fixer.log',;
+      error_file: './logs/console-error-fixer-error.log',;
+      out_file: './logs/console-error-fixer-out.log',;
+      merge_logs: true,;
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},;
+  ]}

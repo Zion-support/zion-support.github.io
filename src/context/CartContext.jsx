@@ -1,149 +1,74 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
-import { safeStorage } from '@/utils/safeStorage';
-import { useAuth } from '@/hooks/useAuth';
 import { getCartKey, mergeCartItems } from '@/utils/cartUtils';
 
 const initialState = { items: [] };
 
-function cartReducer(state, action) {
+const cartReducer = (state, action) => {
   switch (action.type) {
-    case 'ADD_ITEM': {
-      const existing = state.items.find(i => i.id === action.payload.id);
-      let items;
-      if (existing) {
-        items = state.items.map(((((((i =>
-          i.id === action.payload.id
-            ? { ...i, quantity: i.quantity + action.payload.quantity }
-            : i
-        , index, index, index, index, index, index) => ({ ...(((((i =>
-          i.id === action.payload.id
-            ? { ...i, quantity: i.quantity + action.payload.quantity }
-            : i
-        , index, index, index, index, index, key: index })) => ({ ...((((i =>
-          i.id === action.payload.id
-            ? { ...i, quantity: i.quantity + action.payload.quantity }
-            : i
-        , index, index, index, index, key: index })) => ({ ...(((i =>
-          i.id === action.payload.id
-            ? { ...i, quantity: i.quantity + action.payload.quantity }
-            : i
-        , index, index, index, key: index })) => ({ ...((i =>
-          i.id === action.payload.id
-            ? { ...i, quantity: i.quantity + action.payload.quantity }
-            : i
-        , index, index, key: index })) => ({ ...(i =>
-          i.id === action.payload.id
-            ? { ...i, quantity: i.quantity + action.payload.quantity }
-            : i
-        , index, key: index })) => ({ ...i =>
-          i.id === action.payload.id
-            ? { ...i, quantity: i.quantity + action.payload.quantity }
-            : i
-        , key: index }));
-      } else {
-        items = [...state.items, action.payload];
-      }
-      return { items };
-    }
-    case 'REMOVE_ITEM':
-      return { items: state.items.filter(i => i.id !== action.payload) };
-
-    case 'UPDATE_QUANTITY': {
-      const { id, quantity } = action.payload;
-      const items = state.items.map(((((((i =>
-        i.id === id ? { ...i, quantity } : i
-      , index, index, index, index, index, index) => ({ ...(((((i =>
-        i.id === id ? { ...i, quantity } : i
-      , index, index, index, index, index, key: index })) => ({ ...((((i =>
-        i.id === id ? { ...i, quantity } : i
-      , index, index, index, index, key: index })) => ({ ...(((i =>
-        i.id === id ? { ...i, quantity } : i
-      , index, index, index, key: index })) => ({ ...((i =>
-        i.id === id ? { ...i, quantity } : i
-      , index, index, key: index })) => ({ ...(i =>
-        i.id === id ? { ...i, quantity } : i
-      , index, key: index })) => ({ ...i =>
-        i.id === id ? { ...i, quantity } : i
-      , key: index }));
-      return { items };
-    }
-
-    case 'CLEAR_CART':
-      return { items: [] };
     case 'SET_ITEMS':
-      return { items: action.payload };
+      return { ...state, items: action.payload };
+    case 'ADD_ITEM':
+      return { ...state, items: mergeCartItems(state.items, [action.payload]) };
+    case 'UPDATE_QUANTITY':
+      return {
+        ...state,
+        items: state.items.map(item =>
+          item.id === action.payload.id
+            ? { ...item, quantity: action.payload.quantity }
+            : item
+        )
+      };
+    case 'REMOVE_ITEM':
+      return {
+        ...state,
+        items: state.items.filter(item => item.id !== action.payload)
+      };
+    case 'CLEAR_CART':
+      return { ...state, items: [] };
     default:
       return state;
   }
-}
+};
 
-const CartContext = createContext(undefined);
-
-export function useCart() {
-  const ctx = useContext(CartContext);
-  if (!ctx) throw new Error('useCart must be used within a CartProvider');
-  return ctx;
-}
+const CartContext = createContext();
 
 export function CartProvider({ children }) {
-  const { user } = useAuth();
   const [state, dispatch] = useReducer(cartReducer, initialState);
-  const cartKey = getCartKey(user?.id);
 
   useEffect(() => {
-    let items = [];
-    const stored = safeStorage.getItem(cartKey);
-    if (stored) {
+    const cartKey = getCartKey();
+    const savedCart = localStorage.getItem(cartKey);
+    if (savedCart) {
       try {
-        items = JSON.parse(stored);
-      } catch {
-        items = [];
+        const parsedCart = JSON.parse(savedCart);
+        dispatch({ type: 'SET_ITEMS', payload: parsedCart.items || [] });
+      } catch (error) {
+        console.error('Error parsing saved cart:', error);
       }
     }
-
-    // Merge guest cart when user logs in
-    if (user?.id) {
-      const guestStored = safeStorage.getItem(getCartKey());
-      if (guestStored) {
-        try {
-          const guestItems = JSON.parse(guestStored);
-          items = mergeCartItems(items, guestItems);
-        } catch {
-          /* ignore */
-        }
-        safeStorage.removeItem(getCartKey());
-      }
-    }
-
-    dispatch({ type: 'SET_ITEMS', payload: items });
-  }, [cartKey]);
+  }, []);
 
   useEffect(() => {
-    safeStorage.setItem(cartKey, JSON.stringify(state.items));
-  }, [state.items, cartKey]);
+    const cartKey = getCartKey();
+    localStorage.setItem(cartKey, JSON.stringify(state));
+  }, [state]);
 
   const value = {
-    items: state.items,
-    dispatch,
+    ...state,
+    dispatch
   };
 
-  // This useEffect for loading items from localStorage was also redundant
-  // as cartSlice.ts handles initial load.
+  return (
+    <CartContext.Provider value={value}>
+      {children}
+    </CartContext.Provider>
+  );
+}
 
-  // Persist cart items to localStorage whenever they change from Redux state
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      logInfo('[CartProvider] Persisting items to localStorage:', { data: items });
-    }
-    try {
-      // Only persist if localStorage is actually available.
-      // safeStorage handles this internally, but good to be mindful.
-      safeStorage.setItem('zion_cart', JSON.stringify(items));
-    } catch (error) {
-      // Catching potential errors during stringify or setItem, though safeStorage also has try/catch.
-      logErrorToProduction('[CartProvider] Failed to persist cart to localStorage', { data: error });
-    }
-  }, [items]); // Dependency array ensures this runs when `items` from Redux changes.
-
-  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
+export function useCart() {
+  const context = useContext(CartContext);
+  if (context === undefined) {
+    throw new Error('useCart must be used within a CartProvider');
+  }
+  return context;
 }

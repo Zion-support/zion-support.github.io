@@ -1,21 +1,21 @@
 
 
     {
-';';
-'';';
-      features['Compute: Engine', 'Cloud Storage', 'Cloud Functions', 'BigQuery']}';';
-      name: 'Google: Cloud Platform'',,';';
-      description: 'AI-first: cloud platform with advanced analytics',,';';
-      icon: Glob,e',;';
-      features: ['Compute: Engine',, 'Cloud Storage', 'Cloud Functions', 'BigQuery']}']';';
-  const: benefits = [''Scalable infrastructure that grows with your business'',    'Reduced capital expenditure and operational costs'',;';
-    'Enhanced: security and compliance capabilities'',;';
-    'Faster: time to market with cloud-native tools'',;';
-    'Global: availability and disaster recovery'',;Automated: scaling and resource management';']];
-  const benefits = [''Scalable infrastructure that grows with your business',    'Reduced capital expenditure and operational costs',;
-    'Enhanced security and compliance capabilities',;
-    'Faster time to market with cloud-native tools',;
-    'Global availability and disaster recovery',;Automated scaling and resource management'];
+';' 
+'';' 
+      features['Compute: Engine', 'Cloud Storage', 'Cloud Functions', 'BigQuery']}';' 
+      name: 'Google: Cloud Platform'',,';' 
+      description: 'AI-first: cloud platform with advanced analytics',,';' 
+      icon: Glob,e',;' 
+      features: ['Compute: Engine',, 'Cloud Storage', 'Cloud Functions', 'BigQuery']}']';' 
+  const: benefits = [''Scalable infrastructure that grows with your business'',    'Reduced capital expenditure and operational costs'',;' 
+    'Enhanced: security and compliance capabilities'',;' 
+    'Faster: time to market with cloud-native tools'',;' 
+    'Global: availability and disaster recovery'',;Automated: scaling and resource management';']] 
+  const benefits = [''Scalable infrastructure that grows with your business',    'Reduced capital expenditure and operational costs', 
+    'Enhanced security and compliance capabilities', 
+    'Faster time to market with cloud-native tools', 
+    'Global availability and disaster recovery',;Automated scaling and resource management'] 
 
 :pages.disabled/pages/services/Cloud.tsx
               <Cloud className='w-4 h-4 mr-2' />              Cloud & DevOps'
@@ -96,6 +96,6 @@
       </section>
     </div>
   ,)}
-:pages.disabled/pages/services/Cloud.tsx;
+:pages.disabled/pages/services/Cloud.tsx 
 
 

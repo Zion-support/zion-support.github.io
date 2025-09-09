@@ -1,22 +1,22 @@
-:pages.disabled/pages/services/ai-hr-platform.tsx;
+:pages.disabled/pages/services/ai-hr-platform.tsx 
 import: { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search, Award, Shield, Globe, Zap, Heart, Building, UserCheck, UserPlus const AIHRPlatform: React.FC: = props {
 import { User,s, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search, Award, Shield, Globe, Zap, Heart, Building, UserCheck, UserPlus const AIHRPlatform: React.FC: = props  {}
     }, {
 
-  ];
-  return();
-:pages.disabled/pages/services/ai-hr-platform.tsx;
-    <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
+  ] 
+  return() 
+:pages.disabled/pages/services/ai-hr-platform.tsx 
+    <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>' 
 :pages.disabled/pages/services/ai-hr-platform.tsx
-<:pages.disabled/pages/services/ai-hr-platform.tsx;
-      <SEO;
-=;
+<:pages.disabled/pages/services/ai-hr-platform.tsx 
+      <SEO 
+= 
 
-          <motion.div;
+          <motion.div 
             initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ai-hr-platform.tsx;
-:pages.disabled/pages/services/ai-hr-platform.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-hr-platform.tsx 
+:pages.disabled/pages/services/ai-hr-platform.tsx 
+  y: 20 
 
               <span className='block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-400'>
                 Platform
@@ -26,7 +26,7 @@ import { User,s, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search
             </h1>'
 '''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
-              Revolutionize your HR operations with AI-powered recruitment, talent management, and performance analytics.;
+              Revolutionize your HR operations with AI-powered recruitment, talent management, and performance analytics. 
 
                 Get Started'
             </p>'
@@ -59,16 +59,16 @@ import { User,s, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search
     g:grid-cols-4 gap-8'>
             {features.map((feature, index(
 
-              <motion.div;
+              <motion.div 
                 key={feature.title}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ai-hr-platform.tsx;
-:pages.disabled/pages/services/ai-hr-platform.tsx;
-  y: 20;
+:pages.disabled/pages/services/ai-hr-platform.tsx 
+:pages.disabled/pages/services/ai-hr-platform.tsx 
+  y: 20 
 
                   <feature.icon className='w-6 h-6 text-blue-400' />'
                 </div>'''
-                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'';
+                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'' 
 
                   <feature.icon className='w-6 h-6 text-blue-400' />
                 </div>'''
@@ -76,7 +76,7 @@ import { User,s, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search
                 <p className='text-gray-300'>{feature.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -89,7 +89,7 @@ import { User,s, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search
 
           <div className='grid md:grid-cols-2 gap-8'>
             {modules.map(modul,
-    e: unknown, index: unknown();
+    e: unknown, index: unknown() 
               <motion.div
           </motion.div>'
 '''
@@ -98,18 +98,18 @@ import { User,s, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search
             {modules.map(modul,
     e: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={module.titl,e}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/ai-hr-platform.tsx;
-:pages.disabled/pages/services/ai-hr-platform.tsx;
+:pages.disabled/pages/services/ai-hr-platform.tsx 
+:pages.disabled/pages/services/ai-hr-platform.tsx 
 
                     <p className='text-gray-300'>{module.description}</p>
 
                   </div>
                 </div>
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
@@ -125,30 +125,30 @@ import { User,s, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search
 '''
           <div className='grid md:grid-cols-2 gap-8'>
 
-            <motion.div;
+            <motion.div 
               initial: =  {}, { opacity:  ,0,
-:pages.disabled/pages/services/ai-hr-platform.tsx;
-:pages.disabled/pages/services/ai-hr-platform.tsx;
-  x: -20;
+:pages.disabled/pages/services/ai-hr-platform.tsx 
+:pages.disabled/pages/services/ai-hr-platform.tsx 
+  x: -20 
 
 
                   </li>
                 ))}
               </ul>
             </motion.div>
-:pages.disabled/pages/services/ai-hr-platform.tsx: <motion.div;
+:pages.disabled/pages/services/ai-hr-platform.tsx: <motion.div 
               initial: = {
   { opacity:  ,0,
-:pages.disabled/pages/services/ai-hr-platform.tsx;
-  x: 20;
+:pages.disabled/pages/services/ai-hr-platform.tsx 
+  x: 20 
   ,
-    x: 20;
-            <motion.div;
+    x: 20 
+            <motion.div 
               initial: =  {}, { opacity:  ,0,
   x: 2,0}}
               whileInView: = {}, { opacity:  ,1,
-:pages.disabled/pages/services/ai-hr-platform.tsx;
-:pages.disabled/pages/services/ai-hr-platform.tsx;
+:pages.disabled/pages/services/ai-hr-platform.tsx 
+:pages.disabled/pages/services/ai-hr-platform.tsx 
 
               <p className='text-gray-300 mb-6'>
                 Ready to transform your HR operations? Our AI HR experts can help you implement

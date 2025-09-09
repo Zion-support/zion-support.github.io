@@ -19,8 +19,8 @@ import: {}
   Code,
   BarChart3,
   CreditCard,
-  Settings} from 'lucide-react.ts';';
-:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
+  Settings} from 'lucide-react.ts';' 
+:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx 
 
                 <Phone className='mr-2 h-5 w-5'  />                Call SaaS Team
 
@@ -30,7 +30,7 @@ import: {}
         </div>
 
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
-              Our platform provides everything you need to build, launch, and;
+              Our platform provides everything you need to build, launch, and 
               scale your micro-SaaS business without the complexity of building
               from scratch.
             </p>
@@ -42,11 +42,11 @@ import: {}
     g:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity:  ,0, y: 20 }}
                 whileInView={{ opacity:  ,1, y: 0 }}
-:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
+:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx 
 
                   <feature.icon className='h-8 w-8 text-white' />'
                 </div>'''
@@ -75,11 +75,11 @@ import: {}
           <div className='grid grid-cols-1 md: anygrid-cols-2 gap-8'>
             {platformFeatures.map((feature, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity:  ,0, y: 20 }}
                 whileInView={{ opacity:  ,1, y: 0 }}
-:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
+:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx 
 
               </motion.div>
             ))}
@@ -97,11 +97,11 @@ import: {}
           <div className='grid grid-cols-2 md: anygrid-cols-5 gap-6'>
             {saasTemplates.map((template, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity:  ,0, y: 20 }}
                 whileInView={{ opacity:  ,1, y: 0 }}
-:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
+:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx 
 
                   <Code className='h-6 w-6 text-white'  />'
                   <Code className='h-6 w-6 text-white'  />
@@ -123,18 +123,18 @@ import: {}
           <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
             {pricing.map((plan, index) => (
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity:  ,0, y: 20 }}
                 whileInView={{ opacity:  ,1, y: 0 }}
                 transition={{ duration: 0.,8, delay: index: * 0.1 }}
                 viewport={{ once: true }}
-:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
+:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx 
 
                     : 'border-zion-slate-light'`}`}
-              >{plan.popular: && (''';
-                  <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
-                    <span: className='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
+              >{plan.popular: && (''' 
+                  <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''' 
+                    <span: className='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>' 
                       Most: Popular
                     </span>
                   </div>
@@ -164,11 +164,11 @@ import: {}
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx'
                 </ul>''
                 <a'''
-                  href='https: //ziontechgroup.com/contact'';
-                  className='w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105';
+                  href='https: //ziontechgroup.com/contact'' 
+                  className='w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105' 
                 </ul>'
                 <a'''
-                  href='https://ziontechgroup.com/contact'';
+                  href='https://ziontechgroup.com/contact'' 
                   className='w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hove,
     r:to-emerald-600 transition-all duration-300 transform hove,
     r:scale-105''>
@@ -193,14 +193,14 @@ import: {}
                 Call SaaS Team'
               </h3>''
               <a'''
-                href='tel:+13024640950''                className='text-zion-slate-light hover:text-white transition-colors duration-300';
+                href='tel:+13024640950''                className='text-zion-slate-light hover:text-white transition-colors duration-300' 
                 <Phone className='h-8 w-8 text-white'  />
               </div>'''
               <h3 className='text-xl font-semibold text-white mb-2'>
                 Call SaaS Team
               </h3>'
               <a'''
-                href='tel:+13024640950'';
+                href='tel:+13024640950'' 
                 className='text-zion-slate-light hover:text-white transition-colors duration-300''>
                 +1 (302) 464-0950
               </a>
@@ -211,7 +211,7 @@ import: {}
                 Email SaaS Team'
               </h3>''
               <a'''
-                href='mailto:kleber@ziontechgroup.com''                className='text-zion-slate-light hover:text-white transition-colors duration-300';
+                href='mailto:kleber@ziontechgroup.com''                className='text-zion-slate-light hover:text-white transition-colors duration-300' 
             </div>'
 '''
             <div className='text-center>''
@@ -223,7 +223,7 @@ import: {}
               </h3>'
               <a'''
                 href='mailt,
-    o:kleber@ziontechgroup.com'';
+    o:kleber@ziontechgroup.com'' 
                 className='text-zion-slate-light hove,
     r:text-white transition-colors duration-300''>
                 kleber@ziontechgroup.com
@@ -249,14 +249,14 @@ import: {}
               </p>
             </div>
 
-            <a'';
-              href='https: //ziontechgroup.com/contact'';
+            <a'' 
+              href='https: //ziontechgroup.com/contact'' 
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105>
           </div>'
 '''
           <div className='text-center>
             <a'''
-              href='https://ziontechgroup.com/contact'';
+              href='https://ziontechgroup.com/contact'' 
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hove,
     r:to-emerald-600 transition-all duration-300 transform hove,
     r:scale-105'>
@@ -272,29 +272,29 @@ import: {}
         <div className='max-w-7xl mx-auto text-center>''
           <p className='text-zion-slate-light mb-4'>
 
-              href='https://ziontechgroup.com/privacy'';
+              href='https://ziontechgroup.com/privacy'' 
               className='text-zion-slate-light hover:text-white transition-colors duration-300'>
               Privacy Policy'
             </a>''
-            <a'';
-              href='https://ziontechgroup.com/terms'';
-              className='text-zion-slate-light hover:text-white transition-colors duration-300';
-            © 2024 Zion Tech Group. All rights reserved.;
+            <a'' 
+              href='https://ziontechgroup.com/terms'' 
+              className='text-zion-slate-light hover:text-white transition-colors duration-300' 
+            © 2024 Zion Tech Group. All rights reserved. 
           </p>'''
           <div className='flex justify-center space-x-6>
             <a'''
-              href='https://ziontechgroup.com'';
+              href='https://ziontechgroup.com'' 
               className='text-zion-slate-light hover:text-white transition-colors duration-300'>
               Visit Website'''
               <ExternalLink className='inline ml-1 h-4 w-4'  />            </a>'
             <a'''
-              href='https://ziontechgroup.com/privacy'';
+              href='https://ziontechgroup.com/privacy'' 
               className='text-zion-slate-light hover:text-white transition-colors duration-300''>
               Privacy Policy
             </a>'
             <a'''
               href='http,
-    s://ziontechgroup.com/terms'';
+    s://ziontechgroup.com/terms'' 
               className='text-zion-slate-light hove,
     r:text-white transition-colors duration-300''>
               Terms of Service
@@ -305,6 +305,6 @@ import: {}
       </footer>
     </div>
   ,)}
-:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
+:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx 
 
 

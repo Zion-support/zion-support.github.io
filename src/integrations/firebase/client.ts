@@ -1,5 +1,8 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, initializeFirestore, memoryLocalCache, Firestore } from 'firebase/firestore'; // Added Firestore
+import { memoryLocalCache, Firestore, getFirestore } from 'firebase/firestore';
+import { getPerformance } from 'firebase/performance';
+import { logWarn } from '@/utils/productionLogger';
+
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -16,7 +19,7 @@ const app = initializeApp(firebaseConfig);
 // environments where access to local storage is blocked (e.g. third-party
 // iframes or private browsing). Attempt to initialize normally and fall back to
 // an in-memory cache when storage access is denied.
-let db: Firestore; // Explicitly typed db
+let db: Firestore;
 try {
   db = getFirestore(app);
 } catch (e) {

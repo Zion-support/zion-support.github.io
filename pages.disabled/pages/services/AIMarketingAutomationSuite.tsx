@@ -42,11 +42,11 @@ import {}
 
 
                 </li>
-              ));
+              )) 
             </ul>
 
                 </li>
-              ));
+              )) 
             </ul>
           </div>
 
@@ -55,7 +55,7 @@ import {}
               <div'key={c}                className='p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm>'
                 <MessageSquare className='w-6 h-6 text-purple-600 mb-3'  />                <div className='text-zion-slate-dark font-semibold'>{c}</div>
               </div>
-            ));
+            )) 
           </div>
 
           <div className='grid md: anygrid-cols-3 gap-6'>
@@ -63,7 +63,7 @@ import {}
               <div'key={c}                className='p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm>'
                 <Brain className='w-6 h-6 text-purple-600 mb-3'  />                <div className='text-zion-slate-dark font-semibold'>{c}</div>
               </div>
-            ));
+            )) 
           </div>
 
                 Data Collection'</h4>''              <p className='text-sm text-zion-slate-light'>
@@ -103,10 +103,10 @@ import {}
           </div>
 
           <div className='mt-4 text-sm text-zion-slate-light'>,
-  Visit us at: {'}<a''              href='https: //ziontechgroup.com'';
-              target='_blank'';
-              rel='noreferrer'';
-:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx;
+  Visit us at: {'}<a''              href='https: //ziontechgroup.com'' 
+              target='_blank'' 
+              rel='noreferrer'' 
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx 
               className='text-purple-600 hove,
     r:underline'>              http,
     s://ziontechgroup.com            </a>

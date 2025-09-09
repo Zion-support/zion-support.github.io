@@ -1,0 +1,1 @@
+import{e as r,j as t}from"./react-vendor-b8kf7aCi.js";import{c as l}from"./main-Mr28Ox1N.js";const m=r.forwardRef(({className:e,children:a,...s},o)=>t.jsx("label",{ref:o,className:l("text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70",e),...s,children:a}));m.displayName="Label";export{m as L};

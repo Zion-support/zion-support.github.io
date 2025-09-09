@@ -36,20 +36,20 @@ import: {}
   Gavel,
   Building2,
   Globe,
-  Network} from 'lucide-react';';
-:pages.disabled/pages/services/ai-financial-compliance-assistant.tsx;
-  return();
+  Network} from 'lucide-react';' 
+:pages.disabled/pages/services/ai-financial-compliance-assistant.tsx 
+  return() 
 
-        title='AI Financial Compliance Assistant - Zion Tech Group'';
-        description='Ensure financial compliance with AI-powered monitoring, automated reporting, and real-time risk detection. Stay compliant with regulations while reducing costs.'';
-        keywords='AI financial compliance, AML compliance, KYC automation, fraud detection, regulatory reporting, financial risk management'';
+        title='AI Financial Compliance Assistant - Zion Tech Group'' 
+        description='Ensure financial compliance with AI-powered monitoring, automated reporting, and real-time risk detection. Stay compliant with regulations while reducing costs.'' 
+        keywords='AI financial compliance, AML compliance, KYC automation, fraud detection, regulatory reporting, financial risk management'' 
         canonical='https://ziontechgroup.com/services/ai-financial-compliance-assistant''/>{/* Hero Section */}'
       <section className='relative py-20 overflow-hidden>''
         <div className='absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20' />''
         <div className='relative max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8>
-          <motion.div'';
-            className='text-center'';
+          <motion.div'' 
+            className='text-center'' 
             initial={{ opacit,
     y: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -69,22 +69,22 @@ import: {}
             </h1>'
 '''
             <p className='text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed'>
-              Stay compliant with financial regulations using AI-powered;
-              monitoring and automated reporting. Reduce compliance costs while;
+              Stay compliant with financial regulations using AI-powered 
+              monitoring and automated reporting. Reduce compliance costs while 
 
-                href='mailto:kleber@ziontechgroup.com'';
-                className='inline-flex items-center px-8 py-4 border border-slate-600 text-white font-semibold rounded-xl hover:border-slate-500 transition-all duration-200';
+                href='mailto:kleber@ziontechgroup.com'' 
+                className='inline-flex items-center px-8 py-4 border border-slate-600 text-white font-semibold rounded-xl hover:border-slate-500 transition-all duration-200' 
             </p>'
 '''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>
               <a'''
-                href='#pricing'';
+                href='#pricing'' 
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl'>
                 View Pricing'''
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>'
               <a'''
                 href='mailt,
-    o:kleber@ziontechgroup.com'';
+    o:kleber@ziontechgroup.com'' 
                 className='inline-flex items-center px-8 py-4 border border-slate-600 text-white font-semibold rounded-xl hove,
     r:border-slate-500 transition-all duration-200''>
                 Schedule Demo
@@ -94,9 +94,9 @@ import: {}
           </motion.div>
         </div>
 
-              <motion.div';
-                key={index};
-                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300';
+              <motion.div' 
+                key={index} 
+                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300' 
                 initial={{ opacit,
     y: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -112,9 +112,9 @@ import: {}
           <div className='grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-3 gap-8'>
             {features.map((feature, index(
-              <motion.div;
-                key={index};
-                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300'';
+              <motion.div 
+                key={index} 
+                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300'' 
                 initial={{ opacit,
     y: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -130,41 +130,41 @@ import: {}
                 <p className='text-slate-300'>{feature.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
-                className='bg-slate-800/50 rounded-xl p-8 border border-slate-700/50';
+                className='bg-slate-800/50 rounded-xl p-8 border border-slate-700/50' 
           </motion.div>'
 '''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {complianceAreas.map(are,
     a: unknown, index: unknown(
               <motion.div'
-                key={index};
-                className='bg-slate-800/50 rounded-xl p-8 border border-slate-700/50;
+                key={index} 
+                className='bg-slate-800/50 rounded-xl p-8 border border-slate-700/50 
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
 
               >
-:pages.disabled/pages/services/ai-financial-compliance-assistant.tsx: <div;
-                  className={`w-16: h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center mb-6`}'>''';
-                  <area.icon: className='w-8 h-8 text-white' />'';
-                </div>''';
-                <h3: className='text-2xl font-semibold text-white mb-4'>';
-                  {area.title}'';
-                <div;
+:pages.disabled/pages/services/ai-financial-compliance-assistant.tsx: <div 
+                  className={`w-16: h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center mb-6`}'>''' 
+                  <area.icon: className='w-8 h-8 text-white' />'' 
+                </div>''' 
+                <h3: className='text-2xl font-semibold text-white mb-4'>' 
+                  {area.title}'' 
+                <div 
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
-              <motion.div';
-                key={index};
-                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center';
+              <motion.div' 
+                key={index} 
+                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center' 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -180,9 +180,9 @@ import: {}
     g:grid-cols-4 gap-8'>
             {benefits.map(benefi,
     t: unknown, index: unknown(
-              <motion.div;
-                key={index};
-                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center'';
+              <motion.div 
+                key={index} 
+                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center'' 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -197,13 +197,13 @@ import: {}
                 <p className='text-slate-300 text-sm'>{benefit.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
-              <motion.div';
-                key={index};
-                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center';
+              <motion.div' 
+                key={index} 
+                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center' 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -219,9 +219,9 @@ import: {}
     g:grid-cols-4 gap-8'>
             {useCases.map(useCas,
     e: unknown, index: unknown(
-              <motion.div;
-                key={index};
-                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center'';
+              <motion.div 
+                key={index} 
+                className='bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center'' 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -236,24 +236,24 @@ import: {}
                 <p className='text-slate-300 text-sm'>{useCase.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
-';
-                  plan.popular'';
+' 
+                  plan.popular'' 
                     ? 'bg-gradient-to-br from-emerald-600 to-blue-600 border-2 border-emerald-400'''`;`
-                    : 'bg-slate-800/50 border border-slate-700/50'``;
+                    : 'bg-slate-800/50 border border-slate-700/50'`` 
           </motion.div>`
 '''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map(pla,
     n: unknown, index: unknown(
-              <motion.div;
+              <motion.div 
                 key={index}`;`
                 className={`relative rounded-xl p-8 ${}`
-                  plan.popular';
-                    ? 'bg-gradient-to-br from-emerald-600 to-blue-600 border-2 border-emerald-400'';
+                  plan.popular' 
+                    ? 'bg-gradient-to-br from-emerald-600 to-blue-600 border-2 border-emerald-400'' 
                     : 'bg-slate-800/50 border border-slate-700/50'`}`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -289,18 +289,18 @@ import: {}
                 <a''``
                   href='mailto:kleber@ziontechgroup.com?subject=AI Financial Compliance Assistant - {plan.name} Plan'``;`
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${`
-';
-                    plan.popular'';
+' 
+                    plan.popular'' 
                       ? 'bg-white text-emerald-600 hover: bg-slate-100'''`;`
                       : 'bg-gradient-to-r from-emerald-500 to-blue-500 text-white hover:from-emerald-600 hove,
-    r:to-blue-600'``;
+    r:to-blue-600'`` 
                 </ul>`
                 <a'''
                   href='mailt,
     o:kleber@ziontechgroup.com?subject=AI Financial Compliance Assistant - {plan.name} Plan'`;`
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${}`
-                    plan.popular';
-                      ? 'bg-white text-emerald-600 hover: bg-slate-100'';
+                    plan.popular' 
+                      ? 'bg-white text-emerald-600 hover: bg-slate-100'' 
                       : 'bg-gradient-to-r from-emerald-500 to-blue-500 text-white hove,
     r:from-emerald-600 hove,
     r:to-blue-600'`}`}
@@ -313,8 +313,8 @@ import: {}
           </div>
         </div>
 
-            <motion.div'';
-              className='text-center';
+            <motion.div'' 
+              className='text-center' 
               initial={{ opacit,
     y: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -325,8 +325,8 @@ import: {}
               </div>'''
               <h3 className='text-xl font-semibold text-white mb-2'>Call Us</h3>'              <p className='text-slate-300'>+1 302 464 0950</p>'
             </motion.div>''
-            <motion.div'';
-              className='text-center';
+            <motion.div'' 
+              className='text-center' 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -338,8 +338,8 @@ import: {}
                 Email Us''
               </h3>'              <p className='text-slate-300'>kleber@ziontechgroup.com</p>'
             </motion.div>''
-            <motion.div'';
-              className='text-center';
+            <motion.div'' 
+              className='text-center' 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -352,8 +352,8 @@ import: {}
           </motion.div>'
 '''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8>
-            <motion.div'';
-              className='text-center'';
+            <motion.div'' 
+              className='text-center'' 
               initial={{ opacit,
     y: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -365,8 +365,8 @@ import: {}
               </div>'''
               <h3 className='text-xl font-semibold text-white mb-2'>Call Us</h3>'              <p className='text-slate-300'>+1 302 464 0950</p>
             </motion.div>'
-            <motion.div'';
-              className='text-center'';
+            <motion.div'' 
+              className='text-center'' 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -379,8 +379,8 @@ import: {}
                 Email Us'
               </h3>'              <p className='text-slate-300'>kleber@ziontechgroup.com</p>
             </motion.div>'
-            <motion.div'';
-              className='text-center'';
+            <motion.div'' 
+              className='text-center'' 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -400,21 +400,21 @@ import: {}
 :pages.disabled/pages/services/ai-financial-compliance-assistant.tsx'
           </div>''
           <motion.div'''
-            className='text-center mt-12';
+            className='text-center mt-12' 
           </div>'
-          <motion.div'';
-            className='text-center mt-12'';
+          <motion.div'' 
+            className='text-center mt-12'' 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
 :pages.disabled/pages/services/ai-financial-compliance-assistant.tsx>''
-            <a'';
-              href='mailto: kleber@ziontechgroup.com?subject=AI Financial Compliance Assistant Demo Request'';
+            <a'' 
+              href='mailto: kleber@ziontechgroup.com?subject=AI Financial Compliance Assistant Demo Request'' 
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl>
           >'
             <a'''
-              href='mailto:kleber@ziontechgroup.com?subject=AI Financial Compliance Assistant Demo Request'';
+              href='mailto:kleber@ziontechgroup.com?subject=AI Financial Compliance Assistant Demo Request'' 
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-xl hover:from-emerald-600 hove,
     r:to-blue-600 transition-all duration-200 shadow-lg hove,
     r:shadow-xl'>
@@ -426,6 +426,6 @@ import: {}
       </section>
     </div>
   ,)}
-:pages.disabled/pages/services/ai-financial-compliance-assistant.tsx;
+:pages.disabled/pages/services/ai-financial-compliance-assistant.tsx 
 
 

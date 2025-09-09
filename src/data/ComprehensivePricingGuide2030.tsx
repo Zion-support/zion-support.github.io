@@ -12,17 +12,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   const getFilteredServices = () => {;
     let services: any[] = [];
     ;
-    switch (activeTab) {;
-      case 'microsaas':;
-        services = innovativeMicroSaasServices2030;
-        break;
-      case 'it':;
-        services = comprehensiveITServices2030;
-        break;
-      case 'ai':;
-        services = comprehensiveAIServices2030;
-        break};
-;
+    switch (activeTab) {};
+        break}
+
     // Filter by price range;
     services = services.filter(service => {;
       if (activeTab === 'it') {;
@@ -69,21 +61,18 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         services = comprehensiveAIServices2030;
         break};
 ;
-    if (activeTab = == 'it') {;
-      const max = Math.max(...services.map(((((((s => s.hourlyRate, index, index, index, index, index, index) => ({ ...(((((s => s.hourlyRate, index, index, index, index, index, key: index })) => ({ ...((((s => s.hourlyRate, index, index, index, index, key: index })) => ({ ...(((s => s.hourlyRate, index, index, index, key: index })) => ({ ...((s => s.hourlyRate, index, index, key: index })) => ({ ...(s => s.hourlyRate, index, key: index })) => ({ ...s => s.hourlyRate, key: index })));
-      return [min, max];
-    } else {;
-      const max = Math.max(...services.map(((((((s => s.price, index, index, index, index, index, index) => ({ ...(((((s => s.price, index, index, index, index, index, key: index })) => ({ ...((((s => s.price, index, index, index, index, key: index })) => ({ ...(((s => s.price, index, index, index, key: index })) => ({ ...((s => s.price, index, index, key: index })) => ({ ...(s => s.price, index, key: index })) => ({ ...s => s.price, key: index })));
-      return [min, max]};
-  };
-;
-  const renderPricingCard = (service)  => {;
-    if (activeTab === 'microsaas') {;
-      return (;
-        <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">;
-          <div className="p-6">;
-            <div className="text-center mb-6">;
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>;
+    if(activeTab = == 'it') {};
+      return [min, max]} else {};
+      return [min, max]}
+  }
+  const renderPricingCard: unknown = (service)  => {}
+';
+    if (activeTab === 'microsaas') {}
+      return ("";
+        <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">"";
+          <div className="p-6">"";
+            <div className="text-center mb-6">"";
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>"";
               <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full">;
                 {service.pricing};
               </span>;
@@ -321,13 +310,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             </div>;
           </div>;
         </div>;
-      );
-    };
-  };
-;
-  const priceRangeData = getPriceRange();
-;
-  return (;
+      )}
+  }
+  return ();
     <>;
       <SEO;
         title = "Comprehensive Pricing Guide 2030 - Zion Tech Group";
@@ -450,15 +435,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                       value={priceRange[1]};
                       onChange = {;
   (e) => setPriceRange([priceRange[0],;
-  parseInt(e.target.value)]);
-;
-;
-;
-;
-;
-;
-};
-                      className="flex-1";
+  parseInt(e.target.value)])}                      className="flex-1";
                     />;
                     <input;
                       type="range";
@@ -467,15 +444,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                       value={priceRange[0]};
                       onChange = {;
   (e) => setPriceRange([parseInt(e.target.value),;
-  priceRange[1]]);
-;
-;
-;
-;
-;
-;
-};
-                      className="flex-1";
+  priceRange[1]])}                      className="flex-1";
                     />;
                   </div>;
                   <div className="flex justify-between text-sm text-gray-500 mt-1">;
@@ -591,16 +560,16 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 Clear Filters;
               </button>;
             </div>;
-          )};
-;
-          {/* Pricing Comparison */};
-          <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg">;
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Why Choose Zion Tech Group?</h2>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-              <div className="text-center">;
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">;
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"       />;
+          )}
+
+          {/* Pricing Comparison */}";
+          <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg">";
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Why Choose Zion Tech Group?</h2>";
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">";
+              <div className="text-center">";
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">";
+                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">";
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />;
                   </svg>;
                 </div>;
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Competitive Pricing</h3>;
@@ -660,7 +629,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         </div>;
       </div>;
     </>;
-  );
-};
-;
+  )}
 export default ComprehensivePricingGuide2030;}}}}}}}
+
+export { ComprehensivePricingGuide2030 }
+export { ComprehensivePricingGuide2030 }
+export { ComprehensivePricingGuide2030 }
+export { ComprehensivePricingGuide2030 }
+export { ComprehensivePricingGuide2030 }

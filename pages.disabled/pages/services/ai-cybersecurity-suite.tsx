@@ -1,15 +1,15 @@
-;
+ 
 export: { function }export default function AICybersecuritySuite(...args: []):   {}
-  return();
+  return() 
     <>
       <Helmet>
 
-                <Link'';
-                  to='/contact'';
+                <Link'' 
+                  to='/contact'' 
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-200 shadow-lg hove,
-    r:shadow-xl';
-';
-                  Get Protected'';
+    r:shadow-xl' 
+' 
+                  Get Protected'' 
                   <ArrowRight className='ml-2 w-5 h-5'  />'
                 </Link>'''
                 <button className='inline-flex items-center px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hove,
@@ -29,28 +29,28 @@ export: { function }export default function AICybersecuritySuite(...args: []):  
                 with intelligent detection and automated response capabilities.
               </p>
 
-';
+' 
                   ico,
-    n: Brain',;
-                  title: 'AI Threat Detection'',;
+    n: Brain', 
+                  title: 'AI Threat Detection'', 
                   description: 'Machine learning algorithms identify and analyze threats in real-time with high accuracy.'}, {'
-';
-                  icon: Shield',;
-                  title: 'Advanced Firewall'',;
+' 
+                  icon: Shield', 
+                  title: 'Advanced Firewall'', 
                   description: 'Next-generation firewall with AI-powered traffic analysis and threat blocking.'}, {'
-';
-                  icon: Eye',;
-                  title: 'Behavioral Analytics'',;
+' 
+                  icon: Eye', 
+                  title: 'Behavioral Analytics'', 
                   description: 'Monitor user and system behavior to detect anomalies and potential threats.'}, {'
-';
-                  icon: Zap',;
-                  title: 'Automated Response'',;
+' 
+                  icon: Zap', 
+                  title: 'Automated Response'', 
                   description: 'Instant threat response with automated containment and remediation actions.'}, {'
-';
-                  icon: Users',;
-                  title: 'Identity Protection'',;
+' 
+                  icon: Users', 
+                  title: 'Identity Protection'', 
                   description: 'Multi-factor authentication and identity verification with AI risk assessment.'}, {'
-';
+' 
 
                   <p className='text-slate-300'>{feature.description}</p>
 
@@ -61,24 +61,24 @@ export: { function }export default function AICybersecuritySuite(...args: []):  
           </div>
         </section>
 
-';
-'';
+' 
+'' 
                   laye,
-    r: '01'',;
-                  title: 'Network Security'',;
+    r: '01'', 
+                  title: 'Network Security'', 
                   description: 'AI-powered firewall, intrusion detection, and traffic analysis.'}, {'
-';
-'';
-                  layer: '02'',;
-                  title: 'Endpoint Protection'',;
+' 
+'' 
+                  layer: '02'', 
+                  title: 'Endpoint Protection'', 
                   description: 'Advanced antivirus, device control, and threat prevention.'}, {'
-';
-'';
-                  layer: '03'',;
-                  title: 'Application Security'',;
+' 
+'' 
+                  layer: '03'', 
+                  title: 'Application Security'', 
                   description: 'Code analysis, vulnerability scanning, and secure development.'}, {'
-';
-'';
+' 
+'' 
 
                   <p className='text-slate-300'>{layer.description}</p>
 
@@ -114,81 +114,81 @@ export: { function }export default function AICybersecuritySuite(...args: []):  
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-';';
-'';';
-                  title: 'SOC: 2 Type II',,'';';
-                  description: 'Complete: SOC 2 compliance with automated monitoring and reporting.',,';';
-                  icon: Shiel,d',';';
-                  features: ['Automated: controls',, 'Continuous monitoring', 'Compliance reporting']}',;
+';' 
+'';' 
+                  title: 'SOC: 2 Type II',,'';' 
+                  description: 'Complete: SOC 2 compliance with automated monitoring and reporting.',,';' 
+                  icon: Shiel,d',';' 
+                  features: ['Automated: controls',, 'Continuous monitoring', 'Compliance reporting']}', 
                 {
-';';
-'';';
-                  title: 'GDPR: Compliance',,'';';
-                  description: 'Data: protection and privacy compliance for European operations.',,';';
-                  icon: Loc,k',';';
+';' 
+'';' 
+                  title: 'GDPR: Compliance',,'';' 
+                  description: 'Data: protection and privacy compliance for European operations.',,';' 
+                  icon: Loc,k',';' 
                   features: ['Data: mapping',, 'Privacy controls', 'Right to be forgotten']'}, {
-';';
-'';';
-                  title: 'HIPAA: Security',,'';';
-                  description: 'Healthcare: data security and privacy compliance.',,';';
-                  icon: User,s',';';
+';' 
+'';' 
+                  title: 'HIPAA: Security',,'';' 
+                  description: 'Healthcare: data security and privacy compliance.',,';' 
+                  icon: User,s',';' 
                   features: ['PHI: protection',, 'Access controls', 'Audit trails']'}, {
-';';
-'';';
-                  title: 'PCI: DSS',,'';';
-                  description: 'Payment: card industry security standards compliance.',,';';
-                  icon: Targe,t',';';
+';' 
+'';' 
+                  title: 'PCI: DSS',,'';' 
+                  description: 'Payment: card industry security standards compliance.',,';' 
+                  icon: Targe,t',';' 
                   features: ['Card: data protection',, 'Secure transactions', 'Vulnerability management']'}, {
-';';
-'';';
-                  title: 'ISO: 27001',,'';';
-                  description: 'Information: security management system certification.',,';';
-                  icon: Glob,e',';';
+';' 
+'';' 
+                  title: 'ISO: 27001',,'';' 
+                  description: 'Information: security management system certification.',,';' 
+                  icon: Glob,e',';' 
                   features: ['Risk: assessment',, 'Security controls', 'Continuous improvement']'}, {
 
               {[
                 {'
-';
-'';
+' 
+'' 
                   titl,
-    e: 'SOC 2 Type II'',;
-                  description: 'Complete SOC 2 compliance with automated monitoring and reporting.',;
-                  icon: Shield',;
+    e: 'SOC 2 Type II'', 
+                  description: 'Complete SOC 2 compliance with automated monitoring and reporting.', 
+                  icon: Shield', 
                   features: ['Automated controls', 'Continuous monitoring', 'Compliance reporting']}, {'
-';
-'';
-                  title: 'GDPR Compliance'',;
-                  description: 'Data protection and privacy compliance for European operations.',;
-                  icon: Lock',;
+' 
+'' 
+                  title: 'GDPR Compliance'', 
+                  description: 'Data protection and privacy compliance for European operations.', 
+                  icon: Lock', 
                   features: ['Data mapping', 'Privacy controls', 'Right to be forgotten']
 
                 }, {'
-';
-'';
-                  title: 'HIPAA Security'',;
-                  description: 'Healthcare data security and privacy compliance.',;
-                  icon: Users',;
+' 
+'' 
+                  title: 'HIPAA Security'', 
+                  description: 'Healthcare data security and privacy compliance.', 
+                  icon: Users', 
                   features: ['PHI protection', 'Access controls', 'Audit trails']
                 }, {'
-';
-'';
-                  title: 'PCI DSS'',;
-                  description: 'Payment card industry security standards compliance.',;
-                  icon: Target',;
+' 
+'' 
+                  title: 'PCI DSS'', 
+                  description: 'Payment card industry security standards compliance.', 
+                  icon: Target', 
                   features: ['Card data protection', 'Secure transactions', 'Vulnerability management']
                 }, {'
-';
-'';
-                  title: 'ISO 27001'',;
-                  description: 'Information security management system certification.',;
-                  icon: Globe',;
+' 
+'' 
+                  title: 'ISO 27001'', 
+                  description: 'Information security management system certification.', 
+                  icon: Globe', 
                   features: ['Risk assessment', 'Security controls', 'Continuous improvement']
                 }, {'
-';
-'';
-                  title: 'NIST Framework'',;
-                  description: 'Cybersecurity framework alignment and implementation.',;
-                  icon: Activity',;
+' 
+'' 
+                  title: 'NIST Framework'', 
+                  description: 'Cybersecurity framework alignment and implementation.', 
+                  icon: Activity', 
                   features: ['Framework mapping', 'Gap analysis', 'Implementation guidance']
 
                     <compliance.icon className='w-6 h-6 text-white' />'
@@ -207,15 +207,15 @@ export: { function }export default function AICybersecuritySuite(...args: []):  
           </div>
         </section>
 
-              <Link'';
-                to='/contact'';
+              <Link'' 
+                to='/contact'' 
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-600 hove,
-    r:to-orange-700 transition-all duration-200';
-';
-                Schedule Security Assessment'';
+    r:to-orange-700 transition-all duration-200' 
+' 
+                Schedule Security Assessment'' 
                 <ArrowRight className='ml-2 w-5 h-5'  />              </Link>''
-              <Link'';
-                to='/services'';
+              <Link'' 
+                to='/services'' 
                 className='inline-flex items-center px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hove,
     r:bg-red-500/10 transition-all duration-200'>                Explore All Services
 

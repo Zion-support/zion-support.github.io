@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import { supabase, getFromProfiles } from "../../integrations/supabase/client";
-import { useAuthOperations } from "../../hooks/useAuthOperations";
 import { AuthContext } from "./AuthContext";
 import { cleanupAuthState } from "../../utils/authUtils";
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -9,9 +7,12 @@ import { useAuthEventHandlers } from "./useAuthEventHandlers";
 import { mapProfileToUser } from "./profileMapper";
 import { loginUser, registerUser } from "@/services/authService";
 import { safeStorage } from "@/utils/safeStorage";
-import { toast } from "@/hooks/use-toast"; // Import toast
+import { toast } from "@/hooks/use-toast";
 import { useDispatch } from 'react-redux';
 import { addItem } from '@/store/cartSlice';
+import { supabase } from '@/lib/supabase';
+import { getFromProfiles } from '@/lib/supabase';
+import { useAuthOperations } from './useAuthOperations';
 export const AuthProvider = ({ children }) => {
     const { user, setUser, isLoading, setIsLoading, onboardingStep, setOnboardingStep, tokens, setTokens } = useAuthState();
     const navigate = useNavigate();
@@ -75,8 +76,7 @@ export const AuthProvider = ({ children }) => {
             setTokens({ accessToken: data.token, refreshToken: data.refreshToken || null });
             setUser(data.user);
             return { error: null };
-        }
-        catch (err) {
+        } catch (err) {
             return { error: err?.message || 'Registration failed' };
         }
     };
@@ -169,7 +169,9 @@ export const AuthProvider = ({ children }) => {
         onboardingStep,
         tokens
     };
-    return (<AuthContext.Provider value={authContextValue}>
-      {children}
-    </AuthContext.Provider>);
+    return (
+        <AuthContext.Provider value={authContextValue}>
+            {children}
+        </AuthContext.Provider>
+    );
 };

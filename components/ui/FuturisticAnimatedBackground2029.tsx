@@ -1,30 +1,73 @@
-import React from 'react';
+import React from "react";
+        if (this.y < 0) this.y = canvas.height;
+        if (this.y > canvas.height) this.y = 0;
+        // comment;
+draw() {
+        if (ctx) {
 
-const FuturisticAnimatedBackground2029: React.FC = () => {
-  return (
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-black opacity-50" />
-  );
-};
-
-export default FuturisticAnimatedBackground2029;
-    <div className={`fixed inset-0 pointer-events-none ${className}`}>
-      <canvas
-        ref={canvasRef}
-        className="w-full h-full"
-        style={{
-          background: 'radial-gradient(ellipse at center, rgba(20, 20, 40, 0.8) 0%, rgba(0, 0, 0, 1) 100%)'
-        }}
-      />
-      
-      {/* Overlay gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-purple-900/10 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-blue-900/10 to-transparent" />
-      
-      {/* Animated orbs */}
-      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
-    </div>
-  );
+          const alpha = this.life / this.maxLife;
+          ctx.save()}
+          ctx.globalAlpha = alpha;
+          ctx.fillStyle = this.color;
+          ctx.beginPath()}
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)}
+          ctx.fill()}
+          // comment;
+ctx.shadowColor = this.color          ctx.restore()}
 }
 
+      isDead() {
+
+
+    // Grid system,;
+class Grid {
+
+      spacing: number,;
+      offset: number,;
+
+    // comment;
+class Grid {
+
+      spacing: number,;
+      offset: number,;
+          ctx.strokeStyle = "rgba(100, 200, 255, 0.1)";
+          ctx.lineWidth = 1;
+          // comment;
+for (let x = this.offset % this.spacing; x < canvas.width; x += this.spacing) {
+            ctx.moveTo(x, 0)}
+            ctx.lineTo(x, canvas.height)}            ctx.stroke()}
+
+    // Wave system,;
+class Wave {
+
+    // comment;
+class Wave {
+
+      amplitude: number,;
+frequency: number,;
+      speed: number,";
+          ctx.strokeStyle = "rgba(150, 100, 255, 0.3)";
+          ctx.lineWidth = 2;
+          for (let x = 0; x < canvas.width; x++) {
+      particles.push(new Particle())}
+
+    // comment;
+for (let i = 0; i < 3; i++) {";
+      ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+      // comment;
+particles[index] = new Particle()}
+})}
+      // comment;
+const time = Date.now() * 0.001;
+        const angle = (i * Math.PI * 2) / 3 + time * 0.5;
+        const x = Math.cos(angle) * 100;
+        const y = Math.sin(angle) * 100;
+      animationId = requestAnimationFrame(animate)}
+
+    // comment;
+return () => {
+
+';
+
+
+export default Component

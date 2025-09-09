@@ -3,9 +3,9 @@
       </section>
     </div>
   )}
-:pages.disabled/pages/services/EcommercePersonalization.tsx;
+:pages.disabled/pages/services/EcommercePersonalization.tsx 
 
-export { EcommercePersonalization };
+export { EcommercePersonalization } 
 
 export default EcommercePersonalization}
   '''""

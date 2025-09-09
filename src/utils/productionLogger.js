@@ -7,13 +7,12 @@ export const logger = {
   log: () => {}
 };
 
-export const logErrorToProduction = (error, context = '') => {
-  // In production, we might want to send errors to a monitoring service
-  // For now, just log to console in development
-  if (process.env.NODE_ENV === 'development') {
-    console.error(`Production Error in ${context}:`, error);
+// Removed duplicate export - this function is now part of the ProductionLogger class
+
+class ProductionLogger {
+  constructor() {
+    this.enabled = process.env.NODE_ENV === 'production';
   }
-};
 
   log(message, data = null) {
     if (this.enabled) {

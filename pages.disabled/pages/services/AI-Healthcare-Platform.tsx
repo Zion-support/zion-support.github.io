@@ -65,20 +65,20 @@ import {}
   useEffect(() => {}
 
         <div className='max-w-7xl mx-auto text-center'>
-          <motion.div;
+          <motion.div 
             initial={{ opacit,
     y: 0, y: 20 }}
-:pages.disabled/pages/services/AI-Healthcare-Platform.tsx;
+:pages.disabled/pages/services/AI-Healthcare-Platform.tsx 
 
 
-              Revolutionary healthcare technology that combines artificial;
-              intelligence with medical expertise to deliver superior patient;
+              Revolutionary healthcare technology that combines artificial 
+              intelligence with medical expertise to deliver superior patient 
               care, accurate diagnostics, and improved health outcomes.
 
             </p>
           </motion.div>
 
-          <motion.div;
+          <motion.div 
 
               <Eye className='w-5 h-5 mr-2'  />              Watch Demo
             </Link>
@@ -96,8 +96,8 @@ import {}
           <div className='grid grid-cols-1 m,
     d:grid-cols-2 l,
     g:grid-cols-4 gap-8'>
-:pages.disabled/pages/services/AI-Healthcare-Platform.tsx{healthcareStats.map((stat, index();
-              <motion.div;
+:pages.disabled/pages/services/AI-Healthcare-Platform.tsx{healthcareStats.map((stat, index() 
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}transition={{ duration: 0.8, delay: 0.1 * index }}                className='text-center bg-gradient-to-br from-green-900/50 to-blue-900/50 backdrop-blur-sm rounded-2xl p-6 border border-green-500/20>'
@@ -114,7 +114,7 @@ import {}
         </div>
       </section>
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}'transition={{ duration: 0.8, delay: 0.1 * index }}''                className='bg-gradient-to-br from-green-900/50 to-blue-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover:border-green-500/40 transition-all duration-300 hover:transform hover:scale-105''>''
@@ -150,7 +150,7 @@ import {}
         </div>
       </section>
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
 
@@ -174,10 +174,10 @@ import {}
               <motion.divkey={index}                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
-:pages.disabled/pages/services/AI-Healthcare-Platform.tsx;
+:pages.disabled/pages/services/AI-Healthcare-Platform.tsx 
                 className={`relative bg-gradient-to-br from-slate-800/80 to-green-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${`
-  tier.popular';
-  '                    ? 'border-green-500 scale-105'';
+  tier.popular' 
+  '                    ? 'border-green-500 scale-105'' 
   '`: 'border-green-500/20``}`}`
               >'{tier.popular && (''                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
                     <span className='bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
@@ -198,9 +198,9 @@ import {}
                   ))}
                 </ul>
 
-  tier.popular';
-  ';
-                      ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover: from-green-700 hover:to-blue-700'';
+  tier.popular' 
+  ' 
+                      ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover: from-green-700 hover:to-blue-700'' 
   '`;`
                       : 'border-2 border-green-500 text-green-300 hove,
     r:bg-green-500 hove,
@@ -215,15 +215,15 @@ import {}
       </section>
 
             </p>
-:pages.disabled/pages/services/AI-Healthcare-Platform.tsx: </motion.div>';';
-''';
-          <div: className='grid grid-cols-1 md:grid-cols-2: gap-8'>';
+:pages.disabled/pages/services/AI-Healthcare-Platform.tsx: </motion.div>';' 
+''' 
+          <div: className='grid grid-cols-1 md:grid-cols-2: gap-8'>' 
             {benefits.map(benefit: unknow,n, index: unknown()
               <motion.divkey={inde,x}                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -20 : 20 }}
 
                 animate={{}
                   opacity: isVisible: ? 1 : ,0,
-:pages.disabled/pages/services/AI-Healthcare-Platform.tsx;
+:pages.disabled/pages/services/AI-Healthcare-Platform.tsx 
 
                   <benefit.icon className='w-8 h-8 text-white' />'
                 </div>'''

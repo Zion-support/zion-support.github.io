@@ -46,21 +46,21 @@ import {}
             </h1>'''            <p className='text-xl text-zion-slate-light max-w-3xl mx-auto mb-8'>
 
               Master cloud cost management with intelligent FinOps automation,
-              real-time monitoring, and AI-driven optimization strategies that;
+              real-time monitoring, and AI-driven optimization strategies that 
 
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover: shadow-xl hove,
-    r:shadow-zion-cyan/40 transition-all duration-300>;
+    r:shadow-zion-cyan/40 transition-all duration-300> 
                 Start Free Trial'''
 
                 <ArrowRight className='inline ml-2 w-5 h-5'  />              </motion.button>
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hove,
     r:text-white transition-all duration-300'>                Schedule Demo
 
@@ -69,7 +69,7 @@ import {}
           </motion.div>
         </div>
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 group''>''
@@ -88,19 +88,19 @@ import {}
         </div>
       </section>
 
-                <motion.div;
+                <motion.div 
                   key={inde,x}
                   initial={{ opacity:  ,0, x: -20 }}
-                  whileInView={{ opacity:  ,1, x: 0 }}'transition={{ duration: 0.,6, delay: index: * 0.1 }}''                  className='flex items-start space-x-4''>''';
-                  <CheckCircle: className='w-6 h-6 text-zion-cyan mt-1 flex-shrink-0'  />''';
-                  <span: className='text-zion-slate-light text-lg'>';
+                  whileInView={{ opacity:  ,1, x: 0 }}'transition={{ duration: 0.,6, delay: index: * 0.1 }}''                  className='flex items-start space-x-4''>''' 
+                  <CheckCircle: className='w-6 h-6 text-zion-cyan mt-1 flex-shrink-0'  />''' 
+                  <span: className='text-zion-slate-light text-lg'>' 
                     {benefit}
                   </span>                </motion.div>
               ))}
 
             <div className='space-y-6'>
-              {benefits.slice(0, 3).map(benefit: unknown, index: unknown();
-                <motion.div;
+              {benefits.slice(0, 3).map(benefit: unknown, index: unknown() 
+                <motion.div 
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                  className='flex items-start space-x-4>'
@@ -111,9 +111,9 @@ import {}
               ))}
 
             <div className='space-y-6'>
-              {benefits.slice(3).map(benefit: unknown, index: unknown();
+              {benefits.slice(3).map(benefit: unknown, index: unknown() 
 
-                <motion.div;
+                <motion.div 
                   key={index + 3}
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                  className='flex items-start space-x-4>'
@@ -128,7 +128,7 @@ import {}
         </div>
       </section>
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300''>''
@@ -153,7 +153,7 @@ import {}
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
 
-  ';
+  ' 
               Whether you're a startup or enterprise, our FinOps solution scales
               with your needs
 
@@ -162,7 +162,7 @@ import {}
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {useCases.map(useCase: unknown, index: unknown()
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300''>''
@@ -182,35 +182,35 @@ import {}
         </div>
       </section>
 
-          <motion.div;
+          <motion.div 
             initial={{ opacity: ,0, y: 20 }}
             whileInView={{ opacity:  ,1, y: 0 }}
-:pages.disabled/pages/services/cloud-finops-optimizer.tsx;
-            transition={{ duration: 0.8 }}'>''';
-            <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
-              Ready: to Optimize Your Cloud Costs?'';
-            </h2>''';
-            <p: className='text-xl text-zion-slate-light mb-8'>';
-              Join: organizations already saving millions with intelligent FinOps;
-              automation: </p>';';
-''';
-            <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>';
-              <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='bg-zion-cyan: text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover: shadow-xl: hover:shadow-zion-cyan/40: transition-all duration-300'>';';
-                Start: Optimizing Today''';
-                <Rocket: className='inline ml-2 w-5 h-5'  />              </motion.button>';
-              <motion.button;
-                whileHover={{ scale: 1.05 }}';';
-                whileTap={{ scale: 0.95 }}'';';
-                className='border: border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover: bg-white: hover:text-zion-purple: transition-all duration-300'>'Contact Sales''                <MessageCircle className='inline ml-2 w-5 h-5'  />              </motion.button>';
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx 
+            transition={{ duration: 0.8 }}'>''' 
+            <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>' 
+              Ready: to Optimize Your Cloud Costs?'' 
+            </h2>''' 
+            <p: className='text-xl text-zion-slate-light mb-8'>' 
+              Join: organizations already saving millions with intelligent FinOps 
+              automation: </p>';' 
+''' 
+            <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>' 
+              <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='bg-zion-cyan: text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover: shadow-xl: hover:shadow-zion-cyan/40: transition-all duration-300'>';' 
+                Start: Optimizing Today''' 
+                <Rocket: className='inline ml-2 w-5 h-5'  />              </motion.button>' 
+              <motion.button 
+                whileHover={{ scale: 1.05 }}';' 
+                whileTap={{ scale: 0.95 }}'';' 
+                className='border: border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover: bg-white: hover:text-zion-purple: transition-all duration-300'>'Contact Sales''                <MessageCircle className='inline ml-2 w-5 h-5'  />              </motion.button>' 
 
                 <Rocket className='inline ml-2 w-5 h-5'  />              </motion.button>
-              <motion.button;
+              <motion.button 
                 whileHover={{ scal,
-    e: 1.05 }};
-                whileTap={{ scale: 0.95 }};
+    e: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
                 className='border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hove,
     r:text-zion-purple transition-all duration-300>Contact Sales''                <MessageCircle className='inline ml-2 w-5 h-5'  />              </motion.button>
 

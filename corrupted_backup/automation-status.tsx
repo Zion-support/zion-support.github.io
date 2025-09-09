@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react' 
+import Head from 'next/head' 
 
 const AutomationStatus: React.FC = () => {
   return (
@@ -11,15 +11,15 @@ const AutomationStatus: React.FC = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from 'next' 
+import Head from 'next/head' 
 
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from 'next' 
+import Head from 'next/head' 
 
-import type { NextPage } from 'next',;
-import Head from 'next/head',;
-import type { NextPage } from 'next';
-import Head from 'next/head';
-  );
-};
+import type { NextPage } from 'next', 
+import Head from 'next/head', 
+import type { NextPage } from 'next' 
+import Head from 'next/head' 
+  ) 
+} 

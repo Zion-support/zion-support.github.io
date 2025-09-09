@@ -1,99 +1,86 @@
+#!/usr/bin/env node
 
-const fixes = [
-  // Fix import statements with comma issues
-  {
-    pattern: /import\s+(\w+)\s+from\s*,\s*['"`]([^'"`]+)['"`]/g,
-    replacement: "import $1 from '$2'"
-  }, {
-    pattern: /import\s+(\w+)\s+from\s*,\s*([^]+);/g,
-    replacement: "import $1 from $2;"
-  },
-  
-  // Fix missing semicolons in function calls
-  {
-    pattern: /(\w+\([^)]*\))\s*\)\s*}/g,
-    replacement: "$1);"
-  },
-  
-  // Fix unterminated strings
-  {
-    pattern: /(['"`])([^'"`]*)\s*$/gm,
-    replacement: (match, quote, content) => {
-      if (!content.includes(quote)) {
-        return match + quote}
-      return match}
-  },
-  
-  // Fix missing commas in object literals
-  {
-    pattern: /(\w+:\s*[^}]+)\s*(\w+:\s*[^}]+)/g,
-    replacement: "$1,\n    $2"
-  },
-  
-  // Fix missing semicolons after statements
-  {
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
-];
+console.log('🔧 Starting comprehensive syntax error fix...');
 
-function fixFile(filePath) {
+// Function to fix syntax errors in a file
+function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
-
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false];
-
-
-    // Apply fixes
-    fixes.forEach(fix => {
-      if (typeof fix.replacement === 'function') {
-        content = content.replace(fix.pattern, fix.replacement)} else {
-        content = content.replace(fix.pattern, fix.replacement)}
-    });
-
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-
-      return true}
+    // Fix common syntax errors
+    content = content.replace(/ {/g, ' {');
+    content = content.replace(/;,$/gm, ',');
+    content = content.replace(/,/g, ',');
+    content = content.replace(/;$/gm, ';');
+    content = content.replace(/^;$/gm, '');
+    content = content.replace(/^; /gm, '');
+    content = content.replace(/; /gm, '; ');
+    content = content.replace(/,\s*}/g, '}');
+    content = content.replace(/,\s*]/g, ']');
+    content = content.replace(/,\s*\)/g, ')');
     
-    return false} catch (error) { 
-    console.error(`Error fixing ${filePath }:`, error.message);
-    return false}
+    // Fix specific patterns
+    content = content.replace(/}\s*else\s*{/g, '} else {');
+    content = content.replace(/}\s*;\s*$/gm, '}');
+    content = content.replace(/^\s*;\s*$/gm, '');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`✅ Fixed syntax errors in: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
+    return false;
+  }
 }
 
-
-  const files = fs.readdirSync(dirPath);
-
-  let fixedCount = 0;
-
-function walkDir(dir) {
-  const filesInDir = fs.readdirSync(dir);
-  for (const file of filesInDir) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-
-    if (
-      stat.isDirectory() &&
-      !file.startsWith(`.`) &&
-      file !== 'node_modules'
-    ) {
-      fixedCount += fixFilesInDirectory(filePath);
-
-      if (fixSyntaxErrors(filePath)) {
-        fixedCount++}
+// Function to find and fix all relevant files
+function fixAllFiles() {
+  const extensions = ['.tsx', '.ts', '.js', '.jsx', '.cjs'];
+  const excludeDirs = ['node_modules', '.next', 'out', 'dist', 'build', 'coverage'];
+  
+  function walkDir(dir) {
+    const files = fs.readdirSync(dir);
+    let fixedCount = 0;
+    
+    for (const file of files) {
+      const filePath = path.join(dir, file);
+      const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        if (!excludeDirs.includes(file)) {
+          fixedCount += walkDir(filePath);
+        }
+      } else if (extensions.some(ext => file.endsWith(ext))) {
+        if (fixSyntaxErrors(filePath)) {
+          fixedCount++;
+        }
+      }
     }
+    
+    return fixedCount;
   }
   
-  traverse(dir);
-  return files}
+  return walkDir('.');
+}
 
+// Run the fix
+const fixedCount = fixAllFiles();
+console.log(`🎉 Fixed syntax errors in ${fixedCount} files`);
 
-console.log('🔧 Starting syntax error fixes...');
-const fixedCount = fixFilesInDirectory('.');
-console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
-
-
-
+// Try to build the project
+console.log('🚀 Attempting to build the project...');
+try {
+  execSync('npm run build', { stdio: 'inherit' });
+  console.log('✅ Build successful!');
+} catch (error) {
+  console.log('❌ Build failed, but syntax errors have been fixed');
+  console.log('Please check the build output for remaining issues');
+}

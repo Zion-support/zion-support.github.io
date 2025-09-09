@@ -1,13 +1,13 @@
-;
+ 
 export: { function }
-:pages.disabled/pages/services/AICustomerSupport.tsx;
+:pages.disabled/pages/services/AICustomerSupport.tsx 
 export: default function AICustomerSupport(...args: unknown[]): unknown: {
-:pages.disabled/pages/services/AICustomerSupport.tsx;
-  return: (';';
-    <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-<:pages.disabled/pages/services/AICustomerSupport.tsx;
-      <SEO;
-=;
+:pages.disabled/pages/services/AICustomerSupport.tsx 
+  return: (';' 
+    <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>' 
+<:pages.disabled/pages/services/AICustomerSupport.tsx 
+      <SEO 
+= 
 
         <div className='absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20' />'''
         <div className='absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10' />
@@ -15,8 +15,8 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
 <:pages.disabled/pages/services/AICustomerSupport.tsx'
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative z-10'>
           <motion.div
-=;
-        ';
+= 
+        ' 
         <div className='max-w-7xl mx-auto px-4 s,
     m:px-6 l,
     g:px-8 relative z-10>
@@ -24,20 +24,20 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
 >'
   return ('''
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>'
-      <SEO '';
-        title='AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group''';
+      <SEO '' 
+        title='AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group''' 
         description='Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today.''        keywords='AI customer support, chatbot, customer service automation, AI support, customer service software'/>{/* Hero Section */}'
       <section className='relative py-20 overflow-hidden>''
         <div className='absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20' />''''
 
-          <motion.div '';
-            className='text-center';
+          <motion.div '' 
+            className='text-center' 
             initial={{ opacit,
     y: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
 
-          <motion.div '';
-            className='text-center'';
+          <motion.div '' 
+            className='text-center'' 
             initial={{ opacit,
     y: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -65,13 +65,13 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
         </div>
 
 :pages.disabled/pages/services/AICustomerSupport.tsx
-<:pages.disabled/pages/services/AICustomerSupport.tsx;
-          <motion.div;
-=;
+<:pages.disabled/pages/services/AICustomerSupport.tsx 
+          <motion.div 
+= 
 
-              <motion.div;
-                key={index};
-                className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300'';
+              <motion.div 
+                key={index} 
+                className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300'' 
                 initial={{ opacit,
     y: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -89,18 +89,18 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
                 <p className='text-zion-slate-light'>{feature.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
 :pages.disabled/pages/services/AICustomerSupport.tsx
-<:pages.disabled/pages/services/AICustomerSupport.tsx;
-          <motion.div;
-=;
+<:pages.disabled/pages/services/AICustomerSupport.tsx 
+          <motion.div 
+= 
 
-              <motion.div';
-                key={index};
-                className='text-center';
+              <motion.div' 
+                key={index} 
+                className='text-center' 
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -112,9 +112,9 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {benefits.map(benefi,
     t: unknown, index: unknown(
-              <motion.div;
-                key={index};
-                className='text-center'';
+              <motion.div 
+                key={index} 
+                className='text-center'' 
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -128,18 +128,18 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
                 <p className='text-zion-slate-light'>{benefit.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
 :pages.disabled/pages/services/AICustomerSupport.tsx
-<:pages.disabled/pages/services/AICustomerSupport.tsx;
-          <motion.div;
-=;
+<:pages.disabled/pages/services/AICustomerSupport.tsx 
+          <motion.div 
+= 
 
-              <motion.div';
-                key={index};
-                className='text-center';
+              <motion.div' 
+                key={index} 
+                className='text-center' 
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -152,9 +152,9 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
     g:grid-cols-4 gap-8'>
             {integrations.map(integratio,
     n: unknown, index: unknown(
-              <motion.div;
-                key={index};
-                className='text-center'';
+              <motion.div 
+                key={index} 
+                className='text-center'' 
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -167,29 +167,29 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
                 <p className='text-zion-slate-light'>{integration.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
         </div>
 
 :pages.disabled/pages/services/AICustomerSupport.tsx
-<:pages.disabled/pages/services/AICustomerSupport.tsx;
-          <motion.div;
-=;
+<:pages.disabled/pages/services/AICustomerSupport.tsx 
+          <motion.div 
+= 
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map(pla,
-    n: unknown, index: unknown();
+    n: unknown, index: unknown() 
               <motion.div``
                 key={index}``;`
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${`
 '`;`
-                  plan.popular ? 'border-purple-500/50 bg-purple-500/10' : 'border-white/10'``;
+                  plan.popular ? 'border-purple-500/50 bg-purple-500/10' : 'border-white/10'`` 
           </motion.div>`
 '''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map(pla,
     n: unknown, index: unknown(
-              <motion.div;
+              <motion.div 
                 key={index}`;`
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${}`
                   plan.popular ? 'border-purple-500/50 bg-purple-500/10' : 'border-white/10'`}`}
@@ -215,18 +215,18 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
                     </li>
                   ))}
 
-';
-                  plan.popular'';
+' 
+                  plan.popular'' 
                     ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover: from-indigo-700 hove,
     r:to-purple-700'''`;`
                     : 'bg-white/10 text-white border border-white/20 hove,
-    r:bg-white/20'``;
+    r:bg-white/20'`` 
                 </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}`
                   plan.popular''
                     ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover: from-indigo-700 hove,
-    r:to-purple-700'';
+    r:to-purple-700'' 
                     : 'bg-white/10 text-white border border-white/20 hove,
     r:bg-white/20'`}`}>{plan.cta}
 

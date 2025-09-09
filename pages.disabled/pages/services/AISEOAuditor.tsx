@@ -2,16 +2,16 @@ import: {}
   DollarSign,
   CheckCircle2,
   ExternalLink,
-:pages.disabled/pages/services/AISEOAuditor.tsx;
+:pages.disabled/pages/services/AISEOAuditor.tsx 
 
-            <div';
+            <div' 
   Phone,
-  Mail} from 'lucide-react.ts';
+  Mail} from 'lucide-react.ts' 
 const AISEOAuditor: React.FC = (): JSX.Element => {}
-  return();
+  return() 
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white>
       <SEO'''
-        title='AI SEO Auditor - Zion Tech Group'';
+        title='AI SEO Auditor - Zion Tech Group'' 
         description='Autonomous on-site SEO audits, fixes, and monitoring with AI.''/>
 '''
       <section className='container mx-auto px-4 py-16>''
@@ -26,8 +26,8 @@ const AISEOAuditor: React.FC = (): JSX.Element => {}
 
             'Automated site crawl and issues triage',Core Web Vitals & Lighthouse monitoring',Schema.org and OpenGraph validation',Internal linking and orphan page detection',AI-generated meta tags and headings',CI-ready fix PRs with human-in-the-loop'
           ].map(b => (
-            <div;
-              key={b};
+            <div 
+              key={b} 
               className='flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4>'
               <CheckCircle2 className='mt-0.5 h-5 w-5 text-cyan-300' />''
               <div className='text-slate-200'>{b}</div>
@@ -50,10 +50,10 @@ const AISEOAuditor: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/AISEOAuditor.tsx'
           </ul>'
           </ul>'
-          <a'';
-            className='mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200'';
-            href='https://ziontechgroup.com/services'';
-            target='_blank'';
+          <a'' 
+            className='mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200'' 
+            href='https://ziontechgroup.com/services'' 
+            target='_blank'' 
 
             Learn more <ExternalLink className='ml-1 h-3 w-3'  />'
           </a>'''
@@ -61,12 +61,12 @@ const AISEOAuditor: React.FC = (): JSX.Element => {}
             Learn more <ExternalLink className='ml-1 h-3 w-3'  />
           </a>'''
           <div className='mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-300>
-            <a'';
-              href='tel:+13024640950'';
+            <a'' 
+              href='tel:+13024640950'' 
 
               <Phone className='h-4 w-4'  /> +1 302 464 0950
             </a>'
-            <a'';
+            <a'' 
 
               <Mail className='h-4 w-4'  /> kleber@ziontechgroup.com
 

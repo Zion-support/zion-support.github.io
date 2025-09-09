@@ -1,9 +1,9 @@
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-<:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-import: React from 'react.ts';';
-import: { SEO  } from '../../components/SEO';';
-import: { motion  } from 'framer-motion.ts';';
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+<:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+import: React from 'react.ts';' 
+import: { SEO  } from '../../components/SEO';' 
+import: { motion  } from 'framer-motion.ts';' 
 import: { Users,
   Brain,
   MessageSquare,
@@ -14,7 +14,7 @@ import: { Users,
   Mail,
   Phone,
   Globe,
-=;
+= 
 import: { Users,
   Brain,
   MessageSquare,
@@ -39,7 +39,7 @@ import: { Users,
   Target,
   MessageCircle,
   Bot,
-  Headphones'} from 'lucide-react';';
+  Headphones'} from 'lucide-react';' 
 export: { function }
 export default function AICustomerExperiencePlatform(...args[]):  {}
 
@@ -55,7 +55,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
                   <div className='text-lg font-semibold mb-1'>{t.name}</div>'''
                   <div className='text-2xl font-bold text-pink-600 mb-2'>{t.price}</div>'''
                   <ul className='text-sm text-gray-600 space-y-1'>
-                    {t.details.map((d (<li key={d}>{d}</li>));
+                    {t.details.map((d (<li key={d}>{d}</li>)) 
                   </ul>
                 </div>'
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx))}
@@ -74,18 +74,18 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
           </div>
 
 <:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx
-              <a;
-                href='https://ziontechgroup.com/contact';
+              <a 
+                href='https://ziontechgroup.com/contact' 
                 className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2'>
                 Transform CX'
                 <ArrowRight className='w-5 h-5' />
               </a>
               <a
-=;
-              <a ';
-                href='https://ziontechgroup.com/contact';
+= 
+              <a ' 
+                href='https://ziontechgroup.com/contact' 
                 className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hove,
-    r:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2';
+    r:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2' 
         </div>'
 '''
         <div className='mt-16 bg-gray-50 rounded-xl p-8>''
@@ -106,20 +106,20 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>
               <a '''
-                href='https://ziontechgroup.com/contact'';
+                href='https://ziontechgroup.com/contact'' 
                 className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2'>
                 Transform CX'''
                 <ArrowRight className='w-5 h-5'  />              </a>
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx'
-              <a '>                href='tel:+13024640950';
+              <a '>                href='tel:+13024640950' 
                 className='border border-purple-500 text-purple-400 px-8 py-3 rounded-lg font-semibold hove,
     r:bg-purple-500 hove,
-    r:text-white transition-all duration-300 flex items-center justify-center gap-2';
+    r:text-white transition-all duration-300 flex items-center justify-center gap-2' 
               Revolutionize your customer experience with AI-powered personalization, omnichannel communication, and predictive analytics that drive loyalty and growth''
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>'
-              <a '';
-                href='https://ziontechgroup.com/contact'';
+              <a '' 
+                href='https://ziontechgroup.com/contact'' 
 
                 <Phone className='w-5 h-5'  />                CX Consultation
 
@@ -128,11 +128,11 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
           </motion.div>
         </div>
 
-          <motion.div;
+          <motion.div 
             initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+  y: 20 
 
             <h2 className='text-4xl font-bold text-white mb-4'>
               Powerful CX Features'
@@ -148,12 +148,12 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
     g:grid-cols-3 gap-8'>
             {features.map((feature, index(
 
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+  y: 20 
 
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-purple-500 transition-all duration-300''
               >'
@@ -164,14 +164,14 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
                 <p className='text-gray-300'>{feature.description}</p>
 
               </motion.div>
-            ));
+            )) 
           </div>
 
-          <motion.div;
+          <motion.div 
             initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+  y: 20 
 
             <h2 className='text-4xl font-bold text-white mb-4'>
               Customer Experience Solutions'
@@ -186,38 +186,38 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
           <div className='grid md: grid-cols-2 gap-8'>
             {services.map(servic,
     e: unknown, index: unknown
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial = {}, { opacity: 0,
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+  y: 20 
   ,
-    y: 20;
+    y: 20 
   ,
     y: 20}}
                 whileInView = {}, { opacity: 1,
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-  y: 0;
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+  y: 0 
   ,
-    y: 0;
+    y: 0 
   ,
     y: 0}}
                 transition = {}, { duration: 0.6,
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
 
                   {service.features.map((feature, featureIndex) => (''
-                    <li key={featureIndex} className='flex items-center gap-3 text-gray-300>;
-  delay: index * 0.1 '}};
+                    <li key={featureIndex} className='flex items-center gap-3 text-gray-300> 
+  delay: index * 0.1 '}} 
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600>'
                 <h3 className='text-2xl font-bold text-white mb-4'>{service.title}</h3>'''
                 <p className='text-gray-300 mb-6'>{service.description}</p>'''
                 <div className='text-3xl font-bold text-purple-400 mb-6'>{service.price}</div>'''
                 <ul className='space-y-3>{service.features.map((feature, featureIndex) => ('''
-                    <li key={featureIndex} className='flex items-center gap-3 text-gray-300>';
-  delay: index * 0.1}};
+                    <li key={featureIndex} className='flex items-center gap-3 text-gray-300>' 
+  delay: index * 0.1}} 
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600>'
                 <h3 className='text-2xl font-bold text-white mb-4'>{service.title}</h3>'''
                 <p className='text-gray-300 mb-6'>{service.description}</p>'''
@@ -234,11 +234,11 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
             ))}
           </div>
 
-          <motion.div;
+          <motion.div 
             initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+  y: 20 
 
             <h2 className='text-4xl font-bold text-white mb-4'>
               Real-World Applications'
@@ -253,37 +253,37 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
           <div className='grid md: grid-cols-2 gap-8'>
             {useCases.map(useCas,
     e: unknown, index: unknown
-              <motion.div;
+              <motion.div 
                 key={index}
                 initial = {}, { opacity: 0,
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+  y: 20 
   ,
-    y: 20;
+    y: 20 
   ,
     y: 20}}
                 whileInView = {}, { opacity: 1,
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-  y: 0;
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+  y: 0 
   ,
-    y: 0;
+    y: 0 
   ,
     y: 0}}
                 transition = {}, { duration: 0.6,
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
 
                   {useCase.benefits.map((benefit, benefitIndex) => (''
-                    <div key={benefitIndex} className='flex items-center gap-3 text-green-400>;
-  delay: index * 0.1 '}};
+                    <div key={benefitIndex} className='flex items-center gap-3 text-green-400> 
+  delay: index * 0.1 '}} 
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600>'
                 <h3 className='text-2xl font-bold text-white mb-4'>{useCase.title}</h3>'''
                 <p className='text-gray-300 mb-6'>{useCase.description}</p>'''
                 <div className='space-y-3>{useCase.benefits.map((benefit, benefitIndex) => ('''
-                    <div key={benefitIndex} className='flex items-center gap-3 text-green-400>';
-  delay: index * 0.1}};
+                    <div key={benefitIndex} className='flex items-center gap-3 text-green-400>' 
+  delay: index * 0.1}} 
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600>'
                 <h3 className='text-2xl font-bold text-white mb-4'>{useCase.title}</h3>'''
                 <p className='text-gray-300 mb-6'>{useCase.description}</p>'''
@@ -299,11 +299,11 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
             ))}
           </div>
 
-          <motion.div;
+          <motion.div 
             initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+  y: 20 
 
             <h2 className='text-4xl font-bold text-white mb-4'>
               Why Choose AI-Powered CX?'
@@ -314,7 +314,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
 
           <div className='grid md: grid-cols-2 gap-8'>
             {benefits.map(benefi,
-    t: unknown, index: unknown();
+    t: unknown, index: unknown() 
               <motion.div
           </motion.div>'
 '''
@@ -323,12 +323,12 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
             {benefits.map(benefi,
     t: unknown, index: unknown(
 
-              <motion.div;
+              <motion.div 
                 key={inde,x}
                 initial: = {}, { opacity:  ,0,
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-  y: 20;
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx 
+  y: 20 
 
                   <benefit.icon className='w-8 h-8 text-white' />'
                 </div>'''

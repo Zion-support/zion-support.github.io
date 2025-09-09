@@ -1,25 +1,36 @@
-import { supabase } from '@/integrations / supabase / client';
-    export async function updateJob (...args: any[]) : any {;
-  export async function getJobById (...args: any[]) : any {;
-export async function createJob (...args: any[]) : any {;
-;
-      const { data, error } = await supabase;
-        .from ('jobs') .insert ([jobData]) .select () .single () ;
-;
-      if (error) throw error;
-      return data;
-    };
-;
-    const { data, error } = await supabase;
-      .from ('jobs') .update (jobData) .eq ('id', jobId) .select () .single () ;
-;
-    if (error) throw error;
-    return data;
-  };
-;
-  const { data, error } = await supabase;
-    .from ('jobs') .select ('*') .eq ('id', jobId) .single () ;
-;
+
+import { supabase } from "@/integrations/supabase/client";
+
+export async function createJob(jobData: any) {
+  const { data, error } = await supabase
+    .from('jobs')
+    .insert([jobData])
+    .select()
+    .single();
+
   if (error) throw error;
   return data;
-};
+}
+
+export async function updateJob(jobId: string, jobData: any) {
+  const { data, error } = await supabase
+    .from('jobs')
+    .update(jobData)
+    .eq('id', jobId)
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data;
+}
+
+export async function getJobById(jobId: string) {
+  const { data, error } = await supabase
+    .from('jobs')
+    .select('*')
+    .eq('id', jobId)
+    .single();
+
+  if (error) throw error;
+  return data;
+}
