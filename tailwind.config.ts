@@ -137,12 +137,24 @@ export default {
           "50%": { transform: "translateY(-20px)" },
         },
         "glow": {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(34, 221, 210, 0.5)" },
-          "50%": { boxShadow: "0 0 40px rgba(34, 221, 210, 0.8)" },
+          "0%": { boxShadow: "0 0 20px rgba(34, 221, 210, 0.3)" },
+          "100%": { boxShadow: "0 0 30px rgba(34, 221, 210, 0.6)" },
         },
         "pulse-slow": {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.5" },
+        },
+        "bounce-slow": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "rotate-slow": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        "scale-pulse": {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.05)" },
         },
       },
       animation: {
@@ -160,7 +172,10 @@ export default {
         "slide-in-from-right": "slide-in-from-right 0.3s ease-out",
         "float": "float 6s ease-in-out infinite",
         "glow": "glow 2s ease-in-out infinite alternate",
-        "pulse-slow": "pulse-slow 3s ease-in-out infinite",
+        "pulse-slow": "pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "bounce-slow": "bounce-slow 2s ease-in-out infinite",
+        "rotate-slow": "rotate-slow 20s linear infinite",
+        "scale-pulse": "scale-pulse 2s ease-in-out infinite",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
