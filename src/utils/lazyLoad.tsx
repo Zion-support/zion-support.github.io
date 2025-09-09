@@ -127,7 +127,3 @@ export default {
   useIntersectionObserver,
   LazyImage,
 };
-
-// Additional lazy loaded components
-export const LazyPerformanceDashboard = lazy(() => import('../components/PerformanceDashboard'));
-export const LazyPerformanceOptimizations = lazy(() => import('../components/PerformanceOptimizations'));

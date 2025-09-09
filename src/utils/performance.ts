@@ -62,9 +62,7 @@ class PerformanceMonitor {
     this.observeMetric('first-input', (entries) => {
       entries.forEach((entry) => {
         const fidEntry = entry as any; // Type assertion for FID-specific properties
-        if (fidEntry.processingStart) {
-          this.recordMetric('FID', fidEntry.processingStart - entry.startTime, 'timing');
-        }
+        this.recordMetric('FID', (fidEntry.processingStart || 0) - entry.startTime, 'timing');
       });
     });
 
