@@ -1,12 +1,10 @@
-# Zion Tech Group - Advanced Technology Services Platform
+# Project Title (Example - To Be Updated)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-site-id/deploy-status)](https://app.netlify.com/sites/your-site-name/deploys)
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D20.18.1-brightgreen)](https://nodejs.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+This is the main README for the project. Below are details about specific components and utilities.
 
-A cutting-edge technology services platform offering AI, blockchain, web3, and enterprise solutions. Built with modern web technologies and deployed on Netlify.
+## URL Performance Monitoring
 
-## 🚀 Features
+This project includes a URL/API performance monitoring service located in the `monitoring/` directory. It periodically checks configured endpoints, logs their performance, and can trigger alerts and custom remediation actions if performance degrades. For detailed information, see the [`monitoring/README.md`](./monitoring/README.md) file.
 
 - **AI & Machine Learning Services** - Advanced AI solutions for businesses
 - **Blockchain & Web3 Integration** - Decentralized applications and smart contracts
@@ -16,64 +14,22 @@ A cutting-edge technology services platform offering AI, blockchain, web3, and e
 - **Responsive Design** - Mobile-first, accessible user interface
 - **Performance Optimized** - Fast loading and efficient builds
 
-## 🛠️ Tech Stack
+## Set environment variables (optional):
+Copy `.env.example` to `.env` and adjust any values needed for your setup.
+Important variables include:
+* `DJANGO_API_BASE_URL`, `NEXTJS_API_BASE_URL`, `CUSTOM_SERVER_BASE_URL` –
+  base URLs for services you want to monitor (used by the `monitoring/` service).
+* `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`,
+  `SUPABASE_SERVICE_ROLE_KEY` – credentials required for Supabase
+  authentication (used for login).
+* `ALERT_WEBHOOK_URL` – a webhook endpoint (Slack, Discord, etc.) for alert
+  notifications (used by the `monitoring/` service).
+* `LOG_LEVEL` – logging verbosity (`error`, `warn`, `info`, `debug`).
 
-- **Frontend**: React 18, TypeScript, Vite
-- **UI Framework**: Chakra UI, Radix UI
-- **Styling**: Tailwind CSS, Emotion
-- **State Management**: Redux Toolkit, React Query
-- **Authentication**: NextAuth.js, Supabase
-- **Blockchain**: Ethers.js, Web3 integration
-- **Deployment**: Netlify, Netlify Functions
-- **Testing**: Vitest, Jest, Cypress
-- **Linting**: ESLint, Prettier
 
-## 📦 Installation
+## Running Tests
 
-### Prerequisites
-
-- Node.js >= 20.18.1
-- npm >= 10.0.0
-
-### Setup
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Zion-Holdings/zion.app.git
-   cd zion.app
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm ci --no-audit --no-fund --include=optional
-   ```
-
-3. **Environment setup**
-   ```bash
-   cp .env.example .env.local
-   # Edit .env.local with your configuration
-   ```
-
-4. **Start development server**
-   ```bash
-   npm run dev
-   ```
-
-## 🚀 Deployment
-
-### Netlify (Recommended)
-
-The project is configured for automatic deployment on Netlify:
-
-```bash
-# Deploy to preview
-npm run deploy:preview
-
-# Deploy to production
-npm run deploy
-```
-
-### Manual Build
+Run the automated tests using npm:
 
 ```bash
 # Production build
@@ -157,23 +113,7 @@ npm run cypress:run
 npm run test:accessibility
 ```
 
-## 📊 Performance
-
-The application is optimized for performance:
-
-- **Bundle Analysis**: `npm run build:analyze`
-- **Performance Monitoring**: Built-in performance tracking
-- **Image Optimization**: Automatic image optimization
-- **Code Splitting**: Dynamic imports for optimal loading
-
-## 🔒 Security
-
-- **Content Security Policy**: Configured in `netlify.toml`
-- **Security Headers**: Comprehensive security headers
-- **Dependency Scanning**: Regular security audits
-- **Environment Protection**: Secure environment variable handling
-
-## 🤝 Contributing
+## Generating Test Logs
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
